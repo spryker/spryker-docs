@@ -14,7 +14,7 @@ Check out an example usage of the Actions Close Drawer.
 
 Service configuration:
 
-- `type` - an action type.
+- `type`—an action type.
 
 ```html
 <spy-button-action
@@ -30,6 +30,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/actions' {
+    interface ActionsRegistry {
+        'close-drawer': CloseDrawerActionHandlerService;
+    }
+}
+
 @NgModule({
     imports: [
         ActionsModule.withActions({

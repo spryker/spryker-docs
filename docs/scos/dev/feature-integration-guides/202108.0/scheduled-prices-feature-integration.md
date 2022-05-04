@@ -1,5 +1,5 @@
 ---
-title: Scheduled prices feature integration
+title: Scheduled Prices feature integration
 description: Use the guide to install the Scheduled Prices feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -52,7 +52,6 @@ Run the following commands to:
 * generate entity and transfer changes
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

@@ -1,5 +1,5 @@
 ---
-title: Product packaging unit feature integration
+title: Packaging Units feature integration
 last_updated: Sep 8, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/product-packaging-unit-feature-integration
@@ -120,7 +120,6 @@ Set up synchronization queue pools, so non-multistore entities (not store-specif
 Run the following commands to apply the database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -240,7 +239,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that  the configured data in the database has been added to the `spy_glossary` table.
+Make sure that  the configured data in the database has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 {% endinfo_block %}
 
 
@@ -971,7 +970,7 @@ Run the following console command to import data:
 console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
-Make sure that the configured data in the database has been added to the `spy_glossary` table.
+Make sure that the configured data in the database has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 {% endinfo_block %}
 
 ### 3) Set up Widgets

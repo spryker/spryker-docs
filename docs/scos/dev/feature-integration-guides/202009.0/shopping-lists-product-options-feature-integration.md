@@ -1,5 +1,5 @@
 ---
-title: Shopping lists + product options feature integration
+title: Shopping Lists + Product Options feature integration
 description: In this guide, we provide step-by-step instruction on how to install Shopping Lists + Product Options Feature  into Spryker-based project.
 last_updated: Aug 27, 2020
 template: feature-integration-guide-template
@@ -33,7 +33,6 @@ Verify that the following modules were installed:
 ### 2) Set up the Database Schema and Transfer Objects
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```yaml
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -145,7 +144,7 @@ Run the following console command to import data:
 console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 {% endinfo_block %}
 
 ### 2) Set up Behavior

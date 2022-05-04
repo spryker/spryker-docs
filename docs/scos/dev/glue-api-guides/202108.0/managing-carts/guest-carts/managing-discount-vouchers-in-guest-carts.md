@@ -184,7 +184,7 @@ To apply a discount voucher to a guest cart, send the request:
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/vouchers/mydiscount-qa1ma?include=vouchers"
+                "self": "https://glue.mysprykershop.com/vouchers/mydiscount-qa1ma?include=vouchers"
             }
         }
     ]
@@ -225,7 +225,7 @@ To remove a discount voucher, send the request:
 | X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | &check; | Guest user's unique identifier. The value should correspond to the value used when [creating the guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart). |
 
 
-Request sample: `DELETE http://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers/mydiscount-we3ca`
+Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers/mydiscount-we3ca`
 
 ### Response
 
@@ -237,7 +237,8 @@ If the voucher is deleted successfully, the endpoints returns the `204 No Data` 
 | --- | --- |
 | 101 | Cart with the specified ID is not found. |
 | 109 | `X-Anonymous-Customer-Unique-Id` header is empty. |
-| 3301 | Voucher with the specified ID was not found. |
-| 3302 | Incorrect voucher code or the voucher could not be applied.|
+| 3301 | Voucher with the specified ID is not found. |
+| 3302 | Incorrect voucher code or the voucher cannot be applied.|
+| 3303| Cart code can't be removed. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

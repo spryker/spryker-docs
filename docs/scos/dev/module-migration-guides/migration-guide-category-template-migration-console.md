@@ -32,6 +32,8 @@ redirect_from:
 
 ## Category template migration script
 
+Use this script to migrate the category template:
+
 ```php
 <?php
 
@@ -129,7 +131,3 @@ class CategoryTemplateMigration extends Console
 
 }
 ```
-
-<!--See also
-Get a general idea about a Category
-Migration Guide - Category-->

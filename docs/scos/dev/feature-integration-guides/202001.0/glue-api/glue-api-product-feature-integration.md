@@ -49,7 +49,6 @@ Make sure that the following modules were installed:
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -140,8 +139,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox “Verification” %}
 
 Make sure that the following endpoints are available:
-- http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %} 
-- http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}
+- https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %} 
+- https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}
 - 
 {% endinfo_block %}
 
@@ -209,11 +208,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox “Verification” %}
 
 Make sure that the following endpoints are available:
-- http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-image-sets
-- http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-image-sets
+- https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-image-sets
+- https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-image-sets
 
-Send a request to "http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-image-sets". An abstract product with a given SKU should have at least one image set. Make sure that the response includes relationships to the `abstract-product-image-sets` resources.
-Send a request to "http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=abstract-product-image-sets". A concrete product with a given SKU should have at least one image set. Make sure that the response includes relationships to the "concrete-product-image-sets" resources.
+Send a request to "https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-image-sets". An abstract product with a given SKU should have at least one image set. Make sure that the response includes relationships to the `abstract-product-image-sets` resources.
+Send a request to "https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=abstract-product-image-sets". A concrete product with a given SKU should have at least one image set. Make sure that the response includes relationships to the "concrete-product-image-sets" resources.
 
 {% endinfo_block %}
 
@@ -281,12 +280,12 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox “Verification” %}
 
 Make sure that the following endpoints are available:
-- http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-prices
-- http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-prices
+- https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-prices
+- https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-prices
 
-Send a request to "http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-prices". Make sure that the response includes relationships to the `abstract-product-prices` resources.
+Send a request to "https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-prices". Make sure that the response includes relationships to the `abstract-product-prices` resources.
 
-Make a request to "http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=concrete-product-prices". Make sure that the response includes relationships to the `concrete-product-prices` resources.
+Make a request to "https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=concrete-product-prices". Make sure that the response includes relationships to the `concrete-product-prices` resources.
 
 {% endinfo_block %}
 
@@ -332,7 +331,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox “Verification” %}
 
-Send a request to http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=category-nodes.
+Send a request to https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=category-nodes.
 
 Make sure that the response contains `category-nodes` as a relationship and `category-nodes` data included.
 
@@ -347,7 +346,7 @@ Example:
 			...
 		},
 		"links":{  
-			"self":"http://glue.mysprykershop.com/abstract-products/001"
+			"self":"https://glue.mysprykershop.com/abstract-products/001"
 		},
 		"relationships":{  
 			"category-nodes":{  
@@ -372,7 +371,7 @@ Example:
 				...
 			},
 			"links":{  
-				"self":"http://glue.mysprykershop.com/category-nodes/4"
+				"self":"https://glue.mysprykershop.com/category-nodes/4"
 			}
 		},
 		{  
@@ -382,7 +381,7 @@ Example:
 				...
 			},
 			"links":{  
-				"self":"http://glue.mysprykershop.com/category-nodes/2"
+				"self":"https://glue.mysprykershop.com/category-nodes/2"
 			}
 		}
 	]

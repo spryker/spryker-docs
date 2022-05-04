@@ -36,12 +36,14 @@ related:
 
 {% info_block errorBox "Prerequisites" %}
 
-This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgarding this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/module-migration-guides/migration-guide-search.html#upgrading-from-version-89-to-version-810).
+This migration guide is a part of the [Search migration effort](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html). Prior to upgrading this module, make sure you have completed all the steps from the [Search Migration Guide](/docs/scos/dev/module-migration-guides/migration-guide-search.html#upgrading-from-version-89-to-version-810).
 
 {% endinfo_block %}
 
-To upgrade the module, do the following:
+To upgrade to the new version of the module, do the following:
+
 1. Remove the deprecated search related console command classes from `Pyz\Zed\Console\ConsoleDependencyProvider`:
+
 ```bash
 Spryker\Zed\Search\Communication\Console\GenerateIndexMapConsole;
 Spryker\Zed\Search\Communication\Console\SearchCloseIndexConsole;
@@ -54,6 +56,7 @@ Spryker\Zed\Search\Communication\Console\SearchRegisterSnapshotRepositoryConsole
 Spryker\Zed\Search\Communication\Console\SearchRestoreSnapshotConsole;
 Spryker\Zed\Search\Communication\Console\SearchSetupIndexesConsole;
 ```
+
 2. Enable the new commands:
 
 **Pyz\Zed\Console**
@@ -105,9 +108,10 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
-## Upgrading from Version 3.* to Version 4.*
 
-Console version 4 has been prepared for a standalone usage. Now, you are able to use `Console` module even without a DB configuration.
+## Upgrading from version 3.* to version 4.*
+
+`Console` version 4 has been prepared for a standalone usage. Now, you are able to use `Console` module even without a DB configuration.
 Find or create `ConsoleDependencyProvider` in your project.
 
 {% info_block warningBox %}
@@ -134,5 +138,3 @@ public function getServiceProviders(Container $container)
     return $serviceProviders;
 }
 ```
-
-<!-- Last review date: Nov 23, 2017 by Denis Turkov -->

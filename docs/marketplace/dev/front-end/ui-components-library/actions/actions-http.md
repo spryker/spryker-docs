@@ -14,9 +14,9 @@ Check out an example usage of the Actions HTTP.
 
 Service configuration:
 
-- `type` - an action type.  
-- `url` - an action request URL.  
-- `method` - an action request method (`GET` by default).  
+- `type`—an action type.  
+- `url`—an action request URL.  
+- `method`—an action request method (`GET` by default).  
 
 ```html
 <spy-button-action
@@ -34,6 +34,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/actions' {
+    interface ActionsRegistry {
+        http: HttpActionHandlerService;
+    }
+}
+
 @NgModule({
     imports: [
         ActionsModule.withActions({

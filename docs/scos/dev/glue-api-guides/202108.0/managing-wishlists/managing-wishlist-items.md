@@ -38,7 +38,9 @@ To add an item to a wishlist, send the request:
 
 ### Request
 
-Request sample: `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
+Request sample: add an item to a wishlist
+
+`POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
 
 ```json
 {
@@ -56,6 +58,8 @@ Request sample: `POST https://glue.mysprykershop.com/wishlists/09264b7f-1894-58e
 | sku | String | SKU of a concrete product to add. |
 
 ### Response
+
+Response sample: add an item to a wishlist
 
 ```json
 {
@@ -94,7 +98,9 @@ To delete wishlist item, send the request:
 
 ### Request
 
-Request sample: `DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/064_18404924`
+Request sample: delete a wishlist item
+
+`DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/064_18404924`
 
 ### Response
 
@@ -104,9 +110,13 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 
 | CODE | REASON |
 | --- | --- |
-| 201 | Cannot find the wishlist. |
-| 206 | Cannot add an item to the wishlist. |
+| 001 | Access token is invalid. |
+| 002 | Access token is missing. |
+| 201 | Wishlist with the specified ID is not found. |
+| 206 | Item with the specified ID cannot be added to the wishlist. |
 | 207 | Cannot remove the item. |
-| 208 | An item with the provided SKU does not exist in the wishlist. |
+| 208 | Item with the provided SKU does not exist in the wishlist. |
+| 209 | ID is not specified. |
+| 901 |`sku` field is empty. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

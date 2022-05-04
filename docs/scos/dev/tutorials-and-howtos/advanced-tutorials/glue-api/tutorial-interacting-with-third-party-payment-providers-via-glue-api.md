@@ -20,10 +20,10 @@ redirect_from:
 
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
+    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
-The checkout process of Spryker Glue API can be leveraged to involve third parties in the process of order confirmation. This can be required, for example, when the method of payment selected by the user requires additional steps to complete the purchase. These can include, but not limited to, card validation, processing a bank transfer, etc.
+The checkout process of Spryker Glue API can be leveraged to involve third parties in the process of order confirmation. This can be required, for example, when the method of payment selected by the user requires additional steps to complete the purchase. These can include, but not limited to, card validation, processing a bank transfer.
 {% info_block infoBox %}
 
 For details, see [Checking Out Purchases and Getting Checkout Data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/checking-out-purchases.html).
@@ -97,8 +97,8 @@ To process the data, we need to implement another plugin on the Zed layer. The p
 
 The plugin must extend the OrderPaymentUpdaterPluginInterface and implement the following two functions:
 
-* `isAppplicable` - this function determines whether a specific payment is processed by the plugin. The function must return true if the payment should be processed, otherwise it must return false.
-* `updateOrderPayment` - this function should update the payment data in the database.
+* `isAppplicable`—this function determines whether a specific payment is processed by the plugin. The function returns true if the payment must be processed; otherwise, it returns false.
+* `updateOrderPayment`—this function updates the payment data in the database.
 
 To help you understand which payments need to be processed, you can use the optional **paymentIdentifier** field in POST requests to the `/order-payments` endpoint. To make sure it is always present in a request, you may require the API client to set the field to a specific value to invoke your payment plugin. The value of the field can be retrieved using the `getPaymentIdentifier` helper function.
 

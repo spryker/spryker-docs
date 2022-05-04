@@ -57,7 +57,7 @@ We have compiled a short checklist to use while creating the specification and d
 * Did I document my code well? Does anyone require additional information about my changes?
 * Did I clearly describe any discrepancies between the specification and my implementation?
 * Did I inform the testers of specific areas which need to be double checked?
-* Do the testers need any kind of help to perform the tests (i.e. scripts for generating specific data)?
+* Do the testers need any kind of help to perform the tests (for example, scripts for generating specific data)?
 
 ## What is “High-Quality Software”?
 

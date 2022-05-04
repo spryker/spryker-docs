@@ -44,10 +44,9 @@ To add an address to a customer, send the request:
 
 ### Request
 
-Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
+Request sample: add an address
 
-<details>
-<summary markdown='span'>Request sample body</summary>
+`POST http://glue.mysprykershop.com/customers/DE--1/addresses`
 
 ```json
 {
@@ -73,8 +72,6 @@ Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
 }
 ```
 
-</details>
-
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | customer_reference | String | &check; | Unique identifier of the customer to add the address to. To get it, [Retrieve customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#retrieve-customers) or [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer) |
@@ -96,7 +93,7 @@ Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: add an address</summary>
 
 ```json
 {
@@ -125,7 +122,6 @@ Request sample: `POST http://glue.mysprykershop.com/customers/DE--1/addresses`
     }
 }
 ```
-
 </details>
 
 <a name="add-an-address-response-attributes"></a>
@@ -163,7 +159,9 @@ To edit an address, send the request:
 
 ### Request
 
-Request sample: `PATCH` **http://glue.mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b**
+Request sample: edit an address
+
+`PATCH` http://glue.mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b
 
 <details>
 <summary markdown='span'>Request sample body</summary>
@@ -190,7 +188,7 @@ Request sample: `PATCH` **http://glue.mysprykershop.com/customers/DE-25/addresse
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: edit an address</summary>
 
 ```json
 {
@@ -219,12 +217,11 @@ Request sample: `PATCH` **http://glue.mysprykershop.com/customers/DE-25/addresse
 		}
 	}
 ```
-
 </details>
 
 For response attributes, see [Add an address](#add-an-address-response-attributes).
 
-## Retrieve a customer's addresses
+## Retrieve customer's addresses
 
 To retrieve a list of customer's addresses, send the request:
 
@@ -239,13 +236,15 @@ To retrieve a list of customer's addresses, send the request:
 
 ### Request
 
-Sample request: `GET http://glue.mysprykershop.com/customers/DE-25/addresses`
+Request sample: retrieve customer's addresses
+
+`GET http://glue.mysprykershop.com/customers/DE-25/addresses`
 
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve customer's addresses</summary>
 
 ```json
 {
@@ -302,7 +301,6 @@ Sample request: `GET http://glue.mysprykershop.com/customers/DE-25/addresses`
 			}
 	}
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -338,12 +336,14 @@ To retrieve an address, send the request:
 
 ### Request
 
-Request sample : `GET http://glue.mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b`
+Request sample: retrieve an address
+
+`GET http://glue.mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b`
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve an address</summary>
 
 </details>
 
@@ -382,7 +382,9 @@ To delete an address, send the request:
 
 ### Request
 
-Request sample: `DELETE http://glue.mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b`
+Request sample: delete an address
+
+`DELETE http://glue.mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b`
 
 ### Response
 
@@ -392,12 +394,15 @@ If the address is deleted successfully, the endpoint returns the `204 No Content
 
 | CODE | REASON |
 | --- | --- |
-| 402 | Customer with the specified ID was not found. |
-| 404 | Specified address could not be found. |
+| 001 | Access token is invalid. |
+| 002 | Access token is missing. |
+| 402 | Customer with the specified ID is not found. |
+| 404 | Specified address cannot be found. |
 | 405 | Customer reference is missing. |
 | 409 | Failed to update an address. |
 | 411 | Unauthorized request. |
 | 412 | No address ID provided. |
+| 901 | One of the following fields is not specified: `salutaion`, `firstName`, `lastName`, `city`, `address1`, `address2`, `zipCode`, `country`, `iso2Code`, `isDefaultShipping`, `isDefaultBilling` |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

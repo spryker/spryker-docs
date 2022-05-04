@@ -1,5 +1,5 @@
 ---
-title: Configurable bundle + order management feature integration
+title: Configurable Bundle + Order Management feature integration
 description: This integration guide provides step-by-step instructions on installing Configurable Bundle + Order Management feature.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

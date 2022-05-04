@@ -194,7 +194,6 @@ Once you've finished Setup Behavior step, make sure that:
 Run the following commands to apply database changes and to generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -1257,7 +1256,7 @@ console data:import:glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 
@@ -1304,7 +1303,7 @@ Register the following controller provider(s) in the Yves application:
 
 | Provider | Namespace | Enabled Controller | Controller Specifcation |
 | --- | --- | --- | --- |
-| `CartCodeWidgetControllerProvider` |`SprykerShop\Yves\CartCodeWidget\Plugin\Provider`  | `CartCodeWidget/CodeController` | `Handles add, remove and clear of cart codes for of the activated CartCodePlugins (i.e. gift card code, voucher code, etc.) of the cart.` |
+| `CartCodeWidgetControllerProvider` |`SprykerShop\Yves\CartCodeWidget\Plugin\Provider`  | `CartCodeWidget/CodeController` | `Handles add, remove and clear of cart codes for of the activated CartCodePlugins (for example, gift card code, voucher code, etc.) of the cart.` |
 
 **src/Pyz/Yves/ShopApplication/YvesBootstrap.php**
 

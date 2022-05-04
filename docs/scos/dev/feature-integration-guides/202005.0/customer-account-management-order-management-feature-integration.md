@@ -17,9 +17,9 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Customer Account Management | master |
-| Order Management | master |
-| Spryker Core | master |
+| Customer Account Management | {{page.version}} |
+| Order Management | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Set up Configuration
 To enable order search functionality, adjust config as shown below.
@@ -86,6 +86,6 @@ console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}

@@ -1,5 +1,5 @@
 ---
-title: Product Image Management
+title: Product Images overview
 description: Group several images into sets and link them to products. One product can have several named and localized sets of images.
 last_updated: Sep 14, 2020
 template: concept-topic-template
@@ -31,5 +31,5 @@ Developer:
 
 Back Office User:
 
-- [Assign images to a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html#adding-images)
+- [Assign images to a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html#adding-images)
 - [Assign images to categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html)

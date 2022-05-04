@@ -1,5 +1,5 @@
 ---
-title: GLUE- Promotions & Discounts feature integration
+title: GLUE API - Promotions and Discounts feature integration
 description: The guide walks you through the process of installing Promotions&Discounts feature into the project
 last_updated: Feb 7, 2020
 template: feature-integration-guide-template
@@ -118,6 +118,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following endpoint is available: `http://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}`<br>Send a request to `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` and verify if the abstract product with a given SKU has at least one assigned product label and the response includes relationships to product-labels resources.)
+Make sure that the following endpoint is available: `https://glue.mysprykershop.comm/product-labels/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}`<br>Send a request to https://glue.mysprykershop.comom/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` and verify if the abstract product with a given SKU has at least one assigned product label and the response includes relationships to product-labels resources.)
 
 {% endinfo_block %}

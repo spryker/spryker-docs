@@ -38,12 +38,14 @@ To retrieve a product label, send the request:
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/product-labels/3`
+Request sample: retrieve a product label
+
+`GET http://glue.mysprykershop.com/product-labels/3`
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve a product label</summary>
 
 ```json
 {
@@ -89,7 +91,7 @@ Apart from using this dedicated endpoint, you can retrieve product lables as an 
 
 | CODE | REASON |
 | --- | --- |
-| 1201 | A label with the specified ID does not exist. |
+| 1201 | Label with the specified ID does not exist. |
 | 1202 | Product label ID is not specified. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

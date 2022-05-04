@@ -1,5 +1,5 @@
 ---
-title: Gift Cards Purchase and Redeeming
+title: Gift Cards feature overview
 last_updated: Sep 29, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v1/docs/gift-cards-purchase-redeeming
@@ -23,7 +23,7 @@ This article describes general concepts of gift cards, their purchase and redeem
 
 In the Spryker shop, the gift cards follow the same rules and bought as products, they can even be bundles, however they are purely virtual and do not require shipping. Gift card can be applied as a voucher and redeemed to pay an order. Therefore, the gift cards have two characteristics - a product characteristic and a voucher (+payment method) characteristic. When gift card is bought, it is treated like a product, and when it is applied - it’s a voucher that can be used as a payment method.
 
-Gift cards have variants just like abstract products, i.e. for example, a New Year Gift Card can have all the different values - 50 Euro, 100 Euro, etc. - in this case, the New Year Gift Card would be handled like an abstract product, and 50 Euro, 100 Euro etc. gift cards would be its variants.
+Gift cards have variants just like abstract products, for example, for example, a New Year Gift Card can have all the different values - 50 Euro, 100 Euro, etc. - in this case, the New Year Gift Card would be handled like an abstract product, and 50 Euro, 100 Euro etc. gift cards would be its variants.
 
 When customer puts a gift card to cart, it is possible to change variant, quantity and remove it from cart, just like any abstract product. It should be noted however, that no discounts are applied on gift card products, since the price paid for the gift card must equal the value of the gift card. Even though technically it is possible to have different amounts for gift card’s price and value (say, the gift card price is 100 Euro however the gift card value is 150 Euro), but you need to consult your local legislation to make sure it would be legal in your country.
 ![Gift cards](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gift_card.png) 

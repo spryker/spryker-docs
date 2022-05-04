@@ -1,5 +1,5 @@
 ---
-title: Product Labels API feature integration
+title: Glue API - Product Labels feature integration
 description: This guide will navigate you through the process of installing and configuring the Product Labels API feature in Spryker OS.
 last_updated: Jun 19, 2020
 template: feature-integration-guide-template
@@ -114,7 +114,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following endpoint is available: `http://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}`
+Make sure the following endpoint is available: `https://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}`
 
 
 Send a request to `http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels `and verify if the abstract product with the given SKU has at least one assigned product label and the response includes relationships to the product-labels resources.

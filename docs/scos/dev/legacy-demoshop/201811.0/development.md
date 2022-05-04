@@ -22,6 +22,11 @@ redirect_from:
   - /v2/docs/en/development-for-legacy-demoshop
   - /v1/docs/development-for-legacy-demoshop
   - /v1/docs/en/development-for-legacy-demoshop
+  - /docs/scos/dev/sdk/202009.0/development.html
+  - /docs/scos/dev/sdk/202005.0/development.html
+  - /docs/scos/dev/sdk/202001.0/development.html
+  - /docs/scos/dev/sdk/201907.0/development.html
+  - /docs/scos/dev/sdk/201903.0/development.html        
 ---
 
 Development refers to writing your own assets, consuming external dependencies and linking resources to make them work together.

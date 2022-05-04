@@ -1,5 +1,5 @@
 ---
-title: HowTo - Set up Database Connections
+title: "HowTo: Set up database connections"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-setup-database-connections

@@ -14,13 +14,13 @@ related:
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
   - title: Discontinuing Products
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/discontinuing-products.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/discontinuing-products.html
   - title: Creating Product Bundles
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/creating-product-bundles.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/creating-product-bundles.html
   - title: Adding Product Alternatives
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/adding-product-alternatives.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/adding-product-alternatives.html
   - title: Adding Volume Prices to Abstract Products
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
   - title: Availability- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/catalog/availability/references/availability-reference-information.html
 ---
@@ -58,7 +58,7 @@ This will take you to the **Product Availability** page. See [Availability: Refe
 Please note that you are updating the product variant availability, not the bundle availability itself. To see examples on how the bundle availability is calculated, see [Availability: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/references/availability-reference-information.html).
 {% endinfo_block %}
 ***
-**Tips & Tricks**
+**Tips and tricks**
 You can edit stock for variants from the **Edit Concrete Product** page:
 1. Navigate to the **Edit Product Abstract** using one of the following options:
     1.  **Products > Products > Edit**.

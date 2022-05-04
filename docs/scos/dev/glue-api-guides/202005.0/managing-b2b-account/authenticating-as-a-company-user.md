@@ -60,7 +60,7 @@ To retrieve a list of all the Company Users available to the currently logged in
 
 [/company-users/mine](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/company-users)
 
-Sample request: *GET http://glue.mysprykershop.com/company-users/mine*
+Request sample: *GET http://glue.mysprykershop.com/company-users/mine*
 
 {% info_block infoBox "Authentication Required" %}
 To get a list of Company Users, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
@@ -130,7 +130,7 @@ If the currently logged in user does not have access to any Company User account
 
 To help customers with selecting the necessary Company User, you can provide additional information, such as the company and business unit that each account belongs to. Also, you can identify which roles the corporate accounts can perform within the company. To fetch such information, extend the response of the endpoint with the **companies** and **company-business-units**, and **company-roles** resource relationships.
 
-Sample request: *GET http://glue.mysprykershop.com/company-users/min?**include=companies,company-business-units,company-roles***
+Request sample: *GET http://glue.mysprykershop.com/company-users/min?**include=companies,company-business-units,company-roles***
 
 In this case, the following additional attributes will be added to the response:
 
@@ -335,7 +335,7 @@ To impersonate a user as a Company Account and receive a B2B access token, send 
 
 [/company-user-access-tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/company-user-access-tokens)
 
-Sample request: *POST http://glue.mysprykershop.com/company-user-access-tokens*
+Request sample: *POST http://glue.mysprykershop.com/company-user-access-tokens*
 
 {% info_block warningBox "Authentication Required" %}
 To access the endpoint, you need to authenticate customers as regular users first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).

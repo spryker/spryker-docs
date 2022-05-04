@@ -24,7 +24,7 @@ redirect_from:
 
 ## Upgrading from version 1.0.* to version 2.0.0
 
-In this new version of the **ShipmentCheckoutConnector** module, we have added support of split delivery. You can find more details about the changes on the ShipmentCheckoutConnector module release page.
+In this new version of the `ShipmentCheckoutConnector` module, we have added support of split delivery. You can find more details about the changes on the `ShipmentCheckoutConnector` module release page.
 
 {% info_block errorBox %}
 
@@ -32,17 +32,19 @@ This release is a part of the Split delivery concept migration. When you upgrade
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 5 min*
 
-1. Upgrade the **ShipmentCheckoutConnector** module to the new version:
+To upgrade to the new version of the module, do the following:
+
+1. Upgrade the `ShipmentCheckoutConnector` module to the new version:
 
 ```bash
-composer require spryker/shipment-сheckout-сonnector: "^2.0.0" --update-with-dependencies
+composer require spryker/shipment-checkout-connector: "^2.0.0" --update-with-dependencies
 ```
+
 2. Generate the transfer objects:
 
 ```bash
 console transfer:generate
 ```
 
-*Estimated migration time: 5 min*

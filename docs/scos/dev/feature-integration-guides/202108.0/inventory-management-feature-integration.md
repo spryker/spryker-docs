@@ -1,5 +1,5 @@
 ---
-title: Inventory management feature integration
+title: Inventory Management feature integration
 description: The guide guides you through the process of installing the Warehouse Management functionality into your project.
 last_updated: Jun 17, 2021
 template: feature-integration-guide-template
@@ -129,7 +129,6 @@ class DataImportConfig extends SprykerDataImportConfig
 3. Generate transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

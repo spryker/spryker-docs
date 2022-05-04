@@ -37,13 +37,13 @@ To retrieve protected resources, send the request:
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/customer-access`
+Request sample: retrieve protected resources
+
+`GET http://glue.mysprykershop.com/customer-access`
 
 ### Response
 
-
-
-Response sample:
+Response sample: retrieve protected resources
 
 ```json
 {
@@ -60,12 +60,12 @@ Response sample:
                 ]
             },
             "links": {
-                "self": "https://glue.mysprykershop.com/customer-access
+                "self": "https://glue.mysprykershop.com/customer-access"
             }
         }
     ],
     "links": {
-        "self": "https://glue.mysprykershop.com/customer-access
+        "self": "https://glue.mysprykershop.com/customer-access"
     }
 }
 ```

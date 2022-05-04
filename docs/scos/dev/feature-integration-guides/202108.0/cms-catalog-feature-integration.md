@@ -1,5 +1,5 @@
 ---
-title: CMS + catalog feature integration
+title: CMS + Catalog feature integration
 description: The CMS Page Search Catalog feature allows viewing search results for subcategory pages. The guide describes how to enable the feature in the project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -259,7 +259,7 @@ shelldata:console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_glossary` table.
+Make sure that in the database the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 

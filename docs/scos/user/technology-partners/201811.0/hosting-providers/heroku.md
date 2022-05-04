@@ -21,4 +21,4 @@ See [Disclaimer](https://github.com/spryker/spryker-documentation).
 
 ## Integration
 
-To learn how to integrate Heroku into a Spryker project, see [Heroku technology partner integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/hosting-providers/heroku-technology-partner-integration.html).
+To learn how to integrate Heroku into a Spryker project, see [Integrating Heroku](/docs/scos/dev/technology-partner-guides/{{page.version}}/hosting-providers/integrating-heroku.html).

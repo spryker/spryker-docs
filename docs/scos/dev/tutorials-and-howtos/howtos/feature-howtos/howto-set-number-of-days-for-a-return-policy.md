@@ -1,5 +1,5 @@
 ---
-title: HowTo - Set Number of Days for a Return Policy
+title: "HowTo: Set number of fays for a return policy"
 description: The article describes how to set a number of days for a Return Policy
 last_updated: Jun 16, 2021
 template: howto-guide-template

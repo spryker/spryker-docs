@@ -1,5 +1,5 @@
 ---
-title: Product measurement unit feature integration
+title: Product Measurement Unit feature integration
 description: The Measurement Units feature allows defining specific units of measure for products. The guide describes how to integrate the feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -96,7 +96,6 @@ Adjust the schema definition so entity changes will trigger events.
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -197,7 +196,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 
@@ -963,7 +962,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 

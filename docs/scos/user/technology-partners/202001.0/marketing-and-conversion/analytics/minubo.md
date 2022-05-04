@@ -10,7 +10,7 @@ redirect_from:
   - /v4/docs/en/minubo
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
+    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information
@@ -26,7 +26,7 @@ YOUR ADVANTAGES:
 * The minubo data feeds and already developed integrations to third-party systems enables flexible use of the data
 * Implementation and enablement is conducted by our in-house advisory and support team
 
-## Related Developer articles
+## Related Developer guides
 
 * [Installing and configuring Minubo](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/installing-and-confiugring-minubo.html)
 

@@ -10,15 +10,15 @@ redirect_from:
   - /v1/docs/en/managing-products
 related:
   - title: Creating Product Variants
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/concrete-products/creating-product-variants.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/creating-product-variants.html
   - title: Discontinuing Products
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/discontinuing-products.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/discontinuing-products.html
   - title: Creating and Managing Product Bundles
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/creating-product-bundles.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/creating-product-bundles.html
   - title: Adding Product Alternatives
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/adding-product-alternatives.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/adding-product-alternatives.html
   - title: Adding Volume Prices
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
   - title: Products- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html
   - title: Abstract Product- Reference Information
@@ -40,7 +40,7 @@ The abstract product is inactive until at least one product variant is activated
 Starting now, the product is visible to the customers of your online store. 
 Please keep in mind that each variant needs to be activated in order to be visible to your customers.
 ***
-**Tips & Tricks**
+**Tips and tricks**
 If at some point of time you want to hide the product variant from your customers, you just deactivate it using the same procedure described above. This deactivates only the product variant. The abstract product is active until at least one its variant is active.
 ***
 ## Viewing a Product
@@ -48,7 +48,7 @@ If you need to review the product details without actually editing them, do the 
 1. In the _Actions_ column of the abstract product you want to view, click **View**.
 2. On the **View Product** page, you can navigate to the view product variant, initiate the editing flow for it, or manage its attributes. 
 ***
-**Tips & Tricks**
+**Tips and tricks**
 If you notice something you would like to change for your product, click **Edit** on the top-right corner of the page. 
 ***
 

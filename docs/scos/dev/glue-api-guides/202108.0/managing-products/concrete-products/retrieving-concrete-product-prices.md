@@ -38,8 +38,8 @@ To retrieve prices of a concrete product, send the request:
 
 | REQUEST | USAGE |
 |-|-|
-| `GET http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices` | Retrieve the prices of the 001_25904006 product. |
-| `GET http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices?currency=CHF&priceMode=GROSS_MODE` | Retrieve the gross price of the 001_25904006 product in Swiss Franc. |
+| GET https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices | Retrieve the prices of the `001_25904006` product. |
+| GET https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices?currency=CHF&priceMode=GROSS_MODE | Retrieve the gross price of the 001_25904006 product in Swiss Franc. |
 
 | STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 |-|-|-|
@@ -48,7 +48,7 @@ To retrieve prices of a concrete product, send the request:
 
 ### Response
 
-<details><summary markdown='span'>Response sample with default concrete product prices</summary>
+<details><summary markdown='span'>Response sample: retrieve default prices of a concrete product</summary>
 
 ```json
 {
@@ -82,23 +82,20 @@ To retrieve prices of a concrete product, send the request:
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
+                "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
+        "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
     }
 }
 ```
-
 </details>
 
-<details><summary markdown='span'>Response sample with default and volume concrete prices</summary>
+<details><summary markdown='span'>Response sample: retrieve default and volume prices of a concrete product</summary>
 
 ```json
-
-
 {
     "data": [
         {
@@ -146,10 +143,9 @@ To retrieve prices of a concrete product, send the request:
     }
 }
 ```
-
 </details>
 
-<details><summary markdown='span'>Response sample with a gross price in Swiss Franc for a concrete product</summary>
+<details><summary markdown='span'>Response sample: retrieve a gross price in Swiss Franc of a concrete product</summary>
 
 ```json
 {
@@ -183,16 +179,15 @@ To retrieve prices of a concrete product, send the request:
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
+                "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-prices"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/001_25904006/items?currency=CHF&priceMode=GROSS_MODE"
+        "self": "https://glue.mysprykershop.com/concrete-products/001_25904006/items?currency=CHF&priceMode=GROSS_MODE"
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -213,6 +208,7 @@ To retrieve prices of a concrete product, send the request:
 
 | CODE | REASON |
 |-|-|
+| 302 | Concrete product is not found. |
 | 308 | Can't find concrete product prices. |
 | 312 | Concrete product sku is not specified. |
 | 302 | Concrete product is not found. |

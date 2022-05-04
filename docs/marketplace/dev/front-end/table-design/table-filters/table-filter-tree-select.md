@@ -14,11 +14,11 @@ Check out an example usage of the Table Filter Tree Select in the `@spryker/tabl
 
 Component configuration:
 
-- `enabled` - enables the filter via config.  
-- `items` - an array with config for each filter tree-select.  
+- `enabled`—enables the filter via config.  
+- `items`—an array with config for each filter tree-select.  
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         dataSource: { ... },
         columns: [ ... ],
@@ -59,7 +59,12 @@ Component configuration:
 Register the component:
 
 ```ts
-// Dynamic
+declare module '@spryker/table.feature.filters' {
+    interface TableFiltersRegistry {
+        'tree-select': TableFilterTreeSelect;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -99,14 +104,8 @@ export class RootModule {}
 Below you can find interfaces for the Table Filter Tree Select:
 
 ```ts
-declare module '@spryker/table.feature.filters' {
-    interface TableFiltersRegistry {
-        'tree-select': TableFilterTreeSelect;
-    }
-}
-
 export interface TableFilterTreeSelect
-    extends TableFilterBase<TableFilterTreeSelectValue> {
+    extends TableFilterBase<TableFilterTreeSelectValue | TableFilterTreeSelectValue[]> {
     type: 'tree-select';
     typeOptions: TableFilterTreeSelectOptions;
 }
@@ -122,5 +121,5 @@ export interface TableFilterTreeSelectOptionsValue {
     children?: TableFilterTreeSelectOptionsValue[];
 }
 
-export type TableFilterTreeSelectValue = unknown | unknown[];
+export type TableFilterTreeSelectValue = TreeSelectValue;
 ```

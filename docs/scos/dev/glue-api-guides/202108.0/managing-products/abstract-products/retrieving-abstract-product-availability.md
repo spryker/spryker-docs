@@ -25,17 +25,21 @@ To retrieve availability of an abstract product, send the request:
 ---
 `GET` **/abstract-products/*{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*/abstract-product-availabilities**
 
+---
+
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
 | ***{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*** | SKU of an abstract product to get availability for. |
 
 ### Request
 
-Request sample : `GET http://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities`
+Request sample: retrieve availability of an abstract product
+
+`GET http://glue.mysprykershop.com/abstract-products/001/abstract-product-availabilities`
 
 ### Response
 
-Response sample:
+Response sample: retrieve availability of an abstract product
 
 ```json
 {

@@ -1,5 +1,5 @@
 ---
-title: Product group feature integration
+title: Product Groups feature integration
 description: The guide describes the process of installing the Product Group feature in your project.
 last_updated: Feb 16, 2021
 template: feature-integration-guide-template
@@ -98,7 +98,6 @@ Make sure that the following modules have been installed:
 3. Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

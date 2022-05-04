@@ -14,8 +14,8 @@ redirect_from:
 
 This endpoint allows retrieving business unit addresses.
 
-
 ## Retrieve a business unit address
+
 To retrieve a business unit address, send the request:
 
 ***
@@ -33,15 +33,17 @@ To retrieve a business unit address, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
-Request sample: `GET http://glue.mysprykershop.com/company-business-unit-addresses/eec036ee-b999-5753-a7dd-8d0710a2312f`
+Request sample: retrieve a business unit address
+
+`GET http://glue.mysprykershop.com/company-business-unit-addresses/eec036ee-b999-5753-a7dd-8d0710a2312f`
 
 
 ### Response
 
 
 <details>
-<summary markdown='span'>Response sample</summary>
-    
+<summary markdown='span'>Response sample: retrieve a business unit address</summary>
+
 ```json
 {
     "data": {
@@ -63,7 +65,6 @@ Request sample: `GET http://glue.mysprykershop.com/company-business-unit-address
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -83,7 +84,7 @@ Request sample: `GET http://glue.mysprykershop.com/company-business-unit-address
 | --- | --- |
 | 001 | Access token is invalid. |
 | 002 | Access token is missing. |
-| 2001 | Сompany business unit address was not found.|
+| 2001 | Company business unit address is not found.|
 
 {% info_block infoBox "Note" %}
 

@@ -101,7 +101,7 @@ To stop sharing a cart, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
-Sample request: `DELETE http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa`
+Request sample: `DELETE http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa`
 
 ### Response
 
@@ -111,7 +111,14 @@ If the request is successful, the endpoint returns  `204 No Content` status code
 
 | CODE | REASON |
 | --- | --- |
-| 401 | The access token is invalid. |
-| 403 | The access token is missing. |
-| 404 | Cart not found. |
-| 422 | Failed to share a cart. |
+| 001 | Access token is invalid. |
+| 002 | Access token is missing. |
+| 101 | Cart is not found. |
+| 104 | Cart uuid is missing.  |
+| 2501| Specified permission group is not found or the user does not have access to it. |
+| 2701 | Action is forbidden. |
+| 2702 | Failed to share a cart. |
+| 2703 | Shared cart not found. |
+| 2704 | Shared cart ID is missing. |
+| 2705 | Shared cart is not found. |
+| 2706 | Failed to save the shared cart. |

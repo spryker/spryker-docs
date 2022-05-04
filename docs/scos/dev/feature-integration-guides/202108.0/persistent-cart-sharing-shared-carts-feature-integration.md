@@ -1,5 +1,5 @@
 ---
-title: Persistent cart sharing + shared carts feature integration
+title: Persistent Cart Sharing + Shared Carts feature integration
 description: The guide walks you through the process of installing the Shared Carts and Persistent Cart Sharing features in the project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -150,7 +150,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 

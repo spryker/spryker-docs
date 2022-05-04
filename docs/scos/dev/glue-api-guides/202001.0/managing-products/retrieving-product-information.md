@@ -29,7 +29,7 @@ As Spryker Commerce OS implements product data in a hierarchical structure, this
 To retrieve full information about a product (regardless of whether it is available or not) via REST, use the endpoints listed below.
 `/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}`
 Retrieves information on an abstract product by SKU.
-Sample request: `GET http://mysprykershop.com/abstract-products/001`
+Request sample: `GET http://mysprykershop.com/abstract-products/001`
 where `001` is the SKU of the abstract product.
 
 | Field* | Type | Description |
@@ -181,7 +181,7 @@ If the request was successful and a product with the specified SKU was found, th
 ```
 `/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}`
 Retrieves information on a concrete product by SKU.
-Sample request: `GET http://mysprykershop.com/concrete-products/001_25904006`
+Request sample: `GET http://mysprykershop.com/concrete-products/001_25904006`
 where `001_25904006` is the SKU of the concrete product.
 
 | Field* | Type | Description |
@@ -331,7 +331,7 @@ By default, the response contains additional product information as relationship
 To find out how many items of a certain product are available, use the following endpoints:
 `/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-product-availabilities`
 Retrieves the availability of an abstract product by SKU.
-Sample request: `GET http://mysprykershop.com/abstract-products/001/abstract-product-availabilities`
+Request sample: `GET http://mysprykershop.com/abstract-products/001/abstract-product-availabilities`
 where `001` is the SKU of the abstract product.
 
 | Field* | Type | Description |
@@ -364,7 +364,7 @@ If the request was successful, the resource responds with a **RestAbstractProduc
 
 `/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/concrete-product-availabilities`
 Retrieves the availability of a concrete product by SKU.
-Sample request: `GET http://mysprykershop.com/concrete-products/001_25904006/concrete-product-availabilities`
+Request sample: `GET http://mysprykershop.com/concrete-products/001_25904006/concrete-product-availabilities`
 where `001_25904006` is the SKU of the concrete product.
 
 | Field* | Type | Description |
@@ -406,7 +406,7 @@ For information on the different price types available in Spryker, see [Price]()
 
 `/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-product-prices`
 Gets prices for an **abstract** product by SKU.
-Sample request: `GET http://mysprykershop.com/abstract-products/001/abstract-product-prices`
+Request sample: `GET http://mysprykershop.com/abstract-products/001/abstract-product-prices`
 where `001` is the SKU of the abstract product.
 
 | Field* | Type | Description |
@@ -468,7 +468,7 @@ If the request was successful, the resource responds with a **RestProductPricesR
 
 `/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/concrete-product-prices`
 Gets prices for a concrete product by SKU.
-Sample request: `GET http://mysprykershop.com/concrete-products/001_25904006/concrete-product-prices`
+Request sample: `GET http://mysprykershop.com/concrete-products/001_25904006/concrete-product-prices`
 where `001_25904006` is the SKU of the concrete product.
 
 | Field* | Type | Description |
@@ -532,7 +532,7 @@ If the request was successful, the resource responds with a RestProductPricesRes
 
 Gets prices for an abstract product by SKU with the specific currency and a price mode.
 
-Sample request: `GET http://mysprykershop.com//abstract-products/001/abstract-product-prices?currency=CHF&priceMode=GROSS_MODE`
+Request sample: `GET http://mysprykershop.com//abstract-products/001/abstract-product-prices?currency=CHF&priceMode=GROSS_MODE`
 
 where `001` is the SKU of the abstract product; `CHF` is the currency to display (Swiss Franc); `GROSS_MODE` is the price mode.
 
@@ -605,7 +605,7 @@ Gets prices for an abstract product by SKU.
 Tax sets are available for abstract products only.
 {% endinfo_block %}
 
-Sample request: `GET http://mysprykershop.com/abstract-products/209/product-tax-sets`
+Request sample: `GET http://mysprykershop.com/abstract-products/209/product-tax-sets`
 where `209` is the SKU of the abstract product.
 
 | Field* | Description |
@@ -722,7 +722,7 @@ Sample response
 To get image sets that can be used to display a product, use the endpoints below.
 `/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/abstract-product-image-sets`
 Gets images of an abstract product by SKU.
-Sample request: `GET http://mysprykershop.com/abstract-products/001/abstract-product-image-sets`
+Request sample: `GET http://mysprykershop.com/abstract-products/001/abstract-product-image-sets`
 where `001` is the SKU of the abstract product.
 
 | Field* | Description |
@@ -769,7 +769,7 @@ Sample response
 
 `/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/concrete-product-image-sets`
 Gets images of a concrete product by SKU.
-Sample request: `GET http://mysprykershop.com/concrete-products/001_25904006/concrete-product-image-sets`
+Request sample: `GET http://mysprykershop.com/concrete-products/001_25904006/concrete-product-image-sets`
 where `001_25904006` is the SKU of the concrete product.
 
 | Field* | Description |

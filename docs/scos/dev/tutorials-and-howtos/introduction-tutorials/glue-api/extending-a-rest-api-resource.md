@@ -1,5 +1,5 @@
 ---
-title: Extending a REST API Resource
+title: Extending a REST API resource
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/extending-a-rest-request-resource
@@ -43,7 +43,7 @@ To complete this tutorial, you need to comply with the following prerequisites:
 
 {% info_block infoBox %}
 
-If you have a development virtual machine with the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops) installed, all the required components will be available out of the box.
+If you have a development virtual machine with the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops) installed, all the required components will be available out of the box.
 
 {% endinfo_block %}
 

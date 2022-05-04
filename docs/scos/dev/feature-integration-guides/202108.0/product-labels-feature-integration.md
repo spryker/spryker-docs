@@ -1,5 +1,5 @@
 ---
-title: Product labels feature integration
+title: Product Labels feature integration
 description: This guide provides step-by-step instruction on integrating
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -152,7 +152,6 @@ Set up database schema and transfer objects as follows:
 3. Apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

@@ -1,5 +1,5 @@
 ---
-title: Customer access feature integration
+title: Customer Access feature integration
 description: The guide walks you through the process of installing the Customer Access feature in the project.
 last_updated: Aug 27, 2020
 template: feature-integration-guide-template
@@ -103,7 +103,6 @@ Adjust the schema definition so entity changes will trigger events.
 
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -379,5 +378,5 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data has been added to the `spy_glossary` table.
+Make sure that in the database the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 {% endinfo_block %}

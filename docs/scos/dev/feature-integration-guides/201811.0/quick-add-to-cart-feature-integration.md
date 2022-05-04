@@ -1,5 +1,5 @@
 ---
-title: Quick Order feature integration
+title: Quick Add to Cart feature integration
 description: Quick Add to Cart allows customers to buy products in a few clicks. This guide will walk you through the process of integrating this feature into your project.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template
@@ -104,7 +104,7 @@ console data:import:glossary
 
 {% info_block warningBox “Verification” %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table. 
+Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables. 
 
 {% endinfo_block %}
 

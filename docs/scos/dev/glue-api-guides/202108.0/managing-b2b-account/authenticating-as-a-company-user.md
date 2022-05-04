@@ -15,6 +15,7 @@ redirect_from:
 This endpoint allows authenticating as a company user.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html).
 
 ## Authenticate as a company user
@@ -31,9 +32,10 @@ To authenticate as a company user, send the request:
 
 ### Request
 
-Request sample:
+Request sample: authenticate as a company user
 
 `POST https://glue.mysprykershop.com/company-user-access-tokens`
+
 ```json
 {
     "data": {
@@ -54,7 +56,7 @@ Request sample:
 
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: authenticate as a company user</summary>
 
 ```json
 {
@@ -73,7 +75,6 @@ Request sample:
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -87,9 +88,9 @@ Request sample:
 
 | CODE | REASON |
 | --- | --- |
-| 001 | Failed to authenticate a user. This can happen due to the following reasons:<ul><li>Current authenticated customer cannot authenticate as the specified company user;</li><li>Specified company user does not exist;</li><li>Authentication token provided in the request is incorrect.</li></ul> |
-| 002 | Authentication token is missing in the request. |
-| 901 | Company user Id format is incorrect. |
+| 001 | Failed to authenticate a user. This can happen due to the following reasons:<ul><li>Current authenticated customer cannot authenticate as the specified company user.</li><li>Specified company user does not exist.</li><li>Authentication token provided in the request is incorrect.</li></ul> |
+| 002 | Authentication token is missing. |
+| 901 | The `idCompanyUser` attribute is not specified, invalid, or empty. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

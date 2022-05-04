@@ -25,7 +25,7 @@ This endpoint allows retrieving information about company users.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html).
 
 ## Retrieve company users
 
@@ -41,12 +41,14 @@ To retrieve all the company users that belong to the company of the authenticate
 | --- | --- | --- |
 | Authorization | &check; | Alphanumeric string that authorizes the company user to send requests to protected resources. Get it by [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).  |
 
-Sample request: `GET https://glue.mysprykershop.com/company-users`
+Request sample: retrieve company users
+
+`GET https://glue.mysprykershop.com/company-users`
 
 ### Response
 
 <details>
-<summary markdown='span'>Sample Response</summary>
+<summary markdown='span'>Response sample: retrieve company users</summary>
 
 ```json
 {
@@ -101,7 +103,6 @@ Sample request: `GET https://glue.mysprykershop.com/company-users`
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -134,12 +135,12 @@ To retrieve information about a company user, send the request:
 | REQUEST | USAGE |
 | --- | --- |
 | GET https://glue.mysprykershop.com/company-users/e1019900-88c4-5582-af83-2c1ea8775ac5 | Retrieve the company user with unique identifier `e1019900-88c4-5582-af83-2c1ea8775ac5`. |
-| GET https://glue.mysprykershop.com/company-users/min?include=companies,company-business-units,company-roles | Retrieve copmany users and related companies, business units, and roles. |
+| GET https://glue.mysprykershop.com/company-users/min?include=companies,company-business-units,company-roles | Retrieve company users and related companies, business units, and roles. |
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve a company user with the unique identifier</summary>
 
 ```json
 {
@@ -156,11 +157,10 @@ To retrieve information about a company user, send the request:
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with companies, company business units and company roles</summary>
+<summary markdown='span'>Response sample: Retrieve company users and related companies, business units, and roles</summary>
 
 ```json
 {
@@ -327,7 +327,6 @@ To retrieve information about a company user, send the request:
     ]
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -356,8 +355,9 @@ To retrieve information about a company user, send the request:
 | --- | --- |
 | 001 | Access token is invalid. |
 | 002 | Access token is missing.|
-| 1403| Current company account is not set. |
-| 1404 | Specified company user was not found or the user does not have permissions to view the account. |
+| 1401 | Rest user is not a company user. |
+| 1403 | Current company account is not set. Select the current company user with `/company-user-access-tokens` to access the resource collection. |
+| 1404 | Specified company user is not found or does not have permissions to view the account. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

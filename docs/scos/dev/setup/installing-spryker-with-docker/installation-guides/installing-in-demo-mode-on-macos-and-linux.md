@@ -34,17 +34,17 @@ Follow the steps to install Spryker in Demo Mode:
 
 1. Open a terminal.
 2. Create a new folder and navigate into it.
-3. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops):
+3. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops):
     * Clone the B2C repository:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202108.0  --single-branch ./b2c-demo-shop
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202204.0 --single-branch ./b2c-demo-shop
     ```
 
     * Clone the B2B repository:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202108.0  --single-branch ./b2b-demo-shop
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0 --single-branch ./b2b-demo-shop
     ```
 4. Depending on the cloned repository, navigate into the cloned folder:
     * B2C repository:
@@ -89,7 +89,7 @@ docker/sdk up
 8. Update the `hosts` file:
 
 ```bash
-echo "127.0.0.1 zed.de.spryker.local yves.de.spryker.local glue.de.spryker.local zed.at.spryker.local yves.at.spryker.local glue.at.spryker.local zed.us.spryker.local yves.us.spryker.local glue.us.spryker.local mail.spryker.local scheduler.spryker.local queue.spryker.local" | sudo tee -a /etc/hosts
+echo "127.0.0.1 zed.de.spryker.local yves.de.spryker.local glue.de.spryker.local zed.at.spryker.local yves.at.spryker.local glue.at.spryker.local zed.us.spryker.local yves.us.spryker.local glue.us.spryker.local mail.spryker.local scheduler.spryker.local queue.spryker.local backoffice.de.spryker.local" | sudo tee -a /etc/hosts
 ```
 
 {% info_block infoBox %}
@@ -136,4 +136,4 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 * [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
 * [Configuring services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html)
 * [Setting up a self-signed SSL certificate](/docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html)
-* [Additional DevOPS guidelines](/docs/scos/dev/setup/installing-spryker-with-docker/configuration/additional-devops-guidelines.html)
+* [Adjusting Jenkins for a Docker environment](/docs/scos/dev/setup/installing-spryker-with-docker/configuration/adjusting-jenkins-for-a-docker-environment.html)

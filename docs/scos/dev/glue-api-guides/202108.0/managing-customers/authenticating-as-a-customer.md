@@ -21,7 +21,7 @@ This endpoint allows authenticating as a customer. As an authenticated customer,
 
 {% info_block warningBox %}
 
-This endpoint does not comply with OAuth 2.0. If your project requires such compliance, use the `/token`endpoint. For details about the `/token`endpoint, see [Managing customer authentication tokens via OAuth 2.0](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html).
+This endpoint does not comply with OAuth 2.0. If your project requires such compliance, use the `/token` endpoint. For details about the `/token` endpoint, see [Managing customer authentication tokens via OAuth 2.0](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html).
 
 {% endinfo_block %}
 
@@ -39,7 +39,9 @@ To authenticate as a customer, send the request:
 
 ### Request
 
-Request sample: `POST https://mysprykershop.com/access-tokens`
+Request sample: authenticate as a customer
+
+`POST https://mysprykershop.com/access-tokens`
 
 ```json
 {
@@ -73,7 +75,7 @@ Note that depending on the Login feature configuration for your project, too man
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: authenticate as a customer</summary>
 
 ```json
 {
@@ -88,12 +90,11 @@ Note that depending on the Login feature configuration for your project, too man
             "idCompanyUser": "ebf4b55a-cab0-5ed0-8fb7-525a3eeedeac"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/access-tokens"
+            "self": "https://glue.mysprykershop.com/access-tokens"
         }
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -108,11 +109,7 @@ Note that depending on the Login feature configuration for your project, too man
 
 | CODE | REASON |
 | --- | --- |
-| 001 | Invalid access token. |
-| 002 | Access token missing or forbidden resource for the given user scope. |
 | 003 | Failed to log in the user. |
-| 004 | Failed to refresh a token. |
-| 403 | Failed to authenticate a user. |
 | 901 | Unprocessable login data (incorrect email format; email or password is empty).|
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

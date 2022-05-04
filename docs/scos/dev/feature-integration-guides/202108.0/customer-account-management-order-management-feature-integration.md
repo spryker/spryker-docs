@@ -1,5 +1,5 @@
 ---
-title: Customer account management + order management feature integration
+title: Customer Account Management + Order Management feature integration
 description: This guide provides step-by-step instruction on integrating Customer Account Management + Order Management feature into the Spryker-based project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -93,6 +93,6 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}

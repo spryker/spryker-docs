@@ -1,5 +1,5 @@
 ---
-title: Gift cards feature integration
+title: Gift Cards feature integration
 description: The guide walks you through the process of installing the Gift Cards feature in the project.
 last_updated: Nov 10, 2020
 template: feature-integration-guide-template
@@ -191,7 +191,6 @@ Once you've finished Setup Behavior step, make sure that:
 Run the following commands to apply database changes and to generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -1246,7 +1245,7 @@ console data:import:glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 {% endinfo_block %}
 
 ### 3) Set up Widgets

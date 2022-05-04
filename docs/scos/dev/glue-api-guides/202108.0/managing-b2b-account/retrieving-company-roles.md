@@ -26,6 +26,7 @@ related:
 In corporate environments, where users act as company representatives rather than private buyers, companies can leverage [Company Roles](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html) to distribute scopes and permissions among [Company Users](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html). This endpoint allows retrieving information about the company roles.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html).
 
 ## Retrieve a company role
@@ -52,14 +53,14 @@ To retrieve a company role, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| GET https://glue.mysprykershop.com/company-roles/mine | Retrieve all the copmany roles of the current authenticated company user. |
+| GET https://glue.mysprykershop.com/company-roles/mine | Retrieve all the company roles of the current authenticated company user. |
 | GET https://glue.mysprykershop.com/company-roles/2f0a9d3e-9e69-53eb-8518-284a0db04376 | Retrieve the company role with the id `2f0a9d3e-9e69-53eb-8518-284a0db04376`. |
 | GET https://glue.mysprykershop.com/company-roles/2f0a9d3e-9e69-53eb-8518-284a0db04376?include=companies | Retrieve the company role with the id `2f0a9d3e-9e69-53eb-8518-284a0db04376` with related companies included. |
 
 #### Response
 
 <details>
-<summary markdown='span'>Response sample of company roles of the current authenticated company user</summary>
+<summary markdown='span'>Response sample: Retrieve all the company roles of the current authenticated company user</summary>
 
 ```json
 {
@@ -85,7 +86,7 @@ To retrieve a company role, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample of a particular company role</summary>
+<summary markdown='span'>Response sample: retrieve a company role with the unique identifier</summary>
 
 ```json
 {
@@ -102,12 +103,11 @@ To retrieve a company role, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample with companies</summary>
+<summary markdown='span'>Response sample: retrieve a company role with the unique identifier and include the related companies</summary>
 
 ```json
 {
@@ -143,7 +143,6 @@ To retrieve a company role, send the request:
     ]
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -163,8 +162,8 @@ To retrieve a company role, send the request:
 | --- | --- |
 | 001 | Authentication token is invalid. |
 | 002 | Authentication token is missing. |
-|2101 | Company role is not found. |
-| 2103 | Current company user is not set. You need to select the current company user with /company-user-access-tokens in order to access the resource collection.
+| 2101 | Company role is not found. |
+| 2103 | Current company user is not set. Select the current company user with `/company-user-access-tokens` to access the resource collection. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

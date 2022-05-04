@@ -1,5 +1,5 @@
 ---
-title: Order management feature integration
+title: Order Management feature integration
 last_updated: Sep 8, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/order-management-feature-integration
@@ -679,7 +679,7 @@ console data:import:glossary
 
 {% info_block warningBox "Verification" %}
 
-Ensure that, in the database, the configured data has been added to the `spy_glossary` table.
+Ensure that, in the database, the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 
@@ -992,7 +992,7 @@ console data:import:glossary
 
 {% info_block warningBox "Verification" %}
 
-Ensure that, in the database, the configured data has been added to the `spy_glossary` table.
+Ensure that, in the database, the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 

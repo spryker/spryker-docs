@@ -23,7 +23,7 @@ redirect_from:
 This document describes the prerequisites for installing Spryker in Docker on MacOS.
 
 
-## System requirements
+## System requirements for installing Spryker with Docker
 
 Review the system and software requirements in the table and configure them using the following instructions.
 
@@ -31,7 +31,7 @@ Review the system and software requirements in the table and configure them usin
 | --- | --- |
 | Docker | 18.09.1 or higher |
 | Docker Compose | 1.28 or 1.29 |  
-| vCPU | 2 or more |
+| vCPU | 4 or more |
 | RAM  | 4GB or more |
 | Swap  | 2GB or more |
 
@@ -47,7 +47,7 @@ Signup for Docker Hub is not required.
 
 3. In the Docker Desktop, go to preferences by selecting the gear in the top right corner.
 
-4. In the *General* seciton of *Preferences*, clear the **Use Docker Compose V2** checkbox.
+4. In the *General* section of *Preferences*, select the **Use Docker Compose V2** checkbox.
 
 5. Update Memory and Swap Limits:
 
@@ -65,9 +65,9 @@ You can select lower **Memory:** and **Swap:** values than those provided in the
 
 {% endinfo_block %}
 
-5. [Development mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Install Mutagen:
+5. [Development mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Install or update Mutagen and Mutagen Compose to the latest version:
 ```shell
-brew install mutagen-io/mutagen/mutagen-beta
+brew list | grep mutagen | xargs brew remove && brew install mutagen-io/mutagen/mutagen mutagen-io/mutagen/mutagen-compose && mutagen daemon stop && mutagen daemon start
 ```
 
 ## Next steps

@@ -1,5 +1,5 @@
 ---
-title: Glue API - Products feature integration
+title: Glue API - Product feature integration
 description: This guide will navigate you through the process of installing and configuring the Product API feature in Spryker OS.
 last_updated: Oct 30, 2020
 template: feature-integration-guide-template
@@ -17,9 +17,9 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | Master | [Feature API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Product |master |  |
-| Price | master |  |
+| Spryker Core | 202009.0 | [Feature API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Product |202009.0 |  |
+| Price | 202009.0 |  |
 
 ###1) Install the required modules using Composer
 Run the following command to install the required modules:
@@ -45,14 +45,13 @@ Make sure that the following modules were installed:
 Run the following commands to apply the database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes haveoccurred in transfer objects:
+Make sure that the following changes have occurred in transfer objects:
 
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |
@@ -141,8 +140,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Make sure that the following endpoints are available:
 
-* `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}`
-* `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}`
+* `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}`
+* `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}`
 
 
 {% endinfo_block %}
@@ -216,12 +215,12 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Make sure that the following endpoints are available:
 
-* `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-image-sets` 
-* `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-image-sets`
+* `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-image-sets` 
+* `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-image-sets`
 
-Make a request to `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-image-sets`. The abstract product with the given SKU should have at least one image set. Make sure that the response includes relationships to the `abstract-product-image-sets` resource(s).
+Make a request to `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-image-sets`. The abstract product with the given SKU should have at least one image set. Make sure that the response includes relationships to the `abstract-product-image-sets` resource(s).
 
-Make a request to `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=concrete-product-image-sets`. The concrete product with a given SKU should have at least one image set. Make sure that the response includes relationships to the `concrete-product-image-sets` resources.
+Make a request to `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=concrete-product-image-sets`. The concrete product with a given SKU should have at least one image set. Make sure that the response includes relationships to the `concrete-product-image-sets` resources.
 
 {% endinfo_block %}
 
@@ -293,12 +292,12 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Make sure that the following endpoints are available:
 
-* `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-prices`
-* `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-prices`
+* `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/abstract-product-prices`
+* `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}/concrete-product-prices`
 
-Make a request to `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-prices`. Make sure that the response includes relationships to the `abstract-product-prices` resource(s).
+Make a request to `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=abstract-product-prices`. Make sure that the response includes relationships to the `abstract-product-prices` resource(s).
 
-Make a request to `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=concrete-product-prices`. Make sure that the response includes relationships to the `concrete-product-prices` resources.
+Make a request to `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=concrete-product-prices`. Make sure that the response includes relationships to the `concrete-product-prices` resources.
 
 {% endinfo_block %}
 
@@ -347,7 +346,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make a request to `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=category-nodes`.
+Make a request to `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=category-nodes`.
 
 Make sure that the response contains `category-nodes` as a relationship, and that the* category-nodes* data is included.
 
@@ -363,7 +362,7 @@ Make sure that the response contains `category-nodes` as a relationship, and tha
 			...
 		},
 		"links":{  
-			"self":"http://glue.mysprykershop.com/abstract-products/001"
+			"self":"https://glue.mysprykershop.com/abstract-products/001"
 		},
 		"relationships":{  
 			"category-nodes":{  
@@ -388,7 +387,7 @@ Make sure that the response contains `category-nodes` as a relationship, and tha
 				...
 			},
 			"links":{  
-				"self":"http://glue.mysprykershop.com/category-nodes/4"
+				"self":"https://glue.mysprykershop.com/category-nodes/4"
 			}
 		},
 		{  
@@ -398,7 +397,7 @@ Make sure that the response contains `category-nodes` as a relationship, and tha
 				...
 			},
 			"links":{  
-				"self":"http://glue.mysprykershop.com/category-nodes/2"
+				"self":"https://glue.mysprykershop.com/category-nodes/2"
 			}
 		}
 	]

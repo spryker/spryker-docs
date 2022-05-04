@@ -54,7 +54,7 @@ For detailed information on the modules that provide the API functionality and r
 ## Getting Related Items for an Abstract Product
 To get related items for an abstract product, send a GET request to the following endpoint:
 `/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}/related-products`
-Sample request: `GET http://mysprykershop.com/abstract-products/122/related-products`
+Request sample: `GET http://mysprykershop.com/abstract-products/122/related-products`
 where `122` is the SKU of the abstract product you need relations for.
 
 ### Response
@@ -316,7 +316,7 @@ You can also use the Accept-Language header to specify the locale.<br>Sample hea
 ## Getting Up-Selling Products for a Registered User's Cart
 To get up-selling items for all products in a cart of a registered customer, send a GET request to the following endpoint:
 `/carts/{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}/up-selling-products`
-Sample request: `GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products`
+Request sample: `GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products`
 where `1ce91011-8d60-59ef-9fe0-4493ef3628b2` is the ID of the cart you need items for.
 
 {% info_block infoBox %}
@@ -1408,7 +1408,7 @@ You can also use the **Accept-Language** header to specify the locale.<br>Sample
 ## Getting Up-Selling Products for a Guest Cart
 To get up-selling items for products in a guest cart, send a GET request to the following endpoint:
 `/guest-carts/{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}/up-selling-products`
-Sample request: `GET http://mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products`
+Request sample: `GET http://mysprykershop.com/guest-carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/up-selling-products`
 where `1ce91011-8d60-59ef-9fe0-4493ef3628b2` is the ID of the guest cart you need items for.
 
 Your request must specify a unique identifier of the **guest user** in the **X-Anonymous-Customer-Unique-Id** header.

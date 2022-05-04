@@ -1,5 +1,5 @@
 ---
-title: Product images + configurable bundle feature integration
+title: Product Images + Configurable Bundle feature integration
 description: This guide provides step-by-step instruction on integrating the Product Images + Configurable Bundle feature into the Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -60,7 +60,6 @@ Adjust the schema definition so that entity changes will trigger the events:
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -274,7 +273,6 @@ Run the following commands to apply database changes and generate entity and tra
 changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

@@ -1,5 +1,5 @@
 ---
-title: Inventory management feature integration
+title: Inventory Management feature integration
 description: The guide guides you through the process of installing the Warehouse Management functionality into your project.
 last_updated: Sep 8, 2020
 template: feature-integration-guide-template
@@ -73,7 +73,6 @@ Adjust the schema definition so `EventTransfer` has the additional columns for A
 Run the following commands to generate transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

@@ -39,7 +39,9 @@ For detailed information on the modules that provide the API functionality and r
 Before suggesting an alternative product, check if a product is discontinued by [retrieving a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product).
 
 {% info_block infoBox %}
+
 It is the responsibility of the client to identify if a product is unavailable and when to provide alternatives. The API only provides information on availability, discontinued status and possible alternatives.
+
 {% endinfo_block %}
 
 ## Retrieve abstract alternative products
@@ -66,12 +68,12 @@ To retrieve abstract alternative products, send the request:
 | REQUEST | USAGE |
 | --- | --- |
 | `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/abstract-alternative-products` | Retrieve abstract product alternatives of the product with SKU `145_29885470`. |
-| `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/abstract-alternative-products?include=product-labels` | Retrieve general information about the abstract product with its assigned product lables included. |
+| `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/abstract-alternative-products?include=product-labels` | Retrieve general information about the abstract product with its assigned product labels included. |
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve abstract product alternatives of the product</summary>
 
 ```json
 {
@@ -131,12 +133,11 @@ To retrieve abstract alternative products, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample with product labels</summary>
+<summary markdown='span'>Response sample: retrieve abstract product alternatives of the product with the details on the product labels</summary>
 
 ```json
 {
@@ -221,11 +222,11 @@ To retrieve abstract alternative products, send the request:
     ]
 }
 ```
-
 </details>
 
 
 ## Retrieve concrete alternative products
+
 To retrieve concrete alternative products, send the request:
 
 ---
@@ -246,13 +247,13 @@ To retrieve concrete alternative products, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/concrete-alternative-products` | Retrieve abstract product alternatives of the product with SKU `145_29885470`. |
-| `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/concrete-alternative-products?include=product-labels` | Retrieve general information about the abstract product with its assigned product lables included. |
+| `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/concrete-alternative-products` | Retrieve concrete product alternatives of the product with SKU `145_29885470`. |
+| `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/concrete-alternative-products?include=product-labels` | Retrieve concrete product alternatives with the assigned product labels included. |
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve concrete product alternatives of the product</summary>
 
 ```json
 {
@@ -291,12 +292,11 @@ To retrieve concrete alternative products, send the request:
     }
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample with product labels</summary>
+<summary markdown='span'>Response sample: retrieve concrete product alternatives of the product with the details on the product labels</summary>
 
 ```json
 {
@@ -360,7 +360,6 @@ To retrieve concrete alternative products, send the request:
     ]
 }
 ```
-
 </details>
 
 

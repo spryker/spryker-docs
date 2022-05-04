@@ -23,7 +23,7 @@ For detailed information on the modules that provide the API functionality and r
 To retrieve tax sets of a product, send the request:
 
 ---
-`GET` **/abstract-products/*{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*/tax-sets**
+`GET` **/abstract-products/*{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*/product-tax-sets**
 
 ---
 
@@ -33,12 +33,14 @@ To retrieve tax sets of a product, send the request:
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/abstract-products/209/product-tax-sets`
+Request sample: retrieve tax sets
+
+`GET http://glue.mysprykershop.com/abstract-products/209/product-tax-sets`
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve tax sets</summary>
 
 ```json
 {
@@ -136,7 +138,6 @@ Request sample: `GET http://glue.mysprykershop.com/abstract-products/209/product
     }
 }
 ```
-
 </details>
 
 <a name="tax-sets-response-attributes"></a>

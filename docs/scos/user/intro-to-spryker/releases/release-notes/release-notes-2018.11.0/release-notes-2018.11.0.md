@@ -44,7 +44,7 @@ For information about installing the Spryker Commerce OS, see [Getting Started G
 Spryker’s new B2B Demo Shop was made to provide you with the right combination of modules and functionalities to represent the most common B2B commerce use case. You will get an integrated and stable product that is consistent in both technological and feature completeness point of view. This Demo Shop is our recommended starting point for all standard B2B commerce projects. It comes with the new modern look-and-feel and atomic design approach.
 ![B2B Demo Shop](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Releases/Release+notes/Release+Notes+2018.11.0/image1.png)
 
-**Documentation**: [B2B Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops).
+**Documentation**: [B2B Demo Shop](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops).
 
 ### Non-authenticated B2B Shop User Permissions Manager
 Spryker has improved permissions control mechanism for non-authenticated B2B shop users. A shop administrator can hide/show specific shop features such as prices, shopping lists, an ability to add products to the cart or going to the checkout.

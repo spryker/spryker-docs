@@ -7,7 +7,7 @@ template: glue-api-storefront-guide-template
 This endpoint allows managing guest carts.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see:
+For detailed information about the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 * [Glue API: Product options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
@@ -71,24 +71,24 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | REQUEST | USAGE |
 | --- | --- |
 | `GET https://glue.mysprykershop.com/guest-carts` | Retrieve a guest cart. |
-| `GET https://glue.mysprykershop.com/guest-carts?include=guest-cart-items` | Retrieve information about a guest cart with the concrete products included. |
+| `GET https://glue.mysprykershop.com/guest-carts?include=guest-cart-items` | Retrieve information about a guest cart with its items included. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=cart-rules` | Retrieve a guest cart with information about the cart rules. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=gift-cards,vouchers` | Retrieve a guest cart with information about the gift cards applied. |
-| `GET https://glue.mysprykershop.com/guest-carts?include=guest-cart-items,concrete-products,product-options` | Retrieve a guest cart with information about its items, respective concrete products, and product options of the concrete products. |
+| `GET https://glue.mysprykershop.com/guest-carts?include=guest-cart-items,concrete-products,product-options` | Retrieve a guest cart with information about its items, respective concrete products, and product options included. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=sales-units,product-measurement-units` | Retrieve a guest cart with information about its items, sales units, and product measurement units. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=vouchers` | Retrieve a guest cart with information about vouchers. |
-| `GET https://glue.mysprykershop.com/guest-carts?include=concrete-products,product-labels` | Retrieve a guest cart with information about concrete products and the product labels assigned to the products in it. |
+| `GET https://glue.mysprykershop.com/guest-carts?include=concrete-products,product-labels` | Retrieve a guest cart with information about concrete products and the product labels assigned. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=promotional-items,abstract-products,concrete-product`| Retrieve detailed information on the promotional items for the guest cart. |
-| `GET https://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers` | Retrieve all guest carts of a user with information about product offers. |
-| `GET http://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers,product-offer-availabilities` | Retrieve all guest carts of a user with product offer availabilities. |
-| `GET http://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers,product-offer-prices` | Retrieve all guest carts of a user with product offer prices. |
-| `GET https://glue.mysprykershop.com/guest-carts/f0d01709-4dea-5ac3-8ceb-873875446ab0?include=guest-cart-items,merchants` | Retrieve a guest cart with items and respective merchants included. |
+| `GET https://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers` | Retrieve a guest cart with information about product offers included. |
+| `GET https://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers,product-offer-availabilities` | Retrieve a guest cart with product offer availabilities information included. |
+| `GET https://glue.mysprykershop.com/guest-carts?include=items,concrete-products,product-offers,product-offer-prices` | Retrieve a guest cart with product offer prices information included. |
+| `GET https://glue.mysprykershop.com/guest-carts/f0d01709-4dea-5ac3-8ceb-873875446ab0?include=guest-cart-items,merchants` | Retrieve a guest cart with items and information about merchants included. |
 
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart</summary>
 
 ```json
 {
@@ -132,7 +132,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample with guest cart items</summary>
+<summary markdown='span'>Response sample: retrieve information about a guest cart with its items included</summary>
 
 ```json
 {
@@ -227,7 +227,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample with cart rules</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with information about the cart rules</summary>
 
 ```json
 {
@@ -301,7 +301,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample with gift cards</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with information about the gift cards applied</summary>
 
 ```json
 {
@@ -371,7 +371,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Sample response with guest cart items, concrete products, and product options</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with information about its items, respective concrete products, and product options included</summary>
 
 ```json
 {
@@ -501,7 +501,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "reviewCount": 0,
                 "productAbstractSku": "181",
                 "name": "Samsung Galaxy Tab S2 SM-T813",
-                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2’s 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper - create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
+                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2’s 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper—create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
                 "attributes": {
                     "internal_memory": "3 GB",
                     "processor_model": "APQ8076",
@@ -628,7 +628,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample with guest cart items, sales units, and product measurement units</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with information about its items, sales units, and product measurement units</summary>
 
 ```json
 {
@@ -757,7 +757,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 <details>
-<summary markdown='span'>Response sample with a cart rule and a discount voucher</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with information about vouchers</summary>
 
 ```json
 {
@@ -800,7 +800,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/vouchers/mydiscount-yu8je"
+                "self": "https://glue.mysprykershop.com/vouchers/mydiscount-yu8je"
             }
         },
         {
@@ -817,17 +817,16 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/cart-rules/1"
+                "self": "https://glue.mysprykershop.com/cart-rules/1"
             }
         }
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product labels</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with information about concrete products and the product labels assigned</summary>
 
 ```json
 {
@@ -881,7 +880,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Samsung Galaxy Tab S2 SM-T715",
-                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2’s 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper - create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
+                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2’s 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper—create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
                 "attributes": {
                     "storage_media": "flash",
                     "touch_technology": "Multi-touch",
@@ -970,12 +969,11 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
     ]
 }
 ```
-
 </details>
 
 
 <details>
-<summary markdown='span'>Response sample with promotional items</summary>
+<summary markdown='span'>Response sample: retrieve detailed information on the promotional items for the guest cart</summary>
 
 ```json
 {
@@ -1119,7 +1117,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offers</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with information about product offers included</summary>
 
 ```json
 {
@@ -1283,7 +1281,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample with availability of product offers</summary>
+<summary markdown='span'>Response sample: Retrieve a guest cart with product offer availabilities information included</summary>
 
 ```json
 {
@@ -1491,7 +1489,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample with product offer prices</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with product offer prices information included</summary>
 
 ```json
 {
@@ -1753,7 +1751,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 </details>
 
 <details>
-<summary markdown='span'>Response sample with items and merchant</summary>
+<summary markdown='span'>Response sample: retrieve a guest cart with items and information about merchants included</summary>
 
 ```json
 {
@@ -1802,7 +1800,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
                 "longitude": "52.534105",
                 "faxNumber": "+49 30 234567800",
                 "legalInformation": {
-                    "terms": "<p><span style=\"font-weight: bold;\">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=\"font-weight: bold;\">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to allow us to deliver the type of content and product offerings in which you are most interested.<br><br><span style=\"font-weight: bold;\">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>",
+                    "terms": "<p><span style=\"font-weight: bold;\">General Terms</span><br><br>(1) This privacy policy has been compiled to better serve those who are concerned with how their 'Personally identifiable information' (PII) is being used online. PII, as used in US privacy law and information security, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to get a clear understanding of how we collect, use, protect or otherwise handle your Personally Identifiable Information in accordance with our website. <br><br>(2) We do not collect information from visitors of our site or other details to help you with your experience.<br><br><span style=\"font-weight: bold;\">Using your Information</span><br><br>We may use the information we collect from you when you register, make a purchase, sign up for our newsletter, respond to a survey or marketing communication, surf the website, or use certain other site features in the following ways: <br><br>To personalize user's experience and to let us deliver the type of content and product offerings in which you are most interested.<br><br><span style=\"font-weight: bold;\">Protecting visitor information</span><br><br>Our website is scanned on a regular basis for security holes and known vulnerabilities in order to make your visit to our site as safe as possible. Your personal information is contained behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems, and are required to keep the information confidential. In addition, all sensitive/credit information you supply is encrypted via Secure Socket Layer (SSL) technology.</p>",
                     "cancellationPolicy": "You have the right to withdraw from this contract within 14 days without giving any reason. The withdrawal period will expire after 14 days from the day on which you acquire, or a third party other than the carrier and indicated by you acquires, physical possession of the last good. You may use the attached model withdrawal form, but it is not obligatory. To meet the withdrawal deadline, it is sufficient for you to send your communication concerning your exercise of the right of withdrawal before the withdrawal period has expired.",
                     "imprint": "<p>Spryker Systems GmbH<br><br>Julie-Wolfthorn-Straße 1<br>10115 Berlin<br>DE<br><br>Phone: +49 (30) 2084983 50<br>Email: info@spryker.com<br><br>Represented by<br>Managing Directors: Alexander Graf, Boris Lokschin<br>Register Court: Hamburg<br>Register Number: HRB 134310<br></p>",
                     "dataPrivacy": "Spryker Systems GmbH values the privacy of your personal data."
@@ -1885,7 +1883,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
+| expenseTotal | String | Total amount of expenses (including, for example, shipping costs). |
 | discountTotal | Integer | Total amount of discounts applied to the cart. |
 | taxTotal | Integer | Total amount of taxes to be paid. |
 | subTotal | Integer | Subtotal of the cart. |
@@ -1940,14 +1938,14 @@ For the attributes of other included resources, see:
 
 Guest carts are anonymous as they are not related to any user. If a user registers or logs in, the guest cart is automatically assigned to their account.
 
-To assign a guest cart to a customer, i.e., merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
+To assign a guest cart to a customer, that is, merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
 
 Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/user/features/{{page.version}}/multiple-carts-feature-overview.html) environment:
 
 * In a **single cart** environment, the products in the guest cart are added to the customers' own cart.
 * In a **multiple cart** environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.
 
-The workflow is displayed in the diagram below:
+The workflow is displayed in the following diagram:
 
 ![Assign cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Managing+Carts/Managing+Guest+Carts/assigning-guest-cart-to-registered-user.png)
 
@@ -1955,7 +1953,10 @@ Below, you can see an exemplary workflow for converting a guest cart into a regu
 
 1. The customer adds items to a guest cart.
 
-Request sample: `POST https://glue.myspsrykershop.com/guest-cart-items`
+Request sample:
+
+`POST https://glue.myspsrykershop.com/guest-cart-items`
+
 ```json
 {
     "data": {
@@ -1973,7 +1974,8 @@ Request sample: `POST https://glue.myspsrykershop.com/guest-cart-items`
 | --- | --- | --- |
 | X-Anonymous-Customer-Unique-Id | guest-user-001 | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value.. |
 
-**Response sample**
+Response sample:
+
 ```json
 {
     "data": {
@@ -1985,9 +1987,10 @@ Request sample: `POST https://glue.myspsrykershop.com/guest-cart-items`
     "included": [...]
 }
 ```
-2. The customer logs in.
+1. The customer logs in.
 
 Request sample: `POST https://glue.myspsrykershop.com/access-tokens`
+
 ```json
 {
     "data": {
@@ -2004,7 +2007,7 @@ Request sample: `POST https://glue.myspsrykershop.com/access-tokens`
 | --- | --- | --- |
 | X-Anonymous-Customer-Unique-Id | guest-user-001 | Guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
 
-**Response sample**
+Response sample:
 
 ```json
 {
@@ -2024,7 +2027,9 @@ Request sample: `POST https://glue.myspsrykershop.com/access-tokens`
 ```
 3. The customer requests a list of his own carts.
 
-Request sample: `GET https://glue.myspsrykershop.com/carts`
+Request sample: 
+
+`GET https://glue.myspsrykershop.com/carts`
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
@@ -2032,7 +2037,7 @@ Request sample: `GET https://glue.myspsrykershop.com/carts`
 
 In the **multi-cart** environment, the guest cart has been converted to a regular cart. You can see it in the list of carts with the id `9183f604-9b2c-53d9-acbf-cf59b9b2ff9f`.
 
-**Response sample**
+Response sample:
 
 ```json
 {
@@ -2094,7 +2099,7 @@ In a **single cart** environment, items from the guest cart have been added to
 | 105 | Cart could not be deleted. |
 | 106 | Cart item could not be deleted. |
 | 107 | Failed to create a cart. |
-| 109 | Anonymous customer unique id is empty. |
+| 109 | Anonymous customer unique ID is empty. |
 | 111 | Can’t switch price mode when there are items in the cart. |
 | 112 | Store data is invalid. |
 | 113 | Cart item could not be added. |

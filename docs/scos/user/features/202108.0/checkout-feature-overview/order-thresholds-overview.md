@@ -1,6 +1,6 @@
 ---
-title: Order Thresholds
-description: Order thresholds allow you to control the values of the orders your customers place. You can define a maximum or a minimum value that should be reached for an order to be placed.
+title: Order Thresholds feature overview
+description: Order thresholds let you control the values of the orders your customers place. You can define a maximum or a minimum value that should be reached for an order to be placed.
 last_updated: Jul 19, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/order-thresholds
@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/order-thresholds
 ---
 
-Order thresholds allow you to control the values of the orders your customers place. You can define a maximum or a minimum value that should be reached for an order to be placed. Apart from just disallowing a customer to place an order if a threshold condition is not fulfilled, you can request them to pay different types of fees.
+Order thresholds let you control the values of the orders your customers place. You can define a maximum or a minimum value that should be reached for an order to be placed. Apart from just disallowing a customer to place an order if a threshold condition is not fulfilled, you can request them to pay different types of fees.
 
 
 ## Hard maximum threshold
@@ -22,7 +22,7 @@ For example, if the hard maximum threshold is €3000, and a customer adds items
 
 A Back Office user can enter a message that is displayed in cart when the hard maximum threshold is reached.
 
-See [Setting up a maximum hard threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html#setting-up-maximum-hard-threshold) to learn how a Back Office user configures the maximum hard threshold.
+To learn how a Back Office user configures the maximum hard threshold, see [Setting up a maximum hard threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html#setting-up-maximum-hard-threshold).
 
 
 ## Minimum thresholds
@@ -30,15 +30,15 @@ A *minimum* threshold is a monetary value that should be reached for an order to
 
 
 ### Hard minimum threshold
-A *hard minimum* threshold is a minimum threshold that under no conditions allows a customer to place an order if its subtotal is below the defined value.
+A *hard minimum* threshold is a minimum threshold that under no conditions lets a customer place an order if its subtotal is below the defined value.
 
 For example, if the hard minimum threshold value is €400, and a customer adds products for €195 to cart, they cannot place the order. If the customer adds more products and the order subtotal becomes equal to or greater than €400, they can place the order.
 
-See [Setting up a minimum hard threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html#setting-up-minimum-hard-threshold) to learn how a Back Office user configures the minimum hard threshold.
+To learn how a Back Office user configures the minimum hard threshold, see [Setting up a minimum hard threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html#setting-up-minimum-hard-threshold).
 
 
 ### Soft minimum threshold
-A *soft minimum* threshold is a minimum threshold that, under the conditions defined by the shop owner, allows a customer to place an order even if its subtotal is below the minimum soft threshold.
+A *soft minimum* threshold is a minimum threshold that, under the conditions defined by the shop owner, lets a customer place an order even if its subtotal is below the minimum soft threshold.
 
 The following soft minimum thresholds are shipped by default:
 
@@ -48,7 +48,7 @@ The following soft minimum thresholds are shipped by default:
 
 Fees for the soft thresholds are based on sub-total order values. Fixed and flexible fees are added in a separate line as expenses for orders.
 
-See [Setting up a minimum soft threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html#setting-up-minimum-soft-threshold) to learn how a Back Office user configures the minimum soft threshold.
+To learn how a Back Office user configures the minimum soft threshold, see [Setting up a minimum soft threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html#setting-up-minimum-soft-threshold).
 
 
 #### Soft minimum threshold with a message
@@ -67,7 +67,7 @@ The soft threshold with a flexible fee allows placing an order with the value be
 For example, a shop owner sets a soft minimum threshold €400 with a flexible fee of 10%. If a customer adds products to cart for 195 Euro, they can still place the order, but the flexible fee of €19.5 is added to their cart. If the customer adds more products and the order subtotal becomes equal to or greater than €400, the fee is removed from the cart.
 
 
-The diagram below shows how orders are checked against defined thresholds.
+The following diagram shows how orders are checked against defined thresholds.
 
 ![minimum-order-value-schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Order+Thresholds/minimum-order-value-schema.jpg)
 
@@ -103,21 +103,19 @@ If a global and a merchant order thresholds are defined, both of them are applie
 If the global minimum threshold is €400, and the minimum threshold per merchant relation is €100, the minimum sub-total is €400.
 
 {% endinfo_block %}
+
 {% info_block infoBox "Example 2" %}
 
 If the global minimum threshold is €400, and the minimum threshold per merchant relation is €700, the minimum sub-total is €700.
 
 {% endinfo_block %}
 
- {% info_block infoBox "Example 3" %}
+{% info_block infoBox "Example 3" %}
 
 
 * Conditions:
-
     * Global hard maximum threshold is €100.
-
     * Soft minimum merchant order threshold with a fee is €200.
-
     * Order sub-total is €150.
 
 * Result: The fee of the merchant order threshold is added to cart, but the customer cannot place the order because the global threshold is reached.

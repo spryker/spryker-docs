@@ -29,9 +29,9 @@ Instead of changing prices manually on the starting day of the promotion, you ca
 
 ## Prerequisites
 
-To start working with scheduled prices, go to **Catalog** > **Scheduled Prices**.
+To start working with scheduled prices, go to **Catalog&nbsp;<span aria-label="and then">></span> Scheduled Prices**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating scheduled prices
 
@@ -54,10 +54,10 @@ If needed, you can [edit the imported scheduled prices](/docs/scos/user/back-off
 
 7. If you are satisfied with the results, in the *Publish the scheduled prices* section, click **Publish** to apply the price schedules.
 
-**Tips & tricks**
+**Tips and tricks**
 
 * If you leave the _Import dry run_ page without publishing the imported price schedules, they do not get deleted. However, you won't be able to return to that page unless you import the file once again.
-* You can check the current price schedules of each product in the *Products* section > the *Edit Product* page > the *Scheduled Prices* tab.
+* You can check the current price schedules of each product in the *Products* section&nbsp;<span aria-label="and then">></span> the *Edit Product* page&nbsp;<span aria-label="and then">></span> the *Scheduled Prices* tab.
 
 ### Reference information: Creating scheduled prices
 
@@ -110,7 +110,7 @@ The *Scheduled Prices: Import dry run* page is divided into four sections.
 | Row n° | Numeric identifier of a price schedule entry in the list of price schedules. |
 | Error |  Describes why a particular price schedule has not been imported.|
 | ID | Numeric identifier of price schedule. |
-|abstract_sku  | Identifier of the abstract product to which price schedule is assigned. |
+| abstract_sku  | Identifier of the abstract product to which price schedule is assigned. |
 | concrete_sku | Identifier of the concrete product to which price schedule is assigned. |
 | store |Store relation of the product to which price schedule is assigned.  |
 | currency |Currency in which price schedule is defined.  |

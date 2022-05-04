@@ -46,10 +46,12 @@ To create a return for a registered user, send the request:
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
-| offset | Ofset of the order at which to begin the response. <br> Works only together with `page[limit]`. <br> To work correctly, the value should be devisable by the value of `page[limit]`. <br> The default value is `0`.  | From `0` to any. |
+| offset | Offset of the order at which to begin the response. <br> Works only together with `page[limit]`. <br> To work correctly, the value should be devisable by the value of `page[limit]`. <br> The default value is `0`.  | From `0` to any. |
 | limit | Maximum number of entries to return. <br> Works only together with `page[offset]`. <br> The default value is `10`. | From `1` to any. |
 
-Request sample: `POST https://glue.mysprykershop.com/returns`
+Request sample: create a return
+
+`POST https://glue.mysprykershop.com/returns`
 
 ```json
 {
@@ -81,8 +83,7 @@ Request sample: `POST https://glue.mysprykershop.com/returns`
 
 ### Response
 
-<details>
-  <summary markdown='span'>Response sample</summary>
+<details><summary markdown='span'>Response sample: create a return</summary>
 
 ```json
 {
@@ -192,7 +193,6 @@ Request sample: `POST https://glue.mysprykershop.com/returns`
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -260,12 +260,14 @@ To retrieve returns, send the request:
 | offset | Ofset of the order at which to begin the response. <br> Works only together with `page[limit]`. <br> To work correctly, the value should be devisable by the value of `page[limit]`. <br> The default value is `0`.  | From `0` to any. |
 | limit | Maximum number of entries to return. <br> Works only together with `page[offset]`. <br> The default value is `10`. | From `1` to any. |
 
-Request sample: `GET https://glue.mysprykershop.com/returns`
+Request sample: retrieve returns
+
+`GET https://glue.mysprykershop.com/returns`
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve returns</summary>
 
 ```json
 {
@@ -324,7 +326,6 @@ Request sample: `GET https://glue.mysprykershop.com/returns`
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -359,12 +360,14 @@ To retrieve a return, send the request:
 | offset | Ofset of the order at which to begin the response. <br> Works only together with `page[limit]`. <br> To work correctly, the value should be devisable by the value of `page[limit]`. <br> The default value is `0`.  | From `0` to any. |
 | limit | Maximum number of entries to return. <br> Works only together with `page[offset]`. <br> The default value is `10`. | From `1` to any. |
 
-Sample request: `GET http://glue.mysprykershop.com/returns/DE--1-R3`
+Request sample: retrieve a return
+
+`GET http://glue.mysprykershop.com/returns/DE--1-R3`
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve a return</summary>
 
 ```json
 {
@@ -474,7 +477,6 @@ Sample request: `GET http://glue.mysprykershop.com/returns/DE--1-R3`
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -527,4 +529,8 @@ Sample request: `GET http://glue.mysprykershop.com/returns/DE--1-R3`
 
 | CODE | REASON |
 | --- | --- |
+| 001 | Access token is invalid. |
+| 002 | Access token is missing. |
 | 3601 | Return can't be created. |
+| 3602 | Can't find return by the given return reference. |
+| 3603 | Return contains items from different merchants. |

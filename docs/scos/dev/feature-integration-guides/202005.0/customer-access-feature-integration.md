@@ -18,14 +18,14 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 |---|---|
-| Spryker Core | master |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/customer-access:"^master" --update-with-dependencies 
+composer require spryker-feature/customer-access:"^{{page.version}}" --update-with-dependencies 
 ```
 
 {% info_block warningBox "Verification" %}
@@ -95,7 +95,6 @@ Adjust the schema definition so entity changes will trigger events.
 
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -326,7 +325,7 @@ Overview and install the necessary features before beginning the integration ste
 
 | Name | Version |
 |---|---|
-| Spryker Core | master |
+| Spryker Core | {{page.version}} |
 
 ### 1) Add Translations
 Append glossary according to your configuration:
@@ -345,5 +344,5 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data has been added to the `spy_glossary` table.
+Make sure that in the database the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 {% endinfo_block %}

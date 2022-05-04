@@ -411,6 +411,10 @@
     }
 
     .anchorjs-link {
+        min-height: 1em;
+        display: inline-block;
+        vertical-align: baseline;
+
         @include media("<desktop") {
             opacity: 1;
         }
@@ -567,7 +571,7 @@
     position: relative;
 
     table {
-        margin: 0 0 5px;
+        margin: 0;
 
         @include media("<tablet") {
             margin: 0;

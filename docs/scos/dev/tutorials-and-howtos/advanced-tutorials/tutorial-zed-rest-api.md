@@ -48,7 +48,7 @@ It is advised to recap the following topics before starting the challenge:
 * [PHP Reflection](http://php.net/manual/en/book.reflection.php)
 * Facades
 * Transfer objects
-* [Tutorial - Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/adding-a-new-module.html)
+* [Tutorial - Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html)
 * Controllers in Zed
 
 ### Plan of solving the challenge
@@ -191,7 +191,7 @@ And template for this action `Presentation/V1/doc.twig`:
 ```
 Now the controller should work, but will return empty values, we can start implementing the business logic. To dynamically read documentation from facade we will use `ReflectionClass` of standard PHP library, the idea is to go through public methods, extract doc-strings and parameter types and render them on the page. This will result in self-documenting API. The final version of the `ApiEntry` for this step will look like:
 
-<details open>
+<details>
 <summary markdown='span'>Code sample:</summary>
 
 ```php
@@ -277,7 +277,7 @@ The resulting structure of the array is following:
 ```
 Now modify template to output the array:
 
-<details open>
+<details>
 <summary markdown='span'>Code sample:</summary>
 
 ```
@@ -461,6 +461,6 @@ In this challenge we implemented self-documenting API based on a public API of m
 |[PHP Reflection](http://php.net/manual/en/book.reflection.php)  |  Reflection in PHP|
 | Facades | Facades in Spryker |
 | Transfer objects | Transfer Objects in Spryker |
-|  [Tutorial - Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/adding-a-new-module.html)| Creating a new Module |
+|  [Tutorial - Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html)| Creating a new Module |
 | Controllers in Zed | 	Developing controllers in ZED |
 |  Twig syntax reference| Twig syntax reference |

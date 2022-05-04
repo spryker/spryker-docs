@@ -1,5 +1,5 @@
 ---
-title: Product API feature integration
+title: Glue API - Product feature integration
 description: This guide will navigate you through the process of installing and configuring the Product API feature in Spryker OS.
 last_updated: May 2, 2019
 template: feature-integration-guide-template
@@ -36,7 +36,6 @@ Make sure that the following module is installed:
 **Implementation**
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

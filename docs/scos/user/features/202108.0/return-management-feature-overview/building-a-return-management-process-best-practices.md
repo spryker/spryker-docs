@@ -1,5 +1,5 @@
 ---
-title: Building a return management process- Best practices
+title: Building a return management process - Best practices
 description: Choose a suitable return management process for your project.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -68,7 +68,7 @@ You can have the following return process:
         1. Creates the return based on the reclamation.
         2. Sends the return slip and the return label to the Buyer so the Buyer can print it, adhere to the box and ship the items back.
 
-The schema below illustrates the workflow as well as the areas that require custom development for your project:
+The following schema illustrates the workflow as well as the areas that require custom development for your project:
 
 ![image](https://confluence-connect.gliffy.net/embed/image/2599f923-6892-42bc-a867-e2b38bed5b2b.png?utm_medium=live&utm_source=custom)
 
@@ -110,7 +110,6 @@ Like with scenario 2, this scenario is best to use for resolving disputes and ha
 You can also combine this scenario with [scenario 1](#scenario1). For example, you might have the *Return* option available for Buyers within 14 days after the delivery of the products, and then have some *Contact Customer Service* option, which would be active during the warranty period.
 
 The main advantages of this approach are:
-
 * You save Buyers' time by allowing them to quickly resolve their questions without having to create claims and wait for the responses.
 * You have only valid Buyer claims, which can be sorted and forwarded to the respective departments by the Customer Service. You also have only valid return requests, which saves your and Buyers' time and money.
 * Even though this workflow implies additional development effort, you can tailor it to the specific needs of your project.

@@ -1,5 +1,5 @@
 ---
-title: Search widget for concrete products feature integration
+title: Search Widget for Concrete Products feature integration
 last_updated: Aug 27, 2020
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v6/docs/search-widget-for-concrete-products-integration
@@ -91,7 +91,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 

@@ -14,11 +14,11 @@ Check out an example usage of the Table Feature Settings in the `@spryker/table`
 
 Component configuration:
 
-- `enabled` - enables the feature via config.  
-- `tableId` - `id` of the table that syncs with the table toolbar settings (also can be assigned to the table via HTML).  
+- `enabled`—enables the feature via config.  
+- `tableId`—`id` of the table that syncs with the table toolbar settings (also can be assigned to the table via HTML).  
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         dataSource: { ... },
         columns: [ ... ],
@@ -36,7 +36,12 @@ Component configuration:
 Register the component:
 
 ```ts
-// Dynamic
+declare module '@spryker/table' {
+    interface TableConfig {
+        columnConfigurator?: TableSettingsConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -71,12 +76,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Feature Settings:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableConfig {
-        columnConfigurator?: TableSettingsConfig;
-    }
-}
-
 export interface TableSettingsConfig extends TableFeatureConfig {
     tableId?: string;
 }

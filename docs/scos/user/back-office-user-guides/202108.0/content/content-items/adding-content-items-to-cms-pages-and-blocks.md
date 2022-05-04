@@ -16,9 +16,9 @@ This topic describes how to add a content item widget to a page and block using 
 
 ## Prerequisites
 
-To start adding content item widgets to pages, navigate to **Content** > **Pages**.
+To start adding content item widgets to pages, navigate to **Content&nbsp;<span aria-label="and then">></span> Pages**.
 
-To start adding content item widgets to blocks, navigate to **Content** > **Blocks**.
+To start adding content item widgets to blocks, navigate to **Content&nbsp;<span aria-label="and then">></span> Blocks**.
 
 {% info_block warningBox %}
 
@@ -29,7 +29,7 @@ Prior to adding a content item widget to a block or a page, make sure that the p
 ## Adding content item widgets to pages
 
 To add a content item widget to a page:
-1. On the *Overview of CMS Pages* page, In the _Actions_ column, select **Edit** > **Placeholders** next to the page you want to add a content item widget to.
+1. On the *Overview of CMS Pages* page, In the _Actions_ column, select **Edit&nbsp;<span aria-label="and then">></span> Placeholders** next to the page you want to add a content item widget to.
 3. On the *Edit Placeholders: CMS Page [Name]* page, go to the *Placeholder* tab and place your cursor where you want to insert the content items.
 4. In the editor pane, select the widget you want to add from the **Content Item** drop-down list.
 

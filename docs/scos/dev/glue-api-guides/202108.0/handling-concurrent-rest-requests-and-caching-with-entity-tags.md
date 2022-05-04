@@ -27,7 +27,8 @@ Apart from that, ETags can also boost API performance via caching. They can be
 
 When a client requests a resource that supports ETag optimization and is authorized to use it, the Glue API server responds with a REST response. It contains an identifier of the current state of the resource in the ETag header.
 
-Sample request:
+Request sample:
+
 `GET http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab`
 
 ```
@@ -36,7 +37,7 @@ Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImNhO...
 ...
 ```
 
-Sample response:
+Response sample:
 
 ```
 HTTP/1.1 200 OK
@@ -89,7 +90,7 @@ The following error responses can be returned by the server when a resource supp
 
 | CODE | REASON |
 | --- | --- |
-| 412 | Pre-condition failed.<br>The `If-Match` header value is invalid or outdated. <br>Request the current state of the resource using a `GET` request to obtain a valid tag value. |
-| 428 | Pre-condition required.<br>The `If-Match` header is missing. |
+| 005 | Pre-condition required.<br>The `If-Match` header is missing. |
+| 006 | Pre-condition failed.<br>The `If-Match` header value is invalid or outdated. <br>Request the current state of the resource using a `GET` request to obtain a valid tag value. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

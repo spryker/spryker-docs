@@ -20,14 +20,16 @@ To retrieve merchant addresses, send the request:
 
 {% info_block warningBox "Note" %}
 
-This endpoint returns only [active](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
+This endpoint returns only [active](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. You can activate merchants in the Back Office. 
 
 {% endinfo_block %}
 
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/merchants/MER000001/merchant-addresses`
+Request sample: retrieve merchant addresses
+
+`GET https://glue.mysprykershop.com/merchants/MER000001/merchant-addresses`
 
 ### Response
 
@@ -80,7 +82,6 @@ Request sample: `GET http://glue.mysprykershop.com/merchants/MER000001/merchant-
     }
 }
 ```
-
 </details>
 
 <a name="merchant-addresses-response-attributes"></a>

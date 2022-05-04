@@ -1,5 +1,5 @@
 ---
-title: HowTo - Display Product Groups by Color on the Storefront
+title: "HowTo: Display product groups by color on the Storefront"
 description: Procedure to display a product group on Storefront.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -48,7 +48,6 @@ Add the `color_code` field to the `spy_product_abstract` table in the database:
 2. Apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

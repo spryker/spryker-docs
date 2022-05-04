@@ -1,5 +1,5 @@
 ---
-title: Multiple carts feature integration
+title: Multiple Carts feature integration
 description: Multiple Carts allows customers to manage multiple shopping carts in one account. The guide describes how to integrate the feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -51,7 +51,6 @@ Make sure that the following modules have been installed:
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -110,7 +109,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that  the configured data has been added to the `spy_glossary` table in the database.
+Make sure that  the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
 
 {% endinfo_block %}
 
@@ -593,7 +592,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 

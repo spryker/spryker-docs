@@ -15,8 +15,8 @@ redirect_from:
 Please review and install the necessary features before beginning the integration.
 |Name|Version|
 |---|---|
-|Alternative Products|master|
-|Product Label|master|
+|Alternative Products|{{page.version}}|
+|Product Label|{{page.version}}|
 
 ### 1) Install the required modules using Composer
 Run the following command to install the required modules:

@@ -21,13 +21,16 @@ For detailed information on the modules that provide the API functionality and r
 ## Confirm customer registration
 
 To confirm customer registration, send the request:
+
 ***
 `POST` **/customer-confirmation**
 ***
 
 ### Request
 
-Request sample: `POST` **/customer-confirmation**
+Request sample: confirm customer registration
+
+`POST` **/customer-confirmation**
 
 ```json
 {
@@ -50,7 +53,7 @@ If the customer email is confirmed successfully, the endpoint returns the `204 N
 
 ## Possible errors
 
-| Code| Reason |
+| CODE| REASON |
 | --- | --- |
 | 423 | Confirmation code is invalid or has been already used. |
 | 901 | Confirmation code is empty. |

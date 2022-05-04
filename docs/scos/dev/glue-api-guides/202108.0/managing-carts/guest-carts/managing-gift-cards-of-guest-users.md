@@ -17,7 +17,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-cart-items.html
 ---
 
-[Gift сard](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html) is an alternative payment method. It is purchased as a regular product in the Spryker Commerce OS and is redeemed as a voucher code during checkout.  When you apply the code of a gift card to a shopping cart, the money value of the gift card is deducted from the total sum of the cart items.
+[Gift card](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html) is an alternative payment method. It is purchased as a regular product in the Spryker Commerce OS and is redeemed as a voucher code during checkout.  When you apply the code of a gift card to a shopping cart, the money value of the gift card is deducted from the total sum of the cart items.
 
 In your development, Gift Cards API provides resources for purchasing and redeeming gift cards.
 
@@ -184,6 +184,8 @@ If the item is deleted successfully, the endpoint will respond with a `204 No C
 
 | CODE  | REASON |
 | --- | --- |
+| 101 | Cart with the specified ID is not found. |
+| 109 | `X-Anonymous-Customer-Unique-Id` header is empty. |
 | 3301| Cart code not found in cart. |
 | 3302| Cart code can't be added. |
 | 3303| Cart code can't be removed. |

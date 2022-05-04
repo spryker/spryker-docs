@@ -37,12 +37,15 @@ To retrieve image sets of a concrete product, send the request:
 | ***{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}*** | SKU of a concrete product to get the image sets of. |
 
 ### Request
-Request sample : `GET http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-image-sets`
+
+Request sample: retrieve image sets of a concrete product
+
+`GET http://glue.mysprykershop.com/concrete-products/001_25904006/concrete-product-image-sets`
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve image sets of a concrete product</summary>
 
 ```json
 {
@@ -73,7 +76,6 @@ Request sample : `GET http://glue.mysprykershop.com/concrete-products/001_259040
     }
 }
 ```
-
 </details>
 
 <a name="concrete-image-sets-response-attributes"></a>
@@ -88,6 +90,7 @@ Request sample : `GET http://glue.mysprykershop.com/concrete-products/001_259040
 
 | CODE | REASON |
 | --- | --- |
+| 302 | Concrete product is not found. |
 | 304 | Can't find concrete product image sets. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

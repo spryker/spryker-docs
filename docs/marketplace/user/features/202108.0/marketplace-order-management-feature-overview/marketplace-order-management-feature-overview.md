@@ -4,34 +4,38 @@ description: This document contains concept information for the Marketplace orde
 template: concept-topic-template
 ---
 
-When customer places an order on the Marketplace, the *Marketplace order* is created in the system. The Marketplace order, in comparison to a regular order in Spryker Commerce OS, contains information about merchants and one or several [merchant orders](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html). Thus, the Marketplace order represents a list of items a customer has bought from one or multiple merchants in a single order.
+When a customer places an order on the Marketplace, the *Marketplace order* is created in the system. Compared to a regular order in Spryker Commerce OS, the Marketplace order contains information about merchants and one or several [merchant orders](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html). Thus, the Marketplace order represents a list of items a customer has bought from one or multiple merchants in a single order.
 
 ![Marketplace order](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+order+feature+overview/marketplace-order.png)
 
 Each Marketplace order has a set of properties such as order number, order summary, payment information, date, state, shipping methods, and others.
 
-For example, let’s consider the case when a customer purchased 4 items from 3 different merchants in 1 order.
+For example, let’s consider the case when a customer purchased four items from three different merchants in one order.
 From the customer perspective, the Marketplace order is a single order with products from one or multiple merchants:
 
 ![Marketplace order structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+order+management/Marketplace+Order+Management+feature+overview/Marketplace+Order+schema.png)
 
-The items in the Marketplace order are grouped by merchant and split into different shipments automatically by default. However, you can change this behavior on the project level according to your business requirements. During the checkout, customers can check how many shipments to expect and select different delivery addresses or methods based on their items. To learn more about multiple shipments, see [Split Delivery feature overview](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html).
+The items in the Marketplace order are grouped by merchant and split into different shipments automatically by default. However, you can change this behavior on the project level according to your business requirements. During the checkout, customers can check how many shipments to expect and select different delivery addresses or methods based on their items. To learn more about multiple shipments, see the [Split Delivery feature overview](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html).
 
-As the Marketplace order contains details about offers and products a customer has bought from multiple merchants, the Marketplace order list with the related information is only available to the Marketplace administrator in the Back Office. <!---See LINK TO BACK OFFICE FOR ORDERS for details on how Marketplace administrators can manage Marketplace orders in the Back Office.--> Each [merchant order](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html) can be accessed and managed by the relevant merchant in the Merchant Portal.<!---See LINK TO MERCHANT PORTAL FOR ORDERS for details on how merchants can manage their orders orders in the Merchant Portal.-->
+As the Marketplace order contains details about offers and products a customer has bought from multiple merchants, the Marketplace order list with the related information is only available to the Marketplace administrator in the Back Office. <!---See LINK TO BACK OFFICE FOR ORDERS for details about how Marketplace administrators can manage Marketplace orders in the Back Office.--> Each [merchant order](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html) can be accessed and managed by the relevant merchant in the Merchant Portal.<!---See LINK TO MERCHANT PORTAL FOR ORDERS for details about how merchants can manage their orders in the Merchant Portal.-->
 
 ![Merchant order in the Merchant Portal](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Marketplace+and+Merchant+orders/Marketplace+order+feature+overview/merchant-order-in-merchant-portal.png)
 
 ## Marketplace and merchant order states machines
-You can coordinate the Marketplace and merchant orders processing by triggering the state machine events. See [Marketplace and merchant state machines](/docs/marketplace/user/features/{{page.version}}//marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html) for details on the Marketplace and merchant order state machines and [Marketplace and merchant state machine interactions](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html) for details on how the two state machines interact with each other.
+You can coordinate the Marketplace and merchant orders processing by triggering the state machine events.
+
+For details about the Marketplace and merchant order state machines, see [Marketplace and merchant state machines](/docs/marketplace/user/features/{{page.version}}//marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html).
+
+For details about how the two state machines interact, see [Marketplace and merchant state machine interactions](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html).
 
 ## Marketplace order calculation
 By default, calculations for the Marketplace order items are performed using the item price (product offer price or the price inherited from the concrete or abstract product), their totals, subtotal aggregation, and tax information.
 
-The Marketplace order comprises all the [totals from the Merchant orders](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html) and is defined by the following formula:
+The Marketplace order contains all the [totals from the Merchant orders](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html) and is defined by the following formula:
 
 {% info_block infoBox "Info" %}
 
-Marketplace Sales Order Total = ∑ Merchant Order Totals + ∑ Marketplace Sales Order Expense Totals
+Marketplace Sales Order Total = ∑ Merchant Order Totals + ∑ Marketplace Sales Order Expense Totals.
 
 {% endinfo_block %}
 

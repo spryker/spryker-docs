@@ -1,5 +1,5 @@
 ---
-title: Documenting GLUE API Resources
+title: Documenting Glue API resources
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/documenting-glue-api-resources
@@ -28,9 +28,9 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
 ---
 
-To help developers understand and use the public API of your project, you need to cover it with complete and up-to-date documentation. Spryker Glue provides the possibility to generate it automatically with the help of the **DocumentationGeneratorRestApi** Module. It extracts information on your REST API endpoints directly from their implementation. It also adds the possibility to provide additional information on endpoints, such as their purpose, usage details, request parameters (e.g. in headers, paths, queries, or cookies), etc.
+To help developers understand and use the public API of your project, you need to cover it with complete and up-to-date documentation. Spryker Glue provides the possibility to generate it automatically with the help of the **DocumentationGeneratorRestApi** Module. It extracts information on your REST API endpoints directly from their implementation. It also adds the possibility to provide additional information on endpoints, such as their purpose, usage details, or request parameters—for example, in headers, paths, queries, or cookies.
 
-The resulting document is a full description of your REST API following the [OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification) (formerly known as Swagger Document Format). It can be viewed, edited and consumed with the help of such tools as [Swagger Tools](https://swagger.io/), [Postman](https://www.getpostman.com/) etc.
+The resulting document is a full description of your REST API following the [OpenAPI Specification](https://github.com/OAI/OpenAPI-Specification) (formerly known as Swagger Document Format). It can be viewed, edited and consumed with the help of such tools as [Swagger Tools](https://swagger.io/) and [Postman](https://www.getpostman.com/).
 
 {% info_block warningBox %}
 
@@ -45,7 +45,7 @@ Before you begin, make sure that you have Spryker Glue installed and enabled<!--
 * [Swagger Tools Reference](https://swagger.io/)
 
 ## 1. Installation and Configuration
-To be able to generate REST API documentation, first, you need to install the `DocumentationGeneratorRestApi` Module. To do this, run the following command in the console:
+To generate REST API documentation, first, install the `DocumentationGeneratorRestApi` Module. To do this, run the following command:
 
 ```bash
 composer require spryker/rest-api-documentation-generator
@@ -62,7 +62,7 @@ After installation, open the file `src/Pyz/Zed/DocumentationGeneratorRestApi/Doc
 | `APPLICATION_PROJECT_ANNOTATION_SOURCE_DIRECTORY_PATTERN` | Specifies a template for paths where to search for REST API controllers on the **project** level. | `/Glue/%1$s/Controller/` |
 | `APPLICATION_CORE_ANNOTATION_SOURCE_DIRECTORY_PATTERN` | Specifies a template for paths where to search for REST API controllers on the **vendor** level. | `/*/*/src/*/Glue/%1$s/Controller/` |
 
-For details on REST API controllers, see step [4. Create a Resource Controller](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html#create-a-resource-controller) in the **Implementing a REST API Resource** article.
+For information about REST API controllers, see step [4. Create a Resource Controller](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html#create-a-resource-controller) in the **Implementing a REST API Resource** article.
 
 ## 2. Test Run
 To make sure that the documentation generator is working properly, run the following command in the console:
@@ -73,18 +73,18 @@ When the command completes, you should see a specification file generated in the
 ## 3. Describe Your REST API
 ### Requests and Responses
 
-Data models of requests used in your REST API are described with the help of transfer objects. Such objects contain a list of fields for each request or response, their data type, which of the fields are required etc. By default, the fields are not included in the specification automatically. To include them, you need to modify the XML schema definitions of the transfer objects.
+Data models of requests used in your REST API are described with the help of transfer objects. Such objects contain a list of fields for each request or response, their data type, and which of the fields are required. By default, the fields are not included in the specification automatically. To include them, you need to modify the XML schema definitions of the transfer objects.
 The visibility of request and response fields is controlled by XML attribute restRequestParameter. It can have **3** possible values:
 
-* **required** - the field will be included in the documentation and also required for a valid request;
-* **yes** - the field will be included in the documentation, but optional;
-* **no** - the field will not be included in the documentation.
+* **required**—the field will be included in the documentation and also required for a valid request;
+* **yes**—the field will be included in the documentation, but optional;
+* **no**—the field will not be included in the documentation.
 
 If the `restRequestParameter` attribute is not present for a field, the default value no is assumed.
 
 A response is generated using all properties of a transfer object. Below, you can see an example definition of a request transfer object:
 
-auth_rest_api.transfer.xml
+**auth_rest_api.transfer.xml**
 
 ```xml
 <transfer name="RestAccessTokensAttributes">
@@ -128,7 +128,7 @@ For more information on `ResourceRelationshipPlugins`, see [Relationship Plugin]
 
 
 
-## REST Methods
+## REST methods
 In addition to requests and responses, you can also supply additional information on your API endpoints. To do so, you need to modify the resource controllers of your REST API modules.
 
 Each controller has `getAction`, `postAction`, `patchAction`, or `deleteAction` functions, each providing functionality for the respective REST verbs (GET, POST, PATCH, DELETE). In the PHP-DOC blocks of such functions, you can use a new type of annotations: `@Glue`. The annotations use JSON-like format as follows:
@@ -173,7 +173,7 @@ The annotation keys are described below:
 | `getResourceById` | When set to **true**, indicates a _GET_ endpoint that returns a single resource, for example: _/wishlists/{ID}. *_ | The `getResourceById` and `getCollection` annotations are used for GET endpoints only. If neither of the notations are present for the getAction function or they are both set to false, a GET endpoint will be generated anyway. However, in such a case, the resource ID will not be included in the response. |
 | `getCollection` |  When set to true, indicates a _GET_ endpoint that returns a collection of resources, for example: _/wishlists.*_ | The `getResourceById` and `getCollection` annotations are used for GET endpoints only. If neither of the notations are present for the `getAction` function or they are both set to false, a GET endpoint will be generated anyway. However, in such a case, the resource ID will not be included in the response. |
 | `summary` | Sets a description for the endpoint. Use it to describe, in as much details as possible, what the endpoint is used for, its purpose and intention. | If a summary is not specified explicitly, it will be generated automatically.  |
-| `parameters` | Sets optional parameters for the request. | Parameters can be passed in HTTP headers, queries, cookies or as a part of the resource URI. For more details on parameter use and the available fields, see [Parameter Object](https://swagger.io/specification/#parameterObject). |
+| `parameters` | Sets optional parameters for the request. | Parameters can be passed in HTTP headers, queries, cookies or as a part of the resource URI. For more information about parameter use and the available fields, see [Parameter Object](https://swagger.io/specification/#parameterObject). |
 | `responses` |Use this parameter to describe all possible responses that can be generated by this endpoint and their respective response codes.  | The **default** response is included automatically. There is no need to include it here. |
 | `responseAttributesClassName` | Sets the FQCN of a custom transfer class that represents the response object. | Use this annotation when a response object is different from the corresponding request object. |
 | `isEmptyResponse` | When set to **true**, indicates that the HTTP method does not have a response body. | Do not use this annotation for the DELETE method. It has an empty response body by default.	 |

@@ -1,5 +1,5 @@
 ---
-title: Glue API - Product Rating & Reviews feature integration
+title: Glue API - Product Rating and Reviews feature integration
 description: This guide contains step-by-step instructions on integrating Product Rating & Reviews API feature into a Spryker-based project.
 last_updated: Sep 14, 2020
 template: feature-integration-guide-template
@@ -36,7 +36,6 @@ Make sure that the following module was installed:
 ### 2) Set up Database Schema and Transfer Objects
 Run the following command to generate transfer changes:
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -109,7 +108,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure that the following endpoint is available:
-`http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews`
+`https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}/product-reviews`
 
 <details open>
 <summary markdown='span'>Example</summary>
@@ -279,7 +278,7 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
 
 {% info_block warningBox "Verification" %}
 
-Make a request to `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=product-reviews`.
+Make a request to `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}?include=product-reviews`.
 
 Make sure that the response contains product-reviews as a relationship and product-reviews data included.
 
@@ -439,7 +438,7 @@ Make sure that `averageRating` and `reviewCount` attributes are present in concr
 
 {% info_block warningBox "Verification" %}
 
-Make a request to `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=product-reviews`.
+Make a request to `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}?include=product-reviews`.
 
 Make sure that the response contains product-reviews as a relationship and product-reviews data included.
 

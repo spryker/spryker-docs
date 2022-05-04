@@ -18,16 +18,16 @@ Ensure that the related features are installed:
 
 | Name | Version |
 | --- | --- |
-| Mailing & Notifications | master |
-| Inventory Management | master |
-| Product | master |
-| Spryker Core | master |
+| Mailing & Notifications | {{page.version}} |
+| Inventory Management | {{page.version}} |
+| Product | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 ```bash
-composer require "spryker-feature/availability-notification":"^master" --update-with-dependencies 
+composer require "spryker-feature/availability-notification":"^{{page.version}}" --update-with-dependencies 
 ```
 
 {% info_block warningBox "Verification" %}
@@ -38,7 +38,6 @@ Make sure that the following modules have been installed:<table><thead><tr><th>M
 
 Run the following commands to apply database changes, generate entities and transfer changes:
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate 
 ```
@@ -224,16 +223,16 @@ Ensure that the related features are installed:
 
 | Name | Version |
 | --- | --- |
-| Mailing & Notifications | master |
-| Inventory Management | master |
-| Product | master |
-| Spryker Core | master |
+| Mailing & Notifications | {{page.version}} |
+| Inventory Management | {{page.version}} |
+| Product | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 ```bash
-composer require "spryker-feature/availability-notification":"^master" --update-with-dependencies 
+composer require "spryker-feature/availability-notification":"^{{page.version}}" --update-with-dependencies 
 ```
 
 {% info_block warningBox "Verification" %}
@@ -294,7 +293,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that, in the database, the configured data is added to the `spy_glossary` table.
+Make sure that, in the database, the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 {% endinfo_block %}
 
 ### 3)Enable Controllers

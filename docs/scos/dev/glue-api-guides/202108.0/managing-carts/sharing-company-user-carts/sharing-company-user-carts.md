@@ -38,7 +38,7 @@ To share a cart, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
-Request sample: `POST http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab/shared-carts`
+Request sample: `POST https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab/shared-carts`
 
 ```json
 {
@@ -71,7 +71,7 @@ Response sample:
             "idCartPermissionGroup": 1
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa"
+            "self": "https://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa"
         }
     }
 }
@@ -87,10 +87,19 @@ Response sample:
 
 | CODE | REASON |
 | --- | --- |
-| 401 | The access token is invalid. |
-| 403 | The access token is missing. |
-| 404 | Cart not found. |
+| 001 | The access token is invalid. |
+| 002 | The access token is missing. |
+| 101 | Cart is not found. |
+| 104 | Cart uuid is missing. |
 | 422 | Failed to share a cart. |
+| 901 | `idCompanyUser` field is not specified or empty. |
+| 2501 | Cart permission group is not found. |
+| 2701 | Action is forbidden. |
+| 2702 | Failed to share a cart. |
+| 2703 | Shared cart not found. |
+| 2704 | Shared cart ID is missing. |
+| 2705 | Shared cart is not found. |
+| 2706 | Failed to save the shared cart. |
 
 ## Next steps
 

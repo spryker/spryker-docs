@@ -30,7 +30,7 @@ This tutorial explains how to retrieve data from the database and render it in a
 
 **Prerequisites:**
 
-* You have created a new [module](/docs/scos/dev/back-end-development/extending-spryker/adding-a-new-module.html).
+* You have created a new [module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html).
 
 ## Creating a Table
 Create the `ProductTable` class under the `src/Pyz/Zed/HelloWorld/Communication/Table` folder:
@@ -102,7 +102,7 @@ class ProductTable extends AbstractTable
 ```
 
 ## Creating a Factory
-The factory should be placed in the communication layer and should contain a method that returns an instance of the `ProductTable` class. Add the method that constructs the instance of the `ProductTable` class:
+The factory must be placed in the communication layer and must contain a method that returns an instance of the `ProductTable` class. Add the method that constructs the instance of the `ProductTable` class:
 
 ```php
 <?php

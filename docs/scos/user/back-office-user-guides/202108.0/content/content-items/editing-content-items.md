@@ -19,19 +19,19 @@ This topic describes how to edit content items in the Back Office.
 
 ## Prerequisites
 
-To start working with abstract products, go to **Catalog** > **Products**.
+To start working with abstract products, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Editing a content item
 
 To edit a content item:
-1. On the left-side navigation bar, navigate to  **Content** > **Content Items**.
+1. On the left-side navigation bar, navigate to  **Content&nbsp;<span aria-label="and then">></span> Content Items**.
 2. In the _Actions_ column of the *List of Content Items* table, click **Edit** next to the item you want to modify. The *Edit Content Item Type: Content Item Key* page opens.
 3. Make changes to the needed attributes.
 4. To save the updates, click **Save**. The updated content item will be displayed on the grid of _List of Content Items_, and the following message is displayed: "_Content item has been successfully updated_".
 
-**Tips & tricks**
+**Tips and tricks**
 <br>On the *Edit Content Item Type: Content Item Key* page, you can clear all the fields in the current locale by clicking **Clear locale**.
 
 Clicking **Back to Content Items** in the top right corner of the page can trigger different actions:

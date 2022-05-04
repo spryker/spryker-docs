@@ -1,5 +1,5 @@
 ---
-title: Product relations feature integration
+title: Product Relations feature integration
 description: Integrate the Product Relations feature into your project.
 last_updated: Feb 23, 2021
 template: feature-integration-guide-template
@@ -55,7 +55,6 @@ Make sure that the following modules have been installed:
 1. Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

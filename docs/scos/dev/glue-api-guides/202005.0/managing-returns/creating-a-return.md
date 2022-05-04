@@ -27,7 +27,7 @@ To create a return for a registered user, send the request:
 ***
 ## Request
 
-Sample request: `POST https://glue.mysprykershop.com/returns`
+Request sample: `POST https://glue.mysprykershop.com/returns`
 
 ```json
 {

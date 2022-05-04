@@ -13,8 +13,8 @@ To start feature integration, install the required features:
 
 | NAME  | VERSION | INTEGRATION GUIDE |
 | --------------- | --------- | ------------|
-| Marketplace Merchant Portal Product Offer Management | {{page.version}} | [Marketplace Merchant Portal Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html)
-| Merchant Portal - Marketplace Order Management | {{page.version}} | [Marketplace Merchant Portal Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-order-management-feature-integration.html)
+| Marketplace Merchant Portal Product Offer Management | {{page.version}} | [Marketplace Merchant Portal Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html)|
+| Merchant Portal - Marketplace Order Management | {{page.version}} | [Marketplace Merchant Portal Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-order-management-feature-integration.html)|
 
 
 ### 1) Set up behavior
@@ -38,7 +38,7 @@ use Spryker\Zed\SalesMerchantPortalGui\SalesMerchantPortalGuiDependencyProvider 
 class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPortalGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\SalesMerchantPortalGuiExtension\Dependency\Plugin\MerchantOrderItemTableExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\SalesMerchantPortalGuiExtension\Dependency\Plugin\MerchantOrderItemTableExpanderPluginInterface>
      */
     protected function getMerchantOrderItemTableExpanderPlugins(): array
     {

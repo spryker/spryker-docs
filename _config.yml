@@ -126,6 +126,28 @@ defaults:
     values:
       sidebar: "cloud_dev_sidebar"
       role: "dev"
+  -
+     scope:
+       path: "docs/fes"
+     values:
+       product: "frontend-enablement-service"
+  -
+     scope:
+       path: "docs/fes/dev"
+     values:
+       sidebar: "fes_dev_sidebar"
+       role: "dev"
+  -
+     scope:
+       path: "docs/paas-plus"
+     values:
+       product: "platform-as-a-service-plus"
+  -
+     scope:
+       path: "docs/paas-plus/dev"
+     values:
+       sidebar: "paas_plus_dev_sidebar"
+       role: "dev"
 
 versions:
   '201811.0': '201811.0'
@@ -178,6 +200,8 @@ sidebars:
   - cloud_dev_sidebar
   - scos_dev_sidebar
   - scos_user_sidebar
+  - fes_dev_sidebar
+  - paas_plus_dev_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file
@@ -206,6 +230,10 @@ algolia:
       title: 'Marketplace Developer'
     - name: 'cloud_dev'
       title: 'Cloud Developer'
+    - name: 'fes_dev'
+      title: 'Frontend enablement Service Developer'
+    - name: 'paas_plus_dev'
+      title: 'Platform as a Service Plus Developer'
 
 sass:
     sass_dir: css
@@ -217,3 +245,6 @@ last-modified-at:
 
 redirect_from:
   json: false
+
+form_endpoints:
+  feedback: 'https://formspree.io/f/xdoboyro'

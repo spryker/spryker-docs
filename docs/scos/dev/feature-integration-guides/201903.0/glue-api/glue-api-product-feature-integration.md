@@ -1,5 +1,5 @@
 ---
-title: Product API feature integration
+title: Glue API - Product feature integration
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/v2/docs/product-api-feature-integration
@@ -36,7 +36,6 @@ Make sure that the following module is installed:
 ### 2) Set up Database Schema and Transfer objects
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```yaml
-console transfer:generate
 console propel:install
 console transfer:generate 
 ```

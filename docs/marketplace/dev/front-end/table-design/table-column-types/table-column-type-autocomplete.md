@@ -49,6 +49,12 @@ Check out an example usage of the Table Column Autocomplete in the `@spryker/tab
 Register the component:
 
 ```ts
+declare module '@spryker/table' {
+    interface TableColumnTypeRegistry {
+        autocomplete: TableColumnAutocompleteConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -66,12 +72,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Column Autocomplete:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableColumnTypeRegistry {
-        autocomplete: TableColumnAutocompleteConfig;
-    }
-}
-
 interface AutocompleteValue {
     value: unknown;
     title: string;

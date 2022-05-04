@@ -30,6 +30,7 @@ To retrieve all active CMS pages, send the request:
 ***
 `GET` **/cms-pages**
 ***
+
 {% info_block infoBox %}
 
 This endpoint returns activated CMS pages only. Also, if there are more than 12 active CMS pages, the endpoint returns the number of pages multiple of 12. See the Request section below for details.
@@ -50,7 +51,14 @@ You set the `offset` value, which equals the difference by which the actual numb
 | --- | --- | --- |
 | offset | 	Specifies the number of results to skip | numeric |
 | limit | Specifies the number of results per single request | numeric |
-| include | Adds resource relationships to the request | content-product-abstract-lists, content-banners <section contenteditable="false" class="errorBox"><div class="content"> To retrieve abstract products for the `content-product-abstract-lists` relationship, include the `abstract-products` relationship as well.</div></section>|
+| include | Adds resource relationships to the request | content-product-abstract-lists, content-banners |
+
+{% info_block infoBox "Info" %}
+
+To retrieve abstract products for the `content-product-abstract-lists` relationship, include the `abstract-products` relationship as well.
+
+{% endinfo_block %}
+
 
 | REQUEST SAMPLE | USAGE |
 | --- | --- |
@@ -64,7 +72,7 @@ You set the `offset` value, which equals the difference by which the actual numb
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: All CMS pages</summary>
+<summary markdown='span'>Response sample: retrieve all active CMS pages</summary>
 
 ```json
 {
@@ -162,7 +170,7 @@ You set the `offset` value, which equals the difference by which the actual numb
 </details>
 
 <details>
-<summary markdown='span'>Response sample: CMS pages with pagination</summary>
+<summary markdown='span'>Response sample: retrieve CMS pages with pagination included</summary>
 
 ```json
 {
@@ -213,9 +221,9 @@ When paging is enabled, the links section of the response contains links for the
 {% endinfo_block %}
 
 <details>
-<summary markdown='span'>Response sample: CMS pages with Abstract Product List and Banner content items</summary>
+<summary markdown='span'>Response sample: retrieve CMS pages with the details on the Abstract Product List and Banner content items</summary>
 
-```
+```json
 {
     "data": [
        {
@@ -329,7 +337,7 @@ When paging is enabled, the links section of the response contains links for the
 </details>
 
 <details>
-<summary markdown='span'>Response sample: CMS pages with Abstract Product List content items and their abstract products</summary>
+<summary markdown='span'>Response sample: retrieve CMS pages with the details on the Abstract Product List content items and their abstract products</summary>
 
 ```json
 {
@@ -592,7 +600,14 @@ To retrieve a specific CMS page, send the request:
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | content-product-abstract-lists,content-banners <section contenteditable="false" class="errorBox"><div class="content"> To retrieve abstract products for the `content-product-abstract-lists` relationship, include the `abstract-products` relationship as well.</div></section> |
+| include | Adds resource relationships to the request. | content-product-abstract-lists,content-banners |
+
+{% info_block infoBox "Info" %}
+
+To retrieve abstract products for the `content-product-abstract-lists` relationship, include the `abstract-products` relationship as well.
+
+{% endinfo_block %}
+
 
 | REQUEST SAMPLE | USAGE |
 | --- | --- |
@@ -602,7 +617,7 @@ To retrieve a specific CMS page, send the request:
 | `GET https://glue.mysprykershop.com/cms-pages/0455b56c-55bf-54b6-859d-68753e6f480c?include=content-banners` | Retrieve information about [Banner](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-types.html#banner-content-item-widget) content item for the CMS page. |
 
 <details>
-<summary markdown='span'>Response sample: A specific CMS page</summary>
+<summary markdown='span'>Response sample: retrieve a specific CMS page</summary>
 
 ```json
 {
@@ -625,7 +640,7 @@ To retrieve a specific CMS page, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: A CMS page with Abstract Product List and Banner content items</summary>
+<summary markdown='span'>Response sample: retrieve a CMS page with the details on the Abstract Product List and Banner content items</summary>
 
 ```json
 {
@@ -689,7 +704,7 @@ To retrieve a specific CMS page, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: A CMS page with Abstract Product List content items and abstract products</summary>
+<summary markdown='span'>Response sample: retrieve a CMS page with the details on the Abstract Product List content items and abstract products</summary>
 
 ```json
 {
@@ -858,3 +873,9 @@ To retrieve a specific CMS page, send the request:
 </details>
 
 Find all the related attribute descriptions in [Retrieve all CMS Pages](#all-cms-pages).
+
+## Possible errors
+
+| CODE | REASON |
+| --- | --- |
+| 3801 | CMS page is not found. |

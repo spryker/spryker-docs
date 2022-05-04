@@ -1,5 +1,5 @@
 ---
-title: Splittable Order Items Feature Overview
+title: Splittable Order Items overview
 description: Product concretes are splittable. Avoid the creation of numerous sales order items, make them non-splittable (no many sales orders, only one will be created).
 last_updated: Nov 22, 2019
 template: concept-topic-template
@@ -12,7 +12,7 @@ redirect_from:
   - /v4/docs/en/splittable-order-items
 ---
 
-As a final step of checkout, for each item in the cart, sales order items are created. By default, each product concrete is splittalble: i.e. if the product concrete is a pallet containing 1000 cans, 1000 sales order items will be created in the database upon checkout. To avoid creation of numerous individual sales order items for such products, you can make them non-splittable - i.e instead of many sales orders, just one will be created. This can be achieved by specifying either "true" of "false" value for `is_quantity_splittable` field in the product table. `is_quantity_splittable` attribute (true by default) controls how many sales order items should be created as a result of checkout.
+As a final step of checkout, for each item in the cart, sales order items are created. By default, each product concrete is splittalble: for example, if the product concrete is a pallet containing 1000 cans, 1000 sales order items will be created in the database upon checkout. To avoid creation of numerous individual sales order items for such products, you can make them non-splittable - i.e instead of many sales orders, just one will be created. This can be achieved by specifying either "true" of "false" value for `is_quantity_splittable` field in the product table. `is_quantity_splittable` attribute (true by default) controls how many sales order items should be created as a result of checkout.
 
 Depending on the `is_quantity_splittable` value, different amount of splittable order items (SOI) is created. But the following is always true:
 

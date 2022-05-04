@@ -1,5 +1,5 @@
 ---
-title: Product Bundles
+title: Product Bundles feature overview
 description: With the Product Bundles feature you can freely tie individual items together and sell them as a package.
 last_updated: Apr 3, 2020
 template: concept-topic-template
@@ -98,7 +98,7 @@ If bundled item moves to reserved state machine state then corresponding bundle 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/creating-abstract-products-and-product-bundles.html)  |
+| [Create product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

@@ -1,5 +1,5 @@
 ---
-title: Persistent cart sharing feature integration
+title: Persistent Cart Sharing feature integration
 description: The guide describes the process of installing the Persistent Cart feature into your project.
 last_updated: Aug 27, 2020
 template: feature-integration-guide-template
@@ -88,7 +88,7 @@ Run the following console command to import data:
 console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 {% endinfo_block %}
 
 ### 3) Set up Behavior

@@ -8,7 +8,7 @@ This document explains the Table Feature Total component in the Components Libra
 
 ## Overview
 
-Table Feature Total is a feature of the Table Component that renders the total number of the data 
+Table Feature Total is a feature of the Table Component that renders the total number of the data
 set via Chips component.
 In case table rows are selectable, Table Feature Total also renders a number of selected rows.
 
@@ -16,10 +16,10 @@ Check out an example usage of the Table Feature Total in the `@spryker/table` co
 
 Component configuration:
 
-- `enabled` - enables the feature via config.  
+- `enabled`—enables the feature via config.  
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         dataSource: { ... },
         columns: [ ... ],
@@ -36,7 +36,12 @@ Component configuration:
 Register the component:
 
 ```ts
-// Dynamic
+declare module '@spryker/table' {
+    interface TableConfig {
+        total?: TableTotalConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -71,11 +76,5 @@ export class RootModule {}
 Below you can find interfaces for the Table Feature Total:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableConfig {
-        total?: TableTotalConfig;
-    }
-}
-
 export interface TableTotalConfig extends TableFeatureConfig {}
 ```

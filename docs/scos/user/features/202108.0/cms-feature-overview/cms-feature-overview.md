@@ -1,5 +1,5 @@
 ---
-title: CMS
+title: CMS feature overview
 description: The Spryker Commerce OS offers a feature-rich content management system that allows providing the right content at the right place at the right time.
 last_updated: Jul 16, 2021
 template: concept-topic-template
@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/cms
 ---
 
-The *CMS* feature is a content management system that allows you to create and manage the content of custom pages that are not part of the product catalog.
+The *CMS* feature is a content management system that lets you create and manage the content of custom pages that are not part of the product catalog.
 
 The main functionalities of the feature are:
 * Templates and slots
@@ -31,7 +31,7 @@ All the CMS elements are based on templates. They simplify the creation of simil
 
 | CONCEPT | DEFINITION |
 | --- | --- |
-| Page | Pages defined in CMS refer to web pages that are meant to be displayed in the front-end application (Yves). A page is defined by an URL and a template. |
+| Page | Pages defined in CMS refer to web pages that are meant to be displayed in the frontend application (Yves). A page is defined by an URL and a template. |
 | Page URL | When accessing the URL assigned to a page defined in CMS, the associated template will be loaded. |
 | Template | The CMS uses Twig templates that are placed under src/Pyz/Yves/Cms/Theme/default/template/ folder. |
 | Placeholder | Placeholders enable putting context to a template; a placeholder has a glossary key assigned, so at runtime, the placeholders are replaced by the corresponding glossary key value, considering the context. |

@@ -1,5 +1,5 @@
 ---
-title: Reference Information- CMS redirects
+title: Reference information- CMS redirects
 description: The guide provides reference information you see when creating and updating URL redirects in the Back Office.
 last_updated: Aug 27, 2020
 template: back-office-user-guide-template

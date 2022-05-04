@@ -16,20 +16,20 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | master |
-| Cart | master |
-|Product  | master |
-|Payments  | master |
-| Shipment | master |
-| Order Management | master |
-| Mailing &amp; Notifications | master |
-| Promotions &amp; Discounts | master |
+| Spryker Core | {{page.version}} |
+| Cart | {{page.version}} |
+|Product  | {{page.version}} |
+|Payments  | {{page.version}} |
+| Shipment | {{page.version}} |
+| Order Management | {{page.version}} |
+| Mailing &amp; Notifications | {{page.version}} |
+| Promotions &amp; Discounts | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/gift-cards:"^master" --update-with-dependencies
+composer require spryker-feature/gift-cards:"^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -174,7 +174,6 @@ Once you've finished Setup Behaviour step, make sure that:<ul><li>NoPayment01 st
 Run the following commands to apply database changes and to generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -1070,15 +1069,15 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | master |
-| Cart | master |
-| Checkout | master |
+| Spryker Core | {{page.version}} |
+| Cart | {{page.version}} |
+| Checkout | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/gift-cards:"^master" --update-with-dependencies
+composer require spryker-feature/gift-cards:"^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1149,7 +1148,7 @@ console data:import:glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 {% endinfo_block %}
 
 ### 3) Set up Widgets

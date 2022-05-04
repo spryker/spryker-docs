@@ -1,5 +1,5 @@
 ---
-title: Alternative products + wishlist feature integration
+title: Alternative products + Wishlist feature integration
 description: The guide walks you through the process of installing the Alternative products and Wishlist features into the project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -39,8 +39,11 @@ Run the following console command to import data:
 ```yaml
 console data:import glossary
 ```
+
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+
+Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+
 {% endinfo_block %}
 
 ### 2) Set up widgets

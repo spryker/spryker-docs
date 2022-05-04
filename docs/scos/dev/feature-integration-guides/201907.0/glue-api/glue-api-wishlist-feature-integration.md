@@ -1,5 +1,5 @@
 ---
-title: Wishlist API feature integration
+title: Glue API - Wishlist feature integration
 description: This guide will navigate you through the process of installing and configuring the Wishlist API feature in Spryker OS.
 last_updated: Nov 22, 2019
 template: feature-integration-guide-template
@@ -41,7 +41,6 @@ composer require spryker/wishlists-rest-api:"^1.0.0" --update-with-dependencies
 Run the following commands to apply database changes, and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -140,7 +139,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 @(Warning" %}
 
-{% endinfo_block %}(Make sure that the following endpoints are available:<ul><li>`http:///glue.mysprykershop.com/wishlists`</li><li>`http:///glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlists-items`</li></ul>Send a request to `http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=wishlists` and make sure that the given customer has at least one wishlist. Make sure that the response includes relationships to the `wishlists` resources.)
+{% endinfo_block %}(Make sure that the following endpoints are available:<ul><li>`http:///glue.mysprykershop.com/wishlists`</li><li>`http:///glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlists-items`</li></ul>Send a request to `https://glue.mysprykershop.comm/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=wishlists` and make sure that the given customer has at least one wishlist. Make sure that the response includes relationships to the `wishlists` resources.)
 
 **See also:**
 

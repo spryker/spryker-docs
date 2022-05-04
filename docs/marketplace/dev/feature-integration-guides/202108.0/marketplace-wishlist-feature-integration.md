@@ -16,7 +16,7 @@ Follow the steps below to install the Marketplace Wishlist feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | LINK |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | ---------- |
 | Spryker Core         | {{page.version}}      | [Spryker Core Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Marketplace Merchant | {{page.version}}      | [Marketplace Merchant Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
@@ -48,7 +48,6 @@ Make sure the following modules have been installed:
 Generate transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -83,7 +82,7 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | WishlistProductOfferPostMoveToCartCollectionExpanderPlugin | Expands `WishlistMoveToCartRequestCollection` transfer object with not valid product offers as request items. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
-| WishlistMerchantProductPostMoveToCartCollectionExpanderPlugin | Expands `WishlistMoveToCartRequestCollection` transfer object with not valid merchant products as request items. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
+| WishlistMerchantProductPostMoveToCartCollectionExpanderPlugin | Expands `WishlistMoveToCartRequestCollection` transfer object with not valid marketplace products as request items. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
 | WishlistProductOfferCollectionToRemoveExpanderPlugin | Expands `WishlistItemCollectionTransfer` transfer object with product offer reference. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
 | WishlistMerchantProductCollectionToRemoveExpanderPlugin | Expands `WishlistItemCollection` transfer object with merchant product wishlist items from the `WishlistMoveToCartRequestCollection` transfer object. | None | Spryker\Client\WishlistExtension\Dependency\Plugin |
 | MerchantProductWishlistItemRequestExpanderPlugin | Expands `WishlistItem` transfer by provided merchant_reference in params. | None | SprykerShop\Yves\MerchantProductWidget\Plugin\WishlistPage |
@@ -110,7 +109,7 @@ use Spryker\Client\Wishlist\WishlistDependencyProvider as SprykerWishlistDepende
 class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 {
     /**
-     * @return \Spryker\Client\WishlistExtension\Dependency\Plugin\WishlistPostMoveToCartCollectionExpanderPluginInterface[]
+     * @return array<\Spryker\Client\WishlistExtension\Dependency\Plugin\WishlistPostMoveToCartCollectionExpanderPluginInterface>
      */
     protected function getWishlistPostMoveToCartCollectionExpanderPlugins(): array
     {
@@ -121,7 +120,7 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
     }
 
     /**
-     * @return \Spryker\Client\WishlistExtension\Dependency\Plugin\WishlistCollectionToRemoveExpanderPluginInterface[]
+     * @return array<\Spryker\Client\WishlistExtension\Dependency\Plugin\WishlistCollectionToRemoveExpanderPluginInterface>
      */
     protected function getWishlistCollectionToRemoveExpanderPlugins(): array
     {
@@ -149,7 +148,7 @@ use SprykerShop\Yves\WishlistPage\WishlistPageDependencyProvider as SprykerWishl
 class WishlistPageDependencyProvider extends SprykerWishlistPageDependencyProvider
 {
     /**
-     * @return \SprykerShop\Yves\WishlistPageExtension\Dependency\Plugin\WishlistItemRequestExpanderPluginInterface[]
+     * @return array<\SprykerShop\Yves\WishlistPageExtension\Dependency\Plugin\WishlistItemRequestExpanderPluginInterface>
      */
     protected function getWishlistItemRequestExpanderPlugins(): array
     {
@@ -160,7 +159,7 @@ class WishlistPageDependencyProvider extends SprykerWishlistPageDependencyProvid
     }
 
     /**
-     * @return \SprykerShop\Yves\WishlistPageExtension\Dependency\Plugin\WishlistItemMetaFormExpanderPluginInterface[]
+     * @return array<\SprykerShop\Yves\WishlistPageExtension\Dependency\Plugin\WishlistItemMetaFormExpanderPluginInterface>
      */
     protected function getWishlistItemMetaFormExpanderPlugins(): array
     {
@@ -184,7 +183,7 @@ use Spryker\Zed\Wishlist\WishlistDependencyProvider as SprykerWishlistDependency
 class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistPreAddItemPluginInterface[]
+     * @return array<\Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistPreAddItemPluginInterface>
      */
     protected function getWishlistPreAddItemPlugins(): array
     {

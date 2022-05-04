@@ -1,5 +1,5 @@
 ---
-title: Approval process feature integration
+title: Approval Process feature integration
 description: This guide describes all steps needed to be performed in order to integrate the Approval Process feature into your project.
 last_updated: Dec 3, 2020
 template: feature-integration-guide-template
@@ -82,7 +82,6 @@ Make sure that the configuration returns the billing address and payment keys.
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -164,7 +163,7 @@ console data:import glossary
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the configured data has been added to the `spy_glossary` table in the database.
+Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
 {% endinfo_block %}
 
 ### 4) Set up Behavior
@@ -457,7 +456,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data is added to the `spy_glossary` table in the database.
+Make sure that the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
 
 {% endinfo_block %}
 

@@ -61,7 +61,7 @@ use Spryker\Service\Shipment\ShipmentConfig as SprykerShipmentConfig;
 class ShipmentConfig extends SprykerShipmentConfig
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     public function getShipmentHashFields(): array
     {
@@ -70,18 +70,11 @@ class ShipmentConfig extends SprykerShipmentConfig
 }
 ```
 
-{% info_block warningBox "Verification" %}
-
-Make sure that `ShipmentService::groupItemsByShipment()` groups items by shipment using the merchant reference.
-
-{% endinfo_block %}
-
 ### 3) Set up the database schema and transfer definitions
 
 Apply the database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -109,7 +102,7 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantShipmentOrderItemTemplatePlugin | Shows merchant shipment in shipment section of the ShipmentGui::SallesController |  | Spryker\Zed\MerchantShipmentGui\Communication\ShipmentGui |
+| MerchantShipmentOrderItemTemplatePlugin | Shows merchant shipment in shipment section of the ShipmentGui::SalesController |  | Spryker\Zed\MerchantShipmentGui\Communication\ShipmentGui |
 
 **src/Pyz/Zed/ShipmentGui/ShipmentGuiDependencyProvider.php**
 
@@ -129,7 +122,7 @@ use Spryker\Zed\ShipmentGui\ShipmentGuiDependencyProvider as SprykerShipmentGuiD
 class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ShipmentGuiExtension\Dependency\Plugin\ShipmentOrderItemTemplatePluginInterface[]
+     * @return array<\Spryker\Zed\ShipmentGuiExtension\Dependency\Plugin\ShipmentOrderItemTemplatePluginInterface>
      */
     protected function getShipmentOrderItemTemplatePlugins(): array
     {

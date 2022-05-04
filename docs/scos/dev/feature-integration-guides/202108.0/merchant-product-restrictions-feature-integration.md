@@ -1,5 +1,5 @@
 ---
-title: Merchant product restrictions feature integration
+title: Merchant Product Restrictions feature integration
 description: Merchant Product Restrictions allows setting access to particular products. This guide describes the process of integrating the feature into a project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -59,7 +59,6 @@ Make sure that the following modules were installed:
 Run the following commands to apply database changes, as well as generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

@@ -27,15 +27,15 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Spryker Core |master  |
-| Product Lists | master |
-| Merchant | master |
+| Spryker Core |{{page.version}}  |
+| Product Lists | {{page.version}} |
+| Merchant | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/merchant-product-restrictions:"^master" --update-with-dependencies
+composer require spryker-feature/merchant-product-restrictions:"^{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -54,7 +54,6 @@ Make sure that the following modules were installed:
 Run the following commands to apply database changes, as well as generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

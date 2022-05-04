@@ -1,5 +1,5 @@
 ---
-title: CMS feature integration Guide
+title: CMS feature integration
 description: Multi-store CMS Pages feature allows making CMS pages visible or hidden on the store website. The guide describes how to integrate the feature into your project.
 last_updated: Dec 24, 2019
 template: feature-integration-guide-template
@@ -55,7 +55,6 @@ Adjust the schema definition so that entity changes can trigger events.
 
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

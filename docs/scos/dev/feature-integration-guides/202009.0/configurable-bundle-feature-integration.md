@@ -1,5 +1,5 @@
 ---
-title: Configurable bundle feature integration
+title: Configurable Bundle feature integration
 description: This guide provides step-by-step instruction on installing the basic functionality for the Configurable Bundle feature in Spryker.
 last_updated: Aug 27, 2020
 template: feature-integration-guide-template
@@ -124,7 +124,6 @@ Adjust the schema definition so that entity changes will trigger the events:
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -312,7 +311,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database, the configured data are added to the `spy_glossary` table.
+Make sure that in the database, the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 

@@ -1,5 +1,5 @@
 ---
-title: HowTo - Replace Spryker Module Dependencies
+title: "HowTo: Replace Spryker module dependencies"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-replace-bundle-dependencies

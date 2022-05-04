@@ -28,7 +28,7 @@ YOUR ADVANTAGES:
 * <b>personalization and individualization</b> with the very latest KI methods (up to 40% increase in turnover share, an increase of up to 800% in mailing success.)
 
 
-## Related Developer articles
+## Related Developer guides
 
 * [Installing Econda](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/installing-econda.html)
 * [Integrating Econda](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda.html)

@@ -1,5 +1,5 @@
 ---
-title: Return management feature integration
+title: Return Management feature integration
 description: This guide provides step-by-step instructions on integrating the Return Management feature into your project.
 last_updated: Sep 8, 2020
 template: feature-integration-guide-template
@@ -293,7 +293,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 

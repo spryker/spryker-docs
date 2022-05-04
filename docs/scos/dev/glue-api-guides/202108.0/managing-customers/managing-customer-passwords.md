@@ -44,7 +44,9 @@ To change a customer's password, send the request:
 | Authorization | string | &check; | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
 
-Request sample: `PATCH http://glue.mysprykershop.com/customer-password/DE--21`
+Request sample: change a customer's password
+
+`PATCH http://glue.mysprykershop.com/customer-password/DE--21`
 
 ```json
 {
@@ -85,7 +87,9 @@ To request a password reset key, send the request:
 
 #### Request
 
-Sample request: `POST https://glue.mysprykershop.com/customer-forgotten-password`
+Request sample: request a password reset key
+
+`POST https://glue.mysprykershop.com/customer-forgotten-password`
 
 ```json
 {
@@ -119,7 +123,9 @@ To set a new password, send the request:
 
 #### Request
 
-Request sample: `PATCH https://glue.mysprykershop.com/customer-restore-password/98ffa3ecccac2b7f0815e0417784cd54`
+Request sample: set a new password
+
+`PATCH https://glue.mysprykershop.com/customer-restore-password/98ffa3ecccac2b7f0815e0417784cd54`
 
 ```json
 {
@@ -149,11 +155,16 @@ If the password reset is successful, the endpoint returns the `204 No Content` s
 
 | CODE | REASON |
 | --- | --- |
+| 002 | Access token is missing. |
+| 404 | Customer with the specified ID is not found.  |
 | 406 | New password and password confirmation do not match. |
 | 407 | Password change failed. |
-| 408 | Invalid password. |
+| 408 | Old password is invalid.|
 | 411 | Unauthorized request. |
 | 415 | Password Reset Key is invalid. |
+| 420 | The password character set is invalid.  |
+| 422 | `newPassword` and `confirmPassword` values are not identical.  |
+| 901 | `newPassword` and `confirmPassword` are not specified; or the password length is invalid (it should be from 8 to 64 characters). |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
 

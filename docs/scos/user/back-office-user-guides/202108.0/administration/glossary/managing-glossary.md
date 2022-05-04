@@ -13,12 +13,19 @@ redirect_from:
 ---
 
 This article describes how to manage translations.
-To start managing translations, go to the **Administration** > **Glossary** section.
 
-**To create a new translation:**
+## Prerequisites
 
-1. In the top-right corner of the *Overview of Translations* page click **Create Translation**.
-2. On the *Create Translation* page, do the following:
+To start managing translations, go to the **Administration&nbsp;<span aria-label="and then">></span> Glossary** section.
+
+Review the reference information before you start, or look up the necessary information as you go through the process.
+
+## Creating a new translation
+
+To create a new translation, do the following:
+
+1. In the top-right corner of the **Overview of Translations** page click **Create Translation**.
+2. On the **Create Translation** page, do the following:
 3. In the **Name** field, enter the glossary key.
 
 {% info_block errorBox %}
@@ -27,14 +34,16 @@ You can not just add/update a glossary key without using it in code, otherwise t
 
 {% endinfo_block %}
 
-4. Populate the glossary values per the locales.
-5. Once done, click **Save**.
+4. Fill in the glossary values per the locales.
+5. Click **Save**.
 
 This is the example of how the translations can look like:
 ![Example of translations](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Glossary/Managing+Glossary/managing-glossary.png)
 
-**To edit an existing translation:**
+## Editing an existing translation
 
-1. On the *Overview of Translations* page, click **Edit** in the _Actions_ column for a specific glossary key.
-2. On the *Edit Translation* page, change the translation values in the locales (the *Name* field is greyed out thus the glossary key itself is not available for modifications).
-3. Once done, click **Save**.
+To edit an existing translation, do the following:
+
+1. On the **Overview of Translations** page, for a specific glossary key, in the **Actions** column, click **Edit**.
+2. On the **Edit Translation** page, change the translation values in the locales—the **Name** field is greyed out, and thus the glossary key itself is not available for modifications.
+3. Click **Save**.

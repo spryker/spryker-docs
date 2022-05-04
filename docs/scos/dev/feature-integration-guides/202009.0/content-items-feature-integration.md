@@ -1,5 +1,5 @@
 ---
-title: Content items feature integration
+title: Content Items feature integration
 description: The guide walks you through the process of installing the Content Items feature in the project.
 last_updated: Aug 27, 2020
 template: feature-integration-guide-template
@@ -72,7 +72,6 @@ Adjust the schema definition so entity changes will trigger events:
 Run the following commands to apply database changes and generate changes for entities and transfers:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

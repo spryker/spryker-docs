@@ -16,9 +16,9 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Order Management | master |
-| Company Account | master |
-| Spryker Core | master |
+| Order Management | {{page.version}} |
+| Company Account | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
@@ -88,7 +88,7 @@ console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 ### 4) Set up Behavior
@@ -301,8 +301,8 @@ To start feature integration, overview, and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Customer Account Management | master |
-| Company Account | master |
+| Customer Account Management | {{page.version}} |
+| Company Account | {{page.version}} |
 ### 1) Add Translations
 Append glossary according to your configuration:
 
@@ -323,7 +323,7 @@ console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 ### 2) Setup Order Search Behavior

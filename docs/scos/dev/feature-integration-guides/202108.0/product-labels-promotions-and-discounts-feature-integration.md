@@ -1,5 +1,5 @@
 ---
-title: Product labels + promotions & discounts feature integration
+title: Product labels + Promotions and Discounts feature integration
 description: This guide provides step-by-step instructions on integrating Product Labels + Promotions & Discounts feature into a Spryker-based project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -79,7 +79,7 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 
 Ensure that the plugins work correctly:
 
-1. [Create a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html) and define its condition as a query string with a *product-label* field.
+1. [Create a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html) and define its condition as a query string with a *product-label* field.
 2. Add a product with the defined product label to cart.
 3. The discount should be applied to the cart.
 

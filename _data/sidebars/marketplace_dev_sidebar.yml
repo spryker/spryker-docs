@@ -395,14 +395,14 @@ entries:
             - "202204.0"
             nested:
               - title: Managing shopping lists
-              url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-lists.html
-              include_versions:
-              - "202204.0"
+                url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-lists.html
+                include_versions:
+                - "202204.0"
 
               - title: Managing shopping list items
-              url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-list-items.html
-              include_versions:
-              - "202204.0"
+                url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-list-items.html
+                include_versions:
+                - "202204.0"
               
           - title: Wishlists
             nested:

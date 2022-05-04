@@ -23,10 +23,12 @@ data:import:stock
 
 The file should have the following parameters:
 
+<div>
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- |
 | name | Yes | String |  | Name of the warehouse. |
 | is_active | No | Boolean | <ul><li>True = 1</li><li>False = 0</li><li>If empty, it will be assumed 0 (false)</li></ul>| Status of the warehouse, specified in a boolean value: 1 (true) or 0 (false), where 1 indicates that the warehouse is available and 0 indicates that the warehouse is unavailable. By default, the warehouse is not active.|
+</div>
 
 ## Import file dependencies
 

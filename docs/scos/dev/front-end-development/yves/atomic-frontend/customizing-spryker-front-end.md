@@ -222,7 +222,7 @@ Another important aspect you can override are styles. The global styles are defi
 
 {% info_block infoBox %}
 
-For detailed information on global styles, see the _SASS Layer_ section in [Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/customizing-spryker-front-end.html#sass-layer).
+For detailed information on global styles, see the _SASS Layer_ section in [Atomic Frontend general overview](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html#sass-layer).
 
 {% endinfo_block %}
 

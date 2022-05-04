@@ -28,7 +28,7 @@ related:
   - title: Implementing URL Routing in Yves
     link: docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
   - title: Glossary Creation
-    link: docs/scos/user/back-office-user-guides/{{site.version}}/administration/glossary/managing-glossary.html
+    link: docs/scos/user/back-office-user-guides/site.version/administration/glossary/managing-glossary.html
   - title: Cronjob Scheduling
     link: docs/scos/dev/sdk/cronjob-scheduling.html
 ---

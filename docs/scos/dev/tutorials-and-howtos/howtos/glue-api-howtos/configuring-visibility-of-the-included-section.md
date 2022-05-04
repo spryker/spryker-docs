@@ -94,7 +94,7 @@ class GlueApplicationConfig extends SprykerGlueApplicationConfig
 
 To verify that the configuration has been completed successfully:
 
-4. Send a GET request as follows: `http://mysprykershop.com/concrete-products/177_24867659?include=concrete-product-image-sets`
+1. Send a GET request as follows: `http://mysprykershop.com/concrete-products/177_24867659?include=concrete-product-image-sets`
 
 2. Make sure that the **included** and **relationships** sections of the response contain the `concrete-product-image-sets` resource only.
 

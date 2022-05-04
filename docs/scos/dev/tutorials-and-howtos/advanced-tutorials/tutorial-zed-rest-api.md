@@ -22,8 +22,6 @@ redirect_from:
   - /v1/docs/t-zed-rest-api
   - /v1/docs/en/t-zed-rest-api
 related:
-  - title: PHP Reflection
-    link: http://php.net/manual/en/book.reflection.php
   - title: About Facade
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
   - title: Creating, using, and extending the transfer objects

@@ -20,7 +20,7 @@ The entire data object is stored into the session and it consists of:
 |items ([ItemTransfer](#item-transfer)[])|CartItem collection.|
 |voucherDiscounts ([DiscountTransfer](#discount-transfer)[])||
 |cartRuleDiscounts ([DiscountTransfer](#discount-transfer)[])||
-|expenses ([ExpenseTransfer](#expensetransfer))||
+|expenses ([ExpenseTransfer](#expense-transfer))||
 |priceMode (int) | Quote object's price mode. |
 
 ### Totals transfer

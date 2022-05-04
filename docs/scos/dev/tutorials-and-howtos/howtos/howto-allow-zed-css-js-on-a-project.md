@@ -1,5 +1,5 @@
 ---
-title: HowTo - Allow Zed CSS/JS on a project
+title: "HowTo - Allow Zed CSS/JS on a project"
 description: Learn how you can allow Zed CSS/JS on a project level.
 last_updated: Jun 16, 2021
 template: howto-guide-template

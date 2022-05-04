@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Sending an email
+title: "Tutorial - Sending an email"
 description: The tutorial provides code samples on how to process customer registration information in Zed to register the customer and send a confirmation email.
 last_updated: Sep 27, 2021
 template: howto-guide-template
@@ -46,7 +46,7 @@ class Customer extends SprykerCustomer
         $mailTransfer = new MailTransfer();
 
         // Set the mail type which is used for the
-        // internal mapping e.g. which mail provider
+        // internal mapping—for example, which mail provider
         // should send this mail
         $mailTransfer->setType(CustomerRegistrationMailTypePlugin::MAIL_TYPE);
 
@@ -56,7 +56,7 @@ class Customer extends SprykerCustomer
         $mailTransfer->setCustomer($customerTransfer);
 
         // Set the LocaleTransfer which should be used
-        // for e.g. translation inside your templates
+        // for, for example, translation inside your templates
         $mailTransfer->setLocale($customerTransfer->getLocale());
 
         // Trigger the mail facade to handle the mail
@@ -370,7 +370,7 @@ We also provide a basic layout file where you can inject concrete content files 
 {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
 ```
 
-This one is used for plain text messages, and templates can also be used to generate JSON or a query strings like `customer={% raw %}{{{% endraw %} mail.customer.firstName {% raw %}}}{% endraw %}&orderReference={% raw %}{{{% endraw %} mail.order.orderReference {% raw %}}}{% endraw %}` - it’s up to your provider to decide what you need to render.
+This one is used for plain text messages, and templates can also be used to generate JSON or a query strings like `customer={% raw %}{{{% endraw %} mail.customer.firstName {% raw %}}}{% endraw %}&orderReference={% raw %}{{{% endraw %} mail.order.orderReference {% raw %}}}{% endraw %}`—it’s up to your provider to decide what you need to render.
 
 For HTML messages you need to have this in your layout file:
 

@@ -1,5 +1,5 @@
 ---
-title: HowTo - Force HTTPS
+title: "HowTo - Force HTTPS"
 description: Use the guide to configure HTTPs and HTTP for your pages.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -53,7 +53,7 @@ $config[ApplicationConstants::ZED_SSL_ENABLED] = true;
 $config[ApplicationConstants::YVES_SSL_ENABLED] = true;
 ```
 
-Before a controller is resolved, the application will check if the request is secure and that the requested resource is not excluded from HTTPS.
+Before a controller is resolved, the application checks if the request is secure and that the requested resource is not excluded from HTTPS.
 
 {% info_block infoBox "Info" %}
 
@@ -87,13 +87,14 @@ $config[ApplicationConstants::YVES_SSL_EXCLUDED] = [
 ```
 
 ## When is a request secure?
-
 There are two options that identify if a request is secure or not.
 
 1. When the value of `$request->server->get('REMOTE_ADDR')` is found in the configured trusted proxies and the value of `$request->header->get('X_FORWARDED_PROTO')` is HTTPS.
 2. When the value of `$request->server->get('HTTPS')` is HTTPS.
 
-The checks for a secure request will be made in this order.
+The checks for a secure request is made in this order.
+
+## Trusted proxy configuration
 
 ## Trusted proxy configuration
 
@@ -121,4 +122,4 @@ $config[ApplicationConstants::YVES_TRUSTED_PROXIES] = [
 ];
 ```
 
-As described above, the application will check if the value of `$request->server->get('REMOTE_ADDR')` can be found in your configured trusted proxies. If so, the current request will be marked as secure when the value of `$request->header->get('X_FORWARDED_PROTO')` is HTTPS.
+As described above, the application checks if the value of `$request->server->get('REMOTE_ADDR')` can be found in your configured trusted proxies. If so, the current request is marked as secure when the value of `$request->header->get('X_FORWARDED_PROTO')` is HTTPS.

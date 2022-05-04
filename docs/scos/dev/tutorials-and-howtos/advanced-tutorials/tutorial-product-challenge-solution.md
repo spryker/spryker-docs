@@ -68,7 +68,7 @@ console propel:install
 
 Method: `Pyz\Zed\ProductCountry\Communication\Controller\ImportController::indexAction()`
 
-<details open>
+<details>
 <summary markdown='span'>Click to expand the code sample</summary>
 
 ```php
@@ -100,7 +100,7 @@ class ProductCountryQueryContainer extends AbstractQueryContainer implements Pro
 
 In the `ProductCountryBusinessFactory` class you need to create a new instance of the `ProductCountryManager`. The dependency to the product module facade is missing in the class. Create a new method `getProductFacade` that returns the facade from the `ProductCountryDependencyProvider`.
 
-<details open>
+<details>
 <summary markdown='span'>Click to expand the code sample</summary>
 
 ```
@@ -140,7 +140,7 @@ class ProductCountryBusinessFactory extends SprykerBusinessFactory
 
 Now, implement the logic to save a new product, within the `ProductCountryManager`.
 
-<details open>
+<details>
 <summary markdown='span'>Click to expand the code sample</summary>
 
 ```php
@@ -217,7 +217,7 @@ LEFT JOIN spy_country ON (spy_country.id_country = spy_product_country.fk_countr
 
 Now we need to add the new selected column `product_country` to the collectItem list in `Pyz\Zed\Collector\Business\Storage\ProductCollector`.
 
-<details open>
+<details>
 <summary markdown='span'>Click to expand the code sample</summary>
 
 ```php

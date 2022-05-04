@@ -1,5 +1,5 @@
 ---
-title: HowTo - Import Packaging Units
+title: "HowTo: Import packaging units"
 description: Use this guide to learn how to import packaging unit information and its types using a .CSV file.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -18,7 +18,7 @@ redirect_from:
   - /v4/docs/en/howto-import-packaging-units
 ---
 
-This HowTo provides the steps on how to extend the list of the packaging unit types available by default (box, bag, palette etc.) by importing packaging unit information and types using a .CSV file.
+This HowTo provides the steps on how to extend the list of the packaging unit types available by default (box, bag, palette) by importing packaging unit information and types using a .CSV file.
 
 {% info_block warningBox "Note" %}
 

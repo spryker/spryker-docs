@@ -24,7 +24,7 @@ redirect_from:
   - /v1/docs/en/ht-case-sensitive-file-system-mac
 ---
 
-By default Mac OS uses a case-insensitive file system to support compatibility to applications (e.g. Photoshop) provided for the operating system. The file-system itself is capable of working in a case-sensitive mode. There are a number of options on how to change case sensitivity:
+By default Mac OS uses a case-insensitive file system to support compatibility to applications (for example, Photoshop) provided for the operating system. The file-system itself is capable of working in a case-sensitive mode. There are a number of options on how to change case sensitivity:
 
 1. Re-partition the entire hard drive with case-sensitivity turned on.
 2. Create a new partition and re-format only this new partition with the case-sensitive file-system.
@@ -47,7 +47,7 @@ We can use Mac OS' Disk Utility application to create a disk image. We will crea
 9. Select the image format: Sparse (be careful: Sometimes changing the image format will reset the setting for image size).
 
 The resulting dialog should look something like this:
-![Case sensitive file system](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+Handle+Case+Sensitive+File-System/case+sensitive+system.png) 
+![Case sensitive file system](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+Handle+Case+Sensitive+File-System/case+sensitive+system.png)
 
 After the disk has been created you can see it being mounted in Finder already.
 
@@ -59,7 +59,7 @@ You can copy all existing projects to the newly created box. If it is not mounte
 
 You don't want to manually mount the disk image every time you restart your system. We will create a Launch Agent that will take care of this.
 
-1. Create a new file for the definition of the Launch Agent under  (e.g. `~Library/LaunchAgents/local.mount-case-sensitive-file-system.plist`)
+1. Create a new file for the definition of the Launch Agent under—for example, `~Library/LaunchAgents/local.mount-case-sensitive-file-system.plist`.
 
 ```
 vim ~Library/LaunchAgents/local.mount-case-sensitive-file-system.plist

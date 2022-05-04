@@ -102,7 +102,7 @@ For production purposes, we recommend choosing Multi-AZ Deployment.
 
 ![Get database name endpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/get-db-name-endpoint.png)
 
-See [Database creation manual](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Tutorials.WebServerDB.CreateDBInstance.html) for more details on how to create the database.
+See [Database creation manual](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Tutorials.WebServerDB.CreateDBInstance.html) for more information about how to create the database.
 
 ### Elasticsearch service
 
@@ -139,7 +139,7 @@ For production purposes, we recommend choosing the Production deployment type.
 
 ![Get VPS endpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/get-vpc-endpoint.png)
 
-See [Elasticseacrh service creation manual](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains) for more details on how to create an Elasticsearch service domain.
+See [Elasticseacrh service creation manual](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains) for more information about how to create an Elasticsearch service domain.
 
 ### ElastiCache
 
@@ -229,7 +229,7 @@ To configure Elastic IP, do the following:
 
 ![Allocate](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/allocate.png)
 
-4. Click **Actions** > **Associate address**.
+4. Click **Actions&nbsp;<span aria-label="and then">></span> Associate address**.
 
 ![Associate address](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/associate-address.png)
 
@@ -238,13 +238,13 @@ To configure Elastic IP, do the following:
 
 ![Choose Spryker instance](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-spryker-instance.png)
 
-See [Allocating an Elastic IP Address](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-allocating) and [Associating an Elastic IP Address with a Running Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-associating) for more details on configuring the Elastic IP Address.
+See [Allocating an Elastic IP Address](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-allocating) and [Associating an Elastic IP Address with a Running Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-associating) for more information about configuring the Elastic IP Address.
 
 ### Connecting to the instance
 
 To connect to the instance, do the following:
 
-1. Click **Actions** > **Connect**.
+1. Click **Actions&nbsp;<span aria-label="and then">></span> Connect**.
 
 ![Connect action](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/actions-connect.png)
 
@@ -340,7 +340,7 @@ To configure PHP, do the following:
 
 1. Create or update the following files using the provided templates:
 
-<details open>
+<details>
 <summary markdown='span'>/etc/php/7.2/fpm/php.ini</summary>
 
 ```php
@@ -351,7 +351,7 @@ sendmail_path = /usr/sbin/sendmail -t -i
 </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>/etc/php/7.2/fpm/pool.d/yves.conf</summary>
 
 ```php
@@ -386,7 +386,7 @@ php_admin_value[error_log] = /dev/stderr
 ```
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>/etc/php/7.2/fpm/pool.d/zed.conf</summary>
 
 ```php
@@ -421,7 +421,7 @@ php_admin_value[error_log] = /dev/stderr
 ```
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>/etc/php/7.2/fpm/pool.d/glue.conf</summary>
 
 ```php
@@ -459,7 +459,7 @@ php_admin_value[error_log] = /dev/stderr
 
 2. Edit the following file using the template:
 
-<details open>
+<details>
 <summary markdown='span'>
 /etc/php/7.2/fpm/conf.d/10-opcache.ini</summary>
 
@@ -509,7 +509,7 @@ To configure Nginx, do the following:
 
 1. Update `{% raw %}{{{% endraw %}YVES_HOST{% raw %}}}{% endraw %}` and `application_store` variables for each store (AT, DE, US), and create `/etc/nginx/conf.d/vhost-yves-{% raw %}{{{% endraw %}STORE_NAME{% raw %}}}{% endraw %}.conf` using the template:
 
-<details open>
+<details>
 <summary markdown='span'>vhost-yves.conf template</summary>
 
 ```
@@ -591,7 +591,7 @@ sudo htpasswd -c /etc/nginx/.htpasswd {% raw %}{{{% endraw %}SOME_USER{% raw %}}
 
 3. Update `{% raw %}{{{% endraw %}ZED_HOST{% raw %}}}{% endraw %}` and `application_store` variables for each store (AT, DE, US), and create `/etc/nginx/conf.d/vhost-zed-{% raw %}{{{% endraw %}STORE_NAME{% raw %}}}{% endraw %}.conf` using the template:
 
-<details open>
+<details>
 <summary markdown='span'>vhost-zed.conf template</summary>
 
 ```
@@ -654,7 +654,7 @@ more_clear_headers 'X-Powered-By' 'X-Store' 'X-Locale' 'X-Env' 'Server';
 
 4. Update `{% raw %}{{{% endraw %}GLUE_HOST{% raw %}}}{% endraw %}` and `application_store` variables for each store (AT, DE, US), and create `/etc/nginx/conf.d/vhost-glue-{% raw %}{{{% endraw %}STORE_NAME{% raw %}}}{% endraw %}.conf` using the template:
 
-<details open>
+<details>
 <summary markdown='span'>vhost-glue.conf template</summary>
 
 ```
@@ -723,7 +723,7 @@ sudo service php7.2-fpm restart
 
 6. Create  `/etc/nginx/conf.d/jenkins.conf`:
 
-<details open>
+<details>
 <summary markdown='span'>/etc/nginx/conf.d/jenkins.conf</summary>
 
 ```
@@ -762,7 +762,7 @@ proxy_request_buffering off;
 
 7. Create `/etc/nginx/fastcgi_params` using the template:
 
-<details open>
+<details>
 <summary markdown='span'>fastcgi_params template</summary>
 
 ```
@@ -919,7 +919,7 @@ sudo systemctl daemon-reload
 
 6. Update Jenkins configuration file:
 
-<details open>
+<details>
 <summary markdown='span'>/var/lib/jenkins/config.xml</summary>
 
 ```xml
@@ -1223,7 +1223,7 @@ $config[SessionFileConstants::ZED_SESSION_TIME_TO_LIVE] = $config[SessionConstan
 </details>
 
 
-<details open>
+<details>
 <summary markdown='span'>/data/config/Shared/config_local_DE.php</summary>
 
 ```php
@@ -1335,7 +1335,7 @@ $config[KernelConstants::DOMAIN_WHITELIST] = [
 ```
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>/data/config/Shared/config_local_AT.php</summary>
 
 ```php
@@ -1446,7 +1446,7 @@ $config[KernelConstants::DOMAIN_WHITELIST] = [
 ```
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>/data/config/Shared/config_local_US.php</summary>
 
 ```php
@@ -1569,7 +1569,7 @@ composer require --no-update aws/aws-sdk-php
 
 5. Create the following file:
 
-<details open>
+<details>
 <summary markdown='span'>/data/config/install/staging.yml</summary>
 
 ```yml

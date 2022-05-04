@@ -1,5 +1,5 @@
 ---
-title: Tutorial - CMS
+title: "Tutorial: CMS"
 description: Use the tutorial to create a static Contact Us page with its own template and integrate it to Yves.
 last_updated: Jun 16, 2021
 template: howto-guide-template

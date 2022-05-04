@@ -70,7 +70,7 @@ To add a new shipment method:
 
 1. In the Zed Admin UI, navigate to the Shipment section and click **Add new Carrier Company**.
 2. Specify a name for the carrier company and the corresponding glossary key for having a localized name.
-3. To  use this carrier company in the shop, select **Enabled** in the check-box.
+3. To use this carrier company in the shop, select **Enabled** in the check-box.
 <!-- ../../Resources/Images/ui_add_carrier_cmpany.png-->
 
 Now that we have a new shipment carrier, we can add a new shipment method to it.
@@ -78,10 +78,10 @@ Now that we have a new shipment carrier, we can add a new shipment method to it.
 To add a new shipment method to a carrier:
 
 1. Click **Add new Shipment Method**.
-You will be redirected to the _Add a new shipment method_ page.
+   The **Add a new shipment method** page opens.
 2. Select the carrier you created in the previous step.
-3. Add the name and default price
-4. Mark it as "Active"
+3. Add the name and default price.
+4. Mark it as `Active`.
 5. Select the corresponding tax set.
 6. Click **Add Shipment Method**.
 <!-- ../../Resources/Images/ui_shipment_method_6.png -->

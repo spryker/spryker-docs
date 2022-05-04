@@ -60,7 +60,7 @@ public function provideBusinessLayerDependencies(Container $container)
 
 By using `$container->extend()`, you get the `MailProviderCollectionAddInterface` where you can add your provider. The `MailProviderCollectionAddInterface::addProvider()` takes the provider you want to use as the first argument, and as the second argument, one `MailType` or a list of MailTypes which should be handled by this provider.
 
-As you can see in the example above, the provider is registered to all MailTypes by using `MailConfig::MAIL_TYPE_ALL`. If you want the provider to only handle a specific MailType, use the `MailType` constant from your `MailTypePlugin` e.g. `CustomerRegistrationMailTypePlugin::MAIL_TYPE`. See [HowTo - Creating and Registering a MailTypePlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html) for information on how to create and register a MailTypePlugin.
+As you can see in the preceding example, the provider is registered to all MailTypes by using `MailConfig::MAIL_TYPE_ALL`. If you want the provider to only handle a specific `MailType`, use the `MailType` constant from your `MailTypePlugin`—for example, `CustomerRegistrationMailTypePlugin::MAIL_TYPE`. For information about how to create and register a `MailTypePlugin`, see [HowTo: Creating and registering a MailTypePlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html)
 
 ### Use more than one provider
 

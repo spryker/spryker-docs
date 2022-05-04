@@ -1,5 +1,5 @@
 ---
-title: HowTo - Set up custom response headers on project level
+title: "HowTo: Set up custom response headers on project level"
 description: In this HowTo, you will learn how to set up custom response headers to play the full-screen video.
 last_updated: Jun 16, 2021
 template: howto-guide-template

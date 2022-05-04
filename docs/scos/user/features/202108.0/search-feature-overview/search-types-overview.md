@@ -33,7 +33,7 @@ For details about how you can manage the search preferences, see [Managing searc
 
 ## Current constraints
 
-Currently, the feature has the following functional constraints:
+The feature has the following functional constraints:
 
 * Search preference attributes are shared across all the stores in a project.
 * You cannot define a search preference for a single store.

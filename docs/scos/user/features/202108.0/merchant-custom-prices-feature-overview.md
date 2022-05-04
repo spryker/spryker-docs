@@ -26,7 +26,7 @@ When talking about product prices that depend on customers they refer to, we dif
 
 The different price categories that can be selected based on contextual information, like customer or merchant relationship, is referred to as **price dimension**.
 
-Currently we have the following price dimensions:
+We have the following price dimensions:
 
 - Mode (Net/Gross)
 - Volume

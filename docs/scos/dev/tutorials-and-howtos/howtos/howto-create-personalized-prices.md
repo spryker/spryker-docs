@@ -40,13 +40,13 @@ There are several steps to consider when implementing special prices based on wh
 
 The `spy_customer` table should be extended on the project side to include the group id. You can read more on how to extend the database schema in [Extending the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html) article.
 
-After you applied the changes on the database level, you need to extend the Customer module to include the group id when creating, updating or retrieving customer data.
+The `spy_customer` table should be extended on the project side to include the group ID. You can read more here on how to extend the database schema.
 
 ## 2. Extend Price module
 
 The `spy_price` table should be extended on the project side to include the group id. The new added column should not be mandatory.
 
-As a rule you can apply, for each SKU we should have an entry in the `spy_price` table without a group id associated. This entry can be considered the default price for that SKU and can be used if no price was found for a specific group id or for guest users.
+## Extend price module
 
 The Price module should be extended so that we can query prices by SKU and group id and retrieve the default price.
 
@@ -54,7 +54,7 @@ The Price module should be extended so that we can query prices by SKU and group
 
 The `Importer` module takes care of importing data to the SQL database.
 
-Prices are imported by the `ProductPriceImporter`. If you are using the Importer module to load initial data to the SQL database, you need to update the `ProductPriceImporter:importOne(array $data)` to include the group id for each price entry.
+Prices are imported by the `ProductPriceImporter`. If you are using the Importer module to load initial data to the SQL database, you need to update the `ProductPriceImporter:importOne(array $data)` to include the group ID for each price entry.
 
 ## 4. Adjust prices for cart
 

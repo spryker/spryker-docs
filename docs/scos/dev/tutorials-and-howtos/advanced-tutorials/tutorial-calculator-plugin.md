@@ -29,7 +29,7 @@ redirect_from:
 
 This tutorial explains how to add a new calculation plugin to the calculator stack.
 
-Requirement : display the tax amount per item.
+Requirement: display the tax amount per item.
 
 Right now, you can get the tax amount from `grandTotal`. For this, you have to add a new calculator to the existing stack for the module. To do that:
 
@@ -55,7 +55,7 @@ Modify the `tax.transfer.xml` transfer object to reflect the new data model. Add
 vendor/bin/console transfer:generate
 ```
 
-Once done, you should have two new properties in the `ItemTransfer`.
+Once done, two new properties appear in the `ItemTransfer`.
 
 4. Next, create a new calculator plugin and register it to the calculator plugin stack.
 

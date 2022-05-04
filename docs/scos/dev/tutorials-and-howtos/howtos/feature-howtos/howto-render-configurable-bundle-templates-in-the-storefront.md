@@ -24,7 +24,7 @@ The configurable bundle functionality is implemented by 3 widgets:
 * `SalesConfiguredBundleWidget`
 * `ConfiguredBundleNoteWidget`
 
-By adding these widgets to respective templates, you can render the Configurable Bundle Templates in the Storefront. Specifically, in the Cart, Checkout Summary, Order Details, and Quote Request pages. This article provides details on how to do that.
+By adding these widgets to respective templates, you can render the Configurable Bundle Templates in the Storefront. Specifically, in the Cart, Checkout Summary, Order Details, and Quote Request pages. This article provides information about how to do that.
 
 ## Rendering Configurable Bundle Templates on the cart page
 

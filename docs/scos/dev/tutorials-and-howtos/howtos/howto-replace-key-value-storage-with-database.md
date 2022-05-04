@@ -1,5 +1,5 @@
 ---
-title: HowTo - Replace key-value storage with database
+title: "HowTo - Replace key-value storage with database"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-replace-key-value-storage-with-database
@@ -18,7 +18,7 @@ One of the main ways of transferring data from Zed to Yves is the Publish & Sync
 1. storing the denormalized data, that is saved in Zed and should be shared with Yves, in specific infrastructural database tables;
 2. synchronizing that data to a fast key-value storage (e.g., Redis) with the help of message queues.
 
-Yves then reads the synchronized data directly from the storage. However, sometimes, you might need to exclude the second step and read data directly from the database. This article describes how to do that.
+Yves then reads the synchronized data directly from the storage. However, sometimes, you might need to exclude the second step and read data directly from the database. This document describes how to do that.
 
 ## Why you may need to skip synchronization
 

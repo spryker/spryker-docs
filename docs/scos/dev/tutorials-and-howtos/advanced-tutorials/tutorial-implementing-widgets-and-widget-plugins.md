@@ -251,7 +251,7 @@ The following twig functions can be used to hook widgets in any twig template:
 
 In the same module, you will create an interface that represents the widget used in the template. This step is important to make Dependency Inversion visible on PHP level in the caller module.
 
-Create the interface for the widget and define the `initialize()` method. This method is a must have, it defines the contract (e.g. input) of a widget plugin.
+Create the interface for the widget and define the `initialize()` method. This method is a must have, it defines the contract of a widget plugin—for example, input.
 
 The inputs of the widget plugins are usually different, that's why the `initialize()` method has to be defined for each case individually. When calling the `widget()`, `widgetBlock()` and `widgetGlobal()` twig functions, the `initialize()` method of the widget plugin will be executed internally, thus the system by design makes sure that the required inputs are passed.
 

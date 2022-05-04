@@ -1,5 +1,5 @@
 ---
-title: Implementing a REST API Resource
+title: Implementing a REST API resource
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/implementing-rest-api-resource
@@ -48,7 +48,7 @@ To create a module:
 | `/Dependency` | Bridges to other clients. |
 | `/Plugin` |Glue API plugins.  |
 | `/Processor` | Folder where all the resource processing logic, data mapping code and calls to other clients are located. |
-| `{YOUR_RESOURCE}sRestApiConfig.php` | Contains resource-related configuration, such as the resource type, error code constants etc. |
+| `{YOUR_RESOURCE}sRestApiConfig.php` | Contains resource-related configuration, such as the resource type and error code constants. |
 |`{YOUR_RESOURCE}sRestApiFactory.php`  |  Factory to construct objects.|
 | `ResourcesDependencyProvider.php` | Provides external dependencies to this module. |
 | `{YOUR_RESOURCE}sRestApiResource.php` |  Locatable class that provides resource objects to other modules as a dependency.|
@@ -65,7 +65,7 @@ You'll need to agree to all the default values when prompted.
 
 {% endinfo_block %}
 
-* Add a transfer file that will be used to automatically map JSON data. Transfers are defined in the Shared layer (e.g. `src/Pyz/Shared/{YOUR_RESOURCE}sRestApi/Transfer`) as it needs to be accessible to any layer, including Glue. The name of the transfer file is `resources_rest_api.transfer.xml` where the first part is the name of your resource.
+* Add a transfer file that will be used to automatically map JSON data. Transfers are defined in the Shared layer (for example, `src/Pyz/Shared/{YOUR_RESOURCE}sRestApi/Transfer`) as it needs to be accessible to any layer, including Glue. The name of the transfer file is `resources_rest_api.transfer.xml` where the first part is the name of your resource.
 
 {% info_block infoBox %}
 
@@ -260,7 +260,7 @@ The same as with any other data source, you can use containers called **Transfer
 
 {% info_block infoBox %}
 
-For information on how to define the objects and syntax, see [How to create transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html).
+For information about how to define the objects and syntax, see [How to create transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html).
 
 {% endinfo_block %}
 

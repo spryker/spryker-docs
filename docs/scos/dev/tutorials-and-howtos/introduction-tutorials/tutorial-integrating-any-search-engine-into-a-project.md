@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Integrating any search engine into a project
+title: "Tutorial - Integrating any search engine into a project"
 description: Learn how to integrate any external search engine instead of the default Elasticsearch.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -56,7 +56,7 @@ To build a query, you have to define, for example, `FfSearchQueryTransfer` objec
 
 Then you create a query model, for example, `FactFinderQuery`. The basic version might look like this:
 
-<details open>
+<details>
 <summary markdown='span'>Code sample</summary>
 
 ```php
@@ -138,7 +138,7 @@ To handle search requests through a different source, you need your own model im
 
 Template for this model is:
 
-<details open>
+<details>
 <summary markdown='span'>Code sample</summary>
 
 ```php

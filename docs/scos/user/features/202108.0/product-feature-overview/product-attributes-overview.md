@@ -150,7 +150,7 @@ Length = 4.92 feet
 
 ## Current Constraints
 
-Currently, the feature has the following functional constraints which are going to be resolved in the future.
+The feature has the following functional constraints which are going to be resolved in the future.
 
 * When adding a product variant to an existing abstract product, you can only use the existing super attributes.
 

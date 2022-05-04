@@ -166,7 +166,7 @@ class ContentFooTermForm extends AbstractType
 
 {% info_block warningBox "Verification" %}
 
-After enabling the plugin, make sure there is the new content item in Back Office > **Content Management** > **Content Items** > **Add Content Item** drop-down menu.
+After enabling the plugin, make sure there is the new content item in Back Office > **Content Management&nbsp;<span aria-label="and then">></span> Content Items&nbsp;<span aria-label="and then">></span> Add Content Item** drop-down menu.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Feature+HowTos/HowTo+-+Create+a+New+Custom+Content+Item/add-content-item-menu.png)
 
@@ -183,19 +183,19 @@ The method returns `ContentTypeContextTransfer` where `ContentTypeContextTransfe
 
 To create a new Twig plugin:
 
-1. Using `ContentTypeContextTransfer::$term` and `ContentTypeContextTransfer::$parameters`, fill in the properties of your new content transfer object, e.g. `ContentFooTransfer`, in `src/Shared/ContentFoo/Transfer/`.
+1. Using `ContentTypeContextTransfer::$term` and `ContentTypeContextTransfer::$parameters`, fill in the properties of your new content transfer object—for example, `ContentFooTransfer`, in `src/Shared/ContentFoo/Transfer/`.
 
 2. Create a new module, for example, `src/Yves/ContentFooWidget`.
 
-3. Implement a Twig function using `\Spryker\Shared\Twig\TwigFunction`, e.g. `\SprykerShop\Yves\ContentBannerWidget\Twig\ContentBannerTwigFunction`.
+3. Implement a Twig function using `\Spryker\Shared\Twig\TwigFunction`—for example, `\SprykerShop\Yves\ContentBannerWidget\Twig\ContentBannerTwigFunction`.
 
-4. Implement a Twig plugin using `\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface`, e.g. `\SprykerShop\Yves\ContentBannerWidget\Plugin\Twig\ContentBannerTwigPlugin`.
+4. Implement a Twig plugin using `\Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface`—for example, `\SprykerShop\Yves\ContentBannerWidget\Plugin\Twig\ContentBannerTwigPlugin`.
 
 {% info_block infoBox "Function parameters" %}
 
-The `$key` parameter is obligatory for the function, e.g. `function (string $key)`.
+The `$key` parameter is obligatory for the function—for example, `function (string $key)`.
 
-Optionally, you can add the `$templateIdentifier` parameter, e.g. `function (string $key, string $templateIdentifier)`.
+Optionally, you can add the `$templateIdentifier` parameter—for example, `function (string $key, string $templateIdentifier)`.
 
 {% endinfo_block %}
 

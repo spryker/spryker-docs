@@ -1,5 +1,5 @@
 ---
-title: HowTo - Enable guest checkout in B2B Demo Shop
+title: "HowTo - Enable guest checkout in B2B Demo Shop"
 description: Learn how to enable guest checkout in B2B Demo Shop.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -27,9 +27,9 @@ To enable guest checkout:
 1. In the `is_restricted` column of the `spy_unauthenticated_customer_access` table, set `0` for `add-to-cart` and `order-place-submit` content types.
 
 2. Remove customer permissions:
-    1. In the Back Office, go to **Customers** > **Customer Access**.
+    1. In the Back Office, go to **Customers&nbsp;<span aria-label="and then">></span> Customer Access**.
     2. Clear all the permissions.
-    ![customer-permissions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+enable+guest+checkout+in+B2B+Demo+Shop/customer-permissions.png) 
+    ![customer-permissions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+enable+guest+checkout+in+B2B+Demo+Shop/customer-permissions.png)
     3. Select **Save**
     This refreshes the page with the success message displayed.
 

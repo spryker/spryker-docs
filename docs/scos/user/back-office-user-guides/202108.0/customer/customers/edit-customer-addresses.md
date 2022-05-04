@@ -31,7 +31,7 @@ Review the [reference information](#reference-information-edit-a-customer-addres
 15. Click **Save**.
     The **View** page opens. The updated address is displayed in the **ADDRESSES** pane.
 
-## Reference information: Editing a customer address
+## Reference information: Edit a customer address
 
 | ATTRIBUTE| DESCRIPTION |
 |---|---|

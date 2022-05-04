@@ -20,7 +20,7 @@ This document describes how to create customers in the Back Office.
 
 ## Prerequisites
 
-Review the [reference information](#reference-information-create-a-customer-address) before you start or look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-create-a-customer) before you start or look up the necessary information as you go through the process.
 
 ## Create a customer
 

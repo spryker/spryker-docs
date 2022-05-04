@@ -469,7 +469,9 @@ entries:
 
           - title: "File details: merchant_product_approval_status_default.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-approval-status-default.html
-
+            include_versions:
+            - "202204.0"
+            
           - title: "File details: merchant-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-offer.csv.html
 

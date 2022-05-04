@@ -8,7 +8,7 @@ This endpoint lets you add and remove items from wishlists.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html). 
+For detailed information about the modules that provide the API functionality and related installation instructions, see [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html). 
 
 ## Add an item to a wishlist
 
@@ -198,11 +198,11 @@ To add an item to a wishlist, send the request:
 | merchantReference | String  | Unique identifier of the merchant.  |
 | id     | String  | Unique identifier of the product offer in the wishlist. It's based on the `sku` and `productOfferReference`. |
 | sku       | String  | SKU of the concrete product in the wishlist.     |
-| availability    | Object  | Contains information on the product's availability. |
+| availability    | Object  | Contains information about the product's availability. |
 | availability.isNeverOutOfStock | Boolean | Defines if the product is never out of stock. |
 | availability.availability  | Boolean | Defines if the product is available.  |
 | availability.quantity  | Integer | Aggregated stock of the item in all [warehouses](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html#warehouse-management).   |
-| prices  | Array   | Contains information on prices.    |
+| prices  | Array   | Contains information about prices.    |
 | prices.priceTypeName  | String  | Price type. |
 | prices.grossAmount  | Integer | Gross price in cents.  |
 | prices.netAmount | Integer | Net price in cents.   |

@@ -31,11 +31,11 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-publish-and-synchronization.html
 ---
 
-## Upgrading from Version 0.* to Version 1.*
+## Upgrading from version 0.* to version 1.*
 
 ### Version 1 of the Storage and the Search modules
 
-#### Table indexs
+#### Table indexes
 
 In this version, Indexes were added to Storage and Search tables, this will increase the performance of Listeners and workers.
 
@@ -48,6 +48,7 @@ Currently, Spryker supports multi-store and this should be adopted for the rest 
 	<parameter name="queue_pool" value="synchronizationPool" />
 </behavior>
 ```
+
 For wiring the stores and sync queues you should configure it in `store.php`
 
 ```php
@@ -56,9 +57,10 @@ $stores['DE']['queuePools']['synchronizationPool'] = [
 	'DE-connection'
 ];
 ```
+
 #### Module layers
 
-In Previous version the listener plugins has been extended from Abstract plugin classes and now this has changed due to obey the spryker architecture and moved into business layer and open APIs from Facade classes.
+In Previous version the listener plugins has been extended from Abstract plugin classes and now this has changed due to obey the Spryker architecture and moved into business layer and open APIs from Facade classes.
 
 ### Version 1 of the EventBehavior modules
 
@@ -66,7 +68,7 @@ In Previous version the listener plugins has been extended from Abstract plugin 
 
 The type of primary key of `spy_event_behavior_entity_change` table (`id_event_behavior_entity_change`) changed from `INTEGER` to `BIGINT`
 
-### Version 1 of the SynchronizationBehaivor modules
+### Version 1 of the SynchronizationBehavior modules
 
 #### PropelPlugin
 

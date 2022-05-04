@@ -20,6 +20,7 @@ There are multiple ways to register a customer. Regardless of a how a customer i
 {% endinfo_block %}
 
 ## Registration flows
+
 There are four customer registration options:
 
 * Regular registration
@@ -30,7 +31,7 @@ There are four customer registration options:
 
 ### Regular registration
 
-The *regular registration*  is the registration triggered from the registration page of *My Account* page on the Storefront. It is a two-step process:
+The *regular registration*  is the registration triggered from the registration page of **My Account** page on the Storefront. It is a two-step process:
 
 1. A customer fills out the registration form and selects **Sign Up**. A message about the email verification is displayed.  
 
@@ -46,7 +47,7 @@ After checkout registration, the cart created by a customer as a guest user is c
 ### Registration by creating an account in the Back Office
 
 
-A Back Office user can register a customer by entering customer account details. The verification email is sent to the email address specified by the Back Office user. Until the customer verifies their account via the link in the email, in the Back Office, the status of their account is *Unverified*. Once they click the link, the status changes to *Verified*.
+A Back Office user can register a customer by entering customer account details. The verification email is sent to the email address specified by the Back Office user. Until the customer verifies their account via the link in the email, in the Back Office, the status of their account is `Unverified`. Once they click the link, the status changes to `Verified`.
 
 To learn how a Back Office user creates customer accounts, see [Creating customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html#creating-customers).
 

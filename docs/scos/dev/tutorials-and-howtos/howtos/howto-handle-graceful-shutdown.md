@@ -1,5 +1,5 @@
 ---
-title: HowTo - Handle graceful shutdown
+title: "HowTo: Handle graceful shutdown"
 description: Implement a graceful shutdown for your project to make sure the uncompleted processes are not stopped by signals like SIGTERM
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -14,7 +14,7 @@ redirect_from:
   - /v6/docs/en/howto-handle-graceful-shutdown
 ---
 
-When a running process is stopped by, for example, signals like `SIGTERM`, `SIGINT`, etc., the process is stopped right away, no matter if it is completed or not. Sometimes, such behavior is not acceptable, for example, in the case of half imported data set.
+When a running process is stopped by, for example, signals like `SIGTERM` and `SIGINT`, the process is stopped right away, no matter if it is completed or not. Sometimes, such behavior is not acceptable—for example, in the case of half imported data set.
 
 Whenever you need to make sure that a process is shut down gracefully, you can use the *GracefulRunner* module and pass `\Generator` to its `GracefulRunnerFacadeInterface::run()` method. `GracefulRunnerFacadeInterface::run()` uses the [signal handler](https://github.com/Seldaek/signal-handler) to register a new handler [with pcntl_signal](https://www.php.net/manual/en/function.pcntl-signal.php), and wraps the passed `\Generator`.  Until a signal was sent, the `\Generator::next()` method is executed to make sure that one step of your process is fully completed before the script shuts down.
 

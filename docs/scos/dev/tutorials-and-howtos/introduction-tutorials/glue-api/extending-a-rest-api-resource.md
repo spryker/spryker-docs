@@ -1,5 +1,5 @@
 ---
-title: Extending a REST API Resource
+title: Extending a REST API resource
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/extending-a-rest-request-resource

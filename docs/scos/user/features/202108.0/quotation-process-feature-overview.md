@@ -28,9 +28,9 @@ redirect_from:
 
 With the *Quotation Process* feature the B2B customers ask for special prices, and suppliers can get back to them with a compromise pricing suggestion.
 
-**Request for Quote (RFQ)** is a request that a B2B buyer sends to their suppliers stating that they would like to get a quoted price on particular products with the details about the packaging and volumes they need.
+*Request for Quote (RFQ)* is a request that a B2B buyer sends to their suppliers stating that they want to get a quoted price on particular products with the details about the packaging and volumes they need.
 Within the Spryker Commerce OS, RFQ is represented by the ability of a sales representative to see the list of quotes, check and edit them, thereby change and overwrite the prices for the products, view and edit shipment cost in the RFQ for a certain buyer. In turn, a buyer is able to create an RFQ from a shopping cart, add a note to it and bid for lower prices, as well as define a delivery address and select a shipment method. An RFQ can also specify the timeline for delivery, a date by which the proposal should be submitted, and the history of the negotiations.
-One of the RFQ features is a tool for creating special offers for buyers with limited validity. For example, a sales representative can update the prices for products in the RFQ and set the exact time until which this offer is valid, e.g., the 29th of December, 2019, 11:58 PM. If the buyer tries to proceed with this RFQ to checkout on the 29th of December, 2019, at 11:59 PM, then this RFQ will not be available.
+One of the RFQ features is a tool for creating special offers for buyers with limited validity. For example, a sales representative can update the prices for products in the RFQ and set the exact time until which this offer is valid, for example, the 29th of December, 2019, 11:58 PM. If the buyer tries to proceed with this RFQ to checkout on the 29th of December, 2019, at 11:59 PM, then this RFQ will not be available.
 ![RFQ Validity](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/valid-till.png)
 
 To view how to create and mange RFQs, see [Quotation process & RFQ on the Storefront](#quotation-process-and-rfq-on-the-storefront).
@@ -68,13 +68,13 @@ For the Draft RFQ, a buyer can:
 * Edit and add/remove products.
 * Change product quantity and update meta information.
 
-Once the buyers are done editing the Draft RFQ, they can send it to a sales representative. After that, they wait until the RFQ gets processed by a sales representative. The status of the RFQ changes to **Waiting**. Request for Quote cannot be edited at this point. It is only possible to cancel it.
+Once the buyers are done editing the Draft RFQ, they can send it to a sales representative. After that, they wait until the RFQ gets processed by a sales representative. The status of the RFQ changes to **Waiting**. Request for Quote cannot be edited at this point. It can be only cancelled.
 
 After the sales representative has processed the request, the buyer gets it back with the status **Ready**. At this point, if buyers are satisfied with such a request, they can convert the RFQ to the cart, and after that, proceed to checkout. When the order is placed, the RFQ receives the **Closed** status.
 
-If they aren't satisfied and would like to negotiate the price further, they can **Revise** the RFQ and move it back to the **Draft** status. The RFQ obtains a new RFQ version.
+If they aren't satisfied and want to negotiate the price further, they can **Revise** the RFQ and move it back to the **Draft** status. The RFQ obtains a new RFQ version.
 
-Schematically, the workflow is shown below:
+Schematically, the workflow is shown in the following diagram:
 ![Buyer's Workflow](https://confluence-connect.gliffy.net/embed/image/0dedd086-45ab-494d-a2f8-04c92501a229.png?utm_medium=live&utm_source=custom)
 
 ### Sales representative workflow
@@ -99,7 +99,7 @@ Upon revising the RFQ, a new RFQ version is created. When the sales representati
 
 {% info_block infoBox "Info" %}
 
-A sales representative can quickly access the RFQs via a Quote Request Widget that displays the latest five requests for quotes that were updated except for those that are in the status Closed. You can configure the statuses for the RFQ you would like to check in the widget on the project level. In the widget, the sales representative can check all the basic information for the RFQs.
+A sales representative can quickly access the RFQs via a Quote Request Widget that displays the latest five requests for quotes that were updated except for those that are in the status Closed. You can configure the statuses for the RFQ you want to check in the widget on the project level. In the widget, the sales representative can check all the basic information for the RFQs.
 
 {% endinfo_block %}
 
@@ -108,7 +108,7 @@ A sales representative can quickly access the RFQs via a Quote Request Widget th
 A sales representative can create an RFQ on behalf of any company user, then process it and even complete checkout. This option is especially convenient when, for example, a company user is busy or doesn't have access to an account.
 
 
-The workflow with statuses for a sales representative is presented in the schema below:
+The workflow with statuses for a sales representative is presented in the following schema:
 ![Sales Rep Workflow](https://confluence-connect.gliffy.net/embed/image/0dedd086-45ab-494d-a2f8-04c92501a229.png?utm_medium=live&utm_source=custom)
 
 When a sales representative creates an RFQ, it has the **Show the latest version to customer** checkbox empty by default. It means that the buyer cannot see the latest updated version of the RFQ (for example, with the changed prices) until the **Show the latest version to customer** checkbox is selected.  The buyer can see the **In Progress** status for the RFQ.
@@ -134,7 +134,7 @@ If your project has only the Persistent Cart module, which means that only one S
 
 If your project has Persistent Cart and Multi-cart modules, converting the RFQ into a Shopping Cart creates a new locked shopping cart.
 
-The buyers can utilize the blocked cart irrespective of the RFQ updates by unblocking the cart. However, the modifications that have been applied during the RFQ workflow will be discarded.
+The buyers can use the blocked cart irrespective of the RFQ updates by unblocking the cart. However, the modifications that have been applied during the RFQ workflow will be discarded.
 ![Locked cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/locked-cart.png)
 
 ## Interaction of the RFQ with the approval process

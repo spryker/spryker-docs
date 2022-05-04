@@ -476,7 +476,7 @@ console data:import:acl-entity-segment-connector
 
 ### 6. Add AclEntityRules
 The final stage of the data creation is creating the corresponding `AclEntityRules`.
-See [Rules and Scopes](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html) for more information about `AclEntityRule`.
+For more information about `AclEntityRule`, see [Rules and scopes](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html).
 
 {% info_block infoBox "Info" %}
 

@@ -8,7 +8,7 @@ This document explains the Data Transformer Data Configurators service in the Co
 
 ## Overview
 
-Data Transformer Data Configurators is an Angular Service that re-populates data based on configuration. This allows backend systems to control where re-population data is placed.
+Data Transformer Data Configurators is an Angular Service that re-populates data based on configuration. This lets backend systems control where re-population data is placed.
 
 Data Transformer Data Configurators are used in the Datasource service.
 
@@ -67,7 +67,7 @@ export class CustomDataTransformerConfiguratorService implements DataTransformer
         config: DataTransformerConfiguratorConfig,
         injector: Injector,
     ): Observable<DataTransformerConfiguratorConfigT> {
-        ... 
+        ...
     }
 }
 
@@ -106,4 +106,4 @@ interface DataTransformerConfigurator {
 
 There are a few common Data Transformer Data Configurators that are available in UI library as separate packages:
 
-- [Table](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html) - integrates Table into Collate to re-populate data when the table updates.
+- [Table](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html)—integrates Table into Collate to re-populate data when the table updates.

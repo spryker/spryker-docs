@@ -219,7 +219,7 @@ When you deprecate a method, class, or alike, it is recommended to add a short s
 
 ### Naming of methods
 
-| Type | Method |
+| TYPE | METHOD |
 | --- | --- |
 | singular | getFoo() / setFoo() |
 | plural | getFoos() / setFoos() |

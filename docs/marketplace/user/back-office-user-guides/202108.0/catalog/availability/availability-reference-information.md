@@ -35,12 +35,12 @@ For the [Marketplace](/docs/marketplace/user/intro-to-spryker-marketplace/market
 
 ## View product availability page
 
-On the **View Product Availability** page, you see 2 sections:
+On the **View Product Availability** page, you see two sections:
 
 * Abstract product availability
 * Variant availability
 
-The **Abstract Product availability** section is not modifiable. It only provides basic information. As the abstract product itself does not have any stock, the *Current Stock* value reflects the summarized value of all its variants.
+The **Abstract Product availability** section is not modifiable. It only provides basic information. As the abstract product itself does not have any stock, the **Current Stock** value reflects the summarized value of all its variants.
 
 
 {% info_block infoBox "Info" %}
@@ -55,7 +55,7 @@ For the [Marketplace](/docs/marketplace/user/intro-to-spryker-marketplace/market
 
 {% endinfo_block %}
 
-Unlike the abstract product availability, the variant availability provides you with an option to edit stock. You invoke the edit stock flow from the *Actions* column. It also has the identifier of the product bundle.
+Unlike the abstract product availability, the variant availability provides you with an option to edit stock. You invoke the edit stock flow from the **Actions** column. It also has the identifier of the product bundle.
 
 Both sections contain the following info:
 

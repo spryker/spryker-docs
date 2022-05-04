@@ -24,7 +24,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-oauthcompanyuser.html
 ---
 
-## Upgrading from Version 1.x.x to 2.x.x
+## Upgrading from version 1.x.x to 2.x.x
 
 `OauthCompanyUser` module version 2.0.0 brings two major changes:
 
@@ -41,7 +41,10 @@ BC Breaking changes:
 * Removed `OauthCompanyUserClient::getClientSecret()`.
 * Removed `OauthCompanyUserClient::getClientId()`.
 
-To migrate do the following:
+*Estimated migration time: ~10m*
+
+To upgrade to the new version of the module, do the following:
+
 1. Update composer:
 
 ```bash
@@ -60,6 +63,7 @@ vendor/bin/console transfer:generate
 $config[OauthCompanyUserConstants::OAUTH_CLIENT_IDENTIFIER] = '';
 $config[OauthCompanyUserConstants::OAUTH_CLIENT_SECRET] = '';
 ```
+
 Instead of this usage, use constants from the `Oauth` module:
 
 ```yaml
@@ -74,4 +78,3 @@ $config[OauthConstants::OAUTH_CLIENT_SECRET] = '';
 + use Spryker\Glue\CompanyUserAuthRestApi\Plugin\AuthRestApi\CompanyUserRestUserMapperPlugin;
 ```
 
-*Estimated migration time: ~10m*

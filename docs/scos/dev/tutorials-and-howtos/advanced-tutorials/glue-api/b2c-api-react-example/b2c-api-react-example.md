@@ -34,12 +34,12 @@ As a part of documentation related to Spryker Glue REST API, we have also develo
 The application has been developed for four primary purposes:
 
 1. Provide a simple yet fully functional example of Glue REST API usage.
-2. Illustrate a complete B2C Spryker experience using REST endpoints, starting from selecting the necessary product all the way through to placing an order. The shop also demonstrates the use of the API resources to create such features as the product catalog, search, auto-suggestions, customer registration, cart management, displaying order details etc.
+2. Illustrate a complete B2C Spryker experience using REST endpoints, starting from selecting the necessary product all the way through to placing an order. The shop also demonstrates the use of the API resources to create such features as the product catalog, search, auto-suggestions, customer registration, cart management, displaying order details.
 3. Allow you to try Glue REST API without any coding.
 4. Provide sample REST requests that can facilitate custom touchpoint development.
 
 {% info_block errorBox %}
-The shop is provided for display purposes only and should not under any circumstances be used as a starting point for any project.
+The shop is provided for display purposes only and must not under any circumstances be used as a starting point for any project.
 {% endinfo_block %}
 
 ## API Resources
@@ -81,4 +81,4 @@ To get a list of Glue API requests that were used to build a page:
 2. Activate the **Console** section.
 3. To get details of a specific request, expand it in the console.
 
-![glue-requests-sample.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/B2C+API+React+Example/glue-requests-sample.png) 
+![glue-requests-sample.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/B2C+API+React+Example/glue-requests-sample.png)

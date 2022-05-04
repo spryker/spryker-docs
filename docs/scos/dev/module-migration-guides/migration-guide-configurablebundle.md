@@ -22,7 +22,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-configurablebundle.html
 ---
 
-## Upgrading from Version 1.* to Version 2.0.0
+## Upgrading from version 1.* to version 2.0.0
 
 `ConfigurableBundle` v2.0.0 provides extended database schema and additional plugins for interaction with other modules.
 
@@ -40,35 +40,51 @@ The following details have been changed:
 * Introduced `ConfigurableBundleTemplateSlotProductListDeletePreCheckPlugin`.
 * Introduced `CartConfigurableBundlePreReloadPlugin`.
 
+*Estimated migration time: 2-3 hours*
 
-**To upgrade to the new version of the module, do the following:**
+
+To upgrade to the new version of the module, do the following:
 
 1. Run the following command to update the `ConfigurableBundle` module and its dependencies version:
+
 ```bash
 composer require spryker/configurable-bundle:"^2.0.0" --update-with-dependencies
 ```
+
 2. Start executing the following SQL to migrate the database:
+
 ```sql
 ALTER TABLE spy_configurable_bundle_template ADD COLUMN name VARCHAR(255) NULL;
 ```
+
 Now, ensure that all of the entries from `spy_configurable_bundle_template` contain string values. Take into account, that the name column actually contains a glossary key for configurable bundle template translation.
+
 3. When done, execute the following SQL:
+
 ```sql
 ALTER TABLE spy_configurable_bundle_template ALTER COLUMN name SET NOT NULL;
 ```
+
 4. Execute the following command to finish the database migration:
+
 ```bash
 console propel:install
 ```
+
 5. Update transfer objects by running the command:
+
 ```bash
 console transfer:generate
 ```
+
 6. Generate translator cache by running the following command to get the latest Zed translations:
+
 ```bash
 console translator:generate-cache
 ```
+
 7. To disallow deletion of a `product list` which is already used by `configurable bundles template slot`, add a corresponding plugin to `ProductListDependencyProvider`:
+
 ```php
 <?php
 
@@ -91,7 +107,9 @@ class ProductListDependencyProvider extends SprykerProductListDependencyProvider
     }
 }
 ```
-8. Add a preload plugin to `CartConfigurableBundlePreReloadPlugin` to update the Cart module behavior:
+
+8. Add a pre-load plugin to `CartConfigurableBundlePreReloadPlugin` to update the Cart module behavior:
+
 ```php
 <?php
 
@@ -117,9 +135,9 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     }
 }
 ```
+
 9. Run the following command to apply JS changes:
+
 ```bash
 console frontend:zed:build
 ```
-
-*Estimated migration time: 2-3 hours*

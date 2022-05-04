@@ -22,9 +22,9 @@ To view a customer in the Back Office, follow the steps:
 | Email | Email address. |
 |Company | Company. Not to be confused with a [B2B company](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html). |
 | Customer Reference	| Unique identifier of the customer. |
-| Gender | Gender.|
-| Locale | Locale.|
+| Gender | Gender. |
+| Locale | Locale. |
 | Phone | Phone number.|
 | Date of birth	 | Date of birth.|
 | Registered at	| Date and time of the customer's creation. |
-| Zed Account Reference	|
+| Zed Account Reference	| Unique identifier of the Back Office user this [customer is assigned](/docs/scos/user/back-office-user-guides/{page.version}/users/managing-users/assigning-customers-to-users.html) to. |

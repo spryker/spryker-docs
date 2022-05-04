@@ -48,6 +48,7 @@ Add the `color_code` field to the `spy_product_abstract` table in the database:
 2. Apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

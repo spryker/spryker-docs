@@ -51,4 +51,40 @@ docker/sdk cli
     ```bash
     yarn install
     ```
-7.
+7. Rebuild Yves:
+
+```bash
+npm run yves
+```
+
+8. Rebuild Zed
+
+```bash
+npm run zed
+```
+
+## 2. Update RabbitMQ and Jenkins services
+
+In the Deploy file, update RabbitMQ and Jenkins to [ARM supporting versions](https://github.com/spryker/docker-sdk#supported-services). Example:
+
+```
+services:
+...
+    broker:
+        engine: rabbitmq
+        version: '3.9'
+        api:
+            username: 'spryker'
+            password: 'secret'
+        endpoints:
+            queue.spryker.local:
+            localhost:5672:
+                protocol: tcp
+...
+        scheduler:
+        engine: jenkins
+        version: '2.324'
+        endpoints:
+            scheduler.spryker.local:
+...
+```

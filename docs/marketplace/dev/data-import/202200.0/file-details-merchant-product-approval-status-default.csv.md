@@ -6,7 +6,7 @@ template: import-file-template
 
 This document describes the `merchant_product_approval_status_default.csv` file to configure default merchant products approval statuses in your Spryker shop.
 
-To import the file, run:
+To import the file, run the following:
 
 ```bash
 console data:import merchant-product-approval-status-default

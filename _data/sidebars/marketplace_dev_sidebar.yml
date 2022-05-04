@@ -506,9 +506,6 @@ entries:
                 include_versions:
                 - "202108.0"
 
-              - title: "Glue API: Marketplace Shopping Lists feature integration"
-                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-shopping-lists-feature-integration.html
-
       - title: Glue API guides
         nested:
           - title: Abstract products

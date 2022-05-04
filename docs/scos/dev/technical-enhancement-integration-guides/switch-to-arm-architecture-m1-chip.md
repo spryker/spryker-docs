@@ -1,5 +1,5 @@
 ---
-title: Switching to ARM architecture (M1 chip)
+title: Switch to ARM architecture (M1 chip)
 description: Learn how to switch Docker based projects to ARM architecture.
 template: howto-guide-template
 ---

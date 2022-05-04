@@ -67,7 +67,7 @@ npm run zed
 
 ## 2. Update RabbitMQ and Jenkins services
 
-In the Deploy file, update RabbitMQ and Jenkins to [ARM supporting versions](https://github.com/spryker/docker-sdk#supported-services). Example:
+In the deploy file, update RabbitMQ and Jenkins to [ARM supporting versions](https://github.com/spryker/docker-sdk#supported-services). Example:
 
 ```yaml
 services:
@@ -92,4 +92,18 @@ services:
 ```
 
 
-## 3. Enabled Jenkins CSRF protection
+## 3. Enable Jenkins CSRF protection
+
+
+Add the following to the deploy file:
+
+```yaml
+...
+services:
+  scheduler:
+    csrf-protection-enabled: true
+...
+```    
+
+
+Now your project supports ARM architecture and you can run it on M1 based Apple devices.

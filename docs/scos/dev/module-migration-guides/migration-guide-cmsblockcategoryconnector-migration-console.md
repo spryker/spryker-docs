@@ -35,7 +35,9 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector.html
 ---
 
-## CMS Block Category Connector Migration script
+## CMS Block Category Connector migration script
+
+Use this script to migrate CMS Block Category Connector:
 
 ```php
 <?php

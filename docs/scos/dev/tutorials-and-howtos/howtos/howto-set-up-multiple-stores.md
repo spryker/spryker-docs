@@ -1,5 +1,5 @@
 ---
-title: HowTo - Set up multiple stores
+title: "HowTo: Set up multiple stores"
 description: Learn how to set up multiple stores for your project.
 last_updated: Nov 16, 2021
 template: howto-guide-template

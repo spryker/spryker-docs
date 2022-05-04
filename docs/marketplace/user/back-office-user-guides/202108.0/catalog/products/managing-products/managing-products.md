@@ -14,7 +14,7 @@ To start managing products, go to **Catalog&nbsp;<span aria-label="and then">></
 The abstract product is inactive until at least one product variant is activated. You should understand that there is no option to activate
 
 To activate a product:
-1. Navigate to the product variant of the product that you want to activate: **Edit abstract product** > **Variant** > **Edit product variant**.
+1. Navigate to the product variant of the product that you want to activate: **Edit abstract product&nbsp;<span aria-label="and then">></span> Variant&nbsp;<span aria-label="and then">></span> Edit product variant**.
 2.  Click **Activate** on the top of the **Edit Concrete Product** page.
 Starting now, the product is visible to the customers of your online store.
 
@@ -47,7 +47,7 @@ When you see the **Manage Attributes** option, keep in mind that you manage the 
 
 {% info_block infoBox "Info" %}
 
-The attributes that you add are taken from the **Products** > **Attributes** section of the Back Office. So the attribute you want to define should exist in that section.
+The attributes that you add are taken from the **Products&nbsp;<span aria-label="and then">></span> Attributes** section of the Back Office. So the attribute you want to define should exist in that section.
 
 {% endinfo_block %}
 

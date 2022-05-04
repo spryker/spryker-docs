@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproductvolumegui.html
 ---
 
-## Upgrading from Version 1.* to Version 3.0.0
+## Upgrading from version 1.* to version 3.0.0
 
 {% info_block infoBox %}
 

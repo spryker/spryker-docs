@@ -1,6 +1,6 @@
 ---
 title: Front-end performance guidelines
-description: Optimize your Spryker front end.
+description: Optimize your Spryker frontend.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/front-end-performance-guidelines
@@ -15,9 +15,9 @@ redirect_from:
   - /docs/scos/dev/guidelines/front-end-performance-guidelines.html
 ---
 
-This document describes general and Spryker-specific front-end performance guidelines.
+This document describes general and Spryker-specific frontend performance guidelines.
 
-## General performance guidelines for front end
+## General performance guidelines for frontend
 
 Server configuration:
 
@@ -44,7 +44,7 @@ HTML optimization:
 
 
 
-## Spryker-specific performance guidelines for front end
+## Spryker-specific performance guidelines for frontend
 General rules:
 
 * Use the `lazy` webpack directive to register unnecessary components.

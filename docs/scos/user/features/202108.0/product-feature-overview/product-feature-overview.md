@@ -53,7 +53,7 @@ On the Storefront, only abstract products are displayed in the product catalog a
 
 Product variants are always a part of an abstract product. Abstract product and all its product variants share the same URL.
 
-In this example, a T-shirt, which is an abstract product, is available in sizes S, M, and L, which are three different product variants, each having its own stock. When you search *T-shirt* on the Storefront, it's the abstract product that appears as the search result. A Storefront user can only buy one of the product variants. On the *Product details* page of the abstract product, they select and add to cart one of the product variants: S, M, L.
+In this example, a T-shirt, which is an abstract product, is available in sizes S, M, and L, which are three different product variants, each having its own stock. When you search *T-shirt* on the Storefront, it's the abstract product that appears as the search result. A Storefront user can only buy one of the product variants. On the **Product Details** page of the abstract product, they select and add to cart one of the product variants: S, M, L.
 
 
 ### Product information inheritance
@@ -63,7 +63,7 @@ Information of a concrete product on the Storefront is a combination of the info
 The information of a concrete product always overwrites the information of its abstract product. For example, if the abstract product name is *VGA cable*, and the concrete product name is *VGA cable(1.5m)*, the latter is displayed.
 If some information is not specified for a concrete product, it inherits the information from its abstract product. For example, if no price is specified for a concrete product, the price of its abstract product is displayed.
 
-Check the use cases below to better understand how abstract and concrete products are processed in a shop.
+To better understand how abstract and concrete products are processed in a shop, see the following use cases.
 
 #### Case 1: Selling books
 
@@ -81,7 +81,7 @@ The product information is structured as follows:
   - The blue variant holds the stock information and the super attribute: `color = blue`.
   - The green variant holds:
     - The stock information.
-    - The super attribute: `color = green`,
+    - The super attribute: `color = green`.
     - The price, which is different from the abstract product's price.
 
 #### Case 3: Selling a product in five colors, four sizes, and three materials

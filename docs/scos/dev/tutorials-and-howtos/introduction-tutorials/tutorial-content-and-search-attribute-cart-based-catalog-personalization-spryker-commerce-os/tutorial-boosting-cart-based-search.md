@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Boosting Cart Based Search
+title: "Tutorial: Boosting cart based search"
 description: The tutorial provides a step-by-step solution on how you can arrange your products in the cart by a color attribute.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -73,7 +73,7 @@ class CatalogFactory extends SprykerCatalogFactory
 {% info_block infoBox "Snippet for Implementing Cart Boost Query Expander" %}
 
 Check out the example code of the `CartBoostQueryExpanderPlugin` plugin:
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Client/Catalog/Plugin/Elasticsearch/QueryExpander/CartBoostQueryExpanderPlugin.php</summary>
 
 ```php

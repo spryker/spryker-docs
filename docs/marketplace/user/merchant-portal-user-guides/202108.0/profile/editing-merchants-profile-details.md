@@ -45,7 +45,7 @@ The contact person is the only contact of the merchant with the Marketplace admi
 
 #### Company
 
-This section contains general information on the company the merchant has.
+This section contains general information about the company the merchant has.
 
 | ATTRIBUTE | DESCRIPTION | REQUIRED? |
 |-|-|-|

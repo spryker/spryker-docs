@@ -40,7 +40,7 @@ use Spryker\Zed\MerchantSwitcher\Communication\Plugin\Wishlist\SingleMerchantWis
 class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 {
  /**
-  * @return \Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistReloadItemsPluginInterface[]
+  * @return array<\Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistReloadItemsPluginInterface>
   */
  protected function getWishlistReloadItemsPlugins(): array
  {
@@ -50,7 +50,7 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
  }
 
  /**
-  * @return \Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistItemsValidatorPluginInterface[]
+  * @return array<\Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistItemsValidatorPluginInterface>
   */
  protected function getWishlistItemsValidatorPlugins(): array
  {

@@ -1,5 +1,5 @@
 ---
-title: HowTo - Implement customer approval process based on a generic state machine
+title: "HowTo: Implement customer approval process based on a generic state machine"
 description: The guide describes the implementation flow of a customer approval process based on a state machine.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -97,7 +97,7 @@ interface CustomerApproveProcessFacadeInterface
     public function getCustomerApproveProcessItemsByStateIds(array $stateIds = []): array;
 
     /**
-     * Creates `SpyCustomerApproveProcessItem` entity based on `CustomerTransfer` (only customer id is used) and saves it into DB.
+     * Creates `SpyCustomerApproveProcessItem` entity based on `CustomerTransfer` (only customer ID is used) and saves it into DB.
      *
      * @param \Generated\Shared\Transfer\CustomerTransfer $customerTransfer
      *
@@ -222,7 +222,7 @@ class CustomerApproveProcessStateMachineHandlerPlugin extends AbstractPlugin imp
 
     /**
      * This method is called when state of item was changed, client can create custom logic for example update it's related table with new state id/name.
-     * StateMachineItemTransfer:identifier is id of entity from implementor.
+     * StateMachineItemTransfer:identifier is ID of entity from implementor.
      *
      * @param \Generated\Shared\Transfer\StateMachineItemTransfer $stateMachineItemTransfer
      *
@@ -579,7 +579,7 @@ transfer.xml
                 {% raw %}{%{% endraw %}- endif {% raw %}%}{% endraw %}
             </td>
             <td>
-                <a href="{% raw %}{{{% endraw %} url('/customer-approve-process/state-machine-items/delete-item', { id : customerApproveProcessItem.idCustomerApproveProcessItem }) {% raw %}}}{% endraw %}">
+                <a href="{% raw %}{{{% endraw %} url('/customer-approve-process/state-machine-items/delete-item', { ID : customerApproveProcessItem.idCustomerApproveProcessItem }) {% raw %}}}{% endraw %}">
                     Delete
                 </a>
             </td>

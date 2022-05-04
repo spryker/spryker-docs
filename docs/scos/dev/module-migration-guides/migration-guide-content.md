@@ -24,9 +24,10 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-content.html
 ---
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
-The Content module version 2.0.0 implemented the following improvements:
+The `Content` module version 2.0.0 implemented the following improvements:
+
 * Introduced the `spy_content.key` field to store the identifier for entities.
 * Introduced the `spy_content.spy_content-key` unique index.
 * Introduced the `ContentTransfer::$key` transfer object property.
@@ -35,7 +36,11 @@ The Content module version 2.0.0 implemented the following improvements:
 * Adjusted `ContentWriter` so it uses `ContentKeyProvider` to persist the key field while writing the content entity.
 * Added dependency to `spryker/util-uuid-generator`.
 
-**To upgrade to the new version of the module, do the following:**
+
+_Estimated migration time: 30minutes-1h_
+
+To upgrade to the new version of the module, do the following:
+
 1. Upgrade the `Content` module to version 2.0.0:
 
 ```bash
@@ -54,7 +59,8 @@ console transfer:generate
 console propel:install
 ```
 
-**If you need to update existing content items in the Database, please follow these steps:**
+**If you need to update the existing content items in the database, please follow these steps:**
+
 1. In `src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml`, update the key column's property "required" to false for the data migration on the project level:
 
 **src/Pyz/Zed/Content/Persistence/Propel/Schema/spy_content.schema.xml**
@@ -233,8 +239,3 @@ console content-items:generate-keys
 ```bash
 console propel:install
 ```
-
-
-_Estimated migration time: 30minutes-1h_
- 
-<!-- Last review date: Jul 12, 2019 by Sergey Samoylov, Yuliia Boiko-->

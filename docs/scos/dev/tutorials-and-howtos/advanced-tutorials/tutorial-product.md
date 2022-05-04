@@ -26,7 +26,7 @@ redirect_from:
 <!-- used to be: http://spryker.github.io/onboarding/product/ -->
 
 ## Challenge Description
-Add information to the products regarding the country where the product is being produced (e.g.: Made in “China”). Don’t add this information as an attribute.
+Add information to the products regarding the country where the product is being produced—for example: Made in “China”. Don’t add this information as an attribute.
 
 Display this information on the product details page in Yves.
 
@@ -40,7 +40,7 @@ Create the `ProductCountry` table under the persistence layer.
 
 After defining the new table, run the database migration(`console propel:install`) and check that the table was added to your database.
 
-Implement query by product id and query by country id under the persistence layer.
+Implement query by product ID and query by country ID under the persistence layer.
 
 Implement `ProductCountryManager` and add the facade call. Implement `ProductCountryBusinessFactory`.
 

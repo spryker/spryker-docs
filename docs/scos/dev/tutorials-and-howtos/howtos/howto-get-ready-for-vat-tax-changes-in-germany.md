@@ -37,12 +37,12 @@ Make sure that custom code follows the Spryker architecture and leveraging Tax c
 
 To get you ready for the tax update on 01.07.2020, we have prepared an example of the solution that will work on our non-modified Demo Shop and should be adjusted accordingly for every project.
 
-Let's assume that:
-- you use the default cronjobs configuration from `config/Zed/cronjobs/jenkins.php`;
-- you use the default tax import;
-- you want to update the tax rate Germany Standard to 16% on 01.07.2020;
-- you want to update the tax rate Germany Reduced to 5% on 01.07.2020;
-- you want to revert these changes on 01.01.2021.
+Let's assume the following:
+- You use the default cronjobs configuration from `config/Zed/cronjobs/jenkins.php`.
+- You use the default tax import.
+- You want to update the tax rate Germany Standard to 16% on 01.07.2020.
+- You want to update the tax rate Germany Reduced to 5% on 01.07.2020.
+- You want to revert these changes on 01.01.2021.
 
 To schedule the tax rates update, do the following:
 1. Create the `data/import/reduce_tax.csv` file with the following content:

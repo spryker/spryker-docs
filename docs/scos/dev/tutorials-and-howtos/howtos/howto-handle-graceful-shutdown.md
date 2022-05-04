@@ -16,7 +16,7 @@ redirect_from:
 
 When a running process is stopped by, for example, signals like `SIGTERM` and `SIGINT`, the process is stopped right away, no matter if it is completed or not. Sometimes, such behavior is not acceptable—for example, in the case of half imported data set.
 
-Whenever you need to make sure that a process is shut down gracefully, you can use the *GracefulRunner* module and pass `\Generator` to its `GracefulRunnerFacadeInterface::run()` method. `GracefulRunnerFacadeInterface::run()` uses the [signal handler](https://github.com/Seldaek/signal-handler) to register a new handler [with pcntl_signal](https://www.php.net/manual/en/function.pcntl-signal.php), and wraps the passed `\Generator`.  Until a signal was sent, the `\Generator::next()` method is executed to make sure that one step of your process is fully completed before the script shuts down.
+To make sure that a process is shut down gracefully, use the `GracefulRunner` module and pass `\Generator` to its `GracefulRunnerFacadeInterface::run()` method. `GracefulRunnerFacadeInterface::run()` uses the [signal handler](https://github.com/Seldaek/signal-handler) to register a new handler [with pcntl_signal](https://www.php.net/manual/en/function.pcntl-signal.php), and wraps the passed `\Generator`.  Until a signal was sent, the `\Generator::next()` method is executed to make sure that one step of your process is fully completed before the script shuts down.
 
 Example:
 
@@ -46,7 +46,8 @@ To learn more about the Generators, see the Generators documentation.
 {% endinfo_block %}
 
 ## Handling exceptions
-Sometimes, you need to throw an exception into the Generator code. For such cases, you can use the second argument of the `GracefulRunnerFacadeInterface::run()` method. It’s the class name that should be thrown into the Generator when a signal was handled. The following example explains it in more details:
+
+To throw an exception into the Generator code, you can use the second argument of the `GracefulRunnerFacadeInterface::run()` method. It’s the class name that should be thrown into the Generator when a signal was handled. The following example explains it in more details:
 
 ```php
 public function import(Collection $collection): void

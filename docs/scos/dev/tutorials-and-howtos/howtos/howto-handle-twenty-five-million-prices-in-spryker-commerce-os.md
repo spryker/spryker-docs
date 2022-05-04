@@ -17,11 +17,11 @@ redirect_from:
 
 B2B business model usually challenges any software with higher requirements to amounts of data and business complexity.
 
-Imagine you have thousands of products and customers with unique pricing terms and conditions. A product can have thousands of prices assigned — one per customer. In this article, we share the technical challenges of handling such a number of prices and the solutions we used to solve them.
+Imagine you have thousands of products and customers with unique pricing terms and conditions. A product can have thousands of prices assigned—one per customer. In this article, we share the technical challenges of handling such a number of prices and the solutions we used to solve them.
 
-Such a number of prices cannot be managed manually, but it is defined by business rules based on which the prices can be generated automatically. For example, you might agree on the special terms with your B2B partner, and he receives his own prices for the whole catalog. It might be considered as a discount, but usually it is not a single simple rule, but a set of rules and their priorities for each partner. These rules exist in an ERP system which can export data through SOAP or CSV files.
+Such a number of prices cannot be managed manually, but it is defined by business rules based on which the prices can be generated automatically. For example, you might agree on the special terms with your B2B partner, and they receive their own prices for the whole catalog. It might be considered as a discount, but usually it is not a single simple rule, but a set of rules and their priorities for each partner. These rules exist in an ERP system which can export data through SOAP or CSV files.
 
-In Spryker, each price is imported as a [price dimension](/docs/scos/user/features/{{site.version}}/merchant-custom-prices-feature-overview.html) and has a unique key which determines its relation to a customer. For example, `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. To appear on the Storefront, the prices should appear in Redis price entries and abstract product search documents, so that facet filters can be applied in search and categories.
+In Spryker, each price is imported as a [price dimension](/docs/scos/user/features/{{site.version}}/merchant-custom-prices-feature-overview.html) and has a unique key which determines its relation to a customer—for example, `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. To appear on the Storefront, the prices should appear in Redis price entries and abstract product search documents, so that facet filters can be applied in search and categories.
 
 
 Price import flow:
@@ -32,21 +32,21 @@ Price import flow:
 
 When enabling Spryker to handle such a number of prices, we faced the following challenges:
 
-1. 25 000 000 prices should be imported in two separate price dimensions.
+1. 25,000,000 prices should be imported in two separate price dimensions.
 
-2. A product can have about 40 000 prices. This results in overpopulated product abstract search documents: each document aggregates prices of abstract products and all related concrete products. Each price is represented as an indexed field in the search document. Increasing the number of indexed fields slows ElasticSearch(ES) down. Just for comparison, the [recommended limit](https://www.elastic.co/guide/en/elasticsearch/reference/master/mapping.html#mapping-limit-settings) is 1000.
+2. A product can have about 40,000 prices. This results in overpopulated product abstract search documents: each document aggregates prices of abstract products and all related concrete products. Each price is represented as an indexed field in the search document. Increasing the number of indexed fields slows `ElasticSearch(ES)` down. Just for comparison, the [recommended limit](https://www.elastic.co/guide/en/elasticsearch/reference/master/mapping.html#mapping-limit-settings) is 1,000.
 
-3. Overloaded product abstract search documents cause issues with memory limit and slow down [Publish and Synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html). Average document size is bigger than 1 MB.
+3. Overloaded product abstract search documents cause issues with memory limit and slow down [Publish and Synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html). The average document size is bigger than 1&nbsp;MB.
 
-4. When more than 100 product abstract search documents are processed at a time, payload gets above 100 MB, and ES rejects queries. [AWS native service](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-limits.html) does not allow changing this limit.
-The queries rejected by ES are considered successful by Spryker because the [Elastica library](https://elastica.io/) ignores the 413 error code.
+4. When more than 100 product abstract search documents are processed at a time, payload gets above 100&nbsp;MB, and ES rejects queries. [AWS native service](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-limits.html) does not allow changing this limit.
+The queries rejected by ES are considered successful by Spryker because the [Elastica library](https://elastica.io/) ignores the `413` error code.
 
 5. Each price having a unique key results in more different index properties in the whole index. Key structure: `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. This key structure requires millions of actual facets, which slows down ES too much.
 
 
 ## Problem
 
-Below, is an example of a short version of the overpopulated document structure:
+The following example represents a short version of the overpopulated document structure:
 
 ```json
 {
@@ -86,43 +86,38 @@ Below, is an example of a short version of the overpopulated document structure:
 }
 ```
 
-All the `specificPrice-DEFAULT-EUR-NET_MODE-FOO-BAR` properties in the document are converted into mapping properties in ES. We hit the default limit of 1000 properties quickly and receive the following exception:
+All the `specificPrice-DEFAULT-EUR-NET_MODE-FOO-BAR` properties in the document are converted into mapping properties in ES. The default limit of 1,000 properties is hit quickly and receives the following exception:
 
 ```text
 \/de_search\/page\/product_abstract:de:de_de:576 caused Limit of total fields [1000] in index [de_search] has been exceeded\nindex`
 ```
 
-We could increase the limit, but it makes the reindexing process a lot slower.
+You could increase the limit, but it slows down the reindexing process.
 
-The events with the data for ES are processed and acknowledged in RabbitMQ but not delivered to the search service, and we don’t get any related errors.
+The events with the data for ES are processed and acknowledged in RabbitMQ but not delivered to the search service, and you don’t get any related errors.
 
-In AWS, the `http.max_content_length` ES limit defines the maximum payload size in an HTTP request. In our case, the payload is higher than the default limit of 100 MB without the infrastructural option to increase it. See [Amazon Elasticsearch Service Limits](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-limits.html) to learn about cloud service providers, technologies, and limits.
+In AWS, the `http.max_content_length` ES limit defines the maximum payload size in an HTTP request. In this case, the payload is higher than the default limit of 100&nbsp;MB without the infrastructural option to increase it. To learn about cloud service providers, technologies, and limits, see [Amazon Elasticsearch Service Limits](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-limits.html).
 
 ## Evaluated solutions
 
-We evaluated the following solutions:
+The following solutions were evaluated:
 
-1. ES join field type
-This ES functionality is similar to the classical joins in relational databases.
+1. ES join field type.
+   This ES functionality is similar to the classical joins in relational databases. This solution solves your problem faster and with less effort. To learn how we implemented this solution, see [ElasticSearch join data type: Implementation](#elasticsearch-join-field-type-implementation). Also, have a look at the other evaluated solutions as they may be more appropriate in your particular case.
+   <br>Documentation: [Join field type](https://www.elastic.co/guide/en/elasticsearch/reference/current/parent-join.html)
 
-We chose this solution because it looked like it solved our problem faster and with less effort. See [ElasticSearch join data type - implementation](#elasticsearch-join-field-type---implementation) to learn how we implemented this solution. Also, have a look at the other evaluated solutions as they may be more appropriate in your particular case.
+2. Multi sharding with the `_routing` field.
+   The idea is to avoid indexing problems by sharing big documents between shards. Breaking a huge index into smaller ones makes it easier for the search to index data. The solution is complex and does not solve the payload issues.
+   <br>Documentation: [`_routing` field](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-routing-field.html)
 
-Documentation: [Join field type](https://www.elastic.co/guide/en/elasticsearch/reference/current/parent-join.html)
+3. Use Postgres or combine ES and Postgres.
+   Postgres provides search functionalities and you can set up an additional database dedicated to running searches or helping ES with additional data. The `script_scoring` function in search lets you embed any data, though performance is decreased, as this script is evaluated for every document when search is being performed.
+   Compared to the first option, this solution is more complex.
+   <br>Documentation:
+   - [Script score query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-script-score-query.html#script-score-query-ex-request)
+   - [Chapter 12. Full Text Search](https://www.postgresql.org/docs/9.5/textsearch.html)
 
-2. Multi sharding with the `_routing` field
-The idea is to avoid indexing problems by sharing big documents between shards. Breaking a huge index into smaller ones makes it easier for the search to index data. The solution is complex and does not solve the payload issues.
-
-Documentation: [`_routing` field](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-routing-field.html)
-
-3. Use Postgres or combine ES and Postgres
-Postgres provides search functionalities and it is possible to set up an additional database dedicated to running searches or helping ES with additional data. The `script_scoring` function in search allows to embed any data, though performance is decreased, as this script is evaluated for every document when search is being performed.
-Compared to the first option, this solution is more complex.
-
-Documentation:
-[Script score query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-script-score-query.html#script-score-query-ex-request)
-[Chapter 12. Full Text Search](https://www.postgresql.org/docs/9.5/textsearch.html)
-
-## ElasticSearch Join field type - implementation
+## ElasticSearch Join field type: Implementation
 
 To solve the ES indexing issue, we reduced the size of product abstract documents which reduced dynamic mapping properties.
 

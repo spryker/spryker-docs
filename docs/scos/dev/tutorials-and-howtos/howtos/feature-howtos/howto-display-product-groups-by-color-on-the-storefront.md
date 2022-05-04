@@ -116,7 +116,7 @@ Extend the product abstract writer with the color code data in the data import m
 
 /**
  * This file is part of the Spryker Commerce OS.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information, view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\DataImport\Business\Model\ProductAbstract;

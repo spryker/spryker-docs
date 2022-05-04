@@ -36,7 +36,7 @@ If your servers are behind a load balancer and the load balancer is doing the re
 
 ### Force HTTPS for all pages
 
-To force HTTPS on all pages, you have to set `$config[ApplicationConstants::(YVES|ZED)_SSL_ENABLED]` to `true`. The application forces HTTPS on all pages.
+To force HTTPS on all pages, set `$config[ApplicationConstants::(YVES|ZED)_SSL_ENABLED]` to `true`. The application forces HTTPS on all pages.
 
 Configuration:
 

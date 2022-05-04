@@ -30,14 +30,14 @@ To enable guest checkout, follow these steps:
     1. In the Back Office, go to **Customers&nbsp;<span aria-label="and then">></span> Customer Access**.
     2. Clear all the permissions.
     ![customer-permissions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+enable+guest+checkout+in+B2B+Demo+Shop/customer-permissions.png)
-    3. Select **Save**
-    This refreshes the page with the success message displayed.
+    3. Select **Save**. The page refreshes with the success message displayed.
 
-3. In `​ Pyz\Client\Permission\PermissionDependencyProvider.php`, remove or comment `​PlaceOrderWithAmountUpToPermissionPlugin()`​.
+3. In `​Pyz\Client\Permission\PermissionDependencyProvider.php`, remove or comment `​PlaceOrderWithAmountUpToPermissionPlugin()`​.
 
-4. DevVM-based instace: to sync code changes, run `vagrant halt && vagrant up`.
+4. DevVM-based instance: to sync code changes, run `vagrant halt && vagrant up`.
 
-5. In CheckoutPage module, create `src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig`.
+5. In `CheckoutPage` module, create `src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig`.
+
 <details><summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig</summary>
 
 ```twig
@@ -142,7 +142,7 @@ To enable guest checkout, follow these steps:
 
 </details>
 
-6. In `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.twig` adjust the form definition by replacing `enable: data.isPlaceableOrder and can('WriteSharedCartPermissionPlugin', data.cart.idQuote),` with the following:
+6. In `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.twig`, adjust the form definition by replacing `enable: data.isPlaceableOrder and can('WriteSharedCartPermissionPlugin', data.cart.idQuote),` with the following:
 ```twig
 enable: data.isPlaceableOrder
 and can('SeeOrderPlaceSubmitPermissionPlugin')

@@ -1,4 +1,4 @@
-~~---
+---
 title: Marketplace Product Search Widget feature integration
 description: Learn how to integrate the Marketplace Product Search Widget feature into a Spryker project.
 template: feature-integration-guide-template

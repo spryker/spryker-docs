@@ -10,6 +10,8 @@ To switch to ARM architecture, follow the steps:
 
 ## 1. Update Sass
 
+Replace x86 based Sass with an ARM based one:
+
 1. In `package.json`, remove `node-sass` dependencies.
 2. Add `sass` and `sass-loader` dependencies.
 
@@ -67,7 +69,7 @@ npm run zed
 
 In the Deploy file, update RabbitMQ and Jenkins to [ARM supporting versions](https://github.com/spryker/docker-sdk#supported-services). Example:
 
-```
+```yaml
 services:
 ...
     broker:
@@ -88,3 +90,6 @@ services:
             scheduler.spryker.local:
 ...
 ```
+
+
+## 3. Enabled Jenkins CSRF protection

@@ -1,6 +1,6 @@
 ---
 title: Managing marketplace concrete products
-last_updated: Aug 11, 2021
+last_updated: May 05, 2022
 description: This document describes how to modify marketplace concrete products in the Merchant Portal.
 template: back-office-user-guide-template
 ---
@@ -16,10 +16,12 @@ This article contains reference information. Make sure to review it before you s
 ## Filtering and sorting concrete products
 
 The following drop-down menus can be used to filter the marketplace concrete products on the *Concrete Products* page:
+
 - Status of the concrete product
 - Validity dates
 
 Select one or more sorting parameters from the drop-down menu on the *Concrete Products* page to sort the existing concrete products. Choose among the following sort criteria:
+
 - SKU
 - Name
 - Status

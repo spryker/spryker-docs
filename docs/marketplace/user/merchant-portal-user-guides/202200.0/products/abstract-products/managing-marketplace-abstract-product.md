@@ -1,6 +1,6 @@
 ---
 title: Managing marketplace abstract products
-last_updated: Feb 10, 2022
+last_updated: May 05, 2022
 description: This document describes how to modify marketplace abstract products in the Merchant Portal.
 template: back-office-user-guide-template
 ---
@@ -61,7 +61,13 @@ To edit the existing marketplace abstract product:
 | Categories  | Defines the [categories](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html) the product is displayed in. |           |
 | SEO         | In this pane, you can manage meta information for your product. See [Managing abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-meta-information.html) for more details. |           |
 
-### Sending the product for approval
+## Sending the product for approval
+
+{% info_block warningBox "Warning" %}
+
+You can approve only the [newly created marketplace product](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/creating-marketplace-abstract-product.html).
+
+{% endinfo_block %}
 
 In order for the new product to be available on the Storefront, it needs to be approved. To send the product for approval:
 

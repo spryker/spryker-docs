@@ -5,7 +5,7 @@ template: concept-topic-template
 ---
 The [marketplace operator](/docs/marketplace/user/intro-to-the-spryker-marketplace/back-office-for-marketplace-operator.html) is primarily responsible for ensuring the quality of data on the marketplace, including merchants, products, and offers. To control those things in the Marketplace, the approval mechanism is a key feature.
 
-The Marketplace Product Approval Process allows marketplace owners to verify the products of merchants before showing them to customers.
+The *Marketplace Product Approval Process* allows marketplace owners to verify the products of merchants before showing them to customers.
 
 Thus, the Storefront displays only the approved, active, within the validity period, and existing for the defined store products.
 
@@ -36,9 +36,11 @@ A product only appears in the Storefront if it is approved, active, within their
 
 ## Marketplace Product Approval process workflow
 
-In order for the new marketplace product to be displayed in the Storefront, every [merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) needs this product to be approved by the marketplace administrator. The approval process goes through the following stages:
+In order for the new marketplace product to be displayed in the Storefront, every [merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) needs this product to be approved by the marketplace administrator. The procedure goes through the following stages:
 
-1. **Submitting the product for approval.** The [merchant user](https://docs.spryker.com/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-personas.html) submits the request for product approval in the Merchant Portal. The status of the product changes to *Waiting for approval*.
+1. [**Creating a marketplace product**](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/creating-marketplace-abstract-product.html)
+
+2. **Submitting the product for approval.** The [merchant user](https://docs.spryker.com/docs/marketplace/user/intro-to-the-spryker-marketplace/marketplace-personas.html) submits the request for product approval in the Merchant Portal. The status of the product changes to *Waiting for approval*.
 
 2. **Product approval or rejection.** The marketplace administrator can view the products and update their status in the Back Office. If the product is approved, the approval status changes to *Approved*. If the marketplace administrator rejects the product, the product gets *Denied* status.
 

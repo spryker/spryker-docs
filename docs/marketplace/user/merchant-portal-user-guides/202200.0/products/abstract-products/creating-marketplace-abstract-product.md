@@ -1,6 +1,6 @@
 ---
 title: Creating marketplace abstract product
-last_updated: Aug 11, 2021
+last_updated: May 05, 2022
 description: This document describes how to create marketplace abstract products in the Merchant Portal.
 template: back-office-user-guide-template
 ---
@@ -93,6 +93,21 @@ By selecting **Autogenerate SKUs**, the SKU numbers for the variants are generat
 
 By selecting **Same Name as Abstract Product**, the name of the abstract product is used for the concrete products as well.
 
+
+### Sending the product for approval
+
+In order for the new product to be available on the Storefront, it needs to be approved. To send the product for approval:
+
+1. Next to the abstract product, you want to send approval for, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *[Product name]* drawer, *Abstract Product Details* tab.
+2. In the right top corner of the drawer, click **Send for Approval**.
+
+{% info_block infoBox "Info" %}
+
+This button is only displayed if the product status is *Draft*. To learn more about the product statuses, see, [Marketplace Product Approval feature overview](/docs/marketplace/user/features/202200.0/marketplace-product-approval-process-feature-overview.html)
+
+{% endinfo_block %}
+
 ## Next steps
 
+- [Approve the marketplace product](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product.html#sending-the-product-for-approval)
 - [Manage abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product.html)

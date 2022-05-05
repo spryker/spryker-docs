@@ -1,15 +1,15 @@
 ---
-title: Merchant Portal - Marketplace Shopping Lists feature integration
+title: Marketplace Shopping Lists feature integration
 last_updated: April 13, 2022
-description: This document describes the process how to integrate the Merchant Portal - Marketplace Shopping Lists feature into a Spryker project.
+description: This document describes the process how to integrate the Marketplace Shopping Lists feature into a Spryker project.
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Merchant Portal - Marketplace Shopping Lists feature into a Spryker project.
+This document describes how to integrate the Marketplace Shopping Lists feature into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Merchant Portal - Marketplace Shopping Lists feature core.
+Follow the steps below to install the Marketplace Shopping Lists feature core.
 
 ### Prerequisites
 
@@ -17,16 +17,15 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Merchant Portal Marketplace Product | {{page.version}} | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)  |
+| Shopping Lists | {{page.version}} | [Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html)  |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-shopping-lists 
+composer require spryker-feature/marketplace-shopping-lists:"202204.0" --update-with-dependencies 
 ```
 {% info_block warningBox "Verification" %}
 
@@ -107,7 +106,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-run the `propel:install` command :
+Run the `console propel:install` command:
 
 {% info_block warningBox "Verification" %}
 
@@ -155,6 +154,10 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
             new ProductOfferShoppingListItemMapperPlugin(),
         ];
     }
+    
+    /**
+     * @return array<\Spryker\Client\ShoppingListExtension\Dependency\Plugin\ShoppingListItemToItemMapperPluginInterface>
+     */
     protected function getShoppingListItemToItemMapperPlugins(): array
     {
         return [            
@@ -269,7 +272,7 @@ use SprykerShop\Yves\ProductOfferWidget\Widget\ShoppingListProductOfferWidget;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
-/**
+    /**
      * @return array<string>
      */
     protected function getGlobalWidgets(): array
@@ -319,7 +322,7 @@ use Spryker\Zed\ProductOfferShoppingListDataImport\ProductOfferShoppingListDataI
 
 class DataImportConfig extends SprykerDataImportConfig
 {
-/**
+    /**
      * @return array<string>
      */
     public function getFullImportTypes(): array
@@ -340,18 +343,18 @@ namespace Pyz\Zed\Console;
 
 use Spryker\Zed\ProductOfferShoppingListDataImport\ProductOfferShoppingListDataImportConfig;
 
-class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+class c extends SprykerConsoleDependencyProvider
 {
-/**
- * @var string
- */
-protected const COMMAND_SEPARATOR = ':';
-    
-/**
-* @param \Spryker\Zed\Kernel\Container $container
-*
-* @return array<\Symfony\Component\Console\Command\Command>
-*/
+    /**
+    * @var string
+    */
+    protected const COMMAND_SEPARATOR = ':';
+        
+    /**
+    * @param \Spryker\Zed\Kernel\Container $container
+    *
+    * @return array<\Symfony\Component\Console\Command\Command>
+    */
     protected function getConsoleCommands(Container $container): array
     {
         $commands = [                
@@ -375,7 +378,7 @@ use Spryker\Zed\ProductOfferShoppingListDataImport\Communication\Plugin\DataImpo
 
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
- protected function getDataImporterPlugins(): array
+    protected function getDataImporterPlugins(): array
     {
         return [            
             new ProductOfferShoppingListItemDataImportPlugin(),
@@ -386,7 +389,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 
 #### 6. 
 ```bash
-console data:import console data:import product-offer-shopping-list-item
+console data:import product-offer-shopping-list-item
 ```
 
 {% info_block warningBox "Verification" %}
@@ -445,5 +448,5 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | -|
-| Shop Guide - Shopping Lists | {{page.version}} |  [Shop Guide - Shopping Lists](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-shopping-lists.html)  |
+| Shopping Lists | {{page.version}} | [Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html)  |
 | Glue API: Marketplace Shopping Lists feature integration | {{page.version}} |  [Glue API: Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/glue/{{page.version}}/marketplace-shopping-lists-feature-integration.html)  |

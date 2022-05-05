@@ -295,7 +295,6 @@ Enable the following behaviors by registering the plugins:
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
 ```php
-
 <?php
 
 namespace Pyz\Yves\ShopApplication;
@@ -484,6 +483,7 @@ Make sure that the following plugins were registered:
 | MerchantProductOfferShoppingListItemBulkPostSavePlugin       | Go to product detail page and add concrete to shopping list. Open shopping list and add item to cart. Make sure that correct product and merchant is transfered from shopping list to cart.                                                                                                                                                                                                                                                                                                                                                                                                                 |
 
 {% endinfo_block %}
+
 ## Related features
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |

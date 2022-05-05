@@ -20,13 +20,22 @@ redirect_from:
 
 Spryker OS exposes codebase Projects, which enables a high level of customization and can satisfy even the most complex Project business requirements.
 
-The project development, the team is free to decide what approach to use. Spryker recommends considering **Configuration**, **Plug and Play**, and **Project modules** first to get maximum from the Spryker OS codebase, atomic releases, leverage minimum efforts for the integration of the new features and keeping system up to date.
+The project development, the team is free to decide what approach to use. To get maximum from the Spryker OS codebase, atomic releases, leverage minimum efforts for the integration of the new features and keeping system up to date, Spryker recommends considering:
+- **Configuration**, 
+- **Plug and Play**,
+- **Project modules**.
 
 Before starting the project, we recommend you check available development strategies and define one for your implementation. See [Development strategies](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html) for details.
 
-## Use custom namespaces and names
+## Coding guidelines
+Check and apply from the fist day - 
+https://docs.spryker.com/docs/scos/dev/guidelines/coding-guidelines/coding-guidelines.html
+
+## Use custom namespace
 
 Instead of using the `Pyz` namespace, create your own namespace for project development. For example, use the project name as a namespace.
+
+## Use custom names
 
 Use custom names for everything that is added on the project level, like the following:
 - Transfers
@@ -50,11 +59,19 @@ Additionally, we recommend keeping modules up to date in general.
 
 ## Development and tests
 
-From the very first day of project development, it’s recommended to establish an incremental development process based on CI/CD supported by tests.
+From the very first day of project development, it’s recommended to write tests for all the added customisations.
 
 Spryker provides an infrastructure for Unit, Functional, and Acceptance tests.
 
-General test coverage depends on project business requirements and the complexity of a project. But defining critical e-commerce functionalities and covering them with tests is necessary for every project (even if they are only big 5: Home page, Catalog Page, PDP, Add to cart, and Place order).
+## CI/CD
+From the very first day of project development, it’s recommended to establish an incremental development process based on CI/CD (including tests that stated above).
+
+It is recomended to establish the code standarts before the start of the project. OOTB checks that Spryker provides can be found under: "/config/install/sniffs.yml". Feel free to add more on your specific project. 
+
+Make sure that code that breaks the pipeline - can not be merged until fixed.
+
+- 
+
 
 <!--More on test infrastructure <link>
 

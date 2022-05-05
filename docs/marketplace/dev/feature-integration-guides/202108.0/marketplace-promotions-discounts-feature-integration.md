@@ -60,7 +60,7 @@ use Spryker\Zed\MerchantSalesOrderMerchantUserGui\MerchantSalesOrderMerchantUser
 class MerchantSalesOrderMerchantUserGuiConfig extends SprykerMerchantSalesOrderMerchantUserGuiConfig
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     public function getMerchantSalesOrderDetailExternalBlocksUrls(): array
     {
@@ -112,13 +112,13 @@ Enable the following behaviors by registering the plugins:
 
 namespace Pyz\Zed\MerchantSalesOrder;
 
-use Spryker\Zed\DiscountMerchantSalesOrder\Communication\Plugin\DiscountMerchantOrderFilterPlugin;
+use Spryker\Zed\DiscountMerchantSalesOrder\Communication\Plugin\MerchantSalesOrder\DiscountMerchantOrderFilterPlugin;;
 use Spryker\Zed\MerchantSalesOrder\MerchantSalesOrderDependencyProvider as SprykerMerchantSalesOrderDependencyProvider;
 
 class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MerchantSalesOrderExtension\Dependency\Plugin\MerchantOrderFilterPluginInterface[]
+     * @return array<\Spryker\Zed\MerchantSalesOrderExtension\Dependency\Plugin\MerchantOrderFilterPluginInterface>
      */
     protected function getMerchantOrderFilterPlugins(): array
     {
@@ -127,6 +127,13 @@ class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDepe
         ];
     }
 }
+```
+
+Run the following command:
+
+```bash
+console router:cache:warm-up:backend-gateway             
+console router:cache:warm-up:backoffice
 ```
 
 ---

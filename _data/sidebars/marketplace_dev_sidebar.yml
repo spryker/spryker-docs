@@ -274,6 +274,11 @@ entries:
             include_versions:
             - "202108.0"
 
+          - title: Merchant Switcher + Customer Account Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-customer-account-management-feature-integration.html
+            include_versions:
+              - "202108.0"
+
           - title: Merchant Switcher + Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-wishlist-feature-integration.html
             include_versions:
@@ -281,11 +286,6 @@ entries:
 
           - title: Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
-            include_versions:
-            - "202108.0"
-
-          - title: Marketplace Order Management + Customer Account Management feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-customer-account-management-feature-integration.html
             include_versions:
             - "202108.0"
 

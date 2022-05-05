@@ -1,11 +1,11 @@
 ---
-title: Marketplace Order Management + Customer Account Management feature integration
+title: Merchant Switcher + Customer Account Management feature integration
 last_updated: Jan 06, 2021
-description: This document describes the process how to integrate the Marketplace Order Management Feature + Order Threshold feature into a Spryker project.
+description: This document describes the process how to integrate the Merchant Switcher + Customer Account Management feature into a Spryker project.
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Marketplace Order Management + Customer Account Management feature into a Spryker project.
+This document describes how to integrate the Merchant Switcher + Customer Account Management feature into a Spryker project.
 
 ## Install feature frontend
 
@@ -17,7 +17,7 @@ To start feature integration, integrate the required features:
 
 | NAME  | VERSION | INTEGRATION GUIDE |
 | ------------------ | ----------- | ----------|
-| Marketplace Order Management |  {{page.version}} | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html) |
+| Merchant Switcher | {{page.version}} | [Merchant Switcher feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-feature-integration.html)|
 | Customer Account Management  | {{page.version}}    | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html)
 
 ### 1) Set up the transfer objects
@@ -59,7 +59,7 @@ use SprykerShop\Yves\MerchantSwitcherWidget\Plugin\CustomerPage\MerchantSwitchCa
 class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyProvider
 {
     /**
-     * @return \SprykerShop\Yves\CustomerPageExtension\Dependency\Plugin\AfterCustomerAuthenticationSuccessPluginInterface[]
+     * @return array<\SprykerShop\Yves\CustomerPageExtension\Dependency\Plugin\AfterCustomerAuthenticationSuccessPluginInterface>
      */
     protected function getAfterCustomerAuthenticationSuccessPlugins(): array
     {

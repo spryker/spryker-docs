@@ -50,10 +50,12 @@ Check your code and where you make use of the `RefundFacade` change your impleme
 {% endinfo_block %}
 
 These methods are:
+
 * `RefundFacade::calculateRefund(array $salesOrderItems`, SpySalesOrder $salesOrderEntity)`
 * `RefundFacade::saveRefund(RefundTransfer $refundTransfer)`
+  
 **You need to:**
-1. Rename method `RefundFacade::calculateRefundableAmount()` to `RefundFacade::calculateRefund()` and pass needed arguments to it.
- `calculateRefund()` will return a `RefundTransfer` which holds the refundable amount.
+
+1. Rename method `RefundFacade::calculateRefundableAmount()` to `RefundFacade::calculateRefund()` and pass needed arguments to it. `calculateRefund()` will return a `RefundTransfer` which holds the refundable amount.
 2. When refund process of payment provider is done and accepted, pass the `RefundTransfer` to `RefundFacade::saveRefund()`.
 3. Refund view in sales order detail page can be activated by adding `'refund' => '/refund/sales/list'` to `SalesConfig::getSalesDetailExternalBlocksUrls()`.

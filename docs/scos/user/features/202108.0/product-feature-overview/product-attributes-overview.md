@@ -54,13 +54,6 @@ Product variants of the same abstract product can differ by different super attr
     * C:  `color = red`
     * D:  `size = 45`
 
-
-
-
-
-
-
-
 ## Predefined product attribute values
 A *predefined product attribute value* is a product attribute value that a Back Office user defines when managing product attributes.
 
@@ -69,7 +62,7 @@ A Back Office user can configure configure a product attribute to accept only pr
 ## Product attribute translations
 A Back Office user can localize product attributes. They can add translations for attribute names and values. For example, in the attribute `Color = White`, both `Color` and `White` can be localized.
 
-There are different ways to handle translations of attributes. See the examples below.
+There are different ways to handle translations of attributes. See the following examples.
 
 ### Example 1: localized attributes and non-localized values
 
@@ -151,15 +144,13 @@ Länge = 1.5 meter
 What you see on the US version of the shop:
 Length = 4.92 feet  
 
-
-
 ## Database schema for product attributes
 
 ![Product attribute management](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Attributes/product_attribute_management.png)
 
 ## Current Constraints
 
-Currently, the feature has the following functional constraints which are going to be resolved in the future.
+The feature has the following functional constraints which are going to be resolved in the future.
 
 * When adding a product variant to an existing abstract product, you can only use the existing super attributes.
 

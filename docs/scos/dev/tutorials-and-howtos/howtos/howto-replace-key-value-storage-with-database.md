@@ -1,5 +1,5 @@
 ---
-title: HowTo - Replace key-value storage with database
+title: "HowTo - Replace key-value storage with database"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-replace-key-value-storage-with-database
@@ -14,15 +14,18 @@ redirect_from:
 ---
 
 One of the main ways of transferring data from Zed to Yves is the Publish & Synchronization mechanism. It works by:
-1. storing the denormalized data, that is saved in Zed and should be shared with Yves, in specific infrastructural database tables,
+
+1. storing the denormalized data, that is saved in Zed and should be shared with Yves, in specific infrastructural database tables;
 2. synchronizing that data to a fast key-value storage (e.g., Redis) with the help of message queues.
 
-Yves then reads the synchronized data directly from the storage. However, sometimes, you might need to exclude the second step and read data directly from the database. This article describes how to do that.
+Yves then reads the synchronized data directly from the storage. However, sometimes, you might need to exclude the second step and read data directly from the database. This document describes how to do that.
 
-## Why You May Need to Skip Synchronization
+## Why you may need to skip synchronization
+
 Publish and Synchronize creates expected data duplication: the same data is stored both in the database and in the key-value storage. In high-load scenarios, like B2C, where there is usually a large number of customers, such data duplication is necessary to ensure performance when processing requests. In B2B, where there is normally a huge amount of data and a smaller number of customers, the duplication penalty is not justified.
 
-## How the Key-value Bypass Works
+## How the key-value bypass works
+
 The regular Publish & Synchronization flow has two steps:
 
 1. **Publish** the denormalized data to storage tables located in the database;
@@ -33,22 +36,31 @@ In the diagram below, you can see a typical implementation of Publish & Synchron
 Key-Value Storage Bypass works by disabling the synchronization step and reading data directly from the database. This is done by using the newly created StorageDatabase module instead of *StorageRedis*.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+Disable+Key-value+Storage+and+use+the+Database+Instead/key-value+bypass.png)
 This new module is responsible for interacting with the database in read-only mode and fetching the necessary data directly from storage tables. This makes the key-value storage unnecessary, allowing projects to avoid it. Any number of other vendor-specific modules can be created by providing implementations for interfaces from the *StorageExtension* module. The same is true for StorageDatabase except that it interacts with the database.
+
 {% info_block errorBox %}
-There are two limitations of using the database as storage on Yves compared to the default storage engine. Scenarios, when Yves actually writes data to storage, are:<ul><li>Caching of requests to storage: while using the database as storage it is not possible to cache anything in Yves at the moment</li> <li> Concurrent requests and caching for the Glue API.</li></ul>
+
+There are two limitations of using the database as storage on Yves compared to the default storage engine. Scenarios, when Yves actually writes data to storage, are:
+
+- Caching of requests to storage: while using the database as storage it is not possible to cache anything in Yves at the moment
+- Concurrent requests and caching for the Glue API.
+
 {% endinfo_block %}
+
 Out of the box, the `StorageDatabase` module can work with two RDBS vendors - MySQL or MariaDB and PostgreSQL. But you can add support for any other database by providing the implementation for `Spryker\Client\StorageDatabaseExtension\Storage\Reader\StorageReaderInterface` as described below.
 
 ## Installation
-Install the required modules by running
+
+Install the required modules by running:
+
 ```bash
 composer require spryker/storage:3.8.0 spryker/storage-database
 ```
 
-## Configuring the Storage Database (DevOps)
+## Configuring the storage database (DevOps)
 
 1. For the key-value storage bypass to work properly, add a set of new configuration values to the environment configuration of a project:
 
-config/Shared/config_default.php
+**config/Shared/config_default.php**
 
 ```php
 <?php
@@ -105,11 +117,12 @@ class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
     }
 }
 ```
+
 {% info_block infoBox %}
 
 By changing `isSynchronizationEnabled` to false you disable the synchronization for all modules (storage and search). To keep the search synchronization (essential for the search functionality), go through all installed `Search modules and modify the schema.xml` file, for example:
 
-spy_product_page_search.schema.xml
+**spy_product_page_search.schema.xml**
 
 ```xml
 <?xml version="1.0"?>
@@ -134,9 +147,10 @@ spy_product_page_search.schema.xml
 vendor/bin/console propel:install
 vendor/bin/console event:trigger
 ```
+
 4. Disable the storage caching. As mentioned above, at the moment the cache would not work when reading the published data directly from the database. For this you need to modify config on the project level:
 
-src/Pyz/Client/Storage/StorageConfig.php
+**src/Pyz/Client/Storage/StorageConfig.php**
 
 ```php    
 <?php
@@ -183,7 +197,7 @@ class EntityTagsRestApiConfig extends SprykerEntityTagsRestApiConfig
 
 For example, by default (with no mappings) the key `product_concrete:de_de:1` would be translated into `spy_product_concrete_storage` - the default prefix is `spy`, the default suffix is `storage`, and the actual name of the table is taken from the resource key prefix - `product_concrete` in this case. You can adjust the process of resolving the table name, should you need to do so. Say, if in the example above the data for  key `product_concrete:de_de:1` needs to be fetched from the tabled named `pyz_product_foo` instead, you need to configure the corresponding mapping:
 
-Pyz\Client\StorageDatabase\StorageDatabaseConfig
+**Pyz\Client\StorageDatabase\StorageDatabaseConfig**
 
 ```php
 <?php
@@ -212,10 +226,11 @@ class StorageDatabaseConfig extends SprykerStorageDatabaseConfig
 
 The top level key here, `product_concrete`, is the resource key prefix. Any of the table name fragment entries (prefix, name, suffix) can be omitted. In this case, a fragment will be set to its default value according to the rules described above.
 
-## Enabling the Storage Database
+## Enabling the storage database
+
 Adjust the Storage module's dependency provider as shown below:
 
-Pyz\Client\StorageDatabase\StorageDatabaseConfig
+**Pyz\Client\StorageDatabase\StorageDatabaseConfig**
 
 ```php
 <?php
@@ -238,10 +253,11 @@ class StorageDependencyProvider extends SprykerStorageDependencyProvider
 }
 ```
 
-## Selecting a Storage Engine
+## Selecting a storage engine
+
 As mentioned above, out of the box, Spryker can interact with storage databases provided by two vendors: **PostgresSQL** and **MySQL**. To use PostgresSQL as the storage database engine, add the following dependency provider to the project:
 
-Pyz\Client\StorageDatabase\StorageDatabaseDependencyProvider
+**Pyz\Client\StorageDatabase\StorageDatabaseDependencyProvider**
 
 ```php
 <?php

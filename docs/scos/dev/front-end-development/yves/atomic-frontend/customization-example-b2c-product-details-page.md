@@ -22,7 +22,7 @@ You can see the [full version of this page](https://www.de.b2c.demo-spryker.com/
 
 
 
-| # | Path to SCSS |
+| # | PATH TO SCSS |
 | --- | --- |
 | 1 | project/src/Pyz/Yves/ShopUi/Theme/default/components/molecules/breadcrumb/breadcrumb.scss |
 | 2 | project/src/Pyz/Yves/ProductImageWidget/Theme/default/components/molecules/image-gallery/image-gallery.scss |
@@ -40,7 +40,7 @@ You can see the [full version of this page](https://www.de.b2c.demo-spryker.com/
 ![B2C-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2C+Product+Details+page/b2c-2.png)
 
 
-| # | Path to SCSS |
+| # | PATH TO SCSS |
 | --- | --- |
 | 12 | project/src/Pyz/Yves/ShopUi/Theme/default/components/atoms/title/title.scss |
 | 13 | project/src/Pyz/Yves/ShopUi/Theme/default/components/molecules/toggler-item/toggler-item.scss |
@@ -49,7 +49,7 @@ You can see the [full version of this page](https://www.de.b2c.demo-spryker.com/
 ![B2C-3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2C+Product+Details+page/b2c-3.png)
 
 
-| # | Path to SCSS |
+| # | PATH TO SCSS |
 | --- | --- |
 | 15 | project/src/Pyz/Yves/ShopUi/Theme/default/components/molecules/product-slider-title/product-slider-title.scss |
 | 16 | project/src/Pyz/Yves/ShopUi/Theme/default/components/atoms/title/title.scss |

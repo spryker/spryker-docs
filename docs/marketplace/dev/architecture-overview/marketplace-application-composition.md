@@ -22,14 +22,14 @@ Yves is a customer-facing HTML-based Storefront application where customers brow
 Backend Gateway is a Storefront-oriented application. This is where a storefront (Yves/Glue) changes the state of the system (stock reservations, order placement, payments).
 
 ### Merchant Portal
-Merchant Portal is a merchant-focused application. Merchants use the Merchant Portal to manage their catalog and fulfill customer orders. Check out [Merchant Portal's architecture](/docs/marketplace/dev/architecture-overview/marketplace-merchant-portal-architecture-overview.html) for more details.
+Merchant Portal is a merchant-focused application. Merchants use the Merchant Portal to manage their catalog and fulfill customer orders. For more details, see [Merchant Portal's architecture](/docs/marketplace/dev/architecture-overview/marketplace-merchant-portal-architecture-overview.html).
 
 ### Marketplace Operator Back Office
 Back Office for the Marketplace Operator is a marketplace owner-centric or admin-centric application. Marketplace Operator here takes care of the whole Marketplace, including listing global products, managing merchants, and managing categories.
 
 The Back Office also includes facilities oriented to the Operator-As-A-Merchant case, such as offers and orders management. Check out [Marketplace in the Back Office](/docs/marketplace/dev/architecture-overview/marketplace-in-back-office.html) for more details.
 
-{% info_block warningBox "Important Note" %}
+{% info_block warningBox "Important note" %}
 
 Ensure that Back Office is protected by a secure VPN connection.
 

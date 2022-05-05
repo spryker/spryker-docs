@@ -1,6 +1,6 @@
 ---
 title: Merchant Product Restrictions feature overview
-description: Merchant Product Restrictions allow merchants to define the products that are available to each of their B2B customers.
+description: Merchant Product Restrictions lets merchants define the products that are available to each of their B2B customers.
 last_updated: Jul 22, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/merchant-product-restrictions-feature-overview
@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/merchant-product-restrictions-feature-overview
 ---
 
-At its core, the _Product Restrictions_ feature allows merchants to define the products that are available to each of their B2B customers.
+At its core, the _Product Restrictions_ feature lets merchants define the products that are available to each of their B2B customers.
 
 In terms of [Merchant concept](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html), the **merchant** is the one who sells products on a marketplace and can set prices.
 
@@ -31,7 +31,7 @@ You can check more cases of product restrictions workflow on the [Restricted Pro
 
 ## Current constraints
 
-- Currently, in the situation, when a single product from the product set is blacklisted, the other items are displayed in the shop. We are going to update the logic in a way, that in case any of the items in the product set gets blacklisted, all relevant product sets containing this item will get blacklisted too.
+- In the situation when a single product from the product set is blacklisted, the other items are displayed in the shop. We are going to update the logic in a way, that in case any of the items in the product set gets blacklisted, all relevant product sets containing this item will get blacklisted too.
 -  The current functionality allows displaying the whole product bundle even if it contains the blacklisted customer-specific products. We are working on updating the logic so that if the bundle product includes a blacklisted item, the whole bundle is also blacklisted for a customer.
 
 ## Related Business User articles

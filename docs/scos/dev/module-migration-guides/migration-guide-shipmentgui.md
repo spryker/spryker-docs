@@ -22,22 +22,26 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shipmentgui.html
 ---
 
-## Upgrading from Version 1.* to Version 2.0.0
+## Upgrading from version 1.* to version 2.0.0
 
-In the version 2.0.0 of the **ShipmentGui** module, we have added the ability to assign a delivery method to a store in the Back Office. You can find more details about the changes on the [ShipmentGui module](https://github.com/spryker/shipment-gui/releases) release page.
+In the version 2.0.0 of the `ShipmentGui` module, we have added the ability to assign a delivery method to a store in the Back Office. You can find more details about the changes on the [ShipmentGui module](https://github.com/spryker/shipment-gui/releases) release page.
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 5 min*
 
-1. Upgrade the **ShipmentGui** module to the new version:
+To upgrade to the new version of the module, do the following:
+
+1. Upgrade the `ShipmentGui` module to the new version:
 
 ```bash
 composer require spryker/shipment-gui:"^2.0.0" --update-with-dependencies
 ```
-2. Generate the transfer objects:
+
+2. Generate transfer objects:
 
 ```bash
 console transfer:generate
 ```
+
 3. Register the following form plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
@@ -45,7 +49,7 @@ console transfer:generate
 | `MoneyCollectionFormTypePlugin` | Represents the money collection fields based on stores, currencies, and price types defined in the system. | None | `Spryker\Zed\Money\Communication\Plugin\Form` |
 | `StoreRelationToggleFormTypePlugin` | Represents a store relation toggle form based on stores registered in the system. | None | `Spryker\Zed\Store\Communication\Plugin\Form` |
 
-src/Pyz/Zed/ShipmentGui/ShipmentGuiDependencyProvider.php
+**src/Pyz/Zed/ShipmentGui/ShipmentGuiDependencyProvider.php**
 
 ```php
 <?php
@@ -80,4 +84,3 @@ class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 }
 ```
 
-*Estimated migration time: 5 min*

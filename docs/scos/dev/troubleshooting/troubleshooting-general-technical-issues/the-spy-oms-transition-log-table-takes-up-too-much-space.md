@@ -23,9 +23,11 @@ Table manipulations can affect a shop greatly. It is not safe to do so, and we r
 {% endinfo_block %}
 
 ## Cause
+
 By default, nothing limits the table size or deletes old records.
 
 ## Solution
+
 Schedule the following SQL query to delete all the logs older than 90 days. You can adjust the time interval per your requirements.
 
 ```sql

@@ -27,37 +27,44 @@ This document describes how to install Spryker in [Development Mode](/docs/scos/
 ## Installing Docker prerequisites on MacOS and Linux
 
 To install Docker prerequisites, follow one of the guides:
+
 * [Installing Docker prerequisites on MacOS](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html)
 * [Installing Docker prerequisites on Linux](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
 
 ## Installing Spryker in Development mode on MacOS and Linux
-Follow the steps to install Spryker in Development mode:
 
+Follow the steps to install Spryker in Development mode:
 
 1. Open a terminal.
 2. Create a new folder and navigate into it.
 3. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops):
+
     * Clone the B2C repository:
 
     ```bash
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202108.0  --single-branch ./b2c-demo-shop
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202204.0 --single-branch ./b2c-demo-shop
     ```
 
     * Clone the B2B repository:
 
     ```bash
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202108.0  --single-branch ./b2b-demo-shop
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0 --single-branch ./b2b-demo-shop
     ```
 
 4. Depending on the repository you've cloned, navigate into the cloned folder:
+
     * B2C repository:
+
     ```bash
     cd b2c-demo-shop
     ```
+
     * B2B repository:
+
     ```bash
     cd b2b-demo-shop
     ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that you are in the correct folder by running the `pwd` command.
@@ -65,14 +72,17 @@ Make sure that you are in the correct folder by running the `pwd` command.
 {% endinfo_block %}
 
 5. Clone the Docker SDK repository:
+
 ```bash
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
 ```
 
 6. Bootstrap local docker setup:
+
 ```bash
 docker/sdk bootstrap deploy.dev.yml
 ```
+
 {% info_block warningBox "Bootstrap" %}
 
 Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after you update the Docker SDK or the deploy file.
@@ -80,6 +90,7 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 {% endinfo_block %}
 
 7. Update the `hosts` file:
+
 Follow the installation instructions in the white box from the `docker/sdk bootstrap` command execution results to prepare the environment.
 
 {% info_block infoBox %}
@@ -87,7 +98,6 @@ Follow the installation instructions in the white box from the `docker/sdk boots
  You can run `docker/sdk install` after `bootstrap` to get the list of the instructions.
 
 {% endinfo_block %}
-
 
 8. Once the job finishes, build and start the instance:
 

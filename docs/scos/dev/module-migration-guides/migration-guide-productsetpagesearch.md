@@ -20,11 +20,14 @@ This migration guide is a part of the [Search migration effort](/docs/scos/dev/m
 {% endinfo_block %}
 
 To upgrade the module, do the following:
-1. Update the module with composer:
+1. Update the module using Composer:
+
 ```bash
 composer update spryker/product-set-page-search
 ```
+
 2. Remove deprecated plugin usages (if any) from `Pyz\Zed\Search\SearchDependencyProvider`:
+
 ```php
 Spryker\Zed\ProductSetPageSearch\Communication\Plugin\Search\ProductSetPageMapPlugin
 ```

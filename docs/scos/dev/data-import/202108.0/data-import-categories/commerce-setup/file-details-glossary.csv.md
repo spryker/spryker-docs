@@ -1,5 +1,5 @@
 ---
-title: File details- glossary.csv
+title: File details - glossary.csv
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-glossarycsv
@@ -11,27 +11,33 @@ redirect_from:
   - /docs/en/file-details-glossarycsv
 ---
 
-This article contains content of the **glossary.csv** file to configure [Customer](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html) information on your Spryker Demo Shop.
+This document describes the `glossary.csv` file to configure [Customer](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html) information in your Spryker Demo Shop.
 
-## Headers & Mandatory Fields
-These are the header fields to be included in the .csv file:
+To import the file, run:
 
-| File Name | Mandatory | Type | Other Requirements/Comments | Description |
+```bash
+data:import:glossary
+```
+
+## Import file parameters
+
+The file should have the following parameters:
+
+| PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| key | Yes | String | N/A* | Glossary key, which is used in the templates contained in the shop application. |
-| translation | Yes | String | N/A | Translation value of the key for the specific locale. |
-| locale | Yes | String | N/A | Locale of the translation. |
-*N/A: Not applicable.
+| key | &check; | String |   | Glossary key, which is used in the templates contained in the shop application. |
+| translation | &check; | String |   | Translation value of the key for the specific locale. |
+| locale | &check; | String |   | Locale of the translation. |
 
-## Dependencies
+## Import file dependencies
+
 This file has no dependencies.
 
-## Template File & Content Example
+## Import template file and content example
 
-A template and an example of the *glossary.csv*  file can be downloaded here:
+Find the template and an example of the file below:
 
-
-| File | Description |
+| FILE | DESCRIPTION |
 | --- | --- |
-| [glossary.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/Template+glossary.csv) | Glossary .csv template file (empty content, contains headers only). |
-| [glossary.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/glossary.csv) | Glossary .csv file containing a Demo Shop data sample. |
+| [glossary.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/Template+glossary.csv) | Exemplary import file with headers only. |
+| [glossary.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/glossary.csv) | Exemplary import file with Demo Shop data. |

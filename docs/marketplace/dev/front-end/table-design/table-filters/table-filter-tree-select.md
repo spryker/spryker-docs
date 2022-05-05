@@ -14,11 +14,11 @@ Check out an example usage of the Table Filter Tree Select in the `@spryker/tabl
 
 Component configuration:
 
-- `enabled` - enables the filter via config.  
-- `items` - an array with config for each filter tree-select.  
+- `enabled`—enables the filter via config.  
+- `items`—an array with config for each filter tree-select.  
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         dataSource: { ... },
         columns: [ ... ],

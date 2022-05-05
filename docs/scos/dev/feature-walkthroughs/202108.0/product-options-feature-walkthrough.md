@@ -11,8 +11,6 @@ The _Product Options_ feature allows a Back Office user to create and assign pro
 To learn more about the feature and to find out how end users use it, see [Product Options feature overview](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html) for business users.
 
 
-
-
 ## Related Developer articles
 
 |INTEGRATION GUIDES  | MIGRATION GUIDES  | DATA IMPORT |

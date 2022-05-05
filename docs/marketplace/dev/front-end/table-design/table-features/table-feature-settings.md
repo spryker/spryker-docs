@@ -14,11 +14,11 @@ Check out an example usage of the Table Feature Settings in the `@spryker/table`
 
 Component configuration:
 
-- `enabled` - enables the feature via config.  
-- `tableId` - `id` of the table that syncs with the table toolbar settings (also can be assigned to the table via HTML).  
+- `enabled`—enables the feature via config.  
+- `tableId`—`id` of the table that syncs with the table toolbar settings (also can be assigned to the table via HTML).  
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         dataSource: { ... },
         columns: [ ... ],

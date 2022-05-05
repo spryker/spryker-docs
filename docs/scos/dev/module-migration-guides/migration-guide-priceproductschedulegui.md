@@ -22,9 +22,11 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproductschedulegui.html
 ---
 
-## Upgrading from Version 1.* to Version 2.0.0
+## Upgrading from version 1.* to version 2.0.0
 
-1. Upgrade the **PriceProductScheduleGui** module to version 2.0.0:
+*Estimated migration time: 5 minutes*
+
+1. Upgrade the `PriceProductScheduleGui` module to version 2.0.0:
 
 ```bash
 composer require spryker/price-product-schedule-gui: "^2.0.0" --update-with-dependencies
@@ -35,5 +37,3 @@ composer require spryker/price-product-schedule-gui: "^2.0.0" --update-with-depe
 ```bash
 console transfer:generate
 ```
-
-*Estimated migration time: 5 minutes*

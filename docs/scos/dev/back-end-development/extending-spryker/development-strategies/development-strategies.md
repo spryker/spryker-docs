@@ -14,10 +14,10 @@ Before proceeding to the strategies definition, check out the following table of
 | DEVELOPMENT STRATEGY | SPYKER OS UPDATE SUPPORT |
 | --- | --- |
 | Configuration | High, you can safely take minor and patch releases. |
-| Plug and Play | High, you can safely take minor and patch releases. |
-| Project Modules | High, you can safely take minor and patch releases. |
-| Spryker OS Module Customization | Reduced, manual check is needed for every update. |
-| Spryker OS Module Replacement | No support. |
+| Plug and play | High, you can safely take minor and patch releases. |
+| Project modules | High, you can safely take minor and patch releases. |
+| Spryker OS module customization | Reduced, manual check is needed for every update. |
+| Spryker OS module replacement | No support. |
 
 ## Development strategies
 
@@ -44,7 +44,7 @@ In your project, you don’t calculate a refundable amount inside Spryker OS, so
 
 Spryker OS support: High, you can safely take minor and patch releases.
 
-### Plug and Play
+### Plug and play
 
 When existing OOTB functionality is not enough, we need to consider building our Plugins for existing plugin stacks in separate Project modules.
 
@@ -72,9 +72,13 @@ In my Project, we would like to introduce Product Label groups. In this case, I 
 
 Spryker OS support: High, you can safely take minor and patch releases.
 
-### Spryker OS Module Customization
+### Spryker OS module customization
 
 When specific OOTB Spryker behavior doesn’t fit Project requirements, you can enable the full power of available for your codebase by extending existing business modules.
+
+{% info_block infoBox "Let us know which extension point is missing, so we can add it in the core" %}
+Register missing extension points in [Aha ideas](https://spryker.ideas.aha.io/).  
+{% endinfo_block %}
 
 As it’s quite a substantial change, we need to go deeper and not only extend OOTB Spryker behaviors but also change it, some of the non-API change become dangerous. That’s why a module constraint to a specific minor version is required (using ~ instead of ^).
 
@@ -88,7 +92,7 @@ In my Project, Order entity should not be hydrated during the buying process (we
 
 Spryker OS support: Reduced, manual check is needed for every update.
 
-### Spryker OS Module Replacement
+### Spryker OS module replacement
 
 When an existing Spryker module provides functionality that doesn’t fit the Project conceptually, there is a possibility to replace a Spryker module completely using the “composer replace” feature.
 

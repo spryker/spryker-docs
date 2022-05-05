@@ -18,10 +18,12 @@ redirect_from:
   - /v4/docs/en/updating-a-spryker-based-project
 ---
 
-## General Information
+## General information
+
 CRUD Scheduled Prices adds UI for creating, reading, updating and deleting scheduled prices for concrete and abstract products.
 
-## Migration Process
+## Migration process
+
 Upgrade all the affected modules in bulk by following the steps below.
 
 1. Run the following composer command, but **make sure to remove the modules that are irrelevant for your project from the command**.
@@ -38,12 +40,13 @@ console transfer:generate
 ```
 
 3. Follow individual migration guides of the modules listed below:
+
 * [PriceProductSchedule](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedule.html#upgrading-from-version-1-to-version-200)
 * [PriceProductScheduleGui](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedulegui.html)
 
 You can find the affected modules of the CRUD scheduled prices update in the following table.
 
-| Module | Version | Migration guide |
+| MODULE | VERSION | MIGRATION GUIDE |
 | --- | --- | --- |
 | `spryker/price-product-schedule	` | 	2.0.0 | [Migration Guide - PriceProductSchedule](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedule.html#upgrading-from-version-1-to-version-200) |
 | `spryker/price-product-schedule-gui` | 	2.0.0 | [Migration Guide - PriceProductScheduleGui](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedulegui.html) |

@@ -671,11 +671,28 @@ To make sure the `CompanyBusinessUnitCompanyUserStorageExpanderPlugin` was set u
 
 {% endinfo_block %}
 
+### 6) Zed Translations
+
+Run the following command to generate a new translation cache for Zed:
+
+```bash
+console translator:generate-cache
+```
+
+### 7) Build Zed UI Frontend
+Run the following command to enable Javascript and CSS changes for Zed:
+
+```bash
+console frontend:zed:build
+```
+
 {% info_block warningBox "Verification" %}
 
 To make sure the transform dropdowns plugins (`CompanyFieldToCompanyUserFormExpanderPlugin`, `CompanyBusinessUnitToCompanyUserFormExpanderPlugin`,
 `CompanyToCompanyUserAttachCustomerFormExpanderPlugin`, `CompanyBusinessUnitToCompanyUserAttachCustomerFormExpanderPlugin`,
 `CompanyToCompanyUnitAddressEditFormExpanderPlugin`, `CompanyToCompanyRoleCreateFormExpanderPlugin`, `CompanyBusinessUnitToCustomerBusinessUnitAttachFormExpanderPlugin`) were set up correctly, you need to open the corresponding form and check that input boxes with search and suggestions are used for the company and business unit fields instead of default select dropdowns.
+
+Also make sure that field labels (like "Company") and hints (like "Select company") have been translated correctly for the dropdowns.
 
 {% endinfo_block %}
 

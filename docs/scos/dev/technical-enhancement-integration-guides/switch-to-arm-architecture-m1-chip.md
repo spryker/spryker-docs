@@ -8,7 +8,7 @@ This document describes how to switch Docker based projects to ARM architecture.
 
 To switch to ARM architecture, follow the steps:
 
-## 1. Update Sass
+## Update Sass
 
 Replace x86 based Sass with an ARM based one:
 
@@ -65,7 +65,7 @@ npm run yves
 npm run zed
 ```
 
-## 2. Update RabbitMQ and Jenkins services
+## Update RabbitMQ and Jenkins services
 
 In the deploy file, update RabbitMQ and Jenkins to [ARM supporting versions](https://github.com/spryker/docker-sdk#supported-services). Example:
 
@@ -92,10 +92,10 @@ services:
 ```
 
 
-## 3. Enable Jenkins CSRF protection
+## Enable Jenkins CSRF protection
 
 
-Add the following to the deploy file:
+1. In the deploy file, enable the usage of the CSRF variable:
 
 ```yaml
 ...
@@ -104,6 +104,20 @@ services:
     csrf-protection-enabled: true
 ...
 ```    
+
+2. In the config file, enable Jenkins CSRF protection by defining the CSRF variable. Example:
+
+```php
+...
+$config[SchedulerJenkinsConstants::JENKINS_CONFIGURATION] = [
+    SchedulerConfig::SCHEDULER_JENKINS => [
+        SchedulerJenkinsConfig::SCHEDULER_JENKINS_CSRF_ENABLED => (bool)getenv('SPRYKER_JENKINS_CSRF_PROTECTION_ENABLED'),
+    ],
+];
+...
+```
+
+
 
 
 Now your project supports ARM architecture and you can run it on M1 based Apple devices.

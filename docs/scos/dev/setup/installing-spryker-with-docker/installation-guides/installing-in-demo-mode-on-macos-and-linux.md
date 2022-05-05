@@ -22,15 +22,13 @@ redirect_from:
 
 This document describes the procedure of installing Spryker in [Demo Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) on MacOS and Linux.
 
-## Installing Docker prerequisites on MacOS and Linux
+## Install Docker prerequisites on MacOS and Linux
 
 To install Docker prerequisites, follow one of the guides:
 * [Installing Docker prerequisites on MacOS](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html)
 * [Installing Docker prerequisites on Linux](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
 
-## Installing Spryker in Demo mode on MacOS and Linux
-
-Follow the steps to install Spryker in Demo Mode:
+## 1. Clone a Demo Shop and the Docker SDK
 
 1. Open a terminal.
 2. Create a new folder and navigate into it.
@@ -65,6 +63,14 @@ Make sure that you are in the correct folder by running the `pwd` command.
 ```shell
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
 ```
+
+
+## 2. Apple M1 devices: Switch the project to ARM architecture
+
+
+
+
+
 
 
 6. Bootstrap the local Docker setup for demo:

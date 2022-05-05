@@ -148,7 +148,7 @@ entries:
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-approval-process-feature-walkthrough.html
             include_versions:
             - "202204.0"
-      
+
       - title: Feature integration guides
         nested:
           - title: ACL feature integration
@@ -195,6 +195,11 @@ entries:
 
           - title: Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
+
+          - title: Marketplace Order Management + Customer Account Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-customer-account-management-feature-integration.html
+            include_versions:
+            - "202108.0"
 
           - title: Marketplace Order Management + Order Threshold feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-order-threshold-feature-integration.html
@@ -389,7 +394,7 @@ entries:
 
               - title: Retrieving product offer prices
                 url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offer-prices.html
-          
+
           - title: Shopping lists
             include_versions:
             - "202204.0"
@@ -403,7 +408,7 @@ entries:
                 url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-list-items.html
                 include_versions:
                 - "202204.0"
-              
+
           - title: Wishlists
             nested:
               - title: Managing wishlists
@@ -471,7 +476,7 @@ entries:
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-approval-status-default.csv.html
             include_versions:
             - "202204.0"
-            
+
           - title: "File details: merchant-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-offer.csv.html
 

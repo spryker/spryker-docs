@@ -15,6 +15,7 @@ redirect_from:
 ---
 
 ## Description
+
 You can encounter error messages like this one:
 
 ```bash

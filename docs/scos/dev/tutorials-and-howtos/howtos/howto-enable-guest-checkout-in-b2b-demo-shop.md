@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Enable guest checkout in B2B Demo Shop"
+title: "HowTo - Enable guest checkout in B2B Demo Shop"
 description: Learn how to enable guest checkout in B2B Demo Shop.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -16,13 +16,13 @@ redirect_from:
 
 As B2B environments usually implement complex business logics, in the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html), guest users cannot check out by default. In some cases, you might need guest checkout to be enabled.
 
-{% info_block infoBox "Examplary implementation" %}
+{% info_block infoBox "Exemplary implementation" %}
 
-The implementation described in this document is examplary and may require additional development on the project level.
+The implementation described in this document is exemplary and may require additional development on the project level.
 
 {% endinfo_block %}
 
-To enable guest checkout, follow these steps:
+To enable guest checkout:
 
 1. In the `is_restricted` column of the `spy_unauthenticated_customer_access` table, set `0` for `add-to-cart` and `order-place-submit` content types.
 
@@ -35,10 +35,15 @@ To enable guest checkout, follow these steps:
 
 3. In `​ Pyz\Client\Permission\PermissionDependencyProvider.php`, remove or comment `​PlaceOrderWithAmountUpToPermissionPlugin()`​.
 
-4. DevVM-based instace: to sync code changes, run `vagrant halt && vagrant up`.
+4. DevVM-based instance: to sync code changes, run: 
 
-5. In CheckoutPage module, create `src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig`.
-<details><summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig</summary>
+```bash
+vagrant halt && vagrant up
+```
+
+5. In `CheckoutPage` module, create `src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig`.
+
+<details open><summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}
@@ -139,10 +144,10 @@ To enable guest checkout, follow these steps:
     </div>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
-
 </details>
 
 6. In `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.twig` adjust the form definition by replacing `enable: data.isPlaceableOrder and can('WriteSharedCartPermissionPlugin', data.cart.idQuote),` with the following:
+
 ```twig
 enable: data.isPlaceableOrder
 and can('SeeOrderPlaceSubmitPermissionPlugin')

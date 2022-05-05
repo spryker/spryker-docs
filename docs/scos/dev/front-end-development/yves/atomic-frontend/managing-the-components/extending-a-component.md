@@ -27,16 +27,18 @@ With the idea of [atomic design](/docs/scos/dev/front-end-development/yves/atomi
 
 Let us review the process of extending a component on the example of **side-drawer**. This component appears in Spryker Shop only on mobile screens. You can access it by clicking the menu button.
 
-![Open side drawer](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/open-side-drawer.png) 
+![Open side drawer](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/open-side-drawer.png)
 
 The following tutorial shows how to create a new component based on the default side drawer. The new side drawer will show an alert whenever it is present on a page. Also, the component outlook will be different.
 
-## 1. Create Component Folder
+## 1. Create component folder
+
 The first thing we need to do is create a folder for the new component. Since we are going to implement it on the project level, we need to create a folder in `src/Pyz/Yves/ShopUi`. The side drawer is an organism, so let us create the following folder: `src/Pyz/Yves/ShopUi/Theme/default/components/**organisms**/new-existing-component-side-drawer`.
 
 We are going to add new behavior, so the new component will have Javascript code. This requires an entry point for Webpack. To be able to add it, create an empty file named `index.ts` in the component folder.
 
-## 2. Override Component on the Twig Level
+## 2. Override component on the twig level
+
 No, we need to specify a name for the new component. Also, the component implements its own behavior, so we also need a to use a custom HTML tag to render it. We'll use the component name as the tag name. Let us create file `new-existing-component-side-drawer.twig` and add the **config** property as follows:
 
 ```twig
@@ -67,10 +69,11 @@ Now, let us customize the template of the source component. The original templa
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-## 3. Change Styles
+## 3. Change styles
+
 Apart from changing the icon, we are going to use different colors. This can be done via styles.
 
-First of all, we need to inherit the styles of the source component (_side-drawer_). It has a mixin called **shop-ui-side-drawer**. Since it is a core component shipped with Spryker Shop Suite, this mixin is shared. Therefore, it can be accessed everywhere in Shop UI. To inherit the styles, we need to include the mixin in the _SCSS_ file of our new component. To render the block, elements and modifiers with the class name of the new component, we need to pass its class name to the mxin.
+First of all, we need to inherit the styles of the source component (_side-drawer_). It has a mixin called **shop-ui-side-drawer**. Since it is a core component shipped with Spryker Shop Suite, this mixin is shared. Therefore, it can be accessed everywhere in Shop UI. To inherit the styles, we need to include the mixin in the _SCSS_ file of our new component. To render the block, elements and modifiers with the class name of the new component, we need to pass its class name to the mixin.
 
 Let us create file `new-existing-component-side-drawer.scss`, include the original mixin of the _side-drawer_ component, and pass the class name of the new component we are creating:
 
@@ -93,17 +96,20 @@ We will change the main and overlay colors:
 ```
 
 {% info_block warningBox %}
+
 You can find settings for the respective colors in configuration files. They are located in `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles/settings`.
+
 {% endinfo_block %}
 
 After defining the styles, let us make them visible to Webpack. Open the `index.ts` file and add the following content:
 
-```Javascript
+```js
 // Import component style
 import './new-existing-component-side-drawer.scss';
 ```
 
-## 4. Modify Behavior
+## 4. Modify behavior
+
 Finally, let us define what the component does. Create the `new-existing-component-side-drawer.ts`file with the following content:
 
 ```js
@@ -123,7 +129,9 @@ export default class NewSideDrawer extends SideDrawer {
 In the above example, first, we import class **SideDrawer** from the global level. After that, we export a new class, `NewSideDrawer`. Since it extends the class of the default side drawer component, it also inherits its behavior.
 
 {% info_block warningBox %}
-If you want to define the component behavior from scratch rather than importing the behavior of a default component, you need to extend the base Component class instead
+
+If you want to define the component behavior from scratch rather than importing the behavior of a default component, you need to extend the base Component class instead.
+
 {% endinfo_block %}
 
 ```js
@@ -150,7 +158,8 @@ export default register(
 
 When importing the component, the **eager** keyword is used, as the component is used on every page, and we want it to be always available and loaded.
 
-## 5. Build Frontend
+## 5. Build frontend
+
 Now, let us build the frontend. Run the following command in the console: `npm run yves`.
 
 As soon as the frontend has been compiled, replace the original side drawer with the new implementation. To do this:

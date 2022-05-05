@@ -1,5 +1,5 @@
 ---
-title: File details- cms_block_category_postion.csv
+title: File details - cms_block_category_position.csv
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-cms-block-category-postioncsv
@@ -11,26 +11,33 @@ redirect_from:
   - /docs/en/file-details-cms-block-category-postioncsv
 ---
 
-This article contains content of the **cms_block_category_postion.csv** file to configure CMS Block Category Position information on your Spryker Demo Shop.
+This document describes the `cms_block_category_position.csv` file to configure CMS Block Category Position information in your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
-These are the header fields to be included in the .csv file:
+To import the file, run:
 
-| FIELD NAME | MANDATORY | TYPE | OTHER REQUIREMENTS/COMMENTS | DESCRIPTION |
+```bash
+data:import:cms-block-category-position
+```
+
+## Import file parameters
+
+The file should have the following parameters:
+
+| PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| **cms_block_category_position_name** | Yes | String | N/A* |Name of the CMS block category position.  |
+| cms_block_category_position_name | &check; | String |  |Name of the CMS block category position.  |
 
-*N/A: Not applicable.
 
-## Dependencies
+## Import file dependencies
 
 This file has no dependencies.
 
-## Template File & Content Example
-A template and an example of the *cms_block_category_postion.csv*  file can be downloaded here:
+## Import template file and content example
+
+Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |
 | --- | --- |
-| [cms_block_category_postion.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_block_category_position_template.csv) | CMS Block Category Position.csv template file (empty content, contains headers only). |
-| [cms_block_category_postion.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_block_category_position.csv) | CMS Block Category Position.csv file containing a Demo Shop data sample. |
+| [cms_block_category_position.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_block_category_position_template.csv) | Exemplary import file with headers only. |
+| [cms_block_category_position.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_block_category_position.csv) | Exemplary import file with Demo Shop data. |
 

@@ -31,6 +31,7 @@ For Docker installation instructions, see one of the following:
 To set up a local project with the Docker SDK:
 
 1. Create the project directory and clone the source:
+
 ```bash
 mkdir {project-name} && cd {project-name}
 git clone https://github.com/{project-url} ./
@@ -43,7 +44,7 @@ git clone git@github.com:spryker/docker-sdk.git docker
 ```
 
 
-## Setting up a developer environemnt
+## Setting up a developer environment
 
 To set up a developer environment:
 
@@ -63,6 +64,7 @@ docker/sdk up --build --assets --data
 ```
 
 Depending on your requirements, you can select any combination of the following `up` command attributes. To fetch all the changes from the branch you switch to, we recommend running the command with all of them:
+
 - `--build` - update composer, generate transfer objects, etc.
 - `--assets` - build assets
 - `--data` - fetch new demo data
@@ -88,6 +90,7 @@ docker/sdk up --build --assets --data
 ```
 
 Depending on your requirements, you can select any combination of the following `up` command attributes. To fetch all the changes from the branch you switch to, we recommend running the command with all of them:
+
 - `--build` - update composer, generate transfer objects, etc.
 - `--assets` - build assets
 - `--data` - get new demo data

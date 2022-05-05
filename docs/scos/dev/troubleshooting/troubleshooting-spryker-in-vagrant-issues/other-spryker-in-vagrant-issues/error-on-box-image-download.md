@@ -15,9 +15,11 @@ redirect_from:
 ---
 
 ## Description
+
 When downloading Spryker VM box image file, an error occurs.
 
 ## Solution
+
 Try running Vagrant with debug to see potential errors: `vagrant up --debug`.
 
 Also, you can go to [Spryker VM Releases](https://github.com/spryker/devvm/releases/) page and download the box manually. After finishing the box download, you need to run the following:

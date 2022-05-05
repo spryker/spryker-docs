@@ -65,6 +65,7 @@ npm run yves
 npm run zed
 ```
 
+
 ## Update RabbitMQ and Jenkins services
 
 In the deploy file, update RabbitMQ and Jenkins to [ARM supporting versions](https://github.com/spryker/docker-sdk#supported-services). Example:
@@ -105,7 +106,7 @@ services:
 ...
 ```    
 
-2. In the config file, enable Jenkins CSRF protection by defining the CSRF variable. Example:
+2. In the config file, enable Jenkins CSRF protection by defining the CSRF variable:
 
 ```php
 ...

@@ -17,8 +17,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE                                                                                                                                                 |
 | --------- | ------ |-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Merchant Custom Prices | 202108.0 | [Merchant Custom Prices feature integration](/docs/scos/dev/feature-integration-guides/202108.0/merchant-custom-prices-feature-integration.html) |
-| Marketplace Product | 202108.0 | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/202108.0/merchant-portal-marketplace-product-feature-integration.html) |
+| Merchant Custom Prices | {{page.version}} | [Merchant Custom Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-custom-prices-feature-integration.html) |
+| Marketplace Product | {{page.version}} | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 

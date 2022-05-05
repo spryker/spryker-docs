@@ -432,7 +432,7 @@ entries:
           - title: Merchant Portal - Marketplace Customer Specific Prices feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-customer-specific-prices-feature-integration.html
             include_versions:
-            - "202108.0"
+            - "202200.0"
 
           - title: Glue API
             nested:

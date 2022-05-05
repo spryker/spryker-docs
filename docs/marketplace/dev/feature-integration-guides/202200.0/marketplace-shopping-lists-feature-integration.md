@@ -39,42 +39,8 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Add Yves translations
+### 2) Set up database schema and transfer objects
 
-Append glossary according to your configuration:
-
-**src/data/import/glossary.csv**
-
-```yaml
-shopping_list.pre.check.product_offer,Product Offer is not found.,en_US
-shopping_list.pre.check.product_offer,Produktangebot wurde nicht gefunden.,de_DE
-shopping_list.pre.check.product_offer.approved,Product Offer is not approved.,en_US
-shopping_list.pre.check.product_offer.approved,Product Offer ist nicht genehmigt.,de_DE
-shopping_list.pre.check.product_offer.is_active,Product Offer is not active.,en_US
-shopping_list.pre.check.product_offer.is_active,Produktangebot ist inaktiv.,de_DE
-shopping_list.pre.check.product_offer.store_invalid,Product Offer is not equal to the current Store.,en_US
-shopping_list.pre.check.product_offer.store_invalid,Das Angebot gleicht nicht dem aktuellen Shop.,de_DE
-shopping_list.pre.check.product_merchant_inactive,Merchant is inactive.,en_US
-shopping_list.pre.check.product_merchant_inactive,Der Händler ist nicht aktiv.,de_DE
-shopping_list.pre.check.product_merchant_not_approved,Merchant is not approved.,en_US
-shopping_list.pre.check.product_merchant_not_approved,Der Händler ist nicht bestätigt.,de_DE
-shopping_list.pre.check.product.store_invalid,Product is not equal to the current Store.,en_US
-shopping_list.pre.check.product.store_invalid,Das Produkt gleicht nicht dem aktuellen Shop.,de_DE
-```
-
-Import data:
-
-```bash
-console data:import glossary
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that in the database, the configured data is added to the spy_glossary table.
-
-{% endinfo_block %}
-
-### 3) Generate transfers and migrations
 ```bash
 console transfer:generate
 ```
@@ -120,9 +86,252 @@ Ensure that the following changes have occurred in the database:
 
 {% endinfo_block %}
 
-### 4) Setup desired behaviour 
+### 3) Add translations
 
-#### 1. Set up mappers for data
+Append glossary according to your configuration:
+
+**src/data/import/glossary.csv**
+
+```yaml
+shopping_list.pre.check.product_offer,Product Offer is not found.,en_US
+shopping_list.pre.check.product_offer,Produktangebot wurde nicht gefunden.,de_DE
+shopping_list.pre.check.product_offer.approved,Product Offer is not approved.,en_US
+shopping_list.pre.check.product_offer.approved,Product Offer ist nicht genehmigt.,de_DE
+shopping_list.pre.check.product_offer.is_active,Product Offer is not active.,en_US
+shopping_list.pre.check.product_offer.is_active,Produktangebot ist inaktiv.,de_DE
+shopping_list.pre.check.product_offer.store_invalid,Product Offer is not equal to the current Store.,en_US
+shopping_list.pre.check.product_offer.store_invalid,Das Angebot gleicht nicht dem aktuellen Shop.,de_DE
+shopping_list.pre.check.product_merchant_inactive,Merchant is inactive.,en_US
+shopping_list.pre.check.product_merchant_inactive,Der Händler ist nicht aktiv.,de_DE
+shopping_list.pre.check.product_merchant_not_approved,Merchant is not approved.,en_US
+shopping_list.pre.check.product_merchant_not_approved,Der Händler ist nicht bestätigt.,de_DE
+shopping_list.pre.check.product.store_invalid,Product is not equal to the current Store.,en_US
+shopping_list.pre.check.product.store_invalid,Das Produkt gleicht nicht dem aktuellen Shop.,de_DE
+```
+
+Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that in the database, the configured data is added to the spy_glossary table.
+
+{% endinfo_block %}
+
+### 4) Configure export to Redis
+
+Make changes to PublisherDependencyProvider
+
+**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+```php
+<?php
+namespace Pyz\Zed\Publisher;
+
+use Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Merchant\MerchantProductOfferWritePublisherPlugin;
+
+class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
+{
+    /**
+     * @return array
+     */
+    protected function getPublisherPlugins(): array
+    {
+        return [        
+            new MerchantProductOfferWritePublisherPlugin(),
+        ];
+    }
+}
+```
+
+Make changes to ProductStorageDependencyProvider
+
+**src/Pyz/Zed/ProductStorage/ProductStorageDependencyProvider.php**
+```php
+<?php
+namespace Pyz\Zed\ProductStorage;
+
+use Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage\MerchantProductConcreteStorageCollectionExpanderPlugin;
+
+class ProductStorageDependencyProvider extends SprykerProductStorageDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\ProductStorageExtension\Dependency\Plugin\ProductConcreteStorageCollectionExpanderPluginInterface>
+     */
+    protected function getProductConcreteStorageCollectionExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductConcreteStorageCollectionExpanderPlugin(),
+        ];
+    }
+}
+```
+
+### 5) Import data
+
+To import data:
+Prepare import data according to your requirements using demo data
+
+**data/import/common/common/marketplace/product_offer_shopping_list_item.csv**
+```csv
+shopping_list_item_key,product_offer_reference
+shopping-list-item-key-38,offer2
+shopping-list-item-key-39,offer402
+shopping-list-item-key-40,offer91
+shopping-list-item-key-41,offer404
+shopping-list-item-key-42,offer9
+shopping-list-item-key-43,offer51
+```
+
+#### Set up configuration 
+Add importer configuration
+
+**data/import/local/full_EU.yml **
+```csv
+version: 0
+
+actions:
+    - data_entity: product-offer-shopping-list-item
+      source: data/import/common/common/marketplace/product_offer_shopping_list_item.csv
+```
+Adjust Data Import configuration
+
+**src/Pyz/Zed/DataImport/DataImportConfig.php**
+```php
+<?php
+
+namespace Pyz\Zed\DataImport;
+
+use Spryker\Zed\ProductOfferShoppingListDataImport\ProductOfferShoppingListDataImportConfig;
+
+class DataImportConfig extends SprykerDataImportConfig
+{
+    /**
+     * @return array<string>
+     */
+    public function getFullImportTypes(): array
+    {
+        return [            
+            ProductOfferShoppingListDataImportConfig::IMPORT_TYPE_PRODUCT_OFFER_SHOPPING_LIST_ITEM,
+        ];
+    }
+}
+```
+#### Enable required data import command
+
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+```php
+
+<?php
+namespace Pyz\Zed\Console;
+
+use Spryker\Zed\ProductOfferShoppingListDataImport\ProductOfferShoppingListDataImportConfig;
+
+class c extends SprykerConsoleDependencyProvider
+{
+    /**
+    * @var string
+    */
+    protected const COMMAND_SEPARATOR = ':';
+        
+    /**
+    * @param \Spryker\Zed\Kernel\Container $container
+    *
+    * @return array<\Symfony\Component\Console\Command\Command>
+    */
+    protected function getConsoleCommands(Container $container): array
+    {
+        $commands = [                
+                new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ProductOfferShoppingListDataImportConfig::IMPORT_TYPE_PRODUCT_OFFER_SHOPPING_LIST_ITEM),
+            ];
+            
+        return $commands;
+    }
+}
+```
+
+#### Set up behavior
+
+**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+```php
+<?php
+
+namespace Pyz\Zed\DataImport;
+
+use Spryker\Zed\ProductOfferShoppingListDataImport\Communication\Plugin\DataImport\ProductOfferShoppingListItemDataImportPlugin;
+
+class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
+{
+    protected function getDataImporterPlugins(): array
+    {
+        return [            
+            new ProductOfferShoppingListItemDataImportPlugin(),
+        ];
+    }
+}
+```
+
+#### Run import
+```bash
+console data:import product-offer-shopping-list-item
+```
+
+{% info_block warningBox "Verification" %}
+Make sure that the imported data is added to the spy_shopping_list_item table.
+{% endinfo_block %}
+
+### Set up widgets
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+|-|-|-|-|
+| ShoppingListMerchantWidget | Enables merchant shopping list widget | None | SprykerShop\Yves\MerchantWidget\Widget |
+| ShoppingListProductOfferWidget | Enables product offer in shopping list widget | None | SprykerShop\Yves\ProductOfferWidget\Widget |
+| ProductOfferShoppingListWidget | Enables shopping list for product offer widget | None | SprykerShop\Yves\ProductOfferShoppingListWidget\Widget |
+
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
+
+```php
+
+<?php
+
+namespace Pyz\Yves\ShopApplication;
+
+use SprykerShop\Yves\MerchantWidget\Widget\ShoppingListMerchantWidget;
+use SprykerShop\Yves\ProductOfferShoppingListWidget\Widget\ProductOfferShoppingListWidget;
+use SprykerShop\Yves\ProductOfferWidget\Widget\ShoppingListProductOfferWidget;
+
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
+{
+    /**
+     * @return array<string>
+     */
+    protected function getGlobalWidgets(): array
+    {
+        return [            
+            ShoppingListMerchantWidget::class,
+            ShoppingListProductOfferWidget::class,
+            ProductOfferShoppingListWidget::class,
+        ];
+    }
+}
+```
+{% info_block warningBox "Verification" %}
+
+Make sure that the following widgets were registered:
+
+| MODULE | TEST                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ----------------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ShoppingListMerchantWidget       | Go to product page. Add concrete product to shopping list. Login to admin page. Find merchant that owns concrete product and change it's state. Refresh shopping list page - item will change it's status to 'Currently not available'                                                                                                                                                                           |
+| ShoppingListProductOfferWidget       | Go to product page, containing product offers. Select product offer, e.g. `offer96`. Then open another tab and login to merchant portal with credentials of merchant who owns previousely selected product offer, in our case `michele@sony-experts.com`. Find product offer by SKU `offer96`. Change offer availability. Refresh shopping list page - item will change it's status to 'Currently not available' |                                                                                                                                                   |
+| ProductOfferShoppingListWidget       | Go to product page and verify that product offer's merchants are dicsplayed and items are added to shopping list with correct merchant names.                                                                                                                                                                                                                                                                    |
+
+{% endinfo_block %}
+
+### Set up behavior 
 
 Enable the following behaviors in Client by registering the plugins:
 
@@ -167,8 +376,19 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
     }
 }
 ```
+{% info_block warningBox "Verification" %}
 
-#### 2. Enable the following behaviors in Zed by registering the plugins:
+Make sure that the following widgets were registered:
+
+| MODULE | TEST                                                                                                                                                               |
+| ----------------- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ProductOfferShoppingListItemMapperPlugin       | Go to product detail page and select product offer. Add product offer to shopping list. Open shopping list and verify that correct merchant and price is stored    |
+| ProductOfferShoppingListItemToItemMapperPlugin       | Go to product detail page and add product offer to shopping list. Open shopping list and add item to cart. Make sure that correct offer and price is added to cart |
+| MerchantShoppingListItemToItemMapperPlugin       | Go to product detail page and add product to shopping list. Open shopping list and add item to cart. Make sure that correct merchant and price is added to cart    |
+
+{% endinfo_block %}
+
+Enable the following behaviors in Zed by registering the plugins:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
@@ -247,203 +467,23 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
     }
 }
 ```
-
-#### 3. Enable related widgets
-
-Enable the following behaviors by registering the plugins:
-
-| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
-|-|-|-|-|
-| ShoppingListMerchantWidget | Enables merchant shopping list widget | None | SprykerShop\Yves\MerchantWidget\Widget |
-| ShoppingListProductOfferWidget | Enables product offer in shopping list widget | None | SprykerShop\Yves\ProductOfferWidget\Widget |
-| ProductOfferShoppingListWidget | Enables shopping list for product offer widget | None | SprykerShop\Yves\ProductOfferShoppingListWidget\Widget |
-
-**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
-
-```php
-
-<?php
-
-namespace Pyz\Yves\ShopApplication;
-
-use SprykerShop\Yves\MerchantWidget\Widget\ShoppingListMerchantWidget;
-use SprykerShop\Yves\ProductOfferShoppingListWidget\Widget\ProductOfferShoppingListWidget;
-use SprykerShop\Yves\ProductOfferWidget\Widget\ShoppingListProductOfferWidget;
-
-class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
-{
-    /**
-     * @return array<string>
-     */
-    protected function getGlobalWidgets(): array
-    {
-        return [            
-            ShoppingListMerchantWidget::class,
-            ShoppingListProductOfferWidget::class,
-            ProductOfferShoppingListWidget::class,
-        ];
-    }
-}
-```
-
-### 5) Import data
-
-To import data:
-#### 1. Prepare import data according to your requirements using demo data
-
-**data/import/common/common/marketplace/product_offer_shopping_list_item.csv**
-```csv
-shopping_list_item_key,product_offer_reference
-shopping-list-item-key-38,offer2
-shopping-list-item-key-39,offer402
-shopping-list-item-key-40,offer91
-shopping-list-item-key-41,offer404
-shopping-list-item-key-42,offer9
-shopping-list-item-key-43,offer51
-```
-
-#### 2. Add importer configuration
-**data/import/local/full_EU.yml **
-```csv
-version: 0
-
-actions:
-    - data_entity: product-offer-shopping-list-item
-      source: data/import/common/common/marketplace/product_offer_shopping_list_item.csv
-```
-#### 3. Adjust Data Import configuration
-**src/Pyz/Zed/DataImport/DataImportConfig.php**
-```php
-<?php
-
-namespace Pyz\Zed\DataImport;
-
-use Spryker\Zed\ProductOfferShoppingListDataImport\ProductOfferShoppingListDataImportConfig;
-
-class DataImportConfig extends SprykerDataImportConfig
-{
-    /**
-     * @return array<string>
-     */
-    public function getFullImportTypes(): array
-    {
-        return [            
-            ProductOfferShoppingListDataImportConfig::IMPORT_TYPE_PRODUCT_OFFER_SHOPPING_LIST_ITEM,
-        ];
-    }
-}
-```
-#### 4. Enable required data import command
-
-**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
-```php
-
-<?php
-namespace Pyz\Zed\Console;
-
-use Spryker\Zed\ProductOfferShoppingListDataImport\ProductOfferShoppingListDataImportConfig;
-
-class c extends SprykerConsoleDependencyProvider
-{
-    /**
-    * @var string
-    */
-    protected const COMMAND_SEPARATOR = ':';
-        
-    /**
-    * @param \Spryker\Zed\Kernel\Container $container
-    *
-    * @return array<\Symfony\Component\Console\Command\Command>
-    */
-    protected function getConsoleCommands(Container $container): array
-    {
-        $commands = [                
-                new DataImportConsole(DataImportConsole::DEFAULT_NAME . static::COMMAND_SEPARATOR . ProductOfferShoppingListDataImportConfig::IMPORT_TYPE_PRODUCT_OFFER_SHOPPING_LIST_ITEM),
-            ];
-            
-        return $commands;
-    }
-}
-```
-
-#### 5. Register required Data Import plugin
-
-**src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
-```php
-<?php
-
-namespace Pyz\Zed\DataImport;
-
-use Spryker\Zed\ProductOfferShoppingListDataImport\Communication\Plugin\DataImport\ProductOfferShoppingListItemDataImportPlugin;
-
-class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
-{
-    protected function getDataImporterPlugins(): array
-    {
-        return [            
-            new ProductOfferShoppingListItemDataImportPlugin(),
-        ];
-    }
-}
-```
-
-#### 6. 
-```bash
-console data:import product-offer-shopping-list-item
-```
-
 {% info_block warningBox "Verification" %}
-Make sure that the imported data is added to the spy_shopping_list_item table.
+
+Make sure that the following plugins were registered:
+
+| MODULE | TEST                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ----------------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ProductOfferShoppingListAddItemPreCheckPlugin       | Go to product page, containing product offers. Select product offer, e.g. `offer96`. Then open another tab and login to merchant portal with credentials of merchant who owns previousely selected product offer, in our case `michele@sony-experts.com`. Find product offer by SKU `offer96`. By changing product offer with futher pressing "Add to shopping list" on PDP tab check that product offer validation is enabled. The following cases may be checked: 1. Offer is not found 2. Product Offer does not belong to current store 3. Product offer is not active 4. Product offer is not approved |
+| ShoppingListItemProductConcreteHasValidStoreAddItemPreCheckPlugin       | Go to product page. Select concrete product. Then open another tab and login to backoffice. Find concrete product selected on PDP by concrete SKU. Uncheck current store option on product edit page. Press "Add to shopping list" on PDP tab to check that product store validation is enabled. An error message will appear.                                                                                                                                                                                                                                                                              |
+| MerchantProductOfferAddItemPreCheckPlugin       | Go to product page, containing product offers. Select product offer, e.g. `offer96`. Then open another tab and login to backoffice and find merchant who owns previousely selected product offer, in our case `michele@sony-experts.com`. By changing product offer with futher pressing "Add to shopping list" on PDP tab check that product offer merchant validation is enabled. The following cases may be checked: 1. Product offer merchant is not active 2. Product offer merchant is not approved.                                                                                                  |
+| MerchantProductAddItemPreCheckPlugin       | Go to product page. Select concrete product. Then open another tab and login to admin page. Find merchant that owns concrete product and change it's state. Press "Add to shopping list" on PDP tab to check that product merchant status validation is enabled. The following cases may be checked: 1. Product merchant is not active 2. Product merchant is not approved.                                                                                                                                                                                                                                 |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| MerchantProductOfferShoppingListItemCollectionExpanderPlugin       | Go to product page, select merchant product offer and add it to shopping list. Open shopping list and make sure "Sold By" field shows the merchant that owns corresponding product offer.                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| MerchantProductShoppingListItemCollectionExpanderPlugin       | Go to product page, select merchant product and add it to shopping list. Open shopping list and make sure "Sold By" field shows the merchant that owns the product.                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| ProductOfferItemToShoppingListItemMapperPlugin       | Go to product page, select merchant product offer and add it to cart. Open cart and press "Add to shopping list". Make sure that Shopping list contains selected product offer with correct merchant.                                                                                                                                                                                                                                                                                                                                                                                                       |
+| MerchantProductShoppingListItemBulkPostSavePlugin       | Go to product detail page and add concrete to shopping list. Open shopping list and add item to cart. Make sure that correct product and merchant is transfered from shopping list to cart.                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| MerchantProductOfferShoppingListItemBulkPostSavePlugin       | Go to product detail page and add concrete to shopping list. Open shopping list and add item to cart. Make sure that correct product and merchant is transfered from shopping list to cart.                                                                                                                                                                                                                                                                                                                                                                                                                 |
+
 {% endinfo_block %}
-
-### 6) Add required functionality to Product storage
-
-#### 1. Make changes to PublisherDependencyProvider 
-
-**src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
-```php
-<?php
-namespace Pyz\Zed\Publisher;
-
-use Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Merchant\MerchantProductOfferWritePublisherPlugin;
-
-class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
-{
-    /**
-     * @return array
-     */
-    protected function getPublisherPlugins(): array
-    {
-        return [        
-            new MerchantProductOfferWritePublisherPlugin(),
-        ];
-    }
-}
-```
-
-#### 2. Make changes to ProductStorageDependencyProvider 
-
-**src/Pyz/Zed/ProductStorage/ProductStorageDependencyProvider.php**
-```php
-<?php
-namespace Pyz\Zed\ProductStorage;
-
-use Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage\MerchantProductConcreteStorageCollectionExpanderPlugin;
-
-class ProductStorageDependencyProvider extends SprykerProductStorageDependencyProvider
-{
-    /**
-     * @return array<\Spryker\Zed\ProductStorageExtension\Dependency\Plugin\ProductConcreteStorageCollectionExpanderPluginInterface>
-     */
-    protected function getProductConcreteStorageCollectionExpanderPlugins(): array
-    {
-        return [
-            new MerchantProductConcreteStorageCollectionExpanderPlugin(),
-        ];
-    }
-}
-```
-
 ## Related features
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |

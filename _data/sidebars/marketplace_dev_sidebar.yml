@@ -72,6 +72,11 @@ entries:
             include_versions:
             - "202108.0"
 
+          - title: Marketplace Merchant Portal Customer Specific Prices
+              url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-customer-price-feature-walkthrough.md
+              include_versions:
+                - "202205.0"
+
           - title: Marketplace Order Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html
             include_versions:

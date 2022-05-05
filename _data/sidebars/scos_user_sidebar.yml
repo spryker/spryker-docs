@@ -998,12 +998,42 @@ entries:
             - "202009.0"
     - title: Customers
       nested:
+      - title: Customers
+        include_versions:
+        - "202108.0"
+        nested:
+        - title: Create customers
+          url: /docs/scos/user/back-office-user-guides/customer/customers/create-customers.html
+        - title: Edit customers
+          url: /docs/scos/user/back-office-user-guides/customer/customers/edit-customers.html
+        - title: View customers
+          url: /docs/scos/user/back-office-user-guides/customer/customers/view-customers.html
+        - title: Add notes to customers
+          url: /docs/scos/user/back-office-user-guides/customer/customers/add-notes-to-customers.html
+        - title: Add customer addresses
+          url: /docs/scos/user/back-office-user-guides/customer/customers/add-customer-addresses.html
+        - title: Edit customer addresses
+          url: /docs/scos/user/back-office-user-guides/customer/customers/edit-customer-addresses.html
       - title: Customer, customer access, customer groups
         nested:
         - title: Managing customers
           url: /docs/scos/user/back-office-user-guides/customer/customer-customer-access-customer-groups/managing-customers.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
         - title: Managing customer addresses
           url: /docs/scos/user/back-office-user-guides/customer/customer-customer-access-customer-groups/managing-customer-addresses.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
         - title: Managing customer access
           url: /docs/scos/user/back-office-user-guides/customer/customer-customer-access-customer-groups/managing-customer-access.html
         - title: Managing customer groups

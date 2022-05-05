@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Create and register a mail provider"
+title: HowTo - Create and register a mail provider
 description: Use the guide to create and register a mail provider in the Mail module.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,19 +22,20 @@ redirect_from:
   - /v2/docs/en/ht-create-register-provider-plugin
   - /v1/docs/ht-create-register-provider-plugin
   - /v1/docs/en/ht-create-register-provider-plugin
+related:
+  - title: HowTo - Create and register a MailTypePlugin
+    link: docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html
+  - title: Tutorial - Sending an email
+    link: docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email.html
 ---
-
-{% info_block infoBox %}
 
 This HowTo describes how to create and register a mail provider you want to use.
 
-{% endinfo_block %}
+The mail provider is defined in the provider class. Since each provider behaves differently, the provider class will also be different.
 
-The mail provider is defined in the provider class. As each provider behaves differently, the provider class will also look different as well.
+1. Create a class which implements `MailProviderPluginInterface`. After that, register your provider in the `Mail` module.
 
-Create a class which implements `MailProviderPluginInterface`. After that, register your provider in the `Mail` module.
-
-To register a provider, add it to `MailProviderCollection` by adding the provider to `MailDependencyProvider`:
+2. To register a provider, add it to `MailProviderCollection` by adding the provider to `MailDependencyProvider`:
 
 ```php
 <?php
@@ -61,8 +62,9 @@ By using `$container->extend()`, you get the `MailProviderCollectionAddInterface
 
 As you can see in the preceding example, the provider is registered to all MailTypes by using `MailConfig::MAIL_TYPE_ALL`. If you want the provider to only handle a specific `MailType`, use the `MailType` constant from your `MailTypePlugin`—for example, `CustomerRegistrationMailTypePlugin::MAIL_TYPE`. For information about how to create and register a `MailTypePlugin`, see [HowTo: Creating and registering a MailTypePlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html)
 
-## Using more than one provider
-To send emails through different providers, register more than one provider to the `Mail` module. You can even create a scenario when all marketing emails go through provider A, and all others—through provider B. In *Register the mail provider* you already made use of this technique to register one provider to all types. The following example demonstrates how to wire up more than one provider:
+### Use more than one provider
+
+To send emails through different providers, register more than one provider to the `Mail` module. You can even create a scenario when all marketing emails go through provider A, and all others - through provider B. In *Register the Mail Provider* you already made use of this technique to register one provider to all types. The following example demonstrates how to wire up more than one provider:
 
 ```php
 <?php
@@ -87,11 +89,4 @@ public function provideBusinessLayerDependencies(Container $container)
 ...
 ```
 
-If a `MailType` can be handled by more than one provider, the email is sent by both of them.
-
-<!--
-See also:
-
-* HowTo: [Create and register a MailTypePlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html)
-* [Tutorial: Sending a mail](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email.html)
-* -->
+If a `MailType` can be handled by more than one provider, the email will be sent by both of them.

@@ -1,5 +1,5 @@
 ---
-title: File details- currency.csv
+title: File details - currency.csv
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-currencycsv
@@ -11,31 +11,39 @@ redirect_from:
   - /docs/en/file-details-currencycsv
 ---
 
-This article contains content of the **currency.csv** file to configure [Currency](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html) information on your Spryker Demo Shop.
+This document describes the `currency.csv` file to configure [Currency](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html) information in your Spryker Demo Shop.
 
-## Headers & Mandatory Fields
-These are the header fields to be included in the .csv file:
+To import the file, run:
 
-|  | Field Name | Mandatory | Type | Other Requirements/Comments | Description |
+```bash
+data:import:currency
+```
+
+## Import file parameters
+
+The file should have the following parameters:
+
+| PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- |
-| 1 | **iso_code** | Yes | String | N/A* | Currency ISO code. <br>For more details check [ISO 4217 CURRENCY CODES](https://www.iso.org/iso-4217-currency-codes.html).  |
-| 2 | **currency_symbol** | Yes | String | N/A | Currency symbol. |
-| 3 | **name** | Yes | String |N/A  | Currency name. |
-*N/A: Not applicable.
+| iso_code | &check; | String |   | Currency ISO code. <br>For more details check [ISO 4217 CURRENCY CODES](https://www.iso.org/iso-4217-currency-codes.html).  |
+| currency_symbol | &check; | String |   | Currency symbol. |
+| name | &check; | String |   | Currency name. |
 
-## Dependencies
+## Import file dependencies
+
 This file has no dependencies.
 
-## Recommendations
+## Additional information
 
 It is recommended to fill all three columns, when adding a new record, except if the “currency” being added is not an ISO standard currency (for example, system of points, or product/service exchange, etc.).
 
 Default currency might be set up when setting up the store. Check [here](https://github.com/spryker-shop/b2c-demo-shop/blob/master/config/Shared/stores.php#L38).
 
-## Template File & Content Example
-A template and an example of the *currency.csv* file can be downloaded here:
+## Import template file and content example
 
-| File | Description |
+Find the template and an example of the file below:
+
+| FILE | DESCRIPTION |
 | --- | --- |
-| [currency.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/Template+currency.csv) | Currency .csv template file (empty content, contains headers only). |
-| [currency.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/currency.csv) | Currency .csv file containing a Demo Shop data sample. |
+| [currency.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/Template+currency.csv) | Exemplary import file with headers only. |
+| [currency.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/currency.csv) | Exemplary import file with Demo Shop data. |

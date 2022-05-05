@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Hydrate payment methods for an order"
+title: HowTo - Hydrate payment methods for an order
 description: This doc describes how to use PaymentDependencyProvider::PAYMENT_HYDRATION_PLUGINS and how to add other payment methods into the order.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -20,7 +20,7 @@ redirect_from:
 
 {% info_block warningBox "Warning" %}
 
-`PaymentOrderHydratePlugin`  and `PaymentDependencyProvider::PAYMENT_HYDRATION_PLUGINS` are deprecated, the new plugin is `\Spryker\Zed\SalesPayment\Communication\Plugin\Sales\SalesPaymentOrderExpanderPlugin`, which automatically adds all payments from `spy_sales_payment` into `OrderTransfer`.
+`PaymentOrderHydratePlugin` and `PaymentDependencyProvider::PAYMENT_HYDRATION_PLUGINS` are deprecated, the new plugin is `\Spryker\Zed\SalesPayment\Communication\Plugin\Sales\SalesPaymentOrderExpanderPlugin`, which automatically adds all payments from `spy_sales_payment` into `OrderTransfer`.
 
 {% endinfo_block %}
 
@@ -73,5 +73,6 @@ The plugin will receive `OrderTransfer` and `PaymentTransfer` which is the payme
 Plugins have to populate the `PaymentTransfer` object and return it back. After this step you should be able to get payment information when calling `SalesFacade::getOrderByIdSalesOrder`. We also included simple Zed UI twig block for payments, so it can display more information about payment methods used on the order details page.
 
 To enable it:
-* Go to `\Pyz\Zed\Sales\SalesConfig::getSalesDetailExternalBlocksUrls`.
-* Add` ‘payments’ => ‘/payment/sales/list’`, to `$projectExternalBlocks` array.
+
+1. Go to `\Pyz\Zed\Sales\SalesConfig::getSalesDetailExternalBlocksUrls`.
+2. Add` ‘payments’ => ‘/payment/sales/list’`, to `$projectExternalBlocks` array.

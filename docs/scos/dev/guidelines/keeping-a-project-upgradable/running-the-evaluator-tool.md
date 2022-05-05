@@ -26,11 +26,13 @@ Get general information about the tool and see all available commands related to
 To install the evaluator tool, do the following:
 
 1. In the Docker SDK CLI, install Spryker SDK:
+
 ```bash
 composer global require spryker-sdk/sdk "dev-master"
 ```
 
 2. Initialize Spryker SDK:
+
 ```bash
 ~/.composer/vendor/spryker-sdk/sdk/bin/console sdk:init:sdk
 ```
@@ -52,7 +54,8 @@ The Evaluator supports only the YAML format.
 
 The Evaluator creates `analyze:php:code-compliance.violations.yaml` in the reports folder.
 
-To veiw the report, run the following command:
+To view the report, run the following command:
+
 ```bash
 ~/.composer/vendor/spryker-sdk/sdk/bin/console analyze:php:code-compliance-report
 ```

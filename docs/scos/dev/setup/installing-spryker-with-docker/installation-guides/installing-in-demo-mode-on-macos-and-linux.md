@@ -25,6 +25,7 @@ This document describes the procedure of installing Spryker in [Demo Mode](/docs
 ## Installing Docker prerequisites on MacOS and Linux
 
 To install Docker prerequisites, follow one of the guides:
+
 * [Installing Docker prerequisites on MacOS](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html)
 * [Installing Docker prerequisites on Linux](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
 
@@ -35,6 +36,7 @@ Follow the steps to install Spryker in Demo Mode:
 1. Open a terminal.
 2. Create a new folder and navigate into it.
 3. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops):
+
     * Clone the B2C repository:
 
     ```shell
@@ -47,14 +49,19 @@ Follow the steps to install Spryker in Demo Mode:
     git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0 --single-branch ./b2b-demo-shop
     ```
 4. Depending on the cloned repository, navigate into the cloned folder:
+
     * B2C repository:
+
     ```bash
     cd b2c-demo-shop
     ```
+
     * B2B repository:
+
     ```bash
     cd b2b-demo-shop
     ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that you are in the correct folder by running the `pwd` command.
@@ -62,24 +69,26 @@ Make sure that you are in the correct folder by running the `pwd` command.
 {% endinfo_block %}
 
 5. Clone the Docker SDK repository into the same folder:
+
 ```shell
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
 ```
 
-
 6. Bootstrap the local Docker setup for demo:
+
 ```shell
 docker/sdk bootstrap
 ```
 
-
 {% info_block warningBox "Bootstrap" %}
 
 Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after:
+
 * Docker SDK version update;
 * Deploy file update.
 
 {% endinfo_block %}
+
 7. Once the job finishes, build and start the instance:
 
 ```shell
@@ -108,7 +117,7 @@ Depending on the hardware performance, the first project launch can take up to 2
 
 To ensure that the installation is successful, make sure you can access the following endpoints.
 
-| Application | Endpoints |
+| APPLICATION | ENDPOINTS |
 | --- | --- |
 | The Storefront |  yves.de.spryker.local, yves.at.spryker.local, yves.us.spryker.local |
 | the Back Office | zed.de.spryker.local, zed.at.spryker.local, zed.us.spryker.local |
@@ -122,8 +131,6 @@ To ensure that the installation is successful, make sure you can access the foll
 To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`. See [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) to learn about the Deploy file.
 
 {% endinfo_block %}
-
-
 
 ## Getting the list of useful commands
 

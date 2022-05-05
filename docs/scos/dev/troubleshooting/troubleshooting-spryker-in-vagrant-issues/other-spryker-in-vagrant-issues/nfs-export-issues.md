@@ -15,6 +15,7 @@ redirect_from:
 ---
 
 ## Description
+
 The following error can occur:
 
 ```
@@ -30,6 +31,7 @@ exports:4: using fallback (marked offline): /
 ```
 
 ## Solution
+
 Try re-creating NFS exports by running the following commands:
 
 ```bash

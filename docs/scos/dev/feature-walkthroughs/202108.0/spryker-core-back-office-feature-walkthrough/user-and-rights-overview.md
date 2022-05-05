@@ -83,9 +83,10 @@ $config[AclConstants::ACL_USER_RULE_WHITELIST] = [
     // ....
 ];
 ```
+
 In the example, we grant access to the Application module resources for all users.
 
-{% info_block warningBox "" %}
+{% info_block warningBox "Note" %}
 
 With the configuration provided in the example, users are granted access to these resources regardless of ACL configuration in ZED UI.
 

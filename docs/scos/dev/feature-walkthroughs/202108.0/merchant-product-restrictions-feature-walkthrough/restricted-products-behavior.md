@@ -226,7 +226,7 @@ On this page, you can find commonly encountered cases of product restrictions be
    </tbody>
 </table>
 
-{% info_block infoBox "" %}
+{% info_block infoBox "Info" %}
 
 If there are cases you would like to get overview of within Product Restrictions feature, email us.
 

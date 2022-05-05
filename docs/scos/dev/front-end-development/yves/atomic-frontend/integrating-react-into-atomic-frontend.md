@@ -22,6 +22,7 @@ redirect_from:
 This guide aims to illustrate how to integrate React within Spryker frontend.
 
 ## Setup
+
 1. Install *React*, *ReactDOM*, and relative types.
         Add required dependencies to the project by running the following command from the root folder:
 
@@ -31,8 +32,8 @@ This guide aims to illustrate how to integrate React within Spryker frontend.
 
 
 {% info_block warningBox %}
+
 `./package.json` is updated as follows:
-{% endinfo_block %}
 
 ```php
 "dependencies": {
@@ -44,10 +45,10 @@ This guide aims to illustrate how to integrate React within Spryker frontend.
   ...
 }
 ```
+{% endinfo_block %}
 
 2. Update webpack configuration.
 			React relies on `.jsx` (or `.tsx`) files. As they must be specifically transpiled into Javascript, you need to tell Webpack to read them. Add the following to `./frontend/configs/development.js`:
-
 
 ```php
 resolve: {
@@ -89,6 +90,7 @@ import 'react-dom';
 By doing this, Webpack will know to place React source code inside the vendor chunk and require it from there whenever needed.
 
 ## Usage
+
 1. Create your first React component.
     a. Create the example folder `./src/Pyz/Yves/ShopUi/Theme/default/components/molecules/react-component`.
     b. In this folder, create 2 files:
@@ -116,4 +118,5 @@ document
 ```bash
 npm run yves
 ```
+
 3. To use the component, add an html element with the class name `.react-component` anywhere in your twig files to see the React component `<div class="react-component"></div>`.

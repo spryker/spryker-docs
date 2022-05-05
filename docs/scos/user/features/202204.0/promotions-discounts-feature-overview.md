@@ -238,7 +238,7 @@ In this case, discounts are applied based on their priority, regardless of type.
 
 {% info_block infoBox "Info" %}
 
-If you have a voucher code and a cart rule with the same priority, both discounts should apply and use the same cart subtotal. For an example, see [Scenario 5: Non-exclusive, fixed amount and percentage discounts with the same priority values](#scenario-5-non-exclusive-fixed-amount-and-percentage-discounts-with-the-same-priority-values).
+If you have a voucher code and a cart rule with the same priority, both discounts should apply and use the same cart subtotal. For an example, see [Scenario 5: Non-exclusive, fixed amount and percentage discounts with the same priority values](#scenario-4-non-exclusive-fixed-amount-and-percentage-discounts-with-the-same-priority-values).
 
 {% endinfo_block %}
 

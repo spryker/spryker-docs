@@ -27,7 +27,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/price-product-offer-volumes-rest-api:"^1.0.0" --update-with-dependencies
+composer require spryker/spryker/price-product-offer-volumes-rest-api:"^0.1.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -45,6 +45,7 @@ Make sure that the following modules have been installed:
 Update the database and generate transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -80,7 +81,7 @@ use Spryker\Glue\ProductOfferPricesRestApi\ProductOfferPricesRestApiDependencyPr
 class ProductOfferPricesRestApiDependencyProvider extends SprykerProductPricesRestApiDependencyProvider
 {
     /**
-     * @return array<\Spryker\Glue\ProductOfferPricesRestApiExtension\Dependency\Plugin\RestProductOfferPricesAttributesMapperPluginInterface>
+     * @return \Spryker\Glue\ProductOfferPricesRestApiExtension\Dependency\Plugin\RestProductOfferPricesAttributesMapperPluginInterface[]
      */
     protected function getRestProductOfferPricesAttributesMapperPlugins(): array
     {
@@ -93,6 +94,6 @@ class ProductOfferPricesRestApiDependencyProvider extends SprykerProductPricesRe
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the `ProductOfferPricesRestApiDependencyProvider` plugin is set up by having product offer volumes over sending the request `GET https://glue.mysprykershop.com//concrete-products/{% raw %}{{concreteProductId}}{% endraw %}?include=product-offers,product-offer-prices`.
+Make sure that  `ProductOfferPricesRestApiDependencyProvider` plugin is set up by having product offer volumes over sending the request `GET https://glue.mysprykershop.com//concrete-products/{% raw %}{{concreteProductId}}{% endraw %}?include=product-offers,product-offer-prices`.
 
 {% endinfo_block %}

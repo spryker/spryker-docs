@@ -26,6 +26,7 @@ redirect_from:
 ---
 
 ## Configuring Git
+
 If you want to commit from within the VM, it is recommended to set the right Git preferences:
 
 ```bash
@@ -36,6 +37,7 @@ git config --global pull.rebase true
 ```
 
 ## Configuring VM
+
 If you like to change the default configuration of the virtual machine, you can do this by following the example below.
 
 ```bash
@@ -46,6 +48,7 @@ export VM_IP_PREFIX="10.10.0."
 ```
 
 ## Disabling a shared folder
+
 For non-standard setups you have the option to disable shared folder with Spryker code.
 
 If you decide not to use shared folders feature, it’s your responsibility to get Spryker code into the `/data/shop/development/current` directory of your VM. For example, you can use a file synchronization utility like [Unison](https://www.cis.upenn.edu/~bcpierce/unison/).
@@ -55,21 +58,26 @@ export VM_SKIP_SF=1
 ```
 
 ## Using SSH instead of HTTPS
+
 In case you already have your SSH keys set up on your host system, it can be more convenient to directly use them for downloading the repository:
+
 ```bash
 export SPRYKER_REPOSITORY="git@github.com:spryker-shop/suite.git"
 ```
 
 {% info_block warningBox %}
+
 Before proceeding with the installation, please make sure you have your SSH public key in GitHub.
+
 {% endinfo_block %}
 
 To generate your SSH key, follow [Generating SSH keys](https://help.github.com/articles/generating-ssh-keys/).
 
 ## Filesystem layout
+
 A common Spryker Project is like a typical web project. There is the project level code and the Spryker Commerce OS code. Spryker Commerce OS code is installed into the vendor folder. As you are running both Yves and Zed inside the VM, you will actually see the source code for both. They share a similar directory layout, but specific folders are indicated by the name of the application. So, a folder named Zed naturally belongs to Zed. A Shared folder belongs to Yves and Zed.
 
-| Path | Usage |
+| PATH | USAGE |
 | --- | --- |
 | config | configuration files |
 | data | log files and caches |
@@ -80,7 +88,7 @@ A common Spryker Project is like a typical web project. There is the project lev
 
 ## Services and ports
 
-| Service | Port | Comments |
+| SERVICE | PORT | COMMENTS |
 | --- | --- | --- |
 | MySQL or MariaDB Server | 3306 | Username is `development`, password is `mate20mg`. |
 | PostgreSQL Server | 5432 | Username is `development`, password is `mate20mg`. |
@@ -89,6 +97,7 @@ A common Spryker Project is like a typical web project. There is the project lev
 |Management UI|15672|See [Default Queue Engine](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html#default-queue-engine) for more information. |
 
 ## Activating the Opcache module
+
 To optimize the performance of the system, you can enable the Opcache. This is not recommend for development, because you may get strange results. To activate the Opcache, just put the following lines at the end of the `php.ini` and `restart.php`.
 
 This configuration is not optimized for production environments!
@@ -131,14 +140,18 @@ sudo service php7.2-fpm restart
 ```
 
 ## Setting VM name
+
 It is advised to label your VM (especially when you have more than a single one):
+
 ```bash
 set-vm-name my-project
 ```
 This will display `vagrant@my-project` in your console starting with the next login.
 
 ## Setting a domain name for the shop
+
 To set a domain name for your Spryker shop, change values of the following keys in the shop configuration file:
+
 ```bash
 $config[ApplicationConstants::HOST_ZED] = 'zed.de.XXX.local';
 $config[ApplicationConstants::HOST_YVES] = 'www.de.XXX.local';
@@ -146,7 +159,6 @@ $config[ApplicationConstants::HOST_YVES] = 'www.de.XXX.local';
 
 The first key is responsible for proper call from Yves to Zed, while the second one is used for domain name used for session cookies.
 
-
-
 ## Upgrading to a newer version
+
 To check for newer released versions, we recommend that you follow the steps described in [Core Updates](/docs/scos/dev/setup/managing-scos-dependencies-with-composer.html#core-updates).

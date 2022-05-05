@@ -9,8 +9,6 @@ template: concept-topic-template
 
 The upgrader tool is a utility that automatically updates a Spryker project’s modules and libraries to the latest versions.
 
-
-
 ## How the upgrader tool works
 
 To update a project, the upgrader tool runs the following steps.
@@ -91,4 +89,4 @@ For example, if at step 6, due to incorrect authentication details, the upgrader
 
 ## Next steps
 
-[Running the upgrader tool](/docs/scos/dev/upgradability-services/running-the-upgrader-tool.html)
+[Running the upgrader tool](/docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-upgrader-tool.html)

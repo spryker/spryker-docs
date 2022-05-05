@@ -34,25 +34,26 @@ redirect_from:
   - /docs/en/concept-overview
 ---
 
-Spryker is a Commerce Operating System, mainly composed of several applications, such as Storefront (Yves), Backoffice (Zed) and Storefront API (Glue).
+Spryker is a Commerce Operating System, mainly composed of several applications, such as Storefront (Yves), Back Office (Zed) and Storefront API (Glue).
 
 * *Storefront* - Front-end-presentation layer for customers, provided by Yves Application Layer based on [Symfony Components](https://symfony.com/components).
-* *Backoffice* - an application that contains all business logic and the backend GUI, provided by Zed Application Layer, and also uses the Symfony Components.
-* *Storefront API*- an application providing resources for customers' interaction, provided by Glue Application Layer, based on [JSON API convention](https://jsonapi.org/).
+* *Back Office* - an application that contains all business logic and the backend GUI, provided by Zed Application Layer, and also uses the Symfony Components.
+* *Storefront API* - an application providing resources for customers' interaction, provided by Glue Application Layer, based on [JSON API convention](https://jsonapi.org/).
 
 The following diagram shows the conceptual parts of the application and their connections:
+
 ![Spryker overview](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Architecture+Concepts/Conceptual+Overview/spryker-overview.png)
 
 The Spryker OS provides the following Application Layers:
 
 * [Yves](/docs/scos/dev/back-end-development/yves/yves.html) - provides frontend functionality with the light-weight data access.
-* [Zed](/docs/scos/dev/back-end-development/zed/zed.html) - provides backoffice/backend functionality with heavy calculations.
+* [Zed](/docs/scos/dev/back-end-development/zed/zed.html) - provides back office/backend functionality with complicated calculations.
 * [Glue](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-infrastructure.html) - provides infrastructure for API with the mixed data access.
 * [Client](/docs/scos/dev/back-end-development/client/client.html) - provides data access infrastructure.
 * Shared - provides shared code abstractions to be used in other Application Layers of the same module.
 * Service - provides infrastructure for the stateless operations, usually utils.
 
-Application Layers structure supports you in a better conceptual decoupling and not always represent a bootstraped Application.
+Application Layers structure supports you in a better conceptual decoupling and not always represent a bootstrapped Application.
 
 {% info_block infoBox %}
 
@@ -60,9 +61,9 @@ See [Programming Concepts](/docs/scos/dev/architecture/programming-concepts.html
 
 {% endinfo_block %}
 
-## Application Separation
+## Application separation
 
-Spryker architecture is designed with two main application layers that are separated from each other: front-end and back-end. This architecture allows to connect any Storefront application with the Backoffice application easily.
+Spryker architecture is designed with two main application layers that are separated from each other: front-end and back-end. This architecture allows to connect any Storefront application with the Back Office application easily.
 
 Along with the default front-end app that is provided out of the box, you can have any other front-end app you need for your business: a native app, Alexa Skill, an e-commerce bot, a dash button, or an IoT device.
 
@@ -72,13 +73,13 @@ The application separation brings 3 main benefits:
 2. **Scalability**: as front-ends in Spryker have their own applications, storages, and deployments, scalability becomes easily achievable and given by the architecture. Spryker can be easily scaled out horizontally by simply just adding more instances with more storages without affecting the back-end application and logic.
 3. **Security**: having two applications, accessing the back-end relational database becomes a harder challenge for cyber attacks. The back-end application also is usually hidden behind a firewall making the Commerce OS even more secured for different e-commerce applications.
 
-## Data Separation
+## Data separation
 
 Following the separation between front-end and back-end, one of the main concepts in Spryker is the separation of data between the front-end and back-end. As in any e-commerce shop system, there are always tons of data to persist and usually with relations between different data entities, e.g., orders with products and customers. For managing such data relations, a relational database is needed. The back-end manages your shop’s data and its relations; thus it comes with a relational database.
 
 ### Storage
 
-The front-end application(s) require denormalized data in order to quickly be able to present them for the end users. By concept, the necessary data is pre-aggregated, denormalized, and stored in key-value storage which can be quickly accessed by any Storefront application.
+The front-end application(s) require de-normalized data in order to quickly be able to present them for the end users. By concept, the necessary data is pre-aggregated, de-normalized, and stored in key-value storage which can be quickly accessed by any Storefront application.
 
 Key-value storages works like a hash-tables where retrieval time is faster compared to the complicated joins and queries in a relational database. For example, to render a product detail page, the system needs several pieces of information like the product title, description, attributes, images, and prices. Instead of execution time-consuming queries in the SQL database, all the data is placed in a few entries in the storage and can be loaded by a single lookup. 
 
@@ -98,7 +99,7 @@ With data separation comes the question: how to sync data between both applicati
 
 The idea behind this concept is that the necessary data (stored in the relational database) is being watched for changes (create, update, delete). When a change occurs, the relevant data gets published to the relevant place (Search and/or Storage). It is an eventually consistent method of providing data for the front-end.
 
-For more details on how Publish & Sync works, see [Publish and Synchronization ](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html).
+For more details on how Publish & Sync works, see [Publish and Synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html).
 
 ## Where to go from here?
 

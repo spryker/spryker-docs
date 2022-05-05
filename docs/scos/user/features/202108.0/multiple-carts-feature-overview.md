@@ -69,7 +69,7 @@ Only one shopping cart can be set as active in the customer account.
 
 {% endinfo_block %}
 
-There are 2 ways to set a shopping cart as active:
+There are two ways to set a shopping cart as active:
 
 * Clicking on the cart name in the shopping cart widget in the header of the shop.
 * Clicking on the cart name on the **Shopping Cart** page in the **My Account** menu.

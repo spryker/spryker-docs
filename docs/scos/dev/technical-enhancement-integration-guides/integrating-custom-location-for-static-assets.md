@@ -18,7 +18,8 @@ redirect_from:
   - /docs/scos/dev/technical-enhancements/custom-location-for-static-assets.html
 ---
 
-## General Information
+## General information
+
 In Spryker, the default folders of static assets are:
 
 * `public/Yves/assets/`
@@ -29,20 +30,23 @@ For organizational or cost and speed optimization purposes, you may need to chan
 ## Integration
 
 ### Prerequisites
+
 To start the integration, overview and install the necessary feature:
 
-| Name | Version |
+| NAME | VERSION |
 | --- | --- |
 | Spryker Core | {{page.version}} |
 
-### 1) Install the Required Modules Using Composer
+### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
 composer require spryker-feature/spryker-core: "^{{page.version}}" --update-with-dependencies
 ```
 
-### 2) Set up Behavior
+### 2) Set up behavior
+
 Register the following Twig plugins for `Zed` application:
 
 ```php
@@ -129,10 +133,13 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 }    
 ```
 
-### Change the Location of Static Assets
+### Change the location of static assets
+
 To change the location of static assets:
+
 1. Define the source of assets for:
-    a. Yves:
+
+    1. Yves:
 
     ```bash
     # BASH shell
@@ -146,7 +153,7 @@ To change the location of static assets:
     export SPRYKER_YVES_ASSETS_URL_PATTERN=http://s3.aws-region.amazonaws.com/bucket/en/default # or any other CDN
     ```
 
-    b. Zed:
+    2. Zed:
 
     ```bash
     # BASH shell

@@ -8,7 +8,7 @@ template: concept-topic-template
 The following diagram illustrates the calculation data structure.
 ![calculation-data-structure-diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Calculation/Calculation+Data+Structure/calculation.png)
 
-## Quote Transfer
+## Quote transfer
 
 `QuoteTransfer` is the main data transfer object used in Cart, Calculation, Checkout and when order is placed. This object is created when first item is added to the cart.
 
@@ -20,10 +20,10 @@ The entire data object is stored into the session and it consists of:
 |items ([ItemTransfer](#item-transfer)[])|CartItem collection.|
 |voucherDiscounts ([DiscountTransfer](#discount-transfer)[])||
 |cartRuleDiscounts ([DiscountTransfer](#discount-transfer)[])||
-|expenses ([ExpenseTransfer](#expensetransfer))||
+|expenses ([ExpenseTransfer](#expense-transfer))||
 |priceMode (int) | Quote object's price mode. |
 
-### Totals Transfer
+### Totals transfer
 
 `TotalsTransfer` is a data object holding cart totals, subtotal, expenses (shipping), discount total and grand total. Here should the amounts for order level be stored.
 
@@ -38,7 +38,7 @@ The entire data object is stored into the session and it consists of:
 |canceledTotal (int)|Total canceled amount. It is set by `CanceledTotalCalculationPlugin` calculator plugin.|
 |hash (string)|Hash from total values to identify amount changes. It is set by `GrandTotalCalculatorPlugin`. |
 
-### Tax Total Transfer
+### Tax total transfer
 
 `TaxTotalsTransfer` holds the `taxRate` and `taxAmount` used for the grandTotal.
 
@@ -46,7 +46,7 @@ The entire data object is stored into the session and it consists of:
 | --- | --- |
 | amount (int)|Current tax amount from grandTotal. |
 
-### Item Transfer
+### Item transfer
 
 `ItemTransfer` is a cart item transfer, holds single product information.
 
@@ -78,7 +78,7 @@ The entire data object is stored into the session and it consists of:
 |taxRateAverageAggregation (float)|Item tax rate average, with additions used when recalculating tax amount after cancellation, set by `TaxRateAverageAggregatorPlugin`.|
 |taxAmountAfterCancellation (int)|Tax amount after cancellation, recalculated using tax average, set by `TaxAmountAfterCancellationCalculatorPlugin`. |
 
-## Calculated Discount Transfer
+## Calculated discount transfer
 
 Each item which can have discounts applied has a `calculatedDiscounts` property which holds collection of discounts for each discount type.
 
@@ -91,7 +91,7 @@ Each item which can have discounts applied has a `calculatedDiscounts` property 
 |unitGrossAmount (int)|Discount gross amount for single items, set by `DiscountCalculatorPlugin`.|
 |sumGrossAmount (int)|Discount gross amount for sum of items, set by `DiscountCalculatorPlugin`. |
 
-## Product Option Transfer
+## Product option transfer
 
 `ProductOptionTransfer`, some items may have product option collection attached which also have amounts calculated.
 
@@ -111,14 +111,15 @@ Each item which can have discounts applied has a `calculatedDiscounts` property 
 |unitDiscountAmountAggregation (int)|Product option total discount amount, set by `DiscountAmountAggregatorPlugin`.|
 |sumDiscountAmountAggregation (int)|Sum of product option total discount amount, set by `DiscountAmountAggregatorPlugin`. |
 
-## Discount Transfer
+## Discount transfer
+
 `DiscountTransfer` is a collection of discounts used in all QuoteTransfer discountable items such as `voucherDiscounts` and `cartRuleDiscounts`.
 
 | FIELD | DESCRIPTION |
 | --- | --- |
 | amount (int)|total discount amount used for this discount type. It’s set by `DiscountCalculatorPlugin`. |
 
-## ExpenseTransfer
+## Expense transfer
 
 | FIELD | DESCRIPTION |
 | --- | --- |

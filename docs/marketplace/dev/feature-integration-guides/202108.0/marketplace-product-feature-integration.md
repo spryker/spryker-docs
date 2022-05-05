@@ -70,6 +70,7 @@ Adjust the schema definition so that entity changes will trigger the events:
 Apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -189,7 +190,7 @@ use Spryker\Zed\MerchantProduct\Communication\Plugin\Product\MerchantProductProd
 class ProductDependencyProvider extends SprykerProductDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\ProductExtension\Dependency\Plugin\ProductAbstractPostCreatePluginInterface>
+     * @return \Spryker\Zed\ProductExtension\Dependency\Plugin\ProductAbstractPostCreatePluginInterface[]
      */
     protected function getProductAbstractPostCreatePlugins(): array
     {
@@ -199,6 +200,11 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
     }
 }
 ```
+{% info_block warningBox "Verification" %}
+
+Make sure that you can create a new product in the Merchant Portal and observe it after creation in the product data table.
+
+{% endinfo_block %}
 
 **src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
 
@@ -214,7 +220,7 @@ use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\Mercha
 class ProductManagementDependencyProvider extends SprykerProductManagementDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractViewActionViewDataExpanderPluginInterface>
+     * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractViewActionViewDataExpanderPluginInterface[]
      */
     protected function getProductAbstractViewActionViewDataExpanderPlugins(): array
     {
@@ -224,7 +230,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
     }
 
     /**
-     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductTableQueryCriteriaExpanderPluginInterface>
+     * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductTableQueryCriteriaExpanderPluginInterface[]
      */
     protected function getProductTableQueryCriteriaExpanderPluginInterfaces(): array
     {
@@ -234,7 +240,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
     }
 
     /**
-     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractListActionViewDataExpanderPluginInterface>
+     * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractListActionViewDataExpanderPluginInterface[]
      */
     protected function getProductAbstractListActionViewDataExpanderPlugins(): array
     {
@@ -248,7 +254,6 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 {% info_block warningBox "Verification" %}
 
 Make sure that you can filter products by merchant in `http://zed.de.demo-spryker.com/product-management`.
-
 Make sure that you can see the merchant name in `http://zed.de.demo-spryker.com/product-management/view?id-product-abstract={id-product-abstract}}`. (Applicable only for products that are assigned to some merchant. See import step.)
 
 {% endinfo_block %}
@@ -269,7 +274,7 @@ use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider as Spryker
 class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\ProductPageSearch\Dependency\Plugin\ProductPageDataExpanderInterface>
+     * @return \Spryker\Zed\ProductPageSearch\Dependency\Plugin\ProductPageDataExpanderInterface[]
      */
     protected function getDataExpanderPlugins()
     {
@@ -280,7 +285,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 
     /**
-     * @return array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductAbstractMapExpanderPluginInterface>
+     * @return \Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductAbstractMapExpanderPluginInterface[]
      */
     protected function getProductAbstractMapExpanderPlugins(): array
     {
@@ -290,7 +295,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 
     /**
-     * @return array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductPageDataLoaderPluginInterface>
+     * @return \Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductPageDataLoaderPluginInterface[]
      */
     protected function getDataLoaderPlugins()
     {
@@ -307,7 +312,7 @@ Make sure the `de_page` Elasticsearch index for any product that belongs (see `s
 
 {% endinfo_block %}
 
-**src/Pyz/Zed/ProductStorage/ProductStorageDependencyProvider.php**
+**src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php**
 
 ```php
 <?php
@@ -320,7 +325,7 @@ use Spryker\Zed\ProductStorage\ProductStorageDependencyProvider as SprykerProduc
 class ProductStorageDependencyProvider extends SprykerProductStorageDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\ProductStorageExtension\Dependency\Plugin\ProductAbstractStorageExpanderPluginInterface>
+     * @return \Spryker\Zed\ProductStorageExtension\Dependency\Plugin\ProductAbstractStorageExpanderPluginInterface[]
      */
     protected function getProductAbstractStorageExpanderPlugins(): array
     {
@@ -329,13 +334,6 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
         ];
     }
 }
-```
-
-Run the following command:
-
-```bash
-console cache:class-resolver:build
-console sync:data
 ```
 
 {% info_block warningBox "Verification" %}
@@ -525,26 +523,6 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-**data/import/local/full_EU.yml**
-
-```yml
-version: 0
-
-actions:
-  - data_entity: merchant-product
-    source: data/import/common/common/marketplace/merchant_product.csv
-```
-
-**data/import/local/full_US.yml**
-
-```yml
-version: 0
-
-actions:
-  - data_entity: merchant-product
-    source: data/import/common/common/marketplace/merchant_product.csv
-```
-
 Import data:
 
 ```bash
@@ -568,6 +546,7 @@ Register the following plugins to enable widgets:
 | PLUGIN  | DESCRIPTION | Prerequisites | NAMESPACE |
 | ----------- | ----------- | ---------- | --------- |
 | MerchantProductWidget | Displays alternative product. |  | SprykerShop\Yves\MerchantProductWidget\Widget |
+| ProductSoldByMerchantWidget | Displays merchant product. |  | SprykerShop\Yves\MerchantProductWidget\Widget |
 
 ```php
 <?php
@@ -581,7 +560,7 @@ use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as Spryke
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
-     * @return array<string>
+     * @return string[]
      */
     protected function getGlobalWidgets(): array
     {
@@ -611,15 +590,13 @@ Make sure that when you add merchant product to cart, on a cart page is has the 
 
 Append glossary according to your configuration:
 
-**data/import/common/common/glossary.csv**
+**src/data/import/common/common/glossary.csv**
 
 ```
 merchant_product.message.invalid,Product "%sku%" with Merchant "%merchant_reference%" not found.,en_US
 merchant_product.message.invalid,Der Produkt "%sku%" mit dem Händler "%merchant_reference%" ist nicht gefunden.,de_DE
 merchant_product.sold_by,Sold by,en_US
 merchant_product.sold_by,Verkauft durch,de_DE
-product.filter.merchant_name,Merchant,en_US
-product.filter.merchant_name,Händler,de_DE
 ```
 
 Import data:
@@ -630,7 +607,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
+Make sure that the configured data is added to the `spy_glossary` table in the database.
 
 {% endinfo_block %}
 
@@ -659,7 +636,7 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
     /**
      * @param \Spryker\Client\Kernel\Container $container
      *
-     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface>
+     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface[]
      */
     protected function createSearchConfigExpanderPlugins(Container $container): array
     {
@@ -688,7 +665,7 @@ class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDe
     /**
      * @param \Spryker\Client\Kernel\Container $container
      *
-     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface>
+     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface[]
      */
     protected function getSearchConfigExpanderPlugins(Container $container): array
     {
@@ -719,7 +696,7 @@ use Spryker\Client\ProductStorage\ProductStorageDependencyProvider as SprykerPro
 class ProductStorageDependencyProvider extends SprykerProductStorageDependencyProvider
 {
     /**
-     * @return array<\Spryker\Client\ProductStorage\Dependency\Plugin\ProductViewExpanderPluginInterface>
+     * @return \Spryker\Client\ProductStorage\Dependency\Plugin\ProductViewExpanderPluginInterface[]
      */
     protected function getProductViewExpanderPlugins()
     {
@@ -728,55 +705,6 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
         ];
     }
 }
-```
-
-**src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-configurator/product-configurator.twig**
-
-```twig
-...
-{%- raw -%}
-{% widget 'AddToCartFormWidget' args [config, data.product, isDisabled, options] only %}
-    {% block embeddedData %}
-        ...
-        {% set merchantProductOfferWidget = findWidget('MerchantProductOfferWidget', [data.product]) %}
-
-        {% set productOffersCount = merchantProductOfferWidget ? merchantProductOfferWidget.productOffers | length : 0 %}
-        {% set isRadioButtonVisible = productOffersCount > 0  %}
-        {% set isChecked = merchantProductOfferWidget ? not merchantProductOfferWidget.productView.productOfferReference: true %}
-        {% set merchantProductWidget = findWidget('MerchantProductWidget', [
-            data.product,
-            isRadioButtonVisible,
-            isChecked
-        ]) %}
-
-        {% if merchantProductWidget %}
-            {% widget merchantProductWidget %}
-            {% endwidget %}
-        {% endif %}
-    {% endblock %}
-{% endwidget %}
-...
-{% endraw %}
-```
-
-**src/Pyz/Yves/ShopUi/Theme/default/components/molecules/product-card-item/product-card-item.twig**
-
-```twig
-{%- raw -%}
-...
-{% block productInfo %}
-    ...
-    {% if widgetGlobalExists('SoldByMerchantWidget') %}
-        {% widget 'SoldByMerchantWidget' args [data.listItem] only %}{% endwidget %}
-    {% elseif widgetGlobalExists('ProductOfferSoldByMerchantWidget') %}
-        {% widget 'ProductOfferSoldByMerchantWidget' args [data.listItem] only %}{% endwidget %}
-    {% elseif widgetGlobalExists('ProductSoldByMerchantWidget') %}
-        {% widget 'ProductSoldByMerchantWidget' args [data.listItem] only %}{% endwidget %}
-    {% endif %}
-
-{% endblock %}
-...
-{% endraw %}
 ```
 
 {% info_block warningBox "Verification" %}

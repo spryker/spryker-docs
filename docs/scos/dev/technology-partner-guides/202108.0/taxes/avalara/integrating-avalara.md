@@ -132,6 +132,7 @@ Make sure that in the database, the configured data has been added to the `spy_
 Apply database changes, generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

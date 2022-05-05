@@ -3732,6 +3732,8 @@ entries:
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html
     - title: Symfony 5
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-5.html
+    - title: ARM architecture (M1 chip)
+      url: /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html      
   - title: SDK
     nested:
     - title: Development Virtual Machine, Docker Containers & Console
@@ -4705,16 +4707,20 @@ entries:
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/port-is-already-occupied-on-host.html
       - title: Troubleshooting Docker installation
         nested:
-        - title: Setup of new indexes throws an exception
-          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/setup-of-new-indexes-throws-an-exception.html
-        - title: Docker daemon is not running
-          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html
-        - title: Demo data was imported incorrectly
-          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/demo-data-was-imported-incorrectly.html
-        - title: docker-sync cannot start
-          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-sync-cannot-start.html
         - title: An error during front end setup
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/an-error-during-front-end-setup.html
+        - title: Demo data was imported incorrectly
+          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/demo-data-was-imported-incorrectly.html
+        - title: Docker daemon is not running
+          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html
+        - title: docker-sync cannot start
+          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-sync-cannot-start.html
+        - title: Error 403 No valid crumb was included in the request
+          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/error-403-no-valid-crumb-was-included-in-the-request.html
+        - title: Node Sass does not yet support your current environment
+          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/node-saas-does-not-yet-support-your-current-environment.html
+        - title: Setup of new indexes throws an exception
+          url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/setup-of-new-indexes-throws-an-exception.html
         - title: Vendor folder synchronization error
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/vendor-folder-synchronization-error.html
   - title: Updating a Spryker-based project

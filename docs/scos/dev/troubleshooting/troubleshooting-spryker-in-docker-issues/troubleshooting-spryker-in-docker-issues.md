@@ -24,6 +24,7 @@ redirect_from:
 This section includes guidance for problems related to issues you might encounter with your Spryker-based project in the Docker environment.  
 
 ## Topics
+
 Troubleshooting [Docker installation](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html):
 * [Docker daemon is not running](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-daemon-is-not-running.html)
 * [docker-sync cannot start](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/docker-sync-cannot-start.html)

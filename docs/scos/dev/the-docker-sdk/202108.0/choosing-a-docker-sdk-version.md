@@ -18,6 +18,7 @@ This document describes why and how to select a particular version of the Docker
 ## Why should I use a particular version of the Docker SDK?
 
 You should use a particular Docker SDK version for:
+
 - Compatibility: project configuration is compatible with the selected Docker SDK version.
 - Consistency: the same Docker SDK version is used in development, integration, and deployment pipelines.
 - Control: control when and how you switch the Docker SDK version of the project.
@@ -26,6 +27,7 @@ You should use a particular Docker SDK version for:
 ## Choosing a versioning approach
 
 To choose a versioning approach, consider the following:
+
 - What kind of project do you have? For example, Long-term, short-term, production, demo.
 - What will you use the Docker SDK for? For example, for development, operations, CI/CD management.
 - Do you need to customize the Docker SDK?
@@ -73,11 +75,13 @@ To configure git submodule:
 1. Using a terminal, navigate to your project root folder. You can find the src/ directory and composer.json file there.
 
 2. Create a git submodule:
+
 ```bash
 git submodule add git@github.com:spryker/docker-sdk.git ./docker
 ```
 
 3. Check out the local clone of the repository to a specific hash, branch, or tag:
+
 ```bash
 cd docker
 git checkout my-branch
@@ -85,6 +89,7 @@ cd ..
 ```
 
 4. Commit and push:
+
 ```bash
 git add .gitmodules docker
 git commit -m "Added docker submodule"
@@ -94,6 +99,7 @@ git push
 {% info_block infoBox "Changing Docker SDK version" %}
 
 Commit and push the git submodule again each time you want to start using a new version of Docker SDK:
+
 ```bash
 git add docker
 git commit -m "Updated docker submodule"
@@ -107,6 +113,7 @@ See [7.11 Git Tools - Submodules](https://www.git-scm.com/book/en/v2/Git-Tools-S
 #### Using git submodule to stick to the chosen version
 
 To fetch the chosen version of the Docker SDK, init or update the Docker SDK submodule:
+
 ```bash
 git submodule update --init --force docker
 ```
@@ -129,6 +136,7 @@ To configure a reference file:
 |Major branch|1.x|
 
 4. Commit and push:
+
 ```bash
 git add .git.docker
 git commit -m "Added .git.docker"
@@ -138,6 +146,7 @@ git push
 {% info_block infoBox "Changing Docker SDK version" %}
 
 Commit and push the reference file each time you want to start using the new version of the Docker SDK:
+
 ```bash
 git add .git.docker
 git commit -m "Updated .git.docker"
@@ -155,9 +164,10 @@ Do the following to fetch the chosen version of the Docker SDK:
   3. According to the reference, check out the local clone of the repository to the hash, branch, or tag.
 
  An example of a pipeline to fetch the chosen version of the Docker SDK:
-  ```bash
-  git clone git@github.com:spryker/docker-sdk.git .docker
-  cd docker
-  git checkout "$(cat ../.git.docker | tr -d '\n\r')"
-  cd ..
-  ```
+
+```bash
+git clone git@github.com:spryker/docker-sdk.git .docker
+cd docker
+git checkout "$(cat ../.git.docker | tr -d '\n\r')"
+cd ..
+```

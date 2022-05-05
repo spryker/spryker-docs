@@ -21,6 +21,7 @@ Starting from [version 1.0.0 the Install package](https://github.com/spryker/ins
 The [Install module](https://github.com/spryker/install) has some layers that are available in a regular core module: *Business* and *Communication*. It also includes the `InstallConfig` class.
 
 ### Business layer
+
 All of the models of the Install module reside in the *Business* layer. The Business layer facade consists of one method:
 
 ```php
@@ -36,15 +37,18 @@ public function runInstall(InputInterface $input, OutputInterface $output): void
 This method starts the installation process and expects Symfony’s console `input` and `output` objects as its arguments.
 
 ### Communication layer
+
 The *Communication* layer consists of just one console command - `InstallConsole`. The only thing it does is making the Business layer facade start the installation process. This command is triggered by the *install* script.
 
 ### Configuration
 
 The fully extensible `\Spryker\Zed\Install\InstallConfig` class exposes two methods:
+
 1. `::getEnvironment()`: for resolving the environment in which the installation is being run. Override this method with caution and only when needed.
 2. `::getLogFilePath()`: for defining the path to the installation log file.
 
 ## Running the install script
+
 Installation is triggered by the *install* script. As before version 1.0.0 of the Install module, the *install* script accepts one argument - the name of the store, however, in version 1.0.0, you can override some environment variables while running the script. These variables include: `APPLICATION_ENV`, `APPLICATION_CODE_BUCKET`, `APPLICATION_ROOT_DIR`, `APPLICATION_SOURCE_DIR`, `APPLICATION_VENDOR_DIR`, `APPLICATION_STATIC_DIR`. For example, to override `APPLICATION_ROOT_DIR`, one needs to run the *install* script like this:
 
 ```bash

@@ -20,7 +20,7 @@ redirect_from:
 
 To improve developer experience, [Twig](https://twig.symfony.com/) functionality has been extended with the new Twig functions introduced. All the Twig extension implementations are located in the `ShopUi` module and can be found in `ShopUi/src/SprykerShop/Yves/ShopUi/Twig`.
 
-| Function Name | Description | Method Signature | Usage Example |
+| FUNCTION NAME | DESCRIPTION | METHOD SIGNATURE | USAGE EXAMPLE |
 | --- | --- | --- | --- |
 | `publicPath` | <ul><li>Provides a safe way to access the `public` folder where compiled assets are located. Returns a string in the following format:<br>`{publicAssetsPath}{namespaceName}{themeName}{relativeAssetPath}.` For example, `/assets/DE/default/css/yves_default.app.css.`<br>The string is used internally to resolve a component/resource location within a provided module. </li><li>Provides a safe way to access a remote folder where compiled assets are located, e.g. a CDN (Content Delivery Network) resource. See [Custom Location for Static Assets](/docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html) for more details.</li></ul> | `function publicPath($relativePath: string): string`<ul><li>`$relativePath` - relative asset path (*required*). </li></ul>| `{% raw %}{{{% endraw %} publicPath('css/yves_default.app.css') {% raw %}}}{% endraw %}`<br>`{% raw %}{{{% endraw %} publicPath('js/yves_default.runtime.js') {% raw %}}}{% endraw %}` |
 | `model` | Resolves a model path and returns a string in the following format:<br> `@ShopUi/models/{modelName}.twig`. | `function model($modelName: string): string`<ul><li>`$modelName` - model name (*required*).</li></ul> | `{% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}` |

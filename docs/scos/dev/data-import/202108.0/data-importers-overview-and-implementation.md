@@ -80,9 +80,9 @@ Currently, there are the following importers in Spryker Commerce OS:
 
 Each of the importers can be executed one by one with the separate command (for example, `./vendor/bin/console data:import:product-abstract`).
 
-However, if you want to execute specific import types **in bulk**, you can create a config.yml configuration file with the following structure:
+However, if you want to execute specific import types **in bulk**, you can create a `config.yml` configuration file with the following structure:
 
-```
+```yml
 action:
   - data_entity: company
   ...
@@ -94,15 +94,16 @@ action:
   where:
 
 * `data_entity` represents the name of your data importer.
-* `source` describes the path to your .csv file with data to import. If the source is not specified, then .csv file defined in the module’s `Config` will be used.
+* `source` describes the path to your CSV file with data to import. If the source is not specified, then CSV file defined in the module’s `Config` will be used.
 
-Then you can run the `./vendor/bin/console data:import --config=path/to/config.yml` command to import all the data from the config.yml file. See[ Importing Data](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html) for more details about this and other import commands you can use.
+Then you can run the `./vendor/bin/console data:import --config=path/to/config.yml` command to import all the data from the `config.yml` file. See [Importing Data](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html) for more details about this and other import commands you can use.
 
 On the project level, you can set a default configuration file path in `DataImportConfig::getDefaultYamlConfigPath()` so this file will be used when `--config` option is not specified, for example, when you run the `./vendor/bin/console data:import` command.
 
 Be advised that some of the importers are related to the data that is imported by another one. For example, *Product Concrete Importer* will not work if there are no abstract products in a database because a particular product cannot exist without an abstract. The same goes for all data with relations. Therefore, make sure to check the database relations or dependencies in [Execution Order of Data Importers in Demo Shop](/docs/scos/dev/data-import/{{page.version}}/demo-shop-data-import/execution-order-of-data-importers-in-demo-shop.html) before running the importers.
 
 ## Implementation overview
+
 Currently, we have two approaches to data importers. Most of the importers are project-based, but there are a few module-based importers. The main difference is the way the importer should be enabled.
 
 **Modular Data Importers (coming from vendor):**
@@ -157,14 +158,15 @@ To use a module-based importer, add it to the plugin stack. See the example belo
 
 All those plugins should implement `Spryker\Zed\DataImport\Dependency\Plugin\DataImportPluginInterface`.
 
-By default, .csv files with data are stored under the module directory in a data folder. It's possible to place them on the project level by extending the `config.yml` file with the required source for the data importer. See the example below:
+By default, CSV files with data are stored under the module directory in a data folder. It's possible to place them on the project level by extending the `config.yml` file with the required source for the data importer. See the example below:
 
-```
+```yml
 action:
   - data_entity: company
     source: data/import/company.csv
   ...
 ```
+
 These actions should be enough to prepare a module-based importer to use.
 
 **Project-level importers:**
@@ -265,6 +267,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
     }
 }
 ```
+
 That’s it. Your data importer is now appended to the DataImport module.
 
 Also, there are **bulk importers** that can be used if you have a huge amount of data to import, and existing importers may be slow.
@@ -286,7 +289,6 @@ You can enable a bulk importer in `Pyz\Zed\DataImport\Business\DataImportBusines
 <?php
 		
 namespace Pyz\Zed\DataImport\Business;
-
 ...
 		
 class DataImportBusinessFactory extends SprykerDataImportBusinessFactory

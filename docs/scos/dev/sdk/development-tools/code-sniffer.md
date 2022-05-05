@@ -65,7 +65,11 @@ There are two levels of sniffer severity: Level 1 (normal, used by default) and 
 	console c:s:s -m Spryker.Development -l 2 -v
 ```
 
-Tip: `c:s:s` can be used as short for `code:sniff:style`.
+{% info_block infoBox "Tip" %}
+
+`c:s:s` can be used as short for `code:sniff:style`.
+
+{% endinfo_block %} 
 
 Additional options:
 

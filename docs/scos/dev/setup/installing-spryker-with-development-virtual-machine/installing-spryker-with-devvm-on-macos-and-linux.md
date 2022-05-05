@@ -71,9 +71,11 @@ cd devvm
 ```bash
 vagrant init devv410 https://u220427-sub1:PpiiHzuF2OIUzmcH@u220427-sub1.your-storagebox.de/devvm_v4.1.0.box
 ```
+
 {% info_block warningBox %}
 
 For _Spryker Core_ version 201907.0 or prior, initialize an older version of DevVM:
+
 ```bash
 vagrant init devvm2.3.1 https://github.com/spryker/devvm/releases/download/v2.3.1/spryker-devvm.box
 ```
@@ -88,6 +90,7 @@ awk '/^end/{print "  config.hostmanager.enabled = true\n  config.hostmanager.man
 ```
 
 5. Build and start the DevVM with the needed Demo Shop:
+
     * With B2B Demo Shop:
 
     ```bash
@@ -95,6 +98,7 @@ awk '/^end/{print "  config.hostmanager.enabled = true\n  config.hostmanager.man
     ```
 
     * With B2C Demo Shop:
+
     ```bash
     VM_PROJECT=b2c-demo-shop SPRYKER_REPOSITORY="https://github.com/spryker-shop/b2c-demo-shop.git" vagrant up
     ```
@@ -110,6 +114,7 @@ vagrant ssh
 ```
 
 2. DevVM version below 2.2.0: Set the maximum number of connections to 65535:
+
 ```bash
 ulimit -n 65535
 ```
@@ -121,22 +126,24 @@ composer install &&
 vendor/bin/install
 ```
 
-
 This installs all required dependencies, and runs the installation process. Also, this installs demo data and exports it to Redis and Elasticsearch.
 
 When the installation process is complete, you can access your Spryker Commerce OS via the following links:
 
 * B2B Demo Shop:
+
     * `http://de.b2b-demo-shop.local` - frontend (Storefront)
     * `http://zed.de.b2b-demo-shop.local` - backend (the Back Office)
     * `http://glue.de.b2b-demo-shop.local` - REST API (Glue)
 
 * B2C Demo Shop:
+
     * `http://de.b2c-demo-shop.local/` - frontend (Storefront)
     * `http://zed.de.b2c-demo-shop.local` - backend (the Back Office)
     * `http://glue.de.b2c-demo-shop.local` - REST API (Glue)
 
 Back Office credentials:
+
 * EMAIL: `admin@spryker.com`
 * PASSWORD: `change123`
 

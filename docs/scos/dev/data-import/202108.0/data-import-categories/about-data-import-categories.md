@@ -11,11 +11,11 @@ redirect_from:
   - /docs/en/about-data-import-categories
 ---
 
-Each functional entity (category) has its own set of data importers. To import data for these categories, you have to run their data importers containing the .csv files with data.
-This section provides details on data importers' Demo Shop group categories and their correspondent .csv files. Here you will information on all the .csv file fields, dependencies, as well as examples and templates of the .csv files.
+Each functional entity (category) has its own set of data importers. To import data for these categories, you have to run their data importers containing the CSV files with data.
+This section provides details on data importers' Demo Shop group categories and their correspondent CSV files. Here you will information on all the CSV file fields, dependencies, as well as examples and templates of the CSV files.
 For details on building your import files, choose the Demo Shop category you want to import data for, and follow the information contained therein:
 
-* [Commerce Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/commerce-setup.html): to set up the multistore environment, glossary, warehouses, tax levels, shipping and payment methods.
+* [Commerce Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/commerce-setup.html): to set up the multi-store environment, glossary, warehouses, tax levels, shipping and payment methods.
 * [Catalog Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/catalog-setup.html): to import all the product-related data necessary for selling products/services in your online store.
 * [Special Product Types](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/special-product-types-import-category.html): to import all the necessary data related to the special product types information in the online store. For example, this category includes data on Gift Cards and Product Options.
 * [Merchandising Setup](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/merchandising-setup.html): to import all the necessary data related to the merchandising information in the online store. For example, this category includes data on Product Labels, Product Relations, Discounts, etc.

@@ -15,9 +15,11 @@ redirect_from:
 ---
 
 ## Description
+
 When building the virtual machine in Windows, you get *The host path of the shared folder is missing* error.
 
 ## Solution
+
 Clone the Spryker repository manually and start the machine again. To do this, execute the following commands:
 
 ```php

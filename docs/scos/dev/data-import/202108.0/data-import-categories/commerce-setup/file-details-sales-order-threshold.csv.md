@@ -1,5 +1,5 @@
 ---
-title: File details- sales_order_threshold.csv
+title: File details - sales_order_threshold.csv
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-sales-order-thresholdcsv
@@ -11,32 +11,40 @@ redirect_from:
   - /docs/en/file-details-sales-order-thresholdcsv
 ---
 
-This article contains content of the **sales_order_threshold.csv** file to configure [Sales Order Threshold](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html) information on your Spryker Demo Shop.
+This document describes the `sales_order_threshold.csv` file to configure [Sales Order Threshold](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html) information in your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
-These are the header fields to be included in the .csv file:
+To import the file, run:
 
-| Field Name | Mandatory | Type | Other Requirements/Comments | Description |
+```bash
+data:import:sales-order-threshold
+```
+
+## Import file parameters
+
+The file should have the following parameters:
+
+| PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| **store** | Yes | String | N/A*| Name of the store. |
-| **currency** | Yes | String | N/A | Currency ISO code. |
-| **threshold_type_key** | Yes | String | N/A | Identifier of the threshold type. |
-| **threshold** | Yes | Integer | N/A| Threshold value. |
-| **fee** | No | Integer | N/A | Threshold fee. |
-| **message_glossary_key** | Yes | String | N/A | Identifier of the glossary message. |
-*N/A: Not applicable.
+| store | &check; | String |  | Name of the store. |
+| currency | &check; | String |  | Currency ISO code. |
+| threshold_type_key | &check; | String |  | Identifier of the threshold type. |
+| threshold | &check; | Integer |  | Threshold value. |
+| fee |  | Integer |   | Threshold fee. |
+| message_glossary_key | &check; | String |   | Identifier of the glossary message. |
 
-## Dependencies
+## Import file dependencies
+
 This file has the following dependencies:
 
-*  [currency.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-currency.csv.html)
-*  [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
-*  s*tores.php* configuration file of the demo shop PHP project
+* [currency.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-currency.csv.html)
+* [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
+* *stores.php* configuration file of the demo shop PHP project
 
-## Template File & Content Example
-A template and an example of the *sales_order_threshold.csv* file can be downloaded here:
+## Import template file and content example
 
-| File | Description |
+Find the template and an example of the file below:
+
+| FILE | DESCRIPTION |
 | --- | --- |
-| [sales_order_threshold.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/Template+sales_order_threshold.csv) | Sales Order Threshold .csv template file (empty content, contains headers only). |
-| [sales_order_threshold.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/sales_order_threshold.csv) | Sales Order Threshold .csv file containing a Demo Shop data sample. |
+| [sales_order_threshold.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/Template+sales_order_threshold.csv) | Exemplary import file with headers only. |
+| [sales_order_threshold.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/sales_order_threshold.csv) | Exemplary import file with Demo Shop data. |

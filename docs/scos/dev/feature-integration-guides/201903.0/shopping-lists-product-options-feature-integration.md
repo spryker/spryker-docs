@@ -32,6 +32,7 @@ Verify that the following modules were installed:
 ### 2) Set up the Database Schema and Transfer Objects
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```yaml
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -141,7 +142,7 @@ Run the following console command to import data:
 console data:import glossary
 ```
 {% info_block infoBox "Verification" %}
-Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data are added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 2) Set up Behavior

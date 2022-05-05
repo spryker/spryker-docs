@@ -10,7 +10,6 @@ The _Shipment_ feature allows you to create and manage carrier companies and ass
 
 To learn more about the feature and to find out how end users use it, see [Shipment feature overview](/docs/scos/user/features/{{page.version}}/shipment-feature-overview.html) for business users.
 
-
 ## Entity diagram
 
 The following schema shows how the sales order and shipment method entities are modelled in the database:
@@ -20,7 +19,6 @@ The following schema shows how the sales order and shipment method entities are 
 ![shipment-database-schema.png)](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shipment/Shipment+Overview/shipment-database-schema.png)
 
 </div>
-
 
 ## Related Developer articles
 

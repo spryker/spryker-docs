@@ -16,7 +16,7 @@ redirect_from:
 
 This document describes the procedure of installing Spryker in [Demo Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) on Windows.
 
-## Installing Docker prerequisites on Windows
+## Install Docker prerequisites on Windows
 
 To install Docker prerequisites on Windows with WSL1, follow [Installing Docker prerequisites on Windows with WSL1](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html).
 
@@ -30,6 +30,7 @@ Follow the steps to install Spryker in Demo Mode:
 2. Open a terminal.
 3. Create a new folder and navigate into it.
 4. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops):
+
     * Clone the B2C repository:
 
     ```shell
@@ -41,15 +42,21 @@ Follow the steps to install Spryker in Demo Mode:
     ```shell
     git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0 --single-branch ./b2b-demo-shop
     ```
+
 5. Depending on the cloned repository, navigate into the cloned folder:
+
     * B2C repository:
+
     ```bash
     cd b2c-demo-shop
     ```
+
     * B2B repository:
+
     ```bash
     cd b2b-demo-shop
     ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that you are in the correct folder by running the `pwd` command.
@@ -57,6 +64,7 @@ Make sure that you are in the correct folder by running the `pwd` command.
 {% endinfo_block %}
 
 6. Clone the Docker SDK repository into the same folder:
+
 ```shell
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
 ```
@@ -67,16 +75,16 @@ git clone https://github.com/spryker/docker-sdk.git --single-branch docker
 sudo usermod -aG docker $USER
 ```
 
-
 8. Bootstrap the local Docker setup for demo:
+
 ```shell
 docker/sdk bootstrap
 ```
 
-
 {% info_block warningBox "Bootstrap" %}
 
 Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after:
+
 * Docker SDK version update;
 * Deploy file update.
 
@@ -98,9 +106,11 @@ docker/sdk up
     7. In the **File name** line, enter `hosts` and select **Open**.
     The hosts file opens in the drop-down.
     8. Add the following line into the file:
+
     ```text
     127.0.0.1   zed.de.spryker.local glue.de.spryker.local yves.de.spryker.local scheduler.spryker.local mail.spryker.local queue.spryker.local
     ```
+
     {% info_block infoBox %}
 
     If needed, add corresponding entries for other stores. For example, if you are going to have a US store, add the following entries: `zed.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
@@ -112,14 +122,16 @@ docker/sdk up
 
 
 {% info_block warningBox %}
+
 Depending on the hardware performance, the first project launch can take up to 20 minutes.
+
 {% endinfo_block %}
 
 ## Endpoints
 
 To ensure that the installation is successful, make sure you can access the following endpoints.
 
-| Application | Endpoints |
+| APPLICATION | ENDPOINTS |
 | --- | --- |
 | The Storefront |  yves.de.spryker.local, yves.at.spryker.local, yves.us.spryker.local |
 | the Back Office | zed.de.spryker.local, zed.at.spryker.local, zed.us.spryker.local |
@@ -133,8 +145,6 @@ To ensure that the installation is successful, make sure you can access the foll
 To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. You can adjust the credentials in `deploy.yml`. See [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) to learn about the Deploy file.
 
 {% endinfo_block %}
-
-
 
 ## Getting the list of useful commands
 

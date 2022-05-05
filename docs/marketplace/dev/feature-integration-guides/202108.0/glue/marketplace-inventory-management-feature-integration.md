@@ -81,7 +81,7 @@ use Spryker\Glue\ProductOfferAvailabilitiesRestApi\Plugin\GlueApplication\Produc
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
-     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
+     * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface[]
      */
     protected function getResourceRoutePlugins(): array
     {

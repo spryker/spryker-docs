@@ -28,7 +28,7 @@ Refactoring of the Spryker’s search sub-system has two main goals:
 
 This article describes the changes made to add support of Elasticsearch 6 and create the foundation for replacing Elasticsearch with other search providers.
 
-## Preparing the Infrastructure for Replacing Elasticsearch
+## Preparing the infrastructure for replacing Elasticsearch
 
 The central place of the Spryker’s search sub-system is the *Search* module. This module provides APIs for:
 
@@ -57,10 +57,12 @@ There are several new interfaces, for which search provider-specific modules may
 
 3. `Spryker\Zed\SearchExtension\Dependency\Plugin\InstallPluginInterface`. This API is used to create the infrastructure for a particular search provider (e.g., create indexes and index maps for Elasticsearch).
 
-### Creating the Infrastructure for Search
+### Creating the infrastructure for search
+
 All the Elasticsearch specific commands in the *Search* module were deprecated and replaced with generic commands (e.g., `search:setup:sources` instead of `search:setup:indexes`), which utilize `Spryker\Zed\SearchExtension\Dependency\Plugin\InstallPluginInterface` to hand over the infrastructure setup tasks to search provider-specific modules.
 
-### Searching for Data
+### Searching for data
+
 Searching for data is done through the SearchClient. Whenever there is a need to search for some data, implementation of `\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface`, tailored for that specific search, is defined by some satellite module.  It is then passed to `SearchClient::search()` method. Right now, all existing implementations of this interface in the core are bound to Elasticsearch. To provide future support for other search providers all these classes now implement the additional interface `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. This interface could be implemented like this:
 
 **Code sample**
@@ -137,7 +139,8 @@ Here is how the SearchElastisearch module resolves a source (index name) from th
 * A new `ElasticsearchSearchContextTransfer` object is created, and the index name is set as its property
 * This new transfer object is set as the property of the passed `SearchContextTransfer` object, which is then returned back to the *Search* module
 
-### Storing Data for Search
+### Storing data for search
+
 Data that needs to be stored for future search is passed along with some metadata as a `SearchDocumentTransfer` object. This is done by the *Synchronization* module. `SearchDocumentTransfer` transfer is now also extended with the property to hold a search context, which is used to determine where exactly (search provider, source) this data should be stored. The mechanism for this is the same as for searching the data.
 
 ## Unblocking Elasticsearch 6
@@ -145,13 +148,15 @@ Data that needs to be stored for future search is passed along with some metadat
 As already mentioned before, previously, there was one index per store for all searchable data, which was split into several mapping types (page, product-review, etc.). From now on, for each of the mapping types, a separate index will be created by the SearchElasticsearch module, which will only have its dedicated mapping type. All the operations related to indexing/searching for documents will then be routed to the proper index with the help of source identifiers.
 
 ## Migrating to Elasticsearch 7
+
 In Elasticsearch 7, among other changes, the mapping types removal started in version 6, continues. While the previous major version has deprecated the concept of mapping types themselves but still required one mapping type per index, Elasticsearch 7.x by default, does not allow mapping types at all.
 
 ### General information
 
 To communicate with Elasticsearch, Spryker uses a third-party library called `ruflin/elastica`. To be able to interact with Elaticsearch 7.x, `ruffling/elastica:7.*.*` must be used (major version of this package so far refer to major versions of Elasticsearch itself). This version has some drastic changes in its API compared to the previous major versions. Among those changes are:
+
 - removal of several query type classes, for example, `\Elastica\Query\Type` and `\Elastica\Query\GeohashCell`
-- removal of `the_parent` field in favour of the `join` field
+- removal of `the_parent` field in favor of the `join` field
 - various changes in the existing classes APIs (`\Elastica\Document`, `\Elastica\Query\Terms` etc.)
 
 For the full list of changes,check [Elasticsearch 7.0.0 release notes](https://elastica.io/2019/10/31/release-7-dot-0-0-beta1/). All the project code that's not compatible with these changes, must be adjusted accordingly before running Elasticsearch 7.
@@ -161,6 +166,7 @@ For the full list of changes,check [Elasticsearch 7.0.0 release notes](https://e
 ### Migrating from Elasticsearch 6.x to Elasticsearch 7.x
 
 to migrate from Elasticsearch 6 to Elasticsearch 7, update the necessary modules by running:
+
 ```bash
 composer update spryker/elastica spryker/product-review spryker/search spryker/search-elasticsearch spryker/synchronization spryker/collector --with-dependencies
 ```
@@ -173,14 +179,17 @@ To migrate from Elasticsearch 5.x to Elasticsearch 7.x:
 
 1. Follow the guidelines in this Search migration concept from the very beginning, to make your project code is Elasticsearch 6 compatible.
 2. After that, follow the [guidelines for migrating from Elasticsearch 6.x to Elasticsearch 7.x](#Elasticsearch7) described above.
+3. 
 {% info_block warningBox "your title goes here" %}
 
 To perform the upgrade without shutting down the cluster, you have to do a rolling upgrade as described in the [Elasticserach rolling upgrades documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/rolling-upgrades.html).
 
 {% endinfo_block %}
+
 That being done, the migration to Elasticsearch 7 from Elasticsearch 5 is complete.
 
 ## Modules to upgrade
+
 The Search migration effort implies an upgrade of the following modules:
 
 * [Search](/docs/scos/dev/module-migration-guides/migration-guide-search.html#upgrading-from-version-89-to-version-810)

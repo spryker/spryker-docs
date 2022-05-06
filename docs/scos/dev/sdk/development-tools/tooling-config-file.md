@@ -36,23 +36,26 @@ related:
 
 In order to make the tool configuring more convenient, we introduce the `.tooling.yml` file. It contains settings for different tools (the Architecture and the Code sniffers are supported at the moment) in one place, helping you to keep the number of files on the root level as small as possible. The `.tooling.yml` file should also be in `.gitattributes` to be ignored for tagging:
 
-```
+```yml
 ... export-ignore
 ```
 
 ## Supported tools and directives
+
 ### Code sniffer
+
 The code sniffer configuration section can have one directive: level. Example:
 
-```
+```yml
 code-sniffer:
     level: 1
  ```
 
  ### Architecture sniffer
+
 The architecture sniffer configuration section can have two directives: priority and ignoreErrors. Example:
 
-```
+```yml
 architecture-sniffer:
     priority: 5
     ignoreErrors:

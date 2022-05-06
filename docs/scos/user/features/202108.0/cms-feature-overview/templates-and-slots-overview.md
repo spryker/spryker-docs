@@ -202,7 +202,7 @@ The following schema shows how content is managed with the help of templates wit
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/templates-and-slots.png)
 
 ## Visibility conditions
-When the content manager assigns a CMS block to a slot, it is displayed in all the pages to which the template with the slot is applied. To narrow down the number of pages to a desired selection, the content manager can define visibility conditions for each CMS block assigned to a slot. Visibility conditions are defined by selecting particular pages in which the content of a CMS block will be displayed. When visibility conditions are defined, the slot widget checks if the CMS block should be rendered in an opened page and either renders or skips it.
+When the content manager assigns a CMS block to a slot, it is displayed in all the pages to which the template with the slot is applied. To narrow down the number of pages to a needed selection, the content manager can define visibility conditions for each CMS block assigned to a slot. Visibility conditions are defined by selecting particular pages in which the content of a CMS block will be displayed. When visibility conditions are defined, the slot widget checks if the CMS block should be rendered in an opened page and either renders or skips it.
 
 Page identifiers used to define visibility conditions depend on the page type to which a template with slots is applied. You can check identifiers for each page type in the following table.
 
@@ -372,7 +372,7 @@ The following image shows the database schema for templates, slots and the Spryk
 
 {% info_block infoBox %}
 
-Currently, the functionality has the following functional constraints which are going to be resolved in the future.
+The functionality has the following functional constraints which are going to be resolved in the future.
 
 {% endinfo_block %}
 

@@ -16,7 +16,7 @@ Every [business unit](/docs/scos/user/features/{{page.version}}/company-account-
 
 For example, as a shop owner, you might have a financial manager in your company, who, for audit purposes, should be able to access company business units' accounts to check their order histories, shopping lists.
 
-You can assign a user to multiple business units in the Back Office. After that, a single user will be able to log in to several company accounts and manage all of them via a browser window.
+You can assign a user to multiple business units in the Back Office. After that, a single user can log in to several company accounts and manage all of them by a browser window.
 
 {% info_block warningBox %}
 
@@ -56,8 +56,7 @@ Company users can assign and unassign a company business unit to their accounts 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Attach a company user to a business unit](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-account/managing-company-users.html#attaching-a-company-user-to-a-business-unit)  |
-| [Attach a customer to a company](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html)  |
+| [Assign a company user to a company unit](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-users/edit-company-users.html)  |
 
 
 {% info_block warningBox "Developer guides" %}

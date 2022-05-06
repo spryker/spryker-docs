@@ -20,7 +20,7 @@ When paying for orders with a gift card, the gift cards are considered as an add
 
 {% info_block warningBox %}
 
-Gift cards are sensitive data and can be used to pay orders, therefore please keep in mind that they should be protected just like real money.
+Gift cards are sensitive data and can be used to pay orders; therefore, keep in mind that they should be protected like real money.
 
 {% endinfo_block %}
 
@@ -28,10 +28,10 @@ In a Spryker-based shop, the gift cards follow the same rules and bought as prod
 
 Gift cards have variants just like abstract products. For example, a New Year Gift Card can have all the different values—50 Euro and 100 Euro. In this case, the New Year Gift Card would be handled like an abstract product, and 50 Euro and 100 Euro gift cards would be its variants.
 
-When a customer puts a gift card to cart, they can change a variant, quantity and remove it from cart, just like any abstract product. It should be noted, however, that no discounts are applied to gift card products since the price paid for the gift card must equal the value of the gift card. Even though technically it is possible to have different amounts for gift card’s price and value (say, the gift card price is 100 Euro, however, the gift card value is 150 Euro), you need to consult your local legislation to make sure it would be legal in your country.
+When a customer puts a gift card to cart, they can change a variant, quantity and remove it from cart, just like any abstract product. It should be noted, however, that no discounts are applied to gift card products since the price paid for the gift card must equal the value of the gift card. Even though technically you can have different amounts for gift card’s price and value (say, the gift card price is 100 Euro, however, the gift card value is 150 Euro), you need to consult your local legislation to make sure it would be legal in your country.
 ![Gift cards](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Gift+Cards/Gift+Cards+Purchase+and+Redeeming/gift_card.png)
 
-It is not possible to pay a gift card by using another gift card, even if the order contains other products with the gift card. Also, the range of payment methods that can be used to pay for gift cards can be limited. That is, you can filter out the payment methods for gift cards. Payment methods available for gift cards can be specified in the configuration file. By default, invoice payment method is not available for gift cards to avoid fraud.
+You can't to pay a gift card by using another gift card, even if the order contains other products with the gift card. Also, the range of payment methods that can be used to pay for gift cards can be limited. That is, you can filter out the payment methods for gift cards. Payment methods available for gift cards can be specified in the configuration file. By default, invoice payment method is not available for gift cards to avoid fraud.
 
 After a customer buys a gift card, they get a code sent to the specified email address.
 

@@ -15,6 +15,7 @@ redirect_from:
 ---
 
 ## Description
+
 You can get the following exception from Redis:
 
 ```php

@@ -1,5 +1,5 @@
 ---
-title: File details- product_search_attribute_map.csv
+title: File details - product_search_attribute_map.csv
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-search-attribute-mapcsv
@@ -11,29 +11,36 @@ redirect_from:
   - /docs/en/file-details-product-search-attribute-mapcsv
 ---
 
-This article contains content of the **product_search_attribute_map.csv** file to configure Product Search Attribute Map information on your Spryker Demo Shop.
+This document describes the `product_search_attribute_map.csv` file to configure Product Search Attribute Map information in your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
-These are the header fields to be included in the .csv file:
+To import the file, run:
 
-| Field Name | Mandatory | Type | Other Requirements/Comments | Description |
+```bash
+data:import:product-search-attribute-map
+```
+
+## Import file parameters
+
+The file should have the following parameters:
+
+| PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| **attribute_key** | Yes | String |N/A* | 	Identifier of an attribute. |
-| **target_field** | No | String |	Any constant from the class `src/Generated/Shared/Search/PageIndexMap.php` | Elasticsearch property. |
-*N/A: Not applicable.
+| attribute_key | &check; | String |  | Identifier of an attribute. |
+| target_field |  | String | Any constant from the class `src/Generated/Shared/Search/PageIndexMap.php` | Elasticsearch property. |
 
-## Dependencies
+## Import file dependencies
 
-This file has the following dependency:
-*    [product_attribute_key.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html)
+This file has the following dependency: [product_attribute_key.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html).
 
-Recommendations & other information
-This file maps the product attributes that are imported in the *product_attribute_key.csv* file with Elasticsearch-specific properties.
+## Additional information
 
-## Template File & Content Example
-A template and an example of the *product_search_attribute_map.csv*  file can be downloaded here:
+This file maps the product attributes that are imported in the `product_attribute_key.csv` file with Elasticsearch-specific properties.
 
-| File | Description |
+## Import template file and content example
+
+Find the template and an example of the file below:
+
+| FILE | DESCRIPTION |
 | --- | --- |
-| [product_search_attribute_map.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Product+Merchandising/Template+product_search_attribute_map.csv) | Product Search Attribute Map .csv template file (empty content, contains headers only). |
-| [product_search_attribute_map.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Product+Merchandising/product_search_attribute_map.csv) | Product Search Attribute Map .csv file containing a Demo Shop data sample. |
+| [product_search_attribute_map.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Product+Merchandising/Template+product_search_attribute_map.csv) | Exemplary import file with headers only. |
+| [product_search_attribute_map.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Product+Merchandising/product_search_attribute_map.csv) | Exemplary import file with headers only. |

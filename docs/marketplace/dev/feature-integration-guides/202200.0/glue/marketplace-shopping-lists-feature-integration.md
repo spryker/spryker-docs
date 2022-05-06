@@ -10,7 +10,7 @@ project.
 
 ## Install feature core
 
-Follow the steps below to install Marketplace Shopping Lists Glue API feature core.
+Follow the steps below to install Marketplace Shopping Lists API feature core.
 
 ### Prerequisites
 
@@ -67,9 +67,9 @@ Make sure that the following changes have been applied in transfer objects:
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | MerchantByMerchantReferenceResourceRelationshipPlugin | Adds `merchant` resources as relationship by Product Offer reference.                     |   | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
-| ProductOfferAvailabilitiesByProductOfferReferenceResourceRelationshipPlugin | Adds `product offer availabilities` resources as relationship by Product Offer reference. |   | Spryker\Glue\ProductOfferAvailabilitiesRestApi\Plugin\GlueApplication |
-| ProductOffersByProductOfferReferenceResourceRelationshipPlugin | Adds `product offers` resources as relationship by Product Offer reference.               |   | Spryker\Glue\ProductOffersRestApi\Plugin\GlueApplication |
-| ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin | Adds `product offer prices` resources as relationship by Product Offer reference.         |   | Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication |
+| ProductOfferAvailabilitiesByProductOfferReferenceResourceRelationshipPlugin | Adds `product offer availabilities` resources as relationship by the Product Offer reference. |   | Spryker\Glue\ProductOfferAvailabilitiesRestApi\Plugin\GlueApplication |
+| ProductOffersByProductOfferReferenceResourceRelationshipPlugin | Adds `product offers` resources as relationship by the Product Offer reference.               |   | Spryker\Glue\ProductOffersRestApi\Plugin\GlueApplication |
+| ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin | Adds `product offer prices` resources as relationship the by Product Offer reference.         |   | Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication |
 
 <details><summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
@@ -121,9 +121,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure that merchant and offer references are present by sending the `POST` request to https://glue.mysprykershop.com/shopping-lists/{shoppingListReference}/shopping-list-items`
+1. Make sure that merchant and offer references are present by sending the `POST` request to `https://glue.mysprykershop.com/shopping-lists/{shoppingListReference}/shopping-list-items`
 
-Example request data:
+Request sample:
 
 ```json
 {
@@ -137,7 +137,8 @@ Example request data:
     }
 }
 ```
-<summary markdown='span'>Example expected data</summary>
+
+Response sample:
 
 ```json
 {
@@ -160,7 +161,7 @@ Example request data:
 2. Make sure that product offers, product concrete availabilities, product offers' availabilities and merchants are loaded by sending the `GET` request to
    `https://glue.mysprykershop.com/shopping-lists/{shoppingListReference}?include=concrete-products,shopping-list-items,product-offers,product-offer-availabilities,concrete-product-availabilities,merchants`
 
-<details><summary markdown='span'>Example expected data fragment</summary>
+<details><summary markdown='span'>Response data example with included concrete products, shopping list items, product offers, product offer availabilities, concrete product availabilities, and merchants:</summary>
 
 ```json
 {
@@ -251,6 +252,7 @@ Example request data:
 ```
 
 </details>
+
 {% endinfo_block %}
 
 ## Related features

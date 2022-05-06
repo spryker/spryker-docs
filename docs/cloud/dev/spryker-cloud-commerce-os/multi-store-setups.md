@@ -4,15 +4,12 @@ description: Types of multi-store setups in Spryker Cloud Commerce OS
 template: concept-topic-template
 ---
 
-
-## Into about supported setups
-
-This document describes the multi-store setups supported by Spryker Cloud.
+This document describes the multi-store setups supported by Spryker Cloud Commerce OS.
 
 Currently, the following setups are available:
 
-* Separated: separate databases and codebase.
-* Shared: shared databases and codebase.
+* Separated: a codebase with separate databases.
+* Shared: a codebase with a shared database.
 
 
 ## Shared setup
@@ -20,7 +17,7 @@ Currently, the following setups are available:
 With the separated setup, all the stores share a single database and codebase. It is the standard Spryker setup.
 
 
-![shared setup diagram]()
+![shared setup diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/multi-store-setups.md/shared-setup.png)
 
 
 ### Shared setup: When to use
@@ -63,7 +60,7 @@ The shared setup features:
 
 With the separated setup, each store has a dedicated database and codebase.
 
-![shared setup diagram]()
+![separated setup diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/multi-store-setups.md/separated-setup.png)
 
 
 ### Separated setup: When to use
@@ -103,3 +100,11 @@ The separated setup features:
 * Several CI/CD(continuous integration/continuous delivery) pipelines are shipped for every store by default.
 
 * On-demand setup of any type of environment: test, staging, and so on.
+
+* Better control over expenses of each separate store.
+
+* Flexibility of domain management. For example, you can solve the uniqueness issue with URLs.
+
+* Flexibility of managing the configuration of stores: distinct category navigation, product schema details, and users.
+
+* Each store is independent of one another.

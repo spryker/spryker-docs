@@ -229,7 +229,7 @@ namespace Pyz\Zed\Console;
 
 use Spryker\Zed\ProductOfferShoppingListDataImport\ProductOfferShoppingListDataImportConfig;
 
-class c extends SprykerConsoleDependencyProvider
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 {
     /**
     * @var string

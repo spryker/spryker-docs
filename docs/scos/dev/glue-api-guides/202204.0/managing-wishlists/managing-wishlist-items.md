@@ -51,7 +51,6 @@ Request sample: add an item to a wishlist
 		}
 	}
 ```
-</details>
 
 <details><summary>Request sample: add a configurable product to a wishlist</summary>
 

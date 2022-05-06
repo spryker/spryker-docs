@@ -1,6 +1,6 @@
 ---
 title: Category Management + Promotions and Discounts feature integration
-description: Add the "category" parameter to calculation and conditions queries in the Promotions & Discounts feature.
+description: Add the category parameter to calculation and conditions queries in the Promotions & Discounts feature.
 last_updated: Jan 11, 2022
 template: feature-integration-guide-template
 ---

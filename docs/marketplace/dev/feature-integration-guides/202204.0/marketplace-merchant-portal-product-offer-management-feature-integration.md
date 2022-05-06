@@ -102,7 +102,7 @@ use Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin\DashboardMerc
 class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerchantPortalGuiDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\DashboardMerchantPortalGuiExtension\Dependency\Plugin\MerchantDashboardCardPluginInterface>
+     * @return \Spryker\Zed\DashboardMerchantPortalGuiExtension\Dependency\Plugin\MerchantDashboardCardPluginInterface[]
      */
     protected function getDashboardCardPlugins(): array
     {

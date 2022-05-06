@@ -535,6 +535,7 @@ Make sure that the `orders` resource is expanded with the product configuration 
     }
 }
 ```
+</details>
 
 {% endinfo_block %}
 
@@ -789,7 +790,6 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
     }
 }
 ```
-</details>
 
 **src/Pyz/Glue/ProductConfigurationWishlistsRestApi/ProductConfigurationWishlistsRestApiDependencyProvider.php**
 

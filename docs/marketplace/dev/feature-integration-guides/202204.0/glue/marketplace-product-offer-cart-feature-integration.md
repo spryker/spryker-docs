@@ -45,7 +45,7 @@ use Spryker\Glue\MerchantProductOffersRestApi\Plugin\CartsRestApi\MerchantProduc
 class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvider
 {
     /**
-     * @return array<\Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\RestCartItemsAttributesMapperPluginInterface>
+     * @return \Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\RestCartItemsAttributesMapperPluginInterface[]
      */
     protected function getRestCartItemsAttributesMapperPlugins(): array
     {
@@ -55,7 +55,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
     }
 
     /**
-     * @return array<\Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\CartItemExpanderPluginInterface>
+     * @return \Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\CartItemExpanderPluginInterface[]
      */
     protected function getCartItemExpanderPlugins(): array
     {
@@ -79,7 +79,7 @@ use Spryker\Zed\MerchantProductOffersRestApi\Communication\Plugin\CartsRestApi\M
 class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvider
 {
     /**
-     * @return array<\Spryker\Zed\CartsRestApiExtension\Dependency\Plugin\CartItemMapperPluginInterface>
+     * @return \Spryker\Zed\CartsRestApiExtension\Dependency\Plugin\CartItemMapperPluginInterface[]
      */
     protected function getCartItemMapperPlugins(): array
     {

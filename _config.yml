@@ -234,6 +234,10 @@ algolia:
       title: 'Frontend enablement Service Developer'
     - name: 'paas_plus_dev'
       title: 'Platform as a Service Plus Developer'
+  settings:
+    attributesForFaceting:
+      - tags
+      - versions
 
 sass:
     sass_dir: css

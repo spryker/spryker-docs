@@ -61,6 +61,23 @@ const AlgoliaSearch = {
                 );
             }
 
+            // tags refinement list
+            searchIndex.addWidget(
+                instantsearch.widgets.refinementList({
+                    container: '#tags-refinement-list',
+                    attribute: 'tags',
+                })
+            );
+
+            // versions refinement list
+            searchIndex.addWidget(
+                instantsearch.widgets.refinementList({
+                    container: '#versions-refinement-list',
+                    attribute: 'versions',
+                })
+            );
+
+
             // stats
             searchIndex.addWidget(
                 instantsearch.widgets.stats({

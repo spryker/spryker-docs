@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Decrease the memory usage of Spryker with Docker on WSL2"
+title: "HowTo - Decrease the memory usage of Spryker with Docker on WSL2"
 description: Learn how to limit the memory usage of VMmem when running Spryker with Docker on WSL2.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -26,7 +26,7 @@ Ensure that you are running the latest versions of:
 
 ## Limiting the memory usage of VMmem
 
-To limit the memory usage of VMmem, follow these steps:
+To limit the memory usage of VMmem:
 
 1. Create or update `c:\users\USERNAME\.wslconfig` with `memory` and `processors` parameters per your hardware and performance requirements. The following example should suit most use cases.
 

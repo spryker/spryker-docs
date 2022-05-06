@@ -18,12 +18,9 @@ This document describes how to run tests in different ways.
 
 The Docker SDK lets you run applications in an environment configured for running tests.
 
-
 In the testing mode, you can run tests in isolation, with full control of the system tested and all needed tooling in place. Once you activate the testing mode, the following happens:
 1. The scheduler is enabled. Background jobs are stopped for preserving data consistency and full isolation.
 2. The webdriver is enabled.
-
-
 
 ## Activating the testing mode and running tests
 
@@ -35,11 +32,13 @@ You can activate the testing mode in one of the following ways:
 ### Activating the testing mode in a running environment
 
 1. Activate the testing mode in a running environment and enter the CLI container:
+
 ```bash
 docker/sdk testing
 ```
 
 2. In the CLI container, run Codeception:
+
 ```bash
 codecept run
 ```
@@ -59,11 +58,13 @@ docker/sdk up -t
 ```
 
 2. Switch to the CLI container:
+
 ```bash
 docker/sdk cli -t
 ```
 
 3. Run Codeception:
+
 ```bash
 codecept run
 ```
@@ -72,11 +73,13 @@ codecept run
 ## Running a specific category of tests
 
 There are three categories of Spryker tests:
+
 * Acceptance
 * Functional
 * Api
 
 To run a specific category, run `codecept` with the respective configuration file:
+
 ```bash
 codecept run -c codeception.{acceptance|functional|api}.yml
 ```
@@ -97,6 +100,7 @@ To choose a webdriver, update `deploy.*.yml`.
 Chromedriver is the default webdriver shipped with Docker SDK.
 
 The Chromedriver configuration looks as follows in the deploy file:
+
 ```yaml
 services:
     webdriver:
@@ -110,6 +114,7 @@ See [webdriver:](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/depl
 To configure Codeception:
 
 1. Prepare required environment variables:
+
 ```yaml
 SPRYKER_TESTING_ENABLED: false
 SPRYKER_TEST_WEB_DRIVER_HOST: '0.0.0.0'
@@ -120,6 +125,7 @@ SPRYKER_TEST_WEB_DRIVER_BIN: 'vendor/bin/chromedriver'
 ```
 
 2. Configure `codeception.*.yml`:
+
 ```yaml
 extensions:
     enabled:

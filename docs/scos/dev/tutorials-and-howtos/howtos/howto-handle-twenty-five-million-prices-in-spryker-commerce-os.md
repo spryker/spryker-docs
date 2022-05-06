@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Handle twenty five million prices in Spryker Commerce OS"
+title: "HowTo - Handle twenty five million prices in Spryker Commerce OS"
 description: Learn how we enabled Spryker to handle 25 million of prices.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -14,7 +14,6 @@ redirect_from:
   - /v6/docs/en/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
 ---
 
-
 B2B business model usually challenges any software with higher requirements to amounts of data and business complexity.
 
 Imagine you have thousands of products and customers with unique pricing terms and conditions. A product can have thousands of prices assigned—one per customer. In this article, we share the technical challenges of handling such a number of prices and the solutions we used to solve them.
@@ -23,8 +22,8 @@ Such a number of prices cannot be managed manually, but it is defined by busines
 
 In Spryker, each price is imported as a [price dimension](/docs/scos/user/features/{{site.version}}/merchant-custom-prices-feature-overview.html) and has a unique key which determines its relation to a customer—for example, `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. To appear on the Storefront, the prices should appear in Redis price entries and abstract product search documents, so that facet filters can be applied in search and categories.
 
-
 Price import flow:
+
 ![price import flow ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+handle+25+million+prices+in+Spryker+Commerce+OS/price-import-flow.jpg)
 
 
@@ -42,7 +41,6 @@ When enabling Spryker to handle such a number of prices, we faced the following 
 The queries rejected by ES are considered successful by Spryker because the [Elastica library](https://elastica.io/) ignores the `413` error code.
 
 5. Each price having a unique key results in more different index properties in the whole index. Key structure: `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. This key structure requires millions of actual facets, which slows down ES too much.
-
 
 ## Problem
 
@@ -222,8 +220,7 @@ The following solutions were evaluated:
 
 [Postgresql CTE](https://www.postgresqltutorial.com/postgresql-cte/) allows managing bulk inserts and updates of huge data amounts, which speeds up the execution of PHP processes.
 
-<details>
-    <summary markdown='span'>SQL query example</summary>
+<details open><summary markdown='span'>SQL query example</summary>
 
 ```sql
 WITH records AS
@@ -291,18 +288,15 @@ UNION ALL
 SELECT inserted.id_pyz_price_product_concrete_group_specific_search
 FROM   inserted;
 ```
-
 </details>
 
-### Price Events Quick Lane
+### Price events quick lane
 
 Prices are published by pushing the corresponding message to the generic event queue. As this queue can hold a lot more messages than just those related to prices, it makes sense to introduce a dedicated queue for publishing only price-related information.
 
 You can configure it by tweaking the Event and EventBehavior modules. Allow the `EventBehavior` Propel behavior to accept additional parameters (except those related to columns). For example, allow it to accept the name of a custom queue, which is used later for pushing messages to the queue. In this case, price events are segregated from all other events and can be processed in parallel without being blocked by other heavier events. Also, this allows to configure different chunk size for the subscriber, resulting in a more optimized usage of CPU and faster processing.
 
-
 To implement this functionality:
-
 
 1. Extend `EventEntityTransfer` with a new field, like `queueName`.
 2. Override `\Spryker\Zed\EventBehavior\Persistence\Propel\Behavior\EventBehavior` and adjust it to be able to accept an additional `queueName` parameter (except those related to columns) through the Propel schema files.
@@ -319,7 +313,7 @@ Ensure that `\Pyz\Zed\EventBehavior\Persistence\Propel\Behavior\ResourceAwareEve
 
 Now you should have a separate event queue for prices. This approach is applicable to any type of event. “Quick lane” ensures that critical data is replicated faster.
 
-### Tweaking Database
+### Tweaking database
 
 With millions of prices in a shop, we needed analytics tools to monitor data consistency in the database. The CSV files, which are the source of price data for analytics, are too big, so it’s hard to process them. That's why we decided to convert them into Postgres database tables.
 
@@ -328,9 +322,6 @@ The Postgres `COPY` command is the fastest and easiest way to do that. This comm
 {% info_block errorBox %}
 
 To convert data successfully, the order of the columns in the database table should reflect the order in the CSV files.
-
-{% endinfo_block %}
-
 
 Example:
 
@@ -350,22 +341,19 @@ then
 fi
 ```
 
-#### Disabling Synchronous Commit
+{% endinfo_block %}
+
+#### Disabling synchronous commit
 
 We were running the analytics at night when there was no intensive activity in our shop. This allowed us to disable synchronous commit to reduce the processing time of the `COPY` operations.
 
 The following line in the previous code snippet disables synchronous commit: `SET synchronous_commit TO OFF;`
-
-
 
 {% info_block errorBox %}
 
 If you disable synchronous commit, make sure to enable it back after you’ve finished importing the files.
 
 {% endinfo_block %}
-
-
-
 
 ### Materialized views for analytics
 
@@ -396,6 +384,7 @@ create index IF NOT exists csv_data_merchant_relationship_prices_net_price ON cs
 3. Compare the views to detect inconsistencies.
 
 ## Conclusion
+
 With the configuration and customizations described in this document, Spryker can hold and manage millions of prices in one instance. RabbitMQ, internal APIs, data import modules and Glue API allow to build a custom data import to:
 
 * Fetch a lot of data from a third-party system

@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Handle case-sensitive file system on Mac OS"
+title: HowTo - Handle case sensitive file-system on Mac OS
 description: Use the guide to change the case-sensitive file system on Mac OS.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -32,7 +32,7 @@ By default Mac OS uses a case-insensitive file system to support compatibility t
 
 Options 1 and 2 will require tampering with an existing hard drive that contains your operating system. Option 3 is the least destructive and requires very little effort.
 
-## Creating the disk image
+## Create the disk image
 
 You can use Mac OS' Disk Utility application to create a disk image. You create a growing image with decent size so we don't waste any hard drive space bit still keep enough room for many projects.
 
@@ -51,11 +51,11 @@ The resulting dialog should look something like as follows:
 
 After the disk has been created, you can see it being mounted in Finder already.
 
-## Copying existing projects
+## Copy existing projects
 
 You can copy all existing projects to the newly created box. If it is not mounted, double-click the disk image file in Finder. After copying all your projects, you can replace your current project directory with the mount-point for the disk image so that you don't have to adjust any paths you already set up. For details, see the following section [Automatically mounting disk image at boot](#automatically-maunting-disc-image-at-boot).
 
-## Automatically mounting disk image at boot
+## Automatically mount disk image at boot
 
 To avoid manually mounting the disk image every time you restart your system, create a Launch Agent that can take care of this.
 
@@ -93,15 +93,14 @@ vim ~Library/LaunchAgents/local.mount-case-sensitive-file-system.plist
 
 Put in some values for `[ABSOLUTE_PATH_TO_DISK_IMAGE]` (for example, `/Users/joeaverage/case-sensitive-file-system.sparseimage`) and `[ABSOLUTE_PATH_TO_MOUNT_POINT]` (for example, `/Users/joeaverage/workspace`). Also, make sure that the `mount-point` folder exists and is empty.
 
-## Configuring PhpStorm
+## Configure PhpStorm
 
 The first time you open one of the projects form the disk-image you may notice a warning about case-sensitive file systems. PhpStorm for Mac OS is configured to work with a case-insensitive file system and reports a warning that if it detects a case-sensitive file system. Unfortunately, there is no way to configure PhpStorm on a per-project level, but you can let PhpStorm know that all your projects will be stored in a case-sensitive file system.
 
-To  let PhpStorm know that all your projects will be stored in a case-sensitive file system, take these steps:
+To let PhpStorm know that all your projects will be stored in a case-sensitive file system, take these steps:
 
 1. In PHPStorm, go to **Help&nbsp;<span aria-label="and then">></span> Edit Custom Properties**.
 2. Add the `idea.case.sensitive.fs=true` option.
 3. Save and close.
 
 For more information, see [Filesystem Case-Sensitivity Mismatch](https://confluence.jetbrains.com/display/IDEADEV/Filesystem+Case-Sensitivity+Mismatch).
- 

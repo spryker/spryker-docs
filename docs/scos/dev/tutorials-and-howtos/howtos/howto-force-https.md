@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Force HTTPS"
+title: "HowTo - Force HTTPS"
 description: Use the guide to configure HTTPs and HTTP for your pages.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -32,13 +32,13 @@ If your servers are behind a load balancer and the load balancer is doing the re
 
 {% endinfo_block %}
 
-## Application configuration
 
-### Force HTTPS for all pages
+Perform the following steps to configure the application to use HTTPS.
 
+## 1. Force HTTPS for all pages
 To force HTTPS on all pages, set `$config[ApplicationConstants::(YVES|ZED)_SSL_ENABLED]` to `true`. The application forces HTTPS on all pages.
 
-Configuration:
+**Configuration**
 
 ```php
 <?php
@@ -56,17 +56,16 @@ Before a controller is resolved, the application checks if the request is secure
 
 {% info_block infoBox "Info" %}
 
-If the request is not secure and not excluded from HTTPS, the application returns a redirect response if the page was requested with HTTP.
-
-If the request is secure and the page is excluded from HTTPS, the application allows requests with HTTP.
+If the request is not secure and not excluded from HTTPS, the application will return a redirect response if the page was requested with HTTP.<br>If the request is secure and the page is excluded from HTTPS, the application will allow requests with HTTP.
 
 {% endinfo_block %}
 
-### Allow pages to use HTTP
+## 2. Allow pages to use HTTP
 
-You can also allow some of your pages not to use HTTPS. To allow some pages to use HTTP you can add them to `$config[ApplicationConstants::(YVES|ZED)_SSL_EXCLUDED]` and only set `$config[ApplicationConstants::(YVES|ZED)_SSL_ENABLED]` to `true`. The key in this array is the route name and the value is the URL.
+You can also allow some of your pages not to use HTTPS. If you want to allow some pages to use HTTP you can add them to `$config[ApplicationConstants::(YVES|ZED)_SSL_EXCLUDED]` and only set `$config[ApplicationConstants::(YVES|ZED)_SSL_ENABLED]` to `true`. The
+ key in this array is the route name and the value is the URL.
 
-Configuration:
+**Configuration**
 
 ```php
 <?php
@@ -96,9 +95,11 @@ The checks for a secure request is made in this order.
 
 ## Trusted proxy configuration
 
+## Trusted proxy configuration
+
 Both applications have a configuration for trusted proxies. To use trusted proxies, configure `$config[ApplicationConstants::(YVES|ZED)_TRUSTED_PROXIES]`.
 
-Configuration:
+**Configuration**
 
 ```php
 <?php

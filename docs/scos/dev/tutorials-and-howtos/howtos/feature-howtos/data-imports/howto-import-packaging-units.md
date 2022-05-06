@@ -48,9 +48,9 @@ The imported packaging unit types appear in the `spy_product_packaging_unit_type
 
 You can import the following product packaging unit information using a CSV file:
 
-* Define a packaging unit for a specific product concrete by populating the `concrete_sku` and `packaging_unit_type_name` fields.
-Both fields are required.
+You can import the following product packaging unit information using a CSV file:
 
+* Define a packaging unit for a specific product concrete by populating the `concrete_sku` and `packaging_unit_type_name` fields. Both fields are required.
 * Define a lead product in the `lead_product_sku` field.
 * Define the default amount (`default_amount`) included in the packaged product
 * Set amount restrictions in the `is_amount_variable` field: `1` if the amount can be changed, and `0` if it cannot be changed.

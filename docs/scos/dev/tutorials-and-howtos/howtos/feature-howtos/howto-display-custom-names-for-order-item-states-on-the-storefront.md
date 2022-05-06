@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Display custom names for order item states on the Storefront"
+title: HowTo - Display custom names for order item states on the Storefront
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-display-custom-names-for-order-item-states-on-the-storefront
@@ -56,9 +56,9 @@ It is possible to have the same display values for different OMS states.
     1. In the **Actions** column, click **Edit**. The **Edit translation** page opens.
     2. Enter translations for the available locales and click **Save**. The **Overview of Translation** page opens, where you can see the translations of the order state for the Storefront.
 
-After taking these steps, on the Storefront, on the **Order Overview** and **Order History** pages, customers see the states that correspond to the values of the `display` parameter you set in XML files of the respective payment methods and sub-processes.
+After taking steps 1-5, on the Storefront, on the **Order Overview** and **Order History** pages, customers see the states that correspond to the values of the `display` parameter you set in XML files of the respective payment methods and sub-processes.
 
-{% info_block infoBox "" %}
+{% info_block infoBox "Info" %}
 
 If you delete the `display` parameter with its value, the OMS state, that is, the one specified in the `state name` parameter, is displayed on the Storefront.
 

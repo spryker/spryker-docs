@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Import warehouse data"
+title: HowTo - Import warehouse data
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-import-warehouse-data
@@ -57,7 +57,6 @@ The imported data should be imported to the `spy_stock` database table and appea
 ## Importing a warehouse with the stores assigned
 
 To import warehouses with the stores assigned:
-
 1. Prepare the `warehouse_store.csv` file containing the following fields:
 
 | PROPERTY | TRANSCRIPTION | EXAMPLE |
@@ -68,22 +67,19 @@ To import warehouses with the stores assigned:
 2. Populate the necessary data and save changes.
 3. Upload the `warehouse_store.csv` file to `StockDataImport/data/import`.
 4. Import the data:
-
-```bash
-console data:import stock-store
-```
+    ```bash
+    console data:import stock-store
+    ```
 
 The imported data should be added to the `spy_stock_store` database table and appear in the Back Office, on the list of warehouses. For more information about how to manage the warehouses, see [Managing warehouses](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/managing-warehouses.html).
 
 ## Importing warehouses with store relation in bulk
 
 You can also import warehouses with the stores assigned in bulk. To do this, follow these steps:
-
-1. Perform steps 2-4 from the previous sections: [Importing Warehouses](#importing-warehouses) and [Importing a Warehouse with the Stores Assigned](importing-a-warehouse-with-the-stores-assigned).
+1. Perform steps 2-4 from the preceding sections: [Importing Warehouses](#importing-warehouses) and [Importing a Warehouse with the Stores Assigned](importing-a-warehouse-with-the-stores-assigned).
 2. Run the following console command:
-
-```bash
-console data:import
-```
+    ```bash
+    console data:import
+    ```
 
 The imported data should appear in the Back Office, on the **Warehouses** page. For more information about how to manage the warehouses, see [Managing warehouses](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/managing-warehouses.html).

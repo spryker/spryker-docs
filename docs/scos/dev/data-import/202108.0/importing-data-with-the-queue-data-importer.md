@@ -24,9 +24,11 @@ Queue data import allows you to import data via message queues. It increases dat
 Also, queue data import allows you to use different import groups.
 
 ## Why do you need it?
+
 Mainly, it is used to import data in parallel. Once data is stored in a queue, it can be consumed by several consumers at a time, thus roughly dividing total import execution time by the number of consumers.
 
 ## How does it work?
+
 Regular data import is done as a single-step process: data is read from a data source and then stored in a persistent storage (usually a database).
 
 Queue data import is designed to be done in two separate steps.
@@ -34,7 +36,7 @@ Queue data import is designed to be done in two separate steps.
 1. Data is relocated from the original data source into the queues. Each resource, like abstract product data, is imported into a dedicated queue without pre-processing.
 2. Data in a queue is consumed and imported into a persistent storage. If you already have data in the queues, skip this part and check [Tutorial - Replacing a default data importer with the queue data importer](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer.html). 
 
-## Exporting data from CSV to queue 
+## Exporting data from CSV to queue
 
 If your provide data in the .CSV format, you can import it to the queues.
 The [DataImport](https://github.com/spryker/data-import) module has classes responsible for providing the preconfigured queue writer instances to the data import facilities. It is configured on the project level.
@@ -200,9 +202,11 @@ Now, product abstract data is stored in the dedicated queue whenever you run
 ```bash
 vendor/bin/console data:import --group=QUEUE_WRITERS
 ```
+
 {% info_block errorBox "Important" %}
 
 Use import groups together with import types. For example, this command is illegal and leads to an exception:
+
 ```bash
 vendor/bin/console data:import:product-abstract --group=QUEUE_WRITERS
 ```

@@ -21,50 +21,54 @@ redirect_from:
   - /v2/docs/en/t-zed-rest-api
   - /v1/docs/t-zed-rest-api
   - /v1/docs/en/t-zed-rest-api
+related:
+  - title: About Facade
+    link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
+  - title: Creating, using, and extending the transfer objects
+    link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html
+  - title: Adding a New Module
+    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html
+  - title: Controllers and Actions
+    link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
+
 ---
 
 <!--used to be: http://spryker.github.io/challenge/zed-restapi/-->
-## Challenge Description
+
 Spryker-based shop exposes module business logic through a simple API in Zed. The API is self-documented and can be easily explored for each module.
 
-**Bonus challenge**
+This tutorial describes how to:
 
 * Create a simple client library to authorize and talk to Zed through API.
 * Extract the controller endpoint from Zed authorization or provide another authorization mechanism.
 
-## Challenge Solving Highlights
-### Preparation
+## Preparation
+
 As a basis for solution, we will use an idea of exposing facade methods through HTTP. Each module provides a stateless public interface, which operates either by using scalar types or transfer objects. We can dynamically examine this API using PHP Reflection and expose it through a Zed controller. This will require to be authorized in Zed, which is fine for a demo challenge, as a bonus challenge one might implement a separate authentication for the API endpoint.
 
-Transfer objects can de-serialised from JSON, this will simplify a transport layer.
+Transfer objects can de-serialized from JSON, this will simplify a transport layer.
 
 {% info_block errorBox %}
+
 Reflection is used here for educational purposes, blindly exposing internal code structure in production might lead to security-related consequences.
+
 {% endinfo_block %}
 
-### Topics involved into solution
 It is advised to recap the following topics before starting the challenge:
 
 * [PHP Reflection](http://php.net/manual/en/book.reflection.php)
-* Facades
-* Transfer objects
+* [Facades](/docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html)
+* [Transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html)
 * [Tutorial - Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html)
-* Controllers in Zed
-
-### Plan of solving the challenge
-
-1. Create a simple Zed module with controller.
-2. Create a business model to examine facade classes using Reflection. This will serve as self-documnted API and will allow helping with it.
-3. Create a business model to examine transfer objects using Reflection.
-4. Implement an “execute” controller action, which will proxy calls to specific methods of a facade and pass all the arguments to it.
-
-## Step by step solution
+* [Controllers in Zed](/docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html)
 
 {% info_block infoBox %}
+
 Code snippets below are stripped of doc strings and comments to minimize footprint, it is advised to always correctly specify method signatures to take advantage of IDE autocompletion.
+
 {% endinfo_block %}
 
-### Step 1: Create a simple Zed Module with controller
+## 1. Create a simple Zed module with controller
 
 Create a new module Api in `Pyz/Zed` scope.
 
@@ -77,6 +81,7 @@ Pyz/Zed
         |__ Controller
             |__ V1Controller.php
 ```
+
 Actions can be empty and just returning some random string.
 
 ```php
@@ -100,9 +105,11 @@ class V1Controller extends AbstractController
     }
 }
 ```
+
 After this step log in to Zed and try opening `http://ZED_HOST/api/v1/doc` and `http://ZED_HOST/api/v1/docTransfer`.
 
-### Step 2: Create a business model to examine facade classes using Reflection
+## 2. Create a business model to examine facade classes using reflection
+
 First, it is needed to create an empty model class `ApiEntry` in the business layer, it can be placed in `Business/Model/ApiEntry.php`.
 
 This class must be created in a factory of the module. Additionally, the factory must provide additional dependencies from facades of other modules. To simplify the solution, facades can be created dynamically based on GET parameters of the request, while in real life it is advised to always specify these dependencies implicitly.
@@ -170,6 +177,7 @@ class ApiFacade extends AbstractFacade implements ApiFacadeInterface
     }
 }
 ```
+
 After this we can call the method from the controller and think about implementing the business logic of the `ApiEntry` class:
 
 ```php
@@ -184,15 +192,17 @@ class V1Controller extends AbstractController
         ];
     }
 ```
+
 And template for this action `Presentation/V1/doc.twig`:
 
-```
+```twig
 {% raw %}{{{% endraw %} dump() {% raw %}}}{% endraw %}
 ```
+
 Now the controller should work, but will return empty values, we can start implementing the business logic. To dynamically read documentation from facade we will use `ReflectionClass` of standard PHP library, the idea is to go through public methods, extract doc-strings and parameter types and render them on the page. This will result in self-documenting API. The final version of the `ApiEntry` for this step will look like:
 
-<details>
-<summary markdown='span'>Code sample:</summary>
+<details open>
+<summary markdown='span'>Code sample</summary>
 
 ```php
 <?php
@@ -261,8 +271,6 @@ class ApiEntry
 
 }
 ```
-
-<br>
 </details>
 
 The resulting structure of the array is following:
@@ -275,12 +283,13 @@ The resulting structure of the array is following:
   ],
 ]
 ```
+
 Now modify template to output the array:
 
-<details>
-<summary markdown='span'>Code sample:</summary>
+<details open>
+<summary markdown='span'>Code sample</summary>
 
-```
+```html
 &lt;html&gt;
     &lt;table border="1"&gt;
         &lt;thead&gt;
@@ -310,17 +319,17 @@ Now modify template to output the array:
     &lt;/table&gt;
 &lt;/html&gt;
 ```
-<br>
 </details>
 
 Open `http://ZED_HOST/api/v1/doc?bundle=customerGroup` to see the results.
 
-### Step 3: Create a business model to examine transfer objects using Reflection
+## 3. Create a business model to examine transfer objects using reflection
+
 Now, let us repeat everything from the previous step, but for a new model TransferAnnotator, which we will use to annotate transfer objects. The model should implement a method public function `annotate($transfer)`, it should be exposed through the facade of the module and used in the `docTransferAction`, which we prepared in the controller.
 
 {% info_block infoBox "Attention" %}
-Transfer objects have a private propery transferMetadata, which describes all the fields, the easiest is to read it for exercise purposes.
-{% endinfo_block %}
+
+Transfer objects have a private property `transferMetadata`, which describes all the fields, the easiest is to read it for exercise purposes.
 
 ```php
 <?php
@@ -341,9 +350,11 @@ class TransferAnnotator implements TransferAnnotatorInterface
 }
 ```
 
-Template doc-transfer.twig:
+{% endinfo_block %}
 
-```
+Template `doc-transfer.twig`:
+
+```html
 &lt;html&gt;
     &lt;table border="1"&gt;
         &lt;thead&gt;
@@ -360,10 +371,12 @@ Template doc-transfer.twig:
     &lt;/table&gt;
 &lt;/html&gt;
 ```
+
 After completing this step we should be able to see transfer object annotation by accessing `http://ZED_HOST/api/v1/docTransfer?transfer=Generated\Shared\Transfer\CustomerGroupTransfer`.
 
-### Step 4: Implement an “execute” controller action, which will proxy calls to specific methods of a facade and pass all the arguments to it
-This step is not directly related to Spryker but to an idea to cast incoming parameters to types based on method signature dynamically and forward a call to respective facade method. The big advantage is that Spryker allows to unserialise transfer objects from JSON, it means, we can just send values for complex objects as JSON objects and those can be automatically cast to transfer objects and be safely used, when calling different facade methods.
+## 4. Implement an “execute” controller action, which will proxy calls to specific methods of a facade and pass all the arguments to it
+
+This step is not directly related to Spryker but to an idea to cast incoming parameters to types based on method signature dynamically and forward a call to respective facade method. The big advantage is that Spryker allows to unserialize transfer objects from JSON, it means, we can just send values for complex objects as JSON objects and those can be automatically cast to transfer objects and be safely used, when calling different facade methods.
 
 Let us extend `ApiEntry` with:
 
@@ -399,7 +412,7 @@ Let us extend `ApiEntry` with:
     }
 ```
 
-Publish this mehthod in the facade of our module and add a controller method to forward the call and render the result of the call. Let us just convert the return values to JSON for simplicity, new methods of `V1Controller` may look like:
+Publish this method in the facade of our module and add a controller method to forward the call and render the result of the call. Let us just convert the return values to JSON for simplicity, new methods of `V1Controller` may look like:
 
 ```php
 <?php
@@ -439,8 +452,9 @@ use Symfony\Component\HttpFoundation\JsonResponse;
     }
 ```
 
-### Testing
-Finally the challenge is finished, now we can finally play with our API, here are a couple of example of calling the facade of the `CustomerGroup` module:
+## Test the API
+
+Finally the challenge is finished, now we can finally play with our API, here are a couple of examples of calling the facade of the `CustomerGroup` module:
 
 ```
 -> http://ZED_HOST/api/v1/execute?bundle=customerGroup&method=add&arguments[customerGroupTransfer]={% raw %}{%{% endraw %}22name%22:%22test98597435%22}
@@ -451,16 +465,5 @@ Finally the challenge is finished, now we can finally play with our API, here ar
 
 <- {"id_customer_group":1,"name":"test","description":null,"customers":{% raw %}{}}{% endraw %}
 ```
-## To sum up
+
 In this challenge we implemented self-documenting API based on a public API of modules, we learned how to use Reflection in PHP, extend Zed, forward calls dynamically to different facades and how Spryker powerful and flexible is regarding public API and boundaries of modules.
-
-## References
-
-|  Documentation| Description |
-| --- | --- |
-|[PHP Reflection](http://php.net/manual/en/book.reflection.php)  |  Reflection in PHP|
-| Facades | Facades in Spryker |
-| Transfer objects | Transfer Objects in Spryker |
-|  [Tutorial - Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html)| Creating a new Module |
-| Controllers in Zed | 	Developing controllers in ZED |
-|  Twig syntax reference| Twig syntax reference |

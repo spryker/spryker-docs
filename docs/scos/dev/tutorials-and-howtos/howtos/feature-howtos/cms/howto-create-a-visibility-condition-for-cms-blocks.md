@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Create a visibility condition for CMS blocks"
+title: HowTo - Create a visibility condition for CMS Blocks
 description: Visibility condition is a tool used to define particular pages in which the content of CMS block is displayed.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -83,7 +83,7 @@ To show the procedure, the following steps walk you through the creation of the 
 ```
 
 2. From the properties available on the product details page, choose the properties which you want to pass to the slot widget. For example, the property values related to user account details (like `age` or `city`) can be fetched from the session.
-   The slot widget with `idProductAbstract`, `isGuest`, `age` and `city` properties looks as follows:
+   The slot widget with `idProductAbstract`, `isGuest`, `age`, and `city` properties looks as follows:
 
 ```twig
 {% raw %}{%{% endraw %} cms_slot 'slt-key' required ['idProductAbstract'] with {
@@ -97,7 +97,8 @@ To show the procedure, the following steps walk you through the creation of the 
 3. Insert it into the product details page template—`@ProductDetailPage/views/pdp/pdp.twig`.
 
 3. Define the new properties for `CmsSlotBlockConditionTransfer` and `CmsSlotParamsTransfer` in `src/Pyz/Shared/CmsSlotBlockCustomer/Transfer/cms_slot_block_customer.transfer.xml`:
-```html
+
+```xml
 <transfer name="CmsSlotParams">
     <property name="isGuest" type="bool"/>
     <property name="age" type="int"/>
@@ -208,7 +209,7 @@ In this case, the created form has five elements:
     }
 ```
 
-1. Add the new plugin to the `\Pyz\Zed\CmsSlotBlockGui\CmsSlotBlockGuiDependencyProvider::getCmsSlotBlockFormPlugins()` plugin list in `CustomerSlotBlockConditionFormPlugin`.
+4. Add the new plugin to the `\Pyz\Zed\CmsSlotBlockGui\CmsSlotBlockGuiDependencyProvider::getCmsSlotBlockFormPlugins()` plugin list in `CustomerSlotBlockConditionFormPlugin`.
 
 {% info_block warningBox "Verification" %}
 
@@ -224,9 +225,7 @@ You should be able to see a rendered form of the customer visibility condition.
 {% endinfo_block %}
 
 5. Select any visibility conditions and take note of them.
-
 6. Click **Save**.
-
 7. In database, check the last added rows in `spy_cms_slot_block.conditions` and `spy_cms_slot_block_storage.data` columns.
 
 {% info_block infoBox %}

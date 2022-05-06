@@ -95,6 +95,7 @@ Adjust the schema definition so entity changes will trigger events.
 
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -344,5 +345,5 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data has been added to the `spy_glossary` table.
 {% endinfo_block %}

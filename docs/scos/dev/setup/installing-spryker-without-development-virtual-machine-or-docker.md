@@ -52,6 +52,7 @@ To install [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [
 * RabbitMQ v3.6+
 
 ### Nginx configuration
+
 #### Nginx configuration for Yves
 
 The following configuration must be included for Yves in the Nginx configuration file.
@@ -219,11 +220,13 @@ If you want to configure the hostname, set the values for Yves and Zed hostnames
  When the installation process is complete, Spryker Commerce OS is ready to use. It can be accessed via the following links:
 
 **B2B Demo Shop:**
+
 * `http://de.b2b-demo-shop.local` - front-end (Storefront);
 * `http://zed.de.b2b-demo-shop.local` - backend (the Back Office).
 * `http://glue.de.b2b-demo-shop.local` - REST API (Glue).
 
 **B2C Demo Shop:**
+
 * `http://de.b2c-demo-shop.local` - front-end (Storefront);
 * `http://zed.de.b2c-demo-shop.local` - backend (the Back Office).
 * `http://glue.de.b2c-demo-shop.local` - REST API (Glue).
@@ -231,4 +234,5 @@ If you want to configure the hostname, set the values for Yves and Zed hostnames
 Credentials to access the administrator interface: user `admin@spryker.com` and password `change123`.
 
 ## Next steps:
+
 * [Troubleshooting installation issues](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html)

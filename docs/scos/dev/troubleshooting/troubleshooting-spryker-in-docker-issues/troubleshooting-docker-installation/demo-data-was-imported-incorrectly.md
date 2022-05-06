@@ -15,10 +15,13 @@ redirect_from:
 ---
 
 ## Description
+
 Demo data was imported incorrectly.
 
 ## Solution
+
 Re-load the demo data:
+
 ```bash
 docker/sdk clean-data && docker/sdk up --data && docker/sdk console q:w:s -v -s
 ```

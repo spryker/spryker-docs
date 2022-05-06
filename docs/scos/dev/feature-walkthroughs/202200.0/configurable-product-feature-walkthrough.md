@@ -7,9 +7,7 @@ template: concept-topic-template
 
 The _Configurable Product_ feature introduces a new type of product that can be customized by customers—a configurable product.
 
-
 To learn more about the feature and to find out how end users use it, see [Configurable Product feature overview](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html) for business users.
-
 
 ## Related Developer articles
 

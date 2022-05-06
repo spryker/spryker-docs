@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Create discounts based on shipment"
+title: HowTo - Create discounts based on shipment
 description: Use the guide to activate a discount rule based on a shipment carrier and add a shipment pre-check plugin to checkout.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -28,7 +28,7 @@ The HowTo guide explains how to do the following:
 * Activate a discount rule based on a shipment carrier, a shipment method or a shipment price.
 * Add a shipment pre-check plugin to checkout.
 
-## Activate a Discount Rule Based on a Shipment Carrier
+## Activate a discount rule based on a shipment carrier
 
 It is possible to create a discount rule based on a shipment carrier, a shipment method or a shipment price.
 
@@ -92,8 +92,7 @@ You are ready to use the shipment discounts.
 
 You can add shipment pre-check plugin to checkout workflow, which checks if the shipment is active in order placing. If it's not, then error message is displayed and a customer gets redirected to the shipment step to select another shipment method.
 
-1. Composer install a new module composer require `spryker/shipment-checkout-connector`. This module provides plugin itself.
-
+1. Composer install a new module composer require `spryker/shipment-checkout-connector`. This module provides the plugin itself.
 2. Add the `\Spryker\Zed\ShipmentCheckoutConnector\Communication\Plugin\Checkout\ShipmentCheckoutPreCheckPlugin` plugin to the checkout dependency provider pre-check plugin stack.
 
 ```php

@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Display product groups by color on the Storefront"
+title: HowTo - Display product groups by color on the Storefront
 description: Procedure to display a product group on Storefront.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -16,10 +16,7 @@ redirect_from:
   - /v6/docs/en/howto-display-product-groups-by-color-on-the-storefront
 ---
 
-
-
 To enhance the visual shopping experience of your customers, you can use product groups. A product group is a group of products logically united by an attribute. You can create product groups, but there is no way to display them on the Storefront by default. This guide shows how to display a product group on the Storefront using the color attribute as an example. The behavior to be configured is described in [Product Groups feature overview](/docs/scos/user/features/202108.0/product-groups-feature-overview.html).
-
 
 ## Prerequisites
 
@@ -44,10 +41,10 @@ Add the `color_code` field to the `spy_product_abstract` table in the database:
 </database>
 ```
 
-
 2. Apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -58,12 +55,9 @@ The `color_code` field has been added to the `spy_product_abstract` table.
 
 {% endinfo_block %}
 
-
 ## Transfer object extension
 
-
 Extend the existing transfer objects to support the newly introduced `colorCode` field:
-
 1. Create or extend the transfer object definition file as follows.
 
 **src/Pyz/Shared/ProductGroup/Transfer/product.transfer.xml**
@@ -89,13 +83,9 @@ Extend the existing transfer objects to support the newly introduced `colorCode`
 ```
 
 2. Generate transfer objects:
-
 ```bash
 console transfer:generate
 ```
-
-
-
 
 {% info_block warningBox "Verification" %}
 
@@ -159,7 +149,6 @@ class ProductAbstractWriterStep extends PublishAwareStep implements DataImportSt
 ## Demo data preparation
 
 Prepare the demo data for the color code field:
-
 1. Add the `color_code` field to the product abstract data import. The provided data below can be used as an example.
 
 **data/import/icecat_biz_data/product_abstract.csv**

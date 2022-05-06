@@ -1,6 +1,6 @@
 ---
-title: "HowTo: Handle graceful shutdown"
-description: Implement a graceful shutdown for your project to make sure the uncompleted processes are not stopped by signals like SIGTERM
+title: HowTo - Handle graceful shutdown
+description: Implement a graceful shutdown for your project to make sure the uncompleted processes are not stopped by signals like SIGTERM.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-handle-graceful-shutdown
@@ -39,13 +39,14 @@ protected function createImportGenerator(Collection $collection): \Generator
     }
 }
 ```
+
 {% info_block infoBox %}
 
 To learn more about the Generators, see the Generators documentation.
 
 {% endinfo_block %}
 
-## Handling exceptions
+## Handle exceptions
 
 To throw an exception into the Generator code, you can use the second argument of the `GracefulRunnerFacadeInterface::run()` method. It’s the class name that should be thrown into the Generator when a signal was handled. The following example explains it in more details:
 

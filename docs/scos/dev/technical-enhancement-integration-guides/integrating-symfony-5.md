@@ -32,6 +32,7 @@ Most of the changes in Symfony 5 are related to changes in `symfony/http-kernel`
 In version 5 of the `symfony/translation` component, some interfaces were extracted into the `symfony/translation-contracts` component. Due to this, we had to refactor some modules that used those interfaces.
 
 ## Integration
+
 To make your project compatible with Symfony 5, update the [Symfony](https://github.com/spryker/symfony) module and all modules that use it:
 
 ```bash
@@ -90,6 +91,7 @@ return static function (ContainerConfigurator $containerConfigurator): void {
     $parameters->set(Option::AUTO_IMPORT_NAMES, true);
 };
 ```
+
 The second configuration we have added:
 
 ```php

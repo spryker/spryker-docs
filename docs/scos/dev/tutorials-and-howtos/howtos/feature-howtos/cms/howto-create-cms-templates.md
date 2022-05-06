@@ -25,14 +25,15 @@ CMS templates are usually project-specific. To create them, some Storefront desi
 
 {% endinfo_block %}
 
-## CMS Page Template
+## CMS page template
 
 CMS page template is a [Twig](https://twig.symfony.com/) file that, when applied to a Storefront page, defines its design and layout.
+
 To learn how the template is created, check the exemplary procedure below.
 
 1. Create the Twig template—`src/Pyz/Shared/Cms/Theme/default/templates/contact_page.twig`:
 
-```html
+```twig
 <h1>CONTACT US </h1>
 <div>
 <strong>  Get in touch </strong>
@@ -129,7 +130,6 @@ Depending on the content item widget you create the template for, make sure to i
 * [ContentProductWidget](https://github.com/spryker-shop/content-product-widget)
 * [ContentProductSetWidget](https://github.com/spryker-shop/content-product-set-widget)
 * [ContentFileWidget](https://github.com/spryker-shop/content-file-widget)
-
 
 {% endinfo_block %}
 

@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Import delivery methods linked to store"
+title: HowTo - Import delivery methods linked to store
 description: Use the guide to learn how to import delivery methods assigned to specific stores in the Back Office.
 last_updated: Jun 16, 2021
 template: howto-guide-template

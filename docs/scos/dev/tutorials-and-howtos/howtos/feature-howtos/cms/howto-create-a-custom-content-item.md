@@ -1,5 +1,5 @@
 ---
-title: "HowTo: create a custom content item"
+title: HowTo - Create a custom content item
 description: If the content items shipped with Spryker do not fulfill your needs, the article will help you to create a new one.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -174,7 +174,6 @@ After enabling the content form plugin, you have your new content item data in S
 
 The method returns `ContentTypeContextTransfer` where `ContentTypeContextTransfer::$parameters` is the data saved by the form created in the previous section.
 
-***
 To create a new Twig plugin, follow these steps:
 1. Using `ContentTypeContextTransfer::$term` and `ContentTypeContextTransfer::$parameters`, fill in the properties of your new content transfer object—for example, `ContentFooTransfer`, in `src/Shared/ContentFoo/Transfer/`.
 2. Create a new module—for example, `src/Yves/ContentFooWidget`.
@@ -249,5 +248,4 @@ class ContentFooContentGuiEditorPlugin extends AbstractPlugin implements Content
         return "{% raw %}{{{% endraw %} content_foo('%KEY%', '%TEMPLATE%') {% raw %}}}{% endraw %}";
     }
 }
-
 ```

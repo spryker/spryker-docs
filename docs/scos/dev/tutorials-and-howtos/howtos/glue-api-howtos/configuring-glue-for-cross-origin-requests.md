@@ -26,9 +26,11 @@ By default, Glue REST API is configured to run using the [same-origin policy](ht
 To enable cross-origin resource sharing in Glue:
 
 ## Prerequisites
+
 To enable CORS support in Glue, follow the Installation Guide.
 
 ## Configuration
+
 CORS is configured in Spryker Glue via environment variables. There are 2 levels where CORS can be configured: global and per-domain. On the global level, CORS is configured for the whole Glue Application. On the **per-domain** level, you can configure CORS behavior for each domain configured in Glue Application separately. For example, you can configure different lists of allowed origins for the `http://glue.de.mysprykershop.com` and `http://glue.at.mysprykershop.com` domains.
 
 {% info_block warningBox %}
@@ -46,6 +48,7 @@ To configure CORS behavior:
 
 1. Open the necessary configuration file depending on which CORS configuration you want to set up.
 2. Modify the value of the `GlueApplicationConstants::GLUE_APPLICATION_CORS_ALLOW_ORIGIN` variable. You can set its value as follows:
+
     * `<null>` - CORS is disabled. Example:
 
     ```php
@@ -67,6 +70,7 @@ To configure CORS behavior:
 3. Save the file.
 
 ## Verification
+
 To verify that the configuration has been completed successfully, make an _OPTIONS_ pre-flight request to any valid Glue resource with the correct Origin header, for example, `http://glue.example.com/`, and make sure that:
 
 * The **Access-Control-Allow-Origin** header is present and is the same as set in the configuration;

@@ -15,9 +15,11 @@ redirect_from:
 ---
 
 ## Description
+
 When running `composer install` or `composer update`, you might get the issue *Failed to decode response: zlib_decode(): data error* .
 
 ## Solution
+
 Change the composer configuration by running `composer config -ge` in the terminal and replacing the configuration with the following one
 
 ```php

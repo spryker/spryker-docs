@@ -25,26 +25,34 @@ redirect_from:
 
  To analyze and fixTS files, [TSLint](https://palantir.github.io/tslint/) is used.
 
-##  Installation
+## Installation
+
 For details on how to install the TS linter for your project, see the [TS linter integration file](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-ts-linter.html).
 
-##  Using TS linter
+## Using TS linter
 
 To execute the TS linter, do the following:
 
 1. Install the Node modules:
+
 ```bash
 npm ci
 ```
+
 2. Execute the TS linter in:
+
 * validation mode:
+
 ```bash
 npm run yves:tslint
 ```
+
 * fix mode:
+
 ```bash
 npm run yves:tslint:fix
 ```
+
 ## TS linter config
 
 The config for tslint resides in `/tslint.json`.
@@ -61,14 +69,18 @@ The TS linter rules related to formatting aren’t included in `tslint.json` to 
 The TS linter is integrated into:
 
 * Pre-commit hooks.
- The function that executes TS linter before the commit resides in `/.githook`
- ```
-- GitHook\Command\FileCommand\PreCommit\TsLintCommand
-```
-* Travis.
-Command to run the TS linter is integrated into `.travis.yml`
+
+The function that executes TS linter before the commit resides in `/.githook`
 
 ```
+- GitHook\Command\FileCommand\PreCommit\TsLintCommand
+```
+
+* Travis.
+
+Command to run the TS linter is integrated into `.travis.yml`
+
+```yml
 - node ./frontend/libs/tslint --format stylish
 ```
 
@@ -77,6 +89,7 @@ Command to run the TS linter is integrated into `.travis.yml`
 If you commit without the pre-commit hooks, you should run the TS linter manually to avoid issues with Travis.
 
 {% endinfo_block %}
+
 {% info_block infoBox %}
 
 Pre-commit hooks weren’t integrated into [B2B](https://github.com/spryker-shop/b2b-demo-shop) and [B2C](https://github.com/spryker-shop/b2c-demo-shop) Demo Shops, only in the [Shop Suite](https://github.com/spryker-shop/suite).

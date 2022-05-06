@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Product data from import to frontend view"
+title: HowTo - Product data from import to front-end view
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-product-data-import-frontend
@@ -24,13 +24,11 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-product-data-from-import-to-front-end-view.html
 ---
 
-{% info_block warningBox "Product Customization" %}
+
 
 This document describes flow of the product data from importing it to the SQL database to showing it in the frontend view.
 
-{% endinfo_block %}
-
-## Importing Products to SQL Database
+## Import products to SQL database
 
 Products are imported in the SQL database through the `Importer` module. The product details are parsed from CSV files, from where they are processed and inserted in the SQL database. This step is done when installing the application, after the database is created, when running the `./setup -i` script.
 
@@ -40,21 +38,21 @@ The products can also be imported separately, by running the dedicated command b
 vendor/bin/console data:import:product-abstract
 ```
 
-In the Demoshop we import abstract (`product_abstract.csv`) and concrete (`product_concrete.csv`) products separately. The first line in the CSV files describes the structure of the entries stored in database.
+In the Demoshop we import abstract (`product_abstract.csv`) and concrete (`product_concrete.csv`) products separately. The first line in the CSV files describes the structure of the entries stored in the database.
 
-Both abstract and concrete products have some attributes that are localized and non-localized. In the csv files the localized attributes contains the locales as suffix, such as `abstract_sku` which is a non-localized attribute of the product or `name.en_US` which is the localized name of the product.
+Both abstract and concrete products have some attributes that are localized and non-localized. In the CSV files the localized attributes contain the locales as suffix, such as `abstract_sku` which is a non-localized attribute of the product or `name.en_US` which is the localized name of the product.
 
-There are also several fields such as `attribute_key_1` and `value_1` which represent a non-localized product attribute and it’s value. Localized product attributes also contain the locales as a suffix in the header of the csv file. These product attributes are stored in json format in the database as key-value pairs.
+There are also several fields such as `attribute_key_1` and `value_1` which represent a non-localized product attribute and it’s value. Localized product attributes also contain the locales as a suffix in the header of the CSV file. These product attributes are stored in json format in the database as key-value pairs.
 
 ### Load Products Into the Redis Data Store
-To have this data available on frontend, we must collect it and export to Redis; Yves has no connection to the SQL database and it retrieves the product information through the Redis and Elasticsearch data stores.
+To have this data available on frontend, you must collect it and export to Redis. Yves has no connection to the SQL database and it retrieves the product information through the Redis and Elasticsearch data stores.
 The export is done by the collectors. You can manually execute the export to the key-value data stores by running the following command from console:
 
 ```bash
 vendor/bin/console collector:storage:export
 ```
 
-### Display Product Information in Frontend
+### Display product information in frontend
 
 Now that we have the data in the key-value storage, we are able to show the product details in the frontend views.
 
@@ -63,6 +61,7 @@ When requesting a page in frontend, the `Collector` module takes care of identif
 It also takes care of routing the request to the correct controller action.
 
 **Example:**
+
 When in Demoshop we request this page: `/en/canon-1200d-+-efs-1855mm-89`, the `StorageRouter` will try to find the route for this request. This is done in the `StorageRouter::match($pathInfo)` operation.
 
 The `UrlMatcher` will get the URL details for this request; it will decode the URL and generate a key and it will try to retrieve the value for this key from Redis:
@@ -79,7 +78,7 @@ In Demoshop, product details requests are routed to `ProductController::detailAc
 
 You can find the view associated with this controller action under `Pyz\Yves\Product\Theme\demoshop\product\detail.twig`.
 
-```php
+```twig
 {% raw %}{%{% endraw %} extends "@application/layout/layout.twig" {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
@@ -90,13 +89,13 @@ You can find the view associated with this controller action under `Pyz\Yves\Pro
 
 In the example above, when rendering the product details page, we’ll be able to see the name and description of the product.
 
-## Adding New Attributes to a Product
+## Add new attributes to a product
 
 Adding a new attribute to a product can be done very easy, without having to make many changes.
 
-Let’s consider that we want to add a waterproof attribute to abstract products that have associated boolean values.
+Let’s consider that we want to add a *waterproof* attribute to abstract products that have associated boolean values.
 
-In the `product_abstract.csv` file, add the “waterproof” key to one of the already defined and yet empty `attribute_key_x` (where **"x"** is a number) field and the desired value to its related `value_x` field. If there’s no empty product attribute key-value field for the product you’d like to edit, then you can simply introduce a new column in the csv with the same pattern.
+In the `product_abstract.csv` file, add the *waterproof* key to one of the already defined and yet empty `attribute_key_x` (where **"x"** is a number) field and the desired value to its related `value_x` field. If there’s no empty product attribute key-value field for the product you’d like to edit, then you can simply introduce a new column in the CSV with the same pattern.
 
 The process of importing products can only happen once so in order to re-import every product we’ll need to reset the data stores and reinstall it with the following command:
 

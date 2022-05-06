@@ -1,5 +1,5 @@
 ---
-title: File details- discount_store.csv
+title: File details - discount_store.csv
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-discount-storecsv
@@ -11,27 +11,35 @@ redirect_from:
   - /docs/en/file-details-discount-storecsv
 ---
 
-This article contains content of the **discount_store.csv** file to configure Discount Store information on your Spryker Demo Shop.
+This document describes the `discount_store.csv` file to configure Discount Store information in your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
-These are the header fields to be included in the .csv file:
+To import the file, run:
 
-| Field Name | Mandatory | Type | Other Requirements/Comments | Description |
+```bash
+data:import:discount-store
+```
+
+## Import file parameters
+
+The file should have the following parameters:
+
+| PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| **discount_key** | Yes | String |`discount_key` must be included in the *discount.csv* file. |  |
-| **store_name** | Yes | String |N/A* | Name of the store to which the discount applies. |
-*N/A: Not applicable.
+| discount_key | &check; | String |`discount_key` must be included in the `discount.csv` file. |  |
+| store_name | &check; | String |  | Name of the store to which the discount applies. |
 
-## Dependencies
+## Import file dependencies
 
 This file has the following dependencies:
-*     [discount.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html)
-*     *stores.php* configuration file of the demo shop PHP project
 
-## Template File & Content Example
-A template and an example of the *discount_store.csv*  file can be downloaded here:
+* [discount.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html)
+* *stores.php* configuration file of the demo shop PHP project
 
-| File | Description |
+## Import template file and content example
+
+Find the template and an example of the file below:
+
+| FILE | DESCRIPTION |
 | --- | --- |
-| [discount_store.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Discounts/Template+discount_store.csv) | Discount Store .csv template file (empty content, contains headers only). |
-| [discount_store.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Discounts/discount_store.csv) | Discount Store .csv file containing a Demo Shop data sample. |
+| [discount_store.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Discounts/Template+discount_store.csv) | Exemplary import file with headers only. |
+| [discount_store.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Discounts/discount_store.csv) | Exemplary import file with Demo Shop data. |

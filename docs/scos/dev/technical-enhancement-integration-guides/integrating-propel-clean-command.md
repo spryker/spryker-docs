@@ -27,17 +27,17 @@ When working with a remote database, you might have insufficient permissions to 
 
 ## Integration
 
-### Install Feature Core
+### Install feature core
 
 #### Prerequisites
 
 Ensure that the related features are installed:
 
-| Name | Version | Required sub-feature |
+| NAME | VERSION | REQUIRED SUB-FEATURE |
 | --- | --- | --- |
-| Spryker Core | 201907.0 | [Feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{site.version}} | [Feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 
-#### 1)Install the Required Modules Using Composer
+#### 1)Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
@@ -49,15 +49,15 @@ composer require spryker/propel:"^3.10.0" --update-with-dependencies
 
 Make sure that the following module has been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-|  `Propel ` |  `vendor/spryker/propel ` |
+|  Propel |  vendor/spryker/propel |
 
 {% endinfo_block %}
 
-#### 2) Set Up Behavior
+#### 2) Set up behavior
 
-Clean up codeception configuration by deleting  `SetupHelper ` from all codeception configuration files:
+Clean up codeception configuration by deleting `SetupHelper` from all codeception configuration files:
 
 ```shell
 - \SprykerTest\Shared\Application\Helper\SetupHelper
@@ -65,13 +65,13 @@ Clean up codeception configuration by deleting  `SetupHelper ` from all codecept
 
 {% info_block infoBox %}
 
-Use  `SprykerTest\Shared\Testify\Helper\DataCleanupHelper ` instead to clean up data after each test that can intersect with other tests.
+Use `SprykerTest\Shared\Testify\Helper\DataCleanupHelper` instead to clean up data after each test that can intersect with other tests.
 
 {% endinfo_block %}
 
-Enable the  `DatabaseDropTablesConsole ` console command in  `Pyz\Zed\Console\ConsoleDependencyProvider `:
+Enable the `DatabaseDropTablesConsole` console command in `Pyz\Zed\Console\ConsoleDependencyProvider`:
 
-src/Pyz/Zed/Console/ConsoleDependencyProvider.php
+**src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 
 ```php
     <?php
@@ -93,9 +93,8 @@ src/Pyz/Zed/Console/ConsoleDependencyProvider.php
 {% info_block infoBox %}
 
 * Spryker\Zed\Propel\Communication\Console\DatabaseExportConsole is deprecated.
-
 * Spryker\Zed\Propel\Communication\Console\DatabaseImportConsole is deprecated.
 
 {% endinfo_block %}
 
-Run  `vendor/bin/console ` and make sure the  `propel:tables:drop ` command is in the list.
+Run `vendor/bin/console` and make sure the `propel:tables:drop` command is in the list.

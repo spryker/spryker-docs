@@ -41,7 +41,7 @@ use Spryker\Glue\MerchantProductsRestApi\Plugin\CartsRestApi\MerchantProductCart
 class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvider
 {
     /**
-     * @return array<\Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\CartItemExpanderPluginInterface>
+     * @return \Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\CartItemExpanderPluginInterface[]
      */
     protected function getCartItemExpanderPlugins(): array
     {

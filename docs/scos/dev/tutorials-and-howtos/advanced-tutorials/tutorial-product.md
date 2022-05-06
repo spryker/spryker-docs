@@ -21,51 +21,43 @@ redirect_from:
   - /v2/docs/en/t-product-challenge
   - /v1/docs/t-product-challenge
   - /v1/docs/en/t-product-challenge
+related:
+  - title: Extending the core
+    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html
+  - title: About the Persistence layer
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
+  - title: Using translations
+    link: docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-using-translations.html
 ---
 
 <!-- used to be: http://spryker.github.io/onboarding/product/ -->
 
-## Challenge Description
-Add information to the products regarding the country where the product is being produced—for example: Made in “China”. Don’t add this information as an attribute.
 
-Display this information on the product details page in Yves.
+This tutorial shows how to add information to products regarding the country where the product was manufactured (for example, Made in "China") and display it on the product details page rather than just adding it as an attribute.
 
 **Bonus challenge**: Add a glossary key for “Made in”. Show this string translated in the product detail page.
 
-## Challenge Solving Highlights
-### ProductCountry module (Zed)
-Create the `ProductCountry` module located in `src/Zed`.
+## ProductCountry module (Zed)
 
-Create the `ProductCountry` table under the persistence layer.
+1. Create the `ProductCountry` module located in `src/Zed`.
+2. Create the `ProductCountry` table under the persistence layer.
+3. After defining the new table, run the database migration and check that the table was added to your database.
 
-After defining the new table, run the database migration(`console propel:install`) and check that the table was added to your database.
+```bash
+console propel:install
+```
 
-Implement query by product ID and query by country ID under the persistence layer.
-
-Implement `ProductCountryManager` and add the facade call. Implement `ProductCountryBusinessFactory`.
-
-Implement the operations under `ProductCountryFacade`.
-
-Manually add values to table in order to have relations between abstract products and countries (for testing few products would be enough).
+4. Implement query by product id and query by country id under the persistence layer.
+5. Implement `ProductCountryManager` and add the facade call. Implement `ProductCountryBusinessFactory`.
+6. Implement the operations under `ProductCountryFacade`.
+7. Manually add values to table in order to have relations between abstract products and countries (for testing few products would be enough).
 
 ### Collector module (Zed)
-Update the query that aggregates the product data and aggregation/processing logic.
 
-Add `product_country` to the data set that goes to Redis.
-
-Run the collectors to bring data to Redis.
+1. Update the query that aggregates the product data and aggregation/processing logic.
+2. Add `product_country` to the data set that goes to Redis.
+3. Run the collectors to bring data to Redis.
 
 ### Product module (Yves)
+
 Update the Twig template that shows the product details (`src/Pyz/Yves/Product/Theme/default/product/detail.twig`) so that it also shows where the product is being produced.
-
-## References
-
-| Documentation | Description |
-| --- | --- |
-|  Core Extension| How to extend Spryker Core |
-| Collector | Collector module documentation |
-| Touch | Touch module documentation |
-| Database Schema Definition | Defining the database Schema using Propel |
-| Persistence Layer | Persistence layer overview |
-| Product | Product module documentation |
-| [Using Translations](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-using-translations.html) |Using translations in Yves  |

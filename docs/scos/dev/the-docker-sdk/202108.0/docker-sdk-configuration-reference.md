@@ -14,8 +14,7 @@ redirect_from:
 
 This document is a quick reference for the most common configuration options of the Docker SDK.
 
-The configuration parameters in this document are examplary. You may need to adjust them per your project requirements.
-
+The configuration parameters in this document are exemplary. You may need to adjust them per your project requirements.
 
 
 ## Configuring Opcache

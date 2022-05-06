@@ -27,8 +27,8 @@ redirect_from:
   - /docs/scos/dev/setup/system-requirements.html
 ---
 
-| Requirement | Value|
-| ----------------------------------------- | ------------------------------------------------------------ |
+| REQUIREMENT | VALUE |
+| ----------------- | ----------------------- |
 | OS                          | <ul><li>Native: Linux</li><li>DevVM: MacOS and Windows</li></ul>  |
 | **Web Server**                                | NginX - preferred. But any webserver which supports PHP will work such as lighttpd, Apache, Cherokee. |
 | **Databases**                             | Depending on the project, one of the databases: MariaDB >= 10.4 - preferred, PostgreSQL >=9.6, or MySQL >=5.7. |
@@ -43,9 +43,8 @@ redirect_from:
 |**NPM**| Version >= 6.9.0 |
 |**Intranet**| Back Office application (Zed) must be secured in an Intranet (using VPN, Basic Auth, IP Allowlist, DMZ, etc.) |
 
-
-
 ### Supported browsers
+
 The Spryker Commerce OS supports the following browsers for all frontend-related projects/products ([B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html), [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html), [Master Suite](/docs/scos/user/intro-to-spryker/master-suite.html)):
 
 | Desktop (Yves and Zed) | Mobile (Yves only) | Tablet (Yves only) |

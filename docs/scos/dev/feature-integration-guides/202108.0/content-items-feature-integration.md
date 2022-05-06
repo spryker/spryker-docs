@@ -105,6 +105,7 @@ Ensure that the following modules have been installed in `vendor/spryker`:
 2. Apply database changes and generate changes for entities and transfers:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

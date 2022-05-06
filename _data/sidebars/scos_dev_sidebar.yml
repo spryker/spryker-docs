@@ -2799,6 +2799,8 @@ entries:
     include_versions:
     - "202005.0"
     - "202009.0"
+    - "202108.0"
+    - "202204.0"
     nested:
     - title: Importing data with a configuration file
       url: /docs/scos/dev/data-import/importing-data-with-a-configuration-file.html

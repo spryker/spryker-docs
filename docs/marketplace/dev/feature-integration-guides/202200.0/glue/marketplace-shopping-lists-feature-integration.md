@@ -1,35 +1,32 @@
 ---
-title: "Glue API: Shopping Lists feature integration" 
-last_updated: Apr 13, 2022 
-description: This document describes how to integrate the Shopping lists feature into a Spryker project.
+title: "Glue API: Marketplace Shopping Lists feature integration"
+last_updated: May 5, 2022
+description: This document describes how to integrate the Shopping Lists feature API into a Spryker project.
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Marketplace Shopping Lists feature into a Spryker
+This document describes how to integrate the Marketplace Shopping Lists feature API into a Spryker
 project.
 
 ## Install feature core
 
-Follow the steps below to install Marketplace Shopping Lists Glue API feature core.
+Follow the steps below to install Marketplace Shopping Lists API feature core.
 
 ### Prerequisites
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE | 
-| - | - | - | 
+| NAME | VERSION | INTEGRATION GUIDE |
+| - | - | - |
 | Spryker Core | {{page.version}} |  [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html)
-| Marketplace Shopping Lists | {{page.version}} | [Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shopping-lists-feature-integration.html)
+| Marketplace Shopping Lists | {{page.version}} | [Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-shopping-lists-feature-integration.html)
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker/merchant-product-offer-shopping-lists-api
-composer require spryker/merchant-product-shopping-lists-api
-composer require spryker/product-offer-shopping-lists-rest-api
+composer require spryker/merchant-product-offer-shopping-lists-api require spryker/merchant-product-shopping-lists-api require spryker/product-offer-shopping-lists-rest-api
 ```
 
 {% info_block warningBox "Verification" %}
@@ -38,7 +35,6 @@ Make sure that the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 |-|-|
-
 | MerchantProductOfferShoppingListsRestApi | vendor/spryker/merchant-product-offer-shopping-lists-api |
 | MerchantProductShoppingListsRestApi | vendor/spryker/merchant-product-shopping-lists-api |
 | ProductOfferShoppingListsRestApi | vendor/spryker/product-offer-shopping-lists-rest-api |
@@ -57,28 +53,25 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER | TYPE | EVENT | PATH | 
-|-|-|-|-| 
-| RestShoppingListItemsAttributes.productOfferReference | property | Created | src/Generated/Shared/Transfer/RestShoppingListItemsAttributesTransfer.php | 
-| MerchantProductOfferShoppingListsRestApi.productOfferReference | property | Created | src/Generated/Shared/Transfer/RestShoppingListItemsAttributesTransfer.php | 
-| MerchantProductOfferShoppingListsRestApi.merchantReference | property | Created | src/Generated/Shared/Transfer/RestShoppingListItemsAttributesTransfer.php | 
+| TRANSFER | TYPE | EVENT | PATH |
+|-|-|-|-|
+| RestShoppingListItemsAttributes.productOfferReference | property | Created | src/Generated/Shared/Transfer/RestShoppingListItemsAttributesTransfer.php |
+| MerchantProductOfferShoppingListsRestApi.productOfferReference | property | Created | src/Generated/Shared/Transfer/RestShoppingListItemsAttributesTransfer.php |
+| MerchantProductOfferShoppingListsRestApi.merchantReference | property | Created | src/Generated/Shared/Transfer/RestShoppingListItemsAttributesTransfer.php |
 | MerchantProductShoppingListsRestApi.merchantReference | property | Created | src/Generated/Shared/Transfer/RestShoppingListItemsAttributesTransfer.php |
 
 {% endinfo_block %}
 
-### 3) Setup necessary plugins
+### 3) Set up plugins for the ability to load additional relations in the shopping list items resource
 
-#### Set up plugins for the ability to load additional relations in shopping list items resource
-
-
-| PLUGIN | SPECIFICATION                                                                             | PREREQUISITES | NAMESPACE |
-| ----------- |-------------------------------------------------------------------------------------------| ------------- | ------------- |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|-|-|-|-|
 | MerchantByMerchantReferenceResourceRelationshipPlugin | Adds `merchant` resources as relationship by Product Offer reference.                     |   | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
-| ProductOfferAvailabilitiesByProductOfferReferenceResourceRelationshipPlugin | Adds `product offer availabilities` resources as relationship by Product Offer reference. |   | Spryker\Glue\ProductOfferAvailabilitiesRestApi\Plugin\GlueApplication |
-| ProductOffersByProductOfferReferenceResourceRelationshipPlugin | Adds `product offers` resources as relationship by Product Offer reference.               |   | Spryker\Glue\ProductOffersRestApi\Plugin\GlueApplication |
-| ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin | Adds `product offer prices` resources as relationship by Product Offer reference.         |   | Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication |
+| ProductOfferAvailabilitiesByProductOfferReferenceResourceRelationshipPlugin | Adds `product offer availabilities` resources as relationship by the Product Offer reference. |   | Spryker\Glue\ProductOfferAvailabilitiesRestApi\Plugin\GlueApplication |
+| ProductOffersByProductOfferReferenceResourceRelationshipPlugin | Adds `product offers` resources as relationship by the Product Offer reference.               |   | Spryker\Glue\ProductOffersRestApi\Plugin\GlueApplication |
+| ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin | Adds `product offer prices` resources as relationship the by Product Offer reference.         |   | Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication |
 
-**src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
+<details><summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -124,11 +117,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 }
 ```
 
+</details>
+
 {% info_block warningBox "Verification" %}
 
-1. Make sure that Merchant and Offer references are present by sending POST request to http://glue.de.spryker.local/shopping-lists/{shoppingListReference}/shopping-list-items
-<details>
-<summary markdown='span'>Example request data</summary>
+1. Make sure that merchant and offer references are present by sending the `POST` request to `https://glue.mysprykershop.com/shopping-lists/{shoppingListReference}/shopping-list-items`
+
+Request sample:
 
 ```json
 {
@@ -142,7 +137,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-<summary markdown='span'>Example expected data</summary>
+
+Response sample:
 
 ```json
 {
@@ -156,19 +152,16 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
       "sku": "204_29851280"
     },
     "links": {
-      "self": "http://glue.de.spryker.local/shopping-lists/cf032865-d1ad-5e27-803a-423bd15ced66/shopping-list-items/5eb9f15f-f127-5929-89ed-c240b41f888e"
+      "self": "https://glue.mysprykershop.com/shopping-lists/cf032865-d1ad-5e27-803a-423bd15ced66/shopping-list-items/5eb9f15f-f127-5929-89ed-c240b41f888e"
     }
   }
 }
 ```
 
-</details>
+2. Make sure that product offers, product concrete availabilities, product offers' availabilities and merchants are loaded by sending the `GET` request to
+   `https://glue.mysprykershop.com/shopping-lists/{shoppingListReference}?include=concrete-products,shopping-list-items,product-offers,product-offer-availabilities,concrete-product-availabilities,merchants`
 
-2. Make sure that Product Offers, Product Concrete availabilities, Product Offers availabilities and Merchants are loaded by sending GET request to
-   http://glue.de.spryker.local/shopping-lists/{shoppingListReference}?include=concrete-products,shopping-list-items,product-offers,product-offer-availabilities,concrete-product-availabilities,merchants
-<details>
-
-<summary markdown='span'>Example expected data fragment</summary>
+<details><summary markdown='span'>Response data example with included concrete products, shopping list items, product offers, product offer availabilities, concrete product availabilities, and merchants:</summary>
 
 ```json
 {
@@ -183,7 +176,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
          "createdAt": "2022-02-14 15:10:08.000000"
       },
       "links": {
-         "self": "http://glue.de.spryker.local/shopping-lists/cf032865-d1ad-5e27-803a-423bd15ced66?include=concrete-products,shopping-list-items,product-offers,product-offer-availabilities,concrete-product-availabilities,merchants"
+         "self": "https://glue.mysprykershop.com/shopping-lists/cf032865-d1ad-5e27-803a-423bd15ced66?include=concrete-products,shopping-list-items,product-offers,product-offer-availabilities,concrete-product-availabilities,merchants"
       },
    },
    "included": [
@@ -196,7 +189,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             "quantity": "0.0000000000"
          },
          "links": {
-            "self": "http://glue.de.spryker.local/concrete-products/134_29759322/concrete-product-availabilities"
+            "self": "https://glue.mysprykershop.com/concrete-products/134_29759322/concrete-product-availabilities"
          }
       },
 
@@ -209,7 +202,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             "quantity": "1.0000000000"
          },
          "links": {
-            "self": "http://glue.de.spryker.local/concrete-products/204_29851280/concrete-product-availabilities"
+            "self": "https://glue.mysprykershop.com/concrete-products/204_29851280/concrete-product-availabilities"
          }
       },
       {
@@ -239,7 +232,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             "categories": []
          },
          "links": {
-            "self": "http://glue.de.spryker.local/merchants/MER000006"
+            "self": "https://glue.mysprykershop.com/merchants/MER000006"
          }
       },
       {
@@ -251,7 +244,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             "quantity": "0.0000000000"
          },
          "links": {
-            "self": "http://glue.de.spryker.local/product-offers/offer360/product-offer-availabilities"
+            "self": "https://glue.mysprykershop.com/product-offers/offer360/product-offer-availabilities"
          }
       }
    ]
@@ -259,10 +252,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 ```
 
 </details>
+
 {% endinfo_block %}
 
 ## Related features
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE | 
-| - | - | - | 
-| Merchant Portal - Marketplace Shopping Lists feature integration| | [Merchant Portal - Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-shopping-lists-feature-integration.html)|
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| - | - | - |
+| Merchant Portal - Marketplace Shopping Lists feature integration| | [Merchant Portal - Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-shopping-lists-feature-integration.html) |

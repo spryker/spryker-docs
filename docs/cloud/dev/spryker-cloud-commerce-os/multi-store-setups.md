@@ -8,13 +8,13 @@ This document describes the multi-store setups supported by Spryker Cloud Commer
 
 Currently, the following setups are available:
 
-* Separated: a codebase with separate databases.
-* Shared: a codebase with a shared database.
+* Separated: a codebase with dedicated databases per store.
+* Shared: a codebase with all the stores sharing a database.
 
 
 ## Shared setup
 
-With the separated setup, all the stores share a single database and codebase. It is the standard Spryker setup.
+With the shared setup, all the stores share a single database and codebase. It is the standard Spryker setup.
 
 
 ![shared setup diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/multi-store-setups.md/shared-setup.png)
@@ -31,17 +31,19 @@ We recommend this setup for the stores that can be described as follows:
 
 * Insignificant differences are covered in the code, for example, using code-buckets.
 
-### Shared setup: Details
+* Stores are scaled together and don't need different deployment workflows.
+
+### Shared setup: Advantages
 
 The shared setup features:
 
 * Products, customers, orders, and so on are stored in the same database, which simplifies collaborative management.
 
-* Applications are not scaled or deployed independently since all cloud resources are shared. This setup is much more cost effective if you don’t need to separate workflows.
+* All the stores are deployed together, which is the most cost-effective solution.
 
-    * All stores are hosted in a single AWS region.
+* All stores are hosted in the same AWS region.
 
-    * Shared traffic distribution for all stores using ALB+NLBs.
+* Shared traffic distribution for all stores using ALB+NLBs.
 
 * SSL certificates are generated automatically or managed manually in AWS.
 
@@ -53,12 +55,9 @@ The shared setup features:
 
 * On-demand setup of any type of environment: test, staging, and so on.
 
-
-
-
 ## Separated setup
 
-With the separated setup, each store has a dedicated database and codebase.
+With the separated setup, store share the same codebase but have dedicated databases.
 
 ![separated setup diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/multi-store-setups.md/separated-setup.png)
 
@@ -67,44 +66,30 @@ With the separated setup, each store has a dedicated database and codebase.
 
 We recommend this setup for the stores that can be described as follows:
 
-* The stores are completely different from the perspective of:
+* The stores are completely different from the perspective of the following:
 
-    * design
+    * Design
 
-    * business logic
+    * Business logic
 
-    * features or modules
+    * Features or modules
 
 * Independent maintenance and development: each store is handled by a dedicated team with its development workflow and release cycles.
 
 * Separated data management for products, customers, orders, and so on. Data sharing and synchronization requires external systems.
 
 
-### Separated setup: Details
+### Separated setup: Advantages
 
 
 The separated setup features:
 
-* Flexible but expensive scaling and deployment:
-
-    * Stores can be hosted in different AWS regions. For example, US store in N. Virginia and DE store in Frankfurt.
-
-    * Independent traffic distribution for every store using ALBs ([application load balancers](application load balancers)) and NLBs ([network load balancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/introduction.html)).
-
-* SSL certificates are generated automatically or managed manually in AWS.
-
-    * SSL termination process is handled by ALB.
-
-    * We can assign multiple certificates of different domains to one ALB.
+* Flexible deployment and scaling: since stores are independent of one another, deploy, remove, and scale each store without affecting other stores.
 
 * Several CI/CD(continuous integration/continuous delivery) pipelines are shipped for every store by default.
 
-* On-demand setup of any type of environment: test, staging, and so on.
+* Better control over expenses of each store.
 
-* Better control over expenses of each separate store.
+* Flexible URL management. For example, you can solve the uniqueness issue with URLs.
 
-* Flexibility of domain management. For example, you can solve the uniqueness issue with URLs.
-
-* Flexibility of managing the configuration of stores: distinct category navigation, product schema details, and users.
-
-* Each store is independent of one another.
+* Flexible management of the configuration of stores: distinct category navigation, product schema details, and users.

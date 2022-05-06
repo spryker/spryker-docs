@@ -75,8 +75,12 @@ console data:import stock-store
 
 The imported data should be added to the `spy_stock_store` database table and appear in the Back Office, on the list of warehouses. For more information about how to manage the warehouses, see [Managing warehouses](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/managing-warehouses.html).
 
-## Importing Warehouses with Store Relation in Bulk
-You can also import warehouses with the stores assigned in bulk. To do this, perform the steps 2-4 from the previous sections: [Importing Warehouses](#importing-warehouses) and [Importing a Warehouse with the Stores Assigned](importing-a-warehouse-with-the-stores-assigned). Then, run the following console command:
+## Importing warehouses with store relation in bulk
+
+You can also import warehouses with the stores assigned in bulk. To do this, follow these steps:
+
+1. Perform steps 2-4 from the previous sections: [Importing Warehouses](#importing-warehouses) and [Importing a Warehouse with the Stores Assigned](importing-a-warehouse-with-the-stores-assigned).
+2. Run the following console command:
 
 ```bash
 console data:import

@@ -26,7 +26,7 @@ redirect_from:
 
 {% info_block warningBox "Product Customization" %}
 
-This document describes flow of the product data from importing it to the SQL database to showing it in the front-end view.
+This document describes flow of the product data from importing it to the SQL database to showing it in the frontend view.
 
 {% endinfo_block %}
 
@@ -47,18 +47,18 @@ Both abstract and concrete products have some attributes that are localized and 
 There are also several fields such as `attribute_key_1` and `value_1` which represent a non-localized product attribute and it’s value. Localized product attributes also contain the locales as a suffix in the header of the csv file. These product attributes are stored in json format in the database as key-value pairs.
 
 ### Load Products Into the Redis Data Store
-To have this data available on front-end, we must collect it and export to Redis; Yves has no connection to the SQL database and it retrieves the product information through the Redis and Elasticsearch data stores.
+To have this data available on frontend, we must collect it and export to Redis; Yves has no connection to the SQL database and it retrieves the product information through the Redis and Elasticsearch data stores.
 The export is done by the collectors. You can manually execute the export to the key-value data stores by running the following command from console:
 
 ```bash
 vendor/bin/console collector:storage:export
 ```
 
-### Display Product Information in Front-end
+### Display Product Information in Frontend
 
-Now that we have the data in the key-value storage, we are able to show the product details in the front-end views.
+Now that we have the data in the key-value storage, we are able to show the product details in the frontend views.
 
-When requesting a page in front-end, the `Collector` module takes care of identifying the type of request (if it is a product details page or a category page) and retrieves necessary data from Redis.
+When requesting a page in frontend, the `Collector` module takes care of identifying the type of request (if it is a product details page or a category page) and retrieves necessary data from Redis.
 
 It also takes care of routing the request to the correct controller action.
 

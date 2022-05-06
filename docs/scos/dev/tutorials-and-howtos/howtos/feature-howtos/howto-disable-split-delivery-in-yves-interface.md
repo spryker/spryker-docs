@@ -24,10 +24,8 @@ related:
 
 Sometimes payment service providers do not support multiple shipments for the same order, which contradicts the essence of the Split Delivery feature. In this case, you can disable the Split Delivery feature in the Checkout process, however, it will still work in the Back Office.
 
-**To disable the feature for the Checkout process in Yves**, do the following:
-
- 1. Open the `\Pyz\Shared\Shipment\ShipmentConfig.php` file.
-
+To disable the feature for the Checkout process in Yves, do the following:
+1. Open the `\Pyz\Shared\Shipment\ShipmentConfig.php` file.
 2. Change the `isMultiShipmentSelectionEnabled()` to return false:
 
 ```php
@@ -54,4 +52,4 @@ class ShipmentConfig extends SprykerShipmentConfig
 }
 ```
 
-3. Save the changes.
+3. Save your changes.

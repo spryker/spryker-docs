@@ -20,7 +20,7 @@ To start feature integration, integrate the required features:
 | - | - | - | 
 | Spryker Core | {{page.version}} |  [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html)
-| Marketplace Shopping Lists | {{page.version}} | [Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-shopping-lists-feature-integration.html)
+| Marketplace Shopping Lists | {{page.version}} | [Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shopping-lists-feature-integration.html)
 
 ### 1) Install the required modules using Composer
 

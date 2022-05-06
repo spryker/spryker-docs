@@ -123,6 +123,11 @@ entries:
             include_versions:
             - "202108.0"
 
+          - title: Marketplace Products Search Widget
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-products-search-widget-feature-walkthrough.html
+            include_versions:
+            - "202200.0"
+
           - title: Persistence ACL
             url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html
             include_versions:

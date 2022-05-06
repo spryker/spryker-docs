@@ -12,11 +12,11 @@ The following diagram illustrates the dependencies between the modules for the *
 
 ![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/9c1ca47c-0a5e-4727-a602-65873f92d571.png?utm_medium=live&utm_source=confluence)
 
-| MODULE                                                                                                    | DESCRIPTION                                                                            |
-|-----------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
-| [MerchantProductOfferWidgetExtension](https://github.com/spryker/merchant-product-offer-widget-extension) | This module provides nterfaces for extension of the MerchantProductOfferWidget module. |
-| [MerchantSearchWidget](https://github.com/spryker/merchant-search-widget)                                 | This module provides a new widget which renders a merchants filter.                    |
-| [ProductSearchWidgetExtension](https://github.com/spryker/product-search-widget-extension)                | This module provides for extension of the ProductSearchWidget module.                  |
+| MODULE                                                                                                         | DESCRIPTION                                                                            |
+|----------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| [MerchantProductOfferWidgetExtension](https://github.com/spryker-shop/merchant-product-offer-widget-extension) | This module provides nterfaces for extension of the MerchantProductOfferWidget module. |
+| [MerchantSearchWidget](https://github.com/spryker-shop/merchant-search-widget)                                 | This module provides a new widget which renders a merchants filter.                    |
+| [ProductSearchWidgetExtension](https://github.com/spryker-shop/product-search-widget-extension)                | This module provides for extension of the ProductSearchWidget module.                  |
 
 ## Related Developer articles
 

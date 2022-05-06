@@ -1,5 +1,5 @@
 ---
-title: HowTo - Create and register a mail provider
+title: "HowTo: Create and register a mail provider"
 description: Use the guide to create and register a mail provider in the Mail module.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -23,7 +23,7 @@ redirect_from:
   - /v1/docs/ht-create-register-provider-plugin
   - /v1/docs/en/ht-create-register-provider-plugin
 related:
-  - title: HowTo - Create and register a MailTypePlugin
+  - title: "HowTo: Create and register a MailTypePlugin
     link: docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html
   - title: Tutorial - Sending an email
     link: docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email.html

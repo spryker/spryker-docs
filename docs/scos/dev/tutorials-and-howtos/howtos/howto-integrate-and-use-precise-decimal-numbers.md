@@ -1,5 +1,5 @@
 ---
-title: HowTo - Integrate and use Precise Decimal Numbers
+title: "HowTo: Integrate and use precise decimal numbers"
 description: Use the guide to install and work with precise decimal numbers in arithmetic, casting, rounding, comparing operations. Learn how they work with transfer objects
 last_updated: Jun 16, 2021
 template: howto-guide-template

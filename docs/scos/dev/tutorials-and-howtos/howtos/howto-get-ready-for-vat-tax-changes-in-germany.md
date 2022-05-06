@@ -1,5 +1,5 @@
 ---
-title: HowTo - Get ready for VAT (tax) changes in Germany
+title: "HowTo: Get ready for VAT (tax) changes in Germany"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-get-ready-for-vat-tax-changes-in-germany

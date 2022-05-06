@@ -1,5 +1,5 @@
 ---
-title: HowTo - Configure the product reviews
+title: "HowTo: Configure the product reviews"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-product-review-feature-configuration

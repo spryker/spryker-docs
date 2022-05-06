@@ -1,5 +1,5 @@
 ---
-title: HowTo - Add a new shipment method 2.0
+title: "HowTo: Add a new shipment method 2.0"
 description: Use the guide to add a new shipment method with the currency and price specified without integrating the method with shipment providers.
 last_updated: Jun 16, 2021
 template: howto-guide-template

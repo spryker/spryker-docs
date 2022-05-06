@@ -1,5 +1,5 @@
 ---
-title: HowTo - Create a visibility condition for CMS Blocks
+title: "HowTo: Create a visibility condition for CMS Blocks"
 description: Visibility condition is a tool used to define particular pages in which the content of CMS block is displayed.
 last_updated: Jun 16, 2021
 template: howto-guide-template

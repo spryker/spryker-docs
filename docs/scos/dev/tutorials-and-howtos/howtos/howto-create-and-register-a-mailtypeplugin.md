@@ -1,5 +1,5 @@
 ---
-title: HowTo - Create and register a MailTypePlugin
+title: "HowTo: Create and register a MailTypePlugin"
 description: Use the guide to create and register the  MailTypePlugin in the Mail module.
 last_updated: Jun 16, 2021
 template: howto-guide-template

@@ -1,5 +1,5 @@
 ---
-title: HowTo - Set number of days for a return policy
+title: "HowTo: Set number of days for a return policy"
 description: The article describes how to set a number of days for a Return Policy
 last_updated: Jun 16, 2021
 template: howto-guide-template

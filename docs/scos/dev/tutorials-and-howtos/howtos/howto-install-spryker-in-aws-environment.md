@@ -1,5 +1,5 @@
 ---
-title: HowTo - Install Spryker in AWS environment
+title: "HowTo: Install Spryker in AWS environment"
 description: Learn how to configure native AWS services to prepare infrastructure for successful Spryker installation in AWS environment and about the installation itself.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -876,7 +876,7 @@ sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/ja
 ```
 
 3. Stop Jenkins service:
-   
+
 ```bash
 sudo service jenkins stop
 ```

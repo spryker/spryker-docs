@@ -1,5 +1,5 @@
 ---
-title: HowTo - Change the default behavior of event triggering in the AvailabilityStorage module
+title: "HowTo: Change the default behavior of event triggering in the AvailabilityStorage module"
 description: Learn how to change the default behavior of the event being triggered in the AvailabilityStorage module when the amount of product is changed.
 last_updated: Jun 16, 2021
 template: howto-guide-template

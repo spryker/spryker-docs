@@ -1,5 +1,5 @@
 ---
-title: HowTo - Email invoices using BCC
+title: "HowTo: Email invoices using BCC"
 description: This article provides detailed instructions on emailing invoices using BCC.
 last_updated: Jun 16, 2021
 template: howto-guide-template

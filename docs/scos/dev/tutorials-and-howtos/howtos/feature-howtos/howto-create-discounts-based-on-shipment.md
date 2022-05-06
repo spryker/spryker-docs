@@ -1,5 +1,5 @@
 ---
-title: HowTo - Create discounts based on shipment
+title: "HowTo: Create discounts based on shipment"
 description: Use the guide to activate a discount rule based on a shipment carrier and add a shipment pre-check plugin to checkout.
 last_updated: Jun 16, 2021
 template: howto-guide-template

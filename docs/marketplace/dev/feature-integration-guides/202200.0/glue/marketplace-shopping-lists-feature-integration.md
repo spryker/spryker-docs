@@ -5,7 +5,7 @@ description: This document describes how to integrate the Shopping Lists feature
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Marketplace Shopping Lists feature into a Spryker
+This document describes how to integrate the Marketplace Shopping Lists feature API into a Spryker
 project.
 
 ## Install feature core

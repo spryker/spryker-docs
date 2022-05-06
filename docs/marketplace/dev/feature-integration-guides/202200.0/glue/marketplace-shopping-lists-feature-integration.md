@@ -259,4 +259,4 @@ Response sample:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | - |
-| Merchant Portal - Marketplace Shopping Lists feature integration| | [Merchant Portal - Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-shopping-lists-feature-integration.html) |
+| Marketplace Shopping Lists feature integration| | [Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shopping-lists-feature-integration.html) |

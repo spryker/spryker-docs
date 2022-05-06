@@ -2951,7 +2951,7 @@ To retrieve a particular cart, send the request:
 ```
 </details>
 
-For the threshold attributes, see [Threshold attributes](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#treshold-attributes).
+For the threshold attributes, see [Threshold attributes](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#threshold-attributes).
 
 For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-a-registered-users-carts-response-attributes).
 

@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/ratepay-structure-diag
   - /docs/ratepay-structure-diag
   - /docs/en/ratepay-structure-diag
-  - /docs/scos/user/technology-partners/202108.0/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
+  - /docs/scos/user/technology-partners/202204.0/payment-partners/ratepay/ratepay-core-module-structure-diagram.html
 related:
   - title: RatePay facade methods
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-facade-methods.html

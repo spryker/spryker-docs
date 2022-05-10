@@ -11,7 +11,7 @@ To test console commands, do the following:
 
 1. Add `\SprykerTest\Zed\Console\Helper\ConsoleHelper` to the `codeception.yml` file:
 
-```
+```yml
 suites:
     Communication:
         path: Communication
@@ -21,12 +21,13 @@ suites:
                 - \SprykerTest\Zed\Console\Helper\ConsoleHelper
                 - ...
 ```
+
 For more information about the `codeception.yml` file, see [Test framework](https://docs.spryker.com/docs/scos/dev/guidelines/testing-guidelines/test-framework.html).
 
 2. Create the test directory `tests/PyzTests/Zed/FooModule/Communication/Plugin/Console/`, if it is not available yet.
 3. Add the test class:
 
-```
+```php
 <?php
 
 namespace PyzTest\Zed\FooModule\Communication\Plugin\Console;
@@ -44,7 +45,8 @@ class MyConsoleCommandTest extends Unit
 ```
 
 4. Add the test method:
-```
+
+```php
 public function testMyConsoleCommand(): void
 {
     // You can also use a mocked command or add a mocked facade etc.

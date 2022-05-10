@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Handle twenty five million prices in Spryker Commerce OS"
+title: "HowTo - Handle twenty five million prices in Spryker Commerce OS"
 description: Learn how we enabled Spryker to handle 25 million of prices.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -14,7 +14,6 @@ redirect_from:
   - /v6/docs/en/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
 ---
 
-
 B2B business model usually challenges any software with higher requirements to amounts of data and business complexity.
 
 Imagine you have thousands of products and customers with unique pricing terms and conditions. A product can have thousands of prices assigned — one per customer. In this article, we share the technical challenges of handling such a number of prices and the solutions we used to solve them.
@@ -23,8 +22,8 @@ Such a number of prices cannot be managed manually, but it is defined by busines
 
 In Spryker, each price is imported as a [price dimension](/docs/scos/user/features/{{site.version}}/merchant-custom-prices-feature-overview.html) and has a unique key which determines its relation to a customer. For example, `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. To appear on the Storefront, the prices should appear in Redis price entries and abstract product search documents, so that facet filters can be applied in search and categories.
 
-
 Price import flow:
+
 ![price import flow ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+handle+25+million+prices+in+Spryker+Commerce+OS/price-import-flow.jpg)
 
 
@@ -42,7 +41,6 @@ When enabling Spryker to handle such a number of prices, we faced the following 
 The queries rejected by ES are considered successful by Spryker because the [Elastica library](https://elastica.io/) ignores the 413 error code.
 
 5. Each price having a unique key results in more different index properties in the whole index. Key structure: `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. This key structure requires millions of actual facets, which slows down ES too much.
-
 
 ## Problem
 
@@ -92,7 +90,7 @@ All the `specificPrice-DEFAULT-EUR-NET_MODE-FOO-BAR` properties in the document 
 \/de_search\/page\/product_abstract:de:de_de:576 caused Limit of total fields [1000] in index [de_search] has been exceeded\nindex`
 ```
 
-We could increase the limit, but it makes the reindexing process a lot slower.
+We could increase the limit, but it makes the re-indexing process a lot slower.
 
 The events with the data for ES are processed and acknowledged in RabbitMQ but not delivered to the search service, and we don’t get any related errors.
 
@@ -191,8 +189,6 @@ To implement the solution:
 
 These two documents can be viewed as two tables with a foreign key in terms of relational databases.
 
-
-
 ### ElasticSearch join data type feature - side effects
 
 The side effects of this solution are:
@@ -206,26 +202,24 @@ The side effects of this solution are:
 To implement a parent-child relationship between documents, we built a standard search module that follows [Spryker architecture](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html). The new price search module is subscribed to the publish and unpublish events of abstract products to manage related price documents in the search. The listener in the search module receives a product abstract ID and fetches all related prices to publish or unpublish them depending on the incoming event. Due to a big number of prices, the publish process became slow. This causes the following issues.
 
 #### Issues
+
 We addressed the following issues related to a slow publish process:
 
 
 1. Memory limit and performance issues. As a product abstract can stand for about forty thousand prices, a table with 25 000 000 rows is parsed every time to find them.
 
 The default message chunk size of an event queue is 500. With this size, about two million rows of data have to be published per one bulk.
-
-
 2. The following has to be done simultaneously:
+
     * Trigger product abstract events to update their structure in ES
     * Trigger their child documents to be published
-
 
 3. RabbitMQ connection issues. Connection is getting closed after fetching a bunch of messages because the PHP process takes too long to be executed. After processing the messages, PHP tries to acknowledge them using the old connection which has been closed by RabbitMQ. Being single-threaded, the PHP library cannot asynchronously send any heartbeats when the thread is busy with something else.
 See [Detecting Dead TCP Connections with Heartbeats and TCP Keepalives](https://www.rabbitmq.com/heartbeats.html) to learn more.
 
-#### Evaluated Solutions
+#### Evaluated solutions
 
 We evaluated the following solutions:
-
 
 1. Use [Common Table Expression (CTE)](https://www.postgresql.org/docs/10/queries-with.html) queries to handle bulk insert and update operations in the `_search` table. We chose this solution because we had implemented it previously. See [Data Importer Speed Optimization](/docs/scos/dev/data-import/{{site.version}}/data-importer-speed-optimization.html) to learn how this solution is used to optimize the speed of data importers.
 2. Use [PostgreSQL trigger feature](https://www.postgresql.org/docs/9.1/sql-createtrigger.html) to fill the `search` table on the insert update operations in the `entity` table.
@@ -235,8 +229,7 @@ We evaluated the following solutions:
 
 [Postgresql CTE](https://www.postgresqltutorial.com/postgresql-cte/) allows managing bulk inserts and updates of huge data amounts, which speeds up the execution of PHP processes.
 
-<details>
-    <summary markdown='span'>SQL query example</summary>
+<details open><summary markdown='span'>SQL query example</summary>
 
 ```sql
 WITH records AS
@@ -304,18 +297,15 @@ UNION ALL
 SELECT inserted.id_pyz_price_product_concrete_group_specific_search
 FROM   inserted;
 ```
-
 </details>
 
-### Price Events Quick Lane
+### Price events quick lane
 
 Prices are published by pushing the corresponding message to the generic event queue. As this queue can hold a lot more messages than just those related to prices, it makes sense to introduce a dedicated queue for publishing only price-related information.
 
 You can configure it by tweaking the Event and EventBehavior modules. Allow the `EventBehavior` Propel behavior to accept additional parameters (except those related to columns). For example, allow it to accept the name of a custom queue, which is used later for pushing messages to the queue. In this case, price events are segregated from all other events and can be processed in parallel without being blocked by other heavier events. Also, this allows to configure different chunk size for the subscriber, resulting in a more optimized usage of CPU and faster processing.
 
-
 To implement this functionality:
-
 
 1. Extend `EventEntityTransfer` with a new field, like `queueName`.
 2. Override `\Spryker\Zed\EventBehavior\Persistence\Propel\Behavior\EventBehavior` and adjust it to be able to accept an additional `queueName` parameter (except those related to columns) through the Propel schema files.
@@ -332,7 +322,7 @@ Ensure that `\Pyz\Zed\EventBehavior\Persistence\Propel\Behavior\ResourceAwareEve
 
 Now you should have a separate event queue for prices. This approach is applicable to any type of event. “Quick lane” ensures that critical data is replicated faster.
 
-### Tweaking Database
+### Tweaking database
 
 With millions of prices in a shop, we needed analytics tools to monitor data consistency in the database. The CSV files, which are the source of price data for analytics, are too big, so it’s hard to process them. That's why we decided to convert them into Postgres database tables.
 
@@ -341,9 +331,6 @@ The Postgres `COPY` command is the fastest and easiest way to do that. This comm
 {% info_block errorBox %}
 
 To convert data successfully, the order of the columns in the database table should reflect the order in the CSV files.
-
-{% endinfo_block %}
-
 
 Example:
 
@@ -363,22 +350,19 @@ then
 fi
 ```
 
-#### Disabling Synchronous Commit
+{% endinfo_block %}
+
+#### Disabling synchronous commit
 
 We were running the analytics at night when there was no intensive activity in our shop. This allowed us to disable synchronous commit to reduce the processing time of the `COPY` operations.
 
 The following line in the previous code snippet disables synchronous commit: `SET synchronous_commit TO OFF;`
-
-
 
 {% info_block errorBox %}
 
 If you disable synchronous commit, make sure to enable it back after you’ve finished importing the files.
 
 {% endinfo_block %}
-
-
-
 
 ### Materialized views for analytics
 
@@ -409,6 +393,7 @@ create index IF NOT exists csv_data_merchant_relationship_prices_net_price ON cs
 3. Compare the views to detect inconsistencies.
 
 ## Conclusion
+
 With the configuration and customizations described in this document, Spryker can hold and manage millions of prices in one instance. RabbitMQ, internal APIs, data import modules and Glue API allow to build a custom data import to:
 
 * Fetch a lot of data from a third-party system

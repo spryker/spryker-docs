@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Integrating any search engine into a project"
+title: "Tutorial - Integrating any search engine into a project"
 description: Learn how to integrate any external search engine instead of the default Elasticsearch.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -17,6 +17,7 @@ redirect_from:
 In a Spryker-based project, you can use any external search provider instead of the default Elasticsearch. This tutorial will teach you how to replace the default Elasticsearch with any other search engine.
 
 ## Challenge description
+
 Every search engine comes along with its own functionalities and search approaches. However, integration of search & search suggestions is similar in most of the search platforms.
 
 In this tutorial, we will show you how to integrate the FACT-Finder (PHP) search platform. A system integrator development team could use this guide to integrate other platforms, taking into account the differences of the target search platform.
@@ -24,6 +25,7 @@ In this tutorial, we will show you how to integrate the FACT-Finder (PHP) search
 The integration is following the concept described in [Search Migration Concept](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html).
 
 ## Challenge solving highlights
+
 To use FACT-Finder as a search data provider, you have to do the following:
 
 1. [Execute search and search suggestion requests](#executing), which implies:
@@ -38,17 +40,20 @@ To use FACT-Finder as a search data provider, you have to do the following:
 <a name="executing"></a>
 
 ### Executing search & search suggestion requests
+
 To execute the search and search suggestion requests, follow the instructions below.
 
 #### 1. Build and pass a query
+
 To build a query, you have to define, for example, `FfSearchQueryTransfer` object, which should contain at least `searchString` (*string*, customer’s input) and `requestParams` (*string[]*, containing, for example, pagination and filters):
 
-```
+```xml
 <transfer name="FfSearchQuery">
         <property name="searchString" type="string"/>
         <property name="requestParams" type="string[]" singular="requestParam"/>
     </transfer>
 ```
+
 Then you create a query model, for example, `FactFinderQuery`. The basic version might look like this:
 
 <details>
@@ -128,6 +133,7 @@ public function catalogSuggestSearch($searchString, array $requestParameters = [
 ```
 
 #### 2. Executing the search request
+
 To handle search requests through a different source, you need your own model implementing the `SearchAdapterPluginInterface` interface.
 
 Template for this model is:
@@ -231,7 +237,9 @@ You have to make sure that all events affecting FACT-Finder-related product data
 
 </database>
 ```
+
 #### 3. Requesting data from FACT-Finder
+
 At this point, you have to implement method search in the aforementioned [adapter plugin](#executing).
 Your search function will receive `FactFinderQuery` with `FFSearchQueryTransfer` in it as the first argument.
 
@@ -240,6 +248,7 @@ Prepare proper request to a FACT-Finder based on these parameters.
 If you need specific `$resultFormatters` or `$requestParameters`, use the arrays proposed in the adapter plugin.    
 
 #### 4. Mapping response
+
 The general idea behind mapping of the response is to make sure you’re able to display the received data.
 
 The FACT-Finder module provides a response in `FactFinderSdkSearchResponse`, but Spryker provides complete rendering of the search results and search suggestions based on the response from the default search provider, which is Elasticsearch.
@@ -248,7 +257,8 @@ It means that in order to use the FACT-Finder response, you have to comply with 
 You have to respond with an object, supporting an array-based or `get`-based index. For example, creating a JSON object or a transfer object.
 
 Example of a response from the search provider:
-<details>
+
+<details open>
 <summary markdown='span'>Code sample</summary>
 
 ```
@@ -317,11 +327,12 @@ Refer to `CatalogDependencyProvider::createCatalogSearchResultFormatterPlugins` 
 
 <a name="populate"></a>
 
-### Populating Fact Finder with Product Data
+### Populating Fact Finder with product data
 To handle search update events, follow the instructions below.
 
 
 #### 1. Adjust the Adapter plugin
+
 To handle search update events, you have to implement the following methods of the `SearchAdapterPluginInterface`:
 
 * `deleteDocument` - when a single document is supposed to be removed. You will receive an internal identifier as a key.
@@ -330,9 +341,11 @@ To handle search update events, you have to implement the following methods of t
 * `writeDocuments`
 
 #### 2. Handle the events
-Since Spryker stores not only product data in Elasticsearch, but also CMS pages and categories, make sure that only product data is handled by the FACT-Finder adapter.
+
+Since Spryker stores not only product data in Elasticsearch, but also CMS pages, categories, etc., you have to make sure that only product data is handled by the FACT-Finder adapter.
 
 To achieve this, change schema for the search documents in `spy_product_page_search.schema.xml`. Make sure to use the same source identifier as used in the adapter class.
+
 ```xml
 <?xml version="1.0"?>
 <database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd"
@@ -352,13 +365,16 @@ To achieve this, change schema for the search documents in `spy_product_page_sea
     </table>
 
 </database>
- ```
+```
+
 #### 3. Map data
+
 To load and map data properly, you might have to adjust data loaders, expanders, and mappers in `ProductPageSearchDependencyProvider`, both for product abstract and product concrete.
 
 Having completed these steps, you should have the search engine integrated into your project.
 
 ## Using search service provider in Glue API
+
 The current version of catalog-search in Glue has more requirements for the response.
 
-It expects that `sort` value in the response supports `toArray` function and contains fields `sortParamNames`, `sortParamLocalizedNames`, `currentSortParam`, `currentSortOrder`. As a reference, use the `RestCatalogSearchSortTransfer` transfer object.    
+It expects that `sort` value in the response supports `toArray` function and contains fields `sortParamNames`, `sortParamLocalizedNames`, `currentSortParam`, `currentSortOrder`. As a reference, use the `RestCatalogSearchSortTransfer` transfer object

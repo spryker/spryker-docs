@@ -25,7 +25,8 @@ redirect_from:
 
 To use a component, in Spryker Shop, you need to add it to a layout template (Twig file). Components can be added to other components (except atoms), views, page templates and widgets. There are two possible strategies for this purpose: **include** and **embed**. In the following document, we shall review both of them.
 
-## Helper Functions
+## Helper functions
+
 Before adding a component, you need to locate it. There are 3 helper functions provided for this purpose. They are implemented the same way. Use the one that matches the component you want to add.
 
 * atom (name, module)
@@ -46,6 +47,7 @@ The function returns the fully qualified component name that can be used in Twig
 `@CartPage/components/organisms/some-name/some-name.twig`
 
 ## Arguments
+
 _Include_ or _Embed_ needs to be called with 2 arguments:
 
 * `with {}` - defines the context to pass to the component;
@@ -54,7 +56,9 @@ _Include_ or _Embed_ needs to be called with 2 arguments:
 The `with{}` attribute must pass the objects and variables that are defined in the component. They need to follow the contracts defined by the component itself. The most important of them is the **data** object that defines the data contract.
 
 {% info_block errorBox %}
+
 It is important to always pass **required** properties, otherwise, the component you are including will fail.
+
 {% endinfo_block %}
 
 The most common attributes to include are:
@@ -65,14 +69,17 @@ The most common attributes to include are:
 * `modifiers` (optional) - used to enable component modifiers.
 
 {% info_block infoBox %}
+
 For more details, see section _Twig_ in [Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html#twig).
+
 {% endinfo_block %}
 
 ## Include
+
 By including a component, you place it on a page as is. Each component has the `data`, `attributes` and other properties that allows passing the necessary information to configure it, but apart from that, you cannot change it. The outlook of the component depends only on configuration. By including an element, you also pass the context of the page where it is added.
 The following block demonstrates how to include component `new-component-counter`.
 
-```php
+```twig
 {% raw %}{%{% endraw %} include molecule('new-component-counter') with {
     class: 'custom-classname',
     modifiers: ['big'],
@@ -87,7 +94,9 @@ The following block demonstrates how to include component `new-component-counter
 ```
 
 {% info_block infoBox %}
+
 See component implementation in [How To Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html).
+
 {% endinfo_block %}
 
 Now, let us have a look at the embedded element on the page:
@@ -95,6 +104,7 @@ Now, let us have a look at the embedded element on the page:
 ![Embedded element](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/embedded-element.png) 
 
 ## Embed
+
 Embedding gives you more freedom with components. It allows you to modify the template of the component you include and even add additional elements to it. For example, you can add or remove blocks, arrange them differently etc. Unlike including, context is not passed via the embed statement, so you need to define the required contracts explicitly.
 
 The following example shows how to embed  block to component `new-component-counter`. For this purpose, we need to do the following:
@@ -104,7 +114,7 @@ The following example shows how to embed  block to component `new-component-coun
 
 The resulting Twig will look as follows:
 
-```php
+```twig
 {% raw %}{%{% endraw %} embed molecule('new-component-counter') with {
     class: 'custom-classname',
     modifiers: ['big'],
@@ -131,7 +141,9 @@ The resulting Twig will look as follows:
 ```
 
 {% info_block infoBox %}
+
 You can find the original Twig of the component in the _Create Component Template_ section of [HowTo - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html).
+
 {% endinfo_block %}
 
 Now, let us check how it looks like on the page.

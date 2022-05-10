@@ -32,24 +32,29 @@ redirect_from:
 ---
 
 ## Twig
+
 Twig is a template engine that is used in Spryker to render the templates provided by the modules. For further information about Twig, check out the [twig documentation](https://twig.symfony.com/).
 
 ## TwigApplicationPlugin
+
 To be able to add Twig, we created `TwigApplicationPlugin`. It initializes the Twig service and extends it with the corresponding Twig Plugins. `TwigApplicationPlugin` exists for both Yves and Zed and, under the twig service key, adds Twig to the Container to make it available in your application.
 
 ## Modules
+
 You can find the list of all the modules related to the service below:
 
 * Twig - spryker/twig
 * TwigExtension - spryker/twig-extension
 
 ### Installation
+
 To install these modules, run:
 `spryker/twig & spryker/twig-extension installation`
 `composer require spryker/twig`
 `spryker/twig-extension` is installed along with `spryker/twig` since the earlier is required by the latter.
 
 ## Integration
+
 To use the Twig service in your application, you need to add `TwigApplicationPlugin` of the `spryker/twig` module to your `ApplicationDependencyProvider`.
 Zed integration:
 
@@ -79,6 +84,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 
     // ...
 ```
+
 Yves integration:
 
 ```php
@@ -110,13 +116,14 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 ```
 
 ## Configure Twig
+
 Twig provides wide configuration possibilities. For further information about Twig configuration, check out the Twig documentation [here](https://twig.symfony.com/doc/2.x/api.html#environment-options) and [here](https://twig.symfony.com/doc/2.x/api.html#loaders).
 
 Some of the Twig options are predefined in our Twig service. You can check them in the TwigConfig files for Zed and Yves on core and project levels.
 
 Configuration description can be found below:
 
-| Method | Description | Yves | Zed |
+| METHOD | DESCRIPTION | YVES | ZED |
 | --- | --- | --- | --- |
 | `getTemplatePaths` | Defines folders that contain templates to be listed in `TwigFilesystemLoader` | Yes | Yes |
 | `getCacheFilePath` | Defines the cache folder for templates rendered by Twig | Yes | Yes |
@@ -128,11 +135,13 @@ Configuration description can be found below:
 | `getTwigOptions` | Here we can define standard options that are available for Twig. Check out [Twig documentation](https://twig.symfony.com/doc/2.x/api.html#environment-options) for more details. | Yes | Yes |
 
 ## Extending Twig
+
 Twig offers several ways to add additional functionality such as functions, filters, globally available template variables, etc. For such purposes, there is a `spryker/twig-extension` module installed along with the `spryker/twig` module.
 The extension module offers the following interfaces:
 
 ### TwigPluginInterface
-Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface
+
+**Spryker\Shared\TwigExtension\Dependency\Plugin\TwigPluginInterface**
 
 ```php
 <?php
@@ -263,7 +272,8 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 ```
 
 ### TwigLoaderPluginInterface
-Spryker\Shared\TwigExtension\Dependency\Plugin\TwigLoaderPluginInterface
+
+**Spryker\Shared\TwigExtension\Dependency\Plugin\TwigLoaderPluginInterface**
 
 ```php
 <?php

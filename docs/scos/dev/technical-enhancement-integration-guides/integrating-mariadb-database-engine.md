@@ -27,10 +27,10 @@ See [MariaDB knowledge base](https://mariadb.com/kb/en/) for more details.
 For Docker-based integration instructions, see [MariaDB](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html#mariadb).
 
 ## Integration into DevVM-based projects
+
 To integrate MariaDB into a DevVM-based project:
 
 1. Update Vagrant to version 3.2.0 or higher.
-
 2. Update `config_*.php` as follows:
 
 ```php

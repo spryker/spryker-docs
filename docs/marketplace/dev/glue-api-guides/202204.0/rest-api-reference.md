@@ -1,20 +1,13 @@
 ---
 title: REST API reference
-description: This page provides an exhaustive reference for the REST API endpoints present in Spryker by default with the corresponding parameters and data formats.
+description: This page provides an exhaustive reference for the REST API endpoints present in the Spryker Marketplace by default with the corresponding parameters and data formats.
 last_updated: May 10, 2022
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/rest-api-reference
-originalArticleId: 4f1c673e-8917-40ed-a88e-8710a00aec8a
-redirect_from:
-  - /2021080/docs/rest-api-reference
-  - /2021080/docs/en/rest-api-reference
-  - /docs/rest-api-reference
-  - /docs/en/rest-api-reference
 ---
 
-This document provides an overview of REST API endpoints provided by Spryker by default. For each endpoint, you will find its URL relative to the server, REST request parameters, as well as the appropriate request and response data formats.
+This document provides an overview of REST API endpoints provided by the Spryker Marketplace by default. For each endpoint, you will find its URL relative to the server, REST request parameters, as well as the appropriate request and response data formats.
 
-## B2C Demo Shop
+## Marketplace B2C Demo Shop
 
 <div id="swagger-ui"></div>
 
@@ -26,7 +19,7 @@ This document provides an overview of REST API endpoints provided by Spryker by 
 const swaggerContainer = document.getElementById('swagger-ui');
 if(swaggerContainer) { 
     console.log('start'); const ui = SwaggerUIBundle({
-        url: 'https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/glue-api-guides/202204.0/b2c_spryker_rest_api.schema.json',
+        url: 'https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/dev+guides/glue-api-guides/202204.0/rest-api-reference/mp_b2c_spryker_rest_api.schema.json',
         dom_id: '#swagger-ui', deepLinking: true, presets: [
             SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset
         ],
@@ -37,7 +30,7 @@ if(swaggerContainer) {
 </script>
 {% endraw %}
 
-## B2B Demo Shop
+## Marketplace B2B Demo Shop
 
 <div id="swagger-ui"></div>
 
@@ -49,7 +42,7 @@ if(swaggerContainer) {
 const swaggerContainer = document.getElementById('swagger-ui');
 if(swaggerContainer) { 
     console.log('start'); const ui = SwaggerUIBundle({
-        url: 'https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/glue-api-guides/202204.0/b2b_spryker_rest_api.schema.json',
+        url: 'https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/dev+guides/glue-api-guides/202204.0/rest-api-reference/mp_b2b_spryker_rest_api.schema.json',
         dom_id: '#swagger-ui', deepLinking: true, presets: [
             SwaggerUIBundle.presets.apis, SwaggerUIStandalonePreset
         ],

@@ -16,7 +16,7 @@ redirect_from:
 
 B2B business model usually challenges any software with higher requirements to amounts of data and business complexity.
 
-Imagine you have thousands of products and customers with unique pricing terms and conditions. A product can have thousands of prices assigned—one per customer. In this article, we share the technical challenges of handling such a number of prices and the solutions we used to solve them.
+Imagine you have thousands of products and customers with unique pricing terms and conditions. A product can have thousands of prices assigned—one per customer. In this document, we share the technical challenges of handling such a number of prices and the solutions we used to solve them.
 
 Such a number of prices cannot be managed manually, but it is defined by business rules based on which the prices can be generated automatically. For example, you might agree on the special terms with your B2B partner, and they receive their own prices for the whole catalog. It might be considered as a discount, but usually it is not a single simple rule, but a set of rules and their priorities for each partner. These rules exist in an ERP system which can export data through SOAP or CSV files.
 

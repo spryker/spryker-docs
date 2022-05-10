@@ -16,7 +16,7 @@ redirect_from:
 
 This HowTo will teach you how to create customer response headers in your Spryker project. We use a header that allows playing full-screen videos in Chrome is used as an example.
 
-The purpose of this article  is to illustrate the usage of `Symfony\Component\HttpFoundation\Response()` and `ShopApplicationTwigEventSubscriber::createResponse()` to create custom headers.
+The purpose of this document  is to illustrate the usage of `Symfony\Component\HttpFoundation\Response()` and `ShopApplicationTwigEventSubscriber::createResponse()` to create custom headers.
 
 {% info_block infoBox "Info" %}
 

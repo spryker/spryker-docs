@@ -28,7 +28,7 @@ related:
 
 {% info_block infoBox %}
 
-This article describes the steps to add a new shipment method, without integrating with the shipment provider.
+This document describes the steps to add a new shipment method, without integrating with the shipment provider.
 
 {% endinfo_block %}
 

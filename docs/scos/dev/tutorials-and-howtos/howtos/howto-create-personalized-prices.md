@@ -23,7 +23,7 @@ redirect_from:
   - /v1/docs/en/ht-create-personalized-prices
 ---
 
-This article describes the steps you need to consider when implementing personalized prices for customer groups.
+This document describes the steps you need to consider when implementing personalized prices for customer groups.
 
 There are several steps to consider when implementing special prices based on which customer group the customer belongs to.
 
@@ -38,7 +38,7 @@ There are several steps to consider when implementing special prices based on wh
 
 ## 1. Extend the Customer module
 
-The `spy_customer` table should be extended on the project side to include the group ID. You can read more on how to extend the database schema in [Extending the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html) article.
+The `spy_customer` table should be extended on the project side to include the group ID. You can read more on how to extend the database schema in [Extending the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html) document.
 
 The `spy_customer` table should be extended on the project side to include the group ID. You can read more here on how to extend the database schema.
 

@@ -1,6 +1,6 @@
 ---
 title: B2C API React Example installation
-description: This article describes installation of B2C API Demo Shop to experience the use of Spryker Glue REST API.
+description: This document describes installation of B2C API Demo Shop to experience the use of Spryker Glue REST API.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/b2c-api-react-example-installation
@@ -24,7 +24,7 @@ redirect_from:
   - /v1/docs/en/b2c-api-react-example-installation
 ---
 
-B2C API React Example can be installed inside [Spryker Development Virtual Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html) (VM) or on a separate dedicated server. Below, you will find detailed steps on how to perform both the installation scenarios.
+B2C API React Example can be installed inside [Spryker Development Virtual Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html) (VM) or on a separate dedicated server. To perform both the installation scenarios, take the following steps.
 
 {% info_block infoBox %}
 
@@ -71,8 +71,8 @@ git clone https://github.com/spryker-shop/b2c-api-react-example
 ```
 
 6. Open the `local_inside_vm.env` file for editing.
-7. <a name="step7"></a> Change the `DEV_SERVER_HOST` variable to point to the Glue host. For example, if your project name is `b2c-demo-shop`, the host address will be `glue.de.b2c-demo-shop.local`. Also, you can change the example app page title. It is specified via the `APP_TITLE` variable. 
-    
+7. <a name="step7"></a> Change the `DEV_SERVER_HOST` variable to point to the Glue host. For example, if your project name is `b2c-demo-shop`, the host address will be `glue.de.b2c-demo-shop.local`. Also, you can change the example app page title. It is specified via the `APP_TITLE` variable.
+
 Sample `local_inside_vm.env` file implementation for a VM running B2C Demo Shop:
 
 ```

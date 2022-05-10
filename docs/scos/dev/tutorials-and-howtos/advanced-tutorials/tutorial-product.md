@@ -47,7 +47,7 @@ This tutorial shows how to add information to products regarding the country whe
 console propel:install
 ```
 
-4. Implement query by product id and query by country id under the persistence layer.
+4. Implement query by product ID and query by country ID under the persistence layer.
 5. Implement `ProductCountryManager` and add the facade call. Implement `ProductCountryBusinessFactory`.
 6. Implement the operations under `ProductCountryFacade`.
 7. Manually add values to table in order to have relations between abstract products and countries (for testing few products would be enough).

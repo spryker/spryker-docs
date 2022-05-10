@@ -23,7 +23,7 @@ redirect_from:
   - /v1/docs/en/t-twig-extensions
 ---
 
-This article will teach you to implement a Twig extension. For the sake of an example, we’ll build a filter which can be used for displaying prices.
+This dpcuments shows how to implement a Twig extension. For the sake of an example, we’ll build a filter which can be used for displaying prices.
 
 To implement a Twig extension, you have to do the following:
 

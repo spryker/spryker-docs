@@ -70,7 +70,7 @@ To configure stores, do the following.
 
 #### 1. Define the stores
 
-Define the desired stores in `config/Shared/stores.php`. In the example below, we define DE and AT stores:
+Define the desired stores in `config/Shared/stores.php`. In the following example,  DE and AT stores are defined:
 
 <details><summary markdown='span'>config/Shared/stores.php</summary>
 
@@ -254,10 +254,10 @@ regions:
 ```
 </details>
 
-We use the following configuration parameters in this example:
+The following configuration parameters are used in this example:
 
-* *Region* defines one or more isolated instances of the Spryker applications that have only one persistent database to work with. Visibility of the project's *Stores* is limited to operate only with the *Stores* that belong to a *Region*. *Region* refers to geographical terms like data centers, regions, and continents in the real world.
-* *Store* defines the list of *Stores* and store-specific settings for *Services*.
+* The `regions` parameter defines one or more isolated instances of the Spryker applications that have only one persistent database to work with. Visibility of the project's stores is limited to operate only with the stores that belong to a region. Region refers to geographical terms like data centers, regions, and continents in the real world.
+* The `stores` parameter defines the list of stores and store-specific settings for `services`.
 
 For more information about deploy file configuration, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 

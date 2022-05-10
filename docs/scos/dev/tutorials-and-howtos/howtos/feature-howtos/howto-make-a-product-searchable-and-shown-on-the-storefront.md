@@ -29,7 +29,7 @@ related:
 
 {% info_block infoBox %}
 
-The article describes the flow on how to make a product searchable and displayed on the Storefront.
+The document describes the flow on how to make a product searchable and displayed on the Storefront.
 
 {% endinfo_block %}
 

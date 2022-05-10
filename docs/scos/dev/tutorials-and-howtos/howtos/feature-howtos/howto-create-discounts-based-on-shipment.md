@@ -23,7 +23,7 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
 ---
 
-The HowTo guide explains how to do the following:
+The HowTo guide shows how to do the following:
 
 * Activate a discount rule based on a shipment carrier, a shipment method or a shipment price.
 * Add a shipment pre-check plugin to checkout.

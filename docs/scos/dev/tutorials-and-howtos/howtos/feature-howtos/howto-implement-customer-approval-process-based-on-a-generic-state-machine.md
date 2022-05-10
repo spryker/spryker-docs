@@ -26,11 +26,11 @@ redirect_from:
 
 ## Introduction
 
-There are only few things need to do to implement any business processes based on the `StateMachine` module:
+To implement any business processes based on the `StateMachine` module, follow these steps:
 
-1. First of all you need to add table in DB to connect Entity and StateMachine. In our case it's Customer Entity.
-2. We need to create CRUD operations for our new table.
-3. Implement the `StateMachineHandlerInterface` plugin and add into StateMachine module dependencies.
+1. Add table in DB to connect Entity and StateMachine. In this case, it's Customer Entity.
+2. Create CRUD operations for our new table.
+3. Implement the `StateMachineHandlerInterface` plugin and add into thr `StateMachine` module dependencies.
 4. Implement some Command and Condition plugins (if need it).
 5. Create state machine xml file with customer approve flow.
 6. Provide Zed UI presentation.
@@ -64,13 +64,13 @@ Create the corresponding approval process schema:
 </table>
 ```
 
-We have added several foreign keys including foreign key to the `spy_customer` table.
+Several foreign keys have been added, including foreign key to the `spy_customer` table.
 
 ## CRUD implementation
 
 Set up a few operations for managing customer approval process:
 
-**CustomerApproveProcessFacadeInterface**
+<details><summary markdown='span'>CustomerApproveProcessFacadeInterface</summary>
 
 ```php
 <?php
@@ -128,8 +128,10 @@ interface CustomerApproveProcessFacadeInterface
 }
 ```
 
+</details>
+
 This is all you need to implement in the business layer.
-`CustomerApproveProcessItemTransfer` was implemented to keep all the data in one place for further usage.
+`CustomerApproveProcessItemTransfer` has been implemented to keep all the data in one place for further usage.
 
 **transfer.xml**
 
@@ -148,7 +150,7 @@ This is all you need to implement in the business layer.
 
 Configure the `StateMachineHandlerPlugin`:
 
-**CustomerApproveProcessStateMachineHandlerPlugin**
+<details><summary markdown='span'>CustomerApproveProcessStateMachineHandlerPlugin</summary>
 
 ```php
 <?php
@@ -266,6 +268,8 @@ class CustomerApproveProcessStateMachineHandlerPlugin extends AbstractPlugin imp
 }
 ```
 
+</details>
+
 ## Commands and conditions
 
 Configure the plugins:
@@ -336,7 +340,7 @@ class CustomerApproveProcessConditionPlugin extends AbstractPlugin implements Co
 
 There is a simple example of the state machine process, you need to put it into `config/Zed/StateMachine/CustomerApproveProcess/Process01.xml`.
 
-**Process01.xml**
+<details><summary markdown='span'>Process01.xml</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -400,12 +404,14 @@ There is a simple example of the state machine process, you need to put it into 
 </statemachine>
 ```
 
+</details>
+
 ## Zed UI presentation
 
 For representing our process items in Zed UI we need only two things: controller and template.
-Controller includes list of all items, add new item, delete item actions:
+Controller includes the list of all items, add new item, delete item actions:
 
-**StateMachineItemsController**
+<details><summary markdown='span'>StateMachineItemsController</summary>
 
 ```php
 <?php
@@ -513,9 +519,11 @@ class StateMachineItemsController extends AbstractController
 }
 ```
 
-We need the template only for the list action, there is an example:
+</details>
 
-**transfer.xml**
+You need the template only for the list action; the following is an example:
+
+<details><summary markdown='span'>StateMachineItemsController</summary>transfer.xml</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends '@Cms/Layout/layout.twig' {% raw %}%}{% endraw %}
@@ -599,3 +607,5 @@ We need the template only for the list action, there is an example:
     </table>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+
+</details>

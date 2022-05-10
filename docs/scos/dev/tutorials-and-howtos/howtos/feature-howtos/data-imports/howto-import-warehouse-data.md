@@ -22,13 +22,14 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/administration/warehouses/creating-warehouses.html
 ---
 
-This HowTo provides the steps on how to import warehouse data using a CSV file, including:
+This document shows how to import warehouse data using a CSV file, including:
 
 * Import warehouses.
 * Assign a warehouse to stores.
 * Import warehouses with the stores assigned in bulk.
 
 ## Importing warehouses
+
 To import warehouse data, follow these steps:
 
 1. Prepare the `warehouse.csv` file where you can indicate whether the warehouse name and its availability. The file can contain the following fields:

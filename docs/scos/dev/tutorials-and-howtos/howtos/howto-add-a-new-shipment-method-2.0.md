@@ -33,7 +33,7 @@ This document describes the steps to add a new shipment method, without integrat
 
 {% endinfo_block %}
 
-In this tutorial we’ll consider the case when you need to add a new shipment method, without the need to integrate it with the shipment providers system.
+This document considers the case when you need to add a new shipment method, without the need to integrate it with the shipment providers system.
 
 What’s important for this situation is to have multi-currency prices attached to the shipment method and also to have the correct tax set linked to it. Also, the `ship` event should be manually triggerable from the Back Office.
 
@@ -80,7 +80,7 @@ Now that we have a new shipment carrier, we can add a new shipment method to it.
 To add a new shipment method to a carrier:
 
 1. Click **Add new Shipment Method**.
-You will be redirected to the _Add a new shipment method_ dialog.
+You will be redirected to the **Add a new shipment method** dialog.
 2. Select the carrier you created in the previous step.
 3. Add the name and store/currency specific net and gross prices.
 4. Mark it as `Active`.

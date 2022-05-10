@@ -24,7 +24,7 @@ redirect_from:
   - /v1/docs/en/ht-make-product-shown-on-frontend-by-url
 ---
 
-This HowTo guides describes how to create and register a mail provider you want to use.
+This document shows how to create and register a mail provider you want to use.
 
 ## 1. Create a MailTypePlugin
 

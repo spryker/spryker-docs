@@ -14,7 +14,7 @@ redirect_from:
   - /v6/docs/en/howto-add-additional-countries-to-spryker-checkout
 ---
 
-This HowTo explains how to add additional shipping countries selected by the end users upon checkout.
+This document explains how to add additional shipping countries selected by the end users upon checkout.
 
 Customers that want to open up their store to buyers of more than the predefined counties need to make adjustments to the Spryker code to display more countries for selection in the Spryker checkout.
 

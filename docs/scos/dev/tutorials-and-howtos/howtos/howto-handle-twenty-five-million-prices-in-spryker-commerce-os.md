@@ -111,7 +111,7 @@ The following solutions were evaluated:
 
 ## ElasticSearch Join field type: Implementation
 
-To solve the ES indexing issue, we reduced the size of product abstract documents which reduced dynamic mapping properties.
+To solve the ES indexing issue, we reduced the size of product abstract documents, which reduced dynamic mapping properties.
 
 To implement the solution, follow these steps:
 

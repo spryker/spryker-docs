@@ -32,7 +32,7 @@ This document describes the steps to add a new shipment method, without integrat
 
 {% endinfo_block %}
 
-In this tutorial we’ll consider the case when you need to add a new shipment method, without the need to integrate it with the shipment providers system.
+This document considers the case when you need to add a new shipment method, without the need to integrate it with the shipment providers system.
 
 What’s important for this situation is to have a price attached to the shipment method and also to have the correct tax set linked to it. Also, the ship event should be manually triggerable from the Zed Admin UI.
 

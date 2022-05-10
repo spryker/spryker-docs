@@ -172,6 +172,12 @@ class SecurityGuiDependencyProvider extends SprykerSecurityGuiDependencyProvider
 }
 ```
 
+{% info_block warningBox "Verification" %}
+
+Ensure that Merchant Users or Users whose Acl Group does not have Backoffice allowed Acl Group Reference can not log in to Backoffice.
+
+{% endinfo_block %}
+
 **src/Pyz/Zed/UserMerchantPortalGui/UserMerchantPortalGuiDependencyProvider.php**
 
 ```php
@@ -278,6 +284,12 @@ class MerchantUserDependencyProvider extends SprykerMerchantUserDependencyProvid
     }
 }
 ```
+
+{% info_block warningBox "Verification" %}
+
+Ensure that non-Merchant Users whose Acl Group has Backoffice allowed Acl Group Reference (see `AclMerchantPortalConfig::getBackofficeAllowedAclGroupReferences()`) can log in to Backoffice.
+
+{% endinfo_block %}
 
 **src/Pyz/Zed/Acl/AclDependencyProvider.php**
 

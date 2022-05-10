@@ -631,6 +631,8 @@ entries:
     nested:
     - title: Glue REST API
       url: /docs/scos/dev/glue-api-guides/glue-rest-api.html
+    - title: REST API reference
+      url: /docs/scos/dev/glue-api-guides/rest-api-reference.html
     - title: Managing customers
       url: /docs/scos/dev/glue-api-guides/managing-customers/managing-customers.html
       nested:
@@ -684,8 +686,6 @@ entries:
         include_versions:
         - "202108.0"
         - "202204.0"
-    - title: REST API reference
-      url: /docs/scos/dev/glue-api-guides/rest-api-reference.html
     - title: Managing agent assists
       include_versions:
       - "202009.0"

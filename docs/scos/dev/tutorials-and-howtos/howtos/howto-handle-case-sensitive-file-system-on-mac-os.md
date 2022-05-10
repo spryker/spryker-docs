@@ -24,19 +24,18 @@ redirect_from:
   - /v1/docs/en/ht-case-sensitive-file-system-mac
 ---
 
-By default Mac OS uses a case-insensitive file system to support compatibility to applications (for example, Photoshop) provided for the operating system. The file system itself is capable of working in a case-sensitive mode. There are a number of options on how to change case sensitivity:
-
-1. Re-partition the entire hard drive with case-sensitivity turned on.
+By default Mac OS uses a case-insensitive file system to support compatibility with applications (for example, Photoshop) provided for the operating system. The file system itself is capable of working in a case-sensitive mode. There are a number of options on how to change case sensitivity:
+1. Repartition the entire hard drive with case-sensitivity turned on.
 2. Create a new partition and re-format only this new partition with the case-sensitive file-system.
 3. Create a disk image, format that image with the case-sensitive file-system, and mount this disk image.
 
-Options 1 and 2 will require tampering with an existing hard drive that contains your operating system. Option 3 is the least destructive and requires very little effort.
+Options 1 and 2 require tampering with an existing hard drive that contains your operating system. Option 3 is the least destructive and requires very little effort.
 
 ## Create the disk image
 
 You can use Mac OS' Disk Utility application to create a disk image. You create a growing image with decent size so we don't waste any hard drive space bit still keep enough room for many projects.
 
-1. Open Disk Utility by opening Spotlight (<kbd>Cmd + Space</kbd>) and entering `disk utility`.
+1. Open **Disk Utility** by opening Spotlight (<kbd>Cmd + Space</kbd>) and entering `disk utility`.
 2. Select **File&nbsp;<span aria-label="and then">></span> New Image&nbsp;<span aria-label="and then">></span> Blank Image**.
 3. Enter a file name for the disk image—for example, `case-sensitive-file-system`.
 4. Select the place where to store the image—for example, your home folder.
@@ -44,7 +43,7 @@ You can use Mac OS' Disk Utility application to create a disk image. You create 
 6. Enter a decent value for the size so the image can accommodate all your projects—for example, `100GB`.
 7. Select the format: **Mac OS Extended** (Case-sensitive, Journaled).
 8. You can leave encryption and partitions as is.
-9. Select the image format: **Sparse** (be careful: Sometimes, changing the image format resets the setting for image size).
+9. Select the image format: **Sparse** (Note: Sometimes, changing the image format resets the setting for image size).
 
 The resulting dialog should look something like as follows:
 ![Case sensitive file system](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+Handle+Case+Sensitive+File-System/case+sensitive+system.png)
@@ -60,7 +59,6 @@ You can copy all existing projects to the newly created box. If it is not mounte
 To avoid manually mounting the disk image every time you restart your system, create a Launch Agent that can take care of this.
 
 To create a Launch Agent, follow these steps:
-
 1. Create a new file for the definition of the Launch Agent under—for example, `~Library/LaunchAgents/local.mount-case-sensitive-file-system.plist`.
 
 ```
@@ -98,7 +96,6 @@ Put in some values for `[ABSOLUTE_PATH_TO_DISK_IMAGE]` (for example, `/Users/joe
 The first time you open one of the projects form the disk-image you may notice a warning about case-sensitive file systems. PhpStorm for Mac OS is configured to work with a case-insensitive file system and reports a warning that if it detects a case-sensitive file system. Unfortunately, there is no way to configure PhpStorm on a per-project level, but you can let PhpStorm know that all your projects will be stored in a case-sensitive file system.
 
 To let PhpStorm know that all your projects will be stored in a case-sensitive file system, take these steps:
-
 1. In PHPStorm, go to **Help&nbsp;<span aria-label="and then">></span> Edit Custom Properties**.
 2. Add the `idea.case.sensitive.fs=true` option.
 3. Save and close.

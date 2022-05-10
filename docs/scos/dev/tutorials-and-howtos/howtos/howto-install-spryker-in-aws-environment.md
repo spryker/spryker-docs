@@ -102,7 +102,7 @@ For production purposes, we recommend choosing Multi-AZ Deployment.
 
 ![Get database name endpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/get-db-name-endpoint.png)
 
-See [Database creation manual](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Tutorials.WebServerDB.CreateDBInstance.html) for more information about how to create the database.
+For more information about how to create the database, see [Database creation manual](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Tutorials.WebServerDB.CreateDBInstance.html).
 
 ### Elasticsearch service
 
@@ -1909,13 +1909,11 @@ List of connections:
 | Redis | TCP: 6379 ( Yves, Glue, Zed ) |
 | Elasticsearch | TCP: 9200 ( Yves, Glue, Zed ) |
 
-## AWS services Setup validation
-
-### RDS latency check
+## AWS services Setup validation: RDS latency check
 
 Perform RDS LatencyCheck by running the commands below.
 
-#### PostgreSQL
+## AWS services Setup validation: PostgreSQL
 
 ```sql
 export PGPASSWORD={% raw %}{{{% endraw %}RDS_PASSWORD{% raw %}}}{% endraw %}
@@ -1929,7 +1927,7 @@ Benchmark result examples: Average latency for db.t2.micro / db.t2.micro - 29 ms
 
 {% endinfo_block %}
 
-#### MySQL
+### MySQL
 
 ```sql
 sudo apt-get -y install mysql-client
@@ -1942,7 +1940,7 @@ Average number of seconds to run all queries: 0.739 seconds - db.t2.small <br>Av
 
 {% endinfo_block %}
 
-#### Redis latency check
+### Redis latency check
 
 Run the command:
 

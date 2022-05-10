@@ -68,11 +68,11 @@ class PaymentDependencyInjector extends AbstractDependencyInjector
 ?>
 ```
 
-The plugin will receive `OrderTransfer` and `PaymentTransfer` which is the payment you need to hydrate with additional data.
+The plugin receives `OrderTransfer` and `PaymentTransfer`, which are the payment you need to hydrate with additional data.
 
 Plugins have to populate the `PaymentTransfer` object and return it back. After this step you should be able to get payment information when calling `SalesFacade::getOrderByIdSalesOrder`. We also included simple Zed UI twig block for payments, so it can display more information about payment methods used on the order details page.
 
-To enable it:
+To enable it, follow these steps:
 
 1. Go to `\Pyz\Zed\Sales\SalesConfig::getSalesDetailExternalBlocksUrls`.
 2. Add` ‘payments’ => ‘/payment/sales/list’`, to `$projectExternalBlocks` array.

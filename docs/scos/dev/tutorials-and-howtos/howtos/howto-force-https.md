@@ -24,7 +24,7 @@ redirect_from:
   - /v1/docs/en/ht-force-https
 ---
 
-The following article describes how you can force to use HTTPS in your pages.
+This guide shows how you can force to use HTTPS in your pages.
 
 {% info_block infoBox "Load balancer" %}
 
@@ -32,10 +32,10 @@ If your servers are behind a load balancer and the load balancer is doing the re
 
 {% endinfo_block %}
 
-
 Perform the following steps to configure the application to use HTTPS.
 
 ## 1. Force HTTPS for all pages
+
 To force HTTPS on all pages, set `$config[ApplicationConstants::(YVES|ZED)_SSL_ENABLED]` to `true`. The application forces HTTPS on all pages.
 
 **Configuration**
@@ -56,14 +56,13 @@ Before a controller is resolved, the application checks if the request is secure
 
 {% info_block infoBox "Info" %}
 
-If the request is not secure and not excluded from HTTPS, the application will return a redirect response if the page was requested with HTTP.<br>If the request is secure and the page is excluded from HTTPS, the application will allow requests with HTTP.
+If the request is not secure and not excluded from HTTPS, the application returns a redirect response if the page is requested with HTTP.<br>If the request is secure and the page is excluded from HTTPS, the application allows requests with HTTP.
 
 {% endinfo_block %}
 
 ## 2. Allow pages to use HTTP
 
-You can also allow some of your pages not to use HTTPS. If you want to allow some pages to use HTTP you can add them to `$config[ApplicationConstants::(YVES|ZED)_SSL_EXCLUDED]` and only set `$config[ApplicationConstants::(YVES|ZED)_SSL_ENABLED]` to `true`. The
- key in this array is the route name and the value is the URL.
+You can also allow some of your pages not to use HTTPS. If you want to allow some pages to use HTTP you can add them to `$config[ApplicationConstants::(YVES|ZED)_SSL_EXCLUDED]` and only set `$config[ApplicationConstants::(YVES|ZED)_SSL_ENABLED]` to `true`. The key in this array is the route name and the value is the URL.
 
 **Configuration**
 

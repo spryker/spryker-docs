@@ -22,10 +22,8 @@ The implementation described in this document is exemplary and may require addit
 
 {% endinfo_block %}
 
-To enable guest checkout:
-
+To enable guest checkout, follow these steps:
 1. In the `is_restricted` column of the `spy_unauthenticated_customer_access` table, set `0` for `add-to-cart` and `order-place-submit` content types.
-
 2. Remove customer permissions:
     1. In the Back Office, go to **Customers&nbsp;<span aria-label="and then">></span> Customer Access**.
     2. Clear all the permissions.
@@ -144,7 +142,7 @@ To enable guest checkout:
 ```
 </details>
 
-6. In `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.twig`, adjust the form definition by replacing `enable: data.isPlaceableOrder and can('WriteSharedCartPermissionPlugin', data.cart.idQuote),` with the following:
+6. In `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.twig`, adjust the form definition by replacing `enable: data.isPlaceableOrder and can('WriteSharedCartPermissionPlugin', data.cart.idQuote)`, with the following:
 ```twig
 enable: data.isPlaceableOrder
 and can('SeeOrderPlaceSubmitPermissionPlugin')

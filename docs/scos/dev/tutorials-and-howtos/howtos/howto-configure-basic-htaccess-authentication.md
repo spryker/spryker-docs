@@ -16,17 +16,15 @@ redirect_from:
 
 This document describes how to configure basic .htaccess authentication for the Storefront and the Back Office.
 
-To set up .htaccess authentication, follow the instructions below.
-
 {% info_block errorBox "Important" %}
 
 It is not possible to protect Glue endpoints with basic auth and we do not recommend to use the basic auth for production environments. Instead of the basic oath, consider other options, like IP whitelisting.
 
 {% endinfo_block %}
 
-## 1. Define login details and endpoints
+To set up .htaccess authentication, follow these steps:
 
-To define login details and endpoints:
+## 1. Define login details and endpoints
 
 1. Add login details to `deploy.*.yml` of the desired environment as follows:
 
@@ -67,7 +65,7 @@ groups:
 docker/sdk boot deploy.*.yml
 ```
 
-4. Once the job finishes, build and start the instance:
+4. Build and start the instance:
 
 ```bash
 docker/sdk up

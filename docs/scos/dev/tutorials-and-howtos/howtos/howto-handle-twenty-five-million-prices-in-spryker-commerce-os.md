@@ -32,14 +32,10 @@ Price import flow:
 When enabling Spryker to handle such a number of prices, we faced the following challenges:
 
 1. 25,000,000 prices should be imported in two separate price dimensions.
-
 2. A product can have about 40,000 prices. This results in overpopulated product abstract search documents: each document aggregates prices of abstract products and all related concrete products. Each price is represented as an indexed field in the search document. Increasing the number of indexed fields slows `ElasticSearch(ES)` down. Just for comparison, the [recommended limit](https://www.elastic.co/guide/en/elasticsearch/reference/master/mapping.html#mapping-limit-settings) is 1,000.
-
 3. Overloaded product abstract search documents cause issues with memory limit and slow down [Publish and Synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html). The average document size is bigger than 1&nbsp;MB.
-
-4. When more than 100 product abstract search documents are processed at a time, payload gets above 100&nbsp;MB, and ES rejects queries. [AWS native service](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-limits.html) does not allow changing this limit.
+4. When moe than 100 product abstract search documents are processed at a time, payload gets above 100&nbsp;MB, and ES rejects queries. [AWS native service](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-limits.html) does not allow changing this limit.
 The queries rejected by ES are considered successful by Spryker because the [Elastica library](https://elastica.io/) ignores the `413` error code.
-
 5. Each price having a unique key results in more different index properties in the whole index. Key structure: `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. This key structure requires millions of actual facets, which slows down ES too much.
 
 ## Problem
@@ -103,11 +99,9 @@ The following solutions were evaluated:
 1. ES join field type.
    This ES functionality is similar to the classical joins in relational databases. This solution solves your problem faster and with less effort. To learn how we implemented this solution, see [ElasticSearch join data type: Implementation](#elasticsearch-join-field-type-implementation). Also, have a look at the other evaluated solutions as they may be more appropriate in your particular case.
    <br>Documentation: [Join field type](https://www.elastic.co/guide/en/elasticsearch/reference/current/parent-join.html)
-
 2. Multi sharding with the `_routing` field.
    The idea is to avoid indexing problems by sharing big documents between shards. Breaking a huge index into smaller ones makes it easier for the search to index data. The solution is complex and does not solve the payload issues.
    <br>Documentation: [`_routing` field](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-routing-field.html)
-
 3. Use Postgres or combine ES and Postgres.
    Postgres provides search functionalities and you can set up an additional database dedicated to running searches or helping ES with additional data. The `script_scoring` function in search lets you embed any data, though performance is decreased, as this script is evaluated for every document when search is being performed.
    Compared to the first option, this solution is more complex.
@@ -183,8 +177,6 @@ To implement the solution, follow these steps:
     ```
 
 These two documents can be viewed as two tables with a foreign key in terms of relational databases.
-
-
 
 ### ElasticSearch join data type feature: Side effects
 
@@ -345,7 +337,7 @@ fi
 
 #### Disabling synchronous commit
 
-We were running the analytics at night when there was no intensive activity in our shop. This allowed us to disable synchronous commit to reduce the processing time of the `COPY` operations.
+We were running the analytics at night when there was no intensive activity in our shop. This lets us disable synchronous commit to reduce the processing time of the `COPY` operations.
 
 The following line in the previous code snippet disables synchronous commit: `SET synchronous_commit TO OFF;`
 
@@ -357,7 +349,7 @@ If you disable synchronous commit, make sure to enable it back after you’ve fi
 
 ### Materialized views for analytics
 
-Materialized view is a tool that aggregates data for analysis. Applying indexes to filterable columns in the views allows you to run `SELECT` queries faster than in relational tables.
+Materialized view is a tool that aggregates data for analysis. Applying indexes to filterable columns in the views lets you run `SELECT` queries faster than in relational tables.
 
 Exemplary procedure:
 
@@ -385,8 +377,7 @@ create index IF NOT exists csv_data_merchant_relationship_prices_net_price ON cs
 
 ## Conclusion
 
-With the configuration and customizations described in this document, Spryker can hold and manage millions of prices in one instance. RabbitMQ, internal APIs, data import modules and Glue API allow to build a custom data import to:
-
-* Fetch a lot of data from a third-party system
-* Successfully import it into the database
-* Denormalize and replicate it to be used by quick storages, such as Redis and ES
+With the configuration and customizations described in this document, Spryker can hold and manage millions of prices in one instance. RabbitMQ, internal APIs, data import modules, and Glue API allow building a custom data import to do the following:
+* Fetch a lot of data from a third-party system.
+* Successfully import it into the database.
+* Denormalize and replicate it to be used by quick storages, such as Redis and ES.

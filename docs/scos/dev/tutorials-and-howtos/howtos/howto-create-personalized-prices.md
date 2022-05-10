@@ -36,17 +36,17 @@ There are several steps to consider when implementing special prices based on wh
 | Catalog | Price that corresponds to the logged in customer group should be displayed. |
 | PriceCartConnector | Price that corresponds to the group the logged in customer is part of should be used in the cart. |
 
-## 1. Extend Customer module
+## 1. Extend the Customer module
 
 The `spy_customer` table should be extended on the project side to include the group ID. You can read more on how to extend the database schema in [Extending the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html) article.
 
 The `spy_customer` table should be extended on the project side to include the group ID. You can read more here on how to extend the database schema.
 
-## 2. Extend Price module
+## 2. Extend the Price module
 
 The `spy_price` table should be extended on the project side to include the group ID. The new added column should not be mandatory.
 
-## 3. Extend price module
+## 3. Extend the price module
 
 The `Price` module should be extended so that we can query prices by SKU and group ID and retrieve the default price.
 

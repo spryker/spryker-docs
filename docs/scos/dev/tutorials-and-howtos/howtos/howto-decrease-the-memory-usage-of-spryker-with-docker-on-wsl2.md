@@ -26,7 +26,7 @@ Ensure that you are running the latest versions of:
 
 ## Limiting the memory usage of VMmem
 
-To limit the memory usage of VMmem:
+To limit the memory usage of VMmem, follow these steps:
 
 1. Create or update `c:\users\USERNAME\.wslconfig` with `memory` and `processors` parameters per your hardware and performance requirements. The following example should suit most use cases.
 
@@ -36,7 +36,7 @@ processors=2 # Sets the number of CPU cores WSL2 is allowed to use to 2.
 ```
 
 2. Restart the *LXSSMANAGER* service:
-    1. In the Start menu, enter `Services` and press <kbd>Enter</kbd>.
+    1. In the **Start** menu, enter `Services` and press <kbd>Enter</kbd>.
     2. Right-click the **LXSSMANAGER** service and select **Restart**.
 
 

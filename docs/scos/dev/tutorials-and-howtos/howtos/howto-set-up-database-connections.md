@@ -50,7 +50,7 @@ $config[PropelConstants::PROPEL]['database']['connections']['zed'] = $connection
 
 ## Multiple connections
 
-Custom case, which allows a project to have more than one connections to different DBs. To define a new connection find a Propel configuration `APP_DIR/config/Shared/config_propel.php`and add the following (example for Postgres):
+Custom case which lets a project have more than one connections to different DBs. To define a new connection find a Propel configuration `APP_DIR/config/Shared/config_propel.php`and add the following (example for Postgres):
 
 ```php
 $config[PropelConstants::PROPEL]['database']['connections']['additional_db_connection'] = [

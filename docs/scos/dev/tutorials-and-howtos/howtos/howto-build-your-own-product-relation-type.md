@@ -23,17 +23,19 @@ redirect_from:
   - /v1/docs/en/ht-build-product-relation
 ---
 
+This tutorial provides step-by-step instruction for the process of building your own product relation type.
+
 {% info_block infoBox %}
 
-This tutorial provides step-by-step instruction for the process of building your own product relation type.
+These instructions are related to Yves and Zed, so both applications must be updated accordingly to allow your product relation type.
 
 {% endinfo_block %}
 
-These instructions are related to Yves and Zed, so both applications should be updated accordingly in order to allow your product relation type.
+
 
 ## Modify Zed
 
-To modify Zed, do the following:
+To modify Zed, follow these steps:
 
 1. Create a new relation type in `\Spryker\Shared\ProductRelation\ProductRelationTypes` as a new constant type.
 
@@ -75,9 +77,9 @@ class RelationNewDataProvider implements ProductRelationDataProviderInterface
 ## Modify Yves
 
 By default, the demoshop provides a carousel type javascript component which renders related products.
-This component can be added with a twig product_relation (type, parameters, title, templatePath) function.
+This component can be added with a twig `product_relation` (type, parameters, title, templatePath) function.
 
-The type is a string which maps to a specific data provider and provides custom data when used, like related-product, up-selling.
+The type is a string which maps to a specific data provider and provides custom data when used, like a related product, upselling.
 
 It accepts the following arguments:
 

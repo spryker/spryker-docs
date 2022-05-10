@@ -14,7 +14,7 @@ redirect_from:
   - /v6/docs/en/howto-allow-zed-cssjs-on-a-project
 ---
 
-To allow Zed CSS/JS on a project level, do the following:
+To allow Zed CSS/JS on a project level, follow these steps:
 
 1. Create `frontend/zed-build.js` on the project with the following content:
 
@@ -50,10 +50,11 @@ api.getConfiguration(settings)
 ```
 
 Matching path is configured with line `path.resolve('./src/Pyz')`, and the file names are configured with line patterns: `['**/Zed/**/*.entry.js'],`.
-Example of the project file location:  `Pyz\Zed\Product\assets\js\main.entry.js` .
+
+An example of the project file location:  `Pyz\Zed\Product\assets\js\main.entry.js`.
 
 {% info_block warningBox %}
 
-Do not remove pattern `'**/Zed/**/*.entry.js'`, as this would break Core assets build process and might lead to non-functional Zed.
+Do not remove pattern `/Zed/**/*.entry.js`, as this breaks the Core assets build process and might lead to non-functional Zed.
 
 {% endinfo_block %}

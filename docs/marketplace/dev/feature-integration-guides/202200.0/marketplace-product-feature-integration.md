@@ -33,14 +33,16 @@ composer require spryker-feature/marketplace-product:"{{page.version}}" --update
 
 Make sure that the following modules have been installed:
 
-| MODULE              | EXPECTED DIRECTORY                   |
-| ------------------- | ------------------------------------ |
-| MerchantProduct           | vendor/spryker/merchant-product             |
-| MerchantProductDataImport | vendor/spryker/merchant-product-data-import |
-| MerchantProductGui        | vendor/spryker/merchant-product-gui         |
-| MerchantProductSearch     | vendor/spryker/merchant-product-search      |
-| MerchantProductStorage    | vendor/spryker/merchant-product-storage     |
-| MerchantProductWidget     | vendor/spryker-shop/merchant-product-widget |
+| MODULE                       | EXPECTED DIRECTORY                                  |
+|------------------------------|-----------------------------------------------------|
+| MerchantProduct              | vendor/spryker/merchant-product                     |
+| MerchantProductDataImport    | vendor/spryker/merchant-product-data-import         |
+| MerchantProductGui           | vendor/spryker/merchant-product-gui                 |
+| MerchantProductSearch        | vendor/spryker/merchant-product-search              |
+| MerchantProductStorage       | vendor/spryker/merchant-product-storage             |
+| MerchantProductWidget        | vendor/spryker-shop/merchant-product-widget         |
+| ProductSearchWidget          | vendor/spryker-shop/product-search-widget           |
+| ProductSearchWidgetExtension | vendor/spryker-shop/product-search-widget-extension |
 
 {% endinfo_block %}
 
@@ -95,20 +97,44 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER  | TYPE | EVENT | PATH  |
-| ----------------- | ----- | ------ | -------------------------- |
-| MerchantProductCriteria   | class | Created | src/Generated/Shared/Transfer/MerchantProductCriteriaTransfer |
-| MerchantProduct           | class | Created | src/Generated/Shared/Transfer/MerchantProductTransfer        |
-| MerchantProductCollection | class | Created | src/Generated/Shared/Transfer/MerchantProductCollectionTransfer |
-| ProductAbstractMerchant   | class | Created | src/Generated/Shared/Transfer/ProductAbstractMerchantTransfer |
-| MerchantSearchCollection  | class | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer |
-| MerchantProductStorage    | class | Created | src/Generated/Shared/Transfer/MerchantProductStorageTransfer |
-| ProductAbstract.idMerchant | property | Created | src/Generated/Shared/Transfer/ProductAbstractTransfer |
-| MerchantProductView       | class | Created | src/Generated/Shared/Transfer/MerchantProductViewTransfer |
+| TRANSFER                   | TYPE     | EVENT | PATH                                                            |
+|----------------------------|----------| ------ |-----------------------------------------------------------------|
+| MerchantProductCriteria    | class    | Created | src/Generated/Shared/Transfer/MerchantProductCriteriaTransfer   |
+| MerchantProduct            | class    | Created | src/Generated/Shared/Transfer/MerchantProductTransfer           |
+| MerchantProductCollection  | class    | Created | src/Generated/Shared/Transfer/MerchantProductCollectionTransfer |
+| ProductAbstractMerchant    | class    | Created | src/Generated/Shared/Transfer/ProductAbstractMerchantTransfer   |
+| MerchantSearchCollection   | class    | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer  |
+| MerchantProductStorage     | class    | Created | src/Generated/Shared/Transfer/MerchantProductStorageTransfer    |
+| ProductAbstract.idMerchant | property | Created | src/Generated/Shared/Transfer/ProductAbstractTransfer           |
+| MerchantProductView        | class    | Created | src/Generated/Shared/Transfer/MerchantProductViewTransfer       |
+| Merchant                   | class    | Created | src/Generated/Shared/Transfer/MerchantTransfer                  |
+| ProductConcretePageSearch  | class    | Created | src/Generated/Shared/Transfer/ProductConcretePageSearchTransfer |
+| PageMap.merchantReferences | property | Created | src/Generated/Shared/Transfer/PageMapTransfer                   |
 
 {% endinfo_block %}
 
 ### 3) Add translations
+
+Add translations as follows:
+
+1. Append glossary for the feature:
+
+```yaml
+quick-order.input-label.merchant,Merchant,en_US
+quick-order.input-label.merchant,Händler,de_DE
+```
+
+2. Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that in the database the configured data are added to the `spy_glossary` table.
+
+{% endinfo_block %}
 
 Generate new translation cache for Zed:
 
@@ -167,18 +193,21 @@ Make sure that the merchant product data appears in the search engine and in the
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                         | DESCRIPTION                                                                                    | PREREQUISITES | NAMESPACE                                                                |
-|----------------------------------------------------------------|------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
-| MerchantProductProductAbstractViewActionViewDataExpanderPlugin | Expands view data for abstract product with merchant data.                                     |               | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
-| MerchantProductProductAbstractListActionViewDataExpanderPlugin | Expands product list data for abstract product data for merchant filter.                       |               | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
-| MerchantProductProductTableQueryCriteriaExpanderPlugin         | Expands QueryCriteriaTransfer with QueryJoinTransfer for filtering by idMerchant.              |               | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
-| MerchantProductAbstractMapExpanderPlugin                       | Adds merchant names to product abstract search data.                                           |               | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
-| MerchantProductPageDataExpanderPlugin                          | Expands the provided ProductAbstractPageSearch transfer object's data by merchant names.       |               | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
-| MerchantProductPageDataLoaderPlugin                            | Expands ProductPageLoadTransfer object with merchant data.                                     |               | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
-| MerchantProductAbstractStorageExpanderPlugin                   | Expands product abstract storage data with merchant references.                                |               | Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage   |
-| MerchantProductProductAbstractPostCreatePlugin                 | Creates a new merchant product abstract entity if `ProductAbstractTransfer.idMerchant` is set. | None          | Spryker\Zed\MerchantProduct\Communication\Plugin\Product                 |
-| ProductApprovalProductAbstractEditViewExpanderPlugin           | Expands view data with abstract product approval status data.                                  | None          | Spryker\Zed\ProductApprovalGui\Communication\Plugin\ProductManagement    |
-| MerchantProductProductAbstractEditViewExpanderPlugin           | Expands view data for abstract product with merchant data.                                     | None          | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
+| PLUGIN                                                         | DESCRIPTION                                                                                    | PREREQUISITES | NAMESPACE                                                                     |
+|----------------------------------------------------------------|------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
+| MerchantProductProductAbstractViewActionViewDataExpanderPlugin | Expands view data for abstract product with merchant data.                                     |               | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement         |
+| MerchantProductProductAbstractListActionViewDataExpanderPlugin | Expands product list data for abstract product data for merchant filter.                       |               | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement         |
+| MerchantProductProductTableQueryCriteriaExpanderPlugin         | Expands QueryCriteriaTransfer with QueryJoinTransfer for filtering by idMerchant.              |               | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement         |
+| MerchantProductAbstractMapExpanderPlugin                       | Adds merchant names to product abstract search data.                                           |               | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch      |
+| MerchantProductPageDataExpanderPlugin                          | Expands the provided ProductAbstractPageSearch transfer object's data by merchant names.       |               | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch      |
+| MerchantProductPageDataLoaderPlugin                            | Expands ProductPageLoadTransfer object with merchant data.                                     |               | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch      |
+| MerchantProductAbstractStorageExpanderPlugin                   | Expands product abstract storage data with merchant references.                                |               | Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage        |
+| MerchantProductProductAbstractPostCreatePlugin                 | Creates a new merchant product abstract entity if `ProductAbstractTransfer.idMerchant` is set. | None          | Spryker\Zed\MerchantProduct\Communication\Plugin\Product                      |
+| ProductApprovalProductAbstractEditViewExpanderPlugin           | Expands view data with abstract product approval status data.                                  | None          | Spryker\Zed\ProductApprovalGui\Communication\Plugin\ProductManagement         |
+| MerchantProductProductAbstractEditViewExpanderPlugin           | Expands view data for abstract product with merchant data.                                     | None          | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement         |
+| MerchantProductOfferProductConcretePageMapExpanderPlugin       | Expands the provided PageMap transfer object and returns the modified version.                 |               | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch |
+| MerchantProductProductConcretePageMapExpanderPlugin            | Expands `PageMap` transfer object with `merchant_reference`.                                   |               | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch      |
+| MerchantProductOfferProductQuickAddFormExpanderPlugin          | Expands `ProductQuickAddForm` with `product_offer_reference` hidden field.                     |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\ProductSearchWidget        |
 
 **src/Pyz/Zed/Product/ProductDependencyProvider.php**
 
@@ -321,6 +350,19 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
             new MerchantMerchantProductPageDataLoaderPlugin(),
         ];
     }
+        
+    /**
+     * @return array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductConcretePageMapExpanderPluginInterface>
+     */
+    protected function getConcreteProductMapExpanderPlugins(): array
+    {
+        return [
+            new ProductConcreteProductListPageMapExpanderPlugin(),
+            new ProductImageProductConcretePageMapExpanderPlugin(),
+            new MerchantProductProductConcretePageMapExpanderPlugin(),
+            new MerchantProductOfferProductConcretePageMapExpanderPlugin(),
+        ];
+    }
 }
 ```
 
@@ -359,6 +401,37 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 {% info_block warningBox "Verification" %}
 
 Make sure that data contains `merchant_references` for merchant products in the `spy_product_abstract_storage`.
+
+{% endinfo_block %}
+
+**src/Pyz/Yves/ProductSearchWidget/ProductSearchWidgetDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ProductSearchWidget;
+
+use ...
+
+class ProductSearchWidgetDependencyProvider extends SprykerProductSearchWidgetDependencyProvider
+{
+...
+    /**
+     * @return array<\SprykerShop\Yves\ProductSearchWidgetExtension\Dependency\Plugin\ProductQuickAddFormExpanderPluginInterface>
+     */
+    protected function getProductQuickAddFormExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductOfferProductQuickAddFormExpanderPlugin(),
+        ];
+    }
+...
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that correct product offer is added to cart with Quick Add To Cart option.
 
 {% endinfo_block %}
 
@@ -635,10 +708,10 @@ Make sure that the configured data is added to the `spy_glossary` table in the d
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN  | DESCRIPTION    | PREREQUISITES | NAMESPACE  |
-| ----------------- | ---------------------- | ------------ | -------------------- |
-| MerchantProductMerchantNameSearchConfigExpanderPlugin | Expands facet configuration with merchant name filter.       |           | Spryker\Client\MerchantProductSearch\Plugin\Search          |
-| ProductViewMerchantProductExpanderPlugin              | Expands ProductView transfer object with merchant reference. |           | Spryker\Client\MerchantProductStorage\Plugin\ProductStorage |
+| PLUGIN                                                   | DESCRIPTION                                                                    | PREREQUISITES | NAMESPACE                                                                     |
+|----------------------------------------------------------|--------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
+| MerchantProductMerchantNameSearchConfigExpanderPlugin    | Expands facet configuration with merchant name filter.                         |               | Spryker\Client\MerchantProductSearch\Plugin\Search                            |
+| ProductViewMerchantProductExpanderPlugin                 | Expands ProductView transfer object with merchant reference.                   |               | Spryker\Client\MerchantProductStorage\Plugin\ProductStorage                   |
 
 **src/Pyz/Client/Search/SearchDependencyProvider.php**
 

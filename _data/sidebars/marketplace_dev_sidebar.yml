@@ -429,11 +429,6 @@ entries:
             include_versions:
             - "202108.0"
 
-          - title: Marketplace Product Search Widget feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-search-widget-feature-integration.html
-            include_versions:
-            - "202200.0"
-
           - title: Glue API
             nested:
               - title: "Glue API: Marketplace Inventory Management feature integration"

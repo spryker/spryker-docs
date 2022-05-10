@@ -339,6 +339,11 @@ entries:
 
       - title: Glue API guides
         nested:
+          - title: REST API reference
+            url: /docs/marketplace/dev/glue-api-guides/rest-api-reference.html
+            include_versions:       
+            - "202204.0"
+
           - title: Abstract products
             nested:
               - title: Retrieving abstract products

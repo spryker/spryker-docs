@@ -93,3 +93,5 @@ The separated setup features:
 * Flexible URL management. For example, the same product in different stores can have the same URL.
 
 * Flexible management of the configuration of stores: distinct category navigation, product schema details, and users.
+
+* Separate deployment of each store: deploy a new version of a store without affecting other stores. 

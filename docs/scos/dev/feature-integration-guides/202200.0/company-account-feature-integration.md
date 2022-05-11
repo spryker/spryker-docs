@@ -372,8 +372,8 @@ Enable the following behaviors by registering the plugins:
 | CompanyToCompanyUnitAddressEditFormExpanderPlugin                 | Transforms company select dropdown on the company unit address edit form into an input field with search and suggestions                  | None              | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyUnitAddressGui`           |
 | CompanyToCompanyRoleCreateFormExpanderPlugin                      | Transforms company select dropdown on the company role edit form into an input field with search and suggestions                          | None              | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyRoleGui`                  |
 | CompanyBusinessUnitToCustomerBusinessUnitAttachFormExpanderPlugin | Transforms business unit select dropdown on the company user to business unit attach form into an input field with search and suggestions | None              | `Spryker\Zed\CompanyBusinessUnitGui\Communication\Plugin\BusinessOnBehalfGui` |
-****_~~[| CompanyToCompanyBusinessUnitFormExpanderPlugin                    | Transforms company select dropdown on the company business unit create form into an input field with search and suggestions               | None              | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyBusinessUnitGui`          |****_~~
-]()
+| CompanyToCompanyBusinessUnitFormExpanderPlugin                    | Transforms company select dropdown on the company business unit create form into an input field with search and suggestions               | None              | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyBusinessUnitGui`          |
+
 **src/Pyz/Zed/Customer/CustomerDependencyProvider.php**
 
 ```php

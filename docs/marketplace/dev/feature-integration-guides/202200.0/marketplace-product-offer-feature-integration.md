@@ -1105,14 +1105,8 @@ Enable the following behaviors by registering the plugins:
 | ProductOfferValidityProductOfferExpanderPlugin              | Expands product offer data with validity dates when the product offer is fetched.                                      |                                       | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer               |
 | ProductOfferValidityConsole                                 | Updates product offers to have the `isActive` flag to be `false` where their validity date is not current anymore.     |                                       | Spryker\Zed\ProductOfferValidity\Communication\Console                           |
 | MerchantProductOfferStorageMapperPlugin                     | Maps Merchant foreign key of `ProductOffer` transfer object to Merchant Id `ProductOfferStorage` transfer object.      |                                       | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferStorage |
-| MerchantProductOfferQuickOrderFormColumnPlugin              | Returns glossary key for column title to be displayed.                                                                 |                                       | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage                |
-| MerchantProductOfferQuickOrderItemExpanderPlugin            | Expands provided ItemTransfer with additional data.                                                                    |                                       | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage                |
-| MerchantProductOfferQuickOrderFormExpanderPlugin            | Expands QuickOrderItemEmbeddedForm with `product_offer_reference` form field.                                          |                                       | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage                |
-| MerchantProductQuickOrderItemExpanderPlugin                 | Expands provided ItemTransfer with additional data.                                                                    |                                       | SprykerShop\Yves\MerchantProductWidget\Plugin\QuickOrderPage                     |
 | ProductOfferQuickOrderItemMapperPlugin                      | Maps product offer reference to QuickOrderItem transfer.                                                               |                                       | SprykerShop\Yves\ProductOfferWidget\Plugin\QuickOrderPage                        |
-| MerchantQuickOrderItemMapperPlugin                          | Maps merchant reference to QuickOrderItem transfer.                                                                    |                                       | SprykerShop\Yves\MerchantWidget\Plugin\QuickOrderPage                            |
-| MerchantProductOfferWidgetRouteProviderPlugin               | Adds Routes to the RouteCollection.                                                                                    |                                       | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\Router |
-| MerchantProductMerchantProductOfferCollectionExpanderPlugin | Finds merchant product by sku and expands form choices with a merchant product's value.                                |                                       | SprykerShop\Yves\MerchantProductWidget\Plugin\MerchantProductOfferWidget                |
+| MerchantProductOfferWidgetRouteProviderPlugin               | Adds Routes to the RouteCollection.                                                                                    |                                       | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\Router                        |
 
 **src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
 
@@ -1457,94 +1451,6 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
 }
 ```
 
-**src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php**
-```php
-<?php
-
-namespace Pyz\Yves\QuickOrderPage;
-
-use ...
-
-class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyProvider
-{
-    /**
-     * @return array<\SprykerShop\Yves\QuickOrderPageExtension\Dependency\Plugin\QuickOrderItemExpanderPluginInterface>
-     */
-    protected function getQuickOrderItemTransferExpanderPlugins(): array
-    {
-        return [
-            new QuickOrderItemDefaultPackagingUnitExpanderPlugin(),
-            new MerchantProductQuickOrderItemExpanderPlugin(),
-            new MerchantProductOfferQuickOrderItemExpanderPlugin(),
-        ];
-    }
-...
-    /**
-     * @return array<\SprykerShop\Yves\QuickOrderPageExtension\Dependency\Plugin\QuickOrderFormExpanderPluginInterface>
-     */
-    protected function getQuickOrderFormExpanderPlugins(): array
-    {
-        return [
-            new MerchantProductOfferQuickOrderFormExpanderPlugin(),
-        ];
-    }
-    
-    /**
-     * @return array<\SprykerShop\Yves\QuickOrderPageExtension\Dependency\Plugin\QuickOrderFormColumnPluginInterface>
-     */
-    protected function getQuickOrderFormColumnPlugins(): array
-    {
-        return [
-            new MerchantProductOfferQuickOrderFormColumnPlugin(),
-            new QuickOrderFormMeasurementUnitColumnPlugin(),
-        ];
-    }
-...    
-    /**
-     * @return array<\SprykerShop\Yves\QuickOrderPageExtension\Dependency\Plugin\QuickOrderItemMapperPluginInterface>
-     */
-    protected function getQuickOrderItemMapperPlugins(): array
-    {
-        return [
-            new MerchantQuickOrderItemMapperPlugin(),
-            new ProductOfferQuickOrderItemMapperPlugin(),
-        ];
-    }
-}
-```
-
-**src/Pyz/Yves/Router/RouterDependencyProvider.php**
-```php
-<?php
-
-namespace Pyz\Yves\Router;
-
-use ...
-
-class RouterDependencyProvider extends SprykerRouterDependencyProvider
-{
-...
-    /**
-     * @return array<\Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface>
-     */
-    protected function getRouteProvider(): array
-    {
-        $routeProviders = [
-        ...
-            new MerchantProductOfferWidgetRouteProviderPlugin(),
-        ...
-        ];
-
-        if (class_exists(LoadTestingRouterProviderPlugin::class)) {
-            $routeProviders[] = new LoadTestingRouterProviderPlugin();
-        }
-
-        return $routeProviders;
-    }
-...
-}
-```
-
 **src/Pyz/Yves/MerchantProductOfferWidget/MerchantProductOfferWidgetDependencyProvider.php**
 ```php
 <?php
@@ -1584,7 +1490,6 @@ It means the following:
 1. If a merchant gets deactivated, `ProductAbstract`s that were on the catalog search only because they had a product offer from that merchant get removed.
 2. If a product offer gets created, and the `ProductAbstract` related to it was not available on catalog search, it would be available now.
 
-Make sure that column Title is translated properly
 Make sure that merchant product can be found by sku and added to Cart with proper merchant
 
 {% endinfo_block %}

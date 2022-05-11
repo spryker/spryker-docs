@@ -205,9 +205,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductProductAbstractPostCreatePlugin                 | Creates a new merchant product abstract entity if `ProductAbstractTransfer.idMerchant` is set. | None          | Spryker\Zed\MerchantProduct\Communication\Plugin\Product                      |
 | ProductApprovalProductAbstractEditViewExpanderPlugin           | Expands view data with abstract product approval status data.                                  | None          | Spryker\Zed\ProductApprovalGui\Communication\Plugin\ProductManagement         |
 | MerchantProductProductAbstractEditViewExpanderPlugin           | Expands view data for abstract product with merchant data.                                     | None          | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement         |
-| MerchantProductOfferProductConcretePageMapExpanderPlugin       | Expands the provided PageMap transfer object and returns the modified version.                 |               | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch |
 | MerchantProductProductConcretePageMapExpanderPlugin            | Expands `PageMap` transfer object with `merchant_reference`.                                   |               | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch      |
-| MerchantProductOfferProductQuickAddFormExpanderPlugin          | Expands `ProductQuickAddForm` with `product_offer_reference` hidden field.                     |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\ProductSearchWidget        |
 
 **src/Pyz/Zed/Product/ProductDependencyProvider.php**
 
@@ -401,37 +399,6 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 {% info_block warningBox "Verification" %}
 
 Make sure that data contains `merchant_references` for merchant products in the `spy_product_abstract_storage`.
-
-{% endinfo_block %}
-
-**src/Pyz/Yves/ProductSearchWidget/ProductSearchWidgetDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Yves\ProductSearchWidget;
-
-use ...
-
-class ProductSearchWidgetDependencyProvider extends SprykerProductSearchWidgetDependencyProvider
-{
-...
-    /**
-     * @return array<\SprykerShop\Yves\ProductSearchWidgetExtension\Dependency\Plugin\ProductQuickAddFormExpanderPluginInterface>
-     */
-    protected function getProductQuickAddFormExpanderPlugins(): array
-    {
-        return [
-            new MerchantProductOfferProductQuickAddFormExpanderPlugin(),
-        ];
-    }
-...
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that correct product offer is added to cart with Quick Add To Cart option.
 
 {% endinfo_block %}
 
@@ -708,10 +675,10 @@ Make sure that the configured data is added to the `spy_glossary` table in the d
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                   | DESCRIPTION                                                                    | PREREQUISITES | NAMESPACE                                                                     |
-|----------------------------------------------------------|--------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
-| MerchantProductMerchantNameSearchConfigExpanderPlugin    | Expands facet configuration with merchant name filter.                         |               | Spryker\Client\MerchantProductSearch\Plugin\Search                            |
-| ProductViewMerchantProductExpanderPlugin                 | Expands ProductView transfer object with merchant reference.                   |               | Spryker\Client\MerchantProductStorage\Plugin\ProductStorage                   |
+| PLUGIN  | DESCRIPTION    | PREREQUISITES | NAMESPACE  |
+| ----------------- | ---------------------- | ------------ | -------------------- |
+| MerchantProductMerchantNameSearchConfigExpanderPlugin | Expands facet configuration with merchant name filter.       |           | Spryker\Client\MerchantProductSearch\Plugin\Search          |
+| ProductViewMerchantProductExpanderPlugin              | Expands ProductView transfer object with merchant reference. |           | Spryker\Client\MerchantProductStorage\Plugin\ProductStorage |
 
 **src/Pyz/Client/Search/SearchDependencyProvider.php**
 

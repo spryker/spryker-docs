@@ -75,13 +75,13 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                                                   | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                                                                      |
 |--------------------------------------------------------------------------|------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------------------|
-| MerchantRelationshipPreBuildPriceProductGroupKeyPlugin                   | Extends the logic for Price Product group key generation.. |               | Spryker\Service\PriceProductMerchantRelationship\Plugin\PriceProduct                                           |
+| MerchantRelationshipPreBuildPriceProductGroupKeyPlugin                   | Extends the logic for Price Product group key generation . |               | Spryker\Service\PriceProductMerchantRelationship\Plugin\PriceProduct                                           |
 | MerchantRelationshipVolumePriceProductValidatorPlugin                    | Validates volume prices.                                   |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\PriceProduct                | 
 | MerchantRelationshipPriceProductCollectionDeletePlugin                   | Removes price product merchant relationships.              |               | Spryker\Zed\PriceProductMerchantRelationship\Communication\Plugin\PriceProduct                                 |
 | MerchantRelationshipPriceProductTableFilterPlugin                        | Filters price product transfers.                           |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui    |
 | MerchantRelationshipPriceProductAbstractTableConfigurationExpanderPlugin | Expands price product abstract table configuration.        |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui    |
 | MerchantRelationshipPriceProductConcreteTableConfigurationExpanderPlugin | Expands price product concrete table configuration.        |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui    |
-| MerchantRelationshipPriceProductMapperPlugin                             | Maps merchant relationship data .                          |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui    |
+| MerchantRelationshipPriceProductMapperPlugin                             | Maps merchant relationship data.                           |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui    |
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/ProductMerchantPortalGui/ProductMerchantPortalGuiDependencyProvider.php</summary>
@@ -181,7 +181,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 {% info_block warningBox "Verification" %}
 
 Open any merchant product with a regular price.
-Create a customer-specific price with the same combination of currency and country.
+Create a customer-specific price with the same combination of currency and country as the existing price.
 Make sure that there is no validation error.
 
 {% endinfo_block %}

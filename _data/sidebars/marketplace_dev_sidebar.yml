@@ -293,7 +293,7 @@ entries:
           - title: Marketplace Merchant Custom Prices
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-custom-prices.html
             include_versions:
-            - "202200.0"
+            - "202204.0"
 
           - title: Glue API
             nested:

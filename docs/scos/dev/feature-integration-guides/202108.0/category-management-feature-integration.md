@@ -54,7 +54,7 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up сonfiguration
+### 2) Set up configuration
 
 Set up the following configuration:
 

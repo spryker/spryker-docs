@@ -28,7 +28,7 @@ This topic describes how to add product attributes to search and define search p
 
 3. Add the product attribute to a product by [creating a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) or by [editing a product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/editing-abstract-products.html).
 
-4. To start working with filter preferences, go to **Merchandising** > **Search Preferences**.
+4. To start working with filter preferences, go to **Merchandising&nbsp;<span aria-label="and then">></span> Search Preferences**.
 
 Review the [reference information](#reference-information-add-product-attributes-to-search-and-define-search-preferences) before you start, or look up the necessary information as you go through the process.
 

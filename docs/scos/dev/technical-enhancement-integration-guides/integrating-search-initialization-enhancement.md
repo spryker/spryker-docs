@@ -19,41 +19,43 @@ redirect_from:
   - /docs/scos/dev/technical-enhancements/search-initialization-improvement.html
 ---
 
-## General Information
+## General information
 
 Previously, the `vendor/bin/console setup:search` command invoked the `build` and `data initialization` processes. Running both processes simultaneously in a read-only file system results into the`build` process failing as the codebase is already baked into images. That's why the command has has been split into two commands for each of the processes which allows running them separately. You can find the commands below:
 
 **console search:create-indexes**
+
 >Creates indexes in the search service (Elastic Search).
 
 **console search:setup:index-map**
+
 >Generates IndexMap PHP files that are used by the whole application.
 
 ## Integration
 
-### 1) Install the Required Modules Using Composer
+### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
+
 ```bash
 composer require spryker/search:"^8.9.0"
 ```
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that the following module has been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| `Seach` | `vendor/spryker/search` |
+| SeaRch | vendor/spryker/search |
 
 {% endinfo_block %}
 
-### 2) Set Up Behavior
+### 2) Set up behavior
 
 Enable the console commands provided by the `Search`module:
 
-Pyz/Zed/Console/ConsoleDependencyProvider
+**Pyz/Zed/Console/ConsoleDependencyProvider**
 
 ```php
 <?php

@@ -16,11 +16,15 @@ redirect_from:
 ---
 
 To implement [CSS lazy loading for front end](/docs/scos/dev/front-end-development/yves/frontend-assets-building-and-loading.html#page-critical-path-layout), do the following:
+
 1. Update the `ShopUi` module to 1.44.0 version, and also update the spryker-shop/shop dependencies for the `CatalogPage`, `HomePage` and `ProductDetailPage` modules by running:
+
 ```bash
 COMPOSER_MEMORY_LIMIT=-1 composer update spryker-shop/shop-application spryker-shop/shop-ui spryker-shop/catalog-page spryker-shop/home-page spryker-shop/product-detail-page --with-dependencies
 ```
-2. Add `"@jsdevtools/file-path-filter": "~3.0.2"`, into the `package.json` file to the `devDependencies` section and run
+
+2. Add `"@jsdevtools/file-path-filter": "~3.0.2"`, into the `package.json` file to the `devDependencies` section and run:
+
 ```bash
 npm install
 ```
@@ -28,6 +32,7 @@ npm install
 3. Make the following adjustments to the `frontend/settings.js` file:
 
 * Define `criticalPatterns`:
+
 ```js
 ...
 // array of patterns for the critical components
@@ -41,6 +46,7 @@ const criticalPatterns = [
 ```
 
 * Add `criticalPatterns` to the returned settings object:
+
 ```js
 ...
 // return settings
@@ -56,6 +62,7 @@ const criticalPatterns = [
 ```
 
 * Extend the definition of the setting for the frontend builder with the following style entry point patterns for components `stylesEntryPoints`:
+
 ```js
 ...
 // define settings for suite-frontend-builder finder
@@ -91,6 +98,7 @@ const criticalPatterns = [
       },
 ...
 ```
+
 4. Update the `frontend/libs/finder.js` file with the following cod:
 
     1. Add `mergeEntryPoints` function:
@@ -173,15 +181,18 @@ const criticalPatterns = [
     4. Extend the destructuring assignment with the following changes:
 
     From:
+
     ```js
     const [componentEntryPoints, styles] = await Promise.all([componentEntryPointsPromise, stylesPromise]);
     ```
     To:
+
     ```js
     const [componentEntryPoints, styleEntryPoints, styles] = await Promise.all([componentEntryPointsPromise, styleEntryPointsPromise, stylesPromise]);
     ```
 
     5. Add new local variables `criticalEntryPoints` and `nonCriticalEntryPoints` to the `getConfiguration` function:
+
     ```js
     ...
     const criticalEntryPoints = styleEntryPoints.filter(filePathFilter({
@@ -242,7 +253,8 @@ const criticalPatterns = [
     ```
 
 7. Update the `page-blank.twig` layout on the project level in `src/Pyz/Yves/ShopUi/Theme/default/templates/page-blank/page-blank.twig` by adding the new `isCssLazyLoadSupported` twig variable:
-```html
+
+```twig
 {% raw %}{%{% endraw %} extends template('page-blank', '@SprykerShop:ShopUi') {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} block template {% raw %}%}{% endraw %}
@@ -252,11 +264,13 @@ const criticalPatterns = [
     {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+
 {% info_block infoBox "Info" %}
 
 Make sure your styles from `node_modules` included in `.scss` files (not in `index.ts`). For example:
 
 `molecules/slick-carousel/slick-carousel.scss`:
+
 ```js
 @import '~slick-carousel/slick/slick.scss';
 

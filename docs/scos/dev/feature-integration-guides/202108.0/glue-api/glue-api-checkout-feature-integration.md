@@ -143,7 +143,7 @@ class CheckoutRestApiConfig extends SprykerCheckoutRestApiConfig
 
 {% info_block infoBox "Info" %}
 
-If `CheckoutRestApiConfig::IS_PAYMENT_PROVIDER_METHOD_TO_STATE_MACHINE_MAPPING_ENABLED` is true, make sure that the payment methods and providers of your shop are configured in `CheckoutRestApiConfig::getPaymentProviderMethodToStateMachineMapping()`. 
+If `CheckoutRestApiConfig::IS_PAYMENT_PROVIDER_METHOD_TO_STATE_MACHINE_MAPPING_ENABLED` is true, make sure that the payment methods and providers of your shop are configured in `CheckoutRestApiConfig::getPaymentProviderMethodToStateMachineMapping()`.
 
 Setting `CheckoutRestApiConfig::IS_PAYMENT_PROVIDER_METHOD_TO_STATE_MACHINE_MAPPING_ENABLED` to false ignores the Glue API level configuration. Subsequently, the `checkout-data` endpoint returns all the payment methods.
 
@@ -239,7 +239,7 @@ If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAt
 
 <details open>
 <summary markdown='span'>Response sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -280,8 +280,9 @@ If `Pyz\Glue\CheckoutRestApi\CheckoutRestApiConfig::isPaymentProvidersMappedToAt
             ...
 }
  ```
-</details>
  
+</details>
+
 {% endinfo_block %}
 
 ## 3) Set up transfer objects
@@ -353,7 +354,7 @@ Activate the following plugins:
 
 | PLUGIN    | SPECIFICATION   | PREREQUISITES | NAMESPACE   |
 | --------------- | -------------------- | ----------- | ---------------------- |
-| CheckoutDataResourcePlugin              | Registers the `сheckout-data` resource.                      | None          | Spryker\Glue\CheckoutRestApi\Plugin\GlueApplication |
+| CheckoutDataResourcePlugin              | Registers the `checkout-data` resource.                      | None          | Spryker\Glue\CheckoutRestApi\Plugin\GlueApplication |
 | CheckoutResourcePlugin                  | Registers the `checkout` resource.                           | None          | Spryker\Glue\CheckoutRestApi\Plugin\GlueApplication |
 | OrderRelationshipByOrderReferencePlugin | Adds a relationship to the `order` entity by order reference. | None          | Spryker\Glue\OrdersRestApi\Plugin                   |
 | OrderPaymentsResourceRoutePlugin        | Registers the `order-payments` resource.                     | None          | Spryker\Glue\OrderPaymentsRestApi\Plugin            |
@@ -548,5 +549,3 @@ Integrate the following related features.
 | -------- | ----------------- | ---------------------- |
 | Glue API: Shipment  | ✓                                | [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html)  |
 | Glue API: Payments   | ✓                                | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-payments-feature-integration.html) |
-
-

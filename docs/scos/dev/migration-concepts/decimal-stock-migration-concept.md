@@ -22,9 +22,11 @@ related:
 ---
 
 ## General information
+
 The feature supports decimal inventory in terms of stock and availability, amount of reserved products, as well as amount values of a packaging unit.
 
 ## Migration process
+
 You can upgrade all modules affected by the feature in bulk.
 
 **To update all the modules affected by feature in bulk, do the following:**
@@ -54,19 +56,18 @@ console propel:install
 console transfer:generate
 ```
 
-5. Follow the steps in the individual migration guide for [ProductPackagingUnitStorage](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitstorage.html#upgrading-from-version-4-to-version-500).
-
+5. Follow the steps in the individual migration guide for [ProductPackagingUnitStorage](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitstorage.html#upgrading-from-version-4-to-v--version-500).
 6. Follow the steps in the individual migration guide for [Availability](/docs/scos/dev/module-migration-guides/migration-guide-availability.html#upgrading-from-version-8-to-version-900).
 
 {% info_block errorBox %}
 
-Care should be taken on the project level code to handle the availability and stock values as decimal objects. Due to the PHP floating-point precision issues, all decimal numbers in Spryker are wrapped in `decimal-object` that handles the calculations performed on them to allow exact precision. For more informatkion about the`decimal-object` library, see [HowTo - Integrate and use precise decimal numbers](/docs/scos/dev/tutorials-and-howtos/howtos/howto-integrate-and-use-precise-decimal-numbers.html).
+Care should be taken on the project level code to handle the availability and stock values as decimal objects. Due to the PHP floating-point precision issues, all decimal numbers in Spryker are wrapped in `decimal-object` that handles the calculations performed on them to allow exact precision. For more information about the`decimal-object` library, see [HowTo - Integrate and use precise decimal numbers](/docs/scos/dev/tutorials-and-howtos/howtos/howto-integrate-and-use-precise-decimal-numbers.html).
 
 {% endinfo_block %}
 
 The following table lists the modules affected by the Decimal Stock update and will be released as a major or a semantic major.
 
-| Module | Version | Migration guide |
+| MODULE | VERSION | MIGRATION GUIDE |
 | --- | --- | --- |
 | `spryker/availability` | 9.0.0 | [Migration Guide - Availability](/docs/scos/dev/module-migration-guides/migration-guide-availability.html#upgrading-from-version-8-to-version-900) |
 | `spryker/oms` | 11.0.0 | [Migration Guide - OMS](/docs/scos/dev/module-migration-guides/migration-guide-oms.html#upgrading-from-version-10-to-version-1100) |
@@ -82,6 +83,6 @@ The following table lists the modules affected by the Decimal Stock update and w
 | `spryker/product-packaging-unit` | 4.0.0 | [Migration Guide - ProductPackagingUnit](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunit.html#upgrading-from-version-3-to-version-400) |
 | `spryker/product-measurement-unit` | 5.0.0 | [Migration Guide - ProductMeasurementUnit](/docs/scos/dev/module-migration-guides/migration-guide-productmeasurementunit.html#upgrading-from-version-4-to-version-500) |
 | `spryker/product-packaging-unit-data-import` | 2.0.0 | [Migration Guide - ProductPackagingUnitDataImport](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitdataimport.html#upgrading-from-version-1-to-version-200) |
-| `spryker/product-packaging-unit-storage` | 5.0.0 | [Migration Guide - ProductPackagingUnitStorage](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitstorage.html#upgrading-from-version-4-to-version-500) |
+| `spryker/product-packaging-unit-storage` | 5.0.0 | [Migration Guide - ProductPackagingUnitStorage](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitstorage.html#upgrading-from-version-4-to-v--version-500) |
 | `spryker/product-management` | 0.19.0 | [Migration Guide - ProductManagement](/docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html#upgrading-from-version-018-to-version-0190) |
 | `spryker-shop/product-packaging-unit-widget` | 0.5.0 | [Migration Guide - ProductPackagingUnitWidget](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitwidget.html#upgrading-from-version-04-to-version-050) |

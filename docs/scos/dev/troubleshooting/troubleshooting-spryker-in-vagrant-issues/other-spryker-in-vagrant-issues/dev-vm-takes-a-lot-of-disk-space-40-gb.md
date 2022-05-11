@@ -19,6 +19,7 @@ redirect_from:
 Spryker Virtual Machine creates a dynamically allocated storage that grows over time as you add data. However, if you delete the data from the virtual machine later, you'll notice that the disk doesn't automatically shrink.
 
 ## Solution
+
 To solve this issue, you can use the [dd](https://en.wikipedia.org/wiki/Dd_(Unix)) utility. To do this, run the following commands inside the folder where you placed the source code (by default, it's *devvm*):
 
 ```bash

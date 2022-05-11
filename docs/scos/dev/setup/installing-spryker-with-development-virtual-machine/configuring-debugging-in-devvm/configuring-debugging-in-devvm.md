@@ -77,6 +77,7 @@ sudo -i bash -c "phpenmod xdebug && systemctl restart php7.4-fpm.service"
 {% info_block warningBox "Heavy memory usage" %}
 
 After you've finished debugging, make sure to disable the module by running the following command:
+
 ```bash
 sudo -i bash -c "phpdismod xdebug && systemctl restart php7.4-fpm.service"
 ```
@@ -86,6 +87,7 @@ sudo -i bash -c "phpdismod xdebug && systemctl restart php7.4-fpm.service"
 ## 2. Configure PhpStorm servers
 
 Define servers in PhpStorm:
+
 1. In PhpStorm, go to **Preferences** > **Languages & Frameworks** > **PHP** > **Servers**.
 2. Add a new server:
     1. Select **+**.
@@ -115,7 +117,6 @@ To debug with PhpStorm:
     3. For **Servers**, enter *zed.mysprykershop.com*.
     4. For **Ide Key(session id)**, enter *PHPSTORM*.
 3. Select *Listen for PHP Debug Connections* ![listen-to-php-debug-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Debugging/Configuring+debugging+in+Vagrant/listen-php-debug-connections.png).
-
 
 4. Select *Debug* ![debug-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Debugging/Configuring+debugging+in+Vagrant/debug-button.png). You should get the message: “Waiting for incoming connection with IDE key ‘PHPSTORM’”.
 

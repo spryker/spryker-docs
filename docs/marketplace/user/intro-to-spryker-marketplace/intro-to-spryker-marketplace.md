@@ -8,7 +8,7 @@ template: concept-topic-template
 
 In this section, you will find all the information about Spryker Marketplace and how to start developing one.
 
-If you are new to Spryker, first see our [Intro to Spryker](/docs/scos/user/intro-to-spryker/intro-to-spryker.html)
+If you are new to Spryker, first see our [Intro to Spryker](/docs/scos/user/intro-to-spryker/intro-to-spryker.html).
 
 ## Overview of Spryker Marketplace
 
@@ -27,7 +27,7 @@ For new projects, we provide a B2C Demo Marketplace template, which is a great s
 
 Even if you don't need marketplace features at first, but you are going to use them in future, the B2C Demo Marketplace is still the best starting point. You can just ignore the marketplace features until you actually want to use them.
 
-To learn how to install B2C Demo Marketplace, see [Spryker Marketplace Setup](/docs/marketplace/dev/setup/spryker-marketplace-setup.html)
+To learn how to install B2C Demo Marketplace, see [Spryker Marketplace Setup](/docs/marketplace/dev/setup/spryker-marketplace-setup.html).
 
 ## Read next
 

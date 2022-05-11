@@ -25,11 +25,11 @@ redirect_from:
 ---
 
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
-Version 2.0.0 of the ContentGui module introduces the [Content Items](/docs/scos/user/features/{{site.version}}/content-items-feature-overview.html) functionality that allows creating and managing content and later selecting where it should be inserted.
+Version 2.0.0 of the `ContentGui` module introduces the [Content Items](/docs/scos/user/features/{{site.version}}/content-items-feature-overview.html) functionality that allows creating and managing content and later selecting where it should be inserted.
 
-With the ContentBanner version 2.0, the following changes have been made:
+With the `ContentBanner` version 2.0, the following changes have been made:
 
 * Removed the deprecated `ContentBannerTransfer` definition.
 * Removed deprecated `ContentBannerClient::execute()`.
@@ -41,8 +41,12 @@ With the ContentBanner version 2.0, the following changes have been made:
 
 You can find more details about the changes on the [ContentBanner module release notes](https://github.com/spryker/content-banner/releases/tag/2.0.0) page.
 
-**To upgrade to the new version of the module, do the following:**
+_Estimated migration time: 30minutes-1h_
+
+To upgrade to the new version of the module, do the following:
+
 1. Perform the steps provided in [Migration Guide - ContentStorage](/docs/scos/dev/module-migration-guides/migration-guide-contentstorage.html).
+
 2. Upgrade the `ContentBanner` module to version 2.0.0:
 
 ```bash
@@ -56,8 +60,5 @@ console transfer:generate
 ```
 
 4. Remove any usage of `\Spryker\Client\ContentBanner\Plugin\ContentStorage\BannerTermExecutorPlugin`.
+
 5. The `ContentBannerClient::execute()` method has been removed, the replacement is `ContentBannerClient::executeBannerTypeByKey()`.
-
-_Estimated migration time: 30minutes-1h_
-
-<!-- Last review date: Jul 08, 2019 -by Anton Zubariev, Yuliia Boiko-->

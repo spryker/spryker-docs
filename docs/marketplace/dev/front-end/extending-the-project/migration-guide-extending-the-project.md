@@ -1,10 +1,10 @@
 ---
-title: Migration guide - Extending the project
+title: "Migration guide - Extending the project"
 description: This document provides details for migration of the marketplace modules to be able to extend the project.
 template: module-migration-guide-template
 ---
 
-To be able to extend the front-end project, the marketplace modules must correspond to the following versions:
+To be able to extend the frontend project, the marketplace modules must correspond to the following versions:
 
 | NAME                                        | VERSION   |
 | ------------------------------------------- | --------- |
@@ -167,4 +167,4 @@ yarn mp:build
 
 Related articles:
 
-[Extending the project](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2316501312/Extending+the+project)
+[Extending the project](/docs/marketplace/dev/front-end/extending-the-project/index.html)

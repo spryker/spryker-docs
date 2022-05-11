@@ -698,7 +698,7 @@ Verify that the `PromotionItemByQuoteTransferResourceRelationshipPlugin` and `Pr
 
 Prerequisites:
 
-* Have a discount rule for a product. Discount application type should be chosen Promotional Product (see [Creating a Cart Rule Discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+* [Create a discount for the product](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html). The discount application type should be promotional product.
 * Create a cart.
 
 Add items to the cart to satisfy the conditions of the discount rule:
@@ -868,7 +868,7 @@ Verify the `DiscountPromotionCartItemExpanderPlugin` and `DiscountPromotionCartI
 
 Prerequisites:
 
-* Have a discount rule for a product. Discount application type should be Promotional product (see [Creating a Cart Rule Discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html)).
+* [Create a discount])(/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html). Discount application type should be promotional product.
 * Create a cart with items that satisfy the conditions of the discount rule.
 * Get a concrete promotional product SKU.
 

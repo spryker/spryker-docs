@@ -38,15 +38,16 @@ related:
 
 `SalesAggregator` version 4 is last version to be released for this module. Apart from future bug fixes, it will no longer be developed and Core will no longer use it to get order totals anymore.
 There are two steps to the two migration process.
+
 * The first is to migrate all your orders to the new structure and drop use of `SalesAggregator`.
 * The second is to migrate your code to support the `old Aggregators`.
 
 To learn how to migrate to the new structure, see [Migration Guide - Calculation](/docs/scos/dev/module-migration-guides/migration-guide-calculation.html).
 
-### Enable the `SalesAggregator` in Your Project
+### Enable the `SalesAggregator` in your project
 
 The `SalesAggregator` module has been deprecated but all calculators are still provided. If you want to keep them you can do so with a few changes to the code.
-All `SalesAggregatorr` plugins were moved to the `SalesAggregator` module's, final core plugins list.
+All `SalesAggregator` plugins were moved to the `SalesAggregator` module's, final core plugins list.
 
 ```php
 <?php
@@ -76,9 +77,10 @@ If you extended any of the above, update your namespace accordingly.
 To receive future patches for related plugins, update all your use statements to point to the `salesAggregator` modules.
 The modules are: `ProductOption`, `DiscountSalesAggregatorConnector`, `DiscountSalesAggregatorConnector` - they will no longer store any Aggregator plugins.
 
-### Migrate Your Code to Support the Old Aggregators Sales module
+### Migrate your code to support the old aggregator sales module
 
 Inject the `salesAggregator` Facade into your `\Pyz\Zed\Sales\SalesDependencyProvider::provideBusinessLayerDependencies` as follows:
+
 ```php
 <?php
 
@@ -108,11 +110,12 @@ Inject the `salesAggregator` Facade into your `\Pyz\Zed\Sales\SalesDependencyPro
 ?>
 ```
 
-#### Injecting the Aggregator facade:
+#### Injecting the aggregator facade:
 
 A similar approach to injecting the Aggregator facade can be used in other modules where replacement is necessary.
 
 The sales `hydrator \Spryker\Zed\Sales\Business\Model\Order\OrderHydrator` no longer uses the Aggregator facade.
+
 * To use it, provide `salesAggregatorFacade` to this class and add a method call in `createOrderTransfer` to `$this->salesAggregatorFacade->getOrderTotalByOrderTransfer($orderTransfer)`;
 * To get old calculated objects, the Order table list also was using the SalesAggregator and therefore you need to include it in the OrdersTable by adding it as follows:
 
@@ -133,16 +136,17 @@ The sales `hydrator \Spryker\Zed\Sales\Business\Model\Order\OrderHydrator` no lo
    }
 ```
 
-#### OMS Module
+#### OMS module
 
 `Spryker\Zed\Oms\Business\Mail\MailHandler` also used `SalesAggregator`. To add it to `getOrderTransfer` ad the following to the method's top object:
+
 ```php
 <?php
   $orderTransfer = $this->salesAggregatorFacade->getOrderTotalsByIdSalesOrder($salesOrderEntity->getIdSalesOrder());
 ?>
 ```
 
-#### Refund Module
+#### Refund module
 
 `Spryker\Zed\Refund\Business\Model\RefundCalculator` used the Aggregator to calculate refundable amount. To keep injecting the `SalesAggregatorFacade` to class and include the Aggregator:
 
@@ -161,17 +165,18 @@ protected function getOrderTransfer(SpySalesOrder $salesOrderEntity)
    return $orderTransfer;
 }
 ```
+
 #### Payment methods
 
 The payment methods have changed accordingly to use `SalesFacade` instead of `SalesAggregatorFacade`.
 
-## Upgrading from Version 2.* to Version 3.*
+## Upgrading from version 2.* to version 3.*
 
 The tax plugins are using the version 3.* of the Tax module. See [Migration Guide - Tax](/docs/scos/dev/module-migration-guides/migration-guide-tax.html) for more details.
 
-## SalesAggregator Migration Console Command
+### SalesAggregator migration console command
 
-SalesAggregator Migration Console Command:
+**SalesAggregator migration console command**
 
 ```php
 <?php

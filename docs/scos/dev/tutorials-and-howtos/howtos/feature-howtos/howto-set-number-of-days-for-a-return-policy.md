@@ -1,5 +1,5 @@
 ---
-title: HowTo - Set Number of Days for a Return Policy
+title: HowTo - Set number of days for a return policy
 description: The article describes how to set a number of days for a Return Policy
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -23,6 +23,7 @@ To define a period within which an item can be returned, redefine the Config in 
 where *{% raw %}{{{% endraw %}Number of days{% raw %}}}{% endraw %}* is the time period in days after the item purchase, within which the item can be returned.
 
 Example:
+
 ```php
 namespace Pyz\Zed\SalesReturn;use Spryker\Zed\SalesReturn\SalesReturnConfig as SprykerSalesReturnConfig;class SalesReturnConfig extends SprykerSalesReturnConfig
 {

@@ -174,7 +174,7 @@ At Contorion, this is how we send the same product as in the above example to El
 }
 ```
 
-That’s a lot of redundant information! For example the manufacturer, hammer_weight and nameattributes are repeated in five top-level fields. But these attributes are used very differently in various search operations which require different analyzers and query strategies:
+That’s a lot of redundant information! For example the manufacturer, hammer_weight and name attributes are repeated in five top-level fields. But these attributes are used very differently in various search operations which require different analyzers and query strategies:
 
 * Search result rendering: The field search_result_data contains all the information that is returned as a result of a query for rendering a search result page or completion popup
 * Full-text search: The fields search_data/full_text and search_data/full_text_boosted contain all text content for which the product should be found in a full-text search
@@ -185,7 +185,8 @@ That’s a lot of redundant information! For example the manufacturer, hammer_we
 * Dynamic result ranking: scores contains numeric indicators of user relevancy, past performance and product quality
 * Category navigation: category contains information about the position of a product in a category tree/graph
 
-## Complete Schema
+## Complete schema
+
 For reference, this is the complete schema (mapping) that we currently use to index pages at contorion (again, we will explain most of the details later):
 
 ```js

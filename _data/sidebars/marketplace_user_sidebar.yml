@@ -48,6 +48,11 @@ entries:
         - title: Merchant Opening Hours
           url: /docs/marketplace/user/features/merchant-opening-hours-feature-overview.html
 
+        - title: Marketplace Merchant Custom Prices
+          url: /docs/marketplace/user/features/marketplace-merchant-custom-prices-feature-overview.html
+          include_versions:
+          - "202204.0"
+          
         - title: Marketplace Product
           url: /docs/marketplace/user/features/marketplace-product-feature-overview.html
 

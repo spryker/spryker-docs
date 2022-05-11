@@ -31,6 +31,7 @@ In this article, you will learn how to map API resources to *Customer Access Fea
 {% info_block infoBox %}
 
 *Customer Access Feature* items available out of the box are mapped to API resource types by default. The corresponding resource types are:
+
 * **price** - `abstract-product-prices` and `concrete-product-prices`;
 * **add-to-cart** - `guest-cart-items`;
 * **wishlist** - `wishlists` and `wishlist-items`;
@@ -38,32 +39,36 @@ In this article, you will learn how to map API resources to *Customer Access Fea
 
 {% endinfo_block %}
 
-1. To define the mapping of API resource types to content types, open or create file `src/Pyz/Glue/CustomerAccessRestApi/CustomerAccessRestApiConfig.php`.
+To define the mapping of API resource types to content types:
+
+1. Open or create file `src/Pyz/Glue/CustomerAccessRestApi/CustomerAccessRestApiConfig.php`.
 
 2. The file contains the `CustomerAccessRestApiConfig::CUSTOMER_ACCESS_CONTENT_TYPE_TO_RESOURCE_TYPE_MAPPING` array, where each entry specifies a mapping of a *Customer Access Feature* item to the corresponding API resource type(s).
+
 For example, in the following code block, item **can place an order** is mapped to **2** resource types: *checkout* and *checkout-data*:
 
-   ```php
-   <?php
+```php
+<?php
 
-   namespace Pyz\Glue\CustomerAccessRestApi;
-   ...
+namespace Pyz\Glue\CustomerAccessRestApi;
+...
 
-   class CustomerAccessRestApiConfig extends SprykerCustomerAccessRestApiConfig
-   {
-       protected const CUSTOMER_ACCESS_CONTENT_TYPE_TO_RESOURCE_TYPE_MAPPING = [
-           CustomerAccessConfig::CONTENT_TYPE_ORDER_PLACE_SUBMIT => [
-               CheckoutRestApiConfig::RESOURCE_CHECKOUT,
-               CheckoutRestApiConfig::RESOURCE_CHECKOUT_DATA,
-           ],
-       ];
-   }
-   ```
+class CustomerAccessRestApiConfig extends SprykerCustomerAccessRestApiConfig
+{
+    protected const CUSTOMER_ACCESS_CONTENT_TYPE_TO_RESOURCE_TYPE_MAPPING = [
+        CustomerAccessConfig::CONTENT_TYPE_ORDER_PLACE_SUBMIT => [
+            CheckoutRestApiConfig::RESOURCE_CHECKOUT,
+            CheckoutRestApiConfig::RESOURCE_CHECKOUT_DATA,
+        ],
+    ];
+}
+```
 
-   Define the mapping of the resources you need.
-   For constants that represent the content item types, see file `src/Spryker/Shared/CustomerAccess/CustomerAccessConfig.php`.
+Define the mapping of the resources you need.
 
-   For constants that represent API resource types, see configuration files of the corresponding APIs.
+For constants that represent the content item types, see file `src/Spryker/Shared/CustomerAccess/CustomerAccessConfig.php`.
+
+For constants that represent API resource types, see configuration files of the corresponding APIs.
 
 3. When done, save the file.
 
@@ -71,7 +76,7 @@ For example, in the following code block, item **can place an order** is mapped 
 
 {% info_block infoBox %}
 
-The default `CustomerAccessRestApiConfig.php` of Spryker Storefronts looks as follows:
+The default `CustomerAccessRestApiConfig.php` of Spryker Storefront looks as follows:
 
 ```php
 <?php

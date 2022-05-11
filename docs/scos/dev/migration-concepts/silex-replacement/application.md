@@ -30,22 +30,24 @@ The Application class is responsible for booting and running the application. Th
 
 In the Application Plugin registration process, the `ContainerInterface` is filled with all the services the application requires. In the boot process, all Application Plugins which implement `Spryker\Shared\ApplicationExtention\Dependency\Plugin\BootableApplicationPluginInterface` are booted.
 
-HttpKernel handles the run process in the following way:
+`HttpKernel` handles the run process in the following way:
 
 1. A request object is created from the globals.
 2. The response is returned.
 3. The process is terminated.
 
-## Adding Application Plugins
+## Adding application plugins
+
 Like all plugins in Spryker,  Application Plugins are added within their corresponding Dependency Providers. Each application provided by Spryker has a `getApplicationPlugins()` method which needs to be overridden inside the project namespace and returns a stack of `Spryker\Shared\ApplicationExtention\Dependency\Plugin\ApplicationPluginInterfaces`. All the plugins returned from this method are added to the application.
 
-## Extending Application Plugins
+## Extending application plugins
 
 Each service added as an Application plugin has an extension interface. To extend a service, use the extension interface of the respective service. For example, The `Twig` module contains `TwigApplicationPlugin`. The `TwigExtension` module brings at least one interface that can be used to extend Twig. To extend it, add `TwigApplicationPlugin` to `ApplicationDependencyProvider`. To extend Twig further, add a plugin to `TwigDependencyProvider`.
 
 You can still extend services via Service providers.
 
-## Retrieving an Application Services
+## Retrieving an application services
+
 You may need to retrieve application services, for example, to generate URLs in one of your models. In your dependency provider, you have access to all Application services through the container.
 
 ```php

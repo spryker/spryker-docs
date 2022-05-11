@@ -14,8 +14,8 @@ In the following example, the `datasource` will return an array with the transfo
 
 Service configuration:
 
-- `mapProps` - a Data Transformer that is set up with a configuration object.  
-- `propName` - the name of the property from which the value needs to be transformed.  
+- `mapProps`—a Data Transformer that is set up with a configuration object.  
+- `propName`—the name of the property from which the value needs to be transformed.  
 
 ```html
 <spy-select

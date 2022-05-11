@@ -33,7 +33,7 @@ redirect_from:
 
 ## Upgrading from version 3.0.* version to 4.0.0
 
-In this new version of the **ShipmentDiscountConnector** module, we have added support of split delivery. You can find more details about the changes on the [ShipmentDiscountConnector module release page](https://github.com/spryker/shipment-discount-connector/releases).
+In this new version of the `ShipmentDiscountConnector` module, we have added support of split delivery. You can find more details about the changes on the [ShipmentDiscountConnector module release page](https://github.com/spryker/shipment-discount-connector/releases).
 
 {% info_block errorBox %}
 
@@ -41,7 +41,9 @@ This release is a part of the **Split delivery** concept migration. When you upg
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 5 min*
+
+To upgrade to the new version of the module, do the following:
 
 1. Upgrade the `ShipmentDiscountConnector` module to the new version:
 
@@ -55,8 +57,6 @@ composer require spryker/shipment-discount-connector: "^4.0.0" --update-with-dep
 console transfer:generate
 ```
 
-*Estimated migration time: 5 min*
-***
 ## Upgrading from version 1.* to version 3.0.0
 
 {% info_block infoBox %}

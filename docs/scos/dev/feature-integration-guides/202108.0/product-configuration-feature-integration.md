@@ -39,7 +39,7 @@ To start feature integration, overview and install the necessary features:
 | Inventory Management| {{page.version}} |
 | Order Management |{{page.version}} |
 
-### 1) Install required modules using Сomposer
+### 1) Install required modules using Composer
 
 Run the following command(s) to install the required modules:
 ```bash

@@ -16,11 +16,11 @@ Check out an example usage of the Table Feature Batch Actions in the `@spryker/t
 
 Component configuration:
 
-- `enabled` - enables the feature via the config.  
-- `noActionsMessage` - error message text.  
-- `actions` - an array with actions that are displayed in the top bar, and their type of the registered [action](/docs/marketplace/dev/front-end/ui-components-library/actions/).   
-- `rowIdPath` - gets a row `id` via the column `id` (in the following example, `Sku` column).  
-- `availableActionsPath` - path to an array with available action IDs in the top bar (supports nested objects using dot notation for ex. `prop.nestedProp`).   
+- `enabled`—enables the feature via the config.  
+- `noActionsMessage`—error message text.  
+- `actions`—an array with actions that are displayed in the top bar, and their type of the registered [action](/docs/marketplace/dev/front-end/ui-components-library/actions/).   
+- `rowIdPath`—gets a row `id` via the column `id` (in the following example, `Sku` column).  
+- `availableActionsPath`—path to an array with available action IDs in the top bar (supports nested objects using dot notation for ex. `prop.nestedProp`).   
 
 ```html
 <spy-table

@@ -28,10 +28,13 @@ The Benchmark tool allows you to profile requests to an application and see how 
 To install the Benchmark tool, follow the steps below.
 
 1. Install the package via composer. You might want to add it to the `composer dev` section if you don’t want to use it on the production environment:
+
 ```bash
 composer require --dev spryker-sdk/benchmark
 ```
+
 2. Update composer `autoload-dev` section to autoload your tests:
+
 ```php
 "autoload-dev": {
     "psr-4": {
@@ -40,7 +43,9 @@ composer require --dev spryker-sdk/benchmark
     },
   },
 ```
+
 3. Add the new console command `\SprykerSdk\Zed\Benchmark\Communication\Console\BenchmarkRunConsole` to `\Pyz\Zed\Console\ConsoleDependencyProvider`:
+
 <details open>
 <summary markdown='span'>Pyz\Zed\Console</summary>
 
@@ -92,6 +97,7 @@ To have the same code on production and development environments, we recommend a
 5. Add the bootstrap file to `tests\Benchmark\bootstrap.php`. The bootstrap file is a .php file that should be almost the same as your public index.php file (e.g., `public/Zed/index.php`). The Benchmark tool has default bootstrap files out-of-the-box, but it’s recommended to add one on the project level, as shown below.
 
 **tests\Benchmark\bootstrap.php**
+
 ```php
 <?php
 
@@ -104,6 +110,7 @@ require_once APPLICATION_ROOT_DIR . '/vendor/autoload.php';
 
 Environment::initialize();
 ```
+
 6. Add bootstrap files for each application `tests\Benchmark\Yves|Zed|Glue\bootstrap.php`:
 
 ```php
@@ -111,6 +118,7 @@ Environment::initialize();
 
 require_once __DIR__ . '/../bootstrap.php';
 ```
+
 That’s it. You now have the Benchmark tool installed.
 
 ## Running the tests
@@ -120,15 +128,19 @@ To run the tests, execute the following command:
 ```bash
 vendor/bin/console benchmark:run
 ```
+
 By default, all tests from the `tests/Benchmark/*/*` folders are run. However, you can use the optional argument `path` to run tests from a different application or folder.
 
 ```bash
 vendor/bin/console benchmark:run --path=tests/Benchmark/(Yves|Zed|Glue)
 ```
+
 ```bash
 vendor/bin/console benchmark:run --path=tests/Benchmark/Zed/HomePage
 ```
+
 ## Writing the tests
+
 {% info_block infoBox %}
 
 Before you start writing the tests, check out the [PHPBench documentation](https://phpbench.readthedocs.io/en/latest/guides/writing-benchmarks.html?highlight=writing%20benchmarks).
@@ -158,6 +170,7 @@ Use the factories from the application that you write the test for.
 ## Example of a benchmark
 
 Here is an example of a benchmark:
+
 ```php
 <?php
 

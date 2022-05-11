@@ -15,8 +15,8 @@ redirect_from:
 ---
 
 ## Description
-You can receive an error about a wrong curl version on Mac OS.
 
+You can receive an error about a wrong curl version on Mac OS.
 
 ## Solution
 

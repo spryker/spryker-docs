@@ -34,6 +34,7 @@ If you can not upgrade PHP you can require composer/package-versions-deprecated 
 ## Solution
 
 Run the following commands:
+
 ```bash
 composer self-update --2
 composer remove sllh/composer-versions-check --ignore-platform-reqs

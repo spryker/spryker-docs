@@ -30,6 +30,7 @@ To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.ht
 To set up your environment, do the following:
 
 1. Install the following prerequisites:
+
     * [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
     * [VirtualBox 5.2.2](https://www.virtualbox.org/wiki/Download_Old_Builds_5_2)
     * [Vagrant 2.0.0+](https://www.vagrantup.com/downloads.html)
@@ -69,9 +70,11 @@ cd devvm
 ```bash
 vagrant init devv410 https://u220427-sub1:PpiiHzuF2OIUzmcH@u220427-sub1.your-storagebox.de/devvm_v4.1.0.box
 ```
+
 {% info_block warningBox %}
 
 For _Spryker Core_ version 201907.0 or prior, initialize an older version of DevVM:
+
 ```bash
 vagrant init devvm2.3.1 https://github.com/spryker/devvm/releases/download/v2.3.1/spryker-devvm.box
 ```
@@ -88,11 +91,13 @@ awk '/^end/{print "  config.hostmanager.enabled = true\n  config.hostmanager.man
 6. Build and start the DevVM without cloning the Demo Shop:
 
     * For the B2B Demo Shop:
+
     ```bash
     VM_SKIP_SF="1" VM_PROJECT=b2b-demo-shop SPRYKER_REPOSITORY="https://github.com/spryker-shop/b2b-demo-shop.git" vagrant up
     ```
 
     * For the B2C Demo Shop:
+
     ```bash
     VM_SKIP_SF="1" VM_PROJECT=b2c-demo-shop SPRYKER_REPOSITORY="https://github.com/spryker-shop/b2c-demo-shop.git" vagrant up
     ```
@@ -152,6 +157,7 @@ sudo chmod og+rwx .
        ```bash
        net use s: \\spryker-vagrant\project\current /persistent:yes
        ```
+
 This mounts the share as the `s:` drive.
 
 
@@ -163,25 +169,31 @@ This mounts the share as the `s:` drive.
 
         1. Log out from the VM.
         2. In Git Bash, clone the Demo Shop:
+
         ```bash
         cd /c/ &&
         git clone https://github.com/spryker-shop/b2b-demo-shop.git
         ```
 
         3. In Windows Command Prompt, move the `c:\b2b-demo-shop` directory to the network drive:
+
         ```bash
         xcopy C:\b2b-demo-shop s: /he
-        ```    
+        ```
+        where:    
           `s:` - is the network drive you've mounted in the previous step.
 
     * Clone the B2C Demo Shop:
         1. Log out from the VM.
         2. In Git Bash, clone the Demo Shop:
+        
         ```bash
         cd /c/ &&
         git clone https://github.com/spryker-shop/b2c-demo-shop.git
         ```
+
         3. In Windows Command Prompt, move the `c:\b2c-demo-shop` directory to the network drive:
+        
         ```bash
         xcopy C:\b2c-demo-shop s: /he
         ```
@@ -192,11 +204,13 @@ This mounts the share as the `s:` drive.
 2. In Git Bash, go to the `devvm` folder you've created in [Install Spryker DevVM](#install-spryker-devvm).
 
 3. DevVM version below 2.2.0: Set the maximum number of connections to 65535:
+
 ```bash
 ulimit -n 65535
 ```
 
 4. Install the Demo Shop:
+
 ```bash
 vagrant ssh
 composer install
@@ -208,16 +222,19 @@ This installs all required dependencies, and runs the installation process. Also
 When the installation process is complete, you can access your Spryker Commerce OS via the following links:
 
 * B2B Demo Shop:
+
     * `http://de.b2b-demo-shop.local` - frontend (Storefront)
     * `http://zed.de.b2b-demo-shop.local` - backend (the Back Office)
     * `http://glue.de.b2b-demo-shop.local` - REST API (Glue)
 
 * B2C Demo Shop:
+
     * `http://de.b2c-demo-shop.local` - frontend (Storefront)
     * `http://zed.de.b2c-demo-shop.local` - backend (the Back Office)
     * `http://glue.de.b2c-demo-shop.local` - REST API (Glue)
 
 Back Office credentials:
+
 * EMAIL: `admin@spryker.com`
 * PASSWORD: `change123`
 

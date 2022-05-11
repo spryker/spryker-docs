@@ -15,13 +15,17 @@ redirect_from:
 ---
 
 ## Description
+
 When running `./vendor/bin/install`, the *Too many open files* error occurs.
 
 ## Cause
+
 Maximum number of open files is too high.
 
 ## Solution
+
 Adjust the maximum number of open files as follows:
+
 ```bash
 ulimit -n 65535
 ```

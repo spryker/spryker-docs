@@ -28,6 +28,7 @@ redirect_from:
 This article describes how to configure debugging in a development environment for VM below version 91.
 
 ## Installing the Xdebug module
+
 To install the Xdebug module:
 
 1. Install Xdebug:
@@ -52,7 +53,7 @@ sudo -i apt-get install php5-xdebug
 3. Export Xdebug configuration:
 
 ```php
- export XDEBUG_CONFIG='idekey=PHPSTORM'
+export XDEBUG_CONFIG='idekey=PHPSTORM'
 ```
 
 4. Restart PHP:
@@ -102,9 +103,7 @@ To debug with PhpStorm:
 
 4. Select *Debug* ![debug-button](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Debugging/Configuring+debugging+in+Vagrant/debug-button.png). You should get the message: “Waiting for incoming connection with IDE key ‘PHPSTORM’”.
 
-
-
-### Debugging Console Commands
+### Debugging console commands
 
 To trigger Xdebug in CLI, prepend environment variables to commands as follows.
 

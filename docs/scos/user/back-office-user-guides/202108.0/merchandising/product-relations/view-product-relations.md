@@ -17,7 +17,7 @@ redirect_from:
 
 
 To view a product relation, do the following:
-1. Go to **Merchandising** > **Product Relations**.
+1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Relations**.
     This opens the **Product Relations** page.
 2. Next to the product relation you want to view, click **View**.
     This opens the **View Product Relation** page.

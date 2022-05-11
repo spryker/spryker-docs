@@ -1,5 +1,5 @@
 ---
-title: HowTo - Customize HTTP Headers in AJAX Request
+title: HowTo - Customize HTTP headers in AJAX request
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-customize-http-headers-in-ajax-request
@@ -25,11 +25,13 @@ redirect_from:
 
 The `XMLHttpRequest` method `setRequestHeader()` sets the value of an HTTP request header. When using `setRequestHeader()`, you must call it after calling `open()`, but before calling `send()`. If this method is called several times with the same header, the values are merged into a single request header.
 
-To update `ajax-provider.ts` for adding custom headers, add `this.headers.forEach((value: string, key: string) => this.xhr.setRequestHeader(key, value));` into Promise of the`fetch` method.
+To add custom headers to the `ajax-provider.ts`, add `this.headers.forEach((value: string, key: string) => this.xhr.setRequestHeader(key, value));` into the promise of the `fetch` method.
 
-{% info_block infoBox "Usage example:" %}
+{% info_block infoBox "Usage example" %}
 
+```ts
 this.ajaxProvider.headers.set('Accept', 'application/json'
 );.
+```
 
 {% endinfo_block %}

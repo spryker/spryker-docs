@@ -26,9 +26,9 @@ redirect_from:
 
 We use our [Architecture Sniffer Tool](https://github.com/spryker/architecture-sniffer) to assert a certain quality of Spryker architecture for both core and project.
 
-## Running the Tool
+## Running the tool
 
-The sniffer can find a lot of violations and will report them:
+The sniffer can find a lot of violations and report them:
 
 ```php
 $ vendor/bin/console code:sniff:architecture
@@ -51,7 +51,3 @@ Tip: `c:s:a` can be used as a shortcut.
 Run –help or -h to get help about usage of all options available.
 
 See the [architecture sniffer](https://github.com/spryker/architecture-sniffer) documentation for details and information on how to set it up for your CI system as a checking tool for each PR.
-
-## Conventions and Guidelines
-
-If you have a running Demoshop, go to [Architecture rules](`http://zed.mysprykershop.com/development/architecture/rules`) in Zed backend to get an overview of all currently implemented rules.

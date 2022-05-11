@@ -26,14 +26,15 @@ then you need to upgrade to the latest version of Node.js inside devvm.
 
 To upgrade, do the following:
 
-1.  Run inside devvm:
+1. Run inside devvm:
 
 ```bash
 sudo npm cache clean -f
 sudo npm install -g n
 sudo n stable
 ```
- {% info_block infoBox %}
+
+{% info_block infoBox %}
 
 You can specify an exact version instead of *stable*: `sudo n [version]`. For example, if you want to upgrade the Node .js version to 12.0.0, the last command would be `sudo n 12.0.0`.
 

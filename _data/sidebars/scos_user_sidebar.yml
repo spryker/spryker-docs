@@ -1075,6 +1075,14 @@ entries:
           url: /docs/scos/user/back-office-user-guides/customer/customers/add-customer-addresses.html
         - title: Edit customer addresses
           url: /docs/scos/user/back-office-user-guides/customer/customers/edit-customer-addresses.html
+      - title: Manage customer access
+        url: /docs/scos/user/back-office-user-guides/customer/manage-customer-access.html
+        include_versions:
+        - "202204.0"
+      - title: Manage customer groups
+        url: /docs/scos/user/back-office-user-guides/customer/manage-customer-groups.html
+        include_versions:
+        - "202204.0"        
       - title: Customer, customer access, customer groups
         nested:
         - title: Managing customers
@@ -1097,6 +1105,14 @@ entries:
           - "202009.0"
         - title: Managing customer access
           url: /docs/scos/user/back-office-user-guides/customer/customer-customer-access-customer-groups/managing-customer-access.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: Managing customer groups
           url: /docs/scos/user/back-office-user-guides/customer/customer-customer-access-customer-groups/managing-customer-groups.html
         - title: References
@@ -1107,6 +1123,7 @@ entries:
           - "202001.0"
           - "202005.0"
           - "202009.0"
+          - "202108.0"
           nested:
           - title: Reference information - Customers
             url: /docs/scos/user/back-office-user-guides/customer/customer-customer-access-customer-groups/references/reference-information-customers.html

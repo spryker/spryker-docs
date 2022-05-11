@@ -18,10 +18,12 @@ redirect_from:
   - /v4/docs/en/split-delivery-concept
 ---
 
-## General Information
+## General information
+
 Split Delivery splits order items into different shipments according to a delivery address, a shipment method, and a delivery date. The feature also provides an ability to edit a shipment or create a new one for the existing order in the Back Office.
 
 ## Migration process
+
 You can upgrade all affected modules by the feature in bulk.
 
 **To update all the modules affected by feature in bulk, do the following:**
@@ -30,7 +32,7 @@ You can upgrade all affected modules by the feature in bulk.
 
 ```bash
 composer update "spryker/*" "spryker-shop/*"
- composer require spryker/sales: "^11.0.0" spryker/shipment: "^7.0.0" spryker-shop/checkout-page: "^3.0.0" spryker-shop/customer-page: "^2.0.0" spryker/checkout-rest-api: "^2.0.0" spryker/manual-order-entry-gui:"^0.8.0" spryker/shipment-cart-connector:"^2.0.0" spryker/shipment-checkout-connector:"^2.0.0" spryker/shipment-discount-connector:"^4.0.0" spryker/orders-rest-api: "^4.0.0" --update-with-dependencies
+composer require spryker/sales: "^11.0.0" spryker/shipment: "^7.0.0" spryker-shop/checkout-page: "^3.0.0" spryker-shop/customer-page: "^2.0.0" spryker/checkout-rest-api: "^2.0.0" spryker/manual-order-entry-gui:"^0.8.0" spryker/shipment-cart-connector:"^2.0.0" spryker/shipment-checkout-connector:"^2.0.0" spryker/shipment-discount-connector:"^4.0.0" spryker/orders-rest-api: "^4.0.0" --update-with-dependencies
 ```
 
 2. Clean up the database entity schema for each store in the system:
@@ -55,7 +57,7 @@ console transfer:generate
 
 The following table lists the modules affected by the Split Delivery update:
 
-| Module | Version | Migration guide |
+| MODULE | VERSION | MIGRATION GUIDE |
 | --- | --- | --- |
 | `spryker/sales` | 11.0.0 | [Migration Guide - Sales](/docs/scos/dev/module-migration-guides/migration-guide-sales.html#upgrading-from-version-10-to-version-1100) |
 | `spryker/shipment` | 7.0.0 | [Migration Guide - Shipment](/docs/scos/dev/module-migration-guides/migration-guide-shipment.html#upgrading-from-version-6-to-version-7) |

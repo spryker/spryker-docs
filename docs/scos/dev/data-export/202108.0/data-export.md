@@ -20,6 +20,7 @@ related:
 To quickly populate an external system like ERP or OMS with data from your Spryker shop, you can export it as CSV files from the Spryker shop and then import them into the external system.
 
 For now, you can export only order data, which includes data on:
+
 * Orders
 * Order items
 * Order expenses
@@ -45,6 +46,7 @@ Spryker Data Export supports the multi-store functionality, which means that you
 ## YML export configuration file
 
 The YML export configuration file lets you define what orders you want to export. The following content is exported:
+
 * order
 * order-item
 * order-expense
@@ -100,6 +102,7 @@ actions:
           <<: *default_filter_criteria
           store_name: [<store_name_value_1>]
 ```
+
 Type of content to export is defined in section `actions` by `data_entity` and must be `order`, `order-item` and `order-expense` . You can define what stores you want to run export for, and specify order dates you want to export data for. For the infomration about how to export order data for specific stores and time period, see [Setting the Filter Criteria](/docs/scos/dev/data-export/{{page.version}}/data-export.html#filter) in a YML file.
 
 For example, check out the default YML export configuration file [order_export_config.yml](https://github.com/spryker-shop/suite/blob/master/data/export/production/order_export_config.yml). It’s configuration presupposes batch export of the three data entities: `order`, `order-item`, `order-expense.`
@@ -113,7 +116,8 @@ When running the command for data export with this file, `console data:export --
 * orders_AT.csv
 * orders_DE.csv
 
-For details about the content of each of the files, see[ Data Export Ordres CSV Files Format](/docs/scos/dev/data-export/{{page.version}}/data-export-orders-.csv-files-format.html).
+For details about the content of each of the files, see [Data Export Ordres CSV Files Format](/docs/scos/dev/data-export/{{page.version}}/data-export-orders-.csv-files-format.html).
+
 <a name="filter"></a>
 
 ### Setting the filter criteria in a YML file
@@ -154,8 +158,9 @@ actions:
       filter_criteria:
           <<: *default_filter_criteria
           store_name: [AT]
-  ```
-#### Defining the Date and Time Range for Order Data Export
+```
+
+#### Defining the date and time range for order data export
 
 The default date and time range filter criteria, for example, the order creation dates filter applied to all `data_entity` items by default, is specified in the `defaults` section:
 
@@ -220,7 +225,9 @@ When exporting data, the newly generated CSV files overwrite the existing ones. 
 If you want to generate new CSV files without overwriting eventual existing ones, you may use a `{timestamp}` tag in the name of the file to be generated. For example, if you use the default structure of the yaml export configuration file, upon repeated launch of the `console data:export --config file-name.yml`, the already existing export csv files will be generated with different file names according to the `{timestamp}` on the moment of its creation, and therefore will not be overwritten.
 And vice versa: if you want to overwrite the existing files, remove `{timestamp}` from the `destination` parameter of the YML file for the necessary `data_entity` items, for example:
 
+
 Initial file:
+
 ```yml
 defaults:
   filter_criteria: &default_filter_criteria
@@ -244,6 +251,7 @@ actions:
 ```
 
 File with the removed `{timestamp}`:
+
 ```yml
 defaults:
   filter_criteria: &default_filter_criteria

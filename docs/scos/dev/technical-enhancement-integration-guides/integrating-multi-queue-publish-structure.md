@@ -17,26 +17,27 @@ redirect_from:
 
 To improve debugging of failures and slow events in Spryker, we introduced a new publish queue structure. In the new structure, the single event queue is replaced by multiple publish queues. You can can find a detailed comparison of the structures in the table below.
 
-
-| Property | Single publish queue structure | Multiple publish queue structure |
+| PROPERTY | SINGLE PUBLISH QUEUE STRUCTURE | MULTIPLE PUBLISH QUEUE STRUCTURE |
 | --- | --- | --- |
 | Event processing | Infrastructure and application events are processed in the same event queue. | Infrastructure events are spread across multiple publish events. Application events are processed in the event queue. |
 | Monitoring of event consumption speed | Due to mixed listeners, event consumption speed is unpredictable and not linear. | You can monitor the speed of event consumption in each queue separately. |
-| Per event configuration of chunk size |  | v |
-| Per event separation of workers |  | v |
+| Per event configuration of chunk size |  | &check; |
+| Per event separation of workers |  | &check; |
 
 
 **Diagram of the single publish queue structure**
+
 ![single-publish-queue-structure](https://confluence-connect.gliffy.net/embed/image/cc624c10-1d44-4922-8637-55a913ca8b19.png?utm_medium=live&utm_source=custom)
 
 **Diagram of the multiple publish queue structure**
+
 ![multiple-publish-queue-structure](https://confluence-connect.gliffy.net/embed/image/69563548-7606-424a-944c-f78b2d67382e.png?utm_medium=live&utm_source=custom)
 
 ## Set up multiple publish queue structure
 
 To enhance your project with the new structure, follow the steps below.
 
-### 1) Install the Required Modules Using Composer
+### 1) Install the required modules using Composer
 
 ```bash
 composer require spryker/publisher:"1.1.0"
@@ -46,21 +47,17 @@ composer require spryker/publisher:"1.1.0"
 
 Ensure that the following modules have been installed:
 
-
-| Module | Expected directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | Publisher | spryker/publisher |
 
-
 {% endinfo_block %}
-
 
 ### 2) Set up Behavior  
 
 Set up behavior as follows:
 
-1.  Set up the `publish` queue as the default one:
-
+1. Set up the `publish` queue as the default one:
 
 ```php
 <?php
@@ -84,8 +81,7 @@ class PublisherConfig extends SprykerPublisherConfig
 
 2. Set `\Pyz\Client\RabbitMqRabbitMqConfig::getPublishQueueConfiguration()` to use the `publish` queue.
 
-<details>
-    <summary markdown='span'>Pyz\Client\RabbitMq</summary>
+<details><summary markdown='span'>Pyz\Client\RabbitMq</summary>
 
 ```php
 <?php
@@ -137,9 +133,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 ...
 }
 ```
-
 </details>
-
 
 3. Set `Pyz\Zed\Queue\QueueDependencyProvider::getProcessorMessagePlugins()` to use the `publish` queue.
 
@@ -249,8 +243,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 4. Set `\Pyz\Zed\Publisher\PublisherDependencyProvider::getPublisherPlugins()` to use the `publish.translation` queue.
 
-<details open>
-    <summary markdown='span'>Pyz\Zed\Publisher</summary>
+<details open><summary markdown='span'>Pyz\Zed\Publisher</summary>
 
 ```php
 <?php
@@ -292,14 +285,13 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     ...
 }
 ```
-
 </details>
 
 ### Publish events using the default publish queue
 
 To publish events using the default `publish` queue, register the publisher plugins which process glossary events:
 
-```
+```php
 <?php
 
 namespace Pyz\Zed\Publisher;
@@ -332,8 +324,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 You can set up an individual publish queue for a publisher plugin or a set of publisher plugins as follows:
 
-<details open>
-    <summary markdown='span'>Pyz\Zed\Publisher</summary>
+<details open><summary markdown='span'>Pyz\Zed\Publisher</summary>
 
 ```php
 <?php
@@ -367,7 +358,5 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
     }
     ...
 }
-
 ```
-
 </details>

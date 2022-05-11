@@ -40,6 +40,7 @@ Run the following commands to:
 * generate entity and transfer changes
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -207,7 +208,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database the configured data is added to the `spy_glossary` table.
 {% endinfo_block %}
 
 ### 3) Set up Widgets

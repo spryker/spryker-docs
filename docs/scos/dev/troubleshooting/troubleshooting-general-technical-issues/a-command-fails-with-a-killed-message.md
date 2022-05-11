@@ -30,16 +30,19 @@ image:
 
 * Increase `PropelConfig` class timeout:
 
+**/b2c/vendor/spryker/propel/src/Spryker/Zed/Propel/PropelConfig.php**
+
 ```php
-/b2c/vendor/spryker/propel/src/Spryker/Zed/Propel/PropelConfig.php
+
 class PropelConfig extends AbstractBundleConfig
 {
     public const DB_ENGINE_MYSQL = 'mysql';
     public const DB_ENGINE_PGSQL = 'pgsql';
 
-    protected const PROCESS_TIMEOUT = {process_timout_value};
+    protected const PROCESS_TIMEOUT = {process_timeout_value};
 
     ...
 }
 ```
-Replace `{process_timout_value}` with a suitable value. We recommend setting the value that is just enough to run the command. Setting an unreasonably big value may cause performance issue.
+
+Replace `{process_timeout_value}` with a suitable value. We recommend setting the value that is just enough to run the command. Setting an unreasonably big value may cause performance issue.

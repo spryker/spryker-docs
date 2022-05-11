@@ -15,6 +15,7 @@ redirect_from:
 ---
 
 ## Description
+
 Running the `docker/sdk up` console command might return a similar error:
 
 ```
@@ -22,5 +23,6 @@ Error response from daemon: Bad response from Docker engine
 ```
 
 ## Solution
+
 1. Make sure Docker daemon is running.
 2. Run docker/sdk up again.

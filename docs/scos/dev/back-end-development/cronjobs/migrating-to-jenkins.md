@@ -81,7 +81,7 @@ class SchedulerDependencyProvider extends SprykerSchedulerDependencyProvider
     protected function getSchedulerReaderPlugins(): array
     {
         return [
-            new PhpScheduleReaderPlugin(),
+            SchedulerConfig::SCHEDULER_JENKINS => new PhpScheduleReaderPlugin(),
         ];
     }
     /**

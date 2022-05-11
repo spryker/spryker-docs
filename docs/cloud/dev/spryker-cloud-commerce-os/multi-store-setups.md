@@ -14,7 +14,7 @@ Currently, the following setups are available:
 
 ## Shared setup
 
-With the shared setup, all the stores share a single database and codebase. It is the standard Spryker setup.
+With the shared setup, all the stores share a single database and codebase.
 
 
 ![shared setup diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/multi-store-setups.md/shared-setup.png)
@@ -57,7 +57,7 @@ The shared setup features:
 
 ## Separated setup
 
-With the separated setup, store share the same codebase but have dedicated databases.
+With the separated setup, store share the same codebase but have dedicated databases. It is the standard setup.
 
 ![separated setup diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/multi-store-setups.md/separated-setup.png)
 

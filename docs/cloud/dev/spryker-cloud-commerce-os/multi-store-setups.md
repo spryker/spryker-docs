@@ -90,6 +90,6 @@ The separated setup features:
 
 * Better control over expenses of each store.
 
-* Flexible URL management. For example, you can solve the uniqueness issue with URLs.
+* Flexible URL management. For example, the same product in different stores can have the same URL.
 
 * Flexible management of the configuration of stores: distinct category navigation, product schema details, and users.

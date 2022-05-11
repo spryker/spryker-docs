@@ -339,8 +339,13 @@ entries:
 
       - title: Glue API guides
         nested:
-          - title: REST API reference
-            url: /docs/marketplace/dev/glue-api-guides/rest-api-reference.html
+          - title: REST API Marketplace B2C reference
+            url: /docs/marketplace/dev/glue-api-guides/rest-api-b2c-reference.html
+            include_versions:       
+            - "202204.0"
+
+          - title: REST API Marketplace B2B reference
+            url: /docs/marketplace/dev/glue-api-guides/rest-api-b2b-reference.html
             include_versions:       
             - "202204.0"
 

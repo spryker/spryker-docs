@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Console commands
+title: "Tutorial: Console commands"
 description: Use the guide to create and use a new console command.
 last_updated: Jun 16, 2021
 template: howto-guide-template

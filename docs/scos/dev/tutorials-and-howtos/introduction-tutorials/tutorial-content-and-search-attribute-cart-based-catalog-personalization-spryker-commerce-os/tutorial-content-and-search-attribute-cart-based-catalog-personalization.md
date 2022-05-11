@@ -1,5 +1,5 @@
 ---
-title: "Tutorial - Content and search - attribute-cart-based catalog personalization"
+title: "Tutorial: Content and search - attribute-cart-based catalog personalization"
 description: The tutorial provides a step-by-step solution on how you can arrange your products in the cart by a color attribute
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -29,7 +29,7 @@ In this tutorial, we will boost and personalize the catalog using the color attr
 
 {% info_block infoBox "Info" %}
 
-This tutorial is also available on the Spryker Training web-site. For more information and hands-on exercises, visit [Spryker Training](https://training.spryker.com/).
+This tutorial is also available on the Spryker Training website. For more information and hands-on exercises, visit [Spryker Training](https://training.spryker.com/).
 
 {% endinfo_block %}
 

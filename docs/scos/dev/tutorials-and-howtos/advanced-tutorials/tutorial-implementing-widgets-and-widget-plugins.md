@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Implementing widgets and widget plugins
+title: "Tutorial: Implementing widgets and widget plugins"
 description: Depending on your version of spryker/kernel module, learn how to implement widgets or widget plugins.
 last_updated: Jun 16, 2021
 template: howto-guide-template

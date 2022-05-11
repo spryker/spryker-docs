@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Calculator plugin
+title: "Tutorial: Calculator plugin"
 description: Use the guide to create and register a calculator plugin to the calculator plugin stack.
 last_updated: Jun 16, 2021
 template: howto-guide-template

@@ -1,5 +1,5 @@
 ---
-title: "Tutorial - Boosting cart-based search"
+title: Tutorial: Boosting cart-based search"
 description: The tutorial provides a step-by-step solution on how you can arrange your products in the cart by a color attribute.
 last_updated: Jun 16, 2021
 template: howto-guide-template

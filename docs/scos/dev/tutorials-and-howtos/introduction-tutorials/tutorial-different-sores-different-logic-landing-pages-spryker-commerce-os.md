@@ -22,11 +22,12 @@ redirect_from:
   - /v2/docs/en/t-different-stores-different-logic-landing-pages
   - /v1/docs/t-different-stores-different-logic-landing-pages
   - /v1/docs/en/t-different-stores-different-logic-landing-pages
+  - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-different-sores-different-logic-landing-pages-spryker-commerce-os.html
 ---
 
 {% info_block infoBox %}
 
-This tutorial is also available on the Spryker Training web-site. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp) web-site.
+This tutorial is also available on the Spryker Training website. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp) website.
 
 {% endinfo_block %}
 

@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Zed Rest API
+title: "Tutorial: Zed Rest API"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-zed-rest-api
@@ -59,7 +59,7 @@ It is advised to recap the following topics before starting the challenge:
 * [PHP Reflection](http://php.net/manual/en/book.reflection.php)
 * [Facades](/docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html)
 * [Transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html)
-* [Tutorial - Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html)
+* ["Tutorial: Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html)
 * [Controllers in Zed](/docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html)
 
 {% info_block infoBox %}

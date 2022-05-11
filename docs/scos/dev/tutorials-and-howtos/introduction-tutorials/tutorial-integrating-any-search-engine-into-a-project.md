@@ -1,5 +1,5 @@
 ---
-title: "Tutorial - Integrating any search engine into a project"
+title: "Tutorial: Integrating any search engine into a project"
 description: Learn how to integrate any external search engine instead of the default Elasticsearch.
 last_updated: Jun 16, 2021
 template: howto-guide-template

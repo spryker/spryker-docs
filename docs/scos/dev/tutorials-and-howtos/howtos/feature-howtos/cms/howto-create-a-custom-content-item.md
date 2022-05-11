@@ -98,7 +98,7 @@ class ContentFooFormPlugin extends AbstractPlugin implements ContentPluginInterf
      * For more information about Symfony forms, see [Forms](https://symfony.com/doc/current/forms.html).
      * To learn about form creation procedure in Spryker, see [Creating forms](/docs/scos/dev/back-end-development/forms/creating-forms.html)
      * `\Spryker\Zed\ContentBannerGui\Communication\Form\BannerContentTermForm` as an example of a simple form.
-     * `\Spryker\Zed\ContentProductGui\Communication\Form\ProductAbstractListContentTermForm` as an example of a form with a dedicated template and a complex Javascript functionality.
+     * `\Spryker\Zed\ContentProductGui\Communication\Form\ProductAbstractListContentTermForm` as an example of a form with a dedicated template and complex Javascript functionality.
 
 Each form shipped by default require at least one form field to be filled out before it can be submitted. However, you can add more form constraints with additional validation.
 

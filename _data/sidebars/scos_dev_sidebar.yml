@@ -4050,7 +4050,7 @@ entries:
         url: /docs/scos/dev/legacy-demoshop/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html
         include_versions:
         - "201811.0"
-    - title: "Tutorial: Set Up a Hello World Queue - Legacy Demoshop
+    - title: "Tutorial: Set Up a Hello World Queue - Legacy Demoshop"
       url: /docs/scos/dev/legacy-demoshop/set-up-a-hello-world-queue-legacy-demoshop.html
       include_versions:
       - "201811.0"

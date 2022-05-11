@@ -69,7 +69,7 @@ It features a lightweight environment that is closer to a production implementat
 
 To start developing your Spryker in Docker, see [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
 #### Deploy file
-For local env we use deploy.dev.yml file (see docimentation how to work with it [https://github.com/spryker/docker-sdk/tree/master/docs/07-deploy-file](https://github.com/spryker/docker-sdk/tree/master/docs/07-deploy-file) )
+For local env we use deploy.dev.yml file (see documentation how to work with it [https://github.com/spryker/docker-sdk/tree/master/docs/07-deploy-file](https://github.com/spryker/docker-sdk/tree/master/docs/07-deploy-file) )
 
 What to change in this file:
  - namespace - better to have name for your project, it will prevent problem when two or more project with the same name installed.
@@ -107,7 +107,7 @@ After installing, make sure to have a look at [Post-Installation steps and addit
 ### Readme.md
  - Update project install description.
  - Update repository link. 
- - Remove unused information (like vagrant installation if you not use it)
+ - Remove unused information if you don't use it (like vagrant installation if you not use it)
  - It can be good idea to move production information to down, all new developers will easily see how to use project.
 
 
@@ -199,6 +199,7 @@ Get to know the parts of the Spryker Development Virtual Machine with which we s
 * Technology Stack: Linux distribution, PHP, Postgres, MySQL, ES, Redis, Queue, Jenkins-->
 
 ## 6. CI configuration
+Continuous integration - is a development practice where each part of the code can be verified by an automated build and automated tests. This allows to have a good code quality and be sure that each new feature do not broken existed functionality. There are the list how to enable CI on a different repositories:
  - [Deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-pipelines.html)
  - [Customizing deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/customizing-deployment-pipelines.html)
  - [GitHub Actions](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-github-actions.html)
@@ -214,9 +215,9 @@ composer update spryker/code-sniffer slevomat/coding-standard --with-dependencie
 ```
 
 There are will be some new checks, but mostly everything is easy to fix.
-On a project level you may decide to use your own rules, or exclude something that enamled in spryker by default.
+On a project level you may decide to use your own rules, or exclude something that enabled in spryker by default.
 
-To enable some new rule see full list there: [Slevomat Coding Standard](https://github.com/slevomat/coding-standard)
+To enable some new rule see the full list of rules there: [Slevomat Coding Standard](https://github.com/slevomat/coding-standard)
 
 To disable something you can use configuration. Next example exclude rule that annotation for constructor and method is required:
 ```yaml

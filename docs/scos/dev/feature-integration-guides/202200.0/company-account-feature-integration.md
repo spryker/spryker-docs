@@ -372,7 +372,8 @@ Enable the following behaviors by registering the plugins:
 | CompanyToCompanyUnitAddressEditFormExpanderPlugin                 | Transforms company select dropdown on the company unit address edit form into an input field with search and suggestions                  | None              | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyUnitAddressGui`           |
 | CompanyToCompanyRoleCreateFormExpanderPlugin                      | Transforms company select dropdown on the company role edit form into an input field with search and suggestions                          | None              | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyRoleGui`                  |
 | CompanyBusinessUnitToCustomerBusinessUnitAttachFormExpanderPlugin | Transforms business unit select dropdown on the company user to business unit attach form into an input field with search and suggestions | None              | `Spryker\Zed\CompanyBusinessUnitGui\Communication\Plugin\BusinessOnBehalfGui` |
-
+****_~~[| CompanyToCompanyBusinessUnitFormExpanderPlugin                    | Transforms company select dropdown on the company business unit create form into an input field with search and suggestions               | None              | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyBusinessUnitGui`          |****_~~
+]()
 **src/Pyz/Zed/Customer/CustomerDependencyProvider.php**
 
 ```php
@@ -653,6 +654,28 @@ class BusinessOnBehalfGuiDependencyProvider extends SprykerBusinessOnBehalfGuiDe
 }
 ```
 
+**src/Pyz/Zed/CompanyBusinessUnitGui/CompanyBusinessUnitGuiDependencyProvider.php**
+
+```php
+namespace Pyz\Zed\CompanyBusinessUnitGui;
+
+use Spryker\Zed\CompanyBusinessUnitGui\CompanyBusinessUnitGuiDependencyProvider as SprykerCompanyBusinessUnitGuiDependencyProvider;
+use Spryker\Zed\CompanyGui\Communication\Plugin\CompanyBusinessUnitGui\CompanyToCompanyBusinessUnitFormExpanderPlugin;
+
+class CompanyBusinessUnitGuiDependencyProvider extends SprykerCompanyBusinessUnitGuiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\CompanyBusinessUnitGuiExtension\Communication\Plugin\CompanyBusinessUnitFormExpanderPluginInterface>
+     */
+    protected function getCompanyBusinessUnitFormExpanderPlugins(): array
+    {
+        return [
+            new CompanyToCompanyBusinessUnitFormExpanderPlugin(),
+        ];
+    }
+}
+```
+
 {% info_block warningBox "Verification" %}
 
 Log in with a customer who has multiple Company Users and a default one. Check in the session if the default Company User was assigned to the Customer. Check in the session if the `IsOnBehalf` property is set correctly for the Customer.
@@ -690,7 +713,7 @@ console frontend:zed:build
 
 To make sure the transform dropdowns plugins (`CompanyFieldToCompanyUserFormExpanderPlugin`, `CompanyBusinessUnitToCompanyUserFormExpanderPlugin`,
 `CompanyToCompanyUserAttachCustomerFormExpanderPlugin`, `CompanyBusinessUnitToCompanyUserAttachCustomerFormExpanderPlugin`,
-`CompanyToCompanyUnitAddressEditFormExpanderPlugin`, `CompanyToCompanyRoleCreateFormExpanderPlugin`, `CompanyBusinessUnitToCustomerBusinessUnitAttachFormExpanderPlugin`) were set up correctly, you need to open the corresponding form and check that input boxes with search and suggestions are used for the company and business unit fields instead of default select dropdowns.
+`CompanyToCompanyUnitAddressEditFormExpanderPlugin`, `CompanyToCompanyRoleCreateFormExpanderPlugin`, `CompanyBusinessUnitToCustomerBusinessUnitAttachFormExpanderPlugin`, `CompanyToCompanyBusinessUnitFormExpanderPlugin`) were set up correctly, you need to open the corresponding form and check that input boxes with search and suggestions are used for the company and business unit fields instead of default select dropdowns.
 
 Also make sure that field labels (like "Company") and hints (like "Select company") have been translated correctly for the dropdowns.
 

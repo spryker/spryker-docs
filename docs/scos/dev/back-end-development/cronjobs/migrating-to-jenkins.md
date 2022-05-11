@@ -38,7 +38,7 @@ class SchedulerConfig extends AbstractSharedConfig
 
 
 
-2. In `src/Pyz/Zed/Console/ConsoleDependencyProvider.php`, add the console commands and twig:
+2. In `src/Pyz/Zed/Console/ConsoleDependencyProvider.php`, add the console commands and Twig application plugin:
 
 ```php
 /**

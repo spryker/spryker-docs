@@ -32,6 +32,9 @@ entries:
             - title: Release notes 202108.0
               url: /docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2021080.html
 
+            - title: Release notes 202204.0
+              url: /docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.html
+
       - title: Features
         url: /docs/marketplace/user/features/
         nested:

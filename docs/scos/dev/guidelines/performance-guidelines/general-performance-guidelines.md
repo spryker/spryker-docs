@@ -52,14 +52,14 @@ For performance reasons, always use the newest stable version of PHP, as every n
 
 Make sure that Opcache is activated and properly configured:
 
-| Configuration                   | Purpose                                                      | Production | Development |
-| ------------------------------- | ------------------------------------------------------------ | ---------- | ----------- |
-| `opcache.enable`                | Activates Opcache for web requests. Most developers disable this on development environments to avoid outdated code in caches, but you can also activate it and check for changed files via `validate_timestamps` and `revalidate_freq` configurations. | 1          | 0           |
-| `opcache.enable_cli`            | Activates Opcache for console commands                        | 1          | 0           |
-| `opcache.max_accelerated_files` | Spryker and all the used open source libraries contain a lot of PHP classes, so this value should be high (max is 100k). | ?          | 8192        |
-| `opcache.memory_consumption`    | To avoid an automatic reset of the Opcache, these values must be high enough. You can look into the PHP info (e.g., in Zed browse to `/maintenance/php-info`) to see the current usage. You can count the number of classes in your codebase to get an idea of a good value. | ?          |             |
-| `opcache.validate_timestamps`   | Boolean values that activate the check for the updated code. This check is time-consuming and should be disabled in production environments. However, you'll need to flush the cache during deployments (e.g., by restarting PHP). | 0          | 1           |
-| `opcache.revalidate_freq`       | This configures the frequency of checks (if enabled via the `validate_timestamps` configuration). "0" means *on every request*  which is recommended for development environments in case you want to program with activated Opcache.	0	0 | 0          | 0           |
+| CONFIGURATION  | PURPOSE   | PRODUCTION | DEVELOPMENT |
+| ------------- | ----------------- | ---------- | ----------- |
+| `opcache.enable`    | Activates Opcache for web requests. Most developers disable this on development environments to avoid outdated code in caches, but you can also activate it and check for changed files via `validate_timestamps` and `revalidate_freq` configurations. | 1     | 0   |
+| `opcache.enable_cli`   | Activates Opcache for console commands.     | 1    | 0   |
+| `opcache.max_accelerated_files` | Spryker and all the used open source libraries contain a lot of PHP classes, so this value should be high (max is 100k). | ?  | 8192  |
+| `opcache.memory_consumption`  | To avoid an automatic reset of the Opcache, these values must be high enough. You can look into the PHP info (e.g., in Zed browse to `/maintenance/php-info`) to see the current usage. You can count the number of classes in your codebase to get an idea of a good value. | ?       |             |
+| `opcache.validate_timestamps`  | Boolean values that activate the check for the updated code. This check is time-consuming and should be disabled in production environments. However, you'll need to flush the cache during deployments (e.g., by restarting PHP). | 0  | 1  |
+| `opcache.revalidate_freq`  | This configures the frequency of checks (if enabled via the `validate_timestamps` configuration). "0" means *on every request*  which is recommended for development environments in case you want to program with activated Opcache.	0	0 | 0  | 0  |
 
 ```php
 zend_extension=opcache.so
@@ -183,6 +183,7 @@ You can also configure a path for the `unresolvable.cache` file as follows:
 $config[\Spryker\Shared\Kernel\KernelConstants::AUTO_LOADER_CACHE_FILE_PATH] = APPLICATION_ROOT_DIR . '/data/' . \Spryker\Shared\Kernel\Store::getInstance()->getStoreName() . '/cache/' . ucfirst(strtolower(APPLICATION)) . '/unresolvable.cache';
 
 ```
+
 {% info_block warningBox "Warning" %}
 
 You need to remove the cache files for each project deployment.
@@ -192,7 +193,6 @@ You need to remove the cache files for each project deployment.
 See [EventDispatcher module migration guide](/docs/scos/dev/module-migration-guides/migration-guide-eventdispatcher.html) for information on how to upgrade to a newer version of the EventDispatcher module.
 
 See [Cache of Unresolved Entities for Zed](/docs/scos/dev/technical-enhancement-integration-guides/integrating-cache-of-unresolved-entities-for-zed.html) for information on how to integrate the Cache of Unresolved Entities for Zed feature into your project.
-
 
 ## Redis Mget cache
 
@@ -208,10 +208,13 @@ The process of resolving the right class name is done by building class name can
 To speed up the overall page load, there are two features: resolvable class names cache and resolvable Instance cache.
 
 ### Resolvable class names cache
+
 The resolvable class names cache is disabled by default. Activate it by adding the following configuration to your `config_*` files:
+
 ```php
 $config[KernelConstants::RESOLVABLE_CLASS_NAMES_CACHE_ENABLED] = true;
 ```
+
 Additionally, you need to build the cache file during your deployment. Add `\Spryker\Zed\Kernel\Communication\Console\ResolvableClassCacheConsole` to your `ConsoleDependencyProvider` if you don't have it, and run
 
 ```bash
@@ -220,10 +223,13 @@ vendor/bin/console cache:class-resolver:build
 This builds a cache file that will be used by the ClassResolver.
 
 ### Resolved instance cache
+
 On top of the resolvable class names cache, you can turn on an instance cache for the resolved classes by adding the following configuration to your `config_*` files:
+
 ```php
 $config[KernelConstants::RESOLVED_INSTANCE_CACHE_ENABLED] = true;
 ```
+
 This allows reusing an already resolved class instance during a request.
 
 {% info_block warningBox "Warning" %}
@@ -235,6 +241,7 @@ Enabling this option can lead to undesired behavior when the resolved class is s
 ## Reduce functionality
 
 Check if you require all features you currently use and check all applied plugins if you need them. Some plugins can probably be removed. Specifically, check:
+
 - CheckoutDependencyProvider
 - CalculationDependencyProvider
 

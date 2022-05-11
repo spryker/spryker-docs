@@ -26,10 +26,12 @@ redirect_from:
 
 Oryx is the Spryker projects frontend helper. The purpose of Oryx is to simplify the asset building process, giving developers the freedom to choose and configure the preprocessors for the frontend.
 
-Oryx relies on webpack 2.
+Oryx relies on Webpack 2.
 
 {% info_block warningBox "Oryx for Zed" %}
+
 If you're looking for Oryx Zed dedicated solution, see [Oryx for Zed](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html).
+
 {% endinfo_block %}
 
 ### Requirements
@@ -44,6 +46,7 @@ Before installing Oryx, make sure that you have the following:
 To install and setup Oryx, you need to add it to your project’s root folder `package.json`.
 
 **To add Oryx to your package.json:**
+
 Open the terminal, go to your project root folder and type:
 
 ```
@@ -53,12 +56,14 @@ yarn add @spryker/oryx --dev
 ```
 
 {% info_block warningBox %}
-Oryx comes with a peer dependency - webpack version >= 2.x (needed when you build assets using Oryx api)
+
+Oryx comes with a peer dependency - Webpack version >= 2.x (needed when you build assets using Oryx api).
+
 {% endinfo_block %}
 
 ## Usage
 
-Once installed, Oryx can be used to enrich your webpack configuration and to programmatically execute webpack (with a formatted terminal output).
+Once installed, Oryx can be used to enrich your Webpack configuration and to programmatically execute Webpack (with a formatted terminal output).
 
 The following example shows a basic Oryx integration with `webpack`.
 
@@ -66,7 +71,7 @@ The following example shows a basic Oryx integration with `webpack`.
 
 Use Oryx to find Spryker Yves core entry points and add them to your configuration. The following `entrySettings` constant defines where to search for them (`dirs`), which patterns to adopt to spot them (`patterns`), the description to log in the terminal (description) and how to name the entry points (`defineName(path)`).
 
-To configure Oryx to look for your own entry points, change the settings accordingly or add them directly as you always do with webpack. As the "find entry points" function is working an asyncronous mode, it is necessary to create an asyncronous configuration function which would resolve the entry points promises (see example below).
+To configure Oryx to look for your own entry points, change the settings accordingly or add them directly as you always do with Webpack. As the "find entry points" function is working an asynchronous mode, it is necessary to create an asynchronous configuration function which would resolve the entry points promises (see example below).
 
 ```
 const oryx = require('@spryker/oryx');
@@ -99,9 +104,9 @@ module.exports = getConfiguration;
 
 ### build.js
 
-This file contains the programmatic call to webpack using the `oryx.build()` function. Oryx will take care of printing a minimal log in the terminal console.
+This file contains the programmatic call to Webpack using the `oryx.build()` function. Oryx will take care of printing a minimal log in the terminal console.
 
-```
+```js
 const oryx = require('@spryker/oryx');
 const getConfiguration = require('./webpack.config.js');
 
@@ -114,7 +119,7 @@ getConfiguration()
 
 Add a script into your `package.json` pointing to `build.js`.
 
-```javascript
+```js
 {
     "scripts": {
         "yves": "node ./path/to/yves/frontend/build"
@@ -134,7 +139,7 @@ yarn run yves
 
 ### find()
 
-```
+```js
 oryx.find(settings, [initial])
 ```
 
@@ -169,14 +174,14 @@ const entrySettings = {
 
 ### build()
 
-```
+```js
 oryx.build(configuration, [callback])
 ```
 
-Build the assets using `webpack` and print a formatted terminal output. This functon is just a wrapper for `webpack(configuration, callback)`:
+Build the assets using `webpack` and print a formatted terminal output. This function is just a wrapper for `webpack(configuration, callback)`:
 
-* `configuration {object}`: webpack configuration file
-* `callback(error, stats) {function} [optional]`: function called once webpack build task is completed
+* `configuration {object}`: Webpack configuration file
+* `callback(error, stats) {function} [optional]`: function called once Webpack build task is completed
 
 ```bash
 oryx.build(configuration, (error, stats) => {
@@ -186,25 +191,29 @@ oryx.build(configuration, (error, stats) => {
 ```
 
 {% info_block warningBox %}
-For more control over the process feel free to use the webpack one.
+
+For more control over the process feel free to use the Webpack one.
+
 {% endinfo_block %}
 
 ### build.loadCompiler()
 
-```
+```js
 oryx.build.loadCompiler(webpack, webpackVersion)
 ```
 
 Load the compiler instance used for build.
 
-* `webpack {object}`: webpack instance object
-* `webpackVersion {string}`: webpack instance object version number
+* `webpack {object}`: Webpack instance object
+* `webpackVersion {string}`: Webpack instance object version number
 
 {% info_block warningBox %}
-It is useful to load the compiler when oryx is a dependecy in a module where it's mandatory to execute the build API using the webpack version specified in that module's package.json.
+
+It is useful to load the compiler when oryx is a dependency in a module where it's mandatory to execute the build API using the Webpack version specified in that module's `package.json`.
+
 {% endinfo_block %}
 
-```
+```js
 const oryx = require('@spryker/oryx');
 const webpack = require('webpack');
 const webpackVersion = require('webpack/package').version;

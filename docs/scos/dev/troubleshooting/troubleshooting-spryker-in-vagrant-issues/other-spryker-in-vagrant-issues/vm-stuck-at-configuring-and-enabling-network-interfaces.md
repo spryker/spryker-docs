@@ -23,11 +23,15 @@ If Spryker Virtual Machine gets stuck at the *Configuring and enabling network i
 3. Start the virtual machine again with *vagrant up*.
 
 {% info_block infoBox %}
+
 If you get a message that the machine is already running, end all processes related to *Vagrant*, *Virtualbox* and *Ruby*. Then try again.
+
 {% endinfo_block %}
 
 4. If the start up process halts again with the same message, delete all virtual network interfaces in **Virtualbox** and restart the VM again.
 
 {% info_block infoBox %}
+
 The interfaces will be re-created automatically.
+
 {% endinfo_block %}

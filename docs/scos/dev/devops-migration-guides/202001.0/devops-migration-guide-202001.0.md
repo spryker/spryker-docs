@@ -87,9 +87,10 @@ We strongly recommend adding new configuration constants alongside the old ones 
 
 {% endinfo_block %}
 
-### Data Migration
+### Data migration
 
 Migrate all the search data from the old indexes to the new ones. The quickest way to do this is through the Elasticsearch Reindex API.  Find an exemplary case of migrating data from the old `de_search` index to the new ones called `de_page` and `de_product-review` below:
+
 ```php
 POST _reindex
 {
@@ -127,9 +128,9 @@ Only after you make sure that all the search data is migrated, you can remove th
 
 PHP 7.1 is no longer supported. Update PHP version to 7.2 or higher.
 
-## Health Checks
+## Health checks
 
-Heartbeat functionality was replaced with the [Health Сhecks](/docs/scos/dev/technical-enhancement-integration-guides/integrating-health-checks.html) functionality.
+Heartbeat functionality was replaced with the [Health checks](/docs/scos/dev/technical-enhancement-integration-guides/integrating-health-checks.html) functionality.
 
 Enable heath checks by defining `\Spryker\Shared\HealthCheck\HealthCheckConstants::HEALTH_CHECK_ENABLED = true` in configuration.
 
@@ -139,7 +140,7 @@ The `health-check/index` path is used to check the status of each application.
 
 As [Silex has been replaced](/docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html) together with the Routing service provider, we introduced a new routing that implements router cache. To warm up the router cache, include `vendor/bin/yves router:cache:warm-up` and `vendor/bin/console router:cache:warm-up` into the deployment recipe.
 
-## Updated Console Commands
+## Updated console commands
 
 * `console transfer:generate` was split into two commands:
     * `console transfer:generate`
@@ -151,14 +152,14 @@ In the deployment recipe, replace `console transfer:generate` with console `tran
     * `console search:setup:source-map`
 In the deployment recipe, replace `console search:setup:indexes`with `console search:setup:sources`and `console search:setup:source-map`.
 
-## Twig Cache Location
+## Twig cache location
 
 Find the new paths to Twig cache directories below:
 
 * Yves - `%s/data/%s/cache/YVES/twig/`
 * Zed - `%s/data/%s/cache/ZED/twig/`
 
-## Translation Cache Location
+## Translation cache location
 
 The new path to Zed translation cache directory is `%s/data/%s/cache/Zed/translation`.
 

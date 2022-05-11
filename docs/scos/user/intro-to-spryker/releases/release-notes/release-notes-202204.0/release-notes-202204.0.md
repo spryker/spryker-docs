@@ -114,7 +114,7 @@ Use Klarna services to let your customers pay later for their purchases.
 
 Starting from this version, B2C and B2B Demo Shops are fully compatible with the industry and our own coding standards. The implemented fixes are based on the evaluation performed by the Evaluator tool.
 
-You can now evaluate your code and make sure it’s upgradable by following the [Keeping a project upgradable](/docs/scos/user/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html) guide. After a successful evaluation, headless projects can safely take minor and patch updates. For PaaS+ projects, if a project passes the evaluation, the updates are provided automatically.
+You can now evaluate your code and make sure it’s upgradable by following the [Keeping a project upgradable](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html) guide. After a successful evaluation, headless projects can safely take minor and patch updates. For PaaS+ projects, if a project passes the evaluation, the updates are provided automatically.
 
 ## ACP (APP Composition Platform)
 

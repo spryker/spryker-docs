@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/creating-a-warehouse
   - /docs/creating-a-warehouse
   - /docs/en/creating-a-warehouse
+  - /docs/scos/user/user-guides/201811.0/back-office-user-guide/administration/warehouses/creating-warehouses.html
+  - /docs/scos/user/user-guides/201903.0/back-office-user-guide/administration/warehouses/creating-warehouses.html
+  - /docs/scos/user/user-guides/201907.0/back-office-user-guide/administration/warehouses/creating-warehouses.html
 ---
 
 The topic describes how to create warehouses in the Back Office.

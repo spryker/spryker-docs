@@ -15,6 +15,7 @@ redirect_from:
 ---
 
 ## Description
+
 During the Spryker Commerce OS installation , you can get the following error:
 
 ```bash
@@ -26,6 +27,7 @@ npm ERR! Failed at the spryker-master-suite@ zed script.
 ```
 
 ## Solution
+
 To fix the error:
 
 1. On the host, execute the following commands:

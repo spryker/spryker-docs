@@ -22,12 +22,11 @@ redirect_from:
 For Docker-based integration instructions, see [ChromeDriver](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html#chromedriver).
 
 ## Integration into DevVM-based projects
+
 To integrate Chromium into a DevVM-based project:
 
 1. Update Vagrant to version 3.2.0 or higher.
-
 2. Set the `SPRYKER_TEST_IN_BROWSER=chrome` environment variable.
-
 3. Point the `SPRYKER_TEST_BROWSER_BIN` environment variable to the Chromium binary file.
 
 {% info_block infoBox "Chromium binary file location" %}
@@ -37,7 +36,6 @@ By default, the Chromium binary file is located in `vendor/bin/chrome`.
 {% endinfo_block %}
 
 4. Update `codeception*.yml` as follows:
-
 
 ```yaml
 extensions:

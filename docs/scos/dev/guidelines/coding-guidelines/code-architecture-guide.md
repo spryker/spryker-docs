@@ -26,7 +26,7 @@ redirect_from:
 
 We use our [Architecture Sniffer Tool](https://github.com/spryker/architecture-sniffer) to assert a certain quality of Spryker architecture for both core and project.
 
-## Running the Tool
+## Running the tool
 
 The sniffer can find a lot of violations and report them:
 

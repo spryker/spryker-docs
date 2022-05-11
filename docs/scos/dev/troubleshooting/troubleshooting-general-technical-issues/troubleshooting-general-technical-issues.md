@@ -35,8 +35,6 @@ This section helps you troubleshoot general technical issues you might encounter
 * [PHPStan memory issues](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/phpstan-memory-issues.html)
 
 
-
-
 {% info_block infoBox %}
 
 If you encounter a general technical issue that is not addressed on this page, try searching by an error output or keywords, or visit the [Spryker Support Portal](https://spryker.force.com/support/s/) for technical support.

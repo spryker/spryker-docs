@@ -22,9 +22,11 @@ related:
 ---
 
 ## General information
+
 The feature supports decimal inventory in terms of stock and availability, amount of reserved products, as well as amount values of a packaging unit.
 
 ## Migration process
+
 You can upgrade all modules affected by the feature in bulk.
 
 **To update all the modules affected by feature in bulk, do the following:**
@@ -54,8 +56,7 @@ console propel:install
 console transfer:generate
 ```
 
-5. Follow the steps in the individual migration guide for [ProductPackagingUnitStorage](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitstorage.html#upgrading-from-version-4-to-v--version-500). 
-
+5. Follow the steps in the individual migration guide for [ProductPackagingUnitStorage](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitstorage.html#upgrading-from-version-4-to-v--version-500).
 6. Follow the steps in the individual migration guide for [Availability](/docs/scos/dev/module-migration-guides/migration-guide-availability.html#upgrading-from-version-8-to-version-900).
 
 {% info_block errorBox %}
@@ -66,7 +67,7 @@ Care should be taken on the project level code to handle the availability and st
 
 The following table lists the modules affected by the Decimal Stock update and will be released as a major or a semantic major.
 
-| Module | Version | Migration guide |
+| MODULE | VERSION | MIGRATION GUIDE |
 | --- | --- | --- |
 | `spryker/availability` | 9.0.0 | [Migration Guide - Availability](/docs/scos/dev/module-migration-guides/migration-guide-availability.html#upgrading-from-version-8-to-version-900) |
 | `spryker/oms` | 11.0.0 | [Migration Guide - OMS](/docs/scos/dev/module-migration-guides/migration-guide-oms.html#upgrading-from-version-10-to-version-1100) |

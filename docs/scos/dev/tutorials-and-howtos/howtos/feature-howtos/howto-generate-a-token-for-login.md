@@ -1,5 +1,5 @@
 ---
-title: HowTo - Generate a Token for Login
+title: HowTo - Generate a token for login
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-generate-a-token-for-login
@@ -18,6 +18,7 @@ redirect_from:
 A token is a unique identifier that contains all the information needed for authentication to fetch a specific resource without using a username and password. The tokens are JSON strings that are encoded in `base64url` format.
 
 To generate a token, follow the steps:
+
 1. The following transfers have to be adjusted for expansion:
 
 ```xml
@@ -37,6 +38,7 @@ To generate a token, follow the steps:
 	<property name="additionalProperty" type="array" />
 </transfer>
 ```
+
 2. Generate a token using a facade call `OauthCompanyUserFacade::createCompanyUserAccessToken()`:
 
 ```php
@@ -47,6 +49,7 @@ $customerTransfer = (new CustomerTransfer())
 $oauthResponseTransfer = OauthCompanyUserFacade::createCompanyUserAccessToken($customerTransfer);
 $accessToken = $oauthResponseTransfer->getAccessToken();
 ```
+
 3. Retrieve the customer by an access token using a client call `OauthCompanyUserClient::getCustomerByAccessToken()`:
 
 ```php

@@ -44,8 +44,7 @@ Review the [reference information](#reference-information-manage-customer-groups
 5. On the **Available customers** subtab, select the checkboxes next to the customers you want to add to the group.   
 6. On the **Assigned customers** subtab, clear the checkboxes next to the customers you want to remove from the group.   
 7.  Click **Save**.
-
-This opens the **View customer group** page with a success message displayed.
+    This opens the **View customer group** page with a success message displayed.
 
 ## Reference information: Manage customer groups
 

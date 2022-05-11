@@ -15,6 +15,7 @@ redirect_from:
 ---
 
 ## Description
+
 When running `./setup`, on the `Setup Zed` step, the following error occurs:
 
 ```php
@@ -22,6 +23,7 @@ Zed Exception: RuntimeException - psql: FATAL:  Peer authentication failed for u
 ```
 
 ## Solution
+
 Open the PostgreSQL configuration file :
 
 ```bash

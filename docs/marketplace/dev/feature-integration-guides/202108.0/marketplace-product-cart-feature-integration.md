@@ -47,7 +47,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductCartPreCheckPlugin | Validates that merchant references in the cart items match existing marketplace products. |  | Spryker\Zed\MerchantProduct\Communication\Plugin\Cart |
 | MerchantProductPreAddToCartPlugin | Sets merchant reference to item transfer on add to cart. |  | SprykerShop\Yves\MerchantProductWidget\Plugin\CartPage |
 
-**src/Pyz/Zed/Cart/CartDependencyProvider.php**
+**src/Pyz/Zed/Merchant/MerchantDependencyProvider.php**
 
 ```php
 <?php
@@ -63,7 +63,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\CartPreCheckPluginInterface>
+     * @return \Spryker\Zed\CartExtension\Dependency\Plugin\CartPreCheckPluginInterface[]
      */
     protected function getCartPreCheckPlugins(Container $container): array
     {
@@ -93,7 +93,7 @@ use SprykerShop\Yves\MerchantProductWidget\Plugin\CartPage\MerchantProductPreAdd
 class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 {
     /**
-     * @return array<\SprykerShop\Yves\CartPageExtension\Dependency\Plugin\PreAddToCartPluginInterface>
+     * @return \SprykerShop\Yves\CartPageExtension\Dependency\Plugin\PreAddToCartPluginInterface[]
      */
     protected function getPreAddToCartPlugins(): array
     {

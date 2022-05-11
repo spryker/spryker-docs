@@ -43,7 +43,7 @@ To learn how a product catalog manager can create a voucher in the Back Office, 
 
 ### Voucher code collection
 
-All the voucher codes belonging to a voucher discount comprise a *voucher code collection*. A customer can apply one voucher code from a collection to a cart. If they apply two codes from a single collection to a cart, the code with a bigger discount value is applied.
+All the voucher codes belonging to a voucher discount include a *voucher code collection*. A customer can apply one voucher code from a collection to a cart. If they apply two codes from a single collection to a cart, the code with a bigger discount value is applied.
 
 At the same time, a customer can apply two voucher codes to a single cart, if the codes belong to different collections.
 

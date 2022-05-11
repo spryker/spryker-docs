@@ -42,7 +42,8 @@ related:
 
 Easily import your business logic and data, such as Product Information, Customer Base, Categories, and many more into the Spryker Commerce OS.
 
-The* Data Import* feature allows you to configure what you need to import. You don't need to import all data that is available in Spryker OS out of the box. Instead, you can define what data you want to import for your project using a YAML configuration file. See [Importing data with a configuration file](/docs/scos/dev/data-import/{{site.version}}/importing-data-with-a-configuration-file.html) for details on how you can do that.
+The *Data Import* feature allows you to configure what you need to import. You don't need to import all data that is available in Spryker OS out of the box. Instead, you can define what data you want to import for your project using a YAML configuration file. See [Importing data with a configuration file](/docs/scos/dev/data-import/{{site.version}}/importing-data-with-a-configuration-file.html) for details on how you can do that.
+
 {% info_block infoBox "Data import help" %}
 
 To help you build your import files, define the correct order of the data importers to run, there is the [Data import documentation](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/about-data-import-categories.html) for your reference. Consult it whenever you need to import data into your project.

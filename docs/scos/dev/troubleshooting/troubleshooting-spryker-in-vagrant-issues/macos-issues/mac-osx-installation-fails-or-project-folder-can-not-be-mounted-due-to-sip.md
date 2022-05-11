@@ -15,9 +15,11 @@ redirect_from:
 ---
 
 ## Description
+
 Sometimes, installation fails or project folder can not be mounted due to SIP on MacOS.
 
 ## Cause
+
 SIP (System Integrity Protection) is a MacOS feature that protects the system files from modification. In some cases, it precludes the proper functioning of third-party applications and may prevent you from installing Spryker on MacOS starting from version 10.11 El Capitan.
 
 This may produce the effect of the VM correctly installed and started, but the `/project` folder containg the application to be run, can not be mounted inside the VM. This means that the whole application can not be started und run. If logged into the VM via `vagrant ssh`the improperly mounted project folder can be identified by running the `ls` command which returns the following error message:
@@ -38,10 +40,10 @@ To solve this problem, disable SIP during the installation:
 
 After SIP is disabled, install Spryker. It is strongly recommended to enable SIP when Spryker is installed. To do that, repeat the steps above, replacing the `csrutil disable` command with `csrutil enable`.
 
-
 {% info_block warningBox "Verification" %}
 
 Make sure SIP is enabled by running the command:
+
 ```bash
 csrutil status
 ```

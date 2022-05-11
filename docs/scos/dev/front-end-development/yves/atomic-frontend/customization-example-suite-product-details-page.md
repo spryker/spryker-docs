@@ -19,7 +19,7 @@ In Spryker, front-end elements have dedicated SCSS styles. To show you how to cu
 ![suite-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+Suite+Product+Details+page/suite-1.png)
 
 
-| # | Path to SCSS |
+| # | PATH TO SCSS |
 | --- | --- |
 | 1 | project/src/Pyz/Yves/ShopUi/Theme/default/components/molecules/breadcrumb-step/breadcrumb-step.scss |
 | 2 | project/vendor/spryker-shop/price-product-volume-widget/src/SprykerShop/Yves/PriceProductVolumeWidget/Theme/default/components/molecules/volume-price/volume-price.scss |
@@ -30,7 +30,7 @@ In Spryker, front-end elements have dedicated SCSS styles. To show you how to cu
 
 ![suite-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+Suite+Product+Details+page/suite-2.png)
 
-| # | Path to SCSS |
+| # | PATH TO SCSS |
 | --- | --- |
 | 3 | project/vendor/spryker-shop/product-review-widget/src/SprykerShop/Yves/ProductReviewWidget/Theme/default/components/molecules/rating-selector/rating-selector.scss |
 | 7 | project/vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/components/molecules/pagination/pagination.scss |

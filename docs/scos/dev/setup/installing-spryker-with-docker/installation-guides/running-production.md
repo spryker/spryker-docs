@@ -20,10 +20,12 @@ redirect_from:
 This document describes the procedure of generating images and assets suitable for a production environment. After going through all the steps, it's up to you how to proceed further.
 
 {% info_block infoBox %}
+
 This functionality is available in the Docker SDK from version 1.7.2.
+
 {% endinfo_block %}
 
-Follow the steps to generate Docker images and assests for a production environment:
+Follow the steps to generate Docker images and assets for a production environment:
 
 1. Clone or update the Docker SDK repository to version 1.7.2.
 
@@ -36,16 +38,19 @@ git clone https://github.com/spryker/docker-sdk.git -b 1.7.2 --single-branch doc
 ```bash
 docker/sdk bootstrap
 ```
+
 {% info_block warningBox "Bootstrap" %}
 
 Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after:
+
 * Docker SDK version update;
 * Deploy file update.
 
 {% endinfo_block %}
+
 3. Run the command to generate docker images for each application:
 
-```
+```bash
 docker/sdk export images [tag]
 ```
 
@@ -54,7 +59,7 @@ docker/sdk export images [tag]
 
 4. Run the command to generate archives with assets for each application:
 
-```
+```bash
 docker/sdk export assets [tag] [path]
 ```
 

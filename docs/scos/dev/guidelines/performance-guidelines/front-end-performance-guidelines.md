@@ -27,8 +27,6 @@ Server configuration:
 * Expires and ETag response headers.
 * Production build mode.  To build production, run `npm run yves:production` and `npm run zed:production`.
 
-
-
 Assets optimization:
 
 * Optimize images to reduce their size for network transfer. To optimize project images, run `npm run yves:images-optimization`.
@@ -36,18 +34,15 @@ Assets optimization:
 * Remove unused characters from fonts.
 * Use lazy loading for images.
 
-
-
 HTML optimization:
 
 * If users are very likely to follow a link, apply a pretender: `<link rel="prerender" href="">`.
 
-
-
 ## Spryker-specific performance guidelines for frontend
+
 General rules:
 
-* Use the `lazy` webpack directive to register unnecessary components.
+* Use the `lazy` Webpack directive to register unnecessary components.
 * Decrease the number of components on each page to as small as possible.
 * Avoid using `querySelectorAll` or at least do not use it in `Document` contexts.
 * Detect and resolve `404` errors.

@@ -22,7 +22,8 @@ Data builders help you create transfer objects for your tests. Instead of prepar
 Data builders need to be configured only once, and then they are ready to use. The configuration is done within a `module.databuilder.xml` file that has to be placed into the `_data` directory.
 
 Here is an example for a data builder configuration:
-```
+
+```xml
 <?xml version="1.0"?>
 <transfers
     xmlns="spryker:databuilder-01"
@@ -36,8 +37,11 @@ Here is an example for a data builder configuration:
 
 </transfers>
 ```
+
 In your test, you will use the data builder with:
-```
+
+```php
 $customerTransfer = (new CustomerBuilder())->build();
 ```
-With this code, you get CustomerTransfer that is filled by the [Faker library](https://github.com/fzaninotto/Faker) with the defined dataBuilderRule(s). When passing the optional `$seedData` to the constructor, the values you pass will be used instead.
+
+With this code, you get `CustomerTransfer` that is filled by the [Faker library](https://github.com/fzaninotto/Faker) with the defined dataBuilderRule(s). When passing the optional `$seedData` to the constructor, the values you pass will be used instead.

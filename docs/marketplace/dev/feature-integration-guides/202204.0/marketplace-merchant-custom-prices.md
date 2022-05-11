@@ -5,11 +5,11 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Merchant Portal - Marketplace Customer Specific Prices feature into a Spryker project.
+This document describes how to integrate the Marketplace Custom Prices feature into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Merchant Portal - Marketplace Customer Specific Prices feature core.
+Follow the steps below to install the Marketplace Custom Prices feature core.
 
 ### Prerequisites
 

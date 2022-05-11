@@ -1,5 +1,5 @@
 ---
-title: Create customer groups
+title: Manage customer groups
 description: Learn how to create and edit customer groups in the Back Office.
 last_updated: May 10, 2022
 template: back-office-user-guide-template

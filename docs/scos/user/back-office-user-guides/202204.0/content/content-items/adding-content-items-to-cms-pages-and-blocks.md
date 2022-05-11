@@ -30,8 +30,8 @@ Prior to adding a content item widget to a block or a page, make sure that the p
 
 To add a content item widget to a page:
 1. On the *Overview of CMS Pages* page, In the _Actions_ column, select **Edit&nbsp;<span aria-label="and then">></span> Placeholders** next to the page you want to add a content item widget to.
-3. On the *Edit Placeholders: CMS Page [Name]* page, go to the *Placeholder* tab and place your cursor where you want to insert the content items.
-4. In the editor pane, select the widget you want to add from the **Content Item** drop-down list.
+2. On the *Edit Placeholders: CMS Page [Name]* page, go to the *Placeholder* tab and place your cursor where you want to insert the content items.
+3. In the editor pane, select the widget you want to add from the **Content Item** drop-down list.
 
 ![Content item menu page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Adding+Content+Item+Widgets+to+Pages+and+Blocks/content-item-menu-page.png)
 

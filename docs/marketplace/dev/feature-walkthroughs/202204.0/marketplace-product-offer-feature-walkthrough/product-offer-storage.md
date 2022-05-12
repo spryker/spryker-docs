@@ -14,15 +14,16 @@ For details about how to use and configure Redis as a key-value storage, see [Us
 
 The following modules are used for the Product Offer storage:
 
-| MODULE | DESCRIPTION |
-| -------------------- | ---------- |
-| [MerchantProductOfferStorage](https://github.com/spryker/merchant-product-offer-storage) | Provides entity listeners and operates data  caching according to the entity changes |
-| [MerchantProductOfferStorageExtension](https://github.com/spryker/merchant-product-offer-storage-extension) | Provides interfaces for extending the data caching. |
+| MODULE                                                                                                      | DESCRIPTION                                                                                                 |
+|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| [ProductOfferStorage](https://github.com/spryker/product-offer-storage)                                     | Provides publisher plugins and operates data caching according to the entity changes                        |
+| [ProductOfferStorageExtension](https://github.com/spryker/product-offer-storage-extension)                  | Provides interfaces for extending the data caching.                                                         |
+| [MerchantProductOfferStorage](https://github.com/spryker/merchant-product-offer-storage)                    | Provides publisher plugins and operates product offer data caching according to the merchant entity changes |
 
 
 {% info_block infoBox "" %}
 
-For details about how to use Client, use `Client` of the `MerchantProductOfferStorage` module for getting the cached data, see [Client](/docs/scos/dev/back-end-development/client/client.html).
+For details about how to use Client, use `Client` of the `ProductOfferStorage` module for getting the cached data, see [Client](/docs/scos/dev/back-end-development/client/client.html).
 
 {% endinfo_block %}
 
@@ -30,4 +31,4 @@ For details about how to use Client, use `Client` of the `MerchantProductOfferSt
 
 The following schema illustrates module relations in the Product Offer storage entity:
 
-![Module dependency graph](https://confluence-connect.gliffy.net/embed/image/088f0f24-b61d-40e0-a402-876fb48915b6.png?utm_medium=live&utm_source=custom)
+![Module dependency graph](https://confluence-connect.gliffy.net/embed/image/143ce2da-e590-4a06-994e-f969ef342cea.png?utm_medium=live&utm_source=confluence)

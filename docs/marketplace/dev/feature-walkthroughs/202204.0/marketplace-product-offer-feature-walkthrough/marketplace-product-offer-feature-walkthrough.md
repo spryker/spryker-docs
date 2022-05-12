@@ -25,7 +25,7 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 The following diagram illustrates the dependencies between the modules for the Marketplace Product Offer feature.
 
-![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/73bc50f6-4822-485c-bd0e-d19646a761f3.png?utm_medium=live&utm_source=custom)
+![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/2594d553-5312-4c2b-b184-7ad466b945e3.png?utm_medium=live&utm_source=confluence)
 
 The following table lists the main modules of the Marketplace Product Offer feature.
 
@@ -34,7 +34,7 @@ The following table lists the main modules of the Marketplace Product Offer feat
 | [MerchantProductOffer](https://github.com/spryker/merchant-product-offer) | Provides a collection of product offers by request. Extends `ProductOffer` with the merchant information. Used by `MerchantSwitcher` for enabling the merchant functionality.  |
 | [ProductOffer](https://github.com/spryker/product-offer) | Provides the main create-read-update product offer functionality.  |
 | [ProductOfferValidity](https://github.com/spryker/product-offer-validity) | Defines validity period for an offer. |
-| [Shop.MerchantProductOfferWidget](https://github.com/spryker-shop/merchant-product-offer-widget) | Provides merchant product offer information for the `spryker-shop`. |
+| [MerchantProductOfferWidget](https://github.com/spryker-shop/merchant-product-offer-widget) | Provides merchant product offer information for the `spryker-shop`. |
 
 ## Domain model
 

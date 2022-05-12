@@ -34,7 +34,8 @@ The following guide relies on your knowledge of the structure of a Glue REST API
 
 {% endinfo_block %}
 
-## Prerequisites:
+## Prerequisites
+
 To complete this tutorial, you need to comply with the following prerequisites:
 
 * [Install Spryker Development Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html);
@@ -57,7 +58,8 @@ For more details, see [Database schema for product attributes](/docs/scos/user/f
 
 Now, let us add this field to responses of the _Products API_ endpoints:
 
-## 1. Extend Glue Transfers
+## 1. Extend Glue transfers
+
 First of all, we need to extend the existing Glue Transfers that describe Glue attributes. Attributes of _Products_ resources are defined in a transfer file named `products_rest_api.transfer.xml`. To extend it, do the following:
 
 * Create file `src/Pyz/Shared/ProductsRestApi/Transfer/products_rest_api.transfer.xml` that will extend the transfer on the project level
@@ -91,12 +93,14 @@ All transfer file names end with `.transfer.xml`.
 
 * Run `vendor/bin/console transfer:generate` to generate the transfers.
 * Check that the generated transfers contain the attribute you added:
+
     * `src/Generated/Shared/Transfer/AbstractProductsRestAttributesTransfer.php - for abstract products`;
     * `src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer.php` - for concrete products;
 
 {% info_block infoBox %}
 
-You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to extend Glue transfers. Run the following command:  
+You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to extend Glue transfers. Run the following command:
+
 ```bash
 console spryk:run AddSharedRestAttributesTransfer --mode=project --module=ResourcesRestApi --organization=Pyz --name=RestResourcesAttributes
 ```
@@ -104,14 +108,15 @@ console spryk:run AddSharedRestAttributesTransfer --mode=project --module=Resour
 {% endinfo_block %}
 
 ## 2. Put data
+
 If automatic transfer-to-transfer conversion can be performed, you do not need to take extra steps to put data in the attribute you added on step 1. Automatic conversion occurs when the attribute name defined in the REST transfer matches exactly the name of the respective field in the storage transfer.
 
-In more complicated cases, when, for example, you need to pull data from alternative storage or map data differently from what automapping does, you need to override the processor classes. Let us override the `AbstractProductsResourceMapper` class in order to add the `manufacturerCountry` attribute data. For this purpose, we need to extend, on the project level, the `ProductsRestApi` module that implements the Products API. To do this:
+In more complicated cases, when, for example, you need to pull data from alternative storage or map data differently from what auto-mapping does, you need to override the processor classes. Let us override the `AbstractProductsResourceMapper` class in order to add the `manufacturerCountry` attribute data. For this purpose, we need to extend, on the project level, the `ProductsRestApi` module that implements the Products API. To do this:
 
 * Create the `src/Pyz/Glue/ProductsRestApi` directory.
 * Implement `\Pyz\Glue\ProductsRestApi\Processor\Mapper\AbstractProductsResourceMapper` as follows:
 
-AbstractProductsResourceMapper.php
+**AbstractProductsResourceMapper.php**
 
 ```php
 <?php
@@ -143,21 +148,24 @@ As you can see from the code, the mapper that you implemented extends the origin
 
 {% info_block infoBox %}
 
-You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to put data. Run the following command:  
+You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to put data. Run the following command:
+
 ```bash
 console spryk:run AddGlueResourceMapper --mode=project --module=ResourcesRestApi --organization=Pyz  --subDirectory=Mapper --className=Resource
 ```
+
 This will create a mapper and add it to the factory on the project level. You will need to extend the mapper from the original feature.
 
 {% endinfo_block %}
 
 ## 3. Override mapper initialization
+
 Now, we need to override the initialization of the mapper we created on the previous step. For this purpose, we need to extend the factory of the `ProductsRestApi` module. A factory is used to create objects and processor classes of a module, thus, by overriding it, we can invoke our new mapper. To do this:
 
 * Create the Glue factory on the project level: `\Pyz\Glue\ProductsRestApi\ProductsRestApiFactory`.
 * Implement the factory as follows:
 
-ProductsRestApiFactory.php
+**ProductsRestApiFactory.php**
 
 ```php
 <?php
@@ -185,12 +193,15 @@ The same as the mapper, `ProductsRestApiFactory` extends the core factory and on
 {% info_block infoBox %}
 
 You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to override mapper initialization. Run the following command:  
+
 ```bash
 console spryk:run AddGlueMapperFactoryMethod --mode=project --module=ResourcesRestApi --organization=Pyz --subDirectory=Mapper --className=Resource
 ```
+
 This will add mapper initialization to the project level factory.
 
 {% endinfo_block %}
 
 ## 4. Verify implementation
+
 No, you can query the Products API to check whether the attribute has been added to the API response. For example, you can query information on one of the products with the `manufacturerCountry` field populated. For details, see [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{site.version}}/abstract-products/retrieving-abstract-products.html) and [Retrieving concrete products](/docs/marketplace/dev/glue-api-guides/{{site.version}}/concrete-products/retrieving-concrete-products.html).

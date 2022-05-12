@@ -15,10 +15,13 @@ redirect_from:
 ---
 
 ## Description
+
 You get an error similar to `vendor/bin/console: not found`.
 
 ## Solution
+
 Re-build basic images, assets, and codebase:
+
 ```bash
 docker/sdk up --build --assets
 ```

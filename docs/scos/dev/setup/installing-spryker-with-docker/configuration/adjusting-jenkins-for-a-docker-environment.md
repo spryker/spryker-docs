@@ -22,6 +22,7 @@ redirect_from:
 
 
 Follow the steps to adjust the Jenkins scheduler to docker like environments:
+
 1. Update the scheduler configuration settings in `src/Pyz/Zed/Scheduler/SchedulerDependencyProvider.php`:
 
 ```php
@@ -52,7 +53,6 @@ $config[SchedulerJenkinsConstants::JENKINS_TEMPLATE_PATH] = getenv('SPRYKER_JENK
         bash -c \
         "{% raw %}{{{% endraw %} job.command {% raw %}}}{% endraw %}"
 ]]>{% raw %}{%{% endraw %} endblock command {% raw %}%}{% endraw %}
-
 ```
 
 {% info_block infoBox %}
@@ -62,6 +62,7 @@ You can define additional store-specific variables if needed.
 {% endinfo_block %}
 
 3. Set up deployment, so that the following environment variables are set in the container where  `console scheduler:setup ` is run:
-*  `SPRYKER_SCHEDULER_HOST `
-*   `SPRYKER_SCHEDULER_PORT `
-*    `SPRYKER_JENKINS_TEMPLATE_PATH `
+
+* `SPRYKER_SCHEDULER_HOST `
+* `SPRYKER_SCHEDULER_PORT `
+* `SPRYKER_JENKINS_TEMPLATE_PATH `

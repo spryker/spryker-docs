@@ -30,7 +30,6 @@ This tutorial is also available on the Spryker Training web-site. For more infor
 
 {% endinfo_block %}
 
-## Challenge Description
 This task helps to understand the main concepts of testing with Spryker and see how simple it is to build tests. You will use the **Test-Driven Development (TDD)** approach.
 
 Spryker's testing structure and data handling make it very easy to develop using TDD. You will build a simple module that reverses a string and test it.
@@ -38,6 +37,7 @@ Spryker's testing structure and data handling make it very easy to develop using
 Using TDD, you will write the test first, see it fails, and then write the string reverser that makes the test pass.
 
 ## 1. Build the test that fails
+
 As everything in Spryker is modular, tests are also modular. To build a new test, you simply add a new module inside your tests.
 
 {% info_block warningBox %}
@@ -101,6 +101,7 @@ class StringReverserDependencyProvider extends AbstractBundleDependencyProvider
 
 }
 ```
+
 4. Add the Business folder inside `tests/PyzTest/Zed/StringReverser`.
 5. To generate the needed test classes from Codeception, run the command `vendor/bin/codecept build -c tests/PyzTest/Zed/StringReverser`.
 6. Create a facade test class to add your test inside it. The facade test class looks like this:
@@ -135,11 +136,15 @@ class StringReverserFacadeTest extends Unit
 To add the data faker rules for the test we need to create a data builder schema. Inside `tests/`, create a new directory called `_data` and inside it add the data builder schema. Call it `string_reverser.databuilder.xml`.
 
 {% info_block infoBox %}
+
 The schema looks very similar to a transfer object schema. This schema will only add the rules when generating the data builders.
+
 {% endinfo_block %}
 
 {% info_block warningBox %}
+
 Remember, you can generate the data builders without the rules and without the schema.
+
 {% endinfo_block %}
 
 **Code sample**
@@ -228,6 +233,7 @@ public function testStringIsReversedCorrectly(): void
 The test at this point should fail and give an error that the `StringReverserFacade` cannot be resolved because it does not exist.
 
 ## 2. Make the test pass
+
 Now you can write the actual logic (feature) to reverse a string and make the test pass:
 
 1. Add a new module in Zed called `StringReverser`.

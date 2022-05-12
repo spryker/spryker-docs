@@ -21,10 +21,12 @@ redirect_from:
   - /v2/docs/en/ht-manage-a-big-number-of-categories-201903
 ---
 
-## Preface
+## Overview
+
 The default Zed UI for the _Category_ section comes in a form of a tree which is handy for managing nested categories, but impossible to use with a big number of categories. To cope with such cases, we've introduced a new _Category_ section view in a form of a table where categories are listed, paginated and can be easily found by searching.
 
 ## Installation
+
 Perform the following steps to enable the view:
 
 1. Install the `spryker/category-gui` module by running the command:

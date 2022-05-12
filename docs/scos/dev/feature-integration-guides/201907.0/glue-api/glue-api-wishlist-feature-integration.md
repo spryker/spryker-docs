@@ -41,6 +41,7 @@ composer require spryker/wishlists-rest-api:"^1.0.0" --update-with-dependencies
 Run the following commands to apply database changes, and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

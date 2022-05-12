@@ -55,6 +55,7 @@ Make sure that the following module is installed:
 Run the following commands to generate the transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

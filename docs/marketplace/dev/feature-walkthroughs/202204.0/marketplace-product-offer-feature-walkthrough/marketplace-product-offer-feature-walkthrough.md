@@ -3,7 +3,7 @@ title: Marketplace Product Offer feature walkthrough
 last_updated: Apr 23, 2021
 description: Product Offer is created when a merchant wants to sell products already available on the Marketplace.
 template: feature-walkthrough-template
-redirect_from: /docs/marketplace/dev/feature-walkthroughs/202108.0/marketplace-product-offer-feature-walkthrough/rendering-merchant-product-offers-on-the-storefront.html
+redirect_from: /docs/marketplace/dev/feature-walkthroughs/202204.0/marketplace-product-offer-feature-walkthrough/rendering-merchant-product-offers-on-the-storefront.html
 ---
 
 The *Marketplace Product Offer* entity is created when multiple merchants sell the same product on the Marketplace. The product offer is a variation of a concrete product with its own specific price (and volume price) and stock. It can be “owned” by any entity, however, in a B2C or B2B Marketplace, it is owned by a [merchant](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-feature-walkthrough.html).
@@ -29,13 +29,13 @@ The following diagram illustrates the dependencies between the modules for the M
 
 The following table lists the main modules of the Marketplace Product Offer feature.
 
-| NAME                                                                                                                | DESCRIPTION                                                                                                                                                                   |
-|---------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [MerchantProductOffer](https://github.com/spryker/merchant-product-offer)                                           | Provides a collection of product offers by request. Extends `ProductOffer` with the merchant information. Used by `MerchantSwitcher` for enabling the merchant functionality. |
-| [ProductOffer](https://github.com/spryker/product-offer)                                                            | Provides the main create-read-update product offer functionality.                                                                                                             |
-| [ProductOfferValidity](https://github.com/spryker/product-offer-validity)                                           | Defines validity period for an offer.                                                                                                                                         |
-| [Shop.MerchantProductOfferWidget](https://github.com/spryker-shop/merchant-product-offer-widget)                    | Provides merchant product offer information for the `spryker-shop`.                                                                                                           |
-| [Shop.MerchantProductOfferWidgetExtension](https://github.com/spryker-shop/merchant-product-offer-widget-extension) | This module provides plugin interfaces to extend the `Shop.MerchantProductOfferWidget` module from the other modules.                                                                                                                                   |
+| NAME                                                                                                           | DESCRIPTION                                                                                                                                                                   |
+|----------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [MerchantProductOffer](https://github.com/spryker/merchant-product-offer)                                      | Provides a collection of product offers by request. Extends `ProductOffer` with the merchant information. Used by `MerchantSwitcher` for enabling the merchant functionality. |
+| [ProductOffer](https://github.com/spryker/product-offer)                                                       | Provides the main create-read-update product offer functionality.                                                                                                             |
+| [ProductOfferValidity](https://github.com/spryker/product-offer-validity)                                      | Defines validity period for an offer.                                                                                                                                         |
+| [MerchantProductOfferWidget](https://github.com/spryker-shop/merchant-product-offer-widget)                    | Provides merchant product offer information for the `spryker-shop`.                                                                                                           |
+| [MerchantProductOfferWidgetExtension](https://github.com/spryker-shop/merchant-product-offer-widget-extension) | This module provides plugin interfaces to extend the `Shop.MerchantProductOfferWidget` module from the other modules.                                                                                                                                   |
 
 ## Domain model
 

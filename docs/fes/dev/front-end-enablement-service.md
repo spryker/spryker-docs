@@ -1,10 +1,10 @@
 ---
-title: Frontend enablement Service
-description: Overview of Frontend enablement Service, an application for launching frontends.
+title: Frontend Enablement Service
+description: Overview of Frontend Enablement Service, an application for launching frontends.
 template: concept-topic-template
 ---
 
-Frontend enablement Service (FeS) is an application that enables everyone to launch and manage frontends easily and quickly.
+Frontend Enablement Service (FES) is an application that enables everyone to launch and manage frontends easily and quickly.
 
 Its main objectives are:
 * To enable business users to manage frontends without developers' help.
@@ -14,11 +14,11 @@ Quick and easy provisioning of frontends speeds up project development. Every fr
 
 For content managers, it simplifies day-to-day work, like creating frontends for new regions, minisites, or brands and managing their look and feel.
 
-## FeS overview
+## FES overview
 
-FeS consists of Spryker Launchpad and Spryker Experience Builder. The Launchpad is responsible for launching and managing frontends. The Experience Builder is responsible for managing the structure and layout of frontends.
+FES consists of Spryker Launchpad and Spryker Experience Builder. The Launchpad is responsible for launching and managing frontends. The Experience Builder is responsible for managing the structure and layout of frontends.
 
-FeS is structured around four key concepts:
+FES is structured around four key concepts:
 
 * Frontends are connected to SCCOS via APIs.
 * Frontends are easily deployed and can be connected to different backends.
@@ -31,7 +31,11 @@ Combined, they let you make changes without developers’ help, decouple and spe
 
 The Launchpad lets developers and content managers create frontend applications and connect them to Spryker backends.
 
-![Spryker Launchpad](https://spryker.s3.eu-central-1.amazonaws.com/docs/fes/dev/front-end-enablement-service.md/spryker-launchpad.png)
+![Spryker Launchpad](https://spryker.s3.eu-central-1.amazonaws.com/docs/
+
+
+
+/dev/front-end-enablement-service.md/spryker-launchpad.png)
 
 
 The default frontend template is a Storefront based on a [progressive web application (PWA)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps) that supports mobile first design and native features.
@@ -60,11 +64,11 @@ Developers can switch the application between multiple repositories. For example
 ### Spryker Experience Builder
 The Experience Builder lets content managers manage the structure and layout of frontends without developer’s help. It is in development, and we will release it soon.
 
-## What projects can use FeS?
-Any project running on PaaS and with up-to-date APIs can use FeS for its frontends.
+## What projects can use FES?
+Any project running on PaaS and with up-to-date APIs can use FES for its frontends.
 
-## Who are the users of FeS?
-FeS is designed to be used by both developers and content managers.
+## Who are the users of FES?
+FES is designed to be used by both developers and content managers.
 
 ## Next steps
 

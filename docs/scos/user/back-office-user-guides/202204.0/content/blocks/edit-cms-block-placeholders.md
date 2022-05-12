@@ -1,11 +1,28 @@
 
 
 
+
+## Prerequisites
+
+Optional: If you want to add content items to a block, [create content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html).
+
+
 Editing placeholders
 
 To edit a placeholder:
-1. On the *Overview of CMS Blocks* page in the _Actions_ column, click *Edit Placeholder* next to the block you want to update.
-2. On the *Edit Block Glossary: [Block ID]* page, you can update a title or content of the CMS block, as well as insert a content item widget. For more details, see [Adding content item widgets to a block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-blocks).
+1. Next to the block you want to edit the placeholders of, click **Edit Placeholder**.
+    This opens the **Edit CMS Block Glossary** page on the **Title** tab.
+2. Add **CONTENT** to the needed locales.
+    The content will be assigned to the title placeholder.
+3. Click the **Content** tab.
+4. Add **CONTENT** to the needed locales.
+    This is the main content part of the CMS block.
+5. Click **Save**.
+    This refreshes the page with a success message displayed.
+
+
+
+    you can update a title or content of the CMS block, as well as insert a content item widget. For more details, see [Adding content item widgets to a block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-blocks).
 3. To save the updates, click **Save**. The updated block is displayed on the grid of *List of CMS Blocks*.
 
 **Tips and tricks**

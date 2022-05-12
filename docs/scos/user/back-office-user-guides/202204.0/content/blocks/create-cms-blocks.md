@@ -42,21 +42,14 @@ Review the [reference information](#reference-information-create-a-cms-block) be
 9. Click **Save**.
     This opens the **Edit CMS Block Glossary** page with a success message displayed.
 
-
-
-Templates are project-specific and are usually created by a developer and a business person. If you are missing a CMS Block template, contact them and refer to the [HowTo - Create CMS block templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template).
-
-
-
-
-### Reference information: Creating a CMS block
+## Reference information: Creating a CMS block
 
 | ATTRIBUTE  | DESCRIPTION: REGULAR CMS BLOCK | DESCRIPTION: EMAIL CMS BLOCK |
 | --- | --- | --- |
-| STORE RELATION |  Store locale for which the block will be available. | This option does not affect email CMS blocks, so choose any. |
-| TEMPLATE | Defines the layout of the CMS Block. | Defines the layout of the Email CMS Block.
-| NAME | Name of the block. | Name of the block. Should correspond to the name defined in the email template the block will be assigned to. |
-| VALID FROM and VALID TO | Dates that specify how long your active block is visible on the Storefront. | Irrelevant. |
+| STORE RELATION |  Stores to displayed the block in. | This option does not affect email CMS blocks, so choose any. |
+| TEMPLATE | Defines the layout of the CMS Block. A developer can [create more templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template). | Defines the layout of the Email CMS Block. A developer can [create more templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template). |
+| NAME | You will use this name when [assigning the block to a slot in a page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#assigning-cms-blocks-to-slots). | The name should correspond to the name defined in the email template the block will be assigned to. |
+| VALID FROM and VALID TO | Dates that inclusively specify when the block is to be visible on the Storefront. | Irrelevant. |
 | PRODUCTS | Products to assign the block to. The block will be displayed on the products' details pages. | Irrelevant. |
 
 ## Next steps

@@ -23,7 +23,7 @@ There are different strategies developers can use to develop projects. Before st
 - Plug and play
 - Project modules
 
-## Apply guidelines
+## Apply coding guidelines
 
 Starting from the first day of development, apply the [coding guidelines](/docs/scos/dev/guidelines/coding-guidelines/coding-guidelines.html).
 
@@ -55,20 +55,18 @@ Additionally, we recommend keeping modules up to date in general.
 
 ## Development and tests
 
-Starting from the first day of development, write tests for all the customization you implement.
+Starting from the first day of development, write tests for all the customizations you implement. We provide infrastructure for unit, functional, and acceptance tests.
 
-We provides infrastructure for unit, functional, and acceptance tests.
+## Implement CI/CD
 
-## CI/CD
-
-Starting from the first day of development, we recommend establishing an incremental development process based on CI/CD and the tests mentioned in the previous section. (including tests that stated above).
+Starting from the first day of development, we recommend establishing an incremental development process based on CI/CD and the tests mentioned in the previous section.
 
 
 ## Establish coding standards
 
 Before you start developing, establish coding standards. Implement code checks based on the standards into your CI/CD. The default code checks shipped with Spryker are located in `/config/install/sniffs.yml`. You might want to add more checks that are based on your project's requirements.
 
-Make sure that code that breaks the pipeline - can not be merged until fixed.
+Make sure that code can't be merged until it corresponds to your coding standards.
 
 
 

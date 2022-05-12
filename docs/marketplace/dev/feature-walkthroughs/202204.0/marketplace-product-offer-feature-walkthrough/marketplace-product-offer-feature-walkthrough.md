@@ -35,7 +35,7 @@ The following table lists the main modules of the Marketplace Product Offer feat
 | [ProductOffer](https://github.com/spryker/product-offer)                                                       | Provides the main create-read-update product offer functionality.                                                                                                             |
 | [ProductOfferValidity](https://github.com/spryker/product-offer-validity)                                      | Defines validity period for an offer.                                                                                                                                         |
 | [MerchantProductOfferWidget](https://github.com/spryker-shop/merchant-product-offer-widget)                    | Provides merchant product offer information for the `spryker-shop`.                                                                                                           |
-| [MerchantProductOfferWidgetExtension](https://github.com/spryker-shop/merchant-product-offer-widget-extension) | This module provides plugin interfaces to extend the `Shop.MerchantProductOfferWidget` module from the other modules.                                                                                                                                   |
+| [MerchantProductOfferWidgetExtension](https://github.com/spryker-shop/merchant-product-offer-widget-extension) | This module provides plugin interfaces to extend the `MerchantProductOfferWidget` module from the other modules.                                                                                                                                   |
 
 ## Domain model
 

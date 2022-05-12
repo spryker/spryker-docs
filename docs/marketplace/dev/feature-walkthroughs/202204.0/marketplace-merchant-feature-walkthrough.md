@@ -38,7 +38,7 @@ The following diagram illustrates the dependencies between the modules for the M
 | [MerchantRestApiExtension](https://github.com/spryker/merchants-rest-api-extension)                 | Provides plugin interfaces to extend the `MerchantsRestApi` module from the other modules.       |
 | [Merchant](https://github.com/spryker/merchant)                                                     | Provides DB structure and facade methods to save, update, or remove merchants.                   |
 | [MerchantUser](https://github.com/spryker/merchant-user)                                            | Provides data structure, facade methods, and plugins for user relation to merchant.              |
-| [MerchantSearchWidget](https://github.com/spryker-shop/merchant-search-widget)                 | Provides a widget to render a merchants filter.                           |
+| [MerchantSearchWidget](https://github.com/spryker-shop/merchant-search-widget)                      | Provides a widget to render a merchants filter.                           |
 
 
 ## Domain model

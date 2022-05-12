@@ -65,7 +65,7 @@ class Customer extends SprykerCustomer
 }
 ```
 
-Also, you need to override factory:
+Also, override factory:
 
 ```php
 <?php
@@ -102,7 +102,7 @@ class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
 }
 ```
 
-All MailTransfer’s need at least to know which mail type (nothing more than a string) should be used for further internal processing.
+All MailTransfers need to know which mail type (nothing more than a string) must be used for further internal processing.
 
 A minimalistic example could look like this:
 
@@ -117,9 +117,9 @@ protected function sendRegistrationToken()
 
 ## 2. Creating a MailTypePlugin
 
-Now, create the `MailType` plugin for this example. See [HowTo - Create and Register a MailTypePlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html) for more information on creating a MailTypePlugin:
+Create the `MailType` plugin for this example. For more information about creating a `MailTypePlugin`, see [HowTo: Create and register a MailTypePlugin](/docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html):
 
-**Code sample:**
+<details><summary markdown='span'>Code sample:</summary>
 
 ```php
 <?php
@@ -228,11 +228,13 @@ class CustomCustomerRegistrationMailTypePlugin extends AbstractPlugin implements
 }
 ```
 
-The Mail module’s default `MailBuilder` is already pre-defined to build the `MailTransfer`. `MailBuilder` internally adds a new `MailRecipientTransfer` with the passed information, email, and name.
+</details>
 
-## 3. Registering a Plugin
+The `Mail` module’s default `MailBuilder` is already pre-defined to build the `MailTransfer`. `MailBuilder` internally adds a new `MailRecipientTransfer` with the passed information, email, and name.
 
-When the plugin is created, it should be registered in `MailDependencyProvider`:
+## 3. Registering a plugin
+
+When the plugin is created, it must be registered in `MailDependencyProvider`:
 
 ```php
 <?php
@@ -301,7 +303,7 @@ namespace Spryker\Zed\Mail\Business\Model\Mail\Builder;
 }
 ```
 
-As you can see above, you can also translate with the placeholder. For the `mail.order.shipped.subject` key, we have `Your order {orderReference} is on its way as translation`.
+As you can see above, you can also translate with the placeholder. For the `mail.order.shipped.subject` key, you have `Your order {orderReference} is on its way as translation`.
 
 In your `MailType` plugin, you can use the `orderReference` from the given `OrderTransfer` within the subject:
 
@@ -327,7 +329,7 @@ protected function setSubject(MailBuilderInterface $mailBuilder)
 
 ## Setting templates
 
-Usually you will have a `.twig` file which contains the template you want to use for mail. You need to set the template which should be used in your `MailType` plugin:
+Usually, you have a `.twig` file which contains the template you want to use for mail. Set the template which must be used in your `MailType` plugin:
 
 ```php
 <?php
@@ -350,7 +352,7 @@ The provider determines the template final look. It can contain a plain text, HT
 }
 ```
 
-In our example we have a plain text template with:
+In this example, you have a plain text template with:
 
 ```twig
 {% raw %}{{{% endraw %} 'mail.customer.registration.text' | trans {% raw %}}}{% endraw %}
@@ -382,4 +384,4 @@ For HTML messages you need to have this in your layout file:
 {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
 ```
 
-Once you have completed the steps below, call `MailFacade::handleMail()` to activate the mail functionality.
+When you complete the steps, call `MailFacade::handleMail()` to activate the mail functionality.

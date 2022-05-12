@@ -20,13 +20,13 @@ In a Spryker-based project, you can use any external search provider instead of 
 
 Every search engine comes along with its own functionalities and search approaches. However, integration of search & search suggestions is similar in most of the search platforms.
 
-In this tutorial, we will show you how to integrate the FACT-Finder (PHP) search platform. A system integrator development team could use this guide to integrate other platforms, taking into account the differences of the target search platform.
+This tutorial shows how to integrate the FACT-Finder (PHP) search platform. A system integrator development team could use this guide to integrate other platforms, taking into account the differences of the target search platform.
 
 The integration is following the concept described in [Search Migration Concept](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html).
 
 ## Challenge solving highlights
 
-To use FACT-Finder as a search data provider, you have to do the following:
+To use FACT-Finder as a search data provider, do the following:
 
 1. [Execute search and search suggestion requests](#executing), which implies:
 
@@ -39,13 +39,13 @@ To use FACT-Finder as a search data provider, you have to do the following:
 
 <a name="executing"></a>
 
-### Executing search & search suggestion requests
+### Executing search and search suggestion requests
 
-To execute the search and search suggestion requests, follow the instructions below.
+To execute the search and search suggestion requests, follow these steps:
 
 #### 1. Build and pass a query
 
-To build a query, you have to define, for example, `FfSearchQueryTransfer` object, which should contain at least `searchString` (*string*, customer’s input) and `requestParams` (*string[]*, containing, for example, pagination and filters):
+1. Define, for example, the `FfSearchQueryTransfer` object, which must contain at least `searchString` (*string*, customer’s input) and `requestParams` (*string[]*, containing, for example, pagination and filters):
 
 ```xml
 <transfer name="FfSearchQuery">
@@ -54,7 +54,7 @@ To build a query, you have to define, for example, `FfSearchQueryTransfer` objec
     </transfer>
 ```
 
-Then you create a query model, for example, `FactFinderQuery`. The basic version might look like this:
+2. Create a query model—for example, `FactFinderQuery`. The basic version can look like this:
 
 <details>
 <summary markdown='span'>Code sample</summary>
@@ -109,7 +109,7 @@ class FactFinderQuery implements QueryInterface, SearchContextAwareQueryInterfac
 ```
 </details>
 
-This being done, you extend `Spryker\Client\Catalog\CatalogClient`, in particular `catalogSearch` and `catalogSuggestSearch`:
+3. In particular `catalogSearch` and `catalogSuggestSearch`, extend `Spryker\Client\Catalog\CatalogClient`:
 
 ```php
 public function catalogSuggestSearch($searchString, array $requestParameters = [])
@@ -136,10 +136,10 @@ public function catalogSuggestSearch($searchString, array $requestParameters = [
 
 To handle search requests through a different source, you need your own model implementing the `SearchAdapterPluginInterface` interface.
 
-Template for this model is:
+The following is a template for this model:
 
 <details>
-<summary markdown='span'>Code sample</summary>
+<summary markdown='span'>Code sample:</summary>
 
 ```php
 class FFSearchAdapterPlugin implements SearchAdapterPluginInterface
@@ -213,9 +213,9 @@ class FFSearchAdapterPlugin implements SearchAdapterPluginInterface
 ```
 </details>
 
-`isApplicable` method in the template above validates that the request is supposed to be processed in this adapter, in our example via FACT-Finder.
+The `isApplicable` method in the preceding template validates that the request is supposed to be processed in this adapter—in this example, by FACT-Finder.
 
-You have to make sure that all events affecting FACT-Finder-related product data are triggered with this type. For this purpose, the following change is required in `Pyz/Zed/ProductPageSearch/Persistence/Propel/Schema/spy_product_page_search.schema.xml`:   
+Make sure that all events affecting FACT-Finder-related product data are triggered with this type. For this purpose, the following change is required in `Pyz/Zed/ProductPageSearch/Persistence/Propel/Schema/spy_product_page_search.schema.xml`:   
 
 ```xml
 <?xml version="1.0"?>
@@ -240,8 +240,8 @@ You have to make sure that all events affecting FACT-Finder-related product data
 
 #### 3. Requesting data from FACT-Finder
 
-At this point, you have to implement method search in the aforementioned [adapter plugin](#executing).
-Your search function will receive `FactFinderQuery` with `FFSearchQueryTransfer` in it as the first argument.
+Implement method search in the aforementioned [adapter plugin](#executing).
+Your search function receives `FactFinderQuery` with `FFSearchQueryTransfer` in it as the first argument.
 
 Prepare proper request to a FACT-Finder based on these parameters.
 
@@ -249,17 +249,14 @@ If you need specific `$resultFormatters` or `$requestParameters`, use the arrays
 
 #### 4. Mapping response
 
-The general idea behind mapping of the response is to make sure you’re able to display the received data.
+The general idea behind mapping of the response is to make sure you can display the received data.
 
 The FACT-Finder module provides a response in `FactFinderSdkSearchResponse`, but Spryker provides complete rendering of the search results and search suggestions based on the response from the default search provider, which is Elasticsearch.
 
-It means that in order to use the FACT-Finder response, you have to comply with the response structure produced there. This would be changed in the future, but for now, you have to implement mapping to the similar response Elasticsearch modules provides.
-You have to respond with an object, supporting an array-based or `get`-based index. For example, creating a JSON object or a transfer object.
+It means that in order to use the FACT-Finder response, you have to comply with the response structure produced there. This will be changed in the future, but for now, you have to implement mapping to the similar response Elasticsearch modules provides.
+You have to respond with an object, supporting an array-based or `get`-based index—for example, creating a JSON object or a transfer object.
 
-Example of a response from the search provider:
-
-<details open>
-<summary markdown='span'>Code sample</summary>
+<details><summary markdown='span'>Code sample< of a response from the search provider:</summary>
 
 ```
 {
@@ -316,18 +313,20 @@ Example of a response from the search provider:
 ```
 </details>   
 
-Returning this JSON data as an object will show you an empty result page.     
+Returning this JSON data as an object shows you an empty result page.
+
 {% info_block infoBox %}
 
-Refer to `CatalogDependencyProvider::createCatalogSearchResultFormatterPlugins` to see what is supported by Spryker’s templates.
+To see what is supported by Spryker’s template, refer to `CatalogDependencyProvider::createCatalogSearchResultFormatterPlugins`.
 
 {% endinfo_block %}
 
- Response structure for search suggestions should be investigated in the similar way.
+Response structure for search suggestions should be investigated in the similar way.
 
 <a name="populate"></a>
 
 ### Populating Fact Finder with product data
+
 To handle search update events, follow the instructions below.
 
 
@@ -335,14 +334,14 @@ To handle search update events, follow the instructions below.
 
 To handle search update events, you have to implement the following methods of the `SearchAdapterPluginInterface`:
 
-* `deleteDocument` - when a single document is supposed to be removed. You will receive an internal identifier as a key.
-* `deleteDocuments` -  when documents are supposed to be removed in bulk. You will receive a list of internal identifiers.
+* `deleteDocument`—when a single document is supposed to be removed. You will receive an internal identifier as a key
+* `deleteDocuments`—when documents are supposed to be removed in bulk. You will receive a list of internal identifiers
 * `writeDocument`
 * `writeDocuments`
 
 #### 2. Handle the events
 
-Since Spryker stores not only product data in Elasticsearch, but also CMS pages, categories, etc., you have to make sure that only product data is handled by the FACT-Finder adapter.
+Since Spryker stores not only product data in Elasticsearch, but also CMS pages and categories, you have to make sure that only product data is handled by the FACT-Finder adapter.
 
 To achieve this, change schema for the search documents in `spy_product_page_search.schema.xml`. Make sure to use the same source identifier as used in the adapter class.
 

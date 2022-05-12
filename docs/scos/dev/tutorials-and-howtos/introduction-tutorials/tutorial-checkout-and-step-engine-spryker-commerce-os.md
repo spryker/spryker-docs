@@ -33,7 +33,6 @@ This tutorial is also available on the Spryker Training website. For more inform
 ## Challenge description
 
 This task helps you learn how to do the following:
-
 * Work with Checkout and the Step Engine.
 * Apply and use discounts.
 * Extend the Spryker core code and functionalities.
@@ -48,8 +47,8 @@ This document shows how to add a voucher step to the existing out-of-the-box Spr
 
 1. Before adding the step, define the route for the step.
 
-   * Add `CheckoutPageRouteProviderPlugin` that extends the core `AbstractRouteProviderPlugin` in `src/Pyz/Yves/CheckoutPage/Plugin/Provider`.
-   * Then, add the route for the step.
+   1. Add `CheckoutPageRouteProviderPlugin` that extends the core `AbstractRouteProviderPlugin` in `src/Pyz/Yves/CheckoutPage/Plugin/Provider`.
+   2. Add the route for the step.
 
 	```php
 	<?php
@@ -111,7 +110,7 @@ This document shows how to add a voucher step to the existing out-of-the-box Spr
 vendor/bin/console router:cache:warm-up
 ```
 
-4. Next, add the voucher step class inside `src/Pyz/Yves/CheckoutPage/Process/Steps` and call it **VoucherStep**.
+4. Add the voucher step class inside `src/Pyz/Yves/CheckoutPage/Process/Steps` and call it `VoucherStep`.
 
 {% info_block infoBox "Info" %}
 
@@ -327,9 +326,9 @@ class CheckoutController extends SprykerShopCheckoutController
 ```
 
 The step is now created:
-- Go to the shop.
-- Add any product to the cart.
-- Checkout.
+- Go to the shop
+- Add any product to the cart
+- Checkout
 
 The Voucher step must be working now.
 
@@ -524,10 +523,13 @@ Add the voucher field in the `Quote` transfer.
 </transfers>
 ```
 
-6. To generate the new transfer object, run `console transfer:generate`.
+6. Generate the new transfer object:
+ ```bash
+ console transfer:generate
+ ```
 7. Return to the controller and use the new form instead of the returned string.
 
-Modify the voucher action to create the process for the voucher step and use the form collection.
+To create the process for the voucher step and use the form collection, modify the voucher action.
 
 ```php
 /**
@@ -574,7 +576,7 @@ The step has a form now and receives the voucher code value from the customer. G
 2. Implement the `execute()` method in `VoucherStep` to calculate the new grand total after applying the discount. To do so, use the `CalculationClient`:
 
     1. Add the voucher code which you from the form into a discount transfer object.
-    2. The **CalculationClient** in the checkout works only with the `quoteTransfer`; thus, add the discount transfer back to the `quoteTransfer` using the method `$quoteTransfer→addVoucherDiscount()`.
+    2. The `CalculationClient` in the checkout works only with the `quoteTransfer`; thus, add the discount transfer back to the `quoteTransfer` using the method `$quoteTransfer→addVoucherDiscount()`.
     3. Call the method `recalculate()` from the `CalculationClient` and pass the `quoteTransfer` as a parameter and the discount should be applied.
 
 ```php

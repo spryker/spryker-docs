@@ -83,8 +83,8 @@ entries:
             - title: Marketplace and merchant state machines interaction
               url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
 
-        - title: Marketplace Cart Notes
-          url: /docs/marketplace/user/features/marketplace-cart-notes-feature-overview.html
+        - title: Marketplace Cart
+          url: /docs/marketplace/user/features/marketplace-cart-feature-overview.html
 
         - title: Marketplace Return Management
           url: /docs/marketplace/user/features/marketplace-return-management-feature-overview.html

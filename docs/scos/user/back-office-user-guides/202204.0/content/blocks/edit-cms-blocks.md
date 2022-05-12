@@ -11,6 +11,7 @@ redirect_from:
   - /docs/managing-cms-blocks
   - /docs/en/managing-cms-blocks
   - /docs/scos/user/back-office-user-guides/202204.0/content/blocks/managing-cms-blocks.html
+  - /docs/scos/user/back-office-user-guides/202200.0/content/blocks/managing-cms-blocks.html
 related:
   - title: CMS Block
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html

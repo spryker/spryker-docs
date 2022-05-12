@@ -7,27 +7,33 @@
 Optional: If you want to add content items to a block, [create content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html).
 
 
-Editing placeholders
+## Edit placeholders of a CMS block
 
-To edit a placeholder:
-1. Next to the block you want to edit the placeholders of, click **Edit Placeholder**.
+1. Go to **Content&nbsp;<span aria-label="and then">></span> Blocks**.
+    This opens the **Blocks** page.
+2. Next to the block you want to edit the placeholders of, click **Edit Placeholder**.
     This opens the **Edit CMS Block Glossary** page on the **Title** tab.
-2. Add **CONTENT** to the needed locales.
-    The content will be assigned to the title placeholder.
-3. Click the **Content** tab.
-4. Add **CONTENT** to the needed locales.
-    This is the main content part of the CMS block.
-5. Click **Save**.
+3. Add **CONTENT** to the needed locales and placeholders.  
+4. Click **Save**.
     This refreshes the page with a success message displayed.
 
+## Reference information: Edit placeholders of a CMS block
 
+The only field for editing placeholders is **CONTENT**. Depending on the template of a block, the block can have different placeholders. On the **Edit CMS Block Glossary** page, placeholders are represented by tabs. 
 
-    you can update a title or content of the CMS block, as well as insert a content item widget. For more details, see [Adding content item widgets to a block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html#adding-content-item-widgets-to-blocks).
-3. To save the updates, click **Save**. The updated block is displayed on the grid of *List of CMS Blocks*.
+Apart from the usual editing tools, you can add content items to blocks. To add a content item in the editor, do the following:
 
-**Tips and tricks**
-<br>On the *Edit Block Glossary: [Block ID]* page, you can do the following:
-* Edit a block general information and layout by clicking **Edit block** in the top right corner of the page.
-* Make a CMS block invisible on the store website by clicking **Deactivate** in the top right corner of the page.
-* Make a CMS block visible on the store website by clicking **Activate** in the top right corner of the page.
-* Return to the list of CMS blocks by clicking **Back to list** in the top right corner of the page.
+1. In the **CONTENT** field of the needed placeholder, place your cursor where you want to add the content item to.
+
+2. From the **Content Item** menu button, select the content item you want to add.
+    The **Insert a Content Item** window opens.
+![Insert content item for blocks](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Adding+Content+Item+Widgets+to+Pages+and+Blocks/insert-content-item-widget-block.png)
+
+3. In the **SELECT A CONTENT ITEM** pane, select a content item to add.
+4. For **Select a template**, select a template to apply to the content item.
+5. Click **Insert**
+    This closes the window. The widget with the information about the content item is displayed in the **CONTENT** field.
+
+![Content item widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Adding+Content+Item+Widgets+to+Pages+and+Blocks/example-block.png)
+
+When the block is rendered on the Storefront, the widget will be rendered as the selected content item.

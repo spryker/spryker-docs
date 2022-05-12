@@ -11,6 +11,7 @@ redirect_from:
   - /docs/creating-cms-block
   - /docs/en/creating-cms-block
   - /docs/scos/user/back-office-user-guides/202204.0/content/blocks/creating-cms-blocks.html
+  - /docs/scos/user/back-office-user-guides/202200.0/content/blocks/creating-cms-blocks.html
 related:
   - title: Managing CMS Blocks
     link: docs/scos/user/back-office-user-guides/page.version/content/blocks/managing-cms-blocks.html

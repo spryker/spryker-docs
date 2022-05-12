@@ -35,6 +35,8 @@ The best way to resolve compatibility issues is to prevent them. Throughout the 
 
 The Evaluator tool is part of Spryker SDK that performs a number of checks based on the static code analysis of our tools.
 
+To install it check [this documenttion](https://docs.spryker.com/docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html#installing-the-evaluator-tool)
+
 Evaluator provides informative output about your code. If all the checks are successful, the tool returns zero messages.
 
 Evaluation example without compliance errors:

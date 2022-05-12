@@ -13,7 +13,7 @@ The Spryker B2B Marketplace Suite is a collection of ready-to-use B2B- Marketpla
 
 ![b2b-marketplace-demo-shop-yves-home-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.md/b2b-marketplace-demo-shop-yves-home-page.png)
 
-Documentation: <!-- WIP -->
+<!-- Documentation: add when ready-->
 
 ## Merchant Products Custom Prices in Merchant Portal
 
@@ -24,7 +24,7 @@ With the Merchant Custom Prices in Merchant Portal feature, the 3rd-party Mercha
 
 ![merchant-products-custom-prices-in-merchant-portal-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.md/merchant-products-custom-prices-in-merchant-portal-2.png)
 
-Documentation: <!-- WIP -->
+<!--Documentation: add when ready-->
 
 ## Merchant Product Approval Process
 
@@ -35,7 +35,7 @@ The status can be either of the following: draft, waiting for approval, approved
 
 ![merchant-product-approval-process-merchant-product-list](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.md/merchant-product-approval-process-merchant-product-list.png)
 
-Documentation: <!-- WIP -->
+<!--Documentation: add when ready -->
 
 ## Marketplace Shopping Lists & API
 
@@ -43,7 +43,7 @@ The Marketplace Shopping Lists feature lets B2B customers create and share multi
 
 ![marketplace-shopping-lists](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.md/marketplace-shopping-lists.png)
 
-Documentation: <!-- WIP -->
+<!-- Documentation: add when ready-->
 
 ## Marketplace Quick Add to Cart
 
@@ -51,7 +51,7 @@ The Marketplace Quick Add to Cart feature lets B2B customers find and buy mercha
 
 ![marketplace-quick-add-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.md/marketplace-quick-add-to-cart.png)
 
-Documentation: <!-- WIP -->
+<!-- Documentation: add when ready -->
 
 ## Technical Enhancements
 

@@ -12,7 +12,7 @@ Cart and item notes on the Storefront:
 
 ![Marketplace Cart Notes on the Storefront](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Cart+Notes/mp-cart-notes-on-the-storefront.png)
 
-Item notes in the Merchant portal:
+Item notes in the Merchant Portal:
 
 ![Items notes in the Merchant Portal](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Cart+Notes/mp-item-notes-merchant-portal.png)
 
@@ -24,10 +24,8 @@ The Marketplace administrator can see the special request in the [order details 
 
 In a situation where the same product variants are added to the cart with different notes, the variants get merged with the same note.
 
-<!---
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Cart Notes feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-cart-notes-feature-walkthrough.html) for developers.
+Are you a developer? See [Marketplace Cart feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-cart-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}
--->

@@ -8,6 +8,7 @@ originalArticleId: 7c152adf-a67a-4030-b214-701e103654c5
 redirect_from:
   - /v2/docs/computop-sofort
   - /v2/docs/en/computop-sofort
+  - /docs/scos/user/technology-partners/201903.0//payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html
@@ -32,7 +33,7 @@ related:
 ---
 
 Example State Machine:
-![Click Me](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/computop-sofort-flow-example.png) 
+![Click Me](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/computop-sofort-flow-example.png)
 
 ## Front-End Integration
 To adjust the frontend appearance, provide the following templates in your theme directory:

@@ -23,9 +23,9 @@ redirect_from:
   - /v1/docs/en/t-twig-extensions
 ---
 
-This dpcuments shows how to implement a Twig extension. For the sake of an example, we’ll build a filter which can be used for displaying prices.
+This document shows how to implement a Twig extension. As an example, let's build a filter which can be used for displaying prices.
 
-To implement a Twig extension, you have to do the following:
+To implement a Twig extension, do the following:
 
 1. Implement the filter.
 2. Add the twig extension.
@@ -119,7 +119,7 @@ class PriceFilterService extends AbstractService implements PriceFilterServiceIn
 
 ## 2. Add the Twig extension
 
-Having implemented the filter, you have to add the Twig extension. To do so, create a class that extends the `AbstractTwigExtensionPlugin` class and calls the logic implemented in the class mentioned above.
+Having implemented the filter, add the Twig extension by creating a class that extends the `AbstractTwigExtensionPlugin` class and calls the logic implemented in the preceding class.
 
 **Code sample**
 

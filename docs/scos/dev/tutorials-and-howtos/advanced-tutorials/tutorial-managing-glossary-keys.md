@@ -27,9 +27,9 @@ redirect_from:
 Glossary keys present two layers of persistence:
 
 * SQL database storage
-* in-memory key-value storage: Redis
+* In-memory key-value storage: Redis
 
-In this tutorial, we show how to manage the glossary keys of the Back Office user interface and how to manage the glossary keys of the Storefront interface via Twig extensions.
+This document shows how to manage the glossary keys of the Back Office user interface and how to manage the glossary keys of the Storefront interface via Twig extensions.
 
 Update, insert and delete operations for glossary keys are exposed in the `Glossary` module through the `GlossaryFacade` class.
 
@@ -72,7 +72,7 @@ Locales are configured in `config/Shared/stores.php` as follows:
 
 ## Using glossary keys
 
-On the Storefront, you can use glossary keys to translate rendered content. The following examples shows how to do it using a dedicated extension for the Twig template engine:
+On the Storefront, you can use glossary keys to translate rendered content. The following example shows how to do it using a dedicated extension for the Twig template engine:
 
 ```twig
 <div><label>{% raw %}{{{% endraw %} 'First Name' | trans {% raw %}}}{% endraw %}</label>

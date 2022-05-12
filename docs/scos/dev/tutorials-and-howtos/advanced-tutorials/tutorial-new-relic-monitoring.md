@@ -26,7 +26,7 @@ redirect_from:
 
 ## Installing the PHP agent
 
-When accessing your New Relic APM dashboard, you will be asked to download and set up the New Relic agent:
+When accessing your New Relic APM dashboard, you are asked to download and set up the New Relic agent:
 
 ![New Relic - Step 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Tutorial+New+Relic+Monitoring/newrelic-step1.png)
 
@@ -34,7 +34,7 @@ It is important to generate a LICENSE KEY (which is different from the API KEY):
 
 ![New Relic - Step 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Tutorial+New+Relic+Monitoring/newrelic-step2.png)
 
-Then, you'll be able to install the New Relic agent:
+Then, you can install the New Relic agent:
 
 ![New Relic - Step 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Tutorial+New+Relic+Monitoring/newrelic-step3.png)
 
@@ -67,7 +67,7 @@ newrelic.appname = "ZED-DE (environment)"
 newrelic.framework = "no_framework"
 ```
 
-Additionally, if, for some reasons, the transactions return some erroneous data, these values can be set in either one or both `newrelic.ini` files:
+Additionally, if, for some reasons, the transactions return some erroneous data, these values can be set in one or both `newrelic.ini` files:
 
 ```bash
 newrelic.browser_monitoring.auto_instrument = false
@@ -90,7 +90,7 @@ php_admin_value[newrelic.appname] = "ZED-DE (environment)"
 php_admin_value[newrelic.framework] = "no_framework"
 ```
 
-In the end, you'll need to restart `fpm` and `Nginx`, and check that the New Relic daemon is up and running:
+Then, restart `fpm` and `Nginx`, and check that the New Relic daemon is up and running:
 
 ```bash
 $ sudo service php7.2-fpm restart

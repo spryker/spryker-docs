@@ -22,13 +22,13 @@ Specifically, the `ProductAbstract` data importer is replaced here.
 
 ## Prerequisites
 
-You should have data in the `PRODUCT_ABSTRACT_QUEUE`. See [Importing data with the queue data importer](/docs/scos/dev/data-import/{{site.version}}/importing-data-with-the-queue-data-importer.html#exporting-data-from-csv-to-queue) for details on how to import data into the queue.
+You should have data in the `PRODUCT_ABSTRACT_QUEUE`. For details about how to import data into the queue, see [Importing data with the queue data importer](/docs/scos/dev/data-import/{{site.version}}/importing-data-with-the-queue-data-importer.html#exporting-data-from-csv-to-queue)
 
 ## 1. Configuration
 
 Configure `DataImportConfig` and add a constant to it. You can add a new constant and a public method to  `Pyz\Zed\DataImport\DataImportConfig`.
 
-The method should call `Spryker\Zed\DataImport::buildQueueDataImporterConfiguration()`, passing three arguments:
+The method must call `Spryker\Zed\DataImport::buildQueueDataImporterConfiguration()`, passing three arguments:
 
 * Import type
 * Queue consumer options

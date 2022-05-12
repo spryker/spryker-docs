@@ -27,10 +27,9 @@ redirect_from:
 
 ## ProductCountry module (Zed)
 
-First, you need to create a new table with the name `pyz_product_country`. This table will be filled with demo data provided by a hard coded `sku/country` list in the `ImportController` of the module.
+Create a new table with the name `pyz_product_country`. This table is filled with demo data provided by a hard coded `sku/country` list in the `ImportController` of the module.
 
-<details open>
-<summary markdown='span'>Pyz/Zed/ProductCountry/Persistence/Propel/Schema/pyz_product_country.schema.xml</summary>
+**Pyz/Zed/ProductCountry/Persistence/Propel/Schema/pyz_product_country.schema.xml**
 
 ```xml
 &lt;?xml version="1.0"?&gt;
@@ -58,9 +57,9 @@ First, you need to create a new table with the name `pyz_product_country`. This 
 
 &lt;/database&gt;
 ```
-</details>
 
-Next, call the console command to migrate the database and create the query objects.
+
+Then, call the console command to migrate the database and create the query objects.
 
 ```bash
 console propel:install
@@ -68,8 +67,7 @@ console propel:install
 
 Method: `Pyz\Zed\ProductCountry\Communication\Controller\ImportController::indexAction()`
 
-<details>
-<summary markdown='span'>Click to expand the code sample</summary>
+The code sample:
 
 ```php
 &lt;?php
@@ -96,14 +94,13 @@ class ProductCountryQueryContainer extends AbstractQueryContainer implements Pro
     //...
 }
 ```
-</details>
 
-In the `ProductCountryBusinessFactory` class you need to create a new instance of the `ProductCountryManager`. The dependency to the product module facade is missing in the class. Create a new method `getProductFacade` that returns the facade from the `ProductCountryDependencyProvider`.
 
-<details>
-<summary markdown='span'>Click to expand the code sample</summary>
+In the `ProductCountryBusinessFactory` class, create a new instance of the `ProductCountryManager`. The dependency to the product module facade is missing in the class. Create a new method `getProductFacade` that returns the facade from the `ProductCountryDependencyProvider`.
 
-```
+The code sample:
+
+```php
 &lt;?php
 
 class ProductCountryBusinessFactory extends SprykerBusinessFactory
@@ -136,12 +133,12 @@ class ProductCountryBusinessFactory extends SprykerBusinessFactory
 
 }
 ```
-</details>
 
-Now, implement the logic to save a new product, within the `ProductCountryManager`.
+
+Implement the logic to save a new product, within the `ProductCountryManager`.
 
 <details>
-<summary markdown='span'>Click to expand the code sample</summary>
+<summary markdown='span'>The code sample:</summary>
 
 ```php
 &lt;?php
@@ -196,7 +193,7 @@ class ProductCountryManager implements ProductCountryManagerInterface
 
 ## Collector module (Zed)
 
-The collector is used to transfer data from the SQL storage to the key-value storage. The collector must be extended with the new field “product_country”.
+The collector is used to transfer data from the SQL storage to the key-value storage. The collector must be extended with the new field `product_country`.
 
 Open `Pyz/Zed/Collector/Persistence/Storage/Pdo/PostgreSql/ProductCollectorQuery.php` and extend the collector SQL query with a left join to the new created table `spy_product_country` in order to load and select the country name where each product is produced.
 
@@ -215,10 +212,9 @@ LEFT JOIN spy_country ON (spy_country.id_country = spy_product_country.fk_countr
 ...
 ```
 
-Now we need to add the new selected column `product_country` to the collectItem list in `Pyz\Zed\Collector\Business\Storage\ProductCollector`.
+Add the new selected column `product_country` to the` collectItem` list in `Pyz\Zed\Collector\Business\Storage\ProductCollector`.
 
-<details>
-<summary markdown='span'>Click to expand the code sample</summary>
+The code sample:
 
 ```php
 &lt;?php

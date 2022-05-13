@@ -8,6 +8,7 @@ originalArticleId: 4d3d995a-2ee6-4765-8bcb-6ff4ebe7a8bc
 redirect_from:
   - /v2/docs/crefopay-integration
   - /v2/docs/en/crefopay-integration
+  - /docs/scos/user/technology-partners/201903.0/payment-partners/crefopay/crefopay-integration.html
 related:
   - title: CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay.html

@@ -1,0 +1,38 @@
+---
+title: "File details: product_offer_shopping_list.csv"
+last_updated: May 13, 2022
+description: This document describes the product_offer_shopping_list.csv file to configure merchant product offer shopping list in your Spryker shop.
+template: import-file-template
+---
+
+This document describes the `product_offer_shopping_list.csv` file to configure [Marketplace Shopping Lists](/docs/marketplace/user/features/{{page.version}}/marketplace-shopping-lists-feature-walkthrough.html#marketplace-shopping-lists) information in your Spryker shop.
+
+To import the file, run:
+
+```bash
+data:import product-offer-shopping-list-item
+```
+
+## Import file parameters
+
+The file should have the following parameters:
+
+| PARAMETER               | REQUIRED? | TYPE    | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION                                                                                                                                                 |
+|-------------------------|-----------|---------|---------------|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| shopping_list_item_key  | &check;   | String  |               | Unique                   | The key that will identify the shopping list item to add data to.                                                                                           |
+| product_offer_reference | &check;   | String  |               | Unique                   | Identifier of the [merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) in the system. |
+
+## Import file dependencies
+
+The file has the following dependencies:
+
+- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer.csv.html)
+
+## Import template file and content example
+
+Find the template and an example of the file below:
+
+| FILE  | DESCRIPTION  |
+| ---------------------------- | ------------------- |
+| [template_product_offer_shopping_list.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Marketplace+setup/template_product_offer_shopping_list.csv) | Import file template with headers only.         |
+| [product_offer_shopping_list.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Marketplace+setup/product_offer_shopping_list.csv) | Exemple of the import file with Demo Shop data. |

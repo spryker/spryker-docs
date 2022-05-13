@@ -11,19 +11,12 @@ redirect_from:
   - /docs/creating-cms-block
   - /docs/en/creating-cms-block
   - /docs/scos/user/back-office-user-guides/202204.0/content/blocks/creating-cms-blocks.html
-  - /docs/scos/user/back-office-user-guides/202200.0/content/blocks/creating-cms-blocks.html
 related:
-  - title: Managing CMS Blocks
-    link: docs/scos/user/back-office-user-guides/page.version/content/blocks/managing-cms-blocks.html
+  - title: Edit CMS blocks
+    link: docs/scos/user/back-office-user-guides/page.version/content/blocks/edit-cms-blocks.html
 ---
 
 This topic describes how to create CMS blocks in the Back Office.
-
-{% info_block infoBox "Info" %}
-
-If you want to create a CMS block for [email](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html), see [Creating an email CMS block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html#creating-an-email-cms-block).
-
-{% endinfo_block %}
 
 ## Prerequisites
 
@@ -42,8 +35,12 @@ Review the [reference information](#reference-information-create-a-cms-block) be
 8. Enter and select **PRODUCTS**.
 9. Click **Save**.
     This opens the **Edit CMS Block Glossary** page with a success message displayed.
+10. Optional: For **CONTENT**, add content to the block per placeholder per locale.
+11. Click **Save**.
+    This refreshes the page with a success message displayed.
 
-## Reference information: Creating a CMS block
+
+## Reference information: Create a CMS block
 
 | ATTRIBUTE  | DESCRIPTION: REGULAR CMS BLOCK | DESCRIPTION: EMAIL CMS BLOCK |
 | --- | --- | --- |
@@ -53,8 +50,30 @@ Review the [reference information](#reference-information-create-a-cms-block) be
 | VALID FROM and VALID TO | Dates that inclusively specify when the block is to be visible on the Storefront. | Irrelevant. |
 | PRODUCTS | Products to assign the block to. The block will be displayed on the products' details pages. | Irrelevant. |
 
+
+## Reference information: Add content to the placeholders of a CMS block
+
+The only field for editing placeholders is **CONTENT**. Depending on the template of a block, the block can have different placeholders. On the **Edit CMS Block Glossary** page, placeholders are represented by tabs. So, using the editing tools in the **CONTENT** field, you can add content per placeholder per locale. After adding the content, click **Save**. This will refresh the page with a success message displayed.
+
+Apart from the usual editing tools, you can add content items to blocks' placeholders. To add a content item in the editor, do the following:
+
+1. In the **CONTENT** field of the needed placeholder, place your cursor where you want to add the content item to.
+
+2. From the **Content Item** menu button, select the content item you want to add.
+    The **Insert a Content Item** window opens.
+![Insert content item for blocks](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Adding+Content+Item+Widgets+to+Pages+and+Blocks/insert-content-item-widget-block.png)
+
+3. In the **SELECT A CONTENT ITEM** pane, select a content item to add.
+4. For **Select a template**, select a template to apply to the content item.
+5. Click **Insert**
+    This closes the window. The widget with the information about the content item is displayed in the **CONTENT** field.
+
+![Content item widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Adding+Content+Item+Widgets+to+Pages+and+Blocks/example-block.png)
+
+6. Click **Save**.
+    This refreshes the page with a success message displayed. When the block is rendered on the Storefront, the widget will be rendered as the selected content item.
+
+
 ## Next steps
 
-<br>After a new block has been created, you can add the content if needed.
-
-To learn more about editing a CMS block, see the [Editing CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-cms-blocks.html#editing-blocks).
+[Edit CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-cms-blocks)  

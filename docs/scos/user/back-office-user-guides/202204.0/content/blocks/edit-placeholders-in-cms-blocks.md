@@ -1,10 +1,16 @@
+---
+title: Edit placeholders in CMS blocks
+description: Learn how to edit placeholders in CMS blocks in the Back Office.
+last_updated: May 11, 2022
+template: back-office-user-guide-template
+---
 
-
-
+This document describes how to edit placeholders in CMS blocks in the Back Office.
 
 ## Prerequisites
 
-Optional: If you want to add content items to a block, [create content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html).
+* Optional: If you want to add content items to a block, [create content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html).
+* Review the [reference information](#reference-information-edit-placeholders-in-a-cms-block) before you start or look up the necessary information as you go through the process.
 
 
 ## Edit placeholders of a CMS block
@@ -17,11 +23,11 @@ Optional: If you want to add content items to a block, [create content items](/d
 4. Click **Save**.
     This refreshes the page with a success message displayed.
 
-## Reference information: Edit placeholders of a CMS block
+## Reference information: Edit placeholders in a CMS block
 
-The only field for editing placeholders is **CONTENT**. Depending on the template of a block, the block can have different placeholders. On the **Edit CMS Block Glossary** page, placeholders are represented by tabs. 
+The only field for editing placeholders is **CONTENT**. Depending on the template of a block, the block can have different placeholders. On the **Edit CMS Block Glossary** page, placeholders are represented by tabs. So, using the editing tools in the **CONTENT** field, you can add content per placeholder per locale. After adding the content, click **Save**. This will refresh the page with a success message displayed.
 
-Apart from the usual editing tools, you can add content items to blocks. To add a content item in the editor, do the following:
+Apart from the usual editing tools, you can add content items to blocks' placeholders. To add a content item in the editor, do the following:
 
 1. In the **CONTENT** field of the needed placeholder, place your cursor where you want to add the content item to.
 
@@ -36,4 +42,5 @@ Apart from the usual editing tools, you can add content items to blocks. To add 
 
 ![Content item widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Adding+Content+Item+Widgets+to+Pages+and+Blocks/example-block.png)
 
-When the block is rendered on the Storefront, the widget will be rendered as the selected content item.
+6. Click **Save**.
+    This refreshes the page with a success message displayed. When the block is rendered on the Storefront, the widget will be rendered as the selected content item.

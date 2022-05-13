@@ -17,13 +17,7 @@ related:
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
 ---
 
-This document describes how to create CMS blocks in the Back Office.
-
-{% info_block infoBox "Info" %}
-
-If you want to manage a CMS block for [email](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html), see [Managing content of emails via CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html).
-
-{% endinfo_block %}
+This document describes how to edit CMS blocks in the Back Office.
 
 ## Prerequisites
 
@@ -47,13 +41,14 @@ This opens the **Edit CMS Block** page.
     * Enter and select products you want to assign.
 9. Click **Save**.
     This refreshes the page with a success message displayed.
+10. Email blocks: If you've updated the **NAME**, pass it to your development team to update the name of the respective [email template](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html).    
 
 ## Reference information: Edit a CMS block
 
 | ATTRIBUTE  | DESCRIPTION: REGULAR CMS BLOCK | DESCRIPTION: EMAIL CMS BLOCK |
 | --- | --- | --- |
-| STORE RELATION |  Stores in which the block is displayed. | This option does not affect email CMS blocks. |
-| TEMPLATE | Defines the layout of the CMS Block. A developer can [create more templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template). | Defines the layout of the Email CMS Block. A developer can [create more templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template). |
+| STORE RELATION | Stores in which the block is displayed. | Irrelevant. |
+| TEMPLATE | Defines the layout of the block. A developer can [create more templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template). | Defines the layout of the email block. A developer can [create more templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template). |
 | NAME | The name is used when [assigning the block to a slot in a page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#assigning-cms-blocks-to-slots). | The name should correspond to the name defined in the email template the block will be assigned to. |
 | VALID FROM and VALID TO | Dates that inclusively specify when the block is visible on the Storefront. | Irrelevant. |
 | PRODUCTS | Products to which the block is assigned. The block is displayed on the products' details pages. | Irrelevant. |

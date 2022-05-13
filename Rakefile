@@ -39,7 +39,8 @@ commonOptions = {
     /docs.github.com\/[\.\w\-\/\?]+/,
     /shopify.github.io\/[\.\w\-\/\?]+/,
     / marketplace.visualstudio.com\/[\.\w\-\/\?]+/,    
-    /blackfire.io\/[\.\w\-\/\?]+/
+    /blackfire.io\/[\.\w\-\/\?]+/,
+    /www.nekom.com\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {

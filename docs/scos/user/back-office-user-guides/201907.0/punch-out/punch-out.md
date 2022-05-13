@@ -8,6 +8,7 @@ originalArticleId: 88396c19-2609-4630-bcfb-83a153dc7f8a
 redirect_from:
   - /v3/docs/punch-out
   - /v3/docs/en/punch-out
+  - /docs/scos/user/features/201907.0/technology-partner-integrations/punchout/punchout.html
 related:
   - title: Punch Out
     link: docs/scos/user/features/page.version/technology-partner-integrations/punch-out/punch-out.html
@@ -20,7 +21,7 @@ related:
 Punch Out section is designed to maintain the Punch Out connections that are configured to connect Spryker Commerce OS to different buyers' procurement systems. This section is mostly used by the IT Site Administrators who set up these connections in cooperation with E-Commerce managers that provide the details of the configuration.
 
 **Standardized flow of actions for a Backend Developer**
-![Flow of actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Punch+Out/flow-of-actions-of-backend-developer.png) 
+![Flow of actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Punch+Out/flow-of-actions-of-backend-developer.png)
 
 {% info_block infoBox "Info" %}
 This is how the Backend Developer interacts with the  Spryker Admin to set up the Punch Out Connection.

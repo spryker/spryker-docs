@@ -1,6 +1,6 @@
 ---
 title: Release notes 202204.0
-description: Release notes for the release 202204.0
+description: Release notes for the Spryker Marketplace release 202204.0
 template: concept-topic-template
 ---
 
@@ -9,20 +9,23 @@ For information about installing the Spryker Commerce OS, see [Developer getting
 
 ## B2B Marketplace Demo Shop
 
-The Spryker B2B Marketplace Suite is a collection of ready-to-use B2B- Marketplace-specific features. The B2B Marketplace Demo Shop is a showcase that is pre-loaded with a combination of modules and functionalities best suited for B2B Marketplace commerce. This Demo Shop is our recommended starting point for all standard B2B Marketplace commerce projects.
+The Spryker B2B Marketplace Suite is a collection of ready-to-use B2B- Marketplace-specific features. The B2B Marketplace Demo Shop is a showcase that is pre-loaded with a combination of modules and functionalities best suited for the B2B Marketplace commerce. This Demo Shop is our recommended starting point for all standard B2B Marketplace commerce projects.
 
 ![b2b-marketplace-demo-shop-yves-home-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.md/b2b-marketplace-demo-shop-yves-home-page.png)
 
-Documentation: [B2B Demo Shop](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-b2b-demo-shop.html)
+Documentation: 
+[Marketplace B2B Demo Shop](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-b2b-demo-shop.html)
 
-## Merchant Products Custom Prices in Merchant Portal
+## Merchant Product Custom Prices in the Merchant Portal
 
-With the Merchant Custom Prices in Merchant Portal feature, the 3rd-party Merchants of B2B marketplaces can provide specific prices for their various customers’ business units using the Merchant Portal UI.
+With the Merchant Custom Prices in Merchant Portal feature, the 3rd-party Merchants of the B2B marketplaces can provide specific prices for their various customers’ business units using the Merchant Portal UI.
 
 
 ![merchant-products-custom-prices-in-merchant-portal-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.md/merchant-products-custom-prices-in-merchant-portal-1.png)
 
 ![merchant-products-custom-prices-in-merchant-portal-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.md/merchant-products-custom-prices-in-merchant-portal-2.png)
+
+*Documentation on this feature will be published in the next few days*
 
 <!--Documentation: add when ready-->
 
@@ -35,14 +38,16 @@ The status can be either of the following: draft, waiting for approval, approved
 
 ![merchant-product-approval-process-merchant-product-list](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.md/merchant-product-approval-process-merchant-product-list.png)
 
+*Documentation on this feature will be published in the next few days*
 <!--Documentation: add when ready-->
 
-## Marketplace Shopping Lists & API
+## Marketplace Shopping Lists and API
 
 The Marketplace Shopping Lists feature lets B2B customers create and share multiple lists of merchant products and product offers between company business units or single users.
 
 ![marketplace-shopping-lists](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.md/marketplace-shopping-lists.png)
 
+*Documentation on this feature will be published in the next few days*
 <!-- Documentation: add when ready-->
 
 ## Marketplace Quick Add to Cart
@@ -51,6 +56,7 @@ The Marketplace Quick Add to Cart feature lets B2B customers find and buy mercha
 
 ![marketplace-quick-add-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.md/marketplace-quick-add-to-cart.png)
 
+*Documentation on this feature will be published in the next few days*
 <!-- Documentation: add when ready -->
 
 ## Technical Enhancements
@@ -59,4 +65,5 @@ The Marketplace Quick Add to Cart feature lets B2B customers find and buy mercha
 
 The frontend project of the Spryker Marketplace was upgraded to  Angular 12. Follow the steps from the migration guide to update the Angular version of the project.
 
-Documentation: [Migration guide - Upgrade to Angular v12](/docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v12.html)
+Documentation: 
+[Migration guide - Upgrade to Angular v12](/docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v12.html)

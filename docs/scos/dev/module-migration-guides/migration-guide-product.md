@@ -309,6 +309,7 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
             new PriceProductAbstractReadPlugin(),
         ];
     }
+    
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *

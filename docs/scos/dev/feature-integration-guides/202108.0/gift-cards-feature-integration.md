@@ -39,7 +39,7 @@ composer require spryker-feature/gift-cards:"{{page.version}}" --update-with-dep
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, the following modules have been installed:
+Make sure that the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -1239,7 +1239,7 @@ console data:import:glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database, the configured data has been added to the `spy_glossary` table.
+Make sure that, in the database, the configured data has been added to the `spy_glossary` table.
 
 {% endinfo_block %}
 

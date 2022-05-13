@@ -5,7 +5,7 @@ template: concept-topic-template
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of new Marketplace features and enhancements.
-For information about installing the Spryker Commerce OS, see [Developer getting started guide](/docs/scos/dev/developer-getting-started-guide.html), and for information about upgrading it with Enterprise Marketplace Capabilities, see[ How-To: Upgrade Spryker instance to the Marketplace](/docs/marketplace/dev/howtos/how-to-upgrade-spryker-instance-to-marketplace.html).
+For information about installing the Spryker Commerce OS, see [Developer getting started guide](/docs/scos/dev/developer-getting-started-guide.html), and for information about upgrading it with Enterprise Marketplace Capabilities, see [How-To: Upgrade Spryker instance to the Marketplace](/docs/marketplace/dev/howtos/how-to-upgrade-spryker-instance-to-marketplace.html).
 
 ## B2B Marketplace Demo Shop
 
@@ -13,7 +13,7 @@ The Spryker B2B Marketplace Suite is a collection of ready-to-use B2B- Marketpla
 
 ![b2b-marketplace-demo-shop-yves-home-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.md/b2b-marketplace-demo-shop-yves-home-page.png)
 
-<!-- Documentation: add when ready-->
+Documentation: [B2B Demo Shop](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-b2b-demo-shop.html)
 
 ## Merchant Products Custom Prices in Merchant Portal
 
@@ -35,7 +35,7 @@ The status can be either of the following: draft, waiting for approval, approved
 
 ![merchant-product-approval-process-merchant-product-list](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.md/merchant-product-approval-process-merchant-product-list.png)
 
-<!--Documentation: add when ready -->
+<!--Documentation: add when ready-->
 
 ## Marketplace Shopping Lists & API
 
@@ -56,3 +56,7 @@ The Marketplace Quick Add to Cart feature lets B2B customers find and buy mercha
 ## Technical Enhancements
 
 ### Angular v12
+
+The frontend project of the Spryker Marketplace was upgraded to  Angular 12. Follow the steps from the migration guide to update the Angular version of the project.
+
+Documentation: [Migration guide - Upgrade to Angular v12](/docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v12.html)

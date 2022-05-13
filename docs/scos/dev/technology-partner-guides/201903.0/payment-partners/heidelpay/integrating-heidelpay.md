@@ -8,6 +8,7 @@ originalArticleId: 14990f17-7df5-46cc-9f57-c91f480bb058
 redirect_from:
   - /v2/docs/heidelpay-integration-scos
   - /v2/docs/en/heidelpay-integration-scos
+  - /docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/integrating-heidelpay.html
 related:
   - title: Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay.html
@@ -94,9 +95,9 @@ protected function addPaymentMethodHandlerPluginCollection(Container $container)
 ```
 <br>
 </details>
-    
+
 3. Add checkout plugins:
- 
+
  <details open>
 <summary markdown='span'>\Pyz\Zed\Checkout\CheckoutDependencyProvider</summary>
 
@@ -175,7 +176,7 @@ To make Heidelpay module work with your project, it's necessary to extend the fr
 
 <details open>
 <summary markdown='span'>tsconfig.json</summary>
- 
+
  ```json
  "include": [
  "./vendor/spryker/spryker-shop/**/*",

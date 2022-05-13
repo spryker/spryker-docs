@@ -30,7 +30,7 @@ Review the [reference information](#reference-information-manage-customer-groups
 2. On the **Add a customer group**, page, enter a **NAME**.
 3. Optional: Enter a **DESCRIPTION**.
 4. Click the **Customers** tab.
-5. In the **Available customers** subtab, select the checkboxes next to the customers you want to add to the group.    
+5. On the **Available customers** subtab, select the checkboxes next to the customers you want to add to the group.    
 6. Click **Save**.
     This opens the **Customer Groups** page with a success message displayed. The group is displayed in the list.
 
@@ -41,11 +41,10 @@ Review the [reference information](#reference-information-manage-customer-groups
 2. On the **Edit customer group** page, enter the **NAME**.
 3. Update the **DESCRIPTION**.
 4. Click the **Customers** tab.
-5. In the **Available customers** subtab, select the checkboxes next to the customers you want to add to the group.   
-6. In the **Assigned customers** subtab, clear the checkboxes next to the customers you want to remove from the group.   
+5. On the **Available customers** subtab, select the checkboxes next to the customers you want to add to the group.   
+6. On the **Assigned customers** subtab, clear the checkboxes next to the customers you want to remove from the group.   
 7.  Click **Save**.
-
-This opens the **View customer group** page with a success message displayed.
+    This opens the **View customer group** page with a success message displayed.
 
 ## Reference information: Manage customer groups
 

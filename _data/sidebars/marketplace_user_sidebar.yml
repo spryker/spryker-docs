@@ -23,6 +23,12 @@ entries:
           - title: Merchant Portal
             url: /docs/marketplace/user/intro-to-spryker-marketplace/merchant-portal.html
 
+          - title: Marketplace B2C Demo Shop
+            url: /docs/marketplace/user/intro-to-spryker-marketplace/marketplace-b2c-demo-shop.html
+
+          - title: Marketplace B2B Demo Shop
+            url: /docs/marketplace/user/intro-to-spryker-marketplace/marketplace-b2b-demo-shop.html
+          
           - title: Upcoming major module releases
             url: /docs/marketplace/user/intro-to-spryker-marketplace/upcoming-major-module-releases.html
 
@@ -77,8 +83,8 @@ entries:
             - title: Marketplace and merchant state machines interaction
               url: /docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
 
-        - title: Marketplace Cart Notes
-          url: /docs/marketplace/user/features/marketplace-cart-notes-feature-overview.html
+        - title: Marketplace Cart
+          url: /docs/marketplace/user/features/marketplace-cart-feature-overview.html
 
         - title: Marketplace Return Management
           url: /docs/marketplace/user/features/marketplace-return-management-feature-overview.html

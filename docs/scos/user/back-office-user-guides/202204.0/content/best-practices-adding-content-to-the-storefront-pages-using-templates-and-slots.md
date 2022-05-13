@@ -79,7 +79,7 @@ Make sure to activate the CMS blocks. Only active CMS blocks are rendered on Sto
     * Link—`/en/stationery/paper/sticky-notes`.
     * ImageURL—`/assets/DE/default/images/category-banner-image-3@2x.jpg`.
 
-See [Editing placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-cms-blocks.html#editing-placeholders) to learn about inserting content into CMS blocks.
+See [Editing placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-placeholders-in-cms-blocks.html) to learn about inserting content into CMS blocks.
 
 
 ## Select a template with slots

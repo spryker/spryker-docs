@@ -76,4 +76,4 @@ Apart from the usual editing tools, you can add content items to blocks' placeho
 
 ## Next steps
 
-[Edit CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-cms-blocks)  
+[Edit CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-cms-blocks.html)  

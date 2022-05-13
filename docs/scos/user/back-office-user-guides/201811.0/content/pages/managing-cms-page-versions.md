@@ -8,6 +8,7 @@ originalArticleId: 898c8975-afad-4205-bb75-d74b53a96443
 redirect_from:
   - /v1/docs/cms-pages-versioning
   - /v1/docs/en/cms-pages-versioning
+  - /docs/scos/user/back-office-user-guides/201811.0/content/pages/ managing-cms-page-versions.html
 related:
   - title: CMS Page
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html

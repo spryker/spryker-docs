@@ -39,7 +39,7 @@ composer require spryker-feature/gift-cards:"{{page.version}}" --update-with-dep
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules have been installed:
+Make sure that, the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |

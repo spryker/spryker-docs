@@ -50,7 +50,6 @@ APPLICATION_STORE=US console propel:schema:copy
 4. Run the database migration:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

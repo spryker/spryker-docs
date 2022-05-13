@@ -53,7 +53,7 @@ console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that above keys and corresponding translations are present in the `spy_glossary` table.
+Make sure that above keys and corresponding translations are present in the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 

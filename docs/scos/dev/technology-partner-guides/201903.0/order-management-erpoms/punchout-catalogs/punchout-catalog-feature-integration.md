@@ -146,7 +146,7 @@ Make sure that you do not receive an `MissingYvesUrlConfigurationException` exce
 ### 3) Set up Database Schema and Transfer Objects
 Run the following commands to apply database changes and generate entity and transfer changes:
 
-```bash
+```
 console transfer:generate
 console propel:install
 console transfer:generate

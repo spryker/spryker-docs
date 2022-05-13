@@ -332,13 +332,6 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 }
 ```
 
-Run the following command:
-
-```bash
-console cache:class-resolver:build
-console sync:data
-```
-
 {% info_block warningBox "Verification" %}
 
 Make sure that data contains `merchant_references` for marketplace products in the `spy_product_abstract_storage`.
@@ -729,55 +722,6 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
         ];
     }
 }
-```
-
-**src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-configurator/product-configurator.twig**
-
-```twig
-...
-{%- raw -%}
-{% widget 'AddToCartFormWidget' args [config, data.product, isDisabled, options] only %}
-    {% block embeddedData %}
-        ...
-        {% set merchantProductOfferWidget = findWidget('MerchantProductOfferWidget', [data.product]) %}
-
-        {% set productOffersCount = merchantProductOfferWidget ? merchantProductOfferWidget.productOffers | length : 0 %}
-        {% set isRadioButtonVisible = productOffersCount > 0  %}
-        {% set isChecked = merchantProductOfferWidget ? not merchantProductOfferWidget.productView.productOfferReference: true %}
-        {% set merchantProductWidget = findWidget('MerchantProductWidget', [
-            data.product,
-            isRadioButtonVisible,
-            isChecked
-        ]) %}
-
-        {% if merchantProductWidget %}
-            {% widget merchantProductWidget %}
-            {% endwidget %}
-        {% endif %}
-    {% endblock %}
-{% endwidget %}
-...
-{% endraw %}
-```
-
-**src/Pyz/Yves/ShopUi/Theme/default/components/molecules/product-card-item/product-card-item.twig**
-
-```twig
-{%- raw -%}
-...
-{% block productInfo %}
-    ...
-    {% if widgetGlobalExists('SoldByMerchantWidget') %}
-        {% widget 'SoldByMerchantWidget' args [data.listItem] only %}{% endwidget %}
-    {% elseif widgetGlobalExists('ProductOfferSoldByMerchantWidget') %}
-        {% widget 'ProductOfferSoldByMerchantWidget' args [data.listItem] only %}{% endwidget %}
-    {% elseif widgetGlobalExists('ProductSoldByMerchantWidget') %}
-        {% widget 'ProductSoldByMerchantWidget' args [data.listItem] only %}{% endwidget %}
-    {% endif %}
-
-{% endblock %}
-...
-{% endraw %}
 ```
 
 {% info_block warningBox "Verification" %}

@@ -1118,25 +1118,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 ```
 
-**src/Pyz/Yves/CustomerPage/Theme/default/components/molecules/order-detail-table/order-detail-table.twig**
-
-```twig
-{%- raw -%}
-{% extends molecule('order-detail-table', '@SprykerShop:CustomerPage') %}
-
-{% block body %}
-    {% for shipmentGroup in data.shipmentGroups %}
-        <article class="grid grid--gap spacing-bottom spacing-bottom--big">
-            ...
-            {% widget 'MerchantOrderReferenceForItemsWidget' args [shipmentGroup.items] only %}{% endwidget %}
-            ...
-        </article>
-    {% endfor %}
-{% endblock %}
-{% endraw %}
-```
-
-
 {% info_block warningBox "Verification" %}
 
 Make sure that the Merchant State Machine is executed on merchant orders after the order has been split.

@@ -66,6 +66,7 @@ Ensure that the following modules have been installed:
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

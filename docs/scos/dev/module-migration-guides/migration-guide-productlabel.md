@@ -57,6 +57,7 @@ composer update spryker/product-label-data-import --update-with-dependencies
 2. Update the database schema and the generated classes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

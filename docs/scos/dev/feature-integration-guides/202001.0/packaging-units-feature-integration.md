@@ -120,6 +120,7 @@ src/Pyz/Zed/ProductPackagingUnitStorage/Persistence/Propel/Schema/spy_product_pa
 Run the following commands to apply the database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

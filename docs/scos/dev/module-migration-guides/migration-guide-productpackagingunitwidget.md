@@ -55,6 +55,7 @@ composer require spryker-shop/product-packaging-unit-widget: "^0.5.0" --update-w
 2. Run the transfer object generation:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

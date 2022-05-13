@@ -45,6 +45,7 @@ Make sure that the following modules have been installed:
 Update the database and generate transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

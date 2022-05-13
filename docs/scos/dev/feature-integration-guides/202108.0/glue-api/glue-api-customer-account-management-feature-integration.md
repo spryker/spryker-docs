@@ -157,6 +157,7 @@ customer-restore-password:
 Apply database changes and generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

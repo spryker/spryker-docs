@@ -24,6 +24,12 @@ redirect_from:
   - /v1/docs/en/implementing-a-query-container
 ---
 
+{% info_block infoBox "When to use Query Containers" %}
+
+Don't use query containers to cross module boundaries, as this increases modules coupling. However, you can use them behind [Repository](/docs/scos/dev/back-end-development/zed/persistence-layer/repository.html) and [Entity Manager](/docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html) as query aggregations.
+Previously, query containers were used to cross module borders (via dependency providers), which led to higher module coupling and leaking of persistence layer from one domain object to another, and therefore, to higher maintenance efforts and lower code reusability. This approach has been deprecated now, so we don't recommend using query containers like this in your project development.
+
+{% endinfo_block %}
 
 To create a new Query Container you can copy and paste the following snippet and replace `MyBundle` with your module name.
 

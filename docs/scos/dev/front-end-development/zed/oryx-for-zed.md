@@ -26,7 +26,7 @@ redirect_from:
 
 ## Introduction
 
-`oryx-for-zed` is an extension of Oryx that performs a full build for Spryker Zed UI applications. It also provides access to Zed settings and Zed webpack configuration, so you can extend/change the whole building process.
+`oryx-for-zed` is an extension of Oryx that performs a full build for Spryker Zed UI applications. It also provides access to Zed settings and Zed Webpack configuration, so you can extend/change the whole building process.
 
 ### Requirements
 
@@ -35,8 +35,7 @@ redirect_from:
 
 ### Setup
 
-You need to add `oryx-for-zed` to your `package.json`:
-Open the terminal, go to your project root folder and type:
+You need to add `oryx-for-zed` to your `package.json`. Open the terminal, go to your project root folder and type:
 
 ```bash
 npm install @spryker/oryx-for-zed --save-dev
@@ -45,7 +44,9 @@ yarn add @spryker/oryx-for-zed --dev
 ```
 
 {% info_block warningBox %}
-oryx-for-zed comes with a peer dependency: `oryx` version  >= 1.x
+
+oryx-for-zed comes with a peer dependency: `oryx` version  >= 1.x.
+
 {% endinfo_block %}
 
 ## Usage
@@ -70,6 +71,7 @@ Add the following script to your `package.json`:
 }
 
 ```
+
 Open the terminal and type:
 
 ```
@@ -78,7 +80,7 @@ npm run build-zed
 yarn run build-zed
 ```
 
-### Extend/change settings
+### Extend or change the settings
 
 Settings are extended and changed by using the onyx-for-zed [API](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html#api).
 
@@ -109,16 +111,19 @@ Add a script into your `package.json` pointing to `build.js`.
     }
 }
 ```
+
 You will now be able to…
 
 ### Extend/change webpack configuration
-`webpack` is customised by using the `onyx-for-zed` [API](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html#api).
+
+`webpack` is customized by using the `onyx-for-zed` [API](/docs/scos/dev/front-end-development/zed/oryx-for-zed.html#api).
+
 The example below shows how to create a custom build:
 
 **Step 1:** `webpack.config.js`
-Create a `webpack.config.js` file in your project containing your webpack custom configuration:
+Create a `webpack.config.js` file in your project containing your Webpack custom configuration:
 
-```
+```js
 const oryxForZed = require('@spryker/oryx-for-zed');
 async function myCustomZedConfiguration() {
     const oryxConfiguration = await oryxForZed.getConfiguration(oryxForZed.settings);
@@ -131,9 +136,9 @@ async function myCustomZedConfiguration() {
 
 **Step 2:** `build.js`
 
-Create a `build.js` file in your project containing your webpack configuration and the logic needed to run the builder:
+Create a `build.js` file in your project containing your Webpack configuration and the logic needed to run the builder:
 
-```
+```js
 const oryx = require('@spryker/oryx');
 const myCustomZedConfiguration = require('./webpack.config.js');
 
@@ -152,22 +157,25 @@ Add a script into your `package.json` pointing to `build.js`.
 ```
 
 ## API
+
 ### Settings
 
-```
+```js
 oryxForZed.settings
 ```
 
-Contains all the basic settings used in the webpack configuration. Go to the code for more details.
+Contains all the basic settings used in the Webpack configuration. Go to the code for more details.
 
 ### getConfiguration()
-oryxForZed.getConfiguration(settings)
-Returns a promise with the default Zed webpack configuration, based on provided settings.
+
+`oryxForZed.getConfiguration(settings)`
+Returns a promise with the default Zed Webpack configuration, based on provided settings.
 
 Go to the code for more details.
 
 ### CLI args
-`oryx-for-zed`1 uses arguments to customise the build process.
+
+`oryx-for-zed`1 uses arguments to customize the build process.
 
 You can pass them using the terminal:
 
@@ -190,7 +198,7 @@ Or embed them into the script section in `package.json`:
 Args list
 
 * `--dev`: development mode; enable `webpack` watchers on the code
-* `--prod`: production mode; enable assets optimisation/compression
+* `--prod`: production mode; enable assets optimization/compression
 * `--boost`: boost mode (experimental); build assets using eval source maps
 
 If no arg is passed, development is activated but without watchers.

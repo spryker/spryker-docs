@@ -10,6 +10,7 @@ redirect_from:
   - /v5/docs/en/order-thresholds-feature-overview
   - /v5/docs/order-thresholds
   - /v5/docs/en/order-thresholds
+  - /docs/scos/user/shop-user-guides/202005.0/shop-application-guide/cart/minimum-order-value-feature-overview.html
 ---
 
 To increase order values, sometimes merchants might want to define a minimum order value for orders placed by their buyers. The **minimum order value** is a monetary value stipulated by a shop owner. If the minimum order value is not reached, the order placement can either be blocked or made possible only under certain conditions, for example, after paying a fee. This minimum value itself is also referred to as a **threshold**. The threshold can either be hard or soft. The **hard threshold** implies that if the buyer's cart value is below the minimum order value, the buyer will not be allowed to proceed to order placement.
@@ -26,7 +27,7 @@ The **soft threshold** is represented by three types:
 
 The **soft threshold with a message** means that, if the minimum order value is not reached, the customer sees a message saying that minimum order requirements are not fulfilled. However, the customer can still purchase the product(s). The soft **threshold with a fixed fee** means that, if the minimum order value is not reached, a certain amount of money (defined by a shop-owner), is added to the order sum.
 
-![Threshold with fixed value](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Minimum+Order+Value/Minimum+Order+Value+Feature+Overview/threshold-with-fixed-fee.png) 
+![Threshold with fixed value](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Minimum+Order+Value/Minimum+Order+Value+Feature+Overview/threshold-with-fixed-fee.png)
 
 In this case, the buyer can either buy with the fee or increase the cart value to meet the minimum order value threshold and then proceed to checkout without having to pay the fee.
 
@@ -34,7 +35,7 @@ The **soft threshold with a flexible fee** means that, if the minimum order valu
 
 The schema below illustrates the order placement workflow with minimum order value thresholds:
 
-![Minimum Order Value schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Minimum+Order+Value/Minimum+Order+Value+Feature+Overview/minimum-order-value-schema.jpg) 
+![Minimum Order Value schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Minimum+Order+Value/Minimum+Order+Value+Feature+Overview/minimum-order-value-schema.jpg)
 
 {% info_block infoBox %}
 Keep in mind, that fees for the soft thresholds are based on sub-total and not grand-total values of orders. Fixed and flexible fees are added in a separate line as expenses for orders.
@@ -47,5 +48,4 @@ However, if a merchant has several merchant relations (which are relations betwe
 
 The diagram below illustrates the relation of entities in the context of the Minimum Order Value feature
 
-![Relation of entities](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Minimum+Order+Value/Minimum+Order+Value+Feature+Overview/context-of-the-minimum-order-value-module.png) 
-
+![Relation of entities](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Minimum+Order+Value/Minimum+Order+Value+Feature+Overview/context-of-the-minimum-order-value-module.png)

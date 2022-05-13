@@ -30,7 +30,7 @@ The file has the following dependencies:
 
 Find the template and an example of the file below:
 
-| FILE | DESCRIPITON |
+| FILE | DESCRIPTION |
 |---|---|
 | [template_{file name with extension}](link to the template) <!--Make sure the file with the same formatting is uploaded to the AWS instance. --> | Import file template with headers only. |
 | [{file name with extension}](link to the exemplary file) | Exemplary import file with the Demo Shop data. |

@@ -15,12 +15,13 @@ redirect_from:
 ---
 
 ## Description
+
 An application like Yves, BackOffice(Zed), GlueStorefront(Glue), GlueBackend or MerchantPortal is not reachable after installation.
 
-
-
 ## Solution
+
 In `deploy.*.yml`, ensure that SSL encryption is disabled:
+
 ```yaml
 docker:
     ssl:

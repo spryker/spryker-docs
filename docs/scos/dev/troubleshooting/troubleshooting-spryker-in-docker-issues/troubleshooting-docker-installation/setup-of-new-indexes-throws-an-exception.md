@@ -15,11 +15,14 @@ redirect_from:
 ---
 
 ## Description
+
 Running the command `setup-search-create-sources [vendor/bin/console search:setup:sources]` returns the exception:
+
 ```
 Elastica\Exception\Connection\HttpException - Exception: Couldn't resolve host
 in /data/vendor/ruflin/elastica/lib/Elastica/Transport/Http.php (190)
 ```
 
 ## Solution
+
 Increase RAM for Docker usage.

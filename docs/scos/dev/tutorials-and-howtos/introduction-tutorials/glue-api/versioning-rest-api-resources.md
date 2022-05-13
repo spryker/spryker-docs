@@ -1,5 +1,5 @@
 ---
-title: Versioning REST API Resources
+title: Versioning REST API resources
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/versioning-rest-api-resources
@@ -28,7 +28,8 @@ In the course of development of your REST APIs, you may need to change the data 
 
 {% info_block infoBox %}
 
-Resources provided by Spryker out of the box do not have a version. When developing resources, only new resources, attributes etc are added without removing anything, which ensures backward compatibility for all clients. <br>If necessary, you can implement versioning for built-in resources as well by [extending](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html) the corresponding resource module on your project level.
+Resources provided by Spryker out of the box do not have a version. When developing resources, only new resources, attributes etc are added without removing anything, which ensures backward compatibility for all clients. 
+If necessary, you can implement versioning for built-in resources as well by [extending](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html) the corresponding resource module on your project level.
 
 {% endinfo_block %}
 
@@ -46,7 +47,7 @@ For more information on route plugins, see the [Resource Routing](/docs/scos/dev
 
 Let us consider the following implementation of a route plugin:
 
-CustomerRestorePasswordResourceRoutePlugin.php
+**CustomerRestorePasswordResourceRoutePlugin.php**
 
 ```php
 <?php
@@ -116,10 +117,13 @@ class CustomerRestorePasswordResourceRoutePlugin extends AbstractPlugin implemen
 ```
 
 {% info_block errorBox %}
+
 It is important that you set both the major and the minor version of a resource, otherwise, requests to it will fail.
+
 {% endinfo_block %}
 
 ## 2. Query specific resource version
+
 Now, that you've implemented a specific resource version, you can query the resource specifying the version you need. Let us send a PATCH request to the `/customer-restore-password` endpoint that now has version 2.0. The payload is as follows:
 
 **Code sample:**
@@ -149,10 +153,13 @@ Content-Type: application/vnd.api+json; version=3.0
 In this case, the endpoint will respond with the **404 Not Found** error.
 
 {% info_block infoBox %}
+
 If a version is not specified, the latest available version will be returned.
+
 {% endinfo_block %}
 
 ## 3. Add more versions
+
 Now, if you want to implement a new version, you can create a new route plugin in your module. For example, to support version **3.0**, you can use the following code in your plugin:
 
 **Code sample:**

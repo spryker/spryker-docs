@@ -8,6 +8,7 @@ originalArticleId: 8d842c97-7455-4933-b3a3-012dedb5537b
 redirect_from:
   - /v2/docs/heidelpay-installation
   - /v2/docs/en/heidelpay-installation
+  - /docs/scos/user/technology-partners/201903.0/payment-partners/heidelpay/installing-heidelpay.html
 related:
   - title: Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay.html

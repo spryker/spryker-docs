@@ -16,7 +16,7 @@ redirect_from:
 
 You get the Nginx welcome page by opening an application in the browser.
 
-1. Update the nginx:alpine image:
+1. Update the `nginx:alpine` image:
 
 ```bash
 docker pull nginx:alpine

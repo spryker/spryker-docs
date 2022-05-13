@@ -20,7 +20,7 @@ You can see the [full version of this page](https://www.de.b2b.demo-spryker.com/
 
 ![B2B-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2B+Product+Details+page/b2b-1.png)
 
-| # | Path to SCSS |
+| # | PATH TO SCSS |
 | --- | --- |
 | 1 | project/src/Pyz/Yves/ShopUi/Theme/default/components/molecules/breadcrumb |
 | 2 | project/src/Pyz/Yves/ProductLabelWidget/Theme/default/components/molecules/label-group/label-group.scss |
@@ -40,7 +40,7 @@ You can see the [full version of this page](https://www.de.b2b.demo-spryker.com/
 ![B2B-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2B+Product+Details+page/b2b-2.png)
 
 
-| # | Path to SCSS |
+| # | PATH TO SCSS |
 | --- | --- |
 | 14 | project/src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-detail/product-detail.scss |
 | 15 | project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/organisms/review-summary/review-summary.scss <br> project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/rating-selector/rating-selector.scss <br> project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/review-average-display/review-average-display.scss <br> project/src/Pyz/Yves/ProductReviewWidget/Theme/default/components/molecules/review-distribution-display/review-distribution-display.scss |

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/eco-punchout-catalogs-feature-integration
   - /docs/en/eco-punchout-catalogs-feature-integration
   - /docs/scos/user/technology-partners/202204.0/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html
+  - /docs/scos/dev/technology-partner-guides/202200.0/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html
 ---
 
 ## Install Feature Core

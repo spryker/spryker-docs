@@ -11,6 +11,7 @@ redirect_from:
   - /docs/amazon-sandbox-simulations
   - /docs/en/amazon-sandbox-simulations
   - /docs/scos/user/technology-partners/202204.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-sandbox-simulations.html
+  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
 related:
   - title: Handling orders with Amazon Pay API
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html

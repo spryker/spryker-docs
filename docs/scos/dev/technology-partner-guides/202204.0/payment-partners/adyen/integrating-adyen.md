@@ -11,6 +11,7 @@ redirect_from:
   - /docs/adyen-integration
   - /docs/en/adyen-integration
   - /docs/scos/user/technology-partners/202204.0/payment-partners/adyen/adyen-integration-into-a-project.html
+  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/adyen/integrating-adyen.html
 related:
   - title: Installing and configuring Adyen
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/installing-and-configuring-adyen.html

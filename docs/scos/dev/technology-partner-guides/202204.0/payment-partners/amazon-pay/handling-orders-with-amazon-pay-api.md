@@ -11,6 +11,7 @@ redirect_from:
   - /docs/amazon-pay-api
   - /docs/en/amazon-pay-api
   - /docs/scos/user/technology-partners/202204.0/payment-partners/amazon-pay/scos-integration/amazon-pay-api.html
+  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html
 related:
   - title: Configuring Amazon Pay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/configuring-amazon-pay.html

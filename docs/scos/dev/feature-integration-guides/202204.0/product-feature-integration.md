@@ -295,6 +295,7 @@ Make sure that the following modules are installed:
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | ProductSearchWidget | spryker-shop/product-search-widget |
+| ProductSearchWidgetExtension | vendor/spryker-shop/product-search-widget-extension |
 
 {% endinfo_block %}
 

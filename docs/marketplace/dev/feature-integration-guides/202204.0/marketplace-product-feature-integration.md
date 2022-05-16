@@ -41,8 +41,6 @@ Make sure that the following modules have been installed:
 | MerchantProductSearch        | vendor/spryker/merchant-product-search              |
 | MerchantProductStorage       | vendor/spryker/merchant-product-storage             |
 | MerchantProductWidget        | vendor/spryker-shop/merchant-product-widget         |
-| ProductSearchWidget          | vendor/spryker-shop/product-search-widget           |
-| ProductSearchWidgetExtension | vendor/spryker-shop/product-search-widget-extension |
 
 {% endinfo_block %}
 

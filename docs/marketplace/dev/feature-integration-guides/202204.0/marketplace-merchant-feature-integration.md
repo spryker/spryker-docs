@@ -42,7 +42,6 @@ Make sure that the following modules have been installed:
 | MerchantUser | vendor/spryker/merchant-user |
 | MerchantUserGui |	vendor/spryker/merchant-user-gui |
 | MerchantStorage | vendor/spryker/merchant-storage |
-| MerchantSearchWidget  | vendor/spryker-shop/merchant-search-widget   |
 
 {% endinfo_block %}
 
@@ -123,30 +122,7 @@ Make sure that the following changes have occurred in transfer objects:
 {% endinfo_block %}
 
 
-### 3) Add translations
-
-Add translations as follows:
-
-1. Append glossary for the feature:
-
-```yaml
-merchant_search_widget.all_merchants,All Merchants,en_US
-merchant_search_widget.all_merchants,Alle Händler,de_DE
-merchant_search_widget.merchants,Merchants,en_US
-merchant_search_widget.merchants,Händler,de_DE
-```
-
-2. Import data:
-
-```bash
-console data:import glossary
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that in the database the configured data are added to the `spy_glossary` table.
-
-{% endinfo_block %}
+### 3) Add Zed translations
 
 Generate new translation cache for Zed:
 
@@ -172,7 +148,6 @@ Enable the following behaviors by registering the plugins:
 | MerchantUserViewMerchantUpdateFormViewExpanderPlugin | Expands merchant `FormView` with the data for the merchant user tab.                                     |               | Spryker\Zed\MerchantUserGui\Communication\Plugin\MerchantGui |
 | MerchantProductOfferStorageExpanderPlugin            | Returns `ProductOfferStorage` transfer object expanded with `Merchant`.                                  |               | Spryker\Client\MerchantStorage\Plugin\ProductOfferStorage |
 | MerchantProductOfferStorageFilterPlugin              | Filters `ProductOfferCollection` transfer object by active and approved merchant.                        |               | Spryker\Zed\MerchantStorage\Communication\Plugin\ProductOfferStorage |
-| MerchantReferenceQueryExpanderPlugin                 | Adds filter by merchant reference to query.                                                              |               | Spryker\Client\MerchantProductOfferSearch\Plugin\Search |
 
 <details><summary markdown='span'>src/Pyz/Zed/Merchant/MerchantDependencyProvider.php</summary>
 
@@ -348,83 +323,6 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
 {% info_block warningBox "Verification" %}
 
 Make sure that when you retrieve a product offer from storage, you can see merchant transfer property.
-
-{% endinfo_block %}
-
-**src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
-```php
-<?php
-
-namespace Pyz\Client\Catalog;
-
-use ...
-
-class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
-{
-...
-    /**
-     * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface>|array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
-     */
-    protected function createCatalogSearchQueryExpanderPlugins(): array
-    {
-        return [
-            new StoreQueryExpanderPlugin(),
-            new LocalizedQueryExpanderPlugin(),
-            new ProductPriceQueryExpanderPlugin(),
-            new SortedQueryExpanderPlugin(),
-            new SortedCategoryQueryExpanderPlugin(CategoryFacetConfigTransferBuilderPlugin::PARAMETER_NAME),
-            new PaginatedQueryExpanderPlugin(),
-            new SpellingSuggestionQueryExpanderPlugin(),
-            new IsActiveQueryExpanderPlugin(),
-            new IsActiveInDateRangeQueryExpanderPlugin(),
-            new CustomerCatalogProductListQueryExpanderPlugin(),
-            new MerchantReferenceQueryExpanderPlugin(),
-
-            /*
-             * FacetQueryExpanderPlugin needs to be after other query expanders which filters down the results.
-             */
-            new FacetQueryExpanderPlugin(),
-        ];
-    }
-...    
-    /**
-     * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface>|array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
-     */
-    protected function createSuggestionQueryExpanderPlugins(): array
-    {
-        return [
-            new FuzzyQueryExpanderPlugin(),
-            new StoreQueryExpanderPlugin(),
-            new LocalizedQueryExpanderPlugin(),
-            new CompletionQueryExpanderPlugin(),
-            new SuggestionByTypeQueryExpanderPlugin(),
-            new IsActiveQueryExpanderPlugin(),
-            new IsActiveInDateRangeQueryExpanderPlugin(),
-            new CustomerCatalogProductListQueryExpanderPlugin(),
-            new MerchantReferenceQueryExpanderPlugin(),
-        ];
-    }
-...    
-    /**
-     * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface>|array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
-     */
-    protected function getProductConcreteCatalogSearchQueryExpanderPlugins(): array
-    {
-        return [
-            new LocalizedQueryExpanderPlugin(),
-            new PaginatedProductConcreteCatalogSearchQueryExpanderPlugin(),
-            new CustomerCatalogProductListQueryExpanderPlugin(),
-            new ProductListSearchProductListQueryExpanderPlugin(),
-            new MerchantReferenceQueryExpanderPlugin(),
-            new MerchantProductReferenceQueryExpanderPlugin(),
-        ];
-    }
-...
-}
-```
-{% info_block warningBox "Verification" %}
-
-Make sure that when you retrieve a product offer from storage, you can see merchant reference transfer property.
 
 {% endinfo_block %}
 
@@ -1452,6 +1350,7 @@ composer require spryker-feature/marketplace-merchant: "{{page.version}}" --upda
 | MerchantProfileWidget | vendor/spryker-shop/merchant-profile-widget |
 | MerchantWidget | vendor/spryker-shop/merchant-widget |
 | MerchantPage | vendor/spryker-shop/merchant-page |
+| MerchantSearchWidget  | vendor/spryker-shop/merchant-search-widget   |
 
 ### 2) Add translations
 
@@ -1480,6 +1379,10 @@ merchant_profile.privacy,Data Privacy,en_US
 merchant_profile.privacy,Datenschutz,de_DE
 merchant_profile.delivery_time,Delivery Time,en_US
 merchant_profile.delivery_time,Lieferzeit,de_DE
+merchant_search_widget.all_merchants,All Merchants,en_US
+merchant_search_widget.all_merchants,Alle Händler,de_DE
+merchant_search_widget.merchants,Merchants,en_US
+merchant_search_widget.merchants,Händler,de_DE
 ```
 
 2. Import data:
@@ -1498,9 +1401,10 @@ Make sure that the configured data has been added to the `spy_glossary` table in
 
 Register the following plugins to enable widgets:
 
-| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
-| -------------- | --------------- | ------ | ---------------- |
-| SoldByMerchantWidget      | Shows the list of the offers with their prices for a concrete product. |           | SprykerShop\Yves\MerchantWidget\Widget |
+| PLUGIN                | DESCRIPTION | PREREQUISITES | NAMESPACE |
+|-----------------------| --------------- |---------------| ---------------- |
+| SoldByMerchantWidget  | Shows the list of the offers with their prices for a concrete product. |               | SprykerShop\Yves\MerchantWidget\Widget |
+| MerchantSearchWidget  | Provides a widget to render a merchants filter. |               | SprykerShop\Yves\MerchantSearchWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -1510,6 +1414,7 @@ Register the following plugins to enable widgets:
 namespace Pyz\Yves\ShopApplication;
 
 use SprykerShop\Yves\MerchantWidget\Widget\SoldByMerchantWidget;
+use SprykerShop\Yves\MerchantSearchWidget\Widget\MerchantSearchWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
@@ -1520,7 +1425,9 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     protected function getGlobalWidgets(): array
     {
         return [
+            ...
             SoldByMerchantWidget::class,
+            MerchantSearchWidget::class,
         ];
     }
 }

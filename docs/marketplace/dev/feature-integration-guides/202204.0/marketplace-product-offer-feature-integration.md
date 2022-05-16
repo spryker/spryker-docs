@@ -1091,7 +1091,6 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductOfferViewSectionPlugin                       | Adds a new merchant section to the `ProductOfferGui` view.                                                             |                                       | Spryker\Zed\MerchantProductOfferGui\Communication\Plugin\ProductOfferGui         |
 | ProductOfferValidityProductOfferViewSectionPlugin           | Adds a new validity section to the `ProductOfferGui` view.                                                             |                                       | Spryker\Zed\ProductOfferValidityGui\Communication\Plugin\ProductOfferGui         |
 | MerchantProductOfferListActionViewDataExpanderPlugin        | Expands product offer view data with merchant data when showing it in the  `ProductOfferGui` module.                   |                                       | Spryker\Zed\MerchantGui\Communication\Plugin\ProductOffer                        |
-| MerchantReferenceQueryExpanderPlugin                        | Adds filter by the merchant reference to the search query.                                                             |                                       | Spryker\Client\MerchantProductOfferSearch\Plugin\Search                          |
 | MerchantNameSearchConfigExpanderPlugin                      | Expands facet configuration with the merchant name filter.                                                             |                                       | Spryker\Client\MerchantProductOfferSearch\Plugin\Search                          |
 | MerchantProductPageDataExpanderPlugin                       | Expands the provided `ProductAbstractPageSearch` transfer object's data by merchant names.                             |                                       | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch    |
 | MerchantProductPageDataLoaderPlugin                         | Expands the `ProductPageLoadTransfer` object with merchant data.                                                       |                                       | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch    |
@@ -1107,40 +1106,6 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductOfferStorageMapperPlugin                     | Maps Merchant foreign key of `ProductOffer` transfer object to Merchant Id `ProductOfferStorage` transfer object.      |                                       | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferStorage |
 | ProductOfferQuickOrderItemMapperPlugin                      | Maps product offer reference to QuickOrderItem transfer.                                                               |                                       | SprykerShop\Yves\ProductOfferWidget\Plugin\QuickOrderPage                        |
 | MerchantProductOfferWidgetRouteProviderPlugin               | Adds Routes to the RouteCollection.                                                                                    |                                       | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\Router                        |
-
-**src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Client\Catalog;
-
-use Spryker\Client\Catalog\CatalogDependencyProvider as SprykerCatalogDependencyProvider;
-use Spryker\Client\MerchantProductOfferSearch\Plugin\Search\MerchantReferenceQueryExpanderPlugin;
-
-class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
-{
-    /**
-     * @return \Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface[]|\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface[]
-     */
-    protected function createCatalogSearchQueryExpanderPlugins()
-    {
-        return [
-            new MerchantReferenceQueryExpanderPlugin(),
-        ];
-    }
-
-    /**
-     * @return \Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface[]|\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface[]
-     */
-    protected function createSuggestionQueryExpanderPlugins()
-    {
-        return [
-            new MerchantReferenceQueryExpanderPlugin(),
-        ];
-    }
-}
-```
 
 **src/Pyz/Client/Search/SearchDependencyProvider.php**
 

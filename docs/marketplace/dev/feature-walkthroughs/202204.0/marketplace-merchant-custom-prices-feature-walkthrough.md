@@ -1,6 +1,6 @@
 ---
 title: Marketplace Merchant Custom Prices feature walkthrough
-description: description: Marketplace Merchant Custom Prices feature lets merchants to define custom prices for specific business units of B2B customers via Merchant Portal Product Price UI.
+description: Marketplace Merchant Custom Prices feature lets merchants to define custom prices for specific business units of B2B customers via Merchant Portal Product Price UI.
 template: feature-walkthrough-template
 ---
 
@@ -16,17 +16,17 @@ To learn more about the Marketplace Merchant Custom Prices feature in Merchant P
 
 The following diagram illustrates the dependencies between the modules for the *Marketplace Merchant Custom Prices* feature.
 
-![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/1a2032a6-6339-44ed-9de0-3734af0981cc.png?utm_medium=live&utm_source=custom)
+![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/07d9f98a-5bc3-478f-8d0a-cb33cdeb2ed7.png?utm_medium=live&utm_source=custom)
 
 | NAME | DESCRIPTION |
 | --- | --- |
-| [PriceProduct](https://github.com/spryker/price-product) | Provides product price main business logic and persistence. |
-| [PriceProductMerchantRelationship](https://github.com/spryker/price-product-merchant-relationship) | Provides product customer specific price functionality. |
-| [PriceProductMerchantRelationshipMerchantPortalGui](https://github.com/spryker/price-product-merchant-relationship-merchant-portal-gui) | Provides merchant portal UI for product customer specific price management. |
-| [ProductMerchantPortalGui](https://github.com/spryker/product-merchant-portal-gui) | Provides merchant portal UI for product management. |
+| [PriceProduct](https://github.com/spryker/price-product) | Provides product price related functionality, price persistence, current price resolvers per currency/price mode. |
+| [PriceProductMerchantRelationship](https://github.com/spryker/price-product-merchant-relationship) | Provides database schema and required plugins for specific product prices per merchant relationship. |
+| [PriceProductMerchantRelationshipMerchantPortalGui](https://github.com/spryker/price-product-merchant-relationship-merchant-portal-gui) | Provides components for price product merchant relationships management. |
+| [ProductMerchantPortalGui](https://github.com/spryker/product-merchant-portal-gui) | Provides components for merchant products management. |
 
 ## Domain model
 
-The following schema illustrates the Marketplace Merchant Portal Customer Specific Prices domain model:
+The following schema illustrates the *Marketplace Merchant Custom Prices* domain model:
 
-![Domain Model](https://confluence-connect.gliffy.net/embed/image/5eb0f9ca-ed53-4f7f-a968-38b647712678.png?utm_medium=live&utm_source=custom)
+![Domain Model](https://confluence-connect.gliffy.net/embed/image/165bf49e-5aed-4228-b231-cc5187eca7d4.png?utm_medium=live&utm_source=custom)

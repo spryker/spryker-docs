@@ -121,6 +121,9 @@ entries:
           - title: Merchant Opening Hours
             url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours-feature-walkthrough.html
 
+          - title: Marketplace Merchant Custom Prices
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-custom-prices-feature-walkthrough.html
+
           - title: Merchant Portal
             nested:
 

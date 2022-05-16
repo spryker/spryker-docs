@@ -27,7 +27,9 @@ layout: default
 <div class="page-content page-content--post">
 
     <aside class="main-sidebar">
-        <h3  data-toc-skip>{{ site.data.sidebars[page.sidebar].title }}</h3>
+        <div class="main-sidebar__title-wrapper">
+            <h3 data-toc-skip class="tablet-show main-sidebar__title">{{ site.data.sidebars[page.sidebar].title }}</h3>
+        </div>
         <a href="#" class="main-sidebar__opener tablet-hidden js-main-sidebar-switcher" aria-label="sidebar desktop opener">
             <span class="main-sidebar__opener-decorator"></span>
             <span class="main-sidebar__opener-decorator"></span>

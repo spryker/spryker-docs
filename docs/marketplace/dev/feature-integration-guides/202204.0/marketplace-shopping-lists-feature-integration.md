@@ -25,8 +25,9 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-shopping-lists:"202204.0" --update-with-dependencies 
+composer require spryker-feature/marketplace-shopping-lists:"{{page.version}}" --update-with-dependencies 
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
@@ -40,6 +41,8 @@ Make sure that the following modules have been installed:
 {% endinfo_block %}
 
 ### 2) Set up database schema and transfer objects
+
+Generate transfer changes: 
 
 ```bash
 console transfer:generate
@@ -72,7 +75,11 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-Run the `console propel:install` command:
+Run the command to initiate the changes:
+
+```bash
+console propel:install
+```
 
 {% info_block warningBox "Verification" %}
 
@@ -90,7 +97,7 @@ Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**
 
-```yaml
+```csv
 shopping_list.pre.check.product_offer,Product Offer is not found.,en_US
 shopping_list.pre.check.product_offer,Produktangebot wurde nicht gefunden.,de_DE
 shopping_list.pre.check.product_offer.approved,Product Offer is not approved.,en_US
@@ -115,15 +122,16 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database, the configured data is added to the spy_glossary table.
+Make sure that in the database, the configured data is added to the `spy_glossary` table.
 
 {% endinfo_block %}
 
 ### 4) Configure export to Redis
 
-Make changes to PublisherDependencyProvider
+Make changes to the `PublisherDependencyProvider`:
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+
 ```php
 <?php
 namespace Pyz\Zed\Publisher;
@@ -144,9 +152,10 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 }
 ```
 
-Make changes to ProductStorageDependencyProvider
+Make changes to `ProductStorageDependencyProvider`:
 
 **src/Pyz/Zed/ProductStorage/ProductStorageDependencyProvider.php**
+
 ```php
 <?php
 namespace Pyz\Zed\ProductStorage;
@@ -169,10 +178,10 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 
 ### 5) Import data
 
-To import data:
-Prepare import data according to your requirements using demo data
+Prepare import data according to your requirements using demo data:
 
 **data/import/common/common/marketplace/product_offer_shopping_list_item.csv**
+
 ```csv
 shopping_list_item_key,product_offer_reference
 shopping-list-item-key-38,offer2
@@ -184,19 +193,23 @@ shopping-list-item-key-43,offer51
 ```
 
 #### Set up configuration
-Add importer configuration
 
-**data/import/local/full_EU.yml **
-```csv
+Add importer configuration:
+
+**data/import/local/full_EU.yml**
+
+```yml
 version: 0
 
 actions:
     - data_entity: product-offer-shopping-list-item
       source: data/import/common/common/marketplace/product_offer_shopping_list_item.csv
 ```
-Adjust Data Import configuration
+
+Adjust the data import configuration:
 
 **src/Pyz/Zed/DataImport/DataImportConfig.php**
+
 ```php
 <?php
 
@@ -217,9 +230,13 @@ class DataImportConfig extends SprykerDataImportConfig
     }
 }
 ```
+
 #### Enable required data import command
 
+Modify the `ConsoleDependencyProvider.php` file to enable the data import command:
+
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
+
 ```php
 
 <?php
@@ -252,7 +269,10 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 #### Set up behavior
 
+Enable the following behavior:
+
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
+
 ```php
 <?php
 
@@ -272,23 +292,28 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 ```
 
 #### Run import
+
+Import the shopping list data:
+
 ```bash
 console data:import product-offer-shopping-list-item
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the imported data is added to the spy_shopping_list_item table.
+
+Make sure that the imported data is added to the `spy_shopping_list_item` table.
+
 {% endinfo_block %}
 
 ### Set up widgets
 
-Enable the following behaviors by registering the plugins:
+Set up widgets as follows:
 
-| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| ShoppingListMerchantWidget | Enables merchant shopping list widget | None | SprykerShop\Yves\MerchantWidget\Widget |
-| ShoppingListProductOfferWidget | Enables product offer in shopping list widget | None | SprykerShop\Yves\ProductOfferWidget\Widget |
-| ProductOfferShoppingListWidget | Enables shopping list for product offer widget | None | SprykerShop\Yves\ProductOfferShoppingListWidget\Widget |
+| ShoppingListMerchantWidget | Enables merchant shopping list widget. | None | SprykerShop\Yves\MerchantWidget\Widget |
+| ShoppingListProductOfferWidget | Enables product offer in shopping list widget. | None | SprykerShop\Yves\ProductOfferWidget\Widget |
+| ProductOfferShoppingListWidget | Enables shopping list for product offer widget. | None | SprykerShop\Yves\ProductOfferShoppingListWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -316,15 +341,16 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following widgets were registered:
 
-| MODULE | TEST                                                                                                                                                                                                                                                                                                                                                                                                             |
-| ----------------- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ShoppingListMerchantWidget       | Go to the product page. Add concrete product to the shopping list, then login to the admin page. Find a merchant that owns a concrete product and change its state. Refresh shopping list page - item will change its status to 'Currently not available.'                                                                                                                                                                           |
-| ShoppingListProductOfferWidget       | Go to the product page containing product offers. Select a product offer, e.g., `offer96`. Then open another tab and login to the merchant portal with the merchant's credentials who owns the previously selected product offer, in our case `michele@sony-experts.com`. Find product offer by SKU `offer96`. Change offer availability. Refresh shopping list page - item will change its status to 'Currently not available.'                                                                                                                                                   |
-| ProductOfferShoppingListWidget       | Go to the product page and verify that the merchants' product offers are displayed and items are added to the shopping list with correct merchant names.                                                                                                                                                                                                                                                                    |
+| MODULE | TEST  |
+| ----------------- |---------------|
+| ShoppingListMerchantWidget       | Go to the product page. Add concrete product to the shopping list, then login to the admin page. Find a merchant that owns a concrete product and change its state. Refresh shopping list page - item will change its status to 'Currently not available.'    |
+| ShoppingListProductOfferWidget       | Go to the product page containing product offers. Select a product offer, e.g., `offer96`. Then open another tab and login to the merchant portal with the merchant's credentials who owns the previously selected product offer, in our case `michele@sony-experts.com`. Find product offer by SKU `offer96`. Change offer availability. Refresh shopping list page - item will change its status to 'Currently not available.'  |
+| ProductOfferShoppingListWidget       | Go to the product page and verify that the merchants' product offers are displayed and items are added to the shopping list with correct merchant names.   |
 
 {% endinfo_block %}
 
@@ -332,11 +358,11 @@ Make sure that the following widgets were registered:
 
 Enable the following behaviors in Client by registering the plugins:
 
-| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| ProductOfferShoppingListItemMapperPlugin | Maps Product Offer data to `ShoppingListItemTransfer` | None | Spryker\Client\ProductOfferShoppingList\Plugin\ShoppingList |
-| ProductOfferShoppingListItemToItemMapperPlugin | Maps `ShoppingListItemTransfer` transfer properties to `ItemTransfer` transfer properties | None | Spryker\Client\ProductOfferShoppingList\Plugin\ShoppingList |
-| MerchantShoppingListItemToItemMapperPlugin | Maps `ShoppingListItemTransfer` transfer properties to `ItemTransfer` transfer properties | None | Spryker\Client\Merchant\Plugin\ShoppingList |
+| ProductOfferShoppingListItemMapperPlugin | Maps Product Offer data to `ShoppingListItemTransfer`. | None | Spryker\Client\ProductOfferShoppingList\Plugin\ShoppingList |
+| ProductOfferShoppingListItemToItemMapperPlugin | Maps `ShoppingListItemTransfer` transfer properties to `ItemTransfer` transfer properties. | None | Spryker\Client\ProductOfferShoppingList\Plugin\ShoppingList |
+| MerchantShoppingListItemToItemMapperPlugin | Maps `ShoppingListItemTransfer` transfer properties to `ItemTransfer` transfer properties. | None | Spryker\Client\Merchant\Plugin\ShoppingList |
 
 **src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php**
 
@@ -373,31 +399,32 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following widgets were registered:
 
-| MODULE | TEST                                                                                                                                                               |
-| ----------------- |--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ProductOfferShoppingListItemMapperPlugin       | Go to the product detail page and select product offer. Add product offer to shopping list. Open the shopping list and verify that the correct merchant and price are stored    |
-| ProductOfferShoppingListItemToItemMapperPlugin       | Go to a product detail page and add a product offer to the shopping list. Open the shopping list and add the item to the cart. Make sure that the correct offer and price are added to the cart. |
-| MerchantShoppingListItemToItemMapperPlugin       | Go to the product detail page and add the product to the shopping list. Open the shopping list and add the item to the cart. Make sure that the correct merchant and price are added to the cart.   |
+| MODULE |  TEST  |
+| ----------------- |----------------------|
+| ProductOfferShoppingListItemMapperPlugin       | Go to the product details page and select product offer. Add product offer to a shopping list. Open the shopping list and verify that the correct merchant and price are stored.    |
+| ProductOfferShoppingListItemToItemMapperPlugin       | Go to a product details page and add a product offer to the shopping list. Open the shopping list and add the item to the cart. Make sure that the correct offer with its price are added to the cart. |
+| MerchantShoppingListItemToItemMapperPlugin       | Go to the product details page and add the marketplace product to the shopping list. Open the shopping list and add the item to the cart. Make sure that the correct merchant and price are added to the cart.   |
 
 {% endinfo_block %}
 
 Enable the following behaviors in Zed by registering the plugins:
 
-| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
 | ProductOfferShoppingListAddItemPreCheckPlugin | Checks if a product offer exists and refers to the required product. | None | Spryker\Zed\ProductOfferShoppingList\Communication\Plugin\ShoppingList; |
-| MerchantProductAddItemPreCheckPlugin | Validates that the merchant of the product offer is active and approved                |   | Spryker\Zed\MerchantProduct\Communication\Plugin\ShoppingList |
-| MerchantProductConcreteStorageCollectionExpanderPlugin | Expands `ProductConcreteStorage` transfers with the merchant reference| None | Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage |
-| MerchantProductOfferAddItemPreCheckPlugin | Validates that the merchant of the product offer is active and approved          |   | Spryker\Zed\MerchantProductOffer\Communication\Plugin\ShoppingList |
-| MerchantProductOfferShoppingListItemBulkPostSavePlugin | Expands a shopping list item that has a Product Offer with the merchant reference    |   | Spryker\Zed\MerchantProductOffer\Communication\Plugin\ShoppingList |
-| MerchantProductOfferShoppingListItemCollectionExpanderPlugin | Expands a `ShoppingListItemCollectionTransfer` with merchant data of the Product Offer| None | Spryker\Zed\MerchantProductOffer\Communication\Plugin\ShoppingList |
-| MerchantProductShoppingListItemBulkPostSavePlugin | Expands a Shopping list item with Product Concrete with Merchant reference |   | Spryker\Zed\MerchantProduct\Communication\Plugin\ShoppingList |
-| MerchantProductShoppingListItemCollectionExpanderPlugin | Expands a `ShoppingListItemCollectionTransfer` with Merchant data of Product. | None | Spryker\Zed\MerchantProduct\Communication\Plugin\ShoppingListExtension |
-| ProductOfferItemToShoppingListItemMapperPlugin | Maps `ItemTransfer.productOfferReference` transfer property to `ShoppingListItemTransfer.productOfferReference` transfer property | None | Spryker\Zed\ProductOfferShoppingList\Communication\Plugin\ShoppingList |
+| MerchantProductAddItemPreCheckPlugin | Ensures that the merchant owning the marketplace product is active and approved.              |   | Spryker\Zed\MerchantProduct\Communication\Plugin\ShoppingList |
+| MerchantProductConcreteStorageCollectionExpanderPlugin | Expands `ProductConcreteStorage` transfers with the merchant reference. | None | Spryker\Zed\MerchantProductStorage\Communication\Plugin\ProductStorage |
+| MerchantProductOfferAddItemPreCheckPlugin | Ensures that the merchant owning the product offer is active and approved.           |   | Spryker\Zed\MerchantProductOffer\Communication\Plugin\ShoppingList |
+| MerchantProductOfferShoppingListItemBulkPostSavePlugin | Expands a shopping list item that has a product offer with the merchant reference.    |   | Spryker\Zed\MerchantProductOffer\Communication\Plugin\ShoppingList |
+| MerchantProductOfferShoppingListItemCollectionExpanderPlugin | Expands a `ShoppingListItemCollectionTransfer` with merchant data of the product offer. | None | Spryker\Zed\MerchantProductOffer\Communication\Plugin\ShoppingList |
+| MerchantProductShoppingListItemBulkPostSavePlugin | Expands a shopping list item with product concrete and its merchant reference. |   | Spryker\Zed\MerchantProduct\Communication\Plugin\ShoppingList |
+| MerchantProductShoppingListItemCollectionExpanderPlugin | Expands a `ShoppingListItemCollectionTransfer` with merchant data of the marketplace product. | None | Spryker\Zed\MerchantProduct\Communication\Plugin\ShoppingListExtension |
+| ProductOfferItemToShoppingListItemMapperPlugin | Maps `ItemTransfer.productOfferReference` transfer property to `ShoppingListItemTransfer.productOfferReference` transfer property. | None | Spryker\Zed\ProductOfferShoppingList\Communication\Plugin\ShoppingList |
 
 **src/Pyz/Zed/ShoppingList/ShoppingListDependencyProvider.php**
 
@@ -464,21 +491,22 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that the following plugins were registered:
 
-| MODULE | TEST                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| ----------------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ProductOfferShoppingListAddItemPreCheckPlugin       | Go to a product page, containing product offers. Select product offer, e.g. `offer96`. Then open another tab and login to the merchant portal with the merchant's credentials who owns the previously selected product offer, in our case `michele@sony-experts.com`. Find product offer by SKU `offer96`. By changing the product offer by further pressing "Add to shopping list" on the PDP tab, check that product offer validation is enabled. The following cases may be checked: 1. Offer is not found 2. Product Offer does not belong to current store 3. The product offer is not active 4. The product offer is not approved |
-| ShoppingListItemProductConcreteHasValidStoreAddItemPreCheckPlugin       | Go to the product page, and select a concrete product. Then open another tab and login into the back office. Find concrete product selected on PDP by concrete SKU. Uncheck the current store option on the product edit page. Press "Add to shopping list" on the PDP tab to check that product store validation is enabled. An error message will appear.                                                                                                                                                                                                                                                                              |
-| MerchantProductOfferAddItemPreCheckPlugin       | Go to the product page, containing product offers. Select product offer, e.g. `offer96`. Then open another tab and login to the back office, and find the merchant who owns the previously selected product offer, in our case `michele@sony-experts.com`. By changing the product offer by further pressing "Add to shopping list" on the PDP tab, check that product offer merchant validation is enabled. The following cases may be checked: 1. The merchant of the product offer is not active 2. The merchant of the product offer is not approved.                                                                                            |
-| MerchantProductAddItemPreCheckPlugin       | Go to the product page and select a concrete product. Then open another tab and login to the admin page. Find the merchant that owns the concrete product and change its state. Press "Add to shopping list" on the PDP tab to check that product merchant status validation is enabled. The following cases may be checked: 1. The merchant that owns the product is not active 2. The merchant that owns the product is not approved.                                                                                                                                                                                                                                |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| MerchantProductOfferShoppingListItemCollectionExpanderPlugin       | Go to the product page, select merchant product offer, and add it to the shopping list. Open the shopping list and ensure the "Sold By" field shows the merchant that owns the corresponding product offer.                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| MerchantProductShoppingListItemCollectionExpanderPlugin       | Go to the product page, select merchant product, and add it to the shopping list. Open the shopping list, and ensure the "Sold By" field shows the merchant that owns the product.                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ProductOfferItemToShoppingListItemMapperPlugin       | Go to the product page, select merchant product offer, and add it to the cart. Open the cart and press "Add to shopping list." Ensure that the Shopping list contains selected product offers from the correct merchant.                                                                                                                                                                                                                                                                                                                                                                                                       |
-| MerchantProductShoppingListItemBulkPostSavePlugin       | Go to the product detail page and add concrete to the shopping list. Open the shopping list and add the item to the cart. Ensure that the correct product and merchant are transferred from the shopping list to the cart.                                                                                                                                                                                                                                                                                                                                                                                                              |
-| MerchantProductOfferShoppingListItemBulkPostSavePlugin       | Go to the product detail page and add concrete to the shopping list. Open the shopping list and add the item to the cart. Ensure that the correct product and merchant are transferred from the shopping list to the cart.                                                                                                                                                                                                                                                                                                                                                                                                                |
+| MODULE | TEST  |
+| ----------------- |-----------------|
+| ProductOfferShoppingListAddItemPreCheckPlugin       | Go to a product page containing product offers. Select a product offer, e.g. `offer96`. Then open another tab and login to the merchant portal with the merchant's credentials who owns the previously selected product offer, in our case `michele@sony-experts.com`. Find product offer by SKU `offer96`. By changing the product offer by further pressing "Add to shopping list" on the PDP tab, check that product offer validation is enabled. The following cases may be checked: <ol><li>Offer is not found.</li><li>Product offer does not belong to current store.</li><li>The product offer is not active.</li><li>The product offer is not approved.</li></ol> |
+| ShoppingListItemProductConcreteHasValidStoreAddItemPreCheckPlugin       | Go to the product page and select a concrete product. Then open another tab and log into the Back Office. Find a concrete product selected on PDP by a concrete SKU. Uncheck the current store option on the product edit page. Press "Add to shopping list" on the PDP tab to check that the product store validation is enabled. An error message will appear.     |
+| MerchantProductOfferAddItemPreCheckPlugin       | Go to the product page containing product offers. Select a product offer, e.g. `offer96`. Then open another tab and log into the Back office, and find the merchant who owns the previously selected product offer, in our case `michele@sony-experts.com`. By changing the product offer by further pressing "Add to shopping list" on the PDP tab, check that product offer merchant validation is enabled. The following cases may be checked: <ol><li>The merchant of the product offer is not active</li><li>The merchant of the product offer is not approved</li></ol>  |
+| MerchantProductAddItemPreCheckPlugin       | Go to the product page and select a concrete product. Then open another tab and log into the admin page. Find the merchant that owns the concrete product and change its state. Press "Add to shopping list" on the PDP tab to check that product merchant status validation is enabled. The following cases may be checked: <ol><li>The merchant that owns the product is not active</li><li>The merchant that owns the product is not approved. </li></ol>|
+| MerchantProductOfferShoppingListItemCollectionExpanderPlugin       | Go to the product page, select the merchant product offer, and add it to the shopping list. Open the shopping list and ensure the "Sold By" field shows the merchant that owns the corresponding product offer. |
+| MerchantProductShoppingListItemCollectionExpanderPlugin       | Go to the product page, select a marketplace product, and add it to the shopping list. Open the shopping list, and ensure that the "Sold By" field shows the merchant that owns the product.  |
+| ProductOfferItemToShoppingListItemMapperPlugin       | Go to the products page, select a merchant product offer and add it to the cart. Open the cart and press "Add to shopping list." Ensure that the shopping list contains the selected product offers from the correct merchant.  |
+| MerchantProductShoppingListItemBulkPostSavePlugin       | Go to the product details page and add a marketplace product to the shopping list. Open the shopping list and add the item to the cart. Ensure that the correct product and merchant are transferred from the shopping list to the cart.    |
+| MerchantProductOfferShoppingListItemBulkPostSavePlugin       | Go to the product details page and add marketplace product to the shopping list. Open the shopping list and add the item to the cart. Ensure that the correct product and merchant are transferred from the shopping list to the cart.  |
 
 {% endinfo_block %}
 
@@ -487,4 +515,4 @@ Make sure that the following plugins were registered:
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | -|
 | Shopping Lists | {{page.version}} | [Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html)  |
-| Glue API: Marketplace Shopping Lists feature integration | {{page.version}} |  [Glue API: Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/glue/{{page.version}}/marketplace-shopping-lists-feature-integration.html)  |
+| Glue API: Marketplace Shopping Lists feature integration | {{page.version}} |  <!---[Glue API: Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/glue/{{page.version}}/marketplace-shopping-lists-feature-integration.html)-->  |

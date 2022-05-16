@@ -262,7 +262,9 @@ entries:
 
           - title: Marketplace Shopping Lists feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-shopping-lists-feature-integration.html
-            - "202108.0"
+            include_versions:
+            - "202204.0"
+
 
           - title: Marketplace Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-wishlist-feature-integration.html

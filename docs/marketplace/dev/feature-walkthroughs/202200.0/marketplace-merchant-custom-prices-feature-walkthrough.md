@@ -1,10 +1,10 @@
 ---
 title: Marketplace Merchant Custom Prices feature walkthrough
-description: Marketplace Merchant Customer Specific Prices lets merchants in Merchant Portal create specific product price for the customer that merchant has relationship with.
+description: description: Marketplace Merchant Custom Prices feature lets merchants to define custom prices for specific business units of B2B customers via Merchant Portal Product Price UI.
 template: feature-walkthrough-template
 ---
 
-The *Marketplace Merchant Custom Prices* feature lets merchants in create and edit specific product price for the Customer Business Unit that current merchant has relationship with a help of Merchant Portal UI that is provided.
+The *Marketplace Merchant Custom Prices* feature lets merchants to define custom prices for specific business units of B2B customers via Merchant Portal Product Price UI.
 
 {% info_block warningBox "User documentation" %}
 
@@ -16,7 +16,7 @@ To learn more about the Marketplace Merchant Custom Prices feature in Merchant P
 
 The following diagram illustrates the dependencies between the modules for the *Marketplace Merchant Custom Prices* feature.
 
-![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/5eb0f9ca-ed53-4f7f-a968-38b647712678.png?utm_medium=live&utm_source=custom)
+![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/1a2032a6-6339-44ed-9de0-3734af0981cc.png?utm_medium=live&utm_source=custom)
 
 | NAME | DESCRIPTION |
 | --- | --- |
@@ -30,4 +30,3 @@ The following diagram illustrates the dependencies between the modules for the *
 The following schema illustrates the Marketplace Merchant Portal Customer Specific Prices domain model:
 
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/5eb0f9ca-ed53-4f7f-a968-38b647712678.png?utm_medium=live&utm_source=custom)
-

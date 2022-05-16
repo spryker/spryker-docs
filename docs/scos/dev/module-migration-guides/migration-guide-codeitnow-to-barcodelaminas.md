@@ -4,26 +4,27 @@ description:
 template: module-migration-guide-template
 ---
 
-This document describes how to switch from using deprecated `CodeItNow` module to `BarcodeLaminas`.
+Because of a DMCA takedown of a 3rd party library that the `spryker/code-it-now` module uses, the `spryker/code-it-now` module is deprecated. Therefore, migration to the `BarcodeLaminas` module is required.
+
+This document describes how to replace the deprecated `CodeItNow` module with `BarcodeLaminas`.
 
 ## Migrating from `CodeItNow` to `BarcodeLaminas`
 
 *Estimated migration time: 10 minutes*
 
-Because of a DMCA takedown of a 3rd party library the `spryker/code-it-now` module was using a replacement for it was required. The `spryker/code-it-now` module is for that reason now deprecated and a migration to the new module is required.
+To migrate from `CodeItNow` to `BarcodeLaminas`, follow these steps:
 
-1. Remove the deprecated module:
+1. Remove the deprecated `CodeItNow` module:
 ```bash
 composer remove spryker/code-it-now
 ```
 
-2. Install the replacement:
-
+2. Install the replacement `BarcodeLaminas` module:
 ```bash
 composer require spryker/barcode-laminas
 ```
 
-3. Replace the old `Code128BarcodeGeneratorPlugin` from `spryker/code-it-now` with the new plugin from `spryker/barcode-laminas` in the dependency provider:
+3. In the dependency provider, replace the old `Code128BarcodeGeneratorPlugin` from `spryker/code-it-now` with the new plugin from `spryker/barcode-laminas`:
 
 **src/Pyz/Service/Barcode/BarcodeDependencyProvider.php**
 
@@ -53,6 +54,6 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-To verify that the `BarcodeLaminas` has been installed and works correctly, in the Back Office, go to **Catalog** > **Product Barcodes** and check that barcode images are generated successfully.   
+To verify that `BarcodeLaminas` has been installed and works correctly, in the Back Office, go to **Catalog&nbsp;<span aria-label="and then">></span> Product Barcodes** and check that barcode images are generated successfully.   
 
 {% endinfo_block %}

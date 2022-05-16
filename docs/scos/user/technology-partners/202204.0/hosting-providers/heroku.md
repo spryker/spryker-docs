@@ -1,6 +1,8 @@
 ---
 title: Heroku
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/user/technology-partners/202200.0/hosting-providers/heroku.html
 ---
 
 ## Partner Information

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/metaways
   - /docs/metaways
   - /docs/en/metaways
+  - /docs/scos/user/technology-partners/202200.0/hosting-providers/metaways.html
 ---
 
 ## Partner Information

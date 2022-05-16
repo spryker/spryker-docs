@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/logging-in-to-the-back-office
   - /docs/logging-in-to-the-back-office
   - /docs/en/logging-in-to-the-back-office
+  - /docs/scos/user/back-office-user-guides/201811.0/logging-in-to-the-back-office.html
+  - /docs/scos/user/back-office-user-guides/201903.0/logging-in-to-the-back-office.html
+  - /docs/scos/user/back-office-user-guides/201907.0/logging-in-to-the-back-office.html
+  - /docs/scos/user/back-office-user-guides/202005.0/logging-in-to-the-back-office.html
 ---
 
 To be able to use the Back Office, you have to log in to it. You can log in via:
@@ -25,6 +29,7 @@ Only [active](/docs/scos/user/back-office-user-guides/{{page.version}}/users/man
 
 ## Logging in with a regular Back Office user account
 <a name="prerequisites"></a>
+
 {% info_block warningBox "Prerequisites" %}
 
 To log in with a Back Office user account, you should have the account preliminary created either [by the existing Back Office user](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html#creating-users) or [programmatically by a developer](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html).

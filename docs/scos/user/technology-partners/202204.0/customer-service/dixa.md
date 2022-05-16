@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/dixa
   - /docs/dixa
   - /docs/en/dixa
+  - /docs/scos/user/technology-partners/202200.0/customer-service/dixa.html
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

@@ -113,27 +113,6 @@ Make sure that the following changes have been applied in transfer objects:
 
 ### 3) Add translations
 
-Add translations as follows:
-
-1. Append glossary for the feature:
-
-```yaml
-quick-order.input-label.merchant,Merchant,en_US
-quick-order.input-label.merchant,Händler,de_DE
-```
-
-2. Import data:
-
-```bash
-console data:import glossary
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that in the database the configured data are added to the `spy_glossary` table.
-
-{% endinfo_block %}
-
 Generate new translation cache for Zed:
 
 ```bash
@@ -312,6 +291,7 @@ use Spryker\Shared\MerchantProductSearch\MerchantProductSearchConfig;
 use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductAbstractMapExpanderPlugin;
 use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductPageDataExpanderPlugin as MerchantMerchantProductPageDataExpanderPlugin;
 use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductPageDataLoaderPlugin as MerchantMerchantProductPageDataLoaderPlugin;
+use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductProductConcretePageMapExpanderPlugin;
 use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider as SprykerProductPageSearchDependencyProvider;
 
 class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDependencyProvider
@@ -353,10 +333,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     protected function getConcreteProductMapExpanderPlugins(): array
     {
         return [
-            new ProductConcreteProductListPageMapExpanderPlugin(),
-            new ProductImageProductConcretePageMapExpanderPlugin(),
             new MerchantProductProductConcretePageMapExpanderPlugin(),
-            new MerchantProductOfferProductConcretePageMapExpanderPlugin(),
         ];
     }
 }

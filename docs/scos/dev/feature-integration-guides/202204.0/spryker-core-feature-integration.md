@@ -11,6 +11,7 @@ redirect_from:
   - /docs/spryker-core-feature-integration
   - /docs/en/spryker-core-feature-integration
   - /v20/docs/install-core-module
+  - /docs/scos/dev/feature-integration-guides/202200.0/spryker-core-feature-integration.html
 ---
 
 This document describes how to integrate the Spryker Core feature into a Spryker project.

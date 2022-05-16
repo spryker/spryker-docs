@@ -64,8 +64,8 @@ Product blocks are blocks that can be embedded in the product template, for whic
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html)  |
-| [Manage CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-cms-blocks.html)  |
+| [Create CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/create-cms-blocks.html)  |
+| [Edit CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-cms-blocks.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/managing-customer-access
   - /docs/en/managing-customer-access
   - /docs/scos/user/back-office-user-guides/202204.0/customer/customer-customer-access-customer-groups/managing-customer-access.html
+  - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customer-access.html
 related:
   - title: Hide Content from Logged out Users Overview
     link: docs/scos/user/features/page.version/customer-access-feature-overview.html

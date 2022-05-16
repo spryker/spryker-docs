@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-glossary
   - /docs/managing-glossary
   - /docs/en/managing-glossary
+  - /docs/scos/user/back-office-user-guides/202200.0/administration/glossary/managing-glossary.html
 ---
 
 This article describes how to manage translations.

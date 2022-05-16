@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-navigation-elements
   - /docs/managing-navigation-elements
   - /docs/en/managing-navigation-elements
+  - /docs/scos/user/back-office-user-guides/202200.0/content/navigation/managing-navigation-elements.html
 ---
 
 This topic describes how to manage [navigation elements](/docs/scos/user/features/{{page.version}}/navigation-feature-overview.html#navigation-element).

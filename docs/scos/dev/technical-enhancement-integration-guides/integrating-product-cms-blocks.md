@@ -31,115 +31,115 @@ To install the Product CMS Block in your project, follow the steps described in 
 1. Install the CMS Block Product Connector module with composer: 
 
 ```bash
-composer require spryker/cms-block-product-connector:"^1.0.0"
+composer require spryker/cms-block-product-connector:"^1.4.0"
 ```
 
-2. Register the form plugin by adding `CmsBlockProductFormPlugin` to the CMS Block GUI dependency provider `\Pyz\Zed\CmsBlockGui\CmsBlockGuiDependencyProvider`.
+2. Register the CMS block form plugin.
+Add `CmsBlockProductAbstractFormPlugin` to the CMS Block GUI dependency provider:
+
+**src/Pyz/Zed/CmsBlockGui/CmsBlockGuiDependencyProvider.php**
 
 ```php
 <?php
+
 namespace Pyz\Zed\CmsBlockGui;
 
-use Spryker\Zed\CmsBlockProductConnector\Communication\Plugin\CmsBlockProductFormPlugin;
+use Spryker\Zed\CmsBlockGui\CmsBlockGuiDependencyProvider as CmsBlockGuiCmsBlockGuiDependencyProvider;
+use Spryker\Zed\CmsBlockProductConnector\Communication\Plugin\CmsBlockProductAbstractFormPlugin;
 
 class CmsBlockGuiDependencyProvider extends CmsBlockGuiCmsBlockGuiDependencyProvider
 {
     /**
-    * @return array
-    */
-    protected function getCmsBlockFormPlugins()
+     * @return array<\Spryker\Zed\CmsBlockGui\Communication\Plugin\CmsBlockFormPluginInterface>
+     */
+    protected function getCmsBlockFormPlugins(): array
     {
-        return = array_merge(parent::getCmsBlockFormPlugins(), [
-            new CmsBlockProductFormPlugin(),
+        return array_merge(parent::getCmsBlockFormPlugins(), [
+            new CmsBlockProductAbstractFormPlugin(),
         ]);
     }
 }
 ```
 
-3. Register the form handler plugin by adding  `CmsBlockProductConnectorUpdatePlugin` to the CMS Block dependency provider `Pyz\Zed\CmsBlock\CmsBlockDependencyProvider`.
+3. Register the CMS block form handler plugin.
+Add `CmsBlockProductAbstractUpdatePlugin` to the CMS Block dependency provider:
+
+**src/Pyz/Zed/CmsBlock/CmsBlockDependencyProvider.php**
 
 ```php
 <?php
+
 namespace Pyz\Zed\CmsBlock;
 
-use Spryker\Zed\CmsBlockProductConnector\Communication\Plugin\CmsBlockProductConnectorUpdatePlugin;
-
+use Spryker\Zed\CmsBlock\CmsBlockDependencyProvider as CmsBlockCmsBlockDependencyProvider;
+use Spryker\Zed\CmsBlockProductConnector\Communication\Plugin\CmsBlockProductAbstractUpdatePlugin;
 
 class CmsBlockDependencyProvider extends CmsBlockCmsBlockDependencyProvider
 {
-    protected function getCmsBlockUpdatePlugins()
+    /**
+     * @return array<\Spryker\Zed\CmsBlockExtension\Dependency\Plugin\CmsBlockUpdatePluginInterface>
+     */
+    protected function getCmsBlockUpdatePlugins(): array
     {
         return array_merge(parent::getCmsBlockUpdatePlugins(), [
-            new CmsBlockProductConnectorUpdatePlugin()
+            new CmsBlockProductAbstractUpdatePlugin(),
         ]);
     }
 }
 ```
 
-4. Register the collector plugin by adding  `CmsBlockProductConnectorCollectorPlugin` to the Collector dependency provider `\Pyz\Zed\Collector\CollectorDependencyProvider`.
-
-```php
-<?php
-namespace Pyz\Zed\Collector;
-
-...
-
-class CollectorDependencyProvider extends SprykerCollectorDependencyProvider
-{
-    public function provideBusinessLayerDependencies(Container $container)
-    {
-        ...
-        $container[self::STORAGE_PLUGINS] = function (Container $container) {
-            return [
-                ...
-                CmsBlockProductConnectorConstants::RESOURCE_TYPE_CMS_BLOCK_PRODUCT_CONNECTOR => new CmsBlockProductConnectorCollectorPlugin(),
-            ];
-        };
-    }
-}
-```
-
-5. Register the product list plugin (optional).
+4. Register the product list plugin (optional).
 To show which product abstracts are assigned to a block on a block view page, add `CmsBlockProductAbstractListViewPlugin` to the CMS Block GUI dependency provider.
 
+**src/Pyz/Zed/CmsBlockGui/CmsBlockGuiDependencyProvider.php**
+
 ```php
 <?php
+
 namespace Pyz\Zed\CmsBlockGui;
 
-...
+use Spryker\Zed\CmsBlockGui\CmsBlockGuiDependencyProvider as CmsBlockGuiCmsBlockGuiDependencyProvider;
+use Spryker\Zed\CmsBlockProductConnector\Communication\Plugin\CmsBlockProductAbstractListViewPlugin;
 
 class CmsBlockGuiDependencyProvider extends CmsBlockGuiCmsBlockGuiDependencyProvider
 {
-    ...
-
     /**
-    * @return array
-    */
-    protected function getCmsBlockViewPlugins()
+     * @return array<\Spryker\Zed\CmsBlockGui\Communication\Plugin\CmsBlockViewPluginInterface>
+     */
+    protected function getCmsBlockViewPlugins(): array
     {
-       return array_merge(parent::getCmsBlockViewPlugins(), [
-           new CmsBlockProductAbstractListViewPlugin(),
-       ]);
-    }
-}
-```
-
-6. Register the block list to the product abstract view (optional).
-To show which blocks are assigned to a product abstract on a product abstract view page, add `CmsBlockProductAbstractBlockListViewPlugin` to the Product Management dependency provider.
-
-```php
-<?php
-namespace Pyz\Zed\ProductManagement;
-
-...
-
-class ProductManagementDependencyProvider extends SprykerProductManagementDependencyProvider
-{
-    protected function getProductAbstractViewPlugins()
-    {
-        return array_merge(parent::getProductAbstractViewPlugins(), [
-            new CmsBlockProductAbstractBlockListViewPlugin()
+        return array_merge(parent::getCmsBlockViewPlugins(), [
+            new CmsBlockProductAbstractListViewPlugin(),
         ]);
     }
 }
+
+```
+
+5. Register the block list to the product abstract view (optional).
+To show which blocks are assigned to a product abstract on a product abstract view page, add `CmsBlockProductAbstractBlockListViewPlugin` to the Product Management dependency provider.
+
+**src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductManagement;
+
+use Spryker\Zed\CmsBlockProductConnector\Communication\Plugin\CmsBlockProductAbstractBlockListViewPlugin;
+use Spryker\Zed\ProductManagement\ProductManagementDependencyProvider as SprykerProductManagementDependencyProvider;
+
+class ProductManagementDependencyProvider extends SprykerProductManagementDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\ProductManagement\Communication\Plugin\ProductAbstractViewPluginInterface>
+     */
+    protected function getProductAbstractViewPlugins(): array
+    {
+        return [
+            new CmsBlockProductAbstractBlockListViewPlugin(),
+        ];
+    }
+}
+
 ```

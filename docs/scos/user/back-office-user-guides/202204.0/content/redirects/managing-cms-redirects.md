@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-cms-redirects
   - /docs/managing-cms-redirects
   - /docs/en/managing-cms-redirects
+  - /docs/scos/user/back-office-user-guides/202200.0/content/redirects/managing-cms-redirects.html
 ---
 
 This topic describes how to manage redirects in the Back Office.

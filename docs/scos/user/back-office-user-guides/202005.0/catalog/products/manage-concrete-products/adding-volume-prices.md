@@ -9,6 +9,7 @@ redirect_from:
   - /v5/docs/adding-volume-prices
   - /v5/docs/en/adding-volume-prices
   - /docs/scos/user/back-office-user-guides/202005.0/catalog/products/managing-products/adding-volume-prices.html
+  - /docs/scos/user/back-office-user-guides/202005.0/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
 related:
   - title: Volume Prices Feature Overview
     link: docs/scos/user/features/page.version/prices-feature-overview/volume-prices-overview.html

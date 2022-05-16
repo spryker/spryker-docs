@@ -18,6 +18,7 @@ redirect_from:
   - /2021080/docs/en/international-tax-rates-sets-1
   - /docs/international-tax-rates-sets-1
   - /docs/en/international-tax-rates-sets-1
+  - /docs/scos/user/features/202200.0/tax-feature-overview.html
 ---
 
 The *Tax* feature lets you define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.

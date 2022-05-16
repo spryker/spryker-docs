@@ -8,6 +8,7 @@ originalArticleId: 057fbf19-a8ff-457f-8735-39b3c65ac5f6
 redirect_from:
   - /v3/docs/creating-and-managing-product-bundles
   - /v3/docs/en/creating-and-managing-product-bundles
+  - /docs/scos/user/back-office-user-guides/201907.0/products/products/managing-products/creating-and-managing-product-bundles.html
 related:
   - title: Abstract Product- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html

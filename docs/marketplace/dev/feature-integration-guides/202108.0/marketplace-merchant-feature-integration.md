@@ -1443,6 +1443,12 @@ class UrlStorageDependencyProvider extends SprykerUrlDependencyProvider
 }
 ```
 
+{% info_block warningBox "Verification" %}
+
+Make sure that you can open the merchant page at link `http://yves.de.demo-spryker.com/de/merchant/spryker`.
+
+{% endinfo_block %}
+
 2. Enable Javascript and CSS changes:
 
 ```bash

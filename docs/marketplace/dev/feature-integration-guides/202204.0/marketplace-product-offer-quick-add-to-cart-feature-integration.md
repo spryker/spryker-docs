@@ -70,6 +70,35 @@ Make sure that in the database the configured data are added to the `spy_glossar
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                         | DESCRIPTION                                                                                    | PREREQUISITES | NAMESPACE                                                                     |
-|----------------------------------------------------------------|------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
-                             |               | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch      |
+| PLUGIN                                 | DESCRIPTION                                              | PREREQUISITES | NAMESPACE                                                 |
+|----------------------------------------|----------------------------------------------------------|---------------|-----------------------------------------------------------|
+| ProductOfferQuickOrderItemMapperPlugin | Maps product offer reference to QuickOrderItem transfer. |               | SprykerShop\Yves\ProductOfferWidget\Plugin\QuickOrderPage |
+
+
+**src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php**
+
+```php
+<?php
+namespace Pyz\Yves\QuickOrderPage;
+
+use SprykerShop\Yves\ProductOfferWidget\Plugin\QuickOrderPage\ProductOfferQuickOrderItemMapperPlugin;
+
+class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyProvider
+{
+    /**
+     * @return array<\SprykerShop\Yves\QuickOrderPageExtension\Dependency\Plugin\QuickOrderItemMapperPluginInterface>
+     */
+    protected function getQuickOrderItemMapperPlugins(): array
+    {
+        return [
+            new ProductOfferQuickOrderItemMapperPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that merchant product can be found by sku and added to Cart with proper merchant
+
+{% endinfo_block %}

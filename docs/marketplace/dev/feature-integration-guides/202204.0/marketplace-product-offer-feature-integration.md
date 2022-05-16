@@ -47,7 +47,6 @@ Make sure that the following modules were installed:
 | ProductOfferValidityGui             | spryker/product-offer-validity-gui                          |
 | ProductOfferStorage                 | spryker/product-offer-storage                               |
 | ProductOfferStorageExtension        | spryker/product-offer-storage-extension                     |
-| MerchantProductOfferWidgetExtension | vendor/spryker-shop/merchant-product-offer-widget-extension |
 
 {% endinfo_block %}
 
@@ -1104,7 +1103,6 @@ Enable the following behaviors by registering the plugins:
 | ProductOfferValidityProductOfferExpanderPlugin              | Expands product offer data with validity dates when the product offer is fetched.                                      |                                       | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer               |
 | ProductOfferValidityConsole                                 | Updates product offers to have the `isActive` flag to be `false` where their validity date is not current anymore.     |                                       | Spryker\Zed\ProductOfferValidity\Communication\Console                           |
 | MerchantProductOfferStorageMapperPlugin                     | Maps Merchant foreign key of `ProductOffer` transfer object to Merchant Id `ProductOfferStorage` transfer object.      |                                       | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferStorage |
-| ProductOfferQuickOrderItemMapperPlugin                      | Maps product offer reference to QuickOrderItem transfer.                                                               |                                       | SprykerShop\Yves\ProductOfferWidget\Plugin\QuickOrderPage                        |
 | MerchantProductOfferWidgetRouteProviderPlugin               | Adds Routes to the RouteCollection.                                                                                    |                                       | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\Router                        |
 
 **src/Pyz/Client/Search/SearchDependencyProvider.php**
@@ -1516,10 +1514,11 @@ If installed before, not needed.
 
 Verify that the following modules were installed:
 
-| MODULE                     | EXPECTED DIRECTORY                         |
-|----------------------------|--------------------------------------------|
-| MerchantProductOfferWidget | spryker-shop/merchant-product-offer-widget |
-| ProductOfferWidget         | spryker-shop/product-offer-widget          |
+| MODULE                              | EXPECTED DIRECTORY                                   |
+|-------------------------------------|------------------------------------------------------|
+| MerchantProductOfferWidget          | spryker-shop/merchant-product-offer-widget           |
+| ProductOfferWidget                  | spryker-shop/product-offer-widget                    |
+| MerchantProductOfferWidgetExtension | spryker-shop/merchant-product-offer-widget-extension |
 
 {% endinfo_block %}
 

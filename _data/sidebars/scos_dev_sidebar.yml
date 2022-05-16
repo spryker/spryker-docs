@@ -2803,7 +2803,7 @@ entries:
     - title: Migration Guide - WebProfiler
       url: /docs/scos/dev/module-migration-guides/migration-guide-webprofiler.html
     - title: Migration Guide - Wishlist
-      url: /docs/scos/dev/module-migration-guides/migration-guide-wishlist.htm
+      url: /docs/scos/dev/module-migration-guides/migration-guide-wishlist.html
   - title: DevOps migration guides
     include_versions:
     - "202001.0"

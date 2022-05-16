@@ -10,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/managing-punch-out-connections
   - /docs/managing-punch-out-connections
   - /docs/en/managing-punch-out-connections
+  - /docs/scos/user/back-office-user-guides/201811.0/punch-out/managing-punch-out-connections.html
+  - /docs/scos/user/back-office-user-guides/201903.0/punch-out/managing-punch-out-connections.html
 ---
 
 This topic describes how to create and manage the Punch Out connections.
@@ -24,7 +26,7 @@ Each section contains reference information. Make sure to review it before you s
 
 To connect your ERP with the Spryker Commerce OS via the Punch Out protocol, you need to create a Punch Out connection.
 To create the connection:
-1. On the *Punch Out Connections* page, in the top right corner, click **+New Connection**. 
+1. On the *Punch Out Connections* page, in the top right corner, click **+New Connection**.
 2. On the *Create Transferred Cart Connection* page, enter and select the attributes.
 3. Click **Create**.
 
@@ -43,7 +45,7 @@ The following table describes the attributes that are used when creating a conne
 | Username | Required field for the OCI connection setup that needs to be sent to the buyer's ERP system. Username validates the Punch Out setup request. |
 | Password | Required field for the OCI connection setup that needs to be sent to the buyer's ERP system. The password validates the Punch Out setup request. |
 | Type | Drop-down list with the available types of the connection, e.g., *Setup Request*. |
-| Set Description length on "Transfer to Requisition" | This field controls the maximum length on the description section for a transferred cart, e.g., 128. Any characters outside the limit will be cut off on a transferred cart. | 
+| Set Description length on "Transfer to Requisition" | This field controls the maximum length on the description section for a transferred cart, e.g., 128. Any characters outside the limit will be cut off on a transferred cart. |
 | Cart Encoding | Drop-down list with the available cart encoding types: base64, url-encoded, no-encoding. This configuration varies based on the buyer's ERP requirements. Base64 is selected by default. |
 | Totals Mode | Drop-down list with the available options: Line and Header. This configuration allows you to set whether the cart total is set in the header or on the line level, and it varies based on the buyer's ERP requirements. The header is not supported using the OCI connection type. |
 | Cart Mapping | JSON mapping definition for cart mapping. |
@@ -76,7 +78,7 @@ The following table describes the attributes that are used when editing a connec
 | Username | Required field for the OCI connection setup that needs to be sent to the buyer's ERP system. Username validates the Punch Out setup request. |
 | Password | Required field for the OCI connection setup that needs to be sent to the buyer's ERP system. The password validates the Punch Out setup request. |
 | Type | Drop-down list with the available types of the connection, e.g., *Setup Request*. |
-| Set Description length on "Transfer to Requisition" | This field controls the maximum length on the description section for a transferred cart, e.g., 128. Any characters outside the limit will be cut off on a transferred cart. | 
+| Set Description length on "Transfer to Requisition" | This field controls the maximum length on the description section for a transferred cart, e.g., 128. Any characters outside the limit will be cut off on a transferred cart. |
 | Cart Encoding | Drop-down list with the available cart encoding types: base64, url-encoded, no-encoding. This configuration varies based on the buyer's ERP requirements. Base64 is selected by default. |
 | Totals Mode | Drop-down list with the available options: Line and Header. This configuration allows you to set whether the cart total is set in the header or on the line level, and it varies based on the buyer's ERP requirements. The header is not supported using the OCI connection type. |
 | Cart Mapping | JSON mapping definition for cart mapping. |
@@ -96,5 +98,3 @@ To view the entry points, in the **Actions** column of *List of Punch Out Connec
 To activate or deactivate a connection, in the *Actions* column of *List of Punch Out Connections*, click:
 * **Activate** to activate a connection.
 * **Deactivate** to deactivate a connection.
-
-

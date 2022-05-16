@@ -8,6 +8,7 @@ originalArticleId: e08c223b-cd26-4c57-a977-83eee9370aee
 redirect_from:
   - /v1/docs/crefopay-configuration
   - /v1/docs/en/crefopay-configuration
+  - /docs/scos/user/technology-partners/201811.0/payment-partners/crefopay/installing-and-configuring-crefopay.html
 related:
   - title: Integrating CrefoPay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/integrating-crefopay.html

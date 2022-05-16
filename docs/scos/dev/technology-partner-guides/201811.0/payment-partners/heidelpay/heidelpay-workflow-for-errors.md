@@ -8,6 +8,7 @@ originalArticleId: c2aa8f50-fd92-4573-b1eb-d7420b69fa49
 redirect_from:
   - /v1/docs/heidelpay-error-workflow
   - /v1/docs/en/heidelpay-error-workflow
+  - /docs/scos/user/technology-partners/201811.0/payment-partners/heidelpay/heidelpay-workflow-for-errors.html
 related:
   - title: Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay.html
@@ -44,4 +45,4 @@ The only exception is a redirect to the URL after the `placeOrderAction` (`/chec
  $config[HeidelpayConstants::CONFIG_YVES_CHECKOUT_PAYMENT_FAILED_URL] = 'http://' . $config[ApplicationConstants::HOST_YVES] . '/heidelpay/payment-failed?error_code=%s';
  ```
 Data flow containing information about the Heidelpay transaction error is marked red.
-[Heidelpay error handling workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/heidelpay-workflow-for-errors.md/heidelpay-error-handling-workflow.png) 
+[Heidelpay error handling workflow](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/heidelpay-workflow-for-errors.md/heidelpay-error-handling-workflow.png)

@@ -9,6 +9,7 @@ redirect_from:
   - /v5/docs/en/multiple-shared-shopping-lists
   - /v5/docs/shopping-list
   - /v5/docs/en/shopping-list
+  - /docs/scos/user/features/202005.0/shopping-lists-feature-overview/shopping-list.html
 last_updated: Sep 15, 2020
 template: concept-topic-template
 ---

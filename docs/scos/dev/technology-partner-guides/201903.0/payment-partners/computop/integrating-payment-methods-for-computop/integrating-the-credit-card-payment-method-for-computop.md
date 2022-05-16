@@ -8,6 +8,7 @@ originalArticleId: d3e31474-ec4c-43d6-afa5-0d19c64fde73
 redirect_from:
   - /v2/docs/computop-credit-card
   - /v2/docs/en/computop-credit-card
+  - /docs/scos/user/technology-partners/201903.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html
@@ -32,7 +33,7 @@ related:
 ---
 
 Example State Machine:
-![Click Me](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/computop-credit-card-flow-example.png) 
+![Click Me](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/computop-credit-card-flow-example.png)
 
 ## Front-end Integration
 
@@ -93,4 +94,3 @@ You capture a partial amount of the authorization => The rest of the amount forf
 * [Configure PayNow payment method for Computop](/docs/scos/user/technology-partners/201903.0/payment-partners/computop.html-paynow)
 * [Configure PayPal payment method for Computop](/docs/scos/user/technology-partners/201903.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paypal-payment-method-for-computop.html)
 * [Configure Sofort payment method for Computop](/docs/scos/user/technology-partners/201903.0//payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html)
-

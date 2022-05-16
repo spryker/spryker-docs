@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/retrieving-concrete-product-prices
   - /docs/retrieving-concrete-product-prices
   - /docs/en/retrieving-concrete-product-prices
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-products/concrete-products/retrieving-concrete-product-prices.html
+  - /docs/scos/dev/glue-api-guides/201907.0/managing-products/concrete-products/retrieving-concrete-product-prices.html
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-products/concrete-products/retrieving-concrete-product-prices.html
 ---
 
 This endpoint allows retrieving prices of concrete products.

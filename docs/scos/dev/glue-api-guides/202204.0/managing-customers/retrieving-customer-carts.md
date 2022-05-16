@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/retrieving-customer-carts
   - /docs/retrieving-customer-carts
   - /docs/en/retrieving-customer-carts
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-customers/retrieving-customer-carts.html
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/retrieving-customer-carts.html
+  - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/retrieving-customer-carts.html
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/retrieving-customer-carts.html
 related:
   - title: Managing carts of registered users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html

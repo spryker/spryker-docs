@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/updating-payment-data
   - /docs/updating-payment-data
   - /docs/en/updating-payment-data
+  - /docs/scos/dev/glue-api-guides/202005.0/checking-out/updating-payment-data.html
 ---
 
 This endpoint allows completing payment with payment verification of a third-party resource.

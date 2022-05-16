@@ -10,7 +10,8 @@ redirect_from:
   - /2021080/docs/en/deploy-file-reference-10
   - /docs/deploy-file-reference-10
   - /docs/en/deploy-file-reference-10
-  - /docs/scos/dev/the-docker-sdk/202108.0/deploy-file-reference-1.0.html
+  - /docs/scos/dev/the-docker-sdk/202204.0/deploy-file-reference-1.0.html
+  - /docs/scos/dev/installation/spryker-in-docker/docker-sdk/deploy-file-reference-1.0.html
 related:
   - title: Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
@@ -747,12 +748,12 @@ docker:
 Defines the composer settings to be used during deployment.
 
 1. `mode:` - defines whether packages should be installed from the  `require` or `require-dev` section of `composer.json`. Possible values are `--no-dev` and `-dev`. This variable is optional. If not specified, the default values apply:
-	
+
   * [Development mode]: `mode: --dev`
 	* [Demo mode]: `mode: --no-dev`
 
 2. `autoload:` - defines composer autoload options. Possible values are `--optimize` and `--classmap-authoritative`. This variable is optional. If not specified, the default values apply:
-	
+
   * Development mode: `autoload: --optimize`
 	* Demo mode: `autoload: --classmap-authoritative`
 
@@ -821,7 +822,7 @@ A real-time log monitoring *Service*.
 
   - `dashboard: engine:` - possible value is `dashboard`.
   - `dashboard: endpoints:` - defines the service's port and web interface that can be accessed via given endpoints.
-  - 
+  -
 ***
 
 ### database:

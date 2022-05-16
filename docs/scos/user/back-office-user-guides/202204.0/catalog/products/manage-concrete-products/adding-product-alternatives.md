@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/adding-product-alternatives
   - /docs/adding-product-alternatives
   - /docs/en/adding-product-alternatives
+  - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-concrete-products/adding-product-alternatives.html
 related:
   - title: Alternative Products Feature Overview
     link: docs/scos/user/features/page.version/alternative-products-feature-overview.html

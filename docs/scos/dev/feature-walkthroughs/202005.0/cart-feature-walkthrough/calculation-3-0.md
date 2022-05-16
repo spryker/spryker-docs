@@ -8,6 +8,7 @@ originalArticleId: 03efb98e-e7ee-4bd6-a832-915307e39582
 redirect_from:
   - /v5/docs/calculation-3-0
   - /v5/docs/en/calculation-3-0
+  - /docs/scos/user/features/202005.0/cart-feature-overview/calculation/calculation-3.0.html
 related:
   - title: Cart Functionality
     link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-functionality.html

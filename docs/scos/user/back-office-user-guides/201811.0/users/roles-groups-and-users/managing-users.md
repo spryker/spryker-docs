@@ -8,6 +8,7 @@ originalArticleId: 18e23108-6483-493b-aadd-70c82e356fab
 redirect_from:
   - /v1/docs/managing-users
   - /v1/docs/en/managing-users
+  - /docs/scos/user/back-office-user-guides/201811.0/users/managing-users/creating-users.html
 related:
   - title: Roles- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/references/roles-reference-information.html
@@ -63,7 +64,7 @@ The Assign Customers option is used to assign store customers' records to the Ba
 2. In the **Users List > Action** column, select **Assign Customers**.
 3. In the **List of customers > Select customers to assign** table, select the check-box next to the customer you want to assign (multiple customers can be selected).
 4. Click **Save**.
-   
+
 {% info_block infoBox "Info" %}
 
 A customer cannot be assigned to multiple users at a time.

@@ -45,35 +45,14 @@ Total messages: 0
 
 If one or more checks fail, Evaluator returns errors per check.
 
-<details open>
-    <summary>Evaluation example with compliance errors</summary>
-
 ```bash
 ...
-NotUnique:Constant Pyz\Shared\ContentBannerGui\ContentBannerGuiConfig::WIDGET_TEMPLATE_DISPLAY_NAME_SLIDER_WITHOUT_LINK name has to have project namespace, like PYZ_WIDGET_TEMPLATE_DISPLAY_NAME_SLIDER_WITHOUT_LINK.
------------------- ----------------------------------------------------------------------------------------------------
-NotUnique:DatabaseColumn Database column name has to have project prefix Pyz in src/Pyz/Zed/ExampleStateMachine/Persistence/Propel/Schema/spy_example_state_machine.schema.xml, like pyz_name
------------------------- ----------------------------------------------------------------------------------------------------
-NotUnique:Method Method name Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider::extendPaymentMethodHandler() should contains project prefix, like pyzExtendPyzPaymentMethodHandler
----------------- ----------------------------------------------------------------------------------------------------
-NotUnique:TransferName Transfer object name ProductAbstractStore has to have project prefix Pyz in src/Pyz/Shared/Product/Transfer/product.transfer.xml, like PyzProductAbstractStore
----------------------- ----------------------------------------------------------------------------------------------------
-NotUnique:TransferProperty Transfer property contentWidgetParameterMap for LocaleCmsPageData has to have project prefix Pyz in src/Pyz/Shared/Cms/Transfer/cms.transfer.xml, like pyzContentWidgetParameterMap
--------------------------- ----------------------------------------------------------------------------------------------------
-PrivateApi:Dependency Please avoid usage of ProductStorageDependencyProvider::FACADE_PRODUCT in Pyz\Zed\ProductStorage\Business\ProductStorageBusinessFactory
---------------------- ----------------------------------------------------------------------------------------------------
-PrivateApi:Extension Please avoid extension of the PrivateApi SprykerShop\Yves\ContentProductWidget\Twig\ContentProductAbstractListTwigFunctionProvider in Pyz\Yves\ContentProductWidget\Twig\ContentProductAbstractListTwigFunctionProvider
--------------------- ----------------------------------------------------------------------------------------------------
-PrivateApi:PrivateApiDependencyInBusinessModel Please avoid usage of Spryker\Zed\ProductSet\Business\Model\Touch\ProductSetTouchInterface in Pyz\Zed\ProductSet\Business\Model\ProductSetUpdater
----------------------------------------------- ----------------------------------------------------------------------------------------------------
 PrivateApi:MethodIsOverwritten Please avoid usage of core method Spryker\Client\Kernel\AbstractFactory::getConfig() in the class Pyz\Client\ExampleProductSalePage\ExampleProductSalePageFactory
 ------------------------------ ----------------------------------------------------------------------------------------------------
 ...
-Total messages: 11
+Total messages: 1
 
 ```    
-
-</details>
 
 
 ### Using the evaluator tool

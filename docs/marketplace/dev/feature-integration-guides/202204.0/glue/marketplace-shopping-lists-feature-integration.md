@@ -19,7 +19,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | - | - | - |
 | Spryker Core | {{page.version}} |  [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)
-| Marketplace Shopping Lists | {{page.version}} | [Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-shopping-lists-feature-integration.html)
+| Marketplace Shopping Lists | {{page.version}} | [Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shopping-lists-feature-integration.html)
 
 ### 1) Install the required modules using Composer
 
@@ -62,18 +62,20 @@ Make sure that the following changes have been applied in transfer objects:
 
 {% endinfo_block %}
 
-### 3) Set up plugins for the ability to load additional relations in the shopping list items resource
+### 3) Set up plugins
+
+Set up plugins to load additional relations in the shopping list items resource:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 |-|-|-|-|
-| MerchantByMerchantReferenceResourceRelationshipPlugin | Adds `merchant` resources as relationship by Product Offer reference.                     |   | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
-| ProductOfferAvailabilitiesByProductOfferReferenceResourceRelationshipPlugin | Adds `product offer availabilities` resources as relationship by the Product Offer reference. |   | Spryker\Glue\ProductOfferAvailabilitiesRestApi\Plugin\GlueApplication |
-| ProductOffersByProductOfferReferenceResourceRelationshipPlugin | Adds `product offers` resources as relationship by the Product Offer reference.               |   | Spryker\Glue\ProductOffersRestApi\Plugin\GlueApplication |
-| ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin | Adds `product offer prices` resources as relationship the by Product Offer reference.         |   | Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication |
+| MerchantByMerchantReferenceResourceRelationshipPlugin | Adds `merchant` resources as relationship by the product offer reference.                     |   | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
+| ProductOfferAvailabilitiesByProductOfferReferenceResourceRelationshipPlugin | Adds `product offer availabilities` resources as relationship by the product offer reference. |   | Spryker\Glue\ProductOfferAvailabilitiesRestApi\Plugin\GlueApplication |
+| ProductOffersByProductOfferReferenceResourceRelationshipPlugin | Adds `product offers` resources as relationship by the product offer reference.               |   | Spryker\Glue\ProductOffersRestApi\Plugin\GlueApplication |
+| ProductOfferPriceByProductOfferReferenceResourceRelationshipPlugin | Adds `product offer prices` resources as relationship the by the product offer reference.         |   | Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication |
 
 <details><summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
-    ```php
+```php
 <?php
 
 namespace Pyz\Glue\GlueApplication;
@@ -116,7 +118,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -158,10 +159,9 @@ Response sample:
 }
 ```
 
-2. Make sure that product offers, product concrete availabilities, product offers' availabilities and merchants are loaded by sending the `GET` request to
-   `https://glue.mysprykershop.com/shopping-lists/{shoppingListReference}?include=concrete-products,shopping-list-items,product-offers,product-offer-availabilities,concrete-product-availabilities,merchants`
+2. Make sure that product offers, product concrete availabilities, product offers' availabilities and merchants are loaded by sending the `GET` request to `https://glue.mysprykershop.com/shopping-lists/{shoppingListReference}?include=concrete-products,shopping-list-items,product-offers,product-offer-availabilities,concrete-product-availabilities,merchants`
 
-<details><summary markdown='span'>Response data example with included concrete products, shopping list items, product offers, product offer availabilities, concrete product availabilities, and merchants:</summary>
+<details><summary markdown='span'>Response data sample with the included concrete products, shopping list items, product offers, product offer availabilities, concrete product availabilities, and merchants</summary>
 
 ```json
 {
@@ -250,7 +250,6 @@ Response sample:
    ]
 }
 ```
-
 </details>
 
 {% endinfo_block %}

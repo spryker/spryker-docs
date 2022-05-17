@@ -1,16 +1,16 @@
 ---
 title: "File details: product_offer_shopping_list.csv"
 last_updated: May 13, 2022
-description: This document describes the product_offer_shopping_list.csv file to configure merchant product offer shopping list in your Spryker shop.
+description: This document describes the product_offer_shopping_list.csv file to configure shopping lists with product offers in your Spryker shop.
 template: import-file-template
 ---
 
-This document describes the `product_offer_shopping_list.csv` file to configure [Marketplace Shopping Lists](/docs/marketplace/user/features/{{page.version}}/marketplace-shopping-lists-feature-walkthrough.html#marketplace-shopping-lists) information in your Spryker shop.
+This document describes the `product_offer_shopping_list.csv` file to configure [Shopping lists with Product Offers](/docs/marketplace/user/features/{{page.version}}/marketplace-shopping-lists-feature-walkthrough.html#marketplace-shopping-lists) information in your Spryker shop.
 
 To import the file, run:
 
 ```bash
-data:import product-offer-shopping-list-item
+console data:import product-offer-shopping-list-item
 ```
 
 ## Import file parameters
@@ -19,8 +19,8 @@ The file should have the following parameters:
 
 | PARAMETER               | REQUIRED? | TYPE    | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION                                                                                                                                                 |
 |-------------------------|-----------|---------|---------------|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| shopping_list_item_key  | &check;   | String  |               | Unique                   | The key that will identify the shopping list item to add data to.                                                                                           |
-| product_offer_reference | &check;   | String  |               | Unique                   | Identifier of the [merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) in the system. |
+| shopping_list_item_key  | &check;   | String  |               | Unique                   | Identifier of the merchant in the system.                                                                                         |
+| product_offer_reference | &check;   | String  |               |                          | Identifier of the [merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) in the system. |
 
 ## Import file dependencies
 

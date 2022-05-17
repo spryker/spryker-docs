@@ -512,6 +512,9 @@ entries:
           - title: "File details: price-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-price-product-offer.csv.html
 
+          - title: "File details: product-offer-shopping-list.csv"
+            url: /docs/marketplace/dev/data-import/file-details-product-offer-shopping-list.csv.html
+
           - title: "File details: product-offer-stock.csv"
             url: /docs/marketplace/dev/data-import/file-details-product-offer-stock.csv.html
 
@@ -797,4 +800,3 @@ entries:
 
           - title: "Migration guide - Upgrade to Angular v12"
             url: /docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v12.html
- 

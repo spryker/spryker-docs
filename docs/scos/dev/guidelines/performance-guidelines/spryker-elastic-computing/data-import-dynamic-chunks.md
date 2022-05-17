@@ -25,24 +25,22 @@ Using less memory generates more I/O operations, which subsequently increases th
 
 ## Dynamic memory allocation
 
-To use the memory more efficiently the batch size is now calculated based on the amount of memory  available for current thread. When memory is full by some threshold value database insert is performed.
+To use the memory more efficiently the batch size is now calculated based on the amount of memory available for current thread. When memory is full by some threshold value processing of the current batch is performed.
 
 The algorithm uses the following variables:
 - Allowed total memory for PHP thread
 - Currently used memory
 - Maximum used memory during the execution of current thread
-
-Implementation is based on a gradual principle when we reach a memory threshold usage step-by-step.
-
-Two variables are also important here:
 - Graduality factor
 - Memory threshold percent
+
+Implementation is based on a gradual principle for the calculation a memory threshold usage step-by-step.
 
 ## Graduality factor
 
 Graduality factor is a number that defines how many steps a program needs to take before a maximum allowed memory usage is reached.
 
-The larger the gradually factor is, the more approximation steps the program takes, and the higher  the accuracy is. A smaller gradually factor makes application work faster but rougher.
+The larger the graduality factor is, the more approximation steps the program takes, and the higher the accuracy is. A smaller gradually factor allows to calculate the memory limit  faster but rougher.
 
 ## Memory threshold percent
 Memory threshold percent is an integer that defines the percentage of available system memory that can be used for data import.

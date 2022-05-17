@@ -14,7 +14,7 @@ This document describes the methods of improving performance and efficiency of r
 
 `THREAD_POOL_SIZE` defines the maximum number of parallel processes for all queues. It's default value is `0`, which means that scalable infrastructure is disabled.
 
-Computational Resource Manager - is a component of the Queue module provides 
+Computational Resource Manager component provides a functionality for computational resource distribution among parallel processes. 
 
 At the beginning of the processing, queues contain a different number of messages. To process all messages efficiently, processes are distributed by the computational resource manager among queues according to the number of messages per queue.
 
@@ -77,7 +77,7 @@ Symbols:
 
 ## RAM distribution
 
-To exclude runtime memory limit issues, the memory allocated to each worker must be also managed by .
+To exclude runtime memory limit issues, the memory allocated to each worker is also managed by computational resource manager.
 
 The amount of RAM available for workers is calculated based on `memory_get_usage();` and `ini_get('memory_limit');` and distributed evenly. Formula:
 

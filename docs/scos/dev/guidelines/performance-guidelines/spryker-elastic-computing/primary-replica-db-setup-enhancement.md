@@ -5,29 +5,27 @@ last_updated: May 16, 2022
 template: concept-topic-template
 ---
 
-# Status Quo
-When database replication is enabled, application may have issues with data reading from replica DB after data just has been inserted in the primary DB. When data is inserted to the primary DB, there is a time gap when data is transferred to replica database.
+With database replication enabled, there is a time gap between adding data to the primary database (DB) and transferring data to the replica. So, the application may fail to read the data from the replica.
 
-# Problem statement
-If application had enabled database replication then we can easily face an issue when we just wrote data to the **primary** DB and reading from **replica** DB - we don't yet have a data in the replica DB.
-
-Use-cases:
-- A record is created via Yves request, but Zed wants to read from replica DB
-- During parallel requests to Zed, our application must read replica after insert was just done
+This issue can occur in the following cases:
+* A record is created via Yves request in the primary database, and Zed requests the data from the replica.
+* During parallel requests to Zed, our application must read replica after insert was just done === Please describe in more details.
 
 # Solution
-In order to cover defined use-cases, we use Storage as a caching mechanism to keep  just created records’s type.
+
+To cover the cases, Storage is used as a caching mechanism for keeping the type of the records that recently were added to a primary DB.
 
 The approach works as shown below:
 1. Record is created.
-2. Record type is stored in Storage (for example “User“ string for a User model).
-3. Storage keeps the record type in Storage alive for 3 seconds (configurable).
-4. During data read, the Storage is checked for matching record type.
-- If record type is present in Storage, primary DB is read.
-- Otherwise replica DB is read.
+2. Record type is stored in Storage. For example `User` string for a User model.
+3. Storage keeps the record type alive for 3 seconds. The time is configurable.
+4. When reading data, application checks the Storage for a needed record type and does the following:
+    * If the record type is present in Storage, it reads the primary DB.
+    * If the record type is not present in the Storage, it reads the replica.
 
 # Project enablement
-Solution implementation affects all find*() methods of Propel query objects and postSave() hooks of Propel query objects.
+
+Solution implementation affects all `find*()` methods and `postSave()` hooks of Propel query objects.
 
 In order to implement a solution 3 major modules were created/updated:
 

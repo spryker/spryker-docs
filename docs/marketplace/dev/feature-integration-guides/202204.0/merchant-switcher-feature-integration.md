@@ -312,6 +312,7 @@ Make sure that the following widgets were registered:
 
 ## Related features
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
-| --- | --- | --- |
-|  Merchant Switcher + Wishlist | | [ Merchant Switcher + Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-wishlist-feature-integration.html) |
+| FEATURE                                          | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                                |
+|--------------------------------------------------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Merchant Switcher + Customer Account Management  |                                  | [Merchant Switcher + Customer Account Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-customer-account-management-feature-integration.html)  |
+| Merchant Switcher + Wishlist                     |                                  | [ Merchant Switcher + Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-wishlist-feature-integration.html)                                       |

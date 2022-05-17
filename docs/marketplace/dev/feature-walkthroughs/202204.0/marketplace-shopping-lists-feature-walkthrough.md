@@ -4,7 +4,7 @@ description: The Marketplace Shopping Lists feature allows customers to create a
 template: feature-walkthrough-template
 ---
 
-The `Marketplace Shopping Lists` feature allows customers to create and share multiple lists of merchant products and product offers between company business units or single users. Shopping lists can be shared between users with different sets of permissions.
+The *Marketplace Shopping Lists* feature allows customers to create and share multiple lists of merchant products and product offers between company business units or single users. Shopping lists can be shared between users with different sets of permissions.
 
 {% info_block warningBox "User documentation" %}
 
@@ -14,7 +14,7 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 ## Module dependency graph
 
-The following diagram illustrates the dependencies between the modules for the `Marketplace Shopping Lists` feature.
+The following diagram illustrates the dependencies between the modules for the *Marketplace Shopping Lists* feature.
 
 ![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/b9b242da-b56f-452d-b44f-7eb740adf1da.png?utm_medium=live&utm_source=custom)
 
@@ -30,14 +30,13 @@ The following diagram illustrates the dependencies between the modules for the `
 
 ## Domain model
 
-The following schema illustrates the `Marketplace Shopping Lists` domain model:
+The following schema illustrates the *Marketplace Shopping Lists* domain model:
 
 ![Domain Model](https://confluence-connect.gliffy.net/embed/image/40d25819-b12d-45ac-938d-c1ee0b68ac44.png?utm_medium=live&utm_source=custom)
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES                                                                                                                                                      | GLUE API GUIDES                                                                                                                                                       | DATA IMPORT                                                                                                                                                        | REFERENCES                                                                                                                                                     |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shopping-lists-feature-integration.html) | [Glue API: Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-shopping-lists-feature-integration.html) | [File details: file-details-product-offer-shopping-list.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-shopping-list.csv.html) |                                                                                                                                                                |
-|                                                                                                                                                                         |                                                                                                                                                                       |                                                                                                                                                                    | [Managing shopping lists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/marketplace-shopping-lists/managing-marketplace-shopping-lists.html)          |
-|                                                                                                                                                                         |                                                                                                                                                                       |                                                                                                                                                                    | [Managing shopping list items](/docs/marketplace/dev/glue-api-guides/{{page.version}}/marketplace-shopping-lists/managing-marketplace-shopping-list-items.html)|
+| INTEGRATION GUIDES                                                                                                                                                      | GLUE API GUIDES                                                                                                                                                       | DATA IMPORT                                                                                                                                                        |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shopping-lists-feature-integration.html) | [Managing shopping lists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/marketplace-shopping-lists/managing-marketplace-shopping-lists.html) | [File details: file-details-product-offer-shopping-list.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-shopping-list.csv.html) |
+| [Glue API: Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-shopping-lists-feature-integration.html)   | [Managing shopping list items](/docs/marketplace/dev/glue-api-guides/{{page.version}}/marketplace-shopping-lists/managing-marketplace-shopping-list-items.html) | | | |

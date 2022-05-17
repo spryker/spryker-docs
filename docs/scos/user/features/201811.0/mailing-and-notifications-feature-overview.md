@@ -11,6 +11,7 @@ redirect_from:
   - /v1/docs/en/newsletter-subscription
   - /v1/docs/transactional-email-management
   - /v1/docs/en/transactional-email-management
+  - /docs/scos/user/features/201811.0/mailing-and-communication/mailing-and-communication.html
 ---
 
 The *Mailing & Notifications* feature allows you to manage newsletters and notifications.

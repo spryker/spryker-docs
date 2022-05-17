@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/editing-a-product-variant
   - /docs/editing-a-product-variant
   - /docs/en/editing-a-product-variant
+  - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-concrete-products/editing-product-variants.html
 related:
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html

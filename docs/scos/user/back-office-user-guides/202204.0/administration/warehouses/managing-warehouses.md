@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/managing-warehouses
   - /docs/managing-warehouses
   - /docs/en/managing-warehouses
+  - /docs/scos/user/user-guides/201811.0/back-office-user-guide/administration/warehouses/managing-warehouses.html
+  - /docs/scos/user/user-guides/201903.0/back-office-user-guide/administration/warehouses/managing-warehouses.html
+  - /docs/scos/user/user-guides/201907.0/back-office-user-guide/administration/warehouses/managing-warehouses.html
 ---
 
 This topic describes how to manage warehouses.

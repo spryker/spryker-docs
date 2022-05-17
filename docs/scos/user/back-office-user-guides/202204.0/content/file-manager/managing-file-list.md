@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-file-list
   - /docs/managing-file-list
   - /docs/en/managing-file-list
+  - /docs/scos/user/back-office-user-guides/202200.0/content/file-manager/managing-file-list.html
 related:
   - title: Managing File Tree
     link: docs/scos/user/back-office-user-guides/page.version/content/file-manager/managing-file-tree.html

@@ -8,6 +8,7 @@ originalArticleId: 78e47366-fc2c-44d2-a752-1c8a9e711109
 redirect_from:
   - /v2/docs/computop-ideal
   - /v2/docs/en/computop-ideal
+  - /docs/scos/user/technology-partners/201903.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-ideal-payment-method-for-computop.html
 related:
   - title: Integrating the Sofort payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
@@ -28,7 +29,7 @@ related:
 ---
 
 Example State Machine:
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop-ideal-flow-example.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop-ideal-flow-example.png)
 
 ## Front-end Integration
 

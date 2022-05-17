@@ -7,11 +7,11 @@ template: concept-topic-template
 
 Spryker is shipped with several elastic computing features that let you to utilize computational resources more efficiently. 
 
-## Monitoring
+## Integrate New Relic monitoring
 
-To enable New Relic monitoring for P&S and the infastructure of queue workers, follow the steps:
+To integrate New Relic monitoring for publish and sync (P&S) and the infastructure of queue workers, follow the steps:
 
-1. Update the `spryker/monitoring` module to version 2.5.0 or higher.
+1. Update module `spryker/monitoring` to version 2.5.0 or higher.
 2. In `Pyz\Zed\Monitoring\MonitoringConfig`, add `queue:task:start` command to the argument grouped transactions:
 ```php
 namespace Pyz\Zed\Monitoring;
@@ -43,18 +43,13 @@ public function getMonitoringTransactionNamingStrategies(): array
 ```
 This will aggregate all different queue worker transactions under corresponding `queue:task:start {queue_name}` transaction name in New Relic.
 
-As a result, the transactions will be displayed in the New Relic dashboardas follows.
+As a result, the transactions are displayed in the New Relic dashboardas as follows.
 
-## RAM-aware batch processing integration
+## Integrate RAM-aware batch processing 
 
-Batch processing significantly speeds up processing operations. Moving more data into RAM at once decreases the number of I/O, thus winning some operations wall time. Dynamic batch size calcualtion based on available RAM wins even more time. 
+Batch processing significantly speeds up processing operations. Moving more data into RAM at once decreases the number of I/O, which decreases operations' processing time. Dynamic batch size calcualtion based on available RAM decreases it even more. 
 
-
-
-
-This can be achieved with elastic batch concept introduced in `spryker/data-import` module. The following instruction will explain the integration details of elastic batch using the glossary data import as an example.
-
-> :info: Similar integration must be applied for all project data importers.
+To intagrate elastic batch for the glossary data import as an example, follow the steps:
 
 1. In `Pyz\Zed\DataImport\DataImportConfig`, add the following configuration:
 
@@ -91,9 +86,7 @@ class DataImportConfig extends SprykerDataImportConfig
 }
 ```
 
-2. In `src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php`, adjust the creation of data importer so it’s new version will
-- use `DataSetStepBrokerElasticBatchTransactionAware` data set step broker and
-- the writer steps receive the `MemoryAllocatedElasticBatch`
+2. In `src/Pyz/Zed/DataImport/Business/DataImportBusinessFactory.php`, adjust the creation of the data importer. The updated data importer uses `DataSetStepBrokerElasticBatchTransactionAware` and its writer steps receive  `MemoryAllocatedElasticBatch`.
 ```php
 /**
  * @method \Pyz\Zed\DataImport\DataImportConfig getConfig()
@@ -262,9 +255,9 @@ As a result, worker spawn a group of processes per each non-empty queue based on
 
 ## Integrate primary-replica database reading and writing
 
-1. Update the `spryker/propel-orm` module to version 1.15.1 or higher.
-2. Update the `spryker/propel-replication-cache` module to version 1.0.0 or higher.
-3. In `config/Shared/config_default.php` add the following configuration.
+1. Update module `spryker/propel-orm` to version 1.15.1 or higher.
+2. Update module `spryker/propel-replication-cache` to version 1.0.0 or higher.
+3. In `config/Shared/config_default.php`, add the following configuration.
 ```php
 <?php
 use Spryker\Shared\PropelReplicationCache\PropelReplicationCacheConstants;

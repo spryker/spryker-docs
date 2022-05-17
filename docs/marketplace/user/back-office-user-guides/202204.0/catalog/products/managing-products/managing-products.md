@@ -19,10 +19,11 @@ To start managing products, go to **Catalog** > **Products**.
 The abstract product is inactive until at least one product variant is activated. You should understand that there is no option to activate it.
 
 To activate a product:
+
 1. Navigate to the product variant of the product that you want to activate:
-    **Edit** > **Variants** > **Edit product variant**
-2.  In the top right corner of the *Edit Concrete Product* page, click **Activate**.
-The product turns visible to the customers of your online store.
+  **Edit** > **Variants** > **Edit product variant**
+2. In the top right corner of the *Edit Concrete Product* page, click **Activate**.
+The product turns visible to the customers of your marketplace.
 
 {% info_block infoBox "Note" %}
 
@@ -36,6 +37,7 @@ Each variant needs to be activated in order to be visible to your customers.
 ## Viewing products
 
 If you need to review the product details without actually editing them, do the following:
+
 1. In the _Actions_ column of the abstract product you want to view, click **View**.
 2. On the *View Product* page, you can navigate to the view product variant, initiate the editing flow for it, or manage its attributes.
 
@@ -53,39 +55,30 @@ The attributes that you add are taken from the **Products** > **Attributes** sec
 {% endinfo_block %}
 
 To manage the product attributes:
-1.  In the _Actions_ column or in the top right corner of the *Edit* page, select the **Manage Attributes** option for the concrete or abstract product.
+1. In the _Actions_ column or in the top right corner of the *Edit* page, select the **Manage Attributes** option for the concrete or abstract product.
 2. On the *Manage Attributes for Product* page, type the first three letters of the attribute key.
 3. Select the suggested value and click **Add**.
 4. In the _Attributes_ section, define the **Default** value for your attributes and specify the value for the **locales**.
-    Repeat the procedure if needed.
+  Repeat the procedure if needed.
 5. Click **Save**.
 
 See the _References_ section to see the examples of how the attributes look like.
 
-## Approving and denying the new marketplace products
+## Approving and denying marketplace products
 
 Once the product is created, it needs to be approved by the marketplace administrator.
 
-Depending on the current status of the product, you can approve, deny or get the product in the *draft* status.
+Depending on the current status of the product, you can approve or deny it.
 To update the approval status of the product, in the _Actions_ column of the abstract product do the following:
 
-- For the product with status *Draft*:
-  - click **Send for Approval** to initiate the approval process.
-  - click **Approve** to approve the product.
-  - click **Deny** to reject the product.
-
 - For the product with status *Waiting for Approval*:
-  - click **Back to Draft** to revert the product to *Draft* status.
   - click **Approve** to approve the product.
   - click **Deny** to reject the product.
 
-- For the product with status *Approved*:
-  - click **Back to Draft** to revert the product to *Draft* status.
-  - click **Deny** to reject the product.
+- For the product with status *Approved*, click **Deny** to reject the product.
 
-- For the product with status *Denied*:
-  - click **Back to Draft** to revert the product to *Draft* status.
-  - click **Approve** to approve the product.
+- For the product with status *Denied*, click **Approve** to approve the product.
 
 **What's next?**
+
 <br>Review the other articles in the _Products_ section to know more about product management. Also, review the _References_ section to learn more about the attributes you see, select, and enter on the product pages.

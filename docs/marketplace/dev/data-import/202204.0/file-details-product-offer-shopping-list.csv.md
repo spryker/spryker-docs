@@ -5,7 +5,7 @@ description: This document describes the product_offer_shopping_list.csv file to
 template: import-file-template
 ---
 
-This document describes the `product_offer_shopping_list.csv` file to configure [shopping lists with product offers](/docs/marketplace/user/features/{{page.version}}/marketplace-shopping-lists-feature-walkthrough.html#marketplace-shopping-lists) in your Spryker shop.
+This document describes the `product_offer_shopping_list.csv` file to configure [shopping lists with product offers](/docs/marketplace/user/features/{{page.version}}/marketplace-shopping-lists-feature-walkthrough.html) in your Spryker shop.
 
 To import the file, run:
 

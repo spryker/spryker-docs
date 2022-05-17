@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/live-chat-service
   - /docs/live-chat-service
   - /docs/en/live-chat-service
+  - /docs/scos/user/technology-partners/202200.0/customer-service/live-chat-service.html
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

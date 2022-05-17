@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-product-lists
   - /docs/managing-product-lists
   - /docs/en/managing-product-lists
+  - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-lists/managing-product-lists.html
 ---
 
 This article describes how to manage product lists.

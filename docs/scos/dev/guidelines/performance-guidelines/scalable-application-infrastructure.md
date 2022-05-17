@@ -31,13 +31,13 @@ Setting `THREAD_POOL_SIZE` to more than `0` disables the `DEFAULT_MAX_QUEUE_WORK
 
 In some cases, a smaller amount of messages may require more workers for processing. To balance such cases, use the `QUEUE_PRIORITY` configurable parameter.
 
-`QUEUE_PRIORITY` - real === number configurable ratio per queue. If a queue has higher priority in processing, based on this ration, it gets more workers in proportion to the number of messages. The default value is `1`.
+`QUEUE_PRIORITY` - real number configurable ratio per queue. If a queue has higher priority in processing, based on this ration, it gets more workers in proportion to the number of messages. The default value is `1`. === How is it real?
 
-Configured `QUEUE_PRIORITY` and `THREAD_POOL_SIZE` with consideration of each other may increase efficiency of resource utilisation even further. Fine tuning of these two parameters can be done based on properly collected statistics of worker execution (e.g. New Relic).
+Configured `QUEUE_PRIORITY` and `THREAD_POOL_SIZE` with consideration of each other may increase efficiency of resource utilization even further. You can fine tune these parameters based on properly collected statistics of worker execution (e.g. New Relic).
 
 ## Workers distribution
 
-For effective worker management, a set of following calculations is used.
+For effective worker management, the following calculations are used.
 
 Queue weight is calculated by the formula:
 
@@ -73,11 +73,11 @@ Symbols:
 
 * `w` — weight of queue.
 
-> :warning: In case of insufficient pool size notification must be sent. ===
+> :warning: In case of insufficient pool size notification must be sent. === Sent by what? Sent to who?
 
-### RAM distribution
+## RAM distribution
 
-To exclude runtime memory limit issues, the memory allocated to each worker must be also managed.
+To exclude runtime memory limit issues, the memory allocated to each worker must be also managed. === Managed by what?
 
 The amount of RAM available for workers is calculated based on `memory_get_usage();` and `ini_get('memory_limit');` and distributed evenly. Formula:
 

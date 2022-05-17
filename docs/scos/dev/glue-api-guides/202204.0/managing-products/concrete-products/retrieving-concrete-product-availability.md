@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/retrieving-concrete-product-availability
   - /docs/retrieving-concrete-product-availability
   - /docs/en/retrieving-concrete-product-availability
+  - docs/scos/dev/glue-api-guides/202200.0/managing-products/concrete-products/retrieving-concrete-product-availability.html
 ---
 
 This endpoint allows retrieving availability of concrete products.

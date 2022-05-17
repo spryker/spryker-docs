@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/creating-and-managing-shipment-methods
   - /docs/creating-and-managing-shipment-methods
   - /docs/en/creating-and-managing-shipment-methods
+  - /docs/scos/user/back-office-user-guides/201811.0/administration/delivery-methods/creating-and-managing-delivery-methods.html
 related:
   - title: Shipment feature overview
     link: docs/scos/user/features/page.version/shipment-feature-overview.html

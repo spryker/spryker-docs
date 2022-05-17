@@ -3,6 +3,8 @@ title: Installing and configuring Inxmail
 description: Install and configure Inxmail
 last_updated: Jun 16, 2021
 template: howto-guide-template
+redirect_from:
+    - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/customer-communication/inxmail/installing-and-configuring-inxmail.html
 ---
 
 This document describes how to install and configure Inxmail.

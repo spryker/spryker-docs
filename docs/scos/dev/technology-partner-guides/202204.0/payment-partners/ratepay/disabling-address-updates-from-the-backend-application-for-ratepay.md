@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/ratepay-disable-address-updates
   - /docs/ratepay-disable-address-updates
   - /docs/en/ratepay-disable-address-updates
-  - /docs/scos/user/technology-partners/202108.0/payment-partners/ratepay/ratepay-how-to-disable-address-updates-from-the-backend-application.html
+  - /docs/scos/user/technology-partners/202204.0/payment-partners/ratepay/ratepay-how-to-disable-address-updates-from-the-backend-application.html
 related:
   - title: Integrating the Invoice payment method for RatePay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-invoice-payment-method-for-ratepay.html

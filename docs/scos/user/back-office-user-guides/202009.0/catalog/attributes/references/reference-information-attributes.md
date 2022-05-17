@@ -8,7 +8,7 @@ originalArticleId: 93341bd1-3fd9-4ef4-bfdf-20986238256c
 redirect_from:
   - /v6/docs/reference-information-product-attributes
   - /v6/docs/en/reference-information-product-attributes
-  - /docs/scos/user/back-office-user-guides/page.version/catalog/attributes/references/reference-information-product-attributes.html
+  - /docs/scos/user/back-office-user-guides/202009.0/catalog/attributes/references/reference-information-product-attributes.html
 ---
 
 This document describes the reference information for managing product attributes, and provides examples of regular and super product attributes.
@@ -32,14 +32,14 @@ The following table describes the attributes you enter and select on the *Create
 | **Translation** | The translation for either an attribute key into the other language based on the locales for which you add the translation.|
 | **Translate predefined values** | A checkbox that defines if the predefined values will also be translated. If selected, the predefined value itself and the **Translation** field for it appears. |
 ***
-The super attributes are displayed in the Variants tab of the **Create a Product** page of an abstract product. 
-![Create a product](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Attributes/Attributes:+Reference+Information/create-product.png) 
+The super attributes are displayed in the Variants tab of the **Create a Product** page of an abstract product.
+![Create a product](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Attributes/Attributes:+Reference+Information/create-product.png)
 
 Once you select any super attribute, you will be able to select among its values.
-![Select a superattribute](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Attributes/Attributes:+Reference+Information/select-superattribute.png) 
+![Select a superattribute](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Attributes/Attributes:+Reference+Information/select-superattribute.png)
 
 The descriptive attributes are displayed on the **Attribute Management** page of the abstract and concrete product. Unlike the super attributes that are defined during the abstract product creation, the descriptive attributes can be added and removed at any point in time.
-![Attribute management](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Attributes/Attributes:+Reference+Information/attribute-management.png) 
+![Attribute management](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Attributes/Attributes:+Reference+Information/attribute-management.png)
 
 In the online store, the descriptive attributes are displayed on the product details page of a specific product:
 ![Descriptive attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Attributes/Attributes:+Reference+Information/descriptive-attributes.png){height="340" width="250"}

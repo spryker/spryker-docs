@@ -40,7 +40,6 @@ $jobs[] = [
     'command'               => '$PHP_BIN vendor/bin/console mail:send-mail',
     'schedule'              => '*/10 * * * *',
     'enable'                => true,
-    'run_on_non_production' => true,
     'stores'                => ['DE', 'FR'],
 ];
 ```
@@ -62,7 +61,6 @@ For each job you can define several configurations:
 | schedule              | string | Expression that defines the job schedule (how often the job is executed).The schedule string is compatible with cronjob schedule definition (eg. 0 * * * * means: run once each hour at 00 minute). If environment is development, return empty string - cronjobs are being executed on development environment only manually. | yes       |
 | enable                | bool   | Enable/Disable jobs                                          | yes       |
 | stores                | array  | An array of stores where the job is executed.                | yes       |
-| run_on_non_production | bool   | Defines, if the job also runs on environments other than production (development, testing, staging). Default: false | no        |
 
 {% info_block errorBox %}
 When not using Jenkins for job scheduling there is no locking between concurrently running commands.

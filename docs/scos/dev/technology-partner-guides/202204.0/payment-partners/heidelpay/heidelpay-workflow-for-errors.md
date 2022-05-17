@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/heidelpay-error-workflow
   - /docs/heidelpay-error-workflow
   - /docs/en/heidelpay-error-workflow
-  - /docs/scos/user/technology-partners/202108.0/payment-partners/heidelpay/technical-details-and-howtos/heidelpay-workflow-for-errors.html
+  - /docs/scos/user/technology-partners/202204.0/payment-partners/heidelpay/technical-details-and-howtos/heidelpay-workflow-for-errors.html
 related:
   - title: Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay.html

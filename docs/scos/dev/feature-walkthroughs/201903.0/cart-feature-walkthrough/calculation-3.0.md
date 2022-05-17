@@ -8,6 +8,7 @@ originalArticleId: f0d2f2dd-70b2-4f9f-ac86-087a9ae73e31
 redirect_from:
   - /v2/docs/calculation-3-0
   - /v2/docs/en/calculation-3-0
+  - /docs/scos/user/features/201903.0/cart-feature-overview/calculation/calculation-3.0.html
 related:
   - title: Cart Functionality
     link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-functionality.html
@@ -40,7 +41,7 @@ Each amount is being calculated and stored in cents.
 
 Calculator plugins are registered in the `CalculationDependencyProvider::getCalculatorStack()` method. This method can be extended on the project level and the plugin stack can be updated with your own plugins. Each calculator must implement `CalculatorPluginInterface`.
 
-For more information see: 
+For more information see:
 
 ```php
 <?php

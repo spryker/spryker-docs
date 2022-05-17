@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/hosting-provider-continum-1
   - /docs/hosting-provider-continum-1
   - /docs/en/hosting-provider-continum-1
+  - /docs/scos/dev/technology-partner-guides/202200.0/hosting-providers/integrating-heroku.html
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

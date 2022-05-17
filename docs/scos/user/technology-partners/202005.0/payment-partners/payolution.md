@@ -8,6 +8,7 @@ originalArticleId: 11ef04d3-0cff-46a6-82a9-27e55557b0e1
 redirect_from:
   - /v5/docs/payolution
   - /v5/docs/en/payolution
+  - /docs/scos/user/technology-partners/202005.0/payment-partners/payolution/payolution-provided-payment-methods/payolution-invoice-payment.html
 related:
   - title: Integrating the installment payment method for Payolution
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html

@@ -8,6 +8,7 @@ originalArticleId: 2f673ad2-bc01-45e5-a125-995f79caaafb
 redirect_from:
   - /v2/docs/factfinder
   - /v2/docs/en/factfinder
+  - /docs/scos/user/technology-partners/201903.0/marketing-and-conversion/analytics/fact-finder/fact-finder.html
 related:
   - title: Installing and configuring FACT-Finder NG API
     link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html

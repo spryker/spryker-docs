@@ -2,6 +2,8 @@
 title: Installing and configuring Tideways with Vagrant
 last_updated: Jun 16, 2021
 template: howto-guide-template
+redirect_from:
+    - /docs/scos/dev/technology-partner-guides/202200.0/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html
 ---
 
 The `spryker-eco/tideways` module provides a `TidewaysMonitoringExtensionPlugin` to send monitoring information to the tideways service.

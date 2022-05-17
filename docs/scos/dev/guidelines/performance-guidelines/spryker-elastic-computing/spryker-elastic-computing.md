@@ -227,9 +227,10 @@ class GlossaryWriterStep extends PublishAwareStep implements DataImportStepInter
 }
 ```
 
-# Scalable application infrastructure for P&S workers
-1. Update `spryker/queue` module at least to v1.10.0.
-2. Configure `THREAD_POOL_SIZE` parameter equals to the number of your CPU cores plus one.
+## Integrate scalable application infrastructure for P&S workers
+
+1. Update module `spryker/queue` to version 1.10.0 or higher. 
+2. Set `THREAD_POOL_SIZE` to the number of your CPU cores plus one.
 ```php
   <?php
 
@@ -257,14 +258,13 @@ class QueueConfig extends SprykerQueueConfig
 }
 ```
 
-As the result, worker will spawn a group of processes per each non empty queue with consideration of number of messages and available RAM. 
+As a result, worker spawn a group of processes per each non-empty queue based on number of messages and available RAM. 
 
-# Primary-Replica DB reading & writing integration
-For enabling an enhanced usage of primary-replice DB setup, you need to apply the following steps.
+## Integrate primary-replica database reading and writing
 
-1. Update `spryker/propel-orm` module to at least v1.15.1
-2. Update/install spryker/propel-replication-cache module to at least v1.0.0
-3. Adjust the `config/Shared/config_default.php` with the following two settings
+1. Update the `spryker/propel-orm` module to version 1.15.1 or higher.
+2. Update the `spryker/propel-replication-cache` module to version 1.0.0 or higher.
+3. In `config/Shared/config_default.php` add the following configuration.
 ```php
 <?php
 use Spryker\Shared\PropelReplicationCache\PropelReplicationCacheConstants;
@@ -276,7 +276,8 @@ $config[PropelReplicationCacheConstants::IS_REPLICATION_ENABLED] = (bool)$config
 $config[PropelReplicationCacheConstants::CACHE_TTL] = 2;
 ```
 
-4. Wire the `FindExtensionPlugin` and `PostSaveExtensionPlugin` plugins in `src/Pyz/Zed/PropelOrm/PropelOrmDependencyProvider.php` to enable “Cache key” management in the background using propel entities.
+4. To enable "cache key" management in the background using propel entities, in `src/Pyz/Zed/PropelOrm/PropelOrmDependencyProvider.php`, wire the `FindExtensionPlugin` and `PostSaveExtensionPlugin` plugins:
+  
 ```php
 <?php
 
@@ -310,7 +311,8 @@ class PropelOrmDependencyProvider extends SprykerPropelOrmDependencyProvider
 }
 ```
 
-5. Rebuild Propel models. This is required for all changes above to take an effect.
-```
+5. To apply the changes, rebuild Propel models:
+
+```bash
 docker/sdk console propel:model:build
 ```

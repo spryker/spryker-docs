@@ -19,6 +19,7 @@ A fail whale is displayed on the front end.
 ## Solution
 
 1. Run the command:
+
 ```bash
 docker/sdk logs
 ```

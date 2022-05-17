@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Import delivery methods linked to store"
+title: HowTo - Import delivery methods linked to store
 description: Use the guide to learn how to import delivery methods assigned to specific stores in the Back Office.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -44,4 +44,4 @@ To import delivery methods linked to the store(s) from the `/ShipmentDataImport/
 console data:import:shipment-method-store
 ```
 
-If successful, the imported data will be added to the **spy_shipment_method_store** database table and appear on the list of delivery methods in the Back Office. For more information on how to view and update the delivery methods, see Managing Delivery Methods <!-- link -->.
+If successful, the imported data will be added to the **spy_shipment_method_store** database table and appear on the list of delivery methods in the Back Office. For more information on how to view and update the delivery methods, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html) <!-- link -->.

@@ -8,6 +8,7 @@ originalArticleId: 86ae2298-71e6-48d5-8a27-810e27c92cf5
 redirect_from:
   - /v1/docs/payone-direct-debit
   - /v1/docs/en/payone-direct-debit
+  - /docs/scos/user/technology-partners/201811.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-direct-debit-payment.html
 related:
   - title: PayOne - Prepayment
     link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html

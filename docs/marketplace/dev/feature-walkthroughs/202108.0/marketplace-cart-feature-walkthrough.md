@@ -9,7 +9,7 @@ The *Marketplace Cart* feature lets buyers add notes to their carts, and Marketp
 
 {% info_block warningBox "User documentation" %}
 
-To learn more about the feature and to find out how end users use it, see [Marketplace Cart Notes feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-cart-notes-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Marketplace Cart Notes feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-cart-feature-overview.html) for business users.
 
 {% endinfo_block %}
 

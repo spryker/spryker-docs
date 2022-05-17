@@ -17,6 +17,7 @@ redirect_from:
 ## Description
 
 You can get the following error:
+
 ```
 [Elastica\Exception\Connection\HttpException]
 Couldn't connect to host, Elasticsearch down?

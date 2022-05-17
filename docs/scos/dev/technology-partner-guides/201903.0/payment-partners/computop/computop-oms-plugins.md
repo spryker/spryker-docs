@@ -8,6 +8,7 @@ originalArticleId: 3cef4aea-0ad8-4c29-b6e9-7940e15b9f1a
 redirect_from:
   - /v2/docs/computop-oms-details
   - /v2/docs/en/computop-oms-details
+  - /docs/scos/user/technology-partners/201903.0/payment-partners/computop/computop-oms-plugins.html
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html

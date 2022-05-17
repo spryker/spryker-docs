@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/econda
   - /docs/econda
   - /docs/en/econda
-  - /docs/scos/user/technology-partners/202108.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html
+  - /docs/scos/user/technology-partners/20204.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda.html
 ---
 
 ## Partner information

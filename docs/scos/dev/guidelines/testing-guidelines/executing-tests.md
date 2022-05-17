@@ -19,18 +19,21 @@ redirect_from:
 
 There are many ways to execute the [tests](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html). You can do a full run of all tests, or you can narrow it down to only execute a specific test method.
 
-## Executing all Tests
+## Executing all tests
+
 To run all tests, use this command:
+
 ```bash
 vendor/bin/codecept run
 ```
 
-## Executing Tests by Group
+## Executing tests by group
 
 At Spryker, all our test classes have a DocBlock containing `@group` annotations.
 
 Example:
-```
+
+```php
 /**
  * Auto-generated group annotations
  *
@@ -43,44 +46,59 @@ Example:
  * Add your own group annotations below this line
  */
 ```
+
 Basically, each part of the namespace is added as `@group` annotation.
 The groups are useful for tests, as you can run them for a specific group.
 
-To execute a test for a group, run
+To execute a test for a group, run:
+
 ```bash
 vendor/bin/codecept run -g {group}
 ```
+
 where `{group}` is the name of your group.
 
 For example, running
+
 ```bash
 vendor/bin/codecept run -g Zed
 ```
+
 will execute tests with the `@group Zed` annotation.
 
-### Executing a Test Suite
+### Executing a test suite
+
 To execute a specific test suite, run:
+
 ```bash
 vendor/bin/codecept run -c {test_suite}
 ```
+
 where `{test_suite}` is the path to the test suite you want to run.
 
 For example, running
+
 ```bash
 vendor/bin/codecept run -c tests/PyzTest/Zed/Acl
 ```
+
 will execute only the tests for the Acl module of the Zed application.
 
 
-### Executing a Single Test Class
-To execute a specific test class, run
+### Executing a single test class
+
+To execute a specific test class, run:
+
 ```bash
 vendor/bin/codecept run -c {test_suite} -g {test_class}
 ```
+
 where `{test_suite}` is the path to the test suite  and `{test_class}` is the test class you want to run.
 
 For example, running
+
 ```bash
 vendor/bin/codecept run -c tests/PyzTest/Zed/Acl -g RoleControllerCest
 ```
- will only execute `RoleControllerCest` from the Acl module of the Zed application.
+
+will only execute `RoleControllerCest` from the Acl module of the Zed application.

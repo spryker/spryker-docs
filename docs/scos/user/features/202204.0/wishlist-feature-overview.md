@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/wishlist-feature-overview
   - /docs/wishlist-feature-overview
   - /docs/en/wishlist-feature-overview
+  - /docs/scos/user/features/202200.0/wishlist-feature-overview.html
 ---
 
 Help your customers track and save items for later purchase through multiple wishlists, which are connected to the users' accounts.

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-categories
   - /docs/managing-categories
   - /docs/en/managing-categories
+  - /docs/scos/user/back-office-user-guides/202200.0/catalog/category/managing-categories.html
 related:
   - title: Creating Categories
     link: docs/scos/user/back-office-user-guides/page.version/catalog/category/creating-categories.html

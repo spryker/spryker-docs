@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/managing-tax-sets
   - /docs/managing-tax-sets
   - /docs/en/managing-tax-sets
+  - /docs/scos/user/back-office-user-guides/202200.0/administration/tax-sets/managing-tax-sets.html
 ---
 
 This document describes how to create, edit, and delete [tax sets](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html).

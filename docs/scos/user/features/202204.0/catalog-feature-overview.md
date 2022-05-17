@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/catalog
   - /docs/catalog
   - /docs/en/catalog
+  - /docs/scos/user/features/202200.0/catalog-feature-overview.html
 ---
 
 Catalogs are used to clearly build and organize your products to meet your and your customer's demands, primarily to make sure everyone can quickly find what they are looking for.

@@ -8,6 +8,7 @@ originalArticleId: 1cf70217-a4b8-4ac0-9418-179551ad9515
 redirect_from:
   - /v3/docs/payolution-requests
   - /v3/docs/en/payolution-requests
+  - /docs/scos/user/technology-partners/201907.0/payment-partners/payolution/payolution-performing-requests.html
 related:
   - title: Integrating the invoice paymnet method for Payolution
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
@@ -99,4 +100,4 @@ In order to perform the needed requests, you can easily use the implemented stat
 ## Core Module Structure Diagram
 
 The Payolution core module uses the following class and flow and structure.
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-core-bundle-structure.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-core-bundle-structure.png)

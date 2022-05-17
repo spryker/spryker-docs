@@ -48,7 +48,46 @@ Make sure that the following modules have been installed:
 
 {% endinfo_block %}
 
-### 2) Set up behavior
+### 2) Set up the database schema
+
+**src/Pyz/Zed/Merchant/Persistence/Propel/Schema/spy_merchant.schema.xml**
+
+```xml
+<?xml version="1.0"?>
+<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Merchant\Persistence" package="src.Orm.Zed.Merchant.Persistence">
+    <table name="spy_merchant">
+        <behavior name="event">
+            <parameter name="spy_merchant-name" column="name"/>
+            <parameter name="spy_merchant-is_active" column="is_active"/>
+        </behavior>
+        <behavior name="\Spryker\Zed\AclEntity\Persistence\Propel\Behavior\AclEntityBehavior"/>
+    </table>
+
+</database>
+```
+
+**src/Pyz/Zed/MerchantUser/Persistence/Propel/Schema/spy_merchant_user.schema.xml**
+
+```xml
+<?xml version="1.0"?>
+<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\MerchantUser\Persistence" package="src.Orm.Zed.MerchantUser.Persistence">
+
+    <table name="spy_merchant_user">
+        <behavior name="\Spryker\Zed\AclEntity\Persistence\Propel\Behavior\AclEntityBehavior"/>
+    </table>
+
+</database>
+```
+
+Apply database changes and to generate entity and transfer changes:
+
+```bash
+console transfer:generate
+console propel:install
+console transfer:generate
+```
+
+### 3) Set up behavior
 
 Set up behavior as follows:
 
@@ -435,7 +474,7 @@ sections:
         command: 'vendor/bin/console router:cache:warm-up:merchant-portal'
 ```
 
-### 3) Set up transfer objects
+### 4) Set up transfer objects
 
 Generate transfer objects:
 

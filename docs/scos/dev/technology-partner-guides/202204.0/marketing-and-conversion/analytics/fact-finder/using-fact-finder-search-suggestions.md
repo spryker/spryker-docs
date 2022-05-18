@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/search-factfinder-suggest
   - /docs/search-factfinder-suggest
   - /docs/en/search-factfinder-suggest
+  - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html
 related:
   - title: Integrating FACT-Finder
     link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html

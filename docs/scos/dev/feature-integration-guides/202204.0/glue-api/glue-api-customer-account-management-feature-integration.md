@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-customer-account-management-feature-integration
   - /docs/glue-api-customer-account-management-feature-integration
   - /docs/en/glue-api-customer-account-management-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-customer-account-management-feature-integration.html
 related:
   - title: Authentication and Authorization
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html

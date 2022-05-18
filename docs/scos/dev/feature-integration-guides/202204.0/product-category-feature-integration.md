@@ -10,6 +10,7 @@ redirect_from:
   - /docs/product-category-feature-integration
   - /docs/en/product-category-feature-integration
   - /docs/scos/dev/feature-integration-guides/202005.0/product-category-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/product-category-feature-integration.html
 ---
 
 This document describes how to integrate the Product + Category feature into a Spryker project.

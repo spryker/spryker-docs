@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/product-bundles-feature-integration
   - /docs/product-bundles-feature-integration
   - /docs/en/product-bundles-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201907.0/product-bundles-feature-integration.html
 ---
 
 This integration guide expects the basic feature to be in place. It adds only the Product Bundle storage configuration.

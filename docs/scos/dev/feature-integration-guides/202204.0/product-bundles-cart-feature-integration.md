@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/product-bundles-cart-feature-integration
   - /docs/product-bundles-cart-feature-integration
   - /docs/en/product-bundles-cart-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201907.0/product-bundles-cart-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/product-bundles-cart-feature-integration.html
 ---
 

@@ -86,11 +86,10 @@ Symbols:
 
 * `N` — thread pool size.
 
-<!--
-## Project enablement
 
-For enabling Scalable application infrastructure for publish and sync workers, see “Spryker elastic computing”.
--->
+## Integrating scalable application infrastructure for publish and sync workers
+
+For instructions, see [Integrate scalable application infrastructure for publish and sync workers](/docs/scos/dev/technical-enhancement-integration-guides/integrate-elastic-computing.html#integrate-scalable-application-infrastructure-for-publish-and-sync-workers)
 
 ## Implementation details
 

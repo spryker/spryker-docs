@@ -9,7 +9,7 @@ With database replication enabled, there is a time gap between adding data to th
 
 This issue can occur in the following cases:
 * A record is created via Yves request in the primary database, and Zed requests the data from the replica.
-* During parallel requests to Zed, our application must read replica after insert was just done === Please describe in more details.
+* A data insert was just done, and, during requests to Zed, the application must read the  replica.
 
 ## Caching mechanism
 
@@ -23,7 +23,7 @@ The approach works as follows:
     * If the record type is present in Storage, it reads the primary DB.
     * If the record type is not present in the Storage, it reads the replica.
 
-# Project enablement
+## Project enablement
 
 Solution implementation affects all `find*()` methods and `postSave()` hooks of Propel query objects.
 
@@ -45,7 +45,7 @@ Plugins can contain any functionality to extend Propel object and query instance
 
     * Lets extend Propel entity objects to adjust `find*()` methods generation with additional functionality.
 
-* **PropelOrmExtension*
+* `PropelOrmExtension`
 
     * Lets extend the `PropelOrm` module with plugins to expand its functionality.
 

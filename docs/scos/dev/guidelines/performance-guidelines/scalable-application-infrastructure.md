@@ -1,10 +1,9 @@
 ---
 title: Scalable application infrastructure for publish and sync workers
-description: This guideline explains how to use scalable application infrastructure.
+description: Learn how to use scalable application infrastructure.
 last_updated: May 16, 2022
 template: concept-topic-template
 ---
-
 
 Performing compute-intensive operations with significant amount of data without proper resource management inevitably leads to inefficient computation resource utilization and increases processing time.
 
@@ -14,13 +13,11 @@ This document describes the methods of improving performance and efficiency of r
 
 `THREAD_POOL_SIZE` defines the maximum number of parallel processes for all queues. It's default value is `0`, which means that scalable infrastructure is disabled.
 
-Computational Resource Manager component provides a functionality for computational resource distribution among parallel processes. 
+Computational Resource Manager component provides a functionality for computational resource distribution among parallel processes.
 
 At the beginning of the processing, queues contain a different number of messages. To process all messages efficiently, processes are distributed by the computational resource manager among queues according to the number of messages per queue.
 
-> :info: `max_children` value must be reviewed in **php-fpm** server configuration according to configured `THREAD_POOL_SIZE` in order to effectively leverage multiple core architecture of the CPU.
-
-Configuring the right number for `THREAD_POOL_SIZE` affects the resulting scaling behavior and processing efficiency. In general, setting `THREAD_POOL_SIZE` to the number of CPU cores plus one is a good starting point. However, make sure to consider the characteristics of your set of queues.
+Configuring the right number for `THREAD_POOL_SIZE` affects the resulting scaling behavior and processing efficiency. In general, setting `THREAD_POOL_SIZE` to the number of CPU cores plus one is a good starting point. However, make sure to consider the characteristics of your set of queues and the `max_children` value of your php-fpm server configuration.
 
 {% info_block infoBox "" %}
 
@@ -33,9 +30,9 @@ Setting `THREAD_POOL_SIZE` to more than `0` disables the `DEFAULT_MAX_QUEUE_WORK
 
 In some cases, a smaller amount of messages may require more workers for processing. To balance such cases, use the `QUEUE_PRIORITY` configurable parameter.
 
-`QUEUE_PRIORITY` - configurable ratio per queue. If a queue has higher priority in processing, based on this ration, it allocates more workers in proportion to the number of messages. The default value is `1`.
+`QUEUE_PRIORITY` defines configurable ratio per queue. If a queue has higher priority in processing, based on this ration, it allocates more workers in proportion to the number of messages. The default value is `1`.
 
-Configured `QUEUE_PRIORITY` and `THREAD_POOL_SIZE` with consideration of each other may increase efficiency of resource utilization even further. You can fine tune these parameters based on properly collected statistics of worker execution (e.g. New Relic).
+Configured `QUEUE_PRIORITY` and `THREAD_POOL_SIZE` with consideration of each other may increase efficiency of resource utilization even further. You can fine tune these parameters based on  statistics of worker execution. For example, you can collect it using New Relic.
 
 ## Workers distribution
 
@@ -97,6 +94,4 @@ For enabling Scalable application infrastructure for publish and sync workers, s
 
 ## Implementation details
 
-Module diagram
-
-Class diagram
+![Class diagram]()

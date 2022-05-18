@@ -37,6 +37,6 @@ We plan to introduce **PHP 8.1** support by the end of June 2022. However, using
 
 The following graph shows the timelines of support of different PHP versions.
 
-![image]([Image to upload in S3](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/supported-versions-of-php/supported-versions-of-php.png))
+![supported-versions-of-php](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/supported-versions-of-php/supported-versions-of-php.png)
 
 Check the official [PHP documentation](https://www.php.net/supported-versions.php) for more details on the supported versions.

@@ -57,9 +57,9 @@ entries:
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
 
           - title: Marketplace Product Approval Process
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-approval-process-feature-walkthrough.html
-                include_versions:
-                - "202204.0"
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-approval-process-feature-walkthrough.html
+            include_versions:
+            - "202204.0"
           
           - title: Marketplace Order Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html

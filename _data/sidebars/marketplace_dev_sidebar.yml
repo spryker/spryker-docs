@@ -56,6 +56,11 @@ entries:
           - title: Marketplace Product
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
 
+          - title: Marketplace Product Approval Process
+                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-approval-process-feature-walkthrough.html
+                include_versions:
+                - "202204.0"
+          
           - title: Marketplace Order Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html
 
@@ -131,8 +136,6 @@ entries:
           - title: Merchant Opening Hours
             url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours-feature-walkthrough.html
 
-          
-
           - title: Merchant Portal
             nested:
 
@@ -155,11 +158,6 @@ entries:
 
               - title: Marketplace Merchant Portal Product Offer Management
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html
-
-              - title: Marketplace Product Approval Process
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-approval-process-feature-walkthrough.html
-                include_versions:
-                - "202204.0"
 
       - title: Feature integration guides
         nested:

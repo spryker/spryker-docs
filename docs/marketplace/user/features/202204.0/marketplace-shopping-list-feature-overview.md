@@ -12,21 +12,19 @@ Merchant information is displayed in the *Sold by* field so that customer can al
 
 ## Marketplace Shopping List on the Storefront
 
-This section contains peculiarities of the marketplace shopping list behavior in the Storefront.
-
-If the product offer or marketplace product is not available, the following behavior is observed:
+If the product offer or marketplace product is not available, the following behavior is observed on the Storefront:
 
 <div class="width-100">
 
 | CASE DESCRIPTION   | BEHAVIOR    |
 | ------------------ | --------------------------- |
-| **Product** Stock is 0 and never out of stock flag is FALSE. | The shopping list item is marked as *not available*, there is no possibility to add it to cart, however the price and merchant information is displayed. |
-| **Offer** Stock is 0 and *never out of stock* flag is FALSE.   | The shopping list item is marked as *not available*, it is impossible to add it to cart, however the price and merchant information is displayed. |
-| Merchant Status is *Inactive*. The  **product** was added to the shopping list. | The shopping list item is marked as *not available*, it is impossible to add it to cart, the *Sold by* hint is not displayed, however the customer can still see the price. If the merchant is active again, the shopping list item gets the *Sold by* hint back with the actual merchant information. |
-| Merchant Status is *Inactive*. The **offer** was added to the shopping list. | The shopping list item is marked as *not available*, it is impossible to add it to cart, the *Sold by* hint is not displayed, however the customer can still see the price. If the merchant is active again, the shopping list item gets the *Sold by* hint back with the actual merchant information. |
+| **Product** stock is 0 and never out of stock flag is FALSE. | The shopping list item is marked as *not available*, there is no possibility to add it to cart, however the price and merchant information is displayed. |
+| **Offer** stock is 0 and *never out of stock* flag is FALSE.   | The shopping list item is marked as *not available*, it is impossible to add it to cart, however the price and merchant information is displayed. |
+| Merchant status is *Inactive*. The  **product** was added to the shopping list. | The shopping list item is marked as *not available*, it is impossible to add it to cart, the *Sold by* hint is not displayed, however the customer can still see the price. If the merchant is active again, the shopping list item gets the *Sold by* hint back with the actual merchant information. |
+| Merchant status is *Inactive*. The **offer** was added to the shopping list. | The shopping list item is marked as *not available*, it is impossible to add it to cart, the *Sold by* hint is not displayed, however the customer can still see the price. If the merchant is active again, the shopping list item gets the *Sold by* hint back with the actual merchant information. |
 | The **Offer** is **not** approved.                           | The shopping list item is marked as *not available*, it is impossible to add it to cart, the *Sold by* hint is not displayed, however the customer can still see the price. |
 | The **Product** status is *Deactivated*.                     | The shopping list item is marked as *not available*, it is impossible to add it to cart, the *Sold by* hint and the price are not displayed, |
-| The **Offer** Status is *Inactive*.                          | The shopping list item is marked as *not available*, it is impossible to add it to cart, the *Sold by* hint is not displayed, the price (taken from the concrete product) is displayed. |
+| The **Offer** status is *Inactive*.                          | The shopping list item is marked as *not available*, it is impossible to add it to cart, the *Sold by* hint is not displayed, the price (taken from the concrete product) is displayed. |
 | **Product** is not in the current store.                     | The shopping list item is marked as *not available*, it is impossible to add it to cart, the *Sold by* hint is not displayed, however the customer can still see the price. |
 | **Offer** is not in the current store.                       | The *Sold by* hint is not displayed. The shopping list item is switched to the normal product without stock, so the shopping list item is marked as *not available*, it is impossible to add it to cart, the price is displayed. |
 | **Product** validity date does not include the current date. | The shopping list item is marked as *not available*, it is impossible to add it to cart, the *Sold by* hint and price are not displayed. |

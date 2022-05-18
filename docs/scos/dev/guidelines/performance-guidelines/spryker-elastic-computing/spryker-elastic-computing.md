@@ -1,6 +1,6 @@
 ---
-title: Spryker Elastic Computing
-description: This guideline explains how to use Elastic Computing functionality.
+title: Integrate Elastic Computing
+description: Learn how to integrate Elastic Computing.
 last_updated: May 16, 2022
 template: concept-topic-template
 ---
@@ -9,7 +9,7 @@ Spryker is shipped with several elastic computing features that let you to utili
 
 ## Integrate New Relic monitoring
 
-To integrate New Relic monitoring for publish and sync (P&S) and the infastructure of queue workers, follow the steps:
+To integrate New Relic monitoring for the infastructure of queue workers in publish and sync (P&S), follow the steps:
 
 1. Update module `spryker/monitoring` to version 2.5.0 or higher.
 2. In `Pyz\Zed\Monitoring\MonitoringConfig`, add `queue:task:start` command to the argument grouped transactions:
@@ -32,7 +32,7 @@ class MonitoringConfig extends BaseMonitoringConfig
 }
 ```
 
-3. Add to the `Pyz\Zed\Monitoring\Business\MonitoringBusinessFactory` following lines of code:
+3. In `Pyz\Zed\Monitoring\Business\MonitoringBusinessFactory`, enable `FirstArgumentMonitoringConsoleTransactionNamingStrategy` to be used for transaction naming.
 ```php
 public function getMonitoringTransactionNamingStrategies(): array
     {
@@ -41,9 +41,8 @@ public function getMonitoringTransactionNamingStrategies(): array
         ];
     }
 ```
-This will aggregate all different queue worker transactions under corresponding `queue:task:start {queue_name}` transaction name in New Relic.
 
-As a result, the transactions are displayed in the New Relic dashboardas as follows.
+Now New Relic groups transactions for the same command by the first argument. When there are multiple `queue:task:start` commands with different queue names as arguments, New Relic will group them by the queue names.
 
 ## Integrate RAM-aware batch processing 
 
@@ -117,7 +116,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 }
 ```
 
-3. Update the writer steps (`Pyz\Zed\DataImport\Business\Model\Glossary\GlossaryWriterStep`) as it is show in the code below by adjusting the execute method to flush `MemoryAllocatedElasticBatch` when it is full.
+3. In `Pyz\Zed\DataImport\Business\Model\Glossary\GlossaryWriterStep`, update the writer steps by adjusting the execute method to flush `MemoryAllocatedElasticBatch` when it is full.
 ```php
 <?php
 /**
@@ -251,7 +250,7 @@ class QueueConfig extends SprykerQueueConfig
 }
 ```
 
-As a result, worker spawn a group of processes per each non-empty queue based on number of messages and available RAM. 
+As a result, the worker spawns a group of processes per each non-empty queue based on the number of messages and available RAM. 
 
 ## Integrate primary-replica database reading and writing
 

@@ -1,6 +1,6 @@
 ---
 title: Managing shopping lists
-last_updated: Feb 22, 2022
+last_updated: May 18, 2022
 template: glue-api-storefront-guide-template
 related:
   - title: Glue API - Shopping Lists feature integration
@@ -9,7 +9,7 @@ related:
     link: docs/marketplace/dev/glue-api-guides/page.version/shopping-lists/managing-shopping-list-items.html
 ---
 
-The Marketplace Shopping Lists API feature allows managing shopping lists in the Marketplace, as well as managing the items in them. Unlike the [Marketplace Wishlists](/docs/marketplace/user/features/{{page.version}}/marketplace-wishlist-feature-overview.html), shopping lists contain not only a list of items to be purchased but also the quantity of each item.
+The Marketplace Shopping Lists API feature allows managing shopping lists in the Marketplace, as well as managing the items in them. 
 
 In your development, the resources can help you to enable the shopping list functionality in your application.
 

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/retrieving-cms-pages
   - /docs/retrieving-cms-pages
   - /docs/en/retrieving-cms-pages
+  - /docs/scos/dev/glue-api-guides/201811.0/retrieving-cms-pages.html
   - /docs/scos/dev/glue-api-guides/202005.0/retrieving-cms-pages.html
 ---
 

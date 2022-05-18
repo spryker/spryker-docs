@@ -3,6 +3,9 @@ title: Managing wishlist items
 description: Retrieve details about wishlist items and learn what else you can do with the resource in the Spryker Marketplace.
 template: glue-api-storefront-guide-template
 redirect_from:
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-wishlists/managing-wishlist-items.html
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-wishlists/managing-wishlist-items.html
+  - /docs/scos/dev/glue-api-guides/201907.0/managing-wishlists/managing-wishlist-items.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-wishlists/managing-wishlist-items.html
 ---
 

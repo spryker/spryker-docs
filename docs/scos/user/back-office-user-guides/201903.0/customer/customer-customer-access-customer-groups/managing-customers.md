@@ -8,6 +8,8 @@ originalArticleId: 1bb6a730-6023-49b9-b169-0232553bc250
 redirect_from:
   - /v2/docs/managing-customers
   - /v2/docs/en/managing-customers
+  - /docs/scos/user/back-office-user-guides/201903.0/customers/customers-customer-access-customer-groups/managing-customers.html
+  - /docs/scos/user/back-office-user-guides/201903.0/customer/customers-customer-access-customer-groups/managing-customers.html
 related:
   - title: Customer Accounts
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
@@ -19,7 +21,7 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/customer/customers-customer-access-customer-groups/managing-customer-access.html
 ---
 
-This article describes the procedures for creating and managing customers. 
+This article describes the procedures for creating and managing customers.
 ***
 To start managing customers, navigate to the **Customers > Customers** section.
 ***
@@ -27,7 +29,7 @@ To start managing customers, navigate to the **Customers > Customers** section.
 **To create a new customer:**
 1. Click **Add Customer** in the top-right corner of the **Customers** page.
 2. On the **Add a customer** page, enter the customer information. The customer information must include first name, last name, and the email address that will be linked to the new account. The email address is important for completing the registration (by accessing the link that will be sent by email) or for later use of the forgot password functionality.
-3. Send password token by email by selecting the **Send password token through email** checkbox. After saving the customer data, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. 
+3. Send password token by email by selecting the **Send password token through email** checkbox. After saving the customer data, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account.
 {% info_block infoBox "Info" %}
 
 If you don’t select this option, the customer is still able to set a password for their account, by clicking the reset password link from the online store.
@@ -36,9 +38,9 @@ If you don’t select this option, the customer is still able to set a password 
 
 4. To complete the customer creation, click **Save**.
 
-To know more about the attributes you see, select, and enter while creating a customer, see the [Customers: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers-customer-access-customer-groups/references/customers-reference-information.html) article. 
+To know more about the attributes you see, select, and enter while creating a customer, see the [Customers: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers-customer-access-customer-groups/references/customers-reference-information.html) article.
 
-## Editing Customers 
+## Editing Customers
 **To edit a customer:**
 1. For a specific customer, you need to update, click **Edit** in the _Actions_ column on the **Customers** page.
 2. On the **Edit Customer** page you see the same attributes as on the **Add a customer** page, but with the following exceptions:
@@ -54,7 +56,7 @@ From the **Edit customer** page you can:
 ## Viewing Customer Details
 The **View customer details** page is designed to serve more purposes than just seeing the details.
 
-On this page, you can view the orders placed by the customer, edit the addresses, or add another address, leave descriptive messages in the **Notes** section. 
+On this page, you can view the orders placed by the customer, edit the addresses, or add another address, leave descriptive messages in the **Notes** section.
 
 To know how the customer addresses are managed, see  [Managing Customer Addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customer-addresses.html).
 
@@ -64,7 +66,7 @@ To know how the customer addresses are managed, see  [Managing Customer Addresse
 OR
 2. Click **View** in the top right corner of the **Edit Customer** page.
 
-If the customer has addresses, they can be edited in the **Addresses** section of the **View Customer** page. 
+If the customer has addresses, they can be edited in the **Addresses** section of the **View Customer** page.
 
 ### Leaving a note
 **To leave a note:**

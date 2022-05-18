@@ -7,6 +7,8 @@ originalArticleId: 1045e309-59a4-4ab6-bca5-9a06c75925f1
 redirect_from:
   - /v2/docs/managing-wishlists
   - /v2/docs/en/managing-wishlists
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-wishlists/managing-wishlist-items.html
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-wishlists.html
 ---
 
 The Wishlists API provides REST access to managing [wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html) of a customer. With the help of the endpoints provided by the API, you can create, list and delete wishlists, as well as manage the items inside them.
@@ -14,7 +16,9 @@ The Wishlists API provides REST access to managing [wishlists](/docs/scos/user/f
 In your development, these resources can help you to enable complete wishlist functionality for your customers.
 
 {% info_block warningBox "Authentication " %}
+
 Since wishlists are available for registered users only, the endpoints provided by the API cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token in your REST requests. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
 {% endinfo_block %}
 
 ## Installation
@@ -40,6 +44,7 @@ Request sample: `POST http://mysprykershop.com/wishlists`
 ```
 
 **Sample Response:**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | name | String | Name of the wishlist |
@@ -71,6 +76,7 @@ Request sample: `POST http://mysprykershop.com/wishlists`
 The response contains a unique identifier, contained in the id attribute, and a self link that can be used to access the wishlist later.
 
 ### Possible errors
+
 | Code | Reason |
 | --- | --- |
 | 202 | A wishlist with the same name already exists. |
@@ -81,6 +87,7 @@ To access all wishlists of a user, send a GET request to the following endpoint:
 `/wishlists`
 Request sample: `GET http://mysprykershop.com/wishlists`
 **Sample Response:**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | name | String | Name of the wishlist. |
@@ -106,8 +113,8 @@ If there are any wishlists already created for a user, they will be returned in 
 ```js
 {
 		"data": {
-  
- 
+
+
 	{
 		"data": [
 			{
@@ -152,6 +159,7 @@ The following sample changes the name of a wishlist.
 ```
 
 **Sample Response:**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | name | String | Name of the wishlist |
@@ -164,6 +172,7 @@ The following sample changes the name of a wishlist.
 In case of a successful update, the endpoint will also respond with a RestWishlistsResponse, where the wishlist name will be updated.
 
 **Sample response**
+
 ### Possible errors
 
 | Code | Reason |
@@ -182,6 +191,7 @@ where `09264b7f-1894-58ed-81f4-d52d683e910a` is the ID of the wishlist you want 
 If the wishlist was deleted successfully, the endpoint would respond with a **204 No Content** status code.
 
 ### Possible errors
+
 | Code | Reason |
 | --- | --- |
 | 201 | Cannot find the wishlist. |
@@ -195,6 +205,7 @@ Request sample: `GET http://mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-
 where `09264b7f-1894-58ed-81f4-d52d683e910a` is the ID of the wishlist you want to retrieve.
 
 **Sample Response:**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | name | String | Name of the wishlist |
@@ -209,6 +220,7 @@ If the specified wishlist exists, the endpoint will respond with a RestWishlists
 **Sample response**
 
 ## Possible errors
+
 | Code | Reason |
 | --- | --- |
 | 201 | Cannot find the wishlist. |
@@ -223,6 +235,7 @@ where `09264b7f-1894-58ed-81f4-d52d683e910a` is the ID of the wishlist to which 
 **Request sample body**
 
 **Sample Response:**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | sku | String | Concrete product SKU. |
@@ -248,6 +261,7 @@ The endpoint will respond with a **RestWishlistItemResponse** that contains info
 ```
 
 ### Possible errors
+
 | Code | Reason |
 | --- | --- |
 | 201 | Cannot find the wishlist. |
@@ -262,6 +276,7 @@ where: `09264b7f-1894-58ed-81f4-d52d683e910a` - the ID of the wishlist where you
 If the item was removed successfully, the endpoint will respond with a **204 No Content** status code.
 
 ## Possible errors:
+
 | Code | Reason |
 | --- | --- |
 | 201 | Cannot find the wishlist. |

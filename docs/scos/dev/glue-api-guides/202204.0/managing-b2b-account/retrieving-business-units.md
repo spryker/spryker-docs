@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/retrieving-business-units
   - /docs/retrieving-business-units
   - /docs/en/retrieving-business-units
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-business-units.html
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-business-units.html
+  - /docs/scos/dev/glue-api-guides/202200.0/managing-b2b-account/retrieving-business-units.html
 related:
   - title: Logging In as Company User
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html

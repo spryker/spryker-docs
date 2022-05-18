@@ -1,11 +1,11 @@
 ---
-title: Integrate Elastic Computing
-description: Learn how to integrate Elastic Computing.
+title: Integrate elastic computing
+description: Learn how to integrate elastic computing.
 last_updated: May 16, 2022
 template: concept-topic-template
 ---
 
-Spryker is shipped with several elastic computing features that let you to utilize computational resources more efficiently. 
+Spryker is shipped with several elastic computing features that let you to utilize computational resources more efficiently.
 
 ## Integrate New Relic monitoring
 
@@ -44,9 +44,9 @@ public function getMonitoringTransactionNamingStrategies(): array
 
 Now New Relic groups transactions for the same command by the first argument. When there are multiple `queue:task:start` commands with different queue names as arguments, New Relic will group them by the queue names.
 
-## Integrate RAM-aware batch processing 
+## Integrate RAM-aware batch processing
 
-Batch processing significantly speeds up processing operations. Moving more data into RAM at once decreases the number of I/O, which decreases operations' processing time. Dynamic batch size calcualtion based on available RAM decreases it even more. 
+Batch processing significantly speeds up processing operations. Moving more data into RAM at once decreases the number of I/O, which decreases operations' processing time. Dynamic batch size calcualtion based on available RAM decreases it even more.
 
 To intagrate elastic batch for the glossary data import as an example, follow the steps:
 
@@ -66,7 +66,7 @@ To intagrate elastic batch for the glossary data import as an example, follow th
 class DataImportConfig extends SprykerDataImportConfig
 {
     ...
-        
+
     /**
      * @return int
      */
@@ -97,7 +97,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 {
   ...
   protected function createGlossaryImporter(
-        DataImportConfigurationActionTransfer $dataImportConfigurationActionTransfer 
+        DataImportConfigurationActionTransfer $dataImportConfigurationActionTransfer
         ): DataImporterInterface
     {
       $dataImporter = $this->getCsvDataImporterFromConfig(
@@ -221,7 +221,7 @@ class GlossaryWriterStep extends PublishAwareStep implements DataImportStepInter
 
 ## Integrate scalable application infrastructure for P&S workers
 
-1. Update module `spryker/queue` to version 1.10.0 or higher. 
+1. Update module `spryker/queue` to version 1.10.0 or higher.
 2. Set `THREAD_POOL_SIZE` to the number of your CPU cores plus one.
 ```php
   <?php
@@ -238,7 +238,7 @@ use Spryker\Zed\Queue\QueueConfig as SprykerQueueConfig;
 class QueueConfig extends SprykerQueueConfig
 {
   public const CPU_CORE_NUMBER = 32; // your system's CPU core count
- 
+
     /**
      * @return array<string, mixed>
      */
@@ -246,11 +246,11 @@ class QueueConfig extends SprykerQueueConfig
     {
         return static::CPU_CORE_NUMBER + 1;
     }
- 
+
 }
 ```
 
-As a result, the worker spawns a group of processes per each non-empty queue based on the number of messages and available RAM. 
+As a result, the worker spawns a group of processes per each non-empty queue based on the number of messages and available RAM.
 
 ## Integrate primary-replica database reading and writing
 
@@ -269,7 +269,7 @@ $config[PropelReplicationCacheConstants::CACHE_TTL] = 2;
 ```
 
 4. To enable "cache key" management in the background using propel entities, in `src/Pyz/Zed/PropelOrm/PropelOrmDependencyProvider.php`, wire the `FindExtensionPlugin` and `PostSaveExtensionPlugin` plugins:
-  
+
 ```php
 <?php
 

@@ -38,8 +38,9 @@ commonOptions = {
     /guides.github.com\/[\.\w\-\/\?]+/,
     /docs.github.com\/[\.\w\-\/\?]+/,
     /shopify.github.io\/[\.\w\-\/\?]+/,
-    /marketplace.visualstudio.com\/[\.\w\-\/\?]+/,    
+    /marketplace.visualstudio.com\/[\.\w\-\/\?]+/,
     /blackfire.io\/[\.\w\-\/\?]+/,
+    /phpunit.de\/[\.\w\-\/\?]+/,    
     /www.nekom.com\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],

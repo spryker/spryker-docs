@@ -88,9 +88,9 @@ protected function addPaymentMethodHandlerPluginCollection(Container $container)
 	];>
 }
 ```
-    
+
 3. Add checkout plugins:
- 
+
 \Pyz\Zed\Checkout\CheckoutDependencyProvider
 
 ```php
@@ -162,7 +162,7 @@ protected function addCommandPlugins(Container $container): Container
 To make Heidelpay module work with your project, it's necessary to extend the frontend part:
 
 tsconfig.json
- 
+
 ```json
  "include": [
  "./vendor/spryker/spryker-shop/**/*",

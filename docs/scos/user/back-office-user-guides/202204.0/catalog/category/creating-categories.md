@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/creating-categories
   - /docs/creating-categories
   - /docs/en/creating-categories
+  - /docs/scos/user/back-office-user-guides/202200.0/catalog/category/creating-categories.html
 related:
   - title: Assigning Products to Categories
     link: docs/scos/user/back-office-user-guides/page.version/catalog/category/assigning-products-to-categories.html

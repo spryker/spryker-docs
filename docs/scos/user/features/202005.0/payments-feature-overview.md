@@ -12,6 +12,7 @@ redirect_from:
   - /v5/docs/en/dummy-payment
   - /v5/docs/payment-provider-integration
   - /v5/docs/en/payment-provider-integration
+  - /docs/scos/user/features/202005.0/payment/payment.html
 
 ---
 

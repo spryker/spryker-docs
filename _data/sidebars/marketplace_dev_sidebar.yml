@@ -69,6 +69,11 @@ entries:
           - title: Marketplace Product Offer Prices
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-prices-feature-walkthrough.html
 
+          - title: Marketplace Merchant Custom Prices
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-custom-prices-feature-walkthrough.html
+            include_versions:
+            - "202204.0"
+            
           - title: Marketplace Return Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-return-management-feature-walkthrough.html
 
@@ -121,6 +126,8 @@ entries:
           - title: Merchant Opening Hours
             url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours-feature-walkthrough.html
 
+          
+
           - title: Merchant Portal
             nested:
 
@@ -146,8 +153,8 @@ entries:
 
               - title: Marketplace Product Approval Process
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-approval-process-feature-walkthrough.html
-            include_versions:
-            - "202204.0"
+                include_versions:
+                - "202204.0"
 
       - title: Feature integration guides
         nested:
@@ -342,6 +349,11 @@ entries:
 
               - title: "Glue API: Marketplace Return Management feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-return-management-feature-integration.html
+
+              - title: "Glue API: Marketplace Shopping Lists feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-shopping-lists-feature-integration.html
+                include_versions:
+                - "202204.0"
 
       - title: Glue API guides
         nested:

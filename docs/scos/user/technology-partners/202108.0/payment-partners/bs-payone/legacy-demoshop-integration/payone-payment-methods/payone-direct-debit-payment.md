@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/payone-direct-debit
   - /docs/payone-direct-debit
   - /docs/en/payone-direct-debit
+  - /docs/scos/user/technology-partners/201907.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-direct-debit-payment.html
 related:
   - title: PayOne - Prepayment
     link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html

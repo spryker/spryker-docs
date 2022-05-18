@@ -24,7 +24,7 @@ redirect_from:
   - /v1/docs/en/code-quality
 ---
 
-Spryker Commerce OS’s code base receives very high scores in terms of quality measures, indicating significantly higher code quality than many other ecommerce solutions.
+Spryker Commerce OS’s code base receives very high scores in terms of quality measures, indicating significantly higher code quality than many other e-commerce solutions.
 
 Code Quality Spryker, PHPmetrics.org score in score points (x out of 100)
 ![Code quality](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Guidelines/Code+Quality/spryker-code-quality.png)

@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Different stores, different logic - landing pages - Spryker Commerce OS
+title: "Tutorial: Different stores, different logic - landing pages - Spryker Commerce OS"
 description: The tutorial describes how you can extend the functionality to set up different home pages per specific stores.
 last_updated: Jun 16, 2021
 template: howto-guide-template

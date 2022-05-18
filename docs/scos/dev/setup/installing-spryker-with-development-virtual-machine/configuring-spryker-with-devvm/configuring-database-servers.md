@@ -31,8 +31,8 @@ Spryker supports MySQL, MariaDB, and PostgreSQL as database servers. By default,
 
 To configure the database server you want to use, you have to keep in mind these constants and use them in the corresponding configuration file:
 
-| Database Server |    ZED_DB_ENGINE    | ZED_DB_PORT |
-| :-------------: | :-----------------: | :---------: |
+| DATABASE SERVER | ZED_DB_ENGINE   | ZED_DB_PORT |
+| ------------- | ----------------- | --------- |
 | MySQL or MariaDB | ZED_DB_ENGINE_MYSQL |    3306     |
 | PostgreSQL | ZED_DB_ENGINE_PGSQL |    5432     |
 

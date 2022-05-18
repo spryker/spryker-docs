@@ -8,6 +8,7 @@ originalArticleId: ae763bda-29db-415a-9beb-24ba861281be
 redirect_from:
   - /v5/docs/payolution-requests
   - /v5/docs/en/payolution-requests
+  - /docs/scos/user/technology-partners/202005.0/payment-partners/payolution/payolution-performing-requests.html
 related:
   - title: Integrating the invoice paymnet method for Payolution
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
@@ -56,7 +57,7 @@ To perform the needed requests, you can easily use the implemented state machine
 **Capture**
 
 * Capture of previous (p)re-authorization call
-* Full and partial capture possible.  Captured amount cannot exceed the authorized amount. 
+* Full and partial capture possible.  Captured amount cannot exceed the authorized amount.
 * Response:
   - Success: Previous (p)re-authorization still valid and accepted
   - Declined: Previous (p)re- authorization expired, request format error, or internal error
@@ -102,4 +103,4 @@ To perform the needed requests, you can easily use the implemented state machine
 ## Core Module Structure Diagram
 
 The Payolution core module uses the following class and flow and structure:
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-core-bundle-structure.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Payolution/payolution-core-bundle-structure.png)

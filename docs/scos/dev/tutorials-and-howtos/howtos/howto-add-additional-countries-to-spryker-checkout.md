@@ -1,5 +1,5 @@
 ---
-title: HowTo - Add additional countries to Spryker checkout
+title: "HowTo - Add additional countries to Spryker checkout"
 description: This HowTo explains how to add additional countries to the checout.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -18,16 +18,18 @@ This HowTo explains how to add additional shipping countries selected by the end
 
 Customers that want to open up their store to buyers of more than the predefined counties need to make adjustments to the Spryker code to display more countries for selection in the Spryker checkout.
 
-![Multiple countries in Checkout](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+Add+additional+countries+to+Spryker+checkout/checkout-multiple-countries.png) 
+![Multiple countries in Checkout](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+Add+additional+countries+to+Spryker+checkout/checkout-multiple-countries.png)
 
 ## Prerequisites
+
 Ensure that you have an up-to-date installation of any of the following instances:
 
-* Spryker B2C Show
+* Spryker B2C Shop
 * Spryker B2B Shop
 * Spryker Suite
 
-## Adding countries to checkout
+## Add countries to checkout
+
 To add additional countries to the checkout, follow the steps:
 
 1. Expand the country list by including country ISO codes directly into `config/Shared/stores.php`.
@@ -37,6 +39,7 @@ To add additional countries to the checkout, follow the steps:
     'countries' => ['DE', 'AT', 'NO', 'CH', 'ES', 'GB','AU'],
 //Add the countries you would like to add to this array. For this example "AU" (Australia) was added
 ```
+
 2. Update the glossary so that the ISO country code is resolved to the real name of the country you added.
 
 **data/import/glossary.csv**
@@ -58,12 +61,11 @@ countries.iso.ES,Spanien,de_DE
 countries.iso.GB,United Kingdom,en_US
 countries.iso.GB,Großbritannien,de_DE
 ```
-{% info_block warningBox "Attention!" %}
 
+{% info_block warningBox "Attention!" %}
 
 It will make sense to define additional tax rules when creating additional countries.
 
 {% endinfo_block %}
-
 
 After these changes are performed, your buyers will be able to select the countries configured in the checkout dialogue.

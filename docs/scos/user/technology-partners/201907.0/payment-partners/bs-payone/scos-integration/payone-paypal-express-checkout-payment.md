@@ -8,6 +8,7 @@ originalArticleId: 5e2faee1-78c5-40b8-9f34-06448bb1e4a6
 redirect_from:
   - /v3/docs/payone-paypal-express-checkout-scos
   - /v3/docs/en/payone-paypal-express-checkout-scos
+  - /docs/scos/user/technology-partners/201907.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-paypal-payment.html-express-checkout
 ---
 
 The payment using PayPal requires redirect to PayPal website. When the customer is redirected to PayPal's website, they have to authorize and after that either cancel or validate the transaction.
@@ -101,7 +102,7 @@ Open `Yves/CheckoutPage/Process/Steps/CustomerStep.php` file in your project and
  return true;
  }
  ```
- 
+
  ```php
  public function postCondition(AbstractTransfer $quoteTransfer)
  {

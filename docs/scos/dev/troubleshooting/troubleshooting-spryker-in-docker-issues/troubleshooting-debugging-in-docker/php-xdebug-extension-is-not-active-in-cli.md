@@ -15,9 +15,12 @@ redirect_from:
 ---
 
 ## Description
+
 PHP `xdebug` extension is not active in CLI.
 
 ## Solution
+
 Exit the CLI session and enter it with the `-x` argument:
+
 * `docker/sdk cli -x`
-* `docker/sdk testing -x
+* `docker/sdk testing -x`

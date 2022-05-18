@@ -25,6 +25,7 @@ composer require spryker-eco/braintree --update-with-dependencies
 ```
 Apply database changes and generate entity and transfer changes:
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

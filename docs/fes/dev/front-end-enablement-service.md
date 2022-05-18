@@ -43,7 +43,7 @@ The Launchpad is a multi-tenant application that interacts with the following co
 * GitHub repository that stores frontends’ code.
 * Netlify hosting provider, where frontends are built and distributed across a CDN.
 
-![launchpad-architecture](https://confluence-connect.gliffy.net/embed/image/70b3572e-f2a0-40d7-826e-3862d16bdfd7.png?utm_medium=live&utm_source=custom)
+![launchpad-architecture](https://confluence-connect.gliffy.net/embed/image/9cb232d7-e48c-48da-a53d-d78b4ba577c4.png?utm_medium=live&utm_source=custom)
 
 Glue API is used for the following:
 * To connect your SCCOS environments to the Launchpad. When creating a frontend, you can see the list of your environments, locales, and currencies.

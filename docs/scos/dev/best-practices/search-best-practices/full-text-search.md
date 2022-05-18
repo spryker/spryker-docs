@@ -25,17 +25,19 @@ redirect_from:
 ---
 
 Full-text search is a feature where a user enters arbitrary text into a search field and then gets documents that are relevant for that query. It is normally combined with faceted navigation. In the example below, a user searched for “hammer” and then further filtered for hammer weights of 2000 gram and prices between 10€ and 50€:
+
 ![Full-text search](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Full-Text+Search/fulltext-search.png) 
 
 Although some tweaking is necessary, Elasticsearch does a great job in running full-text queries fast (it’s one of the most important features of the underlying Lucene engine). On the other hand, more work is required to get text relevance right and to make sure that the first returned query results are the ones that are most relevant for the user.
 
-## Text Analysis
+## Text analysis
 
 The defaults of Elasticsearch work fine for basic full-text search use cases, but language- and business-dependent text processing needs to be performed for a great search experience. This is called text analysis and refers to the process of splitting source text into a stream of tokens. The [Elasticsearch analysis module](https://www.elastic.co/guide/en/elasticsearch/reference/5.0/analysis.html) offers a set of pre-built default analyzers but it’s also possible to build custom ones.
 
 Analyzers are composed of a single tokenizer and zero or more token filters. A tokenizer splits source text into a stream of tokens (e.g. splitting by whitespace characters) which are then passed to token filters. Filters are applied one by one, each modifying its input stream by deleting/splitting/changing tokens and passing the stream to the next filter. The resulting list of tokens is saved to [Elasticsearch inverted index](https://www.elastic.co/guide/en/elasticsearch/guide/current/inverted-index.html) and made searchable in a very performant way.
 
 The picture below shows a text analysis process that works good for tool-related text in German:
+
 ![Text analysis](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Full-Text+Search/text-analysis.png) 
 
 The exact steps and their order will differ for different business models and applications (there is no “free lunch” here) so this will require some experimentation before getting it right.
@@ -67,7 +69,8 @@ The boosting of the second field happens at query time, for example by multiplyi
 }
 ```
 
-### Improving Text Relevance
+### Improving text relevance
+
 Text relevance can be further improved by adding different analyzers for full-text fields. This is straightforward in Elasticsearch and requires small changes in the document mapping:
 
 ```js
@@ -93,10 +96,12 @@ Text relevance can be further improved by adding different analyzers for full-te
 ```
 
 {% info_block warningBox %}
+
 `full_text_index_analyzer`, `full_text_search_analyzer`, etc. are all examples of custom analyzers and need to be configured separately from the mapping.
+
 {% endinfo_block %}
 
-Elasticsearch is now going to take a textual field (in this case full_text) and analyze it with three different analyzers: once with normal `full_text_search_analyzer` but also with two other analyzers that are skipping the decompounding and stemming analysis steps. The reason for this is that the text loses some information during the analysis process (e.g. lowercasing the word removes the case information of the original word). By indexing the same text with different analyzers we have a chance to distinguish good matches from bad ones by giving higher scores to those search terms that match a higher number of analyzers.
+Elasticsearch is now going to take a textual field (in this case full_text) and analyze it with three different analyzers: once with normal `full_text_search_analyzer` but also with two other analyzers that are skipping the decompounding and stemming analysis steps. The reason for this is that the text loses some information during the analysis process (e.g. lower casing the word removes the case information of the original word). By indexing the same text with different analyzers we have a chance to distinguish good matches from bad ones by giving higher scores to those search terms that match a higher number of analyzers.
 
 Below is an example of a query that will:
 

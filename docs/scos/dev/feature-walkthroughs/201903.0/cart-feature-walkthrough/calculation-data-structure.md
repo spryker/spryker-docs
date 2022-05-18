@@ -8,11 +8,12 @@ originalArticleId: 456a9ccd-c3a9-42cf-a624-84b2fd602c64
 redirect_from:
   - /v2/docs/calculation-data-structure
   - /v2/docs/en/calculation-data-structure
+  - /docs/scos/user/features/201903.0/cart-feature-overview/calculation/calculation-data-structure.html
 ---
 
 The following diagram illustrates the Calculation data structure.
 
-![Calculation Data Structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Calculation/Calculation+Data+Structure/calculation.png) 
+![Calculation Data Structure](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Calculation/Calculation+Data+Structure/calculation.png)
 
 ## Quote Transfer
 QuoteTransfer is the main data transfer object used in Cart, Calculation, Checkout and when order is placed. This object is created when first item is added to the cart.

@@ -14,6 +14,7 @@ redirect_from:
   - /2021080/docs/en/company-roles-reference-information
   - /docs/company-roles-reference-information
   - /docs/en/company-roles-reference-information
+  - /docs/scos/user/features/202200.0/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---
 
 Usually employees within a company have different roles (for example, purchasing, administration, supervision). These roles are related to Company Users and are referred to as **Company Roles**. A role can be default (“is_default” option), which means that it is used for all new users automatically.

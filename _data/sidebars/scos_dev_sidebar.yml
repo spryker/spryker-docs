@@ -2804,6 +2804,20 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-webprofiler.html
     - title: Migration Guide - Wishlist
       url: /docs/scos/dev/module-migration-guides/migration-guide-wishlist.html
+    - title: Migration Guide - Flysystem
+      url: /docs/scos/dev/module-migration-guides/migration-guide-flysystem.html
+    - title: Migration Guide - FileManagerStorage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-filemanagerstorage.html
+    - title: Migration Guide - FileManager
+      url: /docs/scos/dev/module-migration-guides/migration-guide-filemanager.html
+    - title: Migration Guide - ContentFileGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-contentfilegui.html
+    - title: Migration Guide - Oauth
+      url: /docs/scos/dev/module-migration-guides/migration-guide-oauth.html
+    - title: Migration Guide - FileManagerWidget
+      url: /docs/scos/dev/module-migration-guides/migration-guide-filemanagerwidget.html
+    - title: Migration Guide - ContentFileWidget
+      url: /docs/scos/dev/module-migration-guides/migration-guide-contentfilewidget.html
   - title: DevOps migration guides
     include_versions:
     - "202001.0"

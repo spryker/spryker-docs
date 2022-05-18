@@ -18,15 +18,15 @@ The following diagram illustrates the dependencies between the modules for the *
 
 ![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/b9b242da-b56f-452d-b44f-7eb740adf1da.png?utm_medium=live&utm_source=custom)
 
-| MODULE                                   | DESCRIPTION                                                                                                                               |
-|------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| MODULE    | DESCRIPTION   |
+|----------------|--------------|
 | ProductOfferShoppingListWidget           | Provides widgets for product offer integration into a shopping list.                                                                      |
-| ProductOfferShoppingListDataImport       | Provides Data Import for Shopping Lists with Product Offers.                                                                              |
-| ProductOfferShoppingList                 | Provides product offer functionality for Shopping List.                                                                                   |
-| MerchantProductShoppingListsRestApi      | Provides REST API endpoints to manage merchant product shopping lists.                                                                    |
+| ProductOfferShoppingListDataImport       | Provides data import for shopping lists with product offers.                                                                              |
+| ProductOfferShoppingList                 | Provides product offer functionality for shopping list.                                                                                   |
+| MerchantProductShoppingListsRestApi      | Provides REST API endpoints to manage marketplace product shopping lists.                                                                    |
 | MerchantProductOfferShoppingListsRestApi | Provides REST API endpoints to manage merchant product offer shopping list.                                                               |
 | ProductOfferShoppingListsRestApi         | Provides REST API endpoints to manage product offer shopping list.                                                                        |
-| ShoppingList                             | Provides infrastructure and functionality to handle multiple shopping lists for a customer account as well as manage shopping list items. |
+| ShoppingList                             | Provides infrastructure and functionality to manage shopping lists as well as the items in shopping lists. |
 
 ## Domain model
 
@@ -36,7 +36,7 @@ The following schema illustrates the *Marketplace Shopping Lists* domain model:
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES                                                                                                                                                      | GLUE API GUIDES                                                                                                                                                       | DATA IMPORT                                                                                                                                                        |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| INTEGRATION GUIDES  | GLUE API GUIDES  | DATA IMPORT   |
+|-----------------|-------------|-----------------|
 | [Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shopping-lists-feature-integration.html) | [Managing shopping lists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/marketplace-shopping-lists/managing-marketplace-shopping-lists.html) | [File details: file-details-product-offer-shopping-list.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-shopping-list.csv.html) |
 | [Glue API: Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-shopping-lists-feature-integration.html)   | [Managing shopping list items](/docs/marketplace/dev/glue-api-guides/{{page.version}}/marketplace-shopping-lists/managing-marketplace-shopping-list-items.html) | | | |

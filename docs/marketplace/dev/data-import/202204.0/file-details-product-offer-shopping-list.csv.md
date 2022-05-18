@@ -5,7 +5,7 @@ description: This document describes the product_offer_shopping_list.csv file to
 template: import-file-template
 ---
 
-This document describes the `product_offer_shopping_list.csv` file to configure [shopping lists with product offers](/docs/marketplace/user/features/{{page.version}}/marketplace-shopping-lists-feature-walkthrough.html) in your Spryker shop.
+This document describes the `product_offer_shopping_list.csv` file to configure [shopping lists with product offers](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-shopping-lists-feature-walkthrough.html) in your Spryker shop.
 
 To import the file, run:
 
@@ -17,10 +17,10 @@ console data:import product-offer-shopping-list-item
 
 The file should have the following parameters:
 
-| PARAMETER               | REQUIRED? | TYPE    | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION                                                                                                                                                 |
-|-------------------------|-----------|---------|---------------|--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| shopping_list_item_key  | &check;   | String  |               | Unique                   | Identifier of the shopping list item in the system.                                                                                         |
-| product_offer_reference | &check;   | String  |               |                          | Identifier of the [merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) in the system. |
+| PARAMETER   | REQUIRED? | TYPE  | REQUIREMENTS OR COMMENTS | DESCRIPTION |
+|--------------|-----------|---------|---------------|------------|
+| shopping_list_item_key  | &check;   | String  | Unique  | Identifier of the shopping list item in the system. |
+| product_offer_reference | &check;   | String  |         | Identifier of the [product offer](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html) in the system. |
 
 ## Import file dependencies
 

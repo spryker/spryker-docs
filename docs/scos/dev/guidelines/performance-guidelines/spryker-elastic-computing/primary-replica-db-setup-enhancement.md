@@ -1,5 +1,5 @@
 ---
-title: Primary-Replica DB setup enhancement
+title: Storage caching for primary-replica database setups
 description: This guideline explains how to setup the Master-Replica database connection.
 last_updated: May 16, 2022
 template: concept-topic-template
@@ -15,10 +15,10 @@ This issue can occur in the following cases:
 
 To cover the cases, Storage is used as a caching mechanism for keeping the type of the records that recently were added to a primary DB.
 
-The approach works as shown below:
+The approach works as follows:
 1. Record is created.
 2. Record type is stored in Storage. For example `User` string for a User model.
-3. Storage keeps the record type alive for 3 seconds. The time is configurable.
+3. Storage keeps the record type alive for 3 seconds. The time is configurable and depends on how quickly the data is usually transferred from the primary to the replica DB.
 4. When reading data, application checks the Storage for a needed record type and does the following:
     * If the record type is present in Storage, it reads the primary DB.
     * If the record type is not present in the Storage, it reads the replica.

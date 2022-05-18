@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/microsoft-azure-active-directory
   - /docs/microsoft-azure-active-directory
   - /docs/en/microsoft-azure-active-directory
+  - https://docs.spryker.com/docs/scos/dev/feature-integration-guides/202005.0/microsoft-azure-active-directory.html
 ---
 
 This page describes the Microsoft Azure Active Directory and how to integrate it into a Spryker project.

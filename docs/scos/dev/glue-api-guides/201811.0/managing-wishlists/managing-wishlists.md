@@ -7,6 +7,7 @@ originalArticleId: 8a6a206f-ce6e-4913-8d5c-60aa3ebc30ba
 redirect_from:
   - /v1/docs/managing-wishlists
   - /v1/docs/en/managing-wishlists
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-wishlists.html
 ---
 
 The Wishlists API provides REST access to managing [wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html) of a customer. With the help of the endpoints provided by the API, you can create, list and delete wishlists, as well as manage the items inside them.

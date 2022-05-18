@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/product-sets-feature-integration
   - /docs/product-sets-feature-integration
   - /docs/en/product-sets-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202005.0/product-sets-feature-integration.html
 related:
   - title: Product Sets feature overview
     link: docs/scos/user/features/page.version/product-sets-feature-overview.html

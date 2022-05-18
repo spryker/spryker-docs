@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/cms-category-management-feature-integration
   - /docs/cms-category-management-feature-integration
   - /docs/en/cms-category-management-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202005.0/cms-category-management-feature-integration.html
 ---
 
 This document describes how to integrate the CMS + Category Management feature into a Spryker project.

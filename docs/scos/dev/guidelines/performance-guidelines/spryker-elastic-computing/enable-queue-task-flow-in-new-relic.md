@@ -5,33 +5,31 @@ last_updated: May 16, 2022
 template: concept-topic-template
 ---
 
-By default, the `spryker/monitoring` module groups all console command New Relic transactions by command’s name e.g. `ooms:check-timeout`.
+By default, the `spryker/monitoring` module groups all New Relic transactions generated from a console command by the command’s name. For example, `ooms:check-timeout`.
 
-This strategy works in most cases, but you might want to override this behavior.
-
-For example, `queue:task:start {queue_name}`. With the default naming strategy all calls of the command with all different queues are named `queue:task:start`. Transaction data is aggregated under the same name for all types for queue processors.
+This strategy works in most cases, but you might want to override this behavior. For example, `queue:task:start {queue_name}`. With the default naming strategy, all the calls of the command with different queues are named `queue:task:start`. Transaction data is aggregated under the same name for all types of queue processors.
 
 In New Relic dashboard, this looks as follows:
 
 ![New relic one]()
 
-> :info: Transaction data is harvested and can be queried by attribute with NRQL.
+> :info: Transaction data is harvested and can be queried by attribute with NRQL. === What are we trying to explain by this note?
 
-## Goal
+## Grouping transactions by command name and argument
 
-Enable `spryker/monitoring` module to aggregate `queue:task:start` transactions not only by command name, but by command and the first argument. As a result,
-
-![Aggregation of transactions]
-
-## Solution
+Enable `spryker/monitoring` module to aggregate `queue:task:start` transactions not only by command name, but by command and the first argument.
 
 1. Provide an advanced extendable infrastructure for [New relic monitoring transaction](https://docs.newrelic.com/docs/apm/transactions/intro-transactions/transactions-new-relic-apm/) naming strategies. This lets you implement, configure, and override the default transaction naming behavior.
 2. Implement the strategy that enables configured console commands to apply naming that groups transaction by command name and first argument.
 3. Enable the new strategy for `queue:task:start` on the project level.
 
+As a result, the transactions are displayed as follows:
+
+![Aggregation of transactions]
+
 ## Project enablement
 
-For enabling queue task flow in New Relic, see “Spryker elastic computing” document.
+For enabling queue task flow in New Relic, see Spryker elastic computing.
 
 ## Implementation details
 ![Class diagram]()

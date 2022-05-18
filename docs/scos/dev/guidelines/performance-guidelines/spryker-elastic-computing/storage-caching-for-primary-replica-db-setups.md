@@ -11,13 +11,13 @@ This issue can occur in the following cases:
 * A record is created via Yves request in the primary database, and Zed requests the data from the replica.
 * During parallel requests to Zed, our application must read replica after insert was just done === Please describe in more details.
 
-# Solution
+## Caching mechanism
 
-To cover the cases, Storage is used as a caching mechanism for keeping the type of the records that recently were added to a primary DB.
+To cover the cases, Storage is used for caching the type of the records that were recently added to a primary DB.
 
 The approach works as follows:
-1. Record is created.
-2. Record type is stored in Storage. For example `User` string for a User model.
+1. A record is created.
+2. The record's type is stored in Storage. For example `User` string for a User model.
 3. Storage keeps the record type alive for 3 seconds. The time is configurable and depends on how quickly the data is usually transferred from the primary to the replica DB.
 4. When reading data, application checks the Storage for a needed record type and does the following:
     * If the record type is present in Storage, it reads the primary DB.
@@ -27,28 +27,28 @@ The approach works as follows:
 
 Solution implementation affects all `find*()` methods and `postSave()` hooks of Propel query objects.
 
-In order to implement a solution 3 major modules were created/updated:
+We created and updated 3 major modules:
 
-- **PropelReplicationCache**
+* `PropelReplicationCache`:
 
-Is responsible for storing key in Redis when Propel inserted a data to the primary DB.
+  * Stores key in Redis after Propel inserted a data to the primary DB.
 
-Is responsible for checking key in Redis when Propel is about reading data from DB.
+  * Checks key in Redis when Propel is about to read data from DB.
 
-Contains plugins to extend PropelOrm module.
+  * Contains plugins to extend PropelOrm module.
 
 Plugins can contain any functionality to extend Propel object and query instances.
 
-- **PropelOrm**
+* `PropelOrm`:
 
-Allows to extend Propel query objects in order to adjust save method generation with additional functionality.
+    * Lets extend Propel query objects to adjust save method generation with additional functionality.
 
-Allows to extend Propel entity objects in order to adjust find*() methods generation with additional functionality.
+    * Lets extend Propel entity objects to adjust `find*()` methods generation with additional functionality.
 
-- **PropelOrmExtension**
+* **PropelOrmExtension*
 
-Allows to extend PropelOrm module with plugins to expand its functionality.
+    * Lets extend the `PropelOrm` module with plugins to expand its functionality.
 
-Introduced a `FindExtensionPluginInterface` to expand data reading from the DB.
+    * Introduced a `FindExtensionPluginInterface` to expand data reading from the DB.
 
-Introduced a `PostSaveExtensionPluginInterface` to expand data saving to the DB.
+    * Introduced a `PostSaveExtensionPluginInterface` to expand data saving to the DB.

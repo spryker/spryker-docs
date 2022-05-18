@@ -109,15 +109,18 @@ $config[\Spryker\Shared\Config\ConfigConstants::ENABLE_WEB_PROFILER] = false;
 Twig files can be pre-compiled into PHP classes to speed the performance up. This behavior can be activated in the configuration. We highly recommend using the `FORCE_BYTECODE_INVALIDATION` option. Otherwise, Opcache may contain outdated content, as the files are modified during runtime.
 
 ```php
+---//---
+use Twig\Cache\FilesystemCache;
+---//---
 $config[\Spryker\Shared\Twig\TwigConstants::ZED_TWIG_OPTIONS] = [
-'cache' => new Twig_Cache_Filesystem(sprintf(
+'cache' => new FilesystemCache(sprintf(
 '%s/data/%s/cache/Zed/twig',
 APPLICATION_ROOT_DIR, $CURRENT_STORE),
 Twig_Cache_Filesystem::FORCE_BYTECODE_INVALIDATION),
 ];
 
 $config[\Spryker\Shared\Twig\TwigConstants::YVES_TWIG_OPTIONS] = [
-'cache' => new Twig_Cache_Filesystem(sprintf(
+'cache' => new FilesystemCache(sprintf(
 '%s/data/%s/cache/Yves/twig',
 APPLICATION_ROOT_DIR, $CURRENT_STORE),
 Twig_Cache_Filesystem::FORCE_BYTECODE_INVALIDATION),
@@ -126,20 +129,7 @@ Twig_Cache_Filesystem::FORCE_BYTECODE_INVALIDATION),
 
 ## Activate Twig path cache
 
-Twig files can be in many places. To avoid time-consuming searches, we recommend to activate the path cache:
-
-```php
-$config[\Spryker\Shared\Twig\TwigConstants::YVES_PATH_CACHE_FILE] = sprintf(
-'%s/data/%s/cache/Yves/twig/.pathCache',
-APPLICATION_ROOT_DIR,
-$CURRENT_STORE
-);
-$config[\Spryker\Shared\Twig\TwigConstants::ZED_PATH_CACHE_FILE] = sprintf(
-'%s/data/%s/cache/Zed/twig/.pathCache',
-APPLICATION_ROOT_DIR,
-$CURRENT_STORE
-);
-```
+Twig files can be in many places. To avoid time-consuming searches, we recommend to activate the path cache (active by default), if you need to change this configuration see `\Spryker\Yves\Twig\TwigConfig::getCacheFilePath()`.
 
 ## General Twig optimizations
 
@@ -157,48 +147,11 @@ $config[\Spryker\Shared\ZedNavigation\ZedNavigationConstants::ZED_NAVIGATION_CAC
 
 ```
 
-## Activate class resolver cache
-
-{% info_block warningBox "Compatibility" %}
-
-We do not recommend using this feature with PHP 7.2 due the [bug](https://bugs.php.net/bug.php?id=75765).
-
-{% endinfo_block %}
-
-Spryker allows extending certain classes (such as facades, clients, etc.) in projects and in multiple stores. Therefore, each class can exist on the *core*, *project*, and *store* level. Also, Spryker supports multiple namespaces for each level. Because of this, there exist multiple possible locations to look up such classes. To avoid unnecessary usages of the expensive `class_exists()` function that does the job, there is a caching mechanism that writes all non-existing classes into a cache file, for example, `/data/DE/cache/Yves/unresolvable.cache` for Yves. Similar files are also created for Glue and Zed, one file per store.
-
-```php
-$config[\Spryker\Shared\Kernel\KernelConstants::AUTO_LOADER_UNRESOLVABLE_CACHE_ENABLED] = true;
-```
-
-{% info_block infoBox "Note" %}
-
-It is recommended to disable this feature during development.
-
-{% endinfo_block %}
-
-You can also configure a path for the `unresolvable.cache` file as follows:
-
-```php
-$config[\Spryker\Shared\Kernel\KernelConstants::AUTO_LOADER_CACHE_FILE_PATH] = APPLICATION_ROOT_DIR . '/data/' . \Spryker\Shared\Kernel\Store::getInstance()->getStoreName() . '/cache/' . ucfirst(strtolower(APPLICATION)) . '/unresolvable.cache';
-
-```
-
-{% info_block warningBox "Warning" %}
-
-You need to remove the cache files for each project deployment.
-
-{% endinfo_block %}
-
-See [EventDispatcher module migration guide](/docs/scos/dev/module-migration-guides/migration-guide-eventdispatcher.html) for information on how to upgrade to a newer version of the EventDispatcher module.
-
-See [Cache of Unresolved Entities for Zed](/docs/scos/dev/technical-enhancement-integration-guides/integrating-cache-of-unresolved-entities-for-zed.html) for information on how to integrate the Cache of Unresolved Entities for Zed feature into your project.
-
 ## Redis Mget cache
 
 Yves performs a high number of `get()` calls to Redis. If Redis is installed on the same machine, the expected time per `get()` is below 0.1 ms. However, in case you run Spryker in a cloud environment, there is latency for each `get()` call to Redis. It can sum up to a few hundred milliseconds per request. To avoid this performance bottleneck, Spryker remembers all used `get()` calls per URL and performs a single `mget()` to retrieve all needed data in one call. This behavior is enabled by default.
 
-In case you see a high number of `get()` calls in your monitoring, make sure that `StorageCacheServiceProvider` is registered in `YvesBootstrap`. This provider is responsible for the persistence of the cache data in Redis. For more information about the Redis Mget cache, see [Using Redis as a KV Storage](/docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html#using-and-configuring-redis-cache).
+In case you see a high number of `get()` calls in your monitoring, make sure that `StorageCacheEventDispatcherPlugin` is registered in `Pyz\Yves\EventDispatcher\EventDispatcherDependencyProvider`. This plugin is responsible for the persistence of the cache data in Redis. For more information about the Redis Mget cache, see [Using Redis as a KV Storage](/docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html#using-and-configuring-redis-cache).
 
 ## ClassResolver optimizations
 Spryker often uses the so-called class resolvers. Those resolvers are responsible for finding class names for certain overridable class names. Resolvables are for example `ModuleFactory`, `ModuleConfig`, `ModuleClient` etc.

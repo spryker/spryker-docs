@@ -1175,14 +1175,14 @@ $config[PropelConstants::PROPEL_DEBUG] = false;
 
 /** Activate Twig Compiler **/
 $config[TwigConstants::ZED_TWIG_OPTIONS] = [
-   'cache' => new Twig_Cache_Filesystem(sprintf(
+   'cache' => new FilesystemCache(sprintf(
 	'%s/data/%s/cache/Zed/twig',
 	 APPLICATION_ROOT_DIR, 'DE'),
 	 Twig_Cache_Filesystem::FORCE_BYTECODE_INVALIDATION),
 ];
 
 $config[TwigConstants::YVES_TWIG_OPTIONS] = [
-    'cache' => new Twig_Cache_Filesystem(sprintf(
+    'cache' => new FilesystemCache(sprintf(
 	'%s/data/%s/cache/Yves/twig',
 	 APPLICATION_ROOT_DIR, 'DE'),
 	 Twig_Cache_Filesystem::FORCE_BYTECODE_INVALIDATION),

@@ -4919,6 +4919,10 @@ entries:
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html
     - title: Performance guidelines
       nested:
+      - title: Elastic computing
+        nested:
+        - title: Scalable application infrastructure for publish and sync workers
+          url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/scalable-application-infrastructure-for-publish-and-sync-workers.html
       - title: General performance guidelines
         url: /docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
       - title: Architecture performance guidelines
@@ -4926,7 +4930,7 @@ entries:
       - title: Front-end performance guidelines
         url: /docs/scos/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
       - title: Scalable application infrastructure for publish and sync workers
-        url: /docs/scos/dev/guidelines/performance-guidelines/scalable-application-infrastructure-for-publish-and-sync-workers.html        
+        url: /docs/scos/dev/guidelines/performance-guidelines/scalable-application-infrastructure-for-publish-and-sync-workers.html
     - title: Testing guidelines
       url: /docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
       nested:

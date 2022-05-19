@@ -206,7 +206,7 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-wishlist-feature-integration.html
 
           - title: Marketplace Merchant Custom Prices
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-custom-prices.html
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-custom-prices-feature-integration.html
             include_versions:
             - "202204.0"
           

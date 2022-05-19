@@ -38,10 +38,10 @@ commonOptions = {
     /guides.github.com\/[\.\w\-\/\?]+/,
     /docs.github.com\/[\.\w\-\/\?]+/,
     /shopify.github.io\/[\.\w\-\/\?]+/,
-    /marketplace.visualstudio.com\/[\.\w\-\/\?]+/,    
+    /marketplace.visualstudio.com\/[\.\w\-\/\?]+/,
     /blackfire.io\/[\.\w\-\/\?]+/,
     /www.nekom.com\/[\.\w\-\/\?]+/,
-    /phpunit.de\/[\.\w\-\/\?]+/,
+    /www.phpunit.de\/[\.\w\-\/\?]+/,
     /rpm.newrelic.com\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],

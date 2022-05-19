@@ -4105,6 +4105,8 @@ entries:
       url: /docs/scos/dev/technical-enhancement-integration-guides/configuring-dynamic-yves-zed-tokens.html
     - title: Dynamic Propel configuration
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-dynamic-propel-configuration.html
+    - title: Elastic computing
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-elastic-computing.html
     - title: Environment configuration enhancement
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-environment-configuration-enhancement.html
     - title: Health checks
@@ -4919,6 +4921,10 @@ entries:
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html
     - title: Performance guidelines
       nested:
+      - title: Elastic computing
+        nested:
+        - title: Scalable application infrastructure for publish and sync workers
+          url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/scalable-application-infrastructure-for-publish-and-sync-workers.html
       - title: General performance guidelines
         url: /docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
       - title: Architecture performance guidelines

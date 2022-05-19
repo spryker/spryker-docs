@@ -10,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/adding-content-items-to-cms-pages-and-blocks
   - /docs/adding-content-items-to-cms-pages-and-blocks
   - /docs/en/adding-content-items-to-cms-pages-and-blocks
+  - /docs/scos/user/back-office-user-guides/201811.0/content/content-items/adding-content-items-to-cms-pages-and-blocks.html
+  - /docs/scos/user/back-office-user-guides/201903.0/content/content-items/adding-content-items-to-cms-pages-and-blocks.html
 ---
 
 This topic describes how to add a content item widget to a page and block using the Back Office.

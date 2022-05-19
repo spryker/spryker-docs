@@ -13,6 +13,7 @@ redirect_from:
   - /2021080/docs/en/shop-guide-shopping-carts-reference-information
   - /docs/shop-guide-shopping-carts-reference-information
   - /docs/en/shop-guide-shopping-carts-reference-information
+  - /docs/scos/user/features/202200.0/cart-feature-overview/cart-feature-overview.html
 
 ---
 

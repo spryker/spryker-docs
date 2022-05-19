@@ -9,6 +9,7 @@ redirect_from:
   - /v1/docs/navigation-node-types
   - /v1/docs/en/navigation-node-types
   - /docs/scos/user/back-office-user-guides/201811.0/content/navigation/references/ navigation-reference-information.html
+  - /docs/scos/user/back-office-user-guides/201811.0/content/navigation/references/navigation-reference-information.html
 ---
 
 This article describes the navigation node types.

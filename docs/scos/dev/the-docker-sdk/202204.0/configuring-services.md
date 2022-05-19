@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/configuring-services
   - /docs/configuring-services
   - /docs/en/configuring-services
+  - /docs/scos/dev/the-docker-sdk/201811.0/configuring-services.html
+  - /docs/scos/dev/the-docker-sdk/201903.0/configuring-services.html
+  - /docs/scos/dev/the-docker-sdk/201907.0/configuring-services.html
+  - /docs/scos/dev/the-docker-sdk/202005.0/configuring-services.html
 related:
   - title: Deploy File Reference - 1.0
     link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-reference-1.0.html
@@ -28,15 +32,15 @@ git clone https://github.com/spryker/docker-sdk.git ./docker
 ```
 
 * After enabling a service, make sure to apply the new configuration:
-    
+
     1. Bootstrap docker setup:
-    
+
     ```bash
     docker/sdk boot {deploy.yml | deploy.dev.yml}
     ```
 
     2. Once the job finishes, build and start the instance:
-    
+
     ```bash
     docker/sdk up
     ```

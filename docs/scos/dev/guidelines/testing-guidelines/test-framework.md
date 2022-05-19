@@ -17,7 +17,7 @@ redirect_from:
   - /docs/scos/dev/guidelines/testing/test-framework.html
 ---
 
-To easily test every aspect of Spryker and the code you write, Spryker uses the [Codeception testing framework](https://codeception.com/) and [PHPUnit](https://phpunit.de/).
+To easily test every aspect of Spryker and the code you write, Spryker uses the [Codeception testing framework](https://codeception.com/) and PHPUnit<!-- ](https://phpunit.de/) -->.
 
 {% info_block infoBox %}
 

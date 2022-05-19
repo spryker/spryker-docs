@@ -219,7 +219,7 @@ class GlossaryWriterStep extends PublishAwareStep implements DataImportStepInter
 }
 ```
 
-## Integrate scalable application infrastructure for P&S workers
+## Integrate scalable application infrastructure for publish and sync workers
 
 1. Update module `spryker/queue` to version 1.10.0 or higher.
 2. Set `THREAD_POOL_SIZE` to the number of your CPU cores plus one.
@@ -252,7 +252,7 @@ class QueueConfig extends SprykerQueueConfig
 
 As a result, the worker spawns a group of processes per each non-empty queue based on the number of messages and available RAM.
 
-## Integrate primary-replica database reading and writing
+## Integrate Storage caching for primary-replica database setups
 
 1. Update module `spryker/propel-orm` to version 1.15.1 or higher.
 2. Update module `spryker/propel-replication-cache` to version 1.0.0 or higher.

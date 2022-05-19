@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
+  - /docs/scos/dev/glue-api-guides/202200.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
 ---
 
 This endpoint allows retrieving detailed information about the prices of abstract products.

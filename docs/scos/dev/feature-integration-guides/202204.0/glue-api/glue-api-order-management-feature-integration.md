@@ -10,6 +10,7 @@ redirect_from:
   - /docs/glue-api-order-management-feature-integration
   - /docs/en/glue-api-order-management-feature-integration
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-order-management-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-order-management-feature-integration.html
 related:
   - title: Retrieving Customer's Order History
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html

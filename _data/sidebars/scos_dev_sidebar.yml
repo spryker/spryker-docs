@@ -4931,8 +4931,6 @@ entries:
         url: /docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
       - title: Front-end performance guidelines
         url: /docs/scos/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
-      - title: Scalable application infrastructure for publish and sync workers
-        url: /docs/scos/dev/guidelines/performance-guidelines/scalable-application-infrastructure-for-publish-and-sync-workers.html
     - title: Testing guidelines
       url: /docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
       nested:

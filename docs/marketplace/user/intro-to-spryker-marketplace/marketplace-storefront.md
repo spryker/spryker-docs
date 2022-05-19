@@ -28,18 +28,30 @@ Sorting of the **Sold by** section is configurable on a project level.
 
 The product price on top of the Product Details page is taken from the selected merchant's product or offer. When a customer selects a product or offer in the **Sold by** section, the page refreshes, showing the selected merchant's price.
 
-
 ## Cart page
 
 On the **Cart** page, a merchant reference is displayed for each product. The merchant names are clickable and lead to the merchant profile pages.
 
+In the **Quick Add to Cart** section, a customer can find and add marketplace products and product offers of a specific merchant by entering a product name or SKU in the search field and selecting the needed product. If there are several merchants selling the selected product, a drop-down with such merchants appears. Then, the customer selects a preferable merchant, enters quantity, and adds the item to the cart.
+
 ![Cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/cart-merchant-relations.png)
+
+## Shopping lists page
+
+When a customer creates, opens, or edits their shopping list, they can use the **Quick add to shopping list** section to search marketplace products and product offers and add them to their shopping lists. To search for a specific product, the customer enters an SKU or product name in the search field of the section.
+
+![products-and-offers-in-quick-add-to-shipping-list-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-storefront.md/products-and-offers-in-quick-add-to-shipping-list.png)
+
+## Quick Order page
+
+On the **Quick Order** page, in the **Merchants** drop-down, customers can select a particular merchant to buy marketplace products and product offers. In this case, when they type in a product name or SKU, a product or offer from only a selected merchant is found. Alternatively, a customer can select the **All Merchants** option to buy from all merchants. If a customer changes the merchant for already selected marketplace products or product offers, some fields may change—for example, **Price**. If a customer selects all merchants, then the marketplace products and product offers of all merchants are found.
+
+![products-and-offers-on-quick-order-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-storefront.md/products-and-offers-on-quick-order-page.png)
 
 
 ## Checkout
 
 At the Shipment checkout step, a merchant reference is displayed for each item. The merchant names are clickable and lead to the merchant profile pages.
-
 
 If a customer is ordering products from multiple merchants, the products are going to be shipped from multiple locations, so the [shipments](/docs/marketplace/user/features/{{site.version}}/marketplace-shipment-feature-overview.html) are automatically grouped by merchants.
 

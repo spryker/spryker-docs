@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-order-management-feature-integration
   - /docs/glue-api-order-management-feature-integration
   - /docs/en/glue-api-order-management-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-order-management-feature-integration.html
 related:
   - title: Retrieving Customer's Order History
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
@@ -137,7 +138,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             CheckoutRestApiConfig::RESOURCE_CHECKOUT,
             new OrderRelationshipByOrderReferencePlugin()
         );
-		
+
 		return $resourceRelationshipCollection;
 	}
 }
@@ -162,7 +163,7 @@ To verify that `CustomerOrdersResourceRoutePlugin` is set up correctly, make sur
 
 {% endinfo_block %}
 
- 
+
 
 {% info_block warningBox "Verification" %}
 
@@ -170,7 +171,7 @@ To verify that `OrderRelationshipByOrderReferencePlugin` is set up correctly, ma
 
 <details open>
 <summary markdown='span'>POST https://glue.mysprykershop.comm/checkout?include=orders</summary>
-    
+
 ```json
 {
     "data": {

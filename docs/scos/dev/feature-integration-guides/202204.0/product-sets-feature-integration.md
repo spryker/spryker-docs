@@ -10,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/product-sets-feature-integration
   - /docs/product-sets-feature-integration
   - /docs/en/product-sets-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/product-sets-feature-integration.html 
+  - /docs/scos/dev/feature-integration-guides/201903.0/product-sets-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/product-sets-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/product-sets-feature-integration.html
 related:

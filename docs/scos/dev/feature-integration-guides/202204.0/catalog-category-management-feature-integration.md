@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/catalog-category-management-feature-integration
   - /docs/catalog-category-management-feature-integration
   - /docs/en/catalog-category-management-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/catalog-category-management-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/catalog-category-management-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/catalog-category-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/catalog-category-management-feature-integration.html
 ---
 

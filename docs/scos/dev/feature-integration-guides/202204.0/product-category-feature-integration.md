@@ -9,6 +9,8 @@ redirect_from:
   - /2021080/docs/en/product-category-feature-integration
   - /docs/product-category-feature-integration
   - /docs/en/product-category-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/product-category-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/product-category-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/product-category-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/product-category-feature-integration.html
 ---

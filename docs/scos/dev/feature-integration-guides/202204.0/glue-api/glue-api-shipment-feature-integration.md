@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-shipment-feature-integration
   - /docs/glue-api-shipment-feature-integration
   - /docs/en/glue-api-shipment-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-shipment-feature-integration.html
 related:
   - title: Checking Out Purchases and Getting Checkout Data
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
@@ -339,7 +340,7 @@ To make sure that `SelectedShipmentMethodCheckoutDataResponseMapperPlugin` is ac
 
 ```json
 {
-	"data": 
+	"data":
 	{
         "type": "checkout-data",
         "id": null,
@@ -474,4 +475,3 @@ Integrate the following related features.
 | FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE       |
 | ------- | -------------- | ------------------------- |
 | Glue API: Checkout | ✓                                | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
-

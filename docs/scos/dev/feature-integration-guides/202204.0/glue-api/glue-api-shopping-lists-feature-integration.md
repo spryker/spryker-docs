@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-shopping-lists-feature-integration
   - /docs/glue-api-shopping-lists-feature-integration
   - /docs/en/glue-api-shopping-lists-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-shopping-lists-feature-integration.html
 related:
   - title: Managing Shopping Lists
     link: docs/scos/dev/glue-api-guides/page.version/managing-shopping-lists/managing-shopping-lists.html
@@ -69,7 +70,7 @@ Make sure that the following changes have been applied by checking your database
 | spy_shopping_list_item.uuid | column | added |
 
 {% endinfo_block %}
-    
+
 
 {% info_block warningBox "Verification" %}
 
@@ -85,12 +86,12 @@ Make sure that the following changes have been applied in transfer objects:
 | ShoppingListItemTransfer.uuid | property | added | src/Generated/Shared/Transfer/ShoppingListItemTransfer |
 
 {% endinfo_block %}
-    
+
 
 
 ## 3) Set up behavior
 
-Set up the following behavior. 
+Set up the following behavior.
 
 
 ### Generate UUIDs for existing records that do not have IDs:
@@ -110,7 +111,7 @@ Make sure that the uuid field is populated for all records in the spy_shopping_l
 SELECT COUNT(*) FROM spy_shopping_list WHERE uuid IS NULL;
 ```
 
-Make sure that the uuid field is populated for all records in the spy_shopping_list_item table. To do so, run the following SQL query and make sure that the result is **0 records**. 
+Make sure that the uuid field is populated for all records in the spy_shopping_list_item table. To do so, run the following SQL query and make sure that the result is **0 records**.
 
 ```php
 SELECT COUNT(*) FROM spy_shopping_list_item WHERE uuid IS NULL;
@@ -136,12 +137,12 @@ SELECT COUNT(*) FROM spy_shopping_list_item WHERE uuid IS NULL;
 
 <details open>
 <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
 use Spryker\Glue\ProductsRestApi\Plugin\GlueApplication\ConcreteProductBySkuResourceRelationshipPlugin;
@@ -149,7 +150,7 @@ use Spryker\Glue\ShoppingListsRestApi\Plugin\ShoppingListItemByShoppingListResou
 use Spryker\Glue\ShoppingListsRestApi\Plugin\ShoppingListItemsResourcePlugin;
 use Spryker\Glue\ShoppingListsRestApi\Plugin\ShoppingListsResourcePlugin;
 use Spryker\Glue\ShoppingListsRestApi\ShoppingListsRestApiConfig;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -162,7 +163,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new ShoppingListItemsResourcePlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
      *
@@ -179,7 +180,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             ShoppingListsRestApiConfig::RESOURCE_SHOPPING_LISTS,
             new ShoppingListItemByShoppingListResourceRelationshipPlugin()
         );
-         
+
         return $resourceRelationshipCollection;
     }
 }
@@ -195,7 +196,7 @@ To verify that the `ShoppingListsResourcePlugin` resource route plugin and the `
 Check the response:
 <details open>
 <summary markdown='span'>GET https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}?include=shopping-list-items,concrete-products</summary>
-   
+
 ```json
 {
     "data": [
@@ -304,7 +305,7 @@ To verify that the `ShoppingListItemsResourcePlugin` is set up correctly, make s
 Post a request with the following body:
 
 **Body request**
-   
+
 ```json
 {
     "data": {
@@ -320,7 +321,7 @@ Post a request with the following body:
 Check the response:
 
 **POST https://glue.mysprykershop.com/shopping-lists/{% raw %}{{{% endraw %}shopping_list_uuid{% raw %}}}{% endraw %}/shopping-list-items**
-   
+
 ```json
 {
     "data": {

@@ -11,7 +11,7 @@ This strategy works in most cases, but you might want to override this behavior.
 
 In New Relic dashboard, this looks as follows:
 
-![New relic one]()
+![Transactions under the same name]()
 
 > :info: Transaction data is harvested and can be queried by attribute with NRQL. === What are we trying to explain by this note?
 

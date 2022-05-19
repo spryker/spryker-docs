@@ -510,7 +510,7 @@ entries:
     - title: Cms
       url: /docs/scos/dev/feature-walkthroughs/cms-feature-walkthrough/cms-feature-walkthrough.html
       include_versions:
-      - "201811.0"      
+      - "201811.0"
       - "202005.0"
       - "202009.0"
       - "202108.0"
@@ -2522,6 +2522,8 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-cmspagesearch.html
     - title: Migration Guide - CmsStorage
       url: /docs/scos/dev/module-migration-guides/migration-guide-cmsstorage.html
+    - title: Migration guide - CodeItNow module to BarcodeLaminas module
+      url: /docs/scos/dev/module-migration-guides/migration-guide-codeitnow-to-barcodelaminas.html
     - title: Migration Guide - Collector
       url: /docs/scos/dev/module-migration-guides/migration-guide-collector.html
     - title: Migration Guide - CompanyBusinessUnit
@@ -2802,7 +2804,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-webprofiler.html
     - title: Migration Guide - Wishlist
       url: /docs/scos/dev/module-migration-guides/migration-guide-wishlist.html
-
   - title: DevOps migration guides
     include_versions:
     - "202001.0"
@@ -4104,6 +4105,8 @@ entries:
       url: /docs/scos/dev/technical-enhancement-integration-guides/configuring-dynamic-yves-zed-tokens.html
     - title: Dynamic Propel configuration
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-dynamic-propel-configuration.html
+    - title: Elastic computing
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-elastic-computing.html
     - title: Environment configuration enhancement
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-environment-configuration-enhancement.html
     - title: Health checks
@@ -4125,7 +4128,7 @@ entries:
     - title: Symfony 5
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-5.html
     - title: ARM architecture (M1 chip)
-      url: /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html      
+      url: /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html
   - title: SDK
     nested:
     - title: Development Virtual Machine, Docker Containers & Console
@@ -4918,6 +4921,14 @@ entries:
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html
     - title: Performance guidelines
       nested:
+      - title: Elastic computing
+        nested:
+        - title: RAM-aware batch processing
+          url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
+        - title: Scalable application infrastructure for publish and sync workers
+          url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/scalable-application-infrastructure-for-publish-and-sync-workers.html
+        - title: Storage caching for primary-replica database setups
+          url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
       - title: General performance guidelines
         url: /docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
       - title: Architecture performance guidelines

@@ -8,6 +8,7 @@ originalArticleId: 3c9dc485-a2c5-4b69-b9ed-7ea3ed14022b
 redirect_from:
   - /v5/docs/punch-out
   - /v5/docs/en/punch-out
+  - /docs/scos/user/features/202005.0/technology-partner-integrations/punchout/punchout.html
 related:
   - title: Punch Out Feature Overview
     link: docs/scos/user/features/page.version/technology-partner-integrations/punch-out/punch-out-feature-overview.html

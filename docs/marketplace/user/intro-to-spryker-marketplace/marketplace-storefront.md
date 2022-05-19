@@ -38,7 +38,7 @@ In the **Quick Add to Cart** section, a customer can find and add marketplace pr
 
 ## Shopping lists page
 
-When a customer creates, opens, or edits their shopping list, they can use the **Quick add to shopping list** section to search marketplace products and product offers and add them to their shopping lists. To search for a specific product, the customer enters an SKU or product name in the search field of the section.
+When a customer creates, opens, or edits a shopping list, they can use the **Quick add to shopping list** section to search marketplace products and product offers and add them to the shopping list. To search for a specific product, the customer enters an SKU or product name in the search field of the section.
 
 ![products-and-offers-in-quick-add-to-shipping-list-page](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-storefront.md/products-and-offers-in-quick-add-to-shipping-list.png)
 
@@ -61,7 +61,6 @@ At the Summary checkout step,  merchant reference is displayed for each product.
 
 ![Summary step](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Intro+to+the+Spryker+Marketplace/Marketplace+Storefront/summary-step.png)
 
-
 ### Order Details pages
 
 On the **Order Details** page, a merchant reference is displayed for each product. Merchant names are clickable and lead to merchant profile pages. If a customer orders products from multiple merchants, the products are grouped by merchants, which also represents the order's shipments.
@@ -70,7 +69,7 @@ On the **Order Details** page, a merchant reference is displayed for each produc
 
 If a customer clicks **Reorder all**, the items are added to their current cart with merchant references from the order.
 
-### Marketplace returns
+## Marketplace returns
 
 On the **Create Return** page, products are grouped by merchants. Merchant names are clickable and lead to the merchant profile pages. A customer can return products from one merchant at a time. After creating a return for the products of one merchant, they can create a return for the products of another merchant from the same order.
 
@@ -78,8 +77,7 @@ On the **Create Return** page, products are grouped by merchants. Merchant names
 
 The **Return Details** page follows the same behavior.
 
-
-### Marketplace wishlists
+## Marketplace wishlists
 
 When a customer adds a product to a wishlist, the product is added with the merchant relation selected in the **Sold by** section.
 
@@ -91,11 +89,18 @@ If, after a product was added to a wishlist, a merchant becomes inactive, the me
 
 If a product in a wishlist is out of stock, an [alternative product](/docs/scos/user/features/{{site.version}}/alternative-products-feature-overview.html) can be displayed. A merchant reference is displayed for the alternative product. Currently, merchant offers are not supported by alternative products, so only marketplace products can be displayed there.
 
-### Merchant profiles
+## Marketplace shopping lists
+
+When a customer adds a product to a shopping list, the product is added with the merchant relation selected in the **Sold by** section.
+
+![gif](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Shopping+List/add-marketplace-product-and-offer-to-shopping-list.gif)
+
+## Merchant profiles
 
 A merchant profile is a page where all the information about a merchant is located. From all the pages where a Merchant is mentioned, customers can access the merchant profile by selecting the merchant name.
 
 On the **Merchant Profile** page, customers can find the following merchant-specific information:
+
 * Logo
 * Banner
 * Contact details and address

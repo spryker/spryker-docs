@@ -87,7 +87,7 @@ Symbols:
 * `N` — thread pool size.
 
 
-## Integrating scalable application infrastructure for publish and sync workers
+## Integrate scalable application infrastructure for publish and sync workers
 
 For instructions, see [Integrate scalable application infrastructure for publish and sync workers](/docs/scos/dev/technical-enhancement-integration-guides/integrate-elastic-computing.html#integrate-scalable-application-infrastructure-for-publish-and-sync-workers).
 

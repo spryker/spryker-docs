@@ -4929,6 +4929,8 @@ entries:
           url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
         - title: Scalable application infrastructure for publish and sync workers
           url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/scalable-application-infrastructure-for-publish-and-sync-workers.html
+        - title: Storage caching for primary-replica database setups
+          url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
       - title: General performance guidelines
         url: /docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
       - title: Architecture performance guidelines

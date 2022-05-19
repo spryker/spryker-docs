@@ -23,6 +23,6 @@ Customers see custom prices applying to them, based on the merchant relation, or
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Merchant Custom Prices feature walkthrough](#link) for developers. <!---LINK-->
+Are you a developer? See [Marketplace Merchant Custom Prices feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-custom-prices-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

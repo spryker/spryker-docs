@@ -37,32 +37,16 @@ The marketplace product is also displayed with the **Sold By** field defining th
 
 ![marketplace product on PDP](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product/add-merchant-product-to-wl-and-from-wh-to-cart.gif)
 
-### Marketplace product on the Quick Order page
-
-On the **Quick Order** page, customers can add to cart products or product offers by entering their names or SKUs. Also, in the **Merchants** drop-down, they can specify merchants who they want to buy from. If customers select specific merchants in the **Merchants** drop-down, only products and product offers of those merchants are available for selection when they enter **SKU or Name** of the product. If they select the **All Merchants** option, then products and offers of all merchants can be added. If customers change the merchant of the already selected item, some values of its fields may change. For example, the prices of different merchants may vary, so when you change a merchant, the **Price** value may change as well. For information about the Quick order feature, see [Quick Add to Cart feature overview](/docs/scos/user/features/{{page,version}}/quick-add-to-cart-feature-overview.html)
-
-<!-- add a GIF file that represents this process-->
-
-### Marketplace product in the shopping cart
-
-On the **Cart** page, a customer can add marketplace products and product offers from the **Quick Add to Cart** section. In the search field of the section, they enter a product or product offer name or SKU and select one of the available options. If there are several merchants selling the selected product or offer, a drop-down with such merchants appears. Then, the customer selects a preferable merchant, enters the quantity, and adds the item to cart. Note that the drop-down with merchants is not visible until the product or offer is selected.
-
-<!-- add a GIF file that represents this process-->
-
-### Marketplace product in shopping lists
-
-On the **Shopping list** page, a customer can add marketplace products and product offers to the existing or new shopping lists by entering a product's name or SKU in the **Quick Add** section and selecting the needed offer. If there are several merchants selling the selected item, a drop-down with available merchants appears. Then, the customer selects a preferable merchant, enters the quantity, and adds the product or offer to cart. Note that the drop-down is not visible until the product of offer is selected.
-
-<!-- add a GIF file that represents this process-->
-
 
 ### Searching and filtering marketplace products
+
 When the merchant name is entered in the catalog search, not only the offers but also the products belonging to this merchant are displayed. By selecting a merchant name in the filter, products from this merchant are also displayed.
 
 ![Search for marketplace products](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+product/search-for-products-by-name-and-sku.gif)
 
 
 ## Marketplace products in the Back Office
+
 Before new marketplace products become visible on the Storefront, they must be [activated either by the merchant](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html#activating-and-deactivating-a-concrete-product) in the Merchant Portal or [by the Marketplace administrator in the Back Office](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html#activating-a-product).
 
 A Marketplace administrator can filter the products belonging to certain merchants in the Back Office.
@@ -73,6 +57,7 @@ Also, Marketplace administrators can edit products, if needed, and create produc
 
 
 ## Marketplace products in the Merchant Portal
+
 Merchants [create](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/creating-marketplace-concrete-product.html) and [manage their products](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html) in the Merchant Portal. They can [define prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product-prices.html), stock, and [attributes](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-attributes.html) for their products.
 
 ## Related Business User articles

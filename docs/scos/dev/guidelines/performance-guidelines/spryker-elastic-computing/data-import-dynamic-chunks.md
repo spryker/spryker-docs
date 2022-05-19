@@ -1,6 +1,6 @@
 ---
-title: Data import dynamic chunks
-description: Data import dynamic chunks
+title: RAM-aware batch processing
+description: RAM-aware batch processing increases memory consumption efficiency for long-running operations.
 last_updated: May 16, 2022
 template: concept-topic-template
 ---
@@ -17,7 +17,7 @@ Legend:
 
 * Steps in red: memory leak.
 
-
+![Memory consumption profile](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/guidelines/performance-guidelines/elastic-computing/memory-consumption-profile.png)
 
 For bulk data imports we used to define batch size, like 2000 or 5000 items. On the prior image, memory consumption reaches the level that corresponds to the batch size, which leaves a lot of  unused memory.
 
@@ -25,31 +25,33 @@ Using less memory generates more I/O operations, which subsequently increases th
 
 ## Dynamic memory allocation
 
-To use the memory more efficiently the batch size is now calculated based on the amount of memory available for current thread. When memory is full by some threshold value processing of the current batch is performed.
+To use the memory more efficiently the batch size is now calculated based on the amount of memory available for current thread. When memory is full by some threshold value, processing of the current batch is performed.
 
 The algorithm uses the following variables:
-- Allowed total memory for PHP thread
-- Currently used memory
-- Maximum used memory during the execution of current thread
-- Graduality factor
-- Memory threshold percent
+* Allowed total memory for PHP thread
+* Currently used memory
+* Maximum used memory during the execution of current thread
+* Graduality factor
+* Memory threshold percent
 
-Implementation is based on a gradual principle for the calculation a memory threshold usage step-by-step.
+Implementation is based on principle of gradual calculation of memory threshold. Before reaching a hard threshold of memory limit, a program passes a configurable number of soft thresholds. More memory is allocated as a program reaches a soft threshold.
 
 ## Graduality factor
 
 Graduality factor is a number that defines how many steps a program needs to take before a maximum allowed memory usage is reached.
 
-The larger the graduality factor is, the more approximation steps the program takes, and the higher the accuracy is. A smaller gradually factor allows to calculate the memory limit  faster but rougher.
+The larger the graduality factor is, the more approximation steps the program takes, and the higher the accuracy is. A smaller gradually factor calculates the memory limit faster but with less accuracy.
 
-## Memory threshold percent
-Memory threshold percent is an integer that defines the percentage of available system memory that can be used for data import.
+## Memory threshold percentage
 
-This is a protection from reaching out of all memory and crushing the program.
+Memory threshold percentage is an integer that defines the percentage of available system memory that can be used for data import.
 
-# Project enablement
+This is a protection from consuming all memory and crushing the program.
 
-For enabling data import dynamic chunks, see “Spryker elastic computing”.
+## Integrate RAM-aware batch processing
 
-# Implementation details
-Class diagram
+For instructions, see [Integrate RAM-aware batch processing](/docs/scos/dev/technical-enhancement-integration-guides/integrate-elastic-computing.html#integrate-ram-aware-batch-processing)
+
+## Implementation details
+
+![RAM-aware butch processing impmlementation details](https://confluence-connect.gliffy.net/embed/image/c0012831-d1d8-4836-abb0-fab467240363.png?utm_medium=live&utm_source=custom)

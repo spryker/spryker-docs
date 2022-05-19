@@ -4921,6 +4921,12 @@ entries:
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html
     - title: Performance guidelines
       nested:
+      - title: Elastic computing
+        nested:
+        - title: RAM-aware batch processing
+          url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
+        - title: Scalable application infrastructure for publish and sync workers
+          url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/scalable-application-infrastructure-for-publish-and-sync-workers.html
       - title: General performance guidelines
         url: /docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
       - title: Architecture performance guidelines

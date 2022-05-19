@@ -205,6 +205,11 @@ entries:
           - title: Merchant Switcher + Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-wishlist-feature-integration.html
 
+          - title: Marketplace Merchant Custom Prices
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-custom-prices-feature-integration.html
+            include_versions:
+            - "202204.0"
+          
           - title: Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
 

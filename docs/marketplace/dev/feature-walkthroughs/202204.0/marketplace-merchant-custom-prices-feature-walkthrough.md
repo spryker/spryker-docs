@@ -35,4 +35,4 @@ The following schema illustrates the *Marketplace Merchant Custom Prices* domain
 
 | INTEGRATION GUIDES|
 |---------|
-| Marketplace Merchant Custom Prices feature integration <!---LINK--> |
+| [Marketplace Merchant Custom Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-custom-prices-feature-integration.html) |

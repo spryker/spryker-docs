@@ -5,18 +5,18 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Marketplace Custom Prices feature into a Spryker project.
+This document describes how to integrate the Marketplace Merchant Custom Prices feature into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Marketplace Custom Prices feature core.
+Follow the steps below to install the Marketplace Merchant Custom Prices feature core.
 
 ### Prerequisites
 
 To start feature integration, integrate the required features:
 
-| NAME                                           | VERSION          | INTEGRATION GUIDE                                                                                                                                                                           |
-|------------------------------------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| NAME    | VERSION    | INTEGRATION GUIDE    |
+|----------------|------------------|-------------------|
 | Merchant Custom Prices                         | {{page.version}} | [Merchant Custom Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-custom-prices-feature-integration.html)                                    |
 | Marketplace Merchant Portal Product Management | {{page.version}} | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |
 
@@ -25,15 +25,15 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-merchant-custom-prices:"202204.0" --with-dependencies
+composer require spryker-feature/marketplace-merchant-custom-prices:"{{page.version}}" --with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
     
 Make sure that the following modules were installed:
 
-| MODULE                                            | EXPECTED DIRECTORY                                                     |
-|---------------------------------------------------|------------------------------------------------------------------------|
+| MODULE     | EXPECTED DIRECTORY       |
+|------------------|------------------|
 | PriceProduct                                      | vendor/spryker/price-product                                           |
 | PriceProductMerchantRelationship                  | vendor/spryker/price-product-merchant-relationship                     |
 | PriceProductMerchantRelationshipMerchantPortalGui | vendor/spryker/price-product-merchant-relationship-merchant-portal-gui |
@@ -53,8 +53,8 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER                                       | TYPE     | EVENT   | PATH                                                                 |
-|------------------------------------------------|----------|---------|----------------------------------------------------------------------|
+| TRANSFER      | TYPE     | EVENT   | PATH       |
+|---------------|----------|---------|------------------|
 | PriceProductTableView.idMerchantRelationship   | property | Created | src/Generated/Shared/Transfer/PriceProductTableViewTransfer.php      |
 | PriceProductTableView.merchantRelationshipName | property | Created | src/Generated/Shared/Transfer/PriceProductTableViewTransfer.php      |
 | MerchantRelationshipFilter.merchantIds         | property | Created | src/Generated/Shared/Transfer/MerchantRelationshipFilterTransfer.php |
@@ -73,9 +73,9 @@ console translator:generate-cache
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                                   | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                                                                                      |
-|--------------------------------------------------------------------------|------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------------------|
-| MerchantRelationshipPreBuildPriceProductGroupKeyPlugin                   | Extends the logic for Price Product group key generation . |               | Spryker\Service\PriceProductMerchantRelationship\Plugin\PriceProduct                                           |
+| PLUGIN     | SPECIFICATION     | PREREQUISITES | NAMESPACE  |
+|-----------------|-----------------|---------------|------------------|
+| MerchantRelationshipPreBuildPriceProductGroupKeyPlugin                   | Extends the logic for the Price Product group key generation. |               | Spryker\Service\PriceProductMerchantRelationship\Plugin\PriceProduct                                           |
 | MerchantRelationshipVolumePriceProductValidatorPlugin                    | Validates volume prices.                                   |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\PriceProduct                | 
 | MerchantRelationshipPriceProductCollectionDeletePlugin                   | Removes price product merchant relationships.              |               | Spryker\Zed\PriceProductMerchantRelationship\Communication\Plugin\PriceProduct                                 |
 | MerchantRelationshipPriceProductTableFilterPlugin                        | Filters price product transfers.                           |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui    |
@@ -146,7 +146,8 @@ class ProductMerchantPortalGuiDependencyProvider extends SprykerProductMerchantP
 
 Log in to the Merchant Portal with a merchant that has at least one merchant relationship.
 
-Open any merchant product and make sure that the Prises table contains the "Customer" column for both: abstract and concrete products.
+Open any merchant product and make sure that the Prices table contains the "Customer" column for both: abstract and concrete products.
+
 Make sure that you can filter and sort the price table by Customer column.
 
 {% endinfo_block %}
@@ -175,13 +176,14 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     }
 }
 ```
-
 </details>
 
 {% info_block warningBox "Verification" %}
 
 Open any merchant product with a regular price.
+
 Create a customer-specific price with the same combination of currency and country as the existing price.
+
 Make sure that there is no validation error.
 
 {% endinfo_block %}
@@ -221,12 +223,12 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     }     
 }
 ```
-
 </details>
 
 {% info_block warningBox "Verification" %}
 
 Make sure that you see the validation error while attempting to set or create the customer price for the volume price.
+
 Make sure that you can delete the customer price.
 
 {% endinfo_block %}

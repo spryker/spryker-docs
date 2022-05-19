@@ -1,6 +1,5 @@
 ---
 title: Managing marketplace concrete product prices
-last_updated: Aug 11, 2021
 description: This document describes how to manage marketplace concrete product prices in the Merchant Portal.
 template: back-office-user-guide-template
 ---
@@ -61,17 +60,17 @@ To edit marketplace concrete product's prices, follow these steps:
 
 **Tips and tricks**
 
-You can sort the prices by stores and currencies. To do that, in the **Price** section, in the **Stores** drop-down menu, select the stores for which the price is defined, and in the **Currencies** drop-down menu, select the currencies in which the price is defined.
+You can sort the prices by stores and currencies. To do that, in the **Price** pane, in the **Stores** drop-down menu, select the stores for which the price is defined, and in the **Currencies** drop-down menu, select the currencies in which the price is defined.
 
 ## Deleting marketplace concrete product prices
 
 To remove a marketplace concrete product's price, follow these steps:
 
 1. On the **Concrete Products** page, next to the concrete product you want to edit, hold the pointer over the three dots and click **Manage Product** or just click the line. The **Concrete Product SKU, Name** page opens.
-2. Scroll down to the **Price** section.
+2. Scroll down to the **Price** pane.
 3. Next to the price you want to remove, hold the pointer over the three dots in the table, and click **Delete**.
 
-### Reference information: Price section
+### Reference information: Price pane
 
 |ATTRIBUTE  | DESCRIPTION   |
 | ------------- | --------------------- |

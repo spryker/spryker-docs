@@ -106,7 +106,7 @@ class V1Controller extends AbstractController
 }
 ```
 
-After this step log in to Zed and try opening `http://ZED_HOST/api/v1/doc` and `http://ZED_HOST/api/v1/docTransfer`.
+After this step log in to Zed and try opening `http://ZED_HOST/api/v1/doc` and `http://ZED_HOST/api/v1/doc-transfer`.
 
 ## 2. Create a business model to examine facade classes using reflection
 

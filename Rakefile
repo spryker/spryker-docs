@@ -40,8 +40,9 @@ commonOptions = {
     /shopify.github.io\/[\.\w\-\/\?]+/,
     /marketplace.visualstudio.com\/[\.\w\-\/\?]+/,
     /blackfire.io\/[\.\w\-\/\?]+/,
-    /www.phpunit.de\/[\.\w\-\/\?]+/,    
-    /www.nekom.com\/[\.\w\-\/\?]+/
+    /www.nekom.com\/[\.\w\-\/\?]+/,
+    /www.phpunit.de\/[\.\w\-\/\?]+/,
+    /rpm.newrelic.com\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {

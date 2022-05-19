@@ -56,6 +56,11 @@ entries:
           - title: Marketplace Product
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
 
+          - title: Marketplace Product Approval Process
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-approval-process-feature-walkthrough.html
+            include_versions:
+            - "202204.0"
+          
           - title: Marketplace Order Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html
 
@@ -92,6 +97,11 @@ entries:
           - title: Marketplace Wishlist
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-wishlist-feature-walkthrough.html
 
+          - title: Marketplace Shopping Lists
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-shopping-lists-feature-walkthrough.html
+            include_versions:
+            - "202204.0"
+
           - title: Persistence ACL
             url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html
 
@@ -126,8 +136,6 @@ entries:
           - title: Merchant Opening Hours
             url: /docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours-feature-walkthrough.html
 
-          
-
           - title: Merchant Portal
             nested:
 
@@ -150,11 +158,6 @@ entries:
 
               - title: Marketplace Merchant Portal Product Offer Management
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html
-
-              - title: Marketplace Product Approval Process
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-approval-process-feature-walkthrough.html
-                include_versions:
-                - "202204.0"
 
       - title: Feature integration guides
         nested:
@@ -271,7 +274,6 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-shopping-lists-feature-integration.html
             include_versions:
             - "202204.0"
-
 
           - title: Marketplace Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-wishlist-feature-integration.html
@@ -513,6 +515,11 @@ entries:
 
           - title: "File details: price-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-price-product-offer.csv.html
+
+          - title: "File details: product-offer-shopping-list.csv"
+            url: /docs/marketplace/dev/data-import/file-details-product-offer-shopping-list.csv.html
+            include_versions:
+            - "202204.0"
 
           - title: "File details: product-offer-stock.csv"
             url: /docs/marketplace/dev/data-import/file-details-product-offer-stock.csv.html
@@ -799,4 +806,3 @@ entries:
 
           - title: "Migration guide - Upgrade to Angular v12"
             url: /docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v12.html
- 

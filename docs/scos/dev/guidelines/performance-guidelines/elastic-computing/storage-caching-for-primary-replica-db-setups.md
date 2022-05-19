@@ -23,7 +23,11 @@ The approach works as follows:
     * If the record type is present in Storage, it reads the primary DB.
     * If the record type is not present in the Storage, it reads the replica.
 
-## Project enablement
+## Integrate Storage caching for primary-replica database setups
+
+For instructions, see [Storage caching for primary-replica database setups](/docs/scos/dev/technical-enhancement-integration-guides/integrate-elastic-computing.html#integrate-storage-caching-for-primary-replica-database-setups)
+
+## Implementation details
 
 Solution implementation affects all `find*()` methods and `postSave()` hooks of Propel query objects.
 

@@ -219,7 +219,7 @@ class GlossaryWriterStep extends PublishAwareStep implements DataImportStepInter
 }
 ```
 
-## Integrate scalable application infrastructure for P&S workers
+## Integrate scalable application infrastructure for publish and sync workers
 
 1. Update module `spryker/queue` to version 1.10.0 or higher.
 2. Set `THREAD_POOL_SIZE` to the number of your CPU cores plus one.

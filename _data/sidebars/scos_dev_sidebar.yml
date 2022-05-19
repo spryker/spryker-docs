@@ -4923,6 +4923,8 @@ entries:
       nested:
       - title: Elastic computing
         nested:
+        - title: New Relic transactions grouping by queue names
+          url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html          
         - title: RAM-aware batch processing
           url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
         - title: Scalable application infrastructure for publish and sync workers

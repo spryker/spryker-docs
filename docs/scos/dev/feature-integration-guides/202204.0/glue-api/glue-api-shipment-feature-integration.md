@@ -9,6 +9,8 @@ redirect_from:
   - /2021080/docs/en/glue-api-shipment-feature-integration
   - /docs/glue-api-shipment-feature-integration
   - /docs/en/glue-api-shipment-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-shipment-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-shipment-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-shipment-feature-integration.html
 related:
   - title: Checking Out Purchases and Getting Checkout Data

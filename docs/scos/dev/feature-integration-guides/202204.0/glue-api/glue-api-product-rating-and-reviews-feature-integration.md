@@ -10,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/glue-api-product-rating-reviews-feature-integration
   - /docs/glue-api-product-rating-reviews-feature-integration
   - /docs/en/glue-api-product-rating-reviews-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-product-rating-and-reviews-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-product-rating-and-reviews-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-product-rating-and-reviews-feature-integration.html
 ---
 

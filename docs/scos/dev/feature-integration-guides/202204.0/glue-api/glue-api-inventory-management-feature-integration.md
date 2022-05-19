@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-inventory-management-feature-integration
   - /docs/glue-api-inventory-management-feature-integration
   - /docs/en/glue-api-inventory-management-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-inventory-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-inventory-management-feature-integration.html
 ---
 

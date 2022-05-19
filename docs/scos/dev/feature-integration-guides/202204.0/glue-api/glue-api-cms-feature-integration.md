@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-cms-feature-integration-guide
   - /docs/glue-api-cms-feature-integration-guide
   - /docs/en/glue-api-cms-feature-integration-guide
+  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-cms-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-cms-feature-integration.html
 ---
 

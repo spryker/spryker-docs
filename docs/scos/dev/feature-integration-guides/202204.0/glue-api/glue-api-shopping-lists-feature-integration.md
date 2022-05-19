@@ -9,6 +9,8 @@ redirect_from:
   - /2021080/docs/en/glue-api-shopping-lists-feature-integration
   - /docs/glue-api-shopping-lists-feature-integration
   - /docs/en/glue-api-shopping-lists-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-shopping-lists-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-shopping-lists-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-shopping-lists-feature-integration.html
 related:
   - title: Managing Shopping Lists

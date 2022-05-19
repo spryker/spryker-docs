@@ -12,7 +12,6 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/order-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/order-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/order-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202204.0/custom-order-reference-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/order-management-feature-integration.html
 related:
   - title: Comments + Order Management feature integration

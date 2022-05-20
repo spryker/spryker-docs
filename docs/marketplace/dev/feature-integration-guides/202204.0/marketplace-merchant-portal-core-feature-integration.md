@@ -65,7 +65,7 @@ Set up behavior as follows:
 | MerchantPortalAclEntityMetadataConfigExpanderPlugin |Expands provided Acl Entity Metadata with merchant order composite, merchant product composite, merchant composite, product offer composit data, merchant read global entities and allow list entities. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity |
 | MerchantAclMerchantPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for provided merchant.  |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant  |
 | MerchantAclMerchantUserPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for provided merchant user. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
-| AclMerchantPortalMerchantUserRoleFilterPreConditionPlugin | Checks if Symfony security authentication roles should be filtered out. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
+| AclMerchantPortalMerchantUserRoleFilterPreConditionPlugin | Checks if the Symfony security authentication roles should be filtered out. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
 | MerchantUserUserRoleFilterPlugin | Filters ROLE_BACK_OFFICE_USER to prevent Merchant User login to Backoffice. |  | Spryker\Zed\MerchantUser\Communication\Plugin\SecurityGui  |
 | ProductViewerForOfferCreationAclInstallerPlugin | Provide `ProductViewerForOfferCreation` Roles with Rules and Groups to create on install. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
 
@@ -174,7 +174,7 @@ class SecurityGuiDependencyProvider extends SprykerSecurityGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that Merchant Users or Users whose Acl Group does not have Backoffice allowed Acl Group Reference can not log in to Backoffice.
+Ensure that merchant users or users whose Acl Group does not have Back Office allowed Acl Group Reference cannot log in to the Back Office.
 
 {% endinfo_block %}
 
@@ -287,7 +287,7 @@ class MerchantUserDependencyProvider extends SprykerMerchantUserDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-Ensure that non-Merchant Users whose Acl Group has Backoffice allowed Acl Group Reference (see `AclMerchantPortalConfig::getBackofficeAllowedAclGroupReferences()`) can log in to Backoffice.
+Ensure that non-merchant users whose Acl Group has Back Office allowed Acl Group Reference (see `AclMerchantPortalConfig::getBackofficeAllowedAclGroupReferences()`) can log in to the Back Office.
 
 {% endinfo_block %}
 

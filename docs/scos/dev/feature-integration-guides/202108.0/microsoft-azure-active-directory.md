@@ -122,7 +122,7 @@ class SecurityGuiDependencyProvider extends SprykerSecurityGuiDependencyProvider
     /**
      * @return \Spryker\Zed\SecurityGuiExtension\Dependency\Plugin\AuthenticationLinkPluginInterface[]
      */
-    protected function SecurityGuiDependencyProvider(): array
+    protected function getAuthenticationLinkPlugins(): array
     {
         return [
             new AzureAuthenticationLinkPlugin(),

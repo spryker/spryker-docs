@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/crefopay-integration
   - /docs/crefopay-integration
   - /docs/en/crefopay-integration
+  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/crefopay/integrating-crefopay.html
 related:
   - title: CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay.html

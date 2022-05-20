@@ -11,6 +11,7 @@ redirect_from:
   - /docs/crefopay-configuration
   - /docs/en/crefopay-configuration
   - /docs/scos/user/technology-partners/201907.0/payment-partners/crefopay/installing-and-configuring-crefopay.html
+  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/crefopay/installing-and-configuring-crefopay.html
 related:
   - title: Integrating CrefoPay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/integrating-crefopay.html

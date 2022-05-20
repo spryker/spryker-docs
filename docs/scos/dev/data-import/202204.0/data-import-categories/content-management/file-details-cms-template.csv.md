@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-cms-templatecsv
   - /docs/file-details-cms-templatecsv
   - /docs/en/file-details-cms-templatecsv
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-cms-template.csv.html
 ---
 
 This document describes the `cms_template.csv` file to configure [CMS Template](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-page-template) information in your Spryker Demo Shop.

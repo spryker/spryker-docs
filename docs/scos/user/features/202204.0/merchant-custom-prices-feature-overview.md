@@ -15,13 +15,14 @@ related:
     link: docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/how-to-manage-business-unit-specific-prices-via-data-import.html
 ---
 
-In B2B commerce transactions, prices are typically negotiated in contracts. Therefore, merchants and their clients, who are usually company business units, expect to see their own prices in the shop. With the Merchant Custom Prices feature, the shop owners of B2B and B2C marketplaces can provide different prices for merchants and their clients. This way, the relationship between merchants and buyers is reflected more accurately, and the shop owners can set different prices for various customers.
+In B2B commerce transactions, prices are typically negotiated in contracts. Therefore, merchants and their clients, who are usually company business units, expect to see their own prices in the shop. With the Merchant Custom Prices feature, the shop owners of the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html) can provide different prices for merchants and their clients. This way, the relationship between merchants and buyers is reflected more accurately, and the shop owners can set different prices for various customers.
 
 
 When talking about product prices that depend on customers they refer to, we differentiate between two types: default prices and specific prices.
 
 - **Default prices** are the prices shown by default to all regular customers
 - **Specific prices** are different prices meant for specific target audience
+
 ![Prices diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Prices+per+Merchant+Relations/Prices+per+Merchant+Relation+Feature+Overview/prices_diagram.png)
 
 The different price categories that can be selected based on contextual information, like customer or merchant relationship, is referred to as **price dimension**.
@@ -34,11 +35,11 @@ We have the following price dimensions:
 - Currency
 - Merchant Relationship
 
-All prices in Spryker OS are stored in *spy_price_product_store; however, connections to price dimensions are stored to different tables.
+All prices in Spryker OS are stored in *spy_price_product_store*; however, connections to price dimensions are stored to different tables.
 
 {% info_block infoBox %}
 
-For example spy_price_product_default contains only connections to prices, which were imported during store installation or created using Zed UI, and connections to prices pertain to merchant relations, would reside in spy_price_product_merchant_relationship. So the `spy_price_product_default` table poses a set of relations between the `spy_price_product_default` and `fk_price_product_store` tables and related entities.
+For example `spy_price_product_default` contains only connections to prices, which were imported during store installation or created using Zed UI, and connections to prices pertain to merchant relations, would reside in `spy_price_product_merchant_relationship`. So the `spy_price_product_default` table poses a set of relations between the `spy_price_product_default` and `fk_price_product_store` tables and related entities.
 
 {% endinfo_block %}
 
@@ -62,6 +63,7 @@ To import the specific prices for merchant relations from the CSV file residing 
 ```bash
 console data:import product-price-merchant-relationship
 ```
+
 Or, if you want to import merchant from your file, indicate a path to it:
 
 ```bash

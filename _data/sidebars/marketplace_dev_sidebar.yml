@@ -435,12 +435,12 @@ entries:
             - "202204.0"
             nested:
               - title: Managing marketplace shopping lists
-                url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-lists.html
+                url: /docs/marketplace/dev/glue-api-guides/marketplace-shopping-lists/managing-marketplace-shopping-lists.html
                 include_versions:
                 - "202204.0"
 
               - title: Managing marketplace shopping list items
-                url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-list-items.html
+                url: /docs/marketplace/dev/glue-api-guides/marketplace-shopping-lists/managing-marketplace-shopping-list-items.html
                 include_versions:
                 - "202204.0"
 

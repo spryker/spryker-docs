@@ -1,7 +1,7 @@
 ---
 title: Managing shopping list items
 description: Learn how to manage shopping list items via Glue API.
-last_updated: Jun 16, 2021
+last_updated: May 20, 2022
 template: glue-api-storefront-guide-template
 related:
   - title: Managing shopping lists
@@ -44,7 +44,7 @@ To add items to a shopping list, send the request:
 <details>
 <summary markdown='span'>Request sample: add items to the shopping list</summary>
 
-`POST http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items`
+`POST https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items`
 
 ```json
 {
@@ -63,7 +63,7 @@ To add items to a shopping list, send the request:
 <details>
 <summary markdown='span'>Request sample: add items to the shopping list, and include information about the concrete products</summary>
 
-`POST http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items?include=concrete-products`
+`POST https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items?include=concrete-products`
 
 ```json
 {
@@ -139,7 +139,7 @@ To add items to a shopping list, send the request:
             "sku": "005_30663301"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08"
+            "self": "https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08"
         }
     }
 }  
@@ -298,7 +298,7 @@ To change the item quantity in a shopping list, send the request:
 <details>
 <summary markdown='span'>Request sample: change the quantity of the items in the shopping list</summary>
 
-`PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08`
+`PATCH https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08`
 
 ```json
 {
@@ -316,7 +316,7 @@ To change the item quantity in a shopping list, send the request:
 <details>
 <summary markdown='span'>Request sample: change the quantity of the items in the shopping list, and include concrete products</summary>
 
-`PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08?include=concrete-products`
+`PATCH https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08?include=concrete-products`
 
 ```json
 {
@@ -387,7 +387,7 @@ To change the item quantity in a shopping list, send the request:
             "sku": "005_30663301"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08"
+            "self": "https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08"
         }
     }
 }
@@ -452,7 +452,7 @@ To change the item quantity in a shopping list, send the request:
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/128_27314278"
+                "self": "https://glue.mysprykershop.com/concrete-products/128_27314278"
             }
         }
     ]
@@ -528,7 +528,7 @@ To remove an item from a shopping list, send the request:
 
 Request sample:
 
-`DELETE http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08` 
+`DELETE https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08` 
 
 ### Response
 

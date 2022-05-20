@@ -200,6 +200,11 @@ class ProductDependencyProvider extends SprykerProductDependencyProvider
     }
 }
 ```
+{% info_block warningBox "Verification" %}
+
+Make sure that you can create a new product in the Merchant Portal and observe it after creation in the product data table.
+
+{% endinfo_block %}
 
 **src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
 

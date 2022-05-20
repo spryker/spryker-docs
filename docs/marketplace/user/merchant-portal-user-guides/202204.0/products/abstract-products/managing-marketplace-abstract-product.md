@@ -41,7 +41,7 @@ To edit the existing marketplace abstract product:
 
 1. Next to the abstract product, you want to edit, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *[Product name]*, *Abstract Product Details* tab.
 2. In the *Name & Description* pane, edit *Name* and *Description* for every locale.
-3. In the *Stores* pane, in the drop-down menu select the stores where the product is available.
+3. In the *Stores* pane, in the drop-down menu, select the stores where the product is available.
 4. In the *Tax Set* pane, in the drop-down menu, select the necessary tax set.
 5. In the *Categories* pane, in the drop-down menu, select the categories where your product belongs.
 6. Click **Save**.  
@@ -69,7 +69,7 @@ You can approve only the [newly created marketplace product](/docs/marketplace/u
 
 {% endinfo_block %}
 
-In order for the new product to be available on the Storefront, it needs to be approved. To send the product for approval:
+For the new product to be available on the Storefront, it needs to be approved. To send the product for approval, do the following:
 
 1. Next to the abstract product, you want to send approval for, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *[Product name]* drawer, *Abstract Product Details* tab.
 2. In the right top corner of the drawer, click **Send for Approval**.

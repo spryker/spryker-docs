@@ -17,7 +17,7 @@ Review the reference information in this article before you start, or look up th
 To create a product offer, follow these steps:
 
 1. Click **Add Offer**.
-2. From the list of concrete products, select the  product you want to create an offer for.
+2. From the list of concrete products, select the product you want to create an offer for.
   The *Create Offer* drawer opens.
 3. Optional: To make the offer active after creating it, select **Offer is Active**.
 4. Optional: Enter a **Merchant SKU**.
@@ -56,13 +56,13 @@ To edit an existing product offer:
 
 ## Reference information: Creating and editing product offers
 
-This section describes attributes you see when creating and editing product offer.
+This section describes attributes you see when creating and editing a product offer.
 
 On all the pages described below, you can rearrange, hide, and show columns by clicking the settings cogwheel next to the tables.
 
 ### Offers page
 
-On the *Offers* page you do the following:
+On the *Offers* page, you do the following:
 
 * Filter product offers using the filtering menu at the top of the page.
 * Sort product offers by clicking on the desired column name.

@@ -1,5 +1,5 @@
 ---
-title: FileManager
+title: Migration guide - FileManager
 description: Use the guide to update versions to the newer ones of the FileManager module.
 last_updated: May 20, 2022
 template: module-migration-guide-template
@@ -11,7 +11,7 @@ In this new version of the `FileManager` module, we have added the support of th
 
 *Estimated migration time: 5 minutes*
 
-To upgrade to the new version of the module, upgrade the `FileManager` module to the new version:
+Upgrade the `FileManager` module to the new version:
 
 ```bash
 composer require spryker/file-manager: "^2.0.0" --update-with-dependencies

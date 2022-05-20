@@ -1,6 +1,7 @@
 ---
-title: FileManagerWidget
+title: Migration guide - FileManagerWidget
 description: Use the guide to update versions to the newer ones of the FileManagerWidget module.
+last_updated: May 20, 2022
 template: module-migration-guide-template
 ---
 
@@ -10,9 +11,7 @@ In this new version of the `FileManagerWidget` module, we have added support of 
 
 *Estimated migration time: 5 minutes*
 
-To upgrade to the new version of the module, do the following:
-
-1. Upgrade the `FileManagerWidget` module to the new version:
+Upgrade the `FileManagerWidget` module to the new version:
 
 ```bash
 composer require spryker-shop/file-manager-widget: "^2.0.0" --update-with-dependencies

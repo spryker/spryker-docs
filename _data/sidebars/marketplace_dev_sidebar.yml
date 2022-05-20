@@ -434,12 +434,12 @@ entries:
             include_versions:
             - "202204.0"
             nested:
-              - title: Managing shopping lists
+              - title: Managing marketplace shopping lists
                 url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-lists.html
                 include_versions:
                 - "202204.0"
 
-              - title: Managing shopping list items
+              - title: Managing marketplace shopping list items
                 url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-list-items.html
                 include_versions:
                 - "202204.0"
@@ -466,6 +466,14 @@ entries:
 
           - title: Retrieving autocomplete and search suggestions
             url: /docs/marketplace/dev/glue-api-guides/retrieving-autocomplete-and-search-suggestions.html
+
+          - title: Shopping lists
+            nested:
+              - title: Managing shopping lists
+                url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-lists.html
+
+              - title: Managing shopping list items
+                url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-list-items.html
 
       - title: Data export
         nested:

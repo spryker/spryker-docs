@@ -3,8 +3,10 @@ title: Managing shopping lists
 last_updated: May 20, 2022
 template: glue-api-storefront-guide-template
 related:
-  - title: Glue API - Shopping Lists feature integration
-    link: ToDo
+  - title: Marketplace Shopping Lists feature integration
+    link: docs/marketplace/dev/feature-integration-guides/page.version/marketplace-shopping-lists-feature-integration.html
+  - title: Glue API - Marketplace Shopping Lists feature integration
+    link: docs/marketplace/dev/feature-integration-guides/page.version/glue/marketplace-shopping-lists-feature-integration.html
   - title: Managing shopping list items
     link: docs/marketplace/dev/glue-api-guides/page.version/shopping-lists/managing-shopping-list-items.html
 ---

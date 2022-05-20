@@ -1384,6 +1384,16 @@ Enable Javascript and CSS changes:
 console frontend:yves:build
 ```
 
+{% info_block warningBox "Verification" %}
+
+Make sure that the following widgets were registered:
+
+| MODULE               | TEST                                                                                                                |
+|----------------------|---------------------------------------------------------------------------------------------------------------------|
+| SoldByMerchantWidget | Open product detail page, and you will see the sold by merchant text. (May require Marketplace Product integration) |
+
+{% endinfo_block %}
+
 ### 4) Set up behavior
 
 To set up behavior:

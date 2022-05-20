@@ -9,7 +9,7 @@ related:
     link: docs/marketplace/dev/glue-api-guides/page.version/shopping-lists/managing-shopping-list-items.html
 ---
 
-The Marketplace Shopping Lists API feature allows managing shopping lists in the Marketplace, as well as managing the items in them. 
+The Marketplace Shopping Lists API feature lets you manage shopping lists in the Marketplace, as well as managing the items in them. 
 
 In your development, the resources can help you to enable the shopping list functionality in your application.
 

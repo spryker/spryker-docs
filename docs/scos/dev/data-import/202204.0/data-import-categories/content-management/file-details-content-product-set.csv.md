@@ -9,6 +9,8 @@ redirect_from:
   - /2021080/docs/en/file-details-content-product-setcsv
   - /docs/file-details-content-product-setcsv
   - /docs/en/file-details-content-product-setcsv
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-content-product-set.csv.html
+  - /docs/scos/dev/data-import/201907.0/data-import-categories/content-management/file-details-content-product-set.csv.html
 ---
 
 This document describes the `content_product_set.csv` file to configure [Content Product Set](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item) information in your Spryker Demo Shop.
@@ -45,4 +47,3 @@ Find the template and an example of the file below:
 | --- | --- |
 | [content_product_set.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+content_product_set.csv) | Exemplary import file with headers only. |
 | [content_product_set.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/content_product_set.csv) | Exemplary import file with Demo Shop data. |
-

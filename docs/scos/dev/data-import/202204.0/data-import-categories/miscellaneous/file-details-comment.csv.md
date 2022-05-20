@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-commentcsv
   - /docs/file-details-commentcsv
   - /docs/en/file-details-commentcsv
+  - /docs/scos/dev/data-import/201907.0/data-import-categories/miscellaneous/file-details-comment.csv.html
 ---
 
 This document describes the `comment.csv` file to configure [Comment](/docs/scos/user/features/{{page.version}}/comments-feature-overview.html)  information in your Spryker Demo Shop.

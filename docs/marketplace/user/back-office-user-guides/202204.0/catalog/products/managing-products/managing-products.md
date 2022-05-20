@@ -16,7 +16,7 @@ To start managing products, go to **Catalog&nbsp;<span aria-label="and then">></
 
 ## Activating products
 
-The abstract product is inactive until at least one product variant is activated. You should understand that there is no option to activate it.
+The abstract product is inactive until at least one product variant is activated. There is no other option to activate the abstract product.
 
 To activate a product:
 
@@ -32,11 +32,11 @@ Each variant needs to be activated in order to be visible to your customers.
 {% endinfo_block %}
 
 **Tips & tricks**
-<br>If at some point in time you want to hide the product variant from your customers, you just deactivate it using the same procedure described above. This deactivates only the product variant. The abstract product is active until at least one its variant is active.
+<br>If you want to hide the product variant from your customers, you deactivate it using the same procedure as for activating the product. This deactivates only the product variant. The abstract product is active until at least one its variant is active.
 
 ## Viewing products
 
-If you need to review the product details without actually editing them, do the following:
+To view the product details without actually editing them, do the following:
 
 1. In the _Actions_ column of the abstract product you want to view, click **View**.
 2. On the *View Product* page, you can navigate to the view product variant, initiate the editing flow for it, or manage its attributes.

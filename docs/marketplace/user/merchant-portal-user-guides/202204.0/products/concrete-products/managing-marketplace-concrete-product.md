@@ -15,7 +15,7 @@ This document contains reference information. Make sure to review it before you 
 
 ## Filtering and sorting concrete products
 
-The following drop-down menus can be used to filter the marketplace concrete products on the *Concrete Products* page:
+You can use the following drop-down menus to filter the marketplace concrete products on the *Concrete Products* page:
 
 - Status of the concrete product
 - Validity dates

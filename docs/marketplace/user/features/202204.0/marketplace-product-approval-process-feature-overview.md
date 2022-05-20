@@ -11,7 +11,7 @@ The *Marketplace Product Approval Process* allows marketplace owners to verify t
 
 The Storefront displays only the products that are approved, active, lie within the validity period, and exist for the defined store.
 
-% endinfo_block %}
+{% endinfo_block %}
 
 ## Product lifecycle
 

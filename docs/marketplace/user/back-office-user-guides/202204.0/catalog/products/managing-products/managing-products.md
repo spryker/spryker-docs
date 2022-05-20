@@ -1,7 +1,7 @@
 ---
 title: Managing products
 description: Use this guide to view product details, activate or update product attributes in the Back Office.
-last_updated: Aug 10, 2021
+last_updated: May 20, 2022
 template: back-office-user-guide-template
 related:
   - title: Discontinuing Products
@@ -10,9 +10,9 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/adding-product-alternatives.html
 ---
 
-This article describes how to manage abstract and concrete products.
+This document describes how to manage abstract and concrete products.
 
-To start managing products, go to **Catalog** > **Products**.
+To start managing products, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
 ## Activating products
 
@@ -21,7 +21,7 @@ The abstract product is inactive until at least one product variant is activated
 To activate a product:
 
 1. Navigate to the product variant of the product that you want to activate:
-  **Edit** > **Variants** > **Edit product variant**
+  **Edit&nbsp;<span aria-label="and then">></span> Variants&nbsp;<span aria-label="and then">></span> Edit product variant**
 2. In the top right corner of the *Edit Concrete Product* page, click **Activate**.
 The product turns visible to the customers of your marketplace.
 
@@ -42,33 +42,13 @@ If you need to review the product details without actually editing them, do the 
 2. On the *View Product* page, you can navigate to the view product variant, initiate the editing flow for it, or manage its attributes.
 
 **Tips & tricks**
+
 <br>If you notice something you would like to change for your product, in the top right corner of the page. click **Edit**.
-
-## Managing product attributes
-
-When you see the **Manage Attributes** option, keep in mind that you manage the attributes like *brand* but not the super attributes. Such attributes like brand do not define the product variants differentiation, meaning they are not used while defining the concrete products of an abstract product. They rather go to the details section on the product details page in your online store. You can manage attributes for both abstract and concrete products.
-
-{% info_block infoBox "Info" %}
-
-The attributes that you add are taken from the **Products** > **Attributes** section of the Back Office. So the attribute you want to define should exist in that section.
-
-{% endinfo_block %}
-
-To manage the product attributes:
-1. In the _Actions_ column or in the top right corner of the *Edit* page, select the **Manage Attributes** option for the concrete or abstract product.
-2. On the *Manage Attributes for Product* page, type the first three letters of the attribute key.
-3. Select the suggested value and click **Add**.
-4. In the _Attributes_ section, define the **Default** value for your attributes and specify the value for the **locales**.
-  Repeat the procedure if needed.
-5. Click **Save**.
-
-See the _References_ section to see the examples of how the attributes look like.
 
 ## Approving and denying marketplace products
 
-Once the product is created, it needs to be approved by the marketplace administrator.
+To make the newly created products visible on the Storefront, the marketplace administrator should approve them. If the marketplace administrator does not want to display the products on the Storefront, they deny the products.
 
-Depending on the current status of the product, you can approve or deny it.
 To update the approval status of the product, in the _Actions_ column of the abstract product do the following:
 
 - For the product with status *Waiting for Approval*:
@@ -81,4 +61,5 @@ To update the approval status of the product, in the _Actions_ column of the abs
 
 **What's next?**
 
-<br>Review the other articles in the _Products_ section to know more about product management. Also, review the _References_ section to learn more about the attributes you see, select, and enter on the product pages.
+To learn more about the product management, see [Editing abstract products](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/editing-abstract-products.html)
+

@@ -13,7 +13,7 @@ Thus, the Storefront displays only the approved, active, within the validity per
 
 {% info_block warningBox "Note" %}
 
-The following workflow is valid only in case the Marketplace Product Approval Process feature is enabled.
+The following workflow is valid only in case the [Marketplace Product Approval Process feature is enabled](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-approval-process-feature-integration.html).
 
 {% endinfo_block %}
 
@@ -31,8 +31,6 @@ A product can have one of the following statuses:
 You can configure the logic of the statuses on the project level.
 
 {% endinfo_block %}
-
-A product only appears in the Storefront if it is approved, active, within their validity dates range, and exists for the defined store.
 
 ## Marketplace Product Approval process workflow
 

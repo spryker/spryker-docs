@@ -1,20 +1,20 @@
 ---
 title: Managing product offers
-description: This topic describes the actions a Merchant can do in the Offers section in the Merchant Portal.
+description: This document describes the actions a Merchant can do in the Offers section in the Merchant Portal.
 template: back-office-user-guide-template
 ---
 
-This topic describes the actions a Merchant can do in the Offers section in the Merchant Portal.
+This document describes the actions a Merchant can do in the Offers section in the Merchant Portal.
 
 ## Prerequisites
 
 To start managing product offers, navigate to the **Merchant Portal** > **Offers**.
 
-Review the reference information in this article before you start, or just look up the necessary information as you go through the process.
+Review the reference information in this article before you start, or look up the necessary information as you go through the process.
 
 ## Creating a product offer
 
-To create a product offer:
+To create a product offer, follow these steps:
 
 1. Click **Add Offer**.
 2. From the list of concrete products, select the  product you want to create an offer for.

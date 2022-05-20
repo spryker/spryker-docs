@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/computop-installation-and-configuration
   - /docs/computop-installation-and-configuration
   - /docs/en/computop-installation-and-configuration
+  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/computop/installing-and-configuring-computop.html
 ---
 
 This topic describes how to integrate Computop into a Spryker project by installing and configuring the Computop module.

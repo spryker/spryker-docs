@@ -26,7 +26,7 @@ The following CMS Block email templates are available by default:
 * *Text email template with header and footer*
 * *Empty email template*
 
-To learn how a Back Office User applies a CMS Block email template, see [Creating an Email CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html#creating-an-email-cms-block).
+To learn how a Back Office User applies a CMS Block email template, see [Create email CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/create-email-cms-blocks.html).
 
 A Developer can create more CMS Block email templates.
 
@@ -96,13 +96,13 @@ The following table contains the list of the default email templates, their Emai
 
 </details>
 
-To learn how a Back Office User manages the content of email templates by editing Email CMS Block, see [Managing Content of Emails via CMS Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html).
+To learn how a Back Office User manages the content of email templates by editing Email CMS Block, see [Edit placeholders in CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-placeholders-in-cms-blocks.html).
 
 After creating email templates, a developer can [import](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-block.csv.html) their assigned Email CMS Blocks. See [an example of the import file](https://github.com/spryker-shop/suite/blob/master/data/import/common/common/cms_block.csv) with the Email CMS Blocks in Spryker Master Suite.
 
-## Email Content
+## Email content
 
-When [editing an email template via Email CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html#editing-email-cms-blocks), you work in the WYSIWYG editor. Apart from the regular WYSIWYG editor tools, you can add glossary keys and variables.
+When [editing an email template via email CMS block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-placeholders-in-cms-blocks.html), you work in the WYSIWYG editor. Apart from the regular WYSIWYG editor tools, you can add glossary keys and variables.
 
 You can use the functionalities described in this section, regardless of the email format.
 
@@ -126,7 +126,7 @@ The CMS capability in Spryker lets you add [content items](/docs/scos/user/featu
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage content of emails via CMS Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-content-of-emails-via-cms-blocks.html)  |
+| [Create email CMS Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/create-email-cms-blocks.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

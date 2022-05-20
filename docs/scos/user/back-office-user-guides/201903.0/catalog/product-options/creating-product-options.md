@@ -8,6 +8,7 @@ originalArticleId: 31ba110f-5fa1-45ae-af7c-6d0f996db487
 redirect_from:
   - /v2/docs/creating-a-product-option
   - /v2/docs/en/creating-a-product-option
+  - /docs/scos/user/back-office-user-guides/201903.0/catalog/product-options/creating-a-product-option.html
 ---
 
 This article describes the procedure you need to perform in order to create a  product option.
@@ -33,7 +34,7 @@ In the **General Information** tab:
       {% info_block infoBox "Note" %}
 
       You can remove an option value by clicking **Remove** next to the Option name translation key and SKU fields.
-      
+
       {% endinfo_block %}
    4. Add a unique SKU for a product option value or proceed with the auto-generated one.
    5. In the **Prices** section, specify gross and net prices for a product option value. If you want to add several product options values, click **Add option** below the **Prices** section, and repeat the same step.

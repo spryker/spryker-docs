@@ -56,6 +56,11 @@ entries:
           - title: Marketplace Product
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
 
+          - title: Marketplace Product Approval Process
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-approval-process-feature-walkthrough.html
+            include_versions:
+            - "202204.0"
+          
           - title: Marketplace Order Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html
 
@@ -69,6 +74,11 @@ entries:
           - title: Marketplace Product Offer Prices
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-prices-feature-walkthrough.html
 
+          - title: Marketplace Merchant Custom Prices
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-custom-prices-feature-walkthrough.html
+            include_versions:
+            - "202204.0"
+            
           - title: Marketplace Return Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-return-management-feature-walkthrough.html
 
@@ -86,6 +96,11 @@ entries:
 
           - title: Marketplace Wishlist
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-wishlist-feature-walkthrough.html
+
+          - title: Marketplace Shopping Lists
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-shopping-lists-feature-walkthrough.html
+            include_versions:
+            - "202204.0"
 
           - title: Persistence ACL
             url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html
@@ -144,11 +159,6 @@ entries:
               - title: Marketplace Merchant Portal Product Offer Management
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html
 
-              - title: Marketplace Product Approval Process
-                url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-approval-process-feature-walkthrough.html
-            include_versions:
-            - "202204.0"
-
       - title: Feature integration guides
         nested:
           - title: ACL feature integration
@@ -195,6 +205,11 @@ entries:
           - title: Merchant Switcher + Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-wishlist-feature-integration.html
 
+          - title: Marketplace Merchant Custom Prices
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-custom-prices-feature-integration.html
+            include_versions:
+            - "202204.0"
+          
           - title: Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
 
@@ -259,6 +274,11 @@ entries:
 
           - title: Marketplace Shipment feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-feature-integration.html
+
+          - title: Marketplace Shopping Lists feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-shopping-lists-feature-integration.html
+            include_versions:
+            - "202204.0"
 
           - title: Marketplace Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-wishlist-feature-integration.html
@@ -337,8 +357,23 @@ entries:
               - title: "Glue API: Marketplace Return Management feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-return-management-feature-integration.html
 
+              - title: "Glue API: Marketplace Shopping Lists feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-shopping-lists-feature-integration.html
+                include_versions:
+                - "202204.0"
+
       - title: Glue API guides
         nested:
+          - title: REST API Marketplace B2C reference
+            url: /docs/marketplace/dev/glue-api-guides/rest-api-b2c-reference.html
+            include_versions:       
+            - "202204.0"
+
+          - title: REST API Marketplace B2B reference
+            url: /docs/marketplace/dev/glue-api-guides/rest-api-b2b-reference.html
+            include_versions:       
+            - "202204.0"
+
           - title: Abstract products
             nested:
               - title: Retrieving abstract products
@@ -486,6 +521,11 @@ entries:
           - title: "File details: price-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-price-product-offer.csv.html
 
+          - title: "File details: product-offer-shopping-list.csv"
+            url: /docs/marketplace/dev/data-import/file-details-product-offer-shopping-list.csv.html
+            include_versions:
+            - "202204.0"
+
           - title: "File details: product-offer-stock.csv"
             url: /docs/marketplace/dev/data-import/file-details-product-offer-stock.csv.html
 
@@ -516,9 +556,6 @@ entries:
 
               - title: "Migration guide: Extending the project"
                 url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
-
-              - title: "Migration guide - Upgrade to Angular v12"
-                url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-upgrade-to-angular-v12.html
 
           - title: "Table design"
             url: /docs/marketplace/dev/front-end/table-design/
@@ -768,3 +805,9 @@ entries:
 
           - title: "How-To: Creating of a new MerchantOms flow "
             url: /docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html
+
+      - title: Technical enhancement guides
+        nested:
+
+          - title: "Migration guide - Upgrade to Angular v12"
+            url: /docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v12.html

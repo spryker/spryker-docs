@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/retrieving-bundled-products
   - /docs/retrieving-bundled-products
   - /docs/en/retrieving-bundled-products
+  - docs/scos/dev/glue-api-guides/202200.0/managing-products/retrieving-bundled-products.html
 ---
 
 This endpoint allows retrieving the products that belong to a bundle.

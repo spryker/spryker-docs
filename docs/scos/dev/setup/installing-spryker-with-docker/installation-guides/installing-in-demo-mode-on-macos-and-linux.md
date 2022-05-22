@@ -81,7 +81,7 @@ Follow the steps in this section if you are installing on a device with an ARM c
 Replace x86 based Sass with an ARM based one:
 
 1. In `package.json`, remove `node-sass` dependencies.
-2. Add `sass` and `sass-loader` dependencies.
+2. Add `sass` and `sass-loader` dependencies:
 
 ```json
 ...
@@ -127,7 +127,7 @@ docker/sdk cli
 npm run yves
 ```
 
-8. Rebuild Zed
+8. Rebuild Zed:
 
 ```bash
 npm run zed
@@ -200,7 +200,7 @@ docker/sdk bootstrap
 
 Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after:
 
-* Docker SDK version update;
+* Docker SDK version update.
 * Deploy file update.
 
 {% endinfo_block %}

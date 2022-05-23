@@ -554,7 +554,7 @@ entries:
 
           - title: "File details: product-option-group.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-option-group.csv.html
-
+          
       - title: Front-end
         nested:
 

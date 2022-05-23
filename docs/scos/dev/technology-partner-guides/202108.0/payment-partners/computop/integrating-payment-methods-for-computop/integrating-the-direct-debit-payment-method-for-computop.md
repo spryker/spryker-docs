@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/computop-direct-debit
   - /docs/computop-direct-debit
   - /docs/en/computop-direct-debit
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/computop/computop-payment-methods/computop-direct-debit.html
 related:
   - title: Integrating the Sofort payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html

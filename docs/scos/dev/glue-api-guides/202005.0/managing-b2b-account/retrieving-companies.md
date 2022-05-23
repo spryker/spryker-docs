@@ -21,8 +21,7 @@ related:
 redirect_from:
   - /v5/docs/retrieving-company-information-201907
   - /v5/docs/en/retrieving-company-information-201907
-  - /docs/scos/dev/glue-api-guides/202005.0/managing-b2b-account/retrieving-companies.html/
-
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-b2b-account/retrieving-companies.html
 ---
 
 Spryker provides the [Company Account](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html) feature that allows purchasing goods and performing other actions on behalf of a user's company. The endpoints provided by the Company API allow retrieving information on companies.

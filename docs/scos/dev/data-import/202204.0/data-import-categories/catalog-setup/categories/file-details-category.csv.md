@@ -9,6 +9,8 @@ redirect_from:
   - /2021080/docs/en/file-details-categorycsv
   - /docs/file-details-categorycsv
   - /docs/en/file-details-categorycsv
+  - /docs/scos/dev/data-import/201903.0/data-import-categories/catalog-setup/categories/file-details-category.csv.html
+  - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/categories/file-details-category.csv.html
 ---
 
 This document describes the `category.csv` file to configure [categories](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html) in your Spryker shop.
@@ -43,7 +45,7 @@ The file should have the following parameters:
 
 {% info_block infoBox "Info" %}
 
-*ANY_LOCALE_NAME: Locale data is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files. For the fields below, it could be replaced by 2 sets of fields: one for *de_DE* and another for *en_US* 
+*ANY_LOCALE_NAME: Locale data is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files. For the fields below, it could be replaced by 2 sets of fields: one for *de_DE* and another for *en_US*
 
 {% endinfo_block %}
 
@@ -59,4 +61,3 @@ Find the template and an example of the file below:
 | --- | --- |
 | [category.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Categories/category_template.csv) | Exemplary import file with headers only. |
 | [category.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Categories/category.csv) | Exemplary import file with Demo Shop data. |
-

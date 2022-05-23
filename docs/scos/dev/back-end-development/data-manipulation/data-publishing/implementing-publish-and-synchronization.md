@@ -92,7 +92,7 @@ For information on how to create a queue, see [Set Up a "Hello World" Queue](/do
 
 {% endinfo_block %}
 
-Now, you need to configure synchronization queues in order to deliver the prepared data to the frontend. We recommended having a separate synchronization queue for each *Redis* or *Elasticsearch* entity. 
+Now, you need to configure synchronization queues in order to deliver the prepared data to the frontend. We recommended having a separate synchronization queue for each *Redis* or *Elasticsearch* entity.
 
 {% info_block infoBox "Naming convention"%}
 
@@ -173,7 +173,7 @@ Synchronization behavior parameters:
 
 
 ## 5. Trigger Publish events
-To implement the first step of the *Publish* process, you need to trigger the corresponding Publish events. 
+To implement the first step of the *Publish* process, you need to trigger the corresponding Publish events.
 
 One way to do that is to trigger the events manually. You can do this by calling the `EventFacade::trigger()` method:
 
@@ -390,7 +390,7 @@ Spryker implemented two generic synchronization message processor plugins for sy
 * `SynchronizationStorageQueueMessageProcessorPlugin` for synchronizing data to Redis, and
 * `SynchronizationSearchQueueMessageProcessorPlugin` for synchronizing data to Elasticsearch.
 
-You need to map your synchronization queue names to one of the plugins depending on which storage you want to use it for. You must map the queues in `QueueDependencyProvider::getProcessorMessagePlugins()`. For details, see [Queue](https://docs.spryker.com/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html#queue-message-processor-plugin).
+You need to map your synchronization queue names to one of the plugins depending on which storage you want to use it for. You must map the queues in `QueueDependencyProvider::getProcessorMessagePlugins()`. For details, see [Queue](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html#queue-message-processor-plugin).
 
 After implementing the above steps, you will have the data storage of your frontend app synchronized with the backend data storage.
 
@@ -413,7 +413,7 @@ The recommended module structure for the Publish and Synchronize module
                 + GlossaryDeletePublisherPlugin.php
                 + GlossaryWriterPublisherPlugin.php
               + GlossaryTranslation/                // "glossary translation" storage entity related listeners
-                + GlossaryWriterPublisherPlugin.php // 
+                + GlossaryWriterPublisherPlugin.php //
               + GlossaryKeyPublisherTriggerPlugin.php  // triggers a publish event for all database entity via "publish:trigger-events" console command
             + Synchronization/
               + GlossaryTranslationSynchrozniationDataRepositoryPlugin.php // triggers a synchronization event for all database entity in the corresponding publish table via "sync:data" console command
@@ -424,7 +424,7 @@ The recommended module structure for the Publish and Synchronize module
 There are some additional tasks for the Publish and Synchronize that you can perform:
 - Viewing the event mapping
 - Debugging Publish and Synchronize
-- 
+-
 ### View event mapping
 
 To see all listeners mapped for a certain event, Ctrl+Click it in PhpStorm. The following example shows that the *SPY_URL_CREATE* event has six listeners mapped to it, which means that there will be six messages for this event in the *event* queue.

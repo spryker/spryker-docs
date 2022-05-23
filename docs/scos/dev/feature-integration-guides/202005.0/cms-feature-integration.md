@@ -8,6 +8,7 @@ originalArticleId: 82e16ca1-a0db-4966-a6d5-5b44a79b6ff9
 redirect_from:
   - /v5/docs/cms-feature-integration-guide
   - /v5/docs/en/cms-feature-integration-guide
+  - /docs/scos/dev/feature-integration-guides/202005.0/cms-feature-integration-guide.html
 ---
 
 ## Install Feature Core

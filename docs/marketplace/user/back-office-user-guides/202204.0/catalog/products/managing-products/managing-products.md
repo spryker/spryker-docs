@@ -3,11 +3,6 @@ title: Managing products
 description: Use this guide to view product details, activate or update product attributes in the Back Office.
 last_updated: May 20, 2022
 template: back-office-user-guide-template
-related:
-  - title: Discontinuing Products
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/discontinuing-products.html
-  - title: Adding Product Alternatives
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/adding-product-alternatives.html
 ---
 
 This document describes how to manage abstract and concrete products.

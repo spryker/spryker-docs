@@ -9,6 +9,7 @@ redirect_from:
   - /v3/docs/arvato-2-0
   - /v3/docs/en/arvato-2-0
   - /docs/scos/dev/technology-partner-guides/201907.0/payment-partners/arvato/v.2.0/arvato-risk-solution-services-integration-2.0.html
+  - /docs/scos/user/technology-partners/201907.0/payment-partners/arvato/v.2.0/arvato-risk-solution-services-integration-2.0.html
 related:
   - title: Arvato - Store Order 2.0
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/arvato-store-order.html

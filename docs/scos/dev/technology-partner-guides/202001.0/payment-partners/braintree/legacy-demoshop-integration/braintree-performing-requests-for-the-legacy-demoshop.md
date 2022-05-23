@@ -9,6 +9,7 @@ redirect_from:
   - /v4/docs/braintree-requests-legacy-demoshop
   - /v4/docs/en/braintree-requests-legacy-demoshop
   - /docs/scos/dev/technology-partner-guides/202001.0/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-performing-requests-for-the-legacy-demoshop.html
+  - /docs/scos/user/technology-partners/202001.0/payment-partners/braintree/legacy-demoshop-integration/braintree-performing-requests-for-the-legacy-demoshop.html
 related:
   - title: Braintree
     link: docs/scos/user/technology-partners/page.version/payment-partners/braintree.html

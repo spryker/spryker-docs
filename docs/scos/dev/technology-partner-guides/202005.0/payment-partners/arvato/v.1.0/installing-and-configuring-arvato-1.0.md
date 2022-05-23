@@ -9,6 +9,8 @@ redirect_from:
   - /v5/docs/arvato-1-0
   - /v5/docs/en/arvato-1-0
   - /docs/scos/dev/technology-partner-guides/202005.0/payment-partners/arvato/v.1.0/arvato-risk-solution-services-integration-1.0.html
+  - /docs/scos/user/technology-partners/202005.0/payment-partners/arvato/v.1.0/arvato-risk-solution-services-integration-1.0.html
+  - /docs/scos/user/technology-partners/202005.0/payment-partners/arvato/arvato-risk-solution-services-integration.html
 related:
   - title: Arvato - Risk Check 1.0
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/v.1.0/arvato-risk-check-1.0.html

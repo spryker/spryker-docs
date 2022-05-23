@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-cms-pagecsv
   - /docs/file-details-cms-pagecsv
   - /docs/en/file-details-cms-pagecsv
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-cms-page.csv.html
 ---
 
 This document describes the `cms_page.csv` file to configure [CMS Page](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html) information in your Spryker Demo Shop.

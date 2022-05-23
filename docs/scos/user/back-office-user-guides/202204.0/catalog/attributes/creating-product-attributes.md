@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/creating-product-attributes
   - /docs/creating-product-attributes
   - /docs/en/creating-product-attributes
+  - /docs/scos/user/back-office-user-guides/202200.0/catalog/attributes/creating-product-attributes.html
 related:
   - title: Product Attributes
     link: docs/scos/user/features/page.version/product-feature-overview/product-attributes-overview.html

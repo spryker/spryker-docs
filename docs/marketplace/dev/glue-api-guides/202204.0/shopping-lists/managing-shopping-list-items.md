@@ -1,21 +1,25 @@
 ---
 title: Managing shopping list items
 description: Learn how to manage shopping list items via Glue API.
-last_updated: Jun 16, 2021
+last_updated: May 20, 2022
 template: glue-api-storefront-guide-template
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-shopping-lists/managing-shopping-list-items.html
+  - /docs/scos/dev/glue-api-guides/201907.0/managing-shopping-lists/managing-shopping-list-items.html
 related:
   - title: Managing shopping lists
     link: docs/marketplace/dev/glue-api-guides/page.version/shopping-lists/managing-shopping-lists.html
 ---
 
-This endpoint allows managing shopping list items
+This endpoint allows managing marketplace shopping list items.
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shopping-lists-feature-integration.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
-
+* [Glue API: Marketplace Shopping Lists feature integration]()<!---LINK-->
+  
 ## Add items to a shopping list
 
 To add items to a shopping list, send the request:
@@ -34,14 +38,16 @@ To add items to a shopping list, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
+
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | concrete-products |
 
-| REQUEST SAMPLE | USAGE |
-| --- | --- |
-| `POST https://glue.mysprykershop.comm/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items` | Add items to the shopping list with the `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` unique identifier. |
-| `POST https://glue.mysprykershop.comm/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items?include=concrete-products` | Add items to the shopping list with the `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` unique identifier. Include information about the concrete products in the shopping list into the response. |
+
+<details>
+<summary markdown='span'>Request sample: add items to the shopping list</summary>
+
+`POST https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items`
 
 ```json
 {
@@ -54,16 +60,77 @@ To add items to a shopping list, send the request:
     }
 }
 ```
+</details>
+
+
+<details>
+<summary markdown='span'>Request sample: add items to the shopping list, and include information about the concrete products</summary>
+
+`POST https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items?include=concrete-products`
+
+```json
+{
+    "data": {
+        "type": "shopping-list-items",
+        "attributes": {
+            "quantity": 4,
+            "sku": "128_27314278"
+       }
+    }
+}
+```
+</details>
+
+
+<details>
+<summary markdown='span'>Request sample: add marketplace products to the shopping list</summary>
+
+`POST https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items?include=shopping-list-items` 
+
+```json
+{
+    "data": {
+        "type": "shopping-list-items",
+        "attributes": {
+            "quantity": 4,
+            "sku": "005_30663301"
+       }
+    }
+}
+```
+</details>
+
+
+<details>
+<summary markdown='span'>Request sample: add product offers to the shopping list</summary>
+
+`POST https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items?include=shopping-list-items`
+
+```json
+{
+    "data":{
+        "type":"shopping-list-items",
+        "attributes":{
+            "sku":"091_25873091", 
+            "quantity": 3,
+             "productOfferReference":"offer3"
+             }
+        }
+}
+```
+</details>
+
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | quantity | Integer | ✓ | Quantity of the product to add. |
 | sku | String | ✓ | SKU of the product to add. Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
+| productOfferReference | String |   | Unique identifier of the product offer. |
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: add items to the shopping list</summary>
 
 ```json
   {
@@ -75,7 +142,7 @@ To add items to a shopping list, send the request:
             "sku": "005_30663301"
         },
         "links": {
-            "self": "https://glue.mysprykershop.comm/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08"
+            "self": "https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08"
         }
     }
 }  
@@ -83,7 +150,7 @@ To add items to a shopping list, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample with concrete products</summary>
+<summary markdown='span'>Response sample: add items to the shopping list, and include information about the concrete products</summary>
 
 ```json
     {
@@ -153,19 +220,64 @@ To add items to a shopping list, send the request:
 ```
 </details>
 
+<details>
+<summary markdown='span'>Response sample: add marketplace products to the shopping list</summary>
+
+```json
+{
+    "data": {
+        "type": "shopping-list-items",
+        "id": "29f1d940-00b6-5492-abf3-d2b5ff15f0b2",
+        "attributes": {
+            "productOfferReference": null,
+            "merchantReference": "MER000001",
+            "quantity": 3,
+            "sku": "110_19682159"
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/29f1d940-00b6-5492-abf3-d2b5ff15f0b2"
+        }
+    }
+}
+```
+</details>
+
+<details>
+<summary markdown='span'>Response sample: add product offers to the shopping list</summary>
+
+```json
+{
+    "data": {
+        "type": "shopping-list-items",
+        "id": "946451d1-3c40-559e-95c7-ebda2d12bebf",
+        "attributes": {
+            "productOfferReference": "offer3",
+            "merchantReference": "MER000001",
+            "quantity": 3,
+            "sku": "091_25873091"
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/946451d1-3c40-559e-95c7-ebda2d12bebf"
+        }
+    }
+}
+```
+</details>
+
 <a name="shopping-list-items-response-attributes"></a>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| cell | cell | cell |
 | quantity | Integer | Quantity of the product. |
 | sku | String | Product SKU. |
+| productOfferReference | String | Unique identifier of the product offer.   |
+| merchantReference | String | Unique identifier of the merchant.   |
 
-For the attributes of included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
+For the attributes of the included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
 
 ## Change item quantity in a shopping list
 
-To change item quantity in a shopping list, send the request:
+To change the item quantity in a shopping list, send the request:
 
 ***
 `PATCH` **/shopping-lists/*{% raw %}{{{% endraw %}shopping_list_id{% raw %}}}{% endraw %}*/shopping-list-items/*{% raw %}{{{% endraw %}shopping_list_item_id{% raw %}}}{% endraw %}***
@@ -186,10 +298,10 @@ To change item quantity in a shopping list, send the request:
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | concrete-products|
 
-| REQUEST SAMPLE | USAGE |
-| --- | --- |
-| `PATCH https://glue.mysprykershop.comm/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08` | In the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`, change quantity of the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08`. |
-| `PATCH https://glue.mysprykershop.comm/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08?include=concrete-products` | In the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`, change quantity of the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08`. Include information about the respective concrete product into the response. |
+<details>
+<summary markdown='span'>Request sample: change the quantity of the items in the shopping list</summary>
+
+`PATCH https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08`
 
 ```json
 {
@@ -202,6 +314,61 @@ To change item quantity in a shopping list, send the request:
     }
 }
 ```
+</details>
+
+<details>
+<summary markdown='span'>Request sample: change the quantity of the items in the shopping list, and include concrete products</summary>
+
+`PATCH https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08?include=concrete-products`
+
+```json
+{
+    "data": {
+        "type": "shopping-list-items",
+        "attributes": {
+            "quantity": 12,
+            "sku": "128_27314278"
+       }
+    }
+}
+```
+</details>
+
+<details>
+<summary markdown='span'>Request sample: change the quantity of marketplace products in the shopping list</summary>
+
+`PATCH https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/29f1d940-00b6-5492-abf3-d2b5ff15f0b2`
+
+```json
+{
+    "data": {
+        "type": "shopping-list-items",
+        "attributes": {
+            "quantity": 15,
+            "sku": "110_19682159"
+       }
+    }
+}
+```
+</details>
+
+<details>
+<summary markdown='span'>Request sample: change the quantity of product offers in the shopping list</summary>
+
+`PATCH https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/946451d1-3c40-559e-95c7-ebda2d12bebf`
+
+```json
+{
+    "data": {
+        "type": "shopping-list-items",
+        "attributes": {
+            "quantity": 10,
+            "sku": "091_25873091"
+       }
+    }
+}
+```
+</details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- |--- |
@@ -211,7 +378,7 @@ To change item quantity in a shopping list, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: change the quantity of the items in the shopping list</summary>
 
 ```json
     {
@@ -223,7 +390,7 @@ To change item quantity in a shopping list, send the request:
             "sku": "005_30663301"
         },
         "links": {
-            "self": "https://glue.mysprykershop.comm/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08"
+            "self": "https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08"
         }
     }
 }
@@ -231,7 +398,7 @@ To change item quantity in a shopping list, send the request:
 </details>     
 
 <details>
-<summary markdown='span'>Response sample with information on concrete products</summary>
+<summary markdown='span'>Response sample: change the quantity of the items in the shopping list, and include concrete products</summary>
 
 ```json
 {
@@ -288,13 +455,57 @@ To change item quantity in a shopping list, send the request:
                 }
             },
             "links": {
-                "self": "https://glue.mysprykershop.comm/concrete-products/128_27314278"
+                "self": "https://glue.mysprykershop.com/concrete-products/128_27314278"
             }
         }
     ]
 }
 ```
-</details>   
+</details> 
+
+<details>
+<summary markdown='span'>Response sample: change the quantity of marketplace products in the shopping list</summary>
+
+```json
+{
+    "data": {
+        "type": "shopping-list-items",
+        "id": "29f1d940-00b6-5492-abf3-d2b5ff15f0b2",
+        "attributes": {
+            "productOfferReference": null,
+            "merchantReference": "MER000001",
+            "quantity": 15,
+            "sku": "110_19682159"
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/29f1d940-00b6-5492-abf3-d2b5ff15f0b2"
+        }
+    }
+}
+```
+</details> 
+
+<details>
+<summary markdown='span'>Response sample: change the quantity of product offers in the shopping list</summary>
+
+```json
+{
+    "data": {
+        "type": "shopping-list-items",
+        "id": "946451d1-3c40-559e-95c7-ebda2d12bebf",
+        "attributes": {
+            "productOfferReference": "offer3",
+            "merchantReference": "MER000001",
+            "quantity": 10,
+            "sku": "091_25873091"
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/946451d1-3c40-559e-95c7-ebda2d12bebf"
+        }
+    }
+}
+```
+</details> 
 
 For response attributes, see [Add items to a shopping list](#shopping-list-items-response-attributes).
 For the attributes of included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
@@ -319,7 +530,8 @@ To remove an item from a shopping list, send the request:
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Request sample:
-`DELETE https://glue.mysprykershop.comm/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08` — From the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`, remove the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08`.
+
+`DELETE https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08` 
 
 ### Response
 
@@ -333,10 +545,15 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 | 002 | Access token is missing. |
 | 400 | Provided access token is not an [access token of a сompany user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
 | 901 | Shop list name or item name is not specified or too long.<br>**OR** <br> Item quantity is not specified or too large.|
-| 1501 | Shopping list ID or item is not specified. |
-| 1503 |  Specified shopping list is not found. |
-| 1504 |  Specified shopping list item is not found. |
-| 1508 | Concrete product is not found. |
+| 1501 | Shopping list ID is not specified. |
+| 1502 | Shopping list item is not specified. |
+| 1503 | Specified shopping list is not found. |
+| 1504 | Shopping list item is not found. |
+| 1505 | Shopping list write permission is required. |
+| 1506 | Shopping list with given name already exists. |
+| 1507 | Shopping list item quantity is not valid. |
+| 1508 | Concrete product not found. |
+| 1509 | Shopping list validation failed.  |
 | 1510 | Product is discontinued. |
 | 1511 | Product is not active. |
 | 1512 | Merchant is inactive. |
@@ -344,8 +561,8 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 | 1514 | Product offer is not approved. |
 | 1515 | Product is not approved. |
 | 1516 | Product offer is not active. |
-| 1517 | Product offer is not found.
-| 1518 | Product is not equal to the current Store.
-| 1519 | Product offer is not equal to the current Store.
+| 1517 | Product offer is not found. |
+| 1518 | Product is not equal to the current Store. |
+| 1519 | Product offer is not equal to the current Store. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

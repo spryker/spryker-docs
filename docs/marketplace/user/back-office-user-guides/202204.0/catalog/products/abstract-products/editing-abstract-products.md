@@ -3,6 +3,8 @@ title: Editing abstract products
 last_updated: Jul 27, 2021
 description: This guide explains how to edit abstract products in Marketplace.
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-abstract-products/editing-abstract-products.html
 ---
 
 This document describes how to edit abstract products.

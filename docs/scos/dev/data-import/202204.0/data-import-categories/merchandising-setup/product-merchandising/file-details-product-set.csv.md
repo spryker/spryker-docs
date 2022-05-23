@@ -1,5 +1,5 @@
 ---
-title: File details- product_set.csv
+title: File details - product_set.csv
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-product-setcsv
@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-product-setcsv
   - /docs/file-details-product-setcsv
   - /docs/en/file-details-product-setcsv
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html
+  - /docs/scos/dev/data-import/201903.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html
+  - /docs/scos/dev/data-import/201907.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html
 ---
 
 This document describes the `product_set.csv` file to configure [Product Set](/docs/scos/user/features/{{page.version}}/product-sets-feature-overview.html) information in your Spryker Demo Shop.

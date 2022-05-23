@@ -8,6 +8,7 @@ originalArticleId: 3307ef09-e021-4a85-96cb-9b026115548a
 redirect_from:
   - /v5/docs/ratepay
   - /v5/docs/en/ratepay
+  - /docs/scos/user/technology-partners/202005.0/payment-partners/ratepay/ratepay.html
 related:
   - title: RatePay - Payment Workflow
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-payment-workflow.html

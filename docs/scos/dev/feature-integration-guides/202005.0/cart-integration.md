@@ -8,11 +8,15 @@ originalArticleId: e8da0d8d-b4fb-48fc-a15b-05be4e91aaac
 redirect_from:
   - /v5/docs/cart-integration
   - /v5/docs/en/cart-integration
+  - /docs/scos/dev/feature-integration-guides/202005.0/cart-feature-integration.html
 ---
 
 {% info_block infoBox %}
+
 This article describes how to add product variants and product images to an existing cart.
+
 {% endinfo_block %}
+
 ## Prerequisites:
 Before starting make sure you are familiar with the concept of Spryker Super Attributes.
 
@@ -68,11 +72,14 @@ protected function getExpanderPlugins(Container $container)
 ```
 
 {% info_block warningBox "Verification" %}
+
 Make sure the `ExpandBundleItemsWithImagesPlugin` is registered after the `ExpandBundleItemsPlugin` plugin.
+
 {% endinfo_block %}
 
 #### Cart variants
-Spryker provides the `CartVariant` module for this purpose. 
+
+Spryker provides the `CartVariant` module for this purpose.
 To install the `CartVariant` module, run:
 
 ```bash
@@ -645,7 +652,7 @@ class AttributeVariantsProvider
 -->
 
 ### AttributeMapCollector
-To support the mapping between attributes and availability, we need to collect additional data in our attribute map collector. You can do that by adding a single line with `SpyProductTableMap::COL_SKU` to the `getConreteProducts` function. 
+To support the mapping between attributes and availability, we need to collect additional data in our attribute map collector. You can do that by adding a single line with `SpyProductTableMap::COL_SKU` to the `getConreteProducts` function.
 
 The full function is as follows:
 
@@ -698,7 +705,7 @@ protected function filterConcreteProductIds(array $concreteProducts)
 <!--
 ## UI Integration
 
-You can use the demoshop's `cart-item.twig` as a template for your own project. 
+You can use the demoshop's `cart-item.twig` as a template for your own project.
 
 <details open>
 <summary markdown='span'>The following code sample demonstrates the feature's use:</summary>
@@ -751,7 +758,7 @@ You can use the demoshop's `cart-item.twig` as a template for your own project.
 <br>
 </details>
 
-Seemingly complex, you can simplify the code if your implementation does not support narrowing down of attributes (only one super attribute per product, for example, T-shirt size). 
+Seemingly complex, you can simplify the code if your implementation does not support narrowing down of attributes (only one super attribute per product, for example, T-shirt size).
 
 <details open>
 <summary markdown='span'>The following snippet should help:</summary>
@@ -815,4 +822,3 @@ module.exports = {
 };
 ```
 -->
-

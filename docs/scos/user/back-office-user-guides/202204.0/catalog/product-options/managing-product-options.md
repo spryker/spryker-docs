@@ -10,18 +10,19 @@ redirect_from:
   - /2021080/docs/en/managing-product-options
   - /docs/managing-product-options
   - /docs/en/managing-product-options
+  - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-options/managing-product-options.html
 related:
   - title: Product Options feature overview
     link: docs/scos/user/features/page.version/product-options-feature-overview.html
 ---
 
-This article describes the managing actions that you can perform with the product options. 
+This article describes the managing actions that you can perform with the product options.
 
 ## Prerequisites
 
 To start working with product options, go to **Products&nbsp;<span aria-label="and then">></span> Product Options**.
 
-Before you start managing the product option by editing or deactivating it, you may want to see the product option details. 
+Before you start managing the product option by editing or deactivating it, you may want to see the product option details.
 
 ## Viewing a product option
 

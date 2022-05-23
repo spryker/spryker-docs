@@ -1,5 +1,5 @@
 ---
-title: File details- navigation.csv
+title: File details - navigation.csv
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-navigationcsv
@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-navigationcsv
   - /docs/file-details-navigationcsv
   - /docs/en/file-details-navigationcsv
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/navigation-setup/file-details-navigation.csv.html
+  - /docs/scos/dev/data-import/201903.0/data-import-categories/navigation-setup/file-details-navigation.csv.html
+  - /docs/scos/dev/data-import/201907.0/data-import-categories/navigation-setup/file-details-navigation.csv.html
 ---
 
 This document describes the `navigation.csv` file to configure [Navigation](/docs/scos/user/features/{{page.version}}/navigation-feature-overview.html) information in your Spryker Demo Shop.
@@ -41,4 +44,3 @@ Find the template and an example of the file below:
 | --- | --- |
 | [navigation.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Navigation+Setup/Template+navigation.csv) | Exemplary import file with headers only. |
 | [navigation.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Navigation+Setup/navigation.csv) | Exemplary import file with Demo Shop data. |
-

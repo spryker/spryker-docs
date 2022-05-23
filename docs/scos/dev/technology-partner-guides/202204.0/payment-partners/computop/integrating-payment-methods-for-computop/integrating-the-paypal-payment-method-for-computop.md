@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/computop-paypal
   - /docs/computop-paypal
   - /docs/en/computop-paypal
+  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paypal-payment-method-for-computop.html
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html

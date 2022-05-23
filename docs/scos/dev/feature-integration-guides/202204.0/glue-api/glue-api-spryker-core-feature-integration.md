@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/glue-api-spryker-core-feature-integration
   - /docs/glue-api-spryker-core-feature-integration
   - /docs/en/glue-api-spryker-core-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-spryker-core-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-spryker-core-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-spryker-core-feature-integration.html
 ---
 
 This document describes how to integrate the Glue API: Spryker Core feature into a Spryker project.

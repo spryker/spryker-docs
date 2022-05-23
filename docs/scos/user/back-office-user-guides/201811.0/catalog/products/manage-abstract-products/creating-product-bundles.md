@@ -8,6 +8,7 @@ originalArticleId: cbb68e74-7ae1-4253-bbc4-1eddb75435d1
 redirect_from:
   - /v1/docs/creating-and-managing-product-bundles
   - /v1/docs/en/creating-and-managing-product-bundles
+  - /docs/scos/user/back-office-user-guides/201811.0/products/products/managing-products/creating-and-managing-product-bundles.html
 related:
   - title: Products- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/products-reference-information.html

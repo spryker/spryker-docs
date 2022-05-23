@@ -15,7 +15,9 @@ The Wishlists API provides REST access to managing [wishlists]() of a customer. 
 In your development, these resources can help you to enable complete wishlist functionality for your customers.
 
 {% info_block warningBox "Authentication " %}
+
 Since wishlists are available for registered users only, the endpoints provided by the API cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token in your REST requests. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization]().
+
 {% endinfo_block %}
 
 ## Installation
@@ -119,8 +121,8 @@ If there are any wishlists already created for a user, they will be returned in 
 ```js
 {
 		"data": {
-  
- 
+
+
 	{
 		"data": [
 			{

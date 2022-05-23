@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/cart-feature-integration
   - /docs/cart-feature-integration
   - /docs/en/cart-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/cart-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/cart-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202200.0/cart-feature-integration.html
 ---
 
 {% info_block errorBox %}

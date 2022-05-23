@@ -22,6 +22,7 @@ redirect_from:
   - /v4/docs/en/getting-started-with-docker
   - /v3/docs/getting-started-with-docker-201907
   - /v3/docs/en/getting-started-with-docker-201907
+  - /docs/scos/dev/installation/spryker-in-docker/installation-guides/modes-overview.html
 ---
 
 

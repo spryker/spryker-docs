@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/retrieving-business-unit-addresses
   - /docs/retrieving-business-unit-addresses
   - /docs/en/retrieving-business-unit-addresses
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-business-unit-addresses.html
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-business-unit-addresses.html
+  - /docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/retrieving-business-unit-addresses.html
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-b2b-account/retrieving-business-unit-addresses.html
 ---
 
 This endpoint allows retrieving business unit addresses.

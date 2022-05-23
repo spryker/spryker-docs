@@ -3,6 +3,8 @@ title: Non-splittable Products feature walkthrough
 last_updated: Aug 18, 2021
 description: The Non-splittable Products feature allows controlling if items bought in quantity greater than 1 are grouped in the cart or processed as separate items.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/201907.0/non-splittable-products-feature-walkthrough.html
 ---
 
 The _Non-splittable Products_ feature allows controlling if items bought in quantity greater than 1 are grouped in the cart or processed as separate items.

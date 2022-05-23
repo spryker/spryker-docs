@@ -18,6 +18,7 @@ redirect_from:
   - /v3/docs/t-interacting-with-third-party-payment-providers-via-glue-api
   - /v3/docs/en/t-interacting-with-third-party-payment-providers-via-glue-api
   - /docs/scos/dev/tutorials/201907.0/advanced/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
+  - /docs/scos/dev/glue-api-guides/202005.0/checking-out/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
 
 related:
   - title: Technology Partner Integration

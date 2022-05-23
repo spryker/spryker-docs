@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/alternative-products-wishlist-feature-integration
   - /docs/alternative-products-wishlist-feature-integration
   - /docs/en/alternative-products-wishlist-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/alternative-products-wishlist-feature-integration.html
 ---
 
 ## Install feature frontend
@@ -58,12 +59,12 @@ Register the following plugins to enable widgets:
 
 ```php    
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\ProductAlternativeWidget\Widget\WishlistProductAlternativeWidget;
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
 	/**

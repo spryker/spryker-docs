@@ -8,6 +8,7 @@ originalArticleId: 794ed6c0-fdea-48d5-bb63-5909ee093a2f
 redirect_from:
   - /v5/docs/managing-guest-carts
   - /v5/docs/en/managing-guest-carts
+  - /docs/marketplace/dev/glue-api-guides/202005.0/guest-carts/managing-guest-carts.html
 related:
   - title: Managing Carts of Registered Users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
@@ -104,10 +105,10 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 }
 ```
 
-| Header key | Header value example | Required | Description | 
+| Header key | Header value example | Required | Description |
 |---|---|---|---|
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | v | A hyphenated alphanumeric value that is the user's unique identifier. | 
-    
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | v | A hyphenated alphanumeric value that is the user's unique identifier. |
+
 
 
 | String parameter | Description | Exemplary values |
@@ -135,7 +136,7 @@ When defining product amount in sales units, make sure that the correlation betw
 
 <details>
     <summary markdown='span'>Response sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -209,11 +210,11 @@ When defining product amount in sales units, make sure that the correlation betw
 ```
 
 </details>
-    
-    
+
+
 <details>
     <summary markdown='span'>Response sample with product measurement units and sales units</summary>
-    
+
 ```json
 {
     "data": {
@@ -327,13 +328,13 @@ When defining product amount in sales units, make sure that the correlation betw
     ]
 }
 ```  
-    
+
 </details>
-    
-    
-    
+
+
+
 <a name="creating-guest-carts-response-attributes"></a>    
-    
+
 
 **General Cart Information**
 
@@ -402,8 +403,8 @@ When defining product amount in sales units, make sure that the correlation betw
 |product-measurement-units|name|String|Measurement unit name.|
 |product-measurement-units|defaultPrecision|Integer|The default ratio between a sales unit and a base unit. It is used when precision for a related sales unit is not specified.|
 \*Type and ID attributes are not mentioned.
-    
-    
+
+
 
 
 
@@ -414,9 +415,9 @@ To retrieve a guest cart with a guest user ID, send the request:
 
 ---
 `GET` **/guest-carts**
-    
+
 ---
-    
+
 {% info_block infoBox "Guest cart ID" %}
 
 
@@ -426,9 +427,9 @@ Even though guest users have one cart by default, you can optionally specify its
 `GET` **/guest-carts/*{% raw %}{{{% endraw %}guestcartuuid{% raw %}}}{% endraw %}***
 
 {% endinfo_block %}
-    
-    
-    
+
+
+
 #### Request
 
 
@@ -441,9 +442,9 @@ Even though guest users have one cart by default, you can optionally specify its
 | `GET https://glue.mysprykershop.com/guest-carts?include=concrete-products,product-labels` | Retrieve  information about a guest cart with concrete products and product labels. |
 
 
-| Header key | Header value example | Required | Description | 
+| Header key | Header value example | Required | Description |
 |---|---|---|---|
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | v | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](#creating-a-guest-cart).  | 
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | v | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](#creating-a-guest-cart).  |
 
 | String parameter | Description | Exemplary values |
 | --- | --- | --- |
@@ -457,13 +458,13 @@ Even though guest users have one cart by default, you can optionally specify its
 {% endinfo_block %}
 
 
-    
-    
+
+
 #### Response
 
 <details>
     <summary markdown='span'>Response sample with concrete products</summary>
-    
+
 ```json
 {
     "data": [
@@ -580,7 +581,7 @@ Even though guest users have one cart by default, you can optionally specify its
 
 <details>
     <summary markdown='span'>Response sample with product measurement units and sales units</summary>
-    
+
 ```json
 {
     "data": [
@@ -714,7 +715,7 @@ Even though guest users have one cart by default, you can optionally specify its
 
 <details open>
 <summary markdown='span'>Response sample with a promotional item</summary>
-   
+
 ```json
 {
     "data": {
@@ -753,7 +754,7 @@ Even though guest users have one cart by default, you can optionally specify its
 
 <details open>
 <summary markdown='span'>Response sample with details on a promotional item</summary>
-   
+
 ```json
 {
     "data": [
@@ -897,7 +898,7 @@ Even though guest users have one cart by default, you can optionally specify its
 
 <details>
     <summary markdown='span'>Response sample with concrete products and product labels</summary>
-    
+
 ```json
 {
     "data": [
@@ -1050,7 +1051,7 @@ Even though guest users have one cart by default, you can optionally specify its
 ```
 
 </details>
-    
+
 
 | Included resource | Attribute | Type | Description |
 | --- | --- | --- | --- |
@@ -1141,9 +1142,9 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 ```
 Find all the related request attribute descriptions in [Creating a Guest Cart](#creating-guest-carts-request-attributes).
 
-| Header key | Header value example | Required | Description | 
+| Header key | Header value example | Required | Description |
 |---|---|---|---|
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | v | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](#creating-a-guest-cart).  | 
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | v | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](#creating-a-guest-cart).  |
 
 | String parameter | Description | Exemplary values |
 | --- | --- | --- |
@@ -1158,7 +1159,7 @@ The `cart-rules` parameter allows you to retrieve detailed information on promot
 
 <details>
     <summary markdown='span'>Response sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -1235,7 +1236,7 @@ The `cart-rules` parameter allows you to retrieve detailed information on promot
 
 <details>
     <summary markdown='span'>Response sample with product measurment units and sales units</summary>
-    
+
 ```json
 {
     "data": {
@@ -1354,7 +1355,7 @@ The `cart-rules` parameter allows you to retrieve detailed information on promot
 
 <details open>
 <summary markdown='span'>Response sample: adding a promotional item without the cart-rules relationship</summary>
-   
+
 ```json
 {
     "data": {
@@ -1397,7 +1398,7 @@ The `cart-rules` parameter allows you to retrieve detailed information on promot
 
 <details open>
 <summary markdown='span'>Response sample: adding a promotional item with the cart-rules relationship</summary>
-   
+
 ```json
 {
     "data": {
@@ -1692,7 +1693,7 @@ Find all other related attribute descriptions  in [Creating a Guest Cart](#creat
 
 
 ## Removing Items from Guest Carts
-To remove an item send the request 
+To remove an item send the request
 
 ---
 `DELETE` **/guest-carts/guest-cart-items/*{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}***
@@ -1720,9 +1721,9 @@ Request sample: `DELETE https://glue.mysprykershop.com/guest-carts/2506b65c-164b
 
 
 
-| Header key | Header value example | Required | Description | 
+| Header key | Header value example | Required | Description |
 |---|---|---|---|
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | v | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](#creating-a-guest-cart).  | 
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | v | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](#creating-a-guest-cart).  |
 
 
 ### Response
@@ -1763,9 +1764,9 @@ Request sample: `PATCH https://glue.mysprykershop.com/guest-carts/2506b65c-164b-
 }
 ```
 
-| Header key | Header value example | Required | Description | 
+| Header key | Header value example | Required | Description |
 |---|---|---|---|
-| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | v | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](#creating-a-guest-cart).  | 
+| X-Anonymous-Customer-Unique-Id | 164b-5708-8530 | v | A hyphenated alphanumeric value that is the user's unique identifier. It is passed in the X-Anonymous-Customer-Unique-Id header when [creating a guest cart](#creating-a-guest-cart).  |
 
 
 
@@ -1813,7 +1814,7 @@ Request sample: `POST https://glue.myspsrykershop.com/guest-cart-items`
 }
 ```
 
-| Header key | Header value | Description | 
+| Header key | Header value | Description |
 |---|---|---|---|
 | X-Anonymous-Customer-Unique-Id | guest-user-001 | A hyphenated alphanumeric value that is the user's unique identifier. |
 
@@ -1850,7 +1851,7 @@ Request sample: `POST https://glue.myspsrykershop.com/access-tokens`
 }
 ```
 
-| Header key | Header value | Description | 
+| Header key | Header value | Description |
 |---|---|---|---|
 | X-Anonymous-Customer-Unique-Id | guest-user-001 | A hyphenated alphanumeric value that is the user's unique identifier. |
 
@@ -1877,7 +1878,7 @@ Request sample: `POST https://glue.myspsrykershop.com/access-tokens`
 Request sample: `GET https://glue.myspsrykershop.com/carts`
 
 
-| Header key | Header value | Description | 
+| Header key | Header value | Description |
 |---|---|---|---|
 | Authorization | Bearer eyJ0eXAiOiJKV1QiLC... | Authorization token. See [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html) for more details about authorization. |
 
@@ -1931,10 +1932,10 @@ In a **single cart** environment, items from the guest cart have been added to t
             "links": {...}
         },
 ```
-    
-    
+
+
 ## Possible Errors
-    
+
 | Code | Reason |
 | --- | --- |
 | 101 |A cart with the specified ID was not found.  |
@@ -1944,6 +1945,3 @@ In a **single cart** environment, items from the guest cart have been added to t
 |106  |Failed to delete an item.  |
 | 107 | Failed to create a cart. |
 | 109 | Anonymous customer ID is missing. |
-
-
-    

@@ -9,7 +9,6 @@ redirect_from:
   - /2021080/docs/en/file-details-cms-slot-templatecsv
   - /docs/file-details-cms-slot-templatecsv
   - /docs/en/file-details-cms-slot-templatecsv
-  - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-cms-slot-template.csv.html
 ---
 
 This document describes the `cms_slot_template.csv` file to configure  [CMS Slot Template](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#template-with-slots) information in your Spryker Demo Shop.
@@ -42,3 +41,4 @@ Find the template and an example of the file below:
 | --- | --- |
 | [cms_slot_template.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+cms_slot_template.csv) |  Exemplary import file with headers only.  |
 | [cms_slot_template.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_slot_template.csv) | Exemplary import file with Demo Shop data. |
+

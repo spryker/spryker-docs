@@ -2,11 +2,6 @@
 title: Managing wishlists
 description: Retrieve details about wishlists and learn what else you can do with the resource in the Spryker Marketplace.
 template: glue-api-storefront-guide-template
-redirect_from:
-  - /docs/marketplace/dev/glue-api-guides/201811.0/wishlists/managing-wishlists.html
-  - /docs/marketplace/dev/glue-api-guides/201903.0/wishlists/managing-wishlists.html
-  - /docs/marketplace/dev/glue-api-guides/201907.0/wishlists/managing-wishlists.html
-  - /docs/marketplace/dev/glue-api-guides/202005.0/wishlists/managing-wishlists.html
 ---
 
 The Marketplace Wishlists API allows creating list and deleting [wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html) in the Marketplace, as well as managing the items in them.
@@ -2295,7 +2290,7 @@ To delete a wishlist, send the request:
 | ---------- | -------- | ----- | ----------------- |
 | Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
 
-Request sample:
+Request sample: 
 
 `DELETE https://glue.mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a`
 

@@ -9,7 +9,6 @@ redirect_from:
   - /2021080/docs/en/file-details-cms-block-storecsv
   - /docs/file-details-cms-block-storecsv
   - /docs/en/file-details-cms-block-storecsv
-  - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-cms-block-store.csv.html
 ---
 
 This document describes the `cms_block_store.csv` file to configure CMS Block Store information on your Spryker Demo Shop.

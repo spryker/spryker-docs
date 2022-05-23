@@ -13,8 +13,6 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/sales-data-export-feature-integration.html
   - title: Data Export Orders .csv Files Format
     link: docs/scos/dev/data-export/page.version/data-export-orders-.csv-files-format.html
-redirect_from:
-  - /docs/scos/dev/data-export/202005.0/yml-export-configuration-file
 ---
 
 {% info_block warningBox "BETA version" %}

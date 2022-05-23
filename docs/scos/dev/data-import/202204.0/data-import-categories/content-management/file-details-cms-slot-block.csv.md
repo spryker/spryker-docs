@@ -9,7 +9,6 @@ redirect_from:
   - /2021080/docs/en/file-details-cms-slot-blockcsv
   - /docs/file-details-cms-slot-blockcsv
   - /docs/en/file-details-cms-slot-blockcsv
-  - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-cms-slot-block.csv.html
 ---
 
 This document describes the `cms_slot_block.csv` file to configure [CMS Slot Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) information in your Spryker Demo Shop.

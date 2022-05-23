@@ -10,7 +10,6 @@ redirect_from:
   - /2021080/docs/en/data-importers-review-implementation
   - /docs/data-importers-review-implementation
   - /docs/en/data-importers-review-implementation
-  - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-importers/data-importers-overview-and-implementation.html
 ---
 
 Currently, there are the following importers in Spryker Commerce OS:
@@ -91,7 +90,7 @@ action:
     source: data/import/icecat_biz_data/product_abstract.csv
   ...
   ```
-
+  
   where:
 
 * `data_entity` represents the name of your data importer.
@@ -136,11 +135,11 @@ To use a module-based importer, add it to the plugin stack. See the example belo
 
 ```php
 <?php
-
+	
 	namespace Pyz\Zed\DataImport;
-
+			
 	...
-
+			
 	class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 	{
 			/**
@@ -222,13 +221,13 @@ To append a data importer to the DataImport module, do the following:
 
 ```php
 <?php
-
+ 
 namespace Pyz\Zed\DataImport\Business;
 ...
-
+		
 class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 {
-
+		
 		/**
 		* @return \Spryker\Zed\DataImport\Business\Model\DataImporterInterface
 		*/
@@ -236,13 +235,13 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 		{
 				//Add importer config
 				$dataImporter = $this->getCsvDataImporterFromConfig($this->getConfig()->getOrderSourceDataImporterConfiguration());
-
+		
 				$dataSetStepBroker = $this->createTransactionAwareDataSetStepBroker();
 				//Add step
 				$dataSetStepBroker->addStep(new OrderSourceWriterStep());
-
+		
 				$dataImporter->addDataSetStepBroker($dataSetStepBroker);
-
+		
 				return $dataImporter;
 		}
 }
@@ -252,13 +251,13 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 
 ```php
 <?php
-
+		
 namespace Pyz\Zed\DataImport\Business;
 ...
-
+		
 class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 {
-
+		
     public function getDataImporterByType(DataImportConfigurationActionTransfer $dataImportConfigurationActionTransfer): ?DataImporterInterface
     {
         switch ($dataImportConfigurationActionTransfer->getDataEntity()) {
@@ -288,14 +287,14 @@ You can enable a bulk importer in `Pyz\Zed\DataImport\Business\DataImportBusines
 
 ```php
 <?php
-
+		
 namespace Pyz\Zed\DataImport\Business;
 ...
-
+		
 class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 {
 ...
-
+		
 		/**
 		* This is an example of how bulk importer plugins should be enabled. Same goes for similar importers.
 		* @return \Spryker\Zed\DataImportExtension\Dependency\Plugin\DataSetWriterPluginInterface[]
@@ -307,7 +306,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
 					    new ProductAbstractPropelWriterPlugin(),
 				];
 		}
-
+		
 		...
 }
 ```

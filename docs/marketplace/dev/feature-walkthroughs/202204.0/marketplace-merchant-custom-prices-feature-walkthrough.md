@@ -8,7 +8,7 @@ The *Marketplace Merchant Custom Prices* feature allows merchants to define cust
 
 {% info_block warningBox "User documentation" %}
 
-To learn more about the Marketplace Merchant Custom Prices feature in Merchant Portal and find out how end users use it see Marketplace Merchant Custom Prices feature overview. <!---LINK-->
+To learn more about the Marketplace Merchant Custom Prices feature and find out how end users use it see [Marketplace Merchant Custom Prices feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-custom-prices-feature-overview.html).
 
 {% endinfo_block %}
 

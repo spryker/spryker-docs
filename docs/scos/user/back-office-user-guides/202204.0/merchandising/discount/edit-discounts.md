@@ -10,7 +10,6 @@ redirect_from:
   - /2021080/docs/en/managing-discounts
   - /docs/managing-discounts
   - /docs/en/managing-discounts
-  - /docs/scos/user/back-office-user-guides/202204.0/merchandising/discount/managing-discounts.html
 ---
 
 This topic describes how to edit discounts in the Back Office.

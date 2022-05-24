@@ -8,6 +8,7 @@ originalArticleId: 5d98b770-b08a-4193-8fa7-66aec9a832b1
 redirect_from:
   - /v3/docs/content-items-reference-information
   - /v3/docs/en/content-items-reference-information
+  - /docs/scos/user/back-office-user-guides/201907.0/content-management/content-items/references/content-items-reference-information.html
   - /docs/scos/user/back-office-user-guides/201907.0/content/content-items/references/content-items-reference-information.html
 ---
 

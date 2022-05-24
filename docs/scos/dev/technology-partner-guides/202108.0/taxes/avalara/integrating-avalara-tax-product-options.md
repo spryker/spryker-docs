@@ -10,7 +10,6 @@ redirect_from:
   - /2021080/docs/en/avalara-tax-product-options-feature-integration
   - /docs/avalara-tax-product-options-feature-integration
   - /docs/en/avalara-tax-product-options-feature-integration
-  - /docs/scos/user/technology-partners/202108.0/taxes/avalara-tax-product-options-feature-integration.html
 related:
   - title: Tax feature overview
     link: docs/scos/user/features/page.version/tax-feature-overview.html
@@ -55,6 +54,7 @@ Ensure that the following modules have been installed:
 Apply database changes, generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

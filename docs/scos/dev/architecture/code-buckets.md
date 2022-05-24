@@ -29,21 +29,21 @@ Multi-layered code inheritance in Spryker allows projects to extend and customiz
 
 Code inheritance consists of the following layers:
 
-*   Core code: the base level located in `vendor/spryker/`.
+* Core code: the base level located in `vendor/spryker/`.
     
-*   *Default* code bucket on the project level. It’s inherited from the core and located in `src/`. The source code on the project level, which is not explicitly part of a code bucket, is considered to be part of the default code bucket.
+  * *Default* code bucket on the project level. It’s inherited from the core and located in `src/`. The source code on the project level, which is not explicitly part of a code bucket, is considered to be part of the default code bucket.
     
-*   *Custom* code bucket on the project level. It’s inherited from the project level or the core level, or from both. All the source code related to a custom business logic is located here.
+  * *Custom* code bucket on the project level. It’s inherited from the project level or the core level, or from both. All the source code related to a custom business logic is located here.
     
 ![Code bucket inheritance](https://confluence-connect.gliffy.net/embed/image/bc410fba-1311-446a-90b2-9b8830ee8ebc.png?utm_medium=live&utm_source=custom)
 
 The inheritance concept applies on a per module basis. You can define a different code bucket for each module. When multiple modules implement the same code bucket, they are used accordingly during runtime. It’s also possible to implement multiple code buckets of the same module. For example,
 
-*   `Checkout`: default implementation
+* `Checkout`: default implementation
     
-*   `CheckoutFOO`: *FOO* code bucket implementation
+* `CheckoutFOO`: *FOO* code bucket implementation
     
-*   `CheckoutBAR` *BAR* code bucket implementation
+* `CheckoutBAR` *BAR* code bucket implementation
     
 
 The inheritance concept consists of two parts: *physical* and *logical* inheritance.
@@ -128,6 +128,7 @@ class CodeBucketConfig extends AbstractCodeBucketConfig
     }
 }
 ```
+
 {% info_block infoBox %}
 
 This class is optional and is only used by Code Buckets.
@@ -136,6 +137,7 @@ This class is optional and is only used by Code Buckets.
 
 
 To make sure that the Composer autoloader can load the `SprykerConfig` namespace, add the following PSR-4 rule to `composer.json`:
+
 ```json
 {
   "autoload": {
@@ -151,6 +153,7 @@ To make sure that the Composer autoloader can load the `SprykerConfig` namespace
 Another way to customize an application for different code buckets is to configure them differently. Since configuration files are loaded one by one, each configuration file can overwrite the configuration of the previous files. In the loading sequence, generic configuration files are placed in the beginning, and environment-specific configuration files are placed later.
 
 Check out the configuration loading sequence in the diagram below to learn how to set up your project configuration for different environments.
+
 {% info_block infoBox %}
 
 To learn more about configuration management, see [Configuration management](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html).

@@ -9,6 +9,7 @@ redirect_from:
   - /v1/docs/customers-reference-information
   - /v1/docs/en/customers-reference-information
   - /docs/scos/user/back-office-user-guides/201811.0/customer/references/customers-reference-information.html
+  - /docs/scos/user/back-office-user-guides/201811.0/customer/customers-customer-access-customer-groups/references/customers-reference-information.html
 ---
 
 This article contains the information you need to know when working with the **Customers** section in Back Office.
@@ -40,7 +41,7 @@ The following table describes the attributes you enter and select when creating 
 |**Send password token through email**|If the checkbox is selected, after saving the customer data, an email will be sent to the customer containing a link. By accessing the link, the customer will be able to set a password for the account. If you don’t select this option, the customer is still able to set a password for their account, by clicking the reset password link from the shop interface. |
 |Edit page only: **Billing Address**|A drop-down list with the addresses set up for the customer. The selected address defines the billing address for your customer.|
 |Edit page only: **Shipping Address**|A drop-down list with the addresses set up for the customer. The selected address defines the shipping address for your customer.|
-![Add or edit customers page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customers%3A+Reference+Information/customers-reference-information.png) 
+![Add or edit customers page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customers%3A+Reference+Information/customers-reference-information.png)
 
 ***
 ## Add New Address page
@@ -55,7 +56,7 @@ The following table describes the attributes you enter and select when adding a 
 |**Phone**|Customer's phone number.|
 |**Company**|Customer's company.|
 |**Comment**|Any specific comment regarding the customer or customer address (e.g. _"This address is going to be used only if the order costs less than 900 euros."_).|
-![Add new address page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customers%3A+Reference+Information/Add+new+address+page.png) 
+![Add new address page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Customers/Customers%3A+Reference+Information/Add+new+address+page.png)
 
 ***
 

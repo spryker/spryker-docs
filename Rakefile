@@ -38,8 +38,11 @@ commonOptions = {
     /guides.github.com\/[\.\w\-\/\?]+/,
     /docs.github.com\/[\.\w\-\/\?]+/,
     /shopify.github.io\/[\.\w\-\/\?]+/,
-    / marketplace.visualstudio.com\/[\.\w\-\/\?]+/,    
-    /blackfire.io\/[\.\w\-\/\?]+/
+    /marketplace.visualstudio.com\/[\.\w\-\/\?]+/,
+    /blackfire.io\/[\.\w\-\/\?]+/,
+    /www.nekom.com\/[\.\w\-\/\?]+/,
+    /www.phpunit.de\/[\.\w\-\/\?]+/,
+    /rpm.newrelic.com\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {
@@ -81,7 +84,7 @@ task :check_acp_dev do
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/acp\/user\/.+/,    
+    /docs\/acp\/user\/.+/,
     /docs\/fes\/.+/,
     /docs\/paas-plus\/.+/
   ]
@@ -109,7 +112,7 @@ task :check_mp_dev do
     /docs\/paas-plus\/.+/,
     /docs\/acp\/.+/,
     /docs\/marketplace\/user\/.+/,
-    /docs\/marketplace\/\w+\/[\w-]+\/202200\.0\/.+/
+    /docs\/marketplace\/\w+\/[\w-]+\/202108\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -142,28 +145,7 @@ task :check_scos_dev do
     /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
-  ]
-  HTMLProofer.check_directory("./_site", options).run
-end
-
-task :check_scos_dev_2020090 do
-  options = commonOptions.dup
-  options[:only_4xx] = false
-  options[:file_ignore] = [
-    /docs\/marketplace\/.+/,
-    /docs\/cloud\/.+/,
-    /docs\/acp\/.+/,
-    /docs\/scos\/user\/.+/,
-    /docs\/fes\/.+/,
-    /docs\/paas-plus\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
+    /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -182,7 +164,8 @@ task :check_scos_user do
     /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202200\.0\/.+/
+    /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

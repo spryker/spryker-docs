@@ -60,7 +60,7 @@ The endpoint responds with a collection of **RestCompanyResponse** consisting of
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Sample Response**
-    
+
 ```json
 {
     "data": [
@@ -113,7 +113,7 @@ The endpoint responds with a **RestCompanyResponse** containing information on t
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Sample Response**
-    
+
 ```json
 {
     "data": {

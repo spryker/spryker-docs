@@ -21,6 +21,7 @@ Router generates URLs with an absolute path instead of a relative one.
 Prior to version 1.9.0 of the [Router](https://github.com/spryker/router) module, Spryker did not set the `RequestContext` properly in `ChainRouter`. This led to an issue that URLs were generated with an absolute path instead of a relative one. This silently happens inside Symfony's router when the host retrieved from `RequestContext` doesn't match the one that the resolved route has.
 
 ## Solution
+
 Do the following:
 
 1. Update the [Router](https://github.com/spryker/router) module to at least version 1.9.0.
@@ -45,7 +46,6 @@ protected function addRequestContext(?RequestContext $requestContext = null): vo
 }
 
 ```
-
 
 3. Update the constructor:
 

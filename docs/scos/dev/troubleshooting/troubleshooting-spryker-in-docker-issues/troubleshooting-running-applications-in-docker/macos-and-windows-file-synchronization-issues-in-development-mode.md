@@ -19,10 +19,13 @@ A project has file synchronization issues in Development mode.
 ## Solution
 
 1. Follow sync logs:
+
 ```bash
 docker/sdk sync logs
 ```
+
 2. Hard reset:
+
 ```bash
 docker/sdk trouble && rm -rf vendor && rm -rf src/Generated && docker/sdk sync && docker/sdk up
 ```

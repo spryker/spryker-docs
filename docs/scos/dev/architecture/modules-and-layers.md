@@ -44,22 +44,26 @@ The Spryker layer structure looks as follows:
 Each layer servers a single purpose inside an application layer.
 
 ### Persistence layer
+
 The persistence layer is responsible for defining and dealing with the database in a module. Database table schemas and query objects are defined in this layer. The Persistence layer cannot access any other layer above it.
 
 ### Business layer
+
 All the business logic is implemented in the Business layer. It usually has several business models to serve the necessary functionality. The Business Layer is located directly above the Persistence layer, so it can access it for the read and write operations.
 
 ### Communication layer
+
 The Communication layer is the entry point of a module. When a front-end application communicates with the Commerce OS, it accesses the Communication layer first. Then, depending on the request functionality, the request is passed further from the Communication layer.
 
 The Communication Layer is located above the Business layer, so it can access all the business logic in a module. That's how the Communication layer invokes the right business logic when requested.
 
 ### Presentation layer
+
 On the Presentation layer, the view related content is implemented. To get the needed data, the layer sends requests to the Communication layer. Then, it shows the data using the templates.
 
 ## Next steps
 
-<!---* To learn how data flows are separated in Spryker Commerce OS, refer to [Commerce OS and frontend apps](https://docs.spryker.com/docs/scos/dev/architecture/conceptual-overview.html).-->
+<!---* To learn how data flows are separated in Spryker Commerce OS, refer to [Commerce OS and frontend apps](/docs/scos/dev/architecture/conceptual-overview.html).-->
 * To learn about the building blocks of Spryker, see [Programming concepts](/docs/scos/dev/architecture/programming-concepts.html).
 * To learn about Application layers, see [Concept overview](/docs/scos/dev/architecture/conceptual-overview.html).
 * To learn about modular programming, see [Modular programming](https://en.wikipedia.org/wiki/Modular_programming).

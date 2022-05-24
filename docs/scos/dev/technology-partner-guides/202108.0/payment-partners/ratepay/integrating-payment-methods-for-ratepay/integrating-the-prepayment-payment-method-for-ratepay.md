@@ -10,7 +10,6 @@ redirect_from:
   - /2021080/docs/en/ratepay-prepayment
   - /docs/ratepay-prepayment
   - /docs/en/ratepay-prepayment
-  - /docs/scos/user/technology-partners/202108.0/payment-partners/ratepay/integrating-payment-methods-for-ratepay//integrating-the-prepayment-payment-method-for-ratepay.html
 related:
   - title: RatePay
     link: docs/scos/user/technology-partners/page.version/payment-partners/ratepay.html

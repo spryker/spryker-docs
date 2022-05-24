@@ -22,25 +22,28 @@ redirect_from:
   - /v4/docs/en/getting-started-with-docker
   - /v3/docs/getting-started-with-docker-201907
   - /v3/docs/en/getting-started-with-docker-201907
+  - /docs/scos/dev/installation/spryker-in-docker/installation-guides/modes-overview.html
 ---
 
 
 In this section, you can find installation guides for Spryker in Docker. Currently, you can install Spryker in the following ways:
+
 * Install Spryker in Development mode.
 * Install Spryker in Demo mode.
 * Integrate Docker into an exiting project.
-* Generate Docker images and assets for a production environement.
+* Generate Docker images and assets for a production environment.
 
 ## What installation mode do I choose?
 
 To install Spryker with all the tools for developing your project, go with the Development mode. Depending on your OS, see one of the following guides for installation instructions:
+
 * [Installing in Development mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html)
 * [Installing in Development mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-windows.html)
 
 To check out Spryker features and how Spryker works in general, go with the Demo mode. Depending on your OS, see one of the following guides for installation instructions:
+
 * [Installing in Demo mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html)
 * [Installing in Demo mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html)
-
 
 If you are already running a Spryker project with another solution like Vagrant, and you want to switch to Docker, see [Integrating the Docker SDK into existing projects](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html).
 
@@ -54,7 +57,8 @@ Development mode is a configuration in which Spryker is built and running with d
 
 ### Use cases
 
-Develpment mode is used in the following cases:
+Development mode is used in the following cases:
+
 * To learn how Spryker works.
 * To develop a new functionality.
 * To debug a functionality.
@@ -62,6 +66,7 @@ Develpment mode is used in the following cases:
 ### Development mode installation guides
 
 See one of the following guides to install Spryker in Development mode:
+
 * [Installing in Development mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html)
 * [Installing in Development mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-windows.html)
 
@@ -70,6 +75,7 @@ See one of the following guides to install Spryker in Development mode:
 Demo mode is a configuration in which Spryker is built and running without development tools, like file synchronization. As a result, Docker images in this mode are smaller.
 
 In Demo mode, the following functionalities are missing or disabled:
+
 1. Swagger UI service
 2. Debugging functionality
 3. File synchronization
@@ -77,6 +83,7 @@ In Demo mode, the following functionalities are missing or disabled:
 ### Use Cases
 
 Demo mode is used in the following cases:
+
 * To check or show the functionalities of [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html)/[B2C demo shops](/docs/scos/user/intro-to-spryker/b2c-suite.html).
 * To check a custom build or a new feature.
 * To test or deploy an application using Continuous Integration and Continuous Delivery tools.
@@ -84,6 +91,7 @@ Demo mode is used in the following cases:
 ### Demo mode installation guides
 
 See one of the following guides to install Spryker in Demo mode:
+
 * [Installing in Demo mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html)
 * [Installing in Demo mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html)
 
@@ -101,6 +109,7 @@ Learn how to generate Docker images and assets for a production environment in [
 ## Next steps
 
 Once you've selected and installation mode, follow one of the guides below:
+
 * [Installing in Development mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html)
 * [Installing in Development mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-windows.html)
 * [Installing in Demo mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html)

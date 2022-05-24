@@ -22,6 +22,7 @@ redirect_from:
   - /v1/docs/en/releases
   - /v6/docs/releases
   - /v6/docs/en/releases
+  - /docs/scos/user/intro-to-spryker/releases/releases-archive.html
 ---
 
 This section contains the notes for each [Product release](/docs/scos/user/intro-to-spryker/spryker-release-process.html#product-releases) made by Spryker. Make sure that you check this section from time-to-time to stay up to date with the improvements, bug fixes and new features that are delivered by our team.

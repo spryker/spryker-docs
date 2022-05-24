@@ -63,7 +63,7 @@ On the product detail page, the new product option group (1) will be displayed a
 
 {% info_block infoBox %}
 
-Currently, the feature has the following functional constraints which are going to be resolved in the future.
+The feature has the following functional constraints which are going to be resolved in the future.
 
 {% endinfo_block %}
 

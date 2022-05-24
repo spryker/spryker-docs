@@ -10,7 +10,6 @@ redirect_from:
   - /2021080/docs/en/episerver-installation-and-configuration
   - /docs/episerver-installation-and-configuration
   - /docs/en/episerver-installation-and-configuration
-  - /docs/scos/user/technology-partners/202108.0/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
 related:
   - title: Episerver - Integration into a project
     link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html

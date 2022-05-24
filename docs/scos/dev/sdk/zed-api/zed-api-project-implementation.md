@@ -75,7 +75,7 @@ For the API and the API bundles to get activated we need to configure our own se
     }
 ```
 
-In the ZedBootstrap class we activate this service provider stack based on the URI:
+In the `ZedBootstrap` class we activate this service provider stack based on the URI:
 
 ```php
 <?php
@@ -115,7 +115,7 @@ In the ZedBootstrap class we activate this service provider stack based on the U
 
 As an alternative you can have your own rest.php PHP entry point and configure your server/container nginx to route into a different ZedBootstrap setup.
 
-This own stack uses the minimal service providers needed exlusively to run the API.
+This own stack uses the minimal service providers needed exclusively to run the API.
 
 Steps for installation when migrating an older demoshop version:
 

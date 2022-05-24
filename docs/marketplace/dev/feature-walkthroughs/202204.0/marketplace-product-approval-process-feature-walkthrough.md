@@ -6,6 +6,12 @@ template: feature-walkthrough-template
 
 The *Marketplace Product Approval Process* feature adds a merchant context to Product Approval Process by providing an optional `spy_merchant.default_product_abstract_approval_status` DB column where default product approval statuses for merchants are stored and can be used as default product approval statuses for merchant products. Also, the feature provides the data importer for the merchant's default product approval statuses.
 
+{% info_block warningBox "User documentation" %}
+
+To learn more about the feature and to find out how end users use it, see [Marketplace Product Approval process feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-product-approval-process-feature-overview.html) for business users.
+
+{% endinfo_block %}
+
 ## Module dependency graph
 
 The following diagram illustrates the dependencies between the modules for the *Marketplace Product Approval Process* feature.

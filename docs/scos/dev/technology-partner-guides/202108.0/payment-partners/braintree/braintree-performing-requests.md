@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/braintree-performing-requests
   - /docs/braintree-performing-requests
   - /docs/en/braintree-performing-requests
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/braintree/braintree-technical-details-and-howtos/braintree-performing-requests.html
 related:
   - title: Installing and configuring Braintree
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/installing-and-configuring-braintree.html

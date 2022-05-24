@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/billpay-payment-methods
   - /docs/billpay-payment-methods
   - /docs/en/billpay-payment-methods
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/billpay/billpay-invoice-payment-in-preauthorize-mode.html
 related:
   - title: Billpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/billpay.html

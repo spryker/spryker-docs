@@ -44,12 +44,50 @@ The [docker-sdk repository](https://github.com/spryker/docker-sdk) contains the 
 The `boot` command of the Docker SDK runs the [generator](https://github.com/spryker/docker-sdk/tree/master/generator) application. The generator is deployed as a Docker container. The generator
 takes twig templates and project's deploy.yml file with context (middle) and generates the content of the [deployment](https://github.com/spryker/docker-sdk/tree/master/deployment) folder.
 
-The `boot` command does the follwing:
+The `boot` command does the following:
 1. Prepares the `env` files for `glue`,`zed`, `yves`
 2. Prepares endpoints and store-specific configs.
 3. Prepare the nginx configuration: frontend, gateway.
 4. Prepare the PHP and debug configuration.
 5. Transforms the `env` files.
-6. 
+6. Prepareі Dashboard.
+7. Prepares the Docker image files and `docker-compose.yml` for local development.
+8. Generates bash scripts in `deploy.sh`.
+9. Shows the list of commands that are necessary to complete installation.
+
+## Docdker/sdk up command details
+
+The `up` command of the Docker SDK does the following:
+
+1. Prepares data in `deployment/default/deploy.sh`:
+   1. Mounts Mutagen: 
+      1. Removes the sync volume
+      2. Terminates Mutagen
+      3. Creates the volume
+   2. Builds app images in CLI with the `docker build` command.
+   3. Tags application images with the `docker tag` command.
+   4. Mounts codebase with the following commands:
+      - `install composer`
+      - `install -s build`
+      - `build-{mode}`
+   5. Mounts assets with the following commands:
+      - `install -s build-static`
+      - `build-static-{mode}`
+   6. Builds frontend and gateway containers from an nginx image.
+
+2. Runs containers:
+   1. Runs before stack
+   2. Runs containers
+   3. Runs after stack
+3. Loads data for each region:
+   1. Skips if DB is not empty: if `data`, then `force`
+   2. Installs and configures Rabbit on broker container with the `rabbitmqctl add_vhost …` command
+   3. Suspends Scheduler and waits for job termination.
+   4. Initiates storages for each store with the `install -s init_storages_per_store` command. 
+   5. If the database does not exist, creates it on MySQL or PostreSQL container.
+4. Starts a scheduler for each region and store with the command `install -s scheduler-setup`
+
+
+
 
 

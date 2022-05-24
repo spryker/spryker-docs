@@ -5,7 +5,7 @@ description: This article provides the technical details of the PriceProduct mod
 template: concept-topic-template
 ---
 
-This article describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](https://docs.spryker.com/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-priceproduct.html#upgrading-from-version-1-to-version-2) of the module.
+This article describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](/docs/scos/dev/module-migration-guides/{{page.version}}/migration-guide-priceproduct.html#upgrading-from-version-1-to-version-2) of the module.
 
 ## Price dimension
 

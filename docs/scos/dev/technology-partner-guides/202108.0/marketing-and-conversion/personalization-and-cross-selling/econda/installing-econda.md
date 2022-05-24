@@ -9,7 +9,6 @@ redirect_from:
   - /2021080/docs/en/econda-installation-and-configuration
   - /docs/econda-installation-and-configuration
   - /docs/en/econda-installation-and-configuration
-  - /docs/socs/user/technology-partners/202204.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-installation-and-configuration.html
 ---
 
 To install Econda, install the required module:

@@ -10,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/file-details-content-navigationcsv
   - /docs/file-details-content-navigationcsv
   - /docs/en/file-details-content-navigationcsv
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-content-navigation.csv.html
+  - /docs/scos/dev/data-import/201907.0/data-import-categories/content-management/file-details-content-navigation.csv.html
 ---
 
 This document describes the `content_navigation.csv` file to configure [Content Navigation](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item) information in your Spryker Demo Shop.
@@ -45,15 +47,3 @@ Find the template and an example of the file below:
 | --- | --- |
 | [content_navigation.csv Template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+content_navigation.csv) | Exemplary import file with headers only. |
 | [content_navigation.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/content_navigation.csv) | Exemplary import file with Demo Shop data. |
-
-
- 
-
-
-
-	
- 
- 
-
-
-

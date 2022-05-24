@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/billpay-integration
   - /docs/billpay-integration
   - /docs/en/billpay-integration
+  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/billpay/integrating-billpay.html
 related:
   - title: Billpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/billpay.html

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/retrieving-protected-resources
   - /docs/retrieving-protected-resources
   - /docs/en/retrieving-protected-resources
+  - /docs/scos/dev/glue-api-guides/202005.0/getting-the-list-of-protected-resources.html
 related:
   - title: Authentication and Authorization
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html

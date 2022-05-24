@@ -22,6 +22,7 @@ redirect_from:
   - /2021080/docs/en/docker-installation-prerequisites
   - /docs/docker-installation-prerequisites
   - /docs/en/docker-installation-prerequisites
+  - /docs/scos/dev/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites-linux.html
 ---
 
 This document describes the prerequisites for installing Spryker in Docker on Linux.

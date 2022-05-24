@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/development-tools/architecture-sniffer.html
   - /docs/scos/dev/sdk/202009.0/development-tools/architecture-sniffer.html
   - /docs/scos/dev/sdk/202108.0/development-tools/architecture-sniffer.html
+  - /docs/scos/dev/sdk/development-tools/development-tools.html
 related:
   - title: Code Sniffer
     link: docs/scos/dev/sdk/development-tools/code-sniffer.html

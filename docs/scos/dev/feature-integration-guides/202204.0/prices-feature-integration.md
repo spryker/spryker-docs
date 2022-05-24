@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/prices-feature-integration
   - /docs/prices-feature-integration
   - /docs/en/prices-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/prices-feature-integration.html
 related:
   - title: Configurable Bundle feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html

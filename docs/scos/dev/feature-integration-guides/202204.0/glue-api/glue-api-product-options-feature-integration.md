@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/glue-api-product-options-feature-integration
   - /docs/glue-api-product-options-feature-integration
   - /docs/en/glue-api-product-options-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-product-options-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-product-options-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-product-options-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-options-feature-integration.html
 ---
 
 ## Install Feature API
@@ -51,7 +55,7 @@ console transfer:generate
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following changes have been applied in transfer objects: 
+Make sure that the following changes have been applied in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
 | --- | --- | --- | --- |
@@ -254,4 +258,3 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 Make a GET request to `https://glue.mysprykershop.com/orders/{% raw %}{{{% endraw %}order_uuid{% raw %}}}{% endraw %}`. Returned order items should have `productOptions` property with product options chosen for an item.
 
 {% endinfo_block %}
-

@@ -5,6 +5,7 @@ last_updated: Nov 26, 2021
 template: concept-topic-template
 redirect_from:
   - /docs/scos/user/features/201903.0/configurable-product-feature-overview.html
+  - /docs/scos/user/features/201907.0/configurable-product-feature-overview.html
 ---
 
 {% info_block errorBox "Beta version" %}

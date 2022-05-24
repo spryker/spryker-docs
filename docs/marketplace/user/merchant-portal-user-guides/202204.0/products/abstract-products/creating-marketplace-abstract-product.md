@@ -1,6 +1,6 @@
 ---
-title: Creating marketplace abstract products
-last_updated: Aug 11, 2021
+title: Creating marketplace abstract product
+last_updated: May 05, 2022
 description: This document describes how to create marketplace abstract products in the Merchant Portal.
 template: back-office-user-guide-template
 ---
@@ -21,6 +21,7 @@ To create a new abstract product:
 2. Enter an **SKU Prefix**.
 3. Enter a **Name** for the default locale. The rest of the locales are defined once the product is created.
 4. Depending on whether your abstract product requires adding variants or no, take one of the following steps:
+
   - If you are creating an abstract product that doesn't require variants, select **Abstract product has 1 concrete product**. The **Create an Abstract Product with 1 Concrete Product** drawer opens.
       1. On the **Create an Abstract Product with 1 Concrete Product** drawer, enter a **Concrete Product SKU**.
       2. Enter a **Concrete Product Name**.
@@ -93,6 +94,21 @@ By selecting **Autogenerate SKUs**, the SKU numbers for the variants are generat
 
 By selecting **Same Name as Abstract Product**, the name of the abstract product is used for the concrete products as well.
 
+
+### Sending the product for approval
+
+For the new product to be available on the Storefront, it needs to be approved. To send the product for approval, do the following:
+
+1. Next to the abstract product, you want to send approval for, hover over the three dots and click **Manage Product** or just click the line. This takes you to the *[Product name]* drawer, *Abstract Product Details* tab.
+2. In the right top corner of the drawer, click **Send for Approval**.
+
+{% info_block infoBox "Info" %}
+
+This button is only displayed if the product status is *Draft*. To learn more about the product statuses, see, [Marketplace Product Approval feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-product-approval-process-feature-overview.html).
+
+{% endinfo_block %}
+
 ## Next steps
 
+- [Approve the marketplace product](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product.html#sending-the-product-for-approval)
 - [Manage abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product.html)

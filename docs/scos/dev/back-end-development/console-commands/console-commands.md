@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/console
   - /v1/docs/console
   - /v1/docs/en/console
+  - /docs/scos/dev/back-end-development/202108.0/console-commandsconsole-commands-in-spryker.html
 ---
 
 The [list of console commands](/docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html) contains the command names together with a short description of what the command does. The most important commands in Spryker can be split into 4 categories : collector commands, order management system commands, setup commands, and frontend-related commands. This article provides details on each of the commands.
@@ -95,18 +96,18 @@ setup:install
   setup:remove-generated-directory
   ```
 
-  3. create or migrate the database 
+  3. create or migrate the database
 
   ```bash
   setup:propel
   ```
 
-  4. generate transfer classes for each of the objects defined in the XML transfer files 
-  
+  4. generate transfer classes for each of the objects defined in the XML transfer files
+
   ```bash
   transfer:generate
   ```
-  
+
   5. initialize the database with required data
 
   ```bash
@@ -120,8 +121,8 @@ dev:ide:generate-auto-completion
 ```
 
   7. build the project resources for Yves and Zed
-  8. build the navigation tree 
-  
+  8. build the navigation tree
+
   ```bash
   application:build-navigation-tree
   ```
@@ -138,21 +139,21 @@ dev:ide:generate-auto-completion
 setup:install:demo-data
 ```
 
-- Setup propel command runs a set of commands, necessary for creating or migrating the database. 
+- Setup propel command runs a set of commands, necessary for creating or migrating the database.
 
 ```bash
 setup:propel
 ```
   The following steps are performed when running this command:
 
-  1. write propel configuration 
+  1. write propel configuration
 
   ```bash
   setup:propel:config:convert
   ```
 
-  2. creates the database if it doesn’t exist yet, based on the configuration set in the previous step 
-  
+  2. creates the database if it doesn’t exist yet, based on the configuration set in the previous step
+
   ```bash
   setup:propel:database:create
   ```
@@ -163,8 +164,8 @@ setup:propel
   setup:propel:pg-sql-compat
   ```
 
-  4. copy schema files from Spryker and project packages to the generated folder 
-  
+  4. copy schema files from Spryker and project packages to the generated folder
+
   ```bash
   setup:propel:schema:copy
   ```
@@ -174,15 +175,15 @@ setup:propel
   ```bash
   setup:propel:model:build
   ```
-  
-  6. compare the propel models with the database tables and generate the diff, in order to prepare for migration 
+
+  6. compare the propel models with the database tables and generate the diff, in order to prepare for migration
 
   ```bash
   setup:propel:diff
   ```
-  
+
   7. migrate the database: update the database so that’s in sync with the propel models in the project
-  
+
   ```bash
   setup:propel:migrate
   ```

@@ -8,6 +8,7 @@ originalArticleId: 3c3cb4b5-714d-44a4-95b6-8a0c5abb43b7
 redirect_from:
   - /v5/docs/retrieving-return-management-information
   - /v5/docs/en/retrieving-return-management-information
+  - /docs/scos/dev/glue-api-guides/202005.0/retrieving-return-management-information/retrieving-return-management-information.html
 related:
   - title: Retrieving Returnable Items
     link: docs/scos/dev/glue-api-guides/page.version/managing-returns/retrieving-returnable-items.html
@@ -19,7 +20,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-returns/retrieving-return-reasons.html
 ---
 
-The Return Management API allows developers to retrieve return information and create a return. The list of retrievable information includes: 
+The Return Management API allows developers to retrieve return information and create a return. The list of retrievable information includes:
 
 * Sales order items that a Buyer can return
 * Returns per customer
@@ -32,7 +33,7 @@ In your development, the API can help you:
 * View return details of a specific customer
 * Specify reasons for returning the sales order items
 
- 
+
 {% info_block warningBox "Authentication" %}
 
 Since the Return Management feature is available for logged-in users only, the endpoints provided by the API cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token in your REST requests. For details on how to authenticate a user and retrieve the token, see Authentication and Authorization.

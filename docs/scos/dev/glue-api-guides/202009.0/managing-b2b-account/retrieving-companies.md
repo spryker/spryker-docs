@@ -62,7 +62,7 @@ To retrieve information about a company, send the request:
 
 <details open>
     <summary markdown='span'>Response sample</summary>
-    
+
 ```json
 {
     "data": [

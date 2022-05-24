@@ -7,8 +7,7 @@ originalArticleId: a1e7c9d9-29c1-4cf0-a734-847cf626955a
 redirect_from:
   - /v3/docs/managing-customers-api
   - /v3/docs/en/managing-customers-api
-  - /docs/scos/user/back-office-user-guides/201907.0/customers/customers-customer-access-customer-groups/managing-customers.html
-  - /docs/scos/user/back-office-user-guides/201907.0/customer/customers-customer-access-customer-groups/managing-customers.html
+  - /docs/scos/dev/glue-api-guides/201907.0/manging-customers/managing-customers.html
 related:
   - title: Managing Wishlists
     link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html

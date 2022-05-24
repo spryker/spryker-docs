@@ -9,6 +9,7 @@ redirect_from:
   - /v1/docs/calculation-3-0
   - /v1/docs/en/calculation-3-0
   - /docs/scos/user/features/201811.0/cart-feature-overview/calculation/calculation-3.0.html
+  - /docs/scos/dev/feature-walkthroughs/201811.0/cart-feature-walkthrough/calculation-3-0.html
 related:
   - title: Cart Functionality
     link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-functionality.html

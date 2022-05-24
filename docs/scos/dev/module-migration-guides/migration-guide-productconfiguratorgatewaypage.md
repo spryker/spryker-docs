@@ -2,9 +2,10 @@
 title: Migration guide - ProductConfiguratorGatewayPage
 description: Learn how to upgrade the ProductConfiguratorGatewayPage module to a newer version.
 template: module-migration-guide-template
----
+redirect_from:
+  - /docs/scos/dev/module-migration-guides/202200.0/migration-guide-productconfiguratorgatewaypage.html
 
-## Upgrading from version 0.3.* to version 0.4.* 
+## Upgrading from version 0.3.* to version 0.4.*
 
 *Estimated migration time: 10 minutes*
 

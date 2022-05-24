@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-product-relations-feature-integration
   - /docs/glue-api-product-relations-feature-integration
   - /docs/en/glue-api-product-relations-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-product-relations-feature-integration.html
 ---
 
 ## Install Feature API
@@ -36,7 +37,7 @@ composer require spryker/related-products-rest-api:"^1.0.0" spryker/up-selling-p
 {% info_block warningBox “Verification” %}
 
 Make sure that the following modules have been installed:
-    
+
 | MODULE | EXPECTED DIRECTORY |
 |---|---|
 |RelatedProductsRestApi|vendor/spryker/related-products-rest-api|
@@ -64,14 +65,14 @@ Activate the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\RelatedProductsRestApi\Plugin\GlueApplication\RelatedProductsResourceRoutePlugin;
 use Spryker\Glue\UpSellingProductsRestApi\Plugin\GlueApplication\CartUpSellingProductsResourceRoutePlugin;
 use Spryker\Glue\UpSellingProductsRestApi\Plugin\GlueApplication\GuestCartUpSellingProductsResourceRoutePlugin;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -97,4 +98,3 @@ Make sure that the following endpoints are available:
 - `https://glue.mysprykershop.com/guest-carts/`{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}`/up-selling-products`
 
 {% endinfo_block %}
-

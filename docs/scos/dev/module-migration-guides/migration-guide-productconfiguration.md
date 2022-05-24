@@ -2,9 +2,11 @@
 title: Migration guide - ProductConfiguration
 description: Learn how to upgrade the ProductConfiguation module to a newer version.
 template: module-migration-guide-template
+redirect_from:
+  - /docs/scos/dev/module-migration-guides/202200.0/migration-guide-productconfiguration.html
 ---
 
-## Upgrading from version 0.1.* to version 0.2.* 
+## Upgrading from version 0.1.* to version 0.2.*
 
 *Estimated migration time: 30 minutes*
 
@@ -96,7 +98,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
     - `ProductConfigurationCartItemQuantityCounterStrategyPlugin` (should be replaced with `Spryker\Zed\ProductConfigurationCart\Communication\Plugin\PriceCartConnector\ProductConfigurationCartItemQuantityCounterStrategyPlugin`)
     - `ProductConfigurationPriceProductExpanderPlugin` (should be replaced with `Spryker\Zed\ProductConfigurationCart\Communication\Plugin\PriceCartConnector\ProductConfigurationPriceProductExpanderPlugin`)
 
-12. From `\Pyz\Zed\QuoteRequest\QuoteRequestDependencyProvider`, remove the plugins: 
+12. From `\Pyz\Zed\QuoteRequest\QuoteRequestDependencyProvider`, remove the plugins:
 
     - `ProductConfigurationQuoteRequestUserValidatorPlugin` (should be replaced with `Spryker\Zed\ProductConfigurationCart\Communication\Plugin\QuoteRequest\ProductConfigurationQuoteRequestUserValidatorPlugin`)
     - `ProductConfigurationQuoteRequestValidatorPlugin` (should be replaced with `Spryker\Zed\ProductConfigurationCart\Communication\Plugin\QuoteRequest\ProductConfigurationQuoteRequestValidatorPlugin`)

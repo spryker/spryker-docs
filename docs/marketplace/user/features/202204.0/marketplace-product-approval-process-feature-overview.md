@@ -49,3 +49,15 @@ If a [merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-mer
 ## Marketplace Product Approval data import
 
 A marketplace owner can set a default approval status for marketplace products owned by a certain merchant via the data import. See [File details: merchant_product_approval_status_default.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-approval-status-default.csv.html) to learn more how to do that.
+
+## Related Business User articles
+
+| BACK OFFICE USER GUIDES  | MERCHANT PORTAL USER GUIDES  |
+| -------------------- | ------------------ |
+|  [Approve and deny marketplace products](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html#approving-and-denying-marketplace-products)  | [Send the product for approval](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/creating-marketplace-abstract-product.html#sending-the-product-for-approval)   |
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Marketplace Product Approval feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-approval-process-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/search-factfinder-recommendation
   - /docs/search-factfinder-recommendation
   - /docs/en/search-factfinder-recommendation
+  - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html
 related:
   - title: Installing and configuring FACT-Finder
     link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html

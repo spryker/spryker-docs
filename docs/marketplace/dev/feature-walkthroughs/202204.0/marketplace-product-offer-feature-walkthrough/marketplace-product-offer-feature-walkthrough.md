@@ -27,14 +27,35 @@ The following diagram illustrates the dependencies between the modules for the M
 
 ![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/2594d553-5312-4c2b-b184-7ad466b945e3.png?utm_medium=live&utm_source=confluence)
 
+<div class="width-100">
+
 The following table lists the main modules of the Marketplace Product Offer feature.
 
-| NAME | DESCRIPTION |
-| -------------------- | ---------- |
-| [MerchantProductOffer](https://github.com/spryker/merchant-product-offer) | Provides a collection of product offers by request. Extends `ProductOffer` with the merchant information. Used by `MerchantSwitcher` for enabling the merchant functionality.  |
-| [ProductOffer](https://github.com/spryker/product-offer) | Provides the main create-read-update product offer functionality.  |
-| [ProductOfferValidity](https://github.com/spryker/product-offer-validity) | Defines validity period for an offer. |
-| [MerchantProductOfferWidget](https://github.com/spryker-shop/merchant-product-offer-widget) | Provides merchant product offer information for the `spryker-shop`. |
+| NAME  | DESCRIPTION    |
+|-------------|--------------|
+| [MerchantProductOffer](https://github.com/spryker/merchant-product-offer)    | Provides a collection of product offers by request. Extends `ProductOffer` with the merchant information. Used by `MerchantSwitcher` for enabling the merchant functionality. |
+| [MerchantProductOfferDataImport](https://github.com/spryker/merchant-product-offer-data-import)    | Module for importing Merchant offers from the CSV file. |
+| [MerchantProductOfferGui](https://github.com/spryker/merchant-product-offer-gui)    | Provides Zed UI interface for merchant product offer management. |
+| [MerchantProductOfferSearch](https://github.com/spryker/merchant-product-offer-search)    | Manages Elasticsearch documents for merchant product offer entities. |
+| [MerchantProductOfferStorage](https://github.com/spryker/merchant-product-offer-storage)   | Manages storage for merchant product offers. |
+| [MerchantProductOfferStorageExtension](https://github.com/spryker/merchant-product-offer-storage-extension)    | Provides an interfaces of plugins to extend `MerchantProductOfferStorage` module from the other modules. |
+| [MerchantProductOffersRestApi](https://github.com/spryker/merchant-product-offers-rest-api)    | Provides Glue API endpoints to manage merchant product offers. |
+| [Product](https://github.com/spryker/product)    | Provides base infrastructure and CRUD operations to handle abstract product and concrete products.       |
+| [ProductOffer](https://github.com/spryker/product-offer)   | Provides the main create-read-update product offer functionality.    |
+| [ProductOfferExtension](https://github.com/spryker/product-offer-extension)  | Provides extension interfaces for `ProductOffer` module.  |
+| [ProductOfferGui](https://github.com/spryker/product-offer-gui)       | `ProductOfferGui` is the Zed Administrative Interface component for managing product offers.    |
+| [ProductOfferGuiExtension](https://github.com/spryker/product-offer-gui-extension)   | Provides plugin interfaces for `ProductOfferGui` module functionality extending.     |
+| [ProductOfferStorage](https://github.com/spryker/product-offer-storage)    | Manages storage for product offers.    |
+| [ProductOfferStorageExtension](https://github.com/spryker/product-offer-storage-extension)    | Provides interfaces for extension of `ProductOfferStorage` module with plugins.   |
+| [ProductOffersRestApi](https://github.com/spryker/product-offers-rest-api)     | Provides availability to add product offer resource relation.    |
+| [ProductOfferValidity](https://github.com/spryker/product-offer-validity)    | Defines validity period for an offer.    |
+| [ProductOfferValidityDataImport](https://github.com/spryker/product-offer-validity-data-import)    | Data importer for `ProductOfferValidity`.    |
+| [ProductOfferValidityGui](https://github.com/spryker/product-offer-validity-gui)      | `ProductOfferValidityGui` is the Zed Administrative Interface component for managing product offer validity.        |
+| [MerchantProductOfferWidget](https://github.com/spryker-shop/merchant-product-offer-widget)    | Provides merchant product offer information for the `spryker-shop`.   |
+| [MerchantProductOfferWidgetExtension](https://github.com/spryker-shop/merchant-product-offer-widget-extension) | This module provides plugin interfaces to extend the `MerchantProductOfferWidget` module from the other modules.     |
+| [ProductOfferWidget](https://github.com/spryker-shop/product-offer-widget)     | Provides widgets for displaying Product Offers.  |
+
+</div>
 
 ## Domain model
 

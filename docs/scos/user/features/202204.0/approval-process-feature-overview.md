@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/approval-process-feature-overview
   - /docs/approval-process-feature-overview
   - /docs/en/approval-process-feature-overview
+  - /docs/scos/user/features/201811.0/approval-process-feature-overview.html
 ---
 
 The *Approval Process* feature lets B2B customers have multiple people contributing to the ordering process but requires the manager's approval to proceed with the checkout.

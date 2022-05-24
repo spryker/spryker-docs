@@ -9,6 +9,8 @@ redirect_from:
   - /2021080/docs/en/glue-api-cms-feature-integration-guide
   - /docs/glue-api-cms-feature-integration-guide
   - /docs/en/glue-api-cms-feature-integration-guide
+  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-cms-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-cms-feature-integration.html
 ---
 
 This document describes how to integrate the CMS feature API into a Spryker project.
@@ -48,8 +50,8 @@ Make sure that the following modules have been installed:
 
 ```bash
 console transfer:generate
-console propel:install 
-console transfer:generate 
+console propel:install
+console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
@@ -86,7 +88,7 @@ console uuid:generate Cms spy_cms_page
 
 {% info_block warningBox "Verification" %}
 
-Make sure that all the records in the `spy_cms_page` have the `uuid` field populated with auto-generated values. 
+Make sure that all the records in the `spy_cms_page` have the `uuid` field populated with auto-generated values.
 
 {% endinfo_block %}
 
@@ -211,5 +213,3 @@ Integrate the following related features:
 | ---------- | ----------------- | ---------------------------- |
 | Content items |                                  | [Content Items feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/content-items-feature-integration.html) |
 | CMS           | ✓                                | [CMS feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-feature-integration.html) |
-
-

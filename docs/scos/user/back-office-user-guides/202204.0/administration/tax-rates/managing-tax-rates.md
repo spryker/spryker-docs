@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-tax-rates
   - /docs/managing-tax-rates
   - /docs/en/managing-tax-rates
+  - /docs/scos/user/back-office-user-guides/202200.0/administration/tax-rates/managing-tax-rates.html
 ---
 
 This document describes how to create, edit, and delete [tax rates](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html).

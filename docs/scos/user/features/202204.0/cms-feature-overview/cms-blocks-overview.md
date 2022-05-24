@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/cms-blocks-overview
   - /docs/cms-blocks-overview
   - /docs/en/cms-blocks-overview
+  - /docs/scos/user/features/202200.0/cms-feature-overview/cms-blocks-overview.html
 ---
 
 A *CMS block* is a piece of reusable content which you can add to multipe CMS pages and templates. For example, with the help of a block, you can add banners to the top of a page or add SEO text to the bottom of a page.
@@ -63,8 +64,8 @@ Product blocks are blocks that can be embedded in the product template, for whic
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html)  |
-| [Manage CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-cms-blocks.html)  |
+| [Create CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/create-cms-blocks.html)  |
+| [Edit CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-cms-blocks.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

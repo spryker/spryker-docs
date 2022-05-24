@@ -8,6 +8,7 @@ originalArticleId: 4553f0c0-98e7-4803-8b5f-bf436271b5ab
 redirect_from:
   - /v3/docs/payone-security-invoice
   - /v3/docs/en/payone-security-invoice
+  - /docs/scos/user/technology-partners/201907.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-security-invoice-payment.html
 related:
   - title: PayOne - Authorization and Preauthorization Capture Flows
     link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-authorization-and-preauthorization-capture-flows.html
@@ -43,4 +44,3 @@ To enable the demo state machine, extend the configuration with following values
  'PayoneSecurityInvoice',
  ];
  ```
-

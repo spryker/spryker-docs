@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/quick-order-non-splittable-products-feature-integration
   - /docs/quick-order-non-splittable-products-feature-integration
   - /docs/en/quick-order-non-splittable-products-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/quick-add-to-cart-non-splittable-products-feature-integration.html
 ---
 
 ## Install feature core

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/merchant-custom-prices-feature-integration
   - /docs/merchant-custom-prices-feature-integration
   - /docs/en/merchant-custom-prices-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/merchant-custom-prices-feature-integration.html
 ---
 
 ## Install feature core

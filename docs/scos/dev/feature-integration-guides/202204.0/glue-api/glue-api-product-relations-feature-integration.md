@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-product-relations-feature-integration
   - /docs/glue-api-product-relations-feature-integration
   - /docs/en/glue-api-product-relations-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-relations-feature-integration.html
 ---
 
 ## Install Feature API

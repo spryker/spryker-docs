@@ -25,6 +25,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cmspagesearch.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmspagesearch.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmspagesearch.html
+  - /module_migration_guides/mg-cmspagesearch.htm
 ---
 
 ## Upgrading from version 2.1.* to version 2.2.*

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/product-labels-feature-integration
   - /docs/product-labels-feature-integration
   - /docs/en/product-labels-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/product-labels-feature-integration.html
 related:
   - title: Alternative products + product label feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-product-label-feature-integration.html

@@ -47,4 +47,3 @@ To upgrade the module, install or update it through composer::
 ```bash
 composer require "spryker/elastica:5.0.0" --update-with-dependencies
 ```
-

@@ -28,6 +28,7 @@ redirect_from:
   - docs/scos/dev/module-migration-guides/202001.0/migration-guide-priceproduct.html
   - docs/scos/dev/module-migration-guides/202005.0/migration-guide-priceproduct.html
   - docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproduct.html
+  - /module_migration_guides/mg-priceproduct.htm
 ---
 
 ## Upgrading from version 2.* to version 4.*

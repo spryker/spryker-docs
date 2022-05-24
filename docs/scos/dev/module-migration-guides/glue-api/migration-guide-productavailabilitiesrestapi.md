@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/glue-api/migration-guide-productavailabilitiesrestapi.html
   - /docs/scos/dev/module-migration-guides/202009.0/glue-api/migration-guide-productavailabilitiesrestapi.html
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/migration-guide-productavailabilitiesrestapi.html
+  - /module_migration_guides/glue_api/productavailabilitiesrestapi-migration-guide.htm
 ---
 
 ## Upgrading from version 3.* to version 4.*

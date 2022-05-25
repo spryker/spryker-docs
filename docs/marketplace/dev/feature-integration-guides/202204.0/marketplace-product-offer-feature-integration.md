@@ -168,14 +168,16 @@ To configure export to Redis and Elasticsearch, take the following steps:
 
 #### Set up publisher plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-|--|--| ----------- | ---------------- |
-| ProductConcreteProductOffersDeletePublisherPlugin       | Finds and deletes product concrete offer storage entities by the given concreteSkus.                                                          |           | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers |
-| ProductConcreteProductOffersWritePublisherPlugin        | Queries all active product offer with the given concreteSkus, stores data as json encoded to storage table.                                   |           | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers |
-| ProductOfferDeletePublisherPlugin                       | Finds and deletes product offer storage entities with the given productOfferReferences, sends delete message to queue based on module config. |           | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer |
-| ProductOfferWritePublisherPlugin                        | Queries all active product offer with the given productOfferReferences, stores data as json encoded to storage table.                         |           | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer |
-| MerchantProductConcreteProductOfferWritePublisherPlugin | Retrieves all active product offers by `merchantIds`, publish active product offers data to `ProductConcreteProductOffersStorage`.            |           | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteProductOffer |
-| MerchantProductOfferWritePublisherPlugin                | Queries all active product offer with the given merchantIds, stores data as json encoded to storage table.                                    |           | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Merchant |
+| PLUGIN                                                  | SPECIFICATION                                                                                                                                 | PREREQUISITES | NAMESPACE                                                                                          |
+|---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------|
+| ProductConcreteProductOffersDeletePublisherPlugin       | Finds and deletes product concrete offer storage entities by the given concreteSkus.                                                          |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers               |
+| ProductConcreteProductOffersWritePublisherPlugin        | Queries all active product offer with the given concreteSkus, stores data as json encoded to storage table.                                   |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers               |
+| ProductOfferDeletePublisherPlugin                       | Finds and deletes product offer storage entities with the given productOfferReferences, sends delete message to queue based on module config. |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer                        |
+| ProductOfferWritePublisherPlugin                        | Queries all active product offer with the given productOfferReferences, stores data as json encoded to storage table.                         |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer                        |
+| MerchantProductConcreteProductOfferWritePublisherPlugin | Retrieves all active product offers by `merchantIds`, publish active product offers data to `ProductConcreteProductOffersStorage`.            |               | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteProductOffer |
+| MerchantProductOfferWritePublisherPlugin                | Queries all active product offer with the given merchantIds, stores data as json encoded to storage table.                                    |               | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Merchant                    |
+| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer events.                                                                |               | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOffer                 |
+| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer store events.                                                          |               | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOfferStore            |
 
 <details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 
@@ -186,6 +188,8 @@ namespace Pyz\Zed\Publisher;
 
 use Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Merchant\MerchantProductOfferWritePublisherPlugin;
 use Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteProductOffer\MerchantProductConcreteProductOfferWritePublisherPlugin;
+use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOffer\ProductConcreteWritePublisherPlugin as ProductOfferProductConcreteWritePublisherPlugin;
+use Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOfferStore\ProductConcreteWritePublisherPlugin as ProductOfferStoreProductConcreteWritePublisherPlugin;
 use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers\ProductConcreteProductOffersDeletePublisherPlugin;
 use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers\ProductConcreteProductOffersWritePublisherPlugin;
 use Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer\ProductOfferDeletePublisherPlugin;
@@ -226,6 +230,17 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
         return [
             new MerchantProductConcreteProductOfferWritePublisherPlugin(),
             new MerchantProductOfferWritePublisherPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherPluginInterface>
+     */
+    protected function getMerchantProductOfferSearchPlugins(): array
+    {
+        return [
+            new ProductOfferProductConcreteWritePublisherPlugin(),
+            new ProductOfferStoreProductConcreteWritePublisherPlugin(),
         ];
     }
 }
@@ -1084,26 +1099,27 @@ Make sure that the product offer validity data is correctly imported in `spy_pro
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                      | DESCRIPTION                                                                                                            | PREREQUISITES                         | NAMESPACE                                                                        |
-|-------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|---------------------------------------|----------------------------------------------------------------------------------|
-| MerchantProductOfferTableExpanderPlugin                     | Expands the  `ProductOfferGui` product table with merchant data.                                                       |                                       | Spryker\Zed\MerchantProductOfferGui\Communication\Plugin                         |
-| MerchantProductOfferViewSectionPlugin                       | Adds a new merchant section to the `ProductOfferGui` view.                                                             |                                       | Spryker\Zed\MerchantProductOfferGui\Communication\Plugin\ProductOfferGui         |
-| ProductOfferValidityProductOfferViewSectionPlugin           | Adds a new validity section to the `ProductOfferGui` view.                                                             |                                       | Spryker\Zed\ProductOfferValidityGui\Communication\Plugin\ProductOfferGui         |
-| MerchantProductOfferListActionViewDataExpanderPlugin        | Expands product offer view data with merchant data when showing it in the  `ProductOfferGui` module.                   |                                       | Spryker\Zed\MerchantGui\Communication\Plugin\ProductOffer                        |
-| MerchantNameSearchConfigExpanderPlugin                      | Expands facet configuration with the merchant name filter.                                                             |                                       | Spryker\Client\MerchantProductOfferSearch\Plugin\Search                          |
-| MerchantProductPageDataExpanderPlugin                       | Expands the provided `ProductAbstractPageSearch` transfer object's data by merchant names.                             |                                       | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch    |
-| MerchantProductPageDataLoaderPlugin                         | Expands the `ProductPageLoadTransfer` object with merchant data.                                                       |                                       | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch    |
-| MerchantNamesProductAbstractMapExpanderPlugin               | Adds merchant names to product abstract search data.                                                                   |                                       | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch    |
-| MerchantReferencesProductAbstractsMapExpanderPlugin         | Adds merchant references to product abstract search data.                                                              |                                       | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch    |
-| DefaultProductOfferReferenceStrategyPlugin                  | Sets the default selected product offer in PDP for a concrete product. It selects the first product offer in the list. | ProductViewProductOfferExpanderPlugin | Spryker\Client\ProductOfferStorage\Plugin\ProductOfferStorage                    |
-| ProductOfferReferenceStrategyPlugin                         | Sets selected oroduct offer in `ProductConcreteTransfer` if one is already selected on PDP.                            | ProductViewProductOfferExpanderPlugin | Spryker\Client\ProductOfferStorage\Plugin\ProductOfferStorage                    |
-| ProductViewProductOfferExpanderPlugin                       | Adds product offer data to `ProductViewTransfer` when a retrieving product.                                            |                                       | Spryker\Client\ProductOfferStorage\Plugin\ProductStorage                         |
-| ProductOfferValidityProductOfferPostCreatePlugin            | Creates product offer validity dates after the product offer is created.                                               |                                       | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer               |
-| ProductOfferValidityProductOfferPostUpdatePlugin            | Updates product offer validity dates after the product offer is updated.                                               |                                       | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer               |
-| ProductOfferValidityProductOfferExpanderPlugin              | Expands product offer data with validity dates when the product offer is fetched.                                      |                                       | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer               |
-| ProductOfferValidityConsole                                 | Updates product offers to have the `isActive` flag to be `false` where their validity date is not current anymore.     |                                       | Spryker\Zed\ProductOfferValidity\Communication\Console                           |
-| MerchantProductOfferStorageMapperPlugin                     | Maps Merchant foreign key of `ProductOffer` transfer object to Merchant Id `ProductOfferStorage` transfer object.      |                                       | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferStorage |
-| MerchantProductOfferWidgetRouteProviderPlugin               | Adds Routes to the RouteCollection.                                                                                    |                                       | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\Router                        |
+| PLUGIN                                                    | DESCRIPTION                                                                                                            | PREREQUISITES                         | NAMESPACE                                                                        |
+|-----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|---------------------------------------|----------------------------------------------------------------------------------|
+| MerchantProductOfferTableExpanderPlugin                   | Expands the  `ProductOfferGui` product table with merchant data.                                                       |                                       | Spryker\Zed\MerchantProductOfferGui\Communication\Plugin                         |
+| MerchantProductOfferViewSectionPlugin                     | Adds a new merchant section to the `ProductOfferGui` view.                                                             |                                       | Spryker\Zed\MerchantProductOfferGui\Communication\Plugin\ProductOfferGui         |
+| ProductOfferValidityProductOfferViewSectionPlugin         | Adds a new validity section to the `ProductOfferGui` view.                                                             |                                       | Spryker\Zed\ProductOfferValidityGui\Communication\Plugin\ProductOfferGui         |
+| MerchantProductOfferListActionViewDataExpanderPlugin      | Expands product offer view data with merchant data when showing it in the  `ProductOfferGui` module.                   |                                       | Spryker\Zed\MerchantGui\Communication\Plugin\ProductOffer                        |
+| MerchantNameSearchConfigExpanderPlugin                    | Expands facet configuration with the merchant name filter.                                                             |                                       | Spryker\Client\MerchantProductOfferSearch\Plugin\Search                          |
+| MerchantProductPageDataExpanderPlugin                     | Expands the provided `ProductAbstractPageSearch` transfer object's data by merchant names.                             |                                       | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch    |
+| MerchantProductPageDataLoaderPlugin                       | Expands the `ProductPageLoadTransfer` object with merchant data.                                                       |                                       | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch    |
+| MerchantNamesProductAbstractMapExpanderPlugin             | Adds merchant names to product abstract search data.                                                                   |                                       | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch    |
+| MerchantReferencesProductAbstractsMapExpanderPlugin       | Adds merchant references to product abstract search data.                                                              |                                       | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch    |
+| DefaultProductOfferReferenceStrategyPlugin                | Sets the default selected product offer in PDP for a concrete product. It selects the first product offer in the list. | ProductViewProductOfferExpanderPlugin | Spryker\Client\ProductOfferStorage\Plugin\ProductOfferStorage                    |
+| ProductOfferReferenceStrategyPlugin                       | Sets selected oroduct offer in `ProductConcreteTransfer` if one is already selected on PDP.                            | ProductViewProductOfferExpanderPlugin | Spryker\Client\ProductOfferStorage\Plugin\ProductOfferStorage                    |
+| ProductViewProductOfferExpanderPlugin                     | Adds product offer data to `ProductViewTransfer` when a retrieving product.                                            |                                       | Spryker\Client\ProductOfferStorage\Plugin\ProductStorage                         |
+| ProductOfferValidityProductOfferPostCreatePlugin          | Creates product offer validity dates after the product offer is created.                                               |                                       | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer               |
+| ProductOfferValidityProductOfferPostUpdatePlugin          | Updates product offer validity dates after the product offer is updated.                                               |                                       | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer               |
+| ProductOfferValidityProductOfferExpanderPlugin            | Expands product offer data with validity dates when the product offer is fetched.                                      |                                       | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer               |
+| ProductOfferValidityConsole                               | Updates product offers to have the `isActive` flag to be `false` where their validity date is not current anymore.     |                                       | Spryker\Zed\ProductOfferValidity\Communication\Console                           |
+| MerchantProductOfferStorageMapperPlugin                   | Maps Merchant foreign key of `ProductOffer` transfer object to Merchant Id `ProductOfferStorage` transfer object.      |                                       | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferStorage |
+| MerchantProductOfferWidgetRouteProviderPlugin             | Adds Routes to the RouteCollection.                                                                                    |                                       | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\Router                        |
+| MerchantProductOfferProductConcretePageMapExpanderPlugin  | Expands the provided `PageMap` transfer object with related merchant references.                                       |                                       | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch    |
 
 **src/Pyz/Client/Search/SearchDependencyProvider.php**
 
@@ -1257,6 +1273,16 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
         return [
             new MerchantNamesProductAbstractMapExpanderPlugin(),
             new MerchantReferencesProductAbstractsMapExpanderPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductConcretePageMapExpanderPluginInterface>
+     */
+    protected function getConcreteProductMapExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductOfferProductConcretePageMapExpanderPlugin(),
         ];
     }
 }
@@ -1431,6 +1457,8 @@ It means the following:
 1. If a merchant gets deactivated, `ProductAbstract`s that were on the catalog search only because they had a product offer from that merchant get removed.
 2. If a product offer gets created, and the `ProductAbstract` related to it was not available on catalog search, it would be available now.
 
+Make sure you can see merchant products after search by sku on Quick Add To Cart page.
+
 {% endinfo_block %}
 
 ### 7) Configure navigation
@@ -1493,6 +1521,7 @@ Verify that the following modules were installed:
 | MODULE                              | EXPECTED DIRECTORY                                   |
 |-------------------------------------|------------------------------------------------------|
 | MerchantProductOfferWidget          | spryker-shop/merchant-product-offer-widget           |
+| MerchantProductOffersSelectWidget   | spryker-shop/merchant-product-offer-widget           |
 | ProductOfferWidget                  | spryker-shop/product-offer-widget                    |
 | MerchantProductOfferWidgetExtension | spryker-shop/merchant-product-offer-widget-extension |
 
@@ -1533,9 +1562,10 @@ Make sure that the configured data is added to the `spy_glossary` table in the d
 
 Register the following plugins to enable widgets:
 
-| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
-| -------------- | --------------- | ------ | ---------------- |
-| MerchantProductOfferWidget       | Shows the list of the offers with their prices for a concrete product. | | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
+| PLUGIN                            | DESCRIPTION                                                            | PREREQUISITES | NAMESPACE |
+|-----------------------------------|------------------------------------------------------------------------| ------ | ---------------- |
+| MerchantProductOfferWidget        | Shows the list of the offers with their prices for a concrete product. | | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
+| MerchantProductOffersSelectWidget | Shows the list of product offers for the concrete product.             | | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -1556,6 +1586,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     {
         return [
             MerchantProductOfferWidget::class,
+            MerchantProductOffersSelectWidget::class,
         ];
     }
 }
@@ -1571,9 +1602,10 @@ console frontend:yves:build
 
 Make sure that the following widgets were registered:
 
-| MODULE | TEST |
-| ----------------- | ----------------- |
-| MerchantProductOfferWidget       | Go to a product concrete detail page that has offers, and you will see the default offer is selected, and the widget is displayed. |
+| MODULE                            | TEST                                                                                                                               |
+|-----------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| MerchantProductOfferWidget        | Go to a product concrete detail page that has offers, and you will see the default offer is selected, and the widget is displayed. |
+| MerchantProductOffersSelectWidget | Perform product search by sku at quick add product page, ensure you can see product offers list in next column.                    |
 
 {% endinfo_block %}
 

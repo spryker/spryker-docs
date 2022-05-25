@@ -57,9 +57,19 @@ entries:
         - title: Merchant Opening Hours
           url: /docs/marketplace/user/features/merchant-opening-hours-feature-overview.html
 
+        - title: Marketplace Merchant Custom Prices
+          url: /docs/marketplace/user/features/marketplace-merchant-custom-prices-feature-overview.html
+          include_versions:
+          - "202204.0"
+          
         - title: Marketplace Product
           url: /docs/marketplace/user/features/marketplace-product-feature-overview.html
 
+        - title: Marketplace Product Approval Process 
+          url: /docs/marketplace/user/features/marketplace-product-approval-process-feature-overview.html
+          include_versions:       
+          - "202204.0"
+        
         - title: Marketplace Product Offer
           url: /docs/marketplace/user/features/marketplace-product-offer-feature-overview.html
 
@@ -109,6 +119,7 @@ entries:
         - title: Marketplace Merchant Portal Product Offer Management
           url: /docs/marketplace/user/features/marketplace-merchant-portal-product-offer-management-feature-overview.html
 
+        
       - title: Back Office user guides
         nested:
 

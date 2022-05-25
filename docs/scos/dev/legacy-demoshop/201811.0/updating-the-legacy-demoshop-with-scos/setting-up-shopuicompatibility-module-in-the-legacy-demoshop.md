@@ -18,6 +18,10 @@ redirect_from:
   - /v2/docs/en/setting-up-shopuicompatibility
   - /v1/docs/setting-up-shopuicompatibility
   - /v1/docs/en/setting-up-shopuicompatibility
+  - /docs/scos/dev/migration-and-integration/201811.0/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html
+  - /docs/scos/dev/migration-and-integration/201903.0/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html
+  - /docs/scos/dev/migration-and-integration/201907.0/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html
+
 related:
   - title: Making the Legacy Demoshop Compatible with the Modular Frontend
     link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html

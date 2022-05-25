@@ -9,9 +9,12 @@ redirect_from:
   - /2021080/docs/en/stocks
   - /docs/stocks
   - /docs/en/stocks
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/catalog-setup/stocks/stocks.html
+  - /docs/scos/dev/data-import/201903.0/data-import-categories/catalog-setup/stocks/stocks.html
+  - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/stocks/stocks.html
 ---
 
-The **Stocks** category contains all data you need to manage stocks in your online store. 
+The **Stocks** category contains all data you need to manage stocks in your online store.
 By importing the [product_stock.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html) file you can define the number of product units stored in each of the warehouses.
 
 The table below provides details on the Stocks data importer, its purpose, CSV file, dependencies, and other details. The data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.

@@ -2,13 +2,18 @@
 title: Managing wishlist items
 description: Retrieve details about wishlist items and learn what else you can do with the resource in the Spryker Marketplace.
 template: glue-api-storefront-guide-template
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-wishlists/managing-wishlist-items.html
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-wishlists/managing-wishlist-items.html
+  - /docs/scos/dev/glue-api-guides/201907.0/managing-wishlists/managing-wishlist-items.html
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-wishlists/managing-wishlist-items.html
 ---
 
 This endpoint lets you add and remove items from wishlists.
 
 ## Installation
 
-For detailed information about the modules that provide the API functionality and related installation instructions, see [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html). 
+For detailed information about the modules that provide the API functionality and related installation instructions, see [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html).
 
 ## Add an item to a wishlist
 

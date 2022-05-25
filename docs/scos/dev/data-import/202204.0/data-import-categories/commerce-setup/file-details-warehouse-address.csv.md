@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/file-details-warehouse-addresscsv
   - /docs/file-details-warehouse-addresscsv
   - /docs/en/file-details-warehouse-addresscsv
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html
+  - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html
+  - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html
+  - /docs/scos/dev/data-import/202005.0/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html
 ---
 
 This document describes the `warehouse_address.csv` file to configure [warehouse address information](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html#defining-a-warehouse-address) in your Spryker shop.

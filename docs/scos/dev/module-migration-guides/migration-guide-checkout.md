@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-checkout.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-checkout.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-checkout.html
+  - /module_migration_guides/mg-checkout.htm
 related:
   - title: Checkout
     link: docs/scos/user/features/page.version/checkout-feature-overview/checkout-feature-overview.html

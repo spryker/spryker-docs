@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/retrieving-autocomplete-and-search-suggestions
   - /docs/retrieving-autocomplete-and-search-suggestions
   - /docs/en/retrieving-autocomplete-and-search-suggestions
+  - /docs/scos/dev/glue-api-guides/202200.0/retrieving-autocomplete-and-search-suggestions.html
 related:
   - title: Browsing a Category Tree
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html

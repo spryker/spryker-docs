@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productoption.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productoption.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productoption.html
+  - /module_migration_guides/mg-product-option.htm
 related:
   - title: Migration guide - Currency
     link: docs/scos/dev/module-migration-guides/migration-guide-currency.html

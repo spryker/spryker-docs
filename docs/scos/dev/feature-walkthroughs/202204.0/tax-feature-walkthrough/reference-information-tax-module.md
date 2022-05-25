@@ -3,6 +3,8 @@ title: "Reference information: Tax module"
 last_updated: Aug 20, 2021
 description: The Tax module is responsible for handling tax rates that can apply for products, product options, or shipment
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202200.0/tax-feature-walkthrough/reference-information-tax-module.html
 ---
 
 

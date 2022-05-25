@@ -16,6 +16,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-categorypagesearch.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-categorypagesearch.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-categorypagesearch.html
+  - /upcoming-release/docs/migration-guide-categorypagesearch
 ---
 
 This document describes how to upgrade the `CategoryPageSearch` module.

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/proclane
   - /docs/proclane
   - /docs/en/proclane
+  - docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/proclane.html
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

@@ -3,6 +3,8 @@ title: Inventory Management feature walkthrough
 last_updated: Aug 13, 2021
 description: The Inventory Management feature adds stock and availability management as well as multiple warehouse stock management for products
 template: concept-topic-template
+redirtect_from:
+  - /docs/scos/dev/feature-walkthroughs/201903.0/nventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
 ---
 
 The _Inventory Management_ feature adds stock and availability management as well as multiple warehouse stock management for products.

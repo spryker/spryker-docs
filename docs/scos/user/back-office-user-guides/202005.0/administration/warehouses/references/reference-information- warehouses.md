@@ -1,5 +1,5 @@
 ---
-title: Reference information -  Warehouses
+title: Reference information - Warehouses
 description: The guide provides additional information on the values you enter when creating and updating warehouses in the Back Office.
 last_updated: Jun 11, 2020
 template: back-office-user-guide-template
@@ -9,6 +9,7 @@ redirect_from:
   - /v5/docs/warehouses-reference-information
   - /v5/docs/en/warehouses-reference-information
   - /docs/scos/user/back-office-user-guides/202005.0/administration/warehouses/references/reference-information-warehouses.html
+  - /docs/scos/user/back-office-user-guides/202005.0/administration/warehouses/references/warehouses-reference-information.html
 ---
 
 This topic contains the reference information for working with warehouses in **Administration** > **Warehouses**.

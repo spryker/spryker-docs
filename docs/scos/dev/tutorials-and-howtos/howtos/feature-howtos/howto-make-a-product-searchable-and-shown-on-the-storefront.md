@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/ht-make-product-shown-on-frontend-by-url
   - /v1/docs/ht-make-product-shown-on-frontend-by-url
   - /v1/docs/en/ht-make-product-shown-on-frontend-by-url
+  - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
 related:
   - title: Creating Product Variants
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/creating-product-variants.html

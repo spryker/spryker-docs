@@ -8,6 +8,7 @@ originalArticleId: c57585c9-d3a0-4fee-8ecd-3cafb6f0c132
 redirect_from:
   - /v3/docs/glue-application-feature-integration-201907
   - /v3/docs/en/glue-application-feature-integration-201907
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-application-feature-integration.html
 ---
 
 ## Install Feature API

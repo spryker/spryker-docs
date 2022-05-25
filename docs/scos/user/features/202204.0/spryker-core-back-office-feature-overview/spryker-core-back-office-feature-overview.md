@@ -14,6 +14,7 @@ redirect_from:
   - /2021080/docs/en/back-office-login-overview
   - /docs/back-office-login-overview
   - /docs/en/back-office-login-overview
+  - /docs/scos/user/features/202200.0/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html
 
 ---
 

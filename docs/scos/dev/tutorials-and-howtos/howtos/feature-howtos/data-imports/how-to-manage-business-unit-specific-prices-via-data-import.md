@@ -9,7 +9,7 @@ related:
 
 {% info_block warningBox "B2B only" %}
 
-You can apply the approaches described in this document only if your project follows the B2B model because the [merchant custom prices](https://docs.spryker.com/docs/scos/user/features/{{site.version}}/merchant-custom-prices-feature-overview.html) feature used for these approaches is only for B2B. Also, the behavior described in this document is not compatible with Marketplace.
+You can apply the approaches described in this document only if your project follows the B2B model because the [merchant custom prices](/docs/scos/user/features/{{site.version}}/merchant-custom-prices-feature-overview.html) feature used for these approaches is only for B2B. Also, the behavior described in this document is not compatible with Marketplace.
 
 {% endinfo_block %}
 

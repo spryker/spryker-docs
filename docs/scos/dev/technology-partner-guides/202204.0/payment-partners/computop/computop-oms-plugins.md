@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/computop-oms-details
   - /docs/computop-oms-details
   - /docs/en/computop-oms-details
+  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/computop/computop-oms-plugins.html
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html

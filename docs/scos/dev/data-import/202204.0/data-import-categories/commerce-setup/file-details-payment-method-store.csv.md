@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-payment-method-storecsv
   - /docs/file-details-payment-method-storecsv
   - /docs/en/file-details-payment-method-storecsv
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html
+  - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html
+  - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-payment-method-store.csv.html
 ---
 
 This document describes the `payment_method_store.csv` file to configure Payment Method Store information in your Spryker Demo Shop.
@@ -33,7 +36,7 @@ The file should have the following parameters:
 
 This file has the following dependencies:
 
-* [payment_method.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method.csv.html) 
+* [payment_method.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method.csv.html)
 * *stores.php* configuration file of the demo shop PHP project
 
 ## Import template file and content example

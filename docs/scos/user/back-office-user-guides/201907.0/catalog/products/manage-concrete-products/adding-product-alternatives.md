@@ -8,6 +8,7 @@ originalArticleId: ce61840c-4322-4825-9cc1-29faab337c00
 redirect_from:
   - /v3/docs/adding-product-alternatives
   - /v3/docs/en/adding-product-alternatives
+  - /docs/scos/user/back-office-user-guides/201907.0/products/products/managing-products/adding-product-alternatives.html
 related:
   - title: Abstract Product- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/references/abstract-product-reference-information.html
@@ -29,14 +30,14 @@ The product alternative is displayed on the Product Details page. This allows yo
 For example, if smartphone 1 is out of stock, or discontinued, you can set smartphone 2 to be its alternative.
 ***
 To set product alternatives for a product, do the following:
-1. On the **Edit Concrete Product** page, switch to the Product Alternatives tab. 
+1. On the **Edit Concrete Product** page, switch to the Product Alternatives tab.
 2. To add product alternatives, enter _Product Name_ or its _SKU_ in the **Add Product Alternative by Name** or **SKU** field.
     You can add multiple alternative products.
-![Adding product alternatives](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Adding+Product+Alternatives/add-product-alternative.png) 
+![Adding product alternatives](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Adding+Product+Alternatives/add-product-alternative.png)
 
 4. Click **Save**.
 
-Once the setup is completed, the page is refreshed to display the table with the alternative products you have added. 
+Once the setup is completed, the page is refreshed to display the table with the alternative products you have added.
 To remove any alternative product, click **Remove** in the _Actions_ column.
 ***
 **Tips and tricks**

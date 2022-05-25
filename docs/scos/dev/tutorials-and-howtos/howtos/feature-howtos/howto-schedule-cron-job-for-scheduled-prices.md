@@ -17,6 +17,7 @@ redirect_from:
   - /v4/docs/en/ht-schedule-cron-job-for-scheduled-prices-201907
   - /v3/docs/ht-schedule-cron-job-for-scheduled-prices-201907
   - /v3/docs/en/ht-schedule-cron-job-for-scheduled-prices-201907
+  - /docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/how-to-schedule-cron-job-for-scheduled-prices.html
 ---
 
 This document describes how to change the default behavior of the cron job shipped with the Scheduled Prices feature.

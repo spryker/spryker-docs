@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/business-units-overview
   - /docs/business-units-overview
   - /docs/en/business-units-overview
+  - /docs/scos/user/features/202200.0/company-account-feature-overview/business-units-overview.html
 ---
 
 Once a company administrator has created a company which has been activated and approved in the Back Office, they can start building the organizational structure of their company in **My Company** section of the web-shop.

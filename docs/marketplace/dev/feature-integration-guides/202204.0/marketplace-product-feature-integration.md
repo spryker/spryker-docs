@@ -344,6 +344,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 {% info_block warningBox "Verification" %}
 
 Make sure the `de_page` Elasticsearch index for any product that belongs (see `spy_merchant_product_abstract`) to active and approved merchant, contains merchant names. (indexes can be accessed by any Elasticsearch client, e.g., Kibana. For Docker configuration details, see [Configuring services](/docs/scos/dev/back-end-development/messages-and-errors/registering-a-new-service.html).
+Make sure that product concrete page data has merchant reference.
 
 {% endinfo_block %}
 
@@ -756,3 +757,5 @@ Make sure that the merchant product is selected on the product details page by d
 | Marketplace Product + Marketplace Product Offer | | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-marketplace-product-offer-feature-integration.html) |
 | Marketplace Product + Inventory Management | | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html) |
 | Marketplace Product + Cart | | [Marketplace Product + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-cart-feature-integration.html) |
+| Marketplace Product + Catalog | | [Marketplace Product + Catalog feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-catalog-feature-integration.html)                     |
+| Marketplace Product + Quick Add to Cart | | [Marketplace Product + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-quick-add-to-cart-feature-integration.html) |

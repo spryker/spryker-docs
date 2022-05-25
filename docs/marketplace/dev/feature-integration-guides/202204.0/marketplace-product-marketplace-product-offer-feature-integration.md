@@ -25,9 +25,10 @@ To start feature integration, integrate the required features:
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
-|-|-|-|-|
-| MerchantProductProductOfferReferenceStrategyPlugin | Allows selecting a merchant product by default on PDP. |  | Spryker\Client\MerchantProductStorage\Plugin\ProductOfferStorage |
+| PLUGIN                                                      | DESCRIPTION                                                                             | PREREQUISITES | NAMESPACE                                                                |
+|-------------------------------------------------------------|-----------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
+| MerchantProductProductOfferReferenceStrategyPlugin          | Allows selecting a merchant product by default on PDP.                                  |               | Spryker\Client\MerchantProductStorage\Plugin\ProductOfferStorage         |
+| MerchantProductMerchantProductOfferCollectionExpanderPlugin | Finds merchant product by sku and expands form choices with a merchant product's value. |               | SprykerShop\Yves\MerchantProductWidget\Plugin\MerchantProductOfferWidget |
 
 {% info_block warningBox "Note" %}
 
@@ -65,5 +66,35 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
 Make sure you can switch between merchant products and product offers on the **Product Details** page.
 
 Make sure that merchant products selected on the **Product Details** page by default.
+
+{% endinfo_block %}
+
+
+**src/Pyz/Yves/MerchantProductOfferWidget/MerchantProductOfferWidgetDependencyProvider.php**
+```php
+<?php
+
+namespace Pyz\Yves\MerchantProductOfferWidget;
+
+use SprykerShop\Yves\MerchantProductOfferWidget\MerchantProductOfferWidgetDependencyProvider as SprykerMerchantProductOfferWidgetDependencyProvider;
+use SprykerShop\Yves\MerchantProductWidget\Plugin\MerchantProductOfferWidget\MerchantProductMerchantProductOfferCollectionExpanderPlugin;
+
+class MerchantProductOfferWidgetDependencyProvider extends SprykerMerchantProductOfferWidgetDependencyProvider
+{
+    /**
+     * @return array<\SprykerShop\Yves\MerchantProductOfferWidgetExtension\Dependency\Plugin\MerchantProductOfferCollectionExpanderPluginInterface>
+     */
+    protected function getMerchantProductOfferCollectionExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductMerchantProductOfferCollectionExpanderPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that Merchant reference is always transferred to destination pages after Merchant search pages and used in "Sold by" widget after performing the action.
 
 {% endinfo_block %}

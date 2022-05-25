@@ -18,7 +18,6 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | ---------- |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)  |
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
 | Quick Add to Cart | {{page.version}} | [Quick Add to Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-feature-integration.html) |
 
@@ -32,18 +31,7 @@ composer require spryker/product-offer: "^0.6.1" --update-with-dependencies
 composer require spryker-feature/quick-add-to-cart:"^2018.11.0" --update-with-dependencies
 ```
 
-{% info_block warningBox "Verification" %}
-
-Make sure that the following modules were installed:
-
-| MODULE | EXPECTED DIRECTORY |
-|-|-|
-| CheckoutExtension | spryker/checkout-extension |
-| ProductOffer | spryker/product-offer |
-
-{% endinfo_block %}
-
-### 2) Add translations
+### Add translations
 
 Add translations as follows:
 
@@ -62,11 +50,11 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that the configured data is added to the `spy_glossary` table in the database.
 
 {% endinfo_block %}
 
-### 3) Set up behavior
+### Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
@@ -99,6 +87,6 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure that merchant product can be found by sku and added to Cart with proper merchant
+Make sure that product offer reference is transferred to Cart and SoldBy section contains proper merchant.
 
 {% endinfo_block %}

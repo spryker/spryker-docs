@@ -15,12 +15,10 @@ Follow the steps below to install the Marketplace Product + Quick Add to Cart fe
 
 To start feature integration, integrate the required features:
 
-| NAME                 | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
-|----------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                        |
-| Product Options      | {{page.version}} | [Product Options feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/903151851/EMPTY+Product+Options+Feature+Integration+-+ongoing)   |  
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Quick Add to Cart    | {{page.version}} | [Quick Add to Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-feature-integration.html)              |
+| NAME                | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
+|---------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Marketplace Product | {{page.version}} | [Marketplace Product Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)|
+| Quick Add to Cart   | {{page.version}} | [Quick Add to Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-feature-integration.html)              |
 
 
 ### 1) Install the required modules using Composer
@@ -32,18 +30,40 @@ composer require spryker-feature/marketplace-product:"{{page.version}}" --update
 composer require spryker-feature/quick-add-to-cart:"^2018.11.0" --update-with-dependencies
 ```
 
+### Set up behavior
+
+1. Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                      | SPECIFICATION                                         | PREREQUISITES | NAMESPACE                                                    |
+|---------------------------------------------|-------------------------------------------------------|---------------|--------------------------------------------------------------|
+| MerchantProductQuickOrderItemExpanderPlugin | Expands provided ItemTransfer with merchant reference.|               | SprykerShop\Yves\MerchantProductWidget\Plugin\QuickOrderPage |
+
+**src/Pyz/Yves/StorageRouter/StorageRouterDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\QuickOrderPage;
+
+use SprykerShop\Yves\MerchantProductWidget\Plugin\QuickOrderPage\MerchantProductQuickOrderItemExpanderPlugin;
+use SprykerShop\Yves\QuickOrderPage\QuickOrderPageDependencyProvider as SprykerQuickOrderPageDependencyProvider;
+
+class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyProvider
+{
+    /**
+     * @return array<\SprykerShop\Yves\QuickOrderPageExtension\Dependency\Plugin\QuickOrderItemExpanderPluginInterface>
+     */
+    protected function getQuickOrderItemTransferExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductQuickOrderItemExpanderPlugin(),
+        ];
+    }
+}
+```
+
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
-
-| MODULE                    | EXPECTED DIRECTORY                          |
-|---------------------------|---------------------------------------------|
-| MerchantProduct           | vendor/spryker/merchant-product             |
-| MerchantProductDataImport | vendor/spryker/merchant-product-data-import |
-| MerchantProductGui        | vendor/spryker/merchant-product-gui         |
-| MerchantProductSearch     | vendor/spryker/merchant-product-search      |
-| MerchantProductStorage    | vendor/spryker/merchant-product-storage     |
-| MerchantProductWidget     | vendor/spryker-shop/merchant-product-widget |
-| QuickOrderPage            | vendor/spryker-shop/quick-order-page        |
+Make sure that merchant product can be added to cart with proper merchant in "SoldBy" section.
 
 {% endinfo_block %}

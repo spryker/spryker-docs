@@ -152,7 +152,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that the configured data is added to the `spy_glossary` table in the database.
 
 {% endinfo_block %}
 
@@ -1414,28 +1414,6 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
 }
 ```
 
-**src/Pyz/Yves/MerchantProductOfferWidget/MerchantProductOfferWidgetDependencyProvider.php**
-```php
-<?php
-
-namespace Pyz\Yves\MerchantProductOfferWidget;
-
-use ...
-
-class MerchantProductOfferWidgetDependencyProvider extends SprykerMerchantProductOfferWidgetDependencyProvider
-{
-    /**
-     * @return array<\SprykerShop\Yves\MerchantProductOfferWidgetExtension\Dependency\Plugin\MerchantProductOfferCollectionExpanderPluginInterface>
-     */
-    protected function getMerchantProductOfferCollectionExpanderPlugins(): array
-    {
-        return [
-            new MerchantProductMerchantProductOfferCollectionExpanderPlugin(),
-        ];
-    }
-}
-```
-
 {% info_block warningBox "Verification" %}
 
 Make sure that a default product offer is given when retrieving product concrete data.
@@ -1452,8 +1430,6 @@ Make sure that when a merchant gets updated or published, or when a product offe
 It means the following:
 1. If a merchant gets deactivated, `ProductAbstract`s that were on the catalog search only because they had a product offer from that merchant get removed.
 2. If a product offer gets created, and the `ProductAbstract` related to it was not available on catalog search, it would be available now.
-
-Make sure that merchant product can be found by sku and added to Cart with proper merchant
 
 {% endinfo_block %}
 
@@ -1611,3 +1587,5 @@ Make sure that the following widgets were registered:
 | Marketplace Product Offer + Cart | | [Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-cart-feature-integration.html) |
 | Marketplace Product Offer + Checkout | | [Marketplace Product Offer + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-checkout-feature-integration.html) |
 | Marketplace Product Offer + Prices | | [Marketplace Product Offer + Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html) |
+| Marketplace Product Offer + Catalog | | [Marketplace Product Offer + Catalog feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-catalog-feature-integration.html)                     |
+| Marketplace Product Offer + Quick Add to Cart | | [Marketplace Product Offer + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-quick-add-to-cart-feature-integration.html) |

@@ -1401,10 +1401,10 @@ Make sure that the configured data has been added to the `spy_glossary` table in
 
 Register the following plugins to enable widgets:
 
-| PLUGIN                | DESCRIPTION | PREREQUISITES | NAMESPACE |
-|-----------------------| --------------- |---------------| ---------------- |
-| SoldByMerchantWidget  | Shows the list of the offers with their prices for a concrete product. |               | SprykerShop\Yves\MerchantWidget\Widget |
-| MerchantSearchWidget  | Provides a widget to render a merchants filter. |               | SprykerShop\Yves\MerchantSearchWidget\Widget |
+| PLUGIN                | DESCRIPTION                                                            | PREREQUISITES | NAMESPACE                                    |
+|-----------------------|------------------------------------------------------------------------|---------------|----------------------------------------------|
+| SoldByMerchantWidget  | Shows the list of the offers with their prices for a concrete product. |               | SprykerShop\Yves\MerchantWidget\Widget       |
+| MerchantSearchWidget  | Provides a widget to render a merchants filter.                        |               | SprykerShop\Yves\MerchantSearchWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -1432,6 +1432,11 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     }
 }
 ```
+{% info_block warningBox "Verification" %}
+
+Make sure that both Quick Order Page and Shopping List page have "Merchant Selector" dropdown with all merchants that have the status "Active".
+
+{% endinfo_block %}
 
 Enable Javascript and CSS changes:
 

@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-wishlist.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-wishlist.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-wishlist.html
+  - /module_migration_guides/mg-wishlist.htm
 related:
   - title: Migration guide - Cart
     link: docs/scos/dev/module-migration-guides/migration-guide-cart.html

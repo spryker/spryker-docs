@@ -2,6 +2,8 @@
 title: Bazaarvoice
 description: Find out how you can integrate and use Bazaarvoice in your Spryker shop
 template: howto-guide-template
+redirect_from:
+   - docs/aop/user/apps/bazaarvoice.html
 ---
 
 The [Bazaarvoice](https://www.bazaarvoice.com/) app lets you collect and add user-generated content (UGC) to your product pages. 

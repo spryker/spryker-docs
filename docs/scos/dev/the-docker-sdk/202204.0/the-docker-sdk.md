@@ -64,8 +64,8 @@ The `up` command of the Docker SDK does the following:
       1. Removes the sync volume
       2. Terminates Mutagen
       3. Creates the volume
-   2. Builds app images in CLI with the `docker build` command.
-   3. Tags application images with the `docker tag` command.
+   2. Builds app images in CLI with the `docker/sdk build` command.
+   3. Tags application images with the `docker/sdk tag` command.
    4. Mounts codebase with the following commands:
       - `install composer`
       - `install -s build`
@@ -74,7 +74,6 @@ The `up` command of the Docker SDK does the following:
       - `install -s build-static`
       - `build-static-{mode}`
    6. Builds frontend and gateway containers from an nginx image.
-
 2. Runs containers:
    1. Runs before stack
    2. Runs containers
@@ -86,6 +85,81 @@ The `up` command of the Docker SDK does the following:
    4. Initiates storages for each store with the `install -s init_storages_per_store` command. 
    5. If the database does not exist, creates it on MySQL or PostreSQL container.
 4. Starts a scheduler for each region and store with the command `install -s scheduler-setup`
+
+## Other docker/sdk commands
+
+The `docker/sdk run` or `start` command does the following:
+ - docker-compose up -d
+ - docker-compose restart frontend, gateway
+ - waits until services are up and running
+
+The `docker/sdk stop` program stops running containers with the `docker-compose stop` program.
+
+The `docker/sdk restart` command does the following:
+ - Executes the `docker/sdk stop` command.
+ - Executes the `docker/sdk start` command.
+
+The `docker/sdk install` command prints information about what needs to be done to complete the installation. For example, how to add hosts to the `/etc/hosts` file, information about warnings regarding incompatible OS or software, etc.
+
+The `docker/sdk down` command executes `docker-compose down`, which stops and removes containers and networks.
+
+The `docker/sdk prune` command does the following:
+- Executes the `docker-compose down -v` command.
+- Executes the `docker prune` command for images, volumes, system, and builder.
+
+The `docker/sdk reset`  command does the following:
+- executes `docker-compose down -v`
+- executes `docker/sdk up --build --assets --data --jobs`
+
+The `docker/sdk clean-data` command stops and removes the following containers and volumes with  `docker-compose down -v`:
+- logs
+- `/data` folder for Zed, Yves, Glue
+- broker data: `/var/lib/rabbitmq`
+- session and key-value data: `/data`
+- search data: `/usr/share/elasticsearch/data`
+- scheduler data
+
+The `docker/sdk trouble` command does the following:
+* executes `docker-compose down`
+* cleans sync volumes for `docker-sync`
+
+The `docker/sdk build` command builds the following:
+- Images: executes the `docker build` command for app and nginx images; builds codebase and assets.
+- Codebase: executes `composer install`, `install -s build`, `build-{mode}`.
+- Assets: executes `install -s build-static`, `build-static-{mode}`.
+
+The `docker/sdk pull` command executes `docker-compose pull` which pulls all the external images, based on `docker-compose.yml`.
+
+The `docker/sdk demo` command does the following:
+ - Executes the `docker-compose up -d` command.
+ - Runs the demo data installation process for each region.
+
+The `docker/sdk export images {tag}` command is only for the baked mode. It does the following:
+ - Builds and tags docker application images.
+ - Builds assets builder docker image based on assetsBuilder and Cli image). Runs `vendor/bin-install -s build-static build-static-{mode}`.
+ - Builds and tags frontend images.
+ - Prints information about the built images.
+
+
+## Development environment
+The following schema illustrates development environment within the Docker SDK:
+![development-environment](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/the-docker-sdk/the-docker-sdk/development-environment.png)
+
+In the development environment, Gateway (nginx) does the following:
+
+* Accepts all public HTTP requests
+* Handles SSL connections
+* Serves all non-application services
+* Proxies application calls to Frontend (nginx)
+
+Frontend (nginx) ? HTTP -> FastCGI proxy for (glue, yves, zed) and serves assets.
+
+## Docker images
+The following schemas illustrate the Docker images:
+![docker-image-nesting](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/the-docker-sdk/the-docker-sdk/Docker-image-nesting.png)
+
+Docker images and containers:
+![docker-images-and-containers](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/the-docker-sdk/the-docker-sdk/Docker-files-inheritance.png)
 
 
 

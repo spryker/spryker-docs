@@ -2,6 +2,8 @@
 title: Glue API - REST Schema Validation feature integration
 description: This guide will navigate you through the process of installing and configuring the REST Schema Validation feature in Spryker OS.
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-rest-schema-validation-feature-integration.html
 ---
 
 Follow the steps below to install Rest schema validation feature API.
@@ -10,9 +12,7 @@ Follow the steps below to install Rest schema validation feature API.
 
 To start feature integration, overview and install the necessary features:
 
-
-
-| Name | Version | Integration guide |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
 
@@ -29,7 +29,7 @@ composer require spryker/rest-request-validator:"^1.0.0" --update-with-dependenc
 
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | RestRequestValidator | vendor/spryker/rest-request-validator |
 
@@ -44,7 +44,7 @@ Set up the following behaviors.
 
 Activate the console command provided by the module:
 
-| Class | Specification | Prerequisites | Namespace |
+| CLASS | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | BuildValidationCacheConsole | Generates a validation cache that is required for request validation | None | 	Spryker\Zed\RestRequestValidator\Communication\Console |
 
@@ -112,7 +112,7 @@ Make sure that cache has been generated successfully. To do so, verify the conte
 
 Activate the following plugin(s):
 
-| Plugin | Specification | Prerequisites | Namespace |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ValidateRestRequestAttributesPlugin | Validates the `request attributes` section of `POST` and `PATCH` methods. | None | Spryker\Glue\RestRequestValidator\Plugin |
 

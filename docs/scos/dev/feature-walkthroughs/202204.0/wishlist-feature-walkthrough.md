@@ -3,6 +3,8 @@ title: Wishlist feature walkthrough
 last_updated: Aug 19, 2021
 description: The Wishlist feature allows customers to track and save the products they wish to purchase through the wish list
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202200.0/wishlist-feature-walkthrough.html
 ---
 
 The _Wishlist_ feature allows customers to track and save the products they wish to purchase through the wish list. Customers can create multiple wish lists and customize their names.

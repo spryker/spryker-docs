@@ -10,18 +10,20 @@ redirect_from:
   - /2021080/docs/en/cart-integration
   - /docs/cart-integration
   - /docs/en/cart-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/cart-integration.html
 ---
 
 {% info_block infoBox %}
 
 This article describes how to add product variants and product images to an existing cart.
+
 {% endinfo_block %}
 
-## Prerequisites:
+## Prerequisites
 
 Before starting make sure you are familiar with the concept of Spryker Super Attributes.
 
-## UI Changes:
+## UI Changes
 
 Cart now supports changing the items in the cart by modifying their attributes. If we have a wrong T-Shirt size in the cart we will be able to change it.
 

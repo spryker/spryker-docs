@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/inventory-management-feature-integration
   - /docs/inventory-management-feature-integration
   - /docs/en/inventory-management-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/inventory-management-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/inventory-management-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/inventory-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/inventory-management-feature-integration.html
 related:
   - title: Inventory Management feature overview

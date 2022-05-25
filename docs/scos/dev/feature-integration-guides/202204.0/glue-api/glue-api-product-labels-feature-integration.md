@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-product-labels-feature-integration
   - /docs/glue-api-product-labels-feature-integration
   - /docs/en/glue-api-product-labels-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-product-labels-feature-integration.html
 related:
   - title: Accessing Product Labels
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-product-labels.html
@@ -81,14 +82,14 @@ Activate the following plugin:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication\ProductLabelsRelationshipByResourceIdPlugin;
 use Spryker\Glue\ProductLabelsRestApi\Plugin\GlueApplication\ProductLabelsResourceRoutePlugin;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -100,7 +101,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new ProductLabelsResourceRoutePlugin(),
         ];
     }
- 
+
     /**
     * @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
     *
@@ -113,7 +114,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             ProductsRestApiConfig::RESOURCE_ABSTRACT_PRODUCTS,
             new ProductLabelsRelationshipByResourceIdPlugin()
         );
- 
+
         return $resourceRelationshipCollection;
     }
 }

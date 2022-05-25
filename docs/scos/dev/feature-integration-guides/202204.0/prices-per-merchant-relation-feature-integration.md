@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/prices-per-merchant-relation-integration
   - /docs/prices-per-merchant-relation-integration
   - /docs/en/prices-per-merchant-relation-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/prices-per-merchant-relation-feature-integration.html
 ---
 
 The Price per Merchant Relation feature is shipped with the following modules:

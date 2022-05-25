@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/file-details-category-storecsv
   - /docs/file-details-category-storecsv
   - /docs/en/file-details-category-storecsv
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html
+  - /docs/scos/dev/data-import/201903.0/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html
+  - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html
+  - /docs/scos/dev/data-import/202005.0/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html
 ---
 
 This document describes the `category_store.csv` file to configure assignments of categories in your Spryker shop.

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/quick-add-to-cart-discontinued-products-feature-integration
   - /docs/quick-add-to-cart-discontinued-products-feature-integration
   - /docs/en/quick-add-to-cart-discontinued-products-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/quick-add-to-cart-discontinued-products-feature-integration.html
 ---
 
 ## Install feature core
@@ -60,7 +61,7 @@ class QuickOrderDependencyProvider extends SprykerQuickOrderDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make the following checks at `https://mysprykershop.com/quick-order`:
-* `ProductDiscontinuedItemValidatorPlugin`validates discontinued products. 
+* `ProductDiscontinuedItemValidatorPlugin`validates discontinued products.
 * Provide the SKU of a discontinued product on the **Quick Add To Cart** page and verify that the error message is displayed and you are not allowed to work with this product.
-  
+
 {% endinfo_block %}

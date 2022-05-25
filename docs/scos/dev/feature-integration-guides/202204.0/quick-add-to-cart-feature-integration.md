@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/quick-order-feature-integration
   - /docs/quick-order-feature-integration
   - /docs/en/quick-order-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/quick-add-to-cart-feature-integration.html
 ---
 ## Install feature core
 

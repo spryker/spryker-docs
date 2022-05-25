@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/glue-api-cart-feature-integration
   - /docs/glue-api-cart-feature-integration
   - /docs/en/glue-api-cart-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-cart-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-cart-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-cart-feature-integration.html
 related:
   - title: Managing Guest Carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
@@ -53,9 +56,9 @@ Ensure that the following modules have been installed:
 Apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate 
-console propel:install 
-console transfer:generate 
+console transfer:generate
+console propel:install
+console transfer:generate
 ```
 
 {% info_block warningBox "Verification" %}
@@ -119,7 +122,7 @@ Ensure that, in the `spy_quote` table, the `uuid` field is populated for all the
 ```sql
 SELECT COUNT(*) FROM spy_quote WHERE uuid IS NULL;
 ```
-The result should be `0 records`. 
+The result should be `0 records`.
 
 {% endinfo_block %}
 
@@ -130,7 +133,7 @@ Activate the following plugin:
 | PLUGIN   | SPECIFICATION  | PREREQUISITES | NAMESPACE   |
 | ---------------- | ---------------- | ------------ | ------------- |
 | AnonymousCustomerUniqueIdValidatorPlugin | Validates a REST resource request before processing it. Checks if `X-Anonymous-Customer-Unique-Id` header is set and can be used for requested resource.  |               | Spryker\Glue\CartsRestApi\Plugin\Validator |
- 
+
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -218,7 +221,7 @@ Activate the following plugins:
 
 {% info_block infoBox %}
 
-There are two cart behavior strategies: single cart and multicart. Unlike the single-cart behavior, the multicart one allows creating more than one cart for a customer. Depending on the selected strategy, from the plugin pairs in the table below, wire only one plugin into the respective provider. 
+There are two cart behavior strategies: single cart and multicart. Unlike the single-cart behavior, the multicart one allows creating more than one cart for a customer. Depending on the selected strategy, from the plugin pairs in the table below, wire only one plugin into the respective provider.
 
 {% endinfo_block %}
 
@@ -345,7 +348,7 @@ Ensure that the `guest-cart-items` resource relationship is registered as a rela
 
 {% endinfo_block %}
 
- 
+
 
 {% info_block warningBox "Verification" %}
 
@@ -378,7 +381,7 @@ class CustomersRestApiDependencyProvider extends SprykerCustomersRestApiDependen
 
 {% endinfo_block %}
 
- 
+
 
 
 {% info_block warningBox "Verification" %}
@@ -465,4 +468,3 @@ To verify that `Spryker\Zed\CartsRestApi\Communication\Plugin\CartsRestApi\Quote
 ```
 
 {% endinfo_block %}
-

@@ -10,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/gift-cards-feature-integration
   - /docs/gift-cards-feature-integration
   - /docs/en/gift-cards-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/gift-cards-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/gift-cards-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/gift-cards-feature-integration.html
 ---
 

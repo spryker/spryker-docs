@@ -10,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/product-images-overview
   - /docs/product-images-overview
   - /docs/en/product-images-overview
+  - /v1/docs/image-hosting
+  - /v1/docs/video-embedding
 ---
 
 *Product Images* make your shop more appealing and give your customers a better idea of what they are buying. The feature lets you group several images into sets and link them to products. One product can have several named and localized sets of images, for example, to present standard or seasonal highlights.

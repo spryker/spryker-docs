@@ -33,7 +33,7 @@ CMS templates are usually project-specific. To create them, some Storefront desi
 
 CMS page template is a [Twig](https://twig.symfony.com/) file that, when applied to a Storefront page, defines its design and layout.
 
-To learn how the template is created, check the exemplary procedure below.
+To learn how the template is created, check the following exemplary procedure:
 
 1. Create the Twig template—`src/Pyz/Shared/Cms/Theme/default/templates/contact_page.twig`:
 

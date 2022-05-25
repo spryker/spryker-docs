@@ -16,11 +16,11 @@ redirect_from:
 
 The following example represents a real-world scenario: `CustomerRegistration`.
 
-A customer goes through the registration process in your frontend (Yves) and all customer information is sent to Zed. Zed uses the information to register the customer. Once the registration is completed, the customer will receive a confirmation email.
+A customer goes through the registration process in your frontend (Yves) and all customer information is sent to Zed. Zed uses the information to register the customer. Once the registration is completed, the customer receives a confirmation email.
 
 ## 1. Handling mail usage
 
-In the model which handles the registration, you can override the  `sendRegistrationToken` function:
+In the model which handles the registration, you can override the `sendRegistrationToken` function:
 
 ```php
 <?php
@@ -102,7 +102,7 @@ class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
 }
 ```
 
-All MailTransfers need to know which mail type (nothing more than a string) must be used for further internal processing.
+All `MailTransfers` need to know which mail type (nothing more than a string) must be used for further internal processing.
 
 A minimalistic example could look like this:
 
@@ -342,7 +342,7 @@ protected function setTextTemplate(MailBuilderInterface $mailBuilder)
 }
 ```
 
-The provider determines the template final look. It can contain a plain text, HTML, etc. For example, you can even have a template which generates JSON:
+The provider determines the template final look. It can contain a plain text, or HTML. For example, you can even have a template which generates JSON:
 
 ```twig
 {
@@ -360,7 +360,7 @@ In this example, you have a plain text template with:
 
 The templates must be placed within the module's Presentation layer. In our example `src/Pyz/Zed/Customer/Presentation/Mail/customer_registration.text.twig`, you can use the same trans filter as used with Yves and Zed templates.
 
-`TwigRenderer` is the default renderer, but you can add your own Renderer by implementing the `RendererInterface`.
+`TwigRenderer` is the default renderer, but you can add your own renderer by implementing the `RendererInterface`.
 
 We also provide a basic layout file where you can inject concrete content files to. If you want to build your own layout, you need to have the following in your template:
 
@@ -384,4 +384,4 @@ For HTML messages you need to have this in your layout file:
 {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
 ```
 
-When you complete the steps, call `MailFacade::handleMail()` to activate the mail functionality.
+When you complete the steps, to activate the mail functionality, call `MailFacade::handleMail()`.

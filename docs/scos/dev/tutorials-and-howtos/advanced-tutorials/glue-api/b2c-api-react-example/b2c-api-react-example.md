@@ -40,7 +40,7 @@ The application has been developed for four primary purposes:
 
 {% info_block errorBox %}
 
-The shop is provided only for display purposes, and should under no circumstances be used as a starting point for any project.
+The shop is provided only for display purposes, and must under no circumstances be used as a starting point for any project.
 
 {% endinfo_block %}
 
@@ -77,8 +77,8 @@ For detailed installation steps, see [B2C API React Example Installation](/docs/
 
 After installing and running the example app, you can try its functionality. Depending on how you installed it, the shop will be available at:
 
-* `http://glue.de.b2c-demo-shop.local/react/` - when installed it in the VM;
-* `http://react.local` - when installed on a separate web server.
+* `http://glue.de.b2c-demo-shop.local/react/`—when installed it in the VM;
+* `http://react.local`—when installed on a separate web server.
 
 To get a list of Glue API requests that were used to build a page:
 

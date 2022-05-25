@@ -321,13 +321,13 @@ To see what is supported by Spryker’s template, refer to `CatalogDependencyPro
 
 {% endinfo_block %}
 
-Response structure for search suggestions should be investigated in the similar way.
+Response structure for search suggestions must be investigated in the similar way.
 
 <a name="populate"></a>
 
 ### Populating Fact Finder with product data
 
-To handle search update events, follow the instructions below.
+To handle search update events, use the instructions from the following sections.
 
 
 #### 1. Adjust the Adapter plugin
@@ -370,10 +370,10 @@ To achieve this, change schema for the search documents in `spy_product_page_sea
 
 To load and map data properly, you might have to adjust data loaders, expanders, and mappers in `ProductPageSearchDependencyProvider`, both for product abstract and product concrete.
 
-Having completed these steps, you should have the search engine integrated into your project.
+Having completed these steps, you the search engine must be integrated into your project.
 
 ## Using search service provider in Glue API
 
-The current version of catalog-search in Glue has more requirements for the response.
+The current version of the catalog search in Glue has more requirements for the response.
 
-It expects that `sort` value in the response supports `toArray` function and contains fields `sortParamNames`, `sortParamLocalizedNames`, `currentSortParam`, `currentSortOrder`. As a reference, use the `RestCatalogSearchSortTransfer` transfer object
+It expects that `sort` value in the response supports `toArray` function and contains `sortParamNames`, `sortParamLocalizedNames`, `currentSortParam`, and `currentSortOrder` fields. As a reference, use the `RestCatalogSearchSortTransfer` transfer object.

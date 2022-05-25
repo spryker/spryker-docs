@@ -18,7 +18,7 @@ Sometimes, after experimenting or getting unexpected behavior from the docker/sd
 
 {% info_block warningBox "Data removal" %}
 
-By following the instructions below, you remove all the Docker data.
+To remove all the Docker data, use the following instructions.
 
 {% endinfo_block %}
 

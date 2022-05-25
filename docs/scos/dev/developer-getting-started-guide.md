@@ -63,6 +63,7 @@ You can choose from the following options:
 * Separate [Features](/docs/scos/user/features/{{site.version}}/features.html) and modules - you can also expand both Demo Shops with separate features and modules.
 
 ### Installing Spryker with Docker
+
 We recommend starting with a Docker SDK environment. This option includes Docker and related tools to build images and run containers that match your requirements.
 
 It features a lightweight environment that is closer to production implementation.
@@ -75,11 +76,11 @@ For the local environment, use the [deploy.dev.yml](/docs/scos/dev/the-docker-sd
 
 In the default deploy file, change the following attributes:
 
- - Namespace: We recommend specifying the name for your project, as this helps to avoid issues when you have two or more projects with the same names.
- - Regions.
- - Stores.
- - Domains for the local environment.
- - Domains for the services (RabbitMQ, Jenkins): Optional, but this can help to keep all project links together.
+ - Namespace: We recommend specifying the name for your project, as this helps to avoid issues when you have two or more projects with the same names
+ - Regions
+ - Stores
+ - Domains for the local environment
+ - Domains for the services (RabbitMQ, Jenkins): Optional, but this can help to keep all project links together
 
 #### Vagrant clean up
 
@@ -94,7 +95,7 @@ Spryker Commerce OS comes with a Virtual Machine that has all the prerequisites 
 Choose an installation guide that suits your needs best:
 
 
-| Operating system | B2B Shop or B2C Shop |
+| OPERATION SYSTEMS | B2B SHOP OR B2C SHOP |
 | --- | --- |
 | DevVM on Linux / Mac OS | [B2B or B2C Demo Shop installation: Mac OS or Linux, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html) |
 | DevVM on Windows | [B2B or B2C Demo Shop installation: Windows, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-without-development-virtual-machine-or-docker.html) |
@@ -113,7 +114,7 @@ After installing, make sure to have a look at [Post-Installation steps and addit
 After you install the project, adjust the readme.md file as follows:
 
  - Update the project installation description.
- - Update the repository link. 
+ - Update the repository link.
  - Remove the unused information, for example, Vagrant installation instructions if you don't use the DevVM.
  - Consider moving the production information down, as this can help new developers easily understand how to use the project.
 
@@ -129,7 +130,7 @@ To define your strategy of taking Spryker updates, learn about our [module and f
 We use [Composer](/docs/scos/dev/setup/managing-scos-dependencies-with-composer.html) to install and manage module dependencies.
 Run the following Composer commands depending on what you want to do:
 * To install the dependencies you listed in the `composer.json` file of the project: `composer install`.
-*  To update all the modules for your project: `composer update "spryker/*"`.
+* To update all the modules for your project: `composer update "spryker/*"`.
 
 {% info_block infoBox %}
 
@@ -138,7 +139,7 @@ We recommend running this command weekly to assert you have the latest fixes. We
 {% endinfo_block %}
 
 *  To update a particular module: `composer update "spryker/module-name"`. You can easily keep track of new module versions using the [composer-versions-check](https://github.com/Soullivaneuh/composer-versions-check) addon for your local Composer tool.
-*  To add a new module to your project: `composer require "spryker/module-name"`
+*  To add a new module to your project: `composer require "spryker/module-name"`.
 
 See [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) to learn about the module versioning approach in Spryker.
 
@@ -163,7 +164,7 @@ This step depends on the store setup which you plan to have. If you start with o
  - `config/install/*`
  - `data/import/*`
  - `deploy.dev.yml`
- - `config_default.php` 
+ - `config_default.php`
  - `src/SprykerConfig/CodeBucketConfig.php`
 
 ### Data import clean up
@@ -172,7 +173,7 @@ In the `data/import` folder, there are many files related to each store. Define 
 
 {% info_block infoBox "Info" %}
 
-Keep in mind that you should also change the default config in `DataImportConfig::getDefaultYamlConfigPath()`.
+Keep in mind that you must also change the default config in `DataImportConfig::getDefaultYamlConfigPath()`.
 
 {% endinfo_block %}
 
@@ -209,6 +210,7 @@ To disable a rule, you can use configuration. The following example excludes a r
 </rule>
 ```
 ### PhpStan
+
 For PHPStan, we recommend using version 1.2.* or later. These versions help you avoid memory and other issues.
 
 On a project level, you can enable rule level 6:
@@ -233,7 +235,7 @@ To disable cache indexing, in the PhpStorm, right click on the folder and select
 
 It is safe to disable cache indexing in the following files:
  - `data/cache `
- - `data/tmp` 
+ - `data/tmp`
  - `public/(Yves/Zed/Marketlace)/assets`
 
 ## 7. Debugging
@@ -243,7 +245,9 @@ Before you start developing, set up and get to know your debugging environment. 
 * [Configuring debugging in DevVM](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html)
 
 {% info_block infoBox %}
+
 In a production setup, Zed must be covered with a VPN, Basic Auth or IP whitelisting.
+
 {% endinfo_block %}
 
 ## 8. Familiarize yourself with the Spryker architecture

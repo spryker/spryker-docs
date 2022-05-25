@@ -25,7 +25,7 @@ redirect_from:
 
 Spryker Jarvis is meant mostly for developers working on the Spryker projects who want to get a clear view of what it takes to update their project to the latest product release version of Spryker. The tools can also be useful for project managers, as it answers the question “How outdated is the project?“ and helps to estimate efforts to update the project.
 
-This article will teach you how to install and use the Spryker Jarvis tool for analysis and upgrade of your project.
+This document shows how to install and use the Spryker Jarvis tool for analysis and upgrade of your project.
 
 ## Prerequisites
 Before you can install Spryker Jarvis, make sure that you have:
@@ -34,6 +34,7 @@ Before you can install Spryker Jarvis, make sure that you have:
 * [NodeJS installed.](https://nodejs.org/en/download)  
 
 ## Installation
+
 To install Spryker Jarvis:
 
 1. Fork/Clone/Download [Spryker Jarvis repository](https://github.com/spryker/jarvis).
@@ -55,9 +56,9 @@ Open `http://localhost:7777` in your browser and enjoy the migration analysis.
 ## Jarvis views
 Depending on your project’s specifics and your goals, you can use various migration views available in Jarvis and take necessary actions. There are three views:
 
-* *Basic* view - for migrating to a newer product release.
-* *No-features* view - for upgrading your project modules to their current major and minor versions.
-* *Missing-features* view - for upgrading your project with the compatible Spryker features.
+* *Basic* view—for migrating to a newer product release.
+* *No-features* view—for upgrading your project modules to their current major and minor versions.
+* *Missing-features* view—for upgrading your project with the compatible Spryker features.
 
 <a name="basic"></a>
 

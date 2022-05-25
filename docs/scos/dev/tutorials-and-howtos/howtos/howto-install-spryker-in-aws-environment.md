@@ -37,7 +37,7 @@ The first thing you need to do to install Spryker in AWS is to configure the fol
 * Elasticsearch Service
 * ElastiCache
 
-Follow the guidelines below to create and configure the services.
+To create and configure the services, follow these guidelines:
 
 ### Security group
 
@@ -172,7 +172,7 @@ To install and configure EC2 instance, you need to:
 * Configure Elastic IP
 * Connect to the Instance
 
-Follow the guidelines below to perform these actions.
+To perform these actions, follow these guidelines:
 
 ### Creating the SSH key
 
@@ -254,7 +254,7 @@ To connect to the instance, do the following:
 
 ## Installing additional software
 
-You need to install and configure additional software to install Spryker in AWS. Follow the guidelines below for instructions.
+To install Spryker in AWS, install and configure additional software. Use the following guidelines for instructions.
 
 ### System tools installation
 
@@ -1911,7 +1911,7 @@ List of connections:
 
 ## AWS services Setup validation: RDS latency check
 
-Perform RDS LatencyCheck by running the commands below.
+Perform RDS LatencyCheck by running the following commands.
 
 ## AWS services Setup validation: PostgreSQL
 

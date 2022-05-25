@@ -32,7 +32,7 @@ This document describes flow of the product data from importing it to the SQL da
 
 Products are imported in the SQL database through the `Importer` module. The product details are parsed from CSV files, from where they are processed and inserted in the SQL database. This step is done when installing the application, after the database is created, when running the `./setup -i` script.
 
-The products can also be imported separately, by running the dedicated command below:
+The products can also be imported separately, by running the following dedicated command:
 
 ```bash
 vendor/bin/console data:import:product-abstract

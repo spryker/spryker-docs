@@ -1,5 +1,5 @@
 ---
-title: "HowTo - Replace key-value storage with database"
+title: "HowTo: Replace key-value storage with database"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-replace-key-value-storage-with-database
@@ -31,22 +31,22 @@ The regular Publish & Synchronization flow has two steps:
 1. **Publish** the denormalized data to storage tables located in the database;
 2. **Synchronize** the data to the key-value storage (Redis) with the help of dedicated queues.
 
-In the diagram below, you can see a typical implementation of Publish & Synchronization, where the high-level *StorageExtension* module is configured to work on top of the *StorageRedis* module. The latter handles all low-level read/write operations on the Redis as storage.
+In the following diagram, you can see a typical implementation of Publish & Synchronization, where the high-level `StorageExtension` module is configured to work on top of the `StorageRedis` module. The latter handles all low-level read/write operations on the Redis as storage.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+Disable+Key-value+Storage+and+use+the+Database+Instead/p-and-s-diagram.png)
-Key-Value Storage Bypass works by disabling the synchronization step and reading data directly from the database. This is done by using the newly created StorageDatabase module instead of *StorageRedis*.
+Key-Value Storage Bypass works by disabling the synchronization step and reading data directly from the database. This is done by using the newly created `StorageDatabase` module instead of `StorageRedis`.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+Disable+Key-value+Storage+and+use+the+Database+Instead/key-value+bypass.png)
-This new module is responsible for interacting with the database in read-only mode and fetching the necessary data directly from storage tables. This makes the key-value storage unnecessary, allowing projects to avoid it. Any number of other vendor-specific modules can be created by providing implementations for interfaces from the *StorageExtension* module. The same is true for StorageDatabase except that it interacts with the database.
+This new module is responsible for interacting with the database in read-only mode and fetching the necessary data directly from storage tables. This makes the key-value storage unnecessary, allowing projects to avoid it. Any number of other vendor-specific modules can be created by providing implementations for interfaces from the `StorageExtension` module. The same is true for `StorageDatabase` except that it interacts with the database.
 
 {% info_block errorBox %}
 
-There are two limitations of using the database as storage on Yves compared to the default storage engine. Scenarios, when Yves actually writes data to storage, are:
+There are two limitations of using the database as storage on Yves compared to the default storage engine. Scenarios, when Yves actually writes data to storage, are as follows:
 
-- Caching of requests to storage: while using the database as storage it is not possible to cache anything in Yves at the moment
+- Caching of requests to storage: while using the database as storage it is not possible to cache anything in Yves at the moment.
 - Concurrent requests and caching for the Glue API.
 
 {% endinfo_block %}
 
-Out of the box, the `StorageDatabase` module can work with two RDBS vendors - MySQL or MariaDB and PostgreSQL. But you can add support for any other database by providing the implementation for `Spryker\Client\StorageDatabaseExtension\Storage\Reader\StorageReaderInterface` as described below.
+Out of the box, the `StorageDatabase` module can work with two RDBS vendors - MySQL or MariaDB and PostgreSQL. However, you can add support for any other database by providing the implementation for `Spryker\Client\StorageDatabaseExtension\Storage\Reader\StorageReaderInterface` as described in the following sections.
 
 ## Installation
 
@@ -141,7 +141,7 @@ By changing `isSynchronizationEnabled` to false you disable the synchronization 
 
 {% endinfo_block %}
 
-3. Run the propel install command and sync for storage data to apply all the changes to entities:
+3. To apply all the changes to entities, install command and sync for storage data:
 
 ```bash
 vendor/bin/console propel:install
@@ -195,7 +195,7 @@ class EntityTagsRestApiConfig extends SprykerEntityTagsRestApiConfig
 
 6. Configure resource to storage table mapping. Unlike Redis, in RDBMs the data is stored across different tables. The correct storage table name for a resource is resolved from a resource key, by which the data is fetched.
 
-For example, by default (with no mappings) the key `product_concrete:de_de:1` would be translated into `spy_product_concrete_storage` - the default prefix is `spy`, the default suffix is `storage`, and the actual name of the table is taken from the resource key prefix - `product_concrete` in this case. You can adjust the process of resolving the table name, should you need to do so. Say, if in the example above the data for  key `product_concrete:de_de:1` needs to be fetched from the tabled named `pyz_product_foo` instead, you need to configure the corresponding mapping:
+For example, by default (with no mappings) the key `product_concrete:de_de:1` would be translated into `spy_product_concrete_storage` - the default prefix is `spy`, the default suffix is `storage`, and the actual name of the table is taken from the resource key prefix—`product_concrete` in this case. You can adjust the process of resolving the table name, should you need to do so. Say, if in the example above the data for  key `product_concrete:de_de:1` needs to be fetched from the tabled named `pyz_product_foo` instead, you need to configure the corresponding mapping:
 
 **Pyz\Client\StorageDatabase\StorageDatabaseConfig**
 
@@ -228,7 +228,7 @@ The top level key here, `product_concrete`, is the resource key prefix. Any of t
 
 ## Enabling the storage database
 
-Adjust the Storage module's dependency provider as shown below:
+Adjust the Storage module's dependency provider as follows:
 
 **Pyz\Client\StorageDatabase\StorageDatabaseConfig**
 

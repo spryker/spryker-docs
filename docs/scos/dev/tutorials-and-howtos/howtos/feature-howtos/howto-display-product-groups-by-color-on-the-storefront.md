@@ -149,7 +149,7 @@ class ProductAbstractWriterStep extends PublishAwareStep implements DataImportSt
 ## Demo data preparation
 
 Prepare the demo data for the color code field:
-1. Add the `color_code` field to the product abstract data import. The provided data below can be used as an example.
+1. Add the `color_code` field to the product abstract data import. The following provided data can be used as an example:
 
 **data/import/icecat_biz_data/product_abstract.csv**
 

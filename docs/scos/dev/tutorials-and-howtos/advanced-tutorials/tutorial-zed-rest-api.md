@@ -64,7 +64,7 @@ It is advised to recap the following topics before starting the challenge:
 
 {% info_block infoBox %}
 
-Code snippets below are stripped of doc strings and comments to minimize footprint, it is advised to always correctly specify method signatures to take advantage of IDE autocompletion.
+The following code snippets are stripped of doc strings and comments to minimize footprint. We recommend always correctly specifying method signatures to take advantage of IDE autocompletion.
 
 {% endinfo_block %}
 

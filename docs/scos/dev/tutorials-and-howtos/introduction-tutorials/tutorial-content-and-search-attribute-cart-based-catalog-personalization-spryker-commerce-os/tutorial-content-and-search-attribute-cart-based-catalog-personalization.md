@@ -45,7 +45,7 @@ Full-text search engines like Elasticsearch provide a possibility to influence s
 
 In this challenge, we will try to affect the scoring function based on products that are already in the cart.
 
-To solve the challenge, follow the instructions below.
+To solve the challenge, use the instructions from the following sections.
 
 ### 1. Prepare the search query plugin
 

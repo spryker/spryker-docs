@@ -64,11 +64,11 @@ As mentioned above, decimals are immutable. This means that arithmetic operation
 
 ## Using a decimal value object in arithmetic, comparing, casting, and rounding operations
 
-Decimal objects can use decimal objects, plain integers, and string values. They support not only arithmetic operations but also can be used with comparing, casting, and rounding methods. Below you’ll find the explanation of each of them with some examples.
+Decimal objects can use decimal objects, plain integers, and string values. They support not only arithmetic operations but also can be used with comparing, casting, and rounding methods. The following section provides the explanation of each of them with some examples.
 
 ### Basic arithmetic operations
 
-They always return a new Decimal object using the maximum precision of the object. Below you can see examples of using Decimal objects with different arithmetic methods:
+They always return a new Decimal object using the maximum precision of the object. The following are examples of using Decimal objects with different arithmetic methods:
 
 1. **add():** Returns the sum of the decimal and the given value.
 

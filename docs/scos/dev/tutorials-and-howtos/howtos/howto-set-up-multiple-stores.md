@@ -211,7 +211,7 @@ stores:
 
 ## Configuring the deploy file
 
-According to the desired infrastructure setup, configure the deploy file for the multi-store setup. In the example below, we configure the [multi-store setup 1](#multi-store-setup-infrastructure-options): database, search engine, and key-value storage are shared:
+According to the desired infrastructure setup, configure the deploy file for the multi-store setup. In the following example, we configure the [multi-store setup 1](#multi-store-setup-infrastructure-options): database, search engine, and key-value storage are shared:
 
 <details><summary markdown='span'>Deploy file configuration for the multi-store setup 1</summary>
 

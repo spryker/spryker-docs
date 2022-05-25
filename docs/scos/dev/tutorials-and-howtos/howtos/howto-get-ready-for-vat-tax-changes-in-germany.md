@@ -24,7 +24,7 @@ In the Spryker system, the tax rate values are as follows:
 - Persisted in the placed orders, history of request for quotes, and changing the rate in the DB will neither affect these entities nor the display of the orders in Customer Account or Back Office.
 - Not persisted in the products, carts, wishlists, shopping lists. Actual Spryker's code always uses the tax rate value from the DB to perform actual calculations.
 
-To adjust the tax rates for your project, you can simply [edit tax rates in the Back Office](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/tax-rates/managing-tax-rates.html) as and when you need to. However, you can also automate the process by scheduling the tax rates update. The section below describes how to do that.
+To adjust the tax rates for your project, you can simply [edit tax rates in the Back Office](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/tax-rates/managing-tax-rates.html) as and when you need to. However, you can also automate the process by scheduling the tax rates update. The following section describes how to do that.
 
 {% info_block warningBox "Project tax customizations" %}
 

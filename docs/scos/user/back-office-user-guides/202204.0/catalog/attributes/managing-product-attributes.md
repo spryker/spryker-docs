@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-attributes
   - /docs/managing-attributes
   - /docs/en/managing-attributes
+  - /docs/scos/user/back-office-user-guides/202200.0/catalog/attributes/managing-product-attributes.html
 related:
   - title: Product Attributes
     link: docs/scos/user/features/page.version/product-feature-overview/product-attributes-overview.html

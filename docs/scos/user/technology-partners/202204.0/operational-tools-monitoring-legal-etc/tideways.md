@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/tideways
   - /docs/tideways
   - /docs/en/tideways
+  - /docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/tideways.html
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

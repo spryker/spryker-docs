@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/availability-notification-feature-integration
   - /docs/availability-notification-feature-integration
   - /docs/en/availability-notification-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201903.0/availability-notification-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/availability-notification-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202005.0/availability-notification-feature-integration.html
 ---
 
 ## Install feature core

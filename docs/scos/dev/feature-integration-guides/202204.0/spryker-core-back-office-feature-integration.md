@@ -14,6 +14,7 @@ redirect_from:
   - /2021080/docs/en/back-office-feature-integration
   - /docs/back-office-feature-integration
   - /docs/en/back-office-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/spryker-core-back-office-feature-integration.html
 ---
 
 {% info_block errorBox %}

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/optimise-it
   - /docs/optimise-it
   - /docs/en/optimise-it
+  - /docs/scos/user/technology-partners/202200.0/customer-service/optimise-it.html
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

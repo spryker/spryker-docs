@@ -58,7 +58,7 @@ Follow the steps to create the CMS blocks with the needed content:
     * Writing materials reference - *Category Banner-2*
     * Sticky notes reference - *Category Banner-3*
 
-See [Creating a CMS Block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/creating-cms-blocks.html) for more details.
+See [Create CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/create-cms-blocks.html) for more details.
 
 {% info_block warningBox "Activation" %}
 
@@ -79,7 +79,7 @@ Make sure to activate the CMS blocks. Only active CMS blocks are rendered on Sto
     * Link—`/en/stationery/paper/sticky-notes`.
     * ImageURL—`/assets/DE/default/images/category-banner-image-3@2x.jpg`.
 
-See [Editing placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-cms-blocks.html#editing-placeholders) to learn about inserting content into CMS blocks.
+See [Editing placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-placeholders-in-cms-blocks.html) to learn about inserting content into CMS blocks.
 
 
 ## Select a template with slots

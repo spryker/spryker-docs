@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/managing-discount-vouchers-in-guest-carts
   - /docs/managing-discount-vouchers-in-guest-carts
   - /docs/en/managing-discount-vouchers-in-guest-carts
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html
+  - /docs/scos/dev/glue-api-guides/201907.0/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html
 related:
   - title: Managing guest cart items
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-cart-items.html

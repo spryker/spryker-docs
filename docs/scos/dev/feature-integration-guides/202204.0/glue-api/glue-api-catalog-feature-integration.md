@@ -10,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/catalog-api-feature-integration
   - /docs/catalog-api-feature-integration
   - /docs/en/catalog-api-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-catalog-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-catalog-feature-integration.html
 ---
 
 ## Install Feature API

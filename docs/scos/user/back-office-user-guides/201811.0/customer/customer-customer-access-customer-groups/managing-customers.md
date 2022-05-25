@@ -8,6 +8,8 @@ originalArticleId: 70806e28-c52d-4e23-b001-2d43ed86169e
 redirect_from:
   - /v1/docs/managing-customers
   - /v1/docs/en/managing-customers
+  - /docs/scos/user/back-office-user-guides/201811.0/customers/customers-customer-access-customer-groups/managing-customers.html
+  - /docs/scos/user/back-office-user-guides/201811.0/customer/customers-customer-access-customer-groups/managing-customers.html
 related:
   - title: Customer Accounts
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html

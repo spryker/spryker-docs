@@ -2,6 +2,8 @@
 title: Configuring Loggly
 last_updated: Jun 16, 2021
 template: howto-guide-template
+redirect_from:
+    - /docs/scos/dev/technology-partner-guides/202200.0/operational-tools-monitoring-legal-etc/loggly/configuring-loggly.html
 ---
 
 

@@ -119,7 +119,7 @@ A content manager can [manage CMS blocks](/docs/scos/user/back-office-user-guide
 </details>
 
 
-CMS Block is a separate entity with a dedicated section in the Back Office. To learn what a content manager can do with CMS blocks in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Blocks** section, see [Managing CMS Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/managing-cms-blocks.html).
+CMS Block is a separate entity with a dedicated section in the Back Office. To learn what a content manager can do with CMS blocks in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Blocks** section, see [Creating CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/create-cms-blocks.html).
 
 
 ## Content item

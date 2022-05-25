@@ -9,6 +9,10 @@ redirect_from:
   - /2021080/docs/en/category-management-feature-integration
   - /docs/category-management-feature-integration
   - /docs/en/category-management-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/category-management-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/category-management-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/category-management-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202005.0/category-management-feature-integration.html
 ---
 
 This document describes how to integrate the [Category Management](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html) feature into a Spryker project.

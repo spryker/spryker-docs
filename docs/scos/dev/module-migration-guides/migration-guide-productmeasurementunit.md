@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productmeasurementunit.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productmeasurementunit.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productmeasurementunit.html
+  - /module_migration_guides/mg-product-measurement-unit.htm
 ---
 
 ## Upgrading from version 4.* to version 5.0.0

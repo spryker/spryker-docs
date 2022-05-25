@@ -10,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/authentication-and-authorization
   - /docs/authentication-and-authorization
   - /docs/en/authentication-and-authorization
+  - /docs/scos/dev/glue-api-guides/202005.0/authentication-and-authorization.html
+  - /docs/scos/dev/glue-api-guides/202200.0/authentication-and-authorization.html
 related:
   - title: Company Account and General Organizational Structure
     link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html

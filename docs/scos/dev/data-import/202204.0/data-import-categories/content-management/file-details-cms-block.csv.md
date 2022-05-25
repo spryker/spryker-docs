@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-cms-blockcsv
   - /docs/file-details-cms-blockcsv
   - /docs/en/file-details-cms-blockcsv
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-cms-block.csv.html
 ---
 
 This document describes the `cms_block.csv` file to configure [CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html) information on your Spryker Demo Shop.
@@ -30,7 +31,7 @@ The file should have the following parameters:
 | template_name |  | String |  | Alphabetical identifier of the slot. It will be shown in the Back Office. |
 | template_path |  | String |Must be a valid path to a twig template. | Path to the Twig file template. |
 | active |  | Boolean |<ul><li>Inactive = 0</li><li>Active = 1</li><li>If empty during the import, the block will be imported as inactive.</li></ul> | Indicates if the block is active or inactive. |
-| placeholder.title.{ANY_LOCALE_NAME}*<br>Example value: *placeholder.title.en_US* |  | String |  | Placeholder for block title, translated into the specified locale (US for our example). | 
+| placeholder.title.{ANY_LOCALE_NAME}*<br>Example value: *placeholder.title.en_US* |  | String |  | Placeholder for block title, translated into the specified locale (US for our example). |
 | placeholder.description.{ANY_LOCALE_NAME}*<br>Example value: *placeholder.description.en_US* |  | String |  | Placeholder for block description, translated into the specified locale (US for our example). |
 | placeholder.link.{ANY_LOCALE_NAME}*<br>Example value: *placeholder.link.en_US* |  | String |  | Placeholder for block link, translated into the specified locale (US for our example). |
 | placeholder.content.{ANY_LOCALE_NAME}*<br>Example value: *placeholder.content.en_US* |  | String |  | Placeholder for block content, translated into the specified locale (US for our example). |

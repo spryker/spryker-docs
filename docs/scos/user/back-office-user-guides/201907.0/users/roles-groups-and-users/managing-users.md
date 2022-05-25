@@ -8,6 +8,7 @@ originalArticleId: 0f4a3837-03b0-45d8-943a-707182c9ace1
 redirect_from:
   - /v3/docs/managing-users
   - /v3/docs/en/managing-users
+  - /docs/scos/user/back-office-user-guides/201907.0/users/managing-users/creating-users.html
 related:
   - title: Roles- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/references/roles-reference-information.html
@@ -51,7 +52,7 @@ You have already done the primary setup (you have created a role and group), so 
      {% endinfo_block %}
 
 3. Click **Create**.
-    
+
 ***
 **Tips and tricks**
 There is a way to initiate a create-new-user flow while editing a user record. To do that, on the **Edit User** page, click **Add User** in the top right corner.
@@ -59,10 +60,10 @@ There is a way to initiate a create-new-user flow while editing a user record. T
 
 ## Assigning Customers to Users
 The Assign Customers option is used to assign store customers' records to the Back office user records. This is done to enable the Back Office user to preview the CMS Pages in the online store (see [CMS Pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html#previewing-cms-pages) set of topics).
-*** 
+***
 **To assign a customer**:
 1. Navigate to the **Users** page.
-2. In the **Users List > Action** column, select **Assign Customers**. 
+2. In the **Users List > Action** column, select **Assign Customers**.
 3. In the **List of customers > Select customers to assign** table, select the check-box next to the customer you want to assign (multiple customers can be selected).
 4. Click **Save**.
 
@@ -74,7 +75,7 @@ A customer cannot be assigned to multiple users at a time.
 
 ***
 **Tips and tricks**
-To de-assign a customer: 
+To de-assign a customer:
 1. On the **Assign Customers to User** page, scroll down to the *Assigned customer*s table.
 2. Deselect the check-box next to the customer(s) that needs to become unassigned, and click **Save**.
 ***
@@ -100,7 +101,7 @@ If a user has deactivated themselves, this user will get logged out immediately 
 
 ***
 
-## Deleting a User 
+## Deleting a User
 **To delete a user:**
 1. In the **Users List > Action** column, click **Delete**.
 2. On the **Warning** page, click **Delete** to confirm the action.

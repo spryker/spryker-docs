@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/glue-api-availability-notification-feature-integration
   - /docs/glue-api-availability-notification-feature-integration
   - /docs/en/glue-api-availability-notification-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-availability-notification-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-availability-notification-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-availability-notification-feature-integration.html
 ---
 
 This document describes how to integrate the Glue API - Availability Notification feature into a Spryker project.

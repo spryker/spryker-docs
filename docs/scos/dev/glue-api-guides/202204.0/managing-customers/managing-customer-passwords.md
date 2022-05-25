@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/managing-customer-passwords
   - /docs/managing-customer-passwords
   - /docs/en/managing-customer-passwords
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-customers/managing-customer-passwords.html
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/managing-customer-passwords.html
+  - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/managing-customer-passwords.html
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/managing-customer-passwords.html
 related:
   - title: Password Management overview
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/password-management-overview.html

@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/product-packaging-unit-feature-integration
   - /docs/product-packaging-unit-feature-integration
   - /docs/en/product-packaging-unit-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/packaging-units-feature-integration.html
 ---
 
 ## Install feature core

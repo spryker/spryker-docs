@@ -11,6 +11,7 @@ redirect_from:
   - /docs/managing-company-units
   - /docs/en/managing-company-units
   - /docs/scos/user/back-office-user-guides/202204.0/customer/company-account/managing-company-units.html
+  - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-units.html
 ---
 
 This document describes how to create company units.

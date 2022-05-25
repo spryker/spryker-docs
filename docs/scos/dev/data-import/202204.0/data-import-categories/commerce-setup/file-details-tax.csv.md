@@ -9,6 +9,8 @@ redirect_from:
   - /2021080/docs/en/file-details-taxcsv
   - /docs/file-details-taxcsv
   - /docs/en/file-details-taxcsv
+  - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-tax.csv.html
+  - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-tax.csv.html
 ---
 
 This document describes the `tax.csv` file to configure the [tax](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) information in your Spryker Demo Shop.
@@ -31,7 +33,7 @@ The file should have the following parameters:
 | tax_rate_name | &check; | String | | Name of the tax rate. <br>Tax rate is the ratio (usually expressed as a percentage) at which a business or person is taxed. |
 | tax_rate_percent | &check; | Float | | Tax rate, expressed  as a percentage. |
 
- 
+
 ## Import file dependencies
 
 This file has no dependencies.
@@ -44,4 +46,3 @@ Find the template and an example of the file below:
 | --- | --- |
 | [template_tax.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/Template+tax.csv) | Tax .csv template file (empty content, contains headers only). |
 | [tax.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/tax.csv) | Exemplary import file with the Demo Shop data. |
- 

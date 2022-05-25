@@ -12,6 +12,7 @@ redirect_from:
   - /v5/docs/en/discount
   - /v5/docs/promotions-discount
   - /v5/docs/en/promotions-discount
+  - /docs/scos/user/features/202005.0/promotions-and-discounts/discount/discount-feature-overview.html
 ---
 
 The Promotions & Discounts feature enables product catalog managers to provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.

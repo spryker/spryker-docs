@@ -8,6 +8,7 @@ originalArticleId: c18b6116-0a52-4783-904f-4817cdffb56d
 redirect_from:
   - /v5/docs/product-bundle
   - /v5/docs/en/product-bundle
+  - /docs/scos/user/features/202005.0/product-information-management/product-bundles.html
 ---
 
 With the Product Bundles feature you can freely tie individual items together and sell them as a package. As opposed to a set, in which products are loosely grouped, the items in a bundle are always sold together. You can choose to create a special bundle price to make the purchase more attractive. Since each bundle's product is still handled like an individual item in the Order Management Process, bundle availability is always calculated and displayed based on the item with the smallest available stock to avoid overselling.

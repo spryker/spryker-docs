@@ -8,6 +8,7 @@ originalArticleId: 1325e7e7-044d-4272-9587-fafc8a9cb928
 redirect_from:
   - /v5/docs/retrieving-business-unit-information-201907
   - /v5/docs/en/retrieving-business-unit-information-201907
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-b2b-account/retrieving-business-unit-information.html
 related:
   - title: Logging In as Company User
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html

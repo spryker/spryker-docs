@@ -19,6 +19,7 @@ redirect_from:
   - /v2/docs/en/implementing-rest-api-resource
   - /v1/docs/implementing-rest-api-resource
   - /v1/docs/en/implementing-rest-api-resource
+  - /docs/scos/dev/tutorials/201811.0/introduction/glue-api/implementing-a-rest-api-resource.html
 ---
 
 The following guide provides step-by-step instructions on how to implement a REST API resource in your project.
@@ -244,7 +245,7 @@ class WishlistsResourceController extends AbstractController
 
 {% info_block infoBox %}
 
-You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to create a resource controller. Run the following command: 
+You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to create a resource controller. Run the following command:
 
 ```bash
 console AddGlueController  --mode=project --module=ResourcesRestApi --organization=Pyz --controller=ResourcesController

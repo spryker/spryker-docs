@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/shipment-feature-integration
   - /docs/shipment-feature-integration
   - /docs/en/shipment-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/shipment-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/shipment-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/shipment-feature-integration.html
 related:
   - title: Shipment feature overview
     link: docs/scos/user/features/page.version/shipment-feature-overview.html

@@ -8,6 +8,7 @@ originalArticleId: 2cf9ee5a-677c-41f0-b2b4-f488fbaed171
 redirect_from:
   - /v2/docs/computop-paydirekt
   - /v2/docs/en/computop-paydirekt
+  - /docs/scos/user/technology-partners/201903.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html
@@ -32,7 +33,7 @@ related:
 ---
 
 Example State Machine:
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop-paydirekt-flow-example.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop-paydirekt-flow-example.png)
 
 ## Front-end Integration
 To adjust the frontend appearance, provide the following templates in your theme directory:

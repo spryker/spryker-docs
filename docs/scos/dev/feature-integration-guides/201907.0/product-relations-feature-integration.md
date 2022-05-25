@@ -8,11 +8,12 @@ originalArticleId: ed3d3753-b440-491b-a3df-778fdff13d1e
 redirect_from:
   - /v3/docs/product-relation-integration
   - /v3/docs/en/product-relation-integration
+  - /docs/scos/dev/feature-integration-guides/201907.0/product-relation-integration.html
 ---
 
 
 1. Register a new collector plugin. How to is in .
-2. Then register a new twig service plugin 
+2. Then register a new twig service plugin
 `\Spryker\Yves\ProductRelation\Plugin\ProductRelationTwigServiceProvider` inside the `\Pyz\Yves\Application\YvesBootstrap::registerServiceProviders` plugin stack. This will allow to use the UI carousel component to display relations.
 3. Add this new twig extension to your templates. By default, it is included in the product detail and cart overview pages of our demoshop.
 
@@ -33,7 +34,7 @@ Each type accepts a number of parameters:
 "dependencies": {
 ...
 "slick-carousel": "~1.6.0",
-} 
+}
 ```
 
 and run `npm install`
@@ -59,9 +60,9 @@ Create a new component under `assets/Yves/default/app/components/carousel/_carou
        text-overflow: ellipsis;
     }
 
-  } 
+  }
   ```
-  
+
 include this style file in `/assets/Yves/default/app/style/index.scss` like `@import '../components/carousel/carousel';assets/Yves/default/app/components/carousel/index.js` - configures the slick.js javascript carousel component.
 
 ```css
@@ -103,7 +104,7 @@ name: 'carousel',
            });
        },
     }
-}; 
+};
 
 ```
 
@@ -144,8 +145,8 @@ $slick-assets-relative-path: "../../../../node_modules/slick-carousel/slick/";
       }
     }
   ```
-    
- Run `npm run yves` to generate javascript and css. 
+
+ Run `npm run yves` to generate javascript and css.
 
 {% info_block warningBox "Note" %}
 To reference an example implementation, see the latest demoshop .

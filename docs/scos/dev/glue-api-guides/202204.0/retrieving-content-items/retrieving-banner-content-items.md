@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/retrieving-banner-content-items
   - /docs/retrieving-banner-content-items
   - /docs/en/retrieving-banner-content-items
+  - /docs/scos/dev/glue-api-guides/201811.0/retrieving-content-items/retrieving-banner-content-items.html
 related:
   - title: REST API Reference
     link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
@@ -47,10 +48,10 @@ Request sample: retrieve a banner content item
 `GET https://glue.mysprykershop.com/content-banners/br-3`
 
 
-### Response 
+### Response
 
 Response sample: retrieve a banner content item
-    
+
 ```json
 {
 	"data": {
@@ -87,4 +88,3 @@ Response sample: retrieve a banner content item
 | 2203 | Content type is invalid. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
-

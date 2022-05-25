@@ -15,6 +15,7 @@ redirect_from:
   - /v5/docs/en/ht-import-warehouse-data
   - /v4/docs/ht-import-warehouse-data
   - /v4/docs/en/ht-import-warehouse-data
+  - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html
 related:
   - title: Managing Warehouses
     link: docs/scos/user/back-office-user-guides/page.version/administration/warehouses/managing-warehouses.html

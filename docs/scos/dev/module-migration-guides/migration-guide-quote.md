@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-quote.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-quote.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-quote.html
+  - /module_migration_guides/mg-quote.htm
 related:
   - title: Migration guide - Cart
     link: docs/scos/dev/module-migration-guides/migration-guide-cart.html

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/creating-a-product-list
   - /docs/creating-a-product-list
   - /docs/en/creating-a-product-list
+  - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-lists/creating-product-lists.html
 ---
 
 This article describes how to create a product list.

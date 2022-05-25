@@ -11,6 +11,7 @@ redirect_from:
   - /docs/managing-company-roles
   - /docs/en/managing-company-roles
   - /docs/scos/user/back-office-user-guides/202204.0/customer/company-account/managing-company-roles.html
+  - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-roles.html
 related:
   - title: Managing Companies
     link: docs/scos/user/back-office-user-guides/page.version/customer/manage-companies.html

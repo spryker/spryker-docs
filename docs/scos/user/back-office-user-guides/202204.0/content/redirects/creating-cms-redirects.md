@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/creating-cms-redirects
   - /docs/creating-cms-redirects
   - /docs/en/creating-cms-redirects
+  - /docs/scos/user/back-office-user-guides/202200.0/content/redirects/creating-cms-redirects.html
 ---
 
 This topic provides a list of steps to create a redirect in the Back Office.

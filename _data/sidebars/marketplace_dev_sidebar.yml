@@ -182,6 +182,9 @@ entries:
           - title: Marketplace Merchant feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration.html
 
+          - title: Marketplace Merchant + Quick Add to Cart feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-quick-add-to-cart-feature-integration.html
+
           - title: Marketplace Merchant Portal Core feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-core-feature-integration.html
 
@@ -294,9 +297,6 @@ entries:
 
           - title: Marketplace Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-wishlist-feature-integration.html
-
-          - title: Merchant + Quick Add to Cart feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/merchant-quick-add-to-cart-feature-integration.html
 
           - title: Merchant Portal feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-feature-integration.html

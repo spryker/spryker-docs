@@ -1,15 +1,15 @@
 ---
-title: Merchant + Quick Add to Cart feature integration
+title: Marketplace Merchant + Quick Add to Cart feature integration
 last_updated: May 25, 2022
-description: This document describes the process how to integrate the Merchant + Quick Add to Cart feature into a Spryker project.
+description: This document describes the process how to integrate the Marketplace Merchant + Quick Add to Cart feature into a Spryker project.
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the Merchant + Quick Add to Cart feature into a Spryker project.
+This document describes how to integrate the Marketplace Merchant + Quick Add to Cart feature into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Merchant Category feature core.
+Follow the steps below to install the Marketplace Merchant + Quick Add to Cart feature core.
 
 ### Prerequisites
 
@@ -27,7 +27,6 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN                             | DESCRIPTION                                           | PREREQUISITES | NAMESPACE                                             |
 |------------------------------------|-------------------------------------------------------|---------------|-------------------------------------------------------|
 | MerchantQuickOrderItemMapperPlugin | Maps merchant reference to `QuickOrderItem` transfer. |               | SprykerShop\Yves\MerchantWidget\Plugin\QuickOrderPage |
-
 
 **src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php**
 

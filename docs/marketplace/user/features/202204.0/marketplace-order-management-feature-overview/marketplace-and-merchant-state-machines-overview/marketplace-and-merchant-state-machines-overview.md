@@ -47,6 +47,12 @@ The status of the Marketplace order is an aggregated state of the Marketplace or
 
 </details>
 
+{% info_block infoBox "Info" %}
+
+In the Marketplace Dummy Payment only the _invoice_ type of payment is supported by default.
+
+{% endinfo_block %}
+
 ### Marketplace state machine in the Back Office
 
 Marketplace administrators manage the orders in the Back Office. For details, see [Managing marketplace orders](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/orders/managing-marketplace-orders.html). In the Back Office, the Marketplace administrators can change the state of the marketplace order by triggering the states. However, they can do that only if there are manually executable events related to the marketplace order items. Triggering the states executes the corresponding event and moves the marketplace order item to the next state. There can be multiple triggering buttons corresponding to several items in the marketplace order. When you click one of those buttons, only the items with such a manually executable event execute it. The rest stay in the same state and need their trigger to be performed to move to the next state.
@@ -54,13 +60,16 @@ Marketplace administrators manage the orders in the Back Office. For details, se
 If there are no manually executable events applicable to any of the items, there is no button to click in the Back Office interface. In this case, the action is performed automatically.
 
 ## Merchant state machine
+
 The Marketplace administrator can define one or several state machines for merchants:
+
 * One as the default, which applies automatically to merchant order items in every merchant order.
 * Another state machine for a specific merchant.
 
 Merchant state machine processes merchant order items and works in parallel with the Marketplace state machine.
 The status of the merchant order is aggregated from the merchant order item statuses. The merchant order status gets properly updated when the state of the items changes.
 Our exemplary merchant state machine provides the following states:
+
 1. New
 2. Canceled by merchant
 3. Shipped
@@ -78,3 +87,4 @@ Our exemplary merchant state machine provides the following states:
 ## Next steps
 
 [Learn how the marketplace and merchant state machines interact with each other](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html)
+

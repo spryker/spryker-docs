@@ -27,11 +27,7 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
 ---
 
-
-
 This document describes the steps to add a new shipment method without integrating with the shipment provider.
-
-
 
 This document considers the case when you need to add a new shipment method without integrating it with the shipment providers' system.
 

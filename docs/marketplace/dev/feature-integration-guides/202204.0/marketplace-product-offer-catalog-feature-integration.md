@@ -18,16 +18,7 @@ To start feature integration, integrate the required features:
 | NAME                      | VERSION          | INTEGRATION GUIDE                                                                                                                                                     |
 |---------------------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
-| Catalog                   | {{page.version}} | [Catalog feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/catalog-feature-integration.html)                                            |
-
-### 1) Install the required modules using Composer
-
-Install the required modules:
-
-```bash
-composer require spryker/product-offer: "^0.6.1" --update-with-dependencies
-composer require spryker-feature/catalog --update-with-dependencies
-```
+| Catalog                   | {{page.version}} | Catalog feature integration                                          |
 
 ### Set up behavior
 

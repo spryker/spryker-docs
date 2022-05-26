@@ -20,14 +20,6 @@ To start feature integration, integrate the required features:
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html)  |
 | Quick Add to Cart    | {{page.version}} | [Quick Add to Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-feature-integration.html)               |
 
-### 1) Install the required modules using Composer
-
-Install the required modules:
-
-```bash
-composer require spryker-feature/merchant
-composer require spryker-feature/quick-add-to-cart:"^2018.11.0" --update-with-dependencies
-```
 ### Set up behavior
 
 Enable the following behaviors by registering the plugins:

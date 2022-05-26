@@ -74,7 +74,7 @@ To add a new shipment method, follow these steps:
 4. Click **Save**.
 ![Enabled checkbox](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ui_add_carrier_cmpany.png)
 
-When have a new shipment carrier, you can add a new shipment method to it.
+When you have a new shipment carrier, you can add a new shipment method to it.
 
 {% info_block infoBox "Note" %}
 

@@ -1,5 +1,5 @@
 ---
-title: "HowTo - Allow Zed CSS/JS on a project"
+title: "HowTo: Allow Zed CSS/JS on a project"
 description: Learn how you can allow Zed CSS/JS on a project level.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -55,6 +55,6 @@ An example of the project file location:  `Pyz\Zed\Product\assets\js\main.entry.
 
 {% info_block warningBox %}
 
-Do not remove pattern `/Zed/**/*.entry.js`, as this breaks the Core assets build process and might lead to non-functional Zed.
+Do not remove pattern `/Zed/**/*.entry.js` because this breaks the Core assets build process and might lead to non-functional Zed.
 
 {% endinfo_block %}

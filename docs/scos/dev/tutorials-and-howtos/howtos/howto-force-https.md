@@ -1,5 +1,5 @@
 ---
-title: "HowTo - Force HTTPS"
+title: "HowTo: Force HTTPS"
 description: Use the guide to configure HTTPs and HTTP for your pages.
 last_updated: Jun 16, 2021
 template: howto-guide-template

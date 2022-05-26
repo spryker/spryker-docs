@@ -94,7 +94,7 @@ The *no-features* view is especially useful when your project does not use any f
 
 Use this view if you want to understand to what extent your project is outdated and estimate the effort to update it.
 
-{% info_block infoBox %}
+{% info_block infoBox "Note" %}
 
 If you use Spryker features and want to be up-to-date with them, we recommend using the [basic view](#basic-view-migrating-to-a-newer-product-release).
 

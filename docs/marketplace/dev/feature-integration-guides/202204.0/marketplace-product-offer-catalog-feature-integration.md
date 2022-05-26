@@ -59,11 +59,21 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             new MerchantReferenceQueryExpanderPlugin(),
         ];
     }
+    
+    /**
+     * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface>|array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
+     */
+    protected function getProductConcreteCatalogSearchQueryExpanderPlugins(): array
+    {
+        return [
+            new MerchantReferenceQueryExpanderPlugin(),
+        ];
+    }
 }
 ```
 
 {% info_block warningBox "Verification" %}
 
-Make sure you can filter product offers by merchant reference while retrieving them from the storage.
+Make sure you can filter product offers by merchant reference while retrieving them from the search.
 
 {% endinfo_block %}

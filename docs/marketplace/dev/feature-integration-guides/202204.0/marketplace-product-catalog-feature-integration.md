@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME                | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
 |---------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Marketplace Product | {{page.version}} | [Marketplace Product Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)|
-| Catalog             | {{page.version}} | [Catalog feature integration                              |
+| Catalog             | {{page.version}} | Catalog feature integration                              |
 
 ### Set up behavior
 

@@ -22,8 +22,6 @@ To start feature integration, integrate the required features:
 
 ### Set up behavior
 
-To set up behavior:
-
 1. Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                 | SPECIFICATION                                              | PREREQUISITES | NAMESPACE                                               |

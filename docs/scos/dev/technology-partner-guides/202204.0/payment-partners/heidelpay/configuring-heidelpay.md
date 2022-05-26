@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/heidelpay-configuration-scos
   - /docs/heidelpay-configuration-scos
   - /docs/en/heidelpay-configuration-scos
+  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/heidelpay/configuring-heidelpay.html
 related:
   - title: Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay.html

@@ -71,8 +71,6 @@ The corresponding XML for this transition would be:
 
 ## Add a new delivery method
 
-
-
 To add a new shipment method, follow these steps:
 1. In the Back Office, navigate to the **Delivery Methods** section and click **Create new carrier company**.
 2. Specify a name for the carrier company and the corresponding glossary key for having a localized name.
@@ -103,7 +101,6 @@ To add a shipment method to a carrier, follow these steps:
 For more detailed information about adding carrier companies, see [Creating carrier companies](docs/scos/user/back-office-user-guides/202204.0/administration/delivery-methods/creating-carrier-companies.html)
 
 {% endinfo_block %}
-
 
 ![Add shipment method ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ui_shipment_method_6.png)
 

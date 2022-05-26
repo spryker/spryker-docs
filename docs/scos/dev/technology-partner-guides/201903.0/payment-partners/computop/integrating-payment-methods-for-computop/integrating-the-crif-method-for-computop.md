@@ -8,6 +8,7 @@ originalArticleId: aecb01be-5791-4314-b754-4ee95179b924
 redirect_from:
   - /v2/docs/computop-crif
   - /v2/docs/en/computop-crif
+  - /docs/scos/dev/technology-partner-guides/201903.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html
@@ -36,11 +37,11 @@ related:
 Popular with customers, risky for the merchant: Payment methods such as direct debit or purchase on account involve a high level of default risk. Computop Paycontrol, an automated credit rating with all standard credit agencies, combines flexibility and payment security for online business. With Paycontrol you can, amongst other things, automatically obtain information from CRIF without having to connect your shop system to individual information interfaces.
 
 CRIF (formerly Deltavista) provides information on about 80 million individuals, 6 million companies, and 10 million payment, register, and address records from Germany, Austria and Switzerland.
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/CRIF-process-flow.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/CRIF-process-flow.png)
 
 ## Calling the Interface
 
-To carry out a CRIF order check via a Server-to-Server connection, go to [that URL](https://www.computop-paygate.com/deltavista.aspx). 
+To carry out a CRIF order check via a Server-to-Server connection, go to [that URL](https://www.computop-paygate.com/deltavista.aspx).
 
 For security reasons, Paygate rejects all payment requests with formatting errors. Therefore please use the correct data type for each parameter.
 
@@ -57,7 +58,7 @@ $config[ComputopConstants::CRIF_ENABLED] = false; // Enable or disable CRIF func
 $config[ComputopApiConstants::CRIF_ACTION] = 'https://www.computop-paygate.com/deltavista.aspx'; //CRIF API call enpoint.
 $config[ComputopApiConstants::CRIF_PRODUCT_NAME] = ''; //This is checking method, could be: QuickCheckConsumer, CreditCheckConsumer, QuickCheckBusiness, CreditCheckBusiness, IdentCheckConsumer
 $config[ComputopApiConstants::CRIF_LEGAL_FORM] = ''; // Legal form of the person/company sought, could be: PERSON, COMPANY, UNKNOWN
- 
+
 $config[ComputopConstants::CRIF_GREEN_AVAILABLE_PAYMENT_METHODS] = []; //List of allowed payment methods if CRIF returns GREED code, for example: computopCreditCard, computopDirectDebit and so on.
 $config[ComputopConstants::CRIF_YELLOW_AVAILABLE_PAYMENT_METHODS] = []; //List of allowed payment methods if CRIF returns YELLOW code, for example: computopPaydirekt, computopEasyCredit and so on.
 $config[ComputopConstants::CRIF_RED_AVAILABLE_PAYMENT_METHODS] = []; //List of allowed payment methods if CRIF returns RED code, for example: computopSofort, computopPayPal and so on.
@@ -72,28 +73,28 @@ $config[ComputopConstants::CRIF_RED_AVAILABLE_PAYMENT_METHODS] = []; //List of a
 
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\CheckoutPage\Process\Steps;
- 
+
 use Spryker\Shared\Kernel\Transfer\AbstractTransfer;
 use Spryker\Yves\StepEngine\Dependency\Plugin\Handler\StepHandlerPluginCollection;
 use SprykerEco\Client\Computop\ComputopClientInterface;
 use SprykerShop\Yves\CheckoutPage\Dependency\Client\CheckoutPageToCalculationClientInterface;
 use SprykerShop\Yves\CheckoutPage\Process\Steps\ShipmentStep as SprykerShipmentStep;
 use Symfony\Component\HttpFoundation\Request;
- 
+
 class ShipmentStep extends SprykerShipmentStep
 {
 	/**
 	 * @var \SprykerEco\Client\Computop\ComputopClientInterface
 	 */
 	protected $computopClient;
- 
+
 	/**
 	 * @param \SprykerShop\Yves\CheckoutPage\Dependency\Client\CheckoutPageToCalculationClientInterface $calculationClient
 	 * @param \Spryker\Yves\StepEngine\Dependency\Plugin\Handler\StepHandlerPluginCollection $shipmentPlugins
@@ -114,10 +115,10 @@ class ShipmentStep extends SprykerShipmentStep
 			$stepRoute,
 			$escapeRoute
 		);
- 
+
 		$this->computopClient = $computopClient;
 	}
- 
+
 	/**
 	 * @param \Symfony\Component\HttpFoundation\Request $request
 	 * @param \Generated\Shared\Transfer\QuoteTransfer $quoteTransfer
@@ -127,7 +128,7 @@ class ShipmentStep extends SprykerShipmentStep
 	public function execute(Request $request, AbstractTransfer $quoteTransfer)
 	{
 		$quoteTransfer = parent::execute($request, $quoteTransfer);
- 
+
 		return $this->computopClient->performCrifApiCall($quoteTransfer);
 	}
 }
@@ -142,21 +143,21 @@ class ShipmentStep extends SprykerShipmentStep
 
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\CheckoutPage\Process;
- 
+
 use Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider;
 use Pyz\Yves\CheckoutPage\Plugin\Provider\CheckoutPageControllerProvider;
 use Pyz\Yves\CheckoutPage\Process\Steps\ShipmentStep;
 use SprykerEco\Client\Computop\ComputopClientInterface;
 use SprykerShop\Yves\CheckoutPage\Process\StepFactory as SprykerStepFactory;
 use SprykerShop\Yves\HomePage\Plugin\Provider\HomePageControllerProvider;
- 
+
 /**
  * @method \SprykerShop\Yves\CheckoutPage\CheckoutPageConfig getConfig()
  */
@@ -175,7 +176,7 @@ class StepFactory extends SprykerStepFactory
 			$this->getComputopClient()
 		);
 	}
- 
+
 	/**
 	 * @return \SprykerEco\Client\Computop\ComputopClientInterface
 	 */
@@ -195,17 +196,17 @@ class StepFactory extends SprykerStepFactory
 
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\CheckoutPage;
- 
+
 use Pyz\Yves\CheckoutPage\Process\StepFactory;
 use SprykerShop\Yves\CheckoutPage\CheckoutPageFactory as SprykerShopCheckoutPageFactory;
- 
+
 class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 {
 	/**

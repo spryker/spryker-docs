@@ -6,13 +6,13 @@ redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-a-new-product-to-the-documentation-site.html
 ---
 
-When we launch a new product, you need to create a separate section for it. Usually, there are two roles per product — user and developer. In this article, we assume that you need to create a new product *aop* with the *user* and *dev* roles.
+When we launch a new product, you need to create a separate section for it. Usually, there are two roles per product — user and developer. In this article, we assume that you need to create a new product *acp* with the *user* and *dev* roles.
 
 To add a new product, follow these steps.
 
 ## 1. Create sidebars for the product
 
-In `_data/sidebars`, create sidebars for the new product per role. For each role, there should be a separate YML file in the following format: `{product_name}_{role}_sidebar.yml`. For example, for the *aop* product with user and developer roles, create `aop_dev_sidebar.yml` and `aop_user_sidebar.yml` sidebar files.
+In `_data/sidebars`, create sidebars for the new product per role. For each role, there should be a separate YML file in the following format: `{product_name}_{role}_sidebar.yml`. For example, for the *acp* product with user and developer roles, create `acp_dev_sidebar.yml` and `acp_user_sidebar.yml` sidebar files.
 
 To learn how to populate sidebar files, see [Sidebars](/docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html#sidebars).
 
@@ -27,9 +27,9 @@ defaults:
   ...
   -
     scope:
-      path: "docs/aop"
+      path: "docs/acp"
     values:
-      product: "aop"
+      product: "acp"
 ```
 
 2. Under the product scope you have added in the previous step, add the product roles with their paths and sidebars. The sidebar names should match those you've created in [1. Create sidebars for the product](#create-sidebars-for-the-product). For example:
@@ -39,15 +39,15 @@ defaults:
   ...
   -
     scope:
-      path: "docs/aop/dev"
+      path: "docs/acp/dev"
     values:
-      sidebar: "aop_dev_sidebar"
+      sidebar: "acp_dev_sidebar"
       role: "dev"
   -
     scope:
-      path: "docs/aop/user"
+      path: "docs/acp/user"
     values:
-      sidebar: "aop_user_sidebar"
+      sidebar: "acp_user_sidebar"
       role: "user"
 ```
 3. Optional: To version one or more categories in your new product, in the `versioned_categories:` section, add the product name and the categories to version. For example:
@@ -55,7 +55,7 @@ defaults:
 ```yaml
 versioned_categories:
   ...
-  aop:
+  acp:
     user:
       - features
       - back-office-user-guides
@@ -70,8 +70,8 @@ versioned_categories:
 ```yaml
 sidebars:
   ...
-  - aop_dev_sidebar
-  - aop_user_sidebar
+  - acp_dev_sidebar
+  - acp_user_sidebar
 ```
 
 ## 3. Add the product to the homepage
@@ -86,10 +86,10 @@ To add the new product to the top navigation and the role boxes on the homepage,
         <span class="main-nav__opener-label">Select Product</span>
         <span class="main-nav__opener-text">
             ...
-            {% elsif page.product == 'aop' and page.role == 'dev' %}
-            App Orchestration Platform developer guide
-            {% elsif page.product == 'aop' and page.role == 'user' %}
-            App Orchestration Platform users guide
+            {% elsif page.product == 'acp' and page.role == 'dev' %}
+            App Composition Platform developer guide
+            {% elsif page.product == 'acp' and page.role == 'user' %}
+            App Composition Platform user guide
             ...
 {% endraw %}
 ```
@@ -99,26 +99,26 @@ To add the new product to the top navigation and the role boxes on the homepage,
                                             ...
                                             <li class="dropdown">
                                                 <a href="/" class="main-nav__drop-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                    App Orchestration Platform
+                                                    App Composition Platform
                                                     <i class="main-nav__drop-link-arrow icon-arrow-right"></i>
                                                 </a>
                                                 <ul class="main-nav__drop dropdown-menu">
                                                     <li>
-                                                        <a href="/docs/aop/dev/setup/system-requirements.html" class="main-nav__drop-link">
+                                                        <a href="/docs/acp/dev/setup/system-requirements.html" class="main-nav__drop-link">
                                                             <span class="main-nav__drop-link-title">
                                                                 <i class="icon-developer"></i>
                                                                 Developer
                                                             </span>
-                                                            <span class="main-nav__drop-link-subtitle">AOP developer guide</span>
+                                                            <span class="main-nav__drop-link-subtitle">ACP developer guide</span>
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="/docs/aop/user/intro-to-aop/aop-overview.html" class="main-nav__drop-link">
+                                                        <a href="/docs/acp/user/intro-to-acp/acp-overview.html" class="main-nav__drop-link">
                                                             <span class="main-nav__drop-link-title">
                                                                 <i class="icon-business"></i>
                                                                 Business User
                                                             </span>
-                                                            <span class="main-nav__drop-link-subtitle">AOP users guide</span>
+                                                            <span class="main-nav__drop-link-subtitle">ACP users guide</span>
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -136,7 +136,7 @@ To add the new product to the top navigation and the role boxes on the homepage,
                         <div class="card__footer">
                             <ul class="card__links">
                                 ...
-                                <li><a href="/docs/aop/dev/setup/system-requirements.html">App Orchestration Platform developeguides</a></li>                            
+                                <li><a href="/docs/acp/dev/setup/system-requirements.html">App Composition Platform developeguides</a></li>                            
                             ...    
 
     ```
@@ -149,7 +149,7 @@ To add the new product to the top navigation and the role boxes on the homepage,
                         <div class="card__footer">
                             <ul class="card__links">                                        
                                 ...
-                                <li><a href="/docs/aop/user/intro-to-aop/aop-overview.html">App Orchestration Platform user guides</a></li>
+                                <li><a href="/docs/acp/user/intro-to-acp/acp-overview.html">App Composition Platform user guides</a></li>
                             ...    
     ```
 
@@ -162,8 +162,8 @@ To add CI checks for the product per role, do the following:
 ```yaml
 jobs:
   ...
-  link_validation_check_aop_dev:
-    name: Links validation (check_aop_dev)
+  link_validation_check_acp_dev:
+    name: Links validation (check_acp_dev)
     needs: jekyll_build
     runs-on: ubuntu-latest
 
@@ -181,17 +181,17 @@ jobs:
         uses: actions/cache@v2
         with:
           path: tmp/.htmlproofer
-          key: ${{ runner.os }}-check_aop_dev-htmlproofer
+          key: ${{ runner.os }}-check_acp_dev-htmlproofer
 
       - uses: actions/download-artifact@v2
 
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
 
-      - run: bundle exec rake check_aop_dev
+      - run: bundle exec rake check_acp_dev
 
-  link_validation_check_aop_user:
-    name: Links validation (check_aop_user)
+  link_validation_check_acp_user:
+    name: Links validation (check_acp_user)
     needs: jekyll_build
     runs-on: ubuntu-latest
 
@@ -209,38 +209,38 @@ jobs:
         uses: actions/cache@v2
         with:
           path: tmp/.htmlproofer
-          key: ${{ runner.os }}-check_aop_user-htmlproofer
+          key: ${{ runner.os }}-check_acp_user-htmlproofer
 
       - uses: actions/download-artifact@v2
 
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
 
-      - run: bundle exec rake check_aop_user
+      - run: bundle exec rake check_acp_user
 ```
 2. In `Rakefile`, add checks for each role. In `options[:file_ignore]` of both checks, exclude all other projects and roles. For example:
 ```
 ...
-task :check_aop_user do
+task :check_acp_user do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/aop\/dev\/.+/,    
+    /docs\/acp\/dev\/.+/,    
     /docs\/fes\/.+/,
     /docs\/paas-plus\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
 
-task :check_aop_dev do
+task :check_acp_dev do
   options = commonOptions.dup
   options[:file_ignore] = [
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/aop\/user\/.+/,    
+    /docs\/acp\/user\/.+/,    
     /docs\/fes\/.+/,
     /docs\/paas-plus\/.+/
   ]
@@ -256,7 +256,7 @@ task :check_mp_dev do
   options[:file_ignore] = [
     /docs\/scos\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/aop\/.+/,
+    /docs\/acp\/.+/,
     /docs\/marketplace\/user\/.+/,
   ]
 ...  
@@ -267,13 +267,13 @@ To configure the Algolia search for the product, you need to configure the searc
 
 ### Configure the Algolia search in the repository
 
-1. In `algolia_config/`, create YML configuration files per role. For example, `algolia_config/_aop_dev.yml` and `algolia_config/_aop_user.yml`.
+1. In `algolia_config/`, create YML configuration files per role. For example, `algolia_config/_acp_dev.yml` and `algolia_config/_acp_user.yml`.
 
 2. In both files, exclude generic pages and the pages of all the existing projects from indexing. Example:
 
 ```yaml
 algolia:
-  index_name: 'aop'
+  index_name: 'acp'
   files_to_exclude:
     - index.md
     - 404.md
@@ -300,8 +300,8 @@ algolia:
     - docs/cloud/dev/**/*.md
     - docs/scos/user/**/*.md
     - docs/paas-plus/dev/**/*.md
-    - docs/aop/dev/**/*.md
-    - docs/aop/user/**/*.md   
+    - docs/acp/dev/**/*.md
+    - docs/acp/user/**/*.md   
 ```
 
 4. In `.github/workflows/ci.yml`, add the Algolia configuration files you've created. Example:
@@ -313,10 +313,10 @@ jobs:
     ...
     steps:
       ...
-      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_aop_dev.yml
+      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_acp_dev.yml
         env: # Or as an environment variable
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
-      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_aop_user.yml
+      - run: bundle exec jekyll algolia --config=_config.yml,algolia_config/_acp_user.yml
         env: # Or as an environment variable
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}          
 ```
@@ -329,10 +329,10 @@ algolia:
   ...
   indices:
     ...
-    - name: 'aop_user'
-      title: 'AOP User'
-    - name: 'aop_dev'
-      title: 'AOP Developer'
+    - name: 'acp_user'
+      title: 'ACP User'
+    - name: 'acp_dev'
+      title: 'ACP Developer'
 ```
 
 ### Configuring the Algolia search in the Algolia app

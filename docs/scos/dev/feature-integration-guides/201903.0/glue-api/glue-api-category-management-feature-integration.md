@@ -8,6 +8,7 @@ originalArticleId: 15f393b8-d90b-4f44-bd15-9c8112d8651b
 redirect_from:
   - /v2/docs/category-api-feature-integration-201903
   - /v2/docs/en/category-api-feature-integration-201903
+  - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/category-api-feature-integration.html
 ---
 
 ## Install Feature API
@@ -42,7 +43,7 @@ console transfer:generate
 ```
 
 {% info_block infoBox "Verification" %}
-Make sure that the following changes are present in transfer objects:	
+Make sure that the following changes are present in transfer objects:
 {% endinfo_block %}
 
 | Transfer | Type | Event | Path |

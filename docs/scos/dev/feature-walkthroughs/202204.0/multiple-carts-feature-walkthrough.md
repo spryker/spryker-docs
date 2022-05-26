@@ -3,6 +3,8 @@ title: Multiple Carts feature walkthrough
 last_updated: Aug 18, 2021
 description: The Multiple Carts feature allows creating and managing one or multiple shopping carts in one customer account.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202200.0/multiple-carts-feature-walkthrough.html
 ---
 
 The _Multiple Carts_ feature allows you to create and manage one or multiple shopping carts in one customer account.

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/retrieving-product-labels
   - /docs/retrieving-product-labels
   - /docs/en/retrieving-product-labels
+  - /docs/scos/dev/glue-api-guides/202200.0/managing-products/retrieving-product-labels.html
 related:
   - title: Glue API - Promotions & Discounts feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-promotions-and-discounts-feature-integration.html

@@ -38,13 +38,13 @@ To install Docker prerequisites, follow one of the guides:
     * Clone the B2C repository:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202204.0 --single-branch ./b2c-demo-shop
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202204.0-p1 --single-branch ./b2c-demo-shop
     ```
 
     * Clone the B2B repository:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0 --single-branch ./b2b-demo-shop
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0-p1 --single-branch ./b2b-demo-shop
     ```
 4. Depending on the cloned repository, navigate into the cloned folder:
 
@@ -81,7 +81,7 @@ Follow the steps in this section if you are installing on a device with an ARM c
 Replace x86 based Sass with an ARM based one:
 
 1. In `package.json`, remove `node-sass` dependencies.
-2. Add `sass` and `sass-loader` dependencies.
+2. Add `sass` and `sass-loader` dependencies:
 
 ```json
 ...
@@ -127,7 +127,7 @@ docker/sdk cli
 npm run yves
 ```
 
-8. Rebuild Zed
+8. Rebuild Zed:
 
 ```bash
 npm run zed
@@ -200,7 +200,7 @@ docker/sdk bootstrap
 
 Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after:
 
-* Docker SDK version update;
+* Docker SDK version update.
 * Deploy file update.
 
 {% endinfo_block %}

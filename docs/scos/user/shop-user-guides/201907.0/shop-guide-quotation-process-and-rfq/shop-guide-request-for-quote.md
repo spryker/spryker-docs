@@ -11,7 +11,7 @@ redirect_from:
   - /docs/scos/user/shop-user-guides/page.version/quotation-process-and-rfq/shop-guide-request-for-quote.html
 ---
 
-Requests for Quote allow your Buyers to bargain for products competitively. With this feature, a Buyer can send requests to a Sales Representative asking them for a better price on products in the cart. The Sales Representative in their turn can respond to the quote with the new prices, or even create a special offer for a specific buyer on their initiative, without receiving a request. For more information, see [Quotation Process & RFQ](https://docs.spryker.com/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html).
+Requests for Quote allow your Buyers to bargain for products competitively. With this feature, a Buyer can send requests to a Sales Representative asking them for a better price on products in the cart. The Sales Representative in their turn can respond to the quote with the new prices, or even create a special offer for a specific buyer on their initiative, without receiving a request. For more information, see [Quotation Process & RFQ](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html).
 
 The articles included in this section:
 

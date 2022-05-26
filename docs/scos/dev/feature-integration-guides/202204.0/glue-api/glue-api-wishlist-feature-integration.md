@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-wishlist-feature-integration
   - /docs/glue-api-wishlist-feature-integration
   - /docs/en/glue-api-wishlist-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-wishlist-feature-integration.html
 related:
   - title: Managing Wishlists
     link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html

@@ -2542,6 +2542,10 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-contentbanner.html
     - title: Migration Guide - ContentBannerGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-contentbannergui.html
+    - title: Migration Guide - ContentFileGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-contentfilegui.html
+    - title: Migration Guide - ContentFileWidget
+      url: /docs/scos/dev/module-migration-guides/migration-guide-contentfilewidget.html
     - title: Migration Guide - ContentGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-contentgui.html
     - title: Migration Guide - ContentStorage
@@ -2572,6 +2576,14 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-errorhandler.html
     - title: Migration Guide - EventDispatcher
       url: /docs/scos/dev/module-migration-guides/migration-guide-eventdispatcher.html
+    - title: Migration Guide - FileManager
+      url: /docs/scos/dev/module-migration-guides/migration-guide-filemanager.html
+    - title: Migration Guide - FileManagerStorage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-filemanagerstorage.html
+    - title: Migration Guide - FileManagerWidget
+      url: /docs/scos/dev/module-migration-guides/migration-guide-filemanagerwidget.html
+    - title: Migration Guide - Flysystem
+      url: /docs/scos/dev/module-migration-guides/migration-guide-flysystem.html
     - title: Migration Guide - Form
       url: /docs/scos/dev/module-migration-guides/migration-guide-form.html
     - title: Migration Guide - HTTP
@@ -2598,6 +2610,8 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-navigation.html
     - title: Migration Guide - NavigationGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-navigationgui.html
+    - title: Migration Guide - Oauth
+      url: /docs/scos/dev/module-migration-guides/migration-guide-oauth.html
     - title: Migration Guide - OauthCompanyUser
       url: /docs/scos/dev/module-migration-guides/migration-guide-oauthcompanyuser.html
     - title: Migration Guide - Offer
@@ -4923,10 +4937,14 @@ entries:
       nested:
       - title: Elastic computing
         nested:
+        - title: New Relic transactions grouping by queue names
+          url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html
         - title: RAM-aware batch processing
           url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
         - title: Scalable application infrastructure for publish and sync workers
           url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/scalable-application-infrastructure-for-publish-and-sync-workers.html
+        - title: Storage caching for primary-replica database setups
+          url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
       - title: General performance guidelines
         url: /docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
       - title: Architecture performance guidelines

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/discontinued-product-overview
   - /docs/discontinued-product-overview
   - /docs/en/discontinued-product-overview
+  - /docs/scos/user/features/202200.0/product-feature-overview/discontinued-products-overview.html
 ---
 
 If a concrete product runs out of stock, it is tagged as out of stock and cannot be added to cart:
@@ -31,4 +32,3 @@ Only [concrete products](/docs/scos/user/features/{{page.version}}/product-featu
 The following schema illustrates the relations between discontinued products, abstract and concrete products:
 
 ![Module relations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Discontinued+Products/Discontinued+Products+Feature+Overview/discontinued-schema.png)
-

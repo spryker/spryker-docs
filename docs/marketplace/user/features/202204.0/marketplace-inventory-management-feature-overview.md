@@ -2,6 +2,8 @@
 title: Marketplace Inventory Management feature overview
 description: This document contains concept information for the Marketplace Products feature.
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/user/features/202200.0/marketplace-inventory-management-feature-overview.html
 ---
 
 The *Marketplace Inventory Management* feature enables maintaining stock and availability of merchant products and product offers that are sold in the Marketplace.

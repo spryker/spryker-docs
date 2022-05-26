@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/catalog-setup
 ---
 
-*Catalog Setup* contains data required to sell products and build their main structure. 
+*Catalog Setup* contains data required to sell products and build their main structure.
 
 {% info_block warningBox "Important" %}
 

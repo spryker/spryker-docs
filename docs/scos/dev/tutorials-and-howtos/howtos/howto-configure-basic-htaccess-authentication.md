@@ -14,15 +14,15 @@ redirect_from:
   - /v6/docs/en/howto-configure-basic-htaccess-authentication
 ---
 
-This document describes how to configure basic .htaccess authentication for the Storefront and the Back Office.
+This document describes how to configure basic `.htaccess` authentication for the Storefront and the Back Office.
 
 {% info_block errorBox "Important" %}
 
-It is not possible to protect Glue endpoints with basic auth and we do not recommend to use the basic auth for production environments. Instead of the basic oath, consider other options, like IP whitelisting.
+You can't protect Glue endpoints with basic AUTH, and we do not recommend using the basic AUTH for production environments. Instead of the basic AUTH, consider other options, like IP allowlisting.
 
 {% endinfo_block %}
 
-To set up .htaccess authentication, follow these steps:
+To set up the `.htaccess` authentication, see the steps in the following sections.
 
 ## 1. Define login details and endpoints
 
@@ -59,7 +59,7 @@ groups:
 ...
 ```
 
-3. Bootstrap the docker setup with the adjusted deploy file:
+3. Bootstrap the Docker setup with the adjusted deploy file:
 
 ```bash
 docker/sdk boot deploy.*.yml
@@ -81,7 +81,7 @@ You've configured basic authentication.
 
 ## 2. Exclude IP addresses from .htaccess authentication
 
-To allow clients with desired IP addresses to bypass .htaccess authentication, adjust the `deploy.*.yml` of the desired environment as follows:
+To allow clients with desired IP addresses to bypass the `.htaccess` authentication, adjust the `deploy.*.yml` of the desired environment as follows:
 
 ```bash
 version: "0.1"

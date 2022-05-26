@@ -7,9 +7,9 @@ template: feature-integration-guide-template
 
 This document describes how to integrate the Marketplace Product + Quick Add to Cart feature into a Spryker project.
 
-## Install feature core
+## Install feature frontend
 
-Follow the steps below to install the Marketplace Product + Quick Add to Cart feature core.
+Follow the steps below to install the Marketplace Product + Quick Add to Cart feature frontend.
 
 ### Prerequisites
 

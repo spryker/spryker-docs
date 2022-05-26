@@ -7,14 +7,13 @@ template: feature-integration-guide-template
 
 This document describes how to integrate the Marketplace Product Offer + Quick Add to Cart feature into a Spryker project.
 
-## Install feature core
+## Install feature frontend
 
-Follow the steps below to install the Marketplace Product Offer + Quick Add to Cart feature core.
+Follow the steps below to install the Marketplace Product Offer + Quick Add to Cart feature frontend.
 
 ### Prerequisites
 
 To start feature integration, integrate the required features:
-
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | ---------- |
@@ -53,7 +52,7 @@ Enable the following behaviors by registering the plugins:
 | ProductOfferQuickOrderItemMapperPlugin                | Maps product offer reference to QuickOrderItem transfer.                                  |               | SprykerShop\Yves\ProductOfferWidget\Plugin\QuickOrderPage              |
 | MerchantProductOfferProductQuickAddFormExpanderPlugin | Expands `ProductQuickAddForm` with `product_offer_reference` hidden field.                |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\ProductSearchWidget |
 | MerchantProductOfferQuickOrderItemExpanderPlugin      | Expands provided ItemTransfer with `ProductOfferStorage` merchant reference.              |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage      |
-| MerchantProductOfferQuickOrderFormColumnPlugin        | Returns glossary key for column title `quick-order.input-label.merchant` to be displayed. |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage      |
+| MerchantProductOfferQuickOrderFormColumnPlugin        | Adds a new `Merchants` column to quick order . |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage      |
 | MerchantProductOfferQuickOrderFormExpanderPlugin      | Expands QuickOrderItemEmbeddedForm with `product_offer_reference` form field.             |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage      |
 
 

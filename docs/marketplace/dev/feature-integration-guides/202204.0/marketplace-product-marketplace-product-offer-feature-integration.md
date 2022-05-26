@@ -19,7 +19,7 @@ To start feature integration, integrate the required features:
 |-|-|-|
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)  |
 | Marketplace Product | {{page.version}} | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)  |
-| Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)   |
+| Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)   |
 
 ### Set up behavior
 
@@ -28,7 +28,6 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN                                                      | DESCRIPTION                                                                             | PREREQUISITES | NAMESPACE                                                                |
 |-------------------------------------------------------------|-----------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
 | MerchantProductProductOfferReferenceStrategyPlugin          | Allows selecting a merchant product by default on PDP.                                  |               | Spryker\Client\MerchantProductStorage\Plugin\ProductOfferStorage         |
-| MerchantProductMerchantProductOfferCollectionExpanderPlugin | Finds merchant product by sku and expands form choices with a merchant product's value. |               | SprykerShop\Yves\MerchantProductWidget\Plugin\MerchantProductOfferWidget |
 
 {% info_block warningBox "Note" %}
 
@@ -69,6 +68,26 @@ Make sure that merchant products selected on the **Product Details** page by def
 
 {% endinfo_block %}
 
+## Install feature front end
+
+Follow the steps below to install the Marketplace Product + Marketplace Product Offer feature front end.
+
+### Prerequisites
+
+To start feature integration, integrate the required features:
+
+| NAME | VERSION | INTEGRATION GUIDE |
+|-|-|-|
+| Marketplace Product | {{page.version}} | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)  |
+| Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)   |
+
+### Set up behavior
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                                      | DESCRIPTION                                                                             | PREREQUISITES | NAMESPACE                                                                |
+|-------------------------------------------------------------|-----------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
+| MerchantProductMerchantProductOfferCollectionExpanderPlugin | Finds merchant product by sku and expands form choices with a merchant product's value. |               | SprykerShop\Yves\MerchantProductWidget\Plugin\MerchantProductOfferWidget |
 
 **src/Pyz/Yves/MerchantProductOfferWidget/MerchantProductOfferWidgetDependencyProvider.php**
 ```php
@@ -95,6 +114,6 @@ class MerchantProductOfferWidgetDependencyProvider extends SprykerMerchantProduc
 
 {% info_block warningBox "Verification" %}
 
-Make sure that Merchant reference is always transferred to destination pages after Merchant search pages and used in "Sold by" widget after performing the action.
+Make sure that the offers select field obtained via `MerchantProductOffersSelectWidget` is extended with merchant product.
 
 {% endinfo_block %}

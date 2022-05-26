@@ -42,26 +42,6 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
     /**
      * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface>|array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
      */
-    protected function createCatalogSearchQueryExpanderPlugins(): array
-    {
-        return [
-            new MerchantReferenceQueryExpanderPlugin(),
-        ];
-    }
-   
-    /**
-     * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface>|array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
-     */
-    protected function createSuggestionQueryExpanderPlugins(): array
-    {
-        return [
-            new MerchantReferenceQueryExpanderPlugin(),
-        ];
-    }
-
-    /**
-     * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface>|array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
-     */
     protected function getProductConcreteCatalogSearchQueryExpanderPlugins(): array
     {
         return [
@@ -72,6 +52,6 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure you can filter products by merchant reference while retrieving them from the storage.
+Make sure you can filter concrete products by merchant reference while searching by full-text.
 
 {% endinfo_block %}

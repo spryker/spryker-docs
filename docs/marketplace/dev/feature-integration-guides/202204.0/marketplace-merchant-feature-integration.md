@@ -1379,10 +1379,6 @@ merchant_profile.privacy,Data Privacy,en_US
 merchant_profile.privacy,Datenschutz,de_DE
 merchant_profile.delivery_time,Delivery Time,en_US
 merchant_profile.delivery_time,Lieferzeit,de_DE
-merchant_search_widget.all_merchants,All Merchants,en_US
-merchant_search_widget.all_merchants,Alle Händler,de_DE
-merchant_search_widget.merchants,Merchants,en_US
-merchant_search_widget.merchants,Händler,de_DE
 ```
 
 2. Import data:
@@ -1404,7 +1400,6 @@ Register the following plugins to enable widgets:
 | PLUGIN                | DESCRIPTION                                                            | PREREQUISITES | NAMESPACE                                    |
 |-----------------------|------------------------------------------------------------------------|---------------|----------------------------------------------|
 | SoldByMerchantWidget  | Shows the list of the offers with their prices for a concrete product. |               | SprykerShop\Yves\MerchantWidget\Widget       |
-| MerchantSearchWidget  | Provides a widget to render a merchants filter.                        |               | SprykerShop\Yves\MerchantSearchWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -1425,18 +1420,11 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     protected function getGlobalWidgets(): array
     {
         return [
-            ...
             SoldByMerchantWidget::class,
-            MerchantSearchWidget::class,
         ];
     }
 }
 ```
-{% info_block warningBox "Verification" %}
-
-Make sure that both Quick Order Page and Shopping List page have "Merchant Selector" dropdown with all merchants that have the status "Active".
-
-{% endinfo_block %}
 
 Enable Javascript and CSS changes:
 

@@ -28,13 +28,13 @@ This document shows how to create and register a mail provider you want to use.
 
 ## 1. Create a MailTypePlugin
 
-`MailType` is a class used to build the entire `MailTransfer` through an easy-to-use interface. Create the `MailTypePlugin` within the `Mail` module which would send out the emails and implement `MailTypePluginInterface`. Then, just set up your email in the `build()` method.
+`MailType` is a class used to build the entire `MailTransfer` through an easy-to-use interface. Create the `MailTypePlugin` within the `Mail` module which sends out the emails, and implement `MailTypePluginInterface`. Then, in the `build()` method, set up your email.
 
-`MailType` is a class used to build the entire `MailTransfer` through an easy-to-use interface. Create the `MailTypePlugin` within the `Mail` module which would send out the emails and implement `MailTypePluginInterface`. Then, just set up your email in the `build()` method.
+`MailType` is a class used to build the entire `MailTransfer` through an easy-to-use interface. Create the `MailTypePlugin` within the `Mail` module which sends out the emails, and implement `MailTypePluginInterface`. Then, in the `build()` method, set up your email.
 
 Within the `build()` method, you have access to the `MailBuilderInterface`, which makes it easy to enrich the `MailTransfer` with the information needed to send out the emails. You also have access to the `MailTransfer` itself through the `MailBuilderInterface`. This one, for example, is used to get the recipient information from a given transfer object.
 
-In most cases, you add a specific transfer to the `MailTransfer`—for example, a `CustomerTransfer` when a customer registers. This transfer object is then available in your `MailType` through the `MailTransfer`.
+In most cases, you can add a specific transfer to the `MailTransfer`—for example, a `CustomerTransfer` when a customer registers. This transfer object is available in your `MailType` through the `MailTransfer`.
 
 Example of a `MailTypePlugin`:
 

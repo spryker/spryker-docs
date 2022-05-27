@@ -90,9 +90,7 @@ There are two options that identify if a request is secure or not.
 1. When the value of `$request->server->get('REMOTE_ADDR')` is found in the configured trusted proxies and the value of `$request->header->get('X_FORWARDED_PROTO')` is HTTPS.
 2. When the value of `$request->server->get('HTTPS')` is HTTPS.
 
-The checks for a secure request is made in this order.
-
-## Trusted proxy configuration
+The checks for a secure request are made in this order.
 
 ## Trusted proxy configuration
 
@@ -120,4 +118,4 @@ $config[ApplicationConstants::YVES_TRUSTED_PROXIES] = [
 ];
 ```
 
-As described above, the application checks if the value of `$request->server->get('REMOTE_ADDR')` can be found in your configured trusted proxies. If so, the current request is marked as secure when the value of `$request->header->get('X_FORWARDED_PROTO')` is HTTPS.
+As described in the preceding section, the application checks if the value of `$request->server->get('REMOTE_ADDR')` can be found in your configured trusted proxies. If so, the current request is marked as secure when the value of `$request->header->get('X_FORWARDED_PROTO')` is HTTPS.

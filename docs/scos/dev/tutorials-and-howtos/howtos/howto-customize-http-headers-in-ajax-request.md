@@ -23,7 +23,7 @@ redirect_from:
   - /v1/docs/en/ht-customize-http-headers-in-ajax-request
 ---
 
-The `XMLHttpRequest` method `setRequestHeader()` sets the value of an HTTP request header. When using `setRequestHeader()`, you must call it after calling `open()`, but before calling `send()`. If this method is called several times with the same header, the values are merged into a single request header.
+The `XMLHttpRequest` method `setRequestHeader()` sets the value of an HTTP request header. When using `setRequestHeader()`, call it after calling `open()`, but before `send()`. If this method is called several times with the same header, the values are merged into a single request header.
 
 To add custom headers to the `ajax-provider.ts`, add `this.headers.forEach((value: string, key: string) => this.xhr.setRequestHeader(key, value));` into the promise of the `fetch` method.
 

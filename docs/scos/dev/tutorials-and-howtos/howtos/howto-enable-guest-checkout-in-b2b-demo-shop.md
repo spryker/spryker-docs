@@ -14,7 +14,7 @@ redirect_from:
   - /v6/docs/en/howto-enable-guest-checkout-in-b2b-demo-shop
 ---
 
-As B2B environments usually implement complex business logics, in the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html), guest users cannot check out by default. In some cases, you might need guest checkout to be enabled.
+As B2B environments usually implement complex business logic, in the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html), guest users cannot check out by default. In some cases, you might need guest checkout to be enabled.
 
 {% info_block infoBox "Exemplary implementation" %}
 
@@ -37,7 +37,7 @@ To enable guest checkout, follow these steps:
    vagrant halt && vagrant up
    ```
 
-5. In `CheckoutPage` module, create `src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig`.
+5. In the `CheckoutPage` module, create `src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig`:
 
 <details><summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig</summary>
 
@@ -142,11 +142,11 @@ To enable guest checkout, follow these steps:
 ```
 </details>
 
-6. In `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.twig`, adjust the form definition by replacing `enable: data.isPlaceableOrder and can('WriteSharedCartPermissionPlugin', data.cart.idQuote)`, with the following:
+6. In `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.twig`, adjust the form definition by replacing `enable: data.isPlaceableOrder and can('WriteSharedCartPermissionPlugin', data.cart.idQuote)` with the following:
 ```twig
 enable: data.isPlaceableOrder
 and can('SeeOrderPlaceSubmitPermissionPlugin')
 and (not is_granted('ROLE_USER') or can('WriteSharedCartPermissionPlugin', data.cart.idQuote)),
 ```
 
-Now you can check out as a guest user. After adding items to cart, use the `http://yves.de.spryker.local/en/cart` custom URL for checkout.
+After this, you can check out as a guest user. After adding items to cart, use the `http://yves.de.spryker.local/en/cart` custom URL for checkout.

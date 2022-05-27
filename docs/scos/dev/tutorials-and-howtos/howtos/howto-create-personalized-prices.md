@@ -29,8 +29,8 @@ There are several steps to consider when implementing special prices based on wh
 
 | MODULE | DESCRIPTION |
 | --- | --- |
-| Customer	 | Customer entity needs to be extended to include the group ID. Also, the customer module should be extended so that we have also the group ID information for the customer. |
-| Price	 | group ID should be included in the price entity also. For an SKU, we should have one or more prices. The Price module should be extended so that we can query the price based on the SKU of the product and the group ID. |
+| Customer	 | Customer entity needs to be extended to include the group ID. Also, the customer module must be extended so that you have also the group ID information for the customer. |
+| Price	 | Group ID must be included in the price entity also. For an SKU, you should have one or more prices. The Price module should be extended so that you can query the price based on the SKU of the product and the group ID. |
 |Importer | Set of prices should be imported for each product. |
 | Collector	 | Set of prices should be exported to the client side data storage. |
 | Catalog | Price that corresponds to the logged in customer group should be displayed. |
@@ -48,7 +48,7 @@ The `spy_price` table should be extended on the project side to include the grou
 
 ## 3. Extend the price module
 
-The `Price` module should be extended so that we can query prices by SKU and group ID and retrieve the default price.
+The `Price` module should be extended so that you can query prices by SKU and group ID and retrieve the default price.
 
 ## 4. Import prices
 
@@ -122,7 +122,7 @@ class CartItemSpecialPricePlugin extends AbstractPlugin implements ItemExpanderP
 
 The special prices must also be exported to the client-side data storage so that the corresponding price can be displayed to the customer. Data aggregation and export to client-side data storage is handled by the `Collector` module.
 
-The product data is collected by the `ProductCollector`. The `ProductCollector:collectItem($touchKey, array $collectItemData)` should be modified to collect the prices for the current SKU.
+The product data is collected by the `ProductCollector`. The `ProductCollector:collectItem($touchKey, array $collectItemData)` must be modified to collect the prices for the current SKU.
 
 ```php
 <?php

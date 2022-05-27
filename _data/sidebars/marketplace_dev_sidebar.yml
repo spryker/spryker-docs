@@ -230,9 +230,6 @@ entries:
           - title: Marketplace Product + Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-cart-feature-integration.html
 
-          - title: Marketplace Product + Catalog feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-catalog-feature-integration.html
-
           - title: Marketplace Product + Inventory Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-inventory-management-feature-integration.html
 

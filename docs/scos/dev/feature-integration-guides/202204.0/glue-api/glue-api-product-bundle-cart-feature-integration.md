@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-product-bundle-cart-feature-integration
   - /docs/glue-api-product-bundle-cart-feature-integration
   - /docs/en/glue-api-product-bundle-cart-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-bundle-cart-feature-integration.html
 ---
 
 Follow the steps below to integrate the Glue API: Product Bundle + Cart feature.

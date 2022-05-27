@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/shopping-lists-product-options-feature-integration
   - /docs/shopping-lists-product-options-feature-integration
   - /docs/en/shopping-lists-product-options-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/shopping-lists-product-options-feature-integration.html
 ---
 
 ## Install feature core

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/retrieving-configurable-bundle-templates
   - /docs/retrieving-configurable-bundle-templates
   - /docs/en/retrieving-configurable-bundle-templates
+  - /docs/scos/dev/glue-api-guides/202200.0/managing-products/retrieving-configurable-bundle-templates.html
 ---
 
 This endpoint allows retrieving information about the configurable bundle templates and their slots.

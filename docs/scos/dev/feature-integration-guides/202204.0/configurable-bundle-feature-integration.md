@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/configurable-bundle-feature-integration
   - /docs/configurable-bundle-feature-integration
   - /docs/en/configurable-bundle-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/configurable-bundle-feature-integration.html
 related:
   - title: Merchant Product Restrictions feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html

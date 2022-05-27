@@ -3,6 +3,8 @@ title: Cart feature walkthrough
 last_updated: Aug 12, 2021
 description: The Cart feature provides functionality of the shopping cart and cart total calculations
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202200.0/cart-feature-walkthrough/cart-feature-walkthrough.html
 ---
 
 The _Cart_ feature provides functionality of the shopping cart and cart total calculations.

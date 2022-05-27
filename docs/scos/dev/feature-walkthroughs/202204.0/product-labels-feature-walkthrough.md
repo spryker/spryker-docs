@@ -3,6 +3,8 @@ title: Product Labels feature walkthrough
 last_updated: Aug 19, 2021
 description: The Product Labels feature enables product catalog managers to highlight the desired products by adding a special type of information - product labels.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202200.0/product-labels-feature-walkthrough.html
 ---
 
 The _Product Labels_ feature enables product catalog managers to highlight the desired products by adding a special type of information—product labels.

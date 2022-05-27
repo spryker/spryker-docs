@@ -103,7 +103,6 @@ Merchants [create](/docs/marketplace/user/merchant-portal-user-guides/{{page.ver
 | [Managing marketplace abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-attributes.html) |  |
 | [Managing marketplace concrete product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product-attributes.html) |  |
 | [Managing marketplace abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-meta-information.html) |  |
-|  |  |
 
 
 {% info_block warningBox "Developer guides" %}

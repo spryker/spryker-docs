@@ -39,7 +39,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data is added to the `spy_glossary` table in the database.
+Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
 
 {% endinfo_block %}
 
@@ -47,13 +47,13 @@ Make sure that the configured data is added to the `spy_glossary` table in the d
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                | DESCRIPTION                                                                               | PREREQUISITES | NAMESPACE                                                              |
-|-------------------------------------------------------|-------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------|
-| ProductOfferQuickOrderItemMapperPlugin                | Maps product offer reference to QuickOrderItem transfer.                                  |               | SprykerShop\Yves\ProductOfferWidget\Plugin\QuickOrderPage              |
-| MerchantProductOfferProductQuickAddFormExpanderPlugin | Expands `ProductQuickAddForm` with `product_offer_reference` hidden field.                |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\ProductSearchWidget |
-| MerchantProductOfferQuickOrderItemExpanderPlugin      | Expands provided ItemTransfer with `ProductOfferStorage` merchant reference.              |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage      |
-| MerchantProductOfferQuickOrderFormColumnPlugin        | Adds a new `Merchants` column to quick order . |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage      |
-| MerchantProductOfferQuickOrderFormExpanderPlugin      | Expands QuickOrderItemEmbeddedForm with `product_offer_reference` form field.             |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage      |
+| PLUGIN                                                | DESCRIPTION                                                                         | PREREQUISITES | NAMESPACE                                                              |
+|-------------------------------------------------------|-------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------|
+| MerchantQuickOrderItemMapperPlugin                    | Maps merchant reference to `QuickOrderItem` transfer.                               |               | SprykerShop\Yves\ProductOfferWidget\Plugin\QuickOrderPage              |
+| ProductOfferQuickOrderItemMapperPlugin                | Maps product offer reference to `QuickOrderItem` transfer.                          |               | SprykerShop\Yves\ProductOfferWidget\Plugin\QuickOrderPage              |
+| MerchantProductOfferQuickOrderItemExpanderPlugin      | Expands provided ItemTransfer with `ProductOfferStorage` merchant reference.        |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage      |
+| MerchantProductOfferQuickOrderFormColumnPlugin        | Adds a new `Merchants` column to quick order .                                      |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage      |
+| MerchantProductOfferQuickOrderFormExpanderPlugin      | Expands QuickOrderItemEmbeddedForm with `product_offer_reference` form field.       |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage      |
 
 
 **src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php**
@@ -65,6 +65,7 @@ namespace Pyz\Yves\QuickOrderPage;
 use SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage\MerchantProductOfferQuickOrderFormColumnPlugin;
 use SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage\MerchantProductOfferQuickOrderFormExpanderPlugin;
 use SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage\MerchantProductOfferQuickOrderItemExpanderPlugin;
+use SprykerShop\Yves\MerchantWidget\Plugin\QuickOrderPage\MerchantQuickOrderItemMapperPlugin;
 use SprykerShop\Yves\ProductOfferWidget\Plugin\QuickOrderPage\ProductOfferQuickOrderItemMapperPlugin;
 use SprykerShop\Yves\QuickOrderPage\QuickOrderPageDependencyProvider as SprykerQuickOrderPageDependencyProvider;
 
@@ -76,6 +77,7 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
     protected function getQuickOrderItemMapperPlugins(): array
     {
         return [
+            new MerchantQuickOrderItemMapperPlugin(),
             new ProductOfferQuickOrderItemMapperPlugin(),
         ];
     }
@@ -112,31 +114,12 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 }
 ```
 
-**src/Pyz/Yves/ProductSearchWidget/ProductSearchWidgetDependencyProvider.php**
-
-```php
-namespace Pyz\Yves\ProductSearchWidget;
-
-use SprykerShop\Yves\MerchantProductOfferWidget\Plugin\ProductSearchWidget\MerchantProductOfferProductQuickAddFormExpanderPlugin;
-use SprykerShop\Yves\ProductSearchWidget\ProductSearchWidgetDependencyProvider as SprykerProductSearchWidgetDependencyProvider;
-
-class ProductSearchWidgetDependencyProvider extends SprykerProductSearchWidgetDependencyProvider
-{
-    /**
-     * @return array<\SprykerShop\Yves\ProductSearchWidgetExtension\Dependency\Plugin\ProductQuickAddFormExpanderPluginInterface>
-     */
-    protected function getProductQuickAddFormExpanderPlugins(): array
-    {
-        return [
-            new MerchantProductOfferProductQuickAddFormExpanderPlugin(),
-        ];
-    }
-}
-```
-
 {% info_block warningBox "Verification" %}
 
-Make sure that product offer reference is transferred to Cart and SoldBy section contains proper merchant.
-Make sure that you can see Merchant additional column, which contains merchant products after product search by sku.
+Make sure that you can see `Merchant` additional column, which contains the corresponding merchants product offers after product search by name or sku.
+
+Make sure that selected product offer reference is transferred to Cart and SoldBy section contains a proper merchant.
+
+Make sure that selected merchant reference affects search results while retrieving for product by name or sku.
 
 {% endinfo_block %}

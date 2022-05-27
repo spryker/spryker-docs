@@ -54,6 +54,8 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure that merchant product can be added to cart with proper merchant in "SoldBy" section.
+Make sure that merchant related products are added to cart with the corresponding merchant in "SoldBy" section.
+
+Make sure that selected merchant reference affects search results while retrieving for product by name or sku.
 
 {% endinfo_block %}

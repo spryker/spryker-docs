@@ -3,6 +3,9 @@ title: Managing marketplace orders
 last_updated: Jul 15, 2021
 description: This document describes how to manage marketplace orders in the Back Office.
 template: back-office-user-guide-template
+related:
+  - title: Marketplace Order Management feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
 ---
 
 This document describes how to manage marketplace orders.
@@ -256,7 +259,7 @@ The **Total** section displays the total amount of items to be returned.
 
 #### Marketplace section
 
-| TTRIBUTE | DESCRIPTION |
+| ATTRIBUTE | DESCRIPTION |
 |---|---|
 | Merchant Order References | Merchant order reference number. |
 | Merchant | Name of the merchant that sold the item. |
@@ -324,6 +327,7 @@ The page refreshes to show the success message about comment creation. Your mess
 ## Editing a billing address in the marketplace order
 
 To edit a billing address:
+
 1. Next to the order you want to edit the billing address of, click **View**.
 2. On the **View Order** page, scroll down to the **Customer** section.
 3. Under the **Billing address**, click **Edit**. The **Edit Address for Order** page opens.

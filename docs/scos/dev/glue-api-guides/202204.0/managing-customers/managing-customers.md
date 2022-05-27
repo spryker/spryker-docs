@@ -10,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/managing-customers-via-glue-api
   - /docs/managing-customers-via-glue-api
   - /docs/en/managing-customers-via-glue-api
+  - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customers.html
+  - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/managing-customers.html
 ---
 
 The Customer API allows creating customers and manage their account data. This includes the possibility to maintain a set of customer addresses as separate resources. In the checkout process, you can retrieve and use these address resources to speed up the buying process. The API supports authentication via OAuth 2.0 and password restoration.

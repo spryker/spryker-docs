@@ -3,6 +3,8 @@ title: Company Account feature walkthrough
 last_updated: Sep 2, 2021
 description: The Company Account feature allows controlling user access to the system within an organization by configuring different permissions and roles for the company's entities (units) and users.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202200.0/company-account-feature-walkthrough/company-account-feature-walkthrough.html
 ---
 
 The _Company Account_ feature allows controlling user access to the system within an organization by configuring different permissions and roles for the company's entities (units) and users.

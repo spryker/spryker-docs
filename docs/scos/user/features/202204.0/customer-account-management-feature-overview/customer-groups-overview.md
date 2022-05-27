@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/customer-groups-overview
   - /docs/customer-groups-overview
   - /docs/en/customer-groups-overview
+  - /docs/scos/user/features/202200.0/customer-account-management-feature-overview/customer-groups-overview.html
 ---
 
 *Customer Groups* let you organize customers into groups to help you target users for discounts and promotions.

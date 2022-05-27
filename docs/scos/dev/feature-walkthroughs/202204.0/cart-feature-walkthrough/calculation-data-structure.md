@@ -3,6 +3,8 @@ title:  Calculation data structure
 last_updated: Aug 12, 2021
 description: This document describes calculation data structure
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202200.0/cart-feature-walkthrough/calculation-data-structure.html
 ---
 
 The following diagram illustrates the calculation data structure.

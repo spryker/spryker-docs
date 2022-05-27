@@ -9,6 +9,7 @@ redirect_from:
   - /v3/docs/shop-guide-managing-agent-account
   - /v3/docs/en/shop-guide-managing-agent-account
   - /docs/scos/user/shop-user-guides/page.version/agent-account/shop-guide-managing-agent-account.html
+  - /docs/scos/user/shop-user-guides/201907.0/agent-account/shop-guide-managing-agent-account.html
 ---
 
 This topic describes the procedures for performing the Agent-related tasks in the shop interface.
@@ -24,7 +25,7 @@ Agent account is represented via an **Agent Widget**.
 To log in to a company account of another user:
 
 1. Start typing the name or email address of the company user you are going to log in to in the **Search** field of the **Agent Widget**.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Agent+Account/agent-account-search.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Agent+Account/agent-account-search.png)
 
 2. Select the account suggested in the drop-down list and click **Confirm**.
 
@@ -33,6 +34,6 @@ Now you can see the account of the customer under which you have logged in.
 ## Ending Customer Assistance
 
 After you have completed your assistance in the customer account, you need to end it. To do so, click **End Customer Assistance** in the **Agent Widget**.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Agent+Account/end-customer-assistance.png) 
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Agent+Account/end-customer-assistance.png)
 
 <!-- Last review date: Aug 01, 2019 -->

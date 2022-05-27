@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/navigation-feature-overview
   - /docs/navigation-feature-overview
   - /docs/en/navigation-feature-overview
+  - /docs/scos/user/features/202200.0/navigation-feature-overview.html
 ---
 
 The *Navigation* feature lets product catalog managers create intuitive navigation elements and display them on the Storefront.

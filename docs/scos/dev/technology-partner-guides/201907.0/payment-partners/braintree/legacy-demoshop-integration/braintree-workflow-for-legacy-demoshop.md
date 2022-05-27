@@ -8,6 +8,7 @@ originalArticleId: 95ad159c-39ad-4cba-afe1-15fcbe3748d8
 redirect_from:
   - /v3/docs/braintree-workflow-legacy-demoshop
   - /v3/docs/en/braintree-workflow-legacy-demoshop
+  - /docs/scos/dev/technology-partner-guides/201907.0/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-workflow-for-legacy-demoshop.html
 related:
   - title: Braintree
     link: docs/scos/user/technology-partners/page.version/payment-partners/braintree.html

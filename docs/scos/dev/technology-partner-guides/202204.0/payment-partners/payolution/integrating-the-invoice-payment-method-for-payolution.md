@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/payolution-invoice
   - /docs/payolution-invoice
   - /docs/en/payolution-invoice
+  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
 related:
   - title: Installing and configuring Payolution
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/installing-and-configuring-payolution.html

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/computop-sofort
   - /docs/en/computop-sofort
   - /docs/scos/dev/technology-partner-guides/202001.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
+  - /docs/scos/dev/technology-partner-guides/202005.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
   - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
 related:
   - title: Computop

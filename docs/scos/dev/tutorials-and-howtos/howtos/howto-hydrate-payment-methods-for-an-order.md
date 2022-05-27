@@ -26,15 +26,15 @@ redirect_from:
 
 ## Multiple payments
 
-Spryker Commerce OS enables to have multiple payments per checkout. Payments are stored in `QuoteTransfer::payments` and persisted when `CheckoutClient::placeOrder` is called in last checkout step.
+Spryker Commerce OS lets you have multiple payments per checkout. Payments are stored in `QuoteTransfer::payments` and persisted when `CheckoutClient::placeOrder` is called in the last checkout step.
 
-Each payment method must provide payment amount it shares from order grand total. This amount is stored in `PaymentTransfer::amount` field. When order is placed in last step all payments are persisted to `spy_sales_payment` table.
+Each payment method must provide the payment amount it shares from the order's grand total. This amount is stored in the `PaymentTransfer::amount` field. When an order is placed in the last step, all payments are persisted in the `spy_sales_payment` table.
 
 ## Payment hydration for order
 
-The [Sales](/docs/scos/dev/feature-walkthroughs/{{site.version}}/order-management-feature-walkthrough/sales-module-reference-information.html) module provides plugins to hydrate `OrderTransfer`, which is called when `SalesFacade::getOrderByIdSalesOrder` invoked.
+The [Sales](/docs/scos/dev/feature-walkthroughs/{{site.version}}/order-management-feature-walkthrough/sales-module-reference-information.html) module provides plugins to hydrate `OrderTransfer`, which is called when `SalesFacade::getOrderByIdSalesOrder` is invoked.
 
-This plugin invokes the payment hydration plugin stack which must be injected to  `\Spryker\Zed\Payment\PaymentDependencyProvider::PAYMENT_HYDRATION_PLUGINS`, for example:
+This plugin invokes the payment hydration plugin stack, which must be injected to  `\Spryker\Zed\Payment\PaymentDependencyProvider::PAYMENT_HYDRATION_PLUGINS`, for example:
 
 ```php
 <?php
@@ -70,9 +70,9 @@ class PaymentDependencyInjector extends AbstractDependencyInjector
 
 The plugin receives `OrderTransfer` and `PaymentTransfer`, which are the payment you need to hydrate with additional data.
 
-Plugins have to populate the `PaymentTransfer` object and return it back. After this step you should be able to get payment information when calling `SalesFacade::getOrderByIdSalesOrder`. We also included simple Zed UI twig block for payments, so it can display more information about payment methods used on the order details page.
+Plugins must populate the `PaymentTransfer` object and return it back. After this step, you can get payment information when calling `SalesFacade::getOrderByIdSalesOrder`. We also included a simple Zed UI twig block for payments to display more information about payment methods used on the order details page.
 
 To enable it, follow these steps:
 
 1. Go to `\Pyz\Zed\Sales\SalesConfig::getSalesDetailExternalBlocksUrls`.
-2. Add` ‘payments’ => ‘/payment/sales/list’`, to `$projectExternalBlocks` array.
+2. Add` ‘payments’ => ‘/payment/sales/list’`, to the `$projectExternalBlocks` array.

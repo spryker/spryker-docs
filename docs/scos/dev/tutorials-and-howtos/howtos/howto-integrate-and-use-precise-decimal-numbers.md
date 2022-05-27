@@ -24,7 +24,7 @@ The `decimal-object` library lets you work with precise decimal numbers. A decim
 
 ## Why you should use decimal objects
 
-Benefits of using decimal numbers are as follows:
+The benefits of using decimal numbers are as follows:
 
 * Managing long and short accurate values as needed.
 * Supporting arithmetic, comparing, rounding, and casting operations.
@@ -64,7 +64,7 @@ As mentioned above, decimals are immutable. This means that arithmetic operation
 
 ## Using a decimal value object in arithmetic, comparing, casting, and rounding operations
 
-Decimal objects can use decimal objects, plain integers, and string values. They support not only arithmetic operations but also can be used with comparing, casting, and rounding methods. The following section provides the explanation of each of them with some examples.
+Decimal objects can use decimal objects, plain integers, and string values. They support not only arithmetic operations but also can be used with comparing, casting, and rounding methods. The following section provides an explanation of each of them with some examples.
 
 ### Basic arithmetic operations
 

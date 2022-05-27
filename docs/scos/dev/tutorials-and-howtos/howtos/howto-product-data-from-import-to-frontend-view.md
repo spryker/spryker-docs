@@ -24,8 +24,6 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-product-data-from-import-to-front-end-view.html
 ---
 
-
-
 This document describes flow of the product data from importing it to the SQL database to showing it in the frontend view.
 
 ## Import products to SQL database

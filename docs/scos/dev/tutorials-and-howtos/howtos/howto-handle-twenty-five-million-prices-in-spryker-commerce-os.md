@@ -16,11 +16,11 @@ redirect_from:
 
 B2B business model usually challenges any software with higher requirements to amounts of data and business complexity.
 
-Imagine you have thousands of products and customers with unique pricing terms and conditions. A product can have thousands of prices assigned—one per customer. In this document, we share the technical challenges of handling such a number of prices and the solutions we used to solve them.
+Imagine you have thousands of products and customers with unique pricing terms and conditions. A product can have thousands of prices assigned—one per customer. This document shares the technical challenges of handling such a number of prices and the solutions to solve them.
 
-Such a number of prices cannot be managed manually, but it is defined by business rules based on which the prices can be generated automatically. For example, you might agree on the special terms with your B2B partner, and they receive their own prices for the whole catalog. It might be considered as a discount, but usually it is not a single simple rule, but a set of rules and their priorities for each partner. These rules exist in an ERP system which can export data through SOAP or CSV files.
+Such a number of prices cannot be managed manually, but it is defined by business rules based on which the prices can be generated automatically. For example, you might agree on the special terms with your B2B partner, and they receive their own prices for the whole catalog. It might be considered as a discount, but usually it is not a single simple rule, but a set of rules and their priorities for each partner. These rules exist in an ERP system, which can export data through SOAP or CSV files.
 
-In Spryker, each price is imported as a [price dimension](/docs/scos/user/features/{{site.version}}/merchant-custom-prices-feature-overview.html) and has a unique key which determines its relation to a customer—for example, `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. To appear on the Storefront, the prices should appear in Redis price entries and abstract product search documents, so that facet filters can be applied in search and categories.
+In Spryker, each price is imported as a [price dimension](/docs/scos/user/features/{{site.version}}/merchant-custom-prices-feature-overview.html) and has a unique key, which determines its relation to a customer—for example, `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. To appear on the Storefront, the prices must appear in Redis price entries and abstract product search documents, so that facet filters can be applied in search and categories.
 
 Price import flow:
 
@@ -29,12 +29,12 @@ Price import flow:
 
 ## Challenges
 
-When enabling Spryker to handle such a number of prices, we faced the following challenges:
+When enabling Spryker to handle such a number of prices, the following challenges occur:
 
 1. 25,000,000 prices should be imported in two separate price dimensions.
 2. A product can have about 40,000 prices. This results in overpopulated product abstract search documents: each document aggregates prices of abstract products and all related concrete products. Each price is represented as an indexed field in the search document. Increasing the number of indexed fields slows `ElasticSearch(ES)` down. Just for comparison, the [recommended limit](https://www.elastic.co/guide/en/elasticsearch/reference/master/mapping.html#mapping-limit-settings) is 1,000.
 3. Overloaded product abstract search documents cause issues with memory limit and slow down [Publish and Synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html). The average document size is bigger than 1&nbsp;MB.
-4. When moe than 100 product abstract search documents are processed at a time, payload gets above 100&nbsp;MB, and ES rejects queries. [AWS native service](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-limits.html) does not allow changing this limit.
+4. When more than 100 product abstract search documents are processed at a time, the payload gets above 100&nbsp;MB, and ES rejects queries. [AWS native service](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-limits.html) does not allow changing this limit.
 The queries rejected by ES are considered successful by Spryker because the [Elastica library](https://elastica.io/) ignores the `413` error code.
 5. Each price having a unique key results in more different index properties in the whole index. Key structure: `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. This key structure requires millions of actual facets, which slows down ES too much.
 
@@ -103,11 +103,11 @@ The following solutions were evaluated:
    The idea is to avoid indexing problems by sharing big documents between shards. Breaking a huge index into smaller ones makes it easier for the search to index data. The solution is complex and does not solve the payload issues.
    <br>Documentation: [`_routing` field](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-routing-field.html)
 3. Use Postgres or combine ES and Postgres.
-   Postgres provides search functionalities and you can set up an additional database dedicated to running searches or helping ES with additional data. The `script_scoring` function in search lets you embed any data, though performance is decreased, as this script is evaluated for every document when search is being performed.
+   Postgres provides search functionalities, and you can set up an additional database dedicated to running searches or helping ES with additional data. The `script_scoring` function in search lets you embed any data, though performance is decreased, as this script is evaluated for every document when search is being performed.
    Compared to the first option, this solution is more complex.
    <br>Documentation:
    - [Script score query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-script-score-query.html#script-score-query-ex-request)
-   - [Chapter 12. Full Text Search](https://www.postgresql.org/docs/9.5/textsearch.html)
+   - [Chapter 12. Full-Text Search](https://www.postgresql.org/docs/9.5/textsearch.html)
 
 ## ElasticSearch Join field type: Implementation
 
@@ -184,9 +184,9 @@ The side effects of this solution are the following:
 
 1. The [Product Reviews feature](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html) is disabled because it requires multiple document types per index.
 2. Performance requires additional attention. You can read about performance issues related to the feature in [Parent-join and performance](https://www.elastic.co/guide/en/elasticsearch/reference/current/parent-join.html#_parent_join_and_performance).
-3. You can’t build proper queries to run sorting by prices due to ES limitations. Only facet filtering is possible.
+3. Due to ES limitations, you can't build proper queries to run sorting by prices. Only facet filtering is possible.
 
-### How to speed up publishing process
+### How to speed up the publishing process
 
 To implement a parent-child relationship between documents, we built a standard search module that follows [Spryker architecture](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html). The new price search module is subscribed to the publish and unpublish events of abstract products to manage related price documents in the search. The listener in the search module receives a product abstract ID and fetches all related prices to publish or unpublish them depending on the incoming event. Due to a big number of prices, the publish process became slow. This causes the following issues.
 
@@ -198,14 +198,14 @@ The following issues related to a slow publish process have been added:
 2. The following has to be done simultaneously:
     * Trigger product abstract events to update their structure in ES.
     * Trigger their child documents to be published.
-3. RabbitMQ connection issues. Connection is getting closed after fetching a bunch of messages because the PHP process takes too long to be executed. After processing the messages, PHP tries to acknowledge them using the old connection which has been closed by RabbitMQ. Being single-threaded, the PHP library cannot asynchronously send any heartbeats when the thread is busy with something else.
+3. RabbitMQ connection issues. The connection is getting closed after fetching a bunch of messages because the PHP process takes too long to be executed. After processing the messages, PHP tries to acknowledge them using the old connection which has been closed by RabbitMQ. Being single-threaded, the PHP library cannot asynchronously send any heartbeats when the thread is busy with something else.
    For more information, see [Detecting Dead TCP Connections with Heartbeats and TCP Keepalives](https://www.rabbitmq.com/heartbeats.html).
 
 #### Evaluated solutions
 
 The following solutions were evaluated:
 1. To handle bulk insert and update operations in the `_search` table, use [Common Table Expression (CTE)](https://www.postgresql.org/docs/10/queries-with.html) queries. We chose this solution because we had implemented it previously. To learn how this solution is used to optimize the speed of data importers, see [Data Importer Speed Optimization](/docs/scos/dev/data-import/{{site.version}}/data-importer-speed-optimization.html).
-2. To fill the `search` table on the insert update operations in the `entity` table, see [PostgreSQL trigger feature](https://www.postgresql.org/docs/9.1/sql-createtrigger.html).
+2. To fill the `search` table on the insert update operations in the `entity` table, see the [PostgreSQL trigger feature](https://www.postgresql.org/docs/9.1/sql-createtrigger.html).
 3. Implement a reconnection logic that establishes a new connection after catching an exception.
 
 #### Bulk insertion with raw SQL
@@ -286,7 +286,7 @@ FROM   inserted;
 
 Prices are published by pushing the corresponding message to the generic event queue. As this queue can hold a lot more messages than just those related to prices, it makes sense to introduce a dedicated queue for publishing only price-related information.
 
-You can configure it by tweaking the Event and EventBehavior modules. Allow the `EventBehavior` Propel behavior to accept additional parameters (except those related to columns). For example, allow it to accept the name of a custom queue, which is used later for pushing messages to the queue. In this case, price events are segregated from all other events and can be processed in parallel without being blocked by other heavier events. Also, this allows to configure different chunk size for the subscriber, resulting in a more optimized usage of CPU and faster processing.
+You can configure it by tweaking the Event and EventBehavior modules. Allow the `EventBehavior` Propel behavior to accept additional parameters (except those related to columns). For example, allow it to accept the name of a custom queue, which is used later for pushing messages to the queue. In this case, price events are segregated from all other events and can be processed in parallel without being blocked by other heavier events. Also, this let you configure different chunk sizes for the subscriber, resulting in a more optimized CPU usage and faster processing.
 
 To implement this functionality:
 
@@ -303,7 +303,7 @@ Ensure that `\Pyz\Zed\EventBehavior\Persistence\Propel\Behavior\ResourceAwareEve
 
 4. Configure `\Spryker\Zed\Event\Business\Queue\Producer\EventQueueProducer::enqueueListenerBulk()` to check if `queueName` is set on the `EventEntityTransfer.` If it is set, this queue name should be used to push event messages to. Otherwise, it should fall back to the default event queue.
 
-Now you should have a separate event queue for prices. This approach is applicable to any type of event. “Quick lane” ensures that critical data is replicated faster.
+Now you have a separate event queue for prices. This approach is applicable to any type of event. *Quick lane* ensures that critical data is replicated faster.
 
 ### Tweaking database
 
@@ -339,11 +339,11 @@ fi
 
 We were running the analytics at night when there was no intensive activity in our shop. This lets us disable synchronous commit to reduce the processing time of the `COPY` operations.
 
-The following line in the previous code snippet disables synchronous commit: `SET synchronous_commit TO OFF;`
+The following line in the previous code snippet disables the synchronous commit: `SET synchronous_commit TO OFF;`
 
 {% info_block errorBox %}
 
-If you disable synchronous commit, make sure to enable it back after you’ve finished importing the files.
+If you disable the synchronous commit, make sure to enable it back after you’ve finished importing the files.
 
 {% endinfo_block %}
 

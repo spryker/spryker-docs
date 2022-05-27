@@ -17,11 +17,11 @@ redirect_from:
   - /v4/docs/en/howto-notify-about-unsupported-browsers
 ---
 
-To notify your users about an unsupported browser, you can use our `unsupported-browser-popup` component. The component is not provided out of the box, download it:
+To notify your users about an unsupported browser, you can use our `unsupported-browser-popup` component. The component is not provided out of the box. Use the following link to download it:
 
-![]https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.md/unsupported-browser-popup.zip)
+[the-unsupported-browser-popup-component](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.md/unsupported-browser-popup.zip)
 
-In our example, the component checks `userAgent` for Internet Explorer browsers by the inline script. If the component detects the Internet Explorer browser, it displays a message.
+In the example, the component checks `userAgent` for Internet Explorer browsers by the inline script. If the component detects the Internet Explorer browser, it displays a message.
 
 The component can also be changed to detect a feature, for example:
 
@@ -31,7 +31,7 @@ var hasNativeCustomElements = !!window.customElements;
 
 ## Usage
 
-To make use of the `unsupported-browser-popup` component, add it to the molecules of the **ShopUi** module and include in the current `page-blank` template in the `body` tag before script bundles. By default, the script bundles reside in the `footerScripts` block.
+To make use of the `unsupported-browser-popup` component, add it to the molecules of the `ShopUi` module and include in the current `page-blank` template in the `body` tag before script bundles. By default, the script bundles reside in the `footerScripts` block.
 
 Example:
 
@@ -41,6 +41,6 @@ Example:
 
 {% info_block infoBox %}
 
-Our example supports IE 9+ browsers.
+The example supports IE 9+ browsers.
 
 {% endinfo_block %}

@@ -33,14 +33,14 @@ composer require spryker-feature/marketplace-product:"{{page.version}}" --update
 
 Make sure that the following modules have been installed:
 
-| MODULE                       | EXPECTED DIRECTORY                                  |
-|------------------------------|-----------------------------------------------------|
-| MerchantProduct              | vendor/spryker/merchant-product                     |
-| MerchantProductDataImport    | vendor/spryker/merchant-product-data-import         |
-| MerchantProductGui           | vendor/spryker/merchant-product-gui                 |
-| MerchantProductSearch        | vendor/spryker/merchant-product-search              |
-| MerchantProductStorage       | vendor/spryker/merchant-product-storage             |
-| MerchantProductWidget        | vendor/spryker-shop/merchant-product-widget         |
+| MODULE              | EXPECTED DIRECTORY                   |
+| ------------------- | ------------------------------------ |
+| MerchantProduct           | vendor/spryker/merchant-product             |
+| MerchantProductDataImport | vendor/spryker/merchant-product-data-import |
+| MerchantProductGui        | vendor/spryker/merchant-product-gui         |
+| MerchantProductSearch     | vendor/spryker/merchant-product-search      |
+| MerchantProductStorage    | vendor/spryker/merchant-product-storage     |
+| MerchantProductWidget     | vendor/spryker-shop/merchant-product-widget |
 
 {% endinfo_block %}
 
@@ -95,16 +95,16 @@ console transfer:generate
 
 Make sure that the following changes have been applied in transfer objects:
 
-| TRANSFER                   | TYPE     | EVENT | PATH                                                            |
-|----------------------------|----------| ------ |-----------------------------------------------------------------|
-| MerchantProductCriteria    | class    | Created | src/Generated/Shared/Transfer/MerchantProductCriteriaTransfer   |
-| MerchantProduct            | class    | Created | src/Generated/Shared/Transfer/MerchantProductTransfer           |
-| MerchantProductCollection  | class    | Created | src/Generated/Shared/Transfer/MerchantProductCollectionTransfer |
-| ProductAbstractMerchant    | class    | Created | src/Generated/Shared/Transfer/ProductAbstractMerchantTransfer   |
-| MerchantSearchCollection   | class    | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer  |
-| MerchantProductStorage     | class    | Created | src/Generated/Shared/Transfer/MerchantProductStorageTransfer    |
-| ProductAbstract.idMerchant | property | Created | src/Generated/Shared/Transfer/ProductAbstractTransfer           |
-| MerchantProductView        | class    | Created | src/Generated/Shared/Transfer/MerchantProductViewTransfer       |
+| TRANSFER  | TYPE | EVENT | PATH  |
+| ----------------- | ----- | ------ | -------------------------- |
+| MerchantProductCriteria   | class | Created | src/Generated/Shared/Transfer/MerchantProductCriteriaTransfer |
+| MerchantProduct           | class | Created | src/Generated/Shared/Transfer/MerchantProductTransfer        |
+| MerchantProductCollection | class | Created | src/Generated/Shared/Transfer/MerchantProductCollectionTransfer |
+| ProductAbstractMerchant   | class | Created | src/Generated/Shared/Transfer/ProductAbstractMerchantTransfer |
+| MerchantSearchCollection  | class | Created | src/Generated/Shared/Transfer/MerchantSearchCollectionTransfer |
+| MerchantProductStorage    | class | Created | src/Generated/Shared/Transfer/MerchantProductStorageTransfer |
+| ProductAbstract.idMerchant | property | Created | src/Generated/Shared/Transfer/ProductAbstractTransfer |
+| MerchantProductView       | class | Created | src/Generated/Shared/Transfer/MerchantProductViewTransfer |
 | Merchant                   | class    | Created | src/Generated/Shared/Transfer/MerchantTransfer                  |
 | ProductConcretePageSearch  | class    | Created | src/Generated/Shared/Transfer/ProductConcretePageSearchTransfer |
 | PageMap.merchantReferences | property | Created | src/Generated/Shared/Transfer/PageMapTransfer                   |

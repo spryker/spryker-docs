@@ -1397,9 +1397,9 @@ Make sure that the configured data has been added to the `spy_glossary` table in
 
 Register the following plugins to enable widgets:
 
-| PLUGIN                | DESCRIPTION                                                            | PREREQUISITES | NAMESPACE                                    |
-|-----------------------|------------------------------------------------------------------------|---------------|----------------------------------------------|
-| SoldByMerchantWidget  | Shows the list of the offers with their prices for a concrete product. |               | SprykerShop\Yves\MerchantWidget\Widget       |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+| -------------- | --------------- | ------ | ---------------- |
+| SoldByMerchantWidget      | Shows the list of the offers with their prices for a concrete product. |           | SprykerShop\Yves\MerchantWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 

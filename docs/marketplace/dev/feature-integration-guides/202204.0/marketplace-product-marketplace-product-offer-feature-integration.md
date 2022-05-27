@@ -25,9 +25,9 @@ To start feature integration, integrate the required features:
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                      | DESCRIPTION                                                                             | PREREQUISITES | NAMESPACE                                                                |
-|-------------------------------------------------------------|-----------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
-| MerchantProductProductOfferReferenceStrategyPlugin          | Allows selecting a merchant product by default on PDP.                                  |               | Spryker\Client\MerchantProductStorage\Plugin\ProductOfferStorage         |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+|-|-|-|-|
+| MerchantProductProductOfferReferenceStrategyPlugin | Allows selecting a merchant product by default on PDP. |  | Spryker\Client\MerchantProductStorage\Plugin\ProductOfferStorage |
 
 {% info_block warningBox "Note" %}
 

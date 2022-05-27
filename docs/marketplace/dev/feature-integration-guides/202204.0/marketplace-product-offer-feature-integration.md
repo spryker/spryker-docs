@@ -33,20 +33,20 @@ composer require spryker-feature/marketplace-product-offer:"{{page.version}}" --
 
 Make sure that the following modules were installed:
 
-| MODULE                              | EXPECTED DIRECTORY                                          |
-|-------------------------------------|-------------------------------------------------------------|
-| MerchantProductOffer                | spryker/merchant-product-offer                              |
-| MerchantProductOfferDataImport      | spryker/merchant-product-offer-data-import                  |
-| MerchantProductOfferGui             | spryker/merchant-product-offer-gui                          |
-| MerchantProductOfferSearch          | spryker/merchant-product-offer-search                       |
-| MerchantProductOfferStorage         | spryker/merchant-product-offer-storage                      |
-| ProductOffer                        | spryker/product-offer                                       |
-| ProductOfferGui                     | spryker/product-offer-gui                                   |
-| ProductOfferValidity                | spryker/product-offer-validity                              |
-| ProductOfferValidityDataImport      | spryker/product-offer-validity-data-import                  |
-| ProductOfferValidityGui             | spryker/product-offer-validity-gui                          |
-| ProductOfferStorage                 | spryker/product-offer-storage                               |
-| ProductOfferStorageExtension        | spryker/product-offer-storage-extension                     |
+| MODULE                         | EXPECTED DIRECTORY                         |
+|--------------------------------|--------------------------------------------|
+| MerchantProductOffer           | spryker/merchant-product-offer             |
+| MerchantProductOfferDataImport | spryker/merchant-product-offer-data-import |
+| MerchantProductOfferGui        | spryker/merchant-product-offer-gui         |
+| MerchantProductOfferSearch     | spryker/merchant-product-offer-search      |
+| MerchantProductOfferStorage    | spryker/merchant-product-offer-storage     |
+| ProductOffer                   | spryker/product-offer                      |
+| ProductOfferGui                | spryker/product-offer-gui                  |
+| ProductOfferValidity           | spryker/product-offer-validity             |
+| ProductOfferValidityDataImport | spryker/product-offer-validity-data-import |
+| ProductOfferValidityGui        | spryker/product-offer-validity-gui         |
+| ProductOfferStorage            | spryker/product-offer-storage              |
+| ProductOfferStorageExtension   | spryker/product-offer-storage-extension    |
 
 {% endinfo_block %}
 
@@ -168,16 +168,16 @@ To configure export to Redis and Elasticsearch, take the following steps:
 
 #### Set up publisher plugins:
 
-| PLUGIN                                                  | SPECIFICATION                                                                                                                                 | PREREQUISITES | NAMESPACE                                                                                          |
-|---------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------|----------------------------------------------------------------------------------------------------|
-| ProductConcreteProductOffersDeletePublisherPlugin       | Finds and deletes product concrete offer storage entities by the given concreteSkus.                                                          |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers               |
-| ProductConcreteProductOffersWritePublisherPlugin        | Queries all active product offer with the given concreteSkus, stores data as json encoded to storage table.                                   |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers               |
-| ProductOfferDeletePublisherPlugin                       | Finds and deletes product offer storage entities with the given productOfferReferences, sends delete message to queue based on module config. |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer                        |
-| ProductOfferWritePublisherPlugin                        | Queries all active product offer with the given productOfferReferences, stores data as json encoded to storage table.                         |               | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer                        |
-| MerchantProductConcreteProductOfferWritePublisherPlugin | Retrieves all active product offers by `merchantIds`, publish active product offers data to `ProductConcreteProductOffersStorage`.            |               | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteProductOffer |
-| MerchantProductOfferWritePublisherPlugin                | Queries all active product offer with the given merchantIds, stores data as json encoded to storage table.                                    |               | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Merchant                    |
-| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer events.                                                                |               | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOffer                 |
-| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer store events.                                                          |               | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOfferStore            |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|--|--| ----------- | ---------------- |
+| ProductConcreteProductOffersDeletePublisherPlugin       | Finds and deletes product concrete offer storage entities by the given concreteSkus.                                                          |           | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers |
+| ProductConcreteProductOffersWritePublisherPlugin        | Queries all active product offer with the given concreteSkus, stores data as json encoded to storage table.                                   |           | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteOffers |
+| ProductOfferDeletePublisherPlugin                       | Finds and deletes product offer storage entities with the given productOfferReferences, sends delete message to queue based on module config. |           | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer |
+| ProductOfferWritePublisherPlugin                        | Queries all active product offer with the given productOfferReferences, stores data as json encoded to storage table.                         |           | Spryker\Zed\ProductOfferStorage\Communication\Plugin\Publisher\ProductOffer |
+| MerchantProductConcreteProductOfferWritePublisherPlugin | Retrieves all active product offers by `merchantIds`, publish active product offers data to `ProductConcreteProductOffersStorage`.            |           | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\ProductConcreteProductOffer |
+| MerchantProductOfferWritePublisherPlugin                | Queries all active product offer with the given merchantIds, stores data as json encoded to storage table.                                    |           | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Merchant |
+| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer events.                                                                |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOffer |
+| ProductConcreteWritePublisherPlugin                     | Publishes concrete products by create, update and delete product offer store events.                                                          |           | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\Publisher\ProductOfferStore |
 
 <details><summary markdown='span'>src/Pyz/Zed/Publisher/PublisherDependencyProvider.php</summary>
 

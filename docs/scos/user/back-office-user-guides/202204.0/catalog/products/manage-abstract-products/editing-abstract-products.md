@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/editing-abstract-products
   - /docs/editing-abstract-products
   - /docs/en/editing-abstract-products
+  - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-abstract-products/editing-abstract-products.html
 related:
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html

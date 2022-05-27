@@ -9,7 +9,8 @@ redirect_from:
   - /2021080/docs/managing-customers-via-glue-api
   - /2021080/docs/en/managing-customers-via-glue-api
   - /docs/managing-customers-via-glue-api
-  - /docs/en/managing-customers-via-glue-api/
+  - /docs/en/managing-customers-via-glue-api
+  - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customers.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/managing-customers.html
 ---
 

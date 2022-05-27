@@ -11,6 +11,7 @@ redirect_from:
   - /docs/glue-api-product-labels-feature-integration
   - /docs/en/glue-api-product-labels-feature-integration
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-product-labels-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-labels-feature-integration.html
 related:
   - title: Accessing Product Labels
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-product-labels.html

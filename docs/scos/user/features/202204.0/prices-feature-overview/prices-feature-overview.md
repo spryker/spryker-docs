@@ -14,6 +14,7 @@ redirect_from:
   - /2021080/docs/en/prices
   - /docs/prices
   - /docs/en/prices
+  - /docs/scos/user/features/202200.0/prices-feature-overview/prices-feature-overview.html
 ---
 
 A price can be attached to an abstract product as well as to a concrete product. The price is stored as an integer, in the smallest unit of the currency—for example, for Euro that would be cents.

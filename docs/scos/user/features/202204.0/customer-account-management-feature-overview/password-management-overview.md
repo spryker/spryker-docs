@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/password-management-overview
   - /docs/password-management-overview
   - /docs/en/password-management-overview
+  - /docs/scos/user/features/202200.0/customer-account-management-feature-overview/password-management-overview.html
 ---
 
 *Password Management* lets Spryker admins manage customer account passwords. It also lets B2B and B2C Shoppers manage their own account passwords.

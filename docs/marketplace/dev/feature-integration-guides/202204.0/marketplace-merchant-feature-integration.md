@@ -1525,4 +1525,3 @@ Integrate the following related features:
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | -|
 | Marketplace Merchant API | &check;  |  [Marketplace Merchant feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-merchant-feature-integration.html) |
-| Marketplace Merchant + Quick Add to Cart |   | [Marketplace Merchant + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-quick-add-to-cart-feature-integration.html)             |

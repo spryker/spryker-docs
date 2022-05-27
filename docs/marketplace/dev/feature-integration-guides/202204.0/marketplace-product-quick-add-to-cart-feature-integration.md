@@ -7,6 +7,81 @@ template: feature-integration-guide-template
 
 This document describes how to integrate the Marketplace Product + Quick Add to Cart feature into a Spryker project.
 
+## Install feature core
+
+Follow the steps below to install the Marketplace Product + Quick Add to Cart feature core.
+
+### Prerequisites
+
+To start feature integration, integrate the required features:
+
+| NAME                | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
+|---------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Marketplace Product | {{page.version}} | [Marketplace Product Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)|
+| Quick Add to Cart   | {{page.version}} | [Quick Add to Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-feature-integration.html)              |
+
+### Set up behavior
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                | SPECIFICATION                               | PREREQUISITES | NAMESPACE                                          |
+|---------------------------------------|---------------------------------------------|---------------|----------------------------------------------------|
+| MerchantReferenceQueryExpanderPlugin  | Adds filter by merchant reference to query. |               | Spryker\Client\MerchantProductSearch\Plugin\Search |
+
+
+**src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
+```php
+<?php
+
+namespace Pyz\Client\Catalog;
+
+use Spryker\Client\Catalog\CatalogDependencyProvider as SprykerCatalogDependencyProvider;
+use Spryker\Client\MerchantProductSearch\Plugin\Search\MerchantReferenceQueryExpanderPlugin;
+
+class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface>|array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
+     */
+    protected function getProductConcreteCatalogSearchQueryExpanderPlugins(): array
+    {
+        return [
+            new MerchantReferenceQueryExpanderPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/ProductPageSearch/ProductPageSearchDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ProductPageSearch;
+
+use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductProductConcretePageMapExpanderPlugin;
+use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider as SprykerProductPageSearchDependencyProvider;
+
+class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductConcretePageMapExpanderPluginInterface>
+     */
+    protected function getConcreteProductMapExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductProductConcretePageMapExpanderPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure you can filter concrete products by merchant reference while searching by full-text.
+
+{% endinfo_block %}
+
 ## Install feature frontend
 
 Follow the steps below to install the Marketplace Product + Quick Add to Cart feature frontend.
@@ -20,15 +95,80 @@ To start feature integration, integrate the required features:
 | Marketplace Product | {{page.version}} | [Marketplace Product Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)|
 | Quick Add to Cart   | {{page.version}} | [Quick Add to Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-feature-integration.html)              |
 
+### Add translations
+
+Add translations as follows:
+
+1. Append glossary for the feature:
+
+```yaml
+merchant_search_widget.all_merchants,All Merchants,en_US
+merchant_search_widget.all_merchants,Alle Händler,de_DE
+merchant_search_widget.merchants,Merchants,en_US
+merchant_search_widget.merchants,Händler,de_DE
+
+```
+
+2. Import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
+
+{% endinfo_block %}
+
+### Set up widgets
+
+Register the following plugins to enable widgets:
+
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+| --------------- | ------------------ | ------------- | --------------- |
+| MerchantSearchWidget | Provides a widget to render a merchants filter.  |   | SprykerShop\Yves\MerchantSearchWidget\Widget |
+
+**src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ShopApplication;
+
+use SprykerShop\Yves\MerchantSearchWidget\Widget\MerchantSearchWidget;
+use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
+
+class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
+{
+    /**
+     * @return array<string>
+     */
+    protected function getGlobalWidgets(): array
+    {
+        return [
+            MerchantSearchWidget::class,
+        ];
+    }
+}
+```
+{% info_block warningBox "Verification" %}
+
+Make sure that Quick Order Page contains "Merchant Selector" dropdown with all active merchants.
+
+Make sure that selected merchant reference affects search results while retrieving for product by name or sku.
+
+{% endinfo_block %}
+
 ### Set up behavior
 
-1. Enable the following behaviors by registering the plugins:
+Enable the following behaviors by registering the plugins:
 
 | PLUGIN                                      | SPECIFICATION                                         | PREREQUISITES | NAMESPACE                                                    |
 |---------------------------------------------|-------------------------------------------------------|---------------|--------------------------------------------------------------|
 | MerchantProductQuickOrderItemExpanderPlugin | Expands provided ItemTransfer with merchant reference.|               | SprykerShop\Yves\MerchantProductWidget\Plugin\QuickOrderPage |
 
-**src/Pyz/Yves/StorageRouter/StorageRouterDependencyProvider.php**
+**src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php**
 
 ```php
 <?php
@@ -55,7 +195,5 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 {% info_block warningBox "Verification" %}
 
 Make sure that merchant related products are added to cart with the corresponding merchant in "SoldBy" section.
-
-Make sure that selected merchant reference affects search results while retrieving for product by name or sku.
 
 {% endinfo_block %}

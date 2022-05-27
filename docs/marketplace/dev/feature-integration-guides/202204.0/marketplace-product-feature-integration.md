@@ -744,6 +744,12 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 }
 ```
 
+{% info_block warningBox "Verification" %}
+
+Make sure that the merchant product is selected on the product details page by default.
+
+{% endinfo_block %}
+
 **src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
 ```php
 <?php
@@ -768,8 +774,6 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
-
-Make sure that the merchant product is selected on the product details page by default.
 
 Make sure you can filter concrete products by merchant reference while searching by full-text.
 

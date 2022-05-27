@@ -135,28 +135,7 @@ Make sure that the following changes were applied in transfer objects:
 
 ### 3) Add translations
 
-Add translations as follows:
-
-1. Append glossary for the feature:
-
- ```yaml
-merchant_product_offer_widget.merchant_name,Merchant,en_US
-merchant_product_offer_widget.merchant_name,Händler,de_DE
-```
-
-2. Import data:
-
-```bash
-console data:import glossary
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the configured data is added to the `spy_glossary` table in the database.
-
-{% endinfo_block %}
-
-2. Generate a new translation cache for Zed:
+Generate a new translation cache for Zed:
 
 ```bash
 console translator:generate-cache
@@ -1559,11 +1538,10 @@ If installed before, not needed.
 
 Verify that the following modules were installed:
 
-| MODULE                              | EXPECTED DIRECTORY                                   |
-|-------------------------------------|------------------------------------------------------|
-| MerchantProductOfferWidget          | spryker-shop/merchant-product-offer-widget           |
-| MerchantProductOffersSelectWidget   | spryker-shop/merchant-product-offer-widget           |
-| ProductOfferWidget                  | spryker-shop/product-offer-widget                    |
+| MODULE                     | EXPECTED DIRECTORY                         |
+|----------------------------|--------------------------------------------|
+| MerchantProductOfferWidget | spryker-shop/merchant-product-offer-widget |
+| ProductOfferWidget         | spryker-shop/product-offer-widget          |
 | MerchantProductOfferWidgetExtension | spryker-shop/merchant-product-offer-widget-extension |
 
 {% endinfo_block %}
@@ -1585,6 +1563,8 @@ product-offer.info.reference.invalid,Product offer reference not found for produ
 product-offer.info.reference.invalid,Produktangebotsreferenz für Produkt mit SKU '% sku%' nicht gefunden.,de_DE
 product-offer.message.not-active-or-approved,"Product offer not active for product with SKU '%sku%'.",en_US
 product-offer.message.not-active-or-approved,"Produktangebot ist inaktiv für Produkt mit SKU '%sku%'.",de_DE
+merchant_product_offer_widget.merchant_name,Merchant,en_US
+merchant_product_offer_widget.merchant_name,Händler,de_DE
 ```
 
 Import data:
@@ -1595,7 +1575,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data is added to the `spy_glossary` table in the database.
+Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
 
 {% endinfo_block %}
 
@@ -1603,9 +1583,9 @@ Make sure that the configured data is added to the `spy_glossary` table in the d
 
 Register the following plugins to enable widgets:
 
-| PLUGIN                            | DESCRIPTION                                                            | PREREQUISITES | NAMESPACE |
-|-----------------------------------|------------------------------------------------------------------------| ------ | ---------------- |
-| MerchantProductOfferWidget        | Shows the list of the offers with their prices for a concrete product. | | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
+| PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
+| -------------- | --------------- | ------ | ---------------- |
+| MerchantProductOfferWidget       | Shows the list of the offers with their prices for a concrete product. | | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
 | MerchantProductOffersSelectWidget | Shows the list of product offers for the concrete product.             | | SprykerShop\Yves\MerchantProductOfferWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
@@ -1643,9 +1623,9 @@ console frontend:yves:build
 
 Make sure that the following widgets were registered:
 
-| MODULE                            | TEST                                                                                                                               |
-|-----------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| MerchantProductOfferWidget        | Go to a product concrete detail page that has offers, and you will see the default offer is selected, and the widget is displayed. |
+| MODULE | TEST |
+| ----------------- | ----------------- |
+| MerchantProductOfferWidget       | Go to a product concrete detail page that has offers, and you will see the default offer is selected, and the widget is displayed. |
 | MerchantProductOffersSelectWidget | Perform product search by sku at quick add product page, ensure you can see product offers list in next column.                    |
 
 {% endinfo_block %}

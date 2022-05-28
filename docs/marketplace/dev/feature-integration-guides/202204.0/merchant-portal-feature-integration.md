@@ -91,7 +91,7 @@ Connect users and merchants using Zed UI (Backoffice) or using the next data imp
 
 **data/import/common/common/marketplace/merchant.csv**
 
-```csv
+```
  merchant_key,merchant_reference,merchant_name,registration_number,status,email,is_active,url.de_DE,url.en_US
  sony-experts,MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com,1,/de/merchant/sony-experts,/en/merchant/sony-experts
 ```
@@ -101,7 +101,7 @@ In case you don't have merchant user data import been integrated, you can find h
 
 **data/import/common/common/marketplace/merchant_user.csv**
 
-```csv
+```
 merchant_key,username
 sony-experts,michele@sony-experts.com
 ```
@@ -152,9 +152,9 @@ class AclConfig extends SprykerAclConfig
     }
 
      /**
-     * @param string[][] $installerRules
+     * @param array<array<string>> $installerRules
      *
-     * @return string[][]
+     * @return array<array<string>>
      */
     protected function addMerchantPortalInstallerRules(array $installerRules): array
     {
@@ -170,7 +170,7 @@ class AclConfig extends SprykerAclConfig
         ];
 
         foreach ($bundleNames as $bundleName) {
-            $installerRules[] = [
+            $array<installerRules> = [
                 'bundle' => $bundleName,
                 'controller' => AclConstants::VALIDATOR_WILDCARD,
                 'action' => AclConstants::VALIDATOR_WILDCARD,
@@ -223,7 +223,7 @@ Use `\Spryker\Zed\AclEntityDummyProduct\Communication\DummyProductAclEntityMetad
      class AclEntityDependencyProvider extends SprykerAclEntityDependencyProvider
      {
          /**
-          * @return \Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface[]
+          * @return array<\Spryker\Zed\AclEntityExtension\Dependency\Plugin\AclEntityMetadataConfigExpanderPluginInterface>
           */
           protected function getAclEntityMetadataCollectionExpanderPlugins(): array
           {
@@ -328,7 +328,7 @@ use Spryker\Zed\ZedNavigation\ZedNavigationDependencyProvider as SprykerZedNavig
 class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ZedNavigationExtension\Dependency\Plugin\NavigationItemCollectionFilterPluginInterface[]
+     * @return array<\Spryker\Zed\ZedNavigationExtension\Dependency\Plugin\NavigationItemCollectionFilterPluginInterface>
      */
     protected function getNavigationItemCollectionFilterPlugins(): array
     {

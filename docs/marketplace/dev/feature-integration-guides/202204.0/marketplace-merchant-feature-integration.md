@@ -1350,7 +1350,6 @@ composer require spryker-feature/marketplace-merchant: "{{page.version}}" --upda
 | MerchantProfileWidget | vendor/spryker-shop/merchant-profile-widget |
 | MerchantWidget | vendor/spryker-shop/merchant-widget |
 | MerchantPage | vendor/spryker-shop/merchant-page |
-| MerchantSearchWidget  | vendor/spryker-shop/merchant-search-widget   |
 
 ### 2) Add translations
 

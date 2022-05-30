@@ -105,8 +105,6 @@ Make sure that the following changes have been applied in transfer objects:
 | MerchantProductStorage    | class | Created | src/Generated/Shared/Transfer/MerchantProductStorageTransfer |
 | ProductAbstract.idMerchant | property | Created | src/Generated/Shared/Transfer/ProductAbstractTransfer |
 | MerchantProductView       | class | Created | src/Generated/Shared/Transfer/MerchantProductViewTransfer |
-| Merchant                   | class    | Created | src/Generated/Shared/Transfer/MerchantTransfer                  |
-| ProductConcretePageSearch  | class    | Created | src/Generated/Shared/Transfer/ProductConcretePageSearchTransfer |
 | PageMap.merchantReferences | property | Created | src/Generated/Shared/Transfer/PageMapTransfer                   |
 
 {% endinfo_block %}
@@ -344,7 +342,6 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 {% info_block warningBox "Verification" %}
 
 Make sure the `de_page` Elasticsearch index for any product that belongs (see `spy_merchant_product_abstract`) to active and approved merchant, contains merchant names. (indexes can be accessed by any Elasticsearch client, e.g., Kibana. For Docker configuration details, see [Configuring services](/docs/scos/dev/back-end-development/messages-and-errors/registering-a-new-service.html).
-Make sure that `PageMap` transfer object is expanded with `merchant_reference`.
 
 {% endinfo_block %}
 

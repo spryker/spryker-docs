@@ -129,7 +129,6 @@ Make sure that the following changes were applied in transfer objects:
 | ProductView.productOfferReference          | property | created | src/Generated/Shared/Transfer/ProductViewTransfer                    |
 | Merchant.merchantReference                 | property | created | src/Generated/Shared/Transfer/MerchantTransfer                       |
 | Merchant.status                            | property | created | src/Generated/Shared/Transfer/MerchantTransfer                       |
-| Store                                      | class | created | src/Generated/Shared/Transfer/StoreTransfer                          |
 
 {% endinfo_block %}
 
@@ -1481,8 +1480,6 @@ It means the following:
 1. If a merchant gets deactivated, `ProductAbstract`s that were on the catalog search only because they had a product offer from that merchant get removed.
 2. If a product offer gets created, and the `ProductAbstract` related to it was not available on catalog search, it would be available now.
 
-Make sure you can see merchant products after search by sku on Quick Add To Cart page.
-
 {% endinfo_block %}
 
 ### 7) Configure navigation
@@ -1681,6 +1678,30 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN                                                | DESCRIPTION | PREREQUISITES | NAMESPACE  |
 |-------------------------------------------------------|-------------|---------------|------------|
 | MerchantProductOfferProductQuickAddFormExpanderPlugin | Expands `ProductQuickAddForm` with `product_offer_reference` hidden field. |  | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\ProductSearchWidget |
+
+**src/Pyz/Yves/ProductSearchWidget/ProductSearchWidgetDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ProductSearchWidget;
+
+use SprykerShop\Yves\MerchantProductOfferWidget\Plugin\ProductSearchWidget\MerchantProductOfferProductQuickAddFormExpanderPlugin;
+use SprykerShop\Yves\ProductSearchWidget\ProductSearchWidgetDependencyProvider as SprykerProductSearchWidgetDependencyProvider;
+
+class ProductSearchWidgetDependencyProvider extends SprykerProductSearchWidgetDependencyProvider
+{
+    /**
+     * @return array<\SprykerShop\Yves\ProductSearchWidgetExtension\Dependency\Plugin\ProductQuickAddFormExpanderPluginInterface>
+     */
+    protected function getProductQuickAddFormExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductOfferProductQuickAddFormExpanderPlugin(),
+        ];
+    }
+}
+```
 
 ## Related features
 

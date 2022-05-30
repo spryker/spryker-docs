@@ -1098,16 +1098,18 @@ Enable the following behaviors by registering the plugins:
 | ProductOfferValidityProductOfferExpanderPlugin       | Expands product offer data with validity dates when the product offer is fetched.                                      |                                       | Spryker\Zed\ProductOfferValidity\Communication\Plugin\ProductOffer               |
 | ProductOfferValidityConsole                          | Updates product offers to have the `isActive` flag to be `false` where their validity date is not current anymore.     |                                       | Spryker\Zed\ProductOfferValidity\Communication\Console                           |
 | MerchantProductOfferStorageMapperPlugin              | Maps Merchant foreign key of `ProductOffer` transfer object to Merchant Id `ProductOfferStorage` transfer object.      |                                       | Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\ProductOfferStorage |
-| MerchantProductOfferWidgetRouteProviderPlugin             | Adds Routes to the RouteCollection.                                                                               |                                       | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\Router                        |
 | MerchantProductOfferProductConcretePageMapExpanderPlugin  | Expands the provided `PageMap` transfer object with related merchant references.                                  |                                       | Spryker\Zed\MerchantProductOfferSearch\Communication\Plugin\ProductPageSearch    |
 
 **src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
 
 ```php
 <?php
+
 namespace Pyz\Client\Catalog;
+
 use Spryker\Client\Catalog\CatalogDependencyProvider as SprykerCatalogDependencyProvider;
 use Spryker\Client\MerchantProductOfferSearch\Plugin\Search\MerchantReferenceQueryExpanderPlugin;
+
 class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 {
     /**
@@ -1119,6 +1121,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
             new MerchantReferenceQueryExpanderPlugin(),
         ];
     }
+    
     /**
      * @return \Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface[]|\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface[]
      */
@@ -1458,6 +1461,7 @@ class ProductOfferStorageDependencyProvider extends SprykerProductOfferStorageDe
         ];
     }
 }
+
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1579,7 +1583,47 @@ Make sure that the configured data has been added to the `spy_glossary_key` and 
 
 {% endinfo_block %}
 
-### 2) Set up widgets
+### 3) Enable controllers
+
+Enable controllers as follows:
+
+Register the following route provider on the Storefront:
+
+| PROVIDER | NAMESPACE |
+| --- | --- |
+| MerchantProductOfferWidgetRouteProviderPlugin | | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\Router                        |
+
+**src/Pyz/Yves/Router/RouterDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\Router;
+
+use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
+use SprykerShop\Yves\MerchantProductOfferWidget\Plugin\Router\MerchantProductOfferWidgetRouteProviderPlugin;
+
+class RouterDependencyProvider extends SprykerRouterDependencyProvider
+{
+    /**
+     * @return \Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface[]
+     */
+    protected function getRouteProvider(): array
+    {
+        return [
+            new MerchantProductOfferWidgetRouteProviderPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the `yves.mysprykershop.com/merchant-product-offer-widget/merchant-product-offers-select` routes is available for `GET` requests.
+
+{% endinfo_block %}
+
+### 4) Set up widgets
 
 Register the following plugins to enable widgets:
 
@@ -1626,9 +1670,17 @@ Make sure that the following widgets were registered:
 | MODULE | TEST |
 | ----------------- | ----------------- |
 | MerchantProductOfferWidget       | Go to a product concrete detail page that has offers, and you will see the default offer is selected, and the widget is displayed. |
-| MerchantProductOffersSelectWidget | Perform product search by sku at quick add product page, ensure you can see product offers list in next column.                    |
+| MerchantProductOffersSelectWidget | Make sure that `ProductConcreteAddWidget` renders product offers list after performing a product search.                    |
 
 {% endinfo_block %}
+
+### 5) Set up behavior
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                                | DESCRIPTION | PREREQUISITES | NAMESPACE  |
+|-------------------------------------------------------|-------------|---------------|------------|
+| MerchantProductOfferProductQuickAddFormExpanderPlugin | Expands `ProductQuickAddForm` with `product_offer_reference` hidden field. |  | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\ProductSearchWidget |
 
 ## Related features
 

@@ -114,6 +114,6 @@ class MerchantProductOfferWidgetDependencyProvider extends SprykerMerchantProduc
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the offers select field obtained via `MerchantProductOffersSelectWidget` is extended with merchant product.
+Make sure that the offers select field obtained via `MerchantProductOffersSelectWidget` is extended with the corresponding merchant product if it exists.
 
 {% endinfo_block %}

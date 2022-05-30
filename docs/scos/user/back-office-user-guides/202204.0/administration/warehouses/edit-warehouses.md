@@ -1,7 +1,7 @@
 ---
 title: Edit warehouses
 description: Learn how to edit warehouses in the Back Office.
-last_updated: Aug 9, 2021
+last_updated: May 28, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-warehouses
 originalArticleId: 0158ceb8-801b-45ed-bfc1-b34dc098253e

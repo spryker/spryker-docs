@@ -900,7 +900,7 @@ entries:
     - title: Sales
       nested:
       - title: Order matrix
-        url: /docs/scos/user/back-office-user-guides/order-matrix/view-the-order-matrix.html
+        url: /docs/scos/user/back-office-user-guides/sales/view-the-order-matrix.html
         include_versions:
         - "202204.0"
       - title: Order matrix

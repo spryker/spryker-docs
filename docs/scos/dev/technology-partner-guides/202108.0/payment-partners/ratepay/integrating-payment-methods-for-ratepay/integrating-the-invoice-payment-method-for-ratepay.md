@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/ratepay-invoice
   - /docs/ratepay-invoice
   - /docs/en/ratepay-invoice
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/ratepay/ratepay-payment-methods/ratepay-invoice.html
 related:
   - title: RatePay facade methods
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/ratepay/ratepay-facade-methods.html

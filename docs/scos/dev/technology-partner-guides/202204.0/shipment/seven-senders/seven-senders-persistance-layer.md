@@ -1,8 +1,10 @@
 ---
 title: Seven Senders — Persistence layer
 template: concept-topic-template
+date: May 25, 2022
+redirect_from:
+  - /docs/scos/dev/technology-partner-guides/202200.0/shipment/seven-senders/seven-senders-persistance-layer.html
 ---
-
 
 There is a table in the database for saving response and request data:
 

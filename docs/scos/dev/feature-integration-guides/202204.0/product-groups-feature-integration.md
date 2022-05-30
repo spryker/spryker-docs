@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/product-groups-feature-integration
   - /docs/product-groups-feature-integration
   - /docs/en/product-groups-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/product-groups-feature-integration.html
 ---
 
 ## Install feature core

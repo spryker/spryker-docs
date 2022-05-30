@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/searching-the-product-catalog
   - /docs/searching-the-product-catalog
   - /docs/en/searching-the-product-catalog
+  - /docs/scos/dev/glue-api-guides/202200.0/searching-the-product-catalog.html
 related:
   - title: Catalog feature overview
     link: docs/scos/user/features/page.version/catalog-feature-overview.html

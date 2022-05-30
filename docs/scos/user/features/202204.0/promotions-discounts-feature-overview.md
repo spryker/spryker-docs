@@ -14,6 +14,7 @@ redirect_from:
   - /2021080/docs/en/promotions-discounts
   - /docs/promotions-discounts
   - /docs/en/promotions-discounts
+  - /docs/scos/user/back-office-user-guides/202200.0/merchandising/discount/docs/scos/user/features/202200.0/promotions-discounts-feature-overview.html
 ---
 
 The *Promotions & Discounts* feature enables shop owners to provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.

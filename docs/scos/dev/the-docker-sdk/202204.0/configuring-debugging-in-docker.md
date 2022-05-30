@@ -169,14 +169,14 @@ This section describes how to debug with Xdebug.
 
 To debug an application:
 
-1. Make a breakpoint:
+1. Make a breakpoint.
 ![Breakpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/breakpoint.png)
 
-2. Select *Start listening* ![Start listening](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/start-listening.png).
+2. Select *Start listening*. ![Start listening](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/start-listening.png)
 
 3. Open the application in a browser.
 
-4. Navigate to the action you have configured the breakpoint for in step 1. The debugging process should be running in the IDE:
+4. Navigate to the action you have configured the breakpoint for in step 1. The debugging process should be running in the IDE.
 ![Debug process](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/debug-process.png)
 
 ### Debugging console commands and tests with Xdebug

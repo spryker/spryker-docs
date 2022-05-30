@@ -14,6 +14,7 @@ redirect_from:
   - /2021080/docs/en/payment-provider-integration-guide
   - /docs/payment-provider-integration-guide
   - /docs/en/payment-provider-integration-guide
+  - /docs/scos/user/technology-partners/202200.0/technology-partners.html
 ---
 
 In this section you will find information about our Technology Partner Integration solutions.

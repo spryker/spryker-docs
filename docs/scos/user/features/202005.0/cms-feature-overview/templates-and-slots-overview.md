@@ -123,7 +123,7 @@ A content manager can [manage CMS blocks](/docs/scos/user/back-office-user-guide
 </details>
 
 
-CMS Block is a separate feature with a dedicated section in the Back Office. See [CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-block.html-guide) to learn what a content manager can do with CMS blocks in the Back Office > **Content Management** > **Blocks** section.
+CMS Block is a separate feature with a dedicated section in the Back Office. See [CMS Block](#cms-block) to learn what a content manager can do with CMS blocks in the Back Office > **Content Management** > **Blocks** section.
 
 
 ## Content Item
@@ -155,7 +155,9 @@ The correlation between templates and slots is defined by importing template and
 Using the information from the imported lists, the Slot Widget can understand which slots are assigned to a template, and from where to fetch content for each slot.
 
 {% info_block infoBox %}
+
 Without correlation defined correctly, Slot Widget may fail to render embedded content correctly.
+
 {% endinfo_block %}
 
 When the lists are imported, the following applies:
@@ -164,6 +166,7 @@ When the lists are imported, the following applies:
 * By managing this information, a content manager adds content to Storefront.
 
 ### Template list
+
 The template list contains the following information:
 
 | Property | Description | Example values |
@@ -178,6 +181,7 @@ Note the following:
 * If a template is on an imported template list, but does not have a slot, it's not considered a template with slots. Therefore, it will not be displayed in the Slots section.
 
 ### Slot list
+
 The slot list contains the following information:
 
 | Property | Description | Example values |
@@ -191,6 +195,7 @@ The slot list contains the following information:
 | status | Defines whether the slot is active or not where "0" stands for "inactive" and "1" stands for "active". If a slot is inactive, it is not rendered in the Storefront by the slot widget. | 1 |
 
 ## Content Providers
+
 A content provider is a source from where Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront.  With the Templates & Slots feature, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (e.g. [CoreMedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html), [E-spirit](/docs/scos/user/technology-partners/{{page.version}}/content-management/e-spirit.html), [Styla](/docs/scos/user/technology-partners/{{page.version}}/content-management/styla.html), [Magnolia](/docs/scos/user/technology-partners/{{page.version}}/content-management/magnolia.html)).
 
 When the feature is integrated into your project, the following applies:
@@ -205,6 +210,7 @@ The schema below shows how content is managed with the help of templates with sl
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/templates-and-slots.png)
 
 ## Visibility Conditions
+
 When the content manager assigns a CMS block to a slot, it is displayed in all the pages to which the template with the slot is applied.  To narrow down the number of pages to a desired selection, the content manager can define visibility conditions for each CMS block assigned to a slot. Visibility conditions are defined by selecting particular pages in which the content of a CMS block will be displayed. When visibility conditions are defined, the slot widget checks if the CMS block should be rendered in an opened page and either renders or skips it.
 
 Page identifiers used to define visibility conditions depend on the page type to which a template with slots is applied. You can check identifiers for each page type in the table below.
@@ -219,7 +225,9 @@ Page identifiers used to define visibility conditions depend on the page type to
 
 
 {% info_block infoBox "Product details page" %}
+
 For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html).
+
 {% endinfo_block %}
 
 To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID or Navigation Nodes. <!-- See HowTo - Create Visibility Conditions for CMS Blocks  link to https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1027735566/HowTo+-+Create+Visibility+Conditions+for+CMS+Blocks  to learn more-->
@@ -231,6 +239,7 @@ A content manager can define visibility conditions by [selecting pages](/docs/sc
 A developer can [import visibility conditions](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html).
 
 ## Slot Widget
+
 Slot widget is used to fetch content from a content provider and render it in specified pages. Content is fetched in the form of HTML code ready to be rendered in the Storefront. With the help of slot widgets, you can fetch and render content from the following content providers:
 
 * [CoreMedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html)
@@ -238,6 +247,7 @@ Slot widget is used to fetch content from a content provider and render it in sp
 
 
 ### Slot Widget Configuration
+
 Slot widget is used by inserting it into a template which is applied to a page subsequently.
 
 A slot widget template looks as follows:
@@ -273,7 +283,9 @@ Properties can be either `required` or `autofilled`. If a property is of the req
 ```
 
 {% info_block infoBox %}
+
 If there is no content to provide on the side of the content provider based on the specified properties, the slot widget renders a blank space in the Storefront.
+
 {% endinfo_block %}
 
 #### Contextual Variables
@@ -375,7 +387,9 @@ You can find the database schema for templates, slots and the SprykerCMS content
 ## Current Constraints
 
 {% info_block infoBox %}
+
 Currently, the feature has the following functional constraints which are going to be resolved in the future.
+
 {% endinfo_block %}
 
 * The Back Office sections related to the CMS Page feature do not provide any relevant information about templates and slots.

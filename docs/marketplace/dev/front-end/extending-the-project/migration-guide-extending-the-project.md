@@ -4,7 +4,7 @@ description: This document provides details for migration of the marketplace mod
 template: module-migration-guide-template
 ---
 
-This document outlines the changes that need to be made at a project level in order to [extend the project](/docs/marketplace/dev/front-end/extending-the-project/index.html).
+This document outlines the changes that need to be made at a project level in order to [extend the frontend part of your project](/docs/marketplace/dev/front-end/extending-the-project/index.html).
 
 *Estimated migration time: 1h 30m*
 

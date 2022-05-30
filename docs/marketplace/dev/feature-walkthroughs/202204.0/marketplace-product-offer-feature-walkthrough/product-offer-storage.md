@@ -14,8 +14,8 @@ For details about how to use and configure Redis as a key-value storage, see [Us
 
 The following modules are used for the Product Offer storage:
 
-| MODULE                                                                                                      | DESCRIPTION                                                                                                  |
-|-------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| MODULE  | DESCRIPTION |
+|---------------|----------------|
 | [ProductOfferStorage](https://github.com/spryker/product-offer-storage)                                     | Provides publisher plugins and operates data caching according to the entity changes.                        |
 | [ProductOfferStorageExtension](https://github.com/spryker/product-offer-storage-extension)                  | Provides interfaces for extending the data caching.                                                          |
 | [MerchantProductOfferStorage](https://github.com/spryker/merchant-product-offer-storage)                    | Provides publisher plugins and operates product offer data caching according to the merchant entity changes. |

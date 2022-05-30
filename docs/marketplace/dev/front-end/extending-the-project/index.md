@@ -193,3 +193,28 @@ If a project file isn’t reflected in the browser, try to clean cache:
 ```bash
 console cache:empty-all
 ```
+
+## Overriding CSS variables
+
+Variables can be overridden in any `.less` file in your project related to place where it's used.
+The file must have an `@import` of the root variables, that placed in the `ui-conponents` library. For example:
+
+- Variable in the root library
+```less
+@btn-padding-base: var(
+  --spy-btn-padding-base,
+  @btn-horizontal-vertical-base @btn-horizontal-padding-base
+);
+```
+
+- Overridden variable on the project level
+```less
+@import '~@spryker/styles/src/lib/themes/default/variables/index.less';
+
+.mp-test-selector {
+  --spy-btn-padding-base: 10px 15px;
+
+  // styles
+  ...
+}
+```

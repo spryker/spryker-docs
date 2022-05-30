@@ -2,6 +2,8 @@
 title: Edit company users
 description: Learn how to edit company users in the Back Office.
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-users.html
 ---
 
 This document describes how to edit company users.

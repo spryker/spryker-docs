@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productpackagingunit.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productpackagingunit.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productpackagingunit.html
+  - /module_migration_guides/mg-product-packaging-unit.htm
 ---
 
 ## Upgrading from version 3.* to version 4.0.0

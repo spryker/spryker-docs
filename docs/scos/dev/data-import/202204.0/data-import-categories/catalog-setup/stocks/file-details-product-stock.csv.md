@@ -9,6 +9,8 @@ redirect_from:
   - /2021080/docs/en/file-details-product-stockcsv
   - /docs/file-details-product-stockcsv
   - /docs/en/file-details-product-stockcsv
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html
+  - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html
 ---
 
 This document describes the `product_stock.csv` file to configure [Product Stock](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) information In your Spryker Demo Shop.
@@ -40,8 +42,8 @@ This file has the following dependencies:
 
 ## Additional information
 
-* The `product_stock.csv` file contains information about the amount of product articles stored in the warehouses. 
-* The product is identified by `concrete_sku` field (imported from `product_concrete.csv`), field name is a valid name of a warehouse (imported from `warehouse.csv`), field quantity is a number of product items/articles remaining in stock. 
+* The `product_stock.csv` file contains information about the amount of product articles stored in the warehouses.
+* The product is identified by `concrete_sku` field (imported from `product_concrete.csv`), field name is a valid name of a warehouse (imported from `warehouse.csv`), field quantity is a number of product items/articles remaining in stock.
 * When you update stock via the data import and some products do not have the records in the `product_stock.csv`  file, then stock of these products are not updated.
 
 ## Import template file and content example

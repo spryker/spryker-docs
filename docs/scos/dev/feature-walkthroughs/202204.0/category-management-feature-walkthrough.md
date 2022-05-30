@@ -3,6 +3,8 @@ title: Category Management feature walkthrough
 last_updated: Aug 12, 2021
 description: The Category Management feature allows you to manage your product catalog with customized categories, category pages, and filters.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202200.0/category-management-feature-walkthrough.html
 ---
 
 The _Category Management_ feature allows managing your product catalog with customized categories, category pages, and filters. All products can be categorized into logical clusters so that customers can filter them on the Storefront.

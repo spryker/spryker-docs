@@ -9,6 +9,7 @@ redirect_from:
   - /v3/docs/shipment-step-shop-guide-201911
   - /v3/docs/en/shipment-step-shop-guide-201911
   - /docs/scos/user/shop-user-guides/page.version/checkout/shop-guide-shipment-step.html
+  - /docs/scos/user/shop-user-guides/201907.0/checkout/shop-guide-shipment-step.html
 ---
 
 The topic provides a list of steps to select shipment methods for the delivery addresses.
@@ -22,13 +23,14 @@ Here you can do the following:
 * Select the appropriate shipment method
 * Select the appropriate delivery date
 ***
+
 ## Selecting a Shipment Method
 
 To select a shipment method:
 
 1. Choose an available shipment method.
 2. Specify a date you want the shipment to be delivered. This is an optional step.
-![Shipment methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Shipment+Step/shipment-step-new.png) 
+![Shipment methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Shipment+Step/shipment-step-new.png)
 
 3. To proceed to the *Payment* step, click **Go to Payment**.
 ***

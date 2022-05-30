@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/loggly-queue
   - /docs/loggly-queue
   - /docs/en/loggly-queue
+  - /docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/loggly.html
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html

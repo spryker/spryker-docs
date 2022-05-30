@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productquantitydataimport.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productquantitydataimport.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productquantitydataimport.html
+  - /module_migration_guides/mg-product-quantity-data-import.htm
 ---
 
 ## Upgrading from version 1.* to version 3.0.0

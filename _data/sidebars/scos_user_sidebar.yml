@@ -900,9 +900,29 @@ entries:
     - title: Sales
       nested:
       - title: Order matrix
+        url: /docs/scos/user/back-office-user-guides/order-matrix/view-the-order-matrix.html
+        include_versions:
+        - "202204.0"
+      - title: Order matrix
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
         nested:
         - title: Viewing the order matrix
           url: /docs/scos/user/back-office-user-guides/sales/order-matrix/viewing-the-order-matrix.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
       - title: Orders
         nested:
         - title: Changing the state of order items
@@ -1620,7 +1640,7 @@ entries:
           - "202001.0"
           - "202005.0"
           - "202009.0"
-          - "202108.0"             
+          - "202108.0"
         - title: Managing content of emails via CMS blocks
           url: /docs/scos/user/back-office-user-guides/content/blocks/managing-content-of-emails-via-cms-blocks.html
           include_versions:
@@ -2354,13 +2374,16 @@ entries:
     - title: Administration
       nested:
       - title: Stores
+        url: /docs/scos/user/back-office-user-guides/administration/view-stores.html
+        include_versions:
+        - "202204.0"
+      - title: Stores
         url: /docs/scos/user/back-office-user-guides/administration/stores.html
         include_versions:
         - "202001.0"
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Warehouses
         include_versions:
         - "202001.0"
@@ -2369,6 +2392,14 @@ entries:
         - "202108.0"
         - "202204.0"
         nested:
+        - title: Create warehouses
+          url: /docs/scos/user/back-office-user-guides/administration/warehouses/create-warehouses.html
+          include_versions:
+          - "202204.0"
+        - title: Edit warehouses
+          url: /docs/scos/user/back-office-user-guides/administration/warehouses/managing-warehouses.html
+          include_versions:
+          - "202204.0"
         - title: Creating warehouses
           url: /docs/scos/user/back-office-user-guides/administration/warehouses/creating-warehouses.html
           include_versions:
@@ -2376,7 +2407,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Managing warehouses
           url: /docs/scos/user/back-office-user-guides/administration/warehouses/managing-warehouses.html
           include_versions:
@@ -2384,7 +2414,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: References
           include_versions:
           - "202001.0"

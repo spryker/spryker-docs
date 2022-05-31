@@ -10,3 +10,4 @@ algolia:
     - docs/scos/user/**/*.md
     - docs/paas-plus/dev/**/*.md
     - docs/fes/dev/**/*.md    
+    - docs/acp/user/**/*.md    

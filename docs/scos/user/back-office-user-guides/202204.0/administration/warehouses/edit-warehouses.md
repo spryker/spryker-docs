@@ -22,7 +22,7 @@ This document describes how to edit warehouses in the Back Office.
 
 To start working with warehouses, go to **Administration&nbsp;<span aria-label="and then">></span> Warehouses**.
 
-Review the [reference information](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/creating-warehouses.html#reference-information-creating-warehouses) before you start, or look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-edit-warehouses) before you start, or look up the necessary information as you go through the process.
 
 
 ## Edit a warehouse

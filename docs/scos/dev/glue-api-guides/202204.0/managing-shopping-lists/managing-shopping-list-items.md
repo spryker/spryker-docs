@@ -12,6 +12,8 @@ redirect_from:
   - /docs/en/managing-shopping-list-items
   - /docs/scos/dev/glue-api-guides/201811.0/managing-shopping-lists/managing-shopping-list-items.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-shopping-lists/managing-shopping-list-items.html
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-shopping-lists/managing-shopping-list-items.html
+  - /docs/scos/dev/glue-api-guides/201907.0/managing-shopping-lists/managing-shopping-list-items.html
 related:
   - title: Managing shopping lists
     link: docs/scos/dev/glue-api-guides/page.version/managing-shopping-lists/managing-shopping-lists.html

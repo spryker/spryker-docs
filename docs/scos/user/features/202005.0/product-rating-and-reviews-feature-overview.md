@@ -12,7 +12,6 @@ redirect_from:
   - /v5/docs/en/rating-revew-management
   - /v5/docs/rating-reviews
   - /v5/docs/en/rating-reviews
-  - https://docs.spryker.com/docs/scos/user/features/{{202005.0}}/product-rating-and-reviews-feature-overview.html
 ---
 
 The Product Reviews feature allows customers to add reviews and ratings to abstract products. In a dedicated Back Office section, you can manage customers' ratings and reviews to moderate content and collect information before publishing them live. Rating information can be used for sorting and filtering products. Product ratings and reviews can be displayed for customers on demand.

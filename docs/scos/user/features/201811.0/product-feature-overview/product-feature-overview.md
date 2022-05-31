@@ -15,6 +15,7 @@ redirect_from:
   - /v1/docs/product-management
   - /v1/docs/en/product-management
   - /docs/scos/user/features/201811.0/product/product-feature-overview/products-overview.html
+  - /docs/scos/user/features/201811.0/product-feature-overview/product-feature-overview.htmlproduct-abstraction.html
 ---
 
 Product data is central data for shops. It contains characteristics that describe the product as well as characteristics that control behavior of the shop. For example the color of a product is an important information that the customer might need, whereas the weight of the product can be used to calculate the delivery costs.

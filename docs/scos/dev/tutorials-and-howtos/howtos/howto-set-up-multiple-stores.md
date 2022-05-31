@@ -18,11 +18,11 @@ redirect_from:
 
 {% info_block warningBox "Cloud environment restrictions" %}
 
-Currently, Spryker Cloud Commerce OS does not support all the multi-store configuration options, like creation of different regions. Soon, we will publish the documentation on all the available configuration options for the cloud environment. In the meantime, if you want to set up multiple stores, [contact support](https://spryker.force.com/support/s/knowledge-center) to learn about available configuration options.
+Spryker Cloud Commerce OS does not support all the multi-store configuration options, like creation of different regions. If you want to set up multiple stores, [contact support](https://spryker.force.com/support/s/knowledge-center) to learn about available configuration options.
 
 {% endinfo_block %}
 
-With the Spryker Commerce OS, you can create multiple stores for different scenarios per your business requirements. The multi-store setup is very versatile and customizable. For example, you can:
+With the Spryker Commerce OS, you can create multiple stores per your business requirements for different scenarios. The multi-store setup is very versatile and customizable. For example, you can do the following:
 
 * Build one store for multiple countries and languages or separate stores for each region.
 * Make abstract products, discounts, and other logic and code shared between stores or create a dedicated setup for each of them.
@@ -35,7 +35,7 @@ Multi-store setup 1: Database, search engine, and key-value storage are shared b
 
 ![multi-store setup 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/how-to-set-up-multiple-stores.md/multi-store-setup-configuration-option-1.png)
 
-Due to the resources being shared, the infrastructure costs are low. This setup is most suitable for B2C projects with low traffic and small amount of data like products and prices.
+Due to the resources being shared, the infrastructure costs are low. This setup is most suitable for B2C projects with low traffic and a small amount of data like products and prices.
 
 Multi-store setup 2: Each store has a dedicated search engine and key-value storage while the database is shared.
 
@@ -62,7 +62,7 @@ To set up multiple stores, do the following.
 
 ### Configuring code buckets
 
-Code buckets provide an easy way to execute different business logics in runtime based on different HTTP or console command requests. To configure code buckets, see [Code buckets](/docs/scos/dev/architecture/code-buckets.html).
+Code buckets provide an easy way to execute different business logic in runtime based on different HTTP or console command requests. To configure code buckets, see [Code buckets](/docs/scos/dev/architecture/code-buckets.html).
 
 ### Configuring stores
 
@@ -70,7 +70,7 @@ To configure stores, do the following.
 
 #### 1. Define the stores
 
-Define the desired stores in `config/Shared/stores.php`. In the following example,  DE and AT stores are defined:
+Define the desired stores in `config/Shared/stores.php`. In the following example, DE and AT stores are defined:
 
 <details><summary markdown='span'>config/Shared/stores.php</summary>
 
@@ -147,10 +147,10 @@ return $stores;
 
 #### 2. Optional: define store-specific configuration
 
-1. For one or more stores you’ve defined in `config/Shared/stores.php`, define separate store-specific configuration. For example, `config/Shared/config-default_docker_de.php` is the configuration file for the `DE` store in the docker environment.
+1. For one or more stores you’ve defined in `config/Shared/stores.php`, define a separate store-specific configuration. For example, `config/Shared/config-default_docker_de.php` is the configuration file for the `DE` store in the docker environment.
 
 2. To apply the defined store-specific configuration, adjust the related deploy file in the `environment:` section.
-In the following example, the `docker_de` environment name points to the `config/Shared/config-default_docker_de.php` store-specific configuration file. For more information about this deploy file parameter, see [environment:](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#environment).
+In the following example, the `docker_de` environment name points to the `config/Shared/config-default_docker_de.php` store-specific configuration file. For more information about this deploy file parameter, see [environment](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#environment):
 
 ```yaml
 ....
@@ -256,7 +256,7 @@ regions:
 
 The following configuration parameters are used in this example:
 
-* The `regions` parameter defines one or more isolated instances of the Spryker applications that have only one persistent database to work with. Visibility of the project's stores is limited to operate only with the stores that belong to a region. Region refers to geographical terms like data centers, regions, and continents in the real world.
+* The `regions` parameter defines one or more isolated instances of the Spryker applications that have only one persistent database to work with. The visibility of the project's stores is limited to operating only with the stores that belong to a region. Region refers to geographical terms like data centers, regions, and continents in the real world.
 * The `stores` parameter defines the list of stores and store-specific settings for `services`.
 
 For more information about deploy file configuration, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).

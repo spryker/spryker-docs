@@ -48,7 +48,11 @@ $config[PropelQueryBuilderConstants::ZED_DB_ENGINE] = $config[PropelConstants::Z
 DATABASE_DEFAULT_ENGINE='mysql'
 ```
 
-3. Run `vendor/bin/install` to install Spryker with MySQL.
+3. Install Spryker with MySQL:
+
+```bash
+vendor/bin/install
+```
 
 ## Configure MySQL GroupBy setting
 

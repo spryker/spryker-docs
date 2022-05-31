@@ -49,8 +49,8 @@ You can use the same steps for any other logic in the shop.
 
 Override the current home page. There is a set of steps you need to follow in order to override the current homepage:
 
-1. in the **Communication** layer of the Application module in Zed in `src/Pyz/Zed`, add a `Controller` directory.
-2. Inside the added `Controller` directory, extend the `IndexController` to return just a string when calling the `indexAction()`.
+1. In the **Communication** layer of the Application module in Zed in `src/Pyz/Zed`, add the `Controller` directory.
+2. Inside the `Controller` directory, extend the `IndexController` to return just a string when calling the `indexAction()`.
 
 ```php
 namespace Pyz\Zed\Application\Communication\Controller;

@@ -27,7 +27,7 @@ Spryker provides flexible database connection configuration.
 
 ## Single connection
 
-Most probable use case and the Zed DB connection is a good example here.
+The most probable use case and the Zed DB connection are good examples.
 
 For this, the open environment config file (for example, `APP_DIR/config/Shared/config_default-development_DE.php`) and add the following parameters:
 
@@ -40,7 +40,7 @@ $config[PropelConstants::ZED_DB_PORT] = 3306;
 $config[PropelConstants::ZED_DB_ENGINE] = $config[PropelConstants::ZED_DB_ENGINE_MYSQL];
 ```
 
-By default Spryker provides configuration for a single connection (two zed and default, but with the same configuration). The configuration you can find in `APP_DIR/config/Shared/config_propel.php` can look like the following:
+By default, Spryker provides configuration for a single connection (two zed and default, but with the same configuration). The configuration you can find in `APP_DIR/config/Shared/config_propel.php` can look like the following:
 
 ```php
 $engine = $config[PropelConstants::ZED_DB_ENGINE];

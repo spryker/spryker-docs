@@ -44,7 +44,7 @@ The state machine that handles orders that use this shipment method needs to use
 
 <!--../../Resources/Images/ship_event.png -->
 
-The corresponding XML for this transition would be as folllws:
+The corresponding XML for this transition would be as follows:
 
 ```xml
 <states>

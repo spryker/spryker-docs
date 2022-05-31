@@ -100,7 +100,7 @@ For more detailed information about adding carrier companies, see [Creating carr
 
 ![Add shipment method ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ui_shipment_method_6.png)
 
-The shipment methods with price are retrieved depending on your pre-configured price mode + current store and the currently selected currency.
+The shipment methods with price are retrieved depending on your pre-configured price mode + current store and the selected currency.
 
 Shipment methods might be excluded if their active flag is off. The connected `AvailabilityPlugin` plugin excludes them, or it would have a price as NULL.
 

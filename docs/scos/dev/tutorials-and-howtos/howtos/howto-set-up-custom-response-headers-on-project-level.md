@@ -27,7 +27,6 @@ The procedure described in this HowTo is just an example of what you can do with
 ## Prerequisites
 
 Ensure that you have:
-
 * Up-to-date Spryker installation
 * Browser to test
 * CMS page with the video in your Spryker-based shop
@@ -53,4 +52,4 @@ $response = new \Symfony\Component\HttpFoundation\Response();
 $response->headers->set('Feature-Policy', 'fullscreen *');
 ```
 
-You should now be able to see the video on the full screen.
+Now, you can see the video on the full screen.

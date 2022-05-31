@@ -1,5 +1,5 @@
 algolia:
-  index_name: 'acp'
+  index_name: 'acp_user'
   files_to_exclude:
     - index.md
     - 404.md

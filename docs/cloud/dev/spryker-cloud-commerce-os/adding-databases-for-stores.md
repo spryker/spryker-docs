@@ -59,7 +59,7 @@ regions:
 
 ## Deploy the database
 
-Deploy the application with the new database defined. Based on the environment, follow the instructions in one of the following docs:
+Run a destructive pipeline for the application. Based on the environment, follow the instructions in one of the following docs:
 
 * [Deploying in a staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html)
 * [Deploying in a production environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html)

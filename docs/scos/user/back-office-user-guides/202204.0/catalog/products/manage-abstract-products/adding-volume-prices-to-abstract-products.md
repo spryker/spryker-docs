@@ -9,6 +9,8 @@ redirect_from:
   - /2021080/docs/en/adding-volume-prices-to-abstract-products
   - /docs/adding-volume-prices-to-abstract-products
   - /docs/en/adding-volume-prices-to-abstract-products
+  - /docs/scos/user/back-office-user-guides/202001.0/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
+  - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
 ---
 
 This document describes how to add volume prices to abstract products.

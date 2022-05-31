@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/multi-store-cms-block-feature-integration
   - /docs/multi-store-cms-block-feature-integration
   - /docs/en/multi-store-cms-block-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/multi-store-cms-block-feature-integration.html
 related:
   - title: Migration Guide - CMS Block
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html

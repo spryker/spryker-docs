@@ -3,6 +3,8 @@ title: Gift Cards feature walkthrough
 last_updated: Aug 13, 2021
 description: The Gift Cards feature enables you to create a virtual product (a gift card) with a chosen value amount
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202200.0/gift-cards-feature-walkthrough.html
 ---
 
 The _Gift Cards_ feature enables you to create a virtual product (a gift card) with a chosen value amount. The purchase of a gift card generates an individual code that is used as a payment method during checkout.

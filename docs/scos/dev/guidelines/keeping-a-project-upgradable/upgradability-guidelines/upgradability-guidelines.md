@@ -17,6 +17,9 @@ PrivateApi:Extension Please avoid extension of the PrivateApi Spryker\Zed\Custom
 
 In the example, the name is `PrivateApi:Extension`. To find the documentation for this error, check the name in the table below.
 
+<div class="width-100">
+
+
 | Group name |  Group description  | Check name  | Error message template | Documentation |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
 | NotUnique | Covers the cases related to project-level entity names that can conflict with the entity names on the core level. | NotUnique:TransferName | Transfer object name `{transfer_name}` has to have project prefix Pyz in **{absolute_transfer_path}**, like **Pyz{transfer_name}** |  [Transfer name is not unique](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/entity-name-is-not-unique.html#transfer-name-is-not-unique)  |
@@ -34,3 +37,5 @@ In the example, the name is `PrivateApi:Extension`. To find the documentation fo
 | PrivateApi |  | PrivateApi:Facade | Please avoid Spryker dependency: **{method_name}** | [Private API is extended](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-extended.html)  |
 | PrivateApi |  | PrivateApi:ObjectInitialization | Please avoid Spryker dependency: **{class_namespace}** in **{class_namespace}** | [Private API is extended](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-extended.html)  |
 | PrivateApi |  | PrivateApi:PersistenceInBusinessModel | Please avoid Spryker dependency: **{object_name}**->**{method_name}(...)** | [Private API is extended](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-extended.html) |
+
+</div>

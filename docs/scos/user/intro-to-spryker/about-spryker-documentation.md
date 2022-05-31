@@ -22,6 +22,7 @@ redirect_from:
   - /v1/docs/en/about-documentation
   - /v6/docs/about-documentation
   - /v6/docs/en/about-documentation
+  - /docs/scos/user/intro-to-spryker/about-spryker.html
 ---
 
 Spryker Documentation is a central hub for knowledge and information about the [Spryker Commerce OS](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#what-is-the-spryker-commerce-os). It details the aspects involved with setting up and using Spryker for your project.

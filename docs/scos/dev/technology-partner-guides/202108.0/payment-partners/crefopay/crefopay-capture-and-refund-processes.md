@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/crefopay-capture-refund-processes
   - /docs/crefopay-capture-refund-processes
   - /docs/en/crefopay-capture-refund-processes
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-capture-and-refund-processes.html
 related:
   - title: Integrating CrefoPay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/integrating-crefopay.html

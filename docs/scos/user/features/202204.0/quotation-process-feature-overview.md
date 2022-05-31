@@ -18,6 +18,7 @@ redirect_from:
   - /2021080/docs/en/rfq-reference-information-shop-guide
   - /docs/rfq-reference-information-shop-guide
   - /docs/en/rfq-reference-information-shop-guide
+  - /docs/scos/user/features/202200.0/quotation-process-feature-overview.html
 ---
 
 | DEFINITION | DESCRIPTION |

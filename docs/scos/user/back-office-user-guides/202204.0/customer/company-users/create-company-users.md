@@ -11,6 +11,7 @@ redirect_from:
   - /docs/managing-company-users
   - /docs/en/managing-company-users
   - /docs/scos/user/back-office-user-guides/202204.0/customer/company-account/managing-company-users.html
+  - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-users.html
 related:
   - title: Create company roles
     link: docs/scos/user/back-office-user-guides/page.version/customer/company-roles/create-company-roles.html

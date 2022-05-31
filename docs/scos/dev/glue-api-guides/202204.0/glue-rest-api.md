@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/glue-rest-api
   - /docs/glue-rest-api
   - /docs/en/glue-rest-api
+  - /docs/scos/dev/glue-api-guides/202200.0/glue-rest-api.html
 ---
 
 The Spryker Glue REST API is a JSON REST API that is an application of the Spryker Commerce OS. It is build to be used as a contract between the Spryker Commerce OS Backend and any possible touchpoint or integration with a third-party system. As an application, Glue knows how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality.

@@ -1,5 +1,5 @@
 ---
-title: Reference information -  Warehouses
+title: Reference information - Warehouses
 description: The guide provides additional information on the values you enter when creating and updating warehouses in the Back Office.
 last_updated: Jun 11, 2020
 template: back-office-user-guide-template
@@ -8,6 +8,8 @@ originalArticleId: 33ecb94b-1b7b-45f5-bf36-dcfd9793fc68
 redirect_from:
   - /v5/docs/warehouses-reference-information
   - /v5/docs/en/warehouses-reference-information
+  - /docs/scos/user/back-office-user-guides/202005.0/administration/warehouses/references/reference-information-warehouses.html
+  - /docs/scos/user/back-office-user-guides/202005.0/administration/warehouses/references/warehouses-reference-information.html
 ---
 
 This topic contains the reference information for working with warehouses in **Administration** > **Warehouses**.
@@ -35,5 +37,3 @@ The following table describes the attributes you enter when creating, viewing or
 | Name | Name of the warehouse. |
 | Is this warehouse available? | *Yes* - the warehouse is active.<br>*No* - the warehouse is inactive. |
 | Store relation | Store(s) in which the warehouse is available. |
-
-

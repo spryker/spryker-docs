@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/fact-finder-installation-and-configuration
   - /docs/fact-finder-installation-and-configuration
   - /docs/en/fact-finder-installation-and-configuration
+  - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html
 related:
   - title: Integrating FACT-Finder
     link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html

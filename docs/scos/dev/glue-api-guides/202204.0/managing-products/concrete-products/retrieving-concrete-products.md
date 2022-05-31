@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/retrieving-concrete-products
   - /docs/retrieving-concrete-products
   - /docs/en/retrieving-concrete-products
+  - /docs/scos/dev/glue-api-guides/202200.0/managing-products/concrete-products/retrieving-concrete-products.html
 related:
   - title: Product Options feature overview
     link: docs/scos/user/features/page.version/product-options-feature-overview.html

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/approval-process-feature-integration
   - /docs/approval-process-feature-integration
   - /docs/en/approval-process-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/approval-process-feature-integration.html
 related:
   - title: Quotation Process + Approval Process feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-approval-process-feature-integration.html

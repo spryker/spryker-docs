@@ -3,6 +3,8 @@ title: Product Options feature walkthrough
 last_updated: Aug 19, 2021
 description: The Product Options feature allows a Back Office user to create and assign product options to abstract products.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202200.0/product-options-feature-walkthrough.html
 ---
 
 The _Product Options_ feature allows a Back Office user to create and assign product options to abstract products.

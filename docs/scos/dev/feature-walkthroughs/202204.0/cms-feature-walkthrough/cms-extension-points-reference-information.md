@@ -3,6 +3,9 @@ title: "CMS extension points: reference information"
 last_updated: Aug 13, 2021
 description: The CMS module provides an extension point for post activation and deactivation of CMS pages.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/201903.0/cms-feature-walkthrough/cms-extension-points-reference-information.html
+  - /docs/scos/dev/feature-walkthroughs/202005.0/cms-feature-walkthrough/cms-extension-points-reference-information.html
 ---
 
 The CMS module provides an extension point for post activation and deactivation of CMS pages. The plugin interface set for this extension point is as follows:

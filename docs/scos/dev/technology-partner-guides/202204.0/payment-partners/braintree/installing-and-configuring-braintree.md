@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/braintree-configuration
   - /docs/braintree-configuration
   - /docs/en/braintree-configuration
+  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/braintree/installing-and-configuring-braintree.html
 related:
   - title: Integrating Braintree
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/integrating-braintree.html

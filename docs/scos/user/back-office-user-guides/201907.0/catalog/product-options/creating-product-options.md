@@ -8,6 +8,7 @@ originalArticleId: ba11713e-413d-45f6-ad27-ea6d03da5c8b
 redirect_from:
   - /v3/docs/creating-a-product-option
   - /v3/docs/en/creating-a-product-option
+  - /docs/scos/user/back-office-user-guides/201907.0/catalog/product-options/creating-a-product-option.html
 related:
   - title: Product Options feature overview
     link: docs/scos/user/features/page.version/product-options-feature-overview.html

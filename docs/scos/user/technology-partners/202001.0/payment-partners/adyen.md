@@ -8,6 +8,7 @@ originalArticleId: 8a6a3946-2791-4684-8b44-980d4143cd0b
 redirect_from:
   - /v4/docs/adyen
   - /v4/docs/en/adyen
+  - /docs/scos/user/technology-partners/202001.0/payment-partners/adyen/adyen.html
 related:
   - title: Integrating Adyen
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/integrating-adyen.html

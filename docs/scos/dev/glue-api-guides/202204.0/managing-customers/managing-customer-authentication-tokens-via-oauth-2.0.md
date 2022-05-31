@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/managing-customer-authentication-tokens-via-oauth-20
   - /docs/managing-customer-authentication-tokens-via-oauth-20
   - /docs/en/managing-customer-authentication-tokens-via-oauth-20
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html
+  - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html
 ---
 
 This endpoint allows authenticating as a customer and refreshing customer authentication tokens via OAuth 2.0.

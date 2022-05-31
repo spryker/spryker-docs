@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/managing-gift-cards-of-guest-users
   - /docs/managing-gift-cards-of-guest-users
   - /docs/en/managing-gift-cards-of-guest-users
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
+  - /docs/scos/dev/glue-api-guides/201907.0/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
 related:
   - title: Managing guest carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html

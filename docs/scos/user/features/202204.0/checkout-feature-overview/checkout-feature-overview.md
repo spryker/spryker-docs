@@ -10,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/checkout
   - /docs/checkout
   - /docs/en/checkout
+  - /docs/scos/user/features/202200.0/checkout-feature-overview/multi-step-checkout-overview.html
+  - /docs/scos/user/features/202200.0/checkout-feature-overview/checkout-feature-overview.html
 ---
 
 

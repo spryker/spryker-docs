@@ -7,6 +7,7 @@ originalArticleId: cdee2948-be3c-43ec-8f99-0d7dc381326e
 redirect_from:
   - /v1/docs/managing-carts-of-registered-users
   - /v1/docs/en/managing-carts-of-registered-users
+  - /docs/marketplace/dev/glue-api-guides/201811.0/carts-of-registered-users/managing-carts-of-registered-users.html
 related:
   - title: Managing Guest Carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
@@ -17,7 +18,9 @@ related:
 The **Carts API** provides access to management of customers' shopping carts. The following document covers working with **carts of registered users**.
 
 {% info_block infoBox %}
+
 If you want to know how to process carts of registered users, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
+
 {% endinfo_block %}
 
 ## Guest Carts and Carts of Registered Users
@@ -34,11 +37,15 @@ To create a guest cart for a registered user, send a POST request to the followi
 Request sample: `POST http://mysprykershop.com/carts`
 
 {% info_block infoBox %}
+
 Apart from creating a new cart, you can also convert a cart of a guest customer to a cart of a registered user when a guest user registers or authenticates. For details, see section **Assigning Guest Cart to Registered Customer** in Managing Guest Carts.
+
 {% endinfo_block %}
 
 {% info_block errorBox %}
+
 To use this endpoint, you need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
 {% endinfo_block %}
 
 ### Request
@@ -88,6 +95,7 @@ If a request was successful and a cart was created, the endpoint responds with a
 ```
 
 **Response Attributes**
+
 **General Cart Information**
 
 | Field* | Type | Description |
@@ -128,6 +136,7 @@ If a request was successful and a cart was created, the endpoint responds with a
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Cart Item Calculation Information**
+
 | Field* | Type | Description |
 | --- | --- | --- |
 | unitPrice | Integer | Single item price without assuming is it net or gross. This value should be used everywhere a price is disabled. It allows switching the tax mode without side effects. sumPrice |
@@ -151,24 +160,34 @@ If a request was successful and a cart was created, the endpoint responds with a
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Possible Errors**
+
 | Code | Reason |
 | --- | --- |
 | 107 | Failed to create a cart. |
 
 ## Retrieving Carts of Registered Users
+
 To access all carts that a regular user has, send a GET request to the following endpoint:
 `/carts`
+
 Request sample: `GET http://mysprykershop.com/carts`
+
 To get a specific cart by ID, use the following endpoint:
+
 `/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}`
+
 Request sample: `GET http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054`
+
 where `4741fc84-2b9b-59da-bb8d-f4afab5be054` is the ID of the cart you need.
 
 {% info_block errorBox %}
+
 To use the endpoints, you need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
 {% endinfo_block %}
 
 ### Response
+
 No matter which of the 2 endpoints you use, they will respond with a RestCartsResponse containing the requested cart(s).
 **Sample Response**
 ```js
@@ -211,22 +230,30 @@ Sample response for a user that doesn't have any carts:
 ```
 
 **Possible Errors**
+
 | Code | Reason |
 | --- | --- |
 | 101 | A cart with the specified ID was not found. |
 | 104 | Cart ID missing. |
 
 ## Adding Items to Carts of Registered Users
+
 To add items to a cart, send a POST request to the following endpoint:
+
 `/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items`
+
 Request sample: `POST http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items`
+
 where `4741fc84-2b9b-59da-bb8d-f4afab5be054` is the ID of the cart you need.
 
 {% info_block errorBox %}
+
 To use this endpoint, you need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
 {% endinfo_block %}
 
 ## Request
+
 **Attributes**
 
 | Attribute | Type | Required | Description |
@@ -248,8 +275,11 @@ To use this endpoint, you need to authenticate first. For details, see [Authenti
 ```
 
 ### Response
+
 In case of a successful update, the endpoint will also respond with a **RestCartsResponse** containing the new items.
+
 **Possible Errors**
+
 | Code | Reason |
 | --- | --- |
 | 101 | A cart with the specified ID was not found. |
@@ -257,18 +287,27 @@ In case of a successful update, the endpoint will also respond with a **RestCart
 | 104 | Cart ID missing. |
 
 ## Removing Items from Guest Carts
+
 To remove an item from a cart, send a DELETE request to the following endpoint:
+
 `/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}`
+
 Request sample: `DELETE http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items/177_25913296`
+
 where `4741fc84-2b9b-59da-bb8d-f4afab5be054` is the ID of the cart you need and `177_25913296` is the SKU of the concrete product you want to remove.
 
 {% info_block errorBox %}
+
 To use this endpoint, you need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
 {% endinfo_block %}
 
 ### Response
+
 If the item was deleted successfully, the endpoint will respond with a **204 No Content** status code.
+
 **Possible Errors**
+
 | Code | Reason |
 | --- | --- |
 | 101 | A cart with the specified ID was not found. |
@@ -277,17 +316,25 @@ If the item was deleted successfully, the endpoint will respond with a **204 No 
 | 106 | Failed to delete an item. |
 
 ## Changing Item Quantity in Registered User's Cart
+
 To change the quantity of certain items in a cart, use the following endpoint with the PATCH method:
+
 `/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}`
+
 Request sample: `PATCH http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items/177_25913296`
+
 where `4741fc84-2b9b-59da-bb8d-f4afab5be054` is the ID of the cart you need and `177_25913296` is the SKU of the concrete product for which to change the quantity.
 
 {% info_block errorBox %}
+
 To use this endpoint, you need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
 {% endinfo_block %}
 
 ### Request
+
 **Attributes**
+
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
 | sku | String | ✓ | Specifies the SKU part number of the item to change. |
@@ -307,9 +354,11 @@ To use this endpoint, you need to authenticate first. For details, see [Authenti
 ```
 
 ### Response
+
 In case of a successful update, the endpoint will also respond with a **RestCartsResponse** with updated quantity.
 
 **Possible Errors**
+
 | Code | Reason |
 | --- | --- |
 | 101 | A cart with the specified ID was not found. |
@@ -318,14 +367,21 @@ In case of a successful update, the endpoint will also respond with a **RestCart
 | 104 | Cart ID missing. |
 
 ## Deleting Registered User's Cart
+
 To delete a cart of a registered user, send a DELETE request to the following endpoint:
+
 `/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}`
+
 Request sample: `DELETE http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054`
+
 where `4741fc84-2b9b-59da-bb8d-f4afab5be054` is the ID of the cart you want to delete.
 
 ### Response
+
 If the cart was deleted successfully, the endpoint will respond with a **204 No Content** status code.
+
 **Possible Errors**
+
 | Code | Reason |
 | --- | --- |
 | 101 | A cart with the specified ID was not found. |

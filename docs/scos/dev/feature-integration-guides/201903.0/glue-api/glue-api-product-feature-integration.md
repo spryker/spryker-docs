@@ -7,6 +7,8 @@ originalArticleId: 0567f702-1a31-4d35-9e67-e713e777f61d
 redirect_from:
   - /v2/docs/product-api-feature-integration
   - /v2/docs/en/product-api-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201903.0/products-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/product-api-feature-integration.html
 ---
 
 ## Install Feature API
@@ -38,16 +40,16 @@ Run the following commands to apply database changes and generate entity and tra
 ```yaml
 console transfer:generate
 console propel:install
-console transfer:generate 
+console transfer:generate
 ```
 **Verification**
 {% info_block infoBox %}
 Make sure that the following modules are installed:
 {% endinfo_block %}
 |Transfer|Type|Event|Path|
-| --- | ---| --- | ---| 
+| --- | ---| --- | ---|
 |`ConcreteProductsRestAttributesTransfer`|class |created|`src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer`|`AbstractProductsRestAttributesTransfer`|class|created|`src/Generated/Shared/Transfer/AbstractProductsRestAttributesTransfer`|
-         
+
 {% info_block infoBox %}
 Make sure that `SpyProductAbstractStorage` and `SpyProductConcreteStorage` are extended by synchronization behavior with these methods:
 {% endinfo_block %}
@@ -59,7 +61,7 @@ Make sure that `SpyProductAbstractStorage` and `SpyProductConcreteStorage` are e
 Run the following commands to reload abstract and product data to storage.
 ```shell
 console event:trigger -r product_abstract
-console event:trigger -r product_concrete 
+console event:trigger -r product_concrete
 ```
 
 {% info_block infoBox "Verification" %}
@@ -76,7 +78,7 @@ Activate the following plugin:
 
 <details open>   
 <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
- 
+
 ```php
 <?php
 
@@ -98,7 +100,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new ConcreteProductsResourceRoutePlugin(),
         ];
     }
-} 
+}
 ```
 
 </details>
@@ -106,4 +108,4 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 *`http://mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}abstract_sku{% raw %}}}{% endraw %}`
 *`http://mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}concrete_sku{% raw %}}}{% endraw %}`
 
-*Last review date: Feb 19, 2019* 
+*Last review date: Feb 19, 2019*

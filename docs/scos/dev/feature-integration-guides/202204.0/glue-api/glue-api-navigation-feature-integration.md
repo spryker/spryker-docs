@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-navigation-feature-integration
   - /docs/glue-api-navigation-feature-integration
   - /docs/en/glue-api-navigation-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-navigation-feature-integration.html
 ---
 
 {% info_block errorBox %}
@@ -79,14 +80,14 @@ Specify mapping for the source field from which the resourceId field should be f
 {% endinfo_block %}
 
 **src/Pyz/Glue/NavigationsRestApi/NavigationsRestApiConfig.php**
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\NavigationsRestApi;
- 
+
 use Spryker\Glue\NavigationsRestApi\NavigationsRestApiConfig as SprykerNavigationsRestApiConfig;
- 
+
 class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfig
 {
 	/**
@@ -123,12 +124,12 @@ Activate the following plugin:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\NavigationsRestApi\Plugin\ResourceRoute\NavigationsResourceRoutePlugin;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
 	/**
@@ -140,7 +141,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			new NavigationsResourceRoutePlugin(),
 		];
 	}
- 
+
 	/**
 	* @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
 	*
@@ -153,7 +154,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			NavigationsRestApiConfig::RESOURCE_NAVIGATIONS,
 			new CategoryNodeByResourceIdResourceRelationshipPlugin()
 		);
-  
+
 		return $resourceRelationshipCollection;
 	}
 }
@@ -169,7 +170,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Now, it is possible to verify that the configuration of NavigationsRestApiConfig is done correctly. Perform the "https://glue.mysprykershop.com/navigations/{navigationId}" request and check that each node of the type you set up in the configuration (category and CMS pages in the example "resourceId" is filled with the valid foreign key.)
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
 
@@ -460,4 +461,3 @@ Make sure that the response contains `category-nodes` as a relationship and `cat
 </details>
 
 {% endinfo_block %}
-

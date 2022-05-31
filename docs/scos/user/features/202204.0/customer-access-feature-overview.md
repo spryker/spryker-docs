@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/customer-access-feature-overview
   - /docs/customer-access-feature-overview
   - /docs/en/customer-access-feature-overview
+  - /docs/scos/user/features/202200.0/customer-access-feature-overview.html
 ---
 
 _Customer Access_ lets store administrators define whether a certain information is visible to logged out users.
@@ -52,7 +53,7 @@ Even if the **Add to Cart** button is available, an unauthenticated customer is 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage customer access](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customer-access.html) |
+| [Manage customer access](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/manage-customer-access.html) |
 
 {% info_block warningBox "Developer guides" %}
 

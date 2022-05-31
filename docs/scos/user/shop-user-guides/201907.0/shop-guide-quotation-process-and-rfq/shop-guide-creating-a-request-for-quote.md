@@ -9,6 +9,7 @@ redirect_from:
   - /v3/docs/creating-rfq-shop-guide
   - /v3/docs/en/creating-rfq-shop-guide
   - /docs/scos/user/shop-user-guides/page.version/quotation-process-and-rfq/shop-guide-creating-a-request-for-quote.html
+  - /docs/scos/user/shop-user-guides/201907.0/quotation-proces-and-rfq/shop-guide-creating-a-request-for-quote.html
 related:
   - title: Shop Guide - Managing Requests for Quotes for a Buyer
     link: docs/scos/user/shop-user-guides/page.version/quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html

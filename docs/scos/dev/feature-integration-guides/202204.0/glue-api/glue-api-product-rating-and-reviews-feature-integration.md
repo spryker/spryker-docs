@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/glue-api-product-rating-reviews-feature-integration
   - /docs/glue-api-product-rating-reviews-feature-integration
   - /docs/en/glue-api-product-rating-reviews-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-product-rating-and-reviews-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-product-rating-and-reviews-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-product-rating-and-reviews-feature-integration.html
 ---
 
 ## Install Feature API
@@ -101,12 +104,12 @@ Activate the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use \Spryker\Glue\ProductReviewsRestApi\Plugin\GlueApplication\AbstractProductsProductReviewsResourceRoutePlugin;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -224,15 +227,15 @@ Activate the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
 use Spryker\Glue\ProductReviewsRestApi\Plugin\GlueApplication\ProductReviewsRelationshipByProductAbstractSkuPlugin;
 use Spryker\Glue\ProductReviewsRestApi\Plugin\GlueApplication\ProductReviewsRelationshipByProductConcreteSkuPlugin;
 use Spryker\Glue\ProductsRestApi\ProductsRestApiConfig;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
    /**
@@ -251,7 +254,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             ProductsRestApiConfig::RESOURCE_CONCRETE_PRODUCTS,
             new ProductReviewsRelationshipByProductConcreteSkuPlugin()
         );
- 
+
         return $resourceRelationshipCollection;
     }
 }
@@ -261,13 +264,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\ProductsRestApi;
- 
+
 use Spryker\Glue\ProductReviewsRestApi\Plugin\ProductsRestApi\ProductReviewsAbstractProductsResourceExpanderPlugin;
 use Spryker\Glue\ProductReviewsRestApi\Plugin\ProductsRestApi\ProductReviewsConcreteProductsResourceExpanderPlugin;
 use Spryker\Glue\ProductsRestApi\ProductsRestApiDependencyProvider as SprykerProductsRestApiDependencyProvider;
- 
+
 class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependencyProvider
 {
     /**
@@ -279,7 +282,7 @@ class ProductsRestApiDependencyProvider extends SprykerProductsRestApiDependency
             new ProductReviewsConcreteProductsResourceExpanderPlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Glue\ProductsRestApiExtension\Dependency\Plugin\AbstractProductsResourceExpanderPluginInterface[]
      */
@@ -600,6 +603,3 @@ Make sure that the response contains product-reviews as a relationship and produ
 </details>
 
 {% endinfo_block %}
-
-
-

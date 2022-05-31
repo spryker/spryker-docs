@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-global-thresholds
   - /docs/managing-global-thresholds
   - /docs/en/managing-global-thresholds
+  - /docs/scos/user/back-office-user-guides/202200.0/administration/thresholds/managing-global-thresholds.html
 related:
   - title: Managing Merchant Order Thresholds
     link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-merchant-order-thresholds.html

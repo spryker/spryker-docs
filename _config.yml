@@ -233,12 +233,9 @@ sidebars:
   - cloud_dev_sidebar
   - scos_dev_sidebar
   - scos_user_sidebar
-  - acp_dev_sidebar
   - acp_user_sidebar
   - fes_dev_sidebar
   - paas_plus_dev_sidebar
-  - acp_dev_sidebar
-  - acp_user_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file
@@ -269,8 +266,6 @@ algolia:
       title: 'Cloud Developer'
     - name: 'acp_user'
       title: 'ACP User'
-    - name: 'ACP_dev'
-      title: 'ACP Developer'
     - name: 'fes_dev'
       title: 'Frontend enablement Service Developer'
     - name: 'paas_plus_dev'

@@ -1,7 +1,7 @@
 ---
-title: Managing global thresholds
-description: Use the procedures to set up hard and soft thresholds when working with global thresholds in the Back Office.
-last_updated: Aug 9, 2021
+title: Define global thresholds
+description: Learn how to define global thresholds in the Back Office.
+last_updated: May 31, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-global-thresholds
 originalArticleId: 99d7ee06-12fa-479a-a148-7728467fb950
@@ -11,19 +11,21 @@ redirect_from:
   - /docs/managing-global-thresholds
   - /docs/en/managing-global-thresholds
   - /docs/scos/user/back-office-user-guides/202200.0/administration/thresholds/managing-global-thresholds.html
+  - /docs/scos/user/back-office-user-guides/202204.0/administration/thresholds/managing-global-thresholds.html  
 related:
   - title: Managing Merchant Order Thresholds
     link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-merchant-order-thresholds.html
   - title: Managing Threshold Settings
-    link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-threshold-settings.html
+    link: docs/scos/user/back-office-user-guides/page.version/administration/manage-threshold-settings.html
 ---
 
-This topic describes how to manage global thresholds.
+This doc describes how to define [global thresholds](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html) in the Back Office.
 
 ## Prerequisites
+
 To start working with global thresholds, go to **Administration&nbsp;<span aria-label="and then">></span> Global Threshold**.
 
-Review the reference information before you start, or look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-define-global-thresholds) before you start, or look up the necessary information as you go through the process.
 
 ## Define a minimum hard threshold
 
@@ -56,25 +58,11 @@ The page refreshes with a success message displayed.
 
 The page refreshes with a success message displayed.
 
-## Setting up several thresholds
-
-To set up several threshold types:
-1. Enter the fields in the sections of the thresholds you want to set up by following the respective instructions:
-    * [Setting up a Hard Minimum Threshold](#setting-up-minimum-hard-threshold)
-    * [Setting up a Hard Maximum Threshold](#setting-up-maximum-hard-threshold)
-    * [Setting up a Soft Minimum Threshold](#setting-up-minimum-soft-threshold)
-2. Select **Save**.
-
-The page refreshes, and the message about successful threshold update is displayed.
-
 **Tips and tricks**
-<br>In the **Message** field, enter *{% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %}* or *{% raw %}{{{% endraw %}fee{% raw %}}}{% endraw %}* to reference the threshold name or the defined fee, respectively. When the message is rendered on the Storefront, the placeholders are replaced with the values from **Enter threshold value** and **Enter flexible fee** or **Enter fixed fee** fields.
 
-See  [Reference information](#reference-information) to know more about attributes.
+In the **Message** field, enter *{% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %}* or *{% raw %}{{{% endraw %}fee{% raw %}}}{% endraw %}* to reference the threshold name or the defined fee, respectively. When the message is rendered on the Storefront, the placeholders are replaced with the values from **ENTER THRESHOLD VALUE** and **ENTER FLEXIBLE FEE** or **ENTER FIXED FEE** fields.
 
-## Reference information
-
-The following table describes the attributes you select and enter when managing global order thresholds or when [managing merchant order thresholds](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-merchant-order-thresholds.html).
+## Reference information: Define global thresholds
 
 | ATTRIBUTE |DESCRIPTION|
 | --- | --- |

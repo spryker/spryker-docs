@@ -1106,6 +1106,14 @@ entries:
         include_versions:
         - "202204.0"
       - title: Customer, customer access, customer groups
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
         nested:
         - title: Managing customers
           url: /docs/scos/user/back-office-user-guides/customer/customer-customer-access-customer-groups/managing-customers.html
@@ -1177,7 +1185,7 @@ entries:
         nested:
           - title: Create company unit addresses
             url: /docs/scos/user/back-office-user-guides/customer/company-unit-addresses/create-company-unit-addresses.html
-          - title: Edit company units
+          - title: Edit company units addresses
             url: /docs/scos/user/back-office-user-guides/customer/company-unit-addresses/edit-company-unit-addresses.html
       - title: Company roles
         include_versions:
@@ -2554,6 +2562,18 @@ entries:
             - "201907.0"
             - "202001.0"
             - "202005.0"
+      - title: Define global thresholds
+        url: /docs/scos/user/back-office-user-guides/administration/define-global-thresholds.html
+        include_versions:
+        - "202204.0"
+      - title: Manage threshold settings
+        url: /docs/scos/user/back-office-user-guides/administration/manage-threshold-settings.html
+        include_versions:
+        - "202204.0"
+      - title: Define merchant order thresholds
+        url: /docs/scos/user/back-office-user-guides/administration/define-merchant-order-thresholds.html
+        include_versions:
+        - "202204.0"
       - title: Thresholds
         include_versions:
         - "201903.0"
@@ -2562,7 +2582,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
         nested:
         - title: Managing global thresholds
           url: /docs/scos/user/back-office-user-guides/administration/thresholds/managing-global-thresholds.html
@@ -2583,7 +2602,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Managing threshold settings
           url: /docs/scos/user/back-office-user-guides/administration/thresholds/managing-threshold-settings.html
           include_versions:
@@ -2593,7 +2611,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Threshold
           url: /docs/scos/user/back-office-user-guides/administration/thresholds/threshold.html
           include_versions:

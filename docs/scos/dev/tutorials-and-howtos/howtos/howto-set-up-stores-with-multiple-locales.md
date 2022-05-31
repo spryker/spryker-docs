@@ -184,7 +184,7 @@ The `spy_url` table stores the URLs that correspond to the following:
 * Product details pages
 * Static pages defined in CMS
 
-For each category there is a distinct URL for each configured locale. Similar for product details pages. These URLs are automatically created and stored in the database when importing products and categories through the `Importer`.
+For each category, there is a distinct URL for each configured locale. Similar works for product details pages. These URLs are automatically created and stored in the database when importing products and categories through the `Importer`.
 
 {% info_block infoBox "Info" %}
 

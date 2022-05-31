@@ -642,7 +642,7 @@ entries:
         - "202108.0"
         - "202204.0"
       - title: Standard Filters (Size, Type, Color, Etc...)
-        url: /docs/scos/user/features/search-feature-overview/standard-filters-size-type-color-etc....html
+        url: /docs/scos/user/features/search-feature-overview/standard-filters-size-type-color-etc.html
         include_versions:
         - "201811.0"
         - "201903.0"

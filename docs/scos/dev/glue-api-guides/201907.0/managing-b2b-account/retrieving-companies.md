@@ -8,7 +8,6 @@ originalArticleId: 97d79556-4638-4876-8d70-e3abe7a75d70
 redirect_from:
   - /v3/docs/retrieving-company-information-201907
   - /v3/docs/en/retrieving-company-information-201907
-  - /docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/retrieving-companies.html/
 related:
   - title: Logging In as Company User
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html

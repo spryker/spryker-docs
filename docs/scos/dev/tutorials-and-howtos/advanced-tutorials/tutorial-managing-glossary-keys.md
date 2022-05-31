@@ -36,11 +36,11 @@ Update, insert and delete operations for glossary keys are exposed in the `Gloss
 For update and insert operations, `GlossaryFacade` exposes `saveGlossaryKeyTranslations` that can be accessed as follows:
 
 ```php
-getFactory()-&gt;getGlossaryFacade();
-$facade-&gt;saveGlossaryKeyTranslations($formData);
+getFactory()->getGlossaryFacade();
+$facade->saveGlossaryKeyTranslations($formData);
 
 //Delete the translation for a glossary key
-$facade-&gt;deleteTranslation($keyName,$locale);
+$facade->deleteTranslation($keyName,$locale);
 ```
 
 ## Retrieving glossary keys
@@ -48,8 +48,8 @@ $facade-&gt;deleteTranslation($keyName,$locale);
 The support for listing the glossary keys is exposed through `GlossaryBusinessContainer`:
 
 ```php
-getFactory()-&gt;getEnabledLocales();
-$grid = $this-&gt;getFactory()-&gt;createGlossaryKeyTranslationGrid($request);
+getFactory()->getEnabledLocales();
+$grid = $this->getFactory()->createGlossaryKeyTranslationGrid($request);
 ```
 
 * `getEnabledLocales()` retrieves the list of locales that are contained in the `stores.php` configuration file.

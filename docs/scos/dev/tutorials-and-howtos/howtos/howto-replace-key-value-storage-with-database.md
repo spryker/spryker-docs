@@ -14,7 +14,7 @@ redirect_from:
 ---
 
 One of the main ways of transferring data from Zed to Yves is the *Publish & Synchronization* mechanism. It works by the following:
-* Storing the denormalized data that is saved in Zed and should be shared with Yves, in specific infrastructural database tables.
+* Storing the denormalized data that is saved in Zed and must be shared with Yves in specific infrastructural database tables.
 * Synchronizing that data to fast key-value storage (for example, Redis) with the help of message queues.
 
 Yves then reads the synchronized data directly from the storage. However, sometimes, you might need to exclude the second step and read data directly from the database. This document describes how to do that.
@@ -27,8 +27,8 @@ Publish and Synchronize creates expected data duplication: the same data is stor
 
 The regular Publish & Synchronization flow has two steps:
 
-1. **Publish** the denormalized data to storage tables located in the database.
-2. **Synchronize** the data to the key-value storage (Redis) with the help of dedicated queues.
+1. *Publish* the denormalized data to storage tables located in the database.
+2. *Synchronize* the data to the key-value storage (Redis) with the help of dedicated queues.
 
 In the following diagram, you can see a typical implementation of Publish & Synchronization, where the high-level `StorageExtension` module is configured to work on top of the `StorageRedis` module. The latter handles all low-level read/write operations on the Redis as storage.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+Disable+Key-value+Storage+and+use+the+Database+Instead/p-and-s-diagram.png)
@@ -38,7 +38,7 @@ This new module is responsible for interacting with the database in read-only mo
 
 {% info_block errorBox %}
 
-There are two limitations of using the database as storage on Yves compared to the default storage engine. Scenarios, when Yves actually writes data to storage, are as follows:
+There are two limitations of using the database as storage on Yves compared to the default storage engine. The following are scenarios when Yves actually writes data to storage:
 
 - Caching of requests to storage: while using the database as storage, it is not possible to cache anything in Yves.
 - Concurrent requests and caching for the Glue API.
@@ -49,7 +49,7 @@ Out of the box, the `StorageDatabase` module can work with two RDBS vendors—My
 
 ## Installation
 
-Install the required modules by running:
+Install the required modules:
 
 ```bash
 composer require spryker/storage:3.8.0 spryker/storage-database
@@ -103,8 +103,8 @@ class SynchronizationBehaviorConfig extends SprykerSynchronizationBehaviorConfig
 
     /**
      * Specification:
-     * - If true, then the alias_keys column is added to all the storage tables, for which mappings are defined.
-     * - The new column is populated with JSON object, containing mapping keys and their respective mapping data for each resource.
+     * - If true, then the alias_keys column is added to all the storage tables for which mappings are defined.
+     * - The new column is populated with a JSON object containing mapping keys and their respective mapping data for each resource.
      *
      * @api
      *
@@ -147,7 +147,7 @@ vendor/bin/console propel:install
 vendor/bin/console event:trigger
 ```
 
-4. Disable the storage caching. As mentioned above, the cache does not work when reading the published data directly from the database. For this, modify the config on the project level:
+4. Disable the storage caching. The cache does not work when reading the published data directly from the database. For this, modify the config on the project level:
 
 **src/Pyz/Client/Storage/StorageConfig.php**
 
@@ -170,7 +170,7 @@ class StorageConfig extends SprykerStorageConfig
 }    
 ```
 
-5. Disable cache and concurrent requests for Glue (if you have it):
+5. Disable cache and concurrent requests for Glue if you have it:
 
 ```php
 <?php
@@ -192,9 +192,9 @@ class EntityTagsRestApiConfig extends SprykerEntityTagsRestApiConfig
 }
 ```
 
-6. Configure resource to storage table mapping. Unlike Redis, in RDBMs the data is stored across different tables. The correct storage table name for a resource is resolved from a resource key, by which the data is fetched.
+6. Configure resource to storage table mapping. Unlike Redis, in RDBMs, the data is stored across different tables. The correct storage table name for a resource is resolved from a resource key, by which the data is fetched.
 
-For example, by default (with no mappings) the key `product_concrete:de_de:1` is translated into `spy_product_concrete_storage`. The default prefix is `spy`, the default suffix is `storage`, and the actual name of the table is taken from the resource key prefix—`product_concrete` in this case. You can adjust the process of resolving the table name if you need to do so. If in the preceding example, the data for the key `product_concrete:de_de:1` needs to be fetched from the tabled named `pyz_product_foo`, configure the corresponding mapping instead:
+For example, by default (with no mappings) the key `product_concrete:de_de:1` is translated into `spy_product_concrete_storage`. The default prefix is `spy`, the default suffix is `storage`, and the actual name of the table is taken from the resource key prefix—`product_concrete` in this case. You can adjust the process of resolving the table name if you need to do so. If, in the preceding example, the data for the key `product_concrete:de_de:1` needs to be fetched from the tabled named `pyz_product_foo`, configure the corresponding mapping instead:
 
 **Pyz\Client\StorageDatabase\StorageDatabaseConfig**
 
@@ -223,11 +223,11 @@ class StorageDatabaseConfig extends SprykerStorageDatabaseConfig
 }
 ```
 
-The top-level key here, `product_concrete`, is the resource key prefix. Any of the table name fragment entries (prefix, name, suffix) can be omitted. In this case, a fragment is set to its default value according to the rules described above.
+The top-level key here, `product_concrete`, is the resource key prefix. Any table name fragment entries (prefix, name, suffix) can be omitted. In this case, a fragment is set to its default value according to the rules described above.
 
 ## Enabling the storage database
 
-Adjust the Storage module's dependency provider as follows:
+Adjust the Storage module's dependency provider:
 
 **Pyz\Client\StorageDatabase\StorageDatabaseConfig**
 

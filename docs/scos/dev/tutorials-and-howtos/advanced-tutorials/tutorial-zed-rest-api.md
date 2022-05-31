@@ -290,34 +290,34 @@ Now modify template to output the array:
 <summary markdown='span'>Code sample</summary>
 
 ```html
-&lt;html&gt;
-    &lt;table border="1"&gt;
-        &lt;thead&gt;
-            &lt;tr&gt;&lt;td&gt;Method&lt;/td&gt;&lt;td&gt;Annotation&lt;/td&gt;&lt;td&gt;Parameters&lt;/td&gt;&lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
+<html>
+    <table border="1">
+        <thead>
+            <tr><td>Method</td><td>Annotation</td><td>Parameters</td></tr>
+        </thead>
+        <tbody>
         {% raw %}{%{% endraw %} for method, annotation in annotations {% raw %}%}{% endraw %}
-            &lt;tr&gt;
-                &lt;td&gt;{% raw %}{{{% endraw %} method | nl2br{% raw %}}}{% endraw %}&lt;/td&gt;
-                &lt;td&gt;{% raw %}{{{% endraw %} annotation.docString | nl2br {% raw %}}}{% endraw %}&lt;/td&gt;
-                &lt;td&gt;
+            <tr>
+                <td>{% raw %}{{{% endraw %} method | nl2br{% raw %}}}{% endraw %}</td>
+                <td>{% raw %}{{{% endraw %} annotation.docString | nl2br {% raw %}}}{% endraw %}</td>
+                <td>
                     {% raw %}{%{% endraw %} for parameter_name, parameter_annotation in annotation.parameters {% raw %}%}{% endraw %}
                         {% raw %}{{{% endraw %} parameter_name {% raw %}}}{% endraw %}:
                         {% raw %}{%{% endraw %} if parameter_annotation.isTransfer {% raw %}%}{% endraw %}
-                            &lt;a href="docTransfer?transfer={% raw %}{{{% endraw %} parameter_annotation.type | escape{% raw %}}}{% endraw %}" target="_blank"&gt;
+                            <a href="docTransfer?transfer={% raw %}{{{% endraw %} parameter_annotation.type | escape{% raw %}}}{% endraw %}" target="_blank">
                         {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
                         {% raw %}{{{% endraw %} parameter_annotation.type {% raw %}}}{% endraw %}
                         {% raw %}{%{% endraw %} if parameter_annotation.isTransfer {% raw %}%}{% endraw %}
-                            &lt;/a&gt;
+                            </a>
                         {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
-                        &lt;/br&gt;
+                        </br>
                     {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
-                &lt;/td&gt;
-            &lt;/tr&gt;
+                </td>
+            </tr>
         {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
-        &lt;/tbody&gt;
-    &lt;/table&gt;
-&lt;/html&gt;
+        </tbody>
+    </table>
+</html>
 ```
 </details>
 
@@ -355,21 +355,21 @@ class TransferAnnotator implements TransferAnnotatorInterface
 Template `doc-transfer.twig`:
 
 ```html
-&lt;html&gt;
-    &lt;table border="1"&gt;
-        &lt;thead&gt;
-            &lt;tr&gt;&lt;td&gt;Property&lt;/td&gt;&lt;td&gt;Type&lt;/td&gt;&lt;/tr&gt;
-        &lt;/thead&gt;
-        &lt;tbody&gt;
+<html>
+    <table border="1">
+        <thead>
+            <tr><td>Property</td><td>Type</td></tr>
+        </thead>
+        <tbody>
         {% raw %}{%{% endraw %} for name, annotation in transfer_annotation {% raw %}%}{% endraw %}
-            &lt;tr&gt;
-                &lt;td&gt;{% raw %}{{{% endraw %} name | nl2br{% raw %}}}{% endraw %}&lt;/td&gt;
-                &lt;td&gt;{% raw %}{{{% endraw %} annotation | nl2br {% raw %}}}{% endraw %}&lt;/td&gt;
-            &lt;/tr&gt;
+            <tr>
+                <td>{% raw %}{{{% endraw %} name | nl2br{% raw %}}}{% endraw %}</td>
+                <td>{% raw %}{{{% endraw %} annotation | nl2br {% raw %}}}{% endraw %}</td>
+            </tr>
         {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
-        &lt;/tbody&gt;
-    &lt;/table&gt;
-&lt;/html&gt;
+        </tbody>
+    </table>
+</html>
 ```
 
 After completing this step we should be able to see transfer object annotation by accessing `http://ZED_HOST/api/v1/docTransfer?transfer=Generated\Shared\Transfer\CustomerGroupTransfer`.

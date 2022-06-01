@@ -224,7 +224,7 @@ Partial override will change a variable for a some scope (for example inside a c
 );
 ```
 
-- Overridden variable on the project level
+- Overridden variable at the project level
 ```less
 .mp-test-selector {
   --spy-btn-padding-base: 10px 15px;

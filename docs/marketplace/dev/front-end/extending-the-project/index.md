@@ -198,7 +198,7 @@ console cache:empty-all
 
 CSS variables can be overridden in any `.less`/`.css` file related to the Marketplace at the project level.
 
-Global case, will be overridden for all places: 
+Global override will change a variable for the whole project: 
 
 - Variables in the root library
 ```less

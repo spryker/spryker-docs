@@ -14,7 +14,7 @@ Currently, the following setups are available:
 
 ## Shared setup
 
-With the shared setup, all the stores share a single database and codebase.
+With the shared setup, stores share a single codebase and databases per region. If there are several stores in a region, they share a single database.
 
 
 ![shared setup diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/multi-store-setups.md/shared-setup.png)
@@ -38,8 +38,6 @@ We recommend this setup for the stores that can be described as follows:
 The shared setup features:
 
 * Products, customers, orders, and so on are stored in the same database, which simplifies collaborative management.
-
-* All the stores are deployed together, which is the most cost-effective solution.
 
 * All stores are hosted in the same AWS region.
 
@@ -94,4 +92,4 @@ The separated setup features:
 
 * Flexible management of the configuration of stores: distinct category navigation, product schema details, and users.
 
-* Separate deployment of each store: deploy a new version of a store without affecting other stores. 
+* Separate deployment of each store: deploy a new version of a store without affecting other stores.

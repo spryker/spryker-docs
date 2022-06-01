@@ -75,7 +75,7 @@ When the merchant name is entered in the catalog search, not only the offers but
 
 ## Marketplace products in the Back Office
 
-Before new marketplace products become visible on the Storefront, they must be [activated either by the merchant](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html#activating-and-deactivating-a-concrete-product) in the Merchant Portal or [by the Marketplace administrator in the Back Office](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html#activating-a-product).
+Before new marketplace products become visible on the Storefront, they must be [activated either by the merchant](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html#activating-and-deactivating-a-concrete-product) in the Merchant Portal or [by the Marketplace administrator in the Back Office](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html).
 
 A Marketplace administrator can filter the products belonging to certain merchants in the Back Office.
 
@@ -103,7 +103,6 @@ Merchants [create](/docs/marketplace/user/merchant-portal-user-guides/{{page.ver
 | [Managing marketplace abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-attributes.html) |  |
 | [Managing marketplace concrete product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product-attributes.html) |  |
 | [Managing marketplace abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-meta-information.html) |  |
-|  |  |
 
 
 {% info_block warningBox "Developer guides" %}

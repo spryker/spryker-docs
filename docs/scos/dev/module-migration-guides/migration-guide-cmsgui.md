@@ -20,6 +20,7 @@ redirect_from:
   - /v6/docs/mg-cms-gui
   - /v6/docs/en/mg-cms-gui
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsgui.html
+  - /module_migration_guides/mg-cms-gui.htm
 ---
 
 ## Upgrading from version 4.* to version 5.*

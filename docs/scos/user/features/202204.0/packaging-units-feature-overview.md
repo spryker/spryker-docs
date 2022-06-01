@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/packaging-units-feature-overview
   - /docs/packaging-units-feature-overview
   - /docs/en/packaging-units-feature-overview
+  - /docs/scos/user/features/202200.0/packaging-units-feature-overview.html
 ---
 
 {% info_block infoBox "Terminology used throughout the article" %}

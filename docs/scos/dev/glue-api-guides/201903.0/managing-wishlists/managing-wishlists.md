@@ -22,7 +22,7 @@ Since wishlists are available for registered users only, the endpoints provided 
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Wishlist API Feature Integration](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html-api-feature-integration-201903).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Wishlist API Feature Integration](h/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-wishlist-feature-integration.html).
 
 ## Creating a Wishlist
 To create a wishlist for a registered user, you need to send a POST request to the following endpoint:

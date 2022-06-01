@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/product-attributes-overview
   - /docs/product-attributes-overview
   - /docs/en/product-attributes-overview
+  - /docs/scos/user/features/202200.0/product-feature-overview/product-attributes-overview.html
 ---
 
 A *product attribute* is a characteristic of a product that consists of a name and value. For example, in the attribute `color = white`, `color` is the attribute name, and `white` is the attribute value.

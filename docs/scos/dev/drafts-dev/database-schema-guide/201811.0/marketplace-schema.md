@@ -1,13 +1,12 @@
----last_updated: Oct 18, 2019
-
+---
 title: Marketplace Schema
+last_updated: Oct 18, 2019
 originalLink: https://documentation.spryker.com/v1/docs/db-schema-marketplace
 originalArticleId: 47faeb28-0a12-41f6-ba7a-5594bc18131a
 redirect_from:
   - /v1/docs/db-schema-marketplace
   - /v1/docs/en/db-schema-marketplace
 ---
-
 
 ## Merchant
 
@@ -16,8 +15,11 @@ redirect_from:
 A Merchant is someone who sells Products on a Marketplace. Merchants sometimes have special agreements with their customers. This agreement is represented as Merchant Relationship in Spryker.
 
 {% info_block warningBox %}
+
 This feature is being developed.
+
 {% endinfo_block %}
+
 ![Merchant and merchant relationships](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Marketplace+Schema/merchant-and-relationship.png)
 
 **Structure**:
@@ -28,12 +30,17 @@ This feature is being developed.
 ### Merchant Relationship to Company Business Units
 
 {% info_block infoBox %}
+
 In a B2B context, there are special agreements between a Merchant and "his" customers which are represented as Company Business Users in Spryker.
+
 {% endinfo_block %}
 
 {% info_block warningBox %}
+
 It may happen that a Business Unit gets contradicting Relationships with the same Merchant. This has to be obeyed in all use cases.
+
 {% endinfo_block %}
+
 ![Merchant Relationship to Company Business Units](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Database+Schema+Guide/Marketplace+Schema/merchant-relationship-company-business-units.png)
 
 **Structure**:

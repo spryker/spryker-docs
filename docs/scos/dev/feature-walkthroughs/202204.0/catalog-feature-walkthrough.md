@@ -3,6 +3,8 @@ title: Catalog feature walkthrough
 last_updated: Aug 12, 2021
 description: The Catalog feature allows building and organizing products to meet your and your customer's demands, primarily to make sure everyone can quickly find what they are looking for
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202200.0/catalog-feature-walkthrough.html
 ---
 
 The _Catalog_ feature allows building and organizing products to meet your and your customer's demands, primarily to make sure everyone can quickly find what they are looking for.

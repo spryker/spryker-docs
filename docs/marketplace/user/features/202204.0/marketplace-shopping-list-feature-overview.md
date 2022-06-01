@@ -52,6 +52,6 @@ The *Print Shopping List* functionality does not contain any merchant-related in
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See Marketplace Shopping Lists feature walkthrough <!---LINK--> for developers.
+Are you a developer? See [Marketplace Shopping Lists feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-shopping-lists-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

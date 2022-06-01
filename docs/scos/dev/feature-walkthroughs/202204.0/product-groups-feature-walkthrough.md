@@ -3,6 +3,8 @@ title: Product Groups feature walkthrough
 last_updated: Aug 19, 2021
 description: The Product Groups feature allows product catalog managers to group products by attributes, like color or size.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202200.0/product-groups-feature-walkthrough.html
 ---
 
 The _Product Groups_ feature allows product catalog managers to group products by attributes, like color or size.

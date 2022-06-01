@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/avalara-tax-shipment-feature-integration
   - /docs/avalara-tax-shipment-feature-integration
   - /docs/en/avalara-tax-shipment-feature-integration
-  - /docs/scos/user/technology-partners/202204.0/taxes/avalara-tax-shipment-feature-integration.html
+  - /docs/scos/user/technology-partners/202108.0/taxes/avalara-tax-shipment-feature-integration.html
 related:
   - title: Tax feature overview
     link: docs/scos/user/features/page.version/tax-feature-overview.html

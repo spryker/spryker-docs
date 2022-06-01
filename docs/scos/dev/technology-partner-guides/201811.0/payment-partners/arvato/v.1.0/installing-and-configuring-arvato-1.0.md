@@ -8,6 +8,7 @@ originalArticleId: bd839a77-34d7-42ee-b25b-6e4ede991179
 redirect_from:
   - /v1/docs/arvato-1-0
   - /v1/docs/en/arvato-1-0
+  - /docs/scos/dev/technology-partner-guides/201811.0/payment-partners/arvato/v.1.0/arvato-risk-solution-services-integration-1.0.html
 related:
   - title: Arvato - Risk Check 1.0
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/v.1.0/arvato-risk-check-1.0.html

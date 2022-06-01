@@ -18,6 +18,7 @@ redirect_from:
   - /2021080/docs/en/shop-guide-managing-products
   - /docs/shop-guide-managing-products
   - /docs/en/shop-guide-managing-products
+  - /docs/scos/user/features/202200.0/product-feature-overview/product-feature-overview.html
 ---
 
 The *Product* feature allows creating products, manage their characteristics and settings.

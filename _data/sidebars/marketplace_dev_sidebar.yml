@@ -554,7 +554,7 @@ entries:
 
           - title: "File details: product-option-group.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-option-group.csv.html
-
+          
       - title: Front-end
         nested:
 
@@ -562,7 +562,7 @@ entries:
             url: /docs/marketplace/dev/front-end/extending-the-project/
             nested:
 
-              - title: "Migration guide: Extending the project"
+              - title: "Migration guide - Extending the project"
                 url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
 
           - title: "Table design"

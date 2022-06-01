@@ -45,7 +45,7 @@ To get back to the list of delivery methods, click **List of shipment methods**.
 
 {% endinfo_block %}
 
-## What's next?
+## Next steps
 
 You have now added a new carrier company for your store.
 The next step is to add a new shipment method to it. For more details, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html).

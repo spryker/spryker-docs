@@ -12,7 +12,7 @@ redirect_from:
 
 In this section you will find information about our Technology Partner Integration solutions.
 
-Please visit our [Partners Registry](https://spryker.com/find-a-partner/) for a complete list of our partners.
+Please visit our [Partners Registry](https://spryker.com/en/partners-overview/) for a complete list of our partners.
 
 ##  Hosting Providers
 

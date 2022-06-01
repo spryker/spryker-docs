@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/klarna-payment-workflow
   - /docs/klarna-payment-workflow
   - /docs/en/klarna-payment-workflow
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/klarna/technical-details-and-howtos/klarna-payment-workflow.html
 related:
   - title: Klarna - Invoice Pay in 14 days
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/klarna/klarna-invoice-pay-in-14-days.html

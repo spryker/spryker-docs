@@ -10,10 +10,9 @@ redirect_from:
   - /2021080/docs/en/retrieving-abstract-product-availability
   - /docs/retrieving-abstract-product-availability
   - /docs/en/retrieving-abstract-product-availability
-  - https://docs.spryker.com/docs/scos/dev/glue-api-guides/201811.0/managing-products/abstract-products/retrieving-abstract-product-availability.html
-  - https://docs.spryker.com/docs/scos/dev/glue-api-guides/201907.0/managing-products/abstract-products/retrieving-abstract-product-availability.html
-  - https://docs.spryker.com/docs/scos/dev/glue-api-guides/202005.0/managing-products/abstract-products/retrieving-abstract-product-availability.html
-  -
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-products/abstract-products/retrieving-abstract-product-availability.html
+  - /docs/scos/dev/glue-api-guides/201907.0/managing-products/abstract-products/retrieving-abstract-product-availability.html
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-products/abstract-products/retrieving-abstract-product-availability.html
 ---
 
 This endpoint allows retrieving information about availability of abstract products.

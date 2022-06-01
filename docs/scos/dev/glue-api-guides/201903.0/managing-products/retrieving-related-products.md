@@ -37,15 +37,19 @@ In your development, the endpoints can help you to:
 * Provide additional products items in a customer's cart to offer upscale variations, accessories and other additional items for products in the cart. This will help you in boosting the cart value.
 
 {% info_block infoBox %}
+
 To be able to use **Product Relations API**, first, you need to have the Product Relations feature integrated with your project. For details, see [Product Relation Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-relation-integration.html).
+
 {% endinfo_block %}
 
 {% info_block infoBox %}
+
 Different types of relations, as well as their logic, are defined on the project level and can vary depending on the project-specific implementation. The API does not define any new relations. Its task is only to present related products via REST requests.
+
 {% endinfo_block %}
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Product Relations API Feature Integration](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html-api-feature-integration-201903).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Product Relations API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-relations-feature-integration.html).
 
 ## Getting Related Items for an Abstract Product
 To get related items for an abstract product, send a GET request to the following endpoint:

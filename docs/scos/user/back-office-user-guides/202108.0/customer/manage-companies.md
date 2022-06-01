@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-companies
   - /docs/managing-companies
   - /docs/en/managing-companies
+  - /docs/scos/user/back-office-user-guides/202108.0/customer/company-account/managing-companies.html
 ---
 
 This document describes how to manage companies.

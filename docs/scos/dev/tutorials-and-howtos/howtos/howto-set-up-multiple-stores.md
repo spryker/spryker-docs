@@ -41,9 +41,9 @@ Multi-store setup 2: Each store has a dedicated search engine and key-value stor
 
 ![multi-store setup 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/how-to-set-up-multiple-stores.md/multi-store-setup-configuration-option-2.png)
 
-This setup is most suitable for B2B projects with high traffic and a big amount of data.
+This setup is most suitable for B2B projects with high traffic and a large amount of data.
 
-Multi-store setup 3: Each store has a dedicated database, a search engine, and a key-value storage.
+Multi-store setup 3: Each store has a dedicated database, search engine, and key-value storage.
 
 ![multi-store setup 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/tutorials-and-howtos/howtos/how-to-set-up-multiple-stores.md/multi-store-setup-configuration-option-3.png)
 
@@ -149,7 +149,7 @@ return $stores;
 
 1. For one or more stores you’ve defined in `config/Shared/stores.php`, define a separate store-specific configuration. For example, `config/Shared/config-default_docker_de.php` is the configuration file for the `DE` store in the docker environment.
 
-2. To apply the defined store-specific configuration, adjust the related deploy file in the `environment:` section.
+2. To apply the defined store-specific configuration, adjust the related deploy file in the `environment` section.
 In the following example, the `docker_de` environment name points to the `config/Shared/config-default_docker_de.php` store-specific configuration file. For more information about this deploy file parameter, see [environment](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html#environment):
 
 ```yaml
@@ -269,7 +269,7 @@ Defining stores by headers is not supported by default, but you can use the foll
 
 {% info_block infoBox %}
 
-The workaround is only supported by the [multi-store store setup 1](#multi-store-setup-infrastructure-options), when all the resources are shared. With the other setup, you need to manage the infrastructure configuration on the application level.
+The workaround is only supported by the [multi-store store setup 1](#multi-store-setup-infrastructure-options) when all the resources are shared. With the other setup, you need to manage the infrastructure configuration on the application level.
 
 **public/Glue/index.php**
 ```php

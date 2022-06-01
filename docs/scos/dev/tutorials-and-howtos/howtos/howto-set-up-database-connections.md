@@ -54,11 +54,11 @@ Custom case which lets a project have more than one connections to different DBs
 
 ```php
 $config[PropelConstants::PROPEL]['database']['connections']['additional_db_connection'] = [
-'adapter' =&gt; PropelConfig::DB_ENGINE_PGSQL,
-'dsn' =&gt; 'pgsql:host=127.0.0.1;port=5432;dbname=additional_db',
-'user' =&gt; 'username',
-'password' =&gt; 'password',
-'settings' =&gt; [],
+'adapter' => PropelConfig::DB_ENGINE_PGSQL,
+'dsn' => 'pgsql:host=127.0.0.1;port=5432;dbname=additional_db',
+'user' => 'username',
+'password' => 'password',
+'settings' => [],
 ]
 ```
 

@@ -76,9 +76,9 @@ It accepts the following arguments:
 | ARGUMENT NAME | TRANSCRIPTION |
 | --- | --- |
 | `type` | <ul><li>Type which is defined in `\Spryker\Shared\ProductRelation\ProductRelationTypes`</li><li>String value (related-products, up-selling).</li></ul> |
-| `parameter` | <ul><li>Is the parameter for the selected relation type</li><li>This value defers depending on the selected relation types</li></ul> |
+| `parameter` | <ul><li>Parameter for the selected relation type</li><li>This value defers depending on the selected relation types</li></ul> |
 | `title` | Title that is displayed in the carousel component. |
-| `templatePath` | Path to the template for rendering the carousel component.<br>For example: `@ProductRelation/partial/product_relation_carousel.twig`. |
+| `templatePath` | Path to the template for rendering the carousel component.<br>For example, `@ProductRelation/partial/product_relation_carousel.twig`. |
 
 Each type has a data provider. This data provider reads data from Redis and sends it to the template.
 

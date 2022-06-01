@@ -107,6 +107,7 @@ class FactFinderQuery implements QueryInterface, SearchContextAwareQueryInterfac
     }
 }
 ```
+
 </details>
 
 3. In particular `catalogSearch` and `catalogSuggestSearch`, extend `Spryker\Client\Catalog\CatalogClient`:
@@ -211,6 +212,7 @@ class FFSearchAdapterPlugin implements SearchAdapterPluginInterface
     }
 }
 ```
+
 </details>
 
 The `isApplicable` method in the preceding template validates that the request is supposed to be processed in this adapter—in this example, by FACT-Finder.
@@ -311,6 +313,7 @@ You have to respond with an object, supporting an array-based or `get`-based ind
   "spellingSuggestion": null
 }
 ```
+
 </details>   
 
 Returning this JSON data as an object shows you an empty result page.

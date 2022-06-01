@@ -196,8 +196,25 @@ console cache:empty-all
 
 ## Overriding CSS variables
 
-Variables can be overridden in any `.less` file in your project related to place where it's used.
-The file must have an `@import` of the root variables, that placed in the `ui-conponents` library. For example:
+Variables can be overridden in any `.less`/`.css` file in your project related to place where it's used.
+
+Global case, will be overridden for all places: 
+
+- Variables in the root library
+```less
+@border-radius-base: var(--spy-border-radius-base, 10px);
+@green: var(--spy-green, #17b497);
+```
+
+- Overridden variables on the project level (eq. `src/Pyz/Zed/ZedUi/Presentation/Components/styles.less`)
+```less
+:root {
+  --spy-border-radius-base: 15px;
+  --spy-green: green;
+}
+```
+
+Special case, will be overridden only inside component: 
 
 - Variable in the root library
 ```less
@@ -209,8 +226,6 @@ The file must have an `@import` of the root variables, that placed in the `ui-co
 
 - Overridden variable on the project level
 ```less
-@import '~@spryker/styles/src/lib/themes/default/variables/index.less';
-
 .mp-test-selector {
   --spy-btn-padding-base: 10px 15px;
 

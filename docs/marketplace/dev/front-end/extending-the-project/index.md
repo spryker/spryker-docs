@@ -196,7 +196,7 @@ console cache:empty-all
 
 ## Overriding CSS variables
 
-Variables can be overridden in any `.less`/`.css` file in your project related to place where it's used.
+CSS variables can be overridden in any `.less`/`.css` file related to the Marketplace at the project level.
 
 Global case, will be overridden for all places: 
 

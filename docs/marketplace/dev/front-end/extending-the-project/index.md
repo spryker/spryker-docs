@@ -214,7 +214,7 @@ Global override will change a variable for the whole project:
 }
 ```
 
-Special case, will be overridden only inside component: 
+Partial override will change a variable for a some scope (for example inside a component):
 
 - Variable in the root library
 ```less

@@ -40,7 +40,7 @@ In the Demoshop, we import abstract (`product_abstract.csv`) and concrete (`prod
 
 Both abstract and concrete products have some attributes that are localized and non-localized. In the CSV files the localized attributes contain the locales as suffix, such as `abstract_sku` which is a non-localized attribute of the product or `name.en_US` which is the localized name of the product.
 
-There are also several fields such as `attribute_key_1` and `value_1` which represent a non-localized product attribute and it’s value. Localized product attributes also contain the locales as a suffix in the header of the CSV file. These product attributes are stored in json format in the database as key-value pairs.
+There are also several fields such as `attribute_key_1` and `value_1` which represent a non-localized product attribute and it’s value. Localized product attributes also contain the locales as a suffix in the header of the CSV file. These product attributes are stored in JSON format in the database as key-value pairs.
 
 ### Load Products Into the Redis Data Store
 To have this data available on frontend, you must collect it and export to Redis. Yves has no connection to the SQL database and it retrieves the product information through the Redis and Elasticsearch data stores.

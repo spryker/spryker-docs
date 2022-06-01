@@ -1,5 +1,5 @@
 ---
-title: Tutorial- Product challenge solution
+title: "Tutorial: Product challenge solution"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-product-challenge-solution
@@ -250,7 +250,6 @@ class ProductCollector extends AbstractStoragePdoCollector
     //...
 }
 ```
-</details>
 
 ## Product module (Yves)
 

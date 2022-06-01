@@ -874,19 +874,6 @@ use Spryker\Zed\MerchantSalesOrder\MerchantSalesOrderDependencyProvider as Spryk
 
 class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDependencyProvider
 {
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
-    public function provideCommunicationLayerDependencies(Container $container): Container
-    {
-        $container = parent::provideCommunicationLayerDependencies($container);
-
-        $container = $this->addSalesFacade($container);
-
-        return $container;
-    }
 
     /**
      * @return array<\Spryker\Zed\MerchantSalesOrderExtension\Dependency\Plugin\MerchantOrderPostCreatePluginInterface>

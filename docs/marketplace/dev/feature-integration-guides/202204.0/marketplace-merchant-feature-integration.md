@@ -1303,7 +1303,7 @@ class DataImportBusinessFactory extends SprykerDataImportBusinessFactory
     /**
      * @return \Spryker\Zed\MerchantUser\Business\MerchantUserFacadeInterface
      */
-    public function getMerchantUserFacade(): MerchantUserFacadeInterface
+    protected function getMerchantUserFacade(): MerchantUserFacadeInterface
     {
         return $this->getProvidedDependency(DataImportDependencyProvider::FACADE_MERCHANT_USER);
     }

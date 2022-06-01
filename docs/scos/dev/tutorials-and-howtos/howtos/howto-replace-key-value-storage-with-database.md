@@ -76,7 +76,7 @@ $config[StorageDatabaseConstants::DB_PASSWORD] = 'mate20mg';
 $config[StorageDatabaseConstants::DB_DATABASE] = 'DE_development_zed';
 ```
 
-The storage database is configured with the database credentials separately. Although most probably, those will be the credentials for the Zed database.
+The storage database is configured with the database credentials separately. Although most probably, those are the credentials for the Zed database.
 
 2. Modify the synchronization behavior config on the project level:
 

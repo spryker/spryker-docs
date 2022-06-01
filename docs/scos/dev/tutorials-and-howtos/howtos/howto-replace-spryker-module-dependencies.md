@@ -29,7 +29,7 @@ Each Spryker module might have several dependent modules that provide communicat
 
 {% info_block infoBox "Example" %}
 
-A company working with the Payone and Refund modules decides they want to use a different refund functionality. They can replace the core refund module with their own implementation that satisfies the same interface. This requires that they first replace the existing refund module with a new refund implementation in the project code. Then, they will have to reroute the Payone module to communicate with the new refund functionality instead.
+A company working with the Payone and Refund modules decides they want to use a different refund functionality. They can replace the core refund module with their own implementation that satisfies the same interface. This requires replacing the existing refund module with a new refund implementation in the project code. Then, they must reroute the Payone module to communicate with the new refund functionality instead.
 
 {% endinfo_block %}
 
@@ -73,7 +73,7 @@ If you added a replace module, go to `shop/vendor` and check that composer added
 To check whether this has worked:
 
 1. Go to `shop/vendor/spryker`.
-2. Check that Composer has removed the modules that needed the replacement from the directory. 
+2. Check that Composer has removed the modules that needed the replacement from the directory.
 3. Connect the module with your new functionality.
 
 ## Setting up a connection with the new functionality

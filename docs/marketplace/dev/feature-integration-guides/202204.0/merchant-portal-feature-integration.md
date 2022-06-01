@@ -170,7 +170,7 @@ class AclConfig extends SprykerAclConfig
         ];
 
         foreach ($bundleNames as $bundleName) {
-            $array<installerRules> = [
+            $installerRules[] = [
                 'bundle' => $bundleName,
                 'controller' => AclConstants::VALIDATOR_WILDCARD,
                 'action' => AclConstants::VALIDATOR_WILDCARD,

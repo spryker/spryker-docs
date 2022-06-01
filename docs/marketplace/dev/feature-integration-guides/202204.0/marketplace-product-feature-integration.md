@@ -686,7 +686,7 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
     {
         $searchConfigExpanderPlugins = parent::createSearchConfigExpanderPlugins($container);
 
-        $array<searchConfigExpanderPlugins> = new MerchantProductMerchantNameSearchConfigExpanderPlugin();
+        $searchConfigExpanderPlugins[] = new MerchantProductMerchantNameSearchConfigExpanderPlugin();
 
         return $searchConfigExpanderPlugins;
     }

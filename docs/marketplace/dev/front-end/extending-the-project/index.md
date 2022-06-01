@@ -206,7 +206,7 @@ Global override will change a variable for the whole project:
 @green: var(--spy-green, #17b497);
 ```
 
-- Overridden variables on the project level (eq. `src/Pyz/Zed/ZedUi/Presentation/Components/styles.less`)
+- Overridden variables at the project level (e.g. `src/Pyz/Zed/ZedUi/Presentation/Components/styles.less`)
 ```less
 :root {
   --spy-border-radius-base: 15px;

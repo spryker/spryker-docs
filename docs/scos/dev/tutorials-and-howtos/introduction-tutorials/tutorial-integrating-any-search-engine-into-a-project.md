@@ -45,7 +45,7 @@ To execute the search and search suggestion requests, follow these steps:
 
 #### 1. Build and pass a query
 
-1. Define, for example, the `FfSearchQueryTransfer` object, which must contain at least `searchString` (*string*, customer’s input) and `requestParams` (*string[]*, containing, for example, pagination and filters):
+1. Define, for example, the `FfSearchQueryTransfer` object, which must contain at least `searchString` (string, customer’s input) and `requestParams` (string, containing, for example, pagination and filters):
 
 ```xml
 <transfer name="FfSearchQuery">
@@ -242,7 +242,7 @@ Make sure that all events affecting FACT-Finder-related product data are trigger
 
 #### 3. Requesting data from FACT-Finder
 
-Implement method search in the aforementioned [adapter plugin](#executing).
+Implement method search in the adapter plugin.
 Your search function receives `FactFinderQuery` with `FFSearchQueryTransfer` in it as the first argument.
 
 Prepare proper request to a FACT-Finder based on these parameters.
@@ -258,9 +258,9 @@ The FACT-Finder module provides a response in `FactFinderSdkSearchResponse`, but
 It means that in order to use the FACT-Finder response, you have to comply with the response structure produced there. This will be changed in the future, but for now, you have to implement mapping to the similar response Elasticsearch modules provides.
 You have to respond with an object, supporting an array-based or `get`-based index—for example, creating a JSON object or a transfer object.
 
-<details><summary markdown='span'>Code sample< of a response from the search provider:</summary>
+<details><summary markdown='span'>Code sample of a response from the search provider:</summary>
 
-```
+```json
 {
   "facets": {
     "category": {},

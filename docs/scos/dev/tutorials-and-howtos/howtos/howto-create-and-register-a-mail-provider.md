@@ -66,7 +66,7 @@ As you can see in the preceding example, the provider is registered to all `Mail
 
 ## Use more than one provider
 
-To send emails through different providers, register more than one provider to the `Mail` module. You can even create a scenario when all marketing emails go through provider A and all others through provider B. In the  [Create and register a mail provider](#create-and-register-a-mail-provider) section, you this technique is used to register one provider to all types. The following example demonstrates how to wire up more than one provider:
+To send emails through different providers, register more than one provider to the `Mail` module. You can even create a scenario when all marketing emails go through provider A and all others through provider B. In the preceding section, this technique is used to register one provider to all types. The following example demonstrates how to wire up more than one provider:
 
 ```php
 <?php

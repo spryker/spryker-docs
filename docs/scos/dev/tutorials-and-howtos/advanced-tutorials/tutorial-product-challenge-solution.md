@@ -32,30 +32,30 @@ Create a new table with the name `pyz_product_country`. This table is filled wit
 **Pyz/Zed/ProductCountry/Persistence/Propel/Schema/pyz_product_country.schema.xml**
 
 ```xml
-&lt;?xml version="1.0"?&gt;
-&lt;database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<?xml version="1.0"?>
+<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     name="zed"
     xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
     namespace="Orm\Zed\ProductCountry\Persistence"
-    package="src.Orm.Zed.ProductCountry.Persistence"&gt;
+    package="src.Orm.Zed.ProductCountry.Persistence">
 
-    &lt;table name="spy_product_country" idMethod="native" allowPkInsert="true"&gt;
-        &lt;column name="id_product_country" required="true" type="INTEGER" autoIncrement="true" primaryKey="true"/&gt;
-        &lt;column name="fk_product" required="true" type="INTEGER"/&gt;
-        &lt;column name="fk_country" required="true" type="INTEGER"/&gt;
+    <table name="spy_product_country" idMethod="native" allowPkInsert="true">
+        <column name="id_product_country" required="true" type="INTEGER" autoIncrement="true" primaryKey="true"/>
+        <column name="fk_product" required="true" type="INTEGER"/>
+        <column name="fk_country" required="true" type="INTEGER"/>
 
-        &lt;foreign-key foreignTable="spy_country"&gt;
-            &lt;reference local="fk_country" foreign="id_country"/&gt;
-        &lt;/foreign-key&gt;
+        <foreign-key foreignTable="spy_country">
+            <reference local="fk_country" foreign="id_country"/>
+        </foreign-key>
 
-        &lt;foreign-key foreignTable="spy_product_abstract"&gt;
-            &lt;reference local="fk_product" foreign="id_product_abstract"/&gt;
-        &lt;/foreign-key&gt;
+        <foreign-key foreignTable="spy_product_abstract">
+            <reference local="fk_product" foreign="id_product_abstract"/>
+        </foreign-key>
 
-        &lt;id-method-parameter value="spy_product_country_pk_seq"/&gt;
-    &lt;/table&gt;
+        <id-method-parameter value="spy_product_country_pk_seq"/>
+    </table>
 
-&lt;/database&gt;
+</database>
 ```
 
 
@@ -70,7 +70,7 @@ Method: `Pyz\Zed\ProductCountry\Communication\Controller\ImportController::index
 The code sample:
 
 ```php
-&lt;?php
+<?php
 
 class ProductCountryQueryContainer extends AbstractQueryContainer implements ProductCountryQueryContainerInterface
 {
@@ -84,9 +84,9 @@ class ProductCountryQueryContainer extends AbstractQueryContainer implements Pro
      */
     public function queryProductCountry($idProduct, $idCountry)
     {
-        $query = $this-&gt;getFactory()-&gt;createProductCountryQuery();
-        $query-&gt;filterByFkProduct($idProduct);
-        $query-&gt;filterByFkCountry($idCountry);
+        $query = $this->getFactory()->createProductCountryQuery();
+        $query->filterByFkProduct($idProduct);
+        $query->filterByFkCountry($idCountry);
 
         return $query;
     }
@@ -101,7 +101,7 @@ In the `ProductCountryBusinessFactory` class, create a new instance of the `Prod
 The code sample:
 
 ```php
-&lt;?php
+<?php
 
 class ProductCountryBusinessFactory extends SprykerBusinessFactory
 {
@@ -112,10 +112,10 @@ class ProductCountryBusinessFactory extends SprykerBusinessFactory
     public function createProductCountryManager()
     {
         return new ProductCountryManager(
-            $this-&gt;getProductFacade(),
-            $this-&gt;getCountryFacade(),
-            $this-&gt;getQueryContainer(),
-            $this-&gt;getPropelConnection()
+            $this->getProductFacade(),
+            $this->getCountryFacade(),
+            $this->getQueryContainer(),
+            $this->getPropelConnection()
         );
     }
 
@@ -126,7 +126,7 @@ class ProductCountryBusinessFactory extends SprykerBusinessFactory
      */
     public function getProductFacade()
     {
-        return $this-&gt;getProvidedDependency(ProductCountryDependencyProvider::PRODUCT_FACADE);
+        return $this->getProvidedDependency(ProductCountryDependencyProvider::PRODUCT_FACADE);
     }
 
     //...
@@ -141,14 +141,14 @@ Implement the logic to save a new product, within the `ProductCountryManager`.
 <summary markdown='span'>The code sample:</summary>
 
 ```php
-&lt;?php
+<?php
 
 class ProductCountryManager implements ProductCountryManagerInterface
 {
     //...
 
     /**
-     * @param array $productCountryData Product SKU =&gt; Country ISO 2 Code
+     * @param array $productCountryData Product SKU => Country ISO 2 Code
      *
      * @throws \Exception
      *
@@ -156,8 +156,8 @@ class ProductCountryManager implements ProductCountryManagerInterface
      */
     public function importProductCountryData(array $productCountryData)
     {
-        foreach ($productCountryData as $productCountrySku =&gt; $productCountryIso2Code) {
-            $this-&gt;saveProductCountryEntity($productCountrySku, $productCountryIso2Code);
+        foreach ($productCountryData as $productCountrySku => $productCountryIso2Code) {
+            $this->saveProductCountryEntity($productCountrySku, $productCountryIso2Code);
         }
     }
 
@@ -169,20 +169,20 @@ class ProductCountryManager implements ProductCountryManagerInterface
     private function saveProductCountryEntity($productCountrySku, $productCountryIso2Code)
     {
         try {
-            $productId = $this-&gt;productFacade-&gt;getProductAbstractIdByConcreteSku($productCountrySku);
-            $countryId = $this-&gt;countryFacade-&gt;getIdCountryByIso2Code($productCountryIso2Code);
+            $productId = $this->productFacade->getProductAbstractIdByConcreteSku($productCountrySku);
+            $countryId = $this->countryFacade->getIdCountryByIso2Code($productCountryIso2Code);
 
             $countryEntity = new SpyProductCountry();
-            $countryEntity-&gt;setFkProduct($productId);
-            $countryEntity-&gt;setFkCountry($countryId);
+            $countryEntity->setFkProduct($productId);
+            $countryEntity->setFkCountry($countryId);
 
-            $countryEntity-&gt;save($this-&gt;connection);
+            $countryEntity->save($this->connection);
 
             // Touch product to trigger collector for key/value export
-            $this-&gt;productFacade-&gt;touchProductActive($productId);
+            $this->productFacade->touchProductActive($productId);
 
         } catch (\Exception $e) {
-            echo $e-&gt;getMessage();
+            echo $e->getMessage();
         }
     }
 
@@ -217,7 +217,7 @@ Add the new selected column `product_country` to the` collectItem` list in `Pyz\
 The code sample:
 
 ```php
-&lt;?php
+<?php
 
 class ProductCollector extends AbstractStoragePdoCollector
 {
@@ -232,18 +232,18 @@ class ProductCollector extends AbstractStoragePdoCollector
     protected function collectItem($touchKey, array $collectItemData)
     {
         return [
-            'abstract_product_id' =&gt; $collectItemData[CollectorConfig::COLLECTOR_RESOURCE_ID],
-            'abstract_attributes' =&gt; $this-&gt;getAbstractAttributes($collectItemData),
-            'abstract_name' =&gt; $collectItemData['abstract_name'],
-            'abstract_sku' =&gt; $collectItemData['abstract_sku'],
-            'url' =&gt; $collectItemData['abstract_url'],
-            'available' =&gt; true,
-            'valid_price' =&gt; $this-&gt;getValidPriceBySku($collectItemData['abstract_sku']),
-            'prices' =&gt; $this-&gt;getPrices($collectItemData),
-            'category' =&gt; $this-&gt;getCategories($collectItemData[CollectorConfig::COLLECTOR_RESOURCE_ID]),
+            'abstract_product_id' => $collectItemData[CollectorConfig::COLLECTOR_RESOURCE_ID],
+            'abstract_attributes' => $this->getAbstractAttributes($collectItemData),
+            'abstract_name' => $collectItemData['abstract_name'],
+            'abstract_sku' => $collectItemData['abstract_sku'],
+            'url' => $collectItemData['abstract_url'],
+            'available' => true,
+            'valid_price' => $this->getValidPriceBySku($collectItemData['abstract_sku']),
+            'prices' => $this->getPrices($collectItemData),
+            'category' => $this->getCategories($collectItemData[CollectorConfig::COLLECTOR_RESOURCE_ID]),
 
              // new line
-            'product_country' =&gt; $collectItemData['product_country']
+            'product_country' => $collectItemData['product_country']
         ];
     }
 
@@ -258,7 +258,7 @@ Open `Pyz/Yves/Product/Theme/default/product/detail.twig` and add the following 
 
 ```twig
 {% raw %}{%{% endraw %} if product.product_country {% raw %}%}{% endraw %}
-&lt;dt&gt;{% raw %}{{{% endraw %} "page.product_country"|trans {% raw %}}}{% endraw %}&lt;/dt&gt;
-&lt;dd&gt;{% raw %}{{{% endraw %} product.product_country {% raw %}}}{% endraw %}&lt;/dd&gt;
+<dt>{% raw %}{{{% endraw %} "page.product_country"|trans {% raw %}}}{% endraw %}</dt>
+<dd>{% raw %}{{{% endraw %} product.product_country {% raw %}}}{% endraw %}</dd>
 {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ```

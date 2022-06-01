@@ -240,7 +240,7 @@ class MyEntityResourceCreator extends AbstractResourceCreator
 }
 ```
 
-<details>
+</details>
 
 3. Create a simple factory and a plugin to provide the `ResourceCreator` to the `Collector` module. Use plugins to communicate between module in Yves.
 

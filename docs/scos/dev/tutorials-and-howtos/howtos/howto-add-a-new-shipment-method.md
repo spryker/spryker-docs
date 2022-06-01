@@ -94,7 +94,7 @@ For more detailed information about adding shipment methods, see [Creating and m
 
 To add a shipment method to a carrier, follow these steps:
 1. Click **Create new delivery method**. The **Create Delivery Method** page opens.
-2. Select the **CARRIER** you have created in the [Add a shipment method](#add-a-shipment-method) section.
+2. Select the **CARRIER** you have created in the [Add a new shipment method](#add-a-new-shipment-method) section.
 3. Add the **NAME** and store- and currency-specific net and gross prices.
 4. Select **IS ACTIVE**.
 5. Select the corresponding **TAX SET**.
@@ -103,7 +103,7 @@ To add a shipment method to a carrier, follow these steps:
 
 {% info_block infoBox "Note" %}
 
-For more detailed information about adding carrier companies, see [Creating carrier companies](/docs/scos/user/back-office-user-guides/202204.0/administration/delivery-methods/creating-carrier-companies.html)
+For more detailed information about adding carrier companies, see [Creating carrier companies](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-carrier-companies.html)
 
 {% endinfo_block %}
 

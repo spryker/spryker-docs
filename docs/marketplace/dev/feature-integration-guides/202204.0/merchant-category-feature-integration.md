@@ -101,7 +101,7 @@ Activate the following plugins:
 
 | PLUGIN                                           | SPECIFICATION                                                   | PREREQUISITES | NAMESPACE                                                                  |
 |--------------------------------------------------|-----------------------------------------------------------------|---------------|----------------------------------------------------------------------------|
-| CategoryWritePublisherPlugin                     |                                                                 |               | Spryker\Zed\MerchantCategory\Communication\Plugin\Publisher\Category       |
+| CategoryWritePublisherPlugin                     | Publishes category node page search data by `SpyCategory` entity events.  |               | Spryker\Zed\MerchantCategory\Communication\Plugin\Publisher\Category       |
 | MerchantCategoryMerchantExpanderPlugin           | Expands MerchantTransfer with categories.                       |               | Spryker\Zed\MerchantCategory\Communication\Plugin\Merchant                 |
 | MerchantCategoryMerchantSearchDataExpanderPlugin | Expands merchant search data with merchant category keys.       |               | Spryker\Zed\MerchantCategorySearch\Communication\Plugin\MerchantSearch     |
 | MerchantCategoryWritePublisherPlugin             | Updates merchant categories in search based on category events. |               | Spryker\Zed\MerchantSearch\Communication\Plugin\Publisher\MerchantCategory |

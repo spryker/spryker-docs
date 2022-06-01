@@ -24,19 +24,19 @@ redirect_from:
   - /docs/scos/dev/tutorials-and-howtos/howtos/howto-product-data-from-import-to-front-end-view.html
 ---
 
-This document describes flow of the product data from importing it to the SQL database to showing it in the frontend view.
+This document describes the flow of the product data from importing it to the SQL database to showing it in the frontend view.
 
 ## Import products to SQL database
 
 Products are imported in the SQL database through the `Importer` module. The product details are parsed from CSV files, from where they are processed and inserted in the SQL database. This step is done when installing the application, after the database is created, when running the `./setup -i` script.
 
-The products can also be imported separately, by running the following dedicated command:
+You can import products separately:
 
 ```bash
 vendor/bin/console data:import:product-abstract
 ```
 
-In the Demoshop we import abstract (`product_abstract.csv`) and concrete (`product_concrete.csv`) products separately. The first line in the CSV files describes the structure of the entries stored in the database.
+In the Demoshop, we import abstract (`product_abstract.csv`) and concrete (`product_concrete.csv`) products separately. The first line in the CSV files describes the structure of the entries stored in the database.
 
 Both abstract and concrete products have some attributes that are localized and non-localized. In the CSV files the localized attributes contain the locales as suffix, such as `abstract_sku` which is a non-localized attribute of the product or `name.en_US` which is the localized name of the product.
 
@@ -60,17 +60,17 @@ It also takes care of routing the request to the correct controller action.
 
 **Example:**
 
-When in Demoshop we request this page: `/en/canon-1200d-+-efs-1855mm-89`, the `StorageRouter` will try to find the route for this request. This is done in the `StorageRouter::match($pathInfo)` operation.
+ In Demoshop, when we request this page: `/en/canon-1200d-+-efs-1855mm-89`, the `StorageRouter` tries to find the route for this request. This is done in the `StorageRouter::match($pathInfo)` operation.
 
-The `UrlMatcher` will get the URL details for this request; it will decode the URL and generate a key and it will try to retrieve the value for this key from Redis:
+The `UrlMatcher` gets the URL details for this request; it decodes the URL and generate a key and tries to retrieve the value for this key from Redis:
 
 ```bash
 {"reference_key":"de.en_us.resource.product_abstract.89","type":"product_abstract"}
 ```
 
-If it succeeds in finding a key-value entry for this URL, it will get the value for the returned reference key (in this example `de.en_us.resource.product_abstract.89`). Now that we have the data, the resource creator according to the resource type will transform the returned JSON in a more understandable format (`ProductResourceCreator`).
+If it succeeds in finding a key-value entry for this URL, it gets the value for the returned reference key—in this example, it's `de.en_us.resource.product_abstract.89`. When you have data, the resource creator according to the resource type transforms the returned JSON in a more understandable format —`ProductResourceCreator`.
 
-After building the product, the resource creator will route the request to the corresponding controller action and will pass the built product to it.
+After building the product, the resource creator routes the request to the corresponding controller action and passes the built product to it.
 
 In Demoshop, product details requests are routed to `ProductController::detailAction(ProductAbstractInterface $product)` from the `Product` module.
 
@@ -85,7 +85,7 @@ You can find the view associated with this controller action under `Pyz\Yves\Pro
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-In the example above, when rendering the product details page, we’ll be able to see the name and description of the product.
+In the preceding example, when rendering the product details page, you can see the name and description of the product.
 
 ## Add new attributes to a product
 

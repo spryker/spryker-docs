@@ -52,15 +52,15 @@ HowTos are simple step-by-step instructions to guide you through the process of 
 
 
 
-**Glue API HowTos**  provide guides and instructions for tasks related to [Spryker Glue Rest API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-rest-api.html). These guides will walk you through the following topics:
+**Glue API HowTos**  provide guides and instructions for tasks related to [Spryker Glue Rest API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-rest-api.html). These guides walk you through the following topics:
 
 * [Configuring visibility of the included section](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-visibility-of-the-included-section.html)
 * [Configuring Glue for cross-origin requests](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/configuring-glue-for-cross-origin-requests.html)
 * [Managing customer access to Glue API resources](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html)
 
-Providing your customers with security, personalized content, and other things that are usually taken for granted by your shop users, may turn out to be challenging for your developers. This is when miscellaneous HowTos for developers come in handy. These guides will navigate you through the process of setting up HTTPS, providing the MVP project structure, setting up the project with MySQL database, along with other useful tutorials on similar subjects.
+Providing your customers with security, personalized content, and other things that are usually taken for granted by your shop users, may turn out to be challenging for your developers. This is when miscellaneous HowTos for developers come in handy. These guides navigate you through the process of setting up HTTPS, providing the MVP project structure, setting up the project with MySQL database, along with other useful tutorials on similar subjects.
 
-With these guides you can learn how to do the following:
+With these guides, you can learn how to do the following:
 
 * [HowTo: Handle the MacOS case-sensitive filesystem](/docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html)
 * [HowTo: Start using an HTTPS protocol](/docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html)

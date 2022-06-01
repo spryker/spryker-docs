@@ -77,7 +77,7 @@ To learn how the template is created, check the following exemplary procedure:
     </div>
 ```
 
-The text in the defined placeholders will be replaced at runtime by the glossary keys assigned to them.
+The text in the defined placeholders is replaced at runtime by the glossary keys assigned to them.
 
 A content manager can apply this template when [creating a CMS page](/docs/scos/user/back-office-user-guides/{{site.version}}/content/pages/creating-cms-pages.html) in the Back Office.
 

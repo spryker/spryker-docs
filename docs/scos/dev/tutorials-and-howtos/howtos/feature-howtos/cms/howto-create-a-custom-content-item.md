@@ -202,7 +202,7 @@ To add the new content item to that list, in `src/Zed/ContentFooGui`, implement 
 The following are the method descriptions:
 * `getType()` returns a string displaying the content type—for example, Foo.
 * `getTemplates()` returns an array of templates supported by your Twig plugin created in the previous section. If there are no supported templates defined, returns an empty array.
-* `getTwigFunctionTemplate()` returns a Twig expression that will be added into the content.
+* `getTwigFunctionTemplate()` returns a Twig expression that is added into the content.
 
 ```php
 <?php
@@ -233,7 +233,7 @@ class ContentFooContentGuiEditorPlugin extends AbstractPlugin implements Content
         return [
             (new ContentWidgetTemplateTransfer())
                 ->setIdentifier('big-header') // $templateIdentifier from step 2
-                ->setName('Big Header'), // will be visible in UI.
+                ->setName('Big Header'), // is visible in UI.
             (new ContentWidgetTemplateTransfer())
                 ->setIdentifier('full-width')
                 ->setName('Full Width'),

@@ -56,7 +56,7 @@ class CmsSlotBlockConfig extends SprykerCmsSlotBlockConfig
 }
 ```
 
-As shown in the preceding example, the visibility condition configuration is an array, so you can have a combination of visibility conditions in a template. For example, the product details page template can have `productCategory` and `customer` visibility conditions. It means that the CMS block for which these conditions are defined is only displayed when both of the defined conditions are fulfilled. In particular, the CMS block will be displayed as follows:
+As shown in the preceding example, the visibility condition configuration is an array, so you can have a combination of visibility conditions in a template. For example, the product details page template can have `productCategory` and `customer` visibility conditions. It means that the CMS block for which these conditions are defined is only displayed when both of the defined conditions are fulfilled. In particular, the CMS block is displayed as follows:
 * In the product details pages belonging to a defined categories and products.
 * When user login status equals to the defined login status.
 * When user account details equal to the defined account details.

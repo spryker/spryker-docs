@@ -41,9 +41,9 @@ To render a `configured bundle` product on the cart page, call `QuoteConfiguredB
 {% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
 ```
 
-To add comments to a `configured bundle` product, set up the `ConfiguredBundleNoteWidget` module for your project. `ConfiguredBundleNoteWidget` will be called automatically in the `configured-bundle` molecule of the `QuoteConfiguredBundleWidget` module.
+To add comments to a `configured bundle` product, set up the `ConfiguredBundleNoteWidget` module for your project. In the `configured-bundle` molecule of the `QuoteConfiguredBundleWidget` module, `ConfiguredBundleNoteWidget` is called automatically.
 
-**Code example that renders ConfiguredBundleNoteWidget**
+**Code example that renders `ConfiguredBundleNoteWidget`**:
 
 ```twig
 {% raw %}{%{% endraw %} if data.isEditable {% raw %}%}{% endraw %}
@@ -77,7 +77,7 @@ To render the `configured bundle` product on the Checkout Summary page, call `Qu
 {% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
 ```
 
-If you set up `ConfiguredBundleNoteWidget` for your product, it will be called automatically in the `configured-bundle` molecule of the `QuoteConfiguredBundleWidget` (the same example as for the cart page). It is impossible to edit or remove comments for the configured bundle product on the checkout summary step. The customer can read comments which are editable on the cart page only.
+When you set up `ConfiguredBundleNoteWidget` for your product, it is called automatically in the `configured-bundle` molecule of the `QuoteConfiguredBundleWidget` (the same example as for the cart page). It is impossible to edit or remove comments for the configured bundle product on the checkout summary step. The customer can read comments which are editable on the cart page only.
 
 ## Rendering Configurable Bundle Templates on the order details page
 
@@ -90,7 +90,7 @@ To render the `configured bundle` product on the order details page, call `Sales
 {% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}
 ```
 
-If you set up the `ConfiguredBundleNoteWidget` for your product, molecule `readonly-bundled-note` of the widget will be called automatically inside the `ordered-configured-bundle` (`SalesConfigurableBundleWidget/Theme/default/components/molecules/ordered-configured-bundle/ordered-configured-bundle.twig`) molecule of the `SalesConfiguredBundleWidget`.
+If you set up the `ConfiguredBundleNoteWidget` for your product, molecule `readonly-bundled-note` of the widget is called automatically inside the `ordered-configured-bundle` (`SalesConfigurableBundleWidget/Theme/default/components/molecules/ordered-configured-bundle/ordered-configured-bundle.twig`) molecule of the `SalesConfiguredBundleWidget`.
 It’s not possible to edit or remove comments for the ordered configured bundle product at the order details step too. The customer can only read comments which are editable on the cart page only. Example:
 
 ```twig

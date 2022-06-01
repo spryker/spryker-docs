@@ -98,7 +98,7 @@ Make sure that the following changes have been applied in transfer objects:
 |   Rules | object | Created | src/Generated/Shared/Transfer/Transfer |
 |   User | object | Created | src/Generated/Shared/Transfer/UserTransfer |
 |   NavigationItem | object | Created | src/Generated/Shared/Transfer/NavigationItemTransfer |
-|   NavigationItemCollection | object | Created | src/Generated/Shared/Transfer/Transfer |
+|   NavigationItemCollection | object | Created | src/Generated/Shared/Transfer/NavigationItemCollectionTransfer |
 
 {% endinfo_block %}
 

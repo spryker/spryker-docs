@@ -41,15 +41,14 @@ The [docker-sdk repository](https://github.com/spryker/docker-sdk) contains the 
   
 ## Docker/sdk boot command details
 
-The Docker SDK `boot` command runs the [generator](https://github.com/spryker/docker-sdk/tree/master/generator) application. The generator is deployed as a Docker container. The generator
-takes twig templates and project's deploy.yml file with context and generates content of the [deployment](https://github.com/spryker/docker-sdk/tree/master/deployment) folder.
+The Docker SDK `boot` command runs the [generator](https://github.com/spryker/docker-sdk/tree/master/generator) application. The generator is deployed as a Docker container. It takes twig templates and project's `deploy.yml` with context and generates the content of the [deployment](https://github.com/spryker/docker-sdk/tree/master/deployment) folder.
 
 The `boot` command does the following:
-1. Prepares the `env` files for `glue`,`zed`, `yves`.
+1. Prepares the env files for Glue, Zed, and Yves.
 2. Prepares endpoints and store-specific configs.
 3. Prepares the Nginx configuration for the frontend and gateway containers.
 4. Prepares the PHP and debug configuration.
-5. Transforms the `env` files.
+5. Prepares Terraform env files.
 6. Prepares Dashboard.
 7. Prepares the Docker image files and the `docker-compose.yml` file for local development.
 8. Generates bash scripts used by `deploy.sh`.
@@ -84,11 +83,11 @@ The Docker SDK `up` command does the following:
    3. Suspends scheduler and waits for job termination.
    4. Initiates storages for each store with the `install -s init_storages_per_store` command. 
    5. If the database does not exist, creates it on MySQL or PostreSQL container.
-4. Starts a scheduler for each region and store with the command `install -s scheduler-setup`.
+4. Starts a scheduler for each region and store with the `install -s scheduler-setup` command.
 
 ## Docker/sdk working mode commands
 
-In the *testing* mode, you can use the `docker/sdk testing` and the `docker/sdk (up|start) -t` commands.
+In the *testing* mode, you can use the `docker/sdk testing` and `docker/sdk (up|start) -t` commands.
 
 The `docker/sdk testing` command does the following:
  - Sets the `SPRYKER_TESTING_ENABLE` variable in the frontend, gateway, and app containers.
@@ -138,16 +137,16 @@ The `docker/sdk prune` command does the following:
 - Executes the `docker prune` command for images, volumes, system, and builder.
 
 The `docker/sdk reset`  command does the following:
-- executes `docker-compose down -v`
-- executes `docker/sdk up --build --assets --data --jobs`
+- Executes `docker-compose down -v`
+- Executes `docker/sdk up --build --assets --data --jobs`
 
 The `docker/sdk clean-data` command stops and removes the following containers and volumes with  `docker-compose down -v`:
-- logs
-- `/data` folder for `zed`, `yves`, `glue`
-- broker data: `/var/lib/rabbitmq`
-- session and key-value data: `/data`
-- search data: `/usr/share/elasticsearch/data`
-- scheduler data
+- Logs
+- `/data` folder for Zed, Yves, and Glue
+- Broker data: `/var/lib/rabbitmq`
+- Session and key-value data: `/data`
+- Search data: `/usr/share/elasticsearch/data`
+- Scheduler data
 
 The `docker/sdk trouble` command does the following:
 * Executes `docker-compose down`.
@@ -166,17 +165,17 @@ The `docker/sdk demo` command does the following:
 
 The `docker/sdk export images {tag}` command is only for the baked mode. It does the following:
  - Builds and tags docker application images.
- - Builds assets builder docker image based on assetsBuilder and Cli image). Runs `vendor/bin-install -s build-static build-static-{mode}`.
+ - Based on assetsBuilder and CLI image, builds the assets builder docker image. Runs `vendor/bin-install -s build-static build-static-{mode}`.
  - Builds and tags frontend images.
  - Prints information about the built images.
 
 ## Development environment
-The following schema illustrates the development environment within the Docker SDK:
+The following schema illustrates the development environment with the Docker SDK:
 ![development-environment](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/the-docker-sdk/the-docker-sdk/development-environment.png)
 
 {% info_block infoBox "Info" %}
 
-Depending on the Spryker version you are use, instead of `zed_eu`, you will have the three containers: `backoffice_eu`, `backend_gateway_eu`, and `backend_api_eu`.
+Depending on the Spryker version used, instead of `zed_eu`, you can have the following containers: `backoffice_eu`, `backend_gateway_eu`, and `backend_api_eu`.
 
 {% endinfo_block %}
 
@@ -187,7 +186,7 @@ In the development environment, Gateway (Nginx) does the following:
 * Serves all non-application services.
 * Proxies application calls to Frontend (Nginx).
 
-Frontend (Nginx) is a HTTP to FastCGI proxy for Glue, Yves, Zed, and serves assets.
+Frontend (Nginx) is an HTTP to FastCGI proxy for Glue, Yves, Zed, and serves assets.
 
 ## Docker/sdk debug mode
 
@@ -209,7 +208,7 @@ Docker images and containers:
 ## Extending Docker/sdk
 To extend Docker/sdk, you can do the following:
 
-- To use custom PHP/nginx image and add extensions or libraries, you can change the application image:
+- To use a custom PHP or Nginx image and add extensions or libraries, you can change the application image:
    
    ```
    environment: docker.dev
@@ -217,7 +216,7 @@ To extend Docker/sdk, you can do the following:
       tag: spryker/php 7.3
       tag: registry.gitlab.com/my-company/spryker:1.0-php8debsap
    ```
-  This approach is compatible with SCCOS, but has limited customization possibilities.
+  This approach is compatible with SCCOS, but provides limited customization possibilities.
 
 - To introduce "mocks" for development and CI/CD testing, you can use the [Docker-compose extension](https://docs.docker.com/compose/extends/):
   ```
@@ -228,7 +227,7 @@ To extend Docker/sdk, you can do the following:
 
   ```
 
-  This approach works for development and CI/CD only, but it won't have any effect on your Cloud setup.
+  This approach works for development and CI/CD only, but it's not compatible with SCCOS setup.
 
 
 

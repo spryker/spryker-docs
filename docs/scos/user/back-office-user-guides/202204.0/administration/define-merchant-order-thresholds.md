@@ -25,7 +25,7 @@ This doc describes how to manage [merchant order thresholds](/docs/scos/user/fea
 ## Prerequisites
 
 * [Create a merchant](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants/create-merchants.html).
-* Review the [reference information](#reference-information-define-global-thresholds) before you start, or look up the necessary information as you go through the process.
+* Review the [reference information](#reference-information-define-merchant-order-thresholds) before you start, or look up the necessary information as you go through the process.
 
 To start working with merchant order thresholds, do the following:
 1. Go to **Administration&nbsp;<span aria-label="and then">></span> Merchant Relationships Threshold**.
@@ -50,8 +50,6 @@ The page refreshes with a success message displayed.
 4. Scroll down the page and select **Save**.
 
 The page refreshes with a success message displayed.
-
-See [Reference information](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html#reference-information) to know more about the attributes of Hard Maximum Threshold.
 
 ## Define a minimum soft threshold for a merchant relationship
 

@@ -24,6 +24,7 @@ Check out an example usage of the Table Column Image in the `@spryker/table` con
                 type: 'image',
                 typeOptions: {
                     src: 'image URL',
+                    alt: 'alt value',
                 },
             },
             ...,

@@ -545,7 +545,7 @@ entries:
         - "202108.0"
         - "202204.0"
     - title: Configurable Product
-      url: /docs/scos/dev/feature-walkthroughs/configurable-product-feature-walkthrough.html
+      url: /docs/scos/dev/feature-walkthroughs/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html
       include_versions:
       - "202108.0"
       - "202204.0"

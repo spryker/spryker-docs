@@ -16,7 +16,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shopping-lists-feature-integration.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 * [Glue API: Marketplace Shopping Lists feature integration]()<!---LINK-->
-  
+
 ## Add items to a shopping list
 
 To add items to a shopping list, send the request:
@@ -82,7 +82,7 @@ To add items to a shopping list, send the request:
 <details>
 <summary markdown='span'>Request sample: add marketplace products to the shopping list</summary>
 
-`POST https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items?include=shopping-list-items` 
+`POST https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items?include=shopping-list-items`
 
 ```json
 {
@@ -108,7 +108,7 @@ To add items to a shopping list, send the request:
     "data":{
         "type":"shopping-list-items",
         "attributes":{
-            "sku":"091_25873091", 
+            "sku":"091_25873091",
             "quantity": 3,
              "productOfferReference":"offer3"
              }
@@ -458,7 +458,7 @@ To change the item quantity in a shopping list, send the request:
     ]
 }
 ```
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>Response sample: change the quantity of marketplace products in the shopping list</summary>
@@ -480,7 +480,7 @@ To change the item quantity in a shopping list, send the request:
     }
 }
 ```
-</details> 
+</details>
 
 <details>
 <summary markdown='span'>Response sample: change the quantity of product offers in the shopping list</summary>
@@ -502,7 +502,7 @@ To change the item quantity in a shopping list, send the request:
     }
 }
 ```
-</details> 
+</details>
 
 For response attributes, see [Add items to a shopping list](#shopping-list-items-response-attributes).
 For the attributes of included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
@@ -528,7 +528,7 @@ To remove an item from a shopping list, send the request:
 
 Request sample:
 
-`DELETE https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08` 
+`DELETE https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08`
 
 ### Response
 

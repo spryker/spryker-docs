@@ -63,5 +63,6 @@ Below you can find interfaces for the Table Column Image:
 ```ts
 interface TableColumnImageConfig {
     src?: string;
+    alt?: string;
 }
 ```

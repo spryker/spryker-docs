@@ -530,7 +530,7 @@ entries:
       - "202108.0"
       - "202204.0"
       nested:
-      - title: Product Relations- module relations
+      - title: Product Relations - module relations
         url: /docs/scos/dev/feature-walkthroughs/product-relations-feature-walkthrough/product-relations-module-relations.html
         include_versions:
         - "202005.0"
@@ -549,6 +549,11 @@ entries:
       include_versions:
       - "202108.0"
       - "202204.0"
+      nested:
+      - title: Configurable PRoduct flow chart
+        url: /docs/scos/dev/feature-walkthroughs/configurable-product-feature-walkthrough/configurable-product-flow-chart.html
+        include_versions:
+        - "202204.0"
     - title: Checkout
       url: /docs/scos/dev/feature-walkthroughs/checkout-feature-walkthrough.html
       include_versions:

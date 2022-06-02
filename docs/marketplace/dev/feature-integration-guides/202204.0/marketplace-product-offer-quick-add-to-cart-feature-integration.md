@@ -54,7 +54,7 @@ Register the following plugins to enable widgets:
 
 | PLUGIN | DESCRIPTION | PREREQUISITES | NAMESPACE |
 | --------------- | ------------------ | ------------- | --------------- |
-| MerchantSearchWidget | Provides a widget to render a merchants filter.  |   | SprykerShop\Yves\MerchantSearchWidget\Widget |
+| MerchantSearchWidget | Provides a widget for rendering a merchant filter.  |   | SprykerShop\Yves\MerchantSearchWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -79,6 +79,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that Quick Order Page contains "Merchant Selector" dropdown with all active merchants.
@@ -89,13 +90,13 @@ Make sure that Quick Order Page contains "Merchant Selector" dropdown with all a
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                | DESCRIPTION                                                                         | PREREQUISITES | NAMESPACE                                                              |
-|-------------------------------------------------------|-------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------|
+| PLUGIN  | DESCRIPTION | PREREQUISITES | NAMESPACE |
+|------------|----------------|---------------|----------------|
 | MerchantQuickOrderItemMapperPlugin                    | Maps merchant reference to `QuickOrderItem` transfer.                               |               | SprykerShop\Yves\ProductOfferWidget\Plugin\QuickOrderPage              |
 | ProductOfferQuickOrderItemMapperPlugin                | Maps product offer reference to `QuickOrderItem` transfer.                          |               | SprykerShop\Yves\ProductOfferWidget\Plugin\QuickOrderPage              |
-| MerchantProductOfferQuickOrderItemExpanderPlugin      | Expands provided ItemTransfer with `ProductOfferStorage` merchant reference.        |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage      |
-| MerchantProductOfferQuickOrderFormColumnPlugin        | Adds a new `Merchants` column to quick order .                                      |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage      |
-| MerchantProductOfferQuickOrderFormExpanderPlugin      | Expands QuickOrderItemEmbeddedForm with `product_offer_reference` form field.       |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage      |
+| MerchantProductOfferQuickOrderItemExpanderPlugin      | Expands the provided `ItemTransfer` with the `ProductOfferStorage` merchant reference.        |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage      |
+| MerchantProductOfferQuickOrderFormColumnPlugin        | Adds a new `Merchants` column to the quick order.                                      |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage      |
+| MerchantProductOfferQuickOrderFormExpanderPlugin      | Expands `QuickOrderItemEmbeddedForm` with the `product_offer_reference` form field.       |               | SprykerShop\Yves\MerchantProductOfferWidget\Plugin\QuickOrderPage      |
 
 
 **src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php**

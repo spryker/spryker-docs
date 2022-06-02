@@ -168,8 +168,8 @@ Make sure that the merchant product data appears in the search engine and in the
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                         | DESCRIPTION                                                                                    | PREREQUISITES | NAMESPACE                                                                |
-|----------------------------------------------------------------|------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
+| PLUGIN   | DESCRIPTION  | PREREQUISITES | NAMESPACE   |
+|-------------|---------------------|---------------|---------------|
 | MerchantProductProductAbstractViewActionViewDataExpanderPlugin | Expands view data for abstract product with merchant data.                                     |               | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
 | MerchantProductProductAbstractListActionViewDataExpanderPlugin | Expands product list data for abstract product data for merchant filter.                       |               | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
 | MerchantProductProductTableQueryCriteriaExpanderPlugin         | Expands QueryCriteriaTransfer with QueryJoinTransfer for filtering by idMerchant.              |               | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
@@ -268,7 +268,6 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
     }
 }
 ```
-
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -336,7 +335,6 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 }
 ```
-
 </details>
 
 {% info_block warningBox "Verification" %}

@@ -85,8 +85,8 @@ To start feature integration, integrate the required features:
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                      | DESCRIPTION                                                                             | PREREQUISITES | NAMESPACE                                                                |
-|-------------------------------------------------------------|-----------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
+| PLUGIN   | DESCRIPTION  | PREREQUISITES | NAMESPACE  |
+|------------------|--------------|---------------|----------------|
 | MerchantProductMerchantProductOfferCollectionExpanderPlugin | Finds merchant product by sku and expands form choices with a merchant product's value. |               | SprykerShop\Yves\MerchantProductWidget\Plugin\MerchantProductOfferWidget |
 
 **src/Pyz/Yves/MerchantProductOfferWidget/MerchantProductOfferWidgetDependencyProvider.php**

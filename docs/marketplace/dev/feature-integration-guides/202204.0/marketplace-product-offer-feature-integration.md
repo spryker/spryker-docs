@@ -104,8 +104,8 @@ Verify that the following changes have been implemented by checking your databas
 
 Make sure that the following changes were applied in transfer objects:
 
-| TRANSFER                                   | TYPE     | EVENT   | PATH                                                                 |
-|--------------------------------------------|----------|---------|----------------------------------------------------------------------|
+| TRANSFER  | TYPE     | EVENT   | PATH |
+|-------------|----------|---------|-----------|
 | Item.productOfferReference                 | property | created | src/Generated/Shared/Transfer/ItemTransfer                           |
 | MerchantProductOfferCriteria               | class    | created | src/Generated/Shared/Transfer/MerchantProductOfferCriteriaTransfer   |
 | PageMap.merchantReferences                 | property | created | src/Generated/Shared/Transfer/PageMapTransfer                        |

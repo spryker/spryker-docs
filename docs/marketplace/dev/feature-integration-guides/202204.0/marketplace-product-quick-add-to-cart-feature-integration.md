@@ -15,8 +15,8 @@ Follow the steps below to install the Marketplace Product + Quick Add to Cart fe
 
 To start feature integration, integrate the required features:
 
-| NAME                | VERSION          | INTEGRATION GUIDE                                                                                                                                           |
-|---------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| NAME | VERSION | INTEGRATION GUIDE |
+|-------------------|-----------------|----------------|
 | Marketplace Product | {{page.version}} | [Marketplace Product Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html)|
 | Quick Add to Cart   | {{page.version}} | [Quick Add to Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-feature-integration.html)              |
 
@@ -31,7 +31,6 @@ merchant_search_widget.all_merchants,All Merchants,en_US
 merchant_search_widget.all_merchants,Alle Händler,de_DE
 merchant_search_widget.merchants,Merchants,en_US
 merchant_search_widget.merchants,Händler,de_DE
-
 ```
 
 2. Import data:
@@ -77,6 +76,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
     }
 }
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that Quick Order Page contains "Merchant Selector" dropdown with all active merchants.
@@ -89,9 +89,9 @@ Make sure that selected merchant reference affects search results while retrievi
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                      | SPECIFICATION                                         | PREREQUISITES | NAMESPACE                                                    |
-|---------------------------------------------|-------------------------------------------------------|---------------|--------------------------------------------------------------|
-| MerchantProductQuickOrderItemExpanderPlugin | Expands provided ItemTransfer with merchant reference.|               | SprykerShop\Yves\MerchantProductWidget\Plugin\QuickOrderPage |
+| PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|--------------|---------------|---------------|-----------------|
+| MerchantProductQuickOrderItemExpanderPlugin | Expands the provided `ItemTransfer` with merchant reference.|               | SprykerShop\Yves\MerchantProductWidget\Plugin\QuickOrderPage |
 
 **src/Pyz/Yves/QuickOrderPage/QuickOrderPageDependencyProvider.php**
 
@@ -119,6 +119,6 @@ class QuickOrderPageDependencyProvider extends SprykerQuickOrderPageDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure that merchant related products are added to cart with the corresponding merchant in "SoldBy" section.
+Make sure that merchant related products are added to cart with the corresponding merchant in "Sold By" section.
 
 {% endinfo_block %}

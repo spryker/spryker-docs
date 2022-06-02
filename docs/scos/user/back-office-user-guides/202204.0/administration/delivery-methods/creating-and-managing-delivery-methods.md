@@ -70,7 +70,7 @@ The fields marked with * are required.
 3. To activate the delivery method, select **Is active**.
 4. On the **Price & Tax** tab, do the following:
    * Define the price for the delivery method per specific locale;
-   * Select the tax set from the drop-down list. The values are taken from the **Taxes&nbsp;<span aria-label="and then">></span> Tax Sets** section. For more information, see [Managing tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html).
+   * Select the tax set from the drop-down list. The values are taken from the **Taxes&nbsp;<span aria-label="and then">></span> Tax Sets** section. For more information, see [create tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/create-tax-sets.html).
 
 5. On the **Store Relation** tab, select the stores in which the delivery method should be available.
 

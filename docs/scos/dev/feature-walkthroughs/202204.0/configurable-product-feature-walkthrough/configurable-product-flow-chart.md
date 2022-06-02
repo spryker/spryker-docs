@@ -97,7 +97,7 @@ The customer clicks the configuration button, and the request is redirected to t
 
 ### Phase 6
 
-1. The user finishes the configuration and clicks a button which creates an AJAX POST request with the data to the configurator page (self). (phase 6.1)
+1. The customer finishes the configuration and clicks a button which creates an AJAX POST request with the data to the configurator page (self). (phase 6.1)
 2. In the backend, the response is prepared according to the public data API from the configurator to Spryker. (phase 6.2)
 3. In the backend, a `CheckSum` is prepared based on the response data, which is encrypted with a shared key and returns these as the AJAX response (phase 6.3)
 4. The data is put to a hidden form on the configurator page and submit the form that points to the gateway page. (phase 6.4)

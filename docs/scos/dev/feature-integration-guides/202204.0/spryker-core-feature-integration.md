@@ -11,6 +11,7 @@ redirect_from:
   - /docs/spryker-core-feature-integration
   - /docs/en/spryker-core-feature-integration
   - /v20/docs/install-core-module
+  - /docs/scos/dev/feature-integration-guides/202200.0/spryker-core-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201811.0/spryker-core-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/spryker-core-feature-integration.html
 ---

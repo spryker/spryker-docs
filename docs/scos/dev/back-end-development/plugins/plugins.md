@@ -23,7 +23,7 @@ redirect_from:
   - /v1/docs/plugin
   - /v1/docs/en/plugin
   - /docs/scos/dev/back-end-development/implementing-and-using-plugins.html
-  - /docs/scos/dev/back-end-development/implementing-and-using-plugins.html
+  - /docs/scos/dev/back-end-development/plugins/implementing-and-using-plugins.html
 ---
 
 Plugins are small classes that are used to connect bundles in a flexible and configurable way. In contrast to a direct call to a facade of another module, there can be an array of provided modules.

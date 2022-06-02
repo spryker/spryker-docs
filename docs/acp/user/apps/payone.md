@@ -2,6 +2,8 @@
 title: Payone
 description: Description
 template: howto-guide-template
+redirect_from:
+   - docs/aop/user/apps/payone.html
 ---
 
 The [Payone](https://www.payone.com/DE-en) app lets your customers make payments with common payment methods, such as credit card and PayPal.

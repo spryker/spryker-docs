@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/viewing-refunds
   - /docs/viewing-refunds
   - /docs/en/viewing-refunds
+  - /docs/scos/user/back-office-user-guides/202200.0/sales/refunds/viewing-refunds.html
 related:
   - title: Refunds feature overview
     link: docs/scos/user/features/page.version/refunds-feature-overview.html

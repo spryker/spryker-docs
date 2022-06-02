@@ -3,6 +3,8 @@ title: Product Barcode feature walkthrough
 last_updated: May 16, 2022
 description: The Product Barcode feature lets you create barcodes for any kind of entity.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202200.0/product-barcode-feature-walkthrough.html
 ---
 
 The _Product Barcode_ feature lets you create barcodes for any kind of entity.

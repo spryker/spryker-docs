@@ -3,6 +3,8 @@ title: Reorder feature walkthrough
 last_updated: Aug 19, 2021
 description: The Reorder feature allows customers to repeat their previous orders in one click
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202200.0/reorder-feature-walkthrough.html
 ---
 
 The _Reorder_ feature allows customers to repeat their previous orders in one click.

@@ -3,6 +3,8 @@ title: Marketplace Product feature integration
 description: This document describes the process how to integrate the Marketplace Product feature into a Spryker project.
 template: feature-integration-guide-template
 last_updated: Mar 11, 2022
+redirect_from:
+  - /docs/marketplace/dev/feature-integration-guides/202200.0/glue/marketplace-product-feature-integration.html
 ---
 
 This document describes how to integrate the Marketplace Product feature into a Spryker project.

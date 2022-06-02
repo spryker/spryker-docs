@@ -11,7 +11,7 @@ The store data is cachable.
 
 The following schema illustrates module relations between the Product Offer and Store entities:
 
-![Module dependency graph](https://confluence-connect.gliffy.net/embed/image/a3cc640e-19f7-4208-aa82-3319450449b1.png?utm_medium=live&utm_source=custom)
+![Module dependency graph](https://confluence-connect.gliffy.net/embed/image/fe00b645-4b20-4a2e-8750-a8998c1612c9.png?utm_medium=live&utm_source=confluence)
 
 
 ## Domain model

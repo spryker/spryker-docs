@@ -8,7 +8,7 @@ This tutorial describes how to deploy Storefronts using the Spryker Launchpad.
 
 ## Logging into the Launchpad
 
-Using the login details provided by your FeS account owner, log into the [Launchpad](https://launchpad.spryker.com).
+Using the login details provided by your FES account owner, log into the [Launchpad](https://launchpad.spryker.com).
 
 After logging in, the *List of Applications* page opens.
 

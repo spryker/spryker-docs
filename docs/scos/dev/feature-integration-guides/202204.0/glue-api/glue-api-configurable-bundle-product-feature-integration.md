@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-configurable-bundle-product-feature-integration
   - /docs/glue-api-configurable-bundle-product-feature-integration
   - /docs/en/glue-api-configurable-bundle-product-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-configurable-bundle-product-feature-integration.html
 ---
 
 This document describes how to integrate the Glue API: Configurable Bundle + Product feature.
@@ -22,7 +23,7 @@ To start the feature integration, overview and install the necessary features:
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Configurable Bundle | {{page.version}} | [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html) |
-| Product | {{page.version}} | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) | 
+| Product | {{page.version}} | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -30,7 +31,7 @@ Install the required modules:
 
 ```bash
 composer require spryker/configurable-bundles-products-resource-relationship:"^1.0.0" --update-with-dependencies
-``` 
+```
 
 {% info_block warningBox "Verification" %}
 
@@ -49,7 +50,7 @@ Set up transfer objects:
 
 ```bash
 console transfer:generate
-``` 
+```
 
 {% info_block warningBox "Verification" %}
 
@@ -58,7 +59,7 @@ Make sure that the following changes have been applied in the transfer objec
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |
 | ConcreteProductsRestAttributesTransfer | class | created | src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer |
-| ProductConcreteCriteriaFilterTransfer | class | created src/Generated/Shared/Transfer/ProductConcreteCriteriaFilterTransfer | 
+| ProductConcreteCriteriaFilterTransfer | class | created src/Generated/Shared/Transfer/ProductConcreteCriteriaFilterTransfer |
 | ConfigurableBundleTemplateSlotStorageTransfer | class | created | src/Generated/Shared/Transfer/ConfigurableBundleTemplateSlotStorageTransfer |
 | ProductListTransfer | class | created | src/Generated/Shared/Transfer/ProductListTransfer |
 
@@ -70,7 +71,7 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ProductConcreteByConfigurableBundleTemplateSlotResourceRelationshipPlugin | Adds the `concrete-products` resource as a relationship by configurable bundle template slot. | None | Spryker\Glue\ConfigurableBundlesProductsResourceRelationship\Plugin\GlueApplication | 
+| ProductConcreteByConfigurableBundleTemplateSlotResourceRelationshipPlugin | Adds the `concrete-products` resource as a relationship by configurable bundle template slot. | None | Spryker\Glue\ConfigurableBundlesProductsResourceRelationship\Plugin\GlueApplication |
 
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
@@ -119,8 +120,4 @@ Integrate the following related features:
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Glue API: Configurable Bundle  | ✓ | [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html) |
-| GLUE: Configurable Bundle + Cart  | ✓ | [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-cart-feature-integration.html) | 
-
-
-
-
+| GLUE: Configurable Bundle + Cart  | ✓ | [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-cart-feature-integration.html) |

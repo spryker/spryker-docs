@@ -2,6 +2,8 @@
 title: App Composition Platform overview
 description: Learn about the App Orchestration Platform and how you can use it.
 template: concept-topic-template
+redirect_from:
+    - /docs/aop/user/intro-to-acp/acp-overview.html
 ---
 
 The App Composition Platform (ACP) lets [Spryker Cloud Commerce OS (SCCOS)](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html) customers connect, configure, and use the available third-party services, or apps, in their application with a click of a button, without development efforts from their side.

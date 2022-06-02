@@ -3,6 +3,8 @@ title: Quick Add to Cart feature walkthrough
 last_updated: Aug 19, 2021
 description: The Quick Add to Cart feature allows adding multiple products to cart at once
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202200.0/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
 ---
 
 The _Quick Add to Cart_ feature allows adding multiple products to cart at once.

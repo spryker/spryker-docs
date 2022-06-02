@@ -198,15 +198,17 @@ console cache:empty-all
 
 CSS variables can be overridden in any `.less`/`.css` file related to the Marketplace at the project level.
 
-Global override will change a variable for the whole project: 
+Global override changes a variable for the whole project:
 
 - Variables in the root library
+
 ```less
 @border-radius-base: var(--spy-border-radius-base, 10px);
 @green: var(--spy-green, #17b497);
 ```
 
-- Overridden variables at the project level (e.g. `src/Pyz/Zed/ZedUi/Presentation/Components/styles.less`)
+- Overridden variables at the project level (for example, `src/Pyz/Zed/ZedUi/Presentation/Components/styles.less`)
+
 ```less
 :root {
   --spy-border-radius-base: 15px;
@@ -214,9 +216,10 @@ Global override will change a variable for the whole project:
 }
 ```
 
-Partial override will change a variable for a some scope (e.g. inside a component):
+A partial override changes a variable for a specific scope (for example, inside a component):
 
 - Variable in the root library
+
 ```less
 @btn-padding-base: var(
   --spy-btn-padding-base,
@@ -225,6 +228,7 @@ Partial override will change a variable for a some scope (e.g. inside a componen
 ```
 
 - Overridden variable at the project level
+
 ```less
 .mp-test-selector {
   --spy-btn-padding-base: 10px 15px;

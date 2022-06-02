@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-product-optioncsv
   - /docs/file-details-product-optioncsv
   - /docs/en/file-details-product-optioncsv
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html
 ---

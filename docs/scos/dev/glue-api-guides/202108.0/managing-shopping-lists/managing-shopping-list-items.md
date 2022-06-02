@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-shopping-list-items
   - /docs/managing-shopping-list-items
   - /docs/en/managing-shopping-list-items
+  - /docs/marketplace/dev/glue-api-guides/202108.0/shopping-lists/managing-shopping-list-items.html
 related:
   - title: Managing shopping lists
     link: docs/scos/dev/glue-api-guides/page.version/managing-shopping-lists/managing-shopping-lists.html
@@ -328,7 +329,7 @@ To remove an item from a shopping list, send the request:
 
 Request sample: remove an item from a shopping list
 
-`DELETE http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08` 
+`DELETE http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08`
 
 ### Response
 

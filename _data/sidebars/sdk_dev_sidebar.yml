@@ -1,0 +1,6 @@
+title: Spryker SDK Developer Guides
+entries:
+  - product: Spryker SDK
+    nested:
+      - title: Spryker SDK
+        url: /docs/sdk/dev/

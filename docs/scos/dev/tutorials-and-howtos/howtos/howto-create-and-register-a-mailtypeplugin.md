@@ -26,7 +26,7 @@ redirect_from:
 
 This document shows how to create and register a mail provider you want to use.
 
-## 1. Create a MailTypePlugin
+## 1. Create a `MailTypePlugin`
 
 `MailType` is a class used to build the entire `MailTransfer` through an easy-to-use interface. Create the `MailTypePlugin` within the `Mail` module which sends out the emails, and implement `MailTypePluginInterface`. Then, in the `build()` method, set up your email.
 
@@ -78,7 +78,7 @@ class YourMailTypePlugin extends AbstractPlugin implements MailTypePluginInterfa
 }
 ```
 
-## 2. Register a MailTypePlugin
+## 2. Register a `MailTypePlugin`
 
 To add your `MailType` to the `MailTypeCollection`, add it to your `MailDependencyProvider`:
 

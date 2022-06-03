@@ -33,7 +33,6 @@ This instruction is related to Yves and Zed, so both applications must be update
 
 ## Modify Zed
 
-To modify Zed, follow these steps:
 1. Create a new relation type in `\Spryker\Shared\ProductRelation\ProductRelationTypes` as a new constant type—for example, `TYPE_RELATION_NEW`.
 2. Include this relation type to `getAvailableRelationTypes` returned array.
 3. Select a new relation type when building a relation.

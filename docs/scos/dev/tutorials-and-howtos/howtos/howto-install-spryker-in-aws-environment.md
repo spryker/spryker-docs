@@ -62,7 +62,7 @@ You need to choose the security group for all services and instances that you cr
 
 {% endinfo_block %}
 
-### RDS (Managed relational database service)
+### Managed relational database service (RDS)
 
 To create and configure RDS, do the following:
 

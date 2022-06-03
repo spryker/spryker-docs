@@ -93,7 +93,7 @@ x-frontend-auth: &frontend-auth
             - username: {secure_username} # Replace the placeholder and the brackets with the actual username.
               password: {secure_password} # Replace the placeholder and the brackets with the actual password.
         exclude:
-              {ip_address} # Replace the placeholder and the brackets with the actual ip address.
+              {ip_address} # Replace the placeholder and the brackets with the actual IP address.
 ```
 
 {% info_block warningBox "Verification" %}

@@ -78,7 +78,7 @@ When you have a new shipment carrier, you can add a new shipment method to it.
 
 {% info_block infoBox "Note" %}
 
-For more detailed information about adding shipment methods, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html)
+For more detailed information about adding shipment methods, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html).
 
 {% endinfo_block %}
 
@@ -86,7 +86,7 @@ For more detailed information about adding shipment methods, see [Creating and m
 
 To add a shipment method to a carrier, follow these steps:
 1. Click **Create new delivery method**. The **Create Delivery Method** page opens.
-2. Select the **CARRIER** you have created in the [Add a a new delivery method](#add-a-new-delivery-method) section.
+2. Select the **CARRIER** you have created in the [Add a new delivery method](#add-a-new-delivery-method) section.
 3. Add the **NAME** and store- and currency-specific net and gross prices.
 4. Select **IS ACTIVE**.
 5. Select the corresponding **TAX SET**.
@@ -94,7 +94,7 @@ To add a shipment method to a carrier, follow these steps:
 
 {% info_block infoBox "Note" %}
 
-For more detailed information about adding carrier companies, see [Creating carrier companies](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-carrier-companies.html)
+For more detailed information about adding carrier companies, see [Creating carrier companies](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-carrier-companies.html).
 
 {% endinfo_block %}
 
@@ -102,7 +102,7 @@ For more detailed information about adding carrier companies, see [Creating carr
 
 The shipment methods with price are retrieved depending on your pre-configured price mode + current store and the selected currency.
 
-Shipment methods might be excluded if their active flag is off. The connected `AvailabilityPlugin` plugin excludes them, or it would have a price as NULL.
+Shipment methods can be excluded if their active flag is off. The connected `AvailabilityPlugin` plugin excludes them; otherwise, it has a price as NULL.
 
 In this current example, the new shipment method is available in the shop for DE store, EUR currency and gross price mode as 7 EUR.
 ![UI shipment selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ui_shipment_selection.png)

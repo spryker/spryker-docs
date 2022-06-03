@@ -20,15 +20,15 @@ This document explains how to limit the memory usage of this process.
 
 ## Prerequisites
 
-Ensure that you are running the latest versions of:
+Ensure that you have the latest versions:
 * Windows 10
 * Docker for Windows
 
-## Limiting the memory usage of VMmem
+## Limit the memory usage of VMmem
 
-To limit the memory usage of VMmem, follow these steps:
+1. Create or update `c:\users\USERNAME\.wslconfig` with `memory` and `processors` parameters per your hardware and performance requirements.
 
-1. Create or update `c:\users\USERNAME\.wslconfig` with `memory` and `processors` parameters per your hardware and performance requirements. The following example suits most use cases.
+The following example suits most use cases.
 
 ```text
 memory=4GB # Sets the memory limit to 4 GB.

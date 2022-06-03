@@ -76,7 +76,7 @@ To check whether this has worked:
 2. Check that Composer has removed the modules that needed the replacement from the directory.
 3. Connect the module with your new functionality.
 
-## Setting up a connection with the new functionality
+## Set up a connection with the new functionality
 
 Now that we have replaced a core module with a different module, we need to connect the rest of the OS to this new module.
 

@@ -36,7 +36,7 @@ Perform the following steps to configure the application to use HTTPS.
 
 ## 1. Force HTTPS for all pages
 
-To force HTTPS on all pages, set `$config[ApplicationConstants::(YVES|ZED)_SSL_ENABLED]` to `true`. The application forces HTTPS on all pages.
+Set `$config[ApplicationConstants::(YVES|ZED)_SSL_ENABLED]` to `true`. The application forces HTTPS on all pages.
 
 **Configuration**
 

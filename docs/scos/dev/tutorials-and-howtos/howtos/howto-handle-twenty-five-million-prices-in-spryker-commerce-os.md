@@ -18,9 +18,9 @@ B2B business model usually challenges any software with higher requirements to a
 
 Imagine you have thousands of products and customers with unique pricing terms and conditions. A product can have thousands of prices assigned—one per customer. This document shares the technical challenges of handling such a number of prices and the solutions to solve them.
 
-Such a number of prices cannot be managed manually, but it is defined by business rules based on which the prices can be generated automatically. For example, you might agree on the special terms with your B2B partner, and they receive their own prices for the whole catalog. It might be considered as a discount, but usually it is not a single simple rule, but a set of rules and their priorities for each partner. These rules exist in an ERP system, which can export data through SOAP or CSV files.
+Such a number of prices cannot be managed manually, but it is defined by business rules based on which the prices can be generated automatically. For example, you might agree on the special terms with your B2B partner, and they receive their own prices for the whole catalog. It might be considered as a discount, but usually, it is not a single simple rule but a set of rules and their priorities for each partner. These rules exist in an ERP system, which can export data through SOAP or CSV files.
 
-In Spryker, each price is imported as a [price dimension](/docs/scos/user/features/{{site.version}}/merchant-custom-prices-feature-overview.html) and has a unique key, which determines its relation to a customer—for example, `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. To appear on the Storefront, the prices must appear in Redis price entries and abstract product search documents, so that facet filters can be applied in search and categories.
+In Spryker, each price is imported as a [price dimension](/docs/scos/user/features/{{site.version}}/merchant-custom-prices-feature-overview.html) and has a unique key, which determines its relation to a customer—for example, `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. To appear on the Storefront, the prices must appear in Redis price entries and abstract product search documents so that facet filters can be applied in search and categories.
 
 Price import flow:
 
@@ -31,12 +31,12 @@ Price import flow:
 
 When enabling Spryker to handle such a number of prices, the following challenges occur:
 
-1. 25,000,000 prices should be imported in two separate price dimensions.
-2. A product can have about 40,000 prices. This results in overpopulated product abstract search documents: each document aggregates prices of abstract products and all related concrete products. Each price is represented as an indexed field in the search document. Increasing the number of indexed fields slows `ElasticSearch(ES)` down. Just for comparison, the [recommended limit](https://www.elastic.co/guide/en/elasticsearch/reference/master/mapping.html#mapping-limit-settings) is 1,000.
+1. 25,000,000 prices are imported in two separate price dimensions.
+2. A product can have about 40,000 prices. This results in overpopulated product abstract search documents: each document aggregates prices of abstract products and all related concrete products. Each price is represented as an indexed field in the search document. I ncreasing the number of indexed fields slows `ElasticSearch(ES)` down. Just for comparison, the [recommended limit](https://www.elastic.co/guide/en/elasticsearch/reference/master/mapping.html#mapping-limit-settings) is 1,000.
 3. Overloaded product abstract search documents cause issues with memory limit and slow down [Publish and Synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html). The average document size is bigger than 1&nbsp;MB.
 4. When more than 100 product abstract search documents are processed at a time, the payload gets above 100&nbsp;MB, and ES rejects queries. [AWS native service](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-limits.html) does not allow changing this limit.
 The queries rejected by ES are considered successful by Spryker because the [Elastica library](https://elastica.io/) ignores the `413` error code.
-5. Each price having a unique key results in more different index properties in the whole index. Key structure: `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. This key structure requires millions of actual facets, which slows down ES too much.
+5. Each price having unique key results in more different index properties in the whole index. Key structure: `specificPrice-DEFAULT-EUR-NET_MODE-FOO1-BAR2`. This key structure requires millions of actual facets, which slows down ES too much.
 
 ## Problem
 
@@ -94,16 +94,16 @@ In AWS, the `http.max_content_length` ES limit defines the maximum payload size 
 
 ## Evaluated solutions
 
-The following solutions were evaluated:
+The evaluated solutions are as follows:
 
 1. ES join field type.
-   This ES functionality is similar to the classical joins in relational databases. This solution solves your problem faster and with less effort. To learn how we implemented this solution, see [ElasticSearch join data type: Implementation](#elasticsearch-join-field-type-implementation). Also, have a look at the other evaluated solutions as they may be more appropriate in your particular case.
+   This ES functionality is similar to the classical joins in relational databases. This solution solves your problem faster and with less effort. o learn about the implementation of this solution, see [ElasticSearch join data type: Implementation](#elasticsearch-join-field-type-implementation). Also, have a look at the other evaluated solutions as they may be more appropriate in your particular case.
    <br>Documentation: [Join field type](https://www.elastic.co/guide/en/elasticsearch/reference/current/parent-join.html)
 2. Multi sharding with the `_routing` field.
    The idea is to avoid indexing problems by sharing big documents between shards. Breaking a huge index into smaller ones makes it easier for the search to index data. The solution is complex and does not solve the payload issues.
    <br>Documentation: [`_routing` field](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-routing-field.html)
 3. Use Postgres or combine ES and Postgres.
-   Postgres provides search functionalities, and you can set up an additional database dedicated to running searches or helping ES with additional data. The `script_scoring` function in search lets you embed any data, though performance is decreased, as this script is evaluated for every document when search is being performed.
+   Postgres provides search functionalities, and you can set up an additional database dedicated to running searches or helping ES with additional data. The `script_scoring` function in search lets you embed any data, though performance is decreased, as this script is evaluated for every document when a search is being performed.
    Compared to the first option, this solution is more complex.
    <br>Documentation:
    - [Script score query](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-script-score-query.html#script-score-query-ex-request)
@@ -188,7 +188,7 @@ The side effects of this solution are the following:
 
 ### How to speed up the publishing process
 
-To implement a parent-child relationship between documents, we built a standard search module that follows [Spryker architecture](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html). The new price search module is subscribed to the publish and unpublish events of abstract products to manage related price documents in the search. The listener in the search module receives a product abstract ID and fetches all related prices to publish or unpublish them depending on the incoming event. Due to a big number of prices, the publish process became slow. This causes the following issues.
+To implement a parent-child relationship between documents, we built a standard search module that follows [Spryker architecture](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html). The new price search module is subscribed to the publish and unpublish events of abstract products to manage related price documents in the search. The listener in the search module receives a product abstract ID and fetches all related prices to publish or unpublish them, depending on the incoming event. Due to a large number of prices, the publish process became slow. This causes the following issues.
 
 #### Issues
 
@@ -198,7 +198,7 @@ The following issues related to a slow publish process have been added:
 2. The following has to be done simultaneously:
     * Trigger product abstract events to update their structure in ES.
     * Trigger their child documents to be published.
-3. RabbitMQ connection issues. The connection is getting closed after fetching a bunch of messages because the PHP process takes too long to be executed. After processing the messages, PHP tries to acknowledge them using the old connection which has been closed by RabbitMQ. Being single-threaded, the PHP library cannot asynchronously send any heartbeats when the thread is busy with something else.
+3. RabbitMQ connection issues. The connection is getting closed after fetching a bunch of messages because the PHP process takes too long to be executed. After processing the messages, PHP tries to acknowledge them using the old connection, which has been closed by RabbitMQ. Being single-threaded, the PHP library cannot asynchronously send any heartbeats when the thread is busy with something else.
    For more information, see [Detecting Dead TCP Connections with Heartbeats and TCP Keepalives](https://www.rabbitmq.com/heartbeats.html).
 
 #### Evaluated solutions
@@ -284,14 +284,14 @@ FROM   inserted;
 
 ### Price events quick lane
 
-Prices are published by pushing the corresponding message to the generic event queue. As this queue can hold a lot more messages than just those related to prices, it makes sense to introduce a dedicated queue for publishing only price-related information.
+Prices are published by pushing the corresponding message to the generic event queue. As this queue can hold more messages than just those related to prices, it makes sense to introduce a dedicated queue for publishing only price-related information.
 
-You can configure it by tweaking the Event and EventBehavior modules. Allow the `EventBehavior` Propel behavior to accept additional parameters (except those related to columns). For example, allow it to accept the name of a custom queue, which is used later for pushing messages to the queue. In this case, price events are segregated from all other events and can be processed in parallel without being blocked by other heavier events. Also, this let you configure different chunk sizes for the subscriber, resulting in a more optimized CPU usage and faster processing.
+You can configure it by tweaking the Event and EventBehavior modules. Allow the `EventBehavior` Propel behavior to accept additional parameters (except those related to columns). For example, allow it to accept the name of a custom queue, which is used later for pushing messages to the queue. In this case, price events are segregated from all other events and can be processed in parallel without being blocked by other heavier events. Also, this lets you configure different chunk sizes for the subscriber, resulting in a more optimized CPU usage and faster processing.
 
 To implement this functionality:
 
 1. Extend `EventEntityTransfer` with a new field, like `queueName`.
-2. Override `\Spryker\Zed\EventBehavior\Persistence\Propel\Behavior\EventBehavior` and adjust it to be able to accept an additional `queueName` parameter (except those related to columns) through the Propel schema files.
+2. Override `\Spryker\Zed\EventBehavior\Persistence\Propel\Behavior\EventBehavior` and adjust it to accept an additional `queueName` parameter (except those related to columns) through the Propel schema files.
 
 {% info_block errorBox %}
 
@@ -299,21 +299,21 @@ Ensure that `\Pyz\Zed\EventBehavior\Persistence\Propel\Behavior\ResourceAwareEve
 
 {% endinfo_block %}
 
-3. Adjust `\Pyz\Zed\EventBehavior\Business\Model\TriggerManager::triggerEvents()` to extract the new piece of data from the payload obtained from database and set it as the value of the newly created `EventEntityTransfer::queueName` property.
+3. Adjust `\Pyz\Zed\EventBehavior\Business\Model\TriggerManager::triggerEvents()` to extract the new piece of data from the payload obtained from the database and set it as the value of the newly created `EventEntityTransfer::queueName` property.
 
-4. Configure `\Spryker\Zed\Event\Business\Queue\Producer\EventQueueProducer::enqueueListenerBulk()` to check if `queueName` is set on the `EventEntityTransfer.` If it is set, this queue name should be used to push event messages to. Otherwise, it should fall back to the default event queue.
+4. Configure `\Spryker\Zed\Event\Business\Queue\Producer\EventQueueProducer::enqueueListenerBulk()` to check if `queueName` is set on the `EventEntityTransfer.` If it is set, this queue name is used to push event messages to. Otherwise, it falls back to the default event queue.
 
-Now you have a separate event queue for prices. This approach is applicable to any type of event. *Quick lane* ensures that critical data is replicated faster.
+Now you have a separate event queue for prices. This approach applies to any type of event. *Quick lane* ensures that critical data is replicated faster.
 
 ### Tweaking database
 
-With millions of prices in a shop, we needed analytics tools to monitor data consistency in the database. The CSV files, which are the source of price data for analytics, are too big, so it’s hard to process them. That's why we decided to convert them into Postgres database tables.
+With millions of prices in a shop, we needed analytics tools to monitor data consistency in the database. The CSV files, which are the source of price data for analytics, are too big, so it’s hard to process them. That's why we converted them into Postgres database tables.
 
 The Postgres `COPY` command is the fastest and easiest way to do that. This command copies the data from a CSV file to a database table.
 
 {% info_block errorBox %}
 
-To convert data successfully, the order of the columns in the database table should reflect the order in the CSV files.
+To convert data successfully, the order of the columns in the database table must reflect the order in the CSV files.
 
 Example:
 
@@ -337,13 +337,13 @@ fi
 
 #### Disabling synchronous commit
 
-We were running the analytics at night when there was no intensive activity in our shop. This lets us disable synchronous commit to reduce the processing time of the `COPY` operations.
+We were running the analytics at night when there was no intensive activity in our shop. This let us disable synchronous commit to reduce the processing time of the `COPY` operations.
 
 The following line in the previous code snippet disables the synchronous commit: `SET synchronous_commit TO OFF;`
 
 {% info_block errorBox %}
 
-If you disable the synchronous commit, make sure to enable it back after you’ve finished importing the files.
+If you disable the synchronous commit, enable it back after you’ve finished importing the files.
 
 {% endinfo_block %}
 
@@ -353,7 +353,7 @@ Materialized view is a tool that aggregates data for analysis. Applying indexes 
 
 Exemplary procedure:
 
-1. Create an aggregated view of all the merchant prices that are already imported into a relational database with a proper normalization.
+1. Create an aggregated view of all the merchant prices that are already imported into a relational database with proper normalization.
 
 ```sql
 CREATE materialized VIEW IF NOT EXISTS debug_merchant_relationship_prices_view AS

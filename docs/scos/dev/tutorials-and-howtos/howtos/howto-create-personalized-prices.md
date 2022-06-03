@@ -33,18 +33,18 @@ There are several steps to consider when implementing special prices based on wh
 | Price	 | Group ID must be included in the price entity also. For an SKU, you should have one or more prices. The Price module should be extended so that you can query the price based on the SKU of the product and the group ID. |
 |Importer | Set of prices should be imported for each product. |
 | Collector	 | Set of prices should be exported to the client side data storage. |
-| Catalog | Price that corresponds to the logged in customer group should be displayed. |
-| PriceCartConnector | Price that corresponds to the group the logged in customer is part of should be used in the cart. |
+| Catalog | Price that corresponds to the logged-in customer group should be displayed. |
+| PriceCartConnector | Price that corresponds to the group the logged-in customer is part of should be used in the cart. |
 
 ## 1. Extend the Customer module
 
-The `spy_customer` table should be extended on the project side to include the group ID. You can read more on how to extend the database schema in [Extending the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html) document.
+The `spy_customer` table should be extended on the project side to include the group ID. For more information about extending the database schema, see [Extending the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
 
 The `spy_customer` table should be extended on the project side to include the group ID. You can read more here on how to extend the database schema.
 
 ## 2. Extend the Price module
 
-The `spy_price` table should be extended on the project side to include the group ID. The new added column should not be mandatory.
+The `spy_price` table should be extended on the project side to include the group ID. The newly added column should not be mandatory.
 
 ## 3. Extend the price module
 
@@ -58,7 +58,7 @@ Prices are imported by the `ProductPriceImporter`. If you are using the `Importe
 
 ## 5. Adjust prices for cart
 
-For the products in the cart, prices must be displayed according to the group the logged-in user belongs to (in case the current user is a guest, the default price should be displayed).
+For the products in the cart, prices must be displayed according to the group the logged-in user belongs to (if the current user is a guest, the default price should be displayed).
 
 The prices for the products in the cart are added by the `CartItemPricePlugin`.
 
@@ -88,7 +88,7 @@ You can implement a new plugin to retrieve the price based on the group ID and r
     }
 ```
 
-From the `QuoteTransfer` that is included in the `CartChangeTransfer` you can get the customer data and the group ID:
+From the `QuoteTransfer` that is included in the `CartChangeTransfer`, you can get the customer data and the group ID:
 
 ```php
 <?php
@@ -120,9 +120,9 @@ class CartItemSpecialPricePlugin extends AbstractPlugin implements ItemExpanderP
 
 ## 6. Export prices
 
-The special prices must also be exported to the client-side data storage so that the corresponding price can be displayed to the customer. Data aggregation and export to client-side data storage is handled by the `Collector` module.
+The special prices also must be exported to the client-side data storage to display the corresponding price to the customer. Data aggregation and export to client-side data storage are handled by the `Collector` module.
 
-The product data is collected by the `ProductCollector`. The `ProductCollector:collectItem($touchKey, array $collectItemData)` must be modified to collect the prices for the current SKU.
+The `ProductCollector` collects the product data. The `ProductCollector:collectItem($touchKey, array $collectItemData)` must be modified to collect the prices for the current SKU.
 
 ```php
 <?php
@@ -152,10 +152,10 @@ The product data is collected by the `ProductCollector`. The `ProductCollector:c
     }
 ```
 
-## 7. Display price to customer
+## 7. Display price to customers
 
 The `ProductResourceCreator` transforms the JSON containing product details stored in Redis into a more understandable format.
 
 The price needs to be set according to the group that the customer belongs to when building the product using the data from Redis.
 
-A controller action that's called when a request on a product detail page is submitted lets you retrieve logged in customer information by calling the `getUser()` method. Now that you know the ID of the group that the customer is a member of, you can set the price of the product according to the group.
+A controller action that's called when a request on a product detail page is submitted lets you retrieve logged-in customer information by calling the `getUser()` method. Now that you know the ID of the group that the customer is a member of, you can set the price of the product according to the group.

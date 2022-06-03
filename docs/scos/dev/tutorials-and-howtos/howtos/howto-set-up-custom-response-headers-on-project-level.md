@@ -31,9 +31,7 @@ Ensure that you have:
 * Browser to test
 * CMS page with the video in your Spryker-based shop
 
-## Setting up custom response headers
-
-To set up custom response headers:
+## Set up custom response headers
 
 1. For the video example, change the `CmsController` of the respective CMS page:
 

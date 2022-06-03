@@ -22,7 +22,8 @@ The implementation described in this document is exemplary and may require addit
 
 {% endinfo_block %}
 
-To enable guest checkout, follow these steps:
+## Enable guest checkout
+
 1. In the `is_restricted` column of the `spy_unauthenticated_customer_access` table, set `0` for `add-to-cart` and `order-place-submit` content types.
 2. Remove customer permissions:
     1. In the Back Office, go to **Customers&nbsp;<span aria-label="and then">></span> Customer Access**.

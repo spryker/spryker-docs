@@ -48,7 +48,7 @@ You can specify Decimal as a type of your Data Transfer Object’s property. To 
 
 For more information about how to work with Data Transfer Objects, see [Creating, using, and extending the transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html).
 
-## Creating a decimal value object
+## Create a decimal value object
 
 Decimal objects can be created using one of the following types: int, numeric string (including numbers in exponential representation), float, objects that have the `__toString()` method defined and returning a numeric string, for example:
 
@@ -62,7 +62,7 @@ $decimal = new Decimal('6.22e8');
 
 Decimals are immutable. This means that arithmetic operations with decimals return a new decimal object without impacting the original decimal object. Thus, the result of a decimal operation is always a new decimal.
 
-## Using a decimal value object in arithmetic, comparing, casting, and rounding operations
+## Use a decimal value object in arithmetic, comparing, casting, and rounding operations
 
 Decimal objects can use decimal objects, plain integers, and string values. They support not only arithmetic operations but also can be used with comparing, casting, and rounding methods. The following section provides an explanation of each of them with some examples.
 
@@ -158,7 +158,7 @@ The table provides additional information about exceptions that may occur when w
 | `add()`, `subtract()`, `multiply()`, `divide()`, `mod()` | `InvalidArgumentException` | Thrown if the given value is not a `decimal`, `float`, `string`, or `integer`. |
 | `divide()` | `DivisionByZeroError` | Thrown if dividing by 0. |
 
-### Comparing operations
+### Compare operations
 
 Decimal objects can be compared to the given values to check the equal or relative ordering of these values. You can determine whether the new decimal is positive or negative, equal or greater/less than a specified one.
 
@@ -248,7 +248,7 @@ $decimalTwo = new Decimal(3.14);
 $result = $decimalOne->compareTo($decimalTwo); //-1
 ```
 
-### Rounding operations
+### Round operations
 
 The rounding operations return a new decimal object value that rounds up or down to the original decimal value. The following methods can be used in the rounding mode for decimal objects:
 
@@ -294,7 +294,7 @@ The table provides additional information about the exception that may be thrown
 | --- | --- | --- |
 |  `truncate()` | `InvalidArgumentException` | Thrown if the given scale is less than or equal to 0. |
 
-### Casting operations
+### Cast operations
 
 The casting operations convert decimal objects into simple data types: integer, float, or string using the following methods:
 

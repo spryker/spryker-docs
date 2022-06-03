@@ -55,7 +55,7 @@ Install the required modules:
 composer require spryker/storage:3.8.0 spryker/storage-database
 ```
 
-## Configuring the storage database (DevOps)
+## Configure the storage database (DevOps)
 
 1. For the key-value storage bypass to work properly, add a set of new configuration values to the environment configuration of a project:
 

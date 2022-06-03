@@ -32,9 +32,9 @@ Spryker works only with MySQL version 5.7 or higher.
 
 ## Adjust Spryker to run with MySQL
 
-To run the Spryker Demoshop with MySQL, adjust some parts in our configs:
+To run the Spryker Demoshop with MySQL, adjust some parts in your configs:
 
-1. Go to `config/Shared/config_default.php` and modify the database configuration:
+1. In `config/Shared/config_default.php`, modify the database configuration:
 
 ```bash
 $config[PropelConstants::ZED_DB_PORT] = 3306;
@@ -42,7 +42,7 @@ $config[PropelConstants::ZED_DB_ENGINE] = $config[PropelConstants::ZED_DB_ENGINE
 $config[PropelQueryBuilderConstants::ZED_DB_ENGINE] = $config[PropelConstants::ZED_DB_ENGINE_MYSQL];
 ```
 
-2. Go to `deploy/setup/params.sh` and modify `DATABASE_DEFAULT_ENGINE` to MySQL:
+2. In `deploy/setup/params.sh`, modify `DATABASE_DEFAULT_ENGINE` to `mysql`:
 
 ```yaml
 DATABASE_DEFAULT_ENGINE='mysql'

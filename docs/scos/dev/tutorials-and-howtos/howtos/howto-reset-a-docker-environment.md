@@ -22,7 +22,7 @@ To remove all the Docker data, use the following instructions.
 
 {% endinfo_block %}
 
-To reset a Docker environment:
+## Reset a Docker Environment
 
 1. Delete all containers, networks, unused images, and build cache:
 

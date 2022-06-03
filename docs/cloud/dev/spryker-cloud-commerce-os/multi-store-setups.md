@@ -22,36 +22,14 @@ With the shared setup, stores share a single codebase and databases per region. 
 
 ### Shared setup: When to use
 
-
-We recommend this setup for the stores that can be described as follows:
-
-* All the stores are united into a multi-store system.
-
-* All the stores follow the same business logic.
-
-* Insignificant differences are covered in the code, for example, using code-buckets.
-
-* Stores are scaled together and don't need different deployment workflows.
+We recommend this setup for simple shops that have two to three stores that don't
 
 ### Shared setup: Advantages
-
-The shared setup features:
 
 * Products, customers, orders, and so on are stored in the same database, which simplifies collaborative management.
 
 * All stores are hosted in the same AWS region.
 
-* Shared traffic distribution for all stores using ALB+NLBs.
-
-* SSL certificates are generated automatically or managed manually in AWS.
-
-    * SSL termination process is handled by ALB.
-
-    * We can assign multiple certificates of different domains to one ALB.
-
-* Single CI/CD pipeline is used for all the stores.
-
-* On-demand setup of any type of environment: test, staging, and so on.
 
 ## Separated setup
 
@@ -62,8 +40,6 @@ With the separated setup, store share the same codebase but have dedicated datab
 
 ### Separated setup: When to use
 
-We recommend this setup for the stores that can be described as follows:
-
 * The stores are completely different from the perspective of the following:
 
     * Design
@@ -72,24 +48,15 @@ We recommend this setup for the stores that can be described as follows:
 
     * Features or modules
 
-* Independent maintenance and development: each store is handled by a dedicated team with its development workflow and release cycles.
-
-* Separated data management for products, customers, orders, and so on. Data sharing and synchronization requires external systems.
+* Separated data management for products, customers, orders, etc. Data sharing and synchronization requires external systems.
 
 
 ### Separated setup: Advantages
 
-
-The separated setup features:
-
-* Flexible deployment and scaling: since stores are independent of one another, deploy, remove, and scale each store without affecting other stores.
-
-* Several CI/CD(continuous integration/continuous delivery) pipelines are shipped for every store by default.
-
-* Better control over expenses of each store.
+* Flexible deployment: since stores are independent of one another, deploy, remove, and scale each store without affecting other stores.
 
 * Flexible URL management. For example, the same product in different stores can have the same URL.
 
 * Flexible management of the configuration of stores: distinct category navigation, product schema details, and users.
 
-* Separate deployment of each store: deploy a new version of a store without affecting other stores.
+* Separate deployment of each database per store: deploy a new version of a store's database without affecting the other stores' databases.

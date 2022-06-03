@@ -49,7 +49,7 @@ regions:
                     search:
                         namespace: de_search
                     database:
-                        name: eu-region-existing-database
+                        name: eu-region-de-database
             AT:
                 services:
                     broker:

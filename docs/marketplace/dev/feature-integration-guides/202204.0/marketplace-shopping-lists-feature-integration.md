@@ -6,6 +6,9 @@ template: feature-integration-guide-template
 related:
   - title: Glue API - Marketplace Shopping Lists feature integration
     link: docs/marketplace/dev/feature-integration-guides/page.version/glue/marketplace-shopping-lists-feature-integration.html
+  related:
+  - title: Marketplace Shopping Lists feature walkthrough
+    link: docs/marketplace/dev/feature-integration-guides/202204.0/marketplace-shopping-lists-feature-integration.html
 ---
 
 This document describes how to integrate the Marketplace Shopping Lists feature into a Spryker project.

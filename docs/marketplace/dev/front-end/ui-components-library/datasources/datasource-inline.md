@@ -2,6 +2,13 @@
 title: Datasource Inline
 description: This document provides details about the Datasource Inline service in the Components Library.
 template: concept-topic-template
+related:
+  - title: Datasources
+    link: docs/marketplace/dev/front-end/ui-components-library/datasources/index.html
+  - title: Datasource Http
+    link: docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-http.html
+  - title: Datasource Inline Table
+    link: docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline-table.html
 ---
 
 This document explains the Datasource Inline service in the Components Library.

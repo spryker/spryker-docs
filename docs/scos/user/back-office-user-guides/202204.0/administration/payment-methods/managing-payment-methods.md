@@ -1,7 +1,7 @@
 ---
-title: Managing payment methods
-description: Use the guide to view, update, activate, and assign to stores payment methods in the Back Office.
-last_updated: Aug 9, 2021
+title: Edit payment methods
+description: Learn how to edit payment methods in the Back Office.
+last_updated: June 2, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-payment-methods
 originalArticleId: d0dc8732-295d-4072-8dc2-63f439feb324
@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/201811.0/administration/payment-methods/managing-payment-methods.html
   - /docs/scos/user/back-office-user-guides/201903.0/administration/payment-methods/managing-payment-methods.html
   - /docs/scos/user/back-office-user-guides/201907.0/administration/payment-methods/managing-payment-methods.html
+  - /docs/scos/user/back-office-user-guides/202204.0/administration/payment-methods/managing-payment-methods.html  
 related:
   - title: Payments feature overview
     link: docs/scos/user/features/page.version/payments-feature-overview.html

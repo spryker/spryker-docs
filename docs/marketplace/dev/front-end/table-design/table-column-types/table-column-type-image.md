@@ -24,6 +24,7 @@ Check out an example usage of the Table Column Image in the `@spryker/table` con
                 type: 'image',
                 typeOptions: {
                     src: 'image URL',
+                    alt: 'alt value',
                 },
             },
             ...,
@@ -63,5 +64,6 @@ Below you can find interfaces for the Table Column Image:
 ```ts
 interface TableColumnImageConfig {
     src?: string;
+    alt?: string;
 }
 ```

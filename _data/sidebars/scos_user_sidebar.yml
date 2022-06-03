@@ -1270,7 +1270,7 @@ entries:
             - "201903.0"
             - "201907.0"
             - "202009.0"
-        - title: Manage concrete products
+        - title: Manage product variants
           nested:
           - title: Creating product variants
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/creating-product-variants.html
@@ -2516,8 +2516,19 @@ entries:
           url: /docs/scos/user/back-office-user-guides/administration/glossary/managing-glossary.html
       - title: Tax rates
         nested:
+        - title: Create tax rates
+          url: /docs/scos/user/back-office-user-guides/administration/tax-rates/create-tax-rates.html
+          include_versions:
+          - "202204.0"
+        - title: Edit tax rates
+          url: /docs/scos/user/back-office-user-guides/administration/tax-rates/edit-tax-rates.html
+          include_versions:
+          - "202204.0"
         - title: Managing tax rates
           url: /docs/scos/user/back-office-user-guides/administration/tax-rates/managing-tax-rates.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
         - title: References
           include_versions:
           - "201811.0"
@@ -2536,8 +2547,19 @@ entries:
             - "202005.0"
       - title: Tax sets
         nested:
+        - title: Create tax sets
+          url: /docs/scos/user/back-office-user-guides/administration/tax-sets/create-tax-sets.html
+          include_versions:
+          - "202204.0"
+        - title: Edit tax sets
+          url: /docs/scos/user/back-office-user-guides/administration/tax-sets/edit-tax-sets.html
+          include_versions:
+          - "202204.0"
         - title: Managing tax sets
           url: /docs/scos/user/back-office-user-guides/administration/tax-sets/managing-tax-sets.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"          
         - title: Taxes
           url: /docs/scos/user/back-office-user-guides/administration/tax-rates/taxes.html
           include_versions:

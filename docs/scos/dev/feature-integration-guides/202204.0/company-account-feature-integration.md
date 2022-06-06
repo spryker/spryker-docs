@@ -763,7 +763,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that in the database the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
+Make sure that in the database, the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 {% endinfo_block %}
 
@@ -773,7 +773,7 @@ To enable widgets, register the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| BusinessOnBehalfStatusWidget | Displays the selected company users and allows for Business on Behalf customers to change it through a link. | None | SprykerShop\Yves\BusinessOnBehalfWidget\Widget |
+| BusinessOnBehalfStatusWidget | Displays the selected company users and allows Business on Behalf customers to change it through a link. | None | SprykerShop\Yves\BusinessOnBehalfWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 

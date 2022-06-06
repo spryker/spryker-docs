@@ -42,7 +42,7 @@ We will generate a URL that points to the gateway page with the following parame
 | `SKU` | `some_sku` |   |
 | `Quantity` | `2` |   |
 
-The following table contains request parameters which the plugin adds to the request:
+The following table contains request parameters, which the plugin adds to the request:
 
 | PARAMETER | VALUE |
 |---|---|

@@ -10,6 +10,7 @@ redirect_from:
   - /v3/docs/en/business-unit-management-feature-overview
   - /v3/docs/business-unit-management
   - /v3/docs/en/business-unit-management
+  - /docs/scos/user/features/201907.0/company-account-feature-overview/business-unit-management.html
 ---
 
 Once a company administrator has created a company which has been activated and approved in the Administrator Interface, they can start building the organizational structure of their company in _My Company_ section of the web-shop.
@@ -26,7 +27,7 @@ The business unit of the upper level is referred to as **parent business unit**,
 
 Upon company registration, a default business unit named "Headquarters" is automatically created under Business Units section.
 
-![default-business-unit_1_.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/default-business-unit_1_.png) 
+![default-business-unit_1_.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/default-business-unit_1_.png)
 
 The company administrator can create, edit, delete as well as arrange business units in hierarchical order in the Business Units section.
 
@@ -35,7 +36,7 @@ To create a business unit, its name and email address must be specified.
 {% info_block infoBox %}
 The user can also select a parent business unit of the newly created unit. If it is not selected, the new business unit will be created with "0" level in hierarchy, for example, as a parent.
 {% endinfo_block %}
-![new-bu.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/new-bu.png) 
+![new-bu.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/new-bu.png)
 
 The parent and child business units are visually differentiated by means of indents. This differentiation is described in the following table:
 
@@ -47,7 +48,7 @@ The parent and child business units are visually differentiated by means of inde
 | And so on |
 
 Example:
-![business-units-hierarchy.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/business-units-hierarchy.png) 
+![business-units-hierarchy.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/business-units-hierarchy.png)
 
 The following are special characteristics of business units:
 
@@ -61,15 +62,14 @@ A business unit's children that are one level below it, become 0 level parent bu
 * A business unit can be assigned with one or multiple addresses.
 * The existing addresses can be assigned to business units right at the stage of their creation, and the new addresses can be added on the _Edit Business Unit_ page.
 
-![business-units-address.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/business-units-address.png) 
+![business-units-address.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/business-units-address.png)
 
 *  The addresses can also be unassigned by clearing the respective address's check box under the Assign Addresses section and clicking Submit.
 
-![unassign-address.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/unassign-address.png) 
+![unassign-address.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/unassign-address.png)
 
 This will move the address to Unassigned addresses section.
 
-![unassigned-addresses.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/unassigned-addresses.png) 
+![unassigned-addresses.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/unassigned-addresses.png)
 
 <!-- _Last review date: Feb 11, 2018_ by Helen Kravchenko -->
-

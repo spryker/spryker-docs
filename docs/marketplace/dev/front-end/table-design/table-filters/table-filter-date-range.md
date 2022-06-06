@@ -14,11 +14,11 @@ Check out an example usage of the Table Filter Date Range in the `@spryker/table
 
 Component configuration:
 
-- `enabled` - enables the filter via config.  
-- `items` - an array with config for each filter date-range.  
+- `enabled`—enables the filter via config.  
+- `items`—an array with config for each filter date-range.  
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         dataSource: { ... },
         columns: [ ... ],

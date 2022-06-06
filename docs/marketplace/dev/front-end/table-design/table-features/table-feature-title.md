@@ -14,11 +14,11 @@ Check out an example usage of the Table Feature Title in the `@spryker/table` co
 
 Component configuration:
 
-- `enabled` - enables the feature via config.  
-- `title` - a table title text.  
+- `enabled`—enables the feature via config.  
+- `title`—a table title text.  
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         dataSource: { ... },
         columns: [ ... ],

@@ -8,6 +8,7 @@ originalArticleId: 7ab8ffb4-a7ab-4ccb-b2e2-5c15e12a19c8
 redirect_from:
   - /v3/docs/user-reference-information
   - /v3/docs/en/user-reference-information
+  - /docs/scos/user/back-office-user-guides/201907.0/users/roles-groups-and-users/references/user-reference-information.html
 ---
 
 This topic contains the reference information that you need to know when working in the **Users Control > Users** section.
@@ -21,9 +22,9 @@ On the **Users** page, you see the following:
 ***
 ## Agent User
 
-While creating or editing a user, you can make a specific user to be an agent. 
+While creating or editing a user, you can make a specific user to be an agent.
 
-This is very helpful for Customer Service and Sales departments. 
+This is very helpful for Customer Service and Sales departments.
 
 **Who is an agent user?**
 This is a user that can do the same actions in the online store as a regular buyer.
@@ -32,14 +33,18 @@ This is a user that can do the same actions in the online store as a regular buy
 Let's pretend that there is a customer that needs assistance with his order. He needs a store representative to find the needed items in the catalog and submit an order on his behalf. This is exactly what an agent can do.
 
 **How this can be done?**
-An agent user goes to Yves using _/agent/login_ at the end of the online store URL and logins with their Back Office credentials. 
+An agent user goes to Yves using _/agent/login_ at the end of the online store URL and logins with their Back Office credentials.
 
-In the **Search** field on the top, he searches for the customer email. Once found, clicks **Confirm** on the right. 
+In the **Search** field on the top, he searches for the customer email. Once found, clicks **Confirm** on the right.
 
-Since now he can perform the same actions as a regular customer. Once all needed actions are done and the order is placed, he clicks **End Customer Assistance**. 
+Since now he can perform the same actions as a regular customer. Once all needed actions are done and the order is placed, he clicks **End Customer Assistance**.
+
 {% info_block infoBox %}
-Click to see how it looks on Yves.<br>![Agent User](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Users+Control/User:+Reference+Information/Agent+User.gif
-{% endinfo_block %}{height="40" width="40"})
+
+Click to see how it looks on Yves.<br>![Agent User](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Users+Control/User:+Reference+Information/Agent+User.gif)
+
+{% endinfo_block %}
+
 ***
 ## Create and Edit User Page Attributes
 The following table describes the attributes that are used when creating or updating a user.

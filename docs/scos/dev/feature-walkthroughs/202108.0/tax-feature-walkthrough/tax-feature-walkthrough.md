@@ -7,7 +7,6 @@ template: concept-topic-template
 
 The _Tax_ feature allows you to define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.
 
-
 To learn more about the feature and to find out how end users use it, see [Tax feature overview](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) for business users.
 
 

@@ -1,5 +1,5 @@
 ---
-title: HowTo - enable SFTP for Flysystem
+title: "HowTo: enable SFTP for Flysystem"
 description: Learn how to enable SFTP for Flysystem.
 last_updated: Jun 16, 2021
 template: howto-guide-template

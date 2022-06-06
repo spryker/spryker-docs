@@ -7,6 +7,7 @@ originalArticleId: a1e7c9d9-29c1-4cf0-a734-847cf626955a
 redirect_from:
   - /v3/docs/managing-customers-api
   - /v3/docs/en/managing-customers-api
+  - /docs/scos/dev/glue-api-guides/201907.0/manging-customers/managing-customers.html
 related:
   - title: Managing Wishlists
     link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html
@@ -186,7 +187,7 @@ To modify a customer, the client must send a **RestCustomersRequest**.
 				}
 		}
 	}
-	
+
 ```
 
 If a customer is modified successfully, the endpoint will respond with a **RestCustomersResponse**.
@@ -283,7 +284,7 @@ The POST data must contain a **RestAddressesRequest**.
 					"isDefaultShipping": false,
 					"isDefaultBilling": false
 				}
-		
+
 ```
 
 If the address was created successfully, the endpoint will respond with a **RestAddressesResponse**.
@@ -550,7 +551,7 @@ If password is changed successfully, the endpoint will respond with the **204 No
 ## Resetting Customer's Password
 In case customer forgets their password, Glue API also provides the possibility to reset it. For this purpose, you need to use the following procedure:
 
-1. Send a POST request to the following endpoint: 
+1. Send a POST request to the following endpoint:
 `/customer-forgotten-password`
 Request sample: `POST http://mysprykershop.com/customer-forgotten-password`
 **Sample Request Body**
@@ -564,8 +565,8 @@ Request sample: `POST http://mysprykershop.com/customer-forgotten-password`
       }
     ```
     If the request was successful, the endpoint will respond with the 204 No Content status point, an email with a password reset link will be sent to the customer. The email will contain a **Password Reset Key**.
-    
-2. Send a PATCH request to the following endpoint: 
+
+2. Send a PATCH request to the following endpoint:
 `/customer-restore-password`
 Request sample: `PATCH http://mysprykershop.com/customer-restore-password`
 **Attributes:**
@@ -600,7 +601,7 @@ If the password reset was successful, the endpoint will respond with the **204 N
 | 415 | The Password Reset Key is invalid |
 
 ## Anonymizing a Customer
-To anonymize a customer account, send a DELETE request to the following endpoint: 
+To anonymize a customer account, send a DELETE request to the following endpoint:
 `/customers/{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}`
 Request sample: `DELETE http://mysprykershop.com/customers/DE-25`
 where `DE-25` is the unique identifier of the customer you want to anonymize.

@@ -28,6 +28,7 @@ Spryker follows an [API test](/docs/scos/dev/guidelines/testing-guidelines/testi
 Assume you want to test a Facade method. The underlying model which should be tested has dependencies to other models and/or to the module config. Inside the Facade method, you have to create the model through the factory, including its dependencies, and call a method on the created model.
 
 Without the Testify module, you would need to create a test like this one:
+
 ```php
 // Arrange
 $dependencyMock = $this->createDependencyMock();
@@ -47,8 +48,10 @@ $result = $facade->doSomething();
 // Assert
 ...
 ```
+
 That would make your test method unreadable and hard to maintain.
 Here is an example with the use of helpers:
+
 ```php
 // Arrange
 $this->tester->mockFactoryMethod('createDependency', $this->createDependencyMock());
@@ -61,9 +64,11 @@ $result = $this->tester->getFacade()->doSomething();
 ...
 
 ```
+
 As you can see, this test is much smaller, easier to read, and better understandable. All the required injections of the mocks are made behind the scenes, and you can easily test what you want to.
 
 ## Next steps
+
 * [Set up an organization of your tests](/docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html).
 * [Create or enable a test helper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html).
 Learn about the [console commands you can use to execute your tests](/docs/scos/dev/guidelines/testing-guidelines/executing-tests.html).

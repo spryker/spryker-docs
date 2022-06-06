@@ -8,6 +8,7 @@ originalArticleId: f2101b26-58ba-4309-9859-50905f08238f
 redirect_from:
   - /v3/docs/content-items-guide-201907
   - /v3/docs/en/content-items-guide-201907
+  - /docs/scos/user/back-office-user-guides/201907.0/content-management/content-items/content-items.html
 related:
   - title: Content Items Overview
     link: docs/scos/user/features/page.version/content-items-feature-overview.html

@@ -12,12 +12,12 @@ Check out an example usage of the Datasource Inline Table.
 
 Service configuration:
 
-- `type` - a datasource type.  
-- `data` - a datasource table data (usually coming from back-end).  
-- `filter` - an array of filters that passes transformed for the table format data.
+- `type`-a datasource type.  
+- `data`-a datasource table data (usually coming from backend).  
+- `filter`-an array of filters that passes transformed for the table format data.
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         dataSource: {
             type: 'inline.table',

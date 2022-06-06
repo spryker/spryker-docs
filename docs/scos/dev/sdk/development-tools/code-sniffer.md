@@ -29,7 +29,6 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/development-tools/code-sniffer.html
   - /docs/scos/dev/sdk/202009.0/development-tools/code-sniffer.html
   - /docs/scos/dev/sdk/202108.0/development-tools/code-sniffer.html
-
 related:
   - title: Architecture Sniffer
     link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
@@ -65,7 +64,11 @@ There are two levels of sniffer severity: Level 1 (normal, used by default) and 
 	console c:s:s -m Spryker.Development -l 2 -v
 ```
 
-Tip: `c:s:s` can be used as short for `code:sniff:style`.
+{% info_block infoBox "Tip" %}
+
+`c:s:s` can be used as short for `code:sniff:style`.
+
+{% endinfo_block %}
 
 Additional options:
 

@@ -17,6 +17,7 @@ redirect_from:
 This document describes how to configure debugging of Spryker in Docker.
 
 [Xdebug](https://xdebug.org) is the default debugging tool for Spryker in Docker. To enable Xdebug, run the command:
+
 ```bash
 docker/sdk {run|start|up} -x
 ```
@@ -39,7 +40,6 @@ You can download PHPStorm through the [Jetbrains Toolbox](https://www.jetbrains.
 To configure Xdebug in PhpStorm:
 
 1. Go to **Preferences** > **PHP** > **Debug**.
-
 2. In the *Xdebug* section:
 
       1. Depending on your requirements, for **Debug port**, enter one or more ports.
@@ -57,7 +57,9 @@ To configure Xdebug in PhpStorm:
 ![image 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Docker+SDK/Configuring+debugging+in+Docker/xdebug-external-connections-configuration.png)
 
 ### Configuring servers
+
 To configure servers:
+
 1. Go to **Preferences** > **PHP** > **Servers**.
 
 2. Add a server:
@@ -103,7 +105,7 @@ Install the required software:
 
 Set up a new `Launch.json`:
 
-```
+```json
 {
     "version": "0.2.0",
     "configurations": [
@@ -135,6 +137,7 @@ Set up a new `Launch.json`:
 The default Zed Request timeout is 60 seconds. Debugging requests often take more than 60 seconds to complete. In this case, a browser stops the connection.
 
 To avoid Zed Request timeouts, adjust your configuration as follows:
+
 ```php
 $config[ZedRequestConstants::CLIENT_OPTIONS] = [
     'timeout' => 300,
@@ -151,6 +154,7 @@ If you set unlimited timeout, this affects all Zed Requests, not only debugging 
 
 
 ## Switching to the debugging mode
+
 There are several ways to switch to the debugging mode:
 
 * To debug a web application, pass the `XDEBUG_SESSION` cookie with a string value. If you are using the Xdebug helper browser extension, in the extension menu, select **debug**.
@@ -161,7 +165,7 @@ There are several ways to switch to the debugging mode:
 
 This section describes how to debug with Xdebug.
 
-### Debbugging applications with Xdebug
+### Debugging applications with Xdebug
 
 To debug an application:
 
@@ -180,6 +184,7 @@ To debug an application:
 To debug a console command or a test in a debugging mode, run it with the `-x` option.
 
 Find several examples below:
+
 * `docker/sdk cli -x`
 * `docker/sdk cli -x console queue:worker:start`
 * `docker/sdk console -x queue:worker:start`

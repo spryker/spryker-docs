@@ -27,7 +27,7 @@ To add a new price for a marketplace abstract product:
 7. For the **GROSS DEFAULT** cell, enter a price. Use `.` or `,` separators.
 8. Optional: For the **NET ORIGINAL** cell, enter a price. Use `.` or `,` separators.
 9. Optional: For the **GROSS ORIGINAL** cell, enter a price. Use `.` or `,` separators.
-10. For the **QUANTITY** cell, enter the number of items. By default, the quantity is 1. See [Adding volume prices](#adding-volume-prices) for an example.
+10. For the **QUANTITY** cell, enter the number of items. By default, the quantity is 1. For an example, see [Adding volume prices](#adding-volume-prices).
 
 **Tips and tricks**
 <br>Click **Cancel** to stop creating a new price.

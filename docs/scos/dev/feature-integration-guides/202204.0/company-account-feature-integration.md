@@ -46,7 +46,7 @@ composer require spryker-feature/company-account: "{{page.version}}" --update-wi
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure that the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -115,10 +115,6 @@ Make sure that the following changes have been applied by checking your database
 | --- | --- | --- |
 | spy_company_user.is_default | column | created |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Make sure that the following changes in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |
@@ -128,20 +124,12 @@ Make sure that the following changes in transfer objects:
 | CompanyUserAccessTokenRequestclass | class | created | src/Generated/Shared/Transfer/CompanyUserAccessTokenRequestTransfer |
 | CompanyUserStorage | class | created | src/Generated/Shared/Transfer/CompanyUserStorageTransfer |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Make sure that propel entities have been generated successfully by checking their existence. Also, change the generated entity classes to extend from Spryker core classes.
 
 | CLASS PATH | EXTENDS |
 | --- | --- |
 | src/Orm/Zed/CompanyUserStorage/Persistence/SpyCompanyUserStorage.php | Spryker\\Zed\\CompanyUserStorage\\Persistence\\Propel\\AbstractSpyCompanyUserStorage |
 | src/Orm/Zed/CompanyUserStorage/Persistence/SpyCompanyUserStorageQuery.php | Spryker\\Zed\\CompanyUserStorage\\Persistence\\Propel\\AbstractSpyCompanyUserStorageQuery |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Make sure that the changes have been implemented successfully. For this purpose, trigger the following methods and make sure that the preceding events have been triggered:
 
@@ -154,6 +142,8 @@ Make sure that the changes have been implemented successfully. For this purpose,
 {% endinfo_block %}
 
 ### 3) Configure export to Redis
+
+Follow instructions in the following sections to configure export to Redis.
 
 #### Set up event listeners
 
@@ -185,7 +175,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 }
 ```
 
-Set up synchronization queue pools so that non-multistore entities (not store-specific entities) are synchronized among stores:
+Set up synchronization queue pools to synchronize non-multistore entities (not store-specific entities) among stores:
 
 **src/Pyz/Zed/CompanyUserStorage/CompanyUserStorageConfig.php**
 
@@ -279,9 +269,7 @@ Make sure that the corresponding company users' records are exported (or removed
 }
 ```
 
-### 4) Import data
-
-#### Import business on behalf
+### 4) Import Business on Behalf
 
 {% info_block infoBox "Info" %}
 
@@ -338,7 +326,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
-import data:
+Import data:
 
 ```bash
 console data:import company-user-on-behalf
@@ -449,7 +437,7 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 }
 ```
 
-<details><summary markdown='span'>**Pyz\Zed\Oauth\OauthDependencyProvider**</summary>
+**Pyz\Zed\Oauth\OauthDependencyProvider**
 
 ```php
 <?php
@@ -497,8 +485,6 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 	}
 }
 ```
-
-</details>
 
 **src/Pyz/Zed/CompanyUserStorage/CompanyUserStorageDependencyProvider.php**
 
@@ -686,11 +672,11 @@ Log in to a customer account which has multiple company users and a default one.
 
 Make sure that token generation for a company user works. For more information, see [HowTo: Generate a Token for Login](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html).
 
-To make sure the `CompanyBusinessUnitCompanyUserStorageExpanderPlugin` is set up correctly, check the data exported to the key-value storage key `kv:company_user:1` for the `id_company_business_unit:id`. `id_company_business_unit` must be set up to a correct foreign key of the business unit the company user is assigned to.
+To make sure the `CompanyBusinessUnitCompanyUserStorageExpanderPlugin` is set up correctly, check the data exported to the key-value storage key `kv:company_user:1` for the `id_company_business_unit:id`. `id_company_business_unit` must be set up to a correct foreign key of the business unit that the company user is assigned to.
 
 {% endinfo_block %}
 
-### 6) Zed Translations
+### 6) Generate Zed Translations
 
 Generate a new translation cache for Zed:
 

@@ -34,7 +34,7 @@ The following table shows the configuration data that is stored in the Session a
 | `ProductConfigurationInstance.configuratorKey` | `dateTime` |   |
 | `ProductConfigurationInstance.configuration` |  `["color"=>"red", "weight"=> 100]` | Sensitive data. |
 
-We will generate a URL that points to the gateway page with the following parameters:
+The framework generates a back URL that points to the gateway page with the following parameters:
 
 | PARAMETER | VALUE | COMMENT |
 |---|---|---|
@@ -189,7 +189,7 @@ Redirects the customer to the configurator page using the GET request.
 1. The gateway page receives data.
 2. The data is checked through the execution of the validator plugins stack for received data.
   - If validation is not successful, the request is redirected to the `backUrl` without saving the of the configuration with a warning message.
-  - If validation is successful, then updates the cart item configuration in the cart.
+  - If validation is successful, the framework updates the cart item configuration in the cart.
 4. All applicable plugins that can handle the configurator response are executed. A plugin that applies to the cart page source type resolves the back URL according to the response data.
 
 ### Phase 8

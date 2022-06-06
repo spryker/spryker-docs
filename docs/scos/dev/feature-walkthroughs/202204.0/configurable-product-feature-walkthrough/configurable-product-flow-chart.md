@@ -189,7 +189,7 @@ Redirects the customer to the configurator page using the GET request.
 2. The data is checked through the execution of the validator plugins stack for received data.
   - If validation is not successful, the request is redirected to the `backUrl` without saving the of the configuration with a warning message.
   - If validation is successful, then updates the cart item configuration in the cart.
-4. All applicable plugins that can handle the configurator response are executed. A plugin that applies for the cart page source type resolves the back URL according to the response data.
+4. All applicable plugins that can handle the configurator response are executed. A plugin that applies to the cart page source type resolves the back URL according to the response data.
 
 ### Phase 8
 

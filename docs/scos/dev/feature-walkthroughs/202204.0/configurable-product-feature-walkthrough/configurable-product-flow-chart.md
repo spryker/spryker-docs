@@ -97,10 +97,10 @@ The customer clicks the configuration button, and the request is redirected to t
 
 ### Phase 6
 
-1. The customer finishes the configuration and clicks a button which creates an AJAX POST request with the data to the configurator page (self). (phase 6.1)
-2. In the backend, the response is prepared according to the public data API from the configurator to Spryker. (phase 6.2)
-3. In the backend, a `CheckSum` is prepared based on the response data, which is encrypted with a shared key and returns these as the AJAX response (phase 6.3)
-4. The data is put to a hidden form on the configurator page and submit the form that points to the gateway page. (phase 6.4)
+1. The customer finishes the configuration and clicks a button which creates an AJAX POST request with the data to the configurator page (self).
+2. In the backend, the response is prepared according to the public data API from the configurator to Spryker.
+3. In the backend, a `CheckSum` is prepared based on the response data, which is encrypted with a shared key and returns these as the AJAX response.
+4. The data is put to a hidden form on the configurator page and submit the form that points to the gateway page.
 5. After the successful configuration, the customer is redirected to the configurator gateway with a configuration response.
 6. The gateway URL does not equal to the back URL; it’s a fixed, known URL.
 
@@ -110,8 +110,7 @@ The customer clicks the configuration button, and the request is redirected to t
 2. The data is checked through the execution of the validator plugins stack for received data.
   - If validation is not successful, the request is redirected to the `backUrl` without saving the of the configuration with a warning message.
   - If the validation part is successful, the configuration is saved to the session.
-4. All applicable plugins that can handle the configurator response are executed.
-  - A plugin that applies for the PDP source type resolves the back URL according to the response data.
+4. All applicable plugins that can handle the configurator response are executed. A plugin that applies to the PDP source type resolves the back URL according to the response data.
 
 ### Phase 8
 
@@ -123,10 +122,10 @@ When configuration starts on Yves, from the Cart page, the product configuration
 
 ### Phase 1
 
-- You are on the Cart page—the page with items that contains the product configuration.
+- The customer is on the Cart page—the page with items that contains the product configuration.
 - The product configuration can be already complete or not.
 - The item product configuration can be taken from one source only: Quote.
-- You generate the URL that points to the gateway page with the following parameters.
+- The generate the URL that points to the gateway page with the following parameters.
 
 | PARAMETER | VALUE | COMMENT |
 |---|---|---|
@@ -190,8 +189,7 @@ Redirects the customer to the configurator page using the GET request.
 2. The data is checked through the execution of the validator plugins stack for received data.
   - If validation is not successful, the request is redirected to the `backUrl` without saving the of the configuration with a warning message.
   - If validation is successful, then updates the cart item configuration in the cart.
-4. All applicable plugins that can handle the configurator response are executed.
-  - A plugin that applies for the cart page source type resolves the back URL according to the response data.
+4. All applicable plugins that can handle the configurator response are executed. A plugin that applies for the cart page source type resolves the back URL according to the response data.
 
 ### Phase 8
 

@@ -6,7 +6,6 @@ template: feature-integration-guide-template
 related:
   - title: Glue API - Marketplace Shopping Lists feature integration
     link: docs/marketplace/dev/feature-integration-guides/page.version/glue/marketplace-shopping-lists-feature-integration.html
-  related:
   - title: Marketplace Shopping Lists feature walkthrough
     link: docs/marketplace/dev/feature-integration-guides/page.version/marketplace-shopping-lists-feature-integration.html
 ---

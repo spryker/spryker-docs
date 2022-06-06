@@ -20,7 +20,7 @@ related:
   - title: Table Column Type Select
     link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-select.html
   - title: Table Column Type Text
-    link: docs/marketplace/dev/front-
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-text.html
 ---
 
 This document explains the Table Column Type Autocomplete in the Components library.

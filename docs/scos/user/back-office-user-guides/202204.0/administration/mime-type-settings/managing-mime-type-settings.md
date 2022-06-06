@@ -18,48 +18,40 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/content/file-manager/managing-file-list.html
 ---
 
-This article describes everything you need to know to create and manage the MIME type settings.
-A media type (also known as a Multipurpose Internet Mail Extensions or MIME type) is a standard that indicates the nature and format of a document or file. These settings are added to either allow or restrict the ability to upload files of defined types to the system.
-
-If no MIME type settings are defines, files of any type can be uploaded.
-
 ## Prerequisites
 
-To start managing MIME type settings, navigate to **Administration&nbsp;<span aria-label="and then">></span> MIME Type Settings**.
+To manage MIME types, go to **Administration&nbsp;<span aria-label="and then">></span> MIME Type Settings**.
 
-## Adding MIME Type Settings
+## Add a MIME type
 
-To add a MIME type setting:
-1. On the **MIME Type Setting** page,  in the top right corner, click **+Add MIME type**.
-2. On the **Add MIME type** page, fill in the following fields:
-    * **MIME Type**. The MIME type should consist of a type and a subtype; these are all strings which, when concatenated with a slash (/) between them, comprise a MIME type. No whitespace is allowed: **type/subtype**. The type represents the general category into which the data type falls, such as video or text. The subtype identifies the exact kind of data of the specified type the MIME type represents—for example, **image/png**.
-    * Optional: In the **Comment** field, leave a comment. This information is viewable by Back Office users only.
-3. Select the **Is allowed** checkbox if you want to allow this file extension to be uploaded to the system.
-4. Click **Save**.
+1. On the **MIME Type Setting** page, click **Add MIME type**.
+2. On the **Add MIME type** page, enter a **MIME TYPE**.
+3. Optional: Enter a **COMMENT**.
+4. To allow uploading this type of files, select **IS ALLOWED**.
+5. Click **Save**.
+    This opens the **MIME Type Setting** page with a success message displayed. The created type is displayed in the list.
 
-## Editing and deleting MIME types
+## Edit a MIME type
 
-In the **Actions** column, click one of the following depending on what you need:
-* **Edit** to edit a setting. Update the attributes and click **Save**.
-* **Delete** to delete a setting.
+1. On the **MIME Type Setting** page, next to the MIME type you want to edit, click **Edit**.
+2. On the **Add MIME type** page, enter a **MIME TYPE**.
+3. Enter a **COMMENT**.
+4. To allow uploading this type of files, select **IS ALLOWED**.
+5. Click **Save**.
+    This opens the **MIME Type Setting** page with a success message displayed. The changed are reflected in the list.    
 
-## Allowing MIME types
+## Reference information: MIME TYPE
 
-There are two ways to allow a MIME type:
+A [MIME (Multipurpose Internet Mail Extensions) type](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) is a standard that indicates the nature and format of a document or file. They are added to allow or restrict uploading file types.
 
-* Select the **Is allowed** checkbox while creating/editing a MIME type.
-    ![Select is allowed](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/File+Manager/Managing+MIME+Type+Settings/allowing-mime-type.gif)
-* On the **MIME Type Settings** page, in the **Is Allowed** column, select the checkbox  and click **Save**.
-    ![MIME type settings](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/File+Manager/Managing+MIME+Type+Settings/mime-type-settings.gif)
+MIME types affect Storefront and Back Office uploads. If no MIME types are defined, files of any type can be uploaded. If you add at least one MIME type, only the files of the added types can be uploaded.
 
-**Tips and tricks**
-<br>If you create a MIME type but do not allow it, no constraints are going to be applied.
-If you create the MIME types as follows:
-![Tips](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/File+Manager/Managing+MIME+Type+Settings/tips-one.png)
+A MIME type consists of a type and a subtype divided by a slash: `type/subtype`. The type represents the general category to which the data type belongs, like video or text. The subtype represents an exact kind of data of the specified type. For example, `image/png`.
 
-Then you can download only the following file types:
-* text/csv
-* application/pdf
+## Reference information: COMMENT
 
-The following is displayed on the **File Tree** page once you select to upload a not allowed file type:
-![File tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/File+Manager/Managing+MIME+Type+Settings/file-tree.png)
+Any information about a MIME type.
+
+## Reference information: IS ALLOWED
+
+Defines if the files of a MIME type can be uploaded. This setting is usually used for effective management of MIME types. You can add different MIME types and then enable or disable them whenever you need. This is quicker than adding and deleting MIME types each time.

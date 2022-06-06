@@ -20,7 +20,7 @@ related:
 
 {% info_block errorBox %}
 
-The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the **Business on Behalf**, **Company Account Storage**, and **Company Account OAuth functionality**.
+The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the *Business on Behalf*, *Company Account Storage*, and *Company Account OAuth functionality*.
 
 {% endinfo_block %}
 
@@ -260,7 +260,7 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when a company user is created, updated or deleted, when company's status changes or company is activated or deactivated, the corresponding company users' records are exported (or removed from Redis).
+Make sure that the corresponding company users' records are exported (or removed from Redis) when the company user is created, updated, or deleted, and the company status changes or the company is activated or deactivated.
 
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | --- | --- | --- |
@@ -285,11 +285,11 @@ Make sure that when a company user is created, updated or deleted, when company'
 
 {% info_block infoBox "Info" %}
 
-The following imported entities are used as data for *Business on Behalf Company Users* (b2b extension for the Company User module in Spryker OS.)
+The following imported entities are used as data for *Business on Behalf Company Users*—b2b extension for the Company User module in Spryker OS.
 
 {% endinfo_block %}
 
-Prepare your data according to your requirements using our demo data:
+Prepare your data according to your requirements using the demo data:
 
 **vendor/spryker/spryker/Bundles/BusinessOnBehalfDataImport/data/import/company_user.csv**
 
@@ -306,16 +306,16 @@ DE--7,spryker_systems,spryker_systems_HQ,0
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| customer_reference | mandatory | string | DE--6 | The key that will identify the Customer to add data to. |
-| company_key | mandatory | string | BoB-Hotel-Mitte | The key that will identify the Company to add data to. |
-| business_unit_key | mandatory | string | business-unit-mitte-1 | The key that will identify the Company Business Unit to add data to. |
-| default | mandatory | bool integer | 0 | Decides if there will be some pre-selected Company Business Unit for BoB User. |
+| customer_reference | mandatory | string | DE--6 | Identifies a customer to add data to. |
+| company_key | mandatory | string | BoB-Hotel-Mitte | Identifies a company to add data to. |
+| business_unit_key | mandatory | string | business-unit-mitte-1 | Identifies the Company Business Unit to add data to. |
+| default | mandatory | bool integer | 0 | Decides if there is a pre-selected Company Business Unit for a Business on Behalf user. |
 
-Register the following plugins to enable data import:
+To enable data import, register the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| BusinessOnBehalfCompanyUserDataImportPlugin | Imports Business on Behalf Company Users. | <ul><li>Assumes that the Customer keys exist in the database.</li><li>Assumes that the Company keys exist in the database</li><li>Assumes that the Company Business Unit keys exist in the database.</li></ul> | Spryker\Zed\BusinessOnBehalfDataImport\Communication\Plugin\DataImport |
+| BusinessOnBehalfCompanyUserDataImportPlugin | Imports Business on Behalf company users. | <ul><li>Assumes that the customer keys exist in the database.</li><li>Assumes that the company keys exist in the database</li><li>Assumes that the Company Business Unit keys exist in the database.</li></ul> | Spryker\Zed\BusinessOnBehalfDataImport\Communication\Plugin\DataImport |
 
 **src/Pyz/Zed/DataImport/DataImportDependencyProvider.php**
 
@@ -346,7 +346,7 @@ console data:import company-user-on-behalf
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data are added to the `spy_company_user` table in the database.
+Make sure that the configured data is added to the `spy_company_user` table in the database.
 
 {% endinfo_block %}
 
@@ -356,25 +356,25 @@ Enable the following behaviors by registering the plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| DefaultCompanyUserCustomerTransferExpanderPlugin | Sets default Company User for a Business on Behalf customer if no Company User has been selected yet. | None | Spryker\Zed\BusinessOnBehalf\Communication\Plugin\Customer |
-| IsOnBehalfCustomerTransferExpanderPlugin | Sets the `CustomerTransfer.IsOnBehalf` property so that other features can determine if the selected Company User is a Business on Behalf Company User. | None | Spryker\Zed\BusinessOnBehalf\Communication\Plugin\Customer |
-| CompanyUserAccessTokenAuthenticationHandlerPlugin | Provides functionality to log in customer by access token. | None | Spryker\Client\OauthCompanyUser\Plugin\Customer |
-| CompanyUserReloadCustomerTransferExpanderPlugin | Reloads company user if it is already set in `CustomerTransfer`. | None | Spryker\Zed\CompanyUser\Communication\Plugin\Customer |
-| CompanyUserAccessTokenOauthUserProviderPlugin | Provides user transfer by company user id. | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth |
-| CompanyUserAccessTokenOauthGrantTypeConfigurationProviderPlugin | Provides configuration of `CompanyUser` `GrantType`. | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth |
-| OauthCompanyUserInstallerPlugin| Creates new OAuth scope (Adds `company_user scope` to the `spy_oauth_scope` table.) | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Installer |
-| CompanyUserOauthScopeProviderPlugin | Associates the `company_user` scope with the password Oauth GrandType. | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth |
-| CompanyUserOauthUserProviderPlugin | Associates the `company_user` scope with `idCompanyUser` Oauth GrandType. | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth |
-| IdCompanyUserOauthGrantTypeConfigurationProviderPlugin | Provides new `IdCompanyUser` Oauth GrandType. | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth |
-| CompanyBusinessUnitCompanyUserStorageExpanderPlugin | Expands the `CompanyUserStorageTransfer` with the company business unit id. | None | Spryker\Zed\CompanyBusinessUnitStorage\Communication\Plugin |
-| CompanyFieldToCompanyUserFormExpanderPlugin                       | Transforms company select dropdown on the company user edit form into an input field with search and suggestions                          | None          | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyUserGui`                  |
-| CompanyBusinessUnitToCompanyUserFormExpanderPlugin                | Transforms business unit select dropdown on the company user edit form into an input field with search and suggestions                    | None              | `Spryker\Zed\CompanyBusinessUnitGui\Communication\Plugin\CompanyUserGui`      |
-| CompanyToCompanyUserAttachCustomerFormExpanderPlugin              | Transforms company select dropdown on the customer to company attach form into an input field with search and suggestions                 | None              | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyUserGui`                  |
-| CompanyBusinessUnitToCompanyUserAttachCustomerFormExpanderPlugin  | Transforms business unit select dropdown on the customer to company attach form into an input field with search and suggestions           | None              | `Spryker\Zed\CompanyBusinessUnitGui\Communication\Plugin\CompanyUserGui`      |
-| CompanyToCompanyUnitAddressEditFormExpanderPlugin                 | Transforms company select dropdown on the company unit address edit form into an input field with search and suggestions                  | None              | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyUnitAddressGui`           |
-| CompanyToCompanyRoleCreateFormExpanderPlugin                      | Transforms company select dropdown on the company role edit form into an input field with search and suggestions                          | None              | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyRoleGui`                  |
-| CompanyBusinessUnitToCustomerBusinessUnitAttachFormExpanderPlugin | Transforms business unit select dropdown on the company user to business unit attach form into an input field with search and suggestions | None              | `Spryker\Zed\CompanyBusinessUnitGui\Communication\Plugin\BusinessOnBehalfGui` |
-| CompanyToCompanyBusinessUnitFormExpanderPlugin                    | Transforms company select dropdown on the company business unit create form into an input field with search and suggestions               | None              | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyBusinessUnitGui`          |
+| DefaultCompanyUserCustomerTransferExpanderPlugin | Sets a default company user for a Business on Behalf customer if a company user has not been selected yet. | None | Spryker\Zed\BusinessOnBehalf\Communication\Plugin\Customer |
+| IsOnBehalfCustomerTransferExpanderPlugin | Sets the `CustomerTransfer.IsOnBehalf` property so that other features can determine if the selected company user is a Business on Behalf company user. | None | Spryker\Zed\BusinessOnBehalf\Communication\Plugin\Customer |
+| CompanyUserAccessTokenAuthenticationHandlerPlugin | Provides functionality to log in a customer by an access token. | None | Spryker\Client\OauthCompanyUser\Plugin\Customer |
+| CompanyUserReloadCustomerTransferExpanderPlugin | Reloads a company user if it is already set in `CustomerTransfer`. | None | Spryker\Zed\CompanyUser\Communication\Plugin\Customer |
+| CompanyUserAccessTokenOauthUserProviderPlugin | Provides a user transfer by a company user ID. | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth |
+| CompanyUserAccessTokenOauthGrantTypeConfigurationProviderPlugin | Provides the configuration of `CompanyUser` `GrantType`. | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth |
+| OauthCompanyUserInstallerPlugin| Creates new OAuth scope—adds `company_user scope` to the `spy_oauth_scope` table.) | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Installer |
+| CompanyUserOauthScopeProviderPlugin | Associates the `company_user` scope with the password Oauth `GrandType`. | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth |
+| CompanyUserOauthUserProviderPlugin | Associates the `company_user` scope with `idCompanyUser` Oauth `GrandType`. | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth |
+| IdCompanyUserOauthGrantTypeConfigurationProviderPlugin | Provides new `IdCompanyUser` Oauth `GrandType`. | None | Spryker\Zed\OauthCompanyUser\Communication\Plugin\Oauth |
+| CompanyBusinessUnitCompanyUserStorageExpanderPlugin | Expands the `CompanyUserStorageTransfer` with the company business unit ID. | None | Spryker\Zed\CompanyBusinessUnitStorage\Communication\Plugin |
+| CompanyFieldToCompanyUserFormExpanderPlugin | Transforms the company select dropdown on the company user edit form into an input field with search and suggestions.                          | None          | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyUserGui`                  |
+| CompanyBusinessUnitToCompanyUserFormExpanderPlugin                | Transforms the business unit select dropdown on the company user edit form into an input field with search and suggestions                    | None              | `Spryker\Zed\CompanyBusinessUnitGui\Communication\Plugin\CompanyUserGui`      |
+| CompanyToCompanyUserAttachCustomerFormExpanderPlugin              | Transforms the company select dropdown on the customer to the company attach form into an input field with search and suggestions                 | None              | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyUserGui`                  |
+| CompanyBusinessUnitToCompanyUserAttachCustomerFormExpanderPlugin  | Transforms the business unit select dropdown on the customer to the company attach form into an input field with search and suggestions           | None              | `Spryker\Zed\CompanyBusinessUnitGui\Communication\Plugin\CompanyUserGui`      |
+  | CompanyToCompanyUnitAddressEditFormExpanderPlugin                 | Transforms the company select dropdown on the company unit address edit form into an input field with search and suggestions                  | None              | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyUnitAddressGui`           |
+| CompanyToCompanyRoleCreateFormExpanderPlugin                      | Transforms the company select dropdown on the company role edit form into an input field with search and suggestions                          | None              | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyRoleGui`                  |
+| CompanyBusinessUnitToCustomerBusinessUnitAttachFormExpanderPlugin | Transforms the business unit select dropdown on the company user to the business unit attach form into an input field with search and suggestions | None              | `Spryker\Zed\CompanyBusinessUnitGui\Communication\Plugin\BusinessOnBehalfGui` |
+| CompanyToCompanyBusinessUnitFormExpanderPlugin                    | Transforms the company select dropdown on the company business unit create form into an input field with search and suggestions               | None              | `Spryker\Zed\CompanyGui\Communication\Plugin\CompanyBusinessUnitGui`          |
 
 **src/Pyz/Zed/Customer/CustomerDependencyProvider.php**
 
@@ -684,15 +684,7 @@ class CompanyBusinessUnitGuiDependencyProvider extends SprykerCompanyBusinessUni
 
 Log in to a customer account which has multiple company users and a default one. In the session, check if the default company user is assigned to the customer and the `IsOnBehalf` property is set correctly for the customer.
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Make sure that token generation for a company user works. For more information, see [HowTo: Generate a Token for Login](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html).
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 To make sure the `CompanyBusinessUnitCompanyUserStorageExpanderPlugin` is set up correctly, check the data exported to the key-value storage key `kv:company_user:1` for the `id_company_business_unit:id`. `id_company_business_unit` must be set up to a correct foreign key of the business unit the company user is assigned to.
 
@@ -720,11 +712,13 @@ To make sure the transform dropdowns plugins (`CompanyFieldToCompanyUserFormExpa
 `CompanyToCompanyUserAttachCustomerFormExpanderPlugin`, `CompanyBusinessUnitToCompanyUserAttachCustomerFormExpanderPlugin`,
 `CompanyToCompanyUnitAddressEditFormExpanderPlugin`, `CompanyToCompanyRoleCreateFormExpanderPlugin`, `CompanyBusinessUnitToCustomerBusinessUnitAttachFormExpanderPlugin`, `CompanyToCompanyBusinessUnitFormExpanderPlugin`) are set up correctly, open the corresponding form and check that input boxes with search and suggestions are used for the company and business unit fields instead of default select dropdowns.
 
-Also make sure that field labels (like "Company") and hints (like "Select company") are translated correctly for the dropdowns.
+Make sure that field labels (like `Company`) and hints (like `Select company`) are translated correctly for the dropdowns.
 
 {% endinfo_block %}
 
 ## Install feature frontend
+
+Follow these steps to install feature frontend
 
 ### Prerequisites
 
@@ -746,7 +740,7 @@ composer require spryker-feature/company-account: "{{page.version}}" --update-wi
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure that the following modules are installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -789,11 +783,11 @@ Make sure that in the database the configured data is added to the `spy_glossary
 
 ### 3) Set up widgets
 
-Register the following plugins to enable widgets:
+To enable widgets, register the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| BusinessOnBehalfStatusWidget | Displays the selected Company Users and allows for Business on Behalf customers to change it through a link. | None | SprykerShop\Yves\BusinessOnBehalfWidget\Widget |
+| BusinessOnBehalfStatusWidget | Displays the selected company users and allows for Business on Behalf customers to change it through a link. | None | SprykerShop\Yves\BusinessOnBehalfWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -827,6 +821,6 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Log in with a Business on Behalf customer and in the top menu, see the selected company user status widget.
+Log in with a Business on Behalf customer, and in the top menu, see the selected company user status widget.
 
 {% endinfo_block %}

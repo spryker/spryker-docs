@@ -24,11 +24,11 @@ In the Spryker system, the tax rate values are as follows:
 - Persisted in the placed orders, history of request for quotes, and changing the rate in the DB neither affect these entities nor the display of the orders in the customer account or Back Office.
 - Not persisted in the products, carts, wishlists, and shopping lists. Actual Spryker's code always uses the tax rate value from the DB to perform actual calculations.
 
-To adjust the tax rates for your project, you can simply [edit tax rates in the Back Office](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/tax-rates/managing-tax-rates.html) as and when you need to. However, you can also automate the process by scheduling the tax rate update. The following section describes how to do that.
+To adjust the tax rates for your project, you can [edit tax rates in the Back Office](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/tax-rates/managing-tax-rates.html). You can also automate the process by scheduling the tax rate update. The following section describes how to do that.
 
 {% info_block warningBox "Project tax customizations" %}
 
-Make sure that custom code follows the Spryker architecture and leveraging Tax calculation plugins. Otherwise, careful revision of the project solutions is required and should be taken into consideration during the project planning.
+Make sure custom code to follow the Spryker architecture and to leverage Tax calculation plugins. Otherwise, careful revision of the project solutions is required and must be taken into consideration during the project planning.
 
 {% endinfo_block %}
 
@@ -84,6 +84,6 @@ $jobs[] = [
 
 {% info_block infoBox "Info" %}
 
-In July 2020, you have to remove the first job, and in January 2021, the last one.
+In July 2020, you must remove the first job, and in January 2021, the last one.
 
 {% endinfo_block %}

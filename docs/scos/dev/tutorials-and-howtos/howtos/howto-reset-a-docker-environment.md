@@ -14,7 +14,7 @@ redirect_from:
   - /v6/docs/en/howto-reset-a-docker-environment
 ---
 
-Sometimes, after experimenting or getting unexpected behavior from the `docker/sdk up` command, it may be useful to reset the entire Docker environment and start from scratch.
+Sometimes, after experimenting or getting unexpected behavior from the `docker/sdk up` command, it may be helpful to reset the entire Docker environment and start from scratch.
 
 {% info_block warningBox "Data removal" %}
 

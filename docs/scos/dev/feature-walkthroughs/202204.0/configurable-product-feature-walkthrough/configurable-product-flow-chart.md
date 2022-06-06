@@ -34,7 +34,7 @@ The following table shows the configuration data that is stored in the Session a
 | `ProductConfigurationInstance.configuratorKey` | `dateTime` |   |
 | `ProductConfigurationInstance.configuration` |  `["color"=>"red", "weight"=> 100]` | Sensitive data. |
 
-We will generate a URL that points to the gateway page with the following parameters:
+The framework generates a back URL that points to the gateway page with the following parameters:
 
 | PARAMETER | VALUE | COMMENT |
 |---|---|---|

@@ -63,7 +63,33 @@ class PriceProductConfig extends SprykerPriceProductConfig
 }
 ```
 
-or run `console price-product-store:optimize` from time to time when needed.
+Alternatively, automatic removal of "orphaned records" can be enabled by using `AclEntityOrphanPriceProductStoreRemovalVoterPlugin` in `src/Pyz/Zed/PriceProduct/PriceProductDependencyProvider.php`:
+
+```php
+namespace Pyz\Zed\PriceProduct;
+
+use Spryker\Zed\AclEntity\Communication\Plugin\PriceProduct\AclEntityOrphanPriceProductStoreRemovalVoterPlugin;
+use Spryker\Zed\PriceProduct\PriceProductDependencyProvider as SprykerPriceProductDependencyProvider;
+
+class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvider
+{
+    protected function getOrphanPriceProductStoreRemovalVoterPlugins(): array
+    {
+        return [
+            new AclEntityOrphanPriceProductStoreRemovalVoterPlugin(),
+        ];
+    }
+}
+```
+
+`AclEntityOrphanPriceProductStoreRemovalVoterPlugin` enables removal of "orphaned" records in 
+`spy_price_product_store` table, except for the case when prices are edited in the Merchant Portal UI. 
+In the latter case, removal is only possible by running `price-product-store:optimize` command (see below). 
+Note, that this plugin can't be used together with config constant `IS_DELETE_ORPHAN_STORE_PRICES_ON_SAVE_ENABLED` 
+described above, either of the two should be used only, with the plugin being preferred, since the config 
+constant is deprecated and will be removed in the next major release of the `PriceProduct` module. 
+
+Another option is to run `console price-product-store:optimize` from time to time when needed.
 
 {% endinfo_block %}
 

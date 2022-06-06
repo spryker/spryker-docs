@@ -19,7 +19,7 @@ When configuration starts on Yves, from the product details page (PDP), the prod
 
 ### Phase 1
 
-- We are on a PDP—the page with the product configuration.
+- A customer is on a PDP—the page with the product configuration.
 - The product configuration can be already complete or use not complete pre-configuration defined by the shop owner.
 - The product configuration can be taken from two sources:
   - A session for complete configuration.

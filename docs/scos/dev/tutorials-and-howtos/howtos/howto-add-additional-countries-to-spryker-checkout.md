@@ -1,5 +1,5 @@
 ---
-title: "HowTo - Add additional countries to Spryker checkout"
+title: "HowTo: Add additional countries to Spryker checkout"
 description: This HowTo explains how to add additional countries to the checout.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -14,7 +14,7 @@ redirect_from:
   - /v6/docs/en/howto-add-additional-countries-to-spryker-checkout
 ---
 
-This HowTo explains how to add additional shipping countries selected by the end users upon checkout.
+This document explains how to add additional shipping countries selected by the end users upon checkout.
 
 Customers that want to open up their store to buyers of more than the predefined counties need to make adjustments to the Spryker code to display more countries for selection in the Spryker checkout.
 
@@ -23,7 +23,6 @@ Customers that want to open up their store to buyers of more than the predefined
 ## Prerequisites
 
 Ensure that you have an up-to-date installation of any of the following instances:
-
 * Spryker B2C Shop
 * Spryker B2B Shop
 * Spryker Suite
@@ -62,10 +61,10 @@ countries.iso.GB,United Kingdom,en_US
 countries.iso.GB,Großbritannien,de_DE
 ```
 
-{% info_block warningBox "Attention!" %}
+{% info_block infoBox "Note "%}
 
-It will make sense to define additional tax rules when creating additional countries.
+We recommend defining additional tax rules when creating additional countries.
 
 {% endinfo_block %}
 
-After these changes are performed, your buyers will be able to select the countries configured in the checkout dialogue.
+After applying these changes, your buyers can select the countries configured in the checkout dialogue.

@@ -1,5 +1,5 @@
 ---
-title: Tutorial - How the "define" Twig Tag is Working
+title: "Tutorial: How the define Twig tag is working"
 description: Use the guide to learn how to the define twig tag works in the template.
 last_updated: Jun 16, 2021
 template: howto-guide-template

@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Implementing widgets and widget plugins
+title: "Tutorial: Implementing widgets and widget plugins"
 description: Depending on your version of spryker/kernel module, learn how to implement widgets or widget plugins.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -33,7 +33,7 @@ Each widget implementation is supposed to be designed as components: considering
 
 ### 1. Implement the widget class
 
-To implement a widget class, follow the detailed example below.
+To implement a widget class, follow the detailed example:
 
 ```php
 <?php
@@ -221,7 +221,7 @@ This section is valid only for projects which are running module `spryker/kernel
 
 {% endinfo_block %}
 
-Follow the steps below to implement a widget.
+To implement a widget, follow these steps: 
 
 ### 1. Place widget extensions
 

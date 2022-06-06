@@ -110,7 +110,7 @@ The customer clicks the configuration button, and the request is redirected to t
 2. The data is checked through the execution of the validator plugins stack for received data.
   - If validation is not successful, the request is redirected to the `backUrl` without saving the of the configuration with a warning message.
   - If the validation part is successful, the configuration is saved to the session.
-4. All applicable plugins that can handle the configurator response are executed. A plugin that applies to the PDP source type resolves the back URL according to the response data.
+3. All applicable plugins that can handle the configurator response are executed. A plugin that applies to the PDP source type resolves the back URL according to the response data.
 
 ### Phase 8
 
@@ -181,7 +181,7 @@ Redirects the customer to the configurator page using the GET request.
 ### Phase 6
 
 * After the successful configuration, the customer is redirected to the configurator gateway with a configuration response.
-* The gateway URL does not equal to the back URL, it’s a fixed known URL.
+* The gateway URL does not equal to the back URL; it’s a fixed known URL.
 
 ### Phase 7
 

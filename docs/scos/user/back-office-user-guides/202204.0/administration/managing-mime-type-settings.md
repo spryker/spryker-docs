@@ -1,6 +1,6 @@
 ---
-title: Managing MIME type settings
-description: Use the procedures to create, edit, delete or activate a MIME type in the Back Office.
+title: Add and edit MIME type settings
+description: Learn how to add and edit MIME types in the Back Office.
 last_updated: Aug 10, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-mime-type-settings
@@ -11,6 +11,7 @@ redirect_from:
   - /docs/managing-mime-type-settings
   - /docs/en/managing-mime-type-settings
   - /docs/scos/user/back-office-user-guides/202200.0/administration/mime-type-settings/managing-mime-type-settings.html
+  - /docs/scos/user/back-office-user-guides/202204.0/administration/mime-type-settings/managing-mime-type-settings.html  
 related:
   - title: Managing File Tree
     link: docs/scos/user/back-office-user-guides/page.version/content/file-manager/managing-file-tree.html

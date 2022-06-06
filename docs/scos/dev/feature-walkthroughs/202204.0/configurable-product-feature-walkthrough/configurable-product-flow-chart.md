@@ -30,7 +30,7 @@ The following table shows the configuration data that is stored in the Session a
 | PARAMETER | VALUE | COMMENTS  |
 |---|---|---|
 | `ProductConfigurationInstance.isComplete` | `true` or `false` | Sensitive data. |
-| `ProductConfigurationInstance.displayDescription` | Some text of JSON blob—fore example, `["color"=>"red", "weight"=> 100]` |   |
+| `ProductConfigurationInstance.displayData` | Some text of JSON blob—fore example, `["color"=>"red", "weight"=> 100]` |   |
 | `ProductConfigurationInstance.configuratorKey` | `dateTime` |   |
 | `ProductConfigurationInstance.configuration` |  `["color"=>"red", "weight"=> 100]` | Sensitive data. |
 
@@ -82,17 +82,17 @@ The customer clicks the configuration button, and the request is redirected to t
 4. Submits the configuration form.
 5. The configurator redirects the customer to the gateway page with configuration data.
 
-| PARAMETER | VALUE | COMMENT |
-|---|---|---|
-| `ProductConfigurationInstance.price` | `123` | Sensitive data. |
-| `ProductConfigurationInstance.isComplete` | `true` | Sensitive data. |
-| `ProductConfigurationInstance.availableQuantity` | `2` |   |
-| `ProductConfigurationInstance.displayDescription` | Some text of JSON blob—for example, `{"color"=>"red", "weight"=> 100}` |   |
-| `ProductConfigurationInstance.configuration` | `{"color"=>"red", "weight"=> 100}`   | Sensitive data. |
-| `idCustomer` | `DE-1` |   |
-| `sourceType` | `pdp`, `cart-page` |   |
-| `SKU`  | `some_sku` |   |
-| `timestamp` | `1231313123123` |   |
+| PARAMETER | VALUE                                                                                                                                        | COMMENT |
+|---|----------------------------------------------------------------------------------------------------------------------------------------------|---|
+| `ProductConfigurationInstance.prices` | `{{"EUR":{"GROSS_MODE":{"DEFAULT":30000}},{"NET_MODE":{"DEFAULT": 25000}},"priceData":{"volume_prices":[{"quantity": 5,"net_price": 28500,"gross_price": 29000}]}}`                                                                                                        | Sensitive data. |
+| `ProductConfigurationInstance.isComplete` | `true`                                                                                                                                       | Sensitive data. |
+| `ProductConfigurationInstance.availableQuantity` | `2`                                                                                                                                          |   |
+| `ProductConfigurationInstance.displayData` | Some text of JSON blob—for example, `{"color"=>"red", "weight"=> 100}`                                                                       |   |
+| `ProductConfigurationInstance.configuration` | `{"color"=>"red", "weight"=> 100}`                                                                                                           | Sensitive data. |
+| `idCustomer` | `DE-1`                                                                                                                                       |   |
+| sourceType | SOURCE_TYPE_PDP, SOURCE_TYPE_CART, SOURCE_TYPE_WISHLIST_DETAIL, …                                                                            |   |
+| `SKU`  | `some_sku`                                                                                                                                   |   |
+| `timestamp` | `1231313123123`                                                                                                                              |   |
 | `CheckSum` | It’s an encrypted value of the `CheckSum`. It should be based on the all requested parameters and should have the same order for decryption. |   |
 
 ### Phase 6
@@ -127,17 +127,18 @@ When configuration starts on Yves, from the Cart page, the product configuration
 - The item product configuration can be taken from one source only: Quote.
 - The generate the URL that points to the gateway page with the following parameters.
 
-| PARAMETER | VALUE | COMMENT |
-|---|---|---|
-| `ProductConfigurationInstance.displayDescription` | Some text of JSON blob—fore example, `["color"=>"red", "weight"=> 100]` |   |
-| `ProductConfigurationInstance.configuration` |  `["color"=>"red", "weight"=> 100]` | Sensitive data. |
+| PARAMETER                                      | VALUE | COMMENT |
+|------------------------------------------------|---|---|
+| `ProductConfigurationInstance.displayData`     | Some text of JSON blob—fore example, `["color"=>"red", "weight"=> 100]` |   |
+| `ProductConfigurationInstance.configuration`   |  `["color"=>"red", "weight"=> 100]` | Sensitive data. |
 | `ProductConfigurationInstance.configuratorKey` | `dateTime` |   |
-| `ProductConfigurationInstance.isComplete` | `true` or `false` | Sensitive data. |
-| `backUrl` | `https://some.url` | Sensitive data. |
-| `sourceType` | `pdp`, `cart-page` |   |
-| `SKU` | `some_sku` |   |
-| `Quantity` | `2` |   |
-| `ItemGroupKey` | `some_key` |   |
+| `ProductConfigurationInstance.isComplete`      | `true` or `false` | Sensitive data. |
+| `backUrl`                                      | `https://some.url` | Sensitive data. |
+| `SubmitUrl`                                    | `https://some.url` | Sensitive data. |
+| sourceType                                     | SOURCE_TYPE_PDP, SOURCE_TYPE_CART, SOURCE_TYPE_WISHLIST_DETAIL, …                                        |   |
+| `SKU`                                          | `some_sku` |   |
+| `Quantity`                                     | `2` |   |
+| `ItemGroupKey`                                 | `some_key` |   |
 
 ### Phase 2
 
@@ -166,17 +167,17 @@ Redirects the customer to the configurator page using the GET request.
 3. Submits the configuration form.
 4. The configurator has to redirect to the gateway page with configuration data.
 
-| PARAMETER | VALUE | COMMENT |
-|---|---|---|
-| `ProductConfigurationInstance.price` | `2123123` | Sensitive data. |
-| `ProductConfigurationInstance.isComplete` | `1` | Sensitive data. |
-| `ProductConfigurationInstance.availableQuantity` | `2` |   |
-| `ProductConfigurationInstance.displayDescription` | Some text of JSON blob—for example, `["color"=>"red", "weight"=> 100]` |   |
-| `ProductConfigurationInstance.configuration` |  `"date"=>"23.07.2020", "time"=>"18:45" 4]`   | Sensitive data. |
-| `ProductConfigurationInstance.timestamp` | `10312313135234` | Sensitive data, a certain configuration should be valid only a certain amount of the time given. |
-| sourceType | pdp, cart-page, … |   |
-| SKU  | `some_sku` |   |
-| itemGroupKey | some_group_key |   |
+| PARAMETER | VALUE                                                                  | COMMENT |
+|---|------------------------------------------------------------------------|---|
+| `ProductConfigurationInstance.prices` | `{"EUR":{"GROSS_MODE":{"DEFAULT":30000}},{"NET_MODE":{"DEFAULT": 25000}},"priceData":{"volume_prices":[{"quantity": 5,"net_price": 28500,"gross_price": 29000}]}}`                                                              | Sensitive data. |
+| `ProductConfigurationInstance.isComplete` | `1`                                                                    | Sensitive data. |
+| `ProductConfigurationInstance.availableQuantity` | `2`                                                                    |   |
+| `ProductConfigurationInstance.displayData` | Some text of JSON blob—for example, `["color"=>"red", "weight"=> 100]` |   |
+| `ProductConfigurationInstance.configuration` | `"date"=>"23.07.2020", "time"=>"18:45" 4]`                             | Sensitive data. |
+| `ProductConfigurationInstance.timestamp` | `10312313135234`                                                       | Sensitive data, a certain configuration should be valid only a certain amount of the time given. |
+| sourceType | SOURCE_TYPE_PDP, SOURCE_TYPE_CART, SOURCE_TYPE_WISHLIST_DETAIL, …                                        |   |
+| SKU  | `some_sku`                                                             |   |
+| itemGroupKey | some_group_key                                                         |   |
 
 ### Phase 6
 

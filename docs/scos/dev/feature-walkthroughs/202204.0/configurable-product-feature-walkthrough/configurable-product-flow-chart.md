@@ -72,7 +72,7 @@ The customer clicks the configuration button, and the request is redirected to t
 2. The configurator handles the request by creating a new session and saving the request's data there (phase 4.2).
 3. The configurator responds with a redirect URL that contains what session ID needs to be picked up (phase 4.2).
 4. The request comes from the gateway to the configurator `index.php` to pick up a session (phase 4.3).
-5. Redirects the customer to the configurator page by a GET request using a secured connection.
+5. The response redirects the customer to the configurator page by a GET request using a secured connection.
 
 ### Phase 5
 

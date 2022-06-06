@@ -1,5 +1,5 @@
 ---
-title: Add and edit MIME type settings
+title: Add and edit MIME types
 description: Learn how to add and edit MIME types in the Back Office.
 last_updated: Aug 10, 2021
 template: back-office-user-guide-template

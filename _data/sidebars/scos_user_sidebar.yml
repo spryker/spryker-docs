@@ -2449,7 +2449,7 @@ entries:
         - title: Edit payment methods
           url: /docs/scos/user/back-office-user-guides/administration/payment-methods/edit-payment-methods.html
           include_versions:
-          - "202204.0"          
+          - "202204.0"
         - title: Managing payment methods
           url: /docs/scos/user/back-office-user-guides/administration/payment-methods/managing-payment-methods.html
           include_versions:
@@ -2664,10 +2664,28 @@ entries:
             - "202001.0"
             - "202005.0"
             - "202009.0"
-      - title: MIME type settings
+      - title: MIME Type settings
+        url: /docs/scos/user/back-office-user-guides/administration/add-and-edit-mime-types.html
+        include_versions:
+        - "202204.0"
+      - title: MIME Type settings
+        include_versions:
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
         nested:
         - title: Managing MIME type settings
           url: /docs/scos/user/back-office-user-guides/administration/mime-type-settings/managing-mime-type-settings.html
+          include_versions:
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
     - title: General Back Office
       url: /docs/scos/user/back-office-user-guides/general-back-office-overview.html
       include_versions:

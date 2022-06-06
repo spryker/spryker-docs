@@ -38,7 +38,7 @@ class SchedulerConfig extends AbstractSharedConfig
 
 
 
-2. In `src/Pyz/Zed/Console/ConsoleDependencyProvider.php`, add the console commands:
+2. In `src/Pyz/Zed/Console/ConsoleDependencyProvider.php`, add the console commands and Twig application plugin:
 
 ```php
 /**
@@ -65,7 +65,27 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
         ];
         ...
     }
+    
     ...
+   
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
+     */
+    public function getApplicationPlugins(Container $container): array
+    {
+        $applicationPlugins = parent::getApplicationPlugins($container);
+
+        ...
+
+        $applicationPlugins[] = new TwigApplicationPlugin();
+
+        return $applicationPlugins;
+    }
+   
+   ...
+
 }
 ```
 

@@ -17,13 +17,12 @@ This document describes the `product_concrete_pre_configuration.csv` file to c
 To import the file, run
 
 ```bash
-data:import product-configuration
+data:import:product-configuration
 ```
 
 ## Import file parameters
 
 The file should have the following parameters:
-
 
 | PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS AND COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- |
@@ -35,10 +34,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-The file has the following dependencies:
-
-*   [File details: product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html#headers-amp-mandatory-fields)
-
+The file has the following dependency: [File details: product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html#import-file-parameters)
 
 ## Import template file and content example
 

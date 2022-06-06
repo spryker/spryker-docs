@@ -129,6 +129,7 @@ class DataImportConfig extends SprykerDataImportConfig
 3. Generate transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

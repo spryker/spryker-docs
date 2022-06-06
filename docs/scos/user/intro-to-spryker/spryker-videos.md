@@ -166,6 +166,8 @@ redirect_from:
   - /v1/docs/en/wishlists-video
   - /v6/docs/spryker-videos
   - /v6/docs/en/spryker-videos
+  - /docs/scos/user/intro-to-spryker/videos-and-webinars/spryker-videos.html
+  - /docs/scos/user/intro-to-spryker/202204.0/videos-and-webinars/spryker-videos.html
 ---
 
 We believe that good technology doesn’t stop with the code. You also need the examples and information to help you convert your vision into reality.
@@ -173,5 +175,3 @@ We believe that good technology doesn’t stop with the code. You also need the 
 [Spryker TV](https://training.spryker.com/pages/spryker-tv) is a dedicated resource for Spryker videos. Explore our Spryker Commerce OS visually!
 
 You can also send us direct requests for videos and topics to [academy@spryker.com](mailto:academy@spryker.com).
-
-

@@ -1,5 +1,5 @@
 ---
-title: File details- content_product_set.csv
+title: File details - content_product_set.csv
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-content-product-setcsv
@@ -11,30 +11,38 @@ redirect_from:
   - /docs/en/file-details-content-product-setcsv
 ---
 
-This article contains content of the **content_product_set.csv** file to configure [Content Product Set](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item) information on your Spryker Demo Shop.
+This document describes the `content_product_set.csv` file to configure [Content Product Set](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item) information in your Spryker Demo Shop.
 
-## Headers & Mandatory Fields 
-These are the header fields to be included in the .csv file:
+To import the file, run:
 
-| Field Name | Mandatory | Type | Other Requirements/Comments | Description |
+```bash
+data:import:content-product-set
+```
+
+## Import file parameters
+
+The file should have the following parameters:
+
+| PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| **key** | Yes (*unique*) | String |N/A* | Unique identifier of the content. |
-| **name** | Yes | String |	Human-readable name. | Name of the content. |
-| **description** | Yes | String |N/A | Description of the content. |
-| **product_set_key.default** | Yes | String |N/A | Default key identifier of the product set. |
-| **product_set_key.{ANY_LOCALE_NAME}** **<br>Example value: *product_set_key.en_US* | No | String |N/A | Key identifier of the product set, translated |
+| key | &check; | String | Must be unique. | Unique identifier of the content. |
+| name | &check; | String |	Human-readable name. | Name of the content. |
+| description | &check; | String |  | Description of the content. |
+| product_set_key.default | &check; | String |  | Default key identifier of the product set. |
+| product_set_key.{ANY_LOCALE_NAME}*<br>Example value: *product_set_key.en_US* |  | String |  | Key identifier of the product set, translated |
 
-*N/A: Not applicable.
+*ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
 
-## Dependencies
+## Import file dependencies
 
-This file has the following dependencies:
-*    [product_set.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html)
+This file has the following dependency: [product_set.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html).
 
-## Template File & Content Example
-A template and an example of the *content_product_set.csv*  file can be downloaded here:
+## Import template file and content example
 
-| File | Description |
+Find the template and an example of the file below:
+
+| FILE | DESCRIPTION |
 | --- | --- |
-| [content_product_set.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+content_product_set.csv) | Content Product Set .csv template file (empty content, contains headers only). |
-| [content_product_set.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/content_product_set.csv) | Content Product Set .csv file containing a Demo Shop data sample. |
+| [content_product_set.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+content_product_set.csv) | Exemplary import file with headers only. |
+| [content_product_set.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/content_product_set.csv) | Exemplary import file with Demo Shop data. |
+

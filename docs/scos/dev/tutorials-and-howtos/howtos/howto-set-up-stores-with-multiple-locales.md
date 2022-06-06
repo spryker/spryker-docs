@@ -1,5 +1,5 @@
 ---
-title: HowTo - Set up Stores with Multiple Locales
+title: HowTo - Set up stores with multiple locales
 description: Use the guide to configure different locales for your store.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -24,15 +24,13 @@ redirect_from:
   - /v1/docs/en/ht-setup-stores-with-multiple-locales
 ---
 
-{% info_block infoBox "Multiple Locales" %}
 This article describes the steps you need to consider when you have to set up stores with multiple locales.
-{% endinfo_block %}
 
-## Configure Locales for Store
+## Configure locales for store
 
 The stores configuration can be found in the `config/Shared/stores.php` file.
 
-For each store you can define a set of locales; the first locale is the default one.
+You can define a set of locales for each store. The first locale is the default one.
 
 ```php
 <?php
@@ -46,19 +44,19 @@ For each store you can define a set of locales; the first locale is the default 
 
 In the example above, the `en` key is associated with the `en_US` locale.
 
-## URL Routing for Stores with Multiple Locales
+## Route URLs for stores with multiple locales
 
 In Yves, the key for the selected locale is contained in the URL; if no key is contained in the URL, the default locale is considered as the current one.
 
 In Demoshop, for listing the current content of the cart, the following URLs are routed to the same controller and action:
 
-| URL	| Locale |
+| URL	| LOCALE |
 | --- | --- |
 | https://mysprykershop.com/cart | en_US |
 | https://mysprykershop.com/de/cart |  de_DE|
-|https://mysprykershop.com/en/cart  |  en_US|
+| https://mysprykershop.com/en/cart  |  en_US|
 
-## Products with Localized Attributes
+## Products with localized attributes
 
 The details of the abstract products are stored localized in the `spy_product_abstract_localized_attributes` table. For each abstract product, there is an entry in this table that corresponds to each locale, containing the associated attributes for the defined locale.
 
@@ -72,7 +70,8 @@ The following details are stored localized in the Demoshop, for both abstract an
 * short description
 * long description
 
-### Importing products with localized attributes
+### Import products with localized attributes
+
 When importing product data in your application, you need to consider the list of locales that are defined for the store.
 
 The CSV file containing the product data that needs to be imported must contain the name of the product for each locale:
@@ -84,7 +83,7 @@ The CSV file that contains the attributes for the products to be imported must c
 * `short_description.en_US`, `short_description.de_DE`
 * `long_description.en_US`, `long_description.de_DE`
 
-## Categories with Localized Attributes
+## Categories with localized attributes
 
 The details of the categories are kept in the `spy_category_attribute`. For each category defined in the `spy_category` table, there is an entry for each defined locale containing the details of the category localized.
 
@@ -96,7 +95,7 @@ The following category details are stored localized:
 * `meta_description`
 * `category_image_name`
 
-### Importing categories with localized attributes
+### Import categories with localized attributes
 
 The product categories are imported through the Importer.
 
@@ -108,13 +107,13 @@ The CSV file containing the product data that needs to be imported must contain 
 * `low_pic.en_US`, `low_pic.de_DE`
 * `category_description.en_US`, `category_description.de_DE`
 
-## Importing CMS Blocks and Pages
+## Import CMS blocks and pages
 
 The CMS blocks and pages are able to render localized content through the use of placeholders. The placeholders have a glossary key associated; at runtime, the placeholder is replaced with the glossary value that corresponds to the current locale. Also, a static page will have a distinct URL for each locale defined in the application.
 
 The CMS blocks and pages are imported through XML files. The structure of the XML file is very simple: it contains a list of blocks, each block has a template associated, a name and a list of placeholders for each locale.
 
-**Example:**
+**Example**
 
 ```xml
 <?xml version="1.0"?>
@@ -146,7 +145,7 @@ The CMS blocks and pages are imported through XML files. The structure of the XM
 
 The XML file structure for loading static pages is similar to the one for importing blocks; the only differences are that a page has also a URL associated for each locale and it doesn’t have a name linked to it.
 
-**Code sample:**
+**Code sample**
 
 ```xml
 <?xml version="1.0"?>
@@ -178,6 +177,7 @@ The XML file structure for loading static pages is similar to the one for import
 ```
 
 ### Localized URLs
+
 The `spy_url` table stores the URLs that correspond to:
 
 * category pages

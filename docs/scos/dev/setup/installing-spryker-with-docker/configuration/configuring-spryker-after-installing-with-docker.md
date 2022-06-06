@@ -84,16 +84,19 @@ groups:
                                 namespace: 1
 ...
 ```
+
 2. Bootstrap the local docker setup:
 
 ```shell
 docker/sdk boot
 ```
+
 3. Once the job finishes, build and start the instance:
 
 ```shell
 docker/sdk up
 ```
+
 4. Update the hosts file:
 
 ```shell

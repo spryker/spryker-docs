@@ -8,6 +8,7 @@ originalArticleId: 6e504899-ba21-4b1c-a2da-bd0075224acf
 redirect_from:
   - /v4/docs/creating-and-managing-product-bundles
   - /v4/docs/en/creating-and-managing-product-bundles
+  - /docs/scos/user/back-office-user-guides/202001.0/catalog/products/managing-products/creating-and-managing-product-bundles.html
 related:
   - title: Product Bundles feature overview
     link: docs/scos/user/features/page.version/product-bundles-feature-overview.html

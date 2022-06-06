@@ -24,9 +24,8 @@ To install Docker prerequisites on Windows with WSL1, follow [Installing Docker 
 To install Docker prerequisites on Windows with WSL2, follow [Installing Docker prerequisites on Windows with WSL2](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html).
 
 
-
-
 ## Installing Spryker in Development mode on Windows
+
 Follow the steps to install Spryker in Development mode:
 
 1. Open Ubuntu.
@@ -44,27 +43,33 @@ Follow the steps to install Spryker in Development mode:
     {% endinfo_block %}
 
 4. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops):
+
     * Clone the B2C repository:
 
     ```bash
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202108.0  --single-branch ./b2c-demo-shop
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202204.0-p1 --single-branch ./b2c-demo-shop
     ```
 
     * Clone the B2B repository:
 
     ```bash
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202108.0  --single-branch ./b2b-demo-shop
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0-p1 --single-branch ./b2b-demo-shop
     ```
 
 5. Depending on the repository you've cloned, navigate into the cloned folder:
+
     * B2C repository:
+
     ```bash
     cd b2c-demo-shop
     ```
+
     * B2B repository:
+
     ```bash
     cd b2b-demo-shop
     ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that you are in the correct folder by running the `pwd` command.
@@ -78,10 +83,10 @@ image: spryker/php:7.3-alpine3.12
 ```
 
 7. Clone the Docker SDK repository:
+
 ```bash
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
 ```
-
 
 8. In `{shop_name}/docker/context/php/debug/etc/php/debug.conf.d/69-xdebug.ini`, set `xdebug.remote_host` and `xdebug.client_host` to `host.docker.internal`:
 
@@ -99,9 +104,11 @@ sudo usermod -aG docker $USER
 ```
 
 10. Bootstrap local docker setup:
+
 ```bash
 docker/sdk bootstrap deploy.dev.yml
 ```
+
 {% info_block warningBox "Bootstrap" %}
 
 Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after you update the Docker SDK or the deploy file.
@@ -127,12 +134,12 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 
     {% info_block warningBox "Warning" %}
 
-    Note that some versions of Windows have limitation of number of hostnames per line. It is recommended not to exceed 10 hostnames per line. Split long line into multiple lines if necessary.
+    Some versions of Windows have a limitation of the number of hostnames per line. It is recommended not to exceed 10 hostnames per line. Split a long line into multiple lines if necessary.
 
     {% endinfo_block %}
  
     9. Select **File** > **Save**.
-    10.  Close the file.
+    10. Close the file.
 
 12. Once the job finishes, build and start the instance:
 
@@ -148,7 +155,7 @@ Depending on the hardware performance, the first project launch can take up to 2
 
 ## Endpoints
 
-To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. See [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) to learn about the Deploy file.
+To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. For more information about the Deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 
 {% info_block infoBox "RabbitMQ UI credentials" %}
 

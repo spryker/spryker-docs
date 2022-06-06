@@ -27,7 +27,7 @@ For successful e-commerce strategies in today's world, meaningful data analysis 
 
 ## Mindlab Download and Support
 
-For downloads, support and additional information send a message to: [info@mindlab.de](info@mindlab.de)
+For downloads, support and additional information send a message to: [info@mindlab.de](mailto:info@mindlab.de)
 
 ---
 

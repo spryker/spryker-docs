@@ -33,7 +33,7 @@ Information from the CMS pages is indexed just like the information from the pro
 
 ## Current constraints
 
-Currently, the feature has the following functional constraints which are going to be resolved in the future.
+The feature has the following functional constraints which are going to be resolved in the future.
 * Search preference attributes are shared across all the stores in a project.
 * You cannot define a search preference for a single store.
 

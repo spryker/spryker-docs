@@ -32,7 +32,7 @@ Redis is a key-value data storage, and for the values, it supports a large colle
 
 The following table shows how translations are stored:
 
-| Locale | Key                                          | Value     |
+| LOCALE | KEY                                          | VALUE     |
 | ------ | -------------------------------------------- | --------- |
 | de_DE  | `kv:de.de_de.glossary.translation.global.cart` | Warenkorb |
 | en_US  | `kv:de.en_us.glossary.translation.global.cart` | Cart      |
@@ -80,6 +80,7 @@ Find the current Redis Port in `config/Shared/config_default-development.php`.
 Make sure that your virtual machine is up and running.
 
 ## Using the data stored in Redis
+
 This section describes how you can use data stored in Redis.
 
 ### Translations
@@ -94,7 +95,7 @@ For example,
 
 The caption for the button depends on the selected locale:
 
-| Locale | Key                                                      | Value            |
+| LOCALE | KEY                                                      | VALUE            |
 | ------ | -------------------------------------------------------- | ---------------- |
 | de_DE  | `kv:de.de_de.glossary.translation.page.detail.add-to-cart` | In den Warenkorb |
 | en_US  | `kv:de.en_us.glossary.translation.page.detail.add-to-cart` | Add to Cart      |
@@ -187,7 +188,7 @@ use Pyz\Yves\Application\Controller\AbstractController;
 2. Define the cache strategy by assigning the value to the **STORAGE_CACHE_STRATEGY** constant. For example, an incremental strategy is defined in the following code.
 
 ```php
- const STORAGE_CACHE_STRATEGY = StorageConstants::STORAGE_CACHE_STRATEGY_INCREMENTAL;
+const STORAGE_CACHE_STRATEGY = StorageConstants::STORAGE_CACHE_STRATEGY_INCREMENTAL;
 ```
 
 That is it!

@@ -10,7 +10,6 @@ redirect_from:
   - /2021080/docs/en/avalara-tax-integration
   - /docs/avalara-tax-integration
   - /docs/en/avalara-tax-integration
-  - /docs/scos/user/technology-partners/202108.0/taxes/avalara-tax-integration.html
 related:
   - title: Tax feature overview
     link: docs/scos/user/features/page.version/tax-feature-overview.html
@@ -132,6 +131,7 @@ Make sure that in the database, the configured data has been added to the `spy_
 Apply database changes, generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

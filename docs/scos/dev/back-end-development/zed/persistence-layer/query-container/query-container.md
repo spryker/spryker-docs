@@ -67,7 +67,7 @@ You might use the following definitions to generate the related code:
 
 See the [Spryk](/docs/scos/dev/sdk/development-tools/spryk-code-generator.html) documentation for details.
 
-## What's next?
+## Next steps
 
 * See [Using a Query Container](/docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html) for information on how to use the Query Containers.
 * If you need to implement your own Query Container, see [Implementing a Query Container](/docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html).

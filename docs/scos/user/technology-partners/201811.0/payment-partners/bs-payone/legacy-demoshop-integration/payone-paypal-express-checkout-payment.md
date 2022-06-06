@@ -8,6 +8,7 @@ originalArticleId: 426cb589-a971-4770-95ed-5e39d7948722
 redirect_from:
   - /v1/docs/payone-paypal-express-checkout
   - /v1/docs/en/payone-paypal-express-checkout
+  - /docs/scos/user/technology-partners/201811.0/payment-partners/bs-payone/legacy-demoshop-integration/payone-paypal-payment.html-express-checkout
 related:
   - title: PayOne - Prepayment
     link: docs/scos/user/technology-partners/page.version/payment-partners/bs-payone/legacy-demoshop-integration/payone-payment-methods/payone-prepayment.html
@@ -102,6 +103,4 @@ $config[PayoneConstants::PAYONE][PayoneConstants::PAYONE_REDIRECT_EXPRESS_CHECKO
 ```
 
 ## Flow Diagram
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/BS+Payone/paypal-express-checkout-spryker-flow.png) 
-
-
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/BS+Payone/paypal-express-checkout-spryker-flow.png)

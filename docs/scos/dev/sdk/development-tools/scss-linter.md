@@ -26,33 +26,40 @@ redirect_from:
 To analyze and fix the existing SCSS files, [Stylelint](https://stylelint.io/) is used.
 
 ## Installation
+
 For details on how to install the SCSS linter for your project, see the [SCSS linter integration guide](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-scss-linter.html).
 
 ## Using SCSS linter
 
 To execute the SCSS linter, do the following:
+
 1. Install the Node modules:
 
 ```bash
 npm ci
 ```
+
 2. Execute the SCSS linter in:
+
 * validation mode:
 
 ```bash
 npm run yves:stylelint
 ```
+
 *  fix mode:
+
 ```bash
 npm run yves:stylelint:fix
 ```
+
 ## SCSS linter config
 
 The config for Stylelint resides in the [@spryker/frontend-config.stylelint](https://www.npmjs.com/package/@spryker/frontend-config.stylelint) module.
 
 To redefine the path for the config file, adjust `/frontend/libs/stylelint.js`  and use other rules for the SCSS linter.
 
-```
+```js
 configFile: `${globalSettings.context}/node_modules/@spryker/frontend-config.stylelint/.stylelintrc.json`,
 ```
 
@@ -70,19 +77,24 @@ The SCSS linter is integrated into:
 
 * Pre-commit hooks
 The function that executes the SCSS linter before the commit resides in `/.githook`:
+
 ```
 - GitHook\Command\FileCommand\PreCommit\StyleLintCommand
 ```
+
 * Travis
 Command to run the SCSS linter is integrated into `.travis.yml`
+
 ```
 - node ./frontend/libs/stylelint
 ```
+
 {% info_block warningBox "Important" %}
 
 If you commit without the pre-commit hooks, you should run the SCSS linter manually to avoid issues with Travis.
 
 {% endinfo_block %}
+
 {% info_block infoBox %}
 
 Pre-commit hooks are integrated only in the Shop Suite and are not integrated in B2B and B2C Demo Shops.

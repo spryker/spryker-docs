@@ -18,6 +18,7 @@ redirect_from:
   - /v4/docs/en/docker-installation-prerequisites-macos
   - /v3/docs/docker-install-prerequisites-macos-201907
   - /v3/docs/en/docker-install-prerequisites-macos-201907
+  - /docs/scos/dev/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites-macos.html
 ---
 
 This document describes the prerequisites for installing Spryker in Docker on MacOS.
@@ -27,7 +28,7 @@ This document describes the prerequisites for installing Spryker in Docker on Ma
 
 Review the system and software requirements in the table and configure them using the following instructions.
 
-| Requirement | Value or version |
+| REQUIREMENT | VALUE OR VERSION |
 | --- | --- |
 | Docker | 18.09.1 or higher |
 | Docker Compose | 1.28 or 1.29 |  
@@ -37,12 +38,17 @@ Review the system and software requirements in the table and configure them usin
 
 
 ## Installing and configuring required software
+
 Follow the steps to install and configure the required software:
+
 1. Download and install [Docker Desktop (Mac)](https://desktop.docker.com/mac/stable/amd64/Docker.dmg).
 
 2. Accept the privilege escalation request "Docker Desktop needs privileged access.".
+
 {% info_block infoBox %}
+
 Signup for Docker Hub is not required.
+
 {% endinfo_block %}
 
 3. In the Docker Desktop, go to preferences by selecting the gear in the top right corner.
@@ -66,14 +72,17 @@ You can select lower **Memory:** and **Swap:** values than those provided in the
 {% endinfo_block %}
 
 5. [Development mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode): Install or update Mutagen and Mutagen Compose to the latest version:
-```shell
+
+```bash
 brew list | grep mutagen | xargs brew remove && brew install mutagen-io/mutagen/mutagen mutagen-io/mutagen/mutagen-compose && mutagen daemon stop && mutagen daemon start
 ```
 
 ## Next steps
 
-See [Chossing an installation mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html) to choose an installation mode.
+See [Choosing an installation mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html) to choose an installation mode.
+
 If you've already selected an installation mode, follow one of the guides below:
+
 * [Installing in Development mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html)
 * [Installing in Demo mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html)
 * [Integrating Docker into existing projects](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/integrating-the-docker-sdk-into-existing-projects.html)

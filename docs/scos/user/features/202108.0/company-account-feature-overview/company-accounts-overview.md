@@ -39,7 +39,7 @@ The level below the business unit is *company address*. The company address is a
 
 One company address can be assigned to several business units. For example, if IT and Sales departments are located in the same office, they can share one company address.
 
-However, a department may distributed between several locations and have several addresses. For example, if the company is a building firm and each unit is a construction site. In this case, for each order made for this department, one should select which address of the department the order should be delivered to. Also, it is possible to assign default billing and shipping addresses to business units.
+However, a department may distributed between several locations and have several addresses. For example, if the company is a building firm and each unit is a construction site. In this case, for each order made for this department, one should select which address of the department the order should be delivered to. Also, default billing and shipping addresses can't be assigned to business units.
 
 ## Company user
 

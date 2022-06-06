@@ -8,6 +8,7 @@ originalArticleId: f8d0248d-0411-4a3c-a23a-2a0f3c33627e
 redirect_from:
   - /v1/docs/econda-frontend-integration
   - /v1/docs/en/econda-frontend-integration
+  - /docs/scos/dev/technology-partner-guides/201811.0/marketing-and-conversion/personalization-and-cross-selling/econda/exporting-econda-data.html
   - /docs/scos/user/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-exporting-csvs.html
 ---
 

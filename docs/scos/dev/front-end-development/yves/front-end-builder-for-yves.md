@@ -14,6 +14,7 @@ redirect_from:
   - /v6/docs/en/front-end-builder-for-yves
   - /v4/docs/front-end-builder-for-yves
   - /v4/docs/en/front-end-builder-for-yves
+  - /docs/scos/dev/front-end-development/frontend-builder-for-yves.html
 ---
 
 This article provides information about how to prepare assets (CSS, js, images, etc.) for different namespaces and their themes.
@@ -35,6 +36,7 @@ The builder has several modes to build frontend:
 * `-i or --info`—displays a list of namespaces with all the available themes.
 
 ## Configuration
+
 To enable the multi-theme in Yves, add the`\SprykerShop\Shared\ShopUi\ShopUiConstants::YVES_ASSETS_URL_PATTERN` configuration.
 
 It supports using the `%theme%` key that will be replaced with the current theme for the Twig module configuration.
@@ -48,7 +50,7 @@ Config for the frontend builder is placed at `/config/Yves/frontend-build-config
 
 The config file should contain the following data:
 
-```php
+```json
 {
 
     "path": "assets/%namespace%/%theme%/", // pattern of the path to the public assets
@@ -75,7 +77,9 @@ The config file should contain the following data:
 ## Twig templates
 
 To specify the theme in a multi-theme environment for twig templates, use TwigConfig. You can overwrite `getYvesThemeName`as follows:
+
 **Shared/TwigDE/TwigConfig.php**
+
 ```php
 <?php
 namespace Pyz\Shared\TwigDE;
@@ -103,10 +107,12 @@ All incoming files (images, fonts, etc.) are copied from `global` (for every nam
 * `frontend/assets/DE/default`
 
  {% info_block infoBox "Info" %}
+
 If the assets were generated earlier for this namespace and theme, these assets will be substituted by the newest ones. If namespace or theme were removed from the config file, assets for this namespace or theme won't be removed, and you should remove it manually, if necessary.
+
 {% endinfo_block %}
 
- ## How frontend builder collects SCSS and JS files
+## How frontend builder collects SCSS and JS files
 
 ### Levels
 
@@ -122,12 +128,14 @@ Also, modules with a specific suffix namespace have higher priority over the mod
 
 ### Javascript
 
-Besides components, the part of the webpack build is vendor.ts and app.ts files.
+Besides components, the part of the webpack build is `vendor.ts` and `app.ts` files.
 
 `vendor.ts` (`/src/Pyz/Yves/ShopUi/Theme/default/vendor.ts`) is used to import global external libraries `app.ts` (`/src/Pyz/Yves/ShopUi/Theme/default/app.ts`) that invoke bootstrap function initializing the Spryker Shop frontend application.
 
 {% info_block warningBox "Note" %}
+
 You can overwrite these files in your own namespace and/or theme.
+
 {% endinfo_block %}
 
 ### SCSS

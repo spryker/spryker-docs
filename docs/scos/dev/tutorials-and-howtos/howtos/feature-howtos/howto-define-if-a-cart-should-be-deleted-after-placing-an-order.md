@@ -1,5 +1,5 @@
 ---
-title: HowTo - Define if a cart should be deleted after placing an order
+title: "HowTo: Define if a cart should be deleted after placing an order"
 last_updated: Jul 20, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-define-if-a-cart-should-be-deleted-after-placing-an-order
@@ -19,7 +19,7 @@ To define this behavior, in `CheckoutPageConfig`, set `cleanCartAfterOrderCreati
 * `false`: after placing an order, the cart is saved.
 
 **Pyz\Shared\CheckoutPage\CheckoutPageConfig**
-   
+
 ```php
     /**
      * @api

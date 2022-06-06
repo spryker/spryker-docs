@@ -22,11 +22,12 @@ redirect_from:
   - /v2/docs/en/t-different-stores-different-logic-landing-pages
   - /v1/docs/t-different-stores-different-logic-landing-pages
   - /v1/docs/en/t-different-stores-different-logic-landing-pages
+  - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-different-sores-different-logic-landing-pages-spryker-commerce-os.html
 ---
 
 {% info_block infoBox %}
 
-This tutorial is also available on the Spryker Training web-site. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp) web-site.
+This tutorial is also available on the Spryker Training website. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp) website.
 
 {% endinfo_block %}
 
@@ -48,8 +49,8 @@ You can use the same steps for any other logic in the shop.
 
 Override the current home page. There is a set of steps you need to follow in order to override the current homepage:
 
-1. in the **Communication** layer of the Application module in Zed in `src/Pyz/Zed`, add a `Controller` directory.
-2. Inside the added `Controller` directory, extend the `IndexController` to return just a string when calling the `indexAction()`.
+1. In the `Communication` layer of the Application module in Zed in `src/Pyz/Zed`, add the `Controller` directory.
+2. Inside the `Controller` directory, extend the `IndexController` to return just a string when calling the `indexAction()`.
 
 ```php
 namespace Pyz\Zed\Application\Communication\Controller;

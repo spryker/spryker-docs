@@ -20,7 +20,7 @@ redirect_from:
 
 Updating your Spryker shop is always an effort. New features, fixes, and updates are coming every day, and modules become more and more outdated. This raises many questions, the most common of which are:
 * Do I actually need to update my project?
-* If yes - how to do it wisely, to spend less time and stay up-to-date?
+* If yes—how to do it wisely, to spend less time and stay up-to-date?
 * How often should I update?
 * What does the update process look like and how to plan / organize it?
 

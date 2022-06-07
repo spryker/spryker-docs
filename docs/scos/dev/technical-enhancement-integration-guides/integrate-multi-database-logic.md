@@ -1,27 +1,16 @@
 ---
 title: Integrate multi-database logic
-description: Learn how to enable the Authorization Enabler
-last_updated: Sep 2, 2021
+description: Learn how to integrate multi-database logic
+last_updated: June 2, 2022
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/authorization-enabler-integration
-originalArticleId: 809afa43-2beb-47d6-acaa-ae58efa62470
-redirect_from:
-  - /2021080/docs/authorization-enabler-integration
-  - /2021080/docs/en/authorization-enabler-integration
-  - /docs/authorization-enabler-integration
-  - /docs/en/authorization-enabler-integration
-  - /docs/scos/dev/technical-enhancements/authorization-enabler-integration.html
 ---
-
-
-
 
 This document describes how to switch from using a shared database to dedicated databases for stores. In the following instructions, DE and AT stores are used as examples. When following the instructions, adjust the configuration to your needs.
 
 ## Prerequisites
 Update the Docker SDK to [version 1.48.0](https://github.com/spryker/docker-sdk/releases/tag/1.48.0) or higher.
 
-## The Docker SDK: Define databases
+## Define databases
 
 1. Define multiple databases per region.
 
@@ -73,7 +62,7 @@ regions:
                         name: eu-region-db-two
 ```
 
-## Application: Configure databases
+## Configure databases
 
 Extend `config/Shared/config_default.php` or custom environment configuration which contains database configuration:                        
 
@@ -95,7 +84,7 @@ if (!empty($paasServices['databases'])) {
 }
 ```
 
-## Application: Configure key-value storage
+## Configure key-value storage
 In `config/Shared/config_default.php`,  extend the key-value configuration:
 
 ```php
@@ -107,7 +96,7 @@ $config[StorageRedisConstants::STORAGE_REDIS_DATABASE] = getenv('SPRYKER_KEY_VAL
 ...
 ```
 
-## Application: Configure stores
+## Configure stores
 
 In `config/Shared/stores.php`, do the following:
 
@@ -149,7 +138,7 @@ return array_intersect_key($stores, [APPLICATION_STORE => []]); //3
 
 
 
-## Application: Adjust installation recipes
+## Adjust installation recipes
 
 
 In `config/install/*`, adjust installation recipes as follows:
@@ -246,7 +235,7 @@ sections:
 
 ```
 
-## Application: Create data import configuration files
+## Create data import configuration files
 
 In `data/import/local/*`, create dedicated data import configuration files per store. For example, for DE and AT stores, create  `full_DE.yml` and `full_AT.yml`.
 

@@ -60,3 +60,7 @@ With the separated setup, store share the same codebase but have dedicated datab
 * Flexible management of the configuration of stores: distinct category navigation, product schema details, and users.
 
 * Separate deployment of each database per store: deploy a new version of a store's database without affecting the other stores' databases.
+
+### Separated setup: Integration
+
+New projects are shipped with a separated setup by default. If your project is still on a shared setup, [integrate multi-database logic](/docs/scos/dev/technical-enhancement-integration-guides/integrate-multi-database-logic.html).

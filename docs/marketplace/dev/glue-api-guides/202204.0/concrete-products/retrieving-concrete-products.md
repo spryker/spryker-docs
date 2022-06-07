@@ -2,12 +2,17 @@
 title: Retrieving concrete products
 description: Retrieve details about the items of the registered users' carts, and learn what else you can do with the resource in the Spryker Marketplace
 template: glue-api-storefront-guide-template
+related:
+  - title: Retrieving product offers of concrete products
+    link: docs/marketplace/dev/glue-api-guides/page.version/concrete-products/retrieving-product-offers-of-concrete-products.html
 ---
 
 This endpoint allows retrieving general information about concrete products.
 
 ## Installation
+
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
+
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 * [Glue API: Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
 * [Glue API: Product Options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)

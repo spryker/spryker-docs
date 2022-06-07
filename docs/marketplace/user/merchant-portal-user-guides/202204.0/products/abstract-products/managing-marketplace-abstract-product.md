@@ -3,6 +3,13 @@ title: Managing marketplace abstract products
 last_updated: May 05, 2022
 description: This document describes how to modify marketplace abstract products in the Merchant Portal.
 template: back-office-user-guide-template
+related:
+  - title: Marketplace Product feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+  - title: Marketplace Inventory Management feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-inventory-management-feature-overview.html
+  - title: Marketplace Product Approval Process feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-product-approval-process-feature-overview.html
 ---
 
 This document describes how to manage marketplace abstract products in the Merchant Portal.

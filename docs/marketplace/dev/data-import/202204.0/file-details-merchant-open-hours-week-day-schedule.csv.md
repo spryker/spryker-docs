@@ -3,6 +3,11 @@ title: "File details: merchant_open_hours_week_day_schedule.csv"
 last_updated: Jun 07, 2021
 description: This document describes the merchant_open_hours_week_day_schedule.csv file to configure merchant opening hours information in your Spryker shop.
 template: import-file-template
+related:
+  - title: Merchant Opening Hours feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/merchant-opening-hours-feature-walkthrough.html
+  - title: Merchant Opening Hours feature overview
+    link: docs/marketplace/user/features/page.version/merchant-opening-hours-feature-overview.html
 ---
 
 This document describes the `merchant_open_hours_week_day_schedule.csv` file to configure [default merchant opening hours](/docs/marketplace/user/features/{{site.version}}/merchant-opening-hours-feature-overview.html) information in your Spryker shop.

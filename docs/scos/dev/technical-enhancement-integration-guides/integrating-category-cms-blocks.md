@@ -17,11 +17,9 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
 ---
 
-This document describes how to enable category CMS blocks in a Spryker project.
+This document describes how to enable category CMS blocks. A category block is a CMS block that can be embedded into a category template.
 
-A category block is a CMS block that can be embedded into a category template.
-
-To enable the Category CMS Block in your project, do the following:
+To enable the Category CMS Block in your project, follow the steps:
 
 1. Install the `CmsBlockCategoryConnector` module using Composer:
 
@@ -29,8 +27,7 @@ To enable the Category CMS Block in your project, do the following:
 composer require spryker/cms-block-category-connector:"^2.6.0"
 ```
 
-2. Register the CMS block form plugin.
-Add `CmsBlockCategoryFormPlugin` to the CMS Block GUI dependency provider:
+2. To register the CMS block form plugin, add `CmsBlockCategoryFormPlugin` to the CMS Block GUI dependency provider:
 
 **src/Pyz/Zed/CmsBlockGui/CmsBlockGuiDependencyProvider.php**
 
@@ -57,8 +54,7 @@ class CmsBlockGuiDependencyProvider extends SprykerCmsBlockGuiDependencyProvider
 
 ```
 
-3. Register the CMS block form handler plugin.
-Add `CmsBlockCategoryConnectorUpdatePlugin` to the CMS Block dependency provider:
+3. To register the CMS block form handler plugin, add `CmsBlockCategoryConnectorUpdatePlugin` to the CMS Block dependency provider:
 
 **src/Pyz/Zed/CmsBlock/CmsBlockDependencyProvider.php**
 
@@ -84,7 +80,7 @@ class CmsBlockDependencyProvider extends SprykerCmsBlockDependencyProvider
 }
 ```
 
-4. Register the Category relation update plugin.
+4. Register the category relation update plugin.
 
 **src/Pyz/Zed/Category/CategoryDependencyProvider.php**
 
@@ -110,7 +106,7 @@ class CategoryDependencyProvider extends SprykerCategoryDependencyProvider
 }
 ```
 
-5. Register the Category subform and category relation read plugins.
+5. Register the category subform and category relation read plugins.
 
 **src/Pyz/Zed/CategoryGui/CategoryGuiDependencyProvider.php**
 

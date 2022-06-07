@@ -2,6 +2,11 @@
 title: Marketplace Product Approval Process feature overview
 description: This document contains concept information for the Marketplace Product Approval Process feature.
 template: concept-topic-template
+related:
+  - title: Approving and denying marketplace products
+    link: docs/marketplace/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html#approving-and-denying-marketplace-products
+  - title: Sending the product for approval
+    link: docs/marketplace/user/merchant-portal-user-guides/page.version/products/abstract-products/creating-marketplace-abstract-product.html#sending-the-product-for-approval
 ---
 The [marketplace operator](/docs/marketplace/user/intro-to-spryker-marketplace/back-office-for-marketplace-operator.html) is primarily responsible for ensuring the quality of data in the marketplace, including merchants, products, and offers. To control those things in the marketplace, the approval mechanism is a key feature.
 

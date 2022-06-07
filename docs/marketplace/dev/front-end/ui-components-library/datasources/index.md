@@ -3,6 +3,13 @@ title: Datasources
 last_updated: Jun 07, 2021
 description: This document provides details about the Datasources service in the Components Library.
 template: concept-topic-template
+related:
+  - title: Datasource Http
+    link: docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-http.html
+  - title: Datasource Inline Table
+    link: docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline-table.html
+  - title: Datasource Inline
+    link: docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline.html
 ---
 
 This document explains the Datasources service in the Components Library.

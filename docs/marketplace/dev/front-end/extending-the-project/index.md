@@ -2,6 +2,9 @@
 title: Extending the project
 description: This document provides details about how to extend the new project.
 template: howto-guide-template
+related:
+  - title: Migration guide - Extending the project
+    link: docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
 ---
 
 To add additional frontend functionality beyond the one provisioned out-of-the-box, the project must be extended.

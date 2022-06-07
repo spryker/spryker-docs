@@ -1,7 +1,7 @@
 ---
 title: Unzer integration guide
 description: Integrate the Unzer module into the Spryker Commerce OS.
-last_updated: Jun 08, 2022
+last_updated: Jun 07, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/202204/docs/unzer-integration
 originalArticleId:

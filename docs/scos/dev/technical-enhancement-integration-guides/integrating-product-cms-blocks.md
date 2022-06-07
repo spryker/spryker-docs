@@ -44,10 +44,10 @@ Add `CmsBlockProductAbstractFormPlugin` to the CMS Block GUI dependency provider
 
 namespace Pyz\Zed\CmsBlockGui;
 
-use Spryker\Zed\CmsBlockGui\CmsBlockGuiDependencyProvider as CmsBlockGuiCmsBlockGuiDependencyProvider;
+use Spryker\Zed\CmsBlockGui\CmsBlockGuiDependencyProvider as SprykerCmsBlockGuiDependencyProvider;
 use Spryker\Zed\CmsBlockProductConnector\Communication\Plugin\CmsBlockProductAbstractFormPlugin;
 
-class CmsBlockGuiDependencyProvider extends CmsBlockGuiCmsBlockGuiDependencyProvider
+class CmsBlockGuiDependencyProvider extends SprykerCmsBlockGuiDependencyProvider
 {
     /**
      * @return array<\Spryker\Zed\CmsBlockGui\Communication\Plugin\CmsBlockFormPluginInterface>
@@ -71,10 +71,10 @@ Add `CmsBlockProductAbstractUpdatePlugin` to the CMS Block dependency provider:
 
 namespace Pyz\Zed\CmsBlock;
 
-use Spryker\Zed\CmsBlock\CmsBlockDependencyProvider as CmsBlockCmsBlockDependencyProvider;
+use Spryker\Zed\CmsBlock\CmsBlockDependencyProvider as SprykerCmsBlockDependencyProvider;
 use Spryker\Zed\CmsBlockProductConnector\Communication\Plugin\CmsBlockProductAbstractUpdatePlugin;
 
-class CmsBlockDependencyProvider extends CmsBlockCmsBlockDependencyProvider
+class CmsBlockDependencyProvider extends SprykerCmsBlockDependencyProvider
 {
     /**
      * @return array<\Spryker\Zed\CmsBlockExtension\Dependency\Plugin\CmsBlockUpdatePluginInterface>
@@ -98,10 +98,10 @@ To show which product abstracts are assigned to a block on a block view page, ad
 
 namespace Pyz\Zed\CmsBlockGui;
 
-use Spryker\Zed\CmsBlockGui\CmsBlockGuiDependencyProvider as CmsBlockGuiCmsBlockGuiDependencyProvider;
+use Spryker\Zed\CmsBlockGui\CmsBlockGuiDependencyProvider as SprykerCmsBlockGuiDependencyProvider;
 use Spryker\Zed\CmsBlockProductConnector\Communication\Plugin\CmsBlockProductAbstractListViewPlugin;
 
-class CmsBlockGuiDependencyProvider extends CmsBlockGuiCmsBlockGuiDependencyProvider
+class CmsBlockGuiDependencyProvider extends SprykerCmsBlockGuiDependencyProvider
 {
     /**
      * @return array<\Spryker\Zed\CmsBlockGui\Communication\Plugin\CmsBlockViewPluginInterface>

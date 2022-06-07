@@ -40,9 +40,9 @@ Add `CmsBlockCategoryFormPlugin` to the CMS Block GUI dependency provider:
 namespace Pyz\Zed\CmsBlockGui;
 
 use Spryker\Zed\CmsBlockCategoryConnector\Communication\Plugin\CmsBlockCategoryFormPlugin;
-use Spryker\Zed\CmsBlockGui\CmsBlockGuiDependencyProvider as CmsBlockGuiCmsBlockGuiDependencyProvider;
+use Spryker\Zed\CmsBlockGui\CmsBlockGuiDependencyProvider as SprykerCmsBlockGuiDependencyProvider;
 
-class CmsBlockGuiDependencyProvider extends CmsBlockGuiCmsBlockGuiDependencyProvider
+class CmsBlockGuiDependencyProvider extends SprykerCmsBlockGuiDependencyProvider
 {
     /**
      * @return array<\Spryker\Zed\CmsBlockGui\Communication\Plugin\CmsBlockFormPluginInterface>
@@ -67,10 +67,10 @@ Add `CmsBlockCategoryConnectorUpdatePlugin` to the CMS Block dependency provider
 
 namespace Pyz\Zed\CmsBlock;
 
-use Spryker\Zed\CmsBlock\CmsBlockDependencyProvider as CmsBlockCmsBlockDependencyProvider;
+use Spryker\Zed\CmsBlock\CmsBlockDependencyProvider as SprykerCmsBlockDependencyProvider;
 use Spryker\Zed\CmsBlockCategoryConnector\Communication\Plugin\CmsBlockCategoryConnectorUpdatePlugin;
 
-class CmsBlockDependencyProvider extends CmsBlockCmsBlockDependencyProvider
+class CmsBlockDependencyProvider extends SprykerCmsBlockDependencyProvider
 {
     /**
      * @return array<\Spryker\Zed\CmsBlockExtension\Dependency\Plugin\CmsBlockUpdatePluginInterface>
@@ -93,10 +93,10 @@ class CmsBlockDependencyProvider extends CmsBlockCmsBlockDependencyProvider
 
 namespace Pyz\Zed\Category;
 
-use Spryker\Zed\Category\CategoryDependencyProvider as SprykerDependencyProvider;
+use Spryker\Zed\Category\CategoryDependencyProvider as SprykerCategoryDependencyProvider;
 use Spryker\Zed\CmsBlockCategoryConnector\Communication\Plugin\Category\CmsBlockCategoryCategoryRelationPlugin;
 
-class CategoryDependencyProvider extends SprykerDependencyProvider
+class CategoryDependencyProvider extends SprykerCategoryDependencyProvider
 {
     /**
      * @return array<\Spryker\Zed\CategoryExtension\Dependency\Plugin\CategoryRelationUpdatePluginInterface>
@@ -158,9 +158,9 @@ class CategoryGuiDependencyProvider extends SpykerCategoryGuiDependencyProvider
 namespace Pyz\Zed\CmsBlockGui;
 
 use Spryker\Zed\CmsBlockCategoryConnector\Communication\Plugin\CmsBlockCategoryListViewPlugin;
-use Spryker\Zed\CmsBlockGui\CmsBlockGuiDependencyProvider as CmsBlockGuiCmsBlockGuiDependencyProvider;
+use Spryker\Zed\CmsBlockGui\CmsBlockGuiDependencyProvider as SprykerCmsBlockGuiDependencyProvider;
 
-class CmsBlockGuiDependencyProvider extends CmsBlockGuiCmsBlockGuiDependencyProvider
+class CmsBlockGuiDependencyProvider extends SprykerCmsBlockGuiDependencyProvider
 {
     /**
      * @return array<\Spryker\Zed\CmsBlockGui\Communication\Plugin\CmsBlockViewPluginInterface>

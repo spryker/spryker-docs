@@ -78,9 +78,8 @@ The customer clicks the configuration button, and the request is redirected to t
 
 1. You are on the configurator page.
 2. The configurator page is rendered based on the data in the session.
-3. The customer does the configuration.
-4. Submits the configuration form.
-5. The configurator redirects the customer to the gateway page with configuration data.
+3. The customer does the configuration and submits the configuration form.
+4. The configurator redirects the customer to the gateway page with configuration data.
 
 | PARAMETER | VALUE                                                                                                                                        | COMMENT |
 |---|----------------------------------------------------------------------------------------------------------------------------------------------|---|

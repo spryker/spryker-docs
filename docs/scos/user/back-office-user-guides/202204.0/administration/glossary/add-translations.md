@@ -1,5 +1,5 @@
 ---
-title: Add and edit translations
+title: Add translations
 description: Learn how to add and edit translations in the Back Office.
 last_updated: June 3, 2022
 template: back-office-user-guide-template

@@ -1,13 +1,17 @@
+---
+title: Edit translations
+last_updated: May 31, 2022
+template: back-office-user-guide-template
+---
 
 
-
-
-
-1. On the **Glossary** page, next to the translation you want to edit, click **Edit**.
-2. On the **Edit Translation** page, enter translations per locale.
-3. Click **Save**.
+To edit a translation in the Back Office, follow the steps:
+1. Go to the **Administration&nbsp;<span aria-label="and then">></span> Glossary**.
+2. On the **Glossary** page, next to the translation you want to edit, click **Edit**.
+3. On the **Edit Translation** page, enter translations per locale.
+4. Click **Save**.
     This opens the **Glossary** page with a success message displayed.
-4. Ask your development team to apply the changes on the code level.    
+5. Ask your development team to apply the changes on the code level.    
 
 ## Reference information: NAME
 

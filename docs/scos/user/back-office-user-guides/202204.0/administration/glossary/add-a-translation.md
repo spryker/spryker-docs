@@ -23,7 +23,7 @@ To add a translation in the Back Office, follow the steps:
 5. Click **Save**.
     This opens the **Glossary** page with a success message displayed. The translation is displayed in the list.
 6. Ask your development team to add the translation on the code level.
-    Now you can use the translation across the Back Office. See [Next steps](#next-steps) for details.
+    Now you can add translations to content. See [Next steps](#next-steps) for details.
 
 ![Example of translations](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Glossary/Managing+Glossary/managing-glossary.png)
 
@@ -34,5 +34,5 @@ A **NAME** of a translation is a glossary key, a unique identifier of the transl
 
 ## Next steps
 
-* Add translations to CMS block by editing [placeholders in CMS blocks](/docs/scos/user/back-office-user-guides/202204.0/content/blocks/edit-placeholders-in-cms-blocks.html).
-* Add translations to CMS page by editing [placeholders in CMS pages](/docs/scos/user/back-office-user-guides/202204.0/content/pages/editing-cms-pages.html).
+* Add translations to CMS block by editing [placeholders in CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-placeholders-in-cms-blocks.html).
+* Add translations to CMS page by editing [placeholders in CMS pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html).

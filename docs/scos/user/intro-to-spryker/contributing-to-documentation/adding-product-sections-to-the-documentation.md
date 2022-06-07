@@ -10,9 +10,9 @@ When we launch a new product, you need to create a separate section for it. Usua
 
 To add a new product, follow these steps.
 
-## 1. Create the folder for the new project
+## 1. Create a folder for the new project
 
-In the `/docs` directory, create a folder for your poject and a folder designating the roles your project will have. For example, a project `acp` that has the `user` and `dev` roles, will have the following paths: `/docs/acp/user` and `/docs/acp/dev`.
+In the `/docs` directory, create a folder for your poject and a folder designating the roles of the project. For example, a project `acp` that has the `user` and `dev` roles, will have the following paths: `/docs/acp/user` and `/docs/acp/dev`.
 
 ## 2. Create sidebars for the product
 
@@ -361,22 +361,22 @@ To configure the search in the Algolia app of the Spryker docs, do the following
 1. Click the **Configuration** tab.
 2. Click **+  Add a Searchable Attribute**.
 3. Enter `title` and press `Enter`.
-4. Repeat steps 2-3 until you add the following attributes in the provided order:
-    * title
-    * headings
-    * content
-    * collection,categories,tags
-    * url
+4. Repeat steps 2-3 until you add the following attributes in the provided order and make them either ordered or unordered for search:
+    * title: ordered
+    * headings: ordered
+    * content: unordered
+    * collection,categories,tags: unordered
+    * url: ordered
 
 #### Add ranking attributes
 
 1. Go to **RELEVANCE ESSENTIALS > Ranking and Sorting**.
 2. Click **+  Add custom ranking attribute**.
 3. Enter `date` and press `Enter`.
-4. Repeat steps 2-3 until you add the following attributes in the provided order:
-    * date
-    * custom_ranking.heading
-    * custom_ranking.position
+4. Repeat steps 2-3 until you add the following attributes in the provided order and make them either ascending or descending:
+    * date: descending
+    * custom_ranking.heading: descending
+    * custom_ranking.position: ascending
 
 #### Configure languages
 
@@ -393,12 +393,12 @@ To configure the search in the Algolia app of the Spryker docs, do the following
 1. Go to **FILTERING AND FACETING > Facets**.
 2. Click **+  Add an Attrribute**.
 3. Enter `categories` and press `Enter`.
-4. Repeat steps 2-3 until you add the following attributes in the provided order:
-    * categories
-    * collection
-    * tags
-    * title
-    * type
+4. Repeat steps 2-3 until you add the following attributes in the provided order and make them either searchable or not searchable:
+    * categories: searchable
+    * collection: searchable
+    * tags: searchable
+    * title: searchable
+    * type: not searchable
 
 #### Configure highliting
 

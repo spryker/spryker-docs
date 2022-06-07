@@ -38,7 +38,7 @@ Make sure the following modules have been installed:
 | MODULE | EXPECTED DIRECTORY |
 |-|-|
 | MerchantProductOfferWishlist | vendor/spryker/merchant-product-offer-wishlist |
-| MerchantProductWishlist | vendor/spryker/merchant-product-offer-wishlist |
+| MerchantProductWishlist | vendor/spryker/merchant-product-wishlist |
 
 {% endinfo_block %}
 
@@ -171,6 +171,8 @@ class WishlistPageDependencyProvider extends SprykerWishlistPageDependencyProvid
     }
 }
 ```
+
+**src/Pyz/Zed/Wishlist/WishlistDependencyProvider.php**
 
 ```php
 <?php

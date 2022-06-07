@@ -321,7 +321,6 @@ Below you will find the list of the new/updated documentation released as part o
 
 * Payment Management
     * [Managing Payment Methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/payment-methods/managing-payment-methods.html)
-    * [Payment Methods: Reference Information](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/payment-methods/managing-payment-methods.html#reference-information-editing-payment-method-pages)
 * [Shipment](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/creating-shipments.html)
 
     * [Creating a Carrier Company](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-carrier-companies.html)

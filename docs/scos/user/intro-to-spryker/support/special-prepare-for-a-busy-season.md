@@ -15,17 +15,17 @@ redirect_from:
 
 We put together this article to help you prepare for a traditionally very busy season of the year: Black Friday, Cyber Monday and the Holiday Season but it will help you whenever you expect your Shop to receive record breaking traffic. In this article you find recommendations written for business decision makers, hosting providers, and Spryker Developers. So feel fry to forward our recommendations to your colleagues!
 
-## Business Tips
+## Business tips
 
 * Prepare you customer care to handle non-technical issues. As higher amounts of transactions result in higher number of customer support requests.
 * Know your customer: global businesses have Black Friday starts much earlier for eastern time zones and ends much later for western time zones
 * Plan your features in advance: delivery something just before the campaign increases your risks
 
-## DevOps and Hosting Tips
+## DevOps and Hosting tips
 
 * Follow [General performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html)
 * Prepare stand-by/hot-spare compute nodes. Buy it in advance.
-* Prepare sizing of Redis/ElasticSeach/Database services.
+* Prepare sizing of Redis/ElasticSearch/Database services.
 * Make sure you have clear procedures of adding a new compute node to your cluster and remove one from it. It would be good to have it fully automated allowing you to easily change your cluster configuration
 * Make sure content delivery services are in place to deliver images or other static binary data
 * Make sure [correct caching headers are set for static content](https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching)
@@ -34,7 +34,7 @@ We put together this article to help you prepare for a traditionally very busy s
 * Make sure infrastructure monitoring is in place so you can watch for errors or issues
 * Test your deployment: you should be able to quickly deliver fixes if needed
 
-## Tips for Developers
+## Tips for developers
 
 * Follow [General performance guidelines](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html)
 * Disable features, that might have no big value during Black Friday but add additional overhead:

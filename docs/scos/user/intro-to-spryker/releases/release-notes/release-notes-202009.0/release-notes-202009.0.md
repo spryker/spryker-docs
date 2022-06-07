@@ -11,6 +11,9 @@ redirect_from:
   - /docs/en/release-notes-2020090
   - /v6/docs/release-notes-2020090
   - /v6/docs/en/release-notes-2020090
+related:
+  - title: Security release notes - 202009.0
+    link: docs/scos/user/intro-to-spryker/releases/release-notes/release-notes-202009.0/security-release-notes-202009.0.html
 ---
 
 The Spryker Commerce OS is an end-to-end solution for digital commerce. This document contains a business level description of new features and enhancements we are announcing in September 2020.

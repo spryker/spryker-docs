@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Console commands
+title: "Tutorial: Console commands"
 description: Use the guide to create and use a new console command.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -41,7 +41,7 @@ vendor/bin/console glue:rest:build-request-validation-cache
 
 1. Create the `UpdateApplicationConsole` class.
 
-The console commands must be added in Zed, under the Communication layer of the module, to the Console folder. The console command must extend the `Console` class from Spryker, as you can see below:
+The console commands must be added in Zed, under the Communication layer of the module, to the `Console` folder. The console command must extend the `Console` class from Spryker:
 
 ```php
 <?php
@@ -57,7 +57,7 @@ class UpdateApplicationConsole extends Console
 }
 ```
 
-2. Configure the new console command: specify the name and a short description:
+2. Configure the new console command—specify the name and a short description:
 
 ```php
 <?php

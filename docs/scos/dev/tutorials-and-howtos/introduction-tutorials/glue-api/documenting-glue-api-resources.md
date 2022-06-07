@@ -64,7 +64,7 @@ After installation, open the file `src/Pyz/Zed/DocumentationGeneratorRestApi/Doc
 | `APPLICATION_PROJECT_ANNOTATION_SOURCE_DIRECTORY_PATTERN` | Specifies a template for paths where to search for REST API controllers on the **project** level. | `/Glue/%1$s/Controller/` |
 | `APPLICATION_CORE_ANNOTATION_SOURCE_DIRECTORY_PATTERN` | Specifies a template for paths where to search for REST API controllers on the **vendor** level. | `/*/*/src/*/Glue/%1$s/Controller/` |
 
-For information about REST API controllers, see step [4. Create a Resource Controller](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html#create-a-resource-controller) in the **Implementing a REST API Resource** article.
+For information about REST API controllers, see step [4. Create a Resource Controller](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html#create-a-resource-controller) in the **Implementing a REST API Resource** document.
 
 ## 2. Test run
 
@@ -86,7 +86,7 @@ The visibility of request and response fields is controlled by XML attribute res
 
 If the `restRequestParameter` attribute is not present for a field, the default value no is assumed.
 
-A response is generated using all properties of a transfer object. Below, you can see an example definition of a request transfer object:
+A response is generated using all properties of a transfer object. See the following definition example of a request transfer object:
 
 **auth_rest_api.transfer.xml**
 
@@ -111,7 +111,7 @@ vendor/bin/console transfer:generate
 
 Many REST API resources are related to each other. For example, the cart items resource is related to the products resources describing the products included in a cart, and so on. On the API side, such relationships are expressed with the help of [resource relationships](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-infrastructure.html#resource-relationships).
 
-The resource relationships that already exist, are added to the documentation automatically. However, some resources are only available through the relationships, which means, they do not have their own resource route. In these cases, to facilitate implementation of clients based on the Glue REST API of your project, you can describe such relationships in the generated documentation. To describe how two resources are related to each other, add an additional annotation to the `ResourceRelationshipPlugin` that links the resources together. For example, in the code sample below `ResourceRelationshipPlugin` allows including items while requesting a cart, is expanded with the specification of the relationship attributes type:
+The resource relationships that already exist, are added to the documentation automatically. However, some resources are only available through the relationships, which means, they do not have their own resource route. In these cases, to facilitate implementation of clients based on the Glue REST API of your project, you can describe such relationships in the generated documentation. To describe how two resources are related to each other, add an additional annotation to the `ResourceRelationshipPlugin` that links the resources together. For example, in the following code sample, `ResourceRelationshipPlugin` allows including items while requesting a cart is expanded with the specification of the relationship attributes type:
 
 ```php
 /**
@@ -171,7 +171,7 @@ Each controller has `getAction`, `postAction`, `patchAction`, or `deleteAction` 
 public function getAction(RestRequestInterface $restRequest)
 ```
 
-The annotation keys are described below:
+The following table describes the annotation keys:
 
 | ANNOTATION | DESCRIPTION | NOTES |
 | --- | --- | --- |

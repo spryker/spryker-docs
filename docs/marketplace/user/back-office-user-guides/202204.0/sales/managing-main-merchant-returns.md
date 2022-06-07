@@ -3,6 +3,11 @@ title: Managing main merchant returns
 last_updated: Aug 09, 2021
 description: This guide explains how to manage main merchant returns in the Back Office.
 template: back-office-user-guide-template
+related:
+  - title: Managing main merchant orders
+    link: docs/marketplace/user/back-office-user-guides/page.version/sales/managing-main-merchant-orders.html
+  - title: Marketplace Return Management feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-return-management-feature-overview.html
 ---
 
 **My Returns** lets you manage the returns as follows:

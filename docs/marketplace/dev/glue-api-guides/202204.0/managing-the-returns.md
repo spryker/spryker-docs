@@ -2,6 +2,9 @@
 title: Managing the returns
 description: Manage the returns via Glue API in the Spryker Marketplace.
 template: glue-api-storefront-guide-template
+related:
+  - title: Retrieving Marketplace orders
+    link: docs/marketplace/dev/glue-api-guides/page.version/retrieving-marketplace-orders.html
 ---
 
 The Return Management API lets developers retrieve return information and create returns. The list of retrievable information includes:

@@ -2,6 +2,11 @@
 title: Marketplace Merchant Custom Prices feature overview
 description: This document contains concept information for the Marketplace Merchant Custom Prices feature.
 template: concept-topic-template
+related:
+  - title: Managing marketplace abstract product prices
+    link: docs/marketplace/user/merchant-portal-user-guides/page.version/products/abstract-products/managing-marketplace-abstract-product-prices.html
+  - title: Managing marketplace concrete product prices
+    link: docs/marketplace/user/merchant-portal-user-guides/page.version/products/concrete-products/managing-marketplace-concrete-product-prices.html
 ---
 
 The *Marketplace Merchant Custom Prices* feature allows marketplace merchants to define custom prices for the marketplace products within specific business units of B2B customers via the Merchant Portal.

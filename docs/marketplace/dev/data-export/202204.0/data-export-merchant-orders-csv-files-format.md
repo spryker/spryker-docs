@@ -3,6 +3,9 @@ title: Data export Merchant Orders CSV files format
 last_updated: May 27, 2021
 description: This document contains content of merchant-orders, merchant order-items, and merchant-order-expenses.
 template: import-file-template
+related:
+  - title: Merchant order overview
+    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/merchant-order-overview.html
 ---
 
 This document contains content of the following files you get when [exporting data on orders](/docs/scos/dev/data-export/{{page.version}}/data-export.html) generated in Spryker:

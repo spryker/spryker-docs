@@ -3,6 +3,9 @@ title: Marketplace Shipment feature integration
 last_updated: Jul 05, 2021
 description: This document describes the process how to integrate Marketplace Shipment feature into your project
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Shipment feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-shipment-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Shipment feature into a Spryker project.

@@ -2,6 +2,11 @@
 title: Marketplace Merchant Portal Product Offer Management feature overview
 description: This document describes product offer management in the Merchant Portal.
 template: concept-topic-template
+related:
+  - title: Managing marketplace product offers
+    link: docs/marketplace/user/merchant-portal-user-guides/page.version/offers/managing-product-offers.html
+  - title: Managing merchant product offers
+    link: docs/marketplace/user/back-office-user-guides/page.version/marketplace/offers/managing-merchant-product-offers.html
 ---
 
 In a marketplace environment, merchants manage [product offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html) in the Merchant Portal.
@@ -23,8 +28,6 @@ Merchants define the following settings when creating product offers:
 |Stock | Offer's own stock that's not dependent on the respective product's stock. |
 |Prices | Product offers support all types of Spryker Commerce OS prices: [volume](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html), [default and original](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html). |
 | Validity dates | Defines the period when an offer is displayed on the Storefront. Even if the respective product is no longer available, the offer can still be displayed. |
-
-
 
 ## Related Business User articles
 

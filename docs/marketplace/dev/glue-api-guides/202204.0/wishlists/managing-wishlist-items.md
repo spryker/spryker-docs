@@ -7,6 +7,9 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/managing-wishlists/managing-wishlist-items.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-wishlists/managing-wishlist-items.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-wishlists/managing-wishlist-items.html
+related:
+  - title: Managing wishlists
+    link: docs/marketplace/dev/glue-api-guides/page.version/wishlists/managing-wishlists.html
 ---
 
 This endpoint lets you add and remove items from wishlists.

@@ -28,19 +28,19 @@ This document provides additional information about the native configuration of 
 
 Following the instructions, you can get Spryker running on AWS. The first part is devoted to the step-by-step configuration of the AWS native services like RDS, Elasticsearch Service, and ElastiCache to prepare a suitable infrastructure for running Spryker. The second part is the installation of Spryker itself.
 
-## AWS native services configuration
+## Install AWS native services
 
-The first thing you need to do to install Spryker in AWS is to configure the following AWS native services:
+To install Spryker in AWS, configure the following AWS native services:
 * Security Group
-* RDS (Managed relational database service)
+* Managed relational database service (RDS)
 * Elasticsearch Service
 * ElastiCache
 
-To create and configure the services, follow these guidelines:
+To create and configure the services, follow instructions in the following sections.
 
-### Security group
+### Create s security group
 
-To create a security group, do the following:
+To create a security group, follow these steps:
 
 1. Open the EC2 console.
 
@@ -54,7 +54,7 @@ To create a security group, do the following:
 
 ![Choose security group](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/choose-security-group.png)
 
-For more information about creating and configuring the security group, see [Creating a Security Group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html#creating-security-group) and [Adding Rules to a Security Group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html#creating-security-group)
+For more information about creating and configuring the security group, see [Creating a Security Group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html#creating-security-group) and [Adding Rules to a Security Group](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html#creating-security-group).
 
 {% info_block warningBox %}
 
@@ -62,9 +62,9 @@ You need to choose the security group for all services and instances that you cr
 
 {% endinfo_block %}
 
-### Managed relational database service (RDS)
+### Create RDS
 
-To create and configure RDS, do the following:
+To create and configure RDS, follow these steps:
 
 1. Open the RDS console.
 ![RDS console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/rds-console.png)
@@ -103,11 +103,11 @@ For production purposes, we recommend choosing Multi-AZ Deployment.
 
 For more information about creating the database, see [Database creation manual](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Tutorials.WebServerDB.CreateDBInstance.html).
 
-### Elasticsearch service
+### Create Elasticsearch service
 
-To create and configure the Elasticsearch service console, do the following:
+To create and configure the Elasticsearch service console, follow these steps:
 
-1. Open Elasticsearch service console.
+1. Open the Elasticsearch service console.
 
 ![Elasticsearch console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/elastic-search-console.png)
 
@@ -117,7 +117,7 @@ To create and configure the Elasticsearch service console, do the following:
 
 3. Fill out all the outlined fields.
 
-4. Choose a deployment type
+4. Choose a deployment type.
 
 {% info_block infoBox %}
 
@@ -140,9 +140,9 @@ For production purposes, we recommend choosing the Production deployment type.
 
 For more information about how to create an Elasticsearch service domain, see [Elasticseacrh service creation manual](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains)
 
-### ElastiCache
+### Configure lastiCache
 
-To configure ElastiCache, do the following:
+To configure ElastiCache, follow these steps:
 
 1. Open the ElastiCache console.
 
@@ -160,11 +160,11 @@ To configure ElastiCache, do the following:
 
 ![Primary endpoint](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/get-primary-endpoint.png)
 
-For more details, see [ElastiCache creation manual](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/GettingStarted.CreateCluster.html)
+For more details, see [ElastiCache creation manual](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/GettingStarted.CreateCluster.html).
 
-## EC2 Instance installation and configuration
+## Install and configure the EC2 instance
 
-To install and configure the EC2 instance, do the following:
+To install and configure the EC2 instance, follow these steps:
 * Create SSH key
 * Launch instance
 * Configure Elastic IP
@@ -172,19 +172,19 @@ To install and configure the EC2 instance, do the following:
 
 To perform these actions, follow these guidelines:
 
-### Creating the SSH key
+### Create an SSH key
 
-To create the SSH key, use the [manual](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair)
+To create an SSH key, use the [manual](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair)
 
-### Launching instance
+### Launch the instance
 
-To launch the instance, do the following:
+To launch the instance, follow these steps:
 
 1. Open EC2 console.
 
 ![EC2 console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/ec2-console.png)
 
-2. Click **Launch instance**.
+2. Click **Launch Instance**.
 
 ![Launch instance](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/launch-instance.png)
 
@@ -210,9 +210,9 @@ To launch the instance, do the following:
 
 ![Select SHH keys](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/select-ssh-key.png)
 
-### Elastic IP
+### Configure Elastic IP
 
-To configure Elastic IP, do the following:
+To configure Elastic IP, follow these steps:
 
 1. Open EC2 console.
 
@@ -237,9 +237,9 @@ To configure Elastic IP, do the following:
 
 For more information about configuring the Elastic IP Address, see [Allocating an Elastic IP Address](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-allocating) and [Associating an Elastic IP Address with a Running Instance](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html#using-instance-addressing-eips-associating)
 
-### Connecting to the instance
+### Connect to the instance
 
-To connect to the instance, do the following:
+To connect to the instance, follow these steps:
 
 1. Click **Actions&nbsp;<span aria-label="and then">></span> Connect**.
 
@@ -249,13 +249,13 @@ To connect to the instance, do the following:
 
 ![Connection instructions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/connection-instructions.png)
 
-## Installing additional software
+## Install additional software
 
 To install Spryker in AWS, install and configure additional software. Use the following guidelines for instructions.
 
-### System tools installation
+### Install system tools
 
-To install the system tools, do the following:
+To install the system tools, follow these steps:
 
 1. Configure additional repositories:
 
@@ -292,7 +292,7 @@ make  \
 apache2-utils
 ```
 
-### PHP installation
+### Install PHP
 
 To install PHP, run the commands:
 
@@ -331,9 +331,9 @@ sudo update-alternatives --set phpize /usr/bin/phpize7.2
 sudo update-alternatives --set php-config /usr/bin/php-config7.2
 ```
 
-### PHP configuration
+### Configure PHP
 
-To configure PHP, do the following:
+To configure PHP, follow these steps:
 
 1. Create or update the following files using the provided templates:
 
@@ -480,7 +480,7 @@ opcache.optimization_level=0
 ```
 </details>  
 
-### Postfix installation
+### Install Postfix
 
 Postfix is a mail server used to send mail. To install it, run these commands:    
 
@@ -489,7 +489,7 @@ sudo apt update
 sudo apt install -q -y postfix
 ```
 
-### Nginx installation
+### Install Nginx
 
 Nginx is an open-source web server that proxies requests to PHP FPM via FCGI protocol. Run these commands to install it:
 
@@ -499,9 +499,9 @@ sudo apt-get  install -q -y nginx nginx-extras
 sudo rm /etc/nginx/sites-enabled/default
 ```
 
-### Nginx configuration
+### Configure Nginx
 
-To configure Nginx, do the following:
+To configure Nginx, follow these steps:
 
 1. Update `{% raw %}{{{% endraw %}YVES_HOST{% raw %}}}{% endraw %}` and `application_store` variables for each store (AT, DE, US), and create `/etc/nginx/conf.d/vhost-yves-{% raw %}{{{% endraw %}STORE_NAME{% raw %}}}{% endraw %}.conf` using the template:
 
@@ -717,7 +717,7 @@ more_clear_headers 'X-Powered-By' 'X-Store' 'X-Locale' 'X-Env' 'Server';
 sudo service php7.2-fpm restart
 ```
 
-6. Create  `/etc/nginx/conf.d/jenkins.conf`:
+6. Create `/etc/nginx/conf.d/jenkins.conf`:
 
 <details>
 <summary markdown='span'>/etc/nginx/conf.d/jenkins.conf</summary>
@@ -798,7 +798,7 @@ fastcgi_param HTTP_X_REQUEST_START "t=${msec}";
 ```
 </details>
 
-### Node.js installation
+### Install Node.js
 
 To install Node.js, run the following command:
 
@@ -806,7 +806,7 @@ To install Node.js, run the following command:
 sudo apt-get install -y nodejs
 ```
 
-### RabbitMQ installation
+### Insall RabbitMQ
 
 To install RabbitMQ, run the commands as root:
 
@@ -821,7 +821,7 @@ sudo apt-get update
 sudo apt-get install -y rabbitmq-server
 ```
 
-### RabbitMQ configuration
+### Configure RabbitMQ
 
 To configure RabbitMQ, run the commands as root:   
 
@@ -852,9 +852,9 @@ sudo rabbitmqctl set_permissions -p /DE_spryker_zed spryker ".*" ".*" ".*"
 ```
 Repeat for `/AT_spryker_zed`, `/US_spryker_zed` virtual hosts.
 
-### Jenkins installation
+### Install Jenkins
 
-To install Jenkins, do the following:
+To install Jenkins, follow these steps:
 
 1. Run the commands as root:
 
@@ -877,9 +877,9 @@ sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/ja
 sudo service jenkins stop
 ```
 
-### Jenkins configuration
+### Configure Jenkins
 
-To configure Jenkins, do the following:
+To configure Jenkins, follow these steps:
 
 1. Change the `JENKINS_USER` variable in the `/etc/init.d/jenkins` and `/etc/default/jenkins` files to `JENKINS_USER="www-data"`.
 2. Create an init scripts directory:
@@ -968,7 +968,7 @@ sudo systemctl daemon-reload
 sudo service jenkins start
 ```
 
-### System Configuration
+### Configure system
 
 1. Change swappiness configuration:
 
@@ -1004,11 +1004,11 @@ su www-data www-data
 }
 ```
 
-## Spryker installation
+## Install Spryker
 
-To install Spryker, do the following:    
+To install Spryker, follow these steps:    
 
-1. Create data folder:
+1. Create a data folder:
 
 ```shell
 sudo mkdir /data
@@ -1016,7 +1016,7 @@ sudo chown ubuntu /data
 cd /data
 ```
 
-2. Clone project:
+2. Clone the project:
 
 ```shell
 git clone https://github.com/spryker-shop/b2c-demo-shop.git ./
@@ -1025,9 +1025,9 @@ git checkout tags/{{page.version}}
 
 3. Create local configurations using the template.  
 
-You should update all variables in curly braces such as {% raw %}{{{% endraw %}RDS_USERNAME{% raw %}}}{% endraw %} or {% raw %}{{{% endraw %} REDIS_ENDPOINT {% raw %}}}{% endraw %}.
+You should update all variables in curly braces such as `{% raw %}{{{% endraw %}RDS_USERNAME{% raw %}}}{% endraw %}` or `{% raw %}{{{% endraw %}REDIS_ENDPOINT{% raw %}}}{% endraw %}`.
 
-<details open>
+<details>
 <summary markdown='span'>/data/config/Shared/config_local.php</summary>
 
 ```php
@@ -1853,13 +1853,13 @@ sudo chown -R www-data:www-data /data
 
 {% info_block errorBox %}
 
-Make sure to provide secure configuration of Zed service. Sufficient security is not provided by "Basic AUTH" based on web server configuration, IP address restriction, or direct VPN connection to the server.
+Make sure to provide a secure configuration of Zed service. Sufficient security is not provided by "Basic AUTH" based on web server configuration, IP address restriction, or direct VPN connection to the server.
 
 {% endinfo_block %}
 
 ### Requirements
 
-RDS (Managed relational database service):
+RDS:
 
 | REQUIREMENT | VALUE |
 | --- | --- |

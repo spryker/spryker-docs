@@ -14,7 +14,7 @@ redirect_from:
   - /v6/docs/en/howto-enable-guest-checkout-in-b2b-demo-shop
 ---
 
-As B2B environments usually implement complex business logic, in the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html), guest users cannot check out by default. In some cases, you might need guest checkout to be enabled.
+As B2B environments usually implement complex business logic, in the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html), guest users cannot check out by default. However, in some cases, you may need guest checkout to be enabled.
 
 {% info_block infoBox "Exemplary implementation" %}
 
@@ -150,4 +150,6 @@ and can('SeeOrderPlaceSubmitPermissionPlugin')
 and (not is_granted('ROLE_USER') or can('WriteSharedCartPermissionPlugin', data.cart.idQuote)),
 ```
 
-After this, you can check out as a guest user. After adding items to cart, use the `http://yves.de.spryker.local/en/cart` custom URL for checkout.
+After this, you can check out as a guest user.
+
+After adding items to cart, use the `https://mysprykershop/en/cart` custom URL for checkout.

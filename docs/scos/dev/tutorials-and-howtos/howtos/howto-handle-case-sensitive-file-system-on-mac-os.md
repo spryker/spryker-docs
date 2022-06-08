@@ -45,7 +45,7 @@ You can use Mac OS' Disk Utility application to create a disk image. You create 
 8. You can leave encryption and partitions as is.
 9. Select the image format: **Sparse**. Note that sometimes, changing the image format resets the setting for image size.
 
-The resulting dialog should look as follows:
+The resulting dialog looks as follows:
 ![Case sensitive file system](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+Handle+Case+Sensitive+File-System/case+sensitive+system.png)
 
 After the disk has been created, you can see it being mounted in Finder already.

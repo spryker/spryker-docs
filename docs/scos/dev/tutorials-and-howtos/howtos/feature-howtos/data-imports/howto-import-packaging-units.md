@@ -22,7 +22,7 @@ This document shows how to extend the list of the packaging unit types available
 
 {% info_block warningBox "Note" %}
 
-The packaging unit type import should happen first; otherwise, you can't import packaging units if the types are not present yet.
+The packaging unit type import must happen first; otherwise, you can't import packaging units if the types are not present yet.
 
 {% endinfo_block %}
 

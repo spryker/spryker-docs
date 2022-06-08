@@ -167,7 +167,7 @@ class CustomerSlotBlockConditionFormPlugin extends AbstractPlugin implements Cms
 
 {% info_block errorBox %}
 
-The name of the first form element should correspond to the condition name you are creating. In our case, it looks like `$builder->add('customer', FormType::class)`.
+The name of the first form element must correspond to the condition name you are creating. In our case, it looks like `$builder->add('customer', FormType::class)`.
 
 Child form elements can have any names and subsequent child form elements.
 
@@ -220,7 +220,7 @@ In this case, the created form has five elements:
 
 {% info_block infoBox %}
 
-You should be able to see a rendered form of the customer visibility condition.
+You must be able to see a rendered form of the customer visibility condition.
 
 {% endinfo_block %}
 
@@ -230,7 +230,7 @@ You should be able to see a rendered form of the customer visibility condition.
 
 {% info_block infoBox %}
 
-They should contain the customer condition data you have set in the Back Office.
+They must contain the customer condition data you have set in the Back Office.
 
 {% endinfo_block %}
 

@@ -22,7 +22,7 @@ The document shows how to install and work with precise decimal objects.
 
 The `decimal-object` library lets you work with precise decimal numbers. A decimal number is a number that is smaller than an integer. Decimal numbers can be used when more precision is required, while float numbers are imprecise and shouldn't be used for cases where exact precision is necessary. For example, when dealing with money (a price of a product), measuring weights or liquids (food or water respectively), and length (meters such as a cable), decimal numbers can be used.
 
-## Why you should use decimal objects
+## Why to use decimal objects
 
 The benefits of using decimal numbers are as follows:
 

@@ -506,7 +506,7 @@ set $application_store DE;
 #include /etc/nginx/maintenance.conf;
 
 # Static files—allow only specified here paths
-# all other resources should be served via static host (and cached, if possible, by reverse proxy or cdn)
+# all other resources must be served via static host (and cached, if possible, by reverse proxy or cdn)
 location ~ (/assets/|/maintenance.html|/favicon.ico|/crossdomain.xml) {
 access_log off;
 expires 30d;
@@ -589,7 +589,7 @@ set $application_store DE;
 #include /etc/nginx/maintenance.conf;
 
 # Timeout for ZED requests—10 minutes
-# (longer requests should be converted to jobs and executed by jenkins)
+# (longer requests must be converted to jobs and executed by jenkins)
 proxy_read_timeout 600s;
 proxy_send_timeout 600s;
 fastcgi_read_timeout 600s;
@@ -655,7 +655,7 @@ set $application_env staging;
 set $application_store DE;
 
 # Timeout for Api requests—10 minutes
-# (longer requests should be converted to jobs and executed via jenkins)
+# (longer requests must be converted to jobs and executed via jenkins)
 proxy_read_timeout 600s;
 proxy_send_timeout 600s;
 fastcgi_read_timeout 600s;
@@ -765,7 +765,7 @@ fastcgi_param SERVER_NAME $server_name;
 fastcgi_param REDIRECT_STATUS 200;
 
 # Are we using ssl? Backward compatibility env, to emulate Apache.
-# According to RFC, app should take a look at "X-Forwarded-Proto" header to deterimine if SSL is on.
+# According to RFC, app must take a look at "X-Forwarded-Proto" header to deterimine if SSL is on.
 if ($http_x_forwarded_proto = "https") {
 set $have_https on;
 }
@@ -993,7 +993,7 @@ git checkout tags/{{page.version}}
 
 3. Create local configurations using the template.  
 
-You should update all variables in curly braces such as `{% raw %}{{{% endraw %}RDS_USERNAME{% raw %}}}{% endraw %}` or `{% raw %}{{{% endraw %}REDIS_ENDPOINT{% raw %}}}{% endraw %}`.
+Update all variables in curly braces such as `{% raw %}{{{% endraw %}RDS_USERNAME{% raw %}}}{% endraw %}` or `{% raw %}{{{% endraw %}REDIS_ENDPOINT{% raw %}}}{% endraw %}`.
 
 <details>
 <summary markdown='span'>/data/config/Shared/config_local.php</summary>

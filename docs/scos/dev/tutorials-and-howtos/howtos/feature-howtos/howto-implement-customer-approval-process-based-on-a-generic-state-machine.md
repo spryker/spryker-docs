@@ -249,7 +249,7 @@ class CustomerApproveProcessStateMachineHandlerPlugin extends AbstractPlugin imp
     }
 
     /**
-     * This method should return all list of StateMachineItemTransfer, with (identifier, IdStateMachineProcess, IdItemState)
+     * This method returns all list of StateMachineItemTransfer, with (identifier, IdStateMachineProcess, IdItemState)
      *
      * @param array $stateIds
      *

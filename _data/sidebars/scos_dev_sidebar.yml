@@ -4087,7 +4087,7 @@ entries:
       - "201811.0"
   - title: Technical enhancement integration guides
     nested:
-    - title: Integrating development tools
+    - title: Integrate development tools
       nested:
       - title: Formatter
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html
@@ -4127,6 +4127,8 @@ entries:
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-health-checks.html
     - title: MariaDB database engine
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-mariadb-database-engine.html
+    - title: Multi-database logic
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-multi-database-logic.html
     - title: Multi-queue publish structure
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html
     - title: Product CMS blocks

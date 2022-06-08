@@ -1,5 +1,5 @@
 ---
-title: Creating carrier companies
+title: Create carrier companies
 description: Use the procedure to create a carrier company and activate it in the Back Office.
 last_updated: Aug 9, 2021
 template: back-office-user-guide-template
@@ -18,35 +18,22 @@ related:
     link: docs/scos/user/features/page.version/shipment-feature-overview.html
 ---
 
-The topic describes how to create a carrier company.
+To create a carrier company in the Back Office, follow the steps:
 
-## Prerequisites
-
-To start working with the carrier companies, go to **Administration&nbsp;<span aria-label="and then">></span> Delivery Methods**.
-
-## Creating carrier companies
-
-To create a carrier company:
-
-1. In the top-right corner of the **Delivery Methods** page, click **+Create new carrier company**.
-2. On the **Create new Carrier company** page, enter a name for the carrier company:
-
-{% info_block warningBox %}
+1. Go to **Administration&nbsp;<span aria-label="and then">></span> Delivery Methods**.
+2. On the **Delivery Methods** page, click **Create new carrier company**.
+3. On the **Create new Carrier company** page, enter a **NAME**.
+4. Select the **ACTIVATE** checkbox.
+5. Click **Add**.
+    This opens the **Delivery Methods** page with a success message displayed.
 
  The name you enter will be visible on the **Create new delivery method** page only.
 
-{% endinfo_block %}
-
-3. To activate the carrier company, select the **Enabled?** checkbox.
-4. To complete the creation, click **Add**.
-
-{% info_block infoBox %}
-
-To get back to the list of delivery methods, click **List of shipment methods**. However, clicking this option *prior to* saving the changes discards all the changes and takes you to the **Delivery Methods** page.
-
-{% endinfo_block %}
+ | ATTRIBUTE |DESCRIPTION|
+ | --- | --- |
+ | NAME | You will use the name for creating delivery methods for the company. |
+ | ACTIVATE | Defines if you can [create delivery methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-carrier-companies.html) for the company. |
 
 ## Next steps
 
-You have now added a new carrier company for your store.
-The next step is to add a new shipment method to it. For more details, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html).
+Add shipment methods for the created company. For instructions, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html).

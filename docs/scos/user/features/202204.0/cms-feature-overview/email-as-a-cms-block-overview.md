@@ -108,9 +108,9 @@ You can use the functionalities described in this section, regardless of the ema
 
 ### Glossary Keys in Email Templates
 
-You can add [glossary keys](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html) directly to email templates, and the respective translations are fetched automatically. When an email with a glossary key is sent, the key is replaced with the translation you defined for the locale selected by the customer. For example, you add the `cart.price.grand.total` glossary key to an email template. When the email is sent to the customer with de_DE locale, the key is replaced with Summe.
+You can add [glossary keys](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/add-translations.html) directly to email templates, and the respective translations are fetched automatically. When an email with a glossary key is sent, the key is replaced with the translation you defined for the locale selected by the customer. For example, you add the `cart.price.grand.total` glossary key to an email template. When the email is sent to the customer with de_DE locale, the key is replaced with Summe.
 
-To learn how a Back Office User creates translations, see [Managing Glossary](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html).
+To learn how a Back Office User creates translations, see [Managing Glossary](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/add-translations.html).
 
 ### Variables in Email Templates
 

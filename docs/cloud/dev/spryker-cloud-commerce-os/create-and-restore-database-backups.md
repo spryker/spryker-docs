@@ -1,5 +1,5 @@
 ---
-title: CreatE and restore database backups
+title: Create and restore database backups
 description: Learn how to manage database backups in Spryker Cloud Commerce OS.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/creating-and-restoring-database-backups

@@ -17,6 +17,9 @@ redirect_from:
   - /docs/scos/user/user-guides/201907.0/back-office-user-guide/administration/warehouses/creating-warehouses.html
   - /docs/scos/user/back-office-user-guides/201907.0/administration/warehouses/creating-warehouses.html
   - /docs/scos/user/back-office-user-guides/202204.0/administration/warehouses/creating-warehouses.html
+related:
+  - title: Inventory Management feature overview
+    link: docs/scos/user/features/page.version/inventory-management-feature-overview.html
 ---
 
 The document describes how to create warehouses in the Back Office.

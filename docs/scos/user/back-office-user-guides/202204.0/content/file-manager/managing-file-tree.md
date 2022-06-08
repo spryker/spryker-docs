@@ -16,6 +16,11 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/content/file-manager/managing-file-list.html
   - title: Add and edit MIME types
     link: docs/scos/user/back-office-user-guides/page.version/administration/add-and-edit-mime-types.html
+  - title: File Manager feature overview
+    link: docs/scos/user/features/page.version/file-manager-feature-overview/file-manager-feature-overview.html
+  - title: File uploader overview
+    link: docs/scos/user/features/page.version/file-manager-feature-overview/file-uploader.html
+---
 ---
 
 This article describes how to manage the file tree.
@@ -33,6 +38,7 @@ To start working with file tree elements, navigate to **Content&nbsp;<span aria-
 To preserve a logical structure of the files that are going to be uploaded to the system and used for the marketing campaigns, you should define the structure according to which your files are going to be stored. Structured marketing campaign materials will also help the other Marketing Team members to work with the File Manager section.
 
 To create a file directory:
+
 1. On the *Overview of File Tree* page, click **Create File Directory**  in the top right corner.
 2. On the *Create Directory Element* page, enter the name of your directory to the *Name* field and populate the *Title* field for all locales.
 3. Once done, click **Save**.
@@ -50,6 +56,7 @@ Once you are satisfied with the order, click **Save Order**.
 ## Deleting directories
 
 To delete a directory:
+
 1. Click on the directory in the *File Tree* section.
 2. Click **Delete Directory** in the top right corner of the page.
 3. On the system message pop-up, click **Confirm** to confirm the action.
@@ -60,6 +67,7 @@ To delete a directory:
 Once you have set up the directory structure, you can proceed with uploading files to those folders.
 
 To upload a file:
+
 1. Click on the directory to which a file needs to be uploaded.
 2. In the top right corner of the *Files List* section, click **Add File**.
 3. On the *Add a file* page, do the following:
@@ -74,10 +82,12 @@ The file is uploaded to the selected folder.
 ## Managing files
 
 Once the file is uploaded, you can manage it from two locations:
+
 * File List (for more details, see [Managing File List](/docs/scos/user/back-office-user-guides/{{page.version}}/content/file-manager/managing-file-list.html))
 * File Tree
 
-**To manage a file:**
+To manage a file:
+
 1. Navigate to the folder where the file locates and click on it.
 2. In the *Files List* section, select one of the following in the *Actions* column for a file:
     1. **View** to view the file. You are redirected to the *View file* page, where you can download it by clicking **Download** in the *Actions* column.

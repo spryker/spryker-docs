@@ -14,6 +14,8 @@ redirect_from:
 related:
   - title: Managing Products
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
+  - title: Product feature overview
+    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
 ---
 
 This document describes how to edit abstract products.

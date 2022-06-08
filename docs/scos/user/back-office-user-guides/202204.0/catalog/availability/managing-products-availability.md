@@ -16,6 +16,8 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
   - title: Timed Product Availability Feature Overview
     link: docs/scos/user/features/page.version/product-feature-overview/timed-product-availability-overview.html
+  - title: Inventory Management feature overview
+    link: docs/scos/user/features/202204.0/inventory-management-feature-overview.html
 ---
 
 This topic describes the actions you can do in the **Availability** section of  the Back Office.
@@ -33,9 +35,10 @@ Each section contains reference information. Make sure to review it before you s
 ## Checking availability
 
 To check the product availability:
+
 1. In the _Actions_ column of the *Products availability list* table, click **View** next to the corresponding product item.
 This will take you to the *Product Availability* page.
-2. In case of a multistore setup, in the **Store** drop-down, select the store locale to check the product's availability for each specific locale.
+2. In case of a multi-store setup, in the **Store** drop-down, select the store locale to check the product's availability for each specific locale.
 
 ### Reference information: Checking availability
 
@@ -44,6 +47,7 @@ This section describes attributes you see when checking availability.
 #### Overview of Products Availability page
 
 On the *Overview of Products Availability* page, you see the following:
+
 * The SKUs and names of the abstract products and the SKU values is a hyperlink to this product Edit page.
 * The number of products in current stock and the number of reserved products (meaning ordered ones)
 *  The identifier for the bundled product and for those that are **never out of stock** (Yes/No values)
@@ -51,6 +55,7 @@ On the *Overview of Products Availability* page, you see the following:
 #### Product Availability page
 
 On the *Product Availability* page, you see 2 sections:
+
 * Abstract product availability
 * Variant availability
 
@@ -59,6 +64,7 @@ The *Abstract product availability* section is not modifiable. It only provides 
 Unlike *Abstract product availability*, *Variant availability* provides you with an option to edit stock. You invoke the edit stock flow from the *Actions* column. It also has the identifier of the product bundle.
 
 Both sections contain the following info:
+
 * The SKU and name of the abstract product/product variant
 * The availability value, the number of products in current stock, and the number of reserved products (meaning ordered ones)
 * The identifier for the **never out of stock** (Yes/No values)
@@ -94,10 +100,14 @@ Please note that you are updating the product variant availability, not the bund
 {% endinfo_block %}
 
 **Tips and tricks**
+
 <br>You can edit stock for variants from the *Edit Concrete Product* page:
+
 1. Navigate to the *Edit Product Abstract* using one of the following options:
+
     1.  **Products&nbsp;<span aria-label="and then">></span> Products&nbsp;<span aria-label="and then">></span> Edit**.
     2.  Click a hyperlinked SKU value in the **Availability&nbsp;<span aria-label="and then">></span> Product availability list** table.
+    
 2. In the *Variants* tab, click **Edit** next to the variant for which you would like to update the stock value.
 3. Go to the *Price&Stock* tab.
 4. Enter **Quantity** and select **Never out of stock** if you want the product to be always available.

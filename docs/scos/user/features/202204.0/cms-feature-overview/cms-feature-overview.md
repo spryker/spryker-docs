@@ -10,7 +10,8 @@ redirect_from:
   - /2021080/docs/en/cms
   - /docs/cms
   - /docs/en/cms
-  - //docs/scos/user/features/202200.0/cms-feature-overview/cms-feature-overview.html
+  - /docs/scos/user/features/202200.0/cms-feature-overview/cms-feature-overview.html
+
 ---
 
 The *CMS* feature is a content management system that lets you create and manage the content of custom pages that are not part of the product catalog.

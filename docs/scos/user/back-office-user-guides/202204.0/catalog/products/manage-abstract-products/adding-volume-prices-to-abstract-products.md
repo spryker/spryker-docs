@@ -11,6 +11,11 @@ redirect_from:
   - /docs/en/adding-volume-prices-to-abstract-products
   - /docs/scos/user/back-office-user-guides/202001.0/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
+related:
+  - title: Product feature overview
+    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
+  - title: Volume Prices overview
+    link: docs/scos/user/features/page.version/prices-feature-overview/volume-prices-overview.html
 ---
 
 This document describes how to add volume prices to abstract products.
@@ -26,6 +31,7 @@ Review the [reference information](/docs/scos/user/back-office-user-guides/{{pag
 ## Adding volume prices to abstract products
 
 To add volume prices to abstract products:
+
 1. Next to the product you want to add volume prices for, select **Edit**.
 2. On the *Edit Product* page, switch to the *Price & Tax* tab.
 3. Next to the store you want to add volume prices for, select **> Add Product Volume Price**.
@@ -48,6 +54,7 @@ To add volume prices to abstract products:
 | Net price | Net price of the product with the quantity equal or bigger than defined in the **Quantity** field.  A net price is a price before tax. |
 
 **The Storefront example:**
+
 <br>Let's say you have a product that you want to sell with a special price if a user wants to buy a specific number of the same product. For example, a Smartphone with a flash memory equals 16GB costs 25 Euros per item, but you have defined that if a user buys three items, the cost will be 23 Euros instead of 25.
 
 ![Volume prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Products:+Reference+Information/Volume-prices.gif)

@@ -10,6 +10,11 @@ redirect_from:
   - /2021080/docs/en/adding-scheduled-prices-to-abstract-products
   - /docs/adding-scheduled-prices-to-abstract-products
   - /docs/en/adding-scheduled-prices-to-abstract-products
+related:
+  - title: Product feature overview
+    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
+  - title: Scheduled Prices feature overview
+    link: docs/scos/user/features/page.version/scheduled-prices-feature-overview.html
 ---
 
 This document describes how to add scheduled prices to abstract products.
@@ -23,6 +28,7 @@ Review the reference information before you start, or look up the necessary info
 ## Adding a scheduled price to an abstract product
 
 To add a scheduled price to an abstract product:
+
 1. Next to the product you want to add a scheduled price for, select **Edit**.
 2. On the *Edit Product* page, switch to the *Scheduled Prices* tab.
 3. Click **+ Add scheduled price**.

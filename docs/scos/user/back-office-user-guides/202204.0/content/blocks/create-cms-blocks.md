@@ -15,6 +15,8 @@ redirect_from:
 related:
   - title: Edit CMS blocks
     link: docs/scos/user/back-office-user-guides/page.version/content/blocks/edit-cms-blocks.html
+  - title: CMS blocks overview
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
 ---
 
 This topic describes how to create CMS blocks in the Back Office.
@@ -32,7 +34,7 @@ Review the [reference information](#reference-information-create-a-cms-block) be
 4. Select a **TEMPLATE**.
 5. Enter a **NAME**.
 6. Optional: Select a **VALID FROM** date.
-7. Optional: Select a **VALID TO** date.    
+7. Optional: Select a **VALID TO** date.
 8. Enter and select **PRODUCTS**.
 9. Click **Save**.
     This opens the **Edit CMS Block Glossary** page with a success message displayed.

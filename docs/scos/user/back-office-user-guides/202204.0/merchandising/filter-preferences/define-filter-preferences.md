@@ -14,9 +14,11 @@ redirect_from:
 related:
   - title: Managing Search Preferences
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-search-preferences.html
+  - title: Standard filters overview
+    link: docs/scos/user/features/page.version/search-feature-overview/standard-filters-overview.html
 ---
 
-This documents describes how to create filters and define preferences for them in the Back Office.
+This document describes how to create filters and define preferences for them in the Back Office.
 
 ## Prerequisites
 

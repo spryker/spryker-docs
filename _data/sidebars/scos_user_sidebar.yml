@@ -2381,7 +2381,7 @@ entries:
           - "202009.0"
     - title: Administration
       nested:
-      - title: Stores
+      - title: View stores
         url: /docs/scos/user/back-office-user-guides/administration/view-stores.html
         include_versions:
         - "202204.0"

@@ -2,6 +2,9 @@
 title: View customers
 description: Learn how to view customers in the Back Office.
 template: back-office-user-guide-template
+related:
+  - title: Customer Account Management feature overview
+    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---
 
 To view a customer in the Back Office, follow the steps:
@@ -17,11 +20,11 @@ To view a customer in the Back Office, follow the steps:
 |ATTRIBUTE| DESCRIPTION|
 |---|---|
 | Salutation | Formal salutation. |
-| First Name	 | First name. |
+| First Name | First name. |
 | Last name	| Last name. |
 | Email | Email address. |
 |Company | Company. Not to be confused with a [B2B company](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html). |
-| Customer Reference	| Unique identifier of the customer. |
+| Customer Reference | Unique identifier of the customer. |
 | Gender | Gender. |
 | Locale | Locale. |
 | Phone | Phone number.|

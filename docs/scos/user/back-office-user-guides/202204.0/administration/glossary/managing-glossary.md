@@ -11,6 +11,9 @@ redirect_from:
   - /docs/managing-glossary
   - /docs/en/managing-glossary
   - /docs/scos/user/back-office-user-guides/202200.0/administration/glossary/managing-glossary.html
+related:
+  - title: Back Office Translations overview
+    link: docs/scos/user/features/202204.0/spryker-core-back-office-feature-overview/back-office-translations-overview.html
 ---
 
 This article describes how to manage translations.

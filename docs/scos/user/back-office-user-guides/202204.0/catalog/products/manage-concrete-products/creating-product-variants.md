@@ -17,6 +17,8 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/discontinuing-products.html
   - title: Adding Product Alternatives
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/adding-product-alternatives.html
+  - title: Product feature overview
+    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
 ---
 
 This topic describes how to add a product variant for an abstract product.
@@ -121,12 +123,13 @@ Once you select to discontinue the product, you can add a note about that on thi
 
 #### Product Alternatives tab
 
-The only field available is **Add Product Alternative by Name or SKU**. Here it is enough to enter three characters of a product name or SKU to see the autosuggested product list. From one to many values can be selected. If there is no need to set up an alternative product, you can skip this tab.
+The only field available is **Add Product Alternative by Name or SKU**. Here it is enough to enter three characters of a product name or SKU to see the auto-suggested product list. From one to many values can be selected. If there is no need to set up an alternative product, you can skip this tab.
 
 
 #### Scheduled Prices tab
 
 On this tab, you see a table with the scheduled prices imported via a CSV file. The following information is available:
+
 * Currency, store, net, and gross price values
 * Start from (included) and Finish at (included) values that identify a period of time when a specific price is going to be set for a product automatically.
 

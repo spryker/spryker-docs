@@ -23,6 +23,11 @@ redirect_from:
   - /v6/docs/about-documentation
   - /v6/docs/en/about-documentation
   - /docs/scos/user/intro-to-spryker/about-spryker.html
+related:
+  - title: Contributing to documentation
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-documentation.html
+  - title: What's new
+    link: docs/scos/user/intro-to-spryker/whats-new/whats-new.html
 ---
 
 Spryker Documentation is a central hub for knowledge and information about the [Spryker Commerce OS](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#what-is-the-spryker-commerce-os). It details the aspects involved with setting up and using Spryker for your project.
@@ -32,10 +37,10 @@ We try to organize our documentation in such a way that it would be easy to find
 * [Split documentation](#documentation-breakdown) into documentation for specific target groups and tasks they want to accomplish.
 * Separate feature documentation into articles for various [personas](#personas): Developer, Back-Office User, and Shop User.
 * Version documentation according to the [product releases](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html). To select a version for a specific product release, choose the version in the green dropdown on the right of each article.
-*	Use [tags](#tags) to distinct documentation by product versions and help you understand whether the documentation refers to B2B or B2C features.
+* Use [tags](#tags) to distinct documentation by product versions and help you understand whether the documentation refers to B2B or B2C features.
 <!--* Use [In-App assistant](#inapp) to allow finding documentation faster.-->
 
-## Documentation Breakdown
+## Documentation breakdown
 
 The Spryker documentation is broken into the following sections:
 **[About](/docs/scos/user/intro-to-spryker/intro-to-spryker.html)**: Is for people who are thinking about adopting the Spryker Commerce OS. Here you will find all the information you need to help you make your decision. This section also contains the Spryker release notes, documentation updates, and news.

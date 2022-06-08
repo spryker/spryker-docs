@@ -28,6 +28,10 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/adding-product-alternatives.html
   - title: Adding Volume Prices
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
+  - title: Product feature overview
+    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
+  - title: Product Bundles feature overview
+    link: docs/scos/user/features/page.version/product-bundles-feature-overview.html
 ---
 
 This topic describes how to create [abstract products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) and [product bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html).
@@ -35,6 +39,7 @@ This topic describes how to create [abstract products](/docs/scos/user/features/
 ## Prerequisites
 
 To start working with products:
+
 1. To create product variants of abstract products, [create at least one super attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html).
 2. Go to  **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
@@ -55,6 +60,7 @@ To be able to add product variants after creating an abstract product, add at le
 ## Defining general settings
 
 To create an abstract product or a product bundle:
+
 1. Depending on the type of the product you want to create, select one of the following:
     * Abstract product: select **Create Product**.
     * Product bundle: select **Create Product Bundle**.
@@ -82,6 +88,7 @@ The following table describes the attributes you enter and select when defining 
 ## Defining prices
 
 In the *Prices & Tax* tab, define prices:
+
 1. B2B Shop: Optional: To define prices for a merchant, select a **Merchant Price Dimension**.
 2. Enter **DEFAULT** prices for all the desired locales and currencies.
 3. Optional: To display promotions, enter **ORIGINAL** prices for the desired locales and currencies.
@@ -109,6 +116,7 @@ The default prices are displayed in the online store as a current price, while t
 ## Defining product variants
 
 In the *Variants* tab, define product variants:
+
 * Product bundle: Select **Save** and follow [Defining meta information](#defining-meta-information). The page refreshes with a product variant created automatically.
 * Abstract product: Define product variants as follows:
     1. Select one or more super attributes that define your product variants.
@@ -133,6 +141,7 @@ You can select as many super attributes as you need and define one or more value
 ## Defining meta information
 
 Optional: Add meta information:
+
 1. Switch to the *SEO* tab.
 2. Enter the following for the desired locales:
     * **Title**
@@ -153,15 +162,18 @@ The following table describes the attributes you enter and select when defining 
 ## Adding images
 
 Optional: Add images for the product:
+
 1. Switch to the **Image** tab.
 2. Select a locale you want to add images for.
 3. Select **Add image set**.
 4. Enter an **Image Set Name**.
 5. Repeat steps *2* and *3* until you add the desired number of image sets.
 6. In the desired image set, enter the following:
+
     *  **Small Image URL**
     *  **Large Image URL**
     *  **Sort order**
+    
 7. Optional: Select **Add image** and repeat the previous step until you add all the desired images for this locale.
 8. Repeat steps *1* to *6* until you add images for all the desired locales.
 9. Select **Save**.

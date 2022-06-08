@@ -18,6 +18,8 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/discontinuing-products.html
   - title: Adding Product Alternatives
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/adding-product-alternatives.html
+  - title: Product feature overview
+    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
 ---
 
 This article describes how to update the product variant added during the abstract product setup.

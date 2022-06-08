@@ -11,11 +11,14 @@ redirect_from:
   - /docs/managing-product-lists
   - /docs/en/managing-product-lists
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-lists/managing-product-lists.html
+related:
+  - title: Product Lists feature overview
+    link: docs/scos/user/features/page.version/product-lists-feature-overview.html
 ---
 
 This article describes how to manage product lists.
 
-## Prerequisistes
+## Prerequisites
 
 To start managing product lists, go to **Catalog&nbsp;<span aria-label="and then">></span> Product Lists**.
 
@@ -41,6 +44,7 @@ If a product list is used by a [configurable bundle](/docs/scos/user/features/{{
 ## Assigning categories to a product list
 
 To assign categories to a product list:
+
 1. Select **Edit List** next to the product list you want to assign categories to.
 2. On the *Edit Product List: {product list ID}*  page, switch to the *Assign Categories* tab.
 3. In the **Categories** field, start typing the name of a category to see the list of matching results. Select the desired category.
@@ -50,6 +54,7 @@ To assign categories to a product list:
 ## Deassigning categories from a product list
 
 To assign categories to a product list:
+
 1. Select **Edit List** next to the product list you want to deassign categories from.
 2. On the *Edit Product List: {product list ID}*  page, switch to the *Assign Categories* tab.
 3. In the *Categories* field, select **X** prior to the category you want to deassign.

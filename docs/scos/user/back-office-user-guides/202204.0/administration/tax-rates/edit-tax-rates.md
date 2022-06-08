@@ -3,6 +3,9 @@ title: Edit tax rates
 description: Learn how to edit tax rates in the Back Office.
 last_updated: May 31, 2022
 template: back-office-user-guide-template
+related:
+  - title: Tax feature overview
+    link: docs/scos/user/features/page.version/tax-feature-overview.html
 ---
 
 
@@ -22,4 +25,4 @@ To edit a [tax rate](/docs/scos/user/features/{{page.version}}/tax-feature-overv
 | --- | --- |
 | NAME | You use this name when assigning the tax rate to a tax set. |
 | COUNTRY | The country in which this tax rate applies. |
-| PERCENTAGE | A percentage of a price that is deducted as tax. |    
+| PERCENTAGE | A percentage of a price that is deducted as tax. |

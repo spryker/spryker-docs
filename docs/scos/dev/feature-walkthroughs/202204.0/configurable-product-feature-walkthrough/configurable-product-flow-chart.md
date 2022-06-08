@@ -124,7 +124,7 @@ When configuration starts on Yves, from the Cart page, the product configuration
 - The customer is on the Cart page—the page with items that contains the product configuration.
 - The product configuration can be already complete or not.
 - The item product configuration can be taken from one source only: Quote.
-- The generate the URL that points to the gateway page with the following parameters.
+- The framework generates the URL that points to the gateway page with the following parameters.
 
 | PARAMETER                                      | VALUE | COMMENT |
 |------------------------------------------------|---|---|

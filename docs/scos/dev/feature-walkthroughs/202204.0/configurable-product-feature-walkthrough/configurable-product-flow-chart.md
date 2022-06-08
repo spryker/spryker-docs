@@ -113,11 +113,11 @@ The customer clicks the configuration button, and the request is redirected to t
 
 ### Phase 8
 
-The customer is redirected back to a PDP—page.
+The customer is redirected back to the PDP.
 
 ## Product configuration data flow on the Cart page
 
-When configuration starts on Yves, from the Cart page, the product configuration data flow consists of the following phases:
+When configuration starts on Yves, from the **Cart** page, the product configuration data flow consists of the following phases:
 
 ### Phase 1
 

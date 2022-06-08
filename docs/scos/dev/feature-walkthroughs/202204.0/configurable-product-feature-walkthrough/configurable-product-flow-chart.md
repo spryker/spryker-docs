@@ -174,8 +174,8 @@ Redirects the customer to the configurator page using the GET request.
 | `ProductConfigurationInstance.displayData` | Some text of JSON blob—for example, `["color"=>"red", "weight"=> 100]` |   |
 | `ProductConfigurationInstance.configuration` | `"date"=>"23.07.2020", "time"=>"18:45" 4]`                             | Sensitive data. |
 | `ProductConfigurationInstance.timestamp` | `10312313135234`                                                       | Sensitive data, a certain configuration should be valid only a certain amount of the time given. |
-| sourceType | SOURCE_TYPE_PDP, SOURCE_TYPE_CART, SOURCE_TYPE_WISHLIST_DETAIL, …                                        |   |
-| SKU  | `some_sku`                                                             |   |
+| `sourceType` | `SOURCE_TYPE_PDP`, `SOURCE_TYPE_CART`, `SOURCE_TYPE_WISHLIST_DETAIL`, …                                        |   |
+| `SKU`  | `some_sku`                                                             |   |
 | itemGroupKey | `some_group_key`                                                         |   |
 
 ### Phase 6

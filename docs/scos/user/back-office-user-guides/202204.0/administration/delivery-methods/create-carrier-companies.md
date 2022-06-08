@@ -1,7 +1,7 @@
 ---
-title: Create carrier companies
-description: Use the procedure to create a carrier company and activate it in the Back Office.
-last_updated: Aug 9, 2021
+title: Add carrier companies
+description: Learn how to add carrier companies in the Back Office.
+last_updated: June 2, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-carrier-company
 originalArticleId: 7335402c-f389-47c0-952c-59d19580cf37
@@ -11,6 +11,7 @@ redirect_from:
   - /docs/creating-a-carrier-company
   - /docs/en/creating-a-carrier-company
   - /docs/scos/user/back-office-user-guides/201811.0/administration/delivery-methods/creating-carrier-companies.html
+  - /docs/scos/user/back-office-user-guides/202204.0/administration/delivery-methods/creating-carrier-companies.html
 related:
   - title: Creating and Managing Delivery Methods
     link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/creating-and-managing-delivery-methods.html
@@ -18,7 +19,7 @@ related:
     link: docs/scos/user/features/page.version/shipment-feature-overview.html
 ---
 
-To create a carrier company in the Back Office, follow the steps:
+To add a carrier company in the Back Office, follow the steps:
 
 1. Go to **Administration&nbsp;<span aria-label="and then">></span> Delivery Methods**.
 2. On the **Delivery Methods** page, click **Create new carrier company**.
@@ -36,4 +37,4 @@ To create a carrier company in the Back Office, follow the steps:
 
 ## Next steps
 
-Add shipment methods for the created company. For instructions, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html).
+Add shipment methods for the added company. For instructions, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html).

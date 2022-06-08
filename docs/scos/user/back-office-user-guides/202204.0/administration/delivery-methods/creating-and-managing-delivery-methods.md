@@ -1,5 +1,5 @@
 ---
-title: Creating and managing delivery methods
+title: Create and managing delivery methods
 description: Use the procedures to create a delivery method, activate it, set a price and tax set, and define a delivery method per store in the Back Office.
 last_updated: Aug 9, 2021
 template: back-office-user-guide-template
@@ -24,7 +24,7 @@ This topic describes how to create and manage shipment methods.
 
 To start working with the delivery methods, go to **Administration&nbsp;<span aria-label="and then">></span> Delivery Methods**.
 
-Once you decide to add a new shipment method, make sure that you have a carrier company to assign a shipment method on the list of delivery methods. If you don't have an appropriate carrier, see [Creating a carrier company](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-carrier-companies.html). You also need to make sure that you have an appropriate tax set in the **Taxes&nbsp;<span aria-label="and then">></span> Tax Sets** section, see [Taxes](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html).
+[Create a carrier company](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-carrier-companies.html). You also need to make sure that you have an appropriate tax set in the **Taxes&nbsp;<span aria-label="and then">></span> Tax Sets** section, see [Taxes](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html).
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
@@ -35,11 +35,11 @@ A delivery method is described by:
 * Delivery time (what is the estimated time for the delivery?).
 * Availability (when is the delivery method available?).
 
-To create a new delivery method:
-1. In the top-right corner of the **Delivery Methods** page, click **+Create new delivery method**. The **Create Delivery Method** page with three tabs opens: **Configuration**, **Price & Tax**, and **Store Relation**.
-2. On the **Configuration** tab, enter and select the following attributes:
-   * Delivery Method Key
-   * Name
+1. On the **Delivery Methods** page, click **Create new delivery method**.
+2. On the **Create** page, enter a **Delivery Method Key**.
+3. Enter a **NAME**.
+4. Select a **CARRIER**.
+5.
 
    {% info_block warningBox "Note" %}
 

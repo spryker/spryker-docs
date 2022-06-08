@@ -30,10 +30,10 @@ To add a carrier company in the Back Office, follow the steps:
 
  The name you enter will be visible on the **Create new delivery method** page only.
 
- | ATTRIBUTE |DESCRIPTION|
- | --- | --- |
- | NAME | You will use the name for creating delivery methods for the company. |
- | ACTIVATE | Defines if you can [create delivery methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-carrier-companies.html) for the company. |
+| ATTRIBUTE |DESCRIPTION|
+| --- | --- |
+| NAME | You will use the name for creating delivery methods for the company. |
+| ACTIVATE | Defines if you can [create delivery methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-carrier-companies.html) for the company. |
 
 ## Next steps
 

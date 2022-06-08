@@ -1,7 +1,7 @@
 ---
-title: Create and managing delivery methods
-description: Use the procedures to create a delivery method, activate it, set a price and tax set, and define a delivery method per store in the Back Office.
-last_updated: Aug 9, 2021
+title: Add delivery methods
+description: Learn how to add delivery methods in the Back Office.
+last_updated: June 2, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-and-managing-shipment-methods
 originalArticleId: 66d6acae-6c36-404a-b6fb-0dbd9d71d193
@@ -11,6 +11,7 @@ redirect_from:
   - /docs/creating-and-managing-shipment-methods
   - /docs/en/creating-and-managing-shipment-methods
   - /docs/scos/user/back-office-user-guides/201811.0/administration/delivery-methods/creating-and-managing-delivery-methods.html
+  - /docs/scos/user/back-office-user-guides/202204.0/administration/delivery-methods/creating-and-managing-delivery-methods.html
 related:
   - title: Shipment feature overview
     link: docs/scos/user/features/page.version/shipment-feature-overview.html
@@ -18,118 +19,48 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/creating-carrier-companies.html
 ---
 
-This topic describes how to create and manage shipment methods.
+This doc describes how to add delivery methods in the Back Office.
 
 ## Prerequisites
 
-To start working with the delivery methods, go to **Administration&nbsp;<span aria-label="and then">></span> Delivery Methods**.
+* [Create a tax set](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/create-tax-sets.html).
+* [Create a carrier company](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/create-carrier-companies.html).
+* Review the [reference information](#reference-information-create-tax-sets) before you start, or look up the necessary information as you go through the process.
 
-[Create a carrier company](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-carrier-companies.html). You also need to make sure that you have an appropriate tax set in the **Taxes&nbsp;<span aria-label="and then">></span> Tax Sets** section, see [Taxes](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html).
+## Create a delivery method
 
-Review the reference information before you start, or look up the necessary information as you go through the process.
-
-## Creating delivery methods
-
-A delivery method is described by:
-* Delivery price (how is the price for a delivery calculated?).
-* Delivery time (what is the estimated time for the delivery?).
-* Availability (when is the delivery method available?).
-
-1. On the **Delivery Methods** page, click **Create new delivery method**.
-2. On the **Create** page, enter a **Delivery Method Key**.
-3. Enter a **NAME**.
-4. Select a **CARRIER**.
-5.
-
-   {% info_block warningBox "Note" %}
-
-   Keep in mind that it will be visible on the Storefront.
-
-   {% endinfo_block %}
-
-   * Carrier
-   * Availability Plugin
-   * Price Plugin
-
-   {% info_block warningBox "Note" %}
-
-   Regardless if you have multi-currency prices with multiple price modes or just one simple static price, the price plugin has priority over those prices and allows you to customize and apply logic over delivery price calculation.
-
-   {% endinfo_block %}
-
-   * Delivery Time Plugin
+1. Go to **Administration&nbsp;<span aria-label="and then">></span> Delivery Methods**.
+2. On the **Delivery Methods** page, click **Create new delivery method**.
+3. On the **Create** page, enter a **Delivery Method Key**.
+4. Enter a **NAME**.
+5. Select a **CARRIER**.
+6. Optional: Select an **AVAILABILITY PLUGIN**.
+7. Optional: Select a **PRICE PLUGIN**.
 
 {% info_block warningBox "Note" %}
-
-The fields marked with * are required.
+Regardless if you have multi-currency prices with multiple price modes or just one simple static price, the price plugin has priority over those prices and allows you to customize and apply logic over delivery price calculation.
 
 {% endinfo_block %}
 
-![Create a delivery method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/create-delivery-method.png)
+8. Optional: Select a **DELIVERY TIME PLUGIN**.
+9. To activate the delivery method after creating it, select **IS ACTIVE**.
+10. Click the **Price & Tax** tab
+11. Enter the needed prices per needed locales.
+12. Select a **TAX SET**.
+13. Click the **Store Relation** tab.
+14. For **AVAILABLE IN THE FOLLOWING STORE(S)** select the stores to display the delivery method in.
+15. Click **Save**. This opens the **Delivery Methods** page with a success message displayed. The created delivery method is displayed in the list.
 
-3. To activate the delivery method, select **Is active**.
-4. On the **Price & Tax** tab, do the following:
-   * Define the price for the delivery method per specific locale;
-   * Select the tax set from the drop-down list. The values are taken from the **Taxes&nbsp;<span aria-label="and then">></span> Tax Sets** section. For more information, see [create tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/create-tax-sets.html).
-
-5. On the **Store Relation** tab, select the stores in which the delivery method should be available.
-
-![Store relation](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/store-relation-delivery-method.png)
-
-6. To keep the changes, click **Save**. This redirects you to the **Delivery Methods** page, where you can see the new delivery method on the list and the following message: '*Shipment method has been successfully saved*'.
-
-### Reference information: Creating delivery methods
-
-The following table describes the attributes you see, select, or enter while viewing or editing delivery methods.
+## Reference information: Create delivery methods
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| Delivery Method Key | Fixed value of the delivery method indicated in the database. |
-| Name | Name for the delivery method. |
-| Carrier | Drop-down list of carrier companies available in the shop application. |
-| Availability Plugin | Drop-down list of the Availability plugins implemented in the back-end. The purpose of this plugin is to check if the delivery method is available for the customer. |
-| Price Plugin | Drop-down list of the Price plugins. You can either provide a static price for your delivery method or select a configured price plugin. |
-| Delivery Time Plugin | Drop-down list of the Delivery time plugins implemented in the back-end. The purpose of this plugin is to calculate the estimated time for the delivery method. |
+| DELIVERY METHOD KEY | Unique identifier of the delivery method. |
+| NAME | Name of the delivery method to be displayed on the Storefront. |
+| CARRIER | Carrier company that will be handling the delivery of this method. To create one, see [Create carrier companies](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/create-carrier-companies.html). |
+| AVAILABILITY PLUGIN | Drop-down list of the Availability plugins implemented in the back-end. The purpose of this plugin is to check if the delivery method is available for the customer. |
+|  PRICE PLUGIN | Drop-down list of the Price plugins. You can either provide a static price for your delivery method or select a configured price plugin. |
+| DELIVERY TIME PLUGIN | Drop-down list of the Delivery time plugins implemented in the back-end. The purpose of this plugin is to calculate the estimated time for the delivery method. |
 | Is active | Checkbox that allows enabling or disabling the delivery method. |
-
-## Editing delivery methods
-
-To update the values, you have entered during the delivery method creation:
-1. For the delivery method you want to update, in the **Actions** column of the **Delivery Methods** page, click **Edit**.
-2. Update the needed values.
-
-{% info_block warningBox "Note" %}
-
-Keep in mind that **Delivery Method Key** cannot be edited.
-
-{% endinfo_block %}
-
-3. To keep the changes, click **Save**. For more details on the attributes, see the [Reference information: Creating delivery methods](#reference-information-creating-delivery-methods) section.
-
-**Tips and tricks**
-<br>This is how the Back Office setup looks in the online store:
-
-![Editing a shipment method](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/editing-shipment-method.png)
-
-
-## Viewing delivery methods
-
-To view details of a delivery method, in the **Actions** column for the delivery method you want to view, click **View**. On the **View Delivery Method: [Delivery Method name]** page, you see three sections containing delivery method details: **Configuration**, **Store relation**, and **Price & Tax**. For more details on the attributes you see on the page, see [Reference information: Creating delivery methods](#reference-information-creating-delivery-methods) 
-
-## Deleting delivery methods
-
-{% info_block warningBox "Note" %}
-
-Deleting a delivery method has no impact on your previous purchases.
-
-{% endinfo_block %}
-
-To delete a delivery method:
-
-1. For the delivery method you want to delete, in the **Actions** column, click **Delete**.  This redirects you to the **Delete Delivery Method** page.
-2. Under **Are you sure about deleting this delivery method?**, select one of the two options:
-   * **No, I want to keep this delivery method** if you want to cancel the deletion of the delivery method. This redirects you to the list of delivery methods.
-   * **Yes, delete this delivery method** if you want to delete the delivery method. This deletes the delivery method and redirects you to the list of delivery methods.
-
-**Online Store**
-![Online store](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Administration/Shipment/Creating+and+Managing+Shipment+Methods/online-store.png)
+| TAX SET | [create tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/create-tax-sets.html).
+| AVAILABLE IN THE FOLLOWING STORE(S) |

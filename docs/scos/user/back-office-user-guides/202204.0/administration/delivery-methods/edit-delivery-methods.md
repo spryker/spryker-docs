@@ -1,3 +1,10 @@
+---
+title: Edit delivery methods
+last_updated: May 31, 2022
+template: back-office-user-guide-template
+---
+
+
 ## Editing delivery methods
 
 To update the values, you have entered during the delivery method creation:

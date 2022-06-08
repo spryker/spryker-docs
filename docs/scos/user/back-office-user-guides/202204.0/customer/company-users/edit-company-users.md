@@ -11,7 +11,7 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/customer/company-roles/create-company-roles.html
   - title: Managing Companies
     link: docs/scos/user/back-office-user-guides/page.version/customer/manage-companies.html
-  - - title: Company user roles and permissions overview
+  - title: Company user roles and permissions overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---
 

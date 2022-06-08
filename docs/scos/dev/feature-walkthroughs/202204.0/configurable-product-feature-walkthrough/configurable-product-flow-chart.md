@@ -99,7 +99,7 @@ The customer clicks the configuration button, and the request is redirected to t
 1. The customer finishes the configuration and clicks a button which creates an AJAX POST request with the data to the configurator page (self).
 2. In the backend, the response is prepared according to the public data API from the configurator to Spryker.
 3. In the backend, a `CheckSum` is prepared based on the response data, which is encrypted with a shared key and returns these as the AJAX response.
-4. The data is put to a hidden form on the configurator page and submit the form that points to the gateway page.
+4. On the configurator page, the framework puts data to a hidden form and submits the form, which points to the gateway page.
 5. After the successful configuration, the customer is redirected to the configurator gateway with a configuration response.
 6. The gateway URL does not equal to the back URL; it’s a fixed, known URL.
 

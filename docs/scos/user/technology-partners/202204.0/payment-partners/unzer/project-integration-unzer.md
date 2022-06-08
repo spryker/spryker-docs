@@ -10,15 +10,15 @@ related:
   link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/unzer/install-and-configuration-unzer.html
 ---
 
-This article provides step-by-step instructions on integrating the Adyen module into your project.
+This article provides step-by-step instructions on integrating the Unzer module into your project.
 
 ## Prerequisites
 
-Prior to integrating Adyen into your project, make sure you [installed and configured the Unzer module](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/unzer/install-and-configuration-unzer.html).
+Prior to integrating Unzer into your project, make sure you [installed and configured the Unzer module](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/unzer/install-and-configuration-unzer.html).
 
 ## Project integration
 
-To integrate Adyen, do the following:
+To integrate Unzer, do the following:
 
 ### OMS
 

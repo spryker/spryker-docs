@@ -75,6 +75,11 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/performance-testing.html
       - title: Monitoring issues and informing about alerts
         url: /docs/cloud/dev/spryker-cloud-commerce-os/monitoring-issues-and-informing-about-alerts.html
+      - title: Multi-store setups
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multi-store-setups.html
+        nested:
+          - title: Add and remove databases of stores
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html
       - title: Troubleshooting
         nested:
           - title: Troubleshooting deployment issues

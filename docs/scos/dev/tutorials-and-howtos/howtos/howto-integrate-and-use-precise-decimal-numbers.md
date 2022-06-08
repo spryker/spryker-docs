@@ -34,7 +34,7 @@ The benefits of using decimal numbers are as follows:
 
 ## Installation
 
-To install the `{% raw %}{{{% endraw %}decimal-object{% raw %}}}{% endraw %}` library, you can use Composer. For more information, on GitHub, see [Decimal Object](https://github.com/spryker/decimal-object).
+To install the `{% raw %}{{{% endraw %}decimal-object{% raw %}}}{% endraw %}` library, you can use Composer. For more information, see [Decimal Object](https://github.com/spryker/decimal-object) on GitHub.
 
 ## How decimal numbers work with transfer objects
 
@@ -46,7 +46,7 @@ You can specify Decimal as a type of your Data Transfer Object’s property. To 
 </transfer>
 ```
 
-For more information about how to work with Data Transfer Objects, see [Creating, using, and extending the transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html).
+For more information about working with Data Transfer Objects, see [Creating, using, and extending the transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html).
 
 ## Create a decimal value object
 
@@ -173,21 +173,21 @@ $decimalTwo = new Decimal(3.14);
 $isEquals = $decimalOne->equals($decimalTwo); //false
 ```
 
-2. `isPositive()`: Returns `true` if the decimal value is positive, otherwise `false`.
+2. `isPositive()`: Returns `true` if the decimal value is positive; otherwise `false`.
 
 ```php
 $decimal = new Decimal(5);
 $isPositive = $decimal->isPositive(); //true
 ```
 
-3. `isNegative()`: Returns `true` if the decimal value is negative, otherwise `false`.
+3. `isNegative()`: Returns `true` if the decimal value is negative; otherwise `false`.
 
 ```php
 $decimal = new Decimal(5);
 $isNegative = $decimal->isNegative(); //false
 ```
 
-4. `greaterThan()`: Returns `true` if the decimal value is greater than the given value, otherwise `false`.
+4. `greaterThan()`: Returns `true` if the decimal value is greater than the given value; otherwise `false`.
 
 ```php
 $decimal = new Decimal(5);
@@ -198,7 +198,7 @@ $decimalTwo = new Decimal(3.14);
 $isGreater = $decimalOne->greaterThan($decimalTwo); //false
 ```
 
-5. `greaterThanOrEquals()`: Returns `true` if the decimal value is greater or equals the given value, otherwise `false`.
+5. `greaterThanOrEquals()`: Returns `true` if the decimal value is greater or equals the given value; otherwise `false`.
 
 ```php
 $decimal = new Decimal(5);
@@ -209,7 +209,7 @@ $decimalTwo = new Decimal(3.14);
 $isGreatherOrEquals = $decimalOne->greatherThanOrEquals($decimalTwo); //false
 ```
 
-6. `lessThan()`: Returns `true` if the decimal value is less than the given value, otherwise `false`.
+6. `lessThan()`: Returns `true` if the decimal value is less than the given value; otherwise `false`.
 
 ```php
 $decimal = new Decimal(5);
@@ -220,7 +220,7 @@ $decimalTwo = new Decimal(3.14);
 $isLess = $decimalOne->lessThan($decimalTwo); //true
 ```
 
-7. `lessThanOrEquals()`: Returns `true` if the decimal value is less or equals the given value, otherwise `false`.
+7. `lessThanOrEquals()`: Returns `true` if the decimal value is less or equals the given value; otherwise `false`.
 
 ```php
 $decimal = new Decimal(5);

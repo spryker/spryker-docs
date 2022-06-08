@@ -27,9 +27,7 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
 ---
 
-This document describes the steps to add a new shipment method without integrating with the shipment provider.
-
-This document considers the case when you need to add a new shipment method without integrating it with the shipment providers' system.
+This document shows how to add a new shipment method without integrating it with the shipment provider system.
 
 {% info_block infoBox "Note" %}
 
@@ -39,7 +37,7 @@ In this situation, you *must* have multi-currency prices attached to the shipmen
 
 ## Set up the state machine
 
-The state machine that handles orders that use this shipment method needs to use a manual event for shipping so that it can be triggered from the Back Office.
+The state machine which handles orders using this shipment method needs to use a manual event for shipping so that it can be triggered from the Back Office.
 
 ![Setting up State Machine](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ship_event.png)
 
@@ -65,7 +63,7 @@ The corresponding XML for this transition would be:
 </events>
 ```
 
-## Add a new delivery method
+## Add a new shipment method
 
 To add a new shipment method, follow these steps:
 1. In the Back Office, navigate to the **Delivery Methods** section and click **Create new carrier company**.
@@ -100,9 +98,9 @@ For more detailed information about adding carrier companies, see [Creating carr
 
 ![Add shipment method ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ui_shipment_method_6.png)
 
-The shipment methods with price are retrieved depending on your pre-configured price mode + current store and the selected currency.
+The shipment methods with price are retrieved depending on your preconfigured price mode + current store and the selected currency.
 
 Shipment methods can be excluded if their active flag is off. The connected `AvailabilityPlugin` plugin excludes them; otherwise, it has a price as NULL.
 
-In this current example, the new shipment method is available in the shop for DE store, EUR currency and gross price mode as 7 EUR.
+In this current example, the new shipment method is available in the shop for DE store, EUR currency, and gross price mode as 7 EUR.
 ![UI shipment selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ui_shipment_selection.png)

@@ -32,7 +32,7 @@ Spryker works only with MySQL version 5.7 or higher.
 
 ## Adjust Spryker to run with MySQL
 
-To run the Spryker Demoshop with MySQL, adjust some parts in your configs:
+To run the Spryker Demoshop with MySQL, adjust the following parts in your configs:
 
 1. In `config/Shared/config_default.php`, modify the database configuration:
 

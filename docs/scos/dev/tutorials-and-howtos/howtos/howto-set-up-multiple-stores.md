@@ -18,7 +18,9 @@ redirect_from:
 
 {% info_block warningBox "Cloud environment restrictions" %}
 
-Spryker Cloud Commerce OS does not support all the multi-store configuration options, like creation of different regions. If you want to set up multiple stores and to learn about available configuration options, [contact support](https://spryker.force.com/support/s/knowledge-center).
+Spryker Cloud Commerce OS does not support all the multi-store configuration options, like creation of different regions.
+
+If you want to set up multiple stores and to learn about available configuration options, [contact support](https://spryker.force.com/support/s/knowledge-center).
 
 {% endinfo_block %}
 
@@ -58,7 +60,7 @@ It’s the most expensive but flexible option in terms of per-store scaling and 
 
 ## Set up multiple stores
 
-To set up multiple stores, follow steps in these sections:
+To set up multiple stores, follow the steps in the following sections:
 
 ### Configure code buckets
 

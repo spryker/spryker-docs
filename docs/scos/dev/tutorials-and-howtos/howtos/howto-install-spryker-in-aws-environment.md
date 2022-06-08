@@ -40,8 +40,6 @@ To create and configure the services, follow instructions in the following secti
 
 ### Create s security group
 
-To create a security group, follow these steps:
-
 1. Open the EC2 console.
 
 ![EC2 console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/ec2-console.png)
@@ -62,9 +60,7 @@ You need to choose the security group for all services and instances that you cr
 
 {% endinfo_block %}
 
-### Create RDS
-
-To create and configure RDS, follow these steps:
+### Create and configure RDS
 
 1. Open the RDS console.
 ![RDS console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/rds-console.png)
@@ -103,9 +99,7 @@ For production purposes, we recommend choosing Multi-AZ Deployment.
 
 For more information about creating the database, see [Database creation manual](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Tutorials.WebServerDB.CreateDBInstance.html).
 
-### Create Elasticsearch service
-
-To create and configure the Elasticsearch service console, follow these steps:
+### Create the Elasticsearch service console
 
 1. Open the Elasticsearch service console.
 
@@ -140,9 +134,7 @@ For production purposes, we recommend choosing the Production deployment type.
 
 For more information about how to create an Elasticsearch service domain, see [Elasticseacrh service creation manual](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/es-createupdatedomains.html#es-createdomains)
 
-### Configure lastiCache
-
-To configure ElastiCache, follow these steps:
+### Configure ElastiCache
 
 1. Open the ElastiCache console.
 
@@ -164,21 +156,19 @@ For more details, see [ElastiCache creation manual](https://docs.aws.amazon.com/
 
 ## Install and configure the EC2 instance
 
-To install and configure the EC2 instance, follow these steps:
+To Installing and configuring the EC2 instance, you need to
 * Create SSH key
 * Launch instance
 * Configure Elastic IP
 * Connect to the Instance
 
-To perform these actions, follow these guidelines:
+Each step is complex. Therefore, they are descriged separately in the following sections.
 
 ### Create an SSH key
 
 To create an SSH key, use the [manual](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-key-pairs.html#having-ec2-create-your-key-pair)
 
 ### Launch the instance
-
-To launch the instance, follow these steps:
 
 1. Open EC2 console.
 
@@ -212,8 +202,6 @@ To launch the instance, follow these steps:
 
 ### Configure Elastic IP
 
-To configure Elastic IP, follow these steps:
-
 1. Open EC2 console.
 
 ![EC2 console](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/ec2-console.png)
@@ -239,8 +227,6 @@ For more information about configuring the Elastic IP Address, see [Allocating a
 
 ### Connect to the instance
 
-To connect to the instance, follow these steps:
-
 1. Click **Actions&nbsp;<span aria-label="and then">></span> Connect**.
 
 ![Connect action](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/Spryker+AWS+Installation/actions-connect.png)
@@ -254,8 +240,6 @@ To connect to the instance, follow these steps:
 To install Spryker in AWS, install and configure additional software. Use the following guidelines for instructions.
 
 ### Install system tools
-
-To install the system tools, follow these steps:
 
 1. Configure additional repositories:
 
@@ -294,8 +278,6 @@ apache2-utils
 
 ### Install PHP
 
-To install PHP, run the commands:
-
 ```shell
 sudo apt-get install -q -y php7.2-fpm \
 php7.2-curl \
@@ -332,8 +314,6 @@ sudo update-alternatives --set php-config /usr/bin/php-config7.2
 ```
 
 ### Configure PHP
-
-To configure PHP, follow these steps:
 
 1. Create or update the following files using the provided templates:
 
@@ -500,8 +480,6 @@ sudo rm /etc/nginx/sites-enabled/default
 ```
 
 ### Configure Nginx
-
-To configure Nginx, follow these steps:
 
 1. Update `{% raw %}{{{% endraw %}YVES_HOST{% raw %}}}{% endraw %}` and `application_store` variables for each store (AT, DE, US), and create `/etc/nginx/conf.d/vhost-yves-{% raw %}{{{% endraw %}STORE_NAME{% raw %}}}{% endraw %}.conf` using the template:
 
@@ -800,15 +778,13 @@ fastcgi_param HTTP_X_REQUEST_START "t=${msec}";
 
 ### Install Node.js
 
-To install Node.js, run the following command:
-
 ```shell
 sudo apt-get install -y nodejs
 ```
 
 ### Insall RabbitMQ
 
-To install RabbitMQ, run the commands as root:
+Run the commands as root:
 
 ```shell
 wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
@@ -822,8 +798,6 @@ sudo apt-get install -y rabbitmq-server
 ```
 
 ### Configure RabbitMQ
-
-To configure RabbitMQ, run the commands as root:   
 
 * Service configuration.
 
@@ -854,8 +828,6 @@ Repeat for `/AT_spryker_zed`, `/US_spryker_zed` virtual hosts.
 
 ### Install Jenkins
 
-To install Jenkins, follow these steps:
-
 1. Run the commands as root:
 
 ```shell
@@ -878,8 +850,6 @@ sudo service jenkins stop
 ```
 
 ### Configure Jenkins
-
-To configure Jenkins, follow these steps:
 
 1. Change the `JENKINS_USER` variable in the `/etc/init.d/jenkins` and `/etc/default/jenkins` files to `JENKINS_USER="www-data"`.
 2. Create an init scripts directory:
@@ -1005,8 +975,6 @@ su www-data www-data
 ```
 
 ## Install Spryker
-
-To install Spryker, follow these steps:    
 
 1. Create a data folder:
 
@@ -1839,7 +1807,7 @@ vendor/bin/console propel:install -vvv
 vendor/bin/console transfer:generate -vvv
 ```
 
-7. Run the install command:
+7. Run the installation command:
 
 ```shell
 APPLICATION_ENV=staging vendor/bin/install -vvv

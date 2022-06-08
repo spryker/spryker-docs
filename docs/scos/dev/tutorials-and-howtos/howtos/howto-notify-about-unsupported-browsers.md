@@ -31,7 +31,7 @@ var hasNativeCustomElements = !!window.customElements;
 
 ## Usage
 
-To make use of the `unsupported-browser-popup` component, add it to the molecules of the `ShopUi` module and include in the current `page-blank` template in the `body` tag before script bundles. By default, the script bundles reside in the `footerScripts` block.
+To use the `unsupported-browser-popup` component, add it to the molecules of the `ShopUi` module and include it in the current `page-blank` template in the `body` tag before script bundles. By default, the script bundles reside in the `footerScripts` block.
 
 Example:
 

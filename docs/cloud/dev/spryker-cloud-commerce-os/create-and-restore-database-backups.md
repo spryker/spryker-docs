@@ -165,27 +165,26 @@ Application restoration is part of a regular deployment workflow. See [Rolling b
 
 To delete recovery steps via Terraform Cloud, follow the steps in the sections below.
 
-### Prerequisites
+### Install AWS CLI and configure the session
 
-Install [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
+1. [Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
 
-### Configure the session
+2. Open a terminal.
 
-1. Open a terminal.
-
-2. Export AWS credentials:
+3. Export AWS credentials:
 ```shell
 export AWS_ACCESS_KEY_ID="{{YOUR_ACCESS_ID}}"
 export AWS_SECRET_ACCESS_KEY="{{YOUR_SECRET_ACCESS_KEY}}"
 export AWS_SESSION_TOKEN="{{YOUR_SESSION_TOKEN}}"
 ```
 
-3. Set the region you want to remove delete recovery points in:
+4. Set the region you want to remove delete recovery points in:
 ```shell
 aws configure set region {REGION_NAME}
 ```
 
 ### Clone Terraform Cloud and delete recovery points
+
 
 1. Clone Terraform Cloud:
 ```shell
@@ -196,6 +195,8 @@ git clone git@github.com:spryker/tfcloud.git
 ```shell
 /tfcloud/tools/scripts./backup_vault_clear.sh {ENVIRONMENT_NAME}_rds_backup
 ```
+
+
 
 ## Next step
 

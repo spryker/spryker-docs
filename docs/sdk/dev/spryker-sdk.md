@@ -1,3 +1,8 @@
+---
+title: Spryker SDK
+description: Learn about the Spryker SDK and how you can use it in your project.
+template: concept-topic-template
+---
 The Spryker SDK aims to provide a single entry point to accelerate your productivity working with Spryker. The Spryker SDK provides you with tools to validate the existing code, implement new features with Spryker, and go live with your project.
 
 ## Installation

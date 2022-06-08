@@ -161,7 +161,7 @@ Redirects the customer to the configurator page using the GET request.
 
 ### Phase 5
 
-1. We are on the configurator page.
+1. The customer is on the configurator page.
 2. The customer does the configuration.
 3. Submits the configuration form.
 4. The configurator has to redirect to the gateway page with configuration data.

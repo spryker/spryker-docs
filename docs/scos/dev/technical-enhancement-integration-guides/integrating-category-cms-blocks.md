@@ -146,7 +146,8 @@ class CategoryGuiDependencyProvider extends SpykerCategoryGuiDependencyProvider
 }
 ```
 
-6. Optional: To show which categories are assigned to a block on a block view page, register the category list plugin by adding `CmsBlockCategoryListViewPlugin` to the CMS Block GUI dependency provider:
+6. Optional: To show which categories a block is assigned to on the **View CMS Block
+** page, register the category list plugin by adding `CmsBlockCategoryListViewPlugin` to the CMS Block GUI dependency provider:
 
 **src/Pyz/Zed/CmsBlockGui/CmsBlockGuiDependencyProvider.php**
 

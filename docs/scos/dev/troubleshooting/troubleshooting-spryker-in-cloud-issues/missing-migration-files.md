@@ -15,6 +15,6 @@ It is recomended to push all the migrations to a repository as a go-live prepara
 
 ## Solution
 
-1. Check if the files are not under ignore (f.e. gitignore) and added to the version control system (f.e. github).
+1. Check if the files are not under ignore (f.e. .dockerignore) and added to the version control system (f.e. github).
 2. Check that during the deployment the files are not removed (f.e. check if during the deployment you are not using the ```console propel:migration:delete``` command that removes migrations).
 

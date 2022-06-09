@@ -19,7 +19,7 @@ entries:
                   - title: Manage payment method
                     url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/manage-payment-method.html
                   - title: Manage Unzer Marketplace credentials
-                    url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/manage-unzer-marketlpace-credentails.html
+                    url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/manage-unzer-marketplace-credentails.html
                   - title: Manage Unzer standard credentials
                     url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/manage-unzer-standard-credentails.html
               - title: Extend & customize

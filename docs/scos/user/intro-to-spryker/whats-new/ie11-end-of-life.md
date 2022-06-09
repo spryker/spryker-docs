@@ -4,7 +4,6 @@ description: Microsoft recently announced that the Internet Explorer 11 desktop 
 last_updated: June 8, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/ie11-end-of-life
-originalArticleId: I DO NOT KNOW WHAT TO PUT HERE
 ---
 
 # IE11 End Of Life

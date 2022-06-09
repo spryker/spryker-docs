@@ -1,37 +1,56 @@
 title: PBC guides
 entries:
   - product: PBC
-    nested:
-      - title: PBC landing
-        url: /docs/pbc/all/pbc-landing.html
-      - title: Tax Management
-        nested:
-          - title: Tax feature overview
-            url: /docs/pbc/all/tax-management/tax-feature-overview.html
-          - title: Tax management updates
-            url: /docs/pbc/all/tax-management/tax-management-pbc-updates.html
-          - title: Tax domain model and relationships
-            url: /docs/pbc/all/tax-management/tax-domain-model-and-relationships.html
-          - title: "Reference information: Tax module"
-            url: /docs/pbc/all/tax-management/reference-information-tax-module.html
-          - title: Integrate and migrate
-            nested:
-              - title: Integrate the Product feature API
-                url: /docs/pbc/all/tax-management/integrate-and-migrate/integrate-the-product-feature-api.html
-              - title: Migrate the ProductTaxSetsRestApi module
-                url: /docs/pbc/all/tax-management/integrate-and-migrate/migrate-the-producttaxsetsrestapi-module.html
-              - title: Migrate the Tax module
-                url: /docs/pbc/all/tax-management/integrate-and-migrate/migrate-the-tax-module.html
-            url: /docs/pbc/all/tax-management/tax-feature-overview.html
-          - title: Manage taxes in the Back Office
-            nested:
-              - title: Manage tax rates
-                url: /docs/pbc/all/tax-management/manage-taxes-in-the-back-office/manage-tax-rates.html
-              - title: Manage tax sets
-                url: /docs/pbc/all/tax-management/manage-taxes-in-the-back-office/manage-tax-sets.html
-          - title: HowTo - Get Ready for VAT (tax) Changes in Germany
-            url: /docs/pbc/all/tax-management/howto-get-ready-for-vat-tax-changes-in-germany.html
-          - title: Tax feature overview
-            url: /docs/pbc/all/tax-management/tax-feature-overview.html
-          - title: Tax feature overview
-            url: /docs/pbc/all/tax-management/tax-feature-overview.html
+  #  nested:
+  #    - title: PBC landing
+  #      url: /docs/pbc/all/pbc-landing.html
+  #    - title: Tax Management
+  #      nested:
+  #        - title: Tax feature overview
+  #          url: /docs/pbc/all/tax-management/tax-feature-overview.html
+  #        - title: Tax management updates
+  #          url: /docs/pbc/all/tax-management/tax-management-pbc-updates.html
+  #        - title: Tax domain model and relationships
+  #          url: /docs/pbc/all/tax-management/tax-domain-model-and-relationships.html
+  #        - title: "Reference information: Tax module"
+  #          url: /docs/pbc/all/tax-management/reference-information-tax-module.html
+  #        - title: Integrate and migrate
+  #          nested:
+  #            - title: Integrate the Product feature API
+  #              url: /docs/pbc/all/tax-management/integrate-and-migrate/integrate-the-product-feature-api.html
+  #            - title: Migrate the ProductTaxSetsRestApi module
+  #              url: /docs/pbc/all/tax-management/integrate-and-migrate/migrate-the-producttaxsetsrestapi-module.html
+  #            - title: Migrate the Tax module
+  #              url: /docs/pbc/all/tax-management/integrate-and-migrate/migrate-the-tax-module.html
+  #          url: /docs/pbc/all/tax-management/tax-feature-overview.html
+  #        - title: Manage taxes in the Back Office
+  #          nested:
+  #            - title: Manage tax rates
+  #              url: /docs/pbc/all/tax-management/manage-taxes-in-the-back-office/manage-tax-rates.html
+  #            - title: Manage tax sets
+  #              url: /docs/pbc/all/tax-management/manage-taxes-in-the-back-office/manage-tax-sets.html
+  #        - title: HowTo - Get Ready for VAT (tax) Changes in Germany
+  #          url: /docs/pbc/all/tax-management/howto-get-ready-for-vat-tax-changes-in-germany.html
+  #        - title: Tax feature overview
+  #          url: /docs/pbc/all/tax-management/tax-feature-overview.html
+  #        - title: Tax feature overview
+  #          url: /docs/pbc/all/tax-management/tax-feature-overview.html
+  #      - title: Payment
+          nested:
+            - title: Unzer
+              url: /docs/pbc/all/payment/unzer/unzer.html
+              nested:
+                - title: What's changed
+                  url: /docs/pbc/all/payment/unzer/whats-changed/whats-changed.html
+                - title: Configuration in the Back Offic
+                  url:
+                - title: Use cases & HowTos & Tips
+                  url:
+                - title: Install & migrate
+                  url: /docs/pbc/all/payment/unzer/installation-and-migration/install-unzer.html
+                - title: API endpoints
+                  url:
+                - title: Extend & Customize
+                  url:
+                - title: Domain model & relationships
+                  url:

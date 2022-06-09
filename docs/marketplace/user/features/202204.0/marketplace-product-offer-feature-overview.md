@@ -2,6 +2,11 @@
 title: Marketplace Product Offer feature overview
 description: This document contains concept information for the Product offers feature in the Spryker Commerce OS.
 template: concept-topic-template
+related:
+  - title: Managing product offers
+    link: docs/marketplace/user/merchant-portal-user-guides/page.version/offers/managing-product-offers.html
+  - title: Managing merchant product offers
+    link: docs/marketplace/user/back-office-user-guides/page.version/marketplace/offers/managing-merchant-product-offers.html
 ---
 
 The *Product Offer* entity is created when multiple merchants need to sell the same product on the Marketplace.

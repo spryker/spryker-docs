@@ -1,7 +1,7 @@
 title: PBC guides
 entries:
   - product: PBC
-  #  nested:
+    nested:
   #    - title: PBC landing
   #      url: /docs/pbc/all/pbc-landing.html
   #    - title: Tax Management
@@ -35,22 +35,22 @@ entries:
   #          url: /docs/pbc/all/tax-management/tax-feature-overview.html
   #        - title: Tax feature overview
   #          url: /docs/pbc/all/tax-management/tax-feature-overview.html
-  #      - title: Payment
-          nested:
-            - title: Unzer
-              url: /docs/pbc/all/payment/unzer/unzer.html
-              nested:
-                - title: What's changed
-                  url: /docs/pbc/all/payment/unzer/whats-changed/whats-changed.html
-                - title: Configuration in the Back Offic
-                  url:
-                - title: Use cases & HowTos & Tips
-                  url:
-                - title: Install & migrate
-                  url: /docs/pbc/all/payment/unzer/installation-and-migration/install-unzer.html
-                - title: API endpoints
-                  url:
-                - title: Extend & Customize
-                  url:
-                - title: Domain model & relationships
-                  url:
+      - title: Payment
+        nested:
+          - title: Unzer
+            url: /docs/pbc/all/payment/unzer/unzer.html
+            nested:
+              - title: What's changed
+                url: /docs/pbc/all/payment/unzer/whats-changed/whats-changed.html
+              - title: Configuration in the Back Offic
+                url:
+              - title: Use cases & HowTos & Tips
+                url:
+              - title: Install & migrate
+                url: /docs/pbc/all/payment/unzer/installation-and-migration/install-unzer.html
+              - title: API endpoints
+                url:
+              - title: Extend & Customize
+                url:
+              - title: Domain model & relationships
+                url:

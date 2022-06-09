@@ -177,7 +177,7 @@ class CmsBlockGuiDependencyProvider extends SprykerCmsBlockGuiDependencyProvider
 
 1. In the Backoffice, go to the Content section and navigate to the Blocks section.
 2. Click Create Block to create a new block.
-3. From the template drop-down, select the "Title and description block" template and name the new block.
+3. From the template drop-down, select the "Category Block" template and name the new block.
 4. Select the Categories in the "Categories: Top", "Categories: Middle" and "Categories: Bottom" fields. While typing, the product search will offer suggestions from the product list.
 5. After clicking **Save**, you will be prompted to provide content per locale for the placeholders in the Twig template.
 6. Set the block to active to use it straight away.

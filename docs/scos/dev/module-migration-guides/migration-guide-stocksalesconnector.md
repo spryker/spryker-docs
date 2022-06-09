@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-stock.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-stock.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-stock.html
+  - /module_migration_guides/mg-stock-sales-connector.htm
 ---
 
 ## Upgrading from version 3.* to version 5.0.0

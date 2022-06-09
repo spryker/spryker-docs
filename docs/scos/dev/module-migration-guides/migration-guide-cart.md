@@ -29,7 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cart.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cart.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cart.html
-
+  - /module_migration_guides/mg-cart.htm
 related:
   - title: Migration guide - Quote
     link: docs/scos/dev/module-migration-guides/migration-guide-quote.html
@@ -47,10 +47,8 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 With the implementation of the quote storage strategies, the new version of the Cart module allows to use different behaviors for different strategies.
 Since `QuoteClient::getStorageStrategy` method is used now, the Quote module's version must be 2.0.0 or higher.
-`CartClientInterface::storeQuote` method is deprecated, remove it from your code and use `QuoteClientInterface::setQuote()`  instead.
+`CartClientInterface::storeQuote` method is deprecated, remove it from your code and use `QuoteClientInterface::setQuote()` instead.
 `CartClientInterface::getZedStub` method is deprecated, remove it from your code and use `\Spryker\Client\ZedRequest\ZedRequestClient::addFlashMessagesFromLastZedRequest` to push stack of ZED request messages to flash messages.
 
-All logic from CartClient has been moved to `\Spryker\Client\Cart\Plugin\SessionQuoteStorageStrategyPlugin`.
+All logic from `CartClient` has been moved to `\Spryker\Client\Cart\Plugin\SessionQuoteStorageStrategyPlugin`.
 Make sure that all your local overwrites of those methods have been moved there.
-
-<!-- Last review date: Apr 10, 2018- by Dmitriy Krainiy -->

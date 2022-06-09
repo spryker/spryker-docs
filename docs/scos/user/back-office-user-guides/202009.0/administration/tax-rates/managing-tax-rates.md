@@ -15,7 +15,7 @@ This document describes how to create, edit, and delete [tax rates](/docs/scos/u
 ## Prerequisites
 To start working with tax rates, go to **Administration > Tax Rates**.
 
-Some sections contain reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Some sections contain reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Creating a tax rate
 To define a rate under which the product, shipment, or a threshold are going to be taxed, you need to create a tax rate. 
@@ -37,7 +37,7 @@ To update a tax rate:
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Taxes/Managing+Tax+Rates/editing-tax-rate.png) 
 
-### Tips & tricks
+### Tips and tricks
 You can start editing a tax rate while viewing it:
 1. On the *View Tax Rate* page, click **Edit** in the top right corner.
 2. Go over the [*Editing a Tax Rate*](#editing-a-tax-rate) procedure.
@@ -73,12 +73,12 @@ The tax rate is deleted. Remember that it will also be deleted from the [tax set
 Even if this was the only tax rate assigned to a tax set, the tax set itself will remain.
 {% endinfo_block %}
 
-### Tips & tricks
+### Tips and tricks
 You can delete a tax rate while viewing it:
 1. On the *View Tax Rate* page, click **Delete** in the top-right corner.
 2. On the *Delete Tax Rate* page, confirm your action.
 
-## What's next?
+## Next steps
 You cannot use the tax rate itself for products, shipment, and threshold taxation. You use tax sets instead. 
 So you can proceed to the procedure of [creating a tax set and assigning it to the tax rate](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html). 
 

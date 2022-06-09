@@ -23,11 +23,14 @@ Basically, almost every Spryker module provides one or more helpers. The helpers
 
 <a name="enabling"></a>
 
-## Enabling a Helper
+## Enabling a helper
+
 To make a helper available for your tests, you need to enable it in the `codeception.yml` configuration file.
 
 Example:
-`tests/OrganizationTest/Application/Module/codeception.yml`
+
+**tests/OrganizationTest/Application/Module/codeception.yml**
+
 ```php
 suites:
     SuiteName:
@@ -37,11 +40,13 @@ suites:
             enabled:
                 - \SprykerTest\Shared\Testify\Helper\ConfigHelper
 ```
+
 This will enable the `\SprykerTest\Shared\Testify\Helper\ConfigHelper` in your tests.
 
 For a real example, check out the [codeception.yml file of the Router module](https://github.com/spryker/router/blob/master/tests/SprykerTest/Zed/Router/codeception.yml).
 
-### Test Lifecycle
+### Test lifecycle
+
 Helpers give easy access to every point of the test lifecycle. A test lifecycle looks as follows:
 
 - Before test suite
@@ -63,12 +68,15 @@ When you have code blocks that are re-usable in other modules as well, consider 
 Every public method in your helper will be generated into the tester class, and can be executed from within your test after you run `vendor/bin/codecept build`.
 
 In your test, you can use the public methods with:
+
 ```php
 $this->tester->myPublicHelperMethod();
 ```
 
-## Creating Your own Helper
+## Creating your own helper
+
 It is very easy to create your own re-usable helper - you just need to create one in your test suite. For example:
+
 ```php
 namespace OrganizationTest\Module\Application\Helper;
 
@@ -98,12 +106,13 @@ This helper adds one method you can use in your test class and executes the `_be
 
 There are almost endless things you can put into these helper classes. For more information, see [Codeception modules and helpers documentation](https://codeception.com/docs/06-ModulesAndHelpers).
 
-## Using Another Helper in a Helper
+## Using another helper in a helper
+
 To get easy access to other helpers, for most of the helpers, Spryker provides a trait that can be used in your helper to get access to it.
 
 If your helper needs access, for example, to ConfigHelper of the Testify module, just add the trait to your helper:
 
-```
+```php
 
 class YourHelper extends Module
 {
@@ -115,7 +124,9 @@ class YourHelper extends Module
     }
 }
 ```
+
 ## Next Steps
+
 * [Set up an organization of your tests](/docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html).
 * Learn about the [available test helpers](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html).
 *  Learn about the [console commands you can use to execute your tests](/docs/scos/dev/guidelines/testing-guidelines/executing-tests.html).

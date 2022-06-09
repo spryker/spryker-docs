@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/crefopay-integration
   - /docs/crefopay-integration
   - /docs/en/crefopay-integration
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/crefopay/crefopay-integration-into-a-project.html
 related:
   - title: CrefoPay
     link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay.html
@@ -26,12 +27,6 @@ related:
   - title: CrefoPay notifications
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-notifications.html
 ---
-
-{% info_block errorBox %}
-
-There is currently an issue when using giftcards with CrefoPay. Our team is developing a fix for it.
-
-{% endinfo_block %}
 
 This article provides step-by-step instructions on integrating the CrefoPay system into your project.
 

@@ -38,7 +38,7 @@ To retrieve information on the Company Roles assigned to the currently logged in
 
 [/company-roles/mine](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#//company-roles)
 
-Sample request: *GET http://glue.mysprykershop.com/company-roles/mine*
+Request sample: *GET http://glue.mysprykershop.com/company-roles/mine*
 
 {% info_block warningBox "Note" %}
 You can use the **Accept-Language** header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de**, **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
@@ -87,7 +87,7 @@ The endpoint responds with a collection of **RestCompanyRoleResponse**, each con
 To retrieve information on a specific Company Role, send a GET request to the following endpoint:
 
 [/company-roles/{% raw %}{{{% endraw %}role_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#//company-roles)
-Sample request: *GET http://glue.mysprykershop.com/company-roles/**2f0a9d3e-9e69-53eb-8518-284a0db04376***
+Request sample: *GET http://glue.mysprykershop.com/company-roles/**2f0a9d3e-9e69-53eb-8518-284a0db04376***
 
 where **2f0a9d3e-9e69-53eb-8518-284a0db04376** is the ID of the Company Role you need.
 
@@ -136,7 +136,7 @@ The endpoint responds with a **RestCompanyRoleResponse** that contains informati
 ### Fetching Additional Information
 You can extend the response with the companies resource relationship in order to obtain information on the company where the role was created.
 
-Sample request: *GET http://glue.mysprykershop.com/company-roles/2f0a9d3e-9e69-53eb-8518-284a0db04376?include=companies*
+Request sample: *GET http://glue.mysprykershop.com/company-roles/2f0a9d3e-9e69-53eb-8518-284a0db04376?include=companies*
 
 The response will include the following additional attributes:
 

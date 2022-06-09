@@ -8,6 +8,7 @@ originalArticleId: 62c81dbe-96fd-40fb-8721-cc5768b42102
 redirect_from:
   - /v5/docs/managing-warehouses
   - /v5/docs/en/managing-warehouses
+  - /docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/warehouses/managing-warehouses.html
 related:
   - title: Warehouses- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/administration/warehouses/references/warehouses-reference-information.html
@@ -15,7 +16,7 @@ related:
 
 This topic describes how to manage warehouses.
 
-To start working with warehouses, go to **Administration** > **Warehouses**. 
+To start working with warehouses, go to **Administration** > **Warehouses**.
 ***
 ## Viewing Warehouse Details
 To view the warehouse details:
@@ -30,7 +31,7 @@ To view the warehouse details:
 ## Editing Warehouse Details
 To edit the warehouse details:
 
-1. In the *Actions* column, click **Edit** for the warehouse you want to update. This will take you to the **Edit Warehouse: [Warehouse name]** page. 
+1. In the *Actions* column, click **Edit** for the warehouse you want to update. This will take you to the **Edit Warehouse: [Warehouse name]** page.
 2. In the **Configuration** tab, make changes to the needed attributes. See [Warehouses: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/references/warehouses-reference-information.html) for more details on the attributes you can update.
 3. Switch to the **Store relation** tab and specify the store in which you want the warehouse to be available.
 4. To keep the changes, click **Save**. This will redirect you to the **Warehouses** page where you can see the updated warehouse and the following message: 'Warehouse has been successfully updated'.

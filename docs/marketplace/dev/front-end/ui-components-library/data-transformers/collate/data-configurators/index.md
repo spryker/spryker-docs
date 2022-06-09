@@ -2,13 +2,16 @@
 title: Data Transformer Data Configurators
 description: This document provides details about the Data Transformer Data Configurators service in the Components Library.
 template: concept-topic-template
+related:
+  - title: Data Transformer Collate Configurator Table
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html
 ---
 
 This document explains the Data Transformer Data Configurators service in the Components Library.
 
 ## Overview
 
-Data Transformer Data Configurators is an Angular Service that re-populates data based on configuration. This allows backend systems to control where re-population data is placed.
+Data Transformer Data Configurators is an Angular Service that re-populates data based on configuration. This lets backend systems control where re-population data is placed.
 
 Data Transformer Data Configurators are used in the Datasource service.
 
@@ -46,6 +49,12 @@ Data Transformer Data Configurator must implement a specific interface (DataTran
 
 ```ts
 // Module augmentation
+declare module '@spryker/data-transformer' {
+    interface DataTransformerRegistry {
+        collate: CollateDataTransformerConfig;
+    }
+}
+
 declare module '@spryker/data-transformer.collate' {
     interface DataTransformerConfiguratorRegistry {
         custom: CustomDataTransformerConfiguratorService;
@@ -61,7 +70,7 @@ export class CustomDataTransformerConfiguratorService implements DataTransformer
         config: DataTransformerConfiguratorConfig,
         injector: Injector,
     ): Observable<DataTransformerConfiguratorConfigT> {
-        ... 
+        ...
     }
 }
 
@@ -100,4 +109,4 @@ interface DataTransformerConfigurator {
 
 There are a few common Data Transformer Data Configurators that are available in UI library as separate packages:
 
-- [Table](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html) - integrates Table into Collate to re-populate data when the table updates.
+- [Table](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html)—integrates Table into Collate to re-populate data when the table updates.

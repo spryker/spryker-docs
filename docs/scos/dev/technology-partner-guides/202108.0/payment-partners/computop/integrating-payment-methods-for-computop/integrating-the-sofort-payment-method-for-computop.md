@@ -1,5 +1,5 @@
 ---
-title: Integrating the Sofort payment method for Computop 
+title: Integrating the Sofort payment method for Computop
 description: Integrate Sofort payment through Computop into the Spryker-based shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/computop-sofort
   - /docs/computop-sofort
   - /docs/en/computop-sofort
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/computop/computop-payment-methods/computop-sofort.html
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html
@@ -21,7 +22,7 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/computop-api-calls.html
   - title: Integrating the iDeal payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-ideal-payment-method-for-computop.html
-  - title: Computop - Paydirekt
+  - title: Integrating the Paydirekt payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html
   - title: Computop - OMS plugins
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/computop-oms-plugins.html

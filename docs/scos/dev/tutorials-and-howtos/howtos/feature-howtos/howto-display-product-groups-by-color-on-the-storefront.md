@@ -1,5 +1,5 @@
 ---
-title: HowTo - Display Product Groups by Color on the Storefront
+title: "HowTo: Display product groups by color on the Storefront"
 description: Procedure to display a product group on Storefront.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -16,20 +16,17 @@ redirect_from:
   - /v6/docs/en/howto-display-product-groups-by-color-on-the-storefront
 ---
 
-
-
 To enhance the visual shopping experience of your customers, you can use product groups. A product group is a group of products logically united by an attribute. You can create product groups, but there is no way to display them on the Storefront by default. This guide shows how to display a product group on the Storefront using the color attribute as an example. The behavior to be configured is described in [Product Groups feature overview](/docs/scos/user/features/202108.0/product-groups-feature-overview.html).
-
 
 ## Prerequisites
 
 Before you start configuration, make sure that the [Product Groups feature is integrated](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-groups-feature-integration.html) into your project.
 
-## Schema Extension
+## Schema extension
 
 Add the `color_code` field to the `spy_product_abstract` table in the database:
 
-1. Create or extend the schema file as follows.
+1. Create or extend the schema file as follows:
 
 **src/Pyz/Zed/ProductGroup/Persistence/Propel/Schema/spy_product.schema.xml**
 
@@ -43,7 +40,6 @@ Add the `color_code` field to the `spy_product_abstract` table in the database:
 
 </database>
 ```
-
 
 2. Apply database changes and generate entity and transfer changes:
 
@@ -59,12 +55,9 @@ The `color_code` field has been added to the `spy_product_abstract` table.
 
 {% endinfo_block %}
 
-
-## Transfer Object Extension
-
+## Transfer object extension
 
 Extend the existing transfer objects to support the newly introduced `colorCode` field:
-
 1. Create or extend the transfer object definition file as follows.
 
 **src/Pyz/Shared/ProductGroup/Transfer/product.transfer.xml**
@@ -90,13 +83,9 @@ Extend the existing transfer objects to support the newly introduced `colorCode`
 ```
 
 2. Generate transfer objects:
-
 ```bash
 console transfer:generate
 ```
-
-
-
 
 {% info_block warningBox "Verification" %}
 
@@ -104,20 +93,19 @@ Transfer objects have been prepared for the `colorCode` field.
 
 {% endinfo_block %}
 
-## Extension of Product Abstract Data Import
+## Extension of product abstract data import
 
 Extend the product abstract writer with the color code data in the data import module. In `src/Pyz/Zed/DataImport/Business/Model/ProductAbstract/ProductAbstractWriterStep.php`, edit `ProductAbstractWriterStep` as follows:
 
-1. Introduce the KEY_COLOR_CODE constant.
-
-2. Extend the `importProductAbstract()` method with the color code for the product abstract entity.
+1. Introduce the `KEY_COLOR_CODE` constant.
+2. Extend the `importProductAbstract()` method with the color code for the product abstract entity:
 
 ```php
 <?php
 
 /**
  * This file is part of the Spryker Commerce OS.
- * For full license information, please view the LICENSE file that was distributed with this source code.
+ * For full license information, view the LICENSE file that was distributed with this source code.
  */
 
 namespace Pyz\Zed\DataImport\Business\Model\ProductAbstract;
@@ -158,11 +146,10 @@ class ProductAbstractWriterStep extends PublishAwareStep implements DataImportSt
 }
 ```
 
-## Demo Data Preparation
+## Demo data preparation
 
 Prepare the demo data for the color code field:
-
-1. Add the `color_code` field to the product abstract data import. The provided data below can be used as an example.
+1. Add the `color_code` field to the product abstract data import. The following provided data can be used as an example:
 
 **data/import/icecat_biz_data/product_abstract.csv**
 
@@ -178,16 +165,16 @@ digital-cameras,34,003,Canon IXUS 160,Canon IXUS 160,/en/canon-ixus-160-3,/de/ca
 ```bash
 console data:import:product-abstract
 ```
+
 {% info_block warningBox "Verification" %}
 
-Make sure that:
-
+Make sure the following:
 * The data is in the database.
 * The data is synchronized to the storage.
 * You can see the color selector on the product card of the product in the group.
 
 {% endinfo_block %}
 
-## Front-end Configuration
+## Frontend configuration
 
-If you want to change the product attribute used for grouping, re-define `colorAttributeName` in the `src/Pyz/Yves/ProductGroupWidget/Theme/default/components/molecules/color-selector/color-selector.twig` Twig template.
+If you want to change the product attribute used for grouping, in the `src/Pyz/Yves/ProductGroupWidget/Theme/default/components/molecules/color-selector/color-selector.twig` Twig template, re-define `colorAttributeName`.

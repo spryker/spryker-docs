@@ -34,19 +34,22 @@ As a part of documentation related to Spryker Glue REST API, we have also develo
 The application has been developed for four primary purposes:
 
 1. Provide a simple yet fully functional example of Glue REST API usage.
-2. Illustrate a complete B2C Spryker experience using REST endpoints, starting from selecting the necessary product all the way through to placing an order. The shop also demonstrates the use of the API resources to create such features as the product catalog, search, auto-suggestions, customer registration, cart management, displaying order details etc.
+2. Illustrate a complete B2C Spryker experience using REST endpoints, starting from selecting the necessary product all the way through to placing an order. The shop also demonstrates the use of the API resources to create such features as the product catalog, search, auto-suggestions, customer registration, cart management, displaying order details.
 3. Allow you to try Glue REST API without any coding.
 4. Provide sample REST requests that can facilitate custom touchpoint development.
 
 {% info_block errorBox %}
-The shop is provided for display purposes only and should not under any circumstances be used as a starting point for any project.
+
+The shop is provided only for display purposes, and must under no circumstances be used as a starting point for any project.
+
 {% endinfo_block %}
 
-## API Resources
-The Demo shop has been built using and demonstrates the use of the endpoints and resources provided by the following APIs:
+## API resources
+
+The Demo shop was built using and demonstrates the use of the endpoints and resources provided by the following APIs:
 
 
-| API | Reference Documents |
+| API | REFERENCE DOCUMENTS |
 | --- | --- |
 | Search API | [Catalog search](/docs/scos/dev/glue-api-guides/{{site.version}}/searching-the-product-catalog.html)<br>[Getting suggestions for auto-completion and search](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-autocomplete-and-search-suggestions.html) |
 | Category API | [Retrieving category trees](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-categories/retrieving-category-trees.html) |
@@ -64,21 +67,23 @@ The Demo shop has been built using and demonstrates the use of the endpoints and
 | Wishlist API | [Managing wishlists](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-wishlists/managing-wishlists.html) |
 | Store API | [Retrieving store configuration](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-store-configuration.html) |
 
-## Running the Example Application
+## Running the example application
+
 The app source code can be found in the following GitHub repository: [https://github.com/spryker-shop/b2c-api-react-example](https://github.com/spryker-shop/b2c-api-react-example). You can install it inside [Spryker Development Virtual Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html) or on a dedicated web server.
 
 For detailed installation steps, see [B2C API React Example Installation](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example.html).
 
-## Peeking Requests
-After installing and running the example app, you can try its functionality. Depending on how you installed it, the shop will be available at:
+## Peeking requests
 
-* `http://glue.de.b2c-demo-shop.local/react/` - when installed it in the VM;
-* `http://react.local` - when installed on a separate web server.
+After installing and running the example app, you can try its functionality. Depending on how you installed it, the shop is available at:
 
-To get a list of Glue API requests that were used to build a page:
+* `http://glue.de.b2c-demo-shop.local/react/`—when installed it in the VM;
+* `http://react.local`—when installed on a separate web server.
+
+To get a list of Glue API requests that have been used to build a page:
 
 1. Open the F12 menu of your web browser.
 2. Activate the **Console** section.
 3. To get details of a specific request, expand it in the console.
 
-![glue-requests-sample.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/B2C+API+React+Example/glue-requests-sample.png) 
+![glue-requests-sample.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/B2C+API+React+Example/glue-requests-sample.png)

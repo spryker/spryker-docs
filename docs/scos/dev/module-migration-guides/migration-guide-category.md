@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-category.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-category.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-category.html
+  - /upcoming-release/docs/migration-guide-category
 related:
   - title: Creating Categories
     link: docs/scos/user/back-office-user-guides/page.version/catalog/category/creating-categories.html
@@ -38,16 +39,13 @@ This document describes how to upgrade the `Category` module.
 
 ## Upgrading from version 4.* to 5.*
 
-
-*Estimated migration time: 30 minutes.*
-
 In Version 5.* of the Category module, we:
 
 - Added the possibility to assign stores to categories.
 - Introduced the `spy_category_store` table.
 - Adjusted the `spy_category.fk_category_template` field to make it a mandatory column in the `spy_category` table.
 
-
+*Estimated migration time: 30 minutes.*
 
 To upgrade the `Category` module from version 4.* to 5.*:
 
@@ -72,6 +70,7 @@ To upgrade the `Category` module from version 4.* to 5.*:
          </behavior>
    </table>
    ```
+
    {% info_block warningBox "Verification" %}
 
    In case you have `src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category_template.schema.xml` file locally: if you've never changed it - remove it. If you have introduced changes to it - make sure to move them to `src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category.schema.xml` and then remove the file.
@@ -91,7 +90,7 @@ In case you have `src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category_te
    console transfer:generate
    ```
 
-4. Update navigation cache:
+4. Update the navigation cache:
 
    ```bash
    console navigation:build-cache
@@ -126,7 +125,7 @@ In case you have `src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category_te
    }
    ```
 
-7.  if you are using data import:
+7.  if you are using the data import:
 
     1. Update the `CategoryDataImport` module:
 
@@ -134,7 +133,7 @@ In case you have `src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category_te
       composer update spryker/category-data-import --update-with-dependencies
       ```
 
-    2. Register data import plugins and add them to the full import list in `Pyz/Zed/DataImport/DataImportDependencyProvider`:
+    2. Register the data import plugins and add them to the full import list in `Pyz/Zed/DataImport/DataImportDependencyProvider`:
 
       ```php
       <?php
@@ -160,7 +159,7 @@ In case you have `src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category_te
 
 
 
-    3. Add the category store import to the list of the import types by the given path`Pyz/Zed/DataImport/DataImportConfig`:
+    3. Add the category store import to the list of the import types by the given path `Pyz/Zed/DataImport/DataImportConfig`:
 
       ```php
       <?php
@@ -184,7 +183,7 @@ In case you have `src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category_te
       }
       ```
 
-    4. In `Pyz/Zed/Console/ConsoleDependencyProvider`, register data import console commands:
+    4. In `Pyz/Zed/Console/ConsoleDependencyProvider`, register the data import console commands:
 
       ```php
       <?php
@@ -214,7 +213,7 @@ In case you have `src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category_te
       }
       ```
 
-    5. Prepare data for category and store relationships by the given path `data/import/common/{STORE}/category_store.csv`:
+    5. Prepare data for the category and store relationships by the given path `data/import/common/{STORE}/category_store.csv`:
 
       ```csv
       category_key,included_store_names,excluded_store_names
@@ -228,17 +227,16 @@ In case you have `src/Pyz/Zed/Category/Persistence/Propel/Schema/spy_category_te
       ```bash
       console data:import:category-store
       ```
+
 {% info_block warningBox "Verification" %}
 
 Ensure that the `spy_category_store` table has been added and filled with data.
 
 {% endinfo_block %}
 
-## Upgrading from Version 3.* to Version 4.*
+## Upgrading from version 3.* to version 4.*
 
-### Changes
-
-The fourth version of the Category module introduced the changes described below.
+The fourth version of the `Category` module introduced the changes described below.
 
 Added:
 
@@ -251,9 +249,11 @@ Removed:
 
 * category `is_clickable` functionality
 
+_Estimated migration time: 1 hour. The time may vary depending on project-specific factors._
+
 ### Update modules
 
-1. Update the Category module by adding `"spryker/category": "^4.0.0"` to your `composer.json` and running composer update.
+1. Update the `Category` module by adding `"spryker/category": "^4.0.0"` to your `composer.json` and running composer update.
 Due to the changes in the Category module, all related modules have to be updated too.
 2. Run composer require `spryker/event spryker/storage` to install Event and Storage modules.
 
@@ -285,9 +285,9 @@ ALTER TABLE "spy_category" ADD FOREIGN KEY("fk_category_template") REFERENCES sp
 
 #### Resolve deprecations
 
-Before upgrading to the new version, make sure that you do not use any deprecated code from version 3.\*. You can find replacements for the deprecated code in the table below.
+Before upgrading to the new version, make sure that you do not use any deprecated code from the version 3.\*. You can find the replacements for the deprecated code in the table below.
 
-| Deprecated code | Replacement |
+| DEPRECATED CODE | REPLACEMENT |
 | --- | --- |
 | `\Spryker\Shared\Category\CategoryConstants::RESOURCE_TYPE_CATEGORY_NODE` | `\Spryker\Shared\Category\CategoryConfig::RESOURCE_TYPE_CATEGORY_NODE` |
 |`Spryker\Shared\Category\CategoryConstants::RESOURCE_TYPE_NAVIGATION`|`\Spryker\Shared\Category\CategoryConfig::RESOURCE_TYPE_NAVIGATION`|
@@ -301,9 +301,9 @@ Also, the `is_clickable` form field was removed because this functionality is ob
 
 #### Data migration
 
-The following migration script is designed to add the category template selection functionality to your project. If necessary, adjust the script to cover your category implementation
+The following migration script is designed to add the category template selection functionality to your project. If necessary, adjust the script to cover your category implementation.
 
-CategoryTemplateMigration.php
+**CategoryTemplateMigration.php**
 
 ```php
 <?php
@@ -426,4 +426,3 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 8. Run the command to add templates to your categories: `vendor/bin/console category-template:migrate`
 
-_Estimated migration time: 1 hour. The time may vary depending on project-specific factors._

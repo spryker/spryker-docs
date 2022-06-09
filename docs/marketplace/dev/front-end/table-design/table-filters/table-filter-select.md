@@ -2,6 +2,13 @@
 title: Table Filter Select
 description: This document provides details about the Table Filter Select component in the Components Library.
 template: concept-topic-template
+related:
+  - title: Table Filter extension
+    link: docs/marketplace/dev/front-end/table-design/table-filters/index.html
+  - title: Table Filter Date Range
+    link: docs/marketplace/dev/front-end/table-design/table-filters/table-filter-date-range.html
+  - title: Table Filter Tree Select
+    link: docs/marketplace/dev/front-end/table-design/table-filters/table-filter-tree-select.html
 ---
 
 This document explains the Table Filter Select component in the Components Library.
@@ -14,11 +21,11 @@ Check out an example usage of the Table Filter Select in the `@spryker/table` co
 
 Component configuration:
 
-- `enabled` - enables the filter via config.  
-- `items` - an array with the configuration for each filter select.  
+- `enabled`—enables the filter via config.  
+- `items`—an array with the configuration for each filter select.  
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         dataSource: { ... },
         columns: [ ... ],
@@ -50,7 +57,12 @@ Component configuration:
 Register the component:
 
 ```ts
-// Dynamic
+declare module '@spryker/table.feature.filters' {
+    interface TableFiltersRegistry {
+        select: TableFilterSelect;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -90,12 +102,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Filter Select:
 
 ```ts
-declare module '@spryker/table.feature.filters' {
-    interface TableFiltersRegistry {
-        select: TableFilterSelect;
-    }
-}
-
 export interface TableFilterSelect
     extends TableFilterBase<TableFilterSelectValue> {
     type: 'select';
@@ -112,5 +118,5 @@ export interface TableFilterSelectOptionsValue {
     title: string;
 }
 
-export type TableFilterSelectValue = unknown | unknown[];
+export type TableFilterSelectValue = SelectValueSelected;
 ```

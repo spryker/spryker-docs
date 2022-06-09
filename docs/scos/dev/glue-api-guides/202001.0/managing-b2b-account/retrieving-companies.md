@@ -8,6 +8,8 @@ originalArticleId: 8659a8a5-fc20-4d4f-838f-e9ea919e7387
 redirect_from:
   - /v4/docs/retrieving-company-information-201907
   - /v4/docs/en/retrieving-company-information-201907
+  - /docs/scos/dev/glue-api-guides/202001.0/managing-b2b-account/retrieving-companies.html
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-b2b-account/retrieving-companies.html
 related:
   - title: Logging In as Company User
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
@@ -40,7 +42,7 @@ To retrieve information on the company a user belongs to, send a GET request to 
 
 companies/mine
 
-Sample request: *GET http://glue.mysprykershop.com/companies/mine*
+Request sample: *GET http://glue.mysprykershop.com/companies/mine*
 
 {% info_block warningBox "Note" %}
 You can use the Accept-Language header to specify the locale.Sample header: [{"key":"Accept-Language","value":"de, en;q=0.9"}]where de, en are the locales; q=0.9 is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
@@ -60,7 +62,7 @@ The endpoint responds with a collection of **RestCompanyResponse** consisting of
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Sample Response**
-    
+
 ```json
 {
     "data": [
@@ -88,7 +90,7 @@ To retrieve information on a specific company, send a GET request to the followi
 
 /companies/{% raw %}{{{% endraw %}company_id{% raw %}}}{% endraw %}
 
-Sample request: *GET http://glue.mysprykershop.com/companies/**59b6c025-cc00-54ca-b101-191391adf2af***
+Request sample: *GET http://glue.mysprykershop.com/companies/**59b6c025-cc00-54ca-b101-191391adf2af***
 where **59b6c025-cc00-54ca-b101-191391adf2af** is the ID of the company you need.
 
 {% info_block infoBox "Info" %}
@@ -113,7 +115,7 @@ The endpoint responds with a **RestCompanyResponse** containing information on t
 *The attributes mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Sample Response**
-    
+
 ```json
 {
     "data": {

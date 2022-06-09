@@ -2,6 +2,9 @@
 title: Cache
 description: This document provides details about the Cache service in the Component Library.}
 template: concept-topic-template
+related:
+  - title: Cache Strategy Static
+    link: docs/marketplace/dev/front-end/ui-components-library/cache/static.html
 ---
 
 This document explains the Cache service in the Component Library.
@@ -9,9 +12,9 @@ This document explains the Cache service in the Component Library.
 ## Overview
 
 Cache Service is responsible for caching arbitrary operations based on the configuration.
-This allows backend systems to use caching without changing the front-end at all (ex. http datasource, etc.).
+This lets backend systems use caching without changing the front-end at all (ex. http datasource).
 
-Cache Service uses Cache Strategy to define caching algorithm (static, cache first, freshness first, etc.).
+Cache Service uses Cache Strategy to define caching algorithm (static, cache first, freshness first).
 
 ```html
 <spy-select
@@ -87,7 +90,7 @@ interface CacheService {
         config: CacheStrategyConfig,
         operation: CacheOperation<T>,
     ): Observable<T> {};
-    
+
     clearCache(namespace?: string): Observable<void> {};
 }
 ```
@@ -169,7 +172,7 @@ interface CacheStrategyConfig {
 
 There are a few common Cache Strategies that are available in UI library as separate packages:
 
-- [Static](/docs/marketplace/dev/front-end/ui-components-library/cache/static.html) - adds values immediately to the 
+- [Static](/docs/marketplace/dev/front-end/ui-components-library/cache/static.html)—adds values immediately to the
 cache until the expiration date and always retrieves them from cache if requested.
 
 ## Related articles

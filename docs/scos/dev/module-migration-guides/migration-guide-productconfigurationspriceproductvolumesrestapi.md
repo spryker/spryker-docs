@@ -2,21 +2,24 @@
 title: Migration guide - ProductConfigurationsPriceProductVolumesRestApi
 description: Learn how to upgrade the ProductConfigurationsPriceProductVolumesRestApi module to a newer version.
 template: module-migration-guide-template
+redirect_from:
+  - /docs/scos/dev/module-migration-guides/202200.0/migration-guide-productconfigurationspriceproductvolumesrestapi.html
 ---
 
-## Upgrading from version 0.1.* to version 0.2.* 
+## Upgrading from version 0.1.* to version 0.2.*
 
 *Estimated migration time: 10 minutes*
 
-To upgrade the ProductConfigurationsPriceProductVolumesRestApi module from version 0.1.* to version 0.2.*, do the following:
+To upgrade the `ProductConfigurationsPriceProductVolumesRestApi` module from version 0.1.* to version 0.2.*, do the following:
 
-1. Update the ProductConfigurationsPriceProductVolumesRestApi module to version 0.2.0:
+1. Update the `ProductConfigurationsPriceProductVolumesRestApi` module to version 0.2.0:
 
 ```bash
 composer require spryker/product-configurations-price-product-volumes-rest-api:"^0.2.0" --update-with-dependencies
 ```
 
 2. From `\Pyz\Glue\ProductConfigurationsRestApi\ProductConfigurationsRestApiDependencyProvider`, remove the plugins:
+
     - `ProductConfigurationVolumePriceRestCartItemProductConfigurationMapperPlugin`
     - `ProductConfigurationVolumePriceCartItemProductConfigurationMapperPlugin`
 

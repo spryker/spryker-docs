@@ -10,7 +10,7 @@ redirect_from:
   - /v2/docs/en/mindlab
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
+    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information
@@ -27,7 +27,7 @@ For successful e-commerce strategies in today's world, meaningful data analysis 
 
 ## Mindlab Download and Support
 
-For downloads, support and additional information send a message to: [info@mindlab.de](info@mindlab.de)
+For downloads, support and additional information send a message to: [info@mindlab.de](mailto:info@mindlab.de)
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: HowTo - Add a New Shipment Method 2.0
+title: "HowTo: Add a new shipment method 2.0"
 description: Use the guide to add a new shipment method with the currency and price specified without integrating the method with shipment providers.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -27,18 +27,22 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
 ---
 
-{% info_block infoBox %}
-This article describes the steps to add a new shipment method, without integrating with the shipment provider.
+This document describes the steps to add a new shipment method without integrating with the shipment provider.
+
+This document considers the case when you need to add a new shipment method without integrating it with the shipment providers' system.
+
+{% info_block infoBox "Note" %}
+
+In this situation, you *must* have multi-currency prices attached to the shipment method and the correct tax set linked to it. Also, the `ship` event *must* be manually triggerable from the Back Office.
+
 {% endinfo_block %}
 
-In this tutorial we’ll consider the case when you need to add a new shipment method, without the need to integrate it with the shipment providers system.
+## Set up the state machine
 
-What’s important for this situation is to have multi-currency prices attached to the shipment method and also to have the correct tax set linked to it. Also, the `ship` event should be manually triggerable from the Back Office.
+The state machine that handles orders that use this shipment method needs to use a manual event for shipping so that it can be triggered from the Back Office.
 
-## Setting Up the State Machine
+![Setting up State Machine](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ship_event.png)
 
-The state machine that handles orders that use this shipment method needs to use a manual event for shipping, so that it can be triggered from the Back Office.
-![Setting up State Machine](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ship_event.png) 
 The corresponding XML for this transition would be:
 
 ```xml
@@ -61,32 +65,44 @@ The corresponding XML for this transition would be:
 </events>
 ```
 
-## Adding a New Shipment Method
-**To add a new shipment method:**
+## Add a new delivery method
 
-1. In the Back Office, navigate to the **Shipment** section and click **Add new Carrier Company**.
+To add a new shipment method, follow these steps:
+1. In the Back Office, navigate to the **Delivery Methods** section and click **Create new carrier company**.
 2. Specify a name for the carrier company and the corresponding glossary key for having a localized name.
-3. To  use this carrier company in the shop, select **Enabled** in the check box.
-![Enabled checkbox](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ui_add_carrier_cmpany.png) 
+3. To use this carrier company in the shop, select **Enabled**.
+4. Click **Save**.
+![Enabled checkbox](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ui_add_carrier_cmpany.png)
 
-Now that we have a new shipment carrier, we can add a new shipment method to it.
+When you have a new shipment carrier, you can add a new shipment method to it.
 
-**To add a new shipment method to a carrier:**
+{% info_block infoBox "Note" %}
 
-1. Click **Add new Shipment Method**.
-You will be redirected to the _Add a new shipment method_ dialog.
-2. Select the carrier you created in the previous step.
-3. Add the name and store/currency specific net and gross prices.
-4. Mark it as "Active".
-5. Select the corresponding tax set.
-6. Click **Add Shipment Method**.
-![Add shipment method ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ui_shipment_method_6.png) 
+For more detailed information about adding shipment methods, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html).
 
-The shipment methods with price are retrieved depending on your preconfigured price mode + current store and the currently selected currency.
+{% endinfo_block %}
 
-Shipment methods might be excluded if their active flag is off, connected `AvailabilityPlugin` plugin excludes them, or it would have a price as NULL.
+## Add a new carrier company
+
+To add a shipment method to a carrier, follow these steps:
+1. Click **Create new delivery method**. The **Create Delivery Method** page opens.
+2. Select the **CARRIER** you have created in the [Add a new delivery method](#add-a-new-delivery-method) section.
+3. Add the **NAME** and store- and currency-specific net and gross prices.
+4. Select **IS ACTIVE**.
+5. Select the corresponding **TAX SET**.
+6. Click **Save**.
+
+{% info_block infoBox "Note" %}
+
+For more detailed information about adding carrier companies, see [Creating carrier companies](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-carrier-companies.html).
+
+{% endinfo_block %}
+
+![Add shipment method ](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ui_shipment_method_6.png)
+
+The shipment methods with price are retrieved depending on your pre-configured price mode + current store and the selected currency.
+
+Shipment methods can be excluded if their active flag is off. The connected `AvailabilityPlugin` plugin excludes them; otherwise, it has a price as NULL.
 
 In this current example, the new shipment method is available in the shop for DE store, EUR currency and gross price mode as 7 EUR.
-![UI shipment selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ui_shipment_selection.png) 
-
-<!-- Last review day: Feb 26, 2019 -by Karoly Gerner, Anastasija Datsun-->
+![UI shipment selection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+Add+a+New+Shipment+Method+2.0/ui_shipment_selection.png)

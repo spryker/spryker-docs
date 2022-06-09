@@ -2,6 +2,21 @@
 title: Data Transformer Array-map
 description: This document provides details about the Data Transformer Array-map service in the Components Library.
 template: concept-topic-template
+related:
+  - title: Data Transformers
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/index.html
+  - title: Data Transformer Chain
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/chain.html
+  - title: Data Transformer Date-parse
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-parse.html
+  - title: Data Transformer Date-serialize
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html
+  - title: Data Transformer Lens
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/lens.html
+  - title: Data Transformer Object-map
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html
+  - title: Data Transformer Pluck
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/pluck.html
 ---
 
 This document explains the Data Transformer Array-map service in the Components Library.
@@ -10,11 +25,11 @@ This document explains the Data Transformer Array-map service in the Components 
 
 Data Transformer Array-map is an Angular Service that executes another Data Transformer based on the config for every element in the array.
 
-In the example below, the `datasource` will return an array with the transformed `date` in every object.
+In the following example, the `datasource` will return an array with the transformed `date` in every object.
 
 Service configuration:
 
-- `mapItems` - a Data Transformer that is set up with a configuration object.
+- `mapItems`—a Data Transformer that is set up with a configuration object.
 
 ```html
 <spy-select
@@ -50,6 +65,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/data-transformer' {
+    interface DataTransformerRegistry {
+        'array-map': ArrayMapDataTransformerConfig;
+    }
+}
+
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
@@ -65,12 +86,6 @@ export class RootModule {}
 Below you can find interfaces for the Data Transformer Array-map:
 
 ```ts
-declare module '@spryker/data-transformer' {
-    interface DataTransformerRegistry {
-        'array-map': ArrayMapDataTransformerConfig;
-    }
-}
-
 export interface ArrayMapDataTransformerConfig extends DataTransformerConfig {
     mapItems: DataTransformerConfig;
 }

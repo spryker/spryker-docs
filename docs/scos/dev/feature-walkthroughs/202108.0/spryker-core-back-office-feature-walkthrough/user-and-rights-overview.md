@@ -10,7 +10,7 @@ redirect_from:
 - /2021080/docs/en/user-and-rights-overview
 - /docs/user-and-rights-overview
 - /docs/en/user-and-rights-overview
-- /docs/scos/dev/feature-walkthroughs/202108.0/customer-account-management-feature-walkthrough/user-and-rights-overview.html
+- /docs/scos/dev/feature-walkthroughs/202204.0/customer-account-management-feature-walkthrough/user-and-rights-overview.html
 ---
 
 User and rights management is a general term that describes the security functionality for controlling user access to perform various roles throughout the system.
@@ -38,7 +38,7 @@ Also, you can find bundle names as well as controllers and actions in the file `
 
 ![bundles_navigation.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.md/bundles_navigation.png)
 
-See [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/roles-groups-and-users/managing-users.html) to learn how to create and manage users, groups, and roles .
+See [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html) to learn how to create and manage users, groups, and roles .
 
 <a name="add-acl"></a>
 
@@ -83,9 +83,10 @@ $config[AclConstants::ACL_USER_RULE_WHITELIST] = [
     // ....
 ];
 ```
+
 In the example, we grant access to the Application module resources for all users.
 
-{% info_block warningBox "" %}
+{% info_block warningBox "Note" %}
 
 With the configuration provided in the example, users are granted access to these resources regardless of ACL configuration in ZED UI.
 

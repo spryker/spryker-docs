@@ -90,6 +90,7 @@ export default class NameOfYourComponent extends Component {
 If you need some images or fonts from a library separately, copy them to `frontend/assets/images` or `frontend/assets/fonts` and use them after that.
 
 ## Adding and Using External Library in Your Project Without npm
+
 If a library has source on CDN, use a molecule `script-loader` to load the library:
 
 **name-of-your-component.twig**

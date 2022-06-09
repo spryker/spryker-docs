@@ -19,18 +19,13 @@ redirect_from:
   - /v5/docs/en/mg-cms-gui
   - /v6/docs/mg-cms-gui
   - /v6/docs/en/mg-cms-gui
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-api-module.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-api-module.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-api-module.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-api-module.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-api-module.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-api-module.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsgui.html
+  - /module_migration_guides/mg-cms-gui.htm
 ---
 
-## Upgrading from Version 4.* to Version 5.*
+## Upgrading from version 4.* to version 5.*
 
-Version 5 of the CMSGui module introduces the [multi-store functionality](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
+Version 5 of the `CMSGui` module introduces the [multi-store functionality](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 {% info_block errorBox %}
 
@@ -38,9 +33,11 @@ To enable the feature, make sure you have the store relation type plugin. See be
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+_Estimated migration time: 30 minutes._
 
-1. Require the update with composer: `"spryker/cms-gui": "^5.0.0"`
+To upgrade to the new version of the module, do the following:
+
+1. Require the update using Composer: `"spryker/cms-gui": "^5.0.0"`
 2. Add the Store Relation Form Type Plugin:
 
 **src/Pyz/Zed/CmsGui/CmsGuiDependencyProvider.php**
@@ -62,11 +59,10 @@ class CmsGuiDependencyProvider extends SprykerCmsGuiDependencyProvider
 ```
 
 New transfers must be generated:
+
 `$ console transfer:generate`
 
 3. If project overrides were introduced, please observe the following changes:
 * `CmsGuiCommunicationFactory::createCmsVersionForm` was deprecated, please use `CmsGuiCommunicationFactory::getCmsVersionForm`.
 * `CmsGuiCommunicationFactory::createCmsGlossaryForm` was deprecated, please use `CmsGuiCommunicationFactory::getCmsGlossaryForm`.
 * `CmsVersionMapper::mapToCmsVersionDataTransfer` was given return type `CmsVersionMapper::CmsVersionDataTransfer`
-
-_Estimated migration time: 30 minutes._

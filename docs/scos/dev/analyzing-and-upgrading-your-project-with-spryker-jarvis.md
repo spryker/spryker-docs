@@ -25,7 +25,7 @@ redirect_from:
 
 Spryker Jarvis is meant mostly for developers working on the Spryker projects who want to get a clear view of what it takes to update their project to the latest product release version of Spryker. The tools can also be useful for project managers, as it answers the question “How outdated is the project?“ and helps to estimate efforts to update the project.
 
-This article will teach you how to install and use the Spryker Jarvis tool for analysis and upgrade of your project.
+This document shows how to install and use the Spryker Jarvis tool for analysis and upgrade of your project.
 
 ## Prerequisites
 Before you can install Spryker Jarvis, make sure that you have:
@@ -34,6 +34,7 @@ Before you can install Spryker Jarvis, make sure that you have:
 * [NodeJS installed.](https://nodejs.org/en/download)  
 
 ## Installation
+
 To install Spryker Jarvis:
 
 1. Fork/Clone/Download [Spryker Jarvis repository](https://github.com/spryker/jarvis).
@@ -55,9 +56,9 @@ Open `http://localhost:7777` in your browser and enjoy the migration analysis.
 ## Jarvis views
 Depending on your project’s specifics and your goals, you can use various migration views available in Jarvis and take necessary actions. There are three views:
 
-* *Basic* view - for migrating to a newer product release.
-* *No-features* view - for upgrading your project modules to their current major and minor versions.
-* *Missing-features* view - for upgrading your project with the compatible Spryker features.
+* *Basic* view—for migrating to a newer product release.
+* *No-features* view—for upgrading your project modules to their current major and minor versions.
+* *Missing-features* view—for upgrading your project with the compatible Spryker features.
 
 <a name="basic"></a>
 
@@ -93,7 +94,7 @@ The *no-features* view is especially useful when your project does not use any f
 
 Use this view if you want to understand to what extent your project is outdated and estimate the effort to update it.
 
-{% info_block infoBox %}
+{% info_block infoBox "Note" %}
 
 If you use Spryker features and want to be up-to-date with them, we recommend using the [basic view](#basic-view-migrating-to-a-newer-product-release).
 
@@ -109,7 +110,7 @@ To see details on a module, such as, what changes have been made in the later ve
   <source src="https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Migrating+Your+Project+to+the+Latest+Spryker+Version+with+Spryker+Jarvis/Screen+Recording+2020-08-06+at+10.04.06.mov">
 </video>
 
-The detailed view of modules allows you to analyze the changes, and if needed, upgrade the modules. To upgrade to the latest minor module versions, run the module [composer update](/docs/scos/dev/setup/composer.html#composer-update) command. To upgrade to a major version, follow the [migration guide](/docs/scos/dev/module-migration-guides/about-migration-guides.html) of the respective module.
+The detailed view of modules allows you to analyze the changes, and if needed, upgrade the modules. To upgrade to the latest minor module versions, run the module [composer update command](/docs/scos/dev/setup/managing-scos-dependencies-with-composer.html#composer-update). To upgrade to a major version, follow the [migration guide](/docs/scos/dev/module-migration-guides/about-migration-guides.html) of the respective module.
 
 ### Missing-features view: Upgrading your project with the compatible Spryker features
 To upgrade your project with the compatible Spryker features, use the *missing-features* view.
@@ -137,4 +138,6 @@ For now, you can not do the following things with Jarvis:
 
 
 ## Reference
-Check out the [How to use Spryker Jarvis video](https://training.spryker.com/pages/spryker-tv?wchannelid=papy2tx2f6&wmediaid=jtkjogkxht) to see Spryker Jarvis in action.
+To see Spryker Jarvis in action, check out this video:
+
+{% wistia t1o6z2o5n 720 480 %}

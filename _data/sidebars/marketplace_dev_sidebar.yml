@@ -6,14 +6,14 @@ entries:
     nested:
       - title: Setup
         nested:
-          - title: System requirements
+          - title: DevVM system requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
 
           - title: Infrastructure requirements
             url: /docs/marketplace/dev/setup/infrastructure-requirements.html
 
-          - title: Installation
-            url: /docs/marketplace/dev/setup/installation.html
+          - title: Setup
+            url: /docs/marketplace/dev/setup/spryker-marketplace-setup.html
 
       - title: Marketplace architecture overview
         nested:
@@ -32,10 +32,10 @@ entries:
       - title: Feature walkthroughs
         nested:
 
-          - title: Marketplace Merchant 
+          - title: Marketplace Merchant
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-feature-walkthrough.html
 
-          - title: Marketplace Product Offer 
+          - title: Marketplace Product Offer
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
             nested:
               - title: Product Offer in the Back Office
@@ -56,8 +56,14 @@ entries:
           - title: Marketplace Product
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
 
+          - title: Marketplace Product Approval Process
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-approval-process-feature-walkthrough.html
+            include_versions:
+            - "202204.0"
+          
           - title: Marketplace Order Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html
+
             nested:
               - title: Merchant Oms
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/merchant-oms.html
@@ -68,6 +74,11 @@ entries:
           - title: Marketplace Product Offer Prices
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-prices-feature-walkthrough.html
 
+          - title: Marketplace Merchant Custom Prices
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-custom-prices-feature-walkthrough.html
+            include_versions:
+            - "202204.0"
+            
           - title: Marketplace Return Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-return-management-feature-walkthrough.html
 
@@ -86,29 +97,36 @@ entries:
           - title: Marketplace Wishlist
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-wishlist-feature-walkthrough.html
 
+          - title: Marketplace Shopping Lists
+            url: /docs/marketplace/dev/feature-walkthroughs/marketplace-shopping-lists-feature-walkthrough.html
+            include_versions:
+            - "202204.0"
+
           - title: Persistence ACL
             url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html
+
             nested:
 
               - title: Persistence ACL feature configuration
                 url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html
-              
+
               - title: Rules and scopes
                 url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/rules-and-scopes.html
+
                 nested:
-                  
+
                   - title: Global scope
                     url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/global-scope.html
-                  
+
                   - title: Segment scope
                     url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html
-                  
+
                   - title: Inherited scope
                     url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/inherited-scope.html
-                  
+
                   - title: Composite entity
                     url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html
-              
+
               - title: Execution flow
                 url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/execution-flow.html
 
@@ -121,8 +139,9 @@ entries:
           - title: Merchant Portal
             nested:
 
-              - title: Marketplace Merchant Portal Core 
+              - title: Marketplace Merchant Portal Core
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-core-feature-walkthrough.html
+
                 nested:
 
                   - title: GUI modules concept
@@ -136,7 +155,7 @@ entries:
 
               - title: Marketplace Merchant Portal Product Management
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-management-feature-walkthrough.html
-              
+
               - title: Marketplace Merchant Portal Product Offer Management
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html
 
@@ -178,9 +197,19 @@ entries:
           - title: Merchant Switcher feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-feature-integration.html
 
+          - title: Merchant Switcher + Customer Account Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-customer-account-management-feature-integration.html
+            include_versions:
+            - "202204.0"
+
           - title: Merchant Switcher + Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-wishlist-feature-integration.html
 
+          - title: Marketplace Merchant Custom Prices
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-custom-prices-feature-integration.html
+            include_versions:
+            - "202204.0"
+          
           - title: Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
 
@@ -189,6 +218,11 @@ entries:
 
           - title: Marketplace Order Management + Order Threshold feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-order-threshold-feature-integration.html
+
+          - title: Marketplace Product Approval Process feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-approval-process-feature-integration.html
+            include_versions:
+            - "202204.0"
 
           - title: Marketplace Product feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html
@@ -202,6 +236,11 @@ entries:
           - title: Marketplace Product + Marketplace Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html
 
+          - title: Marketplace Product + Quick Add to Cart feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-quick-add-to-cart-feature-integration.html
+            include_versions:
+            - "202204.0"
+          
           - title: Marketplace Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html
 
@@ -214,6 +253,11 @@ entries:
           - title: Marketplace Product Offer + Checkout feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-checkout-feature-integration.html
 
+          - title: Marketplace Product Offer + Quick Add to Cart feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-quick-add-to-cart-feature-integration.html
+            include_versions:
+            - "202204.0"
+          
           - title: Marketplace Promotions & Discounts feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-promotions-discounts-feature-integration.html
 
@@ -240,6 +284,11 @@ entries:
 
           - title: Marketplace Shipment feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-shipment-feature-integration.html
+
+          - title: Marketplace Shopping Lists feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-shopping-lists-feature-integration.html
+            include_versions:
+            - "202204.0"
 
           - title: Marketplace Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-wishlist-feature-integration.html
@@ -313,13 +362,28 @@ entries:
                 url: /docs/marketplace/dev/feature-integration-guides/glue/prices-marketplace-wishlist-feature-integration.html
 
               - title: "Glue API: Marketplace Product Offer Volume Prices feature integration"
-                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-volume-prices.html
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-volume-prices-feature-integration.html
 
               - title: "Glue API: Marketplace Return Management feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-return-management-feature-integration.html
 
+              - title: "Glue API: Marketplace Shopping Lists feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-shopping-lists-feature-integration.html
+                include_versions:
+                - "202204.0"
+
       - title: Glue API guides
         nested:
+          - title: REST API Marketplace B2C reference
+            url: /docs/marketplace/dev/glue-api-guides/rest-api-b2c-reference.html
+            include_versions:       
+            - "202204.0"
+
+          - title: REST API Marketplace B2B reference
+            url: /docs/marketplace/dev/glue-api-guides/rest-api-b2b-reference.html
+            include_versions:       
+            - "202204.0"
+
           - title: Abstract products
             nested:
               - title: Retrieving abstract products
@@ -376,6 +440,20 @@ entries:
               - title: Retrieving product offer prices
                 url: /docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offer-prices.html
 
+          - title: Shopping lists
+            include_versions:
+            - "202204.0"
+            nested:
+              - title: Managing marketplace shopping lists
+                url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-lists.html
+                include_versions:
+                - "202204.0"
+
+              - title: Managing marketplace shopping list items
+                url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-list-items.html
+                include_versions:
+                - "202204.0"
+
           - title: Wishlists
             nested:
               - title: Managing wishlists
@@ -398,6 +476,14 @@ entries:
 
           - title: Retrieving autocomplete and search suggestions
             url: /docs/marketplace/dev/glue-api-guides/retrieving-autocomplete-and-search-suggestions.html
+
+          - title: Shopping lists
+            nested:
+              - title: Managing shopping lists
+                url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-lists.html
+
+              - title: Managing shopping list items
+                url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-list-items.html
 
       - title: Data export
         nested:
@@ -439,6 +525,11 @@ entries:
           - title: "File details: merchant-order-status.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-order-status.csv.html
 
+          - title: "File details: merchant_product_approval_status_default.csv"
+            url: /docs/marketplace/dev/data-import/file-details-merchant-product-approval-status-default.csv.html
+            include_versions:
+            - "202204.0"
+
           - title: "File details: merchant-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-offer.csv.html
 
@@ -447,6 +538,11 @@ entries:
 
           - title: "File details: price-product-offer.csv"
             url: /docs/marketplace/dev/data-import/file-details-price-product-offer.csv.html
+
+          - title: "File details: product-offer-shopping-list.csv"
+            url: /docs/marketplace/dev/data-import/file-details-product-offer-shopping-list.csv.html
+            include_versions:
+            - "202204.0"
 
           - title: "File details: product-offer-stock.csv"
             url: /docs/marketplace/dev/data-import/file-details-product-offer-stock.csv.html
@@ -468,7 +564,7 @@ entries:
 
           - title: "File details: product-option-group.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-option-group.csv.html
-
+          
       - title: Front-end
         nested:
 
@@ -706,7 +802,7 @@ entries:
 
           - title: 'How-To: Split products by stores'
             url: /docs/marketplace/dev/howtos/how-to-split-products-by-stores.html
-            
+
           - title: "How-To: Extend Merchant portal dashboard"
             url: /docs/marketplace/dev/howtos/how-to-extend-merchant-portal-dashboard.html
 
@@ -727,3 +823,9 @@ entries:
 
           - title: "How-To: Creating of a new MerchantOms flow "
             url: /docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html
+
+      - title: Technical enhancement guides
+        nested:
+
+          - title: "Migration guide - Upgrade to Angular v12"
+            url: /docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v12.html

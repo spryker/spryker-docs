@@ -24,7 +24,7 @@ Apart from that, ETags can also boost API performance via caching. They can be
 ## Request flow
 When a client requests a resource that supports ETag optimization and is authorized to use it, the Glue API server responds with a REST response. It contains an identifier of the current state of the resource in the ETag header.
 
-Sample request: 
+Request sample: 
 `GET http://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab`
 
 ```

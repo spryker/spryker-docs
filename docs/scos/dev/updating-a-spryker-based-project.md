@@ -20,7 +20,7 @@ redirect_from:
 
 Updating your Spryker shop is always an effort. New features, fixes, and updates are coming every day, and modules become more and more outdated. This raises many questions, the most common of which are:
 * Do I actually need to update my project?
-* If yes - how to do it wisely, to spend less time and stay up-to-date?
+* If yes—how to do it wisely, to spend less time and stay up-to-date?
 * How often should I update?
 * What does the update process look like and how to plan / organize it?
 
@@ -395,7 +395,7 @@ Please let us know in case if anything goes wrong with your update. Feel free to
 * There are missing steps in a [migration guide](/docs/scos/dev/module-migration-guides/about-migration-guides.html) in our documentation.
 
 Reach us out at:
-* **Support and community**: share your problem / solution or learn from others in our [community slack](http://slackcommunity.spryker.com/).
+* **Support and community**: share your problem / solution or learn from others in our [community slack](https://sprykercommunity.slack.com/join/shared_invite/zt-gdakzwk3-~B_gJXbUxMdzkBwTQVjNgg#/).
 * **Create a request** on our [support portal](https://spryker.force.com/support/s/).
 * **Contribute to code**: if you want to share your fix with us, let Spryker take care of it. Spryker can support it in the future and make the fix available for your other projects. To contribute to code, create a pull request on the module's [Github repository](https://github.com/spryker);
 * **Contribute to documentation**: if you found an issue in a migration guide or some parts of it are missing - you can suggest a change by clicking **Edit or Report** right below the article title.

@@ -12,11 +12,15 @@ redirect_from:
 ---
 
 This topic provides you with the information that you need to know when working with discounts.
+
 {% info_block warningBox "Note" %}
+
 You can find the information related to discount calculation, conditions and voucher codes in separate articles. See the **Related Articles** section.
+
 {% endinfo_block %}
 
 ## Discount Overview Page
+
 In the **Discount** section, you see the following:
 
 * The discount ID and name
@@ -29,7 +33,9 @@ By default, the last created discount goes on top of the table. However, you can
 
 All columns with headers having arrows in the List of Orders table are sortable. 
 ***
+
 ## Actions Column
+
 All the discount management options that you can invoke from the _Actions_ column on the **Discount Overview** page are described in the following table.
 
 | Action |Description  |
@@ -54,5 +60,7 @@ The following table describes the attributes you enter and select on the **Edit 
 | **Valid from** and **Valid to**| Vouchers are redeemable/the cart rule is active between Valid From and Valid To dates, inclusive. E.g.:  voucher can be redeemed/discount applies to the cart starting from 1/1/2018 until 31/12/2019.|
 
 {% info_block infoBox "Info" %}
+
 The name and the description should be meaningful to help other Back Office users understand what the discount does. Besides, the given name is displayed in the customer's cart when redeeming the voucher. Therefore, it must be unique.
+
 {% endinfo_block %}

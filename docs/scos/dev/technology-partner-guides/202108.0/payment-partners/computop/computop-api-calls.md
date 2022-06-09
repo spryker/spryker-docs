@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/computop-api-details
   - /docs/computop-api-details
   - /docs/en/computop-api-details
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/computop/technical-details-and-howtos/computop-api.html
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html
@@ -21,7 +22,7 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-direct-debit-payment-method-for-computop.html
   - title: Integrating the iDeal payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-ideal-payment-method-for-computop.html
-  - title: Integrating the Сredit Сard payment method for Computop
+  - title: Integrating the Credit Card payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html
   - title: Integrating the Easy Credit payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-easy-credit-payment-method-for-computop.html
@@ -61,4 +62,3 @@ Status inquiries within Paygate give detailed information about the amounts that
     - Create `Pyz\Zed\Computop\ComputopConfig`.
     - Extend it from original `SprykerEco\Zed\Computop\ComputopConfig`.
     - Update `isRefundShipmentPriceEnabled` method (set up "false").
-

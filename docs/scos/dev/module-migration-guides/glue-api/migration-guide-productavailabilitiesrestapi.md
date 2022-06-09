@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/glue-api/migration-guide-productavailabilitiesrestapi.html
   - /docs/scos/dev/module-migration-guides/202009.0/glue-api/migration-guide-productavailabilitiesrestapi.html
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/migration-guide-productavailabilitiesrestapi.html
+  - /module_migration_guides/glue_api/productavailabilitiesrestapi-migration-guide.htm
 ---
 
 ## Upgrading from version 3.* to version 4.*
@@ -86,12 +87,12 @@ Was:
                 "quantity": 10
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/sku/concrete-product-availabilities"
+                "self": "https://glue.mysprykershop.com/concrete-products/sku/concrete-product-availabilities"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/sku/concrete-product-availabilities"
+        "self": "https://glue.mysprykershop.com/concrete-products/sku/concrete-product-availabilities"
     }
 }
 ```
@@ -109,12 +110,12 @@ Becomes:
                 "quantity": "10.0000000000"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/sku/concrete-product-availabilities"
+                "self": "https://glue.mysprykershop.com/concrete-products/sku/concrete-product-availabilities"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/sku/concrete-product-availabilities"
+        "self": "https://glue.mysprykershop.com/concrete-products/sku/concrete-product-availabilities"
     }
 }
 ```
@@ -135,12 +136,12 @@ Was:
                 "quantity": 10
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/sku/abstract-product-availabilities"
+                "self": "https://glue.mysprykershop.com/abstract-products/sku/abstract-product-availabilities"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/abstract-products/sku/abstract-product-availabilities"
+        "self": "https://glue.mysprykershop.com/abstract-products/sku/abstract-product-availabilities"
     }
 }
 ```
@@ -157,12 +158,12 @@ Becomes:
                 "quantity": "10.0000000000"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/sku/abstract-product-availabilities"
+                "self": "https://glue.mysprykershop.com/abstract-products/sku/abstract-product-availabilities"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/abstract-products/sku/abstract-product-availabilities"
+        "self": "https://glue.mysprykershop.com/abstract-products/sku/abstract-product-availabilities"
     }
 }
 ```

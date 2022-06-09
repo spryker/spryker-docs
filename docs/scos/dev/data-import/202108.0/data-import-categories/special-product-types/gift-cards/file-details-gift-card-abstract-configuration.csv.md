@@ -11,27 +11,33 @@ redirect_from:
   - /docs/en/file-details-gift-card-abstract-configurationcsv
 ---
 
-This article contains content of the **gift_card_abstract_configuration.csv** file to configure [Gift Card](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html) Abstract Configuration information on your Spryker Demo Shop. A **Gift Card Product** is a regular product in the shop which represents a Gift Card that Customer can buy. The **Gift Card Abstract Product** represents a type of Gift Cards with a code pattern (e.g. "XMAS-", “Happy-B”, etc.).
+This document describes the `gift_card_abstract_configuration.csv` file to configure [Gift Card](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html) Abstract Configuration information in your Spryker Demo Shop. A **Gift Card Product** is a regular product in the shop which represents a Gift Card that Customer can buy. The **Gift Card Abstract Product** represents a type of Gift Cards with a code pattern (e.g. "XMAS-", “Happy-B”, etc.).
 
-## Headers & Mandatory Fields 
-These are the header fields to be included in the .csv file:
+To import the file, run
 
-| Field Name | Mandatory | Type | Other Requirements/Comments | Description |
-| --- | --- | --- | --- | --- |
-| **abstract_sku** | Yes | String |N/A* | SKU identifier of the Gift Card Abstract Product. |
-| **pattern** | No | String |N/A | Pattern that is used to create the unique code of the produced Gift Card after the purchase. |
-*N/A: Not applicable.
+```bash
+data:import:gift-card-abstract-configuration
+```
 
-## Dependencies
+## Import file parameters
 
-This file has the following dependencies:
-*     [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+The file should have the following parameters:
 
-## Template File & Content Example
-A template and an example of the *gift_card_abstract_configuration.csv*  file can be downloaded here:
+| PARAMETER | REQUIRED | TYPE | DEFAULT VALUE | REQUIREMENTS AND COMMENTS | DESCRIPTION |
+| --- | --- | --- | --- | --- | --- |
+| abstract_sku | &check; | String |  | SKU identifier of the Gift Card Abstract Product. |
+| pattern |  | String |  | Pattern that is used to create the unique code of the produced Gift Card after the purchase. |
 
-| File | Description |
+## Import file dependencies
+
+This file has the following dependencies: [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
+
+## Import template file and content example
+
+Find the template and an example of the file below:
+
+| FILE | DESCRIPTION |
 | --- | --- |
-| [gift_card_abstract_configuration.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Special+Product+Types/Gift+Cards/Template+gift_card_abstract_configuration.csv) | Gift Card Abstract Configuration .csv template file (empty content, contains headers only). |
-| [gift_card_abstract_configuration.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Special+Product+Types/Gift+Cards/gift_card_abstract_configuration.csv) |Gift Card Abstract Configuration .csv file containing a Demo Shop data sample. |
+| [gift_card_abstract_configuration.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Special+Product+Types/Gift+Cards/Template+gift_card_abstract_configuration.csv) | Exemplary import file with headers only.  |
+| [gift_card_abstract_configuration.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Special+Product+Types/Gift+Cards/gift_card_abstract_configuration.csv) | Exemplary import file with Demo Shop data. |
 

@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/contentserv
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
+    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Copyright and Disclaimer

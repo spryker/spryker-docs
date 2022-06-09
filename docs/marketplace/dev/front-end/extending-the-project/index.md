@@ -1,12 +1,15 @@
 ---
 title: Extending the project
-description: This document provides details on how to extend the new project.
+description: This document provides details about how to extend the new project.
 template: howto-guide-template
+related:
+  - title: Migration guide - Extending the project
+    link: docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
 ---
 
-To add additional front-end functionality beyond the one provisioned out-of-the-box, the project must be extended.
+To add additional frontend functionality beyond the one provisioned out-of-the-box, the project must be extended.
 
-This article can help you understand how you can extend the front-end project.
+This document can help you understand how you can extend the frontend project.
 
 ## Prerequisites
 
@@ -22,11 +25,11 @@ Prior to starting the project extension, verify that the marketplace modules are
 | SalesMerchantPortalGui (optional)           | >= 0.8.1  |
 | SecurityMerchantPortalGui (optional)        | >= 0.4.2  |
 
-If not, follow the steps from the [Migration guide - Extending the project](/docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html).
+Before extending the project, ensure that you have followed the [migration guide for extending the project](/docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html).
 
 ## Extending/customizing configuration modules
 
-There are several modules having global configuration in `app.module.ts `(e.g. `LocaleModule`, `DefaultUnsavedChangesConfigModule`, `DefaultTableConfigModule`) that influence any component in each module.
+There are several modules having global configuration in `app.module.ts `(for example,`LocaleModule`, `DefaultUnsavedChangesConfigModule`, `DefaultTableConfigModule`) that influence any component in each module.
 
 To extend/customize or override the default configuration, you must add a module with the proper static methods to the `app.module.ts` imports. Below, you can find an example with table configuration:
 
@@ -55,7 +58,7 @@ export class AppModule {}
 
 ## Overriding / creating new angular components
 
-For webpack to compile project-based modules rather than vendor-based, `entry.ts` and `components.module.ts` must be created with the appropriate scaffolding (see [Module Structure](https://spryker-docs.herokuapp.com/docs/marketplace/dev/front-end/project-structure.html#module-structure) section).
+For webpack to compile project-based modules rather than vendor-based, `entry.ts` and `components.module.ts` must be created with the appropriate scaffolding (see [Module Structure](/docs/marketplace/dev/front-end/project-structure.html#module-structure) section).
 
 Default `entry.ts` should use the same code as vendor-level `entry.ts`.
 
@@ -192,4 +195,48 @@ If a project file isn’t reflected in the browser, try to clean cache:
 
 ```bash
 console cache:empty-all
+```
+
+## Overriding CSS variables
+
+CSS variables can be overridden in any `.less`/`.css` file related to the Marketplace at the project level.
+
+Global override changes a variable for the whole project:
+
+- Variables in the root library
+
+```less
+@border-radius-base: var(--spy-border-radius-base, 10px);
+@green: var(--spy-green, #17b497);
+```
+
+- Overridden variables at the project level (for example, `src/Pyz/Zed/ZedUi/Presentation/Components/styles.less`)
+
+```less
+:root {
+  --spy-border-radius-base: 15px;
+  --spy-green: green;
+}
+```
+
+A partial override changes a variable for a specific scope (for example, inside a component):
+
+- Variable in the root library
+
+```less
+@btn-padding-base: var(
+  --spy-btn-padding-base,
+  @btn-horizontal-vertical-base @btn-horizontal-padding-base
+);
+```
+
+- Overridden variable at the project level
+
+```less
+.mp-test-selector {
+  --spy-btn-padding-base: 10px 15px;
+
+  // styles
+  ...
+}
 ```

@@ -21,9 +21,9 @@ The topic describes how to edit CMS pages in the Back Office.
 
 ## Prerequisites
 
-To start editing CMS pages, go to **Content Management** > **Pages**.
+To start editing CMS pages, go to **Content Management&nbsp;<span aria-label="and then">></span> Pages**.
 
-Each section contains reference information. Make sure to review it before you start, or just look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Editing CMS pages
 You can edit page layout, modify SEO information or update page content.
@@ -47,7 +47,7 @@ To change general information and SEO details, on the *Edit CMS Page: [Page Name
     * Meta keywords
     * Meta description
 
-**Tips & tricks**
+**Tips and tricks**
 <br>On the *Edit CMS Page: [Page Name]* page, you can do the following:
 
 * Publish the current version of the page by clicking **Publish** at the top of the page.
@@ -71,7 +71,7 @@ In the placeholders editor, you can insert a banner, abstract product list, prod
 
 {% endinfo_block %}
 
-**Tips & tricks**
+**Tips and tricks**
 <br>On the *Edit Placeholders: [Page Name]* editor, you can do the following:
 
 * Publish the current version of the page by clicking **Publish** at the top of the page.

@@ -28,7 +28,7 @@ Run the following command:
 $ yarn install
 ```
 
-## Building front end
+## Building frontend
 
 Run the following command:
 
@@ -42,11 +42,11 @@ For production
 $ yarn mp:build:production
 ```
 
-## Installing back end
+## Installing backend
 
 Install the needed packages for the Merchant Portal with dependencies, see the available list [here](https://github.com/spryker/?q=merchant-portal-gui)
 
-| NAME | VERSION | LINK |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ----- | ---------- |
 | Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Marketplace Merchant Portal Core | {{page.version}}  | [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html) |
@@ -106,7 +106,7 @@ merchant_key,username
 sony-experts,michele@sony-experts.com
 ```
 
-Run the following commands to import data:
+Import data:
 
 ```bash
 console data:import merchant
@@ -195,7 +195,7 @@ class AclConfig extends SprykerAclConfig
 }
 ```
 
-Run the following command to create users with ACL rules :
+Create users with ACL rules:
 
 ```bash
 console setup:init-db
@@ -205,7 +205,7 @@ console setup:init-db
 
 You can use our `AclEntityDummyProduct` module as an example of extending AclEntityMetadata configuration.
 
-Run the following command to install the module:
+Install the module:
 
 ```bash
 composer require spryker/acl-entity-dummy-product:"^0.2.0" --update-with-dependencies
@@ -305,7 +305,7 @@ To configure the Merchant Portal Sidebar add installed MP GUI modules into `conf
 </config>
 ```
 
-Run the following command to build navigation cache:
+Build navigation cache:
 
 ```bash
 console navigation:build-cache

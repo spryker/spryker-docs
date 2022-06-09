@@ -40,6 +40,7 @@ redirect_from:
 The configuration codes have moved from `RabbitMqDependencyProvider` to `RabbitMqConfiguration`.
 
 **RabbitMqOption TransferObject**
+
 * `RabbitMqOption` transfer has changed:
 `bindingQueue` property has changed to `bindingQueueCollection`
 * `RabbitMqOption` transfer has changed:
@@ -129,7 +130,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 ```
 </details>
 
-***
+
 ## Upgrading from version 1.* to version 2.*
 
 ### Version 2 of the RabbitMq module

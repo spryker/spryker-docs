@@ -10,6 +10,8 @@ redirect_from:
   - /v2/docs/en/merchants-and-merchant-relations-overview
   - /v2/docs/merchants-and-merchant-relations
   - /v2/docs/en/merchants-and-merchant-relations
+  - /docs/scos/user/features/201903.0/merchant-b2b-contracts/merchant-b2b-contracts.html
+  - /docs/scos/user/features/201903.0/merchant-b2b-contracts-feature-overview.htm
 ---
 
 In the context of Spryker B2B eCommerce platform, there can be three key figures: marketplace owner, merchant and buyer.

@@ -74,9 +74,9 @@ Ensure that the cart notes are displayed on the order view page when looking at 
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
-Follow the steps below to install the Marketplace Cart feature front end.
+Follow the steps below to install the Marketplace Cart feature frontend.
 
 ### Prerequisites
 

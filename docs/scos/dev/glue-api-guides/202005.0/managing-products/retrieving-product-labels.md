@@ -29,7 +29,7 @@ To retrieve a product label, send the following GET request:
 
 **/product-labels/{% raw %}{{{% endraw %}label-id{% raw %}}}{% endraw %}**
 
-Sample request: *GET http://glue.mysprykershop.com/product-labels/3*
+Request sample: *GET http://glue.mysprykershop.com/product-labels/3*
 
 where **3** is the ID of the label you want to retrieve.
 
@@ -86,7 +86,7 @@ To retrieve all labels for a product, send a GET request to the following endpoi
 * **/concrete-products/{% raw %}{{{% endraw %}product-sku{% raw %}}}{% endraw %}/abstract-alternative-products?include=product-labels** - for *abstract alternative* products;
 * **/concrete-products/{% raw %}{{{% endraw %}product-sku{% raw %}}}{% endraw %}/concrete-alternative-products?include=product-labels** - for *concrete alternative* products.
 
-Sample request: *GET http://glue.mysprykershop.com/abstract-products/001?include=product-labels*
+Request sample: *GET http://glue.mysprykershop.com/abstract-products/001?include=product-labels*
 
 where **001** is the SKU of the product you need labels for.
 
@@ -173,7 +173,7 @@ The above requests fetch not only label information, but also information on the
 The endpoint responds with information on the requested cart, including the products in it and the labels assigned to them. For each assigned label, the attributes are the same as when requesting a specific label.
 
 **Sample:**
-    
+
 ```json
 {
     "data": [
@@ -271,7 +271,7 @@ The endpoint responds with information on the requested cart, including the prod
 ```
 
 ### Possible Errors
-For information on the possible error responses, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html) and [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/managing-carts.html-of-registered-users-201907).
+For information on the possible error responses, see [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html) and [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html).
 
 ## Get Product Labels for Wishlist Items
 To retrieve labels for all products in a wishlist, send a GET request to the following endpoints and include **product-labels** as a relationship:
@@ -279,7 +279,7 @@ To retrieve labels for all products in a wishlist, send a GET request to the fol
 * */wishlists?include=wishlist-items,concrete-products,product-labels* - **all** wishlists of a customer;
 * */wishlists/**{% raw %}{{{% endraw %}wishlist_ID{% raw %}}}{% endraw %}**?include=wishlist-items,concrete-products,product-labels* - specific wishlist.
 
-Sample request: `GET http://glue.mysprykershop.com/wishlists/19154981-f490-56b5-9537-359703a2ed08?include=wishlist-items,concrete-products,product-labels`
+Request sample: `GET http://glue.mysprykershop.com/wishlists/19154981-f490-56b5-9537-359703a2ed08?include=wishlist-items,concrete-products,product-labels`
 
 where **19154981-f490-56b5-9537-359703a2ed08** is the ID of the wishlist you need labels for.
 
@@ -291,7 +291,7 @@ The above requests fetch not only label information, but also information on the
 The endpoint responds with information on the requested wishlist, including the products in it and the labels assigned to them. For each assigned label, the attributes are the same as when requesting that specific label.
 
 **Sample:**
-    
+
 ```json
 {
     "data": {

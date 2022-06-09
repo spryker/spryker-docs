@@ -28,6 +28,7 @@ redirect_from:
   - docs/scos/dev/module-migration-guides/202001.0/migration-guide-priceproduct.html
   - docs/scos/dev/module-migration-guides/202005.0/migration-guide-priceproduct.html
   - docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproduct.html
+  - /module_migration_guides/mg-priceproduct.htm
 ---
 
 ## Upgrading from version 2.* to version 4.*
@@ -61,9 +62,9 @@ console propel:install
     1. Remove project level `PriceProductDataImport` (`Pyz\Zed\DataImport\Business\Model\ProductPrice\ProductPriceWriterStep`) from `\Pyz\Zed\DataImport\Business\DataImportBusinessFactory`;
     2. Install the new importer module:
 
-```bash
-composer install spryker/price-product-data-import
-```
+    ```bash
+    composer install spryker/price-product-data-import
+    ```
     3. Enable the module by adding
 `\Spryker\Zed\PriceProductDataImport\Communication\Plugin\PriceProductDataImportPlugin` to `\Pyz\Zed\DataImport\DataImportDependencyProvider::getDataImporterPlugins()`
 
@@ -90,7 +91,7 @@ protected function savePriceProductDefault(string $idPriceProductStore): void
 
 {% endinfo_block %}
 
-3. Update PriceProductStorage by running
+3. Update `PriceProductStorage` by running the command:
 
 ```bash
 composer require spryker/price-product-storage:"^2.0.0"

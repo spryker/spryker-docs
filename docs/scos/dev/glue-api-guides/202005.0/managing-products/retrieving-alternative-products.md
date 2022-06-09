@@ -102,8 +102,8 @@ To retrieve abstract alternative products, send the request:
 
 | Request | Usage |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/abstract-alternative-products` | Retrieve abstract product alternatives of the product with SKU `145_29885470`. |
-| `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/abstract-alternative-products?include=product-labels` | Retrieve general information about the abstract product with its assigned product lables included. |
+| `GET https://glue.mysprykershop.com/concrete-products/cable-vga-1-1/abstract-alternative-products` | Retrieve abstract product alternatives of the product with SKU `145_29885470`. |
+| `GET https://glue.mysprykershop.com/concrete-products/cable-vga-1-1/abstract-alternative-products?include=product-labels` | Retrieve general information about the abstract product with its assigned product lables included. |
 
 ### Response 
 
@@ -159,12 +159,12 @@ To retrieve abstract alternative products, send the request:
                 "url": "/en/hdmi-cable-1"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/cable-hdmi-1"
+                "self": "https://glue.mysprykershop.com/abstract-products/cable-hdmi-1"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/abstract-alternative-products"
+        "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-1/abstract-alternative-products"
     }
 }
 ```
@@ -224,7 +224,7 @@ To retrieve abstract alternative products, send the request:
                 "url": "/en/hdmi-cable-1"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/cable-hdmi-1"
+                "self": "https://glue.mysprykershop.com/abstract-products/cable-hdmi-1"
             },
             "relationships": {
                 "product-labels": {
@@ -239,7 +239,7 @@ To retrieve abstract alternative products, send the request:
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/abstract-alternative-products?include=product-labels"
+        "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-1/abstract-alternative-products?include=product-labels"
     },
     "included": [
         {
@@ -252,7 +252,7 @@ To retrieve abstract alternative products, send the request:
                 "frontEndReference": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/3"
+                "self": "https://glue.mysprykershop.com/product-labels/3"
             }
         }
     ]
@@ -283,8 +283,8 @@ To retrieve concrete alternative products, send the request:
 
 | Request | Usage |
 | --- | --- |
-| `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/concrete-alternative-products` | Retrieve abstract product alternatives of the product with SKU `145_29885470`. |
-| `GET http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/concrete-alternative-products?include=product-labels` | Retrieve general information about the abstract product with its assigned product lables included. |
+| `GET https://glue.mysprykershop.com/concrete-products/cable-vga-1-1/concrete-alternative-products` | Retrieve abstract product alternatives of the product with SKU `145_29885470`. |
+| `GET https://glue.mysprykershop.com/concrete-products/cable-vga-1-1/concrete-alternative-products?include=product-labels` | Retrieve general information about the abstract product with its assigned product lables included. |
 
 ### Response 
 
@@ -319,12 +319,12 @@ To retrieve concrete alternative products, send the request:
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/cable-hdmi-1-2"
+                "self": "https://glue.mysprykershop.com/concrete-products/cable-hdmi-1-2"
             }
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/concrete-alternative-products"
+        "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-1/concrete-alternative-products"
     }
 }
 ```
@@ -363,7 +363,7 @@ To retrieve concrete alternative products, send the request:
                 }
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/concrete-products/cable-hdmi-1-2"
+                "self": "https://glue.mysprykershop.com/concrete-products/cable-hdmi-1-2"
             },
             "relationships": {
                 "product-labels": {
@@ -378,7 +378,7 @@ To retrieve concrete alternative products, send the request:
         }
     ],
     "links": {
-        "self": "http://glue.mysprykershop.com/concrete-products/cable-vga-1-1/concrete-alternative-products?include=product-labels"
+        "self": "https://glue.mysprykershop.com/concrete-products/cable-vga-1-1/concrete-alternative-products?include=product-labels"
     },
     "included": [
         {
@@ -391,7 +391,7 @@ To retrieve concrete alternative products, send the request:
                 "frontEndReference": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/3"
+                "self": "https://glue.mysprykershop.com/product-labels/3"
             }
         }
     ]

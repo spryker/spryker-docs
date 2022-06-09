@@ -1,16 +1,16 @@
 ---
 title: Retrieving autocomplete and search suggestions
-description: This article provides information on which endpoints to use to get search and auto-completion suggestions for your products, categories, and CMS fields
+description: This document provides information about which endpoints to use to get search and auto-completion suggestions for your products, categories, and CMS fields
 template: glue-api-storefront-guide-template
 ---
 
-In addition to [catalog search](/docs/scos/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html), Glue API allows you to retrieve autocomplete suggestions for products, categories, and CMS pages. The feature allows developers to predict search strings and provide customers with available options.
+In addition to [catalog search](/docs/scos/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html), Glue API lets you retrieve autocomplete suggestions for products, categories, and CMS pages. The feature lets developers predict search strings and provide customers with available options.
 
 In your development, this resource can help you to enhance the customer experience by providing the relevant information for search, product filters, shopping cart, checkout, order history, wishlist, and many more.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-catalog-feature-integration.html).
+For detailed information about the modules that provide the API functionality and related installation instructions, see [Glue API: Catalog feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-catalog-feature-integration.html).
 
 ## Retrieve a search suggestion
 
@@ -24,14 +24,14 @@ To retrieve a search suggestion, send the request:
 
 | QUERY PARAMETER | DESCRIPTION  | POSSIBLE VALUES|
 | ---------------- | -------------------- | -------------------- |
-| q    | Restricts the returned items to the values of the provided parameters. | <ul><li>{% raw %}{{abstract_product_sku}}{% endraw %}</li><li>{% raw %}{{concrete_product_sku}}{% endraw %}</li><li>{% raw %}{{abstract_product_name}}{% endraw %}</li><li>{% raw %}{{product_attribute}} (for example, brand, color, etc.)—to provide multiple product attributes, use '+'</li><li>{% raw %}{{category_name}}{% endraw %}</li></ul> |
+| q    | Restricts the returned items to the values of the provided parameters. | <ul><li>{% raw %}{{abstract_product_sku}}{% endraw %}</li><li>{% raw %}{{concrete_product_sku}}{% endraw %}</li><li>{% raw %}{{abstract_product_name}}{% endraw %}</li><li>{% raw %}{{product_attribute}} (for example, brand, color)—to provide multiple product attributes, use '+'</li><li>{% raw %}{{category_name}}{% endraw %}</li></ul> |
 | include | Adds resource relationships to the request. | abstract-products  |
 | currency | Sets a currency. | {% raw %}{{currency}}{% endraw %} |
 | priceMode  | Sets a price mode.  | <ul><li>NET_MODE</li><li>GROSS_MODE</li></ul> |
 
 | REQUEST | USAGE |
 | ---------------------- | ------------------------ |
-| `GET https://glue.mysprykershop.com/catalog-search-suggestions` | Retrieve suggestions for an empty search string. |
+| `GET https://glue.mysprykershop.com/catalog-search-suggestions` | Retrieve search suggestions. |
 | `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=` | Retrieve suggestions for an empty search string.    |
 | `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=058` | Retrieve search suggestions for the SKU `058`. |
 | `GET https://glue.mysprykershop.com/catalog-search-suggestions?q=058&include=abstract-products` | Retrieve search suggestions for the SKU `058`, including product details. |
@@ -49,7 +49,7 @@ To retrieve a search suggestion, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: no results</summary>
+<summary markdown='span'>Response sample: retrieve suggestions for an empty search string</summary>
 
 ```json
 {
@@ -79,7 +79,7 @@ To retrieve a search suggestion, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve suggestions for an abstract product</summary>
+<summary markdown='span'>Response sample: retrieve search suggestions for an abstract product</summary>
 
 ```json
 {
@@ -1797,7 +1797,7 @@ To retrieve a search suggestion, send the request:
 
 {% info_block infoBox "SEO-friendly URLs" %}
 
-The `url` attribute of categories and abstract products exposes a SEO-friendly URL of the resource that represents the respective category or product. For information on how to resolve such a URL and retrieve the corresponding resource, see [Resolving search engine friendly URLs](/docs/scos/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html).
+The `url` attribute of categories and abstract products exposes a SEO-friendly URL of the resource that represents the respective category or product. For information about how to resolve such a URL and retrieve the corresponding resource, see [Resolving search engine friendly URLs](/docs/scos/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html).
 
 {% endinfo_block %}
 

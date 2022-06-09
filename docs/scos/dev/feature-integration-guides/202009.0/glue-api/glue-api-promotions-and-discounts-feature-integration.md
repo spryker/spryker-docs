@@ -325,7 +325,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 
 
 {% info_block warningBox "Verification" %}
-Make sure that the following endpoint is available:<ul><li>`http://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}idProductLabel{% raw %}}}{% endraw %}`</li></ul>
+Make sure that the following endpoint is available:<ul><li>`https://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}idProductLabel{% raw %}}}{% endraw %}`</li></ul>
 {% endinfo_block %}
 
 **Example response:**
@@ -342,7 +342,7 @@ Make sure that the following endpoint is available:<ul><li>`http://glue.myspryke
             "frontEndReference": "highlight"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/product-labels/5"
+            "self": "https://glue.mysprykershop.com/product-labels/5"
         }
     }
 }
@@ -352,7 +352,7 @@ Make sure that the following endpoint is available:<ul><li>`http://glue.myspryke
 
 To verify that ProductLabelsResourceRoutePlugin is set up correctly, make sure that the following endpoint is available:
 
-* `http://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}idProductLabel{% raw %}}}{% endraw %}`
+* `https://glue.mysprykershop.com/product-labels/{% raw %}{{{% endraw %}idProductLabel{% raw %}}}{% endraw %}`
 
 **Example response**
 
@@ -368,7 +368,7 @@ To verify that ProductLabelsResourceRoutePlugin is set up correctly, make sure t
             "frontEndReference": "highlight"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/product-labels/5"
+            "self": "https://glue.mysprykershop.com/product-labels/5"
         }
     }
 }
@@ -378,7 +378,7 @@ To verify that ProductLabelsResourceRoutePlugin is set up correctly, make sure t
 
 {% info_block warningBox "Verification" %}
 
-To check `ProductLabelsRelationshipByResourceIdPlugin` plugin installation, send a request to `http://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` with an SKU of a product with at least one product label assigned to it. Make sure that the response includes relationships to the product-labels resource(s).
+To check `ProductLabelsRelationshipByResourceIdPlugin` plugin installation, send a request to `https://glue.mysprykershop.com/abstract-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` with an SKU of a product with at least one product label assigned to it. Make sure that the response includes relationships to the product-labels resource(s).
 
 **Example response**
 
@@ -415,7 +415,7 @@ To check `ProductLabelsRelationshipByResourceIdPlugin` plugin installation, send
                 "frontEndReference": "highlight"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/5"
+                "self": "https://glue.mysprykershop.com/product-labels/5"
             }
         }
     ]
@@ -426,7 +426,7 @@ To check `ProductLabelsRelationshipByResourceIdPlugin` plugin installation, send
 
 {% info_block warningBox "Verification" %}
 
-To check `ProductLabelByProductConcreteSkuResourceRelationshipPlugin` plugin installation, send a request to `http://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` with an SKU of a product with at least one product label assigned to it. Make sure that the response includes relationships to the product-labels resource(s).
+To check `ProductLabelByProductConcreteSkuResourceRelationshipPlugin` plugin installation, send a request to `https://glue.mysprykershop.com/concrete-products/{% raw %}{{{% endraw %}sku{% raw %}}}{% endraw %}?include=product-labels` with an SKU of a product with at least one product label assigned to it. Make sure that the response includes relationships to the product-labels resource(s).
 
 <details open>
 <summary markdown='span'>Example response</summary>
@@ -464,7 +464,7 @@ To check `ProductLabelByProductConcreteSkuResourceRelationshipPlugin` plugin ins
                 "frontEndReference": "highlight"
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/product-labels/5"
+                "self": "https://glue.mysprykershop.com/product-labels/5"
             }
         }
     ]
@@ -479,8 +479,8 @@ To check `ProductLabelByProductConcreteSkuResourceRelationshipPlugin` plugin ins
 
 To verify the CartVouchersResourceRoutePlugin and GuestCartVouchersResourceRoutePlugin plugin integration, make sure that the following endpoints are available:
 
-* `http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/vouchers`
-* `http://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/vouchers`
+* `https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/vouchers`
+* `https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/vouchers`
 
 
 {% endinfo_block %}
@@ -489,7 +489,7 @@ To verify the CartVouchersResourceRoutePlugin and GuestCartVouchersResourceRoute
 
 To verify installation of CartRuleByQuoteResourceRelationshipPlugin and VoucherByQuoteResourceRelationshipPlugin make sure that the vouchers and cart-rules relationships are available when requesting a cart:
 
-* `http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
+* `https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
 
 <details open>
 <summary markdown='span'>Example response</summary>
@@ -526,7 +526,7 @@ To verify installation of CartRuleByQuoteResourceRelationshipPlugin and VoucherB
             ]
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=cart-rules,vouchers"
+            "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=cart-rules,vouchers"
         },
         "relationships": {
             "vouchers": {
@@ -562,7 +562,7 @@ To verify installation of CartRuleByQuoteResourceRelationshipPlugin and VoucherB
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/vouchers/sprykerwu3d"
+                "self": "https://glue.mysprykershop.com/vouchers/sprykerwu3d"
             }
         },
         {
@@ -579,7 +579,7 @@ To verify installation of CartRuleByQuoteResourceRelationshipPlugin and VoucherB
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/cart-rules/1"
+                "self": "https://glue.mysprykershop.com/cart-rules/1"
             }
         }
     ]
@@ -594,7 +594,7 @@ To verify installation of CartRuleByQuoteResourceRelationshipPlugin and VoucherB
 
 Make sure that the cart-rules and vouchers relationships are also available for guest carts. The relationships are provided by `CartRuleByQuoteResourceRelationshipPlugin` and `VoucherByQuoteResourceRelationshipPlugin` plugins. To do so, send a request to the following endpoint:
 
-* `http://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest-cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
+* `https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest-cart_uuid{% raw %}}}{% endraw %}?include=vouchers,cart-rules`
 
 <details open>
 <summary markdown='span'>Example response</summary>
@@ -631,7 +631,7 @@ Make sure that the cart-rules and vouchers relationships are also available for 
             ]
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/guest-carts/9b07888e-623b-5ab1-83dd-c7af5e1d81ad?include=vouchers,cart-rules"
+            "self": "https://glue.mysprykershop.com/guest-carts/9b07888e-623b-5ab1-83dd-c7af5e1d81ad?include=vouchers,cart-rules"
         },
         "relationships": {
             "vouchers": {
@@ -667,7 +667,7 @@ Make sure that the cart-rules and vouchers relationships are also available for 
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/vouchers/sprykerpa8n"
+                "self": "https://glue.mysprykershop.com/vouchers/sprykerpa8n"
             }
         },
         {
@@ -684,7 +684,7 @@ Make sure that the cart-rules and vouchers relationships are also available for 
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/cart-rules/1"
+                "self": "https://glue.mysprykershop.com/cart-rules/1"
             }
         }
     ]
@@ -706,7 +706,7 @@ Prerequisites:
 
 Add items to the cart to satisfy the conditions of the discount rule:
 
-* `POST http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items?include=promotional-items,abstract-product`
+* `POST https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/items?include=promotional-items,abstract-product`
 
 <details open>
 <summary markdown='span'>Example of Request</summary>
@@ -738,7 +738,7 @@ Make sure that the following relations are available:
         "id": "1ce91011-8d60-59ef-9fe0-4493ef3628b2",
         ...
         "links": {
-            "self": "http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=promotional-items,abstract-products"
+            "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=promotional-items,abstract-products"
         },
         "relationships": {
             "promotional-items": {
@@ -836,7 +836,7 @@ Make sure that the following relations are available:
                 ...
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/abstract-products/112"
+                "self": "https://glue.mysprykershop.com/abstract-products/112"
             }
         },
         {
@@ -847,7 +847,7 @@ Make sure that the following relations are available:
                 "quantity": 2
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/promotional-items/bfc600e1-5bf1-50eb-a9f5-a37deb796f8a"
+                "self": "https://glue.mysprykershop.com/promotional-items/bfc600e1-5bf1-50eb-a9f5-a37deb796f8a"
             },
             "relationships": {
                 "abstract-products": {
@@ -880,7 +880,7 @@ Prerequisites:
 
 Add the selected promotional product to the cart and check the cart in the response has the cart rule applied to match the promotional product price:
 
-* `POST http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart-uuid{% raw %}}}{% endraw %}/items?include=items,cart-rules`
+* `POST https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart-uuid{% raw %}}}{% endraw %}/items?include=items,cart-rules`
 
 <details open>
 <summary markdown='span'>Example of Request to Add Selected Promotional Product Into The Cart</summary>
@@ -927,7 +927,7 @@ Add the selected promotional product to the cart and check the cart in the respo
             ]
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=promotional-items,abstract-products,cart-rules"
+            "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=promotional-items,abstract-products,cart-rules"
         },
         "relationships": {
             "items": {
@@ -982,7 +982,7 @@ Add the selected promotional product to the cart and check the cart in the respo
                 "selectedProductOptions": []
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items/112_312526171-promotion-1"
+                "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/items/112_312526171-promotion-1"
             }
         },
         {
@@ -999,7 +999,7 @@ Add the selected promotional product to the cart and check the cart in the respo
                 "discountPromotionQuantity": 2
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/cart-rules/6"
+                "self": "https://glue.mysprykershop.com/cart-rules/6"
             }
         }
     ]

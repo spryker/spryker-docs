@@ -22,48 +22,53 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-customer-access-feature-integration.html
 ---
 
-The [Customer Access API](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-protected-resources.html) allows storefront owners to prevent unauthorized (guest) users from accessing certain REST API resources. This capability is tied up to the [Customer Access](/docs/scos/user/back-office-user-guides/{{site.version}}/customer/customer-customer-access-customer-groups/managing-customer-access.html) Feature that allows you to restrict access to certain content items in *Spryker Back Office*.
+The [Customer Access API](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-protected-resources.html) allows storefront owners to prevent unauthorized (guest) users from accessing certain REST API resources. This capability is tied up to the [Customer Access](/docs/scos/user/back-office-user-guides/{{site.version}}/customer/customer-customer-access-customer-groups/managing-customer-access.html) feature that allows you to restrict access to certain content items in *Spryker Back Office*.
 
-The access to resources protected by the API depends on the setup of the *Customer Access* Feature. If a certain type of information is restricted to **customer access only**, all API resources associated with it will be protected from unauthorized access. If the access is unrestricted, the respective resources are available to guest users as well. For example, if you restrict the **can place an order** functionality to customer access only, customers will be able to check out an order only when authenticated. Alongside with that, the associated API resources (`checkout` and `checkout-data`) will be available only upon authentication. If you don’t restrict access, everyone will be able to use the resources. In other words, you can prevent access only to the resources that belong to one of the *Customer Access Feature* items.
+The access to resources protected by the API depends on the setup of the *Customer Access* feature. If a certain type of information is restricted to *customer access only*, all API resources associated with it are protected from unauthorized access. If the access is unrestricted, the respective resources are available to guest users as well. For example, if you restrict the *can place an order* functionality to customer access only, customers can check out an order only when authenticated. Alongside with that, the associated API resources (*checkout* and *checkout-data*) are available only upon authentication. If you don’t restrict access, everyone can use the resources. In other words, you can prevent access only to the resources that belong to one of the Customer Access feature items.
 
-In this article, you will learn how to map API resources to *Customer Access Feature* items.
+This document shows how to map API resources to the Customer Access feature items.
 
 {% info_block infoBox %}
 
-*Customer Access Feature* items available out of the box are mapped to API resource types by default. The corresponding resource types are:
-* **price** - `abstract-product-prices` and `concrete-product-prices`;
-* **add-to-cart** - `guest-cart-items`;
-* **wishlist** - `wishlists` and `wishlist-items`;
-* **can place an order** - `checkout` and `checkout-data`.
+The *Customer Access* feature items available out of the box are mapped to API resource types by default. The corresponding resource types are as follows:
+
+* **price**—`abstract-product-prices` and `concrete-product-prices`
+* **add-to-cart**—`guest-cart-items`
+* **wishlist**—`wishlists` and `wishlist-items`
+* **can place an order**—`checkout` and `checkout-data`
 
 {% endinfo_block %}
 
-1. To define the mapping of API resource types to content types, open or create file `src/Pyz/Glue/CustomerAccessRestApi/CustomerAccessRestApiConfig.php`.
+To define the mapping of API resource types to content types:
 
-2. The file contains the `CustomerAccessRestApiConfig::CUSTOMER_ACCESS_CONTENT_TYPE_TO_RESOURCE_TYPE_MAPPING` array, where each entry specifies a mapping of a *Customer Access Feature* item to the corresponding API resource type(s).
-For example, in the following code block, item **can place an order** is mapped to **2** resource types: *checkout* and *checkout-data*:
+1. Open or create file `src/Pyz/Glue/CustomerAccessRestApi/CustomerAccessRestApiConfig.php`.
 
-   ```php
-   <?php
+2. The file contains the `CustomerAccessRestApiConfig::CUSTOMER_ACCESS_CONTENT_TYPE_TO_RESOURCE_TYPE_MAPPING` array, where each entry specifies a mapping of a *Customer Access Feature* item to the corresponding API resource type.
 
-   namespace Pyz\Glue\CustomerAccessRestApi;
-   ...
+For example, in the following code block, an item *can place an order* is mapped to two resource types: *checkout* and *checkout-data*:
 
-   class CustomerAccessRestApiConfig extends SprykerCustomerAccessRestApiConfig
-   {
-       protected const CUSTOMER_ACCESS_CONTENT_TYPE_TO_RESOURCE_TYPE_MAPPING = [
-           CustomerAccessConfig::CONTENT_TYPE_ORDER_PLACE_SUBMIT => [
-               CheckoutRestApiConfig::RESOURCE_CHECKOUT,
-               CheckoutRestApiConfig::RESOURCE_CHECKOUT_DATA,
-           ],
-       ];
-   }
-   ```
+```php
+<?php
 
-   Define the mapping of the resources you need.
-   For constants that represent the content item types, see file `src/Spryker/Shared/CustomerAccess/CustomerAccessConfig.php`.
+namespace Pyz\Glue\CustomerAccessRestApi;
+...
 
-   For constants that represent API resource types, see configuration files of the corresponding APIs.
+class CustomerAccessRestApiConfig extends SprykerCustomerAccessRestApiConfig
+{
+    protected const CUSTOMER_ACCESS_CONTENT_TYPE_TO_RESOURCE_TYPE_MAPPING = [
+        CustomerAccessConfig::CONTENT_TYPE_ORDER_PLACE_SUBMIT => [
+            CheckoutRestApiConfig::RESOURCE_CHECKOUT,
+            CheckoutRestApiConfig::RESOURCE_CHECKOUT_DATA,
+        ],
+    ];
+}
+```
+
+Define the mapping of the resources you need.
+
+For constants that represent the content item types, see file `src/Spryker/Shared/CustomerAccess/CustomerAccessConfig.php`.
+
+For constants that represent API resource types, see configuration files of the corresponding APIs.
 
 3. When done, save the file.
 
@@ -71,7 +76,7 @@ For example, in the following code block, item **can place an order** is mapped 
 
 {% info_block infoBox %}
 
-The default `CustomerAccessRestApiConfig.php` of Spryker Storefronts looks as follows:
+The default `CustomerAccessRestApiConfig.php` of Spryker Storefront looks as follows:
 
 ```php
 <?php

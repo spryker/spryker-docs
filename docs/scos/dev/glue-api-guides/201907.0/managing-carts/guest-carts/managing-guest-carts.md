@@ -7,6 +7,7 @@ originalArticleId: 716feabe-b263-4010-a4bc-4a637b9568ad
 redirect_from:
   - /v3/docs/managing-guest-carts
   - /v3/docs/en/managing-guest-carts
+  - /docs/marketplace/dev/glue-api-guides/201907.0/guest-carts/managing-guest-carts.html
 ---
 
 The Carts API provides access to management of customers' shopping carts. The following document covers working with guest carts.
@@ -33,7 +34,7 @@ To create a guest cart for an unauthenticated user, you simply need to place an 
 
 `/guest-cart-items`
 
-Sample request: `POST http://mysprykershop.com/guest-cart-items`
+Request sample: `POST http://mysprykershop.com/guest-cart-items`
 
 ### Request
 #### Headers:
@@ -342,7 +343,7 @@ There are 2 possible ways how you can access a cart of a guest user
 The user's unique identifier is passed in the **X-Anonymous-Customer-Unique-Id** header when creating a cart. It is managed by the API client.
 {% endinfo_block %}
 `/guest-carts`
-Sample request: `GET http://mysprykershop.com/guest-carts`
+Request sample: `GET http://mysprykershop.com/guest-carts`
 **Headers:**
 **X-Anonymous-Customer-Unique-Id** - specifies the unique guest user ID.
 
@@ -351,7 +352,7 @@ Sample request: `GET http://mysprykershop.com/guest-carts`
 The unique identifier of the cart is passed by the Glue API in the id attribute of a **RestCartsResponse** when a new guest cart is created.
 {% endinfo_block %}
 `/guest-carts/{% raw %}{{{% endraw %}guestCartId{% raw %}}}{% endraw %}`
-Sample request: `GET http://mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802`
+Request sample: `GET http://mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802`
 where `2506b65c-164b-5708-8530-94ed7082e802` is the ID of the cart you need.
 
 ### Response
@@ -598,7 +599,7 @@ No matter which of the 2 endpoints you use, it will respond with a **RestCartsRe
 |  sku| String |	SKU of the product.  |
 | quantity | Integer |Quantity of the given product in the cart.  |
 |  groupKey| String | Unique item identifier. The value is generated based on product parameters. |
-|amount  | Integer | 	Amount of the product in the cart. 
+|amount  | Integer | 	Amount of the product in the cart.
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Cart item calculation information**
@@ -642,7 +643,7 @@ To add items to guest carts, send a `POST` request to one of the following endpo
 The user's unique identifier is passed in the **X-Anonymous-Customer-Unique-Id** header when creating a cart. It is managed by the API client.
 {% endinfo_block %}
 `/guest-cart-items`
-Sample request: `GET http://mysprykershop.com/guest-cart-items`
+Request sample: `GET http://mysprykershop.com/guest-cart-items`
 **Headers:**
 **X-Anonymous-Customer-Unique-Id** - specifies the unique guest user ID.
 
@@ -651,7 +652,7 @@ Sample request: `GET http://mysprykershop.com/guest-cart-items`
 The unique identifier of the cart is passed by the Glue API in the id attribute of a **RestCartsResponse** when a new guest cart is created.
 {% endinfo_block %}
 `/guest-carts/{% raw %}{{{% endraw %}guestCartId{% raw %}}}{% endraw %}`
-Sample request: `POST http://mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items`
+Request sample: `POST http://mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items`
 where `2506b65c-164b-5708-8530-94ed7082e802` is the ID of the cart you need.
 
 ### Request
@@ -692,7 +693,7 @@ To remove an item from a guest cart, send a `DELETE` request to one of the follo
 
 `/guest-carts/{% raw %}{{{% endraw %}guestCartId{% raw %}}}{% endraw %}/guest-cart-items/{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}`
 
-Sample request: `DELETE http://mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
+Request sample: `DELETE http://mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
 
 where `2506b65c-164b-5708-8530-94ed7082e802` is the ID of the cart you need and `177_25913296` is the SKU of the concrete product you want to remove.
 
@@ -725,7 +726,7 @@ If the item was deleted successfully, the endpoint will respond with a **204 No 
 To change the quantity of certain items in a guest cart, use the following endpoints with the `PATCH` method:
 
 `/guest-carts/{% raw %}{{{% endraw %}guestCartId{% raw %}}}{% endraw %}/guest-cart-items/{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}`
-Sample request: `PATCH http://mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
+Request sample: `PATCH http://mysprykershop.com/guest-carts/2506b65c-164b-5708-8530-94ed7082e802/guest-cart-items/177_25913296`
 where `2506b65c-164b-5708-8530-94ed7082e802` is the ID of the cart you need and `177_25913296` is the SKU the concrete product for which to change the quantity.
 
 **Headers:**

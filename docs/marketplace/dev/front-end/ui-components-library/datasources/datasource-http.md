@@ -2,6 +2,13 @@
 title: Datasource Http
 description: This document provides details about the Datasource Http service in the Components Library.
 template: concept-topic-template
+related:
+  - title: Datasources
+    link: docs/marketplace/dev/front-end/ui-components-library/datasources/index.html
+  - title: Datasource Inline Table
+    link: docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline-table.html
+  - title: Datasource Inline
+    link: docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline.html
 ---
 
 This document explains the Datasource Http service in the Components Library.
@@ -15,9 +22,9 @@ Check out an example usage of the Datasource Http.
 
 Service configuration:
 
-- `type` - a datasource type.  
-- `url` - a datasource request URL.  
-- `method` - a datasource request method (`GET` by default).  
+- `type`—a datasource type.  
+- `url`—a datasource request URL.  
+- `method`—a datasource request method (`GET` by default).  
 
 ```html
 <spy-select
@@ -35,6 +42,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/datasource' {
+    interface DatasourceRegistry {
+        http: DatasourceHttpService;
+    }
+}
+
 @NgModule({
     imports: [
         DatasourceModule.withDatasources({
@@ -50,12 +63,6 @@ export class RootModule {}
 Below you can find interfaces for the Datasource Http:
 
 ```ts
-declare module '@spryker/datasource' {
-    interface DatasourceRegistry {
-        http: DatasourceHttpService;
-    }
-}
-
 export interface DatasourceHttpConfig extends DatasourceConfig {
     url: string;
     method?: string;

@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-session.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-session.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-session.html
+  - /module_migration_guides/mg-session.htm
 ---
 
 {% info_block errorBox %}
@@ -39,20 +40,24 @@ This migration guide is a part of the [Silex migration effort](/docs/scos/dev/mi
 
 To upgrade the module, do the following:
 
-1. Install modules using composer:
+1. Install modules using Composer:
+
 ```bash
 composer require spryker/session spryker/event-dispatcher
 ```
-2. Remove old service providers, if you have them in the project::
+
+2. Remove old service providers, if you have them in the project:
+
 ```php
 \Silex\Provider\SessionServiceProvider
 \Spryker\Yves\Session\Plugin\ServiceProvider\SessionServiceProvider
 \Spryker\Zed\Session\Communication\Plugin\ServiceProvider\SessionServiceProvider
 \Spryker\Zed\Application\Communication\Plugin\ServiceProvider\SaveSessionServiceProvider
 ```
+
 3. Enable new plugins:
 
-**Zed Integration (when usable in ZED)**
+**Zed integration (when usable in ZED)**
 
 ```php
 <?php
@@ -80,7 +85,7 @@ class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
 }
 ```
 
-**Zed Integration (when usable in ZED)**
+**Zed integration (when usable in ZED)**
 
 ```php
 <?php
@@ -108,7 +113,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 }
 ```
 
-**Yves Integration (when usable in Yves)**
+**Yves integration (when usable in Yves)**
 
 ```php
 <?php
@@ -134,7 +139,7 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-**Yves Integration (when usable in Yves)**
+**Yves integration (when usable in Yves)**
 
 ```php
 <?php
@@ -160,7 +165,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 }
 ```
 
-**Glue Integration (required as a mock)**
+**Glue integration (required as a mock)**
 
 ```php
 <?php
@@ -185,11 +190,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
-## Upgrading from Version 3.* to Version 4.*
+
+## Upgrading from version 3.* to version 4.*
 
 The previous version made use of the deprecated `spryker/new-relic` and the `spryker/new-relic-api` modules.
 To be able to use this version you need to install the `spryker/monitoring` module if you haven't done already by running:
-```yaml
+
+```bash
 composer require spryker/monitoring
 ```
 

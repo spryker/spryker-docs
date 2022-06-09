@@ -2,6 +2,25 @@
 title: Table Column Type Chip
 description: This document provides details about the Table Column Type Chip in the Components Library.
 template: concept-topic-template
+related:
+  - title: Table Column Type extension
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/index.html
+  - title: Table Column Type Autocomplete
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html
+  - title: Table Column Type Date
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-date.html
+  - title: Table Column Type Dynamic
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-dynamic.html
+  - title: Table Column Type Image
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-image.html
+  - title: Table Column Type Input
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-input.html
+  - title: Table Column Type List
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-list.html
+  - title: Table Column Type Select
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-select.html
+  - title: Table Column Type Text
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-text.html
 ---
 
 This document explains the Table Column Type Chip in the Components library.
@@ -23,7 +42,7 @@ Check out an example usage of the Table Column Chip in the `@spryker/table` conf
                 title: 'Column Title',
                 type: 'chip',
                 typeOptions: {
-                    text: '${value}',
+                    text: '${displayValue}',
                     color: 'blue',
                 },
             },
@@ -50,6 +69,12 @@ Check out an example usage of the Table Column Chip in the `@spryker/table` conf
 Register the component:
 
 ```ts
+declare module '@spryker/table' {
+    interface TableColumnTypeRegistry {
+        chip: TableColumnChipConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -67,12 +92,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Column Chip:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableColumnTypeRegistry {
-        chip: TableColumnChipConfig;
-    }
-}
-
 interface TableColumnChipConfig {
     /** Bound to the @spryker/chips inputs */
     text?: string;

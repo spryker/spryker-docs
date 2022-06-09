@@ -31,7 +31,7 @@ To retrieve the full category tree, containing all available nodes and their chi
 
 ### Request
 
-Sample request: `GET http://mysprykershop.com/category-trees`
+Request sample: `GET http://mysprykershop.com/category-trees`
 
 Use the `Accept-Language` header to specify one or more locales.
 Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]`

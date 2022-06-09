@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/computop-easy-credit
   - /docs/computop-easy-credit
   - /docs/en/computop-easy-credit
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/computop/computop-payment-methods/computop-easy-credit.html
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html
@@ -29,7 +30,7 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html
   - title: Integrating the CRIF payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html
-  - title: Computop - Paydirekt
+  - title: Integrating the Paydirekt payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html
 ---
 

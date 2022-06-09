@@ -30,7 +30,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-currency.html
 ---
 
-## Upgrading from Version 2.* to Version 3.*
+## Upgrading from version 2.* to version 3.*
 
 With the `Currency` module version 3 we have added the `sp_currency` database table to persist currencies in ZED.
 
@@ -151,11 +151,10 @@ namespace Pyz\Yves\Application;
   }
 ```
 
-And "include" in twig template like `{% raw %}{{{% endraw %} spyCurrencySwitch() {% raw %}}}{% endraw %}`. You may also neet to update your `spryker/kernel` module so you can configure multiple currencies per store. You can set them like here:
+And "include" in twig template like `{% raw %}{{{% endraw %} spyCurrencySwitch() {% raw %}}}{% endraw %}`. You may also need to update your `spryker/kernel` module so you can configure multiple currencies per store. You can set them like here:
 
 ```php
 $stores['DE'] = [
     'currencyIsoCodes' => ['EUR', 'USD'],
   ];
 ```
-<!-- Last review date: Sep 21, 2017 by Aurimas Ličkus -->

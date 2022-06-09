@@ -8,6 +8,7 @@ originalArticleId: 3b4e1dff-22df-4960-968b-0c4c7f357711
 redirect_from:
   - /v5/docs/content-items-reference-information
   - /v5/docs/en/content-items-reference-information
+  - /docs/scos/user/back-office-user-guides/202005.0/content/content-items/references/content-items-reference-information.html
 related:
   - title: Creating Content Items
     link: docs/scos/user/back-office-user-guides/page.version/content/content-items/creating-content-items.html

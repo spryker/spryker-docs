@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-shopping-list-items
   - /docs/managing-shopping-list-items
   - /docs/en/managing-shopping-list-items
+  - /docs/marketplace/dev/glue-api-guides/202108.0/shopping-lists/managing-shopping-list-items.html
 related:
   - title: Managing shopping lists
     link: docs/scos/dev/glue-api-guides/page.version/managing-shopping-lists/managing-shopping-lists.html
@@ -64,13 +65,13 @@ To add items to a shopping list, send the request:
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| quantity | Ingeger | ✓ | Quantity of the product to add. |
+| quantity | Integer | ✓ | Quantity of the product to add. |
 | sku | String | ✓ | SKU of the product to add. Only [concrete products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: add items to a shopping list</summary>
 
 ```json
   {
@@ -87,11 +88,10 @@ To add items to a shopping list, send the request:
     }
 }  
 ```
-<br>
 </details>
 
 <details>
-<summary markdown='span'>Response sample with concrete products</summary>
+<summary markdown='span'>Response sample: add items to a shopping list with the details on concrete products</summary>
 
 ```json
     {
@@ -159,7 +159,6 @@ To add items to a shopping list, send the request:
     ]
 }
 ```
-
 </details>
 
 <a name="shopping-list-items-response-attributes"></a>
@@ -191,7 +190,7 @@ To change item quantity in a shopping list, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
-| QUERY PARAMETER | DESCRIPTION | EXAMPLARY VALUES |
+| QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | concrete-products|
 
@@ -220,7 +219,7 @@ To change item quantity in a shopping list, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: change item quantity in a shopping list</summary>
 
 ```json
     {
@@ -237,11 +236,10 @@ To change item quantity in a shopping list, send the request:
     }
 }
 ```
-
 </details>     
 
 <details>
-<summary markdown='span'>Response sample with information on concrete products</summary>
+<summary markdown='span'>Response sample: change item quantity in a shopping list with the details on concrete products</summary>
 
 ```json
 {
@@ -305,7 +303,6 @@ To change item quantity in a shopping list, send the request:
 }
 
 ```
-<br>
 </details>   
 
 For response attributes, see [Add items to a shopping list](#shopping-list-items-response-attributes).
@@ -330,8 +327,9 @@ To remove an item from a shopping list, send the request:
 | --- | --- | --- | --- |
 | Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
-Request sample:
-`DELETE http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08` — From the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`, remove the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08`.
+Request sample: remove an item from a shopping list
+
+`DELETE http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08`
 
 ### Response
 
@@ -343,7 +341,7 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 | --- | --- |
 | 001 | Access token is incorrect. |
 | 002 | Access token is missing. |
-| 400 | Provided access token is not an [access token of a сompany user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
+| 400 | Provided access token is not an [access token of a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
 | 901 | Shop list name or item name is not specified or too long.<br>**OR** <br> Item quantity is not specified or too large.|
 | 1501 | Shopping list ID or item is not specified. |
 | 1503 |  Specified shopping list is not found. |

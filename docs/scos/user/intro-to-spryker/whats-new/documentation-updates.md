@@ -59,15 +59,15 @@ Below you will find the list of the new/updated documentation released as part o
 <summary markdown='span'>Back Office user guides</summary>
 
 
-* [Creating a New Shipment for Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-an-order)
-* [Editing Shipment Details](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html#editing-shipment-details)
+* [Creating a New Shipment for Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/creating-shipments.html)
+* [Editing Shipment Details](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/editing-shipments.html)
 
 </details>
 <details>
 <summary markdown='span'>Shop user guide</summary>
 
 
-[Assigning Multiple Delivery Addresses to Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-an-order)
+[Assigning Multiple Delivery Addresses to Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/creating-shipments.html)
 
 
 </details>
@@ -321,8 +321,7 @@ Below you will find the list of the new/updated documentation released as part o
 
 * Payment Management
     * [Managing Payment Methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/payment-methods/managing-payment-methods.html)
-    * [Payment Methods: Reference Information](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/payment-methods/managing-payment-methods.html#reference-information-editing-payment-method-pages)
-* [Shipment](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html)
+* [Shipment](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/creating-shipments.html)
 
     * [Creating a Carrier Company](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-carrier-companies.html)
     * [Creating and Managing Delivery Methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html)

@@ -1,5 +1,5 @@
 ---
-title: HowTo - Create a Visibility Condition for CMS Blocks
+title: "HowTo: Create a visibility condition for CMS Blocks"
 description: Visibility condition is a tool used to define particular pages in which the content of CMS block is displayed.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -21,11 +21,11 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/content/slots/managing-slots.html
 ---
 
-Visibility Condition is a [Templates & Slots](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html) feature functionality that allows you to define in which cases a CMS block is displayed on a page. The [Spryker CMS Blocks content provider](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#spryker-cms-blocks) for slots has the following [visibility conditions](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) by default:
+*Visibility Condition* is a [Templates & Slots](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html) feature functionality that lets you define in which cases a CMS block is displayed on a page. The [Spryker CMS Blocks content provider](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#spryker-cms-blocks) for slots has the following [visibility conditions](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) by default:
 
-* Category condition for Category page.
-* Product and category conditions for Product details page.
-* CMS page condition for CMS page.
+* Category condition for the Category page.
+* Product and category conditions for the product details page.
+* CMS page condition for the CMS page.
 
 Each page type has a dedicated template with several [slot widgets](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#slot-widget). The visibility conditions of each template are defined in module configuration.
 
@@ -56,17 +56,14 @@ class CmsSlotBlockConfig extends SprykerCmsSlotBlockConfig
 }
 ```
 
-As shown in the example above, the visibility condition configuration is an array, so it’s possible to have a combination of visibility conditions in a template. For example, the product details page template can have `productCategory` and `customer` visibility conditions. It means that the CMS block for which these conditions are defined is only displayed when both of the defined conditions are fulfilled. In particular, the CMS block will be displayed:
+As shown in the preceding example, the visibility condition configuration is an array, so you can have a combination of visibility conditions in a template. For example, the product details page template can have `productCategory` and `customer` visibility conditions. It means that the CMS block for which these conditions are defined is only displayed when both of the defined conditions are fulfilled. In particular, the CMS block is displayed as follows:
+* In the product details pages belonging to a defined categories and products.
+* When user login status equals to the defined login status.
+* When user account details equal to the defined account details.
 
-* in the product details pages belonging to a defined categories and products;
+## Visibility condition for a template
 
-* when user login status equals to the defined login status;
-
-* when user account details equal to the defined account details.
-
-## Visibility Condition for a Template
-
-To show the procedure, the following steps will walk you through the creation of the `customer` visibility condition for the product details page template.
+To show the procedure, the following steps walk you through the creation of the `customer` visibility condition for the product details page template:
 
 1. Assign the new condition to the template in `src/Pyz/Zed/CmsSlotBlock/CmsSlotBlockConfig.php`:
 
@@ -86,7 +83,7 @@ To show the procedure, the following steps will walk you through the creation of
 ```
 
 2. From the properties available on the product details page, choose the properties which you want to pass to the slot widget. For example, the property values related to user account details (like `age` or `city`) can be fetched from the session.
-    The slot widget with `idProductAbstract`, `isGuest`, `age` and `city` properties looks as follows:
+   The slot widget with `idProductAbstract`, `isGuest`, `age`, and `city` properties looks as follows:
 
 ```twig
 {% raw %}{%{% endraw %} cms_slot 'slt-key' required ['idProductAbstract'] with {
@@ -97,10 +94,11 @@ To show the procedure, the following steps will walk you through the creation of
 } {% raw %}%}{% endraw %}
 ```
 
-3. Insert it into the product details page template - `@ProductDetailPage/views/pdp/pdp.twig`.
+3. Insert it into the product details page template—`@ProductDetailPage/views/pdp/pdp.twig`.
 
 3. Define the new properties for `CmsSlotBlockConditionTransfer` and `CmsSlotParamsTransfer` in `src/Pyz/Shared/CmsSlotBlockCustomer/Transfer/cms_slot_block_customer.transfer.xml`:
-```html
+
+```xml
 <transfer name="CmsSlotParams">
     <property name="isGuest" type="bool"/>
     <property name="age" type="int"/>
@@ -115,11 +113,11 @@ To show the procedure, the following steps will walk you through the creation of
 </transfer>
 ```
 
-## Visibility Condition Form Plugin for Back Office
+## Visibility condition form plugin for the Back Office
 
 1. Implement the following plugin for the Back Office using `\Spryker\Zed\CmsSlotBlockGuiExtension\Communication\Plugin\CmsSlotBlockGuiConditionFormPluginInterface`:
 
-CustomerSlotBlockConditionFormPlugin
+**CustomerSlotBlockConditionFormPlugin**
 
 ```php
 namespace Pyz\Zed\CmsSlotBlockCustomerGui\Communication\Plugin\CmsSlotBlockGui;
@@ -162,11 +160,10 @@ class CustomerSlotBlockConditionFormPlugin extends AbstractPlugin implements Cms
 
 2. Put `CustomerSlotBlockConditionFormPlugin` into the `src/Pyz/Zed/CmsSlotBlockCustomerGui` module.
 
-3. Create `CustomerSlotBlockConditionForm`. It is a regular Symfony Form class which implements `\Symfony\Component\Form\FormBuilderInterface`, See:
-
+3. Create `CustomerSlotBlockConditionForm`. It is a regular Symfony Form class which implements `\Symfony\Component\Form\FormBuilderInterface`. For details, see:
 * [Forms](https://symfony.com/doc/current/forms.html) for more information about Symfony forms.
 * [Creating Forms](/docs/scos/dev/back-end-development/forms/creating-forms.html) to learn about form creation procedure in Spryker.
-* a form example in `\Spryker\Zed\CmsSlotBlockProductCategoryGui\Communication\Form\ProductCategorySlotBlockConditionForm`.
+* A form example in `\Spryker\Zed\CmsSlotBlockProductCategoryGui\Communication\Form\ProductCategorySlotBlockConditionForm`.
 
 {% info_block errorBox %}
 
@@ -176,11 +173,11 @@ Child form elements can have any names and subsequent child form elements.
 
 {% endinfo_block %}
 
-In our case the created form has 5 elements:
-* `customer` parent form with 4 children:
-    * `isGuest` radio button;
-    * `fromAge` numeric input field;
-    * `toAge` numeric input field;
+In this case, the created form has five elements:
+* `customer` parent form with four children:
+    * `isGuest` radio button.
+    * `fromAge` numeric input field.
+    * `toAge` numeric input field.
     * `city` dropdown with the city list fetched from database.
 
 ```php
@@ -212,39 +209,38 @@ In our case the created form has 5 elements:
     }
 ```
 
-1. Add the new plugin to the `\Pyz\Zed\CmsSlotBlockGui\CmsSlotBlockGuiDependencyProvider::getCmsSlotBlockFormPlugins()` plugin list in `CustomerSlotBlockConditionFormPlugin`.
+4. Add the new plugin to the `\Pyz\Zed\CmsSlotBlockGui\CmsSlotBlockGuiDependencyProvider::getCmsSlotBlockFormPlugins()` plugin list in `CustomerSlotBlockConditionFormPlugin`.
 
 {% info_block warningBox "Verification" %}
 
-1. Go to the Back Office > **Content Management** > **Slots**.
-
-2. Select a product details page template in the **List of Templates**.
-
-3. Select a slot in the  **List of Slots for {name} Template**.
-
-4. Add or choose one CMS block in the List of Blocks for {name} Slot.
+1. In the Back Office, go to **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
+2. In the **List of Templates**, select a product details page template.
+3. Select a slot in the **List of Slots for *`{name}`* Template**.
+4. Add or choose one CMS block in the List of Blocks for the *`{name}`* slot.
 
 {% info_block infoBox %}
+
 You should be able to see a rendered form of the customer visibility condition.
+
 {% endinfo_block %}
 
 5. Select any visibility conditions and take note of them.
-
 6. Click **Save**.
-
 7. In database, check the last added rows in `spy_cms_slot_block.conditions` and `spy_cms_slot_block_storage.data` columns.
 
 {% info_block infoBox %}
+
 They should contain the customer condition data you have set in the Back Office.
-{% endinfo_block %}
 
 {% endinfo_block %}
 
-## Visibility Condition Resolver Plugin for Slot Widget
+{% endinfo_block %}
 
-1. Implement the following plugin using `\Spryker\Client\CmsSlotBlockExtension\Dependency\Plugin\CmsSlotBlockVisibilityResolverPluginInterface`.
+## Visibility condition resolver plugin for a slot widget
 
-CustomerSlotBlockConditionResolverPlugin
+1. Implement the following plugin using `\Spryker\Client\CmsSlotBlockExtension\Dependency\Plugin\CmsSlotBlockVisibilityResolverPluginInterface`:
+
+**CustomerSlotBlockConditionResolverPlugin**
 
 ```php
 
@@ -321,14 +317,12 @@ class CustomerSlotBlockConditionResolverPlugin extends AbstractPlugin implements
 {% info_block warningBox "Verification" %}
 
 In the Storefront, open the product details page that contains the CMS block for which you have selected the visibility conditions.
-
 * Make sure that you fulfill the visibility conditions and see the CMS block content.
 * Make sure that you do not fulfill the visibility conditions and do not see the CMS block content.
 
 For example, you can select and check the content against the following visibility conditions:
-
-* login status;
-* location;
-* age.
+* Login status
+* Location
+* Age
 
 {% endinfo_block %}

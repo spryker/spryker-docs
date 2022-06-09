@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/episerver-api-requests
   - /docs/episerver-api-requests
   - /docs/en/episerver-api-requests
-  - /docs/scos/user/technology-partners/202108.0/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-api-requests.html  
+  - /docs/scos/user/technology-partners/202108.0/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-api-requests.html
 related:
   - title: Episerver - Integration into a project
     link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html

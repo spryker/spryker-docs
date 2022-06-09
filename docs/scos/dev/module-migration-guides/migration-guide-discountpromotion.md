@@ -29,11 +29,12 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-discountpromotion.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-discountpromotion.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-discountpromotion.html
+  - /module_migration_guides/mg-discount-promotion.htm
 ---
 
-## Upgrading from Version 3.* to Version 4.0.0
+## Upgrading from version 3.* to version 4.0.0
 
-In this new version of the **DiscountPromotion** module, we have added support of decimal stock. You can find more details about the changes on the [DiscountPromotion module](https://github.com/spryker/discount-promotion/releases) release page.
+In this new version of the `DiscountPromotion` module, we have added support of decimal stock. You can find more details about the changes on the [DiscountPromotion module](https://github.com/spryker/discount-promotion/releases) release page.
 
 {% info_block errorBox %}
 
@@ -41,9 +42,11 @@ This release is a part of the **Decimal Stock** concept migration. When you upgr
 
 {% endinfo_block %}
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 5 min*
 
-1. Upgrade the **DiscountPromotion** module to the new version:
+To upgrade to the new version of the module, do the following:
+
+1. Upgrade the `DiscountPromotion` module to the new version:
 
 ```bash
 composer require spryker/discount-promotion: "^4.0.0" --update-with-dependencies
@@ -64,9 +67,7 @@ console propel:install
 console transfer:generate
 ```
 
-*Estimated migration time: 5 min*
-
-## Upgrading from Version 1.* to Version 3.0.0
+## Upgrading from version 1.* to version 3.0.0
 
 {% info_block infoBox %}
 

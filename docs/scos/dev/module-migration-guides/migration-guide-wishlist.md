@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-wishlist.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-wishlist.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-wishlist.html
+  - /module_migration_guides/mg-wishlist.htm
 related:
   - title: Migration guide - Cart
     link: docs/scos/dev/module-migration-guides/migration-guide-cart.html
@@ -44,26 +45,25 @@ In order to dismantle the Horizontal Barrier and enable partial module updates o
 
 {% endinfo_block %}
 
-***
 
-## Upgrading from Version 5.* to Version 6.*
+## Upgrading from version 5.* to version 6.*
 
 With the implementation of the quote storage strategies, the new version 5.0.0 of the Cart module has been released. The Wishlist module is dependent on it, so make sure your Cart module's version is 5.0.0 or higher.
 `CartClientInterface::storeQuote` is deprecated, you need to use `QuoteClientInterface::setQuote()` instead.
 `addItem()`, `addItems()` methods of `Cart` module saves quote after making changes.
-***
-## Upgrading from Version 4.* to Version 5.*
+
+
+## Upgrading from version 4.* to version 5.*
 
 From version 2 have we added support for multi-currency. First of all, make sure you migrated the Price module. We have changed `ProductStoreClient` to resolve product prices based on the currently selected price mode/currency.
-We have added a new depedendecy to `ProductStoreClient`: now use `Spryker\Client\Wishlist\Dependency\Client\WishlistToPriceProductInterface`. If you have extended this class, merge your changes with core accordingly.
-
-***
+We have added a new dependency to `ProductStoreClient`: now use `Spryker\Client\Wishlist\Dependency\Client\WishlistToPriceProductInterface`. If you have extended this class, merge your changes with core accordingly.
 
 ## Upgrading from Version 2.* to Version 3.*
 
 If you’re migrating the Wishlist module from version 2 to version 3, you need to follow the steps described below.
 Version 3 of the Wishlist module introduced new schema, and old tables have to be deleted while new created.
 First you need to drop old tables:
+
 ```sql
 DROP TABLE spy_wishlist_item;
 DROP TABLE spy_wishlist;

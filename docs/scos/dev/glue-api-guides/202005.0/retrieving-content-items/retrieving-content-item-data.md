@@ -7,9 +7,10 @@ originalArticleId: 57751ebd-4cae-4a61-b90f-c3a5013d7c08
 redirect_from:
   - /v5/docs/retrieving-content-item-data-201907
   - /v5/docs/en/retrieving-content-item-data-201907
+  - /docs/scos/dev/glue-api-guides/202005.0/retrieving-content-item-data/retrieving-content-item-data.html
 ---
 
-This section provides guides that can help you access and manage relevant data of content items. You can retrieve information on each content item based on its content item key for all or a specific locale. 
+This section provides guides that can help you access and manage relevant data of content items. You can retrieve information on each content item based on its content item key for all or a specific locale.
 
 See the following guides for more details:
 

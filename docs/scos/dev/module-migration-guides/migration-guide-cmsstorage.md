@@ -25,23 +25,33 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cmsstorage.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmsstorage.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsstorage.html
+  - /module_migration_guides/mg-cmsstorage.htm
 ---
 
-## Upgrading from Version 1.* to Version 2.*
+## Upgrading from version 1.* to version 2.*
 
-Version 2.0.0 of the CmsStorage module introduces the [multi-store functionality](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
+Version 2.0.0 of the `CmsStorage` module introduces the [multi-store functionality](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
-**The main BC breaking changes are:**
+The main BC breaking changes are:
+
 * Synchronization behavior
 * CMS Storage Dependency Provider return annotation
 
-**To upgrade to the new version of the module, do the following:**
-1. Update `cms-storage` to `^2.0.0` with the command `composer update spryker/cms-storage": "^2.0.0`
+_Estimated migration time: 30 minutes_
+
+To upgrade to the new version of the module, do the following:
+
+1. Update `cms-storage` to `^2.0.0` with the command:
+
+```bash
+composer update spryker/cms-storage": "^2.0.0
+```
+
 2. Remove `queue_pool=synchronizationPool` behavior from `spy_cms_page_storage` table.
 
 **src/Pyz/Zed/CmsStorage/Persistence/Propel/Schema/spy_cms_storage.schema.xml**
 
-```php
+```xml
 <behavior name="synchronization">
 	<parameter name="queue_pool" value="synchronizationPool">
 </behavior>
@@ -54,7 +64,7 @@ When completed, the above synchronization parameter should not be in the file.
 {% endinfo_block %}
 
 3. Make changes to the CMS Storage Dependency Provider:
-The return annotation for `getContentWidgetDataExpander()` has been changed. `CmsPageDataExpanderPluginInterface` was moved to `CmsExtension` module and should be referenced as such.
+The return annotation for `getContentWidgetDataExpander()` has been changed.`CmsPageDataExpanderPluginInterface` was moved to `CmsExtension` module and should be referenced as such.
 
 **src/Pyz/Zed/CmsStorage/CmsStorageDependencyProvider.php**
 
@@ -69,9 +79,13 @@ class CmsStorageDependencyProvider extends SprykerCmsStorageDependencyProvider
 ```
 
 4. Apply the database change:
-`$ console propel:install`
+
+```bash
+$ console propel:install
+```
 
 5. Generate the new transfers:
-`$ console transfer:generate`
 
-_Estimated migration time: 30 minutes_
+```bash
+$ console transfer:generate
+```

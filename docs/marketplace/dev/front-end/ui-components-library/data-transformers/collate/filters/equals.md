@@ -2,6 +2,13 @@
 title: Data Transformer Collate Filter Equals
 description: This document provides details about the Data Transformer Collate Filter Equals service in the Components Library.
 template: concept-topic-template
+related:
+  - title: Data Transformer Filters
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/index.html
+  - title: Data Transformer Collate Filter Range
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/range.html
+  - title: Data Transformer Collate Filter Text
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/text.html
 ---
 
 This document explains the Data Transformer Collate Filter Equals service in the Components Library.
@@ -41,6 +48,12 @@ Check out an example usage of the Data Transformer Collate Filter Equals in the 
 Register the service:
 
 ```ts
+declare module '@spryker/data-transformer.collate' {
+    interface DataTransformerFilterRegistry {
+        equals: EqualsDataTransformerFilterService;
+    }
+}
+
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
@@ -59,12 +72,6 @@ export class RootModule {}
 Below you can find interfaces for the Data Transformer Collate Filter Equals:
 
 ```ts
-declare module '@spryker/data-transformer.collate' {
-    interface DataTransformerFilterRegistry {
-        equals: EqualsDataTransformerFilterService;
-    }
-}
-
 interface DataTransformerFilterConfig {
     type: string;
     propNames: string | string[];

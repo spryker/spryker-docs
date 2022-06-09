@@ -120,13 +120,13 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox “Verification” %}
 
-To verify that `OrdersResourceRoutePlugin` is set up correctly, make sure that the following endpoints are available:<ul><li>http://glue.mysprykershop.com/orders</li><li>http://glue.mysprykershop.com/orders/{% raw %}{{{% endraw %}order_reference{% raw %}}}{% endraw %}</li></ul>
+To verify that `OrdersResourceRoutePlugin` is set up correctly, make sure that the following endpoints are available:<ul><li>https://glue.mysprykershop.commm/orders</li><lhttps://glue.mysprykershop.comomom/orders/{% raw %}{{{% endraw %}order_reference{% raw %}}}{% endraw %}</li></ul>
 {% endinfo_block %}
 
 @(Warning)(To verify that `OrderRelationshipByOrderReferencePlugin` is set up correctly, make sure that the `orders relationship is included when you request it with the `/checkout` request:)
 
 <details open>
-<summary markdown='span'>POST http://glue.mysprykershop.com/checkout?include=orders</summary>
+<summary markdown='span'>POST https://glue.mysprykershop.commm/checkout?include=orders</summary>
 
 ```json
 {
@@ -137,7 +137,7 @@ To verify that `OrdersResourceRoutePlugin` is set up correctly, make sure that t
             "orderReference": "DE--3"
         },
         "links": {
-            "self": "http://glue.mysprykershop.com/checkout"
+            "self": "https://glue.mysprykershop.commm/checkout"
         },
         "relationships": {
             "orders": {
@@ -299,7 +299,7 @@ To verify that `OrdersResourceRoutePlugin` is set up correctly, make sure that t
                 ]
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/orders/DE--3"
+                "self": "https://glue.mysprykershop.commm/orders/DE--3"
             }
         }
     ]

@@ -16,9 +16,9 @@ This topic provides a list of steps to create a redirect in the Back Office.
 
 ## Prerequisites
 
-To start working with the CMS redirects, navigate to the **Content** > **Redirects** section.
+To start working with the CMS redirects, navigate to the **Content&nbsp;<span aria-label="and then">></span> Redirects** section.
 
-Review the reference information before you start, or just look up the necessary information as you go through the process.
+Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Creating a CMS redirect
 
@@ -50,7 +50,7 @@ On the *CMS Redirects* page, you can also:
 * Sort content items by *ID* and *From Url*.
 * Filter content items by *ID*, *From Url*, *To Url*, and *Status*.
 
-#### What's next?
+#### Next steps
 The redirect URL has been created. However, you can either edit it or delete.
 
 To learn how to edit and/or delete a redirect, see [Managing CMS redirects](/docs/scos/user/back-office-user-guides/{{page.version}}/content/redirects/managing-cms-redirects.html).

@@ -8,6 +8,7 @@ redirect_from:
   - /v3/docs/cart-feature-integration
   - /v3/docs/en/cart-feature-integration
   - /docs/scos/dev/feature-integration-guides/201907.0/cart-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-cart-feature-integration.html
 related:
   - title: Managing Carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/managing-carts.html
@@ -36,7 +37,7 @@ composer require spryker/carts-rest-api:"^4.2.1" --update-with-dependencies
 <section contenteditable="false" class="warningBox"><div class="content">
 
 **Verification**
-    
+
 Make sure that the following modules are installed:
 
 | Module | Expected Directory |
@@ -57,7 +58,7 @@ console transfer:generate
 <section contenteditable="false" class="warningBox"><div class="content">
 
 **Verification**
-    
+
 Make sure that the following changes have occurred in the database:
 
 | Database entity | Type | Event |
@@ -102,7 +103,7 @@ console uuid:generate Quote spy_quote
 <section contenteditable="false" class="warningBox"><div class="content">
 
 **Verification**
-    
+
 Make sure that the `uuid` field is populated for all records in the `spy_quote` table. To do so, run the following SQL query and make sure that the result is <b>0</b> records.
 
 ```sql
@@ -149,8 +150,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 <section contenteditable="false" class="warningBox"><div class="content">
 
 **Verification**
-    
-To make sure that `AnonymousCustomerUniqueIdValidatorPlugin` is set up correctly, send a request to an endpoint configured to require an anonymous customer ID (for example, `http://glue.mysprykershop.com/guest-carts`) without any ID and check whether the following error is returned:
+
+To make sure that `AnonymousCustomerUniqueIdValidatorPlugin` is set up correctly, send a request to an endpoint configured to require an anonymous customer ID (for example, `https://glue.mysprykershop.com/guest-carts`) without any ID and check whether the following error is returned:
 
 ```json
 {
@@ -251,15 +252,15 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 <section contenteditable="false" class="warningBox"><div class="content">
 
 **Verification**
-    
+
 To verify the plugin integration:
 
 1. Make sure that the following endpoints are available:
-    - `http://glue.mysprykershop.com/carts`
-    - `http://glue.mysprykershop.com/guest-carts`
-2. Make a request to `http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=items`. The cart with the given ID should have at least one item in it.
+    - `https://glue.mysprykershop.com/carts`
+    - `https://glue.mysprykershop.com/guest-carts`
+2. Make a request to `https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=items`. The cart with the given ID should have at least one item in it.
 3. Make sure that the response includes relationships to the corresponding cart items resources.
-4. Make a request to `http://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/?include=items`. The guest cart with the given ID should have at least one item in it.
+4. Make a request to `https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/?include=items`. The guest cart with the given ID should have at least one item in it.
 5. Make sure that the response includes relationships to the corresponding guest cart items resources.
 </div></section>
 
@@ -294,7 +295,7 @@ class CustomersRestApiDependencyProvider extends SprykerCustomersRestApiDependen
 <section contenteditable="false" class="warningBox"><div class="content">
 
 **Verification**
-    
+
 To verify that `UpdateCartCreateCustomerReferencePlugin` is installed correctly, check whether a guest cart is converted into a regular cart after new customer registration.
 </div></section>
 
@@ -326,8 +327,8 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 <section contenteditable="false" class="warningBox"><div class="content">
 
 **Verification**
-    
-To verify that `QuoteCreatorPlugin` is installed correctly, send a <i>POST</i> request to `http://glue.mysprykershop.com/carts/` with a valid body and make sure that you are unable to create more than one cart for the same customer. When attempting to create the second cart, you should receive the following error response:
+
+To verify that `QuoteCreatorPlugin` is installed correctly, send a <i>POST</i> request to `https://glue.mysprykershop.com/carts/` with a valid body and make sure that you are unable to create more than one cart for the same customer. When attempting to create the second cart, you should receive the following error response:
 
 ```json
 {
@@ -343,4 +344,3 @@ To verify that `QuoteCreatorPlugin` is installed correctly, send a <i>POST</i> r
 </div></section>
 
 <!-- Last review date: November 11, 2019 by Tihran Voitov, Volodymyr Volkov and Yuliia Boiko -->
-

@@ -29,9 +29,10 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-priceproductvolumegui.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-priceproductvolumegui.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproductvolumegui.html
+  - /module_migration_guides/mg-price-product-volume-gui.htm
 ---
 
-## Upgrading from Version 1.* to Version 3.0.0
+## Upgrading from version 1.* to version 3.0.0
 
 {% info_block infoBox %}
 

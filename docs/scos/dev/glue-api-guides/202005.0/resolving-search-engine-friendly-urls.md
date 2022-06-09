@@ -7,6 +7,7 @@ originalArticleId: fde85b1f-cc09-46d7-a990-3e52367db1f2
 redirect_from:
   - /v5/docs/using-search-engine-friendly-urls
   - /v5/docs/en/using-search-engine-friendly-urls
+  - /docs/scos/dev/glue-api-guides/202005.0/using-search-engine-friendly-urls.html
 related:
   - title: Glue API - Spryker Core feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-spryker-core-feature-integration.html
@@ -138,7 +139,7 @@ To resolve a SEO-friendly link into a Glue URL, send a GET request to the follow
 **/url-resolver**
 
 ### Request
-Sample request: *GET http://glue.mysprykershop.com/url-resolver?url=**/de/acer-aspire-s7-134***
+Request sample: *GET http://glue.mysprykershop.com/url-resolver?url=**/de/acer-aspire-s7-134***
 
 where **/de/acer-aspire-s7-134** is the SEF URL you want to resolve, without the server name and scheme.
 

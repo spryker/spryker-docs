@@ -8,6 +8,7 @@ originalArticleId: 5a31882d-7e51-446d-ad7a-8b3826bb0437
 redirect_from:
   - /v5/docs/retrieving-suggestions-for-auto-completion-and-search
   - /v5/docs/en/retrieving-suggestions-for-auto-completion-and-search
+  - /docs/scos/dev/glue-api-guides/202005.0/getting-suggestions-for-auto-completion-and-search.html
 related:
   - title: Catalog Search
     link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
@@ -34,7 +35,7 @@ For detailed information on the modules that provide the API functionality and r
 To get a search suggestion, you need to send a _GET_ request to the following endpoint:  
 `/catalog-search-suggestions`
 
-Sample request: `GET http://glue.mysprykershop.com/catalog-search-suggestions?q=comp`
+Request sample: `GET http://glue.mysprykershop.com/catalog-search-suggestions?q=comp`
 
 To include search queries in your request, use the **q** URL parameter. Below you can find the most common queries to use:
 

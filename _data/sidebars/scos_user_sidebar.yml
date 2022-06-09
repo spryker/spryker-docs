@@ -2478,6 +2478,18 @@ entries:
         - "202108.0"
         - "202204.0"
         nested:
+        - title: Add carrier companies
+          url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/add-carrier-companies.html
+          include_versions:
+          - "202204.0"
+        - title: Add delivery methods
+          url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/add-delivery-methods.html
+          include_versions:
+          - "202204.0"
+        - title: Edit delivery methods
+          url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/edit-delivery-methods.html
+          include_versions:
+          - "202204.0"
         - title: Creating a carrier company
           url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-carrier-companies.html
           include_versions:
@@ -2487,7 +2499,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Creating and managing delivery methods
           url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-and-managing-delivery-methods.html
           include_versions:
@@ -2497,7 +2508,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: References
           include_versions:
           - "202001.0"

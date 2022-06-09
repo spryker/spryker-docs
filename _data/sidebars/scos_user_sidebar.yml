@@ -2543,7 +2543,7 @@ entries:
           include_versions:
           - "202204.0"
         - title: Edit translations
-          url: /docs/scos/user/back-office-user-guides/administration/glossary/edit-glossary.html
+          url: /docs/scos/user/back-office-user-guides/administration/glossary/edit-translations.html
           include_versions:
           - "202204.0"
       - title: Tax rates

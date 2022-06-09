@@ -41,9 +41,13 @@ entries:
             url: /docs/pbc/all/payment/unzer/unzer.html
             nested:
               - title: What's changed
-                url: /docs/pbc/all/payment/unzer/whats-changed/whats-changed.html
-              - title: Configuration in the Back Offic
-                url:
+                url: /docs/pbc/all/payment/unzer/whats-changed/list-of-improvements.html
+              - title: Configuration in the Back Office
+                nested:
+                  - title: Manage Unzer Marketplace credentials
+                    url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/manage-unzer-marketplace-credentails.html
+                  - title: Manage Unzer standard credentials
+                    url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/manage-unzer-standard-credentails.html
               - title: Use cases & HowTos & Tips
                 url:
               - title: Install & migrate

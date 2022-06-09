@@ -24,18 +24,17 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblockgui.html
 ---
 
-Product blocks are blocks that can be embedded in the product template, for which we can specify on which specific product we want them to be rendered.
+Product CMS blocks are embedded in the product template, and you can specify the exact product pages to show the block on.
 
-To install the Product CMS Block in your project, follow the steps described in this procedure:
+To integrate product CMS block, follow the steps:
 
-1. Install the CMS Block Product Connector module with composer: 
+1. Install the CMS Block Product Connector module using Composer: 
 
 ```bash
 composer require spryker/cms-block-product-connector:"^1.4.0"
 ```
 
-2. Register the CMS block form plugin.
-Add `CmsBlockProductAbstractFormPlugin` to the CMS Block GUI dependency provider:
+2. To register the CMS block form plugin, add `CmsBlockProductAbstractFormPlugin` to the CMS block GUI dependency provider:
 
 **src/Pyz/Zed/CmsBlockGui/CmsBlockGuiDependencyProvider.php**
 
@@ -61,8 +60,7 @@ class CmsBlockGuiDependencyProvider extends SprykerCmsBlockGuiDependencyProvider
 }
 ```
 
-3. Register the CMS block form handler plugin.
-Add `CmsBlockProductAbstractUpdatePlugin` to the CMS Block dependency provider:
+3. To register the CMS block form handler plugin, add `CmsBlockProductAbstractUpdatePlugin` to the CMS Block dependency provider:
 
 **src/Pyz/Zed/CmsBlock/CmsBlockDependencyProvider.php**
 
@@ -88,7 +86,7 @@ class CmsBlockDependencyProvider extends SprykerCmsBlockDependencyProvider
 }
 ```
 
-4. Optional: To show which product abstracts are assigned to a block on a block view page, add `CmsBlockProductAbstractListViewPlugin` to the CMS Block GUI dependency provider.
+4. Optional: To show which product abstracts are assigned to a block on a block view page, register the product list plugin by adding `CmsBlockProductAbstractListViewPlugin` to the CMS Block GUI dependency provider:
 
 **src/Pyz/Zed/CmsBlockGui/CmsBlockGuiDependencyProvider.php**
 
@@ -115,7 +113,7 @@ class CmsBlockGuiDependencyProvider extends SprykerCmsBlockGuiDependencyProvider
 
 ```
 
-5. Optional: To show which blocks are assigned to a product abstract on a product abstract view page, add `CmsBlockProductAbstractBlockListViewPlugin` to the Product Management dependency provider.
+5. Optional: To show which blocks are assigned to a product on a product abstract view page, register the block list to the product abstract view by adding `CmsBlockProductAbstractBlockListViewPlugin` to the Product Management dependency provider:
 
 **src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
 

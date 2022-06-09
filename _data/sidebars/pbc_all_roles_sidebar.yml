@@ -42,19 +42,23 @@ entries:
             nested:
               - title: What's changed
                 url: /docs/pbc/all/payment/unzer/whats-changed/list-of-improvements.html
-              - title: Configuration in the Back Office
+              - title: Install Unzer
+                url: /docs/pbc/all/payment/unzer/installation-and-migration/install-unzer.html
+              - title: Migrate Unzer
+                url:
+              - title: Use cases & HowTos & Tips
+                url:
+              - title: API endpoints
+                url:
+              - url: Configuration in the Back Office
                 nested:
                   - title: Manage Unzer Marketplace credentials
                     url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/manage-unzer-marketplace-credentails.html
                   - title: Manage Unzer standard credentials
                     url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/manage-unzer-standard-credentails.html
-              - title: Use cases & HowTos & Tips
-                url:
-              - title: Install & migrate
-                url: /docs/pbc/all/payment/unzer/installation-and-migration/install-unzer.html
-              - title: API endpoints
-                url:
-              - title: Extend & Customize
-                url:
+              - title: Extend & customize
+                nested:
+                  - title: Frontend part for a credit card
+                    url: /docs/pbc/all/payment/unzer/extend-and-customize/frontend-part-for-a-credit-cart.html
               - title: Domain model & relationships
                 url:

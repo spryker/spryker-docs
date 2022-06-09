@@ -287,8 +287,7 @@ algolia:
     - name: 'paas_plus_dev'
       title: 'Platform as a Service Plus Developer'
     - name: 'pbc_all_roles'
-      title: 'Packaged Product Capabilities'
-
+      title: 'Packaged Business Capabilities'
 sass:
     sass_dir: css
     style: compressed

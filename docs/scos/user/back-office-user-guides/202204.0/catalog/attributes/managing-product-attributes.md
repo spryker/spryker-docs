@@ -1,7 +1,7 @@
 ---
-title: Managing product attributes
-description: Use the Managing Attributes procedures to view and updated product attributes in the Back Office.
-last_updated: Jul 8, 2021
+title: Edit product attributes
+description: Learn how to edit product attriibutes in the Back Office.
+last_updated: June 2, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-attributes
 originalArticleId: 98bec018-82ee-4960-aed5-fc13ad8429d5
@@ -11,30 +11,21 @@ redirect_from:
   - /docs/managing-attributes
   - /docs/en/managing-attributes
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/attributes/managing-product-attributes.html
+  - /docs/scos/user/back-office-user-guides/202204.0/catalog/attributes/managing-product-attributes.html  
 related:
   - title: Product Attributes
     link: docs/scos/user/features/page.version/product-feature-overview/product-attributes-overview.html
 ---
 
-This topic describes how to manage product attributes.
+This topic describes how to edit product attributes.
 
 ## Prerequisites
 
-To start managing attributes, go to **Catalog&nbsp;<span aria-label="and then">></span> Attributes**.
+Review the [reference information](#reference-information-create-product-attributes) before you start, or look up the necessary information as you go through the process.
 
-Review the reference information before you start, or look up the necessary information as you go through the process.
+## Edit a product attribute
 
-## Viewing product attributes
-
-To view a product attribute, select **View** next to the product attribute you want to view.
-
-On the *View Product Attributes* page that opens, you can see the general information of the attribute, its predefined values, and translations.
-
-To edit the product attribute, select **Edit** in the top right corner of the page.
-
-## Editing product attributes
-
-To edit a product attribute:
+. Go to **Catalog&nbsp;<span aria-label="and then">></span> Attributes**.
 1. Select **Edit** next to the product attribute you want to edit.
     On the *Edit Product Attributes* page that opens, the **Attribute Key**, **Input type**, and **Super attribute** are disabled. You can define them only when [creating a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html).
 2. Update **Predefined Values**:

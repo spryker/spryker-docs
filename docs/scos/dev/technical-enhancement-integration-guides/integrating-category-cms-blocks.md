@@ -152,6 +152,8 @@ class CategoryGuiDependencyProvider extends SpykerCategoryGuiDependencyProvider
 
 6. Optional: To show which categories are assigned to a block on a block view page, register the category list plugin by adding `CmsBlockCategoryListViewPlugin` to the CMS Block GUI dependency provider:
 
+**src/Pyz/Zed/CmsBlockGui/CmsBlockGuiDependencyProvider.php**
+
 ```php
 <?php
 
@@ -180,7 +182,7 @@ class CmsBlockGuiDependencyProvider extends SprykerCmsBlockGuiDependencyProvider
 2. Click Create Block to create a new block.
 3. From the template drop-down, select the "Title and description block" template and name the new block.
 4. Select the Categories in the "Categories: Top", "Categories: Middle" and "Categories: Bottom" fields. While typing, the product search will offer suggestions from the product list.
-5. After clicking **Save**, you will be prompted to provide glossary keys for the placeholders  included in the Twig template.
+5. After clicking **Save**, you will be prompted to provide content per locale for the placeholders in the Twig template.
 6. Set the block to active to use it straight away.
 7. Embed the block into the category page by adding the following code in the `catalog.twig` template:
 
@@ -190,7 +192,7 @@ class CmsBlockGuiDependencyProvider extends SprykerCmsBlockGuiDependencyProvider
 {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ```
 
-8. To see the page in Yves, the client data storage (Redis) must be up-to-date. This is handled through `cronjobs`.
+8. To see the page in Yves, the client data storage (Redis) must be up-to-date. This is handled through `cronjobs` (command `console queue:worker:start`).
 
 **To configure block positions**
 
@@ -198,14 +200,16 @@ Usually you don't want to change Twig templates for each block assignment, but s
 
 CMS Block positioning means that you can predefine some of the useful places in your Twig templates once and then manage your CMS Blocks based on relations to categories and position. For example, you could define "header", "body", "footer" positions to manage your CMS Blocks in those places independently.
 
-By default, we provide the following positions: "Top", "Middle", "Bottom", but you can easily change them in the module configuration on a project level (put your extension of `CmsBlockCategoryConnectorConfig` with the replaced method `getCmsBlockCategoryPositionList` to `Pyz\Zed\CmsBlockCategoryConnector\CmsBlockCategoryConnectorConfig` as in the example below).
+By default, we provide the following positions: "Top", "Middle", "Bottom". To change them, extend `CmsBlockCategoryConnectorConfig` on a project level and override the method `getCmsBlockCategoryPositionList` as in the example below.
+
+**src/Pyz/Zed/CmsBlockCategoryConnector/CmsBlockCategoryConnectorConfig.php**
 
 ```php
 <?php
 
 namespace Pyz\Zed\CmsBlockCategoryConnector;
 
-...
+use Spryker\Zed\CmsBlockCategoryConnector\CmsBlockCategoryConnectorConfig as SprykerCmsBlockCategoryConnectorConfig;
 
 class CmsBlockCategoryConnectorConfig extends SprykerCmsBlockCategoryConnectorConfig
 {

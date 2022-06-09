@@ -8,6 +8,8 @@ redirect_from:
 - /2021080/docs/en/glue-api-checkout-feature-integration
 - /docs/glue-api-checkout-feature-integration
 - /docs/en/glue-api-checkout-feature-integration
+- /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-checkout-feature-integration.html
+- /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-checkout-feature-integration.html
 ---
 
 Follow the steps below to install Checkout feature API.

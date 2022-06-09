@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/arvato-risk-check
   - /docs/arvato-risk-check
   - /docs/en/arvato-risk-check
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/arvato/arvato-risk-check.html
 related:
   - title: Arvato - Store Order 2.0
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/arvato-store-order.html

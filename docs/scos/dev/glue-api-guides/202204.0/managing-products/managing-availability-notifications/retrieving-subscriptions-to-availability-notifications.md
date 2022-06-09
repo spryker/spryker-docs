@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/retrieving-subscriptions-to-availability-notifications
   - /docs/retrieving-subscriptions-to-availability-notifications
   - /docs/en/retrieving-subscriptions-to-availability-notifications
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
+  - /docs/scos/dev/glue-api-guides/201907.0/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
+  -
 ---
 
 This endpoint allows retrieving subscriptions to availability notifications of a registered customer.

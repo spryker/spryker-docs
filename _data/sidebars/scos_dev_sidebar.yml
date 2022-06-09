@@ -510,7 +510,7 @@ entries:
     - title: Cms
       url: /docs/scos/dev/feature-walkthroughs/cms-feature-walkthrough/cms-feature-walkthrough.html
       include_versions:
-      - "201811.0"      
+      - "201811.0"
       - "202005.0"
       - "202009.0"
       - "202108.0"
@@ -2522,6 +2522,8 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-cmspagesearch.html
     - title: Migration Guide - CmsStorage
       url: /docs/scos/dev/module-migration-guides/migration-guide-cmsstorage.html
+    - title: Migration guide - CodeItNow module to BarcodeLaminas module
+      url: /docs/scos/dev/module-migration-guides/migration-guide-codeitnow-to-barcodelaminas.html
     - title: Migration Guide - Collector
       url: /docs/scos/dev/module-migration-guides/migration-guide-collector.html
     - title: Migration Guide - CompanyBusinessUnit
@@ -2540,6 +2542,10 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-contentbanner.html
     - title: Migration Guide - ContentBannerGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-contentbannergui.html
+    - title: Migration Guide - ContentFileGui
+      url: /docs/scos/dev/module-migration-guides/migration-guide-contentfilegui.html
+    - title: Migration Guide - ContentFileWidget
+      url: /docs/scos/dev/module-migration-guides/migration-guide-contentfilewidget.html
     - title: Migration Guide - ContentGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-contentgui.html
     - title: Migration Guide - ContentStorage
@@ -2570,6 +2576,14 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-errorhandler.html
     - title: Migration Guide - EventDispatcher
       url: /docs/scos/dev/module-migration-guides/migration-guide-eventdispatcher.html
+    - title: Migration Guide - FileManager
+      url: /docs/scos/dev/module-migration-guides/migration-guide-filemanager.html
+    - title: Migration Guide - FileManagerStorage
+      url: /docs/scos/dev/module-migration-guides/migration-guide-filemanagerstorage.html
+    - title: Migration Guide - FileManagerWidget
+      url: /docs/scos/dev/module-migration-guides/migration-guide-filemanagerwidget.html
+    - title: Migration Guide - Flysystem
+      url: /docs/scos/dev/module-migration-guides/migration-guide-flysystem.html
     - title: Migration Guide - Form
       url: /docs/scos/dev/module-migration-guides/migration-guide-form.html
     - title: Migration Guide - HTTP
@@ -2596,6 +2610,8 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-navigation.html
     - title: Migration Guide - NavigationGui
       url: /docs/scos/dev/module-migration-guides/migration-guide-navigationgui.html
+    - title: Migration Guide - Oauth
+      url: /docs/scos/dev/module-migration-guides/migration-guide-oauth.html
     - title: Migration Guide - OauthCompanyUser
       url: /docs/scos/dev/module-migration-guides/migration-guide-oauthcompanyuser.html
     - title: Migration Guide - Offer
@@ -2802,7 +2818,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-webprofiler.html
     - title: Migration Guide - Wishlist
       url: /docs/scos/dev/module-migration-guides/migration-guide-wishlist.html
-
   - title: DevOps migration guides
     include_versions:
     - "202001.0"
@@ -4050,7 +4065,7 @@ entries:
         url: /docs/scos/dev/legacy-demoshop/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html
         include_versions:
         - "201811.0"
-    - title: Tutorial - Set Up a Hello World Queue - Legacy Demoshop
+    - title: "Tutorial: Set Up a Hello World Queue - Legacy Demoshop"
       url: /docs/scos/dev/legacy-demoshop/set-up-a-hello-world-queue-legacy-demoshop.html
       include_versions:
       - "201811.0"
@@ -4072,7 +4087,7 @@ entries:
       - "201811.0"
   - title: Technical enhancement integration guides
     nested:
-    - title: Integrating development tools
+    - title: Integrate development tools
       nested:
       - title: Formatter
         url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html
@@ -4104,12 +4119,16 @@ entries:
       url: /docs/scos/dev/technical-enhancement-integration-guides/configuring-dynamic-yves-zed-tokens.html
     - title: Dynamic Propel configuration
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-dynamic-propel-configuration.html
+    - title: Elastic computing
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-elastic-computing.html
     - title: Environment configuration enhancement
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-environment-configuration-enhancement.html
     - title: Health checks
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-health-checks.html
     - title: MariaDB database engine
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-mariadb-database-engine.html
+    - title: Multi-database logic
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-multi-database-logic.html
     - title: Multi-queue publish structure
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html
     - title: Product CMS blocks
@@ -4125,7 +4144,7 @@ entries:
     - title: Symfony 5
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-5.html
     - title: ARM architecture (M1 chip)
-      url: /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html      
+      url: /docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html
   - title: SDK
     nested:
     - title: Development Virtual Machine, Docker Containers & Console
@@ -4182,13 +4201,13 @@ entries:
     nested:
     - title: Introduction Tutorials
       nested:
-      - title: Tutorial - Checkout and Step Engine - Spryker Commerce OS
+      - title: "Tutorial: Checkout and step engine - Spryker Commerce OS"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-checkout-and-step-engine-spryker-commerce-os.html
-      - title: Tutorial - Sending an email
+      - title: "Tutorial: Sending an email"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email.html
-      - title: Tutorial - Handling New Types of Entity URLs - Legacy Demoshop
+      - title: "Tutorial: Handling new types of entity URLs - Legacy Demoshop"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-handling-new-types-of-entity-urls-legacy-demoshop.html
-      - title: Tutorial - Integrating any search engine into a project
+      - title: "Tutorial: Integrating any search engine into a project"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-integrating-any-search-engine-into-a-project.html
       - title: Glue API
         nested:
@@ -4204,44 +4223,41 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html
         - title: Documenting GLUE API Resources
           url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/documenting-glue-api-resources.html
-      - title: Tutorial - Different Sores Different Logic - Landing Pages - Spryker
-          Commerce OS
-        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-different-sores-different-logic-landing-pages-spryker-commerce-os.html
-      - title: Tutorial - Content and Search - Attribute-Cart-Based Catalog Personalization
-          - Spryker Commerce OS
+      - title: "Tutorial: different stores, different logic - landing pages - Spryker Commerce OS"
+        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-different-stores-different-logic-landing-pages-spryker-commerce-os.html
+      - title: "Tutorial: Content and search - attribute-cart-based catalog personalization Spryker Commerce OS"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-content-and-search-attribute-cart-based-catalog-personalization-spryker-commerce-os/tutorial-content-and-search-attribute-cart-based-catalog-personalization.html
         nested:
-        - title: Tutorial - Boosting Cart Based Search
+        - title: "Tutorial: Boosting cart based search"
           url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-content-and-search-attribute-cart-based-catalog-personalization-spryker-commerce-os/tutorial-boosting-cart-based-search.html
-      - title: Tutorial - CMS
+      - title: "Tutorial: CMS"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-cms.html
-      - title: Tutorial - Hello World - Spryker Commerce OS
+      - title: "Tutorial: Hello world - Spryker Commerce OS"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-hello-world-spryker-commerce-os.html
-      - title: Tutorial - Architectural Walkthrough - Spryker Commerce OS
+      - title: "Tutorial: Architectural Walkthrough - Spryker Commerce OS"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-architectural-walkthrough-spryker-commerce-os.html
-      - title: Tutorial - Content and Search - Personalized Catalog Pages - Spryker
-          Commerce OS
+      - title: "Tutorial: Content and search - personalized catalog pages - Spryker Commerce OS"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-content-and-search-personalized-catalog-pages-spryker-commerce-os.html
-      - title: Tutorial - Testing and TDD - Spryker Commerce OS
+      - title: "Tutorial: Testing and TDD - Spryker Commerce OS"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-testing-and-tdd-spryker-commerce-os.html
     - title: Advanced Tutorials
       url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/advanced-tutorials.html
       nested:
-      - title: Tutorial - Database Transaction Handling
+      - title: "Tutorial: Database transaction handling"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-database-transaction-handling.html
-      - title: Tutorial - Internationalization
+      - title: "Tutorial: Internationalization"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-internationalization.html
-      - title: Tutorial - Zed Rest API
+      - title: "Tutorial: Zed Rest API"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-zed-rest-api.html
-      - title: Tutorial - Creating a Table View
+      - title: "Tutorial: Creating a table view"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-creating-a-table-view.html
-      - title: Tutorial- Product
+      - title: "Tutorial: Product"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-product.html
-      - title: Tutorial - Implementing Widgets and Widget Plugins
+      - title: "Tutorial: Implementing widgets and widget plugins"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-implementing-widgets-and-widget-plugins.html
-      - title: Tutorial - Managing glossary keys
+      - title: "Tutorial: Managing glossary keys"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-managing-glossary-keys.html
-      - title: Tutorial - Replacing a default data importer with the queue data importer
+      - title: "Tutorial: Replacing a default data importer with the queue data importer"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer.html
       - title: Glue API
         nested:
@@ -4250,24 +4266,23 @@ entries:
           nested:
           - title: B2C API React Example Installation
             url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example-installation.html
-        - title: Tutorial - Interacting with Third Party Payment Providers via Glue
-            API
+        - title: "Tutorial: Interacting with third party payment providers via Glue API"
           url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
-      - title: Tutorial- Product Challenge Solution
+      - title: "Tutorial: Product challenge solution"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-product-challenge-solution.html
-      - title: Tutorial - Twig extensions
+      - title: "Tutorial: Twig extensions"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-twig-extensions.html
-      - title: Tutorial - New Relic Monitoring
+      - title: "Tutorial: New Relic monitoring"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-new-relic-monitoring.html
-      - title: Tutorial - How the "define" Twig Tag is Working
+      - title: "Tutorial: How the define Twig tag is working"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-how-the-define-twig-tag-is-working.html
-      - title: Tutorial - Customer Import
+      - title: "Tutorial: Customer import"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-customer-import.html
-      - title: Tutorial - Calculator Plugin
+      - title: "Tutorial: Calculator plugin"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-calculator-plugin.html
-      - title: Tutorial - Using Translations
+      - title: "Tutorial: Using translations"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-using-translations.html
-      - title: Tutorial - Console Commands
+      - title: "Tutorial: Console commands"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-console-commands.html
     - title: About Tutorials
       url: /docs/scos/dev/tutorials-and-howtos/tutorials-and-howtos.html
@@ -4918,6 +4933,16 @@ entries:
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html
     - title: Performance guidelines
       nested:
+      - title: Elastic computing
+        nested:
+        - title: New Relic transactions grouping by queue names
+          url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html
+        - title: RAM-aware batch processing
+          url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
+        - title: Scalable application infrastructure for publish and sync workers
+          url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/scalable-application-infrastructure-for-publish-and-sync-workers.html
+        - title: Storage caching for primary-replica database setups
+          url: /docs/scos/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
       - title: General performance guidelines
         url: /docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
       - title: Architecture performance guidelines

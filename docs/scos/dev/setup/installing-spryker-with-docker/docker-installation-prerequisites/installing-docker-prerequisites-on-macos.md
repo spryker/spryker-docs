@@ -18,6 +18,7 @@ redirect_from:
   - /v4/docs/en/docker-installation-prerequisites-macos
   - /v3/docs/docker-install-prerequisites-macos-201907
   - /v3/docs/en/docker-install-prerequisites-macos-201907
+  - /docs/scos/dev/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites-macos.html
 ---
 
 This document describes the prerequisites for installing Spryker in Docker on MacOS.

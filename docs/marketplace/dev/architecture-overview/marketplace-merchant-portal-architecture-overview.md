@@ -1,7 +1,14 @@
 ---
-title: Merchant Portal architecture overview
+title: Marketplace Merchant Portal architecture overview
 description: This document explains how a Spryker Marketplace MerchantPortal is designed.
 template: concept-topic-template
+related:
+  - title: Marketplace Application composition
+    link: docs/marketplace/dev/architecture-overview/marketplace-application-composition.html
+  - title: Marketplace domain model
+    link: docs/marketplace/dev/architecture-overview/marketplace-domain-model.html
+  - title: Marketplace in the Back Office
+    link: docs/marketplace/dev/architecture-overview/marketplace-in-back-office.html
 ---
 This document explains how a Spryker Marketplace MerchantPortal is designed.
 

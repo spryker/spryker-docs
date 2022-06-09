@@ -3,6 +3,9 @@ title: Merchant Portal - Marketplace Order Management feature integration
 last_updated: Sep 13, 2021
 description: This integration guide provides steps on how to integrate the Marketplace Merchant Portal Order Management feature into a Spryker project.
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Order Management feature integration
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Merchant Portal - Marketplace Order Management feature into a Spryker project.

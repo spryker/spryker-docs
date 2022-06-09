@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/heidelpay-easy-credit
   - /docs/heidelpay-easy-credit
   - /docs/en/heidelpay-easy-credit
+  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-easy-credit-payment-method-for-heidelpay.html
 related:
   - title: Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay.html

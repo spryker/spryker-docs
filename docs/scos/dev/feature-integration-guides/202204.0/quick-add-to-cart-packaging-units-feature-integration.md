@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/quick-order-packaging-units-feature-integration
   - /docs/quick-order-packaging-units-feature-integration
   - /docs/en/quick-order-packaging-units-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/quick-add-to-cart-packaging-units-feature-integration.html
 ---
 
 ## Install feature frontend

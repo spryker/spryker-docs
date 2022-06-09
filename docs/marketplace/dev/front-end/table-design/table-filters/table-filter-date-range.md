@@ -2,6 +2,13 @@
 title: Table Filter Date Range
 description: This document provides details about the Table Filter Date Range component in the Components Library.
 template: concept-topic-template
+related:
+  - title: Table Filter extension
+    link: docs/marketplace/dev/front-end/table-design/table-filters/index.html
+  - title: Table Filter Select
+    link: docs/marketplace/dev/front-end/table-design/table-filters/table-filter-select.html
+  - title: Table Filter Tree Select
+    link: docs/marketplace/dev/front-end/table-design/table-filters/table-filter-tree-select.html
 ---
 
 This document explains the Table Filter Date Range component in the Components Library.

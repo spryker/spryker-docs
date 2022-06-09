@@ -18,13 +18,14 @@ redirect_from:
   - /2021080/docs/en/international-tax-rates-sets-1
   - /docs/international-tax-rates-sets-1
   - /docs/en/international-tax-rates-sets-1
+  - /docs/scos/user/features/202200.0/tax-feature-overview.html
 ---
 
 The *Tax* feature lets you define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.
 
-The tax rate is the percentage of the sales price that buyer pays as a tax. In the default Spryker implementation, the tax rate is defined per country where the tax applies. For details about how to create and manage tax rates for countries in the Back Office, see [Managing tax rates](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/managing-tax-rates.html).
+The tax rate is the percentage of the sales price that buyer pays as a tax. In the default Spryker implementation, the tax rate is defined per country where the tax applies. For details about how to create tax rates for countries in the Back Office, see [Create tax rates](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/create-tax-rates.html).
 
-A tax set is a set of tax rates. You can [define tax sets in the Back office](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html) or[ import tax sets](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-tax.csv.html) into your project.
+A tax set is a set of tax rates. You can [define tax sets in the Back office](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/create-tax-sets.html) or[ import tax sets](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-tax.csv.html) into your project.
 
 Tax sets can be applied to abstract product, product option and shipment:
 
@@ -106,8 +107,10 @@ The feature has the following functional constraints:
 |BACK OFFICE USER GUIDES|
 |---|
 | [Get a general idea of the Tax feature](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) |
-| [Manage tax rates](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/managing-tax-rates.html) |
-| [Manage tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/managing-tax-sets.html) |
+| [Create tax rates](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/create-tax-rates.html) |
+| [Edit tax rates](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/edit-tax-rates.html) |
+| [Create tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/create-tax-sets.html) |
+| [Edit tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/edit-tax-sets.html) |
 
 {% info_block warningBox "Developer guides" %}
 

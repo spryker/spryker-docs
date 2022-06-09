@@ -3,6 +3,16 @@ title: Editing abstract products
 last_updated: Jul 27, 2021
 description: This guide explains how to edit abstract products in Marketplace.
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-abstract-products/editing-abstract-products.html
+related:
+  - title: Creating abstract products
+    link: docs/marketplace/user/back-office-user-guides/page.version/catalog/products/abstract-products/creating-abstract-products.html
+  - title: Managing products
+    link: docs/marketplace/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
+  - title: Marketplace Product feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+
 ---
 
 This document describes how to edit abstract products.
@@ -15,7 +25,7 @@ Each section contains reference information. Make sure to review it before you s
 
 ## Editing general settings of an abstract product
 
-To edit general settings of an abstract product:    
+To edit general settings of an abstract product:
 
 1. Next to the product you want to edit, select **Edit**.
     This takes you to the **Edit Product Abstract [SKU]** page.
@@ -38,7 +48,7 @@ The following table describes the attributes you enter and select when editing g
 
 ## Editing prices of an abstract product
 
-To edit prices of an abstract product:    
+To edit prices of an abstract product:
 
 1. Next to the product you want to edit, select **Edit**.
 2. On the **Edit Product Abstract [SKU]** page, click on the **Prices & Tax** tab.
@@ -67,7 +77,7 @@ To edit volume prices of an abstract product:
 1. Next to the product you want to edit add volume prices of, select **Edit**.
 2. On the **Edit Product Abstract [SKU]** page, switch to the **Price & Tax** tab.
 3. Next to the store you want to edit volume prices for, select **> Edit Product Volume Price**.
-4. On the **Add volume prices** page, enter a **Qunatity**.
+4. On the **Add volume prices** page, enter a **Quantity**.
 5. Enter a **Gross price**.
 6. Optional: Enter a **Net price**.
 7. Optional: To add more volume prices than the number of the rows displayed on the page, select **Save and add more rows**.
@@ -93,7 +103,8 @@ To create a product variant, see [Creating product variants](/docs/marketplace/u
 
 ## Editing meta information of an abstract product
 
-To edit meta information:
+To edit meta information, do the following:
+
 1. Next to the product you want to edit, select **Edit**.
 2. On the **Edit Product Abstract [SKU]** page, switch to the **SEO** tab.
 3. Update the following for the desired locales:
@@ -114,7 +125,8 @@ The following table describes the attributes you enter and select when editing m
 
 ## Editing product images of an abstract product
 
-To edit product images:
+To edit product images, do the following:
+
 1. Next to the product you want to edit, select **Edit**.
 2. On the **Edit Product Abstract [SKU]** page, switch to the **Image** tab.
 3. Select a locale you want to update images for.

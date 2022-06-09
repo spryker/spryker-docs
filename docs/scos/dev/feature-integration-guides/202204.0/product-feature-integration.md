@@ -10,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/product-feature-integration
   - /docs/product-feature-integration
   - /docs/en/product-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/product-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202200.0/product-feature-integration.html
 related:
   - title: Configurable Bundle feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html
@@ -295,6 +297,7 @@ Make sure that the following modules are installed:
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | ProductSearchWidget | spryker-shop/product-search-widget |
+| ProductSearchWidgetExtension | vendor/spryker-shop/product-search-widget-extension |
 
 {% endinfo_block %}
 

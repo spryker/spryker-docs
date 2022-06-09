@@ -3,6 +3,9 @@ title: Marketplace Order Management feature integration
 last_updated: Oct 19, 2021
 description: This document describes how to integrate the Marketplace Order Management feature into a Spryker project.
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Order Management feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Order Management feature into a Spryker project.

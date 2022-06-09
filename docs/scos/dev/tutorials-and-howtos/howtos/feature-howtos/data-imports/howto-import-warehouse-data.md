@@ -1,5 +1,5 @@
 ---
-title: HowTo - Import warehouse data
+title: "HowTo: Import warehouse data"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-import-warehouse-data
@@ -15,6 +15,7 @@ redirect_from:
   - /v5/docs/en/ht-import-warehouse-data
   - /v4/docs/ht-import-warehouse-data
   - /v4/docs/en/ht-import-warehouse-data
+  - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html
 related:
   - title: Managing Warehouses
     link: docs/scos/user/back-office-user-guides/page.version/administration/warehouses/managing-warehouses.html
@@ -22,22 +23,22 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/administration/warehouses/creating-warehouses.html
 ---
 
-This HowTo provides the steps on how to import warehouse data using a .CSV file, including:
+This document shows how to import warehouse data using a CSV file, including:
 
-* import warehouses
-* assign a warehouse to stores
-* import warehouses with the stores assigned in bulk
+* Import warehouses.
+* Assign a warehouse to stores.
+* Import warehouses with the stores assigned in bulk.
 
 ## Importing warehouses
 
-To import warehouse data:
+To import warehouse data, follow these steps:
 
-1. Prepare the **warehouse.csv** file where you can indicate whether the warehouse name and its availability. The file can contain the following fields:
+1. Prepare the `warehouse.csv` file where you can indicate whether the warehouse name and its availability. The file can contain the following fields:
 
 | PROPERTY | TRANSCRIPTION | EXAMPLE |
 | --- | --- | --- |
 | `name` | Warehouse name you want to create. | `Warehouse1` |
-| `is_active` | Status of the warehouse specified in a boolean value: 1 (true) or 0 (false), where **1** indicates that the warehouse is available and **0** indicates that the warehouse is unavailable. | **1** or **0** |
+| `is_active` | Status of the warehouse specified in a boolean value: 1 (true) or 0 (false), where `1` indicates that the warehouse is available and `0` indicates that the warehouse is unavailable. | `1` or `0` |
 
 {% info_block warningBox "Note" %}
 
@@ -46,42 +47,41 @@ Keep in mind that if you don't set the status value, the warehouse will be unava
 {% endinfo_block %}
 
 2. Populate the necessary data and save changes.
-3. Upload the **warehouse.csv** file to `StockDataImport/data/import`.
-4. To import the data, run the following console command:
+3. Upload the `warehouse.csv` file to `StockDataImport/data/import`.
+4. Import the data:
 
-```bash
-console data:import stock
-```
+  ```bash
+  console data:import stock
+  ```
 
-The imported data should be imported to the `spy_stock` database table and appear on the **Warehouses** page in the Back Office. For more information about how to manage the warehouses, see [Managing Warehouses](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/managing-warehouses.html).
+The imported data should be imported to the `spy_stock` database table and appear in the Back Office, on the **Warehouses** page. For more information about how to manage the warehouses, see [Managing warehouses](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/managing-warehouses.html).
 
 ## Importing a warehouse with the stores assigned
 
 To import warehouses with the stores assigned:
-
-1. Prepare the **warehouse_store.csv** file containing the following fields:
+1. Prepare the `warehouse_store.csv` file containing the following fields:
 
 | PROPERTY | TRANSCRIPTION | EXAMPLE |
 | --- | --- | --- |
 | `warehouse_name` | Warehouse name you want to create. | `Warehouse1` |
 | `store_name` | Store, which you want to assign to the warehouse. | `DE` |
 
-1. Populate the necessary data and save changes.
-2. Upload the **warehouse_store.csv** file to `StockDataImport/data/import`.
-3. To import the data, run the following console command:
+2. Populate the necessary data and save changes.
+3. Upload the `warehouse_store.csv` file to `StockDataImport/data/import`.
+4. Import the data:
+    ```bash
+    console data:import stock-store
+    ```
 
-```bash
-console data:import stock-store
-```
-
-The imported data should be added to the `spy_stock_store` database table and appear on the list of warehouses in the Back Office. For more information about how to manage the warehouses, see [Managing Warehouses](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/managing-warehouses.html).
+The imported data should be added to the `spy_stock_store` database table and appear in the Back Office, on the list of warehouses. For more information about how to manage the warehouses, see [Managing warehouses](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/managing-warehouses.html).
 
 ## Importing warehouses with store relation in bulk
 
-You can also import warehouses with the stores assigned in bulk. To do this, perform the steps 2-4 from the previous sections - *Importing Warehouses* and *Importing a Warehouse with the Stores Assigned*. Then, run the following console command:
+You can also import warehouses with the stores assigned in bulk. To do this, follow these steps:
+1. Perform steps 2-4 from the preceding sections: [Importing Warehouses](#importing-warehouses) and [Importing a Warehouse with the Stores Assigned](#importing-a-warehouse-with-the-stores-assigned).
+2. Run the following console command:
+    ```bash
+    console data:import
+    ```
 
-```bash
-console data:import
-```
-
-The imported data should appear on the **Warehouses** page in the Back Office. For more information about how to manage the warehouses, see [Managing Warehouses](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/managing-warehouses.html).
+The imported data should appear in the Back Office, on the *Warehouses* page. For more information about how to manage the warehouses, see [Managing warehouses](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/managing-warehouses.html).

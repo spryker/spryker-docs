@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-measurement-units-feature-integration
   - /docs/glue-api-measurement-units-feature-integration
   - /docs/en/glue-api-measurement-units-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-measurement-units-feature-integration.html
 ---
 
 Follow the steps below to install Measurement units feature API.
@@ -123,9 +124,9 @@ Activate the following plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\CartsRestApi\CartsRestApiConfig;
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
@@ -137,7 +138,7 @@ use Spryker\Glue\ProductMeasurementUnitsRestApi\Plugin\GlueApplication\SalesUnit
 use Spryker\Glue\ProductMeasurementUnitsRestApi\Plugin\GlueApplication\SalesUnitsResourceRoutePlugin;
 use Spryker\Glue\ProductMeasurementUnitsRestApi\ProductMeasurementUnitsRestApiConfig;
 use Spryker\Glue\ProductsRestApi\ProductsRestApiConfig;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
@@ -150,7 +151,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             new SalesUnitsResourceRoutePlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
      *
@@ -179,7 +180,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
             CartsRestApiConfig::RESOURCE_GUEST_CARTS_ITEMS,
             new SalesUnitsByCartItemResourceRelationshipPlugin()
         );
-         
+
         return $resourceRelationshipCollection;
     }
 }
@@ -672,6 +673,3 @@ class OrdersRestApiDependencyProvider extends SprykerOrdersRestApiDependencyProv
 Send the request `GET https://glue.mysprykershop.com/orders/{% raw %}{{{% endraw %}order_uuid{% raw %}}}{% endraw %}` and make sure that the order items have `salesUnits` and `salesUnits.amount` properties in the response.
 
 {% endinfo_block %}
-
-
-

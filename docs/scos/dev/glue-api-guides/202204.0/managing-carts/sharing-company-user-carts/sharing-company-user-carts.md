@@ -10,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/sharing-company-user-carts
   - /docs/sharing-company-user-carts
   - /docs/en/sharing-company-user-carts
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
 ---
 
 Company users can share their carts with other company users, so multiple representatives of a company can work on the same order. When sharing carts, users can choose what type of access they want to grant to different each other.

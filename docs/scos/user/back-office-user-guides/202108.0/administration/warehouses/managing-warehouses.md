@@ -41,6 +41,6 @@ To edit the warehouse details:
 4. To keep the changes, click **Save**. This redirects you to the *Warehouses* page, where you can see the updated warehouse and the following message: 'Warehouse has been successfully updated'.
 
 
-## What's next?
+## Next steps
 
 To learn how to manage stock per specific warehouse, see [Managing product availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html).

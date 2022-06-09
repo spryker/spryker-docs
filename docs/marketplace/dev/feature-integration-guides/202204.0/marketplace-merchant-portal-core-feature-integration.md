@@ -3,6 +3,9 @@ title: Marketplace Merchant Portal Core feature integration
 last_updated: Oct 19, 2021
 description: This document describes how to integrate the Merchant Portal Core feature into a Spryker project.
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Merchant Portal Core feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-core-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Merchant Portal Core feature into a Spryker project.
@@ -65,6 +68,8 @@ Set up behavior as follows:
 | MerchantPortalAclEntityMetadataConfigExpanderPlugin |Expands provided Acl Entity Metadata with merchant order composite, merchant product composite, merchant composite, product offer composit data, merchant read global entities and allow list entities. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity |
 | MerchantAclMerchantPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for provided merchant.  |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant  |
 | MerchantAclMerchantUserPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for provided merchant user. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
+| AclMerchantPortalMerchantUserRoleFilterPreConditionPlugin | Checks if the Symfony security authentication roles should be filtered out. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
+| MerchantUserUserRoleFilterPlugin | Filters ROLE_BACK_OFFICE_USER to prevent Merchant User login to Backoffice. |  | Spryker\Zed\MerchantUser\Communication\Plugin\SecurityGui  |
 | ProductViewerForOfferCreationAclInstallerPlugin | Provide `ProductViewerForOfferCreation` Roles with Rules and Groups to create on install. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser  |
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
@@ -146,6 +151,36 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 }
 ```
 
+**src/Pyz/Zed/SecurityGui/SecurityGuiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\SecurityGui;
+
+use Spryker\Zed\MerchantUser\Communication\Plugin\SecurityGui\MerchantUserUserRoleFilterPlugin;
+use Spryker\Zed\SecurityGui\SecurityGuiDependencyProvider as SprykerSecurityGuiDependencyProvider;
+
+class SecurityGuiDependencyProvider extends SprykerSecurityGuiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\SecurityGuiExtension\Dependency\Plugin\UserRoleFilterPluginInterface>
+     */
+    protected function getUserRoleFilterPlugins(): array
+    {
+        return [
+            new MerchantUserUserRoleFilterPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Ensure that merchant users or users whose Acl Group does not have Back Office allowed Acl Group Reference cannot log in to the Back Office.
+
+{% endinfo_block %}
+
 **src/Pyz/Zed/UserMerchantPortalGui/UserMerchantPortalGuiDependencyProvider.php**
 
 ```php
@@ -225,6 +260,7 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 
 namespace Pyz\Zed\MerchantUser;
 
+use Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser\AclMerchantPortalMerchantUserRoleFilterPreConditionPlugin;
 use Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser\MerchantAclMerchantUserPostCreatePlugin;
 use Spryker\Zed\MerchantUser\MerchantUserDependencyProvider as SprykerMerchantUserDependencyProvider;
 
@@ -239,8 +275,24 @@ class MerchantUserDependencyProvider extends SprykerMerchantUserDependencyProvid
             new MerchantAclMerchantUserPostCreatePlugin(),
         ];
     }
+    
+    /**
+     * @return array<\Spryker\Zed\MerchantUserExtension\Dependency\Plugin\MerchantUserRoleFilterPreConditionPluginInterface>
+     */
+    protected function getMerchantUserRoleFilterPreConditionPlugins(): array
+    {
+        return [
+            new AclMerchantPortalMerchantUserRoleFilterPreConditionPlugin(),
+        ];
+    }
 }
 ```
+
+{% info_block warningBox "Verification" %}
+
+Ensure that non-merchant users whose Acl Group has Back Office allowed Acl Group Reference (see `AclMerchantPortalConfig::getBackofficeAllowedAclGroupReferences()`) can log in to the Back Office.
+
+{% endinfo_block %}
 
 **src/Pyz/Zed/Acl/AclDependencyProvider.php**
 

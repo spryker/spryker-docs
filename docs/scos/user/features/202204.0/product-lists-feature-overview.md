@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/product-lists-feature-overview
   - /docs/product-lists-feature-overview
   - /docs/en/product-lists-feature-overview
+  - /docs/scos/user/features/202200.0/product-lists-feature-overview.html
 ---
 
 Configure product availability for specific companies by blacklisting or whitelisting products for them. Let's say you want to hide some products, or even a category, from a company you've signed a contract with. You create a blacklist of those products and assign it to the company. This will make it impossible for this company to purchase the blacklisted product.

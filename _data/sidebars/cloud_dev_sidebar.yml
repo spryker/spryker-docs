@@ -37,6 +37,8 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/preparation-for-going-live.html
       - title: Deploying in a production environment
         url: /docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-production-environment.html
+      - title: Starting asynchronous commands
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/starting-asynchronous-commands.html
       - title: Security
         nested:
           - title: Checking ECR image scan results
@@ -71,6 +73,11 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/performance-testing.html
       - title: Monitoring issues and informing about alerts
         url: /docs/cloud/dev/spryker-cloud-commerce-os/monitoring-issues-and-informing-about-alerts.html
+      - title: Multi-store setups
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multi-store-setups.html
+        nested:
+          - title: Add and remove databases of stores
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html
       - title: Troubleshooting
         nested:
           - title: Troubleshooting deployment issues

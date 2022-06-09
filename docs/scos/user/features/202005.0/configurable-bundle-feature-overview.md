@@ -89,10 +89,10 @@ A Back Office User can [create an unlimited number of slots](/docs/scos/user/bac
 * Base cabinet
 * Drawer base cabinet
 
-![Kitchen Configurable Bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/kitchen+slots.png) 
+![Kitchen Configurable Bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/kitchen+slots.png)
 
 {% endinfo_block %}
-A slot contains a list of products or even categories to choose from. In Spryker Commerce OS, this functionality is represented via **product lists**. Spryker Back Office User adds the necessary products to the product list to allow buyers to choose among several options in the slot. 
+A slot contains a list of products or even categories to choose from. In Spryker Commerce OS, this functionality is represented via **product lists**. Spryker Back Office User adds the necessary products to the product list to allow buyers to choose among several options in the slot.
 
 {% info_block warningBox "Warning" %}
 
@@ -113,7 +113,7 @@ Slot `Base Cabinet` may contain a list with five assigned products:
 * Base cabinet with two shelves SKU 12236
 * Base cabinet with pull-out SKU 12237
 * Base cabinet with wire basket SKU 12238
-![Slot Base Cabinet](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Slot+Base+Cabinet.png) 
+![Slot Base Cabinet](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Slot+Base+Cabinet.png)
 
 {% endinfo_block %}
 An **assigned product** is a concrete product that is assigned to the slot. When you select the product for a slot, **the product is picked**.
@@ -123,15 +123,15 @@ You have picked `Base cabinet with 2 shelves SKU 12236` product to fill the slot
 
 {% endinfo_block %}
 When represented schematically, a configurable bundle looks like this:
-![Config Bundle Schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/slots+scheme.png) 
+![Config Bundle Schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/slots+scheme.png)
 
 ## Configurable Bundle & Cart and Cart Notes
 When the customer has successfully filled all the slots in the template, they add the configurable bundle to the cart. On the cart page, the items are grouped by the configured bundle.
-![Configured Bundle on the Cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/configured-bundle-on-cart-page.png) 
+![Configured Bundle on the Cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/configured-bundle-on-cart-page.png)
 
 You can add a note to the whole Configurable bundle on the cart page. The note will further be displayed on the Checkout Summary and Order Details page under the respective Configurable Bundle template.
 
-## Configurable Bundle Quantity, Stock and Price 
+## Configurable Bundle Quantity, Stock and Price
 The current configuration supports 1:1 product-slot relation in the Configurator. It means, that you can select only one concrete product for a slot with quantity 1. However, using the data import, you may import a bigger quantity for the products in the slots.
 
 On the cart page, a shopper can also change the number of configured bundles to buy. After the number of bundles is increased, the quantity of the items in the configured bundle is multiplied by this number.
@@ -229,16 +229,17 @@ The non-splittable product has one sales order item with quantity 3.
 Pay attention, that product splitting logic does not support Packaging Units for the Configurable Bundle products.
 
 {% endinfo_block %}
+
 ## Configurator
 Configurator is a page where a shopper assembles a Configurable Bundle. It allows customers to choose compound and technically feasible product combinations online, making the shopping experience interactive for companies and their customers.
 
 ### Configurable Bundle List
 This page contains a list of all Configurable Bundle Templates that are active. All the templates are taken from the **Back Office > Configurable Bundle Templates** section. To configure the template, use our [Configurable Bundle Template Back Office guide](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/configurable-bundle-templates.html).
-![Configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Configurable+Bundle+Template+-+storefront.png) 
+![Configurator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Configurable+Bundle+Template+-+storefront.png)
 
 ### Configurator Page
 Configurator is the exemplary page where you can set up your configurable bundle from the template.
-![Configurator Slots](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/configurator-slots.png) 
+![Configurator Slots](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/configurator-slots.png)
 
 All slots are optional, so you can fill, for example, only two slots from the example image above. However, you can customize this configuration according to project needs.
 

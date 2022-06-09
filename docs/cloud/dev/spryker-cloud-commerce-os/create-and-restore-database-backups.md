@@ -33,7 +33,7 @@ Also, you can create DB snapshots manually.
 
 3.  In the _Databases_ pane, select the DB you want to take a snapshot of.
 
-4.  Select **Actions** > **Take snapshot**.
+4.  Select **Actions&nbsp;<span aria-label="and then">></span> Take snapshot**.
 
     This opens the _Take DB snapshot_ page.
 

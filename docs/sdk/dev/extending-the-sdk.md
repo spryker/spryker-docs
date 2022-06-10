@@ -8,11 +8,11 @@ The SDK offers different extension points to enable third parties to contribute 
 
 From simple to complex, the SDK can be extended by:
 
-- Providing additional tasks or settings via YAML definition placed inside `<path/to/spryker/sdk>/extension/<YourBundleName>/Tasks/<taskname>.yaml`. Those tasks can't introduce additional dependencies and therefore are best suited to integrate existing tools that come with a standalone executable.
+- Providing additional tasks or settings via YAML definition placed inside `<path/to/spryker/sdk>/extension/<YourBundleName>/Tasks/<taskname>.yaml`. Those tasks can't introduce additional dependencies and are best suited to integrate existing tools that come with a standalone executable.
 - Providing additional tasks, value resolvers or settings via the PHP implementation placed inside `<path/to/spryker/sdk>/extension/<YourBundleName>/Tasks/<taskname>.php`. Those tasks need to implement the [TaskInterface](https://github.com/spryker-sdk/sdk-contracts/blob/master/src/Entity/TaskInterface.php) and need to be exposed by providing a Symfony bundle to the Spryker SDK, such as `<path/to/spryker/sdk>/extension/<YourBundleName>/<YourBundleName>Bundle.php`, following the conventions of a [Symfony bundle](https://symfony.com/doc/current/bundles.html#creating-a-bundle). This approach is best suited for more complex tasks that don't require additional dependencies, for example, validating content of a YAML file by using Symphony validators.
-- Providing additional tasks, value resolvers or settings that come with additional dependencies. This approach follows the same guideline as the previous approach with PHP implementation, but requires to build your own [SDK docker image](/docs/sdk/dev/building-flavored-spryker-sdks.html) that includes those dependencies.
+- Providing additional tasks, value resolvers, or settings that come with additional dependencies. This approach follows the same guideline as the previous approach with the PHP implementation but requires building  your own [SDK docker image](/docs/sdk/dev/building-flavored-spryker-sdks.html) that includes those dependencies.
 
-Tщ extend the SDK, follow these steps.
+To extend the SDK, follow these steps.
 
 ## 1. Implement a new task
 
@@ -24,7 +24,7 @@ implementation via PHP and Symfony services for specialized purposes.
 ### Implementation via YAML definition
 
 YAML-based tasks need to fulfill a defined structure to be able to execute them from the SDK.
-The command defined in the YAML definition can have [placeholders](#implement-placeholders), that you need to define in the placeholder section. Each placeholder need to map to one [value resolver](#2-add-a-value-resolver).
+The command defined in the YAML definition can have [placeholders](#implement-placeholders) that you need to define in the placeholder section. Each placeholder need to map to one [value resolver](#add-a-value-resolver).
 
 Add the definition for your task in `<path>/Tasks/<name>.yaml`:
 
@@ -54,11 +54,11 @@ In case when a task is more than just a call to an existing tool, you can implem
 This requires you to make the task a part of the Symfony bundle. To achieve this, follow these steps:
 
 1. Create the Symfony bundle. 
-Refer to the [official Sympfony documentation](https://symfony.com/doc/current/bundles.html) for details on how to do that.
+Refer to the [official Symfony documentation](https://symfony.com/doc/current/bundles.html) for details on how to do that.
 
 {% info_block infoBox "Info" %}
 
-The bundle needs to use the [Spryker SDK Contracts](https://github.com/spryker-sdk/sdk-contracts) via composer.
+The bundle has to use the [Spryker SDK Contracts](https://github.com/spryker-sdk/sdk-contracts) via composer.
 
 {% endinfo_block %}
 
@@ -156,6 +156,7 @@ class YourCommand implements ExecutableCommandInterface
 }
 ```
 <a name="implement-placeholders"></a>
+
 4. Implement placeholders.
 Placeholders are resolved at runtime by using a specified value resolver.
 A placeholder needs a specific name that is not used anywhere in the commands the placeholder is used for.
@@ -164,7 +165,7 @@ A placeholder needs a specific name that is not used anywhere in the commands th
 
 You can append `%` and suffix the placeholder for this purpose, which makes the placeholder easier to recognize in a command.
 
-You can reference the used value resolver by its ID or the full qualified class name (FQCN), whereas the FQCN is preferred.
+You can reference the used value resolver by its ID or the fully qualified class name (FQCN), whereas the FQCN is preferred.
 
 {% endinfo_block %}
 
@@ -192,7 +193,7 @@ class YourTask implements TaskInterface
 ```
 
 5. Implement a Symfony service.
-Once you implemented the task, it needs to be registered as a [Symfony service](https://symfony.com/doc/current/service_container.html#creating-configuring-services-in-the-container).
+Once you have implemented the task, register it as a [Symfony service](https://symfony.com/doc/current/service_container.html#creating-configuring-services-in-the-container).
 
 Implement the service as shown in the example:
 
@@ -213,9 +214,9 @@ For more complex bundles that require additional dependencies, follow the guidel
 
 Most placeholders need a solution to resolve their value during runtime. This can be reading some settings and assembling a value based on the settings content, or any solution that turns a placeholder into a resolved value. 
 
-{% info_block infoBox "Info" %}
+{% info_block warningBox "" %}
 
-Make sure to unify value resolvers and to always use the same name for a value.
+Make sure to unify value resolvers and always use the same name for a value.
 
 {% endinfo_block %}
 
@@ -270,7 +271,7 @@ class YourValueResolver implements ValueResolverInterface
      */
     public function getValue(array $settingValues): mixed
     {
-        //implementation to resolve the according value
+        //implementation to resolve the corresponding value
         //when null is returned the user of the SDK is asked to give his input
         return '<resolved value>'
     }
@@ -316,7 +317,7 @@ settings:
 
 ## Adding a new command runner
 
-Commands are executed using *command runners*. Each command has a `type` that determines what command runner can execute the command.
+Commands are executed via *command runners*. Each command has a `type` that determines what command runner can execute the command.
 To implement new task types, there must be a new command runner and you need to register it as a Symfony service.
 
 Add a new command runner as shown in the example:

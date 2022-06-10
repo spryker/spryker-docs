@@ -3,4 +3,4 @@ entries:
   - product: Spryker SDK
     nested:
       - title: Spryker SDK
-        url: /docs/sdk/dev/
+        url: /docs/sdk/dev/spryker-sdk.html

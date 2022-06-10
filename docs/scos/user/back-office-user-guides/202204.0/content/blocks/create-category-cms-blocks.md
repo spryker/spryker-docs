@@ -52,7 +52,7 @@ This topic describes how to create category CMS blocks in the Back Office.
 
 ## Reference information: Add content to the placeholders of a CMS block
 
-
+{% include scos/user/back-office-user-guides/content/blocks/reference-information-add-content-to-the-placeholders-of-a-cms-block.md %} <!-- To edit, see /_includes/checking-the-status-of-ecs-services-and-tasks.md -->
 
 
 ## Next steps

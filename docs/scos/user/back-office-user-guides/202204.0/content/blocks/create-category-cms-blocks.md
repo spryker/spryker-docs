@@ -12,13 +12,15 @@ This topic describes how to create category CMS blocks in the Back Office.
 
 ## Prerequisites
 
+* [Integrate category CMS blocks](/docs/scos/dev/technical-enhancement-integration-guides/integrate-category-cms-blocks.html)
+
 * [Create categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html)
 
-* [Create products]()
+* [Create abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html)
 
 * Review the [reference information](#reference-information-create-category-cms-blocks) before you start, or look up the necessary information as you go through the process.
 
-## Create a CMS block
+## Create a category CMS block
 
 1. Go to **Content&nbsp;<span aria-label="and then">></span> Blocks**.
 2. On the **Overview of CMS Blocks** page, click  **Create block**.
@@ -37,22 +39,26 @@ This topic describes how to create category CMS blocks in the Back Office.
 10. Optional: For **CONTENT**, add content to the block per placeholder per locale.
 11. Click **Save**.
     This refreshes the page with a success message displayed.
+12.     
 
 
 ## Reference information: Create category CMS blocks
 
-| ATTRIBUTE  | DESCRIPTION: REGULAR CMS BLOCK | DESCRIPTION: EMAIL CMS BLOCK |
+| ATTRIBUTE  | DESCRIPTION: REGULAR CMS BLOCK |
 | --- | --- | --- |
-| STORE RELATION |  Stores to display the block in. | This option does not affect email CMS blocks, so choose any. |
-| TEMPLATE | Defines the layout of the CMS Block. A developer can [create more templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template). | Defines the layout of the Email CMS Block. A developer can [create more templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template). |
-| NAME | You will use this name when [assigning the block to a slot in a page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#assigning-cms-blocks-to-slots). | The name should correspond to the name defined in the email template the block will be assigned to. |
-| VALID FROM and VALID TO | Dates that inclusively specify when the block is to be visible on the Storefront. | Irrelevant. |
-| PRODUCTS | Products to assign the block to. The block will be displayed on the products' details pages. | Irrelevant. |
+| STORE RELATION |  Stores to display the block in. |
+| TEMPLATE | Defines the layout of the CMS Block. A developer can [create more templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template). |
+| NAME | You will use this name when [assigning the block to a slot in a page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#assigning-cms-blocks-to-slots). |
+| VALID FROM and VALID TO | Dates that inclusively specify when the block is to be visible on the Storefront. |
+| CATEGORIES: TOP | The block will be displayed at the top of the pages of these categories. |
+| CATEGORIES: MIDDLE | The block will be displayed in the middle of the pages of these categories. |
+| CATEGORIES: BOTTOM | The block will be displayed at the bottom of the pages of these categories. |
+| PRODUCTS | Products to display in the block. |
 
 
 ## Reference information: Add content to the placeholders of a CMS block
 
-{% include scos/user/back-office-user-guides/content/blocks/reference-information-add-content-to-the-placeholders-of-a-cms-block.md %} <!-- To edit, see /_includes/checking-the-status-of-ecs-services-and-tasks.md -->
+{% include scos/user/back-office-user-guides/content/blocks/reference-information-add-content-to-the-placeholders-of-a-cms-block.md %} <!-- To edit, see /_includes/scos/user/back-office-user-guides/content/blocks/reference-information-add-content-to-the-placeholders-of-a-cms-block.md -->
 
 
 ## Next steps

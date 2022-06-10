@@ -1,6 +1,6 @@
 ---
-title: Integrating product CMS blocks
-description: The guide describes the process of installing the Product CMS Block into your project.
+title: Integrate product CMS blocks
+description: Learn how to integrate product CMS blocks into a Spryker project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/enabling-the-product-cms-block
@@ -24,9 +24,9 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblockgui.html
 ---
 
-Product CMS blocks are embedded in the product template, and you can specify the exact product pages to show the block on.
+Product blocks are CMS blocks that are embedded in the product template and rendered on product details pages of selected products.
 
-To integrate product CMS block, follow the steps:
+To integrate product blocks, follow the steps:
 
 1. Install the CMS Block Product Connector module using Composer: 
 
@@ -86,7 +86,7 @@ class CmsBlockDependencyProvider extends SprykerCmsBlockDependencyProvider
 }
 ```
 
-4. Optional: To show which product abstracts are assigned to a block on a block view page, register the product list plugin by adding `CmsBlockProductAbstractListViewPlugin` to the CMS Block GUI dependency provider:
+4. Optional: To show which product abstracts are assigned to a block on a **View CMS Block** page, register the product list plugin by adding `CmsBlockProductAbstractListViewPlugin` to the CMS Block GUI dependency provider:
 
 **src/Pyz/Zed/CmsBlockGui/CmsBlockGuiDependencyProvider.php**
 
@@ -113,7 +113,7 @@ class CmsBlockGuiDependencyProvider extends SprykerCmsBlockGuiDependencyProvider
 
 ```
 
-5. Optional: To show which blocks are assigned to a product on a product abstract view page, register the block list to the product abstract view by adding `CmsBlockProductAbstractBlockListViewPlugin` to the Product Management dependency provider:
+5. Optional: To show which blocks are assigned to a product on a product abstract view page, add `CmsBlockProductAbstractBlockListViewPlugin` to the Product Management dependency provider:
 
 **src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
 

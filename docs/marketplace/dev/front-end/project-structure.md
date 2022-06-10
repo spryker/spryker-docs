@@ -2,6 +2,9 @@
 title: Project structure
 description: This document provides details about the structure of the frontend project in the Spryker Marketplace.
 template: concept-topic-template
+related:
+  - title: Building the project
+    link: docs/marketplace/dev/front-end/building-the-project.html
 ---
 
 This document explains the structure of the frontend project in the Spryker Marketplace.

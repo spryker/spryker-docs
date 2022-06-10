@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-discount.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-discount.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-discount.html
+  - /module_migration_guides/mg-discount.htm
 ---
 
 ## Upgrading from version 7.* to version 9.0.0

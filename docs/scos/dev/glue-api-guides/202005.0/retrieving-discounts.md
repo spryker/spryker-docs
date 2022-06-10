@@ -7,6 +7,7 @@ originalArticleId: 1afa9ae5-e357-4616-bd9b-8667501ea502
 redirect_from:
   - /v5/docs/retrieving-discounts
   - /v5/docs/en/retrieving-discounts
+  - /docs/scos/dev/glue-api-guides/202005.0/discounts-and-promotions/retrieving-discounts.html
 related:
   - title: Promotions & Discounts feature overview
     link: docs/scos/user/features/page.version/promotions-discounts-feature-overview.html

@@ -1,6 +1,6 @@
 ---
-title: HowTo - Email invoices using BCC
-description: This article provides detailed instructions on emailing invoices using BCC.
+title: "HowTo: Email invoices using BCC"
+description: This document provides detailed instructions on emailing invoices using BCC.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-emailing-invoices-using-bcc
@@ -19,7 +19,7 @@ Every time you generate an [invoice for your customer’s orders](/docs/scos/use
 
 {% info_block infoBox "Info" %}
 
-Currently, BCC is the only way to keep invoices for your reference, as for now, the generated invoices are not saved in the Back Office or on the Storefront.
+BCC is the only way to keep invoices for your reference because for now, the generated invoices are not saved in the Back Office or on the Storefront.
 
 {% endinfo_block %}
 
@@ -42,14 +42,13 @@ namespace Pyz\Zed\SalesInvoice;
 
 When configured, this method sends a hidden copy of each invoice to the specified email address.
 
-You can also force sending the additional copies of all generated invoices to customer’s email and to the email addresses specified in the `getOrderInvoiceBCC()` method. To achieve this, run the command:
+You can also force sending the additional copies of all generated invoices to customer’s email and to the email addresses specified in the `getOrderInoiceBCC()` method:
 
 ```bash
 console order:invoice --force
 ```
 
-If you want to send the additional copies for not all, but for specific orders only, specify the order ID after the `force` flag. For example, if you want to receive an additional copy of the invoice for order 1, your command will look like this:
-
+To send the additional copies for not all, but for specific orders only, specify the order ID after the `force` flag. For example, if you want to receive an additional copy of the invoice for order 1, use this command:
 ```bash
 console order:invoice --force 1
 ```

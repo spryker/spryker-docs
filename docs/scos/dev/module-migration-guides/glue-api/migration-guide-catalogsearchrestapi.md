@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/glue-api/catalogsearchrestapi-migration-guide.html
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/catalogsearchrestapi-migration-guide.html
   - /docs/scos/dev/module-migration-guides/glue-api/catalogsearchrestapi-migration-guide.html
+  - /module_migration_guides/about-migration/glue_api/catalogsearchrestapi-migration-guide.htm
 ---
 
 ## Upgrading from version 1.* to version 2.*

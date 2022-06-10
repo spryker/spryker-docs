@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productbundle.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productbundle.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productbundle.html
+  - /module_migration_guides/mg-product-bundle.htm
 related:
   - title: Migration guide - Price
     link: docs/scos/dev/module-migration-guides/migration-guide-price.html

@@ -10,7 +10,6 @@ redirect_from:
   - /2021080/docs/en/adyen-integration
   - /docs/adyen-integration
   - /docs/en/adyen-integration
-  - /docs/scos/user/technology-partners/202108.0/payment-partners/adyen/adyen-integration-into-a-project.html
 related:
   - title: Installing and configuring Adyen
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/installing-and-configuring-adyen.html
@@ -93,7 +92,7 @@ $config[OmsConstants::PROCESS_LOCATION] = [
     ...
     APPLICATION_ROOT_DIR . '/vendor/spryker-eco/adyen/config/Zed/Oms', // Is not required after State machine are copied to project level.
 ];
-  
+
 $config[OmsConstants::ACTIVE_PROCESSES] = [
     ...
     'AdyenCreditCard01',
@@ -129,14 +128,14 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Zed\Oms;
- 
+
 ...
 use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Command\AuthorizePlugin;
 use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Command\CancelPlugin;
@@ -155,7 +154,7 @@ use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Condition\IsRefundedPlugin;
 use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Condition\IsRefundFailedPlugin;
 use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Condition\IsRefundReceivedPlugin;
 use SprykerEco\Zed\Adyen\Communication\Plugin\Oms\Condition\IsRefusedPlugin;
- 
+
 class OmsDependencyProvider extends SprykerOmsDependencyProvider
 {
     ...
@@ -170,10 +169,10 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
         $container = parent::provideBusinessLayerDependencies($container);
         $container = $this->extendCommandPlugins($container);
         $container = $this->extendConditionPlugins($container);
- 
+
         return $container;
     }
- 
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -188,13 +187,13 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
             $commandCollection->add(new CapturePlugin(), 'Adyen/Capture');
             $commandCollection->add(new RefundPlugin(), 'Adyen/Refund');
             $commandCollection->add(new CancelOrRefundPlugin(), 'Adyen/CancelOrRefund');
- 
+
             return $commandCollection;
         });
- 
+
         return $container;
     }
- 
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -216,10 +215,10 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
             $conditionCollection->add(new IsRefundFailedPlugin(), 'Adyen/IsRefundFailed');
             $conditionCollection->add(new IsRefundReceivedPlugin(), 'Adyen/IsRefundReceived');
             $conditionCollection->add(new IsRefusedPlugin(), 'Adyen/IsRefused');
- 
+
             return $conditionCollection;
         });
- 
+
         return $container;
     }
 }
@@ -235,13 +234,13 @@ Add the router:
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\Router;
- 
+
 use Spryker\Yves\Router\RouterDependencyProvider as SprykerRouterDependencyProvider;
 use SprykerShop\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin;
 use SprykerEco\Yves\Adyen\Plugin\Router\AdyenRouteProviderPlugin;
- 
+
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
     /**
@@ -253,7 +252,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
             ...
             new AdyenRouteProviderPlugin(),
         ];
-        
+
         ...
     }
 }
@@ -275,22 +274,22 @@ If you provide the Credit Card payment method, you have to overwrite `CheckoutPa
 
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Zed\Checkout;
- 
+
 ...
 use SprykerEco\Zed\Adyen\Communication\Plugin\Checkout\AdyenDoSaveOrderPlugin;
 use SprykerEco\Zed\Adyen\Communication\Plugin\Checkout\AdyenPostSaveHookPlugin;
- 
+
 class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 {
     ...
- 
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -303,10 +302,10 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
             ...
             new AdyenDoSaveOrderPlugin(),
         ];
- 
+
         return $plugins;
     }
- 
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -330,14 +329,14 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 ```php
 <?php
- 
+
 /**
  * This file is part of the Spryker Suite.
  * For full license information, please view the LICENSE file that was distributed with this source code.
  */
- 
+
 namespace Pyz\Yves\CheckoutPage;
- 
+
 ...
 use Spryker\Yves\StepEngine\Dependency\Plugin\Form\SubFormPluginCollection;
 use SprykerEco\Shared\Adyen\AdyenConfig;
@@ -352,7 +351,7 @@ use SprykerEco\Yves\Adyen\Plugin\StepEngine\AdyenPayPalSubFormPlugin;
 use SprykerEco\Yves\Adyen\Plugin\StepEngine\AdyenAliPaySubFormPlugin;
 use SprykerEco\Yves\Adyen\Plugin\StepEngine\AdyenWeChatPaySubFormPlugin;
 ...
- 
+
 class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyProvider
 {
     /**
@@ -365,12 +364,12 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
         $container = parent::provideDependencies($container);
         $container = $this->extendPaymentMethodHandler($container);
         $container = $this->extendSubFormPluginCollection($container);
- 
+
         return $container;
     }
- 
+
     ...
- 
+
     /**
      * @param \Spryker\Yves\Kernel\Container $container
      *
@@ -388,13 +387,13 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
             $stepHandlerPluginCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_PAY_PAL);
             $stepHandlerPluginCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_ALI_PAY);
             $stepHandlerPluginCollection->add(new AdyenPaymentHandlerPlugin(), AdyenConfig::ADYEN_WE_CHAT_PAY);
- 
+
             return $stepHandlerPluginCollection;
         });
- 
+
         return $container;
     }
- 
+
     /**
      * @param \Spryker\Yves\Kernel\Container $container
      *
@@ -412,10 +411,10 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
             $subFormPluginCollection->add(new AdyenPayPalSubFormPlugin());
             $subFormPluginCollection->add(new AdyenAliPaySubFormPlugin());
             $subFormPluginCollection->add(new AdyenWeChatPaySubFormPlugin());
- 
+
             return $subFormPluginCollection;
         });
- 
+
         return $container;
     }
 }
@@ -491,7 +490,7 @@ Add the form templates of the desired payment methods to customForms:
 {% raw %}{%{% endraw %} embed molecule('form') with {
     ...
     data: {
-       ... 
+       ...
        submit: {
            ...
            class: '... js-payment-form__submit',

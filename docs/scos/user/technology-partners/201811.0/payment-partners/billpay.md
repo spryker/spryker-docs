@@ -8,6 +8,7 @@ originalArticleId: 9caced27-69ec-419e-bd5b-2893bb59622c
 redirect_from:
   - /v1/docs/billpay
   - /v1/docs/en/billpay
+  - /docs/scos/user/technology-partners/201811.0/payment-partners/billpay/billpay.html
 ---
 
 ## Partner Information

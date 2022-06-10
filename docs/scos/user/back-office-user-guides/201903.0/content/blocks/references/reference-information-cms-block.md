@@ -9,6 +9,7 @@ redirect_from:
   - /v2/docs/cms-block-reference-information
   - /v2/docs/en/cms-block-reference-information
   - /docs/scos/user/back-office-user-guides/201903.0/content/blocks/references/cms-block-reference-information.html
+  - /docs/scos/user/back-office-user-guides/201903.0/content-management/blocks/references/cms-block-reference-information.html
 ---
 
 This topic contains the reference information you need to know when working with CMS Blocks in the **Content Management** > **Blocks** section.

@@ -7,6 +7,7 @@ originalArticleId: 1428f917-f2a8-4c8a-9898-4b4641dbaa43
 redirect_from:
   - /v5/docs/creating-service-offerings
   - /v5/docs/en/creating-service-offerings
+  - /docs/scos/user/back-office-user-guides/202005.0/catalog/products/creating-service-offerings.html
 ---
 
 This article describes how you can create products that can or have to include service assistance.
@@ -91,7 +92,7 @@ If you don’t want to display the Service products in the Storefront so buyers 
 
 {% endinfo_block %}
 
-2. Create a [Configurable Bundle Template](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html-feature-overview#configurable-bundle-template) with two [slots](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html-feature-overview#configurable-bundle-slots) - one for the physical products, and one for the service:
+2. Create a [Configurable Bundle Template](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html#configurable-bundle-template) with two [slots](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html#configurable-bundle-slots) - one for the physical products, and one for the service:
     1. Go to **Merchandising > Configurable Bundle Templates** section and click Create New Template in the top right corner.
     2. On the **Template details** page, enter the name of your bundle template in the **Name** field for the corresponding locale.
     3. Click **Save**. A new tab Slots will appear on the same page.

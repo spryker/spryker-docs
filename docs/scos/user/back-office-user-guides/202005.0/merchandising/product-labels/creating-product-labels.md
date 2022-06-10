@@ -8,6 +8,7 @@ originalArticleId: 6a39cd91-ab8d-4a3c-96fa-c32b199fee6f
 redirect_from:
   - /v5/docs/creating-a-product-label
   - /v5/docs/en/creating-a-product-label
+  - /docs/scos/user/back-office-user-guides/202005.0/merchandising/product-labels/creating-a-product-label.html
 related:
   - title: Product Labels feature overview
     link: docs/scos/user/features/page.version/product-labels-feature-overview.html

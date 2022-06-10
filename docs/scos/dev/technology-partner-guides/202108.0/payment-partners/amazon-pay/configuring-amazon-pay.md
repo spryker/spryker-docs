@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/amazon-pay-configuration-scos
   - /docs/amazon-pay-configuration-scos
   - /docs/en/amazon-pay-configuration-scos
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-configuration-for-the-legacy-demoshop.html
   - /docs/scos/user/technology-partners/202108.0/payment-partners/amazon-pay/scos-integration/amazon-pay-configuration-for-the-scos.html
   - /docs/scos/user/technology-partners/202108.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-support-of-bundled-products.html
 related:

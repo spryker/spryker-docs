@@ -8,6 +8,7 @@ originalArticleId: 627eedca-22b4-4d9c-8c86-0e7dc567df43
 redirect_from:
   - /v3/docs/econda-frontend-integration
   - /v3/docs/en/econda-frontend-integration
+  - /docs/scos/dev/technology-partner-guides/201811.0/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-front-end.html
   - /docs/scos/user/technology-partners/201811.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-frontend-integration.html
 related:
   - title: Econda
@@ -21,8 +22,10 @@ related:
 ---
 
 {% info_block infoBox "Info" %}
-Check [this article](/docs/scos/user/intro-to-spryker/master-suite.html
-{% endinfo_block %} to learn about Spryker Commerce OS (SCOS).)
+
+Check [this article](/docs/scos/user/intro-to-spryker/master-suite.html) to learn about Spryker Commerce OS (SCOS).
+
+{% endinfo_block %}
 
 ## Include Econda Libraries and Scripts for Tracking and Cross-sell
 Econda scripts are recommended to be connected at all the shop pages. To implement that:

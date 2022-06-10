@@ -11,6 +11,7 @@ redirect_from:
   - /docs/enabling-the-product-cms-block
   - /docs/en/enabling-the-product-cms-block
   - /docs/scos/dev/technical-enhancements/enabling-the-product-cms-block.html
+  - /docs/scos/dev/technical-enhancement-integration-guides/integrating-product-cms-blocks.html
 related:
   - title: CMS Block
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
@@ -113,7 +114,7 @@ class CmsBlockGuiDependencyProvider extends SprykerCmsBlockGuiDependencyProvider
 
 ```
 
-5. Optional: To show which blocks are assigned to a product on a product abstract view page, add `CmsBlockProductAbstractBlockListViewPlugin` to the Product Management dependency provider:
+5. Optional: To show which blocks are assigned to a product on a **View Product Abstract** page, add `CmsBlockProductAbstractBlockListViewPlugin` to the Product Management dependency provider:
 
 **src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
 
@@ -139,3 +140,13 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 }
 
 ```
+
+6. To show product CMS blocks on product details pages, add the following to the pages' template:
+
+```twig
+{% raw %}{%{% endraw %} if data.idProductAbstract is defined {% raw %}%}{% endraw %}
+	{% raw %}{{{% endraw %} spyCmsBlock({ product: data.idProductAbstract}) {% raw %}}}{% endraw %}
+{% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
+```
+
+Now you can create product CMS blocks and add them to product pages. For instructions, see [Create product CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/create-product-cms-blocks.html).

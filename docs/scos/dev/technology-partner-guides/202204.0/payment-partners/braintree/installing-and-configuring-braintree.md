@@ -197,22 +197,18 @@ Default implementation for the checkout payment plugins should be added to `Pyz/
 ```php
 protected function getCheckoutPreConditions(Container $container)
 {
-    $plugins = [
+    return [
         ...
         new BraintreeCheckoutPreConditionPlugin(),
     ];
-
-    return $plugins;
 }
 
 protected function getCheckoutOrderSavers(Container $container)
 {
-    $plugins = [
+    return [
         ...
         new BraintreeCheckoutDoSaveOrderPlugin(),
     ];
-
-    return $plugins;
 }
 
 protected function getCheckoutPostHooks(Container $container)

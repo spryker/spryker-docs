@@ -25,7 +25,7 @@ This doc describes how to add delivery methods in the Back Office.
 
 * [Create a tax set](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/create-tax-sets.html).
 * [Add a carrier company](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/add-carrier-companies.html).
-* Review the [reference information](#reference-information-create-add-delivery-methods) before you start, or look up the necessary information as you go through the process.
+* Review the [reference information](#reference-information-add-delivery-methods) before you start, or look up the necessary information as you go through the process.
 
 ## Add a delivery method
 
@@ -52,7 +52,7 @@ This doc describes how to add delivery methods in the Back Office.
 | --- | --- |
 | DELIVERY METHOD KEY | Unique identifier of the delivery method. |
 | NAME | Name of the delivery method to be displayed on the Storefront. |
-| CARRIER | Carrier company that will be handling the delivery of this method. To add one, see [Add carrier companies](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/addd-carrier-companies.html). |
+| CARRIER | Carrier company that will be handling the delivery of this method. To add one, see [Add carrier companies](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/add-carrier-companies.html). |
 | AVAILABILITY PLUGIN | Plugin that checks if the delivery method is available for the customer. A developer can create plugins. |
 |  PRICE PLUGIN | Plugin that calculates the price of delivery. If you select a price  plugin, it will override the prices specified in the **Price & Tax** tab. A developer can create plugins. |
 | DELIVERY TIME PLUGIN | Plugins that calculates estimated delivery time. A developer can create plugins. |

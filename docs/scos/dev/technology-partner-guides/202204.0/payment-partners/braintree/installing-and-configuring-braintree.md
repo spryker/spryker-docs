@@ -195,11 +195,21 @@ All commands and conditions are located in `SprykerEco\Zed\Braintree\Communicati
 Default implementation for the checkout payment plugins should be added to `Pyz/Zed/Checkout/CheckoutDependencyProvider.php`.
 
 ```php
+protected function getCheckoutPreConditions(Container $container)
+{
+    $plugins = [
+        ...
+        new BraintreeCheckoutPreConditionPlugin(),
+    ];
+
+    return $plugins;
+}
+
 protected function getCheckoutOrderSavers(Container $container)
 {
     $plugins = [
         ...
-        new BraintreeSaveOrderPlugin(),
+        new BraintreeCheckoutDoSaveOrderPlugin(),
     ];
 
     return $plugins;
@@ -209,7 +219,7 @@ protected function getCheckoutPostHooks(Container $container)
 {
     return [
         ...
-        new BraintreePostSavePlugin(),
+        new BraintreeCheckoutPostSavePlugin(),
     ];
 }
 ```

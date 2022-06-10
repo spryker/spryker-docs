@@ -4106,7 +4106,7 @@ entries:
     - title: Cache of unresolved entities for Zed
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-cache-of-unresolved-entities-for-zed.html
     - title: Category CMS blocks
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-category-cms-blocks.html
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-category-cms-blocks.html
     - title: Chromium browser for tests
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-chromium-browser-for-tests.html
     - title: CMS block widgets
@@ -4132,7 +4132,7 @@ entries:
     - title: Multi-queue publish structure
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-multi-queue-publish-structure.html
     - title: Product CMS blocks
-      url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-product-cms-blocks.html
+      url: /docs/scos/dev/technical-enhancement-integration-guides/integrate-product-cms-blocks.html
     - title: Propel clean command
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-propel-clean-command.html
     - title: Queue worker signal handling

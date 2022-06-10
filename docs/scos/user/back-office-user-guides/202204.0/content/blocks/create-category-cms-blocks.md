@@ -12,11 +12,11 @@ This topic describes how to create category CMS blocks in the Back Office.
 
 ## Prerequisites
 
-* [Integrate category CMS blocks](/docs/scos/dev/technical-enhancement-integration-guides/integrate-category-cms-blocks.html)
+* [Integrate category CMS blocks](/docs/scos/dev/technical-enhancement-integration-guides/integrate-category-cms-blocks.html).
 
-* [Create categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html)
+* Create the categories whose pages you want to show the block on. For instructions, see [Create categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html).
 
-* [Create abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html)
+* Create the abstract products you want to show in the block. For instructions, see [Create abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html).
 
 * Review the [reference information](#reference-information-create-category-cms-blocks) before you start, or look up the necessary information as you go through the process.
 
@@ -25,8 +25,8 @@ This topic describes how to create category CMS blocks in the Back Office.
 1. Go to **Content&nbsp;<span aria-label="and then">></span> Blocks**.
 2. On the **Overview of CMS Blocks** page, click  **Create block**.
     This opens the **Create new CMS Block** page.
-3. For **STORE RELATION**, select the stores you want to the CMS block to be displayed in.
-4. Select a **TEMPLATE**.
+3. For **STORE RELATION**, select the stores you want the CMS block to be displayed in.
+4. For **TEMPLATE**, select **Category Block**.
 5. Enter a **NAME**.
 6. Optional: Select a **VALID FROM** date.
 7. Optional: Select a **VALID TO** date.  
@@ -38,9 +38,7 @@ This topic describes how to create category CMS blocks in the Back Office.
     This opens the **Edit CMS Block Glossary** page with a success message displayed.
 10. Optional: For **CONTENT**, add content to the block per placeholder per locale.
 11. Click **Save**.
-    This refreshes the page with a success message displayed.
-12.     
-
+    This opens the **Edit Block Glossary** page with a success message displayed.
 
 ## Reference information: Create category CMS blocks
 

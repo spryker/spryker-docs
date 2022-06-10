@@ -12,7 +12,11 @@ This topic describes how to create category CMS blocks in the Back Office.
 
 ## Prerequisites
 
-Review the [reference information](#reference-information-create-category-cms-blocks) before you start, or look up the necessary information as you go through the process.
+* [Create categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html)
+
+* [Create products]()
+
+* Review the [reference information](#reference-information-create-category-cms-blocks) before you start, or look up the necessary information as you go through the process.
 
 ## Create a CMS block
 
@@ -27,8 +31,8 @@ Review the [reference information](#reference-information-create-category-cms-bl
 8. Optional: For **CATEGORIES: TOP**, enter and select one or more categories.
 9. Optional: For **CATEGORIES: MIDDLE**, enter and select one or more categories.
 10. Optional: For **CATEGORIES: BOTTOM**, enter and select one or more categories.
-8. Enter and select **PRODUCTS**.
-9. Click **Save**.
+11. Optional: Enter and select one or more **PRODUCTS**.
+12. Click **Save**.
     This opens the **Edit CMS Block Glossary** page with a success message displayed.
 10. Optional: For **CONTENT**, add content to the block per placeholder per locale.
 11. Click **Save**.
@@ -39,7 +43,7 @@ Review the [reference information](#reference-information-create-category-cms-bl
 
 | ATTRIBUTE  | DESCRIPTION: REGULAR CMS BLOCK | DESCRIPTION: EMAIL CMS BLOCK |
 | --- | --- | --- |
-| STORE RELATION |  Stores to displayed the block in. | This option does not affect email CMS blocks, so choose any. |
+| STORE RELATION |  Stores to display the block in. | This option does not affect email CMS blocks, so choose any. |
 | TEMPLATE | Defines the layout of the CMS Block. A developer can [create more templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template). | Defines the layout of the Email CMS Block. A developer can [create more templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template). |
 | NAME | You will use this name when [assigning the block to a slot in a page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#assigning-cms-blocks-to-slots). | The name should correspond to the name defined in the email template the block will be assigned to. |
 | VALID FROM and VALID TO | Dates that inclusively specify when the block is to be visible on the Storefront. | Irrelevant. |

@@ -167,7 +167,7 @@ entries:
           - title: Combined Product Offer Import feature integration
             url: /docs/marketplace/dev/feature-integration-guides/combined-product-offer-import-feature-integration.html
 
-          - title: Marketplace Dummy Payment integration
+          - title: Marketplace Dummy Payment feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-dummy-payment-feature-integration.html
 
           - title: Marketplace Inventory Management feature integration
@@ -217,11 +217,11 @@ entries:
           
           - title: Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
-            include_versions:
-            - "202204.0"
 
           - title: Marketplace Order Management + Order Threshold feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-order-threshold-feature-integration.html
+            include_versions:
+            - "202204.0"
 
           - title: Marketplace Product Approval Process feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-approval-process-feature-integration.html
@@ -306,7 +306,7 @@ entries:
           - title: Merchant Portal - Marketplace Product feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-feature-integration.html
 
-          - title: Merchant Portal - Marketplace Product Option Management integration
+          - title: Merchant Portal - Marketplace Product Option Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-option-management-integration.html
 
           - title: Merchant Portal - Marketplace Merchant Portal Product Offer Management feature integration

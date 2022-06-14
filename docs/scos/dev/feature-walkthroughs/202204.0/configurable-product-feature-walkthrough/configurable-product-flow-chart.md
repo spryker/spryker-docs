@@ -141,7 +141,7 @@ When configuration starts on Yves, from the **Cart** page, the product configura
 
 ### Phase 2
 
-1. The customer clicks the configuration button,
+1. The customer clicks the configuration button.
 2. The form request is redirected to the gateway page with a given product configuration using the `GET` method.
 
 ### Phase 3

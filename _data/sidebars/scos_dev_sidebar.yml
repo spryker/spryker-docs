@@ -550,7 +550,7 @@ entries:
       - "202108.0"
       - "202204.0"
       nested:
-      - title: Configurable Product flow chart
+      - title: Configuration process flow of Configurable Product
         url: /docs/scos/dev/feature-walkthroughs/configurable-product-feature-walkthrough/configurable-product-flow-chart.html
         include_versions:
         - "202204.0"

@@ -551,7 +551,7 @@ entries:
       - "202204.0"
       nested:
       - title: Configuration process flow of Configurable Product
-        url: /docs/scos/dev/feature-walkthroughs/configurable-product-feature-walkthrough/configurable-product-flow-chart.html
+        url: /docs/scos/dev/feature-walkthroughs/configurable-product-feature-walkthrough/configuration-process-flow-of-configurable-product.html
         include_versions:
         - "202204.0"
     - title: Checkout

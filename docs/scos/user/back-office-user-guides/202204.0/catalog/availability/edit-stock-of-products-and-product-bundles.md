@@ -50,16 +50,16 @@ Please note that you are updating the product variant availability, not the bund
 {% endinfo_block %}
 
 
-### Reference information: Edit stock of products and product bundles
+## Reference information: Edit stock of products and product bundles
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | STOCK TYPE | Name of the warehouse the stock is located in. |
-| QUANTITY | Number of products available in stock per warehouse. |
-| NEVER OUT OF STOCK | Defines if the product is available regardless of its stock per warehouse. Meaning even if the quantity is set to 0, the product will still be available. This option is usually used for digital items, like Gift Cards, for example.|
-| Available in stores | This value is auto-populated according to your store setup and is not modifiable in UI. This just identifies for which store you define the product availability value. |
+| QUANTITY | Number of products in stock per warehouse. When you edit stock of a product variant belonging to a product bundle, the bundle's availability is calculated dynamically. For an example, see [Reference information: Availability calculation of product bundles](#reference-information-availability-calculation-of-product-bundles). |
+| NEVER OUT OF STOCK | Defines if the product is available regardless of its stock per warehouse. Even if **QUANTITY** is 0, customers can still order the product. This is usually useful for digital items like gift cards. Setting this option for a real product may cause overbooking. |
+| Available in stores | Show the stores which the stock is available in. |
 
-#### <a name="availability-calculation-example"></a>Availability calculation example
+### Reference information: Availability calculation of product bundles
 
 A good example of availability calculation is a product bundle.
 Let's say you have two products: a Smartphone and three Glass Screen Protectors for it. They are presented in the store as separate items but also included in a bundle.

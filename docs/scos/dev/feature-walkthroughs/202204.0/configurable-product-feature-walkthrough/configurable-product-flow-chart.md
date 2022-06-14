@@ -181,7 +181,7 @@ Redirects the customer to the configurator page using the GET request.
 ### Phase 6
 
 * After the successful configuration, the customer is redirected to the configurator gateway with a configuration response.
-* The gateway URL does not equal to the back URL; it’s a fixed known URL.
+* The gateway URL is not the same as the back URL; it’s a fixed known URL.
 
 ### Phase 7
 

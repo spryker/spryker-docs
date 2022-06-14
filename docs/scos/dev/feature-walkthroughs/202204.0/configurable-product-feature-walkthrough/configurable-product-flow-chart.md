@@ -128,7 +128,7 @@ When configuration starts on Yves, from the **Cart** page, the product configura
 
 | PARAMETER                                      | VALUE | COMMENT |
 |------------------------------------------------|---|---|
-| `ProductConfigurationInstance.displayData`     | Some text of JSON blob—fore example, `["color"=>"red", "weight"=> 100]` |   |
+| `ProductConfigurationInstance.displayData`     | Some text of JSON blob—for example, `["color"=>"red", "weight"=> 100]` |   |
 | `ProductConfigurationInstance.configuration`   |  `["color"=>"red", "weight"=> 100]` | Sensitive data. |
 | `ProductConfigurationInstance.configuratorKey` | `dateTime` |   |
 | `ProductConfigurationInstance.isComplete`      | `true` or `false` | Sensitive data. |

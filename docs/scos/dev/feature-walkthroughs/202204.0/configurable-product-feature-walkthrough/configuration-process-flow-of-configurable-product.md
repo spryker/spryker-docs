@@ -5,7 +5,6 @@ description: This document describes the flow chart that demonstrates the config
 template: concept-topic-template
 ---
 
-This document describes the flow chart that demonstrates the configuration process of the configurable product.
 
 The configuration process of a configurable product consists of eight phases illustrated in the following flow chart:
 

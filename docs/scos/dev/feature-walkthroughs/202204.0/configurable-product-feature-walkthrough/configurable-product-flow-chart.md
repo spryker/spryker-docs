@@ -1,5 +1,5 @@
 ---
-title: Configurable Product flow chart
+title: Configuration process flow of configurable products
 last_updated: Jun 2, 2022
 description:
 template: concept-topic-template

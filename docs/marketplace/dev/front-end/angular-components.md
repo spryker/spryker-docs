@@ -2,6 +2,11 @@
 title: Angular Components
 description: This document provides details about the Angular Components, and how to create and use them.
 template: concept-topic-template
+related:
+  - title: Angular Services
+    link: docs/marketplace/dev/front-end/angular-services.html
+  - title: Web Components
+    link: docs/marketplace/dev/front-end/web-components.html
 ---
 
 This document describes what Angular Components are, how to create and use them.

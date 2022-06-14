@@ -2,6 +2,11 @@
 title: Main merchant concept
 description: This document contains concept information for the main merchant in the Spryker Commerce OS.
 template: concept-topic-template
+related:
+  - title: Managing main merchant orders
+    link: docs/marketplace/user/back-office-user-guides/page.version/sales/managing-main-merchant-orders.html
+  - title: Managing main merchant returns
+    link: docs/marketplace/user/back-office-user-guides/page.version/sales/managing-main-merchant-returns.html
 ---
 
 The Spryker Marketplace platform offers sales opportunities to everyone. To help support the [Enterprise Marketplace](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-concept.html) model, not only the 3rd party merchants but also the company owner of the Marketplace store can sell their products and offers online. We call this company the *main merchant*.
@@ -15,6 +20,7 @@ Being both a [marketplace operator](/docs/marketplace/user/intro-to-spryker-mark
 ## Main merchant state machine
 
 To manage merchant orders of the main merchant, the *main merchant state machine* exists. Out of the box, the main merchant state machine provides the following states:
+
 - Created
 - New
 - Canceled

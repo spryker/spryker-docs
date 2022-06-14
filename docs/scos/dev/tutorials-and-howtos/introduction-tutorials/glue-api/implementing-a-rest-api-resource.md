@@ -265,7 +265,7 @@ For information about how to define the objects and syntax, see [How to create t
 
 {% endinfo_block %}
 
-In the example below, the `RestWishlistsAttributesTransfer` Transfer Object will have three string attributes automatically mapped from a POST request:
+In the following example, the `RestWishlistsAttributesTransfer` transfer object has three string attributes automatically mapped from a POST request:
 
 **wishlists_rest_api.transfer.xml**
 

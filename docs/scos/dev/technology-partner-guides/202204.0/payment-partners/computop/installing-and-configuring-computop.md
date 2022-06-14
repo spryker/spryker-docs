@@ -17,8 +17,8 @@ This topic describes how to integrate Computop into a Spryker project by install
 The [SprykerEco.Computop](https://github.com/spryker-eco/computop) bundle provides integration of the Computop industry partner with Spryker Commerce OS. It requires the [SprykerEco.ComputopApi](https://github.com/spryker-eco/computop-api) bundle that provides the REST Client for making API calls to the Computop Payment Provider.
 
 The `SprykerEco.Computop` module includes the integrations:
-* Checkout process - payment forms with all the necessary fields that are required to make payment requests, save order information and so on.
-* OMS (Order Management System) - state machines, all necessary commands for making modification requests and conditions for changing order statuses accordingly.
+* Checkout process—payment forms with all the necessary fields that are required to make payment requests, save order information and so on.
+* OMS (Order Management System)—state machines, all necessary commands for making modification requests and conditions for changing order statuses accordingly.
 
 
 The `SprykerEco.Computop` module provides the following payment methods:
@@ -41,7 +41,7 @@ Install the Computop module:
 composer require spryker-eco/computop
 ```
 
-To use PayPal Express, you also need to install the Computop Shipment module:
+To use PayPal Express, also install the Computop Shipment module:
 
 ```bash
 composer require spryker-eco/computop-shipment
@@ -51,7 +51,7 @@ composer require spryker-eco/computop-shipment
 
 You can check all the necessary configurations in `vendor/spryker-eco/computop/config/config.dist.php`.
 
-Find an example of the Computop module configuration below:
+The following example shows the Computop module configuration:
 
 <details open>
 <summary>config/Shared/config_default.php</summary>
@@ -157,7 +157,7 @@ $config[ComputopShipmentConstants::PAYPAL_EXPRESS_DEFAULT_SHIPMENT_METHOD_KEY] =
 
 </details>
 
-| Configuration Key | Type | Description |
+| CONFIGURATION KEY | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | `$config[ComputopApiConstants::MERCHANT_ID]` | string | Computop merchant identifier. |
 | `$config[ComputopApiConstants::BLOWFISH_PASSWORD]` | string | Password for Blowfish hashing. |

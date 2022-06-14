@@ -3679,8 +3679,8 @@ entries:
             url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
           - title: Expanding search data
             url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
-        - title: Transfering data between Yves and Zed
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transfering-data-between-yves-and-zed.html
+        - title: Transferring data between Yves and Zed
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transferring-data-between-yves-and-zed.html
         - title: Defining the Module Dependencies- Dependency Provider
           url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/defining-the-module-dependencies-dependency-provider.html
       - title: Creating an Order Management System - Spryker Commerce OS

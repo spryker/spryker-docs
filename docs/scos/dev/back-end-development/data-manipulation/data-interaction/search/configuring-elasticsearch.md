@@ -52,6 +52,17 @@ redirect_from:
   - /v2/docs/en/search-30
   - /v2/docs/search-40
   - /v2/docs/en/search-40
+related:
+  - title: Configuring search for multi-currency
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
+  - title: Configuring the search features
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html
+  - title: Configuring the search query
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html
+  - title: Expanding search data
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
+  - title: Facet filter overview and configuration
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
 ---
 
 Elasticsearch is a NoSQL data store that allows us to predefine the structure of the data we get to store in it.

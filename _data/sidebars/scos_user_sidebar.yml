@@ -1398,8 +1398,24 @@ entries:
             - "202009.0"
       - title: Availability
         nested:
+        - title: Check availability of products
+          url: /docs/scos/user/back-office-user-guides/catalog/availability/check-availability-of-products.html
+          include_versions:
+          - "202204.0"
+        - title: Edit stock of products and product bundles
+          url: /docs/scos/user/back-office-user-guides/catalog/availability/edit-stock-of-products-and-product-bundles.html
+          include_versions:
+          - "202204.0"              
         - title: Managing products availability
           url: /docs/scos/user/back-office-user-guides/catalog/availability/managing-products-availability.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: References
           include_versions:
           - "201811.0"

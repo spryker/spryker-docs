@@ -19,7 +19,7 @@ related:
     link: docs/scos/user/features/page.version/product-feature-overview/timed-product-availability-overview.html
 ---
 
-To check availability of a product in the Back Office, follow the steps:
+To check a product's availability in the Back Office, follow the steps:
 
 1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Availability**.
 2. Next to the product you want to view the availability of, click **View**.
@@ -37,3 +37,7 @@ To check availability of a product in the Back Office, follow the steps:
 | RESERVED PRODUCTS | Number of products that were ordered and are being processes. Customers cannot order reserved products. |
 | IS BUNDLE PRODUCT | Defines if the product for which availability is displayed is a product bundle. |
 | IS NEVER OUT OF STOCK | Defines if the stock of a product can run out. |
+
+## Next steps
+
+[Edit stock of products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/edit-stock-of-products-and-product-bundles.html).

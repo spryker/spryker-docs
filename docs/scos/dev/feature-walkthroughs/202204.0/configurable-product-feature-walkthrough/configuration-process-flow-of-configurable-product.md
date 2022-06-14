@@ -1,13 +1,11 @@
 ---
 title: Configuration process flow of configurable products
 last_updated: Jun 2, 2022
-description:
+description: This document describes the flow chart that demonstrates the configuration process of the configurable product.
 template: concept-topic-template
 ---
 
 This document describes the flow chart that demonstrates the configuration process of the configurable product.
-
-## Flow chart
 
 The configuration process of a configurable product consists of eight phases illustrated in the following flow chart:
 
@@ -83,7 +81,7 @@ The customer clicks the configuration button, and the request is redirected to t
 
 | PARAMETER | VALUE                                                                                                                                        | COMMENT |
 |---|----------------------------------------------------------------------------------------------------------------------------------------------|---|
-| `ProductConfigurationInstance.prices` | `{{"EUR":{"GROSS_MODE":{"DEFAULT":30000}},{"NET_MODE":{"DEFAULT": 25000}},"priceData":{"volume_prices":[{"quantity": 5,"net_price": 28500,"gross_price": 29000}]}}`                                                                                                        | Sensitive data. |
+| `ProductConfigurationInstance.prices` | `{% raw %}{{"EUR":{"GROSS_MODE":{"DEFAULT":30000}},{"NET_MODE":{"DEFAULT": 25000}},"priceData":{"volume_prices":[{"quantity": 5,"net_price": 28500,"gross_price": 29000}]}}{% endraw %}`                                                                                                        | Sensitive data. |
 | `ProductConfigurationInstance.isComplete` | `true`                                                                                                                                       | Sensitive data. |
 | `ProductConfigurationInstance.availableQuantity` | `2`                                                                                                                                          |   |
 | `ProductConfigurationInstance.displayData` | Some text of JSON blob—for example, `{"color"=>"red", "weight"=> 100}`                                                                       |   |
@@ -92,7 +90,7 @@ The customer clicks the configuration button, and the request is redirected to t
 | sourceType | SOURCE_TYPE_PDP, SOURCE_TYPE_CART, SOURCE_TYPE_WISHLIST_DETAIL, …                                                                            |   |
 | `SKU`  | `some_sku`                                                                                                                                   |   |
 | `timestamp` | `1231313123123`                                                                                                                              |   |
-| `CheckSum` | It’s an encrypted value of the `CheckSum`. It should be based on the all requested parameters and should have the same order for decryption. |   |
+| `CheckSum` | It’s an encrypted value of the `CheckSum`. It must be based on the all requested parameters and must have the same order for decryption. |   |
 
 ### Phase 6
 
@@ -173,7 +171,7 @@ Redirects the customer to the configurator page using the GET request.
 | `ProductConfigurationInstance.availableQuantity` | `2`                                                                    |   |
 | `ProductConfigurationInstance.displayData` | Some text of JSON blob—for example, `["color"=>"red", "weight"=> 100]` |   |
 | `ProductConfigurationInstance.configuration` | `"date"=>"23.07.2020", "time"=>"18:45" 4]`                             | Sensitive data. |
-| `ProductConfigurationInstance.timestamp` | `10312313135234`                                                       | Sensitive data, a certain configuration should be valid only a certain amount of the time given. |
+| `ProductConfigurationInstance.timestamp` | `10312313135234`                                                       | Sensitive data, a certain configuration must be valid only a certain amount of the time given. |
 | `sourceType` | `SOURCE_TYPE_PDP`, `SOURCE_TYPE_CART`, `SOURCE_TYPE_WISHLIST_DETAIL`, …                                        |   |
 | `SKU`  | `some_sku`                                                             |   |
 | itemGroupKey | `some_group_key`                                                         |   |

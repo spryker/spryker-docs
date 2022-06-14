@@ -104,7 +104,7 @@ The customer clicks the configuration button, and the request is redirected to t
 
 1. The gateway page receives data.
 2. The data is checked through the execution of the validator plugins stack for received data.
-  - If validation is not successful, the request is redirected to the `backUrl` without saving the of the configuration with a warning message.
+  - If validation is not successful, the request is redirected to the `backUrl` without saving the configuration. A warning message is displayed.
   - If the validation part is successful, the configuration is saved to the session.
 3. All applicable plugins that can handle the configurator response are executed. A plugin that applies to the PDP source type resolves the back URL according to the response data.
 

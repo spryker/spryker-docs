@@ -166,7 +166,7 @@ Redirects the customer to the configurator page using the GET request.
 
 | PARAMETER | VALUE                                                                  | COMMENT |
 |---|------------------------------------------------------------------------|---|
-| `ProductConfigurationInstance.prices` | `{"EUR":{"GROSS_MODE":{"DEFAULT":30000}},{"NET_MODE":{"DEFAULT": 25000}},"priceData":{"volume_prices":[{"quantity": 5,"net_price": 28500,"gross_price": 29000}]}}`                                                              | Sensitive data. |
+| `ProductConfigurationInstance.prices` | `{% raw %}{"EUR":{"GROSS_MODE":{"DEFAULT":30000}},{"NET_MODE":{"DEFAULT": 25000}},"priceData":{"volume_prices":[{"quantity": 5,"net_price": 28500,"gross_price": 29000}]}}{% endraw %}`                                                              | Sensitive data. |
 | `ProductConfigurationInstance.isComplete` | `1`                                                                    | Sensitive data. |
 | `ProductConfigurationInstance.availableQuantity` | `2`                                                                    |   |
 | `ProductConfigurationInstance.displayData` | Some text of JSON blob—for example, `["color"=>"red", "weight"=> 100]` |   |

@@ -1,6 +1,6 @@
 ---
 title: Integrating Computop
-last_updated: Jun 16, 2021
+last_updated: Jun 10, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/computop-integration-into-project
 originalArticleId: dee3b189-78b2-4dd2-ae97-45506831a9b8
@@ -29,9 +29,9 @@ To integrate Computop, do the following:
 
 ### OMS configuration
 
-To configure the OMS:
+To configure the OMS, do the following::
 
-{% info_block warningBox "Examplary content" %}
+{% info_block warningBox "Exemplary content" %}
 
 The state machines provided below are examples of PSP provider flow.
 
@@ -171,7 +171,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 
 ### Data import
 
-To display the payment methods on the Storefront, import them for each store:
+To display payment methods on the Storefront, import them for each store:
 
 **data/import/common/common/payment_method.csv**
 
@@ -238,9 +238,9 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 ### Checkout configuration
 
-To configure checkout:
+To configure checkout, do the following:
 
-1. Add Checkout plugins to `CheckoutDependencyProvider`:
+1. Add checkout plugins to `CheckoutDependencyProvider`:
 
 
 <details>
@@ -421,7 +421,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 } {% raw %}%}{% endraw %}
 ```
 
-4. Add payment filter plugin `ComputopCurrencyPaymentMethodFilterPlugin`:
+4. Add the payment filter plugin `ComputopCurrencyPaymentMethodFilterPlugin`:
 
 **src\Pyz\Zed\Payment\PaymentDependencyProvider.php**
 
@@ -442,7 +442,7 @@ use SprykerEco\Zed\Computop\Communication\Plugin\Payment\ComputopCurrencyPayment
 
 ### CheckoutStepEngine configuration
 
-Payment methods like CreditCard, PayNow, EasyCredit require adjustments in the `CheckoutStepEngine` flow. To adjust the flow:
+Payment methods like CreditCard, PayNow, EasyCredit require adjustments in the `CheckoutStepEngine` flow. To adjust the flow, do the following::
 
 1. To create Computop specific steps and replace placeOrder and Summary steps with the project-level ones, adjust `StepFactory`:
 
@@ -539,7 +539,8 @@ class StepFactory extends SprykerStepFactory
             $this->getConfig()->getEscapeRoute(),
             $this->getFlashMessenger(),
             $this->getCalculationClient(),
-            $this->getCheckoutPaymentStepEnterPreCheckPlugins()
+            $this->getCheckoutPaymentStepEnterPreCheckPlugins(),
+            $this->createPaymentMethodKeyExtractor(),
         );
     }
 
@@ -1045,7 +1046,7 @@ class PaymentStep extends SprykerShopPaymentStep
 ```
 </details>
 
-9. For PayPalExpress payment method only: adjust the `ShipmentStep` with the default shipment method check:
+9. For PayPalExpress payment method only: Adjust the `ShipmentStep` with the default shipment method check:
 
 <details>
 <summary>src/Pyz/Yves/CheckoutPage/Process/Steps/ShipmentStep.php</summary>
@@ -1378,7 +1379,7 @@ class ComputopDependencyProvider extends SprykerComputopDependencyProvider
 ```
 </details>
 
-13. For PayPal Express payment method only: Extend `ProceedToCheckoutButtonWidget` and add checkout button:
+13. For PayPal Express payment method only: Extend `ProceedToCheckoutButtonWidget` and add the checkout button:
 
 <details>
 <summary>src/Pyz/Yves/CheckoutWidget/Widget/ProceedToCheckoutButtonWidget.php</summary>
@@ -1459,7 +1460,7 @@ class ProceedToCheckoutButtonWidget extends SprykerProceedToCheckoutButtonWidget
 
     ```
 
-15. For  PayPal Express payment method only: override `CheckoutWidgetDependencyProvider`:
+15. For  PayPal Express payment method only: Override `CheckoutWidgetDependencyProvider`:
 
 **src/Pyz/Yves/CheckoutWidget/CheckoutWidgetDependencyProvider.php**
 
@@ -1572,7 +1573,7 @@ namespace Pyz\Yves\ShopApplication;
 
 ### CRIF configuration  
 
-To configure [CRIF](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html):
+To configure [CRIF](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html), do the following:
 
 1. Adjust `PaymentDependencyProvider` to use `ComputopPaymentMethodFilterPlugin`:  
 
@@ -1601,7 +1602,7 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 }
 ```
 
-2. Adjust `ShipmentStep` to perform the API call of CRIF risk check:
+2. Adjust `ShipmentStep` to perform the API call of the CRIF risk check:
 
 <details>
 <summary>\Pyz\Yves\CheckoutPage\Process\Steps\ShipmentStep</summary>
@@ -1774,7 +1775,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 ## Integration into a project
 
-To integrate the computop module, make sure you [installed and configured it](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/computop/installing-and-configuring-computop.html).
+To integrate the Computop module, make sure you [installed and configured it](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/computop/installing-and-configuring-computop.html).
 
 ## Test mode
 

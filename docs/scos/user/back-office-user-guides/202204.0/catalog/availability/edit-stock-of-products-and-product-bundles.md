@@ -1,22 +1,25 @@
-## Editing stock
+---
+title: Check availability of products
+description: Learn how to edit stock of products in the Back Office.
+last_updated: June 3, 2022
+template: back-office-user-guide-template
+---
+
+
+## Edit stock of a product variant
 
 
 1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Availability**.
 2. Next to the abstract product owning the product variant you want to edit the stock of, click **View**.
     This opens the **Product Availability** page.
 3. Next to the product variant you want to edit the stock of, click **Edit Stock**.
-
-4. On the **Edit Stock** page, enter **QUANTITY** per **STOCK TYPE**.
+4. On the **Edit Stock** page, enter **QUANTITY** per needed **STOCK TYPE**.
 5. For **NEVER OUT OF STOCK** per **STOCK TYPE**, do the following:
       * To make the product available regardless of its stock, select the checkbox.
       * To make the product available only if its stock is more than 0, clear the checkbox.
 6. Click **Save**.
-      
+    This refreshes the page with a success message displayed.
 
-
-
-3. Select **Never out of stock** if you want the product to be always available.
-4. Click **Save**.
 
 {% info_block infoBox %}
 
@@ -24,14 +27,21 @@ Product stock the DECIMAL(20,10) value, which means that your product stock can 
 
 {% endinfo_block %}
 
-To edit the bundled product stock:
+## Edit stock of a product variant in a product bundle
 
-1. Navigate to the *Product Availability* page of a bundle whose bundled product variant availability you would like to change.
-2. Click **View bundled products** in the *Variant availability* table.
-3. In the *Bundled products* table that opens, click **Edit Stock** for the corresponding variant.
-4. On the *Edit Stock* page, specify **Quantity** for the product (for the needed warehouse if several are set up).
-5. Select **Never out of stock** if you want the product to be always available.
-6. Click **Save**.
+1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Availability**.
+2. Next to the product bundle owning the product variant you want to edit the stock of, click **View**.
+    This opens the **Product Availability** page.
+3. In the **VARIANT AVAILABILITY** pane, next to the needed product bundle, click **View bundled products**.
+    This opens the **BUNDLED PRODUCTS**.
+4. Next to the product variant you want to edit the stock of, click **Edit Stock**.
+5. On the **Edit Stock** page, enter **QUANTITY** per needed **STOCK TYPE**.
+6. For **NEVER OUT OF STOCK** per **STOCK TYPE**, do the following:
+      * To make the product available regardless of its stock, select the checkbox.
+      * To make the product available only if its stock is more than 0, clear the checkbox.
+7. Click **Save**.
+    This refreshes the page with a success message displayed.
+
 
 {% info_block warningBox "Note" %}
 
@@ -39,31 +49,14 @@ Please note that you are updating the product variant availability, not the bund
 
 {% endinfo_block %}
 
-**Tips and tricks**
-<br>You can edit stock for variants from the *Edit Concrete Product* page:
-1. Navigate to the *Edit Product Abstract* using one of the following options:
-    1.  **Products&nbsp;<span aria-label="and then">></span> Products&nbsp;<span aria-label="and then">></span> Edit**.
-    2.  Click a hyperlinked SKU value in the **Availability&nbsp;<span aria-label="and then">></span> Product availability list** table.
-2. In the *Variants* tab, click **Edit** next to the variant for which you would like to update the stock value.
-3. Go to the *Price&Stock* tab.
-4. Enter **Quantity** and select **Never out of stock** if you want the product to be always available.
-5. Click **Save**.
 
-{% info_block infoBox "Info" %}
-
-Once on the *Edit Concrete Product* page, you can update any of the product details you need.
-
-{% endinfo_block %}
-
-### Reference information: Editing stock
-
-The following table describes the attributes you see and enter when editing stock:
+### Reference information: Edit stock of products and product bundles
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| Stock Type | Name of the corresponding warehouse. The field is auto-populated and is not editable.|
-| Quantity | Number of products available in the stock for a specific store and warehouse. |
-| Never out of stock | Checkbox to set the product to be always available in a specific store and warehouse. Meaning even if the quantity is set to 0, the product will still be available. This option is usually used for digital items, like Gift Cards, for example.|
+| STOCK TYPE | Name of the warehouse the stock is located in. |
+| QUANTITY | Number of products available in stock per warehouse. |
+| NEVER OUT OF STOCK | Defines if the product is available regardless of its stock per warehouse. Meaning even if the quantity is set to 0, the product will still be available. This option is usually used for digital items, like Gift Cards, for example.|
 | Available in stores | This value is auto-populated according to your store setup and is not modifiable in UI. This just identifies for which store you define the product availability value. |
 
 #### <a name="availability-calculation-example"></a>Availability calculation example

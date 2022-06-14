@@ -2,6 +2,8 @@
 title: Merchant Portal - Marketplace Product Option Management integration
 description: This document describes the process how to integrate the Merchant Portal — Marketplace Product Option Management into a Spryker project.
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/marketplace/dev/feature-integration-guides/page.version/merchant-portal-marketplace-product-option-management-integration.html
 related:
   - title: Marketplace Product Options feature walkthrough
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-options-feature-walkthrough.html

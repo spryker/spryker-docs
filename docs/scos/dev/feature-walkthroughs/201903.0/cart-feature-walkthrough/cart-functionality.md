@@ -11,6 +11,7 @@ redirect_from:
   - /v2/docs/cart-functionality-calculations
   - /v2/docs/en/cart-functionality-calculations
   - /docs/scos/dev/feature-walkthroughs/201903.0/cart-feature-walkthrough/cart-module-reference-information.html
+  - /docs/scos/user/features/201903.0/cart-feature-overview/cart-functionality-and-calculations/cart-functionality.html
 ---
 
 Our Cart consists of a few components in Yves and Zed. The Yves components create the cart requests and persist the cart into the session. The Zed components persist the data into the database and expand the items with data obtained from plugins.

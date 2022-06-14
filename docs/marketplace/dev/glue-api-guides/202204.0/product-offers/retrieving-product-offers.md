@@ -2,6 +2,11 @@
 title: Retrieving product offers
 description: Retrieve Marketplace product offers via API
 template: glue-api-storefront-guide-template
+related:
+  - title: Retrieving product offer prices
+    link: docs/marketplace/dev/glue-api-guides/page.version/product-offers/retrieving-product-offer-prices.html
+  - title: Retrieving product offer availabilities
+    link: docs/marketplace/dev/glue-api-guides/page.version/product-offers/retrieving-product-offer-availability.html
 ---
 
 Product offers let different merchants sell the same product on the Marketplace. Product offers are created per concrete products, and you can get the offer information via retrieving the product information.
@@ -11,6 +16,7 @@ In your development, product offers API can help you to retrieve relevant extend
 ## Installation
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
+
 * [GLUE API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)
 * [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)
 * [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-volume-prices.html)

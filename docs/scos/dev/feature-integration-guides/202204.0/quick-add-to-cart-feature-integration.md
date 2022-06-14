@@ -365,3 +365,10 @@ Make the following checks at https://mysprykershop.com/quick-order:
 * `QuickOrderCsvUploadedFileValidatorStrategyPlugin` serves for CSV file validation. It checks header presence and validates mandatory columns depending on the header.
 
 {% endinfo_block %}
+
+## Related features
+
+| FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE  |
+|---------|--------------|--------------|
+| Marketplace Product + Quick Add to Cart       |              | [Marketplace Product + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-quick-add-to-cart-feature-integration.html)             |
+| Marketplace Product Offer + Quick Add to Cart |              | [Marketplace Product Offer + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-quick-add-to-cart-feature-integration.html) |

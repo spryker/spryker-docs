@@ -2,6 +2,11 @@
 title: Web Components
 description: This document provides details how web components are used and what their function is in the Merchant Portal Frontend.
 template: concept-topic-template
+related:
+  - title: Angular Components
+    link: docs/marketplace/dev/front-end/angular-components.html
+  - title: Angular Services
+    link: docs/marketplace/dev/front-end/angular-services.html
 ---
 
 This document provides details how web components are used and what their function is in the Merchant Portal Frontend.

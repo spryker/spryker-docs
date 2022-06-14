@@ -3,6 +3,11 @@ title: Marketplace Shipment + Checkout feature integration
 description: This document describes the process how to integrate Marketplace Shipment + Checkout feature into your project
 last_updated: Jul 05, 2021
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Shipment feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-shipment-feature-walkthrough.html
+  - title: Checkout feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/checkout-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Shipment + Checkout feature into a Spryker project.

@@ -2,6 +2,9 @@
 title: Extending the project
 description: This document provides details about how to extend the new project.
 template: howto-guide-template
+related:
+  - title: Migration guide - Extending the project
+    link: docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
 ---
 
 To add additional frontend functionality beyond the one provisioned out-of-the-box, the project must be extended.
@@ -192,4 +195,48 @@ If a project file isn’t reflected in the browser, try to clean cache:
 
 ```bash
 console cache:empty-all
+```
+
+## Overriding CSS variables
+
+CSS variables can be overridden in any `.less`/`.css` file related to the Marketplace at the project level.
+
+Global override changes a variable for the whole project:
+
+- Variables in the root library
+
+```less
+@border-radius-base: var(--spy-border-radius-base, 10px);
+@green: var(--spy-green, #17b497);
+```
+
+- Overridden variables at the project level (for example, `src/Pyz/Zed/ZedUi/Presentation/Components/styles.less`)
+
+```less
+:root {
+  --spy-border-radius-base: 15px;
+  --spy-green: green;
+}
+```
+
+A partial override changes a variable for a specific scope (for example, inside a component):
+
+- Variable in the root library
+
+```less
+@btn-padding-base: var(
+  --spy-btn-padding-base,
+  @btn-horizontal-vertical-base @btn-horizontal-padding-base
+);
+```
+
+- Overridden variable at the project level
+
+```less
+.mp-test-selector {
+  --spy-btn-padding-base: 10px 15px;
+
+  // styles
+  ...
+}
 ```

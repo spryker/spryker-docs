@@ -5,6 +5,9 @@ description: This document describes how to integrate the Offers Volume Prices G
 template: feature-integration-guide-template
 redirect_from:
     - /docs/marketplace/dev/feature-integration-guides/202204.0/glue/marketplace-product-offer-volume-prices.html
+related:
+  - title: Marketplace Product Offer Prices feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-prices-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Offers Volume Prices Glue API feature into a Spryker project.

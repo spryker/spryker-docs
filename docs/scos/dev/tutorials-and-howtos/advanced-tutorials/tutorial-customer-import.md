@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Customer import
+title: "Tutorial: Customer import"
 description: Use the guide to extend the Importer module and import customer data using a .CSV file
 last_updated: Jun 16, 2021
 template: howto-guide-template

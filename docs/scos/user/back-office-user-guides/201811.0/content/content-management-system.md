@@ -8,6 +8,7 @@ originalArticleId: bcca5467-1c3e-4fd0-8023-6500fbfd927b
 redirect_from:
   - /v1/docs/cms-guide
   - /v1/docs/en/cms-guide
+  - /docs/scos/user/back-office-user-guides/201811.0/content/pages/F
 related:
   - title: CMS
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-feature-overview.html

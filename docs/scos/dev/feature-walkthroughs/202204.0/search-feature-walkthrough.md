@@ -6,6 +6,7 @@ template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/201811.0/search-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/201903.0/search-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/201907.0/search-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202005.0/search-feature-walkthrough.html
 ---
 

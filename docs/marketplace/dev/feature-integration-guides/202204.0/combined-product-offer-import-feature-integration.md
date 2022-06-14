@@ -5,6 +5,9 @@ description: This document describes the process how to integrate combined produ
 draft: true
 template: feature-integration-guide-template
 redirect_from: /docs/marketplace/dev/feature-integration-guides/{{page.version}}/combined-product-offer-import-integration.html
+related:
+  - title: Marketplace Product Offer feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
 ---
 
 ### Prerequisites

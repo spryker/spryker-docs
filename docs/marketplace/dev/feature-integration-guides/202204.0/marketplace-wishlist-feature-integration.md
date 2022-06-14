@@ -3,6 +3,9 @@ title: Marketplace Wishlist feature integration
 last_updated: Jul 05, 2021
 Description: This document describes the process how to integrate the Marketplace wishlist feature into a Spryker project.
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Wishlist feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-wishlist-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Wishlist feature into a Spryker project.
@@ -38,7 +41,7 @@ Make sure the following modules have been installed:
 | MODULE | EXPECTED DIRECTORY |
 |-|-|
 | MerchantProductOfferWishlist | vendor/spryker/merchant-product-offer-wishlist |
-| MerchantProductWishlist | vendor/spryker/merchant-product-offer-wishlist |
+| MerchantProductWishlist | vendor/spryker/merchant-product-wishlist |
 
 {% endinfo_block %}
 
@@ -171,6 +174,8 @@ class WishlistPageDependencyProvider extends SprykerWishlistPageDependencyProvid
     }
 }
 ```
+
+**src/Pyz/Zed/Wishlist/WishlistDependencyProvider.php**
 
 ```php
 <?php

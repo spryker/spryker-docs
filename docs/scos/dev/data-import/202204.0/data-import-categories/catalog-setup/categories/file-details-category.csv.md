@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-categorycsv
   - /docs/file-details-categorycsv
   - /docs/en/file-details-categorycsv
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/catalog-setup/categories/file-details-category.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/catalog-setup/categories/file-details-category.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/categories/file-details-category.csv.html
 ---

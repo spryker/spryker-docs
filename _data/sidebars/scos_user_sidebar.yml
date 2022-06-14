@@ -1628,6 +1628,14 @@ entries:
           url: /docs/scos/user/back-office-user-guides/content/blocks/create-cms-blocks.html
           include_versions:
           - "202204.0"
+        - title: Create category CMS blocks
+          url: /docs/scos/user/back-office-user-guides/content/blocks/create-category-cms-blocks.html
+          include_versions:
+          - "202204.0"
+        - title: Create product CMS blocks
+          url: /docs/scos/user/back-office-user-guides/content/blocks/create-product-cms-blocks.html
+          include_versions:
+          - "202204.0"
         - title: Create email CMS blocks
           url: /docs/scos/user/back-office-user-guides/content/blocks/create-email-cms-blocks.html
           include_versions:
@@ -2559,7 +2567,7 @@ entries:
           include_versions:
           - "202204.0"
         - title: Edit translations
-          url: /docs/scos/user/back-office-user-guides/administration/glossary/edit-glossary.html
+          url: /docs/scos/user/back-office-user-guides/administration/glossary/edit-translations.html
           include_versions:
           - "202204.0"
       - title: Tax rates

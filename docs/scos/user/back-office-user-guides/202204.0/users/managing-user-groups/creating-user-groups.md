@@ -10,6 +10,11 @@ redirect_from:
   - /2021080/docs/en/managing-groups
   - /docs/managing-groups
   - /docs/en/managing-groups
+related:
+  - title: Editing user groups
+    link: docs/scos/user/back-office-user-guides/page.version/users/managing-user-groups/editing-user-groups.html
+  - title: Customer Groups overview
+    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-groups-overview.html
 ---
 
 This document describes how to create user groups.
@@ -38,8 +43,8 @@ Review the [reference information](#reference-information-creating-user-groups) 
 | TITLE | Unique identifier of the user group. You will use it to identify the group when creating users. |
 | ASSIGNED ROLES | The user roles to be assigned to the group. For role creating instructions, see [Creating user roles](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-roles/creating-user-roles.html). |
 
-
 **Tips and tricks**
+
 The **USERS** pane is empty. After you create a user and assign it to this group, the user will be displayed in the pane.
 
 ## Next steps

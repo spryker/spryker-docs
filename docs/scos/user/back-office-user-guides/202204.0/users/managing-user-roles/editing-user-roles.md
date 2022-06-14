@@ -2,6 +2,9 @@
 title: Editing user roles
 description: Learn how to edit user roles in the Back Office.
 template: back-office-user-guide-template
+related:
+  - title: Creating user roles
+    link: docs/scos/user/back-office-user-guides/page.version/users/managing-user-roles/creating-user-roles.html
 ---
 
 This document describes how to edit user roles in the Back Office.
@@ -26,7 +29,7 @@ Review the [reference information](#reference-information-editing-roles) before 
       The page refreshes with the success message displayed and the ruled displayed in the **Assigned Rules** section.
 5. Repeat steps 3-7 until you add all the needed rules.
 6. In the **Assigned Rules** section, delete one or more rules by clicking **Delete** next to the rules you want to delete.
-    This refershes the page with the success message displayed. The rule is no longer displayed in the list.
+    This refreshes the page with the success message displayed. The rule is no longer displayed in the list.
 
 ### Reference information: Editing roles
 
@@ -46,7 +49,7 @@ To allow or deny access for all of the bundles, controllers or actions, enter `*
 
 Alternatively, you can look up **BUNDLE**, **CONTROLLER**, and **ACTION** values in the `navigation.xml` of the needed module.
 
-See the example of the `navigation.xml` file of the AvailabilityGui module:
+See the example of the `navigation.xml` file of the `AvailabilityGui` module:
 
 <details open>
 <summary markdown='span'>navigation.xml</summary>
@@ -86,5 +89,4 @@ See the example of the `navigation.xml` file of the AvailabilityGui module:
     </product>
 </config>
 ```
-
 </details>

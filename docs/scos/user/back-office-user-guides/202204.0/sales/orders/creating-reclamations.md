@@ -2,6 +2,13 @@
 title: Creating reclamations
 description: Learn how to create reclamations in the Back Office
 template: back-office-user-guide-template
+related:
+  - title: Viewing reclamations
+    link: docs/scos/user/back-office-user-guides/page.version/sales/reclamations/viewing-reclamations.html
+  - title: Changing the state of order items in reclamations
+    link: docs/scos/user/back-office-user-guides/page.version/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html
+  - title: Reclamations feature overview
+    link: docs/scos/user/features/page.version/reclamations-feature-overview.html
 ---
 
 This document describes how to create [order reclamations](/docs/scos/user/features/{{page.version}}/reclamations-feature-overview.html) in the Back Office.

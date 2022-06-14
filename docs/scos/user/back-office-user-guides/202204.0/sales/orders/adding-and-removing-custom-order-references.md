@@ -2,6 +2,9 @@
 title: Adding and removing custom order references
 description: Learn how to add and remove custom order references in the Back Office
 template: back-office-user-guide-template
+related:
+  - title: Custom Order Reference overview
+    link: docs/scos/user/features/page.version/order-management-feature-overview/custom-order-reference-overview.html
 ---
 
 This document describes how to add and remove custom order references in the Back Office.
@@ -15,7 +18,7 @@ To start working with orders, go to **Sales&nbsp;<span aria-label="and then">></
 
 1. On the **Orders** page, next to the order you want to add a custom order reference to, click **View**.
     This opens the **Order Overview** page.
-3. In the **CUSTOM ORDER REFERENCE** pane, click **Edit Reference**.
+2. In the **CUSTOM ORDER REFERENCE** pane, click **Edit Reference**.
     This displays a **CUSTOM ORDER REFERENCE** field.
 3. Enter a **CUSTOM ORDER REFERENCE**.
 4. Click **Save**.

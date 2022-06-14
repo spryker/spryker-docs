@@ -28,6 +28,7 @@ Only [active](/docs/scos/user/back-office-user-guides/{{page.version}}/users/man
 {% endinfo_block %}
 
 ## Logging in with a regular Back Office user account
+
 <a name="prerequisites"></a>
 
 {% info_block warningBox "Prerequisites" %}
@@ -40,6 +41,7 @@ To log in with a Back Office user account, you should have the account prelimina
 To log in, on the Back Office login page, enter your login details.
 
 ### Restoring your password
+
 <a name="password-reset"></a>
 If you forgot your password:
 
@@ -71,4 +73,5 @@ Depending on the [third-party login strategy](/docs/scos/user/features/{{page.ve
 {% endinfo_block %}
 
 **Tips and tricks**
+
 <br>Since the user with the email you used for login via the third party has been created in the project database, you can use this email for your next logins to the Back Office [as a regular user](#prerequisites). However, you need to [reset your password first](#password-reset), since to log you in to the Back Office via a third-party, a random password is generated and stored in the project database. You cannot use this password, and therefore need to create a new one by resetting the current password. Once you reset the password, you can log in to Back Office as a regular user without having to use the form for the third-party logins.

@@ -26,6 +26,15 @@ redirect_from:
   - /docs/en/modularity-and-shop-suite
   - /2021080/docs/modularity-and-shop-suite
   - /2021080/docs/en/modularity-and-shop-suite
+related:
+  - title: Conceptual overview
+    link: docs/scos/dev/architecture/conceptual-overview.html
+  - title: Programming concepts
+    link: docs/scos/dev/architecture/programming-concepts.html
+  - title: Technology stack
+    link: docs/scos/dev/architecture/technology-stack.html
+  - title: Code buckets
+    link: docs/scos/dev/architecture/code-buckets.html
 ---
 
 In Spryker, we use modular programming and packaging principles for organizing functionalities into independent software packages — modules.

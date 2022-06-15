@@ -64,7 +64,7 @@ use Spryker\Service\Shipment\ShipmentConfig as SprykerShipmentConfig;
 class ShipmentConfig extends SprykerShipmentConfig
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     public function getShipmentHashFields(): array
     {
@@ -75,7 +75,7 @@ class ShipmentConfig extends SprykerShipmentConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `ShipmentService::groupItemsByShipment()` groups items by shipment using the merchant reference.
+Place an order and check that items are grouped by merchant shipment in backoffice.
 
 {% endinfo_block %}
 
@@ -132,7 +132,7 @@ use Spryker\Zed\ShipmentGui\ShipmentGuiDependencyProvider as SprykerShipmentGuiD
 class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ShipmentGuiExtension\Dependency\Plugin\ShipmentOrderItemTemplatePluginInterface[]
+     * @return array<\Spryker\Zed\ShipmentGuiExtension\Dependency\Plugin\ShipmentOrderItemTemplatePluginInterface>
      */
     protected function getShipmentOrderItemTemplatePlugins(): array
     {

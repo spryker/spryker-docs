@@ -16,12 +16,10 @@ entries:
               - title: API endpoints
               - title: Configuration in the Back Office
                 nested:
-                  - title: Manage payment method
-                    url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/manage-payment-method.html
-                  - title: Manage Unzer Marketplace credentials
+                  - title: Add Unzer credentials
                     url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/manage-unzer-marketplace-credentails.html
-                  - title: Manage Unzer standard credentials
-                    url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/manage-unzer-standard-credentails.html
+                  - title: Add Unzer credentials for external merchants
+                    url: /pbc/all/payment/unzer/configuration-in-the-back-office/add-unzer-credentials-for-external-merchants.html
               - title: Extend & customize
                 nested:
                   - title: Frontend part for a credit card

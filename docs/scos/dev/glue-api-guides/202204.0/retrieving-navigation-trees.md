@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/retrieving-navigation-trees
   - /docs/retrieving-navigation-trees
   - /docs/en/retrieving-navigation-trees
+  - /docs/scos/dev/glue-api-guides/201811.0/retrieving-navigation-trees.html
 related:
   - title: Migration Guide - NavigationsRestApi
     link: docs/scos/dev/module-migration-guides/glue-api/migration-guide-navigationsrestapi.html

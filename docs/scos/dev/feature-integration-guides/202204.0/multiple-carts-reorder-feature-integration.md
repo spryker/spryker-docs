@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/multiple-carts-reorder-feature-integration
   - /docs/multiple-carts-reorder-feature-integration
   - /docs/en/multiple-carts-reorder-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/multiple-carts-reorder-feature-integration.html
 ---
 
 ## Install feature core

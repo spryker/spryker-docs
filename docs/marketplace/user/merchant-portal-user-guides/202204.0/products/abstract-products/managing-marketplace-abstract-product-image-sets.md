@@ -3,6 +3,9 @@ title: Managing marketplace abstract product image sets
 last_updated: Aug 11, 2021
 description: This document describes how to manage marketplace abstract product image sets in the Merchant Portal.
 template: back-office-user-guide-template
+related:
+  - title: Marketplace Product feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
 ---
 
 This document describes how to manage image sets of the marketplace abstract products in the Merchant Portal.

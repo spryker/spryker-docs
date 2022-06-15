@@ -8,6 +8,7 @@ originalArticleId: 7924cb82-d6f6-4f5f-a132-4177692d54fa
 redirect_from:
   - /v5/docs/checking-out-purchases-and-getting-checkout-data-201907
   - /v5/docs/en/checking-out-purchases-and-getting-checkout-data-201907
+  - /docs/scos/dev/glue-api-guides/202005.0/checking-out-purchases-and-getting-checkout-data.html
 related:
   - title: Managing Carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/managing-carts.html

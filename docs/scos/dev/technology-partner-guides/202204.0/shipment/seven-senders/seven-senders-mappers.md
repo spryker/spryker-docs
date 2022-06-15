@@ -1,6 +1,8 @@
 ---
 title: Seven Senders — Mappers
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/technology-partner-guides/202200.0/shipment/seven-senders/seven-senders-mappers.html
 ---
 
 For mapping data from Spryker to Seven Senders `\SprykerEco\Zed\Sevensenders\Business\Mapper\OrderMapper` and `\SprykerEco\Zed\Sevensenders\Business\Mapper\ShipmentMapper` are used by default.

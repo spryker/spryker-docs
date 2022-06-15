@@ -19,13 +19,8 @@ redirect_from:
   - /v5/docs/en/mg-cms-gui
   - /v6/docs/mg-cms-gui
   - /v6/docs/en/mg-cms-gui
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-api-module.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-api-module.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-api-module.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-api-module.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-api-module.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-api-module.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsgui.html
+  - /module_migration_guides/mg-cms-gui.htm
 ---
 
 ## Upgrading from version 4.* to version 5.*
@@ -71,5 +66,3 @@ New transfers must be generated:
 * `CmsGuiCommunicationFactory::createCmsVersionForm` was deprecated, please use `CmsGuiCommunicationFactory::getCmsVersionForm`.
 * `CmsGuiCommunicationFactory::createCmsGlossaryForm` was deprecated, please use `CmsGuiCommunicationFactory::getCmsGlossaryForm`.
 * `CmsVersionMapper::mapToCmsVersionDataTransfer` was given return type `CmsVersionMapper::CmsVersionDataTransfer`
-
-

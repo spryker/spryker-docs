@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Using translations
+title: "Tutorial: Using translations"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-using-translations
@@ -48,6 +48,6 @@ Example :
 </div>
 ```
 
-The example below shows how the Twig Translator can be used:
+The following example shows how to use the Twig Translator:
 
 When the page containing this template is requested, the Twig Translator will replace the text containing the key (for example, `catalog.next`) with the value of the key stored in Redis that corresponds to the current locale (for example, for locale `de_DE`, will replace with the value of the key `demo.de_de.glossary.translation.catalog.next`).

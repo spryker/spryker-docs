@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-monitoring.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-monitoring.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-monitoring.html
+  - /module_migration_guides/mg-monitoring.htm
 related:
   - title: New Relic
     link: docs/scos/user/technology-partners/page.version/operational-tools-monitoring-legal-etc/new-relic.html

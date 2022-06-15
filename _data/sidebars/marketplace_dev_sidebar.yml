@@ -167,7 +167,7 @@ entries:
           - title: Combined Product Offer Import feature integration
             url: /docs/marketplace/dev/feature-integration-guides/combined-product-offer-import-feature-integration.html
 
-          - title: Marketplace Dummy Payment feature integration
+          - title: Marketplace Dummy Payment integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-dummy-payment-feature-integration.html
 
           - title: Marketplace Inventory Management feature integration
@@ -202,6 +202,11 @@ entries:
             include_versions:
             - "202204.0"
 
+          - title: Merchant Switcher + Customer Account Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-customer-account-management-feature-integration.html
+            include_versions:
+              - "202204.0"
+
           - title: Merchant Switcher + Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-wishlist-feature-integration.html
 
@@ -213,11 +218,10 @@ entries:
           - title: Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
 
-          - title: Marketplace Order Management + Customer Account Management feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-customer-account-management-feature-integration.html
-
           - title: Marketplace Order Management + Order Threshold feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-order-threshold-feature-integration.html
+            include_versions:
+            - "202204.0"
 
           - title: Marketplace Product Approval Process feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-approval-process-feature-integration.html
@@ -236,6 +240,11 @@ entries:
           - title: Marketplace Product + Marketplace Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html
 
+          - title: Marketplace Product + Quick Add to Cart feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-quick-add-to-cart-feature-integration.html
+            include_versions:
+            - "202204.0"
+          
           - title: Marketplace Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html
 
@@ -248,6 +257,11 @@ entries:
           - title: Marketplace Product Offer + Checkout feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-checkout-feature-integration.html
 
+          - title: Marketplace Product Offer + Quick Add to Cart feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-quick-add-to-cart-feature-integration.html
+            include_versions:
+            - "202204.0"
+          
           - title: Marketplace Promotions & Discounts feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-promotions-discounts-feature-integration.html
 
@@ -366,12 +380,12 @@ entries:
         nested:
           - title: REST API Marketplace B2C reference
             url: /docs/marketplace/dev/glue-api-guides/rest-api-b2c-reference.html
-            include_versions:       
+            include_versions:
             - "202204.0"
 
           - title: REST API Marketplace B2B reference
             url: /docs/marketplace/dev/glue-api-guides/rest-api-b2b-reference.html
-            include_versions:       
+            include_versions:
             - "202204.0"
 
           - title: Abstract products
@@ -434,12 +448,12 @@ entries:
             include_versions:
             - "202204.0"
             nested:
-              - title: Managing shopping lists
+              - title: Managing marketplace shopping lists
                 url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-lists.html
                 include_versions:
                 - "202204.0"
 
-              - title: Managing shopping list items
+              - title: Managing marketplace shopping list items
                 url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-list-items.html
                 include_versions:
                 - "202204.0"
@@ -466,6 +480,14 @@ entries:
 
           - title: Retrieving autocomplete and search suggestions
             url: /docs/marketplace/dev/glue-api-guides/retrieving-autocomplete-and-search-suggestions.html
+
+          - title: Shopping lists
+            nested:
+              - title: Managing shopping lists
+                url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-lists.html
+
+              - title: Managing shopping list items
+                url: /docs/marketplace/dev/glue-api-guides/shopping-lists/managing-shopping-list-items.html
 
       - title: Data export
         nested:
@@ -546,7 +568,7 @@ entries:
 
           - title: "File details: product-option-group.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-option-group.csv.html
-
+          
       - title: Front-end
         nested:
 
@@ -554,7 +576,7 @@ entries:
             url: /docs/marketplace/dev/front-end/extending-the-project/
             nested:
 
-              - title: "Migration guide: Extending the project"
+              - title: "Migration guide - Extending the project"
                 url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
 
           - title: "Table design"

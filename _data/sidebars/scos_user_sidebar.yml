@@ -642,7 +642,7 @@ entries:
         - "202108.0"
         - "202204.0"
       - title: Standard Filters (Size, Type, Color, Etc...)
-        url: /docs/scos/user/features/search-feature-overview/standard-filters-size-type-color-etc....html
+        url: /docs/scos/user/features/search-feature-overview/standard-filters-size-type-color-etc.html
         include_versions:
         - "201811.0"
         - "201903.0"
@@ -900,9 +900,29 @@ entries:
     - title: Sales
       nested:
       - title: Order matrix
+        url: /docs/scos/user/back-office-user-guides/sales/view-the-order-matrix.html
+        include_versions:
+        - "202204.0"
+      - title: Order matrix
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
         nested:
         - title: Viewing the order matrix
           url: /docs/scos/user/back-office-user-guides/sales/order-matrix/viewing-the-order-matrix.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
       - title: Orders
         nested:
         - title: Changing the state of order items
@@ -1086,6 +1106,14 @@ entries:
         include_versions:
         - "202204.0"
       - title: Customer, customer access, customer groups
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
         nested:
         - title: Managing customers
           url: /docs/scos/user/back-office-user-guides/customer/customer-customer-access-customer-groups/managing-customers.html
@@ -1157,7 +1185,7 @@ entries:
         nested:
           - title: Create company unit addresses
             url: /docs/scos/user/back-office-user-guides/customer/company-unit-addresses/create-company-unit-addresses.html
-          - title: Edit company units
+          - title: Edit company units addresses
             url: /docs/scos/user/back-office-user-guides/customer/company-unit-addresses/edit-company-unit-addresses.html
       - title: Company roles
         include_versions:
@@ -1242,7 +1270,7 @@ entries:
             - "201903.0"
             - "201907.0"
             - "202009.0"
-        - title: Manage concrete products
+        - title: Manage product variants
           nested:
           - title: Creating product variants
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/creating-product-variants.html
@@ -1548,7 +1576,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
           nested:
           - title: Reference information - Content Items
             url: /docs/scos/user/back-office-user-guides/content/content-items/references/reference-information-content-items.html
@@ -1584,23 +1611,31 @@ entries:
         - title: Create CMS blocks
           url: /docs/scos/user/back-office-user-guides/content/blocks/create-cms-blocks.html
           include_versions:
-          - "202004.0"
+          - "202204.0"
+        - title: Create category CMS blocks
+          url: /docs/scos/user/back-office-user-guides/content/blocks/create-category-cms-blocks.html
+          include_versions:
+          - "202204.0"
+        - title: Create product CMS blocks
+          url: /docs/scos/user/back-office-user-guides/content/blocks/create-product-cms-blocks.html
+          include_versions:
+          - "202204.0"
         - title: Create email CMS blocks
           url: /docs/scos/user/back-office-user-guides/content/blocks/create-email-cms-blocks.html
           include_versions:
-          - "202004.0"
+          - "202204.0"
         - title: Edit CMS blocks
           url: /docs/scos/user/back-office-user-guides/content/blocks/edit-cms-blocks.html
           include_versions:
-          - "202004.0"
+          - "202204.0"
         - title: Edit placeholders in CMS blocks
           url: /docs/scos/user/back-office-user-guides/content/blocks/edit-placeholders-in-cms-blocks.html
           include_versions:
-          - "202004.0"
+          - "202204.0"
         - title: View CMS blocks
           url: /docs/scos/user/back-office-user-guides/content/blocks/view-cms-blocks.html
           include_versions:
-          - "202004.0"
+          - "202204.0"
         - title: Creating CMS blocks
           url: /docs/scos/user/back-office-user-guides/content/blocks/creating-cms-blocks.html
           include_versions:
@@ -1620,7 +1655,7 @@ entries:
           - "202001.0"
           - "202005.0"
           - "202009.0"
-          - "202108.0"             
+          - "202108.0"
         - title: Managing content of emails via CMS blocks
           url: /docs/scos/user/back-office-user-guides/content/blocks/managing-content-of-emails-via-cms-blocks.html
           include_versions:
@@ -2354,13 +2389,16 @@ entries:
     - title: Administration
       nested:
       - title: Stores
+        url: /docs/scos/user/back-office-user-guides/administration/view-stores.html
+        include_versions:
+        - "202204.0"
+      - title: Stores
         url: /docs/scos/user/back-office-user-guides/administration/stores.html
         include_versions:
         - "202001.0"
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Warehouses
         include_versions:
         - "202001.0"
@@ -2369,6 +2407,14 @@ entries:
         - "202108.0"
         - "202204.0"
         nested:
+        - title: Create warehouses
+          url: /docs/scos/user/back-office-user-guides/administration/warehouses/create-warehouses.html
+          include_versions:
+          - "202204.0"
+        - title: Edit warehouses
+          url: /docs/scos/user/back-office-user-guides/administration/warehouses/managing-warehouses.html
+          include_versions:
+          - "202204.0"
         - title: Creating warehouses
           url: /docs/scos/user/back-office-user-guides/administration/warehouses/creating-warehouses.html
           include_versions:
@@ -2376,7 +2422,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Managing warehouses
           url: /docs/scos/user/back-office-user-guides/administration/warehouses/managing-warehouses.html
           include_versions:
@@ -2384,7 +2429,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: References
           include_versions:
           - "202001.0"
@@ -2405,6 +2449,14 @@ entries:
         - "202108.0"
         - "202204.0"
         nested:
+        - title: View payment methods
+          url: /docs/scos/user/back-office-user-guides/administration/payment-methods/view-payment-methods.html
+          include_versions:
+          - "202204.0"
+        - title: Edit payment methods
+          url: /docs/scos/user/back-office-user-guides/administration/payment-methods/edit-payment-methods.html
+          include_versions:
+          - "202204.0"
         - title: Managing payment methods
           url: /docs/scos/user/back-office-user-guides/administration/payment-methods/managing-payment-methods.html
           include_versions:
@@ -2412,7 +2464,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: References
           include_versions:
           - "202001.0"
@@ -2435,6 +2486,18 @@ entries:
         - "202108.0"
         - "202204.0"
         nested:
+        - title: Add carrier companies
+          url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/add-carrier-companies.html
+          include_versions:
+          - "202204.0"
+        - title: Add delivery methods
+          url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/add-delivery-methods.html
+          include_versions:
+          - "202204.0"
+        - title: Edit delivery methods
+          url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/edit-delivery-methods.html
+          include_versions:
+          - "202204.0"
         - title: Creating a carrier company
           url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-carrier-companies.html
           include_versions:
@@ -2444,7 +2507,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Creating and managing delivery methods
           url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-and-managing-delivery-methods.html
           include_versions:
@@ -2454,7 +2516,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: References
           include_versions:
           - "202001.0"
@@ -2477,10 +2538,37 @@ entries:
         nested:
         - title: Managing glossary
           url: /docs/scos/user/back-office-user-guides/administration/glossary/managing-glossary.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+        - title: Add translations
+          url: /docs/scos/user/back-office-user-guides/administration/glossary/add-translations.html
+          include_versions:
+          - "202204.0"
+        - title: Edit translations
+          url: /docs/scos/user/back-office-user-guides/administration/glossary/edit-translations.html
+          include_versions:
+          - "202204.0"
       - title: Tax rates
         nested:
+        - title: Create tax rates
+          url: /docs/scos/user/back-office-user-guides/administration/tax-rates/create-tax-rates.html
+          include_versions:
+          - "202204.0"
+        - title: Edit tax rates
+          url: /docs/scos/user/back-office-user-guides/administration/tax-rates/edit-tax-rates.html
+          include_versions:
+          - "202204.0"
         - title: Managing tax rates
           url: /docs/scos/user/back-office-user-guides/administration/tax-rates/managing-tax-rates.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
         - title: References
           include_versions:
           - "201811.0"
@@ -2499,8 +2587,19 @@ entries:
             - "202005.0"
       - title: Tax sets
         nested:
+        - title: Create tax sets
+          url: /docs/scos/user/back-office-user-guides/administration/tax-sets/create-tax-sets.html
+          include_versions:
+          - "202204.0"
+        - title: Edit tax sets
+          url: /docs/scos/user/back-office-user-guides/administration/tax-sets/edit-tax-sets.html
+          include_versions:
+          - "202204.0"
         - title: Managing tax sets
           url: /docs/scos/user/back-office-user-guides/administration/tax-sets/managing-tax-sets.html
+          include_versions:
+          - "202009.0"
+          - "202108.0"
         - title: Taxes
           url: /docs/scos/user/back-office-user-guides/administration/tax-rates/taxes.html
           include_versions:
@@ -2525,6 +2624,18 @@ entries:
             - "201907.0"
             - "202001.0"
             - "202005.0"
+      - title: Define global thresholds
+        url: /docs/scos/user/back-office-user-guides/administration/define-global-thresholds.html
+        include_versions:
+        - "202204.0"
+      - title: Manage threshold settings
+        url: /docs/scos/user/back-office-user-guides/administration/manage-threshold-settings.html
+        include_versions:
+        - "202204.0"
+      - title: Define merchant order thresholds
+        url: /docs/scos/user/back-office-user-guides/administration/define-merchant-order-thresholds.html
+        include_versions:
+        - "202204.0"
       - title: Thresholds
         include_versions:
         - "201903.0"
@@ -2533,7 +2644,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
         nested:
         - title: Managing global thresholds
           url: /docs/scos/user/back-office-user-guides/administration/thresholds/managing-global-thresholds.html
@@ -2554,7 +2664,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Managing threshold settings
           url: /docs/scos/user/back-office-user-guides/administration/thresholds/managing-threshold-settings.html
           include_versions:
@@ -2564,7 +2673,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Threshold
           url: /docs/scos/user/back-office-user-guides/administration/thresholds/threshold.html
           include_versions:
@@ -2589,10 +2697,28 @@ entries:
             - "202001.0"
             - "202005.0"
             - "202009.0"
-      - title: MIME type settings
+      - title: MIME Type settings
+        url: /docs/scos/user/back-office-user-guides/administration/add-and-edit-mime-types.html
+        include_versions:
+        - "202204.0"
+      - title: MIME Type settings
+        include_versions:
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
         nested:
         - title: Managing MIME type settings
           url: /docs/scos/user/back-office-user-guides/administration/mime-type-settings/managing-mime-type-settings.html
+          include_versions:
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
     - title: General Back Office
       url: /docs/scos/user/back-office-user-guides/general-back-office-overview.html
       include_versions:

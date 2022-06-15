@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/authenticating-as-a-company-user
   - /docs/authenticating-as-a-company-user
   - /docs/en/authenticating-as-a-company-user
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/authenticating-as-a-company-user.html
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/authenticating-as-a-company-user.html
+  - /docs/scos/dev/glue-api-guides/202200.0/managing-b2b-account/authenticating-as-a-company-user.html
 ---
 
 This endpoint allows authenticating as a company user.

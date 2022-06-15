@@ -22,6 +22,7 @@ redirect_from:
   - /v4/docs/en/getting-started-with-docker
   - /v3/docs/getting-started-with-docker-201907
   - /v3/docs/en/getting-started-with-docker-201907
+  - /docs/scos/dev/installation/spryker-in-docker/installation-guides/modes-overview.html
 ---
 
 
@@ -101,7 +102,7 @@ Learn how to convert a project into a Docker based instance in [Integrating the 
 
 ## Running production
 
-Currently, there is no installation guide for deploying Spryker in Docker in a production environment. But you can generate the images suitable for a production environment and the archives with assets for each application - Yves, BackOffice(Zed), Backend-Gateway, GlueStorefront(Glue), GlueBackend and MerchantPortal.
+Currently, there is no installation guide for deploying Spryker in Docker in a production environment. But you can generate the images suitable for a production environment and the archives with assets for each application—Yves, BackOffice(Zed), Backend-Gateway, GlueStorefront(Glue), GlueBackend, and MerchantPortal.
 
 Learn how to generate Docker images and assets for a production environment in [Running production](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/running-production.html).
 

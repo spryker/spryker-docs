@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Database transaction handling
+title: "Tutorial: Database transaction handling"
 description: Use the guide to understand how to handle database transactions.
 last_updated: Jun 16, 2021
 template: howto-guide-template

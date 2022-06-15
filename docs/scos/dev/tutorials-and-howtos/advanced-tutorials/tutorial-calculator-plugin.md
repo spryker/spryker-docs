@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Calculator plugin
+title: "Tutorial: Calculator plugin"
 description: Use the guide to create and register a calculator plugin to the calculator plugin stack.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -31,12 +31,11 @@ This tutorial explains how to add a new calculation plugin to the calculator sta
 
 Requirement: display the tax amount per item.
 
-Right now, you can get the tax amount from `grandTotal`. For this, you have to add a new calculator to the existing stack for the module. To do that:
+You can get the tax amount from `grandTotal`. For this, add a new calculator to the existing stack for the module:
 
-1. First, there are some data structure changes that you need to make. Modify the `ItemTransfer` object by adding two new properties :
-
-* `unitTaxAmount` for a single item
-* `sumTaxAmount` tax amount for the sum of items
+1. First, there are some data structure changes that you need to make. Modify the `ItemTransfer` object by adding two new properties:
+  * `unitTaxAmount`—for a single item.
+  * `sumTaxAmount`—tax amount for the sum of items.
 
 2. As this is tax-related, you have to add it on a project level in the `Tax` module.
 
@@ -55,11 +54,11 @@ Modify the `tax.transfer.xml` transfer object to reflect the new data model. Add
 vendor/bin/console transfer:generate
 ```
 
-Once done, two new properties appear in the `ItemTransfer`.
+Two new properties appear in the `ItemTransfer`.
 
-4. Next, create a new calculator plugin and register it to the calculator plugin stack.
+4. Create a new calculator plugin and register it to the calculator plugin stack.
 
-In the `Pyz/Zed/Tax` namespace, create a new module if it does not exist. Then, create a new plugin class under `Pyz/Zed/Tax/Communication/Plugin/ItemTaxAmountCalculatorPlugin`, as you see in the example below:
+In the `Pyz/Zed/Tax` namespace, create a new module if it does not exist. Then, under `Pyz/Zed/Tax/Communication/Plugin/ItemTaxAmountCalculatorPlugin`, create a new plugin class, as you see in the following example:
 
 ```php
 <?php

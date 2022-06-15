@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-category.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-category.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-category.html
+  - /upcoming-release/docs/migration-guide-category
 related:
   - title: Creating Categories
     link: docs/scos/user/back-office-user-guides/page.version/catalog/category/creating-categories.html

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/quick-add-to-cart-shopping-lists-feature-integration
   - /docs/quick-add-to-cart-shopping-lists-feature-integration
   - /docs/en/quick-add-to-cart-shopping-lists-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/quick-add-to-cart-shopping-lists-feature-integration.html
 ---
 
 ## Install feature frontend

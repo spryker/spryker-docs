@@ -2,6 +2,8 @@
 title: Marketplace Inventory Management feature overview
 description: This document contains concept information for the Marketplace Products feature.
 template: concept-topic-template
+redirect_from:
+  - /docs/marketplace/user/features/202200.0/marketplace-inventory-management-feature-overview.html
 ---
 
 The *Marketplace Inventory Management* feature enables maintaining stock and availability of merchant products and product offers that are sold in the Marketplace.
@@ -26,6 +28,7 @@ The stock for product offers is defined in the corresponding merchant warehouse.
 Merchants can define product offer stock in the Merchant Portal. For details, see [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html).
 
 Also, you can do the following using the data import:
+
 * Manage stock of product offers for a merchant by importing the product offer and stock data separately: [File details: product_offer_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-stock.csv.html).
 * Define stock when importing the product offer data: [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-combined-merchant-product-offer.csv.html).
 * Import merchant stock data: [File details: merchant_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-stock.csv.html).
@@ -41,20 +44,15 @@ Product offer availability calculation differs from the calculation of concrete 
 | --------------------- | ------------------------ |
 | Formula: Concrete product availability = Concrete product quantity - Concrete product reservations | Formula: Offer availability = Offer quantity - Offer reservations |
 
-Offer availability is considered on the Storefront: 
+Offer availability is considered on the Storefront:
+
 * On the product details page: While adding the offer to cart.
 * On the cart page: The product stays in the cart if the attached offer is not available anymore, and a hint is shown.
 * During the checkout: When clicking **Buy now**, the availability is rechecked.
 
 {% info_block infoBox "Example" %}
 
-Let's assume that a merchant has defined quantity 10 for product offer 1. A customer adds 8 items of the product offer 1 to cart and later updates the quantity to 12. In such a situation, the availability of the product offer 1 is checked, and the customer is notified to update the quantity of the product offer to the available number to proceed with the purchase. 
-
-{% endinfo_block %}
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [Marketplace Inventory Management feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-inventory-management-feature-walkthrough.html) for developers.
+Let's assume that a merchant has defined quantity 10 for product offer 1. A customer adds 8 items of the product offer 1 to cart and later updates the quantity to 12. In such a situation, the availability of the product offer 1 is checked, and the customer is notified to update the quantity of the product offer to the available number to proceed with the purchase.
 
 {% endinfo_block %}
 
@@ -63,3 +61,9 @@ Are you a developer? See [Marketplace Inventory Management feature walkthrough](
 | MERCHANT PORTAL USER GUIDES | BACK OFFICE USER GUIDES |
 | --------------------------- | ----------------------- |
 | [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html) | [Managing warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html) <!--- UPDATE LINK--> |
+
+{% info_block warningBox "Developer guides" %}
+
+Are you a developer? See [Marketplace Inventory Management feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-inventory-management-feature-walkthrough.html) for developers.
+
+{% endinfo_block %}

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/product-lists-catalog-feature-integration
   - /docs/product-lists-catalog-feature-integration
   - /docs/en/product-lists-catalog-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/product-lists-feature-integration.html
 related:
   - title: Merchant Product Restrictions feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html

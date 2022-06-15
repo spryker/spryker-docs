@@ -25,6 +25,11 @@ redirect_from:
   - /v1/docs/core-extension
   - /v1/docs/en/core-extension
   - /docs/scos/dev/back-end-development/extending-spryker/extending-the-core.html
+related:
+  - title: Extending the Spryker Core functionality
+    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-spryker-core-functionality.html
+  - title: Extending a core module that is used by another
+    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html
 ---
 
 We offer several ways like plugins to hook into the core’s behavior and extend this without modifications. But sometimes this is not enough, so you need to replace a method which is deep in the core.
@@ -39,10 +44,12 @@ There are three ways to extend classes from the core:
 
 Each of them has its advantages and disadvantages.
 
-## Extension via Replacement
+## Extension via replacement
+
 In case you want to completely replace a class from the core, you can add a class that contains all the `public` methods from the original class and implements the same interface.
 
-## Extension via Class Inheritance
+## Extension via class inheritance
+
 You can extend a class from the core and overwrite just the public or protected methods you need. This works well because internally there are almost no `private` methods and no `final` classes.
 
 Inheritance is easy to do but it creates a tight coupling to a concrete class. There is a high chance that a change in parent implementation will force a change in the subclass. Your effort for future updates will be higher.
@@ -59,7 +66,8 @@ class AnyModel extends SprykerAnyModel
 }
 ```
 
-## Extension via Object Composition
+## Extension via object composition
+
 As an alternative to the class inheritance, you can also implement composition of objects. This approach is more flexible and more robust but it requires more work in the initial implementation. You need to implement the same interface and provide all public methods. So you need to copy over some lines of code from the core to the project. This way you take over more control about this code.
 
 ```php
@@ -102,16 +110,18 @@ class AnyModel implements AnyModelInterface
 }
 ```
 
-## Add your Class to the Factory
+## Add your class to the factory
+
 When you extend a class from the core, you want the core code to go use that one instead of the original class. To do so, add a [factory](/docs/scos/dev/back-end-development/factory/factory.html) to the same module and same layer. This factory must extend its equivalent from the core. Core will automatically detect the overwritten factory and use it. Now, you can easily exchange the classes and your extension.
 
 **Example:**
-| Path | Description |
+| PATH | DESCRIPTION |
 | --- | --- |
 | `Pyz\Zed\MyBundle\Business\MyBundleBusinessFactory`|Factory on a project level|
 |`Spryker\Zed\MyBundle\Business\MyBundleBusinessFactory`|Factory on a core level |
 
-## Factory in Case of Class Inheritance
+## Factory in case of class inheritance
+
 ```php
 <?php
 namespace Pyz\Zed\MyBundle\Business;
@@ -139,7 +149,8 @@ class MyBundleBusinessFactory extends SprykerMyBundleBusinessFactory
 }
 ```
 
-## Factory in Case of Composition
+## Factory in case of composition
+
 ```php
 <?php
 namespace Pyz\Zed\MyBundle\Business;

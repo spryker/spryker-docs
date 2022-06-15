@@ -1,5 +1,5 @@
 ---
-title: Step Engine Workflow Overview
+title: Step engine workflow overview
 description: This article provides an overview of  the step engine feature.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -32,6 +32,11 @@ redirect_from:
   - /v4/docs/en/step-engine
   - /v5/docs/step-engine
   - /v5/docs/en/step-engine
+related:
+  - title: Step engine - use case scenario
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-use-case-scenario.html
+  - title: Step engine - creating a breadcrumb navigation
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-creating-a-breadcrumb-navigation.html
 ---
 
 When you need to define a multi-step process using the StepEngine feature, you need to implement the following interfaces:

@@ -1,5 +1,5 @@
 ---
-title: Net & Gross Prices Management
+title: Net and gross prices management
 description: The article describes the net & gross prices management
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -16,9 +16,12 @@ redirect_from:
   - /v5/docs/en/net-gross-prices-management
   - /v4/docs/net-gross-prices-management
   - /v4/docs/en/net-gross-prices-management
+related:
+  - title: Multiple currencies per store configuration
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html
 ---
 
-## Price Mode
+## Price mode
 
 We use the following price modes to identify pricing type:
 
@@ -55,7 +58,7 @@ You can use these keys in environment configuration:
   ```
 
 
-### Price Mode Switching
+### Price mode switching
 
 There is a price switcher plugin to help you with implementing price switcher in Yves.
 
@@ -90,5 +93,9 @@ To use it, do the following:
 
 
  {% info_block infoBox "Switching shop to Net prices:" %}
-If you want to have only NET prices shown in catalog, but proceed in cart and checkout with Gross ones, you need to override `getDefaultPriceMode` and change to `PRICE_MODE_NET` in this class:<br>`return PriceConfig::PRICE_MODE_GROSS;`
+
+If you want to have only NET prices shown in catalog, but proceed in cart and checkout with Gross ones, you need to override `getDefaultPriceMode` and change to `PRICE_MODE_NET` in this class:
+
+`return PriceConfig::PRICE_MODE_GROSS;`
+
 {% endinfo_block %}

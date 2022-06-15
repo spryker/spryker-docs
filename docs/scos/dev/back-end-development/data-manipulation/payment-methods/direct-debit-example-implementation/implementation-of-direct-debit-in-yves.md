@@ -22,6 +22,17 @@ redirect_from:
   - /v2/docs/en/dd-fe-implementation
   - /v1/docs/dd-fe-implementation
   - /v1/docs/en/dd-fe-implementation
+related:
+  - title: Implementing Direct Debit payment
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html
+  - title: Implementation of Direct Debit in Zed
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-zed.html
+  - title: Implementation of Direct Debit in the shared layer
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-the-shared-layer.html
+  - title: Integrate Direct Debit into checkout
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html
+  - title: Testing your Direct Debit implementation
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/testing-your-direct-debit-implementation.html
 ---
 
 Usually, the first step of the Direct Debit payment method implementation is set-up on Yves. This article provides step-by-step instructions on how to do that.

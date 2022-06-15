@@ -21,6 +21,13 @@ redirect_from:
   - /v2/docs/en/event-listen
   - /v1/docs/event-listen
   - /v1/docs/en/event-listen
+related:
+  - title: Event
+    link: docs/scos/dev/back-end-development/data-manipulation/event/event.html
+  - title: Adding events
+    link: docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html
+  - title: Configuring an events queue
+    link: docs/scos/dev/back-end-development/data-manipulation/event/configuring-an-events-queue.html
 ---
 
 There are two ways to listen to events: using direct listeners or subscribers. The difference between these two is that a subscriber allows the module providing the subscriber to wire up the handlers in the module that owns it without touching the `EventDependencyProvider` exception’s initial subscriber initialization. It is best to use a subscriber from the beginning, as this simplifies future listener registration. When you need to listen to specific listener, use `\Pyz\Zed\Event\EventDependencyProvider::getEventListenerCollection`.
@@ -30,6 +37,7 @@ There are two ways to listen to events: using direct listeners or subscribers. T
 To listen to events in the system, you need to add listener plugins. Listener is a class which extends plugins and implements `EventListenerInterface`. This plugin must be placed in the module we want to listen to: `Communication\Plugin\Product\ProductRelationAbstractProductChangeListener`.
 
 For example: Each listener plugin must implement `\Spryker\Service\Event\Dependency\Plugin\EventListenerInterface`.
+
 ```php
 <?php
 namespace Spryker\Zed\ProductRelation\Communication\Plugin\Product;
@@ -57,16 +65,19 @@ class ProductRelationAbstractProductChangeListener extends AbstractPlugin implem
 
 }
 ```
+
 Add this listener to `\Pyz\Zed\Event\EventDependencyProvider::getEventListenerCollection`
 
 For example:
 `$eventCollection->addListener(ProductEvents::PRODUCT_ABSTRACT_BEFORE_CREATE, new ProductRelationAbstractProductChangeListener())`
 
-## Listening to Events with a Subscriber
+## Listening to events with a subscriber
+
 Event subscribers are another way to listen for events in the system. The advantage of using event subscribers is that all the listeners reside in the module we want to react to the event. Register a subscriber once in `EventDependencyProvider` and later a Listener can be added without touching other modules.
 To implement a subscriber:
 
 1. Create event Subscriber class, for example:
+
 ```php
 <?php
 namespace Spryker\Zed\ProductRelation\Communication\Plugin;
@@ -98,7 +109,9 @@ class ProductRelationEventSubscriber extends AbstractPlugin implements EventSubs
 
 }
 ```
+
 2. Include this subscriber class to `\Pyz\Zed\Event\EventDependencyProvider::getEventSubscriberCollection`.
+
 ```php
 <?php
 

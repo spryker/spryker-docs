@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Managing glossary keys
+title: "Tutorial: Managing glossary keys"
 description: Glossary keys present two layers of persistence. This topic covers the usage of the functionality for managing the glossary keys.
 last_updated: Aug 10, 2021
 template: howto-guide-template
@@ -27,20 +27,20 @@ redirect_from:
 Glossary keys present two layers of persistence:
 
 * SQL database storage
-* in-memory key-value storage: Redis
+* In-memory key-value storage: Redis
 
-In this tutorial, we show how to manage the glossary keys of the Back Office user interface and how to manage the glossary keys of the Storefront interface via Twig extensions.
+This document shows how to manage the glossary keys of the Back Office user interface and how to manage the glossary keys of the Storefront interface via Twig extensions.
 
 Update, insert and delete operations for glossary keys are exposed in the `Glossary` module through the `GlossaryFacade` class.
 
 For update and insert operations, `GlossaryFacade` exposes `saveGlossaryKeyTranslations` that can be accessed as follows:
 
 ```php
-getFactory()-&gt;getGlossaryFacade();
-$facade-&gt;saveGlossaryKeyTranslations($formData);
+getFactory()->getGlossaryFacade();
+$facade->saveGlossaryKeyTranslations($formData);
 
 //Delete the translation for a glossary key
-$facade-&gt;deleteTranslation($keyName,$locale);
+$facade->deleteTranslation($keyName,$locale);
 ```
 
 ## Retrieving glossary keys
@@ -48,8 +48,8 @@ $facade-&gt;deleteTranslation($keyName,$locale);
 The support for listing the glossary keys is exposed through `GlossaryBusinessContainer`:
 
 ```php
-getFactory()-&gt;getEnabledLocales();
-$grid = $this-&gt;getFactory()-&gt;createGlossaryKeyTranslationGrid($request);
+getFactory()->getEnabledLocales();
+$grid = $this->getFactory()->createGlossaryKeyTranslationGrid($request);
 ```
 
 * `getEnabledLocales()` retrieves the list of locales that are contained in the `stores.php` configuration file.
@@ -72,7 +72,7 @@ Locales are configured in `config/Shared/stores.php` as follows:
 
 ## Using glossary keys
 
-On the Storefront, you can use glossary keys to translate rendered content. The following examples shows how to do it using a dedicated extension for the Twig template engine:
+On the Storefront, you can use glossary keys to translate rendered content. The following example shows how to do it using a dedicated extension for the Twig template engine:
 
 ```twig
 <div><label>{% raw %}{{{% endraw %} 'First Name' | trans {% raw %}}}{% endraw %}</label>

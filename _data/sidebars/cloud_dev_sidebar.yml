@@ -61,6 +61,8 @@ entries:
             url: /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-bitbucket-pipelines.html
       - title: Configuring data import from an S3 bucket
         url: /docs/cloud/dev/spryker-cloud-commerce-os/configuring-data-import-from-an-s3-bucket.html
+      - title: Create and restore databse backups
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/create-and-restore-database-backups.html
       - title: Customizing AWS CloudWatch dashboards
         url: /docs/cloud/dev/spryker-cloud-commerce-os/customizing-aws-cloudwatch-dashboards.html
       - title: Managing parameters in the Parameter Store
@@ -73,6 +75,11 @@ entries:
         url: /docs/cloud/dev/spryker-cloud-commerce-os/performance-testing.html
       - title: Monitoring issues and informing about alerts
         url: /docs/cloud/dev/spryker-cloud-commerce-os/monitoring-issues-and-informing-about-alerts.html
+      - title: Multi-store setups
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/multi-store-setups.html
+        nested:
+          - title: Add and remove databases of stores
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html
       - title: Troubleshooting
         nested:
           - title: Troubleshooting deployment issues

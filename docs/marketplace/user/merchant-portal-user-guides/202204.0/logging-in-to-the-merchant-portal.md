@@ -3,6 +3,9 @@ title: Logging in to the Merchant Portal
 last_updated: Jul 13, 2021
 description: This document describes how to log in and log out of the Merchant Portal.
 template: back-office-user-guide-template
+related:
+  - title: Merchant Portal overview
+    link: docs/marketplace/user/intro-to-spryker-marketplace/merchant-portal.html
 ---
 
 To use the Merchant Portal, you have to log in. This document describes how you can do that.

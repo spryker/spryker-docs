@@ -2,6 +2,13 @@
 title: Table Filter Select
 description: This document provides details about the Table Filter Select component in the Components Library.
 template: concept-topic-template
+related:
+  - title: Table Filter extension
+    link: docs/marketplace/dev/front-end/table-design/table-filters/index.html
+  - title: Table Filter Date Range
+    link: docs/marketplace/dev/front-end/table-design/table-filters/table-filter-date-range.html
+  - title: Table Filter Tree Select
+    link: docs/marketplace/dev/front-end/table-design/table-filters/table-filter-tree-select.html
 ---
 
 This document explains the Table Filter Select component in the Components Library.

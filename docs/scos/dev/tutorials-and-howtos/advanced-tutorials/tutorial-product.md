@@ -1,5 +1,5 @@
 ---
-title: Tutorial- Product
+title: "Tutorial: Product"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-product-challenge
@@ -47,10 +47,10 @@ This tutorial shows how to add information to products regarding the country whe
 console propel:install
 ```
 
-4. Implement query by product id and query by country id under the persistence layer.
+4. Implement query by product ID and query by country ID under the persistence layer.
 5. Implement `ProductCountryManager` and add the facade call. Implement `ProductCountryBusinessFactory`.
 6. Implement the operations under `ProductCountryFacade`.
-7. Manually add values to table in order to have relations between abstract products and countries (for testing few products would be enough).
+7. To have relations between abstract products and countries (for testing few products would be enough), manually add values to the table.
 
 ### Collector module (Zed)
 

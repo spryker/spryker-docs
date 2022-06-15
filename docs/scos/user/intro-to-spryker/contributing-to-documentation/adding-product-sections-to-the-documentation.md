@@ -10,13 +10,17 @@ When we launch a new product, you need to create a separate section for it. Usua
 
 To add a new product, follow these steps.
 
-## 1. Create sidebars for the product
+## 1. Create a folder for the new project
+
+In the `/docs` directory, create a folder for your poject and a folder designating the roles of the project. For example, a project `acp` that has the `user` and `dev` roles, will have the following paths: `/docs/acp/user` and `/docs/acp/dev`.
+
+## 2. Create sidebars for the product
 
 In `_data/sidebars`, create sidebars for the new product per role. For each role, there should be a separate YML file in the following format: `{product_name}_{role}_sidebar.yml`. For example, for the *acp* product with user and developer roles, create `acp_dev_sidebar.yml` and `acp_user_sidebar.yml` sidebar files.
 
 To learn how to populate sidebar files, see [Sidebars](/docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html#sidebars).
 
-## 2. Add the product to the configuration
+## 3. Add the product to the configuration
 
 To add the new product with its roles to the configuration, in `_config.yml`, do the following:
 
@@ -74,7 +78,15 @@ sidebars:
   - acp_user_sidebar
 ```
 
-## 3. Add the product to the homepage
+5. In the `algolia:` section, add the name and title of your project as they will appear on the Algolia platform. For example:
+
+```yaml
+
+    - name: 'acp_user'
+      title: 'ACP User'
+```
+
+## 4. Add the product to the homepage
 
 To add the new product to the top navigation and the role boxes on the homepage, do the following:
 
@@ -153,7 +165,7 @@ To add the new product to the top navigation and the role boxes on the homepage,
                             ...    
     ```
 
-## 4. Add CI checks for the product
+## 5. Add CI checks for the product
 
 To add CI checks for the product per role, do the following:
 
@@ -261,7 +273,7 @@ task :check_mp_dev do
   ]
 ...  
 ```
-## 5. Configure the Algolia search for the new project
+## 6. Configure the Algolia search for the new project
 
 To configure the Algolia search for the product, you need to configure the search in the *spryker-docs* repository and the Algolia app for Spryker docs.
 
@@ -349,22 +361,22 @@ To configure the search in the Algolia app of the Spryker docs, do the following
 1. Click the **Configuration** tab.
 2. Click **+  Add a Searchable Attribute**.
 3. Enter `title` and press `Enter`.
-4. Repeat steps 2-3 until you add the following attributes in the provided order:
-    * title
-    * headings
-    * content
-    * collection,categories,tags
-    * url
+4. Repeat steps 2-3 until you add the following attributes in the provided order and make them either ordered or unordered for search:
+    * title: ordered
+    * headings: ordered
+    * content: unordered
+    * collection,categories,tags: unordered
+    * url: ordered
 
 #### Add ranking attributes
 
 1. Go to **RELEVANCE ESSENTIALS > Ranking and Sorting**.
 2. Click **+  Add custom ranking attribute**.
 3. Enter `date` and press `Enter`.
-4. Repeat steps 2-3 until you add the following attributes in the provided order:
-    * date
-    * custom_ranking.heading
-    * custom_ranking.position
+4. Repeat steps 2-3 until you add the following attributes in the provided order and make them either ascending or descending:
+    * date: descending
+    * custom_ranking.heading: descending
+    * custom_ranking.position: ascending
 
 #### Configure languages
 
@@ -381,12 +393,12 @@ To configure the search in the Algolia app of the Spryker docs, do the following
 1. Go to **FILTERING AND FACETING > Facets**.
 2. Click **+  Add an Attrribute**.
 3. Enter `categories` and press `Enter`.
-4. Repeat steps 2-3 until you add the following attributes in the provided order:
-    * categories
-    * collection
-    * tags
-    * title
-    * type
+4. Repeat steps 2-3 until you add the following attributes in the provided order and make them either searchable or not searchable:
+    * categories: searchable
+    * collection: searchable
+    * tags: searchable
+    * title: searchable
+    * type: not searchable
 
 #### Configure highliting
 

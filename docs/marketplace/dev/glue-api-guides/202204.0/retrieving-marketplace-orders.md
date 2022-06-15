@@ -2,6 +2,9 @@
 title: Retrieving Marketplace orders
 description: Retrieve information about Marketplace orders via Glue API.
 template: glue-api-storefront-guide-template
+related:
+  - title: Managing the returns
+    link: docs/marketplace/dev/glue-api-guides/page.version/managing-the-returns.html
 ---
 
 Every registered customer can retrieve the list of orders for their account, as well as the detailed order information, including every step of the calculation and addresses used in the orders.

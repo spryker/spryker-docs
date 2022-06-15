@@ -1,6 +1,6 @@
 ---
 title: B2C API React Example installation
-description: This article describes installation of B2C API Demo Shop to experience the use of Spryker Glue REST API.
+description: This document describes installation of B2C API Demo Shop to experience the use of Spryker Glue REST API.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/b2c-api-react-example-installation
@@ -24,7 +24,7 @@ redirect_from:
   - /v1/docs/en/b2c-api-react-example-installation
 ---
 
-B2C API React Example can be installed inside [Spryker Development Virtual Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html) (VM) or on a separate dedicated server. Below, you will find detailed steps on how to perform both the installation scenarios.
+B2C API React Example can be installed inside [Spryker Development Virtual Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html) (VM) or on a separate dedicated server. To perform both the installation scenarios, take the following steps.
 
 {% info_block infoBox %}
 
@@ -34,7 +34,7 @@ Using a virtual machine ensures a faster deployment as the VM already has all th
 
 {% info_block errorBox %}
 
-The example application is provided only for display purposes, and should under no circumstances be used as a starting point for any project.
+The example application is provided only for display purposes, and must under no circumstances be used as a starting point for any project.
 
 {% endinfo_block %}
 
@@ -49,13 +49,13 @@ To perform the app installation on the VM:
 vagrant ssh
 ```
 
-3. After logging in to the VM, the current directory will be the folder where your Spryker project is installed, which is `/data/shop/development/current` by default. Go one directory up. To do this, execute the following command:
+3. After logging in to the VM, the current directory is the folder where your Spryker project is installed, which is `/data/shop/development/current` by default. Go one directory up:
 
 ```bash
 cd ..
 ```
 
-4. Prepare a folder where the example app will be installed. For example, if you want to place it in folder `api-rest-example`, execute the following:
+4. Prepare a folder to install the example app. For example, you can place it in the `api-rest-example` folder:
 
 ```bash
 commands:sudo mkdir api-rest-example
@@ -71,8 +71,8 @@ git clone https://github.com/spryker-shop/b2c-api-react-example
 ```
 
 6. Open the `local_inside_vm.env` file for editing.
-7. <a name="step7"></a> Change the `DEV_SERVER_HOST` variable to point to the Glue host. For example, if your project name is `b2c-demo-shop`, the host address will be `glue.de.b2c-demo-shop.local`. Also, you can change the example app page title. It is specified via the `APP_TITLE` variable. 
-    
+7. <a name="step7"></a> Change the `DEV_SERVER_HOST` variable to point to the Glue host. For example, if your project name is `b2c-demo-shop`, the host address is `glue.de.b2c-demo-shop.local`. Also, you can change the example app page title. It is specified via the `APP_TITLE` variable.
+
 Sample `local_inside_vm.env` file implementation for a VM running B2C Demo Shop:
 
 ```
@@ -85,7 +85,7 @@ API_URL="/"
 APP_TITLE=Spryker API React Example
 ```
 
-When done, save the changes and close the file.
+Save the changes and close the file.
 
 8. Install `npm cpy` globally:
 
@@ -99,7 +99,7 @@ sudo npm install --global cpy-cli
 sudo nano /etc/nginx/sites-available/DE_development_glue
 ```
 
-10. Add a new **location** block as follows:
+10. Add a new *location* block as follows:
 
     ```bash
     location /react/ {
@@ -109,7 +109,7 @@ sudo nano /etc/nginx/sites-available/DE_development_glue
     }
     ```
 
-    where `proxy_pass` specifies the host and port where the B2C API React Example will run. The value must match the values of `DEV_SERVER_HOST` and `DEV_SERVER_PORT` of the `local_inside_vm.env` file you edited in <a href="#step7">step 7</a>.
+    where `proxy_pass` specifies the host and port where the B2C API React Example is to be run. The value must match the values of `DEV_SERVER_HOST` and `DEV_SERVER_PORT` of the `local_inside_vm.env` file you have edited in <a href="#step7">step 7</a>.
 
 **Sample vhost implementation for a VM running B2C Demo Shop**
 
@@ -139,12 +139,12 @@ server {
 }
 ```
 
-When done, save the changes and close the file.
+Save the changes and close the file.
 
 11.  Restart the nginx service:
 
 ```bash
-sudo /etc/init.d/nginx restart`
+sudo /etc/init.d/nginx restart
 ```
 
 12. Build and run the application:
@@ -156,22 +156,18 @@ npm run serve:vm
 ```
 
 13. Check that the example application is available at the following URL: `http://glue.de.b2c-demo-shop.local/react/`, where `glue.de.b2c-demo-shop.local` is the host name you specified in the `local_inside_vm.env` file.
-14. To stop the app, press Ctrl+C. To start it again, run:
-
-```bash
-npm run serve:vm
-```
+14. To stop the app, press <kbd>Ctrl+C</kbd>. To start it again, run `npm run serve:vm`
 
 ## Installation on a dedicated server
 
-To perform the app installation on a dedicated web server:
+To perform the app installation on a dedicated web server, follow these steps:
 
 1. Make sure that you have Spryker Glue REST API [installed and working](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-installation-and-configuration.html).
 
 2. Make sure that the following prerequisites are installed on the server:
     * [Node 8.9.3](https://nodejs.org/en/) or newer.
 
-3. Add the following entries to the **hosts** file of the server:
+3. Add the following entries to the `hosts` file of the server:
 
 ```text
 <Glue_IP> glue.de.project-name.local
@@ -180,9 +176,9 @@ To perform the app installation on a dedicated web server:
 
 where:
 
-* **<Glue_IP>** - the IP of the Glue REST API server;
-* **glue.de.project-name.local** - the local hostname of the Glue REST AP   server;
-* **react.local** - the local hostname of the B2C API React Example application.
+* `<Glue_IP>`—the IP of the Glue REST API server.
+* `glue.de.project-name.local`—the local hostname of the Glue REST AP server.
+* `react.local`—the local hostname of the B2C API React Example application.
 
 4. Clone the B2C API React Example repository:
 
@@ -191,7 +187,7 @@ git clone https://github.com/spryker-shop/b2c-api-react-example
 ```
 
 5. Open the `local_outside_vm.env` file for editing.
-6. Change the `DEV_SERVER_HOST` variable to point to the example app hostname, for example, `react.local`, and the `API_URL` variable to point to the local hostname of the Glue REST API server. Also, you can change the example app page title. It is specified via the `APP_TITLE` variable.
+6. Change the `DEV_SERVER_HOST` variable to point to the example app hostname—for example, `react.local`, and the `API_URL` variable to point to the local hostname of the Glue REST API server. Also, you can change the example app page title. It is specified via the `APP_TITLE` variable.
 Sample `local_outside_vm.env` file implementation:
 
 ```
@@ -204,7 +200,7 @@ API_URL="`https://glue.mysprykershop.com`"
 APP_TITLE=Spryker API React Example
 ```
 
-When done, save the changes and close the file.
+Save the changes and close the file.
 
 7. Install `npm cpy` globally:
 
@@ -221,8 +217,4 @@ npm run serve:local
 ```
 
 9. Check that the example application is available at the following URL: `http://react.local`
-10. To stop the app, press Ctrl+C. To start it again, run:
-
-```bash
-npm run serve:local
-```
+10. To stop the app, press <kbd>Ctrl+C</kbd>. To start it again, run `npm run serve:local`.

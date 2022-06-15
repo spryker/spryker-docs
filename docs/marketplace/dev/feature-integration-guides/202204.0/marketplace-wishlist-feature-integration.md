@@ -113,7 +113,7 @@ use Spryker\Client\Wishlist\WishlistDependencyProvider as SprykerWishlistDepende
 class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 {
     /**
-     * @return \Spryker\Client\WishlistExtension\Dependency\Plugin\WishlistPostMoveToCartCollectionExpanderPluginInterface[]
+     * @return array<\Spryker\Client\WishlistExtension\Dependency\Plugin\WishlistPostMoveToCartCollectionExpanderPluginInterface>
      */
     protected function getWishlistPostMoveToCartCollectionExpanderPlugins(): array
     {
@@ -124,7 +124,7 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
     }
 
     /**
-     * @return \Spryker\Client\WishlistExtension\Dependency\Plugin\WishlistCollectionToRemoveExpanderPluginInterface[]
+     * @return array<\Spryker\Client\WishlistExtension\Dependency\Plugin\WishlistCollectionToRemoveExpanderPluginInterface>
      */
     protected function getWishlistCollectionToRemoveExpanderPlugins(): array
     {
@@ -152,7 +152,7 @@ use SprykerShop\Yves\WishlistPage\WishlistPageDependencyProvider as SprykerWishl
 class WishlistPageDependencyProvider extends SprykerWishlistPageDependencyProvider
 {
     /**
-     * @return \SprykerShop\Yves\WishlistPageExtension\Dependency\Plugin\WishlistItemRequestExpanderPluginInterface[]
+     * @return array<\SprykerShop\Yves\WishlistPageExtension\Dependency\Plugin\WishlistItemRequestExpanderPluginInterface>
      */
     protected function getWishlistItemRequestExpanderPlugins(): array
     {
@@ -163,7 +163,7 @@ class WishlistPageDependencyProvider extends SprykerWishlistPageDependencyProvid
     }
 
     /**
-     * @return \SprykerShop\Yves\WishlistPageExtension\Dependency\Plugin\WishlistItemMetaFormExpanderPluginInterface[]
+     * @return array<\SprykerShop\Yves\WishlistPageExtension\Dependency\Plugin\WishlistItemMetaFormExpanderPluginInterface>
      */
     protected function getWishlistItemMetaFormExpanderPlugins(): array
     {
@@ -189,7 +189,7 @@ use Spryker\Zed\Wishlist\WishlistDependencyProvider as SprykerWishlistDependency
 class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistPreAddItemPluginInterface[]
+     * @return array<\Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistPreAddItemPluginInterface>
      */
     protected function getWishlistPreAddItemPlugins(): array
     {

@@ -5,7 +5,6 @@ description: This document describes the flow chart that demonstrates the config
 template: concept-topic-template
 ---
 
-
 The configuration process of a configurable product consists of eight phases illustrated in the following flow chart:
 
 ![configuration-flow](https://confluence-connect.gliffy.net/embed/image/49194e23-84dc-4dc8-8ce2-29fa244522b3.png?utm_medium=live&utm_source=custom)

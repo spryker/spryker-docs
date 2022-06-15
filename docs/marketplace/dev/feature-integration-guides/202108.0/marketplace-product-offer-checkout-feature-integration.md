@@ -83,7 +83,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreConditionPluginInterface[]
+     * @return array<\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreConditionPluginInterface>
      */
     protected function getCheckoutPreConditions(Container $container)
     {

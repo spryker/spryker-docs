@@ -52,7 +52,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\CartExtension\Dependency\Plugin\ItemExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\ItemExpanderPluginInterface>
      */
     protected function getExpanderPlugins(Container $container): array
     {
@@ -81,7 +81,7 @@ use Spryker\Zed\Quote\QuoteDependencyProvider as SprykerQuoteDependencyProvider;
 class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteExpanderPluginInterface>
      */
     protected function getQuoteExpanderPlugins(): array
     {

@@ -1,7 +1,7 @@
 ---
 title: Assigning products to categories
 description: The guide provides instructions on how to assign products to the category in the Back Office.
-last_updated: Aug 11, 2021
+last_updated: June 15, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/assigning-products-to-categories
 originalArticleId: 4c14098e-c5c1-4f63-9957-202bca4a638a
@@ -24,38 +24,27 @@ This topic describes how to assign products to categories.
 
 ## Prerequisites:
 
-To start creating categories, go to **Catalog&nbsp;<span aria-label="and then">></span> Category**.
+To start creating categories,
 
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
-## Assigning products to categories
+## Assign and deassign products from categories
 
-There are three ways to assign products to your category:
-* Select **Edit** for a specific category, and then on the Edit category page, select **Assign Products** in the top-right corner.
-* On the *Categories* table view page, in the *Actions* column, select the **Assign Products** option for a specific category.
-*  On the *View Category* page, select **Assign Products**.
 
-There is no difference between how you initiate the flow. In any event, you are redirected to the same page.
+. Go to **Catalog&nbsp;<span aria-label="and then">></span> Category**.
+    This opens the **Category** page.
+. Next to the category you want to assign products to, click **Actions&nbsp;<span aria-label="and then">></span> Assign Products**.
+    This opens the **Assign products to category** page.
+. On the **Select Products to assign** tab, select the checkboxes next to the products you want to assign.
+. On the **Products in this category** tab, clear the checkboxes next to the products you want to deassign.
 
-To assign one or more products to a category:
-1. In the *Select Products to assign* tab, select the checkbox next to the product you want to assign in the *Selected* column.
-
-{% info_block infoBox %}
-
- If you need to select all products displayed on the page, select **Select all** at the bottom of the table. If you do not see the needed product on the page, there is no need to navigate through the pages manually. Use the Search field to find your product. You can use either SKU or Name value to find the needed product.
-
-{% endinfo_block %}
 
 2. Click **Save**.
 
 **Tips and tricks**
-<br>If you have assigned too many products to your category, you can remove some of them:
-1. On the same *Assign Products* page, scroll down to view the *Products in this category* section.
-2. Depending on the number of products you want to exclude from the category, either clear the checkbox in the Selected column for specific products or click **Deselect All** (this will clear all checkboxes for all products on the current page).
-3. In the Products to be deassigned tab, review products that will be excluded from the category. To restore one or several products, in the Selected column, click **Remove** next to the products you want to restore.
-4. Click **Save**.
+When assigning or deassigning a lot of categories at a time, you can double-check your selection in **Products to be assigned** and **Products to be deassigned** tabs respectively.
 
-### Reference information: Assigning products to categories
+## Reference information: Assigning products to categories
 
 | TAB | ATTRIBUTE | DESCRIPTION |
 |-|-|-|

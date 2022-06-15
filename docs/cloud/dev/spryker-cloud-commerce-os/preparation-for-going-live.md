@@ -36,6 +36,8 @@ If you delegate DNS to Spryker, let us know the date on which to point the domai
 
 After pointing the domain name to your Spryker project, some of your customers may still see your old project due to DNS propagation. So, keep it live for up to 72 hours after the migration.
 
+We highly recommend you to follow our [Security guidelines](https://docs.spryker.com/docs/scos/dev/guidelines/making-your-spryker-shop-secure.html) and assure all the points are acknowledged and applied.
+
 {% endinfo_block %}
 
 ## Four weeks before go-live

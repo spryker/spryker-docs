@@ -17,7 +17,7 @@ entries:
               - title: Configuration in the Back Office
                 nested:
                   - title: Add Unzer credentials
-                    url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/manage-unzer-marketplace-credentails.html
+                    url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/add-unzer-credentails.html
                   - title: Add Unzer credentials for external merchants
                     url: /pbc/all/payment/unzer/configuration-in-the-back-office/add-unzer-credentials-for-external-merchants.html
               - title: Extend & customize

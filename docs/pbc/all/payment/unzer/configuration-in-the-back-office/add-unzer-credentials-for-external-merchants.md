@@ -14,16 +14,16 @@ This topic describes how to add Unzer <!-- standard/Marketplace -->credentials f
 Review the reference information before you start, or look up the necessary information as you go through the process.
 
 ## Add credentials for external merchants
-
-1. On the **Overview of Unzer Credentials** page, against credentials you want to add external merchant credentials for, click **Edit**.
+1. Go to Back Office > Unzer.
+2. On the **Overview of Unzer Credentials** page, against credentials you want to add external merchant credentials for, click **Edit**.
   The **Edit Unzer Credentials** page opens.
-1. On the **External Merchant Credentials** tab, click **Add Merchant Unzer Credentials**.
-2. For the new merchant Unzer credentials, enter a **NAME** <!--the field must be removed from UI-->.
-3. Enter **UNZER PUBLIC KEY**.
-4. Enter **UNZER PRIVATE KEY**.
-5. Select **MERCHANT REFERENCE**.
-6. Enter **PARTICIPANT ID**.
-7. Click **Save**.
+3. On the **External Merchant Credentials** tab, click **Add Merchant Unzer Credentials**.
+4. For the new merchant Unzer credentials, enter a **NAME** <!--the field must be removed from UI-->.
+5. Enter **UNZER PUBLIC KEY**.
+6. Enter **UNZER PRIVATE KEY**.
+7. Select **MERCHANT REFERENCE**.
+8. Enter **PARTICIPANT ID**.
+9. Click **Save**.
 
 ### Reference information: Add external Unzer credentials
 
@@ -33,4 +33,4 @@ Review the reference information before you start, or look up the necessary info
 | UNZER PUBLIC KEY | Unique public key which Unzer provides for each merchant to accept payments. The key is merchant-specific. |
 | UNZER PRIVATE KEY | Unique private key which Unzer provides for each merchant to accept payments. The key is merchant-specific |
 | MERCHANT REFERENCE | Unique ID of a Spryker merchant. |
-| PARTICIPANT ID | Unique ID of a merchant on the Unzer side, which identifies a merchant who receives money when the order is paid and has the status `payment completed`. |
+| PARTICIPANT ID | Unique ID of a merchant on the Unzer side, which identifies a merchant who receives money when the order gets the [status](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/changing-the-state-of-order-items.html#reference-information-changing-the-state-of-order-items) `payment completed`. |

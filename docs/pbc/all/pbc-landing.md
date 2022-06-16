@@ -1,7 +1,7 @@
 ---
 title: PBC landing
-description: Welcome to the PBC page 
+description: Welcome to the PBC page
 template: concept-topic-template
 ---
 
-Welcome to the PBC page
+This is a draft version of the PBC section.

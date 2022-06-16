@@ -7,7 +7,7 @@ template: concept-topic-template
 
 Microsoft announced that the Internet Explorer 11 (IE11) desktop application would be retired on June 15, 2022, for specific versions of Windows 10. Legacy Internet Explorer-based websites and applications will continue to work with Microsoft Edge’s built-in Internet Explorer mode.
 
-It is time to say goodbye to (IE11) for Spryker Yves. We have been preparing for this sunsetting for over five months already, and we believe this is the best way forward for you to give your shoppers the best possible experience.
+It is time to say goodbye to IE11 for Spryker Yves. We have been preparing for this sunsetting for over five months already, and we believe this is the best way forward for you to give your shoppers the best possible experience.
 
 Since the inception of Yves, browser compatibility has been and continues to be very relevant to our development roadmap and evolution.
 
@@ -21,7 +21,7 @@ Browsers like Chrome, Firefox, Safari, Opera, and even Microsoft Edge are evolvi
 
 ## Timeline
 
-As a team, we have decided to end IE11 support for Spryker as our next product release, estimated for Q4 2022.
+We have decided to end IE11 support for Spryker as our next product release, estimated for Q4 2022.
 
 ## How should you prepare
 

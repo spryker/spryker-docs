@@ -80,7 +80,3 @@ The following table describes attributes you select and enter when adding Unzer 
 | STORE RELATION | Defines stores to add the Unzer payment method to. |
 | MERCHANT REFERENCE | Merchant ID on the Spryker side. |
 | PARTICIPANT ID | Merchant reference on the Unzer side, which identifies a merchant who receives money when the order is paid and gets the [status](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/changing-the-state-of-order-items.html#reference-information-changing-the-state-of-order-items) `payment completed`. |
-
-## Next steps
-
-[Add Unzer credentials for external merchants](/docs/pbc/all/payment/unzer/configuration-in-the-back-office/add-unzer-credentials-for-external-merchants.html)  

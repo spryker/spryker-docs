@@ -4,7 +4,7 @@ entries:
     nested:
       - title: Spryker SDK
         url: /docs/sdk/dev/spryker-sdk.html
-      - Extending the SDK
+      - titel: Extending the SDK
         url: /docs/sdk/dev/extending-the-sdk.html
       - title: Building flavored Spryker SDKs
         url: /docs/sdk/dev/building-flavored-spryker-sdks.html

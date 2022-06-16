@@ -21,7 +21,7 @@ Review the reference information before you start, or look up the necessary info
    4. Select **CREDENTIALS TYPE**.
    5. Enter **UNZER PUBLIC KEY**.
    6. Enter **UNZER PRIVATE KEY**.
-   7. from the **STORE RELATION** dropdown, select **Standard**.
+   7. From the **STORE RELATION** dropdown, select **Standard**.
 
      {% info_block infoBox "Info" %}
 
@@ -33,7 +33,7 @@ Review the reference information before you start, or look up the necessary info
 
 ### Reference information: Add Unzer credentials
 
-The following table describes attributes you select and enter when adding Unzer standard credentials:
+The following table describes the attributes you select and enter when adding Unzer standard credentials:
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|

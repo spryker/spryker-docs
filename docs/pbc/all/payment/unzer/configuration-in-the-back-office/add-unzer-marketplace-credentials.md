@@ -67,7 +67,7 @@ To add Unzer marketplace credentials, take the steps in the following sections.
 
 ### Reference information: Add credentials for external merchants
 
-The following table describes attributes you select and enter when adding Unzer credentials:
+The following table describes the attributes you select and enter when adding Unzer credentials:
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|

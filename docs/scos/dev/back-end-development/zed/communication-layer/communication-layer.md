@@ -1,5 +1,5 @@
 ---
-title: Controllers and Actions
+title: About Communication layer
 description: Zed's communication layer is the entry point to the system. Here are executed all of the external requests from users, the Yves-application and all command-line calls. The purpose of this layer is to retrieve the data, delegate to the business layer and to handover it to the presentation layer.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,13 @@ redirect_from:
   - /v2/docs/en/zed-controllers-actions
   - /v1/docs/zed-controllers-actions
   - /v1/docs/en/zed-controllers-actions
+related:
+  - title: Adding indexes to foreign key columns - index generator
+    link: docs/scos/dev/back-end-development/zed/communication-layer/adding-indexes-to-foreign-key-columns-index-generator.html
+  - title: About the Business layer
+    link: docs/scos/dev/back-end-development/zed/business-layer/business-layer.html
+  - title: About the Persistence layer
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
 ---
 
 Zed's communication layer is the entry point to the system. Here are executed all of the external requests from users, the Yves-application and all command-line calls. The purpose of this layer is to retrieve the data, delegate to the business layer and to hand over it to the presentation layer.
@@ -66,18 +73,19 @@ public function testAction(Request $request)
 }
 ```
 
-## Response Methods
+## Response methods
 
 There are several ways to send responses in different use cases. These methods are called at the end of the action and their return value is returned by the action: for example, `return $this->redirectResponse('/my-module')`.
 
-| Response Method | Purpose |
+| RESPONSE METHOD | PURPOSE |
 | --- | --- |
 |  `viewResponse(array $data = [])` | Loads the related twig template and provides the data for the template. |
-| `jsonResponse($data = null, $status = 200, $headers = [])` | Sends a json response which is needed for ajax calls. |
+| `jsonResponse($data = null, $status = 200, $headers = [])` | Sends a json response which is needed for AJAX calls. |
 | `redirectResponse($url, $status = 302, $headers = [])` | Performs a redirect to the given relative path or absolute url. |
 | `streamedResponse($callback = null, $status = 200, $headers = [])` | Sends binary data. This is used to draw the state machines. |
 
-**Example**:
+**Example**
+
 ```php
 <?php
 
@@ -92,19 +100,19 @@ Now, the data can be accessed in the twig template like this: `{% raw %}{{{% end
 
 ***
 
-## Controllers and Paths in Zed
+## Controllers and paths in Zed
 
 Every `module-controller-action` triple is related to a URL of the application. Usually a URL has three segments which are related to module, controller and action.
 
 Examples of paths:
 
-| Module | Controller | Action | Url(s) |
+| MODULE | CONTROLLER | ACTION | URL(S) |
 | --- | --- | --- | --- |
-| `MyModule` | `IndexController` | `indexAction()` | `my-module/` |
-| `MyModule` | `IndexController` | `testAction()` | `my-module/index/test` |
-| `MyModule` | `AnyOtherController` | `indexAction()` | `my-module/any-other` |
-| `MyModule` | `AnyOtherController` | `testAction()` | `my-module/any-other/test` |
-| `Cart` | `GatewayController` | `addItemAction()` | `cart/gateway/add-item` |
+| MyModule | IndexController | indexAction() | my-module/ |
+| MyModule | IndexController | testAction() | my-module/index/test |
+| MyModule | AnyOtherController | indexAction() | my-module/any-other |
+| MyModule | AnyOtherController | testAction() | my-module/any-other/test |
+| Cart | GatewayController | addItemAction() | cart/gateway/add-item |
 
 As you can see there are some path-resolver rules:
 
@@ -114,7 +122,7 @@ As you can see there are some path-resolver rules:
 
 ***
 
-## Mapping Twig Templates
+## Mapping twig templates
 
 Each action returning `$this->viewResponse()` must have a dedicated Twig template:
 

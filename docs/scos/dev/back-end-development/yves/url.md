@@ -26,7 +26,7 @@ redirect_from:
 
 The URL module handles dynamic URLs for entities that appear on the front-end (Yves). At the moment, Spryker core provides URL handling for products, CMS pages, categories and URL redirects.
 
-The URLs are stored in one database table and each is unique. Spryker OS avoids multiple URLs heading to a single entity, as it leads to a poor SEO support. Only one URL should be active for a single entity, other URLs should be set as URL redirects. 
+The URLs are stored in one database table and each is unique. Spryker OS avoids multiple URLs heading to a single entity, as it leads to a poor SEO support. Only one URL should be active for a single entity, other URLs should be set as URL redirects.
 
 In the Spryker Demo Shop, URLs are exported to the key-value storage (Redis) with collectors. Every stored key contains the URL that can be matched with a router and every stored value contains a reference `key` and a `type`.
 

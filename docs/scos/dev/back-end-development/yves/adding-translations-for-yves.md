@@ -22,6 +22,23 @@ redirect_from:
   - /v2/docs/en/frontend-translations
   - /v1/docs/frontend-translations
   - /v1/docs/en/frontend-translations
+related:
+  - title: How translations are managed
+    link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-feature-walkthrough/how-translations-are-managed.html
+  - title: Yves overview
+    link: docs/scos/dev/back-end-development/yves/yves.html
+  - title: CLI entry point for Yves
+    link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
+  - title: Controllers and actions
+    link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
+  - title: Implementing URL routing in Yves
+    link: docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
+  - title: Modular Frontend
+    link: docs/scos/dev/back-end-development/yves/modular-frontend.html
+  - title: Yves bootstrapping
+    link: docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
+  - title: Yves routes
+    link: docs/scos/dev/back-end-development/yves/yves-routes.html
 ---
 
 Textual translations are handled by the Glossary-module. You can use the GlossaryFacade in Zed to add entries to Glossary (or you can use the Zed UI).
@@ -57,13 +74,13 @@ The translation function is provided by [Symfony translation component](http://s
 
 You can use the key in a Twig template in Yves:
 
-```php
+```twig
 {% raw %}{{{% endraw %} 'say.hello' | trans {% raw %}}}{% endraw %}
 ```
 
 Sometimes you need to list all keys which are used in a template. Currently there is no good solution, but this regex will do the job pretty good:
 
-```php
+```twig
 {% raw %}{{{% endraw %}.?"(.*)".?\|.?trans.?{% raw %}}}{% endraw %}
 ```
 
@@ -73,19 +90,19 @@ When you have a dynamic part in the translation, you can use placeholders.
 
 **Entry in glossary**:
 
-| Key       | Value               |
+| KEY       | VALUE               |
 | --------- | ------------------- |
 | “my.name” | “My name is %name%” |
 
 Now replace it with a value in the Twig template:
 
-```php
+```twig
 {% raw %}{{{% endraw %} "auth.my.name" | trans({'%name%' : 'Fabian'}, "app") {% raw %}}}{% endraw %}
 ```
 
 This will show “My name is Fabian”
 
-## Translation with ajax requests
+## Translation with AJAX requests
 
 To use an AJAX request, you need to send translated content directly from the controller. In Yves you can locate the translator and use it directly:
 

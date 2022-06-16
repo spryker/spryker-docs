@@ -1,5 +1,5 @@
 ---
-title: Getting an Overview of the Used Plugins
+title: Getting an overview of the used plugins
 description: Plugin Overview gives you several ways of displaying plugin usages.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,9 @@ redirect_from:
   - /v2/docs/en/plugin-overview
   - /v1/docs/plugin-overview
   - /v1/docs/en/plugin-overview
+related:
+  - title: Plugins
+    link: docs/scos/dev/back-end-development/plugins/plugins.html
 ---
 
 To be able to use a new feature projects most likely need to add some plugins to their `*DependencyProvider`. Currently, it is not easy for projects to integrate a new feature due to the difficulties in identifying to which *DependencyProvider plugin A* of *module B* can be added to bring *functionality X*.
@@ -30,8 +33,10 @@ To see which [Plugin](/docs/scos/dev/back-end-development/plugins/plugins.html) 
 
 You can even download a .CSV file with all used plugins.
 
-## Console Examples
+## Console examples
+
 ### Show all
+
 Print all used plugins by running the command without any argument or option.
 
 This will search for all `DependencyProvider` in the project code and all used plugins in there. The header of the table is the `DepenencyProvider` in which the plugins are found.
@@ -48,6 +53,7 @@ Spryker\Zed\CustomerUserConnectorGui\Communication\Plugin\UserTableActionExpande
 ```
 
 ### Show one module
+
 Another way of execution is to add the "module" option which can be used to shrink the list to a more readable one.
 
 ```
@@ -62,6 +68,7 @@ Spryker\Zed\CustomerUserConnectorGui\Communication\Plugin\UserTableActionExpande
 ```
 
 ### Show all of an application
+
 You can also print a list of used plugins in applications.
 
 ```
@@ -75,5 +82,3 @@ Spryker\Zed\CustomerUserConnectorGui\Communication\Plugin\UserTableActionExpande
 ```
 
 The module option is very powerful and can be used in many ways. You can also use a placeholder (*) in the module option elements. The module option consists of three elements **Organization + Application + Module**.
-
-<!-- Last review date: Feb 11, 2019 -->

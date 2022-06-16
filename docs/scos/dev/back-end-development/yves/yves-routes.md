@@ -1,5 +1,5 @@
 ---
-title: Yves Routes
+title: Yves routes
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-yves-routes
@@ -21,6 +21,21 @@ redirect_from:
   - /v2/docs/en/t-yves-routes
   - /v1/docs/t-yves-routes
   - /v1/docs/en/t-yves-routes
+related:
+  - title: Yves overview
+    link: docs/scos/dev/back-end-development/yves/yves.html
+  - title: Adding translations for Yves
+    link: docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
+  - title: CLI entry point for Yves
+    link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
+  - title: Controllers and actions
+    link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
+  - title: Implementing URL routing in Yves
+    link: docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
+  - title: Modular Frontend
+    link: docs/scos/dev/back-end-development/yves/modular-frontend.html
+  - title: Yves bootstrapping
+    link: docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
 ---
 
 Whenever you need to create a new controller, you’ll need to define a path where it’s available. To do that, register your controllers for a specific path (or in other words, create a new route definition) in a route.
@@ -109,6 +124,7 @@ protected function getRouteProvider()
 ```
 
 ## Routers
+
 Routers are responsible for finding a matching controller action for each request. Spryker uses Symfony’s `ChainRouter` to chain multiple routers which means that each router will be executed after each other, and the first, which finds a matching path, will resolve the request.
 
 By default we provide three routers:

@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-customerreorderwidget.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-customerreorderwidget.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-customerreorderwidget.html
+  - /module_migration_guides/mg-customer-reorder-widget.htm
 ---
 
 ## Upgrading from version 4.* to version 6.0.0

@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/managing-customer-addresses-via-glue-api
   - /docs/managing-customer-addresses-via-glue-api
   - /docs/en/managing-customer-addresses-via-glue-api
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-customers/managing-customer-addresses.html
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/managing-customer-addresses.html
+  - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/managing-customer-addresses.html
+  - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/managing-customer-addresses.html
 related:
   - title: Managing Wishlists
     link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html

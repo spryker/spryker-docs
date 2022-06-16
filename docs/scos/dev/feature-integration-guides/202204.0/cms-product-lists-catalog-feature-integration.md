@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/cms-page-search-product-lists-catalog-feature-integration
   - /docs/cms-page-search-product-lists-catalog-feature-integration
   - /docs/en/cms-page-search-product-lists-catalog-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/cms-product-lists-catalog-feature-integration.html
 related:
   - title: CMS pages in search results
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-in-search-results-overview.html

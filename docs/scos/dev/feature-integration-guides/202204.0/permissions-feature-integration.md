@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/permissions-feature-integration
   - /docs/permissions-feature-integration
   - /docs/en/permissions-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/permissions-feature-integration.html
 ---
 
 The Permissions feature is shipped with following modules:

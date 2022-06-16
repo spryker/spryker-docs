@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-customer-groups
   - /docs/managing-customer-groups
   - /docs/en/managing-customer-groups
+  - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customer-groups.html
   - /docs/scos/user/back-office-user-guides/202204.0/customer/customer-customer-access-customer-groups/managing-customer-groups.html
 related:
   - title: Customer Accounts

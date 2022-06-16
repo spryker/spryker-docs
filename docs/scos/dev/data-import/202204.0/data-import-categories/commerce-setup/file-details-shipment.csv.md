@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-shipmentcsv
   - /docs/file-details-shipmentcsv
   - /docs/en/file-details-shipmentcsv
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/commerce-setup/file-details-shipment.csv.html
+  - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-shipment.csv.html
+  - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-shipment.csv.html
 ---
 
 This document describes the `shipment.csv` file to configure the [shipment](/docs/scos/user/features/{{page.version}}/shipment-feature-overview.html) information in your Spryker Demo Shop.

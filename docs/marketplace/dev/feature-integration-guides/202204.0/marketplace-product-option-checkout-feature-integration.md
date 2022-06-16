@@ -3,6 +3,11 @@ title: Marketplace Product Option + Checkout feature integration
 last_updated: Jul 28, 2021
 Description: This document describes the process how to integrate the Marketplace Product Option feature into a Spryker project.
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Product Options feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-options-feature-walkthrough.html
+  - title: Checkout feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/checkout-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product Option + Checkout feature into a Spryker project.
@@ -45,7 +50,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreConditionPluginInterface[]
+     * @return array<\Spryker\Zed\CheckoutExtension\Dependency\Plugin\CheckoutPreConditionPluginInterface>
      */
     protected function getCheckoutPreConditions(Container $container)
     {

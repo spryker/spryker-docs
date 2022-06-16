@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/product-measurement-unit-feature-integration
   - /docs/product-measurement-unit-feature-integration
   - /docs/en/product-measurement-unit-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/product-measurement-unit-feature-integration.html
 ---
 
 ## Install feature core

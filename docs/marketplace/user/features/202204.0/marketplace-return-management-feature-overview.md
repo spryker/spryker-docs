@@ -2,6 +2,9 @@
 title: Marketplace Return Management feature overview
 description: This document contains concept information for the Marketplace Return Management feature.
 template: concept-topic-template
+related:
+  - title: Managing marketplace returns
+    link: docs/marketplace/user/back-office-user-guides/page.version/sales/managing-marketplace-returns.html
 ---
 
 *Marketplace Return Management* feature lets you create and manage returns for a merchant order in a Spryker Marketplace Demo Shop.
@@ -18,6 +21,7 @@ You can also create and manage returns via Glue API. For details, see [Managing 
 ## Marketplace return items states
 
 The return items can have the following states in the Marketplace Order Management System (Marketplace OMS):
+
 * *Waiting for return*: a buyer created a return, but a merchant user has not confirmed it in the Merchant Portal yet.
 * *Returned*: the return has been received and confirmed by the merchant user.
 * *Refunded*: A merchant user has made a refund for the returned items.
@@ -32,6 +36,7 @@ The relation of the sales order items statuses and the return states is as follo
 ## Marketplace return slip
 
 Buyers and Back Office users (Marketplace administrator and [main merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html)) can have a paper version of the return by printing the automatically generated *return slip*. The return slip contains:
+
 * The return and marketplace sales order references.
 * Details about the returnable marketplace sales order items.
 * A barcode generated based on the return reference.

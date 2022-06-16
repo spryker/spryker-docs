@@ -3,6 +3,8 @@ title: Product Rating & Reviews feature walkthrough
 last_updated: Aug 19, 2021
 description: The Product Rating & Reviews feature allows customers to add reviews and ratings to abstract products.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202200.0/product-rating-reviews-feature-walkthrough.html
 ---
 
 The _Product Rating & Reviews_ feature allows customers to add reviews and ratings to abstract products.

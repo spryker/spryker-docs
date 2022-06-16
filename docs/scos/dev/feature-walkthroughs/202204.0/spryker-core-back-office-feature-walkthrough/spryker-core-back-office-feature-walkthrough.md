@@ -3,6 +3,8 @@ title: Spryker Core Back Office feature walkthrough
 last_updated: The Spryker Core Back Office feature adds a comprehensive, intuitive administration area
 description:
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202200.0/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
 ---
 
 The _Spryker Core Back Office_ feature adds a comprehensive, intuitive administration area that provides the product and content management capabilities, categories and navigation building blocks, search and filter customizations, barcode generator, order handling, company structure creation (for B2B users), merchant-buyer contracts' setup.

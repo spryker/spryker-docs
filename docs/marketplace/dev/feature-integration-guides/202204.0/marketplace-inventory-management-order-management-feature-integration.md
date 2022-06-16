@@ -3,6 +3,11 @@ title: Marketplace Inventory Management + Order Management feature integration
 last_updated: Sep 07, 2021
 description: This document describes the process how to integrate the Marketplace Inventory Management + Order Management feature into a Spryker project.
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Inventory Management feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-inventory-management-feature-walkthrough.html
+  - title: Marketplace Order Management feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Inventory Management + Order Management feature into a Spryker project.
@@ -46,7 +51,7 @@ use Spryker\Zed\OmsProductOfferReservation\Communication\Plugin\Oms\ProductOffer
 class OmsDependencyProvider extends SprykerOmsDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationAggregationPluginInterface[]
+     * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationAggregationPluginInterface>
      */
     protected function getOmsReservationAggregationPlugins(): array
     {
@@ -56,7 +61,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationWriterStrategyPluginInterface[]
+     * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationWriterStrategyPluginInterface>
      */
     protected function getOmsReservationWriterStrategyPlugins(): array
     {
@@ -66,7 +71,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\OmsExtension\Dependency\Plugin\ReservationPostSaveTerminationAwareStrategyPluginInterface[]
+     * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\ReservationPostSaveTerminationAwareStrategyPluginInterface>
      */
     protected function getReservationPostSaveTerminationAwareStrategyPlugins(): array
     {
@@ -76,7 +81,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationReaderStrategyPluginInterface[]
+     * @return array<\Spryker\Zed\OmsExtension\Dependency\Plugin\OmsReservationReaderStrategyPluginInterface>
      */
     protected function getOmsReservationReaderStrategyPlugins(): array
     {
@@ -110,7 +115,7 @@ use Spryker\Zed\ProductOfferStockGui\ProductOfferStockGuiDependencyProvider as S
 class ProductOfferStockGuiDependencyProvider extends SprykerProductOfferStockGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductOfferStockGuiExtension\Dependeency\Plugin\ProductOfferStockTableExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductOfferStockGuiExtension\Dependeency\Plugin\ProductOfferStockTableExpanderPluginInterface>
      */
     protected function getProductOfferStockTableExpanderPlugins(): array
     {
@@ -122,6 +127,8 @@ class ProductOfferStockGuiDependencyProvider extends SprykerProductOfferStockGui
 ```
 
 {% info_block warningBox "Verification" %}
+
+Make sure that when you view some product offer at `http://zed.de.demo-spryker.com/product-offer-gui/view?id-product-offer={idProductOffer}}`, you can see the `Stock` section.
 
 Make sure that if you open some product offer in view mode at `http://zed.mysprykershop.com/product-offer-gui/view?id-product-offer={% raw %}{{idProductOffer}}{% endraw %}`, stock table contains the `Reservations` column.
 

@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-discount-vouchercsv
   - /docs/file-details-discount-vouchercsv
   - /docs/en/file-details-discount-vouchercsv
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/merchandising-setup/discounts/file-details-discount-voucher.csv.html
+  - /docs/scos/dev/data-import/201903.0/data-import-categories/merchandising-setup/discounts/file-details-discount-voucher.csv.html
+  - /docs/scos/dev/data-import/201907.0/data-import-categories/merchandising-setup/discounts/file-details-discount-voucher.csv.html
 ---
 
 This document describes the `discount_voucher.csv` file to configure Discount Voucher information in your Spryker Demo Shop.
@@ -40,15 +43,15 @@ This file has the following dependency: [ discount.csv ](/docs/scos/dev/data-imp
 
 ## Additional information
 
-The generated voucher code consists of two parts: 
+The generated voucher code consists of two parts:
 
 * `custom_code` which is a prefix of the voucher code that can be set directly at `custom_code`, and
-* a random part with the amount of random symbols equals to the value of `random_generated_code_length` field. 
+* a random part with the amount of random symbols equals to the value of `random_generated_code_length` field.
 
 If a quantity is equal to or greater than 1, then `random_generated_code_length` should be non-empty as the generated code is unique.
 
 Field `voucher_batch` is necessary when different vouchers belong to the same voucher pool. It must have been previously created during `discount.csv` import, then the batch value must be a different number for each row in the file.
-  
+
 ## Import template file and content example
 
 Find the template and an example of the file below:
@@ -57,4 +60,3 @@ Find the template and an example of the file below:
 | --- | --- |
 | [discount_voucher.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Discounts/Template+discount_voucher.csv) | Exemplary import file with headers only. |
 | [discount_voucher.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Merchandising+Setup/Discounts/discount_voucher.csv) | Exemplary import file with Demo Shop data. |
-

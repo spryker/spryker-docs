@@ -1,6 +1,8 @@
 ---
 title: Integrating Seven Senders
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/technology-partner-guides/202200.0/shipment/seven-senders/integrating-seven-senders.html
 ---
 
 This document describes how to integrate the Seven Senders technology partner.

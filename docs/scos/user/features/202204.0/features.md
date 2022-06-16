@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/overview-of-the-feature-guides
   - /docs/overview-of-the-feature-guides
   - /docs/en/overview-of-the-feature-guides
+  - /docs/scos/user/features/202200.0/features.html
 ---
 
 The feature guides describe features in details, highlight their functional abilities, business values, and use-case examples. This information might be useful for:

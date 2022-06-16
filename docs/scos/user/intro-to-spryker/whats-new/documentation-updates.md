@@ -22,6 +22,8 @@ redirect_from:
   - /v1/docs/en/documentation-updates
 ---
 
+
+<!-- causes CI errors
 This page lists all the updates to the documentation made for each release.
 Check out our [release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) to learn more about the releases.
 
@@ -321,7 +323,6 @@ Below you will find the list of the new/updated documentation released as part o
 
 * Payment Management
     * [Managing Payment Methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/payment-methods/managing-payment-methods.html)
-    * [Payment Methods: Reference Information](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/payment-methods/managing-payment-methods.html#reference-information-editing-payment-method-pages)
 * [Shipment](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/creating-shipments.html)
 
     * [Creating a Carrier Company](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-carrier-companies.html)
@@ -344,3 +345,5 @@ Below you will find the list of the new/updated documentation released as part o
 * [Inventory](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html)
 * [Custom Twig Functions for Yves](/docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html)
 * [Custom Twig Functions for Zed](/docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html)
+
+-->

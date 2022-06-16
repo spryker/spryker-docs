@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-cms-pages
   - /docs/managing-cms-pages
   - /docs/en/managing-cms-pages
+  - /docs/scos/user/back-office-user-guides/202200.0/content/pages/managing-cms-pages.html
 related:
   - title: CMS Page
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html

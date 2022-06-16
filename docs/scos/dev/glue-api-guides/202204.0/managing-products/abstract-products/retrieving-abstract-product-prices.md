@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/retrieving-abstract-product-prices
   - /docs/retrieving-abstract-product-prices
   - /docs/en/retrieving-abstract-product-prices
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
+  - /docs/scos/dev/glue-api-guides/201907.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
 ---
 

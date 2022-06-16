@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/authenticating-as-a-customer
   - /docs/authenticating-as-a-customer
   - /docs/en/authenticating-as-a-customer
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-customers/authenticating-as-a-customer.html
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/authenticating-as-a-customer.html
+  - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/authenticating-as-a-customer.html
+  - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/authenticating-as-a-customer.html
 related:
   - title: Authentication and authorization
     link: docs/scos/dev/glue-api-guides/page.version/authentication-and-authorization.html

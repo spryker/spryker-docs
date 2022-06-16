@@ -3,6 +3,8 @@ title: "Glue API: Marketplace Product Offer Prices feature integration"
 last_updated: Nov 10, 2020
 description: This document describes the process how to integrate the Marketplace Product Offer Prices Glue API feature into a Spryker project.
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/marketplace/dev/feature-integration-guides/202200.0/glue/marketplace-product-offer-prices-feature-integration.html
 ---
 
 This document describes how to integrate the Marketplace Product Offer Prices Glue API feature into a Spryker project.
@@ -24,7 +26,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/product-offer-prices-rest-api:"^0.4.0" --update-with-dependencies
+composer require spryker/product-offer-prices-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -85,7 +87,7 @@ use Spryker\Glue\ProductOfferPricesRestApi\Plugin\GlueApplication\ProductOfferPr
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface[]
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
      */
     protected function getResourceRoutePlugins(): array
     {
@@ -130,4 +132,3 @@ Integrate the following related features:
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |---|---|---|
 | Marketplace Product Offer Prices + Wishlist Glue API | &check;  |  [Glue API: Marketplace Product Offer Prices + Wishlist feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-wishlist-feature-integration.html) |
-

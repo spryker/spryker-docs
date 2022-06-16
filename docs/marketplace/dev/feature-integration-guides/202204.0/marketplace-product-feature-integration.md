@@ -3,6 +3,11 @@ title: Marketplace Product feature integration
 description: This document describes the process how to integrate the Marketplace Product feature into a Spryker project.
 template: feature-integration-guide-template
 last_updated: Mar 11, 2022
+redirect_from:
+  - /docs/marketplace/dev/feature-integration-guides/202200.0/glue/marketplace-product-feature-integration.html
+related:
+  - title: Marketplace Product feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product feature into a Spryker project.
@@ -105,6 +110,7 @@ Make sure that the following changes have been applied in transfer objects:
 | MerchantProductStorage    | class | Created | src/Generated/Shared/Transfer/MerchantProductStorageTransfer |
 | ProductAbstract.idMerchant | property | Created | src/Generated/Shared/Transfer/ProductAbstractTransfer |
 | MerchantProductView       | class | Created | src/Generated/Shared/Transfer/MerchantProductViewTransfer |
+| PageMap.merchantReferences | property | Created | src/Generated/Shared/Transfer/PageMapTransfer                   |
 
 {% endinfo_block %}
 
@@ -167,8 +173,8 @@ Make sure that the merchant product data appears in the search engine and in the
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                                         | DESCRIPTION                                                                                    | PREREQUISITES | NAMESPACE                                                                |
-|----------------------------------------------------------------|------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------------|
+| PLUGIN   | DESCRIPTION  | PREREQUISITES | NAMESPACE   |
+|-------------|---------------------|---------------|---------------|
 | MerchantProductProductAbstractViewActionViewDataExpanderPlugin | Expands view data for abstract product with merchant data.                                     |               | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
 | MerchantProductProductAbstractListActionViewDataExpanderPlugin | Expands product list data for abstract product data for merchant filter.                       |               | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
 | MerchantProductProductTableQueryCriteriaExpanderPlugin         | Expands QueryCriteriaTransfer with QueryJoinTransfer for filtering by idMerchant.              |               | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
@@ -179,6 +185,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantProductProductAbstractPostCreatePlugin                 | Creates a new merchant product abstract entity if `ProductAbstractTransfer.idMerchant` is set. | None          | Spryker\Zed\MerchantProduct\Communication\Plugin\Product                 |
 | ProductApprovalProductAbstractEditViewExpanderPlugin           | Expands view data with abstract product approval status data.                                  | None          | Spryker\Zed\ProductApprovalGui\Communication\Plugin\ProductManagement    |
 | MerchantProductProductAbstractEditViewExpanderPlugin           | Expands view data for abstract product with merchant data.                                     | None          | Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement    |
+| MerchantProductProductConcretePageMapExpanderPlugin            | Expands `PageMap` transfer object with `merchant_reference`.                                   |               | Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch |
 
 **src/Pyz/Zed/Product/ProductDependencyProvider.php**
 
@@ -192,7 +199,7 @@ use Spryker\Zed\MerchantProduct\Communication\Plugin\Product\MerchantProductProd
 class ProductDependencyProvider extends SprykerProductDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductExtension\Dependency\Plugin\ProductAbstractPostCreatePluginInterface[]
+     * @return array<\Spryker\Zed\ProductExtension\Dependency\Plugin\ProductAbstractPostCreatePluginInterface>
      */
     protected function getProductAbstractPostCreatePlugins(): array
     {
@@ -225,7 +232,7 @@ use Spryker\Zed\MerchantProductGui\Communication\Plugin\ProductManagement\Mercha
 class ProductManagementDependencyProvider extends SprykerProductManagementDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractViewActionViewDataExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractViewActionViewDataExpanderPluginInterface>
      */
     protected function getProductAbstractViewActionViewDataExpanderPlugins(): array
     {
@@ -235,7 +242,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
     }
 
     /**
-     * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductTableQueryCriteriaExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductTableQueryCriteriaExpanderPluginInterface>
      */
     protected function getProductTableQueryCriteriaExpanderPluginInterfaces(): array
     {
@@ -245,7 +252,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
     }
 
     /**
-     * @return \Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractListActionViewDataExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductManagementExtension\Dependency\Plugin\ProductAbstractListActionViewDataExpanderPluginInterface>
      */
     protected function getProductAbstractListActionViewDataExpanderPlugins(): array
     {
@@ -266,12 +273,12 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
     }
 }
 ```
-
 </details>
 
 {% info_block warningBox "Verification" %}
 
 Make sure that you can filter products by merchant in `http://zed.de.demo-spryker.com/product-management`.
+
 Make sure that you can see the merchant name in `http://zed.de.demo-spryker.com/product-management/view?id-product-abstract={id-product-abstract}}`. (Applicable only for products that are assigned to some merchant. See import step.)
 
 {% endinfo_block %}
@@ -287,12 +294,13 @@ use Spryker\Shared\MerchantProductSearch\MerchantProductSearchConfig;
 use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductAbstractMapExpanderPlugin;
 use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductPageDataExpanderPlugin as MerchantMerchantProductPageDataExpanderPlugin;
 use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductPageDataLoaderPlugin as MerchantMerchantProductPageDataLoaderPlugin;
+use Spryker\Zed\MerchantProductSearch\Communication\Plugin\ProductPageSearch\MerchantProductProductConcretePageMapExpanderPlugin;
 use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider as SprykerProductPageSearchDependencyProvider;
 
 class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductPageSearch\Dependency\Plugin\ProductPageDataExpanderInterface[]
+     * @return array<\Spryker\Zed\ProductPageSearch\Dependency\Plugin\ProductPageDataExpanderInterface>
      */
     protected function getDataExpanderPlugins()
     {
@@ -303,7 +311,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 
     /**
-     * @return \Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductAbstractMapExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductAbstractMapExpanderPluginInterface>
      */
     protected function getProductAbstractMapExpanderPlugins(): array
     {
@@ -313,7 +321,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
     }
 
     /**
-     * @return \Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductPageDataLoaderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductPageDataLoaderPluginInterface>
      */
     protected function getDataLoaderPlugins()
     {
@@ -321,9 +329,18 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
             new MerchantMerchantProductPageDataLoaderPlugin(),
         ];
     }
+        
+    /**
+     * @return array<\Spryker\Zed\ProductPageSearchExtension\Dependency\Plugin\ProductConcretePageMapExpanderPluginInterface>
+     */
+    protected function getConcreteProductMapExpanderPlugins(): array
+    {
+        return [
+            new MerchantProductProductConcretePageMapExpanderPlugin(),
+        ];
+    }
 }
 ```
-
 </details>
 
 {% info_block warningBox "Verification" %}
@@ -332,7 +349,7 @@ Make sure the `de_page` Elasticsearch index for any product that belongs (see `s
 
 {% endinfo_block %}
 
-**src/Pyz/Client/ProductStorage/ProductStorageDependencyProvider.php**
+**src/Pyz/Zed/ProductStorage/ProductStorageDependencyProvider.php**
 
 ```php
 <?php
@@ -345,7 +362,7 @@ use Spryker\Zed\ProductStorage\ProductStorageDependencyProvider as SprykerProduc
 class ProductStorageDependencyProvider extends SprykerProductStorageDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductStorageExtension\Dependency\Plugin\ProductAbstractStorageExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductStorageExtension\Dependency\Plugin\ProductAbstractStorageExpanderPluginInterface>
      */
     protected function getProductAbstractStorageExpanderPlugins(): array
     {
@@ -543,6 +560,26 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
+**data/import/local/full_EU.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-product
+    source: data/import/common/common/marketplace/merchant_product.csv
+```
+
+**data/import/local/full_US.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-product
+    source: data/import/common/common/marketplace/merchant_product.csv
+```
+
 Import data:
 
 ```bash
@@ -566,7 +603,6 @@ Register the following plugins to enable widgets:
 | PLUGIN  | DESCRIPTION | Prerequisites | NAMESPACE |
 | ----------- | ----------- | ---------- | --------- |
 | MerchantProductWidget | Displays alternative product. |  | SprykerShop\Yves\MerchantProductWidget\Widget |
-| ProductSoldByMerchantWidget | Displays merchant product. |  | SprykerShop\Yves\MerchantProductWidget\Widget |
 
 ```php
 <?php
@@ -580,7 +616,7 @@ use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as Spryke
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     protected function getGlobalWidgets(): array
     {
@@ -610,13 +646,15 @@ Make sure that when you add merchant product to cart, on a cart page is has the 
 
 Append glossary according to your configuration:
 
-**src/data/import/common/common/glossary.csv**
+**data/import/common/common/glossary.csv**
 
 ```
 merchant_product.message.invalid,Product "%sku%" with Merchant "%merchant_reference%" not found.,en_US
 merchant_product.message.invalid,Der Produkt "%sku%" mit dem Händler "%merchant_reference%" ist nicht gefunden.,de_DE
 merchant_product.sold_by,Sold by,en_US
 merchant_product.sold_by,Verkauft durch,de_DE
+product.filter.merchant_name,Merchant,en_US
+product.filter.merchant_name,Händler,de_DE
 ```
 
 Import data:
@@ -627,7 +665,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data is added to the `spy_glossary` table in the database.
+Make sure that the configured data is added to the spy_glossary_key` and `spy_glossary_translation` tables in the database.
 
 {% endinfo_block %}
 
@@ -639,6 +677,7 @@ Enable the following behaviors by registering the plugins:
 | ----------------- | ---------------------- | ------------ | -------------------- |
 | MerchantProductMerchantNameSearchConfigExpanderPlugin | Expands facet configuration with merchant name filter.       |           | Spryker\Client\MerchantProductSearch\Plugin\Search          |
 | ProductViewMerchantProductExpanderPlugin              | Expands ProductView transfer object with merchant reference. |           | Spryker\Client\MerchantProductStorage\Plugin\ProductStorage |
+| MerchantReferenceQueryExpanderPlugin  | Adds filter by merchant reference to query. |               | Spryker\Client\MerchantProductSearch\Plugin\Search |
 
 **src/Pyz/Client/Search/SearchDependencyProvider.php**
 
@@ -656,7 +695,7 @@ class SearchDependencyProvider extends SprykerSearchDependencyProvider
     /**
      * @param \Spryker\Client\Kernel\Container $container
      *
-     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface[]
+     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface>
      */
     protected function createSearchConfigExpanderPlugins(Container $container): array
     {
@@ -685,7 +724,7 @@ class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDe
     /**
      * @param \Spryker\Client\Kernel\Container $container
      *
-     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface[]
+     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface>
      */
     protected function getSearchConfigExpanderPlugins(Container $container): array
     {
@@ -716,7 +755,7 @@ use Spryker\Client\ProductStorage\ProductStorageDependencyProvider as SprykerPro
 class ProductStorageDependencyProvider extends SprykerProductStorageDependencyProvider
 {
     /**
-     * @return \Spryker\Client\ProductStorage\Dependency\Plugin\ProductViewExpanderPluginInterface[]
+     * @return array<\Spryker\Client\ProductStorage\Dependency\Plugin\ProductViewExpanderPluginInterface>
      */
     protected function getProductViewExpanderPlugins()
     {
@@ -733,6 +772,35 @@ Make sure that the merchant product is selected on the product details page by d
 
 {% endinfo_block %}
 
+**src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
+```php
+<?php
+
+namespace Pyz\Client\Catalog;
+
+use Spryker\Client\Catalog\CatalogDependencyProvider as SprykerCatalogDependencyProvider;
+use Spryker\Client\MerchantProductSearch\Plugin\Search\MerchantReferenceQueryExpanderPlugin;
+
+class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface>|array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
+     */
+    protected function getProductConcreteCatalogSearchQueryExpanderPlugins(): array
+    {
+        return [
+            new MerchantReferenceQueryExpanderPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure you can filter concrete products by merchant reference while searching by full-text.
+
+{% endinfo_block %}
+
 ## Related features
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
@@ -741,3 +809,4 @@ Make sure that the merchant product is selected on the product details page by d
 | Marketplace Product + Marketplace Product Offer | | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-marketplace-product-offer-feature-integration.html) |
 | Marketplace Product + Inventory Management | | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html) |
 | Marketplace Product + Cart | | [Marketplace Product + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-cart-feature-integration.html) |
+| Marketplace Product + Quick Add to Cart | | [Marketplace Product + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-quick-add-to-cart-feature-integration.html) |

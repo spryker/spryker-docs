@@ -5,6 +5,9 @@ description: This document describes how to integrate the Offers Volume Prices G
 template: feature-integration-guide-template
 redirect_from:
     - /docs/marketplace/dev/feature-integration-guides/202204.0/glue/marketplace-product-offer-volume-prices.html
+related:
+  - title: Marketplace Product Offer Prices feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-prices-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Offers Volume Prices Glue API feature into a Spryker project.
@@ -27,7 +30,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/spryker/price-product-offer-volumes-rest-api:"^0.1.0" --update-with-dependencies
+composer require spryker/price-product-offer-volumes-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -81,7 +84,7 @@ use Spryker\Glue\ProductOfferPricesRestApi\ProductOfferPricesRestApiDependencyPr
 class ProductOfferPricesRestApiDependencyProvider extends SprykerProductPricesRestApiDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\ProductOfferPricesRestApiExtension\Dependency\Plugin\RestProductOfferPricesAttributesMapperPluginInterface[]
+     * @return array<\Spryker\Glue\ProductOfferPricesRestApiExtension\Dependency\Plugin\RestProductOfferPricesAttributesMapperPluginInterface>
      */
     protected function getRestProductOfferPricesAttributesMapperPlugins(): array
     {
@@ -94,6 +97,6 @@ class ProductOfferPricesRestApiDependencyProvider extends SprykerProductPricesRe
 
 {% info_block warningBox "Verification" %}
 
-Make sure that  `ProductOfferPricesRestApiDependencyProvider` plugin is set up by having product offer volumes over sending the request `GET https://glue.mysprykershop.com//concrete-products/{% raw %}{{concreteProductId}}{% endraw %}?include=product-offers,product-offer-prices`.
+Make sure that the `ProductOfferPricesRestApiDependencyProvider` plugin is set up by having product offer volumes over sending the request `GET https://glue.mysprykershop.com//concrete-products/{% raw %}{{concreteProductId}}{% endraw %}?include=product-offers,product-offer-prices`.
 
 {% endinfo_block %}

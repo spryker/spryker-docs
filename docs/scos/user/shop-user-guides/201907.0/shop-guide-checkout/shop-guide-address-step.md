@@ -9,6 +9,7 @@ redirect_from:
   - /v3/docs/address-step-shop-guide-201911
   - /v3/docs/en/address-step-shop-guide-201911
   - /docs/scos/user/shop-user-guides/page.version/checkout/shop-guide-address-step.html
+  - /docs/scos/user/shop-user-guides/201907.0/checkout/shop-guide-address-step.html
 ---
 
 The topic provides a list of steps to select billing and shipping addresses for the order.
@@ -19,7 +20,7 @@ You can proceed to the *Address* step as a:<ul><li>registered user: In the Login
 ***
 To open the *Address* step, click **Checkout** in the corresponding shopping cart.
 
-![Shopping cart checkout](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Address+Step/checkout-btn.png) 
+![Shopping cart checkout](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Address+Step/checkout-btn.png)
 
 Here you can do the following:
 
@@ -36,7 +37,7 @@ If there are no pre-saved addresses, the **Define new address** option is displa
 {% endinfo_block %}
 
 1. On the **Address** page, select the **Define new address** option from the drop-down menu.
-![Create a new address](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Address+Step/define-new-address.png) 
+![Create a new address](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Address+Step/define-new-address.png)
 
 2. Fill in all the required information.
 3. To proceed to the *Shipment* step, click **Next**.

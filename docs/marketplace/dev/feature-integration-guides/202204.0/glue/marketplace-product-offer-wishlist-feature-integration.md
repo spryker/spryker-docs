@@ -3,6 +3,11 @@ title: "Glue API: Marketplace Product Offer + Wishlist feature integration"
 last_updated: Sep 13, 2021
 description: This document describes how to integrate the Marketplace Product Offer + Wishlist Glue API feature into a Spryker project.
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Product Offer feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+  - title: Marketplace Wishlist feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-wishlist-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product Offer + Wishlist Glue API feature into a Spryker project.
@@ -116,7 +121,7 @@ use Spryker\Zed\Wishlist\WishlistDependencyProvider as SprykerWishlistDependency
 class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\WishlistExtension\Dependency\Plugin\AddItemPreCheckPluginInterface[]
+     * @return array<\Spryker\Zed\WishlistExtension\Dependency\Plugin\AddItemPreCheckPluginInterface>
      */
     protected function getAddItemPreCheckPlugins(): array
     {
@@ -142,7 +147,7 @@ use Spryker\Glue\WishlistsRestApi\WishlistsRestApiDependencyProvider as SprykerW
 class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\WishlistsRestApiExtension\Dependency\Plugin\RestWishlistItemsAttributesMapperPluginInterface[]
+     * @return array<\Spryker\Glue\WishlistsRestApiExtension\Dependency\Plugin\RestWishlistItemsAttributesMapperPluginInterface>
      */
     protected function getRestWishlistItemsAttributesMapperPlugins(): array
     {
@@ -167,7 +172,7 @@ use Spryker\Zed\WishlistsRestApi\WishlistsRestApiDependencyProvider as SprykerWi
 class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\WishlistsRestApiExtension\Dependency\Plugin\RestWishlistItemsAttributesDeleteStrategyPluginInterface[]
+     * @return array<\Spryker\Zed\WishlistsRestApiExtension\Dependency\Plugin\RestWishlistItemsAttributesDeleteStrategyPluginInterface>
      */
     protected function getRestWishlistItemsAttributesDeleteStrategyPlugins(): array
     {

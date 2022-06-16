@@ -9,6 +9,7 @@ redirect_from:
   - /v3/docs/content-item-widgets-types-reference-information
   - /v3/docs/en/content-item-widgets-types-reference-information
   - /docs/scos/user/back-office-user-guides/201907.0/content/content-items/references/content-item-widgets-types-reference-information.html
+  - /docs/scos/user/back-office-user-guides/201907.0/content-management/content-item-widgets/references/content-item-widgets-types-reference-information.html
 ---
 
 This topic contains the reference information you need to know when working with content item widgets in the **Content Management > Pages/Blocks > Edit Placeholders** section.

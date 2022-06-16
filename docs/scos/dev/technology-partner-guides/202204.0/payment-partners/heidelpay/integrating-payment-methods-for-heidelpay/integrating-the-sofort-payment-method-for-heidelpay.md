@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/heidelpay-sofort
   - /docs/heidelpay-sofort
   - /docs/en/heidelpay-sofort
+  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/heidelpay/integrating-payment-methods-for-heidelpay/integrating-the-sofort-payment-method-for-heidelpay.html
 related:
   - title: Heidelpay
     link: docs/scos/user/technology-partners/page.version/payment-partners/heidelpay.html

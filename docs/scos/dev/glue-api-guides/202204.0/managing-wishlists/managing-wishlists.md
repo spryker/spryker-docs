@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-wishlists
   - /docs/managing-wishlists
   - /docs/en/managing-wishlists
+  - /docs/scos/dev/glue-api-guides/202200.0/managing-wishlists/managing-wishlists.html
 ---
 
 The Wishlists API allows creating list and deleting [wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html), as well as managing the items inside them.

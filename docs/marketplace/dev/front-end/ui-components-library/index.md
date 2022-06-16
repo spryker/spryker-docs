@@ -2,6 +2,17 @@
 title: UI Components Library
 description: This articles provides details about UI components library.
 template: concept-topic-template
+related:
+  - title: Actions
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/index.html
+  - title: Cache
+    link: docs/marketplace/dev/front-end/ui-components-library/cache/index.html
+  - title: Data Transformers
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/index.html
+  - title: Datasources
+    link: docs/marketplace/dev/front-end/ui-components-library/datasources/index.html
+  - title: Persistence
+    link: docs/marketplace/dev/front-end/ui-components-library/persistence/index.html
 ---
 
 This document provides details about the UI components library.

@@ -22,7 +22,7 @@ suites:
                 - ...
 ```
 
-For more information about the `codeception.yml` file, see [Test framework](https://docs.spryker.com/docs/scos/dev/guidelines/testing-guidelines/test-framework.html).
+For more information about the `codeception.yml` file, see [Test framework](/docs/scos/dev/guidelines/testing-guidelines/test-framework.html).
 
 2. Create the test directory `tests/PyzTests/Zed/FooModule/Communication/Plugin/Console/`, if it is not available yet.
 3. Add the test class:

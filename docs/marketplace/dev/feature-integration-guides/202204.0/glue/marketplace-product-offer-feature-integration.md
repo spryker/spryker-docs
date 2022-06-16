@@ -1,8 +1,12 @@
 ---
 title: "Glue API: Marketplace Product Offer feature integration"
-last_updated: Sep 9, 2021
 description: This document describes the process how to integrate the Marketplace Product Offer Glue API feature into a Spryker project.
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/marketplace/dev/feature-integration-guides/202200.0/glue/marketplace-product-offer-feature-integration.html
+related:
+  - title: Marketplace Product Offer feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product Offer Glue API feature into a Spryker project.
@@ -90,7 +94,7 @@ use Spryker\Glue\ProductsRestApi\ProductsRestApiConfig;
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface[]
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
      */
     protected function getResourceRoutePlugins(): array
     {

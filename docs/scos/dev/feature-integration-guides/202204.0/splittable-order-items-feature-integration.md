@@ -87,7 +87,41 @@ use Spryker\Zed\SalesQuantity\Communication\Plugin\SalesExtension\NonSplittableI
     }
 ```
 
-5. Add plugins to Zed `DiscountDependencyProvider`:
+5. You can set quantity threshold for an order item to be considered non-splittable by adjusting the following config:
+
+**src/Pyz/Zed/SalesQuantity/SalesQuantityConfig.php**
+
+```php
+
+namespace Pyz\Zed\SalesQuantity;
+
+use Spryker\Zed\SalesQuantity\SalesQuantityConfig as SprykerSalesQuantityConfig;
+
+class SalesQuantityConfig extends SprykerSalesQuantityConfig
+{
+    /**
+     * @var int|null
+     */
+    protected const ITEM_NONSPLIT_QUANTITY_THRESHOLD = 10;
+
+    /**
+     * @var int|null
+     */
+    protected const BUNDLED_ITEM_NONSPLIT_QUANTITY_THRESHOLD = 10;
+}
+
+```
+
+Change `SalesQuantityConfig::ITEM_NONSPLIT_QUANTITY_THRESHOLD` to set the threshold for regular items 
+and `SalesQuantityConfig::BUNDLED_ITEM_NONSPLIT_QUANTITY_THRESHOLD` for items in a bundle.
+If order item quantity equals or is higher than the threshold, the item is considered non-splittable. 
+Using `null` deactivates the threshold.
+
+The threshold does not affect order items with `isQuantitySplittable` set to `false`. 
+Such items are considered non-splittable regardless of the threshold.  
+
+
+6. Add plugins to Zed `DiscountDependencyProvider`:
 
 
 | Module | Plugin | Description | Method in Dependency Provider |

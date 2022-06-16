@@ -3,7 +3,7 @@ title: Inventory Management feature overview
 description: Learn how you can manage warehouse, stock, and availability with the Inventory Management feature
 last_updated: Jul 22, 2021
 template: concept-topic-template
-originalLink: /docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html-feature-overview
+originalLink: /docs/scos/user/features/inventory-management-feature-overview.html-feature-overview
 originalArticleId: 6aaacd72-1ca1-4406-8614-0cacf94459d4
 redirect_from:
   - /2021080/docs/inventory-management-feature-overview
@@ -18,23 +18,23 @@ Stock does not always reflect the real availability of products, as not all the 
 
 ## Warehouse management
 
-You can [create warehouses in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/create-warehouses.html) or [import them](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html).
+You can [create warehouses in the Back Office](/docs/scos/user/back-office-user-guides/administration/warehouses/create-warehouses.html) or [import them](/docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-warehouse.csv.html).
 
-A warehouse can be assigned to a single store or shared between several stores. For the warehouse and stock management scenarios you can set up for your project, see [Managing stocks in a multi-store environment: Best practices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html). You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. For details about how you can manage warehouses and stores in the back office, see [Managing warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/edit-warehouses.html). For details about how you can import the warehouse and store data, see [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html).
+A warehouse can be assigned to a single store or shared between several stores. For the warehouse and stock management scenarios you can set up for your project, see [Managing stocks in a multi-store environment: Best practices](/docs/scos/dev/feature-walkthroughs/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html). You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. For details about how you can manage warehouses and stores in the back office, see [Managing warehouses](/docs/scos/user/back-office-user-guides/administration/warehouses/edit-warehouses.html). For details about how you can import the warehouse and store data, see [File details: warehouse_store.csv](/docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html).
 
 ### Defining a warehouse address
 
-You can define the warehouse address that will be used as the shipping origin address by importing the warehouse address data. For details about the import file, see [File details: warehouse_address.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html).
+You can define the warehouse address that will be used as the shipping origin address by importing the warehouse address data. For details about the import file, see [File details: warehouse_address.csv](/docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html).
 
 ### Warehouse assignment to order items (with Avalara integration only)
 
 {% info_block warningBox %}
 
-By default, a warehouse is not linked to a sales order item. The logic described below applies only when [Avalara](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) is integrated into your project. That is, it is used to get warehouse addresses to calculate taxes in the USA.
+By default, a warehouse is not linked to a sales order item. The logic described below applies only when [Avalara](/docs/scos/user/features/tax-feature-overview.html) is integrated into your project. That is, it is used to get warehouse addresses to calculate taxes in the USA.
 
 {% endinfo_block %}
 
-During the checkout, once a buyer entered delivery addresses for all order items, be it a [single delivery](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html) or a split delivery, the order items are assigned to warehouses to fulfil them.
+During the checkout, once a buyer entered delivery addresses for all order items, be it a [single delivery](/docs/scos/user/features/order-management-feature-overview/split-delivery-overview.html) or a split delivery, the order items are assigned to warehouses to fulfil them.
 
 By default, if a buyer orders several items of the same SKU, the requested item’s stock is checked in all the warehouses of the store. Based on the item stock, the warehouses are sorted in descending order, for example:
 
@@ -62,8 +62,8 @@ Schematically, the process looks like this:
 
 When order is made, stock is not updated automatically in the system, you have to set it manually. You can define stock only for concrete products. You can set stock by:
 
-* Editing product stock in the Back Office. For details, see [Editing stock](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html#editing-stock).
-* Importing the quantities of items stored in each of the warehouses. For details, see [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/stocks.html).
+* Editing product stock in the Back Office. For details, see [Editing stock](/docs/scos/user/back-office-user-guides/catalog/availability/managing-products-availability.html#editing-stock).
+* Importing the quantities of items stored in each of the warehouses. For details, see [Stocks](/docs/scos/dev/data-import/data-import-categories/catalog-setup/stocks/stocks.html).
 
 ## Availability management
 
@@ -79,7 +79,7 @@ Product availability after the order:
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/after-order-placement.png)
 
-For details about how you can check product availability in the Back Office, see [Checking availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html#checking-availability).
+For details about how you can check product availability in the Back Office, see [Checking availability](/docs/scos/user/back-office-user-guides/catalog/availability/managing-products-availability.html#checking-availability).
 
 {% info_block infoBox %}
 
@@ -106,12 +106,12 @@ For SEO purposes, products that are not available can still be displayed on the 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/create-warehouses.html)  |
-| [Manage warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/edit-warehouses.html) |
-| [Manage product availabilities](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html)  |
+| [Create a warehouses](/docs/scos/user/back-office-user-guides/administration/warehouses/create-warehouses.html)  |
+| [Manage warehouses](/docs/scos/user/back-office-user-guides/administration/warehouses/edit-warehouses.html) |
+| [Manage product availabilities](/docs/scos/user/back-office-user-guides/catalog/availability/managing-products-availability.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Inventory Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html) for developers.
+Are you a developer? See [Inventory Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

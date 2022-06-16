@@ -41,10 +41,10 @@ For more details about managing ratings and reviews, check the video:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage product reviews](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-reviews/managing-product-reviews.html) |
+| [Manage product reviews](/docs/scos/user/back-office-user-guides/catalog/product-reviews/managing-product-reviews.html) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Product Rating & Reviews feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-rating-reviews-feature-walkthrough.html) for developers.
+Are you a developer? See [Product Rating & Reviews feature walkthrough](/docs/scos/dev/feature-walkthroughs/product-rating-reviews-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

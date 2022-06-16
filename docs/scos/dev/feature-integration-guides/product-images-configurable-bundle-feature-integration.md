@@ -12,15 +12,15 @@ redirect_from:
   - /docs/en/product-images-configurable-bundle-feature-integration
 related:
   - title: Configurable Bundle feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/configurable-bundle-feature-integration.html
   - title: Product Lists feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-lists-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/product-lists-feature-integration.html
   - title: Prices feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/prices-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/prices-feature-integration.html
   - title: Product feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/product-feature-integration.html
   - title: Merchant Product Restrictions feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/merchant-product-restrictions-feature-integration.html
 ---
 
 ## Install feature core
@@ -31,8 +31,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Configurable Bundle  | {{page.version}} |
-| Product Images | {{page.version}} |
+| Configurable Bundle  | {{site.version}} |
+| Product Images | {{site.version}} |
 
 ### 1) Set up database schema and transfer objects
 

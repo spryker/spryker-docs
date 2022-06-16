@@ -19,7 +19,7 @@ redirect_from:
   - /docs/scos/dev/technical-enhancements/health-checks.html
 related:
   - title: REST API Reference
-    link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
+    link: docs/scos/dev/glue-api-guides/rest-api-reference.html
 ---
 
 ## General information
@@ -66,14 +66,14 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker-feature/spryker-core: "^{{page.version}}" --update-with-dependencies
+composer require spryker-feature/spryker-core: "^{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox “Verification” %}

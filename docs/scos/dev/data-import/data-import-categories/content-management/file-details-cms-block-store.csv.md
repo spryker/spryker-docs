@@ -33,7 +33,7 @@ The file should have the following parameters:
 ## Import file dependencies
 
 This file has the following dependencies:
-* [cms_block.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-block.csv.html)
+* [cms_block.csv](/docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-block.csv.html)
 * *stores.php* configuration file of the demo shop PHP project
 
 ## Import template file and content example

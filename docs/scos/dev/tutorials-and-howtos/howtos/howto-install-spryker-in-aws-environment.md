@@ -1020,7 +1020,7 @@ cd /data
 
 ```shell
 git clone https://github.com/spryker-shop/b2c-demo-shop.git ./
-git checkout tags/{{page.version}}
+git checkout tags/{{site.version}}
 ```
 
 3. Create local configurations using the template.  

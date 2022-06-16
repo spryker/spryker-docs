@@ -13,16 +13,16 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/retrieving-content-items/retrieving-abstract-product-list-content-items.html
 related:
   - title: REST API Reference
-    link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
+    link: docs/scos/dev/glue-api-guides/rest-api-reference.html
   - title: Content Items Feature Overview
-    link: docs/scos/user/features/page.version/content-items-feature-overview.html
+    link: docs/scos/user/features/content-items-feature-overview.html
 ---
 
 This endpoint allows retrieving information about abstract product list content items.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-content-items-feature-integration.html).
 
 <a name="product-list"></a>
 
@@ -211,7 +211,7 @@ To retrieve information about an abstract product list content item, send the re
 </details>
 
 
-For the attributes of the included resource, see [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html)
+For the attributes of the included resource, see [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/abstract-products/retrieving-abstract-products.html)
 
 ## Retrieve Abstract Product List with its abstract products
 
@@ -366,4 +366,4 @@ Request sample: retrieve Abstract Product List with its abstract products
 | 2202 | Content key is missing. |
 | 2203 | Content type is invalid. |
 
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

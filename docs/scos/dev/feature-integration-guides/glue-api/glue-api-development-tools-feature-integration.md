@@ -20,7 +20,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION |
 |-|-|
-| Development Tools | {{page.version}} |
+| Development Tools | {{site.version}} |
 
 ## 1) Install the required modules using Composer
 

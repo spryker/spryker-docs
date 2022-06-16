@@ -12,13 +12,13 @@ redirect_from:
   - /docs/en/configurable-bundle-feature-overview
 ---
 
-A *configurable bundle* is a [product bundle](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html) for which a Storefront User selects products on the Storefront.
+A *configurable bundle* is a [product bundle](/docs/scos/user/features/product-bundles-feature-overview.html) for which a Storefront User selects products on the Storefront.
 For example, when buying a kitchen set, a customer selects pieces of furniture, like drawers, cupboards, or cabinets, from suggested options.
 
 ## Configurable bundle template
 Every configurable bundle is created per a template. A *configurable bundle template* is a model with configuration details for a bundle, like a number of [slots](#configurable-bundle-slot) or product lists assigned to a slot. There can be multiple templates in a shop, like a sport suit, a car, or a kitchen set.
 
-A Back Office User creates the templates in the Back Office. See [Сreate configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/create-configurable-bundle-templates.html) to learn how they do it.
+A Back Office User creates the templates in the Back Office. See [Сreate configurable bundle templates](/docs/scos/user/back-office-user-guides/merchandising/configurable-bundle-templates/create-configurable-bundle-templates.html) to learn how they do it.
 
 ![Configurable Bundle Template in the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Configurable+Bundle+Template+-+back+office.png)
 
@@ -67,7 +67,7 @@ For example, a *Kitchen furniture set* configurable bundle template can have the
 
 ![Kitchen Configurable Bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/kitchen+slots.png)
 
-When a Back Office user creates a configurable bundle template, they create the slots, and a [product list](/docs/scos/user/features/{{page.version}}/product-lists-feature-overview.html) is automatically assigned to each of them. They can edit the product list in **Catalog Management&nbsp;<span aria-label="and then">></span> Product Lists** section or by editing the slot in the configurable bundle template.
+When a Back Office user creates a configurable bundle template, they create the slots, and a [product list](/docs/scos/user/features/product-lists-feature-overview.html) is automatically assigned to each of them. They can edit the product list in **Catalog Management&nbsp;<span aria-label="and then">></span> Product Lists** section or by editing the slot in the configurable bundle template.
 
 {% info_block warningBox "Slots" %}
 
@@ -77,8 +77,8 @@ When a Back Office user creates a configurable bundle template, they create the 
 
 {% endinfo_block %}
 
-To learn how a Back Office User edits product lists, see [Managing product lists](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html).
-To learn how a Back Office User creates slots, see [Creating slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html#create-slots-in-a-configurable-bundle-template).
+To learn how a Back Office User edits product lists, see [Managing product lists](/docs/scos/user/back-office-user-guides/catalog/product-lists/managing-product-lists.html).
+To learn how a Back Office User creates slots, see [Creating slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html#create-slots-in-a-configurable-bundle-template).
 
 When a Storefront user configures a bundle, for each slot, they select a product from the provided product list.
 ![Slot Base Cabinet](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Bundle/Slot+Base+Cabinet.png)
@@ -159,7 +159,7 @@ Product availability is taken into account when calculating the total.
 A Storefront User can reorder items from a configurable bundle as separate order items.
 
 ## Configurable bundle and quotation process
-A Storefront User can include a configurable bundle into the [quotation process](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) and change the price of one or more items in a bundle. The price of the configurable bundle is re-calculated based on the new prices.
+A Storefront User can include a configurable bundle into the [quotation process](/docs/scos/user/features/quotation-process-feature-overview.html) and change the price of one or more items in a bundle. The price of the configurable bundle is re-calculated based on the new prices.
 
 ## Configurable bundle and splittable order items
 A Storefront User can add splittable and non-splittable products to a configurable bundle.
@@ -216,7 +216,7 @@ The order looks as follows:
 
 {% info_block errorBox "Packaging units are not supported" %}
 
-The product splitting logic does not support [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units-feature-overview.html) with configurable bundle products.
+The product splitting logic does not support [packaging units](/docs/scos/user/features/packaging-units-feature-overview.html) with configurable bundle products.
 
 {% endinfo_block %}
 
@@ -231,16 +231,16 @@ The Configurable Bundle feature looks as follows on the Storefront:
 The feature has the following functional constraints which are going to be resolved in the future.
 
 
-* On the Configurator page, you cannot add the configured bundle to a [shopping list](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) or [wishlist](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html).
+* On the Configurator page, you cannot add the configured bundle to a [shopping list](/docs/scos/user/features/shopping-lists-feature-overview/shopping-lists-feature-overview.html) or [wishlist](/docs/scos/user/features/wishlist-feature-overview.html).
 * A Storefront User cannot return to the **Configurator** page from the **Cart**, **Reorder**, or **Shopping List** pages.
 * The following products cannot be displayed in the configurator:
-    - Products with [measurement](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) or [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units-feature-overview.html)
-    - [Product bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html)
-    - [Gift cards](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html)
+    - Products with [measurement](/docs/scos/user/features/measurement-units-feature-overview.html) or [packaging units](/docs/scos/user/features/packaging-units-feature-overview.html)
+    - [Product bundles](/docs/scos/user/features/product-bundles-feature-overview.html)
+    - [Gift cards](/docs/scos/user/features/gift-cards-feature-overview.html)
 * The following functionalities are not displayed and cannot be applied to concrete products in configurable bundles:
-    * [Product options](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html)
-    * [Product labels](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html)
-    * [Product quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html)
+    * [Product options](/docs/scos/user/features/product-options-feature-overview.html)
+    * [Product labels](/docs/scos/user/features/product-labels-feature-overview.html)
+    * [Product quantity restrictions](/docs/scos/user/features/non-splittable-products-feature-overview.html)
 * The **Slot** page doesn't have any sorting, pagination, or search.
 * Product bundles cannot be added to configurable bundles.
 
@@ -248,12 +248,12 @@ The feature has the following functional constraints which are going to be resol
 
 |BACK OFFICE USER GUIDES|
 |---|
-|  [Create configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/create-configurable-bundle-templates.html)  |
-|  [Edit configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html)  |
-|  [Edit slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html)  |
+|  [Create configurable bundle templates](/docs/scos/user/back-office-user-guides/merchandising/configurable-bundle-templates/create-configurable-bundle-templates.html)  |
+|  [Edit configurable bundle templates](/docs/scos/user/back-office-user-guides/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html)  |
+|  [Edit slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Configurable Bundle feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/configurable-bundle-feature-walkthrough.html) for developers.
+Are you a developer? See [Configurable Bundle feature walkthrough](/docs/scos/dev/feature-walkthroughs/configurable-bundle-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

@@ -4,7 +4,7 @@ description: Retrieve details about product offers via Glue API
 template: glue-api-storefront-guide-template
 related:
   - title: Retrieving concrete products
-    link: docs/marketplace/dev/glue-api-guides/page.version/concrete-products/retrieving-concrete-products.html
+    link: docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-concrete-products.html
 ---
 
 

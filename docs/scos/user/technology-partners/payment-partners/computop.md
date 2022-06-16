@@ -12,25 +12,25 @@ redirect_from:
   - /docs/en/computop
 related:
   - title: Integrating the Sofort payment method for Computop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html
   - title: Integrating the PayPal payment method for Computop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paypal-payment-method-for-computop.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paypal-payment-method-for-computop.html
   - title: Computop API calls
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/computop-api-calls.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/computop/computop-api-calls.html
   - title: Integrating the PayNow payment method for Computop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paynow-payment-method-for-computop.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paynow-payment-method-for-computop.html
   - title: Integrating the Direct Debit payment method for Computop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-direct-debit-payment-method-for-computop.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-direct-debit-payment-method-for-computop.html
   - title: Integrating the iDeal payment method for Computop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-ideal-payment-method-for-computop.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-ideal-payment-method-for-computop.html
   - title: Integrating the Сredit Сard payment method for Computop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html
   - title: Integrating the Easy Credit payment method for Computop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-easy-credit-payment-method-for-computop.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-easy-credit-payment-method-for-computop.html
   - title: Integrating the Paydirekt payment method for Computop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html
   - title: Integrating the CRIF payment method for Computop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html
 ---
 
 ## Partner Information
@@ -66,16 +66,16 @@ Push notifications speed up order placement process for customers. They allow to
 
 ## Related Developer guides
 
-* [Installing and configuring Computop](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/computop/installing-and-configuring-computop.html)
-* [Integrating Computop](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/computop/integrating-computop.html)
-* [Computop API calls](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/computop/computop-api-calls.html)
-* [Computop - OMS plugins](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/computop/computop-oms-plugins.html)
-* [Integrating the Сredit Сard payment method for Computop](/docs/scos/dev/technology-partner-guides/202108.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html)
-* [Integrating the CRIF payment method for Computop](/docs/scos/dev/technology-partner-guides/202108.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html)
-* [Integrating the Direct Debit payment method for Computop](/docs/scos/dev/technology-partner-guides/202108.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-direct-debit-payment-method-for-computop.html)
-* [Integrating the Easy Credit payment method for Computop](/docs/scos/dev/technology-partner-guides/202108.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-easy-credit-payment-method-for-computop.html)
-* [Integrating the iDeal payment method for Computop](/docs/scos/dev/technology-partner-guides/202108.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-ideal-payment-method-for-computop.html)
-* [Integrating the Paydirekt payment method for Computop](/docs/scos/dev/technology-partner-guides/202108.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html)
-* [Integrating the PayNow payment method for Computop](/docs/scos/dev/technology-partner-guides/202108.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paynow-payment-method-for-computop.html)
-* [Integrating the PayPal payment method for Computop  ](/docs/scos/dev/technology-partner-guides/202108.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paypal-payment-method-for-computop.html)
-* [Integrating the Sofort payment method for Computop](/docs/scos/dev/technology-partner-guides/202108.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html)
+* [Installing and configuring Computop](/docs/scos/dev/technology-partner-guides/payment-partners/computop/installing-and-configuring-computop.html)
+* [Integrating Computop](/docs/scos/dev/technology-partner-guides/payment-partners/computop/integrating-computop.html)
+* [Computop API calls](/docs/scos/dev/technology-partner-guides/payment-partners/computop/computop-api-calls.html)
+* [Computop - OMS plugins](/docs/scos/dev/technology-partner-guides/payment-partners/computop/computop-oms-plugins.html)
+* [Integrating the Сredit Сard payment method for Computop](https://archive.docs.spryker.com/docs/scos/dev/technology-partner-guides/202108.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-credit-card-payment-method-for-computop.html)
+* [Integrating the CRIF payment method for Computop](https://archive.docs.spryker.com/docs/scos/dev/technology-partner-guides/202108.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-crif-payment-method-for-computop.html)
+* [Integrating the Direct Debit payment method for Computop](https://archive.docs.spryker.com/docs/scos/dev/technology-partner-guides/202108.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-direct-debit-payment-method-for-computop.html)
+* [Integrating the Easy Credit payment method for Computop](https://archive.docs.spryker.com/docs/scos/dev/technology-partner-guides/202108.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-easy-credit-payment-method-for-computop.html)
+* [Integrating the iDeal payment method for Computop](https://archive.docs.spryker.com/docs/scos/dev/technology-partner-guides/202108.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-ideal-payment-method-for-computop.html)
+* [Integrating the Paydirekt payment method for Computop](https://archive.docs.spryker.com/docs/scos/dev/technology-partner-guides/202108.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paydirekt-payment-method-for-computop.html)
+* [Integrating the PayNow payment method for Computop](https://archive.docs.spryker.com/docs/scos/dev/technology-partner-guides/202108.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paynow-payment-method-for-computop.html)
+* [Integrating the PayPal payment method for Computop  ](https://archive.docs.spryker.com/docs/scos/dev/technology-partner-guides/202108.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paypal-payment-method-for-computop.html)
+* [Integrating the Sofort payment method for Computop](https://archive.docs.spryker.com/docs/scos/dev/technology-partner-guides/202108.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-sofort-payment-method-for-computop.html)

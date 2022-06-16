@@ -23,7 +23,7 @@ redirect_from:
 
 The *Product* feature allows creating products, manage their characteristics and settings.
 
-In Spryker Commerce OS, you create and manage products in the [Back Office](/docs/scos/user/features/{{page.version}}/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html). The product information you specify serves multiple purposes:
+In Spryker Commerce OS, you create and manage products in the [Back Office](/docs/scos/user/features/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html). The product information you specify serves multiple purposes:
 
 * Defines product characteristics.
 * Affects shop behavior. For example, filtering and search on the Storefront is based on product attributes.
@@ -34,7 +34,7 @@ In Spryker Commerce OS, you create and manage products in the [Back Office](/doc
 
 A product can have multiple variants, such as size or color. Such product variations are called *product variants*, or *concrete products*. To distinguish product versions, track their stock, and provide a better shopping experience, product variants are grouped under *abstract products*.
 
-The abstract product is the highest level of the product hierarchy. It does not have its own stock, but defines the properties shared by its product variants. A product variant always belongs to one abstract product, has a distinctive stock, and is always different from another product variant with at least one [super product attribute](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html).
+The abstract product is the highest level of the product hierarchy. It does not have its own stock, but defines the properties shared by its product variants. A product variant always belongs to one abstract product, has a distinctive stock, and is always different from another product variant with at least one [super product attribute](/docs/scos/user/features/product-feature-overview/product-attributes-overview.html).
 
 The following table shows the differences between abstract products and product variants:
 
@@ -87,7 +87,7 @@ The product information is structured as follows:
 
 #### Case 3: Selling a product in five colors, four sizes, and three materials
 
-To a product in five colors, four sizes, and three materials, you can structure product information in one of the following ways. You can create an abstract product and up to 60 variants to support all the combinations. Or, you can use the [Product Groups](/docs/scos/user/features/{{page.version}}/product-groups-feature-overview.html) feature.
+To a product in five colors, four sizes, and three materials, you can structure product information in one of the following ways. You can create an abstract product and up to 60 variants to support all the combinations. Or, you can use the [Product Groups](/docs/scos/user/features/product-groups-feature-overview.html) feature.
 
 Using the Product Group feature, you create a group of five abstract products, one for each color. Each abstract product  contains up to 12 concrete products of different combinations of the sizes and the materials.
 
@@ -103,26 +103,26 @@ Besides the Back Office, you can maintain product information in an external Pro
 The Spryker Commerce OS supports integration of the following PIM systems:
 
 * [Akeneo](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html)
-* [Censhare PIM](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/censhare-pim.html)
-* [Xentral](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/xentral.html)
+* [Censhare PIM](/docs/scos/user/technology-partners/product-information-pimerp/censhare-pim.html)
+* [Xentral](/docs/scos/user/technology-partners/product-information-pimerp/xentral.html)
 
 
 ## Related Business User articles
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of Product Attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html)  |
-| [Get a general idea of Discontinued Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html)  |
-| [Get a general idea Product Images](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-images-overview.html)  |
-| [Get a general idea of Timed Product Availability](/docs/scos/user/features/{{page.version}}/product-feature-overview/timed-product-availability-overview.html)  |
-| [Create an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) |
-| [Edit an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/editing-abstract-products.html) |
-| [Create a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html) |
-| [Edit a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/editing-product-variants.html) |
-| [Manage products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html) |
+| [Get a general idea of Product Attributes](/docs/scos/user/features/product-feature-overview/product-attributes-overview.html)  |
+| [Get a general idea of Discontinued Products](/docs/scos/user/features/product-feature-overview/discontinued-products-overview.html)  |
+| [Get a general idea Product Images](/docs/scos/user/features/product-feature-overview/product-images-overview.html)  |
+| [Get a general idea of Timed Product Availability](/docs/scos/user/features/product-feature-overview/timed-product-availability-overview.html)  |
+| [Create an abstract product](/docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) |
+| [Edit an abstract product](/docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/editing-abstract-products.html) |
+| [Create a product variant](/docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/creating-product-variants.html) |
+| [Edit a product variant](/docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/editing-product-variants.html) |
+| [Manage products](/docs/scos/user/back-office-user-guides/catalog/products/managing-products/managing-products.html) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-feature-walkthrough.html) for developers.
+Are you a developer? See [Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/product-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

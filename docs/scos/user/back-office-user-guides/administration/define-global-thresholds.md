@@ -14,12 +14,12 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/administration/thresholds/managing-global-thresholds.html  
 related:
   - title: Managing Merchant Order Thresholds
-    link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-merchant-order-thresholds.html
+    link: docs/scos/user/back-office-user-guides/administration/thresholds/managing-merchant-order-thresholds.html
   - title: Managing Threshold Settings
-    link: docs/scos/user/back-office-user-guides/page.version/administration/manage-threshold-settings.html
+    link: docs/scos/user/back-office-user-guides/administration/manage-threshold-settings.html
 ---
 
-This doc describes how to define [global thresholds](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html) in the Back Office.
+This doc describes how to define [global thresholds](/docs/scos/user/features/checkout-feature-overview/order-thresholds-overview.html) in the Back Office.
 
 ## Prerequisites
 

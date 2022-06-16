@@ -10,7 +10,7 @@ redirect_from:
   - /v2/docs/en/searching-within-cms-pages
 related:
   - title: CMS Pages
-    link: docs/scos/user/back-office-user-guides/page.version/content/pages/cms-pages.html
+    link: docs/scos/user/back-office-user-guides/content/pages/cms-pages.html
 ---
 
 For the CMS pages in search results feature, the following details are provided:

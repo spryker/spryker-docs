@@ -104,14 +104,14 @@ Company users can perform the following actions on the Storefront:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage companies](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/manage-companies.html) |
+| [Manage companies](/docs/scos/user/back-office-user-guides/customer/manage-companies.html) |
 
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/company-account-feature-walkthrough.html) for developers.
+Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/company-account-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}
 
 ## See next
-[Business Units overview](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-units-overview.html)
+[Business Units overview](/docs/scos/user/features/company-account-feature-overview/business-units-overview.html)

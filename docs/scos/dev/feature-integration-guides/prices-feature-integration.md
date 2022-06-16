@@ -14,15 +14,15 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/prices-feature-integration.html
 related:
   - title: Configurable Bundle feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/configurable-bundle-feature-integration.html
   - title: Product Images + Configurable Bundle feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-images-configurable-bundle-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/product-images-configurable-bundle-feature-integration.html
   - title: Product feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/product-feature-integration.html
   - title: Product Lists feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-lists-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/product-lists-feature-integration.html
   - title: Merchant Product Restrictions feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/merchant-product-restrictions-feature-integration.html
 ---
 
 {% info_block errorBox "Attention!" %}
@@ -39,15 +39,15 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 |---|---|
-| Spryker Core | {{page.version}} |
-| Prices | {{page.version}} |
+| Spryker Core | {{site.version}} |
+| Prices | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/prices: "^{{page.version}}" --update-with-dependencies
+composer require spryker-feature/prices: "^{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -251,15 +251,15 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 |---|---|
-| Spryker Core E-commerce | {{page.version}} |
-| Prices | {{page.version}} |
+| Spryker Core E-commerce | {{site.version}} |
+| Prices | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/prices: "^{{page.version}}" --update-with-dependencies
+composer require spryker-feature/prices: "^{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -340,6 +340,6 @@ Make sure that the following widgets were registered:
 | MODULE | TEST |
 | --- | --- |
 | ProductPriceVolumeWidget | Go to the product detail page for a product with Volume Prices set, and observe the table in the detail area that contains the Volume Prices data. |
-| PriceProductWidget | Could be checked on a slot configurator page of a [Configurable Bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html) feature. |
+| PriceProductWidget | Could be checked on a slot configurator page of a [Configurable Bundle](/docs/scos/user/features/configurable-bundle-feature-overview.html) feature. |
 
 {% endinfo_block %}

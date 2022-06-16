@@ -20,7 +20,7 @@ For customers' convenience and ease of use, the shopping cart widget is placed i
 For each shopping cart, the following details are provided:
 * Shopping cart name
 * Number of items added to cart
-* Access level to a shopping cart (for more details, see [Shared Cart Feature Overview](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html))
+* Access level to a shopping cart (for more details, see [Shared Cart Feature Overview](/docs/scos/user/features/shared-carts-feature-overview.html))
 * Price mode
 * Cart Total
 * View all carts which opens Shopping cart menu in the customer account

@@ -14,13 +14,13 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/authentication-and-authorization.html
 related:
   - title: Company Account and General Organizational Structure
-    link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
+    link: docs/scos/user/features/company-account-feature-overview/company-accounts-overview.html
   - title: Login & Registration Forms
-    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-login-overview.html
+    link: docs/scos/user/features/customer-account-management-feature-overview/customer-login-overview.html
   - title: Glue API - Customer Account Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-customer-account-management-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html
   - title: Searching by company users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
+    link: docs/scos/dev/glue-api-guides/managing-b2b-account/searching-by-company-users.html
 ---
 
 [Protected resources](#protected-resources) in Spryker Glue API require user authentication. For the authentication, Spryker implements the [OAuth 2.0 mechanism](https://tools.ietf.org/html/rfc6749). On the REST API level, it is represented by the Login API.
@@ -41,7 +41,7 @@ Expired tokens are stored in the database, and you can configure them to be dele
 
 ## Protected resources
 
-Below, you can find a list of the default protected resources. As Glue API is highly customizable, a shop is likely to have its own list of protected resources. To avoid extra calls, we recommend [retrieving protected resources](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-protected-resources.html) of the shop before you start working with the API or setting up a flow.
+Below, you can find a list of the default protected resources. As Glue API is highly customizable, a shop is likely to have its own list of protected resources. To avoid extra calls, we recommend [retrieving protected resources](/docs/scos/dev/glue-api-guides/retrieving-protected-resources.html) of the shop before you start working with the API or setting up a flow.
 
 | ACTION | METHOD | ENDPOINTS|
 | --- | --- | --- |
@@ -133,10 +133,10 @@ Response sample with an error:
 ## User types
 
 Different endpoints require the client to be authenticated as different users. By default, you can:
-* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html)
-* [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html)
-* [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html)
+* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html)
+* [Authenticate as a company user](/docs/scos/dev/glue-api-guides/managing-b2b-account/authenticating-as-a-company-user.html)
+* [Authenticate as an agent assist](/docs/scos/dev/glue-api-guides/managing-agent-assists/authenticating-as-an-agent-assist.html)
 
 ## Next steps
 
-[Retrieve protected resources](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-protected-resources.html)
+[Retrieve protected resources](/docs/scos/dev/glue-api-guides/retrieving-protected-resources.html)

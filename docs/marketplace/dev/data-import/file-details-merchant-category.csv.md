@@ -5,9 +5,9 @@ description: This document describes the merchant_profile_address.csv file to co
 template: import-file-template
 related:
   - title: Merchant Category feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/merchant-category-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/merchant-category-feature-walkthrough.html
   - title: Merchant Category feature overview
-    link: docs/marketplace/user/features/page.version/merchant-category-feature-overview.html
+    link: docs/marketplace/user/features/merchant-category-feature-overview.html
 ---
 
 This document describes the `merchant_category.csv` file to configure [merchant categories](/docs/marketplace/user/features/{{site.version}}/merchant-category-feature-overview.html) in your Spryker shop.

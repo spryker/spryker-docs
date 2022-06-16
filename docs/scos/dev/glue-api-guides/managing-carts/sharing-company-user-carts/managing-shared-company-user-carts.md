@@ -12,13 +12,13 @@ redirect_from:
   - /docs/en/managing-shared-company-user-carts
 related:
   - title: Logging In as Company User
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
+    link: docs/scos/dev/glue-api-guides/managing-b2b-account/authenticating-as-a-company-user.html
   - title: Shared Cart Feature Overview
-    link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
+    link: docs/scos/user/features/shared-carts-feature-overview.html
   - title: Shared Carts feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/shared-carts-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/shared-carts-feature-integration.html
   - title: Managing carts of registered users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
+    link: docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
 ---
 
 This endpoint allows managing shared company user carts.
@@ -39,7 +39,7 @@ To change permissions for a shared cart, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Request sample: `PATCH http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa`
 
@@ -99,7 +99,7 @@ To stop sharing a cart, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Request sample: `DELETE http://glue.mysprykershop.com/shared-carts/4c677a6b-2f65-5645-9bf8-0ef3532bbbccaa`
 

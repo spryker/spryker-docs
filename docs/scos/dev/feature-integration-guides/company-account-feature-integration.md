@@ -13,9 +13,9 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/company-account-feature-integration.html
 related:
   - title: Glue API - Company Account feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-company-account-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html
   - title: Company Account + Order Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/company-account-order-management-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/company-account-order-management-feature-integration.html
 ---
 
 {% info_block errorBox %}
@@ -34,14 +34,14 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/company-account: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/company-account: "{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -712,16 +712,16 @@ Overview and install the necessary features before beginning the integration ste
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
-| Customer Account Management | {{page.version}} |
-| Company Account | {{page.version}} |
+| Spryker Core | {{site.version}} |
+| Customer Account Management | {{site.version}} |
+| Company Account | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/company-account: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/company-account: "{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

@@ -11,7 +11,7 @@ Learn how to edit company units in the Back Office. Additionally, this is the on
 
 ## Prerequisites
 
-* Optional: [Create company unit addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-unit-addresses/create-company-unit-addresses.html). They will be needed to assign addresses to the company unit you are going to edit.
+* Optional: [Create company unit addresses](/docs/scos/user/back-office-user-guides/customer/company-unit-addresses/create-company-unit-addresses.html). They will be needed to assign addresses to the company unit you are going to edit.
 * Review the [reference information](#reference-information-edit-a-company-unit) before you start, or look up the necessary information as you go through the process.
 
 
@@ -31,7 +31,7 @@ Learn how to edit company units in the Back Office. Additionally, this is the on
 
 | ATTRIBUTE | DESCRIPTION  |
 | --- | --- |
-| COMPANY | A company this unit belongs to. You can define the company only when [creating a unit](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-units/create-company-units.html).   |
+| COMPANY | A company this unit belongs to. You can define the company only when [creating a unit](/docs/scos/user/back-office-user-guides/customer/company-units/create-company-units.html).   |
 | PARENT | A parent business unit of this unit. |
 | NAME | Name. |
 | IBAN |  International Bank Account Number. |

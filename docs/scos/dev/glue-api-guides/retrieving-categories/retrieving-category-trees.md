@@ -13,14 +13,14 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/retrieving-categories/retrieving-category-trees.html
 related:
   - title: Category Management feature overview
-    link: docs/scos/user/features/page.version/category-management-feature-overview.html
+    link: docs/scos/user/features/category-management-feature-overview.html
 ---
 
 By means of the category API, you are able to retrieve the exact structure of your category tree with its hierarchical characteristics.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](/docs/scos/dev/feature-integration-guides/category-management-feature-integration.html).
 
 ## Retrieve a category tree
 
@@ -173,8 +173,8 @@ Request sample: retrieve a category tree
 | order | Integer | Digits between 1 and 100, with 100 ranking the highest (on one level under the parent node) |
 | name | String | Name of category associated with the node |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-[Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html)
+[Retrieve a category node](/docs/scos/dev/glue-api-guides/retrieving-categories/retrieving-category-nodes.html)

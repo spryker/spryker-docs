@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/features/202200.0/product-barcode-feature-overview.html
 ---
 
-The *Product Barcode*  feature allows creating barcodes for any kind of entity. By default, barcodes are only generated for [products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html).
+The *Product Barcode*  feature allows creating barcodes for any kind of entity. By default, barcodes are only generated for [products](/docs/scos/user/features/product-feature-overview/product-feature-overview.html).
 
 ## What is a barcode?
 
@@ -24,7 +24,7 @@ By default, barcodes are generated based on product SKUs using the [Code128](htt
 
 {% info_block infoBox %}
 
-You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html).
+You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/user/features/product-feature-overview/product-feature-overview.html).
 
 {% endinfo_block %}
 
@@ -66,10 +66,10 @@ You can see Product ID, product name, SKU, and the barcode itself.
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Viewing product barcodes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-barcodes/viewing-product-barcodes.html)  |
+| [Viewing product barcodes](/docs/scos/user/back-office-user-guides/catalog/product-barcodes/viewing-product-barcodes.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Product Barcodes feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-barcode-feature-walkthrough.html) for developers.
+Are you a developer? See [Product Barcodes feature walkthrough](/docs/scos/dev/feature-walkthroughs/product-barcode-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

@@ -10,10 +10,10 @@ redirect_from:
   - /v5/docs/en/rfq-reference-information-shop-guide
 ---
 
-This page contains the information on the UI elements and pages that refer to the [Quotation Process & RFQ](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html).
+This page contains the information on the UI elements and pages that refer to the [Quotation Process & RFQ](/docs/scos/user/features/quotation-process-feature-overview.html).
 ***
 ## Quote Requests
-Quote Requests is the page where you can access all your RFQs. Don't have an RFQ? Start [creating](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-creating-a-request-for-quote.html) it.
+Quote Requests is the page where you can access all your RFQs. Don't have an RFQ? Start [creating](/docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-creating-a-request-for-quote.html) it.
 
 On the **Quote Requests** page, you see the following:
 

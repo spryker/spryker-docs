@@ -12,7 +12,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201907.0/data-import-categories/miscellaneous/file-details-comment.csv.html
 ---
 
-This document describes the `comment.csv` file to configure [Comment](/docs/scos/user/features/{{page.version}}/comments-feature-overview.html)  information in your Spryker Demo Shop.
+This document describes the `comment.csv` file to configure [Comment](/docs/scos/user/features/comments-feature-overview.html)  information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -34,7 +34,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [customer.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-customer.csv.html).
+This file has the following dependency: [customer.csv](/docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-customer.csv.html).
 
 ## Import template file and content example
 

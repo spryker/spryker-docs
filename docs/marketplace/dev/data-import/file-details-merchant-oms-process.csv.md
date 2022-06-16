@@ -5,12 +5,12 @@ description: This document describes the merchant_oms_process.csv file to config
 template: import-file-template
 related:
   - title: Merchant Oms
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-order-management-feature-walkthrough/merchant-oms.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/merchant-oms.html
   - title: Marketplace and merchant state machines overview
-    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
+    link: docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
 ---
 
-This document describes the `merchant_oms_process.csv` file to configure [Merchant state machines](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html#merchant-state-machine) in your Spryker shop.
+This document describes the `merchant_oms_process.csv` file to configure [Merchant state machines](/docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html#merchant-state-machine) in your Spryker shop.
 
 To import the file, run:
 

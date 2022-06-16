@@ -4,7 +4,7 @@ description: Retrieve information about Marketplace orders via Glue API.
 template: glue-api-storefront-guide-template
 related:
   - title: Managing the returns
-    link: docs/marketplace/dev/glue-api-guides/page.version/managing-the-returns.html
+    link: docs/marketplace/dev/glue-api-guides/managing-the-returns.html
 ---
 
 Every registered customer can retrieve the list of orders for their account, as well as the detailed order information, including every step of the calculation and addresses used in the orders.
@@ -19,7 +19,7 @@ The **Marketplace Order Management API** lets you retrieve all orders made by a 
 
 ## Installation
 
-For detailed information about the modules that provide the API functionality and related installation instructions, see [**Glue API: Order Management feature integration**](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)
+For detailed information about the modules that provide the API functionality and related installation instructions, see [**Glue API: Order Management feature integration**](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-order-management-feature-integration.html)
 
 ## Retrieve all orders
 
@@ -33,7 +33,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | HEADER KEY  | HEADER VALUE | REQUIRED | DESCRIPTION                                                  |
 | ------------- | ------------ | -------- | -------------------------------- |
-| Authorization | string   | &check;  | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string   | &check;  | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION  | POSSIBLE VALUES |
 | ---------------- | ---------------------- | ----------------------------- |
@@ -512,7 +512,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 
 | ATTRIBUTE    | TYPE  | DESCRIPTION     |
 | -------------- | -------- | ----------------------- |
-| merchantReferences | Array    | Unique identifier of the [merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) |
+| merchantReferences | Array    | Unique identifier of the [merchant](/docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) |
 | itemStates  | Array  | State of the item in the order.    |
 | createdAt  | String   | Date and time when the order was created.    |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
@@ -530,7 +530,7 @@ To retrieve a list of all orders made by a registered customer, send the request
 | canceledTotal     | Integer | Total canceled amount.                                  |
 | remunerationTotal | Integer | Total sum of remuneration.                              |
 
-For the attributes of the included resources, see [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html).
+For the attributes of the included resources, see [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchants.html).
 
 ## Retrieve an order
 
@@ -542,13 +542,13 @@ To retrieve detailed information about an order, send the request:
 
 | PATH PARAMETER | DESCRIPTION     |
 | ------------------ | ------------------------------ |
-| {% raw %}***{{order_id}}***{% endraw %}       | Unique identifier of an order. [Retrieve all orders](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-orders.html) to get it. |
+| {% raw %}***{{order_id}}***{% endraw %}       | Unique identifier of an order. [Retrieve all orders](/docs/scos/dev/glue-api-guides/retrieving-orders.html) to get it. |
 
 ### Request
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION |
 | ------------- | ------------ | -------- | ---------------------- |
-| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html). |
 
 
 | String parameter | Description     | Possible values    |
@@ -1336,7 +1336,7 @@ To retrieve detailed information about an order, send the request:
 
 | ATTRIBUTE     | TYPE | DESCRIPTION     |
 | ------------------ | -------- | --------------------- |
-| merchantReferences | Array    | Unique identifier of the [merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) |
+| merchantReferences | Array    | Unique identifier of the [merchant](/docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) |
 | itemStates      | Array  | Statuses of the order’s items in the [state machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html). |
 | createdAt       | String | Date and time when the order was created.   |
 | currencyIsoCode | String | ISO 4217 code of the currency that was selected when placing the order. |
@@ -1378,7 +1378,7 @@ To retrieve detailed information about an order, send the request:
 | billingAddress.email       | String | Email address to use for communication.                      |
 | billingAddress.country     | String | Specifies the country.                                       |
 | billingAddress.iso2Code    | String | ISO 2-Letter Country Code to use.                            |
-| shippingAddress            | object | Shipment address of the order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Checking out purchases in version 202009.0](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html).|
+| shippingAddress            | object | Shipment address of the order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Checking out purchases in version 202009.0](/docs/scos/dev/glue-api-guides/checking-out/checking-out-purchases.html).|
 
 #### Order item information
 
@@ -1430,7 +1430,7 @@ To retrieve detailed information about an order, send the request:
 | items.salesUnit | String| Sales unit to be used for the item amount calculation.|
 | items.amount | String| |
 | items.metadata   | object  | Metadata of the concrete product.                            |
-| items.metadata.superAttributes   | String  | [Attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html) of the order item. |
+| items.metadata.superAttributes   | String  | [Attributes](/docs/scos/user/features/product-feature-overview/product-attributes-overview.html) of the order item. |
 | items.metadata.image     | String  | Product image URL.   |
 
 
@@ -1506,7 +1506,7 @@ To retrieve detailed information about an order, send the request:
 
 | ATTRIBUTE     | TYPE | DESCRIPTION      |
 | ------------------ | ----------- | ------------------------ |
-| shipments | object | Information about the shipments used in this order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Checking out purchases in version 202009.0](/docs/scos/dev/glue-api-guides/202009.0/checking-out/checking-out-purchases.html). To see all the attributes that are returned when retrieving orders without split delivery, see [Retrieving orders in version 202009.0](/docs/scos/dev/glue-api-guides/202009.0/retrieving-orders.html). To retrieve shipment details, include the order-shipments resource in the request. |
+| shipments | object | Information about the shipments used in this order. This value is returned only if you submit an order without split delivery. To learn how to do that, see [Checking out purchases in version 202009.0](https://archive.docs.spryker.com/docs/scos/dev/glue-api-guides/202009.0/checking-out/checking-out-purchases.html). To see all the attributes that are returned when retrieving orders without split delivery, see [Retrieving orders in version 202009.0](https://archive.docs.spryker.com/docs/scos/dev/glue-api-guides/202009.0/retrieving-orders.html). To retrieve shipment details, include the order-shipments resource in the request. |
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE |
 | ---------------- | --------------------- | ------ |
@@ -1535,4 +1535,4 @@ To retrieve detailed information about an order, send the request:
 | order-shipments | shippingAddress.iso2Code    | String | ISO 2-Letter Country Code to use.       |
 
 
-For the attributes of other included resources, see [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html).
+For the attributes of other included resources, see [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchants.html).

@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-reviews/managing-product-reviews.html
 related:
   - title: Product Rating & Reviews feature overview
-    link: docs/scos/user/features/page.version/product-rating-and-reviews-feature-overview.html
+    link: docs/scos/user/features/product-rating-and-reviews-feature-overview.html
 ---
 
 This topic describes how to manage product reviews received from the customers.

@@ -4,9 +4,9 @@ description: This document describes the actions a merchant can do in the Orders
 template: back-office-user-guide-template
 related:
   - title: Merchant order overview
-    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/merchant-order-overview.html
+    link: docs/marketplace/user/features/marketplace-order-management-feature-overview/merchant-order-overview.html
   - title: Marketplace and merchant state machines overview
-    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
+    link: docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
   - title: Marketplace and merchant state machines interaction
     link: docs/marketplace/user/features/202204.0/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
 ---
@@ -30,7 +30,7 @@ To change the state of items in a merchant order:
 3. Repeat step 2 until you get the desired order state. The succession of the steps depends on the merchant state machine that is set up.
 
 **Tips & tricks**
-<br>Merchant order items can have multiple trigger buttons. When you click one of those buttons, only items with a manually executable event are updated. All other items remain in that state until their trigger has been performed. For more details, see [Marketplace state machine](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html#marketplace-state-machine)
+<br>Merchant order items can have multiple trigger buttons. When you click one of those buttons, only items with a manually executable event are updated. All other items remain in that state until their trigger has been performed. For more details, see [Marketplace state machine](/docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html#marketplace-state-machine)
 
 ### Changing merchant order item states
 

@@ -8,7 +8,7 @@ The *Marketplace Merchant Custom Prices* feature allows merchants to define cust
 
 {% info_block warningBox "User documentation" %}
 
-To learn more about the Marketplace Merchant Custom Prices feature and find out how end users use it see [Marketplace Merchant Custom Prices feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-custom-prices-feature-overview.html).
+To learn more about the Marketplace Merchant Custom Prices feature and find out how end users use it see [Marketplace Merchant Custom Prices feature overview](/docs/marketplace/user/features/marketplace-merchant-custom-prices-feature-overview.html).
 
 {% endinfo_block %}
 
@@ -35,4 +35,4 @@ The following schema illustrates the *Marketplace Merchant Custom Prices* domain
 
 | INTEGRATION GUIDES|
 |---------|
-| [Marketplace Merchant Custom Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-custom-prices-feature-integration.html) |
+| [Marketplace Merchant Custom Prices feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-custom-prices-feature-integration.html) |

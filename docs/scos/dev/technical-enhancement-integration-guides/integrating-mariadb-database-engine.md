@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/technical-enhancements/mariadb-database-engine.html
 related:
   - title: Configuring services
-    link: docs/scos/dev/the-docker-sdk/page.version/configuring-services.html
+    link: docs/scos/dev/the-docker-sdk/configuring-services.html
 ---
 
 [MariaDB](https://mariadb.org/) is a community-developed, commercially supported fork of the [MySQL](https://www.mysql.com/) relational database management system.

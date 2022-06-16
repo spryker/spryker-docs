@@ -8,7 +8,7 @@ originalArticleId: f56e9856-d7d6-4356-9f06-c446acbf66f3
 redirect_from:
   - /v3/docs/shop-guide-managing-agent-account
   - /v3/docs/en/shop-guide-managing-agent-account
-  - /docs/scos/user/shop-user-guides/page.version/agent-account/shop-guide-managing-agent-account.html
+  - /docs/scos/user/shop-user-guides/agent-account/shop-guide-managing-agent-account.html
   - /docs/scos/user/shop-user-guides/201907.0/agent-account/shop-guide-managing-agent-account.html
 ---
 

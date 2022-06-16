@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/technology-partners/202204.0/taxes/avalara-tax-shipment-feature-integration.html
 related:
   - title: Tax feature overview
-    link: docs/scos/user/features/page.version/tax-feature-overview.html
+    link: docs/scos/user/features/tax-feature-overview.html
 ---
 
 To enable the AvalaraTax + Shipment component of the Avalara partner integration, use the [spryker-eco/avalara-tax-shipment](https://github.com/spryker-eco/avalara-tax-shipment) module.  
@@ -28,8 +28,8 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Shipment | master | [Shipment feature integration guide](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-feature-integration.html) |
-| Avalara Tax | master | [Avalara Tax integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/taxes/avalara/integrating-avalara.html) |
+| Shipment | master | [Shipment feature integration guide](/docs/scos/dev/feature-integration-guides/shipment-feature-integration.html) |
+| Avalara Tax | master | [Avalara Tax integration](/docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara.html) |
 
 ### 1) Install the required modules using Composer
 

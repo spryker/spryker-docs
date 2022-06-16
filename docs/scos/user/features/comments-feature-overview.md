@@ -78,6 +78,6 @@ Company users can perform the following actions using the Comments widget on the
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Comments feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/comments-feature-walkthrough.html) for developers.
+Are you a developer? See [Comments feature walkthrough](/docs/scos/dev/feature-walkthroughs/comments-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

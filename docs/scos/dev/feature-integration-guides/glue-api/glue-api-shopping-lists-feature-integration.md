@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-shopping-lists-feature-integration.html
 related:
   - title: Managing Shopping Lists
-    link: docs/scos/dev/glue-api-guides/page.version/managing-shopping-lists/managing-shopping-lists.html
+    link: docs/scos/dev/glue-api-guides/managing-shopping-lists/managing-shopping-lists.html
 ---
 
 {% info_block infoBox "Included features" %}
@@ -32,8 +32,8 @@ To start feature integration, overview and install the necessary features:
 
 | FEATURE | VERSION | INTEGRATION GUIDE  |
 | --- | --- |--- |
-| Spryker Core	 | {{page.version}} |[Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Shopping Lists	 | {{page.version}} |[Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html) |
+| Spryker Core	 | {{site.version}} |[Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Shopping Lists	 | {{site.version}} |[Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/shopping-lists-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -125,7 +125,7 @@ SELECT COUNT(*) FROM spy_shopping_list_item WHERE uuid IS NULL;
 
 {% info_block infoBox %}
 
-`ShoppingListsResourcePlugin` GET, POST, PATCH and DELETE, `ShoppingListItemsResourcePlugin` POST, PATCH and DELETE verbs are protected resources. For details, refer to the Configure section of [Glue Infrastructure documentation](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-routing).
+`ShoppingListsResourcePlugin` GET, POST, PATCH and DELETE, `ShoppingListItemsResourcePlugin` POST, PATCH and DELETE verbs are protected resources. For details, refer to the Configure section of [Glue Infrastructure documentation](/docs/scos/dev/glue-api-guides/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

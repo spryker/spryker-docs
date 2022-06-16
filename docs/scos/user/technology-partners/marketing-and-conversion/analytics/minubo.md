@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/minubo
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
+    link: docs/scos/user/technology-partners/technology-partners.html
 ---
 
 ## Partner Information
@@ -32,7 +32,7 @@ YOUR ADVANTAGES:
 
 ## Related Developer guides
 
-* [Installing and configuring Minubo](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/installing-and-integrating-minubo.html)
+* [Installing and configuring Minubo](/docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/installing-and-integrating-minubo.html)
 
 ---
 

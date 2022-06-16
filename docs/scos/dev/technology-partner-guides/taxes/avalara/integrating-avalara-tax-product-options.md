@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/technology-partners/202204.0/taxes/avalara-tax-product-options-feature-integration.html
 related:
   - title: Tax feature overview
-    link: docs/scos/user/features/page.version/tax-feature-overview.html
+    link: docs/scos/user/features/tax-feature-overview.html
 ---
 
 To enable the AvalaraTax + Product Options component of the Avalara partner integration, use the [spryker-eco/avalara-tax-product-option](https://github.com/spryker-eco/avalara-tax-product-option) module.
@@ -29,7 +29,7 @@ To start the feature integration, overview and install the necessary features:
 |NAME | VERSION | INTEGRATION GUIDE |
 |--- | --- | --- |
 | Product Options | master |  |
-| Avalara Tax | master | [Avalara Tax integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/taxes/avalara/integrating-avalara.html)|
+| Avalara Tax | master | [Avalara Tax integration](/docs/scos/dev/technology-partner-guides/taxes/avalara/integrating-avalara.html)|
 
 ### 1) Install the required modules using Composer
 

@@ -5,9 +5,9 @@ Description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 related:
   - title: Marketplace Product Options feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-options-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-options-feature-walkthrough.html
   - title: Checkout feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/checkout-feature-walkthrough.html
+    link: docs/scos/dev/feature-walkthroughs/checkout-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product Option + Checkout feature into a Spryker project.
@@ -23,8 +23,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | ---------- |
-| Marketplace Product Option | {{page.version}}      | [Marketplace Product Option Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-feature-integration.html) |
-| Checkout | {{page.version}} | [Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html) |
+| Marketplace Product Option | {{site.version}}      | [Marketplace Product Option Feature Integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-option-feature-integration.html) |
+| Checkout | {{site.version}} | [Checkout feature integration](/docs/scos/dev/feature-integration-guides/checkout-feature-integration.html) |
 
 ### 1) Set up behavior
 

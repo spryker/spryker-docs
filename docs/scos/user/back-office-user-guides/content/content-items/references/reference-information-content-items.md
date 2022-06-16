@@ -12,9 +12,9 @@ redirect_from:
   - /docs/en/content-items-reference-information
 related:
   - title: Creating Content Items
-    link: docs/scos/user/back-office-user-guides/page.version/content/content-items/creating-content-items.html
+    link: docs/scos/user/back-office-user-guides/content/content-items/creating-content-items.html
   - title: Editing Content Items
-    link: docs/scos/user/back-office-user-guides/page.version/content/content-items/editing-content-items.html
+    link: docs/scos/user/back-office-user-guides/content/content-items/editing-content-items.html
 ---
 
 This topic contains the reference information for working with content items in **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section.
@@ -122,4 +122,4 @@ The following table describes the attributes on the *Create Content Item: Naviga
 | --- | --- |
 | Name | Name of the content item. |
 | Description | Description of the content item. |
-| Navigation | Field to select an existing navigation element. See [Creating a Navigation Element](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html#create-a-navigation-content-item) to learn how to create it. |
+| Navigation | Field to select an existing navigation element. See [Creating a Navigation Element](/docs/scos/user/back-office-user-guides/content/content-items/creating-content-items.html#create-a-navigation-content-item) to learn how to create it. |

@@ -4,9 +4,9 @@ description: This document contains concept information for the Marketplace Prod
 template: concept-topic-template
 related:
   - title: Approving and denying marketplace products
-    link: docs/marketplace/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html#approving-and-denying-marketplace-products
+    link: docs/marketplace/user/back-office-user-guides/catalog/products/managing-products/managing-products.html#approving-and-denying-marketplace-products
   - title: Sending the product for approval
-    link: docs/marketplace/user/merchant-portal-user-guides/page.version/products/abstract-products/creating-marketplace-abstract-product.html#sending-the-product-for-approval
+    link: docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/creating-marketplace-abstract-product.html#sending-the-product-for-approval
 ---
 The [marketplace operator](/docs/marketplace/user/intro-to-spryker-marketplace/back-office-for-marketplace-operator.html) is primarily responsible for ensuring the quality of data in the marketplace, including merchants, products, and offers. To control those things in the marketplace, the approval mechanism is a key feature.
 
@@ -22,7 +22,7 @@ The Storefront displays only the products that are approved, active, lie within 
 
 {% info_block warningBox "Note" %}
 
-The following workflow is valid only in case the [Marketplace Product Approval Process feature is enabled](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-approval-process-feature-integration.html).
+The following workflow is valid only in case the [Marketplace Product Approval Process feature is enabled](/docs/marketplace/dev/feature-integration-guides/marketplace-product-approval-process-feature-integration.html).
 
 {% endinfo_block %}
 
@@ -43,26 +43,26 @@ You can configure the logic of the statuses on the project level.
 
 ## Marketplace Product Approval process workflow
 
-If a [merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) wants their new marketplace product to be displayed in the Storefront, this product has to be approved by the marketplace administrator. The procedure goes through the following stages:
+If a [merchant](/docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) wants their new marketplace product to be displayed in the Storefront, this product has to be approved by the marketplace administrator. The procedure goes through the following stages:
 
-1. [**Creating a marketplace product**](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/creating-marketplace-abstract-product.html).
+1. [**Creating a marketplace product**](/docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/creating-marketplace-abstract-product.html).
 
-2. **Submitting the product for approval.** The [merchant user](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) submits the request for product approval in the Merchant Portal. The status of the product changes to *Waiting for approval*.
+2. **Submitting the product for approval.** The [merchant user](/docs/marketplace/user/features/marketplace-merchant-feature-overview/merchant-users-overview.html) submits the request for product approval in the Merchant Portal. The status of the product changes to *Waiting for approval*.
 
 3. **Product approval or rejection.** The marketplace administrator can view the products and update their statuses in the Back Office. If a product is approved, the approval status changes to *Approved*. If the marketplace administrator rejects a product, the product gets the *Denied* status.
 
 ## Marketplace Product Approval data import
 
-A marketplace owner can set a default approval status for marketplace products owned by a certain merchant via the data import. See [File details: merchant_product_approval_status_default.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-approval-status-default.csv.html) to learn more how to do that.
+A marketplace owner can set a default approval status for marketplace products owned by a certain merchant via the data import. See [File details: merchant_product_approval_status_default.csv](/docs/marketplace/dev/data-import/file-details-merchant-product-approval-status-default.csv.html) to learn more how to do that.
 
 ## Related Business User articles
 
 | BACK OFFICE USER GUIDES  | MERCHANT PORTAL USER GUIDES  |
 | -------------------- | ------------------ |
-|  [Approve and deny marketplace products](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/managing-products/managing-products.html#approving-and-denying-marketplace-products)  | [Send the product for approval](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/creating-marketplace-abstract-product.html#sending-the-product-for-approval)   |
+|  [Approve and deny marketplace products](/docs/marketplace/user/back-office-user-guides/catalog/products/managing-products/managing-products.html#approving-and-denying-marketplace-products)  | [Send the product for approval](/docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/creating-marketplace-abstract-product.html#sending-the-product-for-approval)   |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Product Approval feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-product-approval-process-feature-walkthrough.html) for developers.
+Are you a developer? See [Marketplace Product Approval feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/marketplace-product-approval-process-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

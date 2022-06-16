@@ -10,13 +10,13 @@ redirect_from:
   - /v4/docs/en/shop-guide-wishlists
 related:
   - title: Managing Wishlists
-    link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html
+    link: docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html
 ---
 
 This article describes how you, as a Buyer, can create and manage wishlists in the Storefront.
 ***
 
-You can create [multiple wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html) and save products to them for future purchases. This may be useful when, for example, you do not intend to purchase products at the moment but want to do this later once you return to the online store. Also, you can add to these lists the products you are interested in.
+You can create [multiple wishlists](/docs/scos/user/features/wishlist-feature-overview.html) and save products to them for future purchases. This may be useful when, for example, you do not intend to purchase products at the moment but want to do this later once you return to the online store. Also, you can add to these lists the products you are interested in.
 
 In the **Wishlists** section of your customer account, you can perform the following actions:
 * create multiple wishlists
@@ -42,7 +42,7 @@ The feature is available only for **logged-in** users.
 
 **Tips and tricks**
 
-You can also create a wishlist from the product detail page when adding a product to the wishlist. For more information on how to create a wishlist on the product detail page, see [Shop Guide - Managing Products](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-managing-products.html#adding-a-product-to-shopping-list).
+You can also create a wishlist from the product detail page when adding a product to the wishlist. For more information on how to create a wishlist on the product detail page, see [Shop Guide - Managing Products](/docs/scos/user/shop-user-guides/shop-guide-managing-products.html#adding-a-product-to-shopping-list).
 ***
 
 ## Managing Wishlists
@@ -62,11 +62,11 @@ You can also create a wishlist from the product detail page when adding a produc
 * View the product information, including a product name, attributes, price, and availability in the warehouse.
 * Add all products or the selected ones from the wishlist to the cart. To do this, click **Add all available products to cart** or **Add to Cart** respectively. Once done, the item(s) will be added to the active cart.
 * Remove the product from the wishlist. To do this, click **Remove**. This will remove the item from the active wishlist.
-* Navigate to the product detail page. For more information on how to manage the products on the page, see [Shop Guide - Managing Products](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-managing-products.html#adding-a-product-to-wishlist)
+* Navigate to the product detail page. For more information on how to manage the products on the page, see [Shop Guide - Managing Products](/docs/scos/user/shop-user-guides/shop-guide-managing-products.html#adding-a-product-to-wishlist)
 
 ![Viewing a wishlist](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Wishlists/view-wishlists.png)
 ***
 
 **What’s next?**
 
-If you have added the products to the cart, you can proceed to the checkout. For more information on how to place the order, see [Shop Guide - Checkout](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-checkout.html).
+If you have added the products to the cart, you can proceed to the checkout. For more information on how to place the order, see [Shop Guide - Checkout](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-checkout.html).

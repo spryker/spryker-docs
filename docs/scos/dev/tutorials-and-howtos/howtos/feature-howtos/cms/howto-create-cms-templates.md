@@ -16,9 +16,9 @@ redirect_from:
   - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/cms/howto-create-cms-templates.html
 related:
   - title: CMS Page
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
+    link: docs/scos/user/features/cms-feature-overview/cms-pages-overview.html
   - title: CMS Block
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
+    link: docs/scos/user/features/cms-feature-overview/cms-blocks-overview.html
 ---
 
 This document describes how to create CMS templates for Yves.

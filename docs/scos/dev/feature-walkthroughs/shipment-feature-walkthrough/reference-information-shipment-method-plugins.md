@@ -14,7 +14,7 @@ related:
   - title: Migration Guide - Shipment
     link: docs/scos/dev/module-migration-guides/migration-guide-shipment.html
   - title: Shipment feature overview
-    link: docs/scos/user/features/page.version/shipment-feature-overview.html
+    link: docs/scos/user/features/shipment-feature-overview.html
 ---
 
 The main concerns regarding shipping services are:

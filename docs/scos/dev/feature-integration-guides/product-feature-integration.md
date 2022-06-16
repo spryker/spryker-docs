@@ -14,19 +14,19 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/product-feature-integration.html
 related:
   - title: Configurable Bundle feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/configurable-bundle-feature-integration.html
   - title: Product Lists feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-lists-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/product-lists-feature-integration.html
   - title: Prices feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/prices-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/prices-feature-integration.html
   - title: Merchant Product Restrictions feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/merchant-product-restrictions-feature-integration.html
   - title: Product Images + Configurable Bundle feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-images-configurable-bundle-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/product-images-configurable-bundle-feature-integration.html
   - title: Product + Order Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-order-management-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/product-order-management-feature-integration.html
   - title: Product overview
-    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
+    link: docs/scos/user/features/product-feature-overview/product-feature-overview.html
 ---
 
 {% info_block errorBox %}
@@ -45,15 +45,15 @@ Please overview and install the necessary features before beginning the integrat
 
 | Name | Version |
 |---|---|
-| Spryker Core | {{page.version}} |
-| Prices | {{page.version}} |
+| Spryker Core | {{site.version}} |
+| Prices | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker-feature/product:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/product:"{{site.version}}" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 
@@ -280,14 +280,14 @@ Overview and install the necessary features before beginning the integration ste
 
 | Name | Version |
 | --- | --- |
-| Spryker Core | {{page.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker-feature/product:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/product:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

@@ -131,6 +131,6 @@ To add a quick order to a shopping cart, do the following:
 2. Click **Add to Shopping Cart**.
 ***
 **What's next?**
-* [Go to Checkout](/docs/scos/user/shop-user-guides/201903.0/shop-guide-checkout/shop-guide-checkout.html)
+* [Go to Checkout](https://archive.docs.spryker.com/docs/scos/user/shop-user-guides/201903.0/shop-guide-checkout/shop-guide-checkout.html)
 
 <!-- Last review date: Mar 06, 2019 -->

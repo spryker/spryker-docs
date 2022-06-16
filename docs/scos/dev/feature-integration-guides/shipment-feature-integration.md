@@ -15,9 +15,9 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201907.0/shipment-feature-integration.html
 related:
   - title: Shipment feature overview
-    link: docs/scos/user/features/page.version/shipment-feature-overview.html
+    link: docs/scos/user/features/shipment-feature-overview.html
   - title: Shipment + Approval Process feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/shipment-approval-process-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/shipment-approval-process-feature-integration.html
 ---
 
 {% info_block errorBox %}
@@ -37,14 +37,14 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/shipment:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/shipment:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

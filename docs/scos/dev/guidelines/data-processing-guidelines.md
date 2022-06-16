@@ -16,7 +16,7 @@ redirect_from:
   - /v5/docs/en/data-processing-guidelines
 related:
   - title: Data Importer Speed Optimization
-    link: docs/scos/dev/data-import/page.version/data-importer-speed-optimization.html
+    link: docs/scos/dev/data-import/data-importer-speed-optimization.html
 ---
 
 One of the most important questions addressed during project development is “How to bring data in my project?”. Spryker provides the required infrastructure to address performance and consistency when dealing with project data.

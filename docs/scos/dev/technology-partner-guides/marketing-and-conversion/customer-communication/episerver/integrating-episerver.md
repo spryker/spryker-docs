@@ -14,17 +14,17 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/marketing-and-conversion/customer-communication/episerver/integrating-episerver.html
 related:
   - title: Episerver - Installation and Configuration
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
+    link: docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html
   - title: Episerver - Order referenced commands
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-order-referenced-commands.html
+    link: docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-order-referenced-commands.html
   - title: Episerver - API Requests
-    link: docs/scos/user/technology-partners/page.version/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-api-requests.html
+    link: docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/technical-details-and-howtos/episerver-api-requests.html
 ---
 
 This article provides step-by-step instructions on integrating the Episerver module into your project.
 
 ## Prerequisites
-Prior to integrating Episerver into your project, make sure you [installed and configured](/docs/scos/user/technology-partners/{{page.version}}/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html) the Episerver module.
+Prior to integrating Episerver into your project, make sure you [installed and configured](/docs/scos/user/technology-partners/marketing-and-conversion/customer-communication/episerver/installing-and-configuring-episerver.html) the Episerver module.
 
 ## Customer Registration / Reset Password / Reset Rassword Confirm Event
 

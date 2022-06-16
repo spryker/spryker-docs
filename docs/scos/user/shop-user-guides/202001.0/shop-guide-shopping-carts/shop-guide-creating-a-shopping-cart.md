@@ -21,7 +21,7 @@ To create a shopping cart:
 
 {% info_block infoBox %}
 
-See [Shopping Carts: Reference Information](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-shopping-carts/shopping-carts-reference-information.html for information on the Shopping Carts page contents.
+See [Shopping Carts: Reference Information](/docs/scos/user/shop-user-guides/shop-guide-shopping-carts/shopping-carts-reference-information.html for information on the Shopping Carts page contents.
 
 {% endinfo_block %}
 

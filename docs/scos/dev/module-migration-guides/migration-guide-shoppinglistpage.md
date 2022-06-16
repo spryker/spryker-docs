@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shoppinglistpage.html
 related:
   - title: Multiple and Shared Shopping Lists overview
-    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+    link: docs/scos/user/features/shopping-lists-feature-overview/shopping-lists-feature-overview.html
 ---
 
 ## Upgrading from version 0.* to version 0.8.0

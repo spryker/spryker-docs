@@ -20,7 +20,7 @@ You can send a hidden copy of the invoice to yourself or your employees. Keep in
 
 {% endinfo_block %}
 
-You can generate an invoice only once the order has acquired the `confirmed` state. The invoice generation and sending are triggered in the Back Office by initiating the `invoice-generate` event on the **View Order** page. For details about how a Back Office User initiates events for orders, see [Changing order statuses](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html). After generating the invoice, the OMS state of the order changes to `exported`.
+You can generate an invoice only once the order has acquired the `confirmed` state. The invoice generation and sending are triggered in the Back Office by initiating the `invoice-generate` event on the **View Order** page. For details about how a Back Office User initiates events for orders, see [Changing order statuses](/docs/scos/user/back-office-user-guides/sales/orders/changing-the-state-of-order-items.html). After generating the invoice, the OMS state of the order changes to `exported`.
 
 {% info_block infoBox "Info" %}
 
@@ -61,10 +61,10 @@ Keep in mind that bundled product itself always has a 0 tax rate. However, all o
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Trigger invoice generation in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html)  |
+| [Trigger invoice generation in the Back Office](/docs/scos/user/back-office-user-guides/sales/orders/changing-the-state-of-order-items.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Order Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/order-management-feature-walkthrough/order-management-feature-wakthrough.html) for developers.
+Are you a developer? See [Order Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/order-management-feature-walkthrough/order-management-feature-wakthrough.html) for developers.
 
 {% endinfo_block %}

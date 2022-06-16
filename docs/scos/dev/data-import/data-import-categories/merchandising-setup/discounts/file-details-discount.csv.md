@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201907.0/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html
 ---
 
-This document describes the `discount.csv` file to configure [Discount](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `discount.csv` file to configure [Discount](/docs/scos/user/features/promotions-discounts-feature-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 

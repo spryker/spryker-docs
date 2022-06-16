@@ -21,7 +21,7 @@ To start the integration, review and install the necessary features:
 
 | NAME         | VERSION |
 | ----------- | ------ |
-| Spryker Core | {{page.version}}  |
+| Spryker Core | {{site.version}}  |
 
 ## 1) Install the required modules using Composer
 

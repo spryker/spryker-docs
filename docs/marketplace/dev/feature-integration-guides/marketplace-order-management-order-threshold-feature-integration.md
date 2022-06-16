@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 related:
   - title: Marketplace Order Management feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Order Management + Order Threshold feature into a Spryker project.
@@ -20,8 +20,8 @@ To start feature integration, integrate the required features:
 
 | NAME  | VERSION | INTEGRATION GUIDE |
 | -------------- | --------- | -------------|
-| Order Threshold | {{page.version}}  | [Order Threshold feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html) |
-| Marketplace Order Management | {{page.version}} | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html) |
+| Order Threshold | {{site.version}}  | [Order Threshold feature integration](/docs/scos/dev/feature-integration-guides/checkout-feature-integration.html) |
+| Marketplace Order Management | {{site.version}} | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html) |
 
 ### Install the required modules using Composer
 

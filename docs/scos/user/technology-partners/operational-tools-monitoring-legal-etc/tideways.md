@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/tideways.html
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
+    link: docs/scos/user/technology-partners/technology-partners.html
 ---
 
 ## Partner Information
@@ -32,7 +32,7 @@ YOUR ADVANTAGES:
 
 ## Related Developer guides
 
-* [Installing and configuring Tideways](/docs/scos/dev/technology-partner-guides/{{page.version}}/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html)
+* [Installing and configuring Tideways](/docs/scos/dev/technology-partner-guides/operational-tools-monitoring-legal-etc/installing-and-configuring-tideways-with-vagrant.html)
 
 ---
 

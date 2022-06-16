@@ -4,9 +4,9 @@ description: This integration guide provides steps on how to integrate the Marke
 template: feature-integration-guide-template
 related:
   - title: Marketplace Product Offer feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
   - title: Marketplace Cart feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-cart-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-cart-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product Offer + Cart Glue API feature into a Spryker project.
@@ -21,9 +21,9 @@ To start feature integration, integrate the required features:
 
 | NAME                  | VERSION | INTEGRATION GUIDE |
 | --------------------- | ------- | ------------------|
-| Cart API                         | {{page.version}}  | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) |
-| Marketplace Product Offer API    | {{page.version}}  | [Glue API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html) |
-| Marketplace Inventory Management | {{page.version}}  | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html) |
+| Cart API                         | {{site.version}}  | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html) |
+| Marketplace Product Offer API    | {{site.version}}  | [Glue API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html) |
+| Marketplace Inventory Management | {{site.version}}  | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html) |
 
 ### 1) Set up behavior
 

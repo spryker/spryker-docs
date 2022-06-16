@@ -24,9 +24,9 @@ To start feature integration, overview and install the necessary features:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| Product Bundles | {{page.version}} |
-| Cart | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Product Bundles | {{site.version}} |
+| Cart | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Set up behavior
 

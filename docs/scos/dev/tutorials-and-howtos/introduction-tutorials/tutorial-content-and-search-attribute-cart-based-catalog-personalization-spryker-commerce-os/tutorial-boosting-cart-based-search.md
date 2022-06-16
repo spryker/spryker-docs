@@ -22,7 +22,7 @@ redirect_from:
   - /v1/docs/en/boosting-cart-based-search
 related:
   - title: Search
-    link: docs/scos/user/features/page.version/search-feature-overview/search-feature-overview.html
+    link: docs/scos/user/features/search-feature-overview/search-feature-overview.html
 ---
 
 This tutorial describes how you can improve the cart-based search in your project.

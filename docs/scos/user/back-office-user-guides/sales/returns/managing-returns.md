@@ -12,10 +12,10 @@ redirect_from:
   - /docs/en/managing-returns
 related:
   - title: Return Management Feature Overview
-    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
+    link: docs/scos/user/features/return-management-feature-overview/return-management-feature-overview.html
 ---
 
-This document describes how to manage returns in the Back Office. To learn how Back Office user create returns, see [Creating returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html). To learn how customers create returns, see [Return Management on the Storefront](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#return-management-on-the-storefront).
+This document describes how to manage returns in the Back Office. To learn how Back Office user create returns, see [Creating returns](/docs/scos/user/back-office-user-guides/sales/orders/creating-returns.html). To learn how customers create returns, see [Return Management on the Storefront](/docs/scos/user/features/return-management-feature-overview/return-management-feature-overview.html#return-management-on-the-storefront).
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ On the **Returns** page, next to the return you want to view, click **View**.
 ## Printing return slips
 
 
-Next to the return you want to generate a [return slip](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html#return-slip) for, click **Print Slip**.
+Next to the return you want to generate a [return slip](/docs/scos/user/features/return-management-feature-overview/return-management-feature-overview.html#return-slip) for, click **Print Slip**.
     This opens the page with an auto-generated slip.
 
 ## Reference information: Managing returns     

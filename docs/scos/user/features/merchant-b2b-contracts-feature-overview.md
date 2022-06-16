@@ -18,12 +18,12 @@ In the B2B partnership, which is usually based on contracts, the selling company
 There are three key figures: marketplace owner, merchant, and buyer.
 
 * The marketplace owner owns the platform and acts as a broker between merchants and buyers.
-* The merchants are sellers usually represented by a [company](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html#company).
-* The buyers are often [business units](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-units-overview.html) of companies that purchase products or services from the merchants.
+* The merchants are sellers usually represented by a [company](/docs/scos/user/features/company-account-feature-overview/company-accounts-overview.html#company).
+* The buyers are often [business units](/docs/scos/user/features/company-account-feature-overview/business-units-overview.html) of companies that purchase products or services from the merchants.
 
 The business relationships between merchants and buyers are usually based on contracts.
 
-A Back Office user can create merchants and merchant relations. See [Create merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants/create-merchants.html) and [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/create-merchant-relations.html) to learn how to do that.
+A Back Office user can create merchants and merchant relations. See [Create merchants](/docs/scos/user/back-office-user-guides/marketplace/merchants/create-merchants.html) and [Create merchant relations](/docs/scos/user/back-office-user-guides/marketplace/merchant-relations/create-merchant-relations.html) to learn how to do that.
 
 A developer can also import merchants and merchant relations.
 
@@ -35,13 +35,13 @@ Check out this video tutorial on how to set up merchants and merchant relations:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants/create-merchants.html)  |
-| [Edit merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants/edit-merchants.html)  |
-| [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/create-merchant-relations.html)  |
-| [Edit merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/edit-merchant-relations.html)  |
+| [Create merchants](/docs/scos/user/back-office-user-guides/marketplace/merchants/create-merchants.html)  |
+| [Edit merchants](/docs/scos/user/back-office-user-guides/marketplace/merchants/edit-merchants.html)  |
+| [Create merchant relations](/docs/scos/user/back-office-user-guides/marketplace/merchant-relations/create-merchant-relations.html)  |
+| [Edit merchant relations](/docs/scos/user/back-office-user-guides/marketplace/merchant-relations/edit-merchant-relations.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Merchant B2B Contracts feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-b2b-contracts-feature-walkthrpugh.html) for developers.
+Are you a developer? See [Merchant B2B Contracts feature walkthrough](/docs/scos/dev/feature-walkthroughs/merchant-b2b-contracts-feature-walkthrpugh.html) for developers.
 
 {% endinfo_block %}

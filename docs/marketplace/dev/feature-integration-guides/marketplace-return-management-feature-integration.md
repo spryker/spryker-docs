@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 related:
   - title: Marketplace Return Management feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-return-management-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-return-management-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Return Management feature into a Spryker project.
@@ -20,9 +20,9 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | ---------- |
-| Spryker Core                 | {{page.version}} | [Spryker Core Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Return Management            | {{page.version}} | [Return Management Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/return-management-feature-integration.html) |
-| Marketplace Order Management | {{page.version}} | [Marketplace Order Management Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html) |
+| Spryker Core                 | {{site.version}} | [Spryker Core Feature Integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
+| Return Management            | {{site.version}} | [Return Management Feature Integration](/docs/scos/dev/feature-integration-guides/return-management-feature-integration.html) |
+| Marketplace Order Management | {{site.version}} | [Marketplace Order Management Feature Integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html) |
 
 ### 1) Install required modules using Composer
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
@@ -30,7 +30,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-return-management:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-return-management:"{{site.version}}" --update-with-dependencies
 ```
 
 <!-- Have to be deleted after Return Management feature will be released with a new version-->
@@ -1029,7 +1029,7 @@ Follow the steps below to install the Marketplace return management feature fron
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-return-management:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-return-management:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1108,4 +1108,4 @@ console frontend:yves:build
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | - |
-| Marketplace Return Management API | | [Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-return-management-feature-integration.html) |
+| Marketplace Return Management API | | [Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-return-management-feature-integration.html) |

@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/user/features/201903.0/content-items-feature-overview.html
 ---
 
-The *Content Items* feature creates an abstraction layer for content management in the Back Office. It lets content managers create and preserve small content pieces. Later, they are inserted into [CMS blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html) and, subsequently, into Storefront pages. Content items are rendered on Storefront using [Content Item Widget](#content-item-widget).
+The *Content Items* feature creates an abstraction layer for content management in the Back Office. It lets content managers create and preserve small content pieces. Later, they are inserted into [CMS blocks](/docs/scos/user/features/cms-feature-overview/cms-blocks-overview.html) and, subsequently, into Storefront pages. Content items are rendered on Storefront using [Content Item Widget](#content-item-widget).
 
 ## Content Item
 Content item is the smallest content unit in Spryker. There are four content item types shipped by default:
@@ -28,17 +28,17 @@ You can use each content item for different purposes. For example, the Banner co
 
 {% info_block infoBox %}
 
-For use cases and exmaple of each of the content item, see [Content Item Widgets types: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-types.html) and [Content Item Widgets templates: Reference Information.](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-templates.html)
+For use cases and exmaple of each of the content item, see [Content Item Widgets types: Reference Information](/docs/scos/user/back-office-user-guides/content/content-items/references/reference-information-content-item-widgets-types.html) and [Content Item Widgets templates: Reference Information.](/docs/scos/user/back-office-user-guides/content/content-items/references/reference-information-content-item-widgets-templates.html)
 
 {% endinfo_block %}
 
-A content manager can [create content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section.
+A content manager can [create content items](/docs/scos/user/back-office-user-guides/content/content-items/creating-content-items.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section.
 A developer can do the following:
-* [Import content items](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html)
-* [Retrieving banner content items](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-content-items/retrieving-banner-content-items.html)
-* [Retrieving abstract product list content items](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-content-items/retrieving-abstract-product-list-content-items.html)
+* [Import content items](/docs/scos/dev/data-import/data-importers-overview-and-implementation.html)
+* [Retrieving banner content items](/docs/scos/dev/glue-api-guides/retrieving-content-items/retrieving-banner-content-items.html)
+* [Retrieving abstract product list content items](/docs/scos/dev/glue-api-guides/retrieving-content-items/retrieving-abstract-product-list-content-items.html)
 
-For more information about each content item type and module relations, see [Content Items feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-items-feature-walkthrough.html).
+For more information about each content item type and module relations, see [Content Items feature walkthrough](/docs/scos/dev/feature-walkthroughs/content-items-feature-walkthrough/content-items-feature-walkthrough.html).
 
 ## Content Item Widget
 
@@ -71,7 +71,7 @@ The schema shows how the Content items feature affects content management in Spr
 
 ![image](https://confluence-connect.gliffy.net/embed/image/b2c37d9d-5350-4535-b437-677bffeb18da.png?utm_medium=live&utm_source=custom)
 
-To learn more about working with content item widgets in the WYSIWYG editor, see [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
+To learn more about working with content item widgets in the WYSIWYG editor, see [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
 
 ### Content Item Widget Template
 
@@ -132,13 +132,13 @@ Structure:
 
 |BACK OFFICE USER GUIDES|
 |---|
-|  [Create content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html)  |
-|  [Edit content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/editing-content-items.html)  |
-|  [Add content items to CMS pages and blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html)  |
-|  [Edit content items in CMS pages and blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/editing-content-items-in-cms-pages-and-blocks.html)   |
+|  [Create content items](/docs/scos/user/back-office-user-guides/content/content-items/creating-content-items.html)  |
+|  [Edit content items](/docs/scos/user/back-office-user-guides/content/content-items/editing-content-items.html)  |
+|  [Add content items to CMS pages and blocks](/docs/scos/user/back-office-user-guides/content/content-items/adding-content-items-to-cms-pages-and-blocks.html)  |
+|  [Edit content items in CMS pages and blocks](/docs/scos/user/back-office-user-guides/content/content-items/editing-content-items-in-cms-pages-and-blocks.html)   |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Content Items feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-items-feature-walkthrough.html) for developers.
+Are you a developer? See [Content Items feature walkthrough](/docs/scos/dev/feature-walkthroughs/content-items-feature-walkthrough/content-items-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

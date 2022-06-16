@@ -9,12 +9,12 @@ redirect_from:
   - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html
 related:
   - title: Marketplace Product feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
   - title: Marketplace Product feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-product-feature-overview.html
 ---
 
-This document contains content of the **product_price.csv** file to configure [prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.
+This document contains content of the **product_price.csv** file to configure [prices](/docs/scos/user/features/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -43,8 +43,8 @@ These are the header fields to be included in the CSV file:
 
 This file has the following dependencies:
 
-- [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
-- [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+- [product_abstract.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+- [product_concrete.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 - `stores.php` configuration file of the Demo Shop PHP project
 
 ## Template File & Content Example

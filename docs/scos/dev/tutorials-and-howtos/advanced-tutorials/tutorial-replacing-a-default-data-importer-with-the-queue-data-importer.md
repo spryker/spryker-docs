@@ -14,7 +14,7 @@ redirect_from:
   - /v6/docs/en/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer
 related:
   - title: Importing data with the queue data importer
-    link: docs/scos/dev/data-import/page.version/importing-data-with-the-queue-data-importer.html
+    link: docs/scos/dev/data-import/importing-data-with-the-queue-data-importer.html
 ---
 
 This tutorial is a quick step-by-step guide on how to replace a default data importer with a [queue data importer](/docs/scos/dev/data-import/{{site.version}}/importing-data-with-the-queue-data-importer.html).

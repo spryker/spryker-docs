@@ -25,7 +25,7 @@ redirect_from:
   - /v1/docs/en/ht-add-new-shipment-method
 related:
   - title: "Reference information: Shipment method plugins"
-    link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
+    link: docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
 ---
 
 This document shows how to add a new shipment method without integrating with the shipment provider.

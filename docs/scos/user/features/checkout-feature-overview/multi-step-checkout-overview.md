@@ -27,6 +27,6 @@ The following example shows how the checkout works in the Spryker Demo Shop for 
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Checkout feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/checkout-feature-walkthrough.html) for developers.
+Are you a developer? See [Checkout feature walkthrough](/docs/scos/dev/feature-walkthroughs/checkout-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

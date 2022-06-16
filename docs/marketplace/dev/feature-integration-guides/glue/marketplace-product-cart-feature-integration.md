@@ -4,9 +4,9 @@ description: This integration guide provides steps on how to integrate the Marke
 template: feature-integration-guide-template
 related:
   - title: Marketplace Product feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
   - title: Marketplace Cart feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-cart-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-cart-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product + Cart Glue API feature into a Spryker project.
@@ -21,8 +21,8 @@ To start feature integration, integrate the required features:
 
 | NAME        | VERSION | INTEGRATION GUIDE |
 | ----------- | ------- | ------------------|
-| Cart API | {{page.version}} | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) |
-| Marketplace Product API | {{page.version}} | [Glue API: Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-feature-integration.html) |
+| Cart API | {{site.version}} | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html) |
+| Marketplace Product API | {{site.version}} | [Glue API: Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-feature-integration.html) |
 
 
 ### 1) Set up behavior

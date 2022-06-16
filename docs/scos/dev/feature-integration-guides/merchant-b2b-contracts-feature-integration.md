@@ -20,15 +20,15 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 |---|---|
-| Merchant | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Merchant | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/merchant-contracts: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/merchant-contracts: "{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

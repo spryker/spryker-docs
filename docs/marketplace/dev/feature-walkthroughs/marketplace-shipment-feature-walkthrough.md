@@ -5,11 +5,11 @@ description: The Marketplace Shipment feature provides the connection between Me
 template: feature-walkthrough-template
 ---
 
-The *Marketplace Shipment* feature provides the connection between Merchant and Shipment, and works together with [marketplace orders](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html) to split order items into several shipments based on the merchants from which they were bought.
+The *Marketplace Shipment* feature provides the connection between Merchant and Shipment, and works together with [marketplace orders](/docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html) to split order items into several shipments based on the merchants from which they were bought.
 
 {% info_block warningBox "User documentation" %}
 
-To learn more about the feature and to find out how end users use it, see [Marketplace Shipment feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-shipment-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Marketplace Shipment feature overview](/docs/marketplace/user/features/marketplace-shipment-feature-overview.html) for business users.
 {% endinfo_block %}
 
 ## Module dependency graph
@@ -41,8 +41,8 @@ The following schema illustrates the Marketplace Shipment domain model:
 
 |INTEGRATION GUIDES  |
 |---------|
-| [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-feature-integration.html) |  |
-| [Marketplace Shipment + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-cart-feature-integration.html) |  |
-| [Marketplace Shipment + Customer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-customer-feature-integration.html) |   |
-| [Marketplace Shipment + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-checkout-feature-integration.html) |  |
+| [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-shipment-feature-integration.html) |  |
+| [Marketplace Shipment + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-shipment-cart-feature-integration.html) |  |
+| [Marketplace Shipment + Customer feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-shipment-customer-feature-integration.html) |   |
+| [Marketplace Shipment + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-shipment-checkout-feature-integration.html) |  |
 |    |    |    |    |

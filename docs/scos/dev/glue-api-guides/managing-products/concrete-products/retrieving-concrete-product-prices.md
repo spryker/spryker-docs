@@ -22,8 +22,8 @@ This endpoint allows retrieving prices of concrete products.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Glue API: Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html)
+* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html)
+* [Glue API: Prices feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-price-feature-integration.html)
 
 ## Retrieve prices of a concrete product
 
@@ -203,7 +203,7 @@ To retrieve prices of a concrete product, send the request:
 | currency.code | String | Currency code. |
 | currency.name | String | Currency name. |
 | currency.symbol | String | Currency symbol. |
-| volumePrices | Array | An array of objects defining the [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html) for the concrete product. |
+| volumePrices | Array | An array of objects defining the [volume prices](/docs/scos/user/features/prices-feature-overview/volume-prices-overview.html) for the concrete product. |
 | netAmount | Integer | Net price in cents. |
 | grossAmount | Integer | Gross price in cents. |
 | quantity | Integer | Number of items. |
@@ -218,4 +218,4 @@ To retrieve prices of a concrete product, send the request:
 | 302 | Concrete product is not found. |
 | 404 | Request URL or type is wrong. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

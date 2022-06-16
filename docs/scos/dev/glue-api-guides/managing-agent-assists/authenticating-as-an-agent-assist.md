@@ -12,20 +12,20 @@ redirect_from:
   - /docs/en/authenticating-as-an-agent-assist
 related:
   - title: Agent Assist feature overview
-    link: docs/scos/user/features/page.version/agent-assist-feature-overview.html
+    link: docs/scos/user/features/agent-assist-feature-overview.html
 ---
 
-Log into the Storefront as an [agent assist](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) to help customers by performing actions on their behalf. After you’ve logged in, you can search by customers and impersonate them to perform any action available to them.
+Log into the Storefront as an [agent assist](/docs/scos/user/features/agent-assist-feature-overview.html) to help customers by performing actions on their behalf. After you’ve logged in, you can search by customers and impersonate them to perform any action available to them.
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-agent-assist-feature-integration.html)
+* [Glue API: Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-agent-assist-feature-integration.html)
 
-* [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html)
+* [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/customer-account-management-agent-assist-feature-integration.html)
 
-* [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html)
+* [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/customer-account-management-feature-integration.html)
 
 ## Authenticate as an agent assist
 
@@ -60,7 +60,7 @@ Request sample: authenticate as an agent assist
 
 {% info_block warningBox %}
 
-Note that depending on the Login feature configuration for your project, too many unsuccessful login attempts may result in the 429 error, and the user will be locked out for some time. For details, see [Storefront Login feature overview](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-login-overview.html)
+Note that depending on the Login feature configuration for your project, too many unsuccessful login attempts may result in the 429 error, and the user will be locked out for some time. For details, see [Storefront Login feature overview](/docs/scos/user/features/customer-account-management-feature-overview/customer-login-overview.html)
 
 {% endinfo_block %}
 
@@ -100,10 +100,10 @@ Note that depending on the Login feature configuration for your project, too man
 | --- | --- |
 |4101 | Failed to authenticate an agent. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
 After you’ve authenticated in as an agent assist, you can:
-* [Search by customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/searching-by-customers-as-an-agent-assist.html#search-by-customers)
-* [Impersonate a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/impersonating-customers-as-an-agent-assist.html#impersonate-a-customer)
+* [Search by customers](/docs/scos/dev/glue-api-guides/managing-agent-assists/searching-by-customers-as-an-agent-assist.html#search-by-customers)
+* [Impersonate a customer](/docs/scos/dev/glue-api-guides/managing-agent-assists/impersonating-customers-as-an-agent-assist.html#impersonate-a-customer)

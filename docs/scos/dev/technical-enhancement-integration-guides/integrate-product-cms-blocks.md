@@ -14,11 +14,11 @@ redirect_from:
   - /docs/scos/dev/technical-enhancement-integration-guides/integrating-product-cms-blocks.html
 related:
   - title: CMS Block
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
+    link: docs/scos/user/features/cms-feature-overview/cms-blocks-overview.html
   - title: Creating CMS Blocks
-    link: docs/scos/user/back-office-user-guides/page.version/content/blocks/creating-cms-blocks.html
+    link: docs/scos/user/back-office-user-guides/content/blocks/creating-cms-blocks.html
   - title: Managing CMS Blocks
-    link: docs/scos/user/back-office-user-guides/page.version/content/blocks/managing-cms-blocks.html
+    link: docs/scos/user/back-office-user-guides/content/blocks/managing-cms-blocks.html
   - title: Migration Guide - CMS Block
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
   - title: Migration Guide - CMS Block GUI

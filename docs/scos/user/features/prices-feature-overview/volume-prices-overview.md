@@ -132,16 +132,16 @@ The feature has the following functional constraints which are going to be resol
 
 * As volume price does not support ORIGINAL price type, you cannot define a promotion for a volume price.
 
-* Volume prices cannot be applied to the [prices per merchant relation](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html).
+* Volume prices cannot be applied to the [prices per merchant relation](/docs/scos/user/features/merchant-custom-prices-feature-overview.html).
 
 ## Related Business User articles
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Add volume prices to abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html)  |
+| [Add volume prices to abstract products](/docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Prices feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/prices-feature-walkthrough.html) for developers.
+Are you a developer? See [Prices feature walkthrough](/docs/scos/dev/feature-walkthroughs/prices-feature-walkthrough/prices-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

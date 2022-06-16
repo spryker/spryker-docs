@@ -23,7 +23,7 @@ The file must have the following parameters:
 
 ## Dependencies
 
-This file has the following dependency: [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
+This file has the following dependency: [product_abstract.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
 
 ## Import template file and content example
 

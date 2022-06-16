@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-labels-feature-integration.html
 related:
   - title: Accessing Product Labels
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-product-labels.html
+    link: docs/scos/dev/glue-api-guides/managing-products/retrieving-product-labels.html
 ---
 
 Follow the steps below to install Product Labels Feature API.
@@ -24,9 +24,9 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | REQUIRED SUB-FEATURE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
-| Product Management | {{page.version}} | [Products API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
-| Product Label | {{page.version}} | |
+| Spryker Core | {{site.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-glue-application-feature-integration.html) |
+| Product Management | {{site.version}} | [Products API feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html) |
+| Product Label | {{site.version}} | |
 
 
 ## 1) Install the required modules using Composer

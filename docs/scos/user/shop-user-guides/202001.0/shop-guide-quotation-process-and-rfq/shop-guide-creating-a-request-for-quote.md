@@ -10,9 +10,9 @@ redirect_from:
   - /v4/docs/en/creating-rfq-shop-guide
 related:
   - title: Shop Guide - Managing Requests for Quotes for a Buyer
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html
+    link: docs/scos/user/shop-user-guides/shop-guide-quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html
   - title: Shop Guide - Managing Requests for Quotes for a Sales Representative
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
+    link: docs/scos/user/shop-user-guides/shop-guide-quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
 ---
 
 This topic describes how a buyer can create a new Request for Quote (RFQ).
@@ -33,13 +33,13 @@ To create a new RFQ:
 
 {% info_block infoBox %}
 
-See [Buyer Workflow](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#buyer-workflow) for more information on the request statuses and the workflow.
+See [Buyer Workflow](/docs/scos/user/features/quotation-process-feature-overview.html#buyer-workflow) for more information on the request statuses and the workflow.
 
 {% endinfo_block %}
 
 {% info_block infoBox %}
 
-See [Reference Information](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-quotation-process-and-rfq/shop-guide-request-for-quote-reference-information.html) for details on UI elements in the **Quote Requests** page in the Customer Account.
+See [Reference Information](/docs/scos/user/shop-user-guides/shop-guide-quotation-process-and-rfq/shop-guide-request-for-quote-reference-information.html) for details on UI elements in the **Quote Requests** page in the Customer Account.
 
 {% endinfo_block %}
 

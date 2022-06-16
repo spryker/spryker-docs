@@ -13,11 +13,11 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/quotation-process-feature-integration.html
 related:
   - title: Quotation Process + Approval Process feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-approval-process-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/quotation-process-approval-process-feature-integration.html
   - title: Quotation Process + Multiple Carts feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-multiple-carts-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/quotation-process-multiple-carts-feature-integration.html
   - title: Checkout + Quotation Process feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/checkout-quotation-process-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/checkout-quotation-process-feature-integration.html
 ---
 
 ## Install feature core
@@ -28,19 +28,19 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-|Spryker Core  | {{page.version}} |
-| Cart | {{page.version}} |
-|Company Account  | {{page.version}} |
-|Prices  | {{page.version}} |
-| Persistent Cart | {{page.version}} |
-| Agent Assist | {{page.version}} |
+|Spryker Core  | {{site.version}} |
+| Cart | {{site.version}} |
+|Company Account  | {{site.version}} |
+|Prices  | {{site.version}} |
+| Persistent Cart | {{site.version}} |
+| Agent Assist | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/quotation-process: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/quotation-process: "{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -430,19 +430,19 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-|Spryker Core  | {{page.version}} |
-| Cart | {{page.version}} |
-| Company Account | {{page.version}} |
-|Prices  | {{page.version}} |
-| Persistent Cart | {{page.version}} |
-|Agent Assist  | {{page.version}} |
+|Spryker Core  | {{site.version}} |
+| Cart | {{site.version}} |
+| Company Account | {{site.version}} |
+|Prices  | {{site.version}} |
+| Persistent Cart | {{site.version}} |
+|Agent Assist  | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/quotation-process: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/quotation-process: "{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

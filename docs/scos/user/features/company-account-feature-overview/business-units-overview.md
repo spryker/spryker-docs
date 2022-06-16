@@ -81,17 +81,17 @@ This will move the address to Unassigned addresses section.
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create company units](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-units/create-company-units.html) |
-| [Edit company units](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-units/edit-company-units.html) |
-| [Create company unit addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-unit-addresses/create-company-unit-addresses.html) |
-| [Edit company unit addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-unit-addresses/edit-company-unit-addresses.html) |
+| [Create company units](/docs/scos/user/back-office-user-guides/customer/company-units/create-company-units.html) |
+| [Edit company units](/docs/scos/user/back-office-user-guides/customer/company-units/edit-company-units.html) |
+| [Create company unit addresses](/docs/scos/user/back-office-user-guides/customer/company-unit-addresses/create-company-unit-addresses.html) |
+| [Edit company unit addresses](/docs/scos/user/back-office-user-guides/customer/company-unit-addresses/edit-company-unit-addresses.html) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/company-account-feature-walkthrough.html) for developers.
+Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/company-account-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}
 
 ## See next
 
-[Company user rules and permissions overview](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html)
+[Company user rules and permissions overview](/docs/scos/user/features/company-account-feature-overview/company-user-roles-and-permissions-overview.html)

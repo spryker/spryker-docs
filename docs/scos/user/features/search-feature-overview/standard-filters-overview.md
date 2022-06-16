@@ -44,10 +44,10 @@ Price Range Filter is not supported with the Merchant Relations, that is why thi
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage filter preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-and-filters/managing-filter-preferences.html)  |
+| [Manage filter preferences](/docs/scos/user/back-office-user-guides/merchandising/search-and-filters/managing-filter-preferences.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Search feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) for developers.
+Are you a developer? See [Search feature walkthrough](/docs/scos/dev/feature-walkthroughs/search-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

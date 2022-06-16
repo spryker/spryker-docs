@@ -5,9 +5,9 @@ description: This guide explains how to manage main merchant returns in the Back
 template: back-office-user-guide-template
 related:
   - title: Managing main merchant orders
-    link: docs/marketplace/user/back-office-user-guides/page.version/sales/managing-main-merchant-orders.html
+    link: docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-orders.html
   - title: Marketplace Return Management feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-return-management-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-return-management-feature-overview.html
 ---
 
 **My Returns** lets you manage the returns as follows:
@@ -18,7 +18,7 @@ related:
 
 ## Prerequisites
 
-To start managing the returns for the [main merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html), navigate to **Sales&nbsp;<span aria-label="and then">></span> My Returns**.
+To start managing the returns for the [main merchant](/docs/marketplace/user/features/marketplace-merchant-feature-overview/main-merchant-concept.html), navigate to **Sales&nbsp;<span aria-label="and then">></span> My Returns**.
 
 Each section contains reference information. Make sure to review it before you start or look up the necessary information as you go through the process.
 
@@ -137,7 +137,7 @@ You can trigger the following states for the returns on the **Overview of Return
 
 ## Printing a main merchant return slip
 
-For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html#marketplace-return-slip).
+For all returns, irrespective of their statuses, you can print the automatically generated [return slip](/docs/marketplace/user/features/marketplace-return-management-feature-overview.html#marketplace-return-slip).
 
 To print the return slip, take one of the following steps:
 

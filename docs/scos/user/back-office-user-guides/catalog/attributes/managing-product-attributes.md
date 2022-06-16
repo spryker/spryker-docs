@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/attributes/managing-product-attributes.html
 related:
   - title: Product Attributes
-    link: docs/scos/user/features/page.version/product-feature-overview/product-attributes-overview.html
+    link: docs/scos/user/features/product-feature-overview/product-attributes-overview.html
 ---
 
 This topic describes how to manage product attributes.
@@ -36,7 +36,7 @@ To edit the product attribute, select **Edit** in the top right corner of the pa
 
 To edit a product attribute:
 1. Select **Edit** next to the product attribute you want to edit.
-    On the *Edit Product Attributes* page that opens, the **Attribute Key**, **Input type**, and **Super attribute** are disabled. You can define them only when [creating a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html).
+    On the *Edit Product Attributes* page that opens, the **Attribute Key**, **Input type**, and **Super attribute** are disabled. You can define them only when [creating a product attribute](/docs/scos/user/back-office-user-guides/catalog/attributes/creating-product-attributes.html).
 2. Update **Predefined Values**:
     * Delete one or more predefined values by selecting **x** next to the each value you want to remove.
     * Add predefined values:

@@ -14,9 +14,9 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/administration/mime-type-settings/managing-mime-type-settings.html  
 related:
   - title: Managing File Tree
-    link: docs/scos/user/back-office-user-guides/page.version/content/file-manager/managing-file-tree.html
+    link: docs/scos/user/back-office-user-guides/content/file-manager/managing-file-tree.html
   - title: Managing File List
-    link: docs/scos/user/back-office-user-guides/page.version/content/file-manager/managing-file-list.html
+    link: docs/scos/user/back-office-user-guides/content/file-manager/managing-file-list.html
 ---
 
 ## Prerequisites

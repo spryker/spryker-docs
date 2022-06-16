@@ -4,11 +4,11 @@ description: This document contains concept information for the Marketplace Ship
 template: concept-topic-template
 ---
 
-The *Marketplace Shipment* feature allows splitting the [marketplace order](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) into different shipments based on merchants who will process them.
+The *Marketplace Shipment* feature allows splitting the [marketplace order](/docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) into different shipments based on merchants who will process them.
 
 A *shipment* is a set of two or more products combined by the same delivery address.
 
-With the Marketplace Shipment feature, every merchant can define delivery price and expected delivery time, tax sets, and availability of the delivery method per store. Thus, a [marketplace order](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-order-overview.html) has multiple delivery methods from different merchants.
+With the Marketplace Shipment feature, every merchant can define delivery price and expected delivery time, tax sets, and availability of the delivery method per store. Thus, a [marketplace order](/docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-order-overview.html) has multiple delivery methods from different merchants.
 
 ## Marketplace Shipment on the Storefront
 
@@ -36,6 +36,6 @@ On the **Order _[Order ID]_** drawer, every merchant can view only the shipment 
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Shipment feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-shipment-feature-walkthrough.html) for developers.
+Are you a developer? See [Marketplace Shipment feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/marketplace-shipment-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

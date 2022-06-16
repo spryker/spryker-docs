@@ -12,11 +12,11 @@ redirect_from:
   - /docs/en/product-relations-feature-integration
 related:
   - title: Glue API - Product Relations feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-relations-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html
   - title: Spryker Core feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/spryker-core-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html
   - title: Glue API - Spryker Core feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-spryker-core-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html
 ---
 
 ## Install feature core
@@ -28,15 +28,15 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
-| ProductRelations | {{page.version}} |
+| Spryker Core | {{site.version}} |
+| ProductRelations | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require "spryker-feature/product-relations:"{{page.version}}" --update-with-dependencies
+composer require "spryker-feature/product-relations:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

@@ -16,7 +16,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/merchant-feature-integration.html
 related:
   - title: Order Thresholds
-    link: docs/scos/user/features/page.version/checkout-feature-overview/order-thresholds-overview.html
+    link: docs/scos/user/features/checkout-feature-overview/order-thresholds-overview.html
 ---
 
 This document describes how to integrate the Merchant feature into a Spryker project.
@@ -31,7 +31,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 

@@ -29,7 +29,7 @@ To start managing companies, go to **Customers&nbsp;<span aria-label="and then">
 
 {% info_block warningBox "Company headquarters" %}
 
-Once a company is created, one business unit for it is created automatically. This business unit is the company's headquarters. To edit it, see [Edit company units](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-units/edit-company-units.html).
+Once a company is created, one business unit for it is created automatically. This business unit is the company's headquarters. To edit it, see [Edit company units](/docs/scos/user/back-office-user-guides/customer/company-units/edit-company-units.html).
 
 {% endinfo_block %}
 
@@ -66,4 +66,4 @@ To deactivate a company, click **Deactivate**.
 
 ## Next steps
 
-[Create company units](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-units/create-company-units.html).
+[Create company units](/docs/scos/user/back-office-user-guides/customer/company-units/create-company-units.html).

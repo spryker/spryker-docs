@@ -22,7 +22,7 @@ A shopping list is a list of the items that shoppers buy or plan to buy frequent
 A shopping list is always saved, disregarding if a company user logs out and logs in again—the list is still available. The shopping list does not reserve products on stock, so adding an item to the shopping list does not affect item availability. However, a company user can easily convert any shopping list into a shopping cart to proceed with the Checkout.
 There are two ways to create a shopping list:
 
-* Through a [shopping list widget](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-widget-overview.html) in the header of the shop.
+* Through a [shopping list widget](/docs/scos/user/features/shopping-lists-feature-overview/shopping-list-widget-overview.html) in the header of the shop.
 * From the **Shopping Lists** page in the **My Account** menu. For more detailed instruction, see [Multiple and Shared Shopping Lists on the Storefront](#multiple-and-shared-shopping-lists-on-the-storefront).
 
 New items are added to shopping lists by clicking **Add to Shopping List** on the product details page.
@@ -63,7 +63,7 @@ Three types of shopping list access rights can be granted:
 * SKU
 * Product attribute
 * Product options
-* Product comments (see [Shopping List Notes overview](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details)
+* Product comments (see [Shopping List Notes overview](/docs/scos/user/features/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details)
 * Quantity
 * Item price
 * Availability
@@ -92,7 +92,7 @@ Alternative products are not shown for discontinued products since they can not 
    * SKU
    * Product attribute
    * Product options
-   * Product notes (see [Shopping List Notes overview](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details)
+   * Product notes (see [Shopping List Notes overview](/docs/scos/user/features/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details)
    * Quantity
    * Item price
    * Availability
@@ -124,7 +124,7 @@ Different access rights can be granted on a shopping list to a business unit and
 
 ## Search widget for shopping lists
 
-Starting from v. 201903.0, you can integrate the [Search Widget for Concrete Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/search-widget-for-concrete-products-overview.html) feature. The search widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
+Starting from v. 201903.0, you can integrate the [Search Widget for Concrete Products](/docs/scos/user/features/product-feature-overview/search-widget-for-concrete-products-overview.html) feature. The search widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
 
 {% info_block warningBox %}
 
@@ -191,11 +191,11 @@ We do not support product options in Subtotal of the Shopping Lists. For example
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the shopping list widget](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-widget-overview.html)  |
-| [Get a general idea of Shopping List Notes](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-notes-overview.html)  |
+| [Get a general idea of the shopping list widget](/docs/scos/user/features/shopping-lists-feature-overview/shopping-list-widget-overview.html)  |
+| [Get a general idea of Shopping List Notes](/docs/scos/user/features/shopping-lists-feature-overview/shopping-list-notes-overview.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Shopping Lists feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shopping-lists-feature-walkthrough.html) for developers.
+Are you a developer? See [Shopping Lists feature walkthrough](/docs/scos/dev/feature-walkthroughs/shopping-lists-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

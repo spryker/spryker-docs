@@ -19,7 +19,7 @@ This endpoint allows authenticating as a company user.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html).
 
 ## Authenticate as a company user
 
@@ -31,7 +31,7 @@ To authenticate as a company user, send the request:
 
 | HEADER KEY | REQUIRED | DESCRIPTION |
 | --- | --- | --- |
-| Authorization | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 ### Request
 
@@ -53,7 +53,7 @@ Request sample: authenticate as a company user
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| idCompanyUser | String | Unique identifier of a company user to authenticate as. To get it, [Retrieve available company users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/searching-by-company-users.html#retrieve-available-company-users).  |
+| idCompanyUser | String | Unique identifier of a company user to authenticate as. To get it, [Retrieve available company users](/docs/scos/dev/glue-api-guides/managing-b2b-account/searching-by-company-users.html#retrieve-available-company-users).  |
 
 ### Response
 
@@ -85,7 +85,7 @@ Request sample: authenticate as a company user
 | tokenType | String | Token type. The default value is `Bearer`. |
 | accessToken | String | Authentication token used to send requests to the protected resources available for the company user. |
 | expiresIn | Integer | Time in seconds in which the token expires. The default value is `28800`. |
-| refreshToken | String | Token used to [refresh](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/managing-company-user-authentication-tokens.html#refresh-a-company-user-authentication-token) the `accessToken`. |
+| refreshToken | String | Token used to [refresh](/docs/scos/dev/glue-api-guides/managing-b2b-account/managing-company-user-authentication-tokens.html#refresh-a-company-user-authentication-token) the `accessToken`. |
 
 ## Possible errors
 
@@ -95,13 +95,13 @@ Request sample: authenticate as a company user
 | 002 | Authentication token is missing. |
 | 901 | The `idCompanyUser` attribute is not specified, invalid, or empty. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).
 
 ##  Next steps
 
-* [Retrieve company users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-users.html)
-* [Retrieve companies](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-companies.html)
-* [Retrieve business units](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html)
-* [Retrieve company company roles](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-roles.html)
-* [Retrieve business unit addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-unit-addresses.html)
-* [Manage company user authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/managing-company-user-authentication-tokens.html)
+* [Retrieve company users](/docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-company-users.html)
+* [Retrieve companies](/docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-companies.html)
+* [Retrieve business units](/docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-business-units.html)
+* [Retrieve company company roles](/docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-company-roles.html)
+* [Retrieve business unit addresses](/docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-business-unit-addresses.html)
+* [Manage company user authentication tokens](/docs/scos/dev/glue-api-guides/managing-b2b-account/managing-company-user-authentication-tokens.html)

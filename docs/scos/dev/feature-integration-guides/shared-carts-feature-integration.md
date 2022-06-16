@@ -12,7 +12,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/shared-carts-feature-integration.html
 related:
   - title: Shared Cart Feature Overview
-    link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
+    link: docs/scos/user/features/shared-carts-feature-overview.html
 ---
 
 ## Install feature core
@@ -23,18 +23,18 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 |---|---|
-|Cart|{{page.version}}|
-|Persistent Cart |{{page.version}}|
-|Multiple Carts|{{page.version}}|
-|Company Account|{{page.version}}|
-|Spryker Core|{{page.version}}|
+|Cart|{{site.version}}|
+|Persistent Cart |{{site.version}}|
+|Multiple Carts|{{site.version}}|
+|Company Account|{{site.version}}|
+|Spryker Core|{{site.version}}|
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/shared-carts: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/shared-carts: "{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -575,17 +575,17 @@ Please review and install the necessary features before beginning the integratio
 
 | NAME | VERSION |
 |---|---|
-|Cart|{{page.version}}|
-|Persistent Cart|{{page.version}}|
-|Multiple Carts|{{page.version}}|
-|Spryker Core|{{page.version}}|
+|Cart|{{site.version}}|
+|Persistent Cart|{{site.version}}|
+|Multiple Carts|{{site.version}}|
+|Spryker Core|{{site.version}}|
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/shared-carts: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/shared-carts: "{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

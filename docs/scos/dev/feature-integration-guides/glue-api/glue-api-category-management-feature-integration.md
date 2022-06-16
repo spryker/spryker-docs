@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-category-management-feature-integration.html
 related:
   - title: Browsing a Category Tree
-    link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
+    link: docs/scos/dev/glue-api-guides/retrieving-categories/retrieving-category-trees.html
 ---
 
 
@@ -25,8 +25,8 @@ To start feature integration, overview and install the necessary features:
 
 |FEATURE  |VERSION |REQUIRED SUB-FEATURE |
 |---  |--- |--- |
-| Spryker Core | {{page.version}} |[Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Category Management | {{page.version}} | |
+| Spryker Core | {{site.version}} |[Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Category Management | {{site.version}} | |
 
 
 ## 1) Install the required modules using Composer

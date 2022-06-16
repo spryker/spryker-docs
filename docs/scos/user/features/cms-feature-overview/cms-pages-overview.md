@@ -55,18 +55,18 @@ With the CMS Pages feature, you can:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a CMS page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/creating-cms-pages.html)  |
-| [Manage CMS pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/creating-cms-pages.html)  |
-| [Edit CMS pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html)  |
-| [Manage versions of a CMS page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html)  |
+| [Create a CMS page](/docs/scos/user/back-office-user-guides/content/pages/creating-cms-pages.html)  |
+| [Manage CMS pages](/docs/scos/user/back-office-user-guides/content/pages/creating-cms-pages.html)  |
+| [Edit CMS pages](/docs/scos/user/back-office-user-guides/content/pages/editing-cms-pages.html)  |
+| [Manage versions of a CMS page](/docs/scos/user/back-office-user-guides/content/pages/managing-cms-pages.html)  |
 
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [CMS feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cms-feature-walkthrough/cms-feature-walkthrough.html) for developers.
+Are you a developer? See [CMS feature walkthrough](/docs/scos/dev/feature-walkthroughs/cms-feature-walkthrough/cms-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}
 
 ## See next
 
-* [CMS block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)
+* [CMS block](/docs/scos/user/features/cms-feature-overview/cms-blocks-overview.html)

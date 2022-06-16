@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/abstract-products/retrieving-abstract-products.html
 related:
   - title: Product overview
-    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
+    link: docs/scos/user/features/product-feature-overview/product-feature-overview.html
 ---
 
 This endpoint allows retrieving general information about abstract products.
@@ -21,11 +21,11 @@ This endpoint allows retrieving general information about abstract products.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Glue API: Product Options Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
-* [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html)
-* [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundles-feature-integration.html)
-* [Glue API: Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html)
+* [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html)
+* [Glue API: Product Options Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)
+* [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-labels-feature-integration.html)
+* [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-bundles-feature-integration.html)
+* [Glue API: Prices feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-price-feature-integration.html)
 
 
 
@@ -71,7 +71,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-image-sets` | Retrieve information about the abstract product with SKU `001` with its image sets. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-availabilities` | Retrieve information about the abstract product with SKU `001` with its availability. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `001` with its default prices. |
-| `GET https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093` with its prices (default and [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)). |
+| `GET https://glue.mysprykershop.com/abstract-products/093?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093` with its prices (default and [volume prices](/docs/scos/user/features/prices-feature-overview/volume-prices-overview.html)). |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=category-nodes` | Retrieve information about the abstract product with SKU `001` with the category nodes it belongs to. |
 | `GET https://glue.mysprykershop.com/abstract-products/001?include=product-tax-sets` | Retrieve information about the abstract product with SKU `001` with its tax sets. |
 | `GET http://glue.mysprykershop.com/abstract-products/001?include=product-labels` | Retrieve information about the abstract product with SKU `001` with its assigned product lables. |
@@ -1943,15 +1943,15 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 | product-options | currencyIsoCode | String | Specifies the ISO 4217 code of the currency in which the product option price is specified. |
 
 For the attributes of other included resources, see:
-* [Retrieve image sets of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html#abstract-product-sets-response-attributes)
-* [Retrieve availability of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-availability.html#abstract-product-availability-response-attributes)
-* [Retrieve prices of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html)
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
-* [Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html#category-nodes-response-attributes)
-* [Retrieve tax sets](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-tax-sets.html#tax-sets-response-attributes)
-* [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
-* [Retrieve product reviews](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-product-ratings-and-reviews.html#product-ratings-and-reviews-response-attributes)
-* [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)
+* [Retrieve image sets of an abstract product](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html#abstract-product-sets-response-attributes)
+* [Retrieve availability of an abstract product](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-product-availability.html#abstract-product-availability-response-attributes)
+* [Retrieve prices of an abstract product](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-product-prices.html)
+* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a category node](/docs/scos/dev/glue-api-guides/retrieving-categories/retrieving-category-nodes.html#category-nodes-response-attributes)
+* [Retrieve tax sets](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-tax-sets.html#tax-sets-response-attributes)
+* [Retrieve a product label](/docs/scos/dev/glue-api-guides/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+* [Retrieve product reviews](/docs/scos/dev/glue-api-guides/managing-products/managing-product-ratings-and-reviews.html#product-ratings-and-reviews-response-attributes)
+* [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/retrieving-measurement-units.html)
 
 ## Possible errors
 

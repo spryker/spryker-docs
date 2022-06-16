@@ -13,15 +13,15 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/product-labels-feature-integration.html
 related:
   - title: Alternative products + product label feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-product-label-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/alternative-products-product-label-feature-integration.html
   - title: Product group + product labels feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-group-product-labels-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/product-group-product-labels-feature-integration.html
   - title: Glue API - Product labels feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-labels-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-labels-feature-integration.html
   - title: Discontinued products + product labels feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/discontinued-products-product-labels-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/discontinued-products-product-labels-feature-integration.html
   - title: Product labels + promotions & discounts feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-labels-promotions-and-discounts-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/product-labels-promotions-and-discounts-feature-integration.html
 ---
 
 ## Install feature core
@@ -34,15 +34,15 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
-| cell | {{page.version}} |
+| Spryker Core | {{site.version}} |
+| cell | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/product-labels:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/product-labels:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox “Verification” %}
@@ -581,14 +581,14 @@ Overview and install the necessary features before beginning the integration ste
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
-| Product | {{page.version}} |
+| Spryker Core | {{site.version}} |
+| Product | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require "spryker-feature/product-labels:"{{page.version}}" --update-with-dependencies
+composer require "spryker-feature/product-labels:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

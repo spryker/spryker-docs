@@ -10,11 +10,11 @@ redirect_from:
   - /v5/docs/en/return-details-reference-information
 related:
   - title: Return Management Feature Overview
-    link: /docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html
+    link: /docs/scos/user/features/return-management-feature-overview/return-management-feature-overview.html
   - title: Shop Guide - Creating a Return
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-returns-management/shop-guide-creating-a-return.html
   - title: Shop Guide - Printing a Return Slip
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-returns-management/shop-guide-printing-a-return-slip.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-returns-management/shop-guide-printing-a-return-slip.html
 ---
 
 All the returns that you created, as well as the returns created for you by the Shop Owner, are displayed on the *My Account > Returns* page.

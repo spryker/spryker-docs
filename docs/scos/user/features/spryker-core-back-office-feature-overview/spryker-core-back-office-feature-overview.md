@@ -63,7 +63,7 @@ To use the Spryker Back Office, users have to authenticate to the Back Office. T
 * Regular Back Office user account.
 * Third-party sign-on (optional).
 
-To *authenticate as a regular Back Office user*, you should have the Back Office user account. To learn how to create and manage Back Office user accounts, see [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html).
+To *authenticate as a regular Back Office user*, you should have the Back Office user account. To learn how to create and manage Back Office user accounts, see [Managing users](/docs/scos/user/back-office-user-guides/users/managing-users/creating-users.html).
 
 You can also let your users sign in from a third-party service set up for your project. The third-party sign-on uses the [OpenID](https://en.wikipedia.org/wiki/OpenID) protocol for authentication.
 
@@ -80,8 +80,8 @@ If a user chooses to log in via a third-party, the user is redirected to the OAu
 **Strategy 1: Upon the first login, create the Back Office admin user based on the third-party system’s user data.**
 
 If a user who does not exist in the Spryker database logs in for the first time, the following happens:
-* Based on the third-party system’s user data such as first name, last name, and email, the Back Office user is created and visible on the [Users page](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html) in the Back Office.
-* The user is assigned to the default [group](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-groups/creating-user-groups.html).
+* Based on the third-party system’s user data such as first name, last name, and email, the Back Office user is created and visible on the [Users page](/docs/scos/user/back-office-user-guides/users/managing-users/creating-users.html) in the Back Office.
+* The user is assigned to the default [group](/docs/scos/user/back-office-user-guides/users/managing-user-groups/creating-user-groups.html).
 
 With Strategy 1, the login process looks like this:
 
@@ -106,12 +106,12 @@ Each of the Identity Managers is an ECO module that should be developed separate
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Back Office Translations](/docs/scos/user/features/{{page.version}}/spryker-core-back-office-feature-overview/back-office-translations-overview.html) |
+| [Get a general idea of the Back Office Translations](/docs/scos/user/features/spryker-core-back-office-feature-overview/back-office-translations-overview.html) |
 | **Work with the Back Office**: |
-| [Log in to the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/logging-in-to-the-back-office.html) |
+| [Log in to the Back Office](/docs/scos/user/back-office-user-guides/logging-in-to-the-back-office.html) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Spryker Core back Office feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html) for developers.
+Are you a developer? See [Spryker Core back Office feature walkthrough](/docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

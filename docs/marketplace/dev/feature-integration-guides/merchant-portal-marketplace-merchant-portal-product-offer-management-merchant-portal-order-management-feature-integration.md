@@ -5,7 +5,7 @@ description: This integration guide provides steps on how to integrate the Marke
 template: feature-integration-guide-template
 related:
   - title: Marketplace Merchant Portal Product Offer Management feature walkthrough
-    link: docs/marketplace/dev/feature-integration-guides/page.version/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html
+    link: docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html
 ---
 
 This document describes how to integrate the Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management feature into a Spryker project.
@@ -16,8 +16,8 @@ To start feature integration, install the required features:
 
 | NAME  | VERSION | INTEGRATION GUIDE |
 | --------------- | --------- | ------------|
-| Marketplace Merchant Portal Product Offer Management | {{page.version}} | [Marketplace Merchant Portal Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html) |
-| Merchant Portal - Marketplace Order Management | {{page.version}} | [Marketplace Merchant Portal Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-order-management-feature-integration.html) |
+| Marketplace Merchant Portal Product Offer Management | {{site.version}} | [Marketplace Merchant Portal Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-product-offer-management-feature-integration.html) |
+| Merchant Portal - Marketplace Order Management | {{site.version}} | [Marketplace Merchant Portal Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-order-management-feature-integration.html) |
 
 
 ### 1) Set up behavior

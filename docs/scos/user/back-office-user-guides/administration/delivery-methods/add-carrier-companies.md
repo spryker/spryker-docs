@@ -14,9 +14,9 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/administration/delivery-methods/creating-carrier-companies.html
 related:
   - title: Creating and Managing Delivery Methods
-    link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/creating-and-managing-delivery-methods.html
+    link: docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-and-managing-delivery-methods.html
   - title: Shipment feature overview
-    link: docs/scos/user/features/page.version/shipment-feature-overview.html
+    link: docs/scos/user/features/shipment-feature-overview.html
 ---
 
 To add a carrier company in the Back Office, follow the steps:
@@ -33,8 +33,8 @@ To add a carrier company in the Back Office, follow the steps:
 | ATTRIBUTE |DESCRIPTION|
 | --- | --- |
 | NAME | You will use the name for creating delivery methods for the company. |
-| ACTIVATE | Defines if you can [create delivery methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-carrier-companies.html) for the company. |
+| ACTIVATE | Defines if you can [create delivery methods](/docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-carrier-companies.html) for the company. |
 
 ## Next steps
 
-Add shipment methods for the added company. For instructions, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html).
+Add shipment methods for the added company. For instructions, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-and-managing-delivery-methods.html).

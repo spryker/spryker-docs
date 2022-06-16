@@ -10,12 +10,12 @@ redirect_from:
   - /v5/docs/en/shop-guide-wishlists
 related:
   - title: Managing Wishlists
-    link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html
+    link: docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html
 ---
 
 This article describes how you, as a Buyer, can create and manage wishlists in the Storefront.
 ***
-You can create [multiple wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html) and save products to them for future purchases. This may be useful when, for example, you do not intend to purchase products at the moment but want to do this later once you return to the online store. Also, you can add to these lists the products you are interested in.
+You can create [multiple wishlists](/docs/scos/user/features/wishlist-feature-overview.html) and save products to them for future purchases. This may be useful when, for example, you do not intend to purchase products at the moment but want to do this later once you return to the online store. Also, you can add to these lists the products you are interested in.
 
 In the **Wishlists** section of your customer account, you can perform the following actions:
 
@@ -69,4 +69,4 @@ You can also create a wishlist from the product detail page when adding a produc
 ***
 **What’s next?**
 
-If you have added the products to the cart, you can proceed to the checkout. For more information on how to place the order, see [Shop Guide - Checkout](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-checkout.html#shop-guide---checkout).
+If you have added the products to the cart, you can proceed to the checkout. For more information on how to place the order, see [Shop Guide - Checkout](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-checkout.html#shop-guide---checkout).

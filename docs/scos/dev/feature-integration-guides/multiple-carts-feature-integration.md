@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/multiple-carts-feature-integration.html
 related:
   - title: Multiple Carts per User Feature Overview
-    link: docs/scos/user/features/page.version/multiple-carts-feature-overview.html
+    link: docs/scos/user/features/multiple-carts-feature-overview.html
 ---
 
 ## Install feature core
@@ -24,16 +24,16 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Cart | {{page.version}} |
-| Persistent Cart | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Cart | {{site.version}} |
+| Persistent Cart | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/multiple-carts: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/multiple-carts: "{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -452,17 +452,17 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 | --- | --- |
-| Product | {{page.version}} |
-| Cart | {{page.version}} |
-| Persistent Cart | {{page.version}} |
-| Customer Account Management | {{page.version}} |
+| Product | {{site.version}} |
+| Cart | {{site.version}} |
+| Persistent Cart | {{site.version}} |
+| Customer Account Management | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/multiple-carts: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/multiple-carts: "{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

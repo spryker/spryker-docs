@@ -38,7 +38,7 @@ To start the feature integration:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core Back Office | {{page.version}} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html) |
+| Spryker Core Back Office | {{site.version}} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-back-office-feature-integration.html) |
 
 
 2. [Register an application with the Microsoft identity platform](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app).

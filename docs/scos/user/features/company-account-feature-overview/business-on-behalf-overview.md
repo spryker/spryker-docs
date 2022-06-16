@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/business-on-behalf-overview
 ---
 
-Every [business unit](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-units-overview.html) includes some company users that have specific permissions within this business unit. The *Business on Behalf* feature allows having multiple company users per customer account with a possibility to select one company user to be a default user. This default user can switch between the assigned business units.
+Every [business unit](/docs/scos/user/features/company-account-feature-overview/business-units-overview.html) includes some company users that have specific permissions within this business unit. The *Business on Behalf* feature allows having multiple company users per customer account with a possibility to select one company user to be a default user. This default user can switch between the assigned business units.
 
 For example, as a shop owner, you might have a financial manager in your company, who, for audit purposes, should be able to access company business units' accounts to check their order histories, shopping lists.
 
@@ -56,15 +56,15 @@ Company users can assign and unassign a company business unit to their accounts 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Assign a company user to a company unit](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-users/edit-company-users.html)  |
+| [Assign a company user to a company unit](/docs/scos/user/back-office-user-guides/customer/company-users/edit-company-users.html)  |
 
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/company-account-feature-walkthrough.html) for developers.
+Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/company-account-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}
 
 
 ## See next
-[Customer Login by Token overview](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/customer-login-by-token-overview.html)
+[Customer Login by Token overview](/docs/scos/user/features/company-account-feature-overview/customer-login-by-token-overview.html)

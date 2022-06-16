@@ -5,7 +5,7 @@ description: This document describes the process how to integrate Marketplace Sh
 template: feature-integration-guide-template
 related:
   - title: Marketplace Shipment feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-shipment-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-shipment-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Shipment feature into a Spryker project.
@@ -20,8 +20,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Merchant | {{page.version}} | [Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Shipment | {{page.version}} | [Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-feature-integration.html) |
+| Merchant | {{site.version}} | [Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration.html) |
+| Shipment | {{site.version}} | [Shipment feature integration](/docs/scos/dev/feature-integration-guides/shipment-feature-integration.html) |
 
 
 ### 1) Install the required modules using Composer
@@ -29,7 +29,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-shipment:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-shipment:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -147,6 +147,6 @@ class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE| INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Shipment + Cart | | [Marketplace Shipment + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-cart-feature-integration.html) |
-| Marketplace Shipment + Checkout | | [Marketplace Shipment + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-checkout-feature-integration.html) |
-| Marketplace Shipment + Customer | | [Marketplace Shipment + Customer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-customer-feature-integration.html) |
+| Marketplace Shipment + Cart | | [Marketplace Shipment + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-shipment-cart-feature-integration.html) |
+| Marketplace Shipment + Checkout | | [Marketplace Shipment + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-shipment-checkout-feature-integration.html) |
+| Marketplace Shipment + Customer | | [Marketplace Shipment + Customer feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-shipment-customer-feature-integration.html) |

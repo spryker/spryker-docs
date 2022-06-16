@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html
 related:
   - title: Configurable Bundle Feature Overview
-    link: docs/scos/user/features/page.version/configurable-bundle-feature-overview.html
+    link: docs/scos/user/features/configurable-bundle-feature-overview.html
 ---
 
 This article describes how to edit configurable bundle templates in the Back Office.
@@ -48,4 +48,4 @@ To start editing a configurable bundle template, do the following:
 
 ## Next steps
 
-[Edit slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html)    
+[Edit slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html)    

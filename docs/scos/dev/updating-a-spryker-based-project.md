@@ -97,11 +97,11 @@ If you have started with the Spryker features, you should see something like thi
 "ext-readline": "*",
 "ext-redis": "*",
 "spryker-eco/loggly": "^0.1.0",
-"spryker-feature/agent-assist": "^{{page.version}}",
-"spryker-feature/alternative-products": "^{{page.version}}",
-"spryker-feature/approval-process": "^{{page.version}}",
-"spryker-feature/availability-notification": "^{{page.version}}",
-"spryker-feature/cart": "^{{page.version}}",
+"spryker-feature/agent-assist": "^{{site.version}}",
+"spryker-feature/alternative-products": "^{{site.version}}",
+"spryker-feature/approval-process": "^{{site.version}}",
+"spryker-feature/availability-notification": "^{{site.version}}",
+"spryker-feature/cart": "^{{site.version}}",
 ....
 ```
 

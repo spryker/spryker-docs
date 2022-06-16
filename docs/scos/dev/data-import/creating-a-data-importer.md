@@ -45,7 +45,7 @@ We will use the same technique for the `fk_product` and `fk_product_abstract` fi
 
 {% info_block infoBox "Info" %}
 
-To identify the data for your import file, you can also check out the .csv files of individual data importers listed in [About Data Import Categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/about-data-import-categories.html).
+To identify the data for your import file, you can also check out the .csv files of individual data importers listed in [About Data Import Categories](/docs/scos/dev/data-import/data-import-categories/about-data-import-categories.html).
 
 {% endinfo_block %}
 
@@ -83,7 +83,7 @@ The constant is used to identify an import type. More information about it will 
 
 {% endinfo_block %}
 
-You also need to define the new data importer in the [configuration YML file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html). Add the following lines to the `/data/import/config/full_import_config.yml` configuration file:
+You also need to define the new data importer in the [configuration YML file](/docs/scos/dev/data-import/importing-data-with-a-configuration-file.html). Add the following lines to the `/data/import/config/full_import_config.yml` configuration file:
 
 ```yml
 actions:

@@ -13,15 +13,15 @@ redirect_from:
   - /docs/scos/user/features/202200.0/category-management-feature-overview.html
 ---
 
-A category is a set of products that share a common attribute and, therefore, can be united logically. The *Category Management* feature lets Back Office users structure products into a logical system where each product belongs to a category or set of interrelated categories. You can [assign categories to all or individual stores](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html) from the Back Office or [import stores for categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html). For details about how a Back Office user can group products under categories, see [Assigning products to categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html).
+A category is a set of products that share a common attribute and, therefore, can be united logically. The *Category Management* feature lets Back Office users structure products into a logical system where each product belongs to a category or set of interrelated categories. You can [assign categories to all or individual stores](/docs/scos/user/back-office-user-guides/catalog/category/assigning-products-to-categories.html) from the Back Office or [import stores for categories](/docs/scos/dev/data-import/data-import-categories/catalog-setup/categories/file-details-category-store.csv.html). For details about how a Back Office user can group products under categories, see [Assigning products to categories](/docs/scos/user/back-office-user-guides/catalog/category/assigning-products-to-categories.html).
 
 ## Root, parent, and child categories
 
 The product catalog is structured in a category tree, which consists of root, parent, and child categories.
 
-A *root category* is a base category that stands on top of the category hierarchy. Product and child categories are assigned to root categories, but root categories can not be assigned to anything. Also, a store can only be linked to one root category tree, while a root category tree can be linked to multiple stores. Root categories are added through [data import](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category.csv.html) and cannot be created in the Back Office, unlike other categories, which can be added in both ways.
+A *root category* is a base category that stands on top of the category hierarchy. Product and child categories are assigned to root categories, but root categories can not be assigned to anything. Also, a store can only be linked to one root category tree, while a root category tree can be linked to multiple stores. Root categories are added through [data import](/docs/scos/dev/data-import/data-import-categories/catalog-setup/categories/file-details-category.csv.html) and cannot be created in the Back Office, unlike other categories, which can be added in both ways.
 
-A parent category is a category that has products and other categories assigned to it. Categories, assigned to parent categories are referred to as child categories. Products belonging to a child category that is assigned to a parent one belong to the parent category too. You can assign child categories to parent ones by the Back Office or importing the categories. For information about how to create child categories for the parent categories, see [Creating categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html) and [Managing categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html). For information about how to import the child categories, see [File details: category.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category.csv.html).
+A parent category is a category that has products and other categories assigned to it. Categories, assigned to parent categories are referred to as child categories. Products belonging to a child category that is assigned to a parent one belong to the parent category too. You can assign child categories to parent ones by the Back Office or importing the categories. For information about how to create child categories for the parent categories, see [Creating categories](/docs/scos/user/back-office-user-guides/catalog/category/assigning-products-to-categories.html) and [Managing categories](/docs/scos/user/back-office-user-guides/catalog/category/creating-categories.html). For information about how to import the child categories, see [File details: category.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/categories/file-details-category.csv.html).
 
 On the Storefront, in comparison to parent category names, child category names are indented so that they can be identified.
 
@@ -32,9 +32,9 @@ In the image below, the Cameras & Camcorders parent category has the Digital Cam
 
 ## Category templates
 
-A Back Office user defines the visual representation of a category on the Storefront by assigning a template to the category. For information about how to do that, see [Creating categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html).
+A Back Office user defines the visual representation of a category on the Storefront by assigning a template to the category. For information about how to do that, see [Creating categories](/docs/scos/user/back-office-user-guides/catalog/category/creating-categories.html).
 
-For more information about types of category templates, see [Category page template types](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html#category-page-template-types).
+For more information about types of category templates, see [Category page template types](/docs/scos/user/back-office-user-guides/catalog/category/creating-categories.html#category-page-template-types).
 
 ## Category filters
 
@@ -46,11 +46,11 @@ The default filter functionality includes *standard filters* and *dynamic filter
 
 #### Standard filters
 
-On the Storefront, the standard filters let buyers narrow down the search results by filtering products according to the specified price range, product ratings, product labels, color, material, and brand. For more details about standard filters, see [Standard filters](/docs/scos/user/features/{{page.version}}/search-feature-overview/standard-filters-overview.html).
+On the Storefront, the standard filters let buyers narrow down the search results by filtering products according to the specified price range, product ratings, product labels, color, material, and brand. For more details about standard filters, see [Standard filters](/docs/scos/user/features/search-feature-overview/standard-filters-overview.html).
 
 #### Dynamic filters and facets
 
-Compared to standard filters, dynamic filters and facets allow creating more advanced filter options. For example, you can customize facet filters for any product attribute: the design, quantity of filters, or order criteria by which filters are displayed on the Storefront. For more details about how to configure the filter preferences in the Back Office, see [Managing filter preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-and-filters/managing-filter-preferences.html).
+Compared to standard filters, dynamic filters and facets allow creating more advanced filter options. For example, you can customize facet filters for any product attribute: the design, quantity of filters, or order criteria by which filters are displayed on the Storefront. For more details about how to configure the filter preferences in the Back Office, see [Managing filter preferences](/docs/scos/user/back-office-user-guides/merchandising/search-and-filters/managing-filter-preferences.html).
 
 ## Video tutorial
 Check out this video on managing categories:
@@ -73,12 +73,12 @@ The Category Management feature has the following functional constraints, which 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a category](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html) |
-| [Assign products to categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html) |
-| [Manage categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/managing-categories.html) |
+| [Create a category](/docs/scos/user/back-office-user-guides/catalog/category/creating-categories.html) |
+| [Assign products to categories](/docs/scos/user/back-office-user-guides/catalog/category/assigning-products-to-categories.html) |
+| [Manage categories](/docs/scos/user/back-office-user-guides/catalog/category/managing-categories.html) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Category management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/category-management-feature-walkthrough.html) for developers.
+Are you a developer? See [Category management feature walkthrough](/docs/scos/dev/feature-walkthroughs/category-management-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

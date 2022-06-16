@@ -21,11 +21,11 @@ redirect_from:
   - /docs/scos/dev/migration-and-integration/201811.0/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html
 related:
   - title: Making the Legacy Demoshop Compatible with the Modular Frontend
-    link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html
+    link: docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html
   - title: Making the Legacy Demoshop Compatible with the Atomic Frontend
-    link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html
+    link: docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html
   - title: Setting up ShopUiCompatibility Module in the Legacy Demoshop
-    link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html
+    link: docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html
 ---
 
 In the SCOS, all variables available in the Twig templates can be accessed from the `_view` variable. In the Demoshop we used a different technique and passed the Twig variables to the global Twig namespace directly. The following code examples will help to understand the difference.
@@ -125,4 +125,4 @@ and
 
 can now be used to access variables in Twig.
 
-For more information on Demoshop vs Suite compatibility, see [Making Demoshop Compatible with Shop App, Atomic Design, P&amp;S](/docs/scos/dev/migration-and-integration/202009.0/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html).
+For more information on Demoshop vs Suite compatibility, see [Making Demoshop Compatible with Shop App, Atomic Design, P&amp;S](https://archive.docs.spryker.com/docs/scos/dev/migration-and-integration/202009.0/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html).

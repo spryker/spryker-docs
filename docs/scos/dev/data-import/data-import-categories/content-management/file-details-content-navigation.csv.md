@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201907.0/data-import-categories/content-management/file-details-content-navigation.csv.html
 ---
 
-This document describes the `content_navigation.csv` file to configure [Content Navigation](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item) information in your Spryker Demo Shop.
+This document describes the `content_navigation.csv` file to configure [Content Navigation](/docs/scos/user/features/content-items-feature-overview.html#content-item) information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -31,13 +31,13 @@ The file should have the following parameters:
 | key | &check; | string | Must be unique. | Identifier of the content item. |
 | name | &check; | string | Human-readable name. | Name of the content. |
 | description |   | string |  | Description of the content. |
-| navigation_key.default | &check; | string | Key of an existing navigation element. | Default unique identifier of a [navigation element](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html).  |
-| navigation_key.en_US |  | string | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html) for the `en_US` [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html). |
-| title.de_DE |  | string | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html) for the `de_DE` [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html). |
+| navigation_key.default | &check; | string | Key of an existing navigation element. | Default unique identifier of a [navigation element](/docs/scos/dev/data-import/data-import-categories/navigation-setup/file-details-navigation.csv.html).  |
+| navigation_key.en_US |  | string | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/scos/dev/data-import/data-import-categories/navigation-setup/file-details-navigation.csv.html) for the `en_US` [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html). |
+| title.de_DE |  | string | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/scos/dev/data-import/data-import-categories/navigation-setup/file-details-navigation.csv.html) for the `de_DE` [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html). |
 
 ## Import file dependencies
 
-This file has the following dependencies: [navigation.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html).
+This file has the following dependencies: [navigation.csv](/docs/scos/dev/data-import/data-import-categories/navigation-setup/file-details-navigation.csv.html).
 
 ## Import template file and content example
 

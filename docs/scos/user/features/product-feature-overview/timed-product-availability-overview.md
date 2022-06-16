@@ -46,10 +46,10 @@ The following table shows possible usage scenarios with the TTL feature and resu
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage concrete product validity dates](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/editing-product-variants.html) |
+| [Manage concrete product validity dates](/docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/editing-product-variants.html) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-feature-walkthrough.html) for developers.
+Are you a developer? See [Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/product-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

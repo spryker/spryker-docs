@@ -13,9 +13,9 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/configurable-bundle-templates/creating-configurable-bundle-templates.html
 related:
   - title: Edit configurable bundle templates
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html
+    link: docs/scos/user/back-office-user-guides/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html
   - title: Configurable Bundle Feature Overview
-    link: docs/scos/user/features/page.version/configurable-bundle-feature-overview.html
+    link: docs/scos/user/features/configurable-bundle-feature-overview.html
 ---
 
 To create a configurable bundle template, follow the steps:
@@ -28,5 +28,5 @@ To create a configurable bundle template, follow the steps:
 
 ## Next steps
 
-* [Edit configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html)
-* [Edit slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html)
+* [Edit configurable bundle templates](/docs/scos/user/back-office-user-guides/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html)
+* [Edit slots in configurable bundle templates](/docs/scos/user/back-office-user-guides/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html)

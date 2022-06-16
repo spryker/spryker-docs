@@ -9,7 +9,7 @@ The *Marketplace Merchant* feature lets you create, read, and update merchants i
 
 {% info_block warningBox "User documentation" %}
 
-To learn more about the feature and to find out how end users use it, see [Marketplace Merchant feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Marketplace Merchant feature overview](/docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) for business users.
 
 {% endinfo_block %}
 
@@ -52,8 +52,8 @@ The following diagram illustrates the domain model of the Marketplace Merchant f
 
 | INTEGRATION GUIDES | GLUE API GUIDES | DATA IMPORT |
 | --- | --- | --- |
-|[Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |[Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html) | [File details: merchant.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant.csv.html) |
-|[Glue API: Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-merchant-feature-integration.html) | [Searching the product catalog](/docs/marketplace/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html) | [File details: merchant_profile.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile.csv.html) |
-| [Merchant Portal - Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-feature-integration.html) | [Retrieving autocomplete and search suggestions](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-autocomplete-and-search-suggestions.html) | [File details: merchant_profile_address.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile-address.csv.html) |
-|     | [Resolving the URL of the merchant page](/docs/marketplace/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html) |[File details: merchant_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-stock.csv.html) |
-|   |   | [File details: merchant_store.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-store.csv.html)  |
+|[Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration.html) |[Retrieving merchants](/docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchants.html) | [File details: merchant.csv](/docs/marketplace/dev/data-import/file-details-merchant.csv.html) |
+|[Glue API: Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-merchant-feature-integration.html) | [Searching the product catalog](/docs/marketplace/dev/glue-api-guides/searching-the-product-catalog.html) | [File details: merchant_profile.csv](/docs/marketplace/dev/data-import/file-details-merchant-profile.csv.html) |
+| [Merchant Portal - Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-merchant-feature-integration.html) | [Retrieving autocomplete and search suggestions](/docs/marketplace/dev/glue-api-guides/retrieving-autocomplete-and-search-suggestions.html) | [File details: merchant_profile_address.csv](/docs/marketplace/dev/data-import/file-details-merchant-profile-address.csv.html) |
+|     | [Resolving the URL of the merchant page](/docs/marketplace/dev/glue-api-guides/resolving-search-engine-friendly-urls.html) |[File details: merchant_stock.csv](/docs/marketplace/dev/data-import/file-details-merchant-stock.csv.html) |
+|   |   | [File details: merchant_store.csv](/docs/marketplace/dev/data-import/file-details-merchant-store.csv.html)  |

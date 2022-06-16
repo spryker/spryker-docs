@@ -20,7 +20,7 @@ Every agent user is a Back Office user. When creating or editing a Back Office u
 
 A Back Office user can create an agent user in **Users&nbsp;<span aria-label="and then">></span> Users**.
 
-To learn more about managing agent users in Back Office, see [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html).
+To learn more about managing agent users in Back Office, see [Managing users](/docs/scos/user/back-office-user-guides/users/managing-users/creating-users.html).
 
 ![zed-agent-assist.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Agent+Assist/Agent+Assist+Feature+Overview/zed-agent-assist.png)
 
@@ -49,10 +49,10 @@ Check out this video tutorial on setting up an Agent user in a B2B company accou
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create an agent user](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html#creating-users) |
+| [Create an agent user](/docs/scos/user/back-office-user-guides/users/managing-users/creating-users.html#creating-users) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Agent Assist feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/agent-assist-feature-walkthrough.html) for developers.
+Are you a developer? See [Agent Assist feature walkthrough](/docs/scos/dev/feature-walkthroughs/agent-assist-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

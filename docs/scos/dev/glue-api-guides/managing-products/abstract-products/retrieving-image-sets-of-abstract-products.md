@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/retrieving-image-sets-of-abstract-products
 related:
   - title: Product image management
-    link: docs/scos/user/features/page.version/product-feature-overview/product-images-overview.html
+    link: docs/scos/user/features/product-feature-overview/product-images-overview.html
 ---
 
 This endpoint allows retrieving image sets of abstract products.
@@ -20,7 +20,7 @@ This endpoint allows retrieving image sets of abstract products.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html).
+* [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html).
 
 
 ## Retrieve image sets of an abstract product
@@ -94,4 +94,4 @@ Request sample: retrieve image sets of an abstract product
 | 303 | Can't find abstract product image sets. |
 | 311 | Abstract product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

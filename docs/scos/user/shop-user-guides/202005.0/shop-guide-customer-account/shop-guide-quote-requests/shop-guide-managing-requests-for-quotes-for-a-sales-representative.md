@@ -10,11 +10,11 @@ redirect_from:
   - /v5/docs/en/managing-rfqs-sales-rep-shop-guide
 related:
   - title: Request for Quote- Reference Information
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/references/request-for-quote-reference-information.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/references/request-for-quote-reference-information.html
   - title: Shop Guide - Address Step
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-checkout/shop-guide-address-step.html
+    link: docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-address-step.html
   - title: Shop Guide - Shipment Step
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-checkout/shop-guide-shipment-step.html
+    link: docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-shipment-step.html
 ---
 
 This topic describes the procedure for managing the RFQs from the perspective of the Sales Representative.
@@ -53,8 +53,8 @@ To create an RFQ for a Buyer:
 5. To add items to the RFQ, click **Edit Items**, and then use one of the following options:
     * In the **Quick add to Cart** widget, enter a SKU or a name of the concrete product and its quantity, and click **Add to Cart**.
     * From the catalog, select the product, choose the options and quantity, and click **Add to Cart**.
-    * On the **Quick Order** page, enter a SKU or a name of the concrete product and its quantity, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Quick Order](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-quick-order.html).
-    * On the **Shopping list** page, click the shopping list, select the checkboxes for the items you want to add from the shopping list, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Shopping Lists](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-shopping-lists.html).
+    * On the **Quick Order** page, enter a SKU or a name of the concrete product and its quantity, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Quick Order](/docs/scos/user/shop-user-guides/shop-guide-quick-order.html).
+    * On the **Shopping list** page, click the shopping list, select the checkboxes for the items you want to add from the shopping list, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Shopping Lists](/docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-lists.html).
 6. In the **Quote Request** widget on top of the page, do the following:
     * click **Save** to keep the changes.
     * click **Save and Back to Edit** to keep the changes and return to the **Edit Quote Request** page.
@@ -100,7 +100,7 @@ To add the delivery address and shipment method:
 2. On the **Address** page, select a delivery address using one of the following options from the **Select a delivery address** drop-down and populate the fields:
     * **Define new address** to add the delivery address for the whole RFQ. This will open the form to populate the fields with the necessary information.
     * Select one of the existing addresses
-    * **Deliver to multiple addresses** to assign a delivery addresses per RFQ item. See [Shop Guide - Address Step](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-address-step.html) for more information on delivery address options.
+    * **Deliver to multiple addresses** to assign a delivery addresses per RFQ item. See [Shop Guide - Address Step](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-address-step.html) for more information on delivery address options.
 
 3. In the *Billing Address* section, select the necessary address or add a new one.
 
@@ -154,7 +154,7 @@ If you change the shipment method, the previously entered shipment price will be
 
 {% info_block infoBox "Info" %}
 
-RFQ version number changes upon each revision. Check [RFQ Versioning](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#rfq-workflows) to learn about the version change process.
+RFQ version number changes upon each revision. Check [RFQ Versioning](/docs/scos/user/features/quotation-process-feature-overview.html#rfq-workflows) to learn about the version change process.
 
 {% endinfo_block %}
 To respond to Buyers' Quote Requests and suggest them special prices, you need to revise the Quote Requests and send them to customers. You can revise the Quote Requests only in the *Draft*, *Waiting*, *In Progress*, and *Ready* statuses.

@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/content/pages/managing-cms-page-versions.html
 related:
   - title: CMS Page
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
+    link: docs/scos/user/features/cms-feature-overview/cms-pages-overview.html
 ---
 
 

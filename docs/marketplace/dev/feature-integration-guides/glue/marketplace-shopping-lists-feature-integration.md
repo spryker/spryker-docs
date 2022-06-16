@@ -5,7 +5,7 @@ description: This document describes how to integrate the Shopping Lists feature
 template: feature-integration-guide-template
 related:
   - title: Marketplace Shopping Lists feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-shopping-lists-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-shopping-lists-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Shopping Lists feature API into a Spryker
@@ -21,8 +21,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | - | - | - |
-| Spryker Core | {{page.version}} |  [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)
-| Marketplace Shopping Lists | {{page.version}} | [Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shopping-lists-feature-integration.html)
+| Spryker Core | {{site.version}} |  [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html)
+| Marketplace Shopping Lists | {{site.version}} | [Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-shopping-lists-feature-integration.html)
 
 ### 1) Install the required modules using Composer
 
@@ -261,4 +261,4 @@ Response sample:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | - |
-| Marketplace Shopping Lists | {{page.version}} | [Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shopping-lists-feature-integration.html)  |
+| Marketplace Shopping Lists | {{site.version}} | [Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-shopping-lists-feature-integration.html)  |

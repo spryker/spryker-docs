@@ -5,7 +5,7 @@ description: This document describes how to manage marketplace abstract product 
 template: back-office-user-guide-template
 related:
   - title: Marketplace Product feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-product-feature-overview.html
 ---
 
 This document describes how to manage image sets of the marketplace abstract products in the Merchant Portal.
@@ -65,7 +65,7 @@ To delete an image set with its images for the abstract product, click **Delete 
 
 ## Next steps
 
-- [Edit abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product.html)
-- [Manage abstract product prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-prices.html)
-- [Manage abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-attributes.html)
-- [Manage abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-meta-information.html)
+- [Edit abstract product](/docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product.html)
+- [Manage abstract product prices](/docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-prices.html)
+- [Manage abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-attributes.html)
+- [Manage abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-meta-information.html)

@@ -8,7 +8,7 @@ originalArticleId: 38c3b033-9972-4c11-9e73-9cdb5c736878
 redirect_from:
   - /v3/docs/managing-comments-shop-guide
   - /v3/docs/en/managing-comments-shop-guide
-  - /docs/scos/user/shop-user-guides/page.version/comments/shop-guide-managing-comments.html
+  - /docs/scos/user/shop-user-guides/comments/shop-guide-managing-comments.html
   - /docs/scos/user/shop-user-guides/201907.0/comments/shop-guide-managing-comments.html
 ---
 

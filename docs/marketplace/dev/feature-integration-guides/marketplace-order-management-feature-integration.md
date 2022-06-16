@@ -5,7 +5,7 @@ description: This document describes how to integrate the Marketplace Order Mana
 template: feature-integration-guide-template
 related:
   - title: Marketplace Order Management feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Order Management feature into a Spryker project.
@@ -20,18 +20,18 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | ---------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Order Management | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |
-| State Machine | {{page.version}} | [State Machine feature integration](https://github.com/spryker-feature/state-machine) |
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Marketplace Shipment | {{page.version}} | [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-feature-integration.html) |
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
+| Order Management | {{site.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/order-management-feature-integration.html) |
+| State Machine | {{site.version}} | [State Machine feature integration](https://github.com/spryker-feature/state-machine) |
+| Marketplace Merchant | {{site.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration.html) |
+| Marketplace Shipment | {{site.version}} | [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-shipment-feature-integration.html) |
 
 ### 1) Install required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-order-management:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-order-management:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1121,5 +1121,5 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | --- | --- | --- |
-| Marketplace Order Management + Order Threshold |  |[Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html) |
-| Marketplace Inventory Management + Order Management |  |  [Marketplace Inventory Management + Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)  |
+| Marketplace Order Management + Order Threshold |  |[Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-order-threshold-feature-integration.html) |
+| Marketplace Inventory Management + Order Management |  |  [Marketplace Inventory Management + Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-order-management-feature-integration.html)  |

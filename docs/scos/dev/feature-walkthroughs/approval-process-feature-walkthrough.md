@@ -13,7 +13,7 @@ redirect_from:
 The _Approval Process_ feature enables managers to control purchases requested by their employees.
 
 
-To learn more about the feature and to find out how end users use it, see [Approval Process feature overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Approval Process feature overview](/docs/scos/user/features/approval-process-feature-overview.html) for business users.
 
 
 ## Entity diagram
@@ -31,5 +31,5 @@ The following schema illustrates module relations in the Approval Process featur
 
 |INTEGRATION GUIDES  | TUTORIALS AND HOWTOS |
 |---------|---------|
-| [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-alternative-products-feature-integration.html) | [HowTo - Implement customer approval process based on a generic state machine](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html)  |
-| [Shipment + Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-approval-process-feature-integration.html)  |   |
+| [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-alternative-products-feature-integration.html) | [HowTo - Implement customer approval process based on a generic state machine](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html)  |
+| [Shipment + Approval Process feature integration](/docs/scos/dev/feature-integration-guides/shipment-approval-process-feature-integration.html)  |   |

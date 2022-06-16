@@ -14,14 +14,14 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-roles.html
 related:
   - title: Managing Companies
-    link: docs/scos/user/back-office-user-guides/page.version/customer/manage-companies.html
+    link: docs/scos/user/back-office-user-guides/customer/manage-companies.html
 ---
 
 This document describes how to create company roles in the Back Office.
 
 ## Prerequisites
 
-* [Create a company](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/manage-companies.html).
+* [Create a company](/docs/scos/user/back-office-user-guides/customer/manage-companies.html).
 * Review the [reference information](#create-a-company-role) before you start, or look up the necessary information as you go through the process.
 
 ## Create a company role
@@ -48,4 +48,4 @@ This document describes how to create company roles in the Back Office.
 
 ## Next steps
 
-[Create company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-users/create-company-users.html)
+[Create company users](/docs/scos/user/back-office-user-guides/customer/company-users/create-company-users.html)

@@ -8,7 +8,7 @@ template: concept-topic-template
 The _Product Relations_ feature enables product catalog managers to create logical relations between products based on their actual properties. Product relations are displayed on the Storefront to achieve multiple purposes.
 
 
-To learn more about the feature and to find out how end users use it, see [Product Relations feature overview](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Product Relations feature overview](/docs/scos/user/features/product-relations-feature-overview.html) for business users.
 
 
 ## Entity diagram
@@ -25,5 +25,5 @@ The following schema illustrates relations within the Product Relations feature:
 
 |INTEGRATION GUIDES  | MIGRATION GUIDES |
 |---------|---------|
-|[Product relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-relations-feature-integration.html) | [ProductRelation migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productrelation.html) |
-| [Glue API: Product relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-relations-feature-integration.html) | [ProductRelationStorage migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productrelationstorage.html) |
+|[Product relations feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html) | [ProductRelation migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productrelation.html) |
+| [Glue API: Product relations feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html) | [ProductRelationStorage migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productrelationstorage.html) |

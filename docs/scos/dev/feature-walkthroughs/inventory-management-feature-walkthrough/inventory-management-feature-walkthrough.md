@@ -85,7 +85,7 @@ Stock update triggers the event `stock update`. For example, in our dummy paymen
 
 It’s possible to use `vendor/bin/console data:import:product-stock` command to import stocks into database. The default stock importer uses `csv` file from `src/Pyz/Zed/Updater/Business/Internal/data/import/product_stock.csv` which imports stocks.
 
-The Back Office is provided to allow assigning stocks to products. See [Availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html) for details on how to manage product stocks in the Back Office.
+The Back Office is provided to allow assigning stocks to products. See [Availability](/docs/scos/user/back-office-user-guides/catalog/availability/managing-products-availability.html) for details on how to manage product stocks in the Back Office.
 
 Stock update considers the stock from the stock file to be the absolute value. On stock update, the stock is overwritten with the values from the file. If a certain product does not have a record in the stock file, then it is considered that the stock of this product does not have to be updated.
 
@@ -142,13 +142,13 @@ That means that DE and AT both share database. This information will be used whe
 
 When placing an order in Store A, the reservation is stored with the store identifier `fk_store`. An event is created and published in the queue, and synchronization with Store B happens. See scenario 3 above for information about how reservations are handled as well learn about the new configuration option for shared database in the `store.php` file.
 
-To learn more about the feature and to find out how end users use it, see [Inventory Management feature overview](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Inventory Management feature overview](/docs/scos/user/features/inventory-management-feature-overview.html) for business users.
 
 
 ## Related Developer articles
 
 | INTEGRATION GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
 |---|---|---|---|
-| [Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/inventory-management-feature-integration.html) | [Retrieving abstract product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-availability.html) | [File details: product_stock.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html) | [Reference information: AvailabilityStorage module overview](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/reference-informaton-availabilitystorage-module-overview.html) |
-| [Glue API: Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-inventory-management-feature-integration.html) | [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html) | [File details: warehouse_address.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html) | [Managing stocks in a multi-store environment: Best practices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html) |
-|  |  | [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html) |  |
+| [Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/inventory-management-feature-integration.html) | [Retrieving abstract product availability](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-product-availability.html) | [File details: product_stock.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html) | [Reference information: AvailabilityStorage module overview](/docs/scos/dev/feature-walkthroughs/inventory-management-feature-walkthrough/reference-informaton-availabilitystorage-module-overview.html) |
+| [Glue API: Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-inventory-management-feature-integration.html) | [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-product-availability.html) | [File details: warehouse_address.csv](/docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html) | [Managing stocks in a multi-store environment: Best practices](/docs/scos/dev/feature-walkthroughs/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html) |
+|  |  | [File details: warehouse_store.csv](/docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html) |  |

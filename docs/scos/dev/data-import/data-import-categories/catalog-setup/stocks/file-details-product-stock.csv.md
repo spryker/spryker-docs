@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html
 ---
 
-This document describes the `product_stock.csv` file to configure [Product Stock](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) information In your Spryker Demo Shop.
+This document describes the `product_stock.csv` file to configure [Product Stock](/docs/scos/user/features/inventory-management-feature-overview.html) information In your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -37,8 +37,8 @@ The file should have the following parameters:
 
 This file has the following dependencies:
 
-* [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
-* [warehouse.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html)
+* [product_concrete.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+* [warehouse.csv](/docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-warehouse.csv.html)
 
 ## Additional information
 

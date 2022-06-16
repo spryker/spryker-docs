@@ -5,7 +5,7 @@ description: This document describes the merchant-order-status.csv file to updat
 template: import-file-template
 related:
   - title: Merchant order overview
-    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/merchant-order-overview.html
+    link: docs/marketplace/user/features/marketplace-order-management-feature-overview/merchant-order-overview.html
 ---
 
 

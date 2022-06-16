@@ -12,7 +12,7 @@ redirect_from:
   - /docs/scos/user/technology-partners/202200.0/product-information-pimerp/contentserv.html
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
+    link: docs/scos/user/technology-partners/technology-partners.html
 ---
 
 ## Copyright and Disclaimer

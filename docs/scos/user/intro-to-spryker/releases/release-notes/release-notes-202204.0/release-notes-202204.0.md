@@ -18,7 +18,7 @@ Inside the cart and checkout endpoints, we have added information about the mini
 
 #### Documentation
 
-[Order Threshold feature overview](/docs/scos/user/features/202108.0/checkout-feature-overview/order-thresholds-overview.html)
+[Order Threshold feature overview](https://archive.docs.spryker.com/docs/scos/user/features/202108.0/checkout-feature-overview/order-thresholds-overview.html)
 
 ### Discount management
 
@@ -26,7 +26,7 @@ We have added several new features and improvements to discounts to allow for mo
 
 #### Documentation
 
-[Promotions and Discounts feature overview](/docs/scos/user/features/202204.0/promotions-discounts-feature-overview.html)
+[Promotions and Discounts feature overview](https://archive.docs.spryker.com/docs/scos/user/features/202204.0/promotions-discounts-feature-overview.html)
 
 
 ### Discount priority
@@ -67,7 +67,7 @@ When the **Cart** page shows eligible promotional products, these products now s
 
 #### Documentation
 
-[Promotions & Discounts feature overview](/docs/scos/user/features/202204.0/promotions-discounts-feature-overview.html)
+[Promotions & Discounts feature overview](https://archive.docs.spryker.com/docs/scos/user/features/202204.0/promotions-discounts-feature-overview.html)
 
 
 ### Multiple abstract products within a promotional product discount
@@ -102,7 +102,7 @@ Through Computop, you can now use the PayU set of payment services. This capabil
 With PayPal Express, your customers can complete transactions in just a few steps using their shipping and billing information already stored securely at PayPal to check out, so they don’t have to re-enter it. When PayPal Express is configured with the default settings, customers must have a PayPal account to complete payment.
 
 #### Documentation
-[Installing and configuring Computop](/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/installing-and-configuring-computop.html)
+[Installing and configuring Computop](https://archive.docs.spryker.com/docs/scos/dev/technology-partner-guides/202204.0/payment-partners/computop/installing-and-configuring-computop.html)
 
 #### Payone
 

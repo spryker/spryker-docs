@@ -5,9 +5,9 @@ description: This document describes the combined_merchant_product_offer.csv fil
 template: import-file-template
 related:
   - title: Marketplace Product Offer feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
   - title: Marketplace Product Offer feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-product-offer-feature-overview.html
 ---
 
 This document describes the `combined_merchant_product_offer.csv` file to configure [Merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) information in your Spryker shop.
@@ -20,7 +20,7 @@ data:import --config data/import/common/combined_merchant_product_offer_import_c
 
 {% info_block infoBox "Info" %}
 
-To learn more about bulk importing with the help of the configuration file, see [Importing data with a configuration file](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html).
+To learn more about bulk importing with the help of the configuration file, see [Importing data with a configuration file](/docs/scos/dev/data-import/importing-data-with-a-configuration-file.html).
 
 {% endinfo_block %}
 

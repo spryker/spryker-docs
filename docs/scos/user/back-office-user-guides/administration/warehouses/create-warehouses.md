@@ -56,8 +56,8 @@ If you clear all checkboxes for stores assigned to a specific warehouse, this wa
 
 ## Next steps
 
-The warehouse has been created. You can start working with it when creating or editing a concrete product. For more details, see [Creating a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html).
+The warehouse has been created. You can start working with it when creating or editing a concrete product. For more details, see [Creating a product variant](/docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/creating-product-variants.html).
 
-Additionally, you can [edit a warehouse](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/edit-warehouses.html). For more details, see the [Editing warehouse details]
+Additionally, you can [edit a warehouse](/docs/scos/user/back-office-user-guides/administration/warehouses/edit-warehouses.html). For more details, see the [Editing warehouse details]
 
-To learn how to manage stock per specific warehouse, see [Managing product availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html).
+To learn how to manage stock per specific warehouse, see [Managing product availability](/docs/scos/user/back-office-user-guides/catalog/availability/managing-products-availability.html).

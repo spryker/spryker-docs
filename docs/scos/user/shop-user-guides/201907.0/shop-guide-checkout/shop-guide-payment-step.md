@@ -8,7 +8,7 @@ originalArticleId: b3ff92af-1504-46a7-8de5-51305c28f4d5
 redirect_from:
   - /v3/docs/payment-step-shop-guide-201911
   - /v3/docs/en/payment-step-shop-guide-201911
-  - /docs/scos/user/shop-user-guides/page.version/checkout/shop-guide-payment-step.html
+  - /docs/scos/user/shop-user-guides/checkout/shop-guide-payment-step.html
   - /docs/scos/user/shop-user-guides/201907.0/checkout/shop-guide-payment-step.html
 ---
 
@@ -29,6 +29,6 @@ To select a payment method:
 **What's next?**
 
 The delivery addresses, shipment and payment methods are selected. To check the order details and complete the order, go to the **Summary** page.
-For more information, see [Shop Guide - Summary Step](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-summary-step.html).
+For more information, see [Shop Guide - Summary Step](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-summary-step.html).
 
 <!-- Last review date: Sep 24, 2019 -->

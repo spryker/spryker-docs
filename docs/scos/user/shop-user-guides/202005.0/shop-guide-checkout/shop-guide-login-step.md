@@ -11,7 +11,7 @@ redirect_from:
 
 {% info_block warningBox "Note" %}
 
-This step appears only in case if you are not logged in to shop. Otherwise, you turn out at the [Address step](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-address-step.html) at once.
+This step appears only in case if you are not logged in to shop. Otherwise, you turn out at the [Address step](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-address-step.html) at once.
 
 {% endinfo_block %}
 

@@ -33,11 +33,11 @@ A picture with 2 products of the same SKU added
 
 ![Guest shopping cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/guest-shopping-cart.png)
 
-With the search widget, a customer can always find the items that are available specifically to them as [Product Restriction](/docs/scos/user/features/{{page.version}}/merchant-product-restrictions-feature-overview.html) are considered while searching. This means, that if a blacklist rule exists for a customer, the products that are added to that rule will not be displayed in the search results.
+With the search widget, a customer can always find the items that are available specifically to them as [Product Restriction](/docs/scos/user/features/merchant-product-restrictions-feature-overview.html) are considered while searching. This means, that if a blacklist rule exists for a customer, the products that are added to that rule will not be displayed in the search results.
 
 {% info_block infoBox %}
 
-You can find more examples of product restriction use cases on the [Restricted Products Behavior](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html) page.
+You can find more examples of product restriction use cases on the [Restricted Products Behavior](/docs/scos/dev/feature-walkthroughs/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html) page.
 
 {% endinfo_block %}
 
@@ -54,9 +54,9 @@ In the empty shopping list, the customer can still add products with the help of
 
 ![Search widget demo](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/search-widget-demo.png)
 
-In comparison with Shopping Cart, for shopping lists, the quantity that is being added via a search widget is not verified. That means that the customer can add products to a shopping list with any quantity, irrespective of the [quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html) the products may have.
+In comparison with Shopping Cart, for shopping lists, the quantity that is being added via a search widget is not verified. That means that the customer can add products to a shopping list with any quantity, irrespective of the [quantity restrictions](/docs/scos/user/features/non-splittable-products-feature-overview.html) the products may have.
 
-The same works for the [product restriction](/docs/scos/user/features/{{page.version}}/merchant-product-restrictions-feature-overview.html) rules: the shopper can't add blacklisted products to a shopping list. They get "No search results" message in the widget field, and only whitelisted products are suggested in the search results in case of a whitelist.
+The same works for the [product restriction](/docs/scos/user/features/merchant-product-restrictions-feature-overview.html) rules: the shopper can't add blacklisted products to a shopping list. They get "No search results" message in the widget field, and only whitelisted products are suggested in the search results in case of a whitelist.
 
 ## Quick Order page
 
@@ -66,6 +66,6 @@ The widget allows searching the products on the quick order page too:
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-feature-walkthrough.html) for developers.
+Are you a developer? See [Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/product-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

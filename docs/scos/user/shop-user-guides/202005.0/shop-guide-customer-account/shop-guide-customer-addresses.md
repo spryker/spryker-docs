@@ -10,25 +10,25 @@ redirect_from:
   - /v5/docs/en/shop-guide-customer-addresses
 related:
   - title: Shop Guide - Customer Profile
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-customer-profile.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-customer-profile.html
   - title: Shop Guide - Customer Account Overview
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-customer-account-overview.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-customer-account-overview.html
   - title: Shop Guide - Order History
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-order-history.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-order-history.html
   - title: Shop Guide - Newsletter
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-newsletter.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-newsletter.html
   - title: Shop Guide - Wishlists
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-wishlists.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-wishlists.html
   - title: Shop Guide - Managing a Shopping Cart
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-a-shopping-cart.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-a-shopping-cart.html
   - title: Shop Guide - Managing Multiple Shopping Carts
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-multiple-shopping-carts.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-multiple-shopping-carts.html
   - title: Shop Guide - Shopping Lists
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-shopping-lists.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-lists.html
   - title: Shop Guide - Managing Requests for Quotes for a Sales Representative
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
   - title: Shop Guide - Managing Requests for Quotes for a Buyer
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-buyer.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-buyer.html
 ---
 
 On the Addresses page, you can set/update the Billing and Shipping Addresses.
@@ -58,7 +58,7 @@ To start working with the addresses, navigate to the **Customer Account > Addres
 **To create a new Address**:
 
 1. On the **Addresses** page in the Customer Account, click **Add New Address**.
-2. On the **Add Address** page populate the required fields. See [Addresses: Reference Information](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/references/addresses-reference-information.html) to learn what fields are required.
+2. On the **Add Address** page populate the required fields. See [Addresses: Reference Information](/docs/scos/user/shop-user-guides/shop-guide-customer-account/references/addresses-reference-information.html) to learn what fields are required.
     {% info_block infoBox %}
     `Is default shipping address` checkmark defines that this address will be used as the default shipping address for your Customer Account.
     `Is default billing address` checkmark defines that this address will be used as the default billing address for your Customer Account.
@@ -78,7 +78,7 @@ If the existing address is not relevant anymore, you can delete it. To do this, 
 ***
 **What's next?**
 
-To learn more about how to place the order, see [Shop Guide - Checkout](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-checkout.html).
+To learn more about how to place the order, see [Shop Guide - Checkout](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-checkout.html).
 
-To learn more about how to manage your orders, see [Shop Guide - Order History](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-order-history.html).
+To learn more about how to manage your orders, see [Shop Guide - Order History](/docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-order-history.html).
 

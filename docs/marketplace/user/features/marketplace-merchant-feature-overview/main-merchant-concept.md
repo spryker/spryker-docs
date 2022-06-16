@@ -4,18 +4,18 @@ description: This document contains concept information for the main merchant in
 template: concept-topic-template
 related:
   - title: Managing main merchant orders
-    link: docs/marketplace/user/back-office-user-guides/page.version/sales/managing-main-merchant-orders.html
+    link: docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-orders.html
   - title: Managing main merchant returns
-    link: docs/marketplace/user/back-office-user-guides/page.version/sales/managing-main-merchant-returns.html
+    link: docs/marketplace/user/back-office-user-guides/sales/managing-main-merchant-returns.html
 ---
 
 The Spryker Marketplace platform offers sales opportunities to everyone. To help support the [Enterprise Marketplace](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-concept.html) model, not only the 3rd party merchants but also the company owner of the Marketplace store can sell their products and offers online. We call this company the *main merchant*.
 
-Thus, the main merchant acts as a common [marketplace merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) having all its characteristics.
+Thus, the main merchant acts as a common [marketplace merchant](/docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) having all its characteristics.
 
 ## Main merchant orders and returns
 
-Being both a [marketplace operator](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-personas.html) and a seller and already performing tasks in the Back Office, the main merchant manages their [merchant orders](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/merchant-order-overview.html) also in the Back Office. For details, see [Managing main merchant orders](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/orders/managing-merchant-orders.html).
+Being both a [marketplace operator](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-personas.html) and a seller and already performing tasks in the Back Office, the main merchant manages their [merchant orders](/docs/marketplace/user/features/marketplace-order-management-feature-overview/merchant-order-overview.html) also in the Back Office. For details, see [Managing main merchant orders](/docs/marketplace/user/merchant-portal-user-guides/orders/managing-merchant-orders.html).
 
 ## Main merchant state machine
 
@@ -36,6 +36,6 @@ The workflow of the main merchant state machine is schematically displayed in th
 
 ## Main merchant returns
 
-If the [Marketplace Return Management](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html) feature is integrated into the project, the main merchant state machine obtains an additional return subprocess, and the flow looks like this:
+If the [Marketplace Return Management](/docs/marketplace/user/features/marketplace-return-management-feature-overview.html) feature is integrated into the project, the main merchant state machine obtains an additional return subprocess, and the flow looks like this:
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Merchant/Main+merchant+concept/marketplace-main-merchant-return-process.png)

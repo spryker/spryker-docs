@@ -46,6 +46,6 @@ A developer can manage the newsletter text files in `/src/Spryker/Zed/Availabili
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Availability Notification feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/availability-notification-feature-walkthrough.html) for developers.
+Are you a developer? See [Availability Notification feature walkthrough](/docs/scos/dev/feature-walkthroughs/availability-notification-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

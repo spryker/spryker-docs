@@ -32,7 +32,7 @@ redirect_from:
   - /module_migration_guides/mg-checkout.htm
 related:
   - title: Checkout
-    link: docs/scos/user/features/page.version/checkout-feature-overview/checkout-feature-overview.html
+    link: docs/scos/user/features/checkout-feature-overview/checkout-feature-overview.html
 ---
 
 ## Upgrading from version 4.* to version 6.0.0

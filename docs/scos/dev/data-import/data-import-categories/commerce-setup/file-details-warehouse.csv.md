@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-warehouse.csv.html
 ---
 
-This document describes the `warehouse.csv` file to configure the [Warehouse](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `warehouse.csv` file to configure the [Warehouse](/docs/scos/user/features/inventory-management-feature-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run
 

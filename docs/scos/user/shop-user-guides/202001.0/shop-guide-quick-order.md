@@ -137,4 +137,4 @@ To add a quick order to a shopping cart, do the following:
 
 **What's next?**
 
-See [Shio Guide - Checkout](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-checkout.html)
+See [Shio Guide - Checkout](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-checkout.html)

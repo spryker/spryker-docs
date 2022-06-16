@@ -38,8 +38,8 @@ The file should have the following parameters:
 
 This file has the following dependencies:
 
-* [discount.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html)
-* [discount_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount-store.csv.html)
+* [discount.csv](/docs/scos/dev/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html)
+* [discount_store.csv](/docs/scos/dev/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount-store.csv.html)
 
 ## Import template file and content example
 

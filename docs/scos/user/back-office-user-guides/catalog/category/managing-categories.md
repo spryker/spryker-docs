@@ -13,11 +13,11 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/category/managing-categories.html
 related:
   - title: Creating Categories
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/creating-categories.html
+    link: docs/scos/user/back-office-user-guides/catalog/category/creating-categories.html
   - title: Assigning Products to Categories
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/assigning-products-to-categories.html
+    link: docs/scos/user/back-office-user-guides/catalog/category/assigning-products-to-categories.html
   - title: Category Management feature overview
-    link: docs/scos/user/features/page.version/category-management-feature-overview.html
+    link: docs/scos/user/features/category-management-feature-overview.html
 ---
 
 This topic describes how to manage categories:
@@ -55,7 +55,7 @@ In case you have several products with the identical order number value, the ord
 
 The following table describes the attributes from the *Products in this category* tab.
 
-For the description of all other attributes on the Assign products to category page, see [Assigning products to categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html).
+For the description of all other attributes on the Assign products to category page, see [Assigning products to categories](/docs/scos/user/back-office-user-guides/catalog/category/assigning-products-to-categories.html).
 
 | TAB | ATTRIBUTE | DESCRIPTION |
 |-|-|-|
@@ -152,11 +152,11 @@ Select the *Sub Category grid* template to create a multilevel category structur
 
 {% info_block infoBox %}
 
-To use a template with slots, make sure the [Templates and slots](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-feature-integration.html) feature is integrated into your project.
+To use a template with slots, make sure the [Templates and slots](/docs/scos/dev/feature-integration-guides/cms-feature-integration.html) feature is integrated into your project.
 
 {% endinfo_block %}
 
-Select such a template to have slots for this category page. Slots can embed content from CMS Blocks and technology partner integrations. See [Templates and slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) for more details.
+Select such a template to have slots for this category page. Slots can embed content from CMS Blocks and technology partner integrations. See [Templates and slots](/docs/scos/user/features/cms-feature-overview/templates-and-slots-overview.html) for more details.
 
 ## Deleting a category
 

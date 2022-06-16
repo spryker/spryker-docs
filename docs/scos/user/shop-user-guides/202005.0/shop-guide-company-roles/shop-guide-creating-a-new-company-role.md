@@ -10,9 +10,9 @@ redirect_from:
   - /v5/docs/en/shop-guide-creating-a-new-company-role
 related:
   - title: Company Roles- Reference Information
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-company-roles/references/company-roles-reference-information.html
+    link: docs/scos/user/shop-user-guides/shop-guide-company-roles/references/company-roles-reference-information.html
   - title: Managing Company Roles
-    link: docs/scos/user/back-office-user-guides/page.version/customer/company-account/managing-company-roles.html
+    link: docs/scos/user/back-office-user-guides/customer/company-account/managing-company-roles.html
 ---
 
 The article describes how you can create a new company role.
@@ -31,4 +31,4 @@ Selecting the **Is Default** check-box means that the new users will be created 
 ***
 **What’s next?**
 
-To learn more about how to manage company roles, see [Shop Guide - Managing Company Roles](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-company-roles/shop-guide-managing-company-roles.html).
+To learn more about how to manage company roles, see [Shop Guide - Managing Company Roles](/docs/scos/user/shop-user-guides/shop-guide-company-roles/shop-guide-managing-company-roles.html).

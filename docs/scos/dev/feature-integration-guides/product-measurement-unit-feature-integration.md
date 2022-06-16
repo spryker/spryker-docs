@@ -21,17 +21,17 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Cart | {{page.version}} |
-|Product| {{page.version}} |
-|Order Management| {{page.version}} |
-|Spryker Core| {{page.version}} |
+| Cart | {{site.version}} |
+|Product| {{site.version}} |
+|Order Management| {{site.version}} |
+|Spryker Core| {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/measurement-units:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/measurement-units:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -902,15 +902,15 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core E-commerce | {{page.version}} |
-|Checkout| {{page.version}} |
+| Spryker Core E-commerce | {{site.version}} |
+|Checkout| {{site.version}} |
 |   |   |
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/measurement-units: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/measurement-units: "{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

@@ -5,9 +5,9 @@ description: This integration guide provides steps on how to integrate the Marke
 template: feature-integration-guide-template
 related:
   - title: Marketplace Product Offer feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
   - title: Marketplace Cart feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-cart-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-cart-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product Offer + Car feature into a Spryker project.
@@ -22,8 +22,8 @@ To start feature integration, integrate the required features:
 
 | NAME      | VERSION  | INTEGRATION GUIDE |
 | --------- | -------- | ------------------|
-| Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)
-| Cart | {{page.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html)
+| Marketplace Product Offer | {{site.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html)
+| Cart | {{site.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/cart-feature-integration.html)
 
 ### Set up behavior
 
@@ -108,8 +108,8 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME        | VERSION    | INTEGRATION GUIDE |
 | ----------- | ---------- | ------------------|
-| Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
-| Cart                      | {{page.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |
+| Marketplace Product Offer | {{site.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html) |
+| Cart                      | {{site.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/cart-feature-integration.html) |
 
 ### Set up behavior
 
@@ -153,4 +153,4 @@ Make sure that the product offer reference (and sold by merchant) is added to th
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | - |
-| Marketplace Product Offer + Cart API | | [Glue API: Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-cart-feature-integration.html) |
+| Marketplace Product Offer + Cart API | | [Glue API: Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-cart-feature-integration.html) |

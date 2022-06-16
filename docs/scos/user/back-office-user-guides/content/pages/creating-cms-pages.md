@@ -13,11 +13,11 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/content/pages/creating-cms-pages.html
 related:
   - title: CMS Page
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
+    link: docs/scos/user/features/cms-feature-overview/cms-pages-overview.html
   - title: Editing CMS Pages
-    link: docs/scos/user/back-office-user-guides/page.version/content/pages/editing-cms-pages.html
+    link: docs/scos/user/back-office-user-guides/content/pages/editing-cms-pages.html
   - title: Managing CMS Page Versions
-    link: docs/scos/user/back-office-user-guides/page.version/content/pages/managing-cms-page-versions.html
+    link: docs/scos/user/back-office-user-guides/content/pages/managing-cms-page-versions.html
 ---
 
 This topic describes how to create a CMS page in the Back Office.
@@ -100,4 +100,4 @@ The following table describes the attributes you enter when creating a CMS page.
 **What's next?**
 <br>Until now, you have created a page draft. The page itself will be available in the online store after you publish it.
 
-To learn how to view or publish the page, see [Managing CMS pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html).
+To learn how to view or publish the page, see [Managing CMS pages](/docs/scos/user/back-office-user-guides/content/pages/managing-cms-pages.html).

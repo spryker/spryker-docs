@@ -16,14 +16,14 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202005.0/product-sets-feature-integration.html
 related:
   - title: Product Sets feature overview
-    link: docs/scos/user/features/page.version/product-sets-feature-overview.html
+    link: docs/scos/user/features/product-sets-feature-overview.html
   - title: Managing product sets
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/managing-product-sets.html
+    link: docs/scos/user/back-office-user-guides/merchandising/product-sets/managing-product-sets.html
   - title: Creating product sets
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/creating-product-sets.html
+    link: docs/scos/user/back-office-user-guides/merchandising/product-sets/creating-product-sets.html
 ---
 
-This document describes how to integrate the [Product Sets feature](/docs/scos/user/features/{{page.version}}/product-sets-feature-overview.html) into a Spryker project.
+This document describes how to integrate the [Product Sets feature](/docs/scos/user/features/product-sets-feature-overview.html) into a Spryker project.
 
 ## Prerequisites
 
@@ -187,7 +187,7 @@ class ProductSetDependencyProvider extends SprykerProductSetDependencyProvider
 
 {% info_block warningBox "Sorting product sets" %}
 
-You can reorder product sets in the Back Office. See [Reorder product sets](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/reorder-product-sets.html) for more details.
+You can reorder product sets in the Back Office. See [Reorder product sets](/docs/scos/user/back-office-user-guides/merchandising/product-sets/reorder-product-sets.html) for more details.
 
 {% endinfo_block %}
 

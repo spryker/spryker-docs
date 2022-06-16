@@ -35,7 +35,7 @@ related:
   - title: Migration Guide - CMS Block GUI
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblockgui.html
   - title: CMS Block
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
+    link: docs/scos/user/features/cms-feature-overview/cms-blocks-overview.html
 ---
 
 ## Upgrading from version 1.* to version 2.*

@@ -78,7 +78,7 @@ related:
 	- title: How to extend an existing Gui table
 		link: docs/marketplace/dev/howtos/how-to-extend-gui-table.html
   - title: Sales Data Export feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/sales-data-export-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/sales-data-export-feature-integration.html
 ---
 ```
 
@@ -156,11 +156,11 @@ To add a new version for the versioned categories:
 
 ![files list](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/files-list.png)
 
-You can make a reference to the currently opened version of the versioned page using the `{% raw %}{{page.version}}{% endraw %}` variable in text and in links. For example, if you open a document in version `202108.0` in the editor and write there:
+You can make a reference to the currently opened version of the versioned page using the `{% raw %}{{site.version}}{% endraw %}` variable in text and in links. For example, if you open a document in version `202108.0` in the editor and write there:
 
 ```
-This feature requires version {{page.version}} of the Merchants feature.
-For details on the feature, see [Merchant feature overview](/docs/marketplace/user/features/{% raw %}{{page.version}}{% endraw %}/merchants/merchants-feature-overview.html).
+This feature requires version {{site.version}} of the Merchants feature.
+For details on the feature, see [Merchant feature overview](/docs/marketplace/user/features/{% raw %}{{site.version}}{% endraw %}/merchants/merchants-feature-overview.html).
 ```
 
 on the website, your text will look like this:
@@ -172,7 +172,7 @@ For details on the feature, see Merchant feature overview(link to merchants-feat
 
 {% info_block infoBox "Info" %}
 
-You can use the `{% raw %}{{page.version}}{% endraw %}` variable only when you refer to versioned pages on versioned pages. To make a reference to the latest page version on a versioned page to an unversioned page, use the `{% raw %}{{site.version}}{% endraw %}` variable described in the next section. To make a reference on an unversioned page to an unversioned page, do not use any variable.
+You can use the `{% raw %}{{site.version}}{% endraw %}` variable only when you refer to versioned pages on versioned pages. To make a reference to the latest page version on a versioned page to an unversioned page, use the `{% raw %}{{site.version}}{% endraw %}` variable described in the next section. To make a reference on an unversioned page to an unversioned page, do not use any variable.
 
 {% endinfo_block %}
 

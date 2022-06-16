@@ -16,22 +16,22 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/authenticating-as-a-customer.html
 related:
   - title: Authentication and authorization
-    link: docs/scos/dev/glue-api-guides/page.version/authentication-and-authorization.html
+    link: docs/scos/dev/glue-api-guides/authentication-and-authorization.html
   - title: Searching by company users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
+    link: docs/scos/dev/glue-api-guides/managing-b2b-account/searching-by-company-users.html
 ---
 
-This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#protected-resources).
+This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](/docs/scos/dev/glue-api-guides/authentication-and-authorization.html#protected-resources).
 
 {% info_block warningBox %}
 
-This endpoint does not comply with OAuth 2.0. If your project requires such compliance, use the `/token` endpoint. For details about the `/token` endpoint, see [Managing customer authentication tokens via OAuth 2.0](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html).
+This endpoint does not comply with OAuth 2.0. If your project requires such compliance, use the `/token` endpoint. For details about the `/token` endpoint, see [Managing customer authentication tokens via OAuth 2.0](/docs/scos/dev/glue-api-guides/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html).
 
 {% endinfo_block %}
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html).
 
 ## Authenticate as a customer
 
@@ -61,8 +61,8 @@ Request sample: authenticate as a customer
 
 | ATTRIBUTE | TYPE | REQUIRED  |DESCRIPTION |
 | --- | --- | --- | --- |
-| username | string | &check; | Customer's username. You define it when [creating a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer). |
-| password | password | &check; | Customer's password. You define it when [creating a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer). |
+| username | string | &check; | Customer's username. You define it when [creating a customer](/docs/scos/dev/glue-api-guides/managing-customers/managing-customers.html#create-a-customer). |
+| password | password | &check; | Customer's password. You define it when [creating a customer](/docs/scos/dev/glue-api-guides/managing-customers/managing-customers.html#create-a-customer). |
 
 {% info_block infoBox "Username" %}
 
@@ -72,7 +72,7 @@ If you are authenticating as a newly created customer, make sure to verify your 
 
 {% info_block warningBox %}
 
-Note that depending on the Login feature configuration for your project, too many unsuccessful login attempts may result in the 429 error, and the user will be locked out for some time. For details, see [Customer Login feature overview](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-login-overview.html).
+Note that depending on the Login feature configuration for your project, too many unsuccessful login attempts may result in the 429 error, and the user will be locked out for some time. For details, see [Customer Login feature overview](/docs/scos/user/features/customer-account-management-feature-overview/customer-login-overview.html).
 
 {% endinfo_block %}
 
@@ -107,7 +107,7 @@ Note that depending on the Login feature configuration for your project, too man
 | expiresIn | Integer | The time in seconds in which the token expires.  |
 | accessToken | String | Authentication token used to send requests to the protected resources available for a customer.  |
 | refreshToken | String | Authentication token used to refresh the `accessToken`. |
-| idCompanyUser | string | A unique identifier of a user within a company. Use it to [retrieve a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-users.html). |
+| idCompanyUser | string | A unique identifier of a user within a company. Use it to [retrieve a company user](/docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-company-users.html). |
 
 ## Possible errors
 
@@ -116,16 +116,16 @@ Note that depending on the Login feature configuration for your project, too man
 | 003 | Failed to log in the user. |
 | 901 | Unprocessable login data (incorrect email format; email or password is empty).|
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-* [Manage carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)
-* [Manage cart items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
-* [Manage gift cards](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html)
-* [Manage wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html)
-* [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html)
-* [Managing customer authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens.html)
-* [Manage customer addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html)
-* [Manage customer addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html)
-* [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html)
+* [Manage carts](/docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)
+* [Manage cart items](/docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
+* [Manage gift cards](/docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html)
+* [Manage wishlists](/docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html)
+* [Manage orders](/docs/scos/dev/glue-api-guides/managing-customers/retrieving-customer-orders.html)
+* [Managing customer authentication tokens](/docs/scos/dev/glue-api-guides/managing-customers/managing-customer-authentication-tokens.html)
+* [Manage customer addresses](/docs/scos/dev/glue-api-guides/managing-customers/managing-customer-addresses.html)
+* [Manage customer addresses](/docs/scos/dev/glue-api-guides/managing-customers/managing-customer-addresses.html)
+* [Manage customer passwords](/docs/scos/dev/glue-api-guides/managing-customers/managing-customer-passwords.html)

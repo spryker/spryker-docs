@@ -22,8 +22,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Product Group | {{page.version}} |
-| Product Labels | {{page.version}} |
+| Product Group | {{site.version}} |
+| Product Labels | {{site.version}} |
 
 
 ### Set up behavior

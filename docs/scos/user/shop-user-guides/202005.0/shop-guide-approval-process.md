@@ -10,11 +10,11 @@ redirect_from:
   - /v5/docs/en/approval-process-shop-guide
 related:
   - title: Approval Process Feature Overview
-    link: docs/scos/user/features/page.version/approval-process-feature-overview.html
+    link: docs/scos/user/features/approval-process-feature-overview.html
 ---
 
 
-On this page you can find the instructions on managing the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html).
+On this page you can find the instructions on managing the [Approval Process](/docs/scos/user/features/approval-process-feature-overview.html).
 {% info_block infoBox "Note" %}
 
 To configure the permissions, you should have admin access to the company account.
@@ -84,7 +84,7 @@ An Approver can check all the Approval requests either on the **Shopping Carts**
 
 To approve or decline a cart, follow the steps below:
 
-1. Click the cart you would like to review to open the [Shopping Cart page](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/references/shopping-carts-reference-information.html#shopping-cart).
+1. Click the cart you would like to review to open the [Shopping Cart page](/docs/scos/user/shop-user-guides/shop-guide-customer-account/references/shopping-carts-reference-information.html#shopping-cart).
 2. Click **Checkout** to proceed to the Checkout Summary page where the widget is located.
 3. In the **Approval Request Widget** click **Approve** or **Decline**.
 ![Approve / Deny Widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Approval+Process/approve-deny-widget.png) 

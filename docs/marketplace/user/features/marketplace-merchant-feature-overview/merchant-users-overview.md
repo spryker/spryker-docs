@@ -4,7 +4,7 @@ description: This document contains concept information for The Merchant users f
 template: concept-topic-template
 related:
   - title: Managing merchant users
-    link: docs/marketplace/user/back-office-user-guides/page.version/marketplace/merchants/managing-merchant-users.html
+    link: docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchant-users.html
 ---
 
 The merchant concept presupposes having employees with access to the Merchant Portal that will perform various actions on behalf of the merchants. To enable that, the *merchant user* entity is introduced.
@@ -31,7 +31,7 @@ The following table explains all the statuses that may apply to a merchant user.
 | STATUS | DESCRIPTION |
 | --- | --- |
 | Active | When the merchant user has the `Active` status, it means that the merchant is approved, the merchant user account is activated, the email with reset password instructions has been sent, and the merchant user has access to the Merchant Portal. |
-| Deactivated | Access to the Merchant Portal is revoked for a deactivated merchant user. A merchant user can be deactivated when:<ul><li>A merchant or Marketplace administrator deactivates the merchant user.</li><li>The merchant to whom the merchant user belongs has been [denied](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses).</li></ul> |
+| Deactivated | Access to the Merchant Portal is revoked for a deactivated merchant user. A merchant user can be deactivated when:<ul><li>A merchant or Marketplace administrator deactivates the merchant user.</li><li>The merchant to whom the merchant user belongs has been [denied](/docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses).</li></ul> |
 | Deleted | Access to the Merchant Portal is revoked for the deleted merchant user. In the current implementation, both statuses `Deactivated` and `Deleted` have the same functionality—they restrict access to the Merchant Portal. However, this can be changed and adapted on the project level. |
 
 <!--See LINK TO BO GUIDE HOW TO ACTIVATE A MERCHANT USER for details on to change the merchant user statues in the Back Office-->
@@ -44,7 +44,7 @@ To log in to the Merchant Portal, both a merchant and merchant user need to be a
 
 {% info_block infoBox "Info" %}
 
-If a merchant is [denied](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses), all their merchant users get deactivated automatically. If the merchant is re-approved again, their merchant users need to be re-activated one by one manually.
+If a merchant is [denied](/docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses), all their merchant users get deactivated automatically. If the merchant is re-approved again, their merchant users need to be re-activated one by one manually.
 
 {% endinfo_block %}
 

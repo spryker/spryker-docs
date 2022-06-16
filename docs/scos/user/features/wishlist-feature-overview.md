@@ -87,6 +87,6 @@ For more details about wishlists, check the video:
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Wishlist feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/wishlist-feature-walkthrough.html) for developers.
+Are you a developer? See [Wishlist feature walkthrough](/docs/scos/dev/feature-walkthroughs/wishlist-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

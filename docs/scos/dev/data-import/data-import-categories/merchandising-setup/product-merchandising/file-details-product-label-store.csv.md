@@ -16,10 +16,10 @@ redirect_from:
   - /docs/scos/dev/data-import/202005.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html
 related:
   - title: Product Labels feature overview
-    link: docs/scos/user/features/page.version/product-labels-feature-overview.html
+    link: docs/scos/user/features/product-labels-feature-overview.html
 ---
 
-This document describes the `product_label_store.csv` file to configure [Product Label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) and store assignment information in your Spryker Demo Shop.
+This document describes the `product_label_store.csv` file to configure [Product Label](/docs/scos/user/features/product-labels-feature-overview.html) and store assignment information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -38,7 +38,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [product_label.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label.csv.html).
+This file has the following dependency: [product_label.csv](/docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label.csv.html).
 
 ## Import template file and content example
 

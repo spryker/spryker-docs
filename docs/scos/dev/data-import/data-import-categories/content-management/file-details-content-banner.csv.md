@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201907.0/data-import-categories/content-management/file-details-content-banner.csv.html
 ---
 
-This document describes the `content_banner.csv` file to configure [Content Banner](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item) information in your Spryker Demo Shop.
+This document describes the `content_banner.csv` file to configure [Content Banner](/docs/scos/user/features/content-items-feature-overview.html#content-item) information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -45,7 +45,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html).
+This file has the following dependency: [glossary.csv](/docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-glossary.csv.html).
 
 ## Import template file and content example
 

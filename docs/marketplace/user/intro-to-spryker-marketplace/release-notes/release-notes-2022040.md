@@ -25,7 +25,7 @@ With the Merchant Custom Prices in Merchant Portal feature, the 3rd-party Mercha
 ![merchant-products-custom-prices-in-merchant-portal-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.md/merchant-products-custom-prices-in-merchant-portal-2.png)
 
 Documentation:<br>
-[Marketplace Merchant Custom Prices feature overview](/docs/marketplace/user/features/202204.0/marketplace-merchant-custom-prices-feature-overview.html)
+[Marketplace Merchant Custom Prices feature overview](https://archive.docs.spryker.com/docs/marketplace/user/features/202204.0/marketplace-merchant-custom-prices-feature-overview.html)
 
 ## Marketplace Product Approval Process
 
@@ -37,7 +37,7 @@ The status can be either of the following: draft, waiting for approval, approved
 ![merchant-product-approval-process-merchant-product-list](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.md/merchant-product-approval-process-merchant-product-list.png)
 
 Documentation:<br>
-[Marketplace Product Approval Process feature overview](/docs/marketplace/user/features/202204.0/marketplace-product-approval-process-feature-overview.html)
+[Marketplace Product Approval Process feature overview](https://archive.docs.spryker.com/docs/marketplace/user/features/202204.0/marketplace-product-approval-process-feature-overview.html)
 
 ## Marketplace Shopping Lists and API
 
@@ -46,7 +46,7 @@ The Marketplace Shopping Lists feature lets B2B customers create and share multi
 ![marketplace-shopping-lists](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.md/marketplace-shopping-lists.png)
 
 Documentation:<br>
-[Marketplace Shopping Lists feature overview](/docs/marketplace/user/features/202204.0/marketplace-shopping-list-feature-overview.html)
+[Marketplace Shopping Lists feature overview](https://archive.docs.spryker.com/docs/marketplace/user/features/202204.0/marketplace-shopping-list-feature-overview.html)
 
 ## Marketplace Quick Add to Cart
 
@@ -55,8 +55,8 @@ The Marketplace Quick Add to Cart feature lets B2B customers find and buy mercha
 ![marketplace-quick-add-to-cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/marketplace/user/intro-to-spryker-marketplace/release-notes/release-notes-2022040.md/marketplace-quick-add-to-cart.png)
 
 Documentation: <br>
-[Marketplace Product feature overview](/docs/marketplace/user/features/202204.0/marketplace-product-feature-overview.html)<br>
-[Marketplace Product Offer feature overview](/docs/marketplace/user/features/202204.0/marketplace-product-offer-feature-overview.html)
+[Marketplace Product feature overview](https://archive.docs.spryker.com/docs/marketplace/user/features/202204.0/marketplace-product-feature-overview.html)<br>
+[Marketplace Product Offer feature overview](https://archive.docs.spryker.com/docs/marketplace/user/features/202204.0/marketplace-product-offer-feature-overview.html)
 
 ## Technical Enhancements
 

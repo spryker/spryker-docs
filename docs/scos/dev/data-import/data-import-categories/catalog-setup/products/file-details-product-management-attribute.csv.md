@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/file-details-product-management-attributecsv
 ---
 
-This document describes the `product_management_attribute.csv` file to configure [product attribute](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_management_attribute.csv` file to configure [product attribute](/docs/scos/user/features/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -39,8 +39,8 @@ The file should have the following parameters:
 
 This file has the following dependencies:
 
-* [ product_attribute_key.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html)
-* [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
+* [ product_attribute_key.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html)
+* [glossary.csv](/docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-glossary.csv.html)
 
 ## Import template file and content example
 

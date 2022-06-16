@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/editing-content-items
 related:
   - title: Content Items Feature Overview
-    link: docs/scos/user/features/page.version/content-items-feature-overview.html
+    link: docs/scos/user/features/content-items-feature-overview.html
 ---
 
 This topic describes how to edit content items in the Back Office.
@@ -148,4 +148,4 @@ The following table describes the attributes on the *Create Content Item: Naviga
 **What's next?**
 <br>When content item is updated, you can add it via content item widgets to a block or a page if needed.
 
-* To learn more about adding content item widgets to a block or page, see [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
+* To learn more about adding content item widgets to a block or page, see [Adding Content Item Widgets to Pages and Blocks](/docs/scos/user/back-office-user-guides/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).

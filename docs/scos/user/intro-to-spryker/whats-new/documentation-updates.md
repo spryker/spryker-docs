@@ -27,7 +27,7 @@ redirect_from:
 This page lists all the updates to the documentation made for each release.
 Check out our [release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) to learn more about the releases.
 
-## Release {{page.version}}
+## Release {{site.version}}
 Below you will find the list of the new/updated documentation released as part of the [{{site.version}} Spryker product release](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html):
 
 ### Features:

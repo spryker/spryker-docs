@@ -13,9 +13,9 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/content/adding-content-to-storefront-pages-using-templates-and-slots-best-practices.html
 related:
   - title: Managing Slots
-    link: docs/scos/user/back-office-user-guides/page.version/content/slots/managing-slots.html
+    link: docs/scos/user/back-office-user-guides/content/slots/managing-slots.html
   - title: Templates & Slots Feature Overview
-    link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html
+    link: docs/scos/user/features/cms-feature-overview/templates-and-slots-overview.html
 ---
 
 This topic describes how to add content to Storefront pages using templates with slots. To start working with templates with slots, go to **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
@@ -37,19 +37,19 @@ Follow the steps below to add the content.
 
 ## Create content items
 
-[Content item](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) is the smallest content unit in Spryker. By creating a content item, you preserve a small content piece that can be used later in multiple pages.
+[Content item](/docs/scos/user/features/content-items-feature-overview.html) is the smallest content unit in Spryker. By creating a content item, you preserve a small content piece that can be used later in multiple pages.
 
 Create the following content items:
 * Abstract product list of top sellers—*Best Selling Products*
 * Abstract product list of featured products—*Featured Products*
 
-See [Creating content items](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) for more details.
+See [Creating content items](/docs/scos/user/back-office-user-guides/content/content-items/creating-content-items.html) for more details.
 
 If the content item types shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [HowTo - Create a Content Item](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-custom-content-item.html) for more details.
 
 ## Create CMS blocks
 
-[CMS block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html) serves as the actual content that you insert into Storefront pages.
+[CMS block](/docs/scos/user/features/cms-feature-overview/cms-blocks-overview.html) serves as the actual content that you insert into Storefront pages.
 
 Follow the steps to create the CMS blocks with the needed content:
 1. Create the following CMS blocks:
@@ -58,7 +58,7 @@ Follow the steps to create the CMS blocks with the needed content:
     * Writing materials reference - *Category Banner-2*
     * Sticky notes reference - *Category Banner-3*
 
-See [Create CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/create-cms-blocks.html) for more details.
+See [Create CMS blocks](/docs/scos/user/back-office-user-guides/content/blocks/create-cms-blocks.html) for more details.
 
 {% info_block warningBox "Activation" %}
 
@@ -79,12 +79,12 @@ Make sure to activate the CMS blocks. Only active CMS blocks are rendered on Sto
     * Link—`/en/stationery/paper/sticky-notes`.
     * ImageURL—`/assets/DE/default/images/category-banner-image-3@2x.jpg`.
 
-See [Editing placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-placeholders-in-cms-blocks.html) to learn about inserting content into CMS blocks.
+See [Editing placeholders](/docs/scos/user/back-office-user-guides/content/blocks/edit-placeholders-in-cms-blocks.html) to learn about inserting content into CMS blocks.
 
 
 ## Select a template with slots
 
-[Template with slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) defines the layout of slots on the Storefront pages you add the CMS blocks to.
+[Template with slots](/docs/scos/user/features/cms-feature-overview/templates-and-slots-overview.html) defines the layout of slots on the Storefront pages you add the CMS blocks to.
 
 Follow the steps to select a template with slots:
 1. Go to **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
@@ -95,11 +95,11 @@ If the templates with slots shipped by default are not sufficient for your proje
 
 ## Select a slot
 
-[Slot](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#slot) defines the Storefront page space you add the CMS blocks to.
+[Slot](/docs/scos/user/features/cms-feature-overview/templates-and-slots-overview.html#slot) defines the Storefront page space you add the CMS blocks to.
 
 In the **List of Slots for "Product" Template**, select the *Bottom* slot. This slot is located at the bottom of product pages. By selecting it, you select to work with this Storefront page space in all the product pages.
 
-If the slots shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [Correlation](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#correlation) for more details.
+If the slots shipped by default are not sufficient for your project needs, new ones can be created by a developer. See [Correlation](/docs/scos/user/features/cms-feature-overview/templates-and-slots-overview.html#correlation) for more details.
 
 ## Assign CMS blocks
 

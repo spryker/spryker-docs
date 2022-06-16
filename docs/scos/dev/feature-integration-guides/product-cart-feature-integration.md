@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/product-cart-feature-integration
 related:
   - title: Product image management
-    link: docs/scos/user/features/page.version/product-feature-overview/product-images-overview.html
+    link: docs/scos/user/features/product-feature-overview/product-images-overview.html
 ---
 
 {% info_block errorBox %}
@@ -28,8 +28,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Cart | {{page.version}} |
-| Product | {{page.version}} |
+| Cart | {{site.version}} |
+| Product | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 

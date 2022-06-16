@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/content-items-feature-integration.html
 ---
 
-This document describes how. to integrate the [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) feature into a Spryker project.
+This document describes how. to integrate the [Content Items](/docs/scos/user/features/content-items-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -25,14 +25,14 @@ To start the feature integration, review and install the necessary features:
 
 | NAME         | VERSION |
 | ----------- | ------ |
-| Spryker Core | {{page.version}}  |
+| Spryker Core | {{site.version}}  |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/content-item:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/content-item:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -745,7 +745,7 @@ To start the feature integration, review and install the necessary features:
 
 | NAME         | VERSION    |
 | ---------- | -------- |
-| Spryker Core | {{page.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 

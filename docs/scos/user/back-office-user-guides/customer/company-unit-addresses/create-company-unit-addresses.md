@@ -18,7 +18,7 @@ This document describes how to create company unit addresses in the Back Office.
 
 ## Prerequisites
 
-* [Create a company](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/manage-companies.html).
+* [Create a company](/docs/scos/user/back-office-user-guides/customer/manage-companies.html).
 * Review the [reference information](#reference-information-create-a-company-unit-address) before you start, or look up the necessary information as you go through the process.
 
 ## Create a company unit address
@@ -41,7 +41,7 @@ This document describes how to create company unit addresses in the Back Office.
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| COMPANY | A company to assign this address to. To learn how to create a company, see [Create a company](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/manage-companies.html). |
+| COMPANY | A company to assign this address to. To learn how to create a company, see [Create a company](/docs/scos/user/back-office-user-guides/customer/manage-companies.html). |
 | COUNTRY | Country. |
 | CITY | City. |
 | ZIP CODE | Zip code. |
@@ -53,7 +53,7 @@ This document describes how to create company unit addresses in the Back Office.
 
 ## Next steps
 
-* [Assign the address to a company unit](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-units/edit-company-units.html)
-* [Edit company unit addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-unit-addresses/edit-company-unit-addresses.html)
-* [Create company roles](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-roles/create-company-roles.html)
-* [Create company users](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-users/create-company-users.html)
+* [Assign the address to a company unit](/docs/scos/user/back-office-user-guides/customer/company-units/edit-company-units.html)
+* [Edit company unit addresses](/docs/scos/user/back-office-user-guides/customer/company-unit-addresses/edit-company-unit-addresses.html)
+* [Create company roles](/docs/scos/user/back-office-user-guides/customer/company-roles/create-company-roles.html)
+* [Create company users](/docs/scos/user/back-office-user-guides/customer/company-users/create-company-users.html)

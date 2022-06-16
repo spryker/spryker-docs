@@ -32,7 +32,7 @@ redirect_from:
   - /module_migration_guides/mg-cms.htm
 related:
   - title: CMS
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-feature-overview.html
+    link: docs/scos/user/features/cms-feature-overview/cms-feature-overview.html
   - title: Migration guide - CmsBlock
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
   - title: Migration guide - CmsBlockCollector

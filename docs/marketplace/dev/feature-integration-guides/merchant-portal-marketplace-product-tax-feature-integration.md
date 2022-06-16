@@ -5,9 +5,9 @@ description: This integration guide provides steps on how to integrate the Merch
 template: feature-integration-guide-template
 related:
   - title: Marketplace Product feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
   - title: Tax feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/tax-feature-walkthrough/tax-feature-walkthrough.html
+    link: docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/tax-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Merchant Portal - Marketplace Product + Tax feature into a Spryker project.
@@ -22,16 +22,16 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Product | {{page.version}} | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html) |
-| Marketplace Merchant Portal Core | {{page.version}}  | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html) |
-| Tax | {{page.version}} | [Tax feature integration](https://github.com/spryker-feature/tax)
+| Marketplace Product | {{site.version}} | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html) |
+| Marketplace Merchant Portal Core | {{site.version}}  | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-core-feature-integration.html) |
+| Tax | {{site.version}} | [Tax feature integration](https://github.com/spryker-feature/tax)
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker/tax-merchant-portal-gui:"{{page.version}}" --update-with-dependencies
+composer require spryker/tax-merchant-portal-gui:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

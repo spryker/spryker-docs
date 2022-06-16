@@ -10,32 +10,32 @@ redirect_from:
   - /v5/docs/en/shop-guide-customer-account-overview
 related:
   - title: Shop Guide - Customer Profile
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-customer-profile.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-customer-profile.html
   - title: Shop Guide - Customer Addresses
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-customer-addresses.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-customer-addresses.html
   - title: Shop Guide - Order History
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-order-history.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-order-history.html
   - title: Shop Guide - Wishlists
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-wishlists.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-wishlists.html
   - title: Shop Guide - Newsletter
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-newsletter.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-newsletter.html
   - title: Shop Guide - Shopping Lists
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-shopping-lists.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-lists.html
   - title: Shop Guide - Managing a Shopping Cart
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-a-shopping-cart.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-a-shopping-cart.html
   - title: Shop Guide - Managing Multiple Shopping Carts
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-multiple-shopping-carts.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-multiple-shopping-carts.html
   - title: Shop Guide - Managing Requests for Quotes for a Sales Representative
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
   - title: Shop Guide - Managing Requests for Quotes for a Buyer
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-buyer.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-buyer.html
 ---
 
 The article describes how you can get information about your customer activity and provides details on:
 
-* Last Orders. See [Order History](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-order-history.html) for the details. 
-* Profile. See [Customer Profile](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-customer-profile.html) for details.
-* Newsletter. See [Newsletter](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-newsletter.html) for details.
+* Last Orders. See [Order History](/docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-order-history.html) for the details. 
+* Profile. See [Customer Profile](/docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-customer-profile.html) for details.
+* Newsletter. See [Newsletter](/docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-newsletter.html) for details.
 
 <details open>
 <summary markdown='span'>B2B Shop</summary>
@@ -61,8 +61,8 @@ This is the default page that opens when you log in to your customer account.
 ***
 **What’s next?**
 
-To learn more about how to check and update your profile information, see [Shop Guide - Customer Profile](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-customer-profile.html).
+To learn more about how to check and update your profile information, see [Shop Guide - Customer Profile](/docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-customer-profile.html).
 
-To learn more about how to manage your addresses, see [Shop Guide - Customer Addresses](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-customer-addresses.html).
+To learn more about how to manage your addresses, see [Shop Guide - Customer Addresses](/docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-customer-addresses.html).
 
-To learn more about how to manage your orders, see [Shop Guide -  Order History](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-order-history.html).
+To learn more about how to manage your orders, see [Shop Guide -  Order History](/docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-order-history.html).

@@ -33,7 +33,7 @@ Review the [reference information](#reference-information-edit-a-company-user) b
 
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
-| EMAIL | Email address that is used to log into the Storefront. You can define it only when [creating a company user](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-users/create-company-users.html). |
+| EMAIL | Email address that is used to log into the Storefront. You can define it only when [creating a company user](/docs/scos/user/back-office-user-guides/customer/company-users/create-company-users.html). |
 | SALUTATION | Formal salutation. |
 | FIRST NAME | First name. |
 | LAST NAME |  Last name. |

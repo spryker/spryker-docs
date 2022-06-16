@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/retrieving-product-attributes
 ---
 
-The Product Management Attributes API allows you to retrieve all predefined [product attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) available in your shop system.
+The Product Management Attributes API allows you to retrieve all predefined [product attributes](/docs/scos/user/features/product-feature-overview/product-feature-overview.html) available in your shop system.
 
 {% info_block infoBox %}
 
@@ -22,7 +22,7 @@ Only preset attributes are retrieved. So if an attribute allows custom input ( `
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html).
 
 <a name="{all-attributes}"></a>
 
@@ -237,4 +237,4 @@ Possible errors
 | --- | --- |
 | 4201 | Attribute not found. |
 
-For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+For generic Glue Application errors that can also occur, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

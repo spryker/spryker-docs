@@ -23,9 +23,9 @@ Check out this video to get more details on how Punchout works:
 
 ## Related Developer guides
 
-* [Punchout Catalog feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html)
-* [Eco - Punchout Catalogs + Product Bundles feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html)
-* [Eco - Punchout Catalogs feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html)
+* [Punchout Catalog feature integration](/docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/punchout-catalog-feature-integration.html)
+* [Eco - Punchout Catalogs + Product Bundles feature integration](/docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-product-bundles-feature-integration.html)
+* [Eco - Punchout Catalogs feature integration](/docs/scos/dev/technology-partner-guides/order-management-erpoms/punchout-catalogs/eco-punchout-catalogs-feature-integration.html)
 
 ## Copyright and Disclaimer
 

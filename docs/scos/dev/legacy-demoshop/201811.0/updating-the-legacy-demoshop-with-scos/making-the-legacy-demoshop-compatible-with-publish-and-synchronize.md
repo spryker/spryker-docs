@@ -21,12 +21,12 @@ redirect_from:
   - /docs/scos/dev/migration-and-integration/201811.0/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-publish-and-synchronize.html
 related:
   - title: Making the Legacy Demoshop Compatible with the Modular Frontend
-    link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html
+    link: docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html
   - title: Making the Legacy Demoshop Compatible with the Atomic Frontend
-    link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html
+    link: docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html
 ---
 
-By following this document and adjusting all the necessary changes in the Legacy Demoshop, you will be able to set up the infrastructure for Publish &amp; Synchronize. If you need to learn more about any requirements needed and changes made to each particular feature, read their own [installation guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/feature-integration-guides.html).
+By following this document and adjusting all the necessary changes in the Legacy Demoshop, you will be able to set up the infrastructure for Publish &amp; Synchronize. If you need to learn more about any requirements needed and changes made to each particular feature, read their own [installation guides](/docs/scos/dev/feature-integration-guides/feature-integration-guides.html).
 
 ### 1. Add infrastructure modules
 You need to adjust the `composer.json` to get the latest version of the Storage and Search modules. By executing this code you will be able to update the library you need for running Publish &amp; Synchronize:

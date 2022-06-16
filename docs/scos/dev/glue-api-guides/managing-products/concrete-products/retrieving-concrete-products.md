@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/concrete-products/retrieving-concrete-products.html
 related:
   - title: Product Options feature overview
-    link: docs/scos/user/features/page.version/product-options-feature-overview.html
+    link: docs/scos/user/features/product-options-feature-overview.html
 ---
 
 This endpoint allows retrieving general information about concrete products.
@@ -21,12 +21,12 @@ This endpoint allows retrieving general information about concrete products.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
-* [Glue API: Product Options Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
-* [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html)
-* [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundles-feature-integration.html)
-* [Glue API: Prices feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html)
+* [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html)
+* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html)
+* [Glue API: Product Options Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)
+* [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-labels-feature-integration.html)
+* [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-bundles-feature-integration.html)
+* [Glue API: Prices feature integration - ongoing](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-price-feature-integration.html)
 
 
 ## Retrieve a concrete product
@@ -62,8 +62,8 @@ To retrieve general information about a concrete product, send the request:
 | `GET http://glue.mysprykershop.com/concrete-products/001_25904006` | Get information about the `001_25904006` product.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-image-sets` | Get information about the `001_25904006` product with its image sets.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-availabilities` | Get information about the `001_25904006` product with its availability.  |
-| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices` | Get information about the `001_25904006` product with its [default prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html#default-and-original-prices-on-the-storefront). |
-| `GET https://glue.mysprykershop.com/abstract-products/093_24495843?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093_24495843` with its prices (default and [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)) |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices` | Get information about the `001_25904006` product with its [default prices](/docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html#default-and-original-prices-on-the-storefront). |
+| `GET https://glue.mysprykershop.com/abstract-products/093_24495843?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093_24495843` with its prices (default and [volume prices](/docs/scos/user/features/prices-feature-overview/volume-prices-overview.html)) |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-options` | Get information about the `001_25904006` product with its product options.  |
 | `GET https://glue.mysprykershop.com/concrete-products/035_17360369?include=product-reviews` | Get information about the `001_25904006` product with its product reviews.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-offers` | Get information about the `001_25904006` product with its product offers.  |
@@ -1637,13 +1637,13 @@ To retrieve general information about a concrete product, send the request:
 
 For other attributes of the included resources, see:
 
-* [Retrieve sales units of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-sales-units.html#sales-units-response-attributes)
-* [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html#measurement-units-response-attributes)
-* [Retrieve image sets of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html#concrete-image-sets-response-attributes)
-* [Retrieve availability of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html#concrete-product-availability-response-attributes)
-* [Retrieve prices of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-prices.html#response)
-* [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
-* [Retrieve product ratings and reviews](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-product-ratings-and-reviews.html#product-ratings-and-reviews-response-attributes)
+* [Retrieve sales units of a concrete product](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-sales-units.html#sales-units-response-attributes)
+* [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/retrieving-measurement-units.html#measurement-units-response-attributes)
+* [Retrieve image sets of a concrete product](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html#concrete-image-sets-response-attributes)
+* [Retrieve availability of a concrete product](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-product-availability.html#concrete-product-availability-response-attributes)
+* [Retrieve prices of a concrete product](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-product-prices.html#response)
+* [Retrieve a product label](/docs/scos/dev/glue-api-guides/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+* [Retrieve product ratings and reviews](/docs/scos/dev/glue-api-guides/managing-products/managing-product-ratings-and-reviews.html#product-ratings-and-reviews-response-attributes)
 
 
 ## Possible errors
@@ -1653,4 +1653,4 @@ For other attributes of the included resources, see:
 | 302 | Concrete product is not found. |
 | 312 | Concrete product is not specified.  |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

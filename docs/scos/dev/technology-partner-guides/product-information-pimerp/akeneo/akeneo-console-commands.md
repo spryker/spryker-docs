@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/akeneo-console-commands
 ---
 
-The following console commands are available in your project after successful [installation](/docs/scos/dev/technology-partner-guides/{{page.version}}/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html) of the Akeneo module. Run them one by one.
+The following console commands are available in your project after successful [installation](/docs/scos/dev/technology-partner-guides/product-information-pimerp/akeneo/installing-and-configuring-akeneo.html) of the Akeneo module. Run them one by one.
 
 1) Command to import super attributes:
 ```bash

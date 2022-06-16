@@ -5,7 +5,7 @@ description: This document describes how to create marketplace abstract products
 template: back-office-user-guide-template
 related:
   - title: Marketplace Product feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-product-feature-overview.html
 ---
 
 This document describes how to create marketplace abstract products.
@@ -63,7 +63,7 @@ To create a new abstract product:
 
 6. Click **Next**.
 
-Only active marketplace products are displayed on the Marketplace Storefront. To activate your marketplace product, see [Managing marketplace concrete products](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/concrete-products/managing-marketplace-concrete-product.html#activating-and-deactivating-a-concrete-product).
+Only active marketplace products are displayed on the Marketplace Storefront. To activate your marketplace product, see [Managing marketplace concrete products](/docs/marketplace/user/merchant-portal-user-guides/products/concrete-products/managing-marketplace-concrete-product.html#activating-and-deactivating-a-concrete-product).
 
 ### Reference information: Create Abstract Product drawer
 
@@ -107,11 +107,11 @@ For the new product to be available on the Storefront, it needs to be approved. 
 
 {% info_block infoBox "Info" %}
 
-This button is only displayed if the product status is *Draft*. To learn more about the product statuses, see, [Marketplace Product Approval feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-product-approval-process-feature-overview.html).
+This button is only displayed if the product status is *Draft*. To learn more about the product statuses, see, [Marketplace Product Approval feature overview](/docs/marketplace/user/features/marketplace-product-approval-process-feature-overview.html).
 
 {% endinfo_block %}
 
 ## Next steps
 
-- [Approve the marketplace product](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product.html#sending-the-product-for-approval)
-- [Manage abstract product](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product.html)
+- [Approve the marketplace product](/docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product.html#sending-the-product-for-approval)
+- [Manage abstract product](/docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product.html)

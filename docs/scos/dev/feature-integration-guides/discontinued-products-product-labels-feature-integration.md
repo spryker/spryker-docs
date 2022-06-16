@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/discontinued-products-product-labels-feature-integration
 related:
   - title: Product labels feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-labels-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/product-labels-feature-integration.html
 ---
 
 ## Install feature core
@@ -25,9 +25,9 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Discontinued Products | {{page.version}} |
-| Product Labels | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Discontinued Products | {{site.version}} |
+| Product Labels | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Import data
 

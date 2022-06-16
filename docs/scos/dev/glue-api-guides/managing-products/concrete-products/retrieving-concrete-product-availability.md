@@ -22,7 +22,7 @@ This endpoint allows retrieving availability of concrete products.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-inventory-management-feature-integration.html)
+* [Glue API: Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-inventory-management-feature-integration.html)
 
 
 
@@ -88,4 +88,4 @@ Request sample: retrieve availability of a concrete product
 | 306 | Availability is not found. |
 | 312 | Concrete product sku is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

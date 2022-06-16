@@ -5,10 +5,10 @@ description: This document contains content of merchant-orders, merchant order-i
 template: import-file-template
 related:
   - title: Merchant order overview
-    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/merchant-order-overview.html
+    link: docs/marketplace/user/features/marketplace-order-management-feature-overview/merchant-order-overview.html
 ---
 
-This document contains content of the following files you get when [exporting data on orders](/docs/scos/dev/data-export/{{page.version}}/data-export.html) generated in Spryker:
+This document contains content of the following files you get when [exporting data on orders](/docs/scos/dev/data-export/data-export.html) generated in Spryker:
 
 * merchant-orders
 * merchant-order-items

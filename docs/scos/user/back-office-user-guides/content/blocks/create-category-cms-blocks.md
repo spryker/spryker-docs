@@ -5,7 +5,7 @@ last_updated: June 2, 2022
 template: back-office-user-guide-template
 related:
   - title: Edit CMS blocks
-    link: docs/scos/user/back-office-user-guides/page.version/content/blocks/edit-cms-blocks.html
+    link: docs/scos/user/back-office-user-guides/content/blocks/edit-cms-blocks.html
 ---
 
 This topic describes how to create category CMS blocks in the Back Office.
@@ -14,9 +14,9 @@ This topic describes how to create category CMS blocks in the Back Office.
 
 * [Integrate category CMS blocks](/docs/scos/dev/technical-enhancement-integration-guides/integrate-category-cms-blocks.html).
 
-* Create the categories whose pages you want to show the block on. For instructions, see [Create categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html).
+* Create the categories whose pages you want to show the block on. For instructions, see [Create categories](/docs/scos/user/back-office-user-guides/catalog/category/creating-categories.html).
 
-* Create the abstract products you want to show in the block. For instructions, see [Create abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html).
+* Create the abstract products you want to show in the block. For instructions, see [Create abstract products](/docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html).
 
 * Review the [reference information](#reference-information-create-category-cms-blocks) before you start, or look up the necessary information as you go through the process.
 
@@ -46,7 +46,7 @@ This topic describes how to create category CMS blocks in the Back Office.
 | --- | --- | --- |
 | STORE RELATION |  Stores to display the block in. |
 | TEMPLATE | Defines the layout of the CMS Block. A developer can [create more templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template). |
-| NAME | You will use this name when [assigning the block to a slot in a page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#assigning-cms-blocks-to-slots). |
+| NAME | You will use this name when [assigning the block to a slot in a page](/docs/scos/user/back-office-user-guides/content/slots/managing-slots.html#assigning-cms-blocks-to-slots). |
 | VALID FROM and VALID TO | Dates that inclusively specify when the block is to be visible on the Storefront. |
 | CATEGORIES: TOP | The block will be displayed at the top of the pages of these categories. |
 | CATEGORIES: MIDDLE | The block will be displayed in the middle of the pages of these categories. |
@@ -61,4 +61,4 @@ This topic describes how to create category CMS blocks in the Back Office.
 
 ## Next steps
 
-[Edit CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-cms-blocks.html)  
+[Edit CMS blocks](/docs/scos/user/back-office-user-guides/content/blocks/edit-cms-blocks.html)  

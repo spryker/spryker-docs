@@ -14,10 +14,10 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/customer/customer-customer-access-customer-groups/managing-customer-groups.html
 related:
   - title: Customer Accounts
-    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
+    link: docs/scos/user/features/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---
 
-This article describes how to create customer groups in the Back Office. By default, customer groups are only used when [defining discount conditions](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html#define-on-what-conditions-the-discount-can-be-applied). A developer can configure customer groups to be used in other parts of the Back Office.
+This article describes how to create customer groups in the Back Office. By default, customer groups are only used when [defining discount conditions](/docs/scos/user/back-office-user-guides/merchandising/discount/create-discounts.html#define-on-what-conditions-the-discount-can-be-applied). A developer can configure customer groups to be used in other parts of the Back Office.
 
 ## Prerequisites
 

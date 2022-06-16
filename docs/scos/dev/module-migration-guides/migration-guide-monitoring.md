@@ -32,7 +32,7 @@ redirect_from:
   - /module_migration_guides/mg-monitoring.htm
 related:
   - title: New Relic
-    link: docs/scos/user/technology-partners/page.version/operational-tools-monitoring-legal-etc/new-relic.html
+    link: docs/scos/user/technology-partners/operational-tools-monitoring-legal-etc/new-relic.html
 ---
 
 ## Upgrading from version 1.* to version 2.*

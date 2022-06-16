@@ -45,5 +45,5 @@ Review the [reference information](#reference-information-edit-a-customer-addres
 |ZIP CODE | ZIP code. |
 |COUNTRY | Country. |
 |PHONE| Phone number. |
-|COMPANY| Company. Not to be confused with a [B2B company](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html). |
+|COMPANY| Company. Not to be confused with a [B2B company](/docs/scos/user/features/company-account-feature-overview/company-accounts-overview.html). |
 |COMMENT| Any comment about the address. For example, `Use only for billing`. |

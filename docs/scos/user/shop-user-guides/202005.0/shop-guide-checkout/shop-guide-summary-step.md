@@ -27,16 +27,16 @@ On the **Summary** page, order items are displayed as shipments based on the sam
 ### Editing Shipment Information
 To edit any of the shipment details, click **Edit** under:
 
-* **Delivery address**. This will redirect you to the [Address](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-address-step.html) step where you can update the address details.
-* **Delivery method**: This will redirect you to the [Shipment](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-shipment-step.html) step where you can change the shipment method and delivery date.
-* **Requested delivery date**: This will redirect you to the [Shipment](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-shipment-step.html) step where you can change the delivery date.
+* **Delivery address**. This will redirect you to the [Address](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-address-step.html) step where you can update the address details.
+* **Delivery method**: This will redirect you to the [Shipment](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-shipment-step.html) step where you can change the shipment method and delivery date.
+* **Requested delivery date**: This will redirect you to the [Shipment](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-shipment-step.html) step where you can change the delivery date.
 ![Summary page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Summary+Step/summary-step-new.png) 
 
 ### Editing Payment Details
 To change the payment details, click **Edit** under:
 
-* **Payment method**: This will redirect you to the [Payment](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-payment-step.html) step where you can change the payment method.
-* **Billing address**: This will redirect you to the [Address](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-address-step.html) step where you can update the billing address.
+* **Payment method**: This will redirect you to the [Payment](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-payment-step.html) step where you can change the payment method.
+* **Billing address**: This will redirect you to the [Address](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-address-step.html) step where you can update the billing address.
 ![Editing payment details](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Summary+Step/edit-billing-information.png) 
 
 ### Adding Comments to Cart
@@ -48,7 +48,7 @@ In this section, you can do the following:
 * Add a tag to the comment so that in future you can filter comments by tags
 
 {% info_block infoBox %}
-See [Shop Guide - Managing Comments](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-comments/shop-guide-managing-comments.html
+See [Shop Guide - Managing Comments](/docs/scos/user/shop-user-guides/shop-guide-comments/shop-guide-managing-comments.html
 {% endinfo_block %} for more information on how to work with comments in cart.)
 ***
 ## Placing Order

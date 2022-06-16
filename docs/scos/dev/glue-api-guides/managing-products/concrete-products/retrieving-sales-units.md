@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/retrieving-sales-units
 related:
   - title: Measurement units feature overview
-    link: docs/scos/user/features/page.version/measurement-units-feature-overview.html
+    link: docs/scos/user/features/measurement-units-feature-overview.html
 ---
 
 This endpoint allows retrieving sales units of concrete products.
@@ -20,8 +20,8 @@ This endpoint allows retrieving sales units of concrete products.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html).
-* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html).
+* [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html).
+* [Glue API: Measurement Units Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html).
 
 ## Retrieve sales units
 
@@ -96,7 +96,7 @@ Request sample: retrieve sales units
 | is default | boolean | Defines if the sales unit is selected by default on the product details page. |
 | measurementUnitCode | string | Code of the measurement unit. |
 
-See [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html) for more information on managing the sales units.
+See [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/retrieving-measurement-units.html) for more information on managing the sales units.
 
 ## Possible errors
 
@@ -105,4 +105,4 @@ See [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/{{page.version
 | 302 | Concrete product is not found. |
 | 312  | Concrete product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

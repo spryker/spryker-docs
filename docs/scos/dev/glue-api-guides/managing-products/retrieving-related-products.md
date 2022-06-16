@@ -12,14 +12,14 @@ redirect_from:
   - /docs/en/retrieving-related-products
 related:
   - title: Retrieving Alternative Products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-alternative-products.html
+    link: docs/scos/dev/glue-api-guides/managing-products/retrieving-alternative-products.html
   - title: Product Relations Feature Overview
-    link: docs/scos/user/features/page.version/product-relations-feature-overview.html
+    link: docs/scos/user/features/product-relations-feature-overview.html
 ---
 
-Using the [Product Relations](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html) feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called related products, in search and in the cart together with the products selected by customers.
+Using the [Product Relations](/docs/scos/user/features/product-relations-feature-overview.html) feature, sellers can define a list of comparable or additional items for each product. You can display such items, also called related products, in search and in the cart together with the products selected by customers.
 
-Only [abstract](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/scos/user/features/{{page.version}}/product-relations-feature-overview.html).
+Only [abstract](/docs/scos/user/features/product-feature-overview/product-feature-overview.html) products support product relations. For more details, see [Product Relations feature overview](/docs/scos/user/features/product-relations-feature-overview.html).
 
 The Product Relations API provides REST endpoints to retrieve the related products. Using it, you can:
 * Retrieve related products of an abstract product.
@@ -31,7 +31,7 @@ In your development, the endpoints can help you to:
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product Relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-relations-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product Relations feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html).
 
 ## Retrieve related items of an abstract product
 
@@ -618,7 +618,7 @@ To get upselling items for all products in a cart of a registered customer, send
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}}*** | ID of a cart to get upselling items of. [Retrieve all carts](/docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 
 ### Request
 
@@ -976,7 +976,7 @@ To get upselling items for all products in a cart of a registered customer, send
 </details>
 
 For response attributes, see [Retrieving related items of an abstract product](#related-product-attributes) for the list of response attributes.
-For the attributes of the included resources, see [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+For the attributes of the included resources, see [Retrieving product labels](/docs/scos/dev/glue-api-guides/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 
 ## Retrieve upselling products of a guest cart
 
@@ -1320,4 +1320,4 @@ See [Retrieving Related Items of an Abstract Product](#related-product-attribute
 | 301 | Abstract product is not found. |
 | 311 | Abstract product ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

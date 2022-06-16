@@ -8,7 +8,7 @@ originalArticleId: 09051b19-962a-4308-9a5b-f2514da67896
 redirect_from:
   - /v3/docs/comments-shop-guide
   - /v3/docs/en/comments-shop-guide
-  - /docs/scos/user/shop-user-guides/page.version/comments/shop-guide-comments.html
+  - /docs/scos/user/shop-user-guides/comments/shop-guide-comments.html
   - /docs/scos/user/shop-user-guides/201907.0/comments/shop-guide-comments.html
 ---
 

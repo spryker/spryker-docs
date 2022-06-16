@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/checkout-quotation-process-feature-integration
 related:
   - title: Quotation Process feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/quotation-process-feature-integration.html
 ---
 
 ## Install feature core
@@ -23,8 +23,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Checkout | {{page.version}} |
-| Quotation Process | {{page.version}} |
+| Checkout | {{site.version}} |
+| Quotation Process | {{site.version}} |
 
 ### 1) Set up behavior
 
@@ -89,8 +89,8 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 | --- | --- |
-| Checkout | {{page.version}} |
-| Quotation Process | {{page.version}} |
+| Checkout | {{site.version}} |
+| Quotation Process | {{site.version}} |
 
 ### Set up behavior
 

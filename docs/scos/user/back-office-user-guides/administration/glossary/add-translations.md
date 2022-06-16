@@ -34,5 +34,5 @@ A **NAME** of a translation is a glossary key, a unique identifier of the transl
 
 ## Next steps
 
-* Add translations to CMS block by editing [placeholders in CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-placeholders-in-cms-blocks.html).
-* Add translations to CMS page by editing [placeholders in CMS pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html).
+* Add translations to CMS block by editing [placeholders in CMS blocks](/docs/scos/user/back-office-user-guides/content/blocks/edit-placeholders-in-cms-blocks.html).
+* Add translations to CMS page by editing [placeholders in CMS pages](/docs/scos/user/back-office-user-guides/content/pages/editing-cms-pages.html).

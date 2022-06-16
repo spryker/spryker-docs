@@ -20,8 +20,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Comment | {{page.version}} |
-| Order Management | {{page.version}} |
+| Comment | {{site.version}} |
+| Order Management | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 

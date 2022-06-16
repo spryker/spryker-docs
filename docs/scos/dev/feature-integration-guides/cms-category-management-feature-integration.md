@@ -24,7 +24,7 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | CMS |
 | --- | --- | ---  |
-| Category Management | {{page.version}} | {{page.version}}|
+| Category Management | {{site.version}} | {{site.version}}|
 
 ## 1) Install the required modules using Composer
 

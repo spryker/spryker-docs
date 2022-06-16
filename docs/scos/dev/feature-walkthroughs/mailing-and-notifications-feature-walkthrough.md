@@ -10,7 +10,7 @@ redirect_from:
 The _Mailing & Notifications_ feature allows you to manage newsletters and notifications.
 
 
-To learn more about the feature and to find out how end users use it, see [Mailing & Notifications feature overview](/docs/scos/user/features/{{page.version}}/mailing-and-notifications-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Mailing & Notifications feature overview](/docs/scos/user/features/mailing-and-notifications-feature-overview.html) for business users.
 
 
 ## Related Developer articles

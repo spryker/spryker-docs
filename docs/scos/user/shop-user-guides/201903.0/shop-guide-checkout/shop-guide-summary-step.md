@@ -8,7 +8,7 @@ originalArticleId: 241b2326-7028-4927-8f34-00fb0af8eecc
 redirect_from:
   - /v2/docs/summary-step-shop-guide-201911
   - /v2/docs/en/summary-step-shop-guide-201911
-  - /docs/scos/user/shop-user-guides/page.version/checkout/shop-guide-summary-step.html
+  - /docs/scos/user/shop-user-guides/checkout/shop-guide-summary-step.html
 ---
 
 The topic describes how you can view the order summary, edit the order details and place the order.

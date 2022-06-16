@@ -11,7 +11,7 @@ redirect_from:
   - /docs/scos/user/features/202005.0/checkout-feature-overview/payment-step-shop-guide-201911
 related:
   - title: Payments feature overview
-    link: docs/scos/user/features/page.version/payments-feature-overview.html
+    link: docs/scos/user/features/payments-feature-overview.html
 ---
 
 The topic provides a list of steps you need to perform to pay for the order.
@@ -31,4 +31,4 @@ To select a payment method:
 **What's next?**
 
 The delivery addresses, shipment and payment methods are selected. To check the order details and complete the order, go to the **Summary** page.
-For more information, see [Shop Guide - Summary Step](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-summary-step.html).
+For more information, see [Shop Guide - Summary Step](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-summary-step.html).

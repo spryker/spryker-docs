@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-barcodes/viewing-product-barcodes.html
 related:
   - title: Barcode Generator Feature Overview
-    link: docs/scos/user/features/page.version/product-barcode-feature-overview.html
+    link: docs/scos/user/features/product-barcode-feature-overview.html
 ---
 
 ## Prerequisites

@@ -35,7 +35,7 @@ The file should have the following parameters:
 
 This file has the following dependencies:
 
-* [discount.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html)
+* [discount.csv](/docs/scos/dev/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html)
 * *stores.php* configuration file of the demo shop PHP project
 
 ## Import template file and content example

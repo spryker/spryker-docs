@@ -4,7 +4,7 @@ last_updated: May 31, 2022
 template: back-office-user-guide-template
 ---
 
-To edit a [tax set](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) in the Back Office, follow the steps:
+To edit a [tax set](/docs/scos/user/features/tax-feature-overview.html) in the Back Office, follow the steps:
 
 1. Go to **Administration&nbsp;<span aria-label="and then">></span> Tax Sets**.
     This opens the **Overview of Tax Sets** page.
@@ -20,4 +20,4 @@ To edit a [tax set](/docs/scos/user/features/{{page.version}}/tax-feature-overvi
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
 | NAME | You use the name when assigning the tax set to products, delivery methods, and thresholds. |
-| TAX RATES | Tax rates to assign to the tax set. For instructions on creating tax rates, see [Create tax rates](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/create-tax-rates.html). |
+| TAX RATES | Tax rates to assign to the tax set. For instructions on creating tax rates, see [Create tax rates](/docs/scos/user/back-office-user-guides/administration/tax-rates/create-tax-rates.html). |

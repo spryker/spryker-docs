@@ -21,8 +21,8 @@ To start feature integration, review ad install the necessary features.
 
 | NAME | VERSION |
 |---|---|
-|Product Options|{{page.version}}|
-|Shopping Lists|{{page.version}}|
+|Product Options|{{site.version}}|
+|Shopping Lists|{{site.version}}|
 
 ### 1) Install the required modules by bsing Composer
 
@@ -149,8 +149,8 @@ Please review and install the necessary features before beginning the integratio
 
 | NAME | VERSION |
 |---|---|
-|Spryker Core |{{page.version}}|
-|Product Options|{{page.version}}|
+|Spryker Core |{{site.version}}|
+|Product Options|{{site.version}}|
 
 ### 1) Add translations
 

@@ -23,17 +23,17 @@ Ensure that the related features are installed:
 
 | NAME | VERSION |
 | --- | --- |
-| Mailing and Notifications | {{page.version}} |
-| Inventory Management | {{page.version}} |
-| Product | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Mailing and Notifications | {{site.version}} |
+| Inventory Management | {{site.version}} |
+| Product | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require "spryker-feature/availability-notification":"{{page.version}}" --update-with-dependencies
+composer require "spryker-feature/availability-notification":"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -320,17 +320,17 @@ Ensure that the related features are installed:
 
 | NAME | VERSION |
 | --- | --- |
-| Mailing & Notifications | {{page.version}} |
-| Inventory Management | {{page.version}} |
-| Product | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Mailing & Notifications | {{site.version}} |
+| Inventory Management | {{site.version}} |
+| Product | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require "spryker-feature/availability-notification":"{{page.version}}" --update-with-dependencies
+composer require "spryker-feature/availability-notification":"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

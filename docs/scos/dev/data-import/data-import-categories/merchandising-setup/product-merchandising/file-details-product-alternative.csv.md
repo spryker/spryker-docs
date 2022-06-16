@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/file-details-product-alternativecsv
 ---
 
-This document describes the `product_alternative.csv` file to configure [Alternative Product](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_alternative.csv` file to configure [Alternative Product](/docs/scos/user/features/alternative-products-feature-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -33,8 +33,8 @@ The file should have the following parameters:
 
 This file has the following dependencies:
 
-* [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
-* [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+* [product_concrete.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+* [product_abstract.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
 
 ## Additional information
 

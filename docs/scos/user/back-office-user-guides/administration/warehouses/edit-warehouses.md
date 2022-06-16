@@ -51,4 +51,4 @@ Review the [reference information](#reference-information-edit-warehouses) befor
 
 ## Next steps
 
-To learn how to manage stock per specific warehouse, see [Managing product availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html).
+To learn how to manage stock per specific warehouse, see [Managing product availability](/docs/scos/user/back-office-user-guides/catalog/availability/managing-products-availability.html).

@@ -12,33 +12,33 @@ redirect_from:
   - /docs/en/checking-out-purchases
 related:
   - title: Glue API - Checkout feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-checkout-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html
   - title: Checkout
-    link: docs/scos/user/features/page.version/checkout-feature-overview/checkout-feature-overview.html
+    link: docs/scos/user/features/checkout-feature-overview/checkout-feature-overview.html
   - title: Multi-Step Checkout
-    link: docs/scos/user/features/page.version/checkout-feature-overview/multi-step-checkout-overview.html
+    link: docs/scos/user/features/checkout-feature-overview/multi-step-checkout-overview.html
   - title: Retrieving Customer's Order History
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
+    link: docs/scos/dev/glue-api-guides/managing-customers/retrieving-customer-orders.html
   - title: Managing guest carts
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
+    link: docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-guest-carts.html
   - title: Managing carts of registered users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
+    link: docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
 ---
 
 This endpoint allows finalizing the checkout process by placing an order.
 
-After sending a request, the cart is deleted, and you cannot make any changes in the checkout data. Thus, use the endpoint for checkouts that can be performed in one pass or for finalizing a checkout after [submitting checkout data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/submitting-checkout-data.html).  
+After sending a request, the cart is deleted, and you cannot make any changes in the checkout data. Thus, use the endpoint for checkouts that can be performed in one pass or for finalizing a checkout after [submitting checkout data](/docs/scos/dev/glue-api-guides/checking-out/submitting-checkout-data.html).  
 
 The endpoint also provides information on whether it is necessary to redirect the user to a third-party page to complete the payment.
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html)
-* [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html)
-* [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html)
-* [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-cart-feature-integration.html)
-* [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
+* [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html)
+* [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html)
+* [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-configurable-bundle-feature-integration.html)
+* [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-configurable-bundle-cart-feature-integration.html)
+* [Glue API: Configurable Bundle + Product feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-configurable-bundle-product-feature-integration.html)
 
 
 
@@ -60,8 +60,8 @@ By default, if checkout is successful, the order is placed, and the cart is dele
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | String | Required when checking out a [guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html). | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
-| Authorization | String | Required when checking out a [cart of registered user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| X-Anonymous-Customer-Unique-Id | String | Required when checking out a [guest cart](/docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-guest-carts.html). | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
+| Authorization | String | Required when checking out a [cart of registered user](/docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html). |
 
 
 
@@ -352,14 +352,14 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| customer | Object | &check; | A list of attributes describing the [customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html) to submit checkout data of. |
+| customer | Object | &check; | A list of attributes describing the [customer](/docs/scos/dev/glue-api-guides/managing-customers/managing-customers.html) to submit checkout data of. |
 | customer.salutation | String | &check; | Salutation to use when addressing the customer. |
 | customer.email | String | &check; | Customer's email address. |
 | customer.firstName | String | &check; | Customer's first name. |
 | customer.lastName | String | &check; | Customer's last name. |
-| idCart | String | &check; | Unique identifier of the customer's [cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html) to check out. |
-| billingAddress | Object | &check; | Customer's billing [address](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html). |
-| billingAddress.id | String | | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html#retrieve-customers-addresses). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
+| idCart | String | &check; | Unique identifier of the customer's [cart](/docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html) to check out. |
+| billingAddress | Object | &check; | Customer's billing [address](/docs/scos/dev/glue-api-guides/managing-customers/managing-customer-addresses.html). |
+| billingAddress.id | String | | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](/docs/scos/dev/glue-api-guides/managing-customers/managing-customer-addresses.html#retrieve-customers-addresses). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
 | billingAddress.salutation | String | &check; | Salutation to use when addressing the customer. |
 | billingAddress.email | String | &check; | Customer's email address. |
 | billingAddress.firstName | String | &check; | Customer's first name. |
@@ -377,9 +377,9 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 | payments.paymentProviderName | String | &check; | Name of the payment provider for this order. |
 | shipment | Object | &check; | A list of attributes describing the shipping method selected for this order. |
 | shipment.items | object | &check; | A list of items that are to be delivered to the shipping address defined in this shipment. |
-| shipment.shippingAddress | Object | &check; | Customer's shipping [address](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html) for this shipment. |
-| shipment.shippingAddress.id | String | | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html#retrieve-customers-addresses). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
-| shipment.shippingAddress.idCompanyBusinessUnitAddress | String | | A hyphenated alphanumeric value of an existing company business unit address. To get it, [retrieve a company business unit](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html#retrieve-a-company-business-unit) with the `company-business-unit-addresses` resource included. If you pass this value for a billing or shipping address, do not pass the other address attributes. |
+| shipment.shippingAddress | Object | &check; | Customer's shipping [address](/docs/scos/dev/glue-api-guides/managing-customers/managing-customer-addresses.html) for this shipment. |
+| shipment.shippingAddress.id | String | | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](/docs/scos/dev/glue-api-guides/managing-customers/managing-customer-addresses.html#retrieve-customers-addresses). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
+| shipment.shippingAddress.idCompanyBusinessUnitAddress | String | | A hyphenated alphanumeric value of an existing company business unit address. To get it, [retrieve a company business unit](/docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-business-units.html#retrieve-a-company-business-unit) with the `company-business-unit-addresses` resource included. If you pass this value for a billing or shipping address, do not pass the other address attributes. |
 | shipment.shippingAddress.salutation | String | &check; | Salutation to use when addressing the customer. |
 | shipment.shippingAddress.email | String | &check; | Customer's email address. |
 | shipment.shippingAddress.firstName | String | &check; | Customer's first name. |
@@ -1262,7 +1262,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | orderReference | String | Unique identifier of the order. |
-| redirectUrl | String | The URL to perform the payment verification requested by the selected payment method. After completing verification, ensure to [update payment data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/updating-payment-data.html#update-payment-data). If the value is `null` or empty, no additional verification is required. |
+| redirectUrl | String | The URL to perform the payment verification requested by the selected payment method. After completing verification, ensure to [update payment data](/docs/scos/dev/glue-api-guides/checking-out/updating-payment-data.html#update-payment-data). If the value is `null` or empty, no additional verification is required. |
 | isExternalRedirect | Boolean | Defines if the customer is redirected to an external URL. |
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -1291,7 +1291,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 | order-shipments | country | String | Specifies the country. |
 | order-shipments | iso2Code | String | ISO 2-Letter Country Code to use. |
 
-For the attributes of other included resources, see [Retrieve customer's order](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html#retrieve-customers-orders)
+For the attributes of other included resources, see [Retrieve customer's order](/docs/scos/dev/glue-api-guides/managing-customers/retrieving-customer-orders.html#retrieve-customers-orders)
 
 ## Possible errors
 
@@ -1312,4 +1312,4 @@ For the attributes of other included resources, see [Retrieve customer's order](
 
 ## Next steps
 
-* [Updating payment data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/updating-payment-data.html)
+* [Updating payment data](/docs/scos/dev/glue-api-guides/checking-out/updating-payment-data.html)

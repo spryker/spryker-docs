@@ -13,13 +13,13 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-company-account-feature-integration.html
 related:
   - title: Logging In as Company User
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
+    link: docs/scos/dev/glue-api-guides/managing-b2b-account/authenticating-as-a-company-user.html
   - title: Retrieving Company User Information
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
+    link: docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-company-users.html
   - title: Retrieving Company Information
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-companies.html
+    link: docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-companies.html
   - title: Retrieving Company Role Information
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
+    link: docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-company-roles.html
 ---
 
 {% info_block errorBox %}
@@ -36,13 +36,13 @@ To start the feature integration, overview and install the necessary features:
 
 | FEATURE OR GLUE API  | VERSION    | INTEGRATION GUIDE    |
 | ----------------- | ---------- | --------------------- |
-| Glue API: Spryker Core                | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Company Account                       | {{page.version}}  | [Company account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html) |
-| Glue API: Customer Account Management | {{page.version}} | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
-| Glue API: Glue Application            | {{page.version}} | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
-| UUID Generation Console               | {{page.version}}  |  |
-| Glue API: Shipment                    | {{page.version}}  | [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html) |
-| Glue API: Checkout                    | {{page.version}} | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| Glue API: Spryker Core                | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Company Account                       | {{site.version}}  | [Company account feature integration](/docs/scos/dev/feature-integration-guides/company-account-feature-integration.html) |
+| Glue API: Customer Account Management | {{site.version}} | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html) |
+| Glue API: Glue Application            | {{site.version}} | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-glue-application-feature-integration.html) |
+| UUID Generation Console               | {{site.version}}  |  |
+| Glue API: Shipment                    | {{site.version}}  | [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html) |
+| Glue API: Checkout                    | {{site.version}} | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html) |
 
 
 
@@ -782,11 +782,11 @@ class ShipmentsRestApiDependencyProvider extends SprykerShipmentsRestApiDependen
 
 To verify that feature is set up correctly go throw the following steps:
 
-1. [Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).
+1. [Authenticate as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).
 
-2. [Retrieve available company users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/searching-by-company-users.html#retrieve-available-company-users).
+2. [Retrieve available company users](/docs/scos/dev/glue-api-guides/managing-b2b-account/searching-by-company-users.html#retrieve-available-company-users).
 
-3. Using the company user ID you’ve retrieved in the previous step, [authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).
+3. Using the company user ID you’ve retrieved in the previous step, [authenticate as a company user](/docs/scos/dev/glue-api-guides/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).
 Check that the response contains all the necessary data.
 
 {% endinfo_block %}

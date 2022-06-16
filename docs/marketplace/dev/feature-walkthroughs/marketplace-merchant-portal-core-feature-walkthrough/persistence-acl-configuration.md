@@ -5,7 +5,7 @@ description: Learn how to you can configure Persistence ACL
 template: concept-topic-template
 ---
 
-Merchant Portal comes with the pre-configured [Persistence ACL](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html) feature to secure sensitive data.
+Merchant Portal comes with the pre-configured [Persistence ACL](/docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html) feature to secure sensitive data.
 
 By default, the feature creates and assigns a set of ACL roles to merchant users to restrict access to other merchant data in the system.
 

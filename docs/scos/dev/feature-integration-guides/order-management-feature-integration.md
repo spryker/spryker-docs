@@ -15,15 +15,15 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/order-management-feature-integration.html
 related:
   - title: Comments + Order Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/comments-order-management-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/comments-order-management-feature-integration.html
   - title: Glue API - Order Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-order-management-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/glue-api/glue-api-order-management-feature-integration.html
   - title: Company Account + Order Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/company-account-order-management-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/company-account-order-management-feature-integration.html
   - title: Product + Order Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-order-management-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/product-order-management-feature-integration.html
   - title: Customer Account Management + Order Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/customer-account-management-order-management-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/customer-account-management-order-management-feature-integration.html
 ---
 This document describes how to integrate the Order Management feature into a Spryker project.
 
@@ -49,17 +49,17 @@ To start feature integration, overview and install the necessary features:
 
 | NAME                    | VERSION    |
 | ---------------------- | --------- |
-| Spryker Core            | {{page.version}} |
-| Mailing & Notifications | {{page.version}} |
-| Order Management        | {{page.version}} |
-| Persistent Cart         | {{page.version}} |
+| Spryker Core            | {{site.version}} |
+| Mailing & Notifications | {{site.version}} |
+| Order Management        | {{site.version}} |
+| Persistent Cart         | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/order-management: "{{page.version}}r" --update-with-dependencies
+composer require spryker-feature/order-management: "{{site.version}}r" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1131,17 +1131,17 @@ To start the feature integration, overview and install the necessary features.
 
 | NAME                        | VERSION    |
 | ---------------------- | ------- |
-| Spryker Core                | {{page.version}} |
-| Cart                        | {{page.version}} |
-| Checkout                    | {{page.version}} |
-| Customer Account Management | {{page.version}} |
+| Spryker Core                | {{site.version}} |
+| Cart                        | {{site.version}} |
+| Checkout                    | {{site.version}} |
+| Customer Account Management | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/order-management: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/order-management: "{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1350,11 +1350,11 @@ Integrate the following related features:
 
 | FEATURE    | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE   |
 | ---------------------- | ------------- | ---------------- |
-| Comments + Order Management feature integration              |                                  | [Comments + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/comments-order-management-feature-integration.html) |
-| Glue API: Order Management feature integration               |                                  | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html) |
-| Company Account + Order Management feature integration       |                                  | [Company Account + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-order-management-feature-integration.html) |
-| Product + Order Management feature integration               |                                  | [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-order-management-feature-integration.html) |
-| Customer Account Management + Order Management feature integration |                                  | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-order-management-feature-integration.html) |
-| Packaging Units feature integration                  |                                  | [Packaging Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/packaging-units-feature-integration.html) |
-| Product + Order Management feature integration                      |                                  | [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-order-management-feature-integration.html) |
-| Product Options + Order Management feature integration                       |                                  | [Product Options + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-options-order-management-feature-integration.html) |
+| Comments + Order Management feature integration              |                                  | [Comments + Order Management feature integration](/docs/scos/dev/feature-integration-guides/comments-order-management-feature-integration.html) |
+| Glue API: Order Management feature integration               |                                  | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-order-management-feature-integration.html) |
+| Company Account + Order Management feature integration       |                                  | [Company Account + Order Management feature integration](/docs/scos/dev/feature-integration-guides/company-account-order-management-feature-integration.html) |
+| Product + Order Management feature integration               |                                  | [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/product-order-management-feature-integration.html) |
+| Customer Account Management + Order Management feature integration |                                  | [Customer Account Management + Order Management feature integration](/docs/scos/dev/feature-integration-guides/customer-account-management-order-management-feature-integration.html) |
+| Packaging Units feature integration                  |                                  | [Packaging Units feature integration](/docs/scos/dev/feature-integration-guides/packaging-units-feature-integration.html) |
+| Product + Order Management feature integration                      |                                  | [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/product-order-management-feature-integration.html) |
+| Product Options + Order Management feature integration                       |                                  | [Product Options + Order Management feature integration](/docs/scos/dev/feature-integration-guides/product-options-order-management-feature-integration.html) |

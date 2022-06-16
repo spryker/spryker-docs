@@ -19,9 +19,9 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME         | VERSION | INTEGRATION GUIDE                                            |
 | ------------ | ------- | ------------------------------------------------------------ |
-| Spryker Core | {{page.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Agent Assist | {{page.version}}  | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-feature-integration.html) |
-| Cart         | {{page.version}}  | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) |
+| Spryker Core | {{site.version}}  | [Spryker Сore feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
+| Agent Assist | {{site.version}}  | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/agent-assist-feature-integration.html) |
+| Cart         | {{site.version}}  | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html) |
 
 
 ## 1) Set up behavior
@@ -69,5 +69,5 @@ Integrate the following related features:
 
 | FEATURE   | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE  |
 | ----------------- | ------------ | ----------------------- |
-| Agent Assist            | ✓     | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-feature-integration.html) |
-| Agent Assist + Shopping List |         | [Agent Assist + Shopping List feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-shopping-list-feature-integration.html) |
+| Agent Assist            | ✓     | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/agent-assist-feature-integration.html) |
+| Agent Assist + Shopping List |         | [Agent Assist + Shopping List feature integration](/docs/scos/dev/feature-integration-guides/agent-assist-shopping-list-feature-integration.html) |

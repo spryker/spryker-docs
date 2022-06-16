@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-content-items-api-feature-integration
   - /docs/glue-api-content-items-api-feature-integration
   - /docs/en/glue-api-content-items-api-feature-integration
-  - /docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/glue-api/glue-api-content-items-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-content-items-feature-integration.html
 ---
 
@@ -22,9 +22,9 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
-| Product | {{page.version}} | [Products API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
-| Content Item | {{page.version}} |  |
+| Spryker Core | {{site.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-glue-application-feature-integration.html) |
+| Product | {{site.version}} | [Products API feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html) |
+| Content Item | {{site.version}} |  |
 
 ### 1) Install the required modules using Composer
 

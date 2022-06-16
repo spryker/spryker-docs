@@ -51,8 +51,8 @@ The RFQ can have the following statuses:
 
 The process of requesting the quote includes two workflows depending on the role the user has. A workflow is defined as the sequence of steps the user can go through to complete the process successfully. These are:
 
-* [Buyer workflow](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#buyer-workflow)
-* [Sales representative workflow](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#sales-representative-workflow)
+* [Buyer workflow](/docs/scos/user/features/quotation-process-feature-overview.html#buyer-workflow)
+* [Sales representative workflow](/docs/scos/user/features/quotation-process-feature-overview.html#sales-representative-workflow)
 
 ### Buyer workflow
 
@@ -81,7 +81,7 @@ Schematically, the workflow is shown in the following diagram:
 ### Sales representative workflow
 
 A sales representative can create an RFQ using two working procedures:
-* Via an [agent](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) account.
+* Via an [agent](/docs/scos/user/features/agent-assist-feature-overview.html) account.
 * On behalf of a company user.
 
 #### Via an agent account
@@ -140,7 +140,7 @@ The buyers can use the blocked cart irrespective of the RFQ updates by unblockin
 
 ## Interaction of the RFQ with the approval process
 
-Mixing several workflows adds complexity to the process and increases the steps a buyer should perform to submit the order. This can be true for projects where the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) and RFQ are integrated. In such a scenario, every RFQ that hits the limit will need to be approved by a manager. Let's check an example:
+Mixing several workflows adds complexity to the process and increases the steps a buyer should perform to submit the order. This can be true for projects where the [Approval Process](/docs/scos/user/features/approval-process-feature-overview.html) and RFQ are integrated. In such a scenario, every RFQ that hits the limit will need to be approved by a manager. Let's check an example:
 
 {% info_block infoBox "Example" %}
 Example: In the project, the cart needs approval when the cart total exceeds €1000. A buyer adds the products to cart with the card total of €1500 and converts the shopping cart into the RFQ. The sales representative reviews the cart and updates the prices for products so that the cart total makes up €1300 and sends the RFQ back to the buyer. The buyer cannot proceed to checkout as the cart total still exceeds the limit, so the buyer has to send the RFQ to their approver. If the approver approves the cart, then the buyer will finally be able to create the order and pay for it.
@@ -200,6 +200,6 @@ Agents can perform the same actions (on company users' behalf) as company users.
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Quotation Process feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html) for developers.
+Are you a developer? See [Quotation Process feature walkthrough](/docs/scos/dev/feature-walkthroughs/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

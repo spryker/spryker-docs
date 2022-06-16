@@ -10,11 +10,11 @@ redirect_from:
   - /v4/docs/en/shopping-lists-shop-guide
 related:
   - title: Multiple and Shared Shopping Lists overview
-    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+    link: docs/scos/user/features/shopping-lists-feature-overview/shopping-lists-feature-overview.html
   - title: Shopping List Notes overview
-    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-list-notes-overview.html
+    link: docs/scos/user/features/shopping-lists-feature-overview/shopping-list-notes-overview.html
   - title: Shopping list printing overview
-    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-list-printing-overview.html
+    link: docs/scos/user/features/shopping-lists-feature-overview/shopping-list-printing-overview.html
 ---
 
 The **Shopping Lists** page allows customers to create and manage the shopping lists of frequently purchased products and add all the items to the cart as well as manage existing shopping lists.
@@ -92,7 +92,7 @@ The _Edit shopping list_ page opens where you can:
 
 {% info_block warningBox %}
 
-To be able to search for products, make sure that [Search Widget for Concrete Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/search-widget-for-concrete-products-overview.html) feature is [integrated](/docs/scos/dev/feature-integration-guides/{{page.version}}/search-widget-for-concrete-products-feature-integration.html) into your Project.
+To be able to search for products, make sure that [Search Widget for Concrete Products](/docs/scos/user/features/product-feature-overview/search-widget-for-concrete-products-overview.html) feature is [integrated](/docs/scos/dev/feature-integration-guides/search-widget-for-concrete-products-feature-integration.html) into your Project.
 
 {% endinfo_block %}
 
@@ -103,7 +103,7 @@ To be able to search for products, make sure that [Search Widget for Concrete Pr
 * Change the product item quantity using minus and plus buttons.
 ![View details](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/view-details.png)
 
-* Add a note to the item. To save the note, click **Save**. See [Shopping List Notes Feature Overview](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details.
+* Add a note to the item. To save the note, click **Save**. See [Shopping List Notes Feature Overview](/docs/scos/user/features/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details.
 
 * Select the warranty option from the drop-down list.
 ![Warranty options](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/warranty-options.png)
@@ -131,7 +131,7 @@ To share a shopping list:
 
 {% info_block infoBox %}
 
-See [Permissions Management for Shared Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html#permissions-management-for-shared-shopping-lists) to learn more about types of shopping list access rights.
+See [Permissions Management for Shared Shopping Lists](/docs/scos/user/features/shopping-lists-feature-overview/shopping-lists-feature-overview.html#permissions-management-for-shared-shopping-lists) to learn more about types of shopping list access rights.
 
 {% endinfo_block %}
 
@@ -162,7 +162,7 @@ To add a shopping list with product items to cart, select the shopping list (lis
 
 ![Add selected to cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/place-order.png)
 
-The shopping list with the available items will be added to the shopping cart. See [Shopping Cart](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-shopping-carts/shop-guide-managing-shopping-carts.html) to learn how to manage and purchase items using the cart.
+The shopping list with the available items will be added to the shopping cart. See [Shopping Cart](/docs/scos/user/shop-user-guides/shop-guide-shopping-carts/shop-guide-managing-shopping-carts.html) to learn how to manage and purchase items using the cart.
 
 ### Dismissing Shared Shopping Lists
 

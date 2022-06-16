@@ -34,14 +34,14 @@ Also, it lets you manage customer access, request a password change or change it
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of Customer Account](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-accounts-overview.html)  |
-| [Get a general idea of Customer Registration](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-registration-overview.html)   |
-| [Get a general idea of Customer Login](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-login-overview.html)  |
-| [Get a general idea of Customer Groups](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-groups-overview.html)   |
-| [Get a general idea of Password Management](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/password-management-overview.html)  |
+| [Get a general idea of Customer Account](/docs/scos/user/features/customer-account-management-feature-overview/customer-accounts-overview.html)  |
+| [Get a general idea of Customer Registration](/docs/scos/user/features/customer-account-management-feature-overview/customer-registration-overview.html)   |
+| [Get a general idea of Customer Login](/docs/scos/user/features/customer-account-management-feature-overview/customer-login-overview.html)  |
+| [Get a general idea of Customer Groups](/docs/scos/user/features/customer-account-management-feature-overview/customer-groups-overview.html)   |
+| [Get a general idea of Password Management](/docs/scos/user/features/customer-account-management-feature-overview/password-management-overview.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Customer Account Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html) for developers.
+Are you a developer? See [Customer Account Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

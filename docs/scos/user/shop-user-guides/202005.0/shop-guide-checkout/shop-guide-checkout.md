@@ -10,23 +10,23 @@ redirect_from:
   - /v5/docs/en/checkout-shop-guide-201911
 related:
   - title: Split Delivery Overview
-    link: docs/scos/user/features/page.version/order-management-feature-overview/split-delivery-overview.html
+    link: docs/scos/user/features/order-management-feature-overview/split-delivery-overview.html
 ---
 
 Checkout allows purchasing the items added to the cart.
 
 {% info_block infoBox %}
 
-If you have several shopping carts in your account, choose the right one and proceed with the checkout. See [Shop Guide - Shopping Carts](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-shopping-carts/shopping-carts.html) for more information.
+If you have several shopping carts in your account, choose the right one and proceed with the checkout. See [Shop Guide - Shopping Carts](/docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-carts/shopping-carts.html) for more information.
 
 {% endinfo_block %}
 
 A typical checkout process includes the following steps:
 
-* [Address](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-address-step.html): Define one or several delivery addresses and add a billing address.
-* [Shipment](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-shipment-step.html): Select a shipment method and/or a delivery date.
-* [Payment](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-payment-step.html): Select the payment method.
-* [Summary]((/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-summary-step.html): View the details, update the information, if needed, and place the order.
+* [Address](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-address-step.html): Define one or several delivery addresses and add a billing address.
+* [Shipment](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-shipment-step.html): Select a shipment method and/or a delivery date.
+* [Payment](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-payment-step.html): Select the payment method.
+* [Summary]((/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-summary-step.html): View the details, update the information, if needed, and place the order.
 
 {% info_block infoBox "Note" %}
 
@@ -46,4 +46,4 @@ If you are not logged in to shop when completing the checkout, the first page yo
 
 After you added items to cart, it is time to proceed to the *Address* step and enter the delivery information.
 
-To learn more on how to set a delivery address, see [Shop Guide - Address step](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-address-step.html).
+To learn more on how to set a delivery address, see [Shop Guide - Address step](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-address-step.html).

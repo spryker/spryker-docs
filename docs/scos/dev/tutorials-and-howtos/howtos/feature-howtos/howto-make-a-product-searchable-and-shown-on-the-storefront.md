@@ -25,7 +25,7 @@ redirect_from:
   - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
 related:
   - title: Creating Product Variants
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/creating-product-variants.html
+    link: docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/creating-product-variants.html
 ---
 
 {% info_block infoBox %}

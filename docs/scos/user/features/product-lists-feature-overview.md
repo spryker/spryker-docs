@@ -21,11 +21,11 @@ Configure product availability for specific companies by blacklisting or whiteli
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create product lists](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/creating-product-lists.html)  |
-| [Manage product lists](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html)  |
+| [Create product lists](/docs/scos/user/back-office-user-guides/catalog/product-lists/creating-product-lists.html)  |
+| [Manage product lists](/docs/scos/user/back-office-user-guides/catalog/product-lists/managing-product-lists.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Product Lists feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-lists-feature-walkthrough.html) for developers.
+Are you a developer? See [Product Lists feature walkthrough](/docs/scos/dev/feature-walkthroughs/product-lists-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

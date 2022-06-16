@@ -8,7 +8,7 @@ The *Marketplace Merchant Portal Product Offer Management* feature lets merchant
 
 {% info_block warningBox "User documentation" %}
 
-To learn more about the feature and to find out how end users use it, see [Marketplace Merchant Portal Product Offer Management feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Marketplace Merchant Portal Product Offer Management feature overview](/docs/marketplace/user/features/marketplace-merchant-portal-product-offer-management-feature-overview.html) for business users.
 
 {% endinfo_block %}
 
@@ -26,4 +26,4 @@ The following diagram illustrates the dependencies between the modules for the *
 
 | INTEGRATION GUIDES|
 | -------------- |
-| [Marketplace Merchant Portal Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html) |
+| [Marketplace Merchant Portal Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-product-offer-management-feature-integration.html) |

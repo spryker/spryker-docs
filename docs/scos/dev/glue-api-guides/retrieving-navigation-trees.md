@@ -15,7 +15,7 @@ related:
   - title: Migration Guide - NavigationsRestApi
     link: docs/scos/dev/module-migration-guides/glue-api/migration-guide-navigationsrestapi.html
   - title: Browsing a Category Tree
-    link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
+    link: docs/scos/dev/glue-api-guides/retrieving-categories/retrieving-category-trees.html
 ---
 
 The Navigation <!-- add link to feature overview later --> feature enables back-end developers to create navigtaion elements for Storefront. The navigation elements help shop users to navigate the shop and locate the necessary products and other content. Navigation elements can be linked to CMS pages, categories, as well as internal and external links.
@@ -24,7 +24,7 @@ A navigation element with its child nodes forms a navigation tree. You can only 
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-navigation-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-navigation-feature-integration.html).
 
 ## Retrieving a navigation tree
 To retrieve a navigation tree, send the request:
@@ -1131,4 +1131,4 @@ If a navigation tree has a category child node, include the `category-nodes` res
 | 1601 | Navigation is not found. |
 | 1602 | Navigation ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

@@ -21,8 +21,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 |---|---|
-|Quick Order| {{page.version}} |
-|Measurement units| {{page.version}} |
+|Quick Order| {{site.version}} |
+|Measurement units| {{site.version}} |
 
 ### 1) Set up behavior
 

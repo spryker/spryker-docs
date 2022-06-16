@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/shipment-cart-feature-integration
 related:
   - title: Shipment feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/shipment-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/shipment-feature-integration.html
 ---
 
 ## Install feature core
@@ -23,10 +23,10 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Shipment | {{page.version}} |
-| Cart | {{page.version}} |
-| Spryker Core | {{page.version}} |
-| Prices | {{page.version}} |
+| Shipment | {{site.version}} |
+| Cart | {{site.version}} |
+| Spryker Core | {{site.version}} |
+| Prices | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 

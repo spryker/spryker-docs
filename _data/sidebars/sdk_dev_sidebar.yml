@@ -8,3 +8,6 @@ entries:
         url: /docs/sdk/dev/extending-the-sdk.html
       - title: Building flavored Spryker SDKs
         url: /docs/sdk/dev/building-flavored-spryker-sdks.html
+      - title: Conventions
+        url: /docs/sdk/dev/sdk-conventions.html
+

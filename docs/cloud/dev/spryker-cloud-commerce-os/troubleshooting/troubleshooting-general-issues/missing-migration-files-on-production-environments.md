@@ -5,7 +5,7 @@ last_updated: Jun 9, 2022
 template: troubleshooting-guide-template
 ---
 
-Missign migration files on production environments.
+There are no tables in the DB after deploy.
 
 {% info_block warningBox "Note" %}
 

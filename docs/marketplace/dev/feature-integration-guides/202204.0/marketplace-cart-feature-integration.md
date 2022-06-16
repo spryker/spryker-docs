@@ -60,7 +60,7 @@ use Spryker\Zed\MerchantSalesOrderMerchantUserGui\MerchantSalesOrderMerchantUser
 class MerchantSalesOrderMerchantUserGuiConfig extends SprykerMerchantSalesOrderMerchantUserGuiConfig
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     public function getMerchantSalesOrderDetailExternalBlocksUrls(): array
     {
@@ -131,7 +131,7 @@ use Spryker\Zed\SalesMerchantPortalGui\SalesMerchantPortalGuiDependencyProvider 
 class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPortalGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\SalesMerchantPortalGuiExtension\Dependency\Plugin\MerchantOrderItemTableExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\SalesMerchantPortalGuiExtension\Dependency\Plugin\MerchantOrderItemTableExpanderPluginInterface>
      */
     protected function getMerchantOrderItemTableExpanderPlugins(): array
     {

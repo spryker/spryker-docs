@@ -10,7 +10,7 @@ entries:
               - title: What's changed
                 url: /docs/pbc/all/payment/unzer/whats-changed/list-of-improvements.html
               - title: Install Unzer
-                url: /docs/pbc/all/payment/unzer/installation-and-migration/integrate-unzer.html
+                url: /docs/pbc/all/payment/unzer/install-unzer/integrate-unzer.html
               - title: Migrate Unzer
               - title: Use cases & HowTos & Tips
               - title: API endpoints

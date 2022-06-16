@@ -63,6 +63,8 @@ entries:
     - title: What's new
       url: /docs/scos/user/intro-to-spryker/whats-new/whats-new.html
       nested:
+      - title: IE11 end of life
+        url: /docs/scos/user/intro-to-spryker/whats-new/ie11-end-of-life.html
       - title: Security audit reports
         nested:
         - title: 2019.11 - Security audit by SektionEins

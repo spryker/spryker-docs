@@ -1,11 +1,11 @@
 ---
 title: Add Unzer credentials
 last_updated: Jun 9, 2022
-description: This document shows how to add Unzer credentials
+description: This document shows how to add standard and marketplace Unzer credentials
 template: back-office-user-guide-template
 ---
 
-This topic describes how to add Unzer <!-- standard/Marketplace -->credentials for a basic shop and marketplace.
+This document describes how to add standard and marketplace Unzer credentials.
 
 ## Prerequisites
 
@@ -43,7 +43,7 @@ The following table describes attributes you select and enter when adding Unzer 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
 | NAME | Name of the Unzer credentials. |
-| CREDENTIALS TYPE | Type of the credentials <ul><li>Marketplace (main channel)—the credentials type for the marketplace with multiple merchants</li><li>Standard—the credentials type for a basic store without merchants. </li></ul> |
+| CREDENTIALS TYPE | Type of the credentials <ul><li>*Marketplace (main channel)*—the credentials type for the marketplace with multiple merchants</li><li>*Standard*—the credentials type for a basic store without merchants. </li></ul> |
 | UNZER PUBLIC KEY | Unique public key which Unzer provides for a project to accept payments. The key is store-specific. |
 | UNZER PRIVATE KEY | Unique private key which Unzer provides for a project to accept payments. The key is store-specific. |
 | UNZER PUBLIC KEY (MAIN MERCHANT CREDENTIALS) | Unique public key which Unzer provides to each merchant to accept payments. The key is merchant-specific. |

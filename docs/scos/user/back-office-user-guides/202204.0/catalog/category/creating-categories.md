@@ -1,7 +1,7 @@
 ---
-title: Creating categories
-description: The guide describes procedures on how to create a category, add images and products, select a template in the Back Office.
-last_updated: Aug 11, 2021
+title: Create categories
+description: Learn how to create categories in the Back Office.
+last_updated: June 15, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-categories
 originalArticleId: b0f46c55-2786-4ab2-acee-594502fff3e1
@@ -11,6 +11,8 @@ redirect_from:
   - /docs/creating-categories
   - /docs/en/creating-categories
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/category/creating-categories.html
+  - /docs/scos/user/back-office-user-guides/202204.0/catalog/category/creating-categories.html
+
 related:
   - title: Assigning Products to Categories
     link: docs/scos/user/back-office-user-guides/page.version/catalog/category/assigning-products-to-categories.html
@@ -31,9 +33,16 @@ Review the reference information before you start, or look up the necessary info
 
 ## Creating a category
 
-To create a category, take the following steps:
-1. On the *Category* page, in the top right corner, click **Create category** to open the *Create category* page.
-2. In the *Settings* tab, enter and select the attributes for your category.
+1. On the **Category** page, in the top right corner, click **Create category**.
+
+2. On the **Create category** page, enter a **CATEGORY KEY**.
+. For **PARENT**, select a parent category.
+. Select one or more **ADDITIONAL PARENTS**.
+. Select one or more **STORES**
+. Select a **TEMPLATE**.
+. To activate the the category after creating, select **ACTIVE**.
+. To show the category on the Storefront, select **VISIBLE IN THE CATEGORY TREE**.
+. To make the category searchable on the Storefront, select **ALLOW TO SEARCH FOR THIS CATEGORY**.
 3. Click **Next** at the bottom of the page, or select the *Images* tab next to *Settings*.
 4. In the *Images* tab, add an image to the category:
     1. Click **Add image set**.
@@ -60,25 +69,16 @@ To create a category, take the following steps:
 
 ### Reference information: Creating a category
 
-This section holds reference information related to the category creation process.
 
-#### Category page
-
-On the *Category* page, you see the following:
-* Category key, category name, and the parent category to which a specific one is assigned.
-* Identifiers for active, visible, and searchable.
-* Template type.
-* Stores the category is assigned to.
-* Actions that you can do in a specific category.
 
 **Settings tab**
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
-| Category key | Value is used to automatically assign products and CMS blocks to your category through the import. |
+| CATEGORY KEY | Value is used to automatically assign products and CMS blocks to your category through the import. |
 | Parent | Drop-down list with categories under which your category is displayed in the hierarchical tree. It means that the category being edited is nested under the selected category. Only one value can be selected. |
 | Additional Parents | Drop-down list with categories under which your category is located in addition to the parent category. You can select several values. |
-| Stores | Stores the given category is assigned to.  |
+| STORES | Stores the given category is assigned to.  |
 | Template | Drop-down list with templates that define the look of your category on the Storefront. Ffor details about templates, see Category page template types). |
 | Active | Defines if the category is in the active state and is visible on the Storefront. |
 | Visible in the category tree | Defines if the category is shown in the menu on the Storefront. |

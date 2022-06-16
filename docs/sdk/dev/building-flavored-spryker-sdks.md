@@ -3,28 +3,28 @@ title: Building flavored Spryker SDKs
 description: Find out how you can build flavored Spryker SDKs
 template: howto-guide-template
 ---
-Sometimes, a [simple extendibility](/docs/sdk/dev/extending-the-sdk.html) and core SDK capabilities might not be enough. This is especially the case when an extension to the SDK requires additional dependencies or a deep integration of the SDK.
-You can extend the SDK by adding additional Symfony bundles to the SDK and building an own flavored Spryker SDK image. To do this, follow the steps below.
+Sometimes, a [simple extendibility](/docs/sdk/dev/extending-the-sdk.html) and core SDK capabilities are not enough. This is especially the case when an extension to the SDK requires additional dependencies or a deep integration of the SDK.
+You can extend the SDK by adding more Symfony bundles to the SDK and building your own flavored Spryker SDK image. To do this, follow the instructions below.
 
-## 1. Add additional dependencies
+## Adding more dependencies
 
 Besides extending the Spryker SDK through [Yaml definitions](/docs/sdk/dev/extending-the-sdk.html#implementation-via-yaml-definition), more complex extensions can be provided via [PHP implementations](/docs/sdk/dev/extending-the-sdk.html#implementation-via-php-implementation).
-You need to add this extension through a PHP implementation as a composer dependency and register it as Symfony bundle. To achieve this, Follow the steps below.
+You must add these extensions through a PHP implementation as a composer dependency and register them as Symfony bundles. To achieve this, follow the steps below.
 
-#### Download the SDK source code
+### 1. Download the SDK source code
 
-First you need to download the source to be able to build your own flavored Spryker SDK.
+To be able to build your own flavored Spryker SDK, first, download the source:
 
 `git clone --depth 1 --branch <tag_name> git@github.com:spryker-sdk/sdk.git`
 
-For testing and development purposes you can run the Spryker SDK in [development mode](development.md#run-sdk-in-development-mode).
+For testing and development purposes, you can run the Spryker SDK in [development mode](development.md#run-sdk-in-development-mode).
 
-#### Composer
+### 2. Add dependencies via Composer
 
-Additional dependencies can be added via composer.
+Add additional dependencies via Composer:
 `composer require <your company>/<your package>`
 
-#### Symfony Bundle registration
+### 3. Register a Symfony bundle
 
 Modify `config/bundles.php`:
 
@@ -36,12 +36,15 @@ $bundles = [
 ];
 ```
 
-#### Build your own image
+### 4. Build your own image
 
 `docker-compose -f docker-compose.yml build -build-arg UID=$(id -u) --build-arg GID=$(id -g) --no-cache`
 
-Once the flavored Spryker SDK is build you can execute the same way a non-flavored one will be executed.
+Once the flavored Spryker SDK is built, you can execute it the same way as a non-flavored one.
 
-#### Private repositories
+{% info_block infoBox "Private repositories" %}
 
-Adding private repositories requires to add an [auth.json](https://getcomposer.org/doc/articles/authentication-for-private-packages.md) before building the container.
+Tp add private repositories as dependencies to the SDK repository, before building the container, add the [auth.json](https://getcomposer.org/doc/articles/authentication-for-private-packages.md) 
+file to your project.
+
+{% endinfo_block %}

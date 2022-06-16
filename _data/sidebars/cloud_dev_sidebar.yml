@@ -101,7 +101,7 @@ entries:
               - title: 'Fatal error: Allowed memory size of x bytes exhausted'
                 url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-general-issues/fatal-error-allowed-memory-size-of-x-bytes-exhausted.html
               - title: Missing migration files on production environments
-                url: docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-general-issues/missing-migration-files-on-production-environments.html         
+                url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-general-issues/missing-migration-files-on-production-environments.html         
           - title: Troubleshooting tutorials
             url: /docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting/troubleshooting-tutorials/troubleshooting-tutorials.html
             nested:

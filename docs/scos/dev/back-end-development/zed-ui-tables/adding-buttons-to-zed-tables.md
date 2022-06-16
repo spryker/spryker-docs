@@ -1,5 +1,5 @@
 ---
-title: Adding Buttons to Zed Tables
+title: Adding buttons to Zed tables
 description: The article describes how to add buttons to Zed tables.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,9 @@ redirect_from:
   - /v2/docs/en/t-add-button-table
   - /v1/docs/t-add-button-table
   - /v1/docs/en/t-add-button-table
+related:
+  - title: Creating and configuring Zed tables
+    link: docs/scos/dev/back-end-development/zed-ui-tables/creating-and-configuring-zed-tables.html
 ---
 
 <!-- used to be: http://spryker.github.io/tutorials/yves/adding-buttons-to-tables/ -->
@@ -35,6 +38,7 @@ $this->generateEditButton('destination_URL', 'Button title', array $buttonOption
 $this->generateViewButton('destination_URL', 'Button title', array $buttonOptions);
 $this->generateRemoveButton('destination_URL', 'Button title', array $buttonOptions);
 ```
+
 Each generated button will have the corresponding style(color,icon) according to its type.
 
 Usage example:

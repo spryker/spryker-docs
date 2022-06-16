@@ -27,17 +27,9 @@ You can use Unzer in a single seller context or a multiple seller context.
 
 ## Payment methods compatible with marketplace
 
-As of May 2022, the following payment methods support a multiple seller basket.
+The following payment methods support a multiple seller basket.
 * Credit Card
 * Unzer Bank Transfer
 * Sofort
 
 All other payment methods offered by Unzer work in a single seller basket.
-
-## Integration initial scope
-
-Version 1.0.0 of Spryker integration with Unzer will support all marketplace compatible payment methods. The integration supports a single seller setup or a marketplace setup.
-
-## Next releases
-
-We will add the support of PayPal and Apple Pay.

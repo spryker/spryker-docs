@@ -22,7 +22,7 @@ related:
 
 To configure Braintree module for Spryker Commerce OS (SCOS), do the following:
 
-Add `spryker-eco/braintree` to your project by running the command:
+Add `spryker-eco/braintree` to your project:
 
 ```bash
 composer require spryker-eco/braintree --update-with-dependencies
@@ -35,19 +35,19 @@ console propel:install
 console transfer:generate
 ```
 
-Add frontend dependencies to your project by running npm:
+Add frontend dependencies to your project:
 
 ```bash
 npm i braintree-web@^3.55 braintree-web-drop-in@^1.20 paypal-checkout@^4.0 jquery@~3.5
 ```
 
-Build Ffrontend changes:
+Build frontend changes:
 
 ```bash
 console frontend:yves:build
 ```
 
-Please refer to `config/config.dist.php` for an example of module configuration.
+For an example of module configuration, refer to `config/config.dist.php`.
 
 To setup the initial Braintree configuration, use the credentials you received after registering your Braintree merchant account:
 ```php
@@ -84,7 +84,7 @@ $config[BraintreeConstants::FAKE_CLIENT_TOKEN] = '';
 
 ## Checkout Configuration
 
-To use Braintree in frontend, Braintree payment method handlers and subforms should be added to `Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php`.
+To use Braintree in frontend, Braintree payment method handlers and subforms must be added to `Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php`.
 
 ```php
 use Spryker\Yves\StepEngine\Dependency\Plugin\Form\SubFormPluginCollection;
@@ -158,7 +158,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 
 ```
 
-Default implementation for commands and options should be added to `Pyz/Zed/Oms/OmsDependencyProvider.php`.
+Default implementation for commands and options must be added to `Pyz/Zed/Oms/OmsDependencyProvider.php`.
 
 1. Commands:
 ```php
@@ -174,7 +174,7 @@ $container->extend(OmsDependencyProvider::COMMAND_PLUGINS, function (CommandColl
         ->add(new OrderRefundPlugin(), 'Braintree/OrderRefund') return $commandCollection; });
 ```
 Also, plugins to split the logic for payment methods were added to the new version of the Braintree module. These plugins don't provide partial operation for the supported payment methods.
-You can use `ItemsCapture` and `ItemsRefund` plugins for Paypal payment methods and `OrderCapture` and `OrderRefund` for Credit card payment method. `CapturePlugin` and `RefundPlugin` as well as relevevant facade methods are deprecated and will be removed with the next major relese.
+You can use `ItemsCapture` and `ItemsRefund` plugins for Paypal payment methods and `OrderCapture` and `OrderRefund` for the Credit card payment method. `CapturePlugin` and `RefundPlugin` as well as relevevant facade methods are deprecated and will be removed with the next major relese.
 
 2. Conditions:
 ```php

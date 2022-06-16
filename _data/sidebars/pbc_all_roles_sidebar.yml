@@ -11,15 +11,14 @@ entries:
                 url: /docs/pbc/all/payment/unzer/whats-changed/list-of-improvements.html
               - title: Install Unzer
                 url: /docs/pbc/all/payment/unzer/install-unzer/integrate-unzer.html
-              - title: Migrate Unzer
               - title: Use cases & HowTos & Tips
               - title: API endpoints
               - title: Configuration in the Back Office
                 nested:
-                  - title: Add Unzer credentials
-                    url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/add-unzer-credentails.html
-                  - title: Add Unzer credentials for external merchants
-                    url: /pbc/all/payment/unzer/configuration-in-the-back-office/add-unzer-credentials-for-external-merchants.html
+                  - title: Add Unzer standard credentials
+                    url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/add-unzer-standard-credentails.html
+                  - title: Add Unzer marketplace credentials
+                    url: /pbc/all/payment/unzer/configuration-in-the-back-office/add-unzer-marketplace-credentials.html
               - title: Extend & customize
                 nested:
                   - title: Frontend for a credit card

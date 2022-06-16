@@ -111,7 +111,7 @@ Debug mode is configured with:
 * `GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG`
 
 ### Demo data
-Remove demo admin users and set strong passwords when creating new admin users.
+*Remove all the demo data from the environment*. The project should only use the real data that will be used after the go-live. Remove all the demo data that comes with the Spryker repository, which includes demo and admin users. Demo admin users in a live shop pose a significant security risk for your project. In addition, make sure to set strong passwords when creating new admin users.
 
 ### Summary
 To sum up, the main points recommended to keep the data secure are:

@@ -8,7 +8,7 @@ By default, customers can search by product names and SKUs. Search preferences e
 
 For example, there is a new camera *Supracam focus* which is popular on the market for its video recording properties: geotagging and autofocus. To add the product and search preferences, do the following:
 
-1. Create a *video_recording* product attribute with *Geotagging* and *Autofocus* values. For instructions, see [Creating product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html).
+1. Create a *video_recording* product attribute with *Geotagging* and *Autofocus* values. For instructions, see [Create product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html).
 
 2. Create the *Supracam focus* abstract product and its variants. See [Creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html).
 

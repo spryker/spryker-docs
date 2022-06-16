@@ -7,4 +7,4 @@ template: concept-topic-template
 
 This document describes how to add the frontend for a credit card to your project.
 
-To use Unzer UI component and to add Unzer Card payment, see [Accept card with UI components](https://docs.unzer.com/payment-methods/card/accept-card-ui-component/)
+To use Unzer UI component and to add Unzer Card payment,see [Accept card with UI components](https://docs.unzer.com/payment-methods/card/accept-card-ui-component/) in the Unzer official documentation.

@@ -27,7 +27,7 @@ You can use Unzer in a single seller context or a multiple seller context.
 
 ## Payment methods compatible with marketplace
 
-The following payment methods support a multiple seller basket.
+The following payment methods support a multiple seller basket:
 * Credit Card
 * Unzer Bank Transfer
 * Sofort

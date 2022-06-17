@@ -32,15 +32,13 @@ The `SprykerEco.Unzer` module provides the following payment methods:
 
 To install and configure the Unzer module, follow the steps below.
 
-### Unzer modules installation
-
-Install unzer modules:
+### Install Unzer modules
 
 ```
 composer require spryker-eco/unzer spryker-eco/unzer-gui
 ```
 
-### General configuration
+### Check general configuration
 
 You can find all necessary configurations in `vendor/spryker-eco/unzer/config/config.dist.php` and `vendor/spryker-eco/unzer-api/config/config.dist.php`.
 
@@ -56,7 +54,7 @@ The following table describes all general configuration keys and their values.
 | `UnzerConstants::EXPENSES_REFUND_STRATEGY_KEY` | Integer | Expense (shipment) refund strategy key. for details, see the [Expense refund strategies](#expense-refund-strategies) section. |
 | `UnzerApiConstants::LOG_API_CALLS`             | Boolean | Flag indicating if API calls log must be saved.                       |
 
-## Configuration example
+#### Configuration example
 
 **config/Shared/config_default.php**
 
@@ -105,9 +103,9 @@ $config[UnzerConstants::UNZER_AUTHORIZE_RETURN_URL] = 'https://mysprykershop/unz
 $config[UnzerConstants::UNZER_CHARGE_RETURN_URL] = 'https://mysprykershop/unzer/payment-result';
 ```
 
-## Specific configuration
+### Add payment methods to State Machine and Domain Whitelist configuration
 
-Also, you must add payment methods to the State Machine (OMS) and Domain Whitelist configuration:
+You must add payment methods to the State Machine (OMS) and Domain Whitelist configuration:
 
 ```php
 
@@ -142,7 +140,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 
  ```
 
-## Notifications
+### Configure notifications
 
 To complete the payment modification requests (authorize succeeded, payment completed), you must provide a correct URL of your Yves with the `/unzer/notification` path to the config file.
 
@@ -153,13 +151,13 @@ Example:
 
 ```
 
-## Expense refund strategies
+### Select expense refund strategy
 
 You can choose one of the provided refund strategies for your payment flow (the configuration key: `UnzerConstants::EXPENSES_REFUND_STRATEGY_KEY`):
 * `UnzerConstants::LAST_SHIPMENT_ITEM_EXPENSES_REFUND_STRATEGY`—expense costs are refunded with the last item in corresponding shipment.
 * `UnzerConstants::LAST_ORDER_ITEM_EXPENSES_REFUND_STRATEGY`—expense costs are refunded with the last item in the whole order.
 * `UnzerConstants::NO_EXPENSES_REFUND_STRATEGY`—expense costs are not refunded.
 
-## Check payment after return request
+### Check payment after return request
 
 To check whether authorization has been successful or failed, for `UnzerConstants::UNZER_AUTHORIZE_RETURN_URL`, use the following Yves path —`https://mysprykershop/unzer/payment-result`. After the check is complete, this endpoint redirects a customer to a default success or fail page.

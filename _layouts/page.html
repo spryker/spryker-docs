@@ -72,15 +72,6 @@ layout: default
             <div class="summary">{{page.summary}}</div>
         {% endif %}
 
-
-        {% if page.canonical_url != nil and page.latest_version != nil %}
-        {% info_block errorBox %}
-
-        You are browsing a previous version of the document. The latest version is <a href="{{ page.canonical_url }}">{{ site.versions[page.latest_version.version] | default: 'undefined' }}</a>.
-
-        {% endinfo_block %}
-        {% endif %}
-
         {{content}}
 
         {% if page.tags != null %}
@@ -164,9 +155,8 @@ layout: default
             <h3 class="related__title" data-toc-skip>Related articles</h3>
             {% for relatedPage in page.related %}
                 {% assign link = relatedPage.link | prepend: '/' %}
-                {% assign version = page.version | default: site.version %}
 
-                <a href="{{link | replace_first: "page.version", version }}" class="related__link">
+                <a href="{{link}}" class="related__link">
                     <i class="icon-article related__link-icon"></i>
                     <span class="related__link-text">{{relatedPage.title}}</span>
                 </a>
@@ -177,7 +167,9 @@ layout: default
 
     <aside class="alt-sidebar">
         <div class="alt-sidebar__sticky">
-            {% include version_selector.html %}
+            <div class="alt-nav">
+                <span class="alt-nav__opener">To view an older version of this document, go to <a href="https://archive.docs.spryker.com">archive</a>.</span>
+            </div>
 
             {% unless page.toc == false %}
                 {% include toc.html %}

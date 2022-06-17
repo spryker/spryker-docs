@@ -283,7 +283,7 @@ jobs:
       - name: Unpack artifacts
         run: tar -xf build-result/result.tar.gz
 
-      - run: bundle exec rake check_pbc_dev
+      - run: bundle exec rake check_aop_dev
 
   page_validation:
     name: Page validation

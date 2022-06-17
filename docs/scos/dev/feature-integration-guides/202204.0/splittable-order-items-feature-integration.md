@@ -16,12 +16,12 @@ The Splittable Order Items feature is shipped with following modules:
 | [DiscountExtension](https://github.com/spryker/spryker/tree/master/Bundles/DiscountExtension) | Provides extension plugins for the `Discount` module. |
 | [SalesQuantity](https://github.com/spryker/spryker/tree/master/Bundles/SalesQuantity)| Provides support in handling and configuring quantity for sales orders and items. |
 
-To install the Merchants and Merchant relations feature, follows the steps below:
+To install the Splittable Order Items feature, follows the steps below:
 
 1. Install necessary modules using composer
 
 ```bash
-composer require spryker/discount-extension:"^1.0.0" spryker/sales-quantity:"^1.0.0" --update-with-dependencies
+composer require spryker/discount-extension:"^1.0.0" spryker/sales-quantity:"^3.4.0" --update-with-dependencies
 ```
 
 2. Run the commands:

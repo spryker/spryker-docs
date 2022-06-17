@@ -135,7 +135,18 @@ defaults:
     scope:
       path: "docs/fes/dev"
     values:
-      sidebar: "fes_dev_sidebar"
+      sidebar: "paas+_dev_sidebar"
+      role: "dev"
+  -
+    scope:
+      path: "docs/paas+"
+    values:
+      product: "platform-as-a-service-plus"
+  -
+    scope:
+      path: "docs/paas+/dev"
+    values:
+      sidebar: "paas+_dev_sidebar"
       role: "dev"
   -
     scope:

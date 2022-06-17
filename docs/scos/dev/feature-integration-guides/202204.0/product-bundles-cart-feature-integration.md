@@ -176,9 +176,8 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Add a product bundle to cart, try to increase its quantity to a large amount, i.e. 1000 items. Then try to decrease the 
-quantity. Make sure that increase and decrease operations are performed without a significant delay and do not fail 
-with an exception.  
+Add a product bundle to cart, try to increase its quantity to a large amount, i.e. 1000 items. Then try to decrease the quantity. 
+Make sure that increase and decrease operations are performed without a significant delay and do not fail with an exception.  
 
 Perform this verification both as anonymous and a logged-in user.  
 
@@ -186,12 +185,8 @@ Perform this verification both as anonymous and a logged-in user.
 
 ### 2) Adjust non-splittable quantity threshold for bundled items in `SalesQuantity` module config
 
-To be able to create an order successfully with a large amount
-of bundle products in cart, `SalesQuantityConfig::BUNDLED_ITEM_NONSPLIT_QUANTITY_THRESHOLD` constant
-in `SalesQuantity` module config also need to be set to some reasonable amount, 10 for example.
-This constant controls the bundle quantity threshold, which when reached keeps bundled items from 
-splitting into individual items and adds them into the order as a single shipment. The lower the threshold,
-the less amount of separate shipments are created in an order, which decreases potential probability of 
-insufficient memory errors during order creation process.
+To be able to create an order successfully with a large amount of bundle products in cart, `SalesQuantityConfig::BUNDLED_ITEM_NONSPLIT_QUANTITY_THRESHOLD` constant in `SalesQuantity` module config also need to be set to some reasonable amount, 10 for example.
+This constant controls the bundle quantity threshold, which when reached keeps bundled items from splitting into individual items and adds them into the order as a single shipment. 
+The lower the threshold, the less amount of separate shipments are created in an order, which decreases potential probability of insufficient memory errors during order creation process.
 
 For details, see the [The Splittable Order Items feature integration guide](/docs/scos/dev/feature-integration-guides/{{page.version}}/splittable-order-items-feature-integration.html).

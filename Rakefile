@@ -207,7 +207,7 @@ task :check_pbc do
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/aop\/.+/,
+    /docs\/acp\/.+/,
     /docs\/fes\/.+/,
     /docs\/paas-plus\/.+/,
   ]

@@ -14,8 +14,8 @@ This topic describes how to install and configure the Unzer module to integrate 
 
 ## Integration overview
 
-The `spryker-eco/unzer` module provides integration of Spryker e-commerce system with Unzer technology partner. It requires the `SprykerEco.UnzerApi` `spryker-eco/unzer-api` module that provides the REST Client for making API calls to the Unzer Payment Provider.
-It also requires `SprykerEco.UnzerGui` `spryker-eco/unzer-gui` module that provides Backoffice functionality to configure Unzer credentials.
+The `spryker-eco/unzer` module provides integration of Spryker e-commerce system with Unzer technology partner. It requires the `spryker-eco/unzer-api` module that provides the REST Client for making API calls to the Unzer Payment Provider.
+It also requires `spryker-eco/unzer-gui` module that provides Backoffice functionality to configure Unzer credentials.
 
 The `SprykerEco.Unzer` module includes integration with:
 

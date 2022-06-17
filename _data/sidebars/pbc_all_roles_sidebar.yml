@@ -10,7 +10,11 @@ entries:
               - title: What's changed
                 url: /docs/pbc/all/payment/unzer/whats-changed/list-of-improvements.html
               - title: Install Unzer
-                url: /docs/pbc/all/payment/unzer/install-unzer/integrate-unzer.html
+                nested:
+                  - title: Install and configure Unzer
+                    url: /docs/pbc/all/payment/unzer/install-unzer/install-and-configure-unzer.html
+                  - title: Integrate Unzer
+                    url: /docs/pbc/all/payment/unzer/install-unzer/integrate-unzer.html
               - title: Use cases & HowTos & Tips
               - title: API endpoints
               - title: Configuration in the Back Office

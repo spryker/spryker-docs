@@ -10,15 +10,13 @@ related:
 
 This document shows how to integrate the Unzer module into your project.
 
-## Integrate Unzer
-
-To integrate the Unzer module, follow the steps below.
-
 ## Prerequisites
 
 Before integrating Unzer into your project, make sure you have [installed and configured the Unzer module](/docs/pbc/all/payment/unzer/install-unzer/install-and-configure-unzer.html).
 
-### OMS
+To integrate the Unzer module, follow the steps below.
+
+## OMS
 
 {% info_block infoBox "Exemplary content" %}
 

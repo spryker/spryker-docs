@@ -1,5 +1,5 @@
 ---
-title: Integrate Unzer
+title: Integrate Unzer in your project
 description: Integrate the Unzer module into the Spryker Commerce OS.
 last_updated: Jun 17, 2022
 template: feature-integration-guide-template

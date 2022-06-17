@@ -91,7 +91,7 @@ Note that we are extending `AbstractRouteProviderPlugin` in the example which he
 
 The mounting process happens in `RouterDependencyProvider`. The example assumes that the `Route` providers we use extend the `AbstractRouteProviderPlugin`.
 
-After adding a new route, clear the route cache `vendor/bin/console router:cache:warm-up`.
+After adding a new route, clear the route cache `vendor/bin/yves router:cache:warm-up`.
 
 ```php
 <?php

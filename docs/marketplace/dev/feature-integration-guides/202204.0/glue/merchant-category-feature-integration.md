@@ -28,7 +28,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/merchant-categories-rest-api:"^0.1.0" --update-with-dependencies
+composer require spryker/merchant-categories-rest-api:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -80,7 +80,7 @@ use Spryker\Glue\MerchantsRestApi\MerchantsRestApiDependencyProvider as SprykerM
 class MerchantsRestApiDependencyProvider extends SprykerMerchantsRestApiDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\MerchantsRestApiExtension\Dependency\Plugin\MerchantRestAttributesMapperPluginInterface[]
+     * @return array<\Spryker\Glue\MerchantsRestApiExtension\Dependency\Plugin\MerchantRestAttributesMapperPluginInterface>
      */
     public function getMerchantRestAttributesMapperPlugins(): array
     {
@@ -95,6 +95,6 @@ class MerchantsRestApiDependencyProvider extends SprykerMerchantsRestApiDependen
 
 Make sure that when you send the request `GET https://glue.mysprykershop.com/merchants`, you can see the category keys and names for merchants assigned to categories.
 
-Make sure that when you send the request `GET https://glue.mysprykershop.com/merchants?categoryKeys[]={% raw %}{{some-category-key}}{% endraw %}`, you can see only merchants that belong to the particular category in the response.
+Make sure that when you send the request `GET https://glue.mysprykershop.com/merchants?category-keys[]={% raw %}{{some-category-key}}{% endraw %}`, you can see only merchants that belong to the particular category in the response.
 
 {% endinfo_block %}

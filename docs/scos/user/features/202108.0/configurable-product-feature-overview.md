@@ -145,6 +145,6 @@ Storefront users configure a product on the Storefront as follows:
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Configurable Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/configurable-product-feature-walkthrough.html) for developers.
+Are you a developer? See [Configurable Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

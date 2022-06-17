@@ -10,17 +10,17 @@ redirect_from:
   - /2021080/docs/en/managing-content-of-emails-via-cms-blocks
   - /docs/managing-content-of-emails-via-cms-blocks
   - /docs/en/managing-content-of-emails-via-cms-blocks
-  - /docs/scos/user/back-office-user-guides/202204.0/content/blocks/managing-content-of-emails-via-cms-blocks.html
+  - /docs/scos/user/back-office-user-guides/content/blocks/managing-content-of-emails-via-cms-blocks.html
 related:
   - title: Email as a CMS block
-    link: docs/scos/user/features/page.version/cms-feature-overview/email-as-a-cms-block-overview.html
+    link: docs/scos/user/features/cms-feature-overview/email-as-a-cms-block-overview.html
 ---
 
-You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html).
+You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](/docs/scos/user/features/cms-feature-overview/email-as-a-cms-block-overview.html).
 
-There is a number of default emails that are automatically sent on different occasions, like customer registration or order shipment. You can change the default emails by editing their email templates via respective CMS blocks. For the full list of the emails with their email CMS blocks, see [Default email templates](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html).
+There is a number of default emails that are automatically sent on different occasions, like customer registration or order shipment. You can change the default emails by editing their email templates via respective CMS blocks. For the full list of the emails with their email CMS blocks, see [Default email templates](/docs/scos/user/features/cms-feature-overview/email-as-a-cms-block-overview.html).
 
-If a developer introduced a new email for your project, you need to create an email block for it. Blocks for the default email templates are already created, and you can [edit them as regular blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-cms-blocks.html).
+If a developer introduced a new email for your project, you need to create an email block for it. Blocks for the default email templates are already created, and you can [edit them as regular blocks](/docs/scos/user/back-office-user-guides/content/blocks/edit-cms-blocks.html).
 
 ## Prerequisites
 
@@ -38,7 +38,7 @@ Review the [reference information](#reference-information-create-an-email-cms-bl
 
 {% info_block warningBox "Content items in email blocks" %}
 
-[Content items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) are not rendered in emails.
+[Content items](/docs/scos/user/features/content-items-feature-overview.html) are not rendered in emails.
 
 {% endinfo_block %}
 
@@ -55,7 +55,7 @@ You don’t need to activate the email CMS block, as the deactivated status of t
 
 **Tips and tricks**
 
-* Add a [glossary key](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html) to the email block. When the email is sent, the key is replaced with the translation you defined for the locale selected by the customer. To learn how to add translations, see [Managing glossary](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/glossary/managing-glossary.html).
+* Add a [glossary key](/docs/scos/user/back-office-user-guides/administration/glossary/managing-glossary.html) to the email block. When the email is sent, the key is replaced with the translation you defined for the locale selected by the customer. To learn how to add translations, see [Managing glossary](/docs/scos/user/back-office-user-guides/administration/glossary/managing-glossary.html).
 
 * Add variables to the email CMS block to replace them with customer and order specific details. When the email is sent, the variables are replaced with the actual details. For example, add *firstName*, and it is replaced with the name of the customer the email is sent to. A developer can provide a full list of variables and create new ones.
 

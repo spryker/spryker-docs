@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/file-details-product-imagecsv
 ---
 
-This document describes the `product_image.csv` file to configure [Product Image](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-images-overview.html) information on your Spryker Demo Shop.
+This document describes the `product_image.csv` file to configure [Product Image](/docs/scos/user/features/product-feature-overview/product-images-overview.html) information on your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -40,8 +40,8 @@ The file should have the following parameters:
 
 This file has the following dependencies:
 
-* [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
-* [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+* [product_abstract.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+* [product_concrete.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 
 ## Import template file and content example
 

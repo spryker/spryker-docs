@@ -10,15 +10,15 @@ redirect_from:
   - /2021080/docs/en/adyen-integration
   - /docs/adyen-integration
   - /docs/en/adyen-integration
-  - /docs/scos/user/technology-partners/202204.0/payment-partners/adyen/adyen-integration-into-a-project.html
-  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/adyen/integrating-adyen.html
+  - /docs/scos/user/technology-partners/payment-partners/adyen/adyen-integration-into-a-project.html
+  - /docs/scos/dev/technology-partner-guides/payment-partners/adyen/integrating-adyen.html
 related:
   - title: Installing and configuring Adyen
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/installing-and-configuring-adyen.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/adyen/installing-and-configuring-adyen.html
   - title: Enabling filtering of payment methods for Ayden
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/enabling-filtering-of-payment-methods-for-adyen.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/adyen/enabling-filtering-of-payment-methods-for-adyen.html
   - title: Integrating Adyen payment methods
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/integrating-adyen-payment-methods.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/adyen/integrating-adyen-payment-methods.html
 ---
 
 {% info_block errorBox %}
@@ -31,7 +31,7 @@ This article provides step-by-step instructions on integrating the Adyen module 
 
 ## Prerequisites
 
-Prior to integrating Adyen into your project, make sure you [installed and configured the Adyen module](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/installing-and-configuring-adyen.html).
+Prior to integrating Adyen into your project, make sure you [installed and configured the Adyen module](/docs/scos/dev/technology-partner-guides/payment-partners/adyen/installing-and-configuring-adyen.html).
 
 ## Project integration
 
@@ -263,7 +263,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 
 {% info_block infoBox "Note" %}
 
-If you provide the Credit Card payment method, you have to overwrite `CheckoutPageRouteProviderPlugin` with the one from the project level. For details, see [Adyen - Provided Payment Methods Credit Card (Step 7)](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html#credit-card).
+If you provide the Credit Card payment method, you have to overwrite `CheckoutPageRouteProviderPlugin` with the one from the project level. For details, see [Adyen - Provided Payment Methods Credit Card (Step 7)](/docs/scos/dev/technology-partner-guides/payment-partners/adyen/integrating-adyen-payment-methods.html#credit-card).
 
 {% endinfo_block %}
 

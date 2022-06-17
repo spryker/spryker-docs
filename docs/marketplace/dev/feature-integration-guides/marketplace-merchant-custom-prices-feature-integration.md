@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 related:
   - title: Marketplace Merchant Custom Prices feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-custom-prices-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-custom-prices-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Merchant Custom Prices feature into a Spryker project.
@@ -20,15 +20,15 @@ To start feature integration, integrate the required features:
 
 | NAME    | VERSION    | INTEGRATION GUIDE    |
 |----------------|------------------|-------------------|
-| Merchant Custom Prices                         | {{page.version}} | [Merchant Custom Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-custom-prices-feature-integration.html)                                    |
-| Marketplace Merchant Portal Product Management | {{page.version}} | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |
+| Merchant Custom Prices                         | {{site.version}} | [Merchant Custom Prices feature integration](/docs/scos/dev/feature-integration-guides/merchant-custom-prices-feature-integration.html)                                    |
+| Marketplace Merchant Portal Product Management | {{site.version}} | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-product-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-merchant-custom-prices:"{{page.version}}" --with-dependencies
+composer require spryker-feature/marketplace-merchant-custom-prices:"{{site.version}}" --with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

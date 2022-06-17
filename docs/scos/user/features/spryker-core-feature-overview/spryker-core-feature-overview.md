@@ -9,15 +9,13 @@ redirect_from:
   - /2021080/docs/en/spryker-core
   - /docs/spryker-core
   - /docs/en/spryker-core
-  - /docs/scos/user/features/201907.0//spryker-core-feature-overview/spryker-core-feature-overview.html
-  - /docs/scos/user/features/201903.0//spryker-core-feature-overview/spryker-core-feature-overview.html
-  - /docs/scos/user/features/201811.0//spryker-core-feature-overview/spryker-core-feature-overview.html
+  - /docs/scos/user/features//spryker-core-feature-overview/spryker-core-feature-overview.html
 ---
 
 The Spryker Core feature is the very basis of all the functionality in Spryker.
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Spryker Core feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html) for developers.
+Are you a developer? See [Spryker Core feature walkthrough](/docs/scos/dev/feature-walkthroughs/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

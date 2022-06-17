@@ -10,10 +10,10 @@ redirect_from:
   - /2021080/docs/en/quick-add-to-cart-feature-overview
   - /docs/quick-add-to-cart-feature-overview
   - /docs/en/quick-add-to-cart-feature-overview
-  - /docs/scos/user/features/202200.0/quick-add-to-cart-feature-overview.html
+  - /docs/scos/user/features/quick-add-to-cart-feature-overview.html
 ---
 
-Regular buyers, and especially B2B wholesale customers, often know what exactly they want to order from the shop—by product SKU and product name. The *Quick Add to Cart* feature lets your customers find and buy products in just a few clicks. Instead of going to each product page individually, they can go to the **Quick Add to Cart** page, accessible directly from the header, and quickly order items by typing product SKU and its quantity in respective fields. At the same time, if some specific [quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html) apply to products, they will also be taken into account when ordering through the **Quick Add to Cart** page. The **Quick Add to Cart** form can also be used to add items to [shopping lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html). Also, if a customer has a list of products to be ordered, for example, in a CSV file or other, the ordering process becomes even faster. The customer can bulk add SKUs and put quantities next to them in a single field. This being done, the customer either adds the items to cart or proceeds directly to checkout.
+Regular buyers, and especially B2B wholesale customers, often know what exactly they want to order from the shop—by product SKU and product name. The *Quick Add to Cart* feature lets your customers find and buy products in just a few clicks. Instead of going to each product page individually, they can go to the **Quick Add to Cart** page, accessible directly from the header, and quickly order items by typing product SKU and its quantity in respective fields. At the same time, if some specific [quantity restrictions](/docs/scos/user/features/non-splittable-products-feature-overview.html) apply to products, they will also be taken into account when ordering through the **Quick Add to Cart** page. The **Quick Add to Cart** form can also be used to add items to [shopping lists](/docs/scos/user/features/shopping-lists-feature-overview/shopping-lists-feature-overview.html). Also, if a customer has a list of products to be ordered, for example, in a CSV file or other, the ordering process becomes even faster. The customer can bulk add SKUs and put quantities next to them in a single field. This being done, the customer either adds the items to cart or proceeds directly to checkout.
 
 The *Quick Add to Cart* feature allows placing bulk orders for wholesale and returning customers.
 
@@ -35,7 +35,7 @@ To view how to create a quick order, see [Quick Order on the Storefront](#quick-
 <!--- ![Quick Order page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/quick-order-page.png)
 --->
 
-As a shop owner, you can also integrate the Quick Order with [Measurement Units](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html). Thus, when the product is selected, the base measurement unit for that product appears in the "Measuring Unit" column.
+As a shop owner, you can also integrate the Quick Order with [Measurement Units](/docs/scos/user/features/measurement-units-feature-overview.html). Thus, when the product is selected, the base measurement unit for that product appears in the "Measuring Unit" column.
 
 {% info_block errorBox %}
 
@@ -76,9 +76,9 @@ However, separators should be the same for all products entered in this form at 
 
 ## Quantity restrictions for Quick Add to Cart
 
-Quick Add to Cart quantity rules fall under limitations set by [quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html). Quantity restriction values define the number of items that customers can put into the cart.
+Quick Add to Cart quantity rules fall under limitations set by [quantity restrictions](/docs/scos/user/features/non-splittable-products-feature-overview.html). Quantity restriction values define the number of items that customers can put into the cart.
 
-When manually filling the **SKU/Name* field, the quantity selector allows a visitor to put the valid numbers based on [quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html) set for that SKU. That means, for example, if a concrete product has the minimum quantity restriction for 4 units, the interval restriction to 2 units, and the maximum quantity is 12, the shopper can put 4, 6, 8, 10, and 12 items to cart.
+When manually filling the **SKU/Name* field, the quantity selector allows a visitor to put the valid numbers based on [quantity restrictions](/docs/scos/user/features/non-splittable-products-feature-overview.html) set for that SKU. That means, for example, if a concrete product has the minimum quantity restriction for 4 units, the interval restriction to 2 units, and the maximum quantity is 12, the shopper can put 4, 6, 8, 10, and 12 items to cart.
 
 The **Quantity** field in the Quick Order adheres to these quantities. Therefore, if the shopper enters an invalid number into the **Quantity** field, for example, 5, the number will automatically change to the next higher quantity set in quantity restrictions, that is 6.
 
@@ -86,7 +86,7 @@ The **Quantity** field in the Quick Order adheres to these quantities. Therefore
 
 To see the price, a shop visitor has to select the concrete product and set the item quantity.
 
-The price is displayed dynamically, taking into account the quantity, currency, store, and [merchant relation](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html) dimensions, respectively. If the item has any [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html), the price is adjusted to the correct price set for the quantity the user has selected.
+The price is displayed dynamically, taking into account the quantity, currency, store, and [merchant relation](/docs/scos/user/features/merchant-b2b-contracts-feature-overview.html) dimensions, respectively. If the item has any [volume prices](/docs/scos/user/features/prices-feature-overview/volume-prices-overview.html), the price is adjusted to the correct price set for the quantity the user has selected.
 
 ## File upload form for concrete products
 
@@ -116,7 +116,7 @@ You can upload only one file at a time.
 
 By default, only concrete SKUs are validated. On successful upload, items and quantities are extracted and filled out in the quick order form fields.
 
-In case the quantity is not valid due to [quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html) setting, the quantity is changed to a valid number.
+In case the quantity is not valid due to [quantity restrictions](/docs/scos/user/features/non-splittable-products-feature-overview.html) setting, the quantity is changed to a valid number.
 
 If there are already products added to the quick order list, the products from the CSV file are added to the bottom of the quick order template.
 
@@ -134,6 +134,6 @@ The following figure shows how to perform these actions:
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Quick Add to Cart feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html) for developers.
+Are you a developer? See [Quick Add to Cart feature walkthrough](/docs/scos/dev/feature-walkthroughs/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

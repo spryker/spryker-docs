@@ -22,16 +22,16 @@ redirect_from:
   - /v1/docs/en/validating-rest-request-format
 related:
   - title: Glue API Installation and Configuration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-installation-and-configuration.html
+    link: docs/scos/dev/feature-integration-guides/glue-api/glue-api-installation-and-configuration.html
   - title: Glue Infrastructure
-    link: docs/scos/dev/glue-api-guides/page.version/glue-infrastructure.html
+    link: docs/scos/dev/glue-api-guides/glue-infrastructure.html
 ---
 
 Glue API allows you to validate requests sent to REST endpoints. It allows you to check if all required fields are present, and if the type and format of the fields is correct.
 
 ## Installation
 
-To enable validation of REST requests, install the `RestRequestValidation` module by following [Glue API: REST Schema Validation Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-rest-schema-validation-feature-integration.html).
+To enable validation of REST requests, install the `RestRequestValidation` module by following [Glue API: REST Schema Validation Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-rest-schema-validation-feature-integration.html).
 
 ## Default validation schema
 
@@ -148,7 +148,7 @@ vendor/bin/console rest-api:build-request-validation-cache
 
 {% info_block infoBox %}
 
-Alternatively, use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) for validation. Run the following command:
+Alternatively, use a [Spryk](/docs/scos/dev/glue-api-guides/glue-spryks.html) for validation. Run the following command:
 
 ```bash
 cconsole spryk:run AddGlueValidation --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources

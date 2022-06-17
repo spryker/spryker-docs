@@ -11,8 +11,6 @@ redirect_from:
   - /docs/vault-for-tokens-feature-overview
   - /docs/en/vault-for-tokens-feature-overview
   - /2021080/docs/vault-for-tokens
-  - /2021080/docs/vault-for-tokens
-  - /docs/vault-for-tokens
   - /docs/vault-for-tokens
 ---
 

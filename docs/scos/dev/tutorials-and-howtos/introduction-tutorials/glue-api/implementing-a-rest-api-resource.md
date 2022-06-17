@@ -19,7 +19,7 @@ redirect_from:
   - /v2/docs/en/implementing-rest-api-resource
   - /v1/docs/implementing-rest-api-resource
   - /v1/docs/en/implementing-rest-api-resource
-  - /docs/scos/dev/tutorials/201811.0/introduction/glue-api/implementing-a-rest-api-resource.html
+  - /docs/scos/dev/tutorials/introduction/glue-api/implementing-a-rest-api-resource.html
 ---
 
 The following guide provides step-by-step instructions on how to implement a REST API resource in your project.
@@ -56,7 +56,7 @@ To create a module:
 
 {% info_block infoBox %}
 
-You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to create a basic structure. Run the following command:
+You can also use a [Spryk](/docs/scos/dev/glue-api-guides/glue-spryks.html) to create a basic structure. Run the following command:
 
 ```bash
 console spryk:run AddGlueBasicStructure --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources
@@ -70,7 +70,7 @@ You'll need to agree to all the default values when prompted.
 
 {% info_block infoBox %}
 
-You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to add a transfer file. Run the following command:  
+You can also use a [Spryk](/docs/scos/dev/glue-api-guides/glue-spryks.html) to add a transfer file. Run the following command:  
 
 ```bash
 console spryk:run AddSharedRestAttributesTransfer --mode=project --module=ResourcesRestApi --organization=Pyz --name=RestResourcesAttributes
@@ -110,7 +110,7 @@ class WishlistsRestApiConfig extends AbstractBundleConfig
 
 {% info_block infoBox %}
 
-You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to create a configuration class. Run the following command:
+You can also use a [Spryk](/docs/scos/dev/glue-api-guides/glue-spryks.html) to create a configuration class. Run the following command:
 
 ```bash
 console spryk:run AddGlueConfig --mode=project --module=ResourcesRestApi --organization=Pyz
@@ -147,7 +147,7 @@ class WishlistsRestApiFactory extends AbstractFactory
 
 {% info_block infoBox %}
 
-You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to create a factory. Run the following command:  
+You can also use a [Spryk](/docs/scos/dev/glue-api-guides/glue-spryks.html) to create a factory. Run the following command:  
 
 ```bash
 console spryk:run AddGlueFactory --mode=project --module=ResourcesRestApi --organization=Pyz
@@ -245,7 +245,7 @@ class WishlistsResourceController extends AbstractController
 
 {% info_block infoBox %}
 
-You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to create a resource controller. Run the following command:
+You can also use a [Spryk](/docs/scos/dev/glue-api-guides/glue-spryks.html) to create a resource controller. Run the following command:
 
 ```bash
 console AddGlueController  --mode=project --module=ResourcesRestApi --organization=Pyz --controller=ResourcesController
@@ -287,7 +287,7 @@ To generate the respective transfer objects, run `vendor/bin/console transfer:ge
 
 {% info_block infoBox %}
 
-You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to describe fields for post and patch calls. Run the following command:
+You can also use a [Spryk](/docs/scos/dev/glue-api-guides/glue-spryks.html) to describe fields for post and patch calls. Run the following command:
 
 ```bash
 console spryk:run AddSharedRestAttributesTransfer --mode=project --module=ResourcesRestApi --organization=Pyz --name=RestResourcesAttributes
@@ -473,7 +473,7 @@ class WishlistsResourceRoutePlugin extends AbstractPlugin implements ResourceRou
 
 {% info_block infoBox %}
 
-You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to route requests to your controller. Run the following command:
+You can also use a [Spryk](/docs/scos/dev/glue-api-guides/glue-spryks.html) to route requests to your controller. Run the following command:
 
 ```bash
 console spryk:run AddGlueResourceRoute --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources --resourceRouteMethod=get

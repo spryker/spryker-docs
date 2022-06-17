@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/creating-cms-redirects
   - /docs/creating-cms-redirects
   - /docs/en/creating-cms-redirects
-  - /docs/scos/user/back-office-user-guides/202200.0/content/redirects/creating-cms-redirects.html
+  - /docs/scos/user/back-office-user-guides/content/redirects/creating-cms-redirects.html
 ---
 
 This topic provides a list of steps to create a redirect in the Back Office.
@@ -54,4 +54,4 @@ On the *CMS Redirects* page, you can also:
 #### Next steps
 The redirect URL has been created. However, you can either edit it or delete.
 
-To learn how to edit and/or delete a redirect, see [Managing CMS redirects](/docs/scos/user/back-office-user-guides/{{page.version}}/content/redirects/managing-cms-redirects.html).
+To learn how to edit and/or delete a redirect, see [Managing CMS redirects](/docs/scos/user/back-office-user-guides/content/redirects/managing-cms-redirects.html).

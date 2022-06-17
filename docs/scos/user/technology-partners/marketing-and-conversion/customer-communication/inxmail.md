@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/inxmail
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
+    link: docs/scos/user/technology-partners/technology-partners.html
 ---
 
 ## Partner Information
@@ -38,10 +38,10 @@ YOUR ADVANTAGES:
 
 ## Related Developer guides
 
-* [Inxmail API requests](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail/inxmail-api-requests.html)
-* [Inxmail order reference commands](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail/inxmail-order-referenced-commands.html)
-* [Installing and configuring Inxmail](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail/installing-and-configuring-inxmail.html)
-* [Integrating Inxmail](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/customer-communication/inxmail/integrating-inxmail.html)
+* [Inxmail API requests](/docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/inxmail-api-requests.html)
+* [Inxmail order reference commands](/docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/inxmail-order-referenced-commands.html)
+* [Installing and configuring Inxmail](/docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/installing-and-configuring-inxmail.html)
+* [Integrating Inxmail](/docs/scos/dev/technology-partner-guides/marketing-and-conversion/customer-communication/inxmail/integrating-inxmail.html)
 
 
 ---

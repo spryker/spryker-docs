@@ -10,10 +10,10 @@ redirect_from:
   - /2021080/docs/en/product-lists-catalog-feature-integration
   - /docs/product-lists-catalog-feature-integration
   - /docs/en/product-lists-catalog-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202200.0/product-lists-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/product-lists-feature-integration.html
 related:
   - title: Merchant Product Restrictions feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/merchant-product-restrictions-feature-integration.html
 ---
 
 ## Install feature core
@@ -24,9 +24,9 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Product Lists | {{page.version}} |
-| Catalog | {{page.version}} |
-| Customer | {{page.version}} |
+| Product Lists | {{site.version}} |
+| Catalog | {{site.version}} |
+| Customer | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
@@ -54,7 +54,7 @@ Once the Product List data is exported to Elasticsearch, make sure to extend you
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ProductListQueryExpanderPlugin | Expands an Elasticsearch query for Abstract and Concrete Products with Blacklist and Whitelist filters based on the Customer session.<br>The result of the query will contain only Products that were on the given Whitelists, but not on the given Blacklists.| The Customer session must contain Product List information. See [Merchant Product Restrictions feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-product-restrictions-feature-integration.html) for an example implementation. | Spryker\Client\CustomerCatalog\Plugin\Search |
+| ProductListQueryExpanderPlugin | Expands an Elasticsearch query for Abstract and Concrete Products with Blacklist and Whitelist filters based on the Customer session.<br>The result of the query will contain only Products that were on the given Whitelists, but not on the given Blacklists.| The Customer session must contain Product List information. See [Merchant Product Restrictions feature integration](/docs/scos/dev/feature-integration-guides/merchant-product-restrictions-feature-integration.html) for an example implementation. | Spryker\Client\CustomerCatalog\Plugin\Search |
 | ProductListQueryExpanderPlugin | Expands search query with filtering by product list ID. | None | Spryker\Client\ProductListSearch\Plugin\Search |
 
 {% info_block infoBox "Info" %}

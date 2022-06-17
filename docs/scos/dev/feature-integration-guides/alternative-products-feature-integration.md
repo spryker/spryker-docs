@@ -12,13 +12,13 @@ redirect_from:
   - /docs/en/alternative-products-feature-integration
 related:
   - title: Alternative Products- Inventory Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-inventory-management-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/alternative-products-inventory-management-feature-integration.html
   - title: Alternative Products- Wishlist feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-wishlist-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/alternative-products-wishlist-feature-integration.html
   - title: Alternative Products- Product Label feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-product-label-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/alternative-products-product-label-feature-integration.html
   - title: Alternative Products- Discontinued Products feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-discontinued-products-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/alternative-products-discontinued-products-feature-integration.html
 ---
 
 ## Install feature core
@@ -29,14 +29,14 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 |---|---|
-| Product | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Product | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 ```bash
-composer require spryker-feature/alternative-products: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/alternative-products: "{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -436,15 +436,15 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 |---|---|
-| Product | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Product | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/alternative-products: "^{{page.version}}" --update-with-dependencies
+composer require spryker-feature/alternative-products: "^{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -551,7 +551,7 @@ Make sure that the following widgets were registered:
 
 {% info_block infoBox "Store relation" %}
 
-If the [Product Labels feature](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
+If the [Product Labels feature](/docs/scos/user/features/product-labels-feature-overview.html) is integrated into your project, make sure to define store relations for *Discontinued* and *Alternatives available* product labels by re-importing [product_label_store.csv](/docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-label-store.csv.html). Otherwise, the product labels are not displayed on the Storefront.
 
 
 {% endinfo_block %}

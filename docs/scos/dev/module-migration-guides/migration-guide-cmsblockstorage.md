@@ -16,10 +16,7 @@ redirect_from:
   - /v5/docs/en/migration-guide-cmsblockstorage
   - /v6/docs/migration-guide-cmsblockstorage
   - /v6/docs/en/migration-guide-cmsblockstorage
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-cmsblockstorage.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cmsblockstorage.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmsblockstorage.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsblockstorage.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-cmsblockstorage.html
 ---
 
 ## Upgrading from version 1.* to version 2.*

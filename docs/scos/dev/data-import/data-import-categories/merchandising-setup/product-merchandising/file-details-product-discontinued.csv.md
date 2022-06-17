@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/file-details-product-discontinuedcsv
 ---
 
-This document describes the `product_discontinued.csv` file to configure [Discontinued Product](/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_discontinued.csv` file to configure [Discontinued Product](/docs/scos/user/features/product-feature-overview/discontinued-products-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -34,7 +34,7 @@ The file should have the following parameters:
 
 This file has the following dependency:
 
-* [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+* [product_concrete.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 
 ## Import template file and content example
 

@@ -29,12 +29,12 @@ On the Shopping Carts page, you see the following:
 | # | Element | Description |
 |---|---|---|
 | 1 | **Customer account menu** | A menu with navigation items to specific sections where you can manage your customer information. |
-| 2 | **Shopping Cart Name** | See [Editing Shopping Cart](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-shopping-carts/shop-guide-managing-shopping-carts.html#editing-a-shopping-cart) to change the name of the shopping cart. |
+| 2 | **Shopping Cart Name** | See [Editing Shopping Cart](/docs/scos/user/shop-user-guides/shop-guide-shopping-carts/shop-guide-managing-shopping-carts.html#editing-a-shopping-cart) to change the name of the shopping cart. |
 | 3 | **Access** | There are three types of access to a shopping cart: Owner, Full Access, and Read-only. |
 | 4 | **No. of items** | A number of items placed in the cart. |
 | 5 | **Prices** | Displays the prices according to its type: Gross or Net. |
 | 6 | **Total** | Cart total amount. |
-| 7 | **Status** | Displays the status of the cart. See [Approval Process feature overview](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) for more information on statuses. Available only after the Approval Process feature has been integrated into your project. |
+| 7 | **Status** | Displays the status of the cart. See [Approval Process feature overview](/docs/scos/user/features/quotation-process-feature-overview.html) for more information on statuses. Available only after the Approval Process feature has been integrated into your project. |
 | 8 | **Actions** | A set of actions you can d with a shopping cart. |
 | 9 |  **+ Create Shopping Cart** | Creates a new shopping cart. |
 ***

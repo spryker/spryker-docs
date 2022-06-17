@@ -10,11 +10,11 @@ redirect_from:
   - /v3/docs/en/shopping-lists-shop-guide
 related:
   - title: Multiple and Shared Shopping Lists overview
-    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+    link: docs/scos/user/features/shopping-lists-feature-overview/shopping-lists-feature-overview.html
   - title: Shopping List Notes overview
-    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-list-notes-overview.html
+    link: docs/scos/user/features/shopping-lists-feature-overview/shopping-list-notes-overview.html
   - title: Shopping list printing overview
-    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-list-printing-overview.html
+    link: docs/scos/user/features/shopping-lists-feature-overview/shopping-list-printing-overview.html
 ---
 
 The **Shopping Lists** page allows customers to create and manage the shopping lists of frequently purchased products and add all the items to the cart as well as manage existing shopping lists. 
@@ -82,8 +82,8 @@ The _Edit shopping list_ page opens where you can:
 ![Quick add to a shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/quick-add-to-shopping-list-window.png) 
 
 {% info_block warningBox %}
-To be able to search for products, make sure that [Search Widget for Concrete Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/search-widget-for-concrete-products-overview.html
-{% endinfo_block %} feature is [integrated](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-shopping-lists.html) into your project.)
+To be able to search for products, make sure that [Search Widget for Concrete Products](/docs/scos/user/features/product-feature-overview/search-widget-for-concrete-products-overview.html
+{% endinfo_block %} feature is [integrated](/docs/scos/user/shop-user-guides/shop-guide-shopping-lists.html) into your project.)
 
 * View the shopping list owner and access rights.
 ![View a shopping list owner and access rights](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/view-owner-on-edit-page.png) 
@@ -92,7 +92,7 @@ To be able to search for products, make sure that [Search Widget for Concrete Pr
 * Change the product item quantity using minus and plus buttons.
 ![View details](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/view-details.png) 
 
-* Add a note to the item. To save the note, click **Save**. See [Shopping List Notes Feature Overview](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details.
+* Add a note to the item. To save the note, click **Save**. See [Shopping List Notes Feature Overview](/docs/scos/user/features/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details.
 
 * Select the warranty option from the drop-down list. 
 ![Warranty options](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/warranty-options.png) 
@@ -120,7 +120,7 @@ To share a shopping list:
 2. From the **drop-down list** next to the business unit or customer you want to share a shopping list with, select the appropriate access rights level.
 
 {% info_block infoBox %}
-See [Permissions Management for Shared Shopping Lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/multiple-and-shared-shopping-lists-overview.html
+See [Permissions Management for Shared Shopping Lists](/docs/scos/user/features/shopping-lists-feature-overview/multiple-and-shared-shopping-lists-overview.html
 {% endinfo_block %} to learn more about types of shopping list access rights.)
 ![Share page](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/share-page.png) 
 
@@ -149,7 +149,7 @@ To add a shopping list with product items to cart, select the shopping list (lis
 
 ![Add selected to cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Lists/place-order.png) 
 
-The shopping list with the available items will be added to the shopping cart. See [Shopping Cart](/docs/scos/user/shop-user-guides/{{page.version}}/shopping-carts/managing-shopping-carts.html) to learn how to manage and purchase items using the cart.
+The shopping list with the available items will be added to the shopping cart. See [Shopping Cart](/docs/scos/user/shop-user-guides/shopping-carts/managing-shopping-carts.html) to learn how to manage and purchase items using the cart.
 
 ### Dismissing Shared Shopping Lists
 

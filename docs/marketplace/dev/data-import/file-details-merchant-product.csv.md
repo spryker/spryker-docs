@@ -5,12 +5,12 @@ description: This document describes the merchant_product.csv file to configure 
 template: import-file-template
 related:
   - title: Marketplace Product feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
   - title: Marketplace Product feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-product-feature-overview.html
 ---
 
-This document describes the `merchant_product.csv` file to configure [marketplace product](/docs/marketplace/user/features/{{page.version}}/marketplace-product-feature-overview.html) information in your Spryker shop.
+This document describes the `merchant_product.csv` file to configure [marketplace product](/docs/marketplace/user/features/marketplace-product-feature-overview.html) information in your Spryker shop.
 
 To import the file, run:
 
@@ -32,8 +32,8 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-- [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html)
-- [product_concrete.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+- [merchant.csv](/docs/marketplace/dev/data-import/file-details-merchant.csv.html)
+- [product_concrete.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 
 ## Import template file and content example
 

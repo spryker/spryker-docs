@@ -14,9 +14,7 @@ redirect_from:
   - /v5/docs/en/migration-guide-webprofiler
   - /v5/docs/migration-guide-webprofiler
   - /v5/docs/en/migration-guide-webprofiler
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-webprofiler.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-webprofiler.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-webprofiler.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-webprofiler.html
 related:
   - title: Web Profiler Widget for Yves
     link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html

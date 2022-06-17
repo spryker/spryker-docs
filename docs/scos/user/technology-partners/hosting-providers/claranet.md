@@ -10,10 +10,10 @@ redirect_from:
   - /2021080/docs/en/claranet
   - /docs/claranet
   - /docs/en/claranet
-  - /docs/scos/user/technology-partners/202200.0/hosting-providers/claranet.html
+  - /docs/scos/user/technology-partners/hosting-providers/claranet.html
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
+    link: docs/scos/user/technology-partners/technology-partners.html
 ---
 
 ## Partner Information

@@ -5,7 +5,7 @@ description: This integration guide provides steps on how to integrate the Merch
 template: feature-integration-guide-template
 related:
   - title: Marketplace Product feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Merchant Portal - Marketplace Product feature into a Spryker project.
@@ -20,9 +20,9 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Product | dev-master | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-feature-integration.html) |
-| Marketplace Merchant Portal Core | dev-master | [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html) |
-| Marketplace Inventory Management  | dev-master | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html) |
+| Marketplace Product | dev-master | [Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-feature-integration.html) |
+| Marketplace Merchant Portal Core | dev-master | [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-core-feature-integration.html) |
+| Marketplace Inventory Management  | dev-master | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 

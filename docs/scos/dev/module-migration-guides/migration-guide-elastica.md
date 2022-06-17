@@ -12,8 +12,7 @@ redirect_from:
   - /docs/en/migration-guide-elastica
   - /v6/docs/migration-guide-elastica
   - /v6/docs/en/migration-guide-elastica
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-elastica.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-elastica.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-elastica.html
 ---
 
 {% info_block infoBox %}

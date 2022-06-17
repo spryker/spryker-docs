@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/migration-guide-productcategorystorage
   - /docs/migration-guide-productcategorystorage
   - /docs/en/migration-guide-productcategorystorage
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productcategorystorage.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-productcategorystorage.html
   - /upcoming-release/docs/migration-guide-productcategorystorage
 ---
 

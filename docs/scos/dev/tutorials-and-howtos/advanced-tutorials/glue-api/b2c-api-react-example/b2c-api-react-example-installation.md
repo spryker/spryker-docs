@@ -42,7 +42,7 @@ The example application is provided only for display purposes, and must under no
 
 To perform the app installation on the VM:
 
-1. Make sure that you have Spryker Glue REST API [installed and working](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-installation-and-configuration.html).
+1. Make sure that you have Spryker Glue REST API [installed and working](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-installation-and-configuration.html).
 2. Log in to the VM. For this purpose, execute the following command on the host where the VM runs:
 
 ```bash
@@ -162,7 +162,7 @@ npm run serve:vm
 
 To perform the app installation on a dedicated web server, follow these steps:
 
-1. Make sure that you have Spryker Glue REST API [installed and working](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-installation-and-configuration.html).
+1. Make sure that you have Spryker Glue REST API [installed and working](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-installation-and-configuration.html).
 
 2. Make sure that the following prerequisites are installed on the server:
     * [Node 8.9.3](https://nodejs.org/en/) or newer.

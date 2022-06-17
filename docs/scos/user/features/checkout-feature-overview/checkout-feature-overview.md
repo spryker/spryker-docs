@@ -10,8 +10,8 @@ redirect_from:
   - /2021080/docs/en/checkout
   - /docs/checkout
   - /docs/en/checkout
-  - /docs/scos/user/features/202200.0/checkout-feature-overview/multi-step-checkout-overview.html
-  - /docs/scos/user/features/202200.0/checkout-feature-overview/checkout-feature-overview.html
+  - /docs/scos/user/features/checkout-feature-overview/multi-step-checkout-overview.html
+  - /docs/scos/user/features/checkout-feature-overview/checkout-feature-overview.html
 ---
 
 
@@ -26,7 +26,7 @@ Fulfilling small orders is not always worthwhile for the business because operat
 
 Per your business requirements, you can also set up a maximum threshold to disallow placing orders above a defined threshold.
 
-In a B2B scenario, you can define any type of threshold for each [merchant relation](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html) separately.
+In a B2B scenario, you can define any type of threshold for each [merchant relation](/docs/scos/user/features/merchant-b2b-contracts-feature-overview.html) separately.
 
 With order thresholds, you can:
 
@@ -39,11 +39,11 @@ With order thresholds, you can:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of Multi-step Checkout](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html)  |
-| [Get a general idea of Order Thresholds](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html)  |
+| [Get a general idea of Multi-step Checkout](/docs/scos/user/features/checkout-feature-overview/multi-step-checkout-overview.html)  |
+| [Get a general idea of Order Thresholds](/docs/scos/user/features/checkout-feature-overview/order-thresholds-overview.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Checkout feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/checkout-feature-walkthrough.html) for developers.
+Are you a developer? See [Checkout feature walkthrough](/docs/scos/dev/feature-walkthroughs/checkout-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

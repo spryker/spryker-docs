@@ -10,13 +10,13 @@ redirect_from:
   - /2021080/docs/en/managing-reclamations
   - /docs/managing-reclamations
   - /docs/en/managing-reclamations
-  - /docs/scos/user/back-office-user-guides/202204.0/sales/reclamations/managing-reclamations.html
+  - /docs/scos/user/back-office-user-guides/sales/reclamations/managing-reclamations.html
 related:
   - title: Reclamations Feature Overview
-    link: docs/scos/user/features/page.version/reclamations-feature-overview.html
+    link: docs/scos/user/features/reclamations-feature-overview.html
 ---
 
-This document describes how to view [order reclamations](/docs/scos/user/features/{{page.version}}/reclamations-feature-overview.html) in the Back Office.
+This document describes how to view [order reclamations](/docs/scos/user/features/reclamations-feature-overview.html) in the Back Office.
 
 ## Prerequisites
 

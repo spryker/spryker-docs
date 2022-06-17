@@ -9,10 +9,10 @@ redirect_from:
   - /2021080/docs/en/file-details-cms-pagecsv
   - /docs/file-details-cms-pagecsv
   - /docs/en/file-details-cms-pagecsv
-  - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-cms-page.csv.html
+  - /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-page.csv.html
 ---
 
-This document describes the `cms_page.csv` file to configure [CMS Page](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html) information in your Spryker Demo Shop.
+This document describes the `cms_page.csv` file to configure [CMS Page](/docs/scos/user/features/cms-feature-overview/cms-pages-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -43,7 +43,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [cms_template.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-template.csv.html).
+This file has the following dependency: [cms_template.csv](/docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-template.csv.html).
 
 ## Import template file and content example
 

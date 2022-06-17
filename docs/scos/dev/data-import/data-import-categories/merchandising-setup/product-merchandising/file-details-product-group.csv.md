@@ -9,12 +9,10 @@ redirect_from:
   - /2021080/docs/en/file-details-product-groupcsv
   - /docs/file-details-product-groupcsv
   - /docs/en/file-details-product-groupcsv
-  - /docs/scos/dev/data-import/201811.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html
-  - /docs/scos/dev/data-import/201903.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html
-  - /docs/scos/dev/data-import/201907.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html
+  - /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html
 ---
 
-This document describes the `product_group.csv` file to configure [Product Group](/docs/scos/user/features/{{page.version}}/product-groups-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_group.csv` file to configure [Product Group](/docs/scos/user/features/product-groups-feature-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -34,7 +32,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
+This file has the following dependency: [product_abstract.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
 
 ## Import template file and content example
 

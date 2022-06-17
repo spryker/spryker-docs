@@ -4,7 +4,7 @@ last_updated: Sep 7, 2021
 description: This integration guide provides steps on how to integrate the ACL feature into a Spryker project.
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/marketplace/dev/feature-integration-guides/202200.0/acl-feature-integration.html
+  - /docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html
 related:
   - title: Persistence ACL feature walkthrough
     link: docs/marketplace/dev/feature-walkthroughs/202204.0/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html
@@ -22,15 +22,15 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE        |
 | --------------- | -------- | ------------------ |
-| Spryker Core         | {{page.version}}      | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Spryker Core Back Office | {{page.version}}      | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html) |
+| Spryker Core         | {{site.version}}      | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
+| Spryker Core Back Office | {{site.version}}      | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-back-office-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/acl:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/acl:"{{site.version}}" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 

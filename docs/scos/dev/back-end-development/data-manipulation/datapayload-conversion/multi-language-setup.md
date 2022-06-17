@@ -17,7 +17,7 @@ redirect_from:
   - /v4/docs/en/multi-language-setup
 related:
   - title: Managing Glossary
-    link: docs/scos/user/back-office-user-guides/page.version/administration/glossary/managing-glossary.html
+    link: docs/scos/user/back-office-user-guides/administration/glossary/managing-glossary.html
 ---
 
 ## Multi-Language Setup

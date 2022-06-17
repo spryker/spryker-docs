@@ -22,18 +22,12 @@ redirect_from:
   - /v5/docs/en/mg-shipment
   - /v6/docs/mg-shipment
   - /v6/docs/en/mg-shipment
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-shipment.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-shipment.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-shipment.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-shipment.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-shipment.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-shipment.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shipment.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-shipment.html
 related:
   - title: "Reference information: Shipment method plugins"
-    link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
+    link: docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
   - title: Shipment feature overview
-    link: docs/scos/user/features/page.version/shipment-feature-overview.html
+    link: docs/scos/user/features/shipment-feature-overview.html
 ---
 
 ## Upgrading from version 7.* to 8.*

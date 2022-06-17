@@ -19,13 +19,13 @@ redirect_from:
   - /v5/docs/en/mg-cms-gui
   - /v6/docs/mg-cms-gui
   - /v6/docs/en/mg-cms-gui
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsgui.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-cmsgui.html
   - /module_migration_guides/mg-cms-gui.htm
 ---
 
 ## Upgrading from version 4.* to version 5.*
 
-Version 5 of the `CMSGui` module introduces the [multi-store functionality](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
+Version 5 of the `CMSGui` module introduces the [multi-store functionality](/docs/scos/user/features/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 {% info_block errorBox %}
 

@@ -12,9 +12,9 @@ redirect_from:
   - /docs/en/creating-scheduled-prices
 related:
   - title: Managing Scheduled Prices
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/scheduled-prices/managing-scheduled-prices.html
+    link: docs/scos/user/back-office-user-guides/catalog/scheduled-prices/managing-scheduled-prices.html
   - title: Scheduled Prices Feature Overview
-    link: docs/scos/user/features/page.version/scheduled-prices-feature-overview.html
+    link: docs/scos/user/features/scheduled-prices-feature-overview.html
 ---
 
 This topic describes how to create scheduled prices.
@@ -45,7 +45,7 @@ To create a price schedule:
 
 {% info_block infoBox "Info" %}
 
-If needed, you can [edit the imported scheduled prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/managing-scheduled-prices.html)
+If needed, you can [edit the imported scheduled prices](/docs/scos/user/back-office-user-guides/catalog/scheduled-prices/managing-scheduled-prices.html)
 
 {% endinfo_block %}
 
@@ -106,7 +106,7 @@ The *Scheduled Prices: Import dry run* page is divided into four sections.
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | Schedule name |Name of the list of price product schedules which you have just imported.  |
-| Select your CSV file |Here, you can select the file with price product schedules which you want to re-import. It is used in case you want to correct or change some of the schedules you have imported. Learn about file format in [File details: product_price_schedule.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html).  |
+| Select your CSV file |Here, you can select the file with price product schedules which you want to re-import. It is used in case you want to correct or change some of the schedules you have imported. Learn about file format in [File details: product_price_schedule.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html).  |
 | Row n° | Numeric identifier of a price schedule entry in the list of price schedules. |
 | Error |  Describes why a particular price schedule has not been imported.|
 | ID | Numeric identifier of price schedule. |

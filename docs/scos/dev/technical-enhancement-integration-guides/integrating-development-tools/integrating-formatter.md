@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/formatter-integration-guide
   - /v6/docs/formatter-integration-guide
   - /v6/docs/en/formatter-integration-guide
-  - /docs/scos/dev/migration-and-integration/202108.0/development-tools/formatter-integration-guide.html
+  - /docs/scos/dev/migration-and-integration/development-tools/formatter-integration-guide.html
 ---
 
 Follow the steps below to integrate [Formatter](/docs/scos/dev/sdk/development-tools/formatter.html) into your project.

@@ -13,9 +13,7 @@ redirect_from:
   - /v5/docs/en/migration-guide-productreviewsearch
   - /v6/docs/migration-guide-productreviewsearch
   - /v6/docs/en/migration-guide-productreviewsearch
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productreviewsearch.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productreviewsearch.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productreviewsearch.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-productreviewsearch.html
 ---
 
 ## Upgrading from version 1.3.* to version 1.4.*

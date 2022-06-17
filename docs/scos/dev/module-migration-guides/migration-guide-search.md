@@ -22,13 +22,7 @@ redirect_from:
   - /v5/docs/en/mg-search
   - /v6/docs/mg-search
   - /v6/docs/en/mg-search
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-search.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-search.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-search.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-search.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-search.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-search.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-search.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-search.html
 ---
 
 ## Upgrading from version 8.9.* to version 8.10.*

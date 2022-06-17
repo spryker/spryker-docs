@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/alternative-products-overview
   - /docs/alternative-products-overview
   - /docs/en/alternative-products-overview
-  - /docs/scos/user/features/202200.0/alternative-products-feature-overview.html
+  - /docs/scos/user/features/alternative-products-feature-overview.html
 ---
 
 Suggesting product alternatives is a great way to ease the user’s product finding process. Instead of browsing the product catalog, product alternatives let customers jump from one product page to the next until they find a relevant item.
@@ -22,7 +22,7 @@ A Back Office user can add product alternatives for both abstract and concrete p
 All the available alternative products are shown on the abstract product details page, if one of the following occurs:
 
 * All the concrete products of the abstract one are in the "out of stock" status.
-* All the concrete products of the abstract one are [discontinued](/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html).
+* All the concrete products of the abstract one are [discontinued](/docs/scos/user/features/product-feature-overview/discontinued-products-overview.html).
 
 {% info_block infoBox %}
 
@@ -40,10 +40,10 @@ On the product details page of a product that's a product alternative for anothe
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Add product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/adding-product-alternatives.html) |
+| [Add product alternatives](/docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/adding-product-alternatives.html) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Alternative Products feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/alternative-products-feature-walkthrough.html) for developers.
+Are you a developer? See [Alternative Products feature walkthrough](/docs/scos/dev/feature-walkthroughs/alternative-products-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

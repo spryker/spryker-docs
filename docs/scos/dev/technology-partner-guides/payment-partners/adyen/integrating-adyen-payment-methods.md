@@ -10,14 +10,14 @@ redirect_from:
   - /2021080/docs/en/adyen-provided-payment-methods
   - /docs/adyen-provided-payment-methods
   - /docs/en/adyen-provided-payment-methods
-  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/adyen/integrating-adyen-payment-methods.html
+  - /docs/scos/dev/technology-partner-guides/payment-partners/adyen/integrating-adyen-payment-methods.html
 related:
   - title: Installing and configuring Adyen
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/installing-and-configuring-adyen.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/adyen/installing-and-configuring-adyen.html
   - title: Integrating Adyen
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/integrating-adyen.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/adyen/integrating-adyen.html
   - title: Enabling filtering of payment methods for Ayden
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/enabling-filtering-of-payment-methods-for-adyen.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/adyen/enabling-filtering-of-payment-methods-for-adyen.html
 ---
 
 ## Credit card

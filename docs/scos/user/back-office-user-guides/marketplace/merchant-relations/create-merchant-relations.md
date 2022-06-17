@@ -10,19 +10,19 @@ redirect_from:
   - /2021080/docs/en/managing-merchant-relations
   - /docs/managing-merchant-relations
   - /docs/en/managing-merchant-relations
-  - /docs/scos/user/back-office-user-guides/202204.0/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html
+  - /docs/scos/user/back-office-user-guides/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html
 related:
   - title: Merchants and Merchant Relations Feature Overview
-    link: docs/scos/user/features/page.version/merchant-b2b-contracts-feature-overview.html
+    link: docs/scos/user/features/merchant-b2b-contracts-feature-overview.html
 ---
 
 This document describes how to create merchant relations in the Back Office.
 
 ## Prerequisites
 
-1. [Create a merchant](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants/create-merchants.html).
-2. [Create a company](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/manage-companies.html).
-3. Optional: [Create a product list](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/creating-product-lists.html). It's needed to allow or deny a company access to certain products.
+1. [Create a merchant](/docs/scos/user/back-office-user-guides/marketplace/merchants/create-merchants.html).
+2. [Create a company](/docs/scos/user/back-office-user-guides/customer/manage-companies.html).
+3. Optional: [Create a product list](/docs/scos/user/back-office-user-guides/catalog/product-lists/creating-product-lists.html). It's needed to allow or deny a company access to certain products.
 4. Review the [reference information](#reference-information-create-a-merchant-relation) before you start, or look up the necessary information as you go through the process.
 
 ## Create a merchant relation
@@ -50,5 +50,5 @@ This document describes how to create merchant relations in the Back Office.
 
 ## Next steps
 
-* Define merchant specific prices. For instructions, see [Creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) and [Creating a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html).
-* Define order thresholds for merchants. For instructions, see [Manage merchant order thresholds](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-merchant-order-thresholds.html).
+* Define merchant specific prices. For instructions, see [Creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) and [Creating a product variant](/docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/creating-product-variants.html).
+* Define order thresholds for merchants. For instructions, see [Manage merchant order thresholds](/docs/scos/user/back-office-user-guides/administration/thresholds/managing-merchant-order-thresholds.html).

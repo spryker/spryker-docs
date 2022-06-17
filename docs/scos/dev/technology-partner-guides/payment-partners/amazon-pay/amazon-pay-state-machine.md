@@ -10,17 +10,17 @@ redirect_from:
   - /2021080/docs/en/amazon-pay-state-machine
   - /docs/amazon-pay-state-machine
   - /docs/en/amazon-pay-state-machine
-  - /docs/scos/user/technology-partners/202204.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-state-machine.html
-  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/amazon-pay/amazon-pay-state-machine.html
+  - /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-state-machine.html
+  - /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay-state-machine.html
 related:
   - title: Handling orders with Amazon Pay API
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html
   - title: Configuring Amazon Pay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/configuring-amazon-pay.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/configuring-amazon-pay.html
   - title: Amazon Pay - Sandbox Simulations
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
   - title: Obtaining an Amazon Order Reference and information about shipping addresses
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
 ---
 
 The state machine is different for synchronous and asynchronous flow. Although from status "capture completed" it is the same and in the state machine, it's presented as a sub-process.

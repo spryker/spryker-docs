@@ -10,26 +10,25 @@ redirect_from:
   - /2021080/docs/en/retrieving-company-roles
   - /docs/retrieving-company-roles
   - /docs/en/retrieving-company-roles
-  - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-company-roles.html
-  - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-company-roles.html
+  - /docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-company-roles.html
 related:
   - title: Logging In as Company User
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
+    link: docs/scos/dev/glue-api-guides/managing-b2b-account/authenticating-as-a-company-user.html
   - title: Retrieving Company Information
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-companies.html
+    link: docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-companies.html
   - title: Retrieving Company User Information
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
+    link: docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-company-users.html
   - title: Company User Roles and Permissions Feature Overview
-    link: docs/scos/user/features/page.version/company-account-feature-overview/company-user-roles-and-permissions-overview.html
+    link: docs/scos/user/features/company-account-feature-overview/company-user-roles-and-permissions-overview.html
   - title: Authentication and Authorization
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
+    link: docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html
 ---
 
-In corporate environments, where users act as company representatives rather than private buyers, companies can leverage [Company Roles](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html) to distribute scopes and permissions among [Company Users](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html). This endpoint allows retrieving information about the company roles.
+In corporate environments, where users act as company representatives rather than private buyers, companies can leverage [Company Roles](/docs/scos/user/features/company-account-feature-overview/company-user-roles-and-permissions-overview.html) to distribute scopes and permissions among [Company Users](/docs/scos/user/features/company-account-feature-overview/company-accounts-overview.html). This endpoint allows retrieving information about the company roles.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html).
 
 ## Retrieve a company role
 
@@ -47,7 +46,7 @@ To retrieve a company role, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value. |
+| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value. |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
@@ -167,9 +166,9 @@ To retrieve a company role, send the request:
 | 2101 | Company role is not found. |
 | 2103 | Current company user is not set. Select the current company user with `/company-user-access-tokens` to access the resource collection. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).
 
 ##  Next steps
 
-* [Retrieve business unit addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-unit-addresses.html)
-* [Manage company user authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/managing-company-user-authentication-tokens.html)
+* [Retrieve business unit addresses](/docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-business-unit-addresses.html)
+* [Manage company user authentication tokens](/docs/scos/dev/glue-api-guides/managing-b2b-account/managing-company-user-authentication-tokens.html)

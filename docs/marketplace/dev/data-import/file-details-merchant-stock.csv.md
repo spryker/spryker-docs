@@ -5,12 +5,12 @@ description: This document describes the merchant_stock.csv file to configure me
 template: import-file-template
 related:
   - title: Marketplace Merchant feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-feature-walkthrough.html
   - title: Marketplace Merchant feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
 ---
 
-This document describes the `merchant_stock.csv` file to configure [merchant stock](/docs/marketplace/user/features/{{site.version}}/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management) information in your Spryker shop.
+This document describes the `merchant_stock.csv` file to configure [merchant stock](/docs/marketplace/user/features/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management) information in your Spryker shop.
 
 To import the file, run:
 
@@ -25,14 +25,14 @@ The file should have the following parameters:
 | PARAMETER    | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS  | DESCRIPTION      |
 | ------------- | -------- | ------ | ------------- | --------------------------------- | ----------------- |
 | merchant_reference | &check;             | String   |                   | Unique                                                       | Identifier of the merchant in the system. |
-| stock_name         | &check;             | String   |                   | Stock name is defined as described in [merchant warehouse](/docs/marketplace/user/features/{{site.version}}/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). | Name of the stock.                        |
+| stock_name         | &check;             | String   |                   | Stock name is defined as described in [merchant warehouse](/docs/marketplace/user/features/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). | Name of the stock.                        |
 
 ## Import file dependencies
 
 The file has the following dependencies:
 
-- [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html)
-- [warehouse.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html)
+- [merchant.csv](/docs/marketplace/dev/data-import/file-details-merchant.csv.html)
+- [warehouse.csv](/docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-warehouse.csv.html)
 
 ## Import template file and content example
 

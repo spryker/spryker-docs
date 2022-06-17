@@ -11,7 +11,7 @@ redirect_from:
   - /docs/migration-guide-categorystorage
   - /docs/en/migration-guide-categorystorage
   - /upcoming-release/docs/migration-guide-categorystorage
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-categorystorage.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-categorystorage.html
 ---
 
 This document describes how to update the `CategoryStorage` module.

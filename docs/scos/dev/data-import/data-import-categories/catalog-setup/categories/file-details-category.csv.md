@@ -9,12 +9,10 @@ redirect_from:
   - /2021080/docs/en/file-details-categorycsv
   - /docs/file-details-categorycsv
   - /docs/en/file-details-categorycsv
-  - /docs/scos/dev/data-import/201811.0/data-import-categories/catalog-setup/categories/file-details-category.csv.html
-  - /docs/scos/dev/data-import/201903.0/data-import-categories/catalog-setup/categories/file-details-category.csv.html
-  - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/categories/file-details-category.csv.html
+  - /docs/scos/dev/data-import/data-import-categories/catalog-setup/categories/file-details-category.csv.html
 ---
 
-This document describes the `category.csv` file to configure [categories](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html) in your Spryker shop.
+This document describes the `category.csv` file to configure [categories](/docs/scos/user/features/category-management-feature-overview.html) in your Spryker shop.
 
 To import the file, run:
 
@@ -52,7 +50,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [category_template.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html).
+This file has the following dependency: [category_template.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/categories/file-details-category-template.csv.html).
 
 ## Import template file and content example
 

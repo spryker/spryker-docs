@@ -20,8 +20,8 @@ To start feature integration, review and install the necessary features:
 
 | NAME | VERSION |
 |---|---|
-|Alternative Products|{{page.version}}|
-|Inventory Management|{{page.version}}|
+|Alternative Products|{{site.version}}|
+|Inventory Management|{{site.version}}|
 
 ### 1) Set up behavior
 

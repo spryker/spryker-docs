@@ -14,9 +14,7 @@ redirect_from:
   - /v5/docs/en/migration-guide-messenger
   - /v6/docs/migration-guide-messenger
   - /v6/docs/en/migration-guide-messenger
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-messenger.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-messenger.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-messenger.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-messenger.html
 ---
 
 {% info_block errorBox %}

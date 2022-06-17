@@ -13,9 +13,7 @@ redirect_from:
   - /v5/docs/en/migration-guide-categorypagesearch
   - /v6/docs/migration-guide-categorypagesearch
   - /v6/docs/en/migration-guide-categorypagesearch
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-categorypagesearch.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-categorypagesearch.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-categorypagesearch.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-categorypagesearch.html
   - /upcoming-release/docs/migration-guide-categorypagesearch
 ---
 

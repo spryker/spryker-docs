@@ -18,11 +18,11 @@ redirect_from:
 
 The *Return Management* feature lets you create and manage returns for a sales order.
 
-Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole order or its individual items. For details about how to create return, see [Creating returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html).
+Once an order has been shipped, the registered buyer or a Back Office user can initiate a return of the whole order or its individual items. For details about how to create return, see [Creating returns](/docs/scos/user/back-office-user-guides/sales/orders/creating-returns.html).
 
 {% info_block warningBox "Note" %}
 
-You can also create and manage returns via Glue API. For details, see [Manging the returns](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-returns/managing-the-returns.html).
+You can also create and manage returns via Glue API. For details, see [Manging the returns](/docs/scos/dev/glue-api-guides/managing-returns/managing-the-returns.html).
 
 {% endinfo_block %}
 
@@ -74,12 +74,12 @@ The **guest users** can not initiate returns of their orders, as the return mana
 
 {% info_block warningBox "Note" %}
 
-For a [Configurable Bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
-The [Product Bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
+For a [Configurable Bundle](/docs/scos/user/features/configurable-bundle-feature-overview.html), you can’t select to return an entire Configurable Bundle, but you can select to return separate items from it.
+The [Product Bundles](/docs/scos/user/features/product-bundles-feature-overview.html), on the contrary, are handled as one product, so only the whole bundle can be returned. You can not return individual items of a Product Bundle.
 
 {% endinfo_block %}
 
-Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office user [processes the return](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html). For details about the return states, see [Return items states](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html).
+Once a return request has been submitted, it acquires the *Waiting for return* state. The return states change as the Back Office user [processes the return](/docs/scos/user/back-office-user-guides/sales/orders/creating-returns.html). For details about the return states, see [Return items states](/docs/scos/user/back-office-user-guides/sales/returns/managing-returns.html).
 
 {% info_block infoBox "Info" %}
 
@@ -93,11 +93,11 @@ The following figure shows how to create a return, view its details and print a 
 
 ## Return Management in the Back Office
 
-A Back Office user can create returns for the [returnable items](#returnable-items-and-a-return-policy) from the order details page of the Back Office. For details, see [Back Office user guide - Managing orders](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html). Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns. For details about how to manage the returns in the Back Office, see [Back Office user guide - Manging returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html).
+A Back Office user can create returns for the [returnable items](#returnable-items-and-a-return-policy) from the order details page of the Back Office. For details, see [Back Office user guide - Managing orders](/docs/scos/user/back-office-user-guides/sales/orders/creating-returns.html). Also, a Back Office user can view returns, change their states, print a return slip, and cancel the returns. For details about how to manage the returns in the Back Office, see [Back Office user guide - Manging returns](/docs/scos/user/back-office-user-guides/sales/returns/managing-returns.html).
 
 {% info_block infoBox "Return management process" %}
 
-To define the most suitable return management process for your project, to learn how you can use the default Spryker Return Management feature, and what custom development you might need to implement it, check out [Building a return management process: Best practices](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/building-a-return-management-process-best-practices.html).
+To define the most suitable return management process for your project, to learn how you can use the default Spryker Return Management feature, and what custom development you might need to implement it, check out [Building a return management process: Best practices](/docs/scos/user/features/return-management-feature-overview/building-a-return-management-process-best-practices.html).
 
 {% endinfo_block %}
 
@@ -119,12 +119,12 @@ The feature has the following functional constraints which are going to be resol
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create returns in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-returns.html)  |
-| [View return details, set return statuses and print return slips in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html)  |
-| [Choose a suitable return management process for your project](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/building-a-return-management-process-best-practices.html)  |
+| [Create returns in the Back Office](/docs/scos/user/back-office-user-guides/sales/orders/creating-returns.html)  |
+| [View return details, set return statuses and print return slips in the Back Office](/docs/scos/user/back-office-user-guides/sales/returns/managing-returns.html)  |
+| [Choose a suitable return management process for your project](/docs/scos/user/features/return-management-feature-overview/building-a-return-management-process-best-practices.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Return Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/return-management-feature-walkthrough.html) for developers.
+Are you a developer? See [Return Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/return-management-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

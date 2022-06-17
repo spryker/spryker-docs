@@ -3,10 +3,10 @@ title: "Glue API: Marketplace Product Offer feature integration"
 description: This document describes the process how to integrate the Marketplace Product Offer Glue API feature into a Spryker project.
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/marketplace/dev/feature-integration-guides/202200.0/glue/marketplace-product-offer-feature-integration.html
+  - /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html
 related:
   - title: Marketplace Product Offer feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product Offer Glue API feature into a Spryker project.
@@ -21,7 +21,7 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Product Offer | {{page.version}} |[Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
+| Marketplace Product Offer | {{site.version}} |[Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -142,7 +142,7 @@ Make sure that `MerchantByMerchantReferenceResourceRelationshipPlugin` is set up
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
-| Marketplace Product Offer + Prices API | | [Glue API: Marketplace Product Offer + Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html) |
-| Marketplace Product Offer + Volume Prices API | | [Glue API: Marketplace Product Offer + Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-volume-prices-feature-integration.html) |
-| Marketplace Product Offer + Wishlist API | | [Glue API: Marketplace Product Offer + Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-wishlist-feature-integration.html) |
-| Marketplace Product Offer + Cart API | | [Glue API: Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-cart-feature-integration.html) |
+| Marketplace Product Offer + Prices API | | [Glue API: Marketplace Product Offer + Prices feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-prices-feature-integration.html) |
+| Marketplace Product Offer + Volume Prices API | | [Glue API: Marketplace Product Offer + Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-volume-prices-feature-integration.html) |
+| Marketplace Product Offer + Wishlist API | | [Glue API: Marketplace Product Offer + Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-wishlist-feature-integration.html) |
+| Marketplace Product Offer + Cart API | | [Glue API: Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-cart-feature-integration.html) |

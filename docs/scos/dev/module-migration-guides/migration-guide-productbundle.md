@@ -22,13 +22,7 @@ redirect_from:
   - /v5/docs/en/mg-product-bundle
   - /v6/docs/mg-product-bundle
   - /v6/docs/en/mg-product-bundle
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productbundle.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productbundle.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productbundle.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-productbundle.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productbundle.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productbundle.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productbundle.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-productbundle.html
   - /module_migration_guides/mg-product-bundle.htm
 related:
   - title: Migration guide - Price

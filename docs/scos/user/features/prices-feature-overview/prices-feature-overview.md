@@ -14,7 +14,7 @@ redirect_from:
   - /2021080/docs/en/prices
   - /docs/prices
   - /docs/en/prices
-  - /docs/scos/user/features/202200.0/prices-feature-overview/prices-feature-overview.html
+  - /docs/scos/user/features/prices-feature-overview/prices-feature-overview.html
 ---
 
 A price can be attached to an abstract product as well as to a concrete product. The price is stored as an integer, in the smallest unit of the currency—for example, for Euro that would be cents.
@@ -45,14 +45,14 @@ The concerns for the product price calculation are the following:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of Volume Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)   |
-| [Define prices when creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html)   |
-| [Edit prices of an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/editing-abstract-products.html#editing-prices-of-an-abstract-product)   |
-| [Define prices when creating a concrete product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html)  |
-| [Edit prices of a concrete product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/editing-product-variants.html)   |
+| [Get a general idea of Volume Prices](/docs/scos/user/features/prices-feature-overview/volume-prices-overview.html)   |
+| [Define prices when creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html)   |
+| [Edit prices of an abstract product](/docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/editing-abstract-products.html#editing-prices-of-an-abstract-product)   |
+| [Define prices when creating a concrete product](/docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/creating-product-variants.html)  |
+| [Edit prices of a concrete product](/docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/editing-product-variants.html)   |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Prices feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/prices-feature-walkthrough.html) for developers.
+Are you a developer? See [Prices feature walkthrough](/docs/scos/dev/feature-walkthroughs/prices-feature-walkthrough/prices-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

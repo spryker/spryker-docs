@@ -10,18 +10,14 @@ redirect_from:
   - /2021080/docs/en/retrieving-abstract-product-prices
   - /docs/retrieving-abstract-product-prices
   - /docs/en/retrieving-abstract-product-prices
-  - /docs/scos/dev/glue-api-guides/201811.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
-  - /docs/scos/dev/glue-api-guides/201903.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
-  - /docs/scos/dev/glue-api-guides/201907.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
-  - /docs/scos/dev/glue-api-guides/202005.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
-  - /docs/scos/dev/glue-api-guides/202200.0/managing-products/abstract-products/retrieving-abstract-product-prices.html
+  - /docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-product-prices.html
 ---
 
 This endpoint allows retrieving detailed information about the prices of abstract products.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html)
 
 ## Retrieve prices of an abstract product
 
@@ -203,7 +199,7 @@ To retrieve prices of an abstract product, send the request:
 | currency.code | String | Currency code. |
 | currency.name | String | Currency name. |
 | currency.symbol | String | Currency symbol. |
-| volumePrices | Array | An array of objects defining the [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html) for the abstract product. |
+| volumePrices | Array | An array of objects defining the [volume prices](/docs/scos/user/features/prices-feature-overview/volume-prices-overview.html) for the abstract product. |
 | netAmount | Integer | Net price in cents. |
 | grossAmount | Integer | Gross price in cents. |
 | quantity | Integer | Number of items. |
@@ -215,4 +211,4 @@ To retrieve prices of an abstract product, send the request:
 | 307 | Abstract product price is not found (for example, because of the wrong abstract product SKU. |
 | 311 | Abstract product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

@@ -16,10 +16,7 @@ redirect_from:
   - /v5/docs/en/mg-shipment-cart-connector
   - /v6/docs/mg-shipment-cart-connector
   - /v6/docs/en/mg-shipment-cart-connector
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-shipmentcartconnector.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-shipmentcartconnector.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-shipmentcartconnector.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shipmentcartconnector.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-shipmentcartconnector.html
 ---
 
 ## Upgrading from version 1.0.* to version 2.0.0

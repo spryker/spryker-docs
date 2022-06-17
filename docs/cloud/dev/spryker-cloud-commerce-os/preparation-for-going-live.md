@@ -22,8 +22,8 @@ You cannot successfully deploy a project on Spryker Cloud Commerce OS unless you
 - Migrate the project's database to MariaDB if you are not already using it.
 - Split up your project's Zed endpoints as outlined in this [integration guide](/docs/scos/dev/technical-enhancement-integration-guides/integrating-separate-endpoint-bootstraps.html).
 - Verify that your project's service naming scheme is an exact match for the examples inside the [sample deploy-spryker-b2c-staging.yml file](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.spryker-b2c-staging.yml).
-- Create [deploy files](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) for each of your environments. These files must be named in a particular manner: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
-- [Define a Docker SDK version](/docs/scos/dev/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html) for the project to use.
+- Create [deploy files](/docs/scos/dev/the-docker-sdk/deploy-file/deploy-file.html) for each of your environments. These files must be named in a particular manner: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
+- [Define a Docker SDK version](/docs/scos/dev/the-docker-sdk/choosing-a-docker-sdk-version.html) for the project to use.
 - Integrate [FlySystem](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-data-import-from-an-s3-bucket.html) so that the project is using data in S3 Buckets instead of local storage.
 
 ## Until five weeks before go-live

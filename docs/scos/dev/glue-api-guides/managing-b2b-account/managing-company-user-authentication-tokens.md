@@ -10,10 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-company-user-authentication-tokens
   - /docs/managing-company-user-authentication-tokens
   - /docs/en/managing-company-user-authentication-tokens\
-  - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/managing-company-user-authentication-tokens.html
-  - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/managing-company-user-authentication-tokens.html
-  - /docs/scos/dev/glue-api-guides/201907.0/managing-b2b-account/managing-company-user-authentication-tokens.html
-  - /docs/scos/dev/glue-api-guides/202005.0/managing-b2b-account/managing-company-user-authentication-tokens.html
+  - /docs/scos/dev/glue-api-guides/managing-b2b-account/managing-company-user-authentication-tokens.html
 ---
 
 This endpoint allows refreshing a company user access token or revoking a refresh token.
@@ -21,7 +18,7 @@ This endpoint allows refreshing a company user access token or revoking a refres
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company account feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html).
 
 ## Refresh a company user authentication token
 
@@ -51,7 +48,7 @@ Request sample: refresh a company user authentication token
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| refreshToken | String | &check; | Authentication token used to refresh `accessToken`. You can get it by [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user). |
+| refreshToken | String | &check; | Authentication token used to refresh `accessToken`. You can get it by [authenticating as a company user](/docs/scos/dev/glue-api-guides/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user). |
 
 
 
@@ -105,7 +102,7 @@ To revoke a company user refresh token, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | Only required when revoking all the refresh token of a company user.  | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | Only required when revoking all the refresh token of a company user.  | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 
 
@@ -129,4 +126,4 @@ The tokens are marked as expired on the date and time of the request. You can co
 | 004 | Failed to refresh the token. |
 | 901 | Refresh token is not specified or empty. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

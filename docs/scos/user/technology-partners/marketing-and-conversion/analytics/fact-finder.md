@@ -12,23 +12,23 @@ redirect_from:
   - /docs/en/factfinder
 related:
   - title: Installing and configuring FACT-Finder
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html
+    link: docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html
   - title: Integrating FACT-Finder
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
+    link: docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html
   - title: Installing and configuring FACT-Finder NG API
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html
+    link: docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html
   - title: Using FACT-Finder search
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html
+    link: docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html
   - title: Using FACT-Finder tracking
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/using-fact-finder-tracking.html
+    link: docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-tracking.html
   - title: Exporting product data for FACT-Finder
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html
+    link: docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html
   - title: Using FACT-Finder recommendation engine
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html
+    link: docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html
   - title: Using FACT-Finder search suggestions
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html
+    link: docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html
   - title: Using FACT-Finder campaigns
-    link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html
+    link: docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html
 ---
 
 ## Partner Information
@@ -44,16 +44,16 @@ This system of permissions is based on roles that provide access to the specific
 
 ## Related Developer guides
 
-* [Integrating FACT-Finder](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html)
-* [Installing and configuring FACT-Finder](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html)
-* [Installing and configuring FACT-Finder NG API](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html)
-* [Installing and configuring FACT-Finder web components](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-web-components.html)
-* [Using FACT-Finder campaigns](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html)
-* [Using FACT-Finder recommendation engine](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html)
-* [Using FACT-Finder search](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html)
-* [Using FACT-Finder search suggestions](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html)
-* [Using FACT-Finder tracking](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/using-fact-finder-tracking.html)
-* [Exporting product data for FACT-Finder](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html)
+* [Integrating FACT-Finder](/docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html)
+* [Installing and configuring FACT-Finder](/docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html)
+* [Installing and configuring FACT-Finder NG API](/docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html)
+* [Installing and configuring FACT-Finder web components](/docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder-web-components.html)
+* [Using FACT-Finder campaigns](/docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-campaigns.html)
+* [Using FACT-Finder recommendation engine](/docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-recommendation-engine.html)
+* [Using FACT-Finder search](/docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search.html)
+* [Using FACT-Finder search suggestions](/docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-search-suggestions.html)
+* [Using FACT-Finder tracking](/docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/using-fact-finder-tracking.html)
+* [Exporting product data for FACT-Finder](/docs/scos/dev/technology-partner-guides/marketing-and-conversion/analytics/fact-finder/exporting-product-data-for-fact-finder.html)
 
 
 ---

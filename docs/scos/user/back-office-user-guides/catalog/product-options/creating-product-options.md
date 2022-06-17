@@ -10,10 +10,10 @@ redirect_from:
   - /2021080/docs/en/creating-a-product-option
   - /docs/creating-a-product-option
   - /docs/en/creating-a-product-option
-  - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-options/creating-product-options.html
+  - /docs/scos/user/back-office-user-guides/catalog/product-options/creating-product-options.html
 related:
   - title: Product Options feature overview
-    link: docs/scos/user/features/page.version/product-options-feature-overview.html
+    link: docs/scos/user/features/product-options-feature-overview.html
 ---
 
 This article describes how to create a product option.
@@ -113,4 +113,4 @@ And the values available in the drop-down lists are the product options:
 ![Select an option](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Product+Options/Product+Options%3A+Reference+Information/select-option-drop-down.png)
 
 **What's next?**
-<br>Once the option is created, you may want to know how those options are managed. See [Managing product options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/managing-product-options.html) for more details.
+<br>Once the option is created, you may want to know how those options are managed. See [Managing product options](/docs/scos/user/back-office-user-guides/catalog/product-options/managing-product-options.html) for more details.

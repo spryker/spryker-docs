@@ -17,11 +17,11 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | - | - | - |
-| Spryker Core | {{page.version}}   | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Payments | {{page.version}}   | [Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/payments-feature-integration.html) |
-| Checkout | {{page.version}} | [Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html)
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html)
-| Marketplace Order Management | {{page.version}} | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html)
+| Spryker Core | {{site.version}}   | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
+| Payments | {{site.version}}   | [Payments feature integration](/docs/scos/dev/feature-integration-guides/payments-feature-integration.html) |
+| Checkout | {{site.version}} | [Checkout feature integration](/docs/scos/dev/feature-integration-guides/checkout-feature-integration.html)
+| Marketplace Merchant | {{site.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration.html)
+| Marketplace Order Management | {{site.version}} | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html)
 
 
 ### 1) Install required modules using Сomposer

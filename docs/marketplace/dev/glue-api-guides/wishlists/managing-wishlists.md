@@ -3,20 +3,17 @@ title: Managing wishlists
 description: Retrieve details about wishlists and learn what else you can do with the resource in the Spryker Marketplace.
 template: glue-api-storefront-guide-template
 redirect_from:
-  - /docs/marketplace/dev/glue-api-guides/201811.0/wishlists/managing-wishlists.html
-  - /docs/marketplace/dev/glue-api-guides/201903.0/wishlists/managing-wishlists.html
-  - /docs/marketplace/dev/glue-api-guides/201907.0/wishlists/managing-wishlists.html
-  - /docs/marketplace/dev/glue-api-guides/202005.0/wishlists/managing-wishlists.html
+  - /docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html
 related:
   - title: Managing wishlist items
-    link: docs/marketplace/dev/glue-api-guides/page.version/wishlists/managing-wishlist-items.html
+    link: docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlist-items.html
 ---
 
-The Marketplace Wishlists API allows creating list and deleting [wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html) in the Marketplace, as well as managing the items in them.
+The Marketplace Wishlists API allows creating list and deleting [wishlists](/docs/scos/user/features/wishlist-feature-overview.html) in the Marketplace, as well as managing the items in them.
 
 ## Installation
 
-For detailed information about the modules that provide the API functionality and related installation instructions, see [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html)
+For detailed information about the modules that provide the API functionality and related installation instructions, see [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-wishlist-feature-integration.html)
 
 ## Create a wishlist
 
@@ -30,7 +27,7 @@ To create a wishlist, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED? | DESCRIPTION |
 | ---------- | -------- | -------- | -------------- |
-| Authorization | string       | &check;         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html). |
 
 Request sample: create a wishlist
 
@@ -104,7 +101,7 @@ To retrieve all wishlists of a customer, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED? | DESCRIPTION |
 | ------------ | ----------- | -------- | --------- |
-| Authorization | string       | &check;         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;         | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html). |
 
 ### Response
 
@@ -426,9 +423,9 @@ To retrieve all wishlists of a customer, send the request:
 
 For attributes of the included resources, see:
 
-- [Add an item to a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlist-items.html#add-an-item-to-a-wishlist)
-- [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
-- [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html)
+- [Add an item to a wishlist](/docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlist-items.html#add-an-item-to-a-wishlist)
+- [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
+- [Retrieve a product label](/docs/scos/dev/glue-api-guides/managing-products/retrieving-product-labels.html)
 
 ## Retrieve a wishlist
 
@@ -440,13 +437,13 @@ To retrieve a specific wishlist, send the request:
 
 | PATH PARAMETER        | DESCRIPTION      |
 | ---------------- | ------------------------- |
-| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to retrieve the items of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
+| {% raw %}***{{wishlist_id}}***{% endraw %} | Unique identifier of the wishlist to retrieve the items of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
 
 ### Request
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION  |
 | ------------ | ----------- | ------- | -------------- |
-| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION     | POSSIBLE VALUES |
 | ---------- | -------------------- | --------------------- |
@@ -2220,17 +2217,17 @@ To retrieve a specific wishlist, send the request:
 
 For the attributes of the included resources, see
 
-[Adding items to wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlist-items.html#add-an-item-to-a-wishlist)
+[Adding items to wishlist](/docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlist-items.html#add-an-item-to-a-wishlist)
 
-[Retrieving concrete products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+[Retrieving concrete products](/docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 
-[Retrieving concrete product availabilities](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html)
+[Retrieving concrete product availabilities](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-product-availability.html)
 
-[Retrieving concrete product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-prices.html)
+[Retrieving concrete product prices](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-product-prices.html)
 
-[Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html)
+[Retrieving product offers](/docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offers.html)
 
-[Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html#merchants-response-attributes)
+[Retrieving merchants](/docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchants.html#merchants-response-attributes)
 
 ## Edit a wishlist
 
@@ -2244,7 +2241,7 @@ To edit a wishlist, send the request:
 
 | HEADER KEY    | HEADER VALUE | REQUIRED | DESCRIPTION    |
 | ------ | ------ | ------ | -------------- |
-| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html). |
 
 Request sample: edit a wishlist
 
@@ -2266,7 +2263,7 @@ The following sample changes the name of a wishlist.
 
 | ATTRIBUTE | TYPE   | REQUIRED | DESCRIPTION    |
 | ------ | ---- | ------- | ----------------------- |
-| id        | string | &check;   | Unique identifier of the wishlist to update the name of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
+| id        | string | &check;   | Unique identifier of the wishlist to update the name of. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
 | name      | string | &check;   | New name of the wishlist.   |
 
 ### Response
@@ -2290,13 +2287,13 @@ To delete a wishlist, send the request:
 
 | PATH PARAMETER   | DESCRIPTION     |
 | --------- | ------------------- |
-| ***{{wishlist_id}}*** | Unique identifier of the wishlist to delete. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
+| ***{{wishlist_id}}*** | Unique identifier of the wishlist to delete. [Create a wishlist](/docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
 
 ### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION   |
 | ---------- | -------- | ----- | ----------------- |
-| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string       | &check;        | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html). |
 
 Request sample:
 
@@ -2316,4 +2313,4 @@ If the wishlist is deleted successfully, the endpoint returns the `204 No Conten
 | 204  | Cannot update the wishlist.                   |
 | 205  | Cannot remove the wishlist.                   |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

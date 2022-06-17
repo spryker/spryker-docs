@@ -16,10 +16,7 @@ redirect_from:
   - /v5/docs/en/mg-availabilitystorage
   - /v6/docs/mg-availabilitystorage
   - /v6/docs/en/mg-availabilitystorage
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-availabilitystorage.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-availabilitystorage.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-availabilitystorage.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-availabilitystorage.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-availabilitystorage.html
 ---
 
 ## Upgrading from version 1.* to version 2.0.0

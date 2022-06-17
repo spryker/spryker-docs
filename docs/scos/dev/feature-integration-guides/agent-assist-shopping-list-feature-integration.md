@@ -19,9 +19,9 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME          | VERSION | INTEGRATION GUIDE                                            |
 | ------------- | ------- | ------------------------------------------------------------ |
-| Spryker Core  | master  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Agent Assist  | master  | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-feature-integration.html) |
-| Shopping List | master  | [Shopping lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html) |
+| Spryker Core  | master  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
+| Agent Assist  | master  | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/agent-assist-feature-integration.html) |
+| Shopping List | master  | [Shopping lists feature integration](/docs/scos/dev/feature-integration-guides/shopping-lists-feature-integration.html) |
 
 ## 1) Set up behavior
 
@@ -67,5 +67,5 @@ Integrate the following related features:
 
 | FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | ---------- | ---------------- | ----------------- |
-| Agent Assist | ✓      | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-feature-integration.html) |
-| Agent Assist + Cart |       | [Agent Assist + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-cart-feature-integration.html) |
+| Agent Assist | ✓      | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/agent-assist-feature-integration.html) |
+| Agent Assist + Cart |       | [Agent Assist + Cart feature integration](/docs/scos/dev/feature-integration-guides/agent-assist-cart-feature-integration.html) |

@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-glue-application-feature-integration
   - /docs/glue-api-glue-application-feature-integration
   - /docs/en/glue-api-glue-application-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-glue-application-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/glue-api/glue-api-glue-application-feature-integration.html
 ---
 
 Follow the steps below to install Glue application feature API.
@@ -21,7 +21,7 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | TYPE | VERSION |
 | --- | --- | --- |
-| Spryker Core | Feature | {{page.version}} |
+| Spryker Core | Feature | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:

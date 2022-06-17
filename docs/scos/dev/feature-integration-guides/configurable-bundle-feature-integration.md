@@ -10,20 +10,20 @@ redirect_from:
   - /2021080/docs/en/configurable-bundle-feature-integration
   - /docs/configurable-bundle-feature-integration
   - /docs/en/configurable-bundle-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202200.0/configurable-bundle-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/configurable-bundle-feature-integration.html
 related:
   - title: Merchant Product Restrictions feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/merchant-product-restrictions-feature-integration.html
   - title: Product Lists + Catalog feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-lists-catalog-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/product-lists-catalog-feature-integration.html
   - title: Prices feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/prices-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/prices-feature-integration.html
   - title: Product feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/product-feature-integration.html
   - title: Product Lists feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-lists-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/product-lists-feature-integration.html
   - title: Product Images + Configurable Bundle feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-images-configurable-bundle-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/product-images-configurable-bundle-feature-integration.html
 ---
 
 ## Install feature core
@@ -34,17 +34,17 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core	 | {{page.version}} |
-| Cart | {{page.version}} |
-| Product | {{page.version}} |
-| Product Lists	 | {{page.version}} |
+| Spryker Core	 | {{site.version}} |
+| Cart | {{site.version}} |
+| Product | {{site.version}} |
+| Product Lists	 | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/configurable-bundle:"^{{page.version}}" --update-with-dependencies
+composer require spryker-feature/configurable-bundle:"^{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1177,17 +1177,17 @@ Please overview and install the necessary features before beginning the integrat
 
 | Feature | Version |
 | --- | --- |
-| Spryker Core | {{page.version}} |
-| Cart | {{page.version}} |
-| Product | {{page.version}} |
-| Prices | {{page.version}} |
+| Spryker Core | {{site.version}} |
+| Cart | {{site.version}} |
+| Product | {{site.version}} |
+| Prices | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/configurable-bundle: "^{{page.version}}" --update-with-dependencies
+composer require spryker-feature/configurable-bundle: "^{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

@@ -14,9 +14,7 @@ redirect_from:
   - /v5/docs/en/migration-guide-validator
   - /v6/docs/migration-guide-validator
   - /v6/docs/en/migration-guide-validator
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-validator.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-validator.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-validator.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-validator.html
 ---
 
 {% info_block errorBox %}

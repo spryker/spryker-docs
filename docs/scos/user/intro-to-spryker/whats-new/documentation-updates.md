@@ -27,17 +27,17 @@ redirect_from:
 This page lists all the updates to the documentation made for each release.
 Check out our [release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) to learn more about the releases.
 
-## Release {{page.version}}
+## Release {{site.version}}
 Below you will find the list of the new/updated documentation released as part of the [{{site.version}} Spryker product release](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html):
 
 ### Features:
 
-* [Split Delivery](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/split-delivery-overview.html)
+* [Split Delivery](/docs/scos/user/features/order-management-feature-overview/split-delivery-overview.html)
 
 <details>
 <summary markdown='span'>Feature overview</summary>
 
-[Split Delivery Overview](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/split-delivery-overview.html)
+[Split Delivery Overview](/docs/scos/user/features/order-management-feature-overview/split-delivery-overview.html)
 
 </details>
 
@@ -61,32 +61,32 @@ Below you will find the list of the new/updated documentation released as part o
 <summary markdown='span'>Back Office user guides</summary>
 
 
-* [Creating a New Shipment for Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/creating-shipments.html)
-* [Editing Shipment Details](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/editing-shipments.html)
+* [Creating a New Shipment for Order](/docs/scos/user/back-office-user-guides/sales/orders/creating-shipments.html)
+* [Editing Shipment Details](/docs/scos/user/back-office-user-guides/sales/orders/editing-shipments.html)
 
 </details>
 <details>
 <summary markdown='span'>Shop user guide</summary>
 
 
-[Assigning Multiple Delivery Addresses to Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/creating-shipments.html)
+[Assigning Multiple Delivery Addresses to Order](/docs/scos/user/back-office-user-guides/sales/orders/creating-shipments.html)
 
 
 </details>
 
-* [Packaging Units with Decimal Stock](/docs/scos/user/features/{{site.version}}/packaging-units-feature-overview.html)
+* [Packaging Units with Decimal Stock](/docs/scos/user/features/packaging-units-feature-overview.html)
 
 <details>
 <summary markdown='span'>Feature overview</summary>
 
-[Packaging Units Feature Overview](/docs/scos/user/features/{{site.version}}/packaging-units-feature-overview.html)
+[Packaging Units Feature Overview](/docs/scos/user/features/packaging-units-feature-overview.html)
 
 </details>
 
 <details>
 <summary markdown='span'>Integration guide</summary>
 
-[Packaging Units Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/packaging-units-feature-integration.html)
+[Packaging Units Feature Integration](/docs/scos/dev/feature-integration-guides/packaging-units-feature-integration.html)
 
 </details>
 
@@ -105,17 +105,17 @@ Below you will find the list of the new/updated documentation released as part o
  </details>
 
 
-* [Scheduled Prices](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
+* [Scheduled Prices](/docs/scos/user/features/scheduled-prices-feature-overview.html)
 <details>
 <summary markdown='span'>Feature overview</summary>
 
-[Scheduled Prices Feature Overview](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
+[Scheduled Prices Feature Overview](/docs/scos/user/features/scheduled-prices-feature-overview.html)
 
 </details>
 <details>
 <summary markdown='span'>Integration guide</summary>
 
-[Scheduled Prices Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/scheduled-prices-feature-integration.html)
+[Scheduled Prices Feature Integration](/docs/scos/dev/feature-integration-guides/scheduled-prices-feature-integration.html)
 
 </details>
 <details>
@@ -135,25 +135,25 @@ Below you will find the list of the new/updated documentation released as part o
 <details>
 <summary markdown='span'>Back Office user guides</summary>
 
-* [Creating Scheduled Prices](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/scheduled-prices/creating-scheduled-prices.html)
-* [Managing Scheduled Prices](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/scheduled-prices/managing-scheduled-prices.html)
-* [Scheduled Prices: Reference Information](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/scheduled-prices/creating-scheduled-prices.html#reference-information-creating-scheduled-prices)   
+* [Creating Scheduled Prices](/docs/scos/user/back-office-user-guides/catalog/scheduled-prices/creating-scheduled-prices.html)
+* [Managing Scheduled Prices](/docs/scos/user/back-office-user-guides/catalog/scheduled-prices/managing-scheduled-prices.html)
+* [Scheduled Prices: Reference Information](/docs/scos/user/back-office-user-guides/catalog/scheduled-prices/creating-scheduled-prices.html#reference-information-creating-scheduled-prices)   
 
 </details>
 
-* [CMS Templates & Slots](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html)
+* [CMS Templates & Slots](/docs/scos/user/features/cms-feature-overview/templates-and-slots-overview.html)
 
 <details>
 <summary markdown='span'>Feature overview</summary>
 
-[CMS Templates & Slots Feature Overview](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html )
+[CMS Templates & Slots Feature Overview](/docs/scos/user/features/cms-feature-overview/templates-and-slots-overview.html )
 
 </details>
 
 <details>
 <summary markdown='span'>Integration guide</summary>
 
-[CMS Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cms-feature-integration.html)
+[CMS Feature Integration](/docs/scos/dev/feature-integration-guides/cms-feature-integration.html)
 
 </details>
 
@@ -171,63 +171,63 @@ Below you will find the list of the new/updated documentation released as part o
 <details>
 <summary markdown='span'>Back Office user guides</summary>
 
-* [Slots](/docs/scos/user/back-office-user-guides/{{site.version}}/content/slots/managing-slots.html)
-* [Managing Slots](/docs/scos/user/back-office-user-guides/{{site.version}}/content/slots/managing-slots.html)
+* [Slots](/docs/scos/user/back-office-user-guides/content/slots/managing-slots.html)
+* [Managing Slots](/docs/scos/user/back-office-user-guides/content/slots/managing-slots.html)
 
 </details>
 
 <details>
 <summary markdown='span'>Technology Partners guides</summary>
 
-[Coremedia with Templates & Slots](/docs/scos/user/technology-partners/{{site.version}}/content-management/coremedia.html)
+[Coremedia with Templates & Slots](/docs/scos/user/technology-partners/content-management/coremedia.html)
 
 
 </details>
 
-* [Approval Process](/docs/scos/user/features/{{site.version}}/approval-process-feature-overview.html)
+* [Approval Process](/docs/scos/user/features/approval-process-feature-overview.html)
 
 <details>
 <summary markdown='span'>Feature overview</summary>
 
-[Approval Process Feature Overview](/docs/scos/user/features/{{site.version}}/approval-process-feature-overview.html)
+[Approval Process Feature Overview](/docs/scos/user/features/approval-process-feature-overview.html)
 
 </details>
 
 <details>
 <summary markdown='span'>Integration guides</summary>
 
-* [Approval Process Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/approval-process-feature-integration.html)
-* [Shipment + Approval Process Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/shipment-approval-process-feature-integration.html)
-* [Shipment Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/shipment-feature-integration.html)
+* [Approval Process Feature Integration](/docs/scos/dev/feature-integration-guides/approval-process-feature-integration.html)
+* [Shipment + Approval Process Feature Integration](/docs/scos/dev/feature-integration-guides/shipment-approval-process-feature-integration.html)
+* [Shipment Feature Integration](/docs/scos/dev/feature-integration-guides/shipment-feature-integration.html)
 
 </details>
 
 <details>
 <summary markdown='span'>Shop User guide</summary>
 
-[Shop Guide - Approval Process](/docs/scos/user/features/{{site.version}}/approval-process-feature-overview.html)
+[Shop Guide - Approval Process](/docs/scos/user/features/approval-process-feature-overview.html)
 
 
 </details>
 
-* [Configurable Bundle](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
+* [Configurable Bundle](/docs/scos/user/features/configurable-bundle-feature-overview.html)
 
 <details>
 <summary markdown='span'>Feature overview</summary>
 
-[Configurable Bundle Feature Overview](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
+[Configurable Bundle Feature Overview](/docs/scos/user/features/configurable-bundle-feature-overview.html)
 
 </details>
 
 <details>
 <summary markdown='span'>Integration guides</summary>
 
-* [Configurable Bundle Feature Integration](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
-* [Product Images + Configurable Bundle](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-images-configurable-bundle-feature-integration.html)
-* [Merchant Product Restrictions](/docs/scos/dev/feature-integration-guides/{{site.version}}/merchant-product-restrictions-feature-integration.html)
-* [Product Lists + Catalog](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-lists-catalog-feature-integration.html)
-* [Prices](/docs/scos/dev/feature-integration-guides/{{site.version}}/prices-feature-integration.html)
-* [Product](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)
+* [Configurable Bundle Feature Integration](/docs/scos/user/features/configurable-bundle-feature-overview.html)
+* [Product Images + Configurable Bundle](/docs/scos/dev/feature-integration-guides/product-images-configurable-bundle-feature-integration.html)
+* [Merchant Product Restrictions](/docs/scos/dev/feature-integration-guides/merchant-product-restrictions-feature-integration.html)
+* [Product Lists + Catalog](/docs/scos/dev/feature-integration-guides/product-lists-catalog-feature-integration.html)
+* [Prices](/docs/scos/dev/feature-integration-guides/prices-feature-integration.html)
+* [Product](/docs/scos/dev/feature-integration-guides/product-feature-integration.html)
 
 
 </details>
@@ -250,62 +250,62 @@ Below you will find the list of the new/updated documentation released as part o
 
 ### Glue API Documentation:
 
-* [Product Labels API](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-product-labels.html)
+* [Product Labels API](/docs/scos/dev/glue-api-guides/managing-products/retrieving-product-labels.html)
 
 <details>
 <summary markdown='span'>Integration guide</summary>
 
-[Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
+[Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 
 </details>
 
-* [Product Discounts API](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-promotional-items.html)
+* [Product Discounts API](/docs/scos/dev/glue-api-guides/retrieving-promotional-items.html)
 
 <details>
 <summary markdown='span'>Integration guide</summary>
 
-[Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
+[Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 
 </details>
 
 
-* [Ratings and Reviews API](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/managing-product-ratings-and-reviews.html)
+* [Ratings and Reviews API](/docs/scos/dev/glue-api-guides/managing-products/managing-product-ratings-and-reviews.html)
 
 <details>
 <summary markdown='span'>Integration guide</summary>
 
-[Glue API: Product Rating & Reviews Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)
+[Glue API: Product Rating & Reviews Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)
 
 </details>
 
 
 * Product Options API
-[Retrieving prodiuct options for abstract products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-products.html)
-[Retrieving prodiuct options for concrete products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html)
+[Retrieving prodiuct options for abstract products](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-products.html)
+[Retrieving prodiuct options for concrete products](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-products.html)
 
 <details>
 <summary markdown='span'>Integration guide</summary>
 
-[Glue API: Product Options Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-options-feature-integration.html)
+[Glue API: Product Options Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)
 
 </details>
 
-* [Search Engine Friendly URLs](/docs/scos/dev/glue-api-guides/{{site.version}}/resolving-search-engine-friendly-urls.html)
-* [Assigning Guest Cart to Registered Customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/guest-carts/managing-guest-carts.html#assign-a-guest-cart-to-a-registered-customer)
+* [Search Engine Friendly URLs](/docs/scos/dev/glue-api-guides/resolving-search-engine-friendly-urls.html)
+* [Assigning Guest Cart to Registered Customer](/docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-guest-carts.html#assign-a-guest-cart-to-a-registered-customer)
 * [Managing Customer Access to API Resources](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/managing-customer-access-to-glue-api-resources.html)
-* [Getting the List of Protected Resources](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-protected-resources.html)
+* [Getting the List of Protected Resources](/docs/scos/dev/glue-api-guides/retrieving-protected-resources.html)
 
 
 ### Spryker in Docker
 
 * [Queue Worker](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#queue)
-* [Deploy File Reference](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
+* [Deploy File Reference](/docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-reference-1.0.html)
 * [Health checks](/docs/scos/dev/technical-enhancement-integration-guides/integrating-health-checks.html)
-* [Asset Management](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/asset-management.html)
+* [Asset Management](/docs/scos/user/features/file-manager-feature-overview/asset-management.html)
 <details>
 <summary markdown='span'>Feature overview</summary>
 
-[Asset Management Feature Overview](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/asset-management.html)
+[Asset Management Feature Overview](/docs/scos/user/features/file-manager-feature-overview/asset-management.html)
 
 </details>
 
@@ -322,17 +322,17 @@ Below you will find the list of the new/updated documentation released as part o
 #### Back Office user guides:
 
 * Payment Management
-    * [Managing Payment Methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/payment-methods/managing-payment-methods.html)
-* [Shipment](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/creating-shipments.html)
+    * [Managing Payment Methods](/docs/scos/user/back-office-user-guides/administration/payment-methods/managing-payment-methods.html)
+* [Shipment](/docs/scos/user/back-office-user-guides/sales/orders/creating-shipments.html)
 
-    * [Creating a Carrier Company](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-carrier-companies.html)
-    * [Creating and Managing Delivery Methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html)
-    * [Delivery Methods: Reference Information](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html#reference-information-creating-delivery-methods)
+    * [Creating a Carrier Company](/docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-carrier-companies.html)
+    * [Creating and Managing Delivery Methods](/docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-and-managing-delivery-methods.html)
+    * [Delivery Methods: Reference Information](/docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-and-managing-delivery-methods.html#reference-information-creating-delivery-methods)
  * Warehouses
-    * [Creating a Warehouse](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/creating-warehouses.html)
-    * [Managing Warehouses](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/warehouses/managing-warehouses.html)
-    * [Warehouses: Reference Information](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html)
-    * [Stores](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/stores.html)
+    * [Creating a Warehouse](/docs/scos/user/back-office-user-guides/administration/warehouses/creating-warehouses.html)
+    * [Managing Warehouses](/docs/scos/user/back-office-user-guides/administration/warehouses/managing-warehouses.html)
+    * [Warehouses: Reference Information](/docs/scos/user/features/inventory-management-feature-overview.html)
+    * [Stores](/docs/scos/user/back-office-user-guides/administration/stores.html)
 
 #### HowTos:
 
@@ -342,7 +342,7 @@ Below you will find the list of the new/updated documentation released as part o
 
 #### Other documentation:
 * [Multiple Stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html)
-* [Inventory](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html)
+* [Inventory](/docs/scos/user/features/inventory-management-feature-overview.html)
 * [Custom Twig Functions for Yves](/docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html)
 * [Custom Twig Functions for Zed](/docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html)
 

@@ -18,7 +18,7 @@ redirect_from:
   - /2021080/docs/en/about-user-guides
   - /docs/about-user-guides
   - /docs/en/about-user-guides
-  - /docs/scos/user/back-office-user-guides/202200.0/about-back-office-user-guides.html
+  - /docs/scos/user/back-office-user-guides/about-back-office-user-guides.html
 ---
 
 The Back Office user guide helps shop administrators and shop owners manage their stores from the shop administration area or the Back Office.

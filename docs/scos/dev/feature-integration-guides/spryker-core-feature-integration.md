@@ -11,9 +11,7 @@ redirect_from:
   - /docs/spryker-core-feature-integration
   - /docs/en/spryker-core-feature-integration
   - /v20/docs/install-core-module
-  - /docs/scos/dev/feature-integration-guides/202200.0/spryker-core-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201811.0/spryker-core-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201903.0/spryker-core-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html
 ---
 
 This document describes how to integrate the Spryker Core feature into a Spryker project.
@@ -38,7 +36,7 @@ Follow the steps below to install the Spryker Core feature core.
 Run the following command to install the required modules:
 
 ```bash
-composer require "spryker-feature/spryker-core":"{{page.version}}" --update-with-dependencies
+composer require "spryker-feature/spryker-core":"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -685,7 +683,7 @@ Follow the steps below to install the front end of the Spryker Core feature.
 Run the following command to install the required modules:
 
 ```bash
-composer require "spryker-feature/spryker-core": "{{page.version}}"
+composer require "spryker-feature/spryker-core": "{{site.version}}"
 ```
 
 ### 2) Set up configuration

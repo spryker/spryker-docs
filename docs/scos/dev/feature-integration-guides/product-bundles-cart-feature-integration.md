@@ -10,10 +10,7 @@ redirect_from:
   - /2021080/docs/en/product-bundles-cart-feature-integration
   - /docs/product-bundles-cart-feature-integration
   - /docs/en/product-bundles-cart-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/product-bundles-cart-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201903.0/product-bundles-cart-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201907.0/product-bundles-cart-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202005.0/product-bundles-cart-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/product-bundles-cart-feature-integration.html
 ---
 
 ## Install feature core
@@ -24,9 +21,9 @@ To start feature integration, overview and install the necessary features:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-| Product Bundles | {{page.version}} |
-| Cart | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Product Bundles | {{site.version}} |
+| Cart | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Set up behavior
 

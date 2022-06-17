@@ -32,7 +32,7 @@ To start integrating Docker into your project:
     * [Installing Docker prerequisites on Windows with WSL1](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html).
     * [Installing Docker prerequisites on Windowswith WSL2](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html).
 
-2. Integrate the [Spryker Core](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) feature into your project.
+2. Integrate the [Spryker Core](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) feature into your project.
 
 ## Set up .dockerignore
 
@@ -64,7 +64,7 @@ In `config/Shared`, adjust or create a configuration file. The name of the file 
 
 ## Set up a Deploy file
 
-Set up a [Deploy file](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) per your infrastructure requirements using the examples in the table:
+Set up a [Deploy file](/docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-reference-1.0.html) per your infrastructure requirements using the examples in the table:
 
 | DEVELOPMENT MODE | DEMO MODE |
 | --- | --- |
@@ -120,7 +120,7 @@ Ensure that, in the `hosts` file in the local environment, all the domains from 
 
 ## Endpoints
 
-To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. See [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html) to learn about the Deploy file.
+To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. See [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-reference-1.0.html) to learn about the Deploy file.
 
 {% info_block infoBox "RabbitMQ UI credentials" %}
 
@@ -135,8 +135,8 @@ To get the full and up-to-date list of commands, run `docker/sdk help`.
 ## Next steps
 
 * [Troubleshooting](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-spryker-in-docker-issues.html)
-* [Debugging Setup in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
-* [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)
-* [Services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html)
+* [Debugging Setup in Docker](/docs/scos/dev/the-docker-sdk/configuring-debugging-in-docker.html)
+* [Deploy File Reference - 1.0](/docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-reference-1.0.html)
+* [Services](/docs/scos/dev/the-docker-sdk/configuring-services.html)
 * [Self-signed SSL Certificate Setup](/docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html)
 * [Adjusting Jenkins for a Docker environment](/docs/scos/dev/setup/installing-spryker-with-docker/configuration/adjusting-jenkins-for-a-docker-environment.html)

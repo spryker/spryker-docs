@@ -10,20 +10,17 @@ redirect_from:
   - /2021080/docs/en/retrieving-category-nodes
   - /docs/retrieving-category-nodes
   - /docs/en/retrieving-category-nodes
-  - /docs/scos/dev/glue-api-guides/201811.0/retrieving-categories/retrieving-category-nodes.html
-  - /docs/scos/dev/glue-api-guides/201903.0/retrieving-categories/retrieving-category-nodes.html
-  - /docs/scos/dev/glue-api-guides/201907.0/retrieving-categories/retrieving-category-nodes.html
-  - /docs/scos/dev/glue-api-guides/202005.0/retrieving-categories/retrieving-category-nodes.html
+  - /docs/scos/dev/glue-api-guides/retrieving-categories/retrieving-category-nodes.html
 related:
   - title: Category Management feature overview
-    link: docs/scos/user/features/page.version/category-management-feature-overview.html
+    link: docs/scos/user/features/category-management-feature-overview.html
 ---
 
 This endpoint allows retrieving category nodes.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Category API Feature Integration](/docs/scos/dev/feature-integration-guides/category-management-feature-integration.html).
 
 ## Retrieve a category node
 
@@ -36,7 +33,7 @@ To retrieve a category node, send the request:
 
 |PATH PARAMETER | DESCRIPTION |
 |---|---|
-| ***node_id*** | ID of a node to get information for. [Retrieve a category tree](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-trees.html#retrieve-a-category-tree) to get a full list of node IDs. |
+| ***node_id*** | ID of a node to get information for. [Retrieve a category tree](/docs/scos/dev/glue-api-guides/retrieving-categories/retrieving-category-trees.html#retrieve-a-category-tree) to get a full list of node IDs. |
 
 ### Request
 
@@ -143,4 +140,4 @@ Request sample: retrieve a category node
 | 701 | Node ID not specified or invalid. |
 | 703 | Node with the specified ID was not found. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/product-groups-feature-integration
   - /docs/product-groups-feature-integration
   - /docs/en/product-groups-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202200.0/product-groups-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/product-groups-feature-integration.html
 ---
 
 ## Install feature core
@@ -23,15 +23,15 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Product | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Product | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/product-groups: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/product-groups: "{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -276,8 +276,8 @@ Overview and install the necessary features before beginning the integration ste
 
 | NAME | VERSION |
 | --- | --- |
-| Product | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Product | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 
 ### 1) Install the required modules using Composer
@@ -285,7 +285,7 @@ Overview and install the necessary features before beginning the integration ste
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/product-groups: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/product-groups: "{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -364,6 +364,6 @@ Make sure that `ProductGroupColorWidget` has been registered:
 
 | FEATURE | FEATURE INTEGRATION GUIDE |
 | --- | --- |
-| Product Group + Product Labels | [Product Group + Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-group-product-labels-feature-integration.html) |
-| Product Group + Product Rating & Reviews | [Product Group + Product Rating & Reviews feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-group-product-rating-and-reviews-feature-integration.html) |
-| Product Group + Cart | [Product Group + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-group-cart-feature-integration.html)  |
+| Product Group + Product Labels | [Product Group + Product Labels feature integration](/docs/scos/dev/feature-integration-guides/product-group-product-labels-feature-integration.html) |
+| Product Group + Product Rating & Reviews | [Product Group + Product Rating & Reviews feature integration](/docs/scos/dev/feature-integration-guides/product-group-product-rating-and-reviews-feature-integration.html) |
+| Product Group + Cart | [Product Group + Cart feature integration](/docs/scos/dev/feature-integration-guides/product-group-cart-feature-integration.html)  |

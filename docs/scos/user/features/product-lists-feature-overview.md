@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/product-lists-feature-overview
   - /docs/product-lists-feature-overview
   - /docs/en/product-lists-feature-overview
-  - /docs/scos/user/features/202200.0/product-lists-feature-overview.html
+  - /docs/scos/user/features/product-lists-feature-overview.html
 ---
 
 Configure product availability for specific companies by blacklisting or whitelisting products for them. Let's say you want to hide some products, or even a category, from a company you've signed a contract with. You create a blacklist of those products and assign it to the company. This will make it impossible for this company to purchase the blacklisted product.
@@ -21,11 +21,11 @@ Configure product availability for specific companies by blacklisting or whiteli
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create product lists](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/creating-product-lists.html)  |
-| [Manage product lists](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html)  |
+| [Create product lists](/docs/scos/user/back-office-user-guides/catalog/product-lists/creating-product-lists.html)  |
+| [Manage product lists](/docs/scos/user/back-office-user-guides/catalog/product-lists/managing-product-lists.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Product Lists feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-lists-feature-walkthrough.html) for developers.
+Are you a developer? See [Product Lists feature walkthrough](/docs/scos/dev/feature-walkthroughs/product-lists-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

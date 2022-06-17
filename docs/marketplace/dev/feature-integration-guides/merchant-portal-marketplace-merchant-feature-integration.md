@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 related:
   - title: Marketplace Merchant feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Merchant Portal - Marketplace Merchant feature into a Spryker project.
@@ -20,8 +20,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE  |
 | -------------------- | ------- | ------------------ |
-| Marketplace Merchant Portal Core | {{page.version}}  | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html) |
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Marketplace Merchant Portal Core | {{site.version}}  | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-core-feature-integration.html) |
+| Marketplace Merchant | {{site.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 

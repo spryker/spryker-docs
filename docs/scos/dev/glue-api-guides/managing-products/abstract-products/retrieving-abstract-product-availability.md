@@ -10,16 +10,14 @@ redirect_from:
   - /2021080/docs/en/retrieving-abstract-product-availability
   - /docs/retrieving-abstract-product-availability
   - /docs/en/retrieving-abstract-product-availability
-  - /docs/scos/dev/glue-api-guides/201811.0/managing-products/abstract-products/retrieving-abstract-product-availability.html
-  - /docs/scos/dev/glue-api-guides/201907.0/managing-products/abstract-products/retrieving-abstract-product-availability.html
-  - /docs/scos/dev/glue-api-guides/202005.0/managing-products/abstract-products/retrieving-abstract-product-availability.html
+  - /docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-product-availability.html
 ---
 
 This endpoint allows retrieving information about availability of abstract products.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-inventory-management-feature-integration.html)
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-inventory-management-feature-integration.html)
 
 ## Retrieve availability of an abstract product
 
@@ -78,4 +76,4 @@ Response sample: retrieve availability of an abstract product
 | 305 | Availability is not found. |
 | 311 | Abstract product SKU is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

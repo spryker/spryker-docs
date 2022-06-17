@@ -5,9 +5,9 @@ description: This document describes the merchant_store.csv file to configure me
 template: import-file-template
 related:
   - title: Marketplace Merchant feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-feature-walkthrough.html
   - title: Marketplace Merchant feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
 ---
 
 This document describes the `merchant_store.csv` file to configure merchant's stores in your Spryker shop.
@@ -31,7 +31,7 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-- [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html)
+- [merchant.csv](/docs/marketplace/dev/data-import/file-details-merchant.csv.html)
 - `stores.php` configuration file of the demo shop PHP project, where stores are defined initially
 
 ## Import template file and content example

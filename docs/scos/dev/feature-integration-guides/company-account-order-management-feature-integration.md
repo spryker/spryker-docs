@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/company-account-order-management-feature-integration
 related:
   - title: Company Account
-    link: docs/scos/user/features/page.version/company-account-feature-overview/company-account-feature-overview.html
+    link: docs/scos/user/features/company-account-feature-overview/company-account-feature-overview.html
 ---
 
 ## Install feature core
@@ -23,9 +23,9 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Order Management | {{page.version}} |
-| Company Account | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Order Management | {{site.version}} |
+| Company Account | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
@@ -328,8 +328,8 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Customer Account Management | {{page.version}} |
-| Company Account | {{page.version}} |
+| Customer Account Management | {{site.version}} |
+| Company Account | {{site.version}} |
 
 
 Append glossary according to your configuration:

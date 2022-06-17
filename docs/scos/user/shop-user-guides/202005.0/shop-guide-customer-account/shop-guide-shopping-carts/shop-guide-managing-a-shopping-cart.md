@@ -40,22 +40,22 @@ To update the cart name:
 If you want to discard the changes, click **Back**.
 ***
 ## Managing Order Items Details
-In the *Items* section, you can change items quantity, remove the items or [add a comment](/docs/scos/user/features/{{page.version}}/comments-feature-overview.html) per item.
+In the *Items* section, you can change items quantity, remove the items or [add a comment](/docs/scos/user/features/comments-feature-overview.html) per item.
 
 **To change the items quantity**, use the plus or minus icons.
 
 **To remove the items**, click **Delete** (1) for each item or click **Delete all** (2) if you want to remove all the items from the cart.
 
-**To add a comment**, in the **Add a comment** field, add a message and click **Save**. For more information on how to manage comments in the cart, see [Shop Guide - Managing Comments](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-comments/shop-guide-managing-comments.html#shop-guide---managing-comments).
+**To add a comment**, in the **Add a comment** field, add a message and click **Save**. For more information on how to manage comments in the cart, see [Shop Guide - Managing Comments](/docs/scos/user/shop-user-guides/shop-guide-comments/shop-guide-managing-comments.html#shop-guide---managing-comments).
 ***
 ## Adding a Note to Cart
-If you want to leave some information or comments for the cart, you can use the [Cart Notes](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-notes-overview.html) section.
+If you want to leave some information or comments for the cart, you can use the [Cart Notes](/docs/scos/user/features/cart-feature-overview/cart-notes-overview.html) section.
 
 To add a note to the cart, in the **Add a note for the cart** widget, enter your comment and click **Save**.
 ***
 
 ## Adding a Cart to the Shopping List
-You can add the products from the cart to the [shopping list](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html) to purchase them later.
+You can add the products from the cart to the [shopping list](/docs/scos/user/features/shopping-lists-feature-overview/multiple-and-shared-shopping-lists/multiple-and-shared-shopping-lists-overview.html) to purchase them later.
 
 To add a cart to the shopping list:
 
@@ -98,11 +98,11 @@ Internal users are the users that belong to your company account. You can share 
 * Read-only permissions: users can view the shopping cart details and edit only the comments to the cart or a custom order reference.
 * Full-access permissions: users can edit the cart details. 
 
-For more information about the actions internal users can perform on the cart, see [Shared Cart Feature Overview](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html#shared-cart-feature-overview).
+For more information about the actions internal users can perform on the cart, see [Shared Cart Feature Overview](/docs/scos/user/features/shared-carts-feature-overview.html#shared-cart-feature-overview).
 ***
 
 ## Adding a Custom Order Reference to the Cart
-If you want to link your order to the invoice in your external system, you can use a [custom order reference](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/custom-order-reference-overview.html).
+If you want to link your order to the invoice in your external system, you can use a [custom order reference](/docs/scos/user/features/order-management-feature-overview/custom-order-reference-overview.html).
 
 {% info_block infoBox "Info" %}
 
@@ -113,13 +113,13 @@ T**o add a custom order reference**, in the **Custom Order Reference** field, en
 ***
 
 ## Adding Comments to the Cart
-If you want to add some information to the order, you can [leave a comment](/docs/scos/user/features/{{page.version}}/comments-feature-overview.html) to your cart.
+If you want to add some information to the order, you can [leave a comment](/docs/scos/user/features/comments-feature-overview.html) to your cart.
 
 **To add a comment to the cart**, in the **Comments to Cart** widget, write a message and click **Send**.
 ***
 **What’s next?**
 
-If you added products to the cart, you can proceed with the checkout. For more information on how to place the order, see [Shop Guide - Checkout](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-checkout.html).
+If you added products to the cart, you can proceed with the checkout. For more information on how to place the order, see [Shop Guide - Checkout](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-checkout.html).
 
-If you want to negotiate the price, you can request a quote. For more information on how to create a request for quote, see [Shop Guide - Creating an RFQ](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-creating-a-request-for-quote.html).
+If you want to negotiate the price, you can request a quote. For more information on how to create a request for quote, see [Shop Guide - Creating an RFQ](/docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-creating-a-request-for-quote.html).
 

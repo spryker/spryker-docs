@@ -10,20 +10,17 @@ redirect_from:
   - /2021080/docs/en/managing-customer-passwords
   - /docs/managing-customer-passwords
   - /docs/en/managing-customer-passwords
-  - /docs/scos/dev/glue-api-guides/201811.0/managing-customers/managing-customer-passwords.html
-  - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/managing-customer-passwords.html
-  - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/managing-customer-passwords.html
-  - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/managing-customer-passwords.html
+  - /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-passwords.html
 related:
   - title: Password Management overview
-    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/password-management-overview.html
+    link: docs/scos/user/features/customer-account-management-feature-overview/password-management-overview.html
 ---
 
 The endpoints in this document allows you to manage customer passwords. You can change or reset a password.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html).
 
 
 ## Change a customer's password
@@ -45,7 +42,7 @@ To change a customer's password, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string | &check; | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html). |
 
 
 Request sample: change a customer's password
@@ -170,8 +167,8 @@ If the password reset is successful, the endpoint returns the `204 No Content` s
 | 422 | `newPassword` and `confirmPassword` values are not identical.  |
 | 901 | `newPassword` and `confirmPassword` are not specified; or the password length is invalid (it should be from 8 to 64 characters). |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-[Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html)
+[Authenticate as a customer](/docs/scos/dev/glue-api-guides/managing-customers/managing-customer-passwords.html)

@@ -9,9 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-discount-amountcsv
   - /docs/file-details-discount-amountcsv
   - /docs/en/file-details-discount-amountcsv
-  - /docs/scos/dev/data-import/201811.0/data-import-categories/merchandising-setup/discounts/file-details-discount-amount.csv.html
-  - /docs/scos/dev/data-import/201907.0/data-import-categories/merchandising-setup/discounts/file-details-discount-amount.csv.html
-  - /docs/scos/dev/data-import/201903.0/data-import-categories/merchandising-setup/discounts/file-details-discount-amount.csv.html
+  - /docs/scos/dev/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount-amount.csv.html
 ---
 
 This document describes the `discount_amount.csv` file to configure Discount Amount information in your Spryker Demo Shop.
@@ -38,8 +36,8 @@ The file should have the following parameters:
 
 This file has the following dependencies:
 
-* [discount.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html)
-* [discount_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount-store.csv.html)
+* [discount.csv](/docs/scos/dev/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html)
+* [discount_store.csv](/docs/scos/dev/data-import/data-import-categories/merchandising-setup/discounts/file-details-discount-store.csv.html)
 
 ## Import template file and content example
 

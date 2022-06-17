@@ -8,7 +8,7 @@ With the *Marketplace Wishlist* feature, the customers can track and save mercha
 
 {% info_block warningBox "User documentation" %}
 
-To learn more about the feature and to find out how end users use it, see [Marketplace Wishlist feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-wishlist-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Marketplace Wishlist feature overview](/docs/marketplace/user/features/marketplace-wishlist-feature-overview.html) for business users.
 
 {% endinfo_block %}
 
@@ -36,5 +36,5 @@ The following diagram illustrates the domain model of the *Marketplace Wishlist*
 
 | INTEGRATION GUIDES | GLUE API GUIDES  |
 | ------------- | -------------- |
-| [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html) | [Managing wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html)
-| [Glue API: Marketplace Product Offer + Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-wishlist-feature-integration.html) | [Managing wishlist items](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlist-items.html) |
+| [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-wishlist-feature-integration.html) | [Managing wishlists](/docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html)
+| [Glue API: Marketplace Product Offer + Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-wishlist-feature-integration.html) | [Managing wishlist items](/docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlist-items.html) |

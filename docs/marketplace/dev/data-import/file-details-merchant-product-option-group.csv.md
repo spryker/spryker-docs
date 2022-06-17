@@ -5,12 +5,12 @@ description: This document describes the merchant_product_option_group file to c
 template: import-file-template
 related:
   - title: Marketplace Product Options feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-options-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-options-feature-walkthrough.html
   - title: Marketplace Product Options feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-options-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-product-options-feature-overview.html
 ---
 
-This document describes the `merchant_product_option_group` file to create [merchant product option groups](/docs/marketplace/user/features/{{page.version}}/marketplace-product-options-feature-overview.html).
+This document describes the `merchant_product_option_group` file to create [merchant product option groups](/docs/marketplace/user/features/marketplace-product-options-feature-overview.html).
 
 To import the file, run:
 
@@ -26,7 +26,7 @@ The file should have the following parameters:
 | ---------- | ---------- | ------- | ------------- | ------------------ | ------------- |
 | product_option_group_key | &check;  | String   | It should be either one word, or several words separated with underscore.    | Unique   | Glossary key for a product option group. |
 | merchant_reference | &check;     | String |      |      | Unique identifier of the merchant the product option group belongs to. |
-| approval_status  |     | String | waiting_for_approval     | Possible values: <ul><li>waiting_for_approval</li><li>approved</li><li>denied</li></ul>  | [Approval status](/docs/marketplace/user/features/{{page.version}}/marketplace-product-options-feature-overview.html#marketplace-product-options-approval-statuses) of the product option group.   |
+| approval_status  |     | String | waiting_for_approval     | Possible values: <ul><li>waiting_for_approval</li><li>approved</li><li>denied</li></ul>  | [Approval status](/docs/marketplace/user/features/marketplace-product-options-feature-overview.html#marketplace-product-options-approval-statuses) of the product option group.   |
 | merchant_sku  |     | String |      | External merchant SKU in the merchant's ERP.   |
 
 ## Import file dependencies

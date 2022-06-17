@@ -5,12 +5,12 @@ description: This document describes the merchant_product_offer_store.csv file t
 template: import-file-template
 related:
   - title: Marketplace Product Offer feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
   - title: Marketplace Product Offer feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-product-offer-feature-overview.html
 ---
 
-This document describes the `merchant_product_offer_store.csv` file to configure [merchant product offer stores](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html#product-offer-stores) in your Spryker shop.
+This document describes the `merchant_product_offer_store.csv` file to configure [merchant product offer stores](/docs/marketplace/user/features/marketplace-product-offer-feature-overview.html#product-offer-stores) in your Spryker shop.
 
 To import the file, run:
 
@@ -24,14 +24,14 @@ The file should have the following parameters:
 
 | PARAMETER | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | ----------- | ----------- | ------- | ------------ | --------------------- | ------------ |
-| product_offer_reference | &check;             | String   |                   | Unique                                                       | Identifier of the [merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) in the system. |
+| product_offer_reference | &check;             | String   |                   | Unique                                                       | Identifier of the [merchant product offer](/docs/marketplace/user/features/marketplace-product-offer-feature-overview.html) in the system. |
 | store_name              | &check;             | String   |                   | Value previously defined in the *stores.php* project configuration. | Store where the merchant product offer belongs.              |
 
 ## Import file dependencies
 
 The file has the following dependencies:
 
-- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant-product-offer.csv.html)
+- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/file-details-merchant-product-offer.csv.html)
 - `stores.php` configuration file of the demo shop PHP project
 
 ## Import template file and content example

@@ -42,17 +42,17 @@ To keep our docs consistent, we have templates for all types of documents. The t
 
 | TEMPLATE   | DESCRIPTION  |
 | ---------------- | ---------------- |
-| [back-office-user-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/back-office-user-guide-template.md) | Use this template for creating [Back Office user guides](/docs/scos/user/back-office-user-guides/{{site.version}}/customer/customers/create-customers.html) or [Merchant Portal user guides.](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/offers/managing-product-offers.html) |
-| [concept-topic-template](https://github.com/spryker/spryker-docs/blob/master/_templates/concept-topic-template.md) | Use this template for creating general and technical conceptual topics, such as [feature overviews](/docs/scos/user/features/{{site.version}}/catalog-feature-overview.html) or [technical articles](/docs/marketplace/dev/front-end/angular-components.html). |
-| [feature-walkthrough-template](https://github.com/spryker/spryker-docs/blob/master/_templates/feature-walkthrough-template.md) | Use this template for creating feature [walkthrough guides](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html). |
-| [feature-integration-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/feature-integration-guide-template.md) | Use this template while working on the [integration guides](/docs/scos/dev/feature-integration-guides/{{site.version}}/agent-assist-feature-integration.html). Check the [instructions on formatting for the integration guides](https://github.com/spryker/spryker-docs/blob/master/_templates/formatting-templates-for-feature-integration-guides.md). |
-| [glue-api-storefront-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/glue-api-storefront-guide-template.md) | Use this template for creating [Glue API guides](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/retrieving-company-users.html). |
-| [data-export-template](https://github.com/spryker/spryker-docs/blob/master/_templates/data-export-template.md) | Use this template for creating documents on [data export](/docs/scos/dev/data-export/{{site.version}}/data-export-orders-.csv-files-format.html). |
-| [data-import-template](https://github.com/spryker/spryker-docs/blob/master/_templates/data-import-template.md) | Use this template for creating documents on [data import](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant-category.csv.html). |
+| [back-office-user-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/back-office-user-guide-template.md) | Use this template for creating [Back Office user guides](/docs/scos/user/back-office-user-guides/customer/customers/create-customers.html) or [Merchant Portal user guides.](/docs/marketplace/user/merchant-portal-user-guides/offers/managing-product-offers.html) |
+| [concept-topic-template](https://github.com/spryker/spryker-docs/blob/master/_templates/concept-topic-template.md) | Use this template for creating general and technical conceptual topics, such as [feature overviews](/docs/scos/user/features/catalog-feature-overview.html) or [technical articles](/docs/marketplace/dev/front-end/angular-components.html). |
+| [feature-walkthrough-template](https://github.com/spryker/spryker-docs/blob/master/_templates/feature-walkthrough-template.md) | Use this template for creating feature [walkthrough guides](/docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html). |
+| [feature-integration-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/feature-integration-guide-template.md) | Use this template while working on the [integration guides](/docs/scos/dev/feature-integration-guides/agent-assist-feature-integration.html). Check the [instructions on formatting for the integration guides](https://github.com/spryker/spryker-docs/blob/master/_templates/formatting-templates-for-feature-integration-guides.md). |
+| [glue-api-storefront-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/glue-api-storefront-guide-template.md) | Use this template for creating [Glue API guides](/docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-company-users.html). |
+| [data-export-template](https://github.com/spryker/spryker-docs/blob/master/_templates/data-export-template.md) | Use this template for creating documents on [data export](/docs/scos/dev/data-export/data-export-orders-.csv-files-format.html). |
+| [data-import-template](https://github.com/spryker/spryker-docs/blob/master/_templates/data-import-template.md) | Use this template for creating documents on [data import](/docs/marketplace/dev/data-import/file-details-merchant-category.csv.html). |
 | [module-migration-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/module-migration-guide-template.md) | Use this template for creating [module migration guides](/docs/scos/dev/module-migration-guides/migration-guide-merchantgui.html#upgrading-from-version-1-to-version-2). |
 | [troubleshooting-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/troubleshooting-guide-template.md) | Use this template for creating [troubleshooting pages](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/rabbitmq-zed.critical-phpamqplib-exception-amqpchannelclosedexception-channel-connection-is-closed.html). |
 | [howto-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/howto-guide-template.md) | Use this template for creating [howto guides](/docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method.html). |
-| [best-practices-file-template](https://github.com/spryker/spryker-docs/blob/master/_templates/best-practices-file-template.md) | Use this template for creating [best practices](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/creating-service-offerings-best-practices.html) docs. |
+| [best-practices-file-template](https://github.com/spryker/spryker-docs/blob/master/_templates/best-practices-file-template.md) | Use this template for creating [best practices](/docs/scos/user/back-office-user-guides/catalog/products/creating-service-offerings-best-practices.html) docs. |
 
 {% info_block warningBox "Warning" %}
 
@@ -78,7 +78,7 @@ related:
 	- title: How to extend an existing Gui table
 		link: docs/marketplace/dev/howtos/how-to-extend-gui-table.html
   - title: Sales Data Export feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/sales-data-export-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/sales-data-export-feature-integration.html
 ---
 ```
 
@@ -156,11 +156,11 @@ To add a new version for the versioned categories:
 
 ![files list](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/files-list.png)
 
-You can make a reference to the currently opened version of the versioned page using the `{% raw %}{{page.version}}{% endraw %}` variable in text and in links. For example, if you open a document in version `202108.0` in the editor and write there:
+You can make a reference to the currently opened version of the versioned page using the `{% raw %}{{site.version}}{% endraw %}` variable in text and in links. For example, if you open a document in version `202108.0` in the editor and write there:
 
 ```
-This feature requires version {{page.version}} of the Merchants feature.
-For details on the feature, see [Merchant feature overview](/docs/marketplace/user/features/{% raw %}{{page.version}}{% endraw %}/merchants/merchants-feature-overview.html).
+This feature requires version {{site.version}} of the Merchants feature.
+For details on the feature, see [Merchant feature overview](/docs/marketplace/user/features/{% raw %}{{site.version}}{% endraw %}/merchants/merchants-feature-overview.html).
 ```
 
 on the website, your text will look like this:
@@ -172,7 +172,7 @@ For details on the feature, see Merchant feature overview(link to merchants-feat
 
 {% info_block infoBox "Info" %}
 
-You can use the `{% raw %}{{page.version}}{% endraw %}` variable only when you refer to versioned pages on versioned pages. To make a reference to the latest page version on a versioned page to an unversioned page, use the `{% raw %}{{site.version}}{% endraw %}` variable described in the next section. To make a reference on an unversioned page to an unversioned page, do not use any variable.
+You can use the `{% raw %}{{site.version}}{% endraw %}` variable only when you refer to versioned pages on versioned pages. To make a reference to the latest page version on a versioned page to an unversioned page, use the `{% raw %}{{site.version}}{% endraw %}` variable described in the next section. To make a reference on an unversioned page to an unversioned page, do not use any variable.
 
 {% endinfo_block %}
 

@@ -9,23 +9,20 @@ redirect_from:
   - /2021080/docs/en/managing-customer-authentication-tokens
   - /docs/managing-customer-authentication-tokens
   - /docs/en/managing-customer-authentication-tokens
-  - /docs/scos/dev/glue-api-guides/201811.0/managing-customers/managing-customer-authentication-tokens.html
-  - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/managing-customer-authentication-tokens.html
-  - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/managing-customer-authentication-tokens.html
-  - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/managing-customer-authentication-tokens.html
+  - /docs/scos/dev/glue-api-guides/managing-customers/managing-customer-authentication-tokens.html
 ---
 
 This endpoint allows refreshing customer authentication tokens and revoking customer refresh tokens. You may want to refresh an authentication token when it expires. Revocation is useful when an authentication token is compromised.
 
 {% info_block warningBox %}
 
-This endpoint does not comply with OAuth 2.0. If your project requires such compliance, use the `/token`endpoint. For details about the `/token`endpoint, see [Manging customer authentication tokens via OAuth 2.0](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html).
+This endpoint does not comply with OAuth 2.0. If your project requires such compliance, use the `/token`endpoint. For details about the `/token`endpoint, see [Manging customer authentication tokens via OAuth 2.0](/docs/scos/dev/glue-api-guides/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html).
 
 {% endinfo_block %}
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html).
 
 ## Refresh an authentication token
 
@@ -58,7 +55,7 @@ To refresh an authentication token, send the request:
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| refreshToken | string | &check; | Authentication token to refresh the `accessToken`. You can get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| refreshToken | string | &check; | Authentication token to refresh the `accessToken`. You can get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html). |
 
 ### Response
 
@@ -108,7 +105,7 @@ To revoke a refresh token, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 | REQUEST | USAGE |
 | --- | --- |
@@ -127,9 +124,9 @@ The tokens are marked as expired on the date and time of the request. You can co
 | --- | --- |
 | 004 | Failed to refresh the token. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html)
-* [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html)
+* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/managing-customers/managing-customer-passwords.html)
+* [Manage customer passwords](/docs/scos/dev/glue-api-guides/managing-customers/managing-customer-passwords.html)

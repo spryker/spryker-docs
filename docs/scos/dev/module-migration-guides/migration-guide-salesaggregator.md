@@ -22,13 +22,7 @@ redirect_from:
   - /v5/docs/en/mg-sales-aggregator
   - /v6/docs/mg-sales-aggregator
   - /v6/docs/en/mg-sales-aggregator
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-salesaggregator.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-salesaggregator.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-salesaggregator.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-salesaggregator.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-salesaggregator.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-salesaggregator.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-salesaggregator.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-salesaggregator.html
 related:
   - title: Migration guide - Sales
     link: docs/scos/dev/module-migration-guides/migration-guide-sales.html

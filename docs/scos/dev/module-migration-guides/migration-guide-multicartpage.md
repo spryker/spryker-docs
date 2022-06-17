@@ -22,17 +22,11 @@ redirect_from:
   - /v5/docs/en/mg-multi-cart-page
   - /v6/docs/mg-multi-cart-page
   - /v6/docs/en/mg-multi-cart-page
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-multicartpage.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-multicartpage.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-multicartpage.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-multicartpage.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-multicartpage.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-multicartpage.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-multicartpage.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-multicartpage.html
   - /module_migration_guides/mg-multi-cart-page.htm
 related:
   - title: Multiple Carts per User Feature Overview
-    link: docs/scos/user/features/page.version/multiple-carts-feature-overview.html
+    link: docs/scos/user/features/multiple-carts-feature-overview.html
 ---
 
 ## Upgrading from version 1.* to version 2.*

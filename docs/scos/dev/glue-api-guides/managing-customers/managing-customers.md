@@ -10,8 +10,8 @@ redirect_from:
   - /2021080/docs/en/managing-customers-via-glue-api
   - /docs/managing-customers-via-glue-api
   - /docs/en/managing-customers-via-glue-api
-  - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customers.html
-  - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/managing-customers.html
+  - /docs/scos/user/back-office-user-guides/customer/customer-customer-access-customer-groups/managing-customers.html
+  - /docs/scos/dev/glue-api-guides/managing-customers/managing-customers.html
 ---
 
 The Customer API allows creating customers and manage their account data. This includes the possibility to maintain a set of customer addresses as separate resources. In the checkout process, you can retrieve and use these address resources to speed up the buying process. The API supports authentication via OAuth 2.0 and password restoration.
@@ -26,7 +26,7 @@ In your development, these resources can help you:
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Customer Access Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html).
 
 ## Create a customer
 
@@ -116,7 +116,7 @@ Request sample: create a customer
 
 
 
-After creating a customer, users receive a verification email. The email contains a link with the token that confirms and finalizes the customer registration process. Customers click the verification link from the email and finish the registration. Alternatively, you can confirm the customer registration via API (see [Confirming customer registration](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/confirming-customer-registration.html)). After confirmation, you can authenticate as a customer to perform requests to the protected resources.
+After creating a customer, users receive a verification email. The email contains a link with the token that confirms and finalizes the customer registration process. Customers click the verification link from the email and finish the registration. Alternatively, you can confirm the customer registration via API (see [Confirming customer registration](/docs/scos/dev/glue-api-guides/managing-customers/confirming-customer-registration.html)). After confirmation, you can authenticate as a customer to perform requests to the protected resources.
 
 ## Retrieve customers
 
@@ -130,7 +130,7 @@ To retrieve customers, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample: retrieve customers
 
@@ -188,7 +188,7 @@ To retrieve information about a customer, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample: Retrieve a customer
 
@@ -249,7 +249,7 @@ To edit a customer account, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer which you want to edit. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer which you want to edit. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample: edit a customer
 
@@ -320,7 +320,7 @@ To anonymize a customer, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer which you want to anonymize. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer which you want to anonymize. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample: anonymize a customer
 
@@ -392,7 +392,7 @@ Request sample: retrieve subscriptions to availability notifications
 
 ## Other management options
 
-There is an alternative way to retrieve existing subscriptions, for details see [Retrieving subscriptions to availability notifications](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html).
+There is an alternative way to retrieve existing subscriptions, for details see [Retrieving subscriptions to availability notifications](/docs/scos/dev/glue-api-guides/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html).
 
 ## Possible errors
 
@@ -413,9 +413,9 @@ There is an alternative way to retrieve existing subscriptions, for details see 
 | 4606 | Request is unauthorized.|
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).
 
 ## Next steps
 
-* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html)
-* [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html)
+* [Authenticate as a customer](/docs/scos/dev/glue-api-guides/managing-customers/managing-customer-passwords.html)
+* [Manage customer passwords](/docs/scos/dev/glue-api-guides/managing-customers/managing-customer-passwords.html)

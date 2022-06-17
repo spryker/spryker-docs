@@ -22,13 +22,7 @@ redirect_from:
   - /v5/docs/en/mg-shopping-list-widget
   - /v6/docs/mg-shopping-list-widget
   - /v6/docs/en/mg-shopping-list-widget
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-shoppinglistwidget.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-shoppinglistwidget.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-shoppinglistwidget.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-shoppinglistwidget.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-shoppinglistwidget.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-shoppinglistwidget.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shoppinglistwidget.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-shoppinglistwidget.html
 ---
 
 ## Upgrading from version 0.4.* to version 0.6.0

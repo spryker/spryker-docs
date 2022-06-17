@@ -3,7 +3,7 @@ title: Marketplace Inventory Management feature overview
 description: This document contains concept information for the Marketplace Products feature.
 template: concept-topic-template
 redirect_from:
-  - /docs/marketplace/user/features/202200.0/marketplace-inventory-management-feature-overview.html
+  - /docs/marketplace/user/features/marketplace-inventory-management-feature-overview.html
 ---
 
 The *Marketplace Inventory Management* feature enables maintaining stock and availability of merchant products and product offers that are sold in the Marketplace.
@@ -19,20 +19,20 @@ When a merchant is created, the corresponding warehouse is created for this merc
 
 {% endinfo_block %}
 
-A warehouse can be assigned to a single store or shared between several stores. For details about how you can manage warehouses and stores in the Back Office, see [Managing warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html).
+A warehouse can be assigned to a single store or shared between several stores. For details about how you can manage warehouses and stores in the Back Office, see [Managing warehouses](/docs/scos/user/back-office-user-guides/administration/warehouses/managing-warehouses.html).
 
 ## Marketplace stock management
 
 The stock for product offers is defined in the corresponding merchant warehouse. The stock does not reflect the actual availability of products, as not all the items available in stock are available for sale. For example, when there are pending orders with offers, these order items are *reserved*, so they are not available for ordering, even if they are physically on hand.
 
-Merchants can define product offer stock in the Merchant Portal. For details, see [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html).
+Merchants can define product offer stock in the Merchant Portal. For details, see [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/offers/managing-product-offers.html).
 
 Also, you can do the following using the data import:
 
-* Manage stock of product offers for a merchant by importing the product offer and stock data separately: [File details: product_offer_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-stock.csv.html).
-* Define stock when importing the product offer data: [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-combined-merchant-product-offer.csv.html).
-* Import merchant stock data: [File details: merchant_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-stock.csv.html).
-* Import stock of merchant products: [File details: product_stock.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html).
+* Manage stock of product offers for a merchant by importing the product offer and stock data separately: [File details: product_offer_stock.csv](/docs/marketplace/dev/data-import/file-details-product-offer-stock.csv.html).
+* Define stock when importing the product offer data: [File details: combined_merchant_product_offer.csv](/docs/marketplace/dev/data-import/file-details-combined-merchant-product-offer.csv.html).
+* Import merchant stock data: [File details: merchant_stock.csv](/docs/marketplace/dev/data-import/file-details-merchant-stock.csv.html).
+* Import stock of merchant products: [File details: product_stock.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html).
 
 ## Marketplace availability management
 
@@ -60,10 +60,10 @@ Let's assume that a merchant has defined quantity 10 for product offer 1. A cust
 
 | MERCHANT PORTAL USER GUIDES | BACK OFFICE USER GUIDES |
 | --------------------------- | ----------------------- |
-| [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/offers/managing-product-offers.html) | [Managing warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/managing-warehouses.html) <!--- UPDATE LINK--> |
+| [Managing product offers](/docs/marketplace/user/merchant-portal-user-guides/offers/managing-product-offers.html) | [Managing warehouses](/docs/scos/user/back-office-user-guides/administration/warehouses/managing-warehouses.html) <!--- UPDATE LINK--> |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Inventory Management feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-inventory-management-feature-walkthrough.html) for developers.
+Are you a developer? See [Marketplace Inventory Management feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/marketplace-inventory-management-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

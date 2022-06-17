@@ -10,23 +10,23 @@ redirect_from:
   - /2021080/docs/en/crefopay-configuration
   - /docs/crefopay-configuration
   - /docs/en/crefopay-configuration
-  - /docs/scos/user/technology-partners/201907.0/payment-partners/crefopay/installing-and-configuring-crefopay.html
-  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/crefopay/installing-and-configuring-crefopay.html
+  - /docs/scos/user/technology-partners/payment-partners/crefopay/installing-and-configuring-crefopay.html
+  - /docs/scos/dev/technology-partner-guides/payment-partners/crefopay/installing-and-configuring-crefopay.html
 related:
   - title: Integrating CrefoPay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/integrating-crefopay.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/crefopay/integrating-crefopay.html
   - title: CrefoPay
-    link: docs/scos/user/technology-partners/page.version/payment-partners/crefopay.html
+    link: docs/scos/user/technology-partners/payment-partners/crefopay.html
   - title: CrefoPay payment methods
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-payment-methods.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-payment-methods.html
   - title: CrefoPay capture and refund Processes
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-capture-and-refund-processes.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-capture-and-refund-processes.html
   - title: CrefoPay — Enabling B2B payments
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-enabling-b2b-payments.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-enabling-b2b-payments.html
   - title: CrefoPay callbacks
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-callbacks.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-callbacks.html
   - title: CrefoPay notifications
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/crefopay-notifications.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-notifications.html
 ---
 
 This document describes how to install and configure CrefoPay.
@@ -97,8 +97,8 @@ CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_BILL => 'CrefoPayBill01',
 ];
 ```
 
-See [CrefoPay payment methods](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html) for more information on the payment methods provided by CrefoPay.
+See [CrefoPay payment methods](/docs/scos/dev/technology-partner-guides/payment-partners/crefopay/crefopay-payment-methods.html) for more information on the payment methods provided by CrefoPay.
 
 ## Next steps
 
-Once you are done with the installation and configuration of the CrefoPay module, [integrate CrefoPay into your project](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/integrating-crefopay.html).
+Once you are done with the installation and configuration of the CrefoPay module, [integrate CrefoPay into your project](/docs/scos/dev/technology-partner-guides/payment-partners/crefopay/integrating-crefopay.html).

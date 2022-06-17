@@ -10,16 +10,13 @@ redirect_from:
   - /2021080/docs/en/configuring-services
   - /docs/configuring-services
   - /docs/en/configuring-services
-  - /docs/scos/dev/the-docker-sdk/201811.0/configuring-services.html
-  - /docs/scos/dev/the-docker-sdk/201903.0/configuring-services.html
-  - /docs/scos/dev/the-docker-sdk/201907.0/configuring-services.html
-  - /docs/scos/dev/the-docker-sdk/202005.0/configuring-services.html
+  - /docs/scos/dev/the-docker-sdk/configuring-services.html
   - /docs/scos/dev/installation/spryker-in-docker/configuration/services.html
 related:
   - title: Deploy File Reference - 1.0
-    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-reference-1.0.html
+    link: docs/scos/dev/the-docker-sdk/deploy-file/deploy-file-reference-1.0.html
   - title: Docker SDK
-    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
+    link: docs/scos/dev/the-docker-sdk/the-docker-sdk.html
 ---
 
 This document describes configuration options of the services shipped with Spryker in Docker by default.

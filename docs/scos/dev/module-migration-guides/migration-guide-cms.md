@@ -22,17 +22,11 @@ redirect_from:
   - /v5/docs/en/mg-cms
   - /v6/docs/mg-cms
   - /v6/docs/en/mg-cms
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-cms.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-cms.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-cms.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-cms.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cms.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cms.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cms.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-cms.html
   - /module_migration_guides/mg-cms.htm
 related:
   - title: CMS
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-feature-overview.html
+    link: docs/scos/user/features/cms-feature-overview/cms-feature-overview.html
   - title: Migration guide - CmsBlock
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
   - title: Migration guide - CmsBlockCollector
@@ -47,7 +41,7 @@ related:
 
 ## Upgrading from version 6.* to version 7.*
 
-Version 7.0.0 of the CMS module introduces the [multi-store functionality](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
+Version 7.0.0 of the CMS module introduces the [multi-store functionality](/docs/scos/user/features/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 ### BC breaks and solutions:
 

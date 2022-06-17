@@ -11,8 +11,7 @@ redirect_from:
   - /docs/viewing-the-order-matrix
   - /docs/en/viewing-the-order-matrix
   - /docs/order-matrix-reference-information
-  - /docs/scos/user/back-office-user-guides/202200.0/sales/order-matrix/viewing-the-order-matrix.html
-  - /docs/scos/user/back-office-user-guides/202204.0/sales/order-matrix/viewing-the-order-matrix.html
+  - /docs/scos/user/back-office-user-guides/sales/order-matrix/viewing-the-order-matrix.html
 ---
 
 The **Overview of Order Matrix** page displays the information about ordered items.

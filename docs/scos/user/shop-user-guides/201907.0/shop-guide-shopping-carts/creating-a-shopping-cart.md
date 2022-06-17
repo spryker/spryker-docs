@@ -8,8 +8,8 @@ originalArticleId: 72e47221-e583-4fd1-98fc-ceb7c3c8d5d4
 redirect_from:
   - /v3/docs/creating-shopping-cart
   - /v3/docs/en/creating-shopping-cart
-  - /docs/scos/user/shop-user-guides/page.version/shopping-carts/creating-a-shopping-cart.html
-  - /docs/scos/user/shop-user-guides/201907.0/shopping-carts/creating-a-shopping-cart.html
+  - /docs/scos/user/shop-user-guides/shopping-carts/creating-a-shopping-cart.html
+  - /docs/scos/user/shop-user-guides/shopping-carts/creating-a-shopping-cart.html
 ---
 
 This topic describes how to create a new shopping cart in your customer account.
@@ -20,7 +20,7 @@ To create a shopping cart:
 
 1. On the Shopping Carts page or in the **Shopping Cart Widget**, click **+Create Shopping Cart**.
 {% info_block infoBox %}
-See [Shopping Carts: Reference Information](/docs/scos/user/shop-user-guides/{{page.version}}/shopping-carts/shopping-carts-reference-information.html
+See [Shopping Carts: Reference Information](/docs/scos/user/shop-user-guides/shopping-carts/shopping-carts-reference-information.html
 {% endinfo_block %} for information on the Shopping Carts page contents.)
 ![Create shopping cart button](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Creating+a+Shopping+Cart/create-shopping-cart-button.png)
 

@@ -9,10 +9,10 @@ redirect_from:
   - /2021080/docs/en/file-details-product-quantitycsv
   - /docs/file-details-product-quantitycsv
   - /docs/en/file-details-product-quantitycsv
-  - /docs/scos/dev/data-import/201907.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-quantity.csv.html
+  - /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-quantity.csv.html
 ---
 
-This document describes the `product_quantity.csv` file to configure [Product Quantity](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html) Store information in your Spryker Demo Shop.
+This document describes the `product_quantity.csv` file to configure [Product Quantity](/docs/scos/user/features/non-splittable-products-feature-overview.html) Store information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -33,7 +33,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html).
+This file has the following dependency: [product_concrete.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html).
 
 ## Import template file and content example
 

@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the Merchant S
 template: feature-integration-guide-template
 related:
   - title: Wishlist feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/wishlist-feature-walkthrough.html
+    link: docs/scos/dev/feature-walkthroughs/wishlist-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Merchant Switcher + Wishlist feature into a Spryker project.
@@ -20,8 +20,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE  |
 |-|-|-|
-| Merchant Switcher | {{page.version}} | [Merchant Switcher feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-feature-integration.html)|
-| Marketplace Wishlist | {{page.version}} | [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html) |
+| Merchant Switcher | {{site.version}} | [Merchant Switcher feature integration](/docs/marketplace/dev/feature-integration-guides/merchant-switcher-feature-integration.html)|
+| Marketplace Wishlist | {{site.version}} | [Marketplace Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-wishlist-feature-integration.html) |
 
 ### 1) Set up behavior
 

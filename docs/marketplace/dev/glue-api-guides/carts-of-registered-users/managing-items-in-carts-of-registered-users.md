@@ -4,7 +4,7 @@ description: Retrieve details about the items of the registered users' carts, an
 template: glue-api-storefront-guide-template
 related:
   - title: Managing carts of registered users
-    link: docs/marketplace/dev/glue-api-guides/page.version/carts-of-registered-users/managing-carts-of-registered-users.html
+    link: docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-carts-of-registered-users.html
 ---
 This endpoint allows managing items in carts of registered users by adding, changing, and deleting them.
 
@@ -12,13 +12,13 @@ This endpoint allows managing items in carts of registered users by adding, chan
 ## Installation
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
-* [Glue API: Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
-* [Glue API: Product Options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
-* [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
-* [GLUE API: Merchant Offers feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)
-* [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)
-* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-volume-prices.html
+* [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html)
+* [Glue API: Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html)
+* [Glue API: Product Options feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-options-feature-integration.html)
+* [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
+* [GLUE API: Merchant Offers feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html)
+* [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-prices-feature-integration.html)
+* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-volume-prices.html
 
 
 
@@ -33,14 +33,14 @@ To add items to a cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [retrieve a registered user's carts](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-cart) to get it. |
+| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](/docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [retrieve a registered user's carts](/docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-cart) to get it. |
 
 
 ### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
@@ -256,7 +256,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 
 {% info_block infoBox "Conversion" %}
 
-When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units feature overview](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) to learn more.
+When defining product amount in sales units, make sure that the correlation between amount and quantity corresponds to the conversion of the defined sales unit. See [Measurement Units feature overview](/docs/scos/user/features/measurement-units-feature-overview.html) to learn more.
 
 {% endinfo_block %}
 
@@ -1590,13 +1590,13 @@ It is the responsibility of the API Client to track whether the selected items a
 | vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
 
 For the attributes of the included resources, see:
-* [Retrieving measurement units](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)
-* [Create a cart](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart)
-* [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html)
-* [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html#product-offers-response-attributes)
-* [Retrieving product offer prices](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-prices.html#product-offer-prices-response-attributes)
-* [Retrieving product availability](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offer-availability.html#product-offer-availability-response-attributes)
-* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html#merchants-response-attributes)
+* [Retrieving measurement units](/docs/scos/dev/glue-api-guides/retrieving-measurement-units.html)
+* [Create a cart](/docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart)
+* [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-concrete-products.html)
+* [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offers.html#product-offers-response-attributes)
+* [Retrieving product offer prices](/docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offer-prices.html#product-offer-prices-response-attributes)
+* [Retrieving product availability](/docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offer-availability.html#product-offer-availability-response-attributes)
+* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchants.html#merchants-response-attributes)
 
 ## Change item quantity
 
@@ -1609,7 +1609,7 @@ To change the number of items in a cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [retrieve a registered user's carts](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-cart) to get it. |
+| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](/docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [retrieve a registered user's carts](/docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-cart) to get it. |
 | {% raw %}***{{item_group_key}}***{% endraw %} | Group key of the item. Usually, it is equal to the item’s SKU. |
 
 ### Request
@@ -1617,7 +1617,7 @@ To change the number of items in a cart, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 
 Request sample: change item quantity
@@ -1767,7 +1767,7 @@ Request sample: change item quantity
 ```    
 </details>
 
-For the attributes of the included resources, see [Retrieving concrete products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html).
+For the attributes of the included resources, see [Retrieving concrete products](/docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-concrete-products.html).
 
 ## Remove items from a registered user's cart
 
@@ -1779,7 +1779,7 @@ To remove an item from a registered user's cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [retrieve a registered user's carts](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-cart) to get it. |
+| {% raw %}***{{cart_uuid}}***{% endraw %} | Unique identifier of a cart. [Create a cart](/docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [retrieve a registered user's carts](/docs/marketplace/dev/glue-api-guides/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-cart) to get it. |
 | {% raw %}***{{item_group_key}}***{% endraw %}| Group key of the item. Usually, it is equal to the item’s SKU. |
 
 
@@ -1787,7 +1787,7 @@ To remove an item from a registered user's cart, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample: Remove items from a registered user's cart
 
@@ -1820,4 +1820,4 @@ If the item is deleted successfully, the endpoint returns the `204 No Content`�
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

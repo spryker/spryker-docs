@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-orders
   - /docs/managing-orders
   - /docs/en/managing-orders
-  - /docs/scos/user/back-office-user-guides/202204.0/sales/orders/managing-orders.html
+  - /docs/scos/user/back-office-user-guides/sales/orders/managing-orders.html
 ---
 
 This article describes how to change the state of order items.

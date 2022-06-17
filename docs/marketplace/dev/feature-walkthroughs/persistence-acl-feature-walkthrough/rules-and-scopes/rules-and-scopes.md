@@ -43,18 +43,18 @@ In the database layer scope represented as enum:
 | inherited | 2 |
 
 Depending on the scope, the system behaves differently. Read the documentation for each of them:
-- [Global scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/global-scope.html)
-- [Segment scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html)
-- [Inherited scope](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/inherited-scope.html)
-- [Composite entity](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html)
+- [Global scope](/docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/global-scope.html)
+- [Segment scope](/docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/segment-scope.html)
+- [Inherited scope](/docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/inherited-scope.html)
+- [Composite entity](/docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/rules-and-scopes/composite-entity.html)
 
 ## Default rule
 
 If a user performs any operation on an entity for which he has no rules, the default rule is triggered. The default rule can be configured both within a specific class and in a general context.
 
-A class context takes precedence over a general context. Persistence ACL feature is especially useful when all database tables are connected simultaneously. For more details, see [configuration](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html#connect-persistence-acl-feature-to-all-database-tables). Thus, you can define publicly available entities such as `Country`, `Currency`, and `Region`.
+A class context takes precedence over a general context. Persistence ACL feature is especially useful when all database tables are connected simultaneously. For more details, see [configuration](/docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html#connect-persistence-acl-feature-to-all-database-tables). Thus, you can define publicly available entities such as `Country`, `Currency`, and `Region`.
 
-The default rule configuration is described in the [configuration document](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html).
+The default rule configuration is described in the [configuration document](/docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-configuration.html).
 
 {% info_block infoBox "Info" %}
 

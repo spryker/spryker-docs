@@ -9,12 +9,10 @@ redirect_from:
   - /2021080/docs/en/glue-api-shipment-feature-integration
   - /docs/glue-api-shipment-feature-integration
   - /docs/en/glue-api-shipment-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-shipment-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-shipment-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-shipment-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html
 related:
   - title: Checking Out Purchases and Getting Checkout Data
-    link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
+    link: docs/scos/dev/glue-api-guides/checking-out/checking-out-purchases.html
 ---
 
 This document describes how to integrate the Shipment feature API into a Spryker project.
@@ -25,11 +23,11 @@ To start feature integration, overview and install the necessary features:
 
 | FEATURE | VERSION | INTEGRATION GUIDE  |
 | ----------------- | ------ | ------------------- |
-| Glue API: Spryker Core     | {{page.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Shipment                  | {{page.version}}  | [Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-feature-integration.html) |
-| Glue API: Checkout         | {{page.version}}  | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
-| Glue API: Glue Application      | {{page.version}}  | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
-| Glue API: Order Management | {{page.version}}  | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html) |
+| Glue API: Spryker Core     | {{site.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Shipment                  | {{site.version}}  | [Shipment feature integration](/docs/scos/dev/feature-integration-guides/shipment-feature-integration.html) |
+| Glue API: Checkout         | {{site.version}}  | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html) |
+| Glue API: Glue Application      | {{site.version}}  | [Glue API: Glue Application feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-glue-application-feature-integration.html) |
+| Glue API: Order Management | {{site.version}}  | [Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-order-management-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -476,4 +474,4 @@ Integrate the following related features.
 
 | FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE       |
 | ------- | -------------- | ------------------------- |
-| Glue API: Checkout | ✓                                | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| Glue API: Checkout | ✓                                | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html) |

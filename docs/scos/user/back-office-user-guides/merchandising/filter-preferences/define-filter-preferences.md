@@ -10,18 +10,18 @@ redirect_from:
   - /2021080/docs/en/managing-filter-preferences
   - /docs/managing-filter-preferences
   - /docs/en/managing-filter-preferences
-  - /docs/scos/user/back-office-user-guides/202204.0/merchandising/search-and-filters/managing-filter-preferences.html
+  - /docs/scos/user/back-office-user-guides/merchandising/search-and-filters/managing-filter-preferences.html
 related:
   - title: Managing Search Preferences
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-search-preferences.html
+    link: docs/scos/user/back-office-user-guides/merchandising/search-and-filters/managing-search-preferences.html
 ---
 
 This documents describes how to create filters and define preferences for them in the Back Office.
 
 ## Prerequisites
 
-1. [Create a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) for the filter that you are going to create.
-2. [Assign the product attribute to a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/assign-product-attributes-to-product-variants.html) or [assign the product attribute to an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/assign-product-attributes-to-abstract-products.html).
+1. [Create a product attribute](/docs/scos/user/back-office-user-guides/catalog/attributes/creating-product-attributes.html) for the filter that you are going to create.
+2. [Assign the product attribute to a product variant](/docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/assign-product-attributes-to-product-variants.html) or [assign the product attribute to an abstract product](/docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/assign-product-attributes-to-abstract-products.html).
 3. To start working with category filter, go to **Merchandising&nbsp;<span aria-label="and then">></span> Filter Preferences**.
 
 Review the [reference information](#reference-information-create-a-category-filter-and-define-its-filter-preferences) before you start, or look up the necessary information as you go through the process.
@@ -43,13 +43,13 @@ Review the [reference information](#reference-information-create-a-category-filt
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
-| ATTRIBUTE KEY | A [product attribute](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html) the values of which will be used to filter products. |
-| FILTER TYPE | Defines how customers select filter values. For more details, see [Filter types](/docs/scos/user/features/{{page.version}}/search-feature-overview/standard-filters-overview.html#filter-types).  |
+| ATTRIBUTE KEY | A [product attribute](/docs/scos/user/features/product-feature-overview/product-attributes-overview.html) the values of which will be used to filter products. |
+| FILTER TYPE | Defines how customers select filter values. For more details, see [Filter types](/docs/scos/user/features/search-feature-overview/standard-filters-overview.html#filter-types).  |
 | FILTER NAME | Name of the filter to be displayed on the Storefront. |
 
 
 
 ## Next steps
 
-* [Reorder filter preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/filter-preferences/reorder-filter-preferences.html)
-* [Assign and dessign filters from categories](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/category-filters/assign-and-deassign-filters-from-categories.html)
+* [Reorder filter preferences](/docs/scos/user/back-office-user-guides/merchandising/filter-preferences/reorder-filter-preferences.html)
+* [Assign and dessign filters from categories](/docs/scos/user/back-office-user-guides/merchandising/category-filters/assign-and-deassign-filters-from-categories.html)

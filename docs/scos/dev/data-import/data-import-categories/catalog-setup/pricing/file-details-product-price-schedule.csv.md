@@ -9,11 +9,11 @@ redirect_from:
   - /2021080/docs/en/file-details-product-price-schedulecsv
   - /docs/file-details-product-price-schedulecsv
   - /docs/en/file-details-product-price-schedulecsv
-  - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html
-  - /docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/howto-import-scheduled-prices.html
+  - /docs/scos/dev/data-import/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html
+  - /docs/scos/dev/tutorials/howtos/feature-howtos/howto-import-scheduled-prices.html
 ---
 
-This article contains content of the `product_price_schedule.csv` file to configure [Product Price Schedule](/docs/scos/user/features/{{page.version}}/scheduled-prices-feature-overview.html) information in your Spryker Demo Shop.
+This article contains content of the `product_price_schedule.csv` file to configure [Product Price Schedule](/docs/scos/user/features/scheduled-prices-feature-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -41,8 +41,8 @@ The file should have the following parameters:
 
 This file has the following dependencies:
 
-* [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
-* [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+* [product_abstract.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+* [product_concrete.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 * *stores.php* configuration file of the Demo Shop PHP project
 
 ## Import template file and content example

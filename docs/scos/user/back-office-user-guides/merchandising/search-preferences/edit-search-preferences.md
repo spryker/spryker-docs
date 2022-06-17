@@ -8,7 +8,7 @@ This document describes how to edit search preferences for product attributes in
 
 ## Prerequisites
 
-1. If you are new to the **Search preferences** section, you might want to start with [Best practices: Promote products with search preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-preferences/best-practices-promote-products-with-search-preferences.html).
+1. If you are new to the **Search preferences** section, you might want to start with [Best practices: Promote products with search preferences](/docs/scos/user/back-office-user-guides/merchandising/search-preferences/best-practices-promote-products-with-search-preferences.html).
 
 2. To start working with filter preferences, go to **Merchandising&nbsp;<span aria-label="and then">></span> Search Preferences**.
 
@@ -33,7 +33,7 @@ This section describes attributes you see and enter when editing search preferen
 
 ### ATTRIBUTE KEY
 
-A [product attribute](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html) to which the search preferences are assigned. The values of the product attribute are used to search products by. For example, the `color` attribute is added to search. One of the values of the attribute is `green`. When a customer searches for `green`, the search returns all the products with this attribute value assigned.
+A [product attribute](/docs/scos/user/features/product-feature-overview/product-attributes-overview.html) to which the search preferences are assigned. The values of the product attribute are used to search products by. For example, the `color` attribute is added to search. One of the values of the attribute is `green`. When a customer searches for `green`, the search returns all the products with this attribute value assigned.
 
 ### FULL TEXT
 

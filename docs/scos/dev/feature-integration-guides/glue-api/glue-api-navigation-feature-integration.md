@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-navigation-feature-integration
   - /docs/glue-api-navigation-feature-integration
   - /docs/en/glue-api-navigation-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-navigation-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/glue-api/glue-api-navigation-feature-integration.html
 ---
 
 {% info_block errorBox %}
@@ -27,8 +27,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
-| Navigation | {{page.version}} |
+| Spryker Core | {{site.version}} |
+| Navigation | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 

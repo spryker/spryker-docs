@@ -18,11 +18,11 @@ redirect_from:
   - /v4/docs/en/ht-import-delivery-methods-linked-to-store
 related:
   - title: Shipment feature overview
-    link: docs/scos/user/features/page.version/shipment-feature-overview.html
+    link: docs/scos/user/features/shipment-feature-overview.html
   - title: Creating a Carrier Company
-    link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/creating-carrier-companies.html
+    link: docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-carrier-companies.html
   - title: Creating and Managing Delivery Methods
-    link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/creating-and-managing-delivery-methods.html
+    link: docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-and-managing-delivery-methods.html
 ---
 
 In addition to creating and managing delivery methods in the Back Office <!-- link -->, you can also import them with the stores assigned from a CSV file.
@@ -43,4 +43,4 @@ To import delivery methods linked to the stores from the `/ShipmentDataImport/da
 console data:import:shipment-method-store
 ```
 
-If successful, the imported data is added to the `spy_shipment_method_store` database table and appear on the list of delivery methods in the Back Office. For more information about how to view and update the delivery methods, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html) <!-- link -->.
+If successful, the imported data is added to the `spy_shipment_method_store` database table and appear on the list of delivery methods in the Back Office. For more information about how to view and update the delivery methods, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-and-managing-delivery-methods.html) <!-- link -->.

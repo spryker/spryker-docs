@@ -14,9 +14,7 @@ redirect_from:
   - /v5/docs/en/migration-guide-errorhandler
   - /v6/docs/migration-guide-errorhandler
   - /v6/docs/en/migration-guide-errorhandler
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-errorhandler.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-errorhandler.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-errorhandler.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-errorhandler.html
 ---
 
 {% info_block errorBox %}

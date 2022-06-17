@@ -26,7 +26,7 @@ When you connect Bazaarvoice, the app puts JavaScrip tags into your store, and t
 
 {% info_block infoBox "Info" %}
 
-If you have Bazaarvoice integrated, the Spryker default [Product Ratings and Reviews feature](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html) is turned off. This means that ratings and reviews collected with the default Spryker Product Ratings and Reviews feature are replaced with the BazzareVoice ratings and reviews.
+If you have Bazaarvoice integrated, the Spryker default [Product Ratings and Reviews feature](/docs/scos/user/features/product-rating-and-reviews-feature-overview.html) is turned off. This means that ratings and reviews collected with the default Spryker Product Ratings and Reviews feature are replaced with the BazzareVoice ratings and reviews.
 
 {% endinfo_block %}
 
@@ -81,4 +81,4 @@ To configure the stores where you want to turn on the Bazaarvoice app, in **Sett
 
 ## Disconnecting Bazaarvoice from your store
 You can always disconnect the Bazaarvoice app from your store. For example, after the trial period, you might decide not to continue with the app. 
-To disconnect Bazaarvoice, on the Bazaarvoice app details page, next to the **Configure** button, hold the pointer over <span class="inline-img"><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/bazzarvoice/disconnect-button.png"></span> and click **Disconnect**. Disconnecting the app removes the Bazaarvoice UGC and automatically restores the default Spryker [Product Ratings and Reviews feature](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html) feature.
+To disconnect Bazaarvoice, on the Bazaarvoice app details page, next to the **Configure** button, hold the pointer over <span class="inline-img"><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/bazzarvoice/disconnect-button.png"></span> and click **Disconnect**. Disconnecting the app removes the Bazaarvoice UGC and automatically restores the default Spryker [Product Ratings and Reviews feature](/docs/scos/user/features/product-rating-and-reviews-feature-overview.html) feature.

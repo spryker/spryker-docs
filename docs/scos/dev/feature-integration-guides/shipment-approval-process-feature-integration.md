@@ -10,12 +10,12 @@ redirect_from:
   - /2021080/docs/en/shipment-approval-process-feature-integration
   - /docs/shipment-approval-process-feature-integration
   - /docs/en/shipment-approval-process-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201907.0/shipment-approval-process-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/shipment-approval-process-feature-integration.html
 related:
   - title: Approval Process feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/approval-process-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/approval-process-feature-integration.html
   - title: Shipment feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/shipment-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/shipment-feature-integration.html
 ---
 
 ## Install feature core
@@ -26,8 +26,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Shipment | {{page.version}} |
-| Approval Process | {{page.version}} |
+| Shipment | {{site.version}} |
+| Approval Process | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
@@ -153,7 +153,7 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| CheckoutPage | {{page.version}} |
+| CheckoutPage | {{site.version}} |
 
 ### 1) Set up behavior
 

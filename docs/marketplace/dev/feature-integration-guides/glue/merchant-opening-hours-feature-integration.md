@@ -5,7 +5,7 @@ description: This document describes how to integrate the Merchant Opening Hours
 template: feature-integration-guide-template
 related:
   - title: Merchant Opening Hours feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/merchant-opening-hours-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Merchant Opening Hours Glue API feature into a Spryker project.
@@ -20,7 +20,7 @@ To start feature integration, integrate the required features:
 
 | NAME  | VERSION | INTEGRATION GUIDE |
 | ----------- | ------ | --------------|
-| Merchant Opening Hours | {{page.version}}  | [Merchant Opening Hours feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-opening-hours-feature-integration.html) |
+| Merchant Opening Hours | {{site.version}}  | [Merchant Opening Hours feature integration](/docs/marketplace/dev/feature-integration-guides/merchant-opening-hours-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 

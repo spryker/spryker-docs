@@ -5,7 +5,7 @@ last_updated: June 2, 2022
 template: back-office-user-guide-template
 related:
   - title: Payments feature overview
-    link: docs/scos/user/features/page.version/payments-feature-overview.html
+    link: docs/scos/user/features/payments-feature-overview.html
 ---
 
 To view a payment methods in the Back Office, follow the steps:
@@ -25,4 +25,4 @@ To view a payment methods in the Back Office, follow the steps:
 
 ## Next steps
 
-[Edit payment methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/payment-methods/edit-payment-methods.html)
+[Edit payment methods](/docs/scos/user/back-office-user-guides/administration/payment-methods/edit-payment-methods.html)

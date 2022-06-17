@@ -10,7 +10,7 @@ redirect_from:
   - /v4/docs/en/address-step-shop-guide-201911
 related:
   - title: Split Delivery Overview
-    link: docs/scos/user/features/page.version/order-management-feature-overview/split-delivery-overview.html
+    link: docs/scos/user/features/order-management-feature-overview/split-delivery-overview.html
 ---
 
 The topic provides a list of steps to select billing and shipping addresses for the order.
@@ -113,4 +113,4 @@ If there are no saved addresses, the **Define new address** option will be displ
 
 The delivery addresses are added to your items. Now, you need to select shipment methods for each delivery address.
 
-To learn more on how to select a shipment method, see [Shop Guide - Shipment Step](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-shipment-step.html).
+To learn more on how to select a shipment method, see [Shop Guide - Shipment Step](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-shipment-step.html).

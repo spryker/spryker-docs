@@ -5,7 +5,7 @@ Description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 related:
   - title: Marketplace Product Options feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-options-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-options-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product Option feature into a Spryker project.
@@ -21,9 +21,9 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | ---------- |
-| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Product Options      | {{page.version}} | [Product Options feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/903151851/EMPTY+Product+Options+Feature+Integration+-+ongoing) |  
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Spryker Core         | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
+| Product Options      | {{site.version}} | [Product Options feature integration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/903151851/EMPTY+Product+Options+Feature+Integration+-+ongoing) |  
+| Marketplace Merchant | {{site.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration.html) |
 
 
 ### 1) Install the required modules using Composer
@@ -31,7 +31,7 @@ To start feature integration, integrate the required features:
 1) Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-product-options:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-product-options:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -374,5 +374,5 @@ Make sure that merchant product options are a part of the marketplace/merchant o
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
-| Marketplace Product Option + Cart | | [Marketplace Product Option + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-cart-feature-integration.html) |
-| Marketplace Product Option + Checkout | | [Marketplace Product Option + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-checkout-feature-integration.html) |
+| Marketplace Product Option + Cart | | [Marketplace Product Option + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-option-cart-feature-integration.html) |
+| Marketplace Product Option + Checkout | | [Marketplace Product Option + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-option-checkout-feature-integration.html) |

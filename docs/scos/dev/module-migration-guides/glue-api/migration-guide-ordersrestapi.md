@@ -15,10 +15,7 @@ redirect_from:
   - /v5/docs/en/mg-ordersrestapi
   - /v6/docs/mg-ordersrestapi
   - /v6/docs/en/mg-ordersrestapi
-  - /docs/scos/dev/module-migration-guides/202001.0/glue-api/migration-guide-ordersrestapi.html
-  - /docs/scos/dev/module-migration-guides/202005.0/glue-api/migration-guide-ordersrestapi.html
-  - /docs/scos/dev/module-migration-guides/202009.0/glue-api/migration-guide-ordersrestapi.html
-  - /docs/scos/dev/module-migration-guides/202108.0/glue-api/migration-guide-ordersrestapi.html
+  - /docs/scos/dev/module-migration-guides/glue-api/migration-guide-ordersrestapi.html
   - /module_migration_guides/glue_api/ordersrestapi-migration-guide.htm
 ---
 

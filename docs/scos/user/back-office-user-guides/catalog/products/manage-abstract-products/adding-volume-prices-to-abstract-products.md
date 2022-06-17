@@ -9,8 +9,7 @@ redirect_from:
   - /2021080/docs/en/adding-volume-prices-to-abstract-products
   - /docs/adding-volume-prices-to-abstract-products
   - /docs/en/adding-volume-prices-to-abstract-products
-  - /docs/scos/user/back-office-user-guides/202001.0/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
-  - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
+  - /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
 ---
 
 This document describes how to add volume prices to abstract products.
@@ -19,9 +18,9 @@ This document describes how to add volume prices to abstract products.
 
 To start working with abstract products, go to  **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
-Define default product prices for the stores you want to define volume prices for. To learn how to do that, see [Editing prices of an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/editing-abstract-products.html#editing-prices-of-an-abstract-product).
+Define default product prices for the stores you want to define volume prices for. To learn how to do that, see [Editing prices of an abstract product](/docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/editing-abstract-products.html#editing-prices-of-an-abstract-product).
 
-Review the [reference information](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html#reference-information-adding-volume-prices-to-abstract-products) before you start, or look up the necessary information as you go through the process.
+Review the [reference information](/docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html#reference-information-adding-volume-prices-to-abstract-products) before you start, or look up the necessary information as you go through the process.
 
 ## Adding volume prices to abstract products
 

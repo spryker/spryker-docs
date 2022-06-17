@@ -4,14 +4,14 @@ last_updated: Jul 27, 2021
 description: This guide explains how to edit abstract products in Marketplace.
 template: back-office-user-guide-template
 redirect_from:
-  - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-abstract-products/editing-abstract-products.html
+  - /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/editing-abstract-products.html
 related:
   - title: Creating abstract products
-    link: docs/marketplace/user/back-office-user-guides/page.version/catalog/products/abstract-products/creating-abstract-products.html
+    link: docs/marketplace/user/back-office-user-guides/catalog/products/abstract-products/creating-abstract-products.html
   - title: Managing products
-    link: docs/marketplace/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
+    link: docs/marketplace/user/back-office-user-guides/catalog/products/managing-products/managing-products.html
   - title: Marketplace Product feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-product-feature-overview.html
 
 ---
 
@@ -44,7 +44,7 @@ The following table describes the attributes you enter and select when editing g
 | SKU Prefix | Unique product identifier that helps to track unique information related to the product. |
 | Name | Name that's displayed for the product on the Storefront. |
 | Description | Description that's displayed for the product on the Storefront. |
-| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) *New* is assigned to the product.</li><li>The product is assigned to the *New* [category](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html).</li></ul><br> You can either select no dates or both. |
+| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/scos/user/features/product-labels-feature-overview.html) *New* is assigned to the product.</li><li>The product is assigned to the *New* [category](/docs/scos/user/features/category-management-feature-overview.html).</li></ul><br> You can either select no dates or both. |
 
 ## Editing prices of an abstract product
 
@@ -64,8 +64,8 @@ The following table describes the attributes you enter and select when editing p
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-|Merchant Price Dimension| B2B only<br>Defines the [merchant](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) the prices apply to.<br>If **Default prices** is selected, the prices apply to all customers.<br>To [manage merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchant Relations**. |
-| Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price  before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/marketplace/user/features/{{page.version}}/marketplace-product-feature-overview.html) the price you enter here. |
+|Merchant Price Dimension| B2B only<br>Defines the [merchant](/docs/scos/user/features/merchant-custom-prices-feature-overview.html) the prices apply to.<br>If **Default prices** is selected, the prices apply to all customers.<br>To [manage merchant relations](/docs/scos/user/back-office-user-guides/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchant Relations**. |
+| Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price  before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/marketplace/user/features/marketplace-product-feature-overview.html) the price you enter here. |
 |Default<br>Original| A default price is the price a customer pays for the product. An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
 |Add Product Volume Price<br>Edit Product Volume Price| This option lets you define the prices that are based on the quantity of products that a customer selects. Works only with the default prices.<br>Add Product Volume Price appears only when the price for a currency was set up and saved.<br>Edit Product Volume Price appears only what the volume price was already set up for a currency.||&check;|
 |Tax Set|The conditions under which a product is going to be taxed.<br>The values available for selection derive from **Taxes&nbsp;<span aria-label="and then">></span> Tax Sets** <br>Only one value can be selected.|
@@ -98,8 +98,8 @@ The following table describes the attributes you enter and select when editing v
 
 ## Editing product variants of an abstract product
 
-To edit a product variant, see [Editing product variants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/editing-abstract-products.html#editing-product-variants-of-an-abstract-product).
-To create a product variant, see [Creating product variants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/concrete-products/creating-product-variants.html).
+To edit a product variant, see [Editing product variants](/docs/marketplace/user/back-office-user-guides/catalog/products/abstract-products/editing-abstract-products.html#editing-product-variants-of-an-abstract-product).
+To create a product variant, see [Creating product variants](/docs/marketplace/user/back-office-user-guides/catalog/products/concrete-products/creating-product-variants.html).
 
 ## Editing meta information of an abstract product
 

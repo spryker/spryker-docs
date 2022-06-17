@@ -16,10 +16,7 @@ redirect_from:
   - /v5/docs/en/migration-guide-configurablebundlestorage
   - /v6/docs/migration-guide-configurablebundlestorage
   - /v6/docs/en/migration-guide-configurablebundlestorage
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-configurablebundlestorage.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-configurablebundlestorage.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-configurablebundlestorage.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-configurablebundlestorage.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-configurablebundlestorage.html
 related:
   - title: Migration guide - ConfigurableBundle
     link: docs/scos/dev/module-migration-guides/migration-guide-configurablebundle.html

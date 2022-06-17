@@ -10,12 +10,12 @@ redirect_from:
   - /2021080/docs/en/retrieving-banner-content-items
   - /docs/retrieving-banner-content-items
   - /docs/en/retrieving-banner-content-items
-  - /docs/scos/dev/glue-api-guides/201811.0/retrieving-content-items/retrieving-banner-content-items.html
+  - /docs/scos/dev/glue-api-guides/retrieving-content-items/retrieving-banner-content-items.html
 related:
   - title: REST API Reference
-    link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
+    link: docs/scos/dev/glue-api-guides/rest-api-reference.html
   - title: Content Items Feature Overview
-    link: docs/scos/user/features/page.version/content-items-feature-overview.html
+    link: docs/scos/user/features/content-items-feature-overview.html
 ---
 
 This endpoint allows retrieving information about banner content items.
@@ -23,7 +23,7 @@ This endpoint allows retrieving information about banner content items.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-content-items-feature-integration.html).
 
 ## Retrieve a banner content item
 
@@ -87,4 +87,4 @@ Response sample: retrieve a banner content item
 | 2202 | Content key is missing. |
 | 2203 | Content type is invalid. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

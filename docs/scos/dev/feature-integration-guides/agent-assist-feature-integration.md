@@ -10,10 +10,10 @@ redirect_from:
   - /2021080/docs/en/agent-assist-feature-integration
   - /docs/agent-assist-feature-integration
   - /docs/en/agent-assist-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202200.0/agent-assist-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/agent-assist-feature-integration.html
 ---
 
-This document describes how to integrate the [Agent Assist](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Agent Assist](/docs/scos/user/features/agent-assist-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -24,16 +24,16 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Product | {{page.version}} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html) |
-| Cart | {{page.version}}| [Customer Account Management](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
+| Spryker Core | {{site.version}} | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
+| Product | {{site.version}} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-back-office-feature-integration.html) |
+| Cart | {{site.version}}| [Customer Account Management](/docs/scos/dev/feature-integration-guides/customer-account-management-feature-integration.html) |
 
 ### 1) Install the required modules using composer
 
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker-feature/agent-assist:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/agent-assist:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -148,14 +148,14 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker-feature/agent-assist:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/agent-assist:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

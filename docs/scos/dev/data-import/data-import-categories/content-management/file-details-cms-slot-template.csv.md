@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-cms-slot-templatecsv
   - /docs/file-details-cms-slot-templatecsv
   - /docs/en/file-details-cms-slot-templatecsv
-  - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-cms-slot-template.csv.html
+  - /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-slot-template.csv.html
 ---
 
 This document describes the `cms_slot_template.csv` file to configure  [CMS Slot Template](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#template-with-slots) information in your Spryker Demo Shop.

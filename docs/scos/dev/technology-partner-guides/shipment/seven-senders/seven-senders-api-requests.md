@@ -2,7 +2,7 @@
 title: Seven Senders — API requests
 template: concept-topic-template
 redirect_from:
-  - /docs/scos/dev/technology-partner-guides/202200.0/shipment/seven-senders/seven-senders-api-requests.html
+  - /docs/scos/dev/technology-partner-guides/shipment/seven-senders/seven-senders-api-requests.html
 ---
 
 `\SprykerEco\Zed\Inxmail\Business\Api\Adapter\EventAdapter` extending `\SprykerEco\Zed\Sevensenders\Business\Api\Adapter\SevensendersApiAdapter` contains everything for sending data to Seven Senders system for events.

@@ -10,21 +10,21 @@ redirect_from:
   - /v5/docs/en/shop-guide-newsletter
 related:
   - title: Shop Guide - Order History
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-order-history.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-order-history.html
   - title: Shop Guide - Customer Profile
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-customer-profile.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-customer-profile.html
   - title: Shop Guide - Customer Addresses
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-customer-addresses.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-customer-addresses.html
   - title: Shop Guide - Customer Account Overview
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-customer-account-overview.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-customer-account-overview.html
   - title: Shop Guide - Managing a Shopping Cart
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-a-shopping-cart.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-a-shopping-cart.html
   - title: Shop Guide - Managing Multiple Shopping Carts
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-multiple-shopping-carts.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-multiple-shopping-carts.html
   - title: Shop Guide - Managing Requests for Quotes for a Sales Representative
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
   - title: Shop Guide - Managing Requests for Quotes for a Buyer
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-buyer.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-buyer.html
 ---
 
 On the Newsletter page, you can subscribe to the Newsletter and keep updated about the news and sale campaigns the shop has.

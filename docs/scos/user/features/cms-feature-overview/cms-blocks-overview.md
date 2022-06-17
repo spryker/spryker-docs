@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/cms-blocks-overview
   - /docs/cms-blocks-overview
   - /docs/en/cms-blocks-overview
-  - /docs/scos/user/features/202200.0/cms-feature-overview/cms-blocks-overview.html
+  - /docs/scos/user/features/cms-feature-overview/cms-blocks-overview.html
 ---
 
 A *CMS block* is a piece of reusable content which you can add to multipe CMS pages and templates. For example, with the help of a block, you can add banners to the top of a page or add SEO text to the bottom of a page.
@@ -19,7 +19,7 @@ A *CMS block* is a piece of reusable content which you can add to multipe CMS pa
 
 A *CMS block template* is a Twig file that, when applied to a block, defines its design, layout, and functionality.
 
-You can create templates to effectively create similar content. However, as far as CMS block is a multi-purpose entity, you can create templates that let you manage the content of different functionalities in your shop. For example, you can [manage emails using CMS blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html).
+You can create templates to effectively create similar content. However, as far as CMS block is a multi-purpose entity, you can create templates that let you manage the content of different functionalities in your shop. For example, you can [manage emails using CMS blocks](/docs/scos/user/features/cms-feature-overview/email-as-a-cms-block-overview.html).
 
 The CMS feature is shipped with several block templates by default. A developer can create more templates.
 
@@ -64,15 +64,15 @@ Product blocks are blocks that can be embedded in the product template, for whic
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/create-cms-blocks.html)  |
-| [Edit CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-cms-blocks.html)  |
+| [Create CMS blocks](/docs/scos/user/back-office-user-guides/content/blocks/create-cms-blocks.html)  |
+| [Edit CMS blocks](/docs/scos/user/back-office-user-guides/content/blocks/edit-cms-blocks.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [CMS feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cms-feature-walkthrough/cms-feature-walkthrough.html) for developers.
+Are you a developer? See [CMS feature walkthrough](/docs/scos/dev/feature-walkthroughs/cms-feature-walkthrough/cms-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}
 
 ## See next
 
-* [Templates and slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html)
+* [Templates and slots](/docs/scos/user/features/cms-feature-overview/templates-and-slots-overview.html)

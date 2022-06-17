@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/managing-the-returns
 related:
   - title: Retrieving the Return Reasons
-    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/retrieving-return-reasons.html
+    link: docs/scos/dev/glue-api-guides/managing-returns/retrieving-return-reasons.html
 ---
 
 The Return Management API allows developers to retrieve return information and create returns. The list of retrievable information includes:
@@ -28,7 +28,7 @@ In your development, the API can help you:
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Return Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-return-management-feature-integration.html)
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Return Management feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-return-management-feature-integration.html)
 
 ## Create a return
 
@@ -42,7 +42,7 @@ To create a return for a registered user, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
@@ -253,7 +253,7 @@ To retrieve returns, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
@@ -353,7 +353,7 @@ To retrieve a return, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | ✓ | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |

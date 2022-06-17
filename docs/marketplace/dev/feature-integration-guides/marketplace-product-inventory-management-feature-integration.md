@@ -4,12 +4,12 @@ last_updated: Dec 07, 2020
 description: This document describes the process how to integrate the Marketplace Product + Inventory Management feature into a Spryker project.
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/marketplace/dev/feature-integration-guides/202200.0/marketplace-product-inventory-management-feature-integration.html
+  - /docs/marketplace/dev/feature-integration-guides/marketplace-product-inventory-management-feature-integration.html
 related:
   - title: Marketplace Product feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
   - title: Marketplace Inventory Management feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-inventory-management-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-inventory-management-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product + Inventory Management feature into a Spryker project.
@@ -24,9 +24,9 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html)  |
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html)   |
-| Inventory Management | {{page.version}} | [Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/inventory-management-feature-integration.html)  |
+| Spryker Core | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html)  |
+| Marketplace Merchant | {{site.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration.html)   |
+| Inventory Management | {{site.version}} | [Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/inventory-management-feature-integration.html)  |
 
 ### Set up behavior
 

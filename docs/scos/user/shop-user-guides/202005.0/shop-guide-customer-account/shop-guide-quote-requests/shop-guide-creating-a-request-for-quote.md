@@ -10,9 +10,9 @@ redirect_from:
   - /v5/docs/en/creating-rfq-shop-guide
 related:
   - title: Quotation Process feature overview
-    link: docs/scos/user/features/page.version/quotation-process-feature-overview.html
+    link: docs/scos/user/features/quotation-process-feature-overview.html
   - title: Request for Quote- Reference Information
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/references/request-for-quote-reference-information.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/references/request-for-quote-reference-information.html
 ---
 
 This topic describes how a Buyer can create a new Request for Quote (RFQ) and add a delivery address along with the shipment method.
@@ -33,8 +33,8 @@ To create a new RFQ:
 
 4. On the **Create Quote Request** page, click **Submit Request**. This will create a Request for Quote in the Draft status in the **Customer Account > Quote Request** section.
 
-* See [Buyer Workflow](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#buyer-workflow) for more information on the request statuses and the workflow.
-* See [Reference Information](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/references/request-for-quote-reference-information.html) for details on UI elements in the **Quote Requests** page in the Customer Account.
+* See [Buyer Workflow](/docs/scos/user/features/quotation-process-feature-overview.html#buyer-workflow) for more information on the request statuses and the workflow.
+* See [Reference Information](/docs/scos/user/shop-user-guides/shop-guide-customer-account/references/request-for-quote-reference-information.html) for details on UI elements in the **Quote Requests** page in the Customer Account.
 ![Create Quote Request](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Creating+a+Request+for+Quote/create-quote-request.png)
 
 ***
@@ -46,4 +46,4 @@ The Quote Request is created in your Customer Account. Next, you can do the foll
 2. Send the quote to the Sales Representative to negotiate the price.
 3. Cancel the Quote Request, if you created it by mistake or don't need it anymore etc.
 
-See [Managing RFQs](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-buyer.html) to learn how you can perform these actions.
+See [Managing RFQs](/docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-buyer.html) to learn how you can perform these actions.

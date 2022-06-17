@@ -14,13 +14,7 @@ redirect_from:
   - /v6/docs/en/data-export
   - /v5/docs/data-export
   - /v5/docs/en/data-export
-  - /docs/scos/dev/sdk/201811.0/data-export.html
-  - /docs/scos/dev/sdk/201903.0/data-export.html
-  - /docs/scos/dev/sdk/201907.0/data-export.html
-  - /docs/scos/dev/sdk/202001.0/data-export.html
-  - /docs/scos/dev/sdk/202005.0/data-export.html
-  - /docs/scos/dev/sdk/202009.0/data-export.html
-  - /docs/scos/dev/sdk/202108.0/data-export.html
+  - /docs/scos/dev/sdk/data-export.html
 ---
 
 {% info_block warningBox "BETA version" %}
@@ -35,6 +29,6 @@ Export data on orders, generated in Spryker, to external systems like ERP or OMS
 
 **What's next?**
 
-* To install the Sales Data Export feature, see [Sales Data Export Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/sales-data-export-feature-integration.html).
-* To learn how you can export order information, see [Exporting Data](/docs/scos/dev/data-export/{{site.version}}/data-export.html).
-* For the examples of the exported files and details on their format, see [Data Export Orders .csv Files Format](/docs/scos/dev/data-export/{{site.version}}/data-export-orders-.csv-files-format.html).
+* To install the Sales Data Export feature, see [Sales Data Export Feature Integration](/docs/scos/dev/feature-integration-guides/sales-data-export-feature-integration.html).
+* To learn how you can export order information, see [Exporting Data](/docs/scos/dev/data-export/data-export.html).
+* For the examples of the exported files and details on their format, see [Data Export Orders .csv Files Format](/docs/scos/dev/data-export/data-export-orders-.csv-files-format.html).

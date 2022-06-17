@@ -13,13 +13,13 @@ To use the Merchant Portal, you have to log in. This document describes how you 
 
 ## Prerequisites
 
-To log in to the Merchant Portal, a [merchant user](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) needs to be [created](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html#creating-a-merchant-user) and [activated in the Back Office](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html#activating-and-deactivating-the-merchant-users) by the Marketplace administrator.
+To log in to the Merchant Portal, a [merchant user](/docs/marketplace/user/features/marketplace-merchant-feature-overview/merchant-users-overview.html) needs to be [created](/docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchant-users.html#creating-a-merchant-user) and [activated in the Back Office](/docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchant-users.html#activating-and-deactivating-the-merchant-users) by the Marketplace administrator.
 
 Each section in this article contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 ## Creating a password
 
-Once the merchant user is [activated](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html#activating-and-deactivating-the-merchant-users), an email with the password reset link is sent. To reset the password:
+Once the merchant user is [activated](/docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchant-users.html#activating-and-deactivating-the-merchant-users), an email with the password reset link is sent. To reset the password:
 
 1. Click the link provided in the email. The **Reset Password** page opens.
 
@@ -74,6 +74,6 @@ To log out, in the top right corner of the Merchant Portal, click the user icon 
 
 **What’s Next?**
 
-To have a quick overview of Merchant performance, see [Managing merchant's performance data](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/dashboard/managing-merchants-performance-data.html).
+To have a quick overview of Merchant performance, see [Managing merchant's performance data](/docs/marketplace/user/merchant-portal-user-guides/dashboard/managing-merchants-performance-data.html).
 
-To learn how to manage a Merchant Profile in the Merchant Portal, see [Editing merchant's profile details](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/profile/editing-merchants-profile-details.html) page.
+To learn how to manage a Merchant Profile in the Merchant Portal, see [Editing merchant's profile details](/docs/marketplace/user/merchant-portal-user-guides/profile/editing-merchants-profile-details.html) page.

@@ -9,11 +9,10 @@ redirect_from:
   - /2021080/docs/en/file-details-content-product-abstract-listcsv
   - /docs/file-details-content-product-abstract-listcsv
   - /docs/en/file-details-content-product-abstract-listcsv
-  - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-content-product-abstract-list.csv.html
-  - /docs/scos/dev/data-import/201907.0/data-import-categories/content-management/file-details-content-product-abstract-list.csv.html
+  - /docs/scos/dev/data-import/data-import-categories/content-management/file-details-content-product-abstract-list.csv.html
 ---
 
-This document describes the `content_product_abstract_list.csv` file to configure [Content Product Abstract List](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item) information in your Spryker Demo Shop.
+This document describes the `content_product_abstract_list.csv` file to configure [Content Product Abstract List](/docs/scos/user/features/content-items-feature-overview.html#content-item) information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -37,7 +36,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
+This file has the following dependency: [product_abstract.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
 
 ## Import template file and content example
 

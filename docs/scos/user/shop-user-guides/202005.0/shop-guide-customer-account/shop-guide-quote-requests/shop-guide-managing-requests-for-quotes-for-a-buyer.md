@@ -10,15 +10,15 @@ redirect_from:
   - /v5/docs/en/managing-rfqs-for-buyer-shop-guide
 related:
   - title: Request for Quote- Reference Information
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/references/request-for-quote-reference-information.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/references/request-for-quote-reference-information.html
   - title: Quotation Process feature overview
-    link: docs/scos/user/features/page.version/quotation-process-feature-overview.html
+    link: docs/scos/user/features/quotation-process-feature-overview.html
   - title: Shop Guide - Checkout
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-checkout/shop-guide-checkout.html
+    link: docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-checkout.html
   - title: Shop Guide - Address Step
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-checkout/shop-guide-address-step.html
+    link: docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-address-step.html
   - title: Shop Guide - Shipment Step
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-checkout/shop-guide-shipment-step.html
+    link: docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-shipment-step.html
 ---
 
 This topic describes the procedure for managing the Request for Quotes (RFQs) from the Buyer perspective:
@@ -30,10 +30,10 @@ This topic describes the procedure for managing the Request for Quotes (RFQs) fr
 
 You can start managing quote requests on the **Edit Quote Request** page. To navigate to this page, use one of the following options:
 
-* On the **Cart** page, create an RFQ from the **Cart** page. See [Creating an RFQ](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-creating-a-request-for-quote.html) for more information. Then, on the **Quote Request** page, click **Edit**.
+* On the **Cart** page, create an RFQ from the **Cart** page. See [Creating an RFQ](/docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-creating-a-request-for-quote.html) for more information. Then, on the **Quote Request** page, click **Edit**.
 * In the **Customer Account > Quote Requests** section, in the *Actions* column, click the **View** icon for the quote request in the *Dr*aft status you want to edit. Then, on the **View Quote Request** page, click **Edit**.
 
-See [RFQ: Reference Information](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/references/request-for-quote-reference-information.html) for details on components the Quote Request page consists of.
+See [RFQ: Reference Information](/docs/scos/user/shop-user-guides/shop-guide-customer-account/references/request-for-quote-reference-information.html) for details on components the Quote Request page consists of.
 ***
 ## Adding Delivery Information
 Once you created a Quote Request, you can set a delivery address and select a shipment method.
@@ -45,7 +45,7 @@ To add a delivery address and a shipment method:
 2. On the **Edit Quote Request** page, click **Add address**. This will redirect you to the **Address** page where you can select one of the following options and populate the fields:
     * **Define new address** to add the delivery address for the whole order. This will open the form to populate the fields with the necessary information.
     * Select one of the existing addresses.
-    * Deliver to multiple addresses to set a delivery address per item. See [Shop Guide - Delivery Address](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-address-step.html) for more information.
+    * Deliver to multiple addresses to set a delivery address per item. See [Shop Guide - Delivery Address](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-address-step.html) for more information.
 
 3. In the Billing Address section, select the necessary address or add a new one.
 
@@ -66,7 +66,7 @@ On the **Edit Quote Request** page, clicking **Add shipment method** should redi
 5. Select the shipment method and the delivery date (if needed), and click **Save**. The Quote Request will be updated successfully and redirect you to the **Edit Quote Request** page.
 
 **Tips and tricks**
-You can add a delivery address and a shipment method during the checkout prior to creating a Quote Request. To do this, follow the instructions in the [Address](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-address-step.html) and [Shipment](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-shipment-step.html) steps. Once done, the changes will be saved. To proceed with the quote request, click **Back to Cart**.
+You can add a delivery address and a shipment method during the checkout prior to creating a Quote Request. To do this, follow the instructions in the [Address](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-address-step.html) and [Shipment](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-shipment-step.html) steps. Once done, the changes will be saved. To proceed with the quote request, click **Back to Cart**.
 ___
 
 ## Editing an RFQ
@@ -91,8 +91,8 @@ Keep in mind that measurement units cannot be updated. You can only add a new pr
     * On the **Cart** page in the **Quick add to Cart** widget, enter a SKU or a name of the concrete product and its quantity, and click **Add to Cart**.
 ![quick-add-to-cart-widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Buyer/quick-add-to-cart-widget.png)
     * From the catalog, select the product, choose the options and quantity, and click **Add to Cart**.
-    * On the **Quick Order** page, enter a SKU or a name of the concrete product and its quantity, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Quick Order](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-quick-order.html).
-    * On the **Shopping list** page, click the shopping list, select the checkboxes for the items you want to add from the shopping list, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Shopping Lists](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-shopping-lists.html).
+    * On the **Quick Order** page, enter a SKU or a name of the concrete product and its quantity, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Quick Order](/docs/scos/user/shop-user-guides/shop-guide-quick-order.html).
+    * On the **Shopping list** page, click the shopping list, select the checkboxes for the items you want to add from the shopping list, and click **Add to Cart**. For more information on Quick Order, see [Shop Guide - Shopping Lists](/docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-lists.html).
 
 3.  To keep changes, click **Save and Back to Edit**. The Quote Request will be updated.
 
@@ -115,7 +115,7 @@ If the delivery address hasn’t been defined yet, the Address step will open fi
 
 ![update-delivery-information](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/RFQ/Shop+Guide+-+Managing+Requests+for+Quotes+for+a+Buyer/update-delivery-information.png)
 
-2. On the **Address** page, select the new delivery and billing addresses. See [Shop Guide - Delivery Address](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-address-step.html) for more information on the options you have in the **Select a delivery address** field.
+2. On the **Address** page, select the new delivery and billing addresses. See [Shop Guide - Delivery Address](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-address-step.html) for more information on the options you have in the **Select a delivery address** field.
 
 3. To proceed to the **Shipment** tab, click **Next**.
 
@@ -146,7 +146,7 @@ This will send the Quote Request to a Sales Representative for further processin
 
 To check the RFQ's status, navigate to the **Customer Account -> Quote Requests** section.
 
-See [Buyer Workflow](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#buyer-workflow) for more information on quote request statuses and workflow.
+See [Buyer Workflow](/docs/scos/user/features/quotation-process-feature-overview.html#buyer-workflow) for more information on quote request statuses and workflow.
 ___
 
 ## Processing a Ready RFQ
@@ -154,7 +154,7 @@ Once a Sales Representative has prepared a price suggestion and sent it to you, 
 
 To convert an RFQ to cart, on the **View Quote Request** page for the RFQ that is in the Ready status, click **Convert to Cart**.
 
-After that, you can continue to [Checkout](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-checkout.html).
+After that, you can continue to [Checkout](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-checkout.html).
 
 To request an even better price, **revise** the RFQ.
 

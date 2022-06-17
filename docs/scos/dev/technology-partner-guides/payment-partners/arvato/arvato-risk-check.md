@@ -12,9 +12,9 @@ redirect_from:
   - /docs/en/arvato-risk-check
 related:
   - title: Arvato - Store Order 2.0
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/arvato-store-order.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/arvato/arvato-store-order.html
   - title: Arvato
-    link: docs/scos/user/technology-partners/page.version/payment-partners/arvato.html
+    link: docs/scos/user/technology-partners/payment-partners/arvato.html
 ---
 
 Accounted for by external credit agency data and internal existing customer- and order-details the `RiskCheck` evaluates the probability of payment default for the customer orders.

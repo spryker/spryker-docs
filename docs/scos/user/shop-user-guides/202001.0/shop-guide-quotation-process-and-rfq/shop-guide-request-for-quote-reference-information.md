@@ -27,7 +27,7 @@ On the **Quote Requests** page, you see the following:
 | 3 | Owner | The name of the company user for whom the RFQ has been created. |
 | 4 | Total | RFQ total amount. |
 | 5 | Date | The date when the RFQ has been created. |
-| 6 | Status | The status of the RFQ. See [RFQ Statuses](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#rfq-statuses) for the details. |
+| 6 | Status | The status of the RFQ. See [RFQ Statuses](/docs/scos/user/features/quotation-process-feature-overview.html#rfq-statuses) for the details. |
 | 7 | Actions | A set of actions you can do with the RFQ. |
 
 By default, the last created RFQ goes on top of the table.

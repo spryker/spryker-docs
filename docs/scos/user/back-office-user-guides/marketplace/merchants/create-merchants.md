@@ -10,10 +10,10 @@ redirect_from:
   - /2021080/docs/en/managing-merchants
   - /docs/managing-merchants
   - /docs/en/managing-merchants
-  - /docs/scos/user/back-office-user-guides/202204.0/marketplace/merchants-and-merchant-relations/managing-merchants.html
+  - /docs/scos/user/back-office-user-guides/marketplace/merchants-and-merchant-relations/managing-merchants.html
 related:
   - title: Merchants and Merchant Relations Feature Overview
-    link: docs/scos/user/features/page.version/merchant-b2b-contracts-feature-overview.html
+    link: docs/scos/user/features/merchant-b2b-contracts-feature-overview.html
 ---
 
 This document describes how to create merchants in the Back Office.
@@ -57,5 +57,5 @@ Review the [reference information](#reference-information-create-a-merchant) bef
 
 ## Next steps
 
-[Edit merchants](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants/edit-merchants.html)
-[Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/create-merchant-relations.html)
+[Edit merchants](/docs/scos/user/back-office-user-guides/marketplace/merchants/edit-merchants.html)
+[Create merchant relations](/docs/scos/user/back-office-user-guides/marketplace/merchant-relations/create-merchant-relations.html)

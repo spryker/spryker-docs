@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/file-details-product-attribute-keycsv
 ---
 
-This document describes the `product_attribute_key.csv` file to configure [Product Attribute](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html) information on your Spryker Demo Shop.
+This document describes the `product_attribute_key.csv` file to configure [Product Attribute](/docs/scos/user/features/product-feature-overview/product-attributes-overview.html) information on your Spryker Demo Shop.
 
 To import the file, run:
 

@@ -2,7 +2,7 @@
 title: Heroku
 template: concept-topic-template
 redirect_from:
-  - /docs/scos/user/technology-partners/202200.0/hosting-providers/heroku.html
+  - /docs/scos/user/technology-partners/hosting-providers/heroku.html
 ---
 
 ## Partner Information
@@ -15,7 +15,7 @@ Heroku is fully managed, giving developers the freedom to focus on their core pr
 
 ## Related Developer guides
 
-* [Integrating Heroku](/docs/scos/dev/technology-partner-guides/{{page.version}}/hosting-providers/integrating-heroku.html)
+* [Integrating Heroku](/docs/scos/dev/technology-partner-guides/hosting-providers/integrating-heroku.html)
 
 
 ---

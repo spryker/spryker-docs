@@ -12,14 +12,14 @@ redirect_from:
   - /docs/en/retrieving-return-reasons
 related:
   - title: Managing the returns
-    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/managing-the-returns.html
+    link: docs/scos/dev/glue-api-guides/managing-returns/managing-the-returns.html
 ---
 
 This endpoint allows retrieving returns reasons.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Return Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-return-management-feature-integration.html)
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Return Management feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-return-management-feature-integration.html)
 
 ## Retrieve return reasons
 
@@ -86,4 +86,4 @@ Request sample: retrieve return reasons
 | --- | --- | --- |
 | reason | String | Predefined return reason. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

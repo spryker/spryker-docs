@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-product-lists
   - /docs/managing-product-lists
   - /docs/en/managing-product-lists
-  - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-lists/managing-product-lists.html
+  - /docs/scos/user/back-office-user-guides/catalog/product-lists/managing-product-lists.html
 ---
 
 This article describes how to manage product lists.
@@ -34,7 +34,7 @@ To edit a product list:
 
 {% info_block warningBox "Blacklist" %}
 
-If a product list is used by a [configurable bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html) and its type is changed to **Blacklist**, it stops being displayed for the [configurable bundle slot](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html#configurable-bundle-slot) on the Storefront. To check if a product list is used by a configurable bundle, on the *Edit Product List: {product list ID}*  page, switch to the *Used by* tab.
+If a product list is used by a [configurable bundle](/docs/scos/user/features/configurable-bundle-feature-overview.html) and its type is changed to **Blacklist**, it stops being displayed for the [configurable bundle slot](/docs/scos/user/features/configurable-bundle-feature-overview.html#configurable-bundle-slot) on the Storefront. To check if a product list is used by a configurable bundle, on the *Edit Product List: {product list ID}*  page, switch to the *Used by* tab.
 
 {% endinfo_block %}
 
@@ -102,4 +102,4 @@ To remove a product list:
     The *Overview of Product lists* page opens with the success message displayed.
 
 **What's next?**
-<br>See the reference information of the [Creating a product list](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/creating-product-lists.html) guide to learn about the attributes you see, select, and enter while managing a product list.
+<br>See the reference information of the [Creating a product list](/docs/scos/user/back-office-user-guides/catalog/product-lists/creating-product-lists.html) guide to learn about the attributes you see, select, and enter while managing a product list.

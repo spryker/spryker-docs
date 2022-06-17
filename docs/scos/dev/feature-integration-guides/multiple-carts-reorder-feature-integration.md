@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/multiple-carts-reorder-feature-integration
   - /docs/multiple-carts-reorder-feature-integration
   - /docs/en/multiple-carts-reorder-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202200.0/multiple-carts-reorder-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/multiple-carts-reorder-feature-integration.html
 ---
 
 ## Install feature core
@@ -21,9 +21,9 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Multiple Carts | {{page.version}} |
-| Reorder | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Multiple Carts | {{site.version}} |
+| Reorder | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Set up behavior
 

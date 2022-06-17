@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/product-rating-reviews-feature-integration
 related:
   - title: Product Rating & Reviews feature overview
-    link: docs/scos/user/features/page.version/product-rating-and-reviews-feature-overview.html
+    link: docs/scos/user/features/product-rating-and-reviews-feature-overview.html
 ---
 
 ## Prerequisites

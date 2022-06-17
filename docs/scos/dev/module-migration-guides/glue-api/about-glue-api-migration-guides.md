@@ -21,13 +21,7 @@ redirect_from:
   - /v5/docs/en/about-glue-api-migration
   - /v6/docs/about-glue-api-migration
   - /v6/docs/en/about-glue-api-migration
-  - /docs/scos/dev/module-migration-guides/201811.0/glue-api/about-glue-api-migration-guides.html
-  - /docs/scos/dev/module-migration-guides/201903.0/glue-api/about-glue-api-migration-guides.html
-  - /docs/scos/dev/module-migration-guides/201907.0/glue-api/about-glue-api-migration-guides.html
-  - /docs/scos/dev/module-migration-guides/202001.0/glue-api/about-glue-api-migration-guides.html
-  - /docs/scos/dev/module-migration-guides/202005.0/glue-api/about-glue-api-migration-guides.html
-  - /docs/scos/dev/module-migration-guides/202009.0/glue-api/about-glue-api-migration-guides.html
-  - /docs/scos/dev/module-migration-guides/202108.0/glue-api/about-glue-api-migration-guides.html
+  - /docs/scos/dev/module-migration-guides/glue-api/about-glue-api-migration-guides.html
 ---
 
 The Glue API migration guides provide step-by-step implementation on how to manually update a module to a newer version.

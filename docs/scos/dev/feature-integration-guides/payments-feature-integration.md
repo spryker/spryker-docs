@@ -10,12 +10,10 @@ redirect_from:
   - /2021080/docs/en/payments-feature-integration
   - /docs/payments-feature-integration
   - /docs/en/payments-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/payments-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201903.0/payments-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201907.0/payments-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/payments-feature-integration.html
 related:
   - title: Payments feature overview
-    link: docs/scos/user/features/page.version/payments-feature-overview.html
+    link: docs/scos/user/features/payments-feature-overview.html
 ---
 
 {% info_block errorBox %}
@@ -35,14 +33,14 @@ To start the feature integration, overview and install the necessary features:
 
 |  NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require "spryker-feature/payments:{{page.version}}" "spryker/checkout-rest-api:^3.0.0" --update-with-dependencies
+composer require "spryker-feature/payments:{{site.version}}" "spryker/checkout-rest-api:^3.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

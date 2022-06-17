@@ -8,7 +8,7 @@ originalArticleId: c01aaea9-5602-4cb9-9d99-04d42aa2aa8a
 redirect_from:
   - /v7/docs/company-account-module-relations
   - /v7/docs/en/company-account-module-relations
-  - /docs/scos/dev/feature-walkthroughs/202200.0/company-account-feature-walkthrough/company-account-module-relations.html
+  - /docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/company-account-module-relations.html
 ---
 
 The schema below illustrates relations between company, business unit, company unit address and company user (customer).

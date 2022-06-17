@@ -9,8 +9,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-cms-feature-integration-guide
   - /docs/glue-api-cms-feature-integration-guide
   - /docs/en/glue-api-cms-feature-integration-guide
-  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-cms-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-cms-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/glue-api/glue-api-cms-feature-integration.html
 ---
 
 This document describes how to integrate the CMS feature API into a Spryker project.
@@ -21,8 +20,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME     | VERSION | REQUIRED SUB-FEATURE     |
 | --------- | ------ | ------------------------ |
-| Spryker Core | {{page.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| CMS          | {{page.version}}  | [CMS feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-feature-integration.html) |
+| Spryker Core | {{site.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |
+| CMS          | {{site.version}}  | [CMS feature integration](/docs/scos/dev/feature-integration-guides/cms-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -211,5 +210,5 @@ Integrate the following related features:
 
 | FEATURE      | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE     |
 | ---------- | ----------------- | ---------------------------- |
-| Content items |                                  | [Content Items feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/content-items-feature-integration.html) |
-| CMS           | ✓                                | [CMS feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-feature-integration.html) |
+| Content items |                                  | [Content Items feature integration](/docs/scos/dev/feature-integration-guides/content-items-feature-integration.html) |
+| CMS           | ✓                                | [CMS feature integration](/docs/scos/dev/feature-integration-guides/cms-feature-integration.html) |

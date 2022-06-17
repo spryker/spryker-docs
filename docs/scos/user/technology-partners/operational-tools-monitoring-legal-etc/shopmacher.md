@@ -9,10 +9,10 @@ redirect_from:
   - /2021080/docs/en/shopmacher
   - /docs/shopmacher
   - /docs/en/shopmacher
-  - /docs/scos/user/technology-partners/202200.0/operational-tools-monitoring-legal-etc/shopmacher.html
+  - /docs/scos/user/technology-partners/operational-tools-monitoring-legal-etc/shopmacher.html
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
+    link: docs/scos/user/technology-partners/technology-partners.html
 ---
 
 ## Copyright and Disclaimer

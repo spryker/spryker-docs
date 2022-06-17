@@ -10,8 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-punch-out-connections
   - /docs/managing-punch-out-connections
   - /docs/en/managing-punch-out-connections
-  - /docs/scos/user/back-office-user-guides/201811.0/punch-out/managing-punch-out-connections.html
-  - /docs/scos/user/back-office-user-guides/201903.0/punch-out/managing-punch-out-connections.html
+  - /docs/scos/user/back-office-user-guides/punch-out/managing-punch-out-connections.html
 ---
 
 This topic describes how to create and manage the Punch Out connections.

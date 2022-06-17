@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/migration-guide-categorygui
   - /docs/migration-guide-categorygui
   - /docs/en/migration-guide-categorygui
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-categorygui.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-categorygui.html
 ---
 
 This document describes how to upgrade the `CategoryGui` module.  

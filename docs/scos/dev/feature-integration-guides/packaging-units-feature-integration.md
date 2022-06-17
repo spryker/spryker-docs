@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/product-packaging-unit-feature-integration
   - /docs/product-packaging-unit-feature-integration
   - /docs/en/product-packaging-unit-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202200.0/packaging-units-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/packaging-units-feature-integration.html
 ---
 
 ## Install feature core
@@ -20,17 +20,17 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Inventory Management | {{page.version}} |
-|Spryker Core  | {{page.version}} |
-|Order Management  | {{page.version}} |
-| Product | {{page.version}} |
-| Measurement Units | {{page.version}} |
+| Inventory Management | {{site.version}} |
+|Spryker Core  | {{site.version}} |
+|Order Management  | {{site.version}} |
+| Product | {{site.version}} |
+| Measurement Units | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/packaging-units:"{{page.version}}" --update-with-dependencies`
+composer require spryker-feature/packaging-units:"{{site.version}}" --update-with-dependencies`
 ```
 
 {% info_block warningBox "Verification" %}
@@ -919,16 +919,16 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core E-commerce | {{page.version}} |
-| Measurement Units | {{page.version}} |
-| Non-splittable Products | {{page.version}} |
+| Spryker Core E-commerce | {{site.version}} |
+| Measurement Units | {{site.version}} |
+| Non-splittable Products | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/packaging-units: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/packaging-units: "{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

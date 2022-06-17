@@ -22,13 +22,7 @@ redirect_from:
   - /v1/docs/en/mg-cart-extension
   - /v1/docs/mg-cart-extension
   - /v1/docs/en/mg-cart-extension
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-cartextension.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-cartextension.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-cartextension.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-cartextension.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cartextension.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cartextension.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cartextension.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-cartextension.html
   - /module_migration_guides/mg-cart-extension.htm
 ---
 

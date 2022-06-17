@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/customer-groups-overview
   - /docs/customer-groups-overview
   - /docs/en/customer-groups-overview
-  - /docs/scos/user/features/202200.0/customer-account-management-feature-overview/customer-groups-overview.html
+  - /docs/scos/user/features/customer-account-management-feature-overview/customer-groups-overview.html
 ---
 
 *Customer Groups* let you organize customers into groups to help you target users for discounts and promotions.
@@ -19,10 +19,10 @@ redirect_from:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage customer groups](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/manage-customer-groups.html)   |
+| [Manage customer groups](/docs/scos/user/back-office-user-guides/customer/manage-customer-groups.html)   |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Customer Account Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html) for developers.
+Are you a developer? See [Customer Account Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

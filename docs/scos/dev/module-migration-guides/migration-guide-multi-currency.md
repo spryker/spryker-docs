@@ -22,13 +22,7 @@ redirect_from:
   - /v5/docs/en/mg-multi-currency
   - /v6/docs/mg-multi-currency
   - /v6/docs/en/mg-multi-currency
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-multi-currency.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-multi-currency.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-multi-currency.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-multi-currency.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-multi-currency.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-multi-currency.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-multi-currency.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-multi-currency.html
 related:
   - title: Migration guide - Currency
     link: docs/scos/dev/module-migration-guides/migration-guide-currency.html

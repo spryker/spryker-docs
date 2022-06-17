@@ -22,13 +22,7 @@ redirect_from:
   - /v5/docs/en/mg-product-label
   - /v6/docs/mg-product-label
   - /v6/docs/en/mg-product-label
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productlabel.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productlabel.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productlabel.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-productlabel.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productlabel.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productlabel.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productlabel.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-productlabel.html
 related:
   - title: Migration guide - Product Label GUI
     link: docs/scos/dev/module-migration-guides/migration-guide-productlabelgui.html

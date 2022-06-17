@@ -10,18 +10,18 @@ redirect_from:
   - /2021080/docs/en/managing-wishlists
   - /docs/managing-wishlists
   - /docs/en/managing-wishlists
-  - /docs/scos/dev/glue-api-guides/202200.0/managing-wishlists/managing-wishlists.html
+  - /docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html
 ---
 
-The Wishlists API allows creating list and deleting [wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html), as well as managing the items inside them.
+The Wishlists API allows creating list and deleting [wishlists](/docs/scos/user/features/wishlist-feature-overview.html), as well as managing the items inside them.
 
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Wishlist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-wishlist-feature-integration.html)
-* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html)
+* [Glue API: Wishlist feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-wishlist-feature-integration.html)
+* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html)
+* [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-labels-feature-integration.html)
 
 ## Create a wishlist
 
@@ -36,7 +36,7 @@ To create a wishlist, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample: create a wishlist
 
@@ -112,7 +112,7 @@ To retrieve all wishlists of a customer, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 ### Response
 
@@ -433,9 +433,9 @@ To retrieve all wishlists of a customer, send the request:
 | updatedAt | String | Date of the last update. |
 
 For attributes of the included resources, see:
-* [Add an item to a wishlist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlist-items.html#wishlist-items-response-attributes)
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
-* [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+* [Add an item to a wishlist](/docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlist-items.html#wishlist-items-response-attributes)
+* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a product label](/docs/scos/dev/glue-api-guides/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 
 ## Retrieve a wishlist
 
@@ -465,7 +465,7 @@ To retrieve wishlist items, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 ### Response
 
@@ -750,9 +750,9 @@ To retrieve wishlist items, send the request:
 | updatedAt | String | Date of the last update. |
 
 For attributes of the included resources, see:
-* [Add an item to a wishlist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlist-items.html#wishlist-items-response-attributes)
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
-* [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+* [Add an item to a wishlist](/docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlist-items.html#wishlist-items-response-attributes)
+* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieve a product label](/docs/scos/dev/glue-api-guides/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 
 ## Edit a wishlist
 
@@ -767,7 +767,7 @@ To edit a wishlist, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample: edit a wishlist. The following sample changes the name of a wishlist.
 
@@ -817,7 +817,7 @@ To delete a wishlist, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample: delete a wishlist
 
@@ -842,4 +842,4 @@ If the wishlist is deleted successfully, the endpoint returns the `204 No Conten
 | 210 | Please enter the name using only letters, numbers, underscores, spaces or dashes.  |
 | 901 | `name` field is empty. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

@@ -10,10 +10,10 @@ redirect_from:
   - /2021080/docs/en/file-details-product-concrete-pre-configurationcsv
   - /docs/file-details-product-concrete-pre-configurationcsv
   - /docs/en/file-details-product-concrete-pre-configurationcsv
-  - /docs/scos/dev/data-import/202200.0/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html
+  - /docs/scos/dev/data-import/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html
 ---
 
-This document describes the `product_concrete_pre_configuration.csv` file to configure [configurable product](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html) information in your Spryker shop.
+This document describes the `product_concrete_pre_configuration.csv` file to configure [configurable product](/docs/scos/user/features/configurable-product-feature-overview.html) information in your Spryker shop.
 
 To import the file, run
 
@@ -35,7 +35,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-The file has the following dependency: [File details: product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html#import-file-parameters)
+The file has the following dependency: [File details: product_concrete.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html#import-file-parameters)
 
 ## Import template file and content example
 

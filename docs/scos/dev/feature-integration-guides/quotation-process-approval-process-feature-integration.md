@@ -24,8 +24,8 @@ To start feature integration, integrate the required features:
 
 | NAME              | VERSION          | INTEGRATION GUIDE |
 |-------------------|------------------|------------------|
-| Quotation Process | {{page.version}} | [Quotation Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quotation-process-feature-integration.html) |
-| Approval Process  | {{page.version}} | [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/approval-process-feature-integration.html) |
+| Quotation Process | {{site.version}} | [Quotation Process feature integration](/docs/scos/dev/feature-integration-guides/quotation-process-feature-integration.html) |
+| Approval Process  | {{site.version}} | [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/approval-process-feature-integration.html) |
 
 ### 1) Set up behavior
 

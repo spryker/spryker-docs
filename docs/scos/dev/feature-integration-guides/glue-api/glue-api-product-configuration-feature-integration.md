@@ -4,7 +4,7 @@ description: Learn how to integrate the Product Configurator feature API into a 
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the [Product Configuration](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html) feature API into a Spryker project.
+This document describes how to integrate the [Product Configuration](/docs/scos/user/features/configurable-product-feature-overview.html) feature API into a Spryker project.
 
 ## Prerequisites
 
@@ -12,12 +12,12 @@ To start feature integration, integrate the required features and Glue APIs:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core API | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Product API |{{page.version}} |[Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)|
-| Cart API| {{page.version}}| [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)|
-| Wishlist API| {{page.version}}| [Glue API: Wishlist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-wishlist-feature-integration.html)|
-| Order Management API| {{page.version}} |[Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-order-management-feature-integration.html)|
-|Product Configuration |{{page.version}} |[Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-configuration-feature-integration.html)|
+| Spryker Core API | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Product API |{{site.version}} |[Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html)|
+| Cart API| {{site.version}}| [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html)|
+| Wishlist API| {{site.version}}| [Glue API: Wishlist feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-wishlist-feature-integration.html)|
+| Order Management API| {{site.version}} |[Glue API: Order Management feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-order-management-feature-integration.html)|
+|Product Configuration |{{site.version}} |[Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/product-configuration-feature-integration.html)|
 
 ## 1) Install the required modules using Composer
 

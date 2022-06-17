@@ -5,11 +5,11 @@ description: This document describes how to modify marketplace abstract products
 template: back-office-user-guide-template
 related:
   - title: Marketplace Product feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-product-feature-overview.html
   - title: Marketplace Inventory Management feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-inventory-management-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-inventory-management-feature-overview.html
   - title: Marketplace Product Approval Process feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-approval-process-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-product-approval-process-feature-overview.html
 ---
 
 This document describes how to manage marketplace abstract products in the Merchant Portal.
@@ -61,18 +61,18 @@ To edit the existing marketplace abstract product:
 | Name        | Name of your product displayed on the Storefront. It is set per locale. | ✓         |
 | Description | Description of the product displayed on the Storefront. It is set per locale. |           |
 | Stores      | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product is available in.<br/>You can select multiple values. |           |
-| Price       | In this pane, you can manage prices for your abstract product. See [Managing abstract product prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-prices.html) for more details. |           |
+| Price       | In this pane, you can manage prices for your abstract product. See [Managing abstract product prices](/docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-prices.html) for more details. |           |
 | Tax Set     | The conditions under which a product is going to be taxed.<br/>The values available for selection derive from Taxes > Tax Sets<br/>Only one value can be selected. | ✓         |
-| Images      | In this pane, you can manage image sets for your abstract product. See [Managing abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-image-sets.html) for more details. |           |
-| Attributes  | In this pane, you can manage attributes for your product. See [Managing abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-attributes.html) for more details. |           |
-| Categories  | Defines the [categories](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html) the product is displayed in. |           |
-| SEO         | In this pane, you can manage meta information for your product. See [Managing abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-meta-information.html) for more details. |           |
+| Images      | In this pane, you can manage image sets for your abstract product. See [Managing abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-image-sets.html) for more details. |           |
+| Attributes  | In this pane, you can manage attributes for your product. See [Managing abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-attributes.html) for more details. |           |
+| Categories  | Defines the [categories](/docs/scos/user/features/category-management-feature-overview.html) the product is displayed in. |           |
+| SEO         | In this pane, you can manage meta information for your product. See [Managing abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-meta-information.html) for more details. |           |
 
 ## Sending the product for approval
 
 {% info_block warningBox "Warning" %}
 
-You can approve only the [newly created marketplace product](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/creating-marketplace-abstract-product.html).
+You can approve only the [newly created marketplace product](/docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/creating-marketplace-abstract-product.html).
 
 {% endinfo_block %}
 
@@ -83,14 +83,14 @@ For the new product to be available on the Storefront, it needs to be approved. 
 
 {% info_block infoBox "Info" %}
 
-This button is only displayed if the product status is *Draft*. To learn more about the product statuses, see, [Marketplace Product Approval feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-product-approval-process-feature-overview.html)
+This button is only displayed if the product status is *Draft*. To learn more about the product statuses, see, [Marketplace Product Approval feature overview](/docs/marketplace/user/features/marketplace-product-approval-process-feature-overview.html)
 
 {% endinfo_block %}
 
 
 ## Next steps
 
-- [Manage abstract product prices](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-prices.html)
-- [Manage abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-attributes.html)
-- [Manage abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-image-sets.html)
-- [Manage abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/products/abstract-products/managing-marketplace-abstract-product-meta-information.html)
+- [Manage abstract product prices](/docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-prices.html)
+- [Manage abstract product attributes](/docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-attributes.html)
+- [Manage abstract product image sets](/docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-image-sets.html)
+- [Manage abstract product meta information](/docs/marketplace/user/merchant-portal-user-guides/products/abstract-products/managing-marketplace-abstract-product-meta-information.html)

@@ -9,12 +9,10 @@ redirect_from:
   - /2021080/docs/en/file-details-navigation-nodecsv
   - /docs/file-details-navigation-nodecsv
   - /docs/en/file-details-navigation-nodecsv
-  - /docs/scos/dev/data-import/201811.0/data-import-categories/navigation-setup/file-details-navigation-node.csv.html
-  - /docs/scos/dev/data-import/201903.0/data-import-categories/navigation-setup/file-details-navigation-node.csv.html
-  - /docs/scos/dev/data-import/201907.0/data-import-categories/navigation-setup/file-details-navigation-node.csv.html
+  - /docs/scos/dev/data-import/data-import-categories/navigation-setup/file-details-navigation-node.csv.html
 ---
 
-This document describes the `navigation_node.csv` file to configure [Navigation Node](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#navigation-node-types) information in your Spryker Demo Shop.
+This document describes the `navigation_node.csv` file to configure [Navigation Node](/docs/scos/user/back-office-user-guides/content/navigation/managing-navigation-elements.html#navigation-node-types) information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -44,8 +42,8 @@ The file should have the following parameters:
 
 This file has the following dependencies:
 
-* [navigation.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html)
-* [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
+* [navigation.csv](/docs/scos/dev/data-import/data-import-categories/navigation-setup/file-details-navigation.csv.html)
+* [glossary.csv](/docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-glossary.csv.html)
 
 ## Import template file and content example
 

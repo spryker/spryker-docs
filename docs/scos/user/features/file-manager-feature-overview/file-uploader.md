@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/file-uploader
   - /docs/file-uploader
   - /docs/en/file-uploader
-  - /docs/scos/user/features/202200.0/file-manager-feature-overview/file-uploader.html
+  - /docs/scos/user/features/file-manager-feature-overview/file-uploader.html
 ---
 
 The *File Uploader* feature is helpful when a Back Office user needs to add instructions or additional documentation to the product as an attachment. These files can further be downloaded to visitors' PCs.
@@ -164,10 +164,10 @@ To check the full list of MIME types, refer to the article.
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Upload files to the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/content/file-manager/managing-file-tree.html#uploading-files) |
+| [Upload files to the Back Office](/docs/scos/user/back-office-user-guides/content/file-manager/managing-file-tree.html#uploading-files) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [File Manager feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/file-manager-feature-walkthrough.html) for developers.
+Are you a developer? See [File Manager feature walkthrough](/docs/scos/dev/feature-walkthroughs/file-manager-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

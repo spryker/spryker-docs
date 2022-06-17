@@ -8,9 +8,9 @@ originalArticleId: 6eb7d49b-7cde-4884-b603-7dad443a51eb
 redirect_from:
   - /v3/docs/managing-rfqs-for-buyer-shop-guide
   - /v3/docs/en/managing-rfqs-for-buyer-shop-guide
-  - /docs/scos/user/shop-user-guides/page.version/quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html
-  - /docs/scos/user/shop-user-guides/201907.0/quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html
-  - /docs/scos/user/shop-user-guides/201907.0/quotation-proces-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html
+  - /docs/scos/user/shop-user-guides/quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html
+  - /docs/scos/user/shop-user-guides/quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html
+  - /docs/scos/user/shop-user-guides/quotation-proces-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html
 ---
 
 This topic describes the procedure for managing the Request for Quotes (RFQs) from the Buyer perspective:
@@ -21,10 +21,10 @@ This topic describes the procedure for managing the Request for Quotes (RFQs) fr
 
 You can do this all from the Quote Request page. You will be taken to this page when you:
 
-* Initially create an RFQ from the Cart page. See [Creating an RFQ (Buyer)](/docs/scos/user/shop-user-guides/{{page.version}}/quotation-proces-and-rfq/shop-guide-creating-a-request-for-quote.html) for more information.
+* Initially create an RFQ from the Cart page. See [Creating an RFQ (Buyer)](/docs/scos/user/shop-user-guides/quotation-proces-and-rfq/shop-guide-creating-a-request-for-quote.html) for more information.
 * Open a Quote Request which is in the *Draft* status in the **Customer Account → Quote Request**.
 
-See [Reference Information](/docs/scos/user/shop-user-guides/{{page.version}}/quotation-proces-and-rfq/shop-guide-request-for-quote-reference-information.html) for details on components the Quote Request page consists of.
+See [Reference Information](/docs/scos/user/shop-user-guides/quotation-proces-and-rfq/shop-guide-request-for-quote-reference-information.html) for details on components the Quote Request page consists of.
 ***
 ## Sending an RFQ to a Sales Representative
 
@@ -35,7 +35,7 @@ You can send the newly-created RFQs and the ones that are in *Draft* status to a
 
 Your Quote Request will be sent to the Sales Representative. You can check the RFQ's status in the **Customer Account -> Quote Request**.
 
-See [Buyer Workflow](/docs/scos/user/shop-user-guides/{{page.version}}/quotation-proces-and-rfq/shop-guide-request-for-quote-reference-information.html) for more information on request statuses and workflow.
+See [Buyer Workflow](/docs/scos/user/shop-user-guides/quotation-proces-and-rfq/shop-guide-request-for-quote-reference-information.html) for more information on request statuses and workflow.
 ***
 ## Processing a Ready RFQ
 
@@ -43,7 +43,7 @@ Once a Sales Representative has prepared a price suggestion and sent it to you, 
 
 To convert an RFQ to cart, on the **Quote Request** page for the RFQ that is in the status Ready, click **Convert to Cart**.
 
-From now on, you can continue to [Checkout](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-checkout.html).
+From now on, you can continue to [Checkout](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-checkout.html).
 
 To request an even better price, you need to revise the RFQ.
 ***
@@ -56,7 +56,7 @@ You can revise an RFQ with the status *Ready*. To revise the RFQ:
 
 {% info_block warningBox %}
 
-RFQ version number changes upon each revision. Check [RFQ Versioning](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#rfq-versioning) to learn about the version change process.
+RFQ version number changes upon each revision. Check [RFQ Versioning](/docs/scos/user/features/quotation-process-feature-overview.html#rfq-versioning) to learn about the version change process.
 
 {% endinfo_block %}
 
@@ -67,12 +67,12 @@ You can edit the RFQs that are in a *Draft* status. To edit the RFQ:
 
 1. Open the **Quote Request** page.
 2. Click **Edit**.
-3. Change **Purchase order number, Do not ship later than, Notes** fields, and/or [Edit the Items](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#quotation-process-and-rfq-on-the-storefront) that are in the RFQ.
+3. Change **Purchase order number, Do not ship later than, Notes** fields, and/or [Edit the Items](/docs/scos/user/features/quotation-process-feature-overview.html#quotation-process-and-rfq-on-the-storefront) that are in the RFQ.
 4. Click **Save**.
 
 {% info_block warningBox %}
 
-RFQ version number changes upon each revision. Check [RFQ Versioning](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#rfq-versioning) to learn about the version change process.
+RFQ version number changes upon each revision. Check [RFQ Versioning](/docs/scos/user/features/quotation-process-feature-overview.html#rfq-versioning) to learn about the version change process.
 
 {% endinfo_block %}
 

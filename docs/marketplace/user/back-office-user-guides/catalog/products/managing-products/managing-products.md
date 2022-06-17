@@ -5,13 +5,13 @@ last_updated: May 20, 2022
 template: back-office-user-guide-template
 related:
   - title: Editing abstract products
-    link: docs/marketplace/user/back-office-user-guides/page.version/catalog/products/abstract-products/editing-abstract-products.html
+    link: docs/marketplace/user/back-office-user-guides/catalog/products/abstract-products/editing-abstract-products.html
   - title: Editing product variants
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/editing-product-variants.html
+    link: docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/editing-product-variants.html
   - title: Marketplace Product feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-product-feature-overview.html
 redirect_from:
-  - docs/marketplace/user/back-office-user-guides/page.version/catalog/products/products-reference-information.html
+  - docs/marketplace/user/back-office-user-guides/catalog/products/products-reference-information.html
 ---
 
 This document describes how to manage abstract and concrete products.
@@ -65,5 +65,5 @@ To update the approval status of the product, in the _Actions_ column of the abs
 
 **What's next?**
 
-To learn more about the product management, see [Editing abstract products](/docs/marketplace/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/editing-abstract-products.html)
+To learn more about the product management, see [Editing abstract products](/docs/marketplace/user/back-office-user-guides/catalog/products/abstract-products/editing-abstract-products.html)
 

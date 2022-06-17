@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/shared-carts-feature-overview
   - /docs/shared-carts-feature-overview
   - /docs/en/shared-carts-feature-overview
-  - /docs/scos/user/features/202200.0/shared-carts-feature-overview.html
+  - /docs/scos/user/features/shared-carts-feature-overview.html
 ---
 
 *Shopping Cart* is a part of the online shop where the record of the items a buyer has ‘picked up’ from the online store is kept. The shopping cart lets customers select products, review what they selected, make modifications or add extra items if needed, and purchase the products.
@@ -133,7 +133,7 @@ If the shared cart has been dismissed individually by the user, this user will n
 
 ## Current constraints
 
-With the current functionality, the shopping cart cannot be shared outside of a [business unit](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-units-overview.html) where the owner belongs.
+With the current functionality, the shopping cart cannot be shared outside of a [business unit](/docs/scos/user/features/company-account-feature-overview/business-units-overview.html) where the owner belongs.
 
 ## Shared Cart on the Storefront
 <a id=shared-cart-on-the-storefront></a>
@@ -145,6 +145,6 @@ On the storefront, company users can share a cart with other users within the sa
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Shared Carts feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shared-carts-feature-walkthrough.html) for developers.
+Are you a developer? See [Shared Carts feature walkthrough](/docs/scos/dev/feature-walkthroughs/shared-carts-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

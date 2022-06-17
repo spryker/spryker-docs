@@ -4,9 +4,9 @@ description: Retrieve Marketplace product offer prices via Glue API
 template: glue-api-storefront-guide-template
 related:
   - title: Retrieving product offers
-    link: docs/marketplace/dev/glue-api-guides/page.version/product-offers/retrieving-product-offers.html 
+    link: docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offers.html 
   - title: Retrieving product offer availabilities
-    link: docs/marketplace/dev/glue-api-guides/page.version/product-offers/retrieving-product-offer-availability.html
+    link: docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offer-availability.html
 ---
 
 This document describes how to retrieve product offer prices via Glue API.
@@ -14,9 +14,9 @@ This document describes how to retrieve product offer prices via Glue API.
 ## Installation
 
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
-* [GLUE API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)
-* [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html)
-* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-volume-prices.html)
+* [GLUE API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html)
+* [Glue API: Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-prices-feature-integration.html)
+* [Glue API: Marketplace Product Offer Volume Prices feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-volume-prices.html)
 
 ## Retrieve prices of a product offer
 
@@ -30,7 +30,7 @@ To retrieve prices of a product offer, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | ------------------ | ---------------------- |
-| {% raw %}***{{offerId}}***{% endraw %} | Unique identifier of a product offer to retrieve the availability of. To get it, [retrieve the offers of a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-product-offers-of-concrete-products.html). |
+| {% raw %}***{{offerId}}***{% endraw %} | Unique identifier of a product offer to retrieve the availability of. To get it, [retrieve the offers of a concrete product](/docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-product-offers-of-concrete-products.html). |
 
 ### Request
 
@@ -95,7 +95,7 @@ Response sample: retrieve prices of a product offer
 | prices.currency.code   | String  | Currency code.   |
 | prices.currency.name   | String  | Currency name.  |
 | prices.currency.symbol   | String  | Currency symbol.  |
-| prices.volumePrices   | Object  |  An array of objects defining the [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html) of the product offer.  |
+| prices.volumePrices   | Object  |  An array of objects defining the [volume prices](/docs/scos/user/features/prices-feature-overview/volume-prices-overview.html) of the product offer.  |
 | prices.volumePrices.grossAmount | Integer   |  Gross volume price in cents.         |
 | prices.volumePrices.netAmount | Integer   | Net volume price in cents.          |
 | prices.volumePrices.quantity  |  Integer         | Required quantity of items in offer for the volume price to apply.  |
@@ -103,7 +103,7 @@ Response sample: retrieve prices of a product offer
 
 ## Other management options
 
-Retrieve product offer prices as a relationship by [retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html)
+Retrieve product offer prices as a relationship by [retrieving product offers](/docs/marketplace/dev/glue-api-guides/product-offers/retrieving-product-offers.html)
 
 ## Possible errors
 
@@ -112,4 +112,4 @@ Retrieve product offer prices as a relationship by [retrieving product offers](/
 | 3701     | Product offer was not found. |
 | 3702     | Product offer ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

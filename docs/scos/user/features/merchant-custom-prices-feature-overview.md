@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/merchant-custom-prices-feature-overview
   - /docs/merchant-custom-prices-feature-overview
   - /docs/en/merchant-custom-prices-feature-overview
-  - /docs/scos/user/features/202200.0/merchant-custom-prices-feature-overview.html
+  - /docs/scos/user/features/merchant-custom-prices-feature-overview.html
 related:
   - title: HowTo - Manage business unit specific prices via data import
     link: docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/how-to-manage-business-unit-specific-prices-via-data-import.html
@@ -87,10 +87,10 @@ console price-product-merchant-relationship:delete [-m X] . X = MR ID
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Set prices per merchant relations when creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html)   |
+| [Set prices per merchant relations when creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html)   |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Merchant B2B Contracts feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-b2b-contracts-feature-walkthrpugh.html) for developers.
+Are you a developer? See [Merchant B2B Contracts feature walkthrough](/docs/scos/dev/feature-walkthroughs/merchant-b2b-contracts-feature-walkthrpugh.html) for developers.
 
 {% endinfo_block %}

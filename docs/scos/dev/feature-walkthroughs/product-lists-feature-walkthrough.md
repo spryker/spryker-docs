@@ -4,13 +4,13 @@ last_updated: Aug 19, 2021
 description: The Product Lists feature allows configuring product availability for specific companies by blacklisting or whitelisting products for them.
 template: concept-topic-template
 redirect_from:
-  - /docs/scos/dev/feature-walkthroughs/202200.0/product-lists-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/product-lists-feature-walkthrough.html
 ---
 
 The _Product Lists_ feature allows configuring product availability for specific companies by blacklisting or whitelisting products for them.
 
 
-To learn more about the feature and to find out how end users use it, see [Product Lists feature overview](/docs/scos/user/features/{{page.version}}/product-lists-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Product Lists feature overview](/docs/scos/user/features/product-lists-feature-overview.html) for business users.
 
 
 
@@ -18,4 +18,4 @@ To learn more about the feature and to find out how end users use it, see [Produ
 
 |INTEGRATION GUIDES |
 |---------|
-| [Product Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-lists-feature-integration.html) |
+| [Product Lists feature integration](/docs/scos/dev/feature-integration-guides/product-lists-feature-integration.html) |

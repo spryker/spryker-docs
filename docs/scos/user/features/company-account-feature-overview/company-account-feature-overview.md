@@ -11,7 +11,7 @@ redirect_from:
   - /2021080/docs/en/company-account
   - /docs/company-account
   - /docs/en/company-account
-  - /docs/scos/user/features/202200.0/company-account-feature-overview/company-account-feature-overview.html
+  - /docs/scos/user/features/company-account-feature-overview/company-account-feature-overview.html
 ---
 
 A B2B business model implies bilateral commercial relations between businesses, so a company is the top figure of every B2B marketplace. Each company has a specific organizational structure with its divisions (units) and employee roles. At some point or another, a B2B business owner would need separate accounts for employees to constrain or extend rights in regards to products, orders, confidential information.
@@ -37,14 +37,14 @@ Setting up company structure:
 
 |BACK OFFICE USER GUIDES|
 |---|
-|  [Get a general idea of Company Accounts](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-accounts-overview.html)  |
-|  [Get a general idea of Business Units](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-units-overview.html)  |
-|  [Get a general idea of Business on Behalf](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/business-on-behalf-overview.html)  |
-|  [Get a general idea of company user roles and permissions](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html)  |
+|  [Get a general idea of Company Accounts](/docs/scos/user/features/company-account-feature-overview/company-accounts-overview.html)  |
+|  [Get a general idea of Business Units](/docs/scos/user/features/company-account-feature-overview/business-units-overview.html)  |
+|  [Get a general idea of Business on Behalf](/docs/scos/user/features/company-account-feature-overview/business-on-behalf-overview.html)  |
+|  [Get a general idea of company user roles and permissions](/docs/scos/user/features/company-account-feature-overview/company-user-roles-and-permissions-overview.html)  |
 
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/company-account-feature-walkthrough.html) for developers.
+Are you a developer? See [Company Account feature walkthrough](/docs/scos/dev/feature-walkthroughs/company-account-feature-walkthrough/company-account-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

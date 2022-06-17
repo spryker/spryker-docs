@@ -4,7 +4,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 related:
   - title: Marketplace Inventory Management feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-inventory-management-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-inventory-management-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Inventory Management Glue API feature into a Spryker project.
@@ -19,8 +19,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html)  |
-| Marketplace Inventory Management | {{page.version}} | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html)  |
+| Spryker Core | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html)  |
+| Marketplace Inventory Management | {{site.version}} | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html)  |
 
 ### 1) Install the required modules using Composer
 
@@ -127,4 +127,4 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |---|---|---|
-| Marketplace Inventory Management + Wishlist Glue API |  |  [Glue API: Marketplace Inventory Management + Wishlist feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-inventory-management-wishlist-feature-integration.html) |
+| Marketplace Inventory Management + Wishlist Glue API |  |  [Glue API: Marketplace Inventory Management + Wishlist feature integration ](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-inventory-management-wishlist-feature-integration.html) |

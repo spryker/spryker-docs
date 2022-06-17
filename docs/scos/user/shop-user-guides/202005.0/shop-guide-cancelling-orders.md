@@ -22,6 +22,6 @@ The page refreshes to display the message about successful order cancellation.
 
 {% info_block infoBox "Cancellable Orders" %}
 
-See [Time Frames and Statuses](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-cancellation-overview.html) to learn what orders are cancellable.
+See [Time Frames and Statuses](/docs/scos/user/features/order-management-feature-overview/order-cancellation-overview.html) to learn what orders are cancellable.
 
 {% endinfo_block %}

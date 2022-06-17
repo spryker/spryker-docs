@@ -10,12 +10,12 @@ redirect_from:
   - /2021080/docs/en/managing-file-tree
   - /docs/managing-file-tree
   - /docs/en/managing-file-tree
-  - /docs/scos/user/back-office-user-guides/202200.0/content/file-manager/managing-file-tree.html
+  - /docs/scos/user/back-office-user-guides/content/file-manager/managing-file-tree.html
 related:
   - title: Managing File List
-    link: docs/scos/user/back-office-user-guides/page.version/content/file-manager/managing-file-list.html
+    link: docs/scos/user/back-office-user-guides/content/file-manager/managing-file-list.html
   - title: Add and edit MIME types
-    link: docs/scos/user/back-office-user-guides/page.version/administration/add-and-edit-mime-types.html
+    link: docs/scos/user/back-office-user-guides/administration/add-and-edit-mime-types.html
 ---
 
 This article describes how to manage the file tree.
@@ -24,7 +24,7 @@ The *File Tree* section is used to upload the files, create or delete the direct
 
 ## Prerequisites
 
-If there are no MIME types defined in the *MIME Type Settings* section, you will be able to download any type of file. If you have at least one MIME type defined as Is Allowed, you will be able to download only the files of that type unless you add more allowed types. See [Add and edit MIME types](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/add-and-edit-mime-types.html) for more details.
+If there are no MIME types defined in the *MIME Type Settings* section, you will be able to download any type of file. If you have at least one MIME type defined as Is Allowed, you will be able to download only the files of that type unless you add more allowed types. See [Add and edit MIME types](/docs/scos/user/back-office-user-guides/administration/add-and-edit-mime-types.html) for more details.
 
 To start working with file tree elements, navigate to **Content&nbsp;<span aria-label="and then">></span> File Tree** section.
 
@@ -74,7 +74,7 @@ The file is uploaded to the selected folder.
 ## Managing files
 
 Once the file is uploaded, you can manage it from two locations:
-* File List (for more details, see [Managing File List](/docs/scos/user/back-office-user-guides/{{page.version}}/content/file-manager/managing-file-list.html))
+* File List (for more details, see [Managing File List](/docs/scos/user/back-office-user-guides/content/file-manager/managing-file-list.html))
 * File Tree
 
 **To manage a file:**

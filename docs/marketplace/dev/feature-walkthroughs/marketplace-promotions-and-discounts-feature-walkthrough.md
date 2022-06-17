@@ -8,7 +8,7 @@ With the *Marketplace Promotions and Discounts* feature, the discounts are appli
 
 {% info_block warningBox "User documentation" %}
 
-To learn more about the feature and to find out how end users use it, see [Marketplace Promotions and Discounts feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-product-options-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Marketplace Promotions and Discounts feature overview](/docs/marketplace/user/features/marketplace-product-options-feature-overview.html) for business users.
 
 {% endinfo_block %}
 
@@ -29,4 +29,4 @@ The following diagram illustrates the dependencies between the modules for the *
 
 | INTEGRATION GUIDES|
 | -------------- |
-| [Marketplace Promotions & Discounts feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-promotions-discounts-feature-integration.html) |
+| [Marketplace Promotions & Discounts feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-promotions-discounts-feature-integration.html) |

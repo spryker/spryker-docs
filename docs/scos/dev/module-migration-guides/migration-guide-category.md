@@ -22,17 +22,11 @@ redirect_from:
   - /v5/docs/en/mg-category
   - /v6/docs/mg-category
   - /v6/docs/en/mg-category
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-category.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-category.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-category.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-category.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-category.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-category.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-category.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-category.html
   - /upcoming-release/docs/migration-guide-category
 related:
   - title: Creating Categories
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/creating-categories.html
+    link: docs/scos/user/back-office-user-guides/catalog/category/creating-categories.html
 ---
 
 This document describes how to upgrade the `Category` module.

@@ -28,4 +28,4 @@ To de-assign a user from the group, in the **Users** section, click **Delete** n
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | TITLE | Unique identifier of the user group. It's used for identifying the group when creating users. |
-| ASSIGNED ROLES | The user roles that are assigned to the group. For role creating instructions, see [Creating user roles](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-user-roles/creating-user-roles.html). |
+| ASSIGNED ROLES | The user roles that are assigned to the group. For role creating instructions, see [Creating user roles](/docs/scos/user/back-office-user-guides/users/managing-user-roles/creating-user-roles.html). |

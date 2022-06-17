@@ -22,13 +22,7 @@ redirect_from:
   - /v5/docs/en/mg-sales
   - /v6/docs/mg-sales
   - /v6/docs/en/mg-sales
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-sales.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-sales.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-sales.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-sales.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-sales.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-sales.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-sales.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-sales.html
 ---
 
 ## Upgrading from version 10.* to version 11.0.0

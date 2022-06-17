@@ -19,18 +19,13 @@ redirect_from:
   - /v5/docs/en/mg-cmsstorage
   - /v6/docs/mg-cmsstorage
   - /v6/docs/en/mg-cmsstorage
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-cmsstorage.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-cmsstorage.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-cmsstorage.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cmsstorage.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmsstorage.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsstorage.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-cmsstorage.html
   - /module_migration_guides/mg-cmsstorage.htm
 ---
 
 ## Upgrading from version 1.* to version 2.*
 
-Version 2.0.0 of the `CmsStorage` module introduces the [multi-store functionality](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
+Version 2.0.0 of the `CmsStorage` module introduces the [multi-store functionality](/docs/scos/user/features/cms-feature-overview/cms-pages-overview.html). The multi-store CMS page feature enables management of CMS page display per store via a store toggle control in the Back Office.
 
 The main BC breaking changes are:
 

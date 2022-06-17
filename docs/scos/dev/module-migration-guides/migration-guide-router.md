@@ -14,9 +14,7 @@ redirect_from:
   - /v5/docs/en/migration-guide-router
   - /v6/docs/migration-guide-router
   - /v6/docs/en/migration-guide-router
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-router.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-router.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-router.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-router.html
 ---
 
 {% info_block errorBox %}

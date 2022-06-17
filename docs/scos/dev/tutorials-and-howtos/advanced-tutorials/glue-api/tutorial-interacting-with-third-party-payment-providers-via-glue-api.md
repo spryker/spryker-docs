@@ -17,19 +17,19 @@ redirect_from:
   - /v4/docs/en/t-interacting-with-third-party-payment-providers-via-glue-api
   - /v3/docs/t-interacting-with-third-party-payment-providers-via-glue-api
   - /v3/docs/en/t-interacting-with-third-party-payment-providers-via-glue-api
-  - /docs/scos/dev/tutorials/201907.0/advanced/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
-  - /docs/scos/dev/glue-api-guides/202005.0/checking-out/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
+  - /docs/scos/dev/tutorials/advanced/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
+  - /docs/scos/dev/glue-api-guides/checking-out/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
 
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
+    link: docs/scos/user/technology-partners/technology-partners.html
 ---
 
 The checkout process of Spryker Glue API can be leveraged to involve third parties in the process of order confirmation. This can be required, for example, when the method of payment selected by the user requires additional steps to complete the purchase. These can include, but not limited to, card validation, processing a bank transfer, etc.
 
 {% info_block infoBox %}
 
-For details, see [Checking Out Purchases and Getting Checkout Data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/checking-out-purchases.html).
+For details, see [Checking Out Purchases and Getting Checkout Data](/docs/scos/dev/glue-api-guides/checking-out/checking-out-purchases.html).
 
 {% endinfo_block %}
 
@@ -113,7 +113,7 @@ To help you understand which payments need to be processed, you can use the opti
 
 {% info_block infoBox %}
 
-For details, see [Updating Payment Data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/updating-payment-data.html).
+For details, see [Updating Payment Data](/docs/scos/dev/glue-api-guides/checking-out/updating-payment-data.html).
 
 {% endinfo_block %}
 

@@ -22,13 +22,7 @@ redirect_from:
   - /v5/docs/en/mg-price-cart-connector
   - /v6/docs/mg-price-cart-connector
   - /v6/docs/en/mg-price-cart-connector
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-pricecartconnector.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-pricecartconnector.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-pricecartconnector.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-pricecartconnector.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-pricecartconnector.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-pricecartconnector.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-pricecartconnector.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-pricecartconnector.html
   - /module_migration_guides/mg-price-cart-connector.htm
 related:
   - title: Migration guide - Price

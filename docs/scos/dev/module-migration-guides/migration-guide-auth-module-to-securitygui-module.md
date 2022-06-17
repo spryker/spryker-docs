@@ -11,8 +11,7 @@ redirect_from:
   - /docs/en/migration-guide-auth-module-to-securitygui-module
   - /v6/docs/migration-guide-auth-module-to-securitygui-module
   - /v6/docs/en/migration-guide-auth-module-to-securitygui-module
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-auth-module-to-securitygui-module.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-auth-module-to-securitygui-module.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-auth-module-to-securitygui-module.html
 
 ---
 

@@ -22,13 +22,7 @@ redirect_from:
   - /v5/docs/en/mg-merchant
   - /v6/docs/mg-merchant
   - /v6/docs/en/mg-merchant
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-merchant.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-merchant.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-merchant.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-merchant.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-merchant.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-merchant.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-merchant.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-merchant.html
 ---
 
 ## Upgrading from version 2.* to version 3.*

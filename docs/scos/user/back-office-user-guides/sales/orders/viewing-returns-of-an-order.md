@@ -17,7 +17,7 @@ Review the [reference information](#reference-information-viewing-returns-of-an-
 1. On the **Orders** page, next to the order you want to view the returns of, click **View**.
     This opens the **Order Overview** page.
 2. In the **RETURNS** pane, next to the return you want to view, click **View**.
-    This opens the **Overview of Return: [Return ID]** page. To learn what you can do with returns, see [Managing returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html).
+    This opens the **Overview of Return: [Return ID]** page. To learn what you can do with returns, see [Managing returns](/docs/scos/user/back-office-user-guides/sales/returns/managing-returns.html).
 
 ## Reference information: Viewing returns of an order
 

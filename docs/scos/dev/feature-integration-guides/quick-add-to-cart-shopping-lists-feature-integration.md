@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/quick-add-to-cart-shopping-lists-feature-integration
   - /docs/quick-add-to-cart-shopping-lists-feature-integration
   - /docs/en/quick-add-to-cart-shopping-lists-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/quick-add-to-cart-shopping-lists-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/quick-add-to-cart-shopping-lists-feature-integration.html
 ---
 
 ## Install feature frontend
@@ -21,8 +21,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 |---|---|
-|Quick Order| {{page.version}} |
-|Shopping Lists| {{page.version}} |
+|Quick Order| {{site.version}} |
+|Shopping Lists| {{site.version}} |
 
 ### 1) Set up widgets
 

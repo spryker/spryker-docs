@@ -167,7 +167,6 @@ redirect_from:
   - /v6/docs/spryker-videos
   - /v6/docs/en/spryker-videos
   - /docs/scos/user/intro-to-spryker/videos-and-webinars/spryker-videos.html
-  - /docs/scos/user/intro-to-spryker/202204.0/videos-and-webinars/spryker-videos.html
 ---
 
 We believe that good technology doesn’t stop with the code. You also need the examples and information to help you convert your vision into reality.

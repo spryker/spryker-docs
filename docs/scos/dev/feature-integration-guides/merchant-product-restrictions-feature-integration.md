@@ -10,18 +10,18 @@ redirect_from:
   - /2021080/docs/en/merchant-product-restrictions-feature-integration
   - /docs/merchant-product-restrictions-feature-integration
   - /docs/en/merchant-product-restrictions-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202200.0/merchant-product-restrictions-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/merchant-product-restrictions-feature-integration.html
 related:
   - title: Configurable Bundle feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/configurable-bundle-feature-integration.html
   - title: Product feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/product-feature-integration.html
   - title: Product Lists feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-lists-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/product-lists-feature-integration.html
   - title: Prices feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/prices-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/prices-feature-integration.html
   - title: Product Images + Configurable Bundle feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-images-configurable-bundle-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/product-images-configurable-bundle-feature-integration.html
 ---
 
 ## Install feature core
@@ -31,16 +31,16 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}}  |
-| Product Lists | {{page.version}} |
-| Merchant | {{page.version}} |
+| Spryker Core | {{site.version}}  |
+| Product Lists | {{site.version}} |
+| Merchant | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/merchant-product-restrictions:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/merchant-product-restrictions:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

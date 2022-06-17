@@ -10,19 +10,19 @@ redirect_from:
   - /v5/docs/en/shop-guide-managing-shopping-carts
 related:
   - title: Comments feature overview
-    link: docs/scos/user/features/page.version/comments-feature-overview.html
+    link: docs/scos/user/features/comments-feature-overview.html
   - title: Shop Guide - Managing Comments
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-comments/shop-guide-managing-comments.html
+    link: docs/scos/user/shop-user-guides/shop-guide-comments/shop-guide-managing-comments.html
   - title: Cart Notes Feature Overview
-    link: docs/scos/user/features/page.version/cart-feature-overview/cart-notes-overview.html
+    link: docs/scos/user/features/cart-feature-overview/cart-notes-overview.html
   - title: Multiple and Shared Shopping Lists overview
-    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+    link: docs/scos/user/features/shopping-lists-feature-overview/shopping-lists-feature-overview.html
   - title: Quick Add to Cart feature overview
-    link: docs/scos/user/features/page.version/quick-add-to-cart-feature-overview.html
+    link: docs/scos/user/features/quick-add-to-cart-feature-overview.html
   - title: Shared Cart Feature Overview
-    link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
+    link: docs/scos/user/features/shared-carts-feature-overview.html
   - title: Custom order Reference Feature Overview
-    link: docs/scos/user/features/page.version/order-management-feature-overview/custom-order-reference-overview.html
+    link: docs/scos/user/features/order-management-feature-overview/custom-order-reference-overview.html
 ---
 
 This topic describes the steps buyers can perform to manage their shopping carts.
@@ -64,7 +64,7 @@ You can share a shopping cart with the company users within your business unit, 
 
 1. Navigate to the **Shopping Carts** page.
 2. Click **Share** in the **Shopping Carts List > Action** column.
-3. On the **Share my cart** page from the drop-down list next to the users you would like to share the cart with, select the sharing access rights: **No access, Read-only, Full Access**. See [Shared Cart Feature Overview](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html) for more details on the access rights. 
+3. On the **Share my cart** page from the drop-down list next to the users you would like to share the cart with, select the sharing access rights: **No access, Read-only, Full Access**. See [Shared Cart Feature Overview](/docs/scos/user/features/shared-carts-feature-overview.html) for more details on the access rights. 
 ![Share a cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Managing+Shopping+Carts/share-cart-users.png) 
 4. Click **Save**.
 ***
@@ -117,6 +117,6 @@ Internal users are the users that belong to your company account. You can share 
 3. Depending on the level of access you would like to share the cart with, click **Copy** to copy the link. 
 ![Internal users](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Shopping+Carts/Shop+Guide+-+Managing+Shopping+Carts/internal-uers-share-link.png) 
 
-To learn more about the differences in the access levels, check the [Shared Carts Feature Overview](/docs/scos/user/features/{{page.version}}/shared-carts-feature-overview.html).
+To learn more about the differences in the access levels, check the [Shared Carts Feature Overview](/docs/scos/user/features/shared-carts-feature-overview.html).
 
 <!-- Last review date: Aug 01, 2019 by Oksana Karasyova  -->

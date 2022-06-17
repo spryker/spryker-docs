@@ -11,8 +11,7 @@ redirect_from:
   - /docs/en/migration-guide-productlabelstorage
   - /v6/docs/migration-guide-productlabelstorage
   - /v6/docs/en/migration-guide-productlabelstorage
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productlabelstorage.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productlabelstorage.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-productlabelstorage.html
 ---
 
 ## Upgrading from version 1.* to version 2.*

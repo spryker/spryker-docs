@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/merchant-custom-prices-feature-integration
   - /docs/merchant-custom-prices-feature-integration
   - /docs/en/merchant-custom-prices-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202200.0/merchant-custom-prices-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/merchant-custom-prices-feature-integration.html
 ---
 
 ## Install feature core
@@ -21,17 +21,17 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
-| Merchant | {{page.version}} |
-| Merchant Contracts | {{page.version}} |
-| Prices | {{page.version}} |
-| Product | {{page.version}} |
+| Spryker Core | {{site.version}} |
+| Merchant | {{site.version}} |
+| Merchant Contracts | {{site.version}} |
+| Prices | {{site.version}} |
+| Product | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker-feature/merchant-custom-prices:"{{page.version}}" spryker/price-product-merchant-relationship-gui:"^1.0.0" --update-with-dependencies
+composer require spryker-feature/merchant-custom-prices:"{{site.version}}" spryker/price-product-merchant-relationship-gui:"^1.0.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

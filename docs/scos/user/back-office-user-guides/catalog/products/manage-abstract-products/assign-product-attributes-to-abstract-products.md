@@ -6,13 +6,13 @@ template: back-office-user-guide-template
 
 This document describes how to assign product attributes to abstract products in the Back Office.
 
-By assigning a product attribute to an abstract product, you assign it to all its variants. This is useful when you have an abstract product has a lot of variants with the same attribute value. Alternatively, you can [assign product attributes to a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/assign-product-attributes-to-product-variants.html).
+By assigning a product attribute to an abstract product, you assign it to all its variants. This is useful when you have an abstract product has a lot of variants with the same attribute value. Alternatively, you can [assign product attributes to a product variant](/docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/assign-product-attributes-to-product-variants.html).
 
 ## Prerequisites
 
-1. Create the product attributes you want to add to the abstract product. For instructions, see [Creating product variants](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html).
+1. Create the product attributes you want to add to the abstract product. For instructions, see [Creating product variants](/docs/scos/user/back-office-user-guides/catalog/attributes/creating-product-attributes.html).
 
-2. Create the abstract product to assign the product attributes to. For instructions, see [creating an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html).  
+2. Create the abstract product to assign the product attributes to. For instructions, see [creating an abstract product](/docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html).  
 3. To start working with products, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 
 Review the [reference information](#reference-information-assign-product-attributes-to-abstract-products) before you start, or look up the necessary information as you go through the process.
@@ -39,6 +39,6 @@ This section describes the attributes you see when creating a return.
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
-| ATTRIBUTE KEY | [Product attribute](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html) to add to the abstract product. |
+| ATTRIBUTE KEY | [Product attribute](/docs/scos/user/features/product-feature-overview/product-attributes-overview.html) to add to the abstract product. |
 | KEY | Product attribute key. |
 | DEFAULT | Default value of the product attribute. This value is displayed on the Storefront if locale specific value is not specified. |     

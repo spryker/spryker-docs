@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 related:
   - title: Marketplace Product Offer feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product Offer into a Spryker project.
@@ -20,16 +20,16 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | -------|
-| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Product              | {{page.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |
+| Spryker Core         | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
+| Marketplace Merchant | {{site.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration.html) |
+| Product              | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/product-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-product-offer:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-product-offer:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1556,8 +1556,8 @@ To start feature integration, integrate the following features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | ---------- | ----- | --------------|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)  |
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html)  |
+| Marketplace Merchant | {{site.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -1735,12 +1735,12 @@ class ProductSearchWidgetDependencyProvider extends SprykerProductSearchWidgetDe
 
 | FEATURE   | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |--------------|---------------|-----------------|
-| Combined Product Offer Import                        |                                  | [Combined Product Offer Import integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/combined-product-offer-import-feature-integration.html)                                           |
-| Marketplace Product Offer Prices                     |                           | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html)                             |
-| Marketplace Merchant Portal Product Offer Management |                                  | [Marketplace Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html)     |
-| Marketplace Product Offer API                        |                                  | [Glue API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)                            |
-| Marketplace Product + Marketplace Product Offer      |                                  | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-marketplace-product-offer-feature-integration.html) |
-| Marketplace Product Offer + Cart                     |                                  | [Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-cart-feature-integration.html)                               |
-| Marketplace Product Offer + Checkout                 |                                  | [Marketplace Product Offer + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-checkout-feature-integration.html)                       |
-| Marketplace Product Offer + Prices                   |                                  | [Marketplace Product Offer + Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html)                           |
-| Marketplace Product Offer + Quick Add to Cart | | [Marketplace Product Offer + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-quick-add-to-cart-feature-integration.html) |
+| Combined Product Offer Import                        |                                  | [Combined Product Offer Import integration](/docs/marketplace/dev/feature-integration-guides/combined-product-offer-import-feature-integration.html)                                           |
+| Marketplace Product Offer Prices                     |                           | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-prices-feature-integration.html)                             |
+| Marketplace Merchant Portal Product Offer Management |                                  | [Marketplace Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-product-offer-management-feature-integration.html)     |
+| Marketplace Product Offer API                        |                                  | [Glue API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-feature-integration.html)                            |
+| Marketplace Product + Marketplace Product Offer      |                                  | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html) |
+| Marketplace Product Offer + Cart                     |                                  | [Marketplace Product Offer + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-cart-feature-integration.html)                               |
+| Marketplace Product Offer + Checkout                 |                                  | [Marketplace Product Offer + Checkout feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-checkout-feature-integration.html)                       |
+| Marketplace Product Offer + Prices                   |                                  | [Marketplace Product Offer + Prices feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-prices-feature-integration.html)                           |
+| Marketplace Product Offer + Quick Add to Cart | | [Marketplace Product Offer + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-quick-add-to-cart-feature-integration.html) |

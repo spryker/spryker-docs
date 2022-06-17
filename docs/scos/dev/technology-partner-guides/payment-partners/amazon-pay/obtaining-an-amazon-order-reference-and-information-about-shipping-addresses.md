@@ -10,16 +10,16 @@ redirect_from:
   - /2021080/docs/en/amazon-order-reference-information
   - /docs/amazon-order-reference-information
   - /docs/en/amazon-order-reference-information
-  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
+  - /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
 related:
   - title: Handling orders with Amazon Pay API
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html
   - title: Configuring Amazon Pay
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/configuring-amazon-pay.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/configuring-amazon-pay.html
   - title: Amazon Pay - State Machine
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/amazon-pay-state-machine.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay-state-machine.html
   - title: Amazon Pay - Sandbox Simulations
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
 ---
 
 After successful authorization, a buyer will be redirected to an order detils page to enter all the information necessary for placing an order: address of shipment, payment method, delivery method and some calculations about taxes, possible discounts, delivery cost, etc.

@@ -21,16 +21,16 @@ redirect_from:
   - /v1/docs/en/extending-a-rest-request-resource
 related:
   - title: Glue API Installation and Configuration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-installation-and-configuration.html
+    link: docs/scos/dev/feature-integration-guides/glue-api/glue-api-installation-and-configuration.html
   - title: Glue Infrastructure
-    link: docs/scos/dev/glue-api-guides/page.version/glue-infrastructure.html
+    link: docs/scos/dev/glue-api-guides/glue-infrastructure.html
 ---
 
 Spryker Glue REST API comes with a set of predefined APIs out of the box. You have the possibility to extend and customize them to your own project needs. For this purpose, you need to extend the Glue API modules that provide the relevant functionality on your project level.
 
 {% info_block infoBox %}
 
-The following guide relies on your knowledge of the structure of a Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource Modules](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-infrastructure.html#resource-modules) section in **Glue Infrastructure**.
+The following guide relies on your knowledge of the structure of a Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource Modules](/docs/scos/dev/glue-api-guides/glue-infrastructure.html#resource-modules) section in **Glue Infrastructure**.
 
 {% endinfo_block %}
 
@@ -39,8 +39,8 @@ The following guide relies on your knowledge of the structure of a Glue REST API
 To complete this tutorial, you need to comply with the following prerequisites:
 
 * [Install Spryker Development Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html);
-* [Enable Glue Rest API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-installation-and-configuration.html);
-* [Integrate Products API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html).
+* [Enable Glue Rest API](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-installation-and-configuration.html);
+* [Integrate Products API](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html).
 
 {% info_block infoBox %}
 
@@ -52,7 +52,7 @@ Also, let us assume that you modified the product storage data to match your pro
 
 {% info_block warningBox %}
 
-For more details, see [Database schema for product attributes](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-attributes-overview.html) and [Extending the Database Schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
+For more details, see [Database schema for product attributes](/docs/scos/user/features/product-feature-overview/product-attributes-overview.html) and [Extending the Database Schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
 
 {% endinfo_block %}
 
@@ -99,7 +99,7 @@ All transfer file names end with `.transfer.xml`.
 
 {% info_block infoBox %}
 
-You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to extend Glue transfers. Run the following command:
+You can also use a [Spryk](/docs/scos/dev/glue-api-guides/glue-spryks.html) to extend Glue transfers. Run the following command:
 
 ```bash
 console spryk:run AddSharedRestAttributesTransfer --mode=project --module=ResourcesRestApi --organization=Pyz --name=RestResourcesAttributes
@@ -148,7 +148,7 @@ As you can see from the code, the mapper that you implemented extends the origin
 
 {% info_block infoBox %}
 
-You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to put data. Run the following command:
+You can also use a [Spryk](/docs/scos/dev/glue-api-guides/glue-spryks.html) to put data. Run the following command:
 
 ```bash
 console spryk:run AddGlueResourceMapper --mode=project --module=ResourcesRestApi --organization=Pyz  --subDirectory=Mapper --className=Resource
@@ -192,7 +192,7 @@ The same as the mapper, `ProductsRestApiFactory` extends the core factory and on
 
 {% info_block infoBox %}
 
-You can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) to override mapper initialization. Run the following command:  
+You can also use a [Spryk](/docs/scos/dev/glue-api-guides/glue-spryks.html) to override mapper initialization. Run the following command:  
 
 ```bash
 console spryk:run AddGlueMapperFactoryMethod --mode=project --module=ResourcesRestApi --organization=Pyz --subDirectory=Mapper --className=Resource
@@ -204,4 +204,4 @@ This will add mapper initialization to the project level factory.
 
 ## 4. Verify implementation
 
-No, you can query the Products API to check whether the attribute has been added to the API response. For example, you can query information on one of the products with the `manufacturerCountry` field populated. For details, see [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{site.version}}/abstract-products/retrieving-abstract-products.html) and [Retrieving concrete products](/docs/marketplace/dev/glue-api-guides/{{site.version}}/concrete-products/retrieving-concrete-products.html).
+No, you can query the Products API to check whether the attribute has been added to the API response. For example, you can query information on one of the products with the `manufacturerCountry` field populated. For details, see [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/abstract-products/retrieving-abstract-products.html) and [Retrieving concrete products](/docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-concrete-products.html).

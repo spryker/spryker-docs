@@ -5,12 +5,12 @@ description: This document describes the `merchant_product_offer.csv` file to co
 template: import-file-template
 related:
   - title: Marketplace Product Offer feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
   - title: Marketplace Product Offer feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-product-offer-feature-overview.html
 ---
 
-This document describes the `merchant_product_offer.csv` file to configure [merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) information in your Spryker shop.
+This document describes the `merchant_product_offer.csv` file to configure [merchant product offer](/docs/marketplace/user/features/marketplace-product-offer-feature-overview.html) information in your Spryker shop.
 
 To import the file, run
 
@@ -24,19 +24,19 @@ The file should have the following parameters:
 
 | PARAMETER    | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS     | DESCRIPTION |
 | ------------------ | ------------ | ------- | -------------- | -------------------- | ----------------------- |
-| product_offer_reference | &check;             | String   |                   | Unique                                       | Identifier of the [merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) in the system. |
+| product_offer_reference | &check;             | String   |                   | Unique                                       | Identifier of the [merchant product offer](/docs/marketplace/user/features/marketplace-product-offer-feature-overview.html) in the system. |
 | concrete_sku            | &check;             | String   |                   | Unique                                       | SKU of the concrete product the offer is being created for.  |
-| merchant_reference      | &check;             | String   |                   | Unique                                       | Identifier of the [merchant](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) in the system. |
+| merchant_reference      | &check;             | String   |                   | Unique                                       | Identifier of the [merchant](/docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html) in the system. |
 | merchant_sku            |               | String   |                   | Unique                                       | SKU of the merchant.                                         |
 | is_active               | &check;             | Integer  |                   | 1—is active<br>0—is not active             | Defines whether the offer is active or not.                  |
-| approval_status         | &check;             | String   |                   | Can be: <ul><li>waiting_for_approval</li><li>approved</li><li>declined</li></ul> | Defines the [status of the offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html#product-offer-status) in the system. |
+| approval_status         | &check;             | String   |                   | Can be: <ul><li>waiting_for_approval</li><li>approved</li><li>declined</li></ul> | Defines the [status of the offer](/docs/marketplace/user/features/marketplace-product-offer-feature-overview.html#product-offer-status) in the system. |
 
 ## Import file dependencies
 
 The file has the following dependencies:
 
-- [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html)
-- [product_concrete.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+- [merchant.csv](/docs/marketplace/dev/data-import/file-details-merchant.csv.html)
+- [product_concrete.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 
 ## Import template file and content example
 

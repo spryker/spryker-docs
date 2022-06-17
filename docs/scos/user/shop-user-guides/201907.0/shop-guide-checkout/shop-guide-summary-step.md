@@ -8,8 +8,8 @@ originalArticleId: 15fe5a00-6bdf-4c70-af6b-4c2271a0c6fd
 redirect_from:
   - /v3/docs/summary-step-shop-guide-201911
   - /v3/docs/en/summary-step-shop-guide-201911
-  - /docs/scos/user/shop-user-guides/page.version/checkout/shop-guide-summary-step.html
-  - /docs/scos/user/shop-user-guides/201907.0/checkout/shop-guide-summary-step.html
+  - /docs/scos/user/shop-user-guides/checkout/shop-guide-summary-step.html
+  - /docs/scos/user/shop-user-guides/checkout/shop-guide-summary-step.html
 ---
 
 The topic describes how you can view the order summary, edit the order details and place the order.
@@ -49,7 +49,7 @@ In this section, you can do the following:
 * Add a tag to the comment so that in future you can filter comments by tags
 
 {% info_block infoBox %}
-See [Shop Guide - Managing Comments](/docs/scos/user/shop-user-guides/{{page.version}}/comments/shop-guide-managing-comments.html
+See [Shop Guide - Managing Comments](/docs/scos/user/shop-user-guides/comments/shop-guide-managing-comments.html
 {% endinfo_block %} for more information on how to work with comments in cart.)
 ***
 ## Placing Order

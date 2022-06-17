@@ -14,9 +14,7 @@ redirect_from:
   - /v5/docs/en/migration-guide-productrelationstorage
   - /v6/docs/migration-guide-productrelationstorage
   - /v6/docs/en/migration-guide-productrelationstorage
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productrelationstorage.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productrelationstorage.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productrelationstorage.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-productrelationstorage.html
 ---
 
 ## Upgrading from version 1.* to 2.0.0

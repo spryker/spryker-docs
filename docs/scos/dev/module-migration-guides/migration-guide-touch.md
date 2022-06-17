@@ -22,13 +22,8 @@ redirect_from:
   - /v5/docs/en/mg-touch
   - /v6/docs/mg-touch
   - /v6/docs/en/mg-touch
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-touch.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-touch.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-touch.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-touch.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-touch.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-touch.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-touch.html   
+  - /docs/scos/dev/module-migration-guides/migration-guide-touch.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-touch.html   
 ---
 
 ## Upgrading from version 3.* to version 4.*

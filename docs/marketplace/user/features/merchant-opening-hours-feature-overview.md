@@ -21,10 +21,10 @@ A merchant has the following:
 
 * Public holidays—special days when the Merchant is not available due to the public holidays
 
-To display merchant opening hours on the Storefront, you should import the open hours information. For information about how to do that, see [File details: merchant_open_hours_date_schedule.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-open-hours-date-schedule.csv.html) and [File details: merchant_open_hours_week_day_schedule.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-open-hours-week-day-schedule.csv.html).
+To display merchant opening hours on the Storefront, you should import the open hours information. For information about how to do that, see [File details: merchant_open_hours_date_schedule.csv](/docs/marketplace/dev/data-import/file-details-merchant-open-hours-date-schedule.csv.html) and [File details: merchant_open_hours_week_day_schedule.csv](/docs/marketplace/dev/data-import/file-details-merchant-open-hours-week-day-schedule.csv.html).
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Merchant Opening Hours feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/merchant-opening-hours-feature-walkthrough.html) for developers.
+Are you a developer? See [Merchant Opening Hours feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/merchant-opening-hours-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

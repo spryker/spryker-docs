@@ -18,17 +18,16 @@ redirect_from:
   - /v2/docs/en/demoshop-with-modular-frontend
   - /v1/docs/demoshop-with-modular-frontend
   - /v1/docs/en/demoshop-with-modular-frontend
-  - /docs/scos/dev/migration-and-integration/201811.0/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html
-  - /docs/scos/dev/migration-and-integration/202009.0/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html
+  - /docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-modular-frontend.html
 related:
   - title: Twig Compatibility- Legacy Demoshop vs SCOS
-    link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html
+    link: docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/twig-compatibility-legacy-demoshop-vs-scos.html
   - title: Making the Legacy Demoshop Compatible with the Atomic Frontend
-    link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html
+    link: docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-the-atomic-frontend.html
   - title: Making the Legacy Demoshop Compatible with Publish & Synchronize
-    link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-publish-and-synchronize.html
+    link: docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/making-the-legacy-demoshop-compatible-with-publish-and-synchronize.html
   - title: Setting up ShopUiCompatibility Module in the Legacy Demoshop
-    link: docs/scos/dev/migration-and-integration/page.version/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html
+    link: docs/scos/dev/migration-and-integration/updating-the-legacy-demoshop-with-scos/setting-up-shopuicompatibility-module-in-the-legacy-demoshop.html
 ---
 
 ## Infrastructure Preparation

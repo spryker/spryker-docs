@@ -32,7 +32,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [cms_block_category_position.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-block-category-postion.csv.html). 
+This file has the following dependency: [cms_block_category_position.csv](/docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-block-category-postion.csv.html). 
 
 ## Import template file and content example
 

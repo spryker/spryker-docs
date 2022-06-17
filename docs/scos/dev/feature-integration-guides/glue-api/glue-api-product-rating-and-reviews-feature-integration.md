@@ -10,9 +10,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-product-rating-reviews-feature-integration
   - /docs/glue-api-product-rating-reviews-feature-integration
   - /docs/en/glue-api-product-rating-reviews-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-product-rating-and-reviews-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-product-rating-and-reviews-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-product-rating-and-reviews-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-rating-and-reviews-feature-integration.html
 ---
 
 ## Install Feature API
@@ -23,8 +21,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Feature API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Product Rating & Reviews  | {{page.version}} |  |
+| Spryker Core | {{site.version}} | [Feature API](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Product Rating & Reviews  | {{site.version}} |  |
 
 ### 1) Install the required modules using Composer
 

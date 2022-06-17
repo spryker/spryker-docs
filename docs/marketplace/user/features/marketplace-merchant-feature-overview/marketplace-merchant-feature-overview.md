@@ -4,18 +4,18 @@ description: This document contains concept information for the Merchants featur
 template: concept-topic-template
 related:
   - title: Managing merchants
-    link: docs/marketplace/user/back-office-user-guides/page.version/marketplace/merchants/managing-merchants.html
+    link: docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchants.html
 ---
 
-A *merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* lets merchants upload and manage merchant products and [offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html).  
+A *merchant* is a seller of goods or services, either a business or a private person working in the Marketplace environment. Merchants manage their business in the *Merchant Portal*. The *Merchant Portal* lets merchants upload and manage merchant products and [offers](/docs/marketplace/user/features/marketplace-product-offer-feature-overview.html), define prices and stock, fulfill orders, and edit merchant profile information. Merchant can have employees who can access the Merchant Portal and perform actions on the merchant's behalf there. These employees are referred to as [*merchant users*](/docs/marketplace/user/features/marketplace-merchant-feature-overview/merchant-users-overview.html).  
 
 Merchant is the core entity of the Spryker Marketplace and the second main entity after customers since the Marketplace connects the buying customers and the selling customers.
 Every merchant in the Spryker Marketplace has a unique identifier in the system called *Merchant SKU*. 
-You can [create merchants in the Back Office](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#creating-merchants) or [import merchants](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant.csv.html).
+You can [create merchants in the Back Office](/docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchants.html#creating-merchants) or [import merchants](/docs/marketplace/dev/data-import/file-details-merchant.csv.html).
 
 {% info_block infoBox "Note" %}
 
-After you create a merchant, you can not delete it completely. You can only [deactivate](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants) the merchant.
+After you create a merchant, you can not delete it completely. You can only [deactivate](/docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants) the merchant.
 
 {% endinfo_block %}
 
@@ -43,11 +43,11 @@ The Marketplace administrator manages merchants and sets their statuses in the
 | Active | N/A | &check; |
 | Inactive | N/A | ✗ |
 
-For details about how to change the merchant statuses and activate or deactivate merchants in the Back Office, see [approving and denying merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#approving-and-denying-merchants) and [activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
+For details about how to change the merchant statuses and activate or deactivate merchants in the Back Office, see [approving and denying merchants](/docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchants.html#approving-and-denying-merchants) and [activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
 
 {% info_block infoBox "Info" %}
 
-Whenever a merchant is denied, all the users (/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) of this merchant get deactivated. Upon re-approval, the merchant users must be manually activated one by one.
+Whenever a merchant is denied, all the users (/docs/marketplace/user/features/marketplace-merchant-feature-overview/merchant-users-overview.html) of this merchant get deactivated. Upon re-approval, the merchant users must be manually activated one by one.
 
 {% endinfo_block %}
 
@@ -57,7 +57,7 @@ Schematically, the merchant status change flow looks like this:
 
 ## Merchant category
 
-You can group merchants by categories to make your working process more efficient and simplify merchants' search for customers. For details, see [Merchant Category](/docs/marketplace/user/features/{{page.version}}/merchant-category-feature-overview.html).
+You can group merchants by categories to make your working process more efficient and simplify merchants' search for customers. For details, see [Merchant Category](/docs/marketplace/user/features/merchant-category-feature-overview.html).
 
 ## Merchants on the Storefront
 
@@ -73,8 +73,8 @@ The merchant profile page is available only if the merchant is [Active](#merchan
 
 The information for a merchant profile can be defined:
 
-* By the Marketplace administrator in the Back Office when [creating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#creating-merchants) or [editing merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#editing-merchants).
-* By importing the merchant profile data. For more information, see [File details: merchant_profile.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile.csv.html) and [File details: merchant_profile_address.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile-address.csv.html).
+* By the Marketplace administrator in the Back Office when [creating merchants](/docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchants.html#creating-merchants) or [editing merchants](/docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchants.html#editing-merchants).
+* By importing the merchant profile data. For more information, see [File details: merchant_profile.csv](/docs/marketplace/dev/data-import/file-details-merchant-profile.csv.html) and [File details: merchant_profile_address.csv](/docs/marketplace/dev/data-import/file-details-merchant-profile-address.csv.html).
 * By the merchant in the Merchant Portal:
 ![Merchant profile page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/merchant-profile-page.png)
 
@@ -83,7 +83,7 @@ The information for a merchant profile can be defined:
 
 ### Merchant opening hours
 
-To make the selling activity efficient, merchants can provide their working schedule that will display to buyers on the Storefront. For details, see [Merchant Opening Hours feature overview](/docs/marketplace/user/features/{{page.version}}/merchant-opening-hours-feature-overview.html).
+To make the selling activity efficient, merchants can provide their working schedule that will display to buyers on the Storefront. For details, see [Merchant Opening Hours feature overview](/docs/marketplace/user/features/merchant-opening-hours-feature-overview.html).
 
 ### Merchant links on the Storefront pages
 
@@ -110,7 +110,7 @@ Marketplace Storefront lets buyers check what merchants are the owners of the of
 In the Spryker Marketplace, you can search for the products sold by a specific merchant by entering the merchant name in the search field. The search results contain the marketplace products and/or the abstract products the merchant product offers are related to. The search suggestions and the auto-completion functionality provide the marketplace products and offers by the merchant name.
 ![Search by merchant name](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/search-by-merchant-name.gif)
 
-In the catalog and search results pages, there is the merchant multi-select filter. This filter lets shoppers see only the products with the product offers belonging to the selected merchant. For more details about filters available in the Spryker Commerce O, see [Standard Filters](/docs/scos/user/features/{{page.version}}/search-feature-overview/standard-filters-overview.html) documentation.
+In the catalog and search results pages, there is the merchant multi-select filter. This filter lets shoppers see only the products with the product offers belonging to the selected merchant. For more details about filters available in the Spryker Commerce O, see [Standard Filters](/docs/scos/user/features/search-feature-overview/standard-filters-overview.html) documentation.
 
 ![Merchant search filter](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Marketplace/Merchants/Merchants+feature+overview/merchant-filter.gif)
 
@@ -119,17 +119,17 @@ If the merchant is not active, their products and offers are not displayed in th
 
 ## Next steps
 
-Learn about [merchant users](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html)
+Learn about [merchant users](/docs/marketplace/user/features/marketplace-merchant-feature-overview/merchant-users-overview.html)
 
 ## Related Business User articles
 
 |FEATURE OVERVIEWS  |MERCHANT PORTAL USER GUIDES  |BACK OFFICE USER GUIDES |
 |---------|---------|---------|
-|[Merchant users overview](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) | [Editing merchant's profile details](/docs/marketplace/user/merchant-portal-user-guides/{{page.version}}/profile/editing-merchants-profile-details.html) |[Managing merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html)|
-|[Main merchant concept](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html)| | [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html)|
+|[Merchant users overview](/docs/marketplace/user/features/marketplace-merchant-feature-overview/merchant-users-overview.html) | [Editing merchant's profile details](/docs/marketplace/user/merchant-portal-user-guides/profile/editing-merchants-profile-details.html) |[Managing merchants](/docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchants.html)|
+|[Main merchant concept](/docs/marketplace/user/features/marketplace-merchant-feature-overview/main-merchant-concept.html)| | [Managing merchant users](/docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchant-users.html)|
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Marketplace Merchant feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-feature-walkthrough.html) for developers.
+Are you a developer? See [Marketplace Merchant feature walkthrough](/docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

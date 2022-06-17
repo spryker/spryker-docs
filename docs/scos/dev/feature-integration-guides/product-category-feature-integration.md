@@ -9,10 +9,7 @@ redirect_from:
   - /2021080/docs/en/product-category-feature-integration
   - /docs/product-category-feature-integration
   - /docs/en/product-category-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/product-category-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201903.0/product-category-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202005.0/product-category-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201907.0/product-category-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/product-category-feature-integration.html
 ---
 
 This document describes how to integrate the Product + Category feature into a Spryker project.
@@ -27,16 +24,16 @@ To start feature integration, overview and install the necessary features:
 
 |NAME | VERSION |
 |--- | --- |
-|Spryker Core | {{page.version}} |
-|Category Management | {{page.version}} |
-|Product | {{page.version}} |
+|Spryker Core | {{site.version}} |
+|Category Management | {{site.version}} |
+|Product | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/product:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/product:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -650,15 +647,15 @@ Overview and install the following features.
 
 |NAME | VERSION |
 |--- | --- |
-|Spryker Core | {{page.version}} |
-|Category | master | Product | {{page.version}}|
+|Spryker Core | {{site.version}} |
+|Category | master | Product | {{site.version}}|
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/product:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/product:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -715,8 +712,8 @@ Integrate the following related features:
 
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |--- | --- | --- |
-| Category Management Feature | ✓ | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
-| Product Management Feature | ✓ | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |
-| Glue API: Category Management |  |[Glue API: Category management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-category-management-feature-integration.html) |
-| Catalog + Category Management |  |[Catalog + Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/catalog-category-management-feature-integration.html) |
-| CMS + Category Management  | | [CMS + Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-category-management-feature-integration.html) |
+| Category Management Feature | ✓ | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/category-management-feature-integration.html) |
+| Product Management Feature | ✓ | [Product feature integration](/docs/scos/dev/feature-integration-guides/product-feature-integration.html) |
+| Glue API: Category Management |  |[Glue API: Category management feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-category-management-feature-integration.html) |
+| Catalog + Category Management |  |[Catalog + Category Management feature integration](/docs/scos/dev/feature-integration-guides/catalog-category-management-feature-integration.html) |
+| CMS + Category Management  | | [CMS + Category Management feature integration](/docs/scos/dev/feature-integration-guides/cms-category-management-feature-integration.html) |

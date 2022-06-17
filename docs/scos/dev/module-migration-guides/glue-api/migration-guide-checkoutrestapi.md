@@ -15,10 +15,7 @@ redirect_from:
   - /v5/docs/en/mg-checkoutrestapi
   - /v6/docs/mg-checkoutrestapi
   - /v6/docs/en/mg-checkoutrestapi
-  - /docs/scos/dev/module-migration-guides/202001.0/glue-api/migration-guide-checkoutrestapi.html
-  - /docs/scos/dev/module-migration-guides/202005.0/glue-api/migration-guide-checkoutrestapi.html
-  - /docs/scos/dev/module-migration-guides/202009.0/glue-api/migration-guide-checkoutrestapi.html
-  - /docs/scos/dev/module-migration-guides/202108.0/glue-api/migration-guide-checkoutrestapi.html
+  - /docs/scos/dev/module-migration-guides/glue-api/migration-guide-checkoutrestapi.html
 related:
   - title: Migration guide - Payment
     link: docs/scos/dev/module-migration-guides/migration-guide-payment.html

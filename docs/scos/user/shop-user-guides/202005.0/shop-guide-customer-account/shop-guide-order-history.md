@@ -10,25 +10,25 @@ redirect_from:
   - /v5/docs/en/shop-guide-order-history
 related:
   - title: Shop Guide - Customer Profile
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-customer-profile.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-customer-profile.html
   - title: Shop Guide - Customer Addresses
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-customer-addresses.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-customer-addresses.html
   - title: Shop Guide - Customer Account Overview
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-customer-account-overview.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-customer-account-overview.html
   - title: Shop Guide - Newsletter
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-newsletter.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-newsletter.html
   - title: Shop Guide - Wishlists
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-wishlists.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-wishlists.html
   - title: Shop Guide - Shopping Lists
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-shopping-lists.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-lists.html
   - title: Shop Guide - Managing a Shopping Cart
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-a-shopping-cart.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-a-shopping-cart.html
   - title: Shop Guide - Managing Multiple Shopping Carts
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-multiple-shopping-carts.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-multiple-shopping-carts.html
   - title: Shop Guide - Managing Requests for Quotes for a Sales Representative
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
   - title: Shop Guide - Managing Requests for Quotes for a Buyer
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-buyer.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-quote-requests/shop-guide-managing-requests-for-quotes-for-a-buyer.html
 ---
 
 Order History is the page where you can check all the orders you have created in your Customer Account.
@@ -70,7 +70,7 @@ On the **Order Details** page, you can view the order details, add a comment, an
 * Payment details
 * Subtotal, shipment costs, and grand total
 
-**To add a comment**, in the **Comments to Cart** widget, add a comment, and click **Add**. For more information on how to manage comments, see [Shop Guide - Managing Comments](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-comments/shop-guide-managing-comments.html).
+**To add a comment**, in the **Comments to Cart** widget, add a comment, and click **Add**. For more information on how to manage comments, see [Shop Guide - Managing Comments](/docs/scos/user/shop-user-guides/shop-guide-comments/shop-guide-managing-comments.html).
 ***
 ## Reordering the Orders
 You can reorder the whole order or the selected items from the order.
@@ -83,12 +83,12 @@ You can reorder the whole order or the selected items from the order.
     * Click **Reorder All** to reorder the whole order.
     * Select the items you want to reorder and then click **Reorder selected items**. 
 
-This will take you to the Cart page where you can proceed to the checkout. For information on how to place the order, see [Shop Guide - Checkout](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-checkout.html).
+This will take you to the Cart page where you can proceed to the checkout. For information on how to place the order, see [Shop Guide - Checkout](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-checkout.html).
 
 ## Sorting and Filtering Orders (B2B Shop)
 When there is a long list of orders in the Customer account, it is always a good idea to filter the orders using various parameters. To **filter the orders**:
 
-1. In the **Search** drop-down menu select one of the provided filter parameters. See [Orders: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/references/orders-reference-information.html) to learn more about the filter parameters.
+1. In the **Search** drop-down menu select one of the provided filter parameters. See [Orders: Reference Information](/docs/scos/user/back-office-user-guides/sales/orders/references/orders-reference-information.html) to learn more about the filter parameters.
 
 2. Depending on the selection from step #1, enter the search query in the next to the **Search** drop-down field.
 
@@ -102,7 +102,7 @@ To narrow the filtered results and find a more specific order, you can proceed w
 
 3. [Optional] Select the date range in fields **From** and **To**.
 
-4. [Optional] In the **Business Unit** drop-down field, select the Business Unit the orders of which you would like to check. See [Company Roles: Reference Information](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-company-roles/references/company-roles-reference-information.html) for the permissions needed to be assigned for viewing the Business Unit orders.
+4. [Optional] In the **Business Unit** drop-down field, select the Business Unit the orders of which you would like to check. See [Company Roles: Reference Information](/docs/scos/user/shop-user-guides/shop-guide-company-roles/references/company-roles-reference-information.html) for the permissions needed to be assigned for viewing the Business Unit orders.
 
 5. [Optional] Check **Show products in search results** checkmark if you wish to see the products matching your search parameters in the search results. Otherwise, only the order list appropriate to the search parameters will be displayed.
 
@@ -111,9 +111,9 @@ To narrow the filtered results and find a more specific order, you can proceed w
 
 **What’s next?**
 
-To learn more about how to place the order, see [Shop Guide - Checkout](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-checkout.html).
+To learn more about how to place the order, see [Shop Guide - Checkout](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-checkout.html).
 
-To learn more about how to share the cart with external or internal users, see [Sharing a Shopping Cart via Link](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-multiple-shopping-carts.html#sharing-a-shopping-cart-via-link).
+To learn more about how to share the cart with external or internal users, see [Sharing a Shopping Cart via Link](/docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-shopping-carts/shop-guide-managing-multiple-shopping-carts.html#sharing-a-shopping-cart-via-link).
 
-To learn more about how to manage comments in the cart, see [Shop Guide - Managing Comments](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-comments/shop-guide-managing-comments.html).
+To learn more about how to manage comments in the cart, see [Shop Guide - Managing Comments](/docs/scos/user/shop-user-guides/shop-guide-comments/shop-guide-managing-comments.html).
 

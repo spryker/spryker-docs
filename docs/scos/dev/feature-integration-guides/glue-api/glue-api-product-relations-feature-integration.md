@@ -10,8 +10,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-product-relations-feature-integration
   - /docs/glue-api-product-relations-feature-integration
   - /docs/en/glue-api-product-relations-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-product-relations-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-relations-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html
 ---
 
 ## Install Feature API
@@ -23,10 +22,10 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | REQUIRED  SUB-FEATURE|
 |---|---|---|
-|Spryker Core| {{page.version}} |[Glue Application](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)|
-|Product Relation| {{page.version}} | [Product relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-relations-feature-integration.html)|
-|Cart| {{page.version}}| [Cart API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) ||
-Product| {{page.version}} |[Products API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)|
+|Spryker Core| {{site.version}} |[Glue Application](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-glue-application-feature-integration.html)|
+|Product Relation| {{site.version}} | [Product relations feature integration](/docs/scos/dev/feature-integration-guides/product-relations-feature-integration.html)|
+|Cart| {{site.version}}| [Cart API](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html) ||
+Product| {{site.version}} |[Products API](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 

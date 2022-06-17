@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-product-sets
   - /docs/managing-product-sets
   - /docs/en/managing-product-sets
-  - /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-sets/managing-product-sets.html
+  - /docs/scos/user/back-office-user-guides/merchandising/product-sets/managing-product-sets.html
 ---
 
 This document describes how to edit product sets in the Back Office.
@@ -44,7 +44,7 @@ Some section below contain reference information. Review it before you start or 
 | NAME | Unique identifier of the product set that is displayed on the Storefront. |
 | URL | A relative URL address of the product set. When entering multi-word URLs, use hyphens and dashes.|
 | DESCRIPTION | This description is displayed on the Storefront for the product set. |
-| PRODUCT SET KEY | Unique identifier of the product set for adding to [CMS pages](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html). When entering a multi-word key, use underscores and dashes instead of spaces. |
+| PRODUCT SET KEY | Unique identifier of the product set for adding to [CMS pages](/docs/scos/user/features/cms-feature-overview/cms-pages-overview.html). When entering a multi-word key, use underscores and dashes instead of spaces. |
 | WEIGHT | Defines the position of the product set on a page relatively to the weight value of the other product sets. A product set with a bigger weight is displayed higher on a page. |
 | ACTIVE | Defines if the product set is displayed on the Storefront. |    
 

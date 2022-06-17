@@ -21,13 +21,7 @@ redirect_from:
   - /v5/docs/en/producttaxsetsrestapi-migration-guide
   - /v6/docs/producttaxsetsrestapi-migration-guide
   - /v6/docs/en/producttaxsetsrestapi-migration-guide
-  - /docs/scos/dev/module-migration-guides/201811.0/glue-api/migration-guide-producttaxsetsrestapi.html
-  - /docs/scos/dev/module-migration-guides/201903.0/glue-api/migration-guide-producttaxsetsrestapi.html
-  - /docs/scos/dev/module-migration-guides/201907.0/glue-api/migration-guide-producttaxsetsrestapi.html
-  - /docs/scos/dev/module-migration-guides/202001.0/glue-api/migration-guide-producttaxsetsrestapi.html
-  - /docs/scos/dev/module-migration-guides/202005.0/glue-api/migration-guide-producttaxsetsrestapi.html
-  - /docs/scos/dev/module-migration-guides/202009.0/glue-api/migration-guide-producttaxsetsrestapi.html
-  - /docs/scos/dev/module-migration-guides/202108.0/glue-api/migration-guide-producttaxsetsrestapi.html
+  - /docs/scos/dev/module-migration-guides/glue-api/migration-guide-producttaxsetsrestapi.html
 ---
 
 ## Upgrading from version 1.* to version 2.*

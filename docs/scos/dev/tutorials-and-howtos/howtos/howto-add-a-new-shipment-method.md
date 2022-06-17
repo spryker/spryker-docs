@@ -25,7 +25,7 @@ redirect_from:
   - /v1/docs/en/ht-add-new-shipment-method
 related:
   - title: "Reference information: Shipment method plugins"
-    link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
+    link: docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
 ---
 
 This document shows how to add a new shipment method without integrating with the shipment provider.
@@ -86,7 +86,7 @@ When you have a new shipment carrier, you can add a new shipment method to it.
 
 {% info_block infoBox "Note" %}
 
-For more detailed information about adding shipment methods, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html)
+For more detailed information about adding shipment methods, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-and-managing-delivery-methods.html)
 
 {% endinfo_block %}
 
@@ -103,7 +103,7 @@ To add a shipment method to a carrier, follow these steps:
 
 {% info_block infoBox "Note" %}
 
-For more detailed information about adding carrier companies, see [Creating carrier companies](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-carrier-companies.html)
+For more detailed information about adding carrier companies, see [Creating carrier companies](/docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-carrier-companies.html)
 
 {% endinfo_block %}
 

@@ -22,13 +22,7 @@ redirect_from:
   - /v5/docs/en/mg-pub-and-sync
   - /v6/docs/mg-pub-and-sync
   - /v6/docs/en/mg-pub-and-sync
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-publish-and-synchronization.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-publish-and-synchronization.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-publish-and-synchronization.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-publish-and-synchronization.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-publish-and-synchronization.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-publish-and-synchronization.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-publish-and-synchronization.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-publish-and-synchronization.html
 ---
 
 ## Upgrading from version 0.* to version 1.*

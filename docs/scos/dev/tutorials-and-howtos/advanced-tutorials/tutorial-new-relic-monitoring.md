@@ -101,4 +101,4 @@ $ sudo /etc/init.d/newrelic-daemon status
 To enable or migrate New Relic packages, check the following documents:
 
 * [Migration Guide - Monitoring](/docs/scos/dev/module-migration-guides/migration-guide-monitoring.html)
-* [New Relic](/docs/scos/user/technology-partners/{{site.version}}/operational-tools-monitoring-legal-etc/new-relic.html)
+* [New Relic](/docs/scos/user/technology-partners/operational-tools-monitoring-legal-etc/new-relic.html)

@@ -4,7 +4,7 @@ description: This document describes the process how to integrate the Merchant P
 template: feature-integration-guide-template
 related:
   - title: Marketplace Product Options feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-options-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-options-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Merchant Portal — Marketplace Product Option Management into a Spryker project.
@@ -19,8 +19,8 @@ To start integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Product Option | {{page.version}} | [Marketplace Product Option feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-feature-integration.html) |
-| Merchant Portal Marketplace Order Management | {{page.version}} | [Merchant Portal Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-order-management-feature-integration.html) |
+| Marketplace Product Option | {{site.version}} | [Marketplace Product Option feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-option-feature-integration.html) |
+| Merchant Portal Marketplace Order Management | {{site.version}} | [Merchant Portal Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-order-management-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 

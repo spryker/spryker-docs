@@ -18,7 +18,7 @@ redirect_from:
   - /v4/docs/en/decimal-stock-concept
 related:
   - title: Packaging Units feature overview
-    link: docs/scos/user/features/page.version/packaging-units-feature-overview.html
+    link: docs/scos/user/features/packaging-units-feature-overview.html
 ---
 
 ## General information

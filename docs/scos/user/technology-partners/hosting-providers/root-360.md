@@ -10,10 +10,10 @@ redirect_from:
   - /2021080/docs/en/root360
   - /docs/root360
   - /docs/en/root360
-  - /docs/scos/user/technology-partners/202200.0/hosting-providers/root-360.html
+  - /docs/scos/user/technology-partners/hosting-providers/root-360.html
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
+    link: docs/scos/user/technology-partners/technology-partners.html
 ---
 
 ## Partner Information

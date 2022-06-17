@@ -14,7 +14,7 @@ redirect_from:
   - /2021080/docs/en/product-set
   - /docs/product-set
   - /docs/en/product-set
-  - /docs/scos/user/features/202200.0/product-sets-feature-overview.html
+  - /docs/scos/user/features/product-sets-feature-overview.html
 ---
 
 The *Product Sets* feature lets you create and sell collections of products. For example, you can create a stationary workspace set, a set of clothing or accessories, or furniture for a specific room. The "Shop-the-Look" function is a common example of a product set, where you can build a collection of items based on relations or recommendations.
@@ -30,7 +30,7 @@ A Back Office user can define the following:
 * The order of products sets displayed on the Storefront. It's relevant if you have multiple product sets on the same page.
 * The unique product set URL.
 
-A Back Office user can add a product sets to any page by [creating a product set content item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html) and [adding it to CMS pages and blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
+A Back Office user can add a product sets to any page by [creating a product set content item](/docs/scos/user/back-office-user-guides/content/content-items/creating-content-items.html) and [adding it to CMS pages and blocks](/docs/scos/user/back-office-user-guides/content/content-items/adding-content-items-to-cms-pages-and-blocks.html).
 
 
 For more details about product sets, check the video:
@@ -48,12 +48,12 @@ The feature has the following functional constraints which are going to be resol
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Product Sets feature](/docs/scos/user/features/{{page.version}}/product-sets-feature-overview.html) |
-| [Create product sets](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/creating-product-sets.html) |
-| [Manage product sets](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/product-sets/managing-product-sets.html) |
+| [Get a general idea of the Product Sets feature](/docs/scos/user/features/product-sets-feature-overview.html) |
+| [Create product sets](/docs/scos/user/back-office-user-guides/merchandising/product-sets/creating-product-sets.html) |
+| [Manage product sets](/docs/scos/user/back-office-user-guides/merchandising/product-sets/managing-product-sets.html) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Product Sets feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-sets-feature-walkthrough/product-sets-feature-walkthrough.html) for developers.
+Are you a developer? See [Product Sets feature walkthrough](/docs/scos/dev/feature-walkthroughs/product-sets-feature-walkthrough/product-sets-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

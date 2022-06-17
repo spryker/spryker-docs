@@ -17,11 +17,7 @@ redirect_from:
   - /v5/docs/en/mg-quoterequestwidget
   - /v6/docs/mg-quoterequestwidget
   - /v6/docs/en/mg-quoterequestwidget
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-quoterequestwidget.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-quoterequestwidget.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-quoterequestwidget.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-quoterequestwidget.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-quoterequestwidget.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-quoterequestwidget.html
 ---
 
 ## Upgrading from version 1.x.x to version 2.x.x

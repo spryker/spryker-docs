@@ -12,16 +12,16 @@ redirect_from:
   - /docs/en/resolving-search-engine-friendly-urls
 related:
   - title: Glue API - Spryker Core feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-spryker-core-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html
 ---
 
 This endpoints allows resolving Search Engine Friendly (SEF) URLs into a resource URL in Glue API.
 
 For SEO purposes, Spryker automatically generates SEF URLs for products and categories. The URLs are returned as a `url` attribute in responses related to abstract products and product categories. For examples of such responses, see:
-* [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
-* [Retrieve a category tree](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-trees.html#retrieve-a-category-tree)
-* [Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html#retrieve-a-category-node)
-* [Retrieve a CMS page](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-cms-pages.html)
+* [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
+* [Retrieve a category tree](/docs/scos/dev/glue-api-guides/retrieving-categories/retrieving-category-trees.html#retrieve-a-category-tree)
+* [Retrieve a category node](/docs/scos/dev/glue-api-guides/retrieving-categories/retrieving-category-nodes.html#retrieve-a-category-node)
+* [Retrieve a CMS page](/docs/scos/dev/glue-api-guides/retrieving-cms-pages.html)
 
 In your development, the endpoints can help you to:
 * significantly boost the SEO presence of your product store
@@ -32,7 +32,7 @@ To facilitate their usage, Spryker Glue provides an endpoint that allows resolvi
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html).
 
 ## Resolve a SEF URL into a Glue API URL
 
@@ -44,7 +44,7 @@ To resolve a SEF URL into a Glue API URL, send the request:
 
 | PATH PARAMETER  | DESCRIPTION |
 | --------------- | ---------------- |
-| ***{% raw %}{{{% endraw %}SEF URL{% raw %}}}{% endraw %}*** | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html)</li><li>[retrieving category nodes](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html)</li><li>[retrieving cms pages](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-cms-pages.html)</li></ul>|
+| ***{% raw %}{{{% endraw %}SEF URL{% raw %}}}{% endraw %}*** | SEF URL you want to resolve. You can get it when:<ul><li>[retrieving abstract products](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-products.html)</li><li>[retrieving category nodes](/docs/scos/dev/glue-api-guides/retrieving-categories/retrieving-category-nodes.html)</li><li>[retrieving cms pages](/docs/scos/dev/glue-api-guides/retrieving-cms-pages.html)</li></ul>|
 
 ### Request
 
@@ -152,4 +152,4 @@ Using the information from the response and the Glue server name, you can constr
 | 2801 | The `url` parameter is missing. |
 | 2802 | The provided URL does not exist. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

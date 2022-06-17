@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-installation-and-configuration
   - /docs/glue-api-installation-and-configuration
   - /docs/en/glue-api-installation-and-configuration
-  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-installation-and-configuration.html
+  - /docs/scos/dev/feature-integration-guides/glue-api/glue-api-installation-and-configuration.html
 ---
 
 Functionally, Spryker API can be split into 2 parts: API infrastructure (GLUE) and feature modules. The infrastructure provides the general functionality of the API layer, while each feature module implements a specific resource or resource relation.

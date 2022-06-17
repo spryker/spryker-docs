@@ -19,8 +19,8 @@ To help customers select payment and shipment methods, the endpoint allows retri
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html)
-* [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html)
+* [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html)
+* [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html)
 
 
 ## Submit checkout data
@@ -36,8 +36,8 @@ To submit checkout data without order confirmation, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| X-Anonymous-Customer-Unique-Id | String | Required when submitting data of a [guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html). | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
-| Authorization | String | Required when submitting data of a [registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| X-Anonymous-Customer-Unique-Id | String | Required when submitting data of a [guest cart](/docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-guest-carts.html). | A guest user's unique identifier. For security purposes, we recommend passing a hyphenated alphanumeric value, but you can pass any. If you are sending automated requests, you can configure your API client to generate this value. |
+| Authorization | String | Required when submitting data of a [registered user's cart](/docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html). | An alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
@@ -254,8 +254,8 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| billingAddress | Object | | Customer's billing [address](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html). |
-| billingAddress.id | String | . | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [add a customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-customer-addresses.html). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
+| billingAddress | Object | | Customer's billing [address](/docs/scos/dev/glue-api-guides/managing-customers/managing-customer-addresses.html). |
+| billingAddress.id | String | . | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [add a customer addresses](/docs/scos/user/back-office-user-guides/customer/customers/add-customer-addresses.html). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
 | billingAddress.salutation | String | &check; | Salutation to use when addressing the customer. |
 | billingAddress.email | String | &check; | Customer's email address. |
 | billingAddress.firstName | String | &check; | Customer's first name. |
@@ -272,8 +272,8 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 | shipments | Array | | A list of shipments. |
 | shipments.items | Array | &check; | A list of items in a shipment. |
 | shipments.shippingAddress | Object | &check; | Shipping address for the items in the shipment. |
-| shipments.shippingAddress.id | String | . | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [add a customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-customer-addresses.html). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
-| shipments.shippingAddress.idCompanyBusinessUnitAddress | String | | A hyphenated alphanumeric value of an existing company business unit address. To get it, include the `company-business-unit-addresses` resource in your request. Alternatively,  [retrieve a company business unit](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html#retrieve-a-company-business-unit) with the company-business-unit-addresses resource included. If you pass this value for a billing or shipping address, do not pass the other address attributes. |
+| shipments.shippingAddress.id | String | . | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [add a customer addresses](/docs/scos/user/back-office-user-guides/customer/customers/add-customer-addresses.html). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
+| shipments.shippingAddress.idCompanyBusinessUnitAddress | String | | A hyphenated alphanumeric value of an existing company business unit address. To get it, include the `company-business-unit-addresses` resource in your request. Alternatively,  [retrieve a company business unit](/docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-business-units.html#retrieve-a-company-business-unit) with the company-business-unit-addresses resource included. If you pass this value for a billing or shipping address, do not pass the other address attributes. |
 | shipments.shippingAddress.salutation | String | &check; | Salutation to use when addressing the customer. |
 | shipments.shippingAddress.email | String | &check; | Customer's email address. |
 | shipments.shippingAddress.firstName | String | &check; | Customer's first name. |
@@ -993,7 +993,7 @@ In case of a successful update, the endpoint responds with information that can 
 | addresses | Array | A list of customer addresses that can be used for billing or shipping. This attribute is deprecated. To retrieve all available addresses, include the `addresses` resource in your request. |
 | paymentProviders | Array | Payment providers that can be used for the checkout. This attribute is deprecated. To retrieve all the available payment methods, include the `payment-methods` resource in your request. |  
 | shipmentMethods | Array | A list of available shipment methods. This attribute is deprecated. To retrieve all the available shipment methods, include the `shipment-methods` resource in your request. |  
-| selectedShipmentMethods | Array | Shipment methods selected for the order. This value is returned only if you submit an order without shipments. See [Submitting checkout data in version 202009.0](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/submitting-checkout-data.html) to learn how to do that. |
+| selectedShipmentMethods | Array | Shipment methods selected for the order. This value is returned only if you submit an order without shipments. See [Submitting checkout data in version 202009.0](/docs/scos/dev/glue-api-guides/checking-out/submitting-checkout-data.html) to learn how to do that. |
 | selectedPaymentMethods | Array | Payment methods selected for this order. |
 | selectedPaymentMethods.paymentMethodName | String | Payment method name. |
 | selectedPaymentMethods.paymentProviderName | String | Name of the payment provider for this payment method. |
@@ -1088,4 +1088,4 @@ In case of a successful update, the endpoint responds with information that can 
 
 ## Next steps
 
-[Checking out purchases](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html)
+[Checking out purchases](/docs/scos/dev/glue-api-guides/checking-out/checking-out-purchases.html)

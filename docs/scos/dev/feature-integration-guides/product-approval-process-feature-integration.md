@@ -17,10 +17,10 @@ To start feature integration, integrate the required features:
 
 | NAME         | VERSION            | INTEGRATION GUIDE                                                                                                                    |
 |--------------|--------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core | {{page.version}}   | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Product      | {{page.version}}   | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)           |
-| Cart         | {{page.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html)                 |
-| Checkout     | {{page.version}}   | [Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html)         |
+| Spryker Core | {{site.version}}   | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
+| Product      | {{site.version}}   | [Product feature integration](/docs/scos/dev/feature-integration-guides/product-feature-integration.html)           |
+| Cart         | {{site.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/cart-feature-integration.html)                 |
+| Checkout     | {{site.version}}   | [Checkout feature integration](/docs/scos/dev/feature-integration-guides/checkout-feature-integration.html)         |
 
 
 ### 1) Install the required modules using Сomposer
@@ -28,7 +28,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/product-approval-process:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/product-approval-process:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

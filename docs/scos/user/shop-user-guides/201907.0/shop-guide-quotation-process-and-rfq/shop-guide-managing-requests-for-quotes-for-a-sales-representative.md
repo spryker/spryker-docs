@@ -8,9 +8,9 @@ originalArticleId: 4619c1d1-d8e8-4e32-94aa-cc017b5d855f
 redirect_from:
   - /v3/docs/managing-rfqs-sales-rep-shop-guide
   - /v3/docs/en/managing-rfqs-sales-rep-shop-guide
-  - /docs/scos/user/shop-user-guides/page.version/quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
-  - /docs/scos/user/shop-user-guides/201907.0/quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
-  - /docs/scos/user/shop-user-guides/201907.0/quotation-proces-and-rfq/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
+  - /docs/scos/user/shop-user-guides/quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
+  - /docs/scos/user/shop-user-guides/quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
+  - /docs/scos/user/shop-user-guides/quotation-proces-and-rfq/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
 ---
 
 This topic describes the procedure for managing the RFQs from the perspective of the Sales Representative.

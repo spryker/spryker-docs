@@ -8,8 +8,8 @@ originalArticleId: 5a857cfd-42a8-4102-bd8d-8c2c4d7d3203
 redirect_from:
   - /v3/docs/shop-guide-agent-account
   - /v3/docs/en/shop-guide-agent-account
-  - /docs/scos/user/shop-user-guides/page.version/agent-account/shop-guide-agent-account.html
-  - /docs/scos/user/shop-user-guides/201907.0/agent-account/shop-guide-agent-account.html
+  - /docs/scos/user/shop-user-guides/agent-account/shop-guide-agent-account.html
+  - /docs/scos/user/shop-user-guides/agent-account/shop-guide-agent-account.html
 ---
 
 

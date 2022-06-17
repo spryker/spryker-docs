@@ -10,13 +10,11 @@ redirect_from:
   - /2021080/docs/en/managing-payment-methods
   - /docs/managing-payment-methods
   - /docs/en/managing-payment-methods
-  - /docs/scos/user/back-office-user-guides/201811.0/administration/payment-methods/managing-payment-methods.html
-  - /docs/scos/user/back-office-user-guides/201903.0/administration/payment-methods/managing-payment-methods.html
-  - /docs/scos/user/back-office-user-guides/201907.0/administration/payment-methods/managing-payment-methods.html
-  - /docs/scos/user/back-office-user-guides/202204.0/administration/payment-methods/managing-payment-methods.html  
+  - /docs/scos/user/back-office-user-guides/administration/payment-methods/managing-payment-methods.html
+  - /docs/scos/user/back-office-user-guides/administration/payment-methods/managing-payment-methods.html  
 related:
   - title: Payments feature overview
-    link: docs/scos/user/features/page.version/payments-feature-overview.html
+    link: docs/scos/user/features/payments-feature-overview.html
 ---
 
 To edit a payment method in the Back Office, follow the steps:

@@ -17,17 +17,13 @@ redirect_from:
   - /v5/docs/en/mg-contentbanner-201907
   - /v6/docs/mg-contentbanner-201907
   - /v6/docs/en/mg-contentbanner-201907
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-contentbanner.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-contentbanner.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-contentbanner.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-contentbanner.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-contentbanner.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-contentbanner.html
 ---
 
 
 ## Upgrading from version 1.* to version 2.*
 
-Version 2.0.0 of the `ContentGui` module introduces the [Content Items](/docs/scos/user/features/{{site.version}}/content-items-feature-overview.html) functionality that allows creating and managing content and later selecting where it should be inserted.
+Version 2.0.0 of the `ContentGui` module introduces the [Content Items](/docs/scos/user/features/content-items-feature-overview.html) functionality that allows creating and managing content and later selecting where it should be inserted.
 
 With the `ContentBanner` version 2.0, the following changes have been made:
 

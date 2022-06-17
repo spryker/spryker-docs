@@ -13,9 +13,7 @@ redirect_from:
   - /v5/docs/en/migration-guide-companybusinessunit
   - /v6/docs/migration-guide-companybusinessunit
   - /v6/docs/en/migration-guide-companybusinessunit
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-companybusinessunit.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-companybusinessunit.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-companybusinessunit.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-companybusinessunit.html
 ---
 
 ## Upgrading from version 1.* to version 2.*

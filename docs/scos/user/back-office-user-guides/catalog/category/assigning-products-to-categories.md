@@ -10,14 +10,14 @@ redirect_from:
   - /2021080/docs/en/assigning-products-to-categories
   - /docs/assigning-products-to-categories
   - /docs/en/assigning-products-to-categories
-  - /docs/scos/user/back-office-user-guides/202200.0/catalog/category/assigning-products-to-categories.html
+  - /docs/scos/user/back-office-user-guides/catalog/category/assigning-products-to-categories.html
 related:
   - title: Creating Categories
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/creating-categories.html
+    link: docs/scos/user/back-office-user-guides/catalog/category/creating-categories.html
   - title: Managing Categories
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/managing-categories.html
+    link: docs/scos/user/back-office-user-guides/catalog/category/managing-categories.html
   - title: Category Management feature overview
-    link: docs/scos/user/features/page.version/category-management-feature-overview.html
+    link: docs/scos/user/features/category-management-feature-overview.html
 ---
 
 This topic describes how to assign products to categories.
@@ -83,4 +83,4 @@ To assign one or more products to a category:
 
 ## Next steps
 
-You have assigned products to a category. Now, you can learn how to [manage categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/managing-categories.html).
+You have assigned products to a category. Now, you can learn how to [manage categories](/docs/scos/user/back-office-user-guides/catalog/category/managing-categories.html).

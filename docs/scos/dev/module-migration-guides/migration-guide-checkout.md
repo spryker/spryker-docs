@@ -22,17 +22,11 @@ redirect_from:
   - /v5/docs/en/mg-checkout
   - /v6/docs/mg-checkout
   - /v6/docs/en/mg-checkout
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-checkout.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-checkout.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-checkout.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-checkout.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-checkout.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-checkout.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-checkout.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-checkout.html
   - /module_migration_guides/mg-checkout.htm
 related:
   - title: Checkout
-    link: docs/scos/user/features/page.version/checkout-feature-overview/checkout-feature-overview.html
+    link: docs/scos/user/features/checkout-feature-overview/checkout-feature-overview.html
 ---
 
 ## Upgrading from version 4.* to version 6.0.0

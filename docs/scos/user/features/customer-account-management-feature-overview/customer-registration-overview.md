@@ -49,7 +49,7 @@ After checkout registration, the cart created by a customer as a guest user is c
 
 A Back Office user can register a customer by entering customer account details. The verification email is sent to the email address specified by the Back Office user. Until the customer verifies their account via the link in the email, in the Back Office, the status of their account is `Unverified`. Once they click the link, the status changes to `Verified`.
 
-To learn how a Back Office user creates customer accounts, see [Creating customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/create-customers.html).
+To learn how a Back Office user creates customer accounts, see [Creating customers](/docs/scos/user/back-office-user-guides/customer/customers/create-customers.html).
 
 ### Registration via Glue API
 
@@ -61,9 +61,9 @@ A developer can verify a customer's email address via Glue API regardless of the
 
 {% endinfo_block %}
 
-To learn how a developer creates customer accounts via Glue API, see [Create a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html).
+To learn how a developer creates customer accounts via Glue API, see [Create a customer](/docs/scos/dev/glue-api-guides/managing-customers/managing-customers.html).
 
-To learn how a developer confirms a customer's email address, see [Confirming customer registration](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/confirming-customer-registration.html).
+To learn how a developer confirms a customer's email address, see [Confirming customer registration](/docs/scos/dev/glue-api-guides/managing-customers/confirming-customer-registration.html).
 
 ### Registration via import
 
@@ -73,10 +73,10 @@ A developer can register a customer by importing their customer account details.
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/create-customers.html)  |
+| [Create customers](/docs/scos/user/back-office-user-guides/customer/customers/create-customers.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Customer Account Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html) for developers.
+Are you a developer? See [Customer Account Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

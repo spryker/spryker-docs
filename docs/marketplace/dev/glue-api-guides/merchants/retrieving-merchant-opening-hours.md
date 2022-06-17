@@ -4,9 +4,9 @@ description: Retrieve merchant opening hours via Glue API
 template: glue-api-storefront-guide-template
 related:
   - title: Retrieving merchants
-    link: docs/marketplace/dev/glue-api-guides/page.version/merchants/retrieving-merchants.html
+    link: docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchants.html
   - title: Retrieving merchant addresses
-    link: docs/marketplace/dev/glue-api-guides/page.version/merchants/retrieving-merchant-addresses.html 
+    link: docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-addresses.html 
 ---
 
 This document describes how to retrieve merchant opening hours.
@@ -21,11 +21,11 @@ To retrieve a merchant opening hours, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| {% raw %}***{{merchantId}}***{% endraw %} | Unique identifier of a merchant to retrieve the addresses of. To get it, [retrieve all merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html#retrieve-merchants). |
+| {% raw %}***{{merchantId}}***{% endraw %} | Unique identifier of a merchant to retrieve the addresses of. To get it, [retrieve all merchants](/docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchants.html#retrieve-merchants). |
 
 {% info_block warningBox "Note" %}
 
-This endpoint returns only [active](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. You can activate merchants in the Back Office.
+This endpoint returns only [active](/docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. You can activate merchants in the Back Office.
 
 {% endinfo_block %}
 
@@ -204,4 +204,4 @@ Request sample: retrieve merchant opening hours
 
 ## Possible errors
 
-For statuses, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+For statuses, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

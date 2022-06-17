@@ -10,18 +10,18 @@ redirect_from:
   - /2021080/docs/en/amazon-pay-configuration-scos
   - /docs/amazon-pay-configuration-scos
   - /docs/en/amazon-pay-configuration-scos
-  - /docs/scos/user/technology-partners/202204.0/payment-partners/amazon-pay/scos-integration/amazon-pay-configuration-for-the-scos.html
-  - /docs/scos/user/technology-partners/202204.0/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-support-of-bundled-products.html
-  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/amazon-pay/configuring-amazon-pay.html
+  - /docs/scos/user/technology-partners/payment-partners/amazon-pay/scos-integration/amazon-pay-configuration-for-the-scos.html
+  - /docs/scos/user/technology-partners/payment-partners/amazon-pay/legacy-demoshop-integration/amazon-pay-support-of-bundled-products.html
+  - /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/configuring-amazon-pay.html
 related:
   - title: Handling orders with Amazon Pay API
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html
   - title: Amazon Pay - State Machine
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/amazon-pay-state-machine.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay-state-machine.html
   - title: Amazon Pay - Sandbox Simulations
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
   - title: Obtaining an Amazon Order Reference and information about shipping addresses
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
 ---
 
 {% info_block errorBox %}

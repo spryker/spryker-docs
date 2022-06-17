@@ -5,7 +5,7 @@ description: This integration guide describes how to integrate the Merchants fea
 template: feature-integration-guide-template
 related:
   - title: Marketplace Merchant feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Merchant feature into a Spryker project.
@@ -20,15 +20,15 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION |INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Merchant | {{page.version}} | [Merchant feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html) |
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
+| Merchant | {{site.version}} | [Merchant feature integration](/docs/scos/dev/feature-integration-guides/merchant-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-merchant:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-merchant:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1353,13 +1353,13 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 ```bash
-composer require spryker-feature/marketplace-merchant: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-merchant: "{{site.version}}" --update-with-dependencies
 ```
 
 | MODULE | EXPECTED DIRECTORY |
@@ -1540,4 +1540,4 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | -|
-| Marketplace Merchant API | &check;  |  [Marketplace Merchant feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-merchant-feature-integration.html) |
+| Marketplace Merchant API | &check;  |  [Marketplace Merchant feature integration ](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-merchant-feature-integration.html) |

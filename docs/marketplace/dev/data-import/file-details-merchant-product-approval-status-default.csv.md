@@ -4,9 +4,9 @@ description: This document describes the merchant_product_approval_status_defaul
 template: import-file-template
 related:
   - title: Marketplace Product Approval Process feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-approval-process-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-approval-process-feature-walkthrough.html
   - title: Marketplace Product Approval Process feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-approval-process-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-product-approval-process-feature-overview.html
 ---
 
 This document describes the `merchant_product_approval_status_default.csv` file to configure default merchant products approval statuses in your Spryker shop.
@@ -28,7 +28,7 @@ The file must have the following parameters:
 
 ## Import file dependencies
 
-The file has the following dependency: [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html).
+The file has the following dependency: [merchant.csv](/docs/marketplace/dev/data-import/file-details-merchant.csv.html).
 
 ## Import template file and content example
 

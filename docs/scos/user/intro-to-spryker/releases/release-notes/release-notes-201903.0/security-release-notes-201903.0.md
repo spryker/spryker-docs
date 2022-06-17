@@ -44,7 +44,7 @@ An admin user was able to save raw HTML in product attributes, glossary and user
 
 * ProductAttribute <!--/module_guide/spryker/product-attribute.htm -->  (1.1.2)
 * ProductAttributeGui <!--(https://github.com/spryker/product-attribute-gui) -->  (1.2.1)
-* Glossary <!-- (/docs/scos/user/back-office-user-guides/{{site.version}}/administration/glossary/glossary.html) --> (3.5.2)
+* Glossary <!-- (/docs/scos/user/back-office-user-guides/administration/glossary/glossary.html) --> (3.5.2)
 * Acl <!--(https://github.com/spryker/acl) -->(3.1.2)
 
 **How to get the fix:** Just update modules with'

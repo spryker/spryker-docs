@@ -10,10 +10,8 @@ redirect_from:
   - /2021080/docs/en/managing-warehouses
   - /docs/managing-warehouses
   - /docs/en/managing-warehouses
-  - /docs/scos/user/user-guides/201811.0/back-office-user-guide/administration/warehouses/managing-warehouses.html
-  - /docs/scos/user/user-guides/201903.0/back-office-user-guide/administration/warehouses/managing-warehouses.html
-  - /docs/scos/user/user-guides/201907.0/back-office-user-guide/administration/warehouses/managing-warehouses.html
-  - /docs/scos/user/back-office-user-guides/202204.0/administration/warehouses/managing-warehouses.html
+  - /docs/scos/user/user-guides/back-office-user-guide/administration/warehouses/managing-warehouses.html
+  - /docs/scos/user/back-office-user-guides/administration/warehouses/managing-warehouses.html
 ---
 
 This document describes how to edit warehouses in the Back Office.
@@ -51,4 +49,4 @@ Review the [reference information](#reference-information-edit-warehouses) befor
 
 ## Next steps
 
-To learn how to manage stock per specific warehouse, see [Managing product availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html).
+To learn how to manage stock per specific warehouse, see [Managing product availability](/docs/scos/user/back-office-user-guides/catalog/availability/managing-products-availability.html).

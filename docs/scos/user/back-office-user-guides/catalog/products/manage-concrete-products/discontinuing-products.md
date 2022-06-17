@@ -10,10 +10,10 @@ redirect_from:
   - /2021080/docs/en/discontinuing-products
   - /docs/discontinuing-products
   - /docs/en/discontinuing-products
-  - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-concrete-products/discontinuing-products.html
+  - /docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/discontinuing-products.html
 related:
   - title: Adding Product Alternatives
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/adding-product-alternatives.html
+    link: docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/adding-product-alternatives.html
 ---
 
 This article describes what steps you need to follow to discontinue the product.

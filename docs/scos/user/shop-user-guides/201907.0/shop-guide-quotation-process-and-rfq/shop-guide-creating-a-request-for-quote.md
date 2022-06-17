@@ -8,13 +8,13 @@ originalArticleId: 94b35e65-4e4d-4cc4-9a29-eb840d1b225a
 redirect_from:
   - /v3/docs/creating-rfq-shop-guide
   - /v3/docs/en/creating-rfq-shop-guide
-  - /docs/scos/user/shop-user-guides/page.version/quotation-process-and-rfq/shop-guide-creating-a-request-for-quote.html
-  - /docs/scos/user/shop-user-guides/201907.0/quotation-proces-and-rfq/shop-guide-creating-a-request-for-quote.html
+  - /docs/scos/user/shop-user-guides/quotation-process-and-rfq/shop-guide-creating-a-request-for-quote.html
+  - /docs/scos/user/shop-user-guides/quotation-proces-and-rfq/shop-guide-creating-a-request-for-quote.html
 related:
   - title: Shop Guide - Managing Requests for Quotes for a Buyer
-    link: docs/scos/user/shop-user-guides/page.version/quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html
+    link: docs/scos/user/shop-user-guides/quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-buyer.html
   - title: Shop Guide - Managing Requests for Quotes for a Sales Representative
-    link: docs/scos/user/shop-user-guides/page.version/quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
+    link: docs/scos/user/shop-user-guides/quotation-process-and-rfq/shop-guide-managing-requests-for-quotes-for-a-sales-representative.html
 ---
 
 This topic describes how a buyer can create a new Request for Quote (RFQ).
@@ -41,7 +41,7 @@ See [Buyer Workflow](/docs/scos/user/features/201907.0/quotation-process-feature
 
 {% info_block infoBox %}
 
-See [Reference Information](/docs/scos/user/shop-user-guides/{{page.version}}/quotation-proces-and-rfq/shop-guide-request-for-quote-reference-information.html) for details on UI elements in the **Quote Requests** page in the Customer Account.
+See [Reference Information](/docs/scos/user/shop-user-guides/quotation-proces-and-rfq/shop-guide-request-for-quote-reference-information.html) for details on UI elements in the **Quote Requests** page in the Customer Account.
 
 {% endinfo_block %}
 

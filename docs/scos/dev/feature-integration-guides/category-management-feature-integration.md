@@ -9,13 +9,10 @@ redirect_from:
   - /2021080/docs/en/category-management-feature-integration
   - /docs/category-management-feature-integration
   - /docs/en/category-management-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/category-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201903.0/category-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201907.0/category-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202005.0/category-management-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/category-management-feature-integration.html
 ---
 
-This document describes how to integrate the [Category Management](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html) feature into a Spryker project.
+This document describes how to integrate the [Category Management](/docs/scos/user/features/category-management-feature-overview.html) feature into a Spryker project.
 
 ## Install feature core
 
@@ -27,14 +24,14 @@ Overview and install the necessary features.
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/category-management:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/category-management:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1244,15 +1241,15 @@ Overview and install the following features.
 
 | NAME | VERSION |
 | --- | --- |
-| Category | {{page.version}} |
-| Spryker Core | {{page.version}}|
+| Category | {{site.version}} |
+| Spryker Core | {{site.version}}|
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/category-management:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/category-management:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1355,6 +1352,6 @@ Integrate the following related features:
 
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |--- | --- | --- |
-| GLUE: Category Management  | | [GLUE: Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-category-management-feature-integration.html) |
-| Catalog + Category Management  | | [Catalog + Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/catalog-category-management-feature-integration.html) |
-| CMS + Category Management | | [CMS + Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-category-management-feature-integration.html)|
+| GLUE: Category Management  | | [GLUE: Category Management feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-category-management-feature-integration.html) |
+| Catalog + Category Management  | | [Catalog + Category Management feature integration](/docs/scos/dev/feature-integration-guides/catalog-category-management-feature-integration.html) |
+| CMS + Category Management | | [CMS + Category Management feature integration](/docs/scos/dev/feature-integration-guides/cms-category-management-feature-integration.html)|

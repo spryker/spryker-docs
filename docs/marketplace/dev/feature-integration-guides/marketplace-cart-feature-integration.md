@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 related:
   - title: Marketplace Cart feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-cart-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-cart-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Cart feature into a Spryker project.
@@ -20,16 +20,16 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | ----------- | ------- | ------------------|
-| Cart            | {{page.version}}  | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |
-| Order Threshold | {{page.version}}  | [Order Threshold feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html) |
-| Marketplace Order Management | {{page.version}}  | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html) |
+| Cart            | {{site.version}}  | [Cart feature integration](/docs/scos/dev/feature-integration-guides/cart-feature-integration.html) |
+| Order Threshold | {{site.version}}  | [Order Threshold feature integration](/docs/scos/dev/feature-integration-guides/checkout-feature-integration.html) |
+| Marketplace Order Management | {{site.version}}  | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-cart:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-cart:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -87,10 +87,10 @@ To start feature integration, integrate the required features:
 
 | NAME            | VERSION |
 | -------------------- | ----------- |
-| Order Threshold      | {{page.version}}  |
-| Cart                 | {{page.version}}  |
-| Merchant Portal Core | {{page.version}}  |
-| Marketplace Order Management | {{page.version}}  |
+| Order Threshold      | {{site.version}}  |
+| Cart                 | {{site.version}}  |
+| Merchant Portal Core | {{site.version}}  |
+| Marketplace Order Management | {{site.version}}  |
 
 ### 1) Install the required modules using Composer
 

@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/quick-order-non-splittable-products-feature-integration
   - /docs/quick-order-non-splittable-products-feature-integration
   - /docs/en/quick-order-non-splittable-products-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/quick-add-to-cart-non-splittable-products-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/quick-add-to-cart-non-splittable-products-feature-integration.html
 ---
 
 ## Install feature core
@@ -21,8 +21,8 @@ To start feature integration, review and install the necessary features:
 
 | NAME | VERSION |
 |---|---|
-|Quick Add To Cart| {{page.version}} |
-|Non-splittable Products| {{page.version}} |
+|Quick Add To Cart| {{site.version}} |
+|Non-splittable Products| {{site.version}} |
 
 ### 1) Set up behavior
 

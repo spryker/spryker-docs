@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the Merchant C
 template: feature-integration-guide-template
 related:
   - title: Merchant Category feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/merchant-category-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/merchant-category-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Merchant Category feature into a Spryker project.
@@ -20,15 +20,15 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ----- | ---------- |
-| Spryker Core         | {{page.version}}      | [Spryker Core Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Marketplace Merchant | {{page.version}}      | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Spryker Core         | {{site.version}}      | [Spryker Core Feature Integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
+| Marketplace Merchant | {{site.version}}      | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/merchant-category:"{{page.version}}"  --update-with-dependencies
+composer require spryker-feature/merchant-category:"{{site.version}}"  --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -320,8 +320,8 @@ Integrate the required features before beginning the integration step.
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | -------- | ------ | -------------- |
-| Spryker Core | {{page.version}}  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Merchant     | {{page.version}} | [[DEPRECATED\] Merchant Feature Integration](https://github.com/spryker-feature/merchant) |
+| Spryker Core | {{site.version}}  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
+| Merchant     | {{site.version}} | [[DEPRECATED\] Merchant Feature Integration](https://github.com/spryker-feature/merchant) |
 
 ### 1) Set up behavior
 

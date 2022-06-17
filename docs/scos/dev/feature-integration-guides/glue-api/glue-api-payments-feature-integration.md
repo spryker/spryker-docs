@@ -9,10 +9,10 @@ redirect_from:
   - /2021080/docs/en/glue-api-payments-feature-integration
   - /docs/glue-api-payments-feature-integration
   - /docs/en/glue-api-payments-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-payments-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/glue-api/glue-api-payments-feature-integration.html
 related:
   - title: Checking Out Purchases and Getting Checkout Data
-    link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
+    link: docs/scos/dev/glue-api-guides/checking-out/checking-out-purchases.html
 ---
 
 {% info_block errorBox %}
@@ -32,8 +32,8 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | {{page.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)  |
-| Payments | {{page.version}} | [Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/payments-feature-integration.html) |
+| Spryker Core | {{site.version}} | [Glue Application feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-glue-application-feature-integration.html)  |
+| Payments | {{site.version}} | [Payments feature integration](/docs/scos/dev/feature-integration-guides/payments-feature-integration.html) |
 
 ## 1)  Install the required modules using Composer
 
@@ -277,4 +277,4 @@ To verify that SelectedPaymentMethodCheckoutDataResponseMapperPlugin is activate
 
 | FEATURE | LINK |
 | --- | --- |
-| Checkout API | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| Checkout API | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-checkout-feature-integration.html) |

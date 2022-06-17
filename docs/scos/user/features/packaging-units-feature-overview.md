@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/packaging-units-feature-overview
   - /docs/packaging-units-feature-overview
   - /docs/en/packaging-units-feature-overview
-  - /docs/scos/user/features/202200.0/packaging-units-feature-overview.html
+  - /docs/scos/user/features/packaging-units-feature-overview.html
 ---
 
 {% info_block infoBox "Terminology used throughout the article" %}
@@ -198,6 +198,6 @@ You have a product in your shop—a pen. And there exists a packaging unit for a
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Packaging Units feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/packaging-units-feature-walkthrough.html) for developers.
+Are you a developer? See [Packaging Units feature walkthrough](/docs/scos/dev/feature-walkthroughs/packaging-units-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

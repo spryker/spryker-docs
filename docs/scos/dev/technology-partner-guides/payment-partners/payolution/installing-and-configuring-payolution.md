@@ -10,18 +10,18 @@ redirect_from:
   - /2021080/docs/en/payolution-configuration
   - /docs/payolution-configuration
   - /docs/en/payolution-configuration
-  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/payolution/installing-and-configuring-payolution.html
+  - /docs/scos/dev/technology-partner-guides/payment-partners/payolution/installing-and-configuring-payolution.html
 related:
   - title: Integrating Payolution
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-payolution.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-payolution.html
   - title: Payolution - Performing Requests
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-performing-requests.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-performing-requests.html
   - title: Payolution request flow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/payolution-request-flow.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/payolution/payolution-request-flow.html
   - title: Integrating the installment payment method for Payolution
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-the-installment-payment-method-for-payolution.html
   - title: Integrating the invoice paymnet method for Payolution
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
+    link: docs/scos/dev/technology-partner-guides/payment-partners/payolution/integrating-the-invoice-payment-method-for-payolution.html
 ---
 
 To integrate Payolution into your project, first you need to install and configure the Payolution module. This topic describes how to do that.

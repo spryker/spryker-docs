@@ -4,12 +4,12 @@ last_updated: May 3, 2021
 description: This document describes the process how to integrate the Marketplace Product Offer + Checkout feature into a Spryker project.
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/marketplace/dev/feature-integration-guides/202200.0/marketplace-product-offer-checkout-feature-integration.html
+  - /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-checkout-feature-integration.html
 related:
   - title: Marketplace Product Offer feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
   - title: Checkout feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/checkout-feature-walkthrough.html
+    link: docs/scos/dev/feature-walkthroughs/checkout-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product Offer + Checkout feature into a Spryker project.
@@ -24,9 +24,9 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)  |
-| Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
-| Checkout | {{page.version}} | [Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html) |
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html)  |
+| Marketplace Product Offer | {{site.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html) |
+| Checkout | {{site.version}} | [Checkout feature integration](/docs/scos/dev/feature-integration-guides/checkout-feature-integration.html) |
 
 
 ### 1) Install the required modules using Composer

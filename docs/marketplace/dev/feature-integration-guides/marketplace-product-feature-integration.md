@@ -4,10 +4,10 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 last_updated: Mar 11, 2022
 redirect_from:
-  - /docs/marketplace/dev/feature-integration-guides/202200.0/glue/marketplace-product-feature-integration.html
+  - /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-feature-integration.html
 related:
   - title: Marketplace Product feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product feature into a Spryker project.
@@ -22,16 +22,16 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE        |
 | --------------- | -------- | ------------------ |
-| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Product   | {{page.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |
+| Spryker Core         | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
+| Marketplace Merchant | {{site.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration.html) |
+| Product   | {{site.version}} | [Product feature integration](/docs/scos/dev/feature-integration-guides/product-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-product:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-product:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -805,8 +805,8 @@ Make sure you can filter concrete products by merchant reference while searching
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | - |
-| Marketplace Product API | | [Glue API: Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-feature-integration.html) |
-| Marketplace Product + Marketplace Product Offer | | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-marketplace-product-offer-feature-integration.html) |
-| Marketplace Product + Inventory Management | | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html) |
-| Marketplace Product + Cart | | [Marketplace Product + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-cart-feature-integration.html) |
-| Marketplace Product + Quick Add to Cart | | [Marketplace Product + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-quick-add-to-cart-feature-integration.html) |
+| Marketplace Product API | | [Glue API: Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-feature-integration.html) |
+| Marketplace Product + Marketplace Product Offer | | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-marketplace-product-offer-feature-integration.html) |
+| Marketplace Product + Inventory Management | | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-inventory-management-feature-integration.html) |
+| Marketplace Product + Cart | | [Marketplace Product + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-cart-feature-integration.html) |
+| Marketplace Product + Quick Add to Cart | | [Marketplace Product + Quick Add to Cart feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-quick-add-to-cart-feature-integration.html) |

@@ -4,13 +4,13 @@ description: The Marketplace Order Management feature lets Marketplace customers
 template: feature-walkthrough-template
 related:
     - title: MerchantOms
-      link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-order-management-feature-walkthrough/merchant-oms.html
+      link: docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/merchant-oms.html
     - title: Marketplace Shipment
-      link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-shipment-feature-walkthrough.html
+      link: docs/marketplace/dev/feature-walkthroughs/marketplace-shipment-feature-walkthrough.html
     - title: Marketplace and merchant state machines
-      link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
+      link: docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-overview.html
     - title: Marketplace and merchant state machines interaction
-      link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
+      link: docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html
     - title: 'How-to: Create a new MerchantOms flow'
       link: docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html
 ---
@@ -23,7 +23,7 @@ By using `MerchantSalesOrderFacade::createMerchantOrderCollection()`, you can de
 
 {% info_block warningBox "User documentation" %}
 
-To learn more about the feature and to find out how end users use it, see [Marketplace Order Management](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) feature overview for business users.
+To learn more about the feature and to find out how end users use it, see [Marketplace Order Management](/docs/marketplace/user/features/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html) feature overview for business users.
 
 {% endinfo_block %}
 
@@ -65,7 +65,7 @@ The following diagram illustrates the domain model of the Marketplace Order Mana
 {% info_block warningBox “Warning” %}
 
 Do not build the Merchant functionality around Orders, but rather around Merchant Orders.
-Make sure that Merchants do not modify the order directly, but instead use [MerchantOms](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough/merchant-oms.html) for this purpose.
+Make sure that Merchants do not modify the order directly, but instead use [MerchantOms](/docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/merchant-oms.html) for this purpose.
 
 {% endinfo_block %}
 
@@ -92,5 +92,5 @@ The *merchant order total* is the sum of the totals of items of an order relatin
 
 |INTEGRATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |---------|---------|---------|--------|
-| [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html)    | [Retrieving Marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html)        | [File details: merchant_oms_process.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-oms-process.csv.html)        |  [MerchantOms](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-order-management-feature-walkthrough/merchant-oms.html)  |
-| [Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-order-threshold-feature-integration.html)    |         | [File details: merchant-order-status.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-order-status.csv.html)        |  [How-to: Creation a new MerchantOms flow](/docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html)   |
+| [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html)    | [Retrieving Marketplace orders](/docs/marketplace/dev/glue-api-guides/retrieving-marketplace-orders.html)        | [File details: merchant_oms_process.csv](/docs/marketplace/dev/data-import/file-details-merchant-oms-process.csv.html)        |  [MerchantOms](/docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/merchant-oms.html)  |
+| [Marketplace Order Management + Order Threshold feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-order-threshold-feature-integration.html)    |         | [File details: merchant-order-status.csv](/docs/marketplace/dev/data-import/file-details-merchant-order-status.csv.html)        |  [How-to: Creation a new MerchantOms flow](/docs/marketplace/dev/howtos/how-to-create-a-new-merchant-oms-flow.html)   |

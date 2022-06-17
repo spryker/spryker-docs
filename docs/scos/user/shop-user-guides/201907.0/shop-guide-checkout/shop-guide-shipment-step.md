@@ -8,8 +8,8 @@ originalArticleId: 5279484e-74a7-46b6-b2b3-019c4739c3d5
 redirect_from:
   - /v3/docs/shipment-step-shop-guide-201911
   - /v3/docs/en/shipment-step-shop-guide-201911
-  - /docs/scos/user/shop-user-guides/page.version/checkout/shop-guide-shipment-step.html
-  - /docs/scos/user/shop-user-guides/201907.0/checkout/shop-guide-shipment-step.html
+  - /docs/scos/user/shop-user-guides/checkout/shop-guide-shipment-step.html
+  - /docs/scos/user/shop-user-guides/checkout/shop-guide-shipment-step.html
 ---
 
 The topic provides a list of steps to select shipment methods for the delivery addresses.
@@ -38,6 +38,6 @@ To select a shipment method:
 
 The delivery addresses are added and shipment methods along with the delivery dates are selected. Now, you can go to the next step to select a payment method.
 
-To learn more on how to proceed with the payment, see [Shop Guide - Payment Step](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-payment-step.html)
+To learn more on how to proceed with the payment, see [Shop Guide - Payment Step](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-payment-step.html)
 
 <!-- Last review date: Sep 24, 2019 -->

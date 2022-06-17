@@ -20,11 +20,11 @@ To start feature integration, overview and install the necessary features:
 
 | FEATURE   | VERSION | INTEGRATION GUIDE  |
 | ------------- | ------ | ------------------------ |
-| Glue API: Spryker Core                | {{page.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Glue API: Cart                        | {{page.version}}  | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html) |
-| Glue API: Customer Account Management | {{page.version}}  | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
-| Glue API: Payments                    | {{page.version}}  | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-payments-feature-integration.html) |
-| Glue API: Shipment                   | {{page.version}}  | [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html) |
+| Glue API: Spryker Core                | {{site.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Glue API: Cart                        | {{site.version}}  | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html) |
+| Glue API: Customer Account Management | {{site.version}}  | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-customer-account-management-feature-integration.html) |
+| Glue API: Payments                    | {{site.version}}  | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-payments-feature-integration.html) |
+| Glue API: Shipment                   | {{site.version}}  | [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -670,7 +670,7 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
 
 Ensure that the plugins work correctly:
 
-1. [Setting up Minimum Hard Threshold](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-global-thresholds.html).
+1. [Setting up Minimum Hard Threshold](/docs/scos/user/back-office-user-guides/administration/thresholds/managing-global-thresholds.html).
 2. Add a product to the cart with a price less minimum threshold value.
 3. Check that the following error is returned by sending the `GET https://glue.mysprykershop.com/carts/{cart-uuid}` request.
 
@@ -787,5 +787,5 @@ Integrate the following related features.
 
 | FEATURE   | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE    |
 | -------- | ----------------- | ---------------------- |
-| Glue API: Shipment  | ✓                                | [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html)  |
-| Glue API: Payments   | ✓                                | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-payments-feature-integration.html) |
+| Glue API: Shipment  | ✓                                | [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html)  |
+| Glue API: Payments   | ✓                                | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-payments-feature-integration.html) |

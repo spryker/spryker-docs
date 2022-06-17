@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/glue-rest-api
   - /docs/glue-rest-api
   - /docs/en/glue-rest-api
-  - /docs/scos/dev/glue-api-guides/202200.0/glue-rest-api.html
+  - /docs/scos/dev/glue-api-guides/glue-rest-api.html
 ---
 
 The Spryker Glue REST API is a JSON REST API that is an application of the Spryker Commerce OS. It is build to be used as a contract between the Spryker Commerce OS Backend and any possible touchpoint or integration with a third-party system. As an application, Glue knows how to read and interpret API resources and leverage feature modules that expose existing Spryker functionality.
@@ -22,7 +22,7 @@ The Spryker API infrastructure, which is implemented as a separate layer of the 
 
 {% info_block infoBox %}
 
-For more details, see [Glue Infrastructure](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html).
+For more details, see [Glue Infrastructure](/docs/scos/dev/glue-api-guides/glue-infrastructure.html).
 
 {% endinfo_block %}
 
@@ -30,7 +30,7 @@ For more details, see [Glue Infrastructure](/docs/scos/dev/glue-api-guides/{{pag
 
 The Glue REST API comes with a set of predefined APIs, which you can extend or add your own APIs. The predefined APIs support Storefront functionality and can be used for integrations with third-party systems. The Storefront functionality enables you to build a custom experience for your customers in any touchpoint leveraging data and functionality at the core of your Commerce OS. For example, it allows you to fetch product data to be displayed on a custom product details page in your mobile app.
 
-For more details, see [REST API Reference](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html).
+For more details, see [REST API Reference](/docs/scos/dev/glue-api-guides/rest-api-reference.html).
 
 ## B2C API React example
 

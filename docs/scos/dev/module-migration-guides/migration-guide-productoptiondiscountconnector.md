@@ -22,13 +22,7 @@ redirect_from:
   - /v5/docs/en/mg-product-option-discount-connector
   - /v6/docs/mg-product-option-discount-connector
   - /v6/docs/en/mg-product-option-discount-connector
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productoptiondiscountconnector.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productoptiondiscountconnector.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productoptiondiscountconnector.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-productoptiondiscountconnector.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productoptiondiscountconnector.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productoptiondiscountconnector.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productoptiondiscountconnector.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-productoptiondiscountconnector.html
 related:
   - title: Migration guide - Product
     link: docs/scos/dev/module-migration-guides/migration-guide-product.html

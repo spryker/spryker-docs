@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/cart-notes-overview
   - /docs/cart-notes-overview
   - /docs/en/cart-notes-overview
-  - /docs/scos/user/features/202200.0/cart-feature-overview/cart-notes-overview.html
+  - /docs/scos/user/features/cart-feature-overview/cart-notes-overview.html
 ---
 
 *Cart Notes* let Shop administrators include the **Notes** field on the **Cart** page. Customers can add notes to a particular item or the whole cart—for example, some special instructions about how to prepare and deliver an order.

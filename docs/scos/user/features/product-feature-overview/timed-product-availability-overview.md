@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/timed-product-availability-overview
   - /docs/timed-product-availability-overview
   - /docs/en/timed-product-availability-overview
-  - /docs/scos/user/features/202200.0/product-feature-overview/timed-product-availability-overview.html
+  - /docs/scos/user/features/product-feature-overview/timed-product-availability-overview.html
 ---
 
 Timed product availability, or product TTL (Time to Live) lets you define when your products are available online and when they are not. To get the main idea of the TTL, go to the general feature overview for more detailed information about how it works as well as familiarize yourself with its usage scenarios.
@@ -46,10 +46,10 @@ The following table shows possible usage scenarios with the TTL feature and resu
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage concrete product validity dates](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/editing-product-variants.html) |
+| [Manage concrete product validity dates](/docs/scos/user/back-office-user-guides/catalog/products/manage-concrete-products/editing-product-variants.html) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-feature-walkthrough.html) for developers.
+Are you a developer? See [Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/product-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

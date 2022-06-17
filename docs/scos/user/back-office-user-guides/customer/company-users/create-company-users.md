@@ -10,22 +10,21 @@ redirect_from:
   - /2021080/docs/en/managing-company-users
   - /docs/managing-company-users
   - /docs/en/managing-company-users
-  - /docs/scos/user/back-office-user-guides/202204.0/customer/company-account/managing-company-users.html
-  - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-users.html
+  - /docs/scos/user/back-office-user-guides/customer/company-account/managing-company-users.html
 related:
   - title: Create company roles
-    link: docs/scos/user/back-office-user-guides/page.version/customer/company-roles/create-company-roles.html
+    link: docs/scos/user/back-office-user-guides/customer/company-roles/create-company-roles.html
   - title: Managing Companies
-    link: docs/scos/user/back-office-user-guides/page.version/customer/manage-companies.html
+    link: docs/scos/user/back-office-user-guides/customer/manage-companies.html
 ---
 
 This document describes how to create company users in the Back Office.
 
 ## Prerequisites
 
-1. [Create a company](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/manage-companies.html).
-2. [Create a company unit](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-units/create-company-units.html).
-3. [Create a company role](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-roles/create-company-roles.html).
+1. [Create a company](/docs/scos/user/back-office-user-guides/customer/manage-companies.html).
+2. [Create a company unit](/docs/scos/user/back-office-user-guides/customer/company-units/create-company-units.html).
+3. [Create a company role](/docs/scos/user/back-office-user-guides/customer/company-roles/create-company-roles.html).
 4. Review the [reference information](#reference-information-create-a-company-user) before you start, or look up the necessary information as you go through the process.
 
 ## Create a company user
@@ -57,7 +56,7 @@ This document describes how to create company users in the Back Office.
 | GENDER | Customer gender. |
 | DATE OF BIRTH | Date of birth. |
 | PHONE | Phone number. |
-| COMPANY  | A company to create this user for. To create one, see [Managing companies](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/manage-companies.html). |
-| BUSINESS UNIT | A company unit to to assign the user to. To create one, see [Create company units](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-units/create-company-units.html). |
+| COMPANY  | A company to create this user for. To create one, see [Managing companies](/docs/scos/user/back-office-user-guides/customer/manage-companies.html). |
+| BUSINESS UNIT | A company unit to to assign the user to. To create one, see [Create company units](/docs/scos/user/back-office-user-guides/customer/company-units/create-company-units.html). |
 | ASSIGNED ROLES  | Roles assigned to the user. |
 | UNASSIGNED ROLES | Roles that you can assign to the user. |

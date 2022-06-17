@@ -14,9 +14,7 @@ redirect_from:
   - /v5/docs/en/migration-guide-translator
   - /v5/docs/migration-guide-translator
   - /v5/docs/en/migration-guide-translator
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-translator.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-translator.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-translator.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-translator.html
 ---
 
 {% info_block errorBox %}

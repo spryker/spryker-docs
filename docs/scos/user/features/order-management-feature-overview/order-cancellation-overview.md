@@ -34,7 +34,7 @@ A customer can cancel orders on the **Order History** and **Order Details** page
 
 To learn how B2B and B2C shoppers can cancel orders on the Storefront, see [Order cancellation on the Storefront](#storefront).
 
-To learn how a Back Office user can cancel orders, see [Changing Order Statuses](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html).
+To learn how a Back Office user can cancel orders, see [Changing Order Statuses](/docs/scos/user/back-office-user-guides/sales/orders/changing-the-state-of-order-items.html).
 
 ## Timeframes and statuses
 
@@ -50,7 +50,7 @@ Ensure that, in your state machine, the *refunded* state always goes before the 
 
 {% endinfo_block %}
 
-To learn how a Back Office user can skip timeout or cancel an order by changing order statuses, see [Changing the state of order items](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html)
+To learn how a Back Office user can skip timeout or cancel an order by changing order statuses, see [Changing the state of order items](/docs/scos/user/back-office-user-guides/sales/orders/changing-the-state-of-order-items.html)
 
 <a name="storefront"></a>
 
@@ -63,10 +63,10 @@ This is how the Order Cancellation feature works on the Spryker Demo Shop Storef
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Changing the state of order items](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html)   |
+| [Changing the state of order items](/docs/scos/user/back-office-user-guides/sales/orders/changing-the-state-of-order-items.html)   |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Order Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/order-management-feature-walkthrough/order-management-feature-wakthrough.html) for developers.
+Are you a developer? See [Order Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/order-management-feature-walkthrough/order-management-feature-wakthrough.html) for developers.
 
 {% endinfo_block %}

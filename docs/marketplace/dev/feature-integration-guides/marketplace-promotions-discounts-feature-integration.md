@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 related:
   - title: Marketplace Promotions and Discounts feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-promotions-and-discounts-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-promotions-and-discounts-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Promotions & Discounts feature into a Spryker project.
@@ -20,16 +20,16 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | - | - | - |
-| Spryker Core                 | {{page.version}}   | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Marketplace Order Management | {{page.version}} | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html) |
-| Promotions & Discounts       | {{page.version}}   | [Promotions & Discounts feature integration](https://github.com/spryker-feature/promotions-discounts) |
+| Spryker Core                 | {{site.version}}   | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
+| Marketplace Order Management | {{site.version}} | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html) |
+| Promotions & Discounts       | {{site.version}}   | [Promotions & Discounts feature integration](https://github.com/spryker-feature/promotions-discounts) |
 
 ###  1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-promotions-discounts:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-promotions-discounts:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

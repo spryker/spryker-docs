@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/quick-order-packaging-units-feature-integration
   - /docs/quick-order-packaging-units-feature-integration
   - /docs/en/quick-order-packaging-units-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/quick-add-to-cart-packaging-units-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/quick-add-to-cart-packaging-units-feature-integration.html
 ---
 
 ## Install feature frontend
@@ -21,8 +21,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 |---|---|
-|Quick Order| {{page.version}} |
-|Packaging Units| {{page.version}} |
+|Quick Order| {{site.version}} |
+|Packaging Units| {{site.version}} |
 
 ### 1) Set up behavior
 

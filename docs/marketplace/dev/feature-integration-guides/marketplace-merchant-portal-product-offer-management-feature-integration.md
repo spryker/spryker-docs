@@ -4,10 +4,10 @@ last_updated: Sep 14, 2021
 description: This integration guide provides steps on how to integrate the Marketplace Merchant Portal Product Offer Management feature into a Spryker project.
 template: feature-integration-guide-template
 redirect_from:
-  - /docs/marketplace/dev/feature-integration-guides/202200.0/marketplace-merchant-portal-product-offer-management-feature-integration.html
+  - /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-product-offer-management-feature-integration.html
 related:
   - title: Marketplace Merchant Portal Product Offer Management feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Merchant Portal Product Offer Management feature into a Spryker project.
@@ -18,8 +18,8 @@ To start feature integration, integrate the required features:
 
 | NAME  | VERSION | INTEGRATION GUIDE |
 | --------------- | --------- | ------------|
-| Marketplace Product Offer        | {{page.version}}  | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)
-| Marketplace Merchant Portal Core | {{page.version}}  | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html)
+| Marketplace Product Offer        | {{site.version}}  | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html)
+| Marketplace Merchant Portal Core | {{site.version}}  | [Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-portal-core-feature-integration.html)
 
 
 ### 1) Install the required modules using Composer
@@ -27,7 +27,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-merchant-portal-product-offer-management:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-merchant-portal-product-offer-management:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -131,4 +131,4 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | --- | --- | --- |
-| Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management |  |[Merchant Portal - Marketplace Merchant Portal Product Offer Management + Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html) |
+| Merchant Portal - Marketplace Merchant Portal Product Offer Management + Merchant Portal Order Management |  |[Merchant Portal - Marketplace Merchant Portal Product Offer Management + Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-merchant-portal-product-offer-management-merchant-portal-order-management-feature-integration.html) |

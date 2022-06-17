@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/heidelpay-oms-workflow
   - /docs/heidelpay-oms-workflow
   - /docs/en/heidelpay-oms-workflow
-  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/heidelpay/heidelpay-oms-workflow.html
+  - /docs/scos/dev/technology-partner-guides/payment-partners/heidelpay/heidelpay-oms-workflow.html
 ---
 
 We use state machines for handling and managing orders and payments.

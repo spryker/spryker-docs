@@ -20,15 +20,15 @@ For the **Add to cart** icon to be active for the product on the **Catalog** pag
 
 * The product should be abstract with only one variant.
 * The product should be available.
-* The product should not have [attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html).
-* The product should not have [measurement](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) or [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units-feature-overview.html).
+* The product should not have [attributes](/docs/scos/user/features/product-feature-overview/product-attributes-overview.html).
+* The product should not have [measurement](/docs/scos/user/features/measurement-units-feature-overview.html) or [packaging units](/docs/scos/user/features/packaging-units-feature-overview.html).
 
-Product belonging to a [product group](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) can also be added to cart from the Category page. However, like with regular products, a product from the product group should have no more than one variant, and be available.
+Product belonging to a [product group](/docs/scos/user/features/product-feature-overview/product-feature-overview.html) can also be added to cart from the Category page. However, like with regular products, a product from the product group should have no more than one variant, and be available.
 
-If a product has [options](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html), it can be added to cart from the Category page, but it will be added without any options.
+If a product has [options](/docs/scos/user/features/product-options-feature-overview.html), it can be added to cart from the Category page, but it will be added without any options.
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Cart feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-feature-walkthrough.html) for developers.
+Are you a developer? See [Cart feature walkthrough](/docs/scos/dev/feature-walkthroughs/cart-feature-walkthrough/cart-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

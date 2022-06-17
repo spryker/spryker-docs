@@ -3,7 +3,7 @@ title: Edit company users
 description: Learn how to edit company users in the Back Office.
 template: back-office-user-guide-template
 redirect_from:
-  - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-users.html
+  - /docs/scos/user/back-office-user-guides/customer/company-account/managing-company-users.html
 ---
 
 This document describes how to edit company users.
@@ -33,7 +33,7 @@ Review the [reference information](#reference-information-edit-a-company-user) b
 
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
-| EMAIL | Email address that is used to log into the Storefront. You can define it only when [creating a company user](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/company-users/create-company-users.html). |
+| EMAIL | Email address that is used to log into the Storefront. You can define it only when [creating a company user](/docs/scos/user/back-office-user-guides/customer/company-users/create-company-users.html). |
 | SALUTATION | Formal salutation. |
 | FIRST NAME | First name. |
 | LAST NAME |  Last name. |

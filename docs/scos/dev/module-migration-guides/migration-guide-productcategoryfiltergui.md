@@ -11,7 +11,7 @@ redirect_from:
   - /docs/migration-guide-productcategoryfiltergui
   - /docs/en/migration-guide-productcategoryfiltergui
   - /upcoming-release/docs/migration-guide-productcategoryfiltergui
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productcategoryfiltergui.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-productcategoryfiltergui.html
 ---
 
 This document describes how to upgrade the `ProductCategoryFilterGui` module.

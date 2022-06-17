@@ -5,16 +5,16 @@ description: This document describes the product_offer_shopping_list.csv file to
 template: import-file-template
 related:
   - title: Marketplace Product Offer feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
   - title: Marketplace Shopping Lists feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-shopping-lists-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-shopping-lists-feature-walkthrough.html
   - title: Marketplace Product Offer feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-product-offer-feature-overview.html
   - title: Marketplace Shopping List feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-shopping-list-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-shopping-list-feature-overview.html
 ---
 
-This document describes the `product_offer_shopping_list.csv` file to configure [shopping lists with product offers](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-shopping-lists-feature-walkthrough.html) in your Spryker shop.
+This document describes the `product_offer_shopping_list.csv` file to configure [shopping lists with product offers](/docs/marketplace/dev/feature-walkthroughs/marketplace-shopping-lists-feature-walkthrough.html) in your Spryker shop.
 
 To import the file, run:
 
@@ -29,13 +29,13 @@ The file should have the following parameters:
 | PARAMETER   | REQUIRED? | TYPE  | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 |--------------|-----------|---------|---------------|------------|
 | shopping_list_item_key  | &check;   | String  | Unique  | Identifier of the shopping list item in the system. |
-| product_offer_reference | &check;   | String  |         | Identifier of the [product offer](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html) in the system. |
+| product_offer_reference | &check;   | String  |         | Identifier of the [product offer](/docs/marketplace/user/features/marketplace-product-offer-feature-overview.html) in the system. |
 
 ## Import file dependencies
 
 The file has the following dependencies:
 
-- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-offer.csv.html)
+- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/file-details-merchant-product-offer.csv.html)
 
 ## Import template file and content example
 

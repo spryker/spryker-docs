@@ -10,8 +10,7 @@ redirect_from:
   - /2021080/docs/en/sharing-company-user-carts
   - /docs/sharing-company-user-carts
   - /docs/en/sharing-company-user-carts
-  - /docs/scos/dev/glue-api-guides/201811.0/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
-  - /docs/scos/dev/glue-api-guides/201903.0/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
+  - /docs/scos/dev/glue-api-guides/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
 ---
 
 Company users can share their carts with other company users, so multiple representatives of a company can work on the same order. When sharing carts, users can choose what type of access they want to grant to different each other.
@@ -19,7 +18,7 @@ Company users can share their carts with other company users, so multiple repres
 This endpoint allows sharing carts with company users.
 
 ## Installation
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Shared Carts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shared-carts-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Shared Carts feature integration](/docs/scos/dev/feature-integration-guides/shared-carts-feature-integration.html).
 
 
 ## Share a cart
@@ -38,7 +37,7 @@ To share a cart, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Request sample: `POST https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-aefb-ac6c6bbadeab/shared-carts`
 
@@ -57,7 +56,7 @@ Request sample: `POST https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-ae
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | idCompanyUser | String | ✓ | Unique identifier of a company user to share the cart with.<br>The user must belong to the same company as the cart owner. |
-| idCartPermissionGroup | Integer | ✓ | Unique identifier of a cart permission group that defines the permissions of the company user for the cart. To get the full list of cart permission groups, [retrieve permission groups](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html#retrieve-cart-permission-groups). |
+| idCartPermissionGroup | Integer | ✓ | Unique identifier of a cart permission group that defines the permissions of the company user for the cart. To get the full list of cart permission groups, [retrieve permission groups](/docs/scos/dev/glue-api-guides/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html#retrieve-cart-permission-groups). |
 
 ### Response
 
@@ -105,4 +104,4 @@ Response sample:
 
 ## Next steps
 
-* [Manage shared company user carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/managing-shared-company-user-carts.html)
+* [Manage shared company user carts](/docs/scos/dev/glue-api-guides/managing-carts/sharing-company-user-carts/managing-shared-company-user-carts.html)

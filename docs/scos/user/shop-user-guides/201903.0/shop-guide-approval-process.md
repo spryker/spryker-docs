@@ -11,7 +11,7 @@ redirect_from:
 ---
 
 
-On this page you can find the instructions on managing the [Approval Process]/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html).
+On this page you can find the instructions on managing the [Approval Process]/docs/scos/user/features/approval-process-feature-overview.html).
 
 ## Creating the Approver / Buyer with Limit Roles
 

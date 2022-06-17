@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/category-image-feature-integration
 related:
   - title: Product image management
-    link: docs/scos/user/features/page.version/product-feature-overview/product-images-overview.html
+    link: docs/scos/user/features/product-feature-overview/product-images-overview.html
 ---
 
 ## Install feature core
@@ -23,15 +23,15 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 | --- | --- |
-| Category | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Category | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/category-image:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -418,15 +418,15 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 | --- | --- |
-| Category | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Category | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/category-image:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/category-image:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

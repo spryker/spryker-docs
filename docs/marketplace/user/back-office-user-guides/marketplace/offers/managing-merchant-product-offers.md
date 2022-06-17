@@ -5,10 +5,10 @@ description: This document describes how to view and manage merchant product off
 template: back-office-user-guide-template
 related:
   - title: Marketplace Product Offer feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-product-feature-overview.html
 ---
 
-This document describes how to view and manage [merchant product offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html) in the Back Office.
+This document describes how to view and manage [merchant product offers](/docs/marketplace/user/features/marketplace-product-offer-feature-overview.html) in the Back Office.
 
 ## Prerequisites
 
@@ -63,8 +63,8 @@ The following table describes the attributes on the **View Offer: _[Offer Refere
 | SECTION | ATTRIBUTE | DESCRIPTION |
 |-|-|-|
 | Offer | Reference | Unique identifier of the merchant product offer in the system. |
-|  | Status | Current status of the offer. Can be: <ul><li>waiting for approval</li><li>approved</li><li>denied</li></ul>For details about the statuses flow, see [Product offer status](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html#product-offer-status). |
-|  | Visibility | Visibility state of the offer. Can be <ul><li>active</li><li>inactive</li></ul>For details about the visibility flow, see [Product offer status](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html#product-offer-status). |
+|  | Status | Current status of the offer. Can be: <ul><li>waiting for approval</li><li>approved</li><li>denied</li></ul>For details about the statuses flow, see [Product offer status](/docs/marketplace/user/features/marketplace-product-offer-feature-overview.html#product-offer-status). |
+|  | Visibility | Visibility state of the offer. Can be <ul><li>active</li><li>inactive</li></ul>For details about the visibility flow, see [Product offer status](/docs/marketplace/user/features/marketplace-product-offer-feature-overview.html#product-offer-status). |
 |  | Stores | Stores for which the offer is assigned. |
 | Product | SKU | SKU of the product. |
 |  | Type | Type of the item. |
@@ -78,4 +78,4 @@ The following table describes the attributes on the **View Offer: _[Offer Refere
 
 ## Related articles
 
-[Merchant Product Offer feature overview](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html)
+[Merchant Product Offer feature overview](/docs/marketplace/user/features/marketplace-product-offer-feature-overview.html)

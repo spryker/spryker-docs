@@ -10,17 +10,17 @@ redirect_from:
   - /2021080/docs/en/viewing-refunds
   - /docs/viewing-refunds
   - /docs/en/viewing-refunds
-  - /docs/scos/user/back-office-user-guides/202200.0/sales/refunds/viewing-refunds.html
+  - /docs/scos/user/back-office-user-guides/sales/refunds/viewing-refunds.html
 related:
   - title: Refunds feature overview
-    link: docs/scos/user/features/page.version/refunds-feature-overview.html
+    link: docs/scos/user/features/refunds-feature-overview.html
 ---
 
 This document describes how to view refunds in the Back Office.
 
 To view refunds, go to **Sales&nbsp;<span aria-label="and then">></span> Refunds**.
 
-The **Refunds** page provides all the information about refunds. The refund items appear on this page when a Back Office user [changes the state of an item](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html) to **Refunded**. This usually happens when a customer returns an item or reports a faulty item.
+The **Refunds** page provides all the information about refunds. The refund items appear on this page when a Back Office user [changes the state of an item](/docs/scos/user/back-office-user-guides/sales/orders/changing-the-state-of-order-items.html) to **Refunded**. This usually happens when a customer returns an item or reports a faulty item.
 
 
 The following table describes attributes you see when viewing refunds.

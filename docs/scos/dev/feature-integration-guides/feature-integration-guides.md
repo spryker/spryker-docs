@@ -26,7 +26,7 @@ redirect_from:
   - /v1/docs/about-migration-integration
   - /v1/docs/en/about-migration-integration
   - /docs/scos/dev/migration-and-integration/about-migration-and-integration-guides.html
-  - /docs/scos/dev/feature-integration-guides/202200.0/feature-integration-guides.html
+  - /docs/scos/dev/feature-integration-guides/feature-integration-guides.html
 ---
 
 The integration guides provide step-by-step instructions on how to enable individual Spryker features for your project.

@@ -60,7 +60,7 @@ You can choose from the following options:
 
 * [B2B Demo Shop](/docs/scos/user/intro-to-spryker//b2b-suite.html) - a boilerplate for B2B commerce projects.
 * [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html) - a starting point for B2C implementations.
-* Separate [Features](/docs/scos/user/features/{{site.version}}/features.html) and modules - you can also expand both Demo Shops with separate features and modules.
+* Separate [Features](/docs/scos/user/features/features.html) and modules - you can also expand both Demo Shops with separate features and modules.
 
 ### Installing Spryker with Docker
 
@@ -72,7 +72,7 @@ To start developing your Spryker in Docker, see [Installing Spryker with Docker]
 
 #### Deploy file
 
-For the local environment, use the [deploy.dev.yml](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file/deploy-file.html) file.
+For the local environment, use the [deploy.dev.yml](https://archive.docs.spryker.com/docs/scos/dev/the-docker-sdk/202108.0/deploy-file/deploy-file.html) file.
 
 In the default deploy file, change the following attributes:
 
@@ -241,7 +241,7 @@ It is safe to disable cache indexing in the following files:
 ## 7. Debugging
 
 Before you start developing, set up and get to know your debugging environment. To learn how to configure debugging, see one of the following:
-* [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html)
+* [Configuring debugging in Docker](/docs/scos/dev/the-docker-sdk/configuring-debugging-in-docker.html)
 * [Configuring debugging in DevVM](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html)
 
 {% info_block infoBox %}

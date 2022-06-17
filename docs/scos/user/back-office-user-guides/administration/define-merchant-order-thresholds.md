@@ -10,21 +10,21 @@ redirect_from:
   - /2021080/docs/en/managing-merchant-order-thresholds
   - /docs/managing-merchant-order-thresholds
   - /docs/en/managing-merchant-order-thresholds
-  - /docs/scos/user/back-office-user-guides/202204.0/administration/thresholds/managing-merchant-order-thresholds.html
+  - /docs/scos/user/back-office-user-guides/administration/thresholds/managing-merchant-order-thresholds.html
 related:
   - title: Managing Global Thresholds
-    link: docs/scos/user/back-office-user-guides/page.version/administration/define-global-thresholds.html
+    link: docs/scos/user/back-office-user-guides/administration/define-global-thresholds.html
   - title: Managing Threshold Settings
-    link: docs/scos/user/back-office-user-guides/page.version/administration/manage-threshold-settings.html
+    link: docs/scos/user/back-office-user-guides/administration/manage-threshold-settings.html
 ---
 
-This doc describes how to manage [merchant order thresholds](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html#merchant-order-thresholds) in the Back Office.
+This doc describes how to manage [merchant order thresholds](/docs/scos/user/features/checkout-feature-overview/order-thresholds-overview.html#merchant-order-thresholds) in the Back Office.
 
 
 
 ## Prerequisites
 
-* [Create a merchant](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants/create-merchants.html).
+* [Create a merchant](/docs/scos/user/back-office-user-guides/marketplace/merchants/create-merchants.html).
 * Review the [reference information](#reference-information-define-merchant-order-thresholds) before you start, or look up the necessary information as you go through the process.
 
 To start working with merchant order thresholds, do the following:

@@ -17,8 +17,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ---------- | --------|
-| Spryker Core | {{page.version}}   | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
+| Spryker Core | {{site.version}}   | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
+| Marketplace Product Offer | {{site.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html) |
 
 ###  1) Install the required modules using Composer
 
@@ -66,7 +66,7 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION |
 | ------------ | -------- |
-| Spryker Core | {{page.version}} |
+| Spryker Core | {{site.version}} |
 
 ###  1) Install the required modules using Composer
 
@@ -301,5 +301,5 @@ Make sure that the following widgets were registered:
 
 | FEATURE                                          | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                                |
 |--------------------------------------------------|----------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Merchant Switcher + Customer Account Management  |                                  | [Merchant Switcher + Customer Account Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-customer-account-management-feature-integration.html)  |
-| Merchant Switcher + Wishlist                     |                                  | [ Merchant Switcher + Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-wishlist-feature-integration.html)                                       |
+| Merchant Switcher + Customer Account Management  |                                  | [Merchant Switcher + Customer Account Management feature integration](/docs/marketplace/dev/feature-integration-guides/merchant-switcher-customer-account-management-feature-integration.html)  |
+| Merchant Switcher + Wishlist                     |                                  | [ Merchant Switcher + Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/merchant-switcher-wishlist-feature-integration.html)                                       |

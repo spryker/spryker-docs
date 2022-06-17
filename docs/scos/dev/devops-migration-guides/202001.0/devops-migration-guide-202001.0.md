@@ -8,7 +8,7 @@ originalArticleId: 3c4e4250-b03b-4091-856c-675380c3145f
 redirect_from:
   - /v6/docs/devops-migration-guide
   - /v6/docs/en/devops-migration-guide
-  - /docs/scos/dev/devops-migraiton-guides/202001.0/devops-migration-guide-202001.0.html
+  - /docs/scos/dev/devops-migraiton-guides/devops-migration-guide-202001.0.html
 ---
 
 This document covers all the maintenance related details that a DevOps engineer would want to know to keep a Spryker project up to date with the latest release changes.

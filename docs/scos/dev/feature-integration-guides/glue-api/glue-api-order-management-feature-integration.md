@@ -9,15 +9,12 @@ redirect_from:
   - /2021080/docs/en/glue-api-order-management-feature-integration
   - /docs/glue-api-order-management-feature-integration
   - /docs/en/glue-api-order-management-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-order-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-order-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-order-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-order-management-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/glue-api/glue-api-order-management-feature-integration.html
 related:
   - title: Retrieving Customer's Order History
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
+    link: docs/scos/dev/glue-api-guides/managing-customers/retrieving-customer-orders.html
   - title: Checking Out Purchases and Getting Checkout Data
-    link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
+    link: docs/scos/dev/glue-api-guides/checking-out/checking-out-purchases.html
 ---
 
 Follow the steps below to install the Glue API: Order Management feature.
@@ -29,8 +26,8 @@ To start feature integration, overview and install the following features and Gl
 
 | NAME  | VERSION  | INTEGRATION GUIDE   |
 | ---------------- | ------- | --------------------------- |
-| Glue API: Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Order Management       | {{page.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |
+| Glue API: Spryker Core | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Order Management       | {{site.version}} | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/order-management-feature-integration.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -89,7 +86,7 @@ Activate the following plugins:
 
 {% info_block infoBox %}
 
-`OrdersResourceRoutePlugin` GET verb is a protected resource. For more details, see the `configure` function [Resource routing](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-routing).
+`OrdersResourceRoutePlugin` GET verb is a protected resource. For more details, see the `configure` function [Resource routing](/docs/scos/dev/glue-api-guides/glue-infrastructure.html#resource-routing).
 
 {% endinfo_block %}
 

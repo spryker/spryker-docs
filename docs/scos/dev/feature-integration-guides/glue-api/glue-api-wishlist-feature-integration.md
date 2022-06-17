@@ -10,11 +10,11 @@ redirect_from:
   - /2021080/docs/en/glue-api-wishlist-feature-integration
   - /docs/glue-api-wishlist-feature-integration
   - /docs/en/glue-api-wishlist-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-wishlist-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/glue-api/glue-api-wishlist-feature-integration.html
   - /docs/scos/dev/feature-integration-guides//glue-api/glue-api-wishlist-feature-integration.html
 related:
   - title: Managing Wishlists
-    link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html
+    link: docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html
 ---
 
 Follow the steps below to install Wishlist feature API.
@@ -25,9 +25,9 @@ To start feature integration, overview and install the necessary features:
 
 |NAME|VERSION|INTEGRATION GUIDE|
 |---|---|---|
-| Spryker Core| {{page.version}} |[Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html)|
-|Product| {{page.version}} |[Product API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)|
-|Wishlist| {{page.version}} | |
+| Spryker Core| {{site.version}} |[Glue Application feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-glue-application-feature-integration.html)|
+|Product| {{site.version}} |[Product API feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html)|
+|Wishlist| {{site.version}} | |
 
 ### 1) Install the required modules using Composer
 

@@ -3,23 +3,20 @@ title: Inventory Management feature integration
 description: The guide guides you through the process of installing the Warehouse Management functionality into your project.
 last_updated: Jun 17, 2021
 template: feature-integration-guide-template
-originalLink: /docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html-feature-integration
+originalLink: /docs/scos/user/features/inventory-management-feature-overview.html-feature-integration
 originalArticleId: cb79eb0c-0a3a-49c5-a911-ef6f992f1118
 redirect_from:
   - /2021080/docs/inventory-management-feature-integration
   - /2021080/docs/en/inventory-management-feature-integration
   - /docs/inventory-management-feature-integration
   - /docs/en/inventory-management-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/inventory-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201903.0/inventory-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201907.0/inventory-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202200.0/inventory-management-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/inventory-management-feature-integration.html
 related:
   - title: Inventory Management feature overview
-    link: docs/scos/user/features/page.version/inventory-management-feature-overview.html
+    link: docs/scos/user/features/inventory-management-feature-overview.html
 ---
 
-This document describes how to ingrate the [Inventory Management](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) feature into a Spryker project.
+This document describes how to ingrate the [Inventory Management](/docs/scos/user/features/inventory-management-feature-overview.html) feature into a Spryker project.
 
 {% info_block errorBox %}
 
@@ -27,9 +24,9 @@ The following feature integration guide expects the basic feature to be in place
 
 The current feature integration guide adds the following functionality:
 
-* [Warehouse Management](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html)
-* [Add to cart from catalog page](/docs/scos/user/features/{{page.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
-* [Warehouse address](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html#defining-a-warehouse-address)
+* [Warehouse Management](/docs/scos/user/features/inventory-management-feature-overview.html)
+* [Add to cart from catalog page](/docs/scos/user/features/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)
+* [Warehouse address](/docs/scos/user/features/inventory-management-feature-overview.html#defining-a-warehouse-address)
 
 {% endinfo_block %}
 
@@ -45,14 +42,14 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker-feature/inventory-management:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/inventory-management:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -559,5 +556,5 @@ Make sure that the warehouse address management works:
 
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |--- | --- | --- |
-| Inventory Management API | | [Glue API: Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-inventory-management-feature-integration.html) |
-| Alternative Products | | [Alternative Products + Inventory Management feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-inventory-management-feature-integration.html)|
+| Inventory Management API | | [Glue API: Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-inventory-management-feature-integration.html) |
+| Alternative Products | | [Alternative Products + Inventory Management feature integration - ongoing](/docs/scos/dev/feature-integration-guides/alternative-products-inventory-management-feature-integration.html)|

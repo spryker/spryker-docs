@@ -8,7 +8,7 @@ originalArticleId: 3d9e1865-ebab-43fb-addb-6bed0f997f3d
 redirect_from:
   - /v3/docs/shop-guide-shopping-carts
   - /v3/docs/en/shop-guide-shopping-carts
-  - /docs/scos/user/shop-user-guides/201907.0/shopping-carts/shopping-carts.html
+  - /docs/scos/user/shop-user-guides/shopping-carts/shopping-carts.html
 ---
 
 Shopping Carts page allows you to check the carts in your account and manage them.

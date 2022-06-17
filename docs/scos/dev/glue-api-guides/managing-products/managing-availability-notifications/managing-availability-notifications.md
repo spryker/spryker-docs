@@ -10,9 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-availability-notifications
   - /docs/managing-availability-notifications
   - /docs/en/managing-availability-notifications
-  - /docs/scos/dev/glue-api-guides/201907.0/managing-products/managing-availability-notifications/managing-availability-notifications.html
-  - /docs/scos/dev/glue-api-guides/201903.0/managing-products/managing-availability-notifications/managing-availability-notifications.html
-  - /docs/scos/dev/glue-api-guides/202005.0/managing-products/managing-availability-notifications/managing-availability-notifications.html
+  - /docs/scos/dev/glue-api-guides/managing-products/managing-availability-notifications/managing-availability-notifications.html
 ---
 
 *Availability Notification* allows registered and guest customers to subscribe to availability notifications for an unavailable product so that when the product is back in stock, they could receive a notification.
@@ -21,7 +19,7 @@ This endpoint allows managing availability notifications of registered and guest
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue: Availability Notification feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-availability-notification-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue: Availability Notification feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-availability-notification-feature-integration.html).
 
 ## Subscribe to availability notifications
 
@@ -119,4 +117,4 @@ If a customer’s subscription is deleted successfully, the endpoint returns the
 | 4603 | Subscription doesn’t exist. |
 | 4606 | Request is not authorized. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

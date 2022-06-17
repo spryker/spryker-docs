@@ -12,8 +12,7 @@ redirect_from:
   - /docs/en/migration-guide-salesmerchantconnector
   - /v6/docs/migration-guide-salesmerchantconnector
   - /v6/docs/en/migration-guide-salesmerchantconnector
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-salesmerchantconnector.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-salesmerchantconnector.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-salesmerchantconnector.html
 ---
 
 `SalesMerchantConnector` is deprecated. For a plugin expanding order items with the parameters, use the SalesOms module.

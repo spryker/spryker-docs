@@ -4,7 +4,7 @@ description: Manage the returns via Glue API in the Spryker Marketplace.
 template: glue-api-storefront-guide-template
 related:
   - title: Retrieving Marketplace orders
-    link: docs/marketplace/dev/glue-api-guides/page.version/retrieving-marketplace-orders.html
+    link: docs/marketplace/dev/glue-api-guides/retrieving-marketplace-orders.html
 ---
 
 The Return Management API lets developers retrieve return information and create returns. The list of retrievable information includes:
@@ -22,7 +22,7 @@ Specify reasons for returning the sales order items.
 
 ## Installation
 
-For details about the modules that provide the API functionality and how to install them, [see Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-return-management-feature-integration.html).
+For details about the modules that provide the API functionality and how to install them, [see Glue API: Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-return-management-feature-integration.html).
 
 ## Create a return
 
@@ -37,7 +37,7 @@ To create a return for a registered user, send the Request sample:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |---|---|---|---|
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 |---|---|---|
@@ -193,7 +193,7 @@ To create a return for a registered user, send the Request sample:
 | return-items | reason | String | Predefined reason why the return was created. |
 | return-items | orderItemUuid | String | Unique identifier of the order item. |
 
-For the attributes of the included resources, see [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html).
+For the attributes of the included resources, see [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/retrieving-marketplace-orders.html).
 
 ## Retrieve returns
 
@@ -207,7 +207,7 @@ To retrieve returns, send the Request sample:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |---|---|---|---|
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 |---|---|---|
@@ -551,8 +551,8 @@ To retrieve returns, send the Request sample:
 | return-items | orderItemUuid | String | Unique identifier of the order item. |
 
 For the attributes of the other other included resources, see the following:
-* [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html)
-* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html)
+* [Retrieving marketplace orders](/docs/marketplace/dev/glue-api-guides/retrieving-marketplace-orders.html)
+* [Retrieving merchants](/docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchants.html)
 
 ## Retrieve a return
 
@@ -570,7 +570,7 @@ To retrieve a return, send the Request sample:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 |---|---|---|---|
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html). |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html). |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 |---|---|---|

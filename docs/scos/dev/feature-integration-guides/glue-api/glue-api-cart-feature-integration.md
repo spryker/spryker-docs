@@ -10,12 +10,10 @@ redirect_from:
   - /2021080/docs/en/glue-api-cart-feature-integration
   - /docs/glue-api-cart-feature-integration
   - /docs/en/glue-api-cart-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-cart-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-cart-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-cart-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html
 related:
   - title: Managing Guest Carts
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
+    link: docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-guest-carts.html
 ---
 
 This document describes how to integrate the Glue API - Cart feature into a Spryker project.
@@ -26,9 +24,9 @@ To start feature integration, overview and install the following features and Gl
 
 | NAME   | VERSION | INTEGRATION GUIDE     |
 | ------------------- | ------ | ------------------------ |
-| Glue API: Spryker Core | {{page.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
-| Glue API: Product      | {{page.version}}  | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
-| Cart                   | {{page.version}}  | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |
+| Glue API: Spryker Core | {{site.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-spryker-core-feature-integration.html) |
+| Glue API: Product      | {{site.version}}  | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html) |
+| Cart                   | {{site.version}}  | [Cart feature integration](/docs/scos/dev/feature-integration-guides/cart-feature-integration.html) |
 
 
 ## 1) Install the required modules using Composer
@@ -305,9 +303,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 Ensure that the `https://glue.mysprykershop.com/carts` endpoint is available:
 
-1. [Create one or more carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart).
+1. [Create one or more carts](/docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart).
 2. Send the request: `GET https://glue.mysprykershop.com/carts/`.
-3. Check that the response contains the list of carts of the customer you are [authenticated](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html) with.
+3. Check that the response contains the list of carts of the customer you are [authenticated](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html) with.
 
 {% endinfo_block %}
 
@@ -317,7 +315,7 @@ Ensure that the `https://glue.mysprykershop.com/carts` endpoint is available:
 
 Ensure that the `https://glue.mysprykershop.com/guest-carts` endpoint is available:
 
-1. [Create a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart).
+1. [Create a guest cart](/docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-guest-carts.html#create-a-guest-cart).
 2 Send the request: `GET https://glue.mysprykershop.com/carts/`.
 3. Check that the response contains the cart you have created.
 
@@ -329,7 +327,7 @@ Ensure that the `https://glue.mysprykershop.com/guest-carts` endpoint is availab
 
 Ensure that the `items` resource relationships is registered as a relationship of the `carts` resource:
 
-1. [Add one or more items to cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
+1. [Add one or more items to cart](/docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
 2. Send the request: `GET https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=items`.
 3. Check that the response contains the relationships to the `items` resource.
 
@@ -342,7 +340,7 @@ Ensure that the `items` resource relationships is registered as a relationship o
 
 Ensure that the `guest-cart-items` resource relationship is registered as a relationship of the `guest-carts` resource:
 
-1. [Add one or more items to cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart).
+1. [Add one or more items to cart](/docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart).
 2 Send the request: `GET https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/?include=guest-cart-items`.
 3. Check that the response contains the relationships to the `guest-cart-items` resource.
 

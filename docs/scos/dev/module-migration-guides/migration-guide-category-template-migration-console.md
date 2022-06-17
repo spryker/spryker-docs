@@ -21,13 +21,7 @@ redirect_from:
   - /v5/docs/en/mg-category-template-console
   - /v6/docs/mg-category-template-console
   - /v6/docs/en/mg-category-template-console
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-category-template-migration-console.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-category-template-migration-console.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-category-template-migration-console.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-category-template-migration-console.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-category-template-migration-console.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-category-template-migration-console.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-category-template-migration-console.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-category-template-migration-console.html
 ---
 
 ## Category template migration script

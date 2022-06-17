@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/file-details-product-pricecsv
 ---
 
-This article contains content of the `product_price.csv` file to configure [prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.
+This article contains content of the `product_price.csv` file to configure [prices](/docs/scos/user/features/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -39,8 +39,8 @@ The file should have the following parameters:
 
 This file has the following dependencies:
 
-* [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
-* [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
+* [product_abstract.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+* [product_concrete.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html)
 * *stores.php* configuration file of the Demo Shop PHP project
 
 ## Import template file and content example

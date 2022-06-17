@@ -9,10 +9,10 @@ redirect_from:
   - /2021080/docs/en/file-details-cms-blockcsv
   - /docs/file-details-cms-blockcsv
   - /docs/en/file-details-cms-blockcsv
-  - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-cms-block.csv.html
+  - /docs/scos/dev/data-import/data-import-categories/content-management/file-details-cms-block.csv.html
 ---
 
-This document describes the `cms_block.csv` file to configure [CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html) information on your Spryker Demo Shop.
+This document describes the `cms_block.csv` file to configure [CMS Block](/docs/scos/user/features/cms-feature-overview/cms-blocks-overview.html) information on your Spryker Demo Shop.
 
 To import the file, run:
 

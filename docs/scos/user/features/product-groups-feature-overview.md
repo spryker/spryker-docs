@@ -10,10 +10,10 @@ redirect_from:
   - /2021080/docs/en/product-groups-feature-overview
   - /docs/product-groups-feature-overview
   - /docs/en/product-groups-feature-overview
-  - /docs/scos/user/features/202200.0/product-groups-feature-overview.html
+  - /docs/scos/user/features/product-groups-feature-overview.html
 ---
 
-The *Product Groups* feature allows product catalog managers to group products by attributes, like color or size. A typical use case is combining the same product in different colors into a product group (not to be confused with [product variant](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html)). The feature changes the way shop users interact with products by improving accessibility and navigation.
+The *Product Groups* feature allows product catalog managers to group products by attributes, like color or size. A typical use case is combining the same product in different colors into a product group (not to be confused with [product variant](/docs/scos/user/features/product-feature-overview/product-feature-overview.html)). The feature changes the way shop users interact with products by improving accessibility and navigation.
 
 ## Product groups on the Storefront
 
@@ -48,11 +48,11 @@ Product abstract card:
 
 In the Back Office, a product catalog manager can view what product group an abstract product belongs to.
 
-Also, they can insert product groups into CMS pages via content widgets in the [WYSIWYG editor](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item-widget).
+Also, they can insert product groups into CMS pages via content widgets in the [WYSIWYG editor](/docs/scos/user/features/content-items-feature-overview.html#content-item-widget).
 
 ## Creating product groups
 
-Only a developer can create product groups by [importing them](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html) or modifying the database. Only abstract products can be added to product groups.
+Only a developer can create product groups by [importing them](/docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-group.csv.html) or modifying the database. Only abstract products can be added to product groups.
 
 
 ## Current constraints
@@ -71,6 +71,6 @@ Check out this video tutorial on product groups:
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Product Groups feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-groups-feature-walkthrough.html) for developers.
+Are you a developer? See [Product Groups feature walkthrough](/docs/scos/dev/feature-walkthroughs/product-groups-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

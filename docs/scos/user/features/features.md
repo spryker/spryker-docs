@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/overview-of-the-feature-guides
   - /docs/overview-of-the-feature-guides
   - /docs/en/overview-of-the-feature-guides
-  - /docs/scos/user/features/202200.0/features.html
+  - /docs/scos/user/features/features.html
 ---
 
 The feature guides describe features in details, highlight their functional abilities, business values, and use-case examples. This information might be useful for:
@@ -27,11 +27,11 @@ In the feature documentation, you will find the following information:
 
 {% info_block infoBox "Reference documentation" %}
 
-The documentation in the **Features** section provides reference information that should not be used as guidelines. If you want to learn how to use or install a feature, you can find all the guides related to a feature on its summary page, like [Content items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html).
+The documentation in the **Features** section provides reference information that should not be used as guidelines. If you want to learn how to use or install a feature, you can find all the guides related to a feature on its summary page, like [Content items](/docs/scos/user/features/content-items-feature-overview.html).
 
 Or, you can go directly to the following guides:
 
-* [Back Office user guide](/docs/scos/user/back-office-user-guides/{{page.version}}/about-back-office-user-guides.html): for step-by-step guides on how to work with the features in the Back Office.
-* [Feature integration guides](/docs/scos/dev/feature-integration-guides/{{page.version}}/feature-integration-guides.html): for developer guides on how to integrate a feature into a Spryker project.
+* [Back Office user guide](/docs/scos/user/back-office-user-guides/about-back-office-user-guides.html): for step-by-step guides on how to work with the features in the Back Office.
+* [Feature integration guides](/docs/scos/dev/feature-integration-guides/feature-integration-guides.html): for developer guides on how to integrate a feature into a Spryker project.
 
 {% endinfo_block %}

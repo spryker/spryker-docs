@@ -10,15 +10,15 @@ redirect_from:
   - /2021080/docs/en/retrieving-alternative-products
   - /docs/retrieving-alternative-products
   - /docs/en/retrieving-alternative-products
-  - /docs/scos/dev/glue-api-guides/201811.0/retrieving-alternative-products.html
+  - /docs/scos/dev/glue-api-guides/retrieving-alternative-products.html
 related:
   - title: Retrieving Related Products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-related-products.html
+    link: docs/scos/dev/glue-api-guides/managing-products/retrieving-related-products.html
   - title: Alternative Products Feature Overview
-    link: docs/scos/user/features/page.version/alternative-products-feature-overview.html
+    link: docs/scos/user/features/alternative-products-feature-overview.html
 ---
 
-The _Alternative Products_ feature allows customers to find a substitute for a product that runs out of stock or is no longer available for other reasons. The feature is particularly useful when a certain product becomes discontinued. In this case, customers usually look for an up-to-date generation of the same product, and suggesting possible alternatives is crucial. For more details, see [Alternative Products](/docs/scos/user/features/{{page.version}}/alternative-products-feature-overview.html) and [Discontinued Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/discontinued-products-overview.html).
+The _Alternative Products_ feature allows customers to find a substitute for a product that runs out of stock or is no longer available for other reasons. The feature is particularly useful when a certain product becomes discontinued. In this case, customers usually look for an up-to-date generation of the same product, and suggesting possible alternatives is crucial. For more details, see [Alternative Products](/docs/scos/user/features/alternative-products-feature-overview.html) and [Discontinued Products](/docs/scos/user/features/product-feature-overview/discontinued-products-overview.html).
 
 The Product Alternatives API provides access to alternative products via REST API requests. In particular, you can:
 * Find out whether a concrete product is discontinued.
@@ -32,12 +32,12 @@ In your development, the endpoints help to:
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Alternative products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-alternative-products-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Alternative products feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-alternative-products-feature-integration.html).
 
 
 ## Check if a product is discontinued
 
-Before suggesting an alternative product, check if a product is discontinued by [retrieving a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product).
+Before suggesting an alternative product, check if a product is discontinued by [retrieving a concrete product](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product).
 
 {% info_block infoBox %}
 
@@ -372,4 +372,4 @@ To retrieve concrete alternative products, send the request:
 | 312 | Concrete product is ID not specified. |
 
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

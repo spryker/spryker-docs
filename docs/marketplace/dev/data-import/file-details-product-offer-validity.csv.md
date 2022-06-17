@@ -5,9 +5,9 @@ description: This document describes the product_offer_validity.csv file to conf
 template: import-file-template
 related:
   - title: Marketplace Product Offer feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
   - title: Marketplace Product Offer feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-product-offer-feature-overview.html
 ---
 
 This document describes the `product_offer_validity.csv` file to configure product offer validity dates in your Spryker shop.
@@ -24,7 +24,7 @@ The file should have the following parameters:
 
 | PARAMETER | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | ---------- | ---------- | ------- | ------------- | ------------------ | ------------- |
-| product_offer_reference | &check;             | String   |                   | Unique                       | Identifier of the [merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) in the system. |
+| product_offer_reference | &check;             | String   |                   | Unique                       | Identifier of the [merchant product offer](/docs/marketplace/user/features/marketplace-product-offer-feature-overview.html) in the system. |
 | valid_from              |               | Datetime |                   |                              | Date and time from which the offer is active.                |
 | valid_to                |               | Datetime |                   |                              | Date and time till which the offer is active.                |
 
@@ -32,7 +32,7 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant-product-offer.csv.html)
+- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/file-details-merchant-product-offer.csv.html)
 
 ## Import template file and content example
 

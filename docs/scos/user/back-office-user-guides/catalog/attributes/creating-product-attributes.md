@@ -10,10 +10,10 @@ redirect_from:
   - /2021080/docs/en/creating-product-attributes
   - /docs/creating-product-attributes
   - /docs/en/creating-product-attributes
-  - /docs/scos/user/back-office-user-guides/202200.0/catalog/attributes/creating-product-attributes.html
+  - /docs/scos/user/back-office-user-guides/catalog/attributes/creating-product-attributes.html
 related:
   - title: Product Attributes
-    link: docs/scos/user/features/page.version/product-feature-overview/product-attributes-overview.html
+    link: docs/scos/user/features/product-feature-overview/product-attributes-overview.html
 ---
 
 This document describes how to create product attributes.
@@ -92,4 +92,4 @@ In the online store, the descriptive attributes are displayed on the product det
 ![Descriptive attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Attributes/Attributes:+Reference+Information/descriptive-attributes.png)
 
 ## Next steps
-* Learn how to [manage the product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html).
+* Learn how to [manage the product attributes](/docs/scos/user/back-office-user-guides/catalog/attributes/managing-product-attributes.html).

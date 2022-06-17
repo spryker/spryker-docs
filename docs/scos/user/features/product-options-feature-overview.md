@@ -14,9 +14,8 @@ redirect_from:
   - /2021080/docs/en/product-options
   - /docs/product-options
   - /docs/en/product-options
-  - /docs/scos/user/shop-user-guides/201811.0/shop-guide-managing-products.html
-  - /docs/scos/user/shop-user-guides/201903.0/shop-guide-managing-products.html
-  - /docs/scos/user/features/202200.0/product-options-feature-overview.html
+  - /docs/scos/user/shop-user-guides/shop-guide-managing-products.html
+  - /docs/scos/user/features/product-options-feature-overview.html
 ---
 
 The *Product Options* feature lets a Back Office user create and assign product options to abstract products. Product options are product additions that a customer can select on the product detail page before adding the product to the cart. For example, the product options can be gift wrappings for products, insurance, or warranty. Product options do not have stock, but a SKU linked to product abstracts. Thus, you cannot purchase them without buying a corresponding product.
@@ -43,7 +42,7 @@ In the Back Office, you can perform the following actions on product options:
 * Assign product option groups to products.
 * Activate product options to make them visible in the Storefront.
 
-To learn more about how to work with product options in the Back Office, see [Creating a Product Option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html#creating-a-product-option) and [Managing Product Options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/managing-product-options.html).
+To learn more about how to work with product options in the Back Office, see [Creating a Product Option](/docs/scos/user/back-office-user-guides/catalog/product-options/creating-product-options.html#creating-a-product-option) and [Managing Product Options](/docs/scos/user/back-office-user-guides/catalog/product-options/managing-product-options.html).
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product-option-back-office.png)
 
@@ -81,11 +80,11 @@ The feature has the following functional constraints which are going to be resol
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a product option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html)  |
-| [Manage product options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/managing-product-options.html)  |
+| [Create a product option](/docs/scos/user/back-office-user-guides/catalog/product-options/creating-product-options.html)  |
+| [Manage product options](/docs/scos/user/back-office-user-guides/catalog/product-options/managing-product-options.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Product Options feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-options-feature-walkthrough.html) for developers.
+Are you a developer? See [Product Options feature walkthrough](/docs/scos/dev/feature-walkthroughs/product-options-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

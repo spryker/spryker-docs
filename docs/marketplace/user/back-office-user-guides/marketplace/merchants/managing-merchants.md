@@ -5,9 +5,9 @@ description: This guide explains how to create and manage merchant records on th
 template: back-office-user-guide-template
 related:
   - title: Managing merchant users
-    link: docs/marketplace/user/back-office-user-guides/page.version/marketplace/merchants/managing-merchant-users.html
+    link: docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchant-users.html
   - title: Marketplace Merchant feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
 ---
 
 On the **Merchants** page, you can manage the merchants' records and facilitate the merchant registration and approval process, as well as apply any changes to the existing merchants' records. This document describes the procedures of creating and managing merchant records.
@@ -46,7 +46,7 @@ This tab contains the main merchant information.
 | Is Active | Checkbox that gets the merchant profile page on the Storefront online once checked. |  |
 | Store Relation | List of stores where the merchant is present. |  |
 | Merchant URL | Text field where, during editing, you can update the URL that is used to access the merchant profile. The profile URL is specified per locale. | &check; |
-| Warehouses | Name of the Warehouse assigned to the merchant. For more details about the warehouses, see [Merchant Warehouse](/docs/marketplace/user/features/{{page.version}}/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). |  |
+| Warehouses | Name of the Warehouse assigned to the merchant. For more details about the warehouses, see [Merchant Warehouse](/docs/marketplace/user/features/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). |  |
 
 #### Contact Person Details tab
 
@@ -95,7 +95,7 @@ This tab contains legal information that is displayed on the **Merchant Profile*
 
 #### Users tab
 
-This tab contains information about creating and editing [merchant users](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) for the merchant.
+This tab contains information about creating and editing [merchant users](/docs/marketplace/user/features/marketplace-merchant-feature-overview/merchant-users-overview.html) for the merchant.
 
 {% info_block infoBox "Info" %}
 
@@ -121,8 +121,8 @@ On the **Overview of Merchants** page, you see a table with all the merchants. T
 
 * Merchant ID
 * Merchant Name
-* Approval status. For more details about the statuses a merchant profile may have, check the [merchant statuses](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) section.
-* Status (active/inactive). For more details about the statuses a merchant profile may have, check the [merchant statuses](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) section.
+* Approval status. For more details about the statuses a merchant profile may have, check the [merchant statuses](/docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) section.
+* Status (active/inactive). For more details about the statuses a merchant profile may have, check the [merchant statuses](/docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) section.
 * Stores
 * Actions
 
@@ -146,7 +146,7 @@ This tab contains the main merchant information.
 | Is Active | Checkbox that gets the merchant profile page on the Storefront online once checked. |  |
 | Store Relation | List of stores where the merchant is present. |  |
 | Merchant URL | Text field where, during editing, you can update the URL that is used to access the merchant profile. The profile URL is specified per locale. | &check; |
-| Warehouses | Name of the Warehouse assigned to the merchant. For more details about the warehouses, see [Merchant Warehouse](/docs/marketplace/user/features/{{page.version}}/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). |  |
+| Warehouses | Name of the Warehouse assigned to the merchant. For more details about the warehouses, see [Merchant Warehouse](/docs/marketplace/user/features/marketplace-inventory-management-feature-overview.html#marketplace-warehouse-management). |  |
 
 #### Contact Person Details tab
 
@@ -195,7 +195,7 @@ This tab contains legal information that is displayed on the **Merchant Profile*
 
 #### Users tab
 
-This tab contains information about creating and editing [merchant users](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) for the merchant.
+This tab contains information about creating and editing [merchant users](/docs/marketplace/user/features/marketplace-merchant-feature-overview/merchant-users-overview.html) for the merchant.
 
 {% info_block infoBox "Info" %}
 
@@ -205,7 +205,7 @@ To restrict access to the Merchant Portal, on the **Merchants** page, in **Actio
 
 ## Approving and denying merchants
 
-Merchant approval is the process when a Marketplace administrator changes the status of the merchant record according to the flow described in the [Merchant statuses](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) section. After the initial merchant registration, the status is always set to **Waiting for Approval** and is subject to change by a Marketplace administrator after their review. To approve the merchant, click **Approve Access** in the **Actions** column of the **Merchants** page.
+Merchant approval is the process when a Marketplace administrator changes the status of the merchant record according to the flow described in the [Merchant statuses](/docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) section. After the initial merchant registration, the status is always set to **Waiting for Approval** and is subject to change by a Marketplace administrator after their review. To approve the merchant, click **Approve Access** in the **Actions** column of the **Merchants** page.
 
 {% info_block infoBox "Info" %}
 
@@ -237,4 +237,4 @@ You can not delete merchants, you can only deactivate them.
 
 Once you have the merchant record available in the system, you can proceed with creating a merchant user to log in to the Merchant Portal.
 
-To know how to create those, see the [Managing merchant users](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html).
+To know how to create those, see the [Managing merchant users](/docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchant-users.html).

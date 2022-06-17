@@ -22,7 +22,7 @@ related:
 |**Node.js**| Version >= 12.0.0 |
 |**Yarn**| Version >= 2.0.0 && <= 2.3.x |
 |**Intranet**| Back Office application (Zed) must be secured in an Intranet (using VPN, Basic Auth, IP Allowlist, DMZ) |
-| **Spryker Commerce OS**| Version >= {{page.version}} |
+| **Spryker Commerce OS**| Version >= {{site.version}} |
 
 ### Supported browsers
 

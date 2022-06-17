@@ -9,10 +9,7 @@ redirect_from:
   - /2021080/docs/en/retrieving-bundled-products
   - /docs/retrieving-bundled-products
   - /docs/en/retrieving-bundled-products
-  - /docs/scos/dev/glue-api-guides/201811.0/managing-products/retrieving-bundled-products.html
-  - /docs/scos/dev/glue-api-guides/201903.0/managing-products/retrieving-bundled-products.html
-  - /docs/scos/dev/glue-api-guides/201907.0/managing-products/retrieving-bundled-products.html
-  - /docs/scos/dev/glue-api-guides/202200.0/managing-products/retrieving-bundled-products.html
+  - /docs/scos/dev/glue-api-guides/managing-products/retrieving-bundled-products.html
 ---
 
 This endpoint allows retrieving the products that belong to a bundle.
@@ -21,10 +18,10 @@ This endpoint allows retrieving the products that belong to a bundle.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundles-feature-integration.html)
-* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Glue API: Cart feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
-* [Glue API: Product Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundle-cart-feature-integration.html)
+* [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-bundles-feature-integration.html)
+* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-feature-integration.html)
+* [Glue API: Cart feature integration - ongoing](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html)
+* [Glue API: Product Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-bundle-cart-feature-integration.html)
 
 ## Retrieve bundled products
 
@@ -797,8 +794,8 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 
 For the attributes of the included resources, see:
 
-* [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
-* [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#abstract-products-response-attributes)
+* [Retrieving concrete products](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
+* [Retrieving abstract products](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-products.html#abstract-products-response-attributes)
 
 ## Possible errors
 
@@ -807,12 +804,12 @@ For the attributes of the included resources, see:
 | 302 | Concrete product is not found. |
 | 312 | Concrete product is ID not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).
 
 ## Other management options
 
 You can also manage the `bundled-products` resource as follows:
-* [Retrieve bundled products of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
-* [Retrieve bundled products of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html)
-* [Manage bundled products in carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
-* [Manage bundled products in guest carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart)
+* [Retrieve bundled products of a concrete product](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
+* [Retrieve bundled products of an abstract product](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-products.html)
+* [Manage bundled products in carts of registered users](/docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart)
+* [Manage bundled products in guest carts](/docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart)

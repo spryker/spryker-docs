@@ -10,24 +10,23 @@ redirect_from:
   - /2021080/docs/en/retrieving-company-users
   - /docs/retrieving-company-users
   - /docs/en/retrieving-company-users
-  - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-company-users.html
-  - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-company-users.html
+  - /docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-company-users.html
 related:
   - title: Logging In as Company User
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
+    link: docs/scos/dev/glue-api-guides/managing-b2b-account/authenticating-as-a-company-user.html
   - title: Retrieving Company Information
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-companies.html
+    link: docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-companies.html
   - title: Retrieving Company Role Information
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
+    link: docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-company-roles.html
   - title: Company Account and General Organizational Structure
-    link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
+    link: docs/scos/user/features/company-account-feature-overview/company-accounts-overview.html
 ---
 
 This endpoint allows retrieving information about company users.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Company Account feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-company-account-feature-integration.html).
 
 ## Retrieve company users
 
@@ -41,7 +40,7 @@ To retrieve all the company users that belong to the company of the authenticate
 
 | HEADER KEY | REQUIRED | DESCRIPTION |
 | --- | --- | --- |
-| Authorization | &check; | Alphanumeric string that authorizes the company user to send requests to protected resources. Get it by [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).  |
+| Authorization | &check; | Alphanumeric string that authorizes the company user to send requests to protected resources. Get it by [authenticating as a company user](/docs/scos/dev/glue-api-guides/managing-b2b-account/authenticating-as-a-company-user.html).  |
 
 Request sample: retrieve company users
 
@@ -128,7 +127,7 @@ To retrieve information about a company user, send the request:
 
 | HEADER KEY | REQUIRED | DESCRIPTION |
 | --- | --- | --- |
-| Authorization | &check; | Alphanumeric string that authorizes the company user to send requests to protected resources. Get it by [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html).  |
+| Authorization | &check; | Alphanumeric string that authorizes the company user to send requests to protected resources. Get it by [authenticating as a company user](/docs/scos/dev/glue-api-guides/managing-b2b-account/authenticating-as-a-company-user.html).  |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
@@ -361,12 +360,12 @@ To retrieve information about a company user, send the request:
 | 1403 | Current company account is not set. Select the current company user with `/company-user-access-tokens` to access the resource collection. |
 | 1404 | Specified company user is not found or does not have permissions to view the account. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).
 
 ##  Next steps
 
-* [Retrieve companies](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-companies.html)
-* [Retrieve business units](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html)
-* [Retrieve company company roles](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-company-roles.html)
-* [Retrieve business unit addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-unit-addresses.html)
-* [Manage company user authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/managing-company-user-authentication-tokens.html)
+* [Retrieve companies](/docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-companies.html)
+* [Retrieve business units](/docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-business-units.html)
+* [Retrieve company company roles](/docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-company-roles.html)
+* [Retrieve business unit addresses](/docs/scos/dev/glue-api-guides/managing-b2b-account/retrieving-business-unit-addresses.html)
+* [Manage company user authentication tokens](/docs/scos/dev/glue-api-guides/managing-b2b-account/managing-company-user-authentication-tokens.html)

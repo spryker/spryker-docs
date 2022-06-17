@@ -22,20 +22,14 @@ redirect_from:
   - /v5/docs/en/mg-cms-block
   - /v6/docs/mg-cms-block
   - /v6/docs/en/mg-cms-block
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-cmsblock.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-cmsblock.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-cmsblock.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-cmsblock.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cmsblock.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmsblock.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsblock.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
 related:
   - title: Migration guide - CMS Block Collector
     link: docs/scos/dev/module-migration-guides/migration-guide-cms-block-collector.html
   - title: Migration guide - CMS Block GUI
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblockgui.html
   - title: CMS Block
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
+    link: docs/scos/user/features/cms-feature-overview/cms-blocks-overview.html
 ---
 
 ## Upgrading from version 2.* to version 3.*

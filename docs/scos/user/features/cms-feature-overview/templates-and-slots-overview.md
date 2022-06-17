@@ -17,9 +17,9 @@ Templates slots lets content managers effectively and coherently interact with c
 {% info_block infoBox %}
 
 Templates and slots is a complex functionality which works in conjunction with other functionalities. To use it effectively, make sure you get familiar with the functionalities in the order they are presented:
-* [CMS Page](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html)
-* [CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)
-* [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html)
+* [CMS Page](/docs/scos/user/features/cms-feature-overview/cms-pages-overview.html)
+* [CMS Block](/docs/scos/user/features/cms-feature-overview/cms-blocks-overview.html)
+* [Content Items](/docs/scos/user/features/content-items-feature-overview.html)
 
 {% endinfo_block %}
 
@@ -56,7 +56,7 @@ The following templates with slots are shipped with the CMS feature:
 * Product details page template
 * CMS page template
 
-A content manager can [manage templates with slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Slots** section.
+A content manager can [manage templates with slots](/docs/scos/user/back-office-user-guides/content/slots/managing-slots.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Slots** section.
 <details open>
     <summary markdown='span'>Template representation—the Back Office</summary>
 
@@ -87,7 +87,7 @@ By importing a [slot list](#slot-list), a developer can do the following:
 * Delete slots.
 * Define slot configurations.
 
-A content manager can [manage slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Slots** section.
+A content manager can [manage slots](/docs/scos/user/back-office-user-guides/content/slots/managing-slots.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Slots** section.
 
 <details open><summary markdown='span'>Slot representation—the Back Office</summary>
 
@@ -98,7 +98,7 @@ A content manager can [manage slots](/docs/scos/user/back-office-user-guides/{{p
 
 ## CMS block
 
-[CMS block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html), from the perspective of the tempates and slots, is a piece of content that is inserted into a slot. When a CMS block is inserted into a slot, it's content is displayed on the Storefront page space belonging to the slot.  The position of CMS blocks on a page can be defined by a content manager in the Back Office.
+[CMS block](/docs/scos/user/features/cms-feature-overview/cms-blocks-overview.html), from the perspective of the tempates and slots, is a piece of content that is inserted into a slot. When a CMS block is inserted into a slot, it's content is displayed on the Storefront page space belonging to the slot.  The position of CMS blocks on a page can be defined by a content manager in the Back Office.
 
 <details open><summary markdown='span'> CMS block representation—Storefront</summary>
 
@@ -107,7 +107,7 @@ A content manager can [manage slots](/docs/scos/user/back-office-user-guides/{{p
 
 </details>
 
-A content manager can [manage CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Slots** section.
+A content manager can [manage CMS blocks](/docs/scos/user/back-office-user-guides/content/slots/managing-slots.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Slots** section.
 
 
 
@@ -119,12 +119,12 @@ A content manager can [manage CMS blocks](/docs/scos/user/back-office-user-guide
 </details>
 
 
-CMS Block is a separate entity with a dedicated section in the Back Office. To learn what a content manager can do with CMS blocks in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Blocks** section, see [Creating CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/create-cms-blocks.html).
+CMS Block is a separate entity with a dedicated section in the Back Office. To learn what a content manager can do with CMS blocks in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Blocks** section, see [Creating CMS blocks](/docs/scos/user/back-office-user-guides/content/blocks/create-cms-blocks.html).
 
 
 ## Content item
 
-[Content Item](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) is the smallest content unit in Spryker that is used in the WISIWYG editor when creating content for CMS blocks. When a CMS block is inserted into a slot, all the content items of the CMS block are displayed on the Storefront page space of the slot.
+[Content Item](/docs/scos/user/features/content-items-feature-overview.html) is the smallest content unit in Spryker that is used in the WISIWYG editor when creating content for CMS blocks. When a CMS block is inserted into a slot, all the content items of the CMS block are displayed on the Storefront page space of the slot.
 
 <details open><summary markdown='span'> Content item representation—Storefront</summary>
 
@@ -133,19 +133,19 @@ CMS Block is a separate entity with a dedicated section in the Back Office. To l
 </details>
 
 From the perspective of templates and slots, a content item always comes as a part of CMS block. That's why there is no place to manage it in the **Slots** section.
-To learn what a content manager can do with content items in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section, see [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html).
+To learn what a content manager can do with content items in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section, see [Content Items](/docs/scos/user/features/content-items-feature-overview.html).
 
 ### <a name="applying-templates-with-slots"></a>Applying Templates with slots
 
 A template with slots can be applied to any page. Even though a content manager can manage all page types in the Back Office, they can only apply templates with slots to the following:
 
-* Category pages in the Back Office&nbsp;<span aria-label="and then">></span> **Category&nbsp;<span aria-label="and then">></span> Create category** section. For more information, see [Creating Categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html).
-* CMS pages in the Back Office&nbsp;<span aria-label="and then">></span> **Pages&nbsp;<span aria-label="and then">></span> Create new CMS page** section. For more information, see [Creating a CMS Page](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html).
+* Category pages in the Back Office&nbsp;<span aria-label="and then">></span> **Category&nbsp;<span aria-label="and then">></span> Create category** section. For more information, see [Creating Categories](/docs/scos/user/back-office-user-guides/catalog/category/creating-categories.html).
+* CMS pages in the Back Office&nbsp;<span aria-label="and then">></span> **Pages&nbsp;<span aria-label="and then">></span> Create new CMS page** section. For more information, see [Creating a CMS Page](/docs/scos/user/back-office-user-guides/catalog/category/creating-categories.html).
 
 A developer can apply templates with slots to all the other page types.
 
 ## Correlation
-The correlation between templates and slots is defined by importing template and slot lists into database. Learn how to [import these lists](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html).
+The correlation between templates and slots is defined by importing template and slot lists into database. Learn how to [import these lists](/docs/scos/dev/data-import/data-importers-overview-and-implementation.html).
 
 Using the information from the imported lists, the Slot Widget can understand which slots are assigned to a template, and from where to fetch content for each slot.
 
@@ -188,13 +188,13 @@ The slot list contains the following information:
 | status | Defines whether the slot is active or not where "0" stands for "inactive" and "1" stands for "active". If a slot is inactive, it is not rendered in the Storefront by the slot widget. | 1 |
 
 ## Content providers
-A content provider is a source from where Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront. With templates and slots, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (for example, [CoreMedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html), [E-spirit](/docs/scos/user/technology-partners/{{page.version}}/content-management/e-spirit.html), [Styla](/docs/scos/user/technology-partners/{{page.version}}/content-management/styla.html), [Magnolia](/docs/scos/user/technology-partners/{{page.version}}/content-management/magnolia.html)).
+A content provider is a source from where Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront. With templates and slots, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (for example, [CoreMedia](/docs/scos/user/technology-partners/content-management/coremedia.html), [E-spirit](/docs/scos/user/technology-partners/content-management/e-spirit.html), [Styla](/docs/scos/user/technology-partners/content-management/styla.html), [Magnolia](/docs/scos/user/technology-partners/content-management/magnolia.html)).
 
 With templates and slots, the following applies:
 
 * Spryker CMS Blocks is the content provider for all the slots.
-* Slots embed content from [CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html).
-* Content for CMS blocks is created in the [WYSIWYG Editor](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item-widget).
+* Slots embed content from [CMS Blocks](/docs/scos/user/features/cms-feature-overview/cms-blocks-overview.html).
+* Content for CMS blocks is created in the [WYSIWYG Editor](/docs/scos/user/features/content-items-feature-overview.html#content-item-widget).
 * Templates with slots are managed in the Back Office&nbsp;<span aria-label="and then">></span> **Slots** section.
 
 The following schema shows how content is managed with the help of templates with slots:
@@ -216,20 +216,20 @@ Page identifiers used to define visibility conditions depend on the page type to
 
 
 {% info_block infoBox "Product details page" %}
-For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html).
+For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/scos/user/back-office-user-guides/catalog/category/assigning-products-to-categories.html).
 {% endinfo_block %}
 
 To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID or Navigation Nodes. To learn more, see [HowTo - Create Visibility Conditions for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html).
 
 
-A content manager can define visibility conditions by [selecting pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#selecting-pages) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Slots** section.
+A content manager can define visibility conditions by [selecting pages](/docs/scos/user/back-office-user-guides/content/slots/managing-slots.html#selecting-pages) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Slots** section.
 
-A developer can [import visibility conditions](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html).
+A developer can [import visibility conditions](/docs/scos/dev/data-import/data-importers-overview-and-implementation.html).
 
 ## Slot Widget
 Slot widget is used to fetch content from a content provider and render it in specified pages. Content is fetched in the form of HTML code ready to be rendered in the Storefront. With the help of slot widgets, you can fetch and render content from the following content providers:
 
-* [CoreMedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html)
+* [CoreMedia](/docs/scos/user/technology-partners/content-management/coremedia.html)
 * [Spryker CMS Blocks](#spryker-cms-blocks)
 
 
@@ -382,17 +382,17 @@ The functionality has the following functional constraints which are going to be
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Learn about the CoreMedia technology partner integration](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html)  |
-| [Add content to the Storefront using templates and slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/best-practices-adding-content-to-the-storefront-pages-using-templates-and-slots.html) |
-| [Manage slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html)   |
+| [Learn about the CoreMedia technology partner integration](/docs/scos/user/technology-partners/content-management/coremedia.html)  |
+| [Add content to the Storefront using templates and slots](/docs/scos/user/back-office-user-guides/content/best-practices-adding-content-to-the-storefront-pages-using-templates-and-slots.html) |
+| [Manage slots](/docs/scos/user/back-office-user-guides/content/slots/managing-slots.html)   |
 
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [CMS feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cms-feature-walkthrough/cms-feature-walkthrough.html) for developers.
+Are you a developer? See [CMS feature walkthrough](/docs/scos/dev/feature-walkthroughs/cms-feature-walkthrough/cms-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}
 
 ## See next
 
-* [Email as a CMS block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html)
+* [Email as a CMS block](/docs/scos/user/features/cms-feature-overview/email-as-a-cms-block-overview.html)

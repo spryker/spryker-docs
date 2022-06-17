@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/wishlist-feature-overview
   - /docs/wishlist-feature-overview
   - /docs/en/wishlist-feature-overview
-  - /docs/scos/user/features/202200.0/wishlist-feature-overview.html
+  - /docs/scos/user/features/wishlist-feature-overview.html
 ---
 
 Help your customers track and save items for later purchase through multiple wishlists, which are connected to the users' accounts.
@@ -87,6 +87,6 @@ For more details about wishlists, check the video:
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Wishlist feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/wishlist-feature-walkthrough.html) for developers.
+Are you a developer? See [Wishlist feature walkthrough](/docs/scos/dev/feature-walkthroughs/wishlist-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

@@ -5,12 +5,12 @@ description: This document describes the price-product-offer.csv file to configu
 template: import-file-template
 related:
   - title: Marketplace Product Offer feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
   - title: Marketplace Product Offer feature overview
-    link: docs/marketplace/user/features/page.version/marketplace-product-offer-feature-overview.html
+    link: docs/marketplace/user/features/marketplace-product-offer-feature-overview.html
 ---
 
-This document describes the `price-product-offer.csv` file to configure [Merchant product offer price](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) information in your Spryker shop.
+This document describes the `price-product-offer.csv` file to configure [Merchant product offer price](/docs/marketplace/user/features/marketplace-product-offer-feature-overview.html) information in your Spryker shop.
 
 To import the file, run:
 
@@ -24,7 +24,7 @@ The file should have the following parameters:
 
 | PARAMETER | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | ----------- | ---------- | ------- | ------------- | ----------------- | ------------- |
-| product_offer_reference  | &check;             | String   |                   | Unique                                                       | Identifier of the [merchant product offer](/docs/marketplace/user/features/{{site.version}}/marketplace-product-offer-feature-overview.html) in the system. |
+| product_offer_reference  | &check;             | String   |                   | Unique                                                       | Identifier of the [merchant product offer](/docs/marketplace/user/features/marketplace-product-offer-feature-overview.html) in the system. |
 | price_type               | &check;             | String   |                   | Can be DEFAULT or ORIGINAL                                   | Price type.                                                  |
 | store                    | &check;             | String   |                   | Value previously defined in the *stores.php* project configuration. | Store the price is defined for.                              |
 | currency                 | &check;             | String   |                   | Defined in the [ISO code](https://en.wikipedia.org/wiki/ISO_4217). | Currency of the price.                                       |
@@ -36,8 +36,8 @@ The file should have the following parameters:
 
 The file has the following dependencies:
 
-- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant-product-offer.csv.html)
-- [product_price.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html)
+- [merchant_product_offer.csv](/docs/marketplace/dev/data-import/file-details-merchant-product-offer.csv.html)
+- [product_price.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html)
 
 ## Import template file and content example
 

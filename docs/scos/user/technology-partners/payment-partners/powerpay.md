@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/powerpay
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
+    link: docs/scos/user/technology-partners/technology-partners.html
 ---
 
 ## Payment Information

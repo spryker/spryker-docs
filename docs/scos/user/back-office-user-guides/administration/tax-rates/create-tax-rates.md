@@ -10,11 +10,10 @@ redirect_from:
   - /2021080/docs/en/managing-tax-rates
   - /docs/managing-tax-rates
   - /docs/en/managing-tax-rates
-  - /docs/scos/user/back-office-user-guides/202200.0/administration/tax-rates/managing-tax-rates.html
-  - /docs/scos/user/back-office-user-guides/202204.0/administration/tax-rates/managing-tax-rates.html
+  - /docs/scos/user/back-office-user-guides/administration/tax-rates/managing-tax-rates.html
 ---
 
-To create a [tax rate](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) in the Back Office, follow the steps:
+To create a [tax rate](/docs/scos/user/features/tax-feature-overview.html) in the Back Office, follow the steps:
 
 1. Go to **Administration&nbsp;<span aria-label="and then">></span> Tax Rates**.
 2. On the **Overview of Tax Rates** page, click **Create Tax Rate**.
@@ -33,6 +32,6 @@ This opens the **Edit Tax Rate** page with a success message displayed.
 
 ## Next steps
 
-* Assign tax rates to tax sets by [creating tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/create-tax-sets.html).
+* Assign tax rates to tax sets by [creating tax sets](/docs/scos/user/back-office-user-guides/administration/tax-sets/create-tax-sets.html).
 
-* Assign tax rates to existing tax sets by [editing tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/edit-tax-sets.html).
+* Assign tax rates to existing tax sets by [editing tax sets](/docs/scos/user/back-office-user-guides/administration/tax-sets/edit-tax-sets.html).

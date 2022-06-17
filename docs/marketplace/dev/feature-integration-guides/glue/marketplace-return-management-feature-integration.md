@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 related:
   - title: Marketplace Return Management feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-return-management-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-return-management-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Return Management API feature into a Spryker project.
@@ -22,8 +22,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ------ | --------|
-| Marketplace Merchant | {{page.version}}  | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Marketplace Return Management | {{page.version}} | [Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-return-management-feature-integration.html) |
+| Marketplace Merchant | {{site.version}}  | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration.html) |
+| Marketplace Return Management | {{site.version}} | [Marketplace Return Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-return-management-feature-integration.html) |
 
 ### 1) Install the required modules using Сomposer
 <!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->

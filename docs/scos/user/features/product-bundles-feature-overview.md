@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/product-bundles-feature-overview
   - /docs/product-bundles-feature-overview
   - /docs/en/product-bundles-feature-overview
-  - /docs/scos/user/features/202200.0/product-bundles-feature-overview.html
+  - /docs/scos/user/features/product-bundles-feature-overview.html
 ---
 
 With the _Product Bundles_ feature you can tie individual items together and sell them as a package. As opposed to a set, in which products are loosely grouped, the items in a bundle are always sold together. You can choose to create a special bundle price to make the purchase more attractive. Since each bundle's product is still handled like an individual item in the Order Management Process, bundle availability is always calculated and displayed based on the item with the smallest available stock to avoid overselling.
@@ -106,10 +106,10 @@ If bundled item moves to reserved state machine state then corresponding bundle 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html)  |
+| [Create product bundles](/docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Product Bundles feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-bundles-feature-walkthrough.html) for developers.
+Are you a developer? See [Product Bundles feature walkthrough](/docs/scos/dev/feature-walkthroughs/product-bundles-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

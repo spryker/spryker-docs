@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/multiple-carts-quick-order-integration
   - /docs/multiple-carts-quick-order-integration
   - /docs/en/multiple-carts-quick-order-integration
-  - /docs/scos/dev/feature-integration-guides/202200.0/multiple-carts-quick-order-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/multiple-carts-quick-order-feature-integration.html
 ---
 
 ## Install feature core
@@ -21,9 +21,9 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Multiple Carts | {{page.version}} |
-| Quick Add To Cart | {{page.version}} |
-| Spryker Core |{{page.version}} |
+| Multiple Carts | {{site.version}} |
+| Quick Add To Cart | {{site.version}} |
+| Spryker Core |{{site.version}} |
 
 ### 1) Set up behavior
 
@@ -71,9 +71,9 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 | --- | --- |
-| Multiple Carts | {{page.version}} |
-| Quick Add To Cart | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Multiple Carts | {{site.version}} |
+| Quick Add To Cart | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Set up widgets
 

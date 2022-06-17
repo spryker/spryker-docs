@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-order-shipments
   - /docs/managing-order-shipments
   - /docs/en/managing-order-shipments
-  - /docs/scos/user/back-office-user-guides/202204.0/sales/orders/managing-order-shipments.html
+  - /docs/scos/user/back-office-user-guides/sales/orders/managing-order-shipments.html
 ---
 
 This document describes how to create shipments for orders in the Back Office.

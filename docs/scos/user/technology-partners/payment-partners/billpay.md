@@ -21,8 +21,8 @@ BillPay is the DACH market leader for the preferred, local payment methods Invoi
 
 ## Related Developer guides
 
-* [Billpay - Switching invoice payments to a preauthorize mode](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html)
-* [Integrating Billpay](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/billpay/integrating-billpay.html)
+* [Billpay - Switching invoice payments to a preauthorize mode](/docs/scos/dev/technology-partner-guides/payment-partners/billpay/billpay-switching-invoice-payments-to-a-preauthorize-mode.html)
+* [Integrating Billpay](/docs/scos/dev/technology-partner-guides/payment-partners/billpay/integrating-billpay.html)
 
 ---
 

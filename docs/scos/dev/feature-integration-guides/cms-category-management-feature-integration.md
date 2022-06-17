@@ -9,11 +9,7 @@ redirect_from:
   - /2021080/docs/en/cms-category-management-feature-integration
   - /docs/cms-category-management-feature-integration
   - /docs/en/cms-category-management-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/cms-category-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201903.0/cms-category-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201907.0/cms-category-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202005.0/cms-category-management-feature-integration.html
-  -
+  - /docs/scos/dev/feature-integration-guides/cms-category-management-feature-integration.html
 ---
 
 This document describes how to integrate the CMS + Category Management feature into a Spryker project.
@@ -24,7 +20,7 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | CMS |
 | --- | --- | ---  |
-| Category Management | {{page.version}} | {{page.version}}|
+| Category Management | {{site.version}} | {{site.version}}|
 
 ## 1) Install the required modules using Composer
 

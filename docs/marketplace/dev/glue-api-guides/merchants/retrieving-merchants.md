@@ -4,16 +4,16 @@ description: Retrieve merchant information via Glue API
 template: glue-api-storefront-guide-template
 related:
   - title: Retrieving merchant opening hours
-    link: docs/marketplace/dev/glue-api-guides/page.version/merchants/retrieving-merchant-opening-hours.html
+    link: docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-opening-hours.html
   - title: Retrieving merchant addresses
-    link: docs/marketplace/dev/glue-api-guides/page.version/merchants/retrieving-merchant-addresses.html 
+    link: docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-addresses.html 
 ---
 
 Merchant is an individual or an organization selling products on the Marketplace. Every merchant has a profile page where the customer can check information like contact information, opening hours, and legal details.
 
 ## Installation
 
-For detailed information about the modules that provide the API functionality and related installation instructions, see [Glue API - Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-merchant-feature-integration.html).
+For detailed information about the modules that provide the API functionality and related installation instructions, see [Glue API - Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-merchant-feature-integration.html).
 
 ## Retrieve merchants
 
@@ -26,7 +26,7 @@ To retrieve all merchants, send the request:
 
 {% info_block warningBox "Note" %}
 
-This endpoint returns only [active](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
+This endpoint returns only [active](/docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
 
 {% endinfo_block %}
 
@@ -337,7 +337,7 @@ To retrieve a merchant, send the request:
 
 {% info_block warningBox "Note" %}
 
-This endpoint returns only [active](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
+This endpoint returns only [active](/docs/marketplace/user/features/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) merchants. To learn how you can activate a merchant in the Back Office, see [Activating and deactivating merchants](/docs/marketplace/user/back-office-user-guides/marketplace/merchants/managing-merchants.html#activating-and-deactivating-merchants).
 
 {% endinfo_block %}
 
@@ -632,8 +632,8 @@ For the merchant attributes, see [Retrieve merchants](#merchants-response-attrib
 
 For the attributes of the included resources, see:
 
-* [Retrieving merchant addresses](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchant-addresses.html#merchant-addresses-response-attributes).
-* [Retrieving merchant opening hours](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchant-opening-hours.html#merchant-opening-hours-response-attributes).
+* [Retrieving merchant addresses](/docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-addresses.html#merchant-addresses-response-attributes).
+* [Retrieving merchant opening hours](/docs/marketplace/dev/glue-api-guides/merchants/retrieving-merchant-opening-hours.html#merchant-opening-hours-response-attributes).
 
 
 
@@ -642,16 +642,16 @@ For the attributes of the included resources, see:
 
 Retrieve merchant information as a relationship when sending the following requests:
 
-* [Retrieve an abstract product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
-* [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
-* [Retrieve a wishlist](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html#retrieve-a-wishlist)
+* [Retrieve an abstract product](/docs/marketplace/dev/glue-api-guides/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
+* [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
+* [Retrieve a wishlist](/docs/marketplace/dev/glue-api-guides/wishlists/managing-wishlists.html#retrieve-a-wishlist)
 * [Retrieve a product offer]
-* [Retrieve marketplace orders](/docs/marketplace/dev/glue-api-guides/{{page.version}}/retrieving-marketplace-orders.html)
+* [Retrieve marketplace orders](/docs/marketplace/dev/glue-api-guides/retrieving-marketplace-orders.html)
 
-Search by merchants in the product catalog. For details, see [Searching the product catalog](/docs/marketplace/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html).
-Resolve a search engine friendly URL of a merchant page. For details, see [Resolving search engine friendly URLs](/docs/marketplace/dev/glue-api-guides/{{page.version}}/resolving-search-engine-friendly-urls.html).
+Search by merchants in the product catalog. For details, see [Searching the product catalog](/docs/marketplace/dev/glue-api-guides/searching-the-product-catalog.html).
+Resolve a search engine friendly URL of a merchant page. For details, see [Resolving search engine friendly URLs](/docs/marketplace/dev/glue-api-guides/resolving-search-engine-friendly-urls.html).
 
 
 ## Possible errors
 
-For statuses, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+For statuses, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

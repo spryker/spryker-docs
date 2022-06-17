@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/alternative-products-wishlist-feature-integration
   - /docs/alternative-products-wishlist-feature-integration
   - /docs/en/alternative-products-wishlist-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/alternative-products-wishlist-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/alternative-products-wishlist-feature-integration.html
 ---
 
 ## Install feature frontend
@@ -21,8 +21,8 @@ To start feature integration, review and install the necessary features:
 
 |NAME|VERSION|
 |---|---|
-|Alternative Products|{{page.version}}|
-|Wishlist|{{page.version}}|
+|Alternative Products|{{site.version}}|
+|Wishlist|{{site.version}}|
 
 ### 1) Add Translations
 

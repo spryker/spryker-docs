@@ -10,8 +10,7 @@ redirect_from:
   - /2021080/docs/en/rest-api-reference
   - /docs/rest-api-reference
   - /docs/en/rest-api-reference
-  - /docs/scos/dev/glue-api-guides/202204.0/rest-api-reference.html
-  - /docs/scos/dev/glue-api-guides/202200.0/rest-api-reference.html
+  - /docs/scos/dev/glue-api-guides/rest-api-reference.html
 ---
 
 This document provides an overview of REST API endpoints provided by the Spryker B2C Demo Shop by default. For each endpoint, you will find its URL relative to the server, REST request parameters, as well as the appropriate request and response data formats.

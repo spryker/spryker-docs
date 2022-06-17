@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/order-management
   - /docs/order-management
   - /docs/en/order-management
-  - /docs/scos/user/features/202200.0/order-management-feature-overview/order-management-feature-overview.html
+  - /docs/scos/user/features/order-management-feature-overview/order-management-feature-overview.html
 ---
 
 Bringing flexible shipping options in your online business may have a key impact on the purchasing decisions of your customers. The *Order Management* feature is a collection of functionalities that let your customers place orders easily and let you manage the orders effectively.
@@ -29,15 +29,15 @@ B2B customers usually purchase large volumes of products selecting specific meas
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of Custom Order Reference](/docs/scos/dev/feature-walkthroughs/{{page.version}}/order-management-feature-walkthrough/custom-order-reference-module-relations.html)   |
-| [Get a general idea of Invoice Generation](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/invoice-generation-overview.html)   |
-| [Get a general idea of Order Cancellation](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-cancellation-overview.html)   |
-| [Get a general idea of Split Delivery](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html)   |
-| [Get a general idea of Splittable Order Items](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/splittable-order-items-overview.html)   |
-| [Changing the state of order items](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/changing-the-state-of-order-items.html)   |
+| [Get a general idea of Custom Order Reference](/docs/scos/dev/feature-walkthroughs/order-management-feature-walkthrough/custom-order-reference-module-relations.html)   |
+| [Get a general idea of Invoice Generation](/docs/scos/user/features/order-management-feature-overview/invoice-generation-overview.html)   |
+| [Get a general idea of Order Cancellation](/docs/scos/user/features/order-management-feature-overview/order-cancellation-overview.html)   |
+| [Get a general idea of Split Delivery](/docs/scos/user/features/order-management-feature-overview/split-delivery-overview.html)   |
+| [Get a general idea of Splittable Order Items](/docs/scos/user/features/order-management-feature-overview/splittable-order-items-overview.html)   |
+| [Changing the state of order items](/docs/scos/user/back-office-user-guides/sales/orders/changing-the-state-of-order-items.html)   |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Order Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/order-management-feature-walkthrough/order-management-feature-wakthrough.html) for developers.
+Are you a developer? See [Order Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/order-management-feature-walkthrough/order-management-feature-wakthrough.html) for developers.
 
 {% endinfo_block %}

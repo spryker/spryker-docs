@@ -9,12 +9,10 @@ redirect_from:
   - /2021080/docs/en/file-details-taxcsv
   - /docs/file-details-taxcsv
   - /docs/en/file-details-taxcsv
-  - /docs/scos/dev/data-import/201811.0/data-import-categories/commerce-setup/file-details-tax.csv.html
-  - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-tax.csv.html
-  - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-tax.csv.html
+  - /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-tax.csv.html
 ---
 
-This document describes the `tax.csv` file to configure the [tax](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `tax.csv` file to configure the [tax](/docs/scos/user/features/tax-feature-overview.html) information in your Spryker Demo Shop.
 
 To import the data, run
 

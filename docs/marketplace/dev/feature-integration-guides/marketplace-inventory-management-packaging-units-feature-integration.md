@@ -5,9 +5,9 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 related:
   - title: Marketplace Inventory Management feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-inventory-management-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-inventory-management-feature-walkthrough.html
   - title: Packaging Unit feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/packaging-units-feature-walkthrough.html
+    link: docs/scos/dev/feature-walkthroughs/packaging-units-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Inventory Management + Packaging Units feature into a Spryker project.
@@ -22,9 +22,9 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Packaging Units  | {{page.version}} | [Packaging Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/packaging-units-feature-integration.html)  |
-| Marketplace Inventory Management | {{page.version}} | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html)  |
-| Marketplace Order Management | {{page.version}} | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-order-management-feature-integration.html)  |
+| Packaging Units  | {{site.version}} | [Packaging Units feature integration](/docs/scos/dev/feature-integration-guides/packaging-units-feature-integration.html)  |
+| Marketplace Inventory Management | {{site.version}} | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-inventory-management-feature-integration.html)  |
+| Marketplace Order Management | {{site.version}} | [Marketplace Order Management feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html)  |
 
 ### 1) Set up behavior
 

@@ -22,13 +22,7 @@ redirect_from:
   - /v5/docs/en/mg-product-management
   - /v6/docs/mg-product-management
   - /v6/docs/en/mg-product-management
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-productmanagement.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-productmanagement.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-productmanagement.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-productmanagement.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productmanagement.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productmanagement.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productmanagement.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-productmanagement.html
 related:
   - title: Migration guide - Product
     link: docs/scos/dev/module-migration-guides/migration-guide-product.html
@@ -115,7 +109,7 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 }
 ```
 
-You should be able now to see the `abstract product-store` relations in the Product Information Management (PIM) Back Office. However, you will not able to manage / change anything yet. If you would like to enable the entire multi-store product behavior, see [Multi-Store Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/multi-store-products-feature-integration.html).
+You should be able now to see the `abstract product-store` relations in the Product Information Management (PIM) Back Office. However, you will not able to manage / change anything yet. If you would like to enable the entire multi-store product behavior, see [Multi-Store Products Feature Integration](/docs/scos/dev/feature-integration-guides/multi-store-products-feature-integration.html).
 
 ## Upgrading from version 0.8.* to version 0.9.*
 

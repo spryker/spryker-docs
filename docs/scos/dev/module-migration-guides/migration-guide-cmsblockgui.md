@@ -22,13 +22,7 @@ redirect_from:
   - /v5/docs/en/mg-cms-block-gui
   - /v6/docs/mg-cms-block-gui
   - /v6/docs/en/mg-cms-block-gui
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-cmsblockgui.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-cmsblockgui.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-cmsblockgui.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-cmsblockgui.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cmsblockgui.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmsblockgui.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsblockgui.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-cmsblockgui.html
 related:
   - title: Migration guide - CMS Block
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html

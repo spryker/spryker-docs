@@ -14,9 +14,9 @@ redirect_from:
 
 At its core, the _Product Restrictions_ feature lets merchants define the products that are available to each of their B2B customers.
 
-In terms of [Merchant concept](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html), the **merchant** is the one who sells products on a marketplace and can set prices.
+In terms of [Merchant concept](/docs/scos/user/features/merchant-b2b-contracts-feature-overview.html), the **merchant** is the one who sells products on a marketplace and can set prices.
 
-Product restrictions from a merchant to a buyer give merchants [another layer](/docs/scos/user/features/{{page.version}}/customer-access-feature-overview.html) of control over the information, a customer can see in the shop application. Based on product restrictions, you can:
+Product restrictions from a merchant to a buyer give merchants [another layer](/docs/scos/user/features/customer-access-feature-overview.html) of control over the information, a customer can see in the shop application. Based on product restrictions, you can:
 
 * Create a list of products.
 * Hide the product information for the products (pricing, appearance in the search/filters), and limit access to a product details page.
@@ -25,9 +25,9 @@ Product Restriction feature works on the basis of whitelist/blacklist lists. Tha
 
 To restrict the products, a Shop Administrator needs to create a product list, include the necessary products to the list and blacklist them for a specific merchant relationship. All other products will be available for that merchant relationship.
 
-To create product lists, follow the [guideline for the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/creating-product-lists.html).
+To create product lists, follow the [guideline for the Back Office](/docs/scos/user/back-office-user-guides/catalog/product-lists/creating-product-lists.html).
 
-You can check more cases of product restrictions workflow on the [Restricted Products Behavior](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html) page.
+You can check more cases of product restrictions workflow on the [Restricted Products Behavior](/docs/scos/dev/feature-walkthroughs/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html) page.
 
 ## Current constraints
 
@@ -38,15 +38,15 @@ You can check more cases of product restrictions workflow on the [Restricted Pro
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create product lists to set product restrictions](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/creating-product-lists.html)  |
-| [Edit a product list](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html#editing-a-product-list) |
-| [Export a product list](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html#exporting-a-product-list) |
-| [Remove a product list from the system](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html#removing-a-product-list)  |
-| [Assign products to a product list](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html#assigning-products-to-a-product-list) |
-| [Remove products from a product list](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/managing-product-lists.html#deassigning-products-form-a-product-list) |
+| [Create product lists to set product restrictions](/docs/scos/user/back-office-user-guides/catalog/product-lists/creating-product-lists.html)  |
+| [Edit a product list](/docs/scos/user/back-office-user-guides/catalog/product-lists/managing-product-lists.html#editing-a-product-list) |
+| [Export a product list](/docs/scos/user/back-office-user-guides/catalog/product-lists/managing-product-lists.html#exporting-a-product-list) |
+| [Remove a product list from the system](/docs/scos/user/back-office-user-guides/catalog/product-lists/managing-product-lists.html#removing-a-product-list)  |
+| [Assign products to a product list](/docs/scos/user/back-office-user-guides/catalog/product-lists/managing-product-lists.html#assigning-products-to-a-product-list) |
+| [Remove products from a product list](/docs/scos/user/back-office-user-guides/catalog/product-lists/managing-product-lists.html#deassigning-products-form-a-product-list) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Merchant Product Restrictions feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-product-restrictions-feature-walkthrough/merchant-product-restrictions-feature-walkthrough.html) for developers.
+Are you a developer? See [Merchant Product Restrictions feature walkthrough](/docs/scos/dev/feature-walkthroughs/merchant-product-restrictions-feature-walkthrough/merchant-product-restrictions-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

@@ -10,7 +10,7 @@ redirect_from:
   - /v5/docs/en/order-history-reference-information
 related:
   - title: Shop Guide - Order History
-    link: docs/scos/user/shop-user-guides/page.version/shop-guide-customer-account/shop-guide-order-history.html
+    link: docs/scos/user/shop-user-guides/shop-guide-customer-account/shop-guide-order-history.html
 ---
 
 ## Order History Page

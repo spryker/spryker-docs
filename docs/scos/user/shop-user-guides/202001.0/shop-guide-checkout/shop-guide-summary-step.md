@@ -49,7 +49,7 @@ In this section, you can do the following:
 
 {% info_block infoBox %}
 
-See [Shop Guide - Managing Comments](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-comments/shop-guide-managing-comments.html) for more information on how to work with comments in cart.
+See [Shop Guide - Managing Comments](/docs/scos/user/shop-user-guides/shop-guide-comments/shop-guide-managing-comments.html) for more information on how to work with comments in cart.
 
 {% endinfo_block %}
 

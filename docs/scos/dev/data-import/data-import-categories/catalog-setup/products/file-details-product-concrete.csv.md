@@ -9,10 +9,10 @@ redirect_from:
   - /2021080/docs/en/file-details-product-concretecsv
   - /docs/file-details-product-concretecsv
   - /docs/en/file-details-product-concretecsv
-  - /docs/scos/dev/data-import/202200.0/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html
+  - /docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html
 ---
 
-This document describes the `product_concrete.csv` file to configure [Concrete Product](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_concrete.csv` file to configure [Concrete Product](/docs/scos/user/features/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -48,7 +48,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [ product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
+This file has the following dependency: [ product_abstract.csv](/docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
 
 ## Recommendations & other information
 

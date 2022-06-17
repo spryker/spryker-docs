@@ -12,8 +12,7 @@ redirect_from:
   - /docs/en/migration-guide-merchantgui
   - /v6/docs/migration-guide-merchantgui
   - /v6/docs/en/migration-guide-merchantgui
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-merchantgui.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-merchantgui.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-merchantgui.html
 ---
 
 ## Upgrading from version 2.* to version 3.*

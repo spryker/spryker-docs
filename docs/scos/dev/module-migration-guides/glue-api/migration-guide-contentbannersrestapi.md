@@ -17,16 +17,12 @@ redirect_from:
   - /v5/docs/en/mg-contentbannersrestapi-201907
   - /v6/docs/mg-contentbannersrestapi-201907
   - /v6/docs/en/mg-contentbannersrestapi-201907
-  - /docs/scos/dev/module-migration-guides/201907.0/glue-api/migration-guide-contentbannersrestapi.html
-  - /docs/scos/dev/module-migration-guides/202001.0/glue-api/migration-guide-contentbannersrestapi.html
-  - /docs/scos/dev/module-migration-guides/202005.0/glue-api/migration-guide-contentbannersrestapi.html
-  - /docs/scos/dev/module-migration-guides/202009.0/glue-api/migration-guide-contentbannersrestapi.html
-  - /docs/scos/dev/module-migration-guides/202108.0/glue-api/migration-guide-contentbannersrestapi.html
+  - /docs/scos/dev/module-migration-guides/glue-api/migration-guide-contentbannersrestapi.html
 ---
 
 ## Upgrading from version 1.* to version 2.*
 
-`ContentBannersRestApi`, version 2.0.0 introduces the [Banner content item](/docs/scos/dev/feature-walkthroughs/{{site.version}}/content-items-feature-walkthrough/content-item-types-module-relations.html) functionality that allows retrieving its data by the content item key via REST API endpoint for all or a specific locale.
+`ContentBannersRestApi`, version 2.0.0 introduces the [Banner content item](/docs/scos/dev/feature-walkthroughs/content-items-feature-walkthrough/content-item-types-module-relations.html) functionality that allows retrieving its data by the content item key via REST API endpoint for all or a specific locale.
 
 In `ContentBannersRestApi` version 2.0.0, we have:
 * Adjusted models to support parameter KEY of a content item, so now endpoint expects the content key instead of ID in the URL.

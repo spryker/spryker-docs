@@ -10,19 +10,19 @@ redirect_from:
   - /2021080/docs/en/retrieving-product-labels
   - /docs/retrieving-product-labels
   - /docs/en/retrieving-product-labels
-  - /docs/scos/dev/glue-api-guides/202200.0/managing-products/retrieving-product-labels.html
+  - /docs/scos/dev/glue-api-guides/managing-products/retrieving-product-labels.html
 related:
   - title: Glue API - Promotions & Discounts feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-promotions-and-discounts-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/glue-api/glue-api-promotions-and-discounts-feature-integration.html
   - title: Product Labels feature overview
-    link: docs/scos/user/features/page.version/product-labels-feature-overview.html
+    link: docs/scos/user/features/product-labels-feature-overview.html
 ---
 
-[Product labels](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.
+[Product labels](/docs/scos/user/features/product-labels-feature-overview.html) are used to draw your customers' attention to some specific products. Each of them has a name, a priority, and a validity period. The Product Labels API provides endpoints for getting labels via the REST HTTP requests.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-labels-feature-integration.html).
 
 ## Retrieve a product label
 
@@ -80,13 +80,13 @@ Request sample: retrieve a product label
 ## Other management options
 
 Apart from using this dedicated endpoint, you can retrieve product lables as an included resource as follows:
-* [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
-* [Retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart)
-* [Retrieve registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts)
-* [Retrieve a registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-cart)
-* [Retrieve wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-wishlists)
-* [Retrieve a wishlist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-a-wishlist)
+* [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
+* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
+* [Retrieve a guest cart](/docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-guest-carts.html#retrieve-a-guest-cart)
+* [Retrieve registered user's carts](/docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts)
+* [Retrieve a registered user's cart](/docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-cart)
+* [Retrieve wishlists](/docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html#retrieve-wishlists)
+* [Retrieve a wishlist](/docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html#retrieve-a-wishlist)
 
 ## Possible errors
 
@@ -95,4 +95,4 @@ Apart from using this dedicated endpoint, you can retrieve product lables as an 
 | 1201 | Label with the specified ID does not exist. |
 | 1202 | Product label ID is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

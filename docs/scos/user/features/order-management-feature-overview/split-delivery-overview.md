@@ -38,7 +38,7 @@ Then, in the *Shipment* checkout step, you can see the products grouped by the s
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Checkout/Shop+Guide+-+Summary+Step/summary-step-new.png)
 
-For more details about how to add multiple delivery addresses to order items in the Storefront, see [Multi-step checkout](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html).
+For more details about how to add multiple delivery addresses to order items in the Storefront, see [Multi-step checkout](/docs/scos/user/features/checkout-feature-overview/multi-step-checkout-overview.html).
 
 ## Split Delivery in the Back Office
 
@@ -53,7 +53,7 @@ Here you can perform the following actions on shipments:
 * Move items between shipments.
 * Change the state of each item or all items per shipment.
 
-For more details about how to create and manage shipments in the Back Office, see [Creating shipments](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-shipments.html).
+For more details about how to create and manage shipments in the Back Office, see [Creating shipments](/docs/scos/user/back-office-user-guides/sales/orders/creating-shipments.html).
 
 ## Constraints
 
@@ -74,11 +74,11 @@ With Split Delivery, Product Bundles items can be shipped to different delivery 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create shipments](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/creating-shipments.html) |
-| [Editing shipments](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/editing-shipments.html) |
+| [Create shipments](/docs/scos/user/back-office-user-guides/sales/orders/creating-shipments.html) |
+| [Editing shipments](/docs/scos/user/back-office-user-guides/sales/orders/editing-shipments.html) |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Order Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/order-management-feature-walkthrough/order-management-feature-wakthrough.html) for developers.
+Are you a developer? See [Order Management feature walkthrough](/docs/scos/dev/feature-walkthroughs/order-management-feature-walkthrough/order-management-feature-wakthrough.html) for developers.
 
 {% endinfo_block %}

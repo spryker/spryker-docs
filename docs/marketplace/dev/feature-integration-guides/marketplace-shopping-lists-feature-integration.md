@@ -5,9 +5,9 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 related:
   - title: Glue API - Marketplace Shopping Lists feature integration
-    link: docs/marketplace/dev/feature-integration-guides/page.version/glue/marketplace-shopping-lists-feature-integration.html
+    link: docs/marketplace/dev/feature-integration-guides/glue/marketplace-shopping-lists-feature-integration.html
   - title: Marketplace Shopping Lists feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-shopping-lists-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-shopping-lists-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Shopping Lists feature into a Spryker project.
@@ -22,15 +22,15 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)  |
-| Shopping Lists | {{page.version}} | [Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html)  |
+| Marketplace Product Offer | {{site.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html)  |
+| Shopping Lists | {{site.version}} | [Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/shopping-lists-feature-integration.html)  |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-shopping-lists:"{{page.version}}" --update-with-dependencies 
+composer require spryker-feature/marketplace-shopping-lists:"{{site.version}}" --update-with-dependencies 
 ```
 
 {% info_block warningBox "Verification" %}
@@ -519,5 +519,5 @@ Make sure that the following plugins were registered:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | -|
-| Shopping Lists | {{page.version}} | [Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html)  |
-| Glue API: Marketplace Shopping Lists feature integration | {{page.version}} |  <!---[Glue API: Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/glue/{{page.version}}/marketplace-shopping-lists-feature-integration.html)-->  |
+| Shopping Lists | {{site.version}} | [Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/shopping-lists-feature-integration.html)  |
+| Glue API: Marketplace Shopping Lists feature integration | {{site.version}} |  <!---[Glue API: Marketplace Shopping Lists feature integration](/docs/marketplace/dev/feature-integration-guides/glue/{{site.version}}/marketplace-shopping-lists-feature-integration.html)-->  |

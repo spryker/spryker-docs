@@ -4,7 +4,7 @@ last_updated: Aug 12, 2021
 description: This article covers the available calculator plugins along with their examples.
 template: concept-topic-template
 redirect_from:
-  - /docs/scos/dev/feature-walkthroughs/202200.0/cart-feature-walkthrough/calculator-plugins.html
+  - /docs/scos/dev/feature-walkthroughs/cart-feature-walkthrough/calculator-plugins.html
 ---
 
 Calculator plugins are registered in the `CalculationDependencyProvider::getQuoteCalculatorPluginStack()` for `QuoteTransfer` and `CalculationDependencyProvider::getOrderCalculatorPluginStack()` or in later versions of the Calculation module 4.00 and above `CalculationDependencyProvider::getQuoteCalculatorPluginStack()` for OrderTransfer.

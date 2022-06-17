@@ -9,12 +9,12 @@ redirect_from:
   - /2021080/docs/en/cms-page-search-product-lists-catalog-feature-integration
   - /docs/cms-page-search-product-lists-catalog-feature-integration
   - /docs/en/cms-page-search-product-lists-catalog-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/cms-product-lists-catalog-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/cms-product-lists-catalog-feature-integration.html
 related:
   - title: CMS pages in search results
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-in-search-results-overview.html
+    link: docs/scos/user/features/cms-feature-overview/cms-pages-in-search-results-overview.html
   - title: CMS page
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
+    link: docs/scos/user/features/cms-feature-overview/cms-pages-overview.html
 ---
 
 ## Install Feature Core
@@ -25,10 +25,10 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 | --- | --- |
-| Cms | {{page.version}} |
-| Product lists | {{page.version}} |
-| Catalog | {{page.version}} |
-| Customer | {{page.version}} |
+| Cms | {{site.version}} |
+| Product lists | {{site.version}} |
+| Catalog | {{site.version}} |
+| Customer | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 

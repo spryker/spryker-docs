@@ -22,17 +22,11 @@ redirect_from:
   - /v5/docs/en/mg-monitoring
   - /v6/docs/mg-monitoring
   - /v6/docs/en/mg-monitoring
-  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-monitoring.html
-  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-monitoring.html
-  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-monitoring.html
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-monitoring.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-monitoring.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-monitoring.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-monitoring.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-monitoring.html
   - /module_migration_guides/mg-monitoring.htm
 related:
   - title: New Relic
-    link: docs/scos/user/technology-partners/page.version/operational-tools-monitoring-legal-etc/new-relic.html
+    link: docs/scos/user/technology-partners/operational-tools-monitoring-legal-etc/new-relic.html
 ---
 
 ## Upgrading from version 1.* to version 2.*
@@ -110,4 +104,4 @@ $config[\SprykerEco\Shared\NewRelic\NewRelicEnv::NEW_RELIC_APPLICATION_ID_ARRAY]
 ];
 ```
 
-For more details, see [Performance Monitoring - New Relic](/docs/scos/user/technology-partners/{{site.version}}/operational-tools-monitoring-legal-etc/new-relic.html).
+For more details, see [Performance Monitoring - New Relic](/docs/scos/user/technology-partners/operational-tools-monitoring-legal-etc/new-relic.html).

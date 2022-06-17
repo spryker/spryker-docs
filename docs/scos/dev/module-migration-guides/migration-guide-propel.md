@@ -14,9 +14,7 @@ redirect_from:
   - /v5/docs/en/migration-guide-propel
   - /v6/docs/migration-guide-propel
   - /v6/docs/en/migration-guide-propel
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-propel.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-propel.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-propel.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-propel.html
 ---
 
 {% info_block errorBox %}

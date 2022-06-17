@@ -14,7 +14,7 @@ redirect_from:
   - /2021080/docs/en/promotions-discounts
   - /docs/promotions-discounts
   - /docs/en/promotions-discounts
-  - /docs/scos/user/back-office-user-guides/202200.0/merchandising/discount/docs/scos/user/features/202200.0/promotions-discounts-feature-overview.html
+  - /docs/scos/user/back-office-user-guides/merchandising/discount/docs/scos/user/features/202200.0/promotions-discounts-feature-overview.html
 ---
 
 The *Promotions & Discounts* feature enables shop owners to provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.
@@ -25,7 +25,7 @@ There are two discount types:
 * Voucher
 * Cart rule
 
-A Back Office user selects a discount type when [creating a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
+A Back Office user selects a discount type when [creating a discount](/docs/scos/user/back-office-user-guides/merchandising/discount/create-discounts.html).
 
 ## Voucher
 
@@ -42,7 +42,7 @@ You can enter codes manually or use the code generator in the Back Office.
 
 ![Generate codes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+%26+Discounts/Discount/Discount+Feature+Overview/generate_codes.png)
 
-To learn how a Back Office user can create a voucher in the Back Office, see [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
+To learn how a Back Office user can create a voucher in the Back Office, see [Create discounts](/docs/scos/user/back-office-user-guides/merchandising/discount/create-discounts.html).
 
 ## Cart rule
 
@@ -52,7 +52,7 @@ The cart rule is applied automatically. If the decision rules of a discount are 
 
 ![Cart rule](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart-cart-rule.png)
 
-To learn how a Back Office user can create a cart rule in the Back Office, see [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
+To learn how a Back Office user can create a cart rule in the Back Office, see [Create discounts](/docs/scos/user/back-office-user-guides/merchandising/discount/create-discounts.html).
 
 ### Decision rule
 
@@ -182,7 +182,7 @@ See examples in the table below.
 | €50 | Percentage | 10 | €5 | €45 |
 | €50 | Fixed amount | 10 | €10 | €40 |
 
-A Back Office user defines calculation when [creating discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
+A Back Office user defines calculation when [creating discounts](/docs/scos/user/back-office-user-guides/merchandising/discount/create-discounts.html).
 
 ![Discount calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/discount_calculation.png)
 
@@ -190,7 +190,7 @@ A Back Office user defines calculation when [creating discounts](/docs/scos/user
 
 Discount exclusiveness defines if a discount value of a discount can be combined with the discount value of other discounts in a single order.
 
-A Back Office user defines calculation when [creating discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
+A Back Office user defines calculation when [creating discounts](/docs/scos/user/back-office-user-guides/merchandising/discount/create-discounts.html).
 
 ![Exclusive discount](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/promotions-discounts-feature-overview.md/exclusivity.png)
 
@@ -205,13 +205,13 @@ An exclusive discount is a discount that, when applied to a cart, discards all t
 
 {% endinfo_block %}
 
-If a cart is eligible for multiple exclusive discounts, you can [prioritize](#discount-priority) the discounts to define which of the exclusive discounts should prevail over the others. For details on how a Back Office user can set priorities for discounts, see [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
+If a cart is eligible for multiple exclusive discounts, you can [prioritize](#discount-priority) the discounts to define which of the exclusive discounts should prevail over the others. For details on how a Back Office user can set priorities for discounts, see [Create discounts](/docs/scos/user/back-office-user-guides/merchandising/discount/create-discounts.html).
 
 If the exclusive discounts are not prioritized or have the same priorities, the highest-value discount is applied. For details and examples on how the discounts are calculated, see [Discount calculation logic](#discount-calculation-logic).
 
 ### Non-exclusive discount
 
-A non-exclusive discount is a discount that can be combined with other non-exclusive discounts in a single order. As all the discounts are non-exclusive, they are applied together. However, a Back Office user can [prioritize](#discount-priority) the non-exclusive discounts to set the order in which they should apply. For details on how a Back Office user can prioritize the discount, see [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html). For details and examples on how the discounts are calculated based on their priorities, see [Discount calculation logic](#discount-calculation-logic).
+A non-exclusive discount is a discount that can be combined with other non-exclusive discounts in a single order. As all the discounts are non-exclusive, they are applied together. However, a Back Office user can [prioritize](#discount-priority) the non-exclusive discounts to set the order in which they should apply. For details on how a Back Office user can prioritize the discount, see [Create discounts](/docs/scos/user/back-office-user-guides/merchandising/discount/create-discounts.html). For details and examples on how the discounts are calculated based on their priorities, see [Discount calculation logic](#discount-calculation-logic).
 
 ## Discount validity interval
 
@@ -219,7 +219,7 @@ Validity interval is a period of time during which a discount is active and can 
 
 If a cart is eligible for a discount outside of its validity interval, the cart rule is not applied. If a customer enters a voucher code outside of its validity interval, they get a "Your voucher code is invalid." message.
 
-A Back Office user defines calculation when [creating a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
+A Back Office user defines calculation when [creating a discount](/docs/scos/user/back-office-user-guides/merchandising/discount/create-discounts.html).
 
 ![Validity interval](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/promotions-discounts-feature-overview.md/validity-interval.png)
 
@@ -406,11 +406,11 @@ Cart subtotal: €100
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html)  |
-| [Edit discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/edit-discounts.html)  |
+| [Create a discount](/docs/scos/user/back-office-user-guides/merchandising/discount/create-discounts.html)  |
+| [Edit discounts](/docs/scos/user/back-office-user-guides/merchandising/discount/edit-discounts.html)  |
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Promotions & Discounts feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/promotions-discounts-feature-walkthrough.html) for developers.
+Are you a developer? See [Promotions & Discounts feature walkthrough](/docs/scos/dev/feature-walkthroughs/promotions-discounts-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

@@ -9,10 +9,7 @@ redirect_from:
   - /2021080/docs/en/catalog-category-management-feature-integration
   - /docs/catalog-category-management-feature-integration
   - /docs/en/catalog-category-management-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/catalog-category-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201903.0/catalog-category-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201907.0/catalog-category-management-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/202005.0/catalog-category-management-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/catalog-category-management-feature-integration.html
 ---
 
 This document describes how to integrate the Catalog + Category Management into a Spryker project.
@@ -23,9 +20,9 @@ To start the feature integration, overview and install the necessary features:
 
 | NAME                | VERSION | INTEGRATION GUIDE                                            |
 | ------------------- | ------- | ------------------------------------------------------------ |
-| Spryker Core        | {{page.version}}  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Catalog             | {{page.version}}  |  |
-| Category Management | {{page.version}}  | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
+| Spryker Core        | {{site.version}}  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
+| Catalog             | {{site.version}}  |  |
+| Category Management | {{site.version}}  | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/category-management-feature-integration.html) |
 
 ## 1) Set up behavior
 
@@ -108,4 +105,4 @@ Integrate the following related features:
 | FEATURE  | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE     |
 | ------------- | ---------------- | -------------------- |
 | Catalog             |      ✓     | |
-| Category Management |      ✓     | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
+| Category Management |      ✓     | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/category-management-feature-integration.html) |

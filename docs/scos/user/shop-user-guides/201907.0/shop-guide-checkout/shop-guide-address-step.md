@@ -8,8 +8,8 @@ originalArticleId: 0978e254-e4c3-4552-9a32-cede9dc39181
 redirect_from:
   - /v3/docs/address-step-shop-guide-201911
   - /v3/docs/en/address-step-shop-guide-201911
-  - /docs/scos/user/shop-user-guides/page.version/checkout/shop-guide-address-step.html
-  - /docs/scos/user/shop-user-guides/201907.0/checkout/shop-guide-address-step.html
+  - /docs/scos/user/shop-user-guides/checkout/shop-guide-address-step.html
+  - /docs/scos/user/shop-user-guides/checkout/shop-guide-address-step.html
 ---
 
 The topic provides a list of steps to select billing and shipping addresses for the order.
@@ -70,6 +70,6 @@ The **Billing same as shipping** option is enabled by default:
 
 The delivery addresses are added to your items. Now, you need to select shipment methods for each delivery address.
 
-To learn more on how to select a shipment method, see [Shop Guide - Shipment Step](/docs/scos/user/shop-user-guides/{{page.version}}/shop-guide-checkout/shop-guide-shipment-step.html).
+To learn more on how to select a shipment method, see [Shop Guide - Shipment Step](/docs/scos/user/shop-user-guides/shop-guide-checkout/shop-guide-shipment-step.html).
 
 <!-- Last review date: Sep 24, 2019 -->

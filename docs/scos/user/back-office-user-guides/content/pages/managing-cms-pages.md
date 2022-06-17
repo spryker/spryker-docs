@@ -10,21 +10,21 @@ redirect_from:
   - /2021080/docs/en/managing-cms-pages
   - /docs/managing-cms-pages
   - /docs/en/managing-cms-pages
-  - /docs/scos/user/back-office-user-guides/202200.0/content/pages/managing-cms-pages.html
+  - /docs/scos/user/back-office-user-guides/content/pages/managing-cms-pages.html
 related:
   - title: CMS Page
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
+    link: docs/scos/user/features/cms-feature-overview/cms-pages-overview.html
   - title: Editing CMS Pages
-    link: docs/scos/user/back-office-user-guides/page.version/content/pages/editing-cms-pages.html
+    link: docs/scos/user/back-office-user-guides/content/pages/editing-cms-pages.html
   - title: Managing CMS Page Versions
-    link: docs/scos/user/back-office-user-guides/page.version/content/pages/managing-cms-page-versions.html
+    link: docs/scos/user/back-office-user-guides/content/pages/managing-cms-page-versions.html
 ---
 
 This article describes how to manage CMS pages.
 
 ## Prerequisites
 
-1. To preview CMS pages as a specific customer, [assign the customer to your user](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/assigning-customers-to-users.html).
+1. To preview CMS pages as a specific customer, [assign the customer to your user](/docs/scos/user/back-office-user-guides/users/managing-users/assigning-customers-to-users.html).
 
 2. To start managing CMS pages, got to **Content&nbsp;<span aria-label="and then">></span> Pages**.
 
@@ -63,7 +63,7 @@ To preview a draft of your CMS page from the *Overview of CMS Pages* page:
 1. On the *Overview of CMS Pages* page, click **View** and select **Preview** from the drop-down list next to the page whose draft you want to view.
 2. The page in the Preview mode is opened in a new tab of your browser.
 
-To preview a draft of your CMS page from the *Edit Placeholders* editor, see the [Editing placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html#selecting-the-placeholders-option) section.
+To preview a draft of your CMS page from the *Edit Placeholders* editor, see the [Editing placeholders](/docs/scos/user/back-office-user-guides/content/pages/editing-cms-pages.html#selecting-the-placeholders-option) section.
 
 
 ## Publishing a CMS page
@@ -72,7 +72,7 @@ To keep changes and display them on the shop website, you need to publish them.
 
 You can publish your page either from the *Overview of CMS Pages* page or from the *Edit Placeholders* editor:
 * To publish a CMS page from the *Overview of CMS Pages* page, click **Publish** in the _Actions_ column. The page is successfully published.
-* To publish a CMS page from the *Edit Placeholders* editor, see the [Editing placeholders](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/editing-cms-pages.html#selecting-the-placeholders-option) section.
+* To publish a CMS page from the *Edit Placeholders* editor, see the [Editing placeholders](/docs/scos/user/back-office-user-guides/content/pages/editing-cms-pages.html#selecting-the-placeholders-option) section.
 
 ## Viewing a CMS page
 

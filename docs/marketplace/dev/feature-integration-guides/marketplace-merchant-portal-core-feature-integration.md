@@ -5,7 +5,7 @@ description: This document describes how to integrate the Merchant Portal Core f
 template: feature-integration-guide-template
 related:
   - title: Marketplace Merchant Portal Core feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-core-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-portal-core-feature-walkthrough/marketplace-merchant-portal-core-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Merchant Portal Core feature into a Spryker project.
@@ -20,17 +20,17 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | -------------------- | ---------- | ---------|
-| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Spryker Core BO      | {{page.version}} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html) |
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
-| Acl | {{page.version}} | [ACL feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/acl-feature-integration.html) |
+| Spryker Core         | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
+| Spryker Core BO      | {{site.version}} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-back-office-feature-integration.html) |
+| Marketplace Merchant | {{site.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-merchant-feature-integration.html) |
+| Acl | {{site.version}} | [ACL feature integration](/docs/marketplace/dev/feature-integration-guides/acl-feature-integration.html) |
 
 ###  1) Install the required modules using Composer
 
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-merchantportal-core:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-merchantportal-core:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1286,4 +1286,4 @@ Integrate the following related features:
 
 | FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | -|
-| Merchant Portal | &check;  |  [Merchant Portal feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-feature-integration.html) |
+| Merchant Portal | &check;  |  [Merchant Portal feature integration ](/docs/marketplace/dev/feature-integration-guides/merchant-portal-feature-integration.html) |

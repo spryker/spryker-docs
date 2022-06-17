@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/retrieving-store-configuration
   - /docs/retrieving-store-configuration
   - /docs/en/retrieving-store-configuration
-  - /docs/scos/dev/glue-api-guides/202200.0/retrieving-store-configuration.html
+  - /docs/scos/dev/glue-api-guides/retrieving-store-configuration.html
 ---
 
 Depending on your project needs, you can set up a single store that serves all your business needs or have multiple stores designed for different applications or available in different countries. Regardless of how many stores you have, a store contains such generic configuration as the currencies that can be used in transactions, countries where a store is available, supported languages, and the time zone of the store.
@@ -19,7 +19,7 @@ The configuration of the current store in a project can be retrieved via an endp
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue Application Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue Application Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-glue-application-feature-integration.html).
 
 ## Retrieve store configuration
 
@@ -117,4 +117,4 @@ Request sample: retrieve protected resources
 | iso2Code | String | Iso 2 code for the region. |
 | name | String | Region name. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

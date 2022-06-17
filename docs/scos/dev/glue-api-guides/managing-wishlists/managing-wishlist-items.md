@@ -5,9 +5,9 @@ last_updated: Nov 29, 2021
 template: glue-api-storefront-guide-template
 related:
   - title: Managing wishlists
-    link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html
+    link: docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html
   - title: Authenticating as a customer
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
+    link: docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html
 ---
 
 This endpoint allows you to add and remove items from wishlists.
@@ -15,8 +15,8 @@ This endpoint allows you to add and remove items from wishlists.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Wishlist API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-wishlist-feature-integration.html)
-* [Glue API - Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-configuration-feature-integration.html)
+* [Wishlist API Feature Integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-wishlist-feature-integration.html)
+* [Glue API - Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-configuration-feature-integration.html)
 
 ## Add an item to a wishlist
 
@@ -29,13 +29,13 @@ To add an item to a wishlist, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}*** | Unique identifier of the wishlist to add the items to. [Create a wishlist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
+| ***{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}*** | Unique identifier of the wishlist to add the items to. [Create a wishlist](/docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
 
 ### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample: add an item to a wishlist
 
@@ -117,7 +117,7 @@ Request sample: add an item to a wishlist
 | quantity  | Integer  | Quantity of the product that is added to the wishlist.  |
 | availableQuantity  | Integer  |  Product quantity available in the store. |
 
-For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#response).
+For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-product-prices.html#response).
 
 ### Response
 
@@ -217,7 +217,7 @@ Response sample: add an item to a wishlist
 | productOfferReference | String | |Unique identifier of the product offer. |
 | merchantReference | String  | Unique identifier of the merchant. |
 
-For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#response).
+For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-product-prices.html#response).
 
 For attribute descriptions of concrete product availability, see [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/202204.0/managing-products/concrete-products/retrieving-concrete-product-availability.html#concrete-product-availability-response-attributes).
 
@@ -239,14 +239,14 @@ To update a wishlist item, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}*** | Unique identifier of the wishlist to delete an item from. [Create a wishlist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
-| ***{% raw %}{{{% endraw %}wishlist_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a configurable product to update. To get this identifier, [retrieve a wishlist with items included](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-wishlists) or [add a configurable product to a wishlist](#add-an-item-to-a-wishlist). |
+| ***{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}*** | Unique identifier of the wishlist to delete an item from. [Create a wishlist](/docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
+| ***{% raw %}{{{% endraw %}wishlist_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a configurable product to update. To get this identifier, [retrieve a wishlist with items included](/docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html#retrieve-wishlists) or [add a configurable product to a wishlist](#add-an-item-to-a-wishlist). |
 
 ### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 <details><summary>Request sample: update a configurable product in a wishlist</summary>
 
@@ -311,7 +311,7 @@ To update a wishlist item, send the request:
 | quantity  | Integer  | Quantity of the configurable product to update in the wishlist.  |
 | availableQuantity  | Integer  |  Product quantity available in the store. |
 
-For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#abstract-product-prices-response-attributes).
+For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
 ### Response
 
@@ -390,9 +390,9 @@ For attribute descriptions of product prices, see [Retrieving abstract product p
 | quantity  | Integer  | Updated configurable product quantity in the wishlist.  |
 | availableQuantity  | Integer  | Configurable product quantity available in the store. |
 
-For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#response).
+For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-product-prices.html#response).
 
-For attribute descriptions of concrete product availability, see [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html#response).
+For attribute descriptions of concrete product availability, see [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-product-availability.html#response).
 
 
 ## Delete a wishlist item
@@ -406,14 +406,14 @@ To delete wishlist item, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}*** | Unique identifier of the wishlist to delete an item from. [Create a wishlist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
-| ***{% raw %}{{{% endraw %}wishlist_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a concrete or configurable product to delete. To get this identifier, [retrieve a wishlist with items included](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html#retrieve-wishlists) or [add an item to a wishlist](#add-an-item-to-a-wishlist). |
+| ***{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}*** | Unique identifier of the wishlist to delete an item from. [Create a wishlist](/docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html#create-a-wishlist) or [retrieve all wishlists](/docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html#retrieve-wishlists) to get it. |
+| ***{% raw %}{{{% endraw %}wishlist_item_id{% raw %}}}{% endraw %}*** | Unique identifier of a concrete or configurable product to delete. To get this identifier, [retrieve a wishlist with items included](/docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html#retrieve-wishlists) or [add an item to a wishlist](#add-an-item-to-a-wishlist). |
 
 ### Request
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample: delete a wishlist item
 
@@ -432,4 +432,4 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 | 207 | Cannot remove the item. |
 | 208 | An item with the provided SKU does not exist in the wishlist. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/reference-information-glueapplication-errors.html).

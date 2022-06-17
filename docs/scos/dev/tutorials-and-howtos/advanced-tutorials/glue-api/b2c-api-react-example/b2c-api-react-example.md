@@ -24,9 +24,9 @@ redirect_from:
   - /v1/docs/en/b2c-api-react-example
 related:
   - title: Glue REST API
-    link: docs/scos/dev/glue-api-guides/page.version/glue-rest-api.html
+    link: docs/scos/dev/glue-api-guides/glue-rest-api.html
   - title: REST API Reference
-    link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
+    link: docs/scos/dev/glue-api-guides/rest-api-reference.html
 ---
 
 As a part of documentation related to Spryker Glue REST API, we have also developed a B2C API React Example. It is a [React](https://reactjs.org/) single page application based on a [webpack](https://webpack.js.org/) devserver, Typescript, [Redux](https://redux.js.org/), and Material UI.
@@ -51,21 +51,21 @@ The Demo shop was built using and demonstrates the use of the endpoints and reso
 
 | API | REFERENCE DOCUMENTS |
 | --- | --- |
-| Search API | [Catalog search](/docs/scos/dev/glue-api-guides/{{site.version}}/searching-the-product-catalog.html)<br>[Getting suggestions for auto-completion and search](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-autocomplete-and-search-suggestions.html) |
-| Category API | [Retrieving category trees](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-categories/retrieving-category-trees.html) |
-| Product API | [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-products.html)<br>[Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html) |
-| Product Availability API | [Retrieving abstract product availability](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-product-availability.html)<br>[Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html) |
-| Product Price API | [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html)<br>[Retrieving concrete product prices](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-product-prices.html) |
-| Product Tax Sets API | [Retrieving product tax sets](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-tax-sets.html) |
-| Product Image Sets API | [Retrieving image sets of abstract products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html)<br>[Retrieving image sets of concrete products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html) |
-| Product Labels API | [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-product-labels.html) |
-| Login API | [Authentication and authorization](/docs/scos/dev/glue-api-guides/{{site.version}}/authentication-and-authorization.html) |
-| Customer API | [Managing customers](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html) |
-| Cart API | [Guest carts](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/guest-carts/managing-guest-carts.html)<br>[Carts of registered users](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html) |
-| Checkout API | [Checking out purchases and getting checkout data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/checking-out-purchases.html) |
-| Order History API | [Retrieving customer's order history](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-orders.html) |
-| Wishlist API | [Managing wishlists](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-wishlists/managing-wishlists.html) |
-| Store API | [Retrieving store configuration](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-store-configuration.html) |
+| Search API | [Catalog search](/docs/scos/dev/glue-api-guides/searching-the-product-catalog.html)<br>[Getting suggestions for auto-completion and search](/docs/scos/dev/glue-api-guides/retrieving-autocomplete-and-search-suggestions.html) |
+| Category API | [Retrieving category trees](/docs/scos/dev/glue-api-guides/retrieving-categories/retrieving-category-trees.html) |
+| Product API | [Retrieving abstract products](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-products.html)<br>[Retrieving concrete products](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-products.html) |
+| Product Availability API | [Retrieving abstract product availability](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-product-availability.html)<br>[Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-product-availability.html) |
+| Product Price API | [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-product-prices.html)<br>[Retrieving concrete product prices](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-product-prices.html) |
+| Product Tax Sets API | [Retrieving product tax sets](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-tax-sets.html) |
+| Product Image Sets API | [Retrieving image sets of abstract products](/docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html)<br>[Retrieving image sets of concrete products](/docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html) |
+| Product Labels API | [Retrieving product labels](/docs/scos/dev/glue-api-guides/managing-products/retrieving-product-labels.html) |
+| Login API | [Authentication and authorization](/docs/scos/dev/glue-api-guides/authentication-and-authorization.html) |
+| Customer API | [Managing customers](/docs/scos/dev/glue-api-guides/managing-customers/managing-customers.html) |
+| Cart API | [Guest carts](/docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-guest-carts.html)<br>[Carts of registered users](/docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html) |
+| Checkout API | [Checking out purchases and getting checkout data](/docs/scos/dev/glue-api-guides/checking-out/checking-out-purchases.html) |
+| Order History API | [Retrieving customer's order history](/docs/scos/dev/glue-api-guides/retrieving-orders.html) |
+| Wishlist API | [Managing wishlists](/docs/scos/dev/glue-api-guides/managing-wishlists/managing-wishlists.html) |
+| Store API | [Retrieving store configuration](/docs/scos/dev/glue-api-guides/retrieving-store-configuration.html) |
 
 ## Running the example application
 

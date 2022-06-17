@@ -17,11 +17,6 @@ redirect_from:
   - /v5/docs/en/companyuserauthrestapi-migration-guide
   - /v6/docs/companyuserauthrestapi-migration-guide
   - /v6/docs/en/companyuserauthrestapi-migration-guide
-  - /docs/scos/dev/module-migration-guides/201907.0/glue-api/companyuserauthrestapi-migration-guide.html
-  - /docs/scos/dev/module-migration-guides/202001.0/glue-api/companyuserauthrestapi-migration-guide.html
-  - /docs/scos/dev/module-migration-guides/202005.0/glue-api/companyuserauthrestapi-migration-guide.html
-  - /docs/scos/dev/module-migration-guides/202009.0/glue-api/companyuserauthrestapi-migration-guide.html
-  - /docs/scos/dev/module-migration-guides/202108.0/glue-api/companyuserauthrestapi-migration-guide.html
   - /docs/scos/dev/module-migration-guides/glue-api/companyuserauthrestapi-migration-guide.html
 ---
 

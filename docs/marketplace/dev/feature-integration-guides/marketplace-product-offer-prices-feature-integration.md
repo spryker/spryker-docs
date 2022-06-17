@@ -5,7 +5,7 @@ description: This document describes the process how to integrate the Marketplac
 template: feature-integration-guide-template
 related:
   - title: Marketplace Product Offer Prices feature walkthrough
-    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-prices-feature-walkthrough.html
+    link: docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-prices-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product Offer Prices feature into a Spryker project.
@@ -20,9 +20,9 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |---|---|---|
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Prices | {{page.version}} |[Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/prices-feature-integration.html) |
-| Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) |
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/spryker-core-feature-integration.html) |
+| Prices | {{site.version}} |[Prices feature integration](/docs/scos/dev/feature-integration-guides/prices-feature-integration.html) |
+| Marketplace Product Offer | {{site.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html) |
 
 
 ### 1) Install the required modules using Composer
@@ -30,7 +30,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-product-offer-prices:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-product-offer-prices:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1169,4 +1169,4 @@ Make sure that when a product offer with a volume price is selected, and the sel
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | -------------- | -------------------------------- | ----------------- |
-| Marketplace Product Offer + Prices API | | [Glue API: Marketplace Product Offer + Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-prices-feature-integration.html) |
+| Marketplace Product Offer + Prices API | | [Glue API: Marketplace Product Offer + Prices feature integration](/docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-prices-feature-integration.html) |

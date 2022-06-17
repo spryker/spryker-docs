@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/gift-cards-feature-overview
   - /docs/gift-cards-feature-overview
   - /docs/en/gift-cards-feature-overview
-  - /docs/scos/user/features/202200.0/gift-cards-feature-overview.html
+  - /docs/scos/user/features/gift-cards-feature-overview.html
 ---
 
 The _Gift Card_ feature lets you create a special product type with a chosen value amount. The purchase of a gift card generates an individual code that can then be used as a payment method during checkout.
@@ -84,6 +84,6 @@ Even though the Balance strategy is a bit more complicated than Replacement, it 
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Gift Cards feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/gift-cards-feature-walkthrough.html) for developers.
+Are you a developer? See [Gift Cards feature walkthrough](/docs/scos/dev/feature-walkthroughs/gift-cards-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

@@ -133,23 +133,6 @@ defaults:
       product: "frontend-enablement-service"
   -
     scope:
-      path: "docs/fes/dev"
-    values:
-      sidebar: "paas+_dev_sidebar"
-      role: "dev"
-  -
-    scope:
-      path: "docs/paas+"
-    values:
-      product: "platform-as-a-service-plus"
-  -
-    scope:
-      path: "docs/paas+/dev"
-    values:
-      sidebar: "paas+_dev_sidebar"
-      role: "dev"
-  -
-    scope:
       path: "docs/paas-plus"
     values:
       product: "platform-as-a-service-plus"
@@ -180,17 +163,6 @@ defaults:
        path: "docs/fes/dev"
      values:
        sidebar: "fes_dev_sidebar"
-       role: "dev"
-  -
-     scope:
-       path: "docs/paas-plus"
-     values:
-       product: "platform-as-a-service-plus"
-  -
-     scope:
-       path: "docs/paas-plus/dev"
-     values:
-       sidebar: "paas_plus_dev_sidebar"
        role: "dev"
 
 versions:
@@ -247,6 +219,7 @@ sidebars:
   - acp_user_sidebar
   - fes_dev_sidebar
   - paas_plus_dev_sidebar
+
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file

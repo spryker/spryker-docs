@@ -51,7 +51,7 @@ The following table describes all general configuration keys and their values.
 | `UnzerConstants::WEBHOOK_RETRIEVE_URL`         | String | Webhook retrieve URL for Unzer payment notifications.                        |
 | `UnzerConstants::VAULT_DATA_TYPE`              | String | Abstract data type for Unzer data saved in `Spryker.Vault`.                  |
 | `VaultConstants::ENCRYPTION_KEY`               | String | Key for encrypting Unzer private keys in `Spryker.Vault`. |
-| `UnzerConstants::EXPENSES_REFUND_STRATEGY_KEY` | Integer | Expense (shipment) refund strategy key. for details, see the [Expense refund strategies](#expense-refund-strategies) section. |
+| `UnzerConstants::EXPENSES_REFUND_STRATEGY_KEY` | Integer | Expense (shipment) refund strategy key. for details, see the [Select expense refund strategies](#select-expense-refund-strategies) section. |
 | `UnzerApiConstants::LOG_API_CALLS`             | Boolean | Flag indicating if API calls log must be saved.                       |
 
 #### Configuration example

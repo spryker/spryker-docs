@@ -37,9 +37,9 @@ The following table describes attributes you select and enter when adding Unzer 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
 | NAME | Name of the Unzer standard credentials. |
-| CREDENTIALS TYPE | Type of the credentials <ul><li>*Marketplace (main channel)*—the credentials type for the marketplace with multiple merchants</li><li>*Standard*—the credentials type for a basic store without merchants. </li></ul> |
+| CREDENTIALS TYPE | Type of the credentials <ul><li>*Marketplace (main channel)*—the credentials type for the marketplace with multiple merchants</li><li>*Standard*—the credentials type for a basic store without merchants.</li></ul> |
 | UNZER PUBLIC KEY | Unique public key which Unzer provides for a project to accept payments. The key is store-specific. |
 | UNZER PRIVATE KEY | Unique private key which Unzer provides for a project to accept payments. The key is store-specific. |
 | STORE RELATION | Defines stores to add the Unzer payment method to. |
 | MERCHANT REFERENCE | Merchant ID on the Spryker side. |
-| PARTICIPANT ID | Merchant ID on the Unzer side, which identifies a merchant who receives money when the order is paid and has the [status](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/changing-the-state-of-order-items.html#reference-information-changing-the-state-of-order-items) `payment completed`. |
+| PARTICIPANT ID | Merchant ID on the Unzer side, which identifies a merchant who receives money when the order is paid and has the status `payment completed`. |

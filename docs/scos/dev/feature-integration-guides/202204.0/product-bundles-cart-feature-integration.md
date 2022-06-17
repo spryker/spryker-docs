@@ -89,12 +89,18 @@ In order to use this alternative solution, all old plugins have to be removed, a
 
 namespace Pyz\Zed\Cart;
 
+use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Cart\CartDependencyProvider as SprykerCartDependencyProvider;
 use Spryker\Zed\ProductBundle\Communication\Plugin\Cart\RefreshBundlesWithUnitedItemsCartOperationPostSavePlugin;
 use Spryker\Zed\ProductBundle\Communication\Plugin\Cart\UnfoldBundlesToUnitedItemsItemExpanderPlugin;
 
 class CartDependencyProvider extends SprykerCartDependencyProvider
 {
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\ItemExpanderPluginInterface>
+     */
     protected function getExpanderPlugins(Container $container): array
     {
         return [
@@ -103,6 +109,11 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
         ];
     }
     
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\CartOperationPostSavePluginInterface>
+     */
     protected function getPostSavePlugins(Container $container): array
     {
         return [
@@ -125,6 +136,9 @@ use Spryker\Client\ProductBundle\Plugin\Cart\ReplaceBundlesWithUnitedItemsCartCh
 
 class CartDependencyProvider extends SprykerCartDependencyProvider
 {
+    /**
+     * @return array<\Spryker\Client\CartExtension\Dependency\Plugin\CartChangeRequestExpanderPluginInterface>
+     */
     protected function getRemoveItemsRequestExpanderPlugins(): array
     {
         return [
@@ -147,6 +161,9 @@ use Spryker\Zed\ProductBundle\Communication\Plugin\PersistentCart\ReplaceBundles
 
 class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyProvider
 {
+    /**
+     * @return array<\Spryker\Zed\PersistentCartExtension\Dependency\Plugin\CartChangeRequestExpandPluginInterface>
+     */
     protected function getRemoveItemsRequestExpanderPlugins(): array
     {
         return [

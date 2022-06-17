@@ -26,87 +26,83 @@ This topic describes how to create categories.
 
 ## Prerequisites
 
-To start creating categories, go to **Catalog&nbsp;<span aria-label="and then">></span> Categories**
-
-Review the reference information before you start, or look up the necessary information as you go through the process.
+Review the [reference information] before you start, or look up the necessary information as you go through the process.
 
 
-## Creating a category
+## Define general settings of a category
 
-1. On the **Category** page, in the top right corner, click **Create category**.
+1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Categories**
+2. On the **Category** page, click **Create category**.
+3. On the **Create category** page, enter a **CATEGORY KEY**.
+4. For **PARENT**, select a parent category.
+5. Select one or more **ADDITIONAL PARENTS**.
+6. Select one or more **STORES**.
+7. Select a **TEMPLATE**.
+8. Optional: To activate the the category after creating, select **ACTIVE**.
+9. Optional: To show the category on the Storefront, select **VISIBLE IN THE CATEGORY TREE**.
+10. Optional: To make the category searchable on the Storefront, select **ALLOW TO SEARCH FOR THIS CATEGORY**.
+11. In the **Translations** section, enter a **NAME** for each locale.
+12. Optional: Enter any of the following for needed locales:
+    * **META TITLE**
+    * **META DESCRIPTION**
+    * **META KEYWORDS**
 
-2. On the **Create category** page, enter a **CATEGORY KEY**.
-. For **PARENT**, select a parent category.
-. Select one or more **ADDITIONAL PARENTS**.
-. Select one or more **STORES**
-. Select a **TEMPLATE**.
-. To activate the the category after creating, select **ACTIVE**.
-. To show the category on the Storefront, select **VISIBLE IN THE CATEGORY TREE**.
-. To make the category searchable on the Storefront, select **ALLOW TO SEARCH FOR THIS CATEGORY**.
-3. Click **Next** at the bottom of the page, or select the *Images* tab next to *Settings*.
-4. In the *Images* tab, add an image to the category:
-    1. Click **Add image set**.
-    2. Enter the attributes of your image set.
+13. Click **Next** and follow [Add images to a category](#add-images-to-a-category).
 
-    {% info_block infoBox %}
-
-    Keep in mind that small images are used when subcategories on the parent category page are displayed as a list, while the large images are used when subcategories are displayed as a grid.
-
-    {% endinfo_block %}
-
-5. To assign several images or image sets, click **Add image** or **Add image set** respectively, and enter URLs.
-
-   {% info_block infoBox %}
-
-    Even though you can add several image sets and several images to an image set, out of the box, there is no place in the back end and front end where several image sets or images can be displayed for a category. However, if you still do that, the following logic applies:
-    * When adding several image sets, the image set going first or having the name "default" is applied to the category.
-    * When adding several images to the image set that is active for the category, the image with the lowest Sort Order field value is applied to the category. If there are several images with the same value, the image which has been added first is applied. The lowest possible value is "0".
-
-    {% endinfo_block %}
-
-6. Click **Save**.
-
-
-### Reference information: Creating a category
-
-
-
-**Settings tab**
+## Reference information: Define general settings of a category
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
-| CATEGORY KEY | Value is used to automatically assign products and CMS blocks to your category through the import. |
-| Parent | Drop-down list with categories under which your category is displayed in the hierarchical tree. It means that the category being edited is nested under the selected category. Only one value can be selected. |
-| Additional Parents | Drop-down list with categories under which your category is located in addition to the parent category. You can select several values. |
-| STORES | Stores the given category is assigned to.  |
-| Template | Drop-down list with templates that define the look of your category on the Storefront. Ffor details about templates, see Category page template types). |
-| Active | Defines if the category is in the active state and is visible on the Storefront. |
-| Visible in the category tree | Defines if the category is shown in the menu on the Storefront. |
-| Allow to search for this category | Defines if the category is available in search results. |
-| Translations | Contains meta details, which are meant to improve search ranking in the search engines. |
-| Translations: Name | Name that serves as an ID for the back end. The name that is displayed to the customer on the shop website and is rendered with the help of the category key. |
-| Translations: Meta Title | Title that describes the category.  Meta information that is not displayed on the website to the customer but is located in the HTML code of the category page. |
-| Translations: Meta Description | Description of the category. Meta information that is not displayed on the website to the customer but is located in the HTML code of the category page. |
-| Translations: Meta Keywords | Keywords that are suitable for the category. |
+| CATEGORY KEY | Unique identifier of the category that is used for assigning products and CMS blocks to the categories through the import. |
+| PARENT | Defines under which category this category will be displayed on the Storefront. |
+| ADDITIONAL PARENTS | Defines under which categories, apart from the category defined in **PARENT**, the category will be displayed on the Storefront.  |
+| STORES | Stores which the category will be displayed in.  |
+| TEMPLATE | Defines how the category's page will look on the Storefront. For more information, see [Reference information: TEMPLATE](#reference-information-template) |
+| ACTIVE | Defines if the category is to be displayed on the Storefront. |
+| VISIBLE IN THE CATEGORY TREE | Defines if the category is to be displayed in the category tree on the Storefront. |
+| ALLOW TO SEARCH FOR THIS CATEGORY | Defines if customers can find the category on the Storefront using search. |
+| NAME | Name that is displayed on the Storefront. |
+| META TITLE | SEO title. |
+| META DESCRIPTION | SEO description. |
+| META KEYWORDS | SEO keywords. |
 
-If the CMS-related template is selected, the following additional attributes appear:
+## Add images to a category
+
+1. On the **Images** tab, do the following for the needed locales:
+    1. click **Add image set**.
+    2. Enter an **IMAGE SET NAME**.
+    3. Enter a **SMALL IMAGE URL**.
+    4. Enter a **LARGE IMAGE URL**.
+    5. Optional: Enter a **SORT ORDER**.
+    6. Optional: To add one more image, click **Add image**.
+    7. Repeat steps 3-6 until you add all the needed images.
+    8. Optional: To add one more image set, click **Add image set**.
+    9. Repeat steps 2-8 until you add all the needed image sets.
+2. Click **Save**.   
+    This opens the **Edit category** page with a success message displayed.
+
+
+{% info_block infoBox "Adding multiple images" %}
+
+You can add multiple image sets and multiple images to an image set. However, by default, in the Back Office and on the Storefront, multiple images are not displayed for categories. If there are multiple image sets or images for a category, the image displayed is defined as follows:
+  * The image set going first or named `default` is displayed.
+  * The image with the lowest **SORT ORDER** is displayed. If several images have the same **SORT ORDER**, the image going first is displayed.
+
+{% endinfo_block %}
+
+
+
+## Reference information: Add images to a category
 
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
-| CMS Blocks: top | Defines a CMS Block for a top position. Several values can be selected. |
-| CMS Blocks: middle | Defines a CMS Block for a middle position. Several values can be selected. |
-| CMS Blocks: bottom | Defines a CMS Block for a bottom position. Several values can be selected. |
+| IMAGE SET NAME | Name of the image set for you to use in the Back Office. |
+| SMALL IMAGE URL | URL to the small version of the image. This image will be displayed when categories are sorted as a grid. |
+| LARGE IMAGE URL | URL to the large version of the image. This image will be displayed when categories are sorted as a grid. |
+| SORT ORDER | When displayed together with other images, defines the order Numeric identifier of the image in the order of other images of an image set. This defines the order in which the images are shown in the back end and front end. The order starts from "0". |
 
-**Images tab**
 
-| ATTRIBUTE | DESCRIPTION |
-|-|-|
-| Image Set Name | Defines the name of the image set, e.g., Default. |
-| Small Image URL | URL of the small version of the image. |
-| Large Image URL | URL of the large version of the image. |
-| Sort Order | Numeric identifier of the image in the order of other images of an image set. This defines the order in which the images are shown in the back end and front end. The order starts from "0". |
-
-#### <a name="category-page-template-types"></a>Category page template types
+## Reference information: TEMPLATE
 
 When you create or update categories, you select a template according to which your category (and products assigned to it ) is going to be displayed in your online store.
 

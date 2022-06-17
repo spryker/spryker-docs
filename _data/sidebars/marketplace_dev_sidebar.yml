@@ -167,7 +167,7 @@ entries:
           - title: Combined Product Offer Import feature integration
             url: /docs/marketplace/dev/feature-integration-guides/combined-product-offer-import-feature-integration.html
 
-          - title: Marketplace Dummy Payment feature integration
+          - title: Marketplace Dummy Payment integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-dummy-payment-feature-integration.html
 
           - title: Marketplace Inventory Management feature integration
@@ -202,6 +202,11 @@ entries:
             include_versions:
             - "202204.0"
 
+          - title: Merchant Switcher + Customer Account Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-customer-account-management-feature-integration.html
+            include_versions:
+              - "202204.0"
+
           - title: Merchant Switcher + Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-wishlist-feature-integration.html
 
@@ -213,11 +218,10 @@ entries:
           - title: Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
 
-          - title: Marketplace Order Management + Customer Account Management feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-customer-account-management-feature-integration.html
-
           - title: Marketplace Order Management + Order Threshold feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-order-threshold-feature-integration.html
+            include_versions:
+            - "202204.0"
 
           - title: Marketplace Product Approval Process feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-approval-process-feature-integration.html
@@ -376,12 +380,12 @@ entries:
         nested:
           - title: REST API Marketplace B2C reference
             url: /docs/marketplace/dev/glue-api-guides/rest-api-b2c-reference.html
-            include_versions:       
+            include_versions:
             - "202204.0"
 
           - title: REST API Marketplace B2B reference
             url: /docs/marketplace/dev/glue-api-guides/rest-api-b2b-reference.html
-            include_versions:       
+            include_versions:
             - "202204.0"
 
           - title: Abstract products

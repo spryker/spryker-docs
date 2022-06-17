@@ -16,8 +16,9 @@ A *product attribute* is a characteristic of a product that consists of a name a
 
 You can create characteristic attributes for products, like brand or special features. You can define specific values to help you and your customers distinguish between products. You can assign multiple attributes to products to simplify the filter and category functions.
 
+![Descriptive attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Attributes/Attributes:+Reference+Information/descriptive-attributes.png)
 
-A Back Office user can [create product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html).
+A Back Office user can [create product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html).
 
 A developer can import [product attributes](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html) and [super attributes](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-attribute-key.csv.html).
 
@@ -28,7 +29,8 @@ A Back Office user can add product attributes to abstract and concrete products.
 
 
 ## Declared attributes
-A declared attribute is an attribute that was [created](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) or [imported](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html).
+
+A declared attribute is an attribute that was [created](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html) or [imported](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-management-attribute.csv.html).
 
 After declaring an attribute, Back Office users can add it to products, and developers can import products with it.
 
@@ -39,11 +41,12 @@ If a developer imports products with undeclared attributes, Back Office users ca
 {% endinfo_block %}
 
 ## Super attributes
-The Spryker Commerce OS product data model allows creating multiple variants of a product. For a shop to distinguish different product variants, some of their characteristics should be differerent. A product attribute that distinguishes one product variant from another is a *super attribute*.
+
+The Spryker Commerce OS product data model allows creating multiple variants of a product. For a shop to distinguish different product variants, some of their characteristics should be different. A product attribute that distinguishes one product variant from another is a *super attribute*.
 
 For a product variant to be selectable on the Storefront, a value of one of its product attributes should be unique compared to the product attribute values of other variants of the same abstract product.
 
-When creating a product attribute, a Back Office user selectes if it is a super attribute.
+When creating a product attribute, a Back Office user selects if it is a super attribute.
 
 Product variants of the same abstract product can differ by different super attributes. Check the following super attribute examples:
 
@@ -169,8 +172,8 @@ We recommend defining all the atributes you want to use.
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a product attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/creating-product-attributes.html) |
-| [Manage product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/managing-product-attributes.html) |
+| [Create product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html) |
+| [Edit product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/edit-product-attributes.html) |
 
 {% info_block warningBox "Developer guides" %}
 

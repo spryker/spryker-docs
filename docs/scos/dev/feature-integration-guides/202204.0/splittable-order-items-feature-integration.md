@@ -19,11 +19,6 @@ The Splittable Order Items feature is shipped with following modules:
 To install the Merchants and Merchant relations feature, follows the steps below:
 
 1. Install necessary modules using composer
-Update existing and install the required modules:
-
-```bash
-composer update "spryker/*" "spryker-shop/*"
-```
 
 ```bash
 composer require spryker/discount-extension:"^1.0.0" spryker/sales-quantity:"^1.0.0" --update-with-dependencies

@@ -1,8 +1,11 @@
 ---
-title: Managing merchant product offers
+title: Managing marketplace product offers
 last_updated: Apr 19, 2021
 description: This document describes how to view and manage merchant product offers in the Back Office.
 template: back-office-user-guide-template
+related:
+  - title: Marketplace Product Offer feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
 ---
 
 This document describes how to view and manage [merchant product offers](/docs/marketplace/user/features/{{page.version}}/marketplace-product-offer-feature-overview.html) in the Back Office.

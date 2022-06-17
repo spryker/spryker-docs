@@ -7,6 +7,9 @@ redirect_from:
   - /docs/marketplace/dev/glue-api-guides/201903.0/guest-carts/managing-guest-carts.html
   - /docs/marketplace/dev/glue-api-guides/201907.0/guest-carts/managing-guest-carts.html
   - /docs/marketplace/dev/glue-api-guides/202005.0/guest-carts/managing-guest-carts.html
+related:
+  - title: Managing guest cart items
+    link: docs/marketplace/dev/glue-api-guides/page.version/guest-carts/managing-guest-cart-items.html
 ---
 
 This endpoint allows managing guest carts.

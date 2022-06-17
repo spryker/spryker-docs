@@ -3,6 +3,9 @@ title: Managing marketplace concrete product image sets
 last_updated: Aug 11, 2021
 description: This document describes how to manage marketplace concrete product image sets in the Merchant Portal.
 template: back-office-user-guide-template
+related:
+  - title: Marketplace Product feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
 ---
 
 This document describes how to manage image sets of the marketplace concrete products in the Merchant Portal.
@@ -10,6 +13,7 @@ This document describes how to manage image sets of the marketplace concrete pro
 ## Prerequisites
 
 To start working with marketplace concrete products, take the following steps:
+
 1. Go to the **Merchant Portal&nbsp;<span aria-label="and then">></span> Products**.
 2. Next to the abstract product for which you want to create a concrete product, hover over the three dots and click **Manage Product** or just click the line.
    The ***[Product name]*** drawer opens.
@@ -17,9 +21,10 @@ To start working with marketplace concrete products, take the following steps:
 
 This document contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
-##  Adding images for marketplace concrete products
+## Adding images for marketplace concrete products
 
 To add an image for a marketplace concrete product:
+
 1. On the **Concrete Products** page, next to the concrete product you want to edit, hover over the three dots and click **Manage Product** or just click the line.
    The **Concrete Product SKU, Name** page opens.
 2. Scroll down to the **Images** pane.
@@ -33,6 +38,7 @@ To add an image for a marketplace concrete product:
 ## Editing images for marketplace concrete products
 
 To edit an image of the marketplace concrete product:
+
 1. On the **Concrete Products** page, next to the concrete product you want to edit, hover over the three dots and click **Manage Product** or just click the line.
    The **Concrete Product SKU, Name** page opens.
 2. Scroll down to the **Images** pane.

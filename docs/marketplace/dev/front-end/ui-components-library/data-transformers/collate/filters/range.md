@@ -2,6 +2,13 @@
 title: Data Transformer Collate Filter Range
 description: This document provides details about the Data Transformer Collate Filter Range service in the Components Library.
 template: concept-topic-template
+related:
+  - title: Data Transformer Filters
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/index.html
+  - title: Data Transformer Collate Filter Equals
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/equals.html
+  - title: Data Transformer Collate Filter Text
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/text.html
 ---
 
 This document explains the Data Transformer Collate Filter Range service in the Components Library.

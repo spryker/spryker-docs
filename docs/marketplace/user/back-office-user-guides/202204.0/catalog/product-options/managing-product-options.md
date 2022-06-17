@@ -3,6 +3,9 @@ title: Managing product options
 last_updated: Apr 21, 2021
 description: Use this document to manage product options in the Back Office.
 template: back-office-user-guide-template
+related:
+  - title: Creating product options
+    link: docs/marketplace/user/back-office-user-guides/page.version/catalog/product-options/managing-product-options.html
 ---
 
 This document describes how to manage product options.

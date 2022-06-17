@@ -3,6 +3,9 @@ title: Marketplace Merchant Custom Prices
 last_updated: Apr 29, 2022
 description: This document describes the process how to integrate the Marketplace Merchant Custom Prices into the Spryker Merchant Portal.
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Merchant Custom Prices feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-custom-prices-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Merchant Custom Prices feature into a Spryker project.

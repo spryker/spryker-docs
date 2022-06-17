@@ -18,7 +18,7 @@ entries:
                   - title: Add Unzer standard credentials
                     url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/add-unzer-standard-credentails.html
                   - title: Add Unzer marketplace credentials
-                    url: /pbc/all/payment/unzer/configuration-in-the-back-office/add-unzer-marketplace-credentials.html
+                    url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/add-unzer-marketplace-credentials.html
               - title: Extend & customize
                 nested:
                   - title: Frontend for a credit card

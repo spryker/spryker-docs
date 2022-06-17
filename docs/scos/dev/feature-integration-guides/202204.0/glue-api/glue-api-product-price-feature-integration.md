@@ -10,6 +10,11 @@ redirect_from:
   - /docs/glue-api-prices-api-feature-integration
   - /docs/en/glue-api-prices-api-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-price-feature-integration.html
+related:
+  - title: Product feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-feature-walkthrough.html
+  - title: Prices feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/prices-feature-walkthrough/prices-feature-walkthrough.html
 ---
 
 This document describes how to install the Prices feature API.

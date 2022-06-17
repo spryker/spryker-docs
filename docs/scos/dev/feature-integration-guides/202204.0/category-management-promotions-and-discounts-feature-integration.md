@@ -3,6 +3,12 @@ title: Category Management + Promotions and Discounts feature integration
 description: Add the category parameter to calculation and conditions queries in the Promotions & Discounts feature.
 last_updated: Jan 11, 2022
 template: feature-integration-guide-template
+related:
+  - title: Category Management feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/category-management-feature-walkthrough.html
+  - title: Promotions and Discounts feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/promotions-discounts-feature-walkthrough.html
+
 ---
 
 This document describes how to add the `category` parameter to calculation and conditions queries in the [Promotions & Discounts](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html) feature.

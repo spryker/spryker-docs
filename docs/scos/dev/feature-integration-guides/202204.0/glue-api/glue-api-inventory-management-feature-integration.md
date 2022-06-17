@@ -12,6 +12,9 @@ redirect_from:
   - /docs/en/glue-api-inventory-management-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-inventory-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-inventory-management-feature-integration.html
+related:
+  - title: Inventory Management feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
 ---
 
 This document describes how to install the Inventory Management feature API into a Spryker project.

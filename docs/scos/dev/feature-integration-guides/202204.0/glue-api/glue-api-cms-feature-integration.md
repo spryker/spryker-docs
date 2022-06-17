@@ -11,6 +11,9 @@ redirect_from:
   - /docs/en/glue-api-cms-feature-integration-guide
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-cms-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-cms-feature-integration.html
+related:
+  - title: CMS feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html
 ---
 
 This document describes how to integrate the CMS feature API into a Spryker project.

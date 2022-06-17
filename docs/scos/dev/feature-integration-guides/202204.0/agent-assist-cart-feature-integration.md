@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/agent-assist-cart-feature-integration
   - /docs/agent-assist-cart-feature-integration
   - /docs/en/agent-assist-cart-feature-integration
+related:
+  - title: Agent Assist feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/agent-assist-feature-walkthrough.html
+  - title: Cart feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Agent Assist + Cart feature into a Spryker project.

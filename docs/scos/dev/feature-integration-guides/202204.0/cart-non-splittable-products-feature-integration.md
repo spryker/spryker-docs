@@ -1,6 +1,6 @@
 ---
 title: Cart + Non-splittable products feature integration
-description: The guide describes the process of installing the Cart and Non-Splittable Products features into your project
+description: The guide describes the process of installing the Cart and Non-splittable Products features into your project
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cart-non-splittable-products-feature-integration
@@ -10,6 +10,11 @@ redirect_from:
   - /2021080/docs/en/cart-non-splittable-products-feature-integration
   - /docs/cart-non-splittable-products-feature-integration
   - /docs/en/cart-non-splittable-products-feature-integration
+related:
+  - title: Cart feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-feature-walkthrough.html
+  - title: Non-splittable Products feature walkthrough
+	link: docs/scos/dev/feature-walkthroughs/page.version/non-splittable-products-feature-walkthrough.html
 ---
 
 ## Install feature core

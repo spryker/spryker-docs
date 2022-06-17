@@ -1,5 +1,5 @@
 ---
-title: Glue API - Shopping lists feature integration
+title: Glue API - Shopping Lists feature integration
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-shopping-lists-feature-integration
@@ -13,6 +13,8 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-shopping-lists-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-shopping-lists-feature-integration.html
 related:
+  - title: Shopping Lists feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/shopping-lists-feature-walkthrough.html
   - title: Managing Shopping Lists
     link: docs/scos/dev/glue-api-guides/page.version/managing-shopping-lists/managing-shopping-lists.html
 ---

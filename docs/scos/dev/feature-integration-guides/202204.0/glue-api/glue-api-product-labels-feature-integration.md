@@ -13,6 +13,8 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-product-labels-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-labels-feature-integration.html
 related:
+  - title:Product Labels feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-labels-feature-walkthrough.html
   - title: Accessing Product Labels
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-product-labels.html
 ---
@@ -20,6 +22,7 @@ related:
 Follow the steps below to install Product Labels Feature API.
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | REQUIRED SUB-FEATURE |

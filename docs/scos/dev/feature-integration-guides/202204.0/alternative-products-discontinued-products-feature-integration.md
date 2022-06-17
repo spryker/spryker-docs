@@ -1,5 +1,5 @@
 ---
-title: Alternative products + Discontinued Products feature integration
+title: Alternative Products + Discontinued Products feature integration
 description: This guide describes all the steps needed to be performed in order to integrate the Alternative Products + Discontinued Products features into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -10,6 +10,11 @@ redirect_from:
   - /2021080/docs/en/alternative-products-discontinued-products-feature-integration
   - /docs/alternative-products-discontinued-products-feature-integration
   - /docs/en/alternative-products-discontinued-products-feature-integration
+related:
+  - title: Alternative Products feature walkthrough
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-alternative-products-feature-integration.html
+  - title: Product feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-feature-walkthrough.html
 ---
 
 ## Install feature core

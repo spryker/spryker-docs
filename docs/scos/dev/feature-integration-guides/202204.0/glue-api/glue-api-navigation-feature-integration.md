@@ -11,6 +11,9 @@ redirect_from:
   - /docs/glue-api-navigation-feature-integration
   - /docs/en/glue-api-navigation-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-navigation-feature-integration.html
+related:
+  - title: Navigation feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/navigation-feature-walkthrough/navigation-feature-walkthrough.html
 ---
 
 {% info_block errorBox %}

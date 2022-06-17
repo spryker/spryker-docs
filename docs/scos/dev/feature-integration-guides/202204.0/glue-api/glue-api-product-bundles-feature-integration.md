@@ -11,6 +11,9 @@ redirect_from:
   - /docs/glue-api-product-bundles-feature-integration
   - /docs/en/glue-api-product-bundles-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-bundles-feature-integration.html
+related:
+  - title: Product Bundles feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-bundles-feature-walkthrough.html
 ---
 
 Follow the steps below to integrate the Glue API: Product Bundles feature.

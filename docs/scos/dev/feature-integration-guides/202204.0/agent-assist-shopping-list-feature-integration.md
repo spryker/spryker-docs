@@ -9,6 +9,11 @@ redirect_from:
   - /2021080/docs/en/agent-assist-shopping-list-feature-integration
   - /docs/agent-assist-shopping-list-feature-integration
   - /docs/en/agent-assist-shopping-list-feature-integration
+related:
+  - title: Agent Assist feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/agent-assist-feature-walkthrough.html
+  - title: Shopping Lists feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/shopping-lists-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Agent Assist + Shopping List feature into a Spryker project.

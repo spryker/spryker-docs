@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/glue-api-agent-assist-feature-integration
   - /docs/glue-api-agent-assist-feature-integration
   - /docs/en/glue-api-agent-assist-feature-integration
+related:
+  - title: Agent Assist feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/agent-assist-feature-walkthrough.html
 ---
 
 Follow the steps below to install the Agent Assist feature API.

@@ -10,9 +10,15 @@ redirect_from:
   - /2021080/docs/en/cms-pages-in-search-results-integration
   - /docs/cms-pages-in-search-results-integration
   - /docs/en/cms-pages-in-search-results-integration
+related:
+  - title: CMS feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html
+  - title: Catalog feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/catalog-feature-walkthrough.html
 ---
 
-## Install feature core
+## Install feature Core
+
 Follow the steps below to install the CMS + Catalog feature core.
 
 ### Prerequisites

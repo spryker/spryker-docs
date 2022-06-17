@@ -11,12 +11,16 @@ redirect_from:
   - /docs/glue-api-products-feature-integration
   - /docs/en/glue-api-products-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-feature-integration.html
+related:
+  - title: Product feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-feature-walkthrough.html
 ---
 
 Follow the steps below to integrate the Glue API: Products feature.
 
 
 ## Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |

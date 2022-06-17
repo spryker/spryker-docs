@@ -11,6 +11,9 @@ redirect_from:
   - /docs/glue-api-measurement-units-feature-integration
   - /docs/en/glue-api-measurement-units-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-measurement-units-feature-integration.html
+related:
+  - title: Measurement Units feature walkthrough
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-measurement-units-feature-integration.html
 ---
 
 Follow the steps below to install Measurement units feature API.

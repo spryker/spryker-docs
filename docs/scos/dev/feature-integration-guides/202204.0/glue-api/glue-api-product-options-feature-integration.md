@@ -14,6 +14,9 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-product-options-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-product-options-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-options-feature-integration.html
+related:
+  - title: Product Options feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-options-feature-walkthrough.html
 ---
 
 ## Install Feature API

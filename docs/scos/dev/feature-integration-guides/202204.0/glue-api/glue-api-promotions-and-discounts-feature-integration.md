@@ -14,9 +14,11 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-promotions-and-discounts-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-promotions-and-discounts-feature-integration.html
 related:
-  - title: Managing Guest Carts
+  - title: Promotions and Discounts feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/promotions-discounts-feature-walkthrough.html
+  - title: Managing guest carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
-  - title: Managing Carts of Registered Users
+  - title: Managing carts of registered users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
 ---
 

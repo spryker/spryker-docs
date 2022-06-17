@@ -11,6 +11,9 @@ redirect_from:
   - /docs/checkout-feature-integration
   - /docs/en/checkout-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/checkout-feature-integration.html
+related:
+  - title: Checkout feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/checkout-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Checkout feature into a Spryker project. 

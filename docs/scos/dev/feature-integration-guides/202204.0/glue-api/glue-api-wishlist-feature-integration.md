@@ -13,7 +13,9 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-wishlist-feature-integration.html
   - /docs/scos/dev/feature-integration-guides//glue-api/glue-api-wishlist-feature-integration.html
 related:
-  - title: Managing Wishlists
+  - title: Wishlist feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/wishlist-feature-walkthrough.html
+  - title: Managing wishlists
     link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html
 ---
 

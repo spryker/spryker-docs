@@ -12,6 +12,8 @@ redirect_from:
   - /docs/en/cms-feature-integration-guide
   - /docs/scos/dev/feature-integration-guides/201811.0/cms-feature-integration.html
 related:
+  - title: CMS feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html
   - title: CMS page
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
 ---

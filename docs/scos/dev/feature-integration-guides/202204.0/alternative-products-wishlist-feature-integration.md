@@ -1,5 +1,5 @@
 ---
-title: Alternative products + Wishlist feature integration
+title: Alternative Products + Wishlist feature integration
 description: The guide walks you through the process of installing the Alternative products and Wishlist features into the project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -11,6 +11,11 @@ redirect_from:
   - /docs/alternative-products-wishlist-feature-integration
   - /docs/en/alternative-products-wishlist-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/alternative-products-wishlist-feature-integration.html
+related:
+  - title: Alternative Products feature walkthrough
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-alternative-products-feature-integration.html
+  - title: Wishlist feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/wishlist-feature-walkthrough.html
 ---
 
 ## Install feature frontend

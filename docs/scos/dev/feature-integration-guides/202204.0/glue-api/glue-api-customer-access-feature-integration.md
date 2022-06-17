@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/glue-api-customer-access-feature-integration
   - /docs/glue-api-customer-access-feature-integration
   - /docs/en/glue-api-customer-access-feature-integration
+related:
+  - title: Customer Access feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/customer-access-feature-walkthrough.html
 ---
 
 {% info_block errorBox %}

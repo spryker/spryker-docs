@@ -13,7 +13,9 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-shipment-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-shipment-feature-integration.html
 related:
-  - title: Checking Out Purchases and Getting Checkout Data
+  - title: Shipment feature walkthrough
+    title: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/shipment-feature-walkthrough.html
+  - title: Checking out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
 ---
 

@@ -11,6 +11,11 @@ redirect_from:
   - /docs/glue-api-configurable-bundle-product-feature-integration
   - /docs/en/glue-api-configurable-bundle-product-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-configurable-bundle-product-feature-integration.html
+related:
+  - title: Configurable Bundle feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/configurable-bundle-feature-walkthrough.html
+  - title: Product feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Glue API: Configurable Bundle + Product feature.

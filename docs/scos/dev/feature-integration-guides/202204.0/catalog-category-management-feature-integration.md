@@ -13,6 +13,11 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/catalog-category-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/catalog-category-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/catalog-category-management-feature-integration.html
+related:
+  - title: Catalog feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/catalog-feature-walkthrough.html
+  - title: Category Management feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/category-management-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Catalog + Category Management into a Spryker project.

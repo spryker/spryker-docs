@@ -158,24 +158,6 @@ To use a template with slots, make sure the [Templates and slots](/docs/scos/dev
 
 Select such a template to have slots for this category page. Slots can embed content from CMS Blocks and technology partner integrations. See [Templates and slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) for more details.
 
-## Deleting a category
-
-To delete a category:
-
-1. In the *Actions* drop-down, select **Delete** next to a specific category.
-You are taken to the *Delete category [Category name]* page.
-On *Delete category [Category name]*, you see detailed information about everything that will be de-assigned, moved, or deleted along with that category.
-2. Select the checkbox next to **Yes, I am sure** to confirm your awareness and click **Delete**.
-
-   {% info_block infoBox %}
-
-    Products assigned to a deleted category are de-assigned and remain in the system. If the same products are assigned to other categories, they stay assigned to those.
-
-   {% endinfo_block %}
-
-{% info_block infoBox %}
-
-Child categories of the deleted category are assigned to its parent categories.
 
 {% endinfo_block %}
 

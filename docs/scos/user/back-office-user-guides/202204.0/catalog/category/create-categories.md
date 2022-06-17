@@ -104,12 +104,10 @@ You can add multiple image sets and multiple images to an image set. However, by
 
 ## Reference information: TEMPLATE
 
-When you create or update categories, you select a template according to which your category (and products assigned to it ) is going to be displayed in your online store.
-
-The following templates are used to set up your category look:
+The following category templates are available by default:
 
 **Catalog (default)**
-<br>Select this template to display all product pages linked to the selected category. The product pages include the general product description, a price, an image, and a clickable **View** button that redirects you to the product details page.
+Displays the products in the category.
 
 <details><summary markdown='span'>The Catalog(default) template on the Storefront</summary>
 
@@ -117,8 +115,8 @@ The following templates are used to set up your category look:
 
 </details>
 
-**Catalog+Slots**
-<br>Select this template to show all product pages assigned to the selected category and a CMS Block. Depending on your design requirements, you need to set a specific CMS block and specify where it should be displayed: top, middle, or bottom.
+**Catalog + CMS Slot**
+Displays the products in the category and the content of the template's CMS slots. To learn how to add content to the slots, see [Best practices: Adding content to the Storefront pages using templates and slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/best-practices-adding-content-to-the-storefront-pages-using-templates-and-slots.html).
 
 <details><summary markdown='span'>The Catalog+CMS Block template on the Storefront</summary>
 
@@ -126,32 +124,14 @@ The following templates are used to set up your category look:
 
 </details>
 
-The category is in the catalog, and two CMS blocks are now displayed on the page: *Tackle Your To-Do's and Build a Space That Spurs Creativity* in the example).
-
-**Sub Category grid**
-Select the *Sub Category grid* template to create a multilevel category structure. Here you can assign an image to each subcategory.
+**Sub Categories grid**
+Displays the subcategories of the category.
 
 <details><summary markdown='span'>The Sub Category grid template on the Storefront</summary>
 
 ![Sub Category grid](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Category/Category:+Reference+Information/sub+category.gif)
 
 </details>
-
-**A template with slots**
-
-
-{% info_block infoBox %}
-
-To use a template with slots, make sure the [Templates and slots](/docs/scos/dev/feature-integration-guides/{{page.version}}/cms-feature-integration.html) feature is integrated into your project.
-
-{% endinfo_block %}
-
-Select such a template to have slots for this category page. Slots can embed content from CMS Blocks and technology partner integrations. See [Templates and slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) for more details.
-
-**Tips and tricks**
-<br>When you already know the exact parent category under which the category that you create is going to be nested, you can click **Add category to this node** for a specific parent category. This redirects you to the *Create category* page where you can perform the steps described above. The only difference is that the *Parent* field is auto-populated with the needed value.
-
-The same products can be assigned to multiple categories.
 
 ## Next Steps
 

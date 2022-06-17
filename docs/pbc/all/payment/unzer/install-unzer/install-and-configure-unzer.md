@@ -5,7 +5,7 @@ last_updated: Jun 17, 2022
 template: eature-integration-guide-template
 related:
 - title: Integrate Unzer
-  link: /docs/pbc/all/payment/unzer/install-unzer/integrate-unzer.html
+  link: docs/pbc/all/payment/unzer/install-unzer/integrate-unzer.html
 ---
 
 This document describes how to install and configure the Unzer module to [integrate the Unzer module](/docs/pbc/all/payment/unzer/install-unzer/integrate-unzer.html) into your project.

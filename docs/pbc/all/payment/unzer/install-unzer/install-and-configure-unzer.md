@@ -1,7 +1,7 @@
 ---
 title: Install and configure Unzer modules
-description: Install and configure Unzer module to work in the Spryker Commerce OS.
-last_updated: Jun 17, 2022
+description: Install and configure the Unzer module to work in the Spryker Commerce OS.
+last_updated: Jun 22, 2022
 template: feature-integration-guide-template
 related:
 - title: Integrate Unzer

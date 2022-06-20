@@ -1,6 +1,6 @@
 ---
 title: Add Unzer standard credentials
-last_updated: Jun 9, 2022
+last_updated: Jun 22, 2022
 description: This document shows how to add Unzer standard credentials
 template: back-office-user-guide-template
 ---

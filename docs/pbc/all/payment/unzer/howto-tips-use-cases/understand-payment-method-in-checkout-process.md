@@ -48,3 +48,32 @@ The customers in the checkout process will see the following payment methods in 
 * Apple Pay
 
 ### Multiple merchants in the cart
+
+We display all payment methods enabled for a marketplace business model in Unzer
+
+* Credit Card
+* Sofort
+* Unzer Bank Transfer
+
+##### Example
+
+In your Unzer account the following payment methods are enabled for the marketplace business model
+
+* Credit Card
+* Unzer Bank Transfer
+
+For the Merchant A, the following payment methods are enabled
+
+* Credit Card
+* PayPal
+* Apple Pay
+
+For the Merchant B, the following payment methods are enabled
+
+* Credit Card
+* Google Pay
+
+The customers in the checkout process will see the following payment methods in the checkout process
+
+* Credit Card
+* Unzer Bank Transfer

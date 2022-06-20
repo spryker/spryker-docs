@@ -63,6 +63,8 @@ entries:
     - title: What's new
       url: /docs/scos/user/intro-to-spryker/whats-new/whats-new.html
       nested:
+      - title: IE11 end of life
+        url: /docs/scos/user/intro-to-spryker/whats-new/ie11-end-of-life.html
       - title: Security audit reports
         nested:
         - title: 2019.11 - Security audit by SektionEins
@@ -1374,10 +1376,34 @@ entries:
             - "202009.0"
       - title: Attributes
         nested:
+        - title: Create product attributes
+          url: /docs/scos/user/back-office-user-guides/catalog/attributes/create-product-attributes.html
+          include_versions:
+          - "202204.0"
+        - title: Edit product attributes
+          url: /docs/scos/user/back-office-user-guides/catalog/attributes/edit-product-attributes.html
+          include_versions:
+          - "202204.0"            
         - title: Creating product attributes
           url: /docs/scos/user/back-office-user-guides/catalog/attributes/creating-product-attributes.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: Managing product attributes
           url: /docs/scos/user/back-office-user-guides/catalog/attributes/managing-product-attributes.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: References
           include_versions:
           - "201811.0"
@@ -1398,8 +1424,24 @@ entries:
             - "202009.0"
       - title: Availability
         nested:
+        - title: Check availability of products
+          url: /docs/scos/user/back-office-user-guides/catalog/availability/check-availability-of-products.html
+          include_versions:
+          - "202204.0"
+        - title: Edit stock of products and product bundles
+          url: /docs/scos/user/back-office-user-guides/catalog/availability/edit-stock-of-products-and-product-bundles.html
+          include_versions:
+          - "202204.0"              
         - title: Managing products availability
           url: /docs/scos/user/back-office-user-guides/catalog/availability/managing-products-availability.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: References
           include_versions:
           - "201811.0"
@@ -1576,7 +1618,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
           nested:
           - title: Reference information - Content Items
             url: /docs/scos/user/back-office-user-guides/content/content-items/references/reference-information-content-items.html
@@ -1612,23 +1653,31 @@ entries:
         - title: Create CMS blocks
           url: /docs/scos/user/back-office-user-guides/content/blocks/create-cms-blocks.html
           include_versions:
-          - "202004.0"
+          - "202204.0"
+        - title: Create category CMS blocks
+          url: /docs/scos/user/back-office-user-guides/content/blocks/create-category-cms-blocks.html
+          include_versions:
+          - "202204.0"
+        - title: Create product CMS blocks
+          url: /docs/scos/user/back-office-user-guides/content/blocks/create-product-cms-blocks.html
+          include_versions:
+          - "202204.0"
         - title: Create email CMS blocks
           url: /docs/scos/user/back-office-user-guides/content/blocks/create-email-cms-blocks.html
           include_versions:
-          - "202004.0"
+          - "202204.0"
         - title: Edit CMS blocks
           url: /docs/scos/user/back-office-user-guides/content/blocks/edit-cms-blocks.html
           include_versions:
-          - "202004.0"
+          - "202204.0"
         - title: Edit placeholders in CMS blocks
           url: /docs/scos/user/back-office-user-guides/content/blocks/edit-placeholders-in-cms-blocks.html
           include_versions:
-          - "202004.0"
+          - "202204.0"
         - title: View CMS blocks
           url: /docs/scos/user/back-office-user-guides/content/blocks/view-cms-blocks.html
           include_versions:
-          - "202004.0"
+          - "202204.0"
         - title: Creating CMS blocks
           url: /docs/scos/user/back-office-user-guides/content/blocks/creating-cms-blocks.html
           include_versions:
@@ -2479,6 +2528,18 @@ entries:
         - "202108.0"
         - "202204.0"
         nested:
+        - title: Add carrier companies
+          url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/add-carrier-companies.html
+          include_versions:
+          - "202204.0"
+        - title: Add delivery methods
+          url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/add-delivery-methods.html
+          include_versions:
+          - "202204.0"
+        - title: Edit delivery methods
+          url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/edit-delivery-methods.html
+          include_versions:
+          - "202204.0"
         - title: Creating a carrier company
           url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-carrier-companies.html
           include_versions:
@@ -2488,7 +2549,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Creating and managing delivery methods
           url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-and-managing-delivery-methods.html
           include_versions:
@@ -2498,7 +2558,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: References
           include_versions:
           - "202001.0"
@@ -2521,6 +2580,22 @@ entries:
         nested:
         - title: Managing glossary
           url: /docs/scos/user/back-office-user-guides/administration/glossary/managing-glossary.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
+        - title: Add translations
+          url: /docs/scos/user/back-office-user-guides/administration/glossary/add-translations.html
+          include_versions:
+          - "202204.0"
+        - title: Edit translations
+          url: /docs/scos/user/back-office-user-guides/administration/glossary/edit-translations.html
+          include_versions:
+          - "202204.0"
       - title: Tax rates
         nested:
         - title: Create tax rates

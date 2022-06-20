@@ -13,6 +13,21 @@ This document describes how to integrate the [Splittable Order Items](/docs/scos
 
 ## Install feature core
 
+Follow the steps below to install feature core.
+
+### Prerequisites
+
+To start feature integration, overview and install the necessary features:
+
+| NAME         | EXPECTED DIRECTORY | INTEGRATION GUIDE                                                                                                                    |
+|--------------|--------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| Spryker Core | {{page.version}}   | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Product      | {{page.version}}   | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)           | 
+| Cart         | {{page.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html)                 |
+| Checkout     | {{page.version}}   | [Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html)         |
+
+### Feature installation
+
 The Splittable Order Items feature is shipped with following modules:
 
 | MODULE | DESCRIPTION |
@@ -20,7 +35,7 @@ The Splittable Order Items feature is shipped with following modules:
 | [DiscountExtension](https://github.com/spryker/spryker/tree/master/Bundles/DiscountExtension) | Provides extension plugins for the `Discount` module. |
 | [SalesQuantity](https://github.com/spryker/spryker/tree/master/Bundles/SalesQuantity)| Provides support in handling and configuring quantity for sales orders and items. |
 
-To install the Splittable Order Items feature, follows the steps below:
+To install the Splittable Order Items feature, follow the steps below:
 
 1. Install necessary modules using composer
 

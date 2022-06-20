@@ -23,9 +23,9 @@ To add Unzer marketplace credentials, take the steps in the following sections.
    4. For **CREDENTIALS TYPE**, select **Marketplace (main channel)**.
    5. Enter **UNZER PUBLIC KEY**.
    6. Enter **UNZER PRIVATE KEY**.
-   7. Select **STORE RELATION**.
+   7. Select **STORE RELATIONS**.
 
-     {% info_block infoBox "Info" %}
+     {% info_block infoBox "Note" %}
 
       Select only unused store relations. Otherwise, when you complete adding your credentials, an error message is thrown.
 
@@ -48,7 +48,7 @@ To add Unzer marketplace credentials, take the steps in the following sections.
 | UNZER PRIVATE KEY | Unique private key which Unzer provides to a project to accept payments. The key is store-specific. |
 | UNZER PUBLIC KEY (MAIN MERCHANT CREDENTIALS) | Unique public key which Unzer provides to each merchant to accept payments. The key is merchant-specific. |
 | UNZER PRIVATE KEY (MAIN MERCHANT CREDENTIALS) | Unique private key which Unzer provides to each merchant to accept payments. The key is merchant-specific. |
-| STORE RELATION | Defines stores to add the Unzer payment method to. |
+| STORE RELATION | Defines [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the Unzer payment method will be available in. |
 | MERCHANT REFERENCE | Merchant ID on the Spryker side. |
 | PARTICIPANT ID | Merchant reference on the Unzer side, which identifies a merchant who receives money when the order is paid and gets the status `payment completed`. |
 

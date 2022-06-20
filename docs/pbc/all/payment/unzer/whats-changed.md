@@ -36,7 +36,7 @@ The following improvements have been made:
 
 ## June 6th 2022
 
-Initial release of the Unzer integration. This release contains four modules.
+Initial release of the Unzer integration. This release contains four modules:
 
 * [Unzer](https://github.com/spryker-eco/unzer/releases/tag/1.0.0)
 * [Unzer GUI](https://github.com/spryker-eco/unzer-gui/releases/tag/1.0.0)

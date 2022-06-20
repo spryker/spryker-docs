@@ -17,10 +17,10 @@ Review the reference information before you start, or look up the necessary info
    2. On the **Overview of Unzer Credentials** page, click **Add Unzer Credentials**.
       The **Add Unzer Credentials** page opens.
    3. For the new credentials, enter a **NAME**.
-   4. Select **CREDENTIALS TYPE**.
+   4. For **CREDENTIALS TYPE**, select **Standard**.
    5. Enter **UNZER PUBLIC KEY**.
    6. Enter **UNZER PRIVATE KEY**.
-   7. from the **STORE RELATION** dropdown, select **Standard**.
+   7. Select **STORE RELATIONS**.
 
      {% info_block infoBox "Info" %}
 
@@ -40,6 +40,6 @@ The following table describes attributes you select and enter when adding Unzer 
 | CREDENTIALS TYPE | Type of the credentials <ul><li>*Marketplace (main channel)*—the credentials type for the marketplace with multiple merchants</li><li>*Standard*—the credentials type for a basic store without merchants.</li></ul> |
 | UNZER PUBLIC KEY | Unique public key which Unzer provides for a project to accept payments. The key is store-specific. |
 | UNZER PRIVATE KEY | Unique private key which Unzer provides for a project to accept payments. The key is store-specific. |
-| STORE RELATION | Defines stores to add the Unzer payment method to. |
+| STORE RELATION | Defines [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the Unzer payment method will be available in.  |
 | MERCHANT REFERENCE | Merchant ID on the Spryker side. |
-| PARTICIPANT ID | Merchant ID on the Unzer side, which identifies a merchant who receives money when the order is paid and has the status `payment completed`. |
+| PARTICIPANT ID | Merchant ID on the Unzer side, which will identifies a merchant who receives money when the order is paid and has the status `payment completed`. |

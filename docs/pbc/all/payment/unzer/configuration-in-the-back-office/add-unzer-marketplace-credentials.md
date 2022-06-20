@@ -20,7 +20,7 @@ To add Unzer marketplace credentials, take the steps in the following sections.
    2. On the **Overview of Unzer Credentials** page, click **Add Unzer Credentials**.
       The **Add Unzer Credentials** page opens.
    3. For the new credentials, enter a **NAME** .
-   4. From the **CREDENTIALS TYPE** dropdown, select **Marketplace (main channel)**.
+   4. For **CREDENTIALS TYPE**, select **Marketplace (main channel)**.
    5. Enter **UNZER PUBLIC KEY**.
    6. Enter **UNZER PRIVATE KEY**.
    7. Select **STORE RELATION**.

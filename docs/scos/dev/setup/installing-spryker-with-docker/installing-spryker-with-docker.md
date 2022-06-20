@@ -26,7 +26,7 @@ This section is a comprehensive introduction to running Spryker in Docker contai
 
 Spryker provides a standardized and customizable way to bootstrap applications and prepare development and production environments using the [Docker SDK tool](/docs/scos/dev/the-docker-sdk/{{site.version}}/the-docker-sdk.html).
 
-The checklists below will guide you through the necessary steps to manage your Spryker installation using the Docker SDK.
+The following checklists guide you through the necessary steps to manage your Spryker installation using the Docker SDK.
 
 ## Prerequisites
 

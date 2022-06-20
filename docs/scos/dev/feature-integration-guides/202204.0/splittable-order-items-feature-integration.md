@@ -37,7 +37,7 @@ The Splittable Order Items feature is shipped with following modules:
 
 To install the Splittable Order Items feature, follow the steps below:
 
-1. Install necessary modules using composer
+1. Install necessary modules using Composer
 
 ```bash
 composer require spryker/discount-extension:"^1.0.0" spryker/sales-quantity:"^3.4.0" --update-with-dependencies

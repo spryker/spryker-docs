@@ -1,5 +1,5 @@
 ---
-title: Understand the different refund strategies for shipping costs
+title: "Unzer: Strategies of refunding shipping costs"
 description: Depending on your requirements you can refund shipping costs in different ways.
 last_updated: Jun 17, 2022
 template: concept-topic-template

@@ -12,7 +12,7 @@ This document shows how to integrate Unzer into your project.
 
 ## Prerequisites
 
-Before integrating Unzer into your project, make sure you have [installed and configured Unzer](/docs/pbc/all/payment/unzer/install-unzer/install-and-configure-unzer.html).
+[Install and configure Unzer](/docs/pbc/all/payment/unzer/install-unzer/install-and-configure-unzer.html).
 
 To integrate Unzer, follow the steps below.
 

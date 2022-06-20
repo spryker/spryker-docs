@@ -5,9 +5,7 @@ description: This document desribes the Unzer payment method
 template: concept-topic-template
 ---
 
-## Unzer USP
-
-### Accept payments. Effortlessly and anywhere
+## Accept payments. Effortlessly and anywhere
 
 Every business is unique. What do you need to succeed?
 

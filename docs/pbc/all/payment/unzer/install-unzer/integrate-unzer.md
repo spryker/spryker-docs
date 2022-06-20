@@ -1,6 +1,6 @@
 ---
-title: Integrate Unzer in your project
-description: Integrate the Unzer module into the Spryker Commerce OS.
+title: Integrate Unzer
+description: Integrate Unzer into the Spryker Commerce OS.
 last_updated: Jun 17, 2022
 template: feature-integration-guide-template
 related:
@@ -8,13 +8,13 @@ related:
   link: docs/pbc/all/payment/unzer/install-unzer/install-and-configure-unzer.html
 ---
 
-This document shows how to integrate the Unzer module into your project.
+This document shows how to integrate Unzer into your project.
 
 ## Prerequisites
 
-Before integrating Unzer into your project, make sure you have [installed and configured the Unzer module](/docs/pbc/all/payment/unzer/install-unzer/install-and-configure-unzer.html).
+Before integrating Unzer into your project, make sure you have [installed and configured Unzer](/docs/pbc/all/payment/unzer/install-unzer/install-and-configure-unzer.html).
 
-To integrate the Unzer module, follow the steps below.
+To integrate Unzer, follow the steps below.
 
 ## OMS
 

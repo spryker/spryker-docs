@@ -18,7 +18,7 @@ entries:
               - title: Use cases & HowTos & Tips
                 nested:
                   - title: Understand how payment methods are displayed in the checkout process
-                  url: /docs/pbc/all/payment/unzer/howto-tips-use-cases/understand-payment-method-in-checkout-process.html
+                    url: /docs/pbc/all/payment/unzer/howto-tips-use-cases/understand-payment-method-in-checkout-process.html
               - title: API endpoints
               - title: Configuration in the Back Office
                 nested:

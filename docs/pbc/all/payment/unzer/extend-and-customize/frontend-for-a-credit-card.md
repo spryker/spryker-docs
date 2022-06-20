@@ -1,6 +1,6 @@
 ---
 title: Frontend for credit card
-last_updated: Jun 16, 2022
+last_updated: Jun 22, 2022
 description: This document describes how to add the frontend for a credit card to your project.
 template: concept-topic-template
 ---

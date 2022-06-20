@@ -1,35 +1,37 @@
 ---
 title: What's changed
-last_updated: Jun 9, 2022
+last_updated: Jun 20, 2022
 description: This document lists all the Unzer releases
 template: concept-topic-template
 ---
 
 # What's changed in Unzer
 
-This page list all the Unzer releases.
+This page lists all the Unzer releases.
 
 ## June 14th 2022
 
-This release contains one module
-
-* [Unzer](https://github.com/spryker-eco/unzer/releases/tag/1.0.1)
+This release contains one module—[Unzer](https://github.com/spryker-eco/unzer/releases/tag/1.0.1)
 
 [Public release details](https://api.release.spryker.com/release-group/4208)
 
 
-### Breaking Changes
+### Breaking changes
 
-Added new required transfer fields for `UnzerFacade::executeChargeOmsCommand()`. Impacted `UnzerChargeCommandByOrderPlugin` with facade changes.
-Added new required transfer fields for `UnzerFacade::executeRefundOmsCommand()`. Impacted `UnzerRefundCommandByOrderPlugin` with facade changes.
-Introduced `spy_payment_unzer_shipment_charge` table.
+The following changes have been made:
+
+* Added new required transfer fields for `UnzerFacade::executeChargeOmsCommand()`. Impacted `UnzerChargeCommandByOrderPlugin` with facade changes.
+* Added new required transfer fields for `UnzerFacade::executeRefundOmsCommand()`. Impacted `UnzerRefundCommandByOrderPlugin` with facade changes.
+* Introduced `spy_payment_unzer_shipment_charge` table.
 
 ### Improvements
 
-Adjusted `UnzerFacade::executeChargeOmsCommand()` so shipment costs are correctly calculated while charge. Impacted `UnzerChargeCommandByOrderPlugin` with facade changes.
-Adjusted `UnzerFacade::executeRefundOmsCommand()` so shipment costs are correctly calculated while refund. Impacted `UnzerRefundCommandByOrderPlugin` with facade changes.
-Introduced `PaymentUnzerShipmentCharge` transfer object.
-Introduced `UnzerCharge.chargedSalesShipmentIds` transfer field.
+The following improvements have been made:
+
+* Adjusted `UnzerFacade::executeChargeOmsCommand()` so shipment costs are correctly calculated while charge. Impacted `UnzerChargeCommandByOrderPlugin` with facade changes.
+* Adjusted `UnzerFacade::executeRefundOmsCommand()` so shipment costs are correctly calculated while refund. Impacted `UnzerRefundCommandByOrderPlugin` with facade changes.
+* Introduced `PaymentUnzerShipmentCharge` transfer object.
+* Introduced `UnzerCharge.chargedSalesShipmentIds` transfer field.
 
 
 ## June 6th 2022

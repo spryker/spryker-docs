@@ -1,7 +1,7 @@
 ---
 title: Unzer
 last_updated: Jun 9, 2022
-description: This document desribes Unzer
+description: This document desribes the Unzer payment method
 template: concept-topic-template
 ---
 
@@ -29,8 +29,8 @@ You can use Unzer in a single seller context or a marketplace context.
 
 ### Payment methods available in the integration
 
-| Payment Method | Single seller compatible | Marketplace compatible |
+| PAYMENT METHOD | SINGLE SELLER COMPITABLE | MARKETPLACE COMPITABLE |
 |-|-|-|
-| Credit Card | Yes | Yes |
-| Sofort | Yes | Yes |
-| Unzer Bank Transfer | Yes | Yes |
+| Credit Card | &check; | &check; |
+| Sofort | &check; | &check; |
+| Unzer Bank Transfer | &check; | &check; |

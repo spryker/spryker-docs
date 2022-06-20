@@ -7,18 +7,8 @@ template: back-office-user-guide-template
 
 To delete a category in the Back Office, follow the steps:
 
-1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Category**.
-2. 
-You are taken to the *Delete category [Category name]* page.
-On *Delete category [Category name]*, you see detailed information about everything that will be de-assigned, moved, or deleted along with that category.
-2. Select the checkbox next to **Yes, I am sure** to confirm your awareness and click **Delete**.
-
-   {% info_block infoBox %}
-
-    Products assigned to a deleted category are de-assigned and remain in the system. If the same products are assigned to other categories, they stay assigned to those.
-
-   {% endinfo_block %}
-
-{% info_block infoBox %}
-
-Child categories of the deleted category are assigned to its parent categories.
+1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Categories**.
+    This opens the **Category** page.
+2. Next to the category you want to delete, click **Actions&nbsp;<span aria-label="and then">></span> Delete**.
+3. On the **Delete category [Category name]** page, select **Yes, I am sure** and click **Delete**.
+    This opens the **Category** with a success message displayed. The category is no longer displayed in the list. Products assigned to the deleted category are de-assigned and remain in the system. If the same products are assigned to other categories, they stay assigned to those. Child categories of the deleted category are assigned the deleted category's parent category.

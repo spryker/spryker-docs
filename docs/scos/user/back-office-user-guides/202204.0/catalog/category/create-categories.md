@@ -22,16 +22,11 @@ related:
     link: docs/scos/user/features/page.version/category-management-feature-overview.html
 ---
 
-This topic describes how to create categories.
-
-## Prerequisites
-
-Review the [reference information] before you start, or look up the necessary information as you go through the process.
-
+To create a category in the Back Office, follow the steps below.
 
 ## Define general settings of a category
 
-1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Categories**
+1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Categories**.
 2. On the **Category** page, click **Create category**.
 3. On the **Create category** page, enter a **CATEGORY KEY**.
 4. For **PARENT**, select a parent category.

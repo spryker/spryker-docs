@@ -25,7 +25,7 @@ Follow the steps below to install feature core.
 To start feature integration, overview and install the necessary features:
 
 | MODULE | EXPECTED DIRECTORY | INTEGRATION GUIDE |
-| --- | --- |
+| --- | --- | --- |
 | Product Bundles | {{page.version}} | [Product Bundles feature integration](https://docs.spryker.com/docs/scos/dev/feature-integration-guides/202204.0/product-bundles-feature-integration.html)|
 | Cart | {{page.version}} | |
 | Spryker Core | {{page.version}} | [Spryker Core feature integration](https://docs.spryker.com/docs/scos/dev/feature-integration-guides/202204.0/spryker-core-feature-integration.html)|

@@ -62,7 +62,7 @@ Schematically, the process looks like this:
 
 When order is made, stock is not updated automatically in the system, you have to set it manually. You can define stock only for concrete products. You can set stock by:
 
-* Editing product stock in the Back Office. For details, see [Editing stock](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html#editing-stock).
+* Editing product stock in the Back Office. For details, see [Edit stock of products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/edit-stock-of-products-and-product-bundles.html).
 * Importing the quantities of items stored in each of the warehouses. For details, see [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/stocks.html).
 
 ## Availability management
@@ -79,7 +79,7 @@ Product availability after the order:
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/after-order-placement.png)
 
-For details about how you can check product availability in the Back Office, see [Checking availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html#checking-availability).
+For details about how you can check product availability in the Back Office, see [Check availability of products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/check-availability-of-products.html).
 
 {% info_block infoBox %}
 
@@ -108,7 +108,8 @@ For SEO purposes, products that are not available can still be displayed on the 
 |---|
 | [Create a warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/create-warehouses.html)  |
 | [Manage warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/edit-warehouses.html) |
-| [Manage product availabilities](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html)  |
+| [Check availability of products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/check-availability-of-products.html)  |
+| [Edit stock of products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/edit-stock-of-products-and-product-bundles.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

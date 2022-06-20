@@ -9,15 +9,20 @@ There are no tables in the DB after deploy.
 
 {% info_block warningBox "Note" %}
 
-It is recommended to push all the migrations to a repository as a go-live preparation and not during the development (to simplify the process of development).
+It is recommended to define a strategy for migrations at the start of the project. 
+We recommend to push all the migrations to a repository as a go-live preparation to make sure that all the migrations that are executed against production are also in the repositoriy to ease possible troubleshooting in the future.
 
 {% endinfo_block %}
+
+During the development you can keep your migrations ignored by a repositoriy to simplify the process of development.
 
 ## Solution
 
 1. Check if the files are not under ignore (for example, `.dockerignore`) and added to the version control system (for example, Github).
-2. Check that during the deployment the files are not removed. For example, check if during the deployment you are not using the command that removes migrations:
+2. Check that during the deployment the files are not removed. For example, check if during the deployment (in the pipeline) you are not using the command that removes migrations:
 
 ```bash
 console propel:migration:delete
 ```
+
+Find more information about [deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-pipelines.html) or [customizing deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/customizing-deployment-pipelines.html) 

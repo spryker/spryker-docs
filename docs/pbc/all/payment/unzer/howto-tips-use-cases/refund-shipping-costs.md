@@ -5,7 +5,7 @@ last_updated: Jun 17, 2022
 template: concept-topic-template
 ---
 
-# Understand the different refund strategies for shipping costs
+## Understand the different refund strategies for shipping costs
 
 The Spryker integration with Unzer offers multiple strategies to refund shipping costs. Ask a developer in your team to enable the strategy that suit your needs.
 

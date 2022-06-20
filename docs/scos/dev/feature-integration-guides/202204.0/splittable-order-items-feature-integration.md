@@ -26,7 +26,7 @@ To start feature integration, overview and install the necessary features:
 | Cart         | {{page.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html)                 |
 | Checkout     | {{page.version}}   | [Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html)         |
 
-### Feature installation
+### Install feature
 
 The Splittable Order Items feature is shipped with following modules:
 

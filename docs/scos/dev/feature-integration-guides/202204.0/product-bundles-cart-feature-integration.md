@@ -33,7 +33,7 @@ To start feature integration, overview and install the necessary features:
 | Cart | {{page.version}} | |
 
 
-### 1) Set up behavior
+### Set up behavior
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |

@@ -9,9 +9,11 @@ redirect_from:
   - /v3/docs/en/splittable-order-items-integration
 ---
 
+## Install feature core
+
 The Splittable Order Items feature is shipped with following modules:
 
-| Module | Description |
+| MODULE | DESCRIPTION |
 | --- | --- |
 | [DiscountExtension](https://github.com/spryker/spryker/tree/master/Bundles/DiscountExtension) | Provides extension plugins for the `Discount` module. |
 | [SalesQuantity](https://github.com/spryker/spryker/tree/master/Bundles/SalesQuantity)| Provides support in handling and configuring quantity for sales orders and items. |
@@ -24,7 +26,7 @@ To install the Splittable Order Items feature, follows the steps below:
 composer require spryker/discount-extension:"^1.0.0" spryker/sales-quantity:"^3.4.0" --update-with-dependencies
 ```
 
-2. Run the commands:
+2. Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -34,9 +36,9 @@ console propel:install
 3. Add a plugin to Zed `CartDependencyProvider`:
 
 
-| Module | Plugin | Description | Method in Dependency Provider |
+| MODULE | PLUGIN | DESCRIPTION | METHOD IN DEPENDENCY PROVIDER |
 | --- | --- | --- | --- |
-| `Cart` | `IsQuantitySplittableItemExpanderPlugin` | Adds a new `isQuantitySplittable` attribute for products | `getExpanderPlugins` |
+| Cart | IsQuantitySplittableItemExpanderPlugin | Adds a new `isQuantitySplittable` attribute for products | `getExpanderPlugins` |
 
 **src/Pyz/Zed/Cart/CartDependencyProvider.php**
 
@@ -57,9 +59,9 @@ protected function getExpanderPlugins(Container $container)
 4. Add a plugin to Zed `SalesDependencyProvider`:
 
 
-| Module | Plugin | Description | Method in Dependency Provider |
+| MODULE | PLUGIN | DESCRIPTION | METHOD IN DEPENDENCY PROVIDER |
 | --- | --- | --- | --- |
-| `Sales` | `NonSplittableItemTransformerStrategyPlugin` | Defines order item breakdown strategy for cart items depending on if the product is splittable or non-splittable. | `getItemTransformerStrategyPlugins` |
+| Sales | NonSplittableItemTransformerStrategyPlugin | Defines the order item's breakdown strategy for cart items depending on if the product is splittable or nonsplittable. | `getItemTransformerStrategyPlugins` |
 
 **src/Pyz/Zed/Sales/SalesDependencyProvider.php**
 
@@ -82,7 +84,7 @@ use Spryker\Zed\SalesQuantity\Communication\Plugin\SalesExtension\NonSplittableI
     }
 ```
 
-5. You can set quantity threshold for an order item to be considered non-splittable by adjusting the following config:
+5. You can set quantity threshold for an order item to be considered nonsplittable by adjusting the following config:
 
 **src/Pyz/Zed/SalesQuantity/SalesQuantityConfig.php**
 
@@ -107,19 +109,18 @@ class SalesQuantityConfig extends SprykerSalesQuantityConfig
 
 ```
 
-Change `SalesQuantityConfig::ITEM_NONSPLIT_QUANTITY_THRESHOLD` to set the threshold for regular items 
-and `SalesQuantityConfig::BUNDLED_ITEM_NONSPLIT_QUANTITY_THRESHOLD` for items in a bundle.
-If order item quantity equals or is higher than the threshold, the item is considered non-splittable. 
+Change `SalesQuantityConfig::ITEM_NONSPLIT_QUANTITY_THRESHOLD` to set the threshold for regular items and `SalesQuantityConfig::BUNDLED_ITEM_NONSPLIT_QUANTITY_THRESHOLD` for items in a bundle.
+If order item quantity equals or is higher than the threshold, the item is considered non-splittable.
 Using `null` deactivates the threshold.
 
-The threshold does not affect order items with `isQuantitySplittable` set to `false`. 
+The threshold does not affect order items with `isQuantitySplittable` set to `false`.
 Such items are considered non-splittable regardless of the threshold.  
 
 
 6. Add plugins to Zed `DiscountDependencyProvider`:
 
 
-| Module | Plugin | Description | Method in Dependency Provider |
+| MODULE | PLUGIN | DESCRIPTION | METHOD IN DEPENDENCY PROVIDER |
 | --- | --- | --- | --- |
 | `Discount` |`NonSplittableDiscountableItemTransformerStrategyPlugin and`  | Defines discountable item transformation strategy for splittable and non-splittable items to adjust the discount calculation item breakdown according to the corresponding order item breakdown. | `getDiscountableItemTransformerStrategyPlugins` |
 

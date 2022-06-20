@@ -18,22 +18,23 @@ redirect_from:
 
 ## Install feature core
 
+Follow the steps below to install feature core.
+
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:
 
-| MODULE | EXPECTED DIRECTORY |
+| MODULE | EXPECTED DIRECTORY | INTEGRATION GUIDE |
 | --- | --- |
-| Product Bundles | {{page.version}} |
-| Cart | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Product Bundles | {{page.version}} | [Product Bundles feature integration](https://docs.spryker.com/docs/scos/dev/feature-integration-guides/202204.0/product-bundles-feature-integration.html)|
+| Cart | {{page.version}} | |
+| Spryker Core | {{page.version}} | [Spryker Core feature integration](https://docs.spryker.com/docs/scos/dev/feature-integration-guides/202204.0/spryker-core-feature-integration.html)|
 
 ### 1) Set up behavior
 
-
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ProductBundleItemCountQuantityPlugin | Returns combined quantity of all items in cart. | None | Spryker\Client\ProductBundle\Plugin\Cart |
+| ProductBundleItemCountQuantityPlugin | Returns combined quantity of all items in the cart. | None | Spryker\Client\ProductBundle\Plugin\Cart |
 
 **src/Pyz/Client/Cart/CartDependencyProvider.php**
 
@@ -59,17 +60,17 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Add several regular products and product bundles to cart.
-Make sure that item counter at cart widget shows correct number (bundled items should not be counted as separate items).
+Add several regular products and product bundles to the cart.
+Make sure that the item counter of the cart widget shows the correct number—bundled items must not be counted as separate items.
 
 {% endinfo_block %}
 
-## Alternative setup for handling large quantities of bundled products in cart
+## Alternative setup for handling large quantities of bundled products in the cart
 
-When a bundle product is added to cart with a large quantity, 100-200 items for example, users may 
-experience a slow-down in cart operations handling or even may get server internal error due to insufficient memory.
+When a bundle product is added to the cart with a large quantity (for example, 100-200 items), users may
+experience a slow-down in the cart operations handling or even may get an internal server error due to insufficient memory.
 
-To avoid that, an alternative set of plugins was implemented.
+To avoid a slow-down in the cart operations and internal server errors, an alternative set of plugins has been implemented:
 
 | PLUGIN                                                       | ALTERNATIVE FOR                         | NAMESPACE                                                     |
 |--------------------------------------------------------------|-----------------------------------------|---------------------------------------------------------------|
@@ -78,9 +79,9 @@ To avoid that, an alternative set of plugins was implemented.
 | ReplaceBundlesWithUnitedItemsCartChangeRequestExpanderPlugin | RemoveBundleChangeRequestExpanderPlugin | Spryker\Client\ProductBundle\Plugin\Cart                      |
 | ReplaceBundlesWithUnitedItemsCartChangeRequestExpandPlugin   | RemoveBundleChangeRequestExpanderPlugin | Spryker\Zed\ProductBundle\Communication\Plugin\PersistentCart |
 
-### 1) Setup new plugins
+### 1) Set up new plugins
 
-In order to use this alternative solution, all old plugins have to be removed, and new ones should be connected instead. 
+To use this alternative solution, all old plugins must be removed and new ones connected instead.
 
 **src/Pyz/Zed/Cart/CartDependencyProvider.php**
 
@@ -108,7 +109,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
             new UnfoldBundlesToUnitedItemsItemExpanderPlugin(),
         ];
     }
-    
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -176,17 +177,17 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Add a product bundle to cart, try to increase its quantity to a large amount, i.e. 1000 items. Then try to decrease the quantity. 
-Make sure that increase and decrease operations are performed without a significant delay and do not fail with an exception.  
+Add a product bundle to the cart and increase its quantity to a larger number—for example, 1,000 items. Then, decrease the quantity.
+Make sure that increase and decrease operations are performed without a significant delay and do not fail, with an exception.  
 
-Perform this verification both as anonymous and a logged-in user.  
+Perform this verification both as an anonymous and logged-in user.  
 
 {% endinfo_block %}
 
-### 2) Adjust non-splittable quantity threshold for bundled items in `SalesQuantity` module config
+### 2) Adjust a non-splittable quantity threshold for bundled items in the `SalesQuantity` module config.
 
-To be able to create an order successfully with a large amount of bundle products in cart, `SalesQuantityConfig::BUNDLED_ITEM_NONSPLIT_QUANTITY_THRESHOLD` constant in `SalesQuantity` module config also need to be set to some reasonable amount, 10 for example.
-This constant controls the bundle quantity threshold, which when reached keeps bundled items from splitting into individual items and adds them into the order as a single shipment. 
-The lower the threshold, the less amount of separate shipments are created in an order, which decreases potential probability of insufficient memory errors during order creation process.
+To create an order successfully with a large number of product bundles in the cart, the `SalesQuantityConfig::BUNDLED_ITEM_NONSPLIT_QUANTITY_THRESHOLD` constant in the `SalesQuantity` module config must be also set to a lower number—for example, 10.
+This constant controls the bundle quantity threshold. When the threshold is reached, it keeps bundled items from splitting into individual items and adds them to the order as a single shipment.
+The lower the threshold, the fewer number of separate shipments are created in an order, which decreases the potential probability of insufficient memory errors during the order creation process.
 
-For details, see the [The Splittable Order Items feature integration guide](/docs/scos/dev/feature-integration-guides/{{page.version}}/splittable-order-items-feature-integration.html).
+For details, see [Splittable Order Items feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/splittable-order-items-feature-integration.html).

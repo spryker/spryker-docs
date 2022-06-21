@@ -5,8 +5,6 @@ last_updated: Jun 17, 2022
 template: concept-topic-template
 ---
 
-## Understand the different refund strategies for shipping costs
-
 The Spryker integration with Unzer offers multiple strategies to refund shipping costs. Ask a developer in your team to enable the strategy that suit your needs.
 
 If you use the `UnzerConstants::LAST_SHIPMENT_ITEM_EXPENSES_REFUND_STRATEGY`, the shipping costs will be refunded when the last sales order item of a shipment is refunded.

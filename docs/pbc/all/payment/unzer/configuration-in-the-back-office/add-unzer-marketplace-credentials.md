@@ -5,7 +5,7 @@ description: This document shows how to add Unzer marketplace credentials
 template: back-office-user-guide-template
 ---
 
-This document shows how to add standard Unzer marketplace credentials.
+This document shows how to add Unzer marketplace credentials.
 
 ## Prerequisites
 

@@ -5,9 +5,7 @@ last_updated: Jun 22, 2022
 template: concept-topic-template
 ---
 
-# Understand how payment methods are displayed in the checkout process
-
-Depending on your Unzer credentials type defined in the Back Office, the display of the payment method will follow a specific logic.
+Depending on your Unzer credentials type defined in the Back Office, the display of the payment method follows a specific logic.
 
 ## Standard type credentials
 

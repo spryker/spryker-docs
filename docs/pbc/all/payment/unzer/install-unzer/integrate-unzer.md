@@ -14,17 +14,13 @@ This document shows how to integrate Unzer into your project.
 
 [Install and configure Unzer](/docs/pbc/all/payment/unzer/install-unzer/install-and-configure-unzer.html).
 
-To integrate Unzer, follow the steps below.
-
-## OMS
-
 {% info_block infoBox "Exemplary content" %}
 
-The following state machines provided are examples of the payment service provider flow.
+The following state machines are examples of the payment service provider flow.
 
 {% endinfo_block %}
 
-Create the OMS:
+To integrate Unzer, follow these steps:
 
 1. Add the Unzer OMS processes to the project on the project level or provide your own:
 

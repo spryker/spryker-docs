@@ -1,0 +1,51 @@
+---
+title: Task lifecycle management
+description: 
+template: concept-topic-template
+---
+
+An SDK task can change over time. It may need to update the tool it wraps or get replaced by a successor task.
+Each task can subscribe to certain lifecycle events to react, so that whenever the SDK is updated, the task is initialized or removed.
+
+To be able to emit those lifecycle events to a specific task, the task needs to subscribe to the event and it needs to be versioned.
+
+## Subscribing to lifecycle events
+
+A task can define a list of commands and files for each of the lifecycle events that are executed and created when the event is emitted.
+*Commands* follow the same structure as the command of a task itself and can have *placeholders* for the dynamic parts of the command.
+*Files* only define a path and the *content* that should be put into the defined file. It is possible to use *placeholders* for dynamic parts of `files.path` or `files.content`.
+
+## Event types
+
+There are the following event types:
+
+- *Initialized*: Emitted when the task is initialized inside a project for the first time. This is the right event to create a task-specific configuration and initialize the tool.  
+- *Updated*: Emitted when the SDK was updated and the task version has changed, so the task can update configurations and tools it needs to run.
+- *Removed*: Emitted after the task was removed from the SDK. You can use this event to perform cleanups of the task, like removing configuration files.
+
+## via YAML
+
+```yaml
+---
+id: string #e.g.: validation:php:codestile-fix
+version: 1.0.0
+deprecated: false #if false it can be omitted
+successor: string|null # if null it can be omitted, e.g.: validation:php:codestyle-fix
+# ... other task properties
+lifecycle:
+  INITIALIZED:
+    commands:
+      - '%vendor_dir%/bin/composer require --dev "spryker/code-sniffer: dev-master"'
+    files:
+      - path: path # e.g.: '%project_dir%/.cs_config' # does not really exist, only for the example
+        content: string # e.g.: "serverity: 3"
+    placeholders:
+      - name: string # e.g.: '%project_dir%'
+        valueResolver: string #e.g.: PROJECT_DIR mapping to a ValueResolver
+  UPDATED: ~ # if event does not define anything it can be omitted
+  REMOVED: #same format as INITIALIZED
+```
+
+## via PHP
+
+A task implemented in PHP only needs to implement the [TaskLifecycleInterface](https://github.com/spryker-sdk/sdk-contracts/blob/master/src/Entity/Lifecycle/TaskLifecycleInterface.php) to subscribe to the lifecycle events.

@@ -1,6 +1,6 @@
 ---
 title: Task lifecycle management
-description: 
+description: Each task can subscribe to lifecycle events so that whenever the SDK is updated, the tasks is initialized or removed.
 template: concept-topic-template
 ---
 

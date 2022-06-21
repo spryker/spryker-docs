@@ -92,7 +92,7 @@ You can add multiple image sets and multiple images to an image set. However, by
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
 | IMAGE SET NAME | Name of the image set for you to use in the Back Office. |
-| SMALL IMAGE URL | URL to the small version of the image. This image will be displayed when categories are sorted as a grid. |
+| SMALL IMAGE URL | URL to the small version of the image. This image will be displayed when categories are sorted as a list. |
 | LARGE IMAGE URL | URL to the large version of the image. This image will be displayed when categories are sorted as a grid. |
 | SORT ORDER | When displayed together with other images, defines the order Numeric identifier of the image in the order of other images of an image set. This defines the order in which the images are shown in the back end and front end. The order starts from "0". |
 

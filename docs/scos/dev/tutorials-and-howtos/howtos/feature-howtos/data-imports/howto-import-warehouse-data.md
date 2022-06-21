@@ -33,7 +33,7 @@ This document shows how to import warehouse data using a CSV file, including the
 
 To import warehouse data, follow these steps:
 
-1. Prepare the `warehouse.csv` file where you can indicate whether the warehouse name and its availability. The file can contain the following fields:
+1. Prepare the `warehouse.csv` file where you can indicate the warehouse name and its availability. The file can contain the following fields:
 
 | PROPERTY | TRANSCRIPTION | EXAMPLE |
 | --- | --- | --- |

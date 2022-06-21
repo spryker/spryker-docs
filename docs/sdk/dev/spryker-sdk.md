@@ -7,10 +7,10 @@ The Spryker SDK aims to provide a single entry point to accelerate your producti
 
 ## Installation
 
-1. Ensure the `auth` file is available for composer. See (https://getcomposer.org/doc/articles/authentication-for-private-packages.md)
-2. Install [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/)
-3. Download `installer.sh` file from [the latest release](https://github.com/spryker-sdk/sdk/releases)
-4. Run `installer.sh </path/to/install/sdk/in>`
+1. Ensure the `auth` file is available for composer. See [Authentication for privately hosted packages and repositories](https://getcomposer.org/doc/articles/authentication-for-private-packages.md) for details.
+2. Install [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/).
+3. Download the `installer.sh` file from [the latest release](https://github.com/spryker-sdk/sdk/releases).
+4. Run `installer.sh </path/to/install/sdk/in>`.
 5. Optional: Add spryker-sdk as an alias if you use Bash or Zsh.
 To do so, execute `"add alias spryker-sdk='</path/to/install/sdk/in>/bin/spryker-sdk.sh'" >> ~/.bashrc && source ~/.bashrc` for Bash or `"alias spryker-sdk=\"</path/to/install/sdk/in>/bin/spryker-sdk.sh\"" >> ~/.zshrc  && source ~/.zshrc` for Zsh.c
 

@@ -21,19 +21,23 @@ spryker-sdk --mode=dev
 
 To run SDK in the development mode, do the following:
 
-1. Make sure you have (Mutagen)[https://mutagen.io/documentation/introduction/installation] installed.
+1. Make sure you have [Mutagen](https://mutagen.io/documentation/introduction/installation) installed.
 2. Run `spryker-sdk --mode=dev`.
 
 ## Running SDK in the debug mode
-To start an Xdebug session with the serverName `spryker-sdk` that you should configure in PHPStorm, run the command: `spryker-sdk --mode=debug <task>`
+To start an Xdebug session with the serverName `spryker-sdk` that you configured in PHPStorm, run the command: `spryker-sdk --mode=debug <task>`
 
 ## Handy commands
 The following table lists some helpful commands to use during your development:
+
+<div class="width-100">
 
 | Command  |  Description | 
 |---|---|
 | `rm db/data.db && spryker-sdk sdk:init:sdk`  | Resets SDK  |
 | `cd <project> && rm -f .ssdk && rm -f .ssdk.log && spryker-sdk sdk:init:project` | Resets project  | 
+
+</div>
 
 ## Troubleshooting
 

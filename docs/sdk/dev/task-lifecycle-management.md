@@ -23,7 +23,9 @@ There are the following event types:
 - *Updated*: Emitted when the SDK was updated and the task version has changed, so the task can update configurations and tools it needs to run.
 - *Removed*: Emitted after the task was removed from the SDK. You can use this event to perform cleanups of the task, like removing configuration files.
 
-## via YAML
+## Adding events to task created via YAML files
+
+The following examples illustrates how you can add the lifecycle events to [tasks created via a YAML file](/docs/sdk/dev/extending-the-sdk.html#implementation-via-yaml-definition):
 
 ```yaml
 ---
@@ -46,6 +48,6 @@ lifecycle:
   REMOVED: #same format as INITIALIZED
 ```
 
-## via PHP
+## Adding events to task create via a PHP class
 
-A task implemented in PHP only needs to implement the [TaskLifecycleInterface](https://github.com/spryker-sdk/sdk-contracts/blob/master/src/Entity/Lifecycle/TaskLifecycleInterface.php) to subscribe to the lifecycle events.
+A [task implemented in a PHP class](/docs/sdk/dev/extending-the-sdk.html#implementation-via-php-class) only needs to implement the [TaskLifecycleInterface](https://github.com/spryker-sdk/sdk-contracts/blob/master/src/Entity/Lifecycle/TaskLifecycleInterface.php) to subscribe to the lifecycle events.

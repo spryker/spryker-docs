@@ -17,11 +17,11 @@ redirect_from:
   - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html
 ---
 
-To define a period within which an item can be returned, redefine the Config in `Pyz\Zed\SalesReturn\SalesReturnConfig` by adding the following there:
+To define a period within which an item can be returned, in `Pyz\Zed\SalesReturn\SalesReturnConfig`, redefine the config by adding the following:
 
 `protected const GLOBAL_RETURNABLE_NUMBER_OF_DAYS = {% raw %}{{{% endraw %}Number of days{% raw %}}}{% endraw %};`
 
-where *{% raw %}{{{% endraw %}Number of days{% raw %}}}{% endraw %}* is the time period in days after the item purchase, within which the item can be returned.
+Where *{% raw %}{{{% endraw %}Number of days{% raw %}}}{% endraw %}* is the time period in days after the item purchase within which the item can be returned.
 
 Example:
 

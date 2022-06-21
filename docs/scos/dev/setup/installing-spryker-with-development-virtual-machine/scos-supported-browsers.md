@@ -7,8 +7,6 @@ template: howto-guide-template
 
 This document lists browsers which the Spryker Commerce OS supports.
 
-### Supported browsers
-
 The Spryker Commerce OS supports the following browsers for all frontend-related projects and products—[B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html), [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html), [Master Suite](/docs/scos/user/intro-to-spryker/master-suite.html):
 
 | DESKTOP (YVES AND ZED) | MOBILE (YVES ONLY) | TABLET (YVES ONLY) |

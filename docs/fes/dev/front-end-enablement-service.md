@@ -6,7 +6,7 @@ template: concept-topic-template
 
 Frontend Enablement Service (FES) is an application that enables everyone to launch and manage frontends easily and quickly.
 
-Its main objectives are:
+Its main objectives are as follows:
 * To enable business users to manage frontends without developers' help.
 * To give developers more time to focus on the parts of an application that gain more value from their effort, like custom functionality.
 
@@ -49,7 +49,7 @@ The Launchpad is a multi-tenant application that interacts with the following co
 
 ![launchpad-architecture](https://confluence-connect.gliffy.net/embed/image/9cb232d7-e48c-48da-a53d-d78b4ba577c4.png?utm_medium=live&utm_source=custom)
 
-Glue API is used for the following:
+Glue API is used for the following purposes:
 * To connect your SCCOS environments to the Launchpad. When creating a frontend, you can see the list of your environments, locales, and currencies.
 * When a frontend is deployed to Netlify, to connect the frontend to the backend in a SCCOS environment.
 

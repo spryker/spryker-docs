@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/enabling-gift-cards
   - /docs/enabling-gift-cards
   - /docs/en/enabling-gift-cards
+related:
+  - title: Gift Cards feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/gift-cards-feature-walkthrough.html
 ---
 
 The Gift Cards feature is shipped with the following modules:

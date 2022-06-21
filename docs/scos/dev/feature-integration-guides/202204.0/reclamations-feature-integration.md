@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/reclamations-feature-integration
   - /docs/reclamations-feature-integration
   - /docs/en/reclamations-feature-integration
+related:
+  - title: Reclamations feature walkthrough
+	link: docs/scos/dev/feature-walkthroughs/page.version/reclamations-feature-walkthrough.html
 ---
 
 ## Install feature core

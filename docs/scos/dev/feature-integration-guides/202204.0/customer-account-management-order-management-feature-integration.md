@@ -10,11 +10,17 @@ redirect_from:
   - /2021080/docs/en/customer-account-management-order-management-feature-integration
   - /docs/customer-account-management-order-management-feature-integration
   - /docs/en/customer-account-management-order-management-feature-integration
+related:
+  - title: Customer Account Management feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html
+  - title: Order Management feature walkthrough
+	  link: docs/scos/dev/feature-walkthroughs/page.version/order-management-feature-walkthrough/order-management-feature-wakthrough.html
 ---
 
 ## Install feature core
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
@@ -24,6 +30,7 @@ To start feature integration, overview and install the necessary features:
 | Spryker Core | {{page.version}} |
 
 ### 1) Set up configuration
+
 To enable order search functionality, adjust config as shown below.
 
 **src/Pyz/Yves/CustomerPage/CustomerPageConfig.php**
@@ -48,7 +55,7 @@ Make sure you see the order search form at the Order History page.
 {% endinfo_block %}
 
 
-### 2) Add Translations
+### 2) Add translations
 
 Append glossary according to your configuration:
 

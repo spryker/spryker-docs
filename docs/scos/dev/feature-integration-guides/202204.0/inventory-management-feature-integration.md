@@ -15,6 +15,8 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201907.0/inventory-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/inventory-management-feature-integration.html
 related:
+  - title: Inventory Management feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
   - title: Inventory Management feature overview
     link: docs/scos/user/features/page.version/inventory-management-feature-overview.html
 ---

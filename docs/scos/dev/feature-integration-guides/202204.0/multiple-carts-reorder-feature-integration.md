@@ -1,6 +1,6 @@
 ---
 title: Multiple Carts + Reorder feature integration
-description: The Reorder Feature allows reordering previous orders. This guide will walk you through the process of integrating the feature into your project.
+description: The Reorder feature allows reordering previous orders. This guide will walk you through the process of integrating the feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/multiple-carts-reorder-feature-integration
@@ -11,6 +11,11 @@ redirect_from:
   - /docs/multiple-carts-reorder-feature-integration
   - /docs/en/multiple-carts-reorder-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/multiple-carts-reorder-feature-integration.html
+related:
+  - title: Multiple Carts feature walkthrough
+	  link: docs/scos/dev/feature-walkthroughs/page.version/multiple-carts-feature-walkthrough.html
+  - title: Reorder feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/reorder-feature-walkthrough.html
 ---
 
 ## Install feature core

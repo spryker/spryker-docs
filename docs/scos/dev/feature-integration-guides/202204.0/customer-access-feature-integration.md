@@ -10,9 +10,12 @@ redirect_from:
   - /2021080/docs/en/customer-access-feature-integration
   - /docs/customer-access-feature-integration
   - /docs/en/customer-access-feature-integration
+related:
+  - title: Customer Access feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/customer-access-feature-walkthrough.html
 ---
 
-## Install Feature Core
+## Install feature Core
 
 ### Prerequisites
 

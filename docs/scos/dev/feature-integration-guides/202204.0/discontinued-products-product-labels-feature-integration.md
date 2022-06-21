@@ -13,9 +13,14 @@ redirect_from:
 related:
   - title: Product labels feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-labels-feature-integration.html
+  - title: Product feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-feature-walkthrough.html
+  - title: Product Labels feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-labels-feature-walkthrough.html
 ---
 
 ## Install feature core
+
 Follow the steps below to install the feature core.
 
 
@@ -60,7 +65,7 @@ Ensure that the configured data has been added to the spy_product_label  table i
 
 {% endinfo_block %}
 
-### 2) Set up behaviour
+### 2) Set up behavior
 
 Set up the following behavior:
 

@@ -10,6 +10,11 @@ redirect_from:
   - /2021080/docs/en/product-order-management-feature-integration
   - /docs/product-order-management-feature-integration
   - /docs/en/product-order-management-feature-integration
+related:
+  - title: Product feature integration
+	  link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
+  - title: Order Management feature walkthrough
+	link: docs/scos/dev/feature-walkthroughs/page.version/order-management-feature-walkthrough/order-management-feature-wakthrough.html 
 ---
 
 ## Install feature core

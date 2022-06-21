@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/merchant-b2b-contracts-feature-integration
   - /docs/merchant-b2b-contracts-feature-integration
   - /docs/en/merchant-b2b-contracts-feature-integration
+related:
+  - title: Merchant B2B Contracts feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/merchant-b2b-contracts-feature-walkthrough.html
 ---
 
 ## Install feature core

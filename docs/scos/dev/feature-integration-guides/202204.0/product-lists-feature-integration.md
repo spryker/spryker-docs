@@ -27,6 +27,8 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/product-images-configurable-bundle-feature-integration.html
   - title: Merchant Product Restrictions feature overview
     link: docs/scos/user/features/page.version/merchant-product-restrictions-feature-overview.html
+  - title: Product Lists feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-lists-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Product Lists feature into a Spryker project.

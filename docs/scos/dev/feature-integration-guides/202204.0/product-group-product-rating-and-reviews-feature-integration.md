@@ -10,6 +10,11 @@ redirect_from:
   - /2021080/docs/en/product-group-product-rating-reviews-feature-integration
   - /docs/product-group-product-rating-reviews-feature-integration
   - /docs/en/product-group-product-rating-reviews-feature-integration
+related:
+  - title: Product Groups feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-groups-feature-walkthrough.html
+  - title: Product Rating and Reviews feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-rating-reviews-feature-walkthrough.html
 ---
 
 ## Install feature core

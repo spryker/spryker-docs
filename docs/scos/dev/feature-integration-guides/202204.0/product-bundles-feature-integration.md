@@ -13,6 +13,9 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/product-bundles-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/product-bundles-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/product-bundles-feature-integration.html
+related:
+  - title: Product Bundles feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-bundles-feature-walkthrough.html
 ---
 
 This integration guide expects the basic feature to be in place. It adds only the Product Bundle storage configuration.

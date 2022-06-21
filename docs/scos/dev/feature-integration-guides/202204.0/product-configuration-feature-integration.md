@@ -2,6 +2,9 @@
 title: Product Configuration feature integration
 description: Learn how to integrate the Product Configuration feature into a Spryker project.
 template: feature-integration-guide-template
+related:
+  - title: Configurable Product feature walkthrough
+	link: docs/scos/dev/feature-walkthroughs/page.version/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html
 ---
 
 This document describes how to integrate the [Product Configuration](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html) feature into a Spryker project.

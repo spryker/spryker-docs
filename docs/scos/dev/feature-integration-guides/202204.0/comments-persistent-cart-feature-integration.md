@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/comments-persistent-cart-feature-integration
   - /docs/comments-persistent-cart-feature-integration
   - /docs/en/comments-persistent-cart-feature-integration
+related:
+  - title: Comments feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/comments-feature-walkthrough.html
 ---
 
 ## Install feature core

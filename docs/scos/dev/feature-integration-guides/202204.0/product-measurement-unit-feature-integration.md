@@ -11,6 +11,9 @@ redirect_from:
   - /docs/product-measurement-unit-feature-integration
   - /docs/en/product-measurement-unit-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/product-measurement-unit-feature-integration.html
+related:
+  - title: Measurement Units feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/measurement-units-feature-walkthrough.html
 ---
 
 ## Install feature core

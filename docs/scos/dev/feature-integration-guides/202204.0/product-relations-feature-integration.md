@@ -17,9 +17,12 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/spryker-core-feature-integration.html
   - title: Glue API - Spryker Core feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-spryker-core-feature-integration.html
+  - title: Product Relations feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-relations-feature-walkthrough/product-relations-feature-walkthrough.html
 ---
 
 ## Install feature core
+
 Follow the steps below to install feature core.
 
 ### Prerequisites

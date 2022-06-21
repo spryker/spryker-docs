@@ -14,14 +14,18 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/spryker-core-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201811.0/spryker-core-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/spryker-core-feature-integration.html
+related:
+  - title: Spryker Core feature walkthrough
+	link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Spryker Core feature into a Spryker project.
 
-{% info_block infoBox "Influded features" %}
+{% info_block infoBox "Included features" %}
 
 The following feature integration guide expects the basic feature to be in place.
 The current feature integration guide only adds the following functionalities:
+
 * Vault
 * Redis Session
 * Store GUI
@@ -508,7 +512,7 @@ Visit zed.mysprykershop.com and make sure that Zed boots up without errors.
 | COMMAND | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | StorageRedisExportRdbConsole | Exports a Redis database as an .rdb file. | None | Spryker\Zed\StorageRedis\Communication\Console |
-| StorageRedisImportRdbConsole	 | Imports an rdb file.	 | None | Spryker\Zed\StorageRedis\Communication\Console |
+| StorageRedisImportRdbConsole	 | Imports an rdb file. | None | Spryker\Zed\StorageRedis\Communication\Console |
 
 **Pyz\Zed\Console\ConsoleDependencyProvider**
 

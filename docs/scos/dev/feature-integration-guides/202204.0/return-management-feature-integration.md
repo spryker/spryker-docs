@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/return-management-feature-integration
   - /docs/return-management-feature-integration
   - /docs/en/return-management-feature-integration
+related:
+  - title: Return Management feature walkthrough
+	link: docs/scos/dev/feature-walkthroughs/page.version/return-management-feature-walkthrough.html
 ---
 
 ## Install feature core

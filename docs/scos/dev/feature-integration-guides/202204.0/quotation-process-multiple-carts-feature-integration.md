@@ -9,11 +9,17 @@ redirect_from:
   - /2021080/docs/en/quotation-process-multiple-carts-feature-integration
   - /docs/quotation-process-multiple-carts-feature-integration
   - /docs/en/quotation-process-multiple-carts-feature-integration
+related:
+  - title: Quotation Process feature walkthrough
+	link: docs/scos/dev/feature-walkthroughs/page.version/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
+  - title: Multiple Carts feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/multiple-carts-feature-walkthrough.mhtml
 ---
 
 ## Install feature core
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |

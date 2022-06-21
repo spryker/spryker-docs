@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/persistent-cart-sharing-feature-integration
   - /docs/persistent-cart-sharing-feature-integration
   - /docs/en/persistent-cart-sharing-feature-integration
+related:
+  - title: Persistent Cart Sharing feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-walkthrough.html
 ---
 
 ## Install feature core

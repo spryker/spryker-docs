@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/navigation-feature-integration
   - /docs/navigation-feature-integration
   - /docs/en/navigation-feature-integration
+related:
+  - title: Navigation feature walkthrough
+	  link: docs/scos/dev/feature-walkthroughs/page.version/navigation-feature-walkthrough/navigation-feature-walkthrough.html
 ---
 
 {% info_block errorBox "Attention" %}

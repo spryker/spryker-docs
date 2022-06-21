@@ -10,12 +10,17 @@ redirect_from:
   - /docs/product-packaging-unit-feature-integration
   - /docs/en/product-packaging-unit-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/packaging-units-feature-integration.html
+related:
+  - title: Packaging Unit feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/packaging-units-feature-walkthrough.html
 ---
 
 ## Install feature core
+
 Follow the steps to install Packaging Units feature core.
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |

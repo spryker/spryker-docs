@@ -11,6 +11,11 @@ redirect_from:
   - /docs/quick-order-non-splittable-products-feature-integration
   - /docs/en/quick-order-non-splittable-products-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/quick-add-to-cart-non-splittable-products-feature-integration.html
+related:
+  - title: Quick Add to Cart feature walkthrough
+	link: docs/scos/dev/feature-walkthroughs/page.version/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
+  - title: Non-splittable Products feature walkthrough
+	link: docs/scos/dev/feature-walkthroughs/page.version/non-splittable-products-feature-walkthrough.html
 ---
 
 ## Install feature core

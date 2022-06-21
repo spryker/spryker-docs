@@ -16,6 +16,10 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/approval-process-feature-integration.html
   - title: Shipment feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/shipment-feature-integration.html
+  - title: Shipment feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/shipment-feature-walkthrough.html
+  - title: Approval Process feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/approval-process-feature-walkthrough.html
 ---
 
 ## Install feature core

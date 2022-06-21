@@ -10,6 +10,11 @@ redirect_from:
   - /2021080/docs/en/customer-account-management-agent-assist-feature-integration
   - /docs/customer-account-management-agent-assist-feature-integration
   - /docs/en/customer-account-management-agent-assist-feature-integration
+related:
+  - title: Customer Account Management feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html
+  - title: Agent Assist feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/agent-assist-feature-walkthrough.html
 ---
 
 

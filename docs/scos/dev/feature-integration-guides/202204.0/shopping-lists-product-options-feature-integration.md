@@ -11,6 +11,9 @@ redirect_from:
   - /docs/shopping-lists-product-options-feature-integration
   - /docs/en/shopping-lists-product-options-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/shopping-lists-product-options-feature-integration.html
+related:
+  - title: Shopping Lists feature walkthrough
+	link: docs/scos/dev/feature-walkthroughs/page.version/shopping-lists-feature-walkthrough.html
 ---
 
 ## Install feature core

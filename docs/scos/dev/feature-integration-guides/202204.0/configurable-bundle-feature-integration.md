@@ -24,6 +24,8 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/product-lists-feature-integration.html
   - title: Product Images + Configurable Bundle feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-images-configurable-bundle-feature-integration.html
+  - title: Configurable Bundle feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/configurable-bundle-feature-walkthrough.html
 ---
 
 ## Install feature core

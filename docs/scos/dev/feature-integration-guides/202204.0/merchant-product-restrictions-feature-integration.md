@@ -22,11 +22,14 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/prices-feature-integration.html
   - title: Product Images + Configurable Bundle feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-images-configurable-bundle-feature-integration.html
+  - title: Merchant Product Restrictions feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/merchant-product-restrictions-feature-walkthrough/merchant-product-restrictions-feature-walkthrough.html
 ---
 
 ## Install feature core
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |

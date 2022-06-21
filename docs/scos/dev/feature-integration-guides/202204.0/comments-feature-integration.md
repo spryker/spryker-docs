@@ -10,11 +10,15 @@ redirect_from:
   - /2021080/docs/en/comments-feature-integration
   - /docs/comments-feature-integration
   - /docs/en/comments-feature-integration
+related:
+  - title: Comments feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/comments-feature-walkthrough.html
 ---
 
 ## Install feature core
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
@@ -23,6 +27,7 @@ To start feature integration, overview and install the necessary features:
 | Customer Account Management | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
@@ -41,6 +46,7 @@ Make sure that the following modules were installed:
 {% endinfo_block %}
 
 ### 2) Set up configuration
+
 Add the following configuration to your project:
 
 | CONFIGURATION | SPECIFICATION | NAMESPACE |
@@ -136,6 +142,7 @@ Make sure that the following changes in transfer objects:
 {% endinfo_block %}
 
 ### 4) Add translations
+
 Append glossary according to your configuration:
 
 **src/data/import/glossary.csv**

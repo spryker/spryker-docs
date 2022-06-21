@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/resource-sharing-feature-integration
   - /docs/resource-sharing-feature-integration
   - /docs/en/resource-sharing-feature-integration
+related:
+  - title: Resource Sharing feature walkthrough
+	link: docs/scos/dev/feature-walkthroughs/page.version/resource-sharing-feature-walkthrough.html
 ---
 
 ## Install feature core

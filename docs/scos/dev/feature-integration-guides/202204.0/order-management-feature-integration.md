@@ -24,6 +24,8 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/product-order-management-feature-integration.html
   - title: Customer Account Management + Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/customer-account-management-order-management-feature-integration.html
+  - title: Order Management feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/order-management-feature-walkthrough/order-management-feature-wakthrough.html
 ---
 This document describes how to integrate the Order Management feature into a Spryker project.
 

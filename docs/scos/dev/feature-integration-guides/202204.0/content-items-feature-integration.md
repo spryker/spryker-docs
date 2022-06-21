@@ -11,6 +11,9 @@ redirect_from:
   - /docs/content-items-feature-integration
   - /docs/en/content-items-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/content-items-feature-integration.html
+related:
+  - title: Content Items feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/content-items-feature-walkthrough/content-items-feature-walkthrough.html
 ---
 
 This document describes how. to integrate the [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) feature into a Spryker project.

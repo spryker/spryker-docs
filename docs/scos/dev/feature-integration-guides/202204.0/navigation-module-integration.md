@@ -10,9 +10,13 @@ redirect_from:
   - /2021080/docs/en/navigation-module-integration
   - /docs/navigation-module-integration
   - /docs/en/navigation-module-integration
+related:
+  - title: Navigation feature walkthrough
+	  link: docs/scos/dev/feature-walkthroughs/page.version/navigation-feature-walkthrough/navigation-feature-walkthrough.html
 ---
 
 ## Prerequisites
+
 To prepare your project to work with Navigation:
 
 1. Require the Navigation modules in your `composer.json`.

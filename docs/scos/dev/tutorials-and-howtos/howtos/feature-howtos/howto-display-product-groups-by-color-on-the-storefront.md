@@ -20,7 +20,7 @@ To enhance the visual shopping experience of your customers, you can use product
 
 ## Prerequisites
 
-Before you start configuration, make sure that the [Product Groups feature is integrated](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-groups-feature-integration.html) into your project.
+[Integrate Product Groups feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-groups-feature-integration.html) into your project.
 
 ## Schema extension
 

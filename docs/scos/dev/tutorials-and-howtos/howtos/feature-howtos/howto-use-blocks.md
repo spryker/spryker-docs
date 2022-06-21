@@ -51,11 +51,11 @@ To add a CMS block with a hello message, follow these steps:
 ```
 
 3. Configure the new block in the CMS Block interface and add the corresponding glossary keys for the two included placeholders.
-4. Click **Create CMS Block**.
-5. Select the newly created template from the list, select a static type, and give it a proper unique name ("HelloMessage").
+4. In Back Office, in **Content&nbsp;<span aria-label="and then">></span> Blocks**, click **Create Block**.
+5. Select the newly created template from the list, select a static type, and enter a proper unique **NAME** ("HelloMessage").
 6. To limit the availability to a date range, enter the **VALID FROM** and **VALID TO** dates.
 7. Click **Save**.
-8. Create the glossary keys for the placeholders ( see the previous example).
+8. Create the glossary keys for the placeholders (see the previous example).
 9. Run the collectors so that the changes are effective in Yves.
 
 The new block is now ready to be used and integrated in other Twig templates.

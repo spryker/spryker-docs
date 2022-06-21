@@ -21,7 +21,7 @@ entries:
           url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html
         - title: Installing Docker prerequisites on Windows with WSL2
           url: /docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html
-      - title: Choosing an installatiion mode and installing
+      - title: Choosing an installation mode and installing
         nested:
         - title: Choosing an installation mode
           url: /docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html
@@ -530,7 +530,7 @@ entries:
       - "202108.0"
       - "202204.0"
       nested:
-      - title: Product Relations- module relations
+      - title: Product Relations - module relations
         url: /docs/scos/dev/feature-walkthroughs/product-relations-feature-walkthrough/product-relations-module-relations.html
         include_versions:
         - "202005.0"
@@ -545,10 +545,15 @@ entries:
         - "202108.0"
         - "202204.0"
     - title: Configurable Product
-      url: /docs/scos/dev/feature-walkthroughs/configurable-product-feature-walkthrough.html
+      url: /docs/scos/dev/feature-walkthroughs/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html
       include_versions:
       - "202108.0"
       - "202204.0"
+      nested:
+      - title: Configuration process flow of Configurable Product
+        url: /docs/scos/dev/feature-walkthroughs/configurable-product-feature-walkthrough/configuration-process-flow-of-configurable-product.html
+        include_versions:
+        - "202204.0"
     - title: Checkout
       url: /docs/scos/dev/feature-walkthroughs/checkout-feature-walkthrough.html
       include_versions:

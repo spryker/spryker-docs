@@ -108,7 +108,7 @@ Make sure that the following changes were applied in transfer objects:
 
 Append glossary according to your configuration:
 
-**src/data/import/glossary.csv**
+**data/import/common/common/glossary.csv**
 
 ```yaml
 merchant_switcher.message,Switch from %currentMerchant% to %newMerchant%? Due to different availability, not all products may be added to your shopping cart.,en_US
@@ -127,20 +127,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data has been added to the `spy_glossary` table in the database.
-
-{% endinfo_block %}
-```
-
-Import data:
-
-```bash
-console data:import glossary
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that the configured data is added to the `spy_glossary` table in the database.
+Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
 
 {% endinfo_block %}
 
@@ -166,7 +153,7 @@ use SprykerShop\Yves\MerchantSwitcherWidget\Plugin\Router\MerchantSwitcherWidget
 class RouterDependencyProvider extends SprykerRouterDependencyProvider
 {
     /**
-     * @return \Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface[]
+     * @return array<\Spryker\Yves\RouterExtension\Dependency\Plugin\RouteProviderPluginInterface>
      */
     protected function getRouteProvider(): array
     {
@@ -195,7 +182,7 @@ use SprykerShop\Yves\MerchantSwitcherWidget\Plugin\ShopApplication\MerchantShopC
 class ShopContextDependencyProvider extends SprykerShopContextDependencyProvider
 {
     /**
-     * @return \Spryker\Shared\ShopContextExtension\Dependency\Plugin\ShopContextExpanderPluginInterface[]
+     * @return array<\Spryker\Shared\ShopContextExtension\Dependency\Plugin\ShopContextExpanderPluginInterface>
      */
     protected function getShopContextExpanderPlugins(): array
     {
@@ -222,7 +209,7 @@ class SearchElasticsearchDependencyProvider extends SprykerSearchElasticsearchDe
     /**
      * @param \Spryker\Client\Kernel\Container $container
      *
-     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface[]
+     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigExpanderPluginInterface>
      */
     protected function getSearchConfigExpanderPlugins(Container $container): array
     {
@@ -251,7 +238,7 @@ use SprykerShop\Yves\MerchantSwitcherWidget\Plugin\ShopApplication\MerchantShopC
 class ShopContextDependencyProvider extends SprykerShopContextDependencyProvider
 {
     /**
-     * @return \Spryker\Shared\ShopContextExtension\Dependency\Plugin\ShopContextExpanderPluginInterface[]
+     * @return array<\Spryker\Shared\ShopContextExtension\Dependency\Plugin\ShopContextExpanderPluginInterface>
      */
     protected function getShopContextExpanderPlugins(): array
     {
@@ -283,7 +270,7 @@ use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as Spryke
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     protected function getGlobalWidgets(): array
     {
@@ -312,6 +299,7 @@ Make sure that the following widgets were registered:
 
 ## Related features
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
-| --- | --- | --- |
-|  Merchant Switcher + Wishlist | | [ Merchant Switcher + Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-wishlist-feature-integration.html) |
+| FEATURE                                         | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                              |
+|-------------------------------------------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Merchant Switcher + Customer Account Management |                                  | [Merchant Switcher + Customer Account Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-customer-account-management-feature-integration.html) |
+| Merchant Switcher + Wishlist                    |                                  | [Merchant Switcher + Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-switcher-wishlist-feature-integration.html)                                      |

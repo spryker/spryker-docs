@@ -96,4 +96,4 @@ You can add multiple image sets and multiple images to an image set. However, by
 
 ## Next Steps
 
-[Assign product to categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html)
+[Assign product to categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assign-products-to-categories.html)

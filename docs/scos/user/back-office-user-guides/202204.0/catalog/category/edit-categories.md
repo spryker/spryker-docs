@@ -60,11 +60,11 @@ This refreshes the page with a success message displayed.
 |-|-|
 | CATEGORY KEY | Unique identifier of the category that is used for assigning products and CMS blocks to the categories through the import. |
 | PARENT | Defines under which category this category is displayed on the Storefront. |
-| ADDITIONAL PARENTS | Defines under which categories, apart from the category defined in **PARENT**, the category will be displayed on the Storefront.  |
-| STORES | Stores which the category will be displayed in.  |
-| TEMPLATE | Defines how the category's page will look on the Storefront. For more information, see [Reference information: TEMPLATE](#reference-information-template) |
-| ACTIVE | Defines if the category is to be displayed on the Storefront. |
-| VISIBLE IN THE CATEGORY TREE | Defines if the category is to be displayed in the category tree on the Storefront. |
+| ADDITIONAL PARENTS | Defines under which categories, apart from the category defined in **PARENT**, the category is displayed on the Storefront.  |
+| STORES | Stores which the category is displayed in.  |
+| TEMPLATE | Defines how the category's page looks on the Storefront. For more information, see [Reference information: TEMPLATE](#reference-information-template) |
+| ACTIVE | Defines if the category is displayed on the Storefront. |
+| VISIBLE IN THE CATEGORY TREE | Defines if the category is displayed in the category tree on the Storefront. |
 | ALLOW TO SEARCH FOR THIS CATEGORY | Defines if customers can find the category on the Storefront using search. |
 | NAME | Name that is displayed on the Storefront. |
 | META TITLE | SEO title. |
@@ -88,3 +88,5 @@ On the **Edit category** page, click the **Images** tab and do any of the follow
 
 
 ## Reference information: TEMPLATE
+
+{% include scos/user/back-office-user-guides/catalog/category/reference-information-template.md %} <!-- To edit, see /_includes/scos/user/back-office-user-guides/catalog/category/reference-information-template.md -->

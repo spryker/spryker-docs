@@ -167,7 +167,7 @@ class CustomerSlotBlockConditionFormPlugin extends AbstractPlugin implements Cms
 
 {% info_block errorBox %}
 
-The name of the first form element must correspond to the condition name you are creating. In our case, it looks like `$builder->add('customer', FormType::class)`.
+The name of the first form element must correspond to the condition name you create. In this case, it looks like `$builder->add('customer', FormType::class)`.
 
 Child form elements can have any names and subsequent child form elements.
 
@@ -209,30 +209,28 @@ In this case, the created form has five elements:
     }
 ```
 
-4. Add the new plugin to the `\Pyz\Zed\CmsSlotBlockGui\CmsSlotBlockGuiDependencyProvider::getCmsSlotBlockFormPlugins()` plugin list in `CustomerSlotBlockConditionFormPlugin`.
+1. Add the new plugin to the `\Pyz\Zed\CmsSlotBlockGui\CmsSlotBlockGuiDependencyProvider::getCmsSlotBlockFormPlugins()` plugin list in `CustomerSlotBlockConditionFormPlugin`.
 
 {% info_block warningBox "Verification" %}
 
 1. In the Back Office, go to **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
-2. In the **List of Templates**, select a product details page template.
-3. Select a slot in the **List of Slots for *`{name}`* Template**.
-4. Add or choose one CMS block in the List of Blocks for the *`{name}`* slot.
+2. For **List of Templates**, select a product details page template.
+3. In the **List of Slots for *`{name}`* Template**, Select a slot .
+4. Add or choose one CMS block in the List of Blocks for the **`{name}`** slot.
 
-{% info_block infoBox %}
+    {% info_block infoBox %}
 
-You must be able to see a rendered form of the customer visibility condition.
+    You must be able to see a rendered form of the customer visibility condition.
 
-{% endinfo_block %}
+    {% endinfo_block %}
 
 5. Select any visibility conditions and take note of them.
 6. Click **Save**.
-7. In database, check the last added rows in `spy_cms_slot_block.conditions` and `spy_cms_slot_block_storage.data` columns.
+7. In the database, check the last added rows in the `spy_cms_slot_block.conditions` and `spy_cms_slot_block_storage.data` columns.
 
 {% info_block infoBox %}
 
-They must contain the customer condition data you have set in the Back Office.
-
-{% endinfo_block %}
+`spy_cms_slot_block.conditions` and `spy_cms_slot_block_storage.data` must contain the customer condition data that you have set in the Back Office.
 
 {% endinfo_block %}
 
@@ -240,7 +238,7 @@ They must contain the customer condition data you have set in the Back Office.
 
 1. Implement the following plugin using `\Spryker\Client\CmsSlotBlockExtension\Dependency\Plugin\CmsSlotBlockVisibilityResolverPluginInterface`:
 
-**CustomerSlotBlockConditionResolverPlugin**
+<details><summary markdown='span'>**CustomerSlotBlockConditionResolverPlugin**</summary>
 
 ```php
 
@@ -309,6 +307,8 @@ class CustomerSlotBlockConditionResolverPlugin extends AbstractPlugin implements
     }
 }
 ```
+
+</details>
 
 2. Insert it into the `src/Pyz/Client/CmsSlotBlockCustomer` module.
 

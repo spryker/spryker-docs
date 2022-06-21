@@ -33,14 +33,14 @@ By default, the data is stored to the `/ShipmentDataImport/data/import/delivery_
 shipment_method_key,store_name
 ```
 
-where
+where:
 * `shipment_method`: Name of the delivery method you want to create
 * `store_name`: Store in which the delivery method are available
 
-To import delivery methods linked to the stores from the `/ShipmentDataImport/data/import/delivery_method_store.csv` file, run the following console command:
+To import delivery methods linked to the stores from the `/ShipmentDataImport/data/import/delivery_method_store.csv` file, run the following:
 
 ```bash
 console data:import:shipment-method-store
 ```
 
-If successful, the imported data is added to the `spy_shipment_method_store` database table and appear on the list of delivery methods in the Back Office. For more information about how to view and update the delivery methods, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html) <!-- link -->.
+If successful, the imported data is added to the `spy_shipment_method_store` database table and appears on the list of delivery methods in the Back Office. For more information about viewing and updating the delivery methods, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html).

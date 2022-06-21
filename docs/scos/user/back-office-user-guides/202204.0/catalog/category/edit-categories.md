@@ -54,6 +54,23 @@ This doc describes how to edit categories in the Back Office.
 
 This refreshes the page with a success message displayed.
 
+### Reference information: Define general settings of a category
+
+| ATTRIBUTE | DESCRIPTION |
+|-|-|
+| CATEGORY KEY | Unique identifier of the category that is used for assigning products and CMS blocks to the categories through the import. |
+| PARENT | Defines under which category this category is displayed on the Storefront. |
+| ADDITIONAL PARENTS | Defines under which categories, apart from the category defined in **PARENT**, the category will be displayed on the Storefront.  |
+| STORES | Stores which the category will be displayed in.  |
+| TEMPLATE | Defines how the category's page will look on the Storefront. For more information, see [Reference information: TEMPLATE](#reference-information-template) |
+| ACTIVE | Defines if the category is to be displayed on the Storefront. |
+| VISIBLE IN THE CATEGORY TREE | Defines if the category is to be displayed in the category tree on the Storefront. |
+| ALLOW TO SEARCH FOR THIS CATEGORY | Defines if customers can find the category on the Storefront using search. |
+| NAME | Name that is displayed on the Storefront. |
+| META TITLE | SEO title. |
+| META DESCRIPTION | SEO description. |
+| META KEYWORDS | SEO keywords. |
+
 ## Update images of a category
 
 On the **Edit category** page, click the **Images** tab and do any of the following for needed locales.
@@ -67,4 +84,7 @@ On the **Edit category** page, click the **Images** tab and do any of the follow
 | IMAGE SET NAME | Name of the image set that is displayed only in the Back Office. |
 | SMALL IMAGE URL | URL to the small version of the image. This image is displayed when categories are sorted as a list. |
 | LARGE IMAGE URL | URL to the large version of the image. This image is displayed when categories are sorted as a grid. |
-| SORT ORDER | When displayed together with other images, defines the order The order starts from "0". |
+| SORT ORDER | When displayed together with other images, defines the order of images in an ascending order. The minimum value is `0`. |
+
+
+## Reference information: TEMPLATE

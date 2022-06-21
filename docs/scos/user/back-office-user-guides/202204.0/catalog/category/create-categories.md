@@ -63,17 +63,9 @@ To create a category in the Back Office, follow the steps below.
 
 ## Add images to a category
 
-1. On the **Images** tab, do the following for the needed locales:
-    1. click **Add image set**.
-    2. Enter an **IMAGE SET NAME**.
-    3. Enter a **SMALL IMAGE URL**.
-    4. Enter a **LARGE IMAGE URL**.
-    5. Optional: Enter a **SORT ORDER**.
-    6. Optional: To add one more image, click **Add image**.
-    7. Repeat steps 3-6 until you add all the needed images.
-    8. Optional: To add one more image set, click **Add image set**.
-    9. Repeat steps 2-8 until you add all the needed image sets.
-2. Click **Save**.   
+{% include scos/user/back-office-user-guides/add-images.md %} <!-- To edit, see /_includes/scos/user/back-office-user-guides/add-images.md -->
+
+
     This opens the **Edit category** page with a success message displayed.
 
 
@@ -94,39 +86,13 @@ You can add multiple image sets and multiple images to an image set. However, by
 | IMAGE SET NAME | Name of the image set for you to use in the Back Office. |
 | SMALL IMAGE URL | URL to the small version of the image. This image will be displayed when categories are sorted as a list. |
 | LARGE IMAGE URL | URL to the large version of the image. This image will be displayed when categories are sorted as a grid. |
-| SORT ORDER | When displayed together with other images, defines the order Numeric identifier of the image in the order of other images of an image set. This defines the order in which the images are shown in the back end and front end. The order starts from "0". |
+| SORT ORDER | When displayed together with other images, defines the order of images in an ascending order. The minimum value is `0`. |
 
 
 ## Reference information: TEMPLATE
 
-The following category templates are available by default:
+{% include scos/user/back-office-user-guides/catalog/category/reference-information-template.md %} <!-- To edit, see /_includes/scos/user/back-office-user-guides/catalog/category/reference-information-template.md -->
 
-**Catalog (default)**
-Displays the products in the category.
-
-<details><summary markdown='span'>The Catalog(default) template on the Storefront</summary>
-
-![Catalog](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Category/Category%3A+Reference+Information/Catalog.gif)
-
-</details>
-
-**Catalog + CMS Slot**
-Displays the products in the category and the content of the template's CMS slots. To learn how to add content to the slots, see [Best practices: Adding content to the Storefront pages using templates and slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/best-practices-adding-content-to-the-storefront-pages-using-templates-and-slots.html).
-
-<details><summary markdown='span'>The Catalog+CMS Block template on the Storefront</summary>
-
-![Catalog + Slots](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Category/Category%3A+Reference+Information/Catalog%2BCms+Block.gif)
-
-</details>
-
-**Sub Categories grid**
-Displays the subcategories of the category.
-
-<details><summary markdown='span'>The Sub Category grid template on the Storefront</summary>
-
-![Sub Category grid](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Category/Category:+Reference+Information/sub+category.gif)
-
-</details>
 
 ## Next Steps
 

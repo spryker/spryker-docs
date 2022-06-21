@@ -27,7 +27,7 @@ All payment methods enabled for a marketplace business model in Unzer are displa
 
 We display all the payment methods enabled for the merchant that are not yet compatible with a marketplace business model.
 
-##### Example
+#### Example
 
 In your Unzer account, the following payment methods are enabled for the marketplace business model:
 
@@ -55,7 +55,7 @@ All payment methods enabled for a marketplace business model in Unzer are displa
 * Sofort
 * Unzer Bank Transfer
 
-##### Example
+#### Example
 
 In your Unzer account, the following payment methods are enabled for the marketplace business model
 

@@ -5,7 +5,7 @@ description: This document describes domain model & relationships
 template: concept-topic-template
 ---
 
-# Domain model for Unzer payments
+## Domain model for Unzer payments
 
 Every Sales Order is connected to a payment type (the payment method selected by the customer in the checkout process). You can capture as many times as you wish by your OMS state machine.
 

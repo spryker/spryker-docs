@@ -3,6 +3,15 @@ title: Creating product variants
 last_updated: Jul 27, 2021
 description: This guide explains how to create product variants in Marketplace.
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-concrete-products/creating-product-variants.html
+related:
+  - title: Managing products
+    link: docs/marketplace/user/back-office-user-guides/page.version/catalog/products/managing-products/managing-products.html
+  - title: Editing product variants
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/editing-product-variants.html
+  - title: Marketplace Product feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
 ---
 
 This document describes how to add a product variant for an abstract product.
@@ -44,7 +53,7 @@ To create a product variant:
 5. Optional: Click **Next** to go to **Image** to add images for the product and define the image order.
 6. Optional: Click **Next** of select the **Assign bundled products** tab to create a bundles product. For more information, see [Creating and managing product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html).
 7. Click **Save**.
-The page is refreshed and you can see two additional tabs: *Discontinue* and* Product Alternatives*. See  [Discontinuing products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/discontinuing-products.html) and [Adding product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/adding-product-alternatives.html) to know more.
+The page is refreshed and you can see two additional tabs: *Discontinue* and *Product Alternatives*. See [Discontinuing products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/discontinuing-products.html) and [Adding product alternatives](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/adding-product-alternatives.html) to know more.
 
 {% info_block errorBox "Important" %}
 

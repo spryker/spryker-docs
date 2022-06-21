@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/arvato-store-order-2-0
   - /docs/arvato-store-order-2-0
   - /docs/en/arvato-store-order-2-0
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/arvato/arvato-store-order.html
 related:
   - title: Arvato
     link: docs/scos/user/technology-partners/page.version/payment-partners/arvato.html

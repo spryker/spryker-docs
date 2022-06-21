@@ -1,8 +1,12 @@
 ---
 title: "Glue API: Marketplace Product Offer + Cart feature integration"
-last_updated: Aug 31, 2021
 description: This integration guide provides steps on how to integrate the Marketplace Product Offer + Cart Glue API feature into a Spryker project.
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Product Offer feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+  - title: Marketplace Cart feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-cart-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product Offer + Cart Glue API feature into a Spryker project.
@@ -45,7 +49,7 @@ use Spryker\Glue\MerchantProductOffersRestApi\Plugin\CartsRestApi\MerchantProduc
 class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\RestCartItemsAttributesMapperPluginInterface[]
+     * @return array<\Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\RestCartItemsAttributesMapperPluginInterface>
      */
     protected function getRestCartItemsAttributesMapperPlugins(): array
     {
@@ -55,7 +59,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
     }
 
     /**
-     * @return \Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\CartItemExpanderPluginInterface[]
+     * @return array<\Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\CartItemExpanderPluginInterface>
      */
     protected function getCartItemExpanderPlugins(): array
     {
@@ -79,7 +83,7 @@ use Spryker\Zed\MerchantProductOffersRestApi\Communication\Plugin\CartsRestApi\M
 class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\CartsRestApiExtension\Dependency\Plugin\CartItemMapperPluginInterface[]
+     * @return array<\Spryker\Zed\CartsRestApiExtension\Dependency\Plugin\CartItemMapperPluginInterface>
      */
     protected function getCartItemMapperPlugins(): array
     {

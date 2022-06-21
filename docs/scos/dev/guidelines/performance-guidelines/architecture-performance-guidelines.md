@@ -78,13 +78,13 @@ Plugin n ....
 You can solve this issue by:
 
 - Using IN condition instead of = in query:
-  
+
 ```sql
 SELECT * FROM SPY_PRODUCT_ABSTRACT WHERE SKU IN (?,?,?,....)
 ```
 
 - Running only 1 query and providing the result to other plugins:
-  
+
 ```sql
 Plugin 1. QUERY
 Plugin 2. RESULT
@@ -99,7 +99,7 @@ Spryker uses Propel ORM as a database abstraction layer which allows to stay DBM
 
 Performance is one of the key attributes when it comes to synchronous combinations. Therefore, as a rule of thumb, any database operations must be high performant and be executed fast. If ORM cannot guarantee the high-speed database operation because of the lack of features or complexity, one should avoid using it.
 
-For example, to display products in the Spryker shop, we need to import and propagate data into several databases. For some projects, this is a cumbersome operation due to the large volume of data. Therefore, Spryker recommends not to use ORM for these operations, but choose other solutions instead, for example, CTE, PDO, etc. 
+For example, to display products in the Spryker shop, we need to import and propagate data into several databases. For some projects, this is a cumbersome operation due to the large volume of data. Therefore, Spryker recommends not to use ORM for these operations, but choose other solutions instead, for example, CTE, PDO, etc.
 
 For data import of large files, it's also important to use bulk processing. Therefore, consider importing data into the database with chunks of 1000+ elements. The same applies to triggering events. Using bulk processing saves a lot of time for communication with the database and queues.
 
@@ -121,7 +121,7 @@ Database queries are the slowest parts of each application. They have different 
 
 ## Feature configurations
 
-Spryker has different features and several configurable modules that need to be adjusted correctly to have the best performance and smooth execution in the applications. 
+Spryker has different features and several configurable modules that need to be adjusted correctly to have the best performance and smooth execution in the applications.
 
 ### Publish and Synchronization
 
@@ -151,7 +151,7 @@ Publishers use different chunks to consume messages from queues. Even though the
 
 - 500 (Default)
 - 1000
-- 1500 
+- 1500
 - 2000 (Max)
 
 {% info_block warningBox %}
@@ -176,7 +176,7 @@ time vendor/bin/console queue:task:start publisher.product_abstract // Ouput 30.
 As the Spryker boilerplate comes with most of the features enabled, make sure you clean up the unnecessary plugins from the Cart and Checkout plugin stack:
 
 - [Cart plugins](https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/Cart/CartDependencyProvider.php)
- 
+
 - [Checkout plugins](https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php)
 
 ### Zed calls
@@ -190,7 +190,7 @@ Zed calls are necessary when it comes to executing a database-related operation 
 
 OMS processes are the template of the order fulfillment in Spryker. The first state of OMS processes, called the NEW state, plays an important role in the checkout process. Therefore, it is necessary to make sure you don't use unnecessary features when you don't need them, for example, Reservation or Timeout transitions.
 
-One can avoid using the unnecessary transitions by: 
+One can avoid using the unnecessary transitions by:
 
 - Removing the *Reservation* flag from the NEW and other steps in the OMS.
 - Removing the *Timeout* transition from the NEW step in the OMS.
@@ -225,4 +225,4 @@ We strongly recommend our customers enable APM systems for their projects. Spryk
 
 ### Performance CI
 
-Performance CI plays a very important role for each project pipeline as it prevents new issues in the long term when it comes to feature development. To analyze your project's performance, you can use the [Benchmark](https://docs.spryker.com/docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html) tool.
+Performance CI plays a very important role for each project pipeline as it prevents new issues in the long term when it comes to feature development. To analyze your project's performance, you can use the [Benchmark](/docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html) tool.

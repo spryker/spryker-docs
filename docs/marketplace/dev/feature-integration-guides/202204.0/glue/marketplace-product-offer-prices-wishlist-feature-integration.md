@@ -2,10 +2,14 @@
 title: "Glue API: Marketplace Product Offer Prices + Wishlist feature integration"
 description: This document describes how to integrate the Marketplace Product Offer Prices + Wishlist Glue API feature into a Spryker project.
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Product Offer Prices feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-offer-prices-feature-walkthrough.html
+  - title: Marketplace Wishlist feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-wishlist-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Product Offer Prices + Wishlist Glue API feature into a Spryker project.
-
 
 ## Install feature core
 
@@ -42,7 +46,7 @@ use Spryker\Zed\Wishlist\WishlistDependencyProvider as SprykerWishlistDependency
 class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistItemExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistItemExpanderPluginInterface>
      */
     protected function getWishlistItemExpanderPlugins(): array
     {
@@ -65,7 +69,7 @@ use Spryker\Zed\PriceProductOfferVolume\Communication\Plugin\PriceProductOffer\P
 class PriceProductOfferDependencyProvider extends SprykerPriceProductOfferDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\PriceProductOfferExtension\Dependency\Plugin\PriceProductOfferExtractorPluginInterface[]
+     * @return array<\Spryker\Zed\PriceProductOfferExtension\Dependency\Plugin\PriceProductOfferExtractorPluginInterface>
      */
     protected function getPriceProductOfferExtractorPlugins(): array
     {

@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/enabling-cms-widget
   - /2021080/docs/en/enabling-cms-widget
   - /docs/enabling-cms-widget
-  - /docs/en/enabling-cms-widget
+  - /docs/en/enabling-cms-widget/docs/scos/dev/feature-integration-guides/202200.0/enabling-the-content-widget.html
 ---
 
 CMS content widgets is a CMS feature for adding  dynamic content to CMS pages/blocks.

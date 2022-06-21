@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/retrieving-abstract-products
   - /docs/retrieving-abstract-products
   - /docs/en/retrieving-abstract-products
+  - /docs/scos/dev/glue-api-guides/202200.0/managing-products/abstract-products/retrieving-abstract-products.html
 related:
   - title: Product overview
     link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html

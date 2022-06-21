@@ -1,6 +1,6 @@
 ---
-title: HowTo - Set number of days for a return policy
-description: The article describes how to set a number of days for a Return Policy
+title: "HowTo: Set number of days for a return policy"
+description: The document describes how to set a number of days for a Return Policy
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/howto-set-number-of-days-for-a-return-policy
@@ -14,6 +14,7 @@ redirect_from:
   - /v6/docs/en/howto-set-number-of-days-for-a-return-policy
   - /v5/docs/howto-set-number-of-days-for-a-return-policy
   - /v5/docs/en/howto-set-number-of-days-for-a-return-policy
+  - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html
 ---
 
 To define a period within which an item can be returned, redefine the Config in `Pyz\Zed\SalesReturn\SalesReturnConfig` by adding the following there:

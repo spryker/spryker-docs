@@ -3,6 +3,9 @@ title: Marketplace Promotions & Discounts feature integration
 last_updated: Sep 09, 2021
 description: This document describes the process how to integrate the Marketplace Promotions & Discounts feature into a Spryker project.
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Promotions and Discounts feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-promotions-and-discounts-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Promotions & Discounts feature into a Spryker project.
@@ -60,7 +63,7 @@ use Spryker\Zed\MerchantSalesOrderMerchantUserGui\MerchantSalesOrderMerchantUser
 class MerchantSalesOrderMerchantUserGuiConfig extends SprykerMerchantSalesOrderMerchantUserGuiConfig
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     public function getMerchantSalesOrderDetailExternalBlocksUrls(): array
     {
@@ -112,13 +115,13 @@ Enable the following behaviors by registering the plugins:
 
 namespace Pyz\Zed\MerchantSalesOrder;
 
-use Spryker\Zed\DiscountMerchantSalesOrder\Communication\Plugin\DiscountMerchantOrderFilterPlugin;
+use Spryker\Zed\DiscountMerchantSalesOrder\Communication\Plugin\MerchantSalesOrder\DiscountMerchantOrderFilterPlugin;
 use Spryker\Zed\MerchantSalesOrder\MerchantSalesOrderDependencyProvider as SprykerMerchantSalesOrderDependencyProvider;
 
 class MerchantSalesOrderDependencyProvider extends SprykerMerchantSalesOrderDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MerchantSalesOrderExtension\Dependency\Plugin\MerchantOrderFilterPluginInterface[]
+     * @return array<\Spryker\Zed\MerchantSalesOrderExtension\Dependency\Plugin\MerchantOrderFilterPluginInterface>
      */
     protected function getMerchantOrderFilterPlugins(): array
     {

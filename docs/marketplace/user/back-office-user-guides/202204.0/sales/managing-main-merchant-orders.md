@@ -3,6 +3,13 @@ title: Managing main merchant orders
 last_updated: Jul 22, 2021
 description: This guide explains how to manage main merchant orders in the Back Office.
 template: back-office-user-guide-template
+related:
+  - title: Managing main merchant returns
+    link: docs/marketplace/user/back-office-user-guides/page.version/sales/managing-main-merchant-returns.html
+  - title: Marketplace Order Management feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-order-management-feature-overview/marketplace-order-management-feature-overview.html
+  - title: Main Merchant concept
+    link: docs/marketplace/user/features/page.version/marketplace-merchant-feature-overview/main-merchant-concept.html
 ---
 
 *My Orders* is a dedicated page for managing the orders that customers completed from the [main merchant](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html) (Marketplace owner) within the Marketplace.

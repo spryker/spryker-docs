@@ -10,6 +10,10 @@ redirect_from:
   - /2021080/docs/en/retrieving-category-nodes
   - /docs/retrieving-category-nodes
   - /docs/en/retrieving-category-nodes
+  - /docs/scos/dev/glue-api-guides/201811.0/retrieving-categories/retrieving-category-nodes.html
+  - /docs/scos/dev/glue-api-guides/201903.0/retrieving-categories/retrieving-category-nodes.html
+  - /docs/scos/dev/glue-api-guides/201907.0/retrieving-categories/retrieving-category-nodes.html
+  - /docs/scos/dev/glue-api-guides/202005.0/retrieving-categories/retrieving-category-nodes.html
 related:
   - title: Category Management feature overview
     link: docs/scos/user/features/page.version/category-management-feature-overview.html

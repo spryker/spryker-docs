@@ -3,6 +3,9 @@ title: REST API Marketplace B2C Demo Shop reference
 description: This page provides an exhaustive reference for the REST API endpoints present in the Spryker B2C Demo Shop Marketplace by default with the corresponding parameters and data formats.
 last_updated: May 10, 2022
 template: glue-api-storefront-guide-template
+related:
+  - title: REST API Marketplace B2B Demo Shop reference
+    link: docs/marketplace/dev/glue-api-guides/page.version/rest-api-b2b-reference.html
 ---
 
 This document provides an overview of REST API endpoints provided by the Spryker B2C Marketplace by default. For each endpoint, you will find its URL relative to the server, REST request parameters, as well as the appropriate request and response data formats.

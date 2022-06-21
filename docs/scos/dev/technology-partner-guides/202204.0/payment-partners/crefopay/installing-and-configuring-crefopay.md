@@ -11,6 +11,7 @@ redirect_from:
   - /docs/crefopay-configuration
   - /docs/en/crefopay-configuration
   - /docs/scos/user/technology-partners/201907.0/payment-partners/crefopay/installing-and-configuring-crefopay.html
+  - /docs/scos/dev/technology-partner-guides/202200.0/payment-partners/crefopay/installing-and-configuring-crefopay.html
 related:
   - title: Integrating CrefoPay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/integrating-crefopay.html
@@ -98,6 +99,6 @@ CrefoPayConfig::CREFO_PAY_PAYMENT_METHOD_BILL => 'CrefoPayBill01',
 
 See [CrefoPay payment methods](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/crefopay-payment-methods.html) for more information on the payment methods provided by CrefoPay.
 
-## What's next?
+## Next steps
 
 Once you are done with the installation and configuration of the CrefoPay module, [integrate CrefoPay into your project](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/crefopay/integrating-crefopay.html).

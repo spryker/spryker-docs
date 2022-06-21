@@ -3,6 +3,11 @@ title: Managing  marketplace returns
 last_updated: Aug 09, 2021
 description: This guide explains how to manage marketplace returns in the Back Office.
 template: back-office-user-guide-template
+related:
+    - title: Managing marketplace orders
+      link: docs/marketplace/user/back-office-user-guides/page.version/marketplace/orders/managing-marketplace-orders.html
+    - title: Marketplace Return Management feature overview
+      link: docs/marketplace/user/features/page.version/marketplace-return-management-feature-overview.html
 ---
 
 After a [marketplace return](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html) has been created by a Back Office user or by a [shop user](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html#marketplace-return-management-on-the-storefront), it appears on the **Sales&nbsp;<span aria-label="and then">></span> Returns** page. On this page, you can manage the returns as follows:

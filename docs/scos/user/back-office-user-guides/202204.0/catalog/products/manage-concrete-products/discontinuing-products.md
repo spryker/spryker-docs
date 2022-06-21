@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/discontinuing-products
   - /docs/discontinuing-products
   - /docs/en/discontinuing-products
+  - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-concrete-products/discontinuing-products.html
 related:
   - title: Adding Product Alternatives
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/adding-product-alternatives.html
@@ -59,6 +60,6 @@ Let's say the Smartphone with a flash memory equals 16GB is no longer popular, a
 You will discontinue this product variant and set up other products to be displayed as alternatives.
 ![Discontinued and alternatives](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Products:+Reference+Information/Discontinued-and-Alternative.gif)
 
-## What's next?
+## Next steps
 
 Review the other articles in the _Products_ section to know more about product management.

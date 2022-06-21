@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-stock.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-stock.html
   - /docs/scos/dev/module-migration-guides/2021080.0/migration-guide-stock.html
+  - /module_migration_guides/mg-stock.htm
 ---
 
 ## Upgrading from version 7.* to version 8.0.0

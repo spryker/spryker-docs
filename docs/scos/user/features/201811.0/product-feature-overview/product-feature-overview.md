@@ -14,6 +14,8 @@ redirect_from:
   - /v1/docs/en/product-review-filter-and-sort
   - /v1/docs/product-management
   - /v1/docs/en/product-management
+  - /docs/scos/user/features/201811.0/product/product-feature-overview/products-overview.html
+  - /docs/scos/user/features/201811.0/product-feature-overview/product-feature-overview.htmlproduct-abstraction.html
 ---
 
 Product data is central data for shops. It contains characteristics that describe the product as well as characteristics that control behavior of the shop. For example the color of a product is an important information that the customer might need, whereas the weight of the product can be used to calculate the delivery costs.
@@ -63,6 +65,5 @@ In Spryker Commerce OS, both abstract and concrete products have:
 This information, besides the SKU, is inherited from the abstract to the concrete products when they are created. However, only the concrete product has stock and may have one or more additional attributes that we call super attributes (In the example above the super attribute is the size). This structure allows to create multiple variants of a product, which eventually are the products that your customers buy.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Abstraction/producterd.png)
 
-## Product Hierarchy in the Spryker Commerce OS Demoshop 
+## Product Hierarchy in the Spryker Commerce OS Demoshop
 In the catalog of the shop frontend, the abstract products are listed (e.g. shoe model X blue). Once the customer has selected one of these abstract products and proceeded to the product detail page, the abstract products information is displayed first. Only after having selected the distinctive characteristic of a variant (e.g. size 41 for the shoe in the example above) the concrete product information is displayed (e.g. shoe model X color = blue size = 41). Note that the structure of the products is a business decisions and that both, abstract and concrete products, share the same URL in the Spryker Commerce OS demoshop.
-

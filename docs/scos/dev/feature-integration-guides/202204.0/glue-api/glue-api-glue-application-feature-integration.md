@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/glue-api-glue-application-feature-integration
   - /docs/glue-api-glue-application-feature-integration
   - /docs/en/glue-api-glue-application-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-glue-application-feature-integration.html
 ---
 
 Follow the steps below to install Glue application feature API.

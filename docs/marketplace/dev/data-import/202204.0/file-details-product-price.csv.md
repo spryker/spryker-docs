@@ -3,6 +3,15 @@ title: "File details: product_price.csv"
 last_updated: Sep 7, 2021
 description: This document describes the product_price.csv file to configure  product prices in your Spryker shop.
 template: import-file-template
+redirect_from:
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html
+  - /docs/scos/dev/data-import/201903.0/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html
+  - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html
+related:
+  - title: Marketplace Product feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-product-feature-walkthrough.html
+  - title: Marketplace Product feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
 ---
 
 This document contains content of the **product_price.csv** file to configure [prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.

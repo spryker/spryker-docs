@@ -3,6 +3,8 @@ title: Navigation feature walkthrough
 last_updated: Aug 13, 2021
 description: The Navigation feature enables product catalog managers to create intuitive navigation elements and display them on the Storefront
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202200.0/navigation-feature-walkthrough/navigation-feature-walkthrough.html
 ---
 
 The _Navigation_ feature enables product catalog managers to create intuitive navigation elements and display them on the Storefront.

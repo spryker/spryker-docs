@@ -2,16 +2,18 @@
 title: Migration guide - ProductConfigurationsRestApi
 description: Learn how to upgrade the ProductConfigurationsRestApi module to a newer version.
 template: module-migration-guide-template
+redirect_from:
+  - /docs/scos/dev/module-migration-guides/202200.0/migration-guide-productconfigurationsrestapi.html
 ---
 
-## Upgrading from version 0.1.* to version 0.2.* 
+## Upgrading from version 0.1.* to version 0.2.*
 
 *Estimated migration time: 5 minutes*
 
 To upgrade the `ProductConfigurationsRestApi` module from version 0.1.* to version 0.2.*, do the following:
 
 1. Update the `ProductConfigurationsRestApi` module to version 0.2.0:
-   
+
 ```bash
 composer require spryker/product-configurations-rest-api:"^0.2.0" --update-with-dependencies
 ```

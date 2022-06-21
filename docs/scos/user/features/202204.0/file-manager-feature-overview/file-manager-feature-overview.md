@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/media-management
   - /docs/media-management
   - /docs/en/media-management
+  - /docs/scos/user/features/202200.0/file-manager-feature-overview/file-manager-feature-overview.html
 ---
 
 The *File Manager* feature lets you upload and manager your assets effectively.

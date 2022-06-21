@@ -26,7 +26,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker-feature/marketplace-inventory-management: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/marketplace-inventory-management:"{{page.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -144,7 +144,7 @@ Enable the following behaviors by registering the plugins:
 | ProductOfferAvailabilityStrategyPlugin | Reads product offer availability. |  | Spryker\Zed\ProductOfferAvailability\Communication\Plugin\Availability |
 | ProductOfferStockProductOfferViewSectionPlugin | Shows stock section at product offer view page in Zed. |  | Spryker\Zed\ProductOfferStockGui\Communication\Plugin\ProductOffer |
 
-**src/Pyz/Zed/marketplace-merchant/marketplace-merchantDependencyProvider.php**
+**src/Pyz/Zed/Merchant/MerchantDependencyProvider.php**
 
 ```php
 <?php
@@ -158,7 +158,7 @@ use Spryker\Zed\MerchantStock\Communication\Plugin\Merchant\MerchantStockMerchan
 class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantPostCreatePluginInterface[]
+     * @return array<\Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantPostCreatePluginInterface>
      */
     protected function getMerchantPostCreatePlugins(): array
     {
@@ -168,7 +168,7 @@ class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
     }
 
     /**
-     * @return \Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantExpanderPluginInterface>
      */
     protected function getMerchantExpanderPlugins(): array
     {
@@ -200,7 +200,7 @@ use Spryker\Zed\MerchantStockGui\Communication\Plugin\MerchantGui\MerchantStockM
 class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MerchantGuiExtension\Dependency\Plugin\MerchantFormExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\MerchantGuiExtension\Dependency\Plugin\MerchantFormExpanderPluginInterface>
      */
     protected function getMerchantFormExpanderPlugins(): array
     {
@@ -213,7 +213,7 @@ class MerchantGuiDependencyProvider extends SprykerMerchantGuiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you edit some merchant on `http://zed.de.demo-spryker.com/merchant-gui/list-merchant`, you can see the `Wherehouses` field.
+Make sure that when you edit some merchant on `http://zed.de.demo-spryker.com/merchant-gui/list-merchant`, you can see the `Warehouses` field.
 
 {% endinfo_block %}
 
@@ -230,7 +230,7 @@ use Spryker\Zed\ProductOfferStockGui\Communication\Plugin\ProductOffer\ProductOf
 class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductOfferGuiExtension\Dependency\Plugin\ProductOfferViewSectionPluginInterface[]
+     * @return array<\Spryker\Zed\ProductOfferGuiExtension\Dependency\Plugin\ProductOfferViewSectionPluginInterface>
      */
     public function getProductOfferViewSectionPlugins(): array
     {
@@ -244,7 +244,7 @@ class ProductOfferGuiDependencyProvider extends SprykerProductOfferGuiDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when you view some product offer at `http://zed.de.demo-spryker.com/product-offer-gui/view?id-product-offer={{idProductOffer}}`, you can see the `Stock` section.
+Make sure that when you view some product offer at `http://zed.de.demo-spryker.com/product-offer-gui/view?id-product-offer={{idProductOffer}}`, you can see the `Stock` section. 
 
 {% endinfo_block %}
 
@@ -263,7 +263,7 @@ use Spryker\Zed\ProductOfferStock\Communication\Plugin\ProductOffer\ProductOffer
 class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferPostCreatePluginInterface[]
+     * @return array<\Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferPostCreatePluginInterface>
      */
     protected function getProductOfferPostCreatePlugins(): array
     {
@@ -273,7 +273,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
     }
 
     /**
-     * @return \Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferPostUpdatePluginInterface[]
+     * @return array<\Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferPostUpdatePluginInterface>
      */
     protected function getProductOfferPostUpdatePlugins(): array
     {
@@ -283,7 +283,7 @@ class ProductOfferDependencyProvider extends SprykerProductOfferDependencyProvid
     }
 
     /**
-     * @return \Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\ProductOfferExtension\Dependency\Plugin\ProductOfferExpanderPluginInterface>
      */
     protected function getProductOfferExpanderPlugins(): array
     {
@@ -317,7 +317,7 @@ use Spryker\Zed\ProductOfferAvailability\Communication\Plugin\Availability\Produ
 class AvailabilityDependencyProvider extends SprykerAvailabilityDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\AvailabilityExtension\Dependency\Plugin\AvailabilityStrategyPluginInterface[]
+     * @return array<\Spryker\Zed\AvailabilityExtension\Dependency\Plugin\AvailabilityStrategyPluginInterface>
      */
     protected function getAvailabilityStrategyPlugins(): array
     {
@@ -452,7 +452,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface[]
+     * @return array<\Spryker\Zed\Queue\Dependency\Plugin\QueueMessageProcessorPluginInterface>
      */
     protected function getProcessorMessagePlugins(Container $container)
     {
@@ -482,7 +482,7 @@ use Spryker\Zed\Synchronization\SynchronizationDependencyProvider as SprykerSync
 class SynchronizationDependencyProvider extends SprykerSynchronizationDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface[]
+     * @return array<\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataPluginInterface>
      */
     protected function getSynchronizationDataPlugins(): array
     {
@@ -511,7 +511,7 @@ Prepare your data according to your requirements using the demo data:
 
 **data/import/common/common/marketplace/merchant_stock.csv**
 
-```csv
+```
 merchant_reference,stock_name
 MER000001,Spryker MER000001 Warehouse 1
 MER000002,Video King MER000002 Warehouse 1
@@ -694,6 +694,30 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
+**data/import/local/full_EU.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-stock
+    source: data/import/common/common/marketplace/merchant_stock.csv
+  - data_entity: product-offer-stock
+    source: data/import/common/common/marketplace/product_offer_stock.csv
+```
+
+**data/import/local/full_US.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-stock
+    source: data/import/common/common/marketplace/merchant_stock.csv
+  - data_entity: product-offer-stock
+    source: data/import/common/common/marketplace/product_offer_stock.csv
+```
+
 Import data:
 
 ```bash
@@ -709,8 +733,8 @@ Make sure that the imported data is added to the `spy_merchant_stock` and `spy_p
 
 ## Related features
 
-| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
-| - | - | -|
-| Marketplace Inventory Management + Order Management |  |  [Marketplace Inventory Management + Order Management feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html)  |
-| Marketplace Inventory Management + Packaging Units |  |  [Marketplace Inventory Management + Packaging Units feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-packaging-units-feature-integration.html)  |
-| Marketplace Product + Inventory Management | | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html) |
+| FEATURE                                             | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                                       | 
+|-----------------------------------------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Marketplace Inventory Management + Order Management | &check;                          | [Marketplace Inventory Management + Order Management feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html) |
+| Marketplace Inventory Management + Packaging Units  |                                  | [Marketplace Inventory Management + Packaging Units feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-packaging-units-feature-integration.html)   |
+| Marketplace Product + Inventory Management          |                                  | [Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-inventory-management-feature-integration.html)                   |

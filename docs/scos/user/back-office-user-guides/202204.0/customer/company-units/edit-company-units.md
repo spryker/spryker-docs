@@ -2,6 +2,8 @@
 title: Edit company units
 description: Learn how to edit company units in the Back Office.
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202200.0/customer/company-account/managing-company-units.html
 ---
 
 Learn how to edit company units in the Back Office. Additionally, this is the only way to add  addresses to company units.

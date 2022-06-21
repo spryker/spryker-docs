@@ -10,13 +10,14 @@ To provide maximum selling activity, merchants can provide their working schedul
 A merchant has the following:
 
 * Default opening hours—defined per weekday and time including:
+
     * Lunch break time
     * Open/Closed state
 
 * Special opening hours are relevant for cases:
 
     * Merchant is opened on a usually closed day—for example, Sunday.
-    * Merchant has different opening hours in comparison to a normal schedule—for example, December 31th has shorter opening hours.
+    * Merchant has different opening hours in comparison to a normal schedule—for example, December 31st has shorter opening hours.
 
 * Public holidays—special days when the Merchant is not available due to the public holidays
 

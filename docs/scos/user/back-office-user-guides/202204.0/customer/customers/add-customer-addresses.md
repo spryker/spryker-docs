@@ -11,6 +11,7 @@ redirect_from:
   - /docs/managing-customer-addresses
   - /docs/en/managing-customer-addresses
   - /docs/scos/user/back-office-user-guides/202204.0/customer/customer-customer-access-customer-groups/managing-customer-addresses.html
+  - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customer-addresses.html
 related:
   - title: Customer Accounts
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html

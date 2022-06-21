@@ -50,16 +50,16 @@ It is possible to have the same display values for different OMS states.
 
 {% endinfo_block %}
 
-3. Go to **Back Office&nbsp;<span aria-label="and then">></span> Glossary**.
-4. In the **List of translations** table, in the **Name** column, find the state name as you specified it for the `display` parameter—for our example, *waiting for shipment*.
+3. In Back Office, go to **Administration&nbsp;<span aria-label="and then">></span> Glossary**.
+4. In the **LIST OF TRANSLATIONS** table, in the **NAME** column, find the state name as you specified for the `display` parameter—for our example, `waiting for shipment`.
 5. Provide the new glossary keys, that is, translations of the state:
-    1. In the **Actions** column, click **Edit**. The **Edit translation** page opens.
-    2. Enter translations for the available locales and click **Save**. The **Overview of Translation** page opens, where you can see the translations of the order state for the Storefront.
+    1. In the **ACTIONS** column, click **Edit**. The **Edit Translation** page opens.
+    2. For the available locales, enter translations and click **Save**. The **Overview of Translation** page opens, where you can see the translations of the order state for the Storefront.
 
 After taking steps 1-5, on the Storefront, on the **Order Overview** and **Order History** pages, customers see the states that correspond to the values of the `display` parameter you set in XML files of the respective payment methods and sub-processes.
 
 {% info_block infoBox "Info" %}
 
-If you delete the `display` parameter with its value, the OMS state, that is, the one specified in the `state name` parameter, is displayed on the Storefront.
+If you delete the `display` parameter with its value, the OMS state, the one specified in the `state name` parameter, is displayed on the Storefront.
 
 {% endinfo_block %}

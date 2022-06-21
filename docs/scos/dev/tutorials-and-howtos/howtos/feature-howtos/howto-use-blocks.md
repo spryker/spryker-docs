@@ -68,4 +68,4 @@ The new block is now ready to be used and integrated in other Twig templates.
 
 If you have a multiple store environment configured, you can also define in which of your stores the CMS Block can appear.
 
-In the previous example, the CMS Block is assigned to DE and US only. If the CMS Block is enabled, it appears only in store DE and US. Afterward, the user can define another CMS Block assigned to AT store only and have different content per store.
+In the previous example, the CMS Block is assigned to DE and US only. If the CMS Block is enabled, it appears only in DE and US stores. Afterward, the user can define another CMS Block assigned to AT store only and have different content per store.

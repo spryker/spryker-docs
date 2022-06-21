@@ -1,5 +1,5 @@
 ---
-title: Glue API installation and configuration
+title: Glue API Installation and Configuration
 description: This article describes the process of installing and enabling the GLUE API infrastructure and explains the details of integrating the REST API resources.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -17,8 +17,8 @@ Functionally, Spryker API can be split into 2 parts: API infrastructure (GLUE) a
 
 To integrate GLUE API in your project, you need to:
 
-- [1. Installing GLUE](#installing-glue)
-- [2. Enabling GLUE](#enabling-glue)
+- [1. Installing GLUE](#1-installing-glue)
+- [2. Enabling GLUE](#2-enabling-glue)
 - [Integrate REST API resources](#integrate-rest-api-resources)
 
 ## 1. Installing GLUE

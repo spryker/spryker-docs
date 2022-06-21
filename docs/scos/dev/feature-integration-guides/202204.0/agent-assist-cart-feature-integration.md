@@ -10,6 +10,8 @@ redirect_from:
   - /docs/agent-assist-cart-feature-integration
   - /docs/en/agent-assist-cart-feature-integration
 related:
+  - title: Glue API - Agent Assist feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-agent-assist-feature-integration.html
   - title: Agent Assist feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/agent-assist-feature-walkthrough.html
   - title: Cart feature walkthrough

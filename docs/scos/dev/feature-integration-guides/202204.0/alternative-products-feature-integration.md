@@ -11,6 +11,8 @@ redirect_from:
   - /docs/alternative-products-feature-integration
   - /docs/en/alternative-products-feature-integration
 related:
+  - title: Glue API - Alternative products feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-alternative-products-feature-integration.html
   - title: Alternative Products - Inventory Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-inventory-management-feature-integration.html
   - title: Alternative Products - Wishlist feature integration

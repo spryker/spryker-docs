@@ -1,5 +1,5 @@
 ---
-title: Glue API - Glue application feature integration
+title: Glue API - Glue Application feature integration
 description: This guide will navigate you through the process of installing and configuring the Glue Application feature in Spryker OS.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -17,6 +17,7 @@ Follow the steps below to install Glue application feature API.
 
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | NAME | TYPE | VERSION |
@@ -24,6 +25,7 @@ To start feature integration, overview and install the necessary features:
 | Spryker Core | Feature | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash

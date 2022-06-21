@@ -1,5 +1,5 @@
 ---
-title: Glue API - CMS feature integration guide
+title: Glue API - CMS feature integration
 last_updated: Jul 14, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-cms-feature-integration-guide

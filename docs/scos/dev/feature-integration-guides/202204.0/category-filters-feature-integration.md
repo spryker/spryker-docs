@@ -1,5 +1,5 @@
 ---
-title: Category filters feature integration
+title: Category Filters feature integration
 description: The Category Filters Feature allows arranging items into categories and customizing filters. This guide describes how to integrate the feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

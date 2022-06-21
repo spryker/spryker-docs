@@ -1298,7 +1298,7 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-      - title: Glue API - Glue application feature integration
+      - title: Glue API - Glue Application feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-glue-application-feature-integration.html
       - title: Glue API - Configurable Bundle feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-configurable-bundle-feature-integration.html
@@ -1315,7 +1315,7 @@ entries:
         include_versions:
         - "202108.0"
         - "202204.0"
-      - title: Glue API - Alternative products feature integration
+      - title: Glue API - Alternative Products feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-alternative-products-feature-integration.html
       - title: Glue API - Cart feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html
@@ -1351,7 +1351,7 @@ entries:
         include_versions:
         - "202108.0"
         - "202204.0"
-      - title: Glue API - Content Items API feature integration
+      - title: Glue API - Content Items feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-content-items-feature-integration.html
         include_versions:
         - "201907.0"
@@ -1483,7 +1483,7 @@ entries:
         - "202204.0"
       - title: Glue API - Product Image Sets feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-image-sets-feature-integration.html
-      - title: Glue API - Product price feature integration
+      - title: Glue API - Product Price feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-price-feature-integration.html
       - title: Glue API - Product Relations feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-relations-feature-integration.html
@@ -1496,7 +1496,7 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-      - title: Glue API - Return management feature integration
+      - title: Glue API - Return Management feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-return-management-feature-integration.html
         include_versions:
         - "202009.0"
@@ -1529,7 +1529,7 @@ entries:
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-wishlist-feature-integration.html
       - title: Glue API - REST Schema Validation feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-rest-schema-validation-feature-integration.html
-      - title: Catalog Search API feature integration
+      - title: Glue API - Catalog Search feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/catalog-search-api-feature-integration.html
         include_versions:
         - "201811.0"
@@ -1915,6 +1915,17 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
+    - title: Measurement Units feature integration
+      url: /docs/scos/dev/feature-integration-guides/measurement-units-feature-integration.html
+      include_versions:
+      - "201811.0"
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
+      - "202204.0"
     - title: Merchant B2B Contracts feature integration
       url: /docs/scos/dev/feature-integration-guides/merchant-b2b-contracts-feature-integration.html
       include_versions:
@@ -2049,19 +2060,19 @@ entries:
       include_versions:
       - "202108.0"
       - "202204.0"
-    - title: Product bundles + cart feature integration
+    - title: Product Bundles + Cart feature integration
       url: /docs/scos/dev/feature-integration-guides/product-bundles-cart-feature-integration.html
       include_versions:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-    - title: Product bundles + order management feature integration
+    - title: Product Bundles + Order Management feature integration
       url: /docs/scos/dev/feature-integration-guides/product-bundles-order-management-feature-integration.html
       include_versions:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-    - title: Product bundles + return management feature integration
+    - title: Product bundles + Return Management feature integration
       url: /docs/scos/dev/feature-integration-guides/product-bundles-return-management-feature-integration.html
       include_versions:
       - "202009.0"
@@ -2098,9 +2109,9 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-    - title: Product labels feature integration
+    - title: Product Labels feature integration
       url: /docs/scos/dev/feature-integration-guides/product-labels-feature-integration.html
-    - title: Product labels + Promotions and Discounts feature integration
+    - title: Product Labels + Promotions and Discounts feature integration
       url: /docs/scos/dev/feature-integration-guides/product-labels-promotions-and-discounts-feature-integration.html
       include_versions:
       - "202009.0"
@@ -2110,16 +2121,6 @@ entries:
       url: /docs/scos/dev/feature-integration-guides/product-lists-feature-integration.html
     - title: Product Lists + Catalog feature integration
       url: /docs/scos/dev/feature-integration-guides/product-lists-catalog-feature-integration.html
-      include_versions:
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      - "202204.0"
-    - title: Product Measurement Unit feature integration
-      url: /docs/scos/dev/feature-integration-guides/product-measurement-unit-feature-integration.html
       include_versions:
       - "201903.0"
       - "201907.0"

@@ -1,5 +1,5 @@
 ---
-title: Glue API - Content Items API feature integration
+title: Glue API - Content Items feature integration
 description: The guide walks you through the process of installing and configuring the Content Items feature in the project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

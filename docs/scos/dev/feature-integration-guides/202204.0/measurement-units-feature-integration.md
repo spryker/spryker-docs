@@ -1,5 +1,5 @@
 ---
-title: Product Measurement Unit feature integration
+title: Measurement Units feature integration
 description: The Measurement Units feature allows defining specific units of measure for products. The guide describes how to integrate the feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -11,7 +11,16 @@ redirect_from:
   - /docs/product-measurement-unit-feature-integration
   - /docs/en/product-measurement-unit-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/product-measurement-unit-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/product-measurement-unit-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202009.0/product-measurement-unit-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202005.0/product-measurement-unit-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202001.0/product-measurement-unit-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/product-measurement-unit-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/product-measurement-unit-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201811.0/product-measurement-units-feature-integration.html
 related:
+  - title: Glue API - Measurement Units feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-measurement-units-feature-integration.html
   - title: Measurement Units feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/measurement-units-feature-walkthrough.html
 ---
@@ -25,9 +34,9 @@ To start feature integration, overview and install the necessary features:
 | NAME | VERSION |
 | --- | --- |
 | Cart | {{page.version}} |
-|Product| {{page.version}} |
-|Order Management| {{page.version}} |
-|Spryker Core| {{page.version}} |
+| Product | {{page.version}} |
+| Order Management | {{page.version}} |
+| Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
 

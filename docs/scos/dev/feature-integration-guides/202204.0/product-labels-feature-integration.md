@@ -12,6 +12,8 @@ redirect_from:
   - /docs/en/product-labels-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/product-labels-feature-integration.html
 related:
+  - title: Glue API - Product Labels feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-labels-feature-integration.html
   - title: Alternative products + Product Label feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-product-label-feature-integration.html
   - title: Product group + Product Labels feature integration

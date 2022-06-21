@@ -13,6 +13,10 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/product-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/product-feature-integration.html
 related:
+  - title: Glue API - Product feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-feature-integration.html
+  - title: Glue API - Product Image Sets feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-image-sets-feature-integration.html
   - title: Configurable Bundle feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html
   - title: Product Lists feature integration

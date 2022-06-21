@@ -14,6 +14,8 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/cart-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/cart-feature-integration.html
 related:
+  - title: Glue API - Cart feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-cart-feature-integration.html
   - title: Cart feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-feature-walkthrough.html
 ---

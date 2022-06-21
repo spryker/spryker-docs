@@ -11,6 +11,8 @@ redirect_from:
   - /docs/en/shopping-lists-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/shopping-lists-feature-integration.html
 related:
+  - title: Glue API - Shopping Lists feature integration
+	link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-shopping-lists-feature-integration.html
   - title: Shopping list widget overview
     link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-list-widget-overview.html
   - title: Shopping Lists + Product Options feature integration

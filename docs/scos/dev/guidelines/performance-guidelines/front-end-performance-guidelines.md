@@ -1,6 +1,6 @@
 ---
 title: Front-end performance guidelines
-description: Optimize your Spryker frontend.
+description: Optimize your Spryker Frontend.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/front-end-performance-guidelines

@@ -11,6 +11,8 @@ redirect_from:
   - /docs/product-rating-reviews-feature-integration
   - /docs/en/product-rating-reviews-feature-integration
 related:
+  - title: Glue API - Product rating & reviews feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-rating-and-reviews-feature-integration.html
   - title: Product Rating and Reviews feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-rating-reviews-feature-walkthrough.html
   - title: Product Rating & Reviews feature overview
@@ -20,7 +22,9 @@ related:
 ## Prerequisites
 
 To prepare your project to work with Product Reviews:
+
 1. Require the Product Review modules in your composer by running
+
     * `composer require spryker/product-review`
     * `composer require spryker/product-review-collector`
     * `composer require spryker/product-review-gui`

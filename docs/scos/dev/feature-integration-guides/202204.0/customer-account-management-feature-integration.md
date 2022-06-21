@@ -25,6 +25,7 @@ This document describes how to integrate the Customer Account Management feature
 {% info_block errorBox "Included features" %}
 
 The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds:
+
 * Redirect support for Customer login functionality.
 * Password set and reset console commands for customers.
 * Double opt-in for customer registration.

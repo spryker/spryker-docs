@@ -1,5 +1,5 @@
 ---
-title: Glue API - Product options feature integration
+title: Glue API - Product Options feature integration
 description: This guide provides step-by-step instruction on integrating Product Options API Feature into the Spryker based project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

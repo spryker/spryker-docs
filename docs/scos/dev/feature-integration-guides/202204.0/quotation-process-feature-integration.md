@@ -12,6 +12,8 @@ redirect_from:
   - /docs/en/quotation-process-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/quotation-process-feature-integration.html
 related:
+  - title: Glue API - Quotation Process feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-quotation-process-feature-integration.html
   - title: Quotation Process + Approval Process feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-approval-process-feature-integration.html
   - title: Quotation Process + Multiple Carts feature integration

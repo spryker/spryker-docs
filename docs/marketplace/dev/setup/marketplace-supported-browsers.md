@@ -5,8 +5,6 @@ last_updated: Jun 8, 2022
 template: howto-guide-template
 ---
 
-This document lists browsers which the Spryker Marketplace supports.
-
 The Spryker Marketplace supports the following browsers:
 
 | DESKTOP (MARKETPLACE AND MERCHANT PORTAL) | MOBILE (MARKETPLACE ONLY) | TABLET (MARKETPLACE AND MERCHANT PORTAL) |

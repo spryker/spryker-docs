@@ -19,7 +19,7 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/product-options-feature-walkthrough.html
 ---
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 

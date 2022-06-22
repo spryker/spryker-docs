@@ -18,7 +18,7 @@ The current feature integration guide only adds the Shopping List Rest API funct
 {% endinfo_block %}
 
 
-## Install Feature API
+## Install feature API
 Follow the steps below to install feature API.
 
 ### Prerequisites

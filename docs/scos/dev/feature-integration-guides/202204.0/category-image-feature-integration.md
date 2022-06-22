@@ -19,7 +19,7 @@ related:
 
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+Please overview, and install the necessary features before beginning the integration step.
 
 | NAME | VERSION |
 | --- | --- |

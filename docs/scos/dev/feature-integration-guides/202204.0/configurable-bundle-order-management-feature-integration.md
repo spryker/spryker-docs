@@ -14,7 +14,7 @@ related:
   - title: Configurable Bundle feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/configurable-bundle-feature-walkthrough.html
   - title: Order Management feature walkthrough
-	link: docs/scos/dev/feature-walkthroughs/page.version/order-management-feature-walkthrough/order-management-feature-wakthrough.html
+	  link: docs/scos/dev/feature-walkthroughs/page.version/order-management-feature-walkthrough/order-management-feature-wakthrough.html
 ---
 
 ## Install feature core

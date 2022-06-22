@@ -16,6 +16,7 @@ related:
 	link: docs/scos/dev/feature-walkthroughs/page.version/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
   - title: Non-splittable Products feature walkthrough
 	link: docs/scos/dev/feature-walkthroughs/page.version/non-splittable-products-feature-walkthrough.html
+
 ---
 
 ## Install feature core

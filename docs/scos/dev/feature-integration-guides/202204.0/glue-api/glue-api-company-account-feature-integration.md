@@ -12,15 +12,17 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-company-account-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-company-account-feature-integration.html
 related:
+  - title: Company Account feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/company-account-feature-integration.html
   - title: Company Account feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/company-account-feature-walkthrough/company-account-feature-walkthrough.html
-  - title: Logging In as Company User
+  - title: Authenticating as a company user
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
-  - title: Retrieving Company User Information
+  - title: Retrieving company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
-  - title: Retrieving Company Information
+  - title: Retrieving companies
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-companies.html
-  - title: Retrieving Company Role Information
+  - title: Retrieving company roles
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
 ---
 

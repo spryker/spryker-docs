@@ -18,7 +18,7 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/checkout-feature-walkthrough.html
 ---
 
-This document describes how to integrate the Checkout feature into a Spryker project. 
+This document describes how to integrate the Checkout feature into a Spryker project.
 
   
 {% info_block warningBox %}
@@ -533,7 +533,7 @@ Ensure that:
 {% endinfo_block %}
 
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the Checkout feature front end.
 

@@ -12,9 +12,11 @@ redirect_from:
   - /docs/en/glue-api-category-management-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-category-management-feature-integration.html
 related:
+  - title: Category Management feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/category-management-feature-integration.html
   - title: Category Management feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/category-management-feature-walkthrough.html
-  - title: Browsing a category tree
+  - title: Retrieving category trees
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
 ---
 

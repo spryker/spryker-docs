@@ -11,11 +11,13 @@ redirect_from:
   - /docs/glue-api-return-management-feature-integration
   - /docs/en/glue-api-return-management-feature-integration
 related:
+  - title: Return Management feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/return-management-feature-integration.html
   - title: Return Management feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/return-management-feature-walkthrough.html
 ---
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 

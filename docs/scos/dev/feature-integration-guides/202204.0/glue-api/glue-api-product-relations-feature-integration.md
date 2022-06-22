@@ -13,11 +13,13 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-product-relations-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-relations-feature-integration.html
 related:
+  - title: Product Relations feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/product-relations-feature-integration.html
   - title: Product Relations feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-relations-feature-walkthrough/product-relations-feature-walkthrough.html
 ---
 
-## Install Feature API
+## Install feature API
 
 Follow the steps to install the Product Relations feature API.
 

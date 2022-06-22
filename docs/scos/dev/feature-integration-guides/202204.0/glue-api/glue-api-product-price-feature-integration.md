@@ -11,6 +11,8 @@ redirect_from:
   - /docs/en/glue-api-prices-api-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-price-feature-integration.html
 related:
+  - title: Prices feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/prices-feature-integration.html
   - title: Product feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-feature-walkthrough.html
   - title: Prices feature walkthrough

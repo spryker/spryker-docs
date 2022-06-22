@@ -1153,7 +1153,7 @@ Note: You need to complete Feature Frontend integration before you can verify th
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 To start feature integration, overview and install the necessary features:

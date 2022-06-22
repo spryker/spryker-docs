@@ -12,6 +12,8 @@ redirect_from:
   - /docs/en/glue-api-navigation-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-navigation-feature-integration.html
 related:
+  - title: Navigation feature integration
+	link: docs/scos/dev/feature-integration-guides/page.version/navigation-feature-integration.html
   - title: Navigation feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/navigation-feature-walkthrough/navigation-feature-walkthrough.html
 ---
@@ -22,7 +24,7 @@ The following feature integration guide expects the basic feature to be in place
 
 {% endinfo_block %}
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 

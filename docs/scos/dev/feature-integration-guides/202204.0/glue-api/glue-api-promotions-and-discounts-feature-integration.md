@@ -14,6 +14,8 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-promotions-and-discounts-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-promotions-and-discounts-feature-integration.html
 related:
+  - title: Promotions and Discounts feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/promotions-and-discounts-feature-integration.html
   - title: Promotions and Discounts feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/promotions-discounts-feature-walkthrough.html
   - title: Managing guest carts

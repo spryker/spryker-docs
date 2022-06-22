@@ -16,8 +16,6 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-cms-feature-integration.html
   - title: CMS feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html
-  - title: CMS page
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
 ---
 
 ## Install feature core

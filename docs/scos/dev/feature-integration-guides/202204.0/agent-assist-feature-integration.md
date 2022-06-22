@@ -12,6 +12,8 @@ redirect_from:
   - /docs/en/agent-assist-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/agent-assist-feature-integration.html
 related:
+  - title: Glue API - Agent Assist feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-agent-assist-feature-integration.html
   - title: Agent Assist feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/agent-assist-feature-walkthrough.html
 ---
@@ -31,7 +33,7 @@ To start feature integration, overview and install the necessary features:
 | Product | {{page.version}} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html) |
 | Cart | {{page.version}}| [Customer Account Management](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 
@@ -141,7 +143,7 @@ Ensure that the following plugins have been registered:
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the feature front end.
 

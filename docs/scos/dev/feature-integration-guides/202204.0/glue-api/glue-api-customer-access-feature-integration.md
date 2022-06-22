@@ -11,6 +11,8 @@ redirect_from:
   - /docs/glue-api-customer-access-feature-integration
   - /docs/en/glue-api-customer-access-feature-integration
 related:
+  - title: Customer Access feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/customer-access-feature-integration.html
   - title: Customer Access feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/customer-access-feature-walkthrough.html
 ---
@@ -22,7 +24,7 @@ The current feature integration Guide only adds the Company Account REST API fun
 
 {% endinfo_block %}
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 

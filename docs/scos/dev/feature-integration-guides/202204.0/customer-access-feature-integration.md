@@ -17,7 +17,7 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/customer-access-feature-walkthrough.html
 ---
 
-## Install feature Core
+## Install feature core
 
 ### Prerequisites
 

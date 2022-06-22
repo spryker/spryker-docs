@@ -896,7 +896,7 @@ Make sure that every order item from the `SalesFacade::getOrderItems()` results 
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

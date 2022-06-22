@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/quotation-process-multiple-carts-feature-integration
 related:
   - title: Quotation Process feature walkthrough
-	link: docs/scos/dev/feature-walkthroughs/page.version/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
+	  link: docs/scos/dev/feature-walkthroughs/page.version/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
   - title: Multiple Carts feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/multiple-carts-feature-walkthrough.mhtml
 ---

@@ -14,15 +14,17 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-order-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-order-management-feature-integration.html
 related:
+  - title: Order Management feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/order-management-feature-integration.html
   - title: Order Management feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/order-management-feature-walkthrough/order-management-feature-wakthrough.html
-  - title: Retrieving Customer's Order History
+  - title: Retrieving customer orders
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
-  - title: Checking Out Purchases and Getting Checkout Data
+  - title: Checking out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
 ---
 
-Follow the steps below to install the Glue API: Order Management feature.
+Follow the steps below to install the Glue API - Order Management feature.
 
 
 ## Prerequisites

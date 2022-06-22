@@ -13,11 +13,13 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-content-items-feature-integration.html
 related:
+  - title: Content Items feature integration
+	link: docs/scos/dev/feature-integration-guides/page.version/content-items-feature-integration.html
   - title: Content Items feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/content-items-feature-walkthrough/content-items-feature-walkthrough.html
 ---
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 

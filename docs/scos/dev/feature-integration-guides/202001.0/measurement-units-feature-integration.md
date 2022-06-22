@@ -821,7 +821,7 @@ Make sure that checkout workflow works with measurement unit by ordering item wi
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

@@ -731,7 +731,7 @@ Make sure that `<add to cart>` action works with measurement units by adding an 
 Make sure that checkout workflow works with measurement unit by ordering item with sales unit and checking the `spy_sales_order_item` contains `quantity_base_measurement_unit_name`, `quantity_measurement_unit_name`, `quantity_measurement_unit_code`, `quantity_measurement_unit_precision` and `quantity_measurement_unit_conversion` fields populated
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please overview and install the necessary features before beginning the integration step.
 

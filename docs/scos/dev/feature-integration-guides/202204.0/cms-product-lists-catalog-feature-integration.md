@@ -23,7 +23,7 @@ related:
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
 ---
 
-## Install feature Core
+## Install feature core
 
 ### Prerequisites
 

@@ -49,34 +49,20 @@ If a product list is used by a [configurable bundle](/docs/scos/user/features/{{
 1. On the **Edit Product List: {product list ID}**  page, click the **Assign Products** tab.
 2. On the **Select Products to assign** subtab, select the products you want to assign.
 3. On the **Products in the list** subtab, select the products you want to deassign.
-
-3. Select **Save**.
+4. Select **Save**.
     The page refreshes with the success message displayed.
 
 
 
 
-1. Select **Edit List** next to the product list you want to assign products to.
-2. On the *Edit Product List: {product list ID}*  page, switch to the *Assign Products* tab.
-3. Assign products in one of the following ways:
-    *  Import a product list:
-        1. Select **Choose File**.
-        2. Select the product list file to be uploaded.
-            The file should contain the `product_list_key` and `concrete_sku` fields.
-    *  Assign products to the list manually: In the *Selected* column of the *Select Products to assign* table, select the products to assign to the list.
- 5. Select **Save**. The page refreshes with the success message displayed.
+
+
+
 
 **Tips and tricks**
 <br>To double-check the list of products that are to be assigned, switch to the *Products to be assigned* tab.
 
-## Deassigning products form a product list
 
-To deassign products from a product list:
-1. Select **Edit List** next to the product list you want to deassign products from.
-2. On the *Edit Product List: {product list ID}*  page, switch to the *Assign Products* tab.
-3. In the *Selected* column of the *Products in this list* table, select the products to deassign from the list.
-4. Select **Save**.
-    The page refreshes with the success message displayed.
 
 **Tips and tricks**
 <br>To double-check the list of products that are to be deassigned, switch to the *Products to be deassigned* tab.

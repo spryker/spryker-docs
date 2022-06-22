@@ -47,7 +47,6 @@ You can consider product lists as conditions under which companies see products 
 
 
 
-
 Click the **Assign Categories** tab.
 6. Enter and select one or more **CATEGORIES**.
 7.

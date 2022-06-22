@@ -37,3 +37,5 @@ Thank you to all our contributors!
 <a href="https://github.com/spryker/spryker-docs/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=spryker/spryker-docs" />
 </a>
+
+### Our Contributors

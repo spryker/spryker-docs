@@ -34,7 +34,7 @@ To assign and deassign products from categories in the Back Office, follow the s
     This refreshes the page with a success message displayed.
 
 **Tips and tricks**
-When assigning or deassigning a lot of categories at a time, you can double-check your selection in **Products to be assigned** and **Products to be deassigned** tabs respectively.
+</br>When assigning or deassigning a lot of categories at a time, you can double-check your selection in **Products to be assigned** and **Products to be deassigned** tabs respectively.
 
 ## Next steps
 

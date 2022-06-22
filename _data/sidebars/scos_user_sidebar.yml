@@ -1350,6 +1350,10 @@ entries:
             - "202009.0"
       - title: Category
         nested:
+        - title: Create categories
+          url: /docs/scos/user/back-office-user-guides/catalog/category/creating-categories.html
+          include_versions:
+          - "202204.0"  
         - title: Creating categories
           url: /docs/scos/user/back-office-user-guides/catalog/category/creating-categories.html
         - title: Assigning products to categories
@@ -1383,7 +1387,7 @@ entries:
         - title: Edit product attributes
           url: /docs/scos/user/back-office-user-guides/catalog/attributes/edit-product-attributes.html
           include_versions:
-          - "202204.0"            
+          - "202204.0"
         - title: Creating product attributes
           url: /docs/scos/user/back-office-user-guides/catalog/attributes/creating-product-attributes.html
           include_versions:
@@ -1431,7 +1435,7 @@ entries:
         - title: Edit stock of products and product bundles
           url: /docs/scos/user/back-office-user-guides/catalog/availability/edit-stock-of-products-and-product-bundles.html
           include_versions:
-          - "202204.0"              
+          - "202204.0"
         - title: Managing products availability
           url: /docs/scos/user/back-office-user-guides/catalog/availability/managing-products-availability.html
           include_versions:

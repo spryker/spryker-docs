@@ -13,53 +13,49 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-lists/managing-product-lists.html
 ---
 
-This article describes how to manage product lists.
+This doc describes how to edit product lists in the Back Office.
 
 ## Prerequisistes
 
-To start managing product lists, go to **Catalog&nbsp;<span aria-label="and then">></span> Product Lists**.
+1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Product Lists**.
+2. Next to the product list you want to edit, click **Edit List**.
 
-## Editing a product list
 
-To edit a product list:
+## Edit general settings of a product list
 
-1. Select **Edit List** next to the product list you want to edit.
-2. On the *Edit Product List: {product list ID}* page:
-    * Change general information, such as a title and type.
-    * [Assign categories to the list](#assigning-categories-to-a-product-list).
-    * [Deassign categories from the list](#deassigning-categories-from-a-product-list).
-    * [Assign products to the list](#assigning-products-to-a-product-list).
-    * [Deassign products from the list](#deassigning-categories-from-a-product-list).
-3. Select **Save**. The page refreshes with the success message displayed.
+1. On the **Edit Product List: {product list ID}** page, click the **General Information** tab.
+2. Enter a **TITLE**
+3. Select a **TYPE**.
+4. Click **Save**.
+    The page refreshes with the success message displayed.
 
-{% info_block warningBox "Blacklist" %}
+{% info_block warningBox "Blacklists in configurable bundles" %}
 
-If a product list is used by a [configurable bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html) and its type is changed to **Blacklist**, it stops being displayed for the [configurable bundle slot](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html#configurable-bundle-slot) on the Storefront. To check if a product list is used by a configurable bundle, on the *Edit Product List: {product list ID}*  page, switch to the *Used by* tab.
+If a product list is used by a [configurable bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html) and its type is changed to **Blacklist**, it stops being displayed for the [configurable bundle slot](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html#configurable-bundle-slot) on the Storefront. To check if a product list is used by a configurable bundle, on the *Edit Product List: {product list ID}* page, switch to the *Used by* tab.
 
 {% endinfo_block %}
 
-## Assigning categories to a product list
+## Assign and deassign categories from a product list
 
-To assign categories to a product list:
-1. Select **Edit List** next to the product list you want to assign categories to.
-2. On the *Edit Product List: {product list ID}*  page, switch to the *Assign Categories* tab.
-3. In the **Categories** field, start typing the name of a category to see the list of matching results. Select the desired category.
-4. Repeat the previous step until you assign all the desired categories.
-5. Select **Save**. The page refreshes with the success message displayed.
+1. On the **Edit Product List: {product list ID}**  page, click the **Assign Categories** tab.
+2. For **CATEGORIES** do any of the following:
+    * Enter and select one or more categories.
+    * Next to the categories you want to deassign, click **x**.
+3. Select **Save**.
+    The page refreshes with the success message displayed.
 
-## Deassigning categories from a product list
+## Assign and deassign products from a product list
 
-To assign categories to a product list:
-1. Select **Edit List** next to the product list you want to deassign categories from.
-2. On the *Edit Product List: {product list ID}*  page, switch to the *Assign Categories* tab.
-3. In the *Categories* field, select **X** prior to the category you want to deassign.
-4. Repeat the previous step until you deassign all the desired categories.
-5. Select **Save**.
-The page refreshes with the success message displayed.
+1. On the **Edit Product List: {product list ID}**  page, click the **Assign Products** tab.
+2. On the **Select Products to assign** subtab, select the products you want to assign.
+3. On the **Products in the list** subtab, select the products you want to deassign.
 
-## Assigning products to a product list
+3. Select **Save**.
+    The page refreshes with the success message displayed.
 
-To assign products to a product list:
+
+
+
 1. Select **Edit List** next to the product list you want to assign products to.
 2. On the *Edit Product List: {product list ID}*  page, switch to the *Assign Products* tab.
 3. Assign products in one of the following ways:

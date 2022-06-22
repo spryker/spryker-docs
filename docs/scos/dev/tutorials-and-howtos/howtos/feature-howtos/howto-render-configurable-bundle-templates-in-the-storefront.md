@@ -28,7 +28,7 @@ By adding these widgets to respective templates, you can render the Configurable
 
 ## Rendering Configurable Bundle Templates on the cart page
 
-To render a `configured bundle` product on the cart page, in the cart page template (`CartPage/Theme/default/templates/page-layout-cart/page-layout-cart.twig`), call `QuoteConfiguredBundleWidget` .
+To render a `configured bundle` product on the cart page, in the cart page template (`CartPage/Theme/default/templates/page-layout-cart/page-layout-cart.twig`), call `QuoteConfiguredBundleWidget`.
 
 **Code example that renders configured bundle product on the cart page**
 

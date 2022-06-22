@@ -6,7 +6,7 @@ related:
   - title: Product Configuration feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-configuration-feature-integration.html
   - title: Configurable Product feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/configurable-product-feature-walkthrough.html
+    link: docs/scos/dev/feature-walkthroughs/page.version/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html
 ---
 
 This document describes how to integrate the [Product Configuration](/docs/scos/user/features/{{page.version}}/configurable-product-feature-overview.html) feature API into a Spryker project.

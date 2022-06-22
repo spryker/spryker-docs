@@ -4,7 +4,7 @@ description: Learn how to edit shipments in the Back Office
 template: back-office-user-guide-template
 related:
   - title: Creating shipments
-    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/creating-shipments.md
+    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/creating-shipments.html
   - title: Shipment feature overview
     link: docs/scos/user/features/page.version/shipment-feature-overview.html
 ---

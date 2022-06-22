@@ -18,6 +18,8 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/category-management-feature-walkthrough.html
   - title: Retrieving category trees
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
+  - title: Retrieving category nodes
+    link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-nodes.html
 ---
 
 

@@ -17,6 +17,10 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/inventory-management-feature-integration.html
   - title: Inventory Management feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
+  - title: Retrieving abstract product availability
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
+  - title: Retrieving concrete product availability
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-product-availability.html
 ---
 
 This document describes how to install the Inventory Management feature API into a Spryker project.

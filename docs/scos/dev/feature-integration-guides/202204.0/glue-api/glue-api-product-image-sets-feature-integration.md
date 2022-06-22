@@ -14,6 +14,10 @@ redirect_from:
 related:
   - title: Product feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-feature-walkthrough.html
+  - title: Retrieving image sets of abstract products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
+  - title: Retrieving image sets of concrete products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html
 ---
 
 ## Install feature API

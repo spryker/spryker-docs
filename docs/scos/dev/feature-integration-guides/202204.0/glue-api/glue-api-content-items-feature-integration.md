@@ -17,6 +17,10 @@ related:
 	link: docs/scos/dev/feature-integration-guides/page.version/content-items-feature-integration.html
   - title: Content Items feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/content-items-feature-walkthrough/content-items-feature-walkthrough.html
+  - title: Retrieving abstract product list content items
+	link: docs/scos/dev/glue-api-guides/page.version/retrieving-content-items/retrieving-abstract-product-list-content-items.html
+  - title: Retrieving banner content items
+	link: docs/scos/dev/glue-api-guides/page.version/retrieving-content-items/retrieving-banner-content-items.html
 ---
 
 ## Install feature API

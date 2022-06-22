@@ -15,6 +15,14 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/agent-assist-feature-integration.html
   - title: Agent Assist feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/agent-assist-feature-walkthrough.html
+  - title: Authenticating as an agent assist
+    link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/authenticating-as-an-agent-assist.html
+  - title: Impersonating customers as an agent assist
+    link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
+  - title: Managing agent assist authentication tokens
+    link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/managing-agent-assist-authentication-tokens.html
+  - title: Searching by customers as an agent assist
+    link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/searching-by-customers-as-an-agent-assist.html
 ---
 
 Follow the steps below to install the Agent Assist feature API.

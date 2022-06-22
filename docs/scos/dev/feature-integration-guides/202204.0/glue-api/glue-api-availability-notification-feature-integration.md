@@ -18,6 +18,10 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/availability-notification-feature-integration.html
   - title: Availability Notification feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/availability-notification-feature-walkthrough.html
+  - title: Managing availability notifications
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/managing-availability-notifications/managing-availability-notifications.html
+  - title: Retrieving subscriptions to availability notifications
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
 ---
 
 This document describes how to integrate the Glue API - Availability Notification feature into a Spryker project.

@@ -20,6 +20,8 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html
   - title: Configurable Bundle feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/configurable-bundle-feature-walkthrough.html
+  - title: Retrieving configurable bundle templates
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-configurable-bundle-templates.html
 ---
 
 This document describes how to integrate the Configurable Bundle feature.

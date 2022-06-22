@@ -16,6 +16,10 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
   - title: Product feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-feature-walkthrough.html
+  - title: Retrieving abstract products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-products.html
+  - title: Retrieving concrete products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-products.html
 ---
 
 Follow the steps below to integrate the Glue API: Products feature.

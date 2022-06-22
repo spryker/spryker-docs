@@ -16,6 +16,12 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/measurement-units-feature-integration.html
   - title: Measurement Units feature walkthrough
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-measurement-units-feature-integration.html
+  - title: Retrieving measurement units
+    link: docs/scos/dev/glue-api-guides/page.version/retrieving-measurement-units.html
+  - title: Retrieving abstract products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-products.html
+  - title: Retrieving concrete products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-products.html
 ---
 
 Follow the steps below to install Measurement units feature API.

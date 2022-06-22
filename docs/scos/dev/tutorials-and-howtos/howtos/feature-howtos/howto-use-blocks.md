@@ -23,7 +23,7 @@ redirect_from:
   - /v1/docs/en/ht-use-cms-blocks
 ---
 
-Blocks can be viewed as partial content snippets that can be embedded in other pages. From SEO perspective, blocks are a real advantage.
+Blocks can be viewed as partial content snippets that can be embedded in other pages. From an SEO perspective, blocks are a real advantage.
 
 The CMS Block module supports flexible extension by adding a new connector.
 

@@ -24,11 +24,11 @@ The configurable bundle functionality is implemented by 3 widgets:
 * `SalesConfiguredBundleWidget`
 * `ConfiguredBundleNoteWidget`
 
-By adding these widgets to respective templates, you can render the Configurable Bundle Templates in the Storefront. Specifically, in the Cart, Checkout Summary, Order Details, and Quote Request pages. This document provides information about how to do that.
+By adding these widgets to respective templates, you can render the Configurable Bundle Templates on the Storefront, on the Cart, Checkout Summary, Order Details, and Quote Request pages specifically. This document provides information about how to do that.
 
 ## Rendering Configurable Bundle Templates on the cart page
 
-To render a `configured bundle` product on the cart page, call `QuoteConfiguredBundleWidget` in the cart page template (`CartPage/Theme/default/templates/page-layout-cart/page-layout-cart.twig`).
+To render a `configured bundle` product on the cart page, in the cart page template (`CartPage/Theme/default/templates/page-layout-cart/page-layout-cart.twig`), call `QuoteConfiguredBundleWidget` .
 
 **Code example that renders configured bundle product on the cart page**
 

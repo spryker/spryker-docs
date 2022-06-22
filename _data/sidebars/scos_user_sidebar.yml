@@ -1351,15 +1351,55 @@ entries:
       - title: Category
         nested:
         - title: Create categories
-          url: /docs/scos/user/back-office-user-guides/catalog/category/creating-categories.html
+          url: /docs/scos/user/back-office-user-guides/catalog/category/create-categories.html
           include_versions:
-          - "202204.0"  
+          - "202204.0"
+        - title: Edit categories
+          url: /docs/scos/user/back-office-user-guides/catalog/category/edit-categories.html
+          include_versions:
+          - "202204.0"
+        - title: Assign products to categories
+          url: /docs/scos/user/back-office-user-guides/catalog/category/assign-products-to-categories.html
+          include_versions:
+          - "202204.0"
+        - title: Order products in categories
+          url: /docs/scos/user/back-office-user-guides/catalog/category/order-products-in-categories.html
+          include_versions:
+          - "202204.0"
+        - title: Delete categories
+          url: /docs/scos/user/back-office-user-guides/catalog/category/delete-categories.html
+          include_versions:
+          - "202204.0"
         - title: Creating categories
           url: /docs/scos/user/back-office-user-guides/catalog/category/creating-categories.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: Assigning products to categories
           url: /docs/scos/user/back-office-user-guides/catalog/category/assigning-products-to-categories.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: Managing categories
           url: /docs/scos/user/back-office-user-guides/catalog/category/managing-categories.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"              
         - title: References
           include_versions:
           - "201811.0"

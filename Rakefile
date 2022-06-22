@@ -71,7 +71,7 @@ task :check_acp_user do
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/acp\/dev\/.+/,    
+    /docs\/acp\/dev\/.+/,
     /docs\/fes\/.+/,
     /docs\/paas-plus\/.+/
   ]
@@ -98,6 +98,7 @@ task :check_cloud do
     /docs\/fes\/.+/,
     /docs\/marketplace\/.+/,
     /docs\/paas-plus\/.+/,
+    /docs\/pbc\/.+/,
     /docs\/acp\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
@@ -112,6 +113,7 @@ task :check_mp_dev do
     /docs\/paas-plus\/.+/,
     /docs\/acp\/.+/,
     /docs\/marketplace\/user\/.+/,
+    /docs\/pbc\/.+/,
     /docs\/marketplace\/\w+\/[\w-]+\/202108\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
@@ -126,6 +128,7 @@ task :check_mp_user do
     /docs\/paas-plus\/.+/,
     /docs\/acp\/.+/,
     /docs\/marketplace\/dev\/.+/,
+    /docs\/pbc\/.+/,
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -139,6 +142,7 @@ task :check_scos_dev do
     /docs\/paas-plus\/.+/,
     /docs\/acp\/.+/,
     /docs\/scos\/user\/.+/,
+    /docs\/pbc\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
@@ -159,6 +163,7 @@ task :check_scos_user do
     /docs\/scos\/dev\/.+/,
     /docs\/fes\/.+/,
     /docs\/paas-plus\/.+/,
+    /docs\/pbc\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201811\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201903\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/201907\.0\/.+/,
@@ -178,6 +183,7 @@ task :check_fes do
     /docs\/cloud\/.+/,
     /docs\/acp\/.+/,
     /docs\/paas-plus\/.+/,
+    /docs\/pbc\/.+/,
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -190,6 +196,20 @@ task :check_paas_plus do
     /docs\/cloud\/.+/,
     /docs\/acp\/.+/,
     /docs\/fes\/.+/,
+    /docs\/pbc\/.+/,
+  ]
+  HTMLProofer.check_directory("./_site", options).run
+end
+
+task :check_pbc do
+  options = commonOptions.dup
+  options[:file_ignore] = [
+    /docs\/scos\/.+/,
+    /docs\/marketplace\/.+/,
+    /docs\/cloud\/.+/,
+    /docs\/acp\/.+/,
+    /docs\/fes\/.+/,
+    /docs\/paas-plus\/.+/,
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

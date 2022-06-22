@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/file-details-product-reviewcsv
   - /docs/file-details-product-reviewcsv
   - /docs/en/file-details-product-reviewcsv
+  - /docs/scos/dev/data-import/201811.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html
+  - /docs/scos/dev/data-import/201903.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html
+  - /docs/scos/dev/data-import/201907.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html
 ---
 
 This document describes the `product_review.csv` file to configure [Product Review](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) information in your Spryker Demo Shop.

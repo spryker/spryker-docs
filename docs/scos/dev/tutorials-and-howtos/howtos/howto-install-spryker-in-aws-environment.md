@@ -36,7 +36,7 @@ To install Spryker in AWS, configure the following AWS native services:
 * Elasticsearch Service
 * ElastiCache
 
-To create and configure the services, follow instructions in the following sections.
+To create and configure the services, follow these guidelines:
 
 ### Create s security group
 

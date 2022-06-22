@@ -10,6 +10,8 @@ redirect_from:
   - /2021080/docs/en/managing-customers-via-glue-api
   - /docs/managing-customers-via-glue-api
   - /docs/en/managing-customers-via-glue-api
+  - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customers.html
+  - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/managing-customers.html
 ---
 
 The Customer API allows creating customers and manage their account data. This includes the possibility to maintain a set of customer addresses as separate resources. In the checkout process, you can retrieve and use these address resources to speed up the buying process. The API supports authentication via OAuth 2.0 and password restoration.
@@ -50,6 +52,7 @@ Request sample: create a customer
         "firstName":"Sonia",
         "lastName":"Wagner",
         "email":"sonia@spryker.com",
+	"gender": "Female",
         "password":"change123",
         "confirmPassword":"change123",
         "acceptedTerms":true
@@ -64,6 +67,7 @@ Request sample: create a customer
 | acceptedTerms | Boolean | &check; | Specifies whether the customer has accepted the terms of service. For a new customer to be created, this parameter needs to be set to true. |
 | confirmPassword | String | &check;  | Specifies a password confirmation for the account of the new customer. |
 | email | String | &check;  | Specifies customer's last email address. The address must be unique in the system. |
+| gender | String | &check; | Specifies gender of the customer. |
 | firstName | String | &check; | Specifies customer's first name. |
 | lastName | String | &check;  | Specifies customer's last name. |
 | password | String | &check;  | Specifies a password (7 characters or more) for the account of the new customer. This password will be used by the customer to access their account. |

@@ -5,6 +5,7 @@ last_updated: Nov 26, 2021
 template: concept-topic-template
 redirect_from:
   - /docs/scos/user/features/201903.0/configurable-product-feature-overview.html
+  - /docs/scos/user/features/201907.0/configurable-product-feature-overview.html
 ---
 
 {% info_block errorBox "Beta version" %}
@@ -137,6 +138,6 @@ Customers configure a product on the Storefront as follows:
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Configurable Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/configurable-product-feature-walkthrough.html) for developers.
+Are you a developer? See [Configurable Product feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

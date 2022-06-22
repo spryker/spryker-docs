@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/file-uploader
   - /docs/file-uploader
   - /docs/en/file-uploader
+  - /docs/scos/user/features/202200.0/file-manager-feature-overview/file-uploader.html
 ---
 
 The *File Uploader* feature is helpful when a Back Office user needs to add instructions or additional documentation to the product as an attachment. These files can further be downloaded to visitors' PCs.

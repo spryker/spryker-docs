@@ -8,6 +8,7 @@ originalArticleId: 92778df4-daa3-43d6-9af3-fe08f445bae6
 redirect_from:
   - /v2/docs/heidelpay-integration
   - /v2/docs/en/heidelpay-integration
+  - /docs/scos/dev/technology-partner-guides/201903.0/payment-partners/heidelpay/integrating-heidelpay-into-the-legacy-demoshop.html
 related:
   - title: Integrating Heidelpay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/heidelpay/integrating-heidelpay.html
@@ -47,7 +48,7 @@ The most important configuration items are explained in the table below, make su
 Configuration keys are used as follows: `$config[HeidelpayConstants::CONFIGURATION_KEY_HERE] = 'CONFIGURATION VALUE HERE'`<br>
 ** Repeat this configuration for each payment method you're going to use.<br>
 <br>
-Based on the payment methods you're going to use, remove unnecessary processes from `OmsConstants::ACTIVE_PROCESSES` and `SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING`. Please see example of the configuration below: 
+Based on the payment methods you're going to use, remove unnecessary processes from `OmsConstants::ACTIVE_PROCESSES` and `SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING`. Please see example of the configuration below:
 ```php
 // Navigation
 $YVES_HOST_PROTOCOL = 'http';
@@ -134,7 +135,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 +		return $paymentMethodHandler;
 + };
 + return $container; }
-+ 
++
 +
 ```
 

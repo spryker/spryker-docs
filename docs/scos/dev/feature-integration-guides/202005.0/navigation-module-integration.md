@@ -8,6 +8,7 @@ originalArticleId: 4ec06bc8-8e7e-4af0-b1e2-bc8a3d584628
 redirect_from:
   - /v5/docs/navigation-module-integration
   - /v5/docs/en/navigation-module-integration
+  - /docs/scos/dev/feature-integration-guides/202005.0/navigation-feature-integration.html
 ---
 
 ## Prerequisites
@@ -17,7 +18,7 @@ To prepare your project to work with Navigation:
 2. Install the new database tables By running `vendor/bin/console propel:diff`. Propel will generate a migration file with the changes.
 3. Apply the database changes by running `vendor/bin/console propel:migrate`.
 4. Generate ORM models by running `vendor/bin/console propel:model:build`.
-5. After running this command you’ll find some new classes in your project under `\Orm\Zed\Navigation\Persistence` namespace. 
+5. After running this command you’ll find some new classes in your project under `\Orm\Zed\Navigation\Persistence` namespace.
 
     It’s important to make sure that they extend the base classes from the Spryker core, e.g.:
 
@@ -53,14 +54,14 @@ class CollectorDependencyProvider extends SprykerCollectorDependencyProvider
     public function provideBusinessLayerDependencies(Container $container)
     {
         // ...
-       
+
         $container[self::STORAGE_PLUGINS] = function (Container $container) {
             return [
                 // ...
                 NavigationConfig::RESOURCE_TYPE_NAVIGATION_MENU => new NavigationMenuCollectorStoragePlugin(),
             ];
         };
-        
+
         // ...
     }
 }
@@ -115,7 +116,7 @@ The following code examples show the Demoshop implementation of how to render `M
 In `Pyz/Yves/Application/Theme/default/layout/navigation/main.twig` we traverse the root navigation nodes of the navigation tree and for each root node we render their children nodes as well.
 
 **Code sample:**
-    
+
 ```html
 <div class="callout show-for-large">
     <div class="row">
@@ -167,7 +168,7 @@ In `Pyz/Yves/Application/Theme/default/layout/navigation/main.twig` we traverse 
 The children nodes are rendered recursively by `Pyz/Yves/Application/Theme/default/layout/navigation/_partials/nodes.twig`.
 
 **Code sample:**
-    
+
 ```html
 <ul class="vertical menu {% raw %}{%{% endraw %} if nested|default(false) {% raw %}%}{% endraw %}nested{% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}">
     {% raw %}{%{% endraw %} for node in nodes {% raw %}%}{% endraw %}
@@ -207,7 +208,7 @@ To prevent code duplication we implemented the `Pyz/Yves/Application/Theme/defau
 This is also the place where we take the visibility controller parameters into account : `valid_from`, `valid_to`, and `is_active`.
 
 **Code sample:**
-    
+
 ```php
 {% raw %}{%{% endraw %} set class = node.navigationNode.navigationNodeLocalizedAttributes[0].cssClass {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} set url = node.navigationNode.navigationNodeLocalizedAttributes[0].url {% raw %}%}{% endraw %}

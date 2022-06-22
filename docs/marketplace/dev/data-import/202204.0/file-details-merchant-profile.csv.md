@@ -3,6 +3,11 @@ title: "File details: merchant_profile.csv"
 last_updated: Feb 26, 2021
 description: This document describes the merchant_profile.csv file to configure merchant information in your Spryker shop.
 template: import-file-template
+related:
+  - title: Marketplace Merchant feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-feature-walkthrough.html
+  - title: Marketplace Merchant feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
 ---
 
 This document describes the `merchant_profile.csv` file to configure [merchant profile](/docs/marketplace/user/features/{{site.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile) information in your Spryker shop.
@@ -14,6 +19,7 @@ data:import merchant-profile
 ```
 
 ## Import file parameters
+
 The file should have the following parameters:
 
 | PARAMETER | REQUIRED? | TYPE | DEFAULT VALUE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
@@ -40,11 +46,14 @@ The file should have the following parameters:
 | latitude |   | String |   |   | This field identifies merchant’s location. |
 
 ## Import file dependencies
+
 The file has the following dependencies:
+
 - [merchant.csv](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant.csv.html)
 - [glossary.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
 
 ## Import template file and content example
+
 Find the template and an example of the file below:
 
 |FILE|DESCRIPTION|

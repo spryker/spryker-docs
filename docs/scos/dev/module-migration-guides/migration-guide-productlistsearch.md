@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productlistsearch.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productlistsearch.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productlistsearch.html
+  - /module_migration_guides/mg-product-list-search.htm
 ---
 
 ## Upgrading from version 1.* to version 2.*

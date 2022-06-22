@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Creating a table view
+title: "Tutorial: Creating a table view"
 description: Use the guide to render data, fetched from the database, in the table.
 last_updated: Jun 16, 2021
 template: howto-guide-template

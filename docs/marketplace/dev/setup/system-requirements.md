@@ -2,9 +2,12 @@
 title: DevVM system requirements
 Descriptions: System infrastructure requirements for the Spryker Marketplace with Merchant Portal
 template: howto-guide-template
+related:
+  - title: Infrastructure requirements
+    link: docs/marketplace/dev/setup/infrastructure-requirements.html
 ---
 
-| Operating System                          | Native: LinuxOnly via VM: MacOS and MS Windows               |
+| OPERATING SYSTEM | NATIVE: LinuxOnly via VM: MacOS and MS Windows               |
 | ----------------------------------------- | ------------------------------------------------------------ |
 | **Web Server**                                | NginX—preferred. But any webserver which supports PHP will work such as lighttpd, Apache, Cherokee. |
 | **Databases**                             | Depending on the project, one of the databases: MariaDB >= 10.4—preferred, PostgreSQL >=9.6, or MySQL >=5.7. |
@@ -20,12 +23,3 @@ template: howto-guide-template
 |**Yarn**| Version >= 2.0.0 && <= 2.3.x |
 |**Intranet**| Back Office application (Zed) must be secured in an Intranet (using VPN, Basic Auth, IP Allowlist, DMZ) |
 | **Spryker Commerce OS**| Version >= {{page.version}} |
-
-
-
-### Supported browsers
-The Spryker Marketplace supports the following browsers:
-
-| Desktop (Marketplace and Merchant Portal) | Tablet (Marketplace and Merchant Portal) | Mobile (Marketplace only)
-| --- | --- | --- |
-| **Browsers**: <ul><li> Windows, macOS: Chrome (latest version)</li> <li>Windows: Firefox (latest version)</li><li>Windows: Edge (latest version)</li><li>macOS: Safari (latest version)</li></ul> **Windows versions**:<ul><li>Windows 10</li><li>Windows 7</li></ul>**macOS versions**:<ul><li> Catalina (basically, the latest released version)</li></ul>**Screen resolutions**:<ul><li>1024-1920 width</li></ul>| **Browsers**: <ul><li>iOS: Safari</li><li>Android: Chrome</li></ul>**iOS versions**:<ul><li>iOS 13</li></ul>**Screen resolutions**:<ul><li>1024x703 (for example,iPad Air)</li></ul>|**Browsers**: <ul><li>iOS: Safari</li><li>Android: Chrome</li></ul>**Screen resolutions**:<ul><li>360x640 (for example,Samsung Galaxy S8 or S9)</li><li>375x667 (for example,iPhone 7 or 8)</li><li>iPhone X, Xs, Xr</li></ul>**Android versions**:<ul><li>8.0</li></ul>**iOS versions**:<ul><li>iOS 13 (basically the latest released version)</li></ul> |

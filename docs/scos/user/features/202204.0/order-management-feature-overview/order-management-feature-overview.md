@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/order-management
   - /docs/order-management
   - /docs/en/order-management
+  - /docs/scos/user/features/202200.0/order-management-feature-overview/order-management-feature-overview.html
 ---
 
 Bringing flexible shipping options in your online business may have a key impact on the purchasing decisions of your customers. The *Order Management* feature is a collection of functionalities that let your customers place orders easily and let you manage the orders effectively.

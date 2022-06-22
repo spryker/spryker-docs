@@ -3,6 +3,9 @@ title: Creating marketplace concrete products
 last_updated: Aug 11, 2021
 description: This document describes how to create a marketplace concrete product in the Merchant Portal.
 template: back-office-user-guide-template
+related:
+  - title: Marketplace Product feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-product-feature-overview.html
 ---
 
 This document describes how to create marketplace concrete products.

@@ -2,6 +2,27 @@
 title: Table Feature Total
 description: This document provides details about the Table Feature Total component in the Components Library.
 template: concept-topic-template
+related:
+  - title: Table Feature extension
+    link: docs/marketplace/dev/front-end/table-design/table-features/index.html
+  - title: Table Feature Batch Actions
+    link: docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html
+  - title: Table Feature Editable
+    link: docs/marketplace/dev/front-end/table-design/table-features/table-feature-editable.html
+  - title: Table Feature Pagination
+    link: docs/marketplace/dev/front-end/table-design/table-features/table-feature-pagination.html
+  - title: Table Feature Row Actions
+    link: docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html
+  - title: Table Feature Search
+    link: docs/marketplace/dev/front-end/table-design/table-features/table-feature-search.html
+  - title: Table Feature Selectable
+    link: docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html
+  - title: Table Feature Settings
+    link: docs/marketplace/dev/front-end/table-design/table-features/table-feature-settings.html
+  - title: Table Feature Sync State
+    link: docs/marketplace/dev/front-end/table-design/table-features/table-feature-sync-state.html
+  - title: Table Feature Title
+    link: docs/marketplace/dev/front-end/table-design/table-features/table-feature-title.html
 ---
 
 This document explains the Table Feature Total component in the Components Library.

@@ -3,6 +3,9 @@ title: "Glue API: Merchant Opening Hours feature integration"
 last_updated: Dec 04, 2020
 description: This document describes how to integrate the Merchant Opening Hours Glue API feature into a Spryker project.
 template: feature-integration-guide-template
+related:
+  - title: Merchant Opening Hours feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/merchant-opening-hours-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Merchant Opening Hours Glue API feature into a Spryker project.
@@ -24,7 +27,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/merchant-opening-hours-rest-api:"^0.1.0"
+composer require spryker/merchant-opening-hours-rest-api:"^1.0.0"
 ```
 
 {% info_block warningBox "Verification" %}
@@ -80,7 +83,7 @@ use Spryker\Glue\MerchantOpeningHoursRestApi\Plugin\GlueApplication\MerchantOpen
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface[]
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRoutePluginInterface>
      */
     protected function getResourceRoutePlugins(): array
     {

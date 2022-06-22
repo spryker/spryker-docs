@@ -11,12 +11,12 @@ redirect_from:
   - /docs/deploy-file-reference-10
   - /docs/en/deploy-file-reference-10
   - /docs/scos/dev/the-docker-sdk/202204.0/deploy-file-reference-1.0.html
+  - /docs/scos/dev/installation/spryker-in-docker/docker-sdk/deploy-file-reference-1.0.html
 related:
   - title: Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
-redirect_from:  
-  - /docs/scos/dev/the-docker-sdk/202204.0/deploy-file-reference-1.0.html
 ---
+
 
 This reference page describes version 1 of the Deploy file format. This is the newest version.
 <div class="bg-section">
@@ -292,9 +292,27 @@ image:
 ```
 ***
 
+### image: node:
+
+Defines Node.js settings.
+
+* `image: node: version:`—defines a Node.js version. Supports only major versions that are greater than the default one. The default version is `12`.
+* `image: node: npm`—defines an NPM version. Supports only major versions that are greater than the default one. The default version is `6`.
+* `image: node: distro:`—defines a Linux distribution for the Node Docker image. Should be equal to your base PHP image. Possible values are `alpine` and `debian`. This variable is optional with the default value of `alpine`.
+
+```yaml
+image:
+    ...
+    node:
+        version: 18
+        distro: alpine
+        npm: 8
+```
+***
+
 ### image: php:
 
-Defines PHP settings for Spryker applications.
+Defines PHP settings.
 
 * `image: php: ini:` - defines `php.ini` configuration.
 * `image: php: enabled-extensions` - defines enabled PHP extensions. The following extensions are allowed:
@@ -747,12 +765,12 @@ docker:
 Defines the composer settings to be used during deployment.
 
 1. `mode:` - defines whether packages should be installed from the  `require` or `require-dev` section of `composer.json`. Possible values are `--no-dev` and `-dev`. This variable is optional. If not specified, the default values apply:
-	
+
   * [Development mode]: `mode: --dev`
 	* [Demo mode]: `mode: --no-dev`
 
 2. `autoload:` - defines composer autoload options. Possible values are `--optimize` and `--classmap-authoritative`. This variable is optional. If not specified, the default values apply:
-	
+
   * Development mode: `autoload: --optimize`
 	* Demo mode: `autoload: --classmap-authoritative`
 
@@ -821,7 +839,7 @@ A real-time log monitoring *Service*.
 
   - `dashboard: engine:` - possible value is `dashboard`.
   - `dashboard: endpoints:` - defines the service's port and web interface that can be accessed via given endpoints.
-  - 
+  -
 ***
 
 ### database:

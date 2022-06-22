@@ -3,6 +3,9 @@ title: Marketplace Cart feature integration
 last_updated:  Jan 05, 2021
 description: This document describes the process how to integrate the Marketplace Cart integration feature into a Spryker project.
 template: feature-integration-guide-template
+related:
+  - title: Marketplace Cart feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-cart-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Cart feature into a Spryker project.
@@ -57,7 +60,7 @@ use Spryker\Zed\MerchantSalesOrderMerchantUserGui\MerchantSalesOrderMerchantUser
 class MerchantSalesOrderMerchantUserGuiConfig extends SprykerMerchantSalesOrderMerchantUserGuiConfig
 {
     /**
-     * @return string[]
+     * @return array<string>
      */
     public function getMerchantSalesOrderDetailExternalBlocksUrls(): array
     {
@@ -128,7 +131,7 @@ use Spryker\Zed\SalesMerchantPortalGui\SalesMerchantPortalGuiDependencyProvider 
 class SalesMerchantPortalGuiDependencyProvider extends SprykerSalesMerchantPortalGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\SalesMerchantPortalGuiExtension\Dependency\Plugin\MerchantOrderItemTableExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\SalesMerchantPortalGuiExtension\Dependency\Plugin\MerchantOrderItemTableExpanderPluginInterface>
      */
     protected function getMerchantOrderItemTableExpanderPlugins(): array
     {

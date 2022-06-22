@@ -1,8 +1,16 @@
 ---
 title: Marketplace Shipment + Cart feature integration
 description: This document describes the process how to integrate Marketplace Shipment feature into your project
-last_updated: Jun 25, 2021 
+last_updated: Jun 25, 2021
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/marketplace/dev/feature-integration-guides/201907.0/marketplace-shipment-cart-feature-integration.html
+  - /docs/marketplace/dev/feature-integration-guides/202005.0/marketplace-shipment-cart-feature-integration.html
+related:
+  - title: Marketplace Shipment feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-shipment-feature-walkthrough.html
+  - title: Marketplace Cart feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-cart-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Shipment + Cart feature into a Spryker project.
@@ -44,7 +52,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\CartExtension\Dependency\Plugin\ItemExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\ItemExpanderPluginInterface>
      */
     protected function getExpanderPlugins(Container $container): array
     {
@@ -73,7 +81,7 @@ use Spryker\Zed\Quote\QuoteDependencyProvider as SprykerQuoteDependencyProvider;
 class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteExpanderPluginInterface>
      */
     protected function getQuoteExpanderPlugins(): array
     {

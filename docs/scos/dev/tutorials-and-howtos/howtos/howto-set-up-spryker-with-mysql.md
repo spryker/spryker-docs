@@ -28,13 +28,13 @@ Spryker supports connecting to the MySQL database. To install a demo shop with t
 
 ## MySQL version
 
-Currently Spryker works only with MySQL version 5.7 or higher.
+Spryker works only with MySQL version 5.7 or higher.
 
 ## Adjust Spryker to run with MySQL
 
-To run the Spryker Demoshop with MySQL, adjust some parts in our configs:
+To run the Spryker Demoshop with MySQL, adjust some parts in your configs:
 
-1. Go to `config/Shared/config_default.php` and modify the database configuration:
+1. In `config/Shared/config_default.php`, modify the database configuration:
 
 ```bash
 $config[PropelConstants::ZED_DB_PORT] = 3306;
@@ -42,19 +42,23 @@ $config[PropelConstants::ZED_DB_ENGINE] = $config[PropelConstants::ZED_DB_ENGINE
 $config[PropelQueryBuilderConstants::ZED_DB_ENGINE] = $config[PropelConstants::ZED_DB_ENGINE_MYSQL];
 ```
 
-2. Go to `deploy/setup/params.sh` and modify `DATABASE_DEFAULT_ENGINE` to MySQL:
+2. In `deploy/setup/params.sh`, modify `DATABASE_DEFAULT_ENGINE` to `mysql`:
 
 ```yaml
 DATABASE_DEFAULT_ENGINE='mysql'
 ```
 
-3. That's it. Now, run `vendor/bin/install` to install Spryker with MySQL.
+3. Install Spryker with MySQL:
+
+```bash
+vendor/bin/install
+```
 
 ## Configure MySQL GroupBy setting
 
-In some MySQL servers, there is the `ONLY_FULL_GROUP_BY` option which forces all columns to be present in `group_by`. This option should be removed from your configurations of MySQL:
+In some MySQL servers, there is the `ONLY_FULL_GROUP_BY` option which forces all columns to be present in `group_by`. This option must be removed from your configurations of MySQL:
 
-**Wrong setting**
+*Wrong setting*:
 
 ```bash
 [mysqld]
@@ -63,7 +67,7 @@ In some MySQL servers, there is the `ONLY_FULL_GROUP_BY` option which forces all
 sql-mode = STRICT_ALL_TABLES,ONLY_FULL_GROUP_BY
 ```
 
-**Correct setting**
+*Correct setting*:
 
 ```bash
 [mysqld]

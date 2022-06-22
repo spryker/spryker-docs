@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/crefopay-business-to-business-model
   - /docs/crefopay-business-to-business-model
   - /docs/en/crefopay-business-to-business-model
+  - /docs/scos/user/technology-partners/202108.0/payment-partners/crefopay/crefopay-technical-details-and-howtos/crefopay-business-to-business-model.html
 related:
   - title: Integrating CrefoPay
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/crefopay/integrating-crefopay.html

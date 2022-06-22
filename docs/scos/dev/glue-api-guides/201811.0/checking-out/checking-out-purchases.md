@@ -7,6 +7,7 @@ originalArticleId: ec24dbd9-e3b2-4db0-9f09-50594801b162
 redirect_from:
   - /v1/docs/checking-out-purchases-and-getting-checkout-data
   - /v1/docs/en/checking-out-purchases-and-getting-checkout-data
+  - /docs/scos/dev/glue-api-guides/201811.0/checking-out-purchases-and-getting-checkout-data.html
 related:
   - title: Retrieving Customer's Order History
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html

@@ -9,6 +9,8 @@ redirect_from:
   - /2021080/docs/en/glue-api-company-account-api-feature-integration
   - /docs/glue-api-company-account-api-feature-integration
   - /docs/en/glue-api-company-account-api-feature-integration
+  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-company-account-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-company-account-feature-integration.html
 related:
   - title: Logging In as Company User
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html

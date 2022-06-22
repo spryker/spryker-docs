@@ -22,15 +22,15 @@ redirect_from:
   - /docs/en/getting-started-with-docker
 ---
 
-This section is a complete stack for running Spryker in Docker containers.
+This section is a comprehensive introduction to running Spryker in Docker containers.
 
 Spryker provides a standardized and customizable way to bootstrap applications and prepare development and production environments using the [Docker SDK tool](/docs/scos/dev/the-docker-sdk/{{site.version}}/the-docker-sdk.html).
 
-Below, you will find a step-by-step checklist that you will be able to follow through all the stages to start working with Spryker in Docker.
+The following checklists guide you through the necessary steps to manage your Spryker installation using the Docker SDK.
 
 ## Prerequisites
 
-Before you start installing your Spryker with Docker, follow the installation prerequisites for your operating system:
+Before you install Spryker with Docker, review the installation prerequisites for your operating system:
 
 * [Installing Docker prerequisites on MacOS](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html)
 * [Installing Docker prerequisites on Linux](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
@@ -39,7 +39,8 @@ Before you start installing your Spryker with Docker, follow the installation pr
   
 ## Installation
 
-There are several ways to install Spryker with Docker. See [Choosing an installation mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html) to learn about them.
+There are several ways to configure a Docker-based instance of Spryker. See [Choosing an installation mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html) to learn about them in detail.
+
 If you've already selected an installation mode, follow one of the guides below:
 
 * [Installing in Development mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html)
@@ -52,7 +53,8 @@ If you've already selected an installation mode, follow one of the guides below:
 
 ## Configuration
 
-Once you have a running instance, the following documents will help you adjust the project to your requirements:
+After installation, the instance can be customized further to meet your project requirements.
+The following documents detail these customizations:
 
 * [Configuring services](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html)
 * [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html)

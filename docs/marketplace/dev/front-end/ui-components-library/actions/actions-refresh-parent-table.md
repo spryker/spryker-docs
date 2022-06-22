@@ -2,6 +2,24 @@
 title: Actions Refresh Parent Table
 description: This document provides details about the Actions Refresh Parent Table service in the Components Library.
 template: concept-topic-template
+related:
+  - title: Actions
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/index.html
+  - title: Actions Close Drawer
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html
+  - title: Actions Drawer
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-drawer.html
+  - title: Actions HTTP
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-http.html
+  - title: Actions Notification
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-notification.html
+  - title: Actions Redirect
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-redirect.html
+  - title: Actions Refresh Drawer
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-drawer.html
+  - title: Actions Refresh Table
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-table.html
+
 ---
 
 This document explains the Actions Refresh Parent Table service in the Components Library.

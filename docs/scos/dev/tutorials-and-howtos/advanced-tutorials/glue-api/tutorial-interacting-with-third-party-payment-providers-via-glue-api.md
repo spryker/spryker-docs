@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Interacting with third party payment providers via Glue API
+title: "Tutorial: Interacting with third party payment providers via Glue API"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-interacting-with-third-party-payment-providers-via-glue-api
@@ -18,6 +18,7 @@ redirect_from:
   - /v3/docs/t-interacting-with-third-party-payment-providers-via-glue-api
   - /v3/docs/en/t-interacting-with-third-party-payment-providers-via-glue-api
   - /docs/scos/dev/tutorials/201907.0/advanced/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
+  - /docs/scos/dev/glue-api-guides/202005.0/checking-out/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
 
 related:
   - title: Technology Partner Integration
@@ -32,16 +33,16 @@ For details, see [Checking Out Purchases and Getting Checkout Data](/docs/scos/d
 
 {% endinfo_block %}
 
-In this tutorial, you will find out how to invoke third parties in the API payment process.
+This tutorial shows how to invoke third parties in the API payment process.
 
 ## 1. Create new module
 
-To implement third party interactions, first, you need to create a new module or extend an existing one. Let us create one on the Project level. The module needs to interact with 2 layers of Spryker Commerce OS: **Glue** (API) and **Zed** (backend). Thus, you need to create the following folders for module *MyModule*:
+To implement third party interactions, first create a new module or extend an existing one. Let us create one on the Project level. The module needs to interact with two layers of Spryker Commerce OS: **Glue** (API) and **Zed** (backend). Thus, you need to create the following folders for the `MyModule` module:
 
 * `src/Pyz/Glue/MyModule`
 * `src/Pyz/Zed/MyModule`
 
-The module needs to implement 2 plugins:
+The module needs to implement two plugins:
 
 1. A plugin that maps the response of the `/checkout` API endpoint and fills it with the necessary attributes.
 
@@ -58,9 +59,9 @@ The overall interaction diagram between Glue API, the API Client, and the third 
 
 ## 2. Implement Checkout response mapper plugin
 
-First, we need to implement a plugin that maps the checkout response and fills it with the necessary redirect URL and other attributes that are mapped. To do so, create a plugin file on the **Glue** layer: `src/Pyz/Glue/MyModule/Plugin/CheckoutRestApi/CheckoutResponseMapperPlugin.php`.
+First, implement a plugin that maps the checkout response and fills it with the necessary redirect URL and other attributes that are mapped. To do so, create a plugin file on the `Glue` layer: `src/Pyz/Glue/MyModule/Plugin/CheckoutRestApi/CheckoutResponseMapperPlugin.php`.
 
-The plugin must implement the `CheckoutResponseMapperPluginInterface`. Using the the `mapRestCheckoutResponseTransferToRestCheckoutResponseAttributesTransfer` function of the interface, you can set the redirect URL and specify whether it is an internal or external redirect.
+The plugin must implement the `CheckoutResponseMapperPluginInterface`. Using the `mapRestCheckoutResponseTransferToRestCheckoutResponseAttributesTransfer` function of the interface, you can set the redirect URL and specify whether it is an internal or external redirect.
 
 **Sample implementation**
 
@@ -116,7 +117,7 @@ For details, see [Updating Payment Data](/docs/scos/dev/glue-api-guides/{{site.v
 
 {% endinfo_block %}
 
-**Sample implementation**
+<details><summary markdown='span'>Sample implementation</summary>
 
 ```php
 <?php
@@ -161,9 +162,11 @@ class OrderPaymentUpdaterPlugin extends AbstractPlugin implements OrderPaymentUp
 }
 ```
 
+</details>
+
 ## 4. Wire the plugins
 
-Now, you need to wire the plugins so that they could be invoked during checkout. The Checkout *Response Mapper Plugin* needs to be registered in `\Pyz\Glue\CheckoutRestApi\CheckoutRestApiDependencyProvider::getCheckoutResponseMapperPlugins()`:
+Wire the plugins so that they could be invoked during checkout. The *Checkout Response Mapper Plugin* needs to be registered in `\Pyz\Glue\CheckoutRestApi\CheckoutRestApiDependencyProvider::getCheckoutResponseMapperPlugins()`:
 
 ```php
 ...
@@ -197,4 +200,4 @@ The *Payment Processor Plugin* is registered in `\Spryker\Zed\OrderPaymentsRestA
 ...
 ```
 
-After wiring the plugins, the response of the `/checkout` endpoint will contain a correct redirect URL, and the `/order-payments` endpoint will process payloads received from the payment provider. Try accessing the endpoints to verify that the plugins process the data.
+After wiring the plugins, the response of the `/checkout` endpoint contains a correct redirect URL, and the `/order-payments` endpoint processes payloads received from the payment provider. Try accessing the endpoints to verify that the plugins process the data.

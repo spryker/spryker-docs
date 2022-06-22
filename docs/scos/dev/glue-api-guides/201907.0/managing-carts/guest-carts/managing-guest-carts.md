@@ -7,6 +7,7 @@ originalArticleId: 716feabe-b263-4010-a4bc-4a637b9568ad
 redirect_from:
   - /v3/docs/managing-guest-carts
   - /v3/docs/en/managing-guest-carts
+  - /docs/marketplace/dev/glue-api-guides/201907.0/guest-carts/managing-guest-carts.html
 ---
 
 The Carts API provides access to management of customers' shopping carts. The following document covers working with guest carts.
@@ -598,7 +599,7 @@ No matter which of the 2 endpoints you use, it will respond with a **RestCartsRe
 |  sku| String |	SKU of the product.  |
 | quantity | Integer |Quantity of the given product in the cart.  |
 |  groupKey| String | Unique item identifier. The value is generated based on product parameters. |
-|amount  | Integer | 	Amount of the product in the cart. 
+|amount  | Integer | 	Amount of the product in the cart.
 \*The fields mentioned are all attributes in the response. Type and ID are not mentioned.
 
 **Cart item calculation information**

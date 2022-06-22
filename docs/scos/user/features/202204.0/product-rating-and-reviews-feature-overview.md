@@ -14,6 +14,7 @@ redirect_from:
   - /2021080/docs/en/product-rating-reviews
   - /docs/product-rating-reviews
   - /docs/en/product-rating-reviews
+  - /docs/scos/user/features/202200.0/product-rating-and-reviews-feature-overview.html
 ---
 
 The _Product Reviews_ feature lets customers add reviews and ratings to abstract products. In a dedicated Back Office section, you can manage customers' ratings and reviews to moderate content and collect information before publishing them live. Rating information can be used for sorting and filtering products. Product ratings and reviews can be displayed for customers on demand.

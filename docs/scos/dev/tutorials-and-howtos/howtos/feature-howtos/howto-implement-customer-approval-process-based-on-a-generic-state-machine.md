@@ -28,7 +28,7 @@ redirect_from:
 
 To implement any business processes based on the `StateMachine` module, follow these steps:
 
-1. Add table in DB to connect Entity and StateMachine. In this case, it's Customer Entity.
+1. In the database, add a table to connect `Entity` and `StateMachine`. In this case, it's the `Customer` entity.
 2. Create CRUD operations for our new table.
 3. Implement the `StateMachineHandlerInterface` plugin and add it to the `StateMachine` module dependencies.
 4. Implement some command and condition plugins if needed.

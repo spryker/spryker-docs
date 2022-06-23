@@ -294,14 +294,14 @@ entries:
         - "202001.0"
         - "202005.0"
         - "202009.0"
-      - "202108.0"
-      - "202204.0"
+        - "202108.0"
+        - "202204.0"
       - title: Email as a CMS block
         url: /docs/scos/user/features/cms-feature-overview/email-as-a-cms-block-overview.html
         include_versions:
         - "202009.0"
-      - "202108.0"
-      - "202204.0"
+        - "202108.0"
+        - "202204.0"
       - title: CMS Page Drafts and Previews
         url: /docs/scos/user/features/cms-feature-overview/cms-page-drafts-and-previews.html
         include_versions:

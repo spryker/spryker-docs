@@ -57,9 +57,9 @@ This doc describes how to create product lists. Product lists are used to allow 
     The page refreshes with the success message displayed. The assigned products are displayed in the **Products in this list** subtab.
 
 **Tips and tricks**
-</br> When assigning a lot of products at a time, it might be useful to double-check your selection in the **Products to be assigned** tab.
+<br> When assigning a lot of products at a time, it might be useful to double-check your selection in the **Products to be assigned** tab.
 
-## Import products for the product lists
+## Import products for the product list
 
 1. Click the **Assign Products** tab.
 2. Click **Choose File**.

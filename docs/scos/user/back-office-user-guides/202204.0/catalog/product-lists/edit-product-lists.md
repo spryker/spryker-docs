@@ -65,13 +65,13 @@ If a product list is used by a [configurable bundle](/docs/scos/user/features/{{
 
 
 **Tips and tricks**
-</br> When assigning or deassigning a lot of products at a time, it might be useful to double-check your selection in the **Products to be assigned** and **Products to be deassigned** tabs respectively.
+<br> When assigning or deassigning a lot of products at a time, it might be useful to double-check your selection in the **Products to be assigned** and **Products to be deassigned** tabs respectively.
 
 ## Import products for a product list
 
 {% info_block warningBox "" %}
 
-If products are already assigned to a list, and you import products, the existing ones will be overwritten with the imported ones. 
+If products are already assigned to a list, and you import products, the existing ones will be overwritten with the imported ones.
 
 {% endinfo_block %}
 

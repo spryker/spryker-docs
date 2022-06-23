@@ -294,14 +294,14 @@ entries:
         - "202001.0"
         - "202005.0"
         - "202009.0"
-      - "202108.0"
-      - "202204.0"
+        - "202108.0"
+        - "202204.0"
       - title: Email as a CMS block
         url: /docs/scos/user/features/cms-feature-overview/email-as-a-cms-block-overview.html
         include_versions:
         - "202009.0"
-      - "202108.0"
-      - "202204.0"
+        - "202108.0"
+        - "202204.0"
       - title: CMS Page Drafts and Previews
         url: /docs/scos/user/features/cms-feature-overview/cms-page-drafts-and-previews.html
         include_versions:
@@ -1351,15 +1351,39 @@ entries:
       - title: Category
         nested:
         - title: Create categories
-          url: /docs/scos/user/back-office-user-guides/catalog/category/creating-categories.html
+          url: /docs/scos/user/back-office-user-guides/catalog/category/create-categories.html
           include_versions:
           - "202204.0"
         - title: Creating categories
           url: /docs/scos/user/back-office-user-guides/catalog/category/creating-categories.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: Assigning products to categories
           url: /docs/scos/user/back-office-user-guides/catalog/category/assigning-products-to-categories.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: Managing categories
           url: /docs/scos/user/back-office-user-guides/catalog/category/managing-categories.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: References
           include_versions:
           - "201811.0"
@@ -1511,7 +1535,7 @@ entries:
           - "202001.0"
           - "202005.0"
           - "202009.0"
-          - "202108.0"          
+          - "202108.0"
         - title: Managing product lists
           url: /docs/scos/user/back-office-user-guides/catalog/product-lists/managing-product-lists.html
           include_versions:

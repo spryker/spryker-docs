@@ -16,8 +16,6 @@ redirect_from:
 related:
   - title: Creating Categories
     link: docs/scos/user/back-office-user-guides/page.version/catalog/category/creating-categories.html
-  - title: Managing Categories
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/managing-categories.html
   - title: Category Management feature overview
     link: docs/scos/user/features/page.version/category-management-feature-overview.html
 ---
@@ -34,7 +32,7 @@ To assign and deassign products from categories in the Back Office, follow the s
     This refreshes the page with a success message displayed.
 
 **Tips and tricks**
-</br>When assigning or deassigning a lot of categories at a time, you can double-check your selection in **Products to be assigned** and **Products to be deassigned** tabs respectively.
+<br>When assigning or deassigning a lot of categories at a time, you can double-check your selection in **Products to be assigned** and **Products to be deassigned** tabs respectively.
 
 ## Next steps
 

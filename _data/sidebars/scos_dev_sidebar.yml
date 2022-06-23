@@ -50,6 +50,8 @@ entries:
       nested:
       - title: DevVM system requirements
         url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html
+      - title: SCOS supported browsers
+        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/scos-supported-browsers.html
       - title: Installing on MacOS and Linux
         url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html
       - title: Installing on Windows

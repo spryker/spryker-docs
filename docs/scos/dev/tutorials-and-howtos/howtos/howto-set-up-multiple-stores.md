@@ -18,7 +18,7 @@ redirect_from:
 
 {% info_block warningBox "Multiple stores in cloud environments" %}
 
-For instructions on setting up multiple stores in Spryker Cloud Commerce OS, see [Add and remove databases of stores](docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html).
+For instructions on setting up multiple stores in Spryker Cloud Commerce OS, see [Add and remove databases of stores](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html).
 
 {% endinfo_block %}
 

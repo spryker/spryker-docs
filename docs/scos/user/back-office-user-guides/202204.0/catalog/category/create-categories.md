@@ -16,8 +16,6 @@ redirect_from:
 related:
   - title: Assigning Products to Categories
     link: docs/scos/user/back-office-user-guides/page.version/catalog/category/assigning-products-to-categories.html
-  - title: Managing Categories
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/category/managing-categories.html
   - title: Category Management feature overview
     link: docs/scos/user/features/page.version/category-management-feature-overview.html
 ---

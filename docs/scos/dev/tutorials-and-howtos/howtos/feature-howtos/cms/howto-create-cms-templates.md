@@ -138,18 +138,17 @@ Depending on the content item widget you create the template for, make sure to i
 {% endinfo_block %}
 
 1. Create `src/Pyz/Yves/{ModuleWidget}/Theme/default/views/{template-folder}/{new-template}.twig`, where:
-
-* `{new-template}` is the template name.
-* `{ModuleWidget}` is the name of the respective Content Item Widget module.
-* `{template-folder}` is the template folder name. Based on the content item widget, choose:
-    * banner
-    * cms-product-abstract
-    * content-product-set
-    * content-file
+   * `{new-template}` is the template name.
+   * `{ModuleWidget}` is the name of the respective Content Item Widget module.
+   * `{template-folder}` is the template folder name. Based on the content item widget, choose:
+       * banner
+       * cms-product-abstract
+       * content-product-set
+       * content-file
 
 The default templates located on the core level of each module can be used as examples.
 
-1. Modify the template configuration in `Pyz/Yves/{ModuleWidget}/Twig/{ModuleWidgetTwigFunction}.php`:
+2. Modify the template configuration in `Pyz/Yves/{ModuleWidget}/Twig/{ModuleWidgetTwigFunction}.php`:
    - Add the template identifier.
    - Based on the template identifier, add a path to the template.
 

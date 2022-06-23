@@ -1,7 +1,7 @@
 ---
 title: Edit product lists
-description: Use these procedures to edit, export, remove a product list or remove products from the product list in the Back Office.
-last_updated: Aug 11, 2021
+description: Learn how to edit product lists in the Back Office.
+last_updated: June 22, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-product-lists
 originalArticleId: 18628b05-d26f-469a-a201-d74c1a235cf8
@@ -11,6 +11,7 @@ redirect_from:
   - /docs/managing-product-lists
   - /docs/en/managing-product-lists
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-lists/managing-product-lists.html
+  - /docs/scos/user/back-office-user-guides/202204.0/catalog/product-lists/managing-product-lists.html  
 ---
 
 This doc describes how to edit product lists in the Back Office.
@@ -67,6 +68,12 @@ If a product list is used by a [configurable bundle](/docs/scos/user/features/{{
 </br> When assigning or deassigning a lot of products at a time, it might be useful to double-check your selection in the **Products to be assigned** and **Products to be deassigned** tabs respectively.
 
 ## Import products for a product list
+
+{% info_block warningBox "" %}
+
+If products are already assigned to a list, and you import products, the existing ones will be overwritten with the imported ones. 
+
+{% endinfo_block %}
 
 1. On the **Edit Product List: {product list ID}**  page, click the **Assign Products** tab.
 2. Click **Choose File**.

@@ -1,7 +1,7 @@
 ---
-title: Creating product lists
-description: Use the procedure to create a product list by assigning products and selecting the category in the Back Office.
-last_updated: Aug 11, 2021
+title: Create product lists
+description: Learn how to create product lists in the Back Office.
+last_updated: June 22, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-a-product-list
 originalArticleId: e7682701-b572-4934-9422-2a95d31610a1
@@ -11,6 +11,7 @@ redirect_from:
   - /docs/creating-a-product-list
   - /docs/en/creating-a-product-list
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-lists/creating-product-lists.html
+  - /docs/scos/user/back-office-user-guides/202204.0/catalog/product-lists/creating-product-lists.html  
 ---
 
 This doc describes how to create product lists. Product lists are used to allow or deny companies access to products.
@@ -69,7 +70,6 @@ This doc describes how to create product lists. Product lists are used to allow 
 
 ## Next steps
 
-* Allow or deny a company access to the product list by creating a new merchant relationship.
-* 
-
-[Edit product lists](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/edit-product-lists.html).
+* Allow or deny a company access to the product list by [creating a new merchant relation](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/create-merchant-relations.html).
+* Allow or deny a company access to the product list by [editing a merchant relation](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/edit-merchant-relations.html).
+* [Edit product lists](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/edit-product-lists.html).

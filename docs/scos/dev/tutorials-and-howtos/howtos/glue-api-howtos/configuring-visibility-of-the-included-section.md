@@ -36,11 +36,11 @@ You can decide whether Glue REST API includes the sections in all responses by d
 
 | |REQUEST WITH 'INCLUDE' QUERY STRING | REQUEST WITHOUT 'INCLUDE' QUERY STRING |
 | --- | --- | --- |
-| | Example: /concrete-products/177_24867659?**include=concrete-product-image-sets** |Example: /concrete-products/177_24867659  |
-|**Enabled** | The **included** and **relationships** sections contain only the resources whose names were passed in the query string (resource _concrete-product-image-sets_ per the example). | The included section contains all the included resources (if any). |
+| | Example: `/concrete-products/177_24867659?include=concrete-product-image-sets` |Example: `/concrete-products/177_24867659`  |
+|**Enabled** | The **included** and **relationships** sections contain only the resources whose names were passed in the query string (resource `concrete-product-image-sets` per the example). | The included section contains all the included resources (if any). |
 |**Disabled** | The response does not contain the included section with related resources. |  The included section contains all the included resources (if any).|
 
-By default, the option is enabled on the Spryker Core level, but disabled on the project level in all [Spryker Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops) (B2B Demo Shop, B2C Demo Shop and Master Shop Suite).
+By default, the option is enabled on the Spryker Core level but disabled on the project level in all [Spryker Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops) (B2B Demo Shop, B2C Demo Shop and Master Shop Suite).
 
 {% info_block infoBox %}
 
@@ -52,7 +52,7 @@ To configure the behavior of the **included** and **relationships** sections:
 
 ## Prerequisites
 
-To make the option possible, you need to have at least version **1.12.0** of `GlueApplication` module installed in your project. For details on how to upgrade, see the Integration Guide.
+To make the option possible, you need to have at least version *1.12.0* of the `GlueApplication` module installed in your project. For details on how to upgrade, see the Integration Guide.
 
 ## Configuration
 
@@ -60,9 +60,8 @@ To configure the behavior of the sections:
 
 1. Open or create the `Pyz\Glue\GlueApplication\GlueApplicationConfig.php` file on your project level.
 2. Set the value of the `getIsEagerRelatedResourcesInclusionEnabled` parameter according to the desired behavior:
-
-  * **true** - to enable related resources everywhere;
-  * **false** - to return related resources per request only.
+  * `true`: Eables related resources everywhere.
+  * `false`: Returns related resources per request only.
 
 **Sample implementation**
 
@@ -92,13 +91,11 @@ class GlueApplicationConfig extends SprykerGlueApplicationConfig
 
 {% info_block warningBox "Verification" %}
 
-To verify that the configuration has been completed successfully:
-
-   1. Send a GET request as follows: `http://mysprykershop.com/concrete-products/177_24867659?include=concrete-product-image-sets`
-
+To verify that the configuration has been completed successfully, follow these steps:
+   1. Send a `GET` request as follows: `http://mysprykershop.com/concrete-products/177_24867659?include=concrete-product-image-sets`.
    2. Make sure that the **included** and **relationships** sections of the response contain the `concrete-product-image-sets` resource only.
 
-  **Sample response**
+ <details><summary markdown='span'>Sample response</summary>
 
   ```json
   {
@@ -143,11 +140,13 @@ To verify that the configuration has been completed successfully:
   }
   ```
 
-   3. Send a GET request as follows: `http://mysprykershop.com/concrete-products/177_24867659`
-   4. Make sure that the endpoint responds in accordance with your configuration:
-    * if the `getIsEagerRelatedResourcesInclusionEnabled` parameter is set to `true`, the included section of the response contains all related resources.
+</details>
 
-    **Sample response**
+   1. Send a `GET` request as follows: `http://mysprykershop.com/concrete-products/177_24867659`
+   2. Make sure that the endpoint responds in accordance with your configuration:
+      * If the `getIsEagerRelatedResourcesInclusionEnabled` parameter is set to `true`, the included section of the response contains all related resources.
+
+ <details><summary markdown='span'>Sample response</summary>
 
     ```json
     {
@@ -240,9 +239,12 @@ To verify that the configuration has been completed successfully:
         }
       ]
     }
+    
     ```
 
-    * if the `getIsEagerRelatedResourcesInclusionEnabled` parameter is set to `false`, the included and relationships sections are absent.
+</details>
+
+  * If the `getIsEagerRelatedResourcesInclusionEnabled` parameter is set to `false`, the included and relationships sections are absent.
 
     **Sample response**
 

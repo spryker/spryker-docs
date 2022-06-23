@@ -19,11 +19,11 @@ Every time you generate an [invoice for your customer’s orders](/docs/scos/use
 
 {% info_block infoBox "Info" %}
 
-BCC is the only way to keep invoices for your reference because for now, the generated invoices are not saved in the Back Office or on the Storefront.
+BCC is the only way to keep invoices for your reference because the generated invoices are not saved in the Back Office or on the Storefront.
 
 {% endinfo_block %}
 
-To configure emailing BCC for the generated invoice, in `SalesInvoiceConfig.php` file, add the `getOrderInvoiceBcc()` method and specify email addresses and name of the recipient as shown in the example:
+To configure emailing BCC for the generated invoice, in `SalesInvoiceConfig.php` file, add the `getOrderInvoiceBcc()` method and specify the email addresses and name of the recipient as shown in the example:
 
 ```php
 namespace Pyz\Zed\SalesInvoice;
@@ -49,6 +49,7 @@ console order:invoice --force
 ```
 
 To send the additional copies for not all, but for specific orders only, specify the order ID after the `force` flag. For example, if you want to receive an additional copy of the invoice for order 1, use this command:
+
 ```bash
 console order:invoice --force 1
 ```

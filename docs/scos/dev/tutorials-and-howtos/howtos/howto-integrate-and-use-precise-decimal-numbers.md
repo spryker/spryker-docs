@@ -22,7 +22,7 @@ The document shows how to install and work with precise decimal objects.
 
 The `decimal-object` library lets you work with precise decimal numbers. A decimal number is a number that is smaller than an integer. Decimal numbers can be used when more precision is required, while float numbers are imprecise and shouldn't be used for cases where exact precision is necessary. For example, when dealing with money (a price of a product), measuring weights or liquids (food or water respectively), and length (meters such as a cable), decimal numbers can be used.
 
-## Why you should use decimal objects
+## Why to use decimal objects
 
 The benefits of using decimal numbers are as follows:
 
@@ -34,7 +34,7 @@ The benefits of using decimal numbers are as follows:
 
 ## Installation
 
-To install the `{% raw %}{{{% endraw %}decimal-object{% raw %}}}{% endraw %}` library, you can use Composer. For more information, on GitHub, see [Decimal Object](https://github.com/spryker/decimal-object).
+To install the `{% raw %}{{{% endraw %}decimal-object{% raw %}}}{% endraw %}` library, you can use Composer. For more information, see [Decimal Object](https://github.com/spryker/decimal-object) on GitHub.
 
 ## How decimal numbers work with transfer objects
 
@@ -46,7 +46,7 @@ You can specify Decimal as a type of your Data Transfer Object’s property. To 
 </transfer>
 ```
 
-For more information about how to work with Data Transfer Objects, see [Creating, using, and extending the transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html).
+For more information about working with Data Transfer Objects, see [Creating, using, and extending the transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html).
 
 ## Create a decimal value object
 
@@ -149,7 +149,7 @@ $decimal = new Decimal(7);
 $decimal = $decimal->negate(); //-7
 ```
 
-**Table of exceptions**
+#### Table of exceptions
 
 The table provides additional information about exceptions that may occur when working with decimal objects.
 
@@ -173,21 +173,21 @@ $decimalTwo = new Decimal(3.14);
 $isEquals = $decimalOne->equals($decimalTwo); //false
 ```
 
-2. `isPositive()`: Returns `true` if the decimal value is positive, otherwise `false`.
+2. `isPositive()`: Returns `true` if the decimal value is positive; otherwise `false`.
 
 ```php
 $decimal = new Decimal(5);
 $isPositive = $decimal->isPositive(); //true
 ```
 
-3. `isNegative()`: Returns `true` if the decimal value is negative, otherwise `false`.
+3. `isNegative()`: Returns `true` if the decimal value is negative; otherwise `false`.
 
 ```php
 $decimal = new Decimal(5);
 $isNegative = $decimal->isNegative(); //false
 ```
 
-4. `greaterThan()`: Returns `true` if the decimal value is greater than the given value, otherwise `false`.
+4. `greaterThan()`: Returns `true` if the decimal value is greater than the given value; otherwise `false`.
 
 ```php
 $decimal = new Decimal(5);
@@ -198,7 +198,7 @@ $decimalTwo = new Decimal(3.14);
 $isGreater = $decimalOne->greaterThan($decimalTwo); //false
 ```
 
-5. `greaterThanOrEquals()`: Returns `true` if the decimal value is greater or equals the given value, otherwise `false`.
+5. `greaterThanOrEquals()`: Returns `true` if the decimal value is greater or equals the given value; otherwise `false`.
 
 ```php
 $decimal = new Decimal(5);
@@ -209,7 +209,7 @@ $decimalTwo = new Decimal(3.14);
 $isGreatherOrEquals = $decimalOne->greatherThanOrEquals($decimalTwo); //false
 ```
 
-6. `lessThan()`: Returns `true` if the decimal value is less than the given value, otherwise `false`.
+6. `lessThan()`: Returns `true` if the decimal value is less than the given value; otherwise `false`.
 
 ```php
 $decimal = new Decimal(5);
@@ -220,7 +220,7 @@ $decimalTwo = new Decimal(3.14);
 $isLess = $decimalOne->lessThan($decimalTwo); //true
 ```
 
-7. `lessThanOrEquals()`: Returns `true` if the decimal value is less or equals the given value, otherwise `false`.
+7. `lessThanOrEquals()`: Returns `true` if the decimal value is less or equals the given value; otherwise `false`.
 
 ```php
 $decimal = new Decimal(5);
@@ -286,7 +286,7 @@ $decimal = new Decimal(2.718);
 $decimal = $decimal->truncate(2); //2.71
 ```
 
-**Table of exceptions**
+#### Table of exceptions
 
 The table provides additional information about the exception that may be thrown when working with decimal objects in rounding operations.
 
@@ -333,7 +333,7 @@ $decimal = new Decimal(3.1400000);
 $decimal = $decimal->trim(); //3.14
 ```
 
-**Table of exceptions**
+#### Table of exceptions
 
 The table provides additional information about exceptions that may be thrown when working with decimal objects in casting operations.
 

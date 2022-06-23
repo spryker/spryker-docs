@@ -16,7 +16,7 @@ redirect_from:
 
 To allow Zed CSS/JS on a project level, follow these steps:
 
-1. Create `frontend/zed-build.js` on the project with the following content:
+1. On the project level, create `frontend/zed-build.js` the following content:
 
 ```js
 const oryx = require('@spryker/oryx');
@@ -49,7 +49,7 @@ api.getConfiguration(settings)
 "zed:production": "node ./frontend/zed-build --prod",
 ```
 
-Matching path is configured with line `path.resolve('./src/Pyz')`, and the file names are configured with line patterns: `['**/Zed/**/*.entry.js'],`.
+The matching path is configured with the `path.resolve('./src/Pyz')` line; and the file names are configured with line patterns: `['**/Zed/**/*.entry.js'],`.
 
 An example of the project file location:  `Pyz\Zed\Product\assets\js\main.entry.js`.
 

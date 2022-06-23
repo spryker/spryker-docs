@@ -134,7 +134,9 @@ Twig files can be in many places. To avoid time-consuming searches, we recommend
 ## General Twig optimizations
 
 Twig, together with [Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html), is an extremely flexible approach but at the same time not the fastest one. Check if you can reduce or optimize things there.
-For example, the `{% raw %}{{{% endraw %} data.foo.bar.firstName {% raw %}}}{% endraw %}` `{% raw %}{{{% endraw %} data.foo.bar.lastName {% raw %}}}{% endraw %}` trigger many calls to the `Template::getAttribute()` method which is very slow. Making calculations on the PHP side can help here a lot, as well as using `{% raw %}{{{% endraw %} set customer = data.foo.bar {% raw %}}}{% endraw %}` + `{% raw %}{{{% endraw %} customer.firstName {% raw %}}}{% endraw %}` `{% raw %}{{{% endraw %} customer.lastName {% raw %}}}{% endraw %}`.
+For example, the `{% raw %}{{{% endraw %} data.foo.bar.firstName {% raw %}}}{% endraw %}` `{% raw %}{{{% endraw %} data.foo.bar.lastName {% raw %}}}{% endraw %}` trigger many calls to the `Template::getAttribute()` method which is very slow. 
+
+Making calculations on the PHP side can help here a lot, as well as using `{% raw %}{{{% endraw %} set customer = data.foo.bar {% raw %}}}{% endraw %}` + `{% raw %}{{{% endraw %} customer.firstName {% raw %}}}{% endraw %}` `{% raw %}{{{% endraw %} customer.lastName {% raw %}}}{% endraw %}`.
 
 ## Activate Zed navigation cache
 
@@ -161,9 +163,9 @@ The process of resolving the right class name is done by building class name can
 
 To speed up the overall page load, there are two features: resolvable class names cache and resolvable Instance cache.
 
-### Resolvable class names cache
+### Activate resolvable class names cache
 
-The resolvable class names cache is disabled by default. Activate it by adding the following configuration to your `config_*` files:
+The resolvable class names cache is disabled by default. To activate it, by add the following configuration to your `config_*` files:
 
 ```php
 $config[KernelConstants::RESOLVABLE_CLASS_NAMES_CACHE_ENABLED] = true;
@@ -176,7 +178,7 @@ vendor/bin/console cache:class-resolver:build
 ```
 This command builds a cache file, which is used by the `ClassResolver`.
 
-### Resolved instance cache
+### Activate resolved instance cache
 
 On top of the resolvable class names cache, you can turn on an instance cache for the resolved classes by adding the following configuration to your `config_*` files:
 

@@ -209,7 +209,7 @@ In this case, the created form has five elements:
     }
 ```
 
-1. Add the new plugin to the `\Pyz\Zed\CmsSlotBlockGui\CmsSlotBlockGuiDependencyProvider::getCmsSlotBlockFormPlugins()` plugin list in `CustomerSlotBlockConditionFormPlugin`.
+4. Add the new plugin to the `\Pyz\Zed\CmsSlotBlockGui\CmsSlotBlockGuiDependencyProvider::getCmsSlotBlockFormPlugins()` plugin list in `CustomerSlotBlockConditionFormPlugin`.
 
 {% info_block warningBox "Verification" %}
 
@@ -234,11 +234,13 @@ In this case, the created form has five elements:
 
 {% endinfo_block %}
 
+{% endinfo_block %}
+
 ## Visibility condition resolver plugin for a slot widget
 
 1. Implement the following plugin using `\Spryker\Client\CmsSlotBlockExtension\Dependency\Plugin\CmsSlotBlockVisibilityResolverPluginInterface`:
 
-<details><summary markdown='span'>**CustomerSlotBlockConditionResolverPlugin**</summary>
+<details><summary markdown='span'>CustomerSlotBlockConditionResolverPlugin</summary>
 
 ```php
 
@@ -316,7 +318,7 @@ class CustomerSlotBlockConditionResolverPlugin extends AbstractPlugin implements
 
 {% info_block warningBox "Verification" %}
 
-In the Storefront, open the product details page that contains the CMS block for which you have selected the visibility conditions.
+On the Storefront, open the product details page that contains the CMS block for which you have selected the visibility conditions.
 * Make sure that you fulfill the visibility conditions and see the CMS block content.
 * Make sure that you do not fulfill the visibility conditions and do not see the CMS block content.
 

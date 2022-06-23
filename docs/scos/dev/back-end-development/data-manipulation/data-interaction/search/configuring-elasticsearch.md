@@ -68,7 +68,66 @@ You can find the default schema configuration file for the main index called `pa
 If you want to disable the default mapping installation, you need to override the core configuration defined in `Spryker\Zed\SearchElasticsearch\SearchElasticsearchConfig::getJsonIndexDefinitionDirectories()` by implementing it on the project level (for example, `Pyz\Zed\Search\SearchConfig`).
 {% endinfo_block %}
 
-Each configured store has its index installed automatically. The name of the indexes is composed of the store name + underscore + configuration file name (for example, `de_page`).
+Each configured store has its index installed automatically. The name of the indexes is composed of
+* An optional prefix, which is defined by `SearchElasticsearchConstants::INDEX_PREFIX` configuration option.
+* The store name.
+* Configuration file name. 
+
+Index name components are delimited with underscore. For example, `spryker_de_page`.
+
+## Adjusting existing indexes
+
+Below is an example of how the default schema configuration file for the main index `page` can be changed to allow searching for keywords containing special character `&` (ampersand) by switching from [`standard`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-standard-tokenizer.html) tokenizer to a combination of [`keyword`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-keyword-tokenizer.html) tokenizer and a token filter of [`word_delimiter_graph`](https://www.elastic.co/guide/en/elasticsearch/reference/8.2/analysis-word-delimiter-graph-tokenfilter.html) type.      
+
+**src/Pyz/Shared/Search/Schema/page.json**
+
+```json
+{
+    "settings": {
+        "analysis": {
+            "analyzer": {
+                "fulltext_index_analyzer": {
+                    "tokenizer": "keyword",
+                    "filter": ["my_custom_word_delimiter_graph_filter", "lowercase", "fulltext_index_ngram_filter"]
+                },
+                "fulltext_search_analyzer": {
+                    "tokenizer": "keyword",
+                    "filter": ["custom_word_delimiter_graph_filter", "lowercase"]
+                }
+            },
+            "filter": {
+                "fulltext_index_ngram_filter": {
+                    "type": "edge_ngram",
+                    "min_gram": 2,
+                    "max_gram": 20
+                },
+                "custom_word_delimiter_graph_filter": {
+                    "type": "word_delimiter_graph",
+                    "type_table": [ "& => ALPHA" ],
+                    "split_on_case_change": false,
+                    "split_on_numerics": false
+                }
+            }
+        }
+    },
+    "mappings": {
+        "page": {
+            "properties": {
+                "full-text": {
+                    "analyzer": "fulltext_index_analyzer",
+                    "search_analyzer": "fulltext_search_analyzer"
+                },
+                "full-text-boosted": {
+                    "analyzer": "fulltext_index_analyzer",
+                    "search_analyzer": "fulltext_search_analyzer"
+                }
+            }
+        }
+    }
+}
+```
+
+See section **Installing Indexes and Mappings** below for details on how to apply changes made to schema configuration files.
 
 ## Defining New Indexes and Mappings
 You can define new indexes and mappings by creating new configuration files under the `Shared` namespace of any module.
@@ -93,8 +152,12 @@ The first command will install indexes which are not yet created and [update the
 Note that if an index is created with the given settings, it won’t be changed by running this process, but the mapping can be modified and will be changed.
 
 In the development environment, if you need to create new analyzers or change the index settings, you need to delete the index first and run the install process again.
+To populate the newly created index with data, run `publish:trigger-events` in console:
+```php
+vendor/bin/console publish:trigger-events
+```
 
-After running the second command, a helper class will be auto-generated for each and every index installed. You can find these classes under the `\Generated\Shared\Search` namespace. The name of the generated class starts with the name of the index and is suffixed with `IndexMap`.
+After running `search:setup:source-map` command, a helper class will be auto-generated for each and every index installed. You can find these classes under the `\Generated\Shared\Search` namespace. The name of the generated class starts with the name of the index and is suffixed with `IndexMap`.
 
 For the default page index, the class is `\Generated\Shared\Search\PageIndexMap`.
 

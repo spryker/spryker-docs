@@ -74,7 +74,7 @@ The imported data must be added to the `spy_stock_store` database table and appe
 
 ## Import warehouses with store relation in bulk
 
-1. Perform steps 2-4 from the preceding sections: [Importing warehouses](#importing-warehouses) and [Importing a warehouse with the stores assigned](#importing-a-warehouse-with-the-stores-assigned).
+1. Perform steps 2-4 from the preceding sections: [Importing warehouses](#import-warehouses) and [Importing a warehouse with the stores assigned](#import-a-warehouse-with-the-stores-assigned).
 2. Run the following console command:
     ```bash
     console data:import

@@ -34,10 +34,10 @@ shipment_method_key,store_name
 ```
 
 where:
-* `shipment_method`: Name of the delivery method you want to create
-* `store_name`: Store in which the delivery method are available
+* `shipment_method` is a delivery method's name you want to create.
+* `store_name` is a store in which the delivery method are available.
 
-To import delivery methods linked to the stores from the `/ShipmentDataImport/data/import/delivery_method_store.csv` file, run the following:
+To import delivery methods linked to the stores from the `/ShipmentDataImport/data/import/delivery_method_store.csv` file, run the following command:
 
 ```bash
 console data:import:shipment-method-store

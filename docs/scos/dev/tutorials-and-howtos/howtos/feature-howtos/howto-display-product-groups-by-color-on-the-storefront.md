@@ -20,11 +20,11 @@ To enhance the visual shopping experience of your customers, you can use product
 
 ## Prerequisites
 
-[Integrate Product Groups feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-groups-feature-integration.html) into your project.
+Integrate [Product Groups feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-groups-feature-integration.html) into your project.
 
-## Schema extension
+## Extend schema
 
-Add the `color_code` field to the `spy_product_abstract` table in the database:
+In the database, add the `color_code` field to the `spy_product_abstract` table:
 
 1. Create or extend the schema file as follows:
 
@@ -55,7 +55,7 @@ The `color_code` field has been added to the `spy_product_abstract` table.
 
 {% endinfo_block %}
 
-## Transfer object extension
+## Extend transfer object
 
 Extend the existing transfer objects to support the newly introduced `colorCode` field:
 1. Create or extend the transfer object definition file as follows.
@@ -83,6 +83,7 @@ Extend the existing transfer objects to support the newly introduced `colorCode`
 ```
 
 2. Generate transfer objects:
+
 ```bash
 console transfer:generate
 ```
@@ -93,10 +94,9 @@ Transfer objects have been prepared for the `colorCode` field.
 
 {% endinfo_block %}
 
-## Extension of product abstract data import
+## Extend product abstract data import
 
 Extend the product abstract writer with the color code data in the data import module. In `src/Pyz/Zed/DataImport/Business/Model/ProductAbstract/ProductAbstractWriterStep.php`, edit `ProductAbstractWriterStep` as follows:
-
 1. Introduce the `KEY_COLOR_CODE` constant.
 2. Extend the `importProductAbstract()` method with the color code for the product abstract entity:
 
@@ -146,7 +146,7 @@ class ProductAbstractWriterStep extends PublishAwareStep implements DataImportSt
 }
 ```
 
-## Demo data preparation
+## Prepare demo data
 
 Prepare the demo data for the color code field:
 1. Add the `color_code` field to the product abstract data import. The following provided data can be used as an example:
@@ -175,6 +175,6 @@ Make sure the following:
 
 {% endinfo_block %}
 
-## Frontend configuration
+## Configure frontend
 
-If you want to change the product attribute used for grouping, in the `src/Pyz/Yves/ProductGroupWidget/Theme/default/components/molecules/color-selector/color-selector.twig` Twig template, re-define `colorAttributeName`.
+To change the product attribute used for grouping, in the `src/Pyz/Yves/ProductGroupWidget/Theme/default/components/molecules/color-selector/color-selector.twig` Twig template, redefine `colorAttributeName`.

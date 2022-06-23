@@ -56,7 +56,7 @@ It is possible to have the same display values for different OMS states.
     1. In the **ACTIONS** column, click **Edit**. The **Edit Translation** page opens.
     2. For the available locales, enter translations and click **Save**. The **Overview of Translation** page opens, where you can see the translations of the order state for the Storefront.
 
-After taking steps 1-5, on the Storefront, on the **Order Overview** and **Order History** pages, customers see the states that correspond to the values of the `display` parameter you set in XML files of the respective payment methods and sub-processes.
+On the Storefront, on the **Order Overview** and **Order History** pages, customers can see the states that correspond to the values of the `display` parameter you set in XML files of the respective payment methods and sub-processes.
 
 {% info_block infoBox "Info" %}
 

@@ -31,7 +31,7 @@ To enable CORS support in Glue, follow the Installation Guide.
 
 ## Configuration
 
-CORS is configured in Spryker Glue via environment variables. There are 2 levels where CORS can be configured: global and per-domain. On the global level, CORS is configured for the whole Glue Application. On the **per-domain** level, you can configure CORS behavior for each domain configured in Glue Application separately. For example, you can configure different lists of allowed origins for the `http://glue.de.mysprykershop.com` and `http://glue.at.mysprykershop.com` domains.
+CORS is configured in Spryker Glue using environment variables. There are 2 levels where CORS can be configured: global and per-domain. On the global level, CORS is configured for the whole Glue Application. On the **per-domain** level, you can configure CORS behavior for each domain configured in Glue Application separately. For example, you can configure different lists of allowed origins for the `http://glue.de.mysprykershop.com` and `http://glue.at.mysprykershop.com` domains.
 
 {% info_block warningBox %}
 

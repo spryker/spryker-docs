@@ -471,7 +471,7 @@ sudo apt install -q -y postfix
 
 ### Install Nginx
 
-Nginx is an open-source web server that proxies requests to PHP FPM via FCGI protocol. Run these commands to install it:
+Nginx is an open-source web server that proxies requests to PHP FPM by the FCGI protocol. Run these commands to install it:
 
 ```shell
 sudo apt update
@@ -506,7 +506,7 @@ set $application_store DE;
 #include /etc/nginx/maintenance.conf;
 
 # Static files—allow only specified here paths
-# all other resources must be served via static host (and cached, if possible, by reverse proxy or cdn)
+# all other resources must be served by static host (and cached, if possible, by reverse proxy or cdn)
 location ~ (/assets/|/maintenance.html|/favicon.ico|/crossdomain.xml) {
 access_log off;
 expires 30d;
@@ -655,7 +655,7 @@ set $application_env staging;
 set $application_store DE;
 
 # Timeout for Api requests—10 minutes
-# (longer requests must be converted to jobs and executed via jenkins)
+# (longer requests must be converted to jobs and executed by Jenkins)
 proxy_read_timeout 600s;
 proxy_send_timeout 600s;
 fastcgi_read_timeout 600s;

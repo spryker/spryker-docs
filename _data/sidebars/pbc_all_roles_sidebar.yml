@@ -27,7 +27,7 @@ entries:
                     url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/add-unzer-standard-credentails.html
                   - title: Add Unzer marketplace credentials
                     url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/add-unzer-marketplace-credentials.html
-              - title: Customise the credit card display in your payment method
-                url: /docs/pbc/all/payment/unzer/customise-the-credit-card-display-in-your-payment-card.html
+              - title: Customise the credit card display in your payment step
+                url: /docs/pbc/all/payment/unzer/customise-the-credit-card-display-in-your-payment-step.html
               - title: Domain model & relationships
                 url: /docs/pbc/all/payment/unzer/domain-model-and-relationships.html

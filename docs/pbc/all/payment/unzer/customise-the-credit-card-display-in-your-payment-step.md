@@ -1,7 +1,7 @@
 ---
 title: Customise the credit card display in your payment step
 last_updated: Jun 22, 2022
-description: This document describes how to add the frontend for a credit card to your project.
+description: This document describes how to add frontend for a credit card to your project.
 template: concept-topic-template
 ---
 

@@ -32,7 +32,7 @@ Make sure custom code to follow the Spryker architecture and to leverage Tax cal
 
 {% endinfo_block %}
 
-## Scheduling the tax rates update
+## Schedule the tax rates update
 
 To get you ready for the tax update on 01.07.2020, we have prepared an example of the solution that works on our non-modified Demo Shop and must be adjusted accordingly for every project.
 

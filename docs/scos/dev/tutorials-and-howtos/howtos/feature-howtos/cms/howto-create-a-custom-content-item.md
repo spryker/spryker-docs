@@ -188,7 +188,7 @@ Optional: You can add the `$templateIdentifier` parameter—for example, `functi
 
 {% endinfo_block %}
 
-5. In `\Pyz\Yves\Twig\TwigDependencyProvider::getTwigPlugins()`, register your Twig plugin .
+5. In `\Pyz\Yves\Twig\TwigDependencyProvider::getTwigPlugins()`, register your Twig plugin.
 
 Now you can use your plugin as a function in Twig files. If you’ve named your plugin `content_foo`, in a Twig file, the function looks like `{% raw %}{{{% endraw %} content_foo('content-key', 'big-header') {% raw %}}}{% endraw %}`.
 
@@ -200,9 +200,9 @@ The **CMS Block Glossary Edit** and **Placeholder Edit** pages contain the WYSIW
 
 To add the new content item to that list, in `src/Zed/ContentFooGui`, implement a new plugin using `\Spryker\Zed\ContentGuiExtension\Dependency\Plugin\ContentGuiEditorPluginInterface`—for example,  `ContentFooContentGuiEditorPlugin`.
 The following are the method descriptions:
-* `getType()` returns a string displaying the content type—for example, Foo.
-* `getTemplates()` returns an array of templates supported by your Twig plugin created in the previous section. If there are no supported templates defined, returns an empty array.
-* `getTwigFunctionTemplate()` returns a Twig expression that is added into the content.
+* `getType()`: Returns a string displaying the content type—for example, Foo.
+* `getTemplates()`: Returns an array of templates supported by your Twig plugin created in the previous section. If there are no supported templates defined, returns an empty array.
+* `getTwigFunctionTemplate()`: Returns a Twig expression that is added into the content.
 
 ```php
 <?php

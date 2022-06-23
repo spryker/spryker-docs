@@ -23,7 +23,7 @@ redirect_from:
   - /v1/docs/en/ht-product-review-feature-configuration
 ---
 
-## Configuring the maximum rating
+## Configure the maximum rating
 
 To change the maximum allowed rating, alter the Client configuration by extending the `\Spryker\Client\ProductReview\ProductReviewConfig` class in your project directory.
 
@@ -51,7 +51,7 @@ Example of client config extension:
             }
 ```
 
-## Configuring the number of reviews displayed per page
+## Configure the number of reviews displayed per page
 
 To change the maximum number of reviews displayed per page, alter the Client configuration by extending the `\Spryker\Client\ProductReview\ProductReviewConfig` class in your project directory.
 

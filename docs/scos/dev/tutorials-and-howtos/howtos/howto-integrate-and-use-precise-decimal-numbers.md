@@ -149,7 +149,7 @@ $decimal = new Decimal(7);
 $decimal = $decimal->negate(); //-7
 ```
 
-**Table of exceptions**
+#### Table of exceptions
 
 The table provides additional information about exceptions that may occur when working with decimal objects.
 
@@ -286,7 +286,7 @@ $decimal = new Decimal(2.718);
 $decimal = $decimal->truncate(2); //2.71
 ```
 
-**Table of exceptions**
+#### Table of exceptions
 
 The table provides additional information about the exception that may be thrown when working with decimal objects in rounding operations.
 
@@ -333,7 +333,7 @@ $decimal = new Decimal(3.1400000);
 $decimal = $decimal->trim(); //3.14
 ```
 
-**Table of exceptions**
+#### Table of exceptions
 
 The table provides additional information about exceptions that may be thrown when working with decimal objects in casting operations.
 

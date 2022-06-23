@@ -41,8 +41,8 @@ _Per-domain_ configuration always prevails over the global one. For this reason
 
 Configuration can be found in the following files:
 
-* **Global**—`config/Shared/config_default.php`;
-* **Per-domain**—`config/Shared/config_default_DE.php`, where DE is the respective domain.
+* *Global*—`config/Shared/config_default.php`.
+* *Per-domain*—`config/Shared/config_default_DE.php`, where DE is the respective domain.
 
 To configure CORS behavior:
 

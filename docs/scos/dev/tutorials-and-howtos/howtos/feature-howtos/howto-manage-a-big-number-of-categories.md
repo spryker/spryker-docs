@@ -35,7 +35,7 @@ Perform the following steps to enable the view:
 composer require "spryker/category-gui":"^1.0.0"
 ```
 
-1. Once installed, configure the Zed navigation to point to the new page. Insert the following code snippet into `config/Zed/navigation.xml`:
+2. Configure the Zed navigation to point to the new page. Insert the following code snippet into `config/Zed/navigation.xml`:
 
 ```xml
 <?xml version="1.0"?>

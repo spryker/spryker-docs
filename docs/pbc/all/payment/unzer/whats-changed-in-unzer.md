@@ -1,22 +1,18 @@
 ---
-title: What's changed
+title: What's changed in Unzer
 last_updated: Jun 20, 2022
 description: This document lists all the Unzer releases
 template: concept-topic-template
 ---
 
-## What's changed in Unzer
-
-This page lists all the Unzer releases.
-
-### June 14th 2022
+## June 14th 2022
 
 This release contains one module—[Unzer](https://github.com/spryker-eco/unzer/releases/tag/1.0.1)
 
 [Public release details](https://api.release.spryker.com/release-group/4208)
 
 
-#### Breaking changes
+### Breaking changes
 
 The following changes have been made:
 
@@ -24,7 +20,7 @@ The following changes have been made:
 * Added new required transfer fields for `UnzerFacade::executeRefundOmsCommand()`. Impacted `UnzerRefundCommandByOrderPlugin` with facade changes.
 * Introduced `spy_payment_unzer_shipment_charge` table.
 
-#### Improvements
+### Improvements
 
 The following improvements have been made:
 
@@ -34,7 +30,7 @@ The following improvements have been made:
 * Introduced `UnzerCharge.chargedSalesShipmentIds` transfer field.
 
 
-### June 6th 2022
+## June 6th 2022
 
 Initial release of the Unzer integration. This release contains four modules:
 

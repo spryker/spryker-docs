@@ -1,5 +1,5 @@
 ---
-title: Define a custom prefix for core entity names
+title: Define custom prefixes for core entity names
 description: Learn how to define a custom prefix for core entity names
 last_updated: June 3, 2022
 template: howto-guide-template
@@ -18,4 +18,4 @@ upgrader:
     - Zyp
 ```
 
-Now the evaluator will not consider entities prefixed with `Zyp` as not unique. 
+Now the evaluator will not consider entities prefixed with `Zyp` as not unique.

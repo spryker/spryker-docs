@@ -25,7 +25,7 @@ Product Restriction feature works on the basis of whitelist/blacklist lists. Tha
 
 To restrict the products, a Shop Administrator needs to create a product list, include the necessary products to the list and blacklist them for a specific merchant relationship. All other products will be available for that merchant relationship.
 
-To create product lists, follow the [guideline for the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/creating-product-lists.html).
+To create product lists, follow [Create product lists](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/create-product-lists.html).
 
 You can check more cases of product restrictions workflow on the [Restricted Products Behavior](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html) page.
 
@@ -41,7 +41,7 @@ You can check more cases of product restrictions workflow on the [Restricted Pro
 | [Create product lists](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/create-product-lists.html)  |
 | [Edit product lists](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/edit-product-lists.html) |
 | [Create merchant relations]](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/create-merchant-relations.html) |
-| [Edit merchant relations]](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/edit-merchant-relations.html) | 
+| [Edit merchant relations]](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/edit-merchant-relations.html) |
 
 {% info_block warningBox "Developer guides" %}
 

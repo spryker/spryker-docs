@@ -11,9 +11,9 @@ entries:
                 url: /docs/pbc/all/payment/unzer/whats-changed-in-unzer.html
               - title: Install Unzer
                 nested:
-                  - title: Install and configure Unzer
+                  - title: Install and configure
                     url: /docs/pbc/all/payment/unzer/install-unzer/install-and-configure-unzer.html
-                  - title: Integrate Unzer
+                  - title: Integrate
                     url: /docs/pbc/all/payment/unzer/install-unzer/integrate-unzer.html
               - title: Use cases & HowTos & Tips
                 nested:

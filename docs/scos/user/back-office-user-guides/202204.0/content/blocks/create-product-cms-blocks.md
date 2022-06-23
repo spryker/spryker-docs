@@ -14,7 +14,7 @@ related:
 
 * Create the abstract products whose pages you want to show the block on. For instructions, see [Create abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html).
 
-* Review the [reference information](#reference-information-create-category-cms-blocks) before you start, or look up the necessary information as you go through the process.
+* Review the [reference information](#reference-information-create-product-cms-blocks) before you start, or look up the necessary information as you go through the process.
 
 ## Create a product CMS block
 
@@ -35,10 +35,10 @@ related:
 
 
 
-## Reference information: Create category CMS blocks
+## Reference information: Create product CMS blocks
 
-| ATTRIBUTE  | DESCRIPTION: REGULAR CMS BLOCK |
-| --- | --- | --- |
+| ATTRIBUTE  | DESCRIPTION |
+| --- | --- | 
 | STORE RELATION |  Stores to display the block in. |
 | TEMPLATE | Defines the layout of the CMS Block. A developer can [create more templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template). |
 | NAME | You will use this name when [assigning the block to a slot in a page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#assigning-cms-blocks-to-slots). |

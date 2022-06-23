@@ -16,9 +16,9 @@ redirect_from:
   - /docs/en/multiple-stores
 ---
 
-{% info_block warningBox "Cloud environment restrictions" %}
+{% info_block warningBox "Multiple stores in cloud environments" %}
 
-Spryker Cloud Commerce OS does not support all the multi-store configuration options, like creation of different regions. If you want to set up multiple stores, [contact support](https://spryker.force.com/support/s/knowledge-center) to learn about available configuration options.
+For instructions on setting up multiple stores in Spryker Cloud Commerce OS, see [Add and remove databases of stores](/docs/cloud/dev/spryker-cloud-commerce-os/multi-store-setups/add-and-remove-databases-of-stores.html).
 
 {% endinfo_block %}
 

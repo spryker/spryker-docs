@@ -1,5 +1,5 @@
 ---
-title: Managing product lists
+title: Edit product lists
 description: Use these procedures to edit, export, remove a product list or remove products from the product list in the Back Office.
 last_updated: Aug 11, 2021
 template: back-office-user-guide-template
@@ -15,10 +15,13 @@ redirect_from:
 
 This doc describes how to edit product lists in the Back Office.
 
-## Prerequisistes
+## Prerequisites
 
-1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Product Lists**.
-2. Next to the product list you want to edit, click **Edit List**.
+* If you want to assign categories to a product list, [create the categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/create-categories.html).
+* If you want to assign or import products for a product list, [create the products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/adding-product-alternatives.html).
+* To start editing product lists, follow the steps:
+    1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Product Lists**.
+    2. Next to the product list you want to edit, click **Edit List**.
 
 
 ## Edit general settings of a product list
@@ -34,6 +37,13 @@ This doc describes how to edit product lists in the Back Office.
 If a product list is used by a [configurable bundle](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html) and its type is changed to **Blacklist**, it stops being displayed for the [configurable bundle slot](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html#configurable-bundle-slot) on the Storefront. To check if a product list is used by a configurable bundle, on the *Edit Product List: {product list ID}* page, switch to the *Used by* tab.
 
 {% endinfo_block %}
+
+### Reference information: Edit general settings of a product list
+
+| ATTRIBUTE | DESCRIPTION |
+|-|-|
+| TITLE | Name that you will use for identifying the list in the Back Office. |
+| TYPE | Defines whether a company will be able to see the products in the list. |
 
 ## Assign and deassign categories from a product list
 
@@ -53,35 +63,21 @@ If a product list is used by a [configurable bundle](/docs/scos/user/features/{{
     The page refreshes with the success message displayed.
 
 
-
-
-
-
-
-
 **Tips and tricks**
-<br>To double-check the list of products that are to be assigned, switch to the *Products to be assigned* tab.
+</br> When assigning or deassigning a lot of products at a time, it might be useful to double-check your selection in the **Products to be assigned** and **Products to be deassigned** tabs respectively.
+
+## Import products for a product list
+
+1. On the **Edit Product List: {product list ID}**  page, click the **Assign Products** tab.
+2. Click **Choose File**.
+3. Select the file with the list you want to import.
+    To learn about the format of the file, see [File details - content_product_abstract_list.csv](/docs/scos/dev/data-import/202204.0/data-import-categories/content-management/file-details-content-product-abstract-list.csv.html).
+4. Click **Save**.
+    The page refreshes with a success message displayed. The list is displayed in the **Products in the list** subtab.
 
 
 
-**Tips and tricks**
-<br>To double-check the list of products that are to be deassigned, switch to the *Products to be deassigned* tab.
+## Export a product list
 
-## Exporting a product list
-
-To export a product list:
-
-1. Select **Edit List** next to the product list you want to export.
-2. On the *Edit Product List: {product list ID}* page, select **► Export**.
+On the **Edit Product List: {product list ID}** page, click **Export**.
     The list is exported as a CSV file.
-
-## Removing a product list
-
-To remove a product list:
-1. Select **Remove List** next to the product list you want to remove.
-    The *Product List was successfully removed* page opens.
-2. To confirm the deletion, select **Remove List**.
-    The *Overview of Product lists* page opens with the success message displayed.
-
-**What's next?**
-<br>See the reference information of the [Creating a product list](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/creating-product-lists.html) guide to learn about the attributes you see, select, and enter while managing a product list.

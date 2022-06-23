@@ -17,7 +17,7 @@ redirect_from:
   - /docs/scos/dev/technical-enhancements/cache-of-unresolved-entities-for-zed.html
 ---
 
-Spryker allows extending certain classes (such as facades, clients, etc.) in projects and in multiple stores. Therefore each class can exist on the core, project, and store level. In addition to that, Spryker supports multiple namespaces for each level. Because of this, there exist multiple possible locations to look up such classes. To avoid unnecessary usages of the expensive `class_exists()` function that does the job, Spryker provides a caching mechanism that writes all non-existing classes into a cache file for Zed. For more details, see[ Activate Class Resolver Cache](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html#activate-class-resolver-cache) in Performance Guidelines.
+Spryker allows extending certain classes (such as facades, clients, etc.) in projects and in multiple stores. Therefore each class can exist on the core, project, and store level. In addition to that, Spryker supports multiple namespaces for each level. Because of this, there exist multiple possible locations to look up such classes. To avoid unnecessary usages of the expensive `class_exists()` function that does the job, Spryker provides a caching mechanism that writes all non-existing classes into a cache file for Zed. For more details, see[ Activate Class Resolver Cache](/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html#activate-resolvable-class-names-cache) in Performance Guidelines.
 
 ## Integration
 

@@ -7,13 +7,13 @@ entries:
           - title: Unzer
             url: /docs/pbc/all/payment/unzer/unzer.html
             nested:
-              - title: What's changed
-                url: /docs/pbc/all/payment/unzer/whats-changed.html
+              - title: What's changed in Unzer
+                url: /docs/pbc/all/payment/unzer/whats-changed-in-unzer.html
               - title: Install Unzer
                 nested:
-                  - title: Install and configure Unzer
+                  - title: Install and configure
                     url: /docs/pbc/all/payment/unzer/install-unzer/install-and-configure-unzer.html
-                  - title: Integrate Unzer
+                  - title: Integrate
                     url: /docs/pbc/all/payment/unzer/install-unzer/integrate-unzer.html
               - title: Use cases & HowTos & Tips
                 nested:
@@ -27,7 +27,7 @@ entries:
                     url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/add-unzer-standard-credentails.html
                   - title: Add Unzer marketplace credentials
                     url: /docs/pbc/all/payment/unzer/configuration-in-the-back-office/add-unzer-marketplace-credentials.html
-              - title: Frontend for a credit card
-                url: /docs/pbc/all/payment/unzer/frontend-for-a-credit-card.html
+              - title: Customise the credit card display in your payment step
+                url: /docs/pbc/all/payment/unzer/customise-the-credit-card-display-in-your-payment-step.html
               - title: Domain model & relationships
                 url: /docs/pbc/all/payment/unzer/domain-model-and-relationships.html

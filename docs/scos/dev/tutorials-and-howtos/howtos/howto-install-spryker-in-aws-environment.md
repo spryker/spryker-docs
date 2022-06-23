@@ -506,7 +506,9 @@ set $application_store DE;
 #include /etc/nginx/maintenance.conf;
 
 # Static files—allow only specified here paths
+
 # all other resources must be served by static host (and cached, if possible, by reverse proxy or cdn)
+
 location ~ (/assets/|/maintenance.html|/favicon.ico|/crossdomain.xml) {
 access_log off;
 expires 30d;
@@ -655,7 +657,9 @@ set $application_env staging;
 set $application_store DE;
 
 # Timeout for Api requests—10 minutes
+
 # (longer requests must be converted to jobs and executed by Jenkins)
+
 proxy_read_timeout 600s;
 proxy_send_timeout 600s;
 fastcgi_read_timeout 600s;
@@ -1139,14 +1143,14 @@ $config[PropelConstants::PROPEL_DEBUG] = false;
 
 /** Activate Twig Compiler **/
 $config[TwigConstants::ZED_TWIG_OPTIONS] = [
-   'cache' => new Twig_Cache_Filesystem(sprintf(
+   'cache' => new FilesystemCache(sprintf(
 	'%s/data/%s/cache/Zed/twig',
 	 APPLICATION_ROOT_DIR, 'DE'),
 	 Twig_Cache_Filesystem::FORCE_BYTECODE_INVALIDATION),
 ];
 
 $config[TwigConstants::YVES_TWIG_OPTIONS] = [
-    'cache' => new Twig_Cache_Filesystem(sprintf(
+    'cache' => new FilesystemCache(sprintf(
 	'%s/data/%s/cache/Yves/twig',
 	 APPLICATION_ROOT_DIR, 'DE'),
 	 Twig_Cache_Filesystem::FORCE_BYTECODE_INVALIDATION),

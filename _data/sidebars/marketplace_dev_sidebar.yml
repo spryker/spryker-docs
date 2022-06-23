@@ -12,6 +12,9 @@ entries:
           - title: Infrastructure requirements
             url: /docs/marketplace/dev/setup/infrastructure-requirements.html
 
+          - title: Marketplace supported browsers
+            url: /docs/marketplace/dev/setup/marketplace-supported-browsers.html  
+
           - title: Setup
             url: /docs/marketplace/dev/setup/spryker-marketplace-setup.html
 
@@ -60,7 +63,7 @@ entries:
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-approval-process-feature-walkthrough.html
             include_versions:
             - "202204.0"
-          
+
           - title: Marketplace Order Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html
 
@@ -78,7 +81,7 @@ entries:
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-custom-prices-feature-walkthrough.html
             include_versions:
             - "202204.0"
-            
+
           - title: Marketplace Return Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-return-management-feature-walkthrough.html
 
@@ -214,7 +217,7 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-custom-prices-feature-integration.html
             include_versions:
             - "202204.0"
-          
+
           - title: Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
 
@@ -244,7 +247,7 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-quick-add-to-cart-feature-integration.html
             include_versions:
             - "202204.0"
-          
+
           - title: Marketplace Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html
 
@@ -261,7 +264,7 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-quick-add-to-cart-feature-integration.html
             include_versions:
             - "202204.0"
-          
+
           - title: Marketplace Promotions & Discounts feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-promotions-discounts-feature-integration.html
 
@@ -568,7 +571,7 @@ entries:
 
           - title: "File details: product-option-group.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-option-group.csv.html
-          
+
       - title: Front-end
         nested:
 

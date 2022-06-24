@@ -8,7 +8,7 @@ You can extend the SDK by adding more Symfony bundles to the SDK and building yo
 
 ## Adding more dependencies
 
-Besides extending the Spryker SDK through [Yaml definitions](/docs/sdk/dev/extending-the-sdk.html#implementation-via-yaml-definition), more complex extensions can be provided via [PHP implementations](/docs/sdk/dev/extending-the-sdk.html#implementation-via-php-implementation).
+Besides extending the Spryker SDK through [Yaml definitions](/docs/sdk/dev/extending-the-sdk.html#implementation-via-yaml-definition), more complex extensions can be provided via [PHP implementations](/docs/sdk/dev/extending-the-sdk.html#implementation-via-a-php-class).
 You must add these extensions through a PHP implementation as a composer dependency and register them as Symfony bundles. To achieve this, follow the steps below.
 
 ### 1. Download the SDK source code
@@ -17,7 +17,7 @@ To be able to build your own flavored Spryker SDK, first, download the source:
 
 `git clone --depth 1 --branch <tag_name> git@github.com:spryker-sdk/sdk.git`
 
-For testing and development purposes, you can run the Spryker SDK in [development mode](/docs/sdk/dev/developing-the-sdk.html#running-sdk-in-the-development-mode).
+For testing and development purposes, you can run the Spryker SDK in [development mode](development.md#run-sdk-in-development-mode).
 
 ### 2. Add dependencies via Composer
 

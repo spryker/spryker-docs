@@ -29,3 +29,11 @@ For the specific Markdown syntax we use in documentation, see [Markdown syntax](
 
 
 That’s it! Your pull request has been created. Our Documentation team will review it, and once approved, your changes will be merged and available on the documentation website.
+
+## Contributors
+
+Thank you to all our contributors!
+
+<a href="https://github.com/spryker/spryker-docs/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=spryker/spryker-docs" />
+</a>

@@ -12,6 +12,9 @@ entries:
           - title: Infrastructure requirements
             url: /docs/marketplace/dev/setup/infrastructure-requirements.html
 
+          - title: Marketplace supported browsers
+            url: /docs/marketplace/dev/setup/marketplace-supported-browsers.html  
+
           - title: Setup
             url: /docs/marketplace/dev/setup/spryker-marketplace-setup.html
 
@@ -60,7 +63,7 @@ entries:
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-approval-process-feature-walkthrough.html
             include_versions:
             - "202204.0"
-          
+
           - title: Marketplace Order Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html
 
@@ -78,7 +81,7 @@ entries:
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-custom-prices-feature-walkthrough.html
             include_versions:
             - "202204.0"
-            
+
           - title: Marketplace Return Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-return-management-feature-walkthrough.html
 
@@ -167,7 +170,7 @@ entries:
           - title: Combined Product Offer Import feature integration
             url: /docs/marketplace/dev/feature-integration-guides/combined-product-offer-import-feature-integration.html
 
-          - title: Marketplace Dummy Payment feature integration
+          - title: Marketplace Dummy Payment integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-dummy-payment-feature-integration.html
 
           - title: Marketplace Inventory Management feature integration
@@ -202,6 +205,11 @@ entries:
             include_versions:
             - "202204.0"
 
+          - title: Merchant Switcher + Customer Account Management feature integration
+            url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-customer-account-management-feature-integration.html
+            include_versions:
+              - "202204.0"
+
           - title: Merchant Switcher + Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-wishlist-feature-integration.html
 
@@ -209,15 +217,14 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-custom-prices-feature-integration.html
             include_versions:
             - "202204.0"
-          
+
           - title: Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
 
-          - title: Marketplace Order Management + Customer Account Management feature integration
-            url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-customer-account-management-feature-integration.html
-
           - title: Marketplace Order Management + Order Threshold feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-order-threshold-feature-integration.html
+            include_versions:
+            - "202204.0"
 
           - title: Marketplace Product Approval Process feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-approval-process-feature-integration.html
@@ -240,7 +247,7 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-quick-add-to-cart-feature-integration.html
             include_versions:
             - "202204.0"
-          
+
           - title: Marketplace Product Offer feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-feature-integration.html
 
@@ -257,7 +264,7 @@ entries:
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-product-offer-quick-add-to-cart-feature-integration.html
             include_versions:
             - "202204.0"
-          
+
           - title: Marketplace Promotions & Discounts feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-promotions-discounts-feature-integration.html
 
@@ -376,12 +383,12 @@ entries:
         nested:
           - title: REST API Marketplace B2C reference
             url: /docs/marketplace/dev/glue-api-guides/rest-api-b2c-reference.html
-            include_versions:       
+            include_versions:
             - "202204.0"
 
           - title: REST API Marketplace B2B reference
             url: /docs/marketplace/dev/glue-api-guides/rest-api-b2b-reference.html
-            include_versions:       
+            include_versions:
             - "202204.0"
 
           - title: Abstract products
@@ -564,7 +571,7 @@ entries:
 
           - title: "File details: product-option-group.csv"
             url: /docs/marketplace/dev/data-import/file-details-merchant-product-option-group.csv.html
-          
+
       - title: Front-end
         nested:
 

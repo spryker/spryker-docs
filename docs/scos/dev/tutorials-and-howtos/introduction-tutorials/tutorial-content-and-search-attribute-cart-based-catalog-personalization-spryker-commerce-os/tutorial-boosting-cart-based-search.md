@@ -1,5 +1,5 @@
 ---
-title: "Tutorial - Boosting cart-based search"
+title: "Tutorial: Boosting cart-based search"
 description: The tutorial provides a step-by-step solution on how you can arrange your products in the cart by a color attribute.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -29,7 +29,7 @@ This tutorial describes how you can improve the cart-based search in your projec
 
 Based on the colors of the products in the user's cart, the catalog should first display products that have the same color. Let’s say, for example, that there’s a red product in the cart, then the top results in the catalog should also contain red products.
 
-To solve the challenge, follow the instructions below.
+To solve the challenge, use instructions from the following sections.
 
 ## Preparation
 

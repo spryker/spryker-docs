@@ -16,7 +16,7 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 The following diagram illustrates the dependencies between the modules for the *Marketplace Product Approval Process* feature.
 
-![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/bdeba422-0437-4c39-a29f-9340eb153a6a.png?utm_medium=live&utm_source=custom)
+![Module Dependency Graph](https://confluence-connect.gliffy.net/embed/image/411046ea-9d59-40c3-9d41-7473eb45d2d6.png?utm_medium=live&utm_source=custom)
 
 | MODULE     | DESCRIPTION                |
 |------------|----------------------------|
@@ -27,7 +27,7 @@ The following diagram illustrates the dependencies between the modules for the *
 
 The following schema illustrates the *Marketplace Product Approval Process* domain model:
 
-![Domain Model](https://confluence-connect.gliffy.net/embed/image/6e87c4b8-7481-4150-a5e9-ff04ab90b762.png?utm_medium=live&utm_source=custom)
+![Domain Model](https://confluence-connect.gliffy.net/embed/image/dd3fdb7e-e244-4472-a7ed-1341bfa8bcbc.png?utm_medium=live&utm_source=custom)
 
 ## Related Developer articles
 

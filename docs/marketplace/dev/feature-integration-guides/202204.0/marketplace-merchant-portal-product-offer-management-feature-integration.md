@@ -5,6 +5,9 @@ description: This integration guide provides steps on how to integrate the Marke
 template: feature-integration-guide-template
 redirect_from:
   - /docs/marketplace/dev/feature-integration-guides/202200.0/marketplace-merchant-portal-product-offer-management-feature-integration.html
+related:
+  - title: Marketplace Merchant Portal Product Offer Management feature walkthrough
+    link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-merchant-portal-product-offer-management-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Marketplace Merchant Portal Product Offer Management feature into a Spryker project.
@@ -104,7 +107,7 @@ use Spryker\Zed\ProductOfferMerchantPortalGui\Communication\Plugin\DashboardMerc
 class DashboardMerchantPortalGuiDependencyProvider extends SprykerDashboardMerchantPortalGuiDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\DashboardMerchantPortalGuiExtension\Dependency\Plugin\MerchantDashboardCardPluginInterface[]
+     * @return array<\Spryker\Zed\DashboardMerchantPortalGuiExtension\Dependency\Plugin\MerchantDashboardCardPluginInterface>
      */
     protected function getDashboardCardPlugins(): array
     {

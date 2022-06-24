@@ -2,6 +2,11 @@
 title: Retrieving merchant addresses
 description: Retrieve merchant addresses via Glue API
 template: glue-api-storefront-guide-template
+related:
+  - title: Retrieving merchants
+    link: docs/marketplace/dev/glue-api-guides/page.version/merchants/retrieving-merchants.html
+  - title: Retrieving merchant opening hours
+    link: docs/marketplace/dev/glue-api-guides/page.version/merchants/retrieving-merchant-opening-hours.html
 ---
 
 This document describes how to retrieve merchant addresses.

@@ -3,6 +3,11 @@ title: Managing merchants
 last_updated: Apr 23, 2021
 description: This guide explains how to create and manage merchant records on the Merchants page.
 template: back-office-user-guide-template
+related:
+  - title: Managing merchant users
+    link: docs/marketplace/user/back-office-user-guides/page.version/marketplace/merchants/managing-merchant-users.html
+  - title: Marketplace Merchant feature overview
+    link: docs/marketplace/user/features/page.version/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html
 ---
 
 On the **Merchants** page, you can manage the merchants' records and facilitate the merchant registration and approval process, as well as apply any changes to the existing merchants' records. This document describes the procedures of creating and managing merchant records.
@@ -113,6 +118,7 @@ The following table describes the attributes you enter and select when editing m
 #### Overview of Merchants page
 
 On the **Overview of Merchants** page, you see a table with all the merchants. The following information is included in the table:
+
 * Merchant ID
 * Merchant Name
 * Approval status. For more details about the statuses a merchant profile may have, check the [merchant statuses](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses) section.
@@ -121,7 +127,6 @@ On the **Overview of Merchants** page, you see a table with all the merchants. T
 * Actions
 
 ![approving-and-denying-merchants](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Marketplace/Merchants/merchants-page.png)
-
 
 By default, the table is sorted by the merchant Id value.
 

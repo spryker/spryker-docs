@@ -2,6 +2,9 @@
 title: Infrastructure requirements
 description: This document provides the required system infrastructure requirements for a Spryker Marketplace project.
 template: concept-topic-template
+related:
+  - title: DevVM system requirements
+    link: docs/marketplace/dev/setup/system-requirements.html
 ---
 
 This document describes the system infrastructure requirements that help mitigate security risks for Spryker Marketplace projects.
@@ -40,7 +43,6 @@ In the web server configuration (AWS WAF can also be used), only HTTP endpoints 
 ## Merchant portal network
 
 For the Merchant Portal to function properly, it should be in a dedicated public network, not the same network where Yves/Glue runs, with access to a network Database and QueueBroker. For details, see [the diagram](#diagram)).
-
 
 ## Firewall rules for the Merchant Portal (NACLs or Security groups)
 

@@ -40,7 +40,7 @@ In this situation, you *must* have multi-currency prices attached to the shipmen
 
 ## Set up the state machine
 
-The state machine that handles orders that use this shipment method needs to use a manual event for shipping, so that it can be triggered from the Zed Admin UI.
+The state machine that handles orders that use this shipment method needs to use a manual event for shipping so that it can be triggered from the Zed Admin UI.
 
 <!--../../Resources/Images/ship_event.png -->
 
@@ -68,11 +68,6 @@ The corresponding XML for this transition would be as follows:
 
 ## Add a new shipment method
 
-To add a new shipment method, follow these steps:
-1. In the Back Office, navigate to the **Delivery Methods** section and click **Create new carrier company**.
-2. Specify a name for the carrier company and the corresponding glossary key for having a localized name.
-3. To use this carrier company in the shop, select **Enabled**.
-4. Click **Save**.
 <!-- ../../Resources/Images/ui_add_carrier_cmpany.png-->
 
 To add a new shipment method, follow these steps:
@@ -86,7 +81,7 @@ When you have a new shipment carrier, you can add a new shipment method to it.
 
 {% info_block infoBox "Note" %}
 
-For more detailed information about adding shipment methods, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html)
+For more detailed information about adding shipment methods, see [Creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html).
 
 {% endinfo_block %}
 
@@ -103,7 +98,7 @@ To add a shipment method to a carrier, follow these steps:
 
 {% info_block infoBox "Note" %}
 
-For more detailed information about adding carrier companies, see [Creating carrier companies](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-carrier-companies.html)
+For more detailed information about adding carrier companies, see [Creating carrier companies](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-carrier-companies.html).
 
 {% endinfo_block %}
 

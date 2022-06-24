@@ -35,7 +35,7 @@ CMS page template is a [Twig](https://twig.symfony.com/) file that, when applied
 
 To learn how the template is created, check the following exemplary procedure:
 
-1. Create the Twig template—`src/Pyz/Shared/Cms/Theme/default/templates/contact_page.twig`:
+1. Create the Twig template `src/Pyz/Shared/Cms/Theme/default/templates/contact_page.twig`:
 
 ```twig
 <h1>CONTACT US </h1>
@@ -138,14 +138,13 @@ Depending on the content item widget you create the template for, make sure to i
 {% endinfo_block %}
 
 1. Create `src/Pyz/Yves/{ModuleWidget}/Theme/default/views/{template-folder}/{new-template}.twig`, where:
-
-* `{new-template}`—template name.
-* `{ModuleWidget}`—name of the respective Content Item Widget module.
-* `{template-folder}`—template folder name. Based on the content item widget, choose:
-    * banner
-    * cms-product-abstract
-    * content-product-set
-    * content-file
+   * `{new-template}` is the template name.
+   * `{ModuleWidget}` is the name of the respective Content Item Widget module.
+   * `{template-folder}` is the template folder name. Based on the content item widget, choose:
+       * banner
+       * cms-product-abstract
+       * content-product-set
+       * content-file
 
 The default templates located on the core level of each module can be used as examples.
 

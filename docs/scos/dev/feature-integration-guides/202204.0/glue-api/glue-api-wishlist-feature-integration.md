@@ -17,6 +17,8 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/wishlist-feature-walkthrough.html
   - title: Managing wishlists
     link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html
+  - title: Managing wishlist items
+    link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlist-items.html
 ---
 
 Follow the steps below to install Wishlist feature API.

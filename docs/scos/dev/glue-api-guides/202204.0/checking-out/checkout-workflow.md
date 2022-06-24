@@ -10,6 +10,13 @@ redirect_from:
   - /2021080/docs/en/checkout-workflow
   - /docs/checkout-workflow
   - /docs/en/checkout-workflow
+related:
+  - title: Checking out purchases
+    link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
+  - title: Submitting checkout data
+    link: docs/scos/dev/glue-api-guides/page.version/checking-out/submitting-checkout-data.html
+  - title: Updating payment data
+    link: docs/scos/dev/glue-api-guides/page.version/checking-out/updating-payment-data.html
 ---
 
 The Checkout API provides endpoints for placing, updating and retrieving checkout information.

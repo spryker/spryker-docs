@@ -17,6 +17,10 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/product-feature-walkthrough.html
   - title: Prices feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/prices-feature-walkthrough/prices-feature-walkthrough.html
+  - title: Retrieving abstract product prices
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-prices.html
+  - title: Retrieving concrete product prices
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-product-prices.html
 ---
 
 This document describes how to install the Prices feature API.

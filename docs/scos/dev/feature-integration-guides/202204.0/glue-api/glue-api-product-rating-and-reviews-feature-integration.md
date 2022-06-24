@@ -18,6 +18,10 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/product-rating-and-reviews-feature-integration.html
   - title: Product Rating and Reviews feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-rating-reviews-feature-walkthrough.html
+  - title: Retrieving abstract products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-products.html
+  - title: Retrieving concrete products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-products.html
 ---
 
 ## Install feature API

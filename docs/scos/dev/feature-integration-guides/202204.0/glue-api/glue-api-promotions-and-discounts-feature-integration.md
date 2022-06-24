@@ -22,6 +22,8 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
   - title: Managing carts of registered users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
+  - title: Retrieving promotional items
+    link: docs/scos/dev/glue-api-guides/page.version/retrieving-promotional-items.html
 ---
 
 Follow the steps below to install Promotions & Discounts feature API.

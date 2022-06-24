@@ -1,5 +1,5 @@
 ---
-title: Custom Twig Functions for Zed
+title: Custom Twig functions for Zed
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/custom-twig-functions-for-zed

@@ -17,8 +17,10 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/shopping-lists-feature-integration.html
   - title: Shopping Lists feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/shopping-lists-feature-walkthrough.html
-  - title: Managing Shopping Lists
+  - title: Managing shopping lists
     link: docs/scos/dev/glue-api-guides/page.version/managing-shopping-lists/managing-shopping-lists.html
+  - title: Managing shopping list items
+    link: docs/scos/dev/glue-api-guides/page.version/managing-shopping-lists/managing-shopping-list-items.html
 ---
 
 {% info_block infoBox "Included features" %}

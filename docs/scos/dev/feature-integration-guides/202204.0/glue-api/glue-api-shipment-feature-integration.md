@@ -19,6 +19,8 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/shipment-feature-walkthrough.html
   - title: Checking out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
+  - title: Retrieving orders
+    link: docs/scos/dev/glue-api-guides/page.version/retrieving-orders.html
 ---
 
 This document describes how to integrate the Shipment feature API into a Spryker project.

@@ -17,6 +17,8 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/payments-feature-walkthrough.html
   - title: Checking out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
+  - title: Updating payment data
+    link: docs/scos/dev/glue-api-guides/page.version/checking-out/updating-payment-data.html
 ---
 
 {% info_block errorBox %}

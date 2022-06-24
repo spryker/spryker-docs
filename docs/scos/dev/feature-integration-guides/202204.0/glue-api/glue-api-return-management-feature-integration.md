@@ -15,6 +15,10 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/return-management-feature-integration.html
   - title: Return Management feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/return-management-feature-walkthrough.html
+  - title: Managing the returns
+    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/managing-the-returns.html
+  - title: Retrieving return reasons
+    link: docs/scos/dev/glue-api-guides/page.version/managing-returns/retrieving-return-reasons.html
 ---
 
 ## Install feature API

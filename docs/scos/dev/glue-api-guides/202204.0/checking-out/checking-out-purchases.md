@@ -15,9 +15,13 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-checkout-feature-integration.html
   - title: Checkout
     link: docs/scos/user/features/page.version/checkout-feature-overview/checkout-feature-overview.html
-  - title: Multi-Step Checkout
+  - title: Multi-step Checkout
     link: docs/scos/user/features/page.version/checkout-feature-overview/multi-step-checkout-overview.html
-  - title: Retrieving Customer's Order History
+  - title: Submitting checkout data
+    link: docs/scos/dev/glue-api-guides/page.version/checking-out/submitting-checkout-data.html
+  - title: Updating payment data
+    link: docs/scos/dev/glue-api-guides/page.version/checking-out/updating-payment-data.html
+  - title: Retrieving customer orders
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
   - title: Managing guest carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html

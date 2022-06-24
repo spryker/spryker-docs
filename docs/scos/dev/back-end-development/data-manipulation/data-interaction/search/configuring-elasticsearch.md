@@ -73,11 +73,11 @@ Each configured store has its index installed automatically. The name of the ind
 * The store name.
 * Configuration file name. 
 
-Index name components are delimited with underscore. For example, `spryker_de_page`.
+Index name components are delimited with an underscore. For example, `spryker_de_page`.
 
 ## Adjusting existing indexes
 
-Below is an example of how the default schema configuration file for the main index `page` can be changed to allow searching for keywords containing special character `&` (ampersand) by switching from [`standard`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-standard-tokenizer.html) tokenizer to a combination of [`keyword`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-keyword-tokenizer.html) tokenizer and a token filter of [`word_delimiter_graph`](https://www.elastic.co/guide/en/elasticsearch/reference/8.2/analysis-word-delimiter-graph-tokenfilter.html) type.      
+Below is an example of how the default schema configuration file for the main index `page` can be changed to allow searching for keywords containing the special character `&` (ampersand) by switching from [`standard`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-standard-tokenizer.html) tokenizer to a combination of [`keyword`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-keyword-tokenizer.html) tokenizer and a token filter of [`word_delimiter_graph`](https://www.elastic.co/guide/en/elasticsearch/reference/8.2/analysis-word-delimiter-graph-tokenfilter.html) type.      
 
 **src/Pyz/Shared/Search/Schema/page.json**
 

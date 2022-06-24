@@ -50,7 +50,7 @@ class RelationNewDataProvider implements ProductRelationDataProviderInterface
      */
     public function buildTemplateData(array $parameters)
     {
-       //read data from Yves data store, return data for view to render.
+       //read data from Yves data store, return data for the view to render.
     }      
 
     /**

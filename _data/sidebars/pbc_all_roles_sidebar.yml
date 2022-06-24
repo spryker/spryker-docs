@@ -7,7 +7,7 @@ entries:
           - title: Unzer
             url: /docs/pbc/all/payment/unzer/unzer.html
             nested:
-              - title: What's changed in Unzer
+              - title: What's changed
                 url: /docs/pbc/all/payment/unzer/whats-changed-in-unzer.html
               - title: Install Unzer
                 nested:

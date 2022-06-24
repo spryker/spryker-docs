@@ -127,7 +127,7 @@ Below is an example of how the default schema configuration file for the main in
 }
 ```
 
-See section **Installing Indexes and Mappings** below for details on how to apply changes made to schema configuration files.
+See section **Installing Indexes and Mappings** below for details on applying changes made to schema configuration files.
 
 ## Defining New Indexes and Mappings
 You can define new indexes and mappings by creating new configuration files under the `Shared` namespace of any module.
@@ -151,8 +151,8 @@ The first command will install indexes which are not yet created and [update the
 
 Note that if an index is created with the given settings, it won’t be changed by running this process, but the mapping can be modified and will be changed.
 
-In the development environment, if you need to create new analyzers or change the index settings, you need to delete the index first and run the install process again.
-To populate the newly created index with data, run `publish:trigger-events` in console:
+In the development environment, if you need to create new analyzers or change the index settings, you must delete the index first and run the installation process again.
+To populate the newly created index with data, run `publish:trigger-events` in the console:
 ```php
 vendor/bin/console publish:trigger-events
 ```

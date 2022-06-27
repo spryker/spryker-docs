@@ -27,6 +27,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-filter:before {
+  content: "\e91b";
+}
 .icon-thumb-down:before {
   content: "\e919";
 }

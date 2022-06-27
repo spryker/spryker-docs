@@ -1,0 +1,271 @@
+.search-nav {
+    margin: 0 0 15px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    z-index: 3;
+
+    @include media("<tablet") {
+        margin: 0;
+        border-bottom: 1px solid $grey-3;
+    }
+
+    &.show {
+        .main-nav__opener-label {
+            opacity: 0;
+        }
+    }
+
+    &__opener {
+        display: flex;
+        align-items: center;
+        color: $darkest;
+        background: $header-bg-color;
+        border: 2px solid $grey-lighten;
+        font-size: 10px;
+        line-height: 1.4;
+        font-weight: 800;
+        padding: 0 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        height: 50px;
+        width: 300px;
+        position: relative;
+        z-index: 2;
+        transition: background .2s linear, border-radius .2s linear, border-color .2s linear;
+
+        @include media("<desktop") {
+            width: 270px;
+        }
+
+        @include media("<tablet") {
+            background: none;
+            border: 0;
+            pointer-events: none;
+            color: $black;
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 1.4;
+            margin: 0;
+            padding: 16px;
+            text-transform: none;
+            width: auto;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: none;
+            color: $darkest;
+        }
+
+        &--grey {
+            border-color: $grey-lightest;
+            background: $grey-lightest;
+            font-size: 10px;
+            text-transform: uppercase;
+
+            @include media("<tablet") {
+                background: none;
+                border: 0;
+                font-size: 20px;
+                text-transform: none;
+            }
+
+            .main-nav__opener-label {
+                display: none;
+            }
+            .main-nav-opener-icon {
+                color: $grey-4;
+            }
+        }
+
+        &-text {
+            flex: 1 1 auto;
+            display: block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        &-icon {
+            color: $darkest;
+            flex: 0 0 auto;
+            margin: 0 0 0 10px;
+            font-size: 10px;
+
+            @include media("<tablet") {
+                display: none;
+            }
+        }
+    }
+
+    &__drop {
+        margin: 0;
+        padding: 50px 0 0;
+        font-size: 12px;
+        line-height: 16px;
+        font-weight: 600;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: $white;
+        border-radius: 4px;
+        box-shadow: 0px 1px 0px 0px rgba($black, 0.03),
+        0px 3px 8px 0px rgba($black, 0.08),
+        0px 20px 40px 0px rgba($black, 0.08);
+        overflow: hidden;
+        display: none;
+
+        @include media("<tablet") {
+            position: static;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 0;
+            border-radius: 0;
+            font-size: 16px;
+            line-height: 28px;
+            font-weight: 500;
+        }
+
+        &-scroll {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            @include media(">=desktop") {
+                overflow-x: auto;
+                max-height: 256px;
+    
+                &::-webkit-scrollbar {
+                    width: 10px;
+                }
+    
+                &::-webkit-scrollbar-track {
+                    background-color: $grey-lightest;
+                    border-radius: 2px;
+                }
+    
+                &::-webkit-scrollbar-thumb {
+                    border-radius: 4px;
+                    background: $grey;
+                    border: 2px solid transparent;
+                    background-clip: content-box;
+                }
+    
+                scrollbar-color: $grey $grey-lightest;
+                scrollbar-width: thin;
+            }
+        }
+
+        /*a {
+            &:hover,
+            &:active,
+            &:focus {
+                text-decoration: none;
+                color: $darkest;
+            }
+
+            &:focus {
+                text-decoration: none;
+                outline-color: $red;
+            }
+        }*/
+
+        &-link {
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 18px 20px 18px 12px;
+            font-size: 12px;
+            line-height: 16px;
+            color: $dark;
+            transition: background .2s linear, color .2s linear;
+            border-top: 1px solid rgba($white, 0.1);
+            text-decoration: none;
+
+            &:after {
+                content: none !important;
+            }
+
+            &:hover {
+                @include hover {
+                    background: $grey-lightest;
+                    text-decoration: none;
+                    -webkit-text-stroke: .5px currentColor;
+                }
+            }
+
+            &--active {
+                color: $white;
+                background: $darkest;
+
+                &:hover {
+                    @include hover {
+                        color: $white;
+                        background: $grey-dark;
+                        -webkit-text-stroke: 0;
+                    }
+                }
+            }
+
+            &-text {
+                flex: 1 1 auto;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+
+            &-icon {
+                flex: 0 0 auto;
+                font-size: 14px;
+                color: $white;
+                margin: 0 0 0 12px;
+            }
+
+            &-title {
+                margin: 0 0 5px;
+                display: flex;
+                align-items: center;
+                font-weight: 800;
+
+                @include media("<tablet") {
+                    padding-left: 50px;
+                    margin: 0;
+                }
+
+                [class*="icon-"] {
+                    color: $red;
+                    margin: 0 10px 0 0;
+                    font-size: 22px;
+                    line-height: 1;
+                    display: block;
+
+                    @include media("<tablet") {
+                        flex: none;
+                        font-size: 36px;
+                        position: absolute;
+                        top: 50%;
+                        margin: -18px 0 0;
+                        left: 17px;
+                    }
+                }
+            }
+
+            &-subtitle {
+                display: block;
+
+                @include media("<tablet") {
+                    padding: 0 0 0 50px;
+                }
+            }
+        }
+
+        &--mob-static {
+            @include media("<tablet") {
+                display: block;
+            }
+        }
+    }
+}

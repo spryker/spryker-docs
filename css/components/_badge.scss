@@ -14,11 +14,23 @@
         display: none;
     }
 
+    &--small {
+        font-size: 12px;
+        border-radius: 4px;
+        padding: 3px 8px;
+    }
+
     &--grey {
         background: $grey;
     }
 
     &--red {
         background: $red;
+    }
+
+    &--light {
+        background: $white;
+        color: $grey;
+        border: 1px solid $silver;
     }
 }

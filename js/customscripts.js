@@ -197,6 +197,13 @@ function initSetPageOffset() {
 }
 
 function initPopup() {
+    $('.filter').popup({
+        animSpeed: 300,
+        box: '.filter-popup',
+        opener: '.js-filter-popup-toggle',
+        preventScroll: true,
+    });
+
     $('.main-header').popup({
         animSpeed: 300,
         box: '.nav-popup',

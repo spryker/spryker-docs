@@ -61,13 +61,18 @@ const AlgoliaSearch = {
                 );
             }
 
-            // tags refinement list
-            searchIndex.addWidget(
-                instantsearch.widgets.refinementList({
-                    container: '#tags-refinement-list',
+            // Create the custom tag widget
+            const customRefinementList = instantsearch.connectors.connectRefinementList(
+                renderRefinementList
+            );
+
+            // Instantiate the custom tag widget
+            searchIndex.addWidgets([
+                customRefinementList({
+                    container: document.querySelector('#tags-refinement-list-custom'),
                     attribute: 'tags',
                 })
-            );
+            ]);
 
             // versions refinement list
             searchIndex.addWidget(
@@ -105,6 +110,7 @@ const AlgoliaSearch = {
                             let title = typeof item._highlightResult.title !== 'undefined'
                                 ? item._highlightResult.title.value
                                 : item.title;
+                            console.log(item);
 
                             if (typeof title === 'undefined') {
                                 title = item.slug;
@@ -281,3 +287,74 @@ const AlgoliaSearch = {
         return $container;
     }
 }
+
+// 1. Create a render function
+const renderRefinementList = (renderOptions, isFirstRender) => {
+  const {
+    items,
+    isFromSearch,
+    refine,
+    createURL,
+    isShowingMore,
+    canToggleShowMore,
+    searchForItems,
+    toggleShowMore,
+    widgetParams,
+  } = renderOptions;
+
+  if (isFirstRender) {
+  //   input.addEventListener('input', event => {
+  //     searchForItems(event.currentTarget.value);
+  //   });
+  }
+
+  // const input = widgetParams.container.querySelector('input');
+
+  // if (!isFromSearch && input.value) {
+  //   input.value = '';
+  // }
+
+  // ${item.count}
+
+  widgetParams.container.querySelector('.js-search-nav__drop-list').innerHTML = items
+    .map(
+      item => `
+        <li class="search-nav__drop-item">
+          <a
+            href="${createURL(item.value)}"
+            data-value="${item.value}"
+            style="font-weight: ${item.isRefined ? 'bold' : ''}"
+            class="${item.isRefined ? 'search-nav__drop-link--active' : ''} search-nav__drop-link"
+          >
+          <span class="search-nav__drop-link-text">${item.label}</span>
+            <i class="icon-check search-nav__drop-link-icon"></i>
+          </a>
+        </li>
+      `
+    )
+    .join('');
+
+  document.querySelector('.filter__list').innerHTML = items
+    .map(
+      item => `
+        <a
+          href="${createURL(item.value)}"
+          data-value="${item.value}"
+          class="filter__list-item ${item.isRefined ? '' : 'hidden'}"
+        >
+          <div class="filter__list-item-text">
+            ${item.label}
+          </div>
+          <i class="filter__list-item-icon icon-cross"></i>
+        </a>
+      `
+    )
+    .join('');
+
+  [...widgetParams.container.querySelectorAll('a')].forEach(element => {
+    element.addEventListener('click', event => {
+      event.preventDefault();
+      refine(event.currentTarget.dataset.value);
+    });
+  });
+};

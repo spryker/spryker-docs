@@ -1,4 +1,9 @@
 .tabs {
+    &__content {
+        background: $grey-lightest;
+        padding: 20px;
+    }
+
     &__list {
         margin: 0 0 20px;
         padding: 0;

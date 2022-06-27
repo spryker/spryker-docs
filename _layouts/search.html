@@ -4,12 +4,52 @@ layout: default
 
 <div class="page-content page-content--search">
     <div class="container" id="tg-sb-content">
-        <div id="tags-refinement-list"></div>
+        <!-- todo: remove default versions -->
         <div id="versions-refinement-list"></div>
+        <!-- search panel  -->
         <div class="search-panel">
             <i class="search-panel__icon icon-search"></i>
             <div id="searchbox" class="ais-SearchBox"></div>
         </div>
+
+        <!-- custom tags -->
+        <div class="filter">
+            <a href="#" class="filter-popup-opener js-filter-popup-toggle"><i class="icon-filter"></i> Filter</a>
+
+            <div class="filter-popup">
+                <div class="filter-popup__inner">
+                    <div class="filter-popup__header">
+                        <a href="#" class="filter-popup-close expanded js-filter-popup-toggle" aria-label="filter popup opener">
+                            <span class="filter-popup-close__top"></span>
+                            <span class="filter-popup-close__center"></span>
+                            <span class="filter-popup-close__bottom"></span>
+                        </a>
+                    </div>
+                    <div class="filter-popup__content">
+                        <div id="tags-refinement-list-custom">
+                            <div class="search-nav dropdown">
+                                <a href="/" class="search-nav__opener nav-link dropdown-toggle" id="searchTags" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="search-nav__opener-text">
+                                        tags
+                                    </span>
+                                    <i class="search-nav__opener-icon icon-arrow-down"></i>
+                                </a>
+                                <div class="search-nav__drop search-nav__drop--mob-static dropdown-menu" aria-labelledby="searchTags">
+                                    <ul  class="search-nav__drop-scroll js-search-nav__drop-list">
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-popup__footer"></div>
+                </div>
+            </div>
+
+            <!-- selected tags -->
+            <div class="filter__list"></div>
+        </div>
+
+        <!-- tabs -->
         <div id="search-tabs" class="tabs"></div>
     </div>
 </div>

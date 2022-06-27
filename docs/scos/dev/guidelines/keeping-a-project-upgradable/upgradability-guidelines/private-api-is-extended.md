@@ -144,3 +144,29 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
     }
 }
 ```
+
+### Example of code that causes an upgradability error: Extending a private API Bridge
+
+```php
+namespace Pyz\Zed\PriceProduct\Dependency\Facade;
+
+use Spryker\Zed\PriceProduct\Dependency\Facade\PriceProductToProductFacadeBridge as SprykerPriceProductToProductFacadeBridge;
+
+class PriceProductToProductFacadeBridge extends SprykerPriceProductToProductFacadeBridge implements PriceProductToProductFacadeInterface
+{
+    ...
+}
+```
+
+### Related error in the Evaluator output: Extending a private API Bridge
+
+
+```bash
+------------------------------------------------------------------------------------
+Please avoid extension of the PrivateApi Spryker\Zed\PriceProduct\Dependency\Facade\PriceProductToProductFacadeBridge in Pyz\Zed\PriceProduct\Dependency\Facade\PriceProductToProductFacadeBridge
+------------------------------------------------------------------------------------
+```
+
+### Example of resolving the error: Extending a private API Bridge
+Remove the Bridge.
+

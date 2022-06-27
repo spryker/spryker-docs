@@ -28,26 +28,26 @@ In the course of development of your REST APIs, you may need to change the data 
 
 {% info_block infoBox %}
 
-Resources provided by Spryker out of the box do not have a version. When developing resources, only new resources, attributes etc are added without removing anything, which ensures backward compatibility for all clients. 
-If necessary, you can implement versioning for built-in resources as well by [extending](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html) the corresponding resource module on your project level.
+Resources that are provided by Spryker out of the box do not have a version. When developing resources, only new resources or attributes are added without removing anything, which ensures backward compatibility for all clients. 
+If necessary, you can implement versioning for built-in resources as well as [extend](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html) the corresponding resource module on your project level.
 
 {% endinfo_block %}
 
-To implement versioning for a REST API resource, you need to do the following:
+To implement versioning for a REST API resource, follow these steps:
 
-## 1. Implement ResourceVersionableInterface
+## 1. Implement `ResourceVersionableInterface`
 
-To add versioning to a resource, the route plugin of the resource module needs to implement not only `ResourceRoutePluginInterface`, but also `\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceVersionableInterface`. The latter exposes a method called `getVersion` that allows you to set the resource version.
+To add versioning to a resource, the route plugin of the `resource` module needs to implement not only `ResourceRoutePluginInterface`, but also `\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceVersionableInterface`. The latter exposes a method called `getVersion` that lets you set the resource version.
 
 {% info_block warningBox %}
 
-For more information on route plugins, see the [Resource Routing](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-infrastructure.html#resource-routing) section in **Glue Infrastructure**.
+For more information on route plugins, see the [Resource routing](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-infrastructure.html#resource-routing) section in *Glue Infrastructure*.
 
 {% endinfo_block %}
 
-Let us consider the following implementation of a route plugin:
+Consider the following implementation of a route plugin:
 
-**CustomerRestorePasswordResourceRoutePlugin.php**
+<details><summary markdown='span'>CustomerRestorePasswordResourceRoutePlugin.php</summary>
 
 ```php
 <?php
@@ -99,7 +99,9 @@ class CustomerRestorePasswordResourceRoutePlugin extends AbstractPlugin implemen
 }
 ```
 
-As you can see, the `CustomerRestorePasswordResourceRoutePlugin` class implements both the `ResourceRoutePluginInterface` and `ResourceVersionableInterface` interfaces. The resource supports only one HTTP verb: PATCH. Also, the `getVersion` function sets version 2.0 for the resource:
+</details>
+
+As you can see, the `CustomerRestorePasswordResourceRoutePlugin` class implements both the `ResourceRoutePluginInterface` and `ResourceVersionableInterface` interfaces. The resource supports only one HTTP method: `PATCH`. Also, the `getVersion` function sets version 2.0 for the resource:
 
 **Code sample:**
 
@@ -118,13 +120,13 @@ class CustomerRestorePasswordResourceRoutePlugin extends AbstractPlugin implemen
 
 {% info_block errorBox %}
 
-It is important that you set both the major and the minor version of a resource, otherwise, requests to it will fail.
+Set both the major and the minor version of a resource; otherwise, requests to this resource fail.
 
 {% endinfo_block %}
 
 ## 2. Query specific resource version
 
-Now, that you've implemented a specific resource version, you can query the resource specifying the version you need. Let us send a PATCH request to the `/customer-restore-password` endpoint that now has version 2.0. The payload is as follows:
+After implementing a specific resource version, you can query the resource specifying the version you need. Send a `PATCH` request to the `/customer-restore-password` endpoint that now has version 2.0. The payload is as follows:
 
 **Code sample:**
 
@@ -138,29 +140,29 @@ Now, that you've implemented a specific resource version, you can query the reso
 }
 ```
 
-Also, let us specify the exact version we need. For this purpose, you need to specify the resource version in the HTTP header of your request:
+Also, to specify the exact version you need, specify the resource version in the HTTP header of your request:
 
 ```php
 Content-Type: application/vnd.api+json; version=2.0
 ```
 
-In the example above, version 2.0 is specified. If you repeat the request with such headers, you will receive a valid response with resource version 2.0. However, if you specify a non-existent version, for example, 3.0, the request will fail.
+In the preceding example, version 2.0 is specified. If you repeat the request with such headers, you receive a valid response with resource version 2.0. However, if you specify a non-existent version, for example, 3.0, the request fail.
 
 ```php
 Content-Type: application/vnd.api+json; version=3.0
 ```
 
-In this case, the endpoint will respond with the **404 Not Found** error.
+In this case, the endpoint responds with the `404 Not Found` error.
 
 {% info_block infoBox %}
 
-If a version is not specified, the latest available version will be returned.
+If a version is not specified, the latest available version is returned.
 
 {% endinfo_block %}
 
 ## 3. Add more versions
 
-Now, if you want to implement a new version, you can create a new route plugin in your module. For example, to support version **3.0**, you can use the following code in your plugin:
+To implement a new version, you can create a new route plugin in your module. For example, to support version 3.0, you can use the following code in your plugin:
 
 **Code sample:**
 
@@ -177,7 +179,7 @@ class CustomerRestorePasswordResourceRouteVersion3Plugin extends AbstractPlugin 
 }
 ```
 
-In the new plugin, you can configure routing differently. For example, you can use a different controller class, use a different transfer for the resource attributes etc, for example:
+In the new plugin, you can configure routing differently. You can use a different controller class or use a different transfer for the resource attributes—for example:
 
 **Code sample:**
 
@@ -190,7 +192,7 @@ public function getResourceAttributesClassName(): string
 ...
 ```
 
-After implementing the plugin and the required functionality, you need to register the new plugin in `Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider`:
+After implementing the plugin and the required functionality, you register the new plugin in `Pyz\Glue\GlueApplication\GlueApplicationDependencyProvider`:
 
 **Code sample:**
 

@@ -22,11 +22,11 @@ Review the reference information before you start, or look up the necessary info
    6. Enter **UNZER PRIVATE KEY**.
    7. Select **STORE RELATIONS**.
 
-     {% info_block infoBox "Info" %}
+      {% info_block infoBox "Note" %}
 
       Select only unused store relations. Otherwise, when you complete adding your credentials, an error message is thrown.
 
-     {% endinfo_block %}
+      {% endinfo_block %}
 
    8. Click **Save**. The new credentials appear on the **Overview of Unzer Credentials** page.
 

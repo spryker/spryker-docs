@@ -4,4 +4,4 @@ description: Welcome to the PBC page
 template: concept-topic-template
 ---
 
-This is a draft version of the PBC section.
+This is a beta version of the PBC section.

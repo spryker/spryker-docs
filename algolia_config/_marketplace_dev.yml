@@ -12,3 +12,4 @@ algolia:
     - docs/pbc/all-roles/**/*.md
     - docs/fes/dev/**/*.md
     - docs/acp/user/**/*.md
+    - docs/sdk/dev/**/*.md

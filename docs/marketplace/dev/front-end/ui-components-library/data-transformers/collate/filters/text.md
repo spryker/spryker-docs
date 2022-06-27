@@ -35,6 +35,12 @@ Check out an example usage of the Data Transformer Collate Filter Text in the `@
 Register the service:
 
 ```ts
+declare module '@spryker/data-transformer.collate' {
+    interface DataTransformerFilterRegistry {
+        text: TextDataTransformerFilterService;
+    }
+}
+
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
@@ -53,12 +59,6 @@ export class RootModule {}
 Below you can find interfaces for the Data Transformer Collate Filter Text:
 
 ```ts
-declare module '@spryker/data-transformer.collate' {
-    interface DataTransformerFilterRegistry {
-        text: TextDataTransformerFilterService;
-    }
-}
-
 interface DataTransformerFilterConfig {
     type: string;
     propNames: string | string[];

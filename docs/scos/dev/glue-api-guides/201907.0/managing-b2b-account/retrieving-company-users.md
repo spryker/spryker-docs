@@ -37,7 +37,7 @@ To retrieve a list of all the Company Users that belong to the company of the lo
 
 [/company-users](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/company-users)
 
-Sample request: *GET http://glue.mysprykershop.com/company-users*
+Request sample: *GET http://glue.mysprykershop.com/company-users*
 
 {% info_block warningBox "Authentication Required" %}
 To get a list of Company Users, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
@@ -120,7 +120,7 @@ To retrieve a list of the Company Users that the currently logged in user can im
 
 [/company-users/mine](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#company-users)
 
-Sample request: *GET http://glue.mysprykershop.com/company-users/mine*
+Request sample: *GET http://glue.mysprykershop.com/company-users/mine*
 
 {% info_block warningBox "Authentication Required" %}
 To get a list of Company Users, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
@@ -201,7 +201,7 @@ To retrieve information on a specific Company User, send a GET request to the fo
 
 [/company-users/{% raw %}{{{% endraw %}company_user_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html)
 
-Sample request: *GET http://glue.mysprykershop.com/company-users/e1019900-88c4-5582-af83-2c1ea8775ac5*
+Request sample: *GET http://glue.mysprykershop.com/company-users/e1019900-88c4-5582-af83-2c1ea8775ac5*
 
 {% info_block warningBox "Authentication Required" %}
 To get information on a Company User, you need to authenticate first and pass an access token as a part of your request. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
@@ -248,7 +248,7 @@ If the currently logged in user does not have access to the specified Company Us
 ## Fetching Additional Information
 To help customers understand which of the Company User Accounts they need, you can provide additional information, such as the company and business unit that each account belongs to. Also, you can identify which roles the corporate accounts can perform within the company. To fetch such information, extend the response of the endpoint with the companies and company-business-units, and company-roles resource relationships.
 
-Sample request: *GET http://glue.mysprykershop.com/company-users/mine?**include=companies,company-business-units,company-roles***
+Request sample: *GET http://glue.mysprykershop.com/company-users/mine?**include=companies,company-business-units,company-roles***
 
 In this case, the following additional attributes will be added to the response:
 

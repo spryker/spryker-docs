@@ -106,7 +106,6 @@ Set up synchronization queue pools so that non-multistore entities (not store sp
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -143,6 +142,7 @@ Make sure that propel entities have been generated successfully by checking thei
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
+
 Make sure that the following changes have been implemented in transfer objects:
 
 | TRANSFER | TYPE | EVENT | PATH |

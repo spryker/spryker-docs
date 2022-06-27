@@ -12,7 +12,7 @@ related:
   - title: Volume Prices Feature Overview
     link: docs/scos/user/features/page.version/prices-feature-overview/volume-prices-overview.html
   - title: Adding Volume Prices
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
 ---
 
 ## Install Feature Core
@@ -273,7 +273,7 @@ console data:import glossary
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that in the database the configured data has been added to the `spy_glossary` table.
+Make sure that in the database the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 {% endinfo_block %}
 
 ### 2) Set up Widgets

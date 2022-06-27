@@ -29,7 +29,7 @@ For detailed information on the modules that provide the API functionality and r
 ## Creating Registered User Cart
 To create a guest cart for a registered user, send a POST request to the following endpoint:
 `/carts`
-Sample request: `POST http://mysprykershop.com/carts`
+Request sample: `POST http://mysprykershop.com/carts`
 
 {% info_block infoBox %}
 Apart from creating a new cart, you can also convert a cart of a guest customer to a cart of a registered user when a guest user registers or authenticates. For details, see section **Assigning Guest Cart to Registered Customer** in Managing Guest Carts.
@@ -156,10 +156,10 @@ If a request was successful and a cart was created, the endpoint responds with a
 ## Retrieving Carts of Registered Users
 To access all carts that a regular user has, send a GET request to the following endpoint:
 `/carts`
-Sample request: `GET http://mysprykershop.com/carts`
+Request sample: `GET http://mysprykershop.com/carts`
 To get a specific cart by ID, use the following endpoint:
 `/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}`
-Sample request: `GET http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054`
+Request sample: `GET http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054`
 where `4741fc84-2b9b-59da-bb8d-f4afab5be054` is the ID of the cart you need.
 
 {% info_block errorBox %}
@@ -217,7 +217,7 @@ Sample response for a user that doesn't have any carts:
 ## Adding Items to Carts of Registered Users
 To add items to a cart, send a POST request to the following endpoint:
 `/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items`
-Sample request: `POST http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items`
+Request sample: `POST http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items`
 where `4741fc84-2b9b-59da-bb8d-f4afab5be054` is the ID of the cart you need.
 
 {% info_block errorBox %}
@@ -257,7 +257,7 @@ In case of a successful update, the endpoint will also respond with a **RestCart
 ## Removing Items from Guest Carts
 To remove an item from a cart, send a DELETE request to the following endpoint:
 `/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}`
-Sample request: `DELETE http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items/177_25913296`
+Request sample: `DELETE http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items/177_25913296`
 where `4741fc84-2b9b-59da-bb8d-f4afab5be054` is the ID of the cart you need and `177_25913296` is the SKU of the concrete product you want to remove.
 
 {% info_block errorBox %}
@@ -277,7 +277,7 @@ If the item was deleted successfully, the endpoint will respond with a **204 No 
 ## Changing Item Quantity in Registered User's Cart
 To change the quantity of certain items in a cart, use the following endpoint with the PATCH method:
 `/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}/items/{% raw %}{{{% endraw %}concrete_product_sku{% raw %}}}{% endraw %}`
-Sample request: `PATCH http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items/177_25913296`
+Request sample: `PATCH http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054/items/177_25913296`
 where `4741fc84-2b9b-59da-bb8d-f4afab5be054` is the ID of the cart you need and `177_25913296` is the SKU of the concrete product for which to change the quantity.
 
 {% info_block errorBox %}
@@ -318,7 +318,7 @@ In case of a successful update, the endpoint will also respond with a **RestCart
 ## Deleting Registered User's Cart
 To delete a cart of a registered user, send a DELETE request to the following endpoint:
 `/carts/{% raw %}{{{% endraw %}cartId{% raw %}}}{% endraw %}`
-Sample request: `DELETE http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054`
+Request sample: `DELETE http://mysprykershop.com/carts/4741fc84-2b9b-59da-bb8d-f4afab5be054`
 where `4741fc84-2b9b-59da-bb8d-f4afab5be054` is the ID of the cart you want to delete.
 
 ### Response

@@ -24,12 +24,15 @@ redirect_from:
 
 ## Upgrading from version 1.* to version 2.0.0
 
-In this new version of the **StockGui** module, we have added support of the warehouse per store. You can find more details about the changes on the [StockGui module](https://github.com/spryker/stock-gui/releases) release page.
+In this new version of the `StockGui` module, we have added support of the warehouse per store. You can find more details about the changes on the [StockGui module](https://github.com/spryker/stock-gui/releases) release page.
 
-**To upgrade to the new version of the module, do the following:**
+*Estimated migration time: 5 min*
+
+To upgrade to the new version of the module, do the following:
 
 1. Follow the steps in the individual migration guide for the **Stock** module. For more information, see [Migration Guide - Stock](/docs/scos/dev/module-migration-guides/migration-guide-stock.html#upgrading-from-version-7-to-version-800).
-2. Upgrade the **StockGui** module to the new version:
+
+2. Upgrade the `StockGui` module to the new version:
 
 ```bash
 composer require spryker/stock-gui:"^2.0.0" --update-with-dependencies
@@ -70,4 +73,3 @@ class StockGuiDependencyProvider extends SprykerStockGuiDependencyProvider
 }
 ```
 
-*Estimated migration time: 5 min*

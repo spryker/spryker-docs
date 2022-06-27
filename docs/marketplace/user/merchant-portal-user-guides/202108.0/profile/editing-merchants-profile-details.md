@@ -1,17 +1,17 @@
 ---
 title: Editing merchant's profile details
 last_updated: Jul 24, 2020
-description: This topic describes how to edit merchant's profile details in the Merchant Portal.
+description: This document describes how to edit merchant's profile details in the Merchant Portal.
 template: back-office-user-guide-template
 ---
 
-This topic describes how to edit merchant's profile details in the Merchant Portal.
+This document describes how to edit merchant's profile details in the Merchant Portal.
 
 ## Prerequisites
 
-To start managing a merchant profile, navigate to the **Merchant Portal** > **Profile**.
+To start managing a merchant profile, navigate to the **Merchant Portal&nbsp;<span aria-label="and then">></span> Profile**.
 
-This section allows [merchant users](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) to check and update the merchant profile information.
+This section lets [merchant users](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) check and update the merchant profile information.
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
@@ -20,15 +20,15 @@ Each section contains reference information. Make sure to review it before you s
 
 {% info_block infoBox "Info" %}
 
-The merchant's *Business Info* includes the details on contact person and general merchant company information.
+The merchant's **Business Info** includes the details about contact person and general merchant company information.
 
 {% endinfo_block %}
 
-To edit the merchant's business info, in the *Business Info* tab, edit the merchant details and click **Save**.
+To edit the merchant's business info, on the **Business Info** tab, edit the merchant details and click **Save**.
 
 ### Reference information: Editing merchant's business info
 
-This section describes the attributes you enter and select when editing the merchant's business info in the *Business Info* tab. This tab includes business details that are not displayed in the Storefront. This information is needed for the initial merchant setup and further collaboration between the merchant and Marketplace administrator.
+This section describes the attributes you enter and select when editing the merchant's business info on the **Business Info** tab. This tab includes business details that are not displayed in the Storefront. This information is needed for the initial merchant setup and further collaboration between the merchant and Marketplace administrator.
 
 #### Contact Person Details section
 
@@ -37,7 +37,7 @@ The contact person is the only contact of the merchant with the Marketplace admi
 | ATTRIBUTE | DESCRIPTION | REQUIRED? |
 |-|-|-|
 | Role | Role in the company/organization the contact person performs. |   |
-| Title | Formal salutation for your contact person (e.g., Mr, Ms, Mrs, Dr).  |   |
+| Title | Formal salutation for your contact person (for example, Mr, Ms, Mrs, Dr).  |   |
 | First Name | First name of the contact person. The first name is taken from the [General tab of the Merchant Profile in the Back Office](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#general-tab) but can be edited in the Merchant Portal too. | &check; |
 | Last Name | Last name of the contact person. The last name is taken from the [General tab of the Merchant Profile in the Back Office](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#general-tab) but can be edited in the Merchant Portal too. | &check; |
 | Email | Email address of the contact person. This email is taken from the [General tab of the Merchant Profile in the Back Office](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchants.html#general-tab) but can be edited in the Merchant Portal too. | &check; |
@@ -45,7 +45,7 @@ The contact person is the only contact of the merchant with the Marketplace admi
 
 #### Company
 
-This section contains general information on the company the merchant has.
+This section contains general information about the company the merchant has.
 
 | ATTRIBUTE | DESCRIPTION | REQUIRED? |
 |-|-|-|
@@ -57,15 +57,15 @@ This section contains general information on the company the merchant has.
 
 {% info_block infoBox "Info" %}
 
-The *Online Profile* section allows managing the information displayed on the *Merchant Profile* page in the Storefront.
+The **Online Profile** section lets you manage information displayed on the **Merchant Profile** page in the Storefront.
 
 {% endinfo_block %}
 
-To edit the merchant's online profile, in the *Online Profile* tab, edit the necessary details and click **Save**.
+To edit the merchant's online profile, in the **Online Profile** tab, edit the necessary details and click **Save**.
 
 ### Reference information: Editing merchant's online profile
 
-This section describes attributes you see when editing he merchant's online profile in the *Online Profile* tab. This  tab contains the information that will further be displayed on the [Merchant Profile page on the Storefront](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile).
+This section describes attributes you see when editing the merchant's online profile on the **Online Profile** tab. This  tab contains the information displayed on the [Merchant Profile page on the Storefront](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-profile).
 
 #### Store Profile URL
 
@@ -116,8 +116,8 @@ This section describes attributes you see when editing he merchant's online prof
 
 | ATTRIBUTE | DESCRIPTION | REQUIRED? |
 |-|-|-|
-| Your Store is online | By selecting this option, you can define whether the merchant store (with the profile, merchant products and offers) should be displayed on the Marketplace Storefront. |   |
+| Your Store is online | By selecting this option, you can define whether the merchant store (with the profile, marketplace products and offers) should be displayed on the Marketplace Storefront. |   |
 
 ### What’s Next?
 
-Review the *My Offers* section to know more about product offers you can create.
+Review the **My Offers** section to know more about product offers you can create.

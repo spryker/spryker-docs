@@ -43,7 +43,7 @@ Follow the steps to install Spryker in Development mode:
 
     {% endinfo_block %}
 
-4. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops):
+4. Depending on the desired [Demo Shop](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops):
     * Clone the B2C repository:
 
     ```bash

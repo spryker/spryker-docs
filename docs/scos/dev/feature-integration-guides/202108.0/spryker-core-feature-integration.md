@@ -1,5 +1,5 @@
 ---
-title: Spryker Сore feature integration
+title: Spryker Core feature integration
 description: The procedure to integrate Spryker Core feature into your project.
 last_updated: Jun 17, 2021
 template: feature-integration-guide-template
@@ -335,7 +335,6 @@ $config[SecurityBlockerConstants::SECURITY_BLOCKER_AGENT_BLOCKING_NUMBER_OF_ATTE
 Run the following commands to apply database changes, generate entity, and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```

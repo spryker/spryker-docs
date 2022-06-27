@@ -34,7 +34,6 @@ Verify if the following modules were installed:
 #### Implementation
 Run the following commands to apply database changes and generate entity and transfer changes:
 ```yaml
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -140,7 +139,7 @@ console data:import glossary
 ```
 #### Verification
 
-Make sure that in the database the configured data are added to the `spy_glossary` table.
+Make sure that in the database the configured data are added to the `spy_glossary_key` and `spy_glossary_translation` tables.
 
 ### 2) Set up Behavior
 Enable the following behaviors by registering the plugins:

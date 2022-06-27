@@ -17,7 +17,7 @@ related:
 
 ## Prerequisites
 
-To view product barcodes, go to **Catalog > Product Barcodes**.
+To view product barcodes, go to **Catalog&nbsp;<span aria-label="and then">></span> Product Barcodes**.
 
 ## Viewing product barcodes
 
@@ -25,6 +25,6 @@ In this section, you can see Product ID, product name, SKU, and the barcode.
 
 {% info_block infoBox "Info" %}
 
-The section is designed as a reference. You cannot perform any actions. When you create a concrete product, a barcode is generated automatically. 
+The section is designed as a reference. You cannot perform any actions. When you create a concrete product, a barcode is generated automatically.
 
 {% endinfo_block %}

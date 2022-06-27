@@ -15,7 +15,7 @@ Follow the steps below to install the Merchant Category feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | LINK |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ----- | ---------- |
 | Spryker Core         | {{page.version}}      | [Spryker Core Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Marketplace Merchant | {{page.version}}      | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
@@ -25,7 +25,7 @@ To start feature integration, integrate the required features:
 Install the required modules:
 
 ```bash
-composer require spryker/merchant-category:"^0.2.0" spryker/merchant-category-data-import:"^0.2.0" spryker/merchant-category-search:"^0.1.0"  --update-with-dependencies
+composer require spryker-feature/merchant-category:"{{page.version}}"  --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -58,7 +58,6 @@ Adjust the schema definition so that entity changes trigger the events:
 Apply database changes and to generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -101,6 +100,7 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | -------------- | ----------- | ------ | ------------- |
+| CategoryWritePublisherPlugin |  |  | Spryker\Zed\MerchantCategory\Communication\Plugin\Publisher\Category |
 | MerchantCategoryMerchantExpanderPlugin | Expands MerchantTransfer with categories.  |   | Spryker\Zed\MerchantCategory\Communication\Plugin\Merchant |
 | MerchantCategoryMerchantSearchDataExpanderPlugin | Expands merchant search data with merchant category keys. |  | Spryker\Zed\MerchantCategorySearch\Communication\Plugin\MerchantSearch |
 | MerchantCategoryWritePublisherPlugin | Updates merchant categories in search based on category events. |  | Spryker\Zed\MerchantSearch\Communication\Plugin\Publisher\MerchantCategory |
@@ -119,7 +119,7 @@ use Spryker\Zed\MerchantCategory\Communication\Plugin\RemoveMerchantCategoryRela
 class CategoryDependencyProvider extends SprykerDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\Category\Dependency\Plugin\CategoryRelationDeletePluginInterface[]|\Spryker\Zed\CategoryExtension\Dependency\Plugin\CategoryRelationDeletePluginInterface[]
+     * @return array<\Spryker\Zed\Category\Dependency\Plugin\CategoryRelationDeletePluginInterface>|array<\Spryker\Zed\CategoryExtension\Dependency\Plugin\CategoryRelationDeletePluginInterface>
      */
     protected function getRelationDeletePluginStack(): array
     {
@@ -153,7 +153,7 @@ use Spryker\Zed\MerchantCategory\Communication\Plugin\Merchant\MerchantCategoryM
 class MerchantDependencyProvider extends SprykerMerchantDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\MerchantExtension\Dependency\Plugin\MerchantExpanderPluginInterface>
      */
     protected function getMerchantExpanderPlugins(): array
     {
@@ -183,7 +183,7 @@ use Spryker\Zed\MerchantSearch\MerchantSearchDependencyProvider as SprykerMercha
 class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\MerchantSearchExtension\Dependency\Plugin\MerchantSearchDataExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\MerchantSearchExtension\Dependency\Plugin\MerchantSearchDataExpanderPluginInterface>
      */
     protected function getMerchantSearchDataExpanderPlugins(): array
     {
@@ -238,7 +238,8 @@ Prepare your data according to your requirements using the following format:
 **data/import/common/common/marketplace/merchant_category.csv**
 
 ```yaml
-category_key,merchant_reference 2
+category_key,merchant_reference
+demoshop,MER000001
 ```
 
 | COLUMN | REQUIRED? | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
@@ -273,6 +274,26 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 }
 ```
 
+**data/import/local/full_EU.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-category
+    source: data/import/common/common/marketplace/merchant_category.csv
+```
+
+**data/import/local/full_US.yml**
+
+```yml
+version: 0
+
+actions:
+  - data_entity: merchant-category
+    source: data/import/common/common/marketplace/merchant_category.csv
+```
+
 Import data:
 
 ```bash
@@ -285,15 +306,15 @@ Make sure that the imported data is added to the `spy_merchant_category` table.
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
-Follow the steps below to install the Merchant Category feature front end.
+Follow the steps below to install the Merchant Category feature frontend.
 
 ### Prerequisites
 
 Integrate the required features before beginning the integration step.
 
-| NAME | VERSION | LINK |
+| NAME | VERSION | INTEGRATION GUIDE |
 | -------- | ------ | -------------- |
 | Spryker Core | {{page.version}}  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Merchant     | {{page.version}} | [[DEPRECATED\] Merchant Feature Integration](https://github.com/spryker-feature/merchant) |
@@ -319,7 +340,7 @@ use Spryker\Client\MerchantSearch\MerchantSearchDependencyProvider as SprykerMer
 class MerchantSearchDependencyProvider extends SprykerMerchantSearchDependencyProvider
 {
     /**
-     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface[]
+     * @return array<\Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface>
      */
     protected function getMerchantSearchQueryExpanderPlugins(): array
     {

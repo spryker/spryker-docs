@@ -41,7 +41,7 @@ use Spryker\Glue\MerchantProductsRestApi\Plugin\CartsRestApi\MerchantProductCart
 class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\CartItemExpanderPluginInterface[]
+     * @return array<\Spryker\Glue\CartsRestApiExtension\Dependency\Plugin\CartItemExpanderPluginInterface>
      */
     protected function getCartItemExpanderPlugins(): array
     {
@@ -56,6 +56,6 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 
 Make sure that you can add a merchant product to the cart using a `POST` request to `http://glue.de.demo-spryker.com/guest-cart-items or http://glue.de.demo-spryker.com/carts/{% raw %}{{idCart}}{% endraw %}/items`.
 
-Make sure that when you do a `GET` request for the carts with merchant products, their merchants are returned as well. `http://glue.de.demo-spryker.com/guest-carts/{idCart}?include=guest-cart-items,merchants` or `http://glue.de.demo-spryker.com/carts/{% raw %}{{idCart}}{% endraw %}?include=items,merchants`.
+Make sure that when you do a `GET` request for the carts with marketplace products, their merchants are returned as well. `http://glue.de.demo-spryker.com/guest-carts/{idCart}?include=guest-cart-items,merchants` or `http://glue.de.demo-spryker.com/carts/{% raw %}{{idCart}}{% endraw %}?include=items,merchants`.
 
 {% endinfo_block %}

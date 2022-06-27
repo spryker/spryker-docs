@@ -14,11 +14,11 @@ Check out an example usage of the Table Feature Title in the `@spryker/table` co
 
 Component configuration:
 
-- `enabled` - enables the feature via config.  
-- `title` - a table title text.  
+- `enabled`—enables the feature via config.  
+- `title`—a table title text.  
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         dataSource: { ... },
         columns: [ ... ],
@@ -36,7 +36,12 @@ Component configuration:
 Register the component:
 
 ```ts
-// Dynamic
+declare module '@spryker/table' {
+    interface TableConfig {
+        title?: TableTitleConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -71,12 +76,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Feature Title:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableConfig {
-        title?: TableTitleConfig;
-    }
-}
-
 export interface TableTitleConfig extends TableFeatureConfig {
     title?: string;
 }

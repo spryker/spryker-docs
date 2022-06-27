@@ -18,7 +18,7 @@ related:
     link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html
 ---
 
-This topic describes how to add content to Storefront pages using templates with slots. To start working with templates with slots, go to **Content Management** > **Slots**.
+This topic describes how to add content to Storefront pages using templates with slots. To start working with templates with slots, go to **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 
 Let’s say you have *Sticky Notes* and *Writing Materials* categories, and you want to cross-promote them. You set the following tasks:
 
@@ -87,7 +87,7 @@ See [Editing placeholders](/docs/scos/user/back-office-user-guides/{{page.versio
 [Template with slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) defines the layout of slots on the Storefront pages you add the CMS blocks to.
 
 Follow the steps to select a template with slots:
-1. Go to **Content Management** > **Slots**.
+1. Go to **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 2. In **List of Templates**, select the *Product* template with slots.
     This template with slots is assigned to all the product pages. By selecting it, you select to work with all the product pages at once.
 

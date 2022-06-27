@@ -8,7 +8,7 @@ This endpoint allows retrieving abstract products in [abstract product lists](/d
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html).
+For details about the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html).
 
 ## Retrieve abstract products in an abstract product list
 
@@ -33,8 +33,9 @@ Alternatively, you can [retrieve an abstract product list](/docs/scos/dev/glue-a
 
 ### Request
 
-Request sample: `GET http://mysprykershop.com/content-product-abstract-lists/apl-1/abstract-products`
+Request sample: retrieve abstract products in an abstract product list
 
+`GET http://mysprykershop.com/content-product-abstract-lists/apl-1/abstract-products`
 
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
@@ -46,7 +47,7 @@ Request sample: `GET http://mysprykershop.com/content-product-abstract-lists/apl
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve abstract products in an abstract product list</summary>
 
 ```json
 {

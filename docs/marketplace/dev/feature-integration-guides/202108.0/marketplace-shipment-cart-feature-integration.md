@@ -44,7 +44,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\CartExtension\Dependency\Plugin\ItemExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\ItemExpanderPluginInterface>
      */
     protected function getExpanderPlugins(Container $container): array
     {
@@ -73,7 +73,7 @@ use Spryker\Zed\Quote\QuoteDependencyProvider as SprykerQuoteDependencyProvider;
 class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\QuoteExtension\Dependency\Plugin\QuoteExpanderPluginInterface>
      */
     protected function getQuoteExpanderPlugins(): array
     {
@@ -85,6 +85,8 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 ```
 
 {% info_block warningBox "Verification" %}
+
+Make sure that `ShipmentService::groupItemsByShipment()` groups items by shipment using the merchant reference.
 
 Make sure that merchant sold items have a merchant reference attached to their selected shipment.
 

@@ -89,7 +89,6 @@ Make sure that the configuration returns the billing address and payment keys.
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -171,7 +170,7 @@ console data:import glossary
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the configured data has been added to the `spy_glossary` table in the database.
+Make sure that the configured data has been added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
 {% endinfo_block %}
 
 ### 4) Set up behavior
@@ -191,7 +190,7 @@ Register the following plugins:
 
 **src/Pyz/Client/Permission/PermissionDependencyProvider.php**
  
- ```php
+```php
 <?php
  
 namespace Pyz\Client\Permission;
@@ -219,7 +218,7 @@ class PermissionDependencyProvider extends SprykerPermissionDependencyProvider
 
 **src/Pyz/Zed/Permission/PermissionDependencyProvider.php**
 
- ```php
+```php
 <?php
  
 namespace Pyz\Zed\Permission;
@@ -379,13 +378,13 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 }
 ```
 
-{% info_block warningBox "Verfication" %}
+{% info_block warningBox "Verification" %}
 
-Check that the customer without PlaceOrderPermission cannot proceed to checkout.
+Check that the customer without `PlaceOrderPermission` cannot proceed to checkout.
 
 {% endinfo_block %}
 
-## Install feature frontend
+## Install feature front end
 
 ### Prerequisites
 
@@ -398,6 +397,7 @@ To start feature integration, review and install the necessary features:
 | Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer
+
 Run the following command to install the required modules:
 
 ```bash
@@ -465,7 +465,7 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data is added to the `spy_glossary` table in the database.
+Make sure that the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
 
 {% endinfo_block %}
 
@@ -529,6 +529,7 @@ Check that the customer with the sent approval request cannot open the payment s
 
 
 ### 4) Set up widgets
+
 Register the following global widgets:
 
 | WIDGET | DESCRIPTION | PREREQUISITES | NAMESPACE |
@@ -539,7 +540,7 @@ Register the following global widgets:
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
- ```php
+```php
 <?php
  
 namespace Pyz\Yves\ShopApplication;

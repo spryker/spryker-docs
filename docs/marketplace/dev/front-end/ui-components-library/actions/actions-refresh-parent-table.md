@@ -20,9 +20,9 @@ Check out an example usage of the Actions Refresh Parent Table.
 
 Service configuration:
 
-- `rowActions` - the table row actions, check [Table Feature Row Actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html) for more details.  
-- `actions` - an array with actions configuration.  
-- `type` - an action type.  
+- `rowActions`—the table row actions. For more details, see [Table Feature Row Actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-row-actions.html).  
+- `actions`—an array with actions configuration.  
+- `type`—an action type.  
 
 ```html
 <spy-table
@@ -47,6 +47,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/actions' {
+    interface ActionsRegistry {
+        'refresh-parent-table': RefreshParentTableActionHandlerService;
+    }
+}
+
 @NgModule({
     imports: [
         ActionsModule.withActions({

@@ -50,7 +50,6 @@ Make sure that the following modules have been installed:
 Run the following commands to apply database changes and generate entity and transfer changes:
 
 ```bash
-console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -149,7 +148,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-To verify that `AnonymousCustomerUniqueIdValidatorPlugin` is set up correctly, send a request to the endpoint configured to require an anonymous customer id (for example, `http://glue.mysprykershop.com/guest-carts` without a header and check if the following error is returned:
+To verify that `AnonymousCustomerUniqueIdValidatorPlugin` is set up correctly, send a request to the endpoint configured to require an anonymous customer id (for example, `https://glue.mysprykershop.com/guest-carts` without a header and check if the following error is returned:
 
 ```json
 {
@@ -269,11 +268,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure that the following endpoints are available:
-- http://glue.mysprykershop.com/carts
-- http://glue.mysprykershop.com/guest-carts
+- https://glue.mysprykershop.com/carts
+- https://glue.mysprykershop.com/guest-carts
   
-Send a request to "http://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=items". The cart with the given id should have at least one added item. Make sure that the response includes relationships to the items resources.
-Send a request to "http://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/?include=items". The guest cart with the given id should have at least one added item. Make sure that the response includes relationships to the items resources.
+Send a request to "https://glue.mysprykershop.com/carts/{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}/?include=items". The cart with the given id should have at least one added item. Make sure that the response includes relationships to the items resources.
+Send a request to "https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/?include=items". The guest cart with the given id should have at least one added item. Make sure that the response includes relationships to the items resources.
 
 {% endinfo_block %}
 
@@ -362,7 +361,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 
 {% info_block warningBox "Verification" %}
 
-To verify that `QuoteCreatorPlugin` is installed correctly, send a POST request to "http://glue.mysprykershop.com/carts/" with a valid body. Make sure that you are unable to create more than one cart for the same customer. Otherwise, you receive the following error response:
+To verify that `QuoteCreatorPlugin` is installed correctly, send a POST request to "https://glue.mysprykershop.com/carts/" with a valid body. Make sure that you are unable to create more than one cart for the same customer. Otherwise, you receive the following error response:
 
 ```json
 {

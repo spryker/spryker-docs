@@ -1,7 +1,7 @@
 ---
-title: Creating abstract products and product bundles
+title: Create abstract products and product bundles
 description: Learn how to create abstract products and product bundles in the Back Office.
-last_updated: Aug 11, 2021
+last_updated: June 27, 2022
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-abstract-products-and-product-bundles
 originalArticleId: 41920cd2-8fea-4194-9ed3-bf19c1791649
@@ -15,6 +15,7 @@ redirect_from:
   - /docs/creating-product-bundles
   - /docs/en/creating-product-bundles
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html
+  - /docs/scos/user/back-office-user-guides/202204.0/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html  
 related:
   - title: Creating Product Variants
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/creating-product-variants.html
@@ -30,13 +31,12 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
 ---
 
-This topic describes how to create [abstract products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) and [product bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html).
+This doc describes how to create [abstract products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) and [product bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html).
 
 ## Prerequisites
 
-To start working with products:
-1. To create product variants of abstract products, [create at least one super attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html).
-2. Go to  **Catalog&nbsp;<span aria-label="and then">></span> Products**.
+* To create product variants of abstract products, [create at least one super attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html).
+*  
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
@@ -54,12 +54,12 @@ To be able to add product variants after creating an abstract product, add at le
 
 ## Defining general settings
 
-To create an abstract product or a product bundle:
-1. Depending on the type of the product you want to create, select one of the following:
+1. Go to  **Catalog&nbsp;<span aria-label="and then">></span> Products**.
+2. Depending on the type of the product you want to create, select one of the following:
     * Abstract product: select **Create Product**.
     * Product bundle: select **Create Product Bundle**.
-    This takes you to the *Create a Product* page.
-2. In the *General* tab, define general settings:
+    This opens the **Create a Product** page.
+3. On the **General** tab, define general settings:
     1. Select one or more **Store relations**.
     2. Enter an **SKU Prefix**.
     3. Enter a **Name** and **Description** for all the locales.

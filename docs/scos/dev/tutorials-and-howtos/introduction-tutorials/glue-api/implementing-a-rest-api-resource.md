@@ -107,7 +107,7 @@ class WishlistsRestApiConfig extends AbstractBundleConfig
     public const RESOURCE_RELATION_PRODUCTS = 'products';
 
     // Define business validation response codes
-    // The codes will be set manually when building error responses
+    // The codes is set manually when building error responses
     public const RESPONSE_CODE_WISHLIST_NOT_FOUND = '101';
     public const RESPONSE_CODE_WISHLIST_VALIDATION = '102';
 }
@@ -513,7 +513,7 @@ To invoke the processor, follow these steps:
 public function getAction(RestRequestInterface $restRequest): RestResponseInterface
     {
         return $this->getFactory()->createWishlistsReader()->readByIdentifier($restRequest);
-        // This line passes the request to the actual class that handles data. It will return an instance of RestResponseInterface
+        // This line passes the request to the actual class that handles data. It returns an instance of RestResponseInterface
     }
 ```
 

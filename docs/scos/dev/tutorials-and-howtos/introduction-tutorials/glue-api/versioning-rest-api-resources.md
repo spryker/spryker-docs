@@ -24,7 +24,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/glue-infrastructure.html
 ---
 
-In the course of development of your REST APIs, you may need to change the data contracts of API resources. However, you can also have clients that rely on the existing contracts. To preserve backward compatibility for such clients, we recommend implementing a versioning system for REST API resources. In this case, each resource version has its own contract in terms of data, and various clients can request the exact resource versions they are designed for.
+In the course of the development of your REST APIs, you may need to change the data contracts of API resources. However, you can also have clients that rely on the existing contracts. To preserve backward compatibility for such clients, we recommend implementing a versioning system for REST API resources. In this case, each resource version has its own contract in terms of data, and various clients can request the exact resource versions they are designed for.
 
 {% info_block infoBox %}
 
@@ -101,7 +101,7 @@ class CustomerRestorePasswordResourceRoutePlugin extends AbstractPlugin implemen
 
 </details>
 
-As you can see, the `CustomerRestorePasswordResourceRoutePlugin` class implements both the `ResourceRoutePluginInterface` and `ResourceVersionableInterface` interfaces. The resource supports only one HTTP method: `PATCH`. Also, the `getVersion` function sets version 2.0 for the resource:
+As you can see, the `CustomerRestorePasswordResourceRoutePlugin` class implements the `ResourceRoutePluginInterface` and `ResourceVersionableInterface` interfaces. The resource supports only one HTTP method: `PATCH`. Also, the `getVersion` function sets version 2.0 for the resource:
 
 **Code sample:**
 
@@ -118,9 +118,9 @@ class CustomerRestorePasswordResourceRoutePlugin extends AbstractPlugin implemen
 }
 ```
 
-{% info_block errorBox %}
+{% info_block warningBox %}
 
-Set both the major and the minor version of a resource; otherwise, requests to this resource fail.
+Set both the major and minor versions of a resource; otherwise, requests to this resource fail.
 
 {% endinfo_block %}
 

@@ -64,7 +64,7 @@ Make sure `src/Pyz/Generated/Glue/Validator/validation.cache` has been updated.
 
 {% endinfo_block %}
 
-The API endpoints you've provided validation rules for will validate all incoming requests.
+The API endpoints you've provided validation rules for validates all incoming requests.
 
 ## Validation rule format
 

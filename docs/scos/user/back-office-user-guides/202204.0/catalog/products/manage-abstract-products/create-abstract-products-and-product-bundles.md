@@ -35,53 +35,38 @@ This doc describes how to create [abstract products](/docs/scos/user/features/{{
 
 ## Prerequisites
 
-* To create product variants of abstract products, [create at least one super attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html).
-*  
+To create product variants of abstract products, [create at least one super attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html).
 
 Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
-{% info_block warningBox "Adding super attributes" %}
+## Define general settings
 
-You can add super attributes to product variants only when creating an abstract product.
-
-{% endinfo_block %}
-
-{% info_block errorBox "Create at least one product variant" %}
-
-To be able to add product variants after creating an abstract product, add at least one product variant while creating the abstract product.
-
-{% endinfo_block %}
-
-## Defining general settings
-
-1. Go to  **Catalog&nbsp;<span aria-label="and then">></span> Products**.
+1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
 2. Depending on the type of the product you want to create, select one of the following:
-    * Abstract product: select **Create Product**.
-    * Product bundle: select **Create Product Bundle**.
+    * Abstract product: click **Create Product**.
+    * Product bundle: click **Create Product Bundle**.
     This opens the **Create a Product** page.
 3. On the **General** tab, define general settings:
-    1. Select one or more **Store relations**.
-    2. Enter an **SKU Prefix**.
-    3. Enter a **Name** and **Description** for all the locales.
-    4. Optional: Select **New from** and **New to** dates.
-    5. Select **Next >** and follow [Defining prices](#defining-prices).
-        This opens the *Prices & Tax* tab.
+    1. Select one or more **STORE RELATION**.
+    2. Enter an **SKU PREFIX**.
+    3. Enter a **NAME** for each locale.
+    4. Optional: Enter a **DESCRIPTION** for needed locales.
+    5. Optional: Select **NEW FROM** and **NEW TO** dates.
+    5. Select **Next >** and follow [Define prices](#define-prices).
+        This opens the **Prices & Tax** tab.
 
 ### Reference information: Defining general settings
 
-The following table describes the attributes you enter and select when defining general settings.
-
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| Store relation  | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product will be available in.<br>You can select multiple values. |
-| SKU Prefix | Unique product identifier that will be used to track unique information related to the product. |
-| Name | Name that will be displayed for the product on the Storefront. |
-| Description | Description that will be displayed for the product on the Storefront. |
-| New from<br>New to  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html)</li></ul><br> You can either select no dates or both. |
+| STORE RELATION  | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product will be available in.<br>You can select multiple values. |
+| SKU PREFIX | Unique product identifier that will be used to track unique information related to the product. |
+| NAME | Name that will be displayed for the product on the Storefront. |
+| DESCRIPTION | Description that will be displayed for the product on the Storefront. |
+| NEW FROM <br>NEW TO  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html)</li></ul><br> You can either select no dates or both. |
 
-## Defining prices
+## Define prices
 
-In the *Prices & Tax* tab, define prices:
 1. B2B Shop: Optional: To define prices for a merchant, select a **Merchant Price Dimension**.
 2. Enter **DEFAULT** prices for all the desired locales and currencies.
 3. Optional: To display promotions, enter **ORIGINAL** prices for the desired locales and currencies.
@@ -89,9 +74,7 @@ In the *Prices & Tax* tab, define prices:
 5. Select **Next >** and follow [Defining product variants](#defining-product-variants). This opens the **Variants** tab.
 
 
-### Reference information: Defining prices
-
-The following table describes the attributes you enter and select when defining prices.
+### Reference information: Define prices
 
 | ATTRIBUTE |DESCRIPTION |
 | --- | --- |
@@ -106,9 +89,8 @@ If you want to display the difference in price in order to show what the price w
 The default prices are displayed in the online store as a current price, while the original one is displayed strikethrough.
 ![Default and Original prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Products:+Reference+Information/default-and-original-prices.gif)
 
-## Defining product variants
+## Define product variants
 
-In the *Variants* tab, define product variants:
 * Product bundle: Select **Save** and follow [Defining meta information](#defining-meta-information). The page refreshes with a product variant created automatically.
 * Abstract product: Define product variants as follows:
     1. Select one or more super attributes that define your product variants.
@@ -116,9 +98,22 @@ In the *Variants* tab, define product variants:
     3. Repeat the previous step until you select at least one value for each selected super attribute.  
     4. Select **Save** and follow [Defining meta information](#defining-meta-information). The page refreshes with the created product variants displayed in the table.
 
+    {% info_block warningBox "Adding super attributes" %}
+
+    You can add super attributes to product variants only when creating an abstract product.
+
+    {% endinfo_block %}    
+
+
+    {% info_block errorBox "Create at least one product variant" %}
+
+    To be able to add product variants after creating an abstract product, add at least one product variant while creating the abstract product.
+
+    {% endinfo_block %}
+
     ![Defining product variants](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+user+guide/Catalog/Products/Abstract+products/Creating+abstract+products/defining-product-variants.gif)
 
-### Reference information: Defining product variants
+### Reference information: Define product variants
 
 {% info_block warningBox "Product bundles" %}
 
@@ -130,19 +125,16 @@ In the *Variants* tab, you can see all the existing [super attributes](/docs/sco
 
 You can select as many super attributes as you need and define one or more values for them. For each product attribute value you select, a product variant will be created. After creating the abstract product, you will be able to create new product variants based on the super attributes you select when creating the abstract product.
 
-## Defining meta information
+## Optional: Define meta information
 
-Optional: Add meta information:
-1. Switch to the *SEO* tab.
+1. Click the **SEO** tab.
 2. Enter the following for the desired locales:
     * **Title**
     * **Keywords**
     * **Description**
-2. Select **Save** and follow [Adding images](#adding-images).
+3. Select **Save** and follow [Add images](#add-images).
 
-### Reference information: Defining meta information
-
-The following table describes the attributes you enter and select when defining meta information.
+### Reference information: Define meta information
 
 | ATTRIBUTE |DESCRIPTION |
 | --- | --- |
@@ -150,7 +142,7 @@ The following table describes the attributes you enter and select when defining 
 |Keywords| Meta keywords that will be used for the abstract product. |
 |Description| Meta description that will be used for the abstract product.|
 
-## Adding images
+## Add images
 
 Optional: Add images for the product:
 1. Switch to the **Image** tab.
@@ -167,9 +159,7 @@ Optional: Add images for the product:
 9. Select **Save**.
 The page refreshes with the success message displayed.
 
-### Reference information: Adding images
-
-The following table describes the attributes you enter and select when adding images.
+### Reference information: Add images
 
 | ATTRIBUTE |DESCRIPTION |
 | --- | --- |

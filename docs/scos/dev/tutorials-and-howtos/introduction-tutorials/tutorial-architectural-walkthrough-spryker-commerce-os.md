@@ -30,7 +30,7 @@ This tutorial is also available on the Spryker Training website. For more inform
 
 {% endinfo_block %}
 
-This document explains the Spryker architecture and how things work all together. It challenges you to implement a simple functionality in the backend application to reverse a string and then to let the frontend application connect to the backend application to use this functionality and show the result on a webpage in the shop.
+This tutorial explains the Spryker architecture and how things work altogether. It challenges you to implement a simple functionality in the backend application to reverse a string and then to let the frontend application connect to the backend application to use this functionality and show the result on a webpage in the shop.
 
 ## Challenge description
 
@@ -82,7 +82,7 @@ A new module is a new folder.
 
 3. To render text in the Zed UI template, add a `Presentation` layer with a twig file, which loads as the action's response.
     1. Add a new folder called `Presentation`.
-    2. Inside the folder, add a folder for the controller and twig file for the action: `Index/index.twig`.
+    2. Inside the folder, add a folder for the controller and a twig file for the action: `Index/index.twig`.
     The twig file for your action looks like this:
 
     ```xml

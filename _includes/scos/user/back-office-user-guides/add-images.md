@@ -1,7 +1,7 @@
 <!-- Since we have the same interface for adding images in multiple sections of the Back Office, use this include for adding images -->
 
 1. On the **Images** tab, do the following for the needed locales:
-    1. click **Add image set**.
+    1. Click **Add image set**.
     2. Enter an **IMAGE SET NAME**.
     3. Enter a **SMALL IMAGE URL**.
     4. Enter a **LARGE IMAGE URL**.

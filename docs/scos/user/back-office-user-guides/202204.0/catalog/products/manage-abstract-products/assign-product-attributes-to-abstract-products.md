@@ -6,26 +6,28 @@ template: back-office-user-guide-template
 
 This document describes how to assign product attributes to abstract products in the Back Office.
 
-By assigning a product attribute to an abstract product, you assign it to all its variants. This is useful when you have an abstract product has a lot of variants with the same attribute value. Alternatively, you can [assign product attributes to a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/assign-product-attributes-to-product-variants.html).
+By assigning a product attribute to an abstract product, you assign it to all its variants. This is useful when an abstract product has a lot of variants with the same attribute value. Alternatively, you can [assign product attributes to a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/assign-product-attributes-to-product-variants.html).
 
 ## Prerequisites
 
-1. Create the product attributes you want to add to the abstract product. For instructions, see [Creating product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html).
+1. Create the product attributes you want to add to the abstract product. For instructions, see [Create product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html).
 
-2. Create the abstract product to assign the product attributes to. For instructions, see [creating an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html).  
-3. To start working with products, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
+2. Create the abstract product to assign the product attributes to. For instructions, see [Create abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/create-abstract-products-and-product-bundles.html).  
+
 
 Review the [reference information](#reference-information-assign-product-attributes-to-abstract-products) before you start, or look up the necessary information as you go through the process.
 
 
 ## Assign product attributes to an abstract product
 
-1. Next to the abstract product you want to assign product attributes to, click **Manage Attributes**.
-2. For **ATTRIBUTE KEY**, start typing the name of a product attribute and select it from the suggested list.
-3. Click **Add**.
+1. Go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
+    This opens the **Product** page.
+2. Next to the abstract product you want to assign product attributes to, click **Manage Attributes**.
+3. Enter and select an **ATTRIBUTE KEY**.
+4. Click **Add**.
     This adds the attribute to the **ATTRIBUTES** pane.
-4. For the attribute you have added, enter attribute values for one or more locales.
-5. Repeat steps 4-6 until you add all the needed attributes.
+5. For the attribute you have added, enter attribute values for one or more locales.
+6. Repeat steps 4-6 until you add all the needed attributes.
 
 ![Add product attributes to a product variant](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/catalog/products/manage-product-variants/assign-product-attributes-to-product-variants.md/add-product-attributes-to-product-variants.png)
 
@@ -35,10 +37,8 @@ Review the [reference information](#reference-information-assign-product-attribu
 
 ## Reference information: Assign product attributes to abstract products
 
-This section describes the attributes you see when creating a return.
-
 | ATTRIBUTE | DESCRIPTION |
 |-|-|
 | ATTRIBUTE KEY | [Product attribute](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html) to add to the abstract product. |
 | KEY | Product attribute key. |
-| DEFAULT | Default value of the product attribute. This value is displayed on the Storefront if locale specific value is not specified. |     
+| **DEFAULT** locale | Default value of the product attribute. This value is displayed on the Storefront if a locale specific value is not specified. |     

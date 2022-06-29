@@ -35,9 +35,9 @@ This doc describes how to create [abstract products](/docs/scos/user/features/{{
 
 ## Prerequisites
 
-To create product variants of abstract products, [create at least one super attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html).
+To be able to create [product variants](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) of the abstract product, [create at least one super attribute](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html).
 
-Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
+Each section contains reference information. Make sure to look up the necessary information as you go through the process.
 
 ## Define general settings
 
@@ -47,13 +47,13 @@ Each section contains reference information. Make sure to review it before you s
     * Product bundle: click **Create Product Bundle**.
     This opens the **Create a Product** page.
 3. On the **General** tab, define general settings:
-    1. Select one or more **STORE RELATION**.
+    1. For **STORE RELATION**, select one or more stores.
     2. Enter an **SKU PREFIX**.
     3. Enter a **NAME** for each locale.
     4. Optional: Enter a **DESCRIPTION** for needed locales.
     5. Optional: Select **NEW FROM** and **NEW TO** dates.
-    5. Select **Next >** and follow [Define prices](#define-prices).
-        This opens the **Prices & Tax** tab.
+    6. Select **Next >** and follow [Define prices](#define-prices).
+
 
 ### Reference information: Defining general settings
 
@@ -67,21 +67,23 @@ Each section contains reference information. Make sure to review it before you s
 
 ## Define prices
 
-1. B2B Shop: Optional: To define prices for a merchant, select a **Merchant Price Dimension**.
-2. Enter **DEFAULT** prices for all the desired locales and currencies.
-3. Optional: To display promotions, enter **ORIGINAL** prices for the desired locales and currencies.
-4. Select a **Tax Set**.
-5. Select **Next >** and follow [Defining product variants](#defining-product-variants). This opens the **Variants** tab.
+On the **Price & Tax** tab, do the following:
+
+1. B2B Shop: Optional: To define prices for a merchant, select a **MERCHANT PRICE DIMENSION**.
+2. Enter one or more **DEFAULT** prices for needed locales and currencies.
+3. Optional: To display promotions, enter **ORIGINAL** prices for needed locales and currencies.
+4. Select a **TAX SET**.
+5. Select **Next >** and follow [Define product variants](#define-product-variants).
 
 
 ### Reference information: Define prices
 
 | ATTRIBUTE |DESCRIPTION |
 | --- | --- |
-|Merchant Price Dimension| B2B only<br>Defines the [merchant](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) the prices will apply to.<br>If you select **Default prices**, the prices will apply to all customers.<br>To [manage merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchant Relations**. |
+| MERCHANT PRICE DIMENSION | B2B only<br>Defines the [merchant](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) the prices will apply to.<br>If you select **Default prices**, the prices will apply to all customers.<br>To [manage merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchant Relations**. |
 | Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#product-information-inheritance) the price you enter here. |
 |Default<br>Original | Default price is the price a customer pays for the product. An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
-| Tax Set | Conditions under which the product will be taxed.<br>For instructions on creating tax sets, see [Create tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/create-tax-rates.html). |
+| TAX SET | Conditions under which the product will be taxed.<br>For instructions on creating tax sets, see [Create tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/create-tax-rates.html). |
 
 #### Default and original prices on the Storefront
 
@@ -91,31 +93,28 @@ The default prices are displayed in the online store as a current price, while t
 
 ## Define product variants
 
-* Product bundle: Select **Save** and follow [Defining meta information](#defining-meta-information). The page refreshes with a product variant created automatically.
+{% info_block warningBox "Adding super attributes" %}
+
+* You can add super attributes to product variants only when creating an abstract product.
+
+* To be able to add product variants after creating an abstract product, add at least one super attribute.
+
+{% endinfo_block %}  
+
+On the **Variants** tab, depending on the product type, do one of the following:
+
+* Product bundle: Click **Next >** and follow [Define meta information](#optional-define-meta-information).
 * Abstract product: Define product variants as follows:
-    1. Select one or more super attributes that define your product variants.
+    1. Select one or more super attributes to create product variants from.
     2. In the field next to the super attribute you've selected, select one or more product attribute values.
     3. Repeat the previous step until you select at least one value for each selected super attribute.  
-    4. Select **Save** and follow [Defining meta information](#defining-meta-information). The page refreshes with the created product variants displayed in the table.
-
-    {% info_block warningBox "Adding super attributes" %}
-
-    You can add super attributes to product variants only when creating an abstract product.
-
-    {% endinfo_block %}    
-
-
-    {% info_block errorBox "Create at least one product variant" %}
-
-    To be able to add product variants after creating an abstract product, add at least one product variant while creating the abstract product.
-
-    {% endinfo_block %}
+    4. Click **Next >** and follow [Define meta information](#optional-define-meta-information).
 
     ![Defining product variants](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+user+guide/Catalog/Products/Abstract+products/Creating+abstract+products/defining-product-variants.gif)
 
 ### Reference information: Define product variants
 
-{% info_block warningBox "Product bundles" %}
+{% info_block warningBox "Only for abstract products" %}
 
 The reference information in this section is relevant only for abstract products. When you create a product bundle, a single product variant is created automatically.
 
@@ -128,11 +127,11 @@ You can select as many super attributes as you need and define one or more value
 ## Optional: Define meta information
 
 1. Click the **SEO** tab.
-2. Enter the following for the desired locales:
+2. Enter any of the following for needed locales:
     * **Title**
     * **Keywords**
     * **Description**
-3. Select **Save** and follow [Add images](#add-images).
+3. Click **Next >** and follow [Add images](#add-images).
 
 ### Reference information: Define meta information
 
@@ -142,37 +141,21 @@ You can select as many super attributes as you need and define one or more value
 |Keywords| Meta keywords that will be used for the abstract product. |
 |Description| Meta description that will be used for the abstract product.|
 
-## Add images
+## Optional: Add images
 
-Optional: Add images for the product:
-1. Switch to the **Image** tab.
-2. Select a locale you want to add images for.
-3. Select **Add image set**.
-4. Enter an **Image Set Name**.
-5. Repeat steps *2* and *3* until you add the desired number of image sets.
-6. In the desired image set, enter the following:
-    *  **Small Image URL**
-    *  **Large Image URL**
-    *  **Sort order**
-7. Optional: Select **Add image** and repeat the previous step until you add all the desired images for this locale.
-8. Repeat steps *1* to *6* until you add images for all the desired locales.
-9. Select **Save**.
-The page refreshes with the success message displayed.
+{% include scos/user/back-office-user-guides/add-images.md %} <!-- To edit, see /_includes/scos/user/back-office-user-guides/add-images.md -->
+
+This opens the **Edit Product Abstract:{product SKU} page with a success message displayed.
 
 ### Reference information: Add images
 
 | ATTRIBUTE |DESCRIPTION |
 | --- | --- |
-| *Default* locale | Images from this locale will be displayed for the product in the locales images are not added for. |
-| Image Set Name | Name of image set.|
-| Small | Link to the image that will be displayed for the product in product catalogs.|
-|Large| Link to the image that will be displayed for the product on the *Product details* page. |
-|Sort Order| Arranges the images displayed for the product in an ascending order. The smallest number is `0`. |
-
-**Tips and tricks**
-<br>To delete an image set with all its pictures, select **Delete image set**.
-<!---
-To convert an abstract product into a product bundle, you can update the **Assign bundled products** tab for a variant. The product will automatically be transformed into a bundle. -->
+| *DEFAULT* locale | Images from this locale will be displayed for the product in the locales images are not added for. |
+| IMAGE SET NAME | Image set name. For a multi-word name, instead of spaces, use dashes and underscores. |
+| SMALL IMAGE URL | A public URL to fetch a low-resolution image from. |
+| LARGE IMAGE URL | A public URL to fetch a high-resolution image from. |
+| SORT ORDER | A number that will define the position of the image on a page relatively to the sort order value of the other images. An image with a smaller sort order value is displayed higher on a page. |
 
 
 ## Next steps

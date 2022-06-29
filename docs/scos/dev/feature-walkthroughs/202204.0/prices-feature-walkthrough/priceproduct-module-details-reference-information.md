@@ -63,7 +63,7 @@ class PriceProductConfig extends SprykerPriceProductConfig
 }
 ```
 
-Additionally, automatic removal of "orphaned records" can be controlled by `OrphanPriceProductStoreRemovalVoterPluginInterface` plugins.
+Alternatively, automatic removal of "orphaned records" can be controlled by `OrphanPriceProductStoreRemovalVoterPluginInterface` plugins.
 
 Such plugins can vote _for_ or _against_ automatic removal of "orphaned records". The first plugin in the stack, that votes against the removal, disables it. If a plugin votes for removal, all other plugins in the stack are still checked and may vote against.
 

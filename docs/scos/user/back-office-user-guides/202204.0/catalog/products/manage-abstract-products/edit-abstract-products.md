@@ -122,23 +122,22 @@ Click the **Images** tab and do any of the following for needed locales.
 
     The page refreshes with the success message displayed.
 
-### Reference information: Editing product images of an abstract product
+### Reference information: Edit product images of an abstract product
 
 The following table describes the attributes you enter and select when editing product images of an abstract product.
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-|Image Set Name|Name of your image set.|
-|Small|Link of the image that is going to be used in the product catalogs.|
-|Large|Link to the image that is going to be used on the product details page.|
-|Sort Order|If you add several images to an active image set, specify the order in which they are to be shown in the front end and back end using Sort Order fields. The order of images is defined by the order of entered numbers where the image set with sort order "0" is the first to be shown.|
+| IMAGE SET NAME |Name of your image set.|
+| SMALL IMAGE URL | Link to the image that is used in product catalog pages.|
+| LARGE IMAGE URL | Link to the image that is used on the product details page.|
+| SORT ORDER | A number that defines the position of the image on a page relatively to the sort order value of the other images. An image with a smaller sort order value is displayed higher on a page. |
 
 ## Editing scheduled prices of an abstract product
 
-To edit a scheduled price:
-1. Next to the product you want to edit, select **Edit**.
-2. On the *Edit Product Abstract [SKU]* page, switch to the *Scheduled Prices* tab.
-3. Next to the scheduled price you want to edit, select **Edit**.
+
+1. On the **Edit Product Abstract: {SKU}** page, click the **Scheduled Prices** tab.
+2. Next to the scheduled price you want to edit, select **Edit**.
 4. Select a **Store**.
 5. Select a **Currency**.
 6. Enter a **Net price**.

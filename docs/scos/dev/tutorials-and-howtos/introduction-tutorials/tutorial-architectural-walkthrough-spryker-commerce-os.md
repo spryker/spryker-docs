@@ -26,7 +26,7 @@ redirect_from:
 
 {% info_block infoBox %}
 
-This tutorial is available on the Spryker Training website. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp) website.
+This tutorial is also available on the Spryker Training website. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp) website.
 
 {% endinfo_block %}
 
@@ -34,8 +34,8 @@ This document explains the Spryker architecture and how things work all together
 
 ## Challenge description
 
-* Build a `HelloSpryker` module in Zed that renders the `Hello Spryker!` string in reverse order `!rekyrpS olleH` on the screen.
-* Build the `HelloSpryker` module in Yves that communicates with Zed using the Client to retrieve the same reversed string `!rekyrpS olleH ` and shows the string on a webpage in the shop.
+* Build a `HelloSpryker` module in Zed that renders the `Hello Spryker!` string in reverse order on the screen: `!rekyrpS olleH`.
+* Build the `HelloSpryker` module in Yves that communicates with Zed using the client to retrieve the same reversed string `!rekyrpS olleH ` and shows the string on a webpage in the shop.
 * Add Zed persistence layer in the `HelloSpryker` module to store and get the reversed string to and from the database.
 * Move the functionality that returns the reversed string to a new module (`StringFormat`), then provide the string to the `HelloSpryker` module.
 
@@ -55,7 +55,7 @@ A new module is a new folder.
 
 {% endinfo_block %}
 
-2. The communication layer in a module is its entry point. Add it and check if your module responds:
+2. A `Communication` layer in the module is its entry point. Add it and check if your module responds:
     1. Under `HelloSpryker`, create a new folder called `Communication`.
     2. Inside the `Communication` folder, create a folder called `Controller`.
     3. Create a new controller called `IndexController`. This controller has an action that returns only `HelloSpryker!`:
@@ -80,9 +80,9 @@ A new module is a new folder.
     }						
     ```
 
-3. To render the text in the Zed UI template, add the presentation layer with a twig file, which loads as the action's response.
+3. To render text in the Zed UI template, add a `Presentation` layer with a twig file, which loads as the action's response.
     1. Add a new folder called `Presentation`.
-    2. Inside the folder, add a folder for the controller and the twig file for the action: `Index/index.twig`.
+    2. Inside the folder, add a folder for the controller and twig file for the action: `Index/index.twig`.
     The twig file for your action looks like this:
 
     ```xml
@@ -102,7 +102,7 @@ Because reversing a string belongs to the business logic, you need to build a `B
     * `Factory` to instantiate the needed objects and inject their dependencies.
     * `Model` to perform the actual business logic.
 
-2. Build the facade class and don't forget the facade interface:
+2. Build the facade class, and don't forget the facade interface:
 
 ```php
 namespace Pyz\Zed\HelloSpryker\Business;
@@ -143,7 +143,7 @@ To hook things together, follow these steps:
 1. Instantiate an object from your class in the factory and let a facade method use the new factory method to get the needed object. 
 2. From the object, call the `reverseString()` method.
 
-Your facade method looks like the folloing example:
+Your facade method looks like the following example:
 
 ```php    
 /**
@@ -169,7 +169,7 @@ public function reverseString($originalString)
 }									
 ```
 
-3. Call the facade method from the controller you have built in the beggining.
+3. Call the facade method from the controller you have built in the beginning.
 
 ```php
 /**
@@ -186,7 +186,7 @@ public function indexAction(Request $request)
 }		
 ```
 
-When accessing a URL in Zed UI, the action responds to the requests, and then it calls the facade which finally calls the model to perform the needed business logic.
+When accessing a URL in Zed UI, the action responds to the requests, and then it calls the facade, which finally calls the model to perform the needed business logic.
 
 4. To see `!rekyrpS olleH`, go to `https://zed.mysprykershop.com/hello-spryker`.
 
@@ -262,12 +262,12 @@ When accessing a URL in Zed UI, the action responds to the requests, and then it
     }
     ```
 
-4. In the application, register the `HelloSprykerRouteProviderPlugin`, so the application knows about your controller action.
+4. In the application, register `HelloSprykerRouteProviderPlugin`, so the application knows about your controller action.
 5. In the `Router` module, go to the `RouterDependencyProvider::getRouteProvider()` method and add `HelloSprykerRouteProviderPlugin` to the array.
 6. To render your **Hello Spryker** page, add the twig file.
 7. Inside the `HelloSpryker` module, add the following folder structure: `Theme/default/views/index`. 
     This folder structure reflects your theme and controller names. `default` is the theme name, and `index` is the controller name. 
-    For every action there is a template with the same name.
+    For every action, there is a template with the same name.
 8. Because your action is called `index`, add a twig file for your action called `index.twig`:
 
     ```xml
@@ -289,7 +289,7 @@ Transfer objects are a great way to send data from Yves to Zed and to communicat
 To add a `HelloSpryker` transfer, follow these steps:
 1. Add a new folder inside `/src/Shared` and call it `HelloSpryker`. 
 2. Add another folder called `Transfer`.
-3. To define their transfer objects' schemas, they use XML. Therefore, add an XML file inside the `Transfer` directory and call it `hello_spryker.transfer.xml`.
+3. To define their transfer objects' schemas, XML is used. Therefore, inside the `Transfer` directory, add an XML file and call it `hello_spryker.transfer.xml`.
 4. Add the following transfer schema:
 
 ```	xml
@@ -310,7 +310,7 @@ To add a `HelloSpryker` transfer, follow these steps:
 console transfer:generate
 ```
 
-6. After generating the transfer object, update the facade to use the transfer object instead of string as a parameter:
+6. After generating the transfer object, update the facade to use the transfer object instead of a string as a parameter:
 
 ```php					
 /**
@@ -336,13 +336,13 @@ When accessing `https://zed.mysprykershop.com/hello-spryker`, you must get `!rek
 
 ### 4. Build a `HelloSpryker` client to connect Yves to Zed
 
-To build the communication between Yves and Zed, you need a *Client*. Building a Client for `HelloSpryker` is similar to building a module in Zed or Yves. 
+To connect Yves to Zed, you need a *client*. Building a client for `HelloSpryker` is similar to building a module in Zed or Yves. 
 
-To build a Client, follow these steps:
+To build a client, follow these steps:
 1. Under `/src/Pyz/Client`, add a new folder and call it `HelloSpryker`.
    <br>The Client structure consists of three main classes:
-    * `Client` to function as the main API to the client
-    * `Factory` to instantiate the needed objects and inject their dependencies
+    * `Client` to function as the main API to the client.
+    * `Factory` to instantiate the needed objects and inject their dependencies.
     * `Stub` to do the actual call to Zed with the right payload.
 
 2. Create the client class inside the `HelloSpryker` client folder:
@@ -385,11 +385,11 @@ To build a Client, follow these steps:
     }									
     ```					
 
-3. Add the class `HelloSprykerDependencyProvider` inside the `HelloSpryker` module in order to provide the `ZedRequest Client` to your `HelloSpryker Client`.
+3. To provide the `ZedRequest Client` to your `HelloSpryker Client`, inside the `HelloSpryker` module, add the `HelloSprykerDependencyProvider` class.
 
 {% info_block infoBox "Info" %}
 
-Any client that calls Zed from Yves uses the `ZedRequest` module. This module is responsible, as the name suggest, for the request to Zed from Yves, and uses its own client to do so. The client name is `ZedRequest`.
+Any client that calls Zed from Yves uses the `ZedRequest` module. This module is responsible for the request from Yves to Zed and uses its own client to do so. The client name is `ZedRequest`.
 Following the modular approach in Spryker, all other modules need to use the `ZedRequest Client` whenever a request is sent to Zed from Yves.
 As `ZedRequest` is a separated module, a dependency is needed between the calling module, `HelloSpryker` in this case, and the `ZedRequest` module. An architectural concept in Spryker called `DependencyProvider` is used to inject these dependencies between different modules.
 
@@ -473,11 +473,13 @@ public function reverseString(HelloSprykerTransfer $helloSprykerTransfer)
 
 {% info_block infoBox "Info" %}
 
-This method calls the Zed module `HelloSpryker`.<br>The first parameter in the `call()` method is the endpoint of the request, which is divided into three main sections: `moduleName/controllerName/ActionName`. Here, you call `HelloSpryker`, `GatewayController`, and `ReverseStringAction`.<br>By convention, clients send requests to `GatewayControllers`. The second parameter is the payload of the request, which is always a transfer object, any transfer object.
+This method calls the Zed module `HelloSpryker`.
+<br>The first parameter in the `call()` method is the endpoint of the request, which is divided into three main sections: `moduleName/controllerName/ActionName`. Here, you call `HelloSpryker`, `GatewayController`, and `ReverseStringAction`.
+<br>By convention, clients send requests to `GatewayControllers`. The second parameter is the payload of the request, which is always a transfer object, any transfer object.
 
 {% endinfo_block %}
 
-5. In the `HelloSprykerClient`, add a client method  to call the `reverseString()` method in the stub.
+5. In `HelloSprykerClient`, add a client method  to call the `reverseString()` method in the stub.
 
 ```php
 /**
@@ -518,7 +520,7 @@ class GatewayController extends AbstractGatewayController
 }																															
 ```
 
-2. To reverse the string, In Yves, from the `IndexController`, call the client.
+1. To reverse the string, In Yves, from `IndexController`, call the client.
 
 ```php					
 /**
@@ -540,13 +542,13 @@ public function indexAction(Request $request)
 
 3. In Yves, update the twig template to use `reversedString`.
 
-4. Go to `https://mysprykershop.com/hello-spryker1`. The `!rekyrpS olleH` is displayed.
+4. Go to `https://mysprykershop.com/hello-spryker1`. The `!rekyrpS olleH` string is displayed.
 
-### 5. Make `HelloSpryker` module read from database
+### 5. Make the `HelloSpryker` module read from the database
 
 Working with the database means working with the persistence layer in Zed. 
 
-1. Go back to Zed and inside the `HelloSpryker` module, add a new folder called `Persistence`. 
+1. Go back to Zed, and inside `HelloSpryker`, add a new folder called `Persistence`. 
 2. Inside `Persistence`, add the directories `Propel/Schema`.
 3. Propel uses XML, thus Spryker uses XML as well. Inside the Schema directory, add the database XML schema file and call it `pyz_hello_spryker.schema.xml`:
 
@@ -576,12 +578,12 @@ console propel:install.
 
 {% info_block infoBox "Verification" %}
 
-To make sure that he `HelloSpryker` table is in the database, open the database and check if the table is there.
+Open the database and check if the `HelloSpryker` table is there.
 
 {% endinfo_block %}
 
-6. Write the reversed string into the database. 
-7. In the `Business` layer, modify your model to do so after reversing the string:
+1. Write the reversed string into the database. 
+2. In the `Business` layer, modify your model to do so after reversing the string:
 
 ```php
 /**
@@ -597,7 +599,7 @@ protected function saveReversedString(HelloSprykerTransfer $helloSprykerTransfer
 }
 ```					
 
-5. To read from the database, Spryker provides a concept called `QueryContainer`. It's the place where you create query objects to get data from the database. Inside the `Persistence` directory, create the `HelloSprykerPersistenceFactory` and `HelloSprykerQueryContainer`:
+5. To read from the database, Spryker provides a concept called `QueryContainer`. It's the place where you create query objects to get data from the database. Inside the `Persistence` directory, create `HelloSprykerPersistenceFactory` and `HelloSprykerQueryContainer`:
 
 ```php
 namespace Pyz\Zed\HelloSpryker\Persistence;
@@ -655,8 +657,8 @@ class HelloSprykerQueryContainer extends AbstractQueryContainer implements Hello
 
     1. Add a facade method with a model to read and from the database in the `Business` layer.
     2. Call the model `StringReader`. 
-    3. From the `IndexController` in the communication layer, call the facade method. 
-    4. To read from the database, inside `StringReader`, inject `HelloSprykerQueryContainer` using the `HelloSprykerBusinessFactory`:
+    3. From `IndexController` in the communication layer, call the facade method. 
+    4. To read from the database, inside `StringReader`, inject `HelloSprykerQueryContainer` using `HelloSprykerBusinessFactory`:
 
     ```php
     /**
@@ -694,19 +696,19 @@ class HelloSprykerQueryContainer extends AbstractQueryContainer implements Hello
 ### 6. Extra task: `HelloSpryker` module dependency with `StringReverser`
 
 The idea of this extra task is to handle module dependency using the concept of dependency providers.
-As mentioned before, dependency providers provide dependencies in a module level, from one module to another. Mainly, they provide facades and clients only.
+As mentioned before, dependency providers provide dependencies at a module level, from one module to another. Mainly, they provide facades and clients only.
 
-1. One module can't access other classes form another module. To use dependency providers, create a new module called `StringReverser`.
+1. One module can't access other classes from another module. To use dependency providers, create a new module called `StringReverser`.
 2. Move the logic of the reversing string from `HelloSpryker` to `StringReverser`.
 
 {% info_block infoBox "Info" %}
 
-Bild a business later inside `StringReverser` with a facade and a model to revers the string.
+Bild a business later inside `StringReverser` with a facade and a model to reverse the string.
 
 {% endinfo_block %}
 
 1. In the `HelloSpryker` module, create a dependency provider class called `HelloSprykerDependencyProvider`.
-2. Provide the business layer dependency to `HelloSpryker` and internally use the `StringReverser` facade to provide the string reversing functionality. The `HelloSprykerDependencyProvider` looks like this:
+2. Provide the business layer dependency to `HelloSpryker` and internally use the `StringReverser` facade to provide the string reversing functionality. `HelloSprykerDependencyProvider` looks like this:
 
 ```php
 namespace Pyz\Zed\HelloSpryker;
@@ -758,6 +760,6 @@ protected function getStringReverserFacade()
 }						
 ```
 
-6. To reverse the string, use the `StringReverserFacade` instead of using the logic directly inside the `HelloSpryker` module.
+1. To reverse the string, use `StringReverserFacade` instead of using the logic directly inside the `HelloSpryker` module.
 
-7. To see `!rekyrpS olleH`, go to `https://zed.mysprykershop.com/hello-spryker` and `https://mysprykershop.com/hello-spryker`.
+2. To see `!rekyrpS olleH`, go to `https://zed.mysprykershop.com/hello-spryker` and `https://mysprykershop.com/hello-spryker`.

@@ -4,7 +4,7 @@ DESCRIPTION: Learn how issues with environments are monitored and how customers 
 template: concept-topic-template
 ---
 
-Every Spryker cloud environment is monitored by the monitoring systems and a dedicated 24/7 team that ensures that environments run stable. In case of problems, this team takes action autonomously or inform you if there is a need for further action on their side. This article explains in details how monitoring and alerting works on Spryker PaaS.
+Every Spryker cloud environment is monitored by the monitoring systems and a dedicated 24/7 team that ensures that environments run stable. In case of problems, this team takes action autonomously or inform you if there is a need for further action on their side. This document explains in details how monitoring and alerting works on Spryker PaaS.
 
 ## What is monitored?
 

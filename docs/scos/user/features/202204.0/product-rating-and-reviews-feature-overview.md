@@ -41,7 +41,7 @@ For more details about managing ratings and reviews, check the video:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage product reviews](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-reviews/manage-product-reviews.html) |
+| [Manage product reviews](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/manage-product-reviews.html) |
 
 {% info_block warningBox "Developer guides" %}
 

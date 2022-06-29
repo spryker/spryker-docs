@@ -1,7 +1,7 @@
 ---
 title: Configuring Elasticsearch
-description: Elasticsearch is a NoSQL data store which allows us to predefine the structure of the data we’ll be storing in it.
-last_updated: Jul 23, 2021
+description: Elasticsearch is a NoSQL data store which lets you predefine the structure of the data you store in it.
+last_updated: Jul 24, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-configure-elasticsearch
 originalArticleId: 6aa9f4ab-25de-46bc-b734-54bccb25cf0b
@@ -54,50 +54,121 @@ redirect_from:
   - /v2/docs/en/search-40
 ---
 
-Elasticsearch is a NoSQL data store that allows us to predefine the structure of the data we get to store in it.
+Elasticsearch is a NoSQL data store that lets you predefine the structure of the data you get to store in it.
 
-Since the data structure we use is static, we would like to define it in advance. The definitions of the indexes and mappings are written in JSON format, just as you’ll find it in the [Elasticsearch documentation](https://www.elastic.co/guide/index.html?ultron=%5BEL%5D-%5BB%5D-%5BEMEA-General%5D-Exact&blade=adwords-s&Device=c&thor=elasticsearch%20documentation&gclid=EAIaIQobChMIhqvutbfJ5QIVB6WaCh3GYA3CEAAYASAAEgL-RPD_BwE).
+Because the used data structure is static, you need to define it in advance. The definitions of the indexes and mappings are written in JSON format. You can find it in the [official Elasticsearch documentation](https://www.elastic.co/guide/index.html).
 
-The content of the configuration files needs to follow the conventions of the official [Elasticsearch index creation](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html) documentation. Note that the current search installer supports only settings and mappings but if you need more, feel free to extend it on the project level.
+The content of the configuration files must follow the conventions listed in the [Create index API](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html) document of the official Elasticsearch documentation. 
 
-{% info_block infoBox "Schema Example" %}
-You can find the default schema configuration file for the main index called `page` at `vendor/spryker/search-elasticsearch/src/Spryker/Shared/SearchElasticsearch/Schema/page.json`.
+Note that the current search installer supports only settings and mappings. However, if you need more, you can extend it on the project level.
+
+{% info_block infoBox "Schema example" %}
+
+For the main index called `page`, you can find the default schema configuration in `vendor/spryker/search-elasticsearch/src/Spryker/Shared/SearchElasticsearch/Schema/page.json`.
+
 {% endinfo_block %}
 
 {% info_block warningBox %}
-If you want to disable the default mapping installation, you need to override the core configuration defined in `Spryker\Zed\SearchElasticsearch\SearchElasticsearchConfig::getJsonIndexDefinitionDirectories()` by implementing it on the project level (for example, `Pyz\Zed\Search\SearchConfig`).
+
+To disable the default mapping installation, override the core configuration defined in `Spryker\Zed\SearchElasticsearch\SearchElasticsearchConfig::getJsonIndexDefinitionDirectories()` by implementing it on the project level—for example, `Pyz\Zed\Search\SearchConfig`.
+
 {% endinfo_block %}
 
-Each configured store has its index installed automatically. The name of the indexes is composed of the store name + underscore + configuration file name (for example, `de_page`).
+Each configured store has its index, which is installed automatically. An index name consists of the following parts:
+* An optional prefix, which is defined by the `SearchElasticsearchConstants::INDEX_PREFIX` configuration option.
+* A store name.
+* A configuration file name. 
 
-## Defining New Indexes and Mappings
-You can define new indexes and mappings by creating new configuration files under the `Shared` namespace of any module.
+Index name components are delimited with an underscore—for example, `spryker_de_page`.
 
-Example:
-`src/Shared/MyModuleName/Schema/myindex.json`
+## Adjust existing indexes
 
-You can extend or overwrite the existing configurations by creating a new file with the same name you wish to modify and provide only the differences compared to the original one.
+The following example shows how the default schema configuration file for the main index `page` can be changed to allow searching for keywords containing the special character *&* (ampersand) by switching from a [`standard`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-standard-tokenizer.html) tokenizer to a combination of [`keyword`](https://www.elastic.co/guide/en/elasticsearch/reference/current/analysis-keyword-tokenizer.html) tokenizer and token filter of the [`word_delimiter_graph`](https://www.elastic.co/guide/en/elasticsearch/reference/8.2/analysis-word-delimiter-graph-tokenfilter.html) type.      
 
-When the search installer runs, it first reads all the available configuration files and merges them by index name per each store. This might be handy if you have modules that are not tightly coupled together, but both need to use the same index for some reason, or you just need to extend or override the default configuration provided on the Core level.
+<details><summary markdown='span'>src/Pyz/Shared/Search/Schema/page.json</summary>
 
-It’s also possible to extend or modify indexes and mappings for specific stores. All you need to do is to create a new configuration file along with the name of the store (for example, `de_page.json`), and it will only be used for that store. For example, you might have a different analyzing strategy for your stores, so you’ll need to define it separately.
+```json
+{
+    "settings": {
+        "analysis": {
+            "analyzer": {
+                "fulltext_index_analyzer": {
+                    "tokenizer": "keyword",
+                    "filter": ["my_custom_word_delimiter_graph_filter", "lowercase", "fulltext_index_ngram_filter"]
+                },
+                "fulltext_search_analyzer": {
+                    "tokenizer": "keyword",
+                    "filter": ["custom_word_delimiter_graph_filter", "lowercase"]
+                }
+            },
+            "filter": {
+                "fulltext_index_ngram_filter": {
+                    "type": "edge_ngram",
+                    "min_gram": 2,
+                    "max_gram": 20
+                },
+                "custom_word_delimiter_graph_filter": {
+                    "type": "word_delimiter_graph",
+                    "type_table": [ "& => ALPHA" ],
+                    "split_on_case_change": false,
+                    "split_on_numerics": false
+                }
+            }
+        }
+    },
+    "mappings": {
+        "page": {
+            "properties": {
+                "full-text": {
+                    "analyzer": "fulltext_index_analyzer",
+                    "search_analyzer": "fulltext_search_analyzer"
+                },
+                "full-text-boosted": {
+                    "analyzer": "fulltext_index_analyzer",
+                    "search_analyzer": "fulltext_search_analyzer"
+                }
+            }
+        }
+    }
+}
+```
 
-## Installing Indexes and Mappings
-Execute the following commands to run the installation process:
+</details>
+
+For details about applying changes made to schema configuration files, see the [Install indexes and mappings](#install-indexes-and-mappings) section.
+
+## Define new indexes and mappings
+
+To define new indexes and mappings, under the `Shared` namespace of any module, create new configuration files—for example, `src/Shared/MyModuleName/Schema/myindex.json`.
+
+To extend or overwrite the existing configurations, create a new file with the same name you want to modify and provide only the differences compared to the original one.
+
+When the search installer runs, it reads all the available configuration files and merges them by an index name per store. This might be handy if you have modules that are not tightly coupled together, but both need to use the same index for some reason, or you just need to extend or override the default configuration provided on the core level.
+
+To extend or modify indexes and mappings for a specific store, create a new configuration file along with the store's name—for example, `de_page.json`. The file is used for this store only. For example, if you have a different analyzing strategy for your stores, you must define it separately.
+
+## Install indexes and mappings
+
 ```php
 vendor/bin/console search:setup:sources
 vendor/bin/console search:setup:source-map
 ```
-The first command will install indexes which are not yet created and [update the mappings](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-put-mapping.html) based on the JSON configurations.
 
-Note that if an index is created with the given settings, it won’t be changed by running this process, but the mapping can be modified and will be changed.
+The first command installs indexes that are not created and [updates the mappings](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-put-mapping.html) based on the JSON configurations.
 
-In the development environment, if you need to create new analyzers or change the index settings, you need to delete the index first and run the install process again.
+If an index is created with the given settings, it is changed by running this process, but the mapping can be modified and changed.
 
-After running the second command, a helper class will be auto-generated for each and every index installed. You can find these classes under the `\Generated\Shared\Search` namespace. The name of the generated class starts with the name of the index and is suffixed with `IndexMap`.
+In the development environment, to create new analyzers or change the index settings, you must delete the index and run the installation process again.
+
+To populate the newly created index with data, run `publish:trigger-events`:
+```php
+vendor/bin/console publish:trigger-events
+```
+
+After running the `search:setup:source-map` command, a helper class is autogenerated for every installed index. You can find these classes under the `\Generated\Shared\Search` namespace. The name of the generated class starts with the name of the index and is followed by the suffix `IndexMap`.
 
 For the default page index, the class is `\Generated\Shared\Search\PageIndexMap`.
 
-These classes provide some information from the mapping, such as the fields and the metadata. Use these classes for references when you need to program against something related to that mapping schema.
+These classes provide some information from mapping, such as fields and metadata. Use these classes for references to program against something related to that mapping schema.
 
-If you change mapping and run the installer, the auto-generated classes will also change accordingly.
+If you change mapping and run the installer, autogenerated classes change accordingly.

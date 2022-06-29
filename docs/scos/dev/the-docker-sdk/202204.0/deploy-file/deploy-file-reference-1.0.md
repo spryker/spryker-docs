@@ -839,12 +839,19 @@ A real-time log monitoring *Service*.
 
   - `dashboard: engine:` - possible value is `dashboard`.
   - `dashboard: endpoints:` - defines the service's port and web interface that can be accessed via given endpoints.
-  -
+  
 ***
 
 ### database:
 
 An SQL database management system *Service*.
+
+{% info_block warningBox "Notice" %}
+
+Please **do not** set username and password for deploy files that will be used to deploy the shop to the cloud as this
+is not allowed due to security reasons and will be automatically generated.
+
+{% endinfo_block %}
 
 * Project-wide
 

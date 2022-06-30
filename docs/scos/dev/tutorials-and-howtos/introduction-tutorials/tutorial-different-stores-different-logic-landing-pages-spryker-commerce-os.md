@@ -49,8 +49,8 @@ You can use the same steps for any other logic in the shop.
 
 Override the current home page. There is a set of steps you need to follow to override the current homepage:
 
-1. In the `Communication` layer of the Application module in Zed in `src/Pyz/Zed`, add the `Controller` directory.
-2. Inside the `Controller` directory, extend the `IndexController` to return just a string when calling the `indexAction()`.
+1. In the `Communication` layer of the `Application` module, in Zed, in `src/Pyz/Zed`, add the `Controller` directory.
+2. Inside `Controller`, extend `IndexController` to return just a string when calling `indexAction()`.
 
 ```php
 namespace Pyz\Zed\Application\Communication\Controller;
@@ -122,11 +122,14 @@ class IndexController extends AbstractController
     2. Open the config file `sudo vim /etc/nginx/sites-available/DEMO_development_zed`.
     3. Change `$application_store` to `DEMO`.
     4. Change `server_name` to `~^zed\\.demo\\..+\\.local$`.
-    5. If you use devVM, add a new host to `/etc/hosts` with IP VM.
+    5. If you use dev VM, add a new host to `/etc/hosts` with IP VM.
     6. Save the changes.
 
 2. Restart Nginx by running `sudo /etc/init.d/nginx restart`.
-3. Run `console data:import:store`. This command creates a store record in your `spy_store database` table.
+3. Create a store record in your `spy_store database` table:
+```bash
+console data:import:store
+```
 
 To see the new message for the DEMO store, heck the Backend Office (`https://zed.mysprykershop.com/`) again.
 

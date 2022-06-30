@@ -103,14 +103,14 @@ This tutorial shows how to add a voucher step to the existing out-of-the-box Spr
 	}    
 	```
 
-2. In YvesBootstrap in `src/Pyz/Yves/Router/RouterDependencyProvider`, update the `getRouteProvider` method to use the new Route Provider instead of the core one.
-3. Clear route cache:
+3. In YvesBootstrap in `src/Pyz/Yves/Router/RouterDependencyProvider`, update the `getRouteProvider` method to use the new Route Provider instead of the core one.
+4. Clear route cache:
 
 ```bash
 vendor/bin/console router:cache:warm-up
 ```
 
-4. Add the voucher step class inside `src/Pyz/Yves/CheckoutPage/Process/Steps` and call it `VoucherStep`.
+5. Add the voucher step class inside `src/Pyz/Yves/CheckoutPage/Process/Steps` and call it `VoucherStep`.
 
 {% info_block infoBox "Info" %}
 
@@ -221,7 +221,7 @@ class VoucherStep extends AbstractBaseStep implements StepWithBreadcrumbInterfac
 
 {% endinfo_block %}
 
-1. To add the step to `StepFactory`, in `src/Pyz/Yves/CheckoutPage/Process`, extend the core `StepFactory`.
+6. To add the step to `StepFactory`, in `src/Pyz/Yves/CheckoutPage/Process`, extend the core `StepFactory`.
 
 ```php
 namespace Pyz\Yves\CheckoutPage\Process;
@@ -275,7 +275,7 @@ class StepFactory extends SprykerShopStepFactory
 }
 ```
 
-5. To get the step factory to work, extend `CheckoutPageFactory` to use the new factory instead of the core one.
+7. To get the step factory to work, extend `CheckoutPageFactory` to use the new factory instead of the core one.
 
 ```php
 namespace Pyz\Yves\CheckoutPage;
@@ -295,7 +295,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 }
 ```
 
-6. Extend `CheckoutController` in `src/Pyz/Yves/CheckoutPage/Controller`.
+8. In `src/Pyz/Yves/CheckoutPage/Controller`, extend `CheckoutController`.
 
 Add a controller action and call it `voucherAction`.
 
@@ -327,9 +327,9 @@ class CheckoutController extends SprykerShopCheckoutController
 ```
 
 The step is now created:
-- Go to the shop
-- Add any product to the cart
-- Checkout
+1. Go to the shop.
+2. Add any product to the cart.
+3. Check out.
 
 The Voucher step must be working now.
 
@@ -504,7 +504,7 @@ In the `VoucherForm` form class, you have already added the `property_path` to t
 
 To finish the binding, in `src/Pyz/Shared/Checkout/Transfer`, extend `QuoteTransfer` and call it `checkout.transfer.xml`.
 
-When you add a new schema with exactly the same names for the schema file and the transfer object of the core ones, you are extending the transfer object.
+When you add a new schema with the same names for the schema file and the transfer object of the core ones, you extend the transfer object.
 
 Add the voucher field in the `Quote` transfer.
 

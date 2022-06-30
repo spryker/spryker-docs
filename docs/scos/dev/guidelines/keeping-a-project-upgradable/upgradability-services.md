@@ -3,6 +3,17 @@ title: Upgradability services
 description: Overview of upgradability services
 last_updated: Nov 25, 2021
 template: concept-topic-template
+related:
+  - title: Keeping a project upgradable
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
+  - title: Upgrader tool overview
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
+  - title: Running the evaluator tool
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html
+  - title: Running the upgrader tool
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-upgrader-tool.html
+  - title: Define a custom prefix for core entity names
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/configure-a-custom-prefix-for-core-entity-names.html
 ---
 
 

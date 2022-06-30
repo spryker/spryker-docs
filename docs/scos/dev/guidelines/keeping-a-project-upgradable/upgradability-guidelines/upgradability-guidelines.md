@@ -2,6 +2,15 @@
 title: Upgradability guidelines
 description: Find solutions to Evaluator errors
 template: concept-topic-template
+related:
+  - title: Entity name is not unique
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/entity-name-is-not-unique.html
+  - title: Private API is extended
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-extended.html
+  - title: Private API is used on the project level
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-used-on-the-project-level.html
+  - title: Private API method is overridden on the project level
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-method-is-overridden-on-the-project-level.html
 ---
 
 The documents in this section will help you resolve the issues related to code evaluation in a way that keeps your code upgradable and up to date with Spryker's and industry coding standards.

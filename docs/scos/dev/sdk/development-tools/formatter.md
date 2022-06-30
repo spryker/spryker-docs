@@ -19,6 +19,25 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/development-tools/formatter.html
   - /docs/scos/dev/sdk/202009.0/development-tools/formatter.html
   - /docs/scos/dev/sdk/202108.0/development-tools/formatter.html
+related:
+  - title: Architecture sniffer
+    link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
+  - title: Code sniffer
+    link: docs/scos/dev/sdk/development-tools/code-sniffer.html
+  - title: Performance audit tool- Benchmark
+    link: docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
+  - title: PHPStan
+    link: docs/scos/dev/sdk/development-tools/phpstan.html
+  - title: SCSS linter
+    link: docs/scos/dev/sdk/development-tools/scss-linter.html
+  - title: TS linter
+    link: docs/scos/dev/sdk/development-tools/ts-linter.html
+  - title: Spryk code generator
+    link: docs/scos/dev/sdk/development-tools/spryk-code-generator.html
+  - title: Static Security Checker
+    link: docs/scos/dev/sdk/development-tools/static-security-checker.html
+  - title: Tooling config file
+    link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
 ---
 
 *Formatter* allows you to find and fix code style mistakes and keep the code more readable.

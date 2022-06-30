@@ -19,6 +19,16 @@ redirect_from:
 related:
   - title: Packaging Units feature overview
     link: docs/scos/user/features/page.version/packaging-units-feature-overview.html
+  - title: CRUD Scheduled Prices migration concept
+    link: docs/scos/dev/migration-concepts/crud-scheduled-prices-migration-concept.html
+  - title: Float Stock for Products
+    link: docs/scos/dev/migration-concepts/float-stock-for-products-migration-concept.html
+  - title: Migrating from Twig v1 to Twig v3
+    link: docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
+  - title: Split Delivery migration concept
+    link: docs/scos/dev/migration-concepts/split-delivery-migration-concept.html
+  - title: Silex Replacement migration concept
+    link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
 ---
 
 ## General information

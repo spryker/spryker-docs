@@ -63,8 +63,7 @@ To create a category in the Back Office, follow the steps below.
 
 {% include scos/user/back-office-user-guides/add-images.md %} <!-- To edit, see /_includes/scos/user/back-office-user-guides/add-images.md -->
 
-
-    This opens the **Edit category** page with a success message displayed.
+This opens the **Edit category** page with a success message displayed.
 
 
 {% info_block infoBox "Adding multiple images" %}

@@ -1354,6 +1354,22 @@ entries:
           url: /docs/scos/user/back-office-user-guides/catalog/category/create-categories.html
           include_versions:
           - "202204.0"
+        - title: Assign products to categories
+          url: /docs/scos/user/back-office-user-guides/catalog/category/assign-products-to-categories.html
+          include_versions:
+          - "202204.0"
+        - title: Order products in categories
+          url: /docs/scos/user/back-office-user-guides/catalog/category/order-products-in-categories.html
+          include_versions:
+          - "202204.0"
+        - title: Edit categories
+          url: /docs/scos/user/back-office-user-guides/catalog/category/edit-categories.html
+          include_versions:
+          - "202204.0"
+        - title: Delete categories
+          url: /docs/scos/user/back-office-user-guides/catalog/category/create-categories.html
+          include_versions:
+          - "202204.0"
         - title: Creating categories
           url: /docs/scos/user/back-office-user-guides/catalog/category/creating-categories.html
           include_versions:
@@ -1489,6 +1505,18 @@ entries:
             - "202005.0"
             - "202009.0"
       - title: Product reviews
+        url: /docs/scos/user/back-office-user-guides/catalog/manage-product-reviews.html
+        include_versions:
+        - "202204.0"
+      - title: Product reviews
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
         nested:
         - title: Managing product reviews
           url: /docs/scos/user/back-office-user-guides/catalog/product-reviews/managing-product-reviews.html

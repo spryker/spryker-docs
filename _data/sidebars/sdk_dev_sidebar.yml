@@ -16,4 +16,11 @@ entries:
         url: /docs/sdk/dev/sdk-conventions.html
       - title: Integrating SDK commands to PhpStorm command line tools
         url: /docs/sdk/dev/integrating-sdk-commands-to-php-storm-command-line-tools.html
+      - title: Spryks
+        url: /docs/sdk/dev/spryks/spryks.html
+        nested:
+        - title: Adding a new Spryk
+          url: /docs/sdk/dev/spryks/adding-a-new-spryk.html
+        - title: Spryk configuration reference
+          url: /docs/sdk/dev/spryks/spryk-configuration-reference.html
 

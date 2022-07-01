@@ -59,11 +59,11 @@ Each section contains reference information. Make sure to look up the necessary 
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| STORE RELATION  | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product will be available in.<br>You can select multiple values. |
+| STORE RELATION  | Defines the [stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) the product will be available in. |
 | SKU PREFIX | Unique product identifier that will be used to track unique information related to the product. |
 | NAME | Name that will be displayed for the product on the Storefront. |
 | DESCRIPTION | Description that will be displayed for the product on the Storefront. |
-| NEW FROM <br>NEW TO  | Defines the period of time for which: <br><ul><li>A [dynamic product label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html)</li></ul><br> You can either select no dates or both. |
+| NEW FROM <br>NEW TO  | Defines the period of time for which the following applies: <br><ul><li>A [dynamic product label](/docs/scos/user/features/{{page.version}}/product-labels-feature-overview.html) *New* will be assigned to the product.</li><li>The product will be assigned to the *New* [category](/docs/scos/user/features/{{page.version}}/category-management-feature-overview.html)</li></ul>. |
 
 ## Define prices
 
@@ -80,15 +80,16 @@ On the **Price & Tax** tab, do the following:
 
 | ATTRIBUTE |DESCRIPTION |
 | --- | --- |
-| MERCHANT PRICE DIMENSION | B2B only<br>Defines the [merchant](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) the prices will apply to.<br>If you select **Default prices**, the prices will apply to all customers.<br>To [manage merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html) go to **Marketplace&nbsp;<span aria-label="and then">></span> Merchant Relations**. |
-| Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#product-information-inheritance) the price you enter here. |
-|Default<br>Original | Default price is the price a customer pays for the product. An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
+| MERCHANT PRICE DIMENSION | [Merchant relation](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) to apply the prices to.<br>If you select **Default prices**, the prices will apply to all customers.<br>To create one, see [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/create-merchant-relations.html). |
+| Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#product-information-inheritance) the price you enter for the abstract product. |
+| DEFAULT price | Default price is the price a customer pays for the product.
+| ORIGINAL price | An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
 | TAX SET | Conditions under which the product will be taxed.<br>For instructions on creating tax sets, see [Create tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/create-tax-rates.html). |
 
 #### Default and original prices on the Storefront
 
-If you want to display the difference in price in order to show what the price was before and how it changed, you add both Default and Original prices.
-The default prices are displayed in the online store as a current price, while the original one is displayed strikethrough.
+If you want to display the difference in price in order to show what the price was before and how it changed, you add both default and original prices.
+The default prices are displayed in the online store as a current price, while the original one is displayed as a strikethrough.
 ![Default and Original prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Products/Products/Managing+products/Products:+Reference+Information/default-and-original-prices.gif)
 
 ## Define product variants
@@ -114,13 +115,13 @@ On the **Variants** tab, depending on the product type, do one of the following:
 
 ### Reference information: Define product variants
 
-{% info_block warningBox "Only for abstract products" %}
+{% info_block infoBox "Only for abstract products" %}
 
 The reference information in this section is relevant only for abstract products. When you create a product bundle, a single product variant is created automatically.
 
 {% endinfo_block %}
 
-In the *Variants* tab, you can see all the existing [super attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). To create a super attribute, see [Create product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html).
+In the **Variants** tab, you can see all the existing [super attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). To create a super attribute, see [Create product attributes](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/attributes/create-product-attributes.html).
 
 You can select as many super attributes as you need and define one or more values for them. For each product attribute value you select, a product variant will be created. After creating the abstract product, you will be able to create new product variants based on the super attributes you select when creating the abstract product.
 
@@ -128,18 +129,18 @@ You can select as many super attributes as you need and define one or more value
 
 1. Click the **SEO** tab.
 2. Enter any of the following for needed locales:
-    * **Title**
-    * **Keywords**
-    * **Description**
+    * **TITLE**
+    * **KEYWORDS**
+    * **DESCRIPTION**
 3. Click **Next >** and follow [Add images](#add-images).
 
 ### Reference information: Define meta information
 
-| ATTRIBUTE |DESCRIPTION |
+| ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-|Title| Meta title that will be used for the abstract product.|
-|Keywords| Meta keywords that will be used for the abstract product. |
-|Description| Meta description that will be used for the abstract product.|
+| TITLE | Meta title that is to be displayed on search pages and browser tabs.|
+| KEYWORDS | Meta keywords that will be used by some search engines to match search results to search queries.|
+| DESCRIPTION | Meta description that is to be displayed on search pages. |
 
 ## Optional: Add images
 

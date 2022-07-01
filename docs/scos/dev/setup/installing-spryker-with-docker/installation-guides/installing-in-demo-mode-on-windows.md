@@ -55,10 +55,10 @@ Follow the steps to install Spryker in Demo Mode:
     git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202204.0-p1 --single-branch ./b2b-marketplace-demo-shop
     ```
 
-   * Clone the Shop Suite repository:
+   * Clone the Master Suite repository:
   
     ```shell
-    git clone https://github.com/spryker-shop/suite.git -b 202204.0-p1 --single-branch ./shop-suite-demo-shop
+    git clone https://github.com/spryker-shop/suite.git -b 202204.0-p1 --single-branch ./master-suite-demo-shop
     ```
 
 
@@ -88,10 +88,10 @@ Follow the steps to install Spryker in Demo Mode:
     cd b2b-marketplace-demo-shop
     ```
 
-    * Shop Suite repository:
+    * Master Suite repository:
     
     ```bash
-    cd shop-suite-demo-shop
+    cd master-suite-demo-shop
     ```
 
 {% info_block warningBox "Verification" %}

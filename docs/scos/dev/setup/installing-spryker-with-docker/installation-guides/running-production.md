@@ -43,12 +43,12 @@ docker/sdk bootstrap
 
 Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after:
 
-* Docker SDK version update;
+* Docker SDK version update.
 * Deploy file update.
 
 {% endinfo_block %}
 
-3. Run the command to generate docker images for each application:
+3. Generate docker images for each application:
 
 ```bash
 docker/sdk export images [tag]
@@ -57,7 +57,7 @@ docker/sdk export images [tag]
 * The `[tag]` argument is an alphanumerical value used for patching the images. The value will be added to the name of each generated image.
 * After running the command, you will see the list of created images in the output.
 
-4. Run the command to generate archives with assets for each application:
+4. Generate archives with assets for each application:
 
 ```bash
 docker/sdk export assets [tag] [path]

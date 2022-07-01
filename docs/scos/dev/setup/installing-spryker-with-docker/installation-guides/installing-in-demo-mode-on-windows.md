@@ -22,7 +22,7 @@ To install Docker prerequisites on Windows with WSL1, follow [Installing Docker 
 
 To install Docker prerequisites on Windows with WSL2, follow [Installing Docker prerequisites on Windows with WSL2](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html).
 
-## Installing Spryker in Demo mode on Windows
+## Install Spryker in Demo mode on Windows
 
 Follow the steps to install Spryker in Demo Mode:
 
@@ -43,7 +43,26 @@ Follow the steps to install Spryker in Demo Mode:
     git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0-p1 --single-branch ./b2b-demo-shop
     ```
 
-5. Depending on the cloned repository, navigate into the cloned folder:
+    * Clone the B2C Marketplace repository:
+  
+    ```shell
+    git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202204.0-p1 --single-branch ./b2c-marketplace-demo-shop
+    ```
+
+   * Clone the B2B Marketplace repository:
+  
+    ```shell
+    git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202204.0-p1 --single-branch ./b2b-marketplace-demo-shop
+    ```
+
+   * Clone the Shop Suite repository:
+  
+    ```shell
+    git clone https://github.com/spryker-shop/suite.git -b 202204.0-p1 --single-branch ./shop-suite-demo-shop
+    ```
+
+
+1. Depending on the cloned repository, navigate into the cloned folder:
 
     * B2C repository:
 
@@ -56,6 +75,24 @@ Follow the steps to install Spryker in Demo Mode:
     ```bash
     cd b2b-demo-shop
     ```
+    
+    * B2C Marketplace repository:
+
+    ```bash
+    cd b2c-marketplace-demo-shop
+    ```
+
+    * B2B Marketplace repository:
+
+    ```bash
+    cd b2b-marketplace-demo-shop
+    ```
+
+    * Shop Suite repository:
+    
+    ```bash
+    cd shop-suite-demo-shop
+    ```
 
 {% info_block warningBox "Verification" %}
 
@@ -63,7 +100,7 @@ Make sure that you are in the correct folder by running the `pwd` command.
 
 {% endinfo_block %}
 
-6. Clone the Docker SDK repository into the same folder:
+1. Clone the Docker SDK repository into the same folder:
 
 ```shell
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
@@ -146,7 +183,7 @@ To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. Y
 
 {% endinfo_block %}
 
-## Getting the list of useful commands
+## Get the list of useful commands
 
 To get the full and up-to-date list of commands, run `docker/sdk help`.
 

@@ -46,7 +46,26 @@ To install Docker prerequisites, follow one of the guides:
     ```shell
     git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0-p1 --single-branch ./b2b-demo-shop
     ```
-4. Depending on the cloned repository, navigate into the cloned folder:
+
+   * Clone the B2C Marketplace repository:
+  
+    ```shell
+    git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202204.0-p1 --single-branch ./b2c-marketplace-demo-shop
+    ```
+
+   * Clone the B2B Marketplace repository:
+  
+    ```shell
+    git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202204.0-p1 --single-branch ./b2b-marketplace-demo-shop
+    ```
+
+   * Clone the Shop Suite repository:
+  
+    ```shell
+    git clone https://github.com/spryker-shop/suite.git -b 202204.0-p1 --single-branch ./shop-suite-demo-shop
+    ```
+
+1. Depending on the cloned repository, navigate into the cloned folder:
 
     * B2C repository:
 
@@ -59,6 +78,25 @@ To install Docker prerequisites, follow one of the guides:
     ```bash
     cd b2b-demo-shop
     ```
+
+    * B2C Marketplace repository:
+
+    ```bash
+    cd b2c-marketplace-demo-shop
+    ```
+
+    * B2B Marketplace repository:
+
+    ```bash
+    cd b2b-marketplace-demo-shop
+    ```
+
+    Shop Suite repository:
+    
+    ```bash
+    cd shop-suite-demo-shop
+    ```
+
 
 {% info_block warningBox "Verification" %}
 
@@ -189,16 +227,15 @@ $config[SchedulerJenkinsConstants::JENKINS_CONFIGURATION] = [
 
 ## Configure and start the instance
 
-
 1. Bootstrap the local Docker setup for demo:
 
 ```shell
-docker/sdk bootstrap
+docker/sdk bootstrap deploy.dev.yml
 ```
 
 {% info_block warningBox "Bootstrap" %}
 
-Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after:
+Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after the following:
 
 * Docker SDK version update.
 * Deploy file update.
@@ -248,7 +285,7 @@ To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. Y
 
 {% endinfo_block %}
 
-## Getting the list of useful commands
+## Get the list of useful commands
 
 To get the full and up-to-date list of commands, run `docker/sdk help`.
 

@@ -108,7 +108,7 @@ Learn how to generate Docker images and assets for a production environment in [
 
 ## Next steps
 
-Once you've selected and installation mode, follow one of the guides below:
+Once you've selected an installation mode, follow one of the guides below:
 
 * [Installing in Development mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html)
 * [Installing in Development mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-windows.html)

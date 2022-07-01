@@ -30,7 +30,7 @@ Onboarding to PaaS+ happens in two steps:
 
 ## 1. Get your project ready for PaaS+  
 
-Before you can start managing the upgrades of your project with PaaS+, fulfill the following prerequisites:
+Before you can start managing the upgrades of your project with PaaS+, fulfill the following prerequisites.
 
 ### 1.1. Update each module to the latest version
 
@@ -38,66 +38,65 @@ Spryker upgrader provides automatic minor and patch updates for the current vers
 
 ### 1.2. Make your code compliant with Spryker Quality Gate
 
-Spryker Quality Gate contains code checkers that ensure code compliance with Srpyker development and customization guidelines. When an application is compliant with the guidelines, it can safely take minor and patch updates, even if it’s highly customized.
+Spryker Quality Gate contains code checkers that ensure code compliance with Srpyker development and customization guidelines. When an application is compliant with the guidelines, it can take minor and patch updates without breaking anything, even if it’s highly customized.
 
 For instructions on making your code compliant with the guidelines, see [Keeping a project upgradable](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html).
 
 **3. Customer should develop their Spryker application using Spryker SDK**
 **Why?** Customers need to use Spryker SDK throughout the development life cycle, to ensure compliance with Spryker architecture and customization best practices.
 
-## 1.4. Include E2E testing into your project's development workflow
+### 1.4. Include E2E testing into your project's development workflow
 
 Upgrades are provided as PRs that are automatically created in a project’s repository. To make sure all business functionality works as expected, you will need to review and test the PRs before merging.
 
-## 1.5. Codebase is on GitHub or GitLab
+### 1.5. Migrate the codebase to GitHub or GitLab
 
-At the moment, upgrades are provided only  on repositories using GitHub or GitLab. If your project uses a different git provider, please reach out to your CSM to ensure we can incorporate it in our product roadmap.
+At the moment, upgrades are provided only for repositories on GitHub or GitLab. If you want to use a different git provider, reach out to your CSM, so we can add it to our product roadmap.
 
-## 1.6. Optional: Project should be headless
+### 1.6. Optional: Implement headless design
 
-Currently, the the quality gate does not evaluate frontend customizations. You can either move to headless or apply frontend upgrades manually.
+Currently, the quality gate does not evaluate frontend customizations. You can either move to headless or apply frontend upgrades manually.
 
 //needs better formating
 Disclaimer: As we evolve the product, we will be working on extending functionalities and pre-requirements will be adjusted accordindly.
 
-### Assumptions and Exceptions
-We assume customers are already using Spryker PaaS Cloud services. When not applicable, customer needs to migrate to our Cloud service.
+### 1.7 Migrate to Spryker Cloud Commerce OS
+
+PaaS+ supports only the projects that run on Spryker Cloud Commerce OS (SCCOS).
 
 
 
 ## 2. Onboarding to Spryker CI
-Once you finalize step 1, you will be onboarded to Spryker CI and benefit from Spryker quality gate and automated upgrades.
 
-### Get
+Onboarding to Spryker CI consists of the following steps.
 
-To get started, provide the email of your Spryker Cloud Admin to your CSM. The  Spryker Cloud Admin user will be a super user. They will be able to change repository and invite new users to their workspace.
+### Get initial access
+
+To get started, provide the email of your SCCOS admin to your CSM. The admin user will be a super user. They will be able to change repository and invite new users to their workspace.
 
 Once we receive the admin's email address, we will provision and send you an email invitation to your Spryker CI workspace.
 
 ![Onboarding to Spryker CI](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas-plus/dev/platform-as-a-service-plus.md/onboarding-to-spryker-ci.png)
 
-### 2.1. Go to your $(workspacename) workspace
+### 2.1. Go to your workspace
 
-You receive an email with a one-time invitation token, but your invitation is always active when you sign in at [buddy.works](https://buddy.works). Create your account and accept the invitation to your workspace.
+You receive an email with a one-time invitation token, but your invitation is always active when you sign in at [buddy.works](https://buddy.works). Create your account and accept the invitation to the workspace.
 
 ![Spryker CI invitation](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas-plus/dev/platform-as-a-service-plus.md/spryker-ci-invitation.png)
 
 
 ### 2.2. View projects inside your workspace
 
-Your Spryker CI workspace contains the Spryker Upgrader Service project, as well as a project for each of your environments, like development or production.
+Your workspace contains the Spryker Upgrader Service project, as well as a project for each of your environments, like development or production.
 
 ![Spryker CI projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas-plus/dev/platform-as-a-service-plus.md/spryker-ci-projects.png)
 
 ### 2.3. Invite new users
-*Feature only available for Super Users.
 
 Add new users to your project and assign user permissions. Two roles are available: Super Users (RW) and Regular Users (RO & ability to run pipelines).
 
 
 ### 2.4. Connect your repository
-
-*Feature only available for Super Users.
 
 Connect your repository to a project, before running the pipelines. Open the“Code” section, click on the kebab menu and select "Switch repository or Git provider”.
 
@@ -117,15 +116,14 @@ Main pipeline in each project is triggered when you push to a connected reposito
 
 
 
-## What pipelines are available by default?
+## CI pipelines
 
 ### Main pipeline inside environment-related projects
-The main pipeline inside a project is named as follows:
-<b>*** {environment_name} Pipeline ***</b>.
+Inside a project, there is a main pipeline and sub-pipelines.
 
 ![Spryker CI pipelines](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas-plus/dev/platform-as-a-service-plus.md/spryker-ci-pipelines.png)
 
-The main pipeline is triggered when you push from your connected repository, and it automatically triggers the remaining pipelines, according to the following actions:
+The main pipeline is triggered when you push to your connected repository, and it automatically triggers the remaining pipelines, according to the following actions:
 <img width="186" alt="Image7" src="https://user-images.githubusercontent.com/83701393/176355028-49e4b72e-19d0-49f1-9216-6ff909da7f26.png">
 
 
@@ -137,7 +135,6 @@ Build, Quality Gate, and Deployment pipelines are not designed to run independen
 
 {% endinfo_block %}
 
-Please note, the sub-pipelines (i.e. Build, Quality Gate and Deployment) **should not be run independently **and would lead to deployment failure.
 
 1. Build:
 * Builds Docker images
@@ -156,16 +153,13 @@ Please note, the sub-pipelines (i.e. Build, Quality Gate and Deployment) **shoul
 3. Deployment: Deploys to your specific AWS environment.
 
 
-## Spryker Upgrader service
+## Spryker Upgrader Service
 
-The upgrader service provides automated upgrades for your Spryker application:
+The upgrader service provides automated upgrades for your application as follows:
 - Scheduled once per week.
-- Upgrades for minor and patches are automatically prepared in the form of a pull request (PR) created in your connected Git repository.
+- Upgrades for minor and patches are automatically prepared in the form of pull requests in your connected Git repository.
 - Code changes, like deprecations, are automatically applied.
-- If major releases are available, a PR contains a link to instructions for manual upgrade.
-- Customers shall review and perform end to end testing for each prepared PR, before applying suggested changes.
-
-
+- If major releases are available, PRs contain links to instructions for manual upgrades.
 
 ## Support for Spryker CI
 

@@ -3,7 +3,7 @@ entries:
   - product: PBC
     nested:
       - title: Bazaarvoice
-        url: /docs/pbc/all/psp/bazaarvoice/bazaarvoice.html
+        url: /docs/pbc/all/bazaarvoice/bazaarvoice.html
       - title: PSP (Payment Service Provider)
         url: /docs/pbc/all/psp/psp.html
         nested:
@@ -37,4 +37,4 @@ entries:
           - title: Payone
             url: /docs/pbc/all/psp/payone/payone.html
       - title: Usercentrics
-        url: /docs/pbc/all/psp/usercentrics/usercentrics.html
+        url: /docs/pbc/all/usercentrics/usercentrics.html

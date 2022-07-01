@@ -27,7 +27,7 @@ You can use Unzer in a single seller context or a marketplace context.
 
 ### Payment methods available in the integration
 
-| PAYMENT METHOD | SINGLE SELLER COMPITABLE | MARKETPLACE COMPITABLE |
+| PAYMENT METHOD | SINGLE SELLER COMPATIBLE | MARKETPLACE COMPATIBLE |
 |-|-|-|
 | Credit Card | &check; | &check; |
 | Sofort | &check; | &check; |

@@ -2,6 +2,8 @@ title: PBC guides
 entries:
   - product: PBC
     nested:
+      - title: Bazaarvoice
+        url: /docs/pbc/all/psp/bazaarvoice/bazaarvoice.html
       - title: PSP (Payment Service Provider)
         url: /docs/pbc/all/psp/psp.html
         nested:
@@ -32,3 +34,7 @@ entries:
                 url: /docs/pbc/all/psp/unzer/customise-the-credit-card-display-in-your-payment-step.html
               - title: Domain model & relationships
                 url: /docs/pbc/all/psp/unzer/domain-model-and-relationships.html
+          - title: Payone
+            url: /docs/pbc/all/psp/payone/payone.html
+      - title: Usercentrics
+        url: /docs/pbc/all/psp/usercentrics/usercentrics.html

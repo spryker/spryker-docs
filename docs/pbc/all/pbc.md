@@ -10,7 +10,7 @@ Utilizing the ideas of Packaged Business Capabilities, Spryker ensures that the 
 
 ## Spryker PBCs
 
-| Name | Description | Benefits |
+| NAME | DESCRIPTION | BENEFITS |
 | --- | --- | --- |
 | Carrier Management | The Spryker Cloud Commerce OS integrates with several shipping carriers and methods and lets you define their availability, price and tax set. During the checkout process, customers have the option to select their preferred shipment method and relevant carrier. | Ensure quick and cost effective delivery. |
 | Cart & Checkout | The Spryker Cloud Commerce OS offers a powerful and fully-featured online shopping cart and checkout process that acts as a gateway for customer and order management. Allow your customers to easily organize and manage their purchases and apply vouchers and coupon codes. Based on their roles and permissions, your B2B customers can easily add or remove products, share the cart, and manage their purchases. | Increase conversion rates and reduce drop-off rates with a feature-rich Checkout & Cart and offer additional B2B specific, permission-related functionalities. |
@@ -41,7 +41,15 @@ Utilizing the ideas of Packaged Business Capabilities, Spryker ensures that the 
 
 ### Application PBCs
 
-| Name | Description | Benefits |
+| NAME | DESCRIPTION | BENEFITS |
 | --- | --- | --- |
 | Back Office | The Spryker Commerce OS includes a powerful and user-friendly Administration Interface that allows you to manage all back-office tasks with ease. Easily manage and create customer accounts and define who can access the Administration Interface. Keep track of all your internal processes including the management of your products, orders, customers and many more. | Keep your back-end processes running efficiently, protect your data and administer all accounts. |
 | Storefront | The Spryker Cloud Commerce OS offers a fully functional, out-of-the-box online shop application that includes all regular functionalities and workflows; it can be used as a boilerplate to kick-start your project. | Easily start your online shop from our boilerplate solution. |
+
+## ACP (App Composition Platform) PBCs
+
+| NAME | CATEGORY |
+| --- | --- |
+| [Bazaarvoice](/docs/pbc/all/psp/bazaarvoice/bazaarvoice.html) | Ratings & Reviews |
+| [Payone](/docs/pbc/all/psp/payone/payone.html) | PSP (Payment Service Provider) |
+| [Usercentrics](/docs/pbc/all/psp/usercentrics/usercentrics.html) | (CMP) Consent Management Platform |

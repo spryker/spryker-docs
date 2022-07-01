@@ -21,7 +21,7 @@ This doc describes how to add scheduled prices to abstract products and product 
 
 * Review the [reference information](#reference-information-add-scheduled-prices-to-an-abstract-product) before you start, or look up the necessary information as you go through the process.
 
-## Import scheduled prices for an abstract products or product bundle
+## Import scheduled prices for abstract products and product bundles
 
 If you want to add more than five scheduled prices, it might be quicker to [import the scheduled prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html).
 

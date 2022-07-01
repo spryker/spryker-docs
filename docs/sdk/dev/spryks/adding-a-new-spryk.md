@@ -1,7 +1,7 @@
 ---
 title: Adding a new Spryk
 description: Find out how you can add a new Spryk
-template: howto-guide-template
+template: concept-topic-template
 related: 
   - title: Spryk configuration reference
     link: docs/sdk/dev/spryks/spryk-configuration-reference.html

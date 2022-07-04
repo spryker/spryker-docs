@@ -80,7 +80,7 @@ After installing and running the example app, you can try its functionality. Dep
 * `http://glue.de.b2c-demo-shop.local/react/`—when installed it in the VM;
 * `http://react.local`—when installed on a separate web server.
 
-To get a list of Glue API requests that have been used to build a page:
+To get a list of Glue API requests that have been used to build a page, follow these steps:
 
 1. Open the F12 menu of your web browser.
 2. Activate the **Console** section.

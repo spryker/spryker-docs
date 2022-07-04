@@ -40,11 +40,13 @@ protected function createImportGenerator(Collection $collection): \Generator
 }
 ```
 
+<!--
 {% info_block infoBox %}
 
 To learn more about the Generators, see the Generators documentation.
-p
+
 {% endinfo_block %}
+-->
 
 ## Handle exceptions
 
@@ -64,8 +66,8 @@ protected function createImportGenerator(Collection $collection): \Generator
         yield; // Turns this method into a `\Generator`
 
         try {
-            // Code that needs to completely run before script is shutdown.
-            // The GracefulRunner takes care of execution and will stop
+            // Code that needs to run completely before the script is shut down.
+            // The GracefulRunner takes care of the execution and will stop
             // after an iteration was completed when a signal was received.
         } catch (YourException $exception) {
             // When a signal is handled you end up here.

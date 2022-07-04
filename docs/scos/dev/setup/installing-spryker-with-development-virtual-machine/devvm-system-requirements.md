@@ -49,11 +49,3 @@ related:
 |**Node.js**| Version >= 12.0.0 |
 |**NPM**| Version >= 6.9.0 |
 |**Intranet**| Back Office application (Zed) must be secured in an Intranet (using VPN, Basic Auth, IP Allowlist, DMZ, etc.) |
-
-### Supported browsers
-
-The Spryker Commerce OS supports the following browsers for all frontend-related projects/products ([B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html), [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html), [Master Suite](/docs/scos/user/intro-to-spryker/master-suite.html)):
-
-| Desktop (Yves and Zed) | Mobile (Yves only) | Tablet (Yves only) |
-| --- | --- | --- |
-| **Browsers**: <ul><li> Windows, macOS: Chrome (latest version)</li> <li>Windows: Firefox (latest version)</li><li>Windows: IE 11</li><li>Windows: Edge (latest version)</li><li>macOS: Safari (latest version)</li></ul> **Windows versions**:<ul><li>Windows 10</li><li>Windows 7</li></ul>**macOS versions**:<ul><li> Catalina (basically, the latest released version)</li></ul>**Screen resolutions**:<ul><li>1024-1920 width</li></ul>|**Browsers**: <ul><li>iOS: Safari</li><li>Android: Chrome</li></ul>**Screen resolutions**:<ul><li>360x640 (e.g. Samsung Galaxy S8 or S9)</li><li>375x667 (e.g. iPhone 7 or 8)</li><li>iPhone X, Xs, Xr</li></ul>**Android versions**:<ul><li>8.0</li></ul>**iOS versions**:<ul><li>iOS 13 (basically the latest released version)</li></ul> | **Browsers**: <ul><li>iOS: Safari</li><li>Android: Chrome</li></ul>**iOS versions**:<ul><li>iOS 13</li></ul>**Screen resolutions**:<ul><li>1024x703 (e.g. iPad Air)</li></ul>|

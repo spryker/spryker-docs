@@ -48,7 +48,7 @@ Review the system and software requirements in the table and configure them usin
 
 Follow the steps to install and configure the required software:
 
-1. Download and install [Docker Desktop (Mac)](https://desktop.docker.com/mac/stable/amd64/Docker.dmg).
+1. Download and install [Docker Desktop (Mac)](https://docs.docker.com/desktop/mac/install/).
 
 2. Accept the privilege escalation request "Docker Desktop needs privileged access.".
 

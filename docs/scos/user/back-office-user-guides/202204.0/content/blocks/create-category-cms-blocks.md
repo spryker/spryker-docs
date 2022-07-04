@@ -42,8 +42,8 @@ This topic describes how to create category CMS blocks in the Back Office.
 
 ## Reference information: Create category CMS blocks
 
-| ATTRIBUTE  | DESCRIPTION: REGULAR CMS BLOCK |
-| --- | --- | --- |
+| ATTRIBUTE  | DESCRIPTION |
+| --- | --- | 
 | STORE RELATION |  Stores to display the block in. |
 | TEMPLATE | Defines the layout of the CMS Block. A developer can [create more templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-block-template). |
 | NAME | You will use this name when [assigning the block to a slot in a page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#assigning-cms-blocks-to-slots). |

@@ -23,6 +23,13 @@ redirect_from:
   - /docs/docker-installation-prerequisites
   - /docs/en/docker-installation-prerequisites
   - /docs/scos/dev/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites-linux.html
+related:
+  - title: Installing Docker prerequisites on MacOS
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html
+  - title: Installing Docker prerequisites on Windows with WSL1
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html
+  - title: Installing Docker prerequisites on Windows with WSL2
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html
 ---
 
 This document describes the prerequisites for installing Spryker in Docker on Linux.

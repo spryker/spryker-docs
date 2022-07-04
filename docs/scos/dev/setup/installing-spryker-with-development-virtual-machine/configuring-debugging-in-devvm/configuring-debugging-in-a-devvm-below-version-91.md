@@ -23,6 +23,9 @@ redirect_from:
   - /v1/docs/debugging-setup-prior-vm91
   - /v1/docs/en/debugging-setup-prior-vm91
   - /docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant-with-vm-below-version-91.html
+related:
+  - title: Configuring debugging in DevVM
+    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html
 ---
 
 This article describes how to configure debugging in a development environment for VM below version 91.

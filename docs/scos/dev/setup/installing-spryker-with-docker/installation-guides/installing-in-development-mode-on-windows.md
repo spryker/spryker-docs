@@ -12,6 +12,9 @@ redirect_from:
   - /docs/en/installing-in-development-mode-on-windows
   - /v6/docs/installing-in-development-mode-on-windows
   - /v6/docs/en/installing-in-development-mode-on-windows
+related: 
+  - title: Database access credentials
+    link: docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
 
 ---
 

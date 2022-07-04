@@ -20,7 +20,13 @@ redirect_from:
   - /v4/docs/en/b2c-demo-shop-installation-windows-with-development-virtual-machine
   - /docs/b2c-demo-shop-installation-windows-with-development-virtual-machine
   - /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-windows-with-development-virtual-machine.html
-
+related:
+  - title: DevVM system requirements
+    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html
+  - title: Installing Spryker with development virtual machine
+    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html
+  - title: Installing Spryker with DevVM on MacOS and Linux
+    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html
 ---
 
 To install the Demo Shop for [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C](/docs/scos/user/intro-to-spryker/b2c-suite.html) implementations on Windows with Spryker development virtual machine (DevVM), follow the steps below.

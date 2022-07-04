@@ -13,6 +13,11 @@ redirect_from:
   - /v6/docs/upgrading-to-the-latest-version-of-nodejs-inside-devwm
   - /v6/docs/en/upgrading-to-the-latest-version-of-nodejs-inside-devwm
   - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/upgrading-to-the-latest-version-of-node.js-inside-devwm.html
+related:
+  - title: Configuring Spryker after installing with DevVM
+    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html
+  - title: Configuring database servers
+    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html
 ---
 
 As per [Spryker DevVM system requirements](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html), we recommend using 12.x version of Node.js. In the [devvm version 3.1.0](https://github.com/spryker/devvm/releases/tag/v3.1.0), we have added support of Node.js 12.x. Earlier devvm versions require a manual upgrade of Node.js.

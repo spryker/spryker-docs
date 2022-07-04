@@ -32,9 +32,19 @@ Review the system and software requirements in the table and configure them usin
 | --- | --- |
 | Docker | 18.09.1 or higher |
 | Docker Compose | 1.28 or 1.29 |  
-| vCPU | 4 or more |
-| RAM  | 4GB or more |
+| vCPU | 6 or more |
+| RAM  | 16GB or more |
 | Swap  | 2GB or more |
+
+<!-- NAS Synology
+Intel i7 processor or equivalent
+vCPU 6 or more
+RAM 16Gb or more
+Swap 2Gb or more
+SSD
+Admin access (port mapping, file system mounting, etc.)
+
+-->
 
 
 ## Installing and configuring required software
@@ -57,10 +67,10 @@ Signup for Docker Hub is not required.
 
 5. Update Memory and Swap Limits:
 
-    1. Go to **Resources** > **ADVANCED**.
-    2. Set **CPUs:** to "4" or higher.
-    3. Set **Memory:** to "4.00 GB" or higher.
-    4. Set **Swap:** to "2.00 GB" or higher.
+    1. Go to **Resources > ADVANCED**.
+    2. Set **CPUs:** to `4` or higher.
+    3. Set **Memory:** to `16.00 GB` or higher.
+    4. Set **Swap:** to `2.00 GB` or higher.
     5. Set the desired **Disk image size:**.
     6. Select the desired **Disk image location**.
     7. Select **Apply & Restart**.

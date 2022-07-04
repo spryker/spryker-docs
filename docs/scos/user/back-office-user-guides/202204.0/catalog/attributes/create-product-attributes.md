@@ -43,7 +43,7 @@ Review the [reference information](#reference-information-create-product-attribu
     1. Select **TRANSLATE PREDEFINED VALUES**.
     2. Enter a **Translation** for the predefined parameter values for all the locales.
 12. Click **Save**.
-    This opens the **View Product Attribute** page with a success message displayed. Now you can use this attribute for [creating abstract products](/docs/scos/user/back-office-user-guides/202204.0/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html).
+    This opens the **View Product Attribute** page with a success message displayed. Now you can use this attribute for [creating abstract products](/docs/scos/user/back-office-user-guides/202204.0/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 
 **Tips and tricks**
 <br>To apply a translation to all the other locales, select ![copy to other languages icon](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Catalog/Attributes/Creating+product+attributes/copy-to-other-languages-icon.png) *Copy to other languages* next to the **TRANSLATION** you want to apply.
@@ -62,5 +62,5 @@ Review the [reference information](#reference-information-create-product-attribu
 
 ## Next steps
 
-* Assign the attribute to a new abstract product. For instructions, see [Create abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html).
+* Assign the attribute to a new abstract product. For instructions, see [Create abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 * Assign the attribute to an existing abstract product. For instructions, see [Assign product attributes to abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/assign-product-attributes-to-abstract-products.html)

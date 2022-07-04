@@ -31,7 +31,7 @@ Review the [reference information](#reference-information-assign-product-attribu
 
 ![Add product attributes to a product variant](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/catalog/products/manage-product-variants/assign-product-attributes-to-product-variants.md/add-product-attributes-to-product-variants.png)
 
-6. Click **Save**.
+7. Click **Save**.
     A window with a success message opens. You've assigned product attributes to the abstract product.
 
 

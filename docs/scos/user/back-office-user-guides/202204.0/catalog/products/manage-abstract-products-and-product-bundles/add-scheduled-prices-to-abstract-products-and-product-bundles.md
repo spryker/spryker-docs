@@ -53,8 +53,8 @@ If you want to add more than five scheduled prices, it might be quicker to [impo
 | CONCRETE SKU | Unique identifier of a concrete product to import the scheduled price for. The field is disabled because you are adding a scheduled price to a particular abstract product. |
 | STORE | [Store](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html) in which the scheduled price will be displayed. If you want to add the scheduled price for multiple stores, you can repeat the full procedure for all of the needed stores.  |
 | CURRENCY | Currency in which the scheduled price is defined. If you want to add the scheduled price for multiple currencies, you can repeat the full procedure for all of the needed currencies.  |
-| NET PRICE | Net value of the product defined by the scheduled price. |
-| GROSS PRICE |Gross value of product defined by the scheduled price.  |
+| NET PRICE | Net value of the product during the time period defined in **START FROM (INCLUDED)** and **FINISH AT (INCLUDED)**. |
+| GROSS PRICE |Gross value of product during the time period defined in **START FROM (INCLUDED)** and **FINISH AT (INCLUDED)**.  |
 | PRICE TYPE |  Price type in which price schedule is defined: DEFAULT or ORIGINAL.|
 | START FROM (INCLUDED) | Date and time on which the scheduled price will be applied. |
 | FINISH AT (INCLUDED) | Date and time on which the product price will be reverted to the regular price. |

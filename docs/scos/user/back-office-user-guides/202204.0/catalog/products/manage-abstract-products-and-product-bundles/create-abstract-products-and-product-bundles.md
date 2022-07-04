@@ -27,8 +27,8 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/discontinuing-products.html
   - title: Adding Product Alternatives
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/adding-product-alternatives.html
-  - title: Adding Volume Prices
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html
+  - title: Add Volume Prices
+    link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-abstract-products-and-product-bundles/add-volume-prices-to-abstract-products.html
 ---
 
 This doc describes how to create [abstract products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) and [product bundles](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html).
@@ -80,7 +80,7 @@ On the **Price & Tax** tab, do the following:
 
 | ATTRIBUTE |DESCRIPTION |
 | --- | --- |
-| MERCHANT PRICE DIMENSION | [Merchant relation](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) to apply the prices to.<br>If you select **Default prices**, the prices will apply to all customers.<br>To create one, see [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/create-merchant-relations.html). |
+| MERCHANT PRICE DIMENSION | [Merchant relation](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) to apply the prices to.<br>To create one, see [Create merchant relations](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchant-relations/create-merchant-relations.html)<br> If you select **Default prices**, the prices will apply to all customers.<br>. |
 | Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#product-information-inheritance) the price you enter for the abstract product. |
 | DEFAULT price | Default price is the price a customer pays for the product.
 | ORIGINAL price | An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
@@ -138,9 +138,9 @@ You can select as many super attributes as you need and define one or more value
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| TITLE | Meta title that is to be displayed on search pages and browser tabs.|
+| TITLE | Meta title to display on search pages and browser tabs.|
 | KEYWORDS | Meta keywords that will be used by some search engines to match search results to search queries.|
-| DESCRIPTION | Meta description that is to be displayed on search pages. |
+| DESCRIPTION | Meta description to be displayed on search pages. |
 
 ## Optional: Add images
 
@@ -154,13 +154,13 @@ This opens the **Edit Product Abstract:{product SKU} page with a success message
 | --- | --- |
 | *DEFAULT* locale | Images from this locale will be displayed for the product in the locales images are not added for. |
 | IMAGE SET NAME | Image set name. For a multi-word name, instead of spaces, use dashes and underscores. |
-| SMALL IMAGE URL | A public URL to fetch a low-resolution image from. |
-| LARGE IMAGE URL | A public URL to fetch a high-resolution image from. |
+| SMALL IMAGE URL | A public URL to fetch a low-resolution image from. The image will be displayed on product catalog pages. |
+| LARGE IMAGE URL | A public URL to fetch a high-resolution image from. The image will be displayed on product details pages. |
 | SORT ORDER | A number that will define the position of the image on a page relatively to the sort order value of the other images. An image with a smaller sort order value is displayed higher on a page. |
 
 
 ## Next steps
 
-* [Add volume prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html)
-* [Add scheduled prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/adding-scheduled-prices-to-abstract-products.html)
-* [Edit abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/editing-abstract-products.html)
+* [Add volume prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/add-volume-prices-to-abstract-products.html)
+* [Add scheduled prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/add-scheduled-prices-to-abstract-products.html)
+* [Edit abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/edit-abstract-products-and-product-bundles.html)

@@ -1,6 +1,6 @@
 .highlight,
 pre {
-    background: $dark-2;
+    background: $black;
     color: $white;
     padding: 10px;
     word-break: break-word;
@@ -81,7 +81,7 @@ pre {
 }
 
 .code-header {
-    background: $dark-2;
+    background: $black;
     color: $white;
     border-bottom: 1px solid $grey-darker;
     border-radius: 4px 4px 0 0;
@@ -150,4 +150,11 @@ table {
         padding: 2px 8px;
         font-size: 14px;
     }
+}
+
+code {
+    background-color: $black;
+    color: $white;
+    font-style: italic;
+    padding: 0 0.3rem;
 }

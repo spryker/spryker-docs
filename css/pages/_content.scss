@@ -56,6 +56,15 @@
         }
     }
 
+    a {
+        font-style: italic;
+    }
+
+    a::after {
+        content: ' 🔗';
+        font-style: normal;
+    }
+
     table {
         max-width: 100%;
         width: 100%;
@@ -505,7 +514,7 @@
 .post-meta {
     font-size: 14px;
     line-height: 24px;
-    color: $grey-6;
+    color: $grey-8;
     width: 100%;
     margin: 0 0 16px;
 }

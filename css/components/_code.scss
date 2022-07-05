@@ -102,7 +102,7 @@ pre {
     display: inline-flex;
     vertical-align: top;
     color: $grey;
-    font-size: 20px;
+    font-size: 1rem;
     transition: color .2s linear;
     padding: 5px;
     position: relative;
@@ -114,17 +114,17 @@ pre {
     &:before {
         content: 'Copied!';
         position: absolute;
+        color: $red;
         top: 0;
         right: 100%;
-        margin: 0 5px 0 0;
-        font-size: 17px;
+        margin: 0 0.3rem 0 0;
         opacity: 0;
         pointer-events: none;
     }
 
     &.active {
         &:before {
-            animation: fade-in-out 1s linear 1;
+            animation: fade-in-out 1.5s ease 1;
         }
     }
 }

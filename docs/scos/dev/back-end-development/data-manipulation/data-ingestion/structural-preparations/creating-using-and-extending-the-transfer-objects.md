@@ -335,5 +335,5 @@ You can use the following definitions to generate the related code:
 
 * Add shared transfer schema.
 
-See the [Spryk](/docs/scos/dev/sdk/development-tools/spryks.html) documentation for details.
+See the [Spryk](/docs/sdk/dev/spryks/spryks.html) documentation for details.
  

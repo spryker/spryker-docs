@@ -21,6 +21,11 @@ redirect_from:
   - /v2/docs/en/ht-product-review-feature-configuration
   - /v1/docs/ht-product-review-feature-configuration
   - /v1/docs/en/ht-product-review-feature-configuration
+related:
+  - title: Product Rating and Reviews feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-rating-reviews-feature-walkthrough.html
+  - title: Product Rating and Reviews feature overview
+    link: docs/scos/user/features/site.version/product-rating-and-reviews-feature-overview.html
 ---
 
 ## Configure the maximum rating

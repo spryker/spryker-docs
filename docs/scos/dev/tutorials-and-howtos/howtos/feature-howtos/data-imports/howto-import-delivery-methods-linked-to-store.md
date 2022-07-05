@@ -18,14 +18,14 @@ redirect_from:
   - /v4/docs/en/ht-import-delivery-methods-linked-to-store
 related:
   - title: Shipment feature overview
-    link: docs/scos/user/features/page.version/shipment-feature-overview.html
-  - title: Creating a Carrier Company
-    link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/creating-carrier-companies.html
-  - title: Creating and Managing Delivery Methods
-    link: docs/scos/user/back-office-user-guides/page.version/administration/delivery-methods/creating-and-managing-delivery-methods.html
+    link: docs/scos/user/features/site.version/shipment-feature-overview.html
+  - title: Creating carrier companies
+    link: docs/scos/user/back-office-user-guides/site.version/administration/delivery-methods/creating-carrier-companies.html
+  - title: Creating and managing delivery methods
+    link: docs/scos/user/back-office-user-guides/site.version/administration/delivery-methods/creating-and-managing-delivery-methods.html
 ---
 
-In addition to creating and managing delivery methods in the Back Office <!-- link -->, you can also import them with the stores assigned from a CSV file.
+In addition to [creating](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/add-delivery-methods.html) and [editing delivery methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/edit-delivery-methods.html) in the Back Office, you can also import them with the stores assigned from a CSV file.
 
 By default, the data is stored to the `/ShipmentDataImport/data/import/delivery_method_store.csv` file that contains the following columns:
 

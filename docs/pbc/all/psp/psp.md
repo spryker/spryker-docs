@@ -9,20 +9,15 @@ Meet your customers’ demands by offering the payment methods they prefer. Inte
 
 ## PSP integrations available in Spryker
 
-| NAME | STATUS | MARKETPLACE COMPATIBLE | AVAILABLE IN ACP |
-| --- | --- | --- | --- |
-| Adyen | Stable | No | No |
-| After Pay | Stable | No | No |
-| Amazon Pay | Deprecated | No | No |
-| Billpay | Stable | No | No |
-| Braintree | Stable | No | No |
-| Crefo Pay | Stable | No | No |
-| Computop | Stable | No | No |
-| Easycredit | Stable | No | No |
-| First Data | Alpha | No | No |
-| Klarna | Stable | No | No |
-| Optile | Stable | No | No |
-| Payolution | Stable | No | No |
-| [Payone](/docs/pbc/all/psp/payone/payone.html) | Stable | No | Yes |
-| Ratepay | Stable | No | No |
-| [Unzer](/docs/pbc/all/psp/unzer/unzer.html) | Stable | Yes | No |
+| NAME | MARKETPLACE COMPATIBLE | AVAILABLE IN ACP |
+| --- | --- | --- |
+| Adyen | No | No |
+| After Pay | No | No |
+| Braintree | No | No |
+| Crefo Pay | No | No |
+| Computop | No | No |
+| Easycredit | No | No |
+| Optile | No | No |
+| [Payone](/docs/pbc/all/psp/payone/payone.html) | No | Yes |
+| Ratepay | No | No |
+| [Unzer](/docs/pbc/all/psp/unzer/unzer.html) | Yes | No |

@@ -2,8 +2,11 @@ title: PBC guides
 entries:
   - product: PBC
     nested:
-      - title: Bazaarvoice
-        url: /docs/pbc/all/bazaarvoice/bazaarvoice.html
+      - title: Ratings & Reviews
+        url: /docs/pbc/all/ratings-reviews/ratings-reviews.html
+        nested:
+          - title: Bazaarvoice
+            url: /docs/pbc/all/ratings-reviews/bazaarvoice/bazaarvoice.html
       - title: PSP (Payment Service Provider)
         url: /docs/pbc/all/psp/psp.html
         nested:

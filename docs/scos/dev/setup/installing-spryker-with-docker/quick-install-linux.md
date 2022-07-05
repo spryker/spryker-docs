@@ -1,6 +1,6 @@
 ---
-title: Install Spryker on macOS
-description: Get started with Spryker via Docker on macOS
+title: Install Spryker on Linux
+description: Get started with Spryker via Docker on Linux
 last_updated: Jul 5, 2022
 template: concept-topic-template
 ---

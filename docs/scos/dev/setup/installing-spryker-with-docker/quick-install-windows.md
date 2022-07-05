@@ -1,11 +1,15 @@
 ---
-title: Install Spryker on macOS
-description: Get started with Spryker via Docker on macOS
+title: Install Spryker on Windows
+description: Get started with Spryker via Docker on Windows
 last_updated: Jul 5, 2022
 template: concept-topic-template
 ---
 
-## 1. Clone the demo shop of your choice
+## 1. Open Ubuntu
+
+If Ubuntu is not yet installed on your machine, [download](https://apps.microsoft.com/store/detail/ubuntu/9PDXGNCFSCZV?ref=spryker-documentation) it from the Microsoft Store.
+
+## 2. Clone the demo shop of your choice
 
 **B2B Demo Shop**
 
@@ -31,19 +35,19 @@ git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202204.0-p
 git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202204.0-p1 --single-branch ./b2c-demo-marketplace
 ```
 
-## 2. Navigate to the newly created folder
+## 3. Navigate to the newly created folder
 
 ```shell
 cd <new-folder-name>
 ```
 
-## 3. Clone the Docker SDK repository into the same folder
+## 4. Clone the Docker SDK repository into the same folder
 
 ```shell
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
 ```
 
-## 4. Bootstrap the local Docker environment
+## 5. Bootstrap the local Docker environment
 
 ```shell
 docker/sdk bootstrap deploy.dev.yml
@@ -55,17 +59,17 @@ If you do not need to build Spryker with development tools and file synchronisat
 
 {% endinfo_block %}
 
-### 4.a Update the host file
+### 5.a Update the host file
 
-Update your `/etc/hosts` file with the command that the `docker/sdk bootstrap` command will display.
+Update your `C:\Windows\System32\drivers\etc\hosts` file with the command that the `docker/sdk bootstrap` command will display.
 
-## 5. Build and start your local instance
+## 6. Build and start your local instance
 
 ```shell
 docker/sdk up
 ```
 
-## 6. Open your new Spryker project in your browser
+## 7. Open your new Spryker project in your browser
 
 * Storefront [yves.de.spryker.local](yves.de.spryker.local)
 * Back-Office [backoffice.de.spryker.local](backoffice.de.spryker.local)

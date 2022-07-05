@@ -58,7 +58,7 @@ It’s the most expensive but flexible option in terms of per-store scaling and 
 
 ## Set up multiple stores
 
-To set up multiple stores, follow steps in these sections:
+To set up multiple stores, follow the steps in the following sections:
 
 ### Configure code buckets
 
@@ -165,7 +165,7 @@ return 'DE';
 ...
 ```
 
-#### 4. Adjust all the [import files and import configuration](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html) to import data for the stores you’ve added.
+4. To import data for the stores you’ve added, adjust all the [import files and import configuration](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html).
 
 For example, define the import source for the `DE` store you’ve added:
 
@@ -177,7 +177,7 @@ For example, define the import source for the `DE` store you’ve added:
 ...   
 ```
 
-#### 5. Configure installation recipes
+5. Configure installation recipes
 
 Add the new stores to the installation recipes in `config/install/*` as follows:
 
@@ -206,7 +206,7 @@ stores:
 
 According to the desired infrastructure setup, configure the deploy file for the multi-store setup. In the following example, we configure the [multi-store setup 1](#multi-store-setup-infrastructure-options): database, search engine, and key-value storage are shared:
 
-<details><summary markdown='span'>Deploy file configuration for the multi-store setup 1</summary>
+Deploy file configuration for the multi-store setup 1:
 
 ```yaml
 ......
@@ -245,7 +245,6 @@ regions:
                         namespace: 4
 ....                        
 ```
-</details>
 
 The following configuration parameters are used in this example:
 

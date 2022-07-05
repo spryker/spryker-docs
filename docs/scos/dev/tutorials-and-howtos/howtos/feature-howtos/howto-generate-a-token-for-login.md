@@ -13,7 +13,7 @@ redirect_from:
   - /v6/docs/en/howto-generate-a-token-for-login
 ---
 
-[Customer Login by Token](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/customer-login-by-token-overview.html) feature lets B2B users log in to a Spryker Shop using a token.
+The [Customer Login by Token](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/customer-login-by-token-overview.html) feature lets B2B users log in to a Spryker Shop using a token.
 
 A token is a unique identifier that contains all the information needed for authentication to fetch a specific resource without using a username and password. The tokens are JSON strings that are encoded in the `base64url` format.
 

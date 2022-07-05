@@ -24,7 +24,7 @@ You can't protect Glue endpoints with basic AUTH, and we do not recommend using 
 
 To set up the `.htaccess` authentication, see the steps in the following sections.
 
-## 1. Define login details and endpoints
+## Define login details and endpoints
 
 1. Add login details to `deploy.*.yml` of the desired environment as follows:
 
@@ -39,7 +39,7 @@ x-frontend-auth: &frontend-auth
               password: {secure_password} # Replace the placeholder and the brackets with the actual password
 ```
 
-2. In the same `deploy.*.yml`, define the endpoints that should be protected by adding `<<: *frontend-auth` to each desired endpoint as follows:
+2. In the same `deploy.*.yml`, define the endpoints that must be protected by adding `<<: *frontend-auth` to each desired endpoint as follows:
 
 ```yaml
 ...
@@ -79,7 +79,7 @@ Open a protected endpoint and make sure that you are prompted to enter the defin
 
 You've configured basic authentication.
 
-## 2. Exclude IP addresses from .htaccess authentication
+## Exclude IP addresses from .htaccess authentication
 
 To allow clients with desired IP addresses to bypass the `.htaccess` authentication, adjust the `deploy.*.yml` of the desired environment as follows:
 

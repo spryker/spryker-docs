@@ -1,5 +1,5 @@
 ---
-title: B2C API React Example installation
+title: B2C API React example installation
 description: This document describes installation of B2C API Demo Shop to experience the use of Spryker Glue REST API.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,9 @@ redirect_from:
   - /v2/docs/en/b2c-api-react-example-installation
   - /v1/docs/b2c-api-react-example-installation
   - /v1/docs/en/b2c-api-react-example-installation
+related:
+  - title: B2C API React example
+    link: docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example.html
 ---
 
 B2C API React Example can be installed inside [Spryker Development Virtual Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html) (VM) or on a separate dedicated server. To perform both the installation scenarios, take the following steps.

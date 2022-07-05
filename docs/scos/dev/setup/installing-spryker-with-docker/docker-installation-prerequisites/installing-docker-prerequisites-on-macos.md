@@ -47,7 +47,7 @@ Admin access (port mapping, file system mounting, etc.)
 -->
 
 
-## Installing and configuring required software
+## Install and configure required software
 
 Follow the steps to install and configure the required software:
 

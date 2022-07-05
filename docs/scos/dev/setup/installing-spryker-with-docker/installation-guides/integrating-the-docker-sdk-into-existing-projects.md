@@ -128,7 +128,7 @@ To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. Y
 
 {% endinfo_block %}
 
-## Getting the list of useful commands
+## Get the list of useful commands
 
 To get the full and up-to-date list of commands, run `docker/sdk help`.
 

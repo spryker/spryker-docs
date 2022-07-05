@@ -39,7 +39,7 @@ Review the system and software requirements in the table.
 | RAM  | 4GB or more |
 | Swap  | 2GB or more |
 
-## Installing and configuring required software
+## Install and configure required software
 
 Follow the steps to install and configure the required software:
 

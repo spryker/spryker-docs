@@ -240,8 +240,12 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 {% endinfo_block %}
 
 2. Update the `hosts` file:
+   
+```bash
+echo "127.0.0.1 backoffice.de.spryker.local yves.de.spryker.local glue.de.spryker.local backoffice.at.spryker.local yves.at.spryker.local glue.at.spryker.local backoffice.us.spryker.local yves.us.spryker.local glue.us.spryker.local mail.spryker.local scheduler.spryker.local queue.spryker.local" | sudo tee -a /etc/hosts
+```
 
-Follow the installation instructions in the white box from the `docker/sdk bootstrap` command execution results to prepare the environment.
+<!--Follow the installation instructions in the white box from the `docker/sdk bootstrap` command execution results to prepare the environment -->
 
 {% info_block infoBox %}
 
@@ -249,7 +253,7 @@ Follow the installation instructions in the white box from the `docker/sdk boots
 
 {% endinfo_block %}
 
-3. Once the job finishes, build and start the instance:
+1. Once the job finishes, build and start the instance:
 
 ```bash
 docker/sdk up

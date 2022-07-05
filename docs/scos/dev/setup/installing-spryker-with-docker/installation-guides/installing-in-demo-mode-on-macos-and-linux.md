@@ -256,7 +256,7 @@ echo "127.0.0.1 backoffice.de.spryker.local yves.de.spryker.local glue.de.spryke
 
 {% info_block infoBox %}
 
-If needed, add corresponding entries for other stores. For example, if you are going to have a US store, add the following entries: `zed.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
+If needed, add corresponding entries for other stores. For example, if you are going to have a US store, add the following entries: `backoffice.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
 
 {% endinfo_block %}
 

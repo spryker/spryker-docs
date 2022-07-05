@@ -7,12 +7,12 @@ redirect_from:
    - docs/acp/user/apps/bazaarvoice.html
 ---
 
-The [Bazaarvoice](https://www.bazaarvoice.com/) app lets you collect and add user-generated content (UGC) to your product pages. 
+The [Bazaarvoice](https://www.bazaarvoice.com/?ref=spryker-documentation) app lets you collect and add user-generated content (UGC) to your product pages. 
 
 The Bazaarvoice service offers the following UGC: 
 
-- [Rating summaries](https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Display/display_integration.html#rating-summary), or star ratings
-- [Product reviews](https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Display/display_integration.html#reviews)  
+- [Rating summaries](https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Display/display_integration.html#rating-summary?ref=spryker-documentation), or star ratings
+- [Product reviews](https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Display/display_integration.html#reviews?ref=spryker-documentation)  
 <!---- [Questions and answers](https://knowledge.bazaarvoice.com/wp-content/conversations/en_US/Display/display_integration.html#questions--answers)-->
 
 Bazaarvoice uses the content syndication approach, which means that stores using Bazaarvoice republish each others' content. For example, if a store within the Bazaarvoice's network has got a new product review, this review is shared across all other stores in the network that also have this product.
@@ -55,7 +55,7 @@ That's it. You have integrated the Bazaarvoice app into your store. It usually t
 
 {% info_block infoBox "Info" %}
 
-You can do the administration work on the Bazaarvoice reviews from the [Bazaarvoice portal](https://portal.bazaarvoice.com/signin). For example, you can approve individual reviews. See [Workbench overview](https://knowledge.bazaarvoice.com/wp-content/brandedge-pro-wb/en_US/basics/workbench_overview.html#log-in-to-workbench) for details on how you can manage reviews from the Bazaarvoice portal.
+You can do the administration work on the Bazaarvoice reviews from the [Bazaarvoice portal](https://portal.bazaarvoice.com/signin?ref=spryker-documentation). For example, you can approve individual reviews. See [Workbench overview](https://knowledge.bazaarvoice.com/wp-content/brandedge-pro-wb/en_US/basics/workbench_overview.html#log-in-to-workbench?ref=spryker-documentation) for details on how you can manage reviews from the Bazaarvoice portal.
 
 {% endinfo_block %}
 

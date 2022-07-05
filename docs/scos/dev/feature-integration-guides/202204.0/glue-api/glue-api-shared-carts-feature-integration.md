@@ -12,6 +12,7 @@ This document describes how to integrate the Shared Carts Glue API into a Spryke
 To start feature integration, overview and install the following features and Glue APIs:
 
 | NAME |  VERSION |  INTEGRATION GUIDE |
+| - |  - |  -  |
 | Glue API: Spryker Core | {{page.version}}  | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Cart |  {{page.version}} | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |
 | Uuid generation console | {{page.version}} | [Uuid Generation Console feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/uuid-generation-console-feature-integration.html) |
@@ -29,7 +30,7 @@ composer require spryker/shared-carts-rest-api:"^1.2.0" spryker/cart-permission-
 
 Make sure that the following modules have been installed:
 
-| MODULE | EXPECTED | DIRECTORY |
+| MODULE | EXPECTED DIRECTORY |
 | - | - |
 | SharedCartsRestApi | vendor/spryker/shared-carts-rest-api |
 | CartPermissionGroupsRestApi | vendor/spryker/cart-permission-groups-rest-api |
@@ -110,13 +111,17 @@ The result should be 0 records.
 
 * `SharedCartsResourceRoutePlugin` is a protected resource for the following requests: `POST`, `PATCH`, `DELETE`.
 
- `CartPermissionGroupsResourceRoutePlugin` is a protected resource for the `GET` request.
+* `CartPermissionGroupsResourceRoutePlugin` is a protected resource for the `GET` request.
 
-For more details, see the configure function in Resource Routing.
+For more details, see the `configure` function in [Resource Routing](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-routing).
+
+{% endinfo_block %}
+
 
 Activate the following plugins:
 
-PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| - | - | - | - |
 | SharedCartsResourceRoutePlugin | Registers the `/shared-carts` resource route. |  | Spryker\Glue\SharedCartsRestApi\Plugin\GlueApplication\SharedCartsResourceRoutePlugin |
 | CartPermissionGroupsResourceRoutePlugin | Registers the `/cart-permission-groups` resource route. |  | Spryker\Glue\CartPermissionGroupsRestApi\Plugin\GlueApplication\CartPermissionGroupsResourceRoutePlugin |
 | CartPermissionGroupByQuoteResourceRelationshipPlugin | Adds the `cart-permission-groups` resource as a relationship to the `cart` resource. |  | Spryker\Glue\CartPermissionGroupsRestApi\Plugin\GlueApplication\CartPermissionGroupByQuoteResourceRelationshipPlugin |
@@ -125,8 +130,8 @@ PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | CompanyUserByShareDetailResourceRelationshipPlugin | Adds the `company-users` resource as a relationship to the `shared cart` resource. |  | Spryker\Glue\CompanyUsersRestApi\Plugin\GlueApplication\CompanyUserByShareDetailResourceRelationshipPlugin |
 | SharedCartQuoteCollectionExpanderPlugin | Expands the quote collection with the carts shared with a user. |  | Spryker\Zed\SharedCart\Communication\Plugin\CartsRestApi\SharedCartQuoteCollectionExpanderPlugin |
 | CompanyUserStorageProviderPlugin | Retrieves information about a company user from the key-value storage. |  | Spryker\Glue\CompanyUserStorage\Communication\Plugin\SharedCartsRestApi\CompanyUserStorageProviderPlugin
-| CompanyUserCustomerExpanderPlugin | Expands the customer transfer with the company user transfer. |  | Spryker\Glue\CompanyUsersRestApi\Plugin\CartsRestApi\CompanyUserCustomerExpanderPlugin |
-| QuotePermissionGroupQuoteExpanderPlugin | Expands the quote transfer with a quote permission group. |  | Spryker\Zed\SharedCartsRestApi\Communication\Plugin\CartsRestApi\QuotePermissionGroupQuoteExpanderPlugin |
+| CompanyUserCustomerExpanderPlugin | Expands the `customer` transfer with the company user transfer. |  | Spryker\Glue\CompanyUsersRestApi\Plugin\CartsRestApi\CompanyUserCustomerExpanderPlugin |
+| QuotePermissionGroupQuoteExpanderPlugin | Expands the `quote` transfer with a quote permission group. |  | Spryker\Zed\SharedCartsRestApi\Communication\Plugin\CartsRestApi\QuotePermissionGroupQuoteExpanderPlugin |
 
 
 
@@ -322,12 +327,78 @@ Make sure that the `GET https://glue.mysprykershop.com/cart-permission-groups/{{
 To make sure that `SharedCartsResourceRoutePlugin` is installed correctly, check
 that you can send the following requests:
 
+<details>
+  <summary>POST http://glue.mysprykershop.com/carts/{{cart_uuid}}/shared-carts</summary>
+
+```json
+{
+    "data": {
+        "type": "shared-carts",
+        "attributes": {
+            "idCompanyUser": "88ac19e3-ca9c-539e-b1f1-9c3b7fd48718",
+            "idCartPermissionGroup": 1
+        }
+    }
+}
+```
+
+</details>
+
+<details>
+  <summary>PATCH http://glue.mysprykershop.com/shared-carts/{{shared_cart_uuid}}</summary>
+
+```json
+{
+    "data": {
+        "type": "shared-carts",
+        "attributes": {
+            "idCartPermissionGroup": 2
+        }
+    }
+}
+```
+
+</details>
+
 {% endinfo_block %}
 
 
 {% info_block warningBox "Verification" %}
 
 To make sure that `SharedCartsResourceRoutePlugin` is installed correctly, check that you get a valid response from the following requests:  
+
+<details>
+  <summary>POST http://glue.mysprykershop.com/carts/{{cart_uuid}}/shared-carts</summary>
+
+```json
+{
+    "data": {
+        "type": "shared-carts",
+        "attributes": {
+            "idCompanyUser": "88ac19e3-ca9c-539e-b1f1-9c3b7fd48718",
+            "idCartPermissionGroup": 1
+        }
+    }
+}
+```
+
+</details>
+
+<details>
+  <summary>PATCH http://glue.mysprykershop.com/shared-carts/{{shared_cart_uuid}}</summary>
+
+```json
+{
+    "data": {
+        "type": "shared-carts",
+        "attributes": {
+            "idCartPermissionGroup": 2
+        }
+    }
+}
+```
+
+</details>   
 
 {% endinfo_block %}
 

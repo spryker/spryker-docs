@@ -142,7 +142,7 @@ docker/sdk up
 
     {% info_block infoBox %}
 
-    If needed, add corresponding entries for other stores. For example, to have a US store, add the following entries: `zed.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
+    If needed, add corresponding entries for other stores. For example, to have a US store, add the following entries: `backoffice.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
 
     {% endinfo_block %}
 
@@ -169,7 +169,7 @@ To ensure that the installation is successful, make sure you can access the foll
 | APPLICATION | ENDPOINTS |
 | --- | --- |
 | The Storefront |  yves.de.spryker.local, yves.at.spryker.local, yves.us.spryker.local |
-| The Back Office | zed.de.spryker.local, zed.at.spryker.local, zed.us.spryker.local |
+| The Back Office | backoffice.de.spryker.local, backoffice.at.spryker.local, backoffice.us.spryker.local |
 | Glue API | glue.de.spryker.local, glue.at.spryker.local, glue.us.spryker.local |
 | Jenkins (scheduler) | scheduler.spryker.local |
 | RabbitMQ UI (queue manager) | queue.spryker.local |

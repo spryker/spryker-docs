@@ -163,7 +163,7 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 
      {% info_block infoBox %}
 
-        If needed, add corresponding entries for other stores. For example, to have a US store, add the following entries: `zed.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
+        If needed, add corresponding entries for other stores. For example, to have a US store, add the following entries: `backoffice.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
 
         You can run `docker/sdk install` after `bootstrap` to get the list of the instructions.
 

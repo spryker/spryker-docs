@@ -28,5 +28,5 @@ entries:
         - title: Enabling and disabling the Code Sniffer for Spryks
           url: /docs/sdk/dev/spryks/enabling-and-disabling-the-code-sniffer-for-spryks.html
         - title: FileResolver
-          url: /docs/sdk/dev/spryks/filresolver.html
+          url: /docs/sdk/dev/spryks/fileresolver.html
 

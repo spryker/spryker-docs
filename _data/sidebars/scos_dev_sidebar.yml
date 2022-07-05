@@ -4180,8 +4180,6 @@ entries:
       nested:
       - title: Architecture Sniffer
         url: /docs/scos/dev/sdk/development-tools/architecture-sniffer.html
-      - title: Spryk Code Generator
-        url: /docs/scos/dev/sdk/development-tools/spryk-code-generator.html
       - title: Code Sniffer
         url: /docs/scos/dev/sdk/development-tools/code-sniffer.html
       - title: PHPStan

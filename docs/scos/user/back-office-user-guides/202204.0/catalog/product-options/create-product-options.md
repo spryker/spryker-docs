@@ -17,7 +17,7 @@ related:
     link: docs/scos/user/features/page.version/product-options-feature-overview.html
 ---
 
-This article describes how to create product options. Product options are additions to products, like warranty or gift wrapping.
+This document describes how to create product options. Product options are additions to products, like warranty or gift wrapping.
 
 ## Prerequisites
 

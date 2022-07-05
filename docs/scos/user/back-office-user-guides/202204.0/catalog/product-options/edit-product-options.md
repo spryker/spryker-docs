@@ -25,7 +25,7 @@ To edit product options in the Back Office, follow the steps below.
     This opens the **Product option list** page.
 2. Next to the product option you want to edit, click **Create product option**.
 
-Review the [reference information](#reference-information-edit-product-options) before you start, or look up the necessary information as you go through the process.
+Review the [reference information](#reference-information-edit-general-settings-of-product-options) before you start, or look up the necessary information as you go through the process.
 
 ## Edit general settings of product options
 
@@ -42,24 +42,7 @@ Review the [reference information](#reference-information-edit-product-options) 
 7. In the **Translation** section, enter a **GROUP NAME** per locale.
 8. Enter an **OPTION NAME** per locale.     
 9. Click **Save**.
-    The page refreshes with a success message displayed. 
-
-
-
-## Assign and deassign product options from products
-
-1. On the **Edit product option** page, click the **Products** tab.
-2. On the **All products** subtab, select the products you want to assign the option to.
-    The product options will be displayed on the pages of the selected products.
-3. Click the **Assigned products** subtab.
-4. Clear the checkboxes next to the products you want to deassign the option from.
-    The product options will be removed from the pages of the products.
-5. Click **Save**.
-    The page refreshes with a success message displayed. You can check the updated selection in the **Assigned products** subtab.
-
-**Tips and tricks**
-<br>When assigning and deassigning a lot of products at a time, it may be useful to double-check your selection in **Products to be assigned** and **Products to be deassigned** tabs respectively.
-
+    The page refreshes with a success message displayed.
 
 
 ## Reference information: Edit general settings of product options
@@ -74,6 +57,20 @@ Review the [reference information](#reference-information-edit-product-options) 
 | PRICES | Gross and net values per currency per locale. When a price is set to 0, the options is *free of charge*.  |
 | GROUP NAME | Name of the product option group that is displayed on the Storefront. |
 | OPTION NAME | Names of product options that are displayed on the Storefront. |
+
+## Assign and deassign product options from products
+
+1. On the **Edit product option** page, click the **Products** tab.
+2. On the **All products** subtab, select the products you want to assign the option to.
+    The product options will be displayed on the pages of the selected products.
+3. Click the **Assigned products** subtab.
+4. Clear the checkboxes next to the products you want to deassign the option from.
+    The product options will be removed from the pages of the products.
+5. Click **Save**.
+    The page refreshes with a success message displayed. You can check the updated selection in the **Assigned products** subtab.
+
+**Tips and tricks**
+<br>When assigning and deassigning a lot of products at a time, it may be useful to double-check your selection in **Products to be assigned** and **Products to be deassigned** tabs respectively.
 
 
 ## Reference information: Product options on the Storefront

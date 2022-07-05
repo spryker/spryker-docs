@@ -18,7 +18,7 @@ related:
     link: docs/scos/user/features/page.version/product-rating-and-reviews-feature-overview.html
 ---
 
-This topic describes how to manage product reviews received from the customers.
+This  document describes how to manage product reviews received from the customers.
 
 ## Prerequisites
 

@@ -24,8 +24,6 @@ To install Docker prerequisites on Windows with WSL2, follow [Installing Docker 
 
 ## Install Spryker in Demo mode on Windows
 
-Follow the steps to install Spryker in Demo Mode:
-
 1. Open Ubuntu.
 2. Open a terminal.
 3. Create a new folder and navigate into it.
@@ -62,7 +60,7 @@ Follow the steps to install Spryker in Demo Mode:
     ```
 
 
-1. Depending on the cloned repository, navigate into the cloned folder:
+5. Depending on the cloned repository, navigate into the cloned folder:
 
     * B2C repository:
 
@@ -100,7 +98,7 @@ Make sure that you are in the correct folder by running the `pwd` command.
 
 {% endinfo_block %}
 
-1. Clone the Docker SDK repository into the same folder:
+6. Clone the Docker SDK repository into the same folder:
 
 ```shell
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
@@ -134,28 +132,28 @@ docker/sdk up
 ```
 
 10. Update the `hosts` file:
-    1. Open the Start menu.
-    2. In the search field, enter `Notepad`.
-    3. Right-click *Notepad* and select **Run as administrator**.
-    4. In the *User Account Control* window, select **Yes** to confirm the action.
-    5. In the upper navigation panel, select **File** > **Open**.
+    1. In the **Start** menu, find Notepad.
+    3. Right-click Notepad and select **Run as administrator**.
+    4. In the **User Account Control*** window, to confirm the action, select **Yes**.
+    5. In the upper navigation panel, select **File<span aria-label="and then">></span> Open**.
     6. Put the following path into the address line: `C:\Windows\System32\drivers\etc`.
-    7. In the **File name** line, enter `hosts` and select **Open**.
-    The hosts file opens in the drop-down.
-    8. Add the following line into the file:
-
-    ```text
-    127.0.0.1   zed.de.spryker.local glue.de.spryker.local yves.de.spryker.local scheduler.spryker.local mail.spryker.local queue.spryker.local
-    ```
+    7. In **File name**, enter `hosts` and click **Open**.
+    8. Add the following text to the file: `127.0.0.1   zed.de.spryker.local glue.de.spryker.local yves.de.spryker.local scheduler.spryker.local mail.spryker.local queue.spryker.local`
 
     {% info_block infoBox %}
 
-    If needed, add corresponding entries for other stores. For example, if you are going to have a US store, add the following entries: `zed.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
+    If needed, add corresponding entries for other stores. For example, to have a US store, add the following entries: `zed.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
 
     {% endinfo_block %}
 
-    9. Select **File** > **Save**.
-    10. Close the file.
+    {% info_block warningBox "Warning" %}
+
+    Some versions of Windows allow a limited number of hostnames per line. It is recommended not to exceed 10 hostnames per line. Split a long line into multiple lines if necessary.
+
+    {% endinfo_block %}
+
+    1. Select **File<span aria-label="and then">></span> Save**.
+    2. Close the file.
 
 
 {% info_block warningBox %}
@@ -164,14 +162,14 @@ Depending on the hardware performance, the first project launch can take up to 2
 
 {% endinfo_block %}
 
-## Endpoints
+## Check endpoints
 
 To ensure that the installation is successful, make sure you can access the following endpoints.
 
 | APPLICATION | ENDPOINTS |
 | --- | --- |
 | The Storefront |  yves.de.spryker.local, yves.at.spryker.local, yves.us.spryker.local |
-| the Back Office | zed.de.spryker.local, zed.at.spryker.local, zed.us.spryker.local |
+| The Back Office | zed.de.spryker.local, zed.at.spryker.local, zed.us.spryker.local |
 | Glue API | glue.de.spryker.local, glue.at.spryker.local, glue.us.spryker.local |
 | Jenkins (scheduler) | scheduler.spryker.local |
 | RabbitMQ UI (queue manager) | queue.spryker.local |

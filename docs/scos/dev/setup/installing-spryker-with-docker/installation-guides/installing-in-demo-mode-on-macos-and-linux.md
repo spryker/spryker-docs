@@ -266,14 +266,14 @@ Depending on the hardware performance, the first project launch can take up to 2
 
 {% endinfo_block %}
 
-## Endpoints
+## Check endpoints
 
 To ensure that the installation is successful, make sure you can access the following endpoints.
 
 | APPLICATION | ENDPOINTS |
 | --- | --- |
 | The Storefront |  yves.de.spryker.local, yves.at.spryker.local, yves.us.spryker.local |
-| the Back Office | zed.de.spryker.local, zed.at.spryker.local, zed.us.spryker.local |
+| The Back Office | zed.de.spryker.local, zed.at.spryker.local, zed.us.spryker.local |
 | Glue API | glue.de.spryker.local, glue.at.spryker.local, glue.us.spryker.local |
 | Jenkins (scheduler) | scheduler.spryker.local |
 | RabbitMQ UI (queue manager) | queue.spryker.local |

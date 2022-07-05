@@ -151,18 +151,19 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 
 {% endinfo_block %}
 
-11. Update the `hosts` file:
-    1. Open the Start menu.
-    2. In the search field, enter `Notepad`.
-    3. Right-click *Notepad* and select **Run as administrator**.
-    4. In the *User Account Control* window, select **Yes** to confirm the action.
-    5. In the upper navigation panel, select **File** > **Open**.
-    6. Put the following path into the address line: `C:\Windows\System32\drivers\etc`.
-    7. In the **File name** line, enter `hosts` and select **Open**.
-    The hosts file opens in the drop-down.
+11.  Update the `hosts` file:
+    1. In the **Start** menu, find Notepad.
+    2. Right-click Notepad and select **Run as administrator**.
+    3. In the **User Account Control*** window, to confirm the action, select **Yes**.
+    4. In the upper navigation panel, select **File<span aria-label="and then">></span> Open**.
+    5. Put the following path into the address line: `C:\Windows\System32\drivers\etc`.
+    6. In **File name**, enter `hosts` and click **Open**.
+    7. Add the following text to the file: `127.0.0.1   zed.de.spryker.local glue.de.spryker.local yves.de.spryker.local scheduler.spryker.local mail.spryker.local queue.spryker.local`
     8. Follow the installation instructions in the white box from the `docker/sdk bootstrap` command execution results to prepare the environment.
 
     {% info_block infoBox %}
+
+    If needed, add corresponding entries for other stores. For example, to have a US store, add the following entries: `zed.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
 
     You can run `docker/sdk install` after `bootstrap` to get the list of the instructions.
 
@@ -170,14 +171,14 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 
     {% info_block warningBox "Warning" %}
 
-    Some versions of Windows have a limitation of the number of hostnames per line. It is recommended not to exceed 10 hostnames per line. Split a long line into multiple lines if necessary.
+    Some versions of Windows allow a limited number of hostnames per line. It is recommended not to exceed 10 hostnames per line. Split a long line into multiple lines if necessary.
 
     {% endinfo_block %}
  
-    9. Select **File** > **Save**.
-    10. Close the file.
+    1. Select **File<span aria-label="and then">></span> Save**.
+    2. Close the file.
 
-12. Once the job finishes, build and start the instance:
+12.  Once the job finishes, build and start the instance:
 
 ```bash
 docker/sdk up
@@ -189,7 +190,7 @@ Depending on the hardware performance, the first project launch can take up to 2
 
 {% endinfo_block %}
 
-## Endpoints
+## Check endpoints
 
 To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. For more information about the Deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 

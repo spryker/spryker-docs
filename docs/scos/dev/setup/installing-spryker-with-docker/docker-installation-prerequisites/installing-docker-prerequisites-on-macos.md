@@ -33,7 +33,7 @@ Review the system and software requirements in the table and configure them usin
 | Docker | 18.09.1 or higher |
 | Docker Compose | 1.28 or 1.29 |  
 | vCPU | 6 or more |
-| RAM  | 16GB or more |
+| RAM  | 4GB or more |
 | Swap  | 2GB or more |
 
 <!-- NAS Synology
@@ -53,7 +53,7 @@ Follow the steps to install and configure the required software:
 
 1. Download and install [Docker Desktop (Mac)](https://docs.docker.com/desktop/mac/install/).
 
-2. Accept the privilege escalation request "Docker Desktop needs privileged access.".
+2. Accept the privilege escalation request *Docker Desktop needs privileged access.*
 
 {% info_block infoBox %}
 
@@ -61,15 +61,15 @@ Signup for Docker Hub is not required.
 
 {% endinfo_block %}
 
-3. In the Docker Desktop, go to preferences by selecting the gear in the top right corner.
+1. In the Docker Desktop, open **Preferences**.
 
-4. In the *General* section of *Preferences*, select the **Use Docker Compose V2** checkbox.
+2. On the **General** tab, select **Use Docker Compose V2**.
 
-5. Update Memory and Swap Limits:
+3. Update Memory and Swap Limits:
 
-    1. Go to **Resources > ADVANCED**.
+    1. Go to **Resources&nbsp;<span aria-label="and then">></span> ADVANCED**.
     2. Set **CPUs:** to `4` or higher.
-    3. Set **Memory:** to `16.00 GB` or higher.
+    3. Set **Memory:** to `4.00 GB` or higher.
     4. Set **Swap:** to `2.00 GB` or higher.
     5. Set the desired **Disk image size:**.
     6. Select the desired **Disk image location**.

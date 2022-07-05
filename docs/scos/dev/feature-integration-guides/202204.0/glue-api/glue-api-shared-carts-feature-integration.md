@@ -1,5 +1,8 @@
-
-
+---
+title: "Glue API: Shipment feature integration"
+last_updated: Jul 4, 2022
+template: feature-integration-guide-template
+---
 
 This document describes how to integrate the Shared Carts Glue API into a Spryker project.
 
@@ -8,10 +11,10 @@ This document describes how to integrate the Shared Carts Glue API into a Spryke
 
 To start feature integration, overview and install the following features and Glue APIs:
 
-| NAME|  VERSION|  INTEGRATION GUIDE |
-| Glue API: Spryker Core | 201907.0  | Glue API: Spryker Core feature integration |
-| Cart |  201907.0 | Cart feature integration |
-| Uuid generation console | 201907.0 | Uuid generation console feature integration |
+| NAME |  VERSION |  INTEGRATION GUIDE |
+| Glue API: Spryker Core | {{page.version}}  | Glue API: Spryker Core feature integration |
+| Cart |  {{page.version}} | Cart feature integration |
+| Uuid generation console | {{page.version}} | Uuid generation console feature integration |
 
 ## 1) Install the required modules using Composer
 
@@ -80,6 +83,7 @@ Run the following command:
 console uuid:generate SharedCart spy_quote_company_user
 ```
 
+{% info_block warningBox "Verification" %}
 
 To make sure that, in the spy_quote_company_user table, the uuid field is populated for all the records, run the following command:
 
@@ -220,9 +224,9 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 
 
 
-src/Pyz/Glue/SharedCartsRestApi/SharedCartsRestApiDependencyProvider.php
+**src/Pyz/Glue/SharedCartsRestApi/SharedCartsRestApiDependencyProvider.php**
 
-
+```php
 <?php
 
 namespace Pyz\Glue\SharedCartsRestApi;
@@ -241,9 +245,12 @@ class SharedCartsRestApiDependencyProvider extends SprykerSharedCartsRestApiDepe
         return new CompanyUserStorageProviderPlugin();
     }
 }
-src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php
+```
 
 
+**src/Pyz/Glue/CartsRestApi/CartsRestApiDependencyProvider.php**
+
+```
 <?php
 
 namespace Pyz\Glue\CartsRestApi;
@@ -263,24 +270,36 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
         ];
     }
 }
+```
+
+{% info_block warningBox "Verification" %}
 Make sure that the carts shared with a user are returned by sending the GET https://glue.mysprykershop.com/carts request.
 
 Send the GET https://glue.mysprykershop.com/carts/?include=cart-permission-groups request and make sure that the cart-permission-groups resource is returned as a relationship of the shared-carts resource.
 
 Send the GET https://glue.mysprykershop.com/carts/{{cart_uuid}}/?include=cart-permission-groups request and make sure that a single cart item (no matter owned by customers or shared with them) is returned.
 
+
+{% info_block warningBox "Verification" %}
 Send the GET https://glue.mysprykershop.com/carts/?include=shared-carts,cart-permission-groups,company-users request and make sure that the carts shared with the other users are returned with the shared-carts resource as a relationship. Also, make sure that cart-permission-groups and company-user resources are returned as relationships of the shared-carts resource.
 
 Send the GET https://glue.mysprykershop.com/carts/{{cart_uuid}}/?include=shared-carts,cart-permission-groups,company-users request and make sure that a single cart with cart-permission-groups and company-user resources is returned.
 
+
+{% info_block warningBox "Verification" %}
 To make sure that CartPermissionGroupsResourceRoutePlugin is installed correctly, check that the https://glue.mysprykershop.com/cart-permission-groups resource is available.
 
+
+{% info_block warningBox "Verification" %}
 Make sure that the GET https://glue.mysprykershop.com/cart-permission-groups/{{permission_group_id}} request returns a single cart-permission-groups resource.
 
+{% info_block warningBox "Verification" %}
 To make sure that SharedCartsResourceRoutePlugin is installed correctly, check that you can send the following requests:
 
+{% info_block warningBox "Verification" %}
 To make sure that SharedCartsResourceRoutePlugin is installed correctly, check that you get a valid response from the following requests:  
 
+{% info_block warningBox "Verification" %}
 Make sure that you can remove cart sharing:
 
 Send the request: DELETE https://glue.mysprykershop.com/shared-carts/{{shared_cart_uuid}} .

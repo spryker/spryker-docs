@@ -269,7 +269,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 
 #### Synchronize permission plugins with storage:
 
-Go to the Administration interface, **Maintenance** menu, and click **Sync permissions**.
+Go to the Back Office, **Maintenance** menu, and click **Sync permissions**.
 
 {% info_block warningBox "Verification" %}
 

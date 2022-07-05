@@ -93,10 +93,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-    - title: Product Approval Process feature walkthrough
-      url: /docs/scos/dev/feature-walkthroughs/product-approval-process-feature-walkthrough.html
-      include_versions:
-      - "202204.0"
     - title: Shared Carts
       url: /docs/scos/dev/feature-walkthroughs/shared-carts-feature-walkthrough.html
     - title: Reclamations

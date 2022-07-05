@@ -14,7 +14,7 @@ redirect_from:
   - /v6/docs/en/installing-in-demo-mode-on-windows
 ---
 
-This document describes the procedure of installing Spryker in [Demo Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) on Windows.
+This doc describes how to install Spryker in [Demo Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) on Windows.
 
 ## Install Docker prerequisites on Windows
 

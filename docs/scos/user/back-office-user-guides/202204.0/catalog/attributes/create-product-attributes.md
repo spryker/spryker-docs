@@ -52,7 +52,7 @@ Review the [reference information](#reference-information-create-product-attribu
 
 | ATTRIBUTE |DESCRIPTION |
 | --- | --- |
-| ATTRIBUTE KEY | Name that you will use when [assigning the attribute to products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/assign-product-attributes-to-abstract-products.html). For example, `color`. Accepts lower case letters, digits, numbers, underscores, hyphens, and colons. |
+| ATTRIBUTE KEY | Name that you will use when [assigning the attribute to products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products.html). For example, `color`. Accepts lower case letters, digits, numbers, underscores, hyphens, and colons. |
 | INPUT TYPE | Defines the data format of the attribute's values. |
 | SUPER ATTRIBUTE | Defines if the attribute is to be a [super attribute](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html#super-attributes). Super attributes distinguish product variants of an abstract product.  |
 | PREDEFINED VALUES | Values that you will be selecting from when assigning the attribute to products. For example, if the attribute is `color`, the values can be `red`, `green`, `black`, etc. |

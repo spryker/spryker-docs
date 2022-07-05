@@ -152,14 +152,14 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 {% endinfo_block %}
 
 11.  Update the `hosts` file:
-     1. In the **Start** menu, find Notepad.
-     2. Right-click Notepad and select **Run as administrator**.
-     3. In the **User Account Control*** window, to confirm the action, select **Yes**.
-     4. In the upper navigation panel, select **File<span aria-label="and then">></span> Open**.
-     5. Put the following path into the address line: `C:\Windows\System32\drivers\etc`.
-     6. In **File name**, enter `hosts` and click **Open**.
-     7. Add the following text to the file: `127.0.0.1   zed.de.spryker.local glue.de.spryker.local yves.de.spryker.local scheduler.spryker.local mail.spryker.local queue.spryker.local`
-     8. Follow the installation instructions in the white box from the `docker/sdk bootstrap` command execution results to prepare the environment.
+    1. In the **Start** menu, find Notepad.
+    2. Right-click Notepad and select **Run as administrator**.
+    3. In the **User Account Control*** window, to confirm the action, select **Yes**.
+    4. In the upper navigation panel, select **File<span aria-label="and then">></span> Open**.
+    5. Put the following path into the address line: `C:\Windows\System32\drivers\etc`.
+    6. In **File name**, enter `hosts` and click **Open**.
+    7. Add the following text to the file: `127.0.0.1	backoffice.de.spryker.local yves.de.spryker.local glue.de.spryker.local backoffice.at.spryker.local yves.at.spryker.local glue.at.spryker.local backoffice.us.spryker.local yves.us.spryker.local glue.us.spryker.local mail.spryker.local scheduler.spryker.local queue.spryker.local`
+    8. Follow the installation instructions in the white box from the `docker/sdk bootstrap` command execution results to prepare the environment.
 
      {% info_block infoBox %}
 
@@ -175,8 +175,8 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 
      {% endinfo_block %}
  
-     9. Select **File<span aria-label="and then">></span> Save**.
-     10.  Close the file.
+    9. Select **File<span aria-label="and then">></span> Save**.
+    10.  Close the file.
 
 1.   Once the job finishes, build and start the instance:
 

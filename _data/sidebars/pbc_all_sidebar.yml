@@ -2,13 +2,13 @@ title: PBC guides
 entries:
   - product: PBC
     nested:
-      - title: Ratings & Reviews
+      - title: Ratings and Reviews
         url: /docs/pbc/all/ratings-reviews/ratings-reviews.html
         nested:
           - title: Bazaarvoice
             url: /docs/pbc/all/ratings-reviews/bazaarvoice/bazaarvoice.html
       - title: Payment Service Providers
-        url: /docs/pbc/all/psp/psp.html
+        url: /docs/pbc/all/payment-service-providers/psp.html
         nested:
           - title: Unzer
             url: /docs/pbc/all/payment-service-providers/unzer/unzer.html

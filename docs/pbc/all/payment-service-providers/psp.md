@@ -16,6 +16,6 @@ Spryker offers the following Payment Service Providers (PSP) integrations:
 | Computop | No | No |
 | Easycredit | No | No |
 | Optile | No | No |
-| [Payone](/docs/pbc/all/psp/payone/payone.html) | No | Yes |
+| [Payone](/docs/pbc/all/payment-service-providers/payone/payone.html) | No | Yes |
 | Ratepay | No | No |
-| [Unzer](/docs/pbc/all/psp/unzer/unzer.html) | Yes | No |
+| [Unzer](/docs/pbc/all/payment-service-providers/unzer/unzer.html) | Yes | No |

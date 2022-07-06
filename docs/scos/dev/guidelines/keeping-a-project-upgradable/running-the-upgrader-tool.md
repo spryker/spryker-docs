@@ -3,6 +3,8 @@ title: Running the upgrader tool
 description: Instructions for running the upgrader tool
 last_updated: Nov 25, 2021
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/upgradability-services/running-the-upgrader-tool.html
 ---
 This document describes how to upgrade all the modules to the latest versions.
 

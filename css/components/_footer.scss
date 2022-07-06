@@ -15,9 +15,9 @@
 
     &__bottom {
         background: $grey-lightest;
-        color: $grey-5;
+        color: $grey-8;
         padding: 13px 0;
-        font-size: 10px;
+        font-size: 0.7rem;
         line-height: 1.4;
 
         @include media("<desktop") {
@@ -101,7 +101,7 @@
             display: inline-flex;
             vertical-align: top;
             align-items: center;
-            color: $grey;
+            color: $grey-8;
 
             &:hover,
             &:active {
@@ -293,7 +293,7 @@
         }
 
         a {
-            color: $grey;
+            color: $grey-8;
             transition: color .3s linear;
             display: inline-block;
             vertical-align: top;

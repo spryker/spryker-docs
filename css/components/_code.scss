@@ -1,6 +1,6 @@
 .highlight,
 pre {
-    background: $dark-2;
+    background: $black;
     color: $white;
     padding: 10px;
     word-break: break-word;
@@ -81,7 +81,7 @@ pre {
 }
 
 .code-header {
-    background: $dark-2;
+    background: $black;
     color: $white;
     border-bottom: 1px solid $grey-darker;
     border-radius: 4px 4px 0 0;
@@ -102,7 +102,7 @@ pre {
     display: inline-flex;
     vertical-align: top;
     color: $grey;
-    font-size: 20px;
+    font-size: 1rem;
     transition: color .2s linear;
     padding: 5px;
     position: relative;
@@ -114,17 +114,17 @@ pre {
     &:before {
         content: 'Copied!';
         position: absolute;
+        color: $red;
         top: 0;
         right: 100%;
-        margin: 0 5px 0 0;
-        font-size: 17px;
+        margin: 0 0.3rem 0 0;
         opacity: 0;
         pointer-events: none;
     }
 
     &.active {
         &:before {
-            animation: fade-in-out 1s linear 1;
+            animation: fade-in-out 1.5s ease 1;
         }
     }
 }
@@ -150,4 +150,11 @@ table {
         padding: 2px 8px;
         font-size: 14px;
     }
+}
+
+code {
+    background-color: $black;
+    color: $white;
+    font-style: italic;
+    padding: 0 0.3rem;
 }

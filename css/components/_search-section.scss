@@ -1,14 +1,14 @@
 .search-section {
     background: $darkest url('../images/search-section-bg.jpg') no-repeat #{50% 50%/cover};
     color: $white;
-    padding: 82px 0 100px;
+    padding: 3rem 0;
 
     @include media("<desktop") {
-        padding: 130px 0;
+        padding: 3rem 0;
     }
 
     @include media("<tablet") {
-        padding: 90px 0;
+        padding: 2rem 0;
         background-image: url('../images/search-section-bg-sm.png');
     }
 
@@ -32,7 +32,7 @@
     }
 
     &__panel {
-        max-width: 614px;
+        max-width: 70%;
         margin: 0 auto;
         position: relative;
         z-index: 3;
@@ -84,9 +84,9 @@
     .fake-input {
         display: none;
 
-        @include media("<tablet") {
+        @include media("<desktop") {
             display: block;
-            max-width: 614px;
+            max-width: 90%;
             margin: 0 auto;
             position: relative;
             z-index: 3;

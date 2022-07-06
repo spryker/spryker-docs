@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     border: 2px solid $silver;
-    color: $grey;
+    color: $grey-8;
     font-weight: 800;
     border-radius: 2px;
     text-decoration: none;
@@ -12,6 +12,7 @@
     padding: 0 20px;
     min-width: 130px;
     transition: color .3s linear, background .3s linear, border-color .3s linear, box-shadow .3s linear;
+    margin: 0.15rem auto;
 
     &:hover {
         box-shadow: 0 3px 10px rgba($silver, 0.5);

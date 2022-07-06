@@ -7,37 +7,37 @@ entries:
         nested:
           - title: Bazaarvoice
             url: /docs/pbc/all/ratings-reviews/bazaarvoice/bazaarvoice.html
-      - title: PSP (Payment Service Provider)
+      - title: Payment Service Providers
         url: /docs/pbc/all/psp/psp.html
         nested:
           - title: Unzer
-            url: /docs/pbc/all/psp/unzer/unzer.html
+            url: /docs/pbc/all/payment-service-providers/unzer/unzer.html
             nested:
               - title: What's changed
-                url: /docs/pbc/all/psp/unzer/whats-changed-in-unzer.html
+                url: /docs/pbc/all/payment-service-providers/unzer/whats-changed-in-unzer.html
               - title: Install Unzer
                 nested:
                   - title: Install and configure
-                    url: /docs/pbc/all/psp/unzer/install-unzer/install-and-configure-unzer.html
+                    url: /docs/pbc/all/payment-service-providers/unzer/install-unzer/install-and-configure-unzer.html
                   - title: Integrate
-                    url: /docs/pbc/all/psp/unzer/install-unzer/integrate-unzer.html
-              - title: Use cases & HowTos & Tips
+                    url: /docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.html
+              - title: Use cases, HowTos, and tips
                 nested:
                   - title: Refund shipping costs
-                    url: /docs/pbc/all/psp/unzer/howto-tips-use-cases/refund-shipping-costs.html
+                    url: /docs/pbc/all/payment-service-providers/unzer/howto-tips-use-cases/refund-shipping-costs.html
                   - title: Understand how payment methods are displayed in the checkout process
-                    url: /docs/pbc/all/psp/unzer/howto-tips-use-cases/understand-payment-method-in-checkout-process.html
+                    url: /docs/pbc/all/payment-service-providers/unzer/howto-tips-use-cases/understand-payment-method-in-checkout-process.html
               - title: Configuration in the Back Office
                 nested:
                   - title: Add Unzer standard credentials
-                    url: /docs/pbc/all/psp/unzer/configuration-in-the-back-office/add-unzer-standard-credentails.html
+                    url: /docs/pbc/all/payment-service-providers/unzer/configuration-in-the-back-office/add-unzer-standard-credentails.html
                   - title: Add Unzer marketplace credentials
-                    url: /docs/pbc/all/psp/unzer/configuration-in-the-back-office/add-unzer-marketplace-credentials.html
-              - title: Customise the credit card display in your payment step
-                url: /docs/pbc/all/psp/unzer/customise-the-credit-card-display-in-your-payment-step.html
-              - title: Domain model & relationships
-                url: /docs/pbc/all/psp/unzer/domain-model-and-relationships.html
+                    url: /docs/pbc/all/payment-service-providers/unzer/configuration-in-the-back-office/add-unzer-marketplace-credentials.html
+              - title: Customize the credit card display in your payment step
+                url: /docs/pbc/all/payment-service-providers/unzer/customize-the-credit-card-display-in-your-payment-step.html
+              - title: Domain model and relationships
+                url: /docs/pbc/all/payment-service-providers/unzer/domain-model-and-relationships.html
           - title: Payone
-            url: /docs/pbc/all/psp/payone/payone.html
+            url: /docs/pbc/all/payment-service-providers/payone/payone.html
       - title: Usercentrics
         url: /docs/pbc/all/usercentrics/usercentrics.html

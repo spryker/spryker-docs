@@ -1,13 +1,11 @@
 ---
-title: PSP (Payment Service Provider)
+title: Payment Service Providers
 last_updated: Jul 1, 2022
-description: This document desribes the Payment Service Provider that have an integration with Spryker
+description: This document describes the Payment Service Providers that have an integration with Spryker
 template: concept-topic-template
 ---
 
-Meet your customers’ demands by offering the payment methods they prefer. Integrate multiple payment gateways easily, define their availability and customize how they appear on your site.
-
-## PSP integrations available in Spryker
+Spryker offers the following Payment Service Providers (PSP) integrations:
 
 | NAME | MARKETPLACE COMPATIBLE | AVAILABLE IN ACP |
 | --- | --- | --- |

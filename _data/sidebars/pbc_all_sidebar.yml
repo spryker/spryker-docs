@@ -6,7 +6,7 @@ entries:
         url: /docs/pbc/all/ratings-reviews/ratings-reviews.html
         nested:
           - title: Bazaarvoice
-            url: /docs/pbc/all/ratings-reviews/bazaarvoice/bazaarvoice.html
+            url: /docs/pbc/all/ratings-reviews/bazaarvoice.html
       - title: Payment Service Providers
         url: /docs/pbc/all/payment-service-providers/psp.html
         nested:
@@ -40,4 +40,4 @@ entries:
           - title: Payone
             url: /docs/pbc/all/payment-service-providers/payone/payone.html
       - title: Usercentrics
-        url: /docs/pbc/all/usercentrics/usercentrics.html
+        url: /docs/pbc/all/usercentrics.html

@@ -12,4 +12,4 @@ Drive sales by including user reviews and ratings. Reviews and ratings are a pro
 | NAME | MARKETPLACE COMPATIBLE | AVAILABLE IN ACP |
 | --- | --- | --- |
 | Spryker | No | No |
-| [Bazaarvoice](/docs/pbc/all/ratings-reviews/bazaarvoice/bazaarvoice.html) | No | Yes |
+| [Bazaarvoice](/docs/pbc/all/ratings-reviews/bazaarvoice.html) | No | Yes |

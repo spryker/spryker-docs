@@ -50,8 +50,8 @@ Packaged Business Capabilities (PBCs) are capabilities that enclose a certain fu
 
 | NAME | CATEGORY |
 | --- | --- |
-| [Bazaarvoice](/docs/pbc/all/payment-service-providers/bazaarvoice/bazaarvoice.html) | Ratings and Reviews |
+| [Bazaarvoice](/docs/pbc/all/ratings-reviews/bazaarvoice.html) | Ratings and Reviews |
 | [Payone](/docs/pbc/all/payment-service-providers/payone/payone.html) | PSP (Payment Service Provider) |
-| [Usercentrics](/docs/pbc/all/payment-service-providers/usercentrics/usercentrics.html) | (CMP) Consent Management Platform |
+| [Usercentrics](/docs/pbc/all/usercentrics.html) | (CMP) Consent Management Platform |
 
 </div>

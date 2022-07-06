@@ -292,9 +292,27 @@ image:
 ```
 ***
 
+### image: node:
+
+Defines Node.js settings.
+
+* `image: node: version:`—defines a Node.js version. Supports only major versions that are greater than the default one. The default version is `12`.
+* `image: node: npm`—defines an NPM version. Supports only major versions that are greater than the default one. The default version is `6`.
+* `image: node: distro:`—defines a Linux distribution for the Node Docker image. Should be equal to your base PHP image. Possible values are `alpine` and `debian`. This variable is optional with the default value of `alpine`.
+
+```yaml
+image:
+    ...
+    node:
+        version: 18
+        distro: alpine
+        npm: 8
+```
+***
+
 ### image: php:
 
-Defines PHP settings for Spryker applications.
+Defines PHP settings.
 
 * `image: php: ini:` - defines `php.ini` configuration.
 * `image: php: enabled-extensions` - defines enabled PHP extensions. The following extensions are allowed:
@@ -821,12 +839,18 @@ A real-time log monitoring *Service*.
 
   - `dashboard: engine:` - possible value is `dashboard`.
   - `dashboard: endpoints:` - defines the service's port and web interface that can be accessed via given endpoints.
-  -
+
 ***
 
 ### database:
 
 An SQL database management system *Service*.
+
+{% info_block warningBox "SCCOS" %}
+
+In Spryker Cloud Commerse OS, `database: root: username:` and `database: root: password:` are generated automatically for security reasons. You *do not* need to define them for cloud environments.  
+
+{% endinfo_block %}
 
 * Project-wide
 

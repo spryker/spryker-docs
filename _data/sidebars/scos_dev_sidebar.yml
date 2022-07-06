@@ -50,6 +50,8 @@ entries:
       nested:
       - title: DevVM system requirements
         url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html
+      - title: SCOS supported browsers
+        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/scos-supported-browsers.html
       - title: Installing on MacOS and Linux
         url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html
       - title: Installing on Windows
@@ -91,7 +93,7 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-    - title: Product Approval Process feature walkthrough
+    - title: Product Approval Process
       url: /docs/scos/dev/feature-walkthroughs/product-approval-process-feature-walkthrough.html
       include_versions:
       - "202204.0"
@@ -4177,8 +4179,6 @@ entries:
       nested:
       - title: Architecture Sniffer
         url: /docs/scos/dev/sdk/development-tools/architecture-sniffer.html
-      - title: Spryk Code Generator
-        url: /docs/scos/dev/sdk/development-tools/spryk-code-generator.html
       - title: Code Sniffer
         url: /docs/scos/dev/sdk/development-tools/code-sniffer.html
       - title: PHPStan
@@ -4939,6 +4939,8 @@ entries:
               url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-method-is-overridden-on-the-project-level.html
         - title: Running the Evalutor tool
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html
+        - title: Define custom prefixes for core entity names
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
     - title: Performance guidelines
       nested:
       - title: Elastic computing

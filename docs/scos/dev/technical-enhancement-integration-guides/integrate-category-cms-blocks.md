@@ -108,7 +108,8 @@ class CategoryDependencyProvider extends SprykerCategoryDependencyProvider
 
 5. Register the category subform and category relation read plugins:
 
-**src/Pyz/Zed/CategoryGui/CategoryGuiDependencyProvider.php**
+<details>
+  <summary>src/Pyz/Zed/CategoryGui/CategoryGuiDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -145,6 +146,8 @@ class CategoryGuiDependencyProvider extends SpykerCategoryGuiDependencyProvider
     }
 }
 ```
+
+</details>
 
 6. Optional: To show which categories a block is assigned to on the **View CMS Block** page, register the category list plugin by adding `CmsBlockCategoryListViewPlugin` to the CMS Block GUI dependency provider:
 

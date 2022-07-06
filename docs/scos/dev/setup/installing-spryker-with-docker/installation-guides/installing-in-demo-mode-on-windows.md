@@ -14,7 +14,7 @@ redirect_from:
   - /v6/docs/en/installing-in-demo-mode-on-windows
 ---
 
-This document describes the procedure of installing Spryker in [Demo Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) on Windows.
+This doc describes how to install Spryker in [Demo Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) on Windows.
 
 ## Install Docker prerequisites on Windows
 
@@ -22,7 +22,9 @@ To install Docker prerequisites on Windows with WSL1, follow [Installing Docker 
 
 To install Docker prerequisites on Windows with WSL2, follow [Installing Docker prerequisites on Windows with WSL2](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html).
 
-## Install Spryker in Demo mode on Windows
+## Installing Spryker in Demo mode on Windows
+
+Follow the steps to install Spryker in Demo Mode:
 
 1. Open Ubuntu.
 2. Open a terminal.
@@ -32,33 +34,14 @@ To install Docker prerequisites on Windows with WSL2, follow [Installing Docker 
     * Clone the B2C repository:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202204.0-p1 --single-branch ./b2c-demo-shop
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202204.0-p2 --single-branch ./b2c-demo-shop
     ```
 
     * Clone the B2B repository:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0-p1 --single-branch ./b2b-demo-shop
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0-p2 --single-branch ./b2b-demo-shop
     ```
-
-    * Clone the B2C Marketplace repository:
-  
-    ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202204.0-p1 --single-branch ./b2c-marketplace-demo-shop
-    ```
-
-   * Clone the B2B Marketplace repository:
-  
-    ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202204.0-p1 --single-branch ./b2b-marketplace-demo-shop
-    ```
-
-   * Clone the Master Suite repository:
-  
-    ```shell
-    git clone https://github.com/spryker-shop/suite.git -b 202204.0-p1 --single-branch ./master-suite-demo-shop
-    ```
-
 
 5. Depending on the cloned repository, navigate into the cloned folder:
 
@@ -72,24 +55,6 @@ To install Docker prerequisites on Windows with WSL2, follow [Installing Docker 
 
     ```bash
     cd b2b-demo-shop
-    ```
-    
-    * B2C Marketplace repository:
-
-    ```bash
-    cd b2c-marketplace-demo-shop
-    ```
-
-    * B2B Marketplace repository:
-
-    ```bash
-    cd b2b-marketplace-demo-shop
-    ```
-
-    * Master Suite repository:
-    
-    ```bash
-    cd master-suite-demo-shop
     ```
 
 {% info_block warningBox "Verification" %}
@@ -132,28 +97,28 @@ docker/sdk up
 ```
 
 10. Update the `hosts` file:
-    1. In the **Start** menu, find Notepad.
-    3. Right-click Notepad and select **Run as administrator**.
-    4. In the **User Account Control*** window, to confirm the action, select **Yes**.
-    5. In the upper navigation panel, select **File<span aria-label="and then">></span> Open**.
+    1. Open the Start menu.
+    2. In the search field, enter `Notepad`.
+    3. Right-click *Notepad* and select **Run as administrator**.
+    4. In the *User Account Control* window, select **Yes** to confirm the action.
+    5. In the upper navigation panel, select **File** > **Open**.
     6. Put the following path into the address line: `C:\Windows\System32\drivers\etc`.
-    7. In **File name**, enter `hosts` and click **Open**.
-    8. Add the following text to the file: `127.0.0.1	backoffice.de.spryker.local yves.de.spryker.local glue.de.spryker.local backoffice.at.spryker.local yves.at.spryker.local glue.at.spryker.local backoffice.us.spryker.local yves.us.spryker.local glue.us.spryker.local mail.spryker.local scheduler.spryker.local queue.spryker.local`
+    7. In the **File name** line, enter `hosts` and select **Open**.
+    The hosts file opens in the drop-down.
+    8. Add the following line into the file:
+
+    ```text
+    127.0.0.1   backend-api.at.spryker.local backend-api.de.spryker.local backend-api.us.spryker.local backend-gateway.at.spryker.local backend-gateway.de.spryker.local backend-gateway.us.spryker.local backoffice.at.spryker.local backoffice.de.spryker.local backoffice.us.spryker.local glue.at.spryker.local glue.de.spryker.local glue.us.spryker.local mail.spryker.local queue.spryker.local scheduler.spryker.local spryker.local swagger.spryker.local yves.at.spryker.local yves.de.spryker.local yves.us.spryker.local
+    ```
 
     {% info_block infoBox %}
 
-    If needed, add corresponding entries for other stores. For example, to have a US store, add the following entries: `backoffice.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
+    If needed, add corresponding entries for other stores. For example, if you are going to have a US store, add the following entries: `zed.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
 
     {% endinfo_block %}
 
-    {% info_block warningBox "Warning" %}
-
-    Some versions of Windows allow a limited number of hostnames per line. It is recommended not to exceed 10 hostnames per line. Split a long line into multiple lines if necessary.
-
-    {% endinfo_block %}
-
-    1. Select **File<span aria-label="and then">></span> Save**.
-    2. Close the file.
+    9. Select **File** > **Save**.
+    10. Close the file.
 
 
 {% info_block warningBox %}
@@ -162,18 +127,22 @@ Depending on the hardware performance, the first project launch can take up to 2
 
 {% endinfo_block %}
 
-## Check endpoints
+## Endpoints
 
 To ensure that the installation is successful, make sure you can access the following endpoints.
 
 | APPLICATION | ENDPOINTS |
 | --- | --- |
 | The Storefront |  yves.de.spryker.local, yves.at.spryker.local, yves.us.spryker.local |
-| The Back Office | backoffice.de.spryker.local, backoffice.at.spryker.local, backoffice.us.spryker.local |
+| the Back Office | backoffice.de.spryker.local, backoffice.at.spryker.local, backoffice.us.spryker.local |
+| the Back Api | backend-api.at.spryker.local backend-api.de.spryker.local backend-api.us.spryker.local |
+| the Back Gateway | backend-gateway.at.spryker.local backend-gateway.de.spryker.local backend-gateway.us.spryker.local |
 | Glue API | glue.de.spryker.local, glue.at.spryker.local, glue.us.spryker.local |
 | Jenkins (scheduler) | scheduler.spryker.local |
 | RabbitMQ UI (queue manager) | queue.spryker.local |
 | Mailhog UI (email catcher) | mail.spryker.local |
+| Swagger | swagger.spryker.local |
+| Dashboard | spryker.local |
 
 {% info_block infoBox "RabbitMQ UI credentials" %}
 
@@ -181,7 +150,7 @@ To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. Y
 
 {% endinfo_block %}
 
-## Get the list of useful commands
+## Getting the list of useful commands
 
 To get the full and up-to-date list of commands, run `docker/sdk help`.
 

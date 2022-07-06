@@ -267,6 +267,10 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 }
 ```
 
+#### Synchronize permission plugins with storage:
+
+Go to the Back Office, **Maintenance** menu, and click **Sync permissions**.
+
 {% info_block warningBox "Verification" %}
 
 Check that the customer with the permission `RequestQuoteApprovalPermission` can request for approval.

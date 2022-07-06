@@ -62,7 +62,7 @@ You can choose from the following options:
 * [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html) - a starting point for B2C implementations.
 * Separate [Features](/docs/scos/user/features/{{site.version}}/features.html) and modules - you can also expand both Demo Shops with separate features and modules.
 
-### Installing Spryker with Docker
+### Install Spryker with Docker
 
 We recommend starting with a Docker SDK environment. This option includes Docker and related tools to build images and run containers that match your requirements.
 
@@ -88,7 +88,7 @@ If you use Docker and not the Development Virtual Machine (DevVM), you don't nee
 - `config/install/development.yml`
 - `config_default-development_*.php`
 
-### Installing Spryker with the Development Virtual Machine
+### Install Spryker with the Development Virtual Machine
 
 Spryker Commerce OS comes with a Virtual Machine that has all the prerequisites to run Spryker. It provides a full-featured development environment that will help you customize Spryker per your project requirements. The Development Virtual Machine (DevVM) is based on VirtualBox and Vagrant, and can be used to install Spryker on any Operating System.
 
@@ -101,6 +101,7 @@ Choose an installation guide that suits your needs best:
 | DevVM on Windows | [B2B or B2C Demo Shop installation: Windows, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-without-development-virtual-machine-or-docker.html) |
 
 ### Independent installation
+
 Alternatively, you can install Spryker on an operating system that fulfills Spryker [DevVM system requirements](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html) without the virtual machine or Docker images. See [B2B or B2C Demo Shop installation: without Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html) for details.
 
 {% info_block warningBox %}
@@ -109,7 +110,7 @@ After installing, make sure to have a look at [Post-Installation steps and addit
 
 {% endinfo_block %}
 
-### Adjusting the readme file
+### Adjust the readme file
 
 After you install the project, adjust the readme.md file as follows:
 
@@ -159,6 +160,7 @@ To configure and customize your Spryker Commerce OS, do the following:
 <!---4. Move to the maintenance mode-->
 
 ### Store clean up
+
 This step depends on the store setup which you plan to have. If you start with one store, consider cleaning up the remaining stores right away in the following files:
 
  - `config/install/*`
@@ -192,6 +194,7 @@ Continuous integration (CI) is a development practice where each part of the cod
 To keep your code clean, we recommend using the code checkers.
 
 ### Code sniffer
+
 Before running the code sniffer, we recommend updating it to the latest version, as it introduces new checks that increase the code quality even more. When updating, keep in mind that you also need to change the `composer.json` file.
 
 ```bash

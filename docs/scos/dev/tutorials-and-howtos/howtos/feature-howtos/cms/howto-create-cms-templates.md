@@ -88,7 +88,7 @@ A content manager can apply this template when [creating a CMS page](/docs/scos/
 Create a template with slots:
 1. Create a Twig template as described in [CMS Page Template](#cms-page-template).
 2. For each slot that you want to have in the template, insert a [slot widget](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#slot-widget).
-3. [Import](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#correlation) section of Templates & Slots feature overview.
+3. [Import](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#correlation) section of the Templates & Slots feature overview.
 
 Templates with slots are universal. In the Back Office, a content manager can apply this template when [creating a CMS page](/docs/scos/user/back-office-user-guides/{{site.version}}/content/pages/creating-cms-pages.html) or [creating a category](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/category/creating-categories.html).
 

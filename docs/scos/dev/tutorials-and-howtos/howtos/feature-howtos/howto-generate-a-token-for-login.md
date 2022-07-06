@@ -19,7 +19,7 @@ A token is a unique identifier that contains all the information needed for auth
 
 To generate a token, follow the steps:
 
-1. The following transfers have to be adjusted for expansion:
+1. Adjusted the following transfers for expansion:
 
 ```xml
 <transfer name="Customer">

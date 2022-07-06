@@ -276,8 +276,6 @@ algolia:
       title: 'ACP User'
     - name: 'fes_dev'
       title: 'Frontend enablement Service Developer'
-    - name: 'paas_plus_dev'
-      title: 'Platform as a Service Plus Developer'
     - name: 'pbc_all'
       title: 'Packaged Business Capabilities'
 sass:

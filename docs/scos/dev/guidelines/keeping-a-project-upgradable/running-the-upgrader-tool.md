@@ -3,6 +3,8 @@ title: Running the upgrader tool
 description: Instructions for running the upgrader tool
 last_updated: Nov 25, 2021
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/upgradability-services/running-the-upgrader-tool.html
 related:
   - title: Keeping a project upgradable
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html

@@ -119,7 +119,7 @@ To show the procedure, the following steps walk you through the creation of the 
 
 1. Implement the following plugin for the Back Office using `\Spryker\Zed\CmsSlotBlockGuiExtension\Communication\Plugin\CmsSlotBlockGuiConditionFormPluginInterface`:
 
-**CustomerSlotBlockConditionFormPlugin**
+<details><summary markdown='span'>CustomerSlotBlockConditionFormPlugin</summary>
 
 ```php
 namespace Pyz\Zed\CmsSlotBlockCustomerGui\Communication\Plugin\CmsSlotBlockGui;
@@ -159,6 +159,7 @@ class CustomerSlotBlockConditionFormPlugin extends AbstractPlugin implements Cms
     }
 }
 ```
+</details>
 
 2. Put `CustomerSlotBlockConditionFormPlugin` into the `src/Pyz/Zed/CmsSlotBlockCustomerGui` module.
 

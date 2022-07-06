@@ -17,14 +17,14 @@ redirect_from:
 
 This document describes how to install Spryker in [Development Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode) on Windows.
 
-## Installing Docker prerequisites on Windows
+## Install Docker prerequisites on Windows
 
 To install Docker prerequisites on Windows with WSL1, follow [Installing Docker prerequisites on Windows with WSL1](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html).
 
 To install Docker prerequisites on Windows with WSL2, follow [Installing Docker prerequisites on Windows with WSL2](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html).
 
 
-## Installing Spryker in Development mode on Windows
+## Install Spryker in Development mode on Windows
 
 Follow the steps to install Spryker in Development mode:
 
@@ -56,6 +56,24 @@ Follow the steps to install Spryker in Development mode:
     git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0-p2 --single-branch ./b2b-demo-shop
     ```
 
+    * Clone the B2C Marketplace repository:
+  
+    ```shell
+    git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202204.0-p1 --single-branch ./b2c-marketplace-demo-shop
+    ```
+
+   * Clone the B2B Marketplace repository:
+  
+    ```shell
+    git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202204.0-p1 --single-branch ./b2b-marketplace-demo-shop
+    ```
+   
+   * Clone the Master Suite repository:
+  
+    ```shell
+    git clone https://github.com/spryker-shop/suite.git -b 202204.0-p1 --single-branch ./master-suite-demo-shop
+    ```
+
 5. Depending on the repository you've cloned, navigate into the cloned folder:
 
     * B2C repository:
@@ -69,6 +87,24 @@ Follow the steps to install Spryker in Development mode:
     ```bash
     cd b2b-demo-shop
     ```
+
+    * B2C Marketplace repository:
+
+    ```bash
+    cd b2c-marketplace-demo-shop
+    ```
+
+    * B2B Marketplace repository:
+
+    ```bash
+    cd b2b-marketplace-demo-shop
+    ```
+
+    * Master Suite repository:
+    
+    ```bash
+    cd master-suite-demo-shop
+    ```    
 
 {% info_block warningBox "Verification" %}
 
@@ -115,33 +151,34 @@ Once you finish the setup, you don't need to run `bootstrap` to start the instan
 
 {% endinfo_block %}
 
-11. Update the `hosts` file:
-    1. Open the Start menu.
-    2. In the search field, enter `Notepad`.
-    3. Right-click *Notepad* and select **Run as administrator**.
-    4. In the *User Account Control* window, select **Yes** to confirm the action.
-    5. In the upper navigation panel, select **File** > **Open**.
-    6. Put the following path into the address line: `C:\Windows\System32\drivers\etc`.
-    7. In the **File name** line, enter `hosts` and select **Open**.
-    The hosts file opens in the drop-down.
+11.  Update the `hosts` file:
+    1. In the **Start** menu, find Notepad.
+    2. Right-click Notepad and select **Run as administrator**.
+    3. In the **User Account Control*** window, to confirm the action, select **Yes**.
+    4. In the upper navigation panel, select **File<span aria-label="and then">></span> Open**.
+    5. Put the following path into the address line: `C:\Windows\System32\drivers\etc`.
+    6. In **File name**, enter `hosts` and click **Open**.
+    7. Add the following text to the file: `127.0.0.1	backoffice.de.spryker.local yves.de.spryker.local glue.de.spryker.local backoffice.at.spryker.local yves.at.spryker.local glue.at.spryker.local backoffice.us.spryker.local yves.us.spryker.local glue.us.spryker.local mail.spryker.local scheduler.spryker.local queue.spryker.local`
     8. Follow the installation instructions in the white box from the `docker/sdk bootstrap` command execution results to prepare the environment.
 
-    {% info_block infoBox %}
+     {% info_block infoBox %}
 
-    You can run `docker/sdk install` after `bootstrap` to get the list of the instructions.
+        If needed, add corresponding entries for other stores. For example, to have a US store, add the following entries: `backoffice.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
 
-    {% endinfo_block %}
+        You can run `docker/sdk install` after `bootstrap` to get the list of the instructions.
 
-    {% info_block warningBox "Warning" %}
+     {% endinfo_block %}
 
-    Some versions of Windows have a limitation of the number of hostnames per line. It is recommended not to exceed 10 hostnames per line. Split a long line into multiple lines if necessary.
+     {% info_block warningBox "Warning" %}
 
-    {% endinfo_block %}
+        Some versions of Windows allow a limited number of hostnames per line. It is recommended not to exceed 10 hostnames per line. Split a long line into multiple lines if necessary.
+
+     {% endinfo_block %}
  
-    9. Select **File** > **Save**.
-    10. Close the file.
+    9. Select **File<span aria-label="and then">></span> Save**.
+    10.  Close the file.
 
-12. Once the job finishes, build and start the instance:
+1.   Once the job finishes, build and start the instance:
 
 ```bash
 docker/sdk up
@@ -153,7 +190,7 @@ Depending on the hardware performance, the first project launch can take up to 2
 
 {% endinfo_block %}
 
-## Endpoints
+## Check endpoints
 
 To ensure that the installation is successful, make sure you can access the configured endpoints from the Deploy file. For more information about the Deploy file, see [Deploy file reference - 1.0](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file-reference-1.0.html).
 
@@ -163,7 +200,7 @@ To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. Y
 
 {% endinfo_block %}
 
-## Getting the list of useful commands
+## Get the list of useful commands
 
 To get the full and up-to-date list of commands, run `docker/sdk help`.
 

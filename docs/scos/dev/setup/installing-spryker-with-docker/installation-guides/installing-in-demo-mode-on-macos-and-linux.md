@@ -22,7 +22,7 @@ redirect_from:
 
 This document describes the procedure of installing Spryker in [Demo Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) on MacOS and Linux.
 
-## Install Docker prerequisites on MacOS and Linux
+## Install Docker prerequisites on macOS and Linux
 
 To install Docker prerequisites, follow one of the guides:
 
@@ -46,7 +46,26 @@ To install Docker prerequisites, follow one of the guides:
     ```shell
     git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0-p2 --single-branch ./b2b-demo-shop
     ```
-4. Depending on the cloned repository, navigate into the cloned folder:
+
+   * Clone the B2C Marketplace repository:
+  
+    ```shell
+    git clone https://github.com/spryker-shop/b2c-demo-marketplace.git -b 202204.0-p1 --single-branch ./b2c-marketplace-demo-shop
+    ```
+
+   * Clone the B2B Marketplace repository:
+  
+    ```shell
+    git clone https://github.com/spryker-shop/b2b-demo-marketplace.git -b 202204.0-p1 --single-branch ./b2b-marketplace-demo-shop
+    ```
+
+   * Clone the Master Suite repository:
+  
+    ```shell
+    git clone https://github.com/spryker-shop/suite.git -b 202204.0-p1 --single-branch ./master-suite-demo-shop
+    ```
+
+1. Depending on the cloned repository, navigate into the cloned folder:
 
     * B2C repository:
 
@@ -59,6 +78,25 @@ To install Docker prerequisites, follow one of the guides:
     ```bash
     cd b2b-demo-shop
     ```
+
+    * B2C Marketplace repository:
+
+    ```bash
+    cd b2c-marketplace-demo-shop
+    ```
+
+    * B2B Marketplace repository:
+
+    ```bash
+    cd b2b-marketplace-demo-shop
+    ```
+
+    Master Suite repository:
+    
+    ```bash
+    cd master-suite-demo-shop
+    ```
+
 
 {% info_block warningBox "Verification" %}
 
@@ -78,7 +116,7 @@ Follow the steps in this section if you are installing on a device with an ARM c
 
 ### Update Sass
 
-Replace x86 based Sass with an ARM based one:
+Replace x86based Sass with an ARM-based one:
 
 1. In `package.json`, remove `node-sass` dependencies.
 2. Add `sass` and `sass-loader` dependencies:
@@ -133,7 +171,6 @@ npm run yves
 npm run zed
 ```
 
-
 ### Update RabbitMQ and Jenkins services
 
 In the deploy file, update RabbitMQ and Jenkins to [ARM supporting versions](https://github.com/spryker/docker-sdk#supported-services). Example:
@@ -160,9 +197,7 @@ services:
 ...
 ```
 
-
 ### Enable Jenkins CSRF protection
-
 
 1. In the deploy file, enable the usage of the CSRF variable:
 
@@ -186,19 +221,17 @@ $config[SchedulerJenkinsConstants::JENKINS_CONFIGURATION] = [
 ...
 ```
 
-
 ## Configure and start the instance
-
 
 1. Bootstrap the local Docker setup for demo:
 
 ```shell
-docker/sdk bootstrap
+docker/sdk bootstrap deploy.dev.yml
 ```
 
 {% info_block warningBox "Bootstrap" %}
 
-Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after:
+Once you finish the setup, you don't need to run `bootstrap` to start the instance. You only need to run it after the following:
 
 * Docker SDK version update.
 * Deploy file update.
@@ -214,12 +247,12 @@ docker/sdk up
 3. Update the `hosts` file:
 
 ```bash
-echo "127.0.0.1 zed.de.spryker.local yves.de.spryker.local glue.de.spryker.local zed.at.spryker.local yves.at.spryker.local glue.at.spryker.local zed.us.spryker.local yves.us.spryker.local glue.us.spryker.local mail.spryker.local scheduler.spryker.local queue.spryker.local backoffice.de.spryker.local" | sudo tee -a /etc/hosts
+echo "127.0.0.1 backoffice.de.spryker.local yves.de.spryker.local glue.de.spryker.local backoffice.at.spryker.local yves.at.spryker.local glue.at.spryker.local backoffice.us.spryker.local yves.us.spryker.local glue.us.spryker.local mail.spryker.local scheduler.spryker.local queue.spryker.local" | sudo tee -a /etc/hosts
 ```
 
 {% info_block infoBox %}
 
-If needed, add corresponding entries for other stores. For example, if you are going to have a US store, add the following entries: `zed.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
+If needed, add corresponding entries for other stores. For example, if you are going to have a US store, add the following entries: `backoffice.us.spryker.local glue.us.spryker.local yves.us.spryker.local`
 
 {% endinfo_block %}
 
@@ -229,14 +262,14 @@ Depending on the hardware performance, the first project launch can take up to 2
 
 {% endinfo_block %}
 
-## Endpoints
+## Check endpoints
 
 To ensure that the installation is successful, make sure you can access the following endpoints.
 
 | APPLICATION | ENDPOINTS |
 | --- | --- |
 | The Storefront |  yves.de.spryker.local, yves.at.spryker.local, yves.us.spryker.local |
-| the Back Office | zed.de.spryker.local, zed.at.spryker.local, zed.us.spryker.local |
+| The Back Office | backoffice.de.spryker.local, backoffice.at.spryker.local, backoffice.us.spryker.local |
 | Glue API | glue.de.spryker.local, glue.at.spryker.local, glue.us.spryker.local |
 | Jenkins (scheduler) | scheduler.spryker.local |
 | RabbitMQ UI (queue manager) | queue.spryker.local |
@@ -248,7 +281,7 @@ To access RabbitMQ UI, use `spryker` as a username and `secret` as a password. Y
 
 {% endinfo_block %}
 
-## Getting the list of useful commands
+## Get the list of useful commands
 
 To get the full and up-to-date list of commands, run `docker/sdk help`.
 

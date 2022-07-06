@@ -15,11 +15,11 @@ Review the system and software requirements in the table.
 | REQUIREMENT | VALUE OR VERSION | ADDITIONAL DETAILS |
 | --- | --- | --- |
 | Windows | 10 64bit | Pro, Enterprise, or Education (1607 Anniversary Update, Build 14393 or later). |
-| BIOS Virtualization | Enabled | Typically, virtualization is enabled by default. Note that having the virtualization enabled is different from having Hyper-V enabled. This setting can be checked in the **Task Manager** → **Performance** tab.  For more details, see [Virtualization must be enabled](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled). |
+| BIOS Virtualization | Enabled | Typically, virtualization is enabled by default. Note that having the virtualization enabled is different from having Hyper-V enabled. This setting can be checked in **Task Manager&nbsp;<span aria-label="and then">></span> Performance**.  For more details, see [Virtualization must be enabled](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled). |
 | CPU SLAT-capable feature | Enabled |SLAT is CPU related feature. It is called Rapid Virtualization Indexing (RVI). |
 | Docker | 18.09.1 or higher |
 | Docker Compose | 1.28 or 1.29 |  
-| RAM  | 4GB or more |
+| RAM  | 16GB or more |
 | Swap  | 2GB or more |
 
 ## Install and configure the required software with WSL1
@@ -48,10 +48,8 @@ Install Docker Desktop:
 
 #### Enable Docker experimental features
 
-Follow the steps to enable Docker experimental features:
 1. Right-click the **Docker** icon in the tray and select **Settings**.
-2. Select the **Daemon** tab.
-3. Select the **Basic** checkbox.
+2. On the **Daemon** tab, select **Basic**.
 4. Update variables as follows:
 
 ```json
@@ -66,32 +64,28 @@ Follow the steps to enable Docker experimental features:
 
 ### Enable WSL1
 
-WSL is a Windows Subsystem for Linux. It allows Linux programs to run on Windows.
+WSL is a Windows Subsystem for Linux. It lets Linux programs run on Windows.
 
-To enable WSL1:
+To enable WSL1, follow these steps:
 
-1. Open **Windows Control Panel** > **Programs** > **Programs and Features**.
+1. Open **Windows Control Panel&nbsp;<span aria-label="and then">></span> Programs&nbsp;<span aria-label="and then">></span> Programs and Features**.
 2. Select the **Turn Windows features on or off**  hyperlink.
 ![step 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+Windows/w-features-on-off.png)
 
-3. Select **Windows Subsystem for Linux** and select **OK**.
+3. In the Windows Features window, select **Windows Subsystem for Linux** and click **OK**.
 ![step 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+Windows/windows-subsystem.png)
 
 ### Install and update Ubuntu
 
-Install Ubuntu:
-
-1. Open Microsoft Store.
-2. In the Search filed, enter *Ubuntu* and press *Enter*.
-3. From the search results page, select **Ubuntu 18.04 LTS** and install it.
+1. From the Start menu, open Microsoft Store.
+2. In Microsoft Store, find and install Ubuntu 18.04 LTS.
 ![Ubuntu step 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Installation/Spryker+in+Docker/Docker+Install+Prerequisites+-+Windows/ubuntu-in-store.png)
 
-Update Ubuntu:
-
-1. Open the **Start menu**.
-2. Find and launch **Ubuntu**.
-3. Follow the instructions in the wizard.
-4. Set the default root mount point in  `/etc/wsl.conf`.
+3. Update Ubuntu:
+   1. Open the **Start** menu.
+   2. Find and launch **Ubuntu**.
+   3. Follow the instructions in the wizard.
+   4. Set the default root mount point in  `/etc/wsl.conf`.
 
 ```yaml
 # Enable extra metadata options by default
@@ -102,11 +96,9 @@ options = "metadata,umask=22,fmask=11"
 mountFsTab = false
 ```
 
-5. Restart Ubuntu.
+   5. Restart Ubuntu.
 
 ### Install Docker
-
-Install Docker:
 
 1. Update the apt package:
 
@@ -148,8 +140,6 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 ### Install Docker Compose
 
-Install Docker Compose:
-
 1. Download the current stable release of Docker Compose:
 
 ```bash
@@ -164,8 +154,6 @@ sudo chmod +x /usr/local/bin/docker-compose
 
 ### Install docker-sync
 
-Install docker-sync:
-
 1. Install `ruby` and `ruby -dev`:
 
 ```bash
@@ -178,7 +166,7 @@ sudo apt-get install ruby ruby-dev
 sudo gem install docker-sync
 ```
 
-3. Set your Docker for Windows host as an ENV variable:
+3. Set your Docker for the Windows host as an ENV variable:
 
     a. Open the **Docker for Windows** settings and select **Expose daemon on tcp://localhost:2375 without TLS**.
     b. Run the following command in your WSL shell:
@@ -189,9 +177,7 @@ sudo gem install docker-sync
 
 ### Install OCaml
 
-Install OCaml:
-
-1. Check [OCaml release changelog](https://github.com/ocaml/ocaml/releases) and make sure that the version you are going to install is compatible. In the procedure below, we are using version 4.06.0.
+1. Check [OCaml release changelog](https://github.com/ocaml/ocaml/releases) and make sure that the version you are going to install is compatible. The following procedure uses version 4.06.0.
 
 2. Install the build script:
 
@@ -235,12 +221,10 @@ sudo make clean
 
 ## Install Unison
 
-Follow the steps to install Unison:
-
 1. Download the source code of the latest Unison version.
 2. Compile and install it:
 
-    1 . Download the Unison archive:
+    1. Download the Unison archive:
 
     ```bash
     wget https://github.com/bcpierce00/unison/archive/v2.51.2.tar.gz

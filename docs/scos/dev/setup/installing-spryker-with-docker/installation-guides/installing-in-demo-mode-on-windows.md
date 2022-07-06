@@ -14,7 +14,7 @@ redirect_from:
   - /v6/docs/en/installing-in-demo-mode-on-windows
 ---
 
-This document describes the procedure of installing Spryker in [Demo Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) on Windows.
+This doc describes how to install Spryker in [Demo Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) on Windows.
 
 ## Install Docker prerequisites on Windows
 
@@ -34,13 +34,13 @@ Follow the steps to install Spryker in Demo Mode:
     * Clone the B2C repository:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202204.0-p1 --single-branch ./b2c-demo-shop
+    git clone https://github.com/spryker-shop/b2c-demo-shop.git -b 202204.0-p2 --single-branch ./b2c-demo-shop
     ```
 
     * Clone the B2B repository:
 
     ```shell
-    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0-p1 --single-branch ./b2b-demo-shop
+    git clone https://github.com/spryker-shop/b2b-demo-shop.git -b 202204.0-p2 --single-branch ./b2b-demo-shop
     ```
 
 5. Depending on the cloned repository, navigate into the cloned folder:
@@ -108,7 +108,7 @@ docker/sdk up
     8. Add the following line into the file:
 
     ```text
-    127.0.0.1   zed.de.spryker.local glue.de.spryker.local yves.de.spryker.local scheduler.spryker.local mail.spryker.local queue.spryker.local
+    127.0.0.1   backend-api.at.spryker.local backend-api.de.spryker.local backend-api.us.spryker.local backend-gateway.at.spryker.local backend-gateway.de.spryker.local backend-gateway.us.spryker.local backoffice.at.spryker.local backoffice.de.spryker.local backoffice.us.spryker.local glue.at.spryker.local glue.de.spryker.local glue.us.spryker.local mail.spryker.local queue.spryker.local scheduler.spryker.local spryker.local swagger.spryker.local yves.at.spryker.local yves.de.spryker.local yves.us.spryker.local
     ```
 
     {% info_block infoBox %}
@@ -134,11 +134,15 @@ To ensure that the installation is successful, make sure you can access the foll
 | APPLICATION | ENDPOINTS |
 | --- | --- |
 | The Storefront |  yves.de.spryker.local, yves.at.spryker.local, yves.us.spryker.local |
-| the Back Office | zed.de.spryker.local, zed.at.spryker.local, zed.us.spryker.local |
+| the Back Office | backoffice.de.spryker.local, backoffice.at.spryker.local, backoffice.us.spryker.local |
+| the Back Api | backend-api.at.spryker.local backend-api.de.spryker.local backend-api.us.spryker.local |
+| the Back Gateway | backend-gateway.at.spryker.local backend-gateway.de.spryker.local backend-gateway.us.spryker.local |
 | Glue API | glue.de.spryker.local, glue.at.spryker.local, glue.us.spryker.local |
 | Jenkins (scheduler) | scheduler.spryker.local |
 | RabbitMQ UI (queue manager) | queue.spryker.local |
 | Mailhog UI (email catcher) | mail.spryker.local |
+| Swagger | swagger.spryker.local |
+| Dashboard | spryker.local |
 
 {% info_block infoBox "RabbitMQ UI credentials" %}
 

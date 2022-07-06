@@ -130,7 +130,7 @@ You can select as many super attributes as you need and define one or more value
     * **TITLE**
     * **KEYWORDS**
     * **DESCRIPTION**
-3. Click **Next >** and follow [Add images](#add-images).
+3. Click **Next >** and follow [Add images](#optional-add-images).
 
 ### Reference information: Define meta information
 
@@ -161,4 +161,4 @@ This opens the **Edit Product Abstract:{product SKU} page with a success message
 
 * [Add volume prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/add-volume-prices-to-abstract-products-and-product-bundles.html)
 * [Add scheduled prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/add-scheduled-prices-to-abstract-products-and-product-bundles.html)
-* [Edit abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/edit-abstract-products-and-product-bundles.html)
+* [Edit abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html)

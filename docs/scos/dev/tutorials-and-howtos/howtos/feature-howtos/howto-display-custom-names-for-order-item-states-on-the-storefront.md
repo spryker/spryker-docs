@@ -46,12 +46,12 @@ To display custom order states on the Storefront, do the following:
 
 {% info_block infoBox "Info" %}
 
-It is possible to have the same display values for different OMS states.
+You can have the same display values for different OMS states.
 
 {% endinfo_block %}
 
 3. In Back Office, go to **Administration&nbsp;<span aria-label="and then">></span> Glossary**.
-4. In the **LIST OF TRANSLATIONS** table, in the **NAME** column, find the state name as you specified for the `display` parameter—for our example, `waiting for shipment`.
+4. In the **LIST OF TRANSLATIONS** table, in the **NAME** column, find the state name as you specified for the `display` parameter—for example, `waiting for shipment`.
 5. Provide the new glossary keys, that is, translations of the state:
     1. In the **ACTIONS** column, click **Edit**. The **Edit Translation** page opens.
     2. For the available locales, enter translations and click **Save**. The **Overview of Translation** page opens, where you can see the translations of the order state for the Storefront.

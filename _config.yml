@@ -179,7 +179,7 @@ defaults:
     scope:
       path: "docs/pbc/all"
     values:
-      sidebar: "pbc_all_roles_sidebar"
+      sidebar: "pbc_all_sidebar"
       role: "all"
 
 
@@ -241,7 +241,7 @@ sidebars:
   - acp_user_sidebar
   - fes_dev_sidebar
   - paas_plus_dev_sidebar
-  - pbc_all_roles_sidebar
+  - pbc_all_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file
@@ -278,7 +278,7 @@ algolia:
       title: 'Frontend enablement Service Developer'
     - name: 'paas_plus_dev'
       title: 'Platform as a Service Plus Developer'
-    - name: 'pbc_all_roles'
+    - name: 'pbc_all'
       title: 'Packaged Business Capabilities'
 sass:
     sass_dir: css

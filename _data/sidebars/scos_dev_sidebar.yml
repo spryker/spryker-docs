@@ -93,7 +93,7 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-    - title: Product Approval Process feature walkthrough
+    - title: Product Approval Process
       url: /docs/scos/dev/feature-walkthroughs/product-approval-process-feature-walkthrough.html
       include_versions:
       - "202204.0"
@@ -4179,8 +4179,6 @@ entries:
       nested:
       - title: Architecture Sniffer
         url: /docs/scos/dev/sdk/development-tools/architecture-sniffer.html
-      - title: Spryk Code Generator
-        url: /docs/scos/dev/sdk/development-tools/spryk-code-generator.html
       - title: Code Sniffer
         url: /docs/scos/dev/sdk/development-tools/code-sniffer.html
       - title: PHPStan

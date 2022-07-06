@@ -24,7 +24,7 @@ redirect_from:
 
 This document describes how to install Spryker in [Development Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode) on MacOS and Linux.
 
-## Install Docker prerequisites on MacOS and Linux
+## Install Docker prerequisites on macOS and Linux
 
 To install Docker prerequisites, follow one of the guides:
 
@@ -117,7 +117,7 @@ Follow the steps in this section if you are installing on a device with an ARM c
 
 ### Update Sass
 
-Replace x86 based Sass with an ARM based one:
+Replace x86-based Sass with an ARM-based one:
 
 1. In `package.json`, remove `node-sass` dependencies.
 2. Add `sass` and `sass-loader` dependencies.

@@ -99,17 +99,13 @@ docker/sdk up
 10. Update the `hosts` file:
     1. Open the Start menu.
     2. In the search field, enter `Notepad`.
-    3. Right-click *Notepad* and select **Run as administrator**.
-    4. In the *User Account Control* window, select **Yes** to confirm the action.
-    5. In the upper navigation panel, select **File** > **Open**.
+    3. Right-click Notepad and select **Run as administrator**.
+    4. In the **User Account Control** window, select **Yes** to confirm the action.
+    5. In the upper navigation panel, select **File<span aria-label="and then">></span> Open**.
     6. Put the following path into the address line: `C:\Windows\System32\drivers\etc`.
     7. In the **File name** line, enter `hosts` and select **Open**.
     The hosts file opens in the drop-down.
-    8. Add the following line into the file:
-
-    ```text
-    127.0.0.1   backend-api.at.spryker.local backend-api.de.spryker.local backend-api.us.spryker.local backend-gateway.at.spryker.local backend-gateway.de.spryker.local backend-gateway.us.spryker.local backoffice.at.spryker.local backoffice.de.spryker.local backoffice.us.spryker.local glue.at.spryker.local glue.de.spryker.local glue.us.spryker.local mail.spryker.local queue.spryker.local scheduler.spryker.local spryker.local swagger.spryker.local yves.at.spryker.local yves.de.spryker.local yves.us.spryker.local
-    ```
+    8. Add the following line into the file: `127.0.0.1	backoffice.de.spryker.local yves.de.spryker.local glue.de.spryker.local backoffice.at.spryker.local yves.at.spryker.local glue.at.spryker.local backoffice.us.spryker.local yves.us.spryker.local glue.us.spryker.local mail.spryker.local scheduler.spryker.local queue.spryker.local`
 
     {% info_block infoBox %}
 
@@ -117,8 +113,8 @@ docker/sdk up
 
     {% endinfo_block %}
 
-    9. Select **File** > **Save**.
-    10. Close the file.
+    1. Select **File<span aria-label="and then">></span> Save**.
+    2.  Close the file.
 
 
 {% info_block warningBox %}

@@ -22,7 +22,7 @@ redirect_from:
 
 This document describes the procedure of installing Spryker in [Demo Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) on MacOS and Linux.
 
-## Install Docker prerequisites on MacOS and Linux
+## Install Docker prerequisites on macOS and Linux
 
 To install Docker prerequisites, follow one of the guides:
 
@@ -116,7 +116,7 @@ Follow the steps in this section if you are installing on a device with an ARM c
 
 ### Update Sass
 
-Replace x86 based Sass with an ARM based one:
+Replace x86based Sass with an ARM-based one:
 
 1. In `package.json`, remove `node-sass` dependencies.
 2. Add `sass` and `sass-loader` dependencies:
@@ -171,7 +171,6 @@ npm run yves
 npm run zed
 ```
 
-
 ### Update RabbitMQ and Jenkins services
 
 In the deploy file, update RabbitMQ and Jenkins to [ARM supporting versions](https://github.com/spryker/docker-sdk#supported-services). Example:
@@ -198,9 +197,7 @@ services:
 ...
 ```
 
-
 ### Enable Jenkins CSRF protection
-
 
 1. In the deploy file, enable the usage of the CSRF variable:
 
@@ -223,7 +220,6 @@ $config[SchedulerJenkinsConstants::JENKINS_CONFIGURATION] = [
 ];
 ...
 ```
-
 
 ## Configure and start the instance
 

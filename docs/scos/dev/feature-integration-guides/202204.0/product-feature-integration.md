@@ -30,7 +30,7 @@ related:
   - title: Product + Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-order-management-feature-integration.html
   - title: Product feature integration
-	  link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
   - title: Product overview
     link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
 ---

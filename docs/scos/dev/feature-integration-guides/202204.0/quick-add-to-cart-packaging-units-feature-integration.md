@@ -12,10 +12,10 @@ redirect_from:
   - /docs/en/quick-order-packaging-units-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/quick-add-to-cart-packaging-units-feature-integration.html
 related:
-  - title: Quick Add to Cart feature walkthrough
-	link: docs/scos/dev/feature-walkthroughs/page.version/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
-  - title: Packaging Unit feature walkthrough
-	link: docs/scos/dev/feature-walkthroughs/page.version/packaging-units-feature-walkthrough.html
+	- title: Quick Add to Cart feature walkthrough
+	  link: docs/scos/dev/feature-walkthroughs/page.version/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
+	- title: Packaging Unit feature walkthrough
+	  link: docs/scos/dev/feature-walkthroughs/page.version/packaging-units-feature-walkthrough.html
 ---
 
 ## Install feature frontend

@@ -22,7 +22,7 @@ related:
   - title: Merchant Product Restrictions feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
   - title: Product feature integration
-	  link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
+    link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
   - title: Configurable Bundle feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html
 ---

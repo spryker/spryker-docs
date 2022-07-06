@@ -11,10 +11,10 @@ redirect_from:
   - /docs/quotation-process-approval-process-feature-integration
   - /docs/en/quotation-process-approval-process-feature-integration
 related:
-  - title: Quotation Process feature walkthrough
-	link: docs/scos/dev/feature-walkthroughs/page.version/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
-  - title: Approval Process feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/approval-process-feature-walkthrough.html
+    - title: Quotation Process feature walkthrough
+	  link: docs/scos/dev/feature-walkthroughs/page.version/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
+    - title: Approval Process feature walkthrough
+      link: docs/scos/dev/feature-walkthroughs/page.version/approval-process-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Quotation process + Approval Process feature into a Spryker project.

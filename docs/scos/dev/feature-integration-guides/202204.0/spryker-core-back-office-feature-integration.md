@@ -17,8 +17,8 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/spryker-core-back-office-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/spryker-core-back-office-feature-integration.html
 related:
-  - title: Spryker Core Back Office feature walkthrough
-	link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
+    - title: Spryker Core Back Office feature walkthrough
+	  link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html
 ---
 
 {% info_block errorBox %}

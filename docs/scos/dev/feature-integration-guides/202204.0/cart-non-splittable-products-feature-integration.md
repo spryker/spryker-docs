@@ -11,10 +11,10 @@ redirect_from:
   - /docs/cart-non-splittable-products-feature-integration
   - /docs/en/cart-non-splittable-products-feature-integration
 related:
-  - title: Cart feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-feature-walkthrough.html
-  - title: Non-splittable Products feature walkthrough
-	link: docs/scos/dev/feature-walkthroughs/page.version/non-splittable-products-feature-walkthrough.html
+	- title: Cart feature walkthrough
+      link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-feature-walkthrough.html
+	- title: Non-splittable Products feature walkthrough
+	  link: docs/scos/dev/feature-walkthroughs/page.version/non-splittable-products-feature-walkthrough.html
 ---
 
 ## Install feature core

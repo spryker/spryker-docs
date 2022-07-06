@@ -11,6 +11,9 @@ redirect_from:
   - /docs/en/howto-generate-a-token-for-login
   - /v6/docs/howto-generate-a-token-for-login
   - /v6/docs/en/howto-generate-a-token-for-login
+related:
+  - title: Customer Login by Token overview
+    link: docs/scos/user/features/site.version/company-account-feature-overview/customer-login-by-token-overview.html
 ---
 
 The [Customer Login by Token](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/customer-login-by-token-overview.html) feature lets B2B users log in to a Spryker Shop using a token.

@@ -12,12 +12,12 @@ redirect_from:
   - /docs/en/glue-api-navigation-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-navigation-feature-integration.html
 related:
-  - title: Navigation feature integration
-	link: docs/scos/dev/feature-integration-guides/page.version/navigation-feature-integration.html
-  - title: Navigation feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/navigation-feature-walkthrough/navigation-feature-walkthrough.html
-  - title: Retrieving navigation trees
-	link: docs/scos/dev/glue-api-guides/page.version/retrieving-navigation-trees.html
+	- title: Navigation feature integration
+	  link: docs/scos/dev/feature-integration-guides/page.version/navigation-feature-integration.html
+	- title: Navigation feature walkthrough
+      link: docs/scos/dev/feature-walkthroughs/page.version/navigation-feature-walkthrough/navigation-feature-walkthrough.html
+	- title: Retrieving navigation trees
+	  link: docs/scos/dev/glue-api-guides/page.version/retrieving-navigation-trees.html
 ---
 
 {% info_block errorBox %}

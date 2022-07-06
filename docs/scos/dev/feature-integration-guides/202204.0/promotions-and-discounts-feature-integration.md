@@ -6,7 +6,7 @@ related:
   - title: Glue API - Promotions and Discounts feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-promotions-and-discounts-feature-integration.html
   - title: Promotions and Discounts feature walkthrough
-	  link: docs/scos/dev/feature-walkthroughs/page.version/promotions-discounts-feature-walkthrough.html
+    link: docs/scos/dev/feature-walkthroughs/page.version/promotions-discounts-feature-walkthrough.html
 ---
 
 {% info_block errorBox %}

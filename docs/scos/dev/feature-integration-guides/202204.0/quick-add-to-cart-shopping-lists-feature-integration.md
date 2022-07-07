@@ -12,10 +12,10 @@ redirect_from:
   - /docs/en/quick-add-to-cart-shopping-lists-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/quick-add-to-cart-shopping-lists-feature-integration.html
 related:
-	- title: Quick Add to Cart feature walkthrough
-	  link: docs/scos/dev/feature-walkthroughs/page.version/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
-	- title: Shopping Lists feature walkthrough
-	  link: docs/scos/dev/feature-walkthroughs/page.version/shopping-lists-feature-walkthrough.html
+  - title: Quick Add to Cart feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
+  - title: Shopping Lists feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/shopping-lists-feature-walkthrough.html
 ---
 
 ## Install feature frontend

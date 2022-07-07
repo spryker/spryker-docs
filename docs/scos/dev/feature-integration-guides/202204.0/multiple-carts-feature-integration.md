@@ -12,10 +12,10 @@ redirect_from:
   - /docs/en/multiple-carts-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/multiple-carts-feature-integration.html
 related:
-	- title: Multiple Carts feature walkthrough
-	  link: docs/scos/dev/feature-walkthroughs/page.version/multiple-carts-feature-walkthrough.html
-	- title: Multiple Carts feature overview
-      link: docs/scos/user/features/page.version/multiple-carts-feature-overview.html
+  - title: Multiple Carts feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/multiple-carts-feature-walkthrough.html
+  - title: Multiple Carts feature overview
+    link: docs/scos/user/features/page.version/multiple-carts-feature-overview.html
 ---
 
 ## Install feature core

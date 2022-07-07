@@ -11,12 +11,12 @@ redirect_from:
   - /docs/product-cart-feature-integration
   - /docs/en/product-cart-feature-integration
 related:
-	- title: Product feature integration
-	  link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
-	- title: Cart feature integration
-	  link: docs/scos/dev/feature-integration-guides/page.version/cart-feature-integration.html
-	- title: Product image management
-      link: docs/scos/user/features/page.version/product-feature-overview/product-images-overview.html
+  - title: Product feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
+  - title: Cart feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/cart-feature-integration.html
+  - title: Product image management
+    link: docs/scos/user/features/page.version/product-feature-overview/product-images-overview.html
 ---
 
 {% info_block errorBox %}

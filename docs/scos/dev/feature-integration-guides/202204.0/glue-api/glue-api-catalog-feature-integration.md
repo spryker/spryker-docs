@@ -13,10 +13,10 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-catalog-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-catalog-feature-integration.html
 related:
-	- title: Catalog feature walkthrough
-      link: docs/scos/dev/feature-walkthroughs/page.version/catalog-feature-walkthrough.html
-	- title: Searching the product catalog
-  	  link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
+  - title: Catalog feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/catalog-feature-walkthrough.html
+  - title: Searching the product catalog
+  	link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
 ---
 
 ## Install feature API

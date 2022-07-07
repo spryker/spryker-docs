@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/howto-define-if-a-cart-should-be-deleted-after-placing-an-order
 related:
   - title: Cart feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/site.version/cart-feature-walkthrough/cart-feature-walkthrough.html
+    link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-feature-walkthrough.html
 ---
 
 After placing an order, the cart can either be deleted or saved. If you configure carts to be saved, after placing an order, the cart is duplicated, and the customer can access it.

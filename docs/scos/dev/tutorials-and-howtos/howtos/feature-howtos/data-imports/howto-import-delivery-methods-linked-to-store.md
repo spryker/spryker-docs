@@ -18,7 +18,7 @@ redirect_from:
   - /v4/docs/en/ht-import-delivery-methods-linked-to-store
 related:
   - title: Shipment feature overview
-    link: docs/scos/user/features/site.version/shipment-feature-overview.html
+    link: docs/scos/user/features/page.version/shipment-feature-overview.html
   - title: Creating carrier companies
     link: docs/scos/user/back-office-user-guides/site.version/administration/delivery-methods/creating-carrier-companies.html
   - title: Creating and managing delivery methods

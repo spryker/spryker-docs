@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/howto-create-a-custom-content-item
 related:
   - title: Content Items feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/site.version/content-items-feature-walkthrough/content-items-feature-walkthrough.html
+    link: docs/scos/dev/feature-walkthroughs/page.version/content-items-feature-walkthrough/content-items-feature-walkthrough.html
 ---
 
 By default, Spryker provides `Banner`, `Product Abstract List`, `Product Set` and `File List` content items.

@@ -29,10 +29,10 @@ There are several steps to consider when implementing special prices based on wh
 
 | MODULE | DESCRIPTION |
 | --- | --- |
-| Customer	 | Customer entity needs to be extended to include the group ID. Also, the `Customer` module must be extended to have also the group ID information for the customer. |
-| Price	 | Group ID must be also included in the price entity. For an SKU, you can have one or more prices. The `Price` module must be extended so that you can query the price based on the SKU of the product and the group ID. |
+| Customer | Customer entity needs to be extended to include the group ID. Also, the `Customer` module must be extended to have also the group ID information for the customer. |
+| Price | Group ID must be also included in the price entity. For an SKU, you can have one or more prices. The `Price` module must be extended so that you can query the price based on the SKU of the product and the group ID. |
 |Importer | Set of prices must be imported for each product. |
-| Collector	 | Set of prices must be exported to the client side data storage. |
+| Collector | Set of prices must be exported to the client side data storage. |
 | Catalog | Price that corresponds to the logged-in customer group must be displayed. |
 | PriceCartConnector | Price that corresponds to the group the logged-in customer is part of must be used in the cart. |
 

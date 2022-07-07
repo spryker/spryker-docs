@@ -16,11 +16,11 @@ redirect_from:
   - /v5/docs/en/howto-create-a-visibility-condition-for-cms-blocks
 related:
   - title: CMS feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/site.version/cms-feature-walkthrough/cms-feature-walkthrough.html
+    link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html
   - title: Templates & Slots overview
-    link: docs/scos/user/features/site.version/cms-feature-overview/templates-and-slots-overview.html
+    link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html
   - title: Managing slots
-    link: docs/scos/user/back-office-user-guides/site.version/content/slots/managing-slots.html
+    link: docs/scos/user/back-office-user-guides/page.version/content/slots/managing-slots.html
 ---
 
 *Visibility Condition* is a [Templates & Slots](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html) feature functionality that lets you define when a CMS block is displayed on a page. The [Spryker CMS Blocks content provider](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#spryker-cms-blocks) for slots has the following [visibility conditions](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) by default:

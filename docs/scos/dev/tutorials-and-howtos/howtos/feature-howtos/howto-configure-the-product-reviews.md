@@ -25,7 +25,7 @@ redirect_from:
 
 ## Configure the maximum rating
 
-To change the maximum allowed rating, alter the Client configuration by extending the `\Spryker\Client\ProductReview\ProductReviewConfig` class in your project directory.
+To change the maximum allowed rating, alter the `Client` configuration by extending the `\Spryker\Client\ProductReview\ProductReviewConfig` class in your project directory.
 
 Override the `getMaximumRating` method to return the desired selectable maximum rating value.
 
@@ -53,7 +53,7 @@ Example of client config extension:
 
 ## Configure the number of reviews displayed per page
 
-1. To change the maximum number of reviews displayed per page, alter the Client configuration by extending the `\Spryker\Client\ProductReview\ProductReviewConfig` class in your project directory.
+1. To change the maximum number of reviews displayed per page, alter the `Client` configuration by extending the `\Spryker\Client\ProductReview\ProductReviewConfig` class in your project directory.
 
 2. Override the `PAGINATION_DEFAULT_ITEMS_PER_PAGE` and `PAGINATION_VALID_ITEMS_PER_PAGE` constants to the desired number of reviews to be displayed per page.
 

@@ -32,8 +32,8 @@ In the Spryker B2B Demo Shop, there are two data importers used for managing the
 console data:import merchant-relationship
 ```
 
-1. For each merchant relationship, create separate data import CSV files. For example, you can have a file `price-product-merchant-relationship-mr001.csv`, where `mr001` is the merchant relation key you defined in the previous step. In this file, you specify product prices for this specific merchant.
-2. Then, you can do one of the following:
+3. For each merchant relationship, create separate data import CSV files. For example, you can have a file `price-product-merchant-relationship-mr001.csv`, where `mr001` is the merchant relation key you defined in the previous step. In this file, you specify product prices for this specific merchant.
+4. Do one of the following:
    - Set specific default prices for this merchant manually.
      <br>For example, if you provide a 20% discount on a product for the merchant relation `mr001` and change the default price for the product in the [product price file](https://docs.spryker.com/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html), you have to go to the `price-product-merchant-relationship-mr001.csv` file and change the price for this merchant as well. Because changing the general default product price does not automatically change the merchant custom price for this product. Thus, with every change of the default product price, you have to manually change every merchant custom price of this product.
      <br>This option can work for a relatively small amount of products and merchants you provide the specific prices for. For big amount of this data, to avoid too much manual work, we recommend considering the following option.
@@ -42,7 +42,7 @@ console data:import merchant-relationship
     <br>For example, if the percentage of discount for a merchant is 20%, the script generates the `price-product-merchant-relationship-mr001.csv` file with the prices for this `mr001` merchant. In this example, the price is the default price minus 20%.
     <br>This approach is optimal for big amount of data. However, its main drawback is that you need some development effort and that the script runs and processes data outside the Spryker platform.
 
-3. Import product prices for merchant relations:
+5. Import product prices for merchant relations:
 
    ```bash
    console data:import product-price-merchant-relationship

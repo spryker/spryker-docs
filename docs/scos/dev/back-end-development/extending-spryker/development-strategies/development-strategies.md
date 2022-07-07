@@ -52,7 +52,7 @@ The existing Spryker modules remain untouched.
 
 {% info_block infoBox "Example" %}
 
-In your project, you don’t store prices in Spryker OS, but in an external system. You need to create a new module `SuperPrice` with a new plugin `\Pyz\Zed\SuperPrice\Communication\Plugin\Calculator\PriceCalculatorPlugin`, which performs a call to my Super ERP and gather prices. Once it’s done, I replace default `\Spryker\Zed\Calculation\Communication\Plugin\Calculator\PriceCalculatorPlugin` with my Project `PriceCalculatorPlugin`.
+In your project, you don’t store prices in Spryker OS, but in an external system. You need to create a new module `SuperPrice` with a new plugin `\Pyz\Zed\SuperPrice\Communication\Plugin\Calculator\PriceCalculatorPlugin`, which performs a call to my Super ERP and gathers prices. Once it’s done, you replace default `\Spryker\Zed\Calculation\Communication\Plugin\Calculator\PriceCalculatorPlugin` with my Project `PriceCalculatorPlugin`.
 
 {% endinfo_block %}
 
@@ -60,13 +60,13 @@ Spryker OS support: High, you can safely take minor and patch releases.
 
 ### Project modules
 
-When the Spryker OS does not provide certain functionality, domain object, or concept, create a new Project module where we implement new business requirements.
+When the Spryker OS does not provide certain functionality, domain object, or concept, create a new Project module where you implement new business requirements.
 
 The existing Spryker modules remain untouched.
 
 {% info_block infoBox "Example" %}
 
-In my Project, we would like to introduce Product Label groups. In this case, I need to introduce a new Project module `ProductLabelGroup`, which will provide a new domain object `ProductLabelGroup` in a database (by adding `product_label_group.schema.xml` to Persistence layer to Zed) and call `ProductLabelFacade::findLabelById()` and `ProductLabelFacade::findAllLabels()` to manage the `ProductLabel` to `ProductLabelGroup` relations.
+In your project, you want to introduce product Label groups. In this case, you need to introduce a new project module `ProductLabelGroup`, which provides a new domain object `ProductLabelGroup` in a database (by adding `product_label_group.schema.xml` to the `Persistence` layer to Zed) and calls `ProductLabelFacade::findLabelById()` and `ProductLabelFacade::findAllLabels()` to manage the `ProductLabel` to `ProductLabelGroup` relations.
 
 {% endinfo_block %}
 
@@ -77,16 +77,18 @@ Spryker OS support: High, you can safely take minor and patch releases.
 When specific OOTB Spryker behavior doesn’t fit Project requirements, you can enable the full power of available for your codebase by extending existing business modules.
 
 {% info_block infoBox "Let us know which extension point is missing, so we can add it in the core" %}
-Register missing extension points in [Aha ideas](https://spryker.ideas.aha.io/).  
+
+Register missing extension points in [Aha ideas](https://spryker.ideas.aha.io/).
+ 
 {% endinfo_block %}
 
-As it’s quite a substantial change, we need to go deeper and not only extend OOTB Spryker behaviors but also change it, some of the non-API change become dangerous. That’s why a module constraint to a specific minor version is required (using ~ instead of ^).
+As it’s quite a substantial change, we need to go deeper and not only extend OOTB Spryker behaviors but also change them, some of the non-API changes become dangerous. That’s why a module constraint to a specific minor version is required (using *~* instead of *^*).
 
 Consider using the composition design pattern instead of the direct class extensions: it could increase development costs, but also increases vendor support and simplifies minor updates.
 
 {% info_block infoBox "Example" %}
 
-In my Project, Order entity should not be hydrated during the buying process (we are building a vitrine). In this case, I need to create `\Pyz\Zed\Sales\Business\Order\OrderReader`, which will extend the existing `\Spryker\Zed\Sales\Business\Order\OrderReader` and replace the implementation of the `findOrderByIdSalesOrdermethod()`, where I will adjust the hydration calls.
+In your project, the `Order` entity must not be hydrated during the buying process (you are building a vitrine). In this case, you need to create `\Pyz\Zed\Sales\Business\Order\OrderReader`, which extends the existing `\Spryker\Zed\Sales\Business\Order\OrderReader` and replace the implementation of `findOrderByIdSalesOrdermethod()`, where you adjust the hydration calls.
 
 {% endinfo_block %}
 
@@ -100,7 +102,7 @@ This option is not available for every module, as sometimes conceptual changes c
 
 {% info_block infoBox "Example" %}
 
-In my Project, the URL should be built in a completely different concept that Spryker offers. In this case, I need to create a Project module Url, provide an implementation for every API function (Facade, Client, Service, etc.) and replace OOTB module `spryker/url` with `my-super-project/url`. Spryker features based on URL will use Project implementation to process URLs.
+In your project, the URL must be built in a completely different concept that Spryker offers. In this case, you need to create a project module URL, provide an implementation for every API function (Facade, Client, or Service) and replace OOTB module `spryker/url` with `my-super-project/url`. Spryker features based on URL use the project implementation to process URLs.
 
 {% endinfo_block %}
 

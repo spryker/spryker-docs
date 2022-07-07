@@ -1,5 +1,5 @@
 ---
-title: Integrating Avalara
+title: Integrate Avalara
 description: Integrate Avalara to automatically calculate taxes.
 last_updated: Jun 18, 2021
 template: concept-topic-template

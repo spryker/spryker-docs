@@ -1,5 +1,5 @@
 ---
-title: Integrating Avalara Tax + Product Options
+title: Integrate Avalara Tax + Product Options
 description: Integrate the Avalara Tax + Product Options feature into your project
 last_updated: Jun 18, 2021
 template: concept-topic-template

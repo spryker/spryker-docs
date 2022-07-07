@@ -1,5 +1,5 @@
 ---
-title: Integrating Avalara Tax + Shipment
+title: Integrate Avalara Tax + Shipment
 description: Integrate Avalara Tax + Shipment feature into your project.
 last_updated: Jun 18, 2021
 template: concept-topic-template

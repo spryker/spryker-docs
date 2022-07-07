@@ -1,14 +1,14 @@
 ---
-title: Install and configure Unzer
-description: Install and configure Unzer to work in the Spryker Commerce OS.
-last_updated: Jun 22, 2022
+title: Install and configure Unzer module
+description: Learn how to install and configure the Unzer modules
+last_updated: Jul 02, 2022
 template: feature-integration-guide-template
 related:
 - title: Integrate Unzer
   link: docs/pbc/all/payment/unzer/install-unzer/integrate-unzer.html
 ---
 
-This document describes how to install and configure the Unzer module to [integrate the Unzer module](/docs/pbc/all/payment/unzer/install-unzer/integrate-unzer.html) into your project.
+This document describes how to install and configure the Unzer module.
 
 ## Overview
 
@@ -28,17 +28,13 @@ The `SprykerEco.Unzer` module provides the following payment methods:
 * Marketplace Sofort
 * Marketplace Bank Transfer
 
-## Install and configure Unzer
-
-To install and configure the Unzer module, follow the steps below.
-
-### Install Unzer modules
+## Install Unzer modules via Composer
 
 ```
 composer require spryker-eco/unzer spryker-eco/unzer-gui
 ```
 
-### Check general configuration
+## Configure Unzer modules
 
 You can find all necessary configurations in `vendor/spryker-eco/unzer/config/config.dist.php` and `vendor/spryker-eco/unzer-api/config/config.dist.php`.
 
@@ -54,7 +50,7 @@ The following table describes all general configuration keys and their values.
 | `UnzerConstants::EXPENSES_REFUND_STRATEGY_KEY` | Integer | Expense (shipment) refund strategy key. for details, see the [Select expense refund strategies](#select-expense-refund-strategy) section. |
 | `UnzerApiConstants::LOG_API_CALLS`             | Boolean | Flag indicating if API calls log must be saved.                       |
 
-#### Configuration example
+### Configuration example
 
 **config/Shared/config_default.php**
 
@@ -103,9 +99,9 @@ $config[UnzerConstants::UNZER_AUTHORIZE_RETURN_URL] = 'https://mysprykershop/unz
 $config[UnzerConstants::UNZER_CHARGE_RETURN_URL] = 'https://mysprykershop/unzer/payment-result';
 ```
 
-### Add payment methods to State Machine and Domain Whitelist configuration
+## Add payment methods to State Machine and Domain Whitelist configuration
 
-You must add payment methods to the State Machine (OMS) and Domain Whitelist configuration:
+Add payment methods to the State Machine (OMS) and Domain Whitelist configuration:
 
 ```php
 
@@ -140,7 +136,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 
  ```
 
-### Configure notifications
+## Configure notifications
 
 To complete the payment modification requests (authorize succeeded, payment completed), you must provide a correct URL of your Yves with the `/unzer/notification` path to the config file.
 
@@ -151,13 +147,13 @@ Example:
 
 ```
 
-### Select expense refund strategy
+## Select an expense refund strategy
 
 You can choose one of the provided refund strategies for your payment flow (the configuration key: `UnzerConstants::EXPENSES_REFUND_STRATEGY_KEY`):
 * `UnzerConstants::LAST_SHIPMENT_ITEM_EXPENSES_REFUND_STRATEGY`—expense costs are refunded with the last item in corresponding shipment.
 * `UnzerConstants::LAST_ORDER_ITEM_EXPENSES_REFUND_STRATEGY`—expense costs are refunded with the last item in the whole order.
 * `UnzerConstants::NO_EXPENSES_REFUND_STRATEGY`—expense costs are not refunded.
 
-### Check payment after return request
+## Check payment after return request
 
 To check whether authorization has been successful or failed, for `UnzerConstants::UNZER_AUTHORIZE_RETURN_URL`, use the following Yves path —`https://mysprykershop/unzer/payment-result`. After the check is complete, this endpoint redirects a customer to a default success or fail page.

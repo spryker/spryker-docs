@@ -174,7 +174,7 @@ services:
 ...
 ```    
 
-2. In the config file, enable Jenkins CSRF protection by defining the CSRF variable:
+2. In the config file, enable Jenkins CSRF protection by defining the CSRF variable. The default configuration file is `config\Shared\config_default.php`.
 
 ```php
 ...

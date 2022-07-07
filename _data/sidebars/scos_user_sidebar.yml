@@ -1248,7 +1248,29 @@ entries:
       nested:
       - title: Products
         nested:
+        - title: Manage abstract products and product bundles
+          include_versions:
+          - "202204.0"
+          nested:
+          - title: Create
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html
+          - title: Add scheduled prices
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/add-scheduled-prices-to-abstract-products-and-product-bundles.html
+          - title: Add volume prices
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/add-volume-prices-to-abstract-products-and-product-bundles.html
+          - title: Assign product attributes
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html
+          - title: Edit
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html
         - title: Manage abstract products
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
           nested:
           - title: Creating abstract products and product bundles
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html

@@ -22,7 +22,7 @@ With the shared setup, stores share a single codebase and databases per region. 
 
 ### Shared setup: When to use
 
-We recommend this setup for simple shops that have two to three stores that don't
+We recommend this setup for simple shops that have two to three stores that follow the same business logic and have insignificant differences.
 
 ### Shared setup: Advantages
 

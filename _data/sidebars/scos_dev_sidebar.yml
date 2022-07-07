@@ -1504,6 +1504,8 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
+      - title: "Glue API: Shared Carts feature integration"
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-shared-carts-feature-integration.html
       - title: Glue API - Shipment feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html
         include_versions:
@@ -2415,6 +2417,8 @@ entries:
       - "201811.0"
       - "201903.0"
       - "202204.0"
+    - title: Uuid Generation Console feature integration
+      url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
     - title: Product is Available Again feature integration
       url: /docs/scos/dev/feature-integration-guides/product-is-available-again-feature-integration.html
       include_versions:

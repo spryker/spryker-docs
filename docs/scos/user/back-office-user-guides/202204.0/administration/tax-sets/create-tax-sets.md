@@ -42,9 +42,9 @@ This opens the **Edit Tax Set** page with a success message displayed.
 
 ## Next steps
 
-* Assign a tax set to an abstract product by [creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html).
+* Assign a tax set to an abstract product by [creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 
-* Assign a tax set to an existing abstract product by [editing abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/editing-abstract-products.html#prerequisites).
+* Assign a tax set to an existing abstract product by [editing abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html).
 
 * Assign a tax set to a product variant by [creating product variants](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html).
 

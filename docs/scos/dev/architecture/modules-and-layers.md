@@ -26,6 +26,7 @@ redirect_from:
   - /docs/en/modularity-and-shop-suite
   - /2021080/docs/modularity-and-shop-suite
   - /2021080/docs/en/modularity-and-shop-suite
+  - /module_guide/overview.htm
 related:
   - title: Conceptual overview
     link: docs/scos/dev/architecture/conceptual-overview.html

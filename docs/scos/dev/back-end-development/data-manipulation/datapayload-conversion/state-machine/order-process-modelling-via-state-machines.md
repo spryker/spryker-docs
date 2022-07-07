@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/order-process-modelling-state-machines
   - /v1/docs/order-process-modelling-state-machines
   - /v1/docs/en/order-process-modelling-state-machines
+  - /capabilities/order_management/state_machine/order-process-modelling-state-machines.htm
 related:
   - title: Order management system multi-thread
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-management-system-multi-thread.html

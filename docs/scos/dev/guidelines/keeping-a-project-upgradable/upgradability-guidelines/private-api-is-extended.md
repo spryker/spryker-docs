@@ -18,7 +18,7 @@ Modules have public and private APIs. While public API updates always support ba
 
 For more information about module APIs, see [Definition of Module API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html).
 
-## Example of Example of code that causes an upgradability error: Extending a private API form class
+## Example of code that causes an upgradability error: Extending a private API form class
 
 `CustomerAccessForm` extends `Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm` from a private API.
 
@@ -33,7 +33,7 @@ class CustomerAccessForm extends SprykerCustomerAccessForm
 }
 ```
 
-## Related error in the Evaluator output: Extending a private API form class
+### Related error in the Evaluator output: Extending a private API form class
 
 ```bash
 ------------------------------------------------------------------------------------
@@ -41,7 +41,7 @@ class CustomerAccessForm extends SprykerCustomerAccessForm
 ------------------------------------------------------------------------------------
 ```
 
-## Resolving the error: Extending a private API form class
+### Resolving the error: Extending a private API form class
 
 To resolve the error provided in the example, try the following in the provided order:
 1. Recommended: Extend the functionality using the [Configuration strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration).
@@ -54,7 +54,7 @@ To resolve the error provided in the example, try the following in the provided 
         While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 
 
-## Example of resolving the error by copying the form class to the project level
+### Example of resolving the error by copying the form class to the project level
 
 ```php
 <?php
@@ -86,7 +86,7 @@ class CustomerAccessFilter extends SprykerCustomerAccessFilter
 }
 ```
 
-## Related error in the Evaluator output: Extending a private API business model
+### Related error in the Evaluator output: Extending a private API business model
 
 ```bash
 ------------------------------------------------------------------------------------
@@ -94,7 +94,7 @@ class CustomerAccessFilter extends SprykerCustomerAccessFilter
 ------------------------------------------------------------------------------------
 ```
 
-## Example of resolving the error by copying the business model to the project level
+### Example of resolving the error by copying the business model to the project level
 
 ```php
 <?php
@@ -127,7 +127,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 }
 ```
 
-## Related error in the Evaluator output: Extending a private API dependency provider
+### Related error in the Evaluator output: Extending a private API dependency provider
 
 ```bash
 ------------------------------------------------------------------------------------
@@ -135,7 +135,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 ------------------------------------------------------------------------------------
 ```
 
-## Example of resolving the error by copying the dependency provider to the project level
+### Example of resolving the error by copying the dependency provider to the project level
 
 ```php
 namespace Pyz\Yves\CheckoutPage;
@@ -153,3 +153,29 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
     }
 }
 ```
+
+### Example of code that causes an upgradability error: Extending a private API Bridge
+
+```php
+namespace Pyz\Zed\PriceProduct\Dependency\Facade;
+
+use Spryker\Zed\PriceProduct\Dependency\Facade\PriceProductToProductFacadeBridge as SprykerPriceProductToProductFacadeBridge;
+
+class PriceProductToProductFacadeBridge extends SprykerPriceProductToProductFacadeBridge implements PriceProductToProductFacadeInterface
+{
+    ...
+}
+```
+
+### Related error in the Evaluator output: Extending a private API Bridge
+
+
+```bash
+------------------------------------------------------------------------------------
+Please avoid extension of the PrivateApi Spryker\Zed\PriceProduct\Dependency\Facade\PriceProductToProductFacadeBridge in Pyz\Zed\PriceProduct\Dependency\Facade\PriceProductToProductFacadeBridge
+------------------------------------------------------------------------------------
+```
+
+### Example of resolving the error: Extending a private API Bridge
+Remove the Bridge.
+

@@ -4,7 +4,7 @@ description: Find out how you can integrate and use Usercentrics in your Spryker
 template: howto-guide-template
 redirect_from:
    - docs/aop/user/apps/usercentrics.html
-
+   - docs/acp/user/apps/usercentrics.html
 ---
 
 [Usercentrics](https://usercentrics.com/) is the Consent Management Platform (CMP) that lets you obtain and manage the consent of your users to use cookies across your store. Usercentrics helps you get GDPR, CCPA, and LGPD compliant by letting your customers decide which tracking cookies they want to accept or reject.

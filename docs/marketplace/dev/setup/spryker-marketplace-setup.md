@@ -4,7 +4,7 @@ description: This document describes how to get started with the B2C Demo Market
 template: concept-topic-template
 ---
 
-This document describes how to get started with the B2C Demo Marketplace.
+This document describes how to get started with the B2C Demo Marketplace. 
 
 {% info_block infoBox "Info" %}
 

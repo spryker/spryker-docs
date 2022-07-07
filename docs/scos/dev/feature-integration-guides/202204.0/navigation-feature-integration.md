@@ -14,7 +14,7 @@ related:
     - title: Glue API - Navigation feature integration
       link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-navigation-feature-integration.html
     - title: Navigation feature walkthrough
-	  link: docs/scos/dev/feature-walkthroughs/page.version/navigation-feature-walkthrough/navigation-feature-walkthrough.html
+      link: docs/scos/dev/feature-walkthroughs/page.version/navigation-feature-walkthrough/navigation-feature-walkthrough.html
 ---
 
 {% info_block errorBox "Attention" %}

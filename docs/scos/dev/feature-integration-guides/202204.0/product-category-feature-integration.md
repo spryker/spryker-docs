@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201907.0/product-category-feature-integration.html
 related:
     - title: Product feature integration
-	  link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
+      link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
     - title: Category Management feature walkthrough
       link: docs/scos/dev/feature-walkthroughs/page.version/category-management-feature-walkthrough.html
 ---

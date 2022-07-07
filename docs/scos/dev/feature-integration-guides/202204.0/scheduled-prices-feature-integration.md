@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/scheduled-prices-feature-integration
 related:
   - title: Scheduled Prices feature walkthrough
-	link: docs/scos/dev/feature-walkthroughs/page.version/scheduled-prices-feature-walkthrough.html
+    link: docs/scos/dev/feature-walkthroughs/page.version/scheduled-prices-feature-walkthrough.html
 ---
 
 ## Install feature core

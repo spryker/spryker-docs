@@ -21,7 +21,7 @@ related:
     - title: Checkout + Quotation Process feature integration
       link: docs/scos/dev/feature-integration-guides/page.version/checkout-quotation-process-feature-integration.html
     - title: Quotation Process feature walkthrough
-	  link: docs/scos/dev/feature-walkthroughs/page.version/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
+      link: docs/scos/dev/feature-walkthroughs/page.version/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
 ---
 
 ## Install feature core

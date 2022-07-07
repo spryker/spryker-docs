@@ -22,7 +22,7 @@ redirect_from:
   - /v2/docs/en/other-best-practices  
   - /v1/docs/other-best-practices
   - /v1/docs/en/other-best-practices
-  related:
+related:
   - title: Data-driven ranking
     link: docs/scos/dev/best-practices/search-best-practices/data-driven-ranking.html
   - title: Full-text search

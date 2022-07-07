@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/navigation-module-integration
 related:
     - title: Navigation feature walkthrough
-	  link: docs/scos/dev/feature-walkthroughs/page.version/navigation-feature-walkthrough/navigation-feature-walkthrough.html
+      link: docs/scos/dev/feature-walkthroughs/page.version/navigation-feature-walkthrough/navigation-feature-walkthrough.html
 ---
 
 ## Prerequisites

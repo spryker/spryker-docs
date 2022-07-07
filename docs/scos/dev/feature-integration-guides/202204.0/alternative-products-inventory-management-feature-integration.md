@@ -14,7 +14,7 @@ related:
   - title: Alternative Products feature walkthrough
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-alternative-products-feature-integration.html
   - title: Inventory Management feature walkthrough
-	link: docs/scos/dev/feature-walkthroughs/page.version/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
+    link: docs/scos/dev/feature-walkthroughs/page.version/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
 ---
 
 ## Install feature core

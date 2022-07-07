@@ -12,9 +12,9 @@ redirect_from:
   - /docs/en/return-management-feature-integration
 related:
     - title: Glue API - Return Management feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-return-management-feature-integration.html
+      link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-return-management-feature-integration.html
     - title: Return Management feature walkthrough
-	link: docs/scos/dev/feature-walkthroughs/page.version/return-management-feature-walkthrough.html
+	  link: docs/scos/dev/feature-walkthroughs/page.version/return-management-feature-walkthrough.html
 ---
 
 ## Install feature core

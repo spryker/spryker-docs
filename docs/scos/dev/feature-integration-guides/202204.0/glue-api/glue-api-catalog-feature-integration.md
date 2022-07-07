@@ -16,7 +16,7 @@ related:
   - title: Catalog feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/catalog-feature-walkthrough.html
   - title: Searching the product catalog
-  	link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
+    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
 ---
 
 ## Install feature API

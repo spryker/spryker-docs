@@ -8,7 +8,7 @@ Keeping enterprise software up-to-date is a known hurdle. Especially when it com
 
 Platform as a Service Plus (PaaS+) is the next generation of Spryker PaaS that addresses application upgradability challenges via Spryker CI. PaaS+ automates  upgrades and code quality checks, while providing full control on what to bring to your platform. By reducing upgrade efforts to a minimum, PaaS+ is offering a reliable way to keep up with Spryker’s daily updates.
 
-![Spryker PaaS+](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas-plus/dev/platform-as-a-service-plus.md/spryker-paas-plus.png)
+![Spryker PaaS+](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/platform-as-a-service-plus.md/spryker-paas-plus.png)
 
 
 ## Spryker CI
@@ -25,10 +25,11 @@ A CI pipeline provides automated checks, a quality gate, that guides  developers
 
 By default, there is a main pipeline and sub-pipelines.
 
-![Spryker CI pipelines](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas-plus/dev/platform-as-a-service-plus.md/spryker-ci-pipelines.png)
+![Spryker CI pipelines](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/platform-as-a-service-plus.md/pipelines.png)
 
 The main pipeline is triggered when you push to your connected repository, and it automatically triggers the remaining pipelines, according to the following actions:
-<img width="186" alt="Image7" src="https://user-images.githubusercontent.com/83701393/176355028-49e4b72e-19d0-49f1-9216-6ff909da7f26.png">
+
+![Pipeline steps](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/platform-as-a-service-plus.md/pipeline-steps.png)
 
 
 {% info_block warningBox "Always run the main pipeline" %}
@@ -58,7 +59,7 @@ For an effortless and safer upgrade experience, we recommend deploying only the 
 {% endinfo_block %}
 
 
-<img width="743" alt="Image8" src="https://user-images.githubusercontent.com/83701393/176355054-9259da5c-2200-4a69-93fc-f5c4485d6ca9.png">
+![Quality gate](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/platform-as-a-service-plus.md/quality-gate.png)
 
 
 3. Deployment: Deploys to the defined AWS environment.
@@ -79,4 +80,4 @@ The upgrader service provides automated upgrades for your application as follows
 
 ## Next steps
 
-[Onboarding to PaaS+](/docs/paas-plus/dev/onboarding-to-paas+.md)
+[Onboarding to PaaS+](/docs/paas+/dev/onboarding-to-paas+.md)

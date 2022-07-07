@@ -54,20 +54,20 @@ To get started, provide the email of your SCCOS admin to your CSM. The admin use
 
 Once we receive the admin's email address, we will provision and send you an email invitation to your Spryker CI workspace.
 
-![Onboarding to Spryker CI](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas-plus/dev/platform-as-a-service-plus.md/onboarding-to-spryker-ci.png)
+![Onboarding to Spryker CI](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-paas%2B.md/onboarding-to-spryker-ci.png)
 
 ### 2.2. Go to your workspace
 
 You receive an email with a one-time invitation token, but your invitation is always active when you sign in at [buddy.works](https://buddy.works). Create your account and accept the invitation to the workspace.
 
-![Spryker CI invitation](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas-plus/dev/platform-as-a-service-plus.md/spryker-ci-invitation.png)
+![Spryker CI invitation](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-paas%2B.md/spryker-ci-invitation.png)
 
 
 ### 2.3. View projects inside your workspace
 
 Your workspace contains the Spryker Upgrader Service project, as well as a project for each of your environments, like development or production.
 
-![Spryker CI projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas-plus/dev/platform-as-a-service-plus.md/spryker-ci-projects.png)
+![Spryker CI projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-paas%2B.md/projects.png)
 
 ### 2.4. Invite new users
 
@@ -79,20 +79,17 @@ Add new users to your project and assign user permissions. Two roles are availab
 
 ### 2.5. Connect your repository
 
-Connect your repository to a project, before running the pipelines. Open the“Code” section, click on the kebab menu and select "Switch repository or Git provider”.
+Connect a Git repository to provide upgrades to.
 
-![gif1](https://user-images.githubusercontent.com/83701393/176354903-a9d0a669-af3f-449d-bde7-cfc696e96569.gif)
+![Switch repository](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-paas%2B.md/switch-a-repo.mp4)
 
-
-Select your git provider and add a new integration. Authorization is possible via OAuth or Token. After connecting, choose “Clone repository from scratch”.
-
-![gif2](https://user-images.githubusercontent.com/83701393/176354926-c486ddfc-25e2-4ae6-b32d-d0dad14d4aee.gif)
-
-
+For detailed instructions, see [Connect a Git repository]()
 
 ### 2.5. Push and have fun!
-Main pipeline in each project is triggered when you push to a connected repository. More information on Pipelines is provided below.       
-<img width="446" alt="Image 5 6" src="https://user-images.githubusercontent.com/83701393/176354944-9d097014-9f1e-4ec7-9788-287f447fde4a.png">
+
+Main pipeline is triggered when you push to a connected repository.       
+
+![Pipelines](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/platform-as-a-service-plus.md/pipelines.png)
 
 
 ## Support for Spryker CI

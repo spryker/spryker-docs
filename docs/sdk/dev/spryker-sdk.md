@@ -11,10 +11,12 @@ The Spryker SDK aims to provide a single entry point to accelerate your producti
 2. Install [Docker](https://docs.docker.com/engine/install/) and [Docker Compose](https://docs.docker.com/compose/install/).
 3. Download the `installer.sh` file from [the latest release](https://github.com/spryker-sdk/sdk/releases).
 4. Run `installer.sh </path/to/install/sdk/in>`.
-5. Optional: Add spryker-sdk as an alias if you use Bash or Zsh.
+6. Optional: Add spryker-sdk as an alias if you use Bash or Zsh.
 To do so, execute `"add alias spryker-sdk='</path/to/install/sdk/in>/bin/spryker-sdk.sh'" >> ~/.bashrc && source ~/.bashrc` for Bash or `"alias spryker-sdk=\"</path/to/install/sdk/in>/bin/spryker-sdk.sh\"" >> ~/.zshrc  && source ~/.zshrc` for Zsh.c
 
 ## Getting started
+
+Run `sdk:setting:set` to set up your local settings.
 
 To get an overview of the available capabilities of the Spryker SDK, run
 `spryker-sdk list`.

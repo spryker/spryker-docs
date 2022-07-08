@@ -35,13 +35,11 @@ git clone https://github.com/spryker/docker-sdk.git ./docker
 * After enabling a service, make sure to apply the new configuration:
 
     1. Bootstrap docker setup:
-
     ```bash
     docker/sdk boot {deploy.yml | deploy.dev.yml}
     ```
 
     2. Once the job finishes, build and start the instance:
-
     ```bash
     docker/sdk up
     ```

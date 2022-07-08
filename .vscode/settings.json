@@ -15,5 +15,7 @@
     "Spryker",
     "touchpoints",
     "Сore"
-  ]
+  ],
+  "grammarly.config.documentDialect": "american",
+  "grammarly.config.suggestions.OxfordComma": true
 }

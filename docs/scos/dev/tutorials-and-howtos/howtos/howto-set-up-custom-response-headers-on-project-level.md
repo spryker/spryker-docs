@@ -26,7 +26,7 @@ The procedure described in this document is just an example of what you can do w
 
 ## Prerequisites
 
-Ensure that you have:
+Ensure that you have the following:
 * Up-to-date Spryker installation
 * Browser to test
 * CMS page with the video in your Spryker-based shop

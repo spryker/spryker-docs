@@ -1,19 +1,7 @@
----
-title: Enabling the content widget
-description: The guide walks you through the process of installing the Content Widget feature in the project.
-last_updated: Jun 16, 2021
-template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/enabling-cms-widget
-originalArticleId: 5f509a40-2c08-4a64-9cbc-ec1a4354a4cd
-redirect_from:
-  - /2021080/docs/enabling-cms-widget
-  - /2021080/docs/en/enabling-cms-widget
-  - /docs/enabling-cms-widget
-  - /docs/en/enabling-cms-widget/docs/scos/dev/feature-integration-guides/202200.0/enabling-the-content-widget.html
----
+
 
 CMS content widgets is a CMS feature for adding  dynamic content to CMS pages/blocks.
-		
+
 For example, you can list a single product, product lists, product groups or product sets.
 
 ## Integration
@@ -28,22 +16,22 @@ Integration of CMS widget consists of three main parts:
 3. (Optionally) Providing CMS content function parameter mapper plugins.
 
 ### Step 1: Registering twig function in Yves.
-The CMS content widget is a twig function. Therefore, twig syntax rules apply and must be followed when including the inside content. 
+The CMS content widget is a twig function. Therefore, twig syntax rules apply and must be followed when including the inside content.
 For example, `{% raw %}{{{% endraw %} product(['012', '013', '321']) {% raw %}}}{% endraw %}` will include carousel component with three products.
-				
-To register a new function, you need to create a plugin which implements the `\Spryker\Yves\CmsContentWidget\Dependency\CmsContentWidgetPluginInterface` interface and place it in Yves application. Plugins are registered in `\Pyz\Yves\CmsContentWidget\CmsContentWidgetependencyProvider::getCmsContentWidgetPlugins` which is an array stored as key => value pairs, 
+
+To register a new function, you need to create a plugin which implements the `\Spryker\Yves\CmsContentWidget\Dependency\CmsContentWidgetPluginInterface` interface and place it in Yves application. Plugins are registered in `\Pyz\Yves\CmsContentWidget\CmsContentWidgetependencyProvider::getCmsContentWidgetPlugins` which is an array stored as key => value pairs,
 where **key** is the function name you want to use in a template and **value** is a specific plugin instance. This plugin needs configuration which is explained in the next paragraph.
 
 To enable the feature for CMS blocks, you have to configure twig rendering plugin `\Spryker\Yves\CmsContentWidget\Plugin\CmsTwigContentRendererPlugin` and add it to `\Pyz\Yves\CmsBlock\CmsBlockDependencyProvider::getCmsBlockTwigContentRendererPlugin`. This will enable twig function rendering in CMS blocks.
 
 ### Step 2: Providing CMS content widget configuration.
-				
-Some information needs to be shared between Yves and Zed. Therefore, the configuration plugin must be placed in a shared namespace. 
 
-**The new plugin must implement:** `\Spryker\Shared\CmsContentWidget\Depedency\CmsContentWidgetConfigurationProviderInterface` which is used by Yves and Zed. 
+Some information needs to be shared between Yves and Zed. Therefore, the configuration plugin must be placed in a shared namespace.
+
+**The new plugin must implement:** `\Spryker\Shared\CmsContentWidget\Depedency\CmsContentWidgetConfigurationProviderInterface` which is used by Yves and Zed.
 
 When used in Yves, inject this plugin directly to your plugin and use configuration when building twig callable. When used in Zed, it should be added to the `\Pyz\Zed\CmsContentWidget\CmsContentWidgetConfig::getCmsContentWidgetConfigurationProviders` plugin array where key is the function name and value is the plugin instance. Providing it to Zed allows rendering usage information below the content editor.
-				
+
 The configuration provider requires implementation of the following methods:
 
 * `getFunctionName` is the name of function when used in CMS content.
@@ -91,17 +79,17 @@ class CmsWidgetPlugin extends AbstractPlugin implements CmsContentWidgetPluginIn
               );
           };
       }
-      
+
          /**
      * @param null|string $templateIdentifier
      *
      * @return string
      */
-    protected function resolveTemplatePath($templateIdentifier = null) 
+    protected function resolveTemplatePath($templateIdentifier = null)
     {
         return '@Module/partials/function_template.twig'
     }
-    
+
      /**
      * @param array $context
      * @param array|string $parameters
@@ -112,13 +100,13 @@ class CmsWidgetPlugin extends AbstractPlugin implements CmsContentWidgetPluginIn
     {
         return []; //return data to be inserted into template
     }
-      
+
  }
 ```
 
 ## Provided Plugins
 We provide three CMS content widget plugins . All are currently implemented in the demoshop so you can take them from our repository and integrate in your project.
-		
+
 Plugin configuration is described below.
 
 ### Zed Plugins:
@@ -188,7 +176,7 @@ class CmsContentWidgetDependencyProvider extends SprykerCmsContentWidgetDependen
               \Spryker\Shared\CmsProductGroupConnector\ContentWidgetConfigurationProvider\CmsProductGroupContentWidgetConfigurationProvider::FUNCTION_NAME => new \Spryker\Zed\CmsProductConnector\Communication\Plugin\Cms\CmsProductSkuMapperPlugin(),
           ];
       }
-      
+
 }
 ```
 
@@ -220,7 +208,7 @@ class CmsContentWidgetConfig extends SprykerCmsContentConfig
 }
 ```
 
-<!-- 
+<!--
 ### Demoshop - Add Twig Function for Your Application Scope
 
 Open your YvesBootstrap `src/Pyz/Yves/AApplication/YvesBootstrap.php` and add the `CmsContentWidgetServiceProvider` provider to `registerServiceProviders`:

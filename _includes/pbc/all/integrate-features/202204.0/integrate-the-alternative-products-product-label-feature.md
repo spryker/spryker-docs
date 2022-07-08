@@ -1,16 +1,4 @@
----
-title: Alternative products + Product Label feature integration
-description: The guide describes the procedure that you need to perform in order to integrate the Alternative Products + Product Label feature into your project.
-last_updated: Jun 16, 2021
-template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/alternative-products-product-labels-feature-integration
-originalArticleId: ad3a3385-381b-4dcf-a067-965b4d6e04cd
-redirect_from:
-  - /2021080/docs/alternative-products-product-labels-feature-integration
-  - /2021080/docs/en/alternative-products-product-labels-feature-integration
-  - /docs/alternative-products-product-labels-feature-integration
-  - /docs/en/alternative-products-product-labels-feature-integration
----
+
 
 ## Install feature core
 
@@ -51,15 +39,15 @@ Make sure that the following modules have been installed:
 Add the following to your project:
 
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
-    
+
 ```php   
 <?php
- 
+
 namespace Pyz\Zed\Installer;
- 
+
 use Spryker\Zed\Installer\InstallerDependencyProvider as SprykerInstallerDependencyProvider;
 use Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin\Installer\ProductAlternativeProductLabelConnectorInstallerPlugin;
- 
+
 class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 {
 	/**
@@ -107,11 +95,11 @@ Enable the following behavior types by registering the plugins:
 <?php
 
 namespace Pyz\Zed\ProductAlternative;
- 
+
 use Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin\PostProductAlternativeCreatePlugin;
 use Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin\PostProductAlternativeDeletePlugin;
 use Spryker\Zed\ProductAlternative\ProductAlternativeDependencyProvider as SprykerProductAlternativeDependencyProvider;
- 
+
 class ProductAlternativeDependencyProvider extends SprykerProductAlternativeDependencyProvider
 {
     /**
@@ -123,7 +111,7 @@ class ProductAlternativeDependencyProvider extends SprykerProductAlternativeDepe
             new PostProductAlternativeCreatePlugin(),
         ];
     }
- 
+
     /**
      * @return \Spryker\Zed\ProductAlternativeExtension\Dependency\Plugin\PostProductAlternativeDeletePluginInterface[]
      */
@@ -140,12 +128,12 @@ class ProductAlternativeDependencyProvider extends SprykerProductAlternativeDepe
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ProductLabel;
- 
+
 use Spryker\Zed\ProductAlternativeProductLabelConnector\Communication\Plugin\ProductAlternativeLabelUpdaterPlugin;
 use Spryker\Zed\ProductLabel\ProductLabelDependencyProvider as SprykerProductLabelDependencyProvider;
- 
+
 class ProductLabelDependencyProvider extends SprykerProductLabelDependencyProvider
 {
     /**

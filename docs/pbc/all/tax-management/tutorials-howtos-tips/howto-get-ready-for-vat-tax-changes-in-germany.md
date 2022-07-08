@@ -13,6 +13,7 @@ redirect_from:
   - /v5/docs/en/howto-get-ready-for-vat-tax-changes-in-germany
   - /v6/docs/howto-get-ready-for-vat-tax-changes-in-germany
   - /v6/docs/en/howto-get-ready-for-vat-tax-changes-in-germany
+  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-get-ready-for-vat-tax-changes-in-germany.html
 related:
   - title: Managing Tax Sets
     link: docs/scos/user/back-office-user-guides/page.version/administration/tax-sets/managing-tax-sets.html

@@ -1,16 +1,4 @@
----
-title: Alternative products + Inventory Management feature integration
-description: The guide walks you through the process of installing the Alternative products and Inventory features into the project.
-last_updated: Jun 16, 2021
-template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/alternative-products-inventory-management-feature-integration
-originalArticleId: 5bb30c5b-4912-4a16-be29-46f68ef0e0c7
-redirect_from:
-  - /2021080/docs/alternative-products-inventory-management-feature-integration
-  - /2021080/docs/en/alternative-products-inventory-management-feature-integration
-  - /docs/alternative-products-inventory-management-feature-integration
-  - /docs/en/alternative-products-inventory-management-feature-integration
----
+
 
 ## Install feature core
 
@@ -36,12 +24,12 @@ Enable the following behaviors by registering the plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\ProductAlternativeStorage;
- 
+
 use Spryker\Client\AvailabilityStorage\Plugin\ProductAlternativeStorage\AvailabilityCheckAlternativeProductApplicablePlugin;
 use Spryker\Client\ProductAlternativeStorage\ProductAlternativeStorageDependencyProvider as SprykerProductAlternativeStorageDependencyProvider;
- 
+
 class ProductAlternativeStorageDependencyProvider extends SprykerProductAlternativeStorageDependencyProvider
 {
 	/**
@@ -60,12 +48,12 @@ class ProductAlternativeStorageDependencyProvider extends SprykerProductAlternat
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\ProductAlternative;
- 
+
 use Spryker\Zed\Availability\Communication\Plugin\ProductAlternative\AvailabilityCheckAlternativeProductApplicablePlugin;
 use Spryker\Zed\ProductAlternative\ProductAlternativeDependencyProvider as SprykerProductAlternativeDependencyProvider;
- 
+
 class ProductAlternativeDependencyProvider extends SprykerProductAlternativeDependencyProvider
 {
 	/**

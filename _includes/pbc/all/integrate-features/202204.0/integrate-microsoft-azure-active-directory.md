@@ -1,20 +1,4 @@
----
-title: Microsoft Azure Active Directory
-description: Learn  how to integrate Microsoft Azure Active Directory into a Spryker project.
-last_updated: Jun 17, 2021
-template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/microsoft-azure-active-directory
-originalArticleId: 11224ada-6cfc-4217-94e9-085e64755ad6
-redirect_from:
-  - /2021080/docs/microsoft-azure-active-directory
-  - /2021080/docs/en/microsoft-azure-active-directory
-  - /docs/microsoft-azure-active-directory
-  - /docs/en/microsoft-azure-active-directory
-  - /docs/scos/dev/feature-integration-guides/201811.0/microsoft-azure-active-directory.html
-  - /docs/scos/dev/feature-integration-guides/201903.0/microsoft-azure-active-directory.html
-  - /docs/scos/dev/feature-integration-guides/201907.0/microsoft-azure-active-directory.html
-  - /docs/scos/dev/feature-integration-guides/202005.0/microsoft-azure-active-directory.html
----
+
 
 This page describes the Microsoft Azure Active Directory and how to integrate it into a Spryker project.
 

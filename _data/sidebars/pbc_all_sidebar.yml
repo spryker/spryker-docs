@@ -31,3 +31,39 @@ entries:
                 url: /docs/pbc/all/payment/unzer/customise-the-credit-card-display-in-your-payment-step.html
               - title: Domain model & relationships
                 url: /docs/pbc/all/payment/unzer/domain-model-and-relationships.html
+      - title: Tax Management
+        url: /docs/pbc/all/tax-management/tax-feature-overview.html
+        nested:
+          - title: Manage in the Back Office
+            nested:
+              - title: Create tax rates
+                url: /docs/pbc/all/tax-management/manage-taxes-in-the-back-office/create-tax-rates.html
+              - title: Edit tax rates
+                url: /docs/pbc/all/tax-management/manage-taxes-in-the-back-office/edit-tax-rates.html
+              - title: Create tax sets
+                url: /docs/pbc/all/tax-management/manage-taxes-in-the-back-office/create-tax-sets.html
+              - title: Edit tax sets
+                url: /docs/pbc/all/tax-management/manage-taxes-in-the-back-office/edit-tax-sets.html
+          - title: Manage via Glue API
+            url: /docs/pbc/all/tax-management/manage-taxes-via-glue-api/retrieve-tax-sets.html
+            nested:
+              - title: Retrieve tax sets
+                url: /docs/pbc/all/tax-management/manage-taxes-via-glue-api/retrieve-tax-sets.html
+          - title: Avalara
+            url: /docs/pbc/all/tax-management/avalara/avalara.html
+            nested:
+              - title: Integrate Avalara
+                url: /docs/pbc/all/tax-management/avalara/integrate-avalara.html
+              - title: Integrate Avalara Tax + Product Options
+                url: /docs/pbc/all/tax-management/avalara/integrate-avalara-tax-product-options.html
+              - title: Integrate Avalara Tax + Shipment
+                url: /docs/pbc/all/tax-management/avalara/integrate-avalara-tax-shipment.html
+          - title: Tutorials and HowTos
+            nested:
+              - title: "HowTo: Get ready for VAT (tax) changes in Germany"
+                url: /docs/pbc/all/tax-management/tutorials-howtos-tips/howto-get-ready-for-vat-tax-changes-in-germany.html
+          - title: Extend and customize
+            nested:
+              - title: "Reference information: Tax module"
+                url: /docs/pbc/all/tax-management/extend-and-customize/reference-information-tax-module.html
+          - title: Domain model and relationships

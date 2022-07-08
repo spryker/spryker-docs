@@ -22,6 +22,9 @@ redirect_from:
   - /v2/docs/en/t-content-search-personalized-catalog-page
   - /v1/docs/t-content-search-personalized-catalog-page
   - /v1/docs/en/t-content-search-personalized-catalog-page
+related:
+  - title: CMS Pages overview
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
 ---
 
 {% info_block infoBox %}

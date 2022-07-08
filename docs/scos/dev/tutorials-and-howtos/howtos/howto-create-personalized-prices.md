@@ -46,7 +46,7 @@ The `spy_customer` table must be extended on the project side to include the gro
 
 The `spy_price` table must be extended on the project side to include the group ID. The newly added column must not be mandatory.
 
-## Extend the price module
+## Extend the Price module
 
 The `Price` module must be extended so that you can query prices by SKU and group ID and retrieve the default price.
 

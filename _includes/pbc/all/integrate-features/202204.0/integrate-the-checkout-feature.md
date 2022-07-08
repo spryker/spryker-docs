@@ -1,21 +1,8 @@
----
-title: Checkout feature integration
-description: Learn how to integrate the Checkout feature into a Spryker project.
-last_updated: Jul 27, 2021
-template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/checkout-feature-integration
-originalArticleId: f18436a4-91c4-41a4-9bf2-65d858764ab6
-redirect_from:
-  - /2021080/docs/checkout-feature-integration
-  - /2021080/docs/en/checkout-feature-integration
-  - /docs/checkout-feature-integration
-  - /docs/en/checkout-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202200.0/checkout-feature-integration.html
----
+
 
 This document describes how to integrate the Checkout feature into a Spryker project. 
 
-  
+
 {% info_block warningBox %}
 
 This integration guide expects the basic feature to be in place. It only adds the [Order Threshold](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html) functionality.
@@ -59,7 +46,7 @@ Ensure that the following modules have been installed:
 | SalesOrderThresholdDataImport | vendor/spryker/sales-threshold-data-import |
 | SalesOrderThresholdGui | vendor/spryker/sales-order-threshold-gui |
 | SalesOrderThresholdGuiExtension | vendor/spryker/sales-order-threshold-gui-extension |
-	
+
 {% endinfo_block %}
 
 ### 2) Set up database schema and transfer objects
@@ -106,13 +93,13 @@ Using the demo data below, for each threshold message, configure the glossary ke
 1. Add infrastructural record's glossary keys:
 
 **src/data/import/glossary.csv**
-    
+
 ```yaml
 sales-order-threshold.strategy.soft-minimum-threshold-fixed-fee,Zuschlag,de_DE
 sales-order-threshold.strategy.soft-minimum-threshold-fixed-fee,Surcharge,en_US
 sales-order-threshold.strategy.soft-minimum-threshold-flexible-fee,Zuschlag,de_DE
 sales-order-threshold.strategy.soft-minimum-threshold-flexible-fee,Surcharge,en_US
-``` 
+```
 
 
 2. Add demo data glossary keys:
@@ -162,7 +149,7 @@ Import infrastructural data as follows:
 | SalesOrderThresholdTypeInstallerPlugin |Installs sales order threshold types. | None | Spryker\Zed\SalesOrderThreshold\Communication\Plugin\Installer |
 
 **src/Pyz/Zed/Installer/InstallerDependencyProvider.php**
-    
+
 ```php
 <?php
 
@@ -186,7 +173,7 @@ class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 ```
 
 2. Execute the registered installer plugins and install infrastructural data:
-		
+
 ```bash
 console setup:init-d
 ```
@@ -543,7 +530,7 @@ Overview and install the necessary features before beginning the integration ste
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
-		
+
 ```bash
 composer require spryker-feature/order-threshold:"{{page.version}}" --update-with-dependencies
 ```
@@ -564,7 +551,7 @@ Ensure that the following modules have been installed:
 Add translations as follows:
 
 1. Append glossary according to your configuration:
-		
+
 **src/data/import/glossary.csv**
 
 ```yaml
@@ -603,7 +590,7 @@ Ensure that in the database, the configured data has been added to the `spy_glos
 ### 3) Set up widgets
 
 Set up widgets as follows:
-		
+
 1. Enable global widgets:
 
 | WIDGET | DESCRIPTION | NAMESPACE |
@@ -657,5 +644,3 @@ Integrate the following related features:
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Glue API: Checkout |  | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
-
-

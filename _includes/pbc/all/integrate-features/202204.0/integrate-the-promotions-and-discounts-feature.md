@@ -1,8 +1,4 @@
----
-title: Promotions & Discounts feature integration
-description: Learn how to integrate the Promotions & Discounts feature into a Spryker project.
-template: feature-integration-guide-template
----
+
 
 {% info_block errorBox %}
 

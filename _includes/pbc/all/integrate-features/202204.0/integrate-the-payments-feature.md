@@ -1,22 +1,4 @@
----
-title: Payments feature integration
-description: Use the guide to install the Payment per store feature in your project.
-last_updated: Jun 16, 2021
-template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/payments-feature-integration
-originalArticleId: 31957fa5-b32a-4227-b6d5-42b89c6e1855
-redirect_from:
-  - /2021080/docs/payments-feature-integration
-  - /2021080/docs/en/payments-feature-integration
-  - /docs/payments-feature-integration
-  - /docs/en/payments-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/payments-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201903.0/payments-feature-integration.html
-  - /docs/scos/dev/feature-integration-guides/201907.0/payments-feature-integration.html
-related:
-  - title: Payments feature overview
-    link: docs/scos/user/features/page.version/payments-feature-overview.html
----
+
 
 {% info_block errorBox %}
 

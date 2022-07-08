@@ -1,19 +1,4 @@
----
-title: Checkout + Quotation Process feature integration
-description: The guide describes the process of installing the Checkout + Quotation process feature into your project.
-last_updated: Jun 16, 2021
-template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/checkout-quotation-process-feature-integration
-originalArticleId: ac3280a8-f91d-4b7d-99e3-76cee056f96b
-redirect_from:
-  - /2021080/docs/checkout-quotation-process-feature-integration
-  - /2021080/docs/en/checkout-quotation-process-feature-integration
-  - /docs/checkout-quotation-process-feature-integration
-  - /docs/en/checkout-quotation-process-feature-integration
-related:
-  - title: Quotation Process feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-feature-integration.html
----
+
 
 ## Install feature core
 
@@ -36,17 +21,17 @@ Register the following plugins:
 | CloseQuoteRequestCheckoutPostSaveHookPlugin | Closes a quote request after the order has been placed from it. | None | Spryker\Zed\QuoteRequest\Communication\Plugin\Checkout |
 
 **Pyz\Zed\Checkout\CheckoutDependencyProvider.php**
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Checkout;
- 
+
 use Spryker\Zed\Checkout\CheckoutDependencyProvider as SprykerCheckoutDependencyProvider;
 use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\QuoteRequest\Communication\Plugin\Checkout\CloseQuoteRequestCheckoutPostSaveHookPlugin;
 use Spryker\Zed\QuoteRequest\Communication\Plugin\Checkout\QuoteRequestPreCheckPlugin;
- 
+
 class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 {
     /**
@@ -60,7 +45,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
             new QuoteRequestPreCheckPlugin(),
         ];
     }
- 
+
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
@@ -108,14 +93,14 @@ Enable the following behaviors by registering the plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\CheckoutPage;
- 
+
 use SprykerShop\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerShopCheckoutPageDependencyProvider;
 use SprykerShop\Yves\QuoteRequestAgentPage\Plugin\CheckoutPage\QuoteRequestAgentCheckoutWorkflowStepResolverStrategyPlugin;
 use SprykerShop\Yves\QuoteRequestPage\Plugin\CheckoutPage\QuoteRequestCheckoutWorkflowStepResolverStrategyPlugin;
 use SprykerShop\Yves\QuoteRequestPage\Plugin\CheckoutPage\QuoteWithCustomShipmentPriceCheckoutWorkflowStepResolverStrategyPlugin;
- 
+
 class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyProvider
 {
     /**

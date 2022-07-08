@@ -1,13 +1,4 @@
----
-title: Splittable Order Items feature integration
-last_updated: Jun 20, 2022
-template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/v3/docs/splittable-order-items-integration
-originalArticleId: ea499c83-900d-4788-bcaf-c7981220b441
-redirect_from:
-  - /v3/docs/splittable-order-items-integration
-  - /v3/docs/en/splittable-order-items-integration
----
+
 
 This document describes how to integrate the [Splittable Order Items](/docs/scos/user/features/202204.0/order-management-feature-overview/splittable-order-items-overview.html) feature into a Spryker project.
 
@@ -22,7 +13,7 @@ To start feature integration, overview and install the necessary features:
 | NAME         | EXPECTED DIRECTORY | INTEGRATION GUIDE                                                                                                                    |
 |--------------|--------------------|--------------------------------------------------------------------------------------------------------------------------------------|
 | Spryker Core | {{page.version}}   | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Product      | {{page.version}}   | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)           | 
+| Product      | {{page.version}}   | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html)           |
 | Cart         | {{page.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html)                 |
 | Checkout     | {{page.version}}   | [Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html)         |
 

@@ -1,17 +1,4 @@
----
-title: Prices per Merchant Relation feature integration
-description: The guide walks you through the process of installing the Prices per Merchant feature in your project.
-last_updated: Jun 16, 2021
-template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/prices-per-merchant-relation-integration
-originalArticleId: 936f75d0-f0ab-4af8-9c10-a150334e4feb
-redirect_from:
-  - /2021080/docs/prices-per-merchant-relation-integration
-  - /2021080/docs/en/prices-per-merchant-relation-integration
-  - /docs/prices-per-merchant-relation-integration
-  - /docs/en/prices-per-merchant-relation-integration
-  - /docs/scos/dev/feature-integration-guides/202200.0/prices-per-merchant-relation-feature-integration.html
----
+
 
 The Price per Merchant Relation feature is shipped with the following modules:
 

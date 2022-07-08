@@ -1,8 +1,4 @@
----
-title: Backend API feature integration
-description: Integrate the Backend API into your project
-template: feature-integration-guide-template
----
+
 
 This document describes how to integrate the Backend API feature into a Spryker project.
 

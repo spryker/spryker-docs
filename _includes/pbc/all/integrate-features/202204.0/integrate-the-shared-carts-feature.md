@@ -1,19 +1,4 @@
----
-title: Shared Carts feature integration
-last_updated: Jun 16, 2021
-template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/shared-carts-feature-integration
-originalArticleId: 1f7146bf-124f-435a-85aa-632c2c2738ca
-redirect_from:
-  - /2021080/docs/shared-carts-feature-integration
-  - /2021080/docs/en/shared-carts-feature-integration
-  - /docs/shared-carts-feature-integration
-  - /docs/en/shared-carts-feature-integration
-  - /docs/scos/dev/feature-integration-guides/202200.0/shared-carts-feature-integration.html
-related:
-  - title: Shared Cart Feature Overview
-    link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
----
+
 
 ## Install feature core
 
@@ -776,7 +761,7 @@ class YvesBootstrap extends SprykerYvesBootstrap
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following plugin has been registered: 
+Make sure that the following plugin has been registered:
 * Open Yves and log in with customer.
 * Open `https://mysprykershop.com/multi-cart/` - the page should contain all customer's quotes.
 * Click on the share link. The share cart page should open.

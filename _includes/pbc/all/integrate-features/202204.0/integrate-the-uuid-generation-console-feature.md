@@ -1,9 +1,3 @@
----
-title: Uuid Generation Console feature integration
-last_updated: Jul 4, 2022
-template: feature-integration-guide-template
----
-
 This document describes how to integrate the Uuid Generation Console feature.
 
 ## Prerequisites

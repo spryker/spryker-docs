@@ -1,8 +1,4 @@
----
-title: Backend API for Merchant Relationships feature integration
-description: Integrate the Backend API for Merchant Relationships into your project
-template: feature-integration-guide-template
----
+
 
 This document describes how to integrate the BAPI Merchant Relationships into a Spryker project.
 

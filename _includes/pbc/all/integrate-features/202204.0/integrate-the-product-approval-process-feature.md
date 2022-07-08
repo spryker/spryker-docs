@@ -1,9 +1,4 @@
----
-title: Product Approval Process feature integration
-description: Learn how to integrate the Product Approval Process feature into a Spryker project.
-template: feature-integration-guide-template
-last_updated: Mar 11, 2022
----
+
 
 This document describes how to integrate the Product Approval Process feature into a Spryker project.
 

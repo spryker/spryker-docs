@@ -1,19 +1,4 @@
----
-title: Category filters feature integration
-description: The Category Filters Feature allows arranging items into categories and customizing filters. This guide describes how to integrate the feature into your project.
-last_updated: Jun 16, 2021
-template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/category-filter-feature-integration
-originalArticleId: 8190a0e4-7fa1-441b-a539-6b330ead67fc
-redirect_from:
-  - /2021080/docs/category-filter-feature-integration
-  - /2021080/docs/en/category-filter-feature-integration
-  - /docs/category-filter-feature-integration
-  - /docs/en/category-filter-feature-integration/docs/scos/dev/feature-integration-guides/202200.0/category-filters-feature-integration.html
-related:
-  - title: Managing Category Filters
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-category-filters.html
----
+
 
 ## Prerequisites
 
@@ -25,7 +10,7 @@ To prepare your project to work with Category Filters:
 *  `composer require spryker/product-category-filter-gui`
 
 2.  Install the new database tables by running `vendor/bin/console propel:diff`. Propel should generate a migration file with the changes.
-    
+
 3. Run `vendor/bin/console propel:migrate` to apply the database changes.
 4. Generate ORM models by running `vendor/bin/console propel:model:build`.
 This command will generate some new classes in your project under the `  \Orm\Zed\ProductCategoryFilter\Persistence namespace`.
@@ -39,8 +24,8 @@ It is important to make sure that they extend the base classes from the Spryker 
 6. Activate the product category filters collector by adding `ProductCategoryFilterCollectorPlugin` to the Storage Collector plugin stack.
 
 <details open>
-<summary markdown='span'>Example: collector plugin list extension</summary> 
-    
+<summary markdown='span'>Example: collector plugin list extension</summary>
+
 ```php
 <?php
 

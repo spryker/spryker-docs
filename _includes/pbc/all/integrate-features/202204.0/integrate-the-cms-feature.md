@@ -1,20 +1,4 @@
----
-title: CMS feature integration
-description: The guide describes how to integrate the CMS feature into your project.
-last_updated: Jun 16, 2021
-template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/cms-feature-integration-guide
-originalArticleId: ead31fac-6aa6-47f5-9d81-ff891219cf53
-redirect_from:
-  - /2021080/docs/cms-feature-integration-guide
-  - /2021080/docs/en/cms-feature-integration-guide
-  - /docs/cms-feature-integration-guide
-  - /docs/en/cms-feature-integration-guide
-  - /docs/scos/dev/feature-integration-guides/201811.0/cms-feature-integration.html
-related:
-  - title: CMS page
-    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
----
+
 
 ## Install feature core
 

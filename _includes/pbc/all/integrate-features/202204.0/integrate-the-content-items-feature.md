@@ -1,17 +1,4 @@
----
-title: Content Items feature integration
-description: The guide walks you through the process of installing the Content Items feature in the project.
-last_updated: Jul 14, 2021
-template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/content-items-feature-integration
-originalArticleId: d3a7785f-f4f7-4d9e-8b8c-b44ae4dd278a
-redirect_from:
-  - /2021080/docs/content-items-feature-integration
-  - /2021080/docs/en/content-items-feature-integration
-  - /docs/content-items-feature-integration
-  - /docs/en/content-items-feature-integration
-  - /docs/scos/dev/feature-integration-guides/201811.0/content-items-feature-integration.html
----
+
 
 This document describes how. to integrate the [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) feature into a Spryker project.
 

@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/setup-of-new-indexes-throws-an-exception
   - /v6/docs/setup-of-new-indexes-throws-an-exception
   - /v6/docs/en/setup-of-new-indexes-throws-an-exception
-  - related:
+related:
   - title: An error during front end setups
     link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/an-error-during-front-end-setup.html
   - title: Demo data was imported incorrectly

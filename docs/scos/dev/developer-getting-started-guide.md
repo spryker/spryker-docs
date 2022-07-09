@@ -169,6 +169,11 @@ This step depends on the store setup which you plan to have. If you start with o
  - `config_default.php`
  - `src/SprykerConfig/CodeBucketConfig.php`
 
+### Modules clean up
+Analise modules that you have in the desired Demoshop.
+Analise modules that you need to have.
+Remove unnesessary modules (to do that you can use migration guide backwards).
+
 ### Data import clean up
 
 In the `data/import` folder, there are many files related to each store. Define the stores you need and remove all the unused files.

@@ -213,7 +213,7 @@ div.tags {padding: 10px 5px;}
 }
 
 hr {
-    background: #999;
+    border: 1px dashed #64666e;
     margin: 30px auto;
     width: 100%;
 }

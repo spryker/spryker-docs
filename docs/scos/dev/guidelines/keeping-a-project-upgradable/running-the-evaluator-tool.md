@@ -13,7 +13,7 @@ related:
   - title: Running the upgrader tool
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-upgrader-tool.html
   - title: Define custom prefixes for core entity names
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.md.html
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
 ---
 
 This document describes how to check if code is compliant with Spryker’s standards using the evaluator tool.

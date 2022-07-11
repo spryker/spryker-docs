@@ -23,7 +23,7 @@ This doc describes how to add delivery methods in the Back Office.
 
 ## Prerequisites
 
-* [Create a tax set](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/create-tax-sets.html).
+* [Create a tax set](/docs/pbc/all/tax-management/manage-taxes-in-the-back-office/create-tax-sets.html).
 * [Add a carrier company](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/add-carrier-companies.html).
 * Review the [reference information](#reference-information-add-delivery-methods) before you start, or look up the necessary information as you go through the process.
 
@@ -57,5 +57,5 @@ This doc describes how to add delivery methods in the Back Office.
 |  PRICE PLUGIN | Plugin that calculates the price of delivery. If you select a price  plugin, it will override the prices specified in the **Price & Tax** tab. A developer can create plugins. |
 | DELIVERY TIME PLUGIN | Plugins that calculates estimated delivery time. A developer can create plugins. |
 | IS ACTIVE | Defines if customers will be able to choose the method on the Storefront. |
-| TAX SET | Tax set to apply to the price of the method. To create tax sets, see [Create tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/create-tax-sets.html).
+| TAX SET | Tax set to apply to the price of the method. To create tax sets, see [Create tax sets](/docs/pbc/all/tax-management/manage-taxes-in-the-back-office/create-tax-sets.html).
 | AVAILABLE IN THE FOLLOWING STORE(S) | Defines which stores the method will be available in. |

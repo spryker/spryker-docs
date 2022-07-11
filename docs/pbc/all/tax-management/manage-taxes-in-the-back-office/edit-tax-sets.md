@@ -22,4 +22,4 @@ To edit a [tax set](/docs/scos/user/features/{{page.version}}/tax-feature-overvi
 | ATTRIBUTE |DESCRIPTION  |
 | --- | --- |
 | NAME | You use the name when assigning the tax set to products, delivery methods, and thresholds. |
-| TAX RATES | Tax rates to assign to the tax set. For instructions on creating tax rates, see [Create tax rates](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/create-tax-rates.html). |
+| TAX RATES | Tax rates to assign to the tax set. For instructions on creating tax rates, see [Create tax rates](/docs/pbc/all/tax-management/manage-taxes-in-the-back-office/create-tax-rates.html). |

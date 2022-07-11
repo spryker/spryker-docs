@@ -24,7 +24,7 @@ The *Tax* feature lets you define taxes for the items you sell. The feature is r
 
 The tax rate is the percentage of the sales price that buyer pays as a tax. In the default Spryker implementation, the tax rate is defined per country where the tax applies. For details about how to create tax rates for countries in the Back Office, see [Create tax rates](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/create-tax-rates.html).
 
-A tax set is a set of tax rates. You can [define tax sets in the Back office](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/create-tax-sets.html) or[ import tax sets](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-tax.csv.html) into your project.
+A tax set is a set of tax rates. You can [define tax sets in the Back office](/docs/pbc/all/tax-management/manage-taxes-in-the-back-office/create-tax-sets.html) or[ import tax sets](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-tax.csv.html) into your project.
 
 Tax sets can be applied to abstract product, product option and shipment:
 
@@ -107,16 +107,16 @@ The feature has the following functional constraints:
 |---|
 | [Get a general idea of the Tax feature](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) |
 | [Create tax rates](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/create-tax-rates.html) |
-| [Edit tax rates](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/edit-tax-rates.html) |
-| [Create tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/create-tax-sets.html) |
-| [Edit tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/edit-tax-sets.html) |
+| [Edit tax rates](/docs/pbc/all/tax-management/manage-taxes-in-the-back-office/edit-tax-rates.html) |
+| [Create tax sets](/docs/pbc/all/tax-management/manage-taxes-in-the-back-office/create-tax-sets.html) |
+| [Edit tax sets](/docs/pbc/all/tax-management/manage-taxes-in-the-back-office/edit-tax-rates.html) |
 
 
 ## Related Developer articles
 
 | INTEGRATION GUIDES | MIGRATION GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|---|
-| [Avalara Tax integration](/docs/scos/dev/feature-walkthroughs/{{page.version}}/tax-feature-walkthrough/tax-feature-walkthrough.html) | [Tax migration guide](/docs/scos/dev/module-migration-guides/migration-guide-tax.html) | [Retrieving tax sets](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-tax-sets.html) | [File details: tax.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-tax.csv.html) | |
+| [Avalara Tax integration](/docs/scos/dev/feature-walkthroughs/{{page.version}}/tax-feature-walkthrough/tax-feature-walkthrough.html) | [Tax migration guide](/docs/scos/dev/module-migration-guides/migration-guide-tax.html) | [Retrieving tax sets](/docs/pbc/all/tax-management/manage-taxes-via-glue-api/retrieve-tax-sets.html) | [File details: tax.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-tax.csv.html) | |
 | [Avalara Tax + Shipment feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/taxes/avalara/integrating-avalara-tax-shipment.html) |  |  | [File details: product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html) | |
 | [Avalara Tax + Product Options feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/taxes/avalara/integrating-avalara-tax-product-options.html) |  |  | [File details: product_option.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html) | |
 |  |  |  | [File details: shipment.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html) |

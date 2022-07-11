@@ -2746,6 +2746,7 @@ entries:
             - "202001.0"
             - "202005.0"
       - title: Tax sets
+        nested:
         - title: Managing tax sets
           url: /docs/scos/user/back-office-user-guides/administration/tax-sets/managing-tax-sets.html
           include_versions:

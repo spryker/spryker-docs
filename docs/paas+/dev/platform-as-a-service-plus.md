@@ -6,7 +6,7 @@ template: concept-topic-template
 
 Keeping enterprise software up-to-date is a known hurdle. Especially when it comes to sophisticated transactional business models with complex customizations. Current upgrade strategies often require a high investment of time, resources, and money that projects would rather spend on innovation. However, low upgrade frequency comes with reduced access to security and improvements patches, as well as new features.
 
-Platform as a Service Plus (PaaS+) is a new service on top of our standard Spryker PaaS offering, that addresses application upgradability challenges. PaaS+ includes a CI that provides you with automated upgrades and code quality checks while giving you full control of what to bring to your platform. By reducing upgrade efforts to a minimum, PaaS+ offers a reliable way to keep up with Spryker’s daily updates.
+Platform as a Service Plus (PaaS+) is a new service on top of Spryker PaaS, which addresses application upgradability challenges. PaaS+ includes a CI that provides you with automated upgrades and code quality checks while giving you full control of what to bring to your platform. By reducing upgrade efforts to a minimum, PaaS+ offers a reliable way to keep up with Spryker’s daily updates.
 
 ![Spryker PaaS+](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/platform-as-a-service-plus.md/spryker-paas-plus.png)
 
@@ -18,7 +18,7 @@ Spryker CI is powered by [Buddy](https://buddy.works) and provides an intuitive 
 * Quality checks
 * Automated upgrades
 
-A CI pipeline provides automated checks, a quality gate, that guides  developers towards compliance with our best practices and further fuels upgradability success. The new upgrader service provides effortless upgrades for minor and patch releases.
+A CI pipeline provides automated checks, a quality gate, that guides  developers towards compliance with our best practices and further fuels upgradability success. The upgrader service provides automated upgrades for minor and patch releases.
 
 
 ## CI pipelines

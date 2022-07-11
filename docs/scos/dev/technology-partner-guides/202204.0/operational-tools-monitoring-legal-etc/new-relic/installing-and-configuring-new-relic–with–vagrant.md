@@ -8,9 +8,9 @@ redirect_from:
   - /docs/scos/dev/technology-partner-guides/202200.0/operational-tools-monitoring-legal-etc/new-relic/installing-and-configuring-new-relic–with–vagrant.html
 ---
 
-{% info_block infoBox "New Relic installation in Docker based projects" %}
+{% info_block warningBox "Warning" %}
 
-For installation instructions in Docker based projects, see [Configuring New Relic](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html#configuring-new-relic)
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html). For installation instructions in Docker based projects, see [Configuring New Relic](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html#configuring-new-relic)
 
 {% endinfo_block %}
 

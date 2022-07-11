@@ -90,10 +90,15 @@ If you use Docker and not the Development Virtual Machine (DevVM), you don't nee
 
 ### Install Spryker with the Development Virtual Machine
 
+{% info_block warningBox "Warning" %}
+
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](#install-spryker-with-docker).
+
+{% endinfo_block %}
+
 Spryker Commerce OS comes with a Virtual Machine that has all the prerequisites to run Spryker. It provides a full-featured development environment that will help you customize Spryker per your project requirements. The Development Virtual Machine (DevVM) is based on VirtualBox and Vagrant, and can be used to install Spryker on any Operating System.
 
 Choose an installation guide that suits your needs best:
-
 
 | OPERATION SYSTEMS | B2B SHOP OR B2C SHOP |
 | --- | --- |
@@ -102,7 +107,7 @@ Choose an installation guide that suits your needs best:
 
 ### Independent installation
 
-Alternatively, you can install Spryker on an operating system that fulfills Spryker [DevVM system requirements](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html) without the virtual machine or Docker images. See [B2B or B2C Demo Shop installation: without Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html) for details.
+Alternatively, you can install Spryker without the Docker images. See [Installing Spryker without Docker](/docs/scos/dev/setup/installing-spryker-without-docker.html) for details.
 
 {% info_block warningBox %}
 

@@ -14,8 +14,8 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
   - title: Running the evaluator tool
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html
-  - title: Define a custom prefix for core entity names
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/configure-a-custom-prefix-for-core-entity-names.html
+  - title: Define custom prefixes for core entity names
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
 ---
 This document describes how to upgrade all the modules to the latest versions.
 

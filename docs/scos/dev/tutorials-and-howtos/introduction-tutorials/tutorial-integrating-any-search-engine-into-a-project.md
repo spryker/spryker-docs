@@ -14,13 +14,13 @@ redirect_from:
   - /v6/docs/en/tutorial-integrating-any-search-engine
 ---
 
-In a Spryker-based project, you can use any external search provider instead of the default Elasticsearch. This tutorial will teach you how to replace the default Elasticsearch with any other search engine.
+In a Spryker-based project, you can use any external search provider instead of the default Elasticsearch. This tutorial shows how to replace the default Elasticsearch with any other search engine.
 
 ## Challenge description
 
-Every search engine comes along with its own functionalities and search approaches. However, integration of search & search suggestions is similar in most of the search platforms.
+Every search engine comes along with its own functionalities and search approaches. However, in most search platforms, the integration of search and search suggestions is similar.
 
-This tutorial shows how to integrate the FACT-Finder (PHP) search platform. A system integrator development team could use this guide to integrate other platforms, taking into account the differences of the target search platform.
+This tutorial shows how to integrate the FACT-Finder (PHP) search platform. A system integrator development team can use this guide to integrate other platforms, taking into account the differences between the target search platform.
 
 The integration is following the concept described in [Search Migration Concept](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html).
 
@@ -28,10 +28,10 @@ The integration is following the concept described in [Search Migration Concept]
 
 To use FACT-Finder as a search data provider, do the following:
 
-1. [Execute search and search suggestion requests](#executing), which implies:
+1. [Execute search and search suggestion requests](#executing), which implies the following actions:
 
     1. Handling the search request.
-    2. Building a query object from the customer’s request. Usually, the request contains a query string, facets, pagination. All project-specific parameters must be used.
+    2. Building a query object from the customer’s request. Usually, the request contains a query string, facets, and pagination. All project-specific parameters must be used.
     3. Making a request to FACT-Finder with the built query object.
     4. Mapping the response to the shop’s specific format.
 
@@ -133,7 +133,7 @@ public function catalogSuggestSearch($searchString, array $requestParameters = [
     }
 ```
 
-#### 2. Executing the search request
+#### 2. Execute the search request
 
 To handle search requests through a different source, you need your own model implementing the `SearchAdapterPluginInterface` interface.
 
@@ -217,7 +217,7 @@ class FFSearchAdapterPlugin implements SearchAdapterPluginInterface
 
 The `isApplicable` method in the preceding template validates that the request is supposed to be processed in this adapter—in this example, by FACT-Finder.
 
-Make sure that all events affecting FACT-Finder-related product data are triggered with this type. For this purpose, the following change is required in `Pyz/Zed/ProductPageSearch/Persistence/Propel/Schema/spy_product_page_search.schema.xml`:   
+Make sure that all events affecting FACT-Finder-related product data are triggered with this type. For this purpose, the following change is required in `Pyz/Zed/ProductPageSearch/Persistence/Propel/Schema/spy_product_page_search.schema.xml`: 
 
 ```xml
 <?xml version="1.0"?>
@@ -240,20 +240,20 @@ Make sure that all events affecting FACT-Finder-related product data are trigger
 </database>
 ```
 
-#### 3. Requesting data from FACT-Finder
+#### 3. Request data from FACT-Finder
 
 Implement method search in the adapter plugin.
 Your search function receives `FactFinderQuery` with `FFSearchQueryTransfer` in it as the first argument.
 
 Prepare proper request to a FACT-Finder based on these parameters.
 
-If you need specific `$resultFormatters` or `$requestParameters`, use the arrays proposed in the adapter plugin.    
+If you need specific `$resultFormatters` or `$requestParameters`, use the arrays proposed in the adapter plugin.
 
-#### 4. Mapping response
+#### 4. Map response
 
-The general idea behind mapping of the response is to make sure you can display the received data.
+The general idea behind the mapping of the response is to make sure you can display the received data.
 
-The FACT-Finder module provides a response in `FactFinderSdkSearchResponse`, but Spryker provides complete rendering of the search results and search suggestions based on the response from the default search provider, which is Elasticsearch.
+The FACT-Finder module provides a response in `FactFinderSdkSearchResponse`, but Spryker provides the complete rendering of the search results and search suggestions based on the response from the default search provider, which is Elasticsearch.
 
 It means that in order to use the FACT-Finder response, you have to comply with the response structure produced there. This will be changed in the future, but for now, you have to implement mapping to the similar response Elasticsearch modules provides.
 You have to respond with an object, supporting an array-based or `get`-based index—for example, creating a JSON object or a transfer object.
@@ -324,11 +324,11 @@ To see what is supported by Spryker’s template, refer to `CatalogDependencyPro
 
 {% endinfo_block %}
 
-Response structure for search suggestions must be investigated in the similar way.
+The response structure for search suggestions must be investigated in a similar way.
 
 <a name="populate"></a>
 
-### Populating Fact Finder with product data
+### Populate Fact Finder with product data
 
 To handle search update events, use the instructions from the following sections.
 
@@ -346,7 +346,7 @@ To handle search update events, you have to implement the following methods of t
 
 Since Spryker stores not only product data in Elasticsearch, but also CMS pages and categories, you have to make sure that only product data is handled by the FACT-Finder adapter.
 
-To achieve this, change schema for the search documents in `spy_product_page_search.schema.xml`. Make sure to use the same source identifier as used in the adapter class.
+To achieve this, in `spy_product_page_search.schema.xml`, change the schema for the search documents. Make sure to use the same source identifier as used in the adapter class.
 
 ```xml
 <?xml version="1.0"?>
@@ -373,7 +373,7 @@ To achieve this, change schema for the search documents in `spy_product_page_sea
 
 To load and map data properly, you might have to adjust data loaders, expanders, and mappers in `ProductPageSearchDependencyProvider`, both for product abstract and product concrete.
 
-Having completed these steps, you the search engine must be integrated into your project.
+AFter completing these steps, the search engine is integrated into your project.
 
 ## Using search service provider in Glue API
 

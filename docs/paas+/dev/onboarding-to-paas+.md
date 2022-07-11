@@ -14,9 +14,9 @@ Onboarding to PaaS+ happens in two steps:
 
 Before you can start managing the upgrades of your project with PaaS+, fulfill the following prerequisites.
 
-### 1.1. Update each module to the latest version
+### 1.1. Update all modules to the latest version
 
-Spryker upgrader provides automatic minor and patch updates for the current version of each module. Since we release most of the updates for the latest versions of modules, if a module is not of the latest major version, it will not receive most of the updates.
+Spryker upgrader service provides automatic minor and patch updates for the current version of each module. Since we release most of the updates for the latest versions of modules, if a module is not of the latest major version, it will not receive most of the updates.
 
 ### 1.2. Implement Spryker SDK in development
 
@@ -44,6 +44,10 @@ Currently, the quality gate does not evaluate frontend customizations. You can e
 
 PaaS+ supports only the projects that run on Spryker Cloud Commerce OS (SCCOS). If you are running Spryker on premises, to use PaaS+, migrate to SCCOS.
 
+### 1.8 Update PHP to version 8.0
+
+From August 2022, Spryker will [stop supporting PHP 7.4](https://docs.spryker.com/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html). To keep receiving automatic updates after that happens, update PHP to version 8.0.
+
 ## 2. Onboarding to Spryker CI
 
 Onboarding to Spryker CI consists of the following steps.
@@ -69,21 +73,21 @@ Your workspace contains the Spryker Upgrader Service project, as well as a proje
 
 ![Spryker CI projects](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-paas%2B.md/projects.png)
 
-### 2.4. Invite new users
+<!--### 2.4. Invite new users
 
 Add new users to your project and assign user permissions. Two roles are available:
 
 * Super users with read and write access that can configure repositories, run pipelines, and invite new users.
 * Regular users with read access that can run pipelines.
+-->
 
+### 2.4. Connect your repositories
 
-### 2.5. Connect your repository
-
-Connect a Git repository to provide upgrades to.
+Connect Git repositories to your projects in Spryker CI.
 
 ![Switch repository](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-paas%2B.md/switch-a-repo.mp4)
 
-For detailed instructions, see [Connect a Git repository]()
+<!-- For detailed instructions, see [Connect Git repositories]() --> 
 
 ### 2.5. Push and have fun!
 

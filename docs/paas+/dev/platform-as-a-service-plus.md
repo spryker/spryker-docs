@@ -4,9 +4,9 @@ description: PaaS+ is a key to easy upgrades
 template: concept-topic-template
 ---
 
-Keeping enterprise software up-to-date is a known hurdle. Especially when it comes to sophisticated transactional business models with individualization and customizations. Current upgrade strategies require a high investment of time, resources, and money that projects would rather spend on innovation. However, low upgrade frequency comes with reduced access to security and improvements patches, as well as new features.
+Keeping enterprise software up-to-date is a known hurdle. Especially when it comes to sophisticated transactional business models with complex customizations. Current upgrade strategies often require a high investment of time, resources, and money that projects would rather spend on innovation. However, low upgrade frequency comes with reduced access to security and improvements patches, as well as new features.
 
-Platform as a Service Plus (PaaS+) is the next generation of Spryker PaaS that addresses application upgradability challenges via Spryker CI. PaaS+ automates  upgrades and code quality checks, while providing full control on what to bring to your platform. By reducing upgrade efforts to a minimum, PaaS+ is offering a reliable way to keep up with Spryker’s daily updates.
+Platform as a Service Plus (PaaS+) is a new service on top of our standard Spryker PaaS offering, that addresses application upgradability challenges. PaaS+ includes a CI that provides you with automated upgrades and code quality checks while giving you full control of what to bring to your platform. By reducing upgrade efforts to a minimum, PaaS+ offers a reliable way to keep up with Spryker’s daily updates.
 
 ![Spryker PaaS+](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/platform-as-a-service-plus.md/spryker-paas-plus.png)
 

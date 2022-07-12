@@ -1,0 +1,263 @@
+---
+title: Glue documentation generation feature integration
+description: Integrate the Glue documentation generation into your project
+template: feature-integration-guide-template
+---
+
+This document describes how to integrate the Glue documentation generation into a Spryker project.
+
+## Install feature core
+
+Follow the steps below to install the Glue documentation generation.
+
+### Prerequisites
+
+To start feature integration, overview and install the necessary features:
+
+| NAME                                         | VERSION           | INTEGRATION GUIDE                                                                                                                                                                                           |
+|----------------------------------------------| ----------------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Glue Storefront and Backend API Applications | {{page.version}}  | [Glue Storefront and Backend API Applications feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-storefront-and-backend-api-application-integration-guide.html)  |
+
+
+### 1) Install the required modules using Composer
+<!--Provide one or more console commands with the exact latest version numbers of all required modules. If the Composer command contains the modules that are not related to the current feature, move them to the [prerequisites](#prerequisites).-->
+
+Install the required modules:
+
+```bash
+composer require spryker/documentation-generator-api:"^0.1.0" spryker/documentation-generator-open-api:"^0.1.0" --update-with-dependencies
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following modules have been installed:
+
+| MODULE                                                     | EXPECTED DIRECTORY                                                                |
+|------------------------------------------------------------|-----------------------------------------------------------------------------------|
+| DocumentationGeneratorApi                                  | vendor/spryker/documentation-generator-api                                           |
+| DocumentationGeneratorOpenApi                              | vendor/spryker/documentation-generator-open-api |
+
+{% endinfo_block %}
+
+### 2) Set up transfer objects
+
+Generate transfers:
+
+```bash
+console transfer:generate
+```
+
+{% info_block warningBox "Verification" %}
+
+Ensure the following transfers have been created:
+
+| TRANSFER              | TYPE  | EVENT   | PATH                                                            |
+|-----------------------|-------|---------|-----------------------------------------------------------------|
+| ApiApplicationSchemaContext        | class | created | src/Generated/Shared/Transfer/ApiApplicationSchemaContextTransfer.php        |
+| PathAnnotation          | class | created | src/Generated/Shared/Transfer/PathAnnotationTransfer.php          |
+| RelationshipPluginAnnotationsContext           | class | created | src/Generated/Shared/Transfer/RelationshipPluginAnnotationsContextTransfer.php           |
+| ResourceContext | class | created | src/Generated/Shared/Transfer/ResourceContextTransfer.php |
+| Annotation             | class | created | src/Generated/Shared/Transfer/AnnotationTransfer.php             |
+| RelationshipPluginsContext          | class | created | src/Generated/Shared/Transfer/RelationshipPluginsContextTransfer.php          |
+| CustomRoutesContext      | class | created | src/Generated/Shared/Transfer/CustomRoutesContextTransfer.php      |
+| Parameter    | class | created | src/Generated/Shared/Transfer/ParameterTransfer.php    |
+| ParameterSchema            | class | created | src/Generated/Shared/Transfer/ParameterSchemaTransfer.php            |
+| SchemaComponent              | class | created | src/Generated/Shared/Transfer/SchemaComponentTransfer.php              |
+| SchemaItemsComponent            | class | created | src/Generated/Shared/Transfer/SchemaItemsComponentTransfer.php            |
+| ParameterComponent                  | class | created | src/Generated/Shared/Transfer/ParameterComponentTransfer.php                  |
+| SchemaPropertyComponent                  | class | created | src/Generated/Shared/Transfer/SchemaPropertyComponentTransfer.php                  |
+| SchemaData                  | class | created | src/Generated/Shared/Transfer/SchemaDataTransfer.php                  |
+| SchemaProperty                  | class | created | src/Generated/Shared/Transfer/SchemaPropertyTransfer.php                  |
+| SchemaItems                  | class | created | src/Generated/Shared/Transfer/SchemaItemsTransfer.php                  |
+| RestErrorMessage                  | class | created | src/Generated/Shared/Transfer/RestErrorMessageTransfer.php                         |
+
+{% endinfo_block %}
+
+### 4) Set up behavior
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                                | SPECIFICATION                                                                                            | NAMESPACE                                                                                                   |
+|-------------------------------------------------------|----------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| ApiGenerateDocumentationConsole                       | Adds a Glue console command that will generate the documentation for the configured applications.             | Spryker\Glue\DocumentationGeneratorApi\Plugin\Console                                                         |
+| StorefrontApiApplicationProviderPlugin                | Defines the `storefront` application that the documentation will be generated for.                         | Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueStorefrontApiApplication                                                   |
+| BackendApiApplicationProviderPlugin                   | Defines the `backend` application that the documentation will be generated for.      | Spryker\Glue\GlueBackendApiApplication\Plugin\GlueBackendApiApplication                                             |
+| DocumentationGeneratorOpenApiSchemaFormatterPlugin    | Responsible for the formatting several parts of the Open API 3 schema: info, components, paths, tags.                        | Spryker\Glue\DocumentationGeneratorOpenApi\Plugin\DocumentationGeneratorApi                                             |
+| JsonApiSchemaFormatterPlugin                          | Responsible for the formatting JSON:API-specific parameters (e.g. `include`), wrapping the request and response attributes into a JSON:API format. | Spryker\Glue\GlueJsonApiConvention\Plugin\GlueJsonApiConvention                                             |
+| RestApiSchemaFormatterPlugin                          | Formats API parameters that are getting processed by the REST convention.                                           | Spryker\Glue\GlueRestApiConvention\Plugin\GlueRestApiConvention                                             |
+| StorefrontResourcesContextExpanderPlugin              | Adds storefront API resources to the documentation generation context.                                              | Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueStorefrontApiApplication                                             |
+| StorefrontCustomRoutesContextExpanderPlugin           | Adds storefront API custom routes to the documentation generation context.                                              | Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueStorefrontApiApplication                                             |
+| RelationshipPluginsContextExpanderPlugin              | Adds resource relationships to the documentation generation context.                               | Spryker\Glue\GlueStorefrontApiApplicationGlueJsonApiConventionConnector\Plugin\GlueStorefrontApiApplication                                             |
+| BackendResourcesContextExpanderPlugin                 | Adds backend API resources to the documentation generation context.                                                             | Spryker\Glue\GlueBackendApiApplication\Plugin\GlueBackendApiApplication                                             |
+| BackendCustomRoutesContextExpanderPlugin              | Adds backend API custom routes to the documentation generation context.                      | Spryker\Glue\GlueBackendApiApplication\Plugin\GlueBackendApiApplication |
+| ControllerAnnotationsContextExpanderPlugin            | Analyzes and adds to the documentation generation context the information contained in the resource controller annotations.                      | Spryker\Glue\DocumentationGeneratorOpenApi\Plugin\DocumentationGeneratorApi |
+| CustomRouteControllerAnnotationsContextExpanderPlugin | Analyzes and adds to the documentation generation context the information contained in the custom route controller annotations.                      | Spryker\Glue\DocumentationGeneratorOpenApi\Plugin\DocumentationGeneratorApi |
+| RelationshipPluginAnnotationsContextExpanderPlugin    | Analyzes and adds to the documentation generation context the information contained in the relationship plugins annotations.                      | Spryker\Glue\DocumentationGeneratorOpenApi\Plugin\DocumentationGeneratorApi |
+| BackendHostContextExpanderPlugin                      | Adds backend host information to the documentation generation context.                     | Spryker\Glue\GlueBackendApiApplication\Plugin\GlueBackendApiApplication |
+| StorefrontHostContextExpanderPlugin                   | Adds storefront host information to the documentation generation context.                      | Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueStorefrontApiApplication |
+| DocumentationGeneratorOpenApiContentGeneratorStrategyPlugin | Converts the documentation array into string of YAML. Replace this plugin in order to generate other formats like JSON.                      | Spryker\Glue\DocumentationGeneratorOpenApi\Plugin\DocumentationGeneratorApi |
+
+
+
+**src/Pyz/Glue/Console/ConsoleDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\Console;
+
+use Spryker\Glue\Console\ConsoleDependencyProvider as SprykerConsoleDependencyProvider;
+use Spryker\Glue\DocumentationGeneratorApi\Plugin\Console\ApiGenerateDocumentationConsole;
+use Spryker\Glue\Kernel\Container;
+
+class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
+{
+    /**
+     * @param \Spryker\Glue\Kernel\Container $container
+     *
+     * @return array<\Symfony\Component\Console\Command\Command>
+     */
+    protected function getConsoleCommands(Container $container): array
+    {
+        return [
+            new ApiGenerateDocumentationConsole(),
+        ];
+    }
+}
+
+```
+
+{% info_block warningBox “Verification” %}
+
+If everything is set up correctly, the new console command will be available.
+```
+vendor/bin/glue api:generate:documentation
+```
+
+{% endinfo_block %}
+
+**src/Pyz/Glue/DocumentationGeneratorApi/DocumentationGeneratorApiDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Glue\DocumentationGeneratorApi;
+
+use Spryker\Glue\DocumentationGeneratorApi\DocumentationGeneratorApiDependencyProvider as SprykerDocumentationGeneratorApiDependencyProvider;
+use Spryker\Glue\DocumentationGeneratorApi\Expander\ContextExpanderCollectionInterface;
+use Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\Plugin\ContentGeneratorStrategyPluginInterface;
+use Spryker\Glue\DocumentationGeneratorOpenApi\Plugin\DocumentationGeneratorApi\ControllerAnnotationsContextExpanderPlugin;
+use Spryker\Glue\DocumentationGeneratorOpenApi\Plugin\DocumentationGeneratorApi\CustomRouteControllerAnnotationsContextExpanderPlugin;
+use Spryker\Glue\DocumentationGeneratorOpenApi\Plugin\DocumentationGeneratorApi\DocumentationGeneratorOpenApiContentGeneratorStrategyPlugin;
+use Spryker\Glue\DocumentationGeneratorOpenApi\Plugin\DocumentationGeneratorApi\DocumentationGeneratorOpenApiSchemaFormatterPlugin;
+use Spryker\Glue\DocumentationGeneratorOpenApi\Plugin\DocumentationGeneratorApi\RelationshipPluginAnnotationsContextExpanderPlugin;
+use Spryker\Glue\GlueBackendApiApplication\Plugin\GlueBackendApiApplication\BackendApiApplicationProviderPlugin;
+use Spryker\Glue\GlueBackendApiApplication\Plugin\GlueBackendApiApplication\BackendCustomRoutesContextExpanderPlugin;
+use Spryker\Glue\GlueBackendApiApplication\Plugin\GlueBackendApiApplication\BackendHostContextExpanderPlugin;
+use Spryker\Glue\GlueBackendApiApplication\Plugin\GlueBackendApiApplication\BackendResourcesContextExpanderPlugin;
+use Spryker\Glue\GlueJsonApiConvention\Plugin\GlueJsonApiConvention\JsonApiSchemaFormatterPlugin;
+use Spryker\Glue\GlueRestApiConvention\Plugin\GlueRestApiConvention\RestApiSchemaFormatterPlugin;
+use Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueStorefrontApiApplication\StorefrontApiApplicationProviderPlugin;
+use Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueStorefrontApiApplication\StorefrontCustomRoutesContextExpanderPlugin;
+use Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueStorefrontApiApplication\StorefrontHostContextExpanderPlugin;
+use Spryker\Glue\GlueStorefrontApiApplication\Plugin\GlueStorefrontApiApplication\StorefrontResourcesContextExpanderPlugin;
+use Spryker\Glue\GlueStorefrontApiApplicationGlueJsonApiConventionConnector\Plugin\GlueStorefrontApiApplication\RelationshipPluginsContextExpanderPlugin;
+
+class DocumentationGeneratorApiDependencyProvider extends SprykerDocumentationGeneratorApiDependencyProvider
+{
+    /**
+     * @var string
+     */
+    protected const GLUE_BACKEND_API_APPLICATION_NAME = 'backend';
+
+    /**
+     * @var string
+     */
+    protected const GLUE_STOREFRONT_API_APPLICATION_NAME = 'storefront';
+
+    /**
+     * @return array<\Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\Plugin\ApiApplicationProviderPluginInterface>
+     */
+    protected function getApiApplicationProviderPlugins(): array
+    {
+        return [
+            new StorefrontApiApplicationProviderPlugin(),
+            new BackendApiApplicationProviderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\Plugin\SchemaFormatterPluginInterface>
+     */
+    protected function getSchemaFormatterPlugins(): array
+    {
+        return [
+            new DocumentationGeneratorOpenApiSchemaFormatterPlugin(),
+            new JsonApiSchemaFormatterPlugin(),
+            new RestApiSchemaFormatterPlugin(),
+        ];
+    }
+
+    /**
+     * @param \Spryker\Glue\DocumentationGeneratorApi\Expander\ContextExpanderCollectionInterface $contextExpanderCollection
+     *
+     * @return \Spryker\Glue\DocumentationGeneratorApi\Expander\ContextExpanderCollectionInterface
+     */
+    protected function getContextExpanderPlugins(ContextExpanderCollectionInterface $contextExpanderCollection): ContextExpanderCollectionInterface
+    {
+        $apiApplications = [];
+        foreach ($this->getApiApplicationProviderPlugins() as $apiApplicationProviderPlugin) {
+            $apiApplications[] = $apiApplicationProviderPlugin->getName();
+        }
+        $contextExpanderCollection->addApplications($apiApplications);
+
+        $contextExpanderCollection->addExpander(new StorefrontResourcesContextExpanderPlugin(), [static::GLUE_STOREFRONT_API_APPLICATION_NAME]);
+        $contextExpanderCollection->addExpander(new StorefrontCustomRoutesContextExpanderPlugin(), [static::GLUE_STOREFRONT_API_APPLICATION_NAME]);
+        $contextExpanderCollection->addExpander(new RelationshipPluginsContextExpanderPlugin(), [static::GLUE_STOREFRONT_API_APPLICATION_NAME]);
+        $contextExpanderCollection->addExpander(new BackendResourcesContextExpanderPlugin(), [static::GLUE_BACKEND_API_APPLICATION_NAME]);
+        $contextExpanderCollection->addExpander(new BackendCustomRoutesContextExpanderPlugin(), [static::GLUE_BACKEND_API_APPLICATION_NAME]);
+        $contextExpanderCollection->addExpander(new ControllerAnnotationsContextExpanderPlugin());
+        $contextExpanderCollection->addExpander(new CustomRouteControllerAnnotationsContextExpanderPlugin());
+        $contextExpanderCollection->addExpander(new RelationshipPluginAnnotationsContextExpanderPlugin(), [static::GLUE_STOREFRONT_API_APPLICATION_NAME]);
+        $contextExpanderCollection->addExpander(new BackendHostContextExpanderPlugin(), [static::GLUE_BACKEND_API_APPLICATION_NAME]);
+        $contextExpanderCollection->addExpander(new StorefrontHostContextExpanderPlugin(), [static::GLUE_STOREFRONT_API_APPLICATION_NAME]);
+
+        return $contextExpanderCollection;
+    }
+
+    /**
+     * @return \Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\Plugin\ContentGeneratorStrategyPluginInterface
+     */
+    protected function getContentGeneratorStrategyPlugin(): ContentGeneratorStrategyPluginInterface
+    {
+        return new DocumentationGeneratorOpenApiContentGeneratorStrategyPlugin();
+    }
+}
+
+```
+
+{% info_block warningBox “Verification” %}
+
+In order to make sure that `StorefrontApiApplicationProviderPlugin` and `BackendApiApplicationProviderPlugin` are setup correctly,
+attempt to generate the documentation for `storerfront` or `backend`. Do so by passing the optional `--application` parameter:
+```
+glue api:generate:documentation --application storefront
+```
+Make sure only the "storefront" application documentation was generated.
+
+***
+
+Make sure the `DocumentationGeneratorOpenApiSchemaFormatterPlugin` works by inspecting the content of the generated documentation,
+it should contain the information in the following sections:
+* info
+* servers
+* tags
+
+***
+
+Sure sign that `JsonApiSchemaFormatterPlugin` and `RestApiSchemaFormatterPlugin` are setup correctly are the correct content types on the responses of the paths.
+
+***
+
+`ContextExpanderPlugin`s are responsible for adding some parts of the API data into the documentation generation context.
+
+{% endinfo_block %}

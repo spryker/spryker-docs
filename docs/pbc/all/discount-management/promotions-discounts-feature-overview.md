@@ -410,8 +410,11 @@ Cart subtotal: €100
 | [Create a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html)  |
 | [Edit discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/edit-discounts.html)  |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Promotions & Discounts feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/promotions-discounts-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
+|---|---|---|---|---|
+| [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html) | [Discount migration guide](/docs/scos/dev/module-migration-guides/migration-guide-discount.html) | [Retrieving promotional items](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-promotional-items.html) | [File details: discount.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html) | [HowTo - Create discounts based on shipment](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-create-discounts-based-on-shipment.html) |
+|  |  | [Managing discount vouchers in guest carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html) | [File details: discount_amount.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount-amount.csv.html) |  |
+|  |  | [Managing discount vouchers in guest carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html) | [File details: discount_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount-store.csv.html) |  |
+|  |  |  | [File details: discount_voucher.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount-voucher.csv.html) |  |

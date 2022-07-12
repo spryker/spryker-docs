@@ -13,13 +13,13 @@ entries:
           - title: Manage in the Back Office
             nested:
               - title: "Best practices: Promote products with discounts"
-                url: /docs/pbc/all/discount-management/manage-in-the-back-office/best-practices-promote-products-with-discounts.html
+                url: /docs/pbc/all/discount-management/manage-discounts-in-the-back-office/best-practices-promote-products-with-discounts.html
               - title: Create discounts
-                url: /docs/pbc/all/discount-management/manage-in-the-back-office/create-discounts.html
+                url: /docs/pbc/all/discount-management/manage-discounts-in-the-back-office/create-discounts.html
               - title: Edit discounts
-                url: /docs/pbc/all/discount-management/manage-in-the-back-office/edit-discounts.html
+                url: /docs/pbc/all/discount-management/manage-discounts-in-the-back-office/edit-discounts.html
               - title: Export voucher codes
-                url: /docs/pbc/all/discount-management/manage-in-the-back-office/export-voucher-codes.html
+                url: /docs/pbc/all/discount-management/manage-discounts-in-the-back-office/export-voucher-codes.html
       - title: Payment Service Providers
         url: /docs/pbc/all/payment-service-providers/psp.html
         nested:

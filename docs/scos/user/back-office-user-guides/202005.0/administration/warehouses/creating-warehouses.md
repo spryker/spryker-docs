@@ -8,6 +8,7 @@ originalArticleId: 113f7a9d-02fc-4cab-af5b-51984f51bd33
 redirect_from:
   - /v5/docs/creating-a-warehouse
   - /v5/docs/en/creating-a-warehouse
+  - /docs/scos/user/user-guides/202005.0/back-office-user-guide/administration/warehouses/creating-warehouses.html
 related:
   - title: Warehouses- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/administration/warehouses/references/warehouses-reference-information.html

@@ -5,6 +5,7 @@ description: This document describes how to integrate the Offers Volume Prices G
 template: feature-integration-guide-template
 redirect_from:
     - /docs/marketplace/dev/feature-integration-guides/202108.0/glue/marketplace-product-offer-volume-prices.html
+    - /docs/marketplace/dev/feature-integration-guides/202204.0/glue/marketplace-product-offer-volume-prices.html
 ---
 
 This document describes how to integrate the Offers Volume Prices Glue API feature into a Spryker project.
@@ -45,6 +46,7 @@ Make sure that the following modules have been installed:
 Update the database and generate transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```

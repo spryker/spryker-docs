@@ -27,21 +27,24 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/glue-infrastructure.html
 ---
 
-Glue API allows you to validate requests sent to REST endpoints. It allows you to check if all required fields are present, and if the type and format of the fields is correct.
+Glue API lets you validate requests sent to REST endpoints. It lets you check if all required fields are present, and if the type and format of the fields is correct.
 
-## Installation
-To enable validation of REST requests, install the `RestRequestValidation` module by following [Glue API: REST Schema Validation Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-rest-schema-validation-feature-integration.html).
+## Install the `RestRequestValidation` module
 
-## Default validation schema
-Spryker Glue API comes with a default validation schema. The schema provides default validation rules for the REST APIs shipped with Spryker. You can find it in `vendor/spryker/spryker/Bundles/RestRequestValidator/config/validation.dist.yaml`. Use the schema as a sample and a  reference for your own validation implementations.
+To enable validation of REST requests, install the `RestRequestValidation` module by following [Glue API: REST Schema Validation feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-rest-schema-validation-feature-integration.html).
+
+## Use default validation schema
+
+Spryker Glue API comes with a default validation schema. The schema provides default validation rules for the REST APIs shipped with Spryker. You can find it in `vendor/spryker/spryker/Bundles/RestRequestValidator/config/validation.dist.yaml`. Use the schema as a sample and reference for your own validation implementations.
 
 By default, the schema is not applied.
 
-## Validating APIs
+## Validate APIs
+
 To apply validation rules to an API:
 
 1. Copy the default validation schema to the project level and to each API module that you want to be validated.
-  For example, if you want to provide validation for the `StoresRestAPI` module, copy the schema to `src/Pyz/Glue/StoresRestAPI/Validation`.
+  For example, to provide validation for the `StoresRestAPI` module, copy the schema to `src/Pyz/Glue/StoresRestAPI/Validation`.
 
 2. Rename the file to the name of the API you are providing validation for.  
   For `StoresRestAPI`, the name is `STORES.validation.yaml`.
@@ -50,16 +53,18 @@ To apply validation rules to an API:
   Follow the format described in [Validation rule format](#validation-rule-format).
 
 4. Generate validation cache:
+
 ```bash
 vendor/bin/console rest-api:build-request-validation-cache`
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure `src/Pyz/Generated/Glue/Validator/validation.cache` has been updated.
 
 {% endinfo_block %}
 
-The API endpoints you've provided validation rules for will validate all incoming requests.
+The API endpoints you've provided validation rules for validates all incoming requests.
 
 ## Validation rule format
 
@@ -84,7 +89,7 @@ endpoint_name2:
 
 The validation rules are the same as those of the Symfony Validator component. For details, see [Supported Constraints](https://symfony.com/doc/current/validation.html#supported-constraints).
 
-## Disabling validation of core-level fields
+## Disable validation of core-level fields
 
 To disable validation of a field of an API shipped with Spryker, on a project or store level, override the field without any constraints.
 
@@ -105,7 +110,7 @@ refresh-tokens:
     - Required
 ```
 
-To remove validation of the `username` field, override the field on the project or store level as follows:
+To remove the validation of the `username` field, override the field on the project or store level as follows:
 
 ```yaml
 access-tokens:
@@ -118,7 +123,7 @@ refresh-tokens:
     - Required
 ```
 
-## Making fields optional
+## Makie fields optional
 
 By default, all the request fields are required. To make a field optional, write the schema as follows:
 
@@ -135,17 +140,20 @@ refresh-tokens:
 
 All validation rules in Spryker Glue API are cached.
 
-To apply new or updated rules, re-build validation cache by running the command:
+To apply new or updated rules, rebuild validation cache:
 
 ```bash
 vendor/bin/console rest-api:build-request-validation-cache
 ```
+
 {% info_block infoBox %}
 
-Alternatively, use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html) for validation. Run the following command:
+ For validation, you can use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html):
+
 ```bash
-cconsole spryk:run AddGlueValidation --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources
+console spryk:run AddGlueValidation --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources
 ```
+
 This command places the default `validation.yaml` file into the specified module. You need to add attributes manually.
 
 {% endinfo_block %}

@@ -24,13 +24,15 @@ redirect_from:
 The Spryker static Security Checker allows you to detect packages with security vulnerabilities. It is based on the [Local PHP Security Checker](https://github.com/fabpot/local-php-security-checker).
 
 ## Installation
-To install the Security Checker, run
+
+To install the Security Checker, run:
 
 ```bash
 composer require --dev spryker-sdk/security-checker
 ```
 
 ## Configuration
+
 Having installed the Security Checker, enable it in `ConsoleDependencyProvider`:
 
 ```php
@@ -56,6 +58,7 @@ Run the following command to check for security issues in the `composer.lock` fi
 ```bash
 vendor/bin/console security:check
 ```
+
 {% info_block warningBox "False-positive vulnerability CVE-NONE-0001" %}
 
 There is a known false-positive issue CVE-NONE-0001. The issue is not valid, and, therefore, we suspend the notice about it. If you want the details of the suspended notice, run

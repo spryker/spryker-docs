@@ -22,15 +22,18 @@ Out of the box it provides generators for Yves, Zed, Client, Service and Shared 
 
 {% info_block errorBox %}
 
-Check out our new code generation tool [Spryk](/docs/scos/dev/sdk/development-tools/spryk-code-generator.html).
+Check out our new code generation tool [Spryk](/docs/sdk/dev/spryks/spryks.html).
 
 {% endinfo_block %}
 
 
 ## Installation
+
 Install it as
 
-`composer require --dev spryker/code-generator`
+```bash
+composer require --dev spryker/code-generator
+```
 
 You need to run `vendor/bin/console transfer:generate` now.
 
@@ -49,9 +52,10 @@ Then make sure you enable the console commands in your `getConsoleCommands()` me
 ```
 
 ## How to use it
+
 You can now use the commands, to e.g. generate the application layers for `FooBar` module as follows:
 
-```
+```bash
 console code:generate:module:all FooBar
 console code:generate:module:yves FooBar
 console code:generate:module:zed FooBar

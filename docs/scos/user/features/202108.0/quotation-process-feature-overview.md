@@ -68,7 +68,7 @@ For the Draft RFQ, a buyer can:
 * Edit and add/remove products.
 * Change product quantity and update meta information.
 
-Once the buyers are done editing the Draft RFQ, they can send it to a sales representative. After that, they wait until the RFQ gets processed by a sales representative. The status of the RFQ changes to **Waiting**. Request for Quote cannot be edited at this point. It is only possible to cancel it.
+Once the buyers are done editing the Draft RFQ, they can send it to a sales representative. After that, they wait until the RFQ gets processed by a sales representative. The status of the RFQ changes to **Waiting**. Request for Quote cannot be edited at this point. It can be only cancelled.
 
 After the sales representative has processed the request, the buyer gets it back with the status **Ready**. At this point, if buyers are satisfied with such a request, they can convert the RFQ to the cart, and after that, proceed to checkout. When the order is placed, the RFQ receives the **Closed** status.
 
@@ -134,7 +134,7 @@ If your project has only the Persistent Cart module, which means that only one S
 
 If your project has Persistent Cart and Multi-cart modules, converting the RFQ into a Shopping Cart creates a new locked shopping cart.
 
-The buyers can utilize the blocked cart irrespective of the RFQ updates by unblocking the cart. However, the modifications that have been applied during the RFQ workflow will be discarded.
+The buyers can use the blocked cart irrespective of the RFQ updates by unblocking the cart. However, the modifications that have been applied during the RFQ workflow will be discarded.
 ![Locked cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/locked-cart.png)
 
 ## Interaction of the RFQ with the approval process

@@ -73,7 +73,7 @@ When a Back Office user creates a configurable bundle template, they create the 
 
 * A configurable bundle template can have an unlimited number of slots.
 
-* You can assign the same product list to multiple slots in a configurable bundle template only via data import.
+* You can assign the same product list to multiple slots in a configurable bundle template only by data import.
 
 {% endinfo_block %}
 
@@ -106,7 +106,7 @@ A Storefront User can add a note to a configurable bundle. The note is displayed
 
 ## Configurable bundle quantity, stock, and price
 
-Currently, the feature supports 1:1 product-slot relation in the configurator. You can select only one concrete product with quantity 1 for a slot. However, using the data import, you may import a bigger quantity for the products in the slots.
+The feature supports 1:1 product-slot relation in the configurator. You can select only one concrete product with quantity 1 for a slot. However, using the data import, you may import a bigger quantity for the products in the slots.
 
 On the **Cart** page, a Storefront User can change the quantity of a configured bundle. After the quantity is increased, the quantity of all the items in the configured bundle is multiplied by this number.
 
@@ -228,7 +228,7 @@ The Configurable Bundle feature looks as follows on the Storefront:
 
 ### Current constraints
 
-Currently, the feature has the following functional constraints which are going to be resolved in the future.
+The feature has the following functional constraints which are going to be resolved in the future.
 
 
 * On the Configurator page, you cannot add the configured bundle to a [shopping list](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html) or [wishlist](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html).

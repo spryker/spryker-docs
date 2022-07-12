@@ -19,7 +19,9 @@ redirect_from:
 The issue occurs when setting up Docker and WSL 2 and adding routes to `etc/hosts` in one line on Windows. Host file has row 127.0.0.1.
 
 ## Cause
+
 The cause of the issue might be in the maximum length limitaion of a line that you can have in your hosts file in Windows.
 
 ## Solution
+
 In the hosts file, start a new line with `127.0.0.1`, and then add routes for services for which the hosts are not resolved.

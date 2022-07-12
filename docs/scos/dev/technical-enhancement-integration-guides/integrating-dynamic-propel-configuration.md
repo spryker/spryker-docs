@@ -36,11 +36,11 @@ To avoid running the command each time the configuration changes, we introduce a
 
 Ensure that the related features are installed:
 
-| Name | Version | Required sub-feature |
+| NAME | VERSION | REQUIRED SUB-FEATURE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 
-### 1) Install the Required Modules Using Composer
+### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
@@ -50,42 +50,41 @@ composer require spryker/propel:"^3.10.0" spryker/propel-orm:"^1.9.0" --update-w
 
 {% info_block warningBox "Verification" %}
 
-
 Make sure that the following modules have been installed:
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
-|  `Propel ` |  `vendor/spryker/propel ` |
-|  `PropelOrm ` |  `vendor/spryker/propel-orm ` |
+|  Propel |  vendor/spryker/propel |
+|  PropelOrm |  vendor/spryker/propel-orm |
 
 {% endinfo_block %}
 
-### 2) Set up Behavior
+### 2) Set up behavior
 
-#### Clean up Install Recipes
+#### Clean up install recipes
 
-Delete the `propel:config:convert ` command from all install recipes ( `config/install/developing.yml `,  `config/install/testing.yml `, etc.):
+Delete the `propel:config:convert` command from all install recipes ( `config/install/developing.yml`,  `config/install/testing.yml`, etc.):
 
-```bash
+```yml
 propel-config:
     command: "vendor/bin/console propel:config:convert"
 ```
 
 {% info_block infoBox %}
 
-`Spryker\Zed\Propel\Communication\Console\ConvertConfigConsole ` is deprecated.
+`Spryker\Zed\Propel\Communication\Console\ConvertConfigConsole` is deprecated.
 
 {% endinfo_block %}
 
-### 3) Delete Related JSON Files
+### 3) Delete the related JSON files
 
-Delete all the `src/Orm/Propel/*/Config/*/propel.json ` files - they are not needed from now on.
+Delete all the `src/Orm/Propel/*/Config/*/propel.json` files - they are not needed from now on.
 
-## Supporting Native Propel Commands
+## Supporting native Propel commands
 
 To run Propel commands directly, set up a runtime configuration by creating the file:
 
-src/Orm/Propel/propel.php
+**src/Orm/Propel/propel.php**
 
 ```php
 <?php

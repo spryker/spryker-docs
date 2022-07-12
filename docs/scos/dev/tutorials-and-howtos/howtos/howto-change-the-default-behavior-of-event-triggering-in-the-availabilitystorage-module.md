@@ -1,5 +1,5 @@
 ---
-title: HowTo - Change the Default Behavior of Event Triggering in the AvailabilityStorage Module
+title: "HowTo: Change the default behavior of event triggering in the AvailabilityStorage module"
 description: Learn how to change the default behavior of the event being triggered in the AvailabilityStorage module when the amount of product is changed.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -24,9 +24,11 @@ redirect_from:
   - /v1/docs/en/ht-change-default-behaviour-of-event-trigerring-in-availability-storage-module
 ---
 
-By default, events are triggered when product status is changed from `available` to `not available` and vice versa. If you want to change this behavior for the events to be triggered when the amount of product changes, follow the steps below.
+By default, events are triggered when product status changes from `available` to `not available`, and conversely.
 
-1. Remove `value="0"` and `operator="==="` from the line `<parameter name="spy_availability_abstract_quantity" column="quantity" value="0" operator="==="/>` in `src/Pyz/Zed/Availability/Persistence/Propel/Schema/spy_availability.schema.xml`:
+To change this behavior for the events to be triggered when the amount of product changes, follow these steps:
+
+1. In `src/Pyz/Zed/Availability/Persistence/Propel/Schema/spy_availability.schema.xml`, remove `value="0"` and `operator="==="` from the line `<parameter name="spy_availability_abstract_quantity" column="quantity" value="0" operator="==="/>`:
 
 ```xml
 <table name="spy_availability_abstract">

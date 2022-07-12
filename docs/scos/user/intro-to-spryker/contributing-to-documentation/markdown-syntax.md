@@ -379,7 +379,7 @@ Make sure to fulfil the requirements:
 2. Link text to this anchor, depending on the link source:
 
 - When linking to an anchor on a different page, stick to the usual Markdown link syntax and add the anchor name at the end of the link: `[link text](https://{article URL}#{anchor name})`.
-  Following the example above, it looks like `[Sorting parameters](https://docs.spryker.com/docs/marketplace/dev/glue-api-guides/202108.0/searching-the-product-catalog.html#sorting)`.
+  Following the example above, it looks like `[Sorting parameters](/docs/marketplace/dev/glue-api-guides/202108.0/searching-the-product-catalog.html#sorting)`.
 - When linking to an anchor on the same page, stick to the usual Markdown link syntax with a relative URL path - `[link text](#{anchor name})`.
 
 With the same example, it looks like `[Sorting parameters](##sorting)`.

@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Customer Import
+title: "Tutorial: Customer import"
 description: Use the guide to extend the Importer module and import customer data using a .CSV file
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -29,12 +29,13 @@ This tutorial describes the steps you need to follow to extend the `Installer` m
 
 In this example, we’ll import customer data; of course you can update the code in this tutorial to fit your need.
 
-## Implementing Customer Installer
+## Implement customer installer
+
 Create the `CustomerInstaller` class under the `src/Pyz/Zed/Customer/Business/Installer/` folder.
 
 Place the following code in the `CustomerInstaller` class:
 
-**Code sample:**
+**Code sample**
 
 ```php
 <?php
@@ -99,7 +100,7 @@ class CustomerInstaller implements CustomerInstallerInterface
 }
 ```
 
-**Interface:**
+**Interface**
 
 ```php
 <?php
@@ -115,7 +116,8 @@ interface CustomerInstallerInterface
 }
 ```
 
-## Adding a method to Facade
+## Add a method to facade
+
 In the `CustomerFacade`, add a method that calls a new customer installer.
 
 To override the facade, create `CustomerFacade` under the `Pyz\Zed\Customer\Business` folder:
@@ -171,7 +173,8 @@ class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
 }
 ```
 
-## Creating the Installer plugin
+## Create the installer plugin
+
 Create the `CustomerInstallerPlugin` installer plugin  which implements `InstallerPluginInterface` under  `Pyz\Zed\Customer\Communication\Plugin\Installer`:
 
 ```php
@@ -201,7 +204,8 @@ class CustomerInstallerPlugin extends AbstractPlugin implements InstallerPluginI
 }
 ```
 
-## Registering the New Data Installer Plugin
+## Register the new data installer plugin
+
 Now, we’re almost ready to test the new data installer; we just need to register it in `InstallerDependencyProvider`:
 
 ```php
@@ -219,8 +223,11 @@ Now, we’re almost ready to test the new data installer; we just need to regist
     }
 ...
 ```
+
 To test the customer data installer, run the data install from the command line:
 
 ```bash
 vendor/bin/console setup:init-db
 ```
+
+That's it! The new customer data installer is up and running.

@@ -82,6 +82,7 @@ Adjust the schema definition so that entity changes will trigger events:
 Apply database changes and to generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -1498,65 +1499,6 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 }
 ```
 
-**src/Pyz/Yves/ProductDetailPage/Controller/ProductController.php**
-
-```php
-<?php
-
-namespace Pyz\Yves\ProductDetailPage\Controller;
-
-use Generated\Shared\Transfer\ProductStorageCriteriaTransfer;
-use SprykerShop\Yves\ProductDetailPage\Controller\ProductController as SprykerShopProductController;
-
-class ProductController extends SprykerShopProductController
-{
-    protected function executeDetailAction(array $productData, Request $request): array
-    {
-        $shopContextTransfer = $this->getFactory()
-            ->createShopContextResolver()
-            ->resolve();
-
-        $productStorageCriteriaTransfer = (new ProductStorageCriteriaTransfer())
-            ->fromArray($shopContextTransfer->toArray());
-
-        $productViewTransfer = $this->getFactory()
-            ->getProductStorageClient()
-            ->mapProductStorageData($productData, $this->getLocale(), $this->getSelectedAttributes($request));
-            ->mapProductStorageData($productData, $this->getLocale(), $this->getSelectedAttributes($request), $productStorageCriteriaTransfer);
-        ...
-    }
-}
-```
-
-**src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-configurator/product-configurator.twig**
-
-```twig
-{%- raw -%}
-...
-{% widget 'AddToCartFormWidget' args [config, data.product, isDisabled, options] only %}
-    {% block embeddedData %}
-        ...
-        {% if merchantProductOfferWidget %}
-            {% widget merchantProductOfferWidget with
-                {
-                    embed: {
-                        hasMerchantProduct: merchantProductWidget and merchantProductWidget.merchantProductView is defined and merchantProductWidget.merchantProductView,
-                        productOffersCount: merchantProductOfferWidget.productOffers | length
-                    }
-                }
-            %}
-                {% block content %}
-                    {% set isRadioButtonVisible = embed.productOffersCount + embed.hasMerchantProduct > 1 %}
-                    {{ parent() }}
-                {% endblock %}
-            {% endwidget %}
-        {% endif %}
-    {% endblock %}
-{% endwidget %}
-...
-{% endraw %}
-```
-
 Enable Javascript and CSS changes:
 
 ```bash
@@ -1578,7 +1520,7 @@ Make sure that the following widgets were registered:
 | FEATURE                                              | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                               |
 |------------------------------------------------------|----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Combined Product Offer Import                        |                                  | [Combined Product Offer Import integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/combined-product-offer-import-feature-integration.html)                                           |
-| Marketplace Product Offer Prices                     | &check;                          | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html)                             |
+| Marketplace Product Offer Prices                     |                                  | [Marketplace Product Offer Prices feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-prices-feature-integration.html)                             |
 | Marketplace Merchant Portal Product Offer Management |                                  | [Marketplace Product Offer Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-product-offer-management-feature-integration.html)     |
 | Marketplace Product Offer API                        |                                  | [Glue API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html)                            |
 | Marketplace Product + Marketplace Product Offer      |                                  | [Marketplace Product + Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-marketplace-product-offer-feature-integration.html) |

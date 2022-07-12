@@ -8,6 +8,7 @@ originalArticleId: 06b19531-1215-4c3d-a1f7-bab215664671
 redirect_from:
   - /v2/docs/creating-and-managing-product-bundles
   - /v2/docs/en/creating-and-managing-product-bundles
+  - /docs/scos/user/back-office-user-guides/201903.0/products/products/managing-products/creating-and-managing-product-bundles.html
 related:
   - title: Editing Product Variant
     link: docs/scos/user/back-office-user-guides/page.version/catalog/products/manage-concrete-products/editing-product-variant.html

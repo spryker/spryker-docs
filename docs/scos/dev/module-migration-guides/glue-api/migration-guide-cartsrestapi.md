@@ -28,6 +28,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/glue-api/cartsrestapi-migration-guide.html
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/cartsrestapi-migration-guide.html
   - /docs/scos/dev/module-migration-guides/glue-api/cartsrestapi-migration-guide.html
+  - /module_migration_guides/glue_api/cartsrestapi-migration-guide.htm
 ---
 
 ## Upgrading from version 3.* to 5.0.0

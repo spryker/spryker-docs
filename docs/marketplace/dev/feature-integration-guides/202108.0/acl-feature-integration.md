@@ -19,7 +19,6 @@ To start feature integration, integrate the required features:
 | --------------- | -------- | ------------------ |
 | Spryker Core         | {{page.version}}      | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Spryker Core Back Office | {{page.version}}      | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html) |
-| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -45,38 +44,10 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up the database schema
 
-**src/Pyz/Zed/Merchant/Persistence/Propel/Schema/spy_merchant.schema.xml**
-
-```xml
-<?xml version="1.0"?>
-<database xmlns="spryker:schema-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:schemaLocation="spryker:schema-01 https://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\Merchant\Persistence" package="src.Orm.Zed.Merchant.Persistence">
-    <table name="spy_merchant">
-        <behavior name="event">
-            <parameter name="spy_merchant-name" column="name"/>
-            <parameter name="spy_merchant-is_active" column="is_active"/>
-        </behavior>
-        <behavior name="\Spryker\Zed\AclEntity\Persistence\Propel\Behavior\AclEntityBehavior"/>
-    </table>
-
-</database>
-```
-
-**src/Pyz/Zed/MerchantUser/Persistence/Propel/Schema/spy_merchant_user.schema.xml**
-
-```xml
-<?xml version="1.0"?>
-<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="zed" xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd" namespace="Orm\Zed\MerchantUser\Persistence" package="src.Orm.Zed.MerchantUser.Persistence">
-
-    <table name="spy_merchant_user">
-        <behavior name="\Spryker\Zed\AclEntity\Persistence\Propel\Behavior\AclEntityBehavior"/>
-    </table>
-
-</database>
-```
-
 Apply database changes and to generate entity and transfer changes:
 
 ```bash
+console transfer:generate
 console propel:install
 console transfer:generate
 ```
@@ -127,7 +98,7 @@ Make sure that the following changes have been applied in transfer objects:
 |   Rules | object | Created | src/Generated/Shared/Transfer/Transfer |
 |   User | object | Created | src/Generated/Shared/Transfer/UserTransfer |
 |   NavigationItem | object | Created | src/Generated/Shared/Transfer/NavigationItemTransfer |
-|   NavigationItemCollection | object | Created | src/Generated/Shared/Transfer/Transfer |
+|   NavigationItemCollection | object | Created | src/Generated/Shared/Transfer/NavigationItemCollectionTransfer |
 
 {% endinfo_block %}
 

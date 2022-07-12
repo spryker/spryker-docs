@@ -15,11 +15,14 @@ redirect_from:
 ---
 
 ## Description
+
 There is a synchronization issue.
 
 ## Solution
+
 * Restart your OS.
 * Run the commands:
+
 ```
 docker/sdk trouble
 mutagen sync list

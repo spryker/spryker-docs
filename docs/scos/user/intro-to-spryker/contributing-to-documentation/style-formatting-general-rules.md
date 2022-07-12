@@ -32,7 +32,7 @@ Currently, the maximum nesting level in the documentation categories is 3. This 
 
 {% info_block infoBox "Info" %}
 
-You can use any valid URL characters in the names of your document files or category directories. It is strongly recommended to use dashes (`-`) instead of underscores (`_`) in the names because these names will eventually be mapped to URLs, and underscores have a negative impact when it comes to SEO. 
+You can use any valid URL characters in the names of your document files or category directories. It is strongly recommended to use dashes (`-`) instead of underscores (`_`) in the names because these names will eventually be mapped to URLs, and underscores have a negative impact when it comes to SEO.
 
 {% endinfo_block %}
 
@@ -42,7 +42,7 @@ To keep our docs consistent, we have templates for all types of documents. The t
 
 | TEMPLATE   | DESCRIPTION  |
 | ---------------- | ---------------- |
-| [back-office-user-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/back-office-user-guide-template.md) | Use this template for creating [Back Office user guides](/docs/scos/user/back-office-user-guides/{{site.version}}/customer/customer-customer-access-customer-groups/managing-customers.html) or [Merchant Portal user guides.](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/offers/managing-product-offers.html) |
+| [back-office-user-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/back-office-user-guide-template.md) | Use this template for creating [Back Office user guides](/docs/scos/user/back-office-user-guides/{{site.version}}/customer/customers/create-customers.html) or [Merchant Portal user guides.](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/offers/managing-product-offers.html) |
 | [concept-topic-template](https://github.com/spryker/spryker-docs/blob/master/_templates/concept-topic-template.md) | Use this template for creating general and technical conceptual topics, such as [feature overviews](/docs/scos/user/features/{{site.version}}/catalog-feature-overview.html) or [technical articles](/docs/marketplace/dev/front-end/angular-components.html). |
 | [feature-walkthrough-template](https://github.com/spryker/spryker-docs/blob/master/_templates/feature-walkthrough-template.md) | Use this template for creating feature [walkthrough guides](/docs/marketplace/dev/feature-walkthroughs/{{site.version}}/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html). |
 | [feature-integration-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/feature-integration-guide-template.md) | Use this template while working on the [integration guides](/docs/scos/dev/feature-integration-guides/{{site.version}}/agent-assist-feature-integration.html). Check the [instructions on formatting for the integration guides](https://github.com/spryker/spryker-docs/blob/master/_templates/formatting-templates-for-feature-integration-guides.md). |
@@ -51,7 +51,7 @@ To keep our docs consistent, we have templates for all types of documents. The t
 | [data-import-template](https://github.com/spryker/spryker-docs/blob/master/_templates/data-import-template.md) | Use this template for creating documents on [data import](/docs/marketplace/dev/data-import/{{site.version}}/file-details-merchant-category.csv.html). |
 | [module-migration-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/module-migration-guide-template.md) | Use this template for creating [module migration guides](/docs/scos/dev/module-migration-guides/migration-guide-merchantgui.html#upgrading-from-version-1-to-version-2). |
 | [troubleshooting-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/troubleshooting-guide-template.md) | Use this template for creating [troubleshooting pages](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/rabbitmq-zed.critical-phpamqplib-exception-amqpchannelclosedexception-channel-connection-is-closed.html). |
-| [howto-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/howto-guide-template.md) | Use this template for creating [howto guides](/docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method.html#setting-up-the-state-machine). |
+| [howto-guide-template](https://github.com/spryker/spryker-docs/blob/master/_templates/howto-guide-template.md) | Use this template for creating [howto guides](/docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method.html). |
 | [best-practices-file-template](https://github.com/spryker/spryker-docs/blob/master/_templates/best-practices-file-template.md) | Use this template for creating [best practices](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/creating-service-offerings-best-practices.html) docs. |
 
 {% info_block warningBox "Warning" %}
@@ -71,7 +71,7 @@ description: Exemplary description text.
 last_updated: Dec 09, 2021
 template: concept-topic-template
 tags: [new, B2B, B2C]
-redirect_from: 
+redirect_from:
 	-/docs/cloud/dev/spryker-cloud-commerce-os/troubleshooting.html
 	-/docs/marketplace/dev/feature-integration-guides/202108.0/combined-product-offer-import-integration.html
 related:
@@ -140,7 +140,7 @@ If you now open the Glue API guides category, your page looks like this:
 
 We have two types of versions: page versions and the global website version.
 
-The versions are managed in the *config.yml* file*. 
+The versions are managed in the *config.yml* file*.
 
 ### Page version
 
@@ -182,7 +182,7 @@ The *global version* is the main website version. Usually, we make the version o
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/site-version.png)
 
-To make a reference to the main (last) website version on either versioned or unversioned pages, use the `{% raw %}{{site.version}}{% endraw %}`. For example, if the main version of your website is 2020109.0, if you write 
+To make a reference to the main (last) website version on either versioned or unversioned pages, use the `{% raw %}{{site.version}}{% endraw %}`. For example, if the main version of your website is 2020109.0, if you write
 
 ```
 For details on the feature, see [Merchant feature overview](/docs/marketplace/user/features/{% raw %}{{site.version}}{% endraw %}/merchants/merchants-feature-overview.html).

@@ -86,7 +86,7 @@ class QuoteDependencyProvider extends SprykerQuoteDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `ShipmentService::groupItemsByShipment()` groups items by shipment using the merchant reference.
+Place an order and check that items are grouped by merchant shipment in backoffice.
 
 Make sure that merchant sold items have a merchant reference attached to their selected shipment.
 

@@ -1,26 +1,17 @@
 ---
-title: "Migration guide: Extending the project"
+title: "Migration guide - Extending the project"
 description: This document provides details for migration of the marketplace modules to be able to extend the project.
 template: module-migration-guide-template
+related:
+  - title: Extending the project
+    link: docs/marketplace/dev/front-end/extending-the-project/index.html
 ---
 
-To be able to extend the frontend project, the marketplace modules must correspond to the following versions:
-
-| NAME                                        | VERSION   |
-| ------------------------------------------- | --------- |
-| ZedUi                                       | >= 0.4.1  |
-| DashboardMerchantPortalGui (optional)       | >= 0.4.1  |
-| MerchantProfileMerchantPortalGui (optional) | >= 0.7.1  |
-| ProductMerchantPortalGui (optional)         | >= 0.6.1  |
-| ProductOfferMerchantPortalGui (optional)    | >= 0.10.2 |
-| SalesMerchantPortalGui (optional)           | >= 0.8.1  |
-| SecurityMerchantPortalGui (optional)        | >= 0.4.2  |
-
-If not, follow the steps from this migration guide.
+This document outlines the changes that need to be made at a project level in order to [extend the frontend part of your project](/docs/marketplace/dev/front-end/extending-the-project/index.html).
 
 *Estimated migration time: 1h 30m*
 
-To upgrade the modules to the required versions, do the following:
+To update the project, do the following:
 
 1. Update the following files in the root:
 
@@ -167,4 +158,4 @@ yarn mp:build
 
 Related articles:
 
-[Extending the project](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2316501312/Extending+the+project)
+[Extending the project](/docs/marketplace/dev/front-end/extending-the-project/index.html)

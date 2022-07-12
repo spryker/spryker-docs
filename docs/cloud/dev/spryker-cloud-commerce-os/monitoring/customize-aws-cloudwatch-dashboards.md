@@ -1,5 +1,5 @@
 ---
-title: Customizing AWS CloudWatch dashboards
+title: Customize AWS CloudWatch dashboards
 description: Adjust AWS CloudWatch dashboards to your needs.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/customizing-aws-cloudwatch-dashboards
@@ -7,6 +7,7 @@ originalArticleId: 20c2a91e-d6c8-446b-ace9-4723e2fd078a
 redirect_from:
   - /docs/customizing-aws-cloudwatch-dashboards
   - /docs/en/customizing-aws-cloudwatch-dashboards
+  - /docs/cloud/dev/spryker-cloud-commerce-os/customizing-aws-cloudwatch-dashboards.html
 ---
 
 This document describes how to customize AWS CloudWatch dashboards.
@@ -37,7 +38,7 @@ To add a widget displaying CPU utilization of Jenkins to a dashboard:
 
 4. Select **Add widget**.
 
-  
+
 5. In the **Add widget** dialogue box, select **Line**.  
 
 ![widget type selection](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Customizing+AWS+CloudWatch+dashboards/widget-type-selection.png)
@@ -61,11 +62,9 @@ The dialogue box closes with the new widget displayed in the dashboard.
 To customize an existing widget:
 
 1.  At the top-right corner of the widget, select _Widget actions_ > **Edit**.  
-    
+
 ![widget actions in context](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Customizing+AWS+CloudWatch+dashboards/widget-actions-in-context.png)
 
 2.  In the **Edit graph** dialogue box, adjust the widget per your requirements.
-    
-3.  Select **Update widget**.
-    
 
+3.  Select **Update widget**.

@@ -20,10 +20,6 @@ Depending on the OS you use, check out the following installation prerequisites:
 - [Installing Docker prerequisites on Linux](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
 - [Installing Docker prerequisites on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html)
 
-## Requirements
-
-For the recommended DevVM system requirements, see [DevVM system requirements](/docs/marketplace/dev/setup/system-requirements.html).
-
 ## Installing the B2C Demo Marketplace
 
 To install the B2C Demo Marketplace:
@@ -40,8 +36,11 @@ git clone https://github.com/spryker/docker-sdk.git docker
 
 2. Set up the environment you need:
 
-- [Development environment](#setting-up-a-development-environment)
-- [Production-like environment](#setting-up-a-production-like-environment)
+- [Prerequisites](#prerequisites)
+- [Installing the B2C Demo Marketplace](#installing-the-b2c-demo-marketplace)
+  - [Setting up a development environment<a name="setting-up-a-development-environment"></a>](#setting-up-a-development-environment)
+  - [Setting up a production-like environment<a name="setting-up-a-production-like-environment"></a>](#setting-up-a-production-like-environment)
+- [Next steps](#next-steps)
 
 ### Setting up a development environment<a name="setting-up-a-development-environment"></a>
 
@@ -85,6 +84,6 @@ That's it. You've set up your Spryker B2C Demo Marketplace and can access your a
 
 ## Next steps
 
-- For troubleshooting, see [Troubleshooting Spryker in Docker issues](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-spryker-in-docker-issues.html) or [Troubleshooting Spryker in Vagrant installation issues](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/troubleshooting-spryker-in-vagrant-installation-issues.html).
-- Configuring debugging in [Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html) or in [Vagrant](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html).
+- For troubleshooting, see [Troubleshooting Spryker in Docker issues](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-spryker-in-docker-issues.html).
+- Configuring debugging in [Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html).
 - See Glue API reference at [REST API reference](/docs/scos/dev/glue-api-guides/{{site.version}}/rest-api-reference.html).

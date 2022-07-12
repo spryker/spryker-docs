@@ -369,18 +369,3 @@ The [Tax module](/docs/scos/dev/feature-walkthroughs/202204.0/tax-feature-walkth
 ## Wishlist
 
 The [Wishlist](/docs/scos/dev/feature-walkthroughs/202204.0/wishlist-feature-walkthrough.html) feature allows customers to track and save the products they wish to purchase through the wish list. Customers can create multiple wish lists and customize their names.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

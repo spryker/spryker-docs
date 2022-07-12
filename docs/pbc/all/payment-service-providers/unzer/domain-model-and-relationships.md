@@ -1,8 +1,10 @@
 ---
-title: Domain model & relationships
+title: Domain model and relationships
 last_updated: Jun 22, 2022
 description: This document describes domain model & relationships
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/payment/unzer/domain-model-and-relationships.html
 ---
 
 Every Sales Order is connected to a payment type (the payment method selected by the customer in the checkout process). You can capture as many times as you wish by your OMS state machine.

@@ -92,7 +92,7 @@ If you use Docker and not the Development Virtual Machine (DevVM), you don't nee
 
 {% info_block warningBox "Warning" %}
 
-We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](#install-spryker-with-docker).
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker]({% link docs/scos/dev/code-contribution-guide.md %}).
 
 {% endinfo_block %}
 

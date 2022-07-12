@@ -58,9 +58,9 @@ The typical Spryker installation process includes installing a proper starting p
 
 You can choose from the following options:
 
-* [B2B Demo Shop](/docs/scos/user/intro-to-spryker//b2b-suite.html) - a boilerplate for B2B commerce projects.
-* [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html) - a starting point for B2C implementations.
-* Separate [Features](/docs/scos/user/features/{{site.version}}/features.html) and modules - you can also expand both Demo Shops with separate features and modules.
+* [B2B Demo Shop](/docs/scos/user/intro-to-spryker//b2b-suite.html): A boilerplate for B2B commerce projects.
+* [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html): A starting point for B2C implementations.
+* Separate [features](/docs/scos/user/features/{{site.version}}/features.html) and modules: You can also expand both Demo Shops with separate features and modules.
 
 ### Install Spryker with Docker
 
@@ -121,7 +121,7 @@ After you install the project, adjust the readme.md file as follows:
 
 ## 2. Manage your modules
 
-Once you have completed the installation, you can start managing *modules*. A module is a single functional unit that has well-defined dependencies, and can be used and updated independently.
+Once you have completed the installation, you can start managing *modules*. A module is a single functional unit that has well-defined dependencies and can be used and updated independently.
 {% info_block infoBox %}
 
 To define your strategy of taking Spryker updates, learn about our [module and feature release process](/docs/scos/user/intro-to-spryker/spryker-release-process.html).
@@ -170,9 +170,9 @@ This step depends on the store setup which you plan to have. If you start with o
  - `src/SprykerConfig/CodeBucketConfig.php`
 
 ### Modules clean up
-Analise modules that you have in the desired Demoshop.
-Analise modules that you need to have.
-Remove unnesessary modules (to do that you can use migration guide backwards).
+* Analize modules that you have in the desired Demoshop.
+* Analize modules that you need to have.
+* Remove unnesessary modules (to do that, you can use the migration guide backwards).
 
 ### Data import clean up
 
@@ -254,13 +254,13 @@ Before you start developing, set up and get to know your debugging environment. 
 
 {% info_block infoBox %}
 
-In a production setup, Zed must be covered with a VPN, Basic Auth or IP whitelisting.
+In a production setup, Zed must be covered with a VPN, Basic Auth, or IP allowlisting.
 
 {% endinfo_block %}
 
 ## 8. Familiarize yourself with the Spryker architecture
 
-As a developer, the Spryker structure is the first thing you need to know to extend the core functionality. To familiarize yourself with the Spryker architecture, different parts of the Client, Shared, Zed and Yves folders and their different layers, see the following articles:
+As a developer, the Spryker structure is the first thing you need to know to extend the core functionality. To familiarize yourself with the Spryker architecture, different parts of the Client, Shared, Zed, and Yves folders, and their different layers, see the following articles:
 
 * [Conceptual overview](/docs/scos/dev/architecture/conceptual-overview.html): to learn about application layers and code structure.
 * [Modules and layers](/docs/scos/dev/architecture/modules-and-layers.html): to learn about layers and how various functionality is encapsulated in modules.

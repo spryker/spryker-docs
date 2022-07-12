@@ -11,6 +11,27 @@ To build the documentation site locally, see [buidling the documentation site](h
 To build the documentation site with Docker, run this command:
 `docker run --rm --volume="$PWD:/srv/jekyll" --volume="$PWD/vendor/bundle:/usr/local/bundle" -p 4000:4000 jekyll/jekyll:4.2.0 jekyll serve --incremental --livereload`
 
+#### Install Vale
+Vale documentation [https://vale.sh/](https://vale.sh/)
+##### Windows
+In terminal run command:
+`choco install vale`
+if you don't have `choco` read [https://chocolatey.org/](https://chocolatey.org/)
+
+##### macOS
+In terminal run command:
+`brew install vale`
+if you don't have `brew` read [https://brew.sh/](https://brew.sh/)
+
+##### Linux
+In terminal run command:
+`brew install vale`
+if you don't have `brew` read [https://docs.brew.sh/Homebrew-on-Linux](https://docs.brew.sh/Homebrew-on-Linux)
+
+After installations you need run command `vale <path>/<name file>.md`,
+ag: `vale docs/acp/user/apps/payone.md`
+
+
 ## To contribute
 
 1. [Fork](https://help.github.com/articles/fork-a-repo/) the repository.

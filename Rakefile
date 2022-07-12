@@ -42,7 +42,8 @@ commonOptions = {
     /blackfire.io\/[\.\w\-\/\?]+/,
     /www.nekom.com\/[\.\w\-\/\?]+/,
     /www.phpunit.de\/[\.\w\-\/\?]+/,
-    /rpm.newrelic.com\/[\.\w\-\/\?]+/
+    /rpm.newrelic.com\/[\.\w\-\/\?]+/,
+    /martin-loetzsch.de\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {

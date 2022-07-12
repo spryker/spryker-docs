@@ -12,7 +12,7 @@ entries:
               - title: Install Unzer
                 nested:
                   - title: Install and configure
-                    url: /docs/pbc/all/payment/unzer/install-unzer/install-and-configure-unzer.html
+                    url: /docs/pbc/all/payment/unzer/install-unzer/install-and-configure-unzer-modules.html
                   - title: Integrate
                     url: /docs/pbc/all/payment/unzer/install-unzer/integrate-unzer.html
               - title: Use cases & HowTos & Tips

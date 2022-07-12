@@ -3986,6 +3986,9 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
+    - title: Configure services
+      url: /docs/scos/dev/the-docker-sdk/configure-services.html
+      include_versions:
       - "202204.0"
     - title: Docker SDK configuration reference
       url: /docs/scos/dev/the-docker-sdk/docker-sdk-configuration-reference.html

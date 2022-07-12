@@ -42,6 +42,4 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-productoptiondiscountconnector.html
 ---
 
-## Upgrading from version 2.* to version 3.*
-
-The `ProductOptionExporter`  module does not provide the tax functionality anymore. Upgrade [Migration Guide - Tax](/docs/scos/dev/module-migration-guides/migration-guide-tax.html).
+{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->

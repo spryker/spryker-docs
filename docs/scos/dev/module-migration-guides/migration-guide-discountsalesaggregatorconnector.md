@@ -35,6 +35,4 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-discount.html
 ---
 
-## Upgrading from version 2.* to version 3.*
-
-The tax plugins are using the version 3.* of the Tax module. You need to upgrade the [Tax](/docs/scos/dev/module-migration-guides/migration-guide-tax.html) module.
+{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->

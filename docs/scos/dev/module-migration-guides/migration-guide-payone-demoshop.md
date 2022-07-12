@@ -29,3 +29,5 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-payone-demoshop.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-payone-demoshop.html
 ---
+
+{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->

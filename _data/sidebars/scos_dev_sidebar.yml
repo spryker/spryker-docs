@@ -3040,7 +3040,6 @@ entries:
             - "202005.0"
             - "202009.0"
             - "202108.0"
-            - "202204.0"
         - title: Stocks
           url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/stocks/stocks.html
           include_versions:

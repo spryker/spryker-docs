@@ -8,7 +8,7 @@ redirect_from:
 ---
 
 
-To edit a [tax rate](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) in the Back Office, follow the steps:
+To edit a [tax rate](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html) in the Back Office, follow the steps:
 
 1. Go to **Administration&nbsp;<span aria-label="and then">></span> Tax Rates**.
     This opens the **Overview of Tax Rates** page.

@@ -29,12 +29,12 @@ Follow the steps below to install the feature core.
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Spryker Core | master | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-|Cart | master | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |
-|Product  | master | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-feature-integration.html) |
+| Spryker Core | master | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+|Cart | master | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html) |
+|Product  | master | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html) |
 |Tax  | master | |
-| Inventory Management | master | [Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/inventory-management-feature-integration.html) |
-|Glue API: Checkout  | master | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html)|
+| Inventory Management | master | [Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/inventory-management-feature-integration.html) |
+|Glue API: Checkout  | master | [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-checkout-feature-integration.html)|
 
 2. To register an application with the Avalara platform and get configuration options, follow [Set up AvaTax](https://help.avalara.com/Avalara_AvaTax_Update/Set_up_AvaTax_Update).
 
@@ -483,5 +483,5 @@ Open `spy_product_abstract`, and `spy_product` and make sure that all data has b
 
 | FEATURE |REQUIRED FOR THE CURRENT FEATURE |INTEGRATION GUIDE |
 | ---  |---  |---  |
-|Avalara Tax + Product Option  |✓| [Avalara Tax + Product Options feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/taxes/avalara/integrating-avalara-tax-product-options.html) |
-|Avalara Tax + Shipment |✓ |[Avalara Tax + Shipment feature integration](/docs/scos/dev/technology-partner-guides/{{page.version}}/taxes/avalara/integrating-avalara-tax-shipment.html) |
+|Avalara Tax + Product Option  |✓| [Avalara Tax + Product Options feature integration](/docs/scos/dev/technology-partner-guides/{{site.version}}/taxes/avalara/integrating-avalara-tax-product-options.html) |
+|Avalara Tax + Shipment |✓ |[Avalara Tax + Shipment feature integration](/docs/scos/dev/technology-partner-guides/{{site.version}}/taxes/avalara/integrating-avalara-tax-shipment.html) |

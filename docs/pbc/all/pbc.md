@@ -44,6 +44,8 @@ Packaged Business Capabilities (PBCs) are capabilities that enclose a certain fu
 | Back Office | The administration interface that allows you to manage all back-office tasks. In the Back Office, you can manage and create customer accounts and define who can access the Back Office. You can also keep track of all your internal processes including the management of your products, orders, customers and many more. | Keeps your back-end processes running efficiently, protects your data and administers all accounts. |
 | Storefront | The out-of-the-box online shop application that includes all regular functionalities and workflows. You can use the Storefront as a boilerplate to kick-start your project. | Lets you easily start your online shop from our boilerplate solution. |
 
+
+<!--
 ## ACP (App Composition Platform) PBCs
 
 <div class="width-100">
@@ -55,3 +57,5 @@ Packaged Business Capabilities (PBCs) are capabilities that enclose a certain fu
 | [Usercentrics](/docs/pbc/all/usercentrics.html) | (CMP) Consent Management Platform |
 
 </div>
+
+-->

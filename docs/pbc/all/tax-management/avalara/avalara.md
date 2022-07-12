@@ -12,5 +12,5 @@ redirect_from:
 ## Related Developer guides
 
 * [Integrating Avalara](/docs/scos/dev/technology-partner-guides/{{page.version}}/taxes/avalara/integrate-avalara.html)
-* [Integrating Avalara Tax + Product Options](/docs/scos/dev/technology-partner-guides/{{page.version}}/taxes/avalara/integrate-avalara-tax-product-options.html)
+* [Integrating Avalara Tax + Product Options](/docs/scos/dev/technology-partner-guides/taxes/avalara/integrate-avalara-tax-product-options.html)
 * [Integrating Avalara Tax + Shipment](/docs/scos/dev/technology-partner-guides/{{page.version}}/taxes/avalara/integrate-avalara-tax-shipment.html)

@@ -1,4 +1,4 @@
-This document describes the `product_abstract.csv` file to configure [Abstract Product](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_abstract.csv` file to configure [Abstract Product](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run
 
@@ -32,16 +32,16 @@ The file should have the following parameters:
 | icecat_license |  | String | | Icecat product catalogue license code. |
 | new_from |  | Date | | To be considered a new product from this presented date. |
 | new_to |  | String | | To be considered a new product until this presented date. |
-| avalara_tax_code |  | String | | [Avalara tax code](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
+| avalara_tax_code |  | String | | [Avalara tax code](/docs/pbc/all/tax-management/tax-feature-overview.html#avalara-system-for-automated-tax-compliance) for automated tax calculation. |
 
 
 ## Import file dependencies
 
 This file has the following dependencies:
 
-* [category.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/file-details-category.csv.html)
-* [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
-* [tax.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-tax.csv.html)
+* [category.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/categories/file-details-category.csv.html)
+* [glossary.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
+* [tax.csv](/docs/pbc/all/tax-management/data-import-and-export/file-details-tax.csv.html)
 
 ## Additional information
 

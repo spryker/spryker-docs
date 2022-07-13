@@ -1,5 +1,5 @@
 ---
-title: Configuring services
+title: Configure services
 description: Learn how to configure services.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -15,6 +15,7 @@ redirect_from:
   - /docs/scos/dev/the-docker-sdk/201907.0/configuring-services.html
   - /docs/scos/dev/the-docker-sdk/202005.0/configuring-services.html
   - /docs/scos/dev/installation/spryker-in-docker/configuration/services.html
+  - /docs/scos/dev/the-docker-sdk/202204.0/configuring-services.html  
 related:
   - title: Deploy File Reference - 1.0
     link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-reference-1.0.html
@@ -40,29 +41,64 @@ related:
     link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
 ---
 
-This document describes configuration options of the services shipped with Spryker in Docker by default.
+This document describes how to configure services shipped by default.
 
-{% info_block infoBox %}
+## Prerequisites
 
-* Before you start configuring a service, make sure to install or update the Docker SDK to the latest version:
+Install or update the Docker SDK to the latest version:
 
 ```bash
 git clone https://github.com/spryker/docker-sdk.git ./docker
 ```
 
-* After enabling a service, make sure to apply the new configuration:
 
-    1. Bootstrap docker setup:
-    ```bash
-    docker/sdk boot {deploy.yml | deploy.dev.yml}
-    ```
+{% info_block warningBox "After updating a service" %}
 
-    2. Once the job finishes, build and start the instance:
-    ```bash
-    docker/sdk up
-    ```
+After you've updated a service's configuration, bootstrap it:
+
+```bash
+docker/sdk boot {DEPLOY_FILE_NAME}
+```
 
 {% endinfo_block %}
+
+## Service versions
+
+When configuring a service, you will need to define it's version. The Docker SDK supports the following service versions:
+
+| SERVICE | ENGINE  | VERSIONS | ARM SUPPORT | NOTE |
+|----|----|----|----|---|
+| datab | postgres | 9.6*         | &check;     |    |
+|       |          | 10           | &check;     |    |
+|       |          | 11           | &check;     |    |
+|       |          | 12           | &check;     |    |
+|       | mysql    | 5.7          |             |    |
+|       |          | mariadb-10.2 | &check;     |    |
+|       |          | mariadb-10.3 | &check;     |    |
+|       |          | mariadb-10.4 | &check;     |    |
+|       |          | mariadb-10.5 | &check;     |    |
+| broke | rabbitmq | 3.7          |             |    |
+|       |          | 3.8          | &check;     |    |
+|       |          | 3.9          | &check;     |    |
+| session         | redis    | 5.0          | &check;     |    |
+| key_value_store | redis    | 5.0          | &check;     |    |
+| search          | elastic  | 5.6*         | &check;     | https://www.elastic.co/support/eol |
+|                 |          | 6.8          | &check;     | https://www.elastic.co/support/eol |
+|                 |          | 7.6          | &check;     |    |
+|                 |          | 7.10         | &check;     |    |
+| scheduler       | jenkins  | 2.176        |             |    |
+|                 |          | 2.305        | &check;     |    |
+|                 |          | 2.324        | &check;     |    |
+| webdriver       | phantomjs| latest*      |             |    |
+|                 | chromedriver | latest   | &check;      |    |
+| mail_catcher    | mailhog  | 1.0          | &check;     |    |
+| swagger         | swagger-ui   | v3.24    | &check;      |    |
+| kibana          | kibana   | 5.6*         | &check;     | https://www.elastic.co/support/eol |
+|                 |          | 6.8          | &check;     | https://www.elastic.co/support/eol |
+|                 |          | 7.6          | &check;     |    |
+|                 |          | 7.10         | &check;     |    |
+| blackfire       | blackfire  | latest   | &check;      |      |
+
 
 ## Database services
 
@@ -82,7 +118,7 @@ MariaDB is provided as a service by default. You may only need to use this confi
 
 {% endinfo_block %}
 
-#### Configuring MariaDB
+#### Configure MariaDB
 
 Follow the steps below to switch the database service to MariaDB:
 
@@ -115,7 +151,7 @@ docker/sdk up --build --data
 
 See [MySQL documentation](https://dev.mysql.com/doc/) for more details.
 
-#### Configuring MySQL
+#### Configure MySQL
 
 Follow the steps below to switch database engine to MySQL:
 
@@ -147,7 +183,7 @@ docker/sdk up --build --data
 
 See [PostgreSQL documentation](https://www.postgresql.org/docs/) for more details.
 
-#### Configuring PostgreSQL
+#### Configure PostgreSQL
 
 Follow the steps below to switch database engine to PostgreSQL:
 
@@ -181,7 +217,7 @@ See:
 * [Configuring Elasticsearch](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html) to learn more about ElastciSearch configuration in Spryker.
 * [Elasticsearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html) for more information on ElasticSearch.
 
-### Configuring ElasticSearch
+### Configure ElasticSearch
 
 Adjust `deploy.*.yml` in the `services:` section to open the port used for accessing ElasticSearch:
 ```yaml
@@ -201,7 +237,7 @@ See [Kibana documentation](https://www.elastic.co/guide/en/kibana/current/index.
 
 In Docker SDK, Kibana UI is provided as a service by default.
 
-### Configuring Kibana UI
+### Configure Kibana UI
 
 Follow the steps to configure an endpoint for Kibana UI:
 
@@ -226,7 +262,7 @@ echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 
 [RabbitMQ](https://www.rabbitmq.com/) is a messaging broker - an intermediary for messaging. It gives your applications a common platform to send and receive messages, and your messages a safe place to live until received.
 
-### Configuring RabbitMQ
+### Configure RabbitMQ
 
 Adjust `deploy.*.yml` in the `services:` section to open the port used for accessing RabbitMQ:
 ```yaml
@@ -252,7 +288,7 @@ In Docker SDK, Swagger UI is provided as a service by default.
 
 Spryker provides the basic functionality to generate [OpenApi schema specification](https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md) for REST API endpoints. This document provides an overview of REST API endpoints. For each endpoint, you will find the URL, REST request parameters as well as the appropriate request and response data formats.
 
-### Configuring Swagger UI
+### Configure Swagger UI
 
 Follow the steps to configure an endpoint for Swagger UI:
 
@@ -279,7 +315,7 @@ echo "127.0.0.1 {custom_endpoint}" | sudo tee -a /etc/hosts
 
 See [Redis documentation](https://redis.io/documentation) for more details.
 
-### Configuring Redis
+### Configure Redis
 
 Adjust `deploy.*.yml` in the `services:` section to open the port used for accessing Redis:
 
@@ -296,7 +332,7 @@ services:
 ## Redis GUI
 [Redis Commander](http://joeferner.github.io/redis-commander/) is a web management tool that provides a graphical user interface to access Redis databases and perform basic operations like view keys as a tree, view CRUD keys or import/export databases.
 
-### Configuring Redis GUI
+### Configure Redis GUI
 
 Follow the steps to configure an endpoint for Redis Commander:
 
@@ -335,7 +371,7 @@ By default the following applies:
 
 {% endinfo_block %}
 
-### Configuring MailHog
+### Configure MailHog
 
 Adjust `deploy.*.yml` in the `services:` section to specify a custom endpoint:
 
@@ -352,7 +388,7 @@ services:
 
 [Blackfire](https://blackfire.io/) is a tool used to profile, test, debug, and optimize performance of PHP applications. It gathers data about consumed server resources like memory, CPU time, and I/O operations. The data and configuration can be checked via Blackfire web interface.
 
-### Configuring Blackfire
+### Configure Blackfire
 
 Follow the steps to enable Blackfire:
 
@@ -432,7 +468,7 @@ It is not obligatory to pass all the details as environment variables or define 
 
 The solution consists of a client and a server. The client is used to collect the data about applications in an environment and send it to the server for further analysis and presentation. The server is used to aggregate, analyse and present the data.
 
-### Configuring New Relic
+### Configure New Relic
 
 Follow the steps to enable New Relic:
 
@@ -506,7 +542,7 @@ Chromedriver is provided as a service by default. You may only need to use this 
 
 {% endinfo_block %}
 
-#### Configuring ChromeDriver
+#### Configure ChromeDriver
 
 To enable Chromedriver, adjust `deploy.*.yml` as follows:
 
@@ -520,7 +556,7 @@ services:
 
 [PhantomJS](https://phantomjs.org/) is a headless browser for automating web page interaction. It ships with a WebDriver based on [Selenium](https://www.selenium.dev/).
 
-#### Configuring PhantomJS
+#### Configure PhantomJS
 
 To enable PhantomJS, adjust `deploy.*.yml` as follows:
 
@@ -534,7 +570,7 @@ services:
 
 Dashboard is a tool that helps to monitor logs in real time. You can monitor logs in all or a particular container.
 
-### Configuring Dashboard
+### Configure Dashboard
 
 To configure Dashboard, adjust `deploy.*.yml` in the `services:` section:
 
@@ -550,7 +586,7 @@ services:
 
 [Tideways](https://tideways.com/) is an application profiler used for testing and debugging. Its main functions are profiling, monitoring, and exception tracking.
 
-### Configuring Tideways
+### Configure Tideways
 
 To configure Tideways, do the following:
 

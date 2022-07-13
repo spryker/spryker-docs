@@ -1,5 +1,5 @@
 ---
-title: Case Escalation
+title: Case escalation
 last_updated: Sep 6, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html#how-are-bug-tickets-prioritized
@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 ## How does Spryker prioritize cases?
-While we are trying to solve cases in a timely manner, we need to triage and prioritize cases on a daily basis. When you create cases, you can already indicate how urgent a case is for you by choosing the correct case type and Business Impact and provide adequate info to help us assess how important your case is in relation to other cases that are in our backlog. At the end of the day, how high or low a case will be prioritized by the Support team is a function of the following:
+While we are trying to solve cases on time, we need to triage and prioritize cases on a daily basis. When you create cases, you can already indicate how urgent a case is for you by choosing the correct case type and Business Impact and provide adequate info to help us assess how important your case is in relation to other cases that are in our backlog. At the end of the day, how high or low a case is prioritized by the support team is a function of the following:
 * The business impact specified by the partner/customer and the explanation provided for it
 * The subject matter
 * The overall state and context of the project
@@ -40,14 +40,14 @@ Here are some examples of cases with P1 business impact:
 * Performance of certain backend functions is lacklustre but working.
 * You experience regular problems deploying to Spryker PaaS on non-prod environments
 
-*P4—Low*: this is the correct impact to choose if the issue is only affecting processes and functions that are not or rarely used and if they are, they remain functional, albeit with degraded performance/quality. This impact can also be chosen if the problem is theoretical or only visual in nature. Examples:
+*P4—Low*: this is the correct impact to choose if the issue is only affecting processes and functions that are not or rarely used and if they are, they remain functional, albeit with degraded performance/quality. This impact can also be chosen if the problem is theoretical or only visual. Examples:
 * You discover a bug that might, under certain conditions that are unlikely to occur, influence the performance of your website.
 * You discover code that does not follow Spryker's usual code quality guidance.
 
 ## Priorities
 Priority is an internal attribute that we set for cases after having evaluated them. There are 4 Priorities that we assign to cases:
 * *Urgent*: urgent cases have the highest priority for us. Since there can only be a very limited number of urgent cases for us to be able to operate, we assign this priority only to the most severe cases (for example, Security Incidents or Infrastructure Outages).
-* *High*: high priority cases are delt with priority if there are no urgent cases in the backlog, or not all support representatives are currently busy working on urgent cases.
+* *High*: high priority cases are dealt with priority if there are no urgent cases in the backlog, or not all support representatives are currently busy working on urgent cases.
 * *Medium*: most of the problem cases we receive are assigned `Medium` priority. They are dealt with if there are no urgent and high cases in the backlog or if enough free resources are available.
 * *Low*: low priority cases are dealt with if there are no urgent and high priority cases in the Backlog or if a support representative thinks that the request can be dealt with very quickly or that they are working on a similar case already and it is beneficial to work on the related low priority case as well.
 

@@ -1463,7 +1463,7 @@ entries:
         - "202108.0"
         - "202204.0"
       - title: Glue API - Quotation Process
-        url: docs/scos/dev/feature-integration-guides/glue-api/glue-api-quotation-process-feature-integration.html
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-quotation-process-feature-integration.html
         include_versions:
         - "202204.0"
       - title: Glue API - REST Schema Validation
@@ -1677,7 +1677,7 @@ entries:
       - "202108.0"
       - "202204.0"
     - title: Checkout Workflow
-      url: docs/scos/dev/feature-integration-guides/checkout-workflow-integration-guide.html
+      url: /docs/scos/dev/feature-integration-guides/checkout-workflow-integration-guide.html
     - title: CMS
       url: /docs/scos/dev/feature-integration-guides/cms-feature-integration.html
       include_versions:
@@ -3429,14 +3429,14 @@ entries:
     - "202108.0"
     - "202204.0"
     nested:
-    - title: Exporting Data
+    - title: Exporting data
       url: /docs/scos/dev/data-export/data-export.html
       include_versions:
       - "202005.0"
       - "202009.0"
       - "202108.0"
       - "202204.0"
-    - title: Data Export Orders .csv Files Format
+    - title: Data export orders .csv files format
       url: /docs/scos/dev/data-export/data-export-orders-.csv-files-format.html
       include_versions:
       - "202005.0"
@@ -3448,9 +3448,9 @@ entries:
     - title: Client
       url: /docs/scos/dev/back-end-development/client/client.html
       nested:
-      - title: Implementing a Client
+      - title: Implementing a client
         url: /docs/scos/dev/back-end-development/client/implementing-a-client.html
-      - title: Using and Configuring Redis as a Key-value Storage
+      - title: Using and configuring Redis as a key-value storage
         url: /docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html
     - title: Yves
       url: /docs/scos/dev/back-end-development/yves/yves.html
@@ -3459,7 +3459,7 @@ entries:
         url: /docs/scos/dev/back-end-development/yves/modular-frontend.html
       - title: Controllers and actions
         url: /docs/scos/dev/back-end-development/yves/controllers-and-actions.html
-      - title: CLI Entry Point for Yves
+      - title: CLI entry point for Yves
         url: /docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
       - title: Adding translations for Yves
         url: /docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
@@ -3484,7 +3484,7 @@ entries:
             url: /docs/scos/dev/back-end-development/zed/business-layer/facade/using-a-facade.html
           - title: Design by Contract (DBC) - Facade
             url: /docs/scos/dev/back-end-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
-          - title: Implementing a Facade
+          - title: Implementing a facade
             url: /docs/scos/dev/back-end-development/zed/business-layer/facade/implementing-a-facade.html
         - title: Business models
           url: /docs/scos/dev/back-end-development/zed/business-layer/business-models.html
@@ -3493,14 +3493,14 @@ entries:
       - title: Communication layer
         url: /docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html
         nested:
-        - title: Adding indexes to foreign key columns- index generator
+        - title: Adding indexes to foreign key columns - index generator
           url: /docs/scos/dev/back-end-development/zed/communication-layer/adding-indexes-to-foreign-key-columns-index-generator.html
       - title: Persistence layer
         url: /docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
         nested:
         - title: Entity
           url: /docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
-        - title: Entity Manager
+        - title: Entity manager
           url: /docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
         - title: Repository
           url: /docs/scos/dev/back-end-development/zed/persistence-layer/repository.html
@@ -3510,12 +3510,12 @@ entries:
           url: /docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html
         - title: Query objects - creation and usage
           url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
-        - title: Query Container
+        - title: Query container
           url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
           nested:
-          - title: Using a Query Container
+          - title: Using a query container
             url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html
-          - title: Implementing a Query Container
+          - title: Implementing a query container
             url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html
       - title: Adding navigation in the Back Office
         url: /docs/scos/dev/back-end-development/zed/adding-navigation-in-the-back-office.html
@@ -3536,7 +3536,7 @@ entries:
     - title: Plugins
       url: /docs/scos/dev/back-end-development/plugins/plugins.html
       nested:
-      - title: Getting an overview of the used Plugins
+      - title: Getting an overview of the used plugins
         url: /docs/scos/dev/back-end-development/plugins/getting-an-overview-of-the-used-plugins.html
     - title: Session handlers
       url: /docs/scos/dev/back-end-development/session-handlers.html
@@ -3574,13 +3574,13 @@ entries:
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
         - title: Implementing event trigger publisher plugins
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html
-        - title: Debugging Listeners
+        - title: Debugging listeners
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/debugging-listeners.html
         - title: Synchronization behavior - enabling multiple mappings
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
       - title: DataPayload Conversion
         nested:
-        - title: Refund Process Management
+        - title: Refund process management
           url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/refund-process-management.html
         - title: State machine
           url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html
@@ -3591,13 +3591,13 @@ entries:
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-management-system-multi-thread.html
           - title: Common pitfalls in OMS design
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
-        - title: Multi-Language Setup
+        - title: Multi-language setup
           url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html
         - title: Checkout
           nested:
           - title: Checkout steps
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html
-          - title: Checkout Process Review and Implementation
+          - title: Checkout process review and implementation
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-process-review-and-implementation.html
         - title: Step engine
           nested:
@@ -3607,7 +3607,7 @@ entries:
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-use-case-scenario.html
           - title: Step engine workflow overview
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-workflow-overview.html
-        - title: Net & Gross prices management
+        - title: Net and Gross prices management
           url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html
         - title: Multiple currencies per store configuration
           url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html
@@ -3627,13 +3627,13 @@ entries:
             url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
           - title: Configuring the search query
             url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html
-          - title: Configuring Search for Multi-Currency
+          - title: Configuring Search for multi-currency
             url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
           - title: Expanding search data
             url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
         - title: Transferring data between Yves and Zed
           url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transferring-data-between-yves-and-zed.html
-        - title: Defining the Module Dependencies- Dependency Provider
+        - title: Defining the module dependencies- Dependency Provider
           url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/defining-the-module-dependencies-dependency-provider.html
       - title: Creating an Order Management System - Spryker Commerce OS
         url: /docs/scos/dev/back-end-development/data-manipulation/creating-an-order-management-system-spryker-commerce-os.html
@@ -3672,13 +3672,13 @@ entries:
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html
           - title: Implementing Prepayment
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment.html
-          - title: Implement Prepayment in Front End
+          - title: Implement Prepayment in Frontend
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-front-end.html
         - title: Invoice
           nested:
           - title: Testing the Invoice payment implementation
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/testing-the-invoice-payment-implementation.html
-          - title: Implementing Invoice Payment in Front End
+          - title: Implementing Invoice Payment in Frontend
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html
           - title: Integrating Invoice Payment into checkout
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrating-invoice-payment-into-checkout.html
@@ -3696,7 +3696,7 @@ entries:
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/file-system.html
           - title: Flysystem
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html
-          - title: Extending the Database Schema
+          - title: Extending the database schema
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html
           - title: Creating, using, and extending the transfer objects
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html
@@ -3707,9 +3707,9 @@ entries:
         nested:
         - title: Configuring an events queue
           url: /docs/scos/dev/back-end-development/data-manipulation/event/configuring-an-events-queue.html
-        - title: Listening to Events
+        - title: Listening to events
           url: /docs/scos/dev/back-end-development/data-manipulation/event/listening-to-events.html
-        - title: Adding Events
+        - title: Adding events
           url: /docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html
     - title: Extending Spryker
       nested:
@@ -3749,13 +3749,13 @@ entries:
       nested:
       - title: Injecting dependencies within factories- container globals
         url: /docs/scos/dev/back-end-development/factory/injecting-dependencies-within-factories-container-globals.html
-  - title: Front-end development
+  - title: Frontend development
     nested:
     - title: Zed
       nested:
-      - title: Oryx Builder Overview and Setup
+      - title: Oryx Builder overview and setup
         url: /docs/scos/dev/front-end-development/zed/oryx-builder-overview-and-setup.html
-      - title: Custom Twig Functions for Zed
+      - title: Custom twig functions for Zed
         url: /docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html
       - title: Overriding Webpack, JS, SCSS for ZED on project level
         url: /docs/scos/dev/front-end-development/zed/overriding-webpack-js-scss-for-zed-on-project-level.html
@@ -3778,27 +3778,27 @@ entries:
           url: /docs/scos/dev/front-end-development/yves/atomic-frontend/integrating-react-into-atomic-frontend.html
         - title: Managing the Components
           nested:
-          - title: Overriding a Component
-            url: /docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html
-          - title: Creating a Component
+          - title: Creating a component
             url: /docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html
-          - title: Extending a Component
+          - title: Overriding a component
+            url: /docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html
+          - title: Extending a component
             url: /docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/extending-a-component.html
-          - title: Using a Component
+          - title: Using a component
             url: /docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/using-a-component.html
         - title: Customization example - B2C Product Details page
           url: /docs/scos/dev/front-end-development/yves/atomic-frontend/customization-example-b2c-product-details-page.html
-        - title: Atomic Front End - general overview
+        - title: Atomic Frontend - general overview
           url: /docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html
-        - title: Customizing Spryker front end
+        - title: Customizing Spryker frontend
           url: /docs/scos/dev/front-end-development/yves/atomic-frontend/customizing-spryker-front-end.html
       - title: Frontend assets building and loading
         url: /docs/scos/dev/front-end-development/yves/frontend-assets-building-and-loading.html
-      - title: Adding and Using External Libraries in Yves
+      - title: Adding and using external libraries in Yves
         url: /docs/scos/dev/front-end-development/yves/adding-and-using-external-libraries-in-yves.html
-      - title: Front-end builder for Yves
+      - title: Frontend builder for Yves
         url: /docs/scos/dev/front-end-development/yves/front-end-builder-for-yves.html
-      - title: Custom Twig Functions for Yves
+      - title: Custom twig functions for Yves
         url: /docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html
       - title: Multi-theme
         url: /docs/scos/dev/front-end-development/yves/multi-theme.html
@@ -3971,19 +3971,19 @@ entries:
     include_versions:
     - "201811.0"
     nested:
-    - title: About the Legacy Demoshop Front-end Guides
+    - title: About the Legacy Demoshop frontend guides
       url: /docs/scos/dev/legacy-demoshop/about-the-legacy-demoshop-front-end-guides.html
       include_versions:
       - "201811.0"
-    - title: Build and Optimization
+    - title: Build and optimization
       url: /docs/scos/dev/legacy-demoshop/build-and-optimization.html
       include_versions:
       - "201811.0"
-    - title: Frontend Overview
+    - title: Frontend overview
       url: /docs/scos/dev/legacy-demoshop/frontend-overview.html
       include_versions:
       - "201811.0"
-    - title: Twig Templates
+    - title: Twig templates
       include_versions:
       - "201811.0"
       nested:
@@ -4066,7 +4066,7 @@ entries:
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-chromium-browser-for-tests.html
     - title: CMS block widgets
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-cms-block-widgets.html
-    - title: CSS lazy loading for the front end
+    - title: CSS lazy loading for the frontend
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-authorization-enabler.html
     - title: Custom location for static assets
       url: /docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html
@@ -4106,33 +4106,33 @@ entries:
       url: /docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html
     - title: Zed API
       nested:
-      - title: Project Implementation - Zed API
+      - title: Project implementation - Zed API
         url: /docs/scos/dev/sdk/zed-api/zed-api-project-implementation.html
-      - title: Zed API Configuration
+      - title: Zed API configuration
         url: /docs/scos/dev/sdk/zed-api/zed-api-configuration.html
-      - title: CRUD Functionality - Zed API
+      - title: CRUD functionality - Zed API
         url: /docs/scos/dev/sdk/zed-api/zed-api-crud-functionality.html
-      - title: Processor Stack - Zed API
+      - title: Processor stack - Zed API
         url: /docs/scos/dev/sdk/zed-api/zed-api-processor-stack.html
-      - title: Zed API Resources
+      - title: Zed API resources
         url: /docs/scos/dev/sdk/zed-api/zed-api-resources.html
       - title: Zed API (BETA)
         url: /docs/scos/dev/sdk/zed-api/zed-api-beta.html
-    - title: Cronjob Scheduling
+    - title: Cronjob scheduling
       url: /docs/scos/dev/sdk/cronjob-scheduling.html
     - title: Importer
       url: /docs/scos/dev/sdk/data-import.html
-    - title: Development Tools
+    - title: Development tools
       nested:
-      - title: Architecture Sniffer
+      - title: Architecture sniffer
         url: /docs/scos/dev/sdk/development-tools/architecture-sniffer.html
-      - title: Code Sniffer
+      - title: Code sniffer
         url: /docs/scos/dev/sdk/development-tools/code-sniffer.html
       - title: PHPStan
         url: /docs/scos/dev/sdk/development-tools/phpstan.html
       - title: Tooling config file
         url: /docs/scos/dev/sdk/development-tools/tooling-config-file.html
-      - title: Static Security Checker
+      - title: Static security checker
         url: /docs/scos/dev/sdk/development-tools/static-security-checker.html
       - title: TS linter
         url: /docs/scos/dev/sdk/development-tools/ts-linter.html
@@ -4140,15 +4140,15 @@ entries:
         url: /docs/scos/dev/sdk/development-tools/formatter.html
       - title: SCSS linter
         url: /docs/scos/dev/sdk/development-tools/scss-linter.html
-      - title: Performance audit tool- Benchmark
+      - title: Performance audit tool - Benchmark
         url: /docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
     - title: Twig and TwigExtension
       url: /docs/scos/dev/sdk/twig-and-twigextension.html
-    - title: Code Generator
+    - title: Code generator
       url: /docs/scos/dev/sdk/code-generator.html
       include_versions:
       - "201811.0"
-    - title: Data Export
+    - title: Data export
       url: /docs/scos/dev/sdk/data-export.html
   - title: Tutorials and HowTos
     nested:
@@ -4340,7 +4340,7 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method.html
       - title: "HowTo: Notify about unsupported browsers"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html
-      - title: "HowTo: Set up Stores with multiple locales"
+      - title: "HowTo: Set up stores with multiple locales"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-stores-with-multiple-locales.html
       - title: "HowTo: Handle graceful shutdown"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-graceful-shutdown.html
@@ -4372,7 +4372,7 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-allow-zed-css-js-on-a-project.html
   - title: Technology partner guides
     nested:
-    - title: Hosting Providers
+    - title: Hosting providers
       nested:
       - title: Integrating Heroku
         url: /docs/scos/dev/technology-partner-guides/hosting-providers/integrating-heroku.html
@@ -4446,7 +4446,7 @@ entries:
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/installing-econda.html
           - title: Integrating Econda
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda.html
-          - title: Integrating Econda front end
+          - title: Integrating Econda frontend
             url: /docs/scos/dev/technology-partner-guides/marketing-and-conversion/personalization-and-cross-selling/econda/integrating-econda-front-end.html
             include_versions:
             - "201811.0"
@@ -4511,7 +4511,7 @@ entries:
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/obtaining-an-amazon-order-reference-and-information-about-shipping-addresses.html
             - title: Sandbox Simulations
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay-sandbox-simulations.html
-            - title: State Machine
+            - title: State machine
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/amazon-pay-state-machine.html
             - title: Handling orders with Amazon Pay API
               url: /docs/scos/dev/technology-partner-guides/payment-partners/amazon-pay/handling-orders-with-amazon-pay-api.html
@@ -4904,28 +4904,28 @@ entries:
         url: /docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html
       - title: Architecture performance guidelines
         url: /docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
-      - title: Front-end performance guidelines
+      - title: Frontend performance guidelines
         url: /docs/scos/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
     - title: Testing guidelines
       url: /docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
       nested:
-      - title: Setting up Tests
+      - title: Setting up tests
         url: /docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
       - title: Publish and Synchronization testing
         url: /docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
-      - title: Test Helpers
+      - title: Test helpers
         url: /docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
       - title: Testify
         url: /docs/scos/dev/guidelines/testing-guidelines/testify.html
-      - title: Executing Tests
+      - title: Executing tests
         url: /docs/scos/dev/guidelines/testing-guidelines/executing-tests.html
       - title: Test framework
         url: /docs/scos/dev/guidelines/testing-guidelines/test-framework.html
-      - title: Code Coverage
+      - title: Code coverage
         url: /docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
-      - title: Data Builders
+      - title: Data builders
         url: /docs/scos/dev/guidelines/testing-guidelines/data-builders.html
-      - title: Testing Best Practices
+      - title: Testing best practices
         url: /docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
       - title: Available test helpers
         url: /docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
@@ -4933,7 +4933,7 @@ entries:
         url: /docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
     - title: Project development guidelines
       url: /docs/scos/dev/guidelines/project-development-guidelines.html
-    - title: Data Processing Guidelines
+    - title: Data processing guidelines
       url: /docs/scos/dev/guidelines/data-processing-guidelines.html
     - title: Module configuration convention
       url: /docs/scos/dev/guidelines/module-configuration-convention.html
@@ -4943,33 +4943,33 @@ entries:
     nested:
     - title: Basic SEO techniques to use in your project
       url: /docs/scos/dev/best-practices/basic-seo-techniques-to-use-in-your-project.html
-    - title: Coding Best Practices
+    - title: Coding best practices
       url: /docs/scos/dev/best-practices/coding-best-practices.html
-    - title: Search Best Practices
+    - title: Search best practices
       nested:
-      - title: Full-Text Search
+      - title: Full-text search
         url: /docs/scos/dev/best-practices/search-best-practices/full-text-search.html
-      - title: Other Best Practices
+      - title: Other best practices
         url: /docs/scos/dev/best-practices/search-best-practices/other-best-practices.html
-      - title: Data-Driven Ranking
+      - title: Data-driven ranking
         url: /docs/scos/dev/best-practices/search-best-practices/data-driven-ranking.html
-      - title: Generic Faceted Search
+      - title: Generic faceted search
         url: /docs/scos/dev/best-practices/search-best-practices/generic-faceted-search.html
       - title: Precise search by super attributes
         url: /docs/scos/dev/best-practices/search-best-practices/precise-search-by-super-attributes.html
-      - title: Simple Spelling Suggestions
+      - title: Simple spelling suggestions
         url: /docs/scos/dev/best-practices/search-best-practices/simple-spelling-suggestions.html
-      - title: Usage-Driven Schema & Document Structure
+      - title: Usage-driven schema and document structure
         url: /docs/scos/dev/best-practices/search-best-practices/usage-driven-schema-and-document-structure.html
-      - title: Multi-Term Auto Completion
+      - title: Multi-term auto completion
         url: /docs/scos/dev/best-practices/search-best-practices/multi-term-auto-completion.html
-      - title: Naive Product Centric Approach
+      - title: Naive product centric approach
         url: /docs/scos/dev/best-practices/search-best-practices/naive-product-centric-approach.html
-      - title: On-Site Search
+      - title: On-site search
         url: /docs/scos/dev/best-practices/search-best-practices/on-site-search.html
-      - title: Personalization- Dynamic Pricing
+      - title: Personalization - Dynamic pricing
         url: /docs/scos/dev/best-practices/search-best-practices/personalization-dynamic-pricing.html
-    - title: State Machine Cookbook
+    - title: State machine cookbook
       nested:
       - title: State machine cookbook - part 2 - building a state machine
         url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-2-building-a-state-machine.html
@@ -4981,7 +4981,7 @@ entries:
     - title: Troubleshooting general technical issues
       url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-general-technical-issues.html
       nested:
-      - title: Fail whale on the front end
+      - title: Fail whale on the frontend
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/fail-whale-on-the-front-end.html
       - title: A command fails with a `Killed` message
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/a-command-fails-with-a-killed-message.html
@@ -4993,15 +4993,15 @@ entries:
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/phpstan-memory-issues.html
       - title: ProcessTimedOutException after queue-task-start
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/processtimedoutexception-after-queue-task-start.html
-      - title: RuntimeException- Failed to execute regex- PREG_JIT_STACKLIMIT_ERROR
+      - title: RuntimeException - Failed to execute regex - PREG_JIT_STACKLIMIT_ERROR
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/runtimeexception-failed-to-execute-regex-preg-jit-stacklimit-error.html
-      - title: ERROR- remove spryker_logs- volume is in use
+      - title: ERROR - remove spryker_logs - volume is in use
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/error-remove-spryker-logs-volume-is-in-use.html
       - title: Class Silex/ControllerProviderInterface not found
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/class-silex-controllerproviderinterface-not-found.html
-      - title: Error response from daemon- OCI runtime create failed- .... \\\"no such file or directory\\\"\""- unknown
+      - title: Error response from daemon - OCI runtime create failed - .... \\\"no such file or directory\\\"\""- unknown
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/error-response-from-daemon-oci-runtime-create-failed-no-such-file-or-directory-unknown.html
-      - title: RabbitMQ- Zed.CRITICAL- PhpAmqpLib\Exception\AMQPChannelClosedException
+      - title: RabbitMQ - Zed.CRITICAL - PhpAmqpLib\Exception\AMQPChannelClosedException
           - Channel connection is closed
         url: /docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/rabbitmq-zed.critical-phpamqplib-exception-amqpchannelclosedexception-channel-connection-is-closed.html
       - title: Router generates absolute URL with localhost
@@ -5021,7 +5021,7 @@ entries:
         nested:
         - title: VM stuck at 'Configuring and enabling network interfaces'
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/vm-stuck-at-configuring-and-enabling-network-interfaces.html
-        - title: Failed to decode response- zlib_decode()- data error
+        - title: Failed to decode response - zlib_decode() - data error
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/failed-to-decode-response-zlib-decode-data-error.html
         - title: NFS export issues
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/nfs-export-issues.html
@@ -5035,16 +5035,16 @@ entries:
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/nfs-files-crash-my-console-commands.html
       - title: Windows issues
         nested:
-        - title: Windows- The host path of the shared folder is missing
+        - title: Windows - The host path of the shared folder is missing
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/windows-issues/windows-the-host-path-of-the-shared-folder-is-missing.html
       - title: MacOS issues
         nested:
-        - title: Mac OSX- Wrong curl version error
+        - title: Mac OSX - Wrong curl version error
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-wrong-curl-version-error.html
-        - title: Mac OSX- Installation fails or project folder can not be mounted
+        - title: Mac OSX - Installation fails or project folder can not be mounted
             due to SIP
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-installation-fails-or-project-folder-can-not-be-mounted-due-to-sip.html
-        - title: Mac OSX- iterm2 (locale error)
+        - title: Mac OSX - iterm2 (locale error)
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-iterm2-locale-error.html
       - title: Databases and services issues
         nested:
@@ -5080,7 +5080,7 @@ entries:
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/mutagen-synchronization-issue.html
         - title: 413 Request Entity Too Large
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/413-request-entity-too-large.html
-        - title: MacOS and Windows- file synchronization issues in Development mode
+        - title: MacOS and Windows - file synchronization issues in Development mode
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/macos-and-windows-file-synchronization-issues-in-development-mode.html
         - title: Nginx welcome page
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/nginx-welcome-page.html
@@ -5090,7 +5090,7 @@ entries:
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-running-applications-in-docker/port-is-already-occupied-on-host.html
       - title: Troubleshooting Docker installation
         nested:
-        - title: An error during front end setup
+        - title: An error during frontend setup
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/an-error-during-front-end-setup.html
         - title: Demo data was imported incorrectly
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/demo-data-was-imported-incorrectly.html

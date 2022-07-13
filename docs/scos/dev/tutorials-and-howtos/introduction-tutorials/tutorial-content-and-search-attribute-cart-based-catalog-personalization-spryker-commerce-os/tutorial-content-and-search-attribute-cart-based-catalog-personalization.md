@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Content and search - attribute-cart-based catalog personalization"
 description: The tutorial provides a step-by-step solution on how you can arrange your products in the cart by a color attribute
-last_updated: Jun 16, 2021
+last_updated: Jul 12, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/docs/t-content-search-attribute-cart-based-catalog-personalization
 originalArticleId: 7f335803-4f1b-4711-97b7-d32c7bcd57bb
@@ -39,11 +39,11 @@ This tutorial also explains how to work with plugins and extend the search plugi
 
 ## Challenge solving highlights
 
-In this task, you are using the cart only for the sake of training. In a real-life scenario, you can use the customer's order history to analyze what colors this customer likes and boost the catalog accordingly, or even use another attribute.
+In this task, you use the cart only for the sake of training. In a real-life scenario, you can use the customer's order history to analyze what colors this customer likes and boost the catalog accordingly, or even use another attribute.
 
 Full-text search engines like Elasticsearch provide a possibility to influence the sorting of products by tweaking the scoring function. The scoring function assigns weights to each result based on a formula, which is usually based on text similarity or synonyms. However, you can change it to boost specific products higher than others.
 
-In this challenge, you affect the scoring function based on products that are already in the cart.
+In this challenge, you try to affect the scoring function based on products that are already in the cart.
 
 To solve the challenge, use the instructions from the following sections.
 
@@ -53,13 +53,13 @@ As you are working with search and Elasticsearch, you need to work with the clie
 
 The client uses a stack of plugins that implement `\Spryker/Client/SearchExtension/Dependency/Plugin/QueryExpanderPluginInterface`. In this task, you extend this plugin stack by creating a new plugin for boosting and injecting it into the plugin stack. By creating a new plugin for boosting and injecting it into the plugin stack, you can alter the search query accordingly
 
-To create the plugin:
+To create the plugin, follow these steps:
 
 1. Inside the catalog client directory, create the following directories: `Plugin/Elasticsearch/QueryExpander`.
 
-2. Inside the `QueryExpander` directory, create a new query plugin and call it `AttributeCartBasedBoostingQueryExpanderPlugin`. This plugin implements  `QueryExpanderPluginInterface`.
+2. Inside the `QueryExpander` directory, create a new query plugin and call it `AttributeCartBasedBoostingQueryExpanderPlugin`. This plugin implements `QueryExpanderPluginInterface`.
 
-<details><summary markdown='span'>Pyz\Client\Catalog\Plugin\Elasticsearch\QueryExpander</summary>
+<details><summary markdown='span'>src/Pyz/Client/Catalog/Plugin/Elasticsearch/QueryExpander/AttributeCartBasedBoostingQueryExpanderPlugin.php</summary>
 
 ```php
 namespace Pyz\Client\Catalog\Plugin\Elasticsearch\QueryExpander;
@@ -197,9 +197,9 @@ class AttributeCartBasedBoostingQueryExpanderPlugin extends AbstractPlugin imple
 ```
 </details>
 
-1. `CartClient` does not exist as a dependency for `CatalogClient`. Add this dependency, so your query plugin works. For this, in `src/Pyz/Client/Catalog`, open `CatalogDependencyProvider` and add `CartClient` as a dependency:
+3. `CartClient` does not exist as a dependency for `CatalogClient`. Add this dependency, so that your query plugin can work. For this, in `src/Pyz/Client/Catalog`, open `CatalogDependencyProvider` and add `CartClient` as a dependency:
 
-<details><summary markdown='span'>Pyz\Client\Catalog</summary>
+<details><summary markdown='span'>src/Pyz/Client/Catalog/CatalogDependencyProvider.php</summary>
 
 ```php
 namespace Pyz\Client\Catalog;
@@ -247,9 +247,10 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 ```
 </details>
 
-1. Get the `CartClient` dependency using `CatalogFactory`. 
-2. Extend the `CatalogFactory` of the catalog client in `src/Pyz/Client/Catalog` and get `CartClient`.
+4. Get the `CartClient` dependency using `CatalogFactory`. 
+5. Extend the `CatalogFactory` of the catalog client in `src/Pyz/Client/Catalog` and get `CartClient`.
 
+**src/Pyz/Client/Catalog/CatalogFactory.php**
 ```php
 namespace Pyz\Client\Catalog;
 
@@ -268,71 +269,87 @@ class CatalogFactory extends SprykerCatalogFactory
 }
 ```
 
-1. To get the color of a product from the cart, read the product data from the key-value storage Redis. For this, `ProductStorageClient` must be used with the `getProductAbstractStorageData()` method.
+{% info_block infoBox "Info" %}
 
-Like `CartClient`, `ProductStorageClient` needs to be added to the `CatalogDependencyProvider`. Then the `CatalogFactory` can get it from the dependency provider:
+Depending on the system configuration, you might need to reset the class resolver cache:
+```bash
+cache:class-resolver:build`. This might take a moment
+```
 
-<details><summary markdown='span'>Pyz\Client\Catalog</summary>
+This command might take a moment.
+
+{% endinfo_block %}
+
+6. To get the color of a product from the cart, read the product data from the key-value storage Redis. For this, `ProductStorageClient` must be used with the `getProductAbstractStorageData()` method. Like `CartClient`, `ProductStorageClient` needs to be added to `CatalogDependencyProvider`. Then the `CatalogFactory` can get it from the dependency provider:
+
+<details><summary markdown='span'>src/Pyz/Client/Catalog/CatalogDependencyProvider.php</summary>
 
 ```php
 namespace Pyz\Client\Catalog;
 
+//...
+
 class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 {
-	...
-        public const CLIENT_PRODUCT_STORAGE = 'CLIENT_PRODUCT_STORAGE';
-
-	/**
-	 * @param \Spryker\Client\Kernel\Container $container
-	 *
-	 * @return \Spryker\Client\Kernel\Container
-	 */
-	public function provideServiceLayerDependencies(Container $container): Container
-	{
-		$container = parent::provideServiceLayerDependencies($container);
-
-		$container = $this->addCartClient($container);
-		$container = $this->addProductStorageClient($container);
-
-		return $container;
-	}
-
-	...
+    //...
+    const CLIENT_PRODUCT_STORAGE = 'product storage client';
+ 
     /**
      * @param \Spryker\Client\Kernel\Container $container
      *
      * @return \Spryker\Client\Kernel\Container
      */
-    protected function addProductStorageClient(Container $container): Container
+    public function provideServiceLayerDependencies(Container $container)
     {
-        $container->set(static::CLIENT_PRODUCT_STORAGE, function (Container $container): ProductStorageClientInterface {
-            return $container->getLocator()->productStorage()->client();
-        });
+        $container = parent::provideServiceLayerDependencies($container);
 
+        $container = $this->addCartClient($container);
+        $container = $this->addProductStorageClient($container);
+ 
         return $container;
     }
-... }
+
+    //...
+
+    /**
+     * @param \Spryker\Client\Kernel\Container $container
+     *
+     * @return \Spryker\Client\Kernel\Container
+     */
+    protected function addProductStorageClient(Container $container)
+    {
+        $container[static::CLIENT_PRODUCT_STORAGE] = function (Container $container) {
+            return $container->getLocator()->productStorage()->client();
+        };
+ 
+        return $container;
+    }
+ 
+    //...
 ```
+
 </details>
 
-<details><summary markdown='span'>Pyz\Client\Catalog</summary>
+<details><summary markdown='span'>src/Pyz/Client/Catalog/CatalogFactory.php</summary>
 
 ```php
 namespace Pyz\Client\Catalog;
 
 use Spryker\Client\Catalog\CatalogFactory as SprykerCatalogFactory;
-use Spryker\Client\ProductStorage\ProductStorageClientInterface;
 
-class CatalogFactory extends SprykerCatalogFactory {
- ...
-    /**
-     * @return \Spryker\Client\ProductStorage\ProductStorageClientInterface
-     */
-    public function getProductStorageClient(): ProductStorageClientInterface
-    {
-        return $this->getProvidedDependency(CatalogDependencyProvider::CLIENT_PRODUCT_STORAGE);
-    }
-}
+class CatalogFactory extends SprykerCatalogFactory
+{
+    //...
+
+     /**
+      * @throws \Spryker\Client\Kernel\Exception\Container\ContainerKeyNotFoundException
+      *
+      * @return \Spryker\Client\ProductStorage\ProductStorageClientInterface
+      */
+     public function getProductStorageClient()
+     {
+         return $this->getProvidedDependency(CatalogDependencyProvider::CLIENT_PRODUCT_STORAGE);
+     }
 ```
 </details>
 
@@ -347,24 +364,37 @@ To use your new plugin, inject it into the `CatalogDependencyProvider` in the `c
 1. Replace the `SortedCategoryQueryExpanderPlugin()` with your `AttributeCartBasedBoostingQueryExpanderPlugin()`.
 2. Make sure that you keep the same position of the plugin because the order of these plugins matters for the search results.
 
+**src/Pyz/Client/Catalog/CatalogDependencyProvider.php**
 ```php
-/**
- * @return \Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface[]
- */
-protected function createCatalogSearchQueryExpanderPlugins(): array
+namespace Pyz\Client\Catalog;
+
+use Pyz\Client\Catalog\Plugin\Elasticsearch\QueryExpander\AttributeCartBasedBoostingQueryExpanderPlugin;
+//...
+
+class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
 {
-	return [
-		new StoreQueryExpanderPlugin(),
-		new LocalizedQueryExpanderPlugin(),
-		new ProductPriceQueryExpanderPlugin(),
-		new FacetQueryExpanderPlugin(),
-		new SortedQueryExpanderPlugin(),
-		new AttributeCartBasedBoostingQueryExpanderPlugin(),
-		new PaginatedQueryExpanderPlugin(),
-		new SpellingSuggestionQueryExpanderPlugin(),
-		new IsActiveQueryExpanderPlugin(),
-		new IsActiveInDateRangeQueryExpanderPlugin(),
-	];
+    //...
+
+    /**
+     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface[]
+     */
+    protected function createCatalogSearchQueryExpanderPlugins()
+    {
+        return [
+            new StoreQueryExpanderPlugin(),
+            new LocalizedQueryExpanderPlugin(),
+            new ProductPriceQueryExpanderPlugin(),
+            new SortedQueryExpanderPlugin(),
+            new AttributeCartBasedBoostingQueryExpanderPlugin(),
+            new PaginatedQueryExpanderPlugin(),
+            new SpellingSuggestionQueryExpanderPlugin(),
+            new IsActiveQueryExpanderPlugin(),
+            new IsActiveInDateRangeQueryExpanderPlugin(),
+            new FacetQueryExpanderPlugin(),
+        ];
+    }
+
+    //...
 }
 ```
 

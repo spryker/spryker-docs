@@ -251,13 +251,24 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 
 Module names must be unique. Check the examples below to learn how to fix the error.
 
-### Example of code that causes an upgradability error: Module name is not unique
+### Example of source structure that causes an upgradability error: Module name is not unique
 
-
+```php
+src/Pyz/Zed/SomeModuleName
+src/Pyz/Yves/ExampleStateMachine
+```
 
 ### Example of related error in the Evaluator output: Module name is not unique
 
-
-
+```bash
+------------------ ----------------------------------------------------------------------------------------------------
+NotUnique:ModuleName Module ExampleStateMachine has to have project prefix, like PyzSomeModuleName.
+------------------ ----------------------------------------------------------------------------------------------------
+```
 
 ### Example of resolving the error: Module name is not unique
+
+```php
+src/Pyz/Zed/PyzSomeModuleName
+src/Pyz/Yves/PyzExampleStateMachine
+```

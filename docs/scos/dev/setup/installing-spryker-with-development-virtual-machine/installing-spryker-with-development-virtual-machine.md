@@ -6,6 +6,11 @@ redirect_from:
   - docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/cleaning-up-devvm.html
   - docs/scos/dev/setup/cleaning-up-devvm.html
 ---
+{% info_block warningBox "Warning" %}
+
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+
+{% endinfo_block %}
 
 This section is a complete stack for running Spryker in [development virtual machine (DevVM)](https://github.com/spryker/devvm).
 

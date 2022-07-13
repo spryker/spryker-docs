@@ -46,10 +46,10 @@ The modules combine to create [features](/docs/scos/user/features/{{site.version
 
 #### Benefits of the Spryker modular architecture:
 
-* You **take only the modules or features that you need** for your project, without overloading it with redundant code and investing effort in something you don’t need.
-* You can **grow a project easily** using any of the wide selection of modules.
-* You can **add, delete, and test new features** without worrying about breaking or pausing your production shop site.
-* We adhere to the atomic release approach. This means that each module is released independently and has its own version. It is developed and tested so as to ensure backward compatibility with other modules that you might not want to update. This means you can **take new and update existing modules or features right after they have been released**.
+* You *take only the modules or features that you need* for your project, without overloading it with redundant code and investing effort in something you don’t need.
+* You can *grow a project easily* using any of the wide selection of modules.
+* You can *add, delete, and test new features* without worrying about breaking or pausing your production shop site.
+* We adhere to the atomic release approach. This means that each module is released independently and has its own version. It is developed and tested so as to ensure backward compatibility with other modules that you might not want to update. This means you can *take new and update existing modules or features right after they have been released*.
 
 {% info_block infoBox %}
 
@@ -64,22 +64,22 @@ Separation is established by using layers.
 
 SCOS is split into four different layers:
 
-* The **presentation layer**  is a selling point that can be an online store, a mobile app, a voice skill, and anything else used to effectuate a commercial transaction.
-* The **business layer** includes your products, pricing, stock, and general information surrounding your commercial offering.
-* The **communication layer** connects the presentation layer to the business layer and transfers information between the business layer and the different presentation layers you may have.
-* The **persistence layer** covers all the data storage and processing, such as database queries and advanced calculations.
+* The *presentation layer* is a selling point that can be an online store, a mobile app, a voice skill, and anything else used to effectuate a commercial transaction.
+* The *business layer* includes your products, pricing, stock, and general information surrounding your commercial offering.
+* The *communication layer* connects the presentation layer to the business layer and transfers information between the business layer and the different presentation layers you may have.
+* The *persistence layer* covers all the data storage and processing, such as database queries and advanced calculations.
 
 <!---![Spryker layers](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/spryker_layers.png)-->
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/spryker_layers_s.png)
 
 
-#### Benefits of the layered architecture:
+#### Benefits of the layered architecture
 
-* We confine long and resource-intensive processes to the Business and Persistence layers, which ensures **high performance**. The presentation side is separated from the rest of the OS to make sure that only lean processes are executed there. Basically, anything that can wait or can impact the purchase process is offloaded to an area that does not impact the performance.
-* Separate front- and back-end means **developers can work in parallel**, allowing for faster implementation, testing, and better optimization—all for less internal cost.
-* Since your commercial offering is not dependent on a single channel, you can **focus your effort on growth and improvement**, rather than on solutions, extensions, and sometimes hacks to “make things work”.
-* The separation ensures that **essential information is not tied-up with presentation**. You can easily swap-out, extend, replace this information, as well as change the ways it is presented.
+* We confine long and resource-intensive processes to the Business and Persistence layers, which ensures *high performance*. The presentation side is separated from the rest of the OS to make sure that only lean processes are executed there. Basically, anything that can wait or can impact the purchase process is offloaded to an area that does not impact the performance.
+* Separate front- and back-end means *developers can work in parallel*, allowing for faster implementation, testing, and better optimization—all for less internal cost.
+* Since your commercial offering is not dependent on a single channel, you can *focus your effort on growth and improvement*, rather than on solutions, extensions, and sometimes hacks to “make things work”.
+* The separation ensures that *essential information is not tied-up with the presentation*. You can easily swap out, extend, replace this information, as well as change the ways it is presented.
 
 ## Spryker B2B/B2C Demo Shops
 Our [B2B](/docs/scos/user/intro-to-spryker/b2b-suite.html) and [B2C Demo Shops](/docs/scos/user/intro-to-spryker/b2c-suite.html) showcase Spryker functionality and help you choose the best possible starting point and set of features based on your business needs. The Demo Shops pose a clear starting point and upgrade path for everything you base your project on. We ship our B2B/B2C Demo Shops as a part of the product, covered by the same commercial license and the same support and LTS (long-term support) rules as individual Spryker Commerce OS modules.

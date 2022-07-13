@@ -17,5 +17,6 @@
     "Сore"
   ],
   "grammarly.config.documentDialect": "american",
-  "grammarly.config.suggestions.OxfordComma": true
+  "grammarly.config.suggestions.OxfordComma": true,
+  "commentTranslate.targetLanguage": "uk"
 }

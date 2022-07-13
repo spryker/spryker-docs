@@ -38,11 +38,11 @@ git clone https://github.com/spryker/docker-sdk.git docker
 
 - [Prerequisites](#prerequisites)
 - [Installing the B2C Demo Marketplace](#installing-the-b2c-demo-marketplace)
-  - [Setting up a development environment<a name="setting-up-a-development-environment"></a>](#setting-up-a-development-environment)
-  - [Setting up a production-like environment<a name="setting-up-a-production-like-environment"></a>](#setting-up-a-production-like-environment)
+  - [Setting up a development environment](#setting-up-a-development-environment)
+  - [Setting up a production-like environment](#setting-up-a-production-like-environment)
 - [Next steps](#next-steps)
 
-### Setting up a development environment<a name="setting-up-a-development-environment"></a>
+### Setting up a development environment
 
 To set up a development environment:
 
@@ -62,7 +62,7 @@ docker/sdk up
 
 That's it. You've set up your Spryker B2C Demo Marketplace and can access your applications.
 
-### Setting up a production-like environment<a name="setting-up-a-production-like-environment"></a>
+### Setting up a production-like environment
 
 To set up a production-like environment:
 

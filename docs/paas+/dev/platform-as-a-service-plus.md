@@ -23,7 +23,7 @@ A CI pipeline provides automated checks, a quality gate, that guides  developers
 
 ## CI pipelines
 
-By default, there is a main pipeline and sub-pipelines.
+Spryker CI is shipped with four pipelines per project.
 
 ![Spryker CI pipelines](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/platform-as-a-service-plus.md/pipelines.png)
 
@@ -38,7 +38,7 @@ Build, Quality Gate, and Deployment pipelines are not designed to run independen
 
 {% endinfo_block %}
 
-The sub-pipelines do the following:
+The last three pipelines do the following:
 
 1. Build:
     * Builds Docker images.

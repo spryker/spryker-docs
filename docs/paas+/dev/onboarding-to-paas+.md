@@ -54,7 +54,7 @@ Onboarding to Spryker CI consists of the following steps.
 
 ### 2.1 Get initial access
 
-To get started, provide the email of your SCCOS admin to your CSM. The admin user will be a super user. They will be able to change repository and invite new users to their workspace.
+To get started, provide the email of your SCCOS admin. The admin user will be a super user. They will be able to change repository and invite new users to their workspace.
 
 Once we receive the admin's email address, we will provision and send you an email invitation to your Spryker CI workspace.
 
@@ -87,7 +87,7 @@ Connect Git repositories to your projects in Spryker CI.
 
 ![Switch repository](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-paas%2B.md/switch-a-repo.mp4)
 
-<!-- For detailed instructions, see [Connect Git repositories]() --> 
+<!-- For detailed instructions, see [Connect Git repositories]() -->
 
 ### 2.5. Push and have fun!
 

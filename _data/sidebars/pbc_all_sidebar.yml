@@ -58,6 +58,12 @@ entries:
                 url: /docs/pbc/all/tax-management/avalara/integrate-avalara-tax-product-options.html
               - title: Integrate Avalara Tax + Shipment
                 url: /docs/pbc/all/tax-management/avalara/integrate-avalara-tax-shipment.html
+          - title: Data import and export
+            nested:
+              - title: "File details: product_abstract.csv"
+                url: /docs/pbc/all/tax-management/data-import-and-export/file-details-product-abstract.csv.html
+              - title: "File details: tax.csv"
+                url: /docs/pbc/all/tax-management/data-import-and-export/file-details-tax.csv.html                
           - title: Tutorials and HowTos
             nested:
               - title: "HowTo: Get ready for VAT (tax) changes in Germany"

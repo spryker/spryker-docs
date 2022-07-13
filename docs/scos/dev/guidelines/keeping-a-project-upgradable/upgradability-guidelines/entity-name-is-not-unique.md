@@ -19,6 +19,7 @@ The names of the following entities must be unique on the project level:
 * Database columns
 * Methods
 * Constants
+* Modules
 
 
 ## Transfer name is not unique
@@ -245,3 +246,18 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
     public const PYZ_CUSTOM_CONST = 'PYZ_CUSTOM_CONST';
 }
 ```
+
+## Constant name is not unique
+
+Module names must be unique. Check the examples below to learn how to fix the error.
+
+### Example of code that causes an upgradability error: Module name is not unique
+
+
+
+### Example of related error in the Evaluator output: Module name is not unique
+
+
+
+
+### Example of resolving the error: Module name is not unique

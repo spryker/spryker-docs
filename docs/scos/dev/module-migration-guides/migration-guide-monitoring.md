@@ -35,4 +35,4 @@ related:
     link: docs/scos/user/technology-partners/page.version/operational-tools-monitoring-legal-etc/new-relic.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-monitoring-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-monitoring-module.md -->

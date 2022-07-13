@@ -37,4 +37,4 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-product.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-productbundle-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productbundle-module.md -->

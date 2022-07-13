@@ -32,4 +32,4 @@ redirect_from:
   - /module_migration_guides/mg-price-product-storage.htm
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-migration-guide-priceproductstorage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-migration-guide-priceproductstorage-module.md -->

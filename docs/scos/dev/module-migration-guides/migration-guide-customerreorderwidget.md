@@ -32,4 +32,4 @@ redirect_from:
   - /module_migration_guides/mg-customer-reorder-widget.htm
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-customerreorderwidget-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-customerreorderwidget-module.md -->

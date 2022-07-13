@@ -18,3 +18,4 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-categorypagesearch.html
   - /upcoming-release/docs/migration-guide-categorypagesearch
 ---
+{% include pbc/all/upgrade-modules/upgrade-the-categorypagesearch-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-categorypagesearch-module.md -->

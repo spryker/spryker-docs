@@ -15,3 +15,4 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-auth-module-to-securitygui-module.html
 
 ---
+{% include pbc/all/upgrade-modules/replace-the-auth-with-the-securitygui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/replace-the-auth-with-the-securitygui-module.md -->

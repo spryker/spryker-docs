@@ -33,3 +33,4 @@ related:
   - title: Migration guide - CMS Block
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
 ---
+{% include pbc/all/upgrade-modules/upgrade-the-cmscollector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cmscollector-module.md -->

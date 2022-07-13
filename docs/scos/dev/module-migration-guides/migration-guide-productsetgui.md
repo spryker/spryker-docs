@@ -33,4 +33,4 @@ related:
   - title: Migration guide - Price
     link: docs/scos/dev/module-migration-guides/migration-guide-price.html
 ---
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-productsetgui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productsetgui-module.md -->

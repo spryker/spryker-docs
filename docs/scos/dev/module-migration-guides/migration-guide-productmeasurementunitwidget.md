@@ -31,4 +31,4 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productmeasurementunitwidget.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-productmeasurementunitwidget-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productmeasurementunitwidget-module.md -->

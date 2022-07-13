@@ -29,4 +29,4 @@ redirect_from:
   - /module_migration_guides/mg-product-packaging-unit-storage.htm
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-productpackagingunitstorage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productpackagingunitstorage-module.md -->

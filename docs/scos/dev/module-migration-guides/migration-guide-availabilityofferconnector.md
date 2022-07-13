@@ -31,3 +31,5 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-availabilityofferconnector.html
   - /module_migration_guides/mg-availability-offer-connector.htm
 ---
+
+{% include pbc/all/upgrade-modules/upgrade-the-availabilityofferconnector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-availabilityofferconnector-module.md -->

@@ -10,4 +10,4 @@ redirect_from:
   - /docs/migration-guide-productsetpagesearch
   - /docs/en/migration-guide-productsetpagesearch
 ---
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-productsetpagesearch-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productsetpagesearch-module.md -->

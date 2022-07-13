@@ -33,3 +33,4 @@ related:
   - title: Migration guide - Category
     link: docs/scos/dev/module-migration-guides/migration-guide-category.html
 ---
+{% include pbc/all/upgrade-modules/upgrade-the-catalog-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-catalog-module.md -->

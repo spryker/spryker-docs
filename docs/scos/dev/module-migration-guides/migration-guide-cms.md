@@ -44,3 +44,4 @@ related:
   - title: Migration guide - CMS Collector
     link: docs/scos/dev/module-migration-guides/migration-guide-cmscollector.html
 ---
+{% include pbc/all/upgrade-modules/upgrade-the-cms-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cms-module.md -->

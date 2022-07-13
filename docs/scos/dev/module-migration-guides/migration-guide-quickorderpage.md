@@ -27,4 +27,4 @@ redirect_from:
   - /module_migration_guides/mg-quick-order-page.htm
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-quickorderpage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-quickorderpage-module.md -->

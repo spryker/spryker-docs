@@ -29,4 +29,4 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-payone-suite.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-payone-suite.html
 ---
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-payone-suite-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-payone-suite-module.md -->

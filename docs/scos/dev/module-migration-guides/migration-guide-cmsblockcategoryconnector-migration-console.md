@@ -34,3 +34,4 @@ related:
   - title: Migration guide - CmsBlockCategoryConnector
     link: docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector.html
 ---
+{% include pbc/all/upgrade-modules/upgrade-the-cmsblockcategoryconnector-migration-console-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cmsblockcategoryconnector-migration-console-module.md -->

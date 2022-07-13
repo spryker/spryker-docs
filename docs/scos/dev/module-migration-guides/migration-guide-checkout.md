@@ -34,3 +34,4 @@ related:
   - title: Checkout
     link: docs/scos/user/features/page.version/checkout-feature-overview/checkout-feature-overview.html
 ---
+{% include pbc/all/upgrade-modules/upgrade-the-checkout-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-checkout-module.md -->

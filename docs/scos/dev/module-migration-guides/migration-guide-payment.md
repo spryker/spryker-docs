@@ -30,8 +30,8 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-payment.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-payment.html
 related:
-  - title: Migration guide - CheckoutRestApi
-    link: docs/scos/dev/module-migration-guides/glue-api/migration-guide-checkoutrestapi.html
+  - title: Migration guide - CheckoutRestpayment
+    link: docs/scos/dev/module-migration-guides/glue-payment/migration-guide-checkoutrestpayment.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-payment-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-payment-module.md -->

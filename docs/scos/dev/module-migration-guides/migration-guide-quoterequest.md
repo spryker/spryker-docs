@@ -23,4 +23,4 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-quoterequest.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-quoterequest.html
 ---
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-quoterequest-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-quoterequest-module.md -->

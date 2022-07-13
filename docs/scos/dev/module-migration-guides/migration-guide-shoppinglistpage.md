@@ -34,4 +34,4 @@ related:
     link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-lists-feature-overview.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-shoppinglistpage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-shoppinglistpage-module.md -->

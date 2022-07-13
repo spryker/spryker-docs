@@ -6,4 +6,4 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202200.0/migration-guide-productconfiguration.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-productconfiguration-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productconfiguration-module.md -->

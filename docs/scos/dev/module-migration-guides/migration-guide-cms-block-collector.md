@@ -37,3 +37,4 @@ related:
   - title: CMS Block
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
 ---
+{% include pbc/all/upgrade-modules/upgrade-the-cms-block-collector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cms-block-collector-module.md -->

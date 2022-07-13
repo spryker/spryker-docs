@@ -31,4 +31,4 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/2021080.0/migration-guide-navigationgui.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-navigationgui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-navigationgui-module.md -->

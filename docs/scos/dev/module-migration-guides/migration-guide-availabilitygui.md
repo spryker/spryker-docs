@@ -30,3 +30,5 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-availabilitygui.html
   - /module_migration_guides/mg-availability-gui.htm
 ---
+
+{% include pbc/all/upgrade-modules/upgrade-the-availabilitygui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-availabilitygui-module.md -->

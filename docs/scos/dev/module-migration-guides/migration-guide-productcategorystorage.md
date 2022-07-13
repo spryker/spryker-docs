@@ -14,4 +14,4 @@ redirect_from:
   - /upcoming-release/docs/migration-guide-productcategorystorage
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-productcategorystorage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productcategorystorage-module.md -->

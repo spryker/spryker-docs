@@ -35,3 +35,4 @@ related:
   - title: Migration guide - CMS Block Collector
     link: docs/scos/dev/module-migration-guides/migration-guide-cms-block-collector.html
 ---
+{% include pbc/all/upgrade-modules/upgrade-the-cmsblockgui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cmsblockgui-module.md -->

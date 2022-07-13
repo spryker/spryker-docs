@@ -120,7 +120,6 @@ Once your project has been installed, you should adjust the readme.md file in th
 * Remove any unused information, such as Vagrant installation instructions if a DevVM was not used.
 * Consider moving the production information further done in the file so that new developers can more readily understand how to use the project.
 
-
 ## 2. Managing Modules
 
 Once the installation of your new project has been completed, you may start to manage the modules you wish to use. A module within Spryker is a single-function unit that has well-defined dependencies and can be updated independently.
@@ -153,7 +152,6 @@ You can easily keep track of new module versions using the [composer-versions-ch
 *  To add a new module to your project: `composer require "spryker/module-name"`.
 
 See [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html) to learn about the module versioning approach in Spryker.
-
 
 ## 3. Configuring the Environment
 

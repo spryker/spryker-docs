@@ -4,17 +4,15 @@ layout: default
 
 <div class="page-content page-content--search">
     <div class="container" id="tg-sb-content">
-        <!-- todo: remove default versions -->
-        <div id="versions-refinement-list"></div>
         <!-- search panel  -->
         <div class="search-panel">
             <i class="search-panel__icon icon-search"></i>
             <div id="searchbox" class="ais-SearchBox"></div>
         </div>
 
-        <!-- custom tags -->
+        <!-- filter -->
         <div class="filter">
-            <a href="#" class="filter-popup-opener js-filter-popup-toggle"><i class="icon-filter"></i> Filter</a>
+            <a href="#" class="filter-popup-opener js-filter-popup-toggle"><i class="icon-filter filter-popup-opener__icon"></i> Filter</a>
 
             <div class="filter-popup">
                 <div class="filter-popup__inner">
@@ -26,17 +24,46 @@ layout: default
                         </a>
                     </div>
                     <div class="filter-popup__content">
-                        <div id="tags-refinement-list-custom">
-                            <div class="search-nav dropdown">
-                                <a href="/" class="search-nav__opener nav-link dropdown-toggle" id="searchTags" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <span class="search-nav__opener-text">
-                                        tags
-                                    </span>
-                                    <i class="search-nav__opener-icon icon-arrow-down"></i>
-                                </a>
-                                <div class="search-nav__drop search-nav__drop--mob-static dropdown-menu" aria-labelledby="searchTags">
-                                    <ul  class="search-nav__drop-scroll js-search-nav__drop-list">
-                                    </ul>
+                        <!-- custom tags -->
+                        <!-- TODO: add styles -->
+                        <button class="collapse-opener" type="button" data-toggle="collapse" data-target="#mobileCollapse" aria-expanded="false" aria-controls="mobileCollapse">
+                            tags
+                        </button>
+                        <!-- TODO: add styles. add buttons Aply, Back for mobile view -->
+                        <div class="collapse" id="mobileCollapse">
+                            <div id="tags-refinement-list-custom" class="filter-popup__content-item">
+                                <div class="search-nav dropdown">
+                                    <!-- TODO: hide opener on mobile view -->
+                                    <div class="search-nav__opener nav-link dropdown-toggle" id="searchTags" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="search-nav__opener-text">
+                                            tags
+                                        </span>
+                                        <i class="search-nav__opener-icon icon-arrow-down"></i>
+                                    </div>
+                                    <div class="search-nav__drop search-nav__drop--mob-static dropdown-menu" aria-labelledby="searchTags">
+                                        <ul  class="search-nav__drop-scroll js-search-nav__drop-list">
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- custom versions -->
+                        <button class="collapse-opener" type="button" data-toggle="collapse" data-target="#mobileCollapse2" aria-expanded="false" aria-controls="mobileCollapse2">
+                            versions
+                        </button>
+                        <div class="collapse" id="mobileCollapse2">
+                            <div id="versions-refinement-list-custom" class="filter-popup__content-item">
+                                <div class="search-nav dropdown">
+                                    <div class="search-nav__opener nav-link dropdown-toggle" id="versionsTags" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <span class="search-nav__opener-text">
+                                            versions
+                                        </span>
+                                        <i class="search-nav__opener-icon icon-arrow-down"></i>
+                                    </div>
+                                    <div class="search-nav__drop search-nav__drop--mob-static dropdown-menu" aria-labelledby="versionsTags">
+                                        <ul  class="search-nav__drop-scroll js-search-nav__drop-list--vertions">
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>

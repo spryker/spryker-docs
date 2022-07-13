@@ -1,13 +1,5 @@
 .filter {
     &-popup {
-        &-opener {
-            margin: 0 0 15px;
-    
-            @include media(">=tablet") {
-                display: none !important;
-            }
-        }
-
         @include media("<tablet") {
             display: none;
             background: $white;
@@ -21,6 +13,34 @@
 
         @include media(">=tablet") {
             display: block !important;
+        }
+
+        &-opener {
+            margin: 0 0 15px;
+            border: 2px solid $silver;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            line-height: 16px;
+            min-height: 40px;
+            padding: 0 20px;
+            color: $grey;
+            background: $white;
+            text-decoration: none;
+    
+            @include media(">=tablet") {
+                display: none !important;
+            }
+
+            &:focus {
+                text-decoration: none;
+            }
+
+            &__icon {
+                font-size: 12px;
+                margin: 0 8px 0 0;
+            }
         }
 
         &__inner {
@@ -45,10 +65,21 @@
         }
 
         &__content {
+            display: flex;
+
             @include media("<tablet") {
                 flex: 1 1 auto;
                 overflow: auto;
                 width: 100%;
+                display: block;
+            }
+
+            &-item {
+                margin: 0 20px 0 0;
+
+                @include media("<tablet") {
+                    margin: 0;
+                }
             }
         }
 
@@ -66,12 +97,12 @@
             display: none;
             width: 40px;
             height: 40px;
-            position: relative;
             z-index: 2001;
             margin: 0;
             border: 8px solid transparent;
             border-width: 7px;
             position: absolute;
+            z-index: 3;
             top: 12px;
             right: 16px;
     

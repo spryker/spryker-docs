@@ -1,6 +1,6 @@
 .search-nav {
     margin: 0 0 15px;
-    display: inline-block;
+    display: inline-flex;
     vertical-align: top;
     position: relative;
     z-index: 3;
@@ -8,6 +8,8 @@
     @include media("<tablet") {
         margin: 0;
         border-bottom: 1px solid $grey-3;
+        display: block;
+        position: static;
     }
 
     &.show {
@@ -33,6 +35,7 @@
         position: relative;
         z-index: 2;
         transition: background .2s linear, border-radius .2s linear, border-color .2s linear;
+        cursor: pointer;
 
         @include media("<desktop") {
             width: 270px;
@@ -40,16 +43,19 @@
 
         @include media("<tablet") {
             background: none;
-            border: 0;
+            border: none;
+            border-bottom: 1px solid $grey-3;
             pointer-events: none;
             color: $black;
-            font-size: 20px;
-            font-weight: 800;
-            line-height: 1.4;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22px;
             margin: 0;
-            padding: 16px;
+            padding: 14px 16px;
             text-transform: none;
             width: auto;
+            text-transform: capitalize;
+            position: static;
         }
 
         &:hover,
@@ -95,10 +101,12 @@
             font-size: 10px;
 
             @include media("<tablet") {
-                display: none;
+                transform: rotate(-90deg);
             }
         }
     }
+    // border-top: 64px solid $grey-lightest;
+    // background: $white;
 
     &__drop {
         margin: 0;

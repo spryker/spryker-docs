@@ -74,14 +74,18 @@ const AlgoliaSearch = {
                 })
             ]);
 
-            // versions refinement list
-            searchIndex.addWidget(
-                instantsearch.widgets.refinementList({
-                    container: '#versions-refinement-list',
-                    attribute: 'versions',
-                })
+            // Create the custom version tag widget
+            const customVersionsRefinementList = instantsearch.connectors.connectRefinementList(
+                renderVersionsRefinementList
             );
 
+            // Instantiate the custom version tag widget
+            searchIndex.addWidgets([
+                customVersionsRefinementList({
+                    container: document.querySelector('#versions-refinement-list-custom'),
+                    attribute: 'versions',
+                })
+            ]);
 
             // stats
             searchIndex.addWidget(
@@ -302,21 +306,22 @@ const renderRefinementList = (renderOptions, isFirstRender) => {
     widgetParams,
   } = renderOptions;
 
-  if (isFirstRender) {
-  //   input.addEventListener('input', event => {
-  //     searchForItems(event.currentTarget.value);
-  //   });
-  }
+  let filterList = document.querySelector('.filter__list');
 
-  // const input = widgetParams.container.querySelector('input');
+  filterList.innerHTML = '';
 
-  // if (!isFromSearch && input.value) {
-  //   input.value = '';
-  // }
+  const itemsSorted = items.sort((a, b) => {
+    if ( a['value'] > b['value'] ){
+      return -1;
+    }
+    if ( a['value'] < b['value'] ){
+      return 1;
+    }
+    return 0;
+  });
 
-  // ${item.count}
-
-  widgetParams.container.querySelector('.js-search-nav__drop-list').innerHTML = items
+  // tags inside drop down
+  widgetParams.container.querySelector('.js-search-nav__drop-list').innerHTML = itemsSorted
     .map(
       item => `
         <li class="search-nav__drop-item">
@@ -334,24 +339,98 @@ const renderRefinementList = (renderOptions, isFirstRender) => {
     )
     .join('');
 
-  document.querySelector('.filter__list').innerHTML = items
+  // selected tags list
+  let tags = itemsSorted.map(
+    item => `
+      <a
+        href="${createURL(item.value)}"
+        data-value="${item.value}"
+        class="filter__list-item js-tag ${item.isRefined ? '' : 'hidden'}"
+      >
+        <div class="filter__list-item-text">
+          ${item.label}
+        </div>
+        <i class="filter__list-item-icon icon-cross"></i>
+      </a>
+    `
+  )
+  .join('');
+
+  filterList.insertAdjacentHTML('beforeend', tags);
+
+  [...widgetParams.container.querySelectorAll('a'), ...filterList.querySelectorAll('.js-tag')].forEach(element => {
+    element.addEventListener('click', event => {
+      event.preventDefault();
+      refine(event.currentTarget.dataset.value);
+    });
+  });
+};
+
+// 2. Create a render function for vertions
+const renderVersionsRefinementList = (renderOptions, isFirstRender) => {
+  const {
+    items,
+    isFromSearch,
+    refine,
+    createURL,
+    isShowingMore,
+    canToggleShowMore,
+    searchForItems,
+    toggleShowMore,
+    widgetParams,
+  } = renderOptions;
+
+  let filterList = document.querySelector('.filter__list');
+
+  const itemsSorted = items.sort((a, b) => {
+    if ( a['value'] > b['value'] ){
+      return -1;
+    }
+    if ( a['value'] < b['value'] ){
+      return 1;
+    }
+    return 0;
+  });
+
+  // tags inside drop down
+  widgetParams.container.querySelector('.js-search-nav__drop-list--vertions').innerHTML = itemsSorted
     .map(
       item => `
-        <a
-          href="${createURL(item.value)}"
-          data-value="${item.value}"
-          class="filter__list-item ${item.isRefined ? '' : 'hidden'}"
-        >
-          <div class="filter__list-item-text">
-            ${item.label}
-          </div>
-          <i class="filter__list-item-icon icon-cross"></i>
-        </a>
+        <li class="search-nav__drop-item">
+          <a
+            href="${createURL(item.value)}"
+            data-value="${item.value}"
+            style="font-weight: ${item.isRefined ? 'bold' : ''}"
+            class="${item.isRefined ? 'search-nav__drop-link--active' : ''} search-nav__drop-link"
+          >
+          <span class="search-nav__drop-link-text">${item.label}</span>
+            <i class="icon-check search-nav__drop-link-icon"></i>
+          </a>
+        </li>
       `
     )
     .join('');
 
-  [...widgetParams.container.querySelectorAll('a')].forEach(element => {
+  // selected tags list
+  let tags = itemsSorted.map(
+    item => `
+      <a
+        href="${createURL(item.value)}"
+        data-value="${item.value}"
+        class="filter__list-item js-tag--version ${item.isRefined ? '' : 'hidden'}"
+      >
+        <div class="filter__list-item-text">
+          ${item.label}
+        </div>
+        <i class="filter__list-item-icon icon-cross"></i>
+      </a>
+    `
+  )
+  .join('');
+
+  filterList.insertAdjacentHTML('beforeend', tags);
+
+  [...widgetParams.container.querySelectorAll('a'), ...filterList.querySelectorAll('.js-tag--version')].forEach(element => {
     element.addEventListener('click', event => {
       event.preventDefault();
       refine(event.currentTarget.dataset.value);

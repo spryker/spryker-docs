@@ -22,6 +22,7 @@ related:
 This endpoint allows managing discount vouchers in carts of registered users.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [GLUE: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html).
 
 ## Apply a discount voucher to a cart of a registered user
@@ -34,7 +35,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | Unique identifier of the cart to apply the discount voucher to. To get it, [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts).  |
+| ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | Unique identifier of the cart to apply the discount voucher to. To get it, [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts).  |
 
 ### Request
 
@@ -47,7 +48,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
 | Include | Adds resource relationships to the request.	 | vouchers |
 
 <details>
-<summary markdown='span'>Request sample</summary>
+<summary markdown='span'>Request sample: apply a discount voucher to a cart of a registered user</summary>
 
 `POST https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers`
 
@@ -61,11 +62,10 @@ To apply a discount voucher to a cart of a registered user, send the request:
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Request sample with discount voucher information</summary>
+<summary markdown='span'>Request sample: apply a discount voucher to a cart of a registered user with details on discount voucher information</summary>
 
 `POST https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers?include=vouchers`
 
@@ -79,7 +79,6 @@ To apply a discount voucher to a cart of a registered user, send the request:
     }
 }
 ```
-
 </details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
@@ -89,7 +88,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: apply a discount voucher to a cart of a registered user</summary>
 
 ```json
 {
@@ -114,7 +113,8 @@ To apply a discount voucher to a cart of a registered user, send the request:
                     "amount": 7277,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/c9310692-2ab0-5edc-bb41-fee6aa828d55"
@@ -122,11 +122,10 @@ To apply a discount voucher to a cart of a registered user, send the request:
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with discount voucher information</summary>
+<summary markdown='span'>Response sample: apply a discount voucher to a cart of a registered user with details on discount voucher information</summary>
 
 ```json
 {
@@ -151,7 +150,8 @@ To apply a discount voucher to a cart of a registered user, send the request:
                     "amount": 33253,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {...},
         "relationships": {
@@ -180,13 +180,12 @@ To apply a discount voucher to a cart of a registered user, send the request:
                 "discountPromotionQuantity": null
             },
             "links": {
-                "self": "http://glue.mysprykershop.com/vouchers/mydiscount-qa1ma?include=vouchers"
+                "self": "https://glue.mysprykershop.com/vouchers/mydiscount-qa1ma?include=vouchers"
             }
         }
     ]
 }
 ```
-
 </details>
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -210,8 +209,8 @@ To remove a discount voucher, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | Unique identifier of the registered user's cart to remove the discount voucher from. To get it, [Retrieve a registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts).  |
-| ***{% raw %}{{{% endraw %}voucher_id{% raw %}}}{% endraw %}*** | Unique identifier of the voucher to remove. To get it, [Retrieve a registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-carts) with the `vouchers` resource included.  |
+| ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | Unique identifier of the registered user's cart to remove the discount voucher from. To get it, [Retrieve a registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts).  |
+| ***{% raw %}{{{% endraw %}voucher_id{% raw %}}}{% endraw %}*** | Unique identifier of the voucher to remove. To get it, [Retrieve a registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-a-registered-users-cart) or [Retrieve a registered user's carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts) with the `vouchers` resource included.  |
 
 ### Request
 
@@ -219,7 +218,9 @@ To remove a discount voucher, send the request:
 | --- | --- | --- | --- |
 | Authorization | String | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-Request sample: `DELETE https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers/mydiscount-we3ca`
+Request sample: remove a discount voucher from a registered user's cart
+
+`DELETE https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2/vouchers/mydiscount-we3ca`
 
 ### Response
 
@@ -234,6 +235,6 @@ If the voucher is deleted successfully, the endpoints returns the `204 No Data` 
 | 003 | Failed to log in the user. |
 | 3301 | Cart or voucher with the specified ID is not found. |
 | 3302 | Incorrect voucher code or the voucher cannot be applied. |
-| 3303 | Cart code cannot be removed. |
+| 3303 | Cart code can't be removed. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

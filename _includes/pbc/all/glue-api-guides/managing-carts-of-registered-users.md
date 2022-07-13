@@ -56,7 +56,7 @@ Carts created via Glue API are always set as the default carts for the user.
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
 
-Sample request: `POST https://glue.mysprykershop.com/carts`
+Request sample: `POST https://glue.mysprykershop.com/carts`
 
 ```json
 {
@@ -111,7 +111,6 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
         }
 }
 ```
-
 </details>
 
 **General cart information**
@@ -119,7 +118,7 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 | ATTRIBUTE | TYPE  | DESCRIPTION |
 | --- | --- | --- |
 | priceMode | String | Price mode that was active when the cart was created. |
-| currency | String | Currency that was selected whenthe cart was created. |
+| currency | String | Currency that was selected when the cart was created. |
 | store | String | Store for which the cart was created. |
 | name | String | Specifies a cart name.<br>The field is available in multi-cart environments only. |
 | isDefault | Boolean | Specifies whether the cart is the default one for the customer.<br>The field is available in multi-cart environments only.  |
@@ -143,7 +142,7 @@ Sample request: `POST https://glue.mysprykershop.com/carts`
 | grandTotal | Integer | Grand total of the cart.  |
 
 
-## Retrieve a registered user's carts
+## Retrieve registered user's carts
 
 To retrieve all carts, send the request:
 
@@ -175,17 +174,17 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 
 | REQUEST | USAGE |
 | --- | --- |
-| `GET https://glue.mysprykershop.com/carts` | Retrieve all carts of a user. |
-| `GET https://glue.mysprykershop.com/carts?include=items` | Retrieve all carts of a user with the items in them included.  |
-| `GET https://glue.mysprykershop.com/carts?include=cart-permission-groups` | Retrieve all carts of a user with cart permission groups included. |
-| `GET https://glue.mysprykershop.com/carts?include=shared-carts` | Retrieve all carts of a user with shared carts. |
-| `GET https://glue.mysprykershop.com/carts?include=shared-carts,company-users` | Retrieve all carts of a user with information about shared carts and the company uses they are shared with. |
-| `GET https://glue.mysprykershop.com/carts?include=cart-rules` | Retrieve all carts of a user with cart rules. |
-| `GET https://glue.mysprykershop.com/carts?include=vouchers` | Retrieve all carts of a user with information about applied vouchers. |
-| `GET https://glue.mysprykershop.com/carts?include=promotional-items` | Retrieve information about promotional items for the cart. |
-| `GET https://glue.mysprykershop.com/carts?include=gift-cards` | Retrieve all carts of a user with applied gift cards. |
-| `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-options` | Retrieve all carts of a user with items, respective concrete product, and their product options. |
-| `GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-labels` | Retrieve all carts of a user with information about concrete products and the product labels assigned to the products in the carts. |
+| GET https://glue.mysprykershop.com/carts | Retrieve all carts of a user. |
+| GET https://glue.mysprykershop.com/carts?include=items | Retrieve all carts of a user with the items in them included.  |
+| GET https://glue.mysprykershop.com/carts?include=cart-permission-groups | Retrieve all carts of a user with cart permission groups included. |
+| GET https://glue.mysprykershop.com/carts?include=shared-carts | Retrieve all carts of a user with shared carts. |
+| GET https://glue.mysprykershop.com/carts?include=shared-carts,company-users | Retrieve all carts of a user with information about shared carts and the company uses they are shared with. |
+| GET https://glue.mysprykershop.com/carts?include=cart-rules | Retrieve all carts of a user with cart rules. |
+| GET https://glue.mysprykershop.com/carts?include=vouchers | Retrieve all carts of a user with information about applied vouchers. |
+| GET https://glue.mysprykershop.com/carts?include=promotional-items | Retrieve information about promotional items for the cart. |
+| GET https://glue.mysprykershop.com/carts?include=gift-cards | Retrieve all carts of a user with applied gift cards. |
+| GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-options | Retrieve all carts of a user with items, respective concrete product, and their product options. |
+| GET https://glue.mysprykershop.com/carts?include=items,concrete-products,product-labels | Retrieve all carts of a user with information about concrete products and the product labels assigned to the products in the carts. |
 
 ### Response
 
@@ -230,7 +229,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 3744,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1ef-fc333bd88b0a"
@@ -252,7 +252,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                     "subtotal": 83236,
                     "grandTotal": 74912
                 },
-                "discounts": []
+                "discounts": [],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/482bdbd6-137f-5b58-bd1c-37f3fa735a16"
@@ -298,7 +299,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 4158,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/ac3da9eb-f4fc-5803-94b9-343d6cd4cda4"
@@ -337,7 +339,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 6165,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/e877356a-5d8f-575e-aacc-c790eeb20a27"
@@ -380,7 +383,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 4200,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9668-2db890dbee6d"
@@ -585,7 +589,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                     "subtotal": null,
                     "grandTotal": null
                 },
-                "discounts": []
+                "discounts": [],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/59743e37-0182-5153-9935-77106741a9d2"
@@ -613,7 +618,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 2965,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4"
@@ -651,7 +657,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 10206,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/2b72635a-9363-56f5-9ba7-55631b8ad71e"
@@ -722,7 +729,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                     "subtotal": null,
                     "grandTotal": null
                 },
-                "discounts": []
+                "discounts": [],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/59743e37-0182-5153-9935-77106741a9d2"
@@ -750,7 +758,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 2965,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4"
@@ -788,7 +797,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 10206,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/2b72635a-9363-56f5-9ba7-55631b8ad71e"
@@ -859,7 +869,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                     "grandTotal": null,
                     "priceToPay": null
                 },
-                "discounts": []
+                "discounts": [],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/dc16f734-968d-5a45-92b7-aae5f804f77c?include=shared-carts,company-users"
@@ -882,7 +893,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                     "grandTotal": 12522,
                     "priceToPay": 12522
                 },
-                "discounts": []
+                "discounts": [],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9?include=shared-carts,company-users"
@@ -963,7 +975,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                     "subtotal": null,
                     "grandTotal": null
                 },
-                "discounts": []
+                "discounts": [],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/59743e37-0182-5153-9935-77106741a9d2"
@@ -991,7 +1004,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 2965,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4"
@@ -1029,7 +1043,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 10206,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/2b72635a-9363-56f5-9ba7-55631b8ad71e"
@@ -1099,7 +1114,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 1663,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830?include=vouchers"
@@ -1172,7 +1188,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 17352,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/e877356a-5d8f-575e-aacc-c790eeb20a27"
@@ -1238,7 +1255,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 17145,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/e877356a-5d8f-575e-aacc-c790eeb20a27"
@@ -1308,7 +1326,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                         "amount": 19952,
                         "code": null
                     }
-                ]
+                ],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398?include=items,concrete-products,product-options"
@@ -1409,7 +1428,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Samsung Galaxy Tab S2 SM-T813",
-                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2’s 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper - create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
+                "description": "Enjoy greater flexibility  ...than ever before with the Galaxy Tab S2. Remarkably slim and ultra-lightweight, use this device to take your e-books, photos, videos and work-related files with you wherever you need to go. The Galaxy Tab S2's 4:3 ratio display is optimised for magazine reading and web use. Switch to Reading Mode to adjust screen brightness and change wallpaper - create an ideal eBook reading environment designed to reduce the strain on your eyes. Get greater security with convenient and accurate fingerprint functionality. Activate fingerprint lock by pressing the home button. Use fingerprint verification to restrict / allow access to your web browser, screen lock mode and your Samsung account.",
                 "attributes": {
                     "internal_memory": "3 GB",
                     "processor_model": "APQ8076",
@@ -1555,7 +1574,8 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
                     "grandTotal": 3369,
                     "priceToPay": 3369
                 },
-                "discounts": []
+                "discounts": [],
+                "thresholds": []
             },
             "links": {
                 "self": "https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9?include=items,concrete-products,product-labels"
@@ -1689,7 +1709,6 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
     ]
 }
 ```
-
 </details>
 
 
@@ -1700,7 +1719,7 @@ Alternatively, you can retrieve all carts belonging to a customer through the **
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | priceMode | String | Price mode that was active when the cart was created. |
-| currency | String | Currency that was selected whenthe cart was created. |
+| currency | String | Currency that was selected when the cart was created. |
 | store | String | Store for which the cart was created. |
 | name | String | Specifies a cart name.<br>The field is available in multi-cart environments only. |
 | isDefault | Boolean | Specifies whether the cart is the default one for the customer.<br>The field is available in multi-cart environments only.  |
@@ -1766,7 +1785,7 @@ To retrieve a particular cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-registered-users-carts) to get it. |
 
 ### Request
 
@@ -1787,17 +1806,19 @@ To retrieve a particular cart, send the request:
 
 | REQUEST | USAGE |
 | --- | --- |
-| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart. |
-| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=items` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with its items, related concrete products and cart permission groups included. |
-| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=cart-permission-groups` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with its cart permissions included. |
-| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=shared-carts` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with details on the shared cart. |
-| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=shared-carts,company-users` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with information about shared carts and the company uses they are shared with. |
-| `GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=cart-rules` | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with cart rules. |
-| `GET https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=promotional-items` | Retrieve the `1ce91011-8d60-59ef-9fe0-4493ef3628b2` cart with its promotional items. |
-| `GET https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9668-2db890dbee6d?include=gift-cards` | Retrieve the `8ef901fe-fe47-5569-9668-2db890dbee6` cart with detailed information on its gift cards. |
-| `GET https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398?include=items,concrete-products,product-options` | Retrieve the `8fc45eda-cddf-5fec-8291-e2e5f8014398` cart with items, respective concrete product, and their product options. |
-| `GET https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830?include=vouchers` | Retrieve the `976af32f-80f6-5f69-878f-4ea549ee0830` cart with detailed information on its vouchers. |
-| `GET https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9?include=items,concrete-products,product-labels` | Retrieve the `0c3ec260-694a-5cec-b78c-d37d32f92ee9` cart with information about the product labels assigned to the products in the cart. |
+| GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4 | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart. |
+| GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=items | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with its items, related concrete products and cart permission groups included. |
+| GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=cart-permission-groups | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with its cart permissions included. |
+| GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=shared-carts | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with details on the shared cart. |
+| GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=shared-carts,company-users | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with information about shared carts and the company uses they are shared with. |
+| GET https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4?include=cart-rules | Retrieve the `2fd32609-b6b0-5993-9254-8d2f271941e4` cart with cart rules. |
+| GET https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2?include=promotional-items | Retrieve the `1ce91011-8d60-59ef-9fe0-4493ef3628b2` cart with its promotional items. |
+| GET https://glue.mysprykershop.com/carts/8ef901fe-fe47-5569-9668-2db890dbee6d?include=gift-cards | Retrieve the `8ef901fe-fe47-5569-9668-2db890dbee6` cart with detailed information on its gift cards. |
+| GET https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398?include=items,concrete-products,product-options | Retrieve the `8fc45eda-cddf-5fec-8291-e2e5f8014398` cart with items, respective concrete product, and their product options. |
+| GET https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830?include=vouchers | Retrieve the `976af32f-80f6-5f69-878f-4ea549ee0830` cart with detailed information on its vouchers. |
+| GET https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9?include=items,concrete-products,product-labels | Retrieve the `0c3ec260-694a-5cec-b78c-d37d32f92ee9` cart with information about the product labels assigned to the products in the cart. |
+| GET https://glue.mysprykershop.com/carts/308b51f4-2491-5bce-8cf2-436273b44f9b | Retrieve the `308b51f4-2491-5bce-8cf2-436273b44f9b` cart with the unfulfilled hard and soft minimum thresholds. |
+| GET https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2 | Retrieve the `1ce91011-8d60-59ef-9fe0-4493ef3628b2` cart with the unfulfilled hard maximum threshold. |
 
 
 ### Response
@@ -1828,7 +1849,8 @@ To retrieve a particular cart, send the request:
                     "amount": 2965,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4"
@@ -1866,7 +1888,8 @@ To retrieve a particular cart, send the request:
                     "amount": 2965,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4"
@@ -1994,7 +2017,8 @@ To retrieve a particular cart, send the request:
                     "amount": 2965,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4"
@@ -2056,7 +2080,8 @@ To retrieve a particular cart, send the request:
                     "amount": 2965,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4"
@@ -2111,7 +2136,8 @@ To retrieve a particular cart, send the request:
                 "grandTotal": 12522,
                 "priceToPay": 12522
             },
-            "discounts": []
+            "discounts": [],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9?include=shared-carts,company-users"
@@ -2163,7 +2189,6 @@ To retrieve a particular cart, send the request:
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -2193,7 +2218,8 @@ To retrieve a particular cart, send the request:
                     "amount": 2965,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/2fd32609-b6b0-5993-9254-8d2f271941e4"
@@ -2261,7 +2287,8 @@ To retrieve a particular cart, send the request:
                     "amount": 11113,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
@@ -2296,7 +2323,7 @@ To retrieve a particular cart, send the request:
 
 
 <details>
-<summary markdown='span'>Response sample with with details on gift cards</summary>
+<summary markdown='span'>Response sample with details on gift cards</summary>
 
 ```json
 {
@@ -2388,7 +2415,8 @@ To retrieve a particular cart, send the request:
                     "amount": 19952,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/8fc45eda-cddf-5fec-8291-e2e5f8014398?include=items,concrete-products,product-options"
@@ -2639,7 +2667,8 @@ To retrieve a particular cart, send the request:
                     "amount": 18489,
                     "code": null
                 }
-            ]
+            ],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/976af32f-80f6-5f69-878f-4ea549ee0830?include=vouchers"
@@ -2676,7 +2705,6 @@ To retrieve a particular cart, send the request:
     ]
 }
 ```
-
 </details>
 
 <details>
@@ -2701,7 +2729,8 @@ To retrieve a particular cart, send the request:
                 "grandTotal": 3369,
                 "priceToPay": 3369
             },
-            "discounts": []
+            "discounts": [],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9?include=items,concrete-products,product-labels"
@@ -2831,19 +2860,108 @@ To retrieve a particular cart, send the request:
     ]
 }
 ```
-
 </details>
 
+<details>
+<summary markdown='span'>Response sample with the unfulfilled hard and soft minimum thresholds</summary>
+
+```json
+{
+    "data": {
+        "type": "carts",
+        "id": "308b51f4-2491-5bce-8cf2-436273b44f9b",
+        "attributes": {
+            "priceMode": "GROSS_MODE",
+            "currency": "EUR",
+            "store": "DE",
+            "name": "New Year presents",
+            "isDefault": true,
+            "totals": {
+                "expenseTotal": 5000,
+                "discountTotal": 0,
+                "taxTotal": 1350,
+                "subtotal": 9454,
+                "grandTotal": 14454,
+                "priceToPay": 14454
+            },
+            "discounts": [],
+            "thresholds": [
+                {
+                    "type": "hard-minimum-threshold",
+                    "threshold": 20000,
+                    "fee": null,
+                    "deltaWithSubtotal": 10546,
+                    "message": "You need to add items for €200.00 to pass a recommended threshold. Otherwise, €50 fee will be added."
+                },
+                {
+                    "type": "soft-minimum-threshold-fixed-fee",
+                    "threshold": 100000,
+                    "fee": 5000,
+                    "deltaWithSubtotal": 90546,
+                    "message": "You need to add items for €1,000.00 to pass a recommended threshold. Otherwise, €50.00 fee will be added."
+                },
+            ]
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/carts/308b51f4-2491-5bce-8cf2-436273b44f9b"
+        }
+    }
+}
+```
+</details>
+
+<details>
+<summary markdown='span'>Response sample with the unfulfilled hard maximum threshold</summary>
+
+```json
+{
+    "data": {
+        "type": "carts",
+        "id": "1ce91011-8d60-59ef-9fe0-4493ef3628b2",
+        "attributes": {
+            "priceMode": "GROSS_MODE",
+            "currency": "EUR",
+            "store": "DE",
+            "name": "My Cart",
+            "isDefault": false,
+            "totals": {
+                "expenseTotal": 5000,
+                "discountTotal": 0,
+                "taxTotal": 11976,
+                "subtotal": 70007,
+                "grandTotal": 75007,
+                "priceToPay": 75007
+            },
+            "discounts": [],
+            "thresholds": [
+                {
+                    "type": "hard-maximum-threshold",
+                    "threshold": 5000,
+                    "fee": null,
+                    "deltaWithSubtotal": 65007,
+                    "message": "You need to add items for €50 or less to pass a recommended threshold."
+                }
+            ]
+        },
+        "links": {
+            "self": "https://glue.de.69-new.demo-spryker.com/carts/1ce91011-8d60-59ef-9fe0-4493ef3628b2"
+        }
+    }
+}
+```
+</details>
+
+For the threshold attributes, see [Threshold attributes](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#threshold-attributes).
 
 For the attributes of carts of registered users and included resources, see [Retrieve a registered user's carts](#retrieve-a-registered-users-carts-response-attributes).
 
 For the attributes of other included resources, see:
-* [Add an item to a registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart-response-attributes)
+* [Add an item to a registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart-response-attributes).
 * [Managing gift cards of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html).
 * [Cart permission groups](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html).
 * [Managing items in carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html).
-* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
-* [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
+* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
+* [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes).
 
 ## Edit a cart
 
@@ -2856,7 +2974,7 @@ You can edit the name of the cart, change the currency and price mode. To do tha
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-registered-users-carts) to get it. |
 
 {% info_block infoBox "Info" %}
 
@@ -2900,8 +3018,7 @@ Request sample: `https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d3
 
 Response sample:
 
-```
-json
+```json
 {
     "data": {
         "type": "carts",
@@ -2920,14 +3037,14 @@ json
                 "grandTotal": 571843,
                 "priceToPay": 571843
             },
-            "discounts": []
+            "discounts": [],
+            "thresholds": []
         },
         "links": {
             "self": "https://glue.mysprykershop.com/carts/0c3ec260-694a-5cec-b78c-d37d32f92ee9"
         }
     }
 }
-
 ```
 
 ## Delete a cart
@@ -2940,7 +3057,7 @@ To delete a cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-a-registered-users-carts) to get it. |
+| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-registered-users-carts) to get it. |
 
 {% info_block infoBox "Deleting carts" %}
 
@@ -2967,17 +3084,15 @@ If the cart is deleted successfully, the endpoint returns the `204 No Content`�
 | 001 | Access token is incorrect. |
 | 002 | Access token is missing. |
 | 003 | Failed to log in the user. |
-| 005 | `If-Match` header is missing.  |
-| 006 | `If-Match` header value is invalid. |
 | 101 | Cart with given uuid not found. |
 | 102 | Failed to add an item to cart. |
-| 103 | Item with the given group key is not found in the cart. |
+| 103 | Item with the given group key not found in the cart. |
 | 104 | Cart uuid is missing. |
 | 105 | Cart cannot be deleted. |
 | 106 | Cart item cannot be deleted. |
 | 107 | Failed to create a cart. |
 | 110 | Customer already has a cart. |
-| 111 | Cannot switch price mode when there are items in the cart. |
+| 111 | Can't switch price mode when there are items in the cart. |
 | 112 | Store data is invalid. |
 | 113 | Cart item cannot be added. |
 | 114 | Cart item cannot be updated. |

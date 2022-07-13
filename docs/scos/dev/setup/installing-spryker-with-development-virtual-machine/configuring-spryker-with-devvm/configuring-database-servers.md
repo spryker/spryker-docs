@@ -24,6 +24,11 @@ redirect_from:
   - /v1/docs/en/configure-database-server
   - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-the-database-server.html
 ---
+{% info_block warningBox "Warning" %}
+
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+
+{% endinfo_block %}
 
 This article describes how you can change your database server.
 

@@ -7,6 +7,7 @@ originalArticleId: af927b8c-2fc0-46ab-a54d-4ae83d18ca89
 redirect_from:
   - /docs/scos/user/intro-to-spryker/support/understanding-ticket-status.html#how-are-bug-tickets-prioritized
   - /2021080/docs/en/case-priorities
+  - /docs/scos/user/intro-to-spryker/support/business-impact-and-case-priorities.html
 ---
 
 ## How does Spryker prioritize cases?

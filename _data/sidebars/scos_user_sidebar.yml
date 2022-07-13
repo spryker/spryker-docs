@@ -85,8 +85,8 @@ entries:
         url: /docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
       - title: Handling new feature requests
         url: /docs/scos/user/intro-to-spryker/support/handling-new-feature-requests.html
-      - title: Case Escalation
-        url: /docs/scos/user/intro-to-spryker/support/business-impact-and-case-priorities.html
+      - title: Case escalation
+        url: /docs/scos/user/intro-to-spryker/support/case-escalation.html
       - title: Getting support
         url: /docs/scos/user/intro-to-spryker/support/getting-support.html
       - title: Special- Prepare for a busy season

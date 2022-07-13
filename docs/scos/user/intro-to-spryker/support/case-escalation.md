@@ -10,7 +10,7 @@ redirect_from:
 ---
 
 ## How does Spryker prioritize cases?
-While we are trying to solve cases on time, we need to triage and prioritize cases on a daily basis. When you create cases, you can already indicate how urgent a case is for you by choosing the correct case type and Business Impact and provide adequate info to help us assess how important your case is in relation to other cases that are in our backlog. At the end of the day, how high or low a case is prioritized by the support team is a function of the following:
+While we are trying to solve cases on time, we need to triage and prioritize cases on a daily basis. When you create cases, you can already indicate how urgent a case is for you by choosing the correct case type and business impact and provide adequate info to help us assess how important your case is in relation to other cases that are in our backlog. At the end of the day, how high or low a case is prioritized by the support team is a function of the following:
 * The business impact specified by the partner/customer and the explanation provided for it
 * The subject matter
 * The overall state and context of the project
@@ -32,7 +32,7 @@ Here are some examples of cases with P1 business impact:
 * It is no longer possible for customers to use your shop in an intended way, and this impacts your revenue.
 * An issue blocks you from going live with your shop.
 
-*P2—High*: the difference between high and urgent business impact is the factor of time and/or the severity of the issue. If you see an issue that affects the normal operation of your Spryker Shop in a significant way in the short term or see performance and quality degradation (but not outages) in central processes and functions of your shop, these issues must be assigned High Business Impact. Examples:
+*P2—High*: the difference between high and urgent business impact is the factor of time and/or the severity of the issue. If you see an issue that affects the normal operation of your Spryker Shop in a significant way in the short term or see performance and quality degradation (but not outages) in central processes and functions of your shop, these issues must be assigned high business impact. Examples:
 * You see very high server response rates that result in some customer churn.
 * You find a bug that makes the use of a payment module impossible with the next planned update.
 
@@ -66,7 +66,7 @@ We recently gave our partners and customers the option to specify desired soluti
 The case type you choose to create an issue also determines how high it is prioritized initially.
 * *Request Cases* automatically receive low priority and are dealt with when there is time.
 * *Problem Cases* let you specify business impact and desired solution time. We assign a priority to this case after evaluating the information provided, the business impact specified, and the desired solution time.
-* *Emergency Cases* are reserved for severe outages with significant business impact. Emergency cases always receive the highest priority and can only be cases with Business Impact P1—Urgent.
+* *Emergency Cases* are reserved for severe outages with significant business impact. Emergency cases always receive the highest priority and can only be cases with business impact P1—Urgent.
 
 {% info_block infoBox "Note" %}
 

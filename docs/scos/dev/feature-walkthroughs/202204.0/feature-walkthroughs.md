@@ -61,7 +61,7 @@ The [Checkout](/docs/scos/dev/feature-walkthroughs/202204.0/checkout-feature-wal
 
 ## Cms
 
-The [CMS](/docs/scos/dev/feature-walkthroughs/202204.0/cms-feature-walkthrough/cms-feature-walkthrough.html#) feature adds a content management system that allows creating and managing the content of custom pages that are not part of the product catalog.
+The [CMS](/docs/scos/dev/feature-walkthroughs/202204.0/cms-feature-walkthrough/cms-feature-walkthrough.html) feature adds a content management system that allows creating and managing the content of custom pages that are not part of the product catalog.
 
 ### CMS Extension Points
 
@@ -73,7 +73,7 @@ The [Comments](/docs/scos/dev/feature-walkthroughs/202204.0/comments-feature-wal
 
 ## Company Account
 
-The [Company Account](/docs/scos/dev/feature-walkthroughs/202204.0/company-account-feature-walkthrough/company-account-feature-walkthrough.html#) feature allows controlling user access to the system within an organization by configuring different permissions and roles for the company’s entities (units) and users.
+The [Company Account](/docs/scos/dev/feature-walkthroughs/202204.0/company-account-feature-walkthrough/company-account-feature-walkthrough.html) feature allows controlling user access to the system within an organization by configuring different permissions and roles for the company’s entities (units) and users.
 
 ### Company account - module relations
 
@@ -89,7 +89,7 @@ The [Configurable Bundle](/docs/scos/dev/feature-walkthroughs/202204.0/configura
 
 ## Configurable Product
 
-The [Configurable Product](/docs/scos/dev/feature-walkthroughs/202204.0/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html#) feature introduces a new type of product that can be customized by customers—a configurable product.
+The [Configurable Product](/docs/scos/dev/feature-walkthroughs/202204.0/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html) feature introduces a new type of product that can be customized by customers—a configurable product.
 
 ### Configuration process flow of Configurable Product
 
@@ -125,7 +125,7 @@ The [Gift Cards](/docs/scos/dev/feature-walkthroughs/202204.0/gift-cards-feature
 
 ## Inventory Management
 
-The [Inventory Management](/docs/scos/dev/feature-walkthroughs/202204.0/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html#) feature adds stock and availability management as well as multiple warehouse stock management for products.
+The [Inventory Management](/docs/scos/dev/feature-walkthroughs/202204.0/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html) feature adds stock and availability management as well as multiple warehouse stock management for products.
 
 ### Managing stocks in a multi-store environment: Best practices
 In a [multi-store environment](/docs/scos/dev/feature-walkthroughs/202204.0/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html), you can manage the warehouses to stores and database relations in several ways. This article contains scenarios that can help you choose the most suitable warehouse management workflow and implement it using the Inventory Management feature.

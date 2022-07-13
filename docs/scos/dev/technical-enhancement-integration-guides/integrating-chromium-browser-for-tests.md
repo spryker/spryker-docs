@@ -19,7 +19,7 @@ redirect_from:
 
 ## Integration into Docker-based projects
 
-For Docker-based integration instructions, see [ChromeDriver](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-services.html#chromedriver).
+For Docker-based integration instructions, see [ChromeDriver](/docs/scos/dev/the-docker-sdk/{{site.version}}/configure-services.html#chromedriver).
 
 ## Integration into DevVM-based projects
 

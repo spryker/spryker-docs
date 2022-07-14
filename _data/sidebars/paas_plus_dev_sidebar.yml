@@ -3,6 +3,6 @@ entries:
   - product: Platform as a Service Plus
     nested:
       - title: Platform as a Service Plus
-        url: /docs/paas_plus/dev/platform-as-a-service-plus.html
+        url: /docs/paas+/dev/platform-as-a-service-plus.html
       - title: Onboarding to PaaS+
-        url: /docs/paas_plus/dev/onboarding-to-paas+.html
+        url: /docs/paas+/dev/onboarding-to-paas+.html

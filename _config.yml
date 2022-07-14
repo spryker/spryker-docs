@@ -149,7 +149,7 @@ defaults:
       product: "platform-as-a-service-plus"
   -
     scope:
-      path: "docs/paas+/dev"
+      path: "docs/paas_plus/dev"
     values:
       sidebar: "paas_plus_dev_sidebar"
       role: "dev"

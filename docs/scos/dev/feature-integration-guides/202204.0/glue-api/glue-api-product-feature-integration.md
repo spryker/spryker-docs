@@ -210,8 +210,8 @@ Activate the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
-| ConcreteProductsByProductConcreteIdsResourceRelationshipPlugin | Adds the `concrete-products` resource as a relationship to the `abstract-products` resource. | None | Spryker\Glue\ProductsRestApi\Plugin\GlueApplication |
-|ProductAbstractByProductAbstractSkuResourceRelationshipPlugin |Adds the `abstract-products` resource as a relationship to the `concrete-products` resource. |None| Spryker\Glue\ProductsRestApi\Plugin\GlueApplication|
+| ConcreteProductsByProductConcreteIdsResourceRelationshipPlugin | Adds the `concrete-products` resource as a relationship to the `concrete-products` resource. | None | Spryker\Glue\ProductsRestApi\Plugin\GlueApplication |
+|ProductAbstractByProductAbstractSkuResourceRelationshipPlugin |Adds the `abstract-products` resource as a relationship to the `abstract-products` resource. |None| Spryker\Glue\ProductsRestApi\Plugin\GlueApplication|
 
 **src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php**
 
@@ -237,11 +237,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
         ResourceRelationshipCollectionInterface $resourceRelationshipCollection
     ): ResourceRelationshipCollectionInterface {
         $resourceRelationshipCollection->addRelationship(
-            ProductsRestApiConfig::RESOURCE_ABSTRACT_PRODUCTS,
+            ProductsRestApiConfig::RESOURCE_CONCRETE_PRODUCTS,
             new ConcreteProductsByProductConcreteIdsResourceRelationshipPlugin()
         );
         $resourceRelationshipCollection->addRelationship(
-            ProductsRestApiConfig::RESOURCE_CONCRETE_PRODUCTS,
+            ProductsRestApiConfig::RESOURCE_ABSTRACT_PRODUCTS,
             new ProductAbstractByProductAbstractSkuResourceRelationshipPlugin()
         );
 

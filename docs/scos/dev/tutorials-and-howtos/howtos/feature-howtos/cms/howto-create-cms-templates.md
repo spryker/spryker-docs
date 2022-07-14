@@ -35,7 +35,7 @@ CMS page template is a [Twig](https://twig.symfony.com/) file that, when applied
 
 To learn how the template is created, check the following exemplary procedure:
 
-1. Create the Twig template—`src/Pyz/Shared/Cms/Theme/default/templates/contact_page.twig`:
+1. Create the Twig template `src/Pyz/Shared/Cms/Theme/default/templates/contact_page.twig`:
 
 ```twig
 <h1>CONTACT US </h1>
@@ -88,7 +88,7 @@ A content manager can apply this template when [creating a CMS page](/docs/scos/
 Create a template with slots:
 1. Create a Twig template as described in [CMS Page Template](#cms-page-template).
 2. For each slot that you want to have in the template, insert a [slot widget](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#slot-widget).
-3. [Import](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#correlation) section of Templates & Slots feature overview.
+3. [Import](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#correlation) section of the Templates & Slots feature overview.
 
 Templates with slots are universal. In the Back Office, a content manager can apply this template when [creating a CMS page](/docs/scos/user/back-office-user-guides/{{site.version}}/content/pages/creating-cms-pages.html) or [creating a category](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/category/creating-categories.html).
 
@@ -138,14 +138,13 @@ Depending on the content item widget you create the template for, make sure to i
 {% endinfo_block %}
 
 1. Create `src/Pyz/Yves/{ModuleWidget}/Theme/default/views/{template-folder}/{new-template}.twig`, where:
-
-* `{new-template}`—template name.
-* `{ModuleWidget}`—name of the respective Content Item Widget module.
-* `{template-folder}`—template folder name. Based on the content item widget, choose:
-    * banner
-    * cms-product-abstract
-    * content-product-set
-    * content-file
+   * `{new-template}` is the template name.
+   * `{ModuleWidget}` is the name of the respective Content Item Widget module.
+   * `{template-folder}` is the template folder name. Based on the content item widget, choose:
+       * banner
+       * cms-product-abstract
+       * content-product-set
+       * content-file
 
 The default templates located on the core level of each module can be used as examples.
 

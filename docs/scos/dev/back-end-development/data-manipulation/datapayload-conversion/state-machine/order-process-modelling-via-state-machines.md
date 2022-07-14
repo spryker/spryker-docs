@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/order-process-modelling-state-machines
   - /v1/docs/order-process-modelling-state-machines
   - /v1/docs/en/order-process-modelling-state-machines
+  - /capabilities/order_management/state_machine/order-process-modelling-state-machines.htm
 ---
 
 State machines help you define, execute and visualize predefined and automated processes. It can model events that involve performing a predetermined sequence of actions, for example, in the order process.

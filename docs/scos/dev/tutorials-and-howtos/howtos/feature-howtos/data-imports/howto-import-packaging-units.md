@@ -22,11 +22,11 @@ This document shows how to extend the list of the packaging unit types available
 
 {% info_block warningBox "Note" %}
 
-The packaging unit type import should happen first; otherwise, you can't import packaging units if the types are not present yet.
+The packaging unit type import must happen first; otherwise, you can't import packaging units if the types are not present yet.
 
 {% endinfo_block %}
 
-## Importing packaging unit types
+## Import packaging unit types
 
 The CSV file for import must have a name field populated.
 
@@ -44,20 +44,18 @@ console data:import product-packaging-unit-type -f path_to_file.csv
 
 The imported packaging unit types appear in the `spy_product_packaging_unit_type` database table.
 
-## Importing packaging units information
-
-You can import the following product packaging unit information using a CSV file:
+## Import packaging units information
 
 You can import the following product packaging unit information using a CSV file:
 
 * Define a packaging unit for a specific product concrete by populating the `concrete_sku` and `packaging_unit_type_name` fields. Both fields are required.
-* Define a lead product in the `lead_product_sku` field.
-* Define the default amount (`default_amount`) included in the packaged product
-* Set amount restrictions in the `is_amount_variable` field: `1` if the amount can be changed, and `0` if it cannot be changed.
-* Define the minimum and maximum amount of items in the `amount_min` and `amount_max` fields respectively.
-* Set an interval of the amount that a customer can buy in the `amount_interval` field.
+* In the `lead_product_sku` field, define a lead product.
+* Define the default amount (`default_amount`) included in the packaged product.
+* In the `is_amount_variable` field, set amount restrictions: `1` if the amount can be changed and `0` if it cannot be changed.
+* In the `amount_min` and `amount_max` fields, define the minimum and maximum number of items, respectively.
+* In the `amount_interval` field, set the the interval for the quantity that a customer can buy.
 
-To import packaging units information from the `ProductPackagingUnitDataImport/data/import/product_packaging_unit.csv` file, run the following command:
+Import packaging units information from the `ProductPackagingUnitDataImport/data/import/product_packaging_unit.csv` file:
 
 ```bash
 console data:import product-packaging-unit

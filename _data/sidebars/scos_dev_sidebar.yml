@@ -50,6 +50,8 @@ entries:
       nested:
       - title: DevVM system requirements
         url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html
+      - title: SCOS supported browsers
+        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/scos-supported-browsers.html
       - title: Installing on MacOS and Linux
         url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html
       - title: Installing on Windows
@@ -68,8 +70,8 @@ entries:
           url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html
         - title: Configuring debugging in a DevVM below version 91
           url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-a-devvm-below-version-91.html
-    - title: Installing Spryker without Development Virtual Machine or Docker
-      url: /docs/scos/dev/setup/installing-spryker-without-development-virtual-machine-or-docker.html
+    - title: Installing Spryker without Docker
+      url: /docs/scos/dev/setup/installing-spryker-without-docker.html
     - title: Managing SCOS dependencies with Composer
       url: /docs/scos/dev/setup/managing-scos-dependencies-with-composer.html
     - title: Redis Configuration
@@ -91,7 +93,7 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-    - title: Product Approval Process feature walkthrough
+    - title: Product Approval Process
       url: /docs/scos/dev/feature-walkthroughs/product-approval-process-feature-walkthrough.html
       include_versions:
       - "202204.0"
@@ -1502,6 +1504,8 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
+      - title: "Glue API: Shared Carts feature integration"
+        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-shared-carts-feature-integration.html
       - title: Glue API - Shipment feature integration
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-shipment-feature-integration.html
         include_versions:
@@ -2411,6 +2415,9 @@ entries:
       include_versions:
       - "201811.0"
       - "201903.0"
+      - "202204.0"
+    - title: Uuid Generation Console feature integration
+      url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
     - title: Product is Available Again feature integration
       url: /docs/scos/dev/feature-integration-guides/product-is-available-again-feature-integration.html
       include_versions:
@@ -3978,6 +3985,9 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
+    - title: Configure services
+      url: /docs/scos/dev/the-docker-sdk/configure-services.html
+      include_versions:
       - "202204.0"
     - title: Docker SDK configuration reference
       url: /docs/scos/dev/the-docker-sdk/docker-sdk-configuration-reference.html
@@ -4176,8 +4186,6 @@ entries:
       nested:
       - title: Architecture Sniffer
         url: /docs/scos/dev/sdk/development-tools/architecture-sniffer.html
-      - title: Spryk Code Generator
-        url: /docs/scos/dev/sdk/development-tools/spryk-code-generator.html
       - title: Code Sniffer
         url: /docs/scos/dev/sdk/development-tools/code-sniffer.html
       - title: PHPStan
@@ -4361,7 +4369,7 @@ entries:
       - title: "HowTo: Change the default behavior of event triggering in the AvailabilityStorage module"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-change-the-default-behavior-of-event-triggering-in-the-availabilitystorage-module.html
       - title: "HowTo: Define positions of category CMS blocks"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-define-positions-for-category-cms-blocks.html        
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-define-positions-for-category-cms-blocks.html
       - title: "HowTo: Build your own product relation type"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-build-your-own-product-relation-type.html
       - title: "HowTo: Set up multiple stores"
@@ -4938,6 +4946,8 @@ entries:
               url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-method-is-overridden-on-the-project-level.html
         - title: Running the Evalutor tool
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html
+        - title: Define custom prefixes for core entity names
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
     - title: Performance guidelines
       nested:
       - title: Elastic computing

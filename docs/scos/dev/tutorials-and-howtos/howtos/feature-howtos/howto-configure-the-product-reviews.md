@@ -23,9 +23,9 @@ redirect_from:
   - /v1/docs/en/ht-product-review-feature-configuration
 ---
 
-## Configuring the maximum rating
+## Configure the maximum rating
 
-To change the maximum allowed rating, alter the Client configuration by extending the `\Spryker\Client\ProductReview\ProductReviewConfig` class in your project directory.
+To change the maximum allowed rating, alter the `Client` configuration by extending the `\Spryker\Client\ProductReview\ProductReviewConfig` class in your project directory.
 
 Override the `getMaximumRating` method to return the desired selectable maximum rating value.
 
@@ -51,13 +51,13 @@ Example of client config extension:
             }
 ```
 
-## Configuring the number of reviews displayed per page
+## Configure the number of reviews displayed per page
 
-To change the maximum number of reviews displayed per page, alter the Client configuration by extending the `\Spryker\Client\ProductReview\ProductReviewConfig` class in your project directory.
+1. To change the maximum number of reviews displayed per page, alter the `Client` configuration by extending the `\Spryker\Client\ProductReview\ProductReviewConfig` class in your project directory.
 
-Override the `PAGINATION_DEFAULT_ITEMS_PER_PAGE` and `PAGINATION_VALID_ITEMS_PER_PAGE` constants to the desired number of reviews to be displayed per page.
+2. Override the `PAGINATION_DEFAULT_ITEMS_PER_PAGE` and `PAGINATION_VALID_ITEMS_PER_PAGE` constants to the desired number of reviews to be displayed per page.
 
-Example of client config extension:
+An example of the client config extension:
 
 ```php
 <?php

@@ -58,11 +58,11 @@ The typical Spryker installation process includes installing a proper starting p
 
 You can choose from the following options:
 
-* [B2B Demo Shop](/docs/scos/user/intro-to-spryker//b2b-suite.html) - a boilerplate for B2B commerce projects.
-* [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html) - a starting point for B2C implementations.
-* Separate [Features](/docs/scos/user/features/{{site.version}}/features.html) and modules - you can also expand both Demo Shops with separate features and modules.
+* [B2B Demo Shop](/docs/scos/user/intro-to-spryker//b2b-suite.html): A boilerplate for B2B commerce projects.
+* [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html): A starting point for B2C implementations.
+* Separate [features](/docs/scos/user/features/{{site.version}}/features.html) and modules: You can also expand both Demo Shops with separate features and modules.
 
-### Installing Spryker with Docker
+### Install Spryker with Docker
 
 We recommend starting with a Docker SDK environment. This option includes Docker and related tools to build images and run containers that match your requirements.
 
@@ -88,12 +88,17 @@ If you use Docker and not the Development Virtual Machine (DevVM), you don't nee
 - `config/install/development.yml`
 - `config_default-development_*.php`
 
-### Installing Spryker with the Development Virtual Machine
+### Install Spryker with the Development Virtual Machine
+
+{% info_block warningBox "Warning" %}
+
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](#install-spryker-with-docker).
+
+{% endinfo_block %}
 
 Spryker Commerce OS comes with a Virtual Machine that has all the prerequisites to run Spryker. It provides a full-featured development environment that will help you customize Spryker per your project requirements. The Development Virtual Machine (DevVM) is based on VirtualBox and Vagrant, and can be used to install Spryker on any Operating System.
 
 Choose an installation guide that suits your needs best:
-
 
 | OPERATION SYSTEMS | B2B SHOP OR B2C SHOP |
 | --- | --- |
@@ -101,7 +106,8 @@ Choose an installation guide that suits your needs best:
 | DevVM on Windows | [B2B or B2C Demo Shop installation: Windows, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-without-development-virtual-machine-or-docker.html) |
 
 ### Independent installation
-Alternatively, you can install Spryker on an operating system that fulfills Spryker [DevVM system requirements](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html) without the virtual machine or Docker images. See [B2B or B2C Demo Shop installation: without Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html) for details.
+
+Alternatively, you can install Spryker without the Docker images. See [Installing Spryker without Docker](/docs/scos/dev/setup/installing-spryker-without-docker.html) for details.
 
 {% info_block warningBox %}
 
@@ -109,7 +115,7 @@ After installing, make sure to have a look at [Post-Installation steps and addit
 
 {% endinfo_block %}
 
-### Adjusting the readme file
+### Adjust the readme file
 
 After you install the project, adjust the readme.md file as follows:
 
@@ -120,7 +126,7 @@ After you install the project, adjust the readme.md file as follows:
 
 ## 2. Manage your modules
 
-Once you have completed the installation, you can start managing *modules*. A module is a single functional unit that has well-defined dependencies, and can be used and updated independently.
+Once you have completed the installation, you can start managing *modules*. A module is a single functional unit that has well-defined dependencies and can be used and updated independently.
 {% info_block infoBox %}
 
 To define your strategy of taking Spryker updates, learn about our [module and feature release process](/docs/scos/user/intro-to-spryker/spryker-release-process.html).
@@ -159,6 +165,7 @@ To configure and customize your Spryker Commerce OS, do the following:
 <!---4. Move to the maintenance mode-->
 
 ### Store clean up
+
 This step depends on the store setup which you plan to have. If you start with one store, consider cleaning up the remaining stores right away in the following files:
 
  - `config/install/*`
@@ -166,6 +173,11 @@ This step depends on the store setup which you plan to have. If you start with o
  - `deploy.dev.yml`
  - `config_default.php`
  - `src/SprykerConfig/CodeBucketConfig.php`
+
+### Modules clean up
+* Analize modules that you have in the desired Demoshop.
+* Analize modules that you need to have.
+* Remove unnesessary modules (to do that, you can use the migration guide backwards).
 
 ### Data import clean up
 
@@ -192,6 +204,7 @@ Continuous integration (CI) is a development practice where each part of the cod
 To keep your code clean, we recommend using the code checkers.
 
 ### Code sniffer
+
 Before running the code sniffer, we recommend updating it to the latest version, as it introduces new checks that increase the code quality even more. When updating, keep in mind that you also need to change the `composer.json` file.
 
 ```bash
@@ -246,13 +259,13 @@ Before you start developing, set up and get to know your debugging environment. 
 
 {% info_block infoBox %}
 
-In a production setup, Zed must be covered with a VPN, Basic Auth or IP whitelisting.
+In a production setup, Zed must be covered with a VPN, Basic Auth, or IP allowlisting.
 
 {% endinfo_block %}
 
 ## 8. Familiarize yourself with the Spryker architecture
 
-As a developer, the Spryker structure is the first thing you need to know to extend the core functionality. To familiarize yourself with the Spryker architecture, different parts of the Client, Shared, Zed and Yves folders and their different layers, see the following articles:
+As a developer, the Spryker structure is the first thing you need to know to extend the core functionality. To familiarize yourself with the Spryker architecture, different parts of the Client, Shared, Zed, and Yves folders, and their different layers, see the following articles:
 
 * [Conceptual overview](/docs/scos/dev/architecture/conceptual-overview.html): to learn about application layers and code structure.
 * [Modules and layers](/docs/scos/dev/architecture/modules-and-layers.html): to learn about layers and how various functionality is encapsulated in modules.

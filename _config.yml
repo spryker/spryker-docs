@@ -116,6 +116,17 @@ defaults:
       sidebar: "scos_user_sidebar"
       role: "user"
   -
+     scope:
+       path: "docs/sdk"
+     values:
+       product: "sdk"
+  -
+     scope:
+       path: "docs/sdk/dev"
+     values:
+       sidebar: "sdk_dev_sidebar"
+       role: "dev"
+  -
     scope:
       path: "docs/cloud"
     values:
@@ -207,6 +218,9 @@ versioned_categories:
       - legacy-demoshop
       - technology-partner-guides
       - devops-migration-guides
+  pbc:
+    all:
+      - tax-management
 
 # these are defaults used for the front matter for these file types
 
@@ -216,9 +230,11 @@ sidebars:
   - cloud_dev_sidebar
   - scos_dev_sidebar
   - scos_user_sidebar
+  - sdk_dev_sidebar
   - acp_user_sidebar
   - fes_dev_sidebar
   - paas_plus_dev_sidebar
+  - pbc_all_sidebar
 
 
 description: "Spryker documentation center."
@@ -246,15 +262,16 @@ algolia:
       title: 'Marketplace User'
     - name: 'marketplace_dev'
       title: 'Marketplace Developer'
+    - name: 'sdk_dev'
+      title: 'SDK Developer'
     - name: 'cloud_dev'
       title: 'Cloud Developer'
     - name: 'acp_user'
       title: 'ACP User'
     - name: 'fes_dev'
       title: 'Frontend enablement Service Developer'
-    - name: 'paas_plus_dev'
-      title: 'Platform as a Service Plus Developer'
-
+    - name: 'pbc_all'
+      title: 'Packaged Business Capabilities'
 sass:
     sass_dir: css
     style: compressed

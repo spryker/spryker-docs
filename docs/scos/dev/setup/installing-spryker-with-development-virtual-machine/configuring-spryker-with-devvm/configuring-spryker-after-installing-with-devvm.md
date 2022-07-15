@@ -24,6 +24,11 @@ redirect_from:
   - /v1/docs/en/post-installation-steps-and-additional-info
   - /docs/scos/dev/setup/post-installation-steps-and-additional-info.html
 ---
+{% info_block warningBox "Warning" %}
+
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+
+{% endinfo_block %}
 
 ## Configuring Git
 

@@ -37,6 +37,11 @@ The implementation described in this document is exemplary and may require addit
    ```bash
    vagrant halt && vagrant up
    ```
+{% info_block warningBox "Warning" %}
+
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+
+{% endinfo_block %}
 
 5. In the `CheckoutPage` module, create `src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig`:
 

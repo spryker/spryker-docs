@@ -70,8 +70,8 @@ entries:
           url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-devvm.html
         - title: Configuring debugging in a DevVM below version 91
           url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-debugging-in-devvm/configuring-debugging-in-a-devvm-below-version-91.html
-    - title: Installing Spryker without Development Virtual Machine or Docker
-      url: /docs/scos/dev/setup/installing-spryker-without-development-virtual-machine-or-docker.html
+    - title: Installing Spryker without Docker
+      url: /docs/scos/dev/setup/installing-spryker-without-docker.html
     - title: Managing SCOS dependencies with Composer
       url: /docs/scos/dev/setup/managing-scos-dependencies-with-composer.html
     - title: Redis Configuration
@@ -3985,6 +3985,9 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
+    - title: Configure services
+      url: /docs/scos/dev/the-docker-sdk/configure-services.html
+      include_versions:
       - "202204.0"
     - title: Docker SDK configuration reference
       url: /docs/scos/dev/the-docker-sdk/docker-sdk-configuration-reference.html

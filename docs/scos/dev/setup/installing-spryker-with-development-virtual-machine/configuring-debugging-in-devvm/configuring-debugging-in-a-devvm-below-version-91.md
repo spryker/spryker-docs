@@ -24,6 +24,11 @@ redirect_from:
   - /v1/docs/en/debugging-setup-prior-vm91
   - /docs/scos/dev/setup/installing-spryker-with-vagrant/debugger-configuration/configuring-debugging-in-vagrant-with-vm-below-version-91.html
 ---
+{% info_block warningBox "Warning" %}
+
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+
+{% endinfo_block %}
 
 This article describes how to configure debugging in a development environment for VM below version 91.
 

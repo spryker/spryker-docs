@@ -1,10 +1,14 @@
 ---
-title: "Reference information: Tax module"
+title: "Tax module: reference information"
 last_updated: Aug 20, 2021
-description: The Tax module is responsible for handling tax rates that can apply for products, product options, or shipment
-template: concept-topic-template
+description: The Tax module is responsible for handling tax rates that can apply for products, product options or shipment.
+template: feature-walkthrough-template
+originalLink: https://documentation.spryker.com/v2/docs/tax-module
+originalArticleId: 22103ba1-ffdb-4508-b92c-5eaec2dd7f30
 redirect_from:
-  - /docs/scos/dev/feature-walkthroughs/202200.0/tax-feature-walkthrough/reference-information-tax-module.html
+  - /v2/docs/tax-module
+  - /v2/docs/en/tax-module
+  - /docs/scos/dev/feature-walkthroughs/201903.0/tax-feature-walkthrough/reference-information-tax-module.html
 ---
 
 
@@ -144,6 +148,5 @@ class CalculationDependencyProvider extends SprykerCalculationDependencyProvider
 }
 ```
 
-## Migration guide
-
-If you’re migrating the Tax module from version 2 to version 3, you need to follow the steps described in the [Migration Guide—Tax](/docs/scos/dev/module-migration-guides/migration-guide-tax.html).
+## Migration Guide
+If you’re migrating the Tax module from version 2 to version 3, you need to follow the steps described in the [Migration Guide - Tax](/docs/scos/dev/module-migration-guides/migration-guide-tax.html).

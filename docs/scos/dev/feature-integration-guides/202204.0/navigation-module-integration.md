@@ -1,5 +1,5 @@
 ---
-title: Navigation Module Integration
+title: Navigation module integration
 description: The guide walks you through the process of installing the Navigation Module into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/navigation-module-integration
   - /docs/navigation-module-integration
   - /docs/en/navigation-module-integration
+related:
+    - title: Navigation feature walkthrough
+      link: docs/scos/dev/feature-walkthroughs/page.version/navigation-feature-walkthrough/navigation-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-navigation-module.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-navigation-module.md -->

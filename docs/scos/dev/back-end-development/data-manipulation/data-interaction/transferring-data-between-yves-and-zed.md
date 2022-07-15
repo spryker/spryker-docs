@@ -1,5 +1,5 @@
 ---
-title: Transfering data between Yves and Zed
+title: Transferring data between Yves and Zed
 description: In this article, we’ll exemplify how you can set up the communication between Yves and Zed.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/t-transfer-data-yves-zed
   - /v1/docs/t-transfer-data-yves-zed
   - /v1/docs/en/t-transfer-data-yves-zed
+  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transfering-data-between-yves-and-zed.html
 ---
 
 Yves gets most of its data from the client-side NoSQL data stores (data such as product details, product categories, prices, etc.). There are situations when Yves needs to communicate with Zed either to submit data (for example, the customer has submitted a new order or subscribed to a newsletter) or to retrieve data (for example, order history for the customer, customer account details).
@@ -37,6 +38,7 @@ You should have a module for which you set up communication between Yves and Zed
 To implement communication between Yves and Zed, follow the steps below.
 
 ## 1. Create a transfer object
+
 Communication between Yves and Zed is done using [transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html). So the first thing you have to do to establish communication between Yves and Zed, is to create a transfer object as follows:
 
 1. Create a new transfer object and add it to the `src/Pyz/Shared/HelloWorld/Transfer/` folder. In our example, we've called the transfer object `helloworld.transfer.xml` and assigned one property to it:
@@ -75,6 +77,7 @@ public function getSalutationMessage()
 
 
 ## 2. Create the gateway controller
+
 The `GatewayController` is responsible for communication with Yves. It must extend the `AbstractGatewayController` class. So your next step is to create the controller.
 
 Create the `GatewayController` in Zed under `Pyz\Zed\HelloWorld\Communication\Controller`. Add an action to this controller that will call the functionality you have exposed through your facade:
@@ -102,6 +105,7 @@ class GatewayController extends AbstractGatewayController
 ```
 
 ## 3. Implement the stub
+
 Your next step is to move to the client part to add support for calling the controller action we've just added. Follow the steps below.
 
 1. Create a `HelloWorldStub` stub under `src/Pyz/Client/HelloWorld/Zed`. This stub will enable you to submit an HTTP request to Zed.
@@ -149,7 +153,9 @@ class HelloWorldStub implements HelloWorldStubInterface
 </details>
 
 {% info_block infoBox "Request parameter" %}
+
 Through the second parameter, you can pass a transfer object as a request parameter to the request client call.
+
 {% endinfo_block %}
 
 2. Add the corresponding interface for the stub (`HelloWorldStubInterface`). The interface should contain the `getSalutationMessage()` method defined.
@@ -238,10 +244,11 @@ class HelloWorldFactory extends AbstractFactory
 }
 ```
 
-## 4. Implement the Client
-Now that we have the `HelloWorldStub`, we can create the Client that consumes this service.
+## 4. Implement the client
 
-Create the `HelloWorldClient` Cliend under `src/Pyz/Client/HelloWorld` together with its corresponding interface.
+Now that we have the `HelloWorldStub`, we can create the client that consumes this service.
+
+Create the `HelloWorldClient` client under `src/Pyz/Client/HelloWorld` together with its corresponding interface.
 
 ```php
 <?php
@@ -268,6 +275,7 @@ class HelloWorldClient extends AbstractClient implements HelloWorldClientInterfa
 ```
 
 ## 5. Create a controller and a view in Yves
+
 Now that we have everything set up, we can move to Yves and create the controller and the Twig template that will render the random message. Do the following:
 
 1. Under `src/Pyz/Yves/HelloWorld/Controller`, create `IndexController`:
@@ -297,7 +305,7 @@ class IndexController extends AbstractController
 }
 ```
 
-2. Under `src/Pyz/Yves/HelloWorld/Theme/default/index`, create the` index.twig` file:
+2. Under `src/Pyz/Yves/HelloWorld/Theme/default/index`, create the `index.twig` file:
 
 ```php
 {% raw %}{%{% endraw %} extends "@application/layout/layout.twig" {% raw %}%}{% endraw %}
@@ -308,6 +316,7 @@ class IndexController extends AbstractController
 ```
 
 ## 6. Set up the URL routing
+
 Now, the only thing left to do is to take care of the URL routing. Do the following:
 
 1. Under `src/Pyz/Yves/HelloWorld/Plugin/Route`, add `HelloWorldRouteProviderPlugin`:
@@ -337,6 +346,7 @@ class HelloWorldRouteProviderPlugin extends AbstractRouteProviderPlugin
     }
 }
 ```
+
 2. Register your route provider plugin under `RouterDependencyProvider`:
 
 ```php
@@ -358,6 +368,7 @@ vendor/bin/console router:cache:warm-up
 That's it! `https://mysprykershop.com/hello` now displays a random salutation message.
 
 ## ZedRequest header
+
 Since [ZedRequest 3.16.0](https://github.com/spryker/zed-request/releases/tag/3.16.0), you can alter the headers sent with each ZedRequest. You can either use the *default header plugins* or *create your own* by using the `\Spryker\Client\ZedRequestExtension\Dependency\Plugin\HeaderExpanderPluginInterface`.
 
 ### Default header plugins
@@ -398,4 +409,5 @@ class ProjectNameHeaderExpanderPlugin extends AbstractPlugin implements HeaderEx
     }
 }
 ```
-Once you add this plugin to `\Pyz\Client\ZedRequest\ZedRequestDependencyProvider::getHeaderExpanderPlugins()`, your new header will be used with every ZedRequest.
+
+Once you add this plugin to `\Pyz\Client\ZedRequest\ZedRequestDependencyProvider::getHeaderExpanderPlugins()`, your new header will be used with every `ZedRequest`.

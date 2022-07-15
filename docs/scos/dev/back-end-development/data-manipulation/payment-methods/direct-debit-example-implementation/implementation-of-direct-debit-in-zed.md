@@ -22,6 +22,17 @@ redirect_from:
   - /v2/docs/en/dd-be-implementation
   - /v1/docs/dd-be-implementation
   - /v1/docs/en/dd-be-implementation
+related:
+  - title: Implementing Direct Debit payment
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html
+  - title: Implementation of Direct Debit in Yves
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-yves.html
+  - title: Implementation of Direct Debit in the shared layer
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-the-shared-layer.html
+  - title: Integrate Direct Debit into checkout
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html
+  - title: Testing your Direct Debit implementation
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/testing-your-direct-debit-implementation.html
 ---
 
 This article provides the instructions on how to implement the Direct Debit payment method and integrate it into Checkout, State Machine, and OMS on the back-end side.

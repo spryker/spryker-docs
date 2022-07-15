@@ -12,11 +12,15 @@ redirect_from:
   - /docs/en/quotation-process-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/quotation-process-feature-integration.html
 related:
-  - title: Quotation Process + Approval Process feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-approval-process-feature-integration.html
-  - title: Quotation Process + Multiple Carts feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-multiple-carts-feature-integration.html
-  - title: Checkout + Quotation Process feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/checkout-quotation-process-feature-integration.html
+    - title: Glue API - Quotation Process feature integration
+      link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-quotation-process-feature-integration.html
+    - title: Quotation Process + Approval Process feature integration
+      link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-approval-process-feature-integration.html
+    - title: Quotation Process + Multiple Carts feature integration
+      link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-multiple-carts-feature-integration.html
+    - title: Checkout + Quotation Process feature integration
+      link: docs/scos/dev/feature-integration-guides/page.version/checkout-quotation-process-feature-integration.html
+    - title: Quotation Process feature walkthrough
+      link: docs/scos/dev/feature-walkthroughs/page.version/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
 ---
 {% include pbc/all/integrate-features/202204.0/integrate-the-quotation-process-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-quotation-process-feature.md -->

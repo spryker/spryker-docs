@@ -2,6 +2,9 @@
 title: "Best practices: Promote products with search preferences"
 description: Learn how to edit search preferences in the Back Office
 template: back-office-user-guide-template
+related:
+  - title: Search feature overview
+    link: docs/scos/user/features/page.version/search-feature-overview/search-feature-overview.html
 ---
 
 By default, customers can search by product names and SKUs. Search preferences enable searching by product attribute values. However, enabling search preferences for a big number of attributes results in a huge list of search results. This document describes how to effectively use search preferences to promote products.
@@ -21,7 +24,6 @@ You know that customers are very interested in a device with such properties and
 Now customers can search by *Geotagging* and *Autofocus* and are likely to find the *Supracam focus*. Let's assume that there is an existing product attribute *smartphone_camera* with the same values: *Geotagging* and *Autofocus*. The same search preferences are enabled for this attribute. When customers search by *Geotagging* and *Autofocus*, the *Supracam focus* is not always first in the search results.
 
 To make *Supracam focus* appear first in the search results, you need to disable search preferences for the other product attributes with the same values.
-
 
 5. Disable the **FULL TEXT BOOSTED** search preference for the *smartphone_camera* product attribute. For instructions, see [Edit search preferences](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/search-preferences/edit-search-preferences.html).
 

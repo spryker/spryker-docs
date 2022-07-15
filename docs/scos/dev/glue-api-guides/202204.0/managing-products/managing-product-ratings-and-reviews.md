@@ -13,6 +13,9 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/managing-products/managing-product-ratings-and-reviews.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-products/managing-product-ratings-and-reviews.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-products/managing-product-ratings-and-reviews.html
+related:
+  - title: Product Rating and Reviews feature overview
+    link: docs/scos/user/features/page.version/product-rating-and-reviews-feature-overview.html
 ---
 
 [Ratings and reviews](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.

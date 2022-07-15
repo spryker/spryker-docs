@@ -12,16 +12,20 @@ redirect_from:
   - /docs/en/product-labels-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/product-labels-feature-integration.html
 related:
-  - title: Alternative products + product label feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-product-label-feature-integration.html
-  - title: Product group + product labels feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/product-group-product-labels-feature-integration.html
-  - title: Glue API - Product labels feature integration
+  - title: Glue API - Product Labels feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-labels-feature-integration.html
-  - title: Discontinued products + product labels feature integration
+  - title: Alternative products + Product Label feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/alternative-products-product-label-feature-integration.html
+  - title: Product group + Product Labels feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/product-group-product-labels-feature-integration.html
+  - title: Glue API - Product Labels feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-labels-feature-integration.html
+  - title: Discontinued products + Product Labels feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/discontinued-products-product-labels-feature-integration.html
-  - title: Product labels + promotions & discounts feature integration
+  - title: Product labels + Promotions & Discounts feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-labels-promotions-and-discounts-feature-integration.html
+  - title: Product Labels feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-labels-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-product-labels-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-product-labels-feature.md -->

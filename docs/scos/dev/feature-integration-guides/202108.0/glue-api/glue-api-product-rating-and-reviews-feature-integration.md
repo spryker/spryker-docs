@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/glue-api-product-rating-reviews-feature-integration
 ---
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 

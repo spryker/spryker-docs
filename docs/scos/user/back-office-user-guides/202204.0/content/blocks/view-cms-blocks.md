@@ -3,6 +3,9 @@ title: View CMS blocks
 description: Learn how to view CMS blocks in the Back Office.
 last_updated: May 11, 2022
 template: back-office-user-guide-template
+related:
+  - title: CMS blocks overview
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
 ---
 
 To view a CMS block in the Back Office, follow the steps:

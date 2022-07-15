@@ -13,6 +13,10 @@ redirect_from:
 related:
   - title: Shipment feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/shipment-feature-integration.html
+  - title: Shipment feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/shipment-feature-walkthrough.html
+  - title: Cart feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-shipment-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-shipment-cart-feature.md -->

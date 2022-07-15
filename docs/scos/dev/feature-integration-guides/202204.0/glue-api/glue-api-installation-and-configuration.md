@@ -11,6 +11,9 @@ redirect_from:
   - /docs/glue-api-installation-and-configuration
   - /docs/en/glue-api-installation-and-configuration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-installation-and-configuration.html
+related:
+  - title: Customer Account Management feature integration
+    link:
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-glue-api.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-glue-api.md -->

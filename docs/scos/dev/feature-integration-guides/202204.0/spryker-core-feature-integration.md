@@ -14,6 +14,11 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/spryker-core-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201811.0/spryker-core-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/spryker-core-feature-integration.html
+related:
+    - title: Glue API - Spryker Core feature integration
+      link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-spryker-core-feature-integration.html
+    - title: Spryker Core feature walkthrough
+      link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-spryker-core-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-spryker-core-feature.md -->

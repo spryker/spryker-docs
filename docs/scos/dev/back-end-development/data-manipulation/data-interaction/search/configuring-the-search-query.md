@@ -32,6 +32,17 @@ redirect_from:
   - /v3/docs/en/search-query
   - /v2/docs/search-query
   - /v2/docs/en/search-query
+related:
+  - title: Configuring Elasticsearch
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
+  - title: Configuring search for multi-currency
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
+  - title: Configuring the search features
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html
+  - title: Expanding search data
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
+  - title: Facet filter overview and configuration
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
 ---
 
 Once you have all the necessary data in Elasticsearch, it’s time to display it on Yves.

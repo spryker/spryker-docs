@@ -12,6 +12,11 @@ redirect_from:
   - /docs/en/catalog-api-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-catalog-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-catalog-feature-integration.html
+related:
+  - title: Catalog feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/catalog-feature-walkthrough.html
+  - title: Searching the product catalog
+    link: docs/scos/dev/glue-api-guides/page.version/searching-the-product-catalog.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-catalog-glue-api.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-catalog-glue-api.md -->

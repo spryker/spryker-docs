@@ -12,6 +12,13 @@ redirect_from:
   - /docs/en/adding-content-items-to-cms-pages-and-blocks
   - /docs/scos/user/back-office-user-guides/201811.0/content/content-items/adding-content-items-to-cms-pages-and-blocks.html
   - /docs/scos/user/back-office-user-guides/201903.0/content/content-items/adding-content-items-to-cms-pages-and-blocks.html
+related:
+  - title: Content Items feature overview
+    link: docs/scos/user/features/page.version/content-items-feature-overview.html
+  - title: CMS Pages overview
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
+  - title: CMS blocks overview
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
 ---
 
 This topic describes how to add a content item widget to a page and block using the Back Office.
@@ -31,6 +38,7 @@ Prior to adding a content item widget to a block or a page, make sure that the p
 ## Adding content item widgets to pages
 
 To add a content item widget to a page:
+
 1. On the *Overview of CMS Pages* page, In the _Actions_ column, select **Edit&nbsp;<span aria-label="and then">></span> Placeholders** next to the page you want to add a content item widget to.
 2. On the *Edit Placeholders: CMS Page [Name]* page, go to the *Placeholder* tab and place your cursor where you want to insert the content items.
 3. In the editor pane, select the widget you want to add from the **Content Item** drop-down list.
@@ -74,6 +82,7 @@ You can preview the page to see how the content item widget will be displayed on
 ## Adding content item widgets to blocks
 
 To add a content item widget to a block:
+
 1. On the *Overview of CMS Blocks* page, in the _Actions_ column, select **Edit Placeholder** next to the block you want to add a content item widget to.
 3. On the *Edit Block Glossary: Block ID* page, go to the *Placeholder* tab and place your cursor where you want to insert the content items.
 4. In the editor pane, select the widget you want to add from the **Content Item** drop-down list. The *Insert a Content Item* pop-up window opens.

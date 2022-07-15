@@ -11,6 +11,12 @@ redirect_from:
   - /docs/en/cms-page-search-product-lists-catalog-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/cms-product-lists-catalog-feature-integration.html
 related:
+  - title: CMS feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html
+  - title: Product Lists feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-lists-feature-walkthrough.html
+  - title: Catalog feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/catalog-feature-walkthrough.html 
   - title: CMS pages in search results
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-in-search-results-overview.html
   - title: CMS page

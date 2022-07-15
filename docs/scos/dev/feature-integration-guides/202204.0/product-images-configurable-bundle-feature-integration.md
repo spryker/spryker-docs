@@ -21,6 +21,10 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
   - title: Merchant Product Restrictions feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
+  - title: Product feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/product-feature-integration.html
+  - title: Configurable Bundle feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/configurable-product-feature-walkthrough/configurable-product-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-product-images-configurable-bundle-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-product-images-configurable-bundle-feature.md -->

@@ -10,5 +10,10 @@ redirect_from:
   - /2021080/docs/en/comments-order-management-feature-integration
   - /docs/comments-order-management-feature-integration
   - /docs/en/comments-order-management-feature-integration
+related:
+  - title: Comments feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/comments-feature-walkthrough.html
+  - title: Order Management feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/order-management-feature-walkthrough/order-management-feature-wakthrough.html
 ---
 {% include pbc/all/integrate-features/202204.0/integrate-the-comments-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-comments-order-management-feature.md -->

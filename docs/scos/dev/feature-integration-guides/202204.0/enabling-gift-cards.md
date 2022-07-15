@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/enabling-gift-cards
   - /docs/enabling-gift-cards
   - /docs/en/enabling-gift-cards
+related:
+  - title: Gift Cards feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/gift-cards-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-gift-cards-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-gift-cards-feature.md -->

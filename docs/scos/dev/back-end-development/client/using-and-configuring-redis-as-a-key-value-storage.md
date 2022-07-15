@@ -1,5 +1,5 @@
 ---
-title: Using and Configuring Redis as a Key-value Storage
+title: Using and configuring Redis as a key-value storage
 description: This article describes how Redis is used within Spryker; the current functionality can be extended according to your needs.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,11 @@ redirect_from:
   - /v2/docs/en/redis-as-kv
   - /v1/docs/redis-as-kv
   - /v1/docs/en/redis-as-kv
+related:
+  - title: Client
+    link: docs/scos/dev/back-end-development/client/client.html
+  - title: Implementing a client
+    link: docs/scos/dev/back-end-development/client/implementing-a-client.html
 ---
 
 This article describes how Redis is used within Spryker.The current functionality can be extended according to your needs.

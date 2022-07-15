@@ -1,5 +1,5 @@
 ---
-title: Glue API - Product image sets feature integration
+title: Glue API - Product Image Sets feature integration
 description: This guide will navigate you through the process of installing and configuring the Product Image Sets API feature in Spryker OS.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -11,6 +11,13 @@ redirect_from:
   - /docs/glue-api-product-image-sets-api-feature-integration
   - /docs/en/glue-api-product-image-sets-api-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-product-image-sets-feature-integration.html
+related:
+  - title: Product feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-feature-walkthrough.html
+  - title: Retrieving image sets of abstract products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
+  - title: Retrieving image sets of concrete products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-product-image-sets-glue-api.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-product-image-sets-glue-api.md -->

@@ -1,13 +1,13 @@
 ---
-title: Product Measurement Unit feature integration
+title: Measurement Units feature integration
 description: The Measurement Units feature allows defining specific units of measure for products. The guide describes how to integrate the feature into your project.
-last_updated: Nov 22, 2019
+last_updated: Nov 25, 2019
 template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/v2/docs/product-measurement-units-feature-integration-201903
-originalArticleId: 5bde34e0-2f26-4995-bd0a-aaa070b73316
+originalLink: https://documentation.spryker.com/v1/docs/product-measurement-units-feature-integration-201811
+originalArticleId: 87885373-7be5-4321-9c07-2d839ae47819
 redirect_from:
-  - /v2/docs/product-measurement-units-feature-integration-201903
-  - /v2/docs/en/product-measurement-units-feature-integration-201903
+  - /v1/docs/product-measurement-units-feature-integration-201811
+  - /v1/docs/en/product-measurement-units-feature-integration-201811
 ---
 
 ## Install Feature Core
@@ -16,22 +16,23 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version |
 | --- | --- |
-| Cart | 201903.0 |
-|Product|201903.0|
-|Order Management|201903.0|
-|Spryker Core|201903.0|
+| Cart | 2018.11.0 |
+|Product|2018.11.0|
+|Order Management|2018.11.0|
+|Spryker Core|2018.11.0|
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
-`composer require spryker-feature/measurement-units: "^201903.0" --update-with-dependencies`
+```
+composer require spryker-feature/measurement-units: "^2018.11.0" --update-with-dependencies
+```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules are installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`ProductMeasurementUnit`</td><td>`vendor/spryker/product-measurement-unit`</td></tr><tr><td>`ProductMeasurementUnitDataImport`</td><td>`vendor/spryker/product-measurement-unit-data-import`</td></tr><tr><td>`ProductMeasurementUnitStorage`</td><td>`vendor/spryker/product-measurement-unit-storage`</td></tr></tbody></table>
+Make sure that the following modules have been installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`ProductMeasurementUnit`</td><td>`vendor/spryker/product-measurement-unit`</td></tr><tr><td>`ProductMeasurementUnitDataImport`</td><td>`vendor/spryker/product-measurement-unit-data-import`</td></tr><tr><td>`ProductMeasurementUnitStorage`</td><td>`vendor/spryker/product-measurement-unit-storage`</td></tr></tbody></table>
 {% endinfo_block %}
 
-
-### 2) Set up Database Schema and Transfer Objects
+### 2) Set up Database Schema and Transfer objects
 Adjust the schema definition so entity changes will trigger events.
 
 |Module  |Triggered events  |
@@ -79,24 +80,25 @@ Adjust the schema definition so entity changes will trigger events.
 ```
 <br>
 </details>
-Run the following commands to apply database changes and generate entity and transfer changes:
 
+Run the following commands to apply database changes and generate entity and transfer changes:
 ```bash
 console transfer:generate
 console propel:install
 console transfer:generate
 ```
+
 {% info_block warningBox "Verification" %}
-Make sure that the following changes by checking your database: <table><thead><tr><th>Database Entity</th><th>Type</th><th>Event</th></tr></thead><tbody><tr><td>`spy_product_measurement_unit`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_measurement_base_unit`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_measurement_sales_unit`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_measurement_sales_unit_store`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_measurement_unit_storage`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_concrete_measurement_unit_storage`</td><td>table</td><td>created</td></tr><tr><td>`spy_sales_order_item.quantity_base_measurement_unit_name`</td><td>column</td><td>created</td></tr><tr><td>`spy_sales_order_item.quantity_measurement_unit_name`</td><td>column</td><td>created</td></tr><tr><td>`spy_sales_order_item.quantity_measurement_unit_precision`</td><td>column</td><td>created</td></tr><tr><td>`spy_sales_order_item.quantity_measurement_unit_conversion`</td><td>column</td><td>created</td></tr></tbody></table>
+Make sure that the following changes by checking your database:<table><thead><tr><th>Database entity</th><th>Type</th><th>Event</th></tr></thead><tbody><tr><td>`spy_product_measurement_unit`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_measurement_base_unit`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_measurement_sales_unit`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_measurement_sales_unit_store`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_measurement_unit_storage`</td><td>table</td><td>created</td></tr><tr><td>`spy_product_concrete_measurement_unit_storage`</td><td>table</td><td>created</td></tr><tr><td>`spy_sales_order_item.quantity_base_measurement_unit_name`</td><td>column</td><td>created</td></tr><tr><td>`spy_sales_order_item.quantity_measurement_unit_name`</td><td>column</td><td>created</td></tr><tr><td>`spy_sales_order_item.quantity_measurement_unit_precision`</td><td>column</td><td>created</td></tr><tr><td>`spy_sales_order_item.quantity_measurement_unit_conversion`</td><td>column</td><td>created</td></tr></tbody></table>
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the following changes in transfer objects:<table><thead><tr><th>Transfer</th><th>Type</th><th>Event</th><th>Path</th></tr></thead><tbody><tr><td>`ProductMeasurementUnit`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductMeasurementUnitTransfer`</td></tr><tr><td>`ProductMeasurementBaseUnit`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductMeasurementBaseUnitTransfer`</td></tr><tr><td>`ProductMeasurementSalesUnit`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductMeasurementSalesUnitTransfer`</td></tr><tr><td>`SpyProductMeasurementUnitEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductMeasurementUnitEntityTransfer`</td></tr><tr><td>`SpyProductMeasurementBaseUnitEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductMeasurementBaseUnitEntityTransfer`</td></tr><tr><td>`SpyProductMeasurementSalesUnitEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductMeasurementSalesUnitEntityTransfer`</td></tr><tr><td>`SpyProductMeasurementSalesUnitStoreEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductMeasurementSalesUnitStoreEntityTransfer`</td></tr><tr><td>`ProductMeasurementUnitStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductMeasurementUnitStorageTransfer`</td></tr><tr><td>`ProductConcreteMeasurementBaseUnit`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductConcreteMeasurementBaseUnitTransfer`</td></tr><tr><td>`ProductConcreteMeasurementSalesUnit`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductConcreteMeasurementSalesUnitTransfer`</td></tr><tr><td>`ProductConcreteMeasurementUnitStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductConcreteMeasurementUnitStorageTransfer`</td></tr><tr><td>`SpyProductMeasurementUnitStorageEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductMeasurementUnitStorageEntityTransfer`</td></tr><tr><td>`SpyProductConcreteMeasurementUnitStorageEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductConcreteMeasurementUnitStorageEntityTransfer`</td></tr></tbody></table>
+Make sure that the following changeshave been apllied in transfer objects:<table><thead><tr><th>Transfer</th><th>Type</th><th>Event</th><th>Path</th></tr></thead><tbody><tr><td>`ProductMeasurementUnit`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductMeasurementUnitTransfer`</td></tr><tr><td>`ProductMeasurementBaseUnit`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductMeasurementBaseUnitTransfer`</td></tr><tr><td>`ProductMeasurementSalesUnit`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductMeasurementSalesUnitTransfer`</td></tr><tr><td>`SpyProductMeasurementUnitEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductMeasurementUnitEntityTransfer`</td></tr><tr><td>`SpyProductMeasurementBaseUnitEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductMeasurementBaseUnitEntityTransfer`</td></tr><tr><td>`SpyProductMeasurementSalesUnitEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductMeasurementSalesUnitEntityTransfer`</td></tr><tr><td>`SpyProductMeasurementSalesUnitStoreEntityTransfer`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductMeasurementSalesUnitStoreEntityTransfer`</td></tr><tr><td>`ProductMeasurementUnitStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductMeasurementUnitStorageTransfer`</td></tr><tr><td>`ProductConcreteMeasurementBaseUnit`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductConcreteMeasurementBaseUnitTransfer`</td></tr><tr><td>`ProductConcreteMeasurementSalesUnit`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductConcreteMeasurementSalesUnitTransfer`</td></tr><tr><td>`ProductConcreteMeasurementUnitStorage`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/ProductConcreteMeasurementUnitStorageTransfer`</td></tr><tr><td>`SpyProductMeasurementUnitStorageEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductMeasurementUnitStorageEntityTransfer`</td></tr><tr><td>`SpyProductConcreteMeasurementUnitStorageEntity`</td><td>class</td><td>created</td><td>`src/Generated/Shared/Transfer/SpyProductConcreteMeasurementUnitStorageEntityTransfer`</td></tr></tbody></table>
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
-Make sure that the changes were implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:<table><thead><tr><th>Path</th><th>Method Name</th></tr></thead><tbody><tr><td>`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementUnit.php`</td><td><ul><li>`prepareSaveEventName(
-{% endinfo_block %}`</li><li>`addSaveEventToMemory()`</li><li>`addDeleteEventToMemory()`</li></ul></td></tr><tr><td>`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementBaseUnit.php`</td><td><ul><li>`prepareSaveEventName()`</li><li>`addSaveEventToMemory()`</li><li>`addDeleteEventToMemory()`</li></ul></td></tr><tr><td>`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementSalesUnit.php`</td><td><ul><li>`prepareSaveEventName()`</li><li>`addSaveEventToMemory()`</li><li>`addDeleteEventToMemory()`</li></ul></td></tr><tr><td>`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementSalesUnitStore.php`</td><td><ul><li>`prepareSaveEventName()`</li><li>`addSaveEventToMemory()`</li><li>`addDeleteEventToMemory()`</li></ul></td></tr></tbody></table>)
+Make sure that the changes were implemented successfully. For this purpose, trigger the following methods and make sure that the above events have been triggered:<table><thead><tr><th>Path</th><th>Method name</th></tr></thead><tbody><tr><td>`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementUnit.php`</td><td><ul><li>`prepareSaveEventName(
+{% endinfo_block %}`</li><li>`addSaveEventToMemory()`</li><li>`addDeleteEventToMemory()`</li></ul><td></tr><tr><td>`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementBaseUnit.php`</td><td><ul><li>`prepareSaveEventName()`</li><li>`addSaveEventToMemory()`</li><li>`addDeleteEventToMemory()`</li></ul></td></tr><tr><td>`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementSalesUnit.php`</td><td><ul><li>`prepareSaveEventName()`</li><li>`addSaveEventToMemory()`</li><li>`addDeleteEventToMemory()`</li></ul></td></tr><tr><td>`src/Orm/Zed/ProductMeasurementUnit/Persistence/Base/SpyProductMeasurementSalesUnitStore.php`</td><td><ul><li>`prepareSaveEventName()`</li><li>`addSaveEventToMemory()`</li><li>`addDeleteEventToMemory()`</li></ul></td></tr></tbody></table>)
 
 ### 3) Add Translations
 
@@ -132,14 +134,15 @@ measurement_units.standard.length.feet.name,Fuß,de_DE
 ```
 <br>
 </details>
+
 Run the following console command to import data:
 ```
 console data:import glossary
 ```
- {% info_block warningBox "Verification" %}
+
+{% info_block warningBox "Verification" %}
 Make sure that in the database the configured data are added to the `spy_glossary` table.
 {% endinfo_block %}
-
 
 ### 4) Configure Export to Redis
 This step will publish tables on change (create, edit, delete) to the `spy_product_measurement_unit_storage` and `spy_product_concrete_measurement_unit_storage` and synchronise the data to Storage.
@@ -175,7 +178,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 <br>
 </details>
 
-#### Setup Re-Generate and Re-Sync Features
+#### Set up Re-Generate and Re-Sync Features
 
 | Plugin | Specification | Prerequisites | Namespace |
 | --- | --- | --- | --- |
@@ -185,7 +188,7 @@ class EventDependencyProvider extends SprykerEventDependencyProvider
 | `ProductMeasurementUnitSynchronizationDataPlugin` | Allows synchronizing the whole storage table content into Storage. | None | `Spryker\Zed\ProductMeasurementUnitStorage\Communication\Plugin\Synchronization` |
 
 <details open>
-<summary markdown='span'>src/Pyz/Zed/EventBehavior/EventBehaviorDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/EventBehavior/EventBehaviorDependencyProvider.php</summary
 
 ```php
 <?php
@@ -214,7 +217,7 @@ class EventBehaviorDependencyProvider extends SprykerEventBehaviorDependencyProv
 </details>
 
 <details open>
-<summary markdown='span'>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.ph</summary>
 
 ```php
 <?php
@@ -243,7 +246,6 @@ class SynchronizationDependencyProvider extends SprykerSynchronizationDependency
 </details>
 
 ### 5) Import Data
-
 #### Add Infrastructural Data
 
 | Plugin | Specification | Prerequisites | Namespace |
@@ -281,6 +283,7 @@ Run the following console command to execute registered installer plugins and in
 ```
 console setup:init-db
 ```
+
 {% info_block warningBox "Verification" %}
 Make sure that in the database that the configured infrastructural measurement units are added to the `spy_product_measurement_unit` table.
 {% endinfo_block %}
@@ -292,6 +295,7 @@ The following imported entities will be used as measurement units in the Spryker
 {% endinfo_block %}
 
 Prepare your data according to your requirements using our demo data:
+
 <details open>
 <summary markdown='span'>vendor/spryker/product-measurement-unit-data-import/data/import/product_measurement_unit.csv</summary>
 
@@ -355,12 +359,6 @@ measurement_units.standard.box.name,BOX,1
 |code|mandatory|unique, string|CBME|A unique identifier used by the Spryker OS to identify measurement units.|
 |default_precision|mandatory|integer, power of ten|100|A property that affects how detailed to render a float measurement unit. Affects visual only, not used in calculations.|
 
-Register the following plugin to enable data import:
-
-| Plugin | Specification | Prerequisites | Namespace |
-| --- | --- | --- | --- |
-| `ProductMeasurementUnitDataImportPlugin` | Imports measurement unit data into the database. | None | `Spryker\Zed\ProductMeasurementUnitDataImport\Communication\Plugin` |
-
 <details open>
 <summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
@@ -389,6 +387,7 @@ Run the following console command to import data
 ```
 console data:import product-measurement-unit
 ```
+
 {% info_block warningBox "Verification" %}
 Make sure that in the database that the configured data are added to the `spy_product_measurement_unit` table.
 {% endinfo_block %}
@@ -399,6 +398,7 @@ Make sure that in the database that the configured data are added to the `spy_pr
 Imports data that defines the base measurement unit of each product abstract.
 {% endinfo_block %}
 Prepare your data according to your requirements using our demo data:
+
 <details open>
 <summary markdown='span'>vendor/spryker/product-measurement-unit-data-import/data/import/product_measurement_base_unit.csv</summary>
 
@@ -414,8 +414,8 @@ ITEM,218
 
 | Column | Is obligatory? | Data type | Data example | Data explanation |
 | --- | --- | --- | --- | --- |
-| `code` | mandatory | string | METR |  An existing measurement unit code that will be the base of measurement unit calculations for this product abstract. |
-|`abstract_sku`|mandatory|virtual-unique, string|215|An existing product abstract SKU. 1 product abstract can have only 1 base unit; multiple occurrences will override older ones.|
+| code | mandatory | string | METR |  An existing measurement unit code that will be the base of measurement unit calculations for this product abstract. |
+|abstract_sku|mandatory|virtual-unique, string|215|An existing product abstract SKU. 1 product abstract can have only 1 base unit; multiple occurrences will override older ones.|
 Register the following plugin to enable data import:
 
 | Plugin |Specification  | Prerequisites |Namespace  |
@@ -450,6 +450,7 @@ Run the following console command to import data:
 ```
 console data:import product-measurement-base-unit
 ```
+
 {% info_block warningBox "Verification" %}
 Make sure that in the database that the configured data are added to the `spy_product_measurement_base_unit` table.
 {% endinfo_block %}
@@ -482,8 +483,6 @@ sales_unit_17,218_1234,METR,1,100,1,1
 sales_unit_18,217_1231,ITEM,1,1,1,1
 sales_unit_19,218_1232,ITEM,1,1,1,1
 ```
-<br>
-</details>
 
 | Column | Is obligatory? | Data type | Data example | Data explanation |
 | --- | --- | --- | --- | --- |
@@ -494,7 +493,6 @@ sales_unit_19,218_1232,ITEM,1,1,1,1
 |precision|mandatory|integer, power of ten, empty|100|A property that affects how detailed to render a float measurement unit. Affects visual only, not used in calculations. <br>When left empty, the precision of the measurement unit is used.|
 |is_displayed|mandatory|integer|0|Controls if the sales unit can be displayed for customers.|
 |is_default|mandatory|integer|1|Controls if this sales unit is preferred as the default sales unit when offered for customers.<br>Takes no effect if is_displayed set as 0.<br>1 product concrete can have up to 1 default sales unit.|
-
 Register the following plugin:
 
 | Plugin | Specification |Prerequisites  |Namespace  |
@@ -529,17 +527,14 @@ Run the following console command to import data:
 ```
 console data:import product-measurement-sales-unit
 ```
-
 {% info_block warningBox "Verification" %}
 Make sure that in the database that the configured data are added to the `spy_product_measurement_sales_unit` table.
 {% endinfo_block %}
 
 #### Import Product Measurement Sales Unit Stores:
-
 {% info_block infoBox "Info" %}
 Contains the Store configuration for each defined sales unit.<br>Proceed with this step even if you have only 1 Store.
 {% endinfo_block %}
-
 Prepare your data according to your requirements using our demo data:
 <details open>
 <summary markdown='span'>vendor/spryker/product-measurement-unit-data-import/data/import/product_measurement_sales_unit_store.csv</summary>
@@ -613,7 +608,6 @@ Register the following plugin:
 |Plugin  | Specification |  Prerequisites|Namespace  |
 | --- | --- | --- | --- |
 |`ProductMeasurementSalesUnitStoreDataImportPlugin`  |Imports sales measurement units' Store configuration into the database.  | <ul><li>Referred sales units to be imported.</li><li>Referred Stores to be imported.</li></ul> | `Spryker\Zed\ProductMeasurementUnitDataImport\Communication\Plugin` |
-
 <details open>
 <summary markdown='span'>src/Pyz/Zed/DataImport/DataImportDependencyProvider.php</summary>
 
@@ -639,7 +633,7 @@ class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 </details>
 
 Run the following console command to import data:
-```bash
+```
 console data:import product-measurement-sales-unit-store
 ```
 {% info_block warningBox "Verification" %}
@@ -647,8 +641,7 @@ Make sure that in the database that the configured data are added to the `spy_pr
 {% endinfo_block %}
 
 ### 6) Set up Behavior
-
-#### Setup Checkout Workflow
+#### Set up Checkout Workflow
 Enable the following behaviors by registering the plugins:
 
 | Plugin | Specification | Prerequisites |Namespace  |
@@ -731,6 +724,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
 <br>
 </details>
 
+
 <details open>
 <summary markdown='span'>src/Pyz/Zed/Sales/SalesDependencyProvider.php</summary>
 
@@ -769,6 +763,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 ```
 <br>
 </details>
+
 {% info_block warningBox "Verification" %}
 Make sure that `<add to cart>` action works with measurement units by adding an item to cart with sales unit and checking if `QuoteTransfer.items[].quantitySalesUnit` record gets populated.
 {% endinfo_block %}
@@ -776,25 +771,24 @@ Make sure that `<add to cart>` action works with measurement units by adding an 
 Make sure that checkout workflow works with measurement unit by ordering item with sales unit and checking the `spy_sales_order_item` contains `quantity_base_measurement_unit_name`, `quantity_measurement_unit_name`, `quantity_measurement_unit_code`, `quantity_measurement_unit_precision` and `quantity_measurement_unit_conversion` fields populated
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please overview and install the necessary features before beginning the integration step.
 
 |Name  | Version |
 | --- | --- |
-| Spryker Core E-commerce |201903.0 |
-|Checkout|201903.0|
+| Spryker Core E-commerce | 2018.11.0 |
+|Checkout|2018.11.0|
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 ```bash
-composer require spryker-feature/measurement-units: "^201903.0" --update-with-dependencies
+composer require spryker-feature/measurement-units: "^2018.11.0" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
-Make sure that the following modules are installed:<table><thead><tr><th>Module</th><th>Expected Directory</th></tr></thead><tbody><tr><td>`ProductMeasurementUnitWidget`</td><td>`vendor/spryker-shop/product-measurement-unit-widget`</td></tr></tbody></table>
+Make sure that the following modules are installed:<table><thead><tr><th>Module</th><th>Expected directory</th></tr></thead><tbody><tr><td>`ProductMeasurementUnitWidget`</td><td>`vendor/spryker-shop/product-measurement-unit-widget`</td></tr></tbody></table>
 {% endinfo_block %}
-
 
 ### 2) Add Translations
 
@@ -836,6 +830,7 @@ console data:import glossary
 Make sure that in the database the configured data are added to the `spy_glossary` table.
 {% endinfo_block %}
 
+
 ### 3) Set up Widgets
 
 Register the following plugins to enable widgets:
@@ -844,7 +839,6 @@ Register the following plugins to enable widgets:
 | --- | --- | --- | --- |
 | `ProductMeasurementUnitWidgetPlugin` | Allows customers to select sales units for the product when adding to cart. |None  | `SprykerShop\Yves\ProductMeasurementUnitWidget\Plugin\ProductDetailPage` |
 |`QuantitySalesUnitWidgetPlugin`|Displays selected sales unit information for products on the cart overview page.|None|`SprykerShop\Yves\ProductMeasurementUnitWidget\Plugin\CartPage`|
-
 <details open>
 <summary markdown='span'>src/Pyz/Yves/ProductDetailPage/ProductDetailPageDependencyProvider.php</summary>
 
@@ -906,10 +900,11 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 |Controls base unit => sales unit calculations. Applies product quantity restrictions on sales unit level. Offers recommendation when invalid quantity is selected. Maintains stock-based quantity and sales unit information for posting  |`vendor/spryker-shop/product-measurement-unit-widget/src/SprykerShop/Yves/ProductMeasurementUnitWidget/Theme/default/components/molecules/measurement-quantity-selector/measurement-quantity-selector.ts`  |
 
 Run the following command to enable Javascript and CSS changes:
-```
+```bash
 console frontend:yves:build
 ```
 
 {% info_block warningBox "Verification" %}
 Make sure that the following widgets were registered:<table><thead><tr><th>Module</th><th>Test</th></tr></thead><tbody><tr><td>`ProductMeasurementUnitWidgetPlugin`</td><td>Go to the product detail page where the product has sales units and add a product to the cart with a sales unit.</td></tr><tr><td>`QuantitySalesUnitWidgetPlugin`</td><td>Go to the cart overview page and see if the sales unit information appears for a product.</td></tr></tbody></table>
 {% endinfo_block %}
+

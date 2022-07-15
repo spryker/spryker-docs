@@ -26,6 +26,15 @@ redirect_from:
   - /2021080/docs/en/oms-state-machine
   - /docs/oms-state-machine
   - /docs/en/oms-state-machine
+related:
+  - title: Order management system multi-thread
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-management-system-multi-thread.html
+  - title: Order process modelling via state machines
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html
+  - title: State machine console commands
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/state-machine-console-commands.html
+  - title: Common pitfalls in OMS design
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
 ---
 
 {% info_block infoBox %}
@@ -35,6 +44,7 @@ This tutorial is also available on the Spryker Training website. For more inform
 {% endinfo_block %}
 
 ## Challenge description
+
 In this task, you will create a full order management process (OMS) using the Spryker state machine and then use it in your shop.
 
 ### 1. Create the state machine skeleton
@@ -42,6 +52,7 @@ In this task, you will create a full order management process (OMS) using the Sp
 In this order process, you will use the following states: _new_, _paid_, _shipped_, _returned_, _refunded_, _unauthorized_, and _closed_.
 
 You will build all the transitions and events between these states as well. The skeleton of Spryker state machines is simply an XML file.
+
 1. Create a new XML file in `config/Zed/oms` and call it *Demo01.xml*.
 2. Add the *Demo01* state machine process schema as follows:
 
@@ -86,9 +97,12 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
 5. Check the state machine graph while building it.
     1. Go to the **Administration → OMS** page in the Backend Office, you will see your state machine **Demo01**.
     2. Click on it and you will see the graph that represents your XML file.
-{% info_block infoBox %}
-Whenever you change the skeleton in the XML file, refresh the page so see the new changes.
-{% endinfo_block %}
+	
+	{% info_block infoBox %}
+
+	Whenever you change the skeleton in the XML file, refresh the page so see the new changes.
+	
+	{% endinfo_block %}
 
 6. Add the rest of the states to the state machine. Refresh the state machine graph after adding them.
 
@@ -194,7 +208,9 @@ Let's start with the first transition. Refresh after adding the transition and c
 ```
 
 {% info_block infoBox %}
+
 The skeleton of the order process is now done. Refresh the graph and check your process.
+
 {% endinfo_block %}
 
 ### 2. Add a command and condition to the state machine
@@ -210,7 +226,9 @@ They are both implemented in PHP and injected in the state machine skeleton.
 1. Add a dummy command to perform the payment.
 
 {% info_block infoBox %}
+
 In a real scenario, this command would call a payment provider to authorize the payment.
+
 {% endinfo_block %}
 
 A command in the Spryker state machine is added to an event. So add the command **Pay** to the pay event.
@@ -220,13 +238,17 @@ A command in the Spryker state machine is added to an event. So add the command 
 ```
 
 {% info_block infoBox %}
+
 Refresh the graph again. You will see that the command is added with the label not implemented. This means that the PHP implementation is not hooked yet.
+
 {% endinfo_block %}
 
 2. Then, add the command and hook it into the skeleton. The command is simply a Spryker plugin connected to the OMS module.
 
 {% info_block infoBox %}
+
 For the demo, we will add the command plugin directly to the OMS module. In a real-life scenario, you can include the plugin in any other module, depending on the software design of your shop.
+
 {% endinfo_block %}
 
 Add the command plugin to `src/Pyz/Zed/Oms/Communication/Plugin/Command/Demo` and call it `PayCommand`.
@@ -289,13 +311,17 @@ protected function extendCommandPlugins(Container $container): Container
 ```
 
 {% info_block infoBox %}
+
 Refresh the graph. You should not see the not implemented label anymore, meaning that the state machine  recognizes the command.
+
 {% endinfo_block %}
 
 4. Add the condition in the same way but using the `ConditionInterface` interface for the plugin instead of the command one. The state machine engine recognizes where to move next using the event name. In this case, the transitions `paid->shipped` and `paid->unauthorized` should use the same event name with a condition on one of the transitions.
 
 {% info_block infoBox %}
+
 The machine then examines the condition. If it returns `true`, then go to shipped state. Otherwise, go to unauthorized.
+
 {% endinfo_block %}
 
 The skeleton will look like this:
@@ -378,25 +404,32 @@ Your process should be working now.
 ### 4. Test the state machine
 
 You have just built a new order process. To test it, do the following:
+
 1. Go to the shop, chose a product, add it to cart, and checkout using the Invoice payment method.
 2. Open the orders page in Zed UI and then open your order.
 
 {% info_block infoBox %}
+
 This order is now applying the process you have defined in the state machine.
+
 {% endinfo_block %}
 
 3. There is the **ship** button to trigger the manual event ship.
 4. Click on the last state name under the state column to see the current state for a specific item.
 
 {% info_block infoBox %}
- The current state has a yellowish background color.
+
+The current state has a yellowish background color.
+
 {% endinfo_block %}
 
 5. Click on **ship** to move the item into the next state.
 6. Click again on the last state name and check the current state.
 
 {% info_block warningBox %}
+
 You can keep moving the item until the order is closed.
+
 {% endinfo_block %}
 
 ### Nice addition

@@ -12,6 +12,9 @@ redirect_from:
   - /docs/en/managing-tax-rates
   - /docs/scos/user/back-office-user-guides/202200.0/administration/tax-rates/managing-tax-rates.html
   - /docs/scos/user/back-office-user-guides/202204.0/administration/tax-rates/managing-tax-rates.html
+related:
+  - title: Tax feature overview
+    link: docs/scos/user/features/page.version/tax-feature-overview.html
 ---
 
 To create a [tax rate](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) in the Back Office, follow the steps:

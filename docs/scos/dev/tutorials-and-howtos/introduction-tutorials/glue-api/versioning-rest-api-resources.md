@@ -20,7 +20,7 @@ redirect_from:
   - /v1/docs/versioning-rest-api-resources
   - /v1/docs/en/versioning-rest-api-resources
 related:
-  - title: Glue Infrastructure
+  - title: Glue infrastructure
     link: docs/scos/dev/glue-api-guides/page.version/glue-infrastructure.html
 ---
 

@@ -10,6 +10,9 @@ redirect_from:
   - /docs/product-packaging-unit-feature-integration
   - /docs/en/product-packaging-unit-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/packaging-units-feature-integration.html
+related:
+  - title: Packaging Unit feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/packaging-units-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-packaging-units-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-packaging-units-feature.md -->

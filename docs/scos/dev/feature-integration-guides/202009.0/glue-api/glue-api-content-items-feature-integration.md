@@ -10,7 +10,7 @@ redirect_from:
   - /v6/docs/en/glue-api-content-items-api-feature-integration
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

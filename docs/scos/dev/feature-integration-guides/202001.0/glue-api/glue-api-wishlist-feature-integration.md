@@ -13,7 +13,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html
 ---
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 

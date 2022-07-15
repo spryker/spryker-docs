@@ -2,6 +2,17 @@
 title: Reorder product sets
 description: Learn how to reorder product sets in the Back Office.
 template: back-office-user-guide-template
+related:
+  - title: Create product sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/create-product-sets.html
+  - title: Edit product sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/edit-product-sets.html
+  - title: View product sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/view-product-sets.html
+  - title: Delete product sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/delete-product-sets.html
+  - title: Product Sets feature overview
+    link: docs/scos/user/features/page.version/product-sets-feature-overview.html
 ---
 
 This document describes how to reorder product sets in the Back Office by defining weight. A product set's weight, relatively to other the other product sets' weight on a page defines how high it is on a page.

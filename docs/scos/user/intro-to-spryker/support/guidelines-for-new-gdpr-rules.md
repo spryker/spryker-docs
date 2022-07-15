@@ -34,6 +34,7 @@ As of May the 25th, 2018, the new General Data Protection Regulations (GDPR) tak
 
 GDPR is a set of rules related to the protection and control of personal data.
 For more information about GDPR, see:
+
 * [GDPR official site](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=celex%3A32016R0679)
 * [GDPR summary](https://gdpr-info.eu/)
 

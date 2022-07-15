@@ -11,7 +11,7 @@ redirect_from:
   - /docs/managing-slots
   - /docs/en/managing-slots
 related:
-  - title: Templates & Slots Feature Overview
+  - title: Templates & Slots feature overview
     link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html
 ---
 

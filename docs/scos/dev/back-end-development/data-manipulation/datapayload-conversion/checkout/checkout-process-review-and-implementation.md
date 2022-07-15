@@ -1,5 +1,5 @@
 ---
-title: Checkout Process Review and Implementation
+title: Checkout process review and implementation
 description: This article provides an overview of the checkout process and how it is implemented in Spryker.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -18,11 +18,15 @@ redirect_from:
   - /v4/docs/en/checkout-process-review-and-implementation
   - /v2/docs/checkout-process-review-and-implementation
   - /v2/docs/en/checkout-process-review-and-implementation
+related:
+  - title: Checkout steps
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html
 ---
 
 ### Checkout process
 
 To use checkout in Yves, first, you need to configure it correctly and provide dependencies. Each step can have a form, a controller action, the implementation of the step logic and Twig template to render the HTML.
+
 * Forms—current step form collection.
 * Controller action—the action that is called when the step is being triggered.
 * Step—a class that implements the StepInterface and handles the data passed through the form.
@@ -31,6 +35,7 @@ To use checkout in Yves, first, you need to configure it correctly and provide d
 Each form in the Checkout uses `QuoteTransfer` for data storage. When the data is being submitted, it’s automatically mapped by the Symfony form component to `QuoteTransfer`. If the form is valid, the updated `QuoteTransfer` is passed to `Step::execute()` method where you can modify it further or apply custom logic. Also, there is Symfony Request object passed if additional/manual data mapping is required.
 
 There are a few factories provided for checkout dependency wiring:
+
 * `FormFactory`—creates form collections for each step.
 * `StepFactory`—creates the steps together with their dependencies and plugins.
 * `CheckoutFactory`—where the StepProcess is created for all steps.

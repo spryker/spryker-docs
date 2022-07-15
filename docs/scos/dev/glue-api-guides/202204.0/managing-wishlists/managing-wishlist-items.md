@@ -8,6 +8,8 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html
   - title: Authenticating as a customer
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
+  - title: Wishlist feature overview
+    link: docs/scos/user/features/page.version/wishlist-feature-overview.html
 ---
 
 This endpoint allows you to add and remove items from wishlists.

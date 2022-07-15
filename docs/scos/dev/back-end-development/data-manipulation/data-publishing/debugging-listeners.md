@@ -1,5 +1,5 @@
 ---
-title: Debugging Listeners
+title: Debugging listeners
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-debug-listeners
@@ -17,6 +17,25 @@ redirect_from:
   - /v4/docs/en/ht-debug-listeners
   - /v2/docs/cronjob-scheduling-guide
   - /v2/docs/en/cronjob-scheduling-guide
+related:
+  - title: Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
+  - title: Implementing Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-publish-and-synchronization.html
+  - title: Handling data with Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html
+  - title: Adding publish events
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/adding-publish-events.html
+  - title: Implementing event trigger publisher plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html
+  - title: Implementing synchronization plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
+  - title: Publish and Synchronize and multi-store shop systems
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
+  - title: Publish and Synchronize repeated export
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+  - title: Synchronization behavior - enabling multiple mappings
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
 {% info_block infoBox %}

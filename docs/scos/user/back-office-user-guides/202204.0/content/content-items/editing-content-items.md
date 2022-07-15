@@ -11,7 +11,7 @@ redirect_from:
   - /docs/editing-content-items
   - /docs/en/editing-content-items
 related:
-  - title: Content Items Feature Overview
+  - title: Content Items feature overview
     link: docs/scos/user/features/page.version/content-items-feature-overview.html
 ---
 

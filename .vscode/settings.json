@@ -7,9 +7,9 @@
     "en"
   ],
   "spellright.documentTypes": [
-    "markdown",
     "latex",
-    "plaintext"
+    "plaintext",
+    "markdown"
   ],
   "cSpell.words": [
     "Spryker",
@@ -18,5 +18,5 @@
   ],
   "grammarly.config.documentDialect": "american",
   "grammarly.config.suggestions.OxfordComma": true,
-  "commentTranslate.targetLanguage": "uk"
+  "editor.renderWhitespace": "all"
 }

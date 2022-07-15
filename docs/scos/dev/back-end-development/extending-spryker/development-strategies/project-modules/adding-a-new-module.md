@@ -34,13 +34,16 @@ In this tutorial we will create a test module: `HelloWorld` module; the module�
 When a new concept needs to be defined, a new module needs to be added on the project side to encapsulate that concept. The new module needs to follow the same folder structure and conventions as the ones in Core.
 
 ## Prerequisites
+
 To implement this functionality, it’s necessary to have an index view together with its matching controller and a `HelloWorld` dependency provider.
 
 ## Creating a new module
+
 To create a new module:
+
 1. Run the following commands to create the necessary files, following the folder structure conventions:
 
-```
+```bash
 mkdir -p src/Pyz/Zed/HelloWorld/Presentation/Index
 touch src/Pyz/Zed/HelloWorld/Presentation/Index/index.twig
 
@@ -52,13 +55,14 @@ touch src/Pyz/Zed/HelloWorld/HelloWorldDependencyProvider.php
 
 2. Insert the ‘Hello world !’ message inside the view (`index.twig`):
 
-```
+```twig
 {% raw %}{%{% endraw %} extends '@Gui/Layout/layout.twig' {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
    Hello world!
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+
 `IndexController`at the moment is empty (its index action returns an empty array) :
 
 ```php
@@ -98,6 +102,7 @@ Additionally, you can use the code generator to create a module. For this, run `
 We can now extend this example to display a random salutation message on the screen. For this, we’ll create a class that will contain the logic for generating the random salutation message; we’ll call it `MessageGenerator` and we will place it under the business layer.
 
 **To display a random salutation message:**
+
 1. In this class, implement the method that will return the message:
 
 ```php
@@ -162,6 +167,7 @@ class HelloWorldFacade extends AbstractFacade implements HelloWorldFacadeInterfa
     }
 }
 ```
+
 4. Modify the controller so that it calls the method you just added to your facade:
 
 ```php
@@ -190,7 +196,7 @@ class IndexController extends AbstractController
 
 5. Modify the twig template to display the random salutation message instead of the static one we previously defined:
 
-```php
+```twig
 {% raw %}{%{% endraw %} extends '@Gui/Layout/layout.twig' {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}

@@ -13,6 +13,9 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/managing-products/retrieving-bundled-products.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-products/retrieving-bundled-products.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/retrieving-bundled-products.html
+related:
+  - title: Product Bundles feature overview
+    link: docs/scos/user/features/page.version/product-bundles-feature-overview.html
 ---
 
 This endpoint allows retrieving the products that belong to a bundle.
@@ -23,7 +26,7 @@ For detailed information on the modules that provide the API functionality and r
 
 * [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundles-feature-integration.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Glue API: Cart feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
+* [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
 * [Glue API: Product Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundle-cart-feature-integration.html)
 
 ## Retrieve bundled products

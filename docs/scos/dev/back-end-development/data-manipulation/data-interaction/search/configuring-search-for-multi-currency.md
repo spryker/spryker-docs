@@ -1,5 +1,5 @@
 ---
-title: Configuring Search for Multi-Currency
+title: Configuring search for multi-currency
 description: This article describes how to configure search for multi-currency.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -37,6 +37,16 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-multi-currency.html
   - title: Migration Guide - Price
     link: docs/scos/dev/module-migration-guides/migration-guide-price.html
+  - title: Configuring Elasticsearch
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
+  - title: Configuring the search features
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html
+  - title: Configuring the search query
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html
+  - title: Expanding search data
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
+  - title: Facet filter overview and configuration
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
 ---
 
 If you don't have the multi-currency feature in you current project yet and want to migrate, you have to follow certain steps to migrate your system. First [migrate Price](/docs/scos/dev/module-migration-guides/migration-guide-price.html) and [modules related to multi-currency](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html) before proceeding with the search for multi-currency.

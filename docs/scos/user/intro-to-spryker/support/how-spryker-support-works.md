@@ -11,11 +11,16 @@ redirect_from:
   - /docs/en/how-spryker-support-works-1
   - /v6/docs/how-spryker-support-works-1
   - /v6/docs/en/how-spryker-support-works-1
+related:
+  - title: How to get the most out of Spryker Support
+    link: docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html
+  - title: How to use the Support Portal
+    link: docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html
 ---
 
 We believe that you can only deliver great support when you are on the same page as your customers. Being transparent about our performance metrics and processes is a necessary step towards that.
 
-## Our Performance Metrics
+## Our performance metrics
 
 <!--
 ![image.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/image%28130%29.png)
@@ -27,7 +32,7 @@ We believe that you can only deliver great support when you are on the same page
 
 The time it takes us to respond to an incoming case
 Generally, we aim for a first response time of under 1 hour. Our current statistics show that we have consistently reached this goal.
-`
+
 ### Case resolution time
 
 The time it takes us to solve a case and confirm its resolution with you

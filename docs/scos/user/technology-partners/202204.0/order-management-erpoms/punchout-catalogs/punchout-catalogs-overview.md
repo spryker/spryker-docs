@@ -70,9 +70,11 @@ cXML is the most popular and supported standard based on the XML format. It allo
     </Response>
 </cXML>
 ```
+
 ### OCI
 
 OCI is an Open Catalog Interface standard that is used to integrate with the ERP applications that do not support cXML. Example OCI response:
+
 ```html
 <html>
     <body>
@@ -81,6 +83,7 @@ OCI is an Open Catalog Interface standard that is used to integrate with the ERP
     </body>
 </html>
 ```
+
 In case a company user transfers the cart in the Net Prices mode, every part of the cart (discounts, taxes, additional prices and fees) is added in a separate field in the transfer request. For Gross Mode, taxes are already included in the item price, so they will not have a separate field.
 
 ## Punchout architecture and database relations

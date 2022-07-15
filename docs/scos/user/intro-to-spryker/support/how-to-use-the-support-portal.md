@@ -11,6 +11,11 @@ redirect_from:
   - /docs/en/how-to-use-the-support-portal
   - /v6/docs/how-to-use-the-support-portal
   - /v6/docs/en/how-to-use-the-support-portal
+related:
+  - title: How Spryker Support works
+    link: docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
+  - title: How to get the most out of Spryker Support
+    link: docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html
 ---
 
 ## Overview

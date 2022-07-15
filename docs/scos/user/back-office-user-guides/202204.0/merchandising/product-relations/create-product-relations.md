@@ -11,7 +11,11 @@ redirect_from:
   - /docs/creating-product-relations
   - /docs/en/creating-product-relations
 related:
-  - title: Product Relations Feature Overview
+  - title: Edit product relations
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-relations/edit-product-relations.html
+  - title: View product relations
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-relations/view-product-relations.html
+  - title: Product Relations feature overview
     link: docs/scos/user/features/page.version/product-relations-feature-overview.html
 ---
 
@@ -41,11 +45,11 @@ This document describes how to create product relations in the Back Office.
 
 In the **Products** tab, you need to define the condition rules. Based on the rules, products are automatically selected to be displayed as related products.
 
-You can define conditions using one rule or by combining rules into groups and sub-groups. When you open the **Products** tab, there is a preadded rule. The rule is in a box, which is the root group.
+You can define conditions using one rule or by combining rules into groups and sub-groups. When you open the **Products** tab, there is a pre-added rule. The rule is in a box, which is the root group.
 
 The **AND** and **OR** combination operators are used to combine rules in each group. Currently they are greyed out because there is only one rule in the group. To add one more rule to this group, click **Add rule**. This adds one more rule entry and the operators for this group become active. Based on how you can combine these rules, click one of the operators.
 
-To add a subgroup, click **Add group**. Inside the main box, this adds a separate box with its own operators and a preadded rule. The rules in this sub-group combined will be used as a single rule when combining it with the rules in the root group.
+To add a subgroup, click **Add group**. Inside the main box, this adds a separate box with its own operators and a pre-added rule. The rules in this sub-group combined will be used as a single rule when combining it with the rules in the root group.
 
 To define a rule, select a parameter, a relation operator, and a value.
 

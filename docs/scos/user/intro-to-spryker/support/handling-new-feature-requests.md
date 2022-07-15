@@ -35,4 +35,5 @@ After our evaluation, we can assign the following statuses to the ideas:
 | Shipped | This status is assigned to the ideas that have been shipped by Spryker. |
 
 ## What should I expect next?
+
 When the idea is shipped, we will inform you how to get this improvement or the new feature.

@@ -1,5 +1,5 @@
 ---
-title: Implementing Prepayment in Shared Layer
+title: Implementing Prepayment in shared layer
 description: This procedure will help us to identify the new payment type through some unique constants.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,17 @@ redirect_from:
   - /v2/docs/en/ht-prepayment-shared
   - /v1/docs/ht-prepayment-shared
   - /v1/docs/en/ht-prepayment-shared
+related:
+  - title: Implementing Prepayment
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment.html
+  - title: Implement Prepayment in front end
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-front-end.html
+  - title: Implementing Prepayment in back end
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html
+  - title: Integrating Prepayment into checkout
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrating-prepayment-into-checkout.html
+  - title: Testing the Prepayment implementation
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/testing-the-prepayment-implementation.html
 ---
 
 This procedure will help us to identify the new payment type through some unique constants. We are going to define those constants under the Shared namespace, since they’re needed both by Yves and Zed.
@@ -56,14 +67,12 @@ interface PaymentMethodsConstants
 
 }
 ```
-
-<br>
 </details>
 
 2. Enrich the `Payment` transfer file with a new property that corresponds to the new payment method.
 
 <details open>
-<summary markdown='span'>Code sample:</summary>
+<summary markdown='span'>Code sample</summary>
 
 ```xml
 <?xml version="1.0"?>
@@ -77,8 +86,6 @@ interface PaymentMethodsConstants
     </transfer>
     </transfers>
 ```
-
-<br>
 </details>
 
 3. Run the `vendor/bin/console transfer:generate` command to have the `PaymentTransfer` class updated.

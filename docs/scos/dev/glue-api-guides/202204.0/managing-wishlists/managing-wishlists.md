@@ -11,6 +11,14 @@ redirect_from:
   - /docs/managing-wishlists
   - /docs/en/managing-wishlists
   - /docs/scos/dev/glue-api-guides/202200.0/managing-wishlists/managing-wishlists.html
+related:
+  - title: Managing wishlist items
+    link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlist-items.html
+  - title: Authenticating as a customer
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
+  - title: Wishlist feature overview
+    link: docs/scos/user/features/page.version/wishlist-feature-overview.html
+  
 ---
 
 The Wishlists API allows creating list and deleting [wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html), as well as managing the items inside them.

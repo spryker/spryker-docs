@@ -11,7 +11,13 @@ redirect_from:
   - /docs/managing-returns
   - /docs/en/managing-returns
 related:
-  - title: Return Management Feature Overview
+  - title: Creating returns
+    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/creating-returns.html
+  - title: Viewing returns of an order
+    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/viewing-returns-of-an-order.html
+  - title: Changing the state of order items in returns
+    link: docs/scos/user/back-office-user-guides/page.version/sales/returns/changing-the-state-of-order-items-in-returns.html
+  - title: Return Management feature overview
     link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
 ---
 

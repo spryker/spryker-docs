@@ -11,11 +11,18 @@ redirect_from:
   - /docs/en/how-to-get-the-most-out-of-spryker-support
   - /v6/docs/how-to-get-the-most-out-of-spryker-support
   - /v6/docs/en/how-to-get-the-most-out-of-spryker-support
+related:
+  - title: How Spryker Support works
+    link: docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
+  - title: How to use the Support Portal
+    link: docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html
 ---
 
 We are very proud to have outstanding First Response Times (currently, they average around 35 minutes in busy weeks). However, a first response seldom immediately includes the solution to your problem. So how can we shorten Case Resolution Time?
 
-There are many factors influencing Case Resolution Time. Some of them are determined by internal Spryker factor conditions, like availability of developer and engineering resources; others are external. One of these external factors is the question of whether a case is immediately actionable. If a case contains all the information necessary for us to get working on it, it will be solved faster. How can you help us in this regard? Let's take a look at the form that is used to open a case with us:
+There are many of factors influencing [case resolution time](/docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html#case-resolution-time). Some of them are determined by internal Spryker factor conditions, like availability of developer and engineering resources; others are external. One of these external factors is the question whether a case is immediately actionable. If a case contains all the information necessary for us to get working on it, it will be solved faster. How can you help us in this regard? Let's take a look at the form that is used to open a case with us:
+
+We are very proud to have outstanding [first response times](/docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html#first-response-time) (currently they average at around 35 Minutes in busy weeks), however, a first response does seldom immediately include the solution to your problem. So how can we shorten case resolution Time?
 
 ## Whitelist our email addresses
 
@@ -62,7 +69,7 @@ The bad news is that much more often than not, this will achieve quite the oppos
 
 With Spryker Support, it is not necessary to send a message to multiple people by various channels, because we will do that for you. We have clearly defined escalation rules (for an overview, look here) that make sure that every important stakeholder is informed. Raising a case with us also ensures SLA coverage, orderly tracking of all communication in a central, audited, and secure place. By only using our official points of contact to raise cases with us, you are doing us and yourself a big favor.
 
-## Provide Feedback
+## Provide feedback
 <!--
 ![image.png](https://cdn.document360.io/9fafa0d5-d76f-40c5-8b02-ab9515d3e879/Images/Documentation/image%28135%29.png)
 *Photo by [athree23](https://pixabay.com/de/users/athree23-6195572/)*

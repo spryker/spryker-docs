@@ -140,7 +140,7 @@ Where a single developer or expert attacks the feature, dedicating all effort an
 
 {% endinfo_block %}
 
-* Kick-offs and plan-of-attacks are usually better for smaller, but complex tickets.
+* Kick-offs and plan-of-attacks are usually better for smaller but complex tickets.
 
 {% info_block infoBox %}
 
@@ -159,7 +159,7 @@ So you would have a plan of attack workshops with the shop and ERP team and also
 {% endinfo_block %}
 
 ## Launch scenarios
-The bottom line is that for each launch you need to find the scenario that works for you.
+The bottom line is that for each launch, you need to find the scenario that works for you.
 
 There are three main approaches to launching a product:
 

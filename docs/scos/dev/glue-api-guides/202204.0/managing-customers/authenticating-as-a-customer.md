@@ -19,6 +19,22 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/authentication-and-authorization.html
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
+  - title: Confirming customer registration
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/confirming-customer-registration.html
+  - title: Managing customer authentication tokens
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-authentication-tokens.html
+  - title: Managing customer authentication tokens via OAuth 2.0
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html
+  - title: Managing customers
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customers.html
+  - title: Managing customer passwords
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-passwords.html
+  - title: Managing customer addresses
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-addresses.html
+  - title: Retrieving customer carts
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-carts.html
+  - title: Retrieving customer orders
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
 ---
 
 This endpoint allows authenticating as a customer. As an authenticated customer, you can send requests to [protected resources](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html#protected-resources).

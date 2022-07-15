@@ -2,6 +2,9 @@
 title: Edit filter preferences
 description: Learn how to edit filter preferences in the Back Office
 template: back-office-user-guide-template
+related:
+  - title: Standard filters overview
+    link: docs/scos/user/features/page.version/search-feature-overview/standard-filters-overview.html
 ---
 
 This document describes how to edit filter preferences of category filters in the Back Office.

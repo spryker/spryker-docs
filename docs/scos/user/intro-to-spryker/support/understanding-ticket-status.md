@@ -16,28 +16,30 @@ redirect_from:
 When you report an issue, and we discover an underlying problem with Spryker, we create a Jira Bug Ticket. Then, this ticket is handed over to our development department, and our colleagues evaluate how to address the problem best and resolve it. After the issue is resolved, it is then released to our repositories.
 
 ## Status descriptions
+
 Since we began to communicate the status of bug tickets on our Support Portal for the reporters to see, we want to explain what the different statuses mean. On a high level, we distinguish between Bug Tickets and Cloud Tickets.
 
 ### Bug tickets
 
 {% info_block infoBox "Info" %}
 
-Note that usually, a bug ticket does not go through all of these stages. You might see a ticket status not listed here in special cases, but the following covers the majority of ticket cases.
+Usually, a bug ticket does not go through all of these stages. You might see a ticket status not listed here in special cases, but the following covers the majority of ticket cases.
 
 {% endinfo_block %}
 
 | STATUS | EXPLANATION |
 | --- | --- |
 | New | The case was reported and is being analyzed |
-| In Progress | A strategy to resolve the issue was developed, and a developer is working on resolving the issue |
-| On Hold | Work on this issue was paused |
-| In CR | A developer has found a resolution to the issue, and the resolution is currently with another developer for review |
-| Ready for Final Architecture Review | We currently evaluate whether the resolution fits overall architecture design |
-| QA Done | Quality Assurance was done |
-| Ready for Release | The resolution has passed all checks and is now waiting for release |
+| In Progress | A strategy to resolve the issue was developed, and a developer is working on resolving the issue. |
+| On Hold | Work on this issue was paused. |
+| In CR | A developer has found a resolution to the issue, and the resolution is currently with another developer for review. |
+| Ready for Final Architecture Review | We currently evaluate whether the resolution fits overall architecture design. |
+| QA Done | Quality Assurance was done. |
+| Ready for Release | The resolution has passed all checks and is now waiting for release. |
 | Resolved | The issue was fully analyzed, a resolution was developed, checked, and released. |
 
 ### Cloud tickets
+
 Our DevOps team usually uses the following status to indicate progress on tickets assigned to them.
 
 | STATUS | EXPLANATION |

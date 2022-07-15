@@ -12,6 +12,9 @@ redirect_from:
   - /docs/en/howto-enable-sftp-for-flysystem
   - /v6/docs/howto-enable-sftp-for-flysystem
   - /v6/docs/en/howto-enable-sftp-for-flysystem
+related:
+  - title: Flysystem
+    link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html
 ---
 
 {% info_block infoBox "Info" %}

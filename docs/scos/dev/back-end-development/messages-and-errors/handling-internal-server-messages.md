@@ -1,5 +1,5 @@
 ---
-title: Handling Internal Server Messages
+title: Handling Internal Server messages
 description: This document describes how to configure the behavior when an internal server error occurs.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,11 +22,17 @@ redirect_from:
   - /v2/docs/en/internal-server-error-handling
   - /v1/docs/internal-server-error-handling
   - /v1/docs/en/internal-server-error-handling
+related:
+  - title: Handling errors with ErrorHandler
+    link: docs/scos/dev/back-end-development/messages-and-errors/handling-errors-with-errorhandler.html
+  - title: Showing messages in Zed
+    link: docs/scos/dev/back-end-development/messages-and-errors/showing-messages-in-zed.html
 ---
 
 The document describes how to configure the behavior when an internal server error occurs. Whether you need to show the details of the error or render a static page for any internal error, this is done through configuration.
 
 ## Configure Internal Server Error
+
 Page Depending on the environment on which the application is running, you can configure if you wish to show the stack trace of the error or to display a static HTML page.
 
 For example, for development environment, you would like to see the details of the error, so you need have the following configuration in `Config/Shared/config_default.php`:
@@ -46,6 +52,7 @@ $config[SystemConfig::ZED_ERROR_PAGE] = APPLICATION_ROOT_DIR . '/static/public/Y
 ```
 
 ## Custom Error Pages for HTTP errors
+
 By default behavior, HTTP errors are converted to Exceptions. To render different content when a specific error occurs, we have a built-in custom error handler.
 
 **To create a custom error:**

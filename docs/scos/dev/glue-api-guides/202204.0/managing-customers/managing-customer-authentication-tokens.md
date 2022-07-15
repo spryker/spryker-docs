@@ -13,6 +13,27 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/managing-customers/managing-customer-authentication-tokens.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/managing-customer-authentication-tokens.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/managing-customer-authentication-tokens.html
+related:
+  - title: Authentication and authorization
+    link: docs/scos/dev/glue-api-guides/page.version/authentication-and-authorization.html
+  - title: Searching by company users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
+  - title: Confirming customer registration
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/confirming-customer-registration.html
+  - title: Authenticating as a customer
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
+  - title: Managing customer authentication tokens via OAuth 2.0
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html
+  - title: Managing customers
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customers.html
+  - title: Managing customer passwords
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-passwords.html
+  - title: Managing customer addresses
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-addresses.html
+  - title: Retrieving customer carts
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-carts.html
+  - title: Retrieving customer orders
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
 ---
 
 This endpoint allows refreshing customer authentication tokens and revoking customer refresh tokens. You may want to refresh an authentication token when it expires. Revocation is useful when an authentication token is compromised.

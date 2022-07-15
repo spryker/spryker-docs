@@ -19,6 +19,8 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
   - title: Managing guest cart items
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-cart-items.html
+  - title: Managing discount vouchers in guest carts
+    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html
 ---
 
 [Gift card](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html) is an alternative payment method. It is purchased as a regular product in the Spryker Commerce OS and is redeemed as a voucher code during checkout.  When you apply the code of a gift card to a shopping cart, the money value of the gift card is deducted from the total sum of the cart items.

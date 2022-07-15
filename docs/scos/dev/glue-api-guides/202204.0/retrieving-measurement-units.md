@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/retrieving-measurement-units
   - /docs/scos/dev/glue-api-guides/202200.0/retrieving-measurement-units.html
 related:
-  - title: Measurement Units Feature Overview
+  - title: Measurement Units feature overview
     link: docs/scos/user/features/page.version/measurement-units-feature-overview.html
 ---
 

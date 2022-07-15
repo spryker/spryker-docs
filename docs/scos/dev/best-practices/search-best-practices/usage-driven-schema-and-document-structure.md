@@ -1,5 +1,5 @@
 ---
-title: Usage-Driven Schema & Document Structure
+title: Usage-driven schema and document structure
 description: Both the schema and the query generator should not need to know that there is such a thing as as the weight of a hammer.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -22,6 +22,27 @@ redirect_from:
   - /v2/docs/en/usage-driven-schema-structure  
   - /v1/docs/usage-driven-schema-structure
   - /v1/docs/en/usage-driven-schema-structure
+related:
+  - title: Data-driven ranking
+    link: docs/scos/dev/best-practices/search-best-practices/data-driven-ranking.html
+  - title: Full-text search
+    link: docs/scos/dev/best-practices/search-best-practices/full-text-search.html
+  - title: Generic faceted search
+    link: docs/scos/dev/best-practices/search-best-practices/generic-faceted-search.html
+  - title: Precise search by super attributes
+    link: docs/scos/dev/best-practices/search-best-practices/precise-search-by-super-attributes.html
+  - title: On-site search
+    link: docs/scos/dev/best-practices/search-best-practices/on-site-search.html
+  - title: Other best practices
+    link: docs/scos/dev/best-practices/search-best-practices/other-best-practices.html
+  - title: Multi-term autocompletion
+    link: docs/scos/dev/best-practices/search-best-practices/multi-term-auto-completion.html
+  - title: Simple spelling suggestions
+    link: docs/scos/dev/best-practices/search-best-practices/simple-spelling-suggestions.html
+  - title: Naive product centric approach
+    link: docs/scos/dev/best-practices/search-best-practices/naive-product-centric-approach.html
+  - title: Personalization - dynamic pricing
+    link: docs/scos/dev/best-practices/search-best-practices/personalization-dynamic-pricing.html
 ---
 
 Both the schema and the query generator should not need to know that there is such a thing as as the weight of a hammer. We will argue for a document structure and schema design that is not built around the original data but around the usage of attributes in search operations.

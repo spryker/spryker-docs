@@ -11,6 +11,9 @@ redirect_from:
   - /docs/managing-orders
   - /docs/en/managing-orders
   - /docs/scos/user/back-office-user-guides/202204.0/sales/orders/managing-orders.html
+related:
+  - title: Order Management feature overview
+    link: docs/scos/user/features/page.version/order-management-feature-overview/order-management-feature-overview.html
 ---
 
 This article describes how to change the state of order items.

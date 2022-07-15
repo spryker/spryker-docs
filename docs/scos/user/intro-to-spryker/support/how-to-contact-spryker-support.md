@@ -11,6 +11,13 @@ redirect_from:
   - /docs/en/how-to-contact-spryker-support
   - /v6/docs/how-to-contact-spryker-support
   - /v6/docs/en/how-to-contact-spryker-support
+related:
+  - title: How Spryker Support works
+    link: docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
+  - title: How to get the most out of Spryker Support
+    link: docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html
+  - title: How to use the Support Portal
+    link: docs/scos/user/intro-to-spryker/support/how-to-use-the-support-portal.html
 ---
 
 <!--
@@ -19,7 +26,7 @@ redirect_from:
 *Photo by [@snapwire](https://www.pexels.com/@snapwire)*
 
 -->
-Very easy: Use our [Support Portal ](https://support.spryker.com)
+Very easy: Use our [Support Portal](https://support.spryker.com)
 
 Opening a case via this form is the preferred way, as the form will help you include information we need to get working on a case immediately and speed up our case resolution time.
 

@@ -28,12 +28,13 @@ The FileSystem Service provides an abstraction for file systems. It uses the sam
 
 The Flysystem module provides plugins for [thephpleague/flysystem](https://github.com/thephpleague/flysystem) vendor package and implement FileSystem's plugin interfaces. For more details, see [Flysystem](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html).
 
-## FileSystem Module
+## FileSystem module
+
 The FileSystem module uses the `FileSystemReaderPluginInterface` to execute read operations, the `FileSystemWriterPluginInterface` to execute write operations and the `FileSystemStreamPluginInterface` to handle big read or write operations.
 
 ![File_System_Dependencies.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Development/File+System/file_system_dependencies.png)
 
-## FileSystem Plugin Interfaces system
+## FileSystem plugin interfaces system
 
 | Plugin Interface | Description |
 | --- | --- |
@@ -41,7 +42,8 @@ The FileSystem module uses the `FileSystemReaderPluginInterface` to execute read
 | FileSystemWriterPluginInterface | Writing operations |
 | FileSystemWriterPluginInterface | Stream handling operations |
 
-## Plugin Configuration
+## Plugin configuration
+
 The FileSystem plugins are loaded via `FileSystemDependencyProvider` by the methods: `addFileSystemReaderPlugin()`, `addFileSystemWriterPlugin()` and `addFileSystemStreamPlugin()`.
 
 ```php
@@ -99,7 +101,8 @@ class FileSystemDependencyProvider extends AbstractBundleDependencyProvider
     }
 ```
 
-### Service Configuration
+### Service configuration
+
 You can use multiple `FileSystems` at once. They are identified by name, and contain all the configurations required by the specific `FileSystem` adapter and type defined under `sprykerAdapterClass`.
 
 {% info_block warningBox %}
@@ -107,6 +110,7 @@ The `sprykerAdapterClass` should point to the builder plugin used to create the 
 {% endinfo_block %}
 
 **Separate FileSystems for media and documents**
+
 It is entirely possible to create separate file systems for media content and documents.
 
 For example, you can define two `FileSystems`. One called "media", that only contains media specific content like: images, video and audio and another called "customer" that contains customer-sensitive information that should not be stored in the cloud.
@@ -114,6 +118,7 @@ For example, you can define two `FileSystems`. One called "media", that only con
 We use local file systems for development purposes, but config for staging or production environments. Therefore, you could for example provide, an AWS3 adapter without having to change any code. More precisely, with only configuration you can read/write files from AWS3 no need to change any code mirroring your development environment's logic for writing to the local file system.
 
 **Development environment example:**
+
 ```php
 <?php
 
@@ -162,8 +167,9 @@ $config[FileSystemConstants::FILESYSTEM_SERVICE] = [
 ];
 ```
 
-## FileSystem Usage
-Now that we have defined some `FileSystems`, we can start using them. For example, getting metedata information of a media file stored under "foo/bar.jpg".
+## FileSystem usage
+
+Now that we have defined some `FileSystems`, we can start using them. For example, getting metadata information of a media file stored under "foo/bar.jpg".
 
 ```php
 <?php
@@ -181,5 +187,7 @@ $metadataTransfer = $fileSystemService->getMetadata($fileSystemQueryTransfer);
 Define the `FileSystem` name provided in the configuration and set the path to the filename you want to extract metadata from.
 
 {% info_block warningBox %}
+
 The read methods use mostly `FileSystemQueryTransfer`, the write methods use mostly `FileSystemContentTransfer` and stream methods use `FileSystemStreamTransfer`.
+
 {% endinfo_block %}

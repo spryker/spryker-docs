@@ -19,6 +19,25 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/development-tools/ts-linter.html
   - /docs/scos/dev/sdk/202009.0/development-tools/ts-linter.html
   - /docs/scos/dev/sdk/202108.0/development-tools/ts-linter.html
+related:
+  - title: Architecture sniffer
+    link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
+  - title: Code sniffer
+    link: docs/scos/dev/sdk/development-tools/code-sniffer.html
+  - title: Formatter
+    link: docs/scos/dev/sdk/development-tools/formatter.html
+  - title: Performance audit tool- Benchmark
+    link: docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
+  - title: PHPStan
+    link: docs/scos/dev/sdk/development-tools/phpstan.html
+  - title: SCSS linter
+    link: docs/scos/dev/sdk/development-tools/scss-linter.html
+  - title: Spryk code generator
+    link: docs/scos/dev/sdk/development-tools/spryk-code-generator.html
+  - title: Static Security Checker
+    link: docs/scos/dev/sdk/development-tools/static-security-checker.html
+  - title: Tooling config file
+    link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
 ---
 
 *TS linter* allows you to find and fix code style mistakes. It helps a team to follow the same standards and make code more readable.
@@ -60,7 +79,7 @@ The config for tslint resides in `/tslint.json`.
 To redefine the path for the config, adjust `/frontend/libs/tslint.js` and use other [rules](https://palantir.github.io/tslint/rules/) for the TS linter.
 {% info_block infoBox %}
 
-The TS linter rules related to formatting aren’t included in `tslint.json` to avoid duplication with the [Prittier rules](https://www.npmjs.com/package/@spryker/frontend-config.prettier).
+The TS linter rules related to formatting aren’t included in `tslint.json` to avoid duplication with the [Prettier rules](https://www.npmjs.com/package/@spryker/frontend-config.prettier).
 
 {% endinfo_block %}
 

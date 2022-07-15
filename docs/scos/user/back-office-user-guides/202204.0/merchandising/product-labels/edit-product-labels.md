@@ -2,14 +2,19 @@
 title: Edit product labels
 description: Learn how to edit product labels in the Back Office
 template: back-office-user-guide-template
+related:
+  - title: Create product labels
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-labels/create-product-labels.html
+  - title: View product labels
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-labels/view-product-labels.html
+  - title: Product Labels feature overview
+    link: docs/scos/user/features/page.version/product-labels-feature-overview.html
 ---
-
-
-
 
 ## Prerequisites
 
 To start editing product labels, do the following:
+
 1. Go to **Merchandising** > **Product Labels**.
     This opens the **Product Labels** page.
 2. Next to the product label you want to edit, click **Edit**.
@@ -31,7 +36,7 @@ To start editing product labels, do the following:
     * Select the checkboxes next to the stores you want to start displaying the label in.
 7. In the **TRANSLATIONS** pane, update the **NAME** for the needed locales.
 8. Click **Save**.
-    This refershes the page with a success message displayed.
+    This refreshes the page with a success message displayed.
 
 ## Assign and deassign a product label from products
 
@@ -45,7 +50,7 @@ To start editing product labels, do the following:
 **Tips and tricks**
 
 * When assigning a label to multiple products, it might be useful to switch to the **Selected products to assign** subtab to double-check your selection.
-* When deassigning a lable from multiple products, it might be useful to switch to the **Selected products to de-assign** subtab to double-check your selection.
+* When deassigning a label from multiple products, it might be useful to switch to the **Selected products to de-assign** subtab to double-check your selection.
 
 
 ## Reference information: Edit product labels

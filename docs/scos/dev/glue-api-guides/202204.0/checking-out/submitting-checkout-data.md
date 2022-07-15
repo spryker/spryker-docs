@@ -10,6 +10,11 @@ redirect_from:
   - /2021080/docs/en/submitting-checkout-data
   - /docs/submitting-checkout-data
   - /docs/en/submitting-checkout-data
+related:
+  - title: Checking out purchases
+    link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
+  - title: Updating payment data
+    link: docs/scos/dev/glue-api-guides/page.version/checking-out/updating-payment-data.html
 ---
 
 This endpoint allows submitting checkout data as many times as you need. Using the endpoint, you can implement checkout steps in your Glue API client, perform verification steps and execute other operations that require multiple calls to complete. The endpoint does not allow placing an order.

@@ -22,6 +22,9 @@ redirect_from:
   - /v2/docs/en/dependency-provider
   - /v1/docs/dependency-provider
   - /v1/docs/en/dependency-provider
+related:
+  - title: Spryk
+    link: docs/scos/dev/sdk/development-tools/spryk-code-generator.html
 ---
 
 Each module ships with a `DependencyProvider` class which explicitly defines services and external dependencies to other modules. For instance, when the `Cms` module requires the `Glossary` module, this needs to be configured here. The `DependencyProvider` defines dependencies for each layer. Usually you require some of these classes:
@@ -34,7 +37,9 @@ Each module ships with a `DependencyProvider` class which explicitly defines ser
 As you can see in the example, these required classes are wrapped into a closure to enable lazy loading. Inside of the closure you get a `$container` variable which gives you access to a so-called [service locator](https://en.wikipedia.org/wiki/Service_locator_pattern) to retrieve the required classes like this: `$container->getLocator()->glossary()->facade()`.
 
 {% info_block warningBox %}
+
 You can use any module name instead of `->glossary()`. The structure is always the same, so you can copy and adapt it for your use case.
+
 {% endinfo_block %}
 
 ```php
@@ -72,7 +77,7 @@ class CmsDependencyProvider extends SprykerCmsDependencyProvider
 }
 ```
 
-## How to Use the Provided Class
+## How to use the provided class
 
 You can access the classes which are provided by the `DependencyProvider` in the [Factory](/docs/scos/dev/back-end-development/factory/factory.html). Technically the `$container` variable is a simple [DI-container](http://martinfowler.com/articles/injection.html) based on [Pimple](https://github.com/silexphp/Pimple). The contained class is initialized only when you use it.
 
@@ -93,7 +98,8 @@ class CmsBusinessFactory extends AbstractBusinessFactory
 }
 ```
 
-## Snippet for a New Dependency Provider
+## Snippet for a new dependency provider
+
 To create a new dependency provider, copy and adapt the snippet. Just rename the const `FACADE_FOO_BAR` and `fooBar()` according to your requirements.
 
 ```php
@@ -126,11 +132,14 @@ class MyBundleDependencyProvider extends AbstractBundleDependencyProvider
 
 New bundles will not be auto-completable in your IDE just yet. Run `vendor/bin/console dev:ide:generate-auto-completion` to get IDE typehinting for those, the yellow “markup” will go away.
 
-## Bridges in Spryker Core
+## Bridges in Spryker core
+
 When you look into dependency provider classes from the core level, you will discover the existence of bridges. Inside Spryker’s Core, we are using the [Bridge pattern](https://en.wikipedia.org/wiki/Bridge_pattern) to avoid hard dependencies and to further decouple the bundles form each other.
 
 {% info_block warningBox %}
+
 This is not needed in the project code and we recommend avoiding it to reduce overhead.
+
 {% endinfo_block %}
 
 ```php
@@ -146,6 +155,7 @@ $container->set(static::FACADE_GLOSSARY, function (Container $container) {
 The same is true for services.
 
 ## Related Spryks
+
 You might use the following definitions to generate related code:
 
 * Add Zed Dependency Client Bridge

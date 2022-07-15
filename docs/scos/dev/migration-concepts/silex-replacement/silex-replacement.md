@@ -20,6 +20,11 @@ redirect_from:
   - /v3/docs/en/silex-replacement
   - /v2/docs/silex-replacement-201903
   - /v2/docs/en/silex-replacement-201903
+related:
+  - title: Application
+    link: docs/scos/dev/migration-concepts/silex-replacement/application.html
+  - title: Container
+    link: docs/scos/dev/migration-concepts/silex-replacement/container.html
 ---
 
 Originally, *Silex* was used to integrate Symfony Components with Spryker using _Service Providers_. Also, there were other Service Providers added by Spryker and customer projects to bootstrap the application. Such providers implemented Symfony components and other entities by adding them to the *Pimple container*. Since Silex project is abandoned and the Pimple version is outdated, we replace them with a Spryker solution.
@@ -72,6 +77,7 @@ You can still extend services via Service providers.
 Existing Service Providers remain unchanged. New services are added as Application plugins.
 
 ## Migrating away from Silex
+
 Since the migration was implemented in two steps, the migration instructions for each project depend on when it was created. If the services in your project are implemented via Service Providers, start the migration from [Replacing Silex](#replacing-silex). If one or more services are implemented as Application Plugins, start from [Removing Silex](#removing-silex).
 
 ### Replacing Silex

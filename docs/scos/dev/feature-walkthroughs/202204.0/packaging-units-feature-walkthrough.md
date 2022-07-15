@@ -1,5 +1,5 @@
 ---
-title: Packaging Unit feature walkthrough
+title: Packaging Units feature walkthrough
 last_updated: Aug 18, 2021
 description: The Packaging Unit feature defines if a packaging unit holds a fixed amount of products or if customers can buy any amount of products in this packaging unit. Also, it allows applying amount restrictions to products
 template: concept-topic-template

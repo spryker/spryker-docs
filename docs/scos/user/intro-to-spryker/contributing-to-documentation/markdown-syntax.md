@@ -3,6 +3,16 @@ title: Markdown syntax
 description: Learn the markdown syntax and how to create markdown elements in your writing.
 template: concept-topic-template
 related:
+  - title: Building the documentation site
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
+  - title: Adding product sections to the documentation
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-product-sections-to-the-documentation.html
+  - title: Editing documentation via pull requests
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/editing-documentation-via-pull-requests.html
+  - title: Reporting documentation issues
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/reporting-documentation-issues.html
+  - title: Reviewing pull requests
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
   - title: Style, syntax, formatting, and general rules
     link: docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
 ---

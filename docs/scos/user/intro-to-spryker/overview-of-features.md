@@ -3,6 +3,9 @@ title: Overview of features
 template: concept-topic-template
 redirect_from:
   - /capabilities/features.htm
+related:
+  - title: Overview of the feature guides
+    link: docs/scos/user/features/202204.0/features.html
 ---
 
 As a starting point to working with the Spryker Commerce OS, we created a list of all the capabilities we have to offer that arrive out of the box. 

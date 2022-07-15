@@ -17,6 +17,8 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/content/file-manager/managing-file-tree.html
   - title: Managing File List
     link: docs/scos/user/back-office-user-guides/page.version/content/file-manager/managing-file-list.html
+  - title: File Manager feature overview
+    link: docs/scos/user/features/page.version/file-manager-feature-overview/file-manager-feature-overview.html
 ---
 
 ## Prerequisites

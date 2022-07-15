@@ -1,5 +1,5 @@
 ---
-title: Implementing Invoice Payment
+title: Implementing Invoice payment
 description: In this set of articles, we will add a new module called PaymentMethods.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,10 +22,23 @@ redirect_from:
   - /v2/docs/en/ht-implement-invoice-payment
   - /v1/docs/ht-implement-invoice-payment
   - /v1/docs/en/ht-implement-invoice-payment
+related:
+  - title: Implementing Invoice payment in front end
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html
+  - title: Implementing Invoice payment in back end
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-back-end.html
+  - title: Implementing Invoice payment in shared layer
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-shared-layer.html
+  - title: Integrating Invoice payment into checkout
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrating-invoice-payment-into-checkout.html
+  - title: Testing the Invoice payment implementation
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/testing-the-invoice-payment-implementation.html
 ---
 
 {% info_block infoBox "Invoice Payment" %}
+
 This article describes the steps that you need to consider when you need to implement invoice payment method without integrating with a third party payment service provider.
+
 {% endinfo_block %}
 
 In this set of articles, we will add a new module called `PaymentMethods`.

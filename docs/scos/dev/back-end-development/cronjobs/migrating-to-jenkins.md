@@ -3,6 +3,13 @@ title: Migrating to Jenkins
 description: Learn how to migrate to the Jenkins scheduler.
 template: howto-guide-template
 last_updated: Nov 1, 2021
+related:
+  - title: Cronjobs
+    link: docs/scos/dev/back-end-development/cronjobs/cronjobs.html
+  - title: Creating a custom scheduler
+    link: docs/scos/dev/back-end-development/cronjobs/creating-a-custom-scheduler.html
+  - title: Adding and configuring cronjobs
+    link: docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-cronjobs.html
 ---
 
 

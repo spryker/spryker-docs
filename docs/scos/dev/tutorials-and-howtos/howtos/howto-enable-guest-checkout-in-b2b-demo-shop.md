@@ -12,6 +12,9 @@ redirect_from:
   - /docs/en/howto-enable-guest-checkout-in-b2b-demo-shop
   - /v6/docs/howto-enable-guest-checkout-in-b2b-demo-shop
   - /v6/docs/en/howto-enable-guest-checkout-in-b2b-demo-shop
+related:
+  - title: Checkout steps
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html
 ---
 
 As B2B environments usually implement complex business logic, in the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html), guest users cannot check out by default. However, in some cases, you may need guest checkout to be enabled.
@@ -37,6 +40,11 @@ The implementation described in this document is exemplary and may require addit
    ```bash
    vagrant halt && vagrant up
    ```
+{% info_block warningBox "Warning" %}
+
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+
+{% endinfo_block %}
 
 5. In the `CheckoutPage` module, create `src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig`:
 

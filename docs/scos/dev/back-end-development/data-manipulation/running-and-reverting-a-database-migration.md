@@ -26,10 +26,14 @@ redirect_from:
 
 Database migration allows you to update your database with the latest changes.
 
-To see the list of all the commands related to the migration process, run
-`vendor/bin/propel list`
+To see the list of all the commands related to the migration process, run:
 
-To revert the database migration, run
-`vendor/bin/propel migration:down --config-dir=src/Orm/Propel/STORE/Config/development`
+```bash
+vendor/bin/propel list
+```
 
-<!-- Last review date: Nov 6, 2018 by Rene Klatt, Helen Kravchenko -->
+To revert the database migration, run:
+
+```bash
+vendor/bin/propel migration:down --config-dir=src/Orm/Propel/STORE/Config/development
+```

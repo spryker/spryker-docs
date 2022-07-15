@@ -1,5 +1,5 @@
 ---
-title: Full-Text Search
+title: Full-text search
 description: Full-text search is a feature where a user enters arbitrary text into a search field and then gets documents that are relevant for that query.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -22,6 +22,27 @@ redirect_from:
   - /v2/docs/en/full-text-search  
   - /v1/docs/full-text-search
   - /v1/docs/en/full-text-search
+related:
+  - title: Data-driven ranking
+    link: docs/scos/dev/best-practices/search-best-practices/data-driven-ranking.html
+  - title: Generic faceted search
+    link: docs/scos/dev/best-practices/search-best-practices/generic-faceted-search.html
+  - title: Precise search by super attributes
+    link: docs/scos/dev/best-practices/search-best-practices/precise-search-by-super-attributes.html
+  - title: On-site search
+    link: docs/scos/dev/best-practices/search-best-practices/on-site-search.html
+  - title: Other best practices
+    link: docs/scos/dev/best-practices/search-best-practices/other-best-practices.html
+  - title: Multi-term autocompletion
+    link: docs/scos/dev/best-practices/search-best-practices/multi-term-auto-completion.html
+  - title: Simple spelling suggestions
+    link: docs/scos/dev/best-practices/search-best-practices/simple-spelling-suggestions.html
+  - title: Naive product centric approach
+    link: docs/scos/dev/best-practices/search-best-practices/naive-product-centric-approach.html
+  - title: Personalization - dynamic pricing
+    link: docs/scos/dev/best-practices/search-best-practices/personalization-dynamic-pricing.html
+  - title: Usage-driven schema and document structure
+    link: docs/scos/dev/best-practices/search-best-practices/usage-driven-schema-and-document-structure.html
 ---
 
 Full-text search is a feature where a user enters arbitrary text into a search field and then gets documents that are relevant for that query. It is normally combined with faceted navigation. In the example below, a user searched for “hammer” and then further filtered for hammer weights of 2000 gram and prices between 10€ and 50€:
@@ -44,7 +65,7 @@ The exact steps and their order will differ for different business models and ap
 
 Text analysis is executed both for documents that are indexed to Elasticsearch and for search terms entered by the user. Index time and search time analyzers are often very similar but not necessarily the same. The analyzer above is an example of an index time analyzer, the corresponding search time analyzer has the same tokenizer and filters except the synonym and decompounder filter.
 
-### Indexing Text
+### Indexing text
 
 With [a naive product-centric approach](http://project-a.github.io/on-site-search-design-patterns-for-e-commerce/#a-naive-product-centric-approach) text analyzers would have to be added to all fields that contain text material (e.g. `name`, `description`, `category-names`, `manufacturer`, etc.). Moreover, all those attributes would need to be addressed separately in queries. This leads to unnecessarily complicated queries and, more importantly, requires additional effort when new data needs to be added to the documents. More text material per document usually means better search results and thus the process of adding new data to the index should be straightforward and simple.
 

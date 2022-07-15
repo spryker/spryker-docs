@@ -327,7 +327,7 @@ The [Shipment](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-fea
 
 ### Shipment method plugins: reference information
 
-This provides a walkthrough to the [Shipment method](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html) plugin and its features.
+This provides a walkthrough to the [Shipment method](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/shipment-method-plugins-reference-information.html) plugin and its features.
 
 ## Shopping Lists
 

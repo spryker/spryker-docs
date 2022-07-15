@@ -19,6 +19,9 @@ redirect_from:
   - /v3/docs/en/ht-manage-a-big-number-of-categories-201903
   - /v2/docs/ht-manage-a-big-number-of-categories-201903
   - /v2/docs/en/ht-manage-a-big-number-of-categories-201903
+related:
+  - title: Category Management feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/category-management-feature-walkthrough.html
 ---
 
 ## Overview

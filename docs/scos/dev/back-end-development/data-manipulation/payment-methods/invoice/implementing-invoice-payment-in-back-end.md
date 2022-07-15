@@ -1,5 +1,5 @@
 ---
-title: Implementing Invoice Payment in Back End
+title: Implementing Invoice payment in back end
 description: This article describes how to implement invoice payment in the back end.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,17 @@ redirect_from:
   - /v2/docs/en/ht-invoice-payment-be
   - /v1/docs/ht-invoice-payment-be
   - /v1/docs/en/ht-invoice-payment-be
+related:
+  - title: Implementing Invoice payment
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment.html
+  - title: Implementing Invoice payment in front end
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html
+  - title: Implementing Invoice payment in shared layer
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-shared-layer.html
+  - title: Integrating Invoice payment into checkout
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrating-invoice-payment-into-checkout.html
+  - title: Testing the Invoice payment implementation
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/testing-the-invoice-payment-implementation.html
 ---
 
 ## Checkout Plugins
@@ -65,8 +76,6 @@ class InvoicePreCheckPlugin extends AbstractPlugin implements CheckoutPreCheckPl
 
 }
 ```
-
-<br>
 </details>
 
 <details open>
@@ -100,11 +109,9 @@ class InvoiceSaveOrderPlugin extends AbstractPlugin implements CheckoutSaveOrder
     }
 }
 ```
-
-<br>
 </details>
 
-2. Next, inject these 2 plugins in the `Payment` module by creating a `PaymentDependencyInjector` under `Dependency/Injector/` folder:
+1. Next, inject these 2 plugins in the `Payment` module by creating a `PaymentDependencyInjector` under `Dependency/Injector/` folder:
 
 <details open>
 <summary markdown='span'>Code sample:</summary>
@@ -155,11 +162,10 @@ class PaymentDependencyInjector extends AbstractDependencyInjector
 
 }
 ```
-
-<br>
 </details>
 
-## State Machine
+## State machine
+
 Once the preceding procedures are completed, we’ll need to design a state machine. This state machine is dedicated for processing orders that use direct debit as a payment type:
 
 1. Add the `Invoice.xml` file inside the `config/Zed/oms/` folder, with the following content:
@@ -293,14 +299,12 @@ Once the preceding procedures are completed, we’ll need to design a state mach
 </statemachine>
 
 ```
+</details>
 
- <br>
- </details>
-
- 2. Add this new state machine to `OmsConfig`:
+2. Add this new state machine to `OmsConfig`:
 
 <details open>
-<summary markdown='span'>Code sample:</summary>
+<summary markdown='span'>Code sample</summary>
 
 ```php
 <?php
@@ -318,15 +322,13 @@ Once the preceding procedures are completed, we’ll need to design a state mach
         ];
     }
 ```
-
-<br>
 </details>
 
 3. Link the invoice state machine to process the orders submitted with the payment method we’re implementing.
 
 Add this configuration in the `SalesConfig` class:
 
-```xml
+```php
 /**
      * @var array
      */

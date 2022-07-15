@@ -1,5 +1,5 @@
 ---
-title: "Navigation module: Reference information"
+title: "Navigation module: reference information"
 last_updated: Aug 13, 2021
 description: The Navigation module provides database structure and a public API to manage what’s in the database, and a small toolkit for rendering navigation menus in the frontend
 template: concept-topic-template

@@ -12,6 +12,9 @@ redirect_from:
   - /docs/en/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
   - /v6/docs/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
   - /v6/docs/en/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
+related:
+  - title: Prices featre walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/prices-feature-walkthrough/prices-feature-walkthrough.html
 ---
 
 B2B business model usually challenges any software with higher requirements to amounts of data and business complexity.

@@ -14,7 +14,7 @@ redirect_from:
 related:
   - title: Managing Slots
     link: docs/scos/user/back-office-user-guides/page.version/content/slots/managing-slots.html
-  - title: Templates & Slots Feature Overview
+  - title: Templates & Slots feature overview
     link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html
 ---
 
@@ -40,6 +40,7 @@ Follow the steps below to add the content.
 [Content item](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) is the smallest content unit in Spryker. By creating a content item, you preserve a small content piece that can be used later in multiple pages.
 
 Create the following content items:
+
 * Abstract product list of top sellers—*Best Selling Products*
 * Abstract product list of featured products—*Featured Products*
 
@@ -52,6 +53,7 @@ If the content item types shipped by default are not sufficient for your project
 [CMS block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html) serves as the actual content that you insert into Storefront pages.
 
 Follow the steps to create the CMS blocks with the needed content:
+
 1. Create the following CMS blocks:
     * Top selling products reference - *Homepage Top sellers Products*
     * Featured products reference - *Homepage Featured Products*
@@ -87,6 +89,7 @@ See [Editing placeholders](/docs/scos/user/back-office-user-guides/{{page.versio
 [Template with slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) defines the layout of slots on the Storefront pages you add the CMS blocks to.
 
 Follow the steps to select a template with slots:
+
 1. Go to **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 2. In **List of Templates**, select the *Product* template with slots.
     This template with slots is assigned to all the product pages. By selecting it, you select to work with all the product pages at once.
@@ -124,6 +127,7 @@ In the drop-down menu, start typing a CMS block name to filter the list.
 By selecting pages, you define on which particular pages the content of each assigned CMS block is displayed.
 
 For the *Category Banner-2* and *Homepage Featured Products* CMS blocks to be displayed only on the *Sticky Notes* product pages, follow the steps below:
+
 1. In **List of Blocks for "Bottom" Slot**, select the *Category Banner-2* CMS block.
 2. Select the **Specific Product Pages** radio button.
 3. In **Products pages per Category**, select the *Sticky Notes* category.
@@ -156,12 +160,13 @@ In our case, with all the CMS blocks assigned to a single slot, the correct orde
 * *Homepage Top sellers Products* and *Homepage Featured Products* CMS blocks are below them.
 
 
-| WRITING METERIALS PRODUCT PAGES| STICKY NOTES PRODUCT PAGES|
+| WRITING MATERIALS PRODUCT PAGES| STICKY NOTES PRODUCT PAGES|
 | --- | --- |
 | *Homepage Featured Products* | *Homepage Top sellers Products* |
 | *Category Banner-3* | *Category Banner-2* |
 
 To achieve that, make sure to fulfill the following:
+
 * For the *Writing Materials* product pages, the *Homepage Featured products* CMS block is located above the *Category Banner-3* CMS block in the **List of Blocks for "Bottom" Slot**. Other CMS blocks can be disregarded as they are not displayed on the *Writing Materials* product pages.  Any of the following order variants will work:
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Slots/Adding+Content+to+Storefront+Pages+Using+Templates+%26+Slots/cms-block-order-in-slot-1.png)

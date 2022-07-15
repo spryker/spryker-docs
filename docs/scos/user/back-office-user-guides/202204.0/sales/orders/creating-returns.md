@@ -2,6 +2,15 @@
 title: Creating returns
 description: Learn how to create returns in the Back Office
 template: back-office-user-guide-template
+related:
+  - title: Viewing returns of an order
+    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/viewing-returns-of-an-order.html
+  - title: Managing returns
+    link: docs/scos/user/back-office-user-guides/page.version/sales/returns/managing-returns.html
+  - title: Changing the state of order items in returns
+    link: docs/scos/user/back-office-user-guides/page.version/sales/returns/changing-the-state-of-order-items-in-returns.html
+  - title: Return Management feature overview
+    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
 ---
 
 This document describes how to create returns in the Back Office.

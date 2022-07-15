@@ -1,5 +1,5 @@
 ---
-title: Implementing Direct Debit Payment
+title: Implementing Direct Debit payment
 description: This set of articles will guide you through the implementation of the Direct Debit payment method without integrating with a third-party payment service provider.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,17 @@ redirect_from:
   - /v2/docs/en/ht-implement-dd
   - /v1/docs/ht-implement-dd
   - /v1/docs/en/ht-implement-dd
+related:
+  - title: Implementation of Direct Debit in Yves
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-yves.html
+  - title: Implementation of Direct Debit in Zed
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-zed.html
+  - title: Implementation of Direct Debit in the shared layer
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-the-shared-layer.html
+  - title: Integrate Direct Debit into checkout
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html
+  - title: Testing your Direct Debit implementation
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/testing-your-direct-debit-implementation.html
 ---
 
 This set of articles will guide you through implementation of the Direct Debit payment method without integrating with a third party payment service provider.

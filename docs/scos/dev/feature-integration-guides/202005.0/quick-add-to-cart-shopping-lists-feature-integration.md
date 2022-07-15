@@ -11,7 +11,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202005.0/quick-order-shopping-lists-feature-integration.html
 ---
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:

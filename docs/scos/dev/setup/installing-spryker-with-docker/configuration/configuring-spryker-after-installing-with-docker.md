@@ -23,6 +23,11 @@ redirect_from:
   - /v1/docs/post-installation-steps-and-additional-info
   - /v1/docs/en/post-installation-steps-and-additional-info
   - /docs/scos/dev/setup/post-installation-steps-and-additional-info.html
+related:
+  - title: Adjusting Jenkins for a Docker environment
+    link: docs/scos/dev/setup/installing-spryker-with-docker/configuration/adjusting-jenkins-for-a-docker-environment.html
+  - title: Setting up a self-signed SSL certificate
+    link: docs/scos/dev/setup/installing-spryker-with-docker/configuration/setting-up-a-self-signed-ssl-certificate.html
 ---
 
 This document describes how to configure Spryker after installing it with Docker.

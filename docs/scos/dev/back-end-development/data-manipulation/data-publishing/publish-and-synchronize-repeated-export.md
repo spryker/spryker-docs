@@ -22,6 +22,25 @@ redirect_from:
   - /v2/docs/en/publish-and-synchronize-repeated-export
   - /v1/docs/publish-and-synchronize-repeated-export
   - /v1/docs/en/publish-and-synchronize-repeated-export
+related:
+  - title: Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
+  - title: Implementing Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-publish-and-synchronization.html
+  - title: Handling data with Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html
+  - title: Adding publish events
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/adding-publish-events.html
+  - title: Implementing event trigger publisher plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html
+  - title: Implementing synchronization plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
+  - title: Debugging listeners
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debugging-listeners.html
+  - title: Publish and Synchronize and multi-store shop systems
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
+  - title: Synchronization behavior - enabling multiple mappings
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
 Automatic execution of the [Publish & Synchronize process](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html) does not always resolve all your tasks. For example, you might want to re-synchronize(re-sync) the published data in Redis and Elasticsearch to display updated information in your shop front end. Or you might want to re-generate the published data and re-write the data of the database tables in the Storage and Search modules with the subsequent update of Redis and Elasticsearch records. This can be done manually by running console commands.

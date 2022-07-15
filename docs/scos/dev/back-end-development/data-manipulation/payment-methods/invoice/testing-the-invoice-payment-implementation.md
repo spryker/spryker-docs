@@ -1,5 +1,5 @@
 ---
-title: Testing the Invoice Payment Implementation
+title: Testing the Invoice payment implementation
 description: This article describes how to test the invoice payment.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,10 +22,21 @@ redirect_from:
   - /v2/docs/en/ht-invoice-payment-test
   - /v1/docs/ht-invoice-payment-test
   - /v1/docs/en/ht-invoice-payment-test
+related:
+  - title: Implementing Invoice payment
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment.html
+  - title: Implementing Invoice payment in front end
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html
+  - title: Implementing Invoice payment in back end
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-back-end.html
+  - title: Implementing Invoice payment in shared layer
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-shared-layer.html
+  - title: Integrating Invoice payment into checkout
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrating-invoice-payment-into-checkout.html
 ---
 
 When you have completed the instructions on [front end](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html), [back end](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-back-end.html) and [shared](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html) implementation, you are able to test the payment method you just implemented.
 
- This is the last step for this tutorial.
+This is the last step for this tutorial.
 
 All you need to do is to submit a new order from Yves. After that you can control the flow of the order in the Back Office.

@@ -3,6 +3,13 @@ title: Scalable application infrastructure for publish and sync workers
 description: Learn how to use scalable application infrastructure.
 last_updated: May 16, 2022
 template: concept-topic-template
+related:
+  - title: New Relic transactions grouping by queue names
+    link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/new-relic-transaction-grouping-by-queue-names.html
+  - title: RAM-aware batch processing
+    link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/ram-aware-batch-processing.html
+  - title: Storage caching for primary-replica database setups
+    link: docs/scos/dev/guidelines/performance-guidelines/elastic-computing/storage-caching-for-primary-replica-db-setups.html
 ---
 
 Performing compute-intensive operations with significant amount of data without proper resource management inevitably leads to inefficient computation resource utilization and increases processing time.

@@ -12,6 +12,15 @@ redirect_from:
   - /docs/en/order-management-system-multi-thread
   - /v6/docs/order-management-system-multi-thread
   - /v6/docs/en/order-management-system-multi-thread
+related:
+  - title: Order process modelling via state machines
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html
+  - title: State machine console commands
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/state-machine-console-commands.html
+  - title: Common pitfalls in OMS design
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
+  - title: Creating an Order Management System - Spryker Commerce OS
+    link: docs/scos/dev/back-end-development/data-manipulation/creating-an-order-management-system-spryker-commerce-os.html
 ---
 
 Order management system (OMS) heavily relies on the state machine-related concepts like [event timeouts](/docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html#timeout) and [conditions](/docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html#conditions). When an order is managed, a lot of the timeout and condition entities are being processed. Processing of timeouts and conditions in Spryker is done by two console commands:

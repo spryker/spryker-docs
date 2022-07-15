@@ -15,6 +15,7 @@ redirect_from:
 Spryker is shipped with Elasticsearch as the default search solution. Elasticsearch provides all the basic search functionalities. You can extend or customize it to fit your needs.
 
 By default, the following information is indexed:
+
 - General product information (name, description, SKU)
 - Product reviews
 - Product attributes

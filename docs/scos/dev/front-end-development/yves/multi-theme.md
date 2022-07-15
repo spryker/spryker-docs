@@ -1,6 +1,6 @@
 ---
 title: Multi-theme
-description: The article describes Spryker Frontend- Atomic Frontend and Modular Frontend that support theming- current theme and default theme.
+description: The article describes Spryker Frontend - Atomic Frontend and Modular Frontend that support theming - current theme and default theme.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/multi-theme-feature-overview
@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/multi-theme-feature-overview
   - /docs/multi-theme-feature-overview
   - /docs/en/multi-theme-feature-overview
+related:
+  - title: Yves multi-themes
+    link: docs/scos/dev/front-end-development/yves/yves-multi-themes.html
 ---
 
 Spryker Frontend consists of two main parts: [Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html) (JS/CSS/Twg) and [Modular Frontend](/docs/scos/dev/back-end-development/yves/modular-frontend.html) (Widgets and Pages). Both support theming and the same inheritance strategy: Current Theme > Default Theme.

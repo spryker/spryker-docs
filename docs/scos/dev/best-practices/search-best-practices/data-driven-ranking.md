@@ -1,5 +1,5 @@
 ---
-title: Data-Driven Ranking
+title: Data-driven ranking
 description: A common solution to sort the query returns is to manually assign ranks to products.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -22,6 +22,28 @@ redirect_from:
   - /v2/docs/en/data-driven-ranking  
   - /v1/docs/data-driven-ranking
   - /v1/docs/en/data-driven-ranking
+related:
+  - title: Full-text search
+    link: docs/scos/dev/best-practices/search-best-practices/full-text-search.html
+  - title: Generic faceted search
+    link: docs/scos/dev/best-practices/search-best-practices/generic-faceted-search.html
+  - title: Precise search by super attributes
+    link: docs/scos/dev/best-practices/search-best-practices/precise-search-by-super-attributes.html
+  - title: On-site search
+    link: docs/scos/dev/best-practices/search-best-practices/on-site-search.html
+  - title: Other best practices
+    link: docs/scos/dev/best-practices/search-best-practices/other-best-practices.html
+  - title: Multi-term autocompletion
+    link: docs/scos/dev/best-practices/search-best-practices/multi-term-auto-completion.html
+  - title: Simple spelling suggestions
+    link: docs/scos/dev/best-practices/search-best-practices/simple-spelling-suggestions.html
+  - title: Naive product centric approach
+    link: docs/scos/dev/best-practices/search-best-practices/naive-product-centric-approach.html
+  - title: Personalization - dynamic pricing
+    link: docs/scos/dev/best-practices/search-best-practices/personalization-dynamic-pricing.html
+  - title: Usage-driven schema and document structure
+    link: docs/scos/dev/best-practices/search-best-practices/usage-driven-schema-and-document-structure.html
+  
 ---
 
 When a query returns hundreds or thousands of results, it is absolutely crucial that the products at the top of the search result page are the ones that are most relevant to the user. Getting this right will lead to a higher conversion probability and increase customer happiness. Implementing proper data-driven ranking, however, is usually very tricky, because there might be large numbers of heuristics, which define what a good search result for a certain query is.

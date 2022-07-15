@@ -216,7 +216,7 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 To verify that `AvailabilityNotificationSubscriptionCustomerTransferExpanderPlugin` is working:<ol><li>add a new product;</li><li>on Yves, as a company user, subscribe to its availability notifications;</li><li>on Yves, go to account overview> *Newsletters* page;</li><li>check that you are subscribed to the product's availability notifications.</li></ol>
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

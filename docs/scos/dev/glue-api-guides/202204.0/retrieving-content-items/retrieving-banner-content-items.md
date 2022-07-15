@@ -14,7 +14,7 @@ redirect_from:
 related:
   - title: REST API Reference
     link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
-  - title: Content Items Feature Overview
+  - title: Content Items feature overview
     link: docs/scos/user/features/page.version/content-items-feature-overview.html
 ---
 

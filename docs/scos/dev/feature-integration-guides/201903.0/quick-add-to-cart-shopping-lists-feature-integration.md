@@ -10,7 +10,7 @@ redirect_from:
   - /v2/docs/en/quick-order-shopping-lists-feature-integration
 ---
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 
 To start feature integration, overview and install the necessary features:

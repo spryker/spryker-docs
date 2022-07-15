@@ -13,13 +13,14 @@ redirect_from:
 related:
   - title: Sales Data Export feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/sales-data-export-feature-integration.html
-  - title: Data Export Orders .csv Files Format
+  - title: Data export orders .csv files format
     link: docs/scos/dev/data-export/page.version/data-export-orders-.csv-files-format.html
 ---
 
 To quickly populate an external system like ERP or OMS with data from your Spryker shop, you can export it as CSV files from the Spryker shop and then import them into the external system.
 
 For now, you can export only order data, which includes data on:
+
 * Orders
 * Order items
 * Order expenses
@@ -155,6 +156,7 @@ actions:
           <<: *default_filter_criteria
           store_name: [AT]
   ```
+  
 #### Defining the Date and Time Range for Order Data Export
 
 The default date and time range filter criteria, for example, the order creation dates filter applied to all `data_entity` items by default, is specified in the `defaults` section:

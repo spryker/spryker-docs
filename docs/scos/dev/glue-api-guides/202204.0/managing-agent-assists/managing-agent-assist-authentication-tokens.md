@@ -13,6 +13,12 @@ redirect_from:
 related:
   - title: Agent Assist feature overview
     link: docs/scos/user/features/page.version/agent-assist-feature-overview.html
+  - title: Authenticating as an agent assist
+    link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/authenticating-as-an-agent-assist.html
+  - title: Impersonating customers as an agent assist
+    link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
+  - title: Searching by customers as an agent assist
+    link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/searching-by-customers-as-an-agent-assist.html
 ---
 
 This endpoint allows to refresh an agent assist access token or revoke a refresh token.

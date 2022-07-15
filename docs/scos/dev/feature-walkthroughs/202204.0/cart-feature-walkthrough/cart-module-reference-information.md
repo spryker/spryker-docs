@@ -1,5 +1,5 @@
 ---
-title: "Cart module: Reference information"
+title: "Cart module: reference information"
 last_updated: Aug 12, 2021
 description: The extensive Cart allows your customers to add products to their Cart by simply selecting the desired quantity.
 template: concept-topic-template

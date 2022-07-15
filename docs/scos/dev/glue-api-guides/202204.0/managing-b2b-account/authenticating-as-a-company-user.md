@@ -13,6 +13,23 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/authenticating-as-a-company-user.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/authenticating-as-a-company-user.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-b2b-account/authenticating-as-a-company-user.html
+related:
+  - title: Retrieving companies
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-companies.html
+  - title: Retrieving company roles
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
+  - title: Retrieving company users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
+  - title: Managing company user authentication tokens
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/managing-company-user-authentication-tokens.html
+  - title: Searching by company users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
+  - title: Retrieving business units
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-units.html
+  - title: Retrieving business unit addresses
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-unit-addresses.html
+  - title: Authenticating as a customer
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
 ---
 
 This endpoint allows authenticating as a company user.

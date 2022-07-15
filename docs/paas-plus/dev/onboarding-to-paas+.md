@@ -46,7 +46,7 @@ PaaS+ supports only the projects that run on Spryker Cloud Commerce OS (SCCOS). 
 
 ### 1.8 Update PHP to version 8.0
 
-From August 2022, Spryker will [stop supporting PHP 7.4](https://docs.spryker.com/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html). To keep receiving automatic updates after that happens, update PHP to version 8.0.
+From August 2022, Spryker will [stop supporting PHP 7.4](/docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html). To keep receiving automatic updates after that happens, update PHP to version 8.0.
 
 ## 2. Onboarding to Spryker CI
 
@@ -87,7 +87,7 @@ Connect Git repositories to your projects in Spryker CI.
 
 ![Switch repository](https://spryker.s3.eu-central-1.amazonaws.com/docs/paas%2B/dev/onboarding-to-paas%2B.md/switch-a-repo.mp4)
 
-<!-- For detailed instructions, see [Connect Git repositories]() -->
+<!-- For detailed instructions, see [Connect Git repositories -->
 
 ### 2.5. Push and have fun!
 

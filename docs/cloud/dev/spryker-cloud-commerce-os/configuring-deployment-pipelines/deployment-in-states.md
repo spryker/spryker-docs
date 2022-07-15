@@ -19,3 +19,38 @@ To learn how pipelines work in SCCOS, see [Deployment pipelines](/docs/cloud/dev
 ## Initial state
 
 This is the application's state before you started a deployment. All the components are of version 1. The application is working correctly on prod.
+
+## 1.
+
+In this state database and search start transitioning to version 2. <!-- what issues can this cause? -->
+
+Zed 2 enters the scene. It is used to transition database and search to v2.
+
+<!--
+1.  what's zed v2 in deployment tools? Where does it come from and how is it related to zed v2 that is not in the deployment tools?
+
+2. How's yellow different from green ?
+
+
+3. what's zed1 cron?
+
+
+4. When a component finished upgrading to v2, does the app start using it immediately?
+
+
+-->
+
+
+## 2.
+
+
+
+Redis and RabbitMQ: start transitioning. Important: Transitioning to v2 is not an atomic change. New key-value pairs and messages are added to existing ones. This means that during transitioning, they still contain v1 pairs and messages .
+
+
+
+
+
+
+
+-- >

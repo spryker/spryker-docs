@@ -26,7 +26,7 @@ Packaged Business Capabilities (PBCs) are capabilities that enclose a certain fu
 | Price Management | The Spryker Cloud Commerce OS supports multiple currencies and automatically detects the payment currency based on a customer’s preference. You can manage gross and net prices per product and per country. You can also offer volume discounts to encourage customers to purchase products in larger quantities. | Saves you time by letting you implement your pricing strategy in one place and catering it to your business needs. |
 | PIM (Product Information Management) | Encompasses all functionality that is needed to set up your product catalog. With PIM, you can create and extend the product catalog to match your business needs. | Helps you expand your business by organizing your products in a fast and efficient way. |
 | Product Relationship Management | Helps you enhance your shop with cross- and up-selling capabilities to increase sales. | Increases average order values with product relations. |
-| [PSP (Payment Service Provider)](/docs/pbc/all/payment-service-providers/psp.html) | Provides integration of payment methods. You can integrate multiple payment gateways, define their availability, and customize how they appear on your site. | Lets you provide an excellent shopping experience and integrate your customers’ preferred payment methods. |
+<!-- | [PSP (Payment Service Provider)](/docs/pbc/all/payment-service-providers/psp.html) | Provides integration of payment methods. You can integrate multiple payment gateways, define their availability, and customize how they appear on your site. | Lets you provide an excellent shopping experience and integrate your customers’ preferred payment methods. | -->
 | Punchout |The Punchout integration eases the purchasing process for your B2B customers. Buyers can select a shop within their procurement system and visit the supplier website via a Punchout Setup Request, thereby allowing them to follow internal procurement guidelines. | Lets you increase customer satisfaction by offering a direct Punchout integration. |
 | Ratings and Reviews | Lets you incorporate user reviews and ratings. You can receive and moderate feedback in the Back Office. The Ratings and Reviews feature also comes with the functionality to add text-free reviews and star ratings. | Inspires trust among customers with ratings and reviews. |
 | Return Management | Lets you establish a return policy and execute returns. | Increase customer satisfaction and loyalty. |
@@ -44,6 +44,8 @@ Packaged Business Capabilities (PBCs) are capabilities that enclose a certain fu
 | Back Office | The administration interface that allows you to manage all back-office tasks. In the Back Office, you can manage and create customer accounts and define who can access the Back Office. You can also keep track of all your internal processes including the management of your products, orders, customers and many more. | Keeps your back-end processes running efficiently, protects your data and administers all accounts. |
 | Storefront | The out-of-the-box online shop application that includes all regular functionalities and workflows. You can use the Storefront as a boilerplate to kick-start your project. | Lets you easily start your online shop from our boilerplate solution. |
 
+
+<!--
 ## ACP (App Composition Platform) PBCs
 
 <div class="width-100">
@@ -55,3 +57,5 @@ Packaged Business Capabilities (PBCs) are capabilities that enclose a certain fu
 | [Usercentrics](/docs/pbc/all/usercentrics.html) | (CMP) Consent Management Platform |
 
 </div>
+
+-->

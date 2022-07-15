@@ -56,5 +56,5 @@ This doc describes how to edit delivery methods.
 |  PRICE PLUGIN | Plugin that calculates the price of delivery. If you select a price  plugin, it overrides the prices specified in the **Price & Tax** tab. A developer can create plugins. |
 | DELIVERY TIME PLUGIN | Plugins that calculates estimated delivery time. A developer can create plugins. |
 | IS ACTIVE | Defines if customers can choose the method on the Storefront. |
-| TAX SET | Tax set used for the price of the method. To create tax sets, see [Create tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/create-tax-sets.html).
+| TAX SET | Tax set used for the price of the method. To create tax sets, see [Create tax sets](/docs/pbc/all/tax-management/manage-taxes-in-the-back-office/create-tax-sets.html).
 | AVAILABLE IN THE FOLLOWING STORE(S) | Defines in which stores customers can choose the  method. |

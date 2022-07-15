@@ -82,7 +82,7 @@ On the **Price & Tax** tab, do the following:
 | Gross price<br>Net price | Gross and net value of the product. A gross prices is a price after tax. A net price is a price before tax.<br>If a product variant of the abstract product does not have a price, it [inherits](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html#product-information-inheritance) the price you enter for the abstract product. |
 | DEFAULT price | Default price is the price a customer pays for the product.
 | ORIGINAL price | An original price is a price displayed as a strikethrough beside the default price on the Storefront. The original price is optional and is usually used to indicate a price change. |
-| TAX SET | Conditions under which the product will be taxed.<br>For instructions on creating tax sets, see [Create tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/create-tax-rates.html). |
+| TAX SET | Conditions under which the product will be taxed.<br>For instructions on creating tax sets, see [Create tax sets](/docs/pbc/all/tax-management/manage-taxes-in-the-back-office/create-tax-rates.html). |
 
 #### Default and original prices on the Storefront
 

@@ -80,4 +80,4 @@ The upgrader service provides automated upgrades for your application as follows
 
 ## Next steps
 
-[Onboarding to PaaS+](/docs/paas-plus/dev/onboarding-to-paas+.html)
+[Onboarding to PaaS+](/docs/paas-plus/dev/onboarding-to-paas-plus.html)

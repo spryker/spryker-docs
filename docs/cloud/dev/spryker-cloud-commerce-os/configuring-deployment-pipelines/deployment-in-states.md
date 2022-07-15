@@ -27,7 +27,7 @@ In this state database and search start transitioning to version 2. <!-- what is
 Zed 2 enters the scene. It is used to transition database and search to v2.
 
 <!--
-1.  what's zed v2 in deployment tools? Where does it come from and how is it related to zed v2 that is not in the deployment tools?
+1.  what's zed v2 in deployment tools? Where does it come from and how is it related to zed v2 that is not in the deployment tools? -- not relevant   
 
 2. How's yellow different from green ?
 

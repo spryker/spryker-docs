@@ -1,19 +1,4 @@
----
-title: Migration guide - ProductLabelStorage
-last_updated: Jun 16, 2021
-template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productlabelstorage
-originalArticleId: 2ef8ed0a-3efe-4244-9724-1addccd72226
-redirect_from:
-  - /2021080/docs/migration-guide-productlabelstorage
-  - /2021080/docs/en/migration-guide-productlabelstorage
-  - /docs/migration-guide-productlabelstorage
-  - /docs/en/migration-guide-productlabelstorage
-  - /v6/docs/migration-guide-productlabelstorage
-  - /v6/docs/en/migration-guide-productlabelstorage
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productlabelstorage.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productlabelstorage.html
----
+
 
 ## Upgrading from version 1.* to version 2.*
 
@@ -232,8 +217,7 @@ composer require spryker/product-label-storage:"^2.0.0" --update-with-dependenci
     ```
 
    5. Sync all the dictionary data to the storage:
-   
+
     ```bash
     console sync:data product_label_dictionary
     ```
-

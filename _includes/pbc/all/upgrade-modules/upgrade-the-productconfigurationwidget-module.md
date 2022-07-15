@@ -1,10 +1,6 @@
----
-title: Migration guide - ProductConfigurationWidget
-description: Learn how to upgrade the ProductConfigurationWidget module to a newer version.
-template: module-migration-guide-template
----
 
-## Upgrading from version 0.1.* to version 0.2.* 
+
+## Upgrading from version 0.1.* to version 0.2.*
 
 *Estimated migration time: 5 minutes*
 

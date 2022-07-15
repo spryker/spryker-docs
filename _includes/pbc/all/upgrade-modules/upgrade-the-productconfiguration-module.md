@@ -1,10 +1,4 @@
----
-title: Migration guide - ProductConfiguration
-description: Learn how to upgrade the ProductConfiguation module to a newer version.
-template: module-migration-guide-template
-redirect_from:
-  - /docs/scos/dev/module-migration-guides/202200.0/migration-guide-productconfiguration.html
----
+
 
 ## Upgrading from version 0.1.* to version 0.2.*
 

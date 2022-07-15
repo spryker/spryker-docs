@@ -1,18 +1,4 @@
----
-title: Migration guide - ProductCategoryStorage
-description: Learn how to update the ProductCategoryStorage module.
-last_updated: Jun 23, 2021
-template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/migration-guide-productcategorystorage
-originalArticleId: c3c6404f-d1ac-45d4-873d-2975b7ac5e36
-redirect_from:
-  - /2021080/docs/migration-guide-productcategorystorage
-  - /2021080/docs/en/migration-guide-productcategorystorage
-  - /docs/migration-guide-productcategorystorage
-  - /docs/en/migration-guide-productcategorystorage
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productcategorystorage.html
-  - /upcoming-release/docs/migration-guide-productcategorystorage
----
+
 
 This document describes how to update the `ProductCategoryStorage` module.
 
@@ -37,7 +23,7 @@ composer require spryker/product-category-storage:"^2.0.0" --update-with-depend
 ```bash    
 console propel:install
 console transfer:generate
-``` 
+```
 
 4.  From `Pyz\Zed\Event\EventDependencyProvider`, remove the deprecated subscriber: `ProductCategoryStorageEventSubscriber`.
 5.  From `Pyz\EventBehavior\EventBehaviorDependencyProvider`, remove the deprecated plugin:`ProductCategoryEventResourceQueryContainerPlugin` .

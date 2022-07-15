@@ -79,6 +79,7 @@ entries:
     - title: Install module structure and configuration
       url: /docs/scos/dev/setup/install-module-structure-and-configuration.html
   - title: Feature walkthroughs
+    url: /docs/scos/dev/feature-walkthroughs/feature-walkthroughs.html
     nested:
     - title: Agent Assist
       url: /docs/scos/dev/feature-walkthroughs/agent-assist-feature-walkthrough.html
@@ -161,6 +162,10 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
+      - title: Enabling the CMS content widgets button in the WYSIWYG Editor
+        url: /docs/scos/dev/feature-walkthroughs/content-items-feature-walkthrough/enabling-cms-content-widgets-button.html
+        include_versions:
+        - "201907.0"
     - title: Comments
       url: /docs/scos/dev/feature-walkthroughs/comments-feature-walkthrough.html
       include_versions:
@@ -416,11 +421,6 @@ entries:
         - "202009.0"
         - "202108.0"
         - "202204.0"
-    - title: Product Sets
-      url: /docs/scos/dev/feature-walkthroughs/product-sets-feature-walkthrough/product-sets-feature-walkthrough.html
-      nested:
-      - title: "Product Sets: module relations"
-        url: /docs/scos/dev/feature-walkthroughs/product-sets-feature-walkthrough/product-sets-module-relations.html
     - title: Promotions and Discounts
       url: /docs/scos/dev/feature-walkthroughs/promotions-discounts-feature-walkthrough.html
     - title: Quick Add to Cart
@@ -515,22 +515,15 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/shared-carts-feature-walkthrough.html
     - title: Shipment
       url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/shipment-feature-walkthrough.html
-    - title: Shipment
-      include_versions:
-      - "201811.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      - "202204.0"
       nested:
-      - title: "Reference information: Shipment method plugins"
-        url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
+      - title: "Shipment method plugins: reference information"
+        url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/shipment-method-plugins-reference-information.html
       - title: Shipment module overview
         url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/shipment-module-overview.html
         include_versions:
         - "201811.0"
-      - title: "Reference information: Shipment method entities in the database"
-        url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/reference-information-shipment-method-entities-in-the-database.html
+      - title: "Shipment method entities in the database: reference information"
+        url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/shipment-method-entities-in-the-database-reference-information.html
         include_versions:
         - "202005.0"
         - "202009.0"

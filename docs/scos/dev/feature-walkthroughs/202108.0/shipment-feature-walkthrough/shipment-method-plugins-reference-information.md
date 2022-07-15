@@ -1,5 +1,5 @@
 ---
-title: 'Reference information: Shipment method plugins feature walkthrough'
+title: 'Shipment method plugins: reference information'
 description: This topic provides an overview of the Availability, Price Calculation, and Delivery Time plugins.
 last_updated: Aug 20, 2021
 template: concept-topic-template
@@ -10,6 +10,7 @@ redirect_from:
   - 2021080/docs/en/reference-information-shipment-method-plugins
   - /docs/reference-information-shipment-method-plugins
   - /docs/en/reference-information-shipment-method-plugins
+  - /docs/scos/dev/feature-walkthroughs/202108.0/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
 related:
   - title: Migration Guide - Shipment
     link: docs/scos/dev/module-migration-guides/migration-guide-shipment.html

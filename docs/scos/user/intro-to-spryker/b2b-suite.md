@@ -20,7 +20,7 @@ redirect_from:
   - /v6/docs/en/b2b-suite
 ---
 
-The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of course, every B2B project has its own set of features that meet their business needs and B2C features can be used as well, but the most common features for the B2B commerce are listed below.
+The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of course, every B2B project has its own set of features that meet its business needs and B2C features can be used as well, but the most common features for B2B commerce are as follows.
 
 <details>
 <summary markdown='span'>B2B feature list</summary>
@@ -93,7 +93,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 </details>
 
 ## B2B Demo Shop
-To demonstrate the B2B features in a live implementation, we use a B2B Demo Shop. The B2B Demo Shop is a showcase that is pre-loaded with a combination of modules and functionalities best suited for B2B commerce. This Demo Shop is our recommended starting point for all standard B2B commerce projects. It comes with the new modern look-and-feel and atomic design approach. New features for the B2B Demo Shop are released every several months.
+To demonstrate the B2B features in a live implementation, we use a B2B Demo Shop. The B2B Demo Shop is a showcase that is preloaded with a combination of modules and functionalities best suited for B2B commerce. This Demo Shop is our recommended starting point for all standard B2B commerce projects. It comes with the new modern look-and-feel and atomic design approach. New features for the B2B Demo Shop are released every several months.
 
 {% wistia gfmntivjsn 960 720 %}
 

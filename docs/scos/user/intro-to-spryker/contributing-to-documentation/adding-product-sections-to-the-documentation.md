@@ -294,7 +294,7 @@ algolia:
     - docs/marketplace/dev/**/*.md
     - docs/scos/user/**/*.md
     - docs/scos/dev/**/*.md
-    - docs/paas-plus/dev/**/*.md
+    - docs/paas+/dev/**/*.md
     - docs/cloud/dev**/*.md
 
 ```
@@ -311,7 +311,7 @@ algolia:
     - docs/marketplace/dev/**/*.md
     - docs/cloud/dev/**/*.md
     - docs/scos/user/**/*.md
-    - docs/paas-plus/dev/**/*.md
+    - docs/paas+/dev/**/*.md
     - docs/acp/dev/**/*.md
     - docs/acp/user/**/*.md   
 ```

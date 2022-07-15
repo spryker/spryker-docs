@@ -10,7 +10,7 @@ We established development customization guidelines to make sure that you build 
 
 Following these guidelines throughout your development lifecycle is key to an effortless upgrade experience, even when your business requires highly complex customizations.
 
-By keeping your project compliant with our development guidelines, you make sure that you can take minor and patch updates without breaking anything. Additionally, if your project is enrolled into [PaaS+](https://spryker.com/en/paas-plus/), being compatible enables you to take the updates *automatically*.
+By keeping your project compliant with our development guidelines, you make sure that you can take minor and patch updates without breaking anything. Additionally, if your project is enrolled into [PaaS+](https://spryker.com/en/paas+/), being compatible enables you to take the updates *automatically*.
 
 The following steps will help you understand what development strategies you can implement  how they affect upgradability, and what you need to do to keep your project upgradable.
 

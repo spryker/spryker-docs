@@ -143,7 +143,7 @@ class EventDispatcherDependencyProvider extends SprykerEventDispatcherDependency
 
 4. Configure the *Http Module* with the following `\Spryker\Shared\Http\HttpConstants` options:
 
-* `\Spryker\Shared\Http\HttpConstants::YVES_HTTP_PORT` - sets the HTTP port for Yves (Spryker frontend);
+* `\Spryker\Shared\Http\HttpConstants::YVES_HTTP_PORT` - sets the HTTP port for Yves (Spryker Frontend);
 * `\Spryker\Shared\Http\HttpConstants::YVES_HTTPS_PORT` - sets the HTTPS port for Yves;
 * `\Spryker\Shared\Http\HttpConstants::YVES_TRUSTED_PROXIES` - sets an array of trusted proxies for Yves;
 * `\Spryker\Shared\Http\HttpConstants::YVES_TRUSTED_HEADER` - sets a trusted header for Yves requests;

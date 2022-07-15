@@ -22,11 +22,6 @@ redirect_from:
   - /v1/docs/en/faq
   - /v6/docs/faq
   - /v6/docs/en/faq
-related:
-  - title: Overview of features
-    link: docs/scos/user/intro-to-spryker/overview-of-features.html
-  - title: MVP project structuring
-    link: docs/scos/user/intro-to-spryker/mvp-project-structuring.html
 ---
 
 ## Does Spryker have features?
@@ -57,7 +52,7 @@ No. Spryker is an operating system for commerce. In our world, a B2C shop is onl
 
 The choice is yours. You can either divide tasks and work in the OS internally, using agencies to build specific apps, or handle each app separately—for example, an agency builds a webshop, and you build a voice or chatbot.
 
-## What are "Capabilities" in your OS?
+## What are capabilities in your OS?
 
 Capabilities are groups of features that are composed of modules, such as a cart, check-out, search, customer, stock, CMS, discount, order management, and another 700+ modules. We are continually adding new modules to let you build apps faster.
 

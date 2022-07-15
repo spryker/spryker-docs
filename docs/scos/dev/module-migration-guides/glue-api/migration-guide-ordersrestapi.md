@@ -22,4 +22,4 @@ redirect_from:
   - /module_migration_guides/glue_api/ordersrestapi-migration-guide.htm
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-api-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-api-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-ordersrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-ordersrestapi-module.md -->

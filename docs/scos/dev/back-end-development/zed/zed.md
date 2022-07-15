@@ -38,6 +38,9 @@ redirect_from:
   - /v1/docs/en/about-zed
   - /v1/docs/zed
   - /v1/docs/en/zed
+related: 
+  - title: Adding navigation in the Back Office
+    link: docs/scos/dev/back-end-development/zed/adding-navigation-in-the-back-office.html
 ---
 
 Zed is one of the application layers of the Spryker Commerce OS, providing the backoffice/backend functionality.

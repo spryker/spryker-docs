@@ -15,6 +15,9 @@ redirect_from:
   - /v5/docs/en/running-production-mode
   - /v4/docs/running-production-mode
   - /v4/docs/en/running-production-mode
+related: 
+  - title: Database access credentials
+    link: docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
 ---
 
 This document describes the procedure of generating images and assets suitable for a production environment. After going through all the steps, it's up to you how to proceed further.

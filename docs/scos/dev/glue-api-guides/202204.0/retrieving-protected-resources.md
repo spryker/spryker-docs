@@ -12,9 +12,9 @@ redirect_from:
   - /docs/en/retrieving-protected-resources
   - /docs/scos/dev/glue-api-guides/202005.0/getting-the-list-of-protected-resources.html
 related:
-  - title: Authentication and Authorization
+  - title: Authenticating as a customer
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
-  - title: Hide Content from Logged out Users Overview
+  - title: Customer Access feature overview
     link: docs/scos/user/features/page.version/customer-access-feature-overview.html
   - title: Searching by company users
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html

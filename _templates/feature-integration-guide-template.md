@@ -394,7 +394,7 @@ Enable the following behaviors by registering the plugins:
 
 ---
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the {Feature Name} feature front end.
 

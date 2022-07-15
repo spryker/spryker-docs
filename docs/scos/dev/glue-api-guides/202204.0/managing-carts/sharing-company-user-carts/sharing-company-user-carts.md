@@ -12,6 +12,11 @@ redirect_from:
   - /docs/en/sharing-company-user-carts
   - /docs/scos/dev/glue-api-guides/201811.0/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
+related:
+  - title: Retrieving cart permission groups
+    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html
+  - title: Managing shared company user carts
+    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/sharing-company-user-carts/managing-shared-company-user-carts.html
 ---
 
 Company users can share their carts with other company users, so multiple representatives of a company can work on the same order. When sharing carts, users can choose what type of access they want to grant to different each other.
@@ -19,6 +24,7 @@ Company users can share their carts with other company users, so multiple repres
 This endpoint allows sharing carts with company users.
 
 ## Installation
+
 For detailed information on the modules that provide the API functionality and related installation instructions, see [Shared Carts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shared-carts-feature-integration.html).
 
 

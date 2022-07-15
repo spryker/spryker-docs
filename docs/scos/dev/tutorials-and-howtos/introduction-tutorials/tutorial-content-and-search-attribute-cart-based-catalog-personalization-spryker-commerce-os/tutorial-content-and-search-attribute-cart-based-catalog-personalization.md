@@ -21,7 +21,7 @@ redirect_from:
   - /v1/docs/t-content-search-attribute-cart-based-catalog-personalization
   - /v1/docs/en/t-content-search-attribute-cart-based-catalog-personalization
 related:
-  - title: Search
+  - title: Search feature overview
     link: docs/scos/user/features/page.version/search-feature-overview/search-feature-overview.html
 ---
 

@@ -21,6 +21,11 @@ redirect_from:
   - /v1/docs/t-extend-spryker
   - /v1/docs/en/t-extend-spryker
   - /docs/scos/dev/back-end-development/extending-spryker/extending-the-spryker-core-functionality.html
+related:
+  - title: Extending the core
+    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html
+  - title: Extending a core module that is used by another
+    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/zed/extending-spryker/-->

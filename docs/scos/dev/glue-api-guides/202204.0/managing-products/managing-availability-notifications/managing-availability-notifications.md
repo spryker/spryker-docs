@@ -13,6 +13,9 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201907.0/managing-products/managing-availability-notifications/managing-availability-notifications.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-products/managing-availability-notifications/managing-availability-notifications.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-products/managing-availability-notifications/managing-availability-notifications.html
+related:
+  - title: Retrieving subscriptions to availability notifications
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
 ---
 
 *Availability Notification* allows registered and guest customers to subscribe to availability notifications for an unavailable product so that when the product is back in stock, they could receive a notification.

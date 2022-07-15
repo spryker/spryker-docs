@@ -19,6 +19,7 @@ With Standard Filters, you can filter the products according to the specified pr
 ![Filter Attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Standard+Filters/filter-attributes-b2c.png)
 
 ## Filter types
+
 In Spryker Commerce OS, the following filter types exist:
 
 * **Single-select**—lets a user select only one filter option.

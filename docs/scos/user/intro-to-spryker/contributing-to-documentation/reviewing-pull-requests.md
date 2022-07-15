@@ -2,6 +2,19 @@
 title: Reviewing pull requests
 description: Learn how you can propose your changes to a pull request
 template: howto-guide-template
+related:
+  - title: Building the documentation site
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
+  - title: Adding product sections to the documentation
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-product-sections-to-the-documentation.html
+  - title: Editing documentation via pull requests
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/editing-documentation-via-pull-requests.html
+  - title: Reporting documentation issues
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/reporting-documentation-issues.html
+  - title: Style, syntax, formatting, and general rules
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
+  - title: Markdown syntax
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
 ---
 
 When someone requests your review of a pull request, you get an email about the request. <!--Also, a message with the review request is displayed on the pull request page:IMAGE-->

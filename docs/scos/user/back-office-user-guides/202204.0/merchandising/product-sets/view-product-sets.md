@@ -2,9 +2,21 @@
 title: View product sets
 description: Learn how to reorder product sets in the Back Office.
 template: back-office-user-guide-template
+related:
+  - title: Create product sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/create-product-sets.html
+  - title: Edit product sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/edit-product-sets.html
+  - title: Reorder product sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/reorder-product-sets.html
+  - title: Delete product sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/delete-product-sets.html
+  - title: Product Sets feature overview
+    link: docs/scos/user/features/page.version/product-sets-feature-overview.html
 ---
 
 To view a product set, do the following:
+
 1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Sets**.
     This opens the **Product Sets** page.
 2. Next to the product set you want to view, click **View**.

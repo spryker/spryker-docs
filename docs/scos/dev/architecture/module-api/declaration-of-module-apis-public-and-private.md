@@ -23,6 +23,13 @@ redirect_from:
   - /v1/docs/definition-api
   - /v1/docs/en/definition-api
   - /docs/scos/dev/architecture/module-api/definition-of-module-api.html
+related:
+  - title: Performance and scalability
+    link: docs/scos/dev/architecture/module-api/performance-and-scalability.html
+  - title: Semantic versioning - major vs. minor vs. patch release
+    link: docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
+  - title: Using ~ Composer constraint for customized modules
+    link: docs/scos/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html
 ---
 
 According to [Semantic Versioning](http://semver.org/), we release a major version of a module when there are backward compatibility(BC) breaking changes in the Public API. This document declares what public and private APIs are.

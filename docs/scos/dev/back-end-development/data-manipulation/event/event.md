@@ -21,6 +21,13 @@ redirect_from:
   - /v2/docs/en/event
   - /v1/docs/event
   - /v1/docs/en/event
+related:
+  - title: Adding events
+    link: docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html
+  - title: Configuring an events queue
+    link: docs/scos/dev/back-end-development/data-manipulation/event/configuring-an-events-queue.html
+  - title: Listening to events
+    link: docs/scos/dev/back-end-development/data-manipulation/event/listening-to-events.html
 ---
 
 The Event module implements an Observer pattern where you can add hooks (events) to your code and allow other modules to listen and react to those events.

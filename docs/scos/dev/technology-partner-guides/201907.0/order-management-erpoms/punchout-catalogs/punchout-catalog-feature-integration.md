@@ -1391,7 +1391,7 @@ class OauthCompanyUserDependencyProvider extends SprykerOauthCompanyUserDependen
 Make sure that when you chose the supplier for transferred cart in ERP, and redirected to the shop - you are logged in.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

@@ -18,7 +18,7 @@ The following feature integration Guide expects the basic feature to be in place
 
 {% endinfo_block %}
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

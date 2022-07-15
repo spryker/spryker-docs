@@ -9,7 +9,7 @@ redirect_from:
   - /v3/docs/en/store-api-feature-integration
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -17,7 +17,7 @@ To start feature integration, overview and install the necessary features:
 | --- | --- |
 | Spryker Core | 2018.12.0 |
 
-## 1) Install the required modules using composer
+## 1) Install the required modules using Composer
 Run the following command to install the required modules:
 
 ```bash

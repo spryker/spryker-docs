@@ -1,5 +1,5 @@
 ---
-title: Implementing Prepayment in Back End
+title: Implementing Prepayment in back end
 description: This article describes how to implement prepayment in the back end.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,17 @@ redirect_from:
   - /v2/docs/en/ht-prepayment-be
   - /v1/docs/ht-prepayment-be
   - /v1/docs/en/ht-prepayment-be
+related:
+  - title: Implementing Prepayment
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment.html
+  - title: Implement Prepayment in front end
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-front-end.html
+  - title: Implementing Prepayment in shared layer
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html
+  - title: Integrating Prepayment into checkout
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrating-prepayment-into-checkout.html
+  - title: Testing the Prepayment implementation
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/testing-the-prepayment-implementation.html
 ---
 
 To integrate the prepayment method into the checkout, we need to provide implementations for these 2 plugins:

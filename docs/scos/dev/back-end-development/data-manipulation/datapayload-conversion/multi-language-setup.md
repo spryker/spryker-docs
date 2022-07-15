@@ -1,5 +1,5 @@
 ---
-title: Multi-Language Setup
+title: Multi-language setup
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/multi-language-setup
@@ -15,12 +15,7 @@ redirect_from:
   - /v5/docs/en/multi-language-setup
   - /v4/docs/multi-language-setup
   - /v4/docs/en/multi-language-setup
-related:
-  - title: Managing Glossary
-    link: docs/scos/user/back-office-user-guides/page.version/administration/glossary/managing-glossary.html
 ---
-
-## Multi-Language Setup
 
 All textual elements can be created in various languages to support content creation for multiple language setups, for example, for your international stores.
 
@@ -33,11 +28,12 @@ For each entry in the glossary, keys table there is a corresponding entry in the
 
 The glossary keys are kept in sync on the key-value storage by using a cron job that periodically runs the update storage collector command. The storage collector grabs the glossary key entries that were marked for update in the `Touch` table after the last storage update command was run.
 
-## Set up Stores with Multiple Locales
+## Set up stores with multiple locales
 
 This section describes the steps that you need to consider when you have to set up stores with multiple locales.
 
-### Configure Locales for Store
+### Configure locales for store
+
 The stores configuration can be found in the `config/Shared/stores.php` file.
 
 For each store you can define a set of locales and the first locale is the default one.
@@ -52,21 +48,25 @@ For each store you can define a set of locales and the first locale is the defau
 ```
 
 {% info_block infoBox %}
+
 In the example above, the `en` key is associated with the `en_US` locale.
+
 {% endinfo_block %}
 
-### URL Routing for Stores with Multiple Locales
+### URL routing for stores with multiple locales
+
 In Yves, the key for the selected locale is contained in the URL. If URL does not contain any key, the default locale is considered as the current one.
 
 In Demoshop, for listing the current content of the cart, the following URLs are routed to the same controller and action:
 
-| URL | Locale |
+| URL | LOCALE |
 | --- | --- |
 | `https://mysprykershop.com/cart` | en_US |
 | `https://mysprykershop.com/de/cart` | de_DE |
 | `https://mysprykershop.com/en/cart` | en_US |
 
 #### Routing the URLs
+
 For URL routing, when defining the controllers in your controller provider, you must include the allowed locales for the application.
 
 The allowed locales pattern can be retrieved using the `getAllowedLocalesPattern` from the base class of the controller provider (`AbstractYvesControllerProvider`).
@@ -80,7 +80,8 @@ $this->createGetController('/{cart}', static::ROUTE_CART, 'Cart', 'Cart')
      ->value('cart', 'cart');
 ```
 
-### Products with Localized Attributes
+### Products with localized attributes
+
 The details of the abstract products are stored localized in the `spy_product_abstract_localized_attributes` table. For each abstract product, there is an entry in this table that corresponds to each locale, containing the associated attributes for the defined locale.
 
 Similar, the details of the concrete products are kept localized in the `spy_product_localized_attributes` table.
@@ -93,7 +94,7 @@ The following details are stored localized in the Demoshop, for both abstract an
 * Short description
 * Long description
 
-#### Importing Products with Localized Attributes
+#### Importing products with localized attributes
 
 When importing product data in your application you need to consider the list of locales that are defined for the store.
 
@@ -106,7 +107,8 @@ The CSV file that contains the attributes for the products that need to be impor
 * `short_description.en_US, short_description.de_DE`
 * `long_description.en_US, long_description.de_DE`
 
-### Categories with Localized Attributes
+### Categories with localized attributes
+
 The details of the categories are kept in the `spy_category_attribute`. For each category defined in the `spy_category` table there is an entry for each defined locale containing the details of the category localized.
 
 The attributes are loaded in the key-value data storage by the Collectors, so that the details can be rendered in Yves according to the selected locale.
@@ -117,7 +119,8 @@ The following category details are stored localized:
 * `meta_description`
 * `category_image_name`
 
-#### Importing Categories with Localized Attributes
+#### Importing categories with localized attributes
+
 The product categories are imported through the Importer module.
 
 Similar to importing product data, you need to consider each locale defined in the application when importing the attributes for the categories.
@@ -128,17 +131,20 @@ The CSV file containing the product data that needs to be imported must contain 
 * `low_pic.en_US, low_pic.de_DE`
 * `category_description.en_US, category_description.de_DE`
 
-### Importing CMS Blocks and Pages
+### Importing CMS blocks and pages
 
 The CMS blocks and pages are able to render localized content through the use of placeholders. The placeholders have a glossary key associated. At runtime, the placeholder is replaced with the glossary value that corresponds to the current locale. Also, a static page will have a distinct URL for each locale defined in the application.
 
 {% info_block infoBox %}
+
 For more details on CMS, see [Defining Maximum Size of Content Fields](/docs/scos/dev/tutorials-and-howtos/howtos/howto-define-the-maximum-size-of-content-fields.html).
+
 {% endinfo_block %}
 
 The CMS blocks and pages are imported through XML files. The structure of the XML file is very simple: it contains a list of blocks, each block has a template associated, a name and a list of placeholders for each locale.
 
 Example:
+
 ```xml
 <?xml version="1.0"?>
 <blocks>
@@ -209,7 +215,9 @@ The `spy_url` table stores the URLs that correspond to:
 For each category there is a distinct URL for each configured locale. Similar for product details pages. These URLs are automatically created and stored in the DB when importing products and categories through the `Importer` module.
 
 {% info_block infoBox %}
+
 For example, `/en/computers` and `/de/computers` are the URL’s for the same category but for different locales.
+
 {% endinfo_block %}
 
 The URLs assigned for each imported CMS static page are distinct for each defined locale.

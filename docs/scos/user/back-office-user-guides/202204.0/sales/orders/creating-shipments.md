@@ -11,13 +11,19 @@ redirect_from:
   - /docs/managing-order-shipments
   - /docs/en/managing-order-shipments
   - /docs/scos/user/back-office-user-guides/202204.0/sales/orders/managing-order-shipments.html
+related:
+  - title: Editing shipments
+    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/editing-shipments.html
+  - title: Shipment feature overview
+    link: docs/scos/user/features/page.version/shipment-feature-overview.html
 ---
 
 This document describes how to create shipments for orders in the Back Office.
 
 ## Prerequisites
 
-To start working with order shipments, do the following.
+To start working with order shipments, do the following:
+
 1. Go to **Sales&nbsp;<span aria-label="and then">></span> Orders**.
 2. Next to the order you want to manage the shipment of, click **View**.
     This opens the **Order Overview** page.
@@ -27,6 +33,7 @@ Review the [reference information](#reference-information-creating-shipments) be
 {% info_block warningBox %}
 
 If you create or edit a shipment of an order created by a customer, the grand total paid by the customer is not affected:
+
 * If a new shipment method is added, its price is 0.
 * If the shipment method is changed, the price of the previous shipment method is displayed.
 

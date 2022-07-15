@@ -4,6 +4,19 @@ description: Learn how to add a new product to the Spryker docs.
 template: howto-guide-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-a-new-product-to-the-documentation-site.html
+related:
+  - title: Building the documentation site
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
+  - title: Editing documentation via pull requests
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/editing-documentation-via-pull-requests.html
+  - title: Reporting documentation issues
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/reporting-documentation-issues.html
+  - title: Reviewing pull requests
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
+  - title: Style, syntax, formatting, and general rules
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
+  - title: Markdown syntax
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
 ---
 
 When we launch a new product, you need to create a separate section for it. Usually, there are two roles per product — user and developer. In this article, we assume that you need to create a new product *acp* with the *user* and *dev* roles.
@@ -12,7 +25,7 @@ To add a new product, follow these steps.
 
 ## 1. Create a folder for the new project
 
-In the `/docs` directory, create a folder for your poject and a folder designating the roles of the project. For example, a project `acp` that has the `user` and `dev` roles, will have the following paths: `/docs/acp/user` and `/docs/acp/dev`.
+In the `/docs` directory, create a folder for your project and a folder designating the roles of the project. For example, a project `acp` that has the `user` and `dev` roles, will have the following paths: `/docs/acp/user` and `/docs/acp/dev`.
 
 ## 2. Create sidebars for the product
 
@@ -54,6 +67,7 @@ defaults:
       sidebar: "acp_user_sidebar"
       role: "user"
 ```
+
 3. Optional: To version one or more categories in your new product, in the `versioned_categories:` section, add the product name and the categories to version. For example:
 
 ```yaml
@@ -91,6 +105,7 @@ sidebars:
 To add the new product to the top navigation and the role boxes on the homepage, do the following:
 
 1. In `_includes/topnav.html`, in the `<div class="main-nav dropdown">` class, add the names for the new guides. For example:
+
 ```html
 {% raw %}
 <div class="main-nav dropdown">
@@ -105,7 +120,9 @@ To add the new product to the top navigation and the role boxes on the homepage,
             ...
 {% endraw %}
 ```
+
 2. In `<ul class="main-nav__drop main-nav__drop--mob-static dropdown-menu" aria-labelledby="navbarDropdownMenuLink">`, add the product under the last existing product. For example:
+
 ```html
                                         <ul class="main-nav__drop main-nav__drop--mob-static dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                             ...
@@ -136,6 +153,7 @@ To add the new product to the top navigation and the role boxes on the homepage,
                                                 </ul>
                                             </li>
 ```
+
 3. In `_layouts/home.html`, do the following:
 
     1. In `<h2 class="card__heading-title">Developer guides</h2>`, add a link to the document that should open when a user opens the developer guide of the product. For example:
@@ -150,9 +168,10 @@ To add the new product to the top navigation and the role boxes on the homepage,
                                 ...
                                 <li><a href="/docs/acp/dev/setup/system-requirements.html">App Composition Platform developeguides</a></li>                            
                             ...    
-
     ```
+
     2. In `<h2 class="card__heading-title">Business User guides</h2>`, add a link to the document that should open when a user opens the developer guide of the product. For example:
+    
     ```html
                                 <h2 class="card__heading-title">Business User guides</h2>
                             </div>
@@ -230,7 +249,9 @@ jobs:
 
       - run: bundle exec rake check_acp_user
 ```
+
 2. In `Rakefile`, add checks for each role. In `options[:file_ignore]` of both checks, exclude all other projects and roles. For example:
+
 ```
 ...
 task :check_acp_user do
@@ -259,6 +280,7 @@ task :check_acp_dev do
   HTMLProofer.check_directory("./_site", options).run
 end
 ```
+
 3. In `Rakefile`, in `options[:file_ignore]` of all the existing checks, exclude the new project for both roles. For example:
 
 ```
@@ -273,6 +295,7 @@ task :check_mp_dev do
   ]
 ...  
 ```
+
 ## 6. Configure the Algolia search for the new project
 
 To configure the Algolia search for the product, you need to configure the search in the *spryker-docs* repository and the Algolia app for Spryker docs.
@@ -298,8 +321,11 @@ algolia:
     - docs/cloud/dev**/*.md
 
 ```
+
 3. In the Algolia configuration file of each existing project, exclude the project for both roles from indexing. Example:
+
 **algolia_config/_scos_dev.yml**
+
 ```yaml
 algolia:
   index_name: 'scos_dev'
@@ -332,6 +358,7 @@ jobs:
         env: # Or as an environment variable
           ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}          
 ```
+
 <a name="add-product-names-for-the-search"></a>
 
 5. In `_config.yml`, in the `algolia: indices:` section, add indexes for products per role. For example:
@@ -350,6 +377,7 @@ algolia:
 ### Configuring the Algolia search in the Algolia app
 
 To configure the search in the Algolia app of the Spryker docs, do the following.
+
 #### Create an index
 
 1. In the Algloia web interface, go to [Indices](https://www.algolia.com/apps/IBBSSFT6M1/indices).
@@ -357,7 +385,8 @@ To configure the search in the Algolia app of the Spryker docs, do the following
 3. In the **Create index** window, enter the **Index name**
   This shows a success message and opens the page of the created index.
 
-#### Add searchable attributes   
+#### Add searchable attributes
+
 1. Click the **Configuration** tab.
 2. Click **+  Add a Searchable Attribute**.
 3. Enter `title` and press `Enter`.
@@ -391,7 +420,7 @@ To configure the search in the Algolia app of the Spryker docs, do the following
 #### Add facet attributes
 
 1. Go to **FILTERING AND FACETING > Facets**.
-2. Click **+  Add an Attrribute**.
+2. Click **+  Add an Attribute**.
 3. Enter `categories` and press `Enter`.
 4. Repeat steps 2-3 until you add the following attributes in the provided order and make them either searchable or not searchable:
     * categories: searchable
@@ -400,10 +429,10 @@ To configure the search in the Algolia app of the Spryker docs, do the following
     * title: searchable
     * type: not searchable
 
-#### Configure highliting
+#### Configure highlighting
 
 1. Go to **PAGINATION AND DISPLAY > Highlighting**.
-2. In the **Attributes to highlight** section, click **+  Add an Attrribute**.
+2. In the **Attributes to highlight** section, click **+  Add an Attribute**.
 3. Enter `categories` and press `Enter`.
 4. Repeat steps 2-3 until you add the following attributes in the provided order:
     * categories
@@ -414,17 +443,18 @@ To configure the search in the Algolia app of the Spryker docs, do the following
     * tags
     * title
     * type
-5. In the **Highlight prefix tag** section, replace the default value with `<em class="ais-Highlight">`.    
+5. In the **Highlight prefix tag** section, replace the default value with `<em class="ais-Highlight">`.
+6. 
 #### Add snippeting attributes
 
 1. Go to **PAGINATION AND DISPLAY > Snippeting**.
-2. Click **+  Add an Attrribute**.
+2. Click **+  Add an Attribute**.
 3. Enter `content` and press `Enter`.
 
 #### Add unretrievable attributes
 
 1. Go to **SEARCH BEHAVIOR > Retrieved attributes**.
-2. In the **Unretrievable attributes** section, click **+  Add an Attrribute**.
+2. In the **Unretrievable attributes** section, click **+  Add an Attribute**.
 3. Enter `custom_ranking` and press `Enter`.
 #### Configure duplicating and grouping
 

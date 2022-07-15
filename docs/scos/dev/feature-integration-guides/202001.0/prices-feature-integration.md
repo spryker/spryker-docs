@@ -240,7 +240,7 @@ Go to the product detail page for a product with Volume Prices set, update the q
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

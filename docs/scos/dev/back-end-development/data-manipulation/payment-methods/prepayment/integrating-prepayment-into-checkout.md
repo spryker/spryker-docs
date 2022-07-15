@@ -1,5 +1,5 @@
 ---
-title: Integrating Prepayment into Checkout
+title: Integrating Prepayment into checkout
 description: This article describes how to integrate prepayment into Checkout.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,17 @@ redirect_from:
   - /v2/docs/en/ht-prepayment-checkout
   - /v1/docs/ht-prepayment-checkout
   - /v1/docs/en/ht-prepayment-checkout
+related:
+  - title: Implementing Prepayment
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment.html
+  - title: Implement Prepayment in front end
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-front-end.html
+  - title: Implementing Prepayment in back end
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html
+  - title: Implementing Prepayment in shared layer
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html
+  - title: Testing the Prepayment implementation
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/testing-the-prepayment-implementation.html
 ---
 
 The next step is to integrate prepayment into `Checkout`. In the `PaymentMethods/Dependency/Injector` from Yves add the `CheckoutDependencyInjector` that will inject the prepayment form and handler into the `Checkout` module:
@@ -91,10 +102,10 @@ class CheckoutDependencyInjector implements DependencyInjectorInterface
     }
 }
 ```
-
-<br>
 </details>
 
 {% info_block errorBox %}
-If you re-created this example in Demoshop, you’ll need to do some adjustments on the selectPayment() from `checkout.js`.)
+
+If you re-created this example in Demoshop, you’ll need to do some adjustments on the selectPayment() from `checkout.js`.
+
 {% endinfo_block %}

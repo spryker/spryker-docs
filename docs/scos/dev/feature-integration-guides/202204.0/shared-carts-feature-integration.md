@@ -11,8 +11,10 @@ redirect_from:
   - /docs/en/shared-carts-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/shared-carts-feature-integration.html
 related:
-  - title: Shared Cart Feature Overview
+  - title: Shared Cart feature overview
     link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
+  - title: Shared Carts feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/shared-carts-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-shared-carts-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-shared-carts-feature.md -->

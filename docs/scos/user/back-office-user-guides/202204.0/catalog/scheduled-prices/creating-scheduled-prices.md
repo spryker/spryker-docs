@@ -13,7 +13,7 @@ redirect_from:
 related:
   - title: Managing Scheduled Prices
     link: docs/scos/user/back-office-user-guides/page.version/catalog/scheduled-prices/managing-scheduled-prices.html
-  - title: Scheduled Prices Feature Overview
+  - title: Scheduled Prices feature overview
     link: docs/scos/user/features/page.version/scheduled-prices-feature-overview.html
 ---
 

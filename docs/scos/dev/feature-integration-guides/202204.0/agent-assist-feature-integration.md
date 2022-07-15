@@ -11,6 +11,11 @@ redirect_from:
   - /docs/agent-assist-feature-integration
   - /docs/en/agent-assist-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/agent-assist-feature-integration.html
+related:
+  - title: Glue API - Agent Assist feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-agent-assist-feature-integration.html
+  - title: Agent Assist feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/agent-assist-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-agent-assist-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-agent-assist-feature.md -->

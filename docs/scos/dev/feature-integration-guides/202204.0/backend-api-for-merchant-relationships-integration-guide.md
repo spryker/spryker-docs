@@ -1,6 +1,6 @@
 ---
 title: Backend API for Merchant Relationships feature integration
-description: Integrate the Backend API for Merchant Relationships into your project
+description: Integrate the Backend API for Merchant Relationships into your project.
 template: feature-integration-guide-template
 ---
 

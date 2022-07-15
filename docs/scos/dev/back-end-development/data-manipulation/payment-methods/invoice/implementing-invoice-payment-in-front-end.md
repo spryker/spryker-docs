@@ -1,5 +1,5 @@
 ---
-title: Implementing Invoice Payment in Front End
+title: Implementing Invoice payment in front end
 description: This article describes implementing invoice payment in front end.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,17 @@ redirect_from:
   - /v2/docs/en/ht-invoice-payment-fe
   - /v1/docs/ht-invoice-payment-fe
   - /v1/docs/en/ht-invoice-payment-fe
+related:
+  - title: Implementing Invoice payment
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment.html
+  - title: Implementing Invoice payment in back end
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-back-end.html
+  - title: Implementing Invoice payment in shared layer
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-shared-layer.html
+  - title: Integrating Invoice payment into checkout
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrating-invoice-payment-into-checkout.html
+  - title: Testing the Invoice payment implementation
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/testing-the-invoice-payment-implementation.html
 ---
 
 ## Form creation
@@ -172,7 +183,7 @@ class InvoiceSubFormPlugin extends AbstractPlugin implements SubFormPluginInterf
 }
 ```
 
-## Payment Handler
+## Payment handler
 
 The next procedure to be performed is to set-up the payment handler.
 
@@ -253,7 +264,7 @@ class InvoiceHandlerPlugin extends AbstractPlugin implements StepHandlerPluginIn
 }
 ```
 
-## Invoice Twig Template
+## Invoice twig template
 
 Add the Twig template that will be rendered when invoice payment method is selected under the configured path:
 
@@ -261,19 +272,19 @@ Add the Twig template that will be rendered when invoice payment method is selec
 2. Adjust the path according to the theme you are currently using.
 
 <details open>
-<summary markdown='span'>Code sample:</summary>
+<summary markdown='span'>Code sample</summary>
 
-```
+```twig
 <div class="payment-subform paymentmethods-invoice-form">
     {# Place the details regarding invoice here #}
     {% raw %}{{{% endraw %} form_widget(form.paymentmethods_invoice) {% raw %}}}{% endraw %}
     {% raw %}{{{% endraw %} form_errors(form.paymentmethods_invoice) {% raw %}}}{% endraw %}
 </div>
 ```
-
-<br>
 </details>
 
 {% info_block errorBox %}
+
 Don’t forget to add the factory and the dependency provider for this new added module in Yves.
+
 {% endinfo_block %}

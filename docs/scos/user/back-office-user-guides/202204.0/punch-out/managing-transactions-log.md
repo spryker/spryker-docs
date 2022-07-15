@@ -10,6 +10,11 @@ redirect_from:
   - /2021080/docs/en/managing-transactions-log
   - /docs/managing-transactions-log
   - /docs/en/managing-transactions-log
+related:
+  - title: Managing punch out connections
+    link: docs/scos/user/back-office-user-guides/page.version/punch-out/managing-punch-out-connections.html
+  - title: Punchout Catalogs overview
+    link: docs/scos/user/technology-partners/page.version/order-management-erpoms/punchout-catalogs/punchout-catalogs-overview.html
 ---
 
 In this section, you can view the data that is being transmitted during the cart transfer in the Punch Out protocol.

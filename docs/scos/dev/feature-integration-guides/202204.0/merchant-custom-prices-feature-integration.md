@@ -11,6 +11,9 @@ redirect_from:
   - /docs/merchant-custom-prices-feature-integration
   - /docs/en/merchant-custom-prices-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/merchant-custom-prices-feature-integration.html
+related:
+  - title: Merchant Custom Prices feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/merchant-custom-prices-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-merchant-custom-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-merchant-custom-prices-feature.md -->

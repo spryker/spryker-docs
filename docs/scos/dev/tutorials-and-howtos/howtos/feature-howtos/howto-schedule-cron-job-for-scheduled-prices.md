@@ -19,6 +19,9 @@ redirect_from:
   - /v3/docs/ht-schedule-cron-job-for-scheduled-prices-201907
   - /v3/docs/en/ht-schedule-cron-job-for-scheduled-prices-201907
   - /docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/how-to-schedule-cron-job-for-scheduled-prices.html
+related:
+  - title: Scheduled Prices feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/scheduled-prices-feature-walkthrough.html
 ---
 
 

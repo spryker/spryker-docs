@@ -12,6 +12,13 @@ redirect_from:
   - /docs/en/setup-mysql-workbench-to-avoid-port-clashing-with-the-host-system
   - /v6/docs/setup-mysql-workbench-to-avoid-port-clashing-with-the-host-system
   - /v6/docs/en/setup-mysql-workbench-to-avoid-port-clashing-with-the-host-system
+related:
+  - title: Exception connecting to Redis
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/exception-connecting-to-redis.html
+  - title: My Elasticsearch dies
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/my-elasticsearch-dies.html
+  - title: Peer authentication failed for user postgres
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/peer-authentication-failed-for-user-postgres.html
 ---
 
 We recommend setting up TCP/IP over SSH for MySQL to avoid port clashing with the host system. For current connection values have a look at `config/Shared/config_default-development_DE.php`. Use `$HOME/.vagrant.d/insecure_private_key` as SSH Key File.

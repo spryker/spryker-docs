@@ -15,7 +15,7 @@ redirect_from:
 The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the **Navigation REST API** functionality.
 {% endinfo_block %}
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

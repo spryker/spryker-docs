@@ -10,6 +10,11 @@ redirect_from:
   - /2021080/docs/en/navigation-feature-integration
   - /docs/navigation-feature-integration
   - /docs/en/navigation-feature-integration
+related:
+    - title: Glue API - Navigation feature integration
+      link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-navigation-feature-integration.html
+    - title: Navigation feature walkthrough
+      link: docs/scos/dev/feature-walkthroughs/page.version/navigation-feature-walkthrough/navigation-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-navigation-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-navigation-feature.md -->

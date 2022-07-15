@@ -1,5 +1,5 @@
 ---
-title: Query Objects- Creation and Usage
+title: Query objects - creation and usage
 description: Query objects provide an object-oriented API for writing database queries which are used in query containers.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,19 @@ redirect_from:
   - /v2/docs/en/query-objects
   - /v1/docs/query-objects
   - /v1/docs/en/query-objects
+related: 
+  - title: Database overview
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html 
+  - title: Database schema definition
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
+  - title: Entity
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
+  - title: Entity manager
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
+  - title: About the query container
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html 
+  - title: Repository
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/repository.html
 ---
 
 Query objects provide an object-oriented API for writing database queries which are used in [query containers](/docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html).

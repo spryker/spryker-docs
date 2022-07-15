@@ -12,6 +12,19 @@ redirect_from:
   - /docs/en/nfs-export-issues
   - /v6/docs/nfs-export-issues
   - /v6/docs/en/nfs-export-issues
+related:
+  - title: Dev VM takes a lot of disk space (40+ GB)
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/dev-vm-takes-a-lot-of-disk-space-40-gb.html
+  - title: Error on box image download
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/error-on-box-image-download.html
+  - title: Failed to decode response - zlib_decode() - data error
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/failed-to-decode-response-zlib-decode-data-error.html
+  - title: .NFS files crash my console commands
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/nfs-files-crash-my-console-commands.html
+  - title: Too many open files in Dev VM
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/too-many-open-files-in-dev-vm.html
+  - title: VM stuck at 'Configuring and enabling network interfaces'
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/vm-stuck-at-configuring-and-enabling-network-interfaces.html
 ---
 
 ## Description

@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/merchant-b2b-contracts-feature-integration
   - /docs/merchant-b2b-contracts-feature-integration
   - /docs/en/merchant-b2b-contracts-feature-integration
+related:
+  - title: Merchant B2B Contracts feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/merchant-b2b-contracts-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-merchant-b2b-contracts-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-merchant-b2b-contracts-feature.md -->

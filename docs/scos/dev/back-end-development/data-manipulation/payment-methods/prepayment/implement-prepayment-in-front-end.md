@@ -1,5 +1,5 @@
 ---
-title: Implement Prepayment in Front End
+title: Implement Prepayment in front end
 description: This article describes how to implement prepayment method in front end.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,17 @@ redirect_from:
   - /v2/docs/en/ht-prepayment-fe
   - /v1/docs/ht-prepayment-fe
   - /v1/docs/en/ht-prepayment-fe
+related:
+  - title: Implementing Prepayment
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment.html
+  - title: Implementing Prepayment in back end
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html
+  - title: Implementing Prepayment in shared layer
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html
+  - title: Integrating Prepayment into checkout
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrating-prepayment-into-checkout.html
+  - title: Testing the Prepayment implementation
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/testing-the-prepayment-implementation.html
 ---
 
 ## Form creation
@@ -68,8 +79,6 @@ class PrepaymentDataProvider implements DataProviderInterface
 
 }
 ```
-
-<br>
 </details>
 
 <details open>
@@ -139,8 +148,6 @@ class PrepaymentSubForm extends CheckoutAbstractSubFormType implements SubFormIn
 
 }
 ```
-
-<br>
 </details>
 
 <details open>
@@ -180,11 +187,10 @@ class PrepaymentSubFormPlugin extends AbstractPlugin implements SubFormPluginInt
 
 }
 ```
-
-<br>
 </details>
 
-## Payment Handler
+## Payment handler
+
 The next procedure to be performed is to set-up the payment handler.
 
 <details open>
@@ -230,8 +236,6 @@ class PrepaymentHandler
     }
 }
 ```
-
-<br>
 </details>
 
 <details open>
@@ -268,11 +272,9 @@ class PrepaymentHandlerPlugin extends AbstractPlugin implements StepHandlerPlugi
 
 }
 ```
-
-<br>
 </details>
 
-## Prepayment Twig Template
+## Prepayment twig template
 
 Add the Twig template that will be rendered when prepayment method is selected under the configured path.
 
@@ -280,9 +282,9 @@ Add the Twig template that will be rendered when prepayment method is selected u
 2. Adjust the path according to the theme you are currently using.
 
 <details open>
-<summary markdown='span'>Code sample:</summary>
+<summary markdown='span'>Code sample</summary>
 
-```
+```twig
 <div class="payment-subform prepayment-form">
     <p>Please transfer the sum to the following account:</p>
 <p><strong>Account Holder:</strong> [Place account holder here..]</p>
@@ -295,10 +297,10 @@ Add the Twig template that will be rendered when prepayment method is selected u
 
 </div>
 ```
-
-<br>
 </details>
 
 {% info_block errorBox %}
+
 Don’t forget to add the factory and the dependency provider for this new added module in Yves.
+
 {% endinfo_block %}

@@ -21,6 +21,9 @@ redirect_from:
   - /v2/docs/en/ht-use-cms-blocks
   - /v1/docs/ht-use-cms-blocks
   - /v1/docs/en/ht-use-cms-blocks
+related:
+  - title: CMS feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html
 ---
 
 Blocks can be viewed as partial content snippets that can be embedded in other pages. From an SEO perspective, blocks are a real advantage.

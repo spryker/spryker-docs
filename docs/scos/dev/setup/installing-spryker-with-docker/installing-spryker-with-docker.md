@@ -20,6 +20,15 @@ redirect_from:
   - /2021080/docs/en/getting-started-with-docker
   - /docs/getting-started-with-docker
   - /docs/en/getting-started-with-docker
+related:
+  - title: Installing Docker prerequisites on Linux
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html
+  - title: Installing Docker prerequisites on MacOS
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html
+  - title: Installing Docker prerequisites on Windows with WSL1
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html
+  - title: Installing Docker prerequisites on Windows with WSL2
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html
 ---
 
 This section is a comprehensive introduction to running Spryker in Docker containers.

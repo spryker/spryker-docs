@@ -16,6 +16,8 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-approval-process-feature-integration.html
   - title: Shipment + Approval Process feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/shipment-approval-process-feature-integration.html
+  - title: Approval Process feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/approval-process-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-approval-process-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-approval-process-feature.md -->

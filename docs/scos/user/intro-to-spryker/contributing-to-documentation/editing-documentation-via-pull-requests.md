@@ -4,6 +4,19 @@ description: Learn how you can propose changes to the Spryker docs
 template: howto-guide-template
 redirect_from:
    - /docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation.html
+related:
+  - title: Building the documentation site
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
+  - title: Adding product sections to the documentation
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-product-sections-to-the-documentation.html
+  - title: Reporting documentation issues
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/reporting-documentation-issues.html
+  - title: Reviewing pull requests
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
+  - title: Style, syntax, formatting, and general rules
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
+  - title: Markdown syntax
+    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
 ---
 
 The Spryker documentation is hosted on GitHub, in the [spryker-docs](https://github.com/spryker/spryker-docs) repository. Therefore, to contribute to the Spryker documents, you have to use GitHub. For more information about what GitHub is, see [About Git](https://docs.github.com/en/get-started/using-git/about-git).
@@ -31,6 +44,7 @@ For information about how to create a new account on GitHub, see [Signing up for
 ## Propose changes to the Spryker documentation
 
 To propose changes to the Spryker documentation, take the following steps:
+
 1. At the top right corner of the page you want to propose changes to, click **Edit on GitHub**.
    This opens the document on GitHub.
 ![opening-a-document](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation/1-opening-a-document.png)
@@ -46,15 +60,15 @@ To propose changes to the Spryker documentation, take the following steps:
 ![proposing-changes](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation/3-saving-changes.png)
 6. On the **Comparing changes** page, open a pull request by clicking **Create pull request**. For information about pull requests, see [About pull requests](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) in the official GitHub documentation.
 ![comparing-changes](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation/4-creating-a-pull-request.png)
-7. On the **Open a pull request** page, the **Title** field is autopopulated with the name you gave to your commit with the changes proposed in step 5.
+7. On the **Open a pull request** page, the **Title** field is auto-populated with the name you gave to your commit with the changes proposed in step 5.
 {% info_block infoBox "Renaming pull requests" %}
 
-To rename your pull request, delete the autopopulated title and enter a new one.
+To rename your pull request, delete the auto-populated title and enter a new one.
 
 {% endinfo_block %}
 
-8.  Optional: On the **Write** tab, in the **## PR Description** section, add an extended description of your pull request.
-9.  Click **Create pull request**.
+8. Optional: On the **Write** tab, in the **## PR Description** section, add an extended description of your pull request.
+9. Click **Create pull request**.
 ![creating-a-pull-request](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation/5-naming-the-pr-and-saving-it.png)
 
 Your pull request is created. Now, it will be picked up by the Spryker docs team for review and merge.

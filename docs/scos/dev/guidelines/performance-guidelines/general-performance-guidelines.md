@@ -24,6 +24,10 @@ redirect_from:
   - /v1/docs/en/performance-guidelines
   - /docs/scos/dev/guidelines/performance-guidelines.html
 related:
+  - title: Architecture performance guidelines
+    link: docs/scos/dev/guidelines/performance-guidelines/architecture-performance-guidelines.html
+  - title: Frontend performance guidelines
+    link: docs/scos/dev/guidelines/performance-guidelines/front-end-performance-guidelines.html
   - title: Web Profiler Widget for Yves
     link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html
   - title: Web Profiler for Zed

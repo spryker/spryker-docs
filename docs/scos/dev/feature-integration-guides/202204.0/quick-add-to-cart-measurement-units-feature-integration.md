@@ -11,5 +11,10 @@ redirect_from:
   - /docs/quick-order-measurement-units-feature-integration
   - /docs/en/quick-order-measurement-units-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/quick-add-to-cart-measurement-units-feature-integration.html
+related:
+  - title: Quick Add to Cart feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
+  - title: Measurement Units feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/measurement-units-feature-walkthrough.html
 ---
 {% include pbc/all/integrate-features/202204.0/integrate-the-quick-add-to-cart-measurement-units-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-quick-add-to-cart-measurement-units-feature.md -->

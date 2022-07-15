@@ -11,8 +11,14 @@ redirect_from:
   - /docs/en/glue-api-payments-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-payments-feature-integration.html
 related:
-  - title: Checking Out Purchases and Getting Checkout Data
+  - title: Payments feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/payments-feature-integration.html
+  - title: Payments feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/payments-feature-walkthrough.html
+  - title: Checking out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
+  - title: Updating payment data
+    link: docs/scos/dev/glue-api-guides/page.version/checking-out/updating-payment-data.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-payments-glue-api.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-payments-glue-api.md -->

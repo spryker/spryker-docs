@@ -11,6 +11,9 @@ redirect_from:
   - /docs/shopping-lists-product-options-feature-integration
   - /docs/en/shopping-lists-product-options-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/shopping-lists-product-options-feature-integration.html
+related:
+  - title: Shopping Lists feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/shopping-lists-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-shopping-lists-product-options-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-shopping-lists-product-options-feature.md -->

@@ -126,22 +126,22 @@ entries:
     - title: Spryker videos
       url: /docs/scos/user/intro-to-spryker/spryker-videos.html
     - title: Contribute to documentation
-      url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/contribute-to-documentation.html
+      url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/contribute-to-documentation.html
       nested:
       - title: Build the documentation site
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/build-the-documentation-site.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/build-the-documentation-site.html
       - title: Edit documentation via pull requests
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/edit-documentation-via-pull-requests.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/edit-documentation-via-pull-requests.html
       - title: Report documentation issues
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/report-documentation-issues.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/report-documentation-issues.html
       - title: Style, formatting, and general rules
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/style-formatting-general-rules.html
       - title: Markdown syntax
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/markdown-syntax.html
       - title: Review pull requests
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/review-pull-requests.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/review-pull-requests.html
       - title: Add product sections to the documentation
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/add-a-new-product-to-the-documentation-site.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/add-a-new-product-to-the-documentation-site.html
 
   - title: Features
     url: /docs/scos/user/features/features.html

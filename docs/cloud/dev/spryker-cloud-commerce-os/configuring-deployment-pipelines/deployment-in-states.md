@@ -43,14 +43,14 @@ Zed 2 enters the scene. It is used to transition database and search to v2.
 
 ## 2.
 
-
-
 Redis and RabbitMQ: start transitioning. Important: Transitioning to v2 is not an atomic change. New key-value pairs and messages are added to existing ones. This means that during transitioning, they still contain v1 pairs and messages .
 
-
-
-
-
-
-
 -- >
+
+
+
+
+
+
+
+## Schemas

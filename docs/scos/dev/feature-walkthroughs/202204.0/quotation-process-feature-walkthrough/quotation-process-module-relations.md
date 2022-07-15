@@ -1,5 +1,5 @@
 ---
-title: Quotation Process- module relations
+title: "Quotation Process: module relations"
 description: On this page, you can find module relations for the Quotation Process feature.
 template: feature-walkthrough-template
 ---

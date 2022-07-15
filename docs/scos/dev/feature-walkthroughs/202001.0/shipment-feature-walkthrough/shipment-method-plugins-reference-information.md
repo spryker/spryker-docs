@@ -1,16 +1,15 @@
 ---
-title: "Reference information: Shipment method plugins"
+title: "Shipment method plugins: reference information"
 description: An optional plugin is linked to each shipping method. This topic provides an overview of the Availability, Price Calculation, and Delivery Time plugins.
-last_updated: Oct 29, 2019
+last_updated: Dec 21, 2019
 template: feature-walkthrough-template
-originalLink: https://documentation.spryker.com/v1/docs/shipment-method-plugins
-originalArticleId: 3e269e78-fd60-441a-a78f-a4aa0a513288
+originalLink: https://documentation.spryker.com/v4/docs/shipment-method-plugins
+originalArticleId: c0330136-c94a-43ed-bcfc-a6d28a7414b8
 redirect_from:
-  - /v1/docs/shipment-method-plugins
-  - /v1/docs/en/shipment-method-plugins
+  - /v4/docs/shipment-method-plugins
+  - /v4/docs/en/shipment-method-plugins
+  - /docs/scos/dev/feature-walkthroughs/202001.0/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
 related:
-  - title: Shipment Module Overview
-    link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/shipment-module-overview.html
   - title: Migration Guide - Shipment
     link: docs/scos/dev/module-migration-guides/migration-guide-shipment.html
 ---

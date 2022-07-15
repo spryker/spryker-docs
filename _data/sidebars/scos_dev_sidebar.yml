@@ -550,6 +550,8 @@ entries:
         url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
     - title: Tax
       url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/tax-feature-walkthrough.html
+      include_versions:
+      - "202108.0"      
       nested:
       - title: "Reference information: Tax module"
         url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/reference-information-tax-module.html
@@ -1832,7 +1834,7 @@ entries:
       - "201907.0"
       - "202001.0"
       - "202005.0"
-    - title: Enabling Gift Cards  
+    - title: Enabling Gift Cards
       url: /docs/scos/dev/feature-integration-guides/enabling-gift-cards.html
     - title: Enabling the Content Widget
       url: /docs/scos/dev/feature-integration-guides/enabling-the-content-widget.html

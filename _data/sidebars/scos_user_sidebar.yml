@@ -695,6 +695,12 @@ entries:
         url: /docs/scos/user/features/spryker-core-back-office-feature-overview/back-office-translations-overview.html
     - title: Tax
       url: /docs/scos/user/features/tax-feature-overview.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Wishlist
       url: /docs/scos/user/features/wishlist-feature-overview.html
     - title: Sample Suite and Custom Suite
@@ -2722,14 +2728,6 @@ entries:
           - "202204.0"
       - title: Tax rates
         nested:
-        - title: Create tax rates
-          url: /docs/scos/user/back-office-user-guides/administration/tax-rates/create-tax-rates.html
-          include_versions:
-          - "202204.0"
-        - title: Edit tax rates
-          url: /docs/scos/user/back-office-user-guides/administration/tax-rates/edit-tax-rates.html
-          include_versions:
-          - "202204.0"
         - title: Managing tax rates
           url: /docs/scos/user/back-office-user-guides/administration/tax-rates/managing-tax-rates.html
           include_versions:
@@ -2753,14 +2751,6 @@ entries:
             - "202005.0"
       - title: Tax sets
         nested:
-        - title: Create tax sets
-          url: /docs/scos/user/back-office-user-guides/administration/tax-sets/create-tax-sets.html
-          include_versions:
-          - "202204.0"
-        - title: Edit tax sets
-          url: /docs/scos/user/back-office-user-guides/administration/tax-sets/edit-tax-sets.html
-          include_versions:
-          - "202204.0"
         - title: Managing tax sets
           url: /docs/scos/user/back-office-user-guides/administration/tax-sets/managing-tax-sets.html
           include_versions:

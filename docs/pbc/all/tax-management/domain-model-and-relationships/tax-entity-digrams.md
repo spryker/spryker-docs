@@ -1,10 +1,11 @@
 ---
-title: Tax feature walkthrough
+title: Tax entity diagrams
 last_updated: Aug 20, 2021
 description: "The Tax feature allows you to define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets"
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/tax-feature-walkthrough/tax-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202204.0/tax-feature-walkthrough/tax-feature-walkthrough.html  
 ---
 
 The _Tax_ feature allows you to define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.

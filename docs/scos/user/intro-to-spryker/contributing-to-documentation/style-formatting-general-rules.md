@@ -2,6 +2,8 @@
 title: Style, syntax, formatting, and general rules
 description: Learn how to style and format your docs.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
 related:
   - title: Building the documentation site
     link: docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html

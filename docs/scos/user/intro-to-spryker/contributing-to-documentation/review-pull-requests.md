@@ -1,7 +1,9 @@
 ---
-title: Reviewing pull requests
+title: Review pull requests
 description: Learn how you can propose your changes to a pull request
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
 related:
   - title: Building the documentation site
     link: docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html

@@ -1,7 +1,9 @@
 ---
-title: Contributing to documentation
+title: Contribute to documentation
 description: Learn how you can contribute to the Spryker docs.
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-documentation.html
 related:
   - title: Building the documentation site
     link: docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html

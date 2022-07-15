@@ -1,7 +1,9 @@
 ---
-title: Building the documentation site
+title: Build the documentation site
 description: Find out how you can build the Spryker documentation site
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
 related:
   - title: Adding product sections to the documentation
     link: docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-product-sections-to-the-documentation.html

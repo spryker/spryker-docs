@@ -1,6 +1,8 @@
 ---
-title: Reporting documentation issues
+title: Report documentation issues
 description: Learn how to report an issue with Spryker docs.
+redirect_from:
+  - /docs/scos/user/intro-to-spryker/contributing-to-documentation/reporting-documentation-issues.html
 template: howto-guide-template
 related:
   - title: Building the documentation site

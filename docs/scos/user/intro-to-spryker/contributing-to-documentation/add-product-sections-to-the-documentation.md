@@ -1,9 +1,10 @@
 ---
-title: Adding product sections to the documentation
+title: Add product sections to the documentation
 description: Learn how to add a new product to the Spryker docs.
 template: howto-guide-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-a-new-product-to-the-documentation-site.html
+  - /docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-product-sections-to-the-documentation.html
 related:
   - title: Building the documentation site
     link: docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html

@@ -28,6 +28,7 @@ The purpose of these guidelines described in this topic is to help with the proj
 In general, good products are built on strong foundations, and cost-effective projects are managed through clarity, communication, and minimal change.
 
 ## Decoupling IT and Business
+
 Understanding the different stakeholders and creating a clear separation between significantly improves the decision making process and helps assign responsibilities to their correct owners.
 
 IT and Business stakeholders have different agendas, skills, and responsibilities.
@@ -36,7 +37,7 @@ If not clearly defined, the boundaries between responsibilities will become uncl
 
 The division of responsibilities should be made clear:
 
-| Business focused responsibilities |IT focused responsibilities |
+| BUSINESS FOCUSED RESPONSIBILITIES |IT FOCUSED RESPONSIBILITIES |
 | --- | --- |
 | <ul><li>reporting</li><li>accounting</li><li>budgeting</li><li>contracts</li><li>OKRs</li><li>HR</li></ul>  | <ul><li>development</li><li>architecture</li><li>design</li><li>usability</li></ul>  |
 
@@ -46,7 +47,8 @@ Clear responsibilities should be used to support cooperation and communication.
 
 {% endinfo_block %}
 
-## Communication and Ceremonies
+## Communication and ceremonies
+
 Tools and meetings are perfect conduits for creating an environment of clarity and communication, just as long as you don't go too far. Too many systems and meetings can create necessary overload and quickly turn into costly time consuming tasks.
 
 As a general rule, create a set communication method and make clear what the endorsed tool of communication is. Discourage the use of multiple tools when possible.
@@ -54,6 +56,7 @@ As a general rule, create a set communication method and make clear what the end
 The same goes for meetings, Dallies, Spec Workshops, Sprint Plannings, Retrospectives and etc. Those are great tools for bringing teams together with a clear purpose. However, to turn meetings into ceremonies make sure they are held on time, have a specific structure, are short and to the point and support decision making and communicating information. Most importantly is that everyone's time is respected.
 
 ## Specifications
+
 The specification process can be a challenge. There are a few practical suggestions that can make the process more efficient.
 
 * Start early with the designs.
@@ -106,7 +109,8 @@ Initially, to define your MVP try not to match features one by one. Instead, rem
 
 {% endinfo_block %}
 
-### Feature-Value Mapping
+### Feature-value mapping
+
 To create a lean MVP, the first step is to evaluate the importance of features by the added value they provide. A mapping matrix can help with the evaluation process.
 
 {% info_block infoBox %}
@@ -121,7 +125,8 @@ The next step is to map features to specific releases. With this method, you can
 
 ![MVP feature release](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/About+Spryker/MVP+Project+Structuring/mvp_feature_mapping_release.png)
 
-## Controlling Your Backlog
+## Controlling your backlog
+
 Giving people a voice is positive, controlling the voice is necessary. If everyone gets to have an equal input, things can get out of hand very fast. A high level of involvement in the beginning of a project will lead to an excessive and unmaintainable backlog. Subsequently, the ability to keep accurate estimates will be compromised and the sheer volume will not only be time consuming but lead to shift from planning based on micro factors that are not part of the bigger picture.
 
 To control your backlog you need to put a gatekeeper  into place. The gatekeeper can be a BA, PM or PO and their responsibilities should include:
@@ -131,7 +136,8 @@ To control your backlog you need to put a gatekeeper  into place. The gatekeeper
 * Making an initial evaluation of each tickets relevance and timing.
 * Assigning tickets to a specific release either by routing tickets from main to releases or limiting reporting to a specific release.
 
-## Planning for Major Features
+## Planning for major features
+
 The project development life cycle has ups and downs in activity during certain milestones primarily major feature development. There are two main approaches to handling this:
 
 * Spike tickets for larger technical tasks.
@@ -158,7 +164,8 @@ Data Export functionality is ideal to be tackled with the spike tickets approach
 
 {% endinfo_block %}
 
-## Launch Scenarios
+## Launch scenarios
+
 The bottom line is that for each launch you will need to find the scenario that works for you.
 
 There are three main approaches to launching a product:
@@ -175,14 +182,16 @@ For example, if the new feature has to do with financial or highly sensitive inf
 
 {% endinfo_block %}
 
-## Real Life Testing
+## Real life testing
+
 Nothing compares to testing out an actual working demo or prototype. In the development process, changes are inevitable and a product evolves from a specification fast. Having a working prototype allows to test out the initial design and align the development and direction accordingly. Therefore to increases project's productivity, have a working system running from day 1.
 
 Make sure that you leverage the working system by using it to receive stakeholder feedback, learn and understand how operations work.
 
 Using focus groups at any stage can help provide not only the user's perspective but also a fresh set of eyes and an outside opinion that is not influenced by cost, timing, and resources.
 
-## Time Management
+## Time management
+
 One of the major stress factors in project management is when as soon as the project begins you start focusing on when the project will end. Not only does that introduce stress to the process it also distracts from focusing on managing the project and detracts from our ability to deliver and adhere to plans.
 
 Planning adequate time ensures that additional time-consuming distractions can be avoided.

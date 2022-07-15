@@ -18,6 +18,14 @@ redirect_from:
   - /docs/scos/dev/migration-and-integration/202108.0/development-tools/web-profiler-widget
 related:
   - title: Web Profiler for Zed
+    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html 
+  - title: Integrating Formatter
+    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html
+  - title: Integrating SCSS linter
+    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-scss-linter.html
+  - title: Integrating TS linter
+    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-ts-linter.html
+  - title: Integrating Web Profiler for Zed
     link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html
 ---
 

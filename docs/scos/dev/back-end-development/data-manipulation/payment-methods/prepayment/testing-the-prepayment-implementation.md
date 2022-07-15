@@ -1,5 +1,5 @@
 ---
-title: Testing the Prepayment Implementation
+title: Testing the Prepayment implementation
 description: This article describes how to test the prepayment implementation.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,10 +22,21 @@ redirect_from:
   - /v2/docs/en/ht-prepayment-test
   - /v1/docs/ht-prepayment-test
   - /v1/docs/en/ht-prepayment-test
+related:
+  - title: Implementing Prepayment
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment.html
+  - title: Implement Prepayment in front end
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-front-end.html
+  - title: Implementing Prepayment in back end
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html
+  - title: Implementing Prepayment in shared layer
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html
+  - title: Integrating Prepayment into checkout
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrating-prepayment-into-checkout.html
 ---
 
 When you have completed the instructions on [front end](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-front-end.html), [back end](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html) and [shared](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html) implementation, you are able to test the payment method you just implemented.
 
- This is the last step for this tutorial.
+This is the last step for this tutorial.
 
 All you need to do is to submit a new order from Yves. After that you can control the flow of the order in Zed UI.

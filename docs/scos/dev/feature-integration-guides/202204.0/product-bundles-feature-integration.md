@@ -13,6 +13,11 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/product-bundles-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/product-bundles-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/product-bundles-feature-integration.html
+related:
+  - title: Glue API - Product Bundles feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-bundles-feature-integration.html
+  - title: Product Bundles feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-bundles-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-product-bundles-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-product-bundles-feature.md -->

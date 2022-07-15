@@ -1,5 +1,5 @@
 ---
-title: Integrating RabbitMQ Headers in Queue Messages
+title: Integrating RabbitMQ headers in queue messages
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/rabbitmq-headers-in-queue-messages
@@ -16,11 +16,16 @@ redirect_from:
   - /v4/docs/rabbitmq-headers-in-queue-messages
   - /v4/docs/en/rabbitmq-headers-in-queue-messages
 related:
+  - title: Queue
+    link: docs/scos/dev/back-end-development/data-manipulation/queue/queue.html
+  - title: Queue pool
+    link: docs/scos/dev/back-end-development/data-manipulation/queue/queue-pool.html
   - title: Migration Guide - RabbitMQ
     link: docs/scos/dev/module-migration-guides/migration-guide-rabbitmq.html
 ---
 
-## General Information
+## General information
+
 The main goal of RabbitMQ headers in the AMQP (Advanced Message Queuing Protocol) message is to store additional information about the message. Below, you can check an example of the RabbitMQ message usage with demo headers.
 
 ```php
@@ -44,8 +49,10 @@ $messageTransfer = (new QueueSendMessageTransfer())
             ...;
 ```
 
-## Integration Example
+## Integration example
+
 1. Register a new RabbitMQ queue:
+
 ```php
 <?php
 
@@ -76,7 +83,9 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
    ....
 }
 ```
+
 2. Create a queue writer:
+
 ```php
 <?php
 
@@ -128,12 +137,3 @@ class DemoQueueWriter implements DemoQueueWriterInterface
    ....
 }
 ```
-
-<!--
-**See also:**
-
-* Queue
-* Migration Guide - RabbitMQ
--->
-
-<!-- _Last review date: Mar 05, 2019_ by Oleksandr Myrnyi, Andrii Tserkovnyi -->

@@ -1,5 +1,5 @@
 ---
-title: Product Measurement Unit feature integration
+title: Measurement Units feature integration
 description: The Measurement Units feature allows defining specific units of measure for products. The guide describes how to integrate the feature into your project.
 last_updated: Dec 24, 2019
 template: feature-integration-guide-template
@@ -776,7 +776,7 @@ Make sure that `<add to cart>` action works with measurement units by adding an 
 Make sure that checkout workflow works with measurement unit by ordering item with sales unit and checking the `spy_sales_order_item` contains `quantity_base_measurement_unit_name`, `quantity_measurement_unit_name`, `quantity_measurement_unit_code`, `quantity_measurement_unit_precision` and `quantity_measurement_unit_conversion` fields populated
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please overview and install the necessary features before beginning the integration step.
 

@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/comments-feature-integration
   - /docs/comments-feature-integration
   - /docs/en/comments-feature-integration
+related:
+  - title: Comments feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/comments-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-comments-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-comments-feature.md -->

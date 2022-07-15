@@ -22,10 +22,23 @@ redirect_from:
   - /v2/docs/en/ht-implement-prepayment
   - /v1/docs/ht-implement-prepayment
   - /v1/docs/en/ht-implement-prepayment
+related:
+  - title: Implement Prepayment in front end
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-front-end.html
+  - title: Implementing Prepayment in back end
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html
+  - title: Implementing Prepayment in shared layer
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html
+  - title: Integrating Prepayment into checkout
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrating-prepayment-into-checkout.html
+  - title: Testing the Prepayment implementation
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/testing-the-prepayment-implementation.html
 ---
 
 {% info_block infoBox "Prepayment" %}
+
 This article describes the steps that you need to consider when you need to implement the prepayment method without integrating with a third party payment service provider.
+
 {% endinfo_block %}
 
 In this HowTo section, we will add a new module called `PaymentMethods`.

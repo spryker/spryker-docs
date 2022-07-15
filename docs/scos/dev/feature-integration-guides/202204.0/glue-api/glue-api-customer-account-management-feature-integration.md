@@ -11,8 +11,22 @@ redirect_from:
   - /docs/en/glue-api-customer-account-management-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-customer-account-management-feature-integration.html
 related:
-  - title: Authentication and Authorization
+  - title: Customer Account Management feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/customer-account-management-feature-integration.html
+  - title: Customer Account Management feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html
+  - title: Authenticating as a customer
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
+  - title: Confirming customer registration
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/confirming-customer-registration.html
+  - title: Managing customer addresses
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-addresses.html
+  - title: Managing customer authentication tokens via OAuth 2.0
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html
+  - title: Managing customer passwords
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-passwords.html
+  - title: Managing customers
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customers.html
 ---
 
 

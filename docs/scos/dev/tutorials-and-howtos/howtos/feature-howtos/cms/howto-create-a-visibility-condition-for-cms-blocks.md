@@ -15,9 +15,11 @@ redirect_from:
   - /v5/docs/howto-create-a-visibility-condition-for-cms-blocks
   - /v5/docs/en/howto-create-a-visibility-condition-for-cms-blocks
 related:
-  - title: Templates & Slots Feature Overview
+  - title: CMS feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html
+  - title: Templates & Slots overview
     link: docs/scos/user/features/page.version/cms-feature-overview/templates-and-slots-overview.html
-  - title: Managing Slots
+  - title: Managing slots
     link: docs/scos/user/back-office-user-guides/page.version/content/slots/managing-slots.html
 ---
 

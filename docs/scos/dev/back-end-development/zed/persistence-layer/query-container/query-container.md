@@ -1,5 +1,5 @@
 ---
-title: About the Query Container
+title: About the query container
 description: A query container holds all the database queries of the current module.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,11 @@ redirect_from:
   - /v2/docs/en/query-container
   - /v1/docs/query-container
   - /v1/docs/en/query-container
+related: 
+  - title: Implementing a query container
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html
+  - title: Using a query container
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html
 ---
 
 {% info_block infoBox "When to use query containers" %}

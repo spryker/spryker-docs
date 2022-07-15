@@ -13,8 +13,14 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-shipment-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-shipment-feature-integration.html
 related:
-  - title: Checking Out Purchases and Getting Checkout Data
+  - title: Shipment feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/shipment-feature-integration.html
+  - title: Shipment feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/shipment-feature-walkthrough.html
+  - title: Checking out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
+  - title: Retrieving orders
+    link: docs/scos/dev/glue-api-guides/page.version/retrieving-orders.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-shipment-glue-api.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-shipment-glue-api.md -->

@@ -61,7 +61,7 @@ class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyPr
 If items have been added to the cart with param `createOrder`, a new customer cart must be created with the name "Quick order {date of creation}".
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

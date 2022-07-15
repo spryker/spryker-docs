@@ -20,6 +20,9 @@ redirect_from:
   - /2021080/docs/en/installation-guide-development-mode
   - /docs/installation-guide-development-mode
   - /docs/en/installation-guide-development-mode
+related: 
+  - title: Database access credentials
+    link: docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
 ---
 
 This document describes how to install Spryker in [Development Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode) on MacOS and Linux.

@@ -17,6 +17,8 @@ redirect_from:
 related:
   - title: Managing shopping lists
     link: docs/scos/dev/glue-api-guides/page.version/managing-shopping-lists/managing-shopping-lists.html
+  - title: Shopping Lists feature overview
+    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-lists-feature-overview.html
 ---
 
 This endpoint allows managing shopping list items

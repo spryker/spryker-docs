@@ -310,7 +310,7 @@ The config setting exists for BC reasons only.
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 ### Prerequisites
 

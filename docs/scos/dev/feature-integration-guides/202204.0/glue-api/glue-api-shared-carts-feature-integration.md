@@ -1,5 +1,5 @@
 ---
-title: "Glue API: Shared Carts feature integration"
+title: "Glue API - Shared Carts feature integration"
 last_updated: Jul 4, 2022
 template: feature-integration-guide-template
 redirect_from:

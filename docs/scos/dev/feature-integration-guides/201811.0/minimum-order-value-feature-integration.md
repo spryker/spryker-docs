@@ -400,7 +400,7 @@ class SalesOrderThresholdDependencyProvider extends SprykerSalesOrderThresholdDe
 <br>
 </details>
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please overview and install the necessary features before beginning the integration step.
 
@@ -408,7 +408,7 @@ Please overview and install the necessary features before beginning the integrat
 | --- | --- |
 | Spryker Core E-commerce | 2018.11.0 |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 Run the following command(s) to install the required modules:
 
 ```bash

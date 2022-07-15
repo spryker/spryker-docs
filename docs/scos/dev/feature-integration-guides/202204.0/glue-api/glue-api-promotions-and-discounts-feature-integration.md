@@ -1,5 +1,5 @@
 ---
-title: Glue API - Promotions & discounts feature integration
+title: Glue API - Promotions and Discounts feature integration
 description: Use the guide to install the Promotions and Discounts feature in your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -14,10 +14,16 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-promotions-and-discounts-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-promotions-and-discounts-feature-integration.html
 related:
-  - title: Managing Guest Carts
+  - title: Promotions and Discounts feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/promotions-and-discounts-feature-integration.html
+  - title: Promotions and Discounts feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/promotions-discounts-feature-walkthrough.html
+  - title: Managing guest carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
-  - title: Managing Carts of Registered Users
+  - title: Managing carts of registered users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
+  - title: Retrieving promotional items
+    link: docs/scos/dev/glue-api-guides/page.version/retrieving-promotional-items.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-promotions-and-discounts-glue-api.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-promotions-and-discounts-glue-api.md -->

@@ -11,6 +11,11 @@ redirect_from:
   - /docs/multiple-carts-quick-order-integration
   - /docs/en/multiple-carts-quick-order-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/multiple-carts-quick-order-feature-integration.html
+related:
+  - title: Multiple Carts feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/multiple-carts-feature-walkthrough.html
+  - title: Quick Add to Cart feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-multiple-carts-quick-order-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-multiple-carts-quick-order-feature.md -->

@@ -25,9 +25,11 @@ redirect_from:
 ---
 
 ## Overview
+
 Spryker Middleware is a constructor that allows you to set up a linear data processing flow, also referred to as pipeline, for import/export of data from some system to shop, or from shop to some system. For example, it can be used for importing products to a shop, or exporting orders from a shop.
 
-### Pipeline Structure
+### Pipeline structure
+
 The Middleware applies the pipeline pattern allowing to connect different stages of data processing together and inverting dependencies between them. The imported/exported items are processed one by one and go through a set of specific steps called “stages”.
 
 The pipeline contains 5 standard stages: reader, validator, mapper, translator, and writer. However, you can use them or define any number of stages.
@@ -45,7 +47,7 @@ Each stage can be abstracted as having:
 
 The incoming data is taken from the stream - the Middleware does not care about the source of the data, whether it comes from a file, from an API etc. The middleware provides its own interface, so that the source of data does not really matter.
 
-### How the Middleware Works
+### How the Middleware works
 
 The Middleware provides a console interface to allow job triggering and Jenkins integration. It is evoked by running the `middleware:process:run` command. The main parameter of the command is *-p* (process name) which defines the process to be started.
 
@@ -184,14 +186,14 @@ class CategoryImportConfigurationPlugin extends AbstractPlugin implements Proces
 }
 ```
 
-### Code Organization
+### Code organization
 
 The Middleware is a set of modules in the Middleware namespace allowing to group common functionalities together. The middleware cannot provide readers and writers for all systems, these should be implemented in scope of respective modules and namespaces.
 
 Here is an example of code organization for a project:
 ![Code organization](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Spryker+Middleware/code-organization.png)
 
-### Middleware Integration
+### Middleware integration
 
 The core of the Spryker Middleware is implemented in the Process module. This module collects all process plugins and creates processes out of them.
 
@@ -248,7 +250,7 @@ class ProcessDependencyProvider extends SprykerMiddlewareProcessDependencyProvid
 
 See [this example](https://github.com/spryker-eco/akeneo-pim-middleware-connector/blob/master/src/SprykerEco/Zed/AkeneoPimMiddlewareConnector/Communication/Plugin/Configuration/DefaultProductImportConfigurationPlugin.php) on how to implement a process.
 
-### Middleware Reports
+### Middleware reports
 
 You can view the results of the Spryker Middleware processes in the Middleware *Reports* section under the *Maintenance* menu of the Administration interface. This *Middleware Reports* section provides an overview of all the processes run with Middleware, overview of the process results (start time, duration, item count, and status of each process), as well as the detailed information on each process. The detailed information includes:
 
@@ -282,7 +284,8 @@ You can view the results of the Spryker Middleware processes in the Middleware *
 * total execution time
 * average item execution time
 
-### Reports Integration
+### Reports integration
+
 To install Report module, run this command in console:
 
 ```
@@ -306,7 +309,7 @@ public function getPostProcessorHookPlugins(): array
 
 After that, you will be able to see the result of your process runs in the Admin UI (Maintenance\ Middleware Reports).
 
-### OmsMiddlewareConnector Module
+### OmsMiddlewareConnector module
 
 The `OmsMiddlewareConnector` module provides `TriggerOrderExportProcessCommand` which enables triggering of a Middleware process from OMS. Also, this module provides `OrderReadStreamPlugin` that provides input stream for reading orders and pass them to next stages of Middleware process.
 
@@ -353,7 +356,7 @@ At first, you should implement `SprykerMiddleware\Zed\Process\Business\Mapper\Ma
 
 By default, Middleware supports two strategies:
 
-| Strategy | Description |
+| STRATEGY | DESCRIPTION |
 | --- | --- |
 | SprykerMiddleware\Zed\Process\Business\Mapper\Map\MapInterface::MAPPER_STRATEGY_SKIP_UNKNOWN | This strategy will skip the keys which weren't mentioned in the mapper configuration from the payload. |
 | SprykerMiddleware\Zed\Process\Business\Mapper\Map\MapInterface::MAPPER_STRATEGY_COPY_UNKNOWN | This strategy will copy keys with values which weren't mentioned in the mapper configuration from the payload. |
@@ -524,10 +527,11 @@ Use the following format to define validation rules:
 	}
 ```
 
-#### Default Validators
+#### Default validators
+
 There are many predefined validators that can be used in `ValidationRuleSet`.
 
-| Validator Name | Description | Options |
+| VALIDATOR NAME | DESCRIPTION | OPTIONS |
 | --- | --- | --- |
 | DateTime | Validates that a value is a valid "datetime", meaning a string (or an object that can be cast into a string) that follows a specific format. | format (opt, string) |
 | EqualTo | Validates that a value is equal to another value, defined in the options. | value (req, mixed) |
@@ -544,7 +548,8 @@ There are many predefined validators that can be used in `ValidationRuleSet`.
 | Required | Validates that a value is not strictly equal to null. |   |
 | Type | Validates that a value is of a specific data type. For example, if a variable should be an array, you can use this constraint with the array type option to validate this. | type (req, string) |
 
-#### Create a Custom Validator
+#### Create a custom validator
+
 To create your own validator, extend `SprykerMiddleware\Zed\Process\Business\Validator\Validators\AbstractValidator` and implement the `validate()` method.
 
 Now, you are ready to create a new validator plugin. You need to extend `SprykerMiddleware\Zed\Process\Communication\Plugin\Validator\AbstractGenericValidatorPlugin`, implement the `getName()` and `getValidatorClassName()` methods, and use this plugin in the `SprykerMiddleware\Zed\Process\ProcessDependencyProvider::getValidatorStack()` method.
@@ -633,7 +638,7 @@ Use the following format to define translation rules:
 
 #### Default translator functions
 
-| Name | Description | Options |
+| NAME | DESCRIPTION | OPTIONS |
 | --- | --- | --- |
 | ArrayToString | Join array elements with a string. | glue (req, string) |
 | BoolToString | Transforms a bool value to a string value ('true' or 'false'). |   |
@@ -651,7 +656,8 @@ Use the following format to define translation rules:
 | StringToFloat | Transforms the string value to the float value. |   |
 | StringToInt | Transforms the string value to the integer value. |   |
 
-#### Create a Custom Translator Function
+#### Create a custom translator function
+
 To create your own translator function, extend `SprykerMiddleware\Zed\Process\Business\Translator\TranslatorFunction\AbstractTranslatorFunction` and implement the `translate()` method.
 
 Now you are ready to create validator plugin. You should extend `SprykerMiddleware\Zed\Process\Communication\Plugin\TranslatorFunction\AbstractGenericTranslatorFunctionPlugin`, implement the `getName()` and `getTranslatorFunctionClassName()` methods, and use this plugin in the `SprykerMiddleware\Zed\Process\ProcessDependencyProvider::getTranslatorFunctionStack()` method.
@@ -775,9 +781,10 @@ Check out an example of the dictionary below:
 	}		
 ```
 
-## Data Import Plugins and Business Logic
+## Data import plugins and business logic
 
 ### Creating importer
+
 First of all, you need to create a business model to import data to the database. Usually, it's called Importer. It should be implemented at the project level.
 
 ```php
@@ -842,6 +849,7 @@ First of all, you need to create a business model to import data to the database
 ```
 
 ### Prepare Publisher and datasetStepBroker
+
 As an example, we can create `DataImporter` for categories.
 
 Importer business model expects 3 parameters in the constructor, so let's create it.
@@ -1060,7 +1068,7 @@ As the parameter for `DataImportWriteStream`, we should use `CategoryDataImporte
 	}
 ```
 
-### Update Process Plugins
+### Update process plugins
 
 Finally, you are ready to update process plugins:
 

@@ -16,6 +16,8 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-company-account-feature-integration.html
   - title: Company Account + Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/company-account-order-management-feature-integration.html
+  - title: Company Account feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/company-account-feature-walkthrough/company-account-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-company-account-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-company-account-feature.md -->

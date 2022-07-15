@@ -9,6 +9,9 @@ redirect_from:
   - /2021080/docs/en/resource-sharing-feature-integration
   - /docs/resource-sharing-feature-integration
   - /docs/en/resource-sharing-feature-integration
+related:
+  - title: Resource Sharing feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/resource-sharing-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-resource-sharing-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-resource-sharing-feature.md -->

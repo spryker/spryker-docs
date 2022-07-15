@@ -568,7 +568,7 @@ Before removing company user, all records from DB table `spy_quote_company_user`
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

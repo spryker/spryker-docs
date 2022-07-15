@@ -1,5 +1,5 @@
 ---
-title: Quotation Process module relations
+title: "Quotation Process: module relations"
 description: The article describes the Quotation Process feature, its statuses, and workflow (by a customer, sales representative, agent account and interaction with approval process.
 last_updated: Sep 14, 2020
 template: feature-walkthrough-template

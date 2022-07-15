@@ -1,5 +1,5 @@
 ---
-title: Implementing a Facade
+title: Implementing a facade
 description: This article describes how to implement a facade.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -20,14 +20,21 @@ redirect_from:
   - /v3/docs/en/implementing-facade
   - /v2/docs/implementing-facade
   - /v2/docs/en/implementing-facade
+related:
+  - title: About facade
+    link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
+  - title: Using a facade
+    link: docs/scos/dev/back-end-development/zed/business-layer/facade/using-a-facade.html
+  - title: Design by Contract (DBC) - Facade
+    link: docs/scos/dev/back-end-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
 ---
 
 ## AbstractFacade
 
 Every facade extends `Spryker\Zed\Kernel\Business\AbstractFacade` which provides an important method:
 
-| Method              | Purpose                                                      |
-| ------------------- | ------------------------------------------------------------ |
+| METHOD  | PURPOSE  |
+| ------------------- | ------------- |
 | $this->getFactory() | Returns the factory which is needed to access the underlying models. |
 
 ## Methods
@@ -66,7 +73,7 @@ The main idea of the facade is to hide the implementation details. Typical retur
 
 To hide and protect the underlying models and data structure, we never return business models or any propel entities/queries.
 
-## Transfer Objects
+## Transfer objects
 
 Each module ships with its own interface for each transfer object that is used. Transfer objects are much more descriptive compared to arrays.
 

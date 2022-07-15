@@ -13,6 +13,8 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/prices-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202200.0/prices-feature-integration.html
 related:
+  - title: Glue API - Product price feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-price-feature-integration.html
   - title: Configurable Bundle feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html
   - title: Product Images + Configurable Bundle feature integration
@@ -23,6 +25,8 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/product-lists-feature-integration.html
   - title: Merchant Product Restrictions feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
+  - title: Prices feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/prices-feature-walkthrough/prices-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-prices-feature.md -->

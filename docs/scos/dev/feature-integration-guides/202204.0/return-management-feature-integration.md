@@ -10,6 +10,11 @@ redirect_from:
   - /2021080/docs/en/return-management-feature-integration
   - /docs/return-management-feature-integration
   - /docs/en/return-management-feature-integration
+related:
+    - title: Glue API - Return Management feature integration
+      link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-return-management-feature-integration.html
+    - title: Return Management feature walkthrough
+      link: docs/scos/dev/feature-walkthroughs/page.version/return-management-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-return-management-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-return-management-feature.md -->

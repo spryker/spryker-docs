@@ -23,6 +23,7 @@ Spryker employees never ask for credentials. We delete and don’t work with any
 {% endinfo_block %}
 
 ## Prerequisites
+
 Register in our [Slack Community](https://spryker.com/support/).
 
 ## Process for sharing the secrets

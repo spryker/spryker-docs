@@ -10,6 +10,11 @@ redirect_from:
   - /2021080/docs/en/customer-account-management-order-management-feature-integration
   - /docs/customer-account-management-order-management-feature-integration
   - /docs/en/customer-account-management-order-management-feature-integration
+related:
+  - title: Customer Account Management feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html
+  - title: Order Management feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/order-management-feature-walkthrough/order-management-feature-wakthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-customer-account-management-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-customer-account-management-order-management-feature.md -->

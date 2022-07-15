@@ -12,6 +12,10 @@ redirect_from:
   - /docs/en/managing-reclamations
   - /docs/scos/user/back-office-user-guides/202204.0/sales/reclamations/managing-reclamations.html
 related:
+  - title: Creating reclamations
+    link: docs/scos/user/back-office-user-guides/202204.0/sales/orders/creating-reclamations.html
+  - title: Changing the state of order items in reclamations
+    link: docs/scos/user/back-office-user-guides/page.version/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html
   - title: Reclamations Feature Overview
     link: docs/scos/user/features/page.version/reclamations-feature-overview.html
 ---

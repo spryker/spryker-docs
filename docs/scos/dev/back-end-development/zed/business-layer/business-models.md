@@ -1,5 +1,5 @@
 ---
-title: Business Models
+title: Business models
 description: Business models are classes where you program the business logic of your system.
 last_updated: Sep 27, 2021
 template: howto-guide-template
@@ -22,13 +22,18 @@ redirect_from:
   - /v2/docs/en/business-models
   - /v1/docs/business-models
   - /v1/docs/en/business-models
+related:
+  - title: About the Business layer
+    link: docs/scos/dev/back-end-development/zed/business-layer/business-layer.html
+  - title: Custom exceptions
+    link: docs/scos/dev/back-end-development/zed/business-layer/custom-exceptions.html
 ---
 
 Business models are classes where you program the business logic of your system. With business logic we mean all kinds of algorithms (for example, cart calculation), storage procedures (for example, checkout save workflow) and interactions with external providers (for example, payment).
 
 Business models are not visible from other layers and bundles. Although their methods are public they must not be used directly from the outside. In Java we would use the package-private access modifier, so that methods can only be called from within the same package/module. In PHP this modifier is missing, so instead of a explicit declaration we only have a convention.
 
-## Dependency Injection
+## Dependency injection
 
 Business models must not directly depend on each other. The dependency container injects dependencies to the constructor and we use interfaces not to depend on concrete classes. This is very important for testability and decoupling. It also allows you to use country-specific extensions of models.
 
@@ -65,7 +70,7 @@ As you can see, the `KeyManager` class depends on two other classes which are sp
 
 Every business model ships with an interface which exposes all public methods.
 
-## Avoid Hybrids
+## Avoid hybrids
 
 In case you need data objects, you can use transfer objects, entities or you can create your own DTOs for internal use. In any case do not mix them up with the business models. Each class is either a stateless model with functional methods or a data object with getters and setters.
 

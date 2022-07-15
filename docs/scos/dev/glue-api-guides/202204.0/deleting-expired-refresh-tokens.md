@@ -11,7 +11,7 @@ redirect_from:
   - /docs/deleting-expired-refresh-tokens
   - /docs/en/deleting-expired-refresh-tokens
 related:
-  - title: Authentication and Authorization
+  - title: Authenticating as a customer
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
   - title: Glue API - Customer Account Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-customer-account-management-feature-integration.html

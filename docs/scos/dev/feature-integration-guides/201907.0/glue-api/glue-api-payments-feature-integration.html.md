@@ -21,7 +21,7 @@ related:
 The current guide only adds the Payment Management API functionality.
 </div></section>
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start the feature integration, overview and install the necessary features:
 

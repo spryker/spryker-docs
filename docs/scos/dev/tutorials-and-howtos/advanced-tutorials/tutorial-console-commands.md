@@ -22,6 +22,9 @@ redirect_from:
   - /v2/docs/en/t-console-commands
   - /v1/docs/t-console-commands
   - /v1/docs/en/t-console-commands  
+related:
+  - title: Console Commands in Spryker
+    link: docs/scos/dev/back-end-development/console-commands/console-commands.html
 ---
 
 A console command is a PHP class that contains the implementation of a functionality that can get executed from the command line.

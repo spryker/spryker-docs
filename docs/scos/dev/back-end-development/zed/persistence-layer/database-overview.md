@@ -1,5 +1,5 @@
 ---
-title: Database Overview
+title: Database overview
 description: In this article, you will get an overview of the database in the ORM directory.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,19 @@ redirect_from:
   - /v2/docs/en/database-overview
   - /v1/docs/database-overview
   - /v1/docs/en/database-overview
+related: 
+  - title: Database schema definition
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
+  - title: Entity
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
+  - title: Entity manager
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
+  - title: About the query container
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html 
+  - title: Query objects - creation and usage
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
+  - title: Repository
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/repository.html
 ---
 
 

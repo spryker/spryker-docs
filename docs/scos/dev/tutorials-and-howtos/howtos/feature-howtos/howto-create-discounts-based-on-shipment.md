@@ -26,7 +26,7 @@ related:
 The HowTo guide shows how to do the following:
 
 * Activate a discount rule based on a shipment carrier, a shipment method, or a shipment price.
-* Add a shipment precheck plugin to checkout.
+* Add a shipment pre-check plugin to checkout.
 
 ## Activate a discount rule based on a shipment carrier
 

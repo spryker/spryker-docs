@@ -22,6 +22,9 @@ redirect_from:
   - /v2/docs/en/t-implement-customer-approval-process-on-state-machine
   - /v1/docs/t-implement-customer-approval-process-on-state-machine
   - /v1/docs/en/t-implement-customer-approval-process-on-state-machine
+related:
+  - title: Approval Process feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/approval-process-feature-walkthrough.html
 ---
 
 ## Introduction

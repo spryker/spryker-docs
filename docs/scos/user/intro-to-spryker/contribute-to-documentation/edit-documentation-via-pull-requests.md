@@ -24,7 +24,7 @@ The Spryker documentation is hosted on GitHub, in the [spryker-docs](https://git
 
 {% info_block infoBox "Info" %}
 
-We write the Spryker documentation using Markdown. If you don’t know Markdown yet, check the [GitHub Markdown Guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). For the documentation-specific Markdown elements and HTML syntax used where Markdown is not enough, see [Markdown syntax](/docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html).
+We write the Spryker documentation using Markdown. If you don’t know Markdown yet, check the [GitHub Markdown Guide](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax). For the documentation-specific Markdown elements and HTML syntax used where Markdown is not enough, see [Markdown syntax](/docs/scos/user/intro-to-spryker/contribute-to-documentation/markdown-syntax.html).
 
 {% endinfo_block %}
 
@@ -32,7 +32,7 @@ This instruction explains how to contribute to the Spryker documentation by crea
 
 {% info_block infoBox "Info" %}
 
-For information about the structure of the Spryker documentation, as well as style and formatting rules, see [Style, syntax, formatting, and general rules](/docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html).
+For information about the structure of the Spryker documentation, as well as style and formatting rules, see [Style, syntax, formatting, and general rules](/docs/scos/user/intro-to-spryker/contribute-to-documentation/style-formatting-general-rules.html).
 
 {% endinfo_block %}
 

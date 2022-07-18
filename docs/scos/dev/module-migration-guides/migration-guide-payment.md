@@ -29,9 +29,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-payment.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-payment.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-payment.html
-related:
-  - title: Migration guide - CheckoutRestpayment
-    link: docs/scos/dev/module-migration-guides/glue-payment/migration-guide-checkoutrestpayment.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-payment-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-payment-module.md -->

@@ -32,7 +32,7 @@ For general formatting rules and styling rules for Markdown, see [Basic writing 
 {% endinfo_block %}
 
 
-Syntax snippets contain text wrapped in braces - `{}`. This is a placeholder that you should replace with what the text inside describes. Also, remove the braces.
+Syntax snippets contain text wrapped in braces (`{}`). This is a placeholder that you should replace with what the text inside describes. Also, remove the braces.
 
 {% info_block errorBox "Templates" %}
 

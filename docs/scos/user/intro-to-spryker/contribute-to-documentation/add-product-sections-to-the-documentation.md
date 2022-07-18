@@ -9,7 +9,7 @@ related:
   - title: Building the documentation site
     link: docs/scos/user/intro-to-spryker/contributing-to-documentation/build-the-documentation-site.html
   - title: Editing documentation via pull requests
-    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/editing-documentation-via-pull-requests.html
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/edit-documentation-via-pull-requests.html
   - title: Reporting documentation issues
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/report-documentation-issues.html
   - title: Reviewing pull requests

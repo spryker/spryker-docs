@@ -1,5 +1,5 @@
 ---
-title: Integrating Avalara Tax + Shipment
+title: Integrate Avalara Tax + Shipment
 description: Integrate Avalara Tax + Shipment feature into your project.
 last_updated: Jun 18, 2021
 template: concept-topic-template
@@ -11,6 +11,7 @@ redirect_from:
   - /docs/avalara-tax-shipment-feature-integration
   - /docs/en/avalara-tax-shipment-feature-integration
   - /docs/scos/user/technology-partners/202204.0/taxes/avalara-tax-shipment-feature-integration.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/taxes/avalara/integrating-avalara-tax-shipment.html
 related:
   - title: Tax feature overview
     link: docs/scos/user/features/page.version/tax-feature-overview.html

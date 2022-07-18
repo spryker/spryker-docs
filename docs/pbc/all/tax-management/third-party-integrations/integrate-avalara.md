@@ -1,5 +1,5 @@
 ---
-title: Integrating Avalara
+title: Integrate Avalara
 description: Integrate Avalara to automatically calculate taxes.
 last_updated: Jun 18, 2021
 template: concept-topic-template
@@ -11,6 +11,7 @@ redirect_from:
   - /docs/avalara-tax-integration
   - /docs/en/avalara-tax-integration
   - /docs/scos/user/technology-partners/202204.0/taxes/avalara-tax-integration.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/taxes/avalara/integrating-avalara.html
 related:
   - title: Tax feature overview
     link: docs/scos/user/features/page.version/tax-feature-overview.html

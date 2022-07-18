@@ -1,5 +1,5 @@
 ---
-title: Integrating Avalara Tax + Product Options
+title: Integrate Avalara Tax + Product Options
 description: Integrate the Avalara Tax + Product Options feature into your project
 last_updated: Jun 18, 2021
 template: concept-topic-template
@@ -11,6 +11,7 @@ redirect_from:
   - /docs/avalara-tax-product-options-feature-integration
   - /docs/en/avalara-tax-product-options-feature-integration
   - /docs/scos/user/technology-partners/202204.0/taxes/avalara-tax-product-options-feature-integration.html
+  - /docs/scos/dev/technology-partner-guides/202204.0/taxes/avalara/integrating-avalara-tax-product-options.html
 related:
   - title: Tax feature overview
     link: docs/scos/user/features/page.version/tax-feature-overview.html

@@ -83,7 +83,7 @@ Now it's time to deploy the scheduler. It is based on the Zed container, as it n
 Because the scheduler was paused, we don't need to fear it will run against incorrect data or services. 
 However, requests still are coming in:
 
-![Deploy_Scheduler](/home/sylvain/PhpstormProjects/spryker-docs/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/images/Deploy_Scheduler/deploy_scheduler.gif)
+![Deploy_Scheduler](./images/Deploy_Scheduler/deploy_scheduler.gif)
 
 ### Run_install
 
@@ -106,11 +106,11 @@ vendor/bin/console scheduler:setup -vvv --no-ansi
 ```
 When this command run, it will restart our queue workers, and update search and redis.
 
-![Run_install](/home/sylvain/PhpstormProjects/spryker-docs/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/images/Run_install/install_dbs_updates/install_dbs_updates.gif)
+![Run_install](./images/Run_install/install_dbs_updates/install_dbs_updates.gif)
 
 This process might take a while, depending on the amount of data that needs to be processed. And request are still coming in:
 
-![Run_install_requests](/home/sylvain/PhpstormProjects/spryker-docs/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/images/Run_install/request_during_install/install_request.gif)
+![Run_install_requests](./images/Run_install/request_during_install/install_request.gif)
 
 ### Deploy_Spryker_services
 Finally, we are going to deploy our services with the updated codebase. (Zed V2, Glue V2).

@@ -2569,10 +2569,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-oms.html
     - title: Migration Guide - Payment
       url: /docs/scos/dev/module-migration-guides/migration-guide-payment.html
-    - title: Migration guide - Payone Demoshop
-      url: /docs/scos/dev/module-migration-guides/migration-guide-payone-demoshop.html
-    - title: Migration guide - Payone Suite
-      url: /docs/scos/dev/module-migration-guides/migration-guide-payone-suite.html
     - title: Migration Guide - PersistentCart
       url: /docs/scos/dev/module-migration-guides/migration-guide-persistentcart.html
     - title: Migration Guide - Price

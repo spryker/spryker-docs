@@ -241,7 +241,7 @@ Make sure that you can delete the customer price.
 
 {% info_block warningBox %}
 
-This option is only available if you installed [Marketplace Product Offer feature](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html).
+This option is only available if you have the [Marketplace Product Offer feature](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) installed.
 
 {% endinfo_block %}
 
@@ -275,6 +275,6 @@ class ProductMerchantPortalGuiDependencyProvider extends SprykerProductMerchantP
 
 1. Log in to the Merchant Portal with a merchant that has at least one merchant relationship and product offer.
 2. Open any product that has a product offer.
-3. Make sure that the Prices table does not contain product offer prices for both: abstract and concrete products.
+3. Make sure that the Prices table does not contain product offer prices for both abstract and concrete products.
 
 {% endinfo_block %}

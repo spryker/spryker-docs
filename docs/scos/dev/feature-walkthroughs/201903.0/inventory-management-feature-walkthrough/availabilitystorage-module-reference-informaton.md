@@ -1,8 +1,10 @@
 ---
-title:  "Reference information: AvailabilityStorage module overview"
+title:  "AvailabilityStorage module: reference information"
 last_updated: Aug 13, 2021
 description: This article describes the AvailabilityStorage module, which publishes all the availability information for abstract and concrete products
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/201903.0/inventory-management-feature-walkthrough/reference-informaton-availabilitystorage-module-overview.html
 ---
 
 The [AvailabilityStorage](https://github.com/spryker/availability-storage) module publishes all the availability information for abstract and concrete products. Items are grouped by abstract product, and the process is handled by [Publish and Synchronize](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html).

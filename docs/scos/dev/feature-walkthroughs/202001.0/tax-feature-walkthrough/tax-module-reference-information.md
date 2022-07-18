@@ -1,13 +1,14 @@
 ---
-title: "Reference information: Tax module"
+title: "Tax module: reference information"
 last_updated: Aug 20, 2021
-description: The Tax module is responsible for handling tax rates that can apply for products, product options or shipment.
-template: feature-walkthrough-template
-originalLink: https://documentation.spryker.com/v5/docs/tax-module
-originalArticleId: 05ff146a-39a6-4900-8474-f9cd0319457e
+description: The Tax module is responsible for handling tax rates that can apply for products, product options, or shipment
+template: concept-topic-template
+originalLink: https://documentation.spryker.com/v6/docs/tax-module
+originalArticleId: 5cedaed8-f1c1-43ce-b279-54014a354d26
 redirect_from:
-  - /v5/docs/tax-module
-  - /v5/docs/en/tax-module
+  - /v4/docs/tax-module
+  - /v4/docs/en/tax-module
+  - /docs/scos/dev/feature-walkthroughs/202001.0/tax-feature-walkthrough/reference-information-tax-module.html
 ---
 
 

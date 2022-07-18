@@ -237,7 +237,7 @@ Make sure that you can delete the customer price.
 {% endinfo_block %}
 
 
-### Filter out product offer prices
+### 5) Filter out product offer prices
 
 {% info_block warningBox %}
 

@@ -5,13 +5,13 @@ template: howto-guide-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
 related:
-  - title: Adding product sections to the documentation
-    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/adding-product-sections-to-the-documentation.html
-  - title: Editing documentation via pull requests
+  - title: Add product sections to the documentation
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/add-product-sections-to-the-documentation.html
+  - title: Edit documentation via pull requests
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/edit-documentation-via-pull-requests.html
-  - title: Reporting documentation issues
+  - title: Report documentation issues
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/report-documentation-issues.html
-  - title: Reviewing pull requests
+  - title: Review pull requests
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/review-pull-requests.html
   - title: Style, syntax, formatting, and general rules
     link: docs/scos/user/intro-to-spryker/contributeto-documentation/style-formatting-general-rules.html

@@ -6,18 +6,18 @@ redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation.html
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-documentation.html
 related:
-  - title: Building the documentation site
-    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
-  - title: Adding product sections to the documentation
-    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-product-sections-to-the-documentation.html
-  - title: Reporting documentation issues
-    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/reporting-documentation-issues.html
-  - title: Reviewing pull requests
-    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
+  - title: Build the documentation site
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/build-the-documentation-site.html
+  - title: Addi product sections to the documentation
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/add-product-sections-to-the-documentation.html
+  - title: Report documentation issues
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/report-documentation-issues.html
+  - title: Review pull requests
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/review-pull-requests.html
   - title: Style, syntax, formatting, and general rules
-    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/style-formatting-general-rules.html
   - title: Markdown syntax
-    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/markdown-syntax.html
 ---
 
 The Spryker documentation is hosted on GitHub, in the [spryker-docs](https://github.com/spryker/spryker-docs) repository. Therefore, to contribute to the Spryker documents, you have to use GitHub. For more information about what GitHub is, see [About Git](https://docs.github.com/en/get-started/using-git/about-git).

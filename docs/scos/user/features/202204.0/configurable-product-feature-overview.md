@@ -113,7 +113,7 @@ If the configuration is not complete, on entering the **Product details** page, 
 ![incomplete-configurtion-message](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/incomplete-configurtion-message.png)
 
 
-Even if all the parameter values are [preconfigured](#preconfigured-parameter-values), but configuration is not complete, a customer has to open the configurator and save the configuration. They are not required to change the preconfigured values, though.
+Even if all the parameter values are [preconfigured](#preconfigured-parameter-values), but the configuration is not complete, a customer has to open the configurator and save the configuration. They are not required to change the preconfigured values, though.
 
 ![configuration-is-not-complete-message-with-preconfigured-parameters](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configuration-is-not-complete-message-with-pre-configured-parameters.png)
 

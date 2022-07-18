@@ -18,7 +18,7 @@ To learn how pipelines work in SCCOS, see [Deployment pipelines](/docs/cloud/dev
 
 ## Production Pipeline
 
-Here is the list of the steps that we will find in a regular pipeline. Highlighted in **bold** are the steps that have a potential to break our application.
+Here is the list of the steps that we will find in a regular pipeline. Highlighted in **bold** are the steps that have a potential to break (or at least impact) our application.
 * Source
 * Please_approve
 * **Build_and_Prepare**
@@ -42,8 +42,8 @@ This is how our application behaves  when no pipeline is running. In a fully wor
 
 ### Build_and_Prepare
 
-In this step, we build the Containers of each services that we are going to deploy (zed, yves, frontend, backoffice, backapi, glue, etc.)
-For the sake of simplicity, we will use only Glue and Zed in our exemples. 
+In this step, we build the Containers of each service that we are going to deploy (zed, yves, frontend, backoffice, backapi, glue, etc.)
+For the sake of simplicity, we will use only Glue and Zed in our examples. 
 
 ![Build_and_Prepare](./images/Build_and_Prepare/Build_and_Prepare.jpg)
 
@@ -60,7 +60,7 @@ This step will run our application defined scripts. They are registered under th
 ```shell
 vendor/bin/install -r pre-deploy -vvv
 ```
-We mention this step here because it is important to understand that if our script takes a long time to run, we need to keep in mind all the services that are currently (or soon) in an updated state and might respond incorrectly to requests. 
+We mention this step here because it is important to understand that if our script takes a long time to run, we need to keep in mind all the services that are currently (or soon) in an updated state might respond incorrectly to requests. 
 
 An important part of this deployment step is this command:
 ```shell
@@ -78,6 +78,7 @@ Requests in the meantime are still coming in:
 ### Deploy_Scheduler
 
 Now it's time to deploy the scheduler. It is based on the Zed container, as it needs to use Zed codebase. 
+
 ![scheduler_paused](./images/Deploy_Scheduler/Deploy_Scheduler.jpg)
 
 Because the scheduler was paused, we don't need to fear it will run against incorrect data or services. 

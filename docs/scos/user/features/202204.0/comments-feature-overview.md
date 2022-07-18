@@ -18,7 +18,7 @@ An *entity* is a unit or a component that has some properties and may have relat
 
 As an example of this generic solution, we have implemented Comments on the **Shopping Cart** page.
 
-Comments help multiple customers to have a dialog on the cart contents. How does it work? Let's imagine a situation where you have a company account and three HR members (HR assistant, HR manager, and the head of the HR department) who are responsible for purchasing the products for the whole office. They share the same shopping cart. The HR assistant adds the products to the shopping cart and includes a comment requesting to review the shopping cart by an HR manager. With the help of comments, they decide on the final quantity of the products and finalize the shopping cart contents. After the shopping cart is ready, the HR manager adds a comment for the head of the HR department to approve the total price. By means of the conversation in the cart comments, the head of the department makes the latest corrections to the cart's contents and attaches the important comments concerning the shipping of some products to the shopping cart. From now on, the HR assistant can proceed to Checkout. The attached comments will be available on the **Checkout** page and, if the order is successfully placed, in the order history.
+Comments help multiple customers to have a dialog on the cart contents. How does it work? Let's imagine a situation where you have a company account and three HR members (HR assistant, HR manager, and the head of the HR department) who are responsible for purchasing the products for the whole office. They share the same shopping cart. The HR assistant adds the products to the shopping cart and includes a comment requesting to review the shopping cart by an HR manager. With the help of comments, they decide on the final quantity of the products and finalize the shopping cart contents. After the shopping cart is ready, the HR manager adds a comment for the head of the HR department to approve the total price. Using the conversation in the cart comments, the head of the department makes the latest corrections to the cart's contents and attaches the important comments concerning the shipping of some products to the shopping cart. From now on, the HR assistant can proceed to Checkout. The attached comments will be available on the **Checkout** page and if the order is successfully placed, in the order history.
 
 Thus, the Comments feature lets your B2B customers effectively communicate and discuss the purchases with colleagues, thereby improving customer satisfaction and speeding up the process by avoiding additional communication outside of the context.
 
@@ -34,7 +34,7 @@ The comment contains the following information:
 * Contents of the comment
 * Comment Tag
 
-Company users can add comments to a shared cart in both Read-only and Full Access permissions. A user can also add a comment before submitting the order, on the **Checkout Summary** page as well as post factum, after the order has been placed, on the **Order History** page:
+Company users can add comments to a shared cart with both Read-only and Full Access permissions. A user can also add a comment before submitting the order on the **Checkout Summary** page as well as post factum after the order has been placed on the **Order History** page:
 
 {% info_block warningBox "Note" %}
 
@@ -46,7 +46,7 @@ When the order with the attached comments is placed, the Back Office user can vi
 
 ### Comment tags
 
-Every comment may be tagged. *Tags* are keywords associated with the comments. The tags are added to group the comments sharing a similar idea or topic. For example, you may have several comments where colleagues have covered the details about how the order should be delivered, so you may tag these comments with the *Delivery* tag for convenience. Also, in the drop-down menu, you can filter the comments according to tags added.
+Every comment may be tagged. *Tags* are keywords associated with the comments. The tags are added to group the comments sharing a similar idea or topic. For example, you may have several comments where colleagues have covered the details about how the order should be delivered, so you may tag these comments with the *Delivery* tag for convenience. Also, in the drop-down menu, you can filter the comments according to the tags added.
 
 ## Comments on the Storefront
 Company users can perform the following actions using the Comments widget on the Storefront:

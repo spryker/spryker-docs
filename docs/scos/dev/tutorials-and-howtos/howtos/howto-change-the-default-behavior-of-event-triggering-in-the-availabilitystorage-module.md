@@ -23,8 +23,8 @@ redirect_from:
   - /v1/docs/ht-change-default-behaviour-of-event-trigerring-in-availability-storage-module
   - /v1/docs/en/ht-change-default-behaviour-of-event-trigerring-in-availability-storage-module
 related:
-  - title: "Reference information: AvailabilityStorage module overview"
-    link: docs/scos/dev/feature-walkthroughs/page.version/inventory-management-feature-walkthrough/reference-informaton-availabilitystorage-module-overview.html
+  - title: "AvailabilityStorage module: reference information"
+    link: docs/scos/dev/feature-walkthroughs/page.version/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html
 ---
 
 By default, events are triggered when product status changes from `available` to `not available`, and conversely.

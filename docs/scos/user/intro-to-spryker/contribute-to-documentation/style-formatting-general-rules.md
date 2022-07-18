@@ -8,7 +8,7 @@ related:
   - title: Build the documentation site
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/build-the-documentation-site.html
   - title: Add product sections to the documentation
-    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/adding-product-sections-to-the-documentation.html
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/add-product-sections-to-the-documentation.html
   - title: Edit documentation via pull requests
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/edit-documentation-via-pull-requests.html
   - title: Report documentation issues
@@ -131,10 +131,10 @@ Each _product/realm_ set has its own sidebar, which is represented by a YAML fil
 
 ### Creating landing pages for the main categories
 
-For each main category, like *Setup*, *Feature integration guides*, or *HowTos*,  you can create an `index.md.` file. This lets you open category pages without specific files in the link. For example, let’s do that for the **Glue API guides** section of the developer guide:
+For each main category, like *Setup*, *Feature integration guides*, or *HowTos*, you can create an `index.md.` file. This lets you open category pages without specific files in the link. For example, let’s do that for the **Glue API guides** section of the developer guide:
 
 1. In `docs/marketplace/dev/glue-api-guides`, add the `index.md` file. Make sure you specify the title in the file.
-2. In the `marketplace_dev_sidebar.yml` file, add URL for the **Glue API guides** element. You don’t have to write `index.html` in the end of the link, the link works without it:  
+2. In the `marketplace_dev_sidebar.yml` file, add URL for the **Glue API guides** element. You don’t have to write `index.html` in the end of the link, the link works without it:
 
 ```
 - title: Glue API guides         

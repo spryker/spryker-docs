@@ -2,6 +2,8 @@
 title: Markdown syntax
 description: Learn the markdown syntax and how to create markdown elements in your writing.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
 related:
   - title: Build the documentation site
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/build-the-documentation-site.html

@@ -14,7 +14,7 @@ related:
   - title: Review pull requests
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/review-pull-requests.html
   - title: Style, syntax, formatting, and general rules
-    link: docs/scos/user/intro-to-spryker/contributeto-documentation/style-formatting-general-rules.html
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/style-formatting-general-rules.html
   - title: Markdown syntax
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/markdown-syntax.html
 ---

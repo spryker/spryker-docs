@@ -1,6 +1,7 @@
 ---
 title: Add product sections to the documentation
 description: Learn how to add a new product to the Spryker docs.
+last_updated: Jul 18, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-a-new-product-to-the-documentation-site.html

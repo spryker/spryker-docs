@@ -1,6 +1,7 @@
 ---
 title: Contribute to documentation
 description: Learn how you can contribute to the Spryker docs.
+last_updated: Jul 18, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-documentation.html

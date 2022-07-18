@@ -1,6 +1,7 @@
 ---
 title: Style, syntax, formatting, and general rules
 description: Learn how to style and format your docs.
+last_updated: Jul 18, 2022
 template: concept-topic-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html

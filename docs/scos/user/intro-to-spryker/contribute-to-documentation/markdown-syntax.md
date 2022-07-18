@@ -1,6 +1,7 @@
 ---
 title: Markdown syntax
 description: Learn the markdown syntax and how to create markdown elements in your writing.
+last_updated: Jul 18, 2022
 template: concept-topic-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
@@ -19,7 +20,7 @@ related:
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/style-formatting-general-rules.html
 ---
 
-We use Markdown to write the Spryker documentation. This document contains Markdown syntax of the page elements used on the Spryker documentation website, specifically:
+We use Markdown to write the Spryker documentation. This document contains the Markdown syntax of the page elements used on the Spryker documentation website, specifically:
 
 - Documentation-specific Markdown elements
 - HTML syntax that is used where Markdown is insufficient for our documentation website

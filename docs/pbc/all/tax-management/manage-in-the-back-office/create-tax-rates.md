@@ -36,6 +36,6 @@ This opens the **Edit Tax Rate** page with a success message displayed.
 
 ## Next steps
 
-* Assign tax rates to tax sets by [creating tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/create-tax-sets.html).
+* Assign tax rates to tax sets by [creating tax sets](/docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-sets.html).
 
-* Assign tax rates to existing tax sets by [editing tax sets](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-sets/edit-tax-sets.html).
+* Assign tax rates to existing tax sets by [editing tax sets](/docs/pbc/all/tax-management/manage-in-the-back-office/edit-tax-sets.html).

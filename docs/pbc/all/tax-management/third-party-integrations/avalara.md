@@ -11,4 +11,4 @@ redirect_from:
 
 ## Next steps
 
-[Integrate Avalara](/docs/scos/dev/technology-partner-guides/{{page.version}}/taxes/avalara/integrating-avalara.html)
+[Integrate Avalara](/docs/pbc/all/tax-management/third-party-integrations/integrate-avalara.html)

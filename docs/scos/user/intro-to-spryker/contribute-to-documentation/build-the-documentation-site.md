@@ -1,6 +1,7 @@
 ---
 title: Build the documentation site
 description: Find out how you can build the Spryker documentation site
+last_updated: Jul 18, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
@@ -14,7 +15,7 @@ related:
   - title: Review pull requests
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/review-pull-requests.html
   - title: Style, syntax, formatting, and general rules
-    link: docs/scos/user/intro-to-spryker/contributeto-documentation/style-formatting-general-rules.html
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/style-formatting-general-rules.html
   - title: Markdown syntax
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/markdown-syntax.html
 ---

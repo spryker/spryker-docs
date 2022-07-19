@@ -1,6 +1,7 @@
 ---
 title: Review pull requests
 description: Learn how you can propose your changes to a pull request
+last_updated: Jul 18, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html

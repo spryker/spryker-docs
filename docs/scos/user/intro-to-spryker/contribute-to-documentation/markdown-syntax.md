@@ -1,7 +1,10 @@
 ---
 title: Markdown syntax
 description: Learn the markdown syntax and how to create markdown elements in your writing.
-template: concept-topic-template
+last_updated: Jul 18, 2022
+template: howto-guide-template
+redirect_from:
+  - /docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
 related:
   - title: Build the documentation site
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/build-the-documentation-site.html
@@ -17,11 +20,11 @@ related:
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/style-formatting-general-rules.html
 ---
 
-We use Markdown to write the Spryker documentation. This document contains Markdown syntax of the page elements used on the Spryker documentation website, specifically:
+We use Markdown to write the Spryker documentation. This document contains the Markdown syntax of the page elements used on the Spryker documentation website, specifically:
 
-- Documentation-specific Markdown elements
-- HTML syntax that is used where Markdown is insufficient for our documentation website
-- Solutions to common issues
+- Documentation-specific Markdown elements.
+- HTML syntax that is used where Markdown is insufficient for our documentation website.
+- Solutions to common issues.
 
 {% info_block infoBox "Info" %}
 
@@ -30,7 +33,7 @@ For general formatting rules and styling rules for Markdown, see [Basic writing 
 {% endinfo_block %}
 
 
-Syntax snippets contain text wrapped in braces - `{}`. This is a placeholder that you should replace with what the text inside describes. Also, remove the braces.
+Syntax snippets contain text wrapped in braces (`{}`). This is a placeholder that you should replace with what the text inside describes. Also, remove the braces.
 
 {% info_block errorBox "Templates" %}
 

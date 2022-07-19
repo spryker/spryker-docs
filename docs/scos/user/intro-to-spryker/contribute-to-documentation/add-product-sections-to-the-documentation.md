@@ -1,6 +1,7 @@
 ---
 title: Add product sections to the documentation
 description: Learn how to add a new product to the Spryker docs.
+last_updated: Jul 18, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-a-new-product-to-the-documentation-site.html
@@ -20,7 +21,7 @@ related:
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/markdown-syntax.html
 ---
 
-When we launch a new product, you need to create a separate section for it. Usually, there are two roles per product — user and developer. In this article, we assume that you need to create a new product *acp* with the *user* and *dev* roles.
+When we launch a new product, you need to create a separate section for it. Usually, there are two roles per product: user and developer. In this article, we assume that you need to create a new product *acp* with the *user* and *dev* roles.
 
 To add a new product, follow these steps.
 

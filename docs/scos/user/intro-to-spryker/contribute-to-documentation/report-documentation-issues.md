@@ -1,9 +1,10 @@
 ---
 title: Report documentation issues
 description: Learn how to report an issue with Spryker docs.
+last_updated: Jul 18, 2022
+template: howto-guide-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/reporting-documentation-issues.html
-template: howto-guide-template
 related:
   - title: Build the documentation site
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/build-the-documentation-site.html

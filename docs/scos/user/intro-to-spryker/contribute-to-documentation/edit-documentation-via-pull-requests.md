@@ -1,6 +1,7 @@
 ---
 title: Edit documentation via pull requests
 description: Learn how you can propose changes to the Spryker docs
+last_updated: Jul 18, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-spryker-documentation.html

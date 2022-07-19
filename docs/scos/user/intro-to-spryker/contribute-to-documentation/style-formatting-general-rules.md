@@ -1,6 +1,7 @@
 ---
 title: Style, syntax, formatting, and general rules
 description: Learn how to style and format your docs.
+last_updated: Jul 18, 2022
 template: concept-topic-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
@@ -38,7 +39,7 @@ For example, to create a new *sample-category* category and a *foo-bar* page und
 
 {% info_block warningBox "Warning" %}
 
-Currently, the maximum nesting level in the documentation categories is 3. This means that for each category you can have only one sub-category. For example, `marketplace/user/features/202108.0/merchant/`, where `features` is the category (first level of nesting), `202108.0` is the version (does not affect the level of nesting) `merchant` is the sub-category (second level of nesting). The third level of nesting are the .md files under the sub-category.
+Currently, the maximum nesting level in the documentation categories is 3. This means that for each category you can have only one sub-category. For example, `marketplace/user/features/202108.0/merchant/`, where `features` is the category (first level of nesting), `202108.0` is the version (does not affect the level of nesting) `merchant` is the sub-category (second level of nesting). The third level of nesting is the .md files under the sub-category.
 
 {% endinfo_block %}
 
@@ -131,10 +132,10 @@ Each _product/realm_ set has its own sidebar, which is represented by a YAML fil
 
 ### Creating landing pages for the main categories
 
-For each main category, like *Setup*, *Feature integration guides*, or *HowTos*,  you can create an `index.md.` file. This lets you open category pages without specific files in the link. For example, let’s do that for the **Glue API guides** section of the developer guide:
+For each main category, like *Setup*, *Feature integration guides*, or *HowTos*, you can create an `index.md.` file. This lets you open category pages without specific files in the link. For example, let’s do that for the **Glue API guides** section of the developer guide:
 
 1. In `docs/marketplace/dev/glue-api-guides`, add the `index.md` file. Make sure you specify the title in the file.
-2. In the `marketplace_dev_sidebar.yml` file, add URL for the **Glue API guides** element. You don’t have to write `index.html` in the end of the link, the link works without it:  
+2. In the `marketplace_dev_sidebar.yml` file, add the URL for the **Glue API guides** element. You don’t have to write `index.html` at the end of the link, the link works without it:
 
 ```
 - title: Glue API guides         
@@ -166,7 +167,7 @@ To add a new version for the versioned categories:
 
 ![files list](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/files-list.png)
 
-You can make a reference to the currently opened version of the versioned page using the `{% raw %}{{page.version}}{% endraw %}` variable in text and in links. For example, if you open a document in version `202108.0` in the editor and write there the following:
+You can make a reference to the currently opened version of the versioned page using the `{% raw %}{{page.version}}{% endraw %}` variable in text and links. For example, if you open a document in version `202108.0` in the editor and write there the following:
 
 ```
 This feature requires version {{page.version}} of the Merchants feature.

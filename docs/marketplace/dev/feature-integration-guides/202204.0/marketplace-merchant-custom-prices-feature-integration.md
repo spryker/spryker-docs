@@ -235,3 +235,46 @@ Make sure that you see the validation error while attempting to set or create th
 Make sure that you can delete the customer price.
 
 {% endinfo_block %}
+
+
+### 5) Filter out product offer prices
+
+{% info_block warningBox %}
+
+This option is only available if you have the [Marketplace Product Offer feature](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html) installed.
+
+{% endinfo_block %}
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                                                   | SPECIFICATION                     | PREREQUISITES | NAMESPACE                                                                      |
+|--------------------------------------------------------------------------|-----------------------------------|---------------|--------------------------------------------------------------------------------|
+| PriceProductOfferPriceProductTableFilterPlugin (Optional)                | Maps merchant relationship data.  |               | Spryker\Zed\PriceProductOfferGui\Communication\Plugin\ProductMerchantPortalGui |
+
+```php
+namespace Pyz\Zed\ProductMerchantPortalGui;
+
+use Spryker\Zed\PriceProductOfferGui\Communication\Plugin\ProductMerchantPortalGui\PriceProductOfferPriceProductTableFilterPlugin;
+use Spryker\Zed\ProductMerchantPortalGui\ProductMerchantPortalGuiDependencyProvider as SprykerProductMerchantPortalGuiDependencyProvider;
+
+class ProductMerchantPortalGuiDependencyProvider extends SprykerProductMerchantPortalGuiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\ProductMerchantPortalGuiExtension\Dependency\Plugin\PriceProductTableFilterPluginInterface>
+     */
+    protected function getPriceProductTableFilterPlugins(): array
+    {
+        return [
+            new PriceProductOfferPriceProductTableFilterPlugin(),
+        ];
+    }
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+1. Log in to the Merchant Portal with a merchant that has at least one merchant relationship and product offer.
+2. Open any product that has a product offer.
+3. Make sure that the Prices table does not contain product offer prices for both abstract and concrete products.
+
+{% endinfo_block %}

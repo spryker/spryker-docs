@@ -39,5 +39,35 @@ entries:
                 url: /docs/pbc/all/payment-service-providers/unzer/domain-model-and-relationships.html
           - title: Payone
             url: /docs/pbc/all/payment-service-providers/payone/payone.html
+      - title: Tax Management
+        url: /docs/pbc/all/usercentrics.html
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Integrate the Tax Glue API
+                url: /docs/pbc/all/tax-management/install-and-upgrade/integrate-the-tax-glue-api.html
+              - title: Integrate the Product Tax Sets Glue API
+                url: /docs/pbc/all/tax-management/install-and-upgrade/integrate-the-product-tax-sets-glue-api.html
+              - title: Upgrade the ProductTaxSetsRestApi module
+                url: /docs/pbc/all/tax-management/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html
+              - title: Upgrade the Tax module
+                url: /docs/pbc/all/tax-management/install-and-upgrade/upgrade-the-tax-module.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Create tax rates
+                url: /docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-rates.html
+              - title: Edit tax rates
+                url: /docs/pbc/all/tax-management/manage-in-the-back-office/edit-tax-rates.html
+              - title: Create tax sets
+                url: /docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-sets.html
+              - title: Edit tax sets
+                url: /docs/pbc/all/tax-management/manage-in-the-back-office/edit-tax-sets.html
+          - title: Manage via Glue API
+            nested:
+              - title: Retrieve tax sets
+                url: /docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html
+          - title: Data import and export
+            nested:
+              - title:
       - title: Usercentrics
         url: /docs/pbc/all/usercentrics.html

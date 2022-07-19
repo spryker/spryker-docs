@@ -1,3 +1,31 @@
+---
+title: Retrieve tax sets
+description: Retrieve details information about tax sets of abstract products.
+last_updated: Jun 16, 2021
+template: glue-api-storefront-guide-template
+originalLink: https://documentation.spryker.com/2021080/docs/retrieving-tax-sets
+originalArticleId: 9b8f60f0-3815-4d5b-94df-64deb0771117
+redirect_from:
+  - /2021080/docs/retrieving-tax-sets
+  - /2021080/docs/en/retrieving-tax-sets
+  - /docs/retrieving-tax-sets
+  - /docs/en/retrieving-tax-sets
+  - /docs/scos/dev/glue-api-guides/201811.0/managing-products/abstract-products/retrieving-tax-sets.html
+  - /docs/scos/dev/glue-api-guides/201903.0/managing-products/abstract-products/retrieving-tax-sets.html
+  - /docs/scos/dev/glue-api-guides/201907.0/managing-products/abstract-products/retrieving-tax-sets.html
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-products/abstract-products/retrieving-tax-sets.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-products/abstract-products/retrieving-tax-sets.html
+related:
+  - title: Retrieving abstract products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-products.html
+  - title: Retrieving abstract product availability
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
+  - title: Retrieving abstract product prices
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-prices.html
+  - title: Retrieving image sets of abstract products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
+---
+
 This endpoint allows retrieving detailed information about tax sets of abstract products.
 
 ## Installation
@@ -19,12 +47,14 @@ To retrieve tax sets of a product, send the request:
 
 ### Request
 
-Request sample: `GET http://glue.mysprykershop.com/abstract-products/209/product-tax-sets`
+Request sample: retrieve tax sets
+
+`GET http://glue.mysprykershop.com/abstract-products/209/product-tax-sets`
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve tax sets</summary>
 
 ```json
 {
@@ -122,7 +152,6 @@ Request sample: `GET http://glue.mysprykershop.com/abstract-products/209/product
     }
 }
 ```
-
 </details>
 
 <a name="tax-sets-response-attributes"></a>

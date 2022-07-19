@@ -6,13 +6,13 @@ redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-a-new-product-to-the-documentation-site.html
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-product-sections-to-the-documentation.html
 related:
-  - title: Building the documentation site
-    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/build-the-documentation-site.html
-  - title: Editing documentation via pull requests
+  - title: Build the documentation site
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/build-the-documentation-site.html
+  - title: Edit documentation via pull requests
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/edit-documentation-via-pull-requests.html
-  - title: Reporting documentation issues
+  - title: Report documentation issues
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/report-documentation-issues.html
-  - title: Reviewing pull requests
+  - title: Review pull requests
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/review-pull-requests.html
   - title: Style, syntax, formatting, and general rules
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/style-formatting-general-rules.html

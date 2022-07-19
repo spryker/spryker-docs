@@ -35,7 +35,9 @@ image:
         npm: 8
 ```
 
-Note: To make sure the CI jobs will pass deploy, add same part of config to all `deploy.*.yml` files, where frontend are using.
+{% info_block infoBox "Note" %}
+To make sure the CI jobs will pass deploy, add same part of config to all `deploy.*.yml` files, where frontend are using.
+{% endinfo_block %}
 
 2. Update docker hash in the `.git.docker` file to make sure the correct version of `docker-sdk` will be installed:
 
@@ -97,7 +99,51 @@ jobs:
 legacy-peer-deps=true
 ```
 
-// delete .yarn folder
-// delete yarn.lock file
-// clean up .* files in the root by deleting .yarn folder from the list
-// use single command to install dependencies `frontend:project:install-dependencies` in *.yml files instead of `frontend:{yves/zed/mp}:install-dependencies`
+6. Use single command to install dependencies `frontend:project:install-dependencies` in `*.yml` files instead of `frontend:{yves/zed/mp}:install-dependencies`.
+
+7. Delete `.yarn` folder.
+
+8. Delete `yarn.lock` and `package-lock.json` (will be regenerated after install).
+
+### 3) Build the project
+
+Run the following commands to build the project using NPM v8:
+
+```bash
+rm -rf node_modules && docker/sdk cli rm -rf node_modules
+docker/sdk boot deploy.dev.yml
+docker/sdk up --build --assets
+```
+
+{% info_block infoBox "Note" %}
+The following commands are deprecated and will work correctly only with the previous versions (using Yarn):
+
+```bash
+frontend:yves:install-dependencies
+frontend:zed:install-dependencies
+frontend:mp:install-dependencies
+```
+
+To pass an installation of the all (yves, zed, mp) frontend dependencies use a single command: 
+
+```bash
+frontend:project:install-dependencies
+```
+{% endinfo_block %}
+
+{% info_block infoBox "Note" %}
+If `node` and `npm` are uses locally, make sure their version are correct:
+
+```bash
+node -v
+npm -v
+```
+
+To updated them use the following commands:
+```bash
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n 16
+sudo npm -g install npm@8
+```
+{% endinfo_block %}

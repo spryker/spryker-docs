@@ -1,6 +1,6 @@
 ---
 title: GUI modules concept
-description: Short overview of GUI modules in Merchant portal.
+description: Short overview of GUI modules in Merchant Portal.
 template: concept-topic-template
 related:
   - title: How to create a new GUI module

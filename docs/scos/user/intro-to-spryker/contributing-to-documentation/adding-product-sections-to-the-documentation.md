@@ -92,14 +92,6 @@ sidebars:
   - acp_user_sidebar
 ```
 
-5. In the `algolia:` section, add the name and title of your project as they will appear on the Algolia platform. For example:
-
-```yaml
-
-    - name: 'acp_user'
-      title: 'ACP User'
-```
-
 ## 4. Add the product to the homepage
 
 To add the new product to the top navigation and the role boxes on the homepage, do the following:
@@ -171,7 +163,7 @@ To add the new product to the top navigation and the role boxes on the homepage,
     ```
 
     2. In `<h2 class="card__heading-title">Business User guides</h2>`, add a link to the document that should open when a user opens the developer guide of the product. For example:
-    
+
     ```html
                                 <h2 class="card__heading-title">Business User guides</h2>
                             </div>
@@ -444,7 +436,7 @@ To configure the search in the Algolia app of the Spryker docs, do the following
     * title
     * type
 5. In the **Highlight prefix tag** section, replace the default value with `<em class="ais-Highlight">`.
-6. 
+6.
 #### Add snippeting attributes
 
 1. Go to **PAGINATION AND DISPLAY > Snippeting**.

@@ -1,15 +1,15 @@
 ---
 title: Markdown syntax
 description: Learn the markdown syntax and how to create markdown elements in your writing.
-last_updated: Jul 18, 2022
+last_updated: 18 Jul, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
 related:
   - title: Build the documentation site
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/build-the-documentation-site.html
-  - title: Add product sections to the documentation
-  	link: docs/scos/user/intro-to-spryker/contribute-to-documentation/add-product-sections-to-the-documentation.html
+  - title: Adding product sections to the documentation
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/add-product-sections-to-the-documentation.html
   - title: Edit documentation via pull requests
     link: docs/scos/user/intro-to-spryker/contribute-to-documentation/edit-documentation-via-pull-requests.html
   - title: Report documentation issues

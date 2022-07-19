@@ -36,7 +36,7 @@ image:
 ```
 
 {% info_block infoBox "Note" %}
-To make sure the CI jobs will pass deploy, add same part of config to all `deploy.*.yml` files, where frontend are using.
+To make sure the CI jobs will pass deploy, add same part of config to all 'deploy.*.yml' files, where frontend are using.
 {% endinfo_block %}
 
 2. Update docker hash in the `.git.docker` file to make sure the correct version of `docker-sdk` will be installed:
@@ -130,7 +130,7 @@ frontend:zed:install-dependencies
 frontend:mp:install-dependencies
 ```
 
-To pass an installation of the all (yves, zed, mp) frontend dependencies use a single command: 
+To pass an installation of all (yves, zed, mp) frontend dependencies use a single command: 
 
 ```bash
 frontend:project:install-dependencies
@@ -138,7 +138,7 @@ frontend:project:install-dependencies
 {% endinfo_block %}
 
 {% info_block infoBox "Note" %}
-If `node` and `npm` are uses locally, make sure their versions are correct:
+If 'node' and 'npm' are uses locally, make sure their versions are correct:
 
 ```bash
 node -v

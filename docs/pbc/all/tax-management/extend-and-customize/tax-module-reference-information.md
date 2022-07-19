@@ -4,12 +4,9 @@ last_updated: Aug 20, 2021
 description: The Tax module is responsible for handling tax rates that can apply for products, product options, or shipment
 template: concept-topic-template
 redirect_from:
-<<<<<<<< HEAD:docs/pbc/all/tax-management/extend-and-customize/reference-information-tax-module.md
   - /docs/scos/dev/feature-walkthroughs/202200.0/tax-feature-walkthrough/reference-information-tax-module.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/tax-feature-walkthrough/reference-information-tax-module.html  
-========
   - /docs/scos/dev/feature-walkthroughs/202204.0/tax-feature-walkthrough/reference-information-tax-module.html
->>>>>>>> master:docs/scos/dev/feature-walkthroughs/202204.0/tax-feature-walkthrough/tax-module-reference-information.md
 ---
 
 

@@ -1,6 +1,6 @@
 ---
 title: Migration guide - Switch from Yarn to NPM v8
-description: Use the guide to migrate project from Yarn to NPM v8.
+description: Use this guide to migrate project from Yarn to NPM v8.
 template: concept-topic-template
 ---
 
@@ -15,7 +15,7 @@ It's been working with some issues where not all dependencies would be installed
 This issue has been managed internally so far by updating all package versions simultaneously but this cannot be guaranteed when the project is developed by customers.
 Yarn has not been responding to the issue reported for more then a year now so we have to switch back to NPM v8 which also supports workspaces.
 
-*Estimated integration time: 1h 30m*
+*Estimated migration time: 2h*
 
 ### 1) Update modules
 
@@ -25,7 +25,7 @@ composer update spryker/manual-order-entry-gui spryker/chart spryker/cms-block-c
 
 ### 2) Update configs
 
-1. Set up a new versions of node/npm in the main *.yml files, like `deploy.yml`, `deploy.dev.yml` and `deploy.ci.yml`:
+1. Set up a new versions of node/npm in the main `*.yml` files, like `deploy.yml`, `deploy.dev.yml` and `deploy.ci.yml`:
 
 ```yaml
 image:
@@ -43,6 +43,12 @@ To make sure the CI jobs will pass deploy, add same part of config to all `deplo
 
 ```text
 e9ebb666feccae1754792d41e49df3b9f95ef0aa
+```
+
+Then run next command to pull latest `docker-sdk` version:
+
+```bash
+cd docker && git pull origin master
 ```
 
 3. Update `package.json`:
@@ -71,29 +77,13 @@ e9ebb666feccae1754792d41e49df3b9f95ef0aa
 4. Update `.travis.yml`:
 
 ```yaml
-_BEFORE_INSTALL_SCRIPT: &BEFORE_INSTALL_SCRIPT
+before_install:
   ...
-  - nvm install 16 > /dev/null
   - nvm use 16
   ...
-
-jobs:
-  ...
-  include:
-    ...
-    - name: PHP 7.4 / MariaDB / MarketPlace Testing
-      ...
-      script:
-        ...
-        # Install npm packages
-        - vendor/bin/console frontend:project:install-dependencies -vvv
-        - npm run mp:build:production
-        - npm run mp:test
-      ...
-  
 ```
 
-5. Create a new `.npmrc` file in the root folder with the next content: 
+5. Create a new `.npmrc` file in the root directory with the next content: 
 
 ```text
 legacy-peer-deps=true
@@ -101,18 +91,34 @@ legacy-peer-deps=true
 
 6. Use single command to install dependencies `frontend:project:install-dependencies` in `*.yml` files instead of `frontend:{yves/zed/mp}:install-dependencies`.
 
-7. Delete `.yarn` folder.
+7. Delete the following folders/files from the root directory:
 
-8. Delete `yarn.lock` and `package-lock.json` (will be regenerated after install).
+- `.yarn` folder
+- `.yarnrc.yml` file
+- `yarn.lock` file
 
 ### 3) Build the project
 
-Run the following commands to build the project using NPM v8:
+1. Run the following commands to apply the docker changes:
+
+```bash
+docker/sdk boot deploy.dev.yml
+docker/sdk up
+```
+
+2. Regenerate `package-lock.json`: 
+
+```bash
+rm -rf package-lock.json
+docker/sdk cli npm install
+```
+
+3. Run the following commands to build the project using NPM v8:
 
 ```bash
 rm -rf node_modules && docker/sdk cli rm -rf node_modules
 docker/sdk boot deploy.dev.yml
-docker/sdk up --build --assets
+docker/sdk up --build --assets --data
 ```
 
 {% info_block infoBox "Note" %}
@@ -132,18 +138,19 @@ frontend:project:install-dependencies
 {% endinfo_block %}
 
 {% info_block infoBox "Note" %}
-If `node` and `npm` are uses locally, make sure their version are correct:
+If `node` and `npm` are uses locally, make sure their versions are correct:
 
 ```bash
 node -v
 npm -v
 ```
 
-To updated them use the following commands:
+To update them use the following commands:
+
 ```bash
+sudo npm -g install npm@8
 sudo npm cache clean -f
 sudo npm install -g n
 sudo n 16
-sudo npm -g install npm@8
 ```
 {% endinfo_block %}

@@ -126,6 +126,55 @@ It may take a few minutes for the DB to restore.
 {% endinfo_block %}
 
 
+### Restore a DB from AWS Backup
+
+1. In the AWS Management Console, go to **Services** > [**AWS Backup**](https://console.aws.amazon.com/backup).
+
+2. In the navigation pane, select **Backup vaults**.
+
+3. Click the backup vault `{environment-name}_rds_backup`.
+
+4. In **Backups** tab, click on the link start with _"continuous:db"_.
+
+5. Click on **Restore** on the right top of the screen.
+
+6. In **Restore to point in time** tab, choose _**Latest restorable time**_ or _**Specify date and time**_.
+
+7. In **Instance specifications** tab, set _**DB instance class**_ field and keep the rest of fields as default.
+
+8. In **Settings** tab, set _**DB Instance Identifier**_ as new DB name.
+
+9. In **Network and security** tab, set _**Virtual Private Cloud (VPC)**_ as RDS belongs to. Then select __**Subnet group**__ and _**Public accessibility**_.
+
+10. In **Database options** tab, set _**Database port**_ and _**DB parameter group**_ as it should be.
+
+11. In **Log exports** tab, choose any type of log to be published to AWS CloudWatch.
+
+12. In **Maintenance** tab, choose _**Auto minor version upgrade**_.
+
+13. In **Restore role** tab, choose _**Default role**_ or _**Choose an IAM role**_.
+
+14. Click **Restore backup**.
+
+15. Restored DB is created. 
+
+16. In the AWS Management Console, go to **Services** > [**RDS**](https://console.aws.amazon.com/rds/).
+
+17. In the navigation pane, select **Databases**.
+
+18. Select the restored DB and click on **Modify**.
+
+19. In **Connectivity** tab, modify _**Security group**_ field.
+
+20. Click **Continue**.
+
+21. In **Scheduling of modifications** tab, choose _**Apply immediately**_.
+
+22. Click **Modify DB instance**.
+
+Restored DB is created and modified.
+
+
 ### Re-sync data from the restored database to ElasticSearch and Redis
 
 1.  Connect to OpenVPN.
@@ -145,7 +194,6 @@ It may take a few minutes for the DB to restore.
 8.  In the _Execute shell_ pane, for **Command**, enter the script with the `vendor/bin/console sync:data` command. You can add the command to the script from another Jenkins job in your environment.
 
 9.  Select **Save**.  
-
 
 
 ![Set up a jenkins job](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Creating+and+restoring+database+backups/set-up-a-jenkins-job.png)

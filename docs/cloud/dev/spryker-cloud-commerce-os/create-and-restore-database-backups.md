@@ -161,42 +161,6 @@ You’ve re-synced data from a restored database to ElasticSearch and Redis.
 
 Application restoration is part of a regular deployment workflow. See [Rolling back an application](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html#roll-back-an-application) to learn about restoring a previous version of an application.
 
-## Delete recovery points
-
-To delete recovery steps via Terraform Cloud, follow the steps in the sections below.
-
-### Install AWS CLI and configure the session
-
-1. [Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
-
-2. Open a terminal.
-
-3. Export AWS credentials:
-```shell
-export AWS_ACCESS_KEY_ID="{{YOUR_ACCESS_ID}}"
-export AWS_SECRET_ACCESS_KEY="{{YOUR_SECRET_ACCESS_KEY}}"
-export AWS_SESSION_TOKEN="{{YOUR_SESSION_TOKEN}}"
-```
-
-4. Set the region you want to remove delete recovery points in:
-```shell
-aws configure set region {REGION_NAME}
-```
-
-### Clone Terraform Cloud and delete recovery points
-
-
-1. Clone Terraform Cloud:
-```shell
-git clone git@github.com:spryker/tfcloud.git
-```
-
-2. Delete recovery points:
-```shell
-/tfcloud/tools/scripts./backup_vault_clear.sh {ENVIRONMENT_NAME}_rds_backup
-```
-
-
 
 ## Next step
 

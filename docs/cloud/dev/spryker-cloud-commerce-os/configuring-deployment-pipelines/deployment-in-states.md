@@ -10,7 +10,7 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/deployment-pipelines.html
 ---
 
-When it comes to complex applications, deploying to production environments is not just going from version one to version two. This document describes the states which an application goes through during a deployment, potential issues, and what you need to do to avoid them.
+When it comes to complex applications, deploying to production environments is not just going from version one to version two. This document describes the states that an application goes through during a deployment, potential issues, and what you need to do to avoid them.
 
 ## Pipelines in SCCOS
 
@@ -37,19 +37,19 @@ The following sections describe the potential issues applications can encounter 
 
 ## Initial state
 
-This is how an working application behaves when no pipeline is running:
+When no pipeline is running, a working application behaves as follows:
 
 ![Initial state](./images/initial_state/initial-state.gif)
 
 ## Build_and_Prepare
 
-In this step, the containers of the services that are going to deployed are built. For the sake of simplicity, we use only Glue and Zed in our examples.
+In this step, AWS builds the containers for the services that are going to be deployed. For the sake of simplicity, we use only Glue and Zed in our examples.
 
 ![Build_and_Prepare](./images/Build_and_Prepare/Build_and_Prepare.jpg)
 
 ## Configure_RabbitMQ_Vhosts_and_Permissions
 
-In this step, Rabbit MQ vhosts, users, and permissions are updated. Usually, you would change them rarely, but, if you do, while they are being updated, the following may happen:
+In this step, Rabbit MQ vhosts, users, and permissions are updated. Usually, you would change them rarely, but if you do, while they are being updated, the following may happen:
 
 ![Configure_RabbitMQ_Vhosts_and_Permissions](./images/Configure_RabbitMQ_Vhosts_and_Permissions/rmq.gif)
 
@@ -89,7 +89,7 @@ The script runs all the propel database migrations, so the database is updated t
 
 ![migrations](./images/Run_install/migrations.jpg)
 
-From this point on, all the V1 services that are communicating with the database may respond to requests incorrectly. For each request, it depends on what data was migrated. For example, Glue V1 retrieves information about a product from Redis V1 and Search V1. Then Glue V1 makes a request to the the database to put the product to cart. If the product still exists in the database, it will be added to cart. Otherwise, this request will result in an error.
+From this point on, all the V1 services that are communicating with the database may respond to requests incorrectly. For each request, it depends on what data was migrated. For example, Glue V1 retrieves information about a product from Redis V1 and Search V1. Then Glue V1 makes a request to the database to put the product to cart. If the product still exists in the database, it will be added to cart. Otherwise, this request will result in an error.
 
 At the end of this step, the following command re-enables the scheduler and sets up new jobs:
 ```shell
@@ -100,13 +100,13 @@ The scheduler restarts queue workers and updates search and Redis.
 
 ![Run_install](./images/Run_install/install_dbs_updates/install_dbs_updates.gif)
 
-Depending on the amount of data that needs to be processed, this process may take a while. While Redis and search are being updated, they cannot process the requests the are coming in:
+Depending on the amount of data that needs to be processed, this process may take a while. While Redis and search are being updated, they cannot process the requests that are coming in:
 
 ![Run_install_requests](./images/Run_install/request_during_install/install_request.gif)
 
 ## Deploy_Spryker_services
 
-In this step, V2 of the services are deployed. In our example, Zed V2 and Glue V2.
+In this step, services of V2 are deployed. In our example, Zed V2 and Glue V2.
 
 For the sake of simplicity, let's assume that Redis and search are done updating. The asterisks on the schema serve as a reminder that it may not be the case. It depends on the size of the migration.
 
@@ -116,7 +116,7 @@ The services are deployed as follows:
 1. AWS spawns the services of V2.
 2. When the services of V2 are up and running, AWS takes the services of V1 down.
 
-Since this process is uncontrollable, there is potentially a timeframe in which the application may run services of V1 and V2 in random combinations. When a service of V1 communicates with a service of V2 or the other way around, it may result into an error.
+Since this process is uncontrollable, there is potentially a timeframe in which the application may run services of V1 and V2 in random combinations. When a service of V1 communicates with a service of V2 or the other way around, it may result in an error.
 
 ![Deploy_Spryker_services_requests](./images/Deploy_Spryker_services/deploy_services.gif)
 
@@ -128,4 +128,4 @@ In this step, the scripts you defined for this step in the `SPRYKER_HOOK_AFTER_D
 
 Pipelines do not eliminate all the issues related to CI/CD. Since there is lots of space for potential issues, we recommend dividing your updates into smaller chunks. Smaller updates take less time to be deployed, which reduces the timeframe during which issues can occur.
 
-Another powerful technique we recommend is feature flags. They let you enable updates *after* they were deployed. This entirely eliminates the potential risks related to deployment.
+Another powerful technique we recommend is feature flags. They let you enable updates *after* they are deployed. This entirely eliminates the potential risks related to deployment.

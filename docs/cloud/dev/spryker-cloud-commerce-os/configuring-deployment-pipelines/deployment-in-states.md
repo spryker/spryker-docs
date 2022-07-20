@@ -12,7 +12,7 @@ redirect_from:
 
 When it comes to complex applications, deploying to production environments is not just going from version one to version two. This document describes the states which an application goes through during a deployment, potential issues, and what you need to do to avoid them.
 
-## Prerequisites
+## Pipelines in SCCOS
 
 To learn how pipelines work in Spryker Cloud Commerce OS, see [Deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-pipelines.html).
 
@@ -49,15 +49,15 @@ In this step, the containers of the services that are going to deployed are buil
 
 ## Configure_RabbitMQ_Vhosts_and_Permissions
 
-In this step, Rabbit MQ vhosts, users, and permissions are updated. Usually, you would change them rarely, but, if you do, while they are being updated, the following happens:
+In this step, Rabbit MQ vhosts, users, and permissions are updated. Usually, you would change them rarely, but, if you do, while they are being updated, the following may happen:
 
 ![Configure_RabbitMQ_Vhosts_and_Permissions](./images/Configure_RabbitMQ_Vhosts_and_Permissions/rmq.gif)
 
-### Run_pre-deploy_hook
+## Run_pre-deploy_hook
 
 In this step, the following happens:
 * The scripts you defined for this step in the `SPRYKER_HOOK_BEFORE_DEPLOY` are run. The default command is `vendor/bin/install -r pre-deploy -vvv`.
-* The scheduler stops. It waits for the currently running jobs to finish and gracefully shuts down. Stopping the scheduler prevents data corruption or errors for the duration of the deployment.
+* The scheduler stops by the `vendor/bin/console scheduler:suspend -vvv --no-ansi` command. It waits for the currently running jobs to finish and gracefully shuts down. Stopping the scheduler prevents data corruption or errors for the duration of the deployment.
 
 ![scheduler:suspend](./images/Run_pre-deploy_hook/Run_pre-deploy_hook.jpg)
 
@@ -65,7 +65,7 @@ While the scripts you defined are running and the scheduler finishes the current
 
 ![Run_pre-deploy_hook](./images/Run_pre-deploy_hook/pre_deploy.gif)
 
-### Deploy_Scheduler
+## Deploy_Scheduler
 
 In this step, scheduler V2 is deployed. Because the scheduler has been paused, it will not run against incorrect data or services.
 
@@ -81,7 +81,7 @@ During this step, all the services in an updated state may still respond to requ
 
 ![Deploy_Scheduler](./images/Deploy_Scheduler/deploy_scheduler.gif)
 
-### Run_install
+## Run_install
 
 In this step, the scripts in the `SPRYKER_HOOK_INSTALL` are run. By default, it is `vendor/bin/install -r EU/production --no-ansi -vvv`.
 
@@ -89,13 +89,13 @@ The script runs all the propel database migrations, so the database is updated t
 
 ![migrations](./images/Run_install/migrations.jpg)
 
-From this point on, all the V1 services that are communicating with the database may respond to requests incorrectly. For each request, it depends on what data was migrated. For example, Glue V1 retrieves information about a product from Redis V1 and Search V1. Then Glue V1 makes a request to the the database to put the product to cart. Depending on whether the product still exists in the database, 
+From this point on, all the V1 services that are communicating with the database may respond to requests incorrectly. For each request, it depends on what data was migrated. For example, Glue V1 retrieves information about a product from Redis V1 and Search V1. Then Glue V1 makes a request to the the database to put the product to cart. If the product still exists in the database, it will be added to cart. Otherwise, this request will result in an error.
 
-At the very end of this step, we re-enable our scheduler, and setup the new jobs (if there was any)
+At the end of this step, the scheduler is re-enabled and new jobs are set up:
 ```shell
 vendor/bin/console scheduler:setup -vvv --no-ansi
 ```
-When this command run, it will restart our queue workers, and update search and redis.
+It restarts queue workers and updates search and Redis.
 
 ![Run_install](./images/Run_install/install_dbs_updates/install_dbs_updates.gif)
 
@@ -103,20 +103,28 @@ Depending on the amount of data that needs to be processed, this process may tak
 
 ![Run_install_requests](./images/Run_install/request_during_install/install_request.gif)
 
-### Deploy_Spryker_services
-Finally, we are going to deploy our services with the updated codebase. (Zed V2, Glue V2).
-For the sake of simplicity, let's assume that Redis and search are done updating. (We leave the asterisks on the schema, as a reminder that it might not be the case, it depends on the size of the migration)
+## Deploy_Spryker_services
+
+In this step, V2 of the services are deployed. In our example, Zed V2 and Glue V2.
+
+For the sake of simplicity, let's assume that Redis and search are done updating. The asterisks on the schema serve as a reminder that it may not be the case. It depends on the size of the migration.
 
 ![Deploy_Spryker_services](./images/Deploy_Spryker_services/Deploy_Spryker_services.jpg)
 
-This process takes some time. AWS first spawn our v2 services, and when they are up and running, they take V1 down.
-We do not control this process, so there is potentially a timeframe here where the application will run V1 and V2 or services in a random combination. (pessimistic approach)
+The services are deployed as follows:
+1. AWS spawns the services of V2.
+2. When the services of V2 are up and running, AWS takes the services of V1 down.
 
+Since this process is uncontrollable, there is potentially a timeframe in which the application may run services of V1 and V2 in random combinations. When a service of V1 communicates with a service of V2 or the other way around, it may result into an error.
 
 ![Deploy_Spryker_services_requests](./images/Deploy_Spryker_services/deploy_services.gif)
 
-### Run_post-deploy_hook
-This step is the final step that has an impact on the pipeline. It runs the script associated with the constant `SPRYKER_HOOK_AFTER_DEPLOY`. By default, it is not associated with any script.
-We mention it here, because we need to keep in mind that any script run during the pipeline will have an impact on the total running time of the deployment.
+## Run_post-deploy_hook
 
-That's all.
+In this step, the scripts you defined for this step in the `SPRYKER_HOOK_AFTER_DEPLOY` are run. By default, there are no scripts for this step. If you define any scripts for this step, they will just increase the duration of the deployment.
+
+## Conclusion
+
+Pipelines do not eliminate all the issues related to CI/CD. Since there is lots of space for potential issues, we recommend dividing your updates into smaller chunks. Smaller updates take less time to be deployed, which reduces the timeframe during which issues can occur.
+
+Another powerful technique we recommend is feature flags. They let you enable updates *after* they were deployed. This entirely eliminates the potential risks related to deployment.

@@ -3862,6 +3862,8 @@ entries:
         url: /docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html
       - title: Multi-theme
         url: /docs/scos/dev/front-end-development/yves/multi-theme.html
+    - title: Migration guide - Switch from Yarn to NPM v8
+      url: /docs/scos/dev/front-end-development/migration-guide-switch-to-npm.html
   - title: Migration concepts
     nested:
     - title: Decimal Stock migration concept

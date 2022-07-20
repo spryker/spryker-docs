@@ -834,8 +834,5 @@ entries:
       - title: Technical enhancement guides
         nested:
 
-          - title: "Migration guide - Switch from Yarn to NPM v8"
-            url: /docs/marketplace/dev/technical-enhancement/migration-guide-switch-to-npm.html
-
           - title: "Migration guide - Upgrade to Angular v12"
             url: /docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v12.html

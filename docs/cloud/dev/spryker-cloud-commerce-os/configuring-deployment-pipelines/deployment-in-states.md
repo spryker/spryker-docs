@@ -10,28 +10,28 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/deployment-pipelines.html
 ---
 
-When it comes to complex applications, deploying to production environments is not just going from version one to version two. This document describes the states which an application goes through during a deployment and how they affect its behavior.
+When it comes to complex applications, deploying to production environments is not just going from version one to version two. This document describes the states which an application goes through during a deployment, potential issues, and what you need to do to avoid them.
 
 ## Prerequisites
 
-To learn how pipelines work in SCCOS, see [Deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-pipelines.html).
+To learn how pipelines work in Spryker Cloud Commerce OS, see [Deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-pipelines.html).
 
 ## Production pipeline steps
 
-A regular production pipeline contains the following steps. Highlighted in **italic** are the steps that have a potential to break or impact the application.
+A regular production pipeline contains the following steps. Highlighted in *italic* are the steps that may break or impact the application.
 
 * Source
 * Please_approve
 * Build_and_Prepare
-* **Configure_RabbitMQ_Vhosts_and_Permissions**
-* **Run_pre-deploy_hook**
+* *Configure_RabbitMQ_Vhosts_and_Permissions*
+* *Run_pre-deploy_hook*
 * Pre_Deployment_Configuration
-* **Deploy_Scheduler**
-* **Run_install**
-* **Deploy_Spryker_services**
+* *Deploy_Scheduler*
+* *Run_install*
+* *Deploy_Spryker_services*
 * UpdateDeployedVersion
 * Post_Deployment_Configuration
-* **Run_post-deploy_hook**
+* *Run_post-deploy_hook*
 
 The following sections describe the potential issues applications can encounter during each step of deployment. To cover all the issues, we use pessimistic scenarios. During an actual deployment, an application is more likely to encounter one of the issues than all of them.
 
@@ -43,31 +43,31 @@ This is how an working application behaves when no pipeline is running:
 
 ## Build_and_Prepare
 
-In this step, we build the containers of each service that we are going to deploy, like zed, yves, frontend, backoffice, backapi or glue. For the sake of simplicity, we will use only Glue and Zed in our examples.
+In this step, the containers of the services that are going to deployed are built. For the sake of simplicity, we use only Glue and Zed in our examples.
 
 ![Build_and_Prepare](./images/Build_and_Prepare/Build_and_Prepare.jpg)
 
 ## Configure_RabbitMQ_Vhosts_and_Permissions
 
-In this step, Rabbit MQ vhosts, users, and permissions are updated. Usually, they are changed rarely, but if you do, while they are being updated, the following happens:
+In this step, Rabbit MQ vhosts, users, and permissions are updated. Usually, you would change them rarely, but, if you do, while they are being updated, the following happens:
 
 ![Configure_RabbitMQ_Vhosts_and_Permissions](./images/Configure_RabbitMQ_Vhosts_and_Permissions/rmq.gif)
 
 ### Run_pre-deploy_hook
 
 In this step, the following happens:
-* The scripts you defined are run. If a script takes a long time to run, while it's running, all the services that are in an updated state, may respond incorrectly to requests.
+* The scripts you defined for this step in the `SPRYKER_HOOK_BEFORE_DEPLOY` are run. The default command is `vendor/bin/install -r pre-deploy -vvv`.
 * The scheduler stops. It waits for the currently running jobs to finish and gracefully shuts down. Stopping the scheduler prevents data corruption or errors for the duration of the deployment.
 
 ![scheduler:suspend](./images/Run_pre-deploy_hook/Run_pre-deploy_hook.jpg)
 
-While the scheduler finishes the currently running jobs and the scripts you defined for this step run, requests are coming in:
+While the scripts you defined are running and the scheduler finishes the currently running jobs, requests keep coming in. For this duration, all the services that are in an updated state may respond incorrectly to requests:
 
 ![Run_pre-deploy_hook](./images/Run_pre-deploy_hook/pre_deploy.gif)
 
 ### Deploy_Scheduler
 
-In this step, scheduler v2 is deployed. Because the scheduler has been paused, it will not run against incorrect data or services.
+In this step, scheduler V2 is deployed. Because the scheduler has been paused, it will not run against incorrect data or services.
 
 {% info_block infoBox "" %}
 
@@ -77,17 +77,19 @@ Scheduler is based on the Zed container, as it uses the codebase of Zed.
 
 ![scheduler_paused](./images/Deploy_Scheduler/Deploy_Scheduler.jpg)
 
-In the mean time, requests are still coming in:
+During this step, all the services in an updated state may still respond to requests incorrectly:
 
 ![Deploy_Scheduler](./images/Deploy_Scheduler/deploy_scheduler.gif)
 
 ### Run_install
 
-This step should take care of running the necessary migrations for our new version (V2 here) of our application. After this step, the database should be updated. However, Search and Redis are not, as we "paused" the synchronization.
+In this step, the scripts in the `SPRYKER_HOOK_INSTALL` are run. By default, it is `vendor/bin/install -r EU/production --no-ansi -vvv`.
+
+The script runs all the propel database migrations, so the database is updated to V2. However, Search and Redis are not, as we "paused" the synchronization.
 
 ![migrations](./images/Run_install/migrations.jpg)
 
-we should realize by now, that requests still coming in might error out. It all depends on what was migrated.
+From this point on, all the V1 services that are communicating with the database may respond to requests incorrectly. For each request, it depends on what data was migrated. For example, Glue V1 retrieves information about a product from Redis V1 and Search V1. Then Glue V1 makes a request to the the database to put the product to cart. Depending on whether the product still exists in the database, 
 
 At the very end of this step, we re-enable our scheduler, and setup the new jobs (if there was any)
 ```shell

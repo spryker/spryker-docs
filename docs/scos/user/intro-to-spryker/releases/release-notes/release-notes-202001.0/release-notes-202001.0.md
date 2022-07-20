@@ -218,7 +218,7 @@ With this release Publish & Synchronize enables direct access to denormalized da
 To get most of this feature, we recommend to set up master-slave replication and point the Storage to the slave instance, avoiding additional load on the master instance.
 
 #### Documentation
-[HowTo - Disable Key-value Storage and use the Database Instead](/docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html)
+[HowTo: Disable Key-value Storage and use the Database Instead](/docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html)
 
 ### Spryker Application
 In the previous release, our infrastructure provided **Spryker Application** Instead of deprecated Silex. Spryker Application is served with Application Plugins, which should be used instead of Silex Service Providers. This release completes the migration by providing last missing Application Plugins: security, router, validation, messenger, propel, event dispatcher.

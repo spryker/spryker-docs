@@ -26,8 +26,8 @@ related:
 *Photo by [@snapwire](https://www.pexels.com/@snapwire)*
 
 -->
-Very easy: Use our [Support Portal](https://support.spryker.com)
+To contact Spryker Support, use [Spryker Support Portal](https://support.spryker.com)
 
-Opening a case via this form is the preferred way, as the form will help you include information we need to get working on a case immediately and speed up our case resolution time.
+Opening a case using this form is the preferred way, as the form helps you include information we need to get working on a case immediately and speed up our case resolution time.
 
-If your case is not an emergency, please take the time to learn [How Spryker Support Works](/docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html) and [How To Get The Most Out Of Support](/docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html). Both articles give valuable insights into the inner workings of Spryker Support and will help you help us to provide an excellent support experience for you.
+If your case is not an emergency, take the time to learn [How Spryker Support works](/docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html) and [How to get the most out of Spryker Support](/docs/scos/user/intro-to-spryker/support/how-to-get-the-most-out-of-spryker-support.html). Both documents give valuable insights into the inner workings of Spryker Support and let you help us to provide an excellent support experience for you.

@@ -20,8 +20,7 @@ We consider the upvotes and comments for the existing ideas, so if you like some
 ![Spryker idea portal](https://spryker.s3.eu-central-1.amazonaws.com/docs/About/Support/Handling+new+feature+requests/Spryker+idea+portal+interface.png)
 
 ## What happens after I have created a feature request?
-
-After we get your request, we evaluate your idea and gather the necessary details. The idea is marked as **New** in the [Spryker idea portal](https://spryker.ideas.aha.io/ideas). At this point, we may contact you and discuss the request in detail. Once we have the whole picture, your idea is moved to **In Review**. This status reflects the internal discussions about the idea. We assess the feature and decide on the next steps.
+After we get your request, we evaluate your idea and gather the necessary details. The idea is marked as `New` in the [Spryker idea portal](https://spryker.ideas.aha.io/ideas). At this point, we may contact you and discuss the request in detail. Once we have the whole picture, your idea is moved to `In Review`. This status reflects the internal discussions about the idea. We assess the feature and decide on the next steps.
 
 After our evaluation, we can assign the following statuses to the ideas:
 

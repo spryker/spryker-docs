@@ -5,7 +5,7 @@ gem "jekyll", "~> 4.2.0"
 gem "webrick", "~> 1.7"
 gem "html-proofer"
 
-gem "jekyll-feed", "~> 0.12"
+gem "jekyll-feed", "~> 0.16"
 gem "jekyll-redirect-from"
 
 group :jekyll_plugins do

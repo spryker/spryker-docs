@@ -149,7 +149,7 @@ The resulting Twig will look as follows:
 
 {% info_block infoBox %}
 
-You can find the original Twig of the component in the _Create Component Template_ section of [HowTo - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html).
+You can find the original Twig of the component in the _Create Component Template_ section of [HowTo: Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html).
 
 {% endinfo_block %}
 

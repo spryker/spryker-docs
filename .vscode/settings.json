@@ -18,5 +18,6 @@
   ],
   "grammarly.config.documentDialect": "american",
   "grammarly.config.suggestions.OxfordComma": true,
-  "editor.renderWhitespace": "all"
+  "editor.renderWhitespace": "all",
+  "commentTranslate.targetLanguage": "uk"
 }

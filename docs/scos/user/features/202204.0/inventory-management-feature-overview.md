@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/features/202200.0/inventory-management-feature-overview.html
 ---
 
-Thr *Inventory Management* feature refers to warehousing and managing your store’s stock. In this context, a *warehouse* is the physical place where your products are stored, and *stock* is the number of products available in the warehouse. See [Warehouse management](#warehouse-management) and [Stock management](#stock-management) for details about how to manage them.
+Thr *Inventory Management* feature refers to warehousing and managing your store’s stock. In this context, a *warehouse* is a physical place where your products are stored, and *stock* is the number of products available in the warehouse. See [Warehouse management](#warehouse-management) and [Stock management](#stock-management) for details about how to manage them.
 Stock does not always reflect the real availability of products, as not all the items available in stock are available for sale. For example, if items are *reserved*, that is, there are pending orders with these items, they can not be ordered, even though physically, they are still in stock. The value that reflects the difference between the current quantity of products in stock and the quantity of these products in the pending orders, is referred to as the *availability* of products. The availability is calculated per store. For details about how to manage availability, see [Availability management](#availability-management).
 
 ## Warehouse management
@@ -34,7 +34,7 @@ By default, a warehouse is not linked to a sales order item. The logic described
 
 {% endinfo_block %}
 
-During the checkout, once a buyer entered delivery addresses for all order items, be it a [single delivery](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html) or a split delivery, the order items are assigned to warehouses to fulfil them.
+During the checkout, once a buyer entered delivery addresses for all order items, be it a [single delivery](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html) or a split delivery, the order items are assigned to warehouses to fulfill them.
 
 By default, if a buyer orders several items of the same SKU, the requested item’s stock is checked in all the warehouses of the store. Based on the item stock, the warehouses are sorted in descending order, for example:
 
@@ -52,7 +52,7 @@ The warehouse with the *never out of stock* item quantity is always assigned to 
 
 {% endinfo_block %}
 
-If the first warehouse's stock is insufficient to fulfil the order item, this warehouse and the next one is assigned to the order item to fulfill the remaining quantity.
+If the first warehouse's stock is insufficient to fulfill the order item, this warehouse and the next one are assigned to the order item to fulfill the remaining quantity.
 
 Schematically, the process looks like this:
 
@@ -60,7 +60,7 @@ Schematically, the process looks like this:
 
 ## Stock management
 
-When order is made, stock is not updated automatically in the system, you have to set it manually. You can define stock only for concrete products. You can set stock by:
+When the order is made, the stock is not updated automatically in the system, you have to set it manually. You can define stock only for concrete products. You can set stock by:
 
 * Editing product stock in the Back Office. For details, see [Edit stock of products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/edit-stock-of-products-and-product-bundles.html).
 * Importing the quantities of items stored in each of the warehouses. For details, see [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/stocks.html).
@@ -83,11 +83,11 @@ For details about how you can check product availability in the Back Office, see
 
 {% info_block infoBox %}
 
-Availability of a product bundle is defined by the availability of each product in the bundle. If at least one of them is out of stock, the entire bundle is unavailable.
+The availability of a product bundle is defined by the availability of each product in the bundle. If at least one of them is out of stock, the entire bundle is unavailable.
 
 {% endinfo_block %}
 
-In the [state machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html), a developer can use the `reserved` parameter to define the states at which the order items are reserved. There can also be states that release an item. For example, when payment fails and order is cancelled, the item is not reserved anymore:
+In the [state machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html), a developer can use the `reserved` parameter to define the states at which the order items are reserved. There can also be states that release an item. For example, when the payment fails and the order is canceled, the item is not reserved anymore:
 
 <details open>
 <summary markdown='span'>State machine example</summary>

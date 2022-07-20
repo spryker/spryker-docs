@@ -1,25 +1,27 @@
 ---
-title: Adding product sections to the documentation
+title: Add product sections to the documentation
 description: Learn how to add a new product to the Spryker docs.
+last_updated: Jul 18, 2022
 template: howto-guide-template
 redirect_from:
   - /docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-a-new-product-to-the-documentation-site.html
+  - /docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-product-sections-to-the-documentation.html
 related:
-  - title: Building the documentation site
-    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
-  - title: Editing documentation via pull requests
-    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/editing-documentation-via-pull-requests.html
-  - title: Reporting documentation issues
-    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/reporting-documentation-issues.html
-  - title: Reviewing pull requests
-    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
+  - title: Build the documentation site
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/build-the-documentation-site.html
+  - title: Edit documentation via pull requests
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/edit-documentation-via-pull-requests.html
+  - title: Report documentation issues
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/report-documentation-issues.html
+  - title: Review pull requests
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/review-pull-requests.html
   - title: Style, syntax, formatting, and general rules
-    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/style-formatting-general-rules.html
   - title: Markdown syntax
-    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/markdown-syntax.html
 ---
 
-When we launch a new product, you need to create a separate section for it. Usually, there are two roles per product — user and developer. In this article, we assume that you need to create a new product *acp* with the *user* and *dev* roles.
+When we launch a new product, you need to create a separate section for it. Usually, there are two roles per product: user and developer. In this article, we assume that you need to create a new product *acp* with the *user* and *dev* roles.
 
 To add a new product, follow these steps.
 
@@ -31,7 +33,7 @@ In the `/docs` directory, create a folder for your project and a folder designat
 
 In `_data/sidebars`, create sidebars for the new product per role. For each role, there should be a separate YML file in the following format: `{product_name}_{role}_sidebar.yml`. For example, for the *acp* product with user and developer roles, create `acp_dev_sidebar.yml` and `acp_user_sidebar.yml` sidebar files.
 
-To learn how to populate sidebar files, see [Sidebars](/docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html#sidebars).
+To learn how to populate sidebar files, see [Sidebars](/docs/scos/user/intro-to-spryker/contribute-to-documentation/style-formatting-general-rules.html#sidebars).
 
 ## 3. Add the product to the configuration
 

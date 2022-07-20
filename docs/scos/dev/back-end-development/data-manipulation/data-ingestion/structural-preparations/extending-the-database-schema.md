@@ -1,5 +1,5 @@
 ---
-title: Extending the Database Schema
+title: Extending the database schema
 description: Fields can be added to the existing database tables, but they cannot be removed (removing fields from the tables could break the functionalities implemented in Spryker Core).
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,18 +22,23 @@ redirect_from:
   - /v2/docs/en/t-extend-db-schema
   - /v1/docs/t-extend-db-schema
   - /v1/docs/en/t-extend-db-schema
+related:
+  - title: Creating, using, and extending the transfer objects
+    link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/zed/extending-database-schema/-->
 Fields can be added to the existing database tables, but they cannot be removed (removing fields from the tables could break the functionalities implemented in Spryker Core).
 
 {% info_block infoBox "Info" %}
+
 In addition, you can create a new database table by running the following command: `console spryk:run AddZedPersistencePropelSchema`.
+
 {% endinfo_block %}
 
 As an example, we will add a description field to the `spy_price_type` table. The structure of this table is defined in the `PriceProduct` module, in the `spy_price_product.schema.xml` file, as it can be seen below:
 
-```php
+```xml
     ...
     <table name="spy_price_type">
         <column name="id_price_type" type="INTEGER" required="true" primaryKey="true" autoIncrement="true"/>
@@ -53,9 +58,11 @@ To add an additional column to this table, do the following:
 
 1. On the project side, if it hasn’t been created yet, add the corresponding `xml` file ( follow the same folder structure and give it the same name)
 
-```php
+```bash
+
 mkdir -p src/Pyz/Zed/PriceProduct/Persistence/Propel/Schema
 touch src/Pyz/Zed/PriceProduct/Persistence/Propel/Schema/spy_price_product.schema.xml
+
 ```
 
 2. Add the additional fields to the table definition:

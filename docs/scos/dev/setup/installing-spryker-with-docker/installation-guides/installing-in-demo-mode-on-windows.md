@@ -12,6 +12,9 @@ redirect_from:
   - /docs/en/installing-in-demo-mode-on-windows
   - /v6/docs/installing-in-demo-mode-on-windows
   - /v6/docs/en/installing-in-demo-mode-on-windows
+related: 
+  - title: Database access credentials
+    link: docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
 ---
 
 This doc describes how to install Spryker in [Demo Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#demo-mode) on Windows.

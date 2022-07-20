@@ -12,6 +12,17 @@ redirect_from:
   - /docs/en/migrating-from-twig-v1-to-twig-v3
   - /v6/docs/migrating-from-twig-v1-to-twig-v3
   - /v6/docs/en/migrating-from-twig-v1-to-twig-v3
+related:
+  - title: CRUD Scheduled Prices migration concept
+    link: docs/scos/dev/migration-concepts/crud-scheduled-prices-migration-concept.html
+  - title: Decimal Stock migration concept
+    link: docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
+  - title: Float Stock for Products
+    link: docs/scos/dev/migration-concepts/float-stock-for-products-migration-concept.html
+  - title: Split Delivery migration concept
+    link: docs/scos/dev/migration-concepts/split-delivery-migration-concept.html
+  - title: Silex Replacement migration concept
+    link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
 ---
 
 Currently, Spryker supports only Twig v1 as a template engine. However, Twig v1 is quite an outdated solution, so we have added a possibility to update the Spryker-based projects to the latest version of Twig (v3).

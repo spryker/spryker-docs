@@ -2,6 +2,9 @@
 title: "Best practices: Promote products with discounts"
 description: Learn how to promote products using discounts.
 template: back-office-user-guide-template
+related:
+  - title: Promotions & Discounts feature overview
+    link: docs/scos/user/features/page.version/promotions-discounts-feature-overview.html
 ---
 
 This document explains how to use discounts to promote products using a concrete example. 
@@ -50,7 +53,7 @@ To create the corresponding discount, follow the steps in the sections below.
 10. Select the **equal** operator.
 11. For the value, select **Standard (Hermes)**.
     The 100% discount will apply to the standard delivery of DHL and Hermes.
-12. Click **Next**.    
+12. Click **Next**.
 
 ![Define discount calculation and the products to apply the discount to](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/back-office-user-guides/merchandising/discount/best-practices-promote-products-with-discounts.md/define-discount-calculation-and-the-products-to-apply-the-discount-to.png)
 
@@ -79,7 +82,7 @@ To create the corresponding discount, follow the steps in the sections below.
 15. For the current group, select the **OR** combination operator.
     The discount will not be applied if at least one of the group's rules applies.
 
-The default value of **THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIES FOR AT LEAST X ITEM(S).** is `1`. When a customer adds one or more products that fulfill the rules you've specified, the discount will be applied.     
+The default value of **THE DISCOUNT CAN BE APPLIED IF THE QUERY APPLIES FOR AT LEAST X ITEM(S).** is `1`. When a customer adds one or more products that fulfill the rules you've specified, the discount will be applied.
 
 16. Click **Save**.
 

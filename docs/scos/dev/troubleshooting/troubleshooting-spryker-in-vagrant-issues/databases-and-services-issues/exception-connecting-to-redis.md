@@ -12,6 +12,13 @@ redirect_from:
   - /docs/en/exception-connecting-to-redis
   - /v6/docs/exception-connecting-to-redis
   - /v6/docs/en/exception-connecting-to-redis
+related:
+  - title: My Elasticsearch dies
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/my-elasticsearch-dies.html
+  - title: Peer authentication failed for user postgres
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/peer-authentication-failed-for-user-postgres.html
+  - title: Setup MySQL Workbench to avoid port clashing with the host system
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/setup-mysql-workbench-to-avoid-port-clashing-with-the-host-system.html
 ---
 
 ## Description

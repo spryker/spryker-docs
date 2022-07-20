@@ -14,7 +14,11 @@ redirect_from:
   - /docs/scos/dev/installation/spryker-in-docker/docker-sdk/deploy-file-reference-1.0.html
 related:
   - title: Docker SDK
-    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
+    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html 
+  - title: Deploy file inheritance — common use cases
+    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-inheritance-common-use-cases.html
+  - title: Deploy file
+    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file.html
 ---
 
 

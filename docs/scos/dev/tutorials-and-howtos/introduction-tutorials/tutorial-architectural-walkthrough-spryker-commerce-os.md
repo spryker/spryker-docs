@@ -22,6 +22,13 @@ redirect_from:
   - /v2/docs/en/tutorial-architecture-walkthrough-scos
   - /v1/docs/tutorial-architecture-walkthrough-scos
   - /v1/docs/en/tutorial-architecture-walkthrough-scos
+related:
+  - title: Conceptual overview
+    link: docs/scos/dev/architecture/conceptual-overview.html
+  - title: Programming concepts
+    link: docs/scos/dev/architecture/programming-concepts.html
+  - title: Modules and layers
+    link: docs/scos/dev/architecture/modules-and-layers.html
 ---
 
 {% info_block infoBox %}
@@ -35,7 +42,7 @@ This tutorial explains the Spryker architecture and how things work altogether. 
 ## Challenge description
 
 * Build a `HelloSpryker` module in Zed that renders the `Hello Spryker!` string in reverse order on the screen: `!rekyrpS olleH`.
-* Build the `HelloSpryker` module in Yves that communicates with Zed using the client to retrieve the same reversed string `!rekyrpS olleH ` and shows the string on a webpage in the shop.
+* Build the `HelloSpryker` module in Yves that communicates with Zed using the client to retrieve the same reversed string `!rekyrpS olleH` and shows the string on a webpage in the shop.
 * Add Zed persistence layer in the `HelloSpryker` module to store and get the reversed string to and from the database.
 * Move the functionality that returns the reversed string to a new module (`StringFormat`), then provide the string to the `HelloSpryker` module.
 

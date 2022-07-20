@@ -18,6 +18,9 @@ redirect_from:
   - /v4/docs/en/router-yves
   - /v3/docs/router-yves-201907
   - /v3/docs/en/router-yves-201907
+related:
+  - title: Router Zed
+    link: docs/scos/dev/migration-concepts/silex-replacement/router/router-zed.html
 ---
 
 The Router is responsible for matching a request to a route and generating URLs based on a route name. The Spryker's Route module is based on the Symfony's Routing component. For more information on it, check out the [documentation](https://symfony.com/doc/current/routing.html).

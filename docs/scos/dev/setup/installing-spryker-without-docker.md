@@ -21,6 +21,15 @@ redirect_from:
   - /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-without-development-virtual-machine.html
   - /docs/scos/dev/setup/installing-spryker-without-devvm.html
   - /docs/scos/dev/setup/installing-spryker-without-development-virtual-machine-or-docker.html
+related: 
+  - title: Install module structure and configuration
+    link: docs/scos/dev/setup/install-module-structure-and-configuration.html
+  - title: Installing Spryker with custom set of modules
+    link: docs/scos/dev/setup/installing-spryker-with-custom-set-of-modules.html
+  - title: Managing SCOS dependencies with Composer
+    link: docs/scos/dev/setup/managing-scos-dependencies-with-composer.html
+  - title: Redis configuration
+    link: docs/scos/dev/setup/redis-configuration.html
 ---
 
 To install [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html) or [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html) without Docker, follow the steps below.
@@ -196,7 +205,7 @@ Configure Elasticsearch localized parameters:
 
 #### RabbitMQ
 
-Configure RabbitMQ permissions and virtual hosts according to the instructions in [Tutorial - Set Up a "Hello World" Queue - Legacy Demoshop](/docs/scos/dev/legacy-demoshop/201811.0/set-up-a-hello-world-queue-legacy-demoshop.html#rabbitmq-management-ui).
+Configure RabbitMQ permissions and virtual hosts according to the instructions in [Tutorial: Set Up a "Hello World" Queue - Legacy Demoshop](/docs/scos/dev/legacy-demoshop/201811.0/set-up-a-hello-world-queue-legacy-demoshop.html#rabbitmq-management-ui).
 
 #### Hostname
 

@@ -39,6 +39,23 @@ redirect_from:
   - /v1/docs/en/about-yves
   - /v1/docs/yves
   - /v1/docs/en/yves
+related:
+  - title: Yves overview
+    link: docs/scos/dev/back-end-development/yves/yves.html
+  - title: Adding translations for Yves
+    link: docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
+  - title: CLI entry point for Yves
+    link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
+  - title: Controllers and actions
+    link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
+  - title: Implementing URL routing in Yves
+    link: docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
+  - title: Modular Frontend
+    link: docs/scos/dev/back-end-development/yves/modular-frontend.html
+  - title: Yves bootstrapping
+    link: docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
+  - title: Yves routes
+    link: docs/scos/dev/back-end-development/yves/yves-routes.html
 ---
 
 Yves is one of the application layers of the Spryker Commerce OS, providing the front-end functionality.

@@ -1,5 +1,5 @@
 ---
-title: Customizing Spryker front end
+title: Customizing Spryker Front End
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/customizing-spryker-front-end
@@ -15,9 +15,16 @@ redirect_from:
   - /v4/docs/en/customizing-spryker-front-end
   - /docs/t-customize-spryker-frontend
   - /docs/en/t-customize-spryker-frontend
+related:
+  - title: Atomic Frontend - general overview
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html
+  - title: Integrating JQuery into Atomic Frontend
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html
+  - title: Integrating React into Atomic Frontend
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/integrating-react-into-atomic-frontend.html
 ---
 
-Spryker frontend user interface can be customized and extended to meet the needs of your business. You can change the layout, styles and behavior of existing components, as well as create components on your own.
+Spryker Frontend user interface can be customized and extended to meet the needs of your business. You can change the layout, styles and behavior of existing components, as well as create components on your own.
 
 There are 3 aspects of Spryker user interface that can be extended:
 
@@ -210,7 +217,7 @@ Let us also review how to extend the Twig template of a molecule. By default, th
 
 3. Now, let us open the start page of Spryker Shop. It will look like this:
 
-In addition to extending templates of existing components, you can as well create components on your own. When creating a component, you can also define how it looks like, and this is also done in Twig. For detailed information, see the _Create Component Template_ section in [Tutorial - Frontend - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html).
+In addition to extending templates of existing components, you can as well create components on your own. When creating a component, you can also define how it looks like, and this is also done in Twig. For detailed information, see the _Create Component Template_ section in [Tutorial: Frontend - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html).
 
 ## Styles
 
@@ -256,7 +263,7 @@ Typical implementations on the project level look as follows:
 @include util-visibility
 ```
 
-In addition to global styles, each component can have it own styles. For information on how to define styles for a component, see [Tutorial - Frontend - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html) and [Tutorial - Frontend - Override a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html).
+In addition to global styles, each component can have it own styles. For information on how to define styles for a component, see [Tutorial: Frontend - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html) and [Tutorial: Frontend - Override a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html).
 
 ## Behavior
 
@@ -322,7 +329,7 @@ bootstrap();
 
 Additional information on bootstrap implementation can be found in the application folder here: `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/app`.
 
-Apart from Webpack bootstrap, each component can have its own logic defined in the dedicated component Javascript or Typescript. For information on how to define component behavior, see [Tutorial - Frontend - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html), [Tutorial - Frontend - Extend a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/extending-a-component.html) and [Tutorial - Frontend - Override a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html).
+Apart from Webpack bootstrap, each component can have its own logic defined in the dedicated component Javascript or Typescript. For information on how to define component behavior, see [Tutorial: Frontend - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html), [Tutorial: Frontend - Extend a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/extending-a-component.html) and [Tutorial: Frontend - Override a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html).
 
 ## Installing dependencies
 

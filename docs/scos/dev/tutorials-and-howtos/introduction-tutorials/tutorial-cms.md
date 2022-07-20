@@ -23,10 +23,12 @@ redirect_from:
   - /v1/docs/t-cms
   - /v1/docs/en/t-cms
 related:
-  - title: Implementing URL Routing in Yves
+  - title: Implementing URL routing in Yves
     link: docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
-  - title: Cronjob Scheduling
+  - title: Cronjob scheduling
     link: docs/scos/dev/sdk/cronjob-scheduling.html
+  - title: CMS feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html
 ---
 
 <!--used to be: http://spryker.github.io/challenge/cms/-->

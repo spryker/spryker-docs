@@ -1,5 +1,5 @@
 ---
-title: Data Export Orders .csv Files Format
+title: Data Export orders CSV files format
 description: The article explains the format of the orders.csv, order-items.csv, order-expenses.csv export files
 last_updated: Jun 16, 2021
 template: data-export-template
@@ -11,7 +11,7 @@ redirect_from:
   - /docs/data-export-orders-csv-files-format
   - /docs/en/data-export-orders-csv-files-format
 related:
-  - title: Exporting Data
+  - title: Exporting data
     link: docs/scos/dev/data-export/page.version/data-export.html
   - title: Sales Data Export feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/sales-data-export-feature-integration.html

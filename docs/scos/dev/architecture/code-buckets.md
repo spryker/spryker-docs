@@ -12,6 +12,15 @@ redirect_from:
   - /docs/en/code-buckets
   - /v6/docs/code-buckets
   - /v6/docs/en/code-buckets
+related:
+  - title: Conceptual overview
+    link: docs/scos/dev/architecture/conceptual-overview.html
+  - title: Programming concepts
+    link: docs/scos/dev/architecture/programming-concepts.html
+  - title: Technology stack
+    link: docs/scos/dev/architecture/technology-stack.html
+  - title: Modules and layers
+    link: docs/scos/dev/architecture/modules-and-layers.html
 ---
 
 

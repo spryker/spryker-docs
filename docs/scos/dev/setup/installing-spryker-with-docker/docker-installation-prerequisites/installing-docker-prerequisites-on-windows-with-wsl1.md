@@ -3,6 +3,13 @@ title: Installing Docker prerequisites on Windows with WSL1
 description: This page describes the steps that are to be performed before you can start working with Spryker in Docker on Windows.
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/v5/docs/docker-installation-prerequisites-windows
+related:
+  - title: Installing Docker prerequisites on Linux
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html
+  - title: Installing Docker prerequisites on MacOS
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html
+  - title: Installing Docker prerequisites on Windows with WSL2
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html
 ---
 
 This document describes the prerequisites for installing Spryker in Docker on Windows.

@@ -27,7 +27,7 @@ To start feature integration, overview and install the necessary features:
 | Product | {{page.version}} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html) |
 | Cart | {{page.version}}| [Customer Account Management](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) |
 
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 
@@ -138,7 +138,7 @@ Ensure that the following plugins have been registered:
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the feature front end.
 

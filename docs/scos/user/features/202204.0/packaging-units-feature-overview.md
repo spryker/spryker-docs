@@ -69,11 +69,11 @@ A packaging unit usually contains multiple items of a product. For example, a "B
 
 The packaging unit amount can be:
 
-| PACKAGING UNIT AMMOUNT | DESCRIPTION |
+| PACKAGING UNIT AMOUNT | DESCRIPTION |
 | --- | --- |
 | Default (default_amount) | Default amount of items that a customer can buy. <br>For example, a customer can buy 40 apples. <br>Also, this value is used for calculating a price when the custom amount is provided. The Amount field in the online shop is prefilled with a value set in `default_amount`.|
 | Variable (is_variable=true) | Customer can buy any number of that item (respecting the amount restrictions). In case of a variable amount the price is adjusted by the formula: (Price) * (Customer Input) / (Default Amount). |
-| Fixed (is_variable=false) | Customer can buy a predetermined, fixed amount of items. When is_variable is set to "false", all amount_* values are set as NULL. When the amount is non-variable the customer can still see the default amount, but can not change it.<br>However, if a product has a sales unit set for it, the customer is able to select a different sales unit for the amount, which will adjust the displayed amount according to that sales unit.<br> See Measurement Units per Product <!-- link -->to learn about product sales units. |
+| Fixed (is_variable=false) | Customer can buy a predetermined, fixed amount of items. When is_variable is set to "false", all amount_* values are set as NULL. When the amount is non-variable the customer can still see the default amount, but can not change it.<br>However, if a product has a sales unit set for it, the customer is able to select a different sales unit for the amount, which will adjust the displayed amount according to that sales unit.<br> See [Measurement Units feature overview](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) to learn about product sales units. |
 | Interval amount (amount_interval) | Interval of amounts that a customer can buy. <br>For example, you can buy only 40, 80, 120, ... but not 45. <br>The interval is shifted by the minimum value (e.g: minimum = 5, interval = 3; valid values: 5, 8, 11, ...). Only relevant if is_variable=true.<br>If the amount is set as variable, by default, the interval amount is set to 1. |
 | Minimum amount (amount_minimum) | Minimum amount that a customer can buy. <br> For example, you cannot buy less than 1 apple. <br>Only relevant if is_variable=true. If the amount is set as variable, by default, the minimum amount equals the interval amount.|
 | Maximum amount (amount_maximum) | Maximum amount that a customer can buy.<br>For example, you cannot buy more than 10 apples.<br>Only relevant if is_variable=true. |
@@ -106,7 +106,7 @@ Meaning it will be one sales order containing multiple order items.
 
 {% endinfo_block %}
 
-## Stock Calculation and Definition
+## Stock calculation and definition
 
 In Spryker Commerce OS, customers can buy a product defined by the following elements:
 
@@ -164,7 +164,7 @@ In our example, the customer set the **meter** for a sales unit, selected **3.5*
 Once the order has been placed, we can navigate to the Back Office and see the following:
 
 * Availability for the leading product (**VGA cables as long as you want**) decreased by 11.5 (amount of reserved products)
-* Availablity for the non-leading product (**VGA cables**) didn't change from the previous time.
+* Availability for the non-leading product (**VGA cables**) didn't change from the previous time.
 The following figure shows how these items and packaging units appear in the cart.
 
 ![Cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/cart-with-items.png)
@@ -178,7 +178,7 @@ In our example, the following conditions are met:
 
 ## Current constraints
 
-* In the Spryker Commerce OS, you cannot define packaging units for products in the Back Office. They are imported to the database manually. See HowTo - Import Packaging Unit Types <!-- link -->for more details.
+* In the Spryker Commerce OS, you cannot define packaging units for products in the Back Office. They are imported to the database manually. See [HowTo: Import Packaging Units](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html) for more details.
 * We strive to shift all business logic to our backend, however, with Packaging Units, calculations are performed on Yves.
 * On the shopping cart as well as the shopping list page, products do not have a drop-down to change the packaging units. You can select a packaging unit on the product details page only.
 * A shopper cannot reorder the items with the selected packaging units as they are not added automatically. They should be added manually on the product details page.

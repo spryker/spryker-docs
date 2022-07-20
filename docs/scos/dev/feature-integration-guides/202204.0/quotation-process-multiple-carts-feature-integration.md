@@ -9,51 +9,10 @@ redirect_from:
   - /2021080/docs/en/quotation-process-multiple-carts-feature-integration
   - /docs/quotation-process-multiple-carts-feature-integration
   - /docs/en/quotation-process-multiple-carts-feature-integration
+related:
+  - title: Quotation Process feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
+  - title: Multiple Carts feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/multiple-carts-feature-walkthrough.html
 ---
-
-## Install feature core
-
-### Prerequisites
-To start feature integration, overview and install the necessary features:
-
-| NAME | VERSION |
-| --- | --- |
-| Quotation Process | {{page.version}} |
-| Multiple Carts | {{page.version}} |
-
-### 1) Set up behavior
-
-Register the following plugins:
-
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| MultiCartQuotePersistPlugin | Creates a new active customer cart. | None | Spryker\Client\MultiCart\Plugin\PersistentCart |
-
-**src/Pyz/Client/PersistentCart/PersistentCartDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Client\PersistentCart;
-
-use Spryker\Client\PersistentCart\PersistentCartDependencyProvider as SprykerPersistentCartDependencyProvider;
-use Spryker\Client\PersistentCartExtension\Dependency\Plugin\QuotePersistPluginInterface;
-use Spryker\Client\MultiCart\Plugin\PersistentCart\MultiCartQuotePersistPlugin;
-
-class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyProvider
-{
-    /**
-     * @return \Spryker\Client\PersistentCartExtension\Dependency\Plugin\QuotePersistPluginInterface
-     */
-    protected function getQuotePersistPlugin(): QuotePersistPluginInterface
-    {
-        return new MultiCartQuotePersistPlugin();
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that when you converting quote request with status "Ready" to cart, new cart created instead of replacing the existing one.
-
-{% endinfo_block %}
+{% include pbc/all/integrate-features/202204.0/integrate-the-quotation-process-multiple-carts-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-quotation-process-multiple-carts-feature.md -->

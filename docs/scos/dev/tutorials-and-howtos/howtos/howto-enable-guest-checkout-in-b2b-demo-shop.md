@@ -12,6 +12,9 @@ redirect_from:
   - /docs/en/howto-enable-guest-checkout-in-b2b-demo-shop
   - /v6/docs/howto-enable-guest-checkout-in-b2b-demo-shop
   - /v6/docs/en/howto-enable-guest-checkout-in-b2b-demo-shop
+related:
+  - title: Checkout steps
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html
 ---
 
 As B2B environments usually implement complex business logic, in the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html), guest users cannot check out by default. However, in some cases, you may need guest checkout to be enabled.

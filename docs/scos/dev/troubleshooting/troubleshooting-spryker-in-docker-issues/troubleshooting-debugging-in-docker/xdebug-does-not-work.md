@@ -12,6 +12,15 @@ redirect_from:
   - /docs/en/xdebug-does-not-work
   - /v6/docs/xdebug-does-not-work
   - /v6/docs/en/xdebug-does-not-work
+related:
+  - title: nc command does not give any output
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-debugging-in-docker/nc-command-does-not-give-any-output.html
+  - title: nc command tells that the port is opened
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-debugging-in-docker/nc-command-tells-that-the-port-is-opened.html
+  - title: PHP `xdebug` extension is not active in CLI
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-debugging-in-docker/php-xdebug-extension-is-not-active-in-cli.html
+  - title: PHP `xdebug` extension is not active when accessing the website via a browser or curl
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-debugging-in-docker/php-xdebug-extension-is-not-active-when-accessing-the-website-via-a-browser-or-curl.html
 ---
 
 ## Description

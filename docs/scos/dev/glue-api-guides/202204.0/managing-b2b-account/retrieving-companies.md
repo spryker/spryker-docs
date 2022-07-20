@@ -13,15 +13,23 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/managing-b2b-account/retrieving-companies.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-companies.html
 related:
-  - title: Logging In as Company User
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
-  - title: Retrieving Company User Information
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
-  - title: Retrieving Company Role Information
+  - title: Retrieving company roles
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
-  - title: Authentication and Authorization
+  - title: Retrieving company users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
+  - title: Authenticating as a company user
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
+  - title: Managing company user authentication tokens
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/managing-company-user-authentication-tokens.html
+  - title: Searching by company users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
+  - title: Retrieving business units
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-units.html
+  - title: Retrieving business unit addresses
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-unit-addresses.html
+  - title: Authenticating as a customer
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
-  - title: Company Account and General Organizational Structure
+  - title: Company Accounts overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
 ---
 

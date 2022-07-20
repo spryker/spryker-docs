@@ -278,6 +278,8 @@ algolia:
       title: 'Frontend enablement Service Developer'
     - name: 'pbc_all'
       title: 'Packaged Business Capabilities'
+    - name: 'paas_plus_dev'
+      title: 'PaaS+'
 sass:
     sass_dir: css
     style: compressed

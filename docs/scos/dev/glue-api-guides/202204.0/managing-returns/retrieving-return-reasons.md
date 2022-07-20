@@ -13,6 +13,8 @@ redirect_from:
 related:
   - title: Managing the returns
     link: docs/scos/dev/glue-api-guides/page.version/managing-returns/managing-the-returns.html
+  - title: Return Management feature overview
+    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
 ---
 
 This endpoint allows retrieving returns reasons.

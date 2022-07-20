@@ -77,4 +77,4 @@ To learn more about Table design, see [Table design](/docs/marketplace/dev/front
 |        |          |          | [How to create a new Gui table](/docs/marketplace/dev/howtos/how-to-create-gui-table.html)  |
 |        |          |          | [How to extend an existing Gui table](/docs/marketplace/dev/howtos/how-to-extend-gui-table.html)  |
 |        |          |          | [How to create a new Gui table filter type](/docs/marketplace/dev/howtos/how-to-add-new-guitable-filter-type.html)  |
-|        |          |          | [How to extend Merchant portal dashboard](/docs/marketplace/dev/howtos/how-to-extend-merchant-portal-dashboard.html)  |
+|        |          |          | [How to extend Merchant Portal dashboard](/docs/marketplace/dev/howtos/how-to-extend-merchant-portal-dashboard.html)  |

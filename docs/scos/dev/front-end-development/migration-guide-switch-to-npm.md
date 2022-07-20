@@ -6,11 +6,11 @@ template: concept-topic-template
 
 ## Upgrading to version 8.*
 
-In this article, you will find instructions on how to upgrade NPM to version 8 in your Spryker project.
+This article provides instructions for migrating from YARN to NPM version 8 in your Spryker project.
 
 ### Overview
 
-We've been using Yarn v2 since the beginning of Merchant Portal project to install dependencies in a workspace.
+Yarn v2 has been used since the beginning of the Merchant Portal project to install dependencies in a workspace.
 It's been working with some issues where not all dependencies would be installed correctly in the project if some of the package versions will differ between each other.
 This issue has been managed internally so far by updating all package versions simultaneously but this cannot be guaranteed when the project is developed by customers.
 Yarn has not been responding to the issue reported for more then a year now so we have to switch back to NPM v8 which also supports workspaces.
@@ -20,7 +20,7 @@ Yarn has not been responding to the issue reported for more then a year now so w
 ### 1) Update modules
 
 ```bash
-composer update spryker/manual-order-entry-gui spryker/chart spryker/cms-block-category-connector spryker/cms-block-gui spryker/cms-gui spryker/company-business-unit-gui spryker/company-gui spryker/company-role-gui spryker/company-user-gui spryker/content-gui spryker/content-product-gui spryker/content-product-set-gui spryker/dashboard-merchant-portal-gui spryker/discount spryker/gui spryker/gui-table spryker/merchant-profile-merchant-portal-gui spryker/merchant-relationship-sales-order-threshold-gui spryker/price-product-volume-gui spryker/product-list-gui spryker/product-merchant-portal-gui spryker/product-offer-merchant-portal-gui spryker/product-relation-gui spryker/sales-merchant-portal-gui spryker/sales-order-threshold-gui spryker/sales-reclamation-gui spryker/security-merchant-portal-gui spryker/state-machine spryker/user-merchant-portal-gui spryker/zed-ui spryker-shop/product-review-widget spryker-shop/shop-ui
+composer update spryker/chart spryker/dashboard-merchant-portal-gui spryker/discount spryker/gui spryker/gui-table spryker/merchant-profile-merchant-portal-gui spryker/product-merchant-portal-gui spryker/product-offer-merchant-portal-gui spryker/product-relation-gui spryker/sales-merchant-portal-gui spryker/security-merchant-portal-gui spryker/state-machine spryker/user-merchant-portal-gui spryker/zed-ui spryker-shop/product-review-widget spryker-shop/shop-ui
 ```
 
 ### 2) Update configs
@@ -145,12 +145,8 @@ node -v
 npm -v
 ```
 
-To update them use the following commands:
+To update them use an official documentation:
 
-```bash
-sudo npm -g install npm@8
-sudo npm cache clean -f
-sudo npm install -g n
-sudo n 16
-```
+- [node](https://nodejs.org/en/download/package-manager)
+- [npm](https://docs.npmjs.com/try-the-latest-stable-version-of-npm)
 {% endinfo_block %}

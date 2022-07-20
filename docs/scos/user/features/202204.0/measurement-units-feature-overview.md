@@ -1,6 +1,6 @@
 ---
 title: Measurement Units feature overview
-description: The Measurement Units per Products feature allows selling products by any unit of measure defined by a shop administrator.
+description: The Measurement Units per Products feature lets you sell products by any unit of measure defined by a shop administrator.
 last_updated: Aug 13, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/measurement-units-feature-overview
@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/features/202200.0/measurement-units-feature-overview.html
 ---
 
-The *Measurement Units* feature allows selling products by any unit of measure defined by the shop administrator. For example, apples can be offered in "Item" or "Kilogram", cables can be offered in "Centimeter", "Meter" or "Feet". To support alternate units of measure, there must be a base unit value relative to which all the internal conversions and calculations will be made. Such value is referred to as a base unit. The base unit is assigned to abstract products, and by default, it is "item"; however, it can be changed to any other unit.
+The *Measurement Units* feature lets you sell products by any unit of measure defined by the shop administrator. For example, apples can be offered in "Item" or "Kilogram", cables can be offered in "Centimeter", "Meter" or "Feet". To support alternate units of measure, there must be a base unit value relative to which all the internal conversions and calculations will be made. Such value is referred to as a base unit. The base unit is assigned to abstract products, and by default, it is "item"; however, it can be changed to any other unit.
 
 Besides the base unit, the shop owner can define *sales units*—alternate units of measure in which items will be offered in the shop. Sales units are assigned to concrete products, but if sales units are not defined, the *base unit* is used as a default sales unit. If there are several sales units and no default sales unit is defined, then the first unit to show will be the first in alphabetical order.
 

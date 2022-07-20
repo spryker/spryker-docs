@@ -91,11 +91,12 @@ The script runs all the propel database migrations, so the database is updated t
 
 From this point on, all the V1 services that are communicating with the database may respond to requests incorrectly. For each request, it depends on what data was migrated. For example, Glue V1 retrieves information about a product from Redis V1 and Search V1. Then Glue V1 makes a request to the the database to put the product to cart. If the product still exists in the database, it will be added to cart. Otherwise, this request will result in an error.
 
-At the end of this step, the scheduler is re-enabled and new jobs are set up:
+At the end of this step, the following command re-enables the scheduler and sets up new jobs:
 ```shell
 vendor/bin/console scheduler:setup -vvv --no-ansi
 ```
-It restarts queue workers and updates search and Redis.
+
+The scheduler restarts queue workers and updates search and Redis.
 
 ![Run_install](./images/Run_install/install_dbs_updates/install_dbs_updates.gif)
 

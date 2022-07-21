@@ -44,8 +44,7 @@ For detailed information on the modules that provide the API functionality and r
         "type": "abstract-products",
         "id": "001",
         "attributes": {
-            "sku": "001",
-            // ...
+            "sku": "001"
         },
         "links": {
             "self": "https://glue.mysprykershop.com/abstract-products/001?include=product-tax-sets"
@@ -92,8 +91,7 @@ For detailed information on the modules that provide the API functionality and r
                         "name": "Germany Standard",
                         "rate": "19.00",
                         "country": "DE"
-                    },
-                    // ...
+                    }
                 ]
             },
             "links": {

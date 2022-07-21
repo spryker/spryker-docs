@@ -43,7 +43,7 @@ If a user puts one and the same product in different sales units, they will be s
 
 Let's take an example to better understand the feature. Suppose, 1 apple (1=factor) weights 0,1 kg, then the ratio will be 10 (1kg = 10 apples). If the precision is 100, the user can specify a number as 0.40 Kg (which will be 4 apples). Likewise, if, in this case, the user selects "kg" and precision is set to "1", its quantity in sales units on the cart page will be "0", as precision 1 implies that no digits are shown after the decimal sign. Actually,
 
-`(Base Unit Value) = (User Input Sales Unit Value) * Precision / Factor`
+*(Base Unit Value) = (User Input Sales Unit Value) * Precision / Factor*
 
 There can be two types of conversions in the system:
 

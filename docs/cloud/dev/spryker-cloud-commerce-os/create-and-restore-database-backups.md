@@ -134,9 +134,9 @@ It may take a few minutes for the DB to restore.
 
 3. Select the vault of the environment you want to restore the backup for. For example, for a `production` environment, select the `production_rds_backup` vault.
 
-4. In **Backups** tab, click on the link start with _"continuous:db"_.
+4. In the **Recovery points** pane, select the `recovery point ID` you want to restore.
 
-5. Click on **Restore** on the right top of the screen.
+5. Click **Restore**.
 
 6. In **Restore to point in time** tab, choose _**Latest restorable time**_ or _**Specify date and time**_.
 

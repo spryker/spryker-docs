@@ -8,7 +8,7 @@ This document describes how to import taxes for abstract products via  `product_
 
 ## Import file dependencies
 
-[tax.csv](/docs/pbc/all/tax-management/data-import-and-export/file-details-tax.csv.html)
+[tax.csv](/docs/pbc/all/tax-management/import-and-export-data/file-details-tax.csv.html)
 
 ## Import file parameters
 

@@ -67,13 +67,13 @@ entries:
               - title: Retrieve tax sets
                 url: /docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html
               - title: Retrieve tax sets of abstract products
-                url: /docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets-of-abstract-products.html                
+                url: /docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets-of-abstract-products.html
           - title: Import and export data
             nested:
               - title: Import tax sets
-                url: /docs/pbc/all/tax-management/data-import-and-export/import-tax-sets.html
+                url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets.html
               - title: Import tax sets for abstract products
-                url: /docs/pbc/all/tax-management/data-import-and-export/import-tax-sets-for-abstract-products.html
+                url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-abstract-products.html
           - title: Extend and customize
             nested:
               - title: "Tax module: reference information"

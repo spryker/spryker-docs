@@ -7,7 +7,7 @@ related:
     link: docs/scos/user/features/page.version/tax-feature-overview.html
 ---
 
-To edit a [tax set](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) in the Back Office, follow the steps:
+To edit a [tax set](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html) in the Back Office, follow the steps:
 
 1. Go to **Administration&nbsp;<span aria-label="and then">></span> Tax Sets**.
     This opens the **Overview of Tax Sets** page.

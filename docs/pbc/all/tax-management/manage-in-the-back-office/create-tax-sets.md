@@ -16,11 +16,11 @@ related:
     link: docs/scos/user/features/page.version/tax-feature-overview.html
 ---
 
-This document describes how to create [tax sets](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) in the Back Office.
+This document describes how to create [tax sets](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html) in the Back Office.
 
 ## Prerequisites
 
-* [Create tax rates](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/tax-rates/managing-tax-rates.html).  
+* [Create tax rates](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/tax-rates/managing-tax-rates.html).  
 * Review the [reference information](#reference-information-create-tax-sets) before you start, or look up the necessary information as you go through the process.
 
 ## Create a tax set
@@ -42,16 +42,16 @@ This opens the **Edit Tax Set** page with a success message displayed.
 
 ## Next steps
 
-* Assign a tax set to an abstract product by [creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
+* Assign a tax set to an abstract product by [creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html).
 
-* Assign a tax set to an existing abstract product by [editing abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html).
+* Assign a tax set to an existing abstract product by [editing abstract products](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html).
 
-* Assign a tax set to a product variant by [creating product variants](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html).
+* Assign a tax set to a product variant by [creating product variants](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-concrete-products/creating-product-variants.html).
 
-* Assign a tax set to an existing product variant by [editing product variants](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/editing-product-variants.html).
+* Assign a tax set to an existing product variant by [editing product variants](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-concrete-products/editing-product-variants.html).
 
-* Assign a tax set to a product option by [creating product options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html).
+* Assign a tax set to a product option by [creating product options](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/product-options/creating-product-options.html).
 
-* Assign a tax set to a threshold's fee by [managing threshold settings](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/manage-threshold-settings.html).
+* Assign a tax set to a threshold's fee by [managing threshold settings](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/manage-threshold-settings.html).
 
-* Assign a tax set to a delivery method by [creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html).
+* Assign a tax set to a delivery method by [creating and managing delivery methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html).

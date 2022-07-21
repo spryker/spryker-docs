@@ -195,7 +195,7 @@ Once you have finished the full integration of the feature, make sure that the a
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

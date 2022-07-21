@@ -231,7 +231,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 Go to the product detail page for a product with Volume Prices set, update the quantity to meet any of Volume Prices boundaries and check the price. Then add the product to the cart and if the price of the item in the Cart remains the same as it was on the Product Detail Page, the plugins are installed.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

@@ -2,6 +2,13 @@
 title: Edit slots in configurable bundle templates
 description: Learn how to edit slots in configurable bundle templates in the Back Office.
 template: back-office-user-guide-template
+related:
+  - title: Create configurable bundle templates
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/create-configurable-bundle-templates.html
+  - title: Edit slots in configurable bundle templates
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html
+  - title: Configurable Bundle feature overview
+    link: docs/scos/user/features/page.version/configurable-bundle-feature-overview.html
 ---
 
 This document describes how to edit slots in configurable bundle templates in the Back Office.

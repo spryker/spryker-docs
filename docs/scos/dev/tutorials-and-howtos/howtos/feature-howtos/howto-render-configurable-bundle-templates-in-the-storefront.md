@@ -16,6 +16,9 @@ redirect_from:
   - /v5/docs/en/howto-rendering-configurable-bundles-in-the-storefront
   - /v4/docs/howto-rendering-configurable-bundles-in-the-storefront
   - /v4/docs/en/howto-rendering-configurable-bundles-in-the-storefront
+related:
+  - title: Configurable Bundle feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/configurable-bundle-feature-walkthrough.html
 ---
 
 The configurable bundle functionality is implemented by 3 widgets:

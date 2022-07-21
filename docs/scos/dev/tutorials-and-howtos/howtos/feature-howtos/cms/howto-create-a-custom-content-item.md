@@ -10,6 +10,9 @@ redirect_from:
   - /2021080/docs/en/howto-create-a-custom-content-item
   - /docs/howto-create-a-custom-content-item
   - /docs/en/howto-create-a-custom-content-item
+related:
+  - title: Content Items feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/content-items-feature-walkthrough/content-items-feature-walkthrough.html
 ---
 
 By default, Spryker provides `Banner`, `Product Abstract List`, `Product Set` and `File List` content items.
@@ -17,6 +20,7 @@ By default, Spryker provides `Banner`, `Product Abstract List`, `Product Set` an
 If you need another type of content to display in a CMS page or bock content or even inside a [Twig](https://twig.symfony.com/) template file, you can create it on the project level.
 
 You can do the following:
+
 * Introduce a new entity with all the properties required by your project. For example, see `ContentBanner` and `ContentBannerGui` modules.
 * Use an entity that already exists in your shop database, like `Location`, `Partner`, or `Employee`. For example, see `ContentProduct` and `ContentProductGui` modules.
 

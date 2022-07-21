@@ -11,6 +11,10 @@ redirect_from:
   - /docs/managing-product-labels
   - /docs/en/managing-product-labels
 related:
+  - title: Create product labels
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-labels/create-product-labels.html
+  - title: Edit product labels
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-labels/edit-product-labels.html
   - title: Product Labels feature overview
     link: docs/scos/user/features/page.version/product-labels-feature-overview.html
 ---
@@ -24,7 +28,7 @@ To view a product label, do the following:
 
 ## Reference information: View product labels
 
-The following table describes the attributes you see, select, or enter while viewing product labels.   
+The following table describes the attributes you see, select, or enter while viewing product labels.
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |

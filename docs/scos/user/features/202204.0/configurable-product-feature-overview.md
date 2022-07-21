@@ -46,7 +46,7 @@ Configurable products are created in two steps:
 
 A Back Office user can add configurable products to pages, categories, and content items as regular products.
 
-In the product catalog, they can see which products are configurable ones and edit them as regular products. However, a Back Office user cannot change configuration parameters.
+In the product catalog, they can see which products are configurable and edit them as regular products. However, a Back Office user cannot change configuration parameters.
 
 ![configurable-product-entry-in-the-back-office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configurable-product-entry-in-the-back-office.png)
 
@@ -103,7 +103,7 @@ If a price is not provided by the configurator, [a regular product price](/docs/
 
 When [importing configurable products](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/configurable-product-import-category/file-details-product-concrete-pre-configuration.csv.html), a developer defines if the configuration is complete for each product.
 
-If the configuration is complete, on entering the **Product details** page, a customer sees a message that the configuration is complete. By default, the message is followed by the first 3 descriptive attributes set in the configurator. Under the attributes, there are the **Show** and **Hide** buttons, which allow expanding and collapsing the remaining attributes, respectively. In case the configuration is complete, the customer can purchase the product without opening the configurator and selecting parameters.
+If the configuration is complete, on entering the **Product details** page, a customer sees a message that the configuration is complete. By default, the message is followed by the first three descriptive attributes set in the configurator. Under the attributes, there are the **Show** and **Hide** buttons that allow expanding and collapsing of the remaining attributes, respectively. In case the configuration is complete, the customer can purchase the product without opening the configurator and selecting parameters.
 
 ![configurtion-complete-message](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/Features/Configurable+Product+feature+overview/configurtion-complete-message.png)
 
@@ -113,21 +113,21 @@ If the configuration is not complete, on entering the **Product details** page, 
 ![incomplete-configurtion-message](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/incomplete-configurtion-message.png)
 
 
-Even if all the parameter values are [pre-configured](#pre-configured-parameter-values), but configuration is not complete, a customer has to open the configurator and save the configuration. They are not required to change the pre-configured values though.
+Even if all the parameter values are [preconfigured](#preconfigured-parameter-values), but the configuration is not complete, a customer has to open the configurator and save the configuration. They are not required to change the preconfigured values, though.
 
-![configuration-is-not-complete-message-with-pre-configured-parameters](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configuration-is-not-complete-message-with-pre-configured-parameters.png)
+![configuration-is-not-complete-message-with-preconfigured-parameters](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Configurable+Product/Configurable+Product+feature+overview/configuration-is-not-complete-message-with-pre-configured-parameters.png)
 
 #### Request for quote with a configurable product
 
 The information in [Complete and incomplete configuration](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2117927245/WIP+Configurable+Product+feature+overview#Complete-and-incomplete-configuration) applies to [Quotation Process & RFQ](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) functionalities. A customer can only request a quote for a product with a complete configuration.
 
-### Pre-configured parameter values
+### Preconfigured parameter values
 
-When a developer creates configurable products by importing them, they can pre-configure parameter values. If a customer chooses to configure such a product, they start with the pre-configured parameter values and can change them.
+When a developer creates configurable products by importing them, they can pre-configure parameter values. If a customer chooses to configure such a product, they start with the preconfigured parameter values and can change them.
 
-If a developer also defines that the configuration of such a product is complete, on entering the **Product details** page, a customer sees the pre-configured parameter values. They can add the product to the cart without adjusting the configuration.
+If a developer also defines that the configuration of such a product is complete, on entering the **Product details** page, a customer sees the preconfigured parameter values. They can add the product to the cart without adjusting the configuration.
 
-If a developer defines that the configuration of such a product is incomplete, on entering the **Product details** page, a customer does not see the pre-configured parameter values. However, they are still assigned to the product. The customer has to configure the product, but they do not have to change the pre-configured parameter values.
+If a developer defines that the configuration of such a product is incomplete, on entering the **Product details** page, a customer does not see the preconfigured parameter values. However, they are still assigned to the product. The customer has to configure the product, but they do not have to change the preconfigured parameter values.
 
 ## Configurable product on the Storefront
 

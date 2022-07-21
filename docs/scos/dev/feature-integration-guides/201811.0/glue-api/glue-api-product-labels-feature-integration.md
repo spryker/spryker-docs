@@ -10,7 +10,7 @@ redirect_from:
   - /v1/docs/en/product-labels-api-feature-integration
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

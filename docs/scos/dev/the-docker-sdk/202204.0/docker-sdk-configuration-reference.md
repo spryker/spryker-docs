@@ -10,6 +10,27 @@ redirect_from:
   - /2021080/docs/en/docker-sdk-configuration-reference
   - /docs/docker-sdk-configuration-reference
   - /docs/en/docker-sdk-configuration-reference
+related:
+  - title: The Docker SDK
+    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
+  - title: Docker SDK quick start guide
+    link: docs/scos/dev/the-docker-sdk/page.version/docker-sdk-quick-start-guide.html
+  - title: Docker environment infrastructure
+    link: docs/scos/dev/the-docker-sdk/page.version/docker-environment-infrastructure.html
+  - title: Configuring services
+    link: docs/scos/dev/the-docker-sdk/page.version/configuring-services.html
+  - title: Choosing a Docker SDK version
+    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
+  - title: Choosing a mount mode
+    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-mount-mode.html
+  - title: Configuring a mount mode
+    link: docs/scos/dev/the-docker-sdk/page.version/configuring-a-mount-mode.html
+  - title: Configuring access to private repositories
+    link: docs/scos/dev/the-docker-sdk/page.version/configuring-access-to-private-repositories.html
+  - title: Configuring debugging in Docker
+    link: docs/scos/dev/the-docker-sdk/page.version/configuring-debugging-in-docker.html
+  - title: Running tests with the Docker SDK
+    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-docker-sdk-version.html
 ---
 
 This document is a quick reference for the most common configuration options of the Docker SDK.

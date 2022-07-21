@@ -12,7 +12,7 @@ Marketplace State Machine workflow:
 Merchant State Machine workflow:
 ![Merchant state machine workflow](https://confluence-connect.gliffy.net/embed/image/b938441d-1a4a-4fe3-903d-580965b1bfea.png?utm_medium=live&utm_source=custom)
 
-In this article, we'll look into the process of how Marketplace and merchant state machines interfere and check what statuses are displayed in the Back Office to a Marketplace Administrator, in the Merchant Portal to a merchant, and on the Storefront to a buyer.
+In this article, we'll look into the process of how Marketplace and merchant state machines interfere and check what statuses are displayed in the Back Office to a Marketplace administrator, in the Merchant Portal to a merchant, and on the Storefront to a buyer.
 
 ## Order item’s status progress: New
 The process starts when a customer places an order. The Marketplace order obtains state *New*.

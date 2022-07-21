@@ -12,7 +12,11 @@ redirect_from:
   - /docs/en/managing-configurable-bundle-templates
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/configurable-bundle-templates/managing-configurable-bundle-templates.html
 related:
-  - title: Configurable Bundle Feature Overview
+  - title: Create configurable bundle templates
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/create-configurable-bundle-templates.html
+  - title: Edit slots in configurable bundle templates
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html
+  - title: Configurable Bundle feature overview
     link: docs/scos/user/features/page.version/configurable-bundle-feature-overview.html
 ---
 

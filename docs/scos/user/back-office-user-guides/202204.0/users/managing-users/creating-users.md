@@ -11,6 +11,14 @@ redirect_from:
   - /docs/managing-users
   - /docs/en/managing-users
 related:
+  - title: Activating and deactivating users
+    link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/activating-and-deactivating-users.html
+  - title: Assigning and deassigning customers from users
+    link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/assigning-customers-to-users.html
+  - title: Editing users
+    link: docs/scos/user/back-office-user-guides/page.version/users/managing-users/editing-users.html
+  - title: Deleting users
+    link: docs/scos/user/back-office-user-guides/202204.0/users/managing-users/deleting-users.html
   - title: User and Rights Management
     link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
 ---

@@ -2,6 +2,11 @@
 title: Viewing returns of an order
 description: Learn how to view returns of an order in the Back Office
 template: back-office-user-guide-template
+related:
+  - title: Creating returns
+    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/creating-returns.html
+  - title: Return Management feature overview
+    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
 ---
 
 This document describes how to view returns of an order in the Back Office.

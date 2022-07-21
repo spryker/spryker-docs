@@ -73,7 +73,7 @@ Make sure that merchant products selected on the **Product Details** page by def
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the Marketplace Product + Marketplace Product Offer feature front end.
 

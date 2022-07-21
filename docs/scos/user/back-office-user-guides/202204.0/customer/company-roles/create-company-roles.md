@@ -15,6 +15,8 @@ redirect_from:
 related:
   - title: Managing Companies
     link: docs/scos/user/back-office-user-guides/page.version/customer/manage-companies.html
+  - title: Company user roles and permissions overview
+    link: docs/scos/user/features/page.version/company-account-feature-overview/company-user-roles-and-permissions-overview.html
 ---
 
 This document describes how to create company roles in the Back Office.

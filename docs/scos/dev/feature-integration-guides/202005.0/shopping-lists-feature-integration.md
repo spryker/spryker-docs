@@ -979,7 +979,7 @@ To make sure the ShoppingListItemProductConcreteActiveAddItemPreCheckPlugin is s
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please overview and install the necessary features before beginning the integration step.
 

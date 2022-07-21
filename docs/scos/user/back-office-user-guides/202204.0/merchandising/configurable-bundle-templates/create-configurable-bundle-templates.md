@@ -14,7 +14,9 @@ redirect_from:
 related:
   - title: Edit configurable bundle templates
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/edit-configurable-bundle-templates.html
-  - title: Configurable Bundle Feature Overview
+  - title: Edit slots in configurable bundle templates
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/configurable-bundle-templates/edit-slots-in-configurable-bundle-templates.html
+  - title: Configurable Bundle feature overview
     link: docs/scos/user/features/page.version/configurable-bundle-feature-overview.html
 ---
 

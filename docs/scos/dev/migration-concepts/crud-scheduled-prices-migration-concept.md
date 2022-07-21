@@ -16,6 +16,17 @@ redirect_from:
   - /v5/docs/en/updating-a-spryker-based-project
   - /v4/docs/updating-a-spryker-based-project
   - /v4/docs/en/updating-a-spryker-based-project
+related:
+  - title: Decimal Stock migration concept
+    link: docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
+  - title: Float Stock for Products
+    link: docs/scos/dev/migration-concepts/float-stock-for-products-migration-concept.html
+  - title: Migrating from Twig v1 to Twig v3
+    link: docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
+  - title: Split Delivery migration concept
+    link: docs/scos/dev/migration-concepts/split-delivery-migration-concept.html
+  - title: Silex Replacement migration concept
+    link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
 ---
 
 ## General information

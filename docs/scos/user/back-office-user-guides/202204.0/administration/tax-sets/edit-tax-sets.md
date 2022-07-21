@@ -2,6 +2,9 @@
 title: Edit tax sets
 last_updated: May 31, 2022
 template: back-office-user-guide-template
+related:
+  - title: Tax feature overview
+    link: docs/scos/user/features/page.version/tax-feature-overview.html
 ---
 
 To edit a [tax set](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) in the Back Office, follow the steps:

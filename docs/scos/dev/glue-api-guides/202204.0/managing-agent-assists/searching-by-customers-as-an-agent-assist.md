@@ -13,6 +13,12 @@ redirect_from:
 related:
   - title: Agent Assist feature overview
     link: docs/scos/user/features/page.version/agent-assist-feature-overview.html
+  - title: Authenticating as an agent assist
+    link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/authenticating-as-an-agent-assist.html
+  - title: Impersonating customers as an agent assist
+    link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/impersonating-customers-as-an-agent-assist.html
+  - title: Managing agent assist authentication tokens
+    link: docs/scos/dev/glue-api-guides/page.version/managing-agent-assists/managing-agent-assist-authentication-tokens.html
 ---
 
 

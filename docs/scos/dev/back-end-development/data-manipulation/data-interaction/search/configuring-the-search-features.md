@@ -22,6 +22,17 @@ redirect_from:
   - /v2/docs/en/configuring-the-search-features
   - /v1/docs/configuring-the-search-features
   - /v1/docs/en/configuring-the-search-features
+related:
+  - title: Configuring Elasticsearch
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
+  - title: Configuring search for multi-currency
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
+  - title: Configuring the search query
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html
+  - title: Expanding search data
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
+  - title: Facet filter overview and configuration
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
 ---
 
 This article explains how to configure faceted navigation, filters, pagination, and sorting, so all the important search features that are provided by the Search module.

@@ -21,7 +21,7 @@ redirect_from:
   - /v1/docs/boosting-cart-based-search
   - /v1/docs/en/boosting-cart-based-search
 related:
-  - title: Search
+  - title: Search feature overview
     link: docs/scos/user/features/page.version/search-feature-overview/search-feature-overview.html
 ---
 

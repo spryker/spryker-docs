@@ -3,6 +3,15 @@ title: Entity name is not unique
 description: Guidelines for making entity names unique
 last_updated: Mar 23, 2022
 template: concept-topic-template
+related:
+  - title: Upgradability guidelines
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html
+  - title: Private API is extended
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-extended.html
+  - title: Private API is used on the project level
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-used-on-the-project-level.html
+  - title: Private API method is overridden on the project level
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-method-is-overridden-on-the-project-level.html
 ---
 
 Modules have public and private APIs. While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API. For example, if you use a core method on the project level, and it is updated or removed with an update, it can cause unexpected issues.

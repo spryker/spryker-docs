@@ -15,7 +15,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

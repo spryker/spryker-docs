@@ -19,6 +19,25 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/development-tools/performance-audit-tool-benchmark.html
   - /docs/scos/dev/sdk/202009.0/development-tools/performance-audit-tool-benchmark.html
   - /docs/scos/dev/sdk/202108.0/development-tools/performance-audit-tool-benchmark.html
+related:
+  - title: Architecture sniffer
+    link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
+  - title: Code sniffer
+    link: docs/scos/dev/sdk/development-tools/code-sniffer.html
+  - title: Formatter
+    link: docs/scos/dev/sdk/development-tools/formatter.html
+  - title: PHPStan
+    link: docs/scos/dev/sdk/development-tools/phpstan.html
+  - title: SCSS linter
+    link: docs/scos/dev/sdk/development-tools/scss-linter.html
+  - title: TS linter
+    link: docs/scos/dev/sdk/development-tools/ts-linter.html
+  - title: Spryk code generator
+    link: docs/scos/dev/sdk/development-tools/spryk-code-generator.html
+  - title: Static Security Checker
+    link: docs/scos/dev/sdk/development-tools/static-security-checker.html
+  - title: Tooling config file
+    link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
 ---
 
 The Benchmark tool allows you to profile requests to an application and see how long it takes to load a page and how much memory the application uses during these requests. This tool is based on [PHPBench](https://github.com/phpbench/phpbench) and is used inside Spryker.

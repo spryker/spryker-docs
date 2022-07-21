@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/managing-customers
   - /docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html
 related:
-  - title: Customer Accounts
+  - title: Customer Account Management feature overview
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
 ---
 

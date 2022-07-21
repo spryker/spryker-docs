@@ -10,7 +10,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-payments-feature-integration.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

@@ -26,12 +26,12 @@ redirect_from:
 
 ## PHP 7
 
-Since April 2022, Spryker requires **PHP 7.4** as the minimum version. We will keep supporting **PHP 7.4** until June 2022.
+Since April 2022, Spryker requires PHP 7.4 as the minimum version. We will keep supporting PHP 7.4 until June 2022.
 
 ## PHP 8
 
-Since October 2021, Spryker has been compatible with **PHP 8.0**. We recommend using **PHP 8.0**, if possible. 
-We plan to introduce **PHP 8.1** support by the end of June 2022. However, using this version remains optional for now.
+Since October 2021, Spryker has been compatible with PHP 8.0. We recommend using PHP 8.0, if possible. 
+We plan to introduce PHP 8.1 support by the end of June 2022. However, using this version remains optional for now.
 
 ## PHP supported version at Spryker
 

@@ -134,7 +134,7 @@ The table below shows what specific roles each persona includes and what each ro
 </td>
         </tr>
              <tr>
-            <td>Marketplace Administrator</td>
+            <td>Marketplace administrator</td>
             <td>A marketplace operator is a company that offers a platform (online marketplace) to other third parties (merchants: retailers or wholesalers). An online marketplace is a type of e-commerce site where products are delivered and fulfilled by multiple merchants, whereas customer transactions are processed by the marketplace operator. The marketplace operator can have own physical or digital inventory (Amazon, Zalando, Apple) but it is not a must (Ebay, Idealo)</td>
         </tr>
                              <tr>

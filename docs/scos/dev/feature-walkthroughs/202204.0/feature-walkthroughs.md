@@ -2,6 +2,14 @@
 title: Feature Walkthroughs
 description: A collection of walkthroughs for Spryker Commerce OS features.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202005.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/202009.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/201907.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/201811.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/202001.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/201903.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/202108.0/feature-walkthroughs.html
 ---
 
 This section contains a collection of walkthroughs for the features found within the Spryker Commerce OS. Once Spryker has been installed, you can take advantage of its many different features as described below.
@@ -129,9 +137,9 @@ The [Inventory Management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/
 ### Managing stocks in a multi-store environment: Best practices
 In a [multi-store environment](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html), you can manage the warehouses to stores and database relations in several ways. This article contains scenarios that can help you choose the most suitable warehouse management workflow and implement it using the Inventory Management feature.
 
-### Reference information: AvailabilityStorage module overview
+### AvailabilityStorage module: reference information
 
-The [AvailabilityStorage module](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/reference-informaton-availabilitystorage-module-overview.html) publishes all the availability information for abstract and concrete products. Items are grouped by abstract product, and the process is handled by Publish and Synchronize.
+The [AvailabilityStorage module](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html) publishes all the availability information for abstract and concrete products. Items are grouped by abstract product, and the process is handled by Publish and Synchronize.
 
 ## Mailing & Notifications
 
@@ -345,9 +353,9 @@ The [Spryker Core Back Office](/docs/scos/dev/feature-walkthroughs/{{page.versio
 
 The [Tax](/docs/scos/dev/feature-walkthroughs/{{page.version}}/tax-feature-walkthrough/tax-feature-walkthrough.html) feature allows you to define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.
 
-### Reference information: Tax module
+### Tax module: reference information
 
-The [Tax module](/docs/scos/dev/feature-walkthroughs/{{page.version}}/tax-feature-walkthrough/reference-information-tax-module.html) is responsible for handling tax rates that can apply for products, product options, or shipment.
+The [Tax module](/docs/scos/dev/feature-walkthroughs/{{page.version}}/tax-feature-walkthrough/tax-module-reference-information.html) is responsible for handling tax rates that can apply for products, product options, or shipment.
 
 ## Wishlist
 

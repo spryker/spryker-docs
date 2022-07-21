@@ -253,8 +253,8 @@ entries:
       - "202108.0"
       - "202204.0"
       nested:
-      - title: 'Reference information: AvailabilityStorage module overview'
-        url: /docs/scos/dev/feature-walkthroughs/inventory-management-feature-walkthrough/reference-informaton-availabilitystorage-module-overview.html
+      - title: 'AvailabilityStorage module: reference information'
+        url: /docs/scos/dev/feature-walkthroughs/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html
         include_versions:
         - "201903.0"
         - "202009.0"
@@ -551,8 +551,8 @@ entries:
     - title: Tax
       url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/tax-feature-walkthrough.html
       nested:
-      - title: "Reference information: Tax module"
-        url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/reference-information-tax-module.html
+      - title: "Tax module: reference information"
+        url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/tax-module-reference-information.html
     - title: Wishlist
       url: /docs/scos/dev/feature-walkthroughs/wishlist-feature-walkthrough.html
   - title: Glue API guides
@@ -2566,10 +2566,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-oms.html
     - title: Migration Guide - Payment
       url: /docs/scos/dev/module-migration-guides/migration-guide-payment.html
-    - title: Migration guide - Payone Demoshop
-      url: /docs/scos/dev/module-migration-guides/migration-guide-payone-demoshop.html
-    - title: Migration guide - Payone Suite
-      url: /docs/scos/dev/module-migration-guides/migration-guide-payone-suite.html
     - title: Migration Guide - PersistentCart
       url: /docs/scos/dev/module-migration-guides/migration-guide-persistentcart.html
     - title: Migration Guide - Price

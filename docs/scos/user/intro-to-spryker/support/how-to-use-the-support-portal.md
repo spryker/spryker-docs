@@ -20,20 +20,20 @@ related:
 
 ## Overview
 
-This article describes how to use the support portal to create and manage your cases
+This вщсгьуте describes how to use the support portal to create and manage your cases
 
 ## Prerequisites
 
-You already have a customer login provisioned for you. If you do not have an account yet, please request one using this form.
-You can log in to the [support portal](https://support.spryker.com) by using the login button on the top right.
+You already have a customer login provisioned for you. If you do not have an account yet, request one using this form.
+You can log in to the[ support portal](https://support.spryker.com) by using the login button on the top right.
 
-## Creating new cases
+## Create new cases
 
-You can create cases by using the drop down menu “Create a case” and selecting the respective case type, or by clicking on the case type on the landing page. When creating cases, please make use of the recommendations explained [here](/docs/scos/user/intro-to-spryker/support/how-to-share-secrets-with-the-spryker-support-team.html).
+To create new cases, you can use the **Create a case** drop-down menu and select the respective case type, or click on the case type on the landing page. When creating cases, make use of the recommendations explained in [How to share secrets with the Spryker Support Team](/docs/scos/user/intro-to-spryker/support/how-to-share-secrets-with-the-spryker-support-team.html).
 
 ### Questions
 
-Requests can be questions or Change Requests that we do not yet offer as categories in “Hosting Change Requests”.
+Requests can be questions or change requests that we do not yet offer as categories in *Hosting Change Requests*.
 
 ### Problems
 
@@ -45,11 +45,16 @@ Emergencies are reserved for problems that have significant business impact now 
 
 ### Platform change requests
 
-These requests will be automatically forwarded to our DevOps team. Therefore, please make sure that you provide all the information that we ask for in the forms so that the team can get things done without having to ask for further information. If you do not find a Change Request type for your request, please use a Request case type to contact us.
+These requests are automatically forwarded to our DevOps team. Therefore, make sure that you provide all the information that we ask for in the forms so that the team can get things done without having to ask for further information. If you do not find a Change Request type for your request, use a Request case type to contact us.
 
-**Please allow 3-5 days of processing time for change requests**
-In cases you need changes done at a certain date, please include that information in the change request description.
+{% info_block infoBox "Info" %}
 
-## Managing cases
+Allow 3-5 days of processing time for change requests.
 
-Clicking on “Our Cases” brings you to a list view of all cases that you have opened with us. If you want to take a look at the details of a particular case, just click on the case number and it will bring you to the detail page of that particular case. Here you can perform actions like asking for revision of assigned priority, taking a look at the communication history, and see the current status of the case and any Jira Ticket that might be associated with the case.
+If you need changes done at a certain date, include that information in the change request description.
+
+{% endinfo_block %}
+
+## Manage cases
+
+Clicking on **Our Cases** brings you to a list view of all cases that you have opened with us. To take a look at the details of a particular case, click on the case number and it opens the detail page of that particular case. Here you can perform actions like asking for the revision of assigned priority, taking a look at the communication history, and viewing the current status of the case and any Jira Ticket that might be associated with the case.

@@ -83,8 +83,8 @@ entries:
         url: /docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
       - title: Handling new feature requests
         url: /docs/scos/user/intro-to-spryker/support/handling-new-feature-requests.html
-      - title: Case Escalation
-        url: /docs/scos/user/intro-to-spryker/support/business-impact-and-case-priorities.html
+      - title: Case escalation
+        url: /docs/scos/user/intro-to-spryker/support/case-escalation.html
       - title: Getting support
         url: /docs/scos/user/intro-to-spryker/support/getting-support.html
       - title: Special- Prepare for a busy season
@@ -125,23 +125,23 @@ entries:
       url: /docs/scos/user/intro-to-spryker/mvp-project-structuring.html
     - title: Spryker videos
       url: /docs/scos/user/intro-to-spryker/spryker-videos.html
-    - title: Contributing to documentation
-      url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-documentation.html
+    - title: Contribute to documentation
+      url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/contribute-to-documentation.html
       nested:
-      - title: Building the documentation site
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
-      - title: Editing documentation via pull requests
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/editing-documentation-via-pull-requests.html
-      - title: Reporting documentation issues
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/reporting-documentation-issues.html
+      - title: Build the documentation site
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/build-the-documentation-site.html
+      - title: Edit documentation via pull requests
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/edit-documentation-via-pull-requests.html
+      - title: Report documentation issues
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/report-documentation-issues.html
       - title: Style, formatting, and general rules
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/style-formatting-general-rules.html
       - title: Markdown syntax
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
-      - title: Reviewing pull requests
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
-      - title: Adding product sections to the documentation
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-a-new-product-to-the-documentation-site.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/markdown-syntax.html
+      - title: Review pull requests
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/review-pull-requests.html
+      - title: Add product sections to the documentation
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/add-product-sections-to-the-documentation.html
 
   - title: Features
     url: /docs/scos/user/features/features.html

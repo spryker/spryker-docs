@@ -31,7 +31,7 @@ redirect_from:
 
 {% endinfo_block %}
 
-The _Packaging Unit_ feature introduces a **packaging unit** that is a unit of measure used as packaging for a product. It allows including the amount of stock into a product a customer wants to buy. A shop owner can sell the same product in different packaging units, for example, apples can be sold as an "Item", a "Bag" of apples or a "Pallet" of apples. The "bag", "pallet", and "box" are referred to as *packaging unit types*.
+The _Packaging Unit_ feature introduces a **packaging unit** that is a unit of measure used as packaging for a product. It allows including the amount of stock in a product a customer wants to buy. A shop owner can sell the same product in different packaging units, for example, apples can be sold as an "Item", a "Bag", or "Pallet" of apples. The "bag", "pallet", and "box" are referred to as *packaging unit types*.
 
 Each packaging unit is defined on an abstract product level and is represented by one product variant, for example:
 
@@ -43,21 +43,21 @@ Each packaging unit is defined on an abstract product level and is represented b
 
 ## Leading products
 
-The **leading product** represents the relation between two concrete products and holds the availability. The measurement unit, defined on an abstract product level, is the stock unit for all the concrete products of the abstract product. A group of products in a packaging unit, that has a leading product, is called a **product packaging unit group**. Each packaging unit includes a certain amount of products by default (default amount). The shop owner can choose whether the packaging unit, for example, a bag, has a separate stock or shares stock with the contained item. In our example, the different product variants have their own SKUs and prices, but they represent the same physical product in the warehouse. To share the information about availability among these variants, we use the concept of a **leading product**.
+The *leading product* represents the relation between two concrete products and holds the availability. The measurement unit, defined on an abstract product level, is the stock unit for all the concrete products of the abstract product. A group of products in a packaging unit, that has a leading product, is called a *product packaging unit group*. Each packaging unit includes a certain amount of products by default (default amount). The shop owner can choose whether the packaging unit—for example, a bag has a separate stock or shares stock with the contained item. In our example, the different product variants have their own SKUs and prices, but they represent the same physical product in the warehouse. To share the information about availability among these variants, we use the concept of a *leading product*.
 
-However, leading products are not always relevant. Packaging units that represent a package of items which quantity can not be changed, do not need a leading product. In this case, the availability of the packaged items themselves, not individual items in the package, matters. Such packaged products actually behave like normal abstract products for which customers might have a possibility to select applicable sales units (see Measurement Units per Product <!-- add a link--> to learn about product sales units).
+However, leading products are not always relevant. Packaging units that represent a package of items whose quantity can not be changed, do not need a leading product. In this case, the availability of the packaged items themselves, not individual items in the package, matters. Such packaged products actually behave like normal abstract products for which customers might have a possibility to select applicable sales units (see Measurement Units per Product <!-- add a link--> to learn about product sales units).
 
 Basically, when a packaging unit does not use the leading product, it means that the stock is not shared.
 
 {% info_block infoBox "Info" %}
 
-For example, if there is a leading product in the product abstract with 3 packagings, where 1 of the packages "has no lead product", it means that the 2 other packages actually consume the same product when you buy them. But the 3rd packaging (which does not use the leading product is completely independent from a stock perspective, it only depends on its own stock.
+For example, if there is a leading product in the product abstract with three packagings, where one of the packages *has no lead product*, it means that the two other packages actually consume the same product when you buy them. But the 3rd packaging, which does not use the leading product, is completely independent of a stock perspective, it only depends on its own stock.
 
 {% endinfo_block %}
 
 To reflect the availability of a leading product for a packaging unit and to define which concrete product SKU is the leading one, the `lead_product_sku` attribute is used.
 
-The shop owner can define various sales units for the packaging units. For example, for a chocolate bar, the base unit could be set to item, and the sales units could be box, packet or gift box with variable or fixed amount of chocolate bars in them.
+The shop owner can define various sales units for the packaging units. For example, for a chocolate bar, the base unit could be set to *item*, and the sales units could be a *box*, *packet*, or *gift box* with a variable or fixed amount of chocolate bars in them.
 
 ![Packaging Unit](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Packaging+%26+Measurement+Units/Packaging+Units/Packaging+Units+Feature+Overview/sales-units-dropdown.png)
 
@@ -178,7 +178,7 @@ In our example, the following conditions are met:
 
 ## Current constraints
 
-* In the Spryker Commerce OS, you cannot define packaging units for products in the Back Office. They are imported to the database manually. See [HowTo - Import Packaging Units](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html) for more details.
+* In the Spryker Commerce OS, you cannot define packaging units for products in the Back Office. They are imported to the database manually. See [HowTo: Import Packaging Units](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html) for more details.
 * We strive to shift all business logic to our backend, however, with Packaging Units, calculations are performed on Yves.
 * On the shopping cart as well as the shopping list page, products do not have a drop-down to change the packaging units. You can select a packaging unit on the product details page only.
 * A shopper cannot reorder the items with the selected packaging units as they are not added automatically. They should be added manually on the product details page.
@@ -191,10 +191,6 @@ You have a product in your shop—a pen. And there exists a packaging unit for a
 {% endinfo_block %}
 
 ## Related Business User articles
-
-|BACK OFFICE USER GUIDES|
-|---|
-| [Import Packaging Unit Types](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

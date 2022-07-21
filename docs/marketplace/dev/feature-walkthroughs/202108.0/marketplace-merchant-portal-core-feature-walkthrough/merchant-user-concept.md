@@ -1,6 +1,6 @@
 ---
 title: Merchant User concept
-description: Merchant User in Merchant portal.
+description: Merchant User in Merchant Portal.
 template: concept-topic-template
 ---
 

@@ -31,7 +31,7 @@ vendor/bin/console transfer:generate
 3. Build frontend:
 
 ```yaml
-vendor/bin/console frontend:yves:install-dependencies  
+vendor/bin/console frontend:project:install-dependencies  
 vendor/bin/console frontend:yves:build
 ```
 

@@ -39,17 +39,22 @@ image:
 To make sure the CI jobs will pass deploy, add same part of config to all 'deploy.*.yml' files, where frontend are using.
 {% endinfo_block %}
 
-2. Update docker hash in the `.git.docker` file to make sure the correct version of `docker-sdk` will be installed:
-
-```text
-e9ebb666feccae1754792d41e49df3b9f95ef0aa
-```
-
-Then run next command to pull latest `docker-sdk` version:
+2. Run next command to pull latest `docker-sdk` version:
 
 ```bash
 cd docker && git pull origin master
+git log
 ```
+
+`git log` command will print the table with the last 3 commits, copy `hash` of the first commit and replace content in the `.git.docker` file:
+
+```text
+// paste `hash` text here
+```
+
+{% info_block infoBox "Note" %}
+The minimum `hash` text should be `e9ebb666feccae1754792d41e49df3b9f95ef0aa` or higher.
+{% endinfo_block %}
 
 3. Update `package.json`:
 

@@ -1,6 +1,6 @@
 ---
 title: Promotions & Discounts feature overview
-description: The feature allows creating different types of discounts and applying multiple in-built discount settings suitable for any business requirements.
+description: The feature lets you create different types of discounts and apply multiple in-built discount settings suitable for any business requirements.
 last_updated: Oct 13, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/promotions-discounts-feature-overview
@@ -18,7 +18,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/merchandising/discount/docs/scos/user/features/202200.0/promotions-discounts-feature-overview.html
 ---
 
-The *Promotions & Discounts* feature enables shop owners to provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.
+The *Promotions & Discounts* feature lets shop owners provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.
 
 ## Discount types
 

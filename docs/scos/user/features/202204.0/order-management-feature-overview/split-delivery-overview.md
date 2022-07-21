@@ -1,6 +1,6 @@
 ---
 title: Split Delivery overview
-description: The feature allows delivering order items to different shipping addresses and on different days, with different shipment methods.
+description: The feature lets you deliver order items to different shipping addresses and on different days, with different shipment methods.
 last_updated: Aug 18, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/split-delivery-overview
@@ -20,7 +20,7 @@ Each shipment defines:
 * Shipment method
 * Delivery date requested from a customer
 
-In the Storefront, Split Delivery lets you, as a customer, set different delivery addresses for the order items, specify the date when you want the items to be delivered and select shipment methods per each shipment.
+In the Storefront, Split Delivery lets you, as a customer, set different delivery addresses for the order items, specify the date when you want the items to be delivered, and select shipment methods per each shipment.
 
 In the Back Office, the Split Delivery lets you, as a Back Office user, view, update, and create multiple shipments for an order that had originally one delivery address.
 

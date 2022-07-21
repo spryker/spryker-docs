@@ -2,6 +2,14 @@
 title: Feature Walkthroughs
 description: A collection of walkthroughs for Spryker Commerce OS features.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202005.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/202009.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/201907.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/201811.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/202001.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/201903.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/202108.0/feature-walkthroughs.html
 ---
 
 This section contains a collection of walkthroughs for the features found within the Spryker Commerce OS. Once Spryker has been installed, you can take advantage of its many different features as described below.

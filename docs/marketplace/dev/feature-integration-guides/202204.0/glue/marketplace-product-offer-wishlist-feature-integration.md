@@ -67,13 +67,14 @@ Make sure that the following changes have been applied in transfer objects:
 
 Activate the following plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-|---|---|---|---|
-| MerchantProductOfferAddItemPreCheckPlugin | Returns `WishlistPreAddItemCheckResponse.isSuccess=false` if no product offers found by the `WishlistItem.productOfferReference` transfer property. |  | Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist |
-| ProductOfferRestWishlistItemsAttributesMapperPlugin | Populates `RestWishlistItemsAttributes.id` with the following pattern: `{WishlistItem.sku}_{WishlistItemTransfer.productOfferReference}`. |  | Spryker\Glue\MerchantProductOfferWishlistRestApi\Plugin\Wishlist |
-| ProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin | Checks if requested the wishlist item exists in the wishlist item collection. |  | Spryker\Zed\MerchantProductOfferWishlistRestApi\Communication\Plugin |
-| EmptyProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin | Checks if the requested wishlist item exists in the wishlist item collection. |  | Spryker\Zed\MerchantProductOfferWishlistRestApi\Communication\Plugin |
-| MerchantByMerchantReferenceResourceRelationshipPlugin | Adds `merchants` resources as relationship by merchant references in the attributes. |  | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication |
+| PLUGIN                                                           | SPECIFICATION                                                                                                                                                         | PREREQUISITES | NAMESPACE                                                              |
+|------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|------------------------------------------------------------------------|
+| ValidMerchantProductOfferAddItemPreCheckPlugin                   | Returns `WishlistPreAddItemCheckResponse.isSuccess=false` if no valid product offers found by the `WishlistItem.productOfferReference` transfer property.             |               | Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist |
+| ValidMerchantProductOfferUpdateItemPreCheckPlugin                | Returns `WishlistPreUpdateItemCheckResponseTransfer.isSuccess=false` if no valid product offers found by the `WishlistItem.productOfferReference` transfer property.  |               | Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist |
+| ProductOfferRestWishlistItemsAttributesMapperPlugin              | Populates `RestWishlistItemsAttributes.id` with the following pattern: `{WishlistItem.sku}_{WishlistItemTransfer.productOfferReference}`.                             |               | Spryker\Glue\MerchantProductOfferWishlistRestApi\Plugin\Wishlist       |
+| ProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin      | Checks if requested the wishlist item exists in the wishlist item collection.                                                                                         |               | Spryker\Zed\MerchantProductOfferWishlistRestApi\Communication\Plugin   |
+| EmptyProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin | Checks if the requested wishlist item exists in the wishlist item collection.                                                                                         |               | Spryker\Zed\MerchantProductOfferWishlistRestApi\Communication\Plugin   |
+| MerchantByMerchantReferenceResourceRelationshipPlugin            | Adds `merchants` resources as relationship by merchant references in the attributes.                                                                                  |               | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication                   |
 
 <details><summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
 
@@ -115,7 +116,8 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 <?php
 namespace Pyz\Zed\Wishlist;
 
-use Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist\MerchantProductOfferAddItemPreCheckPlugin;
+use Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist\ValidMerchantProductOfferAddItemPreCheckPlugin;
+use Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist\ValidMerchantProductOfferUpdateItemPreCheckPlugin;
 use Spryker\Zed\Wishlist\WishlistDependencyProvider as SprykerWishlistDependencyProvider;
 
 class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
@@ -126,7 +128,17 @@ class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
     protected function getAddItemPreCheckPlugins(): array
     {
         return [
-            new MerchantProductOfferAddItemPreCheckPlugin(),
+            new ValidMerchantProductOfferAddItemPreCheckPlugin(),
+        ];
+    }
+    
+    /**
+     * @return array<\Spryker\Zed\WishlistExtension\Dependency\Plugin\UpdateItemPreCheckPluginInterface>
+     */
+    protected function getUpdateItemPreCheckPlugins(): array
+    {
+        return [
+            new ValidMerchantProductOfferUpdateItemPreCheckPlugin(),
         ];
     }
 
@@ -189,7 +201,9 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
 
 Make sure that `ProductOfferRestWishlistItemsAttributesMapperPlugin` is set up by sending the request `GET https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get `attributes` in the response.
 
-Make sure that `MerchantProductOfferAddItemPreCheckPlugin` is set up by sending the request `POST https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}/wishlist-items`. You should have the wishlist item added only when the product has the specified offer reference.
+Make sure that `ValidMerchantProductOfferAddItemPreCheckPlugin` is set up by sending the request `POST https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}/wishlist-items`. You should have the wishlist item added only when the product has the specified offer reference, offer is active and approved, and merchant, who owns it, is active and approved.
+
+Make sure that `ValidMerchantProductOfferUpdateItemPreCheckPlugin` is set up by sending the request `PATCH https://glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlist-items/{% raw %}{{{% endraw %}wishlist_item_id{% raw %}}}{% endraw %}`. You should have the wishlist item updated only when the product has the specified offer reference, offer is active and approved, and merchant, who owns it, is active and approved.
 
 Make sure that `ProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin` and `EmptyProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin` are set up by sending the request `DELETE https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}/wishlist-items/{% raw %}{{wishlistItemId}}{% endraw %}`. You should get the product offer wishlist item deleted.
 

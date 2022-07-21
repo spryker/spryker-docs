@@ -1,6 +1,6 @@
 ---
 title: Measurement Units feature overview
-description: The Measurement Units per Products feature lets you sell products by any unit of measure defined by a shop administrator.
+description: The Measurement Units feature lets you sell products by any unit of measure defined by a shop administrator.
 last_updated: Aug 13, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/measurement-units-feature-overview

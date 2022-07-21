@@ -24,9 +24,9 @@ redirect_from:
 
 The *Tax* feature lets you define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.
 
-The tax rate is the percentage of the sales price that buyer pays as a tax. In the default Spryker implementation, the tax rate is defined per country where the tax applies. For details about how to create tax rates for countries in the Back Office, see [Create tax rates](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/tax-rates/create-tax-rates.html).
+The tax rate is the percentage of the sales price that buyer pays as a tax. In the default Spryker implementation, the tax rate is defined per country where the tax applies. For details about how to create tax rates for countries in the Back Office, see [Create tax rates](/docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-rates.html).
 
-A tax set is a set of tax rates. You can [define tax sets in the Back office](/docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-sets.html) or[ import tax sets](/docs/pbc/all/tax-management/import-and-export-data/file-details-tax.csv.html) into your project.
+A tax set is a set of tax rates. You can [define tax sets in the Back office](/docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-sets.html) or[ import tax sets](/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets.html) into your project.
 
 Tax sets can be applied to abstract product, product option and shipment:
 
@@ -117,7 +117,7 @@ The feature has the following functional constraints:
 
 | INTEGRATION GUIDES | MIGRATION GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|---|
-| [Avalara Tax integration](/docs/pbc/all/tax-management/third-party-integrations/integrate-avalara.html) | [Upgrade the Tax module](/docs/pbc/all/tax-management/install-and-upgrade/upgrade-the-tax-module.html) | [Retrieve tax sets](/docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html) | [File details: tax.csv](/docs/pbc/all/tax-management/import-and-export-data/file-details-tax.csv.html) | |
+| [Avalara Tax integration](/docs/pbc/all/tax-management/third-party-integrations/integrate-avalara.html) | [Upgrade the Tax module](/docs/pbc/all/tax-management/install-and-upgrade/upgrade-the-tax-module.html) | [Retrieve tax sets](/docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html) | [File details: tax.csv](/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets.html) | |
 | [Avalara Tax + Shipment feature integration](/docs/scos/dev/technology-partner-guides/{{site.version}}/taxes/avalara/integrating-avalara-tax-shipment.html) |  |  | [File details: product_abstract.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html) | |
 | [Avalara Tax + Product Options feature integration](/docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-product-options.html) |  |  | [File details: product_option.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html) | |
 |  |  |  | [File details: shipment.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html) |

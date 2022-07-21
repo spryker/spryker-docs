@@ -36,7 +36,7 @@ entries:
               - title: Customize the credit card display in your payment step
                 url: /docs/pbc/all/payment-service-providers/unzer/customize-the-credit-card-display-in-your-payment-step.html
               - title: Domain model and relationships
-                url: /docs/pbc/all/payment-service-providers/unzer/domain-model-and-relationships.html
+                url: /docs/pbc/all/payment-service-providers/unzer/unzer-domain-model-and-relationships.html
           - title: Payone
             url: /docs/pbc/all/payment-service-providers/payone/payone.html
       - title: Tax Management
@@ -79,9 +79,7 @@ entries:
               - title: "Tax module: reference information"
                 url: /docs/pbc/all/tax-management/extend-and-customize/tax-module-reference-information.html
           - title: Domain model and relationships
-            nested:
-              - title: Tax entity diagrams
-                url: /docs/pbc/all/tax-management/domain-model-and-relationships/tax-entity-digrams.html
+            url: /docs/pbc/all/tax-management/tax-domain-model-and-relationships.html
           - title: Third-party integrations
             url: /docs/pbc/all/tax-management/third-party-integrations/avalara.html
             nested:

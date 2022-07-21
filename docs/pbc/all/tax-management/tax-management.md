@@ -1,6 +1,6 @@
 ---
 title: Tax Management
-description: With the Tax feature you can define taxes for the items you sell.
+description: With the Tax Management capability you can define taxes for the items you sell.
 last_updated: Jun 25, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/tax-feature-overview
@@ -22,7 +22,7 @@ redirect_from:
   - /docs/scos/user/features/202204.0/tax-feature-overview.html  
 ---
 
-The *Tax* feature lets you define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.
+The *Tax Management* capability lets you define taxes for the items you sell. The capability is represented by two entities: tax rates and tax sets.
 
 The tax rate is the percentage of the sales price that buyer pays as a tax. In the default Spryker implementation, the tax rate is defined per country where the tax applies. For details about how to create tax rates for countries in the Back Office, see [Create tax rates](/docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-rates.html).
 
@@ -83,7 +83,7 @@ The Avalara codes are not displayed on the Storefront or in the Back Office. The
 
 When calculating taxes, Avalara takes the items' [warehouse addresses](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html#defining-a-warehouse-address) into account. Therefore, each order item you calculate a tax for with Avalara, must have a warehouse assigned. To learn how warehouses are assigned to order items by default, see [Warehouse assignment to order items (with Avalara integration only)](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html#warehouse-assignment-to-order-items-with-avalara-integration-only).
 
-## Tax feature on the Storefront
+## Tax Management capability on the Storefront
 
 Product tax set is calculated when buyers add products to cart. Therefore, by default, the tax calculated on the basis of the product tax sets is displayed in the **Tax** section on the **Cart** page. However, the tax value on the **Cart** page is not always final because it does not take a possible shipment tax set into account since buyers select the shipping method during the checkout. If you have Avalara integrated, it calculates tax during the checkout as well. Therefore, the final tax value is always displayed only upon checkout.
 
@@ -97,7 +97,7 @@ Tax in the checkout:
 
 ## Current constraints
 
-The feature has the following functional constraints:
+The capability has the following functional constraints:
 
 * There is no Back Office UI for the Avalara tax codes.
 * Many Avalara features are not supported yet. This will be resolved in the future.
@@ -107,7 +107,6 @@ The feature has the following functional constraints:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Get a general idea of the Tax feature](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html) |
 | [Create tax rates](/docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-rates.html) |
 | [Edit tax rates](/docs/pbc/all/tax-management/manage-in-the-back-office/edit-tax-rates.html) |
 | [Create tax sets](/docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-sets.html) |

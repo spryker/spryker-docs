@@ -2946,7 +2946,7 @@ entries:
             - "202009.0"
             - "202108.0"
             - "202204.0"
-            title: File details - product_abstract_approval_status.csv
+          - title: File details - product_abstract_approval_status.csv
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract-approval-status.csv.html
             include_versions:
             - "202204.0"

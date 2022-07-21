@@ -1,0 +1,119 @@
+---
+title: Switching to ARM architecture
+description: Learn how to fix the issue when setup of new indexes throws an exception
+last_updated: Jul 19, 2022
+template: troubleshooting-guide-template
+---
+
+This document explains how to install Spryker in Docker on a device with an ARM chip using demo shops versions 202108.0 or earlier.
+
+The following steps should be performed after you followed the *Clone a Demo Shop and the Docker SDK* section in the installation guides for the [development](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html#clone-a-demo-shop-and-the-docker-sdk) and [demo](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html#clone-a-demo-shop-and-the-docker-sdk) modes.
+
+## Update Sass
+
+Replace x86 based Sass with an ARM based one:
+
+1. In `package.json`, remove `node-sass` dependencies.
+2. Add `sass` and `sass-loader` dependencies:
+
+```json
+...
+"sass": "~1.32.13",
+"sass-loader": "~10.2.0",
+...
+```
+
+3. Update `@spryker/oryx-for-zed`:
+
+```json
+...
+"@spryker/oryx-for-zed": "~2.11.5",
+...
+```
+
+4. In the `frontend/configs/development.js`, add configuration for `saas-loader`:
+```js
+loader: 'sass-loader',
+options: {
+   implementation: require('sass'),
+}
+```
+
+5. Enter the Docker SDK CLI:
+
+```bash
+docker/sdk cli
+```
+
+6. Update `package-lock.json` and install dependencies based on your package manager:
+    * npm:
+    ```bash
+    npm install
+    ```
+    * yarn:
+    ```bash
+    yarn install
+    ```
+7. Rebuild Yves:
+
+```bash
+npm run yves
+```
+
+8. Rebuild Zed:
+
+```bash
+npm run zed
+```
+
+
+## Update RabbitMQ and Jenkins services
+
+In the deploy file, update RabbitMQ and Jenkins to [ARM supporting versions](https://github.com/spryker/docker-sdk#supported-services). Example:
+
+```yaml
+services:
+...
+    broker:
+        engine: rabbitmq
+        version: '3.9'
+        api:
+            username: 'spryker'
+            password: 'secret'
+        endpoints:
+            queue.spryker.local:
+            localhost:5672:
+                protocol: tcp
+...
+        scheduler:
+        engine: jenkins
+        version: '2.324'
+        endpoints:
+            scheduler.spryker.local:
+...
+```
+
+
+## Enable Jenkins CSRF protection
+
+1. In the deploy file, enable the usage of the CSRF variable:
+
+```yaml
+...
+services:
+  scheduler:
+    csrf-protection-enabled: true
+...
+```    
+
+2. In the config file, enable Jenkins CSRF protection by defining the CSRF variable. The default configuration file is `config\Shared\config_default.php`.
+
+```php
+...
+$config[SchedulerJenkinsConstants::JENKINS_CONFIGURATION] = [
+    SchedulerConfig::SCHEDULER_JENKINS => [
+        SchedulerJenkinsConfig::SCHEDULER_JENKINS_CSRF_ENABLED => (bool)getenv('SPRYKER_JENKINS_CSRF_PROTECTION_ENABLED'),
+    ],
+];
+...
+```

@@ -734,7 +734,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about tax rates</summary>
+<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about tax sets</summary>
 
 ```json
 {

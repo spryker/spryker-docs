@@ -1,10 +1,10 @@
 ---
-title: Import taxes for abstract products
+title: Import tax sets for abstract products
 last_updated: July 22, 2022
 template: data-import-template
 ---
 
-This document describes the `product_abstract.csv` file to configure only tax sets for abstract products. To configure all the information for abstract products, see [File details - product_abstract.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html#import-file-parameters).
+This document describes how to import taxes for abstract products via  `product_abstract.csv`. To import full information for abstract products, see [File details - product_abstract.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
 
 ## Import file dependencies
 
@@ -35,5 +35,5 @@ Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |
 | --- | --- |
-| [template_product_abstract.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/202109.0/Template_product_abstract.csv) | Import file template with headers only. |
-| [product_abstract.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Catalog+Setup/Products/202109.0/product_abstract.csv) | Exemplary import file with the Demo Shop data. |
+| [template_product_abstract.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-abstract-products.md/template_product_abstract.csv) | Import file template with headers only. |
+| [product_abstract.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-abstract-products.md/product_abstract.csv) | Exemplary import file with the Demo Shop data. |

@@ -1,5 +1,5 @@
 ---
-title: File details - tax.csv
+title: Import tax sets
 last_updated: Jun 23, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/file-details-taxcsv

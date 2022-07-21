@@ -50,13 +50,15 @@ interface CalculatorPluginInterface
 }
 ```
 
-* `RemoveTotalsCalculatorPlugin`—resets quote totals, sets `TotalsTransfer` empty.
-* `RemoveAllCalculatedDiscountsCalculatorPlugin`—resets every `CalculatedDiscountTransfer`.
-* `ItemGrossAmountsCalculatorPlugin`—calculates `sumGrossPrice` for each `ItemTransfer`.
+* `RemoveTotalsCalculatorPlugin` — resets quote totals, sets `TotalsTransfer` empty.
+* `RemoveAllCalculatedDiscountsCalculatorPlugin` — resets every `CalculatedDiscountTransfer`.
+* `ItemGrossAmountsCalculatorPlugin` — calculates `sumGrossPrice` for each `ItemTransfer`.
 
-`ItemTransfer::sumGrossPrice = ItemTransfer::unitGrossPrice * ItemTransfer::quantity`
+**`ItemTransfer::sumGrossPrice`** ` = ItemTransfer::unitGrossPrice * ItemTransfer::quantity`
 
-* `ProductOptionGrossSumCalculatorPlugin`—calculates `unitGrossPriceWithProductOptions`, `sumGrossPriceWithProductOptions` for `ItemTransfer` and `sumGrossPrice` for `ProductOptionTransfer`—calculates `unitGrossPriceWithProductOptions`, `sumGrossPriceWithProductOptions` for `ItemTransfer` and `sumGrossPrice` for `ProductOptionTransfer`.
+* `ProductOptionGrossSumCalculatorPlugin` — calculates `unitGrossPriceWithProductOptions`, `sumGrossPriceWithProductOptions` for `ItemTransfer` and `sumGrossPrice` for `ProductOptionTransfer`.
+
+	* `ProductOptionTransfer` — calculates `unitGrossPriceWithProductOptions`, `sumGrossPriceWithProductOptions` for `ItemTransfer` and `sumGrossPrice` for `ProductOptionTransfer`.
 
 ```php
 
@@ -65,13 +67,13 @@ ItemTransfer::unitGrossPriceWithProductOptions = sum(ProductOptionTransfer::unit
 ItemTransfer::sumGrossPriceWithProductOptions = sum(ProductOptionTransfer::sumGrossPrice) + ItemTransfer:sumGrossPrice
 ```
 
-* `SubtotalTotalsCalculatorPlugin`—sums each of the `sumGrossPriceWithProductOptions` items.
+* `SubtotalTotalsCalculatorPlugin` — sums each of the `sumGrossPriceWithProductOptions` items.
 `TotalsTransfer::subtotal = sum(ItemTransfer::sumGrossPriceWithProductOptions)`
-* `ExpensesGrossSumAmountCalculatorPlugin`—calculates `sumGrossPrice` for each item.
+* `ExpensesGrossSumAmountCalculatorPlugin` — calculates `sumGrossPrice` for each item.
 `ExpenseTransfer::sumGrossPrice = ExpenseTransfer::unitGrossPrice * ExpenseTransfer::quantity`
-* `ExpenseTotalsCalculatorPlugin`—calculates `expenseTotal` in `TotalsTransfer`.
+* `ExpenseTotalsCalculatorPlugin` — calculates `expenseTotal` in `TotalsTransfer`.
 `TotalsTransfer::expenseTotal = sum(ExpenseTransfer::sumGrossPrice)`
-* `DiscountCalculatorPlugin`—applies discounts to current `QuoteTransfer` each discountable item with property `calculatedDiscounts`, gets discounts filled. Also, `voucherDiscounts` and `cartRuleDiscounts` are populated with additional used discount data for order level.
+* `DiscountCalculatorPlugin` — applies discounts to current `QuoteTransfer` for each discountable item with property `calculatedDiscounts`; gets discounts filled. Also, `voucherDiscounts` and `cartRuleDiscounts` are populated with additional used discount data for the order level.
 
 {% info_block infoBox "Discount Calculation" %}
 
@@ -80,27 +82,27 @@ Discount calculation is a separate topic and is explained in the [Discount](/doc
 {% endinfo_block %}
 
 
-* `SumGrossCalculatedDiscountAmountCalculatorPlugin`—calculates and sets `ItemTransfer` amounts after discounts to `sumGrossPriceWithProductOptionAndDiscountAmounts` and `unitGrossPriceWithProductOptionAndDiscountAmounts`; sets expense amounts after discounts to `unitGrossPriceWithDiscounts` and `sumGrossPriceWithDiscounts`.
+* `SumGrossCalculatedDiscountAmountCalculatorPlugin` — calculates and sets `ItemTransfer` amounts after discounts to `sumGrossPriceWithProductOptionAndDiscountAmounts` and `unitGrossPriceWithProductOptionAndDiscountAmounts`; sets expense amounts after discounts to `unitGrossPriceWithDiscounts` and `sumGrossPriceWithDiscounts`.
 
 ```php
-ItemTransfer::unitGrossPriceWithProductOptionAndDiscountAmounts = ItemTransfer::unitGrossPriceWithProductOptions— (sum(ItemTransfer:calculatedDiscounts::unitGrossPrice) + sum(ProductOptionTransfer::calculatedDiscounts::unitGrossPrice))
-ItemTransfer::sumGrossPriceWithProductOptionAndDiscountAmounts = ItemTransfer::sumGrossPriceWithProductOptions— (sum(ItemTransfer:calculatedDiscounts::sumGrossPrice) + sum(ProductOptionTransfer::calculatedDiscounts::sumGrossPrice))
+ItemTransfer::unitGrossPriceWithProductOptionAndDiscountAmounts = ItemTransfer::unitGrossPriceWithProductOptions —  (sum(ItemTransfer:calculatedDiscounts::unitGrossPrice) + sum(ProductOptionTransfer::calculatedDiscounts::unitGrossPrice))
+ItemTransfer::sumGrossPriceWithProductOptionAndDiscountAmounts = ItemTransfer::sumGrossPriceWithProductOptions —  (sum(ItemTransfer:calculatedDiscounts::sumGrossPrice) + sum(ProductOptionTransfer::calculatedDiscounts::sumGrossPrice))
 ```
 
-* `DiscountTotalsCalculatorPlugin`—calculates total for discounts used and sets it to `totalDiscount` in `TotalsTransfer`. Sum all discountable item `CalculatedDiscountTransfer` gross amounts:
+* `DiscountTotalsCalculatorPlugin` — calculates total for discounts used and sets it to `totalDiscount` in `TotalsTransfer`. Sum all discountable item `CalculatedDiscountTransfer` gross amounts:
 
 ```php
 TotalsTransfer:discountTotal += sum(ItemTransfer::CalculateDiscountTransfer::sumGrossAmount +
 ItemTransfer::ProductOptionTransfer::CalculateDiscountTransfer::sumGrossAmount + ExpenseTransfer::sumGrossAmount)
-GrandTotalTotalsCalculatorPlugin—Calculates grandTotal in TotalsTransfer.
+GrandTotalTotalsCalculatorPlugin — Calculates grandTotal in TotalsTransfer.
 TotalsTransfer:grandTotal = TotalsTransfer::subtotal + TotalsTransfer:expenseTotal
 ```
 
-* `GrandTotalWithDiscountsCalculatorPlugin` —calculates `GrandTotal` after discounts in `TotalsTransfer`.
+* `GrandTotalWithDiscountsCalculatorPlugin`  — calculates `GrandTotal` after discounts in `TotalsTransfer`.
 `TotalsTransfer:grandTotal = TotalsTransfer::subtotal + TotalsTransfer:expenseTotal - TotalsTransfer::discountTotal`
-* `TaxTotalsCalculatorPlugin`—calculates taxTotal and taxRate used from `TotalTransfer::grandTotal`, sets it in `TotalsTransfer::TaxTotalsTransfer`.
+* `TaxTotalsCalculatorPlugin` — calculates taxTotal and taxRate used from `TotalTransfer::grandTotal`, sets it in `TotalsTransfer::TaxTotalsTransfer`.
 
-`TaxableItems = ItemTransfer, ProductOptionTransfer, ExpenseTransfer. TaxTotalsTransfer::taxRate = sum(TaxableItems) / TaxableItems TaxTotalsTransfer::taxAmount = round((TotalsTransfer::grandTotal * TaxTotalsTransfer::taxRate) / TaxTotalsTransfer::taxRate / 100)`
+**`TaxableItems`** ` = ItemTransfer, ProductOptionTransfer, ExpenseTransfer. TaxTotalsTransfer::taxRate = sum(TaxableItems) / TaxableItems TaxTotalsTransfer::taxAmount = round((TotalsTransfer::grandTotal * TaxTotalsTransfer::taxRate) / TaxTotalsTransfer::taxRate / 100)`
 
 ## Calculation data structure
 
@@ -110,7 +112,7 @@ This section describes calculation data structure.
 
 {% info_block warningBox "" %}
 
-`QuoteTransfer` is the main data transfer object used in Cart, Calculation, Checkout and when order is placed. This object is created when first item is added to the cart. The entire data object is stored into the session. It consists of:
+`QuoteTransfer` is the main data transfer object used in Cart, Calculation, and Checkout as well as when an order is placed. This object is created when the first item is added to the cart. The entire data object is stored into the session. It consists of:
 
 {% endinfo_block %}
 
@@ -130,7 +132,11 @@ expenses ([ExpenseTransfer](#expense-transfer))||
 
 ### Totals transfer
 
-`TotalsTransfer` is a data object holding cart totals, subtotal, expenses (shipping), discount total and grand total. Here should the amounts for order level be stored.
+{% info_block warningBox "" %}
+
+`TotalsTransfer` is a data object holding cart totals, subtotal, expenses (shipping), discount total, and grand total. This is where the amounts for the order level should be stored.
+
+{% endinfo_block %}
 
 | FIELD | DESCRIPTION |
 | --- | --- |
@@ -143,7 +149,11 @@ expenses ([ExpenseTransfer](#expense-transfer))||
 
 ### Tax total transfer
 
-`TaxTotalsTransfer` holds taxRate and taxAmount used for grandTotal.
+{% info_block warningBox "" %}
+
+`TaxTotalsTransfer` holds the taxRate and taxAmount used for grandTotal.
+
+{% endinfo_block %}
 
 | FIELD | DESCRIPTION |
 | --- | --- |
@@ -152,7 +162,11 @@ expenses ([ExpenseTransfer](#expense-transfer))||
 
 ### Item transfer
 
-`ItemTransfer` is a cart item transfer, holds single product information.
+{% info_block warningBox "" %}
+
+`ItemTransfer` is a cart item transfer and holds single product information.
+
+{% endinfo_block %}
 
 | FIELD | DESCRIPTION |
 | --- | --- |
@@ -188,7 +202,11 @@ expenses ([ExpenseTransfer](#expense-transfer))||
 
 ### Calculated discount transfer
 
-Each item which can have discounts applied have `calculatedDiscounts` property added which holds the collection of discounts for each discount type.
+{% info_block warningBox "" %}
+
+Each item which can have discounts applied has a `calculatedDiscounts` property which holds the collection of discounts for each discount type.
+
+{% endinfo_block %}
 
 | FIELD | DESCRIPTION |
 | --- | --- |
@@ -201,7 +219,11 @@ Each item which can have discounts applied have `calculatedDiscounts` property a
 
 ### Product option transfer
 
-`ProductOptionTransfer`, some items may have product option collection attached which also have amounts calculated.
+{% info_block warningBox "" %}
+
+`ProductOptionTransfer`: some items may have product option collection attached to them which also have amounts calculated.
+
+{% endinfo_block %}
 
 | FIELD | DESCRIPTION |
 | --- | --- |
@@ -217,7 +239,11 @@ Tax amount for single product option (order only) |
 
 ### Discount transfer
 
-`DiscountTransfer` is a collection of discounts used in all `QuoteTransfer` discountable items. It can be `voucherDiscounts` or `cartRuleDiscounts`.
+{% info_block warningBox "" %}
+
+`DiscountTransfer` is a collection of discounts used in all `QuoteTransfer` discountable items such as`voucherDiscounts` or `cartRuleDiscounts`.
+
+{% endinfo_block %}
 
 | FIELD | DESCRIPTION |
 | --- | --- |

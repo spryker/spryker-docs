@@ -15,9 +15,9 @@ When configuration starts on Yves, from the product details page (PDP), the prod
 
 ### Phase 1
 
-- A customer is on a PDP—the page with the product configuration.
-- The product configuration can be a complete configuration or use incomplete pre-configuration defined by the shop owner.
-- The product configuration can be taken from two sources:
+1. A customer is on a PDP—the page with the product configuration.
+2. The product configuration can be a complete configuration or use am incomplete pre-configuration defined by the shop owner.
+3. The product configuration can be taken from two sources:
   - A session for complete configuration.
   - Storage (Redis) for the pre-configuration.
 
@@ -51,7 +51,7 @@ The following table contains request parameters, which the plugin adds to the re
 
 ### Phase 2
 
-The customer clicks the configuration button, and the request is redirected to the gateway page with a given product configuration using a `GET` method.
+1. The customer clicks the configuration button, and the request is redirected to the gateway page with a given product configuration using a `GET` method.
 
 ### Phase 3
 
@@ -60,7 +60,7 @@ The customer clicks the configuration button, and the request is redirected to t
 3. The plugin expands the request with additional necessary data:
   - store, locale, currency, customer, price mode.
   - `backUrl`—based on the referer header.
-4. The plugin generates the URL that points to the configurator page together with all the necessary data.
+4. The plugin generates the URL that points to the configurator page together with all of the necessary data.
 
 ### Phase 4
 
@@ -97,7 +97,7 @@ The customer clicks the configuration button, and the request is redirected to t
 3. In the backend, a `CheckSum` is prepared based on the response data, which is encrypted with a shared key and returns these as the AJAX response.
 4. On the configurator page, the framework puts data to a hidden form and submits the form, which points to the gateway page.
 5. After the successful configuration, the customer is redirected to the configurator gateway with a configuration response.
-6. The gateway URL does not equal to the back URL; it’s a fixed, known URL.
+6. The gateway URL does not equal the back URL; it’s a fixed, known URL.
 
 ### Phase 7
 
@@ -117,10 +117,10 @@ When configuration starts on Yves, from the **Cart** page, the product configura
 
 ### Phase 1
 
-- The customer is on the Cart page—the page with items that contains the product configuration.
-- The product configuration can be already complete or not.
-- The item product configuration can be taken from one source only: Quote.
-- The framework generates the URL that points to the gateway page with the following parameters.
+1. The customer is on the Cart page — the page with items that contains the product configuration.
+2. The product configuration can be already complete or not.
+3. The item product configuration can be taken from one source only: Quote.
+4. The framework generates the URL that points to the gateway page with the following parameters.
 
 | PARAMETER                                      | VALUE | COMMENT |
 |------------------------------------------------|---|---|
@@ -153,7 +153,7 @@ When configuration starts on Yves, from the **Cart** page, the product configura
 
 ### Phase 4
 
-Redirects the customer to the configurator page using the GET request.
+1. Redirects the customer to the configurator page using the GET request.
 
 ### Phase 5
 
@@ -176,8 +176,8 @@ Redirects the customer to the configurator page using the GET request.
 
 ### Phase 6
 
-* After the successful configuration, the customer is redirected to the configurator gateway with a configuration response.
-* The gateway URL is not the same as the back URL; it’s a fixed known URL.
+1. After the successful configuration, the customer is redirected to the configurator gateway with a configuration response.
+2. The gateway URL is not the same as the back URL; it’s a fixed known URL.
 
 ### Phase 7
 
@@ -189,4 +189,4 @@ Redirects the customer to the configurator page using the GET request.
 
 ### Phase 8
 
-The customer is redirected back to the **Cart** page.
+1. The customer is redirected back to the **Cart** page.

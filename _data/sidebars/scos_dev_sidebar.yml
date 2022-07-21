@@ -234,7 +234,7 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html
       nested:
       - title: "Customer module overview: reference information"
-        url: /docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html
+        url: /docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/customer-module-overview-reference-information.html
     - title: File Manager
       url: /docs/scos/dev/feature-walkthroughs/file-manager-feature-walkthrough.html
       include_versions:

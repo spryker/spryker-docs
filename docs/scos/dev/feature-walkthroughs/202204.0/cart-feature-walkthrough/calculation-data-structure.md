@@ -12,7 +12,7 @@ The following diagram illustrates the calculation data structure.
 
 ## Quote transfer
 
-`QuoteTransfer` is the main data transfer object used in Cart, Calculation, Checkout and when order is placed. This object is created when first item is added to the cart.
+`QuoteTransfer` is the main data transfer object used in Cart, Calculation, and Checkout, as well as when an order is placed. This object is created when the first item is added to the cart.
 
 The entire data object is stored into the session and it consists of:
 
@@ -27,7 +27,7 @@ The entire data object is stored into the session and it consists of:
 
 ### Totals transfer
 
-`TotalsTransfer` is a data object holding cart totals, subtotal, expenses (shipping), discount total and grand total. Here should the amounts for order level be stored.
+`TotalsTransfer` is a data object holding cart totals, subtotal, expenses (shipping), discount total, and grand total. This is where the amounts for the order level should be stored.
 
 | FIELD | DESCRIPTION |
 | --- | --- |
@@ -50,7 +50,7 @@ The entire data object is stored into the session and it consists of:
 
 ### Item transfer
 
-`ItemTransfer` is a cart item transfer, holds single product information.
+`ItemTransfer` is a cart item transfer and holds single product information.
 
 | FIELD | DESCRIPTION |
 | --- | --- |
@@ -82,7 +82,7 @@ The entire data object is stored into the session and it consists of:
 
 ## Calculated discount transfer
 
-Each item which can have discounts applied has a `calculatedDiscounts` property which holds collection of discounts for each discount type.
+Each item which can have discounts applied has a `calculatedDiscounts` property which holds the collection of discounts for each discount type.
 
 | FIELD | DESCRIPTION |
 | --- | --- |
@@ -95,7 +95,7 @@ Each item which can have discounts applied has a `calculatedDiscounts` property 
 
 ## Product option transfer
 
-`ProductOptionTransfer`, some items may have product option collection attached which also have amounts calculated.
+`ProductOptionTransfer`: some items may have product option collection attached to them which also have amounts calculated.
 
 | FIELD | DESCRIPTION |
 | --- | --- |
@@ -115,7 +115,7 @@ Each item which can have discounts applied has a `calculatedDiscounts` property 
 
 ## Discount transfer
 
-`DiscountTransfer` is a collection of discounts used in all QuoteTransfer discountable items such as `voucherDiscounts` and `cartRuleDiscounts`.
+`DiscountTransfer` is a collection of discounts used in all `QuoteTransfer` discountable items such as `voucherDiscounts` and `cartRuleDiscounts`.
 
 | FIELD | DESCRIPTION |
 | --- | --- |

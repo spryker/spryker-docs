@@ -134,7 +134,7 @@ It may take a few minutes for the DB to restore.
 
 3. Click the backup vault `{environment-name}_rds_backup`.
 
-4. In **Backups** tab, click on the link start with _"continuous:db"_.
+4. In **Recovery points** tab, click on the link start with _"continuous:db"_.
 
 5. Click on **Restore** on the right top of the screen.
 

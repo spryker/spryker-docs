@@ -23,9 +23,6 @@ related:
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/password-management-overview.html
   - title: Customer Accounts
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-account-management-feature-overview.html
-  - title: Retrieving orders
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
-related:
   - title: Authentication and authorization
     link: docs/scos/dev/glue-api-guides/page.version/authentication-and-authorization.html
   - title: Searching by company users

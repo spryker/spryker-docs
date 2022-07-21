@@ -130,9 +130,9 @@ It may take a few minutes for the DB to restore.
 
 1. In the AWS Management Console, go to **Services** > [**AWS Backup**](https://console.aws.amazon.com/backup).
 
-2. In the navigation pane, select **Backup vaults**.
+2. In the navigation pane, click **Backup vaults**.
 
-3. Click the backup vault `{environment-name}_rds_backup`.
+3. Select the vault of the environment you want to restore the backup for. For example, for a `production` environment, select the `production_rds_backup` vault.
 
 4. In **Backups** tab, click on the link start with _"continuous:db"_.
 
@@ -156,7 +156,7 @@ It may take a few minutes for the DB to restore.
 
 14. Click **Restore backup**.
 
-15. Restored DB is created. 
+15. Restored DB is created.
 
 16. In the AWS Management Console, go to **Services** > [**RDS**](https://console.aws.amazon.com/rds/).
 

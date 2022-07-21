@@ -136,9 +136,16 @@ It may take a few minutes for the DB to restore.
 
 4. In the **Recovery points** pane, select the `recovery point ID` you want to restore.
 
-5. Click **Restore**.
+5. On the page of the recovery point, click **Restore**.
+    This opens the **Restore backup** page.
 
-6. In **Restore to point in time** tab, choose _**Latest restorable time**_ or _**Specify date and time**_.
+6. In **Restore to point in time** pane, do one of the following:
+    * To restore the latest backup, select the displayed date.
+    * To restore from a specific point in time, do the following:
+        1. Select **Specify date and time**.
+            This adds date and time 
+        2.
+
 
 7. In **Instance specifications** tab, set _**DB instance class**_ field and keep the rest of fields as default.
 

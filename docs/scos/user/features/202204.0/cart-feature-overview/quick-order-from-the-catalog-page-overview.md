@@ -12,20 +12,20 @@ redirect_from:
   - /docs/en/quick-order-from-the-catalog-page-overview
 ---
 
-Buyers can add simple products with one product variant to cart directly from the Category page by clicking the **Add to cart** icon on the product card.
+Buyers can add simple products with one product variant to the cart directly from the Category page by clicking the **Add to cart** icon on the product card.
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Catalog+Management/Quick+Order+from+the+Catalog+Page/Quick+Order+from+the+Catalog+Page+Feature+Overview/quick-order-from-catalog.png)
 
-For the **Add to cart** icon to be active for the product on the **Catalog** page, the following criteria should be met:
+For the **Add to cart** icon to be active for the product on the **Catalog** page, the following criteria must be met:
 
-* The product should be abstract with only one variant.
-* The product should be available.
-* The product should not have [attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html).
-* The product should not have [measurement](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) or [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units-feature-overview.html).
+* The product is an abstract with only one variant.
+* The product is available.
+* The product does not have [attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html).
+* The product does not have [measurement](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) or [packaging units](/docs/scos/user/features/{{page.version}}/packaging-units-feature-overview.html).
 
-Product belonging to a [product group](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) can also be added to cart from the Category page. However, like with regular products, a product from the product group should have no more than one variant, and be available.
+A product belonging to a [product group](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) can also be added to the cart from the **Category** page. However, like with regular products, a product from the product group must have no more than one variant and be available.
 
-If a product has [options](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html), it can be added to cart from the Category page, but it will be added without any options.
+If a product has [options](/docs/scos/user/features/{{page.version}}/product-options-feature-overview.html), it can be added to the cart from the Category page, but it is added without any options.
 
 {% info_block warningBox "Developer guides" %}
 

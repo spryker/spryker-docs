@@ -17,7 +17,7 @@ The checkout workflow is a fully customizable multi-step process. The standard s
 
 Using the Spryker step engine, you can design different checkout types, like a one-page checkout or an invoice page replacing the payment page. The step engine enables the following:
 
-* Checkout as guest, registered customer or register in the checkout flow.
+* Checkout as the guest, registered customer, or register in the checkout flow.
 * Hooks for integrating payment or shipment methods.
 * Progress bar to navigate between checkout steps.
 

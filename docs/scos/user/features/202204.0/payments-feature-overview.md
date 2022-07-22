@@ -13,12 +13,11 @@ redirect_from:
   - /docs/scos/user/features/202200.0/payments-feature-overview.html
 ---
 
-The *Payments* feature lets your customers pay for orders with none (for example, a [gift card](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html)), one or multiple payment methods during the checkout process. Most orders are paid with a single payment method but in some cases, it may be useful to allow multiple payment methods. For example, the customer may want to use two credit cards or a gift card in addition to a traditional payment method.
+The *Payments* feature lets your customers pay for orders with none (for example, a [gift card](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html)), one, or multiple payment methods during the checkout process. Most orders are paid with a single payment method, but in some cases, it may be useful to allow multiple payment methods. For example, the customer may want to use two credit cards or a gift card in addition to a traditional payment method.
 
 With different payment gateways, like Amazon Pay, PayPal, and BS Payone, you can adapt to your customers' needs and define the availability of payment methods based on customer preferences and country-specific regulations.
 
 So that your customers can select a payment method during the checkout, you must fulfill the following conditions:
-
 * Make the payment method active.
 * Assign the payment method to specific stores.
 
@@ -54,11 +53,11 @@ For details about implementing a new payment method, see [how to implement the D
 
 ## Payment methods in the Back Office
 
-In the Back Office, you can view all payment methods available in the shop application and make a payment method active (visible) or inactive (invisible) in the **Payment** step of the checkout process. In addition, you can define stores in which a payment method will be displayed. If changed, the payment methods will be updated in the checkout as well.
+In the Back Office, you can view all payment methods available in the shop application and make a payment method active (visible) or inactive (invisible) in the **Payment** step of the checkout process. In addition, you can define stores in which a payment method is displayed. If changed, the payment methods are updated in the checkout as well.
 
 {% info_block warningBox "Note" %}
 
-Keep in mind that prior to managing payment methods in the Back Office, first, you need to create them by [importing payment methods data using a .CSV file](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method.csv.html).
+Before managing payment methods in the Back Office, you need to create them by [importing payment methods data using a .CSV file](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-payment-method.csv.html).
 
 {% endinfo_block %}
 

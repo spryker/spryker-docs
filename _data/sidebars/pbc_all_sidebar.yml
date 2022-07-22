@@ -42,6 +42,8 @@ entries:
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
         nested:
+          - title: What's changed
+            url: /docs/pbc/all/tax-management/whats-changed-in-tax-management.html
           - title: Install and upgrade
             nested:
               - title: Integrate the Tax Glue API

@@ -88,6 +88,7 @@ The minimum `hash` text should be `e9ebb666feccae1754792d41e49df3b9f95ef0aa` or 
 ```yaml
 before_install:
   ...
+  - nvm install 16 > /dev/null
   - nvm use 16
   ...
 ```

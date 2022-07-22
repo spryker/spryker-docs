@@ -14,7 +14,7 @@ When it comes to complex applications, deploying to production environments is n
 
 ## Pipelines in SCCOS
 
-To learn how pipelines work in Spryker Cloud Commerce OS, see [Deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-pipelines.html).
+To learn how pipelines work in Spryker Cloud Commerce OS, see [Deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-pipelines.html).
 
 ## Production pipeline steps
 
@@ -39,19 +39,19 @@ The following sections describe the potential issues applications can encounter 
 
 When no pipeline is running, a working application behaves as follows:
 
-![Initial state](./images/initial_state/initial-state.gif)
+![Working application](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/working-application.gif)
 
 ## Build_and_Prepare
 
 In this step, AWS builds the containers for the services that are going to be deployed. For the sake of simplicity, we use only Glue and Zed in our examples.
 
-![Build_and_Prepare](./images/Build_and_Prepare/Build_and_Prepare.jpg)
+![Build and Prepare step](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/build-and-prepare-step.jpg)
 
 ## Configure_RabbitMQ_Vhosts_and_Permissions
 
 In this step, Rabbit MQ vhosts, users, and permissions are updated. Usually, they are updated rarely, but if they are, while they are being updated, the following may happen:
 
-![Configure_RabbitMQ_Vhosts_and_Permissions](./images/Configure_RabbitMQ_Vhosts_and_Permissions/rmq.gif)
+![Configure RabbitMQ Vhosts and Permissions](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/configure-rabbitmq-step.gif)
 
 ## Run_pre-deploy_hook
 
@@ -59,11 +59,11 @@ In this step, the following happens:
 * The scripts you defined for this step in the `SPRYKER_HOOK_BEFORE_DEPLOY` are run. The default command is `vendor/bin/install -r pre-deploy -vvv`.
 * The `vendor/bin/console scheduler:suspend -vvv --no-ansi` command is run to stop the scheduler. It waits for the currently running jobs to finish and gracefully shuts down. Stopping the scheduler prevents data corruption or errors for the duration of the deployment.
 
-![scheduler:suspend](./images/Run_pre-deploy_hook/Run_pre-deploy_hook.jpg)
+![Suspend the scheduler](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/suspend-scheduler.jpg)
 
 While the scripts you defined are running and the scheduler finishes the currently running jobs, requests keep coming in. For this duration, all the services that are in an updated state may respond incorrectly to requests:
 
-![Run_pre-deploy_hook](./images/Run_pre-deploy_hook/pre_deploy.gif)
+![Run pre deploy hook](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/pre-deploy-step.gif)
 
 ## Deploy_Scheduler
 
@@ -75,11 +75,11 @@ Scheduler is based on the Zed container, as it uses the codebase of Zed.
 
 {% endinfo_block %}
 
-![scheduler_paused](./images/Deploy_Scheduler/Deploy_Scheduler.jpg)
+![stopped scheduler](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/stopped-scheduler.jpg)
 
 During this step, all the services in an updated state may still respond to requests incorrectly:
 
-![Deploy_Scheduler](./images/Deploy_Scheduler/deploy_scheduler.gif)
+![Deploy Scheduler step](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/deploy-scheduler-step.gif)
 
 ## Run_install
 
@@ -87,7 +87,7 @@ In this step, the scripts in the `SPRYKER_HOOK_INSTALL` are run. By default, it 
 
 The script runs all the propel database migrations, so the database is updated to V2. However, Search and Redis are not, as the synchronization was "paused".
 
-![migrations](./images/Run_install/migrations.jpg)
+![Database migrations](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/database-migration.jpg)
 
 From this point on, all the V1 services that are communicating with the database may respond to requests incorrectly. For each request, it depends on what data was migrated. For example, Glue V1 retrieves information about a product from Redis V1 and Search V1. Then Glue V1 makes a request to the database to put the product to cart. If the product still exists in the database, it will be added to cart. Otherwise, this request will result in an error.
 
@@ -98,11 +98,11 @@ vendor/bin/console scheduler:setup -vvv --no-ansi
 
 The scheduler restarts queue workers and updates search and Redis.
 
-![Run_install](./images/Run_install/install_dbs_updates/install_dbs_updates.gif)
+![Update search and Redis](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/update-search-and-redis.gif)
 
 Depending on the amount of data that needs to be processed, this process may take a while. While Redis and search are being updated, they may process requests incorrectly:
 
-![Run_install_requests](./images/Run_install/request_during_install/install_request.gif)
+![Install step](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/install-step.gif)
 
 ## Deploy_Spryker_services
 
@@ -110,7 +110,7 @@ In this step, services of V2 are deployed. In our example, Zed V2 and Glue V2.
 
 For the sake of simplicity, let's assume that Redis and search are done updating. The asterisks on the schema serve as a reminder that it may not be the case. It depends on the size of the migration.
 
-![Deploy_Spryker_services](./images/Deploy_Spryker_services/Deploy_Spryker_services.jpg)
+![Deploy Spryker services](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/deploy-spryker-services.jpg)
 
 The services are deployed as follows:
 1. AWS spawns the services of V2.
@@ -118,7 +118,7 @@ The services are deployed as follows:
 
 Since this process is uncontrollable, there is a potential timeframe in which the application may run services of V1 and V2 in random combinations. When a service of V1 communicates with a service of V2 or the other way around, it may result in an error.
 
-![Deploy_Spryker_services_requests](./images/Deploy_Spryker_services/deploy_services.gif)
+![Deploy Spryker services step](https://spryker.s3.eu-central-1.amazonaws.com/docs/cloud/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.md/deploy-services-step.gif)
 
 ## Run_post-deploy_hook
 
@@ -129,3 +129,8 @@ In this step, the scripts you defined for this step in the `SPRYKER_HOOK_AFTER_D
 Pipelines do not eliminate all the issues related to CI/CD. Since there is lots of space for potential issues, we recommend dividing your updates into smaller chunks. Smaller updates take less time to be deployed, which reduces the timeframe during which issues can occur.
 
 Another powerful technique we recommend is feature flags. They let you enable updates *after* they are deployed. This entirely eliminates the potential risks related to deployment.
+
+## Next steps
+
+
+*   [Deploying in a staging environemnt](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html)

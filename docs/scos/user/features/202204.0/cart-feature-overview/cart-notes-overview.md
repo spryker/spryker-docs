@@ -1,6 +1,6 @@
 ---
 title: Cart Notes overview
-description: Customers can add notes to a particular item or the whole cart, e.g some special instructions about how to prepare and deliver an order.
+description: Customers can add notes to a particular item or the whole cart
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/cart-notes-overview
@@ -13,13 +13,13 @@ redirect_from:
   - /docs/scos/user/features/202200.0/cart-feature-overview/cart-notes-overview.html
 ---
 
-*Cart Notes* let Shop administrators include the **Notes** field on the **Cart** page. Customers can add notes to a particular item or the whole cart—for example, some special instructions about how to prepare and deliver an order.
+*Cart Notes* let Shop administrators include the **Notes** field on the **Cart** page. Customers can add notes to a particular item or the whole cart—for example, some special instructions about how preparing and deliving an order.
 
 ![Cart notes](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart+Notes/cart-notes.png)
 
-The cart note is added to quote or to a particular item in the quote and pushed to order details.
+The cart note is added to a quote or particular item in the quote and pushed to order details.
 
-The shop administrator can see the special request in the **Back Office: Sales&nbsp;<span aria-label="and then">></span> Orders** section:
+The shop administrator can see the special request in the Back Office, in **Sales&nbsp;<span aria-label="and then">></span> Orders** section:
 
 ![Cart Notes in Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart+Notes/cart-notes-admin.png)
 

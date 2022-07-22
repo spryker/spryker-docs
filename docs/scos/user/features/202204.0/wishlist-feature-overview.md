@@ -41,9 +41,9 @@ In the **Wishlist** section, the customer can rename the existing wishlists' nam
 
 The direct-to-cart function lets your customers simply add items from their wishlist to a shopping cart with a single click.
 
-Specifically, the customer can:
-* Add all the products from the wishlist to the cart by selecting the Add all available products to the cart
-* Add selected items from the wishlist to the cart by using the **Add to Cart** option for a specific item.
+Specifically, the customer can do the following:
+* Add all the products from the wishlist to the cart by clicking **Add all available products to the cart**.
+* Add selected items from the wishlist to the cart by selecting the **Add to Cart** option for a specific item.
 
 <!--- ![Multiple wishlists](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Wishlist/Multiple+Wishlists/multiple_wishlists.gif)-->
 

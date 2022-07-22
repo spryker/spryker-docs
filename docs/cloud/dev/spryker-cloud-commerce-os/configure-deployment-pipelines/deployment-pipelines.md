@@ -157,4 +157,4 @@ Schematically, deployment in Spryker Cloud Commerce OS looks as follows.
 ## Next steps
 
 
-*   [Deploying in a staging environemnt](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html)
+*   [Deployment in states](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-in-states.html)

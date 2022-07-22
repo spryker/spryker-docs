@@ -136,5 +136,5 @@ composer update spryker/chart spryker/discount spryker/product-relation spryker/
 2. Run
 
 ```bash
-console frontend:zed:install-dependencies
+console frontend:project:install-dependencies
 ```

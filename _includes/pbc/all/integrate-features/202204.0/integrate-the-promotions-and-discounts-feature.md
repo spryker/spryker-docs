@@ -99,7 +99,7 @@ Make sure that all labels and help tooltips in the discount form has English and
 Enable Javascript and CSS changes:
 
 ```bash
-console frontend:zed:install-dependencies
+console frontend:project:install-dependencies
 console frontend:zed:build
 ```
 

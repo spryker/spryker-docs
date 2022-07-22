@@ -22,10 +22,9 @@ The main functionalities of the feature are:
 * CMS block
 * WYSIWYG editor
 
-WYSIWYG editor is a powerful tool used to create content for content items, CMS pages and blocks. Templates and slots, CMS pages and blocks are used to manage content.
+The WYSIWYG editor is a powerful tool that is used to create content for content items, and CMS pages and blocks. Templates and slots and CMS pages and blocks are used to manage content.
 
 All the CMS elements are based on templates. They simplify the creation of similar content. CMS block templates in particular define what a block is used for.
-
 
 ### CMS glossary
 

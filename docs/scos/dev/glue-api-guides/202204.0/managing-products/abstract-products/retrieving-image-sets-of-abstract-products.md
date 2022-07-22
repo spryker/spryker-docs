@@ -17,8 +17,6 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
   - title: Retrieving abstract product prices
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-prices.html
-  - title: Retrieving tax sets
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-tax-sets.html
   - title: Product image management
     link: docs/scos/user/features/page.version/product-feature-overview/product-images-overview.html
 ---

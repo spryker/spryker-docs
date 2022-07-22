@@ -16,7 +16,7 @@ redirect_from:
 
 The *CMS* feature is a content management system that lets you create and manage the content of custom pages that are not part of the product catalog.
 
-The main functionalities of the feature are:
+The main functionalities of the feature are the following:
 * Templates and slots
 * CMS page
 * CMS block

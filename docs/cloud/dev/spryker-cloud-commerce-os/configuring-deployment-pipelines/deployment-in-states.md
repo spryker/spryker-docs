@@ -49,7 +49,7 @@ In this step, AWS builds the containers for the services that are going to be de
 
 ## Configure_RabbitMQ_Vhosts_and_Permissions
 
-In this step, Rabbit MQ vhosts, users, and permissions are updated. Usually, you would change them rarely, but if you do, while they are being updated, the following may happen:
+In this step, Rabbit MQ vhosts, users, and permissions are updated. Usually, they are updated rarely, but if they are, while they are being updated, the following may happen:
 
 ![Configure_RabbitMQ_Vhosts_and_Permissions](./images/Configure_RabbitMQ_Vhosts_and_Permissions/rmq.gif)
 
@@ -116,7 +116,7 @@ The services are deployed as follows:
 1. AWS spawns the services of V2.
 2. When the services of V2 are up and running, AWS takes the services of V1 down.
 
-Since this process is uncontrollable, there is potentially a timeframe in which the application may run services of V1 and V2 in random combinations. When a service of V1 communicates with a service of V2 or the other way around, it may result in an error.
+Since this process is uncontrollable, there is a potential timeframe in which the application may run services of V1 and V2 in random combinations. When a service of V1 communicates with a service of V2 or the other way around, it may result in an error.
 
 ![Deploy_Spryker_services_requests](./images/Deploy_Spryker_services/deploy_services.gif)
 

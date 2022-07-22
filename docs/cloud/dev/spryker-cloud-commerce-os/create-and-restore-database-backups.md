@@ -126,6 +126,55 @@ It may take a few minutes for the DB to restore.
 {% endinfo_block %}
 
 
+### Restore a DB from AWS Backup
+
+1. In the AWS Management Console, go to **Services** > [**AWS Backup**](https://console.aws.amazon.com/backup).
+
+2. In the navigation pane, select **Backup vaults**.
+
+3. Click the backup vault `{environment-name}_rds_backup`.
+
+4. In **Recovery points** tab, click on the link start with _"continuous:db"_.
+
+5. Click on **Restore** on the right top of the screen.
+
+6. In **Restore to point in time** tab, choose _**Latest restorable time**_ or _**Specify date and time**_.
+
+7. In **Instance specifications** tab, set _**DB instance class**_ field and keep the rest of fields as default.
+
+8. In **Settings** tab, set _**DB Instance Identifier**_ as new DB name.
+
+9. In **Network and security** tab, set _**Virtual Private Cloud (VPC)**_ as RDS belongs to. Then select __**Subnet group**__ and _**Public accessibility**_.
+
+10. In **Database options** tab, set _**Database port**_ and _**DB parameter group**_ as it should be.
+
+11. In **Log exports** tab, choose any type of log to be published to AWS CloudWatch.
+
+12. In **Maintenance** tab, choose _**Auto minor version upgrade**_.
+
+13. In **Restore role** tab, choose _**Default role**_ or _**Choose an IAM role**_.
+
+14. Click **Restore backup**.
+
+15. Restored DB is created. 
+
+16. In the AWS Management Console, go to **Services** > [**RDS**](https://console.aws.amazon.com/rds/).
+
+17. In the navigation pane, select **Databases**.
+
+18. Select the restored DB and click on **Modify**.
+
+19. In **Connectivity** tab, modify _**Security group**_ field.
+
+20. Click **Continue**.
+
+21. In **Scheduling of modifications** tab, choose _**Apply immediately**_.
+
+22. Click **Modify DB instance**.
+
+Restored DB is created and modified.
+
+
 ### Re-sync data from the restored database to ElasticSearch and Redis
 
 1.  Connect to OpenVPN.
@@ -147,7 +196,6 @@ It may take a few minutes for the DB to restore.
 9.  Select **Save**.  
 
 
-
 ![Set up a jenkins job](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Creating+and+restoring+database+backups/set-up-a-jenkins-job.png)
 
 10.  On the page that opens, select **Build Now**.  
@@ -160,42 +208,6 @@ You’ve re-synced data from a restored database to ElasticSearch and Redis.
 
 
 Application restoration is part of a regular deployment workflow. See [Rolling back an application](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html#roll-back-an-application) to learn about restoring a previous version of an application.
-
-## Delete recovery points
-
-To delete recovery steps via Terraform Cloud, follow the steps in the sections below.
-
-### Install AWS CLI and configure the session
-
-1. [Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html).
-
-2. Open a terminal.
-
-3. Export AWS credentials:
-```shell
-export AWS_ACCESS_KEY_ID="{{YOUR_ACCESS_ID}}"
-export AWS_SECRET_ACCESS_KEY="{{YOUR_SECRET_ACCESS_KEY}}"
-export AWS_SESSION_TOKEN="{{YOUR_SESSION_TOKEN}}"
-```
-
-4. Set the region you want to remove delete recovery points in:
-```shell
-aws configure set region {REGION_NAME}
-```
-
-### Clone Terraform Cloud and delete recovery points
-
-
-1. Clone Terraform Cloud:
-```shell
-git clone git@github.com:spryker/tfcloud.git
-```
-
-2. Delete recovery points:
-```shell
-/tfcloud/tools/scripts./backup_vault_clear.sh {ENVIRONMENT_NAME}_rds_backup
-```
-
 
 
 ## Next step

@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/cart-feature-walkthrough/calculator-plugins.html
 ---
 
-Calculator plugins are registered in the `CalculationDependencyProvider::getQuoteCalculatorPluginStack()` for `QuoteTransfer` and `CalculationDependencyProvider::getOrderCalculatorPluginStack()` or in later versions of the Calculation module 4.00 and above `CalculationDependencyProvider::getQuoteCalculatorPluginStack()` for OrderTransfer.
+Calculator plugins are registered in the `CalculationDependencyProvider::getQuoteCalculatorPluginStack()` for `QuoteTransfer` and `CalculationDependencyProvider::getOrderCalculatorPluginStack()`. In later versions of the Calculation module 4.00 and above, plugins are registered in `CalculationDependencyProvider::getQuoteCalculatorPluginStack()` for OrderTransfer.
 
 This method can be extended on the project level and the plugin stack can be updated with your own plugins.
 
@@ -29,7 +29,7 @@ public function recalculate(CalculableObjectTransfer $calculableObjectTransfer);
 ```
 
 * `RemoveTotalsCalculatorPlugin` — Resets quote totals, sets TotalsTransfer empty.
-* `RemoveAllCalculatedDiscountsCalculatorPlugin`—Resets every CalculatedDiscountTransfer.
+* `RemoveAllCalculatedDiscountsCalculatorPlugin`— Resets every CalculatedDiscountTransfer.
 * `ItemGrossAmountsCalculatorPlugin` — Calculates sumGrossPrice for each ItemTransfer.
     
     `ItemTransfer::sumGrossPrice = ItemTransfer::unitGrossPrice * ItemTransfer::quantity`
@@ -52,7 +52,7 @@ public function recalculate(CalculableObjectTransfer $calculableObjectTransfer);
     
     `TotalsTransfer::expenseTotal = sum(ExpenseTransfer::sumGrossPrice)`
 
-* `DiscountCalculatorPlugin` — Applies discounts to current `QuoteTransfer` each discountable item with property `calculatedDiscounts`, gets discounts filled. Also `voucherDiscounts` and `cartRuleDiscounts` are populated with additional used discount data for order level.
+* `DiscountCalculatorPlugin` — Applies discounts to current `QuoteTransfer` for each discountable item with property `calculatedDiscounts`; gets discounts filled. Also `voucherDiscounts` and `cartRuleDiscounts` are populated with additional used discount data for order level.
  
     {% info_block infoBox "Discount Calculation" %}
 

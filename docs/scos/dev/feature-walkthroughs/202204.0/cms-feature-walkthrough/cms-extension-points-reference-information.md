@@ -64,4 +64,4 @@ class PostCmsPageActivatorNavigationPlugin extends AbstractPlugin implements Pos
 }
 ```
 
-And then in the `CmsDependencyProvider`, in the function `getCmsPagePostActivatorPlugins`, you can register this plugin (or any plugin implementing the above interface) for it to execute post activation or deactivation of CMS pages.
+Found within `CmsDependencyProvider`, in the function `getCmsPagePostActivatorPlugins`, you can register this plugin (or any plugin implementing the above interface) for it to execute post activation or deactivation of CMS pages.

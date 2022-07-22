@@ -20,7 +20,7 @@ On this page, you can find commonly encountered cases of product restrictions be
          <td rowspan="6">Product Catalog</td>
          <td rowspan="2">Blacklist</td>
          <td>
-            <p>If the merchant relation has a blacklist, all buyers in the associated business units can not interact with any products from the blacklist. The blacklisted products are excluded from view, search, existing lists and carts. If the category is a part of a blacklist, it is greyed out in the shop navigation, however, you can change this setting on the project level so, for example, that the category is not greyed out.</p>
+            <p>If the merchant relation has a blacklist, all buyers in the associated business units cannot interact with any products from the blacklist. The blacklisted products are excluded from view, search, existing lists and carts. If the category is a part of a blacklist, it is greyed out in the shop navigation, however, you can change this setting on the project level so, for example, that the category is not greyed out.</p>
             <p>All products assigned to a category are also included in the black/white list.</p>
          </td>
          <td>

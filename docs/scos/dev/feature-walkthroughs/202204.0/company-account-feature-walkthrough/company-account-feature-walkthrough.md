@@ -15,7 +15,7 @@ To learn more about the feature and to find out how end users use it, see [Compa
 
 ## Entity diagram
 
-The following schema illustrates relations between a company, business unit, company unit address and customer.
+The following schema illustrates relations between a company, business unit, company unit address, and customer.
 
 <div class="width-100">
 
@@ -23,7 +23,7 @@ The following schema illustrates relations between a company, business unit, com
 
 </div>
 
-The following schema illustrates relations between modules in of the business on behalf functionality:
+The following schema illustrates relations between modules of the business on behalf functionality:
 
 <div class="width-100">
 
@@ -31,7 +31,7 @@ The following schema illustrates relations between modules in of the business on
 
 </div>
 
-The `BusinessOnBehalfGui` module provides the `BusinessOnBehalfGuiAttachToCompanyButtonCustomerTableActionExpanderPlugin` plugin for the `Customer` module, and `CompanyUserTableAttachToBusinessUnitActionLinksExpanderPlugin` as well as `ReplaceDeleteButtonCompanyUserTableActionLinksExpanderPlugin` plugins for the `CompanyUserG` module. Also, `BusinessOnBehalfGui` takes user information from the `CompanyUser` module.
+The `BusinessOnBehalfGui` module provides the `BusinessOnBehalfGuiAttachToCompanyButtonCustomerTableActionExpanderPlugin` plugin for the `Customer` module and `CompanyUserTableAttachToBusinessUnitActionLinksExpanderPlugin`. It also provides the `ReplaceDeleteButtonCompanyUserTableActionLinksExpanderPlugin` plugins for the `CompanyUserG` module. `BusinessOnBehalfGui` will also take user information from the `CompanyUser` module.
 
 The following schema represents module relations of the Customer Login by Token feature:
 

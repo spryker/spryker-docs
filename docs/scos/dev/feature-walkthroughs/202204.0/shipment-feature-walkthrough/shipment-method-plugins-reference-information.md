@@ -127,7 +127,7 @@ class DHLExpressPlugin extends AbstractPlugin implements ShipmentMethodDeliveryT
 
 ## Plugin registration
 
-The plugins must be registered in the `ShipmentDependencyProvider`, by overriding the following 3 operations:
+The plugins must be registered in the `ShipmentDependencyProvider` by overriding the following 3 operations:
 
 ```php
 <?php

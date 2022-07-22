@@ -11,9 +11,9 @@ Our Cart consists of a few components in Yves and Zed. The Yves components creat
 
 Cart operations are invoked in `CartClient`, which contains methods for all common operations (add, update, remove).
 
-Each cart operation uses `CartChangeTransfer` objects. Each transfer holds the current quote transfer and the items that are being modified. Current `QuoteTransfer` is read from current session and is provided by the `QuoteSession` session adapter.
+Each cart operation uses `CartChangeTransfer` objects. Each transfer holds the current quote transfer and the items that are being modified. Current `QuoteTransfer` is read from the current session and is provided by the `QuoteSession` session adapter.
 
-When an operation is invoked, `CartClient` makes an HTTP request to Zed Cart module. The cart module gateway controller forwards the request to the `CartFacade` where a corresponding operation is handled and modified; `QuoteTransfer` is returned to Yves and persisted into the session.
+When an operation is invoked, `CartClient` makes an HTTP request to the Zed Cart module. The cart module gateway controller forwards the request to the `CartFacade` where a corresponding operation is handled and modified; `QuoteTransfer` is returned to Yves and persisted into the session.
 
 ## Cart data flow
 
@@ -23,21 +23,21 @@ When an operation is invoked, `CartClient` makes an HTTP request to Zed Cart mod
 
 The Cart module in Zed has a cart operation class that handles cart operation requests. Each operation does the following:
 
-* **Expand cart items** — augment cart items with additional data (prices, product details, ProductOptions, …)
-* **Persisting**—storage provider stores items into the database, merges items if same item was added, by default it uses a NonPersistentProvider.
-* **Item grouping** — cart uses the item grouper to group items in the cart using a specially crafted group key, which is provided by cart Expander (e.g.: a list containing the same item coming from different merchants should be split into separate groups and shipped separately).
+* **Expand cart items** — augment cart items with additional data (prices, product details, ProductOptions, etc.)
+* **Persisting** — storage provider stores items into the database, merges items if the same item was added. By default, it uses a NonPersistentProvider.
+* **Item grouping** — Cart uses the item grouper to group items in the cart using a specially crafted group key, which is provided by cart Expander (e.g.: a list containing the same item coming from different merchants should be split into separate groups and shipped separately).
 * **Log operation message** — Cart writes to messenger messages which should be returned to Yves (for example: validation messages, success, failure messages).
-* **Cart recalculation** — happens for each operation in cart recalculation. Cart amounts are reset and recalculated with new added items.
+* **Cart recalculation** — happens for each operation in cart recalculation. Cart amounts are reset and recalculated with newly added items.
 
 ## Cart persistence providers
 
-The Cart has different persistence providers in Zed. By default, it only modifies current QuoteTransfer and it doesn’t persists the data. An example for use case for this is building a cart where the cart items are persisted between log-ins. In this case the `StorageProviderInterface` needs to be implemented and the operation dependency must be changed.
+The Cart has different persistence providers in Zed. By default, it only modifies current QuoteTransfer and it doesn’t persists the data. A use case example of this is building a cart where the cart items are persisted between log-ins. In this case, the `StorageProviderInterface` needs to be implemented and the operation dependency must be changed.
 
 ## Cart expanders
 
-Zed Cart modules can have expander plugins registered. Expander plugins expand the cart with additional data such as price information, product information and add product options.
+Zed Cart modules can have expander plugins registered. Expander plugins expand the cart with additional data, such as price information, product information and add product options.
 
-Currently we ship with a couple of plugins:
+Currently, we ship with a couple of plugins:
 
 | CART EXPANDER | DESCRIPTION |
 | --- | --- |
@@ -49,9 +49,9 @@ Currently we ship with a couple of plugins:
 
 ## Cart pre-checks
 
-The Zed Cart module has a list of Pre-Checks. These are validators which run when adding a new item to the cart. We have a list of default Pre-Checks and of course you might want to add your own. To do so just add a new plugin to `Pyz/Zed/Cart/CartDependencyProvider::getCartPreCheckPlugins()`.
+The Zed Cart module has a list of Pre-Checks. These are validators which run when adding a new item to the cart. We have a list of default Pre-Checks, which you may add your own to. To do so, add a new plugin to `Pyz/Zed/Cart/CartDependencyProvider::getCartPreCheckPlugins()`.
 
-Currently we ship a couple of default pre-checks:
+Currently, we ship a couple of default pre-checks:
 
 | CART PRE-CHECK | DESCRIPTION |
 | --- | --- |

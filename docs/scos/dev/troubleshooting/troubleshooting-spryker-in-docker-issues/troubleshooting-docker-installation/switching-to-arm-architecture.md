@@ -1,13 +1,13 @@
 ---
 title: Switching to ARM architecture
-description: Learn how to fix the issue when setup of new indexes throws an exception
-last_updated: Jul 19, 2022
+description: Learn what additional steps need to be performed if you want to install Spryker in Docker demo shops versions 202108.0 or earlier.
+last_updated: Jul 21, 2022
 template: troubleshooting-guide-template
 ---
 
 This document explains how to install Spryker in Docker on a device with an ARM chip using demo shops versions 202108.0 or earlier.
 
-The following steps should be performed after you followed the *Clone a Demo Shop and the Docker SDK* section in the installation guides for the [development](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html#clone-a-demo-shop-and-the-docker-sdk) and [demo](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html#clone-a-demo-shop-and-the-docker-sdk) modes.
+The steps below should be followed after you have completed the *Clone a Demo Shop and the Docker SDK* section in the installation guides for [development](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html#clone-a-demo-shop-and-the-docker-sdk) and [demo](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html#clone-a-demo-shop-and-the-docker-sdk) modes.
 
 ## Update Sass
 
@@ -117,3 +117,5 @@ $config[SchedulerJenkinsConstants::JENKINS_CONFIGURATION] = [
 ];
 ...
 ```
+
+Once done, you can proceed with *Configure and start the instance* section of the installation guides.

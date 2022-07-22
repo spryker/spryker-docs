@@ -20,8 +20,8 @@ redirect_from:
 The *Shipment* feature lets you create and manage carrier companies and assign multiple delivery methods associated with specific stores, which your customers can select during the checkout. With the feature in place, you can define delivery price and expected delivery time, tax sets, and availability of the delivery method per store.
 
 The main concepts regarding shipping are as follows:
-* **Carrier company**: A company that provides shipping services such as DHL, FedEx, Hermes.
-* **Delivery method**: Shipping services provided by a carrier company such as DHL Express, DHL Standard, Hermes Next Day, Hermes Standard.
+* *Carrier company*: A company that provides shipping services such as DHL, FedEx, and Hermes.
+* *Delivery method*: Shipping services provided by a carrier company such as DHL Express, DHL Standard, Hermes Next Day, and Hermes Standard.
 
 A sales order can have multiple delivery methods from different carrier companies.
 

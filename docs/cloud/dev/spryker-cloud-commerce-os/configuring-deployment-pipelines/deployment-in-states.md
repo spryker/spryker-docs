@@ -1,6 +1,6 @@
 ---
 title: Deployment in states
-description: Deployment pipelines consist of three configurable stages.
+description: States of applications during deployment and how they affect its behaviour.
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/deployment-pipelines
 originalArticleId: 14d91c9f-6c4e-4481-83ee-005683ce602f
@@ -57,7 +57,7 @@ In this step, Rabbit MQ vhosts, users, and permissions are updated. Usually, you
 
 In this step, the following happens:
 * The scripts you defined for this step in the `SPRYKER_HOOK_BEFORE_DEPLOY` are run. The default command is `vendor/bin/install -r pre-deploy -vvv`.
-* The scheduler stops by the `vendor/bin/console scheduler:suspend -vvv --no-ansi` command. It waits for the currently running jobs to finish and gracefully shuts down. Stopping the scheduler prevents data corruption or errors for the duration of the deployment.
+* The `vendor/bin/console scheduler:suspend -vvv --no-ansi` command is run to stop the scheduler. It waits for the currently running jobs to finish and gracefully shuts down. Stopping the scheduler prevents data corruption or errors for the duration of the deployment.
 
 ![scheduler:suspend](./images/Run_pre-deploy_hook/Run_pre-deploy_hook.jpg)
 
@@ -100,7 +100,7 @@ The scheduler restarts queue workers and updates search and Redis.
 
 ![Run_install](./images/Run_install/install_dbs_updates/install_dbs_updates.gif)
 
-Depending on the amount of data that needs to be processed, this process may take a while. While Redis and search are being updated, they cannot process the requests that are coming in:
+Depending on the amount of data that needs to be processed, this process may take a while. While Redis and search are being updated, they may process requests incorrectly:
 
 ![Run_install_requests](./images/Run_install/request_during_install/install_request.gif)
 

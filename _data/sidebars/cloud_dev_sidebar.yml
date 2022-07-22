@@ -53,10 +53,12 @@ entries:
             url: /docs/cloud/dev/spryker-cloud-commerce-os/security/generating-access-keys.html
           - title: Web Application Firewall (WAF)
             url: /docs/cloud/dev/spryker-cloud-commerce-os/security/web-application-firewall-waf.html
-      - title: Configuring deployment pipelines
+      - title: Configure deployment pipelines
         nested:
           - title: Deployment pipelines
             url: /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-pipelines.html
+          - title: Deployment in states
+            url: /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-in-states.html            
           - title: Customizing deployment pipelines
             url: /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/customizing-deployment-pipelines.html
           - title: Configuring Azure Pipelines

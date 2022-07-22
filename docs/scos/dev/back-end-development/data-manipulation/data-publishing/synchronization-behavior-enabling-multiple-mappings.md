@@ -1,5 +1,5 @@
 ---
-title: Synchronization behavior- enabling multiple mappings
+title: Synchronization behavior - enabling multiple mappings
 description: Use mappings to get data of any resource without specifying the resource's ID
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -12,6 +12,25 @@ redirect_from:
   - /docs/en/synchronization-behavior-enabling-multiple-mappings
   - /v6/docs/synchronization-behavior-enabling-multiple-mappings
   - /v6/docs/en/synchronization-behavior-enabling-multiple-mappings
+related:
+  - title: Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
+  - title: Implementing Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-publish-and-synchronization.html
+  - title: Handling data with Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html
+  - title: Adding publish events
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/adding-publish-events.html
+  - title: Implementing event trigger publisher plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html
+  - title: Implementing synchronization plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
+  - title: Debugging listeners
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debugging-listeners.html
+  - title: Publish and Synchronize and multi-store shop systems
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
+  - title: Publish and Synchronize repeated export
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
 ---
 
 During the [Publish and Synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html) process, a unique key is generated for each resource published. Resource’s denormalized data is then saved with this key to storage for later use. To enforce keys' uniqueness for each resource entity, by default, Spryker uses database IDs of the corresponding records during the key generation.

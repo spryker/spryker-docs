@@ -12,6 +12,9 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/retrieving-promotional-items.html
   - /docs/scos/dev/glue-api-guides/201903.0/retrieving-promotional-items.html
   - /docs/scos/dev/glue-api-guides/201907.0/retrieving-promotional-items.html
+related:
+  - title: Promotions and Discounts feature overview
+    link: docs/scos/user/features/page.version/promotions-discounts-feature-overview.html
 ---
 
 The [Promotions](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#promotional-product) functionality enables sellers to provide a promotional item that the customers can add to their carts at a discounted price or even for free. To be eligible for promotions, the purchase needs to fulfill certain discount conditions, for example, the purchase amount should exceed a certain threshold.

@@ -12,6 +12,11 @@ redirect_from:
   - /docs/en/setting-up-a-self-signed-ssl-certificate
   - 6/docs/setting-up-a-self-signed-ssl-certificate
   - 6/docs/en/setting-up-a-self-signed-ssl-certificate
+related:
+  - title: Configuring Spryker after installing with Docker
+    link: docs/scos/dev/setup/installing-spryker-with-docker/configuration/configuring-spryker-after-installing-with-docker.html
+  - title: Adjusting Jenkins for a Docker environment
+    link: docs/scos/dev/setup/installing-spryker-with-docker/configuration/adjusting-jenkins-for-a-docker-environment.html
 ---
 
 

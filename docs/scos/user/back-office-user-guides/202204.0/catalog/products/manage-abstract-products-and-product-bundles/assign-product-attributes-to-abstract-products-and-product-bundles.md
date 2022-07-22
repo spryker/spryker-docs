@@ -2,6 +2,11 @@
 title: Assign product attributes to abstract products
 description: Learn how to assign product attributes to abstract products in the Back Office
 template: back-office-user-guide-template
+related:
+  - title: Product feature overview
+    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
+  - title: Product Attributes overview
+    link: docs/scos/user/features/page.version/product-feature-overview/product-attributes-overview.html
 ---
 
 This document describes how to assign product attributes to abstract products in the Back Office.

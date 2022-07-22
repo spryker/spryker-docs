@@ -18,7 +18,7 @@ Inside the cart and checkout endpoints, we have added information about the mini
 
 #### Documentation
 
-[Order Threshold feature overview](/docs/scos/user/features/202108.0/checkout-feature-overview/order-thresholds-overview.html)
+[Order Threshold feature overview](/docs/scos/user/features/202204.0/checkout-feature-overview/order-thresholds-overview.html)
 
 ### Discount management
 
@@ -136,6 +136,7 @@ Users can now export the data from the tables of the Back Office or the Merchant
 The developers, in their turn, can enable a business user to export a table view by assigning an exporting functionality (for example, plugin or trait) to a Table Query container or Repository.
 
 #### Documentation
+
 [Creating and configuring Zed tables](/docs/scos/dev/back-end-development/zed-ui-tables/creating-and-configuring-zed-tables.html)
 
 ## PHP compatibility window

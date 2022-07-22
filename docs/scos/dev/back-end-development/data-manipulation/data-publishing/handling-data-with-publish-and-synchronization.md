@@ -14,6 +14,25 @@ redirect_from:
   - /v6/docs/en/handling-data-with-publish-and-synchronization
   - /docs/t-handling-data-publish-and-sync-scos
   - /docs/en/t-handling-data-publish-and-sync-scos
+related:
+  - title: Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
+  - title: Implementing Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-publish-and-synchronization.html
+  - title: Adding publish events
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/adding-publish-events.html
+  - title: Implementing event trigger publisher plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html
+  - title: Implementing synchronization plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
+  - title: Debugging listeners
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debugging-listeners.html
+  - title: Publish and Synchronize and multi-store shop systems
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
+  - title: Publish and Synchronize repeated export
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+  - title: Synchronization behavior - enabling multiple mappings
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
 Publish and Synchronization (P&S) allows exporting data from Spryker backend (Zed) to external endpoints. The default external endpoints are Redis and Elasticsearch. The endpoints are usually used by the frontend (Yves) or API (Glue).

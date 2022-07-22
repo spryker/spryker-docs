@@ -39,7 +39,7 @@ This file has no dependencies.
 
 ## Additional information
 
-Check the [HowTo - Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html).
+Check the [HowTo: Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html).
 
 {% info_block infoBox "Note" %}
 

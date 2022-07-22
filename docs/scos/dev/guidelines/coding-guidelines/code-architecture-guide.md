@@ -22,6 +22,13 @@ redirect_from:
   - /v2/docs/en/code-architecture-guide
   - /v1/docs/code-architecture-guide
   - /v1/docs/en/code-architecture-guide
+related:
+  - title: Code Quality
+    link: docs/scos/dev/guidelines/coding-guidelines/code-quality.html
+  - title: Code style guide
+    link: docs/scos/dev/guidelines/coding-guidelines/code-style-guide.html
+  - title: Secure Coding Practices
+    link: docs/scos/dev/guidelines/coding-guidelines/secure-coding-practices.html
 ---
 
 We use our [Architecture Sniffer Tool](https://github.com/spryker/architecture-sniffer) to assert a certain quality of Spryker architecture for both core and project.

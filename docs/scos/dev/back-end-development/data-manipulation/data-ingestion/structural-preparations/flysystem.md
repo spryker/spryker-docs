@@ -33,6 +33,7 @@ There are module with adapters for Local, FTP and AWS3 filesystems.
 ## Flysystem features
 
 Quote from [Flysytem's official documentation](http://flysystem.thephpleague.com/):
+
 * Generic API for handling common tasks across multiple file storage engines.
 * Consistent output which you can rely on.
 * Integrate well with other packages/frameworks.
@@ -48,7 +49,8 @@ The Flysystem module provides plugins which integrate [thephpleague/flysystem](h
 
 ![File_System_Dependencies](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Development/File+System/file_system_dependencies.png)
 
-## Flysystem Service API
+## Flysystem service API
+
 Flysystem's Service API is almost exactly like [Flysystem's API](https://flysystem.thephpleague.com/docs/usage/filesystem-api/) with only one distinction,
 
 it takes an additional mandatory parameter containing a pre-configured filesystem name.
@@ -152,6 +154,7 @@ Every implementation of `\League\Flysystem\AdapterInterface` requires a unique s
 The builders are executed via plugins.
 
 ## Filesystem builder plugin
+
 The Flysystem bundle uses the `FlysystemFilesystemBuilderPluginInterface` implemented by the concrete adapter's module.
 
 The `build()` method is expected to return a class implementing the `\League\Flysystem\Filesystem` interface.
@@ -192,6 +195,7 @@ interface FlysystemFilesystemBuilderPluginInterface
 ```
 
 ### Plugin example
+
 Example implementation from `Aws3v3FilesystemBuilderPlugin`.
 
 ```php
@@ -232,6 +236,7 @@ class Aws3v3FilesystemBuilderPlugin extends AbstractPlugin implements FlysystemF
 ```
 
 **Flysystem adapter builder example**
+
 <br>Example of an `Aws3v3AdapterBuilder`, responsible for the instantiation of `League\Flysystem\Adapter\AwsS3v3\AwsS3Adapter`.
 
 It uses its own config `FlysystemConfigAws3v3Transfer`, created by `Aws3v3FilesystemBuilder`.
@@ -319,7 +324,8 @@ class Aws3v3AdapterBuilder implements AdapterBuilderInterface
 ```
 
 **Flysystem filesystem muilder example**
-Example of `Aws3v3FilesystemBuilder`, responsible for instantiation of Filesystem implementing `League\Flysystem\FilesystemInterface`.
+
+<br>Example of `Aws3v3FilesystemBuilder`, responsible for instantiation of Filesystem implementing `League\Flysystem\FilesystemInterface`.
 
 It creates a config using `FlysystemConfigAws3v3Transfer` and validates it.
 
@@ -374,6 +380,7 @@ class Aws3v3FilesystemBuilder extends AbstractFilesystemBuilder
 ```
 
 **AbstractFilesystemBuilder example**
+
 <br>Example of `AbstractFilesystemBuilder` from the `FlysystemAws3v3FileSystem` module.
 
 ```php

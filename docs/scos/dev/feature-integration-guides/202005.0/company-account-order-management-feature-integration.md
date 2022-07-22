@@ -294,7 +294,7 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 }
 ```
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 To start feature integration, overview, and install the necessary features:

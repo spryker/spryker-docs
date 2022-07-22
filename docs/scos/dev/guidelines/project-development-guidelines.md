@@ -14,6 +14,13 @@ redirect_from:
   - /v6/docs/en/project-development-guidelines
   - /v5/docs/project-development-guidelines
   - /v5/docs/en/project-development-guidelines
+related:
+  - title: Data Processing Guidelines
+    link: docs/scos/dev/guidelines/data-processing-guidelines.html
+  - title: Making your Spryker shop secure
+    link: docs/scos/dev/guidelines/making-your-spryker-shop-secure.html
+  - title: Module configuration convention
+    link: docs/scos/dev/guidelines/module-configuration-convention.html
 ---
 
 Spryker OS exposes codebase projects, which enables a high level of customization and can satisfy  complex business requirements.

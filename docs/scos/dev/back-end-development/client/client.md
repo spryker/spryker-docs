@@ -22,6 +22,11 @@ redirect_from:
   - /v2/docs/en/client
   - /v1/docs/client
   - /v1/docs/en/client
+related:
+  - title: Implementing a client
+    link: docs/scos/dev/back-end-development/client/implementing-a-client.html
+  - title: Using and configuring Redis as a key-value storage
+    link: docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html
 ---
 
 This article provides general information about the Client part of the Yves applications layer and describes how to use it.

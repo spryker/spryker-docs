@@ -14,17 +14,25 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/managing-b2b-account/retrieving-business-units.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-b2b-account/retrieving-business-units.html
 related:
-  - title: Logging In as Company User
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
-  - title: Retrieving Company User Information
-    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
-  - title: Retrieving Company Information
+  - title: Retrieving business unit addresses
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-business-unit-addresses.html
+  - title: Retrieving companies
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-companies.html
-  - title: Authentication and Authorization
+  - title: Retrieving company roles
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-roles.html
+  - title: Retrieving company users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/retrieving-company-users.html
+  - title: Authenticating as a company user
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
+  - title: Managing company user authentication tokens
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/managing-company-user-authentication-tokens.html
+  - title: Searching by company users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
+  - title: Authenticating as a customer
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
-  - title: Business Units Management Feature Overview
+  - title: Business Units overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/business-units-overview.html
-  - title: Company Account and General Organizational Structure
+  - title: Company Accounts overview
     link: docs/scos/user/features/page.version/company-account-feature-overview/company-accounts-overview.html
 ---
 

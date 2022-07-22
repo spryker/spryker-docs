@@ -19,6 +19,16 @@ redirect_from:
 related:
   - title: Packaging Units feature overview
     link: docs/scos/user/features/page.version/packaging-units-feature-overview.html
+  - title: CRUD Scheduled Prices migration concept
+    link: docs/scos/dev/migration-concepts/crud-scheduled-prices-migration-concept.html
+  - title: Float Stock for Products
+    link: docs/scos/dev/migration-concepts/float-stock-for-products-migration-concept.html
+  - title: Migrating from Twig v1 to Twig v3
+    link: docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
+  - title: Split Delivery migration concept
+    link: docs/scos/dev/migration-concepts/split-delivery-migration-concept.html
+  - title: Silex Replacement migration concept
+    link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
 ---
 
 ## General information
@@ -61,7 +71,7 @@ console transfer:generate
 
 {% info_block errorBox %}
 
-Care should be taken on the project level code to handle the availability and stock values as decimal objects. Due to the PHP floating-point precision issues, all decimal numbers in Spryker are wrapped in `decimal-object` that handles the calculations performed on them to allow exact precision. For more information about the`decimal-object` library, see [HowTo - Integrate and use precise decimal numbers](/docs/scos/dev/tutorials-and-howtos/howtos/howto-integrate-and-use-precise-decimal-numbers.html).
+Care should be taken on the project level code to handle the availability and stock values as decimal objects. Due to the PHP floating-point precision issues, all decimal numbers in Spryker are wrapped in `decimal-object` that handles the calculations performed on them to allow exact precision. For more information about the`decimal-object` library, see [HowTo: Integrate and use precise decimal numbers](/docs/scos/dev/tutorials-and-howtos/howtos/howto-integrate-and-use-precise-decimal-numbers.html).
 
 {% endinfo_block %}
 

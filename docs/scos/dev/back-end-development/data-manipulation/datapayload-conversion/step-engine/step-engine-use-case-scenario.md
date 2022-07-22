@@ -1,5 +1,5 @@
 ---
-title: Step Engine - Use Case Scenario
+title: Step engine - use case scenario
 description: In this article, you have an example of the checkout process configuration.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,11 @@ redirect_from:
   - /v2/docs/en/step-engine-use-case-scenario
   - /v1/docs/step-engine-use-case-scenario
   - /v1/docs/en/step-engine-use-case-scenario
+related:
+  - title: Step engine workflow overview
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-workflow-overview.html
+  - title: Step engine - creating a breadcrumb navigation
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-creating-a-breadcrumb-navigation.html
 ---
 
 Below you can see an example of configuration for the checkout process, containing two steps: an entry step and a success step.

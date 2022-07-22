@@ -16,6 +16,8 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/content/file-manager/managing-file-tree.html
   - title: Add and edit MIME types
     link: docs/scos/user/back-office-user-guides/page.version/administration/add-and-edit-mime-types.html
+  - title: File Manager feature overview
+    link: docs/scos/user/features/page.version/file-manager-feature-overview/file-manager-feature-overview.html
 ---
 
 The *File List* section is a way to quickly review all the files from the file tree.
@@ -29,17 +31,21 @@ To start working with the file list, navigate to **File Manager&nbsp;<span aria-
 ## Viewing files
 
 To view a file:
+
 1. On the *File List* page in the _Actions_ column, click **View**.
 2. On the *View File* page, you see the version, file name, the date and time when the file was uploaded.
 
 **Tips and tricks**
+
 <br>On this page, you can download the file:
+
 1. Click **Download** in the _Actions_ column.
 2. Follow the download pop-up instructions.
 
 ## Editing files
 
 To edit a file:
+
 1. On the *File List* page in the _Actions_ column, click **Edit**.
 2. On the *Edit File* page, update the attributes.
 3. Click **Save**.
@@ -51,7 +57,9 @@ The *File versions* tab shows the version of the file.
 * If you only update the attributes, no new version is created.
 
 **Tips and tricks**
+
 <br>In the *File versions* tab, you can manage the versions by:
+
 * Removing the not needed versions. Click **Delete** in the _Actions_ column for the version you want to remove.
 * Downloading a specific version by clicking **Download**.
 

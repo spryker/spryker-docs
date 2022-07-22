@@ -10,7 +10,7 @@ redirect_from:
   - /v3/docs/en/quick-order-packaging-units-feature-integration
 ---
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 |Name|Version|

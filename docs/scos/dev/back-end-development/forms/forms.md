@@ -16,6 +16,9 @@ redirect_from:
   - /v5/docs/en/form-and-validator
   - /v4/docs/form-and-validator
   - /v4/docs/en/form-and-validator
+related:
+  - title: Creating forms
+    link: docs/scos/dev/back-end-development/forms/creating-forms.html
 ---
 
 Spryker uses **Symfony Forms** as the default form engine and **Symfony Validator** for form validation. In combination with Symfony components, we also use an additional **Validator** Service.
@@ -29,21 +32,27 @@ For more details, see [Symfony Forms](https://symfony.com/doc/current/forms.html
 In this guide, you will learn how to integrate and extend the service in your project.
 
 ## Modules
+
 The following modules are related to the service:
-*   `spryker/form`
-*   `spryker/form-extension`
-*   `spryker/validator`
-*   `spryker/validator-extension`
+
+* `spryker/form`
+* `spryker/form-extension`
+* `spryker/validator`
+* `spryker/validator-extension`
     
 ## Installation
-For information on how to install and integrate _Form_ and _Validator_ in your project, perform the steps detailed in the following guides:
-*   [Migration Guide - Form](/docs/scos/dev/module-migration-guides/migration-guide-form.html)
-*   [Migration Guide - Validator](/docs/scos/dev/module-migration-guides/migration-guide-validator.html)
 
-## Extending Form
+For information on how to install and integrate _Form_ and _Validator_ in your project, perform the steps detailed in the following guides:
+
+* [Migration Guide - Form](/docs/scos/dev/module-migration-guides/migration-guide-form.html)
+* [Migration Guide - Validator](/docs/scos/dev/module-migration-guides/migration-guide-validator.html)
+
+## Extending the form
+
 The _Form_ Component provides several possibilities to add additional functionality like form types, validators etc. The `spryker/form-extension` module was created for this purpose. It will be installed automatically together with the `spryker/form` module.
 
 The extension module provides the `FormPluginInterface` interface as follows:
+
 ```php
 <?php
 
@@ -63,6 +72,7 @@ interface FormPluginInterface
     public function extend(FormFactoryBuilderInterface $formFactoryBuilder, ContainerInterface $container): FormFactoryBuilderInterface;
 }
 ```
+
 This interface gets the `FormFactoryBuilderInterface` and the `ContainerInterface` that are used to extend the _Form Service_ with all possible extensions and get other services from the `ContainerInterface`, when required.
 
 To use the _Validator Service_ as an application plugin, it needs to be connected to the _Form Service_. To do so, we provide `ValidatorExtensionFormPlugin` for _Yves_ and `ValidatorFormPlugin` for _Zed_.
@@ -170,7 +180,8 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 }
 ```
 
-## Extending Validator
+## Extending the validator
+
 The _Validator_ offers several possibilities to extend it. For example, you can add a translator or a enable a validation factory. To be able to do so, we provide the `spryker/validator-extension` module, which will be installed automatically when the `spryker/validator` module is installed.
 
 The extension module provides the `ValidatorPluginInterface` as follows:

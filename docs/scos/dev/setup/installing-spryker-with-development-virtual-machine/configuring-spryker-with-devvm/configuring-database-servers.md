@@ -23,7 +23,17 @@ redirect_from:
   - /v1/docs/configure-database-server
   - /v1/docs/en/configure-database-server
   - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-the-database-server.html
+related:
+  - title: Configuring Spryker after installing with DevVM
+    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html
+  - title: Updating Node.js in DevVM to the latest version
+    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/updating-node.js-in-devvm-to-the-latest-version.html
 ---
+{% info_block warningBox "Warning" %}
+
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+
+{% endinfo_block %}
 
 This article describes how you can change your database server.
 

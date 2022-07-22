@@ -24,7 +24,7 @@ _Merchant Portal_ is the management interface where merchants do all administrat
 * Register and edit merchant profile
 * Review their shop’s performance
 
-![Merchant portal dashboard](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/merchant-portal-dashboard.png)
+![Merchant Portal dashboard](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Releases/Release+notes+202108.0/merchant-portal-dashboard.png)
 
 Documentation:
 * [Merchant Portal overview](/docs/marketplace/user/merchant-portal-user-guides/{{site.version}}/logging-in-to-the-merchant-portal.html)

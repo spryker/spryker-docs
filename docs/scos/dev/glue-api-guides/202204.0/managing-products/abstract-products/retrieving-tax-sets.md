@@ -14,6 +14,15 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/managing-products/abstract-products/retrieving-tax-sets.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-products/abstract-products/retrieving-tax-sets.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-products/abstract-products/retrieving-tax-sets.html
+related:
+  - title: Retrieving abstract products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-products.html
+  - title: Retrieving abstract product availability
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
+  - title: Retrieving abstract product prices
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-prices.html
+  - title: Retrieving image sets of abstract products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
 ---
 
 This endpoint allows retrieving detailed information about tax sets of abstract products.

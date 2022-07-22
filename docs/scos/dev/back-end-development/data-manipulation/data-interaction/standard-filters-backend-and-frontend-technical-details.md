@@ -23,7 +23,8 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-and-filters/managing-category-filters.html
 ---
 
-## Backend Technical Details
+## Backend technical details
+
 The backend part of Standard Filters feature is located in the following modules:
 
 1. ProductCategoryFilter (`spryker/product-category-filter`),
@@ -32,7 +33,8 @@ The backend part of Standard Filters feature is located in the following modules
 
 Category Filters management is described in the [Back Office guide](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/search-and-filters/managing-category-filters.html).
 
-## Frontend Technical Details
+## Frontend technical details
+
 CatalogPage module (`spryker-shop/catalog-page`) provides all applicable product filters and a basic set of templates, used by all pages.
 
 The core of each page is `page-layout-catalog.twig`, which extends another global template - `page-layout-main.twig`.
@@ -292,14 +294,13 @@ The general look of the `page-layout-catalog.twig` template is shown below:
     </form>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
-<br>
 </details>
 
 Standard product filters are represented in the form of filter-section organism (`filter-section.twig` in particular) inclusion.
 
 Related code is located in the `filterBar` section, as shown below (extra code removed):
 
-src/Pyz/Yves/CatalogPage/Theme/default/templates/page-layout-catalog/page-layout-catalog.twig
+**src/Pyz/Yves/CatalogPage/Theme/default/templates/page-layout-catalog/page-layout-catalog.twig**
 
 ```twig
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
@@ -424,12 +425,11 @@ When you look closer to the `filter-section.twig` template, you may notice, that
     {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
-<br>
 </details>
 
 As you may see from the code snippet below, this part is responsible for rendering a single filter (extra code removed):
 
-src/Pyz/Yves/CatalogPage/Theme/default/components/organisms/filter-section/filter-section.twig
+**src/Pyz/Yves/CatalogPage/Theme/default/components/organisms/filter-section/filter-section.twig**
 
 ```twig
 {% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}

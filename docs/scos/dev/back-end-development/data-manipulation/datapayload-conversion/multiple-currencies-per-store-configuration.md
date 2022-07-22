@@ -16,6 +16,9 @@ redirect_from:
   - /v5/docs/en/multiple-currencies-per-store-configuration
   - /v4/docs/multiple-currencies-per-store-configuration
   - /v4/docs/en/multiple-currencies-per-store-configuration
+related:
+  - title: Net and gross prices management
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html
 ---
 
 In a Spryker-based shop, you can define multiple currencies per store for product, product option, and shipping method. A product can, for example, cost 5 EUR in Germany, 6 EUR in France and 5 CHF in Switzerland. Your customers may easily choose between these different currencies.
@@ -23,7 +26,9 @@ In a Spryker-based shop, you can define multiple currencies per store for produc
 All prices on the **Product Page** and in the **Cart** are adjusted automatically upon changing the currency.
 
 {% info_block infoBox %}
+
 Products for which you did not define a price in a specific currency do not appear in the catalog for that currency.
+
 {% endinfo_block %}
 
 This article describes how you can configure multiple currencies for your project.
@@ -31,7 +36,9 @@ This article describes how you can configure multiple currencies for your projec
 ## Currency module
 
 {% info_block infoBox %}
+
 The Currency module provides an easy way to retrieve information about a currency given as an ISO code.
+
 {% endinfo_block %}
 
 
@@ -53,16 +60,19 @@ The methods defined in the `CurrencyFacade` return an instance of the `CurrencyT
 In addition, `CurrencyTransfer` contains information that specifies if it is the default currency or not. `CurrencyTransfer::$isDefault` can be used to check if currency that was retrieved by `CurrencyFacade::fromIsoCode()` is the same as the one configured as default for the current store.
 
 From currency version 3, we have introduced currency table where currencies are persisted. Also, currency facade provides API to read this data.
+
 {% info_block infoBox "Info" %}
 
 Check the [Curency migration guide](/docs/scos/dev/module-migration-guides/migration-guide-currency.html) to migrate to the latest  module version.
 
 {% endinfo_block %}
- We have also introduced a currency switcher to Yves. To use it, do the following:
+
+We have also introduced a currency switcher to Yves. To use it, do the following:
 
 1. Add the `\SprykerShop\Yves\CurrencyWidget\Widget\CurrencyWidget` to your `\Pyz\Yves\ShopApplication\ShopApplicationDependencyProvider::getGlobalWidgets()` method. With this switcher, we have introduced a new extension point to act when currency is changed. Implement `"\Spryker\Yves\Currency\Dependency\CurrencyPostChangePluginInterface"` in your custom plugin, place it to `"\Pyz\Yves\Currency\CurrencyDependencyProvider::getCurrencyPostChangePlugins"` and get notified when currency is changed.
 
 2. Register in Yves `RouterDependencyProvider`:
+
 ```php
 <?php
 
@@ -85,6 +95,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 ```
 
 3. Create template in `"/Pyz/Yves/Currency/Theme/default/partial/currency_switcher.twig"`:
+
 ```xml
 {% raw %}{%{% endraw %} if currencies|length > 1 {% raw %}%}{% endraw %}
     <form method="GET" action="{% raw %}{{{% endraw %} path('currency-switch') {% raw %}}}{% endraw %}" data-component="currency-switch">
@@ -99,6 +110,7 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 ```
 
 In order to get the cart recalculated when currency is switched, you need rebuild quote/recalculate item discounts, prices and other related product data when currency changes. To do that, follow these steps:
+
 1. Install the new `composer require spryker/cart-currency-connector` module.
 2. Include plugin `\Spryker\Yves\CartCurrencyConnector\CurrencyChange\RebuildCartOnCurrencyChangePlugin` to the currency post change plugin stack:
 

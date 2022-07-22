@@ -12,6 +12,9 @@ redirect_from:
   - /docs/en/howto-add-additional-countries-to-spryker-checkout
   - /v6/docs/howto-add-additional-countries-to-spryker-checkout
   - /v6/docs/en/howto-add-additional-countries-to-spryker-checkout
+related:
+  - title: Checkout feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/checkout-feature-walkthrough.html
 ---
 
 This document explains how to add additional shipping countries selected by customers upon checkout.

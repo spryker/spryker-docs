@@ -16,19 +16,19 @@ redirect_from:
 
 The *Content Items* feature creates an abstraction layer for content management in the Back Office. It lets content managers create and preserve small content pieces. Later, they are inserted into [CMS blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html) and, subsequently, into Storefront pages. Content items are rendered on Storefront using [Content Item Widget](#content-item-widget).
 
-## Content Item
-Content item is the smallest content unit in Spryker. There are four content item types shipped by default:
+## Content item
+A *content item* is the smallest content unit in Spryker. There are four content item types shipped by default:
 * Banner
 * Abstract Product List
 * Product Set
 * File List
 * Navigation
 
-You can use each content item for different purposes. For example, the Banner content item can be used to promote a specific brand or collection. The Product Set content item can be added to the landing page to display a product set as a slider or carousel. The File List adds a link or icon to download a selected file. The Navigation content item can be used to add different types of navigation elements to different shop pages.
+You can use each content item for different purposes. For example, A *Banner content item* can be used to promote a specific brand or collection. A *Product Set content* item can be added to the landing page to display a product set as a slider or carousel. The File List adds a link or icon to download a selected file. The Navigation content item can be used to add different types of navigation elements to different shop pages.
 
 {% info_block infoBox %}
 
-For use cases and exmaple of each of the content item, see [Content Item Widgets types: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-types.html) and [Content Item Widgets templates: Reference Information.](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-templates.html)
+For use cases and examples of each of the content items, see [Content Item Widgets types: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-types.html) and [Content Item Widgets templates: Reference Information.](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-templates.html)
 
 {% endinfo_block %}
 
@@ -42,7 +42,7 @@ For more information about each content item type and module relations, see [Con
 
 ## Content Item Widget
 
-Content Item Widget is a Twig code piece that is used to render a content item on Storefront.
+*Content Item Widget* is a Twig code piece that is used to render a content item on Storefront.
 
 You can insert a content item widget into a CMS block or a CMS page by selecting a respective content item in the WYSIWYG editor drop-down menu:
 

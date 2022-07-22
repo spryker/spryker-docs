@@ -2,6 +2,13 @@
 title: Edit product relations
 description: Learn how to edit product relations in the Back Office.
 template: back-office-user-guide-template
+related:
+  - title: Create product relations
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-relations/create-product-relations.html
+  - title: View product relations
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-relations/view-product-relations.html
+  - title: Product Relations feature overview
+    link: docs/scos/user/features/page.version/product-relations-feature-overview.html
 ---
 
 This document describes how to edit product relations in the Back Office.
@@ -14,7 +21,7 @@ This document describes how to edit product relations in the Back Office.
 3. Next to the product relation you want to edit, click **Edit**.
     This opens the **Edit Product Relation** page.
 
-Review the [reference information](#reference-information-edit-product-relations) before you start, or look up the necessary information as you go through the process.    
+Review the [reference information](#reference-information-edit-product-relations) before you start, or look up the necessary information as you go through the process.
 
 ## Edit general information of a product relation
 
@@ -52,4 +59,4 @@ Review the [reference information](#reference-information-edit-product-relations
 | UPDATE REGULARLY  | Defines if the product catalog is checked against the specified rules regularly. New products fulfilling the rules are added to related products automatically. Existing related products that no longer fulfill the rules are removed automatically. |
 | IS ACTIVE | Defines if the product relation is visible on the Storefront. |
 | Select product | Table for selecting a product that owns the relation. |
-| SELECT STORES | Defines the stores the product relation is displayed in. |    
+| SELECT STORES | Defines the stores the product relation is displayed in. |

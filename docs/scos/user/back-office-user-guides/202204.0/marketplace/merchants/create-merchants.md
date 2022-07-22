@@ -12,7 +12,9 @@ redirect_from:
   - /docs/en/managing-merchants
   - /docs/scos/user/back-office-user-guides/202204.0/marketplace/merchants-and-merchant-relations/managing-merchants.html
 related:
-  - title: Merchants and Merchant Relations Feature Overview
+  - title: Edit merchants
+    link: docs/scos/user/back-office-user-guides/page.version/marketplace/merchants/edit-merchants.html
+  - title: Merchants and Merchant Relations feature overview
     link: docs/scos/user/features/page.version/merchant-b2b-contracts-feature-overview.html
 ---
 

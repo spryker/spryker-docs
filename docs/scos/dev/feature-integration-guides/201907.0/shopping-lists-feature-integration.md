@@ -1059,7 +1059,7 @@ Make sure that shopping list item notes are being saved when saving shopping lis
 Make sure that shopping list collection in session and in storage is always up-to-date. You can check this by changing the session shopping list collection 'updated_at' value to be older than one in shopping list customer storage.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please overview and install the necessary features before beginning the integration step.
 

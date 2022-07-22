@@ -134,42 +134,52 @@ It may take a few minutes for the DB to restore.
 
 3. Select the vault of the environment you want to restore the backup for. For example, for a `production` environment, select the `production_rds_backup` vault.
 
-4. In the **Recovery points** pane, select the `recovery point ID` you want to restore.
+4. In the **Recovery points** pane, select the `recovery point ID` of a continuous backup you want to restore. The name should start with `continuous:`.
 
 5. On the page of the recovery point, click **Restore**.
     This opens the **Restore backup** page.
 
-6. In **Restore to point in time** pane, do one of the following:
+6. On the **Restore to point in time** pane, do one of the following:
     * To restore the latest backup, select the displayed date.
     * To restore from a specific point in time, do the following:
         1. Select **Specify date and time**.
-            This adds date and time 
-        2.
+            This adds date and time fields.
+        2. Select date and time between **Latest restorable time** and **Earliest restorable time**.
 
+7. On **Instance specifications** pane, select a **DB instance class**.
 
-7. In **Instance specifications** tab, set _**DB instance class**_ field and keep the rest of fields as default.
+8. On the **Settings** pane, enter a unique **DB Instance Identifier**.
 
-8. In **Settings** tab, set _**DB Instance Identifier**_ as new DB name.
+9. On the **Network and security** pane, set _**Virtual Private Cloud (VPC)**_ as RDS belongs to.
 
-9. In **Network and security** tab, set _**Virtual Private Cloud (VPC)**_ as RDS belongs to. Then select __**Subnet group**__ and _**Public accessibility**_.
+10. Select a **Subnet group**.
 
-10. In **Database options** tab, set _**Database port**_ and _**DB parameter group**_ as it should be.
+11. Select **Public accessibility**.
 
-11. In **Log exports** tab, choose any type of log to be published to AWS CloudWatch.
+12. On the **Database options** pane, enter a **Database port**.
 
-12. In **Maintenance** tab, choose _**Auto minor version upgrade**_.
+13. Select a **DB parameter group**.
 
-13. In **Restore role** tab, choose _**Default role**_ or _**Choose an IAM role**_.
+14. On the **Log exports** tab, select the log types to publish to Amazon CloudWatch Logs.
 
-14. Click **Restore backup**.
+15. On **Maintenance** pane, select **Auto minor version upgrade**.
 
-15. Restored DB is created.
+16. On **Restore role** pane, select an IAM role to restore the backup with in one of the following ways:
+    * Select **Default role**.
+    * Select a specific role:
+        1. Select **Choose an IAM role**.
+        2. Select a **Role name**.
 
-16. In the AWS Management Console, go to **Services** > [**RDS**](https://console.aws.amazon.com/rds/).
+17. Click **Restore backup**.
+This opens the **Jobs** page where you can see the progress of restoration. Wait for the process to finish.
 
-17. In the navigation pane, select **Databases**.
+18. In the AWS Management Console, go to **Services** > [**RDS**](https://console.aws.amazon.com/rds/).
 
-18. Select the restored DB and click on **Modify**.
+17. In the navigation pane, click **Databases**.
+
+18. On the **Databases** page, select the restored DB. 
+
+19. and click on **Modify**.
 
 19. In **Connectivity** tab, modify _**Security group**_ field.
 

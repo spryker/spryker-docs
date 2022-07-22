@@ -3863,7 +3863,7 @@ entries:
       - title: Multi-theme
         url: /docs/scos/dev/front-end-development/yves/multi-theme.html
     - title: Migration guide - Switch from Yarn to NPM v8
-      url: /docs/scos/dev/front-end-development/migration-guide-switch-to-npm.html
+      url: /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
   - title: Migration concepts
     nested:
     - title: Decimal Stock migration concept

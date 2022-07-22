@@ -72,7 +72,7 @@ jobs:
 
             - uses: actions/setup-node@v1
               with:
-                  node-version: '12'
+                  node-version: '16'
 
             - name: NPM cache
               uses: actions/cache@v2
@@ -134,7 +134,7 @@ jobs:
                   vendor/bin/console frontend:project:install-dependencies
             - name: Install NPM packages
               run: |
-                  sudo npm install -g --unsafe-perm speccy@0.11.0
+                  sudo npm install --location=global --unsafe-perm speccy@0.11.0
             - name: Speccy lint Glue specification
               run: speccy lint src/Generated/Glue/Specification/spryker_rest_api.schema.yml --rules=default
 

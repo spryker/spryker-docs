@@ -735,7 +735,7 @@ legacy-peer-deps=true
 Run commands from the root of the project:
 
 ```bash
-npm i -g @angular/cli@12.2.16
+npm i --location=global @angular/cli@12.2.16
 ```
 
 `ng --version` should show Angular CLI: 12.2.16 version.

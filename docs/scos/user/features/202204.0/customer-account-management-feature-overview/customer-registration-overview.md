@@ -49,11 +49,11 @@ A Back Office user can register a customer by entering customer account details.
 
 To learn how a Back Office user creates customer accounts, see [Creating customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/create-customers.html).
 
-### Registration via Glue API
+### Registration using Glue API
 
 A developer can register a customer by passing their customer account details using Glue API. The verification email is sent to the email address passed in the registration request. The customer activates the account by verifying their email address. Alternatively, a developer can verify the customer's email address using Glue API.
 
-{% info_block infoBox "Verifying a customer's email address via Glue API" %}
+{% info_block infoBox "Verifying a customer's email address using Glue API" %}
 
 A developer can verify a customer's email address using Glue API regardless of the way the account was created.
 
@@ -63,7 +63,7 @@ To learn how a developer creates customer accounts using Glue API, see [Create a
 
 To learn how a developer confirms a customer's email address, see [Confirming customer registration](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/confirming-customer-registration.html).
 
-### Registration via import
+### Registration using import
 
 A developer can register a customer by importing their customer account details. The verification email is sent to the email address specified in the import file. The customer activates the account by verifying their email address.
 

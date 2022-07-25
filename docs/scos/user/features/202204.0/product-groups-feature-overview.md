@@ -1,6 +1,6 @@
 ---
 title: Product Groups feature overview
-description: Product Groups feature allows product catalog managers to group products by attributes.
+description: Product Groups feature lets product catalog managers group products by attributes.
 last_updated: Jul 26, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-groups-feature-overview
@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/features/202200.0/product-groups-feature-overview.html
 ---
 
-The *Product Groups* feature allows product catalog managers to group products by attributes, like color or size. A typical use case is combining the same product in different colors into a product group (not to be confused with [product variant](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html)). The feature changes the way shop users interact with products by improving accessibility and navigation.
+The *Product Groups* feature lets product catalog managers group products by attributes, like color or size. A typical use case is combining the same product in different colors into a product group (not to be confused with [product variant](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html)). The feature changes the way shop users interact with products by improving accessibility and navigation.
 
 ## Product groups on the Storefront
 

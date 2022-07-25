@@ -13,14 +13,14 @@ redirect_from:
   - /docs/scos/user/features/202200.0/inventory-management-feature-overview.html
 ---
 
-Thr *Inventory Management* feature refers to warehousing and managing your store’s stock. In this context, a *warehouse* is a physical place where your products are stored, and *stock* is the number of products available in the warehouse. See [Warehouse management](#warehouse-management) and [Stock management](#stock-management) for details about how to manage them.
-Stock does not always reflect the real availability of products, as not all the items available in stock are available for sale. For example, if items are *reserved*, that is, there are pending orders with these items, they can not be ordered, even though physically, they are still in stock. The value that reflects the difference between the current quantity of products in stock and the quantity of these products in the pending orders, is referred to as the *availability* of products. The availability is calculated per store. For details about how to manage availability, see [Availability management](#availability-management).
+The *Inventory Management* feature refers to warehousing and managing your store’s stock. In this context, a *warehouse* is a physical place where your products are stored, and *stock* is the number of products available in the warehouse. See [Warehouse management](#warehouse-management) and [Stock management](#stock-management) for details about how to manage them.
+Stock does not always reflect the real availability of products, as not all the items available in stock are available for sale. For example, if items are *reserved*, that is, there are pending orders with these items, they can not be ordered, even though physically, they are still in stock. The value that reflects the difference between the current quantity of products in stock and the quantity of these products in the pending orders, is referred to as the *availability* of products. The availability is calculated per store. For details about managing availability, see [Availability management](#availability-management).
 
 ## Warehouse management
 
 You can [create warehouses in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/create-warehouses.html) or [import them](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html).
 
-A warehouse can be assigned to a single store or shared between several stores. For the warehouse and stock management scenarios you can set up for your project, see [Managing stocks in a multi-store environment: Best practices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html). You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. For details about how you can manage warehouses and stores in the back office, see [Managing warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/edit-warehouses.html). For details about how you can import the warehouse and store data, see [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html).
+A warehouse can be assigned to a single store or shared between several stores. For the warehouse and stock management scenarios you can set up for your project, see [Managing stocks in a multi-store environment: Best practices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html). You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. For details about managing warehouses and stores in the back office, see [Managing warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/edit-warehouses.html). For details about importing the warehouse and store data, see [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html).
 
 ### Defining a warehouse address
 
@@ -60,7 +60,7 @@ Schematically, the process looks like this:
 
 ## Stock management
 
-When the order is made, the stock is not updated automatically in the system, you have to set it manually. You can define stock only for concrete products. You can set stock by:
+When the order is made, the stock is not updated automatically in the system, and you have to set it manually. You can define stock only for concrete products. You can set stock by doing the following:
 
 * Editing product stock in the Back Office. For details, see [Edit stock of products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/edit-stock-of-products-and-product-bundles.html).
 * Importing the quantities of items stored in each of the warehouses. For details, see [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/stocks.html).
@@ -79,7 +79,7 @@ Product availability after the order:
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/after-order-placement.png)
 
-For details about how you can check product availability in the Back Office, see [Check availability of products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/check-availability-of-products.html).
+For details about checking product availability in the Back Office, see [Check availability of products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/check-availability-of-products.html).
 
 {% info_block infoBox %}
 

@@ -11,9 +11,6 @@ redirect_from:
   - /docs/configuring-a-mount-mode
   - /docs/en/configuring-a-mount-mode
 related:
-  - title: Choosing a mount mode
-    link: docs/scos/dev/the-docker-sdk/page.version/choosing-a-mount-mode.html
-related:
   - title: The Docker SDK
     link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
   - title: Docker SDK quick start guide

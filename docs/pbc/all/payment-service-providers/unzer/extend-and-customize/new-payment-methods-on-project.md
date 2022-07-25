@@ -1,17 +1,16 @@
 ---
 title: Understand how implement new payment methods on project level. 
-description: Manual on how to easily implement payment methods that are not yet provided by module, on project level.
+description: Guide to easily implement payment methods that are not yet provided by integration, on project level.
 last_updated: Jul 20, 2022
 template: concept-topic-template
 ---
 
-This document shows how to implement Unzer payment types that are not currently presented in Unzer Eco module into your project.
-In this guide we will use Unzer PayPal as an example.
+This document shows how to implement Unzer payment types that are not currently available in Unzer Eco module. In this guide we will use Unzer PayPal as an example.
 
 ## Prerequisites
 
-[Install and configure Unzer](/docs/pbc/all/payment-service-providers/unzer/install-unzer/install-and-configure-unzer.html).
-[Integrate Unzer](/docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.html)
+[Install and configure Unzer]({% link docs/pbc/all/payment-service-providers/unzer/install-unzer/install-and-configure-unzer.md %}).
+[Integrate Unzer]({% link docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.md %})
 
 
 ## Implementation
@@ -145,6 +144,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 4. Edit payment template:
 **src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig**
 ```twig
+{% raw %}
 {% extends template('page-layout-checkout', 'CheckoutPage') %}
 {% define data = {
     backUrl: _view.previousStepUrl,
@@ -158,7 +158,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
         'Unzer/views/pay-pal': ['pay-pal', 'unzer'],
         },
 } %}
-
+{% endraw %}
 ```
 
 5. Introduce `PayPalFormDataProvider`:

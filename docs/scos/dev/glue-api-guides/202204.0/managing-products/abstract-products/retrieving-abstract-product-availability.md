@@ -21,7 +21,7 @@ related:
   - title: Retrieving image sets of abstract products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
   - title: Retrieving tax sets
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-tax-sets.html
+    link: docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html
 ---
 
 This endpoint allows retrieving information about availability of abstract products.

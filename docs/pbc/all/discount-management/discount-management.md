@@ -1,6 +1,6 @@
 ---
-title: Promotions & Discounts feature overview
-description: The feature lets you create different types of discounts and apply multiple in-built discount settings suitable for any business requirements.
+title: Discount Management
+description: The capability lets you create different types of discounts and apply multiple in-built discount settings suitable for any business requirements.
 last_updated: Oct 13, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/promotions-discounts-feature-overview
@@ -18,7 +18,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202200.0/merchandising/discount/docs/scos/user/features/202200.0/promotions-discounts-feature-overview.html
 ---
 
-The *Promotions & Discounts* feature lets shop owners provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.
+The *Discount Management* capability lets shop owners provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.
 
 ## Discount types
 
@@ -68,7 +68,7 @@ A discount can have one or more decision rules. Find an exemplary combination be
 
 In this case, the discount is applied if the cart contains 3 items and the purchase is made on the fifth day of the week (Friday).
 
-Multiple decision rules form a query. A query is a request for information based on the defined parameters. In the Discount feature, a query requests information from a cart to check if it is eligible for the discount. By specifying decision rules, you define the parameters of the query.
+Multiple decision rules form a query. A query is a request for information based on the defined parameters. In the Discount Management capability, a query requests information from a cart to check if it is eligible for the discount. By specifying decision rules, you define the parameters of the query.
 
 In the Back Office, you create decision rules in a Query Builder. Query Builder transforms the decision rules into a single query.
 

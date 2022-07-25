@@ -1,5 +1,5 @@
 ---
-title: Retrieving promotional items
+title: Retrieve promotional items
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-promotional-items
@@ -12,6 +12,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/retrieving-promotional-items.html
   - /docs/scos/dev/glue-api-guides/201903.0/retrieving-promotional-items.html
   - /docs/scos/dev/glue-api-guides/201907.0/retrieving-promotional-items.html
+  - /docs/scos/dev/glue-api-guides/202204.0/retrieving-promotional-items.html  
 related:
   - title: Promotions and Discounts feature overview
     link: docs/scos/user/features/page.version/promotions-discounts-feature-overview.html

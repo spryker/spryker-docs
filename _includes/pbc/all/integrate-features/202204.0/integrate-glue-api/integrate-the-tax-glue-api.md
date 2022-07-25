@@ -1,14 +1,3 @@
----
-title: Glue API - Tax feature integration
-description: This guide walks you through the process of installing and configuring the Product Tax Sets API feature in your project.
-last_updated: Nov 22, 2019
-template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/v3/docs/tax-api-feature-integration-201907
-originalArticleId: 48705764-af9f-4d16-be2f-6ba995e10ee1
-redirect_from:
-  - /v3/docs/tax-api-feature-integration-201907
-  - /v3/docs/en/tax-api-feature-integration-201907
----
 
 ## Install feature API
 ### Prerequisites
@@ -16,8 +5,8 @@ To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | 201907.0 | [Glue Application](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
-| Product | 201907.0 | [Products API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/product-api-feature-integration.html) |
+| Spryker Core | 201907.0 | [Glue Application](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| Product | 201907.0 | [Products API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html) |
 | Tax | 201907.0 |  |
 
 ### 1) Install the required modules using Composer
@@ -141,7 +130,7 @@ Make sure that the following endpoint is available:<br>`http://mysprykershop.com
 
 **See also:**
 
-* [Tax Management](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html)
+* [Tax Management](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html)
 
  
 *Last review date: Mar 21, 2019*

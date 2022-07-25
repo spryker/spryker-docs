@@ -34,8 +34,6 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-discount.html
   - title: Creating Vouchers
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/creating-vouchers.html
-  - title: Migration guide - Tax
-    link: docs/scos/dev/module-migration-guides/migration-guide-tax.html
   - title: Migration guide - DiscountSalesAggregatorConnector
     link: docs/scos/dev/module-migration-guides/migration-guide-discountsalesaggregatorconnector.html
 ---

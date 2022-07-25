@@ -177,15 +177,16 @@ This opens the **Jobs** page where you can see the progress of restoration. Wait
 
 17. In the navigation pane, click **Databases**.
 
-18. On the **Databases** page, select the restored DB. 
+18. On the **Databases** page, select the restored DB.
 
-19. and click on **Modify**.
+19. On the page of the DB, click **Modify**.
+    This opens the **Modify DB instance: {DB name}** page.
 
-19. In **Connectivity** tab, modify _**Security group**_ field.
+20. On **Connectivity** pane, select a **Security group**.
 
-20. Click **Continue**.
+21. Click **Continue**.
 
-21. In **Scheduling of modifications** tab, choose _**Apply immediately**_.
+21. On the **Scheduling of modifications** pane, for **When to apply modifications**, select **Apply immediately**.
 
 22. Click **Modify DB instance**.
 

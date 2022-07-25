@@ -13,18 +13,17 @@ redirect_from:
   - /docs/scos/user/features/202200.0/file-manager-feature-overview/file-manager-feature-overview.html
 ---
 
-The *File Manager* feature lets you upload and manager your assets effectively.
+The *File Manager* feature lets you upload and manage your assets effectively.
 
 A Back Office user can upload files and add them to CMS pages and blocks to display on the Storefront.
 
-Apart from images, you can add a great variety of different types of assets to your project, including but not limited by the following:
-
+Apart from images, you can add a great variety of different types of assets to your project, including but not limited to the following:
 * Presentations
 * PDF documents
 * Graphics
 * Banners
 
-This lets content managers create rich, compelling and attractive content for your customers, as well as gives the chance to offer your customers additional information they might be interested in, like user manuals or instructions.
+This lets content managers create rich, compelling, and attractive content for your customers and also gives them a chance to offer your customers additional information they might be interested in, like user manuals or instructions.
 
 ## Related Business User articles
 

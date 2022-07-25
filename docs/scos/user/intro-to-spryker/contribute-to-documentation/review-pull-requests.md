@@ -1,20 +1,23 @@
 ---
-title: Reviewing pull requests
+title: Review pull requests
 description: Learn how you can propose your changes to a pull request
+last_updated: Jul 18, 2022
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
 related:
-  - title: Building the documentation site
-    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
-  - title: Adding product sections to the documentation
-    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-product-sections-to-the-documentation.html
-  - title: Editing documentation via pull requests
-    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/editing-documentation-via-pull-requests.html
-  - title: Reporting documentation issues
-    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/reporting-documentation-issues.html
+  - title: Build the documentation site
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/build-the-documentation-site.html
+  - title: Add product sections to the documentation
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/add-product-sections-to-the-documentation.html
+  - title: Edit documentation via pull requests
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/edit-documentation-via-pull-requests.html
+  - title: Report documentation issues
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/report-documentation-issues.html
   - title: Style, syntax, formatting, and general rules
-    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/style-formatting-general-rules.html
   - title: Markdown syntax
-    link: docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
+    link: docs/scos/user/intro-to-spryker/contribute-to-documentation/markdown-syntax.html
 ---
 
 When someone requests your review of a pull request, you get an email about the request. <!--Also, a message with the review request is displayed on the pull request page:IMAGE-->

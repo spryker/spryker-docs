@@ -554,9 +554,9 @@ export default register(
 **What's next?**
 The following topics will help you in developing Spryker Atomic Frontend step-by-step:
 
-[Tutorial - Customize Spryker Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/customizing-spryker-front-end.html)
-[Tutorial - Frontend - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html)
-[Tutorial - Frontend - Override a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html)
-[Tutorial - Frontend - Extend a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/extending-a-component.html)
-[Tutorial - Frontend - Integrate JQuery into Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html)
-[Tutorial - Frontend - Use a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/using-a-component.html)
+[Tutorial: Customize Spryker Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/customizing-spryker-front-end.html)
+[Tutorial: Frontend - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html)
+[Tutorial: Frontend - Override a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html)
+[Tutorial: Frontend - Extend a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/extending-a-component.html)
+[Tutorial: Frontend - Integrate JQuery into Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html)
+[Tutorial: Frontend - Use a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/using-a-component.html)

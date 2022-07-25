@@ -14,16 +14,17 @@ redirect_from:
 
 The _Product Restrictions_ feature lets merchants define the products that are available to each of their B2B customers.
 
-In terms of [Merchant concept](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html), the **merchant** is the one who sells products on a marketplace and can set prices.
+In terms of the [Merchant concept](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html), a *merchant* is the one who sells products on a marketplace and can set prices.
 
-Product restrictions from a merchant to a buyer give merchants [another layer](/docs/scos/user/features/{{page.version}}/customer-access-feature-overview.html) of control over the information, a customer can see in the shop application. Based on product restrictions, you can:
+Product Restrictions from a merchant to a buyer give merchants [another layer](/docs/scos/user/features/{{page.version}}/customer-access-feature-overview.html) of control over the information a customer can see in the shop application. Based on product restrictions, you can do the following actions:
 
 * Create a list of products.
-* Hide the product information for the products (pricing, appearance in the search/filters), and limit access to a product details page.
+* Hide the product information for the products (pricing, appearance in the search/filters).
+* Limit access to a product details page.
 
-Product Restriction feature works on the basis of whitelist/blacklist lists. That means that products that are added to whitelist are always shown to a customer while blacklisted products are hidden from the customer view.
+Product Restriction works on the basis of allowlist and excludelist lists. That means that products that are added to an allowlist are always shown to a customer while products from an excludelist are hidden from the customer view.
 
-To restrict the products, a Shop Administrator needs to create a product list, include the necessary products to the list and blacklist them for a specific merchant relationship. All other products will be available for that merchant relationship.
+To restrict the products, a shop administrator needs to create a product list, include the necessary products to the list and excludelist them for a specific merchant relationship. All other products will be available for that merchant relationship.
 
 To create product lists, follow [Create product lists](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-lists/create-product-lists.html).
 
@@ -31,8 +32,8 @@ You can check more cases of product restrictions workflow on the [Restricted Pro
 
 ## Current constraints
 
-- In the situation when a single product from the product set is blacklisted, the other items are displayed in the shop. We are going to update the logic in a way, that in case any of the items in the product set gets blacklisted, all relevant product sets containing this item will get blacklisted too.
--  The current functionality allows displaying the whole product bundle even if it contains the blacklisted customer-specific products. We are working on updating the logic so that if the bundle product includes a blacklisted item, the whole bundle is also blacklisted for a customer.
+- When a single product from the product set is added to an excludelist, the other items are displayed in the shop. We are going to update the logic in a way that in case any of the items in the product set is added to the excludelist, all relevant product sets containing this item will be added to the excludelist too.
+-  The current functionality allows displaying the whole product bundle even if it contains the customer-specific products from the excludelist. We are working on updating the logic so that if the bundle product includes an item from the excludelist, the whole bundle will also also be hidden from a customer.
 
 ## Related Business User articles
 

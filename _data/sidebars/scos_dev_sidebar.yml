@@ -940,7 +940,6 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
       - title: Carts of registered users
         include_versions:
         - "202009.0"
@@ -966,7 +965,6 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
       - title: Sharing company user carts
         include_versions:
         - "201907.0"

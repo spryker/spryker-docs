@@ -1,7 +1,7 @@
 ---
-title: Managing guest carts
-description: Retrieve details about guest carts and learn what else you can do with the resource.
-last_updated: Jun 16, 2021
+title: Retrieve cart rules and vouchers in guest carts
+description: Retrieve details about cart rules and vouchers in guest carts
+last_updated: July 25, 2022
 template: glue-api-storefront-guide-template
 
 ---
@@ -206,33 +206,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 <a name="guest-cart-response-attributes"></a>
 
-**General Cart Information**
-
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| priceMode | String | Price mode that was active when the cart was created. |
-| currency | String | Currency that was selected when the cart was created. |
-| store | String | Store for which the cart was created. |
-| name | String | Name of the shopping cart. |
-| isDefault | Boolean | Defines whether the cart is default or not. |
-
-**Totals Information**
-
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| expenseTotal | Integer | Total amount of expenses (including e.g. shipping costs). |
-| discountTotal | Integer | Total amount of discounts applied to the cart. |
-| taxTotal | Integer | Total amount of taxes to be paid. |
-| subTotal | Integer | Subtotal of the cart. |
-| grandTotal | Integer | Grand total of the cart. |
-
-**Discount Information**
-
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| displayName | String | Discount name. |
-| code | String | Discount code applied to the cart. |
-| amount | Integer | Discount amount applied to the cart. |
+{% include pbc/all/glue-api-guides/guest-cart-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/guest-cart-response-attributes.md -->
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -251,21 +225,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | CODE | REASON |
 | --- | --- |
 | 101 | Cart with given uuid not found. |
-| 102 | Failed to add an item to cart. |
-| 103 | Item with the given group key not found in the cart. |
 | 104 | Cart uuid is missing. |
-| 105 | Cart cannot be deleted. |
-| 106 | Cart item cannot be deleted. |
-| 107 | Failed to create a cart. |
 | 109 | Anonymous customer unique id is empty. |
-| 111 | Can’t switch price mode when there are items in the cart. |
-| 112 | Store data is invalid. |
-| 113 | Cart item cannot be added. |
-| 114 | Cart item cannot be updated. |
-| 115 | Unauthorized cart action. |
-| 116 | Currency is missing. |
-| 117 | Currency is incorrect. |
-| 118 | Price mode is missing. |
-| 119 | Price mode is incorrect. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

@@ -13,11 +13,11 @@ redirect_from:
   - /docs/scos/user/features/202200.0/company-account-feature-overview/company-accounts-overview.html
 ---
 
-Company accounts let you build an organizational structure for your B2B business.
+*Company accounts* let you build an organizational structure for your B2B business.
 
 ## Company
 
-The top level of every B2B business model hierarchy is a *company*. The company represents a legal organization, which is related to stores and has specific metadata, like a tax number. A company can have a name, activity state, and status attributes.
+The top level of every B2B business model hierarchy is a *company*. The company represents a legal organization related to stores and has specific metadata, like a tax number. A company can have a name, activity state, and status attributes.
 
 {% info_block warningBox "Company statuses" %}
 
@@ -30,13 +30,13 @@ On initial registration of a company, in the Back Office, it appears with the *P
 
 ## Business unit
 
-A company consists of several *business units* which you can consider as physical divisions of the company. The business units, can have a hierarchical structure too. They can have their own departments and teams. Business units also have metadata, like a tax number.
+A company consists of several *business units*, which you can consider physical divisions of the company. Business units can have a hierarchical structure too. They can have their own departments and teams. Business units also have metadata, like a tax number.
 
 ![company-account-overview.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Company+Account/Company+Account+Feature+Overview/company-account-overview.png)
 
 ## Company address
 
-The level below the business unit is *company address*. The company address is a physical representation of a company.
+The level below the business unit is the *company address*. The company address is a physical representation of a company.
 
 One company address can be assigned to several business units. For example, if IT and Sales departments are located in the same office, they can share one company address.
 

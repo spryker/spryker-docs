@@ -142,9 +142,9 @@ It may take a few minutes for the DB to restore.
 
 7. In **Instance specifications** tab, set _**DB instance class**_ field and keep the rest of fields as default.
 
-8. In **Settings** tab, set _**DB Instance Identifier**_ as new DB name.
+8. In **Settings** tab, set _**DB Instance Identifier**_ of original DB name.
 
-9. In **Network and security** tab, set _**Virtual Private Cloud (VPC)**_ as RDS belongs to. Then select __**Subnet group**__ and _**Public accessibility**_.
+9. In **Network and security** tab, set _**Virtual Private Cloud (VPC)**_ which RDS belongs to (`{environment-name}`). Then select __**Subnet group**__ and _**Public accessibility**_.
 
 10. In **Database options** tab, set _**Database port**_ and _**DB parameter group**_ as it should be.
 
@@ -164,7 +164,7 @@ It may take a few minutes for the DB to restore.
 
 18. Select the restored DB and click on **Modify**.
 
-19. In **Connectivity** tab, modify _**Security group**_ field.
+19. In **Connectivity** tab, modify _**Security group**_ field as which RDS belongs to (`{environment-name}-mariadb`).
 
 20. Click **Continue**.
 

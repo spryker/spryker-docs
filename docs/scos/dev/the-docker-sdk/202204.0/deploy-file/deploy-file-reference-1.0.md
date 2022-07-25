@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/installation/spryker-in-docker/docker-sdk/deploy-file-reference-1.0.html
 related:
   - title: Docker SDK
-    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html 
+    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
   - title: Deploy file inheritance — common use cases
     link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-inheritance-common-use-cases.html
   - title: Deploy file
@@ -135,6 +135,26 @@ environment: 'docker'
 ```
 
 ***
+
+### environment-configuration: secrets:
+
+Defines secrets and their configuration:
+
+* `environment-configuration: secrets: name:`—Secret's name.
+* `environment-configuration: secrets: grant:`—Secret's permissions.
+* `environment-configuration: secrets: bucket:`—Defines what the secret is used for. Acceptable values are `app`, `scheduler`, `pipeline`, and `common`. `common` is the default value. Common secrets can be used by all the buckets.
+
+### environment-configuration: params:
+
+Defines parameters and their configuration:
+
+* `environment-configuration: params: name:`—Parameter's name.
+* `environment-configuration: params: bucket:`—Secret's name.
+* `environment-configuration: params: default:`—Parameter's default value. Accepts string, number, and json values.
+* `environment-configuration: params: grant:`—Parameter's permissions.
+
+
+
 
 ### imports:
 

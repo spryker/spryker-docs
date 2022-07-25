@@ -1,5 +1,6 @@
 ---
 title: Customer Login overview
+description: Customer Login lets you prevent brute-force login attacks
 last_updated: Jul 15, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-login-overview
@@ -11,7 +12,7 @@ redirect_from:
   - /docs/en/customer-login-overview
 ---
 
-The *Cusotmer Login* feature with an enhanced secure password policy lets you prevent brute-force login attacks by configuring your project in the following ways:
+The *Customer Login* feature with an enhanced secure password policy lets you prevent brute-force login attacks by configuring your project in the following ways:
 
 * Block a Storefront user account for some time after a certain number of login attempts.
 * Enforce the use of strong passwords by defining requirements for a password, like its length and allowed and forbidden characters.

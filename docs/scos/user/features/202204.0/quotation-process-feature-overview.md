@@ -81,7 +81,7 @@ Schematically, the workflow is shown in the following diagram:
 ### Sales representative workflow
 
 A sales representative can create an RFQ using two working procedures:
-* Via an [agent](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) account.
+* By an [agent](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) account.
 * On behalf of a company user.
 
 #### By an agent account

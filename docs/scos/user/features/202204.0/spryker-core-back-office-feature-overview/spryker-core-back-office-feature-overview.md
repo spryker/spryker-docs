@@ -69,11 +69,11 @@ You can also let your users sign in from a third-party service set up for your p
 
 {% info_block infoBox %}
 
-The feature is shipped with an exemplary ECO module that supports authentication via Microsoft Azure Active Directory. With the existing infrastructure, you can develop your own ECO modules for the identity managers you need.
+The feature is shipped with an exemplary ECO module that supports authentication using Microsoft Azure Active Directory. With the existing infrastructure, you can develop your own ECO modules for the identity managers you need.
 
 {% endinfo_block %}
 
-If a user chooses to log in via a third-party, the user is redirected to the OAuth provider's sign-in page—for example, Microsoft Azure. If the user logs in to the third-party service successfully, the check is made if the user exists in the Spryker database. If the user exists in the database and is active, the user is logged in. If the user does not exist in the database, you can have one of the two different behaviors or strategies for your project:
+If a user chooses to log in using a third party, the user is redirected to the OAuth provider's sign-in page—for example, Microsoft Azure. If the user logs in to the third-party service successfully, the check is made if the user exists in the Spryker database. If the user exists in the database and is active, the user is logged in. If the user does not exist in the database, you can have one of the two different behaviors or strategies for your project:
 
 <a name="strategies"></a>
 
@@ -89,7 +89,7 @@ With Strategy 1, the login process looks like this:
 
 **Strategy 2: Do not log in the user unless they exist in the Spryker database.**
 
-Before a user can log in to Back Office with a third-party service credentials, the user should be added and set to Active in the database. You can add the user either via the Back Office or via the ACL module.
+Before a user can log in to Back Office with a third-party service credentials, the user should be added and set to Active in the database. You can add the user using either the Back Office or the ACL module.
 
 With Strategy 2, the login process looks like this:
 

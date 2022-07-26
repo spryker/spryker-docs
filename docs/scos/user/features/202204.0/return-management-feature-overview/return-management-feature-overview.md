@@ -22,7 +22,7 @@ Once an order has been shipped, the registered buyer or a Back Office user can i
 
 {% info_block warningBox "Note" %}
 
-You can also create and manage returns via Glue API. For details, see [Manging the returns](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-returns/managing-the-returns.html).
+You can also create and manage returns using Glue API. For details, see [Manging the returns](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-returns/managing-the-returns.html).
 
 {% endinfo_block %}
 
@@ -69,8 +69,8 @@ Buyers and Back Office users can have a paper version of the return by printing 
 
 ## Return Management on the Storefront
 
-The **registered buyers** can return entire orders or individual sales order items as soon as they have been delivered to them. When returning, the buyers can select or enter a return reason.
-The **guest users** can not initiate returns of their orders, as the return management is done via the Customer Account on the Storefront. Returns of the guest orders can be initiated only via the Back Office by the Back Office user.
+The *registered buyers* can return entire orders or individual sales order items as soon as they have been delivered to them. When returning, the buyers can select or enter a return reason.
+The *guest users* can not initiate returns of their orders, as the return management is done by the Customer Account on the Storefront. Returns of the guest orders can be initiated only in the Back Office by the Back Office user.
 
 {% info_block warningBox "Note" %}
 

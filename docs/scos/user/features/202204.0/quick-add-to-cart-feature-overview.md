@@ -103,7 +103,7 @@ After the feature is integrated<!-- link to integration guide-->, a buyer can se
 
 ![File Upload form](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/file-upload-form.png)
 
-Buyers can upload a CSV by choosing a file from their local system or via drag & drop. To make the process clearer, they can download a sample CSV file and add the necessary data (SKU and Qty) there:
+Buyers can upload a CSV file by choosing a file from their local system or by drag & drop. To make the process clearer, they can download a sample CSV file and add the necessary data (SKU and Qty) there:
 
 ![File Upload a CSV file](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/file-upload-csv.png)
 

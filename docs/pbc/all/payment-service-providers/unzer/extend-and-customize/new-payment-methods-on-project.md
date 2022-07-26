@@ -1,21 +1,24 @@
 ---
-title: Understand how implement new payment methods on project level. 
-description: Guide to easily implement payment methods that are not yet provided by integration, on project level.
+title: Implement new payment methods on the project level
+description: This document shows how to implement new payment methods, which are not yet provided by integration, on the project level.
 last_updated: Jul 20, 2022
 template: concept-topic-template
 ---
 
-This document shows how to implement Unzer payment types that are not currently available in Unzer Eco module. In this guide we will use Unzer PayPal as an example.
+This document shows how to implement Unzer payment types, which are not currently available in the Unzer Eco module. This document uses Unzer PayPal as an example.
 
 ## Prerequisites
 
-[Install and configure Unzer]({% link docs/pbc/all/payment-service-providers/unzer/install-unzer/install-and-configure-unzer.md %}).
-[Integrate Unzer]({% link docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.md %})
+Before implementing the Unzer payment method, make sure to check and fulfill the following preconditions:
+
+* [Install and configure Unzer](/docs/pbc/all/payment-service-providers/unzer/install-unzer/install-and-configure-unzer.html).
+* [Integrate Unzer](/docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.html)
 
 
 ## Implementation
 
-1. Add PayPal to OMS process list and to payment methods state-machine mappings:
+1. Add PayPal to the OMS process list and payment methods `state-machine` mappings:
+
 **config/Shared/config_default.php**
 ```php
 $config[OmsConstants::ACTIVE_PROCESSES] = [
@@ -31,8 +34,10 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 ];
 ```
 
-2. Add your OMS schema for PayPal payment or use next example:
-**config/Zed/oms/UnzerPayPal01.xml**
+2. Add your OMS schema for PayPal payment or use the following example:
+
+<details><summary markdown='span'>config/Zed/oms/UnzerPayPal01.xml</summary>
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <statemachine
@@ -128,7 +133,10 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 </statemachine>
 ```
 
-3. Extend `PaymentTransfer` with new property:
+</details>
+
+1. Extend `PaymentTransfer` with new property:
+
 **src/Pyz/Shared/Payment/Transfer/payment.transfer.xml**
 ```xml
 <?xml version="1.0"?>
@@ -142,7 +150,9 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 ```
 
 4. Edit payment template:
+
 **src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig**
+
 ```twig
 {% raw %}
 {% extends template('page-layout-checkout', 'CheckoutPage') %}
@@ -162,7 +172,9 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 ```
 
 5. Introduce `PayPalFormDataProvider`:
-**src/Pyz/Yves/Unzer/Form/DataProvider/PayPalFormDataProvider.php**
+
+<details><summary markdown='span'>src/Pyz/Yves/Unzer/Form/DataProvider/PayPalFormDataProvider.php</summary>
+
 ```php
 <?php
 
@@ -211,8 +223,12 @@ class PayPalFormDataProvider extends AbstractFormDataProvider
 }
 ```
 
-6. Introduce PayPalSubform:
-**src/Pyz/Yves/Unzer/Form/PayPalSubform.php**
+</details>
+
+6. Introduce `PayPalSubform`:
+
+<details><summary markdown='span'>src/Pyz/Yves/Unzer/Form/PayPalSubform.php</summary>
+
 ```php
 <?php
 
@@ -270,8 +286,12 @@ class PayPalSubform extends AbstractUnzerSubForm
 } 
 ```
 
+</details>
+
 7. Introduce `UnzerPayPalSubFormPlugin`:
-**src/Pyz/Yves/Unzer/Plugin/StepEngine/UnzerPayPalSubFormPlugin.php**
+
+<details><summary markdown='span'>src/Pyz/Yves/Unzer/Plugin/StepEngine/UnzerPayPalSubFormPlugin.php</summary>
+
 ```php
 <?php
 
@@ -321,8 +341,12 @@ class UnzerPayPalSubFormPlugin extends AbstractPlugin implements SubFormPluginIn
 }
 ```
 
-8. Add `CheckoutPage` plugins to plugin stack:
-   **src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php**
+</details>
+
+8. Add `CheckoutPage` plugins to the plugin stack:
+
+<details><summary markdown='span'>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
+
 ```php
 ...
 use Pyz\Yves\Unzer\Plugin\StepEngine\UnzerPayPalSubFormPlugin;
@@ -361,8 +385,12 @@ use Pyz\Yves\Unzer\Plugin\StepEngine\UnzerPayPalSubFormPlugin;
 
 ```
 
-9. Override `UnzerFactory` to introduce new methods in Yves layer:
-**src/Pyz/Yves/Unzer/UnzerFactory.php**
+</details>
+
+9. To introduce new methods in the `Yves` layer, override `UnzerFactory`:
+
+<details><summary markdown='span'>src/Pyz/Yves/Unzer/UnzerFactory.php</summary>
+
 ```php
 <?php
 
@@ -401,8 +429,12 @@ class UnzerFactory extends EcoUnzerFactory
 } 
 ```
 
-10. Introduce `PayPalPaymentProcessor`:
-**src/Pyz/Zed/Unzer/Business/Payment/Processor/PayPalPaymentProcessor.php**
+</details>
+
+10.  Introduce `PayPalPaymentProcessor`:
+
+<details><summary markdown='span'>src/Pyz/Zed/Unzer/Business/Payment/Processor/PayPalPaymentProcessor.php</summary>
+
 ```php
 <?php
 
@@ -546,8 +578,12 @@ class PayPalPaymentProcessor implements UnzerChargeablePaymentProcessorInterface
 }
 ```
 
-11. Override `UnzerBusinessFactory` to introduce new methods on Zed layer:
-**src/Pyz/Zed/Unzer/Business/UnzerBusinessFactory.php**
+</details>
+
+11. To introduce new methods on the `Zed` layer, override `UnzerBusinessFactory`:
+
+<details><summary markdown='span'>src/Pyz/Zed/Unzer/Business/Payment/Processor/PayPalPaymentProcessor.php</summary>
+
 ```php
 <?php
 
@@ -597,7 +633,10 @@ class UnzerBusinessFactory extends EcoUnzerBusinessFactory
 }
 ```
 
-12. Override `UnzerConfig` to add PayPal to authorizable payment methods:
+</details>
+
+12. To add PayPal to authorizable payment methods, override `UnzerConfig`:
+
 **src/Pyz/Zed/Unzer/UnzerConfig.php**
 ```php
 <?php

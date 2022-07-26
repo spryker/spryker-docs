@@ -16,17 +16,16 @@ related:
     link: docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/how-to-manage-business-unit-specific-prices-via-data-import.html
 ---
 
-In B2B commerce transactions, prices are typically negotiated in contracts. Therefore, merchants and their clients, who are usually company business units, expect to see their own prices in the shop. With the Merchant Custom Prices feature, the shop owners of the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html) can provide different prices for merchants and their clients. This way, the relationship between merchants and buyers is reflected more accurately, and the shop owners can set different prices for various customers.
+In B2B commerce transactions, prices are typically negotiated in contracts. Therefore, merchants and their clients, who are usually company business units, expect to see their own prices in the shop. With the *Merchant Custom Prices* feature, the shop owners of the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html) can provide different prices for merchants and their clients. This way, the relationship between merchants and buyers is reflected more accurately, and the shop owners can set different prices for various customers.
 
 
-When talking about product prices that depend on customers they refer to, we differentiate between two types: default prices and specific prices.
-
-- **Default prices** are the prices shown by default to all regular customers
-- **Specific prices** are different prices meant for specific target audience
+When talking about product prices that depend on the customers they refer to, and we differentiate between two types: default and specific.
+- *Default prices* are the prices shown by default to all regular customers.
+- *Specific prices* are different prices meant for a specific target audience.
 
 ![Prices diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Prices+per+Merchant+Relations/Prices+per+Merchant+Relation+Feature+Overview/prices_diagram.png)
 
-The different price categories that can be selected based on contextual information, like customer or merchant relationship, is referred to as **price dimension**.
+The different price categories that can be selected based on contextual information, like customer or merchant relationship, is referred to as *price dimension*.
 
 We have the following price dimensions:
 
@@ -36,17 +35,17 @@ We have the following price dimensions:
 - Currency
 - Merchant Relationship
 
-All prices in Spryker OS are stored in *spy_price_product_store*; however, connections to price dimensions are stored to different tables.
+All prices in Spryker OS are stored in `spy_price_product_store`; however, connections to price dimensions are stored to different tables.
 
 {% info_block infoBox %}
 
-For example `spy_price_product_default` contains only connections to prices, which were imported during store installation or created using Zed UI, and connections to prices pertain to merchant relations, would reside in `spy_price_product_merchant_relationship`. So the `spy_price_product_default` table poses a set of relations between the `spy_price_product_default` and `fk_price_product_store` tables and related entities.
+For example, `spy_price_product_default` contains only connections to prices, which were imported during store installation or created using Zed UI, and connections to prices pertain to merchant relations, would reside in `spy_price_product_merchant_relationship`. So the `spy_price_product_default` table poses a set of relations between the `spy_price_product_default` and `fk_price_product_store` tables and related entities.
 
 {% endinfo_block %}
 
-The **Merchant Custom Prices** feature relates specifically to prices set for individual merchant relations. This feature implies that customers see only prices applying to them, based on their merchant relation, or default prices if merchant relation doesn't have prices for some products.
+The Merchant Custom Prices feature relates specifically to prices set for individual merchant relations. This feature implies that customers see only prices applying to them, based on their merchant relation, or default prices if merchant relation doesn't have prices for some products.
 
-The specific prices apply only to merchant relation assignee (business units, as a rule) and not to merchant relation owners. If a business unit of a customer has several merchant relations with different prices for one and the same product, the lowest price is offered.
+The specific prices apply only to merchant a relation assignee (business units, as a rule), not to merchant relation owners. If a business unit of a customer has several merchant relations with different prices for one and the same product, the lowest price is offered.
 
 
 **Default prices in the web-shop**
@@ -59,7 +58,7 @@ The specific prices apply only to merchant relation assignee (business units, as
 
 Besides setting specific prices for individual merchant relations products manually, the prices can also be added in bulk by importing them from a CSV file. The CSV file for import must contain populated `merchant_relation_key`, `abstract_sku`, `concrete_sku`, `price_type`, `store,currency`, `price_net`, `price_gross` fields.
 
-To import the specific prices for merchant relations from the CSV file residing in `data/import` inside the module `PriceProductMerchantRelationshipDataImport`, run
+To import the specific prices for merchant relations from the CSV file residing in `data/import` inside the module `PriceProductMerchantRelationshipDataImport`, run:
 
 ```bash
 console data:import product-price-merchant-relationship
@@ -71,7 +70,7 @@ Or, if you want to import merchant from your file, indicate a path to it:
 console data:import product-price-merchant-relationship [-f [path_to_csv_file]
 ```
 
-To remove all imported merchant relation prices you can run:
+To remove all imported merchant relation prices, you can run:
 
 ```bash
 console price-product-merchant-relationship:delete

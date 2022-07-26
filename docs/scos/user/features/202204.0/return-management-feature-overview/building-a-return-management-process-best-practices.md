@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/building-a-return-management-process-best-practices
 ---
 
-Before you can start accepting returns from Buyers, you need to build the returns management strategy that suits your business the best. This article contains scenarios that can help you choose the most suitable returns workflow and implement it using the Spryker [Return Management](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html) functionality.
+Before you can start accepting returns from Buyers, you need to build the returns management strategy that suits your business the best. This document contains scenarios that can help you choose the most suitable returns workflow and implement it using the Spryker [Return Management](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html) functionality.
 
 <a name="scenario1"></a>
 

@@ -13,9 +13,7 @@ redirect_from:
   - /docs/scos/user/features/202200.0/navigation-feature-overview.html
 ---
 
-The *Navigation* feature lets product catalog managers create intuitive navigation elements and display them on the Storefront.
-
-They can create different types of navigation for different places of the shop. For example, create a fully-fledged navigation tree for main website navigation, several simple navigation lists for the footer, and any number of custom navigation elements for CMS pages.
+The *Navigation* feature lets product catalog managers create intuitive navigation elements and display them on the Storefront. Product catalog managers can create different types of navigation for different places of the shop. For example, they can add a fully-fledged navigation tree for main website navigation, several simple navigation lists for the footer, and any number of custom navigation elements for CMS pages.
 
 ## Navigation element
 
@@ -23,12 +21,12 @@ A *navigation element* is a page section that contains links to shop resources, 
 
 ![navigation-element](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/navigation+element.png)
 
-To learn how a Back Office user can create a navigation element, seee [Creating a Navigation Element](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-element).
+To learn how a Back Office user can create a navigation element, see [Creating a navigation element](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-element).
 
 ### Navigation element duplication
 
-If you have a configured navigation element in a shop and you want to use it as a basis for another navigation element, you can duplicate it. This is especially useful in a multi-shop scenario.
-To learn how a Back Office user can do that, see [Duplicating a Navigation Element](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#duplicating-a-navigation-element).
+If you have a configured navigation element in a shop and want to use it as a basis for another navigation element, you can duplicate it. This is especially useful in a multi-shop scenario.
+To learn how a Back Office user can do that, see [Duplicating a navigation element](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#duplicating-a-navigation-element).
 
 ## Navigation tree
 
@@ -37,7 +35,7 @@ In the Back Office, navigation elements are displayed as navigation trees.
 
 ![navigation-tree](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/navigation-tree.png)
 
-However, when publishing a navigation element as a content item on the Storefront, you can select a different [navigation template](#navigation-content-item-templates)
+However, when publishing a navigation element as a content item on the Storefront, you can select a different [navigation template](#navigation-content-item-templates).
 
 ## Navigation node
 
@@ -47,15 +45,15 @@ The following node types are available by default:
 * Label: a piece of text.
 * Category: links to category pages.
 * CMS Page: links to CMS pages.
-* Link: links to internal pages like login, registration, and so on.
-* External URL: links to external URLs.  
-In the context of a navigation tree, there can be *child nodes* and *parent nodes*. A child node is a navigation node that is added to another navigation node. A parent node is a navigation node that has one or more assigned child nodes.
+* Link: links to internal pages like login or registration.
+* External URL: links to external URLs.
+In the context of a navigation tree, there can be *child nodes* and *parent nodes*. A child node is a navigation node that is added to another navigation node. A parent node is a navigation node with one or more assigned child nodes.
 
 
 ![parent-child-navigation-node](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/parent-child-navigation-node.png)
 
 
-A navigation node can be both of the parent type and the child type. For example, the parent navigation node *Writing Materials* from the previous screenshot can be represented as a child node as follows.
+A navigation node can be both the parent and child type. For example, the parent navigation node *Writing Materials* from the previous screenshot can be represented as a child node as follows.
 
 ![child-parent-navigation-node](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation/Navigation+Feature+Overview/child-parent-navigation-node.png)
 
@@ -71,13 +69,13 @@ The only class you can use by default is *label*. This class capitalizes the nav
 
 A frontend developer can create more classes for navigation nodes.
 
-To learn how a Back office user can define a navigation node design, see [Creating a Navigation Node](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-node).
+To learn how a Back office user can define a navigation node design, see [Creating a navigation node](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-node).
 
 ## Navigation node validity period
 
 You can define the time period a navigation node is valid for:
 * When the validity period ends, the navigation node with its child stops being displayed on the Storefront.
-* When the validity period starts, the navigation node with its child starts being displayed on the Storefront.
+* When the validity period starts, the navigation node with its child is displayed on the Storefront.
 
 To learn how a product catalog manager can define a navigation node validity period, see [Creating a Navigation Node](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html#creating-a-navigation-node).
 

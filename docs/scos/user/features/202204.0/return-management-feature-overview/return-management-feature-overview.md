@@ -1,6 +1,6 @@
 ---
 title: Return Management feature overview
-description: This article provides a description for the feature Return Management in the Spryker Commerce OS.
+description: This document provides a description for the feature Return Management in the Spryker Commerce OS.
 last_updated: Sep 2, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/return-management-feature-overview

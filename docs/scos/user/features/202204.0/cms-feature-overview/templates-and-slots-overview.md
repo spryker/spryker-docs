@@ -200,10 +200,10 @@ Page identifiers used to define visibility conditions depend on the page type to
 
 | PAGE TYPE/IDENTIFIER | PRODUCT ID | CATEGORY ID | CMS PAGE ID |
 | --- | --- | --- | --- |
-| Home/Cart/Order Confirmation etc | - | - | - |
-| Product details page | v | v | - |
-| Category page | - | v | - |
-| CMS page | - | - | v |
+| Home/Cart/Order Confirmation  | - | - | - |
+| Product details page | &check; | &check; | - |
+| Category page | - | &check; | - |
+| CMS page | - | - | &check; |
 
 
 

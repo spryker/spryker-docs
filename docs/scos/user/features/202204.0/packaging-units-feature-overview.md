@@ -64,7 +64,7 @@ Read on to learn about the product packaging unit amount options.
 
 ## Product packaging unit amount
 
-A packaging unit usually contains multiple items of a product. For example, a "Bag of apples" can contain 10, 20, 40, etc. apples. This information is called the **amount** of a packaging unit.
+A packaging unit usually contains multiple items of a product. For example, a "Bag of apples" can contain 10, 20, or 40 apples. This information is called the *amount* of a packaging unit.
 
 The packaging unit amount can be:
 

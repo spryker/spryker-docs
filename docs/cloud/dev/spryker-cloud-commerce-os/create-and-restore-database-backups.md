@@ -1,6 +1,7 @@
 ---
 title: Create and restore database backups
 description: Learn how to manage database backups in Spryker Cloud Commerce OS.
+last_updated: July 28, 2022
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/creating-and-restoring-database-backups
 originalArticleId: e2174fdf-a9f6-4fd9-80ee-4d9e46f6d72d
@@ -10,9 +11,9 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/creating-and-restoring-database-backups.html
 ---
 
-This doc describes how to create and restore database backups in Spryker Cloud Commerce OS (SCCOS).
+This doc describes how to create and restore database (DB) backups in Spryker Cloud Commerce OS (SCCOS).
 
-As all the data is stored in relational databases, you only need database(DB) backups. DB backups are managed via [Amazon Relational Database Service (Amazon RDS)](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html).
+As all the data is stored in relational databases, you don't need to back up the codebase. DB backups are managed via [Amazon Relational Database Service (Amazon RDS)](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Welcome.html).
 
 The following DB backups are created automatically:
 
@@ -29,30 +30,25 @@ Also, you can create DB snapshots manually.
 
 1.  In the AWS Management Console, go to **Services** > [**RDS**](https://console.aws.amazon.com/rds/).
 
-2.  In the navigation pane, select **Databases**.
+2.  In the navigation pane, click **Databases**.
 
-3.  In the _Databases_ pane, select the DB you want to take a snapshot of.
+3.  In the **Databases** pane, select the DB you want to take a snapshot of.
 
-4.  Select **Actions&nbsp;<span aria-label="and then">></span> Take snapshot**.
+4.  Click**Actions&nbsp;<span aria-label="and then">></span> Take snapshot**.
 
-    This opens the _Take DB snapshot_ page.
+    This opens the **Take DB snapshot** page.
 
-5.  Enter a **Snapshot name**.  
+5.  Enter a **Snapshot name**.
+    Make sure to enter a meaningful **Snapshot name**. It is used as an identifier when restoring the DB.
 
-{% info_block infoBox "Meaningful Snapshot name" %}
+6. Click **Take snapshot**.
 
-Ensure that you enter a meaningful **Snapshot name**. It is used as an identifier when restoring a DB.
-
-{% endinfo_block %}
-
-6. Select **Take snapshot**.
-
-This opens the _Snapshots_ page. The created snapshot is displayed in the _Manual snapshots_ pane.
+This opens the **Snapshots** page. The created snapshot is displayed in the **Manual snapshots** pane.
 
 ## Restore a database
 
 
-To restore a DB from a snapshot, follow the steps below.
+The following sections describe how to restore databases from snapshots and backups. You will need to rename your original database and give its name to the restored one.
 
 {% info_block warningBox "Expected downtime" %}
 
@@ -65,25 +61,26 @@ During database restoration, your application is not accessible. For production 
 
 1. In the AWS Management Console, go to **Services** > [**RDS**](https://console.aws.amazon.com/rds/).
 
-2. In the navigation pane, select **Databases**.
+2. In the navigation pane, click **Databases**.
 
-3. In the _Databases_ pane, select the DB you want to rename.
+3. In the **Databases** pane, select the DB you want to restore.
 
-4. Select **Modify**.  
-This takes you to the _Modify DB instance: {DB name}_ page.
+4. Click **Modify**.  
+    This opens the **Modify DB instance: {DB name}** page.
 
-5. In the _Settings_ pane, update the **DB instance identifier**.
+5. In the **Settings** pane, copy and save the **DB instance identifier**.  
+    You will need to give this name to a restored database later.
 
-6. Scroll down the page and select **Continue**.
+6. Scroll down the page and click **Continue**.
 
-7. In the _Scheduling of modifications_ pane:
+7. In the **Scheduling of modifications** pane, select when you want to apply the changes:
 
 * To apply the changes immediately, select **Immediately**. This can cause an outage in some cases. For more information, see  [Modifying an Amazon RDS DB Instance](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.DBInstance.Modifying.html).
 
-* To apply the changes during the next scheduled maintenance window of the DB, select **During the next scheduled maintenance window**. In this case, you have to wait for the database to be renamed before you can [restore it from a snapshot](#restore-a-db-from-a-snapshot).
+* To apply the changes during the next scheduled maintenance window of the DB, select **During the next scheduled maintenance window**. In this case, you have to wait for the DB to be renamed before you can restore it.
 
-8. Review your changes and select **Modify DB Instance**_._  
-This takes you to the _Databases_ page with the success message displayed.  
+8. Review your changes and click **Modify DB Instance**.
+    This takes you to the **Databases** page with the success message displayed.  
 
 {% info_block infoBox %}
 
@@ -91,23 +88,28 @@ Even if you selected to apply the change immediately, it may take a few minutes 
 
 {% endinfo_block %}
 
+9. Restore the DB in one of the following ways:
 
-### Restore a DB from a snapshot
+* [Restore the DB from a snapshot](#restore-the-db-from-a-snapshot)
+* [Restore the DB from an AWS backup](#restore-the-db-from-an-aws-backup)
+
+
+### Restore the DB from a snapshot
 
 1. In the AWS Management Console, go to **Services** > [**RDS**](https://console.aws.amazon.com/rds/).
 
-2. In the navigation pane, select **Snapshots**.
+2. In the navigation pane, click **Snapshots**.
 
 3. Select the snapshot you want to restore.
 
 4. Select **Actions** > **Restore snapshot**.  
-This takes you to the _Restore snapshot_ page.
+This takes you to the **Restore snapshot** page.
 
 5. Enter the settings of the original DB.
 
 {% info_block warningBox "DB settings" %}
 
-Ensure that:
+Make sure to configure the following:
 
 *   **DB instance identifier** corresponds to the name of the original DB _before_ you renamed it.
 
@@ -116,8 +118,8 @@ Ensure that:
 {% endinfo_block %}
 
 
-6. Select **Restore DB Instance**.  
-This takes you to the _Databases_ page with the success message displayed. The entry of the restored DB is displayed in the list.
+6. Click **Restore DB Instance**.  
+    This opens the **Databases** page with the success message displayed. The restored DB is displayed in the list.
 
 {% info_block infoBox %}
 
@@ -126,7 +128,7 @@ It may take a few minutes for the DB to restore.
 {% endinfo_block %}
 
 
-### Restore a DB from AWS Backup
+### Restore the DB from AWS Backup
 
 1. In the AWS Management Console, go to **Services** > [**AWS Backup**](https://console.aws.amazon.com/backup).
 
@@ -134,7 +136,8 @@ It may take a few minutes for the DB to restore.
 
 3. Select the vault of the environment you want to restore the backup for. For example, for a `production` environment, select the `production_rds_backup` vault.
 
-4. In the **Recovery points** pane, select the `recovery point ID` of a continuous backup you want to restore. The name should start with `continuous:`.
+4. In the **Recovery points** pane, select the `recovery point ID` of a continuous backup you want to restore.
+    The name should start with `continuous:`.
 
 5. On the page of the recovery point, click **Restore**.
     This opens the **Restore backup** page.
@@ -146,7 +149,7 @@ It may take a few minutes for the DB to restore.
             This adds date and time fields.
         2. Select date and time between **Latest restorable time** and **Earliest restorable time**.
 
-7. On **Instance specifications** pane, select a **DB instance class**.
+7. In **Instance specifications** pane, select the **DB instance class** of the original database.
 
 8. On the **Settings** pane, for **DB Instance Identifier**, enter the identifier of the original database.
 
@@ -156,15 +159,15 @@ It may take a few minutes for the DB to restore.
 
 11. Select **Public accessibility**.
 
-12. On the **Database options** pane, enter a **Database port**.
+12. In the **Database options** pane, enter a **Database port**.
 
 13. Select a **DB parameter group**.
 
-14. On the **Log exports** tab, select the log types to publish to Amazon CloudWatch Logs.
+14. In the **Log exports** pane, select the log types to publish to Amazon CloudWatch Logs.
 
-15. On **Maintenance** pane, select **Auto minor version upgrade**.
+15. In **Maintenance** pane, select **Auto minor version upgrade**.
 
-16. On **Restore role** pane, select an IAM role to restore the backup with in one of the following ways:
+16. In **Restore role** pane, select an IAM role to restore the backup with in one of the following ways:
     * Select **Default role**.
     * Select a specific role:
         1. Select **Choose an IAM role**.

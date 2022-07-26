@@ -21,7 +21,7 @@ When paying for orders with a gift card, the gift cards are considered as an add
 
 {% info_block warningBox %}
 
-Gift cards are sensitive data and can be used to pay orders; therefore, keep in mind that they should be protected like real money.
+Gift cards are sensitive data and can be used to pay orders; therefore, keep in mind that they must be protected like real money.
 
 {% endinfo_block %}
 

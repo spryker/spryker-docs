@@ -40,7 +40,7 @@ Being a multi-purpose entity, CMS Blocks relies strongly on its naming when used
 
 
 #### Template assignment
-When a developer creates an email template, inside the file, they enter the name of the CMS Block, which is assigned to the template. If the name of an Email CMS Block changes, a developer should update it in the respective email template. For example, the `availability-notification-subscription--html` Email CMS Block is assigned to the [subscribed.html.twig](https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/AvailabilityNotification/Presentation/Mail/subscribed.html.twig) default email template.
+When a developer creates an email template, inside the file, they enter the CMS Block's name, which is assigned to the template. If the name of an Email CMS Block changes, a developer must update it in the respective email template. For example, the `availability-notification-subscription--html` Email CMS Block is assigned to the [subscribed.html.twig](https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/AvailabilityNotification/Presentation/Mail/subscribed.html.twig) default email template.
 
 
 #### Email format

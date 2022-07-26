@@ -28,7 +28,7 @@ You can also create and manage returns using Glue API. For details, see [Manging
 
 ## Returnable items and a return policy
 
-Not all the order items can be returned. For an item to be returnable, it should:
+Not all the order items can be returned. For an item to be returnable, it must meet these conditions:
 
 * Be in *Shipped* or *Delivered* state.
 * Fall on the return dates set forth in the Return Policy.
@@ -45,12 +45,12 @@ For now, you can set the Return Policy period in code only. There is no UI for t
 
 The Return items can have the following states in the Order Management System (OMS):
 
-* *Waiting for return*: Buyer created a return, but a Back Office user has not confirmed it yet.
-* *Returned*: The return has been received and confirmed by the Back Office user.
-* *Refunded*: Back Office user has made a refund for the returned items.
-* *Return Canceled*: The return has been canceled by a Back Office user because of the return policy or for any other reason.
-* *Shipped to customer*: The canceled return has been shipped back to the buyer.
-* *Delivered*: Buyer has received the shipped return.
+* `Waiting for return`. A buyer created a return, but a Back Office user has not confirmed it yet.
+* `Returned`. The return has been received and confirmed by the Back Office user.
+* `Refunded`. A Back Office user has made a refund for the returned items.
+* `Return Canceled`. The return has been canceled by a Back Office user because of the return policy or for any other reason.
+* `Shipped to customer`. The canceled return has been shipped back to the buyer.
+* `Delivered`. A buyer has received the shipped return.
 <!---
 {% info_block infoBox "Return states on the Storefront" %}
 

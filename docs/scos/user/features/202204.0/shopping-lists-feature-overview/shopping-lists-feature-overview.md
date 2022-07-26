@@ -128,7 +128,7 @@ Starting from v. 201903.0, you can integrate the [Search Widget for Concrete Pro
 
 {% info_block warningBox %}
 
-Without the Search widget, you will not be able to search for products. Therefore, make sure that the Search Widget for Concrete Products feature is integrated into your project.
+Without the Search widget, you can't search for products. Therefore, make sure that the Search Widget for Concrete Products feature is integrated into your project.
 
 {% endinfo_block %}
 
@@ -136,7 +136,7 @@ Without the Search widget, you will not be able to search for products. Therefor
 
 ## Subtotal for a shopping list
 
-Starting from v. 201907.0, every shopping list has Subtotal for all the items added to the shopping list according to the selected Price Mode and Currency.
+Starting from v. 201907.0, every shopping list has a subtotal for all the items added to the shopping list according to the selected Price Mode and Currency.
 
 ![Subtotal for shopping list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Multiple+and+Shared+Shopping+Lists/Multiple+and+Shared+Shopping+Lists+Overview+v201907.0/subtotal-for-shopping-list.png)
 
@@ -185,7 +185,7 @@ Check out this video tutorial on how to use shopping lists.
 
 ## Current constraints
 
-We do not support product options in Subtotal of the Shopping Lists. For example, a shopping list includes 3 office chairs, each of them cost €15. The subtotal will show €45 for 3 items. But if we add a product option, for example, gift wrapping for €5 each to these three office chairs, the subtotal should display €60 (€15/chair + €5/gift wrapping * 3). However, the shopping list will display just the product price - €45.
+We do not support product options in Subtotal of the Shopping Lists. For example, a shopping list includes 3 office chairs, each of them cost €15. The subtotal will show €45 for 3 items. But if we add a product option, for example, gift wrapping for €5 each to these three office chairs, the subtotal should display €60 (€15/chair + €5/gift wrapping * 3). However, the shopping list will display just the product price—€45.
 
 ## Related Business User articles
 

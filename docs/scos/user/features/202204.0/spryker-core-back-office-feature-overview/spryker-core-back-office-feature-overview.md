@@ -18,7 +18,7 @@ redirect_from:
 
 ---
 
-A Spryker-based shop ships with a comprehensive, intuitive administration area and consists of numerous features that give you a strong hold over the customization of your store. Here you can tailor features to your specific needs, manage orders, products, customers, modify look & feel of your store by—for example, designing the eye-catching marketing campaigns and promotions, and much more.
+A Spryker-based shop ships with a comprehensive, intuitive administration area and consists of numerous features that give you a strong hold over the customization of your store. Here you can tailor features to your specific needs, manage orders, products, and customers, and modify the look and feel of your store by—for example, designing eye-catching marketing campaigns and promotions, and much more.
 
 The Spryker Back Office provides you with a variety of sections that are logically connected to each other.
 
@@ -39,7 +39,7 @@ With Spryker Back Office, you can do the following:
 * Create and manage discounts.
 * Build and manage the main navigation of your online store.
 * Create new carrier companies and shipment methods as well as manage those.
-* Create admin users, add roles and user groups.
+* Create admin users, and add roles and user groups.
 
 Depending on the roles and teams in your project, you can limit the access of different Back Office users to specific Back Office areas.
 
@@ -63,7 +63,7 @@ To use the Spryker Back Office, users have to authenticate to the Back Office. T
 * Regular Back Office user account.
 * Third-party sign-on (optional).
 
-To *authenticate as a regular Back Office user*, you should have the Back Office user account. To learn how to create and manage Back Office user accounts, see [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html).
+To *authenticate as a regular Back Office user*, you must have a Back Office user account. To learn how to create and manage Back Office user accounts, see [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html).
 
 You can also let your users sign in from a third-party service set up for your project. The third-party sign-on uses the [OpenID](https://en.wikipedia.org/wiki/OpenID) protocol for authentication.
 
@@ -89,7 +89,7 @@ With Strategy 1, the login process looks like this:
 
 **Strategy 2: Do not log in the user unless they exist in the Spryker database.**
 
-Before a user can log in to Back Office with a third-party service credentials, the user should be added and set to Active in the database. You can add the user using either the Back Office or the ACL module.
+Before a user can log in to Back Office with third-party service credentials, the user must be added and set to `Active` in the database. You can add the user using either the Back Office or the ACL module.
 
 With Strategy 2, the login process looks like this:
 
@@ -99,7 +99,7 @@ With Strategy 2, the login process looks like this:
 
 The feature has the following functional constraint:
 
-Each of the Identity Managers is an ECO module that should be developed separately. After the module development, the Identity Manager’s roles and permissions should be mapped to the roles and permissions in Spryker. The mapping is always implemented at the project level.
+Each of the identity managers is an ECO module that must be developed separately. After the module development, the identity manager’s roles and permissions must be mapped to the roles and permissions in Spryker. The mapping is always implemented at the project level.
 
 
 ## Related Business User articles

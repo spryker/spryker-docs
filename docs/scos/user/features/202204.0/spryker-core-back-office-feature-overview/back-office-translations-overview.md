@@ -30,7 +30,7 @@ translator:clean-cache
 translator:generate-cache
 ```
 
-Each file should consist of **key** and **translation** columns without headers. Example:
+Each file must consist of the **key** and **translation** columns without headers. Example:
 
 
 |  |  |

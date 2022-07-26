@@ -30,7 +30,7 @@ redirect_from:
 With the *Quotation Process* feature, the B2B customers can ask for special prices, and suppliers can get back to them with a compromise pricing suggestion.
 
 *Request for Quote (RFQ)* is a request that a B2B buyer sends to their suppliers stating that they want to get a quoted price on particular products with the details about the packaging and volumes they need.
-Within the Spryker Commerce OS, RFQ is represented by the ability of a sales representative to see the list of quotes, check and edit them, thereby changing and overwriting the prices for the products, view and edit shipment costs in the RFQ for a certain buyer. In turn, a buyer can create an RFQ from a shopping cart, add a note to it, and bid for lower prices, as well as define a delivery address and select a shipment method. An RFQ can also specify the timeline for delivery, the date the proposal should be submitted, and the history of the negotiations.
+Within the Spryker Commerce OS, RFQ is represented by the ability of a sales representative to see the list of quotes, check and edit them, thereby changing and overwriting the prices for the products, and view and edit shipment costs in the RFQ for a certain buyer. In turn, a buyer can create an RFQ from a shopping cart, add a note to it, and bid for lower prices, as well as define a delivery address and select a shipment method. An RFQ can also specify the timeline for delivery, the date when the proposal is to be submitted, and the history of the negotiations.
 One of the RFQ features is a tool for creating special offers for buyers with limited validity. A sales representative can update the prices for products in the RFQ and set the exact time until which this offer is valid—for example, the 29th of December, 2019, 11:58 PM. If the buyer tries to proceed with this RFQ to checkout on the 29th of December, 2019, at 11:59 PM, then this RFQ will not be available.
 ![RFQ Validity](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Quotation+process+and+RFQ/Quotation+Process+&+RFQ+Feature+Overview/valid-till.png)
 
@@ -139,10 +139,10 @@ The buyers can use the blocked cart irrespective of the RFQ updates by unblockin
 
 ## Interaction of the RFQ with the approval process
 
-Mixing several workflows adds complexity to the process and increases the steps a buyer should perform to submit the order. This can be true for projects where the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) and RFQ are integrated. In such a scenario, every RFQ that hits the limit will need to be approved by a manager. Let's check an example:
+Mixing several workflows adds complexity to the process and increases the steps for a buyer to perform to submit the order. This can be true for projects where the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) and RFQ are integrated. In such a scenario, every RFQ that hits the limit will need to be approved by a manager. Let's check an example:
 
 {% info_block infoBox "Example" %}
-Example: In the project, the cart needs approval when the cart total exceeds €1000. A buyer adds the products to the cart with the total amount of €1500 and converts the shopping cart into the RFQ. The sales representative reviews the cart and updates the prices for products so that the cart total makes up €1300 and sends the RFQ back to the buyer. The buyer cannot proceed to checkout as the cart total still exceeds the limit, so the buyer has to send the RFQ to their approver. If the approver approves the cart, then the buyer will finally be able to create the order and pay for it.
+Example: In the project, the cart needs approval when the cart total exceeds €1000. A buyer adds the products to the cart with the total amount of €1500 and converts the shopping cart into the RFQ. The sales representative reviews the cart and updates the prices for products so that the cart total makes up €1300 and sends the RFQ back to the buyer. The buyer cannot proceed to checkout as the cart total still exceeds the limit, so the buyer has to send the RFQ to their approver. If the approver approves the cart, then the buyer finally can create the order and pay for it.
 {% endinfo_block %}
 
 ## Quotation Process and RFQ on the Storefront

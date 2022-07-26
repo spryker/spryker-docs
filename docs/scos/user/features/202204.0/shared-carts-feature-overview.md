@@ -127,7 +127,7 @@ If a user does not need a cart that has been shared with them, they can remove i
 
 {% info_block errorBox "Important!" %}
 
-If the shared cart has been dismissed individually by the user, this user will not be able to see it in case this cart is shared next time.
+If the shared cart has been dismissed individually by the user, this user can't see it if this cart is shared next time.
 
 {% endinfo_block %}
 

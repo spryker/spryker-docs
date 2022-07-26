@@ -70,7 +70,7 @@ It is also possible to add products to the cart in bulk. To do so, the customer 
 
 {% info_block warningBox %}
 
-However, separators should be the same for all products entered in this form at a time. If products and quantities are added in the correct format and with acceptable separators, but the separators are different for different products—for example, 1234567, 2 in one case and 1234568; 3 in another, an error message is shown after verification. If SKUs and format have passed the verification, then the products and their quantities are automatically entered in the **SKU** and **Qty** fields of the **Quick Order** form, and the customer can either add them to the cart or create the order.
+However, separators must be the same for all products entered in this form at a time. If products and quantities are added in the correct format and with acceptable separators, but the separators are different for different products—for example, 1234567, 2 in one case and 1234568; 3 in another, an error message is shown after verification. If SKUs and format have passed the verification, then the products and their quantities are automatically entered in the **SKU** and **Qty** fields of the **Quick Order** form, and the customer can either add them to the cart or create the order.
 
 {% endinfo_block %}
 

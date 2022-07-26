@@ -84,7 +84,7 @@ Permissions can be simple and complex.
 	</tr>
     <tr>
         <td><b>Infrastructural</b></td>
-		<td>Some permissions should not be managed in the UI, but programmatically. Infrastructural permissions implement InfrastructuralPermissionPluginInterface (Shared).</td>
+		<td>Some permissions can't be managed in the UI, but programmatically. Infrastructural permissions implement `InfrastructuralPermissionPluginInterface` (Shared).</td>
 		<td>
            <p> Read shared cart, which is managed by the Shared Carts feature.</p>
        </td>
@@ -140,7 +140,7 @@ Every company role includes a set of permissions that can be enabled/disabled ac
   - **Add item to cart**—allows adding products to the cart. Without this permission, the user gets the "This action is forbidden" error when trying to add the product to the cart.
   - **Change item in cart**—allows changing products in the cart (changing the quantity or adding notes).
   - **Remove item from cart**—allows deleting the products from the cart.
-  - **Place Order**—allows placing the order. Without this permission enabled, a user gets an error when trying to submit the order. If the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) feature is integrated into your project, then **Buy up to grand total** permission is also required to be able to place an order.
+  - **Place Order**—allows placing the order. Without this permission enabled, a user gets an error when trying to submit the order. If the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) feature is integrated into your project, then **Buy up to grand total** permission is also required to place an order.
   - **Buy up to grand total (Requires "Send cart for approval")**—sets a limit for the grand total of the cart. If the amount in the cart is larger than the limit set in this permission, the user can't proceed to checkout. Works with **Send cart for approval** permission. This permission is available after enabling the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) feature.
   - **Approve up to grand total**—with this permission enabled, a user can approve the cart. For more details, see [Approval Feature Overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html).
   - **View Business Unit orders**—with this permission enabled, a user can see not only their own orders but also the orders of their business unit.

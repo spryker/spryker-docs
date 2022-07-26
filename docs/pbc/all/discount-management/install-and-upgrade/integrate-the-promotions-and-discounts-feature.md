@@ -1,7 +1,9 @@
 ---
-title: Promotions and Discounts feature integration
+title: Integrate the Promotions & Discounts feature
 description: Learn how to integrate the Promotions & Discounts feature into a Spryker project.
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/scos/dev/feature-integration-guides/202204.0/promotions-and-discounts-feature-integration.html
 related:
   - title: Glue API - Promotions and Discounts feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-promotions-and-discounts-feature-integration.html

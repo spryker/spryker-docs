@@ -1,5 +1,5 @@
 ---
-title: Manage cart rules and vouchers via Glue API
+title: Manage discounts via Glue API
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/retrieving-promotional-items
@@ -52,8 +52,9 @@ See [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/manag
 
 Once you know what promotional items you can make use of, you can apply the discounts by adding the promotional items to cart. To retrieve details on cart rules of the promotional items you add, include the cart-rule resource relationship into your request.
 
-See [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html) for details on how you can add promotional items to a registered user’s cart.
-See [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html) for details on how you can add promotional items to a guest user’s cart.
+See [Retrieve discounts in carts of registered users](/docs/pbc/all/discount-management/manage-discounts-via-glue-api/retrieve-discounts-in-carts-of-registered-users.html) for details on how to retrieve promotional items for a registered user’s cart.
+
+See [Retrieve discounts in guest carts](/docs/pbc/all/discount-management/manage-discounts-via-glue-api/retrieve-discounts-in-guest-carts.html) for details on how to retrieve promotional items for a guest user’s cart.
 
 ## Removing promotional items from cart
 

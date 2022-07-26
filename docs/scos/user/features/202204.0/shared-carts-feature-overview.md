@@ -115,7 +115,7 @@ The *Full access* permission allows the following:
 
 * *Duplicating a shopping cart*. The shopping cart can be duplicated on the **Shopping Cart** page.
 
-* *Dismissing a shared shopping cart*. Company users within one business unit can share carts. Such carts can be dismissed if they, for example, are no longer needed.
+* *Dismissing a shared shopping cart*. Company users within one business unit can share carts. For example, such carts can be dismissed if they are no longer needed.
 
 * *Deleting a shopping cart*. The shopping cart can be deleted on the **Shopping Cart** page. Deleting a shared shopping cart also deletes it for users it has been shared with.
 

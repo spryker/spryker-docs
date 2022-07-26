@@ -33,7 +33,7 @@ redirect_from:
 
 The _Packaging Unit_ feature introduces a *packaging unit* that is a unit of measure used as packaging for a product. It allows including the amount of stock in a product a customer wants to buy. A shop owner can sell the same product in different packaging units—for example, apples can be sold as an "Item", a "Bag", or "Pallet" of apples. The "bag", "pallet", and "box" are referred to as *packaging unit types*.
 
-Each packaging unit is defined on an abstract product level and is represented by one product variant, for example:
+Each packaging unit is defined on an abstract product level and is represented by one product variant—for example:
 
 | ABSTRACT PRODUCT | CONCRETE PRODUCT / VARIANT | PACKAGING UNIT |
 | --- | --- | --- |
@@ -43,7 +43,7 @@ Each packaging unit is defined on an abstract product level and is represented b
 
 ## Leading products
 
-The *leading product* represents the relation between two concrete products and holds the availability. The *measurement unit*, defined on an abstract product level, is the stock unit for all the concrete products of the abstract product. A group of products in a packaging unit, that has a leading product, is called a *product packaging unit group*. Each packaging unit includes a certain amount of products by default (default amount). A shop owner can choose whether the packaging unit, for example, a bag, has a separate stock or shares stock with the contained item. In our example, the different product variants have their own SKUs and prices, but they represent the same physical product in the warehouse. To share the information about availability among these variants, we use the concept of a *leading product*.
+The *leading product* represents the relation between two concrete products and holds the availability. The *measurement unit*, defined on an abstract product level, is the stock unit for all the concrete products of the abstract product. A group of products in a packaging unit, that has a leading product, is called a *product packaging unit group*. Each packaging unit includes a certain amount of products by default (default amount). A shop owner can choose whether the packaging unit—for example, a bag, has a separate stock or shares stock with the contained item. In our example, the different product variants have their own SKUs and prices, but they represent the same physical product in the warehouse. To share the information about availability among these variants, we use the concept of a *leading product*.
 
 However, leading products are not always relevant. Packaging units that represent a package of items whose quantity can not be changed, do not need a leading product. In this case, the availability of the packaged items themselves, not individual items in the package, matters. Such packaged products actually behave like normal abstract products for which customers might have a possibility to select applicable sales units see [Measurement Units](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) to learn about product sales units).
 Basically, when a packaging unit does not use the leading product, it means that the stock is not shared.

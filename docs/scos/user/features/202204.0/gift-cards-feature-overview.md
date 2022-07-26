@@ -72,7 +72,7 @@ Replacement means that if after using a gift card it has some remaining balance,
 
 For this strategy, gift cards have a pattern for code generation. For each gift card code generation, a pattern from the previous gift card is used. For example, if the code X-GC-{number} is used for gift card generation, where {number} is the pattern, the 100 Euro gift card code generated for customers is X-GC-1, and the code generated for the remaining 40 Euro is X-GC-2.
 
-The main advantage of this strategy is that one and the same gift card code can not be used twice if the gift card has some remaining balance after a purchase has been made. This might be especially useful, for example, in case when a customer wants another customer to use a part of the value from their gift card. In this case, the initial gift card owner would get an email with the new code for the remaining gift card value.
+The main advantage of this strategy is that one and the same gift card code can not be used twice if the gift card has some remaining balance after a purchase has been made. This might be especially useful if a customer wants another customer to use a part of the value from their gift card. In this case, the initial gift card owner would get an email with the new code for the remaining gift card value.
 
 ### Balance strategy
 

@@ -148,9 +148,9 @@ It may take a few minutes for the DB to restore.
 
 7. On **Instance specifications** pane, select a **DB instance class**.
 
-8. On the **Settings** pane, enter a unique **DB Instance Identifier**.
+8. On the **Settings** pane, for **DB Instance Identifier**, enter the identifier of the original database.
 
-9. On the **Network and security** pane, set _**Virtual Private Cloud (VPC)**_ as RDS belongs to.
+9. In **Network and security** tab, select the **Virtual Private Cloud (VPC)** the original database belongs to.
 
 10. Select a **Subnet group**.
 
@@ -176,6 +176,8 @@ This opens the **Jobs** page where you can see the progress of restoration. Wait
 18. In the AWS Management Console, go to **Services** > [**RDS**](https://console.aws.amazon.com/rds/).
 
 17. In the navigation pane, click **Databases**.
+
+19. In **Connectivity** tab, modify _**Security group**_ field as which RDS belongs to (`{environment-name}-mariadb`).
 
 18. On the **Databases** page, select the restored DB.
 

@@ -1,6 +1,6 @@
 ---
 title: Customer Login by Token overview
-description: With the feature in place, B2B customers can log in to Spryker shop using a token.  In the article, you can find a description of the token structure.
+description: With the feature in place, B2B customers can log in to Spryker shop using a token. In the article, you can find a description of the token structure.
 last_updated: Aug 2, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/customer-login-by-token-overview
@@ -16,11 +16,11 @@ redirect_from:
 
 Most modern e-commerce applications let customers log in by token or, in other words, they support token-based authentication. They do so for several good reasons:
 
-* Tokens are stateless: They are stored on the client side and already contain all the information they need for authentication. No session information about the server is great for scaling your application.
+* Tokens are stateless. They are stored on the client side and already contain all the information they need for authentication. No session information about the server is great for scaling your application.
 
-* Tokens are secure: Tokens (not cookies) are sent on every request, which helps to prevent attacks. Since the session is not stored, there is no session-based information that could be manipulated.
+* Tokens are secure. Tokens (not cookies) are sent on every request, which helps to prevent attacks. Since the session is not stored, there is no session-based information that could be manipulated.
 
-* Extensibility and access control: In the token payload, you can specify user roles, permissions as well as resources that the user can access. Besides, you can share some permissions with other applications.
+* Extensibility and access control. In the token payload, you can specify user roles, permissions as well as resources that the user can access. Besides, you can share some permissions with other applications.
 
 For technical details see [Customer Login by Token reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/customer-login-by-token-reference-information.html)
 

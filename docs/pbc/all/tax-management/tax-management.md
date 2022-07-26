@@ -28,7 +28,7 @@ The tax rate is the percentage of the sales price that buyer pays as a tax. In t
 
 A tax set is a set of tax rates. You can [define tax sets in the Back office](/docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-sets.html) or[ import tax sets](/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets.html) into your project.
 
-Tax sets can be applied to abstract product, product option and shipment:
+Tax sets can be applied to an abstract product, product option, and shipment:
 
 
 | ENTITY | INSTRUCTIONS ON DEFINING TAX SETS FOR THE ENTITY IN THE BACK OFFICE  | DETAILS ON THE IMPORT FILE TO IMPORT TAX SETS FOR THE ENTITY |
@@ -39,11 +39,11 @@ Tax sets can be applied to abstract product, product option and shipment:
 
 ## International tax rates and sets
 
-Align your business with international tax standards by defining tax rates and sets. Determine country-based tax rates for products, options and shipments, that will automatically be applied to the respective shops.
+Align your business with international tax standards by defining tax rates and sets. Determine country-based tax rates for products, options, and shipments, that will automatically be applied to the respective shops.
 
-In a tax system, the tax rate is the ratio (usually expressed as a percentage) at which a business, person, items are taxed.
+In a tax system, the tax rate is the ratio (usually expressed as a percentage) at which a business, person, item is taxed.
 
-Tax set is a set of tax rates that can be applied to a specific product.
+A *tax set* is a set of tax rates that can be applied to a specific product.
 
 Keeping that in mind, the tax rate is created first.
 ![Tax rate](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Tax/International+Tax+Rates+&+Sets/tax-rate.gif)
@@ -85,7 +85,7 @@ When calculating taxes, Avalara takes the items' [warehouse addresses](/docs/sco
 
 ## Tax Management capability on the Storefront
 
-Product tax set is calculated when buyers add products to cart. Therefore, by default, the tax calculated on the basis of the product tax sets is displayed in the **Tax** section on the **Cart** page. However, the tax value on the **Cart** page is not always final because it does not take a possible shipment tax set into account since buyers select the shipping method during the checkout. If you have Avalara integrated, it calculates tax during the checkout as well. Therefore, the final tax value is always displayed only upon checkout.
+A *product tax set* is calculated when buyers add products to the cart. Therefore, by default, the tax calculated on the basis of the product tax sets is displayed in the **Tax** section on the **Cart** page. However, the tax value on the **Cart** page is not always final because it does not take a possible shipment tax set into account since buyers select the shipping method during the checkout. If you have Avalara integrated, it calculates tax during the checkout as well. Therefore, the final tax value is always displayed only upon checkout.
 
 Tax on the **Cart** page:
 

@@ -13,19 +13,19 @@ redirect_from:
   - /docs/scos/user/features/202200.0/file-manager-feature-overview/asset-management.html
 ---
 
-There are 2 types of assets in the Spryker Commerce OS: dynamic and static.
+There are two types of assets in the Spryker Commerce OS: dynamic and static.
 
 ## Dynamic Assets
 
-Dynamic assets are files, added during content and product creation: adding or changing CMS pages, adding product images.
+*Dynamic assets* are files added during content and product creation: adding or changing CMS pages and adding product images.
 
 ## Static Assets
 
-Static assets are images, fonts, CSS, JS, HTML and PHP files that are available and used by default. All the files are split into folders according to the application they are used for: Zed, Yves or Glue. The PHP and HTML files stored in static asset directories are used for handling errors and showing the platform maintenance messages.
+*Static assets* are images, fonts, CSS, JS, and HTML and PHP files that are available and used by default. All the files are split into folders according to the application they are used for: Zed, Yves, or Glue. PHP and HTML files stored in static asset directories are used for handling errors and showing the platform maintenance messages.
 
 {% info_block infoBox %}
 
-Except for the error handling files, there are no Glue related assets.
+Except for the error handling files, there are no Glue-related assets.
 
 {% endinfo_block %}
 
@@ -43,4 +43,4 @@ The following environment variables are used for that:
 * `SPRYKER_ZED_ASSETS_BASE_URL`
 * `SPRYKER_YVES_ASSETS_URL_PATTERN`
 
-Check [Custom Location for Static Assets](/docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html) for more details.
+Check [Integrating custom location for static assets](/docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html) for more details.

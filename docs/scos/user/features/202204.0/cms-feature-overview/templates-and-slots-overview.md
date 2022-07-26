@@ -12,11 +12,11 @@ redirect_from:
   - /docs/en/templates-and-slots-overview
 ---
 
-Templates slots lets content managers effectively and coherently interact with content using a dedicated template in Spryker—a template with slots. In the Back Office, a content manager has access to all the Storefront pages and can easily embed content into them. The embedded content is rendered by the [Slot Widget](#slot-widget).
+*Templates and Slots* lets content managers effectively and coherently interact with content using a dedicated template in Spryker—a template with slots. In the Back Office, a content manager has access to all the Storefront pages and can easily embed content into them. The embedded content is rendered by the [Slot Widget](#slot-widget).
 
 {% info_block infoBox %}
 
-Templates and slots is a complex functionality which works in conjunction with other functionalities. To use it effectively, make sure you get familiar with the functionalities in the order they are presented:
+Templates and slots is a complex functionality that works in conjunction with other functionalities. To use it effectively, make sure you get familiar with the functionalities in the order they are presented:
 * [CMS Page](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html)
 * [CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)
 * [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html)
@@ -27,7 +27,6 @@ Templates and slots is a complex functionality which works in conjunction with o
 ## General Information
 
 Managing content with the help of templates with slots involves four separate entities:
-
   * Template
   * Slot
   * CMS Block
@@ -40,37 +39,32 @@ The following Storefront page breakdown shows the arrangement of the entities.
 ## Template
 Template is a [Twig](https://twig.symfony.com/) file that, when applied to a page, defines its design and layout. Template with slots is a template that defines the layout of slots across a page and has at least one slot assigned.
 
-<details open>
-    <summary markdown='span'>Template representation—Storefront</summary>
+<details open><summary markdown='span'>Template representation—Storefront</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-+template.png)
 
 </details>
 
-
-
 The following templates with slots are shipped with the CMS feature:
-
 * Home page template
 * Category page template
 * Product details page template
 * CMS page template
 
-A content manager can [manage templates with slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Slots** section.
-<details open>
-    <summary markdown='span'>Template representation—the Back Office</summary>
+A content manager can [manage templates with slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
+<details open><summary markdown='span'>Template representation—the Back Office</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/back-office-template.png)
 
 
 </details>
 
-To learn about creation of CMS templates, see [HowTo: Create CMS templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html).
+To learn about the creation of CMS templates, see [HowTo: Create CMS templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html).
 
 
 
 ## Slot
-Slot is a configurable space for content in a template. Unlike template that is an actual file, the slot exists only as an entry in database. To embed content into a slot, a slot widget is inserted into the template file to which the slot is assigned. The slot widget position in regards to the rest of the code in the template defines the position of the slot in the page.
+*Slot* is a configurable space for content in a template. Unlike a template that is an actual file, a slot exists only as an entry in the database. To embed content into a slot, a slot widget is inserted into the template file to which the slot is assigned. The slot widget position in regard to the rest of the code in the template defines the position of the slot in the page.
 
 <details open><summary markdown='span'>Slot representation—Storefront</summary>
 
@@ -82,12 +76,11 @@ Slot is a configurable space for content in a template. Unlike template that is 
 Each template with slots shipped by default has a number of slots. A developer can change the position of an existing slot by changing the position of the corresponding slot widget in the template.
 
 By importing a [slot list](#slot-list), a developer can do the following:
-
 * Add more slots to existing templates.
 * Delete slots.
 * Define slot configurations.
 
-A content manager can [manage slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Slots** section.
+A content manager can [manage slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 
 <details open><summary markdown='span'>Slot representation—the Back Office</summary>
 
@@ -98,7 +91,7 @@ A content manager can [manage slots](/docs/scos/user/back-office-user-guides/{{p
 
 ## CMS block
 
-[CMS block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html), from the perspective of the tempates and slots, is a piece of content that is inserted into a slot. When a CMS block is inserted into a slot, it's content is displayed on the Storefront page space belonging to the slot.  The position of CMS blocks on a page can be defined by a content manager in the Back Office.
+[CMS block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html), from the perspective of the templates and slots, is a piece of content that is inserted into a slot. When a CMS block is inserted into a slot, its content is displayed on the Storefront page space belonging to the slot. The position of CMS blocks on a page can be defined by a content manager in the Back Office.
 
 <details open><summary markdown='span'> CMS block representation—Storefront</summary>
 
@@ -107,8 +100,7 @@ A content manager can [manage slots](/docs/scos/user/back-office-user-guides/{{p
 
 </details>
 
-A content manager can [manage CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Slots** section.
-
+A content manager can [manage CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 
 
 <details open><summary markdown='span'> CMS block representation—the Back Office</summary>
@@ -119,23 +111,23 @@ A content manager can [manage CMS blocks](/docs/scos/user/back-office-user-guide
 </details>
 
 
-CMS Block is a separate entity with a dedicated section in the Back Office. To learn what a content manager can do with CMS blocks in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Blocks** section, see [Creating CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/create-cms-blocks.html).
+CMS Block is a separate entity with a dedicated section in the Back Office. To learn what a content manager can do with CMS blocks in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Blocks** section, see [Creating CMS blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/create-cms-blocks.html).
 
 
 ## Content item
 
-[Content Item](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) is the smallest content unit in Spryker that is used in the WISIWYG editor when creating content for CMS blocks. When a CMS block is inserted into a slot, all the content items of the CMS block are displayed on the Storefront page space of the slot.
+[Content Item](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) is the smallest content unit in Spryker that is used in the WYSIWYG editor when creating content for CMS blocks. When a CMS block is inserted into a slot, all the content items of the CMS block are displayed on the Storefront page space of the slot.
 
-<details open><summary markdown='span'> Content item representation—Storefront</summary>
+<details open><summary markdown='span'>Content item representation—Storefront</summary>
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/storefront-content-item.png)
 
 </details>
 
-From the perspective of templates and slots, a content item always comes as a part of CMS block. That's why there is no place to manage it in the **Slots** section.
+From the perspective of templates and slots, a content item always comes as a part of the CMS block. That's why there is no place to manage it in the **Slots** section.
 To learn what a content manager can do with content items in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section, see [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html).
 
-### <a name="applying-templates-with-slots"></a>Applying Templates with slots
+### <a name="applying-templates-with-slots"></a>Applying templates with slots
 
 A template with slots can be applied to any page. Even though a content manager can manage all page types in the Back Office, they can only apply templates with slots to the following:
 
@@ -145,7 +137,7 @@ A template with slots can be applied to any page. Even though a content manager 
 A developer can apply templates with slots to all the other page types.
 
 ## Correlation
-The correlation between templates and slots is defined by importing template and slot lists into database. Learn how to [import these lists](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html).
+The correlation between templates and slots is defined by importing template and slot lists into the database. Learn how to [import these lists](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html).
 
 Using the information from the imported lists, the Slot Widget can understand which slots are assigned to a template, and from where to fetch content for each slot.
 
@@ -167,12 +159,12 @@ The template list contains the following information:
 | --- | --- | --- |
 | ID | Numeric identifier of template. | 3 |
 | template path | Path to the Twig file template in a project. | `@ShopUI/templates/page-layout-main/page-layout-main.twig` |
-| name | Alphabetical template identifier. It will be shown in the Back Office. | "Home Page" |
-| description | Template description. It will be shown in the Back Office. | "The layout of Slots in the Home Page, always below Store Header including Navigation, and above Store Footer." |
+| name | Alphabetical template identifier. It is shown in the Back Office. | "Home Page" |
+| description | Template description. It is shown in the Back Office. | "The layout of Slots in the Home Page, always below Store Header including Navigation, and above Store Footer." |
 
 Note the following:
-* If a template has only inactive slots, it is still considered a template with slots. Therefore, it will be shown in the Slots section.
-* If a template is on an imported template list, but does not have a slot, it's not considered a template with slots. Therefore, it will not be displayed in the Slots section.
+* If a template has only inactive slots, it is still considered a template with slots. Therefore, it is shown in the **Slots** section.
+* If a template is on an imported template list but does not have a slot, it's not considered a template with slots. Therefore, it's not displayed in the **Slots** section.
 
 ### Slot list
 The slot list contains the following information:
@@ -183,12 +175,12 @@ The slot list contains the following information:
 | template path | Path to the template to which the slot is assigned. | `@ShopUI/templates/page-layout-main/page-layout-main.twig` |
 | slot key | Unique identifier of the slot that is used by slot widget when rendering the content of this slot. | slt-11 |
 | content provider | Defines the source of content of this slot. | SprykerCmsSlotBlock |
-| name | Alphabetical identifier of the slot. It will be shown in the Back Office. | "Header Top" |
-| description | Description of the slot. It will be shown in the Back Office. | "A content area in the Header section, that is below the logo and search section and above main navigation" |
+| name | Alphabetical identifier of the slot. It is shown in the Back Office. | "Header Top" |
+| description | Description of the slot. It is shown in the Back Office. | "A content area in the Header section, that is below the logo and search section and above main navigation" |
 | status | Defines whether the slot is active or not where "0" stands for "inactive" and "1" stands for "active". If a slot is inactive, it is not rendered in the Storefront by the slot widget. | 1 |
 
 ## Content providers
-A content provider is a source from where Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront. With templates and slots, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (for example, [CoreMedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html), [E-spirit](/docs/scos/user/technology-partners/{{page.version}}/content-management/e-spirit.html), [Styla](/docs/scos/user/technology-partners/{{page.version}}/content-management/styla.html), [Magnolia](/docs/scos/user/technology-partners/{{page.version}}/content-management/magnolia.html)).
+A content provider is a source from which Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront. With templates and slots, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (for example, [CoreMedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html), [E-spirit](/docs/scos/user/technology-partners/{{page.version}}/content-management/e-spirit.html), [Styla](/docs/scos/user/technology-partners/{{page.version}}/content-management/styla.html), [Magnolia](/docs/scos/user/technology-partners/{{page.version}}/content-management/magnolia.html)).
 
 With templates and slots, the following applies:
 
@@ -202,7 +194,7 @@ The following schema shows how content is managed with the help of templates wit
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/templates-and-slots.png)
 
 ## Visibility conditions
-When the content manager assigns a CMS block to a slot, it is displayed in all the pages to which the template with the slot is applied. To narrow down the number of pages to a needed selection, the content manager can define visibility conditions for each CMS block assigned to a slot. Visibility conditions are defined by selecting particular pages in which the content of a CMS block will be displayed. When visibility conditions are defined, the slot widget checks if the CMS block should be rendered in an opened page and either renders or skips it.
+When the content manager assigns a CMS block to a slot, it is displayed on all the pages to which the template with the slot is applied. To narrow down the number of pages to a needed selection, the content manager can define visibility conditions for each CMS block assigned to a slot. Visibility conditions are defined by selecting particular pages in which the content of a CMS block will be displayed. When visibility conditions are defined, the slot widget checks if the CMS block should be rendered in an opened page and either renders or skips it.
 
 Page identifiers used to define visibility conditions depend on the page type to which a template with slots is applied. You can check identifiers for each page type in the following table.
 
@@ -216,24 +208,26 @@ Page identifiers used to define visibility conditions depend on the page type to
 
 
 {% info_block infoBox "Product details page" %}
+
 For product details page type, you can use the Product ID or Category ID identifiers. Category ID is a collective identifier. By selecting a category, the content manager selects all the products that are [assigned to the category](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/assigning-products-to-categories.html).
+
 {% endinfo_block %}
 
-To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID or Navigation Nodes. To learn more, see [HowTo: Create Visibility Conditions for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html).
+To meet your project requirements, you can extend the visibility conditions functionality by adding more conditions, like Customer ID, Customer Group ID, or Navigation Nodes. To learn more, see [HowTo: Create Visibility Conditions for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html).
 
 
-A content manager can define visibility conditions by [selecting pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#selecting-pages) in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Slots** section.
+A content manager can define visibility conditions by [selecting pages](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#selecting-pages) in the Back Office, in **Content Management&nbsp;<span aria-label="and then">></span> Slots**.
 
 A developer can [import visibility conditions](/docs/scos/dev/data-import/{{page.version}}/data-importers-overview-and-implementation.html).
 
-## Slot Widget
-Slot widget is used to fetch content from a content provider and render it in specified pages. Content is fetched in the form of HTML code ready to be rendered in the Storefront. With the help of slot widgets, you can fetch and render content from the following content providers:
+## Slot widget
+Slot widget is used to fetch content from a content provider and render it on specified pages. Content is fetched in the form of HTML code ready to be rendered in the Storefront. With the help of slot widgets, you can fetch and render content from the following content providers:
 
 * [CoreMedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html)
 * [Spryker CMS Blocks](#spryker-cms-blocks)
 
 
-### Slot Widget Configuration
+### Slot widget configuration
 Slot widget is used by inserting it into a template which is applied to a page subsequently.
 
 A slot widget template looks as follows:
@@ -245,7 +239,7 @@ A slot widget template looks as follows:
 ```
 
 ### Properties
-Properties are used by slot widgets to identify for which entity content is being fetched. At the same time, all the content that is meant to be fetched by a slot widget can be identified using the same properties on the side of the content provider. When a slot widget make a request to fetch content from a content provider, It passes the property values and fetches what the content provider returns to render it in the specified page. You can find the list of exemplary properties with descriptions in the table:
+Properties are used by slot widgets to identify for which entity content is being fetched. At the same time, all the content that is meant to be fetched by a slot widget can be identified using the same properties on the side of the content provider. When a slot widget makes a request to fetch content from a content provider, it passes the property values and fetches what the content provider returns to render it on the specified page. You can find the list of exemplary properties with descriptions in the table:
 
 | PROPERTY | SPECIFICATION |
 | --- | --- |
@@ -259,7 +253,7 @@ Properties are used by slot widgets to identify for which entity content is bein
 You can add other properties to meet your project or external content provider requirements.
 
 #### Property Types
-Properties can be either `required` or `autofilled`. If a property is of the required type, it is entered manually and slot widget does not render the content if one of the required values is not filled. If a property is of the autofilled type, when sending a request to fetch content, slot widget fills this value based on the page opened on storefront and fetches the corresponding content. For example, if you wanted a slot widget to fill `locale` and `store` values automatically, it would look as follows:
+Properties can be either `required` or `autofilled`. If a property is of the required type, it is entered manually and the slot widget does not render the content if one of the required values is not filled. If a property is of the auto-filled type, when sending a request to fetch content, the slot widget fills this value based on the page opened on the Storefront and fetches the corresponding content. For example, if you want a slot widget to fill `locale` and `store` values automatically, it looks as follows:
 
 ```twig
 {% raw %}{%{% endraw %} cms_slot "cms-slot-key" autofilled ['locale', 'store'] required ['requiredProperty'] with {
@@ -269,11 +263,13 @@ Properties can be either `required` or `autofilled`. If a property is of the req
 ```
 
 {% info_block infoBox %}
+
 If there is no content to provide on the side of the content provider based on the specified properties, the slot widget renders a blank space in the Storefront.
+
 {% endinfo_block %}
 
 #### Contextual variables
-To avoid entering particular identifies of Spryker entities as property values, you can use contextual variables. When such a property is used, slot widget identifies the property value depending on the page opened on the Storefront and fetches the corresponding content. The following example shows contextual variables.
+To avoid entering particular identifies of Spryker entities as property values, you can use contextual variables. When such a property is used, the slot widget identifies the property value depending on the page opened on the Storefront and fetches the corresponding content. The following example shows contextual variables.
 
 | PROPERTY | PROPERTY VA;UE EXAMPLE |
 | --- | --- |
@@ -282,7 +278,7 @@ To avoid entering particular identifies of Spryker entities as property values, 
 | `idCmsPage` | `data.idCmsPage` |
 
 ### Correlation
-Using the slot key property, slot widget retrieves slot information from storage and interprets its attributes in the following way.
+Using the slot key property, the slot widget retrieves slot information from storage and interprets its attributes in the following way.
 
 | ATTRIBUTE | RELEVANCE | DESCRIPTION |
 | --- | --- | --- |
@@ -341,14 +337,14 @@ To fetch content created for a CMS page, you can use the `pageID` property. Find
 ```
 
 #### Home page
-Unlike category, product details and CMS pages, the home page does not require any properties since there is usually only one home page in a project. The following example is a generic slot widget for the home page.
+Unlike category, product details, and CMS pages, the home page does not require any properties since there is usually only one home page in a project. The following example is a generic slot widget for the home page.
 
 ```twig
 {% raw %}{%{% endraw %} cms_slot 'slt-2' {% raw %}%}{% endraw %}
 ```
 
-## Database schema—oemplates with slots and CMS blocks content provider
-The following image shows the database schema for templates, slots and the Spryker CMS content provider:
+## Database schema—templates with slots and CMS blocks content provider
+The following image shows the database schema for templates, slots, and the Spryker CMS content provider:
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/template-slot-cms-blocks-content-provider.png)
 
@@ -364,7 +360,7 @@ The following image shows the database schema for templates, slots and the Spryk
     * Template name and description (that describes the template content).
     * List of slots in the template.
 * CMS Slot Block has:
-    * CMS Block, CMS Slot and CMS Slot Template references.
+    * CMS Block, CMS Slot, and CMS Slot Template references.
     * Conditions data (that is used to define the pages in which a CMS Block is displayed).
     * Position (that defines the order of assigned CMS blocks).
 

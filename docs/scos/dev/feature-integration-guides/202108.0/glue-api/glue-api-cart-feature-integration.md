@@ -197,7 +197,7 @@ class CartsRestApiConfig extends SprykerCartsRestApiConfig
 
 ### Configure quote creation
 
-If you want guest cart items to be added to the authenticated user’s own cart, you can enable it by adjusting the configuration constant:
+If you want to create a cart for the newly authenticated customer while merging guest cart with customer cart, you can enable it by adjusting the configuration constant:
 
 **src/Pyz/Zed/CartsRestApi/CartsRestApiConfig.php**
 

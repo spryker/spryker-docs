@@ -195,6 +195,24 @@ class CartsRestApiConfig extends SprykerCartsRestApiConfig
 }
 ```
 
+### Configure quote creation
+
+To enable creating quote if it doesn't exist, adjust the configuration constant:
+
+**src/Pyz/Zed/CartsRestApi/CartsRestApiConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\CartsRestApi;
+
+use Spryker\Zed\CartsRestApi\CartsRestApiConfig as SprykerCartsRestApiConfig;
+
+class CartsRestApiConfig extends SprykerCartsRestApiConfig
+{
+    protected const IS_QUOTE_CREATION_WHILE_QUOTE_MERGING_ENABLED = true;
+}
+```
 
 ### Enable resources and relationships
 

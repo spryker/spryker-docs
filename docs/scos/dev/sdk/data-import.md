@@ -38,7 +38,6 @@ related:
     link: docs/scos/dev/data-import/page.version/data-import-categories/about-data-import-categories.html
   - title: Importing Data with the Queue Data Importer
     link: docs/scos/dev/data-import/page.version/importing-data-with-the-queue-data-importer.html
-related:
   - title: Code Generator
     link: docs/scos/dev/sdk/code-generator.html
   - title: Cronjob scheduling

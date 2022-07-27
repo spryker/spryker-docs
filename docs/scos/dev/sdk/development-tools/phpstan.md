@@ -28,11 +28,6 @@ redirect_from:
   - /docs/scos/dev/sdk/202009.0/development-tools/phpstan.html
   - /docs/scos/dev/sdk/202108.0/development-tools/phpstan.html
 related:
-  - title: Architecture Sniffer
-    link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
-  - title: Code Sniffer
-    link: docs/scos/dev/sdk/development-tools/phpstan.html
-related:
   - title: Architecture sniffer
     link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
   - title: Code sniffer

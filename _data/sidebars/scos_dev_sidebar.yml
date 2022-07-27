@@ -550,6 +550,8 @@ entries:
         url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
     - title: Tax
       url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/tax-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
       nested:
       - title: "Tax module: reference information"
         url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/tax-module-reference-information.html
@@ -785,7 +787,6 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Retrieving image sets of abstract products
           url: /docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
           include_versions:
@@ -2398,8 +2399,6 @@ entries:
         url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationspriceproductvolumesrestapi.html
       - title: Migration guide - ProductConfigurationsRestApi
         url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationsrestapi.html
-      - title: Migration guide - ProductTaxSetsRestApi
-        url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-producttaxsetsrestapi.html
 
     - title: Migration Guide - API Module
       url: /docs/scos/dev/module-migration-guides/migration-guide-api-module.html
@@ -2743,8 +2742,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-stocksalesconnector.html
     - title: Migration Guide - Store
       url: /docs/scos/dev/module-migration-guides/migration-guide-store.html
-    - title: Migration Guide - Tax
-      url: /docs/scos/dev/module-migration-guides/migration-guide-tax.html
     - title: Migration Guide - Touch
       url: /docs/scos/dev/module-migration-guides/migration-guide-touch.html
     - title: Migration Guide - Transfer
@@ -2858,7 +2855,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - glossary.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-glossary.csv.html
           include_versions:
@@ -2950,7 +2946,7 @@ entries:
             - "202009.0"
             - "202108.0"
             - "202204.0"
-            title: File details - product_abstract_approval_status.csv
+          - title: File details - product_abstract_approval_status.csv
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/products/file-details-product-abstract-approval-status.csv.html
             include_versions:
             - "202204.0"
@@ -3791,6 +3787,8 @@ entries:
         url: /docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html
       - title: Multi-theme
         url: /docs/scos/dev/front-end-development/yves/multi-theme.html
+    - title: Migration guide - Switch from Yarn to NPM v8
+      url: /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
   - title: Migration concepts
     nested:
     - title: Decimal Stock migration concept
@@ -4353,8 +4351,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
       - title: "HowTo: Create and register a mail provider"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mail-provider.html
-      - title: "HowTo: Get ready for VAT (tax) changes in Germany"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-get-ready-for-vat-tax-changes-in-germany.html
       - title: "HowTo: Reset a Docker environment"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reset-a-docker-environment.html
       - title: "HowTo: Allow Zed CSS/JS on a project"
@@ -4812,7 +4808,6 @@ entries:
     - title: Taxes
       include_versions:
       - "202108.0"
-      - "202204.0"
       nested:
         - title: Avalara
           nested:

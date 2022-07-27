@@ -2,6 +2,14 @@
 title: Feature Walkthroughs
 description: A collection of walkthroughs for Spryker Commerce OS features.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202005.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/202009.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/201907.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/201811.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/202001.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/201903.0/feature-walkthroughs.html
+  - /docs/scos/dev/feature-walkthroughs/202108.0/feature-walkthroughs.html
 ---
 
 This section contains a collection of walkthroughs for the features found within the Spryker Commerce OS. Once Spryker has been installed, you can take advantage of its many different features as described below.
@@ -343,11 +351,11 @@ The [Spryker Core Back Office](/docs/scos/dev/feature-walkthroughs/{{page.versio
 
 ## Tax
 
-The [Tax](/docs/scos/dev/feature-walkthroughs/{{page.version}}/tax-feature-walkthrough/tax-feature-walkthrough.html) feature allows you to define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.
+The [Tax](/docs/pbc/all/tax-management/tax-management.html) feature allows you to define taxes for the items you sell. The feature is represented by two entities: tax rates and tax sets.
 
 ### Tax module: reference information
 
-The [Tax module](/docs/scos/dev/feature-walkthroughs/{{page.version}}/tax-feature-walkthrough/tax-module-reference-information.html) is responsible for handling tax rates that can apply for products, product options, or shipment.
+The [Tax module](/docs/pbc/all/tax-management/extend-and-customize/tax-module-reference-information.html) is responsible for handling tax rates that can apply for products, product options, or shipment.
 
 ## Wishlist
 

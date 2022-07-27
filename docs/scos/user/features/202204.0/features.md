@@ -19,8 +19,7 @@ The feature guides describe features in details, highlight their functional abil
 
 The **Features** section is divided into capabilities. Each capability contains a capability description and conceptual documentation of all the features a capability includes.
 
-In the feature documentation, you will find the following information:
-
+In the feature documentation, you can find the following information:
 
 * A short feature summary with guidelines designed for different [personas](/docs/scos/user/intro-to-spryker/about-spryker-documentation.html#personas).
 * A detailed feature overview, workflows, database structure, and more.

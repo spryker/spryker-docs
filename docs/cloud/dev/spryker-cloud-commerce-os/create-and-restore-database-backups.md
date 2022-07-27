@@ -151,17 +151,17 @@ It may take a few minutes for the DB to restore.
 
 7. In **Instance specifications** pane, select the **DB instance class** of the original database.
 
-8. On the **Settings** pane, for **DB Instance Identifier**, enter the identifier of the original database.
+8. On the **Settings** pane, enter the **DB Instance Identifier** of the original database.
 
 9. In **Network and security** tab, select the **Virtual Private Cloud (VPC)** the original database belongs to.
 
-10. Select a **Subnet group**.
+10. Select a **Subnet group** of the original database.
 
-11. Select **Public accessibility**.
+11. Select a **Public accessibility**.
 
-12. In the **Database options** pane, enter a **Database port**.
+12. In the **Database options** pane, enter the **Database port** of the orriginal database.
 
-13. Select a **DB parameter group**.
+13. Select a **DB parameter group** of the original database.
 
 14. In the **Log exports** pane, select the log types to publish to Amazon CloudWatch Logs.
 
@@ -178,22 +178,20 @@ This opens the **Jobs** page where you can see the progress of restoration. Wait
 
 18. In the AWS Management Console, go to **Services** > [**RDS**](https://console.aws.amazon.com/rds/).
 
-17. In the navigation pane, click **Databases**.
+19. In the navigation pane, click **Databases**.
 
-19. In **Connectivity** tab, modify _**Security group**_ field as which RDS belongs to (`{environment-name}-mariadb`).
+20. On the **Databases** page, select the restored DB.
 
-18. On the **Databases** page, select the restored DB.
-
-19. On the page of the DB, click **Modify**.
+21. On the page of the DB, click **Modify**.
     This opens the **Modify DB instance: {DB name}** page.
 
-20. On **Connectivity** pane, select a **Security group**.
+22. In **Connectivity** pane, select the **Security group** of the original database.
 
-21. Click **Continue**.
+23. Click **Continue**.
 
-21. On the **Scheduling of modifications** pane, for **When to apply modifications**, select **Apply immediately**.
+24. In the **Scheduling of modifications** pane, for **When to apply modifications**, select **Apply immediately**.
 
-22. Click **Modify DB instance**.
+25. Click **Modify DB instance**.
 
 Restored DB is created and modified.
 
@@ -212,9 +210,9 @@ Restored DB is created and modified.
 
 6.  Select **OK**.
 
-7.  In the _Build_ section, select **Add build step** > **Execute shell**.
+7.  In the **Build** section, select **Add build step** > **Execute shell**.
 
-8.  In the _Execute shell_ pane, for **Command**, enter the script with the `vendor/bin/console sync:data` command. You can add the command to the script from another Jenkins job in your environment.
+8.  In the **Execute shell** pane, for **Command**, enter the script with the `vendor/bin/console sync:data` command. You can add the command to the script from another Jenkins job in your environment.
 
 9.  Select **Save**.  
 
@@ -222,10 +220,10 @@ Restored DB is created and modified.
 ![Set up a jenkins job](https://spryker.s3.eu-central-1.amazonaws.com/cloud-docs/Spryker+Cloud/Creating+and+restoring+database+backups/set-up-a-jenkins-job.png)
 
 10.  On the page that opens, select **Build Now**.  
-    Give it a few minutes to execute the job. You can track the execution in the _Build History_ pane.  
+    Give it a few minutes to execute the job. You can track the execution in the **Build History** pane.  
 
 
-You’ve re-synced data from a restored database to ElasticSearch and Redis.
+You've restored the database and connected it ot your application.
 
 ## Restore an application
 

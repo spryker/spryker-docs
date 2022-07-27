@@ -197,7 +197,7 @@ class CartsRestApiConfig extends SprykerCartsRestApiConfig
 
 ### Configure quote creation
 
-To enable creating quote if it doesn't exist, adjust the configuration constant:
+If the quote creation is not available, you can enable it by adjusting the configuration constant:
 
 **src/Pyz/Zed/CartsRestApi/CartsRestApiConfig.php**
 

@@ -5090,8 +5090,6 @@ entries:
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/setup-of-new-indexes-throws-an-exception.html
         - title: Vendor folder synchronization error
           url: /docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/vendor-folder-synchronization-error.html
-        - title: Switching to ARM architecture
-          url: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-docker-installation/switching-to-arm-architecture.html
   - title: Updating a Spryker-based project
     url: /docs/scos/dev/updating-a-spryker-based-project.html
   - title: Analyzing and upgrading your project with Spryker Jarvis

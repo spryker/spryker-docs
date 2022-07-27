@@ -114,7 +114,7 @@ When running the command for data export with this file, `console data:export --
 * orders_AT.csv
 * orders_DE.csv
 
-For details about the content of each of the files, see[ Data Export Ordres CSV Files Format](/docs/scos/dev/data-export/{{page.version}}/data-export-orders-.csv-files-format.html).
+For details about the content of each of the files, see[ Data Export Orders CSV Files Format](/docs/scos/dev/data-export/{{page.version}}/data-export-orders-.csv-files-format.html).
 <a name="filter"></a>
 
 ### Setting the filter criteria in a YML file

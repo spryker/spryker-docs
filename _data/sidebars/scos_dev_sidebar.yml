@@ -1589,14 +1589,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-    - title: Backend API
-      url: /docs/scos/dev/feature-integration-guides/backend-api-feature-integration.html
-      include_versions:
-      - "202204.0"
-    - title: Backend API for Merchant Relationships
-      url: /docs/scos/dev/feature-integration-guides/backend-api-for-merchant-relationships-integration-guide.html
-      include_versions:
-      - "202204.0"
     - title: Back in Stock Notification
       url: /docs/scos/dev/feature-integration-guides/back-in-stock-notification-feature-integration.html
       include_versions:
@@ -2371,6 +2363,14 @@ entries:
         url: /docs/scos/dev/feature-integration-guides/spryker-in-docker/spryker-in-docker-feature-integration-guides.html
         include_versions:
         - "201907.0"
+    - title: Zed API
+      url: /docs/scos/dev/feature-integration-guides/zed-api-feature-integration.html
+      include_versions:
+      - "202204.0"
+    - title: Zed API for Merchant Relationships
+      url: /docs/scos/dev/feature-integration-guides/zed-api-for-merchant-relationships-integration-guide.html
+      include_versions:
+      - "202204.0"
   - title: Module migration guides
     url: /docs/scos/dev/module-migration-guides/about-migration-guides.html
     nested:

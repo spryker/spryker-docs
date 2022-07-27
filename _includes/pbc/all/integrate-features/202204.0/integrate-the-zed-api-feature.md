@@ -1,10 +1,10 @@
 
 
-This document describes how to integrate the Backend API feature into a Spryker project.
+This document describes how to integrate the Zed API feature into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Backend API feature core.
+Follow the steps below to install the Zed API feature core.
 
 ### Prerequisites
 
@@ -42,7 +42,7 @@ Add the following configuration:
 | CONFIGURATION                      | SPECIFICATION                                                                          | NAMESPACE          |
 |------------------------------------|----------------------------------------------------------------------------------------|--------------------|
 | ApiConstants::ENABLE_API_DEBUG     | Enables the mode when API response is extended with request parameters and stacktrace. | Spryker\Shared\Api |
-| ApiConfig::isApiEnabled()          | Enables Backend API.                                                                   | Spryker\Zed\Api    |
+| ApiConfig::isApiEnabled()          | Enables Zed API.                                                                   | Spryker\Zed\Api    |
 | ApiConfig::getAllowedOrigin()      | Defines the CORS Access-Control-Allowed-Origin header.                                 | Spryker\Zed\Api    |
 | ApiConfig::getSafeHeaderDataKeys() | Defines allowed headers.                                                               | Spryker\Zed\Api    |
 | ApiConfig::getSafeServerDataKeys() | Defines allowed server data keys.                                                      | Spryker\Zed\Api    |
@@ -170,7 +170,7 @@ class ApiConfig extends SprykerApiConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that Backend API is enabled by accessing any backend API resource.
+Make sure that Zed API is enabled by accessing any backend API resource.
 
 Make sure that backend API is extended with request parameters and stacktrace when `ApiConstants::ENABLE_API_DEBUG` is set to `true`.
 
@@ -300,7 +300,7 @@ class ApiDependencyProvider extends SprykerApiDependencyProvider
 }
 ```
 
-Create a new entry point for Backend API Application:
+Create a new entry point for Zed API Application:
 
 **public/BackendApi/index.php**
 
@@ -343,10 +343,10 @@ server {
 	# Listener for testing/development - one host only, doesn't require external LoadBalancer
 	listen 80;
 
-	server_name ~^backend-api\\..+\\.com$;
+	server_name ~^zed-api\\..+\\.com$;
 
 	keepalive_timeout 0;
-	access_log  /data/logs/development/backend-api-access.log extended;
+	access_log  /data/logs/development/zed-api-access.log extended;
 
 	# entry point for Glue Application
 	root /data/shop/development/current/public/BackendApi;
@@ -363,12 +363,12 @@ Update hosts configuration by adding the following line (replace IP with your se
 **/etc/hosts**
 
 ```bash
-ip backend-api.mysprykershop.com
+ip zed-api.mysprykershop.com
 ```
 
 
 {% info_block warningBox “Verification” %}
 
-If everything is set up correctly, you should be able to access `http://backend-api.mysprykershop.com`.
+If everything is set up correctly, you should be able to access `http://zed-api.mysprykershop.com`.
 
 {% endinfo_block %}

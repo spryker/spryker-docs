@@ -1,5 +1,5 @@
 ---
-title: Discounts
+title: Discount import
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/discounts
@@ -27,4 +27,3 @@ The table below provides details on Product Merchandising data importers, their 
 | Discount Amount  | Imports information used to set the values of the discounts imported with *discount.csv*. |`data:import:discount-amount`| [discount_amount.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount-amount.csv.html) |<ul><li>discount.csv</li><li>discount_store.csv</li></ul> |
 | Discount Store   |Imports information about this file links the discounts with the stores. |`data:import:discount-store`| [discount_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount-store.csv.html) | <ul><li>[discount.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html)</li><li>*stores.php* configuration file of demo shop PHP project.</li></ul> |
 | Discount Voucher   | Imports information used to create the discount voucher.|`data:import:discount-voucher`| [discount_voucher.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount-voucher.csv.html) | [discount.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html) |
-

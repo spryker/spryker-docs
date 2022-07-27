@@ -700,10 +700,9 @@ The following is an example of how the implemented payment method Unzer looks on
 
 
 
-## Unzer in the Back Office
+## Triggering shipment states in the Back Office
 
-The following are examples of the shipment state changes in the Back Office during payment.
-
+The following are examples of the shipment state changes when the order paid with the implemented payment method is processed in the Back Office.
 
 <details><summary markdown='span'>Triggering the charge state</summary>
 

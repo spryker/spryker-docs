@@ -1,6 +1,7 @@
 ---
-title: HowTo: Do better deployments
-description: This document shows ho to do better deployments by using your local environment as a preview for how your application will behave when deployed to PaaS
+title: "HowTo: Do better deployments"
+description: This document shows how to do better deployments by using your local environment as a preview for how your application will behave when deployed to PaaS
+last_updated: Jul 27, 2022
 template: howto-guide-template
 ---
 

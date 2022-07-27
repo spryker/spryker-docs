@@ -195,6 +195,7 @@ class CartsRestApiConfig extends SprykerCartsRestApiConfig
 }
 ```
 
+
 ### Enable resources and relationships
 
 Activate the following plugins:

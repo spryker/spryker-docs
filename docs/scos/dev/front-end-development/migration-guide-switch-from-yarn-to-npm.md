@@ -69,11 +69,13 @@ The minimum `hash` text should be `e9ebb666feccae1754792d41e49df3b9f95ef0aa` or 
         "vendor/spryker/*",
         "vendor/spryker/*/assets/Zed"
     ],
+    ...
     "engines": {
         "node": ">=16.0.0",
         "npm": ">=8.0.0"
     },
-    "dependencies": {
+    ...
+    "devDependencies": {
         ...
         "@babel/plugin-proposal-class-properties": "~7.17.12",
         "@babel/plugin-transform-runtime": "~7.17.12",

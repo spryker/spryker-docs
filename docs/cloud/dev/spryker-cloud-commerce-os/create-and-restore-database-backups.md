@@ -128,7 +128,7 @@ It may take a few minutes for the DB to restore.
 {% endinfo_block %}
 
 
-### Restore the DB from AWS Backup
+### Restore the DB from an AWS Backup
 
 1. In the AWS Management Console, go to **Services** > [**AWS Backup**](https://console.aws.amazon.com/backup).
 

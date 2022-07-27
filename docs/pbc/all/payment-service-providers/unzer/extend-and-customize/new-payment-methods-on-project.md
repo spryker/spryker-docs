@@ -663,3 +663,64 @@ class UnzerConfig extends EcoUnzerConfig
     ];
 }
 ```
+
+## Implemented payment method on the Storefront
+
+The following is an example of how the implemented payment method Unzer looks on the Storefront during the checkout.
+
+<details><summary markdown='span'>Order checkout from Guest shopping cart</summary>
+
+![storefront-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level/storefront-1.jpeg)
+
+</details>
+
+<details><summary markdown='span'>Selecting the Unzer PayPal payment method</summary>
+
+![storefront-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level/storefront-2.jpeg)
+
+</details>
+
+<details><summary markdown='span'>Loggin in PayPal</summary>
+
+![storefront-3](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level/storefront-3.jpeg)
+
+</details>
+
+<details><summary markdown='span'>Paying with PayPal</summary>
+
+![storefront-4](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level/storefront-4.jpeg)
+
+</details>
+
+<details><summary markdown='span'>Successful order placement</summary>
+
+![storefront-5](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level/storefront-5.jpeg)
+
+</details>
+
+
+
+## Unzer in the Back Office
+
+The following are examples of the shipment state changes in the Back Office during payment.
+
+
+<details><summary markdown='span'>Triggering the charge state</summary>
+
+![back-office-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level/back-office-1.jpeg)
+
+</details>
+
+<details><summary markdown='span'>Triggering the refund state</summary>
+
+![back-office-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level/back-office-2.jpeg)
+
+</details>
+
+<details><summary markdown='span'>The shipment is refunded</summary>
+
+![back-office-3](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level/back-office-3.jpeg)
+
+</details>
+
+

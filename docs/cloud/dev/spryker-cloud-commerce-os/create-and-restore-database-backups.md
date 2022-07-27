@@ -159,7 +159,7 @@ It may take a few minutes for the DB to restore.
 
 11. Select a **Public accessibility**.
 
-12. In the **Database options** pane, enter the **Database port** of the orriginal database.
+12. In the **Database options** pane, enter the **Database port** of the original database.
 
 13. Select a **DB parameter group** of the original database.
 

@@ -41,7 +41,7 @@ To ensure the CI jobs will run successfully, add the same config part to all 'de
 
 {% endinfo_block %}
 
-1. Run the following command to pull the latest `docker-sdk` version:
+2. Run the following command to pull the latest `docker-sdk` version:
 
 ```bash
 cd docker && git pull origin master
@@ -65,11 +65,17 @@ The minimum `hash` text should be `e9ebb666feccae1754792d41e49df3b9f95ef0aa` or 
 ```json
 {
     ...
+    "workspaces": [
+        "vendor/spryker/*",
+        "vendor/spryker/*/assets/Zed"
+    ],
+    ...
     "engines": {
         "node": ">=16.0.0",
         "npm": ">=8.0.0"
     },
-    "dependencies": {
+    ...
+    "devDependencies": {
         ...
         "@babel/plugin-proposal-class-properties": "~7.17.12",
         "@babel/plugin-transform-runtime": "~7.17.12",

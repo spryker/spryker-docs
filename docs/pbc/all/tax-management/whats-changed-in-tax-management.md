@@ -1,7 +1,7 @@
 ---
 title: What's changed in Tax Management
 last_updated: Jun 20, 2022
-description: This document lists all the Unzer releases
+description: This document lists all the Tax Management releases
 template: concept-topic-template
 ---
 

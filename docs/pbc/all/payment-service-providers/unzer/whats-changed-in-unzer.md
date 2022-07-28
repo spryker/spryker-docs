@@ -7,12 +7,12 @@ template: concept-topic-template
 
 ## June 14th 2022
 
-This release contains one module—[Unzer](https://github.com/spryker-eco/unzer/releases/tag/1.0.1)
+This release contains one module, [Unzer](https://github.com/spryker-eco/unzer/releases/tag/1.0.1)
 
 [Public release details](https://api.release.spryker.com/release-group/4208)
 
 
-### Breaking changes
+**Breaking changes**
 
 The following changes have been made:
 
@@ -20,7 +20,7 @@ The following changes have been made:
 * Added new required transfer fields for `UnzerFacade::executeRefundOmsCommand()`. Impacted `UnzerRefundCommandByOrderPlugin` with facade changes.
 * Introduced `spy_payment_unzer_shipment_charge` table.
 
-### Improvements
+**Improvements**
 
 The following improvements have been made:
 

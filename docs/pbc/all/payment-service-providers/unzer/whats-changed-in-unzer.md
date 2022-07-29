@@ -15,15 +15,13 @@ This release contains one module, [Unzer](https://github.com/spryker-eco/unzer/r
 **Breaking changes**
 
 The following changes have been made:
-
 * Added new required transfer fields for `UnzerFacade::executeChargeOmsCommand()`. Impacted `UnzerChargeCommandByOrderPlugin` with facade changes.
 * Added new required transfer fields for `UnzerFacade::executeRefundOmsCommand()`. Impacted `UnzerRefundCommandByOrderPlugin` with facade changes.
-* Introduced `spy_payment_unzer_shipment_charge` table.
+* Introduced the `spy_payment_unzer_shipment_charge` table.
 
 **Improvements**
 
 The following improvements have been made:
-
 * Adjusted `UnzerFacade::executeChargeOmsCommand()` so shipment costs are correctly calculated while charge. Impacted `UnzerChargeCommandByOrderPlugin` with facade changes.
 * Adjusted `UnzerFacade::executeRefundOmsCommand()` so shipment costs are correctly calculated while refund. Impacted `UnzerRefundCommandByOrderPlugin` with facade changes.
 * Introduced `PaymentUnzerShipmentCharge` transfer object.
@@ -33,7 +31,6 @@ The following improvements have been made:
 ## June 6th 2022
 
 Initial release of the Unzer integration. This release contains four modules:
-
 * [Unzer](https://github.com/spryker-eco/unzer/releases/tag/1.0.0)
 * [Unzer GUI](https://github.com/spryker-eco/unzer-gui/releases/tag/1.0.0)
 * [Unzer REST API](https://github.com/spryker-eco/unzer-rest-api/releases/tag/0.1.0)

@@ -1,10 +1,10 @@
 
 
-This document describes how to integrate the BAPI Merchant Relationships into a Spryker project.
+This document describes how to integrate the Zed API Merchant Relationships into a Spryker project.
 
 ## Install feature core
 
-Follow the steps below to install the Backend API for Merchant Relationships feature core.
+Follow the steps below to install the Zed API for Merchant Relationships feature core.
 
 ### Prerequisites
 
@@ -12,7 +12,7 @@ To start feature integration, integrate the required features and Glue APIs:
 
 | NAME   | VERSION    | INTEGRATION GUIDE   |
 |-------------------------|-------------------|---------------------------|
-| Backend API                     | {{page.version}}  | [Backend API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/backend-api-feature-integration.html)                                          |
+| Zed API                     | {{page.version}}  | [Zed API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/zed-api-feature-integration.html)                                          |
 | Merchants and Merchant Relations | {{page.version}}  | [Merchants and Merchant Relations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchants-and-merchant-relations-feature-integration.html) |
 | Spryker Core                    | {{page.version}}  | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                                        |
 
@@ -99,7 +99,7 @@ class ApiDependencyProvider extends SprykerApiDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the `https://backend-api.mysprykershop.com/api/rest/merchant-relationships` endpoint is available.
+Make sure that the `https://zed-api.mysprykershop.com/api/rest/merchant-relationships` endpoint is available.
 
 Make sure that data is validated by providing an invalid merchant reference in a request body.
 

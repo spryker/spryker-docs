@@ -31,7 +31,7 @@ Make sure that all endpoints in your `deploy.*.yml` file are referenced there an
 
 For development purposes, your project has different `deploy.yml` files. You can, however, use the `deploy.yml` files used during deployment to staging and production environments to simulate the app's behavior.
 
-You must have the following `deploy.yml` files in your project (it will vary a bit, depending on the total quantity of your environments):
+You must have the following `deploy.yml` files in your project (it may vary, depending on the total quantity of your environments):
 - `deploy.(PROJECT_NAME)-prod.yml`
 - `deploy.(PROJECT_NAME)-staging.yml`
 

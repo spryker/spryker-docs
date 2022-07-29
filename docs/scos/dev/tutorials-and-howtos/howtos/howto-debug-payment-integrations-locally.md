@@ -14,7 +14,7 @@ Most payment integrations rely on a push notification to send feedback to reques
 
 ## Debug payment integrations locally
 
-1. Setup your local development environment in SSL/TLS mode. Most payment providers do not work without this. In the `deploy.yml file` you want to use, change the following setup:
+1. Set up your local development environment in SSL/TLS mode. Most payment providers do not work without this. In the `deploy.yml` file you want to use, change the following setup:
 
 ```
 ssl:

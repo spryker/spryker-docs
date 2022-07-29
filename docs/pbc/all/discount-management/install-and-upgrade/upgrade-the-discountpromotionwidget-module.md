@@ -1,5 +1,5 @@
 ---
-title: Migration guide - DiscountPromotionWidget
+title: Upgrade the DiscountPromotionWidget module
 description: Use the guide to migrate to a newer version of the DiscountPromotionWidget module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-discountpromotionwidget.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-discountpromotionwidget.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-discountpromotionwidget.html
+  - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-discountpromotionwidget.html  
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-discountpromotionwidget-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-discountpromotionwidget-module.md -->

@@ -1,5 +1,5 @@
 ---
-title: Migration guide - DiscountCalculatorConnector
+title: Upgrade the DiscountCalculatorConnector module
 description: Use the guide to migrate to a newer version of the DiscountCalculatorConnector module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -29,12 +29,13 @@ redirect_from:
   - /dev/module-migration-guides/202005.0/migration-guide-discountcalculatorconnector.html
   - /dev/module-migration-guides/202009.0/migration-guide-discountcalculatorconnector.html
   - /dev/module-migration-guides/202108.0/migration-guide-discountcalculatorconnector.html
+  - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-discountcalculatorconnector.html  
 related:
-  - title: Migration guide - Discount
+  - title: Upgrade the Discount
     link: docs/scos/dev/module-migration-guides/migration-guide-discount.html
   - title: Creating Vouchers
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/creating-vouchers.html
-  - title: Migration guide - DiscountSalesAggregatorConnector
+  - title: Upgrade the DiscountSalesAggregatorConnector
     link: docs/scos/dev/module-migration-guides/migration-guide-discountsalesaggregatorconnector.html
 ---
 

@@ -2497,16 +2497,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-customerpage.html
     - title: Migration Guide - CustomerReorderWidget
       url: /docs/scos/dev/module-migration-guides/migration-guide-customerreorderwidget.html
-    - title: Migration Guide - Discount
-      url: /docs/scos/dev/module-migration-guides/migration-guide-discount.html
-    - title: Migration Guide - DiscountCalculatorConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-discountcalculatorconnector.html
-    - title: Migration Guide - DiscountPromotion
-      url: /docs/scos/dev/module-migration-guides/migration-guide-discountpromotion.html
-    - title: Migration Guide - DiscountPromotionWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-discountpromotionwidget.html
-    - title: Migration Guide - DiscountSalesAggregatorConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-discountsalesaggregatorconnector.html
     - title: Migration guide - Elastica
       url: /docs/scos/dev/module-migration-guides/migration-guide-elastica.html
     - title: Migration Guide - Environment Configuration
@@ -4241,8 +4231,6 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html
         - title: "HowTo: Use blocks"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-use-blocks.html
-        - title: "HowTo: Create discounts based on shipment"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-create-discounts-based-on-shipment.html
         - title: "HowTo: Display custom names for order item states on the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html
         - title: "HowTo: Configure the product reviews"

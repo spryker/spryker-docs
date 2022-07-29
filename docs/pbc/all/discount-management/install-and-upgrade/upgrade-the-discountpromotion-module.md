@@ -1,5 +1,5 @@
 ---
-title: Migration guide - DiscountPromotion
+title: Upgrade the DiscountPromotion module
 description: Use the guide to migrate to a new version of the DiscountPromotion module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -30,6 +30,8 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-discountpromotion.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-discountpromotion.html
   - /module_migration_guides/mg-discount-promotion.htm
+  - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-discountpromotion.html  
 ---
+
 
 {% include pbc/all/upgrade-modules/upgrade-the-discountpromotion-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-discountpromotion-module.md -->

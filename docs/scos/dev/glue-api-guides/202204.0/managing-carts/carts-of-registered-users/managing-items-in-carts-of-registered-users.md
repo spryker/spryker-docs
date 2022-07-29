@@ -15,8 +15,6 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
   - title: Managing gift cards of registered users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
-  - title: Managing discount vouchers in carts of registered users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-discount-vouchers-in-carts-of-registered-users.html
 ---
 
 This endpoint allows managing items in carts of registered users by adding, changing, and deleting them.

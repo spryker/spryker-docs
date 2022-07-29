@@ -2,12 +2,14 @@
 title: "Best practices: Promote products with discounts"
 description: Learn how to promote products using discounts.
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202204.0/merchandising/discount/best-practices-promote-products-with-discounts.html
 related:
   - title: Promotions & Discounts feature overview
     link: docs/scos/user/features/page.version/promotions-discounts-feature-overview.html
 ---
 
-This document explains how to use discounts to promote products using a concrete example. 
+This document explains how to use discounts to promote products using a concrete example.
 
 Let's say that today is January 19, 2017. Soon your shop is going to receive Asus laptops with a new Intel processor. You want to quickly sell the laptops with the old processor. To promote the old laptops, you are going to offer free standard delivery for all Intel-based Asus laptops.
 

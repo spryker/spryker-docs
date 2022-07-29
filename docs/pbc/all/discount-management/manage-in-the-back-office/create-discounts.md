@@ -11,18 +11,14 @@ redirect_from:
   - /docs/creating-a-voucher
   - /docs/en/creating-a-voucher
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/discount/creating-vouchers.html
-related:
-  - title: Edit discounts
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/edit-discounts.html
-  - title: Promotions & Discounts feature overview
-    link: docs/scos/user/features/page.version/promotions-discounts-feature-overview.html
+  - /docs/scos/user/back-office-user-guides/202204.0/merchandising/discount/create-discounts.html
 ---
 
 This document describes how to create discounts in the Back Office.
 
 ## Prerequisites
 
-If you are new to discounts, you might want to start with [Best practices: Promote products with discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/best-practices-promote-products-with-discounts.html).
+If you are new to discounts, you might want to start with [Best practices: Promote products with discounts](/docs/pbc/all/discount-management/manage-discounts-in-the-back-office/best-practices-promote-products-with-discounts.html).
 
 There is a [reference information](#reference-information-define-general-settings-of-the-discount) for each section. Review it before you start, or look up the necessary information as you go through the process.
 
@@ -94,7 +90,7 @@ This refreshes the page with a success message displayed.
 | DISCOUNT TYPE | Defines how the discount will be applied: <ul><li>**Cart rule**: the discount will be applied automatically to the products defined in [Define discount calculation and the products to apply the discount to](#define-discount-calculation-and-the-products-to-apply-the-discount-to).</li><li>**Voucher codes**: the discount will be applied to the products defined in [Define discount calculation and the products to apply the discount to](#define-discount-calculation-and-the-products-to-apply-the-discount-to) when a customer enters a voucher code generated in [Generate voucher codes](#generate-voucher-codes).</li></ul> |
 | NAME | Unique identifier of the discount that will be displayed in the Back Office and on the Storefront. |
 | DESCRIPTION | The description will be displayed only in the Back Office.  |
-| PRIORITY | Defines the order of discounts being applied. Accepts integers from `1` to `9999` with `1` being the highest priority. | 
+| PRIORITY | Defines the order of discounts being applied. Accepts integers from `1` to `9999` with `1` being the highest priority. |
 | NON-EXCLUSIVE | Defines that this discount can be applied to a cart together with other non-exclusive discounts. |
 | EXCLUSIVE | Defines that this discount, when applied to a cart, discards all the other non-exclusive discounts. If multiple exclusive discounts are applied to a cart, only the discount with the bigger discount value is applied.   |
 | VALID FROM and VALID TO | Inclusively, define the dates between which the discount can be applied.|
@@ -214,4 +210,4 @@ This section contains additional information for defining decision rules.
 
 ## Next steps
 
-[Edit discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/edit-discounts.html)
+[Edit discounts](/docs/pbc/all/discount-management/manage-discounts-in-the-back-office/edit-discounts.html)

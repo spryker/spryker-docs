@@ -10,7 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-discounts
   - /docs/managing-discounts
   - /docs/en/managing-discounts
-  - /docs/scos/user/features/202200.0/promotions-discounts-feature-overview.md/docs/scos/user/back-office-user-guides/202200.0/merchandising/discount/creating-vouchers.html
+  - /docs/scos/user/back-office-user-guides/202204.0/merchandising/discount/edit-discounts.html
 related:
   - title: Create discounts
     link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/create-discounts.html
@@ -23,7 +23,7 @@ This topic describes how to edit discounts in the Back Office.
 
 ## Prerequisites
 
-If you are new to discounts, you might want to start with [Best practices: Promote products with discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/best-practices-promote-products-with-discounts.html).
+If you are new to discounts, you might want to start with [Best practices: Promote products with discounts](/docs/pbc/all/discount-management/manage-discounts-in-the-back-office/best-practices-promote-products-with-discounts.html).
 
 Review the [reference information](#reference-information-edit-general-settings-of-a-discount) before you start, or look up the necessary information as you go through the process.
 

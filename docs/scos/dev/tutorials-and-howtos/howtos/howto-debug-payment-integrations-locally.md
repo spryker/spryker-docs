@@ -33,7 +33,7 @@ ssl:
 
 A status dashboard for NGROK appears in your terminal. It also displays a useful local web UI where you can see and inspect incoming requests and payloads.
 4. Update your payment configuration.
-This step depends on the payment provider you are using. Normally, payment providers have a management console or web UI that lets you specify notification endpoints that are used to send notifications to your application. You need to update those so they match your NGROK URL. 
+This step depends on the payment provider you are using. Most payment providers provide a management console or web UI where you can specify notification endpoints for sending notifications to your application. You need to update those, so they match your NGROK URL. 
 
 {% info_block infoBox "Info" %}
 

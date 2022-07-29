@@ -24,7 +24,7 @@ The Spryker Back Office provides you with a variety of sections that are logical
 
 {% info_block infoBox "Spryker Back Office" %}
 
-It provides the product and content management capabilities, categories and navigation building blocks, search and filter customizations, barcode generator, order handling, company structure creation (_for B2B users_), merchant-buyer contracts' setup.
+It provides the product and content management capabilities, categories and navigation building blocks, search and filter customizations, barcode generator, order handling, company structure creation (_for B2B users_), and merchant-buyer contracts' setup.
 
 {% endinfo_block %}
 
@@ -43,11 +43,11 @@ With Spryker Back Office, you can do the following:
 
 Depending on the roles and teams in your project, you can limit the access of different Back Office users to specific Back Office areas.
 
-**Back Office provides both, B2B and B2C capabilities.**
+**Back Office provides both B2B and B2C capabilities.**
 
 {% info_block infoBox "Info" %}
 
-The following diagram shows what features are used for both *B2B and B2C*, and which are *B2B-specific*.
+The following diagram shows what features are used for both *B2B and B2C* and which are *B2B-specific*.
 
 {% endinfo_block %}
 
@@ -87,7 +87,7 @@ With Strategy 1, the login process looks like this:
 
 ![image](https://confluence-connect.gliffy.net/embed/image/5b0f6ab5-d4d5-4b53-b82a-d73bec9c81ea.png?utm_medium=live&utm_source=custom)
 
-**Strategy 2: Do not log in the user unless they exist in the Spryker database.**
+**Strategy 2: Do not log in to the user unless they exist in the Spryker database.**
 
 Before a user can log in to Back Office with third-party service credentials, the user must be added and set to `Active` in the database. You can add the user using either the Back Office or the ACL module.
 

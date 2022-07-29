@@ -29,7 +29,7 @@ Make sure that all endpoints in your `deploy.*.yml` file are referenced there an
 
 ### Bootstrap with `deploy.yml`
 
-Your project has different `deploy.yml` files that are used for development purposes. However, you can use the `deploy.yml` files that are used during deployment to staging and production environments as well and simulate the app behavior when deployed to these environments.
+For development purposes, your project has different `deploy.yml` files. You can, however, use the `deploy.yml` files used during deployment to staging and production environments to simulate the app's behavior.
 
 You must have the following `deploy.yml` files in your project (it will vary a bit, depending on the total quantity of your environments):
 - `deploy.(PROJECT_NAME)-prod.yml`

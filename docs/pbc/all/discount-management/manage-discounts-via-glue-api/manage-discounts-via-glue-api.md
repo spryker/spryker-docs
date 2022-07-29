@@ -18,11 +18,11 @@ related:
     link: docs/scos/user/features/page.version/promotions-discounts-feature-overview.html
 ---
 
-The [Promotions](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html#promotional-product) functionality enables sellers to provide a promotional item that the customers can add to their carts at a discounted price or even for free. To be eligible for promotions, the purchase needs to fulfill certain discount conditions, for example, the purchase amount should exceed a certain threshold.
+The [Promotions](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html#promotional-product) functionality enables sellers to provide a promotional item that the customers can add to their carts at a discounted price or even for free. To be eligible for promotions, the purchase needs to fulfill certain discount conditions, for example, the purchase amount should exceed a certain threshold.
 
 {% info_block infoBox "Info" %}
 
-For more details on how to create the discount conditions, see [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
+For more details on how to create the discount conditions, see [Create discounts](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/discount/create-discounts.html).
 
 {% endinfo_block %}
 
@@ -30,7 +30,7 @@ In your development, the Promotions API will help you to enable customers to red
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Promotions & Discounts Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html).
 
 ## Managing promotional items
 
@@ -44,9 +44,9 @@ You can do the following actions on the promotional items via API:
 
 For customers to be able to benefit from promotional offers, first, they need to know about them. For this purpose, you can fetch the promotions available for products in a cart and display the possible benefits to the customer. To do so, you can query the cart information and include the `promotional-items` resource relationship. The response provides the abstract SKU of the promoted product and how many of the promotional items customers can add. To present detailed information on promotional products to the customer, you can include the `abstract-products` and `concrete-products` resource relationships.
 
-See [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html) for details on how to retrieve promotional items for a registered user’s cart.
+See [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html) for details on how to retrieve promotional items for a registered user’s cart.
 
-See [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html) for details on how to retrieve promotional items for a guest user’s cart.
+See [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/guest-carts/managing-guest-carts.html) for details on how to retrieve promotional items for a guest user’s cart.
 
 ## Adding applicable promotional items to cart
 
@@ -58,4 +58,4 @@ See [Retrieve discounts in guest carts](/docs/pbc/all/discount-management/manage
 
 ## Removing promotional items from cart
 
-To remove a discount applied to a promotional product, remove the promotional product(s) from the cart. For details, see Removing Items in [Managing Items in Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#remove-items-from-a-registered-users-cart) and [Managing Guest Cart Items](/docs/marketplace/dev/glue-api-guides/{{page.version}}/guest-carts/managing-guest-cart-items.html#remove-an-item-from-a-guest-cart). Also, if a cart no longer fulfills the conditions of the promotion, all promotional products are removed automatically.
+To remove a discount applied to a promotional product, remove the promotional product(s) from the cart. For details, see Removing Items in [Managing Items in Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#remove-items-from-a-registered-users-cart) and [Managing Guest Cart Items](/docs/marketplace/dev/glue-api-guides/{{site.version}}/guest-carts/managing-guest-cart-items.html#remove-an-item-from-a-guest-cart). Also, if a cart no longer fulfills the conditions of the promotion, all promotional products are removed automatically.

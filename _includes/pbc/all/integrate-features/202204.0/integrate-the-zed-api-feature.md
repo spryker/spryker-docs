@@ -172,7 +172,7 @@ class ApiConfig extends SprykerApiConfig
 
 Make sure that Zed API is enabled by accessing any backend API resource.
 
-Make sure that backend API is extended with request parameters and stacktrace when `ApiConstants::ENABLE_API_DEBUG` is set to `true`.
+Make sure that the backend API is extended with request parameters and stacktrace when `ApiConstants::ENABLE_API_DEBUG` is set to `true`.
 
 {% endinfo_block %}
 

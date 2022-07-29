@@ -17,7 +17,7 @@ To simulate your application behavior and how it looks when deployed to the stag
 
 ### Prepare your local hosts file
 
-In these `deploy.yml` files, you specify the actual endpoint names that determine the URLs under which your environment is reachable. For this to work locally, point your DNS names to your local development environment by adding host entries in your local `/etc/hosts` file. 
+In these `deploy.yml` files, you specify the actual endpoint names that determine the URLs under which your environment is reachable. To work locally, point your DNS names to your local development environment by adding host entries in your local `/etc/hosts` file. 
 
 {% info_block warningBox "Verification" %}
 

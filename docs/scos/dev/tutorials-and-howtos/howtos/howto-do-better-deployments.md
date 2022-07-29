@@ -43,4 +43,4 @@ Bootstrap your `deploy.yml`:
 docker/sdk boot (THE YML file of your choice) && docker/sdk up
 ```
 
-This starts up your application, which is reachable through its staging and production URLs and behaves just like it would in your PaaS environments. This setup shows whether your application builds correctly with the deploy files used in the PaaS pipelines and lets you check out the look and feel of your application in a more authentic fashion.
+It starts up your application, which is reachable through its staging and production URLs and behaves just like it would in your PaaS environments. This setup shows whether your application builds correctly with the deploy files used in the PaaS pipelines and lets you check out the look and feel of your application more authentically.

@@ -31,7 +31,7 @@ ssl:
 //forwarding your requests like this let you keep most of your URL configuration as is. If your base url differs from the example, make sure to update the command to match.
 ```
 
-You are presented with NGROK's status dashboard in your terminal. It also displays you a useful local web UI where you can see and inspect incoming requests and payloads.
+A status dashboard for NGROK appears in your terminal. It also displays a useful local web UI where you can see and inspect incoming requests and payloads.
 4. Update your payment configuration.
 This step depends on the payment provider you are using. Normally, payment providers have a management console or web UI that lets you specify notification endpoints that are used to send notifications to your application. You need to update those so they match your NGROK URL. 
 

@@ -6,7 +6,7 @@ template: howto-guide-template
 ---
 
 Unlike your [PaaS](/docs/paas-plus/dev/platform-as-a-service-plus.html) environment, local development environments let you debug your application using your IDE. This document shows how to debug most payment integrations locally to ensure that your integration works before deploying it.
-Most payment integrations rely on a push notification to send feedback to requests made by your application. Normally, these push notifications would never reach your local development environment, because the payment provider would not be able to resolve its DNS name. You can use tools like NGROK to set up a publicly available reverse proxy that gives you a publicly reachable URL that you can add to the configuration on your payment provider’s management console. 
+Most payment integrations rely on a push notification to send feedback to requests made by your application. Normally, these push notifications would never reach your local development environment because the payment provider would not be able to resolve its DNS name. You can use tools like NGROK to set up a publicly available reverse proxy that gives you a publicly reachable URL that you can add to the configuration on your payment provider’s management console. 
 
 ## Prerequisites
 * Read access to your code base.

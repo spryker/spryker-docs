@@ -2,8 +2,6 @@
 title: Configuring GitHub Actions
 description: Learn how to configure continuous integration for Spryker Cloud Commerce OS with GitHub Actions.
 template: howto-guide-template
-originalLink: https://cloud.spryker.com/docs/configuring-github-actions
-originalArticleId: ad8a174f-1372-4cae-b530-fa77a9cd5479
 redirect_from:
   - /docs/configuring-github-actions
   - /docs/en/configuring-github-actions
@@ -173,7 +171,6 @@ jobs:
               run: vendor/bin/console security:check
 ...
 ```
-
 </details>
 
 ## Configuring groups of tests via the Docker SDK
@@ -238,7 +235,7 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/s
 
 4. Repeat steps 1 to 3 until you add all the desired jobs.
 
-For different configuration examples, see Configuring groups of tests via the [Configuring groups of tests via the Docker SDK: Configuration examples](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-github-actions.html#configuring-groups-of-tests-via-the-docker-sdk).
+For different configuration examples, see Configuring groups of tests via the [Configuring groups of tests via the Docker SDK: Configuration examples](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-github-actions.html#configuring-groups-of-tests-via-the-docker-sdk-configuration-examples).
 
 ### Configuring groups of tests via the Docker SDK: Configuration examples
 

@@ -5,7 +5,7 @@ description: This document lists all the Tax Management releases
 template: concept-topic-template
 ---
 
-## April 18th 2022
+## April 18th, 2022
 
 This release contains the following modules:
 * [TaxProductStorage](https://github.com/spryker/tax-product-storage/releases/tag/1.2.0)
@@ -18,7 +18,7 @@ This release contains the following modules:
 * Removed deprecated usage of `DatabaseTransactionHandlerTrait::preventTransaction()`.
 * Removed `PropelOrm` version BC.
 
-## July 9th 2020
+## July 9th, 2020
 
 This release contains one module, [Tax](https://github.com/spryker/tax/releases/tag/5.9.0).
 
@@ -29,7 +29,7 @@ This release contains one module, [Tax](https://github.com/spryker/tax/releases/
 * Adjusted `DeleteRateController::confirmAction()` in order to use CSRF protection.
 * Adjusted `DeleteSetController::confirmAction()` in order to use CSRF protection.
 
-## July 6th 2020
+## July 6th, 2020
 
 This release contains one module, [Tax](https://github.com/spryker/tax/releases/tag/5.8.10)
 
@@ -39,7 +39,7 @@ This release contains one module, [Tax](https://github.com/spryker/tax/releases/
 
 * Adjusted translations.
 
-## July 3rd 2020
+## July 3rd, 2020
 
 This release contains the following modules:
 * [TaxProductStorage](https://github.com/spryker/tax-product-storage/releases/tag/1.1.0)

@@ -5,7 +5,7 @@ description: This document lists all the Unzer releases
 template: concept-topic-template
 ---
 
-## June 14th 2022
+## June 14th, 2022
 
 This release contains one module, [Unzer](https://github.com/spryker-eco/unzer/releases/tag/1.0.1)
 
@@ -28,9 +28,9 @@ The following improvements have been made:
 * Introduced `UnzerCharge.chargedSalesShipmentIds` transfer field.
 
 
-## June 6th 2022
+## June 6th, 2022
 
-Initial release of the Unzer integration. This release contains four modules:
+The initial release of the Unzer integration. This release contains four modules:
 * [Unzer](https://github.com/spryker-eco/unzer/releases/tag/1.0.0)
 * [Unzer GUI](https://github.com/spryker-eco/unzer-gui/releases/tag/1.0.0)
 * [Unzer REST API](https://github.com/spryker-eco/unzer-rest-api/releases/tag/0.1.0)

@@ -1,6 +1,7 @@
 ---
-title: Managing parameters in the Parameter Store
-description: Learn how to manage parameters in the Parameter Store.
+title: Define parameters in the Parameter Store
+description: Learn how to define parameters in the Parameter Store.
+last_updated: July 28 2022
 template: howto-guide-template
 originalLink: https://cloud.spryker.com/docs/managing-parameters-in-the-parameter-store
 originalArticleId: 2047c84c-bd7b-4bce-9203-08945367ad46
@@ -11,9 +12,11 @@ redirect_from:
 
 This document describes how you can add new parameters and edit the values of existing parameters. You can use parameters for multiple purposes, like storing mail server details or providing Composer authentication details to the build and deploy process securely.
 
-## Adding new parameters
+## Add parameters
 
-Currently, only our team can add new parameters. To add a new parameter, fill out the [parameter creation form](https://spryker.force.com/support/s/hosting-change-requests/change-request-new-param-store-variable).
+1. To define parameters locally and push them to the needed environment
+
+
 
 ## Changing parameters
 

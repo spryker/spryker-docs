@@ -1,6 +1,6 @@
 ---
-title: Define parameters and secrets
-description: Learn how to configure debugging in Docker.
+title: Define parameters and secrets locally
+description: Learn how to declare parameters and define their values.
 last_updated: July 28, 2022
 template: howto-guide-template
 ---
@@ -9,7 +9,7 @@ This document describes how to declare parameters and secrets and define their v
 
 ## Declare parameters and secrets
 
-Declare parameters and secrets in the needed deploy file as follows:
+1. Define parameters and secrets in the needed deploy file as follows:
 
 ```yaml
 ...
@@ -32,30 +32,29 @@ environment-configuration:
 | bucket | Defines what the secret or parameter is used for. Acceptable values are `app`, `scheduler`, `pipeline`, and `common`. `common` is the default value. Common secrets and parameters can be used by all the buckets. |
 | default | Default parameter value. Accepts string, number, and json values. |
 
-
-## Define parameter and secret values locally
-
-1. Bootstrap the declared parameters:
+2. Bootstrap the declared parameters:
 
 ```bash
 docker/sdk boot {DEPLOY_FILE_NAME}
 ```
 
-2. Generate a file for parameter and secret values:
+## Define parameter and secret values locally
+
+1. Generate a file for parameter and secret values:
 
 ```bash
 docker/sdk generate-env
 ```
-    This generates the `.env.docker.local` file and adds it to `.gitignore`
+    This generates the `.env.docker.local` file and adds it to `.gitignore`.
 
-3. In `.env.docker.local`, define parameter and secret values:
+2. In `.env.docker.local`, define parameter and secret values:
 
 ```text
 {SECRET_NAME}='{SECRET_VALUE}'
 {PARAMETER_NAME}=`{PARAMETER_VALUE}`
 ```
 
-4. Optional: Check your environment's parameters:
+3. Optional: Check your environment's parameters:
 
 ```bash
 list-env
@@ -64,4 +63,4 @@ list-env
 
 ## Define parameter and secret values in SCCOS
 
-To define parameter and secret values in a Spryker Cloud Commerce OS environment, push the updated deploy file and follow [Define parameters in the parameter store]()
+To define parameter and secret values in a Spryker Cloud Commerce OS environment, follow [Define parameters and secretes in a SCCOS environment](/docs/cloud/dev/spryker-cloud-commerce-os/define-parameters-and-secrets-in-a-sccos-environment.html).

@@ -13,7 +13,7 @@ Read access to your codebase
 
 ## Simulate your application
 
-To simulate your application behavior and how it looks when deployed to the staging or production environment, bootstrap the `deploy.yml` files that are used by those environments. The following sections show what needs to be done.
+To simulate your application behavior and how it looks when deployed to the staging or production environment, bootstrap the `deploy.yml` files used by those environments. The following sections show what needs to be done.
 
 ### Prepare your local hosts file
 

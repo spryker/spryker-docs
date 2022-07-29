@@ -83,11 +83,11 @@ Once a return request has been submitted, it acquires the *Waiting for return* s
 
 {% info_block infoBox "Info" %}
 
-Next to each sales order item, there is the date till which the item can be returned. This date is controlled by the Return Policy. If the item is non-returnable, you cannot select the return reason and create the return.
+Next to each sales order item, there is the date until which the item can be returned. This date is controlled by the Return Policy. If the item is non-returnable, you cannot select the return reason and create the return.
 
 {% endinfo_block %}
 
-All the returns created by the buyer or by the Back Office user for the buyer are listed on the **Returns** page in the **Customer Account**. From here, the Buyer can view the return details and print the return slip.
+All the returns created by the buyer or by the Back Office user for the buyer are listed on the **Returns** page in the **Customer Account**. From here, the buyer can view the return details and print the return slip.
 The following figure shows how to create a return, view its details and print a slip:
 ![create and print a return](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/create-and-print-a-return.gif)
 

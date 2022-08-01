@@ -19,6 +19,7 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/development-tools/scss-linter.html
   - /docs/scos/dev/sdk/202009.0/development-tools/scss-linter.html
   - /docs/scos/dev/sdk/202108.0/development-tools/scss-linter.html
+  - /docs/scos/dev/sdk/development-tools/scss-linter.html
 ---
 
 *SCSS linter* allows you to find and fix code style mistakes. It helps a team to follow the same standards and make code more readable.

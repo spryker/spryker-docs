@@ -19,6 +19,7 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/development-tools/performance-audit-tool-benchmark.html
   - /docs/scos/dev/sdk/202009.0/development-tools/performance-audit-tool-benchmark.html
   - /docs/scos/dev/sdk/202108.0/development-tools/performance-audit-tool-benchmark.html
+  - /docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
 ---
 
 The Benchmark tool allows you to profile requests to an application and see how long it takes to load a page and how much memory the application uses during these requests. This tool is based on [PHPBench](https://github.com/phpbench/phpbench) and is used inside Spryker.

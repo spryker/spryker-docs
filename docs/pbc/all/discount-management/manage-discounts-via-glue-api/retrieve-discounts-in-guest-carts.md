@@ -50,7 +50,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 | PATH PARAMETER | DESCRIPTION | Possible values |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | <ul><li>cart-rules</li><li>promotional-items</li><li>vouchers</li> |
+| include | Adds resource relationships to the request. | <ul><li>cart-rules</li><li>promotional-items</li><li>vouchers</li></ul> |
 
 | REQUEST | USAGE |
 | --- | --- |

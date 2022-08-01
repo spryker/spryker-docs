@@ -45,7 +45,7 @@ To add items to a guest cart, send the request:
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | <ul><li>cart-rules</li><li>vouchers</li> |
+| include | Adds resource relationships to the request. | <ul><li>cart-rules</li><li>vouchers</li></ul> |
 
 
 
@@ -681,7 +681,7 @@ To add the promotional product to cart, make sure that the cart fulfills the car
 
 
 
-For the attributes of guest carts, see [Retrieve discounts in guest cart](/retrieve-discounts-in-guest-carts.html#guest-cart-response-attributes).
+For the attributes of guest carts, see [Retrieve discounts in guest cart](/docs/pbc/all/discount-management/manage-discounts-via-glue-api/retrieve-discounts-in-guest-carts.html#guest-cart-response-attributes).
 
 
 ## Possible errors

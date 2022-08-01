@@ -1,6 +1,6 @@
 
 
-This document describes how to add the `category` parameter to calculation and conditions queries in the [Promotions & Discounts](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html) feature.
+This document describes how to add the `category` parameter to calculation and conditions queries in the [Promotions & Discounts](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -12,9 +12,9 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Promotions & Discounts | {{page.version}} | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/promotions-and-discounts-feature-integration.html) |
-| Category Management | {{page.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/category-management-feature-integration.html) |
-| Spryker Core | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Promotions & Discounts | {{site.version}} | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/promotions-and-discounts-feature-integration.html) |
+| Category Management | {{site.version}} | [Category Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/category-management-feature-integration.html) |
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 
 ### 1) Set up behavior
 

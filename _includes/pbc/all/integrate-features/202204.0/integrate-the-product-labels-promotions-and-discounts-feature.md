@@ -11,9 +11,9 @@ To start feature integration, overview, and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Promotions & Discounts | {{page.version}} |
-| Product Labels | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Promotions & Discounts | {{site.version}} |
+| Product Labels | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Set up behavior
 

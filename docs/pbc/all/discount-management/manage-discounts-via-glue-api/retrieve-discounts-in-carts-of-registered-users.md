@@ -364,7 +364,7 @@ To retrieve a particular cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](#create-a-cart) or [Retrieve a registered user's carts](#retrieve-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](#retrieve-registered-users-carts) to get it. |
 
 ### Request
 

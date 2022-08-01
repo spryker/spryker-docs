@@ -30,6 +30,8 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-shipmentdiscountconnector.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shipmentdiscountconnector.html
   - /module_migration_guides/mg-shipment-discount-connector.htm
+  - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-shipmentdiscountconnector.html
+
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-shipmentdiscountconnector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-shipmentdiscountconnector-module.md -->

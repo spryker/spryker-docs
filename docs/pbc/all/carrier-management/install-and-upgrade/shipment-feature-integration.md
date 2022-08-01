@@ -1,6 +1,6 @@
 ---
-title: Shipment feature integration
-description: Use the guide to install the Shipment Back Office UI, Delivery method per store and Shipment data import functionalities in your project.
+title: Integrate the Shipment feature
+description: Learn how to integrate the Shipment Back Office UI, Delivery method per store and Shipment data import functionalities in your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/shipment-feature-integration
@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/shipment-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201903.0/shipment-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/shipment-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/shipment-feature-integration.html  
 related:
   - title: Glue API - Shipment feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-shipment-feature-integration.html

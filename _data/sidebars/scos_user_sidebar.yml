@@ -667,6 +667,8 @@ entries:
       url: /docs/scos/user/features/shared-carts-feature-overview.html
     - title: Shipment
       url: /docs/scos/user/features/shipment-feature-overview.html
+      include_versions:
+      - "202108.0"
     - title: Shopping Lists
       url: /docs/scos/user/features/shopping-lists-feature-overview/shopping-lists-feature-overview.html
       nested:

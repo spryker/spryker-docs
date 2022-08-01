@@ -12,6 +12,25 @@ redirect_from:
   - /docs/en/implementing-synchronization-plugins
   - /v6/docs/implementing-synchronization-plugins
   - /v6/docs/en/implementing-synchronization-plugins
+related:
+  - title: Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
+  - title: Implementing Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-publish-and-synchronization.html
+  - title: Handling data with Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html
+  - title: Adding publish events
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/adding-publish-events.html
+  - title: Implementing event trigger publisher plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html
+  - title: Debugging listeners
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debugging-listeners.html
+  - title: Publish and Synchronize and multi-store shop systems
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
+  - title: Publish and Synchronize repeated export
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
+  - title: Synchronization behavior - enabling multiple mappings
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
 Sometimes it’s needed to manually [synchronize or re-syncrhonize](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html#published-data-re-generation) the published model data with Redis or ElasticSearch. To do that, you need to implement a synchronization plugin.

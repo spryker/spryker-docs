@@ -3,6 +3,15 @@ title: Common pitfalls in OMS design
 description: This article explains the common pitfalls in OMS design in the Spryker Commerce OS.
 last_updated: Jan 13, 2022
 template: howto-guide-template
+related:
+  - title: Order management system multi-thread
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-management-system-multi-thread.html
+  - title: Order process modelling via state machines
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html
+  - title: State machine console commands
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/state-machine-console-commands.html
+  - title: Creating an Order Management System - Spryker Commerce OS
+    link: docs/scos/dev/back-end-development/data-manipulation/creating-an-order-management-system-spryker-commerce-os.html
 ---
 
 

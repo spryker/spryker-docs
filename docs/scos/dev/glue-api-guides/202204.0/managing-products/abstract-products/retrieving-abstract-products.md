@@ -12,7 +12,15 @@ redirect_from:
   - /docs/en/retrieving-abstract-products
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/abstract-products/retrieving-abstract-products.html
 related:
-  - title: Product overview
+  - title: Retrieving abstract product availability
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
+  - title: Retrieving abstract product prices
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-prices.html
+  - title: Retrieving image sets of abstract products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
+  - title: Retrieving tax sets
+    link: docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html
+  - title: Product feature overview
     link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
 ---
 
@@ -726,7 +734,7 @@ To include `bundled products`, include `concrete-products` and `bundled-products
 
 
 <details>
-<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about tax rates</summary>
+<summary markdown='span'>Response sample: retrieve information about an abstract product with the details about tax sets</summary>
 
 ```json
 {
@@ -1948,7 +1956,7 @@ For the attributes of other included resources, see:
 * [Retrieve prices of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html#category-nodes-response-attributes)
-* [Retrieve tax sets](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-tax-sets.html#tax-sets-response-attributes)
+* [Retrieve tax sets](/docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html#tax-sets-response-attributes)
 * [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 * [Retrieve product reviews](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-product-ratings-and-reviews.html#product-ratings-and-reviews-response-attributes)
 * [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)

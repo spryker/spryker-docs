@@ -2,6 +2,11 @@
 title: Edit search preferences
 description: Learn how to edit search preferences in the Back Office
 template: back-office-user-guide-template
+related:
+  - title: Define search preferences
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/search-preferences/define-search-preferences.html
+  - title: Search feature overview
+    link: docs/scos/user/features/page.version/search-feature-overview/search-feature-overview.html
 ---
 
 This document describes how to edit search preferences for product attributes in the Back Office.
@@ -41,7 +46,7 @@ Defines if all words in search terms are searched. The results that match all th
 
 For example, **FULL TEXT** is enabled for the following attribute key-value pairs:
 
-| Key | Value|
+| KEY | VALUE|
 | - | - |
 | focus_adjustment | Auto/Manual |
 | flash | Manual |

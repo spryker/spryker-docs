@@ -23,6 +23,11 @@ redirect_from:
   - /v1/docs/post-installation-steps-and-additional-info
   - /v1/docs/en/post-installation-steps-and-additional-info
   - /docs/scos/dev/setup/post-installation-steps-and-additional-info.html
+related:
+  - title: Configuring database servers
+    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html
+  - title: Updating Node.js in DevVM to the latest version
+    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/updating-node.js-in-devvm-to-the-latest-version.html
 ---
 {% info_block warningBox "Warning" %}
 

@@ -424,7 +424,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 To verify that `StorageRedisExportRdbConsole` and `StorageRedisImportRdbConsole` are activated, check if `vendor/bin/console storage:redis:export-rdb` and `vendor/bin/console storage:redis:import-rdb` console commands exist.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 

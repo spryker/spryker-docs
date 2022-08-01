@@ -13,6 +13,11 @@ redirect_from:
   - /v6/docs/upgrading-to-the-latest-version-of-nodejs-inside-devwm
   - /v6/docs/en/upgrading-to-the-latest-version-of-nodejs-inside-devwm
   - /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/upgrading-to-the-latest-version-of-node.js-inside-devwm.html
+related:
+  - title: Configuring Spryker after installing with DevVM
+    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-spryker-after-installing-with-devvm.html
+  - title: Configuring database servers
+    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/configuring-spryker-with-devvm/configuring-database-servers.html
 ---
 
 {% info_block warningBox "Warning" %}

@@ -10,7 +10,7 @@ redirect_from:
   - /v6/docs/en/alternative-products-wishlist-feature-integration
 ---
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 To start feature integration, review and install the necessary features:
 |Name|Version|

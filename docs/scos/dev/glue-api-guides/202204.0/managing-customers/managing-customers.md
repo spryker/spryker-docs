@@ -12,6 +12,27 @@ redirect_from:
   - /docs/en/managing-customers-via-glue-api
   - /docs/scos/user/back-office-user-guides/202200.0/customer/customer-customer-access-customer-groups/managing-customers.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/managing-customers.html
+related:
+  - title: Authentication and authorization
+    link: docs/scos/dev/glue-api-guides/page.version/authentication-and-authorization.html
+  - title: Searching by company users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
+  - title: Confirming customer registration
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/confirming-customer-registration.html
+  - title: Authenticating as a customer
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
+  - title: Managing customer authentication tokens
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-authentication-tokens.html
+  - title: Managing customer authentication tokens via OAuth 2.0
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html
+  - title: Managing customer passwords
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-passwords.html
+  - title: Managing customer addresses
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-addresses.html
+  - title: Retrieving customer carts
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-carts.html
+  - title: Retrieving customer orders
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
 ---
 
 The Customer API allows creating customers and manage their account data. This includes the possibility to maintain a set of customer addresses as separate resources. In the checkout process, you can retrieve and use these address resources to speed up the buying process. The API supports authentication via OAuth 2.0 and password restoration.

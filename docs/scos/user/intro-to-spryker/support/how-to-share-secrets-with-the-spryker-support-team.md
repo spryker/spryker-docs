@@ -23,20 +23,21 @@ Spryker employees never ask for credentials. We delete and don’t work with any
 {% endinfo_block %}
 
 ## Prerequisites
-Register in our [Slack Community](https://spryker.com/support/).
+
+Register in our [Slack community](https://spryker.com/support/).
 
 ## Process for sharing the secrets
 
-Please stick to the following process when sharing secrets with the Spryker Support Team:
+Stick to the following process when sharing secrets with the Spryker Support Team:
 
-1. Create a secret message by navigating to [One-Time Secret](https://onetimesecret.com/) and inserting your secret there. Make sure you configure a passphrase for your secret.
+1. Create a secret message by navigating to [One-Time Secret](https://onetimesecret.com/) and inserting your secret there. Make sure to configure a passphrase for your secret.
 
 {% info_block warningBox %}
 
-Do not include information on what the secret content is for. For example, if you insert a password, do not provide the username for it. Also, don’t include any information on where and how the secret should be used. Please also create a new link for every individual secret you want to share.
+Do not include information on what the secret content is for. For example, if you insert a password, do not provide the username for it. Also, don’t include any information on where and how the secret should be used. Also, create a new link for every individual secret you want to share.
 
 {% endinfo_block %}
 
-2. Send the created link to your secret to our Support Team. If you already opened a case, you can include it in the email response. If you have not yet created a case, you can do so via the [Spryker Support portal](https://support.spryker.com/). Here you can include a description of where and how the secrets should be used. Also, make sure to include your name in Slack.
+2. Send the created link to your secret to our Support Team. If you already opened a case, you can include it in the email response. If you have not yet created a case, you can do so by the [Spryker Support portal](https://support.spryker.com/). Here you can include a description of where and how the secrets should be used. Also, make sure to include your name in Slack.
 
-We will name a Support/DevOps representative that will contact you and ask for the passphrase for your link as soon as it is needed. Always check that the person contacting you for the phrase is the one that we named. The secrets in the link will not be stored or saved (unless you share secrets that should be configured in the AWS parameter store).
+We will name a Support or DevOps representative that will contact you and ask for the passphrase for your link as soon as it is needed. Always check that the person contacting you for the phrase is the one that we named. The secrets in the link are not stored or saved (unless you share secrets that should be configured in the AWS parameter store).

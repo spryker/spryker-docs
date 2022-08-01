@@ -5,6 +5,13 @@ template: howto-guide-template
 redirect_from:
   - docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/cleaning-up-devvm.html
   - docs/scos/dev/setup/cleaning-up-devvm.html
+related:
+  - title: DevVM system requirements
+    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html
+  - title: Installing Spryker with DevVM on MacOS and Linux
+    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html
+  - title: Installing Spryker with DevVM on Windows
+    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html
 ---
 {% info_block warningBox "Warning" %}
 

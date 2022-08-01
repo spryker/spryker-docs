@@ -40,7 +40,7 @@ In the web server configuration (AWS WAF can also be used), only HTTP endpoints 
 
 {% endinfo_block %}
 
-## Merchant portal network
+## Merchant Portal network
 
 For the Merchant Portal to function properly, it should be in a dedicated public network, not the same network where Yves/Glue runs, with access to a network Database and QueueBroker. For details, see [the diagram](#diagram)).
 
@@ -53,10 +53,10 @@ To properly configure Merchant Portal firewall, use these rules:
 | SG / NACLs     | Merchant Portal     | Redis(session):6379 | Allow      |
 | NACLs          | Redis(session):6379     | Merchant Portal | Allow      |
 | SG / NACLs     | Merchant Portal     | RDS:3306 | Allow                 |
-| NACLs          | RDS:3306     | Merchant portal | Allow                 |
+| NACLs          | RDS:3306     | Merchant Portal | Allow                 |
 | SG / NACLs     | Merchant Portal     | RabbitMQ:5672 | Allow            |
 | NACLs          | RabbitMQ:5672     | Merchant Portal | Allow            |
-| SG / NACLs     | Nginx     | Merchant portal:900x | Allow               |
+| SG / NACLs     | Nginx     | Merchant Portal:900x | Allow               |
 | NACLs          | Merchant Portal:9001     | Nginx | Allow               |
 | Default rule   | any     | Merchant Portal | Deny                       |
 

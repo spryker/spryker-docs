@@ -10,7 +10,7 @@ redirect_from:
   - /v4/docs/en/glue-api-products-feature-integration
 ---
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 

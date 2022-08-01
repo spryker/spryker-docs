@@ -20,6 +20,25 @@ redirect_from:
   - /docs/scos/dev/sdk/202009.0/development-tools/static-security-checker.html
   - /docs/scos/dev/sdk/202108.0/development-tools/static-security-checker.html
   - /docs/scos/dev/sdk/development-tools/static-security-checker.html
+related:
+  - title: Architecture sniffer
+    link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
+  - title: Code sniffer
+    link: docs/scos/dev/sdk/development-tools/code-sniffer.html
+  - title: Formatter
+    link: docs/scos/dev/sdk/development-tools/formatter.html
+  - title: Performance audit tool- Benchmark
+    link: docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
+  - title: PHPStan
+    link: docs/scos/dev/sdk/development-tools/phpstan.html
+  - title: SCSS linter
+    link: docs/scos/dev/sdk/development-tools/scss-linter.html
+  - title: TS linter
+    link: docs/scos/dev/sdk/development-tools/ts-linter.html
+  - title: Spryk code generator
+    link: docs/scos/dev/sdk/development-tools/spryk-code-generator.html
+  - title: Tooling config file
+    link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
 ---
 
 The Spryker static Security Checker allows you to detect packages with security vulnerabilities. It is based on the [Local PHP Security Checker](https://github.com/fabpot/local-php-security-checker).

@@ -29,10 +29,24 @@ redirect_from:
   - /docs/scos/dev/sdk/202108.0/development-tools/phpstan.html
   - /docs/scos/dev/sdk/development-tools/phpstan.html
 related:
-  - title: Architecture Sniffer
+  - title: Architecture sniffer
     link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
-  - title: Code Sniffer
-    link: docs/scos/dev/sdk/development-tools/phpstan.html
+  - title: Code sniffer
+    link: docs/scos/dev/sdk/development-tools/code-sniffer.html
+  - title: Formatter
+    link: docs/scos/dev/sdk/development-tools/formatter.html
+  - title: Performance audit tool- Benchmark
+    link: docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
+  - title: SCSS linter
+    link: docs/scos/dev/sdk/development-tools/scss-linter.html
+  - title: TS linter
+    link: docs/scos/dev/sdk/development-tools/ts-linter.html
+  - title: Spryk code generator
+    link: docs/scos/dev/sdk/development-tools/spryk-code-generator.html
+  - title: Static Security Checker
+    link: docs/scos/dev/sdk/development-tools/static-security-checker.html
+  - title: Tooling config file
+    link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
 ---
 
 [PHPStan](https://github.com/phpstan/phpstan) is a static code analyzer that introspects the code without running it and catches various classes of bugs prior to unit testing.

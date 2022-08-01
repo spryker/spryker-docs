@@ -10,52 +10,10 @@ redirect_from:
   - /2021080/docs/en/product-bundles-return-management-feature-integration
   - /docs/product-bundles-return-management-feature-integration
   - /docs/en/product-bundles-return-management-feature-integration
+related:
+  - title: Product Bundles feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-bundles-feature-walkthrough.html
+  - title: Return Management feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/return-management-feature-walkthrough.html
 ---
-
-## Install feature core
-
-### Prerequisites
-
-To start feature integration, overview and install the necessary features:
-
-| NAME | VERSION |
-| --- | --- |
-| Product Bundles | {{page.version}} |
-| Return Management | {{page.version}} |
-| Spryker Core | {{page.version}} |
-
-### 1) Set up behavior
-
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| ProductBundleReturnCreateFormHandlerPlugin | Expands `ReturnCreateForm` data with product bundles subforms. Handles form submit. | None | Spryker\Zed\ProductBundle\Communication\Plugin\SalesReturnGui |
-
-**src/Pyz/Zed/SalesReturnGui/SalesReturnGuiDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\SalesReturnGui;
-
-use Spryker\Zed\ProductBundle\Communication\Plugin\SalesReturnGui\ProductBundleReturnCreateFormHandlerPlugin;
-use Spryker\Zed\SalesReturnGui\SalesReturnGuiDependencyProvider as SprykerSalesReturnGuiDependencyProvider;
-
-class SalesReturnGuiDependencyProvider extends SprykerSalesReturnGuiDependencyProvider
-{
-    /**
-     * @return \Spryker\Zed\SalesReturnGuiExtension\Dependency\Plugin\ReturnCreateFormHandlerPluginInterface[]
-     */
-    protected function getReturnCreateFormHandlerPlugins(): array
-    {
-        return [
-            new ProductBundleReturnCreateFormHandlerPlugin(),
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that on return creation page in the Back Office UI, you are able to create returns for orders which have product bundles.
-
-{% endinfo_block %}
+{% include pbc/all/integrate-features/202204.0/integrate-the-product-bundles-return-management-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-product-bundles-return-management-feature.md -->

@@ -7,8 +7,6 @@ template: concept-topic-template
 
 The _Product_ feature allows creating products, manage their characteristics and settings.
 
-
-
 To learn more about the feature and to find out how end users use it, see [Product](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) for business users.
 
 

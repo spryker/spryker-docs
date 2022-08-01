@@ -10,6 +10,28 @@ entries:
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:
+          - title: What's changed
+            url: /docs/pbc/all/discount-management/whats-changed-in-discount-management.html
+          - title: Install and upgrade
+            nested:
+              - title: Integrate the Promotions & Discounts feature
+                url: /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-promotions-and-discounts-feature.html
+              - title: Integrate the Promotions & Discounts Glue API
+                url: /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html
+              - title: Integrate the Product labels + Promotions & Discounts feature
+                url: /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-product-labels-promotions-and-discounts-feature.html
+              - title: Integrate the Category Management + Promotions & Discounts feature
+                url: /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-category-management-promotions-and-discounts-feature.html
+              - title: Upgrade the Discount module
+                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discount-module.html
+              - title: Upgrade the DiscountCalculatorConnector module
+                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountcalculatorconnector-module.html
+              - title: Upgrade the DiscountPromotion module
+                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountpromotion-module.html
+              - title: Upgrade the DiscountPromotionWidget module
+                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountpromotionwidget-module.html
+              - title: Upgrade the DiscountSalesAggregatorConnector module
+                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountsalesaggregatorconnector-module.html
           - title: Manage in the Back Office
             nested:
               - title: "Best practices: Promote products with discounts"
@@ -20,6 +42,35 @@ entries:
                 url: /docs/pbc/all/discount-management/manage-in-the-back-office/edit-discounts.html
               - title: Export voucher codes
                 url: /docs/pbc/all/discount-management/manage-in-the-back-office/export-voucher-codes.html
+          - title: Manage via Glue API
+            url: /docs/pbc/all/discount-management/manage-via-glue-api/manage-discounts-via-glue-api.html
+            nested:
+              - title: Add items with discounts to guest carts via Glue API
+                url: /docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html
+              - title: Retrieve tax sets of abstract products
+                url: /docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets-of-abstract-products.html
+          - title: Import and export data
+            nested:
+              - title: Import tax sets
+                url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets.html
+              - title: Import tax sets for abstract products
+                url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-abstract-products.html
+          - title: Extend and customize
+            nested:
+              - title: "Tax module: reference information"
+                url: /docs/pbc/all/tax-management/extend-and-customize/tax-module-reference-information.html
+          - title: Domain model and relationships
+            url: /docs/pbc/all/tax-management/tax-domain-model-and-relationships.html
+          - title: Third-party integrations
+            url: /docs/pbc/all/tax-management/third-party-integrations/avalara.html
+            nested:
+              - title: Integrate Avalara
+                url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara.html
+              - title: Integrate Avalara Tax + Product Options
+                url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-product-options.html
+              - title: Integrate Avalara Tax + Shipment
+                url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-shipment.html
+
       - title: Payment Service Providers
         url: /docs/pbc/all/payment-service-providers/psp.html
         nested:

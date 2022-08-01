@@ -1,6 +1,6 @@
 
 
-This document describes how to add the `category` parameter to calculation and conditions queries in the [Promotions & Discounts](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html) feature.
+This document describes how to add the `category` parameter to calculation and conditions queries in the [Promotions & Discounts](/docs/pbc/all/discount-management/discount-management.html) feature.
 
 ## Install feature core
 

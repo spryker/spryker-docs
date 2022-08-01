@@ -25,7 +25,7 @@ When talking about product prices that depend on the customers they refer to, an
 
 ![Prices diagram](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Prices+per+Merchant+Relations/Prices+per+Merchant+Relation+Feature+Overview/prices_diagram.png)
 
-The different price categories that can be selected based on contextual information, like customer or merchant relationship, is referred to as *price dimension*.
+The different price categories that can be selected based on contextual information, like customer or merchant relationship, are referred to as *price dimension*.
 
 We have the following price dimensions:
 
@@ -39,22 +39,22 @@ All prices in Spryker OS are stored in `spy_price_product_store`; however, conne
 
 {% info_block infoBox %}
 
-For example, `spy_price_product_default` contains only connections to prices, which were imported during store installation or created using Zed UI, and connections to prices pertain to merchant relations, would reside in `spy_price_product_merchant_relationship`. So the `spy_price_product_default` table poses a set of relations between the `spy_price_product_default` and `fk_price_product_store` tables and related entities.
+For example, `spy_price_product_default` contains only connections to prices that were imported during store installation or created using Zed UI and connections to prices pertain to merchant relations would reside in `spy_price_product_merchant_relationship`. So the `spy_price_product_default` table poses a set of relations between the `spy_price_product_default` and `fk_price_product_store` tables and related entities.
 
 {% endinfo_block %}
 
 The Merchant Custom Prices feature relates specifically to prices set for individual merchant relations. This feature implies that customers see only prices applying to them, based on their merchant relation, or default prices if merchant relation doesn't have prices for some products.
 
-The specific prices apply only to merchant a relation assignee (business units, as a rule), not to merchant relation owners. If a business unit of a customer has several merchant relations with different prices for one and the same product, the lowest price is offered.
+The specific prices apply only to the merchant a relation assignee (business units, as a rule), not to merchant relation owners. If a business unit of a customer has several merchant relations with different prices for one and the same product, the lowest price is offered.
 
 
 **Default prices in the web-shop**
 
 ![Default prices in the web-shop](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Prices+per+Merchant+Relations/Prices+per+Merchant+Relation+Feature+Overview/default_prices.png)
 
-**Prices for merchant referring to a specific relation**
+**Prices for a merchant referring to a specific relation**
 
-![Prices for merchant referring to a specific relation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Prices+per+Merchant+Relations/Prices+per+Merchant+Relation+Feature+Overview/merchant_prices.png)
+![Prices for a merchant referring to a specific relation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Prices+per+Merchant+Relations/Prices+per+Merchant+Relation+Feature+Overview/merchant_prices.png)
 
 Besides setting specific prices for individual merchant relations products manually, the prices can also be added in bulk by importing them from a CSV file. The CSV file for import must contain populated `merchant_relation_key`, `abstract_sku`, `concrete_sku`, `price_type`, `store,currency`, `price_net`, `price_gross` fields.
 

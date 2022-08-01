@@ -60,7 +60,7 @@ The following is an example of JSON:
 ],
 ```
 
-Volume prices are configured per store and per currency and a Store Administrator can set volume prices for every locale.
+Volume prices are configured per store and per currency, and a shop administrator can set volume prices for every locale.
 
 Volume prices are set for both gross and net mode and are either inherited from the abstract product or specified directly for a standalone concrete product.
 

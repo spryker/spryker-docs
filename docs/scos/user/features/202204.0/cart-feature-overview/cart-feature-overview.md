@@ -35,7 +35,7 @@ In a Spryker shop, the shopping cart widget is displayed in the header. With the
 |---|
 | [Get a general idea of Cart Notes](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-notes-overview.html)  |
 | [Get a general idea of Cart Widget](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-widget-overview.html)  |
-| [Get e general idea of Quick Order from the Catalog Page](/docs/scos/user/features/{{page.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)   |
+| [Get a general idea of Quick Order from the Catalog Page](/docs/scos/user/features/{{page.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)   |
 
 {% info_block warningBox "Developer guides" %}
 

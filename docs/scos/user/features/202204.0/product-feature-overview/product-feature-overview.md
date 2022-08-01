@@ -40,13 +40,13 @@ The following table shows the differences between abstract products and product 
 
 | PRODUCT DATA | ABSTRACT PRODUCT | PRODUCT VARIANT |
 | --- | --- | --- |
-| SKU | v | v |
-| Name | v | v |
-| Description | v | v |
-| Product attributes | v | v |
-| Super attributes |  | v |
-| Media assets | v | v |
-| Stock |  | v |
+| SKU |&check;|&check;|
+| Name |&check;|&check;|
+| Description |&check;|&check;|
+| Product attributes |&check;|&check;|
+| Super attributes |  |&check;|
+| Media assets |&check;|&check;|
+| Stock |  |&check;|
 
 ### Abstract products and product variants on the Storefront
 

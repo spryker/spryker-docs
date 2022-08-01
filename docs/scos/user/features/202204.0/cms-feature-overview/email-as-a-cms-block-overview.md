@@ -40,7 +40,7 @@ Being a multi-purpose entity, CMS Blocks relies strongly on its naming when used
 
 
 #### Template assignment
-When a developer creates an email template, inside the file, they enter the name of the CMS Block, which is assigned to the template. If the name of an Email CMS Block changes, a developer should update it in the respective email template. For example, the `availability-notification-subscription--html` Email CMS Block is assigned to the [subscribed.html.twig](https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/AvailabilityNotification/Presentation/Mail/subscribed.html.twig) default email template.
+When a developer creates an email template, inside the file, they enter the CMS Block's name, which is assigned to the template. If the name of an Email CMS Block changes, a developer must update it in the respective email template. For example, the `availability-notification-subscription--html` Email CMS Block is assigned to the [subscribed.html.twig](https://github.com/spryker-shop/suite/blob/master/src/Pyz/Zed/AvailabilityNotification/Presentation/Mail/subscribed.html.twig) default email template.
 
 
 #### Email format
@@ -102,7 +102,7 @@ After creating email templates, a developer can [import](/docs/scos/dev/data-imp
 
 ## Email content
 
-When [editing an email template via email CMS block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-placeholders-in-cms-blocks.html), you work in the WYSIWYG editor. Apart from the regular WYSIWYG editor tools, you can add glossary keys and variables.
+When [editing an email template using email CMS block](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-placeholders-in-cms-blocks.html), you work in the WYSIWYG editor. Apart from the regular WYSIWYG editor tools, you can add glossary keys and variables.
 
 You can use the functionalities described in this section, regardless of the email format.
 

@@ -22,7 +22,7 @@ The [Promotions](/docs/scos/user/features/{{site.version}}/promotions-discounts-
 
 {% info_block infoBox "Info" %}
 
-For more details on how to create the discount conditions, see [Create discounts](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/discount/create-discounts.html).
+For more details on how to create the discount conditions, see [Create discounts](/docs/pbc/all/discount-management/manage-in-the-back-office/create-discounts.html).
 
 {% endinfo_block %}
 

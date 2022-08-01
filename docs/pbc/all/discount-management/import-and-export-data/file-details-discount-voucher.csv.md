@@ -39,7 +39,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [ discount.csv ](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html).
+This file has the following dependency: [ discount.csv ](/docs/pbc/all/discount-management/import-and-export-data/file-details-discount.csv.html.
 
 ## Additional information
 

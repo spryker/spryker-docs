@@ -27,7 +27,7 @@ There are two discount types:
 * Voucher
 * Cart rule
 
-A Back Office user selects a discount type when [creating a discount](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/discount/create-discounts.html).
+A Back Office user selects a discount type when [creating a discount](/docs/pbc/all/discount-management/manage-in-the-back-office/create-discounts.html).
 
 ## Voucher
 
@@ -207,13 +207,13 @@ An *exclusive discount* is a discount that, when applied to a cart, discards all
 
 {% endinfo_block %}
 
-If a cart is eligible for multiple exclusive discounts, you can [prioritize](#discount-priority) the discounts to define which of the exclusive discounts prevail over the others. For details on how a Back Office user can set priorities for discounts, see [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
+If a cart is eligible for multiple exclusive discounts, you can [prioritize](#discount-priority) the discounts to define which of the exclusive discounts prevail over the others. For details on how a Back Office user can set priorities for discounts, see [Create discounts](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/discount/create-discounts.html).
 
 If the exclusive discounts are not prioritized or have the same priorities, the highest-value discount is applied. For details and examples on how the discounts are calculated, see [Discount calculation logic](#discount-calculation-logic).
 
 ### Non-exclusive discount
 
-A *non-exclusive discount* is a discount that can be combined with other non-exclusive discounts in a single order. As all the discounts are non-exclusive, they are applied together. However, a Back Office user can [prioritize](#discount-priority) the non-exclusive discounts to set the order in which they apply. For details on how a Back Office user can prioritize the discount, see [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html). For details and examples of how the discounts are calculated based on their priorities, see [Discount calculation logic](#discount-calculation-logic).
+A *non-exclusive discount* is a discount that can be combined with other non-exclusive discounts in a single order. As all the discounts are non-exclusive, they are applied together. However, a Back Office user can [prioritize](#discount-priority) the non-exclusive discounts to set the order in which they apply. For details on how a Back Office user can prioritize the discount, see [Create discounts](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/discount/create-discounts.html). For details and examples of how the discounts are calculated based on their priorities, see [Discount calculation logic](#discount-calculation-logic).
 
 ## Discount validity interval
 
@@ -415,7 +415,7 @@ Cart subtotal: €100
 
 | INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---|---|---|---|---|
-| [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html) | [Discount migration guide](/docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discount-module.html) | [Retrieving promotional items](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-promotional-items.html) | [File details: discount.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html) | [HowTo: Create discounts based on shipment](/docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html) |
-|  |  | [Managing discount vouchers in guest carts](/docs/pbc/all/discount-management/manage-discounts-via-glue-api/managing-discount-vouchers-in-guest-carts.html) | [File details: discount_amount.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount-amount.csv.html) |  |
-|  |  | [Managing discount vouchers in guest carts](/docs/pbc/all/discount-management/manage-discounts-via-glue-api/managing-discount-vouchers-in-guest-carts.html) | [File details: discount_store.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount-store.csv.html) |  |
-|  |  |  | [File details: discount_voucher.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount-voucher.csv.html) |  |
+| [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html) | [Discount migration guide](/docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discount-module.html) | [Retrieving promotional items](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-promotional-items.html) | [File details: discount.csv](/docs/pbc/all/discount-management/import-and-export-data/file-details-discount.csv.html) | [HowTo: Create discounts based on shipment](/docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html) |
+|  |  | [Managing discount vouchers in guest carts](/docs/pbc/all/discount-management/manage-discounts-via-glue-api/managing-discount-vouchers-in-guest-carts.html) | [File details: discount_amount.csv](/docs/pbc/all/discount-management/import-and-export-data/file-details-discount-amount.csv.html) |  |
+|  |  | [Managing discount vouchers in guest carts](/docs/pbc/all/discount-management/manage-discounts-via-glue-api/managing-discount-vouchers-in-guest-carts.html) | [File details: discount_store.csv](/docs/pbc/all/discount-management/import-and-export-data/file-details-discount-store.csv.html) |  |
+|  |  |  | [File details: discount_voucher.csv](/docs/pbc/all/discount-management/import-and-export-data/file-details-discount-voucher.csv.html) |  |

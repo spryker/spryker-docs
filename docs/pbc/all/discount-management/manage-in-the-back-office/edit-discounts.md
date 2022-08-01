@@ -11,9 +11,6 @@ redirect_from:
   - /docs/managing-discounts
   - /docs/en/managing-discounts
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/discount/edit-discounts.html
-related:
-  - title: Create discounts
-    link: docs/scos/user/back-office-user-guides/page.version/merchandising/discount/create-discounts.html
   - title: Promotions & Discounts feature overview
     link: docs/scos/user/features/page.version/promotions-discounts-feature-overview.html
 ---

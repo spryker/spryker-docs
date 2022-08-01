@@ -1483,7 +1483,7 @@ For the attributes of other included resources, see:
 * [Retrieve prices of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html)
 * [Retrieve a concrete product](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html)
 * [Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html)
-* [Retrieve tax sets](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-tax-sets.html)
+* [Retrieve tax sets](/docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html)
 * [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html)
 * [Retrieve product reviews](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-product-ratings-and-reviews.html#retrieve-product-ratings-and-reviews)
 *  [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)

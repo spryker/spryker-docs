@@ -550,6 +550,8 @@ entries:
         url: /docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
     - title: Tax
       url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/tax-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
       nested:
       - title: "Tax module: reference information"
         url: /docs/scos/dev/feature-walkthroughs/tax-feature-walkthrough/tax-module-reference-information.html
@@ -785,7 +787,6 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Retrieving image sets of abstract products
           url: /docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
           include_versions:
@@ -1588,14 +1589,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-    - title: Backend API
-      url: /docs/scos/dev/feature-integration-guides/backend-api-feature-integration.html
-      include_versions:
-      - "202204.0"
-    - title: Backend API for Merchant Relationships
-      url: /docs/scos/dev/feature-integration-guides/backend-api-for-merchant-relationships-integration-guide.html
-      include_versions:
-      - "202204.0"
     - title: Back in Stock Notification
       url: /docs/scos/dev/feature-integration-guides/back-in-stock-notification-feature-integration.html
       include_versions:
@@ -2370,6 +2363,14 @@ entries:
         url: /docs/scos/dev/feature-integration-guides/spryker-in-docker/spryker-in-docker-feature-integration-guides.html
         include_versions:
         - "201907.0"
+    - title: Zed API
+      url: /docs/scos/dev/feature-integration-guides/zed-api-feature-integration.html
+      include_versions:
+      - "202204.0"
+    - title: Zed API for Merchant Relationships
+      url: /docs/scos/dev/feature-integration-guides/zed-api-for-merchant-relationships-integration-guide.html
+      include_versions:
+      - "202204.0"
   - title: Module migration guides
     url: /docs/scos/dev/module-migration-guides/about-migration-guides.html
     nested:
@@ -2398,8 +2399,6 @@ entries:
         url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationspriceproductvolumesrestapi.html
       - title: Migration guide - ProductConfigurationsRestApi
         url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationsrestapi.html
-      - title: Migration guide - ProductTaxSetsRestApi
-        url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-producttaxsetsrestapi.html
 
     - title: Migration Guide - API Module
       url: /docs/scos/dev/module-migration-guides/migration-guide-api-module.html
@@ -2743,8 +2742,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-stocksalesconnector.html
     - title: Migration Guide - Store
       url: /docs/scos/dev/module-migration-guides/migration-guide-store.html
-    - title: Migration Guide - Tax
-      url: /docs/scos/dev/module-migration-guides/migration-guide-tax.html
     - title: Migration Guide - Touch
       url: /docs/scos/dev/module-migration-guides/migration-guide-touch.html
     - title: Migration Guide - Transfer
@@ -2858,7 +2855,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - glossary.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-glossary.csv.html
           include_versions:
@@ -3791,6 +3787,8 @@ entries:
         url: /docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html
       - title: Multi-theme
         url: /docs/scos/dev/front-end-development/yves/multi-theme.html
+    - title: Migration guide - Switch from Yarn to NPM v8
+      url: /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
   - title: Migration concepts
     nested:
     - title: Decimal Stock migration concept
@@ -4311,6 +4309,8 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
       - title: "HowTo: Customize HTTP headers in AJAX request"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-customize-http-headers-in-ajax-request.html
+      - title: "HowTo: Debug payment integrations locally"
+        url:  /docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html
       - title: "HowTo: Configure basic htaccess authentication"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-configure-basic-htaccess-authentication.html
       - title: "HowTo: Create personalized prices"
@@ -4321,6 +4321,8 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method-2.0.html
       - title: "HowTo: Define the maximum size of content fields"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-define-the-maximum-size-of-content-fields.html
+      - title: "HowTo: Do better deployments"
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html
       - title: "HowTo: Decrease the memory usage of Spryker with Docker on WSL2"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-decrease-the-memory-usage-of-spryker-with-docker-on-wsl2.html
       - title: "HowTo: Hydrate payment methods for an order"
@@ -4353,8 +4355,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-case-sensitive-file-system-on-mac-os.html
       - title: "HowTo: Create and register a mail provider"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mail-provider.html
-      - title: "HowTo: Get ready for VAT (tax) changes in Germany"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-get-ready-for-vat-tax-changes-in-germany.html
       - title: "HowTo: Reset a Docker environment"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-reset-a-docker-environment.html
       - title: "HowTo: Allow Zed CSS/JS on a project"
@@ -4812,7 +4812,6 @@ entries:
     - title: Taxes
       include_versions:
       - "202108.0"
-      - "202204.0"
       nested:
         - title: Avalara
           nested:

@@ -49,7 +49,7 @@ To learn how a Back Office user can create a voucher in the Back Office, see [Cr
 
 A *cart rule* is a discount that applies to a cart once all the [decision rules](#decision-rule) linked to the cart rule are fulfilled.
 
-The cart rule is applied automatically. If the decision rules of a discount are fulfilled, the customer can see the discount upon entering the cart. Unlike for [voucher](#voucher), the **Clear all** and **Remove** actions are not displayed for cart rules.
+The cart rule is applied automatically. If the decision rules of a discount are fulfilled, the customer can see the discount upon entering the cart. Unlike for [vouchers](#voucher), the **Clear all** and **Remove** actions are not displayed for cart rules.
 
 ![Cart rule](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/cart-cart-rule.png)
 
@@ -57,7 +57,7 @@ To learn how a Back Office user can create a cart rule in the Back Office, see [
 
 ### Decision rule
 
-A *decision rule* is a condition assigned to a discount that should be fulfilled for the discount to apply.
+A *decision rule* is a condition assigned to a discount that must be fulfilled for the discount to apply.
 
 A discount can have one or more decision rules. Find an exemplary combination below:
 
@@ -66,7 +66,7 @@ A discount can have one or more decision rules. Find an exemplary combination be
 | total-quantity | equal |  3 |
 | day-of-week| equal | 5  |
 
-In this case, the discount is applied if the cart contains 3 items and the purchase is made on the fifth day of the week (Friday).
+In this case, the discount is applied if the cart contains three items and the purchase is made on the fifth day of the week (Friday).
 
 Multiple decision rules form a query. A query is a request for information based on the defined parameters. In the Discount feature, a query requests information from a cart to check if it is eligible for the discount. By specifying decision rules, you define the parameters of the query.
 
@@ -84,13 +84,13 @@ The same decision rules look as follows as a plain query:
 
 You can switch between Query Builder and Plain query modes to see how the specified decision rules look in either of them.  
 
-Decision rules are combined with *AND* and *OR*  combination operators. With the AND operator, all the rules should be fulfilled for the discount to be applied. With the OR operator, at least one of them should be fulfilled for the discount to be applied.
+Decision rules are combined with *AND* and *OR*  combination operators. With the AND operator, all the rules must be fulfilled for the discount to be applied. With the OR operator, at least one of them must be fulfilled for the discount to be applied.
 
-In the following example, for the discount to apply, a cart should contain 3 items, and the purchase should be made on Wednesday.
+In the following example, for the discount to apply, a cart must contain three items, and the purchase must be made on Wednesday.
 
 ![AND operator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+%26+Discounts/Discount/Discount+Feature+Overview/and-operator.png)
 
-In the following example, for the discount to apply, a cart should either contain 3 items or the purchase should be made on Wednesday.
+In the following example, for the discount to apply, either a cart must contain three items, or the purchase must be made on Wednesday.
 
 ![OR operator](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+%26+Discounts/Discount/Discount+Feature+Overview/or-operator.png)
 
@@ -110,12 +110,12 @@ With the rule groups, you can build multiple levels of rule hierarchy. When a ca
 
 ![Decision rule hierarchy](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+%26+Discounts/Discount/Discount+Feature+Overview/decision-rule-hierarchy.png)
 
-When a cart is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The diagram below shows how a cart is evaluated against the rules on the previous screenshot.
+When a cart is evaluated on a level that has a rule and a rule group, the rule group is treated as a single rule. The following diagram shows how a cart is evaluated against the rules from the previous screenshot.
 
 ### Discount threshold
 
-Threshold is a minimum number of items in cart that should fulfill all the specified decision rules for the discount to apply.
-The default value is *1* . It means that a discount is applied if at least one item fulfills the discount's decision rules.
+A *threshold* is a minimum number of items in the cart that must fulfill all the specified decision rules for the discount to apply.
+The default value is *1*. It means that a discount is applied if at least one item fulfills the discount's decision rules.
 
 In the following example, the discount is applied if there are four items with the Intel Core processor in the cart.
 
@@ -123,27 +123,27 @@ In the following example, the discount is applied if there are four items with t
 
 ## Discount application
 
-Discount application is a discount configuration option that defines the products to which a discount is applied.
+*Discount application* is a discount configuration option that defines the products to which a discount is applied.
 
-There are two types of discount application:
+There are two types of the discount application:
 * Query string
 * Promotional product
 
 ### Query string
 
-Query string is a discount application type that uses [decision rules](#decision-rule) to dynamically determine which products qualify for discounts.
+A *query string* is a discount application type that uses [decision rules](#decision-rule) to dynamically determine which products qualify for discounts.
 
 The discount in the example below applies to white products.
 
 ![Query collection](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Promotions+&+Discounts/Discount/Discount+Feature+Overview/collection-query.png)
 
 The product selection based on the query string is dynamic:
-* If, at some point, the color attribute of a product changes from white to anything else, the product is no longer eligible for a discount.
-* If, at some point, a product receives the white color attribute, it becomes eligible for a discount.
+* If at some point, the color attribute of a product changes from white to anything else, the product is no longer eligible for a discount.
+* If at some point, a product receives the white color attribute, it becomes eligible for a discount.
 
 ### Promotional product
 
-Promotional product is a discount application type that discounts particular products at a set quantity, enabling "buy X, get Y" promotions.
+*Promotional product* is a discount application type that discounts particular products at a set quantity, enabling "buy X, get Y" promotions.
 
 When a customer meets conditions for a promotional product discount, the **Promotional products** section is displayed in the cart and lets customers add the available quantity of the discounted products. The section consists of the product name, SKU, original and discounted price, and discount description.
 
@@ -160,7 +160,7 @@ The promotional product discount only applies if the product is added to the car
 
 {% endinfo_block %}
 
-A Back Office user can either give away promotional products completely for free or provide a discount for these products by specifying the percentage value or a fixed amount to be discounted from the promotional products' price. When giving a product for free, the percentage value should be 100%. Using a fixed amount discount for a free product is also possible, where the amount is equal to a product's price, but it is not recommended due to the possibility of price fluctuations and differences across multiple products.
+A Back Office user can either give away promotional products completely for free or provide a discount for these products by specifying the percentage value or a fixed amount to be discounted from the promotional products' price. When giving a product for free, the percentage value must be 100%. Using a fixed amount discount for a free product is also possible, where the amount is equal to a product's price, but it is not recommended due to the possibility of price fluctuations and differences across multiple products.
 
 ![Collection - promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/promotions-discounts-feature-overview.md/202200.0/collection-promotional-product.png)
 
@@ -189,7 +189,7 @@ A Back Office user defines calculation when [creating discounts](/docs/scos/user
 
 ## Discount exclusiveness
 
-Discount exclusiveness defines if a discount value of a discount can be combined with the discount value of other discounts in a single order.
+*Discount exclusiveness* defines if a discount value of a discount can be combined with the discount value of other discounts in a single order.
 
 A Back Office user defines calculation when [creating discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
 
@@ -198,7 +198,7 @@ A Back Office user defines calculation when [creating discounts](/docs/scos/user
 
 ### Exclusive discount
 
-An exclusive discount is a discount that, when applied to a cart, discards all the other discounts applied to it.
+An *exclusive discount* is a discount that, when applied to a cart, discards all the other discounts applied to it.
 
 {% info_block infoBox "Promotional products and query string" %}
 
@@ -206,17 +206,17 @@ An exclusive discount is a discount that, when applied to a cart, discards all t
 
 {% endinfo_block %}
 
-If a cart is eligible for multiple exclusive discounts, you can [prioritize](#discount-priority) the discounts to define which of the exclusive discounts should prevail over the others. For details on how a Back Office user can set priorities for discounts, see [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
+If a cart is eligible for multiple exclusive discounts, you can [prioritize](#discount-priority) the discounts to define which of the exclusive discounts prevail over the others. For details on how a Back Office user can set priorities for discounts, see [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
 
 If the exclusive discounts are not prioritized or have the same priorities, the highest-value discount is applied. For details and examples on how the discounts are calculated, see [Discount calculation logic](#discount-calculation-logic).
 
 ### Non-exclusive discount
 
-A non-exclusive discount is a discount that can be combined with other non-exclusive discounts in a single order. As all the discounts are non-exclusive, they are applied together. However, a Back Office user can [prioritize](#discount-priority) the non-exclusive discounts to set the order in which they should apply. For details on how a Back Office user can prioritize the discount, see [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html). For details and examples on how the discounts are calculated based on their priorities, see [Discount calculation logic](#discount-calculation-logic).
+A *non-exclusive discount* is a discount that can be combined with other non-exclusive discounts in a single order. As all the discounts are non-exclusive, they are applied together. However, a Back Office user can [prioritize](#discount-priority) the non-exclusive discounts to set the order in which they apply. For details on how a Back Office user can prioritize the discount, see [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html). For details and examples of how the discounts are calculated based on their priorities, see [Discount calculation logic](#discount-calculation-logic).
 
 ## Discount validity interval
 
-Validity interval is a period of time during which a discount is active and can be applied.
+A *validity interval* is a period of time during which a discount is active and can be applied.
 
 If a cart is eligible for a discount outside of its validity interval, the cart rule is not applied. If a customer enters a voucher code outside of its validity interval, they get a "Your voucher code is invalid." message.
 
@@ -227,7 +227,7 @@ A Back Office user defines calculation when [creating a discount](/docs/scos/use
 
 ## Discount priority
 
-In cases when several discounts can apply to a customer order, a Back Office user can set the discount priorities. The discount priority is an integer value that defines the order in which the discounts are applied. For details on how discounts are calculated based on their priorities, see [Discount calculation logic](#discount-calculation-logic).
+In cases when several discounts can apply to a customer's order, a Back Office user can set the discount priorities. A *discount priority* is an integer value that defines the order in which the discounts are applied. For details on how discounts are calculated based on their priorities, see [Discount calculation logic](#discount-calculation-logic).
 
 Discount prioritization behavior does not depend on the [discount type](#discount-types). For example, you might have the following priorities for different types:
 
@@ -240,7 +240,7 @@ In this case, discounts are applied based on their priority, regardless of type.
 
 {% info_block infoBox "Info" %}
 
-If you have a voucher code and a cart rule with the same priority, both discounts should apply and use the same cart subtotal. For an example, see [Scenario 5: Non-exclusive, fixed amount and percentage discounts with the same priority values](#scenario-4-non-exclusive-fixed-amount-and-percentage-discounts-with-the-same-priority-values).
+If you have a voucher code and a cart rule with the same priority, both discounts apply and use the same cart subtotal. For an example, see [Scenario 5: Non-exclusive, fixed amount and percentage discounts with the same priority values](#scenario-4-non-exclusive-fixed-amount-and-percentage-discounts-with-the-same-priority-values).
 
 {% endinfo_block %}
 
@@ -250,7 +250,7 @@ The discount calculation logic follows these rules:
 
 * All discounts are calculated sequentially based on their [priority value](#discount-priority). Thus, discounts with the highest priority value are considered first.
 * Discounts without priority values are treated with the last possible priority.
-* Discounts with the same priority value are calculated independent of each other.
+* Discounts with the same priority value are calculated independently of each other.
 * If there is a set of discounts with [exclusive](#exclusive-discount) and [non-exclusive](#non-exclusive-discount) discounts, the non-exclusive discounts are disregarded. The remaining exclusive discounts are handled according to their priority values as shown in the schema:
 
 ![discounts-calculation-logic](https://confluence-connect.gliffy.net/embed/image/ad6c6c4c-9ccb-42ae-a9dc-5944300bdf91.png?utm_medium=live&utm_source=custom)
@@ -261,7 +261,7 @@ The discount calculation logic follows these rules:
 
 The following scenarios illustrate how the discount calculation logic works.
 
-#### Scenario 1: Multiple non-exclusive discounts, mix of fixed amount and percentage discount calculation types.
+#### Scenario 1: Multiple non-exclusive discounts, the mix of fixed amount and percentage discount calculation types.
 
 Cart subtotal: €500
 
@@ -288,7 +288,7 @@ Grand total: €382.00
 
 {% info_block infoBox "Info" %}
 
-As customers are not aware of the prioritization, they may be confused about the assigned priorities. For the scenario above, they might wonder why they get 10% off the pre-discount price of the hockey stick and not, for example, the helmet. Thus, in the cases like this one, instead of creating prioritization logic for separate discount types, consider adjusting the discount priority accordingly to avoid customer confusion.
+As customers are not aware of the prioritization, they may be confused about the assigned priorities. For the scenario above, they might wonder why they get 10% off the pre-discount price of the hockey stick and not—for example, the helmet. Thus, in the cases like this one, instead of creating prioritization logic for separate discount types, consider adjusting the discount priority accordingly to avoid customer confusion.
 
 {% endinfo_block %}
 

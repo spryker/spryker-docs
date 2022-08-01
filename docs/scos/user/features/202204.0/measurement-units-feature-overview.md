@@ -1,6 +1,6 @@
 ---
 title: Measurement Units feature overview
-description: The Measurement Units per Products feature lets you sell products by any unit of measure defined by a shop administrator.
+description: The Measurement Units feature lets you sell products by any unit of measure defined by a shop administrator.
 last_updated: Aug 13, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/measurement-units-feature-overview
@@ -43,7 +43,7 @@ If a user puts one and the same product in different sales units, they will be s
 
 Let's take an example to better understand the feature. Suppose, 1 apple (1=factor) weights 0,1 kg, then the ratio will be 10 (1kg = 10 apples). If the precision is 100, the user can specify a number as 0.40 Kg (which will be 4 apples). Likewise, if, in this case, the user selects "kg" and precision is set to "1", its quantity in sales units on the cart page will be "0", as precision 1 implies that no digits are shown after the decimal sign. Actually,
 
-`(Base Unit Value) = (User Input Sales Unit Value) * Precision / Factor`
+*(Base Unit Value) = (User Input Sales Unit Value) * Precision / Factor*
 
 There can be two types of conversions in the system:
 
@@ -61,7 +61,7 @@ If a global unit conversion exists between the base and sales unit, then factor 
 - In the Spryker Commerce OS, you cannot define measurement units for products. They are imported into the database manually.
 - We strive to shift all business logic to our backend; however, with Measurements Units, a part of the calculations (for example, quantity restrictions) are performed on Yves.
 - On the shopping cart as well as the shopping list page, products do not have a dropdown to change the measurement units. You can select a measurement unit on the product details page only.
-- A shopper cannot reorder the items with the selected measurement units as they are not added automatically. They should be added manually on the product details page.
+- A shopper cannot reorder items with the selected measurement units as they are not added automatically. They must be added manually on the product details page.
 - In the [Quick Order](/docs/scos/user/features/{{page.version}}/quick-add-to-cart-feature-overview.html) form and [Search](/docs/scos/user/features/{{page.version}}/search-feature-overview/search-feature-overview.html), the products use the default measurement units that cannot be changed.
 
 {% info_block warningBox "Developer guides" %}

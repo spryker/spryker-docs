@@ -1,14 +1,4 @@
----
-title: Glue API - Product Tax Sets feature integration
-description: This guide will guide you through the process of installing and configuring the Product Tax Sets API feature in your project.
-last_updated: Nov 22, 2019
-template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/v2/docs/product-tax-sets-api-feature-integration-201903
-originalArticleId: abdf52c7-aadd-4d9e-84fa-1f7bd1790ed5
-redirect_from:
-  - /v2/docs/product-tax-sets-api-feature-integration-201903
-  - /v2/docs/en/product-tax-sets-api-feature-integration-201903
----
+
 
 ## Install feature API
 ### Prerequisites
@@ -86,18 +76,18 @@ Activate the following plugin:
 
 <details open>
 <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
 use Spryker\Glue\ProductTaxSetsRestApi\Plugin\ProductTaxSetsResourceRoutePlugin;
 use Spryker\Glue\ProductsProductTaxSetsResourceRelationship\Plugin\ProductsProductTaxSetsResourceRelationshipPlugin;
 use Spryker\Glue\ProductsRestApi\ProductsRestApiConfig;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
 	/**
@@ -109,7 +99,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			new ProductTaxSetsResourceRoutePlugin(),
 		];
 	}
- 
+
 	/**
 	* @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
 	*
@@ -122,7 +112,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			ProductsRestApiConfig::RESOURCE_ABSTRACT_PRODUCTS,
 			new ProductsProductTaxSetsResourceRelationshipPlugin()
 		);
- 
+
 		return $resourceRelationshipCollection;
 	}
 }

@@ -193,12 +193,12 @@ To allow stores, edit `CodeBucketConfig::getCodeBuckets()`.
 
 ## 4. Configure CI
 Continuous integration (CI) is a development practice where each part of the code can be verified by an automated build and automated tests. This allows to have a good code quality and be sure that each new feature does not break the existing functionality. The following documents will help you to enable CI in different repositories:
- - [Deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-pipelines.html)
- - [Customizing deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/customizing-deployment-pipelines.html)
- - [GitHub Actions](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-github-actions.html)
- - [Configuring GitLab pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-gitlab-pipelines.html)
- - [Azure Pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-azure-pipelines.html)
- - [Configuring Bitbucket Pipelines ](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-bitbucket-pipelines.html)
+ - [Deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-pipelines.html)
+ - [Customizing deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/customizing-deployment-pipelines.html)
+ - [GitHub Actions](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-github-actions.html)
+ - [Configuring GitLab pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-gitlab-pipelines.html)
+ - [Azure Pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-azure-pipelines.html)
+ - [Configuring Bitbucket Pipelines ](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-bitbucket-pipelines.html)
 
 ## 5. Configure checkers
 To keep your code clean, we recommend using the code checkers.

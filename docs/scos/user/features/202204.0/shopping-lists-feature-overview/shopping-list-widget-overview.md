@@ -13,15 +13,15 @@ redirect_from:
   - /docs/scos/user/features/202200.0/shopping-lists-feature-overview/shopping-list-widget-overview.html
 ---
 
-Shopping list is a list of items that a customer plans to buy. Many of the B2B customers compile shopping lists of items they buy on a regular basis. Also, such customers often use multiple shopping lists to cover their specific purchasing needs. For example, cafes prefer using Shopping list feature to create several shopping lists where they save items they keep ordering every day or week.
+A *shopping list* is a list of items that a customer plans to buy. Many B2B customers compile shopping lists of items they buy regularly. Also, such customers often use multiple shopping lists to cover their specific purchasing needs. For example, cafes prefer using the *Shopping list* feature to create several shopping lists to save items they keep ordering every day or week.
 
-For customers' convenience and ease of use, the shopping list widget is placed in the very header. When customer puts a cursor on the shopping list icon, a drop-down menu with all their shopping lists is displayed. For each shopping list the following details are provided in the drop-down menu:
+For customers' convenience and ease of use, the shopping list widget is placed in the very header. When a customer holds the pointer over the shopping list icon, a drop-down menu with all their shopping lists appears. For each shopping list the following details are provided in the drop-down menu:
 
 * Shopping list name.
 * First and last name of the person who created the shopping list.
-* Level of access for shopping list: full access (green) or read only (grey). To learn more about shopping lists sharing and access level, see [Multiple and Shared Shopping Lists Overview](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html).
+* Level of access for shopping list: full access (green) or read only (grey). To learn more about shopping list sharing and access levels, see [Multiple and Shared Shopping Lists overview](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html).
 * The number of items in the shopping list.
-* The **Create New List** button which adds a new list in **Shopping List** section.
-* The **All Shopping Lists** button which leads to **Shopping Lists** page with all the shopping lists available for the customer.
+* The **Create New List** button, which adds a new list in the **Shopping List** section.
+* The **All Shopping Lists** button, which leads to the **Shopping Lists** page with all the shopping lists available for the customer.
 
 ![Shopping List widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+List/Shopping+List+Widget/Shopping+List+Widget+Feature+Overview/Shopping-list-widget.png)

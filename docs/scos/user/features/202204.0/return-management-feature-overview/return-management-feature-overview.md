@@ -22,13 +22,13 @@ Once an order has been shipped, the registered buyer or a Back Office user can i
 
 {% info_block warningBox "Note" %}
 
-You can also create and manage returns via Glue API. For details, see [Manging the returns](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-returns/managing-the-returns.html).
+You can also create and manage returns using Glue API. For details, see [Manging the returns](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-returns/managing-the-returns.html).
 
 {% endinfo_block %}
 
 ## Returnable items and a return policy
 
-Not all the order items can be returned. For an item to be returnable, it should:
+Not all the order items can be returned. For an item to be returnable, it must meet these conditions:
 
 * Be in *Shipped* or *Delivered* state.
 * Fall on the return dates set forth in the Return Policy.
@@ -45,12 +45,12 @@ For now, you can set the Return Policy period in code only. There is no UI for t
 
 The Return items can have the following states in the Order Management System (OMS):
 
-* *Waiting for return*: Buyer created a return, but a Back Office user has not confirmed it yet.
-* *Returned*: The return has been received and confirmed by the Back Office user.
-* *Refunded*: Back Office user has made a refund for the returned items.
-* *Return Canceled*: The return has been canceled by a Back Office user because of the return policy or for any other reason.
-* *Shipped to customer*: The canceled return has been shipped back to the buyer.
-* *Delivered*: Buyer has received the shipped return.
+* `Waiting for return`. A buyer created a return, but a Back Office user has not confirmed it yet.
+* `Returned`. The return has been received and confirmed by the Back Office user.
+* `Refunded`. A Back Office user has made a refund for the returned items.
+* `Return Canceled`. The return has been canceled by a Back Office user because of the return policy or for any other reason.
+* `Shipped to customer`. The canceled return has been shipped back to the buyer.
+* `Delivered`. A buyer has received the shipped return.
 <!---
 {% info_block infoBox "Return states on the Storefront" %}
 
@@ -69,8 +69,8 @@ Buyers and Back Office users can have a paper version of the return by printing 
 
 ## Return Management on the Storefront
 
-The **registered buyers** can return entire orders or individual sales order items as soon as they have been delivered to them. When returning, the buyers can select or enter a return reason.
-The **guest users** can not initiate returns of their orders, as the return management is done via the Customer Account on the Storefront. Returns of the guest orders can be initiated only via the Back Office by the Back Office user.
+The *registered buyers* can return entire orders or individual sales order items as soon as they have been delivered to them. When returning, the buyers can select or enter a return reason.
+The *guest users* can not initiate returns of their orders, as the return management is done by the Customer Account on the Storefront. Returns of the guest orders can be initiated only in the Back Office by the Back Office user.
 
 {% info_block warningBox "Note" %}
 
@@ -83,11 +83,11 @@ Once a return request has been submitted, it acquires the *Waiting for return* s
 
 {% info_block infoBox "Info" %}
 
-Next to each sales order item, there is the date till which the item can be returned. This date is controlled by the Return Policy. If the item is non-returnable, you cannot select the return reason and create the return.
+Next to each sales order item, there is the date until which the item can be returned. This date is controlled by the Return Policy. If the item is non-returnable, you cannot select the return reason and create the return.
 
 {% endinfo_block %}
 
-All the returns created by the buyer or by the Back Office user for the buyer are listed on the **Returns** page in the **Customer Account**. From here, the Buyer can view the return details and print the return slip.
+All the returns created by the buyer or by the Back Office user for the buyer are listed on the **Returns** page in the **Customer Account**. From here, the buyer can view the return details and print the return slip.
 The following figure shows how to create a return, view its details and print a slip:
 ![create and print a return](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Order+Management/Return+Management/Return+Management+Feature+Overview/create-and-print-a-return.gif)
 

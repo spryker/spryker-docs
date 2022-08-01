@@ -37,7 +37,7 @@ Every folder within File Directories Tree can be deleted by selecting **Delete D
 
 {% info_block infoBox %}
 
-If the folder, that is being deleted, contains files in it, the files will automatically move to the parent directory. Parent directory File Directories Tree cannot be deleted.
+If the folder that is being deleted contains files in it, the files are automatically moved to the parent directory. Parent directory File Directories Tree cannot be deleted.
 
 {% endinfo_block %}
 
@@ -49,8 +49,8 @@ To upload a file to a particular directory follow the steps:
 ![Upload files to the Back Office](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/add-file.png)
 
 3. On the **Add a File page**, do the following:
-* In the **File name** field, enter the name of the file that will be displayed in the shop.
-* In the **File upload** field, click **Choose File** and from your local storage, select the file you are going to upload to the Back Office.
+4. In the **File name** field, enter the name of the file that will be displayed in the shop.
+5. In the **File upload** field, click **Choose File** and from your local storage, select the file you are going to upload to the Back Office.
 
 {% info_block infoBox %}
 
@@ -64,11 +64,11 @@ A Back Office user cannot upload an empty text file.
 
 {% endinfo_block %}
 
-* Add translations for the File Name for every locale, if necessary.
+6. Add translations for the File Name for every locale, if necessary.
 
 ![Add translations](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/add-file+menu.png)
 
-4. After the file is uploaded it is available in the Files list section in the directory:
+7. After the file is uploaded it is available in the Files list section in the directory:
 
 ![Files list](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/files-list.png)
 
@@ -80,20 +80,20 @@ File List submenu represents a table listing all the files uploaded to the Back 
 A Back Office user can perform the following actions to files:
 
 * **View**—shows the versions the file has.
-* **Edit**—you can re-upload an updated version of the file and edit its name.
+* **Edit**—you can reupload an updated version of the file and edit its name.
 * **Delete**—delete the file in the directory.
 
 ### Versions
 
 **File Uploader** feature lets a Back Office user have several versions for every file.
 
-For example, at first you uploaded `Instruction1.txt` file (`v.1`), then you updated and re-uploaded it to the Administration Interface as `v.2`.
-After that you decided that the image instruction would be more useful in this case and uploaded `Instruction.png` (`v.3`) to the file.
+For example, at first, you upload `Instruction1.txt` file (`v.1`), then you update and reupload it to the Administration Interface as `v.2`.
+After that, you decide that the image instruction is more useful in this case and upload `Instruction.png` (`v.3`) to the file.
 
-Thus, you will have 3 versions of a file available: 2 text instructions and one image instruction.
+Thus, you have three versions of a file available: two text instructions and one image instruction.
 ![File versions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Media+Management/File+Uploader/File+Uploader+Feature+Overview/file-versions.png)
 
-By default, the latest version of all available will be shown to the buyer in the shop application.
+By default, the latest version of all available is shown to the buyer in the shop application.
 
 {% info_block infoBox %}
 
@@ -115,7 +115,7 @@ To add a file to the Shop App, do the following:
 
 2. In the **Content** field, add the **cms_file** widget:
 
-3. You will get the string `{% raw %}{{{% endraw %} cms_file('identifier'){% raw %}}}{% endraw %}` where you need to insert the `file ID` instead of `identifier`:
+3. You get the string `{% raw %}{{{% endraw %} cms_file('identifier'){% raw %}}}{% endraw %}` where you need to insert the `file ID` instead of `identifier`:
 
 4. Save the changes and publish the page.
 5. Check the published page in the Shop Application.
@@ -123,17 +123,17 @@ The file is available as a download link to the visitor shop visitor.
 
 {% info_block errorBox %}
 
-The shop visitor will download the latest version of the file.
+The shop visitor downloads the latest version of the file.
 
 {% endinfo_block %}
 
 ## MIME Type Settings
 
-**MIME Type Settings** submenu lets a Back Office user define the file types that can be uploaded to the Administration Interface based on their nature and format.
+The **MIME Type Settings** submenu lets a Back Office user define the file types that can be uploaded to the Administration Interface based on their nature and format.
 
 {% info_block infoBox %}
 
-[MIME type](https://en.wikipedia.org/wiki/Media_type) is a standard that describes the contents of the files. MIME type will help the browser to determine how it will process a document. For example, if the MIME type is set as "text/html", then a client will open the document in Notepad, if the MIME type is set as "image/jpeg", then the client will open it via image viewer program.
+[MIME type](https://en.wikipedia.org/wiki/Media_type) is a standard that describes the contents of the files. MIME type helps browsers decide how to process a document. For example, if the MIME type is set as `text/html`, then a client opens the document in Notepad, if the MIME type is set as `image/jpeg`, then the client opens it with the image viewer program.
 
 {% endinfo_block %}
 
@@ -141,7 +141,7 @@ The shop visitor will download the latest version of the file.
 
 {% info_block warningBox %}
 
-Only files with the MIME types ticked in the **Is Allowed** column will be allowed for uploading to the Administration Interface.
+Only files with the MIME types ticked in the **Is Allowed** column are allowed for uploading to the Administration Interface.
 
 {% endinfo_block %}
 
@@ -149,7 +149,7 @@ Most popular file types that a shop owner can allow uploading in the Administrat
 
 | TYPE | DESCRIPTION | EXAMPLE OF MIME TYPE |
 | --- | --- | --- |
-| text | Represents any document that contains text and is theoretically human readable | `text/plain`, `text/html`, `text/css`, `text/javascript`<br>For text documents without specific subtype, `text/plain` should be used.|
+| text | Represents any document that contains text and is theoretically human readable | `text/plain`, `text/html`, `text/css`, `text/javascript`<br>For text documents without specific subtype, `text/plain` must be used.|
 |image | Represents any kind of images | `image/gif`, `image/png`, `image/jpeg`, `image/bmp`, `image/webp` |
 | audio | Represents any kind of audio files | `audio/midi`, `audio/mpeg`, `audio/webm`, `audio/ogg`, `audio/wav` |
 | video | Represents any kind of video files | `video/webm`, `video/ogg` |

@@ -41,8 +41,7 @@ To ensure the CI jobs will run successfully, add the same config part to all 'de
 
 {% endinfo_block %}
 
-2. The following commands are deprecated and will work correctly only with the previous versions (using Yarn).
-Please check and remove deprecated commands in all `*.yml` files.
+2. The following commands are deprecated and will work correctly only with the previous versions (using Yarn). Please check and remove deprecated commands in all `*.yml` files.
 
 ```bash
 frontend:yves:install-dependencies

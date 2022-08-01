@@ -63,7 +63,7 @@ The Category Management feature has the following functional constraints, which 
 
 * A category page is accessible by the same URL across all the stores. If the category is not available in the given store, the URL will lead to a 404.
 * Root categories cannot be created in the Back Office. They are imported through CSV files.
-* A store can only be linked to one root category tree, but in the future, a store will be able to have multiple root category trees.
+* A store can only be linked to one root category tree, but in the future, a store can have multiple root category trees.
 * Category URLs are locale-dependent.
 * Category URLs are available in all the stores that share the same locales.
 * Price Range Filter is not supported with merchant relations. That is why this filter is not included in the [B2B demo shop](/docs/scos/user/intro-to-spryker/b2b-suite.html). However, in the [B2C demo shop](/docs/scos/user/intro-to-spryker/b2c-suite.html), you can still filter the products using the price range filter.

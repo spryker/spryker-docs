@@ -33,7 +33,7 @@ redirect_from:
 
 The _Packaging Unit_ feature introduces a *packaging unit* that is a unit of measure used as packaging for a product. It allows including the amount of stock in a product a customer wants to buy. A shop owner can sell the same product in different packaging units—for example, apples can be sold as an "Item", a "Bag", or "Pallet" of apples. The "bag", "pallet", and "box" are referred to as *packaging unit types*.
 
-Each packaging unit is defined on an abstract product level and is represented by one product variant, for example:
+Each packaging unit is defined on an abstract product level and is represented by one product variant—for example:
 
 | ABSTRACT PRODUCT | CONCRETE PRODUCT / VARIANT | PACKAGING UNIT |
 | --- | --- | --- |
@@ -43,7 +43,7 @@ Each packaging unit is defined on an abstract product level and is represented b
 
 ## Leading products
 
-The *leading product* represents the relation between two concrete products and holds the availability. The *measurement unit*, defined on an abstract product level, is the stock unit for all the concrete products of the abstract product. A group of products in a packaging unit, that has a leading product, is called a *product packaging unit group*. Each packaging unit includes a certain amount of products by default (default amount). A shop owner can choose whether the packaging unit, for example, a bag, has a separate stock or shares stock with the contained item. In our example, the different product variants have their own SKUs and prices, but they represent the same physical product in the warehouse. To share the information about availability among these variants, we use the concept of a *leading product*.
+The *leading product* represents the relation between two concrete products and holds the availability. The *measurement unit*, defined on an abstract product level, is the stock unit for all the concrete products of the abstract product. A group of products in a packaging unit, that has a leading product, is called a *product packaging unit group*. Each packaging unit includes a certain amount of products by default (default amount). A shop owner can choose whether the packaging unit—for example, a bag, has a separate stock or shares stock with the contained item. In our example, the different product variants have their own SKUs and prices, but they represent the same physical product in the warehouse. To share the information about availability among these variants, we use the concept of a *leading product*.
 
 However, leading products are not always relevant. Packaging units that represent a package of items whose quantity can not be changed, do not need a leading product. In this case, the availability of the packaged items themselves, not individual items in the package, matters. Such packaged products actually behave like normal abstract products for which customers might have a possibility to select applicable sales units see [Measurement Units](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) to learn about product sales units).
 Basically, when a packaging unit does not use the leading product, it means that the stock is not shared.
@@ -64,7 +64,7 @@ Read on to learn about the product packaging unit amount options.
 
 ## Product packaging unit amount
 
-A packaging unit usually contains multiple items of a product. For example, a "Bag of apples" can contain 10, 20, 40, etc. apples. This information is called the **amount** of a packaging unit.
+A packaging unit usually contains multiple items of a product. For example, a "Bag of apples" can contain 10, 20, or 40 apples. This information is called the *amount* of a packaging unit.
 
 The packaging unit amount can be:
 
@@ -72,7 +72,7 @@ The packaging unit amount can be:
 | --- | --- |
 | Default (default_amount) | Default amount of items that a customer can buy. <br>For example, a customer can buy 40 apples. <br>Also, this value is used for calculating a price when the custom amount is provided. The Amount field in the online shop is prefilled with a value set in `default_amount`.|
 | Variable (is_variable=true) | Customer can buy any number of that item (respecting the amount restrictions). In case of a variable amount the price is adjusted by the formula: (Price) * (Customer Input) / (Default Amount). |
-| Fixed (is_variable=false) | Customer can buy a predetermined, fixed amount of items. When is_variable is set to "false", all amount_* values are set as NULL. When the amount is non-variable the customer can still see the default amount, but can not change it.<br>However, if a product has a sales unit set for it, the customer is able to select a different sales unit for the amount, which will adjust the displayed amount according to that sales unit.<br> See [Measurement Units feature overview](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) to learn about product sales units. |
+| Fixed (is_variable=false) | Customer can buy a predetermined, fixed amount of items. When `is_variable` is set to `false`, all amount_* values are set as NULL. When the amount is non-variable, the customer can still see the default amount but can not change it.<br>However, if a product has a sales unit set for it, the customer can select a different sales unit for the amount, which adjusts the displayed amount according to that sales unit.<br> See [Measurement Units feature overview](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) to learn about product sales units. |
 | Interval amount (amount_interval) | Interval of amounts that a customer can buy. <br>For example, you can buy only 40, 80, and 120 but not 45. <br>The interval is shifted by the minimum value (for example, minimum = 5, interval = 3; valid values: 5, 8, 11). Only relevant if is_variable=true.<br>If the amount is set as variable, by default, the interval amount is set to 1. |
 | Minimum amount (amount_minimum) | Minimum amount that a customer can buy. <br> For example, you cannot buy less than 1 apple. <br>Only relevant if is_variable=true. If the amount is set as variable, by default, the minimum amount equals the interval amount.|
 | Maximum amount (amount_maximum) | Maximum amount that a customer can buy.<br>For example, you cannot buy more than 10 apples.<br>Only relevant if is_variable=true. |
@@ -89,7 +89,7 @@ For example, a packaging unit "bag" can be set to have "item" as a base unit and
 
 {% endinfo_block %}
 
-The amount of items contained in a sales unit is referred to as *sales unit amount*. If a customer chooses a sales unit amount, which is in between 2 available amounts (due to amount restriction settings), a higher or lower amount should be selected.
+The amount of items contained in a sales unit is referred to as *sales unit amount*. If a customer chooses a sales unit amount, which is in between two available amounts (due to amount restriction settings), a higher or lower amount must be selected.
 
 {% info_block infoBox "Info" %}
 
@@ -181,7 +181,7 @@ In our example, the following conditions are met:
 * In the Spryker Commerce OS, you cannot define packaging units for products in the Back Office. They are imported to the database manually. See [HowTo: Import Packaging Units](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html) for more details.
 * We strive to shift all business logic to our backend, however, with Packaging Units, calculations are performed on Yves.
 * On the shopping cart as well as the shopping list page, products do not have a drop-down to change the packaging units. You can select a packaging unit on the product details page only.
-* A shopper cannot reorder the items with the selected packaging units as they are not added automatically. They should be added manually on the product details page.
+* A shopper cannot reorder the items with the selected packaging units as they are not added automatically. They must be added manually on the product details page.
 * In the Quick Order form and search widget, the products use the default packaging units that cannot be changed. Flexible packaging units are not supported on the **Quick Order** page.
 
 {% info_block infoBox "Example:" %}

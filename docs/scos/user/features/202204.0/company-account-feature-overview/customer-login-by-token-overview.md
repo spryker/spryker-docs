@@ -14,7 +14,7 @@ redirect_from:
 
 *Customer Login* by Token feature lets B2B users log in to Spryker Shop using a token.
 
-Most modern e-commerce applications let customers log in by token or, in other words, they support token-based authentication. They do so for several good reasons:
+Most modern ecommerce applications let customers log in by token or, in other words, they support token-based authentication. They do so for several good reasons:
 
 * Tokens are stateless. They are stored on the client side and already contain all the information they need for authentication. No session information about the server is great for scaling your application.
 

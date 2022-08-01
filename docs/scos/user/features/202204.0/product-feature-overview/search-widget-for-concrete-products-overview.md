@@ -15,9 +15,9 @@ redirect_from:
 
 With the search widget, the customer doesn't need to go to the product details page to add items. Search widget adds a search box to a Shopping cart, Shopping List, and Quick Order Page allowing the users to easily search and add concrete products directly from shopping cart/list pages. The widget includes the search field for concrete products and the quantity field. A shopper can search for products by SKU or concrete Product name. What the customers only have to do is to start typing the Name or the product SKU and the appropriate suggestions will appear in the drop-down. The suggested options let shoppers complete the search quickly.
 
-You can add search widget on the Quick order, Shopping List and Shopping Cart pages. Using the widget, the customer only needs to paste the necessary items either by entering the concrete products SKUs or typing their name. The matching product variants are suggested in the drop-down.
+You can add a search widget on the Quick Order, Shopping List, and Shopping Cart pages. Using the widget, the customer only needs to paste the necessary items either by entering the concrete products SKUs or typing their name. The matching product variants are suggested in the drop-down.
 
-Using the search widget, online shoppers are able to find products assigned specifically to the stores the users are in. Also, only products corresponding to user's [currency](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html) and [price mode](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html) settings are searched for.
+Using the search widget, online shoppers can find products assigned specifically to the stores the users are in. Also, only products corresponding to user's [currency](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html) and [price mode](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html) settings are searched for.
 
 Here's an example of what the search widget looks like on:
 
@@ -54,7 +54,7 @@ In the empty shopping list, the customer can still add products with the help of
 
 ![Search widget demo](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/Search+Widget+for+Concrete+Products+Overview/search-widget-demo.png)
 
-In comparison with Shopping Cart, for shopping lists, the quantity that is being added via a search widget is not verified. That means that the customer can add products to a shopping list with any quantity, irrespective of the [quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html) the products may have.
+In comparison with Shopping Cart, for shopping lists, the quantity that is being added by a search widget is not verified. That means that the customer can add products to a shopping list with any quantity, irrespective of the [quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html) the products may have.
 
 The same works for the [product restriction](/docs/scos/user/features/{{page.version}}/merchant-product-restrictions-feature-overview.html) rules: the shopper can't add blacklisted products to a shopping list. They get "No search results" message in the widget field, and only whitelisted products are suggested in the search results in case of a whitelist.
 

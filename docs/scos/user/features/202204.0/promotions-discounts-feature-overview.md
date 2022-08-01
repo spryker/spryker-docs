@@ -114,7 +114,7 @@ When a cart is evaluated on a level that has a rule and a rule group, the rule g
 
 ### Discount threshold
 
-A *threshold* is a minimum number of items in the cart that should fulfill all the specified decision rules for the discount to apply.
+A *threshold* is a minimum number of items in the cart that must fulfill all the specified decision rules for the discount to apply.
 The default value is *1*. It means that a discount is applied if at least one item fulfills the discount's decision rules.
 
 In the following example, the discount is applied if there are four items with the Intel Core processor in the cart.
@@ -160,7 +160,7 @@ The promotional product discount only applies if the product is added to the car
 
 {% endinfo_block %}
 
-A Back Office user can either give away promotional products completely for free or provide a discount for these products by specifying the percentage value or a fixed amount to be discounted from the promotional products' price. When giving a product for free, the percentage value should be 100%. Using a fixed amount discount for a free product is also possible, where the amount is equal to a product's price, but it is not recommended due to the possibility of price fluctuations and differences across multiple products.
+A Back Office user can either give away promotional products completely for free or provide a discount for these products by specifying the percentage value or a fixed amount to be discounted from the promotional products' price. When giving a product for free, the percentage value must be 100%. Using a fixed amount discount for a free product is also possible, where the amount is equal to a product's price, but it is not recommended due to the possibility of price fluctuations and differences across multiple products.
 
 ![Collection - promotional product](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/promotions-discounts-feature-overview.md/202200.0/collection-promotional-product.png)
 
@@ -206,13 +206,13 @@ An *exclusive discount* is a discount that, when applied to a cart, discards all
 
 {% endinfo_block %}
 
-If a cart is eligible for multiple exclusive discounts, you can [prioritize](#discount-priority) the discounts to define which of the exclusive discounts should prevail over the others. For details on how a Back Office user can set priorities for discounts, see [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
+If a cart is eligible for multiple exclusive discounts, you can [prioritize](#discount-priority) the discounts to define which of the exclusive discounts prevail over the others. For details on how a Back Office user can set priorities for discounts, see [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html).
 
 If the exclusive discounts are not prioritized or have the same priorities, the highest-value discount is applied. For details and examples on how the discounts are calculated, see [Discount calculation logic](#discount-calculation-logic).
 
 ### Non-exclusive discount
 
-A *non-exclusive discount* is a discount that can be combined with other non-exclusive discounts in a single order. As all the discounts are non-exclusive, they are applied together. However, a Back Office user can [prioritize](#discount-priority) the non-exclusive discounts to set the order in which they should apply. For details on how a Back Office user can prioritize the discount, see [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html). For details and examples of how the discounts are calculated based on their priorities, see [Discount calculation logic](#discount-calculation-logic).
+A *non-exclusive discount* is a discount that can be combined with other non-exclusive discounts in a single order. As all the discounts are non-exclusive, they are applied together. However, a Back Office user can [prioritize](#discount-priority) the non-exclusive discounts to set the order in which they apply. For details on how a Back Office user can prioritize the discount, see [Create discounts](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html). For details and examples of how the discounts are calculated based on their priorities, see [Discount calculation logic](#discount-calculation-logic).
 
 ## Discount validity interval
 
@@ -240,7 +240,7 @@ In this case, discounts are applied based on their priority, regardless of type.
 
 {% info_block infoBox "Info" %}
 
-If you have a voucher code and a cart rule with the same priority, both discounts should apply and use the same cart subtotal. For an example, see [Scenario 5: Non-exclusive, fixed amount and percentage discounts with the same priority values](#scenario-4-non-exclusive-fixed-amount-and-percentage-discounts-with-the-same-priority-values).
+If you have a voucher code and a cart rule with the same priority, both discounts apply and use the same cart subtotal. For an example, see [Scenario 5: Non-exclusive, fixed amount and percentage discounts with the same priority values](#scenario-4-non-exclusive-fixed-amount-and-percentage-discounts-with-the-same-priority-values).
 
 {% endinfo_block %}
 
@@ -261,7 +261,7 @@ The discount calculation logic follows these rules:
 
 The following scenarios illustrate how the discount calculation logic works.
 
-#### Scenario 1: Multiple non-exclusive discounts, mix of fixed amount and percentage discount calculation types.
+#### Scenario 1: Multiple non-exclusive discounts, the mix of fixed amount and percentage discount calculation types.
 
 Cart subtotal: €500
 
@@ -288,7 +288,7 @@ Grand total: €382.00
 
 {% info_block infoBox "Info" %}
 
-As customers are not aware of the prioritization, they may be confused about the assigned priorities. For the scenario above, they might wonder why they get 10% off the pre-discount price of the hockey stick and not, for example, the helmet. Thus, in the cases like this one, instead of creating prioritization logic for separate discount types, consider adjusting the discount priority accordingly to avoid customer confusion.
+As customers are not aware of the prioritization, they may be confused about the assigned priorities. For the scenario above, they might wonder why they get 10% off the pre-discount price of the hockey stick and not—for example, the helmet. Thus, in the cases like this one, instead of creating prioritization logic for separate discount types, consider adjusting the discount priority accordingly to avoid customer confusion.
 
 {% endinfo_block %}
 

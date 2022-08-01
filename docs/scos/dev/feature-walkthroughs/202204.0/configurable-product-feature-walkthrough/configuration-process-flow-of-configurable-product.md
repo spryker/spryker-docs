@@ -15,9 +15,9 @@ When configuration starts on Yves, from the product details page (PDP), the prod
 
 ### Phase 1
 
-1. A customer is on a PDP—the page with the product configuration.
-2. The product configuration can be a complete configuration or use am incomplete pre-configuration defined by the shop owner.
-3. The product configuration can be taken from two sources:
+* A customer is on a PDP—the page with the product configuration.
+* The product configuration can be a complete configuration or use an incomplete pre-configuration defined by the shop owner.
+* The product configuration can be taken from two sources:
   - A session for complete configuration.
   - Storage (Redis) for the pre-configuration.
 
@@ -51,7 +51,7 @@ The following table contains request parameters, which the plugin adds to the re
 
 ### Phase 2
 
-1. The customer clicks the configuration button, and the request is redirected to the gateway page with a given product configuration using a `GET` method.
+The customer clicks the configuration button, and the request is redirected to the gateway page with a given product configuration using a `GET` method.
 
 ### Phase 3
 
@@ -117,10 +117,10 @@ When configuration starts on Yves, from the **Cart** page, the product configura
 
 ### Phase 1
 
-1. The customer is on the Cart page — the page with items that contains the product configuration.
-2. The product configuration can be already complete or not.
-3. The item product configuration can be taken from one source only: Quote.
-4. The framework generates the URL that points to the gateway page with the following parameters.
+* The customer is on the Cart page—the page with items that contains the product configuration.
+* The product configuration can be already complete or not.
+* The item product configuration can be taken from one source only: Quote.
+* The framework generates the URL that points to the gateway page with the following parameters.
 
 | PARAMETER                                      | VALUE | COMMENT |
 |------------------------------------------------|---|---|
@@ -153,7 +153,7 @@ When configuration starts on Yves, from the **Cart** page, the product configura
 
 ### Phase 4
 
-1. Redirects the customer to the configurator page using the GET request.
+Redirects the customer to the configurator page using the GET request.
 
 ### Phase 5
 

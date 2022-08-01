@@ -11,9 +11,6 @@ redirect_from:
   - /docs/managing-discounts
   - /docs/en/managing-discounts
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/discount/edit-discounts.html
-  - title: Promotions & Discounts feature overview
-    link: docs/scos/user/features/page.version/promotions-discounts-feature-overview.html
----
 ---
 
 This topic describes how to edit discounts in the Back Office.

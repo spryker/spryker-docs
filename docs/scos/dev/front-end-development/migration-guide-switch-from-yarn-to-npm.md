@@ -41,7 +41,23 @@ To ensure the CI jobs will run successfully, add the same config part to all 'de
 
 {% endinfo_block %}
 
-2. Run the following command to pull the latest `docker-sdk` version:
+2. The following commands are deprecated and will work correctly only with the previous versions (using Yarn).
+Please check and remove deprecated commands in all `*.yml` files.
+
+```bash
+frontend:yves:install-dependencies
+frontend:zed:install-dependencies
+```
+
+And replace `frontend:mp:install-dependencies` with the next one `frontend:project:install-dependencies`.
+
+Use the following command to pass all (yves, zed, mp) frontend dependencies:
+
+```bash
+frontend:project:install-dependencies
+```
+
+3. Run the following command to pull the latest `docker-sdk` version:
 
 ```bash
 cd docker && git pull origin master
@@ -60,7 +76,7 @@ The minimum `hash` text should be `e9ebb666feccae1754792d41e49df3b9f95ef0aa` or 
 
 {% endinfo_block %}
 
-3. Update the `package.json`:
+4. Update the `package.json`:
 
 ```json
 {
@@ -89,7 +105,7 @@ The minimum `hash` text should be `e9ebb666feccae1754792d41e49df3b9f95ef0aa` or 
 }
 ```
 
-4. Update the `.travis.yml`:
+5. Update the `.travis.yml`:
 
 ```yaml
 before_install:
@@ -99,13 +115,11 @@ before_install:
   ...
 ```
 
-5. In the root directory, create a new `.npmrc` file with the following content:
+6. In the root directory, create a new `.npmrc` file with the following content:
 
 ```text
 legacy-peer-deps=true
 ```
-
-6. Install dependencies with `frontend:project:install-dependencies` command instead of `frontend:{yves/zed/mp}:install-dependencies`.
 
 7. Delete the following folders/files from the root directory:
 
@@ -136,24 +150,6 @@ rm -rf node_modules && docker/sdk cli rm -rf node_modules
 docker/sdk boot deploy.dev.yml
 docker/sdk up --build --assets --data
 ```
-
-{% info_block infoBox "Note" %}
-
-The following commands are deprecated and will work correctly only with the previous versions (using Yarn):
-
-```bash
-frontend:yves:install-dependencies
-frontend:zed:install-dependencies
-frontend:mp:install-dependencies
-```
-
-Use the following command to pass all (yves, zed, mp) frontend dependencies:
-
-```bash
-frontend:project:install-dependencies
-```
-
-{% endinfo_block %}
 
 {% info_block infoBox "Note" %}
 

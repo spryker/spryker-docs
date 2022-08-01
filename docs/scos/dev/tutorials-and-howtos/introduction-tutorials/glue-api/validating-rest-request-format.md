@@ -55,8 +55,18 @@ To apply validation rules to an API:
 4. Generate validation cache:
 
 ```bash
-vendor/bin/console rest-api:build-request-validation-cache`
+vendor/bin/console rest-api:build-request-validation-cache
 ```
+
+{% info_block warningBox %}
+
+By default, a validation cache will be generated for the current store. In order to generate it for a specific store, please use the `APPLICATION_STORE` variable.
+For example:
+```bash
+APPLICATION_STORE=AT vendor/bin/console rest-api:build-request-validation-cache
+```
+
+{% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
@@ -145,6 +155,16 @@ To apply new or updated rules, rebuild validation cache:
 ```bash
 vendor/bin/console rest-api:build-request-validation-cache
 ```
+
+{% info_block warningBox %}
+
+By default, a validation cache will be generated for the current store. In order to generate it for a specific store, please use the `APPLICATION_STORE` variable.
+For example:
+```bash
+APPLICATION_STORE=AT vendor/bin/console rest-api:build-request-validation-cache
+```
+
+{% endinfo_block %}
 
 {% info_block infoBox %}
 

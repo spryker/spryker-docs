@@ -41,14 +41,10 @@ To ensure the CI jobs will run successfully, add the same config part to all 'de
 
 {% endinfo_block %}
 
-2. The following commands are deprecated and will work correctly only with the previous versions (using Yarn). Please check and remove deprecated commands in all `*.yml` files.
-
-```bash
-frontend:yves:install-dependencies
-frontend:zed:install-dependencies
-```
-
-And replace `frontend:mp:install-dependencies` with the next one `frontend:project:install-dependencies`.
+2. The following commands are deprecated and will work correctly only with the previous versions (using Yarn). 
+Please check all `*.yml` files at the project level and:
+- Remove deprecated `frontend:yves:install-dependencies` and `frontend:zed:install-dependencies` commands.
+- Replace the `frontend:mp:install-dependencies` command with the next one `frontend:project:install-dependencies`.
 
 Use the following command to pass all (yves, zed, mp) frontend dependencies:
 

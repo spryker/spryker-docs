@@ -72,7 +72,7 @@ To start developing your Spryker in Docker, see [Installing Spryker with Docker]
 
 #### Deploy file
 
-For the local environment, use the [deploy.dev.yml](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file/deploy-file.html) file.
+For the local environment, use the [`deploy.dev.yml`](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file/deploy-file.html) file.
 
 In the default deploy file, change the following attributes:
 
@@ -82,7 +82,7 @@ In the default deploy file, change the following attributes:
  - Domains for the local environment
  - Domains for the services (RabbitMQ, Jenkins): Optional, but this can help to keep all project links together
 
-#### Vagrant clean up
+#### Vagrant clean-up
 
 If you use Docker and not the Development Virtual Machine (DevVM), you don't need the DevVM's configs. Therefore, remove the following files:
 - `config/install/development.yml`
@@ -117,7 +117,7 @@ After installing, make sure to have a look at [Post-Installation steps and addit
 
 ### Adjust the readme file
 
-After you install the project, adjust the readme.md file as follows:
+After you install the project, adjust the `readme.md` file as follows:
 
  - Update the project installation description.
  - Update the repository link.
@@ -164,7 +164,7 @@ To configure and customize your Spryker Commerce OS, do the following:
 4. [Schedule tasks](/docs/scos/dev/back-end-development/cronjobs/cronjobs.html) (Cron jobs).
 <!---4. Move to the maintenance mode-->
 
-### Store clean up
+### Store clean-up
 
 This step depends on the store setup which you plan to have. If you start with one store, consider cleaning up the remaining stores right away in the following files:
 
@@ -174,12 +174,12 @@ This step depends on the store setup which you plan to have. If you start with o
  - `config_default.php`
  - `src/SprykerConfig/CodeBucketConfig.php`
 
-### Modules clean up
-* Analize modules that you have in the desired Demoshop.
-* Analize modules that you need to have.
-* Remove unnesessary modules (to do that, you can use the migration guide backwards).
+### Modules clean-up
+* Analyze modules that you have in the desired Demoshop.
+* Analyze modules that you need to have.
+* Remove unnecessary modules (to do that, you can use the migration guide backward).
 
-### Data import clean up
+### Data import clean-up
 
 In the `data/import` folder, there are many files related to each store. Define the stores you need and remove all the unused files.
 
@@ -213,7 +213,7 @@ composer update spryker/code-sniffer slevomat/coding-standard --with-dependencie
 
 On the project level, you may decide to use your own rules or exclude some that are enabled in Spryker by default.
 
-To enable a new rule, check out the full list of rules at [Slevomat Coding Standard](https://github.com/slevomat/coding-standard).
+To activate a new rule, check out the full list of rules at [Slevomat Coding Standard](https://github.com/slevomat/coding-standard).
 
 To disable a rule, you can use configuration. The following example excludes a rule that makes annotation for constructor and method required:
 
@@ -242,9 +242,9 @@ Configure the following plugins:
  - Symfony Support
 
 ### Speed up indexation
-In the beginning of the project, you need to reset your project quite often. PhpStorm indexing is annoying and takes too much of the resources. To avoid this, you can disable cache indexing.
+At the beginning of the project, you need to reset your project quite often. PhpStorm indexing is annoying and takes too much of the resources. To avoid this, you can disable cache indexing.
 
-To disable cache indexing, in the PhpStorm, right click on the folder and select **Mark Directory As**->**Excluded**.
+To disable cache indexing, in the PhpStorm, right-click the folder and select **Mark Directory As&nbsp;<span aria-label="and then">></span> Excluded**.
 
 It is safe to disable cache indexing in the following files:
  - `data/cache `
@@ -265,7 +265,7 @@ In a production setup, Zed must be covered with a VPN, Basic Auth, or IP allowli
 
 ## 8. Familiarize yourself with the Spryker architecture
 
-As a developer, the Spryker structure is the first thing you need to know to extend the core functionality. To familiarize yourself with the Spryker architecture, different parts of the Client, Shared, Zed, and Yves folders, and their different layers, see the following articles:
+As a developer, the Spryker structure is the first thing you need to know to extend the core functionality. To familiarize yourself with the Spryker architecture, different parts of the Client, Shared, Zed, and Yves folders, and their different layers, see the following documents:
 
 * [Conceptual overview](/docs/scos/dev/architecture/conceptual-overview.html): to learn about application layers and code structure.
 * [Modules and layers](/docs/scos/dev/architecture/modules-and-layers.html): to learn about layers and how various functionality is encapsulated in modules.

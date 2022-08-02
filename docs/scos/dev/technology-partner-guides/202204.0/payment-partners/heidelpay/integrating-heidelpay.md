@@ -201,7 +201,7 @@ eco: {
 ```twig
  ...
 
-{% define data = {
+{% raw %}{%{% endraw %} define data = {
     backUrl: _view.previousStepUrl,
     forms: {
         payment: _view.paymentForm,
@@ -211,10 +211,10 @@ eco: {
         'heidelpay/sofort': ['sofort', 'heidelpay'],
         'heidelpay/credit-card-secure': ['credit-card-secure', 'heidelpay'],
     },
-} %}
+} {% raw %}%}{% endraw %}
 
-{% block content %}
-    {% embed molecule('form') with {
+{% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
+    {% raw %}{%{% endraw %} embed molecule('form') with {
         class: 'box',
         data: {
             form: data.forms.payment,
@@ -238,20 +238,20 @@ eco: {
         embed: {
             customForms: data.customForms,
         },
-    } only %}
-        {% block errors %}
+    } only {% raw %}%}{% endraw %}
+        {% raw %}{%{% endraw %} block errors {% raw %}%}{% endraw %}
             {{ parent() }}
             {{ form_errors(data.form.paymentSelection) }}
-        {% endblock %}
+        {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 
-        {% block fieldset %}
-            {% for name, choices in data.form.paymentSelection.vars.choices %}
-                {% set paymentProviderIndex = loop.index0 %}
+        {% raw %}{%{% endraw %} block fieldset {% raw %}%}{% endraw %}
+            {% raw %}{%{% endraw %} for name, choices in data.form.paymentSelection.vars.choices %}
+                {% raw %}{%{% endraw %} set paymentProviderIndex = loop.index0 {% raw %}%}{% endraw %}
                 <h5>{{ name | trans }}</h5>
                 <ul>
-                    {% for key, choice in choices %}
+                    {% raw %}{%{% endraw %} for key, choice in choices {% raw %}%}{% endraw %}
                         <li class="list__item spacing-y clear">
-                            {% embed molecule('form') with {
+                            {% raw %}{%{% endraw %} embed molecule('form') with {
                                 data: {
                                     form: data.form[data.form.paymentSelection[key].vars.name],
                                     enableStart: false,
@@ -262,8 +262,8 @@ eco: {
                                     index: loop.index ~ '-' ~ paymentProviderIndex,
                                     toggler: data.form.paymentSelection[key],
                                 },
-                            } only %}
-                                {% block fieldset %}
+                            } only {% raw %}%}{% endraw %}
+                                {% raw %}{%{% endraw %} block fieldset {% raw %}%}{% endraw %}
                                     {{ form_row(embed.toggler, {
                                         required: false,
                                         component: molecule('toggler-radio'),
@@ -273,26 +273,26 @@ eco: {
                                     }) }}
                                     <div class="col col--sm-12 is-hidden js-payment-method-{{embed.index}}">
                                         <div class="col col--sm-12 col--md-6">
-                                            {% if embed.customForms[data.form.vars.template_path] is not defined %}
+                                            {% raw %}{%{% endraw %} if embed.customForms[data.form.vars.template_path] is not defined {% raw %}%}{% endraw %}
                                                 {{ parent() }}
-                                            {% else %}
-                                                {% set viewName = embed.customForms[data.form.vars.template_path] | first %}
-                                                {% set moduleName = embed.customForms[data.form.vars.template_path] | last %}
-                                                {% include view(viewName, moduleName) ignore missing with {
+                                            {% raw %}{%{% endraw %} else {% raw %}%}{% endraw %}
+                                                {% raw %}{%{% endraw %} set viewName = embed.customForms[data.form.vars.template_path] | first {% raw %}%}{% endraw %}
+                                                {% raw %}{%{% endraw %} set moduleName = embed.customForms[data.form.vars.template_path] | last {% raw %}%}{% endraw %}
+                                                {% raw %}{%{% endraw %} include view(viewName, moduleName) ignore missing with {
                                                     form: data.form.parent
                                                 } only %}
-                                            {% endif %}
+                                            {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
                                         </div>
                                     </div>
-                                {% endblock %}
-                            {% endembed %}
+                                {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+                            {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
                         </li>
-                    {% endfor %}
+                    {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
                 </ul>
-            {% endfor %}
-        {% endblock %}
-    {% endembed %}
-{% endblock %}
+            {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
+        {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+    {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
+{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 
 ```
 

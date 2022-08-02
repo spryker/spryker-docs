@@ -45,32 +45,35 @@ entries:
           - title: Manage via Glue API
             url: /docs/pbc/all/discount-management/manage-via-glue-api/manage-discounts-via-glue-api.html
             nested:
-              - title: Add items with discounts to guest carts via Glue API
-                url: /docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html
-              - title: Retrieve tax sets of abstract products
-                url: /docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets-of-abstract-products.html
+              - title: Add items with discounts to carts of registered users
+                url: /docs/pbc/all/discount-management/manage-via-glue-api/add-items-with-discounts-to-carts-of-registered-users.html
+              - title: Manage discount vouchers in carts of registered users
+                url: /docs/pbc/all/discount-management/manage-via-glue-api/manage-discount-vouchers-in-carts-of-registered-users.html
+              - title: Retrieve discounts in carts of registered users
+                url: /docs/pbc/all/discount-management/manage-via-glue-api/retrieve-discounts-in-carts-of-registered-users.html
+              - title: Retrieve discounts in customer carts
+                url: /docs/pbc/all/discount-management/manage-via-glue-api/retrieve-discounts-in-customer-carts.html
+              - title: Add items with discounts to guest carts
+                url: /docs/pbc/all/discount-management/manage-via-glue-api/add-items-with-discounts-to-guest-carts.html
+              - title: Manage discount vouchers in guest carts
+                url: /docs/pbc/all/discount-management/manage-via-glue-api/manage-discount-vouchers-in-guest-carts.html
+              - title: Retrieve discounts in guest carts
+                url: /docs/pbc/all/discount-management/manage-via-glue-api/retrieve-discounts-in-guest-carts.html
           - title: Import and export data
+            url: /docs/pbc/all/discount-management/import-and-export-data/discount-import.html
             nested:
-              - title: Import tax sets
-                url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets.html
-              - title: Import tax sets for abstract products
-                url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-abstract-products.html
-          - title: Extend and customize
+              - title: File details - discount.csv
+                url: /docs/pbc/all/discount-management/import-and-export-data/file-details-discount.csv.html
+              - title: File details - discount_store.csv
+                url: /docs/pbc/all/discount-management/import-and-export-data/file-details-discount-store.csv.html
+              - title: File details - discount_amount.csv
+                url: /docs/pbc/all/discount-management/import-and-export-data/file-details-discount-amount.csv.html
+              - title: File details - discount_voucher.csv
+                url: /docs/pbc/all/discount-management/import-and-export-data/file-details-discount-voucher.csv.html
+          - title: Tutorials and HowTos
             nested:
-              - title: "Tax module: reference information"
-                url: /docs/pbc/all/tax-management/extend-and-customize/tax-module-reference-information.html
-          - title: Domain model and relationships
-            url: /docs/pbc/all/tax-management/tax-domain-model-and-relationships.html
-          - title: Third-party integrations
-            url: /docs/pbc/all/tax-management/third-party-integrations/avalara.html
-            nested:
-              - title: Integrate Avalara
-                url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara.html
-              - title: Integrate Avalara Tax + Product Options
-                url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-product-options.html
-              - title: Integrate Avalara Tax + Shipment
-                url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-shipment.html
-
+              - title: "HowTo: Create discounts based on shipment"
+                url: /docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
       - title: Payment Service Providers
         url: /docs/pbc/all/payment-service-providers/psp.html
         nested:

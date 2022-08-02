@@ -225,9 +225,6 @@ versioned_categories:
       - legacy-demoshop
       - technology-partner-guides
       - devops-migration-guides
-  pbc:
-    all:
-      - tax-management
 
 # these are defaults used for the front matter for these file types
 
@@ -278,6 +275,8 @@ algolia:
       title: 'Frontend enablement Service Developer'
     - name: 'pbc_all'
       title: 'Packaged Business Capabilities'
+    - name: 'paas_plus_dev'
+      title: 'PaaS+'
 sass:
     sass_dir: css
     style: compressed

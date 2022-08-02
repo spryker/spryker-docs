@@ -1,5 +1,5 @@
 ---
-title: Module Configuration Convention
+title: Module configuration convention
 description: This article contains conventions on the module configuration.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -22,19 +22,26 @@ redirect_from:
   - /v2/docs/en/module-configuration-convention
   - /v1/docs/module-configuration-convention
   - /v1/docs/en/module-configuration-convention
+related:
+  - title: Data Processing Guidelines
+    link: docs/scos/dev/guidelines/data-processing-guidelines.html
+  - title: Making your Spryker shop secure
+    link: docs/scos/dev/guidelines/making-your-spryker-shop-secure.html
+  - title: Project development guidelines
+    link: docs/scos/dev/guidelines/project-development-guidelines.html
 ---
 
 ## Definitions
 
-| Constants                             | Usage hints          | Value                     | In Dev configuration                                         |
-| ------------------------------------- | -------------------- | ------------------------- | ------------------------------------------------------------ |
+| CONSTANTS    | USAGE HINTS   | VALUE     | IN DEV CONFIGURATION    |
+| ------------------ | ------------------ | ----------------- | ---------------- |
 | Environment configuration (constants) | Used in config_*.php | Different per environment | DE, AT, US have different environment configurations         |
 | Module configuration (constants)      |                      | Different per code deploy | DE, AT shares code, they have the same module configuration. |
 | Module constants                      |                      | Always the same           | DE, AT, US has the same module constants.                    |
 
 ## Implementation
 
-### Environment Configuration
+### Environment configuration
 
 Environment configuration is changeable per environment, but the constant and its value is not changeable.
 
@@ -51,7 +58,7 @@ interface ModuleNameConstants
 
 
 
-### Module Configuration
+### Module configuration
 
 Module configuration is extendable on project level. For the module configuration, the following applies:
 

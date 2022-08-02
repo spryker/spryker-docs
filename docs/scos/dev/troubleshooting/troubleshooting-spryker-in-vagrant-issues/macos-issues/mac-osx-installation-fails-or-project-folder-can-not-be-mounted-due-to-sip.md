@@ -1,5 +1,5 @@
 ---
-title: Mac OSX- Installation fails or project folder can not be mounted due to SIP
+title: Mac OSX - Installation fails or project folder can not be mounted due to SIP
 description: Learn how to fix the issue when installation fails on MacOS or project folder can not be mounted due to SIP
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
@@ -12,6 +12,11 @@ redirect_from:
   - /docs/en/mac-osx-installation-fails-or-project-folder-can-not-be-mounted-due-to-sip
   - /v6/docs/mac-osx-installation-fails-or-project-folder-can-not-be-mounted-due-to-sip
   - /v6/docs/en/mac-osx-installation-fails-or-project-folder-can-not-be-mounted-due-to-sip
+related:
+  - title: Mac OSX - iterm2 (locale error)
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-iterm2-locale-error.html
+  - title: Mac OSX - Wrong curl version error
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-wrong-curl-version-error.html
 ---
 
 ## Description

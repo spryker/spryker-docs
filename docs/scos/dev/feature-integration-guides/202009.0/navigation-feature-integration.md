@@ -191,7 +191,7 @@ Ensure that, in the WYSIWYG editor toolbar on *Edit Block Glossary: {block id}* 
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 Follow the steps below to install the Navigation feature front end.
 
 ### Prerequisites

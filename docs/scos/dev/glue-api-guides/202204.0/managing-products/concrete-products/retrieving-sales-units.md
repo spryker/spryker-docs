@@ -11,6 +11,14 @@ redirect_from:
   - /docs/retrieving-sales-units
   - /docs/en/retrieving-sales-units
 related:
+  - title: Retrieving concrete products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-products.html
+  - title: Retrieving concrete product availability
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-product-availability.html
+  - title: Retrieving concrete product prices
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-product-prices.html
+  - title: Retrieving image sets of concrete products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html
   - title: Measurement units feature overview
     link: docs/scos/user/features/page.version/measurement-units-feature-overview.html
 ---

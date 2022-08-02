@@ -15,7 +15,7 @@ To learn more about the feature and to find out how end users use it, see [Retur
 
 | INTEGRATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---|---|---|
-| [Return Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/return-management-feature-integration.html) | [Managing the returns](/docs/marketplace/dev/glue-api-guides/{{page.version}}/managing-the-returns.html) | [HowTo - Set number of days for a return policy](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html) |
+| [Return Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/return-management-feature-integration.html) | [Managing the returns](/docs/marketplace/dev/glue-api-guides/{{page.version}}/managing-the-returns.html) | [HowTo: Set number of days for a return policy](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html) |
 | [Configurable Bundle + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/configurable-bundle-order-management-feature-integration.html) |  |  |
 | [Glue API: Return Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-return-management-feature-integration.html) |  |  |
 | [Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/order-management-feature-integration.html) |  |  |

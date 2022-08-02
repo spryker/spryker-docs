@@ -16,6 +16,17 @@ redirect_from:
   - /v5/docs/en/split-delivery-concept
   - /v4/docs/split-delivery-concept
   - /v4/docs/en/split-delivery-concept
+related:
+  - title: CRUD Scheduled Prices migration concept
+    link: docs/scos/dev/migration-concepts/crud-scheduled-prices-migration-concept.html
+  - title: Decimal Stock migration concept
+    link: docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
+  - title: Float Stock for Products
+    link: docs/scos/dev/migration-concepts/float-stock-for-products-migration-concept.html
+  - title: Migrating from Twig v1 to Twig v3
+    link: docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
+  - title: Silex Replacement migration concept
+    link: docs/scos/dev/migration-concepts/silex-replacement/silex-replacement.html
 ---
 
 ## General information

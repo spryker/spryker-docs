@@ -11,6 +11,17 @@ redirect_from:
   - /docs/managing-product-sets
   - /docs/en/managing-product-sets
   - /docs/scos/user/back-office-user-guides/202204.0/merchandising/product-sets/managing-product-sets.html
+related:
+  - title: Create product sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/create-product-sets.html
+  - title: Reorder product sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/reorder-product-sets.html
+  - title: View product sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/view-product-sets.html
+  - title: Delete product sets
+    link: docs/scos/user/back-office-user-guides/page.version/merchandising/product-sets/delete-product-sets.html
+  - title: Product Sets feature overview
+    link: docs/scos/user/features/page.version/product-sets-feature-overview.html
 ---
 
 This document describes how to edit product sets in the Back Office.
@@ -18,6 +29,7 @@ This document describes how to edit product sets in the Back Office.
 ## Prerequisites
 
 To start editing a product set, do the following:
+
 1. Go to **Merchandising&nbsp;<span aria-label="and then">></span> Product Sets**.
 2. Next to the product set you want to edit, click **Edit**.
 
@@ -46,7 +58,7 @@ Some section below contain reference information. Review it before you start or 
 | DESCRIPTION | This description is displayed on the Storefront for the product set. |
 | PRODUCT SET KEY | Unique identifier of the product set for adding to [CMS pages](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html). When entering a multi-word key, use underscores and dashes instead of spaces. |
 | WEIGHT | Defines the position of the product set on a page relatively to the weight value of the other product sets. A product set with a bigger weight is displayed higher on a page. |
-| ACTIVE | Defines if the product set is displayed on the Storefront. |    
+| ACTIVE | Defines if the product set is displayed on the Storefront. |
 
 ## Assign products to a product set
 
@@ -70,7 +82,7 @@ Some section below contain reference information. Review it before you start or 
     * **KEYWORDS**
     * **DESCRIPTION**
 3. Click **Save**.
-    This opens the **View Product Set** page with a success message displayed. The updated information is displayed in the **SEO** pane.      
+    This opens the **View Product Set** page with a success message displayed. The updated information is displayed in the **SEO** pane.
 
 ## Reference information: Edit SEO information of a product set
 

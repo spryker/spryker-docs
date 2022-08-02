@@ -1,5 +1,5 @@
 ---
-title: B2C API React Example
+title: B2C API React example
 description: B2C API React Example is a single-page web application that demonstrates the use of Spryker Glue REST API in B2C scenarios.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -23,6 +23,8 @@ redirect_from:
   - /v1/docs/b2c-api-react-example
   - /v1/docs/en/b2c-api-react-example
 related:
+  - title: B2C API React example installation
+    link: docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example-installation.html
   - title: Glue REST API
     link: docs/scos/dev/glue-api-guides/page.version/glue-rest-api.html
   - title: REST API Reference
@@ -56,7 +58,7 @@ The Demo shop was built using and demonstrates the use of the endpoints and reso
 | Product API | [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-products.html)<br>[Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html) |
 | Product Availability API | [Retrieving abstract product availability](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-product-availability.html)<br>[Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html) |
 | Product Price API | [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html)<br>[Retrieving concrete product prices](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-product-prices.html) |
-| Product Tax Sets API | [Retrieving product tax sets](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-tax-sets.html) |
+| Product Tax Sets API | [Retrieving product tax sets](/docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html) |
 | Product Image Sets API | [Retrieving image sets of abstract products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html)<br>[Retrieving image sets of concrete products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html) |
 | Product Labels API | [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-product-labels.html) |
 | Login API | [Authentication and authorization](/docs/scos/dev/glue-api-guides/{{site.version}}/authentication-and-authorization.html) |

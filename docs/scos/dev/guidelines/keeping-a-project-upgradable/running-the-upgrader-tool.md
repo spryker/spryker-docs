@@ -5,6 +5,17 @@ last_updated: Nov 25, 2021
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/upgradability-services/running-the-upgrader-tool.html
+related:
+  - title: Keeping a project upgradable
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
+  - title: Upgradability services
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-services.html
+  - title: Upgrader tool overview
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
+  - title: Running the evaluator tool
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html
+  - title: Define custom prefixes for core entity names
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
 ---
 This document describes how to upgrade all the modules to the latest versions.
 

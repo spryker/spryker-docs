@@ -10,56 +10,12 @@ redirect_from:
   - /2021080/docs/en/product-bundles-order-management-feature-integration
   - /docs/product-bundles-order-management-feature-integration
   - /docs/en/product-bundles-order-management-feature-integration
+related:
+  - title: Product Bundles feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-bundles-feature-walkthrough.html
+  - title: Order Management feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/order-management-feature-walkthrough/order-management-feature-wakthrough.html
+  
 ---
 
-## Install feature core
-
-### Prerequisites
-
-To start feature integration, overview and install the necessary features:
-
-| NAME | VERSION |
-| --- | --- |
-| Product Bundles | {{page.version}} |
-| Order Management | {{page.version}} |
-| Spryker Core | {{page.version}} |
-
-### 1) Set up behavior
-
-
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| ProductBundleOrderItemExpanderPlugin | Expands order items with product bundles. | None | Spryker\Zed\ProductBundle\Communication\Plugin\Sales |
-| ProductBundleOptionItemExpanderPlugin | Expands order items with product options. Copies unique product options from related bundle items to bundle. | None | Spryker\Zed\ProductBundle\Communication\Plugin\Sales |
-
-**src/Pyz/Zed/Sales/SalesDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Sales;
-
-use Spryker\Zed\ProductBundle\Communication\Plugin\Sales\ProductBundleOptionItemExpanderPlugin;
-use Spryker\Zed\ProductBundle\Communication\Plugin\Sales\ProductBundleOrderItemExpanderPlugin;
-use Spryker\Zed\Sales\SalesDependencyProvider as SprykerSalesDependencyProvider;
-
-class SalesDependencyProvider extends SprykerSalesDependencyProvider
-{
-    /**
-     * @return \Spryker\Zed\SalesExtension\Dependency\Plugin\OrderItemExpanderPluginInterface[]
-     */
-    protected function getOrderItemExpanderPlugins(): array
-    {
-        return [
-            new ProductBundleOrderItemExpanderPlugin(),
-            new ProductBundleOptionItemExpanderPlugin(),
-        ];
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Make sure that every order item from `SalesFacade::getOrderItems()` results contains product concrete/abstract IDs data.
-
-{% endinfo_block %}
+{% include pbc/all/integrate-features/202204.0/integrate-the-product-bundles-order-management-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-product-bundles-order-management-feature.md -->

@@ -1,5 +1,5 @@
 ---
-title: Atomic Front End - general overview
+title: Atomic Frontend - general overview
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/atomic-front-end-general-overview
@@ -16,6 +16,13 @@ redirect_from:
   - /docs/atomic-frontend
   - /docs/en/atomic-frontend
   - /docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-frontend-general-overview.html
+related:
+  - title: Customizing Spryker Frontend
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/customizing-spryker-front-end.html
+  - title: Integrating JQuery into Atomic Frontend
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html
+  - title: Integrating React into Atomic Frontend
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/integrating-react-into-atomic-frontend.html
 ---
 
 To provide each customer with the features they require, Spryker Commerce OS has been split into modules. Each customer can have a unique set of modules, and even module versions, specific to their business requirements. This fact combined with the possibility for customers to develop functionality on their own poses a big challenge for frontend developers. To ease the task, Spryker Frontend implements a design methodology called **atomic design**. Because of this, the UI layer of Spryker is called *Atomic Frontend*.
@@ -64,7 +71,7 @@ Based on their structure and use, all components are divided into the following 
 * **templates** - Templates can be viewed as combinations of components composed according to a specific graphic layout. They are used to define a visual schema for a set of pages. Typically, pages with a common template have the same structure and share most of content with the exception of a small portion of page-specific or widget-specific information that changes from page to page. Thus, a template serves as a backbone that defines a set of shared components and the overall layout. Examples of templates are the main site layout or the checkout layout.
 * **views** - This is the highest point in the frontend hierarchy. A view is a template filled with specific content for use in a specific case. It represents a specific page or widget. Views are the only components that can be called by the backend directly which means that they also serve as a connection point between backend and frontend. On the backend side, views are always connected to controllers.
 
-For more details on the component model that inspired Spryker frontend, see [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/).
+For more details on the component model that inspired Spryker Frontend, see [Atomic Design](http://bradfrost.com/blog/post/atomic-web-design/).
 
 ## BEM methodology
 
@@ -118,9 +125,9 @@ The naming and other conventions, as well as folder structure applied in the `Sh
 
 ## Folder structure
 
-Spryker frontend implementation is split into several folders depending on their usage and function:
+Spryker Frontend implementation is split into several folders depending on their usage and function:
 
-* **frontend**: Contains Webpack implementation for Spryker frontend.
+* **frontend**: Contains Webpack implementation for Spryker Frontend.
 * **public**: Contains Webpack compiled assets, such as Javascript files, CSS styles, images, fonts etc.
 * **vendor/spryker-shop**: Contains the main application (ShopUi) as shipped by Spryker.
 * **src/Pyz/Yves**: Contains your own implementation of the Shop Suite and its modules.
@@ -187,7 +194,7 @@ There are 3 entry points that will be loaded in the DOM in the following order:
 
 ### Webpack
 
-The core Spryker frontend functionality is provided by Webpack. It serves as the main basis for the shop application and used to compile Typescript code and SASS into Javascript and CSS. In addition to that, Webpack collects static assets, such as images and fonts.
+The core Spryker Frontend functionality is provided by Webpack. It serves as the main basis for the shop application and used to compile Typescript code and SASS into Javascript and CSS. In addition to that, Webpack collects static assets, such as images and fonts.
 
 Out of the box, the Webpack implementation provided by Spryker is sufficient to satisfy the needs of supporting a shop with the help of a Spryker shop application. However, if necessary, you can configure it the way you need.
 
@@ -547,9 +554,9 @@ export default register(
 **What's next?**
 The following topics will help you in developing Spryker Atomic Frontend step-by-step:
 
-[Tutorial - Customize Spryker Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/customizing-spryker-front-end.html)
-[Tutorial - Frontend - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html)
-[Tutorial - Frontend - Override a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html)
-[Tutorial - Frontend - Extend a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/extending-a-component.html)
-[Tutorial - Frontend - Integrate JQuery into Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html)
-[Tutorial - Frontend - Use a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/using-a-component.html)
+[Tutorial: Customize Spryker Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/customizing-spryker-front-end.html)
+[Tutorial: Frontend - Create a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html)
+[Tutorial: Frontend - Override a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html)
+[Tutorial: Frontend - Extend a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/extending-a-component.html)
+[Tutorial: Frontend - Integrate JQuery into Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/integrating-jquery-into-atomic-frontend.html)
+[Tutorial: Frontend - Use a Component](/docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/using-a-component.html)

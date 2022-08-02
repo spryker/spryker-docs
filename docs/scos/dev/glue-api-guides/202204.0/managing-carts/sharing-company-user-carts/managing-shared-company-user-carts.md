@@ -11,9 +11,13 @@ redirect_from:
   - /docs/managing-shared-company-user-carts
   - /docs/en/managing-shared-company-user-carts
 related:
-  - title: Logging In as Company User
+  - title: Sharing company user carts
+    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
+  - title: Retrieving cart permission groups
+    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html
+  - title: Authenticating as a company user
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
-  - title: Shared Cart Feature Overview
+  - title: Shared Cart feature overview
     link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
   - title: Shared Carts feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/shared-carts-feature-integration.html

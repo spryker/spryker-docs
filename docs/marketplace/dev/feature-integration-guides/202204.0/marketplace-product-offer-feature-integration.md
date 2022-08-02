@@ -1546,7 +1546,7 @@ Make sure that in the navigation menu of the Back Office, you can see the **Mark
 {% endinfo_block %}
 
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the Marketplace Product Offer feature front end.
 

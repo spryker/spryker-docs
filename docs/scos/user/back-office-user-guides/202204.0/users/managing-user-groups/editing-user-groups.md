@@ -2,6 +2,11 @@
 title: Editing user groups
 description: Learn how to edit user groups in the Back Office
 template: back-office-user-guide-template
+related:
+  - title: Creating user groups
+    link: docs/scos/user/back-office-user-guides/page.version/users/managing-user-groups/creating-user-groups.html
+  - title: Customer Groups overview
+    link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-groups-overview.html
 ---
 
 This document describes how to edit user groups in the Back Office.

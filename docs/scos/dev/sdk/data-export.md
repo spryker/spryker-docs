@@ -21,6 +21,17 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/data-export.html
   - /docs/scos/dev/sdk/202009.0/data-export.html
   - /docs/scos/dev/sdk/202108.0/data-export.html
+related:
+  - title: Code Generator
+    link: docs/scos/dev/sdk/code-generator.html
+  - title: Cronjob scheduling
+    link: docs/scos/dev/sdk/cronjob-scheduling.html
+  - title: Data import
+    link: docs/scos/dev/sdk/data-import.html
+  - title: Development virtual machine, docker containers & console
+    link: docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html
+  - title: Twig and TwigExtension
+    link: docs/scos/dev/sdk/twig-and-twigextension.html
 ---
 
 {% info_block warningBox "BETA version" %}

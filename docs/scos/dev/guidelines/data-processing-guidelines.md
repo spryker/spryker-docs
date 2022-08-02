@@ -15,19 +15,25 @@ redirect_from:
   - /v5/docs/data-processing-guidelines
   - /v5/docs/en/data-processing-guidelines
 related:
-  - title: Data Importer Speed Optimization
+  - title: Making your Spryker shop secure
+    link: docs/scos/dev/guidelines/making-your-spryker-shop-secure.html
+  - title: Module configuration convention
+    link: docs/scos/dev/guidelines/module-configuration-convention.html
+  - title: Project development guidelines
+    link: docs/scos/dev/guidelines/project-development-guidelines.html
+  - title: Data importer speed optimization
     link: docs/scos/dev/data-import/page.version/data-importer-speed-optimization.html
 ---
 
 One of the most important questions addressed during project development is “How to bring data in my project?”. Spryker provides the required infrastructure to address performance and consistency when dealing with project data.
 
-The simplest way to bring data to a project is to leverage [Data Importers](/docs/scos/dev/data-import/{{site.version}}/creating-a-data-importer.html) and [P&S](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html) infrastructure. See [Data Importers Overview and Implementation](/docs/scos/dev/guidelines/data-processing-guidelines.html) for the list of available importers.
+The simplest way to bring data to a project is to leverage [Data importers](/docs/scos/dev/data-import/{{site.version}}/creating-a-data-importer.html) and [P&S](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html) infrastructure. See [Data importers overview and implementation](/docs/scos/dev/guidelines/data-processing-guidelines.html) for the list of available importers.
 
-## Strategies and Concepts
+## Strategies and concepts
 
 Before starting the implementation, let’s consider the most important concepts and best practices that should be used during data processing.
 
-### Incremental Data Updates
+### Incremental data updates
 
 The rule of thumb is: *Follow incremental data updates. Avoid repetitive full data import.*
 
@@ -39,7 +45,7 @@ A few independent specialized data import pipelines are more performant and flex
 
 {% endinfo_block %}
 
-### Batch Operations
+### Batch operations
 
 To achieve decent performance, batch processing is preferable instead of per-entity processing for reading and writing operations - IO. IO operations have lower scalability opportunities than stateless data transformation. This means that irrespective of the number of entities, you should initiate only 1 SQL query while reading data and 1 SQL while persisting.
 
@@ -56,7 +62,7 @@ To write in batches, consider INSERT concatenations or an advanced method with C
 When writing in batches, there can be data inconsistency, which will be discovered only on DB query execution. In some cases, one of the business requirements is to be able to work with inconsistent data. Typically after a DB exception and transaction rollback, one could decide to stop the import process or log the data set and continue with the next one. Both options are **not optimal** as terminated processes usually cause business losses and leave an engineer no trail on what entity in a batch caused the problem. In this case, consider a fallback strategy for batch operation. The default strategy here is switching to the per-entity processing, where healthy records will reach DB, and unhealthy ones could be logged and then analyzed outside of the data import process. More details on this topic can be found [here](https://docs.spring.io/spring-batch/docs/current/reference/html/index-single.html#databaseItemWriters).
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Guidelines/Data+Processing+Guidelines/recovery+on+batch.png)
 
-### Using Queues
+### Using queues
 
 Data processing has higher impacts on IO resources. To scale this process and take advantage of parallel processing, the use of Queues would be an ideal option to prioritize and buffer the data for asynchronous processing. Queues will allow multiple processes to consume the data messages and process them in different machines or clouds. Spryker has the [Queue DataImporter readers](/docs/scos/dev/data-import/{{site.version}}/importing-data-with-the-queue-data-importer.html), so projects can integrate and use this feature for data processing.
 
@@ -66,7 +72,7 @@ When parallel processing is used, data dependency must be handled manually, and 
 
 {% endinfo_block %}
 
-### Data Consistency
+### Data consistency
 
 There are many DB features we use for data consistency (e.g., foreign keys, unique indexes). This way, we ensure that only complete data sets reach production DB.
 
@@ -78,7 +84,7 @@ When a clean data pipeline is not possible by DevVM system requirements, you can
 
 We recommend collecting import statistics and logs to identify new reasons for data inconsistency and implement relevant validators. Example: while importing summer collection, we found that new products are missing category assignment. In this case, we implement a category validator that will clean the data up before propagating it to persistence.
 
-### Common Table Expressions
+### Common table expressions
 
 [Common Table Expressions, or CTE](https://www.postgresqltutorial.com/postgresql-cte/), is a preferable way to write operations.
 

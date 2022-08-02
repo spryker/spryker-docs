@@ -56,10 +56,10 @@ For the starting point of any project, it is good to start from one of the Spryk
 
 If you would like to select a Demo Shop, you can choose from the following options:
 
-* [B2B Demo Shop](/docs/scos/user/intro-to-spryker//b2b-suite.html) - a boilerplate for B2B commerce projects.
-* [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html) - a starting point for B2C implementations.
+* [B2B Demo Shop](/docs/scos/user/intro-to-spryker//b2b-suite.html). A boilerplate for B2B commerce projects.
+* [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html). A starting point for B2C implementations.
 
-Both Demo Shops can also be expanded with separate [Features](/docs/scos/user/features/{{site.version}}/features.html) and modules.
+Both Demo Shops can also be expanded with separate [features](/docs/scos/user/features/{{site.version}}/features.html) and modules.
 
 ### Installing Spryker with Docker
 
@@ -93,8 +93,13 @@ When you use Docker and not the Development Virtual Machine (also called DevVM),
 
 The Spryker Commerce OS offers a Virtual Machine which includes all of the prerequisites needed to run Spryker. It provides a full-featured development environment what will help you customize Spryker based on your project’s requirements. The Development Virtual Machine (DevVM) is based on VirtualBox and Vagrant and can be used to install Spryker on any operating system.
 
-We offer a number of installation guides that may suit your needs:
+{% info_block warningBox "DevVM is deprecated" %}
 
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](#install-spryker-with-docker).
+
+{% endinfo_block %}
+
+We offer a number of installation guides that may suit your needs:
 
 | OPERATION SYSTEMS | B2B SHOP OR B2C SHOP |
 | --- | --- |
@@ -103,7 +108,7 @@ We offer a number of installation guides that may suit your needs:
 
 ### Independent Installation
 
-Alternatively, you can install Spryker without the Virtual Machine or Docker images on any operating system that fulfills Spryker’s [DevVM system requirements](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html). See [B2B or B2C Demo Shop installation: without Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html) for more details.
+Alternatively, you can install Spryker without the Docker images. See [Installing Spryker without Docker](/docs/scos/dev/setup/installing-spryker-without-docker.html) for details.
 
 {% info_block warningBox %}
 
@@ -122,7 +127,7 @@ Once your project has been installed, you should adjust the readme.md file in th
 
 ## 2. Managing Modules
 
-Once the installation of your new project has been completed, you may start to manage the modules you wish to use. A module within Spryker is a single-function unit that has well-defined dependencies and can be updated independently.
+Once the installation of your new project has been completed, you may start to manage the modules you want to use. A module within Spryker is a single-function unit that has well-defined dependencies and can be updated independently.
 
 {% info_block infoBox %}
 
@@ -177,9 +182,14 @@ This step depends on the store setup you came up with during your configuring. F
 * `config_default.php`
 * `src/SprykerConfig/CodeBucketConfig.php`
 
-### Data Import Clean-up
+### Modules clean-up
+* Analize modules that you have in the desired Demoshop.
+* Analize modules that you need to have.
+* Remove unnesessary modules (to do that, you can use the migration guide backwards).
 
-Located in the `data/import` folder, you may find additional files related to these other stores. As with cleaning up stores, you should define the stores you intend to use and remove unused files of the rest. 
+### Data import clean-up
+
+Located in the `data/import` folder, you may find additional files related to these other stores. As with cleaning up stores, you must define the stores you intend to use and remove unused files of the rest. 
 
 {% info_block infoBox "Info" %}
 
@@ -192,7 +202,6 @@ For those stores that you wish to allow, don’t forget to edit `CodeBucketConfi
 ## 4. Configuring CI
 
 Continuous Integration (CI) is a development practice where each part of the code can be verified by an automated build and automated tests. This allows for good code quality and that each new feature does not break the existing functionality. The following documents will help you to enable CI in different repositories:
-
 * [Deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-pipelines.html)
 * [Customizing deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/customizing-deployment-pipelines.html)
 * [GitHub Actions](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-github-actions.html)
@@ -264,14 +273,13 @@ Before you start developing, you should set up and get to know your debugging en
 
 {% info_block infoBox %}
 
-When in a production environment, Zed must be configured to use a VPN, basic access authentication, or an IP whitelist.
+When in a production environment, Zed must be configured to use a VPN, basic access authentication, or an IP allowlist.
 
 {% endinfo_block %}
 
 ## 8. Familiarizing Yourself with the Spryker Architecture
 
-As a developer, you should understand the structure of Spryker and how to extend its core functionality. To better understand Spryker’s architecture, such as the different parts of the Client, Shared, Zed, and Yves folders (as well as their different layers), see the following articles:
-
+As a developer, you need to understand the structure of Spryker and how to extend its core functionality. To better understand Spryker’s architecture, such as the different parts of the Client, Shared, Zed, and Yves folders (as well as their different layers), see the following articles:
 * [Conceptual overview](/docs/scos/dev/architecture/conceptual-overview.html): to learn about application layers and code structure.
 * [Modules and layers](/docs/scos/dev/architecture/modules-and-layers.html): to learn about layers and how various functionality is encapsulated in modules.
 * [Programming concepts](/docs/scos/dev/architecture/programming-concepts.html): to learn about the Spryker building blocks contained in the application layers.

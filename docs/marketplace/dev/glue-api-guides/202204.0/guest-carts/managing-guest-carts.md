@@ -1946,7 +1946,7 @@ For the attributes of other included resources, see:
 
 Guest carts are anonymous as they are not related to any user. If a user registers or logs in, the guest cart is automatically assigned to their account.
 
-To assign a guest cart to a customer, that is, merge the carts, include the unique identifier associated with the customer in the `X-Anonymous-Customer-Unique-Id` header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
+To assign a guest cart to a customer, that is, merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one.
 
 Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/user/features/{{page.version}}/multiple-carts-feature-overview.html) environment:
 
@@ -1957,7 +1957,7 @@ The workflow is displayed in the following diagram:
 
 ![Assign cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Glue+API/Glue+API+Storefront+Guides/Managing+Carts/Managing+Guest+Carts/assigning-guest-cart-to-registered-user.png)
 
-The following is an exemplary workflow of converting a guest cart into a regular cart:
+Below, you can see an exemplary workflow for converting a guest cart into a regular cart:
 
 1. The customer adds items to a guest cart.
 
@@ -2067,7 +2067,7 @@ Response sample:
 }
 ```
 
-In a *single cart* environment, items from the guest cart have been added to the user's own cart.
+In a **single cart** environment, items from the guest cart have been added to the user's own cart.
 
 **Response body**
 
@@ -2098,7 +2098,7 @@ In a *single cart* environment, items from the guest cart have been added to t
 ## Possible errors
 
 
-| CODE | REASON |
+| Code | Reason |
 | --- | --- |
 | 101 | Cart with given uuid not found. |
 | 102 | Failed to add an item to cart. |

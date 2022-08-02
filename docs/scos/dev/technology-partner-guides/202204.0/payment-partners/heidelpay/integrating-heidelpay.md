@@ -201,85 +201,101 @@ eco: {
 ```twig
  ...
 
-{% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} embed molecule('form') with {
- class: 'box',
- data: {
- form: data.forms.payment,
- options: {
- attr: {
- id: 'payment-form'
- }
- },
- submit: {
- enable: true,
- text: 'checkout.step.summary' | trans
- },
- cancel: {
- enable: true,
- url: data.backUrl,
- text: 'general.back.button' | trans
- }
- }
- } only {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} block fieldset {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} for name, choices in data.form.paymentSelection.vars.choices {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} set paymentProviderIndex = loop.index {% raw %}%}{% endraw %}
- <h5>{% raw %}{{{% endraw %} ('checkout.payment.provider.' ~ name) | trans {% raw %}}}{% endraw %}</h5>
- <ul class="list spacing-y">
- {% raw %}{%{% endraw %} for key, choice in choices {% raw %}%}{% endraw %}
- <li class="list__item spacing-y clear">
- {% raw %}{%{% endraw %} embed molecule('form') with {
- data: {
- form: data.form[data.form.paymentSelection[key].vars.value],
- enableStart: false,
- enableEnd: false
- },
- embed: {
- index: loop.index ~ '-' ~ paymentProviderIndex,
- toggler: data.form.paymentSelection[key]
- }
- } only {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} block fieldset {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} for name, choices in data.form.paymentSelection.vars.choices {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} set paymentProviderIndex = (loop.index0) {% raw %}%}{% endraw %}
- <h5>{% raw %}{{{% endraw %} ('checkout.payment.provider.' ~ name) | trans {% raw %}}}{% endraw %}</h5>
- <ul class="list spacing-y">
- {% raw %}{%{% endraw %} if choices is iterable {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} for key, choice in choices {% raw %}%}{% endraw %}
- <li class="list__item spacing-y clear">
- {% raw %}{%{% endraw %} include molecule('payment-method', 'CheckoutPage') with {
- data: {
- form: data.form[data.form.paymentSelection[key].vars.value],
- index: loop.index ~ '-' ~ paymentProviderIndex,
- toggler: data.form.paymentSelection[key],
- }
- } only {% raw %}%}{% endraw %}
- </li>
- {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} else {% raw %}%}{% endraw %}
- <li class="list__item spacing-y clear">
- {% raw %}{%{% endraw %} include molecule('payment-method', 'CheckoutPage') with {
- data: {
- form: data.form[data.form.paymentSelection[paymentProviderIndex].vars.value],
- index: loop.index ~ '-' ~ paymentProviderIndex,
- toggler: data.form.paymentSelection[paymentProviderIndex],
- parentFormId: data.options.attr.id
- }
- } only {% raw %}%}{% endraw %}
- </li>
- {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
- </ul>
- {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
- </li>
- {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
- </ul>
- {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
- {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
-{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+{% extends template('page-layout-checkout', 'CheckoutPage') %}
+
+{% define data = {
+    backUrl: _view.previousStepUrl,
+    forms: {
+        payment: _view.paymentForm,
+    },
+    title: 'checkout.step.payment.title' | trans,
+    customForms: {
+        'heidelpay/sofort': ['sofort', 'heidelpay'],
+        'heidelpay/credit-card-secure': ['credit-card-secure', 'heidelpay'],
+    },
+} %}
+
+{% block content %}
+    {% embed molecule('form') with {
+        class: 'box',
+        data: {
+            form: data.forms.payment,
+            options: {
+                attr: {
+                    id: 'payment-form',
+                },
+            },
+            submit: {
+                enable: true,
+                isSingleClickEnforcerEnabled: false,
+                text: 'checkout.step.summary' | trans,
+                class: 'button button--success js-payone-credit-card__submit',
+            },
+            cancel: {
+                enable: true,
+                url: data.backUrl,
+                text: 'general.back.button' | trans,
+            },
+        },
+        embed: {
+            customForms: data.customForms,
+        },
+    } only %}
+        {% block errors %}
+            {{ parent() }}
+            {{ form_errors(data.form.paymentSelection) }}
+        {% endblock %}
+
+        {% block fieldset %}
+            {% for name, choices in data.form.paymentSelection.vars.choices %}
+                {% set paymentProviderIndex = loop.index0 %}
+                <h5>{{ name | trans }}</h5>
+                <ul>
+                    {% for key, choice in choices %}
+                        <li class="list__item spacing-y clear">
+                            {% embed molecule('form') with {
+                                data: {
+                                    form: data.form[data.form.paymentSelection[key].vars.name],
+                                    enableStart: false,
+                                    enableEnd: false,
+                                },
+                                embed: {
+                                    customForms: embed.customForms,
+                                    index: loop.index ~ '-' ~ paymentProviderIndex,
+                                    toggler: data.form.paymentSelection[key],
+                                },
+                            } only %}
+                                {% block fieldset %}
+                                    {{ form_row(embed.toggler, {
+                                        required: false,
+                                        component: molecule('toggler-radio'),
+                                        attributes: {
+                                            'target-class-name': 'js-payment-method-' ~ embed.index,
+                                        }
+                                    }) }}
+                                    <div class="col col--sm-12 is-hidden js-payment-method-{{embed.index}}">
+                                        <div class="col col--sm-12 col--md-6">
+                                            {% if embed.customForms[data.form.vars.template_path] is not defined %}
+                                                {{ parent() }}
+                                            {% else %}
+                                                {% set viewName = embed.customForms[data.form.vars.template_path] | first %}
+                                                {% set moduleName = embed.customForms[data.form.vars.template_path] | last %}
+                                                {% include view(viewName, moduleName) ignore missing with {
+                                                    form: data.form.parent
+                                                } only %}
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                {% endblock %}
+                            {% endembed %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        {% endblock %}
+    {% endembed %}
+{% endblock %}
+
 ```
 
 **src/Pyz/Yves/Twig/TwigConfig.php**

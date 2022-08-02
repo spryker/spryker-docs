@@ -1944,24 +1944,7 @@ For the attributes of other included resources, see:
 
 ## Assign a guest cart to a registered customer
 
-Guest carts are anonymous as they are not related to any user. If a user registers or logs in, the guest cart can be automatically assigned to their account.
-
-To assign a guest cart to a customer, that is, merge the carts, include the unique identifier associated with the customer in the *X-Anonymous-Customer-Unique-Id* header of the authentication request if it is an existing customer, or request to create a customer account if it is a new one. Also, you should adjust the configuration constant:
-
-**src/Pyz/Zed/CartsRestApi/CartsRestApiConfig.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\CartsRestApi;
-
-use Spryker\Zed\CartsRestApi\CartsRestApiConfig as SprykerCartsRestApiConfig;
-
-class CartsRestApiConfig extends SprykerCartsRestApiConfig
-{
-    protected const IS_QUOTE_CREATION_WHILE_QUOTE_MERGING_ENABLED = true;
-}
-```
+Guest carts are anonymous as they are not related to any user. If a user registers or logs in, the guest cart is automatically assigned to their account.
 
 Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/user/features/{{page.version}}/multiple-carts-feature-overview.html) environment:
 

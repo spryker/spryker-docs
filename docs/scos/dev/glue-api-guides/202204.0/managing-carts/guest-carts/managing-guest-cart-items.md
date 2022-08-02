@@ -2625,10 +2625,10 @@ It is the responsibility of the API Client to track whether the selected items a
 ```
 </details>
 
-{% include pbc/all/glue-api-guides/manage-guest-cart-items-included-resource-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/manage-guest-cart-items-included-resource-attributes.md -->
+{% include pbc/all/glue-api-guides/add-items-to-a-guest-cart-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/add-items-to-a-guest-cart-response-attributes-of-included-resources.md -->
 
 
-For the attributes of the included resources, see:
+For the attributes of other included resources, see the following:
 * [Threshold attributes](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#threshold-attributes).
 * [Retrieve a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html#guest-cart-response-attributes)
 * [Gift cards of guest users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html)

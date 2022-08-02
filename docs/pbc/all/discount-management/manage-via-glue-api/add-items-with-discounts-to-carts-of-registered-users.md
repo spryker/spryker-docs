@@ -14,7 +14,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 
-## Add an item to a registered user's cart
+## Add items to a registered user's cart
 
 To add items to a cart, send the request:
 
@@ -110,20 +110,8 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 | --- | --- | --- | --- |
 | sku | String | &check; | Specifies the SKU of the concrete product to add to the cart. |
 | quantity | String | &check; | Specifies the number of items to place on the guest cart. If you add a promotional item and the number of products exceeds the number of promotions, the exceeding items will be added without promotional benefits. |
-| salesUnit | Object |  | List of attributes defining the sales unit to be used for item amount calculation. |
-| salesUnit.id | Integer |  | Unique identifier of the sales units to calculate the item amount in. |
-| salesUnit.amount | Integer |  | Amount of the product in the defined sales units.  |
 | idPromotionalItem | String |  | Promotional item ID. Specify the ID to apply the promotion benefits.  |
-| productOptions | Array |  | List of attributes defining the product option to add to the cart. |
-| productOptions.sku | String |  | Unique identifier of the product option to add to the cart.  |
 
-
-
-{% info_block infoBox "Product options" %}
-
-It is the responsibility of the API Client to track whether the selected items are compatible. For example, the client should not allow a 2-year and a 4-year warranty service to be applied to the same product. The API endpoints allow any combination of items, no matter whether they are compatible or not.
-
-{% endinfo_block %}
 
 ### Response
 
@@ -697,78 +685,15 @@ It is the responsibility of the API Client to track whether the selected items a
 
 <a name="add-an-item-to-a-registered-users-cart-response-attributes"></a>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| sku | String | Product SKU. |
-| quantity | Integer | Quantity of the given product in the cart. |
-| groupKey | String | Unique item identifier. The value is generated based on product properties. |
-| abstractSku | String | Unique identifier of the abstract product owning this concrete product. |
-| amount | Integer | Amount of the products in the cart. |
-| unitPrice | Integer | Single item price without assuming if it is net or gross. This value should be used everywhere the price is displayed. It allows switching tax mode without side effects. |
-| sumPrice | Integer | Sum of all items prices calculated. |
-| taxRate | Integer | Current tax rate in per cent. |
-| unitNetPrice | Integer | Single item net price. |
-| sumNetPrice | Integer | Sum of prices of all items. |
-| unitGrossPrice | Integer | Single item gross price. |
-| sumGrossPrice | Integer | Sum of items gross price. |
-| unitTaxAmountFullAggregation | Integer | Total tax amount for a given item with additions. |
-| sumTaxAmountFullAggregation | Integer | Total tax amount for a given sum of items with additions. |
-| sumSubtotalAggregation | Integer | Sum of subtotals of the items. |
-| unitSubtotalAggregation | Integer | Subtotal for the given item. |
-| unitProductOptionPriceAggregation | Integer | Item total product option price. |
-| sumProductOptionPriceAggregation | Integer | Item total of product options for the given sum of items. |
-| unitDiscountAmountAggregation | Integer | Item total discount amount. |
-| sumDiscountAmountAggregation | Integer | Sum of Item total discount amount. |
-| unitDiscountAmountFullAggregation | Integer | Sum total discount amount with additions. |
-| sumDiscountAmountFullAggregation | Integer | Item total discount amount with additions. |
-| unitPriceToPayAggregation | Integer | Item total price to pay after discounts with additions. |
-| sumPriceToPayAggregation | Integer | Sum of the prices to pay (after discounts).|
-| salesUnit |Object | List of attributes defining the sales unit to be used for item amount calculation. |
-| salesUnit.id | Integer | Numeric value the defines the sales units to calculate the item amount in. |
-| salesUnit.amount | Integer | Amount of product in the defined sales units. |
-| selectedProductOptions | array | List of attributes describing the product options that were added to cart with the product. |
-| selectedProductOptions.optionGroupName | String | Name of the group to which the option belongs. |
-| selectedProductOptions.sku | String | SKU of the product option. |
-| selectedProductOptions.optionName | String | Product option name. |
-| selectedProductOptions.price | Integer | Product option price in cents. |
-| selectedProductOptions.currencyIsoCode | String | ISO 4217 code of the currency in which the product option price is specified. |
+{% include pbc/all/glue-api-guides/add-items-to-a-registered-users-cart-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/add-items-to-a-registered-users-cart-response-attributes.md -->
 
-<a name="threshold-attributes">**Threshold attributes**</a>
+{% include pbc/all/glue-api-guides/add-items-to-a-cart-of-registered-user-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/add-items-to-a-cart-of-registered-user-response-attributes-of-included-resources.md -->
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| type | String | Threshold type. |
-| threshold | Integer | Threshold monetary amount. |
-| fee | Integer | Fee to be paid if the threshold is not reached.  |
-| deltaWithSubtotal | Integer | Displays the remaining amount that needs to be added to pass the threshold. |
-| message | String | Message shown to the customer if the threshold is not fulfilled. |
-
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- | --- |
-|items, bundle-items, bundled-items| sku |String| Unique identifier of the product that was added to the cart.|
-|items, bundle-items, bundled-items| quantity |Integer| Quantity of the product that was added to the cart.|
-|items, bundle-items, bundled-items |groupKey| String| Unique identifier of product as a cart item. |The value is generated based on the product’s  properties.|
-|items, bundle-items, bundled-items| abstractSku |String |Unique identifier of the abstract product that owns the concrete product.|
-| product-options | optionGroupName | String | Name of the group to which the option belongs. |
-| product-options | sku | String | SKU of the product option. |
-| product-options | optionName | String | Product option name. |
-| product-options | price | Integer | Product option price in cents. |
-| product-options | currencyIsoCode | String | ISO 4217 code of the currency in which the product option price is specified. |
-| vouchers, cart-rules | displayName | String | Discount name displayed on the Storefront. |
-| vouchers, cart-rules | amount | Integer | Amount of the provided discount. |
-| vouchers, cart-rules | code | String | Discount code. |
-| vouchers, cart-rules | discountType | String | Discount type. |
-| vouchers, cart-rules  | isExclusive | Boolean | Discount exclusivity. |
-| vouchers, cart-rules | expirationDateTime | DateTimeUtc | Date and time on which the discount expires. |
-| vouchers, cart-rules | discountPromotionAbstractSku | String | SKU of the products to which the discount applies. If the discount can be applied to any product, the value is `null`. |
-| vouchers, cart-rules | discountPromotionQuantity | Integer | Specifies the amount of the product required to be able to apply the discount. If the minimum number is `0`, the value is `null`. |
 
 * [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)
 * [Create a cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#abstract-products-response-attributes)
-
-
 
 
 
@@ -783,25 +708,14 @@ It is the responsibility of the API Client to track whether the selected items a
 | 102 | Failed to add an item to a cart. |
 | 103 | Item with the given group key is not found in the cart. |
 | 104 | Cart uuid is missing. |
-| 105 | Cart cannot be deleted. |
-| 106 | Cart item cannot be deleted. |
 | 107 | Failed to create a cart. |
 | 110 | Customer already has a cart. |
-| 111 | Can’t switch price mode when there are items in the cart. |
 | 112 | Store data is invalid. |
 | 113 | Cart item cannot be added. |
-| 114 | Cart item cannot be updated. |
 | 115 | Unauthorized cart action. |
 | 116 | Currency is missing. |
 | 117 | Currency is incorrect. |
 | 118 | Price mode is missing. |
 | 119 | Price mode is incorrect. |
-| 4001 | There was a problem adding or updating the configured bundle. |
-| 4002 | Configurable bundle template is not found. |
-| 4003 | The quantity of the configured bundle should be more than zero. |
-| 4004 | Configured bundle with provided group key is not found in cart. |
-| 4005 | The configured bundle cannot be added. |
-| 4006 | The configured bundle cannot be updated. |
-| 4007 | The configured bundle cannot be removed. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).

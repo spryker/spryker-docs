@@ -92,7 +92,7 @@ The customer clicks the configuration button, and the request is redirected to t
 
 ### Phase 6
 
-1. The customer finishes the configuration and clicks a button which creates an AJAX POST request with the data to the configurator page (self).
+1. The customer finishes the configuration and clicks a button that creates an AJAX POST request with the data to the configurator page (self).
 2. In the backend, the response is prepared according to the public data API from the configurator to Spryker.
 3. In the backend, a `CheckSum` is prepared based on the response data, which is encrypted with a shared key and returns these as the AJAX response.
 4. On the configurator page, the framework puts data to a hidden form and submits the form, which points to the gateway page.
@@ -117,7 +117,7 @@ When configuration starts on Yves, from the **Cart** page, the product configura
 
 ### Phase 1
 
-* The customer is on the Cart page—the page with items that contains the product configuration.
+* The customer is on the **Cart** page—the page with items that contains the product configuration.
 * The product configuration can be already complete or not.
 * The item product configuration can be taken from one source only: Quote.
 * The framework generates the URL that points to the gateway page with the following parameters.

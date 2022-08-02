@@ -12,6 +12,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/merchandising-setup/discounts/file-details-discount-store.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/merchandising-setup/discounts/file-details-discount-store.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/merchandising-setup/discounts/file-details-discount-store.csv.html
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/merchandising-setup/discounts/file-details-discount-store.csv.html  
 ---
 
 This document describes the `discount_store.csv` file to configure Discount Store information in your Spryker Demo Shop.
@@ -35,7 +36,7 @@ The file should have the following parameters:
 
 This file has the following dependencies:
 
-* [discount.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html)
+* [discount.csv](/docs/pbc/all/discount-management/import-and-export-data/file-details-discount.csv.html)
 * *stores.php* configuration file of the demo shop PHP project
 
 ## Import template file and content example

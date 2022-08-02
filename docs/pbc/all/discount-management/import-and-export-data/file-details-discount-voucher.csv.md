@@ -12,6 +12,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201811.0/data-import-categories/merchandising-setup/discounts/file-details-discount-voucher.csv.html
   - /docs/scos/dev/data-import/201903.0/data-import-categories/merchandising-setup/discounts/file-details-discount-voucher.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/merchandising-setup/discounts/file-details-discount-voucher.csv.html
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/merchandising-setup/discounts/file-details-discount-voucher.csv.html  
 ---
 
 This document describes the `discount_voucher.csv` file to configure Discount Voucher information in your Spryker Demo Shop.
@@ -39,7 +40,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [ discount.csv ](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html).
+This file has the following dependency: [ discount.csv ](/docs/pbc/all/discount-management/import-and-export-data/file-details-discount.csv.html).
 
 ## Additional information
 

@@ -1,11 +1,11 @@
 ---
 title: "PriceProduct module details: reference information"
 last_updated: Aug 18, 2021
-description: This article provides the technical details of the PriceProduct module and price dimensions
+description: This document provides the technical details of the PriceProduct module and price dimensions
 template: concept-topic-template
 ---
 
-This article describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](/docs/scos/dev/module-migration-guides/migration-guide-priceproduct.html#upgrading-from-version-1-to-version-2) of the module.
+This document describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](/docs/scos/dev/module-migration-guides/migration-guide-priceproduct.html#upgrading-from-version-1-to-version-2) of the module.
 
 ## Price dimension
 

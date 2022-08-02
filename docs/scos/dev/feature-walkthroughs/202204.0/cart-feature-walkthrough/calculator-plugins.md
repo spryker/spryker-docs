@@ -1,7 +1,7 @@
 ---
 title: Calculator plugins
 last_updated: Aug 12, 2021
-description: This article covers the available calculator plugins along with their examples.
+description: This document covers the available calculator plugins along with their examples.
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/cart-feature-walkthrough/calculator-plugins.html

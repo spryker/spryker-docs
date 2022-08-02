@@ -1,7 +1,7 @@
 ---
 title:  Calculation 3.0
 last_updated: Aug 12, 2021
-description: The Calculation module is used to calculate the cart totals displayed in the cart/checkout or when the order is placed. The article describes its workflow.
+description: The Calculation module is used to calculate the cart totals displayed in the cart/checkout or when the order is placed. The document describes its workflow.
 template: concept-topic-template
 ---
 

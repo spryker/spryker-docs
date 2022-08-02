@@ -120,7 +120,7 @@ The [Customer Account Management](/docs/scos/dev/feature-walkthroughs/{{page.ver
 
 ### Customer module overview
 
-The [Customer entity](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html) wraps data around registered customers. Customer data is managed from the Back Office by the shop administrator and from the shop website itself by customers. This article describes how new customers can be created and managed and how to enable specific features related to customers.
+The [Customer entity](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html) wraps data around registered customers. Customer data is managed from the Back Office by the shop administrator and from the shop website itself by customers. This document describes how new customers can be created and managed and how to enable specific features related to customers.
 
 ## File Manager
 
@@ -223,7 +223,7 @@ Handling monetary values can be a problem and is often quite hard. The [Money](/
 
 ### PriceProduct module details: reference information
 
-This article describes technical details of the [PriceProduct](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/priceproduct-module-details-reference-information.html) module that are valid since version 2 of the module.
+This document describes technical details of the [PriceProduct](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/priceproduct-module-details-reference-information.html) module that are valid since version 2 of the module.
 
 ## Product
 

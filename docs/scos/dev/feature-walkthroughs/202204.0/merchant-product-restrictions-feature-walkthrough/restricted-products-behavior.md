@@ -1,7 +1,7 @@
 ---
 title: Restricted products behavior
 last_updated: Aug 13, 2021
-description: In this article, you can find commonly encountered cases of product restrictions behavior
+description: In this document, you can find commonly encountered cases of product restrictions behavior
 template: concept-topic-template
 ---
 

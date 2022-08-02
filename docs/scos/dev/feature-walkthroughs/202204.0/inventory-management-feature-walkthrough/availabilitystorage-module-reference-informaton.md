@@ -1,7 +1,7 @@
 ---
 title:  "AvailabilityStorage module: reference information"
 last_updated: Aug 13, 2021
-description: This article describes the AvailabilityStorage module, which publishes all the availability information for abstract and concrete products
+description: This document describes the AvailabilityStorage module, which publishes all the availability information for abstract and concrete products
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/inventory-management-feature-walkthrough/reference-informaton-availabilitystorage-module-overview.html

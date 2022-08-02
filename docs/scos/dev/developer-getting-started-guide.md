@@ -116,7 +116,7 @@ Following your installation, make sure to check out [Post-Installation steps and
 
 {% endinfo_block %}
 
-### Adjusting the readme.md File
+### Adjusting the `readme.md` file
 
 Once your project has been installed, you need to adjust the `readme.md` file in the following ways:
 
@@ -125,7 +125,7 @@ Once your project has been installed, you need to adjust the `readme.md` file in
 * Remove any unused information, such as Vagrant installation instructions if a DevVM was not used.
 * Consider moving the production information further done in the file so that new developers can more readily understand how to use the project.
 
-## 2. Managing Modules
+## 2. Managing modules
 
 Once the installation of your new project has been completed, you may start to manage the modules you want to use. A module within Spryker is a single-function unit that has well-defined dependencies and can be updated independently.
 
@@ -203,16 +203,16 @@ For those stores that you wish to allow, don’t forget to edit `CodeBucketConfi
 ## 4. Configuring CI
 
 Continuous Integration (CI) is a development practice where each part of the code can be verified by an automated build and automated tests. This allows for good code quality and that each new feature does not break the existing functionality. The following documents will help you to enable CI in different repositories:
-* [Deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-pipelines.html)
-* [Customizing deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/customizing-deployment-pipelines.html)
-* [GitHub Actions](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-github-actions.html)
-* [Configuring GitLab pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-gitlab-pipelines.html)
-* [Azure Pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-azure-pipelines.html)
-* [Configuring Bitbucket Pipelines ](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/configuring-bitbucket-pipelines.html)
+* [Deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-azure-pipelines.html)
+* [Customizing deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-bitbucket-pipelines.html)
+* [GitHub Actions](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-github-actions.html)
+* [Configuring GitLab pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-gitlab-pipelines.html)
+* [Azure Pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-azure-pipelines.html)
+* [Configuring Bitbucket Pipelines ](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-bitbucket-pipelines.html)
 
-## 5. Configuring Checkers
+## 5. Configuring checkers
 
-In order to keep your code clean, we recommend using code checkers. To keep your code clean, we recommend using the code checkers.
+To keep your code clean, we recommend using code checkers. To keep your code clean, we recommend using the code checkers.
 
 ### Code Sniffer
 

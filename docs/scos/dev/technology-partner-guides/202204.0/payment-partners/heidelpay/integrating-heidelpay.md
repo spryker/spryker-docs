@@ -201,8 +201,6 @@ eco: {
 ```twig
  ...
 
-{% extends template('page-layout-checkout', 'CheckoutPage') %}
-
 {% define data = {
     backUrl: _view.previousStepUrl,
     forms: {

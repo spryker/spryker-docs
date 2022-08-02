@@ -1,5 +1,5 @@
 ---
-title: Managing discount vouchers in carts of registered users
+title: Manage discount vouchers in carts of registered users
 description: Learn how to manage discount vouchers in carts of registered users via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template

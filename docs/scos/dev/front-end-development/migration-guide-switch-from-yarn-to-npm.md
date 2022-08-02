@@ -58,7 +58,7 @@ cd docker && git pull origin master
 git log
 ```
 
-The `git log` command prints the table with the last three commits, copies the `hash` of the first commit, and replaces the content in the `.git.docker` file:
+5. The `git log` command prints the table with the last three commits. Copy the hash of the first commit and replace the content in the `.git.docker` file:
 
 ```text
 // paste `hash` text here
@@ -70,7 +70,7 @@ The minimum `hash` text should be `e9ebb666feccae1754792d41e49df3b9f95ef0aa` or 
 
 {% endinfo_block %}
 
-5. Update the `package.json`:
+6. Update the `package.json`:
 
 ```json
 {
@@ -99,7 +99,7 @@ The minimum `hash` text should be `e9ebb666feccae1754792d41e49df3b9f95ef0aa` or 
 }
 ```
 
-6. Update the `.travis.yml`:
+7. Update the `.travis.yml`:
 
 ```yaml
 before_install:
@@ -109,13 +109,13 @@ before_install:
   ...
 ```
 
-7. In the root directory, create a new `.npmrc` file with the following content:
+8. In the root directory, create a new `.npmrc` file with the following content:
 
 ```text
 legacy-peer-deps=true
 ```
 
-8. Delete the following folders and files from the root directory:
+9. Delete the following folders and files from the root directory:
 
 - `.yarn` folder
 - `.yarnrc.yml` file

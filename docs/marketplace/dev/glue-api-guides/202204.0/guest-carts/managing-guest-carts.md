@@ -2114,7 +2114,7 @@ In a **single cart** environment, items from the guest cart have been added to
 ## Possible errors
 
 
-| Code | Reason |
+| CODE | REASON |
 | --- | --- |
 | 101 | Cart with given uuid not found. |
 | 102 | Failed to add an item to cart. |

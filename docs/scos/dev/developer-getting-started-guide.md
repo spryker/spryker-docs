@@ -54,10 +54,10 @@ This document guides you into getting started with the Spryker Commerce OS. It h
 
 For the starting point of any project, it is good to start from one of the Spryker Demo Shops that are available. They act as a typical Spryker installation and help to establish different types of the Spryker Commerce OS. A Demo Shop includes different sets of components that have been selected for a different type of business or project. Each of these options is fully functional and can be used for both demonstrative purposes as well as working as a boilerplate for your new project. Though each shop comes with its own pre-selected components, Spryker also offers hundreds of additional modules which can be chosen later.
 
-If you would like to select a Demo Shop, you can choose from the following options:
+You can choose from the following options:
 
-* [B2B Demo Shop](/docs/scos/user/intro-to-spryker//b2b-suite.html). A boilerplate for B2B commerce projects.
-* [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html). A starting point for B2C implementations.
+* [B2B Demo Shop](/docs/scos/user/intro-to-spryker//b2b-suite.html): A boilerplate for B2B commerce projects.
+* [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html): A starting point for B2C implementations.
 
 Both Demo Shops can also be expanded with separate [features](/docs/scos/user/features/{{site.version}}/features.html) and modules.
 
@@ -67,7 +67,7 @@ When installing Spryker, we recommend starting with a Docker SDK environment. It
 
 To start developing your Spryker in Docker, see [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html). Spryker can be run on MacOS, Linux, and Windows with WSL1 or WSL2.
 
-* You will want to make sure you have all of the necessary [prerequisites before installing docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html#prerequisites).
+* Make sure you have all of the necessary [prerequisites before installing docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html#prerequisites).
 * Once you have the necessary prerequisites set up, you can then [choose your installation mode with your OS](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html#installation). You can install docker in modes for Development, Demo, or add it to an existing project.
 
 #### The Deploy File
@@ -91,7 +91,7 @@ When you use Docker and not the Development Virtual Machine (also called DevVM),
 
 ### Installing Spryker with the Development Virtual Machine
 
-The Spryker Commerce OS offers a Virtual Machine which includes all of the prerequisites needed to run Spryker. It provides a full-featured development environment what will help you customize Spryker based on your project’s requirements. The Development Virtual Machine (DevVM) is based on VirtualBox and Vagrant and can be used to install Spryker on any operating system.
+The Spryker Commerce OS offers a Virtual Machine, which includes all of the prerequisites needed to run Spryker. It provides a full-featured development environment, which helps you customize Spryker based on your project’s requirements. The Development Virtual Machine (DevVM) is based on VirtualBox and Vagrant and can be used to install Spryker on any operating system.
 
 {% info_block warningBox "DevVM is deprecated" %}
 
@@ -212,7 +212,7 @@ Continuous Integration (CI) is a development practice where each part of the cod
 
 ## 5. Configuring Checkers
 
-In order to keep your code clean, we recommend using code checkers.To keep your code clean, we recommend using the code checkers.
+In order to keep your code clean, we recommend using code checkers. To keep your code clean, we recommend using the code checkers.
 
 ### Code Sniffer
 

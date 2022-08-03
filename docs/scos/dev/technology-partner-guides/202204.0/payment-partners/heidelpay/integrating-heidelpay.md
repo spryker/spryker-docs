@@ -240,14 +240,14 @@ eco: {
         },
     } only {% raw %}%}{% endraw %}
         {% raw %}{%{% endraw %} block errors {% raw %}%}{% endraw %}
-            {{ parent() }}
-            {{ form_errors(data.form.paymentSelection) }}
+            {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
+            {% raw %}{{{% endraw %} form_errors(data.form.paymentSelection) {% raw %}}}{% endraw %}
         {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 
         {% raw %}{%{% endraw %} block fieldset {% raw %}%}{% endraw %}
             {% raw %}{%{% endraw %} for name, choices in data.form.paymentSelection.vars.choices %}
                 {% raw %}{%{% endraw %} set paymentProviderIndex = loop.index0 {% raw %}%}{% endraw %}
-                <h5>{{ name | trans }}</h5>
+                <h5>{% raw %}{{{% endraw %} name | trans {% raw %}}}{% endraw %}</h5>
                 <ul>
                     {% raw %}{%{% endraw %} for key, choice in choices {% raw %}%}{% endraw %}
                         <li class="list__item spacing-y clear">
@@ -264,17 +264,17 @@ eco: {
                                 },
                             } only {% raw %}%}{% endraw %}
                                 {% raw %}{%{% endraw %} block fieldset {% raw %}%}{% endraw %}
-                                    {{ form_row(embed.toggler, {
+                                    {% raw %}{{{% endraw %} form_row(embed.toggler, {
                                         required: false,
                                         component: molecule('toggler-radio'),
                                         attributes: {
                                             'target-class-name': 'js-payment-method-' ~ embed.index,
                                         }
-                                    }) }}
+                                    }) {% raw %}}}{% endraw %}
                                     <div class="col col--sm-12 is-hidden js-payment-method-{{embed.index}}">
                                         <div class="col col--sm-12 col--md-6">
                                             {% raw %}{%{% endraw %} if embed.customForms[data.form.vars.template_path] is not defined {% raw %}%}{% endraw %}
-                                                {{ parent() }}
+                                                {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
                                             {% raw %}{%{% endraw %} else {% raw %}%}{% endraw %}
                                                 {% raw %}{%{% endraw %} set viewName = embed.customForms[data.form.vars.template_path] | first {% raw %}%}{% endraw %}
                                                 {% raw %}{%{% endraw %} set moduleName = embed.customForms[data.form.vars.template_path] | last {% raw %}%}{% endraw %}

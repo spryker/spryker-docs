@@ -12,7 +12,7 @@ related:
     link: docs/marketplace/dev/glue-api-guides/page.version/guest-carts/managing-guest-cart-items.html
 ---
 
-This endpoint allows managing guest carts.
+This endpoint lets you manage guest carts.
 
 ## Installation
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
@@ -1965,8 +1965,8 @@ class CartsRestApiConfig extends SprykerCartsRestApiConfig
 
 Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/user/features/{{page.version}}/multiple-carts-feature-overview.html) environment:
 
-* In a **single cart** environment, the products in the guest cart are added to the customers' own cart.
-* In a **multiple cart** environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.
+* In a *single cart* environment, the products in the guest cart are added to the customers' own cart.
+* In a *multiple cart* environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.
 
 The workflow is displayed in the following diagram:
 
@@ -2059,7 +2059,7 @@ Request sample: 
 | --- | --- | --- | --- |
 | Authorization | string | &check; | Alphanumeric string that authenticates the customer you want to change the password of. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
-In the **multi-cart** environment, the guest cart has been converted to a regular cart. You can see it in the list of carts with the id `9183f604-9b2c-53d9-acbf-cf59b9b2ff9f`.
+In the *multi-cart* environment, the guest cart has been converted to a regular cart. You can see it in the list of carts with the ID `9183f604-9b2c-53d9-acbf-cf59b9b2ff9f`.
 
 Response sample:
 

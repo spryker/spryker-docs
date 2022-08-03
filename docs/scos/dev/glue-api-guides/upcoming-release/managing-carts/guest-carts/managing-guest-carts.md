@@ -19,7 +19,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html
 ---
 
-This endpoint allows to manage guest carts.
+This endpoint lets you manage guest carts.
 
 ## Installation
 

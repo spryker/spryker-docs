@@ -1,11 +1,11 @@
 ---
 title: Measurement Units feature walkthrough
 last_updated: Aug 13, 2021
-description: The Measurement Units feature allows selling products by any unit of measure defined by in the Back Office
+description: The Measurement Units feature lets you sell products by any unit of measure defined by in the Back Office
 template: concept-topic-template
 ---
 
-The _Measurement Units_ feature allows selling products by any unit of measure defined by in the Back Office.
+The _Measurement Units_ feature lets you sell products by any unit of measure defined by in the Back Office.
 
 
 To learn more about the feature and to find out how end users use it, see [Measurement Units feature overview](/docs/scos/user/features/{{page.version}}/measurement-units-feature-overview.html) for business users.

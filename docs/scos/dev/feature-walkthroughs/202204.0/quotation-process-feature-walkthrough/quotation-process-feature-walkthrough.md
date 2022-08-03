@@ -1,11 +1,11 @@
 ---
 title: Quotation Process feature walkthrough
 last_updated: Aug 19, 2021
-description: The Quotation Process feature adds functionality that allows customers to request special product prices and lets agents manage those quote requests.
+description: The Quotation Process feature adds functionality that lets customers to request special product prices and lets agents manage those quote requests.
 template: concept-topic-template
 ---
 
-The _Quotation Process_ feature adds functionality that allows customers to request special product prices and lets agents manage those quote requests.
+The _Quotation Process_ feature adds functionality that lets customers to request special product prices and lets agents manage those quote requests.
 
 
 To learn more about the feature and to find out how end users use it, see [Quotation Process feature overview](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) for business users.

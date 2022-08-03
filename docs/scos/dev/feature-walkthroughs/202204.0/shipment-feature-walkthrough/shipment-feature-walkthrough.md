@@ -1,11 +1,11 @@
 ---
 title: Shipment feature walkthrough
 last_updated: Aug 20, 2021
-description: The Shipment feature allows you to create and manage carrier companies and assign multiple delivery methods associated with specific stores, which your customers can select during the checkout
+description: The Shipment feature lets you create and manage carrier companies and assign multiple delivery methods associated with specific stores, which your customers can select during the checkout
 template: concept-topic-template
 ---
 
-The _Shipment_ feature allows you to create and manage carrier companies and assign multiple delivery methods associated with specific stores, which your customers can select during the checkout. With the feature in place, you can define delivery price and expected delivery time, tax sets, and availability of the delivery method per store.
+The _Shipment_ feature lets you create and manage carrier companies and assign multiple delivery methods associated with specific stores, which your customers can select during the checkout. With the feature in place, you can define delivery price and expected delivery time, tax sets, and availability of the delivery method per store.
 
 
 To learn more about the feature and to find out how end users use it, see [Shipment feature overview](/docs/scos/user/features/{{page.version}}/shipment-feature-overview.html) for business users.

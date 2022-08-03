@@ -5,7 +5,7 @@ description: The Content Items feature creates an abstraction layer for content 
 template: concept-topic-template
 ---
 
-The _Content Items_ feature creates an abstraction layer for content management in the Back Office. It allows content managers to create and preserve small content pieces, which can be inserted into CMS blocks and then into Storefront pages.
+The _Content Items_ feature creates an abstraction layer for content management in the Back Office. It lets content managers create and preserve small content pieces, which can be inserted into CMS blocks and then into Storefront pages.
 
 To learn more about the feature and to find out how end users use it, see [Content Items feature overview](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) for business users.
 

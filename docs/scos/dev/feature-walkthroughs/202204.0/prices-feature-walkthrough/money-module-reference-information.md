@@ -87,7 +87,7 @@ In some cases you need an integer (for example, cents) representation for a deci
 
 ## Money collection form type
 
-From Money version 2.2.*, you can have a money collection form type inside your forms which allow you to include a complex form collection that render a table with currency per store and gross/net price.
+From Money version 2.2.*, you can have a money collection form type inside your forms which let you include a complex form collection that render a table with currency per store and gross/net price.
 
 For example, add FormBuilder in your form type:
 

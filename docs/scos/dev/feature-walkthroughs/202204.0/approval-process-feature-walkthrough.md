@@ -1,7 +1,7 @@
 ---
 title: Approval Process feature walkthrough
 last_updated: Aug 12, 2021
-description: The Approval Process feature allows managers to control purchases requested by their employees
+description: The Approval Process feature lets managers control purchases requested by their employees
 template: concept-topic-template
 redirect_from:
   - /2021080/docs/approval-process-module-relations
@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/approval-process-module-relations
 ---
 
-The _Approval Process_ feature enables managers to control purchases requested by their employees.
+The _Approval Process_ feature lets managers control purchases requested by their employees.
 
 
 To learn more about the feature and to find out how end users use it, see [Approval Process feature overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) for business users.

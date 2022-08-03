@@ -1,11 +1,11 @@
 ---
 title: Configurable Bundle feature walkthrough
 last_updated: Aug 12, 2021
-description: The Configurable Bundle feature allows creating a configurable list of items.
+description: The Configurable Bundle feature lets you create a configurable list of items.
 template: concept-topic-template
 ---
 
-The _Configurable Bundle_ feature allows creating a configurable list of items.
+The _Configurable Bundle_ feature lets you create a configurable list of items.
 
 
 To learn more about the feature and to find out how end users use it, see [Configurable Bundle feature overview](/docs/scos/user/features/{{page.version}}/configurable-bundle-feature-overview.html) for business users.

@@ -1,13 +1,13 @@
 ---
 title: Promotions and Discounts feature walkthrough
 last_updated: Aug 19, 2021
-description: The Promotions & Discounts feature allows defining several types of discounts based on a brand, overall cart value, certain product ranges, or special customer groups
+description: The Promotions & Discounts feature lets you define several types of discounts based on a brand, overall cart value, certain product ranges, or special customer groups
 template: concept-topic-template
 redirect_from:
   - docs/scos/dev/feature-walkthroughs/202200.0/promotions-discounts-feature-walkthrough.html
 ---
 
-The _Promotions & Discounts_ feature allows defining several types of discounts based on a brand, overall cart value, certain product ranges, or special customer groups. You can also offer discount vouchers or incentivize certain products through coupon codes.
+The _Promotions & Discounts_ feature lets you define several types of discounts based on a brand, overall cart value, certain product ranges, or special customer groups. You can also offer discount vouchers or incentivize certain products through coupon codes.
 
 
 To learn more about the feature and to find out how end users use it, see [Promotions & Discounts feature overview](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html) for business users.

@@ -17,7 +17,7 @@ To enable this scenario for your project, a developer should configure it.
 
 Suppose you own a big e-commerce business and ship orders worldwide. You want to manage logistics and products effectively. You also want each store to be completely independent from each other, so user, products, and other data is not shared between stores.
 
-In this case, each store can have its own warehouse and an own database. Stocks, product reservations, and availability are not co-depended between stores, and therefore are not synced:
+In this case, each store can have its own warehouse and database. Stocks, product reservations, and availability are not co-depended between stores, and therefore are not synced:
 
 ![image](https://confluence-connect.gliffy.net/embed/image/62d92512-6863-421f-bdc8-abcc9682c784.png?utm_medium=live&utm_source=custom)
 
@@ -78,11 +78,11 @@ In this case, consider separated warehouses but a shared database:
 
 {% info_block infoBox "" %}
 
-When a buyer places an order, a reservation record  is created in the database. The record also contains information about the store the reservation is made for.
+When a buyer places an order, a reservation record is created in the database. The record also contains information about the store the reservation is made for.
 
 {% endinfo_block %}
 
-This scenario is good for medium and big online shops that want to have a common database of product, user, and other data. It’s a good option to, for example, allow registered users to buy from any store without having to re-register.
+This scenario is good for medium and big online shops that want to have a common database of product, user, and other data. It’s a good option to, for example, let registered users to buy from any store without having to re-register.
 
 ## Scenario 4: Warehouse and database are shared between stores
 

@@ -30,6 +30,6 @@ The Navigation module provides the `spy_navigation` table that stores navigation
 
 Every navigation entity contains some nodes stored in the `spy_navigation_node` table. The structure of the navigation tree depends on the `fk_parent_navigation_node` and the position fields which define if a node has a parent on its level, in what `position` they are ordered. Each navigation node has attributes that can be different per displayed locale. This information is stored in the `spy_navigation_node_localized_attributes` table.
 
-The `valid_from`, `valid_to`, and `is_active` fields allow to toggle the node's and its descendants visibility.
+The `valid_from`, `valid_to`, and `is_active` fields lets you toggle the node's and its descendant's visibility.
 
 ![Navigation database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Navigation/Navigation+Module/navigation_db_schema_2_0.png)

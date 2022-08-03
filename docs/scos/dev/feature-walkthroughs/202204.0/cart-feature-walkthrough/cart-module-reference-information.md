@@ -1,7 +1,7 @@
 ---
 title: "Cart module: reference information"
 last_updated: Aug 12, 2021
-description: The extensive Cart allows your customers to add products to their Cart by simply selecting the desired quantity.
+description: The extensive Cart lets your customers add products to their cart by simply selecting the desired quantity.
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202005.0/cart-feature-walkthrough/cart-module-reference-information.html

@@ -21,7 +21,7 @@ The prices list can come from Yves (Storage) and Zed (DB).
 
 If you need to add additional fields to one of these objects, add it to another one (if you added QTY to filter, criteria must be updated). So that `PriceProductFilterTransfer` could always be converted to `PriceProductCriteriaTransfer`.
 
-`PriceProductService` has plugins with `/Spryker/Service/PriceProductExtension/Dependency/Plugin/PriceProductFilterPluginInterface` which allows filtering price for price dimension.
+`PriceProductService` has plugins with `/Spryker/Service/PriceProductExtension/Dependency/Plugin/PriceProductFilterPluginInterface` which enables filtering price for price dimension.
 
 This filter can be really simple and filter price only by price dimension name, but it can also bear some logic, for example finding the minimum price from this price dimension.
 

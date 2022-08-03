@@ -100,7 +100,7 @@ For example, add FormBuilder in your form type:
 protected function addMoneyValueCollectionType(FormBuilderInterface $builder)
 	{
     	$builder->add(
-        	DiscountCalculatorTransfer::MONEY_VALUE_COLLECTION, //is the property in the main form you want to map. It should be transferred as in example
+        	DiscountCalculatorTransfer::MONEY_VALUE_COLLECTION, //is the property in the main form you want to map. It must be transferred as in example
          	MoneyCollectionType::class,
             	[
                 	MoneyCollectionType::OPTION_AMOUNT_PER_STORE => false, //If you want to render per store, set it to true

@@ -72,7 +72,7 @@ When creating a custom implementation, check and follow the applicable legislati
 
 ## Customer experience
 
-Spryker consistently delivers the scalable operating system without coupling it to a project infrastructure. As a consequence, the project should take care of the impact of the **Customer Delete** functionality on customer experience. Read more about session sensitive actions in [Migration Guide - Customer](/docs/scos/dev/module-migration-guides/migration-guide-customer.html).
+Spryker consistently delivers the scalable operating system without coupling it to a project infrastructure. As a consequence, the project should take care of the impact of the **Customer Delete** functionality on customer experience. Read more about session-sensitive actions in [Migration Guide - Customer](/docs/scos/dev/module-migration-guides/migration-guide-customer.html).
 
 ### Case insensitive queries for email
 
@@ -88,4 +88,4 @@ Finally run `vendor/bin/console propel:diff` and `vendor/bin/console propel:mode
 
 From Customer module 7.6.0 (along with Sales module version 8.7.0) we support the display of customer orders in the *Customers* section of the Back Office. The *Customers View* page now has the Orders table listing all the orders of a respective customer.
 
-To enable the feature to see extra blocks on the *Customer View* page in the Back Office, go to the `CustomerConfig` class in the `Customer` module and add the `getCustomerDetailExternalBlocksUrls` function. This function should return an array where the key is the block name and the value is the URL where this block exists. As for the orders, they are in `/sales/customer/customer-orders`, which in our routing architecture points to Sales `module` -> `CustomerController` -> `CustomerOrdersAction`. If this behavior needs to be extended further, all that’s needed is more key-value pairs for more controller actions that provide the data.
+To enable the feature to see extra blocks on the *Customer View* page in the Back Office, go to the `CustomerConfig` class in the `Customer` module and add the `getCustomerDetailExternalBlocksUrls` function. This function returns an array where the key is the block name and the value is the URL where this block exists. As for the orders, they are in `/sales/customer/customer-orders`, which in our routing architecture points to Sales `module` -> `CustomerController` -> `CustomerOrdersAction`. If this behavior needs to be extended further, all that’s needed is more key-value pairs for more controller actions that provide the data.

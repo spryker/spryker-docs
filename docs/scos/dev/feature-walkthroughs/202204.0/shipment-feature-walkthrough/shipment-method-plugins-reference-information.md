@@ -26,7 +26,7 @@ The main concerns regarding shipping services are:
 
 For each of these concerns, an optional plugin is linked to each shipping method:
 
-* **Availability Plugin**: Returns a boolean value which implies if the active shipping method is available and should be visible to the customers in the list of available shipping services.
+* **Availability Plugin**: Returns a boolean value which implies if the active shipping method is available and visible to the customers in the list of available shipping services.
 * **Price Calculation Plugin**: Shipping services can consider different criteria in calculating the price for delivery (such as size of the package or weight). When a price plugin is paired to a shipping method, the related Zed Admin UI pre-configured prices are omitted.
 * **Delivery Time Plugin**: The estimated delivery time information of the purchased items is important for the customers. The delivery time can vary depending on region, shipping service type, or day of week. Delivery time is measured in seconds as integer (for example,1 day = 86400; 5 days = 5 * 86400).
 

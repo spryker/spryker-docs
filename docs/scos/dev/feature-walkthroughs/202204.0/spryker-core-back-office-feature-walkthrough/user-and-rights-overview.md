@@ -33,13 +33,13 @@ Users are assigned to groups. Groups are a collection of Roles—for example, cu
 
 ## Managing users
 
-The Auth, ACL and User bundles are configured and managed through the Zed user interface. Bundles correspond with the tabs in Zed. You can find which name you should place here from the file `/project/config/Zed/navigation.xml`
+The Auth, ACL, and User bundles are configured and managed through the Zed user interface. Bundles correspond with the tabs in Zed. You can find which name to place here from the file `/project/config/Zed/navigation.xml`
 
 Also, you can find bundle names as well as controllers and actions in the file `communication/navigation.xml`. For example:
 
 ![bundles_navigation.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/feature-walkthroughs/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.md/bundles_navigation.png)
 
-See [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html) to learn how to create and manage users, groups, and roles .
+See [Managing users](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html) to learn how to create and manage users, groups, and roles.
 
 <a name="add-acl"></a>
 

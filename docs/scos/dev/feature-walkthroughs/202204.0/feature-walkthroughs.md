@@ -52,7 +52,7 @@ Our [Cart consists of a few components](/docs/scos/dev/feature-walkthroughs/{{pa
 
 ### Resource Sharing
 
-The [Resource Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/resource-sharing-feature-walkthrough.html) lets you create a unique URL for any entity in the Spyker Commerce OS. For each entity, you should use an additional connector-module. For example, to share a cart through a URL, Resource Sharing should be combined with Persistent Cart Sharing.
+The [Resource Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/resource-sharing-feature-walkthrough.html) lets you create a unique URL for any entity in the Spyker Commerce OS. For each entity, you must use an additional connector module. For example, to share a cart through a URL, Resource Sharing must be combined with Persistent Cart Sharing.
 
 ## Catalog
 
@@ -307,7 +307,7 @@ The [Reorder](/docs/scos/dev/feature-walkthroughs/{{page.version}}/reorder-featu
 
 ## Resource Sharing
 
-The [Resource Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/resource-sharing-feature-walkthrough.html) lets you create a unique URL for any entity in the Spryker Commerce OS. For each entity, you should use an additional connector-module. For example, to share a cart through a URL, Resource Sharing should be combined with Persistent Cart Sharing.
+The [Resource Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/resource-sharing-feature-walkthrough.html) lets you create a unique URL for any entity in the Spryker Commerce OS. For each entity, you must use an additional connector module. For example, to share a cart through a URL, Resource Sharing must be combined with Persistent Cart Sharing.
 
 ## Return Management
 

@@ -16,8 +16,8 @@ Starting from version 2.0.0 of the PriceProduct module, _Default Price Dimension
 Starting from version 2.0.0 of the `PriceProduct` module, we have added the Service layer with `PriceProductService`. Its purpose is to choose only one price from the list of prices available for the current customer, taking into account the provided filter, which could contain selected Store, Currency, Price mode (gross or net), and Quote (with customer information inside).
 The prices list can come from Yves (Storage) and Zed (DB).
 
-* In case with Yves, the `PriceProductFilterTransfer` object should be created for filtering, which contains named values (store name, currency code, named price mode, named price type).
-* In case with Zed,the `PriceProductCriteriaTransfer` object should be created for filtering, which contains IDs as values (store ID, currency ID, and price type ID).
+* In case with Yves, the `PriceProductFilterTransfer` object must be created for filtering, which contains named values (store name, currency code, named price mode, named price type).
+* In case with Zed, the `PriceProductCriteriaTransfer` object must be created for filtering, which contains IDs as values (store ID, currency ID, and price type ID).
 
 If you need to add additional fields to one of these objects, add it to another one (if you added QTY to filter, criteria must be updated). So that `PriceProductFilterTransfer` could always be converted to `PriceProductCriteriaTransfer`.
 
@@ -88,7 +88,7 @@ In the latter case, removal is only possible by running `price-product-store:opt
 
 {% info_block warningBox "Warning" %}
 
-Note, that this plugin can't be used together with config constant `IS_DELETE_ORPHAN_STORE_PRICES_ON_SAVE_ENABLED` described above, either of the two should be used only, with the plugin being preferred, since the config constant is deprecated and will be removed in the next major release of the `PriceProduct` module.
+Note, that this plugin can't be used together with config constant `IS_DELETE_ORPHAN_STORE_PRICES_ON_SAVE_ENABLED` described above, either of the two must be used only, with the plugin being preferred, since the config constant is deprecated and will be removed in the next major release of the `PriceProduct` module.
 
 {% endinfo_block %}
 

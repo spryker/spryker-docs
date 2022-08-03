@@ -11,7 +11,7 @@ In a multi-store environment, you can manage the warehouses to stores and databa
 
 {% info_block infoBox "" %}
 
-To enable this scenario for your project, a developer should configure it.
+To enable this scenario for your project, a developer needs to configure it.
 
 {% endinfo_block %}
 
@@ -54,7 +54,7 @@ Also, there are plugins to help you implement synchronization of the reservation
 | --- | --- |
 |/Spryker/Zed/Oms/Business/OmsFacadeInterface::importReservation | You can use this plugin when reading export data from another store. The plugin stores reservation information to `spy_oms_product_reservation_store` table and updates all timestamps accordingly. |
 | /Spryker/Zed/Oms/Communication/Plugin/Oms/ReservationHandler/ReservationVersionHandlerPlugin | The plugin is called when a customer makes an order, and a reservation is made. It stores reservation in the `spy_oms_reservation_change_version` database table. Register this plugin in `/Pyz/Zed/Oms/OmsDependencyProvider::getReservationHandlerPlugins` plugin stack. |
-| /Spryker/Zed/Oms/Communication/Plugin/Oms/ReservationImport/ReservationExportPlugin | The plugin is called when a reservation export to another store is initiated. This plugin decides if the export should be accepted. We do not provide the delivery mechanism: you could do this with files or a queue. For example, when `ReservationExportPlugin` is called, you can write a file copy to another server and read it there. Same for queue: you could publish an event in the queue and then consume it on the other end. |
+| /Spryker/Zed/Oms/Communication/Plugin/Oms/ReservationImport/ReservationExportPlugin | The plugin is called when a reservation export to another store is initiated. This plugin decides whether the export must be accepted. We do not provide the delivery mechanism: you could do this with files or a queue. For example, when `ReservationExportPlugin` is called, you can write a file copy to another server and read it there. Same for queue: you could publish an event in the queue and then consume it on the other end. |
 
 {% info_block infoBox "" %}
 
@@ -88,11 +88,11 @@ This scenario is good for medium and big online shops that want to have a common
 
 {% info_block infoBox "" %}
 
-To enable this scenario for your project, a developer should configure it.
+To enable this scenario for your project, a developer needs to configure it.
 
 {% endinfo_block %}
 
-Suppose you own a small to big e-commerce business and can’t have or don’t need separate warehouses per each store. You also want all the data stored in one place. So, for example, if a product is unavailable in the DE store, but available in the AT store, a registered user can switch from DE store to AT store and buy the product there.
+Suppose you own a small or big e-commerce business and can’t have or don’t need separate warehouses per store. You also want all the data stored in one place. So, for example, if a product is unavailable in the DE store, but available in the AT store, a registered user can switch from DE store to AT store and buy the product there.
 
 In this case, consider having a shared warehouse and a shared database for all the stores. Since the warehouse is shared, for the correct product availability calculations, product reservations are synced between the stores:
 

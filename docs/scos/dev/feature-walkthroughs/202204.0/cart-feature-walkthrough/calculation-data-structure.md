@@ -27,7 +27,7 @@ The entire data object is stored into the session and it consists of:
 
 ### Totals transfer
 
-`TotalsTransfer` is a data object holding cart totals, subtotal, expenses (shipping), discount total and grand total. Here should the amounts for order level be stored.
+`TotalsTransfer` is a data object holding cart totals, subtotal, expenses (shipping), discount total, and grand total. Amounts for the order level are stored here.
 
 | FIELD | DESCRIPTION |
 | --- | --- |
@@ -59,7 +59,7 @@ The entire data object is stored into the session and it consists of:
 |sumGrossPrice (int)|Sum of item's gross price, calculated with `PriceCalculatorPlugin`.|
 |unitNetPrice (int) | Single item net price, set with `CartItemPricePlugin` (cart expander). |
 | sumNetPrice (int) | Sum of items net price, calculated with `PriceCalculatorPlugin`. |
-| unitPrice (int) | Single item price without assuming is it new or gross, this value should be used everywhere the price is displayed, it lets you switch tax mode without side effects. It's set with `CartItemPricePlugin` (cart expander). |
+| unitPrice (int) | Single item price without assuming is it new or gross, this value must be used everywhere the price is displayed, it lets you switch tax mode without side effects. It's set with `CartItemPricePlugin` (cart expander). |
 | sumPrice (int) | Sum of item's price calculated with `PriceCalculatorPlugin`. |
 | taxRate (float) | Current tax rate, set by `ProductItemTaxRateCalculatorPlugin`. |
 | refundableAmount (int) | Item available refundable amount (order only), set by `RefundableAmountCalculatorPlugin`. |
@@ -104,7 +104,7 @@ Each item which can have discounts applied has a `calculatedDiscounts` property 
 |sumGrossPrice (int)|sum of items gross price. It’s set by `PriceCalculatorPlugin` (cart expander).|
 |unitNetPrice (int)|Single item net price. It's set by CartItemProductOptionPlugin (cart expander)|
 |sumNetPrice (int)|sum of items net price. It's set by `PriceCalculatorPlugin` (cart expander).|
-|unitPrice (int)|single item price without assuming is it new or gross, this value should be used everywhere where price is displayed, it lets you switch tax mode without side effects. It's set by `PriceCalculatorPlugin` cart expander|
+|unitPrice (int)|single item price without assuming is it new or gross, this value must be used everywhere where price is displayed, it lets you switch tax mode without side effects. It's set by `PriceCalculatorPlugin` cart expander|
 |taxRate (float)|Tax rate in percentage. It’s set by `ProductOptionTaxRateCalculatorPlugin` (cart expander).|
 |calculatedDiscounts[] ([CalculatedDiscountTransfer](#calculated-discount-transfer))|Product Option calculated discount collection. It’s set by `DiscountCalculatorPlugin`.|
 |refundableAmount (int)|Item available refundable amount (order only), set by `RefundableAmountCalculatorPlugin`.|
@@ -130,7 +130,7 @@ Each item which can have discounts applied has a `calculatedDiscounts` property 
 | sumNetPrice (int) | Sum of item net price, set by `PriceCalculatorPlugin`. |
 | unitNetPrice (string) | Single net price. Shipment expenses are set in the `Checkout ShipmentStep`. |
 | taxRate (float) | Tax in percents, set by `ShipmentTaxRateCalculatorPlugin`. |
-| unitPrice (int) | Single item price without assuming is it new or gross, this value should be used everywhere where price is displayed, it lets you switch tax mode without side effects, set by `PriceCalculatorPlugin` (cart expander). |
+| unitPrice (int) | Single item price without assuming is it new or gross, this value must be used everywhere where price is displayed, it lets you switch tax mode without side effects, set by `PriceCalculatorPlugin` (cart expander). |
 | sumPrice (int) | Sum of items price, set by `PriceCalculatorPlugin` (cart expander). |
 | [Calculated Discount Transfer](#calculated-discount-transfer) | List of applied discounts for this item.|
 |quantity (int) | Number of items. |

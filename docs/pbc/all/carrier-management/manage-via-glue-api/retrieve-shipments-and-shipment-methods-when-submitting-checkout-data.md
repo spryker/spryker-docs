@@ -1,11 +1,11 @@
 ---
-title: Submit checkout data with shipments and shipment methods
-description: Learn how to submit checkout data with shipment and shipment methods.
+title: Retrieve shipments and shipment methods when submitting checkout data with
+description: Learn how to submit check out data with shipment and shipment methods.
 last_updated: Jul 28, 2022
 template: glue-api-storefront-guide-template
 ---
 
-This document describes how to submit checkout data with shipmeent and shipment methods. For all the options on submitting checkout data, see [Submit checkout data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/submitting-checkout-data.html).
+This document describes how to submit checkout data with shipment and shipment methods. For all the options of submitting checkout data, see [Submit checkout data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/submitting-checkout-data.html).
 
 ## Installation
 
@@ -132,81 +132,11 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 
 
 
-| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
-| --- | --- | --- | --- |
-| billingAddress | Object | | Customer's billing [address](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html). |
-| billingAddress.id | String | . | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [add a customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-customer-addresses.html). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
-| billingAddress.salutation | String | &check; | Salutation to use when addressing the customer. |
-| billingAddress.email | String | &check; | Customer's email address. |
-| billingAddress.firstName | String | &check; | Customer's first name. |
-| billingAddress.lastName | String | &check; | Customer's last name. |
-| billingAddress.address1 | String | &check; | The 1st line of the customer's address. |
-| billingAddress.address2 | String | &check; | The 2nd line of the customer's address. |
-| billingAddress.address3 | String | | The 3rd line of the customer's address. |
-| billingAddress.zipCode | String | &check; | ZIP code. |
-| billingAddress.city | String | &check; | Specifies the city. |
-| billingAddress.iso2Code | String | &check; | Specifies an ISO 2 Country Code to use. |
-| billingAddress.company | String | | Customer's company. |
-| billingAddress.phone | String | | Customer's phone number. |
-| payments | Array | | The payment methods used in this order. |
-| shipments | Array | | A list of shipments. |
-| shipments.items | Array | &check; | A list of items in a shipment. |
-| shipments.shippingAddress | Object | &check; | Shipping address for the items in the shipment. |
-| shipments.shippingAddress.id | String | . | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [add a customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-customer-addresses.html). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
-| shipments.shippingAddress.idCompanyBusinessUnitAddress | String | | A hyphenated alphanumeric value of an existing company business unit address. To get it, include the `company-business-unit-addresses` resource in your request. Alternatively,  [retrieve a company business unit](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html#retrieve-a-company-business-unit) with the company-business-unit-addresses resource included. If you pass this value for a billing or shipping address, do not pass the other address attributes. |
-| shipments.shippingAddress.salutation | String | &check; | Salutation to use when addressing the customer. |
-| shipments.shippingAddress.email | String | &check; | Customer's email address. |
-| shipments.shippingAddress.firstName | String | &check; | Customer's first name. |
-| shipments.shippingAddress.lastName | String | &check; | Customer's last name. |
-| shipments.shippingAddress.address1 | String | &check; | The 1st line of the customer's address. |
-| shipments.shippingAddress.address2 | String | &check; | The 2nd line of the customer's address. |
-| shipments.shippingAddress.address3 | String | | The 3rd line of the customer's address. |
-| shipments.shippingAddress.zipCode | String | &check; | ZIP code. |
-| shipments.shippingAddress.city | String | &check; | Specifies the city. |
-| shipments.shippingAddress.iso2Code | String | &check; | Specifies an ISO 2 Country Code to use. |
-| shipments.shippingAddress.company | String | | Customer's company. |
-| shipments.shippingAddress.phone | String | | Customer's phone number. |
-| shipments.shippingAddress.idShipmentMethod | Integer | &check; | Unique identifier of a shipment method used for a shipment. |
-| shipments.shippingAddress.requestedDeliveryDate | Date | &check; | Desired delivery date for a shipment. |
+{% include pbc/all/glue-api-guides/submit-checkout-data-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/submit-checkout-data-request-attributes.md -->
+
 
 
 ### Response
-
-In case of a successful update, the endpoint responds with information that can help you fill in the missing checkout data, like the customer's addresses, available payment and shipment methods.
-
-<details>
-<summary markdown='span'>Response sample: submit checkout data with one shipment</summary>
-
-```json
-{
-    "data": {
-        "type": "checkout-data",
-        "id": null,
-        "attributes": {
-            "addresses": [],
-            "paymentProviders": [],
-            "shipmentMethods": [],
-            "selectedShipmentMethods": [],
-            "selectedPaymentMethods": [
-                {
-                    "paymentMethodName": "Invoice",
-                    "paymentProviderName": "DummyPayment",
-                    "requiredRequestData": [
-                        "paymentMethod",
-                        "paymentProvider"
-                    ]
-                }
-            ]
-        },
-        "links": {
-            "self": "https://glue.mysprykershop.com/checkout-data"
-        }
-    }
-}
-```
-</details>
-
-
 
 <details>
 <summary markdown='span'>Response sample: submit checkout data with a split shipment</summary>
@@ -586,307 +516,13 @@ In case of a successful update, the endpoint responds with information that can 
 ```
 </details>
 
-<details>
-<summary markdown='span'>Response sample: submit checkout data with customer addresses</summary>
-
-```json
-{
-    "data": {
-        "type": "checkout-data",
-        "id": null,
-        "attributes": {
-            "addresses": [],
-            "paymentProviders": [],
-            "shipmentMethods": [],
-            "selectedShipmentMethods": [],
-            "selectedPaymentMethods": [
-                {
-                    "paymentMethodName": "Invoice",
-                    "paymentProviderName": "DummyPayment",
-                    "requiredRequestData": [
-                        "paymentMethod",
-                        "paymentProvider"
-                    ]
-                }
-            ]
-        },
-        "links": {
-            "self": "https://glue.mysprykershop.com/checkout-data?include=addresses"
-        },
-        "relationships": {
-            "addresses": {
-                "data": [
-                    {
-                        "type": "addresses",
-                        "id": "f4cfa794-3c5d-58b9-8485-20d52c541d1d"
-                    },
-                    {
-                        "type": "addresses",
-                        "id": "904827b4-2b6d-537c-b621-6a1fe2965b4c"
-                    },
-                    {
-                        "type": "addresses",
-                        "id": "70ea4850-1092-54ed-aa81-0257ee60ae8a"
-                    }
-                ]
-            }
-        }
-    },
-    "included": [
-        {
-            "type": "addresses",
-            "id": "f4cfa794-3c5d-58b9-8485-20d52c541d1d",
-            "attributes": {
-                "salutation": "Mr",
-                "firstName": "Spencor",
-                "lastName": "Hopkin",
-                "address1": "Julie-Wolfthorn-Straße",
-                "address2": "1",
-                "address3": "new address",
-                "zipCode": "10115",
-                "city": "Berlin",
-                "country": "Germany",
-                "iso2Code": "DE",
-                "company": "spryker",
-                "phone": "+49 (30) 2084 98350",
-                "isDefaultShipping": true,
-                "isDefaultBilling": true
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/customers/DE--21/addresses/f4cfa794-3c5d-58b9-8485-20d52c541d1d"
-            }
-        },
-        {
-            "type": "addresses",
-            "id": "904827b4-2b6d-537c-b621-6a1fe2965b4c",
-            "attributes": {
-                "salutation": "Mrs",
-                "firstName": "Sonia",
-                "lastName": "Wagner",
-                "address1": "Julie-Wolfthorn-Straße",
-                "address2": "25",
-                "address3": "new one",
-                "zipCode": "10115",
-                "city": "Berlin",
-                "country": "Germany",
-                "iso2Code": "DE",
-                "company": "spryker",
-                "phone": "+49 (30) 2084 98350",
-                "isDefaultShipping": false,
-                "isDefaultBilling": false
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/customers/DE--21/addresses/904827b4-2b6d-537c-b621-6a1fe2965b4c"
-            }
-        },
-        {
-            "type": "addresses",
-            "id": "70ea4850-1092-54ed-aa81-0257ee60ae8a",
-            "attributes": {
-                "salutation": "Mrs",
-                "firstName": "Sonia",
-                "lastName": "Wagner",
-                "address1": "Julie-Wolfthorn-Straße",
-                "address2": "25",
-                "address3": "new one",
-                "zipCode": "10115",
-                "city": "Berlin",
-                "country": "Germany",
-                "iso2Code": "DE",
-                "company": "spryker",
-                "phone": "+49 (30) 2084 98350",
-                "isDefaultShipping": false,
-                "isDefaultBilling": false
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/customers/DE--21/addresses/70ea4850-1092-54ed-aa81-0257ee60ae8a"
-            }
-        }
-    ]
-}
-```
-</details>
 
 
-<details>
-<summary markdown='span'>Response sample: submit checkout data with company business unit addresses</summary>
-
-```json
-{
-    "data": {
-        "type": "checkout-data",
-        "id": null,
-        "attributes": {
-            "addresses": [],
-            "paymentProviders": [],
-            "shipmentMethods": [],
-            "selectedShipmentMethods": [
-                {
-                    "id": 1,
-                    "name": "Standard",
-                    "carrierName": "Spryker Dummy Shipment",
-                    "price": 490,
-                    "taxRate": null,
-                    "deliveryTime": null,
-                    "currencyIsoCode": "EUR"
-                }
-            ],
-            "selectedPaymentMethods": [
-                {
-                    "paymentMethodName": "Invoice",
-                    "paymentProviderName": "DummyPayment",
-                    "requiredRequestData": [
-                        "paymentMethod",
-                        "paymentProvider"
-                    ]
-                }
-            ]
-        },
-        "links": {
-            "self": "https://glue.mysprykershop.com/checkout-data?include=company-business-unit-addresses"
-        },
-        "relationships": {
-            "company-business-unit-addresses": {
-                "data": [
-                    {
-                        "type": "company-business-unit-addresses",
-                        "id": "19a55c0d-7bf0-580c-a9e8-6edacdc1ecde"
-                    }
-                ]
-            }
-        }
-    },
-    "included": [
-        {
-            "type": "company-business-unit-addresses",
-            "id": "19a55c0d-7bf0-580c-a9e8-6edacdc1ecde",
-            "attributes": {
-                "address1": "Kirncher Str.",
-                "address2": "7",
-                "address3": "",
-                "zipCode": "10247",
-                "city": "Berlin",
-                "phone": "4902890031",
-                "iso2Code": "DE",
-                "comment": ""
-            },
-            "links": {
-                "self": "https://glue.mysprykershop.com/company-business-unit-addresses/19a55c0d-7bf0-580c-a9e8-6edacdc1ecde"
-            }
-        }
-    ]
-}
-```
-</details>
-
-
-<details>
-<summary markdown='span'>Response sample: submit checkout data with payment methods</summary>
-
-```json
-{
-    "data": {
-        "type": "checkout-data",
-        "id": null,
-        "attributes": {
-            "addresses": [],
-            "paymentProviders": [],
-            "shipmentMethods": [],
-            "selectedShipmentMethods": [],
-            "selectedPaymentMethods": [
-                {
-                    "paymentMethodName": "Invoice",
-                    "paymentProviderName": "DummyPayment",
-                    "requiredRequestData": [
-                        "paymentMethod",
-                        "paymentProvider"
-                    ]
-                }
-            ]
-        },
-        "links": {
-            "self": "<https://glue.mysprykershop.com/checkout-data?include=addresses">
-        },
-        "relationships": {
-            "payment-methods": {
-                "data": [
-                    {
-                        "type": "payment-methods",
-                        "id": "1"
-                    },
-                    {
-                        "type": "payment-methods",
-                        "id": "2"
-                    }
-                ]
-            }
-        }
-    },
-    "included": [
-        {
-            "type": "payment-methods",
-            "id": "1",
-            "attributes": {
-                "paymentMethodName": "Invoice",
-                "paymentProviderName": "DummyPayment",
-                "priority": 1,
-                "requiredRequestData": [
-                    "paymentMethod",
-                    "paymentProvider",
-                    "dummyPaymentInvoice.dateOfBirth"
-                ]
-            },
-            "links": {
-                "self": "<https://glue.mysprykershop.com/payment-methods/1">
-            }
-        },
-        {
-            "type": "payment-methods",
-            "id": "2",
-            "attributes": {
-                "paymentMethodName": "Credit Card",
-                "paymentProviderName": "DummyPayment",
-                "priority": 2,
-                "requiredRequestData": [
-                    "paymentMethod",
-                    "paymentProvider",
-                    "dummyPaymentCreditCard.cardType",
-                    "dummyPaymentCreditCard.cardNumber",
-                    "dummyPaymentCreditCard.nameOnCard",
-                    "dummyPaymentCreditCard.cardExpiresMonth",
-                    "dummyPaymentCreditCard.cardExpiresYear",
-                    "dummyPaymentCreditCard.cardSecurityCode"
-                ]
-            },
-            "links": {
-                "self": "<https://glue.mysprykershop.com/payment-methods/2">
-            }
-        }
-    ]
-}       
-```
-</details>
-
-
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| ----------- | ----- | ----- |
-| addresses | Array | A list of customer addresses that can be used for billing or shipping. This attribute is deprecated. To retrieve all available addresses, include the `addresses` resource in your request. |
-| paymentProviders | Array | Payment providers that can be used for the checkout. This attribute is deprecated. To retrieve all the available payment methods, include the `payment-methods` resource in your request. |  
-| shipmentMethods | Array | A list of available shipment methods. This attribute is deprecated. To retrieve all the available shipment methods, include the `shipment-methods` resource in your request. |  
-| selectedShipmentMethods | Array | Shipment methods selected for the order. This value is returned only if you submit an order without shipments. See [Submitting checkout data in version 202009.0](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/submitting-checkout-data.html) to learn how to do that. |
-| selectedPaymentMethods | Array | Payment methods selected for this order. |
-| selectedPaymentMethods.paymentMethodName | String | Payment method name. |
-| selectedPaymentMethods.paymentProviderName | String | Name of the payment provider for this payment method. |
-| selectedPaymentMethods.priority | String | Defines the order of returned payment methods in ascending order. |
-| selectedPaymentMethods.requiredRequestData | Array | A list of attributes required by the given method to effectuate a purchase. The actual list depends on the specific provider. |
+{% include pbc/all/glue-api-guides/submit-checkout-data-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/submit-checkout-data-response-attributes.md -->
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- | --- |
-| payment-methods | paymentMethodName | String | Payment method name. |
-| payment-methods | paymentProviderName | String | Payment provider name. |
-| payment-methods | priority | String | Defines the order of returned payment methods in ascending order. |
-| payment-methods | requiredRequestData | Object | An array of attributes required by the given method to effectuate a purchase. The exact attribute list depends on the specific provider. |
 | shipment-methods | name | String | Shipment method name. |
 | shipment-methods | id | String | Unique identifier of the shipment method. |
 | shipment-methods | name | String | Shipment method name. |
@@ -895,20 +531,6 @@ In case of a successful update, the endpoint responds with information that can 
 | shipment-methods | defaultGrossPrice | Integer | Default gross price, in cents. |
 | shipment-methods | defaultNetPrice | Integer | Default net price, in cents. |
 | shipment-methods | currencyIsoCode | String | ISO 4217 code of the currency in which the prices are specified. |
-| addresses | salutation | String | Salutation to use when addressing the customer. |
-| addresses |  firstName | String | Customer's first name. |
-| addresses | lastName | String | Customer's last name. |
-| addresses | address1 | String | The 1st line of the customer's address. |
-| addresses | address2 | String | The 2nd line of the customer's address. |
-| addresses | address3 | String | The 3rd line of the customer's address. |
-| addresses | zipCode | String | ZIP code. |
-| addresses | city | String | City. |
-| addresses | country | String | Country. |
-| addresses | iso2Code | String | Specifies an ISO 2 Country Code to use. |
-| addresses | company | String | Specifies the customer's company. |
-| addresses | phone | String | Specifies the customer's phone number. |
-| addresses | isDefaultShipping | String | Defines if it is the default shipping address of the customer. |
-| addresses | isDefaultBilling | String | Defines if it is the default billing address of the customer. |
 | shipments | Items | Array | A list of items in the shipment. |
 | shipments | requestedDeliveryDate | Date | Desired delivery date. |
 | shipments | shippingAddress | Object | The address to which this shipment will be delivered. |
@@ -942,14 +564,6 @@ In case of a successful update, the endpoint responds with information that can 
 | shipment-methods | deliveryTime | Integer | Estimated delivery time. |
 | shipment-methods | Price | Integer | Price of the shipment method. |
 | shipment-methods | currencyIsoCode | String | ISO 4217 code of the currency in which the price is specified. |
-| company-business-unit-addresses | address1 | String | The 1st line of the customer's address. |
-| company-business-unit-addresses | address2 | String | The 2nd line of the customer's address. |
-| company-business-unit-addresses | address3 | String | The 3rd line of the customer's address. |
-| company-business-unit-addresses | zipCode | String | ZIP code. |
-| company-business-unit-addresses | city | String | City. |
-| company-business-unit-addresses | iso2Code | String | Specifies an ISO 2 Country Code to use. |
-| company-business-unit-addresses | phone | String | Specifies the customer's phone number. |
-| company-business-unit-addresses | comment | String | Comment of the business unit address. |
 
 ## Possible errors
 
@@ -968,4 +582,4 @@ In case of a successful update, the endpoint responds with information that can 
 
 ## Next steps
 
-[Checking out purchases](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/checking-out-purchases.html)
+[Retrieve shipments when checking out purchases](/docs/pbc/all/carrier-management/manage-via-glue-api/retrieve-shipments-when-checking-out-purchases.html)

@@ -354,57 +354,7 @@ To retrieve order shipments, include `orders` and `order-shipments`.
 ```
 </details>
 
-| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
-| --- | --- | --- | --- |
-| customer | Object | &check; | A list of attributes describing the [customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html) to submit checkout data of. |
-| customer.salutation | String | &check; | Salutation to use when addressing the customer. |
-| customer.email | String | &check; | Customer's email address. |
-| customer.firstName | String | &check; | Customer's first name. |
-| customer.lastName | String | &check; | Customer's last name. |
-| idCart | String | &check; | Unique identifier of the customer's [cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html) to check out. |
-| billingAddress | Object | &check; | Customer's billing [address](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html). |
-| billingAddress.id | String | | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html#retrieve-customers-addresses). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
-| billingAddress.salutation | String | &check; | Salutation to use when addressing the customer. |
-| billingAddress.email | String | &check; | Customer's email address. |
-| billingAddress.firstName | String | &check; | Customer's first name. |
-| billingAddress.lastName | String | &check; | Customer's last name. |
-| billingAddress.address1 | String | &check; | The 1st line of the customer's address. |
-| billingAddress.address2 | String | &check; | The 2nd line of the customer's address. |
-| billingAddress.address3 | String | &check; | The 3rd line of the customer's address. |
-| billingAddress.zipCode | String | &check; | ZIP code. |
-| billingAddress.city | String | &check; | Specifies the city. |
-| billingAddress.iso2Code | String | &check; | Specifies an ISO 2 Country Code to use. |
-| billingAddress.company | String | | Customer's company. |
-| billingAddress.phone | String | | Customer's phone number. |
-| payments | Array | &check; | A list of payment methods selected for this order. |
-| payments.paymentMethodName | String | &check; | Name of the payment method for this order. |
-| payments.paymentProviderName | String | &check; | Name of the payment provider for this order. |
-| shipment | Object | &check; | A list of attributes describing the shipping method selected for this order. |
-| shipment.items | object | &check; | A list of items that are to be delivered to the shipping address defined in this shipment. |
-| shipment.shippingAddress | Object | &check; | Customer's shipping [address](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html) for this shipment. |
-| shipment.shippingAddress.id | String | | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [retrieve a customer's addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html#retrieve-customers-addresses). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
-| shipment.shippingAddress.idCompanyBusinessUnitAddress | String | | A hyphenated alphanumeric value of an existing company business unit address. To get it, [retrieve a company business unit](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html#retrieve-a-company-business-unit) with the `company-business-unit-addresses` resource included. If you pass this value for a billing or shipping address, do not pass the other address attributes. |
-| shipment.shippingAddress.salutation | String | &check; | Salutation to use when addressing the customer. |
-| shipment.shippingAddress.email | String | &check; | Customer's email address. |
-| shipment.shippingAddress.firstName | String | &check; | Customer's first name. |
-| shipment.shippingAddress.lastName | String | &check; | Customer's last name. |
-| shipment.shippingAddress.address1 | String | &check; | The 1st line of the customer's address. |
-| shipment.shippingAddress.address2 | String | &check; | The 2nd line of the customer's address. |
-| shipment.shippingAddress.address3 | String | &check; | The 3rd line of the customer's address. |
-| shipment.shippingAddress.zipCode | String | &check; | ZIP code. |
-| shipment.shippingAddress.city | String | &check; | Specifies the city. |
-| shipment.shippingAddress.iso2Code | String | &check; | Specifies an ISO 2 Country Code to use. |
-| shipment.shippingAddress.company | String | | Customer's company. |
-| shipment.shippingAddress.phone | String | | Customer's phone number. |
-| shipment.shippingAddress.idShipmentMethod | String | | Unique identifier of the shipment method for this order or shipment. |
-| shipment.shippingAddress.idShipmentMethod | String | &check; | Unique identifier of the shipment method for this shipment. |
-| shipment.shippingAddress.requestedDeliveryDate | Date | | The delivery date for this shipment requested by the customer. |
-
-{% info_block warningBox "Purchasing a gift card" %}
-
-To prevent fraud, the *invoice* payment method is not accepted if a cart contains a gift card.
-
-{% endinfo_block %}
+{% include pbc/all/glue-api-guides/check-out-purchases-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/check-out-purchases-request-attributes.md -->
 
 
 ### Response
@@ -1269,31 +1219,7 @@ To prevent fraud, the *invoice* payment method is not accepted if a cart contain
 | redirectUrl | String | The URL to perform the payment verification requested by the selected payment method. After completing verification, ensure to [update payment data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/updating-payment-data.html#update-payment-data). If the value is `null` or empty, no additional verification is required. |
 | isExternalRedirect | Boolean | Defines if the customer is redirected to an external URL. |
 
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- | --- |
-| order-shipments | itemUuids | String | Unique identifier of the item in this shipment. |
-| order-shipments | methodName | String | Name of the shipment method selected. |
-| order-shipments | carrierName | String | Name of the shipment service provider. |
-| order-shipments | requestedDeliveryDate | Date | Desired delivery date. |
-| order-shipments | shippingAddress | Object | Shipping address of a shipment. |
-| order-shipments | salutation | String | Salutation to use when addressing the customer. |
-| order-shipments | firstName | String | Customer's first name. |
-| order-shipments | middleName | String | Customer's middle name. |
-| order-shipments | lastName | String | Customer's last name. |
-| order-shipments | address1 | String | The 1st line of the customer's address. |
-| order-shipments | address2 | String | The 2nd line of the customer's address. |
-| order-shipments | address3 | String | The 3rd line of the customer's address. |
-| order-shipments | company | String | Specifies the customer's company. |
-| order-shipments | city | String | Specifies the city. |
-| order-shipments | zipCode | String | ZIP code. |
-| order-shipments | poBox | String | PO Box to use for communication. |
-| order-shipments | phone | String | Specifies the customer's phone number. |
-| order-shipments | cellPhone | String | Mobile phone number. |
-| order-shipments | description | String | Address description. |
-| order-shipments | comment | String | Address comment. |
-| order-shipments | email | String | Email address to use for communication. |
-| order-shipments | country | String | Specifies the country. |
-| order-shipments | iso2Code | String | ISO 2-Letter Country Code to use. |
+{% include pbc/all/glue-api-guides/check-out-puchases-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/check-out-puchases-response-attributes-of-included-resources.md -->
 
 For the attributes of other included resources, see [Retrieve customer's order](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html#retrieve-customers-orders)
 

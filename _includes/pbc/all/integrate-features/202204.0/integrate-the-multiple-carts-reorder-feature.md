@@ -8,9 +8,9 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Multiple Carts | {{page.version}} |
-| Reorder | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Multiple Carts | {{site.version}} |
+| Reorder | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Set up behavior
 

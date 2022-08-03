@@ -31,7 +31,7 @@ This section contains the following guides:
 * [HowTo: Make a product searchable and shown on the Storefront URL](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html)
 * [HowTo: Manage a big number of categories](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-manage-a-big-number-of-categories.html)
 * [HowTo: Configure the product reviews](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-configure-the-product-reviews.html)
-* [HowTo: Create discounts based on shipment](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-create-discounts-based-on-shipment.html)
+* [HowTo: Create discounts based on shipment](/docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html)
 * [HowTo: Define if a cart should be deleted after placing an order](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html)
 * [HowTo: Disable Split Delivery in Yves interface](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html)
 * [HowTo: Display custom names for order item states on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html)

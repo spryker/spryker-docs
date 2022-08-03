@@ -33,7 +33,7 @@ related:
   - title: Migration guide - Currency
     link: docs/scos/dev/module-migration-guides/migration-guide-currency.html
   - title: Migration guide - Discount
-    link: docs/scos/dev/module-migration-guides/migration-guide-discount.html
+    link: docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discount-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-environment-configuration-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-environment-configuration-module.md -->

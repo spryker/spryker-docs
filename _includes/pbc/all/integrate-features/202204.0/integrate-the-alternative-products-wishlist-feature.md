@@ -8,8 +8,8 @@ To start feature integration, review and install the necessary features:
 
 |NAME|VERSION|
 |---|---|
-|Alternative Products|{{page.version}}|
-|Wishlist|{{page.version}}|
+|Alternative Products|{{site.version}}|
+|Wishlist|{{site.version}}|
 
 ### 1) Add Translations
 

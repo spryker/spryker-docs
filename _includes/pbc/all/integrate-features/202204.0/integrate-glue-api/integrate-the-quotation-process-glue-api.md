@@ -10,11 +10,11 @@ To start feature integration, integrate the required features and Glue APIs:
 
 | NAME                | VERSION          | INTEGRATION GUIDE  |
 |---------------------|------------------|--------------------|
-| Spryker Core API    | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html)       |
-| Cart API            | {{page.version}} | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)                       |
-| Company Account API | {{page.version}} | [Glue API: Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html) |
-| Agent Assist API    | {{page.version}} | [Glue API: Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-agent-assist-feature-integration.html)       |
-| Quotation Process   | {{page.version}} | [Quotation process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quotation-process-feature-integration.html)                         |
+| Spryker Core API    | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html)       |
+| Cart API            | {{site.version}} | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html)                       |
+| Company Account API | {{site.version}} | [Glue API: Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-company-account-feature-integration.html) |
+| Agent Assist API    | {{site.version}} | [Glue API: Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-agent-assist-feature-integration.html)       |
+| Quotation Process   | {{site.version}} | [Quotation process feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/quotation-process-feature-integration.html)                         |
 
 
 ### 1) Install the required modules using Composer

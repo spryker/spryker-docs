@@ -81,7 +81,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 | `GET https://glue.mysprykershop.com/guest-carts` | Retrieve a guest cart. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=guest-cart-items` | Retrieve information about a guest cart with its items included. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=cart-rules` | Retrieve a guest cart with information about the cart rules. |
-| `GET https://glue.mysprykershop.com/guest-carts?include=gift-cards,vouchers` | Retrieve a guest cart with information about the gift cards applied. |
+| `GET https://glue.mysprykershop.com/guest-carts?include=gift-cards` | Retrieve a guest cart with information about the gift cards applied. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=guest-cart-items,concrete-products,product-options` | Retrieve a guest cart with information about its items, respective concrete products, and product options included. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=sales-units,product-measurement-units` | Retrieve a guest cart with information about its items, sales units, and product measurement units. |
 | `GET https://glue.mysprykershop.com/guest-carts?include=vouchers` | Retrieve a guest cart with information about vouchers. |
@@ -1877,33 +1877,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 <a name="guest-cart-response-attributes"></a>
 
-**General cart information**
-
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| priceMode | String | Price mode that was active when the cart was created. |
-| currency | String | Currency that was selected when the cart was created. |
-| store | String | Store for which the cart was created. |
-| name | String | Name of the shopping cart. |
-| isDefault | Boolean | Defines whether the cart is default or not. |
-
-**Totals information**
-
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| expenseTotal | String | Total amount of expenses (including, for example, shipping costs). |
-| discountTotal | Integer | Total amount of discounts applied to the cart. |
-| taxTotal | Integer | Total amount of taxes to be paid. |
-| subTotal | Integer | Subtotal of the cart. |
-| grandTotal | Integer | Grand total of the cart. |
-
-**Discount information**
-
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| displayName | String | Discount name. |
-| code | String | Discount code applied to the cart. |
-| amount | Integer | Discount amount applied to the cart. |
+{% include pbc/all/glue-api-guides/manage-guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/manage-guest-carts-response-attributes.md -->
 
 **Included resource attributes**
 

@@ -8,14 +8,14 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 | --- | --- |
-| Spryker Core | {{page.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/cms:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/cms:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1164,7 +1164,7 @@ Make sure that:
 Run the following command(s) to install the required modules:
 
 ```bash
-composer require spryker-feature/cms:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/cms:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -1263,7 +1263,7 @@ Enable Twig plugins:
 | --- | --- | --- |
 | CmsBlockTwigPlugin | Provides the list of plugins for CMS block widget. See the [table](#plugin-table). | SprykerShop\Yves\CmsBlockWidget\Plugin |
 | CmsTwigPlugin | Provides the `spyCms` function. | SprykerShop\Yves\CmsPage\Plugin\Twig |
-| CmsContentWidgetTwigPlugin | Provides the list of plugins for enabling content widgets. You can use them inside CMS blocks and page content. However, we recommend using the [Content Items Widgets feature](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) instead. | Spryker\Yves\CmsContentWidget\Plugin\Twig |
+| CmsContentWidgetTwigPlugin | Provides the list of plugins for enabling content widgets. You can use them inside CMS blocks and page content. However, we recommend using the [Content Items Widgets feature](/docs/scos/user/features/{{site.version}}/content-items-feature-overview.html) instead. | Spryker\Yves\CmsContentWidget\Plugin\Twig |
 | ShopCmsSlotTwigPlugin | Provides the `cms_slot` Twig tag. | SprykerShop\Yves\ShopCmsSlot\Plugin\Twig |
 
 **Pyz\Yves\Twig\TwigDependencyProvider**
@@ -1496,14 +1496,14 @@ class ShopCmsSlotDependencyProvider extends SprykerShopShopCmsSlotDependencyProv
 
 {% info_block warningBox "Verification" %}
 
-Verify the changes by adding a slot widget to a page. See [Templates & Slots Feature Overview](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html) for references.
+Verify the changes by adding a slot widget to a page. See [Templates & Slots Feature Overview](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html) for references.
 
 {% endinfo_block %}
 
 ### Set up SprykerCmsBlocks content provider behavior
 
 {% info_block infoBox %}
-Follow the further steps only if you are going to use the [visibility conidtions](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
+Follow the further steps only if you are going to use the [visibility conidtions](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#visibility-conditions) functionality with `SprykerCmsBlocks` content provider for slots.
 {% endinfo_block %}
 
 #### 1) Install the required modules using Composer
@@ -1613,7 +1613,7 @@ class CmsSlotBlockGuiDependencyProvider extends SprykerCmsSlotBlockGuiDependency
 1. Go to the Back Office > **Content Management** > **Slots** section.
 1. In the **List of Templates**, choose the template for which you've created the visibility condition.
 1. Choose a slot in the **List of Slots for {name} Template**.
-1. Select or [assign](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html#assigning-cms-blocks-to-slots) a CMS block to a slot in the **List of Blocks for {name} Slot**.
+1. Select or [assign](/docs/scos/user/back-office-user-guides/{{site.version}}/content/slots/managing-slots.html#assigning-cms-blocks-to-slots) a CMS block to a slot in the **List of Blocks for {name} Slot**.
 1. Make sure that for each CMS block, there is an additional form allowing you to define the visibility condition you have created.
 
 

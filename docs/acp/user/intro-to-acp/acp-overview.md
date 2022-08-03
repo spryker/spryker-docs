@@ -6,7 +6,7 @@ redirect_from:
     - /docs/aop/user/intro-to-acp/acp-overview.html
 ---
 
-The App Composition Platform (ACP) lets [Spryker Cloud Commerce OS (SCCOS)](/docs/cloud/dev/spryker-cloud-commerce-os/getting-started-with-the-spryker-cloud-commerce-os.html) customers connect, configure, and use the available third-party services, or apps, in their application with a click of a button, without development efforts from their side.
+The App Composition Platform (ACP) lets [PaaS+](/docs/paas-plus/dev/platform-as-a-service-plus.html) customers connect, configure, and use the available third-party services, or apps, in their application with a click of a button, without development efforts from their side.
 
 ![ACP](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/app-orchestration-platform-overview/aop.png)
 
@@ -28,8 +28,8 @@ The ACP has the following advantages:
 
 ## Accessing the ACP catalog
 
-The ACP catalog is a page inside the Back Office that contains the list of applications you can connect to your shop. 
-You can access the ACP catalog only if you are the SCCOS customer. If you were onboarded after March 31st, 2022, you get the ACP catalog integrated into your Back Office by default. If you were onboarded earlier, [contact us](https://spryker.force.com/support/s/case-creation-form). Once you complete the installation, the ACP catalog appears in the Back Office:
+The ACP catalog is a page inside the Back Office that contains the list of applications you can connect to your shop.
+You can access the ACP catalog only if you are the SCCOS customer. If you were onboarded after March 31st, 2022, you get the ACP catalog integrated into your Back Office by default. If you were onboarded earlier, [contact us](https://support.spryker.com/). Once you complete the installation, the ACP catalog appears in the Back Office:
 
 ![aop-catalog](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/app-orchestration-platform-overview/aop-catalog.png)
 
@@ -47,5 +47,4 @@ Make sure you check the configuration guidelines for the app you need because ad
 
 {% endinfo_block %}
 
-That's it! You are all set to try the app out. 
-
+That's it! You are all set to try the app out.

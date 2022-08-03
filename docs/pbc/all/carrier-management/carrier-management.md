@@ -27,7 +27,7 @@ The main concepts regarding shipping are as follows:
 
 A sales order can have multiple delivery methods from different carrier companies.
 
-In the Back Office, you can create a carrier company and configure multiple delivery methods. For each delivery method, you can set a price and an associated tax set, define a store in which the delivery method can be available, as well as activate or deactivate the delivery method. For more information about how to add delivery methods in the Back Office, see [Add delivery methods](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/add-delivery-methods.html).
+In the Back Office, you can create a carrier company and configure multiple delivery methods. For each delivery method, you can set a price and an associated tax set, define a store in which the delivery method can be available, as well as activate or deactivate the delivery method. For more information about how to add delivery methods in the Back Office, see [Add delivery methods](/docs/pbc/all/carrier-management/manage-in-the-back-office/add-delivery-methods.html).
 
 {% info_block warningBox %}
 

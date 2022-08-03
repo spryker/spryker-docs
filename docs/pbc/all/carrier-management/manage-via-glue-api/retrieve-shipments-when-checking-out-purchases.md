@@ -367,8 +367,3 @@ For the attributes of other included resources, see [Retrieve customer's order](
 | 1106 | Unable to delete cart. |
 | 1107 | Multiple payments are not allowed. |
 | 1108 | Payment method "%s" of payment provider "%s" is invalid. |
-
-
-## Next steps
-
-* [Updating payment data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/updating-payment-data.html)

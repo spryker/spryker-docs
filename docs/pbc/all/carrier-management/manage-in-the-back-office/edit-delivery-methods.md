@@ -51,7 +51,7 @@ This doc describes how to edit delivery methods.
 | --- | --- |
 | DELIVERY METHOD KEY | Unique identifier of the delivery method. |
 | NAME | Name of the delivery method displayed on the Storefront. |
-| CARRIER | Carrier company that's handling the delivery of this method. To add one, see [Addd carrier companies](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/delivery-methods/add-carrier-companies.html). |
+| CARRIER | Carrier company that's handling the delivery of this method. To add one, see [Add carrier companies](/docs/pbc/all/carrier-management/manage-in-the-back-office/add-carrier-companies.html). |
 | AVAILABILITY PLUGIN | Plugin that checks if the delivery method is available for the customer. A developer can create plugins. |
 |  PRICE PLUGIN | Plugin that calculates the price of delivery. If you select a price  plugin, it overrides the prices specified in the **Price & Tax** tab. A developer can create plugins. |
 | DELIVERY TIME PLUGIN | Plugins that calculates estimated delivery time. A developer can create plugins. |

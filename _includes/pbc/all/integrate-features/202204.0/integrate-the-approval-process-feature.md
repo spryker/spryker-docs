@@ -8,17 +8,17 @@ To start feature integration, review and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Company Account | {{page.version}}|
-| Shared Carts | {{page.version}} |
-| Checkout | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Company Account | {{site.version}}|
+| Shared Carts | {{site.version}} |
+| Checkout | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker-feature/approval-process:"{{page.version}}" --update-with-dependencies
+composer require spryker-feature/approval-process:"{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}
@@ -379,16 +379,16 @@ To start feature integration, review and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Cart | {{page.version}} |
-| Checkout | {{page.version}} |
-| Spryker Core | {{page.version}} |
+| Cart | {{site.version}} |
+| Checkout | {{site.version}} |
+| Spryker Core | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 
 ```bash
-composer require spryker-feature/approval-process: "{{page.version}}" --update-with-dependencies
+composer require spryker-feature/approval-process: "{{site.version}}" --update-with-dependencies
 ```
 
 {% info_block warningBox "Verification" %}

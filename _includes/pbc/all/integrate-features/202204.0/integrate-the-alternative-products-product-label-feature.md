@@ -8,8 +8,8 @@ Please review and install the necessary features before beginning the integratio
 
 | NAME | VERSION |
 |---|---|
-|Alternative Products| {{page.version}} |
-|Product Label| {{page.version}} |
+|Alternative Products| {{site.version}} |
+|Product Label| {{site.version}} |
 
 ### 1) Install the required modules using Composer
 

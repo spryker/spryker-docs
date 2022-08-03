@@ -8,8 +8,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Shipment | {{page.version}} |
-| Approval Process | {{page.version}} |
+| Shipment | {{site.version}} |
+| Approval Process | {{site.version}} |
 
 ### 1) Install the required modules using Composer
 
@@ -135,7 +135,7 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| CheckoutPage | {{page.version}} |
+| CheckoutPage | {{site.version}} |
 
 ### 1) Set up behavior
 

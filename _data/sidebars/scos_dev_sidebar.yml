@@ -423,6 +423,10 @@ entries:
         - "202204.0"
     - title: Promotions and Discounts
       url: /docs/scos/dev/feature-walkthroughs/promotions-discounts-feature-walkthrough.html
+      include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"      
     - title: Quick Add to Cart
       url: /docs/scos/dev/feature-walkthroughs/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
       nested:
@@ -941,7 +945,6 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
       - title: Carts of registered users
         include_versions:
         - "202009.0"
@@ -967,7 +970,6 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
       - title: Sharing company user carts
         include_versions:
         - "201907.0"
@@ -1167,7 +1169,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Searching the product catalog
       url: /docs/scos/dev/glue-api-guides/searching-the-product-catalog.html
     - title: Retrieving autocomplete and search suggestions
@@ -1455,7 +1456,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Glue API - Quotation Process
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-quotation-process-feature-integration.html
         include_versions:
@@ -2147,7 +2147,6 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Queue Data Import
       url: /docs/scos/dev/feature-integration-guides/queue-data-import-feature-integration.html
       include_versions:
@@ -2502,16 +2501,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-customerpage.html
     - title: Migration Guide - CustomerReorderWidget
       url: /docs/scos/dev/module-migration-guides/migration-guide-customerreorderwidget.html
-    - title: Migration Guide - Discount
-      url: /docs/scos/dev/module-migration-guides/migration-guide-discount.html
-    - title: Migration Guide - DiscountCalculatorConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-discountcalculatorconnector.html
-    - title: Migration Guide - DiscountPromotion
-      url: /docs/scos/dev/module-migration-guides/migration-guide-discountpromotion.html
-    - title: Migration Guide - DiscountPromotionWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-discountpromotionwidget.html
-    - title: Migration Guide - DiscountSalesAggregatorConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-discountsalesaggregatorconnector.html
     - title: Migration guide - Elastica
       url: /docs/scos/dev/module-migration-guides/migration-guide-elastica.html
     - title: Migration Guide - Environment Configuration
@@ -4246,8 +4235,6 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html
         - title: "HowTo: Use blocks"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-use-blocks.html
-        - title: "HowTo: Create discounts based on shipment"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-create-discounts-based-on-shipment.html
         - title: "HowTo: Display custom names for order item states on the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html
         - title: "HowTo: Configure the product reviews"

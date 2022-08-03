@@ -25,7 +25,7 @@ You cannot successfully deploy a project on Spryker Cloud Commerce OS unless you
 - Create [deploy files](/docs/scos/dev/the-docker-sdk/{{site.version}}/deploy-file/deploy-file.html) for each of your environments. These files must be named in a particular manner: `deploy.(project)-(environment).yml`. For example, `deploy.example-staging.yml`.
 - [Define a Docker SDK version](/docs/scos/dev/the-docker-sdk/{{site.version}}/choosing-a-docker-sdk-version.html) for the project to use.
 - Integrate [FlySystem](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-data-import-from-an-s3-bucket.html) so that the project is using data in S3 Buckets instead of local storage.
-- Use the option to  [test your deployments locally](https://docs.spryker.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html#bootstrap-with-codedeployymlcode) to understand how your application will perform and work when deployed.
+- Use the option to [test your deployments locally](https://docs.spryker.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html#bootstrap-with-codedeployymlcode) to understand how your application will perform and work when deployed.
 - It is important to test your Payment Options locally, before deploying them. How that is done is described in this [article](https://docs.spryker.com/docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html).
 
 

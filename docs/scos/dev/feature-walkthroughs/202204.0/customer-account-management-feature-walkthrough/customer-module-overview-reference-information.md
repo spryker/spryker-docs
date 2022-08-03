@@ -14,7 +14,7 @@ The Customer entity wraps data around registered customers. Customer data is man
 
 Customer registration requires two steps:
 
-1. Creating a new customer: This step can be done from both the back-end and frontend applications. Customers are created in the database if the entered details are valid. A registration key is generated for each customer and used as a token for customer registration confirmation. The key is embedded in the confirmation link sent by email.
+1. Creating a new customer: This step can be done from both the backend and frontend applications. Customers are created in the database if the entered details are valid. A registration key is generated for each customer and used as a token for customer registration confirmation. The key is embedded in the confirmation link sent by email.
 2. Confirming customer registration: Only a customer can confirm registration through the frontend application. The customer accesses the link received in the email sent after the customer creation. When opening the link, an update is triggered that sets the customer as registered.
 
 After these two steps are performed, the customer can use the account.

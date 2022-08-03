@@ -72,7 +72,7 @@ To start developing your Spryker in Docker, see [Installing Spryker with Docker]
 
 #### The deploy file
 
-When working with a local environment, you should use the  [deploy.dev.yml](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file/deploy-file.html) file.
+When working with a local environment, you should use the [deploy.dev.yml](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file/deploy-file.html) file.
 
 In the default deploy file, change the following attributes:
 
@@ -146,7 +146,7 @@ We recommend running this command weekly to ensure you have the latest fixes. We
 
 {% endinfo_block %}
 
-*  To update a particular module: `composer update "spryker/module-name"`. 
+* To update a particular module: `composer update "spryker/module-name"`. 
 
 {% info_block infoBox %}
 
@@ -154,7 +154,7 @@ You can easily keep track of new module versions using the [composer-versions-ch
 
 {% endinfo_block %}
 
-*  To add a new module to your project: `composer require "spryker/module-name"`.
+* To add a new module to your project: `composer require "spryker/module-name"`.
 
 To learn about the module versioning approach in Spryker, see [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html).
 
@@ -289,7 +289,7 @@ As a developer, the Spryker structure is the first thing you need to know to ext
 
 <!---## Step 5: The Development Virtual Machine
 
-Get to know the parts of the Spryker Development Virtual Machine with which we ship the Spryker Commerce OS so that you have a pre-configured and ready to go stack.
+Get to know the parts of the Spryker Development Virtual Machine with which we ship the Spryker Commerce OS so that you have a pre-configured and ready-to-go stack.
 
 * What is the Spryker DevVM (Development Virtual Machine) and why do we need it?
 * Main Structure

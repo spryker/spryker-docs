@@ -37,7 +37,7 @@ related:
   - title: Migration guide - Price
     link: docs/scos/dev/module-migration-guides/migration-guide-price.html
   - title: Migration guide - Discount
-    link: docs/scos/dev/module-migration-guides/migration-guide-discount.html
+    link: docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discount-module.html
   - title: Migration guide - Shipment
     link: docs/scos/dev/module-migration-guides/migration-guide-shipment.html
 ---

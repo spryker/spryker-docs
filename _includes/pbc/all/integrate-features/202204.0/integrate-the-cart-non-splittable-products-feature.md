@@ -8,8 +8,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Cart | {{page.version}} |
-| Non-splittable Products |{{page.version}} |
+| Cart | {{site.version}} |
+| Non-splittable Products |{{site.version}} |
 
 ### 1) Set up behavior
 

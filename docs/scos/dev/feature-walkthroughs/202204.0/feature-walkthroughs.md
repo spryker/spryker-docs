@@ -277,10 +277,6 @@ The [Product Sets](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-
 
 The [ProductSet](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-sets-feature-walkthrough/product-sets-module-relations.html) module provides a spy_product_set table that stores some non-localized data about Product Sets entities. Localized data is stored in the spy_product_set_data table. These tables, along with their related URLs and product image sets, contain all the necessary data about Product Sets entities that you can list on the Storefront or show their representing Product details pages.
 
-## Promotions and Discounts
-
-The [Promotions & Discounts](/docs/scos/dev/feature-walkthroughs/{{page.version}}/promotions-discounts-feature-walkthrough.html) feature allows defining several types of discounts based on a brand, overall cart value, certain product ranges, or special customer groups. You can also offer discount vouchers or incentivize certain products through coupon codes.
-
 ## Quick Add to Cart
 
 The [Quick Add to Cart](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html) feature allows adding multiple products to cart at once.

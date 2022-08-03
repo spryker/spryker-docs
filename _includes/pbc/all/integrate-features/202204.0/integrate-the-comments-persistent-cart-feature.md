@@ -8,8 +8,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Comments | {{page.version}} |
-| Persistent Cart | {{page.version}} |
+| Comments | {{site.version}} |
+| Persistent Cart | {{site.version}} |
 
 ### 1) Set up behavior
 
@@ -57,8 +57,8 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 | --- | --- |
-| Comments | {{page.version}} |
-| Cart | {{page.version}} |
+| Comments | {{site.version}} |
+| Cart | {{site.version}} |
 
 ### 1) Set up behavior
 

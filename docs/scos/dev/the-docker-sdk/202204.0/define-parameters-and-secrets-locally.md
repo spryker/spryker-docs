@@ -54,13 +54,14 @@ docker/sdk generate-env
 {PARAMETER_NAME}=`{PARAMETER_VALUE}`
 ```
 
-3. Optional: Check your environment's parameters:
-
+3. Bootstrap the defined values:
 ```bash
-list-env
+docker/sdk boot {DEPLOY_FILE_NAME}
 ```
+
+Now you can launch the application with the defined parameters. To check all the environment's parameters, run `docker/sdk boot list-env`.
 
 
 ## Define parameter and secret values in SCCOS
 
-To define parameter and secret values in a Spryker Cloud Commerce OS environment, follow [Define parameters and secretes in a SCCOS environment](/docs/cloud/dev/spryker-cloud-commerce-os/define-parameters-and-secrets-in-a-sccos-environment.html).
+To define parameter and secret values in a Spryker Cloud Commerce OS environment, follow [Define parameters and secretes in SCCOS environments](/docs/cloud/dev/spryker-cloud-commerce-os/define-parameters-and-secrets-in-sccos-environments.html).

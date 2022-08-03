@@ -1,5 +1,5 @@
 ---
-title: Define parameters and secretes in a SCCOS environment
+title: Define parameters and secretes in SCCOS environments
 description: Learn how to define parameters in the Parameter Store.
 last_updated: July 28, 2022
 template: howto-guide-template
@@ -15,7 +15,7 @@ Parameters are used for multiple purposes, like storing mail server details or p
 
 To define parameters and their values, do the following:
 
-1. To define parameters locally, follow [Define parameters and secrets locally](/docs/scos/dev/the-docker-sdk/{{page.version}}/define-parameters-and-secrets-locally.html).
+1. To define parameters locally, follow [Define parameters and secrets locally](/docs/scos/dev/the-docker-sdk/{{site.version}}/define-parameters-and-secrets-locally.html).
 2. Push the updates to the SCCCOS environment.
 3. Deploy the application with the updated configuration by following one of the following docs:
     * [Deploying in a staging environment](/docs/cloud/dev/spryker-cloud-commerce-os/deploying-in-a-staging-environment.html)

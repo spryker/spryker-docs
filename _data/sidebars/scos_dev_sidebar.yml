@@ -3912,6 +3912,10 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
+    - title: Define parameters and secrets locally
+      url: /docs/scos/dev/the-docker-sdk/define-parameters-and-secrets-locally.html
+      include_versions:
+      - "202204.0"
     - title: Configure services
       url: /docs/scos/dev/the-docker-sdk/configure-services.html
       include_versions:
@@ -3944,13 +3948,6 @@ entries:
     - title: Running tests with the Docker SDK
       url: /docs/scos/dev/the-docker-sdk/running-tests-with-the-docker-sdk.html
       include_versions:
-      - "202009.0"
-      - "202108.0"
-      - "202204.0"
-    - title: Retrieving promotional items
-      url: /docs/scos/dev/glue-api-guides/retrieving-promotional-items.html
-      include_versions:
-      - "202005.0"
       - "202009.0"
       - "202108.0"
       - "202204.0"

@@ -50,7 +50,7 @@ redirect_from:
 
 This document guides you into getting started with the Spryker Commerce OS. It has been structured as a step-by-step checklist to help get you through all of the stages involved in working with Spryker. After following these instructions, if you still have any questions, you can access our [Spryker Community Slack group](https://sprykercommunity.slack.com/join/shared_invite/zt-gdakzwk3-~B_gJXbUxMdzkBwTQVjNgg#/).
 
-## 1. Installing Spryker
+## 1. Install Spryker
 
 For the starting point of any project, it is good to start from one of the Spryker Demo Shops that are available. They act as a typical Spryker installation and help to establish different types of the Spryker Commerce OS. A Demo Shop includes different sets of components that have been selected for a different type of business or project. Each of these options is fully functional and can be used for both demonstrative purposes as well as working as a boilerplate for your new project. Though each shop comes with its own pre-selected components, Spryker also offers hundreds of additional modules which can be chosen later.
 
@@ -61,16 +61,16 @@ You can choose from the following options:
 
 Both Demo Shops can also be expanded with separate [features](/docs/scos/user/features/{{site.version}}/features.html) and modules.
 
-### Installing Spryker with Docker
+### Install Spryker with Docker
 
-When installing Spryker, we recommend starting with a Docker SDK environment. It features a lightweight environment that is closer to a production implementation. This option includes Docker and related tools to build and run containers that match your requirements. 
+When installing Spryker, we recommend starting with a Docker SDK environment. It features a lightweight environment that is closer to production implementation. This option includes Docker and related tools to build and run containers that match your requirements. 
 
 To start developing your Spryker in Docker, see [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html). Spryker can be run on MacOS, Linux, and Windows with WSL1 or WSL2.
 
 * Make sure you have all of the necessary [prerequisites before installing docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html#prerequisites).
 * Once you have the necessary prerequisites set up, you can then [choose your installation mode with your OS](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html#installation). You can install docker in modes for Development, Demo, or add it to an existing project.
 
-#### The Deploy File
+#### The deploy file
 
 When working with a local environment, you should use the  [deploy.dev.yml](/docs/scos/dev/the-docker-sdk/202108.0/deploy-file/deploy-file.html) file.
 
@@ -82,14 +82,14 @@ In the default deploy file, change the following attributes:
 * Domains for the local environment
 * Domains for the services (RabbitMQ, Jenkins): Optional, but this can help to keep all project links together
 
-#### Vagrant Clean-up
+#### Vagrant clean-up
 
 When you use Docker and not the Development Virtual Machine (also called DevVM), you do not need the DevVM’s configuration files. Therefore, you can remove the following files:
 
 * `config/install/development.yml`
 * `config_default-development_*.php`
 
-### Installing Spryker with the Development Virtual Machine
+### Install Spryker with the Development Virtual Machine
 
 The Spryker Commerce OS offers a Virtual Machine, which includes all of the prerequisites needed to run Spryker. It provides a full-featured development environment, which helps you customize Spryker based on your project’s requirements. The Development Virtual Machine (DevVM) is based on VirtualBox and Vagrant and can be used to install Spryker on any operating system.
 
@@ -106,7 +106,7 @@ We offer a number of installation guides that may suit your needs:
 | DevVM on Linux / Mac OS | [B2B or B2C Demo Shop installation: Mac OS or Linux, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html) |
 | DevVM on Windows | [B2B or B2C Demo Shop installation: Windows, with Development Virtual Machine](/docs/scos/dev/setup/installing-spryker-without-development-virtual-machine-or-docker.html) |
 
-### Independent Installation
+### Independent installation
 
 Alternatively, you can install Spryker without the Docker images. See [Installing Spryker without Docker](/docs/scos/dev/setup/installing-spryker-without-docker.html) for details.
 
@@ -116,7 +116,7 @@ Following your installation, make sure to check out [Post-Installation steps and
 
 {% endinfo_block %}
 
-### Adjusting the `readme.md` file
+### Adjust the `readme.md` file
 
 Once your project has been installed, you need to adjust the `readme.md` file in the following ways:
 
@@ -125,7 +125,7 @@ Once your project has been installed, you need to adjust the `readme.md` file in
 * Remove any unused information, such as Vagrant installation instructions if a DevVM was not used.
 * Consider moving the production information further done in the file so that new developers can more readily understand how to use the project.
 
-## 2. Managing modules
+## 2. Manage modules
 
 Once the installation of your new project has been completed, you may start to manage the modules you want to use. A module within Spryker is a single-function unit that has well-defined dependencies and can be updated independently.
 
@@ -158,7 +158,7 @@ You can easily keep track of new module versions using the [composer-versions-ch
 
 To learn about the module versioning approach in Spryker, see [Semantic Versioning: Major vs. Minor vs. Patch Release](/docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html).
 
-## 3. Configuring the environment
+## 3. Configure the environment
 
 The next step to take once installation has finished and modules set up, you need to configure and customize your Spryker Commerce OS. For this, you can do the following:
 
@@ -200,7 +200,7 @@ Keep in mind that you must also change the default config in `DataImportConfig::
 
 For those stores that you wish to allow, don’t forget to edit `CodeBucketConfig::getCodeBuckets()`.
 
-## 4. Configuring CI
+## 4. Configure CI
 
 Continuous Integration (CI) is a development practice where each part of the code can be verified by an automated build and automated tests. This allows for good code quality and that each new feature does not break the existing functionality. The following documents will help you to enable CI in different repositories:
 * [Deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-azure-pipelines.html)
@@ -210,7 +210,7 @@ Continuous Integration (CI) is a development practice where each part of the cod
 * [Azure Pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-azure-pipelines.html)
 * [Configuring Bitbucket Pipelines ](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/configuring-bitbucket-pipelines.html)
 
-## 5. Configuring checkers
+## 5. Configure checkers
 
 To keep your code clean, we recommend using code checkers. To keep your code clean, we recommend using the code checkers.
 
@@ -242,7 +242,7 @@ This can be toggled at the project level by enabling rule level 6:
 vendor/bin/phpstan analyze -l 6 -c phpstan.neon src/
 ```
 
-## 6. Configuring PhpStorm
+## 6. Configure PhpStorm
 
 If you wish to speed up your work, we recommend configuring PhpStorm.
 
@@ -261,7 +261,7 @@ It is safe to disable cache indexing for the following files:
 * `data/tmp`
 * `public/(Yves/Zed/Marketlace)/assets`
 
-## 7. Debugging
+## 7. Configure debugging
 
 Before you start developing, you should set up and get to know your debugging environment. To learn how to configure debugging, see one of the following: 
 

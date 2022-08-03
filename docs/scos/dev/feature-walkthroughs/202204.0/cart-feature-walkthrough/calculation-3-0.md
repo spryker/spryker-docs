@@ -237,7 +237,7 @@ Each item that can have discounts applied has the `calculatedDiscounts` property
 | --- | --- |
 | idExpense (int)|Unique identifier of the expense|
 |sumGrossPrice (int)|Sum of item gross price. It’s set by `ExpensesGrossSumAmountCalculatorPlugin`.|
-|unitGrossPrice (string)|Single expense price, e.g., shipment expenses are set in the ShipmentStep|
+|unitGrossPrice (string)|Single expense price—for example, shipment expenses are set in the ShipmentStep|
 |type (string)|Type of expense (shipping) |
 |taxRate (int)|Tax in percents|
 |calculatedDiscounts (CalculatedDiscountTransfer[]|List of applied discounts for this item|

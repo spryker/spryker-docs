@@ -42,15 +42,15 @@ The entire data object is stored into the session and it consists of:
 
 ### Tax total transfer
 
-`TaxTotalsTransfer` holds the `taxRate` and `taxAmount` used for the grandTotal.
+`TaxTotalsTransfer` holds the `taxRate` and `taxAmount` used for the `grandTotal`.
 
 | FIELD | DESCRIPTION |
 | --- | --- |
-| amount (int)|Current tax amount from grandTotal. |
+| amount (int)|Current tax amount from `grandTotal`. |
 
 ### Item transfer
 
-`ItemTransfer` is a cart item transfer, holds single product information.
+`ItemTransfer` is a cart item transfer; it holds single product information.
 
 | FIELD | DESCRIPTION |
 | --- | --- |
@@ -82,7 +82,7 @@ The entire data object is stored into the session and it consists of:
 
 ## Calculated discount transfer
 
-Each item which can have discounts applied has a `calculatedDiscounts` property which holds collection of discounts for each discount type.
+Each item which can have discounts applied has a `calculatedDiscounts` property which holds the collection of discounts for each discount type.
 
 | FIELD | DESCRIPTION |
 | --- | --- |
@@ -126,9 +126,9 @@ Each item which can have discounts applied has a `calculatedDiscounts` property 
 | FIELD | DESCRIPTION |
 | --- | --- |
 | sumGrossPrice (int) | Sum of item gross price, set by `PriceCalculatorPlugin`. |
-| unitGrossPrice (string) | Single expense price. e.g.: shipment expenses are set in the `Checkout ShipmentStep`. |
+| unitGrossPrice (string) | Single expense price. Shipment expenses are set in the `Checkout ShipmentStep`. |
 | sumNetPrice (int) | Sum of item net price, set by `PriceCalculatorPlugin`. |
-| unitNetPrice (string) | Single net price. e.g.: shipment expenses are set in the `Checkout ShipmentStep`. |
+| unitNetPrice (string) | Single net price. Shipment expenses are set in the `Checkout ShipmentStep`. |
 | taxRate (float) | Tax in percents, set by `ShipmentTaxRateCalculatorPlugin`. |
 | unitPrice (int) | Single item price without assuming is it new or gross, this value should be used everywhere where price is displayed, it allows switching tax mode without side effects, set by `PriceCalculatorPlugin` (cart expander). |
 | sumPrice (int) | Sum of items price, set by `PriceCalculatorPlugin` (cart expander). |

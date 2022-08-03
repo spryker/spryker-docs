@@ -16,10 +16,10 @@ Starting from version 2.0.0 of the PriceProduct module, _Default Price Dimension
 Starting from version 2.0.0 of the `PriceProduct` module, we have added the Service layer with `PriceProductService`. Its purpose is to choose only one price from the list of prices available for the current customer, taking into account the provided filter, which could contain selected Store, Currency, Price mode (gross or net), and Quote (with customer information inside).
 The prices list can come from Yves (Storage) and Zed (DB).
 
-* In case with Yves,  the `PriceProductFilterTransfer` object should be created for filtering, which contains named values (store name, currency code, named price mode, named price type).
-* In case with Zed,the `PriceProductCriteriaTransfer` object should be created for filtering, which contains IDs as values (store ID, currency ID, price type id, etc.).
+* In case with Yves, the `PriceProductFilterTransfer` object should be created for filtering, which contains named values (store name, currency code, named price mode, named price type).
+* In case with Zed,the `PriceProductCriteriaTransfer` object should be created for filtering, which contains IDs as values (store ID, currency ID, and price type ID).
 
-If you need to add additional fields to one of these objects, add it to another one (if you added QTY to filter, criteria must be updated, etc.). So that `PriceProductFilterTransfer` could always be converted to `PriceProductCriteriaTransfer`.
+If you need to add additional fields to one of these objects, add it to another one (if you added QTY to filter, criteria must be updated). So that `PriceProductFilterTransfer` could always be converted to `PriceProductCriteriaTransfer`.
 
 `PriceProductService` has plugins with `/Spryker/Service/PriceProductExtension/Dependency/Plugin/PriceProductFilterPluginInterface` which allows filtering price for price dimension.
 
@@ -31,7 +31,7 @@ Then `/Spryker/Service/PriceProduct/FilterStrategy/SinglePriceProductFilterStrat
 
 There is Quote in a `filter/criteria` without items since this is additional information about the environment from where prices are requested.
 
-That `filter/criteria` is a flat object, so we filter only by its properties; however, plugins can use additional information (e.g., Quote) for filtering.
+That `filter/criteria` is a flat object, so we filter only by its properties; however, plugins can use additional information (for example, Quote) for filtering.
 
 ## Using the price dimensions
 
@@ -43,7 +43,7 @@ The `PriceProduct` module has a set of plugins necessary for work with the price
 - `PriceDimensionConcreteSaverPluginInterface`—saves price for concrete product in the DB for the selected price dimension (based on `PriceProductTransfer->getPriceDimension())`
 - `PriceDimensionQueryCriteriaPluginInterface`—is used for expanding `PriceProductStoreQuery` using the new transfer object `QueryCriteriaTransfer`.
 
-Basing on `PriceProductCriteria`, you can build your own `QueryCriteria` to get prices using joins—all prices can be selected from needed price dimensions using only one SQL query. See the DB scheme:
+Based on `PriceProductCriteria`, you can build your own `QueryCriteria` to get prices using joins—all prices can be selected from needed price dimensions using only one SQL query. See the DB scheme:
 ![Database scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Module+Migration+Guides/Migration+Guide+-+PriceProduct/priece-dimensions-diagram.png)
 
 {% info_block errorBox "Important" %}

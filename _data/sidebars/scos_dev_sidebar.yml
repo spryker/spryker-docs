@@ -426,7 +426,7 @@ entries:
       include_versions:
       - "202005.0"
       - "202009.0"
-      - "202108.0"      
+      - "202108.0"
     - title: Quick Add to Cart
       url: /docs/scos/dev/feature-walkthroughs/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
       nested:
@@ -4213,8 +4213,6 @@ entries:
         nested:
         - title: Data Imports
           nested:
-          - title: "HowTo: Import delivery methods linked to store"
-            url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-delivery-methods-linked-to-store.html
           - title: "HowTo: Import warehouse data"
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html
           - title: "HowTo: Import packaging units"
@@ -4773,6 +4771,8 @@ entries:
           - "202108.0"
           - "202204.0"
     - title: Shipment
+      include_versions:
+      - "202108.0"
       nested:
       - title: Seven Senders
         nested:

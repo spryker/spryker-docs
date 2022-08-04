@@ -11,9 +11,8 @@ redirect_from:
   - /docs/sevensenders
   - /docs/en/sevensenders
   - /docs/scos/user/technology-partners/202200.0/shipment/seven-senders.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
+  - /docs/scos/user/technology-partners/202204.0/shipment/seven-senders.html
+
 ---
 
 ## Partner Information
@@ -37,11 +36,11 @@ YOUR ADVANTAGES:
 
 ## Related Developer guides
 
-* [Installing and configuring Seven Senders](/docs/scos/dev/technology-partner-guides/{{page.version}}/shipment/seven-senders/installing-and-configuring-seven-senders.html)
-* [Integrating Seven Senders](/docs/scos/dev/technology-partner-guides/{{page.version}}/shipment/seven-senders/integrating-seven-senders.html)
-* [Seven Senders — API requests](/docs/scos/dev/technology-partner-guides/{{page.version}}/shipment/seven-senders/seven-senders-api-requests.html)
-* [Seven Senders — Mappers](/docs/scos/dev/technology-partner-guides/{{page.version}}/shipment/seven-senders/seven-senders-mappers.html)
-* [Seven Senders — Persistence layer](/docs/scos/dev/technology-partner-guides/{{page.version}}/shipment/seven-senders/seven-senders-persistance-layer.html)
+* [Install and configure Seven Senders](/docs/pbc/all/carrier-management/third-party-integrations/seven-senders/install-and-configure-seven-senders.html)
+* [Integrate Seven Senders](/docs/pbc/all/carrier-management/third-party-integrations/seven-senders/integrate-seven-senders.html)
+* [Seven Senders — API requests](/docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders-api-requests.html)
+* [Seven Senders — Mappers](/docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders-mappers.html)
+* [Seven Senders — Persistence layer](/docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders-persistance-layer.html)
 
 ---
 

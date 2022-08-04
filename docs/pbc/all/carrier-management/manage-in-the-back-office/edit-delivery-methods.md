@@ -3,6 +3,8 @@ title: Edit delivery methods
 description: Learn how to edit delivery methods in the Back Office.
 last_updated: May 31, 2022
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202204.0/administration/delivery-methods/edit-delivery-methods.html
 ---
 
 This doc describes how to edit delivery methods.

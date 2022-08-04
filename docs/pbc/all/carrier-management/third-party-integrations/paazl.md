@@ -11,9 +11,7 @@ redirect_from:
   - /docs/paazl
   - /docs/en/paazl
   - /docs/scos/user/technology-partners/202200.0/shipment/paazl.html
-related:
-  - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partners.html
+  - /docs/scos/user/technology-partners/202204.0/shipment/paazl.html  
 ---
 
 ## Partner Information

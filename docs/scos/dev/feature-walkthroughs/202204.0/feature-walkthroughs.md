@@ -56,7 +56,7 @@ The [Resource Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart
 
 ## Catalog
 
-The [Catalog](/docs/scos/dev/feature-walkthroughs/{{page.version}}/catalog-feature-walkthrough.html) feature lets you build and organize products to meet your and your customer’s demands, primarily to make sure everyone can quickly find what they are looking for.
+The [Catalog](/docs/scos/dev/feature-walkthroughs/{{page.version}}/catalog-feature-walkthrough.html) feature lets you build and organize products to meet your and your customer's demands, primarily to make sure everyone can quickly find what they are looking for.
 
 ## Category Management
 
@@ -80,7 +80,7 @@ The [Comments](/docs/scos/dev/feature-walkthroughs/{{page.version}}/comments-fea
 
 ## Company Account
 
-The [Company Account](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/company-account-feature-walkthrough.html) feature lets you control user access to the system within an organization by configuring different permissions and roles for the company’s entities (units) and users.
+The [Company Account](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/company-account-feature-walkthrough.html) feature lets you control user access to the system within an organization by configuring different permissions and roles for the company's entities (units) and users.
 
 ### Company account: module relations
 
@@ -319,7 +319,7 @@ The [Scheduled Prices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/sche
 
 ## Search
 
-The [Search](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) feature enables you to control search and filtering preferences and customize them to improve your customers’ user experience and help them quickly find what they are looking for. The feature includes textual search, multi-language search, full-site search, filter by a category, dynamically, and by filters & facets.
+The [Search](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) feature enables you to control search and filtering preferences and customize them to improve your customers' user experience and help them quickly find what they are looking for. The feature includes textual search, multi-language search, full-site search, filter by a category, dynamically, and by filters & facets.
 
 ## Shared Carts
 
@@ -343,7 +343,7 @@ The [Shopping Lists](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shoppi
 
 ## Spryker Core Back Office
 
-The [Spryker Core Back Office](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html) feature adds a comprehensive, intuitive administration area that provides the product and content management capabilities, categories and navigation building blocks, search and filter customizations, barcode generator, order handling, company structure creation (for B2B users), merchant-buyer contracts’ setup.
+The [Spryker Core Back Office](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html) feature adds a comprehensive, intuitive administration area that provides the product and content management capabilities, categories and navigation building blocks, search and filter customizations, barcode generator, order handling, company structure creation (for B2B users), merchant-buyer contracts' setup.
 
 ### Users and rights overview
 

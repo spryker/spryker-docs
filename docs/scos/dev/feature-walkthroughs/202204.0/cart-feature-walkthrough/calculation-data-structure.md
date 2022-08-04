@@ -100,13 +100,13 @@ Each item that can have discounts applied has a `calculatedDiscounts` property, 
 | FIELD | DESCRIPTION |
 | --- | --- |
 | idSalesOrderItemOption (int)|Sales order item ID option stored after the order is placed.|
-|unitGrossPrice (int)|single item gross price. It’s set by `CartItemProductOptionPlugin` (cart expander).|
-|sumGrossPrice (int)|sum of items gross price. It’s set by `PriceCalculatorPlugin` (cart expander).|
+|unitGrossPrice (int)|single item gross price. It's set by `CartItemProductOptionPlugin` (cart expander).|
+|sumGrossPrice (int)|sum of items gross price. It's set by `PriceCalculatorPlugin` (cart expander).|
 |unitNetPrice (int)|Single item net price. It's set by CartItemProductOptionPlugin (cart expander)|
 |sumNetPrice (int)|sum of items net price. It's set by `PriceCalculatorPlugin` (cart expander).|
 |unitPrice (int)|single item price without assuming is it new or gross. This value must be used everywhere where price is displayed. It lets you switch tax mode without side effects. It's set by `PriceCalculatorPlugin` cart expander|
-|taxRate (float)|Tax rate in percentage. It’s set by `ProductOptionTaxRateCalculatorPlugin` (cart expander).|
-|calculatedDiscounts[] ([CalculatedDiscountTransfer](#calculated-discount-transfer))|Product Option calculated discount collection. It’s set by `DiscountCalculatorPlugin`.|
+|taxRate (float)|Tax rate in percentage. It's set by `ProductOptionTaxRateCalculatorPlugin` (cart expander).|
+|calculatedDiscounts[] ([CalculatedDiscountTransfer](#calculated-discount-transfer))|Product Option calculated discount collection. It's set by `DiscountCalculatorPlugin`.|
 |refundableAmount (int)|Item available refundable amount (order only), set by `RefundableAmountCalculatorPlugin`.|
 |unitTaxAmount (int)|Tax amount for single product option (order only), set by `TaxAmountCalculatorPlugin`.|
 |sumTaxAmount (int)|Tax amount for sum of product options (order only), set by `TaxAmountCalculatorPlugin`.|
@@ -119,7 +119,7 @@ Each item that can have discounts applied has a `calculatedDiscounts` property, 
 
 | FIELD | DESCRIPTION |
 | --- | --- |
-| amount (int)|Total discount amount used for this discount type. It’s set by `DiscountCalculatorPlugin`. |
+| amount (int)|Total discount amount used for this discount type. It's set by `DiscountCalculatorPlugin`. |
 
 ## Expense transfer
 

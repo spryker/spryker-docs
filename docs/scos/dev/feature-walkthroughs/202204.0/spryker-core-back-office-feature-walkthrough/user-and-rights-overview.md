@@ -29,7 +29,7 @@ It is important to distinguish between users and customers. A user works with th
 Users are assigned to groups. Groups are a collection of Roles—for example, customer-care, root, or 3rd party. Roles have Resources (rules) assigned to them. Resources (rules) are used to assign specific privileges to a Role for example, a Sales Representative Role or a System Administrator Role. Resources are always /module/controller/action and you can use * as placeholder.
 
 * `/customer/*/*` would mean everything in /customer.
-* `/customer/view/*` would mean a user can only see customers but can’t edit them.
+* `/customer/view/*` would mean a user can only see customers but can't edit them.
 
 ## Managing users
 

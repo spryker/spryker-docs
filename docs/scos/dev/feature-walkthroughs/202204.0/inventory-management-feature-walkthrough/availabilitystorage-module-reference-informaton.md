@@ -44,7 +44,7 @@ This information is used on the product details page when **Add to cart** is ren
 
 The events are triggered in these two cases:
 
-* Availability amount was 0, and now it’s more than 0.
-* Availability amount was more than 0, and now it’s 0.
+* Availability amount was 0, and now it's more than 0.
+* Availability amount was more than 0, and now it's 0.
 
 By default, the product quantity does not affect the *available* or *unavailable* product state. Even though the events are triggered when the product quantity changes from 0 to N or from N to 0, it's not the quantity change that triggers events, but the change of product status. You can change the default behavior for the events to be triggered whenever the quantity is changed. See [HowTo - Change the default behavior of event triggering in the AvailabilityStorage module](/docs/scos/dev/tutorials-and-howtos/howtos/howto-change-the-default-behavior-of-event-triggering-in-the-availabilitystorage-module.html) for details on how to do that.

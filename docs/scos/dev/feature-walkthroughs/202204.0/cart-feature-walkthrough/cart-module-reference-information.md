@@ -31,7 +31,7 @@ The `Cart` module in Zed has a cart operation class that handles cart operation 
 
 ## Cart persistence providers
 
-`Cart` has different persistence providers in Zed. By default, it only modifies the current `QuoteTransfer`, and it doesn’t persist the data. A use case example is building a cart where the cart items are persisted between log-ins. In this case, `StorageProviderInterface` needs to be implemented and the operation dependency must be changed.
+`Cart` has different persistence providers in Zed. By default, it only modifies the current `QuoteTransfer`, and it doesn't persist the data. A use case example is building a cart where the cart items are persisted between log-ins. In this case, `StorageProviderInterface` needs to be implemented and the operation dependency must be changed.
 
 ## Cart expanders
 

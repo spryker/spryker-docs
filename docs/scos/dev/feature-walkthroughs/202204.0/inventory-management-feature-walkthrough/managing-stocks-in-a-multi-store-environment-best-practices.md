@@ -37,7 +37,7 @@ In this case, you can have a common warehouse for all your stores but separate d
 
 ![image](https://confluence-connect.gliffy.net/embed/image/728ee336-f3e0-4d03-b519-24bc15566360.png?utm_medium=live&utm_source=custom)
 
-This approach is appropriate for big businesses that can’t have or don’t need multiple warehouses, but still wish to have the data of each store separated.
+This approach is appropriate for big businesses that can't have or don't need multiple warehouses, but still wish to have the data of each store separated.
 
 ### Implementation reference
 
@@ -82,7 +82,7 @@ When a buyer places an order, a reservation record is created in the database. T
 
 {% endinfo_block %}
 
-This scenario is good for medium and large online shops that want to have a common database of product, user, and other data. It’s a good option to, for example, allow registered users to buy from any store without having to re-register.
+This scenario is good for medium and large online shops that want to have a common database of product, user, and other data. It's a good option to, for example, allow registered users to buy from any store without having to re-register.
 
 ## Scenario 4: Warehouse and database are shared between stores
 
@@ -92,7 +92,7 @@ To enable this scenario for your project, a developer needs to configure it.
 
 {% endinfo_block %}
 
-Suppose you own a small or large e-commerce business and can’t have or don’t need separate warehouses per store. You also want all the data stored in one place. So, for example, if a product is unavailable in the DE store, but available in the AT store, a registered user can switch from the DE store to AT store and buy the product there.
+Suppose you own a small or large e-commerce business and can't have or don't need separate warehouses per store. You also want all the data stored in one place. So, for example, if a product is unavailable in the DE store, but available in the AT store, a registered user can switch from the DE store to AT store and buy the product there.
 
 In this instance, consider having a shared warehouse and a shared database for all stores. Since the warehouse is shared, for the correct product availability calculations, product reservations are synced between the stores:
 

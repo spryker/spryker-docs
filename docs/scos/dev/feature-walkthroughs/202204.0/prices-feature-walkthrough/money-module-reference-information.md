@@ -42,7 +42,7 @@ To get a money object, call the `MoneyFacade::from*()` methods:
 | MoneyFacade::fromString('1000') | string |
 | MoneyFacade::fromString('1000', 'EUR') | string and currency |
 
-All of them return a `MoneyTransfer` with a `MoneyTransfer::$amount` of `‘1000’`.
+All of them return a `MoneyTransfer` with a `MoneyTransfer::$amount` of `‘1000'`.
 
 {% info_block infoBox "" %}
 
@@ -50,8 +50,8 @@ The only difference between them is `MoneyTransfer::$currency`. This value diffe
 
 {% endinfo_block %}
 
-* In case you don’t pass a currency, the currency configured as default is used.
-* If you pass a specific currency, it is used instead of the one that’s configured as default.
+* In case you don't pass a currency, the currency configured as default is used.
+* If you pass a specific currency, it is used instead of the one that's configured as default.
 
 **`MoneyFacade::formatWithSymbol()`**
 
@@ -60,7 +60,7 @@ The `MoneyFacade::formatWithSymbol()` method accepts only one argument — a Mon
 {% info_block infoBox "Example" %}
 
 * MoneyTransfer::$amount = 1000
-* MoneyTransfer::$currency = ‘EUR’
+* MoneyTransfer::$currency = ‘EUR'
 * Current locale is de_DE
 * The output would be 10,00 €
 * If the current locale would be en_US, the output would be: €10.00 when passing the same object.

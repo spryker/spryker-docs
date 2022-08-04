@@ -1,7 +1,7 @@
 ---
 title: "Navigation module: reference information"
 last_updated: Aug 13, 2021
-description: The Navigation module provides database structure and a public API to manage what’s in the database, and a small toolkit for rendering navigation menus in the frontend
+description: The Navigation module provides database structure and a public API to manage what's in the database, and a small toolkit for rendering navigation menus in the frontend
 template: concept-topic-template
 ---
 
@@ -21,7 +21,7 @@ You can control and adjust Navigation node appearance and add icons by assigning
 
 This feature is shipped with three modules:
 
-* **Navigation module** provides database structure and a public API to manage what’s in the database. It also provides a small toolkit for rendering navigation menus in the frontend.
+* **Navigation module** provides database structure and a public API to manage what's in the database. It also provides a small toolkit for rendering navigation menus in the frontend.
 * **NavigationGui** provides a Zed UI to manage navigation menus.
 * **NavigationCollector** provides full collector logic for exporting navigation menus to the KV storage (Redis).
 

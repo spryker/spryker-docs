@@ -194,16 +194,16 @@ The following schema shows how content is managed with the help of templates wit
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/CMS/Templates+%26+Slots/Templates+%26+Slots+Feature+Overview/templates-and-slots.png)
 
 ## Visibility conditions
-When the content manager assigns a CMS block to a slot, it is displayed on all the pages to which the template with the slot is applied. To narrow down the number of pages to a needed selection, the content manager can define visibility conditions for each CMS block assigned to a slot. Visibility conditions are defined by selecting particular pages in which the content of a CMS block will be displayed. When visibility conditions are defined, the slot widget checks if the CMS block should be rendered in an opened page and either renders or skips it.
+When the content manager assigns a CMS block to a slot, it is displayed on all the pages to which the template with the slot is applied. To narrow down the number of pages to a needed selection, the content manager can define visibility conditions for each CMS block assigned to a slot. Visibility conditions are defined by selecting particular pages in which the content of a CMS block will be displayed. When visibility conditions are defined, the slot widget checks if the CMS block must be rendered in an opened page or not. Then, it either renders or skips it.
 
 Page identifiers used to define visibility conditions depend on the page type to which a template with slots is applied. You can check identifiers for each page type in the following table.
 
 | PAGE TYPE/IDENTIFIER | PRODUCT ID | CATEGORY ID | CMS PAGE ID |
 | --- | --- | --- | --- |
-| Home/Cart/Order Confirmation etc | - | - | - |
-| Product details page | v | v | - |
-| Category page | - | v | - |
-| CMS page | - | - | v |
+| Home/Cart/Order Confirmation  | - | - | - |
+| Product details page | &check; | &check; | - |
+| Category page | - | &check; | - |
+| CMS page | - | - | &check; |
 
 
 
@@ -287,7 +287,7 @@ Using the slot key property, the slot widget retrieves slot information from sto
 | content provider | relevant | Defines the content provider from which content is fetched. |
 | name | irrelevant | N/A |
 | description | irrelevant | N/A |
-| status | relevant | Defines if the content fetched for this slot should be rendered on the Storefront. |
+| status | relevant | Defines if the content fetched for this slot must be rendered on the Storefront. |
 
 ### Spryker CMS blocks
 

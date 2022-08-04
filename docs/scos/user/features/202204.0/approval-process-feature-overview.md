@@ -17,7 +17,7 @@ The *Approval Process* feature lets B2B customers have multiple people contribut
 
 Permissions related to the approval process are configured based on the restrictions applied to a [company role](/docs/scos/user/features/{{page.version}}/company-account-feature-overview/company-user-roles-and-permissions-overview.html). Generally, the approval process is initiated when the cart total exceeds a certain amount set in the *Buy up to grand total* permissions. For example, an employee in a company may have to send their order to the manager for approval if the total order cost is above a certain amount. Only after the manager has received the request and approved the order, the employee can proceed to the checkout.
 
-When a company user requests approval for their cart, the cart gets locked, and the users are not able to edit it.
+When a company user requests approval for their cart, the cart gets locked, and the users can't edit it.
 
 
 ## Approval Process concept
@@ -102,7 +102,7 @@ The company has the following company users:
 | Head of the department | Approver  | Has the *Approve up to grand total* permission set to €1000. |
 | Head of the department | Buyer  | Has the *Buy up to grand total* permission set to €1000.  |
 
-The approval process is optional if the buyer submits a quote with cart total that does not exceed the amount set in the *Buy up to grand total* permission. Thus, the buyer can either finish the checkout or send the request for approval to let the approver know about the upcoming expenses, for example. If, the buyer decides to send the approval request, they will not be able to complete the checkout until the request is approved.
+The approval process is optional if the buyer submits a quote with cart total that does not exceed the amount set in the *Buy up to grand total* permission. Thus, the buyer can either finish the checkout or send the request for approval to let the approver know about the upcoming expenses, for example. If the buyer decides to send the approval request, they can't complete the checkout until the request is approved.
 
 #### Case 2: Approval Process is initiated (multiple approvers)
 

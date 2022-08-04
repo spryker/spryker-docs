@@ -26,7 +26,7 @@ All your customers need to do is to agree to the newsletter subscription. Once t
 
 ## Transactional email management
 
-Keep your customers updated with a variety of emails you can either send via the internal SMTP system or an external email provider of your choice.
+Keep your customers updated with a variety of emails you can either send by the internal SMTP system or an external email provider of your choice.
 
 Automated Emails regarding order status, shipping, or transactions are just a few examples of how you can support the purchase process and increase brand loyalty.
 

@@ -11,8 +11,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Product Group | {{page.version}} |
-| Product Rating & Reviews | {{page.version}} |
+| Product Group | {{site.version}} |
+| Product Rating & Reviews | {{site.version}} |
 
 
 ### Set up behavior

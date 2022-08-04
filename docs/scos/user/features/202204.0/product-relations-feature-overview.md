@@ -54,7 +54,7 @@ On the Storefront, the related products are displayed on the product details pag
 
 ## Related product rules
 
-A related product rule is a condition that should be fulfilled by a product to be automatically added to related products of a product relation. The rules are defined as queries, which are built using the Query Builder in the Back Office.
+A related product rule is a condition that must be fulfilled by a product to be automatically added to related products of a product relation. The rules are defined as queries, which are built using the Query Builder in the Back Office.
 
 A product relation can have one or more rules. Example:
 
@@ -65,7 +65,7 @@ A product relation can have one or more rules. Example:
 
 In this example, only the products that belong to the *Cameras* category and the *Sony* brand are added to related products.
 
-You can combine the rules using *AND* and *OR* combination operators. When several rules are combined with the AND operator, all of them should be fulfilled for a product to be added to related products. When several rules are combined with the OR operator, at least one of them should be fulfilled for the product to be added to related products.
+You can combine the rules using *AND* and *OR* combination operators. When several rules are combined with the AND operator, all of them must be fulfilled for a product to be added to related products. When several rules are combined with the OR operator, at least one of them must be fulfilled for the product to be added to related products.
 
 In the following example, for a product to be added to related products, it must belong to both the *Sony* brand and *Cameras* category.
 

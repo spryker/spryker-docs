@@ -74,7 +74,7 @@ entries:
       - title: Create and restore databse backups
         url: /docs/cloud/dev/spryker-cloud-commerce-os/create-and-restore-database-backups.html
       - title: Define parameters and secretes in SCCOS environments
-        url: /docs/cloud/dev/spryker-cloud-commerce-os/define-parameters-and-secrets-in-a-sccos-environment.html
+        url: /docs/cloud/dev/spryker-cloud-commerce-os/define-parameters-and-secrets-in-sccos-environments.html
       - title: Verifying email addresses
         url: /docs/cloud/dev/spryker-cloud-commerce-os/verifying-email-addresses.html
       - title: Setting up notifications for 5xx errors

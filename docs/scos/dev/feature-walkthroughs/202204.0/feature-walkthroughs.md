@@ -221,7 +221,7 @@ The [Prices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature
 
 Handling monetary values can be a problem and is often quite hard. The [Money](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/money-module-reference-information.html) module makes it easier to work with monetary values.
 
-### PriceProduct module details: reference information
+### `PriceProduct` module details: reference information
 
 This document describes technical details of the [PriceProduct](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/priceproduct-module-details-reference-information.html) module that are valid since version 2 of the module.
 

@@ -34,7 +34,7 @@ Customers are assigned a default billing and a default shipping address. Custome
 
 ## Password recovery
 
-Similar to the customer registration flow, password restore makes use of a token that acts as a temporary password for the customer. An email is sent to the user to reset the password. The mail contains a link where the password recovery token is embedded. This token is generated specifically for this request. After the customer accesses the URL and enters necessary confirmation data, the customer password is updated.
+Similar to the customer registration flow, password restore makes use of a token that acts as a temporary password for the customer. An email is sent to the user to reset the password. The mail contains a link where the password recovery token is embedded. This token is generated specifically for this request. After the customer accesses the URL and enters necessary confirmation data, the customer's password is updated.
 
 Out of the box, Spryker provides the plugin `CustomerRestorePasswordMailTypePlugin` (Customer module) to handle a restore password email template. To enable it, register this plugin in your `MailDependencyProvider`—for example, `Pyz/Zed/Mail/MailDependencyProvider`).
 
@@ -48,7 +48,7 @@ By default, the `Customer` module leads to `'‹YVES HOST›/password/restore?to
 
 Customers can remove themselves by clicking **Delete Account** on the Yves Profile page. In addition, this functionality is also available in the Back Office (**Customer > View > Delete**).
 
-Complete removal from the customer table is strictly prohibited as it could affect the database consistency of e-commerce projects or even be illegal in terms of tax reporting and auditing. In Spryker, we don't remove identifiers from a customer table but anonymize private information. Information related to orders and bills will stay untouched.
+Complete removal from the customer table is strictly prohibited as it could affect the database consistency of e-commerce projects or even be illegal in terms of tax reporting and auditing. In Spryker, we don't remove identifiers from a customer table, but instead anonymize private information. Information related to orders and bills will stay untouched.
 
 {% info_block errorBox "Error" %}
 
@@ -76,16 +76,16 @@ Spryker consistently delivers the scalable operating system without coupling it 
 
 ### Case insensitive queries for email
 
-From version 7.0.0, on case-insensitive queries, using the `filterByEmail` conditions are enabled by default. If your version of the **Customer** module is lower, you are still able to use this feature.
+From version 7.0.0, on case-insensitive queries, using the `filterByEmail` conditions are enabled by default. If your version of the **Customer** module is older, you are still able to use this feature.
 
 To enable case insensitive fields in Propel for filtering queries, update the `PropelOrm` module to the 1.5.0 version.
 
 When the feature is enabled, add an attribute `caseInsensitive="true"` into the customer schema file on the project level (usually `src/Pyz/Zed/Customer/Persistence/Propel/Schema/spy_customer.schema.xml`).
 
-Finally run `vendor/bin/console propel:diff` and `vendor/bin/console propel:model:build` to update Propel models.
+Finally, run `vendor/bin/console propel:diff` and `vendor/bin/console propel:model:build` to update Propel models.
 
 ### Orders display on Customer View page
 
-From Customer module 7.6.0 (along with Sales module version 8.7.0) we support the display of customer orders in the *Customers* section of the Back Office. The *Customers View* page now has the Orders table listing all the orders of a respective customer.
+From Customer module 7.6.0 (along with Sales module version 8.7.0), we support the display of customer orders in the **Customers** section of the Back Office. The **Customers View** page now has the Orders table listing all the orders of a respective customer.
 
-To enable the feature to see extra blocks on the *Customer View* page in the Back Office, go to the `CustomerConfig` class in the `Customer` module and add the `getCustomerDetailExternalBlocksUrls` function. This function returns an array where the key is the block name and the value is the URL where this block exists. As for the orders, they are in `/sales/customer/customer-orders`, which in our routing architecture points to Sales `module` -> `CustomerController` -> `CustomerOrdersAction`. If this behavior needs to be extended further, all that’s needed is more key-value pairs for more controller actions that provide the data.
+To enable the feature to see extra blocks on the **Customer View** page in the Back Office, go to the `CustomerConfig` class in the `Customer` module and add the `getCustomerDetailExternalBlocksUrls` function. This function should return an array where the key is the block name and the value is the URL where this block exists. As for the orders, they are in `/sales/customer/customer-orders`, which in our routing architecture points to Sales `module` -> `CustomerController` -> `CustomerOrdersAction`. If this behavior needs to be extended further, all that’s needed is more key-value pairs for more controller actions that provide the data.

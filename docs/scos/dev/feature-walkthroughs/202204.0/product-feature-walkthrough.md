@@ -20,7 +20,7 @@ The following diagram shows the relations between abstract products and product 
 
 </div>
 
-The schema below illustrates the relations between discontinued products, abstract and concrete products:
+The schema below illustrates the relations between discontinued products, as well as abstract and concrete products:
 
 <div class="width-100">
 
@@ -29,7 +29,7 @@ The schema below illustrates the relations between discontinued products, abstra
 </div>
 
 
-The following schema  represents module relations of the _Quick Order_ page:
+The following schema represents module relations of the _Quick Order_ page:
 
 <div class="width-100">
 

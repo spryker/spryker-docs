@@ -37,24 +37,24 @@ The `Cart` module in Zed has a cart operation class that handles cart operation 
 
 Zed `Cart` modules can have expander plugins registered. Expander plugins expand the cart with additional data such as price information, product information and add product options.
 
-Currently we ship with a couple of plugins:
+Currently, we ship with a couple of plugins:
 
 | CART EXPANDER | DESCRIPTION |
 | --- | --- |
-| ProductCartPlugin | Adds product information to ItemTransfer (`idConcreteProduct`, `idAbstractProduct`, `abstractSku`, `name` and `taxRate`). |
+| ProductCartPlugin | Adds product information to `ItemTransfer` (`idConcreteProduct`, `idAbstractProduct`, `abstractSku`, `name` and `taxRate`). |
 | CartItemPricePlugin | Adds `unitGrossPrice` into `itemTransfer`. |
 | CartItemProductOptionPlugin | Adds the `productOption` collection into `ItemTransfer`. |
 | SkuGroupKeyPlugin | Appends SKU to the group key so item's int are grouped by SKU. |
 | CartItemGroupKeyOptionPlugin | Creates product option group key from option IDs, so items with different option combinations are placed separatly. |
 
-## Cart pre-checks
+## Cart prechecks
 
-The Zed `Cart` module has a list of pre-checks. These are validators that run when adding a new item to the cart. We have a list of default pre-checks and of course, you might want to add your own. To do so, just add a new plugin to `Pyz/Zed/Cart/CartDependencyProvider::getCartPreCheckPlugins()`.
+The Zed `Cart` module has a list of pre-checks. These are validators that run when adding a new item to the cart. We have a list of default prechecks, which you may add your own to. To do so, add a new plugin to `Pyz/Zed/Cart/CartDependencyProvider::getCartPreCheckPlugins()`.
 
-Currently, we ship a couple of default pre-checks:
+Currently, we ship a couple of default prechecks:
 
 | CART PRE-CHECK | DESCRIPTION |
 | --- | --- |
 | ProductExistsCartPreCheckPlugin | Checks that passed products exist in the DB. This plugin is provided by `ProductCartConnector` module. |
-| CartBundleAvailabilityPreCheckPlugin | Checks availability of new cart items (products and product bundles). Provided by the `ProductBundle` module. |
-| CheckAvailabilityPlugin | Checks availability of new cart items (only products). Provided by the `AvailabilityCartConnector` module. |
+| CartBundleAvailabilityPreCheckPlugin | Check availability of new cart items (products and product bundles). Provided by `ProductBundle` module. |
+| CheckAvailabilityPlugin | Check availability of new cart items (only products). Provided by `AvailabilityCartConnector` module. |

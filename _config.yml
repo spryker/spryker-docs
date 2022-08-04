@@ -49,6 +49,8 @@ exclude:
   - redirect.html
   - docs/scos/dev/drafts-dev/
   - docs/scos/dev/developers-corner/
+  - docs/marketplace/dev/glue-api-guides/upcoming-release/
+  - docs/scos/dev/glue-api-guides/upcoming-release/
 
 # these are the files and directories that jekyll will exclude from the build
 

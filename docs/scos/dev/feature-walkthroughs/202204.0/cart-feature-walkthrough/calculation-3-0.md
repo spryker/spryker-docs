@@ -54,7 +54,7 @@ interface CalculatorPluginInterface
 * `RemoveAllCalculatedDiscountsCalculatorPlugin` resets every `CalculatedDiscountTransfer`.
 * `ItemGrossAmountsCalculatorPlugin` calculates `sumGrossPrice` for each `ItemTransfer`.
 
-`ItemTransfer::sumGrossPrice = ItemTransfer::unitGrossPrice * ItemTransfer::quantity`
+**`ItemTransfer::sumGrossPrice`** ` = ItemTransfer::unitGrossPrice * ItemTransfer::quantity`
 
 * `ProductOptionGrossSumCalculatorPlugin` calculates `unitGrossPriceWithProductOptions`, `sumGrossPriceWithProductOptions` for `ItemTransfer` and `sumGrossPrice` for `ProductOptionTransfer` calculates `unitGrossPriceWithProductOptions`, `sumGrossPriceWithProductOptions` for `ItemTransfer` and `sumGrossPrice` for `ProductOptionTransfer`.
 
@@ -109,7 +109,7 @@ This section describes the calculation data structure.
 
 {% info_block warningBox "" %}
 
-`QuoteTransfer` is the main data transfer object used in Cart, Calculation, Checkout, and when an order is placed. This object is created when the first item is added to the cart. The entire data object is stored into the session. It consists of the following:
+`QuoteTransfer` is the main data transfer object used in Cart, Calculation, and Checkout as well as when an order is placed. This object is created when the first item is added to the cart. The entire data object is stored into the session. It consists of the following:
 
 {% endinfo_block %}
 
@@ -142,7 +142,11 @@ expenses ([ExpenseTransfer](#expense-transfer))||
 
 ### Tax total transfer
 
-`TaxTotalsTransfer` holds taxRate and taxAmount used for grandTotal.
+{% info_block infoBox "Info" %}
+
+`TaxTotalsTransfer` holds the `taxRate` and `taxAmount` used for `grandTotal`.
+
+{% endinfo_block %}
 
 | FIELD | DESCRIPTION |
 | --- | --- |
@@ -165,7 +169,7 @@ expenses ([ExpenseTransfer](#expense-transfer))||
 |abstractSku (string)|Abstract product sku.|
 |variety (string)|Used when an item is in a module.|
 |status (string)|State machine state when an item used as order item.|
-|addedAt (string)|Used in wishlist to have date when an item was added|
+|addedAt (string)|Used in a wishlist to have date when an item was added|
 |productConcrete (ProductConcreteTransfer)|Concrete product details added to the wishlist.|
 |unitGrossPrice (int)|Single item gross price. It’s set with the `CartItemPricePlugin` cart expander plugin.|
 |sumGrossPrice (int)|Sum of items gross price. Calculated with `ExpensesGrossSumAmountCalculatorPlugin`.|
@@ -200,7 +204,11 @@ Each item that can have discounts applied has the `calculatedDiscounts` property
 
 ### Product option transfer
 
-`ProductOptionTransfer`, some items may have product option collection attached which also have amounts calculated.
+{% info_block infoBox "Info" %}
+
+`ProductOptionTransfer`: some items may have product option collection attached to them which also have amounts calculated.
+
+{% endinfo_block %}
 
 | FIELD | DESCRIPTION |
 | --- | --- |
@@ -215,7 +223,11 @@ Each item that can have discounts applied has the `calculatedDiscounts` property
 
 ### Discount transfer
 
-`DiscountTransfer` is a collection of discounts used in all `QuoteTransfer` discountable items. It can be `voucherDiscounts` or `cartRuleDiscounts`.
+{% info_block warningBox "" %}
+
+`DiscountTransfer` is a collection of discounts used in all `QuoteTransfer` discountable items such as`voucherDiscounts` or `cartRuleDiscounts`.
+
+{% endinfo_block %}
 
 | FIELD | DESCRIPTION |
 | --- | --- |
@@ -235,18 +247,19 @@ Each item that can have discounts applied has the `calculatedDiscounts` property
 
 | FIELD | DESCRIPTION |
 | --- | --- |
-| idExpense (int)|Unique identifier of the expense|
-|sumGrossPrice (int)|Sum of item gross price. It’s set by `ExpensesGrossSumAmountCalculatorPlugin`.|
-|unitGrossPrice (string)|Single expense price—for example, shipment expenses are set in the ShipmentStep|
-|type (string)|Type of expense (shipping) |
-|taxRate (int)|Tax in percents|
-|calculatedDiscounts (CalculatedDiscountTransfer[]|List of applied discounts for this item|
-|quantity (int)|Number of items|
-|IDSalesExpense (int)|ID of expense as stored in the sales_expense|
-|unitGrossPriceWithDiscounts (int)|Single item price after discounts. Set by `SumGrossCalculatedDiscountAmountCalculator` and `OrderAmountAggregator/ItemDiscounts`.|
-|sumGrossPriceWithDiscounts (int)|Sum off all item prices after discounts. Set by `SumGrossCalculatedDiscountAmountCalculator` and `OrderAmountAggregator/ItemDiscounts`.|
-|unitTaxAmountWithDiscounts (int)|Tax amount for single item after discounts(order only) |
-|sumTaxAmountWithDiscounts (int)|Tax amount for sum of items after discounts(order only) |
-|refundableAmount (int)|Total refundable amount for this item (order only) |
-|canceledAmount (int)|Total cancelled amount for this item (order only) |
-|unitTaxAmount (int)|Tax amount for single item (order only) sumTaxAmount (int) | tax amount for sum of items (order only) |
+| idExpense (int) | Unique identifier of the expense. |
+|sumGrossPrice (int) | Sum of item gross price. It’s set by `ExpensesGrossSumAmountCalculatorPlugin`. |
+| unitGrossPrice (string) | Single expense price—for example, shipment expenses are set in the `ShipmentStep`.|
+| type (string) | Type of expense (shipping). |
+| taxRate (int) | Tax in percents. |
+| calculatedDiscounts (CalculatedDiscountTransfer[] | List of applied discounts for this item. |
+| quantity (int) | Number of items. |
+| IDSalesExpense (int) | ID of expense as stored in `sales_expense`. |
+| unitGrossPriceWithDiscounts (int) | Single item price after discounts. Set by `SumGrossCalculatedDiscountAmountCalculator` and `OrderAmountAggregator/ItemDiscounts`. |
+| sumGrossPriceWithDiscounts (int)  |Sum off all item prices after discounts. Set by `SumGrossCalculatedDiscountAmountCalculator` and `OrderAmountAggregator/ItemDiscounts`.|
+| unitTaxAmountWithDiscounts (int) | Tax amount for single item after discounts(order only). |
+| sumTaxAmountWithDiscounts (int). | Tax amount for sum of items after discounts(order only). |
+| refundableAmount (int) | Total refundable amount for this item (order only). |
+| canceledAmount (int) | Total cancelled amount for this item (order only). |
+| unitTaxAmount (int) | Tax amount for single item (order only). |
+| sumTaxAmount (int) | Tax amount for sum of items (order only). |

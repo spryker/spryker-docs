@@ -332,13 +332,13 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 **Pyz/Yves/CheckoutPage/Theme/default/templates/page-layout-checkout/page-layout-checkout.twig**
 
 ```twig
-{% extends template('page-layout-checkout', '@SprykerShop:CheckoutPage') %}
+{% raw %}{%{% endraw %} extends template('page-layout-checkout', '@SprykerShop:CheckoutPage') {% raw %}%}{% endraw %}
 
-{% block headScripts %}
+{% raw %}{%{% endraw %} block headScripts {% raw %}%}{% endraw %}
     {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
-{% endblock %}
+{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
 6. Extend payment Twig with CrefoPay payment methods:
@@ -348,9 +348,9 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 **Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig**
 
 ```twig
-{% extends view('payment', '@SprykerShop:CheckoutPage') %}
+{% raw %}{%{% endraw %} extends view('payment', '@SprykerShop:CheckoutPage') {% raw %}%}{% endraw %}
 
-{% define data = {
+{% raw %}{%{% endraw %} define data = {
     customForms: {
         'crefoPay/bill': ['bill', 'crefoPay'],
         'crefoPay/cash-on-delivery': ['cash-on-delivery', 'crefoPay'],
@@ -361,17 +361,17 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
         'crefoPay/credit-card': ['credit-card', 'crefoPay'],
         'crefoPay/credit-card-3d': ['credit-card-3d', 'crefoPay']
     },
-} %}
+} {% raw %}%}{% endraw %}
 
-{% block content %}
-    {% include molecule('script-loader') with {
+{% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}
+    {% raw %}{%{% endraw %} include molecule('script-loader') with {
         class: 'js-crefopay-payment-form__script-loader',
         attributes: {
             src: 'https://libs.crefopay.de/3.0/secure-fields.js'
         },
-    } only %}
+    } only {% raw %}%}{% endraw %}
 
-    {% include atom('crefopay-checkbox-helper', 'CrefoPay') with {
+    {% raw %}{%{% endraw %} include atom('crefopay-checkbox-helper', 'CrefoPay') with {
         attributes: {
             'trigger-selector': '.toggler-radio__input',
             'payment-container-selector': '.js-payment-method-crefoPay',
@@ -379,9 +379,9 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
             'custom-attribute-name': 'data-crefopay',
             'custom-attribute-value': 'paymentMethod',
         },
-    } only %}
+    } only {% raw %}%}{% endraw %}
 
-    {% embed molecule('form') with {
+    {% raw %}{%{% endraw %} embed molecule('form') with {
         modifiers: ['checkout-actions', 'checkout-form-elements'],
         data: {
             form: data.forms.payment,
@@ -406,13 +406,13 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
         embed: {
             customForms: data.customForms,
         },
-    } only %}
-        {% block fieldset %}
-            {% for name, choices in data.form.paymentSelection.vars.choices %}
-                {% set paymentProviderIndex = loop.index0 %}
+    } only {% raw %}%}{% endraw %}
+        {% raw %}{%{% endraw %} block fieldset {% raw %}%}{% endraw %}
+            {% raw %}{%{% endraw %} for name, choices in data.form.paymentSelection.vars.choices {% raw %}%}{% endraw %}
+                {% raw %}{%{% endraw %} set paymentProviderIndex = loop.index0 {% raw %}%}{% endraw %}
 
                 <div class="js-payment-method-{% raw %}{{{% endraw %} name {% raw %}}}{% endraw %}">
-                    {% embed molecule('list-switches') with {
+                    {% raw %}{%{% endraw %} embed molecule('list-switches') with {
                         modifiers: ['register-type', 'layout-width', 'one-column'],
                         data: {
                             form: data.form.paymentSelection,
@@ -421,9 +421,9 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
                             targetClassName: 'js-payment-method-',
                             providerIndex: paymentProviderIndex,
                         },
-                    } only %}
-                        {% block item %}
-                            {% set fullIndex = loop.index ~ '-' ~ data.providerIndex %}
+                    } only {% raw %}%}{% endraw %}
+                        {% raw %}{%{% endraw %} block item {% raw %}%}{% endraw %}
+                            {% raw %}{%{% endraw %} set fullIndex = loop.index ~ '-' ~ data.providerIndex {% raw %}%}{% endraw %}
 
                             {% raw %}{{{% endraw %} form_row(data.form[key], {
                                 label: data.form[key].vars.label,
@@ -439,17 +439,17 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
                                 },
                             }) {% raw %}}}{% endraw %}
 
-                            {% if key == 0 %}
+                            {% raw %}{%{% endraw %} if key == 0 {% raw %}%}{% endraw %}
                                 <div class="{% raw %}{{{% endraw %} config.name {% raw %}}}{% endraw %}__img-wrap">
                                     <img class="{% raw %}{{{% endraw %} config.name {% raw %}}}{% endraw %}__img" src="{% raw %}{{{% endraw %} publicPath('images/logo-visa.png') {% raw %}}}{% endraw %}" alt="Visa">
                                     <img class="{% raw %}{{{% endraw %} config.name {% raw %}}}{% endraw %}__img" src="{% raw %}{{{% endraw %} publicPath('images/logo-mastercard.png') {% raw %}}}{% endraw %}" alt="Mastercard">
                                 </div>
-                            {% endif %}
-                        {% endblock %}
-                    {% endembed %}
+                            {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
+                        {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+                    {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
 
-                    {% for key, choice in choices %}
-                        {% embed molecule('form') with {
+                    {% raw %}{%{% endraw %} for key, choice in choices {% raw %}%}{% endraw %}
+                        {% raw %}{%{% endraw %} embed molecule('form') with {
                             class: 'spacing-bottom spacing-bottom--bigger',
                             modifiers: ['grid-indent', 'checkout-form-elements'],
                             data: {
@@ -470,29 +470,29 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
                                 index: loop.index ~ '-' ~ paymentProviderIndex,
                                 toggler: data.form.paymentSelection[key],
                             },
-                        } only %}
-                            {% block fieldset %}
-                                <div class="js-payment-method-{% raw %}{{{% endraw %} embed.index {% raw %}}}{% endraw %} js-payment-form-{% raw %}{{{% endraw %} embed.name {% raw %}}}{% endraw %} {% if embed.index != '1-0' %} is-hidden{% endif %}">
+                        } only {% raw %}%}{% endraw %}
+                            {% raw %}{%{% endraw %} block fieldset {% raw %}%}{% endraw %}
+                                <div class="js-payment-method-{% raw %}{{{% endraw %} embed.index {% raw %}}}{% endraw %} js-payment-form-{% raw %}{{{% endraw %} embed.name {% raw %}}}{% endraw %} {% raw %}{%{% endraw %} if embed.index != '1-0' {% raw %}%}{% endraw %} is-hidden{% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}">
                                     <h2 class="title title--primary">{% raw %}{{{% endraw %} embed.toggler.vars.label | trans {% raw %}}}{% endraw %}</h2>
 
-                                    {% if embed.customForms[data.form.vars.template_path] is not defined %}
+                                    {% raw %}{%{% endraw %} if embed.customForms[data.form.vars.template_path] is not defined {% raw %}%}{% endraw %}
                                         {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
-                                    {% else %}
-                                        {% set viewName = embed.customForms[data.form.vars.template_path] | first %}
-                                        {% set moduleName = embed.customForms[data.form.vars.template_path] | last %}
-                                        {% include view(viewName, moduleName) ignore missing with {
+                                    {% raw %}{%{% endraw %} else {% raw %}%}{% endraw %}
+                                        {% raw %}{%{% endraw %} set viewName = embed.customForms[data.form.vars.template_path] | first %}
+                                        {% raw {% raw %}%}{% endraw %}{%{% endraw %} set moduleName = embed.customForms[data.form.vars.template_path] | last {% raw %}%}{% endraw %}
+                                        {% raw %}{%{% endraw %} include view(viewName, moduleName) ignore missing with {
                                             form: data.form.parent,
-                                        } only %}
-                                    {% endif %}
+                                        } only {% raw %}%}{% endraw %}
+                                    {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
                                 </div>
-                            {% endblock %}
-                        {% endembed %}
-                    {% endfor %}
+                            {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+                        {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
+                    {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
                 </div>
-            {% endfor %}
-        {% endblock %}
-    {% endembed %}
-{% endblock %}
+            {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
+        {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+    {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
+{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
 7. In the project root, add an alias for the `CrefoPay` module to `tsconfig.json`:
@@ -559,32 +559,32 @@ export default register('crefopay-checkbox-helper', () => import(/* webpackMode:
 <summary markdown='span'>\Pyz\Yves\CrefoPay\Theme\default\components\molecule\crefopay-payment-form\crefopay-payment-form.twig</summary>
 
 ```twig
-{% extends model('component') %}
+{% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}
 
-{% define config = {
+{% raw %}{%{% endraw %} define config = {
     name: 'crefopay-payment-form',
     tag: 'crefopay-payment-form',
-} %}
+} {% raw %}%}{% endraw %}
 
-{% define data = {
+{% raw %}{%{% endraw %} define data = {
     paymentMethodSubForm: required,
     shopPublicKey: required,
     orderId: required,
     fields: [],
     endpointUrl: required,
     placeholders: required
-} %}
+} {% raw %}%}{% endraw %}
 
-{% set crefoPayConfig = {
+{% raw %}{%{% endraw %} set crefoPayConfig = {
     url: data.endpointUrl,
     placeholders: {
         accountHolder: data.placeholders.accountHolder,
         number: data.placeholders.number,
         cvv: data.placeholders.cvv
     }
-} %}
+} {% raw %}%}{% endraw %}
 
-{% define attributes = {
+{% raw %}{%{% endraw %} define attributes = {
     'shop-public-key': data.shopPublicKey,
     'order-id': data.orderId,
     'crefo-pay-config': crefoPayConfig | json_encode(),
@@ -593,32 +593,32 @@ export default register('crefopay-checkbox-helper', () => import(/* webpackMode:
     'payment-container-selector': '.form',
     'payment-toggler-selector': '[class*="js-payment-form-crefoPay"]',
     'toggle-class-to-check': 'is-hidden'
-} %}
+} {% raw %}%}{% endraw %}
 
-{% block body %}
-    {% macro crefopayField(name, attribute, blockName) %}
+{% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}
+    {% raw %}{%{% endraw %} macro crefopayField(name, attribute, blockName) {% raw %}%}{% endraw %}
         <div class="spacing-y">
             <label class="label label--required">{% raw %}{{{% endraw %} name {% raw %}}}{% endraw %}</label>
             <div class="{% raw %}{{{% endraw %} blockName {% raw %}}}{% endraw %}__input-container" data-crefopay-placeholder="{% raw %}{{{% endraw %} attribute {% raw %}}}{% endraw %}"></div>
         </div>
-    {% endmacro %}
+    {% raw %}{%{% endraw %} endmacro {% raw %}%}{% endraw %}
 
-    {% block requestForm %}
-        {% import _self as macros %}
+    {% raw %}{%{% endraw %} block requestForm {% raw %}%}{% endraw %}
+        {% raw %}{%{% endraw %} import _self as macros {% raw %}%}{% endraw %}
 
         <div class="is-hidden">
             {% raw %}{{{% endraw %} form_widget(data.paymentMethodSubForm) {% raw %}}}{% endraw %}
         </div>
 
-        {% for field in data.fields %}
-            {% raw %}{{{% endraw %} macros.crefopayField(field.name, field.attribute, config.name) {% raw %}}}{% endraw %}
-        {% endfor %}
+        {% raw %}{%{% endraw %} for field in data.fields {% raw %}%}{% endraw %}
+            {% raw %}{%{% endraw %} raw %}{{{% endraw %} macros.crefopayField(field.name, field.attribute, config.name) {% raw %}}}{% endraw %}
+        {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
 
         <div class="{% raw %}{{{% endraw %} config.name {% raw %}}}{% endraw %}__error {% raw %}{{{% endraw %} config.jsName {% raw %}}}{% endraw %}__error spacing-y is-hidden">
             {% raw %}{{{% endraw %} 'crefopay.required_notification' | trans {% raw %}}}{% endraw %}
         </div>
-    {% endblock %}
-{% endblock %}
+    {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
+{% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
 </details>

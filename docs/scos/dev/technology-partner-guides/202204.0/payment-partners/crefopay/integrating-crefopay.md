@@ -335,7 +335,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 {% extends template('page-layout-checkout', '@SprykerShop:CheckoutPage') %}
 
 {% block headScripts %}
-    {{ parent() }}
+    {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
 {% endblock %}
@@ -411,7 +411,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
             {% for name, choices in data.form.paymentSelection.vars.choices %}
                 {% set paymentProviderIndex = loop.index0 %}
 
-                <div class="js-payment-method-{{ name }}">
+                <div class="js-payment-method-{% raw %}{{{% endraw %} name {% raw %}}}{% endraw %}">
                     {% embed molecule('list-switches') with {
                         modifiers: ['register-type', 'layout-width', 'one-column'],
                         data: {
@@ -425,7 +425,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
                         {% block item %}
                             {% set fullIndex = loop.index ~ '-' ~ data.providerIndex %}
 
-                            {{ form_row(data.form[key], {
+                            {% raw %}{{{% endraw %} form_row(data.form[key], {
                                 label: data.form[key].vars.label,
                                 required: false,
                                 component: data.targetClassName ? molecule('toggler-radio'),
@@ -437,12 +437,12 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
                                     checked: choice.value == data.providerIndex,
                                     'target-payment-form-class-name': 'js-payment-method-' ~ loop.index ~ '-' ~ data.providerIndex,
                                 },
-                            }) }}
+                            }) {% raw %}}}{% endraw %}
 
                             {% if key == 0 %}
-                                <div class="{{ config.name }}__img-wrap">
-                                    <img class="{{ config.name }}__img" src="{{ publicPath('images/logo-visa.png') }}" alt="Visa">
-                                    <img class="{{ config.name }}__img" src="{{ publicPath('images/logo-mastercard.png') }}" alt="Mastercard">
+                                <div class="{% raw %}{{{% endraw %} config.name {% raw %}}}{% endraw %}__img-wrap">
+                                    <img class="{% raw %}{{{% endraw %} config.name {% raw %}}}{% endraw %}__img" src="{% raw %}{{{% endraw %} publicPath('images/logo-visa.png') {% raw %}}}{% endraw %}" alt="Visa">
+                                    <img class="{% raw %}{{{% endraw %} config.name {% raw %}}}{% endraw %}__img" src="{% raw %}{{{% endraw %} publicPath('images/logo-mastercard.png') {% raw %}}}{% endraw %}" alt="Mastercard">
                                 </div>
                             {% endif %}
                         {% endblock %}
@@ -472,11 +472,11 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
                             },
                         } only %}
                             {% block fieldset %}
-                                <div class="js-payment-method-{{ embed.index }} js-payment-form-{{ embed.name }} {% if embed.index != '1-0' %} is-hidden{% endif %}">
-                                    <h2 class="title title--primary">{{ embed.toggler.vars.label | trans }}</h2>
+                                <div class="js-payment-method-{% raw %}{{{% endraw %} embed.index {% raw %}}}{% endraw %} js-payment-form-{% raw %}{{{% endraw %} embed.name {% raw %}}}{% endraw %} {% if embed.index != '1-0' %} is-hidden{% endif %}">
+                                    <h2 class="title title--primary">{% raw %}{{{% endraw %} embed.toggler.vars.label | trans {% raw %}}}{% endraw %}</h2>
 
                                     {% if embed.customForms[data.form.vars.template_path] is not defined %}
-                                        {{ parent() }}
+                                        {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
                                     {% else %}
                                         {% set viewName = embed.customForms[data.form.vars.template_path] | first %}
                                         {% set moduleName = embed.customForms[data.form.vars.template_path] | last %}
@@ -598,8 +598,8 @@ export default register('crefopay-checkbox-helper', () => import(/* webpackMode:
 {% block body %}
     {% macro crefopayField(name, attribute, blockName) %}
         <div class="spacing-y">
-            <label class="label label--required">{{ name }}</label>
-            <div class="{{ blockName }}__input-container" data-crefopay-placeholder="{{ attribute }}"></div>
+            <label class="label label--required">{% raw %}{{{% endraw %} name {% raw %}}}{% endraw %}</label>
+            <div class="{% raw %}{{{% endraw %} blockName {% raw %}}}{% endraw %}__input-container" data-crefopay-placeholder="{% raw %}{{{% endraw %} attribute {% raw %}}}{% endraw %}"></div>
         </div>
     {% endmacro %}
 
@@ -607,15 +607,15 @@ export default register('crefopay-checkbox-helper', () => import(/* webpackMode:
         {% import _self as macros %}
 
         <div class="is-hidden">
-            {{ form_widget(data.paymentMethodSubForm) }}
+            {% raw %}{{{% endraw %} form_widget(data.paymentMethodSubForm) {% raw %}}}{% endraw %}
         </div>
 
         {% for field in data.fields %}
-            {{ macros.crefopayField(field.name, field.attribute, config.name) }}
+            {% raw %}{{{% endraw %} macros.crefopayField(field.name, field.attribute, config.name) {% raw %}}}{% endraw %}
         {% endfor %}
 
-        <div class="{{ config.name }}__error {{ config.jsName }}__error spacing-y is-hidden">
-            {{ 'crefopay.required_notification' | trans }}
+        <div class="{% raw %}{{{% endraw %} config.name {% raw %}}}{% endraw %}__error {% raw %}{{{% endraw %} config.jsName {% raw %}}}{% endraw %}__error spacing-y is-hidden">
+            {% raw %}{{{% endraw %} 'crefopay.required_notification' | trans {% raw %}}}{% endraw %}
         </div>
     {% endblock %}
 {% endblock %}

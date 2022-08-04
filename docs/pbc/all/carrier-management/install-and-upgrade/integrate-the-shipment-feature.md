@@ -16,13 +16,13 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/shipment-feature-integration.html  
 related:
   - title: Glue API - Shipment feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-shipment-feature-integration.html
+    link: docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html
   - title: Shipment feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/shipment-feature-walkthrough.html
   - title: Shipment feature overview
     link: docs/scos/user/features/page.version/shipment-feature-overview.html
   - title: Shipment + Approval Process feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/shipment-approval-process-feature-integration.html
+    link: docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-approval-process-feature.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-shipment-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-shipment-feature.md -->

@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-shipment-pricecsv
   - /docs/file-details-shipment-pricecsv
   - /docs/en/file-details-shipment-pricecsv
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-shipment-price.csv.html  
 ---
 
 This document describes the `shipment_price.csv` file to configure the [Shipment Price](/docs/scos/user/features/{{page.version}}/shipment-feature-overview.html) information in your Spryker Demo Shop.
@@ -25,7 +26,7 @@ The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| shipment_method_key | &check; | String  | Value previously imported already by its data importer using the [shipment.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html) file.| Identifier of the shipment method. |
+| shipment_method_key | &check; | String  | Value previously imported already by its data importer using the [shipment.csv](/docs/pbc/all/carrier-management/import-and-export-data/file-details-shipment.csv.html) file.| Identifier of the shipment method. |
 | store | &check; | String | Value previously defined in the *stores.php* project configuration. | Name of the store. |
 | currency | &check; | String | Value previously imported already by its data importer using the [currency.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-currency.csv.html) file. | Currency ISO code. |
 | value_net | No |Integer | Empty price values will be imported as zeros. | Net value of the shipment cost. |
@@ -35,7 +36,7 @@ The file should have the following parameters:
 
 This file has the following dependencies:
 
-* [shipment.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html)
+* [shipment.csv](/docs/pbc/all/carrier-management/import-and-export-data/file-details-shipment.csv.html)
 * [currency.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-currency.csv.html)
 * *stores.ph*p configuration file of the demo shop PHP project
 

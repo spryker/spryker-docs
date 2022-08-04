@@ -11,7 +11,7 @@ This document describes how to submit checkout data with shipment and shipment m
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html)
-* [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html)
+* [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html)
 
 
 ## Submit checkout data

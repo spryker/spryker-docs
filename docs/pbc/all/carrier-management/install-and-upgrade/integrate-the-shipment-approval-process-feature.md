@@ -1,5 +1,5 @@
 ---
-title: Shipment + Approval Process feature integration
+title: Integrate the Shipment + Approval Process feature
 description: This integration guide provides step-by-step instructions on integrating Shipment and Approval Process connector in Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -11,11 +11,12 @@ redirect_from:
   - /docs/shipment-approval-process-feature-integration
   - /docs/en/shipment-approval-process-feature-integration
   - /docs/scos/dev/feature-integration-guides/201907.0/shipment-approval-process-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/shipment-approval-process-feature-integration.html
 related:
   - title: Approval Process feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/approval-process-feature-integration.html
   - title: Shipment feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/shipment-feature-integration.html
+    link: docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html
   - title: Shipment feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/shipment-feature-walkthrough.html
   - title: Approval Process feature walkthrough

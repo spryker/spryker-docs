@@ -46,11 +46,11 @@ You can give shipment discounts based on the carrier, shipment method, or cart v
 
 ## Related Business User articles
 
-|BACK OFFICE USER GUIDES|
+|BACK OFFICE USER GUIDES| THIRD-PARTY INTEGRATIONS |
 |---|
-| [Add carrier companies](/docs/pbc/all/carrier-management/manage-in-the-back-office/add-carrier-companies.html)  |
-| [Add delivery methods](/docs/pbc/all/carrier-management/manage-in-the-back-office/add-delivery-methods.html)  |
-| [Edit delivery methods](/docs/pbc/all/carrier-management/manage-in-the-back-office/edit-delivery-methods.html)  |
+| [Add carrier companies](/docs/pbc/all/carrier-management/manage-in-the-back-office/add-carrier-companies.html)  | [Seven Senders](/docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders.html) |
+| [Add delivery methods](/docs/pbc/all/carrier-management/manage-in-the-back-office/add-delivery-methods.html)  | [Paazl](/docs/pbc/all/carrier-management/third-party-integrations/paazl.html) |
+| [Edit delivery methods](/docs/pbc/all/carrier-management/manage-in-the-back-office/edit-delivery-methods.html)  | [Paqato](/docs/pbc/all/carrier-management/third-party-integrations/paqato.html) | |
 
 ## Related Developer articles
 

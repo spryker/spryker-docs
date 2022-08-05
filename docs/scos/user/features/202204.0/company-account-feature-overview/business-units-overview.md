@@ -13,9 +13,9 @@ redirect_from:
   - /docs/scos/user/features/202200.0/company-account-feature-overview/business-units-overview.html
 ---
 
-Once a company administrator has created a company which has been activated and approved in the Back Office, they can start building the organizational structure of their company in **My Company** section of the web-shop.
+Once a company administrator has created a company that has been activated and approved in the Back Office, they can start building their company's organizational structure in the **My Company** section of the webshop.
 
-The very first step of defining the company structure is setting up business units and creating the business units hierarchy.
+The very first step of defining the company structure is setting up business units and creating the hierarchy of business units.
 
 The **business units hierarchy** poses a system in which business units are arranged into levels:
 
@@ -23,9 +23,9 @@ The **business units hierarchy** poses a system in which business units are arra
 * Lower level
 * Same level
 
-The business unit of the upper level is referred to as **parent business unit**, and the business units below it are its **child business units**.
+The business unit of the upper level is referred to as a *parent business unit*, and the business units below it are its *child business units*.
 
-Upon company registration, a default business unit named "Headquarters" is automatically created under Business Units section.
+Upon company registration, a default business unit named "Headquarters" is automatically created under the **Business Units** section.
 
 ![default-business-unit_1_.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/default-business-unit_1_.png)
 
@@ -35,7 +35,7 @@ To create a business unit, its name and email address must be specified.
 
 {% info_block infoBox %}
 
-The user can also select a parent business unit of the newly created unit. If it is not selected, the new business unit will be created with "0" level in hierarchy, for example, as a parent.
+The user can also select a parent business unit of the newly created unit. If it is not specified, the new business unit is created with the "0" level in the hierarchy—for example, as a parent.
 
 {% endinfo_block %}
 
@@ -56,7 +56,7 @@ Example:
 The following are special characteristics of business units:
 
 * You can't assign a parent business unit to its child.
-* Deleting a parent business unit does not delete its children. The hierarchy is kept, and just goes one level up.
+* Deleting a parent business unit does not delete its children. The hierarchy is kept and just goes one level up.
 
 {% info_block infoBox %}
 
@@ -69,11 +69,11 @@ A business unit's children that are one level below it, become 0 level parent bu
 
 ![business-units-address.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/business-units-address.png)
 
-*  The addresses can also be unassigned by clearing the respective address's check box under the Assign Addresses section and clicking Submit.
+*  The addresses can also be unassigned by clearing the check box of the respective address under the **Assign Addresses** section and clicking **Submit**.
 
 ![unassign-address.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/unassign-address.png)
 
-This will move the address to Unassigned addresses section.
+This moves the address to the **UNASSIGNED ADDRESSES** section.
 
 ![unassigned-addresses.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Company+Account+Management/Business+Unit+Management/Business+Units+Management+Feature+Overview/unassigned-addresses.png)
 

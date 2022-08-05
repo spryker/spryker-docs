@@ -8,8 +8,8 @@ To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION |
 | --- | --- |
-| Checkout | {{page.version}} |
-| Quotation Process | {{page.version}} |
+| Checkout | {{site.version}} |
+| Quotation Process | {{site.version}} |
 
 ### 1) Set up behavior
 
@@ -74,8 +74,8 @@ Please overview and install the necessary features before beginning the integrat
 
 | NAME | VERSION |
 | --- | --- |
-| Checkout | {{page.version}} |
-| Quotation Process | {{page.version}} |
+| Checkout | {{site.version}} |
+| Quotation Process | {{site.version}} |
 
 ### Set up behavior
 

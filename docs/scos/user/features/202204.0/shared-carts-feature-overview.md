@@ -13,42 +13,42 @@ redirect_from:
   - /docs/scos/user/features/202200.0/shared-carts-feature-overview.html
 ---
 
-*Shopping Cart* is a part of the online shop where the record of the items a buyer has ‘picked up’ from the online store is kept. The shopping cart lets customers select products, review what they selected, make modifications or add extra items if needed, and purchase the products.
+*Shopping Cart* is a part of the online shop where the record of the items a buyer has "picked up" from the online store is kept. The shopping cart lets customers select products, review what they selected, make modifications or add extra items if needed, and purchase the products.
 
 There are two ways to access a shopping cart:
-* Through a shopping cart widget in the header of the webshop.
-* From Shopping Cart page in the **My Account** menu.
+* Through a shopping cart widget in the header of the web shop.
+* From the **Shopping Cart** page, in the **My Account** menu.
 
 New items are added to the shopping cart by clicking on **Add to Cart** on the product details page.
 
-To share a shopping cart, a user needs to click **Share cart** in the **Actions** column (on the **Shopping Cart** page, in **My Account** menu) for a cart they want to share. See the [Shared Cart on the Storefront](#shared-cart-on-the-storefront) section.
+To share a shopping cart, a user needs to click **Share cart** in the **Actions** column (on the **Shopping Cart** page, in the **My Account** menu) for a cart they want to share—see the [Shared Cart on the Storefront](#shared-cart-on-the-storefront) section.
 
 ## Permissions management for shared shopping carts
 
-A shopping cart can be shared with the users of the current business unit. The Share cart `<SHOPPING CART NAME>` page consists of the users within the business unit to share the shopping cart with.
+A shopping cart can be shared with the users of the current business unit. The **Share Cart `<SHOPPING CART NAME>`** page consists of the users within the business unit to share the shopping cart with.
 
 ![Shared cart page](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/share-cart-page.png)
 
-There are 3 types of access rights that can be granted on shopping carts:
+There are three types of access rights that can be granted on shopping carts:
 * No access
-* Read-only
+* Read only
 * Full access
 
 ### No access
 
-_**No access**_ means that shopping cart is not shared and therefore can not be seen by a user.
+*No access* means that the shopping cart is not shared and therefore can not be seen by a user.
 
 {% info_block warningBox "Note" %}
 
- ***No access*** is applied automatically to a newly-created cart.
+ *No access** is applied automatically to a newly-created cart.
 
 {% endinfo_block %}
 
 ### Read-only
 
-The _**Read-only**_ permission allows:
+The *Read-only* permission allows:
 
-**_Reading shopping cart_**. On the **Shopping Cart** page, the user sees shopping cart name, access level (Read only), as well as the table of items with the following information:
+*Reading shopping cart*. On the **Shopping Cart** page, the user sees the shopping cart name, access level (Read only), as well as the table of items with the following information:
 
 * Product image
 * Product name
@@ -69,15 +69,15 @@ The _**Read-only**_ permission allows:
 
 {% info_block warningBox "Note" %}
 
-With the ***Read-only*** permission, no cart actions are available to the user, except for adding comments and editing a custom order reference.
+With the *Read-only* permission, no cart actions are available to the user, except for adding comments and editing a custom order reference.
 
 {% endinfo_block %}
 
 ### Full access
 
-The _**Full access**_ permission allows:
+The *Full access* permission allows the following:
 
-1. **Reading shopping cart**: On the **Shopping cart** page, the user sees a shopping cart name, access level (_Full access_), as well as the table of items with the following information:
+* *Reading shopping cart*: On the **Shopping cart** page, the user sees a shopping cart name, access level (_Full access_), as well as the table of items with the following information:
     * Product image
     * Product name
     * SKU
@@ -93,31 +93,31 @@ The _**Full access**_ permission allows:
     * Tax
     * Grand Total
 
-2. **Changing the quantity of items added to a cart**: On the **Shopping Cart summary** page, a user can change the item quantity for the product added to the cart.
+* *Changing the quantity of items added to a cart*. On the **Shopping Cart summary** page, a user can change the item quantity for the product added to the cart.
 
-3. **Adding products to a cart**: A user can add any products to the cart with full access.
+* *Adding products to a cart*. A user can add any products to the cart with full access.
 
-4. **Removing products from a cart**: Having clicked on Remove, the user can remove an item from the cart. Having clicked on Clear cart, deletes all the items in the cart.
+* *Removing products from a cart*. Having clicked on Remove, the user can remove an item from the cart. Having clicked on Clear cart, the user deletes all the items in the cart.
 
-5. **Leaving notes for products in the cart**: A user can leave a note to a particular product in the cart on the **Shopping cart summary** page.
+* *Leaving notes for products in the cart*. A user can leave a note to a particular product in the cart on the **Shopping cart summary** page.
 
-6. **Leaving notes for the cart**: A user can leave a note to a cart on the **Shopping cart summary** page.
+* *Leaving notes for the cart*. A user can leave a note to a cart on the **Shopping cart summary** page.
 
-7. **Entering voucher code**.
+* *Entering voucher code*.
 
-8. **Adding a cart to a shopping list**. A cart can be converted into shopping list on the **Shopping cart summary** page.
+* *Adding a cart to a shopping list*. A cart can be converted into a shopping list on the **Shopping cart summary** page.
 
-9. **Proceeding to the checkout**.
+* *Proceeding to the checkout*.
 
 ![Full access cart](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/full-access-cart.png)
 
-10. **Editing shopping a cart name**: The shopping cart name can be updated on the **Shopping Cart** page.
+* *Editing shopping a cart name*. The shopping cart name can be updated on the **Shopping Cart** page.
 
-11. **Duplicating a shopping cart**: The shopping cart can be duplicated on the **Shopping Cart** page.
+* *Duplicating a shopping cart*. The shopping cart can be duplicated on the **Shopping Cart** page.
 
-12. **Dismissing a shared shopping cart**: Company users within one business unit can share carts. Such carts can be dismissed if they, for example, are no longer needed.
+* *Dismissing a shared shopping cart*. Company users within one business unit can share carts. For example, such carts can be dismissed if they are no longer needed.
 
-13. **Deleting a shopping cart**: The shopping cart can be deleted on the **Shopping Cart** page. Deleting a shared shopping cart also deletes it for users it has been shared with.
+* *Deleting a shopping cart*. The shopping cart can be deleted on the **Shopping Cart** page. Deleting a shared shopping cart also deletes it for users it has been shared with.
 
 ![Shopping Cart Actions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Shared+Cart+Feature+Overview/shopping-cart-actions.png)
 
@@ -127,7 +127,7 @@ If a user does not need a cart that has been shared with them, they can remove i
 
 {% info_block errorBox "Important!" %}
 
-If the shared cart has been dismissed individually by the user, this user will not be able to see it in case this cart is shared next time.
+If the shared cart has been dismissed individually by the user, this user can't see it if this cart is shared next time.
 
 {% endinfo_block %}
 

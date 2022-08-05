@@ -24,7 +24,7 @@ You can implement this scenario with the default Spryker functionality, without 
 
 {% endinfo_block %}
 
-Suppose you are a clothing retailer and often get items returned within the 14-days return window. You want to automate the return process as much as possible, so that minimum intervention of your employees is required.
+Suppose you are a clothing retailer and often get items returned within the 14-day return window. You want to automate the return process as much as possible, so that minimum intervention of your employees is required.
 
 You can have the following return process:
 

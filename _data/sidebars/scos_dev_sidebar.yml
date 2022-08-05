@@ -234,7 +234,7 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/customer-account-management-feature-walkthrough.html
       nested:
       - title: "Customer module overview: reference information"
-        url: /docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html
+        url: /docs/scos/dev/feature-walkthroughs/customer-account-management-feature-walkthrough/customer-module-overview-reference-information.html
     - title: File Manager
       url: /docs/scos/dev/feature-walkthroughs/file-manager-feature-walkthrough.html
       include_versions:
@@ -423,6 +423,10 @@ entries:
         - "202204.0"
     - title: Promotions and Discounts
       url: /docs/scos/dev/feature-walkthroughs/promotions-discounts-feature-walkthrough.html
+      include_versions:
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"      
     - title: Quick Add to Cart
       url: /docs/scos/dev/feature-walkthroughs/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
       nested:
@@ -941,7 +945,6 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
       - title: Carts of registered users
         include_versions:
         - "202009.0"
@@ -967,7 +970,6 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
       - title: Sharing company user carts
         include_versions:
         - "201907.0"
@@ -1167,7 +1169,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Searching the product catalog
       url: /docs/scos/dev/glue-api-guides/searching-the-product-catalog.html
     - title: Retrieving autocomplete and search suggestions
@@ -1455,7 +1456,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Glue API - Quotation Process
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-quotation-process-feature-integration.html
         include_versions:
@@ -1588,14 +1588,6 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
-      - "202204.0"
-    - title: Backend API
-      url: /docs/scos/dev/feature-integration-guides/backend-api-feature-integration.html
-      include_versions:
-      - "202204.0"
-    - title: Backend API for Merchant Relationships
-      url: /docs/scos/dev/feature-integration-guides/backend-api-for-merchant-relationships-integration-guide.html
-      include_versions:
       - "202204.0"
     - title: Back in Stock Notification
       url: /docs/scos/dev/feature-integration-guides/back-in-stock-notification-feature-integration.html
@@ -2155,7 +2147,6 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Queue Data Import
       url: /docs/scos/dev/feature-integration-guides/queue-data-import-feature-integration.html
       include_versions:
@@ -2371,6 +2362,14 @@ entries:
         url: /docs/scos/dev/feature-integration-guides/spryker-in-docker/spryker-in-docker-feature-integration-guides.html
         include_versions:
         - "201907.0"
+    - title: Zed API
+      url: /docs/scos/dev/feature-integration-guides/zed-api-feature-integration.html
+      include_versions:
+      - "202204.0"
+    - title: Zed API for Merchant Relationships
+      url: /docs/scos/dev/feature-integration-guides/zed-api-for-merchant-relationships-integration-guide.html
+      include_versions:
+      - "202204.0"
   - title: Module migration guides
     url: /docs/scos/dev/module-migration-guides/about-migration-guides.html
     nested:
@@ -2502,16 +2501,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-customerpage.html
     - title: Migration Guide - CustomerReorderWidget
       url: /docs/scos/dev/module-migration-guides/migration-guide-customerreorderwidget.html
-    - title: Migration Guide - Discount
-      url: /docs/scos/dev/module-migration-guides/migration-guide-discount.html
-    - title: Migration Guide - DiscountCalculatorConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-discountcalculatorconnector.html
-    - title: Migration Guide - DiscountPromotion
-      url: /docs/scos/dev/module-migration-guides/migration-guide-discountpromotion.html
-    - title: Migration Guide - DiscountPromotionWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-discountpromotionwidget.html
-    - title: Migration Guide - DiscountSalesAggregatorConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-discountsalesaggregatorconnector.html
     - title: Migration guide - Elastica
       url: /docs/scos/dev/module-migration-guides/migration-guide-elastica.html
     - title: Migration Guide - Environment Configuration
@@ -3787,6 +3776,8 @@ entries:
         url: /docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html
       - title: Multi-theme
         url: /docs/scos/dev/front-end-development/yves/multi-theme.html
+    - title: Migration guide - Switch from Yarn to NPM v8
+      url: /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
   - title: Migration concepts
     nested:
     - title: Decimal Stock migration concept
@@ -4244,8 +4235,6 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html
         - title: "HowTo: Use blocks"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-use-blocks.html
-        - title: "HowTo: Create discounts based on shipment"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-create-discounts-based-on-shipment.html
         - title: "HowTo: Display custom names for order item states on the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html
         - title: "HowTo: Configure the product reviews"
@@ -4307,6 +4296,8 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
       - title: "HowTo: Customize HTTP headers in AJAX request"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-customize-http-headers-in-ajax-request.html
+      - title: "HowTo: Debug payment integrations locally"
+        url:  /docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html
       - title: "HowTo: Configure basic htaccess authentication"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-configure-basic-htaccess-authentication.html
       - title: "HowTo: Create personalized prices"
@@ -4317,6 +4308,8 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method-2.0.html
       - title: "HowTo: Define the maximum size of content fields"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-define-the-maximum-size-of-content-fields.html
+      - title: "HowTo: Do better deployments"
+        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-do-better-deployments.html
       - title: "HowTo: Decrease the memory usage of Spryker with Docker on WSL2"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-decrease-the-memory-usage-of-spryker-with-docker-on-wsl2.html
       - title: "HowTo: Hydrate payment methods for an order"

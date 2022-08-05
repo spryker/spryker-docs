@@ -1,13 +1,14 @@
 ---
 title: "Migration guide - Extending the project"
 description: This document provides details for migration of the marketplace modules to be able to extend the project.
+last_updated: Aug 5, 2022
 template: module-migration-guide-template
 related:
   - title: Extending the project
     link: docs/marketplace/dev/front-end/extending-the-project/index.html
 ---
 
-This document outlines the changes that need to be made at a project level in order to [extend the frontend part of your project](/docs/marketplace/dev/front-end/extending-the-project/index.html).
+This document outlines the changes that need to be made at a project level to [extend the frontend part of your project](/docs/marketplace/dev/front-end/extending-the-project/index.html).
 
 *Estimated migration time: 1h 30m*
 
@@ -99,7 +100,7 @@ export const environment = {
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
  *
- * This import should be commented out in production mode because it will have a negative impact
+ * This import must be commented out in production mode because it will have a negative impact
  * on performance if an error is thrown.
  */
 // import 'zone.js/dist/zone-error';  // Included with Angular CLI.

@@ -82,7 +82,7 @@ Make sure that the following modules have been installed:
 </database>
 ```
 
-Apply database changes and to generate entity and transfer changes:
+ To generate entity and transfer changes, apply database changes:
 
 ```bash
 console transfer:generate
@@ -587,7 +587,7 @@ Environment requirements:
 
 Spryker requirements:
 
-To start builder integration, check the Spryker packages versions:
+To start builder integration, check Spryker packages versions:
 
 | NAME | VERSION |
 | --------------------------- | --------- |
@@ -598,6 +598,7 @@ To start builder integration, check the Spryker packages versions:
 ### 1) Install the required modules using Composer
 
 Install the required modules:
+
 ```bash
 composer require spryker/dashboard-merchant-portal-gui:"^1.4.0" --update-with-dependencies
 ```
@@ -633,6 +634,7 @@ Execute the following command:
 ```bash
 console navigation:build-cache
 ```
+
 {% info_block warningBox "Verification" %}
 
 Make sure that Merchant Portal has the **Dashboard** menu.
@@ -650,7 +652,7 @@ wget -O nx.json https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/nx.js
 wget -O .browserslistrc https://raw.githubusercontent.com/spryker-shop/suite/1.9.0/.browserslistrc
 ```
 
-Rename default `tsconfig.json` to `tsconfig.base.json`. Create additional `tsconfig` files (`tsconfig.yves.json`, `tsconfig.mp.json`)
+Rename default `tsconfig.json` to `tsconfig.base.json`. Than, create additional `tsconfig` files (`tsconfig.yves.json`, `tsconfig.mp.json`)
 
 ```bash
 mv tsconfig.json tsconfig.base.json
@@ -738,7 +740,7 @@ Run commands from the root of the project:
 npm i --location=global @angular/cli@12.2.16
 ```
 
-`ng --version` should show Angular CLI: 12.2.16 version.
+`ng --version` must show Angular CLI: 12.2.16 version.
 
 Install project dependencies:
 
@@ -748,11 +750,11 @@ npm install
 
 {% info_block warningBox "Warning" %}
 
-If you're getting `Missing write access to node_modules/mp-profile`, delete this **file** and make a **folder** with the same name.
+If you're getting `Missing write access to node_modules/mp-profile`, delete this *file* and make a *folder* with the same name.
 
 {% endinfo_block %}
 
-Check if the marketplace packages are located in the `node_modules/@spryker` folder — for example, utils.
+Check if the marketplace packages are located in the `node_modules/@spryker` folder—for example, utils.
 
 ### 5) Install Marketplace builder
 
@@ -803,7 +805,7 @@ export default async (
 };
 ```
 
-### 6) Add files for Merchant Portal entry point:
+### 6) Add files for the Merchant Portal entry point:
 
 **public/MerchantPortal/index.php**
 
@@ -964,9 +966,7 @@ import '@mp/polyfills';
 
 {% info_block warningBox "Verification" %}
 
-`npm run mp:build` should pass successfully. If it doesn't work, try full rebuild:
-
-`rm -rf node_modules && npm cache clean --force && npm install && npm run mp:build`
+`npm run mp:build` should pass successfully. If it doesn't work, try rebuilding fully: `rm -rf node_modules && npm cache clean --force && npm install && npm run mp:build`.
 
 {% endinfo_block %}
 
@@ -1033,9 +1033,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 ## Adjust environment infrastructure
 
-It is not safe to expose MerchantPortal next to the Back Office - MerchantPortal  *must not have* OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with Zed.
+It is not safe to expose MerchantPortal next to the Back Office—MerchantPortal *must not have* OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with Zed.
 
-### 1) Set up a new virtual machine/docker container dedicated to MerchantPortal
+### 1) Set up a new virtual the `machine/docker` container dedicated to MerchantPortal
 
 MerchantPortal *must be* placed into its own private subnet.
 
@@ -1095,7 +1095,7 @@ groups:
 
 ### 2) Create a dedicated database user
 
-Grant only default CRUD operations — `INSERT`, `DELETE`, `UPDATE`, `SELECT`. Do not grant `ALL PRIVILEGES`, `GRANT OPTION`, `DROP`, `CREATE`, and other admin-related grants.
+Grant only default CRUD operations: `INSERT`, `DELETE`, `UPDATE`, `SELECT`. Do not grant `ALL PRIVILEGES`, `GRANT OPTION`, `DROP`, `CREATE`, and other admin-related grants.
 
 The following code snippet example is for MySQL:
 
@@ -1168,7 +1168,7 @@ $config[PropelConstants::ZED_DB_PASSWORD] = getenv('SPRYKER_DB_PASSWORD');
 
 {% endinfo_block %}
 
-The following page should now show the login page for MerchantPortal: `https://your-merchant-portal.domain/security-merchant-portal-gui/login`
+The following page now shows the login page for MerchantPortal: `https://your-merchant-portal.domain/security-merchant-portal-gui/login`
 
 {% info_block warningBox "Verification" %}
 
@@ -1270,6 +1270,6 @@ Log in to the Merchant Portal and make sure that when clicking on the profile pi
 
 Integrate the following related features:
 
-| FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | -|
 | Merchant Portal | &check;  |  [Merchant Portal feature integration](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/merchant-portal-feature-integration.html) |

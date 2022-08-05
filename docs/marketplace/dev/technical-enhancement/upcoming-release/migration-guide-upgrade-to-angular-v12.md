@@ -8,7 +8,7 @@ redirect_from:
 
 ## Upgrading from version 9.* to version 12.*
 
-In this article, you will find instructions on how to upgrade Angular to version 12 in your Spryker project.
+This doccument shows how to upgrade Angular to version 12 in your Spryker project.
 
 ### Overview 
 

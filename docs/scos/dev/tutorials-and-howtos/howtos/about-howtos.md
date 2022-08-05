@@ -22,7 +22,7 @@ redirect_from:
   - /v1/docs/en/ht-make-product-shown-on-frontend-by-url
 ---
 
-HowTos are simple step-by-step instructions to guide you through the process of performing a single task. There are three types of HowTos: [Feature HowTos](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/feature-howtos.html), [Glue API HowTos](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html) and miscellaneous *HowTos for developers*.
+HowTos are simple step-by-step instructions to guide you through the process of performing a single task. There are three types of HowTos: Feature HowTos, [Glue API HowTos](/docs/scos/dev/tutorials-and-howtos/howtos/glue-api-howtos/glue-api-howtos.html) and miscellaneous *HowTos for developers*.
 
 *Feature HowTos* can be useful for shop owners, administrators and developers as they explain how to perform tasks related to Spryker features. Specifically, this section contains the following guides:
 

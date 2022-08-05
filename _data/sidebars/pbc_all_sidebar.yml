@@ -183,8 +183,12 @@ entries:
                     url: /docs/pbc/all/payment-service-providers/unzer/configuration-in-the-back-office/add-unzer-standard-credentails.html
                   - title: Add Unzer marketplace credentials
                     url: /docs/pbc/all/payment-service-providers/unzer/configuration-in-the-back-office/add-unzer-marketplace-credentials.html
-              - title: Customize the credit card display in your payment step
-                url: /docs/pbc/all/payment-service-providers/unzer/customize-the-credit-card-display-in-your-payment-step.html
+              - title: Extend and Customize
+                nested:
+                  - title: Implement new payment methods on the project level
+                    url: /docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level.html
+                  - title: Customize the credit card display in your payment step
+                    url: /docs/pbc/all/payment-service-providers/unzer/extend-and-customize/customize-the-credit-card-display-in-your-payment-step.html
               - title: Domain model and relationships
                 url: /docs/pbc/all/payment-service-providers/unzer/unzer-domain-model-and-relationships.html
           - title: Payone

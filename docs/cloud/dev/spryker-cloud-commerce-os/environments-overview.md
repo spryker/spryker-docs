@@ -16,12 +16,10 @@ The contents of contracts may vary, and this article describes the usual setup. 
 Spryker will offer you environments that serve different purposes. These environments are: developer, staging, and production. We will configure these environments to be as similar as possible to make sure that the code you deploy on one platform behaves the same way on the others. Please help us keeping your environments consistent by taking this into consideration when sending us change requests.
 
 ### Developer environment (DEV) (optional)
-A Dev environment is normally used to test code that just left your development team or is actually used in the development process directly through continuous deployment.
+A Dev environment is normally used to test code that just left your development team or is actually used in the development process directly through continuous deployment. It is not designed to handle load tests and large datasets. Development environment does not provide autoscaling and cannot be increased.
 
 ### Staging (STAGE)
-This environment is normally used to host a snapshot of the Dev environment - or a version of your code that is considered stable and that should be deployed to production eventually. You should use your staging environment to do performance testing to see how your code will behave in your production environment. When demoing your shop, this environment will be used regularly.
-
-Please note that it is imperative to use the same data here (in quality and quantity) as you would in production. If you cannot use the same data, make sure to create mock-ups that are at least of the same quantity as the data your production system needs to be able to handle.  Not doing so is gambling with your go-live and first production deployments.
+This environment is normally used to host a snapshot of the Dev environment - or a version of your code that is considered stable and that should be deployed to production eventually. You can use your staging environment to do performance testing to see how your code will behave in your production environment, however staging is not of the same size as Production and a subset of data and expected traffic should be considered while running the test. When demoing your shop, this environment will be used regularly. Staging environment provides limited autoscaling capabilities and cannot be further scaled up.
 
 ### Production (PROD)
 

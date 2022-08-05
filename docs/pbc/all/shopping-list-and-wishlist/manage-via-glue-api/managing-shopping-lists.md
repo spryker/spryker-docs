@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/managing-shopping-lists
   - /docs/managing-shopping-lists
   - /docs/en/managing-shopping-lists
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-shopping-lists/managing-shopping-lists.html
 related:
     - title: Glue API - Shopping Lists feature integration
       link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-shopping-lists-feature-integration.html
@@ -836,7 +837,7 @@ To delete a shopping list, send the request:
 
 Request sample: delete a shopping list
 
-`DELETE http://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83` 
+`DELETE http://glue.mysprykershop.com/shopping-lists/sdb17f85-953f-565a-a4ce-e5cb02405f83`
 
 ### Response
 

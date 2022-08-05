@@ -10,6 +10,13 @@ redirect_from:
   - /2021080/docs/en/editing-content-items-in-cms-pages-and-blocks
   - /docs/editing-content-items-in-cms-pages-and-blocks
   - /docs/en/editing-content-items-in-cms-pages-and-blocks
+related:
+  - title: Content Items feature overview
+    link: docs/scos/user/features/page.version/content-items-feature-overview.html
+  - title: CMS Pages overview
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
+  - title: CMS blocks overview
+    link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
 ---
 
 This topic provides a list of steps you can perform to edit content item widgets in the Back Office.
@@ -52,6 +59,7 @@ To edit a content item widget:
 ## Editing content item widgets in blocks
 
 To edit a content item widget:
+
 1. On the *Overview of CMS Blocks* page, in the *Actions* column, select **Edit Placeholder** next to the block you want to add a content item widget to.
 2. On the *Edit Block Glossary: [Block ID Name]* page, in the *Placeholder* tab editor, click a widget element.
 
@@ -75,4 +83,4 @@ To edit a content item widget:
     {% endinfo_block %}
 
     * **Remove** icon. This will delete the added content item widget.
-3.  To keep the updates, click **Save**.
+3. To keep the updates, click **Save**.

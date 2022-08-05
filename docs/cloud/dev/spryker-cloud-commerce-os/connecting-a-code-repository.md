@@ -156,4 +156,4 @@ Allow the synchronization several minutes to complete and you should see the rec
 
 ## Next step
 
-[Deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-pipelines.html)
+[Deployment pipelines](/docs/cloud/dev/spryker-cloud-commerce-os/configure-deployment-pipelines/deployment-pipelines.html)

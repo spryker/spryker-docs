@@ -101,7 +101,7 @@ All the Spryker assets are divided into .css, .js files, and images and are adde
         * **js** - folder for scripts
 
             * `yves_default.runtime.legacy.js` / `yves_default.runtime.js` -  scripts executed on runtime and compiled in ES5/ES6 modes
-            * `yves_default.app.legacy.js` / `yves_default.app.js`  - compiled Spryker frontend application script in ES5/ES6 modes
+            * `yves_default.app.legacy.js` / `yves_default.app.js`  - compiled Spryker Frontend application script in ES5/ES6 modes
             * `yves_default.vendor.legacy.js` / `yves_default.vendor.js` -  contains scripts of polyfills compiled in ES5/ES6 modes
             * named scripts of used web components compiled in both ES5 and ES6 modes
 

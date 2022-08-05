@@ -1,5 +1,5 @@
 ---
-title: Entity Manager
+title: Entity manager
 description: It is possible to create an entity manager class in your persistence layer. It will be responsible for saving, updating and deleting data. Using the class, you can separate data from persistence details (Propel).
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,19 @@ redirect_from:
   - /v2/docs/en/entity-manager
   - /v1/docs/entity-manager
   - /v1/docs/en/entity-manager
+related: 
+  - title: Database overview
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html 
+  - title: Database schema definition
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
+  - title: Entity
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
+  - title: About the query container
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html 
+  - title: Query objects - creation and usage
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
+  - title: Repository
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/repository.html
 ---
 
 From Kernel version 3.2, it is possible to create an entity manager class in your persistence layer. It will be responsible for saving, updating, and deleting data. Using the class, you can separate data from persistence details (Propel).
@@ -151,4 +164,4 @@ You might use the following definitions to generate related code:
 * `vendor/bin/console spryk:run AddZedPersistenceEntityManagerInterfaceMethod` - Add Zed Persistence Entity Manager Interface Method
 * `vendor/bin/console spryk:run AddZedPersistenceEntityManagerMethod` - Add Zed Persistence Entity Manager Method
 
-See the [Spryk](/docs/scos/dev/sdk/development-tools/spryk-code-generator.html) documentation for details.
+See the [Spryk](/docs/sdk/dev/spryks/spryks.html) documentation for details.

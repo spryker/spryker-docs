@@ -17,6 +17,9 @@ redirect_from:
   - /docs/scos/user/user-guides/201907.0/back-office-user-guide/administration/warehouses/creating-warehouses.html
   - /docs/scos/user/back-office-user-guides/201907.0/administration/warehouses/creating-warehouses.html
   - /docs/scos/user/back-office-user-guides/202204.0/administration/warehouses/creating-warehouses.html
+related:
+  - title: Inventory Management feature overview
+    link: docs/scos/user/features/page.version/inventory-management-feature-overview.html
 ---
 
 The document describes how to create warehouses in the Back Office.
@@ -60,4 +63,4 @@ The warehouse has been created. You can start working with it when creating or e
 
 Additionally, you can [edit a warehouse](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/edit-warehouses.html). For more details, see the [Editing warehouse details]
 
-To learn how to manage stock per specific warehouse, see [Managing product availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html).
+To learn how to manage stock per specific warehouse, see [Edit stock of products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/edit-stock-of-products-and-product-bundles.html).

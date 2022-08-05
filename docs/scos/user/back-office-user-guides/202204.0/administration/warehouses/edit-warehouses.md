@@ -14,6 +14,9 @@ redirect_from:
   - /docs/scos/user/user-guides/201903.0/back-office-user-guide/administration/warehouses/managing-warehouses.html
   - /docs/scos/user/user-guides/201907.0/back-office-user-guide/administration/warehouses/managing-warehouses.html
   - /docs/scos/user/back-office-user-guides/202204.0/administration/warehouses/managing-warehouses.html
+related:
+  - title: Inventory Management feature overview
+    link: docs/scos/user/features/page.version/inventory-management-feature-overview.html
 ---
 
 This document describes how to edit warehouses in the Back Office.
@@ -51,4 +54,4 @@ Review the [reference information](#reference-information-edit-warehouses) befor
 
 ## Next steps
 
-To learn how to manage stock per specific warehouse, see [Managing product availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html).
+To learn how to edit stock per warehouse, see [Edit stock of products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/edit-stock-of-products-and-product-bundles.html).

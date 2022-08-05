@@ -17,15 +17,15 @@ redirect_from:
 
 ---
 
-The *Cart* feature lets your customers add products to their cart by selecting the needed quantity of a product. Inside the cart, customers can change the quantity of items, switch between different variants of the product, add notes, apply vouchers and remove items.
+The *Cart* feature lets your customers add products to their cart by selecting the needed quantity of a product. Inside the cart, customers can change the number of items, switch between different variants of the product, add notes, apply vouchers, and remove items.
 
 Any changes the customer makes within the cart trigger an automatic sum-recalculation that is immediately applied to the total in the sum. Predefined taxes are applied and shown automatically. Additionally, logged-in customers can see and edit their cart from any device.  
 
-The persistent cart functionality lets authenticated customers store their cart throughout multiple sessions. The Cart feature also ensures that your business rules, such as discounts, taxes, or shipping, are applied, based on the customers' final choice of items.
+The persistent cart functionality lets authenticated customers store their cart throughout multiple sessions. The Cart feature also ensures that your business rules, such as discounts, taxes, or shipping, are applied based on the customers' final choice of items.
 
-Your customers can place orders faster by adding simple products to cart from the **Category** page. They can add products with one [product variant](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) to cart with one click.
+Your customers can place orders faster by adding simple products to their cart from the **Category** page. They can add products with one [product variant](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) to the cart with one click.
 
-The feature supports [product groups](/docs/scos/user/features/{{page.version}}/product-groups-feature-overview.html). If simple products are grouped, you can browse and add these products to cart from the **Category** page.
+The feature supports [product groups](/docs/scos/user/features/{{page.version}}/product-groups-feature-overview.html). If simple products are grouped, you can browse and add these products to your cart from the **Category** page.
 
 In a Spryker shop, the shopping cart widget is displayed in the header. With the widget, customers can easily create new shopping carts and view the existing ones by pointing to the cart icon.
 
@@ -35,7 +35,7 @@ In a Spryker shop, the shopping cart widget is displayed in the header. With the
 |---|
 | [Get a general idea of Cart Notes](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-notes-overview.html)  |
 | [Get a general idea of Cart Widget](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-widget-overview.html)  |
-| [Get e general idea of Quick Order from the Catalog Page](/docs/scos/user/features/{{page.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)   |
+| [Get a general idea of Quick Order from the Catalog Page](/docs/scos/user/features/{{page.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)   |
 
 {% info_block warningBox "Developer guides" %}
 

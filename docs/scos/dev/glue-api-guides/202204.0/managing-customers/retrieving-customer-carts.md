@@ -18,6 +18,26 @@ redirect_from:
 related:
   - title: Managing carts of registered users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
+  - title: Authentication and authorization
+    link: docs/scos/dev/glue-api-guides/page.version/authentication-and-authorization.html
+  - title: Searching by company users
+    link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/searching-by-company-users.html
+  - title: Confirming customer registration
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/confirming-customer-registration.html
+  - title: Authenticating as a customer
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
+  - title: Managing customer authentication tokens
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-authentication-tokens.html
+  - title: Managing customer authentication tokens via OAuth 2.0
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-authentication-tokens-via-oauth-2.0.html
+  - title: Managing customers
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customers.html
+  - title: Managing customer passwords
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-passwords.html
+  - title: Managing customer addresses
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-addresses.html
+  - title: Retrieving customer orders
+    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
 ---
 
 This endpoint allows retrieving a customer’s carts.
@@ -1560,35 +1580,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-#### General cart information
-
-| ATTRIBUTE | TYPE | DESCRIPTION |
-|-|-|-|
-| currency | String | Currency that was selected when the cart was created. |
-| isDefault | Boolean | Specifies whether the cart is the default one for the customer. The field is available in multi-cart environments only. |
-| name | String | Specifies a cart name. The field is available in multi-cart environments only. |
-| priceMode | String | Price mode that was active when the cart was created. |
-| store | String | Store for which the cart was created. |
-
-#### Discount information
-
-| ATTRIBUTE | TYPE | DESCRIPTION |
-|-|-|-|
-| displayName | String | Discount name. |
-| amount | Integer | Discount amount applied to the cart. |
-| code | String | Discount code applied to the cart. |
-
-#### Totals
-
-| ATTRIBUTE | TYPE | DESCRIPTION |
-|-|-|-|
-| expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
-| discountTotal | Integer | Total amount of discounts applied to the cart. |
-| taxTotal | Integer | Total amount of taxes to be paid. |
-| subTotal | Integer | Subtotal of the cart. |
-| grandTotal | Integer | Grand total of the cart. |
-| priceToPay | Integer | Total price of the cart to pay after discounts. |
-| selectedProductOptions | array | List of attributes describing the product options that were added to cart with the product. |
+{% include pbc/all/glue-api-guides/retrieve-customer-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/retrieve-customer-carts-response-attributes.md -->
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|-|

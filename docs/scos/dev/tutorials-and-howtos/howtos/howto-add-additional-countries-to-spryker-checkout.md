@@ -12,11 +12,14 @@ redirect_from:
   - /docs/en/howto-add-additional-countries-to-spryker-checkout
   - /v6/docs/howto-add-additional-countries-to-spryker-checkout
   - /v6/docs/en/howto-add-additional-countries-to-spryker-checkout
+related:
+  - title: Checkout feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/checkout-feature-walkthrough.html
 ---
 
-This document explains how to add additional shipping countries selected by the end users upon checkout.
+This document explains how to add additional shipping countries selected by customers upon checkout.
 
-Customers that want to open up their store to buyers of more than the predefined counties need to make adjustments to the Spryker code to display more countries for selection in the Spryker checkout.
+To open up store to customers of more than the predefined counties, you must adjust the Spryker code to display more countries for selection in the Spryker checkout.
 
 ![Multiple countries in Checkout](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+Add+additional+countries+to+Spryker+checkout/checkout-multiple-countries.png)
 
@@ -36,10 +39,10 @@ To add additional countries to the checkout, follow the steps:
 ```php
 // first entry is default.
     'countries' => ['DE', 'AT', 'NO', 'CH', 'ES', 'GB','AU'],
-//Add the countries you would like to add to this array. For this example "AU" (Australia) was added
+//Add the countries you would like to add to this array. For this example, "AU" (Australia) was added
 ```
 
-2. Update the glossary so that the ISO country code is resolved to the real name of the country you added.
+2. Update the glossary so that the ISO country code is resolved to the real name of the country you have added.
 
 **data/import/glossary.csv**
 

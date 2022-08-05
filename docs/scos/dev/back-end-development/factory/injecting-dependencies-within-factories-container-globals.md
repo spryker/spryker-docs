@@ -1,5 +1,5 @@
 ---
-title: Injecting dependencies within factories- container globals
+title: Injecting dependencies within factories - container globals
 description: The ContainerGlobals is a way to inject dependencies which are available inside your Factories.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,9 @@ redirect_from:
   - /v2/docs/en/container-globals
   - /v1/docs/container-globals
   - /v1/docs/en/container-globals
+related:
+  - title: Factory
+    link: docs/scos/dev/back-end-development/factory/factory.html
 ---
 
 The `ContainerInterface` provides a way to make dependencies globally available. Every dependency added to `ContainerInterface`, that is marked as `isGlobal`, is available by using `getProvidedDependency()` in your factory.

@@ -1,7 +1,7 @@
 ---
 title: Product Bundles + Cart feature integration
 description: This guide provides step-by-step instructions on integrating Product Bundles + Cart feature into your project.
-last_updated: Jun 16, 2021
+last_updated: Jun 20, 2022
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/product-bundles-cart-feature-integration
 originalArticleId: f069a875-5736-4134-a2c9-34a54b2dfdd0
@@ -14,52 +14,13 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/product-bundles-cart-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/product-bundles-cart-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/product-bundles-cart-feature-integration.html
+related:
+  - title: Glue API - Product Bundle + Cart feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-bundle-cart-feature-integration.html
+  - title: Product Bundles feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-bundles-feature-walkthrough.html
+  - title: Cart feature integration
+    link: docs/scos/dev/feature-integration-guides/page.version/cart-feature-integration.html
 ---
 
-## Install feature core
-
-### Prerequisites
-
-To start feature integration, overview and install the necessary features:
-
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
-| Product Bundles | {{page.version}} |
-| Cart | {{page.version}} |
-| Spryker Core | {{page.version}} |
-
-### 1) Set up behavior
-
-
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| ProductBundleItemCountQuantityPlugin | Returns combined quantity of all items in cart. | None | Spryker\Client\ProductBundle\Plugin\Cart |
-
-**src/Pyz/Client/Cart/CartDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Client\Cart;
-
-use Spryker\Client\Cart\CartDependencyProvider as SprykerCartDependencyProvider;
-use Spryker\Client\ProductBundle\Plugin\Cart\ProductBundleItemCountQuantityPlugin;
-
-class CartDependencyProvider extends SprykerCartDependencyProvider
-{
-    /**
-     * @return \Spryker\Client\Cart\Dependency\Plugin\ItemCountPluginInterface
-     */
-    protected function getItemCountPlugin(): ItemCountPluginInterface
-    {
-        return new ProductBundleItemCountQuantityPlugin();
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Add several regular products and product bundles to cart.
-Make sure that item counter at cart widget shows correct number (bundled items should not be counted as separate items).
-
-{% endinfo_block %}
+{% include pbc/all/integrate-features/202204.0/integrate-the-product-bundles-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-product-bundles-cart-feature.md -->

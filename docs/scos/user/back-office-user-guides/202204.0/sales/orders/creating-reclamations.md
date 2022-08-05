@@ -2,21 +2,21 @@
 title: Creating reclamations
 description: Learn how to create reclamations in the Back Office
 template: back-office-user-guide-template
+related:
+  - title: Viewing reclamations
+    link: docs/scos/user/back-office-user-guides/page.version/sales/reclamations/viewing-reclamations.html
+  - title: Changing the state of order items in reclamations
+    link: docs/scos/user/back-office-user-guides/page.version/sales/reclamations/changing-the-state-of-order-items-in-reclamations.html
+  - title: Reclamations feature overview
+    link: docs/scos/user/features/page.version/reclamations-feature-overview.html
 ---
 
-This document describes how to create [order reclamations](/docs/scos/user/features/{{page.version}}/reclamations-feature-overview.html) in the Back Office.
+To create [order reclamations](/docs/scos/user/features/{{page.version}}/reclamations-feature-overview.html) in the Back Office, follow the steps:
 
-## Prerequisites
-
-To start managing orders, go to **Sales&nbsp;<span aria-label="and then">></span> Orders**.
-
-Review the [reference information](#reference-information-creating-reclamations) before you start, or look up the necessary information as you go through the process.
-
-## Creating reclamations
-
-1. On the **Orders** page, next to the order you want to create a reclamation for, click **Claim**.
-2. On the **Create reclamation** page, select one or more products you want to create a reclamation for.
-3. Click **Create Reclamation**.
+1. Go to **Sales&nbsp;<span aria-label="and then">></span> Orders**.
+2. On the **Orders** page, next to the order you want to create a reclamation for, click **Claim**.
+3. On the **Create reclamation** page, select one or more products you want to create a reclamation for.
+4. Click **Create Reclamation**.
     The **View reclamation** page opens with the success message displayed. To learn what you can do on this page, see [Managing returns](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/returns/managing-returns.html).
 
 **Tips and tricks**

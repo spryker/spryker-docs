@@ -22,6 +22,19 @@ redirect_from:
   - /v2/docs/en/entity
   - /v1/docs/entity
   - /v1/docs/en/entity
+related: 
+  - title: Database overview
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html 
+  - title: Database schema definition
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html
+  - title: Entity manager
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
+  - title: About the query container
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html 
+  - title: Query objects - creation and usage
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
+  - title: Repository
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/repository.html
 ---
 
 In Spryker, an entity represents one entry from a table in the database. Entities are an implementation of the [Active record design pattern](https://en.wikipedia.org/wiki/Active_record_pattern), so their usage is very simple. For a full documentation, see [Propel’s Active Record Reference](http://propelorm.org/documentation/reference/active-record.html).
@@ -64,4 +77,4 @@ You might use the following definitions to generate the related code:
 
 * `vendor/bin/console spryk:run AddZedPersistencePropelAbstractEntity` - Add Zed Persistence Propel Abstract Entity
 
-See the [Spryk](/docs/scos/dev/sdk/development-tools/spryk-code-generator.html) documentation for details.
+See the [Spryk](/docs/sdk/dev/spryks/spryks.html) documentation for details.

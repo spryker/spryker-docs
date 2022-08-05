@@ -63,14 +63,14 @@ entries:
     - title: What's new
       url: /docs/scos/user/intro-to-spryker/whats-new/whats-new.html
       nested:
+      - title: IE11 end of life
+        url: /docs/scos/user/intro-to-spryker/whats-new/ie11-end-of-life.html
       - title: Security audit reports
         nested:
         - title: 2019.11 - Security audit by SektionEins
           url: /docs/scos/user/intro-to-spryker/whats-new/security-audit-reports/2019.11-security-audit-by-sektioneins.html
         - title: 2020.11 - Penetration test by Port Zero (executive summary)
           url: /docs/scos/user/intro-to-spryker/whats-new/security-audit-reports/2020.11-penetration-test-by-port-zero-executive-summary.html
-      - title: VAT rates reduction in Germany between July 2020 and January 2021
-        url: /docs/scos/user/intro-to-spryker/whats-new/vat-rates-reduction-in-germany-between-july-2020-and-january-2021.html
       - title: Supported versions of PHP
         url: /docs/scos/user/intro-to-spryker/whats-new/supported-versions-of-php.html
       - title: Upcoming major module releases
@@ -83,8 +83,8 @@ entries:
         url: /docs/scos/user/intro-to-spryker/support/how-spryker-support-works.html
       - title: Handling new feature requests
         url: /docs/scos/user/intro-to-spryker/support/handling-new-feature-requests.html
-      - title: Case Escalation
-        url: /docs/scos/user/intro-to-spryker/support/business-impact-and-case-priorities.html
+      - title: Case escalation
+        url: /docs/scos/user/intro-to-spryker/support/case-escalation.html
       - title: Getting support
         url: /docs/scos/user/intro-to-spryker/support/getting-support.html
       - title: Special- Prepare for a busy season
@@ -125,23 +125,23 @@ entries:
       url: /docs/scos/user/intro-to-spryker/mvp-project-structuring.html
     - title: Spryker videos
       url: /docs/scos/user/intro-to-spryker/spryker-videos.html
-    - title: Contributing to documentation
-      url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/contributing-to-documentation.html
+    - title: Contribute to documentation
+      url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/contribute-to-documentation.html
       nested:
-      - title: Building the documentation site
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html
-      - title: Editing documentation via pull requests
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/editing-documentation-via-pull-requests.html
-      - title: Reporting documentation issues
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/reporting-documentation-issues.html
+      - title: Build the documentation site
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/build-the-documentation-site.html
+      - title: Edit documentation via pull requests
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/edit-documentation-via-pull-requests.html
+      - title: Report documentation issues
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/report-documentation-issues.html
       - title: Style, formatting, and general rules
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/style-formatting-general-rules.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/style-formatting-general-rules.html
       - title: Markdown syntax
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/markdown-syntax.html
-      - title: Reviewing pull requests
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/reviewing-pull-requests.html
-      - title: Adding product sections to the documentation
-        url: /docs/scos/user/intro-to-spryker/contributing-to-documentation/adding-a-new-product-to-the-documentation-site.html
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/markdown-syntax.html
+      - title: Review pull requests
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/review-pull-requests.html
+      - title: Add product sections to the documentation
+        url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/add-product-sections-to-the-documentation.html
 
   - title: Features
     url: /docs/scos/user/features/features.html
@@ -292,14 +292,14 @@ entries:
         - "202001.0"
         - "202005.0"
         - "202009.0"
-      - "202108.0"
-      - "202204.0"
+        - "202108.0"
+        - "202204.0"
       - title: Email as a CMS block
         url: /docs/scos/user/features/cms-feature-overview/email-as-a-cms-block-overview.html
         include_versions:
         - "202009.0"
-      - "202108.0"
-      - "202204.0"
+        - "202108.0"
+        - "202204.0"
       - title: CMS Page Drafts and Previews
         url: /docs/scos/user/features/cms-feature-overview/cms-page-drafts-and-previews.html
         include_versions:
@@ -538,6 +538,12 @@ entries:
       url: /docs/scos/user/features/product-sets-feature-overview.html
     - title: Promotions and Discounts
       url: /docs/scos/user/features/promotions-discounts-feature-overview.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Quick Add to Cart
       url: /docs/scos/user/features/quick-add-to-cart-feature-overview.html
     - title: Quotation Process
@@ -695,6 +701,12 @@ entries:
         url: /docs/scos/user/features/spryker-core-back-office-feature-overview/back-office-translations-overview.html
     - title: Tax
       url: /docs/scos/user/features/tax-feature-overview.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Wishlist
       url: /docs/scos/user/features/wishlist-feature-overview.html
     - title: Sample Suite and Custom Suite
@@ -1246,7 +1258,29 @@ entries:
       nested:
       - title: Products
         nested:
+        - title: Manage abstract products and product bundles
+          include_versions:
+          - "202204.0"
+          nested:
+          - title: Create
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html
+          - title: Add scheduled prices
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/add-scheduled-prices-to-abstract-products-and-product-bundles.html
+          - title: Add volume prices
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/add-volume-prices-to-abstract-products-and-product-bundles.html
+          - title: Assign product attributes
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html
+          - title: Edit
+            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html
         - title: Manage abstract products
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
           nested:
           - title: Creating abstract products and product bundles
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html
@@ -1348,12 +1382,56 @@ entries:
             - "202009.0"
       - title: Category
         nested:
+        - title: Create categories
+          url: /docs/scos/user/back-office-user-guides/catalog/category/create-categories.html
+          include_versions:
+          - "202204.0"
+        - title: Assign products to categories
+          url: /docs/scos/user/back-office-user-guides/catalog/category/assign-products-to-categories.html
+          include_versions:
+          - "202204.0"
+        - title: Order products in categories
+          url: /docs/scos/user/back-office-user-guides/catalog/category/order-products-in-categories.html
+          include_versions:
+          - "202204.0"
+        - title: Edit categories
+          url: /docs/scos/user/back-office-user-guides/catalog/category/edit-categories.html
+          include_versions:
+          - "202204.0"
+        - title: Delete categories
+          url: /docs/scos/user/back-office-user-guides/catalog/category/create-categories.html
+          include_versions:
+          - "202204.0"
         - title: Creating categories
           url: /docs/scos/user/back-office-user-guides/catalog/category/creating-categories.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: Assigning products to categories
           url: /docs/scos/user/back-office-user-guides/catalog/category/assigning-products-to-categories.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: Managing categories
           url: /docs/scos/user/back-office-user-guides/catalog/category/managing-categories.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: References
           include_versions:
           - "201811.0"
@@ -1374,10 +1452,34 @@ entries:
             - "202009.0"
       - title: Attributes
         nested:
+        - title: Create product attributes
+          url: /docs/scos/user/back-office-user-guides/catalog/attributes/create-product-attributes.html
+          include_versions:
+          - "202204.0"
+        - title: Edit product attributes
+          url: /docs/scos/user/back-office-user-guides/catalog/attributes/edit-product-attributes.html
+          include_versions:
+          - "202204.0"
         - title: Creating product attributes
           url: /docs/scos/user/back-office-user-guides/catalog/attributes/creating-product-attributes.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: Managing product attributes
           url: /docs/scos/user/back-office-user-guides/catalog/attributes/managing-product-attributes.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: References
           include_versions:
           - "201811.0"
@@ -1398,8 +1500,24 @@ entries:
             - "202009.0"
       - title: Availability
         nested:
+        - title: Check availability of products
+          url: /docs/scos/user/back-office-user-guides/catalog/availability/check-availability-of-products.html
+          include_versions:
+          - "202204.0"
+        - title: Edit stock of products and product bundles
+          url: /docs/scos/user/back-office-user-guides/catalog/availability/edit-stock-of-products-and-product-bundles.html
+          include_versions:
+          - "202204.0"
         - title: Managing products availability
           url: /docs/scos/user/back-office-user-guides/catalog/availability/managing-products-availability.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: References
           include_versions:
           - "201811.0"
@@ -1419,15 +1537,51 @@ entries:
             - "202005.0"
             - "202009.0"
       - title: Product reviews
+        url: /docs/scos/user/back-office-user-guides/catalog/manage-product-reviews.html
+        include_versions:
+        - "202204.0"
+      - title: Product reviews
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
         nested:
         - title: Managing product reviews
           url: /docs/scos/user/back-office-user-guides/catalog/product-reviews/managing-product-reviews.html
       - title: Product options
         nested:
+        - title: Create
+          url: /docs/scos/user/back-office-user-guides/catalog/product-options/create-product-options.html
+          include_versions:
+          - "202204.0"
+        - title: Edit
+          url: /docs/scos/user/back-office-user-guides/catalog/product-options/edit-product-options.html
+          include_versions:
+          - "202204.0"
         - title: Creating product options
           url: /docs/scos/user/back-office-user-guides/catalog/product-options/creating-product-options.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: Managing product options
           url: /docs/scos/user/back-office-user-guides/catalog/product-options/managing-product-options.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: References
           include_versions:
           - "201811.0"
@@ -1448,10 +1602,34 @@ entries:
             - "202009.0"
       - title: Product lists
         nested:
+        - title: Create product lists
+          url: /docs/scos/user/back-office-user-guides/catalog/product-lists/create-product-lists.html
+          include_versions:
+          - "202204.0"
+        - title: Edit product lists
+          url: /docs/scos/user/back-office-user-guides/catalog/product-lists/edit-product-lists.html
+          include_versions:
+          - "202204.0"
         - title: Creating product lists
           url: /docs/scos/user/back-office-user-guides/catalog/product-lists/creating-product-lists.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: Managing product lists
           url: /docs/scos/user/back-office-user-guides/catalog/product-lists/managing-product-lists.html
+          include_versions:
+          - "201811.0"
+          - "201903.0"
+          - "201907.0"
+          - "202001.0"
+          - "202005.0"
+          - "202009.0"
+          - "202108.0"
         - title: References
           include_versions:
           - "201811.0"
@@ -1610,6 +1788,14 @@ entries:
         nested:
         - title: Create CMS blocks
           url: /docs/scos/user/back-office-user-guides/content/blocks/create-cms-blocks.html
+          include_versions:
+          - "202204.0"
+        - title: Create category CMS blocks
+          url: /docs/scos/user/back-office-user-guides/content/blocks/create-category-cms-blocks.html
+          include_versions:
+          - "202204.0"
+        - title: Create product CMS blocks
+          url: /docs/scos/user/back-office-user-guides/content/blocks/create-product-cms-blocks.html
           include_versions:
           - "202204.0"
         - title: Create email CMS blocks
@@ -1831,22 +2017,18 @@ entries:
           url: /docs/scos/user/back-office-user-guides/merchandising/discount/best-practices-promote-products-with-discounts.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: Create discounts
           url: /docs/scos/user/back-office-user-guides/merchandising/discount/create-discounts.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: Edit discounts
           url: /docs/scos/user/back-office-user-guides/merchandising/discount/edit-discounts.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: Export voucher codes
           url: /docs/scos/user/back-office-user-guides/merchandising/discount/export-voucher-codes.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: Creating vouchers
           url: /docs/scos/user/back-office-user-guides/merchandising/discount/creating-vouchers.html
           include_versions:
@@ -2380,7 +2562,7 @@ entries:
           - "202009.0"
     - title: Administration
       nested:
-      - title: Stores
+      - title: View stores
         url: /docs/scos/user/back-office-user-guides/administration/view-stores.html
         include_versions:
         - "202204.0"
@@ -2478,6 +2660,18 @@ entries:
         - "202108.0"
         - "202204.0"
         nested:
+        - title: Add carrier companies
+          url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/add-carrier-companies.html
+          include_versions:
+          - "202204.0"
+        - title: Add delivery methods
+          url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/add-delivery-methods.html
+          include_versions:
+          - "202204.0"
+        - title: Edit delivery methods
+          url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/edit-delivery-methods.html
+          include_versions:
+          - "202204.0"
         - title: Creating a carrier company
           url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-carrier-companies.html
           include_versions:
@@ -2487,7 +2681,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Creating and managing delivery methods
           url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-and-managing-delivery-methods.html
           include_versions:
@@ -2497,7 +2690,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: References
           include_versions:
           - "202001.0"
@@ -2538,14 +2730,6 @@ entries:
           - "202204.0"
       - title: Tax rates
         nested:
-        - title: Create tax rates
-          url: /docs/scos/user/back-office-user-guides/administration/tax-rates/create-tax-rates.html
-          include_versions:
-          - "202204.0"
-        - title: Edit tax rates
-          url: /docs/scos/user/back-office-user-guides/administration/tax-rates/edit-tax-rates.html
-          include_versions:
-          - "202204.0"
         - title: Managing tax rates
           url: /docs/scos/user/back-office-user-guides/administration/tax-rates/managing-tax-rates.html
           include_versions:
@@ -2569,14 +2753,6 @@ entries:
             - "202005.0"
       - title: Tax sets
         nested:
-        - title: Create tax sets
-          url: /docs/scos/user/back-office-user-guides/administration/tax-sets/create-tax-sets.html
-          include_versions:
-          - "202204.0"
-        - title: Edit tax sets
-          url: /docs/scos/user/back-office-user-guides/administration/tax-sets/edit-tax-sets.html
-          include_versions:
-          - "202204.0"
         - title: Managing tax sets
           url: /docs/scos/user/back-office-user-guides/administration/tax-sets/managing-tax-sets.html
           include_versions:
@@ -2709,7 +2885,7 @@ entries:
       - "201907.0"
       - "202001.0"
       - "202005.0"
-  - title: Technology Partners
+  - title: Technology partners
     url: /docs/scos/user/technology-partners/technology-partners.html
     nested:
     - title: Order Management (ERPOMS)
@@ -2926,9 +3102,7 @@ entries:
         url: /docs/scos/user/technology-partners/payment-partners/ratenkauf-by-easycredit.html
       - title: Arvato
         url: /docs/scos/user/technology-partners/payment-partners/arvato.html
-    - title: Technology partners
-      url: /docs/scos/user/technology-partners/technology-partners.html
-    - title: Operational tools, Monitoring, Legal, etc.
+    - title: Operational tools, monitoring, legal, etc.
       nested:
       - title: PlusServer
         url: /docs/scos/user/technology-partners/operational-tools-monitoring-legal-etc/plusserver.html
@@ -3020,7 +3194,6 @@ entries:
         url: /docs/scos/user/technology-partners/taxes/avalara.html
         include_versions:
         - "202108.0"
-        - "202204.0"
   - title: Shop User Guides
     include_versions:
     - "201811.0"

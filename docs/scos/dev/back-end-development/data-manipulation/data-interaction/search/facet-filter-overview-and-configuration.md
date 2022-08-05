@@ -1,5 +1,5 @@
 ---
-title: Facet Filter Overview and Configuration
+title: Facet filter overview and configuration
 description: Facets provide aggregated data based on a search query.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,17 @@ redirect_from:
   - /v2/docs/en/t-working-filter-facets
   - /v1/docs/t-working-filter-facets
   - /v1/docs/en/t-working-filter-facets
+related:
+  - title: Configuring Elasticsearch
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
+  - title: Configuring search for multi-currency
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
+  - title: Configuring the search features
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html
+  - title: Configuring the search query
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html
+  - title: Expanding search data
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/yves/working-with-filter-facets/-->

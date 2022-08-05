@@ -1,5 +1,5 @@
 ---
-title: Glue Infrastructure
+title: Glue infrastructure
 description: The guide will walk you through the process of handling API requests at the Glue layer, including GlueApplication, Resource, and Relationship modules.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -17,7 +17,7 @@ redirect_from:
   - /docs/scos/dev/concepts/glue-api/glue-infrastructure.html
   - /docs/scos/dev/glue-api-guides/202200.0/glue-infrastructure.html
 related:
-  - title: Authentication and Authorization
+  - title: Authentication and authorization
     link: docs/scos/dev/glue-api-guides/page.version/authentication-and-authorization.html
 ---
 

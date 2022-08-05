@@ -11,8 +11,10 @@ redirect_from:
   - /docs/managing-the-returns
   - /docs/en/managing-the-returns
 related:
-  - title: Retrieving the Return Reasons
+  - title: Retrieving the return reasons
     link: docs/scos/dev/glue-api-guides/page.version/managing-returns/retrieving-return-reasons.html
+  - title: Return Management feature overview
+    link: docs/scos/user/features/page.version/return-management-feature-overview/return-management-feature-overview.html
 ---
 
 The Return Management API allows developers to retrieve return information and create returns. The list of retrievable information includes:

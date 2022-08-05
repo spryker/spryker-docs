@@ -1,5 +1,5 @@
 ---
-title: CLI Entry Point for Yves
+title: CLI entry point for Yves
 description: Spryker provides CLI entry points to run console commands for specific use cases.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -12,20 +12,39 @@ redirect_from:
   - /docs/en/cli-entry-point-for-yves
   - /v6/docs/cli-entry-point-for-yves
   - /v6/docs/en/cli-entry-point-for-yves
+related:
+  - title: Yves overview
+    link: docs/scos/dev/back-end-development/yves/yves.html
+  - title: Adding translations for Yves
+    link: docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
+  - title: Controllers and actions
+    link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
+  - title: Implementing URL routing in Yves
+    link: docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
+  - title: Modular Frontend
+    link: docs/scos/dev/back-end-development/yves/modular-frontend.html
+  - title: Yves bootstrapping
+    link: docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
+  - title: Yves routes
+    link: docs/scos/dev/back-end-development/yves/yves-routes.html
 ---
 
-Spryker provides CLI entry points to run console commands for certain use cases. We use [Symfony's Console component](https://symfony.com/doc/current/components/console.html) to provide this feature. 
+Spryker provides CLI entry points to run console commands for certain use cases. We use [Symfony's Console component](https://symfony.com/doc/current/components/console.html) to provide this feature.
 
 Starting from [version 4.4.0](https://symfony.com/doc/4.4/components/console.html), we have added a new entry point for Yves, which significantly improves the separation of concerns and enables to execute Yves specific console commands.
 
-## Yves CLI Entry Point
+## Yves CLI entry point
+
 Commands that should run in the context of Yves, can be executed with the following CLI entry point:
+
 ```bash
 vendor/bin/yves
 ```
+
 This gives you a list of all available console commands for Yves.
 
-### Creating a Console Command
+### Creating a console command
+
 To create a console command for Yves, you need to create a class inside the `Plugin/Console` directory and extend the `\Spryker\Yves\Kernel\Console\Console` which already brings some handy methods. A new console command could look like this:
 
 <details open>
@@ -77,7 +96,8 @@ class YourConsole extends Console
 ```
 </details>
 
-### Adding a Console Command
+### Adding a console command
+
 A console command is added the same way as all other plugins are added to the application.  If you don't have a ConsoleDependencyProvider for Yves, you need to create one and then you can add your console commands to it:
 
 ```php
@@ -106,7 +126,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 ```
 
 ### ApplicationPlugins
+
 For some commands, it might be required to add one or more specific ApplicationPlugins. To achieve this, you need to add the required ApplictionPlugin(s) to  `ConsoleDependencyProvider`:
+
 ```php
 <?php
  
@@ -136,7 +158,9 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 ```
 
 ### EventSubscriber
+
 If you want to add some event subscriber, add it to `ConsoleDependencyProvider`:
+
 ```php
 <?php
  
@@ -164,8 +188,11 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
     }
 }
 ```
+
 ### Pre- and post-run Hooks
-In some cases, you might want to run things before or after your command was executed. Therefore, you can add those kinds of hooks to the ConsoleDependencyProvider:
+
+In some cases, you might want to run things before or after your command was executed. Therefore, you can add those kinds of hooks to the `ConsoleDependencyProvider`:
+
 ```php
 <?php
  

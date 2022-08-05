@@ -12,6 +12,14 @@ redirect_from:
   - /docs/en/retrieving-concrete-products
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/concrete-products/retrieving-concrete-products.html
 related:
+  - title: Retrieving concrete product availability
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-product-availability.html
+  - title: Retrieving concrete product prices
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-product-prices.html
+  - title: Retrieving image sets of concrete products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html
+  - title: Retrieving sales units
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-sales-units.html
   - title: Product Options feature overview
     link: docs/scos/user/features/page.version/product-options-feature-overview.html
 ---
@@ -26,7 +34,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Product Options Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
 * [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html)
 * [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundles-feature-integration.html)
-* [Glue API: Prices feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html)
+* [Glue API: Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html)
 
 
 ## Retrieve a concrete product
@@ -62,7 +70,7 @@ To retrieve general information about a concrete product, send the request:
 | `GET http://glue.mysprykershop.com/concrete-products/001_25904006` | Get information about the `001_25904006` product.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-image-sets` | Get information about the `001_25904006` product with its image sets.  |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-availabilities` | Get information about the `001_25904006` product with its availability.  |
-| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices` | Get information about the `001_25904006` product with its [default prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html#default-and-original-prices-on-the-storefront). |
+| `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=concrete-product-prices` | Get information about the `001_25904006` product with its [default prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#default-and-original-prices-on-the-storefront). |
 | `GET https://glue.mysprykershop.com/abstract-products/093_24495843?include=abstract-product-prices` | Retrieve information about the abstract product with SKU `093_24495843` with its prices (default and [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)) |
 | `GET https://glue.mysprykershop.com/concrete-products/001_25904006?include=product-options` | Get information about the `001_25904006` product with its product options.  |
 | `GET https://glue.mysprykershop.com/concrete-products/035_17360369?include=product-reviews` | Get information about the `001_25904006` product with its product reviews.  |

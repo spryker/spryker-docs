@@ -22,6 +22,11 @@ redirect_from:
   - /v2/docs/en/t-checkout-and-step-engine-spryker-commerce-os
   - /v1/docs/t-checkout-and-step-engine-spryker-commerce-os
   - /v1/docs/en/t-checkout-and-step-engine-spryker-commerce-os
+related:
+  - title: Checkout steps
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html
+  - title: Step engine workflow overview
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-workflow-overview.html
 ---
 
 {% info_block infoBox %}
@@ -39,7 +44,7 @@ This task helps you learn how to do the following:
 
 {% info_block infoBox "Info" %}
 
-This document shows how to add a voucher step to the existing out-of-the-box Spryker checkout.
+This tutorial shows how to add a voucher step to the existing out-of-the-box Spryker checkout.
 
 {% endinfo_block %}
 
@@ -103,18 +108,19 @@ This document shows how to add a voucher step to the existing out-of-the-box Spr
 	}    
 	```
 
-2. Update the `getRouteProvider` method in YvesBootstrap in `src/Pyz/Yves/Router/RouterDependencyProvider` to use the new Route Provider instead of the core one.
-3. Clear route cache by running the command:
+3. In YvesBootstrap in `src/Pyz/Yves/Router/RouterDependencyProvider`, update the `getRouteProvider` method to use the new Route Provider instead of the core one.
+4. Clear route cache:
 
 ```bash
 vendor/bin/console router:cache:warm-up
 ```
 
-4. Add the voucher step class inside `src/Pyz/Yves/CheckoutPage/Process/Steps` and call it `VoucherStep`.
+5. Add the voucher step class inside `src/Pyz/Yves/CheckoutPage/Process/Steps` and call it `VoucherStep`.
 
 {% info_block infoBox "Info" %}
 
-`VoucherStep` must extend the `AbstractBaseStep` class from core.<br>As you may notice, `CalculationClient` is injected into the class. This client is used when you apply the discount, as you need to recalculate the grand total with the applied voucher code.
+`VoucherStep` must extend the `AbstractBaseStep` class from core.
+<br>`CalculationClient` is injected into the class. This client is used when you apply the discount because you need to recalculate the grand total with the applied voucher code.
 
 ```php
 namespace Pyz\Yves\CheckoutPage\Process\Steps;
@@ -220,7 +226,7 @@ class VoucherStep extends AbstractBaseStep implements StepWithBreadcrumbInterfac
 
 {% endinfo_block %}
 
-4. To add the step to `StepFactory`, in `src/Pyz/Yves/CheckoutPage/Process`, extend the core `StepFactory`.
+6. To add the step to `StepFactory`, in `src/Pyz/Yves/CheckoutPage/Process`, extend the core `StepFactory`.
 
 ```php
 namespace Pyz\Yves\CheckoutPage\Process;
@@ -274,7 +280,7 @@ class StepFactory extends SprykerShopStepFactory
 }
 ```
 
-5. To get the step factory to work, extend `CheckoutPageFactory` to use the new factory instead of the core one.
+7. To get the step factory to work, extend `CheckoutPageFactory` to use the new factory instead of the core one.
 
 ```php
 namespace Pyz\Yves\CheckoutPage;
@@ -294,7 +300,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 }
 ```
 
-6. Extend `CheckoutController` in `src/Pyz/Yves/CheckoutPage/Controller`.
+8. In `src/Pyz/Yves/CheckoutPage/Controller`, extend `CheckoutController`.
 
 Add a controller action and call it `voucherAction`.
 
@@ -326,9 +332,9 @@ class CheckoutController extends SprykerShopCheckoutController
 ```
 
 The step is now created:
-- Go to the shop
-- Add any product to the cart
-- Checkout
+1. Go to the shop.
+2. Add any product to the cart.
+3. Check out.
 
 The Voucher step must be working now.
 
@@ -338,9 +344,8 @@ The Voucher step must be working now.
 
 Spryker uses Symfony forms as a foundation to build and handle forms. One of the main concepts in Symfony forms is binding form fields with data objects. This helps in setting and getting different data fields directly from and to the form. As Spryker uses transfer objects, they can be directly bound to your forms.
 
-Build the form and get the customers input for the voucher:
-
-1. Create the form type in `src/Pyz/Yves/CheckoutPage/Form/Steps/`. Call it **VoucherForm**.
+Build the form and get the customer's input for the voucher:
+1. In `src/Pyz/Yves/CheckoutPage/Form/Steps/`, create the form type and call it `VoucherForm`.
 
 ```php
 namespace Pyz\Yves\CheckoutPage\Form\Steps;
@@ -385,7 +390,7 @@ class VoucherForm extends AbstractType
 }
 ```
 
-2. Extend the core's `FormFactory` in `src/Pyz/Yves/CheckoutPage/Form` and create the form collection for the `VoucherForm`.
+2. In `src/Pyz/Yves/CheckoutPage/Form`, extend the core's `FormFactory` and create the form collection for the `VoucherForm`.
 
 ```php
 namespace Pyz\Yves\CheckoutPage\Form;
@@ -423,7 +428,7 @@ class FormFactory extends SprykerShopFormFactory
 }
 ```
 
-3. Override the `createCheckoutFormFactory()` method in `CheckoutPageFactory` to use the new `FormFactory`.
+3. In `CheckoutPageFactory`, override the `createCheckoutFormFactory()` method to use the new `FormFactory`.
 
 ```php
 namespace Pyz\Yves\CheckoutPage;
@@ -452,9 +457,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 }
 ```
 
-4. The only missing thing is the twig template for it.
-
-Add the twig template for the voucher form in `src/Pyz/Yves/CheckoutPage/Theme/default/views/voucher`. Call it `voucher.twig`.
+1. Add the twig template for the voucher form in `src/Pyz/Yves/CheckoutPage/Theme/default/views/voucher` and name it `voucher.twig`.
 
 ```php
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}
@@ -504,9 +507,9 @@ In the `VoucherForm` form class, you have already added the `property_path` to t
 
 {% endinfo_block %}
 
-To finish the binding, extend `QuoteTransfer` in `src/Pyz/Shared/Checkout/Transfer` and call it `checkout.transfer.xml`.
+To finish the binding, in `src/Pyz/Shared/Checkout/Transfer`, extend `QuoteTransfer` and call it `checkout.transfer.xml`.
 
-When you add a new schema with exactly the same names for the schema file and the transfer object of the core ones, you are extending the transfer object.
+When you add a new schema with the same names for the schema file and the transfer object of the core ones, you extend the transfer object.
 
 Add the voucher field in the `Quote` transfer.
 
@@ -567,17 +570,15 @@ The step has a form now and receives the voucher code value from the customer. G
 ## 3. Apply the voucher in the step execution
 
 1. Generate some voucher codes from the Back Office:
+   1. In the Back Office, go to **Discount**, create a new discount, and generate some voucher codes.
+   2. Choose the discount and enter the voucher code.  In the **Valid to** field, make sure to select future dates.
+   3. Add the rule SKU equals to *, so the voucher code is applied to all products in the shop.
+   4. Save and go to the **Voucher codes** tab, and generate the codes.
 
-    1. In the Back Office, go to **Discount**, create a new discount, and generate some voucher codes.
-    2. Choose the discount enter `Voucher code` and make sure that the **Valid to** field is in the future.
-    3. Add the rule SKU equals to *, so the voucher code is applied on all products in the shop.
-    4. Save, go to the **Voucher codes** tab, and generate the codes.
-
-2. Implement the `execute()` method in `VoucherStep` to calculate the new grand total after applying the discount. To do so, use the `CalculationClient`:
-
-    1. Add the voucher code which you from the form into a discount transfer object.
-    2. The `CalculationClient` in the checkout works only with the `quoteTransfer`; thus, add the discount transfer back to the `quoteTransfer` using the method `$quoteTransfer→addVoucherDiscount()`.
-    3. Call the method `recalculate()` from the `CalculationClient` and pass the `quoteTransfer` as a parameter and the discount should be applied.
+2. In `VoucherStep`, implement the `execute()` method to calculate the new grand total after applying the discount. To do so, use `CalculationClient`:
+   1. Add the voucher code to a discount transfer object.
+   2. The `CalculationClient` in the checkout works only with the `quoteTransfer`; thus, add the discount transfer back to the `quoteTransfer` using the method `$quoteTransfer→addVoucherDiscount()`.
+   3. Call the method `recalculate()` from the `CalculationClient` and pass the `quoteTransfer` as a parameter and the discount should be applied.
 
 ```php
 /**
@@ -601,9 +602,8 @@ public function execute(Request $request, AbstractTransfer $quoteTransfer)
 Done and ready for testing!
 
 1. Go to the shop.
-2. Add any product to cart.
-3. Go the checkout and enter any of the available voucher codes.
-
-You should receive a discount on your order.
+2. Add any product to the cart.
+3. Go to the checkout and enter any of the available voucher codes.
+You receive a discount on your order.
 
 {% endinfo_block %}

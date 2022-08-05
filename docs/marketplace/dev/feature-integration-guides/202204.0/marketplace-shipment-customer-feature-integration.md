@@ -35,7 +35,7 @@ Enable the following behaviors by registering the plugins:
 | MerchantShipmentCheckoutAddressStepPreGroupItemsByShipmentPlugin | Sets shipment merchant reference in the initial checkout step to avoid wrong grouping by merchant reference. |  | Spryker\Yves\MerchantShipment\Plugin\CustomerPage|
 
 <details>
-<summary markdown='span'>ssrc/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/CustomerPage/CustomerPageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -48,7 +48,7 @@ use Spryker\Yves\MerchantShipment\Plugin\CustomerPage\MerchantShipmentCheckoutAd
 class CustomerPageDependencyProvider extends SprykerShopCustomerPageDependencyProvider
 {
     /**
-     * @return \SprykerShop\Yves\CustomerPageExtension\Dependency\Plugin\CheckoutAddressStepPreGroupItemsByShipmentPluginInterface[]
+     * @return array<\SprykerShop\Yves\CustomerPageExtension\Dependency\Plugin\CheckoutAddressStepPreGroupItemsByShipmentPluginInterface>
      */
     protected function getCheckoutAddressStepPreGroupItemsByShipmentPlugins(): array
     {

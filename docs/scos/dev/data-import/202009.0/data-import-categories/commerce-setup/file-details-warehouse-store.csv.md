@@ -27,7 +27,7 @@ This file has the following dependencies:
 * `stores.php` configuration file of demo shop PHP project, where stores are defined initially
 
 ## Additional details
-Check the [HowTo - Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html).  
+Check the [HowTo: Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html).  
 The console command `data:import:stock-store` uses `…/vendor/spryker/stock-data-import/data/import/warehouse_store.csv`. 
 
 You can also create `warehouse_store.csv` in `…/data/import`. 

@@ -12,6 +12,9 @@ redirect_from:
   - /docs/en/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
   - /v6/docs/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
   - /v6/docs/en/howto-handle-twenty-five-million-prices-in-spryker-commerce-os
+related:
+  - title: Prices featre walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/prices-feature-walkthrough/prices-feature-walkthrough.html
 ---
 
 B2B business model usually challenges any software with higher requirements to amounts of data and business complexity.
@@ -32,7 +35,7 @@ Price import flow:
 When enabling Spryker to handle such a number of prices, the following challenges occur:
 
 1. 25,000,000 prices are imported in two separate price dimensions.
-2. A product can have about 40,000 prices. This results in overpopulated product abstract search documents: each document aggregates prices of abstract products and all related concrete products. Each price is represented as an indexed field in the search document. I ncreasing the number of indexed fields slows `ElasticSearch(ES)` down. Just for comparison, the [recommended limit](https://www.elastic.co/guide/en/elasticsearch/reference/master/mapping.html#mapping-limit-settings) is 1,000.
+2. A product can have about 40,000 prices. This results in overpopulated product abstract search documents: each document aggregates prices of abstract products and all related concrete products. Each price is represented as an indexed field in the search document. Increasing the number of indexed fields slows `ElasticSearch(ES)` down. Just for comparison, the [recommended limit](https://www.elastic.co/guide/en/elasticsearch/reference/master/mapping.html#mapping-limit-settings) is 1,000.
 3. Overloaded product abstract search documents cause issues with memory limit and slow down [Publish and Synchronization](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html). The average document size is bigger than 1&nbsp;MB.
 4. When more than 100 product abstract search documents are processed at a time, the payload gets above 100&nbsp;MB, and ES rejects queries. [AWS native service](https://docs.aws.amazon.com/elasticsearch-service/latest/developerguide/aes-limits.html) does not allow changing this limit.
 The queries rejected by ES are considered successful by Spryker because the [Elastica library](https://elastica.io/) ignores the `413` error code.
@@ -97,7 +100,7 @@ In AWS, the `http.max_content_length` ES limit defines the maximum payload size 
 The evaluated solutions are as follows:
 
 1. ES join field type.
-   This ES functionality is similar to the classical joins in relational databases. This solution solves your problem faster and with less effort. o learn about the implementation of this solution, see [ElasticSearch join data type: Implementation](#elasticsearch-join-field-type-implementation). Also, have a look at the other evaluated solutions as they may be more appropriate in your particular case.
+   This ES functionality is similar to the classical joins in relational databases. This solution solves your problem faster and with less effort. To learn about the implementation of this solution, see [ElasticSearch join data type: Implementation](#elasticsearch-join-field-type-implementation). Also, have a look at the other evaluated solutions as they may be more appropriate in your particular case.
    <br>Documentation: [Join field type](https://www.elastic.co/guide/en/elasticsearch/reference/current/parent-join.html)
 2. Multi sharding with the `_routing` field.
    The idea is to avoid indexing problems by sharing big documents between shards. Breaking a huge index into smaller ones makes it easier for the search to index data. The solution is complex and does not solve the payload issues.
@@ -337,7 +340,7 @@ fi
 
 #### Disabling synchronous commit
 
-We were running the analytics at night when there was no intensive activity in our shop. This let us disable synchronous commit to reduce the processing time of the `COPY` operations.
+We were running the analytics at night when there was no intensive activity in our shop. This lets us disable synchronous commit to reduce the processing time of the `COPY` operations.
 
 The following line in the previous code snippet disables the synchronous commit: `SET synchronous_commit TO OFF;`
 

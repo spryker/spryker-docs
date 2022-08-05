@@ -1,5 +1,5 @@
 algolia:
-  index_name: 'paas_plus_dev'
+  index_name: 'pbc'
   files_to_exclude:
     - index.md
     - 404.md
@@ -8,6 +8,7 @@ algolia:
     - docs/marketplace/dev/**/*.md
     - docs/scos/user/**/*.md
     - docs/scos/dev/**/*.md
-    - docs/cloud/dev**/*.md
-    - docs/fes/dev/**/*.md    
+    - docs/pbc/all/**/*.md
+    - docs/cloud/dev/spryker-cloud-commerce-os/**/*.md
+    - docs/fes/dev/**/*.md
     - docs/acp/user/**/*.md

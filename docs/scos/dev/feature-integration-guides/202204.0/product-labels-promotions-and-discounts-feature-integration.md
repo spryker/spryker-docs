@@ -13,74 +13,11 @@ redirect_from:
 related:
   - title: Product labels feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/product-labels-feature-integration.html
-  - title: Promotions & Discounts feature integration
+  - title: Promotions and Discounts feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/promotions-and-discounts-feature-integration.html
+  - title: Product Labels feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-labels-feature-walkthrough.html
+
 ---
 
-## Install feature core
-
-Follow the steps below to install the feature core.
-
-### Prerequisites
-
-To start feature integration, overview, and install the necessary features:
-
-
-| NAME | VERSION |
-| --- | --- |
-| Promotions & Discounts | {{page.version}} |
-| Product Labels | {{page.version}} |
-| Spryker Core | {{page.version}} |
-
-### 1) Set up behavior
-
-Set up the following behavirors:
-
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| ProductLabelCollectorPlugin | Collects the cart items with product labels to which a discount should be applied. | None | Spryker\Zed\ProductLabelDiscountConnector\Communication\Plugin\Collector |
-| ProductLabelDecisionRulePlugin | Defines if a discount can be applied to a cart item with a product label. | None | Spryker\Zed\ProductLabelDiscountConnector\Communication\Plugin\DecisionRule |
-
-**src/Pyz/Zed/Discount/DiscountDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Zed\Discount;
-use Spryker\Zed\Discount\DiscountDependencyProvider as SprykerDiscountDependencyProvider;
-use Spryker\Zed\ProductLabelDiscountConnector\Communication\Plugin\DecisionRule\ProductLabelDecisionRulePlugin;
-use Spryker\Zed\ProductLabelDiscountConnector\Communication\Plugin\Collector\ProductLabelCollectorPlugin;
-
-class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
-{
-    /**
-     * @return \Spryker\Zed\Discount\Dependency\Plugin\DecisionRulePluginInterface[]
-     */
-    protected function getDecisionRulePlugins()
-    {
-        return array_merge(parent::getDecisionRulePlugins(), [
-            new ProductLabelDecisionRulePlugin(),
-        ]);
-    }
-
-    /**
-     * @return \Spryker\Zed\Discount\Dependency\Plugin\CollectorPluginInterface[]
-     */
-    protected function getCollectorPlugins()
-    {
-        return array_merge(parent::getCollectorPlugins(), [
-            new ProductLabelCollectorPlugin(),
-        ]);
-    }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-Ensure that the plugins work correctly:
-
-1. [Create a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/create-discounts.html) and define its condition as a query string with a *product-label* field.
-2. Add a product with the defined product label to cart.
-3. The discount should be applied to the cart.
-
-{% endinfo_block %}
+{% include pbc/all/integrate-features/202204.0/integrate-the-product-labels-promotions-and-discounts-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-product-labels-promotions-and-discounts-feature.md -->

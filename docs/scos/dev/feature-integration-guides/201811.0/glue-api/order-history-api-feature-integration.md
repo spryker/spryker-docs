@@ -13,7 +13,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, review and install all these necessary features:
 |Name|Version|
@@ -21,7 +21,7 @@ To start feature integration, review and install all these necessary features:
 |Spryker Core|2018.12.0|
 |Order Management|2018.12.0|
 |AuthRestApi|2.2.2|
-### 1) Install the required modules using composer
+### 1) Install the required modules using Composer
 
 Run the following command to install the required modules:
 ```yaml

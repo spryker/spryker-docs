@@ -16,9 +16,12 @@ redirect_from:
   - /v4/docs/en/b2c-suite
   - /v6/docs/b2c-suite
   - /v6/docs/en/b2c-suite
+related:
+  - title: B2B Suite
+    link: docs/scos/user/intro-to-spryker/b2b-suite.html
 ---
 
-The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. Of course, every B2С project has its own set of features that meet their business needs and B2B features can be used as well, but the most common features for the B2C commerce are listed below.
+The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. Of course, every B2С project has its own set of features that meet its business needs and B2B features can be used as well, but the most common features for B2C commerce are as follows.
 
 <details>
 <summary markdown='span'>B2C feature list</summary>
@@ -77,10 +80,10 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 </details>
 
 ## B2C Demo Shop
-To demonstrate the B2C features in a live implementation, we use a B2C Demo Shop. The B2C Demo Shop is a showcase that is pre-loaded with a combination of modules and functionalities best suited for B2C commerce. This Demo Shop is our recommended starting point for all standard B2C commerce projects. New features for the B2C Demo Shop are released every several months.
+To demonstrate the B2C features in a live implementation, we use a B2C Demo Shop. The B2C Demo Shop is a showcase that is preloaded with a combination of modules and functionalities best suited for B2C commerce. This Demo Shop is our recommended starting point for all standard B2C commerce projects. New features for the B2C Demo Shop are released every several months.
 
 {% wistia e169fy8miw 960 720 %}
 
-To download the B2C Demo Shop, visit the following GitHub repository: [https://github.com/spryker-shop/b2c-demo-shop](https://github.com/spryker-shop/b2c-demo-shop)
+To download the B2C Demo Shop, visit the following GitHub repository: [https://github.com/spryker-shop/b2c-demo-shop](https://github.com/spryker-shop/b2c-demo-shop).
 
 To install the B2C Demo Shop, follow the instructions in [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).

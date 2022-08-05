@@ -1,0 +1,162 @@
+title: PBC guides
+entries:
+  - product: PBC
+    nested:
+      - title: Ratings and Reviews
+        url: /docs/pbc/all/ratings-reviews/ratings-reviews.html
+        nested:
+          - title: Bazaarvoice
+            url: /docs/pbc/all/ratings-reviews/bazaarvoice.html
+      - title: Discount Management
+        url: /docs/pbc/all/discount-management/discount-management.html
+        nested:
+          - title: What's changed
+            url: /docs/pbc/all/discount-management/whats-changed-in-discount-management.html
+          - title: Install and upgrade
+            nested:
+              - title: Integrate the Promotions & Discounts feature
+                url: /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-promotions-and-discounts-feature.html
+              - title: Integrate the Promotions & Discounts Glue API
+                url: /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html
+              - title: Integrate the Product labels + Promotions & Discounts feature
+                url: /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-product-labels-promotions-and-discounts-feature.html
+              - title: Integrate the Category Management + Promotions & Discounts feature
+                url: /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-category-management-promotions-and-discounts-feature.html
+              - title: Upgrade the Discount module
+                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discount-module.html
+              - title: Upgrade the DiscountCalculatorConnector module
+                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountcalculatorconnector-module.html
+              - title: Upgrade the DiscountPromotion module
+                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountpromotion-module.html
+              - title: Upgrade the DiscountPromotionWidget module
+                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountpromotionwidget-module.html
+              - title: Upgrade the DiscountSalesAggregatorConnector module
+                url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountsalesaggregatorconnector-module.html
+          - title: Manage in the Back Office
+            nested:
+              - title: "Best practices: Promote products with discounts"
+                url: /docs/pbc/all/discount-management/manage-in-the-back-office/best-practices-promote-products-with-discounts.html
+              - title: Create discounts
+                url: /docs/pbc/all/discount-management/manage-in-the-back-office/create-discounts.html
+              - title: Edit discounts
+                url: /docs/pbc/all/discount-management/manage-in-the-back-office/edit-discounts.html
+              - title: Export voucher codes
+                url: /docs/pbc/all/discount-management/manage-in-the-back-office/export-voucher-codes.html
+          - title: Manage via Glue API
+            url: /docs/pbc/all/discount-management/manage-via-glue-api/manage-discounts-via-glue-api.html
+            nested:
+              - title: Add items with discounts to carts of registered users
+                url: /docs/pbc/all/discount-management/manage-via-glue-api/add-items-with-discounts-to-carts-of-registered-users.html
+              - title: Manage discount vouchers in carts of registered users
+                url: /docs/pbc/all/discount-management/manage-via-glue-api/manage-discount-vouchers-in-carts-of-registered-users.html
+              - title: Retrieve discounts in carts of registered users
+                url: /docs/pbc/all/discount-management/manage-via-glue-api/retrieve-discounts-in-carts-of-registered-users.html
+              - title: Retrieve discounts in customer carts
+                url: /docs/pbc/all/discount-management/manage-via-glue-api/retrieve-discounts-in-customer-carts.html
+              - title: Add items with discounts to guest carts
+                url: /docs/pbc/all/discount-management/manage-via-glue-api/add-items-with-discounts-to-guest-carts.html
+              - title: Manage discount vouchers in guest carts
+                url: /docs/pbc/all/discount-management/manage-via-glue-api/manage-discount-vouchers-in-guest-carts.html
+              - title: Retrieve discounts in guest carts
+                url: /docs/pbc/all/discount-management/manage-via-glue-api/retrieve-discounts-in-guest-carts.html
+          - title: Import and export data
+            url: /docs/pbc/all/discount-management/import-and-export-data/discount-import.html
+            nested:
+              - title: File details - discount.csv
+                url: /docs/pbc/all/discount-management/import-and-export-data/file-details-discount.csv.html
+              - title: File details - discount_store.csv
+                url: /docs/pbc/all/discount-management/import-and-export-data/file-details-discount-store.csv.html
+              - title: File details - discount_amount.csv
+                url: /docs/pbc/all/discount-management/import-and-export-data/file-details-discount-amount.csv.html
+              - title: File details - discount_voucher.csv
+                url: /docs/pbc/all/discount-management/import-and-export-data/file-details-discount-voucher.csv.html
+          - title: Tutorials and HowTos
+            nested:
+              - title: "HowTo: Create discounts based on shipment"
+                url: /docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
+      - title: Payment Service Providers
+        url: /docs/pbc/all/payment-service-providers/psp.html
+        nested:
+          - title: Unzer
+            url: /docs/pbc/all/payment-service-providers/unzer/unzer.html
+            nested:
+              - title: What's changed
+                url: /docs/pbc/all/payment-service-providers/unzer/whats-changed-in-unzer.html
+              - title: Install Unzer
+                nested:
+                  - title: Install and configure
+                    url: /docs/pbc/all/payment-service-providers/unzer/install-unzer/install-and-configure-unzer.html
+                  - title: Integrate
+                    url: /docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.html
+              - title: Use cases, HowTos, and tips
+                nested:
+                  - title: Refund shipping costs
+                    url: /docs/pbc/all/payment-service-providers/unzer/howto-tips-use-cases/refund-shipping-costs.html
+                  - title: Understand how payment methods are displayed in the checkout process
+                    url: /docs/pbc/all/payment-service-providers/unzer/howto-tips-use-cases/understand-payment-method-in-checkout-process.html
+              - title: Configuration in the Back Office
+                nested:
+                  - title: Add Unzer standard credentials
+                    url: /docs/pbc/all/payment-service-providers/unzer/configuration-in-the-back-office/add-unzer-standard-credentails.html
+                  - title: Add Unzer marketplace credentials
+                    url: /docs/pbc/all/payment-service-providers/unzer/configuration-in-the-back-office/add-unzer-marketplace-credentials.html
+              - title: Customize the credit card display in your payment step
+                url: /docs/pbc/all/payment-service-providers/unzer/customize-the-credit-card-display-in-your-payment-step.html
+              - title: Domain model and relationships
+                url: /docs/pbc/all/payment-service-providers/unzer/unzer-domain-model-and-relationships.html
+          - title: Payone
+            url: /docs/pbc/all/payment-service-providers/payone/payone.html
+      - title: Tax Management
+        url: /docs/pbc/all/tax-management/tax-management.html
+        nested:
+          - title: What's changed
+            url: /docs/pbc/all/tax-management/whats-changed-in-tax-management.html
+          - title: Install and upgrade
+            nested:
+              - title: Integrate the Tax Glue API
+                url: /docs/pbc/all/tax-management/install-and-upgrade/integrate-the-tax-glue-api.html
+              - title: Integrate the Product Tax Sets Glue API
+                url: /docs/pbc/all/tax-management/install-and-upgrade/integrate-the-product-tax-sets-glue-api.html
+              - title: Upgrade the ProductTaxSetsRestApi module
+                url: /docs/pbc/all/tax-management/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html
+              - title: Upgrade the Tax module
+                url: /docs/pbc/all/tax-management/install-and-upgrade/upgrade-the-tax-module.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Create tax rates
+                url: /docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-rates.html
+              - title: Edit tax rates
+                url: /docs/pbc/all/tax-management/manage-in-the-back-office/edit-tax-rates.html
+              - title: Create tax sets
+                url: /docs/pbc/all/tax-management/manage-in-the-back-office/create-tax-sets.html
+              - title: Edit tax sets
+                url: /docs/pbc/all/tax-management/manage-in-the-back-office/edit-tax-sets.html
+          - title: Manage via Glue API
+            nested:
+              - title: Retrieve tax sets
+                url: /docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html
+              - title: Retrieve tax sets of abstract products
+                url: /docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets-of-abstract-products.html
+          - title: Import and export data
+            nested:
+              - title: Import tax sets
+                url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets.html
+              - title: Import tax sets for abstract products
+                url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-abstract-products.html
+          - title: Extend and customize
+            nested:
+              - title: "Tax module: reference information"
+                url: /docs/pbc/all/tax-management/extend-and-customize/tax-module-reference-information.html
+          - title: Domain model and relationships
+            url: /docs/pbc/all/tax-management/tax-domain-model-and-relationships.html
+          - title: Third-party integrations
+            url: /docs/pbc/all/tax-management/third-party-integrations/avalara.html
+            nested:
+              - title: Integrate Avalara
+                url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara.html
+              - title: Integrate Avalara Tax + Product Options
+                url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-product-options.html
+              - title: Integrate Avalara Tax + Shipment
+                url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-shipment.html
+      - title: Usercentrics
+        url: /docs/pbc/all/usercentrics.html

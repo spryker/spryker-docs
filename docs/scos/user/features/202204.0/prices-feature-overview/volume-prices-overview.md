@@ -60,7 +60,7 @@ The following is an example of JSON:
 ],
 ```
 
-Volume prices are configured per store and per currency and a Store Administrator can set volume prices for every locale.
+Volume prices are configured per store and per currency, and a shop administrator can set volume prices for every locale.
 
 Volume prices are set for both gross and net mode and are either inherited from the abstract product or specified directly for a standalone concrete product.
 
@@ -138,7 +138,7 @@ The feature has the following functional constraints which are going to be resol
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Add volume prices to abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html)  |
+| [Add volume prices to abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/add-volume-prices-to-abstract-products-and-product-bundles.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

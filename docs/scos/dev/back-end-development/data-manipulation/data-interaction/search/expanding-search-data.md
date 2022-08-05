@@ -2,6 +2,17 @@
 title: Expanding search data
 description: Learn how to expand entity data and create new data types in the search.
 template: howto-guide-template
+related:
+  - title: Configuring Elasticsearch
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
+  - title: Configuring search for multi-currency
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
+  - title: Configuring the search features
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html
+  - title: Configuring the search query
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html
+  - title: Facet filter overview and configuration
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
 ---
 
 This document describes how to expand entity data and create new data types in the search.
@@ -13,56 +24,56 @@ To expand the search data with a `foo` entity, do the following:
 1. Expand `ProductPageLoadTransfer` object with `foo` data:
 
     1. Add your data to the transfer:
-```xml
-<transfer name="ProductPayload">
-    <property name="foo" type="int"/>
-</transfer>
-```
+
+    ```xml
+    <transfer name="ProductPayload">
+        <property name="foo" type="int"/>
+    </transfer>
+    ```
+
     2. Implement `ProductPageDataLoaderPluginInterface` as follows. This plugin expands `ProductPageLoadTransfer` with data and returns the modified object.
 
-<details>
-    <summary markdown='span'>ProductPageDataLoaderPluginInterface implementation example</summary>
+    <details><summary markdown='span'>ProductPageDataLoaderPluginInterface implementation example</summary>
 
-```php
-class FooPageDataLoaderPlugin implements ProductPageDataLoaderPluginInterface
-{
-    ...
-
-    /**
-     * @param \Generated\Shared\Transfer\ProductPageLoadTransfer $productPageLoadTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductPageLoadTransfer
-     */
-    public function expandProductPageDataTransfer(
-        ProductPageLoadTransfer $productPageLoadTransfer
-    ): ProductPageLoadTransfer {
-
-        $payloadTransfers = $this->updatePayloadTransfers(
-            $productPageLoadTransfer->getPayloadTransfers()
-        );
-
-        $productPageLoadTransfer->setPayloadTransfers($payloadTransfers);
-
-        return $productPageLoadTransfer;
-    }
-
-    /**
-     * @param \Generated\Shared\Transfer\ProductPayloadTransfer[] $productPageLoadTransfers
-     *
-     * @return \Generated\Shared\Transfer\ProductPayloadTransfer[] updated payload transfers
-     */
-    protected function updatePayloadTransfers(array $productPageLoadTransfers): array
+    ```php
+    class FooPageDataLoaderPlugin implements ProductPageDataLoaderPluginInterface
     {
-        foreach ($productPageLoadTransfers as $productPageLoadTransfer) {
-            $productPageLoadTransfer->sefFoo('Some value');
+        ...
+
+        /**
+         * @param \Generated\Shared\Transfer\ProductPageLoadTransfer $productPageLoadTransfer
+         *
+         * @return \Generated\Shared\Transfer\ProductPageLoadTransfer
+         */
+        public function expandProductPageDataTransfer(
+        ProductPageLoadTransfer $productPageLoadTransfer
+        ): ProductPageLoadTransfer {
+
+            $payloadTransfers = $this->updatePayloadTransfers(
+            $productPageLoadTransfer->getPayloadTransfers()
+            );
+
+            $productPageLoadTransfer->setPayloadTransfers($payloadTransfers);
+
+            return $productPageLoadTransfer;
         }
 
-        return $productPageLoadTransfers;
-    }
-}    
-```
+        /**
+         * @param \Generated\Shared\Transfer\ProductPayloadTransfer[] $productPageLoadTransfers
+         *
+         * @return \Generated\Shared\Transfer\ProductPayloadTransfer[] updated payload transfers
+         */
+        protected function updatePayloadTransfers(array $productPageLoadTransfers): array
+        {
+            foreach ($productPageLoadTransfers as $productPageLoadTransfer) {
+            $productPageLoadTransfer->sefFoo('Some value');
+            }
 
-</details>
+            return $productPageLoadTransfers;
+        }
+    }    
+    ```
+    </details>
 
 
 
@@ -75,45 +86,44 @@ class FooPageDataLoaderPlugin implements ProductPageDataLoaderPluginInterface
       <property name="foo" type="int"/>
   </transfer>
   ```
+
     2. Implement `ProductPageDataExpanderPluginInterface` as follows. This plugin expands the provided `ProductAbstractPageSearchTransfer` object's data by `foo`.
 
-<details>
-  <summary markdown='span'>ProductPageDataExpanderPluginInterface implementation example</summary>
+    <details><summary markdown='span'>ProductPageDataExpanderPluginInterface implementation example</summary>
 
-```php
-class ProductFooDataExpanderPlugin implements ProductPageDataExpanderPluginInterface
-{
-    /**
-     * {@inheritDoc}
-     * - Expands the provided ProductAbstractPageSearch transfer object's data by foo.
-     *
-     * @api
-     *
-     * @param mixed[] $productData
-     * @param \Generated\Shared\Transfer\ProductPageSearchTransfer $productAbstractPageSearchTransfer
-     *
-     * @return void
-     */
-    public function expandProductPageData(array $productData, ProductPageSearchTransfer $productAbstractPageSearchTransfer)
+    ```php
+    class ProductFooDataExpanderPlugin implements ProductPageDataExpanderPluginInterface
     {
-        $productPayloadTransfer = $this->getProductPayloadTransfer($productData);
+        /**
+         * {@inheritDoc}
+         * - Expands the provided ProductAbstractPageSearch transfer object's data by foo.
+         *
+         * @api
+         *
+         * @param mixed[] $productData
+         * @param \Generated\Shared\Transfer\ProductPageSearchTransfer $productAbstractPageSearchTransfer
+         *
+         * @return void
+         */
+        public function expandProductPageData(array $productData, ProductPageSearchTransfer $productAbstractPageSearchTransfer)
+        {
+            $productPayloadTransfer = $this->getProductPayloadTransfer($productData);
 
-        $productAbstractPageSearchTransfer->setFoo($productPayloadTransfer->getFoo());
+            $productAbstractPageSearchTransfer->setFoo($productPayloadTransfer->getFoo());
+        }
+
+        /**
+         * @param mixed[] $productData
+         *
+         * @return \Generated\Shared\Transfer\ProductPayloadTransfer
+         */
+        protected function getProductPayloadTransfer(array $productData): ProductPayloadTransfer
+        {
+            return $productData[ProductPageSearchConfig::PRODUCT_ABSTRACT_PAGE_LOAD_DATA];
+        }
     }
-
-    /**
-     * @param mixed[] $productData
-     *
-     * @return \Generated\Shared\Transfer\ProductPayloadTransfer
-     */
-    protected function getProductPayloadTransfer(array $productData): ProductPayloadTransfer
-    {
-        return $productData[ProductPageSearchConfig::PRODUCT_ABSTRACT_PAGE_LOAD_DATA];
-    }
-}
-```
-
-</details>
+    ```
+    </details>
 
 
 
@@ -127,8 +137,7 @@ In the example with `foo`, we use `->addIntegerSort()`, but you can use more opt
 {% endinfo_block %}
 
 
-<details>
-  <summary markdown='span'>ProductAbstractMapExpanderPluginInterface implementation example</summary>
+<details><summary markdown='span'>ProductAbstractMapExpanderPluginInterface implementation example</summary>
 
 
 ```php
@@ -179,14 +188,12 @@ class ProductFooMapExpanderPlugin implements ProductAbstractMapExpanderPluginInt
     }
 }
 ```
-
 </details>
 
 
-4. To allow customers to sort products by `foo`, implement `SortConfigTransferBuilderPluginInterface` by building a `SortConfigTransfer` with a `foo` parameter:
+1. To allow customers to sort products by `foo`, implement `SortConfigTransferBuilderPluginInterface` by building a `SortConfigTransfer` with a `foo` parameter:
 
-<details>
-  <summary markdown='span'>SortConfigTransferBuilderPluginInterface implementation example</summary>
+<details><summary markdown='span'>SortConfigTransferBuilderPluginInterface implementation example</summary>
 
 ```php
 <?php
@@ -228,11 +235,10 @@ class FooSortConfigTransferBuilderPlugin extends AbstractPlugin implements SortC
     }
 }
 ```
-
 </details>
 
 
-5. On the project level, wire the implemented plugins to the providers in `Pyz\Zed\ProductPageSearch\ProductPageSearchDependencyProvider` and `Pyz\Client\Catalog\CatalogDependencyProvider`:
+1. On the project level, wire the implemented plugins to the providers in `Pyz\Zed\ProductPageSearch\ProductPageSearchDependencyProvider` and `Pyz\Client\Catalog\CatalogDependencyProvider`:
 
 * `ProductPageSearchDependencyProvider::getDataExpanderPlugins()`
 

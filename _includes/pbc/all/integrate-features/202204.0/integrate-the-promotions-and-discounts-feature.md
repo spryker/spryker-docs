@@ -108,16 +108,16 @@ console frontend:zed:build
 Make sure that discounts are calculated according to their priorities:
 1. Create a couple of percentage discounts with different priorities.
 2. To fulfill the discounts' requirements, add items to the cart.
-3. Check that discounts are applied in the correct order and the calculated discount total is correct.
+3. Check that discounts are applied in the correct order and that the calculated discount total is correct.
 
 {% endinfo_block %}
 
 {% info_block warningBox "Verification" %}
 
 Make sure that you can submit the *Discount Create* and *Discount Update* forms with specified date and time for **Valid From** and **Valid To** discount form fields:
-1. In the Back Office, go to **Merchandising** > **Discount**.
-2. Create a new discount or update an existing one, check that you can see the *Discount* form.
-3. Click on **Valid From** and **Valid To** fields to ensure you can see the calendar, where you can select specific date and time.
+1. In the Back Office, go to **Merchandising&nbsp;<span aria-label="'">></span> Discount**.
+2. Create a new discount or update an existing one and check that you can see the **Discount** form.
+3. To ensure you can see the calendar, click on **Valid From** and **Valid To** fields, where you can select a specific date and time.
 4. Make sure **Valid From** and **Valid To** fields can accept the selected date and time (for times not falling on the hour, use keystroke entry—for example, 13:45).
 5. In the `spy_discount` DB table, make sure **Valid From** and **Valid To** date and time are saved correctly.
 

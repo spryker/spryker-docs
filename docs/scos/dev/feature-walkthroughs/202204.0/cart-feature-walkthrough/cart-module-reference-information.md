@@ -31,11 +31,11 @@ The `Cart` module in Zed has a cart operation class that handles cart operation 
 
 ## Cart persistence providers
 
-`Cart` has different persistence providers in Zed. By default, it only modifies the current `QuoteTransfer`, and it doesn't persist the data. A use case example is building a cart where the cart items are persisted between log-ins. In this case, `StorageProviderInterface` needs to be implemented and the operation dependency must be changed.
+`Cart` has different persistence providers in Zed. By default, it only modifies the current `QuoteTransfer`, and it doesn't persist the data. A use case example is building a cart where the cart items are persisted between log-ins. In this case, `StorageProviderInterface` needs to be implemented, and the operation dependency must be changed.
 
 ## Cart expanders
 
-Zed `Cart` modules can have expander plugins registered. Expander plugins expand the cart with additional data such as price information, product information and add product options.
+Zed `Cart` modules can have expander plugins registered. Expander plugins expand the cart with additional data such as price information and product information, and they add product options.
 
 Currently, we ship with a couple of plugins:
 
@@ -44,8 +44,8 @@ Currently, we ship with a couple of plugins:
 | ProductCartPlugin | Adds product information to `ItemTransfer` (`idConcreteProduct`, `idAbstractProduct`, `abstractSku`, `name` and `taxRate`). |
 | CartItemPricePlugin | Adds `unitGrossPrice` into `itemTransfer`. |
 | CartItemProductOptionPlugin | Adds the `productOption` collection into `ItemTransfer`. |
-| SkuGroupKeyPlugin | Appends SKU to the group key so item's int are grouped by SKU. |
-| CartItemGroupKeyOptionPlugin | Creates product option group key from option IDs, so items with different option combinations are placed separatly. |
+| SkuGroupKeyPlugin | Appends SKU to the group key, so the item's int are grouped by SKU. |
+| CartItemGroupKeyOptionPlugin | Creates a product option group key from option IDs, so items with different option combinations are placed separatly. |
 
 ## Cart prechecks
 
@@ -55,6 +55,6 @@ Currently, we ship a couple of default prechecks:
 
 | CART PRE-CHECK | DESCRIPTION |
 | --- | --- |
-| ProductExistsCartPreCheckPlugin | Checks that passed products exist in the DB. This plugin is provided by `ProductCartConnector` module. |
-| CartBundleAvailabilityPreCheckPlugin | Check availability of new cart items (products and product bundles). Provided by `ProductBundle` module. |
-| CheckAvailabilityPlugin | Check availability of new cart items (only products). Provided by `AvailabilityCartConnector` module. |
+| ProductExistsCartPreCheckPlugin | Checks that passed products exist in the DB. This plugin is provided by the `ProductCartConnector` module. |
+| CartBundleAvailabilityPreCheckPlugin | Check availability of new cart items (products and product bundles). Provided by the `ProductBundle` module. |
+| CheckAvailabilityPlugin | Check availability of new cart items (only products). Provided by the `AvailabilityCartConnector` module. |

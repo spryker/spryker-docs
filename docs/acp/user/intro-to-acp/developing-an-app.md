@@ -80,7 +80,7 @@ There are a couple of files that an app must have. The workflow guides you throu
 **Manifest files**
 The manifest files define the details like title, category, and description of the app itself. The manifest files are also used to display information about the app on the App Catalog Page and the App Detail Page in the Back office.
 
-For more details on the manifest files, see [App manifest files](LINK)
+For more details on the manifest files, see [App manifest](LINK)
 
 {% info_block infoBox "Info" %}
 

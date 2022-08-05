@@ -38,7 +38,7 @@ If a Back Office user creates or edits a shipment of an order created by a custo
 
 {% endinfo_block %}
 
-Additional behaviors can be attached to a delivery method from the Back Office by selecting specific plugins. For more information about method plugins types, see [Reference information: Shipment method plugins](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/shipment-method-plugins-reference-information.html).
+Additional behaviors can be attached to a delivery method from the Back Office by selecting specific plugins. For more information about method plugins types, see [Reference information: Shipment method plugins](/docs/scos/dev/feature-walkthroughs/{{site.version}}/shipment-feature-walkthrough/shipment-method-plugins-reference-information.html).
 
 Each shipment method has a dedicated price and tax set in the various currencies you define. The price displayed to the customer is calculated based on the store they visit or their preferred currency selection.
 
@@ -56,6 +56,6 @@ You can give shipment discounts based on the carrier, shipment method, or cart v
 
 | INTEGRATION GUIDES  | MIGRATION GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|
-| [Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-feature-integration.html) | [Shipment migration guide](/docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipment-module.html) | [HowTo: Create discounts based on shipment](/docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html#activate-a-discount-rule-based-on-a-shipment-carrier) | [Shipment method plugins: reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/shipment-method-plugins-reference-information.html) |
+| [Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/shipment-feature-integration.html) | [Shipment migration guide](/docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipment-module.html) | [HowTo: Create discounts based on shipment](/docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html#activate-a-discount-rule-based-on-a-shipment-carrier) | [Shipment method plugins: reference information](/docs/scos/dev/feature-walkthroughs/{{site.version}}/shipment-feature-walkthrough/shipment-method-plugins-reference-information.html) |
 | [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html) | [ShipmentGui migration guide](/docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentgui-module.html) | [HowTo: Add a new shipment method 2.0](/docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method-2.0.html) |  |
 |  | [ManualOrderEntryGui migration guide](/docs/scos/dev/module-migration-guides/migration-guide-manualorderentrygui.html) | [HowTo: Import delivery methods linked to store](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-delivery-methods-linked-to-store.html) |  |

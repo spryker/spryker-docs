@@ -321,18 +321,6 @@ The [Search](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature
 
 The [Shared Carts](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shared-carts-feature-walkthrough.html) feature allows sharing carts between company users.
 
-## Shipment
-
-The [Shipment](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/shipment-feature-walkthrough.html) feature allows you to create and manage carrier companies and assign multiple delivery methods associated with specific stores, which your customers can select during the checkout. With the feature in place, you can define delivery price and expected delivery time, tax sets, and availability of the delivery method per store.
-
-### Shipment method entities in the database: reference information
-
-[This schema](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/shipment-method-entities-in-the-database-reference-information.html) shows how the sales order and shipment method entities are modeled in the database.
-
-### Shipment method plugins: reference information
-
-This provides a walkthrough to the [Shipment method](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/shipment-method-plugins-reference-information.html) plugin and its features.
-
 ## Shopping Lists
 
 The [Shopping Lists](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shopping-lists-feature-walkthrough.html) feature allows customers to create and share multiple lists of products between company business units or single users. Shopping lists can be shared between users with different sets of permissions.

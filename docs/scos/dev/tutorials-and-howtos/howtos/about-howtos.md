@@ -46,7 +46,6 @@ HowTos are simple step-by-step instructions to guide you through the process of 
 * [HowTo: Create a visibility condition for CMS Blocks](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-visibility-condition-for-cms-blocks.html)
 * [HowTo: Create CMS Templates](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html)
 * [HowTo: Manage business unit specific prices via data import](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/how-to-manage-business-unit-specific-prices-via-data-import.html)
-* [HowTo: Import delivery methods linked to store](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-delivery-methods-linked-to-store.html)
 * [HowTo: Import Packaging Units](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html)
 * [HowTo: Import warehouse data](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html)
 
@@ -66,4 +65,3 @@ With these guides, you can learn how to do the following:
 * [HowTo: Start using an HTTPS protocol](/docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html)
 * [HowTo: Set up your store with multiple locals](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-stores-with-multiple-locales.html)
 * [HowTo: Set up Spryker with MySQL database](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-spryker-with-mysql.html)
-* [HowTo: Add a new shipment method 2.0](/docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method-2.0.html)

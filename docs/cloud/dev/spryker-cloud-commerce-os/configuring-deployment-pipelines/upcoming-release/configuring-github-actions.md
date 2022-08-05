@@ -11,9 +11,9 @@ This document describes how to configure continuous integration using GitHub Act
 
 ## GitHub Actions
 
-GitHub Actions help you automate your software development workflows in the same place you store code and collaborate on pull requests and issues. You can write individual tasks, called actions, and combine them to create a custom workflow. Workflows are custom automated processes that you can set up in your repository to build, test, package, release, or deploy any code project on GitHub.
+GitHub Actions helps you automate your software development workflows in the same place you store code and collaborate on pull requests and issues. You can write individual tasks, called actions, and combine them to create a custom workflow. Workflows are custom automated processes that you can set up in your repository to build, test, package, release, or deploy any code project on GitHub.
 
-For more information on GitHub Actions, see
+For more information on GitHub Actions, see the following documents:
 * [GitHub Actions](https://github.com/features/actions)
 * [Learn GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
 
@@ -24,7 +24,7 @@ In a GitHub repository, create the workflow configuration file: `.github/workflo
 
 ## Configuring basic validation with GitHub Actions
 
-Set up the job that performs the basic validation like:
+Set up the job that performs the basic validation like the following:
 * Code style
 * Architecture
 * Security
@@ -32,7 +32,7 @@ Set up the job that performs the basic validation like:
 
 
 <details open>
-    <summary>Example of .github/workflows/{project_name}.yml</summary>
+<summary>Example of .github/workflows/{project_name}.yml</summary>
 
 ```yaml
 ...
@@ -225,15 +225,15 @@ To set up a job that runs a specific group of tests via the [Docker SDK](/docs/s
 
 | PLACEHOLDER| DESCRIPTION| EXAMPLE IN THE PROPERTY NAME| EXAMPLE IN THE PROPERTY VALUE|
 |---|---|---|---|
-| {php_version}| PHP version on which validation is based. The version should correspond to the Docker image defined in `{image_tag}`.| 74| 7.4|
+| {php_version}| PHP version on which validation is based. The version must correspond to the Docker image defined in `{image_tag}`.| 74| 7.4|
 |{database_type}| Database type on which validation is based.| mariadb| MariaDB|
 | {tests_type}| | The group of tests to run.| glue| Glue|
-| {image}| Docker image on which the validation is based. The name should correspond to the Docker image defined in `{image_tag}`.| alpine| Alpine|
+| {image}| Docker image on which the validation is based. The name must correspond to the Docker image defined in `{image_tag}`.| alpine| Alpine|
 |{image_tag}| Tag of the Docker image on which the validation is based. Check all the images in the [Spryker Docker hub](https://hub.docker.com/r/spryker/php/tags?page=1&ordering=last_updated&name=-debian).| 7.4|
-| {deployment_configuration_file}| Deploy file configured for building application suitable to run the desired group of tests. Example: [deploy.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.ci.functional.yml)| deploy.ci.functional.mariadb.yml|
-| {tests_configuration_file}| Codeception configuration files that defines the tests to run. Example: [codeception.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/codeception.ci.functional.yml)| codeception.functional.yml|
+| {deployment_configuration_file}| Deploy file configured for building an application suitable to run the desired group of tests. Example: [deploy.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/deploy.ci.functional.yml)| deploy.ci.functional.mariadb.yml|
+| {tests_configuration_file}| Codeception configuration files that defines tests to run. Example: [codeception.ci.functional.yml](https://github.com/spryker-shop/b2c-demo-shop/blob/master/codeception.ci.functional.yml)| codeception.functional.yml|
 
-4. Repeat steps 1 to 3 until you add all the desired jobs.
+1. Repeat steps 1 to 3 until you add all the desired jobs.
 
 For different configuration examples, see [Configuring groups of tests via the Docker SDK: Configuration examples](#configuring-groups-of-tests-via-the-docker-sdk-configuration-examples).
 
@@ -243,7 +243,7 @@ This section describes examples of running groups of tests based on different co
 
 #### Example 1: Running functional tests on a specific version of Alpine with MySQL and PHP 7.3
 
-To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3:
+To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3, follow these steps:
 
 1. Update the desired deploy file:
     1. Define the Docker image tag:
@@ -305,7 +305,7 @@ To run functional tests on Alpine 3.12.0 with MySQL and PHP 7.3:
 
 #### Example 2: Running Glue API tests on Debian with PostgreSQL and PHP 8.0
 
-To run Glue API tests on Debian with PostgreSQL and PHP 8.0:
+To run Glue API tests on Debian with PostgreSQL and PHP 8.0, follow these steps:
 1. Update the desired deploy file:
     1. Define the Docker image tag:
         ```yaml
@@ -367,13 +367,13 @@ To run Glue API tests on Debian with PostgreSQL and PHP 8.0:
 
 {% info_block infoBox "Default configuration" %}
 
-* Since Alpine is the default platform and we don’t need a specific version, we don’t define it in the image tag in the deploy and workflow files.
-* MariaDB is the default database engine, so we don’t need to define it in the deploy file.
+* Since Alpine is the default platform and a specific version is not needed, don’t define it in the image tag in the deploy and workflow files.
+* MariaDB is the default database engine, so you don’t need to define it in the deploy file.
 
 {% endinfo_block %}
 
 
-To run acceptance tests on Alpine with MariaDB and PHP 7.4:
+To run acceptance tests on Alpine with MariaDB and PHP 7.4, follow these steps:
 
 1. In the desired deploy file, define the Docker image tag:
 ```yaml

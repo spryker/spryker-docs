@@ -11,16 +11,17 @@ Follow the steps below to install the Product Configuration feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | INTEGRATION GUIDE |
-| --- | --- | --- |
-| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
-| Product |{{site.version}} |[Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)|
-| Cart| {{site.version}}| [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html)|
-| Order Management| {{site.version}} |[Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-feature-integration.html)|
-| Checkout |{{site.version}} |[Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/checkout-feature-integration.html)|
-| Prices |{{site.version}} |[Prices feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/prices-feature-integration.html)|
+| NAME                 | VERSION | INTEGRATION GUIDE |
+|----------------------| --- | --- |
+| Spryker Core         | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Product              |{{site.version}} |[Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)|
+| Cart                 | {{site.version}}| [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html)|
+| Order Management     | {{site.version}} |[Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-feature-integration.html)|
+| Checkout             |{{site.version}} |[Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/checkout-feature-integration.html)|
+| Prices               |{{site.version}} |[Prices feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/prices-feature-integration.html)|
 | Inventory Management |{{site.version}} |[Inventory management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/inventory-management-feature-integration.html)|
-| Wishlist |{{site.version}} ||
+| Wishlist             |{{site.version}} ||
+| ShoppingList         |{{site.version}} |[Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/shopping-lists-feature-integration.html)|
 
 ### 1) Install the required modules using Composer
 
@@ -35,17 +36,18 @@ composer require spryker-feature/configurable-product:"{{site.version}}" --updat
 
 Make sure that the following modules have been installed:
 
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
-|ProductConfiguration|vendor/spryker/product-configuration|
-|ProductConfigurationCart|vendor/spryker/product-configuration-cart|
-|ProductConfigurationDataImport|vendor/spryker/product-configuration-data-import|
-|ProductConfigurationGui|vendor/spryker/product-configuration-gui|
-|ProductConfigurationPersistentCart|vendor/spryker/product-configuration-persistent-cart|
-|ProductConfigurationStorage|vendor/spryker/product-configuration-storage|
-|ProductConfigurationWishlist|vendor/spryker/product-configuration-wishlist|
-|SalesProductConfiguration|vendor/spryker/sales-product-configuration|
-|SalesProductConfigurationGui|vendor/spryker/sales-product-configuration-gui|
+| MODULE                             | EXPECTED DIRECTORY                                   |
+|------------------------------------|------------------------------------------------------|
+| ProductConfiguration               | vendor/spryker/product-configuration                 |
+| ProductConfigurationCart           | vendor/spryker/product-configuration-cart            |
+| ProductConfigurationDataImport     | vendor/spryker/product-configuration-data-import     |
+| ProductConfigurationGui            | vendor/spryker/product-configuration-gui             |
+| ProductConfigurationPersistentCart | vendor/spryker/product-configuration-persistent-cart |
+| ProductConfigurationStorage        | vendor/spryker/product-configuration-storage         |
+| ProductConfigurationWishlist       | vendor/spryker/product-configuration-wishlist        |
+| ProductConfigurationShoppingList   | vendor/spryker/product-configuration-shopping-list   |
+| SalesProductConfiguration          | vendor/spryker/sales-product-configuration           |
+| SalesProductConfigurationGui       | vendor/spryker/sales-product-configuration-gui       |
 
 {% endinfo_block %}
 
@@ -143,12 +145,13 @@ console transfer:generate
 
 Make sure that the following changes have been applied by checking your database:
 
-| DATABASE ENTITY | TYPE | EVENT |
-| --- | --- | --- |
-|spy_product_configuration |table| created|
-|spy_product_configuration_storage| table | created|
-|spy_sales_order_item_configuration |table| created|
-|spy_wishlist_item.product_configuration_instance_data |column| added|
+| DATABASE ENTITY                                            | TYPE | EVENT |
+|------------------------------------------------------------| --- | --- |
+| spy_product_configuration                                  |table| created|
+| spy_product_configuration_storage                          | table | created|
+| spy_sales_order_item_configuration                         |table| created|
+| spy_wishlist_item.product_configuration_instance_data      |column| added|
+| spy_shopping_list_item.product_configuration_instance_data |column| added|
 
 {% endinfo_block %}
 
@@ -156,51 +159,57 @@ Make sure that the following changes have been applied by checking your database
 
 Make sure that the following changes have been triggered in transfer objects:
 
-| TRANSFER | TYPE | EVENT | PATH |
-| --- | --- | --- | --- |
-| ProductConfigurationTransfer | class | created | src/Generated/Shared/Transfer/ProductConfigurationTransfer |
-| ProductConfigurationInstanceTransfer| class| created |src/Generated/Shared/Transfer/ProductConfigurationInstanceTransfer|
-|ItemTransfer |class |created |src/Generated/Shared/Transfer/ItemTransfer|
-|ProductConfigurationFilterTransfer| class| created| src/Generated/Shared/Transfer/ProductConfigurationFilterTransfer|
-|FilterTransfer |class| created |src/Generated/Shared/Transfer/FilterTransfer|
-|ProductConfigurationCollectionTransfer| class |created |src/Generated/Shared/Transfer/ProductConfigurationCollectionTransfer|
-|CartChangeTransfer |class |created |src/Generated/Shared/Transfer/CartChangeTransfer|
-|QuoteTransfer| class| created |src/Generated/Shared/Transfer/QuoteTransfer|
-|CheckoutErrorTransfer| class| created |src/Generated/Shared/Transfer/CheckoutErrorTransfer|
-|CheckoutResponseTransfer |class| created| src/Generated/Shared/Transfer/CheckoutResponseTransfer|
-|ProductConfiguratorResponseProcessorResponseTransfer |class| created |src/Generated/Shared/Transfer/ProductConfiguratorResponseProcessorResponseTransfer|
-|MessageTransfer| class |created| src/Generated/Shared/Transfer/MessageTransfer|
-|ProductConfiguratorResponseTransfer| class| created |src/Generated/Shared/Transfer/ProductConfiguratorResponseTransfer|
-|ProductConfiguratorRequestTransfer |class| created |src/Generated/Shared/Transfer/ProductConfiguratorRequestTransfer|
-|ProductConfiguratorRedirectTransfer |class| created |src/Generated/Shared/Transfer/ProductConfiguratorRedirectTransfer|
-|ProductConfiguratorRequestDataTransfer |class| created |src/Generated/Shared/Transfer/ProductConfiguratorRequestDataTransfer|
-|CustomerTransfer| class| created| src/Generated/Shared/Transfer/CustomerTransfer|
-|StoreTransfer |class |created |src/Generated/Shared/Transfer/StoreTransfer|
-|CurrencyTransfer| class |created| src/Generated/Shared/Transfer/CurrencyTransfer|
-|PriceProductTransfer| class |created| src/Generated/Shared/Transfer/PriceProductTransfer|
-|CartItemQuantityTransfer |class |created |src/Generated/Shared/Transfer/CartItemQuantityTransfer|
-|ProductConfigurationAggregationTransfer| class| created |src/Generated/Shared/Transfer/ProductConfigurationAggregationTransfer|
-|PriceProductFilterTransfer |class |created |src/Generated/Shared/Transfer/PriceProductFilterTransfer|
-|PriceProductDimensionTransfer| class |created| src/Generated/Shared/Transfer/PriceProductDimensionTransfer|
-|PriceProductTransfer |class |created |src/Generated/Shared/Transfer/PriceProductTransfer|
-|ProductConcreteTransfer| class| created |src/Generated/Shared/Transfer/ProductConcreteTransfer|
-|MoneyValueTransfer| class| created |src/Generated/Shared/Transfer/MoneyValueTransfer|
-|ItemReplaceTransfer |class| created| src/Generated/Shared/Transfer/ItemReplaceTransfer|
-|QuoteResponseTransfer| class| created| src/Generated/Shared/Transfer/QuoteResponseTransfer|
-|QuoteErrorTransfer |class |created| src/Generated/Shared/Transfer/QuoteErrorTransfer|
-|SalesProductConfigurationTemplateTransfer |class| created |src/Generated/Shared/Transfer/SalesProductConfigurationTemplateTransfer|
-|SalesOrderItemConfigurationTransfer |class| created |src/Generated/Shared/Transfer/SalesOrderItemConfigurationTransfer|
-|WishlistPreUpdateItemCheckResponseTransfer |class| created |src/Generated/Shared/Transfer/WishlistPreUpdateItemCheckResponseTransfer|
-|WishlistItemTransfer |class| created |src/Generated/Shared/Transfer/WishlistItemTransfer|
-|WishlistItemMetaTransfer |class| created |src/Generated/Shared/Transfer/WishlistItemMetaTransfer|
-|WishlistMoveToCartRequestTransfer |class| created |src/Generated/Shared/Transfer/WishlistMoveToCartRequestTransfer|
-|WishlistItemCriteriaTransfer |class| created |src/Generated/Shared/Transfer/WishlistItemCriteriaTransfer|
-|WishlistItemResponseTransfer |class| created |src/Generated/Shared/Transfer/WishlistItemResponseTransfer|
-|WishlistPreAddItemCheckResponseTransfer |class| created |src/Generated/Shared/Transfer/WishlistPreAddItemCheckResponseTransfer|
-|WishlistMoveToCartRequestCollectionTransfer |class| created |src/Generated/Shared/Transfer/WishlistMoveToCartRequestCollectionTransfer|
-|WishlistItemCollectionTransfer |class| created |src/Generated/Shared/Transfer/WishlistItemCollectionTransfer|
-|WishlistTransfer |class| created |src/Generated/Shared/Transfer/WishlistTransfer|
-|ProductConfigurationFilterTransfer.skus |property| added |src/Generated/Shared/Transfer/ProductConfigurationFilterTransfer|
+| TRANSFER                                             | TYPE | EVENT | PATH |
+|------------------------------------------------------| --- | --- | --- |
+| ProductConfigurationTransfer                         | class | created | src/Generated/Shared/Transfer/ProductConfigurationTransfer |
+| ProductConfigurationInstanceTransfer                 | class| created |src/Generated/Shared/Transfer/ProductConfigurationInstanceTransfer|
+| ItemTransfer                                         |class |created |src/Generated/Shared/Transfer/ItemTransfer|
+| ProductConfigurationFilterTransfer                   | class| created| src/Generated/Shared/Transfer/ProductConfigurationFilterTransfer|
+| FilterTransfer                                       |class| created |src/Generated/Shared/Transfer/FilterTransfer|
+| ProductConfigurationCollectionTransfer               | class |created |src/Generated/Shared/Transfer/ProductConfigurationCollectionTransfer|
+| CartChangeTransfer                                   |class |created |src/Generated/Shared/Transfer/CartChangeTransfer|
+| QuoteTransfer                                        | class| created |src/Generated/Shared/Transfer/QuoteTransfer|
+| CheckoutErrorTransfer                                | class| created |src/Generated/Shared/Transfer/CheckoutErrorTransfer|
+| CheckoutResponseTransfer                             |class| created| src/Generated/Shared/Transfer/CheckoutResponseTransfer|
+| ProductConfiguratorResponseProcessorResponseTransfer |class| created |src/Generated/Shared/Transfer/ProductConfiguratorResponseProcessorResponseTransfer|
+| MessageTransfer                                      | class |created| src/Generated/Shared/Transfer/MessageTransfer|
+| ProductConfiguratorResponseTransfer                  | class| created |src/Generated/Shared/Transfer/ProductConfiguratorResponseTransfer|
+| ProductConfiguratorRequestTransfer                   |class| created |src/Generated/Shared/Transfer/ProductConfiguratorRequestTransfer|
+| ProductConfiguratorRedirectTransfer                  |class| created |src/Generated/Shared/Transfer/ProductConfiguratorRedirectTransfer|
+| ProductConfiguratorRequestDataTransfer               |class| created |src/Generated/Shared/Transfer/ProductConfiguratorRequestDataTransfer|
+| CustomerTransfer                                     | class| created| src/Generated/Shared/Transfer/CustomerTransfer|
+| StoreTransfer                                        |class |created |src/Generated/Shared/Transfer/StoreTransfer|
+| CurrencyTransfer                                     | class |created| src/Generated/Shared/Transfer/CurrencyTransfer|
+| PriceProductTransfer                                 | class |created| src/Generated/Shared/Transfer/PriceProductTransfer|
+| CartItemQuantityTransfer                             |class |created |src/Generated/Shared/Transfer/CartItemQuantityTransfer|
+| ProductConfigurationAggregationTransfer              | class| created |src/Generated/Shared/Transfer/ProductConfigurationAggregationTransfer|
+| PriceProductFilterTransfer                           |class |created |src/Generated/Shared/Transfer/PriceProductFilterTransfer|
+| PriceProductDimensionTransfer                        | class |created| src/Generated/Shared/Transfer/PriceProductDimensionTransfer|
+| PriceProductTransfer                                 |class |created |src/Generated/Shared/Transfer/PriceProductTransfer|
+| ProductConcreteTransfer                              | class| created |src/Generated/Shared/Transfer/ProductConcreteTransfer|
+| MoneyValueTransfer                                   | class| created |src/Generated/Shared/Transfer/MoneyValueTransfer|
+| ItemReplaceTransfer                                  |class| created| src/Generated/Shared/Transfer/ItemReplaceTransfer|
+| QuoteResponseTransfer                                | class| created| src/Generated/Shared/Transfer/QuoteResponseTransfer|
+| QuoteErrorTransfer                                   |class |created| src/Generated/Shared/Transfer/QuoteErrorTransfer|
+| SalesProductConfigurationTemplateTransfer            |class| created |src/Generated/Shared/Transfer/SalesProductConfigurationTemplateTransfer|
+| SalesOrderItemConfigurationTransfer                  |class| created |src/Generated/Shared/Transfer/SalesOrderItemConfigurationTransfer|
+| WishlistPreUpdateItemCheckResponseTransfer           |class| created |src/Generated/Shared/Transfer/WishlistPreUpdateItemCheckResponseTransfer|
+| WishlistItemTransfer                                 |class| created |src/Generated/Shared/Transfer/WishlistItemTransfer|
+| WishlistItemMetaTransfer                             |class| created |src/Generated/Shared/Transfer/WishlistItemMetaTransfer|
+| WishlistMoveToCartRequestTransfer                    |class| created |src/Generated/Shared/Transfer/WishlistMoveToCartRequestTransfer|
+| WishlistItemCriteriaTransfer                         |class| created |src/Generated/Shared/Transfer/WishlistItemCriteriaTransfer|
+| WishlistItemResponseTransfer                         |class| created |src/Generated/Shared/Transfer/WishlistItemResponseTransfer|
+| WishlistPreAddItemCheckResponseTransfer              |class| created |src/Generated/Shared/Transfer/WishlistPreAddItemCheckResponseTransfer|
+| WishlistMoveToCartRequestCollectionTransfer          |class| created |src/Generated/Shared/Transfer/WishlistMoveToCartRequestCollectionTransfer|
+| WishlistItemCollectionTransfer                       |class| created |src/Generated/Shared/Transfer/WishlistItemCollectionTransfer|
+| WishlistTransfer                                     |class| created |src/Generated/Shared/Transfer/WishlistTransfer|
+| ProductConfigurationFilterTransfer.skus              |property| added |src/Generated/Shared/Transfer/ProductConfigurationFilterTransfer|
+| ShoppingListItemTransfer                             |class| created |src/Generated/Shared/Transfer/ShoppingListItemTransfer|
+| ShoppingListPreAddItemCheckResponseTransfer          |class| created |src/Generated/Shared/Transfer/ShoppingListPreAddItemCheckResponseTransfer|
+| ShoppingListItemCollectionTransfer                   |class| created |src/Generated/Shared/Transfer/ShoppingListItemCollectionTransfer|
+| ShoppingListItemResponseTransfer                     |class| created |src/Generated/Shared/Transfer/ShoppingListItemResponseTransfer|
+| ShoppingListTransfer                                 |class| created |src/Generated/Shared/Transfer/ShoppingListTransfer|
+| CompanyUserTransfer                                 |class| created |src/Generated/Shared/Transfer/CompanyUserTransfer|
 
 {% endinfo_block %}
 
@@ -1245,6 +1254,135 @@ Make sure that the wishlist plugins work correctly:
 
 {% endinfo_block %}
 
+14. Set up shopping list plugins:
+
+| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
+| --- | --- | --- | --- |
+|ProductConfigurationShoppingListItemMapperPlugin | Adds product configuration to shopping list item if product configuration found. | None | Spryker\Client\ProductConfigurationShoppingList\Plugin\ShoppingList |
+|ProductConfigurationShoppingListItemToItemMapperPlugin | Copies product configuration from shopping list item to cart item. | None | Spryker\Client\ProductConfigurationShoppingList\Plugin\ShoppingList |
+|ProductConfigurationShoppingListExpanderPlugin | Expands shopping list items with product configuration. | None | Spryker\Client\ProductConfigurationShoppingList\Plugin\ShoppingList |
+|ProductConfigurationShoppingListAddItemPreCheckPlugin | Checks if product configuration exists by provided `ShoppingListItem.sku` transfer property. | None | Spryker\Zed\ProductConfigurationShoppingList\Communication\Plugin\ShoppingList |
+|ProductConfigurationShoppingListItemBulkPostSavePlugin | Removes configuration if product configuration instance is not set at shopping list item. | None | Spryker\Zed\ProductConfigurationShoppingList\Communication\Plugin\ShoppingList |
+|ProductConfigurationShoppingListItemCollectionExpanderPlugin | Expands `ShoppingListItemTransfer` transfer object with product configuration data. | None | Spryker\Zed\ProductConfigurationShoppingList\Communication\Plugin\ShoppingList |
+|ItemProductConfigurationItemToShoppingListItemMapperPlugin | Copies product configuration from cart item to shopping list item. | None | Spryker\Zed\ProductConfigurationShoppingList\Communication\Plugin\ShoppingList |
+
+**src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Client\ShoppingList;
+
+use Spryker\Client\ProductConfigurationShoppingList\Plugin\ShoppingList\ProductConfigurationShoppingListExpanderPlugin;
+use Spryker\Client\ProductConfigurationShoppingList\Plugin\ShoppingList\ProductConfigurationShoppingListItemMapperPlugin;
+use Spryker\Client\ProductConfigurationShoppingList\Plugin\ShoppingList\ProductConfigurationShoppingListItemToItemMapperPlugin;
+use Spryker\Client\ShoppingList\ShoppingListDependencyProvider as SprykerShoppingListDependencyProvider;
+
+class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Client\ShoppingListExtension\Dependency\Plugin\ShoppingListItemMapperPluginInterface>
+     */
+    protected function getAddItemShoppingListItemMapperPlugins(): array
+    {
+        return [
+            new ProductConfigurationShoppingListItemMapperPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Client\ShoppingListExtension\Dependency\Plugin\ShoppingListItemToItemMapperPluginInterface>
+     */
+    protected function getShoppingListItemToItemMapperPlugins(): array
+    {
+        return [
+            new ProductConfigurationShoppingListItemToItemMapperPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Client\ShoppingListExtension\Dependency\Plugin\ShoppingListExpanderPluginInterface>
+     */
+    protected function getShoppingListExpanderPlugins(): array
+    {
+        return [
+            new ProductConfigurationShoppingListExpanderPlugin(),
+        ];
+    }
+}
+
+```
+
+**src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\ShoppingList;
+
+use Spryker\Zed\ProductConfigurationShoppingList\Communication\Plugin\ShoppingList\ItemProductConfigurationItemToShoppingListItemMapperPlugin;
+use Spryker\Zed\ProductConfigurationShoppingList\Communication\Plugin\ShoppingList\ProductConfigurationShoppingListAddItemPreCheckPlugin;
+use Spryker\Zed\ProductConfigurationShoppingList\Communication\Plugin\ShoppingList\ProductConfigurationShoppingListItemBulkPostSavePlugin;
+use Spryker\Zed\ProductConfigurationShoppingList\Communication\Plugin\ShoppingList\ProductConfigurationShoppingListItemCollectionExpanderPlugin;
+use Spryker\Zed\ShoppingList\ShoppingListDependencyProvider as SprykerShoppingListDependencyProvider;
+
+class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\ShoppingListExtension\Dependency\Plugin\AddItemPreCheckPluginInterface>
+     */
+    protected function getAddItemPreCheckPlugins(): array
+    {
+        return [
+            new ProductConfigurationShoppingListAddItemPreCheckPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ShoppingListExtension\Dependency\Plugin\ShoppingListItemBulkPostSavePluginInterface>
+     */
+    protected function getShoppingListItemBulkPostSavePlugins(): array
+    {
+        return [
+            new ProductConfigurationShoppingListItemBulkPostSavePlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ShoppingListExtension\Dependency\Plugin\ShoppingListItemCollectionExpanderPluginInterface>
+     */
+    protected function getItemCollectionExpanderPlugins(): array
+    {
+        return [
+            new ProductConfigurationShoppingListItemCollectionExpanderPlugin(),
+        ];
+    }
+
+    /**
+     * @return array<\Spryker\Zed\ShoppingListExtension\Dependency\Plugin\ItemToShoppingListItemMapperPluginInterface>
+     */
+    protected function getItemToShoppingListItemMapperPlugins(): array
+    {
+        return [
+            new ItemProductConfigurationItemToShoppingListItemMapperPlugin(),
+        ];
+    }
+}
+
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the shopping list plugins work correctly:
+
+1.  Configure a configurable product.
+
+2.  Add the configured product to shopping list.
+
+3.  Make sure that the product has been successfully added to shopping list.
+
+{% endinfo_block %}
+
 
 ### 5) Import data
 
@@ -1335,14 +1473,15 @@ composer require "spryker-feature/product-labels:"{{site.version}}" --update-wit
 
 Make sure that the following modules have been installed:
 
-| MODULE | EXPECTED DIRECTORY |
-| --- | --- |
-|DateTimeConfiguratorPageExample|vendor/spryker-shop/date-time-configurator-page-example|
-|ProductConfigurationCartWidget|vendor/spryker-shop/product-configuration-cart-widget|
-|ProductConfigurationWidget|vendor/spryker-shop/product-configuration-widget|
-|ProductConfigurationWishlistWidget|vendor/spryker-shop/product-configuration-wishlist-widget|
-|ProductConfiguratorGatewayPage|vendor/spryker-shop/product-configurator-gateway-page|
-|SalesProductConfigurationWidget|vendor/spryker-shop/sales-product-configuration-widget|
+| MODULE                                 | EXPECTED DIRECTORY                                             |
+|----------------------------------------|----------------------------------------------------------------|
+| DateTimeConfiguratorPageExample        | vendor/spryker-shop/date-time-configurator-page-example        |
+| ProductConfigurationCartWidget         | vendor/spryker-shop/product-configuration-cart-widget          |
+| ProductConfigurationWidget             | vendor/spryker-shop/product-configuration-widget               |
+| ProductConfigurationWishlistWidget     | vendor/spryker-shop/product-configuration-wishlist-widget      |
+| ProductConfigurationShoppingListWidget | vendor/spryker-shop/product-configuration-shopping-list-widget |
+| ProductConfiguratorGatewayPage         | vendor/spryker-shop/product-configurator-gateway-page          |
+| SalesProductConfigurationWidget        | vendor/spryker-shop/sales-product-configuration-widget         |
 
 {% endinfo_block %}
 
@@ -1398,6 +1537,10 @@ wishlist.validation.error.wishlist_item_cannot_be_updated,Wishlist item cannot b
 wishlist.validation.error.wishlist_item_cannot_be_updated,Wunschliste kann nicht aktualisiert werden.,de_DE
 product_configuration_wishlist.error.configuration_not_found,"Product configuration was not found for wishlist item '%id%'.",en_US
 product_configuration_wishlist.error.configuration_not_found,"Für den Wunschlistenartikel '%id%' wurde keine Produktkonfiguration gefunden.",de_DE
+product_configuration_shopping_list.error.configuration_not_found,"Product configuration was not found for shopping list item '%uuid%'.",en_US
+product_configuration_shopping_list.error.configuration_not_found,"Für den Einkaufslistenartikel '%uuid%' wurde keine Produktkonfiguration gefunden.",de_DE
+product_configuration_shopping_list.error.item_not_found,"Shopping list item not found.",en_US
+product_configuration_shopping_list.error.item_not_found,"Artikel auf der Einkaufsliste nicht gefunden.",de_DE
 ```
 
 2. Import data:
@@ -1499,17 +1642,20 @@ Make sure that the reorder expander plugin works:
 
 3. Register the following gateway plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| ProductDetailPageProductConfiguratorRequestStrategyPlugin | Finds the product configuration instance for a given product, maps it to ProductConfiguratorRequestTransfer, and sends the product configurator access token request. | None| SprykerShop\Yves\ProductConfiguratorGatewayPage\Plugin|
-| ProductDetailPageProductConfiguratorResponseStrategyPlugin | Maps the product configurator check sum response, validates it and replaces configuration for a given product in the session. | None | SprykerShop\Yves\ProductConfiguratorGatewayPage\Plugin|
-| ProductDetailPageProductConfiguratorRequestDataFormExpanderStrategyPlugin | Extends the product configurator request form with the SKU field to support configuration for a product on the PDP page.| None | SprykerShop\Yves\ProductConfiguratorGatewayPage\Plugin|
-| CartPageProductConfiguratorRequestStartegyPlugin | Finds configuration instance in quote, maps it to `ProductConfiguratorRequestTransfer` and sends product configurator access token request.| None | SprykerShop\Yves\ProductConfigurationCartWidget\Plugin|
-| CartPageProductConfiguratorResponseStrategyPlugin | Maps the raw product configurator checksum response, validates it and replaces the corresponding item in a quote.| None | SprykerShop\Yves\ProductConfigurationCartWidget\Plugin |
-| CartPageProductConfiguratorRequestDataFormExpanderStrategyPlugin | Extends the product configurator request form with SKU, quantity, and key group fields to support configuration for a cart item on a cart page.| None| SprykerShop\Yves\ProductConfigurationCartWidget\Plugin|
-| WishlistPageProductConfiguratorRequestStrategyPlugin | Finds product configuration instance for given wishlist item, maps product configuration instance data to `ProductConfiguratorRequestTransfer`, and sends product configurator access token request. | None | SprykerShop\Yves\ProductConfigurationWishlistWidget\Plugin\ProductConfiguratorGatewayPage |
-| WishlistPageProductConfiguratorResponseStrategyPlugin | Maps the product configurator check sum response, validates it and replaces configuration for a given product in the wishlist item. | None | SprykerShop\Yves\ProductConfigurationWishlistWidget\Plugin\ProductConfiguratorGatewayPage |
-| WishlistPageProductConfiguratorRequestDataFormExpanderStrategyPlugin | Extends the product configurator request form with the `idWishlistItem`, 'sku' fields to support configuration for a wishlist item on the Wishlist page. | None | SprykerShop\Yves\ProductConfigurationWishlistWidget\Plugin\ProductConfiguratorGatewayPage |
+| PLUGIN                                                                    | SPECIFICATION                                                                                                                                                                                             | PREREQUISITES | NAMESPACE |
+|---------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------| --- |
+| ProductDetailPageProductConfiguratorRequestStrategyPlugin                 | Finds the product configuration instance for a given product, maps it to ProductConfiguratorRequestTransfer, and sends the product configurator access token request.                                     | None          | SprykerShop\Yves\ProductConfiguratorGatewayPage\Plugin|
+| ProductDetailPageProductConfiguratorResponseStrategyPlugin                | Maps the product configurator check sum response, validates it and replaces configuration for a given product in the session.                                                                             | None          | SprykerShop\Yves\ProductConfiguratorGatewayPage\Plugin|
+| ProductDetailPageProductConfiguratorRequestDataFormExpanderStrategyPlugin | Extends the product configurator request form with the SKU field to support configuration for a product on the PDP page.                                                                                  | None          | SprykerShop\Yves\ProductConfiguratorGatewayPage\Plugin|
+| CartPageProductConfiguratorRequestStartegyPlugin                          | Finds configuration instance in quote, maps it to `ProductConfiguratorRequestTransfer` and sends product configurator access token request.                                                               | None          | SprykerShop\Yves\ProductConfigurationCartWidget\Plugin|
+| CartPageProductConfiguratorResponseStrategyPlugin                         | Maps the raw product configurator checksum response, validates it and replaces the corresponding item in a quote.                                                                                         | None          | SprykerShop\Yves\ProductConfigurationCartWidget\Plugin |
+| CartPageProductConfiguratorRequestDataFormExpanderStrategyPlugin          | Extends the product configurator request form with SKU, quantity, and key group fields to support configuration for a cart item on a cart page.                                                           | None          | SprykerShop\Yves\ProductConfigurationCartWidget\Plugin|
+| WishlistPageProductConfiguratorRequestStrategyPlugin                      | Finds product configuration instance for given wishlist item, maps product configuration instance data to `ProductConfiguratorRequestTransfer`, and sends product configurator access token request.      | None          | SprykerShop\Yves\ProductConfigurationWishlistWidget\Plugin\ProductConfiguratorGatewayPage |
+| WishlistPageProductConfiguratorResponseStrategyPlugin                     | Maps the product configurator check sum response, validates it and replaces configuration for a given product in the wishlist item.                                                                       | None          | SprykerShop\Yves\ProductConfigurationWishlistWidget\Plugin\ProductConfiguratorGatewayPage |
+| WishlistPageProductConfiguratorRequestDataFormExpanderStrategyPlugin      | Extends the product configurator request form with the `idWishlistItem`, 'sku' fields to support configuration for a wishlist item on the Wishlist page.                                                  | None          | SprykerShop\Yves\ProductConfigurationWishlistWidget\Plugin\ProductConfiguratorGatewayPage |
+| ShoppingListPageProductConfiguratorRequestStrategyPlugin                  | Finds product configuration instance for given shopping list item, maps product configuration instance data to `ProductConfiguratorRequestTransfer`, and sends product configurator access token request. | None          | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Plugin\ProductConfiguratorGatewayPage |
+| ShoppingListPageProductConfiguratorResponseStrategyPlugin                 | Maps the product configurator check sum response, validates it and replaces configuration for a given product in the shopping list item.                                                                  | None          | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Plugin\ProductConfiguratorGatewayPage |
+| ShoppingListPageProductConfiguratorRequestDataFormExpanderStrategyPlugin  | Extends the product configurator request form with the `shoppingListItemUuid` and `quantity` fields to support configuration for a shopping list item on the Shopping List page.                          | None          | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Plugin\ProductConfiguratorGatewayPage |
 
 <details>
 <summary markdown='span'>src/Pyz/Yves/ProductConfiguratorGatewayPage/ProductConfiguratorGatewayPageDependencyProvider.php</summary>
@@ -1522,6 +1668,9 @@ namespace Pyz\Yves\ProductConfiguratorGatewayPage;
 use SprykerShop\Yves\ProductConfigurationCartWidget\Plugin\ProductConfiguratorGatewayPage\CartPageProductConfiguratorRequestDataFormExpanderStrategyPlugin;
 use SprykerShop\Yves\ProductConfigurationCartWidget\Plugin\ProductConfiguratorGatewayPage\CartPageProductConfiguratorRequestStartegyPlugin;
 use SprykerShop\Yves\ProductConfigurationCartWidget\Plugin\ProductConfiguratorGatewayPage\CartPageProductConfiguratorResponseStrategyPlugin;
+use SprykerShop\Yves\ProductConfigurationShoppingListWidget\Plugin\ProductConfiguratorGatewayPage\ShoppingListPageProductConfiguratorRequestDataFormExpanderStrategyPlugin;
+use SprykerShop\Yves\ProductConfigurationShoppingListWidget\Plugin\ProductConfiguratorGatewayPage\ShoppingListPageProductConfiguratorRequestStrategyPlugin;
+use SprykerShop\Yves\ProductConfigurationShoppingListWidget\Plugin\ProductConfiguratorGatewayPage\ShoppingListPageProductConfiguratorResponseStrategyPlugin;
 use SprykerShop\Yves\ProductConfigurationWishlistWidget\Plugin\ProductConfiguratorGatewayPage\WishlistPageProductConfiguratorRequestDataFormExpanderStrategyPlugin;
 use SprykerShop\Yves\ProductConfigurationWishlistWidget\Plugin\ProductConfiguratorGatewayPage\WishlistPageProductConfiguratorRequestStrategyPlugin;
 use SprykerShop\Yves\ProductConfigurationWishlistWidget\Plugin\ProductConfiguratorGatewayPage\WishlistPageProductConfiguratorResponseStrategyPlugin;
@@ -1541,6 +1690,7 @@ class ProductConfiguratorGatewayPageDependencyProvider extends SprykerProductCon
             new ProductDetailPageProductConfiguratorRequestStrategyPlugin(),
             new CartPageProductConfiguratorRequestStartegyPlugin(),
             new WishlistPageProductConfiguratorRequestStrategyPlugin(),
+            new ShoppingListPageProductConfiguratorRequestStrategyPlugin(),
         ];
     }
 
@@ -1553,6 +1703,7 @@ class ProductConfiguratorGatewayPageDependencyProvider extends SprykerProductCon
             new ProductDetailPageProductConfiguratorResponseStrategyPlugin(),
             new CartPageProductConfiguratorResponseStrategyPlugin(),
             new WishlistPageProductConfiguratorResponseStrategyPlugin(),
+            new ShoppingListPageProductConfiguratorResponseStrategyPlugin(),
         ];
     }
 
@@ -1565,6 +1716,7 @@ class ProductConfiguratorGatewayPageDependencyProvider extends SprykerProductCon
             new ProductDetailPageProductConfiguratorRequestDataFormExpanderStrategyPlugin(),
             new CartPageProductConfiguratorRequestDataFormExpanderStrategyPlugin(),
             new WishlistPageProductConfiguratorRequestDataFormExpanderStrategyPlugin(),
+            new ShoppingListPageProductConfiguratorRequestDataFormExpanderStrategyPlugin(),
         ];
     }
 }
@@ -1581,23 +1733,27 @@ Make sure that the plugins are set up correctly:
 
 3. Add a configurable product to the wishlist, go to the wishlist page and make sure that you are able to open the configurator page and return to the wishlist page with the configuration saved.
 
+4. Add a configurable product to the shopping list, go to the shopping list page and make sure that you are able to open the configurator page and return to the shopping list page with the configuration saved.
+
 {% endinfo_block %}
 
 1. Set up widgets as follows:
 
     1.  Register the following plugins to enable widgets:   
 
-    | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-    | --- | --- | --- | --- |
-    | ProductConfigurationCartItemDisplayWidget | Displays the product configuration of cart items. | None | SprykerShop\Yves\ProductConfigurationWidget\Widget |
-    | ProductConfigurationCartPageButtonWidget | Displays the product configuration button for configurable cart items. | None | SprykerShop\Yves\ProductConfigurationCartWidget\Widget |
-    | ProductConfigurationProductDetailPageButtonWidget | Displays the product configuration button for configurable products. | None | SprykerShop\Yves\ProductConfigurationWidget\Widget |
-    | ProductConfigurationProductViewDisplayWidget | Displays the product configuration of configurable products. | None | SprykerShop\Yves\ProductConfigurationCartWidget\Widget |
-    | ProductConfigurationQuoteValidatorWidget | Displays if the configuration of configurable cart items is valid. | None | SprykerShop\Yves\ProductConfigurationWidget\Widget |
-    | ProductConfigurationOrderItemDisplayWidget | Displays the product configuration of order items. | None | SprykerShop\Yves\SalesProductConfigurationWidget\Widget |
-    | ProductConfigurationWishlistFormWidget | Adds `has_product_configuration_attached` form hidden field to enable wishlist item expansion. | None | SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget |
-    | ProductConfigurationWishlistItemDisplayWidget | Displays the product configuration of wishlist items. | None | SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget |
-    | ProductConfigurationWishlistPageButtonWidget | Displays the product configuration button for configurable wishlist items. | None | SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget |
+    | PLUGIN                                            | SPECIFICATION                                                                                  | PREREQUISITES | NAMESPACE |
+---------------------------------------------------|------------------------------------------------------------------------------------------------| --- | --- | --- |
+    | ProductConfigurationCartItemDisplayWidget         | Displays the product configuration of cart items.                                              | None | SprykerShop\Yves\ProductConfigurationWidget\Widget |
+    | ProductConfigurationCartPageButtonWidget          | Displays the product configuration button for configurable cart items.                         | None | SprykerShop\Yves\ProductConfigurationCartWidget\Widget |
+    | ProductConfigurationProductDetailPageButtonWidget | Displays the product configuration button for configurable products.                           | None | SprykerShop\Yves\ProductConfigurationWidget\Widget |
+    | ProductConfigurationProductViewDisplayWidget      | Displays the product configuration of configurable products.                                   | None | SprykerShop\Yves\ProductConfigurationCartWidget\Widget |
+    | ProductConfigurationQuoteValidatorWidget          | Displays if the configuration of configurable cart items is valid.                             | None | SprykerShop\Yves\ProductConfigurationWidget\Widget |
+    | ProductConfigurationOrderItemDisplayWidget        | Displays the product configuration of order items.                                             | None | SprykerShop\Yves\SalesProductConfigurationWidget\Widget |
+    | ProductConfigurationWishlistFormWidget            | Adds `has_product_configuration_attached` form hidden field to enable wishlist item expansion. | None | SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget |
+    | ProductConfigurationWishlistItemDisplayWidget     | Displays the product configuration of wishlist items.                                          | None | SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget |
+    | ProductConfigurationWishlistPageButtonWidget      | Displays the product configuration button for configurable wishlist items.                     | None | SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget |
+    | ProductConfigurationShoppingListItemDisplayWidget | Displays the product configuration of shopping list items.                                     | None | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Widget |
+    | ProductConfigurationShoppingListPageButtonWidget  | Displays the product configuration button for configurable shopping list items.                | None | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Widget |
 
     **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -1615,6 +1771,8 @@ Make sure that the plugins are set up correctly:
     use SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget\ProductConfigurationWishlistItemDisplayWidget;
     use SprykerShop\Yves\ProductConfigurationWishlistWidget\Widget\ProductConfigurationWishlistPageButtonWidget;
     use SprykerShop\Yves\SalesProductConfigurationWidget\Widget\ProductConfigurationOrderItemDisplayWidget;
+    use SprykerShop\Yves\ProductConfigurationShoppingListWidget\Widget\ProductConfigurationShoppingListItemDisplayWidget;
+    use SprykerShop\Yves\ProductConfigurationShoppingListWidget\Widget\ProductConfigurationShoppingListPageButtonWidget;
     use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 
     class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
@@ -1634,6 +1792,8 @@ Make sure that the plugins are set up correctly:
                 ProductConfigurationWishlistFormWidget::class,
                 ProductConfigurationWishlistItemDisplayWidget::class,
                 ProductConfigurationWishlistPageButtonWidget::class,
+                ProductConfigurationShoppingListItemDisplayWidget::class,
+                ProductConfigurationShoppingListPageButtonWidget::class,
             ];
         }
     }
@@ -1657,6 +1817,8 @@ Make sure that the following widgets have been registered by adding the respecti
 | ProductConfigurationWishlistFormWidget | `{% raw %}{%{% endraw %} widget 'ProductConfigurationWishlistFormWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`|
 | ProductConfigurationWishlistItemDisplayWidget | `{% raw %}{%{% endraw %} widget 'ProductConfigurationWishlistItemDisplayWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`|
 | ProductConfigurationWishlistPageButtonWidget | `{% raw %}{%{% endraw %} widget 'ProductConfigurationWishlistPageButtonWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`|
+| ProductConfigurationShoppingListItemDisplayWidget | `{% raw %}{%{% endraw %} widget 'ProductConfigurationShoppingListItemDisplayWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`|
+| ProductConfigurationShoppingListPageButtonWidget | `{% raw %}{%{% endraw %} widget 'ProductConfigurationShoppingListPageButtonWidget' args [...] only {% raw %}%}{% endraw %}{% raw %}{%{% endraw %} endwidget {% raw %}%}{% endraw %}`|
 
 2. Enable Javascript and CSS changes:
 
@@ -1666,7 +1828,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that product configuration data is displayed on the *Product Details*, *Cart* and Wishlist pages.
+Make sure that product configuration data is displayed on the *Product Details*, *Cart*, *Wishlist* and Shopping list pages.
 
 {% endinfo_block %}
 
@@ -1796,6 +1958,8 @@ product_configurator_gateway_page.wishlist_item_id_required,"Wishlist item ID is
 product_configurator_gateway_page.wishlist_item_id_required,"Die ID des Wunschartikels ist ein erforderlicher Parameter.",de_DE
 product_configurator_gateway_page.configurator_key_is_not_supported,"Configurator key is not supported.",en_US
 product_configurator_gateway_page.configurator_key_is_not_supported,"Konfiguratorschlüssel wird nicht unterstützt.",de_DE
+product_configurator_gateway_page.shopping_list_item_uuid_required,"Shopping List item ID is required parameter.",en_US
+product_configurator_gateway_page.shopping_list_item_uuid_required,"Die Artikel-ID der Einkaufsliste ist ein erforderlicher Parameter.",de_DE
 ```
 
 2. Import data:
@@ -1816,16 +1980,17 @@ Set up behavior as follows:
 
 1.  Set up the following plugins:
 
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
+| PLUGIN | SPECIFICATION                                                                                     | PREREQUISITES | NAMESPACE |
+| --- |---------------------------------------------------------------------------------------------------| --- | --- |
 | ExampleDateTimeConfiguratorAvailabilityStrategyPlugin | Returns `true` if a product configuration instance exists and has an appropriate configurator key. | None | SprykerShop\Zed\DateTimeConfiguratorPageExample\Communication\Plugin\Availability |
-| ExampleDateTimeProductConfigurationRenderStrategyPlugin | Decodes JSON configuration data. | None | SprykerShop\Yves\DateTimeConfiguratorPageExample\Plugin\ProductConfigurationWidget |
-| ExampleDateTimeProductConfigurationRenderStrategyPlugin | Decodes JSON configuration data. | None | SprykerShop\Zed\DateTimeConfiguratorPageExample\Communication\Plugin\SalesProductConfigurationGui |
-|ExampleDateTimeSalesProductConfigurationRenderStrategyPlugin | Decodes JSON configuration data. | None | SprykerShop\Yves\DateTimeConfiguratorPageExample\Plugin\SalesProductConfigurationWidget |
-| ExampleDateTimeCartProductConfigurationRenderStrategyPlugin | Decodes JSON configuration data.| None | SprykerShop\Yves\DateTimeConfiguratorPageExample\Plugin\ProductConfigurationCartWidget|
-|ExampleDateTimeProductConfiguratorRequestExpanderPlugin | Expands request to the configurator with the date-time configurator host. | None | SprykerShop\Client\DateTimeConfiguratorPageExample\Plugin\ProductConfiguration |
-|ExampleDateTimeWishlistItemProductConfigurationRenderStrategyPlugin | Decodes JSON configuration data. | None | SprykerShop\Yves\DateTimeConfiguratorPageExample\Plugin\ProductConfigurationWishlistWidget |
-|ProductConfigurationWishlistItemRequestExpanderPlugin | Expands `WishlistItem` with product configuration. | None | SprykerShop\Yves\ProductConfigurationWishlistWidget\Plugin\WishlistPage |
+| ExampleDateTimeProductConfigurationRenderStrategyPlugin | Decodes JSON configuration data.                                                                  | None | SprykerShop\Yves\DateTimeConfiguratorPageExample\Plugin\ProductConfigurationWidget |
+| ExampleDateTimeProductConfigurationRenderStrategyPlugin | Decodes JSON configuration data.                                                                  | None | SprykerShop\Zed\DateTimeConfiguratorPageExample\Communication\Plugin\SalesProductConfigurationGui |
+|ExampleDateTimeSalesProductConfigurationRenderStrategyPlugin | Decodes JSON configuration data.                                                                  | None | SprykerShop\Yves\DateTimeConfiguratorPageExample\Plugin\SalesProductConfigurationWidget |
+| ExampleDateTimeCartProductConfigurationRenderStrategyPlugin | Decodes JSON configuration data.                                                                  | None | SprykerShop\Yves\DateTimeConfiguratorPageExample\Plugin\ProductConfigurationCartWidget|
+|ExampleDateTimeProductConfiguratorRequestExpanderPlugin | Expands request to the configurator with the date-time configurator host.                         | None | SprykerShop\Client\DateTimeConfiguratorPageExample\Plugin\ProductConfiguration |
+|ExampleDateTimeWishlistItemProductConfigurationRenderStrategyPlugin | Decodes JSON configuration data.                                                                  | None | SprykerShop\Yves\DateTimeConfiguratorPageExample\Plugin\ProductConfigurationWishlistWidget |
+|ProductConfigurationWishlistItemRequestExpanderPlugin | Expands `WishlistItem` with product configuration.                                                | None | SprykerShop\Yves\ProductConfigurationWishlistWidget\Plugin\WishlistPage |
+|ExampleDateTimeShoppingListItemProductConfigurationRenderStrategyPlugin | Decodes JSON configuration data.                                                                  | None | SprykerShop\Yves\DateTimeConfiguratorPageExample\Plugin\ProductConfigurationShoppingListWidget |
 
 **src/Pyz/Zed/Availability/AvailabilityDependencyProvider.php**
 
@@ -1943,6 +2108,30 @@ class WishlistPageDependencyProvider extends SprykerWishlistPageDependencyProvid
     {
         return [
             new ProductConfigurationWishlistItemRequestExpanderPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Yves/ProductConfigurationShoppingListWidget/ProductConfigurationShoppingListWidgetDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\ProductConfigurationShoppingListWidget;
+
+use SprykerShop\Yves\DateTimeConfiguratorPageExample\Plugin\ProductConfigurationShoppingListWidget\ExampleDateTimeShoppingListItemProductConfigurationRenderStrategyPlugin;
+use SprykerShop\Yves\ProductConfigurationShoppingListWidget\ProductConfigurationShoppingListWidgetDependencyProvider as SprykerProductConfigurationShoppingListWidgetDependencyProvider;
+
+class ProductConfigurationShoppingListWidgetDependencyProvider extends SprykerProductConfigurationShoppingListWidgetDependencyProvider
+{
+    /**
+     * @return array<\SprykerShop\Yves\ProductConfigurationShoppingListWidgetExtension\Dependency\Plugin\ShoppingListItemProductConfigurationRenderStrategyPluginInterface>
+     */
+    protected function getShoppingListItemProductConfigurationRenderStrategyPlugins(): array
+    {
+        return [
+            new ExampleDateTimeShoppingListItemProductConfigurationRenderStrategyPlugin(),
         ];
     }
 }

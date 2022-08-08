@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/scheduled-prices-feature-overview
   - /docs/scheduled-prices-feature-overview
   - /docs/en/scheduled-prices-feature-overview
+  - /docs/scos/dev/feature-walkthroughs/202204.0/scheduled-prices-feature-walkthrough.html
 ---
 
 The _Scheduled Prices_ feature lets shop administrators schedule price changes, which are to happen in the future for multiple products simultaneously.
@@ -95,8 +96,9 @@ The feature has the following functional constraints which are going to be resol
 |---|
 | [Manage scheduled prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html)  |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Scheduled Prices feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/scheduled-prices-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INTEGRATION GUIDES  | MIGRATION GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
+|---------|---------|---------|---------|
+| [Scheduled prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/scheduled-prices-feature-integration.html) | [PriceProductSchedule migration guide](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedule.html)  | [File details: product_price_schedule.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html) | [HowTo: Schedule cron job for Scheduled Prices](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html)  |
+|   | [PriceProductScheduleGui migration guide](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedulegui.html)  |   |   |

@@ -478,7 +478,6 @@ entries:
         - "202001.0"
         - "202005.0"
         - "202108.0"
-        - "202204.0"
       nested:
       - title: Volume Prices
         url: /docs/scos/user/features/prices-feature-overview/volume-prices-overview.html
@@ -489,7 +488,6 @@ entries:
         - "202001.0"
         - "202005.0"
         - "202108.0"
-        - "202204.0"
     - title: Product
       url: /docs/scos/user/features/product-feature-overview/product-feature-overview.html
       nested:
@@ -599,7 +597,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Search
       url: /docs/scos/user/features/search-feature-overview/search-feature-overview.html
       nested:
@@ -1266,10 +1263,6 @@ entries:
           nested:
           - title: Create
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html
-          - title: Add scheduled prices
-            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/add-scheduled-prices-to-abstract-products-and-product-bundles.html
-          - title: Add volume prices
-            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/add-volume-prices-to-abstract-products-and-product-bundles.html
           - title: Assign product attributes
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html
           - title: Edit
@@ -1661,7 +1654,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         nested:
         - title: Creating scheduled prices
           url: /docs/scos/user/back-office-user-guides/catalog/scheduled-prices/creating-scheduled-prices.html
@@ -1671,7 +1663,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Managing scheduled prices
           url: /docs/scos/user/back-office-user-guides/catalog/scheduled-prices/managing-scheduled-prices.html
           include_versions:
@@ -1679,7 +1670,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: References
           include_versions:
           - "201907.0"
@@ -3169,7 +3159,7 @@ entries:
         - "201907.0"
     - title: Shipment
       include_versions:
-      - "202108.0"    
+      - "202108.0"
       nested:
       - title: Paqato
         url: /docs/scos/user/technology-partners/shipment/paqato.html

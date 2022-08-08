@@ -331,7 +331,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 
 **Pyz/Yves/CheckoutPage/Theme/default/templates/page-layout-checkout/page-layout-checkout.twig**
 
-```twig
+```php
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', '@SprykerShop:CheckoutPage') {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} block headScripts {% raw %}%}{% endraw %}
@@ -348,7 +348,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 
 **Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig**
 
-```twig
+```php
 {% raw %}{%{% endraw %} extends view('payment', '@SprykerShop:CheckoutPage') {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} define data = {
@@ -560,7 +560,7 @@ export default register('crefopay-checkbox-helper', () => import(/* webpackMode:
 <details>
 <summary markdown='span'>\Pyz\Yves\CrefoPay\Theme\default\components\molecule\crefopay-payment-form\crefopay-payment-form.twig</summary>
 
-```twig
+```php
 {% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} define config = {

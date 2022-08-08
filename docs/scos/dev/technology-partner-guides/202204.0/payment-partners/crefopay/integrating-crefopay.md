@@ -340,13 +340,13 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
-
+<!--
 6. Extend payment Twig with CrefoPay payment methods:
 
 **Demo Shop template extension (a B2C theme example)**
 
 **Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig**
-<!--
+
 ```twig
 {% raw %}{%{% endraw %} extends view('payment', '@SprykerShop:CheckoutPage') {% raw %}%}{% endraw %}
 
@@ -494,8 +494,8 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
     {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
--->
-7. In the project root, add an alias for the `CrefoPay` module to `tsconfig.json`:
+
+1. In the project root, add an alias for the `CrefoPay` module to `tsconfig.json`:
 
 **tsconfig.json:**
 
@@ -823,3 +823,4 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
     }
 }
 ```
+-->

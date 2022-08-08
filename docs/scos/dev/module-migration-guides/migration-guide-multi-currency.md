@@ -39,7 +39,7 @@ related:
   - title: Migration guide - Discount
     link: docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discount-module.html
   - title: Migration guide - Shipment
-    link: docs/scos/dev/module-migration-guides/migration-guide-shipment.html
+    link: docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipment-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-multi-currency-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-multi-currency-module.md -->

@@ -667,6 +667,8 @@ entries:
       url: /docs/scos/user/features/shared-carts-feature-overview.html
     - title: Shipment
       url: /docs/scos/user/features/shipment-feature-overview.html
+      include_versions:
+      - "202108.0"
     - title: Shopping Lists
       url: /docs/scos/user/features/shopping-lists-feature-overview/shopping-lists-feature-overview.html
       nested:
@@ -2660,18 +2662,6 @@ entries:
         - "202108.0"
         - "202204.0"
         nested:
-        - title: Add carrier companies
-          url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/add-carrier-companies.html
-          include_versions:
-          - "202204.0"
-        - title: Add delivery methods
-          url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/add-delivery-methods.html
-          include_versions:
-          - "202204.0"
-        - title: Edit delivery methods
-          url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/edit-delivery-methods.html
-          include_versions:
-          - "202204.0"
         - title: Creating a carrier company
           url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-carrier-companies.html
           include_versions:
@@ -3178,6 +3168,8 @@ entries:
         - "201903.0"
         - "201907.0"
     - title: Shipment
+      include_versions:
+      - "202108.0"    
       nested:
       - title: Paqato
         url: /docs/scos/user/technology-partners/shipment/paqato.html

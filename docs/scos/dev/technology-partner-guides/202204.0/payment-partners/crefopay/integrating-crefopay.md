@@ -327,7 +327,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 }
 ```
 
-1. Extend the checkout page layout to add `jQuery`:
+5. Extend the checkout page layout to add `jQuery`:
 
 **Pyz/Yves/CheckoutPage/Theme/default/templates/page-layout-checkout/page-layout-checkout.twig**
 
@@ -341,12 +341,12 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-1. Extend payment Twig with CrefoPay payment methods:
+6. Extend payment Twig with CrefoPay payment methods:
 
 **Demo Shop template extension (a B2C theme example)**
 
 **Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig**
-
+<!--
 ```twig
 {% raw %}{%{% endraw %} extends view('payment', '@SprykerShop:CheckoutPage') {% raw %}%}{% endraw %}
 
@@ -494,7 +494,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
     {% raw %}{%{% endraw %} endembed {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
-
+-->
 7. In the project root, add an alias for the `CrefoPay` module to `tsconfig.json`:
 
 **tsconfig.json:**

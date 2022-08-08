@@ -1,5 +1,5 @@
 ---
-title: Retrieve shipments and shipment methods when submitting checkout data with
+title: Retrieve shipments and shipment methods when submitting checkout data
 description: Learn how to submit check out data with shipment and shipment methods.
 last_updated: Jul 28, 2022
 template: glue-api-storefront-guide-template

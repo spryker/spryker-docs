@@ -8,7 +8,7 @@ redirect_from:
 
 ## Upgrading from version 9.* to version 12.*
 
-This doccument shows how to upgrade Angular to version 12 in your Spryker project.
+This document shows how to upgrade Angular to version 12 in your Spryker project.
 
 ### Overview 
 
@@ -18,8 +18,8 @@ A version upgrade is necessary for improved performance, stability, and security
 
 Angular provides regular updates to ensure stability and security. These are major, minor, and small patches. An upgrade from an existing version to a newer version always requires time and changes to the code.
 
-Because Spryker applications are large and complex, migration to a new Angular version will be a challenge.
-Since it is not possible to migrate using standard methods such as `nx migrate` or `ng update`, we have prepared a detailed guide on migrating to the new version.
+Because Spryker applications are large and complex, migration to a new Angular version is a challenge.
+Since you can't migrate using standard methods such as `nx migrate` or `ng update`, we have prepared a detailed guide on migrating to the new version.
 
 *Estimated migration time: 1h 30m*
 
@@ -94,7 +94,7 @@ Make sure you are using [Node 16 or later](https://nodejs.org/dist/latest-v16.x/
 "typescript": "~4.2.4",
 ```
 
-2. Add `"typescript": "4.2.4",` to the `"resolutions"` section to ensure you're using the correct version.
+2. To ensure you're using the correct version, add `"typescript": "4.2.4",` to the `"resolutions"` section.
 
 3. Update `mp:build:production` command:
 
@@ -102,7 +102,7 @@ Make sure you are using [Node 16 or later](https://nodejs.org/dist/latest-v16.x/
 "mp:build:production": "ng build --configuration production",
 ```
 
-4. Run the following commands to ensure that the `package-lock.json` file and the `node_modules` folder have been updated:
+4. Ensure that the `package-lock.json` file and the `node_modules` folder have been updated:
 
 ```bash
 rm -rf node_modules
@@ -145,7 +145,7 @@ IE 11
 }
 ```
 
-3. Create `jest.preset.js` file in the `frontend/merchant-portal/` folder:
+3. In the `frontend/merchant-portal/` folder, create `jest.preset.js` file:
 
 ```js
 const nxPreset = require('@nrwl/jest/preset');
@@ -153,7 +153,7 @@ const nxPreset = require('@nrwl/jest/preset');
 module.exports = { ...nxPreset };
 ```
 
-4. Add the following section to `tslint.json` file:
+4. Add the following section to the `tslint.json` file:
 
 ```json
 "rules": {
@@ -321,7 +321,7 @@ import 'core-js/features/reflect';
 import 'jest-preset-angular/setup-jest';
 ```
 
-6. Rename `tsconfig.json` to `tsconfig.base.json` and fix usage in the:
+1. Rename `tsconfig.json` to `tsconfig.base.json` and fix usage in `tsconfig.mp.json`:
 
 **tsconfig.mp.json** 
 

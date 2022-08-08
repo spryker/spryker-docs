@@ -11,7 +11,7 @@ entries:
         url: /docs/pbc/all/carrier-management/carrier-management.html
         nested:
           - title: What's changed
-            url: /docs/pbc/all/discount-management/whats-changed-in-carrier-management.html
+            url: /docs/pbc/all/carrier-management/whats-changed-in-carrier-management.html
           - title: Install and upgrade
             nested:
               - title: Integrate the Shipment feature

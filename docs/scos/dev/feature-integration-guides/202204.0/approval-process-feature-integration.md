@@ -15,7 +15,7 @@ related:
   - title: Quotation Process + Approval Process feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-approval-process-feature-integration.html
   - title: Shipment + Approval Process feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/shipment-approval-process-feature-integration.html
+    link: docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-approval-process-feature.html
   - title: Approval Process feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/approval-process-feature-walkthrough.html
 ---

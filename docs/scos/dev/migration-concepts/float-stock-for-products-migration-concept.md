@@ -80,7 +80,7 @@ console transfer:generate
 You can find the affected modules of the float stock update in the following list.
 
 <details open><summary markdown='span'>Affected modules</summary>
- 
+
 
 | OPERATOR | OPERATOR FOR PLAIN QUERY | MIGRATION GUIDE |
 | --- | --- | --- |
@@ -122,7 +122,7 @@ You can find the affected modules of the float stock update in the following lis
 | spryker/sales | 9.0.0 | [Migration Guide - Sales](/docs/scos/dev/module-migration-guides/migration-guide-sales.html) |
 | spryker/sales-quantity | 2.0.0 | [Migration Guide - SalesQuantity](/docs/scos/dev/module-migration-guides/migration-guide-salesquantity.html) |
 | spryker/sales-split | 4.0.0 | [Migration Guide - SalesSplit](/docs/scos/dev/module-migration-guides/migration-guide-salessplit.html) |
-| spryker/shipment-discount-connector | 2.0.0 | [Migration Guide - ShipmentDiscountConnector](/docs/scos/dev/module-migration-guides/migration-guide-shipmentdiscountconnector.html) |
+| spryker/shipment-discount-connector | 2.0.0 | [Migration Guide - ShipmentDiscountConnector](/docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentdiscountconnector-module.html) |
 | spryker/shopping-list | 3.0.0 | [Migration Guide - ShoppingList](/docs/scos/dev/module-migration-guides/migration-guide-shoppinglistwidget.html) |
 | spryker/stock | 6.0.0 | [Migration Guide - Stock](/docs/scos/dev/module-migration-guides/migration-guide-stock.html) |
 | spryker/stock-sales-connector | 4.0.0 | [Migration Guide - StockSalesConnector](/docs/scos/dev/module-migration-guides/migration-guide-stocksalesconnector.html) |

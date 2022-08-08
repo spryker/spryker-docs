@@ -201,6 +201,6 @@ We do not support product options in Subtotal of the Shopping Lists. For example
 
 |INTEGRATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|
-| [Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html)  | [Managing shopping lists](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shopping-lists-feature-walkthrough.html)  |
-| [Glue API: Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shopping-lists-feature-integration.html)  | [Managing shopping list items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html)   |
+| [Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-feature.html)  | [Managing shopping lists](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shopping-lists-feature-walkthrough.html)  |
+| [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-glue-api.html)  | [Managing shopping list items](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html)   |
 | [Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/prices-feature-integration.html)  |  |

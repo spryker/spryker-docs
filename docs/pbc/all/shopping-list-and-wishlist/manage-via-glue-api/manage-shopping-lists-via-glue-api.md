@@ -12,9 +12,9 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/managing-shopping-lists/managing-shopping-lists.html
 related:
     - title: Glue API - Shopping Lists feature integration
-      link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-shopping-lists-feature-integration.html
+      link: docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-glue-api.html
     - title: Managing shopping list items
-      link: docs/scos/dev/glue-api-guides/page.version/managing-shopping-lists/managing-shopping-list-items.html
+      link: docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html
     - title: Shopping Lists feature overview
       link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-lists-feature-overview.html
 ---
@@ -27,7 +27,7 @@ In your development, the resources can help you to enable the shopping list func
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shopping-lists-feature-integration.html)
+* [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-glue-api.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 
 
@@ -343,7 +343,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 For response attributes, see [Create a shopping list](#create-a-shopping-list).
 
 For the attributes of included resources, see:
-* [Add items to a shopping list](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html#shopping-list-items-response-attributes)
+* [Add items to a shopping list](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html#shopping-list-items-response-attributes)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 
 ## Retrieve a shopping list
@@ -603,7 +603,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 For response attributes, see [Create a shopping list](#create-a-shopping-list).
 
 For the attributes of included resources, see:
-* [Add items to a shopping list](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html#shopping-list-items-response-attributes)
+* [Add items to a shopping list](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html#shopping-list-items-response-attributes)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 
 ## Edit a shopping list
@@ -818,7 +818,7 @@ To retrieve concrete products in a shopping list, include `shopping-list-items` 
 For response attributes, see [Create a shopping list](#create-a-shopping-list).
 
 For the attributes of included resources, see:
-* [Add items to a shopping list](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html#shopping-list-items-response-attributes)
+* [Add items to a shopping list](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html#shopping-list-items-response-attributes)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 
 ## Delete a shopping list

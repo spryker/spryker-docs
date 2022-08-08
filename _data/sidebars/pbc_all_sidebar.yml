@@ -207,6 +207,28 @@ entries:
                 url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-widget-overview.md
           - title: Wishlist feature overview
             url: /docs/pbc/all/shopping-list-and-wishlist/wishlist-feature-overview.html
+          - title: Install and upgrade
+            nested:
+              - title: Integrate the Shopping Lists feature
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-feature.md
+              - title: Integrate the Shopping Lists Glue API
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-glue-api.md
+              - title: Integrate the Shopping Lists + Product Options feature
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-product-options-feature.md
+              - title: Integrrate the Wishlist Glue API
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-wishlist-glue-api.md
+              - title: Upgrade the ShoppingList module
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglist-module.md
+              - title: Upgrade the ShoppingListPage module
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistpage-module.md
+              - title: Upgrade the ShoppingListWidget module
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistwidget-module.md
+              - title: Upgrade the Wishlist module
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-wishlist-module.md
+          - title: Manage via Glue API
+            nested:
+              - title: Manage shopping lists
+                url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-lists-via-glue-api.md
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
         nested:

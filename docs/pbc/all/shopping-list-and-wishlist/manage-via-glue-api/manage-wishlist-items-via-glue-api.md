@@ -4,7 +4,7 @@ description: Managing wishlist items via Glue API.
 last_updated: Nov 29, 2021
 template: glue-api-storefront-guide-template
 redirect_from:
-  -
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-wishlists/managing-wishlist-items.html
 related:
   - title: Managing wishlists
     link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html
@@ -19,7 +19,7 @@ This endpoint allows you to add and remove items from wishlists.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Wishlist API Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-wishlist-feature-integration.html)
+* [Wishlist API Feature Integration](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-wishlist-glue-api.html)
 * [Glue API - Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-configuration-feature-integration.html)
 
 ## Add an item to a wishlist

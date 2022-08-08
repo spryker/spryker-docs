@@ -11,6 +11,7 @@ redirect_from:
   - /docs/managing-wishlists
   - /docs/en/managing-wishlists
   - /docs/scos/dev/glue-api-guides/202200.0/managing-wishlists/managing-wishlists.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-wishlists/managing-wishlists.html  
 related:
   - title: Managing wishlist items
     link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlist-items.html
@@ -27,7 +28,7 @@ The Wishlists API allows creating list and deleting [wishlists](/docs/scos/user/
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Wishlist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-wishlist-feature-integration.html)
+* [Glue API: Wishlist feature integration](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-wishlist-glue-api.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
 * [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html)
 

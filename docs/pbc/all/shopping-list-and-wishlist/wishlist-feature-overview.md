@@ -93,4 +93,4 @@ For more details about wishlists, check the video:
 |INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES  |
 |---------|---------|---------|
 | [Alternative Products + Wishlist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-wishlist-feature-integration.html)  | [Wishlist migration guide](/docs/scos/dev/module-migration-guides/migration-guide-wishlist.html) | [Managing wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html)  |
-| [Glue API: Wishlist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-wishlist-feature-integration.html)  |   |[ Managing wishlist items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlist-items.html)  |
+| [Glue API: Wishlist feature integration](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-wishlist-glue-api.html)  |   |[ Managing wishlist items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlist-items.html)  |

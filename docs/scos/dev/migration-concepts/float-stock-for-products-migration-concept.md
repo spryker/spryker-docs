@@ -123,7 +123,7 @@ You can find the affected modules of the float stock update in the following lis
 | spryker/sales-quantity | 2.0.0 | [Migration Guide - SalesQuantity](/docs/scos/dev/module-migration-guides/migration-guide-salesquantity.html) |
 | spryker/sales-split | 4.0.0 | [Migration Guide - SalesSplit](/docs/scos/dev/module-migration-guides/migration-guide-salessplit.html) |
 | spryker/shipment-discount-connector | 2.0.0 | [Migration Guide - ShipmentDiscountConnector](/docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentdiscountconnector-module.html) |
-| spryker/shopping-list | 3.0.0 | [Migration Guide - ShoppingList](/docs/scos/dev/module-migration-guides/migration-guide-shoppinglistwidget.html) |
+| spryker/shopping-list | 3.0.0 | [Migration Guide - ShoppingList](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistwidget-module.html) |
 | spryker/stock | 6.0.0 | [Migration Guide - Stock](/docs/scos/dev/module-migration-guides/migration-guide-stock.html) |
 | spryker/stock-sales-connector | 4.0.0 | [Migration Guide - StockSalesConnector](/docs/scos/dev/module-migration-guides/migration-guide-stocksalesconnector.html) |
 | spryker/wishlist | 7.0.0 | [Migration Guide - WishList](/docs/scos/dev/module-migration-guides/migration-guide-wishlist.html) |
@@ -135,7 +135,7 @@ You can find the affected modules of the float stock update in the following lis
 | spryker-shop/product-packaging-unit-widget | 0.3.0 | [Migration Guide - ProductPackagingUnitWidget](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitwidget.html) |
 | spryker-shop/product-search-widget | 2.0.0 | [Migration Guide - ProductSearchWidget](/docs/scos/dev/module-migration-guides/migration-guide-productsearchwidget.html) |
 | spryker-shop/quick-order-page | 3.0.0 | [Migration Guide - QuickOrderPage](/docs/scos/dev/module-migration-guides/migration-guide-quickorderpage.html) |
-| spryker-shop/shopping-list-page | 0.7.0 | [Migration Guide - ShoppingListPage](/docs/scos/dev/module-migration-guides/migration-guide-shoppinglistpage.html) |
-| spryker-shop/shopping-list-widget | 0.5.0 | [Migration Guide - ShoppingListWidget](/docs/scos/dev/module-migration-guides/migration-guide-shoppinglistwidget.html) |
+| spryker-shop/shopping-list-page | 0.7.0 | [Migration Guide - ShoppingListPage](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistpage-module.html) |
+| spryker-shop/shopping-list-widget | 0.5.0 | [Migration Guide - ShoppingListWidget](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistwidget-module.html) |
 
 </details>   

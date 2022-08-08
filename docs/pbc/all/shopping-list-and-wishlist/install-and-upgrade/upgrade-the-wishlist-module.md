@@ -1,5 +1,5 @@
 ---
-title: Migration guide - Wishlist
+title: Upgrade the Wishlist
 description: Use the guide to learn how to update the Wishlist module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -31,9 +31,9 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-wishlist.html
   - /module_migration_guides/mg-wishlist.htm
 related:
-  - title: Migration guide - Cart
+  - title: Upgrade the Cart
     link: docs/scos/dev/module-migration-guides/migration-guide-cart.html
-  - title: Migration guide - Price
+  - title: Upgrade the Price
     link: docs/scos/dev/module-migration-guides/migration-guide-price.html
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ShoppingListPage
+title: Upgrade the ShoppingListPage
 description: Use the guide to learn how to update the ShoppingListPage module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

@@ -1,5 +1,5 @@
 ---
-title: Managing wishlists
+title: Manage wishlists via Glue API
 description: Create, update and delete wishlists via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -18,7 +18,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
   - title: Wishlist feature overview
     link: docs/scos/user/features/page.version/wishlist-feature-overview.html
-  
+
 ---
 
 The Wishlists API allows creating list and deleting [wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html), as well as managing the items inside them.

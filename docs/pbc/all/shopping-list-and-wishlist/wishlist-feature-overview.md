@@ -11,6 +11,9 @@ redirect_from:
   - /docs/wishlist-feature-overview
   - /docs/en/wishlist-feature-overview
   - /docs/scos/user/features/202200.0/wishlist-feature-overview.html
+  - /docs/scos/user/features/202204.0/wishlist-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202200.0/wishlist-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202204.0/wishlist-feature-walkthrough.html
 ---
 
 With the *Wishlist* feature, you can help your customers track and save items for later purchase through multiple wishlists, which are connected to the customers' accounts.
@@ -84,8 +87,10 @@ For more details about wishlists, check the video:
 
 {% wistia g7hzsa9xw7 720 480 %}
 
-{% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Wishlist feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/wishlist-feature-walkthrough.html) for developers.
+## Related Developer articles
 
-{% endinfo_block %}
+|INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES  |
+|---------|---------|---------|
+| [Alternative Products + Wishlist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-wishlist-feature-integration.html)  | [Wishlist migration guide](/docs/scos/dev/module-migration-guides/migration-guide-wishlist.html) | [Managing wishlists](/docs/marketplace/dev/glue-api-guides/{{page.version}}/wishlists/managing-wishlists.html)  |
+| [Glue API: Wishlist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-wishlist-feature-integration.html)  |   |[ Managing wishlist items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlist-items.html)  |

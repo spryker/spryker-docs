@@ -15,6 +15,9 @@ redirect_from:
   - /docs/shopping-lists
   - /docs/en/shopping-lists
   - /docs/scos/user/features/202200.0/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+  - /docs/scos/user/features/202204.0/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202204.0/shopping-lists-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202200.0/shopping-lists-feature-walkthrough.html    
 ---
 
 A *shopping list* is a list of the items that shoppers buy or plan to buy frequently or regularly. For example, a consumer can compile a shopping list of the products they purchase every week. Shopping lists let a buyer have a quick overview of the products they are planning to buy and the sum of money they are going to spend.
@@ -192,10 +195,12 @@ We do not support product options in Subtotal of the Shopping Lists. For example
 |BACK OFFICE USER GUIDES|
 |---|
 | [Get a general idea of the shopping list widget](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-widget-overview.html)  |
-| [Get a general idea of Shopping List Notes](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-notes-overview.html)  |
+| [Get a general idea of shopping list notes](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-notes-overview.html)  |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Shopping Lists feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shopping-lists-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INTEGRATION GUIDES  | GLUE API GUIDES  |
+|---------|---------|
+| [Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shopping-lists-feature-integration.html)  | [Managing shopping lists](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shopping-lists-feature-walkthrough.html)  |
+| [Glue API: Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shopping-lists-feature-integration.html)  | [Managing shopping list items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-shopping-lists/managing-shopping-list-items.html)   |
+| [Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/prices-feature-integration.html)  |  |

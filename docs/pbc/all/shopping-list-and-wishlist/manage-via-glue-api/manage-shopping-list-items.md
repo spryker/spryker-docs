@@ -1,5 +1,5 @@
 ---
-title: Managing shopping list items
+title: Manage shopping list items via Glue API
 description: Learn how to manage shopping list items via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template

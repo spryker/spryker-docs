@@ -193,6 +193,20 @@ entries:
                 url: /docs/pbc/all/payment-service-providers/unzer/unzer-domain-model-and-relationships.html
           - title: Payone
             url: /docs/pbc/all/payment-service-providers/payone/payone.html
+      - title: Shopping List and Wishlist
+        url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
+        nested:
+          - title: Shopping List feature overview
+            url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.md
+            nested:
+              - title: Shopping List Notes overview
+                url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-notes-overview.md
+              - title: Shopping List Printing overview
+                url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-printing-overview.md
+              - title: Shopping List Widget overview
+                url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-widget-overview.md
+          - title: Wishlist feature overview
+            url: /docs/pbc/all/shopping-list-and-wishlist/wishlist-feature-overview.html
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
         nested:

@@ -16,7 +16,7 @@ The contents of contracts may vary, and this document describes the usual setup.
 Spryker offers you environments that serve different purposes. These environments are developer, staging, and production. We will configure these environments to be as similar as possible to make sure that the code you deploy on one platform behaves the same way on the others. You can help us keep your environments consistent by taking this into consideration when sending us change requests.
 
 ### Developer environment (DEV) (optional)
-A Dev environment is normally used to test code that just left your development team or is actually used in the development process directly through continuous deployment. It is not designed to handle load tests and large datasets. The development environment does not provide autoscaling and cannot be increased.
+A Dev environment is used to test code that just left your development team or is used in the development process directly through continuous deployment. It is not designed to handle load tests and large datasets. The development environment does not provide autoscaling and cannot be increased.
 
 ### Staging (STAGE)
 This environment is used to host a snapshot of the Dev environment or a stable version of your code that is deployed to production eventually. You can use your staging environment to do performance testing to see how your code behaves in your production environment. However, staging is not of the same size as production, and a subset of data and expected traffic must be considered while running the test. When demoing your shop, this environment is used regularly. The staging environment provides limited autoscaling capabilities and cannot be further scaled up.

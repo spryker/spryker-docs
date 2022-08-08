@@ -3,6 +3,7 @@ title: Integrating CrefoPay
 description: This document shows how to integrate CrefoPay into the Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
+render_with_liquid: false
 originalLink: https://documentation.spryker.com/2021080/docs/crefopay-integration
 originalArticleId: ce1c7803-e0a5-493f-94a6-0f602616e987
 redirect_from:
@@ -331,7 +332,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 
 **Pyz/Yves/CheckoutPage/Theme/default/templates/page-layout-checkout/page-layout-checkout.twig**
 
-```php
+```twig
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', '@SprykerShop:CheckoutPage') {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} block headScripts {% raw %}%}{% endraw %}
@@ -348,7 +349,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 
 **Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig**
 
-```php
+```twig
 {% raw %}{%{% endraw %} extends view('payment', '@SprykerShop:CheckoutPage') {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} define data = {
@@ -560,7 +561,7 @@ export default register('crefopay-checkbox-helper', () => import(/* webpackMode:
 <details>
 <summary markdown='span'>\Pyz\Yves\CrefoPay\Theme\default\components\molecule\crefopay-payment-form\crefopay-payment-form.twig</summary>
 
-```php
+```twig
 {% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} define config = {

@@ -1,0 +1,304 @@
+---
+title: Glue support in Unzer feature integration
+description: Integrate the Glue support in Unzer into your project
+template: feature-integration-guide-template
+---
+
+# Glue support in Unzer feature integration
+
+This document describes how to integrate the *Glue support* to the [Unzer]({docs/pbc/all/payment-service-providers/unzer/unzer.html}) into a Spryker project.
+
+## Install feature core
+
+Follow the steps below to install the {Feature Name} feature core.
+
+### Prerequisites
+
+To start feature integration, integrate the required features:
+
+| NAME                | INTEGRATION GUIDE                                                                                                                                 |
+|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| Unzer               | [Unzer feature integration](/docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.html)                                     |
+| Glue API - Checkout | [Glue API - Checkout feature integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-checkout-feature-integration.html) |
+| Glue API - Payments | [Glue API - Payments feature integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-payments-feature-integration.html) |
+
+### 1) Install the required modules using Composer
+
+Install the required modules:
+
+```bash
+composer require spryker-eco/unzer-rest-api
+```
+
+---
+**Verification**
+
+Make sure that the following modules have been installed:
+
+| MODULE       | EXPECTED DIRECTORY                 |
+|--------------|------------------------------------|
+| UnzerRestApi | vendor/spryker-eco/unzer-rest-api  |
+
+---
+
+### 2) Set up the configuration
+
+Put all the payment methods available in the shop to  `PaymentsRestApiConfig`:
+
+**src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php**
+
+```php
+<?php
+ 
+namespace Pyz\Glue\PaymentsRestApi;
+
+use Spryker\Glue\PaymentsRestApi\PaymentsRestApiConfig as SprykerPaymentsRestApiConfig;
+use SprykerEco\Shared\Unzer\UnzerConfig;
+ 
+class PaymentsRestApiConfig extends SprykerPaymentsRestApiConfig
+{
+    /**
+     * @var array<string, int>
+     */
+    protected const PAYMENT_METHOD_PRIORITY = [
+        UnzerConfig::PAYMENT_METHOD_KEY_CREDIT_CARD => 1,
+        UnzerConfig::PAYMENT_METHOD_KEY_SOFORT => 2,
+        UnzerConfig::PAYMENT_METHOD_KEY_BANK_TRANSFER => 3,
+    ];
+ 
+     /**
+     * @var array<string, array<string, array<string>>>
+     */
+    protected const PAYMENT_METHOD_REQUIRED_FIELDS = [
+        UnzerConfig::PAYMENT_PROVIDER_NAME => [
+            UnzerConfig::PAYMENT_METHOD_KEY_CREDIT_CARD => [
+                'unzerPayment.paymentResource.id',
+            ],
+            UnzerConfig::PAYMENT_METHOD_KEY_SOFORT => [
+                'unzerPayment.paymentResource.id',
+            ],
+        ],
+    ];
+}
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that calling `Pyz\Zed\Payment\PaymentConfig::getSalesPaymentMethodTypes()` returns an array of the payment methods available in the shop grouped by the payment provider.
+
+{% endinfo_block %}
+
+### 3) Set up transfer objects
+
+Generate transfers:
+
+```bash
+console transfer:generate
+```
+
+---
+**Verification**
+
+Ensure the following transfers have been created:
+
+| TRANSFER                           | TYPE  | EVENT   | PATH                                                                     |
+|------------------------------------|-------|---------|--------------------------------------------------------------------------|
+| RestCheckoutData                   | class | created | src/Generated/Shared/Transfer/RestCheckoutDataTransfer                   |
+| Quote                              | class | created | src/Generated/Shared/Transfer/QuoteTransfer                              |
+| UnzerCredentials                   | class | created | src/Generated/Shared/Transfer/UnzerCredentialsTransfer                   |
+| UnzerKeypair                       | class | created | src/Generated/Shared/Transfer/UnzerKeypairTransfer                       |
+| RestCheckoutDataResponseAttributes | class | created | src/Generated/Shared/Transfer/RestCheckoutDataResponseAttributesTransfer |
+| CheckoutResponse                   | class | created | src/Generated/Shared/Transfer/CheckoutResponseTransfer                   |
+| CheckoutData                       | class | created | src/Generated/Shared/Transfer/CheckoutDataTransfer                       |
+| RestCheckoutRequestAttributes      | class | created | src/Generated/Shared/Transfer/RestCheckoutRequestAttributesTransfer      |
+| RestPayment                        | class | created | src/Generated/Shared/Transfer/RestPaymentTransfer                        |
+| RestUnzerPayment                   | class | created | src/Generated/Shared/Transfer/RestUnzerPaymentTransfer                   |
+| UnzerPaymentResource               | class | created | src/Generated/Shared/Transfer/UnzerPaymentResourceTransfer               |
+
+---
+
+### 4) Set up behavior
+
+Enable the following behaviors by registering the plugins:
+
+| PLUGIN                                | SPECIFICATION                                                                                                                                                                                          | PREREQUISITES | NAMESPACE                                                          |
+|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------|
+| UnzerCheckoutDataResponseMapperPlugin | Maps `RestCheckoutDataTransfer.unzerCredentials.unzerKeypair.publicKey` to `RestCheckoutDataResponseAttributesTransfer.unzerPublicKey` while `RestCheckoutDataTransfer.unzerCredentials` is specified. | None          | SprykerEco\Glue\UnzerRestApi\Plugin\CheckoutRestApi                |
+| UnzerNotificationResource             | Adds Unzer notification resource.                                                                                                                                                                      | None          | SprykerEco\Glue\UnzerRestApi\Plugin\GlueJsonApiConventionExtension |
+
+**src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
+
+```php
+namespace Pyz\Glue\CheckoutRestApi;
+
+use Spryker\Glue\CheckoutRestApi\CheckoutRestApiDependencyProvider as SprykerCheckoutRestApiDependencyProvider;
+use SprykerEco\Glue\UnzerRestApi\Plugin\CheckoutRestApi\UnzerCheckoutDataResponseMapperPlugin;
+
+class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Glue\CheckoutRestApiExtension\Dependency\Plugin\CheckoutDataResponseMapperPluginInterface>
+     */
+    protected function getCheckoutDataResponseMapperPlugins(): array
+    {
+        return [
+            new UnzerCheckoutDataResponseMapperPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider.php**
+
+```php
+namespace Pyz\Glue\GlueStorefrontApiApplication;
+
+use Spryker\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider as SprykerGlueStorefrontApiApplicationDependencyProvider;
+use SprykerEco\Glue\UnzerRestApi\Plugin\GlueJsonApiConventionExtension\UnzerNotificationResource;
+
+class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefrontApiApplicationDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceInterface>
+     */
+    protected function getResourcePlugins(): array
+    {
+        return [
+            new UnzerNotificationResource(),
+        ];
+    }
+}
+```
+
+---
+**Verification**
+
+{% info_block warningBox "Verification" %}
+
+1. Check result by sending the `POST https://glue.mysprykershop.com/checkout-data?include=payment-methods` request.
+
+**Request:**
+```json
+{
+  "data":
+  {
+    "type": "checkout-data",
+    "attributes":
+    {
+      "idCart": "{{cart_uuid}}",
+      "payments": [
+        {
+          "paymentMethodName": "Unzer Sofort",
+          "paymentProviderName": "Unzer"
+        }
+      ]
+    }
+  }
+}
+```
+
+**Response:**
+```json
+{
+  "data": {
+    "type": "checkout-data",
+    "id": null,
+    "attributes": {
+      "unzerPublicKey": "string",
+      ...
+    },
+    "links": {
+      "self": "https://glue.mysprykershop.com/checkout-data?include=payment-methods"
+    },
+    "relationships": {
+      "payment-methods": {
+        "data": [
+          {
+            "type": "payment-methods",
+            "id": "1"
+          },
+        ]
+      }
+    },
+    ...
+  },
+  "included": [
+    {
+      "type": "payment-methods",
+      "id": "1",
+      "attributes": {
+        "paymentMethodName": "Unzer Sofort",
+        "paymentProviderName": "Unzer",
+        "priority": 1,
+        "requiredRequestData": [
+          "paymentMethod",
+          "paymentProvider",
+          "unzerPayment.paymentResource.id"
+        ]
+      },
+      "links": {
+        "self": "https://glue.mysprykershop.com/payment-methods/1"
+      }
+    },
+    ...
+  ]
+}
+```
+
+2. Check result by sending the `POST https://glue.mysprykershop.com/checkout` request.
+
+**Request:**
+```json
+{
+    "data":
+    {
+        "type": "checkout", 
+        "attributes":
+        {
+            "idCart": "{{cart_uuid}}",
+            "payments": [
+                {
+                    "paymentMethodName": "Unzer Sofort",
+                    "paymentProviderName": "Unzer",
+                    "paymentSelection": "unzerSofort",
+                    "unzerPayment": {
+                        "paymentResource": {
+                            "id": ""
+                        }
+                    }
+                }
+            ],
+            "shipment": {
+                "idShipmentMethod": 1
+            },
+           ...
+        }
+    }
+}
+```
+
+**Response:**
+```json
+{
+    "data": {
+        "type": "checkout",
+        "id": null,
+        "attributes": {
+            "redirectUrl": "https://payment.unzer.com/v1/redirect/sofort/{{id}}",
+            "isExternalRedirect": true,
+            ...
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/checkout"
+        }
+    }
+}
+```
+
+{% endinfo_block %}
+
+{% info_block warningBox %}
+
+Please take care that requests body differs for each Unzer payment method. Property `unzerPayment` of `payments` has to be replaced by used method (e.g. `unzerCreditCard`, `unzerMarketplaceCreditCard`, etc.).
+
+{% endinfo_block %}

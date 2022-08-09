@@ -426,7 +426,7 @@ entries:
       include_versions:
       - "202005.0"
       - "202009.0"
-      - "202108.0"      
+      - "202108.0"
     - title: Quick Add to Cart
       url: /docs/scos/dev/feature-walkthroughs/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
       nested:
@@ -519,6 +519,8 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/shared-carts-feature-walkthrough.html
     - title: Shipment
       url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/shipment-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
       nested:
       - title: "Shipment method plugins: reference information"
         url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/shipment-method-plugins-reference-information.html
@@ -1483,7 +1485,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Glue API - Shopping Lists
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-shopping-lists-feature-integration.html
         include_versions:
@@ -2294,7 +2295,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Shipment + Approval Process
       url: /docs/scos/dev/feature-integration-guides/shipment-approval-process-feature-integration.html
       include_versions:
@@ -2302,14 +2302,12 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Shipment + Cart
       url: /docs/scos/dev/feature-integration-guides/shipment-cart-feature-integration.html
       include_versions:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Shopping Lists
       url: /docs/scos/dev/feature-integration-guides/shopping-lists-feature-integration.html
     - title: Shopping Lists + Product Options
@@ -2705,16 +2703,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-setup.html
     - title: Migration Guide - SharedCartPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-sharedcartpage.html
-    - title: Migration Guide - Shipment
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shipment.html
-    - title: Migration Guide - ShipmentCartConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentcartconnector.html
-    - title: Migration Guide - ShipmentCheckoutConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentcheckoutconnector.html
-    - title: Migration Guide - ShipmentDiscountConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentdiscountconnector.html
-    - title: Migration Guide - ShipmentGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentgui.html
     - title: Migration Guide - ShoppingList
       url: /docs/scos/dev/module-migration-guides/migration-guide-shoppinglist.html
     - title: Migration Guide - ShoppingListPage
@@ -2857,21 +2845,18 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - shipment_method_store.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-shipment-method-store.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - shipment_price.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-shipment-price.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - sales_order_threshold.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-sales-order-threshold.csv.html
           include_versions:
@@ -4219,12 +4204,9 @@ entries:
       url: /docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
       nested:
       - title: Feature HowTos
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/feature-howtos.html
         nested:
         - title: Data Imports
           nested:
-          - title: "HowTo: Import delivery methods linked to store"
-            url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-delivery-methods-linked-to-store.html
           - title: "HowTo: Import warehouse data"
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html
           - title: "HowTo: Import packaging units"
@@ -4304,8 +4286,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-personalized-prices.html
       - title: "HowTo: Set up Spryker with MySQL"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-spryker-with-mysql.html
-      - title: "HowTo: Add a new shipment method 2.0"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method-2.0.html
       - title: "HowTo: Define the maximum size of content fields"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-define-the-maximum-size-of-content-fields.html
       - title: "HowTo: Do better deployments"
@@ -4314,8 +4294,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-decrease-the-memory-usage-of-spryker-with-docker-on-wsl2.html
       - title: "HowTo: Hydrate payment methods for an order"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-hydrate-payment-methods-for-an-order.html
-      - title: "HowTo: Add a new shipment method"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method.html
       - title: "HowTo: Notify about unsupported browsers"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html
       - title: "HowTo: Set up stores with multiple locales"
@@ -4783,6 +4761,8 @@ entries:
           - "202108.0"
           - "202204.0"
     - title: Shipment
+      include_versions:
+      - "202108.0"
       nested:
       - title: Seven Senders
         nested:

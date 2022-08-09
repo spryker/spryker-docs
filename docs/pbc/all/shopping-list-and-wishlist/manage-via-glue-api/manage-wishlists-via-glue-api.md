@@ -18,11 +18,11 @@ related:
   - title: Authenticating as a customer
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/authenticating-as-a-customer.html
   - title: Wishlist feature overview
-    link: docs/scos/user/features/page.version/wishlist-feature-overview.html
+    link: docs/pbc/all/shopping-list-and-wishlist/wishlist-feature-overview.html
 
 ---
 
-The Wishlists API allows creating list and deleting [wishlists](/docs/scos/user/features/{{page.version}}/wishlist-feature-overview.html), as well as managing the items inside them.
+The Wishlists API allows creating list and deleting [wishlists](/docs/pbc/all/shopping-list-and-wishlist/wishlist-feature-overview.html), as well as managing the items inside them.
 
 ## Installation
 
@@ -442,7 +442,7 @@ To retrieve all wishlists of a customer, send the request:
 | updatedAt | String | Date of the last update. |
 
 For attributes of the included resources, see:
-* [Add an item to a wishlist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlist-items.html#wishlist-items-response-attributes)
+* [Add an item to a wishlist](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlist-items-via-glue-api.html#wishlist-items-response-attributes)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 
@@ -759,7 +759,7 @@ To retrieve wishlist items, send the request:
 | updatedAt | String | Date of the last update. |
 
 For attributes of the included resources, see:
-* [Add an item to a wishlist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlist-items.html#wishlist-items-response-attributes)
+* [Add an item to a wishlist](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlist-items-via-glue-api.html#wishlist-items-response-attributes)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 

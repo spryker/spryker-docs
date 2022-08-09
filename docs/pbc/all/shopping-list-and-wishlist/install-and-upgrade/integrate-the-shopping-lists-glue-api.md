@@ -13,14 +13,11 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-shopping-lists-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-shopping-lists-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-shopping-lists-feature-integration.html
-
 related:
   - title: Shopping Lists feature integration
     link: docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-feature.html
-  - title: Shopping Lists feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/shopping-lists-feature-walkthrough.html
   - title: Managing shopping lists
-    link: docs/scos/dev/glue-api-guides/page.version/managing-shopping-lists/managing-shopping-lists.html
+    link: docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-lists-via-glue-api.html
   - title: Managing shopping list items
     link: docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html
 ---

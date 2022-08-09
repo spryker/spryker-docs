@@ -20,10 +20,8 @@ related:
     link: docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-product-options-feature.html
   - title: Glue API - Shopping Lists feature integration
     link: docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-glue-api.html
-  - title: Shopping Lists feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/shopping-lists-feature-walkthrough.html
   - title: Shopping List Notes overview
-    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-list-notes-overview.html
+    link: docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-notes-overview.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-shopping-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-shopping-lists-feature.md -->

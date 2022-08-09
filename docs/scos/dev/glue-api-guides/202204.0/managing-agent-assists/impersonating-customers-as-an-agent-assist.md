@@ -118,7 +118,7 @@ After you’ve authenticated as a customer, you can impersonate them:
 * [Manage carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)
 * [Manage cart items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
 * [Manage gift cards](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html)
-* [Manage wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html)
+* [Manage wishlists](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlists-via-glue-api.html)
 * [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html)  
 
 Also, you can [refresh the agent assist authentication token](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/managing-agent-assist-authentication-tokens.html#refresh-an-agent-assist-authentication-token) or [revoke the agent assist refresh token](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/managing-agent-assist-authentication-tokens.html#revoke-an-agent-assist-refresh-token).

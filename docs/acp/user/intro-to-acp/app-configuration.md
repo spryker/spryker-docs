@@ -1,9 +1,9 @@
 ---
 title: App configuration
-Descriptions: 
+Descriptions: Make configuration to your app, like translation and widgets
 template: howto-guide-template
 ---
-Instead of writing different components for different App configurations, we use JSON to determine the form for the configuration of the apps. There is a [playground for NgxSchemaForm](https://guillotina.io/ngx-schema-form). There are predefined form elements, and also custom form elements.
+Instead of writing different components for different App configurations, we use JSON to determine the form for the configuration of the apps. There is a [playground for NgxSchemaForm](https://guillotina.io/ngx-schema-form). There are predefined form elements and also custom form elements.
 
 {% info_block infoBox "Info" %}
 
@@ -25,7 +25,7 @@ Configuration widget JSON format:
 };
 
 ```
-Example of the configuraiton widget:
+Example of the configuration widget:
 
 ```json
 {
@@ -47,10 +47,10 @@ Example of the configuraiton widget:
 Common properties of a widget are:
 - `type`: widget type
 - `widget`: widgetId - see the available widgetIds in the following sections
-- `title`: the display title of the field
+- `title`: display title of the field
 - `placeholder`: string as a placeholder for the input field
 - `description`: additional description for the field
-- `isRequired`: true / false—if the field is required
+- `isRequired`: determines if the field is required with the `true` and `false` values
 - `default`: default value of the field
 
 ### Form input widget
@@ -82,12 +82,12 @@ Common properties of a widget are:
   <tr>
     <td>time</td>
     <td><br><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/time-widget.png"><br><br> </td>
-    <td> <br>Allow the user to enter a time.</td>
+    <td> <br>Allow the user to enter time.</td>
   </tr>
   <tr>
     <td>password</td>
     <td><br><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/password-widget.png"><br><br> </td>
-    <td>Allow the user to enter a masked string that is used for passwords or API keys.</td>
+    <td>Allows the user to enter a masked string that is used for passwords or API keys.</td>
   </tr>
   <tr>
     <td>textarea</td>
@@ -102,12 +102,12 @@ Common properties of a widget are:
   <tr>
     <td>link</td>
     <td>As a tag:<br><br><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/link-as-a-tag.png"><br>As a button:<br><br><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/link-as-a-button.png"><br></td>
-    <td>Displays a link as a tag or a button.<br>Required properties:<br><code><isButtonLink</code>: <i>false</i> - display as a tag, <i>true</i> - display as a button<br>url: the url<br>target: set to <code><_blank</code>< to open the url in a new tab<br>variant: (for button only) - primary or secondary button<br>See the <i>link example</i> example under this table.<br></td>
+    <td>Displays a link as a tag or a button.<br>Required properties:<br><code><isButtonLink</code>: <i>false</i> - display as a tag, <i>true</i> - display as a button<br>url: the url<br>target: set to <code><_blank</code>< to open the url in a new tab<br>variant: (for button only) - primary or secondary button<br>See the <i>link example</i> under this table.<br></td>
   </tr>
   <tr>
     <td>notification</td>
     <td><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/notification-widget.png"></td>
-    <td>The notification widget is used to inform the user of some additional information. There won’t be any user input for this type of widget. <br>Properties:<ul><li><code>notificationType</code>: <code>info</code>/ <code>warning</code> / <code>error</code> / <code>success</code> - type of the notification</code></li><li><code>content</code>: Content of the notification widget - accepts an HTML string.</li> See <i>notification example</i> under this table.</ul></td>
+    <td>The notification widget is used to inform the user of some additional information. There cannot be any user input for this type of widget. <br>Properties:<ul><li><code>notificationType</code>: <code>info</code>/ <code>warning</code> / <code>error</code> / <code>success</code>—type of the notification</code></li><li><code>content</code>: Content of the notification widget—accepts an HTML string.</li> See <i>notification example</i> under this table.</ul></td>
   </tr>
 </tbody>
 </table>
@@ -182,7 +182,7 @@ Common properties of a widget are:
   <tr>
     <td>app-status</td>
     <td><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/app-status.png"></td>
-    <td>This custom widget shows only the Active (<code>true</code>) or Inactive (<code>false</code>) value to fit the design. See <i>app-status example</i> under this table.</td>
+    <td>This custom widget shows only <i>Active</i> (<code>true</code>) or <i>Inactive</i> (<code>false</code>) value to fit the design. See <i>app-status example</i> under this table.</td>
   </tr> 
 </tbody>
 </table>
@@ -311,7 +311,7 @@ Common properties of a widget are:
 For the form layout, in particular, you should take into consideration the `array` type and order of the fields.
 
 ### Array type
-Sometimes, you might ask a user to input one or more values of the same field sets. For example, when you ask for all the pets within a household. These values can can differ from each other, and there could be 0, or 10, or 100 pets. In these cases, you can use an `array` type of the form:
+Sometimes, you might ask a user to input one or more values of the same field sets. For example, when you ask for all the pets within a household. These values can differ from each other, and there could be 0, or 10, or 100 pets. In these cases, you can use the `array` type of the form:
 
 ```json
 {
@@ -340,7 +340,290 @@ Sometimes, you might ask a user to input one or more values of the same field se
 Where:
 
 - `addButtonText`: text of the **Add** button.
-- `items`: definition of fields within an item. The form returns an array of objects defined in the items:
+- `items`: definition of fields within an item. The form returns an array of objects defined in `items`:
 ![array-type](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/array-type.png)
+The returned object looks like this:
+
+```json
+{
+  "pet": [
+    {
+      "petType": "Dog",
+      "petName": "Lulu"
+    },
+    {
+      "petType": "Cat",
+      "petName": "Meow meow"
+    }
+  ]
+}
+```
+
+### Order of fields
+The `properties` within the form configuration are to define the form’s fields and their corresponding widgets. By default, the fields are displayed in that order also. In some cases, you can use the `order` or `fieldsets` property to change the order of the fields.
+
+The `order` property changes the order of the fields within the form:
+
+```json
+{
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "description": "First name"
+    },
+    "lastName": {
+      "type": "string",
+      "description": "Last name"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email"
+    }
+  },
+  "order": ["lastName", "firstName", "email"]
+}
+```
+Here is how it looks on the Storefront:
+
+![order-property](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/order-property.png)
+
+To group different fields into different sections, you can define the `fieldsets` property:
+
+```json
+{
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "description": "First name"
+    },
+    "lastName": {
+      "type": "string",
+      "description": "Last name"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email"
+    }
+  },
+  "fieldsets": [
+    {
+      "id": "client_name",
+      "title": "Client name",
+      "fields": ["firstName", "lastName"]
+    },
+    {
+      "id": "client_email",
+      "title": "Client email",
+      "fields": ["email"]
+    }
+  ]
+}
+```
+This is how it looks on the Storefront:
+
+![fieldsets-property](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/fieldsets-property.png)
+
+If you don't want any layout for a section, you can set `noLayout` to the `layout` property of the section:
+
+```json
+{
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "description": "First name"
+    },
+    "lastName": {
+      "type": "string",
+      "description": "Last name"
+    },
+    "email": {
+      "type": "string",
+      "description": "Email"
+    }
+  },
+  "fieldsets": [
+    {
+      "id": "client_name",
+      "title": "Client name",
+      "layout": "noLayout",
+      "fields": ["firstName", "lastName"]
+    },
+    {
+      "id": "client_email",
+      "title": "Client email",
+      "fields": ["email"]
+    }
+  ]
+}
+```
+This is how it looks on the Storefront:
+![layout-property](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/layout-property.png)
+
+### Full configuration example
+Here is an example of the full configuration:
+
+<details open>
+<summary>Full configuration example</summary>
+
+```json
+{
+  "properties": {
+    "notification": {
+      "type": "string",
+      "widget": {
+        "id": "notification"
+      },
+      "notificationType": "info",
+      "content": "Don’t have credentials yet? Visit <a href=\"https://google.com/\" target=\"_blank\">admin.usercentrics.eu/#/login</a> to create your account."
+    },
+    "userCentricIntegrationType": {
+      "type": "string",
+      "widget": {
+        "id": "radio"
+      },
+      "oneOf": [
+        {
+          "description": "Enable Smart Data Protector (Default)",
+          "enum": ["SMART_DATA_PROTECTOR"]
+        },
+        {
+          "description": "Enable Direct Integration (works only with Google Tag Manager)",
+          "enum": ["DIRECT"]
+        }
+      ]
+    },
+    "storeSettings": {
+      "type": "array",
+      "addButtonText": "Add Store Settings",
+      "items": {
+        "type": "object",
+        "properties": {
+          "storeName": {
+            "type": "string",
+            "title": "Store",
+            "widget": {
+              "id": "select"
+            },
+            "multiple": true,
+            "multipleOptions": [
+              "AT",
+              "DE",
+              "US"
+            ]
+          },
+          "userCentricSettingIdentifier": {
+            "type": "string",
+            "title": "Setting ID"
+          },
+          "isActive": {
+            "type": "boolean",
+            "title": "Store setting is active",
+            "widget": {
+              "id": "checkbox"
+            },
+            "default": false
+          }
+        },
+        "fieldsets": [
+          {
+            "id": "storeSettings",
+            "fields": [
+              "storeName",
+              "userCentricSettingIdentifier",
+              "isActive"
+            ]
+          }
+        ],
+        "widget": {
+          "id": "object"
+        }
+      },
+      "widget": {
+        "id": "array"
+      }
+    }
+  },
+  "fieldsets": [
+    {
+      "id": "notifications",
+      "layout": "noLayout",
+      "fields": ["notification"]
+    },
+    {
+      "id": "usercentric_integration",
+      "title": "Usercentric Integration",
+      "name": "usercentric_integration",
+      "fields": ["userCentricIntegrationType"]
+    },
+    {
+      "id": "usercentric_stories",
+      "title": "User consent managment per store",
+      "name": "usercentric_integration",
+      "fields": ["storeSettings"]
+    }
+  ]
+}
+```
+</details>
+
+This is how the configuration looks in the Back Office:
+
+![full-configuration](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/full-configuration.png)
 
 ## Translation appendix
+Translation for an app configuration is provided in the `app-store-suite/app/config/<app-name>/translation.json` file. Each field defined in the JSON’s `properties` needs to match its corresponding translation entity in the `translation.json` file. For example, to translate the `title` of the widget `isLiveMode`, we provide `"title": "isLiveMode"` in the app configuration JSON.
+
+*translation.json* file example:
+
+```json
+{    
+    "isLiveMode": {
+        "de_DE": "Auswahl des Modus für Payone Umgebung",
+        "en_US": "Select Payone Environment Mode"
+    },
+    "isLiveMode_test": {
+        "de_DE": "Test",
+        "en_US": "Test"
+    },
+    "isLiveMode_live": {
+        "de_DE": "Live",
+        "en_US": "Live"
+    },
+    "payoneEnvironmentMode": {
+        "de_DE": "Payone Umgebung",
+        "en_US": "Payone Environment Mode"
+    }
+}
+```
+*configuration.json* file example:
+```json
+{
+  "properties": {
+      "isLiveMode": {
+        "type": "string",
+        "title": "isLiveMode",
+        "widget": {
+            "id": "radio"
+        },
+        "oneOf": [
+            {
+                "description": "isLiveMode_test",
+                "enum": ["0"]
+            },
+            {
+                "description": "isLiveMode_live",
+                "enum": ["1"]
+            }
+        ]
+      },
+
+  }
+}
+```
+This is how the result of the configuration looks:
+
+DE shop
+![configuration-de-shop](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/configuration-de-shop.png)
+
+EN shop
+![configuration-en-shop](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/configuration-en-shop.png)

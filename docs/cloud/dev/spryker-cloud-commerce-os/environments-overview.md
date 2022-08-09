@@ -27,7 +27,7 @@ Your production environment must host the code that the end-user gets to interac
 
 {% info_block infoBox "Note" %}
 
-Do not make changes to the production environments directly unless they have been verified on your lower environments first.
+Do not make changes to the production environments directly unless they have been verified on your lower [environments](/docs/cloud/dev/spryker-cloud-commerce-os/environments-overview.html) (staging or dev) first.
 
 {% endinfo_block %}
 

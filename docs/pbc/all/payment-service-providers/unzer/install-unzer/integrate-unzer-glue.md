@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 
 # Glue support in Unzer feature integration
 
-This document describes how to integrate the *Glue support* to the [Unzer]({docs/pbc/all/payment-service-providers/unzer/unzer.html}) into a Spryker project.
+This document describes how to integrate the *Glue support* to the [Unzer]({/docs/pbc/all/payment-service-providers/unzer/unzer.html}) into a Spryker project.
 
 ## Install feature core
 
@@ -30,14 +30,15 @@ Install the required modules:
 composer require spryker-eco/unzer-rest-api
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
 | MODULE       | EXPECTED DIRECTORY                 |
 |--------------|------------------------------------|
 | UnzerRestApi | vendor/spryker-eco/unzer-rest-api  |
+
+{% endinfo_block %}
 
 ---
 
@@ -88,6 +89,8 @@ Make sure that calling `Pyz\Zed\Payment\PaymentConfig::getSalesPaymentMethodType
 
 {% endinfo_block %}
 
+---
+
 ### 3) Set up transfer objects
 
 Generate transfers:
@@ -96,8 +99,7 @@ Generate transfers:
 console transfer:generate
 ```
 
----
-**Verification**
+{% info_block warningBox "Verification" %}
 
 Ensure the following transfers have been created:
 
@@ -114,6 +116,8 @@ Ensure the following transfers have been created:
 | RestPayment                        | class | created | src/Generated/Shared/Transfer/RestPaymentTransfer                        |
 | RestUnzerPayment                   | class | created | src/Generated/Shared/Transfer/RestUnzerPaymentTransfer                   |
 | UnzerPaymentResource               | class | created | src/Generated/Shared/Transfer/UnzerPaymentResourceTransfer               |
+
+{% endinfo_block %}
 
 ---
 
@@ -170,12 +174,11 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 }
 ```
 
----
-**Verification**
-
 {% info_block warningBox "Verification" %}
 
-1. Check result by sending the `POST https://glue.mysprykershop.com/checkout-data?include=payment-methods` request.
+1. Create a cart by sending the `POST https://glue.mysprykershop.com/carts`.
+2. Add at least one item to the cart by sending `POST https://glue.mysprykershop.com/{{cart_uuid}}/items`.
+3. Check result by sending the `POST https://glue.mysprykershop.com/checkout-data?include=payment-methods` request.
 
 **Request:**
 ```json
@@ -197,6 +200,12 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 }
 ```
 
+{% info_block infoBox %}
+
+Please take care that requests body differs for each Unzer payment method. Property `paymentMethodName` of `payments` has to be replaced by used method (e.g. `Unzer Sofort`, `Unzer Credit Card`, etc.)
+
+{% endinfo_block %}
+
 **Response:**
 ```json
 {
@@ -216,7 +225,7 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
           {
             "type": "payment-methods",
             "id": "1"
-          },
+          }
         ]
       }
     },
@@ -245,37 +254,41 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 }
 ```
 
-2. Check result by sending the `POST https://glue.mysprykershop.com/checkout` request.
+4. Check result by sending the `POST https://glue.mysprykershop.com/checkout` request.
 
 **Request:**
+
 ```json
 {
-    "data":
-    {
-        "type": "checkout", 
-        "attributes":
+  "data": {
+    "type": "checkout",
+    "attributes": {
+      "idCart": "{{cart_uuid}}",
+      "payments": [
         {
-            "idCart": "{{cart_uuid}}",
-            "payments": [
-                {
-                    "paymentMethodName": "Unzer Sofort",
-                    "paymentProviderName": "Unzer",
-                    "paymentSelection": "unzerSofort",
-                    "unzerPayment": {
-                        "paymentResource": {
-                            "id": ""
-                        }
-                    }
-                }
-            ],
-            "shipment": {
-                "idShipmentMethod": 1
-            },
-           ...
+          "paymentMethodName": "Unzer Credit Card",
+          "paymentProviderName": "Unzer",
+          "paymentSelection": "unzerCreditCard",
+          "unzerCreditCard": {
+            "paymentResource": {
+              "id": "{{payment_resource}}"
+            }
+          },
+          "amount": "{{amount}}"
         }
+      ],
+      ...
     }
+  }
 }
 ```
+
+{% info_block infoBox %}
+
+Please take care that requests body differs for each Unzer payment method. Property `paymentMethodName` of `payments` has to be replaced by used method (e.g. `Unzer Sofort`, `Unzer Credit Card`, etc.).
+Property `paymentSelection` of `payments` has to be replaced by used method (e.g. `unzerSofort`, `unzerCreditCard`, `unzerMarketplaceCreditCard`, etc.).
+
+{% endinfo_block %}
 
 **Response:**
 ```json
@@ -284,7 +297,7 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
         "type": "checkout",
         "id": null,
         "attributes": {
-            "redirectUrl": "https://payment.unzer.com/v1/redirect/sofort/{{id}}",
+            "redirectUrl": "https://payment.unzer.com/v1/redirect/3ds/{{id}}",
             "isExternalRedirect": true,
             ...
         },
@@ -294,11 +307,5 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
     }
 }
 ```
-
-{% endinfo_block %}
-
-{% info_block warningBox %}
-
-Please take care that requests body differs for each Unzer payment method. Property `unzerPayment` of `payments` has to be replaced by used method (e.g. `unzerCreditCard`, `unzerMarketplaceCreditCard`, etc.).
 
 {% endinfo_block %}

@@ -480,8 +480,8 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
                                     {% raw %}{%{% endraw %} if embed.customForms[data.form.vars.template_path] is not defined {% raw %}%}{% endraw %}
                                         {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}
                                     {% raw %}{%{% endraw %} else {% raw %}%}{% endraw %}
-                                        {% raw %}{%{% endraw %} set viewName = embed.customForms[data.form.vars.template_path] | first %}
-                                        {% raw {% raw %}%}{% endraw %}{%{% endraw %} set moduleName = embed.customForms[data.form.vars.template_path] | last {% raw %}%}{% endraw %}
+                                        {% raw %}{%{% endraw %} set viewName = embed.customForms[data.form.vars.template_path] | first {% raw %}%}{% endraw %}
+                                        {% raw %}{%{% endraw %} set moduleName = embed.customForms[data.form.vars.template_path] | last {% raw %}%}{% endraw %}
                                         {% raw %}{%{% endraw %} include view(viewName, moduleName) ignore missing with {
                                             form: data.form.parent,
                                         } only {% raw %}%}{% endraw %}
@@ -616,7 +616,7 @@ export default register('crefopay-checkbox-helper', () => import(/* webpackMode:
         </div>
 
         {% raw %}{%{% endraw %} for field in data.fields {% raw %}%}{% endraw %}
-            {% raw %}{%{% endraw %} raw %}{{{% endraw %} macros.crefopayField(field.name, field.attribute, config.name) {% raw %}}}{% endraw %}
+            {% raw %}{{{% endraw %} macros.crefopayField(field.name, field.attribute, config.name) {% raw %}}}{% endraw %}
         {% raw %}{%{% endraw %} endfor {% raw %}%}{% endraw %}
 
         <div class="{% raw %}{{{% endraw %} config.name {% raw %}}}{% endraw %}__error {% raw %}{{{% endraw %} config.jsName {% raw %}}}{% endraw %}__error spacing-y is-hidden">

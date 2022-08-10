@@ -20,7 +20,7 @@ This endpoint allows you to add and remove items from wishlists.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Wishlist API Feature Integration](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-wishlist-glue-api.html)
-* [Glue API - Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-configuration-feature-integration.html)
+* [Glue API - Product Configuration feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-configuration-feature-integration.html)
 
 ## Add an item to a wishlist
 
@@ -39,7 +39,7 @@ To add an item to a wishlist, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample: add an item to a wishlist
 
@@ -121,7 +121,7 @@ Request sample: add an item to a wishlist
 | quantity  | Integer  | Quantity of the product that is added to the wishlist.  |
 | availableQuantity  | Integer  |  Product quantity available in the store. |
 
-For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#response).
+For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#response).
 
 ### Response
 
@@ -221,7 +221,7 @@ Response sample: add an item to a wishlist
 | productOfferReference | String | |Unique identifier of the product offer. |
 | merchantReference | String  | Unique identifier of the merchant. |
 
-For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#response).
+For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#response).
 
 For attribute descriptions of concrete product availability, see [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/202204.0/managing-products/concrete-products/retrieving-concrete-product-availability.html#concrete-product-availability-response-attributes).
 
@@ -250,7 +250,7 @@ To update a wishlist item, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 <details><summary>Request sample: update a configurable product in a wishlist</summary>
 
@@ -315,7 +315,7 @@ To update a wishlist item, send the request:
 | quantity  | Integer  | Quantity of the configurable product to update in the wishlist.  |
 | availableQuantity  | Integer  |  Product quantity available in the store. |
 
-For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#abstract-product-prices-response-attributes).
+For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
 ### Response
 
@@ -394,9 +394,9 @@ For attribute descriptions of product prices, see [Retrieving abstract product p
 | quantity  | Integer  | Updated configurable product quantity in the wishlist.  |
 | availableQuantity  | Integer  | Configurable product quantity available in the store. |
 
-For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#response).
+For attribute descriptions of product prices, see [Retrieving abstract product prices](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html#response).
 
-For attribute descriptions of concrete product availability, see [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html#response).
+For attribute descriptions of concrete product availability, see [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html#response).
 
 
 ## Delete a wishlist item
@@ -417,7 +417,7 @@ To delete wishlist item, send the request:
 
 | HEADER KEY | HEADER VALUE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html).  |
 
 Request sample: delete a wishlist item
 
@@ -436,4 +436,4 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 | 207 | Cannot remove the item. |
 | 208 | An item with the provided SKU does not exist in the wishlist. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/reference-information-glueapplication-errors.html).

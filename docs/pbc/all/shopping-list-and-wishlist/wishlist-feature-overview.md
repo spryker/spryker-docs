@@ -92,5 +92,5 @@ For more details about wishlists, check the video:
 
 |INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES  |
 |---------|---------|---------|
-| [Integrate the Alternative Products + Wishlist feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-wishlist-feature-integration.html)  | [Upgrade the Wishlist module](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-wishlist-module.html) | [Managing wishlists](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlists-via-glue-api.html)  |
-| [Integrate the Wishlist Glue API](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-wishlist-glue-api.html)  |   |[ Managing wishlist items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlist-items.html)  |
+| [Integrate the Alternative Products + Wishlist feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/alternative-products-wishlist-feature-integration.html)  | [Upgrade the Wishlist module](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-wishlist-module.html) | [Managing wishlists](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlists-via-glue-api.html)  |
+| [Integrate the Wishlist Glue API](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-wishlist-glue-api.html)  |   |[ Managing wishlist items](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-wishlists/managing-wishlist-items.html)  |

@@ -10,7 +10,7 @@ This document describes how to import taxes for product options via  `product_op
 
 ## Dependencies
 
-* [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
+* [product_abstract.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)
 * [tax.csv](/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets.html)
 
 

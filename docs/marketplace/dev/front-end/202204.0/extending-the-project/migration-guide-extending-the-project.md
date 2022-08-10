@@ -1,7 +1,9 @@
 ---
 title: "Migration guide - Extending the project"
-description: This document provides details for migration of the marketplace modules to be able to extend the project.
+description: This document provides details for the migration of the marketplace modules to be able to extend the project.
 template: module-migration-guide-template
+redirect_from:
+  - /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
 related:
   - title: Extending the project
     link: docs/marketplace/dev/front-end/extending-the-project/index.html

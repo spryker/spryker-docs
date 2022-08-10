@@ -2,6 +2,8 @@
 title: Extending the project
 description: This document provides details about how to extend the new project.
 template: howto-guide-template
+redirect_from:
+  - /docs/marketplace/dev/front-end/extending-the-project/index.html
 related:
   - title: Migration guide - Extending the project
     link: docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html

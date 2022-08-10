@@ -2,6 +2,8 @@
 title: Infrastructure requirements
 description: This document provides the required system infrastructure requirements for a Spryker Marketplace project.
 template: concept-topic-template
+redirect_from: 
+  - /docs/marketplace/dev/setup/infrastructure-requirements.html
 related:
   - title: DevVM system requirements
     link: docs/marketplace/dev/setup/system-requirements.html

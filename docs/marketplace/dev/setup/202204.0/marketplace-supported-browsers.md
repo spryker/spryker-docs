@@ -1,8 +1,10 @@
 ---
 title: Marketplace supported browsers
-description: This documents lists browsers which the Spryker Marketplace supports.
+description: This document lists browsers supported by the Spryker Marketplace.
 last_updated: Jun 8, 2022
 template: howto-guide-template
+redirect_from:
+  - /docs/marketplace/dev/setup/marketplace-supported-browsers.html
 ---
 
 The Spryker Marketplace supports the following browsers:

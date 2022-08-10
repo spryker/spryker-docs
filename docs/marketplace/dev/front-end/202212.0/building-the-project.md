@@ -9,7 +9,7 @@ related:
     link: docs/marketplace/dev/front-end/setting-up-the-merchant-portal.html
 ---
 
-This document provides details how to build the frontend part of the Merchant Portal.
+This document provides details about building the frontend part of the Merchant Portal.
 
 ## Overview
 Spryker uses [webpack](https://webpack.js.org/guides/getting-started/) to build frontend.

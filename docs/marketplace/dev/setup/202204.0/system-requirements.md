@@ -2,6 +2,8 @@
 title: DevVM system requirements
 Descriptions: System infrastructure requirements for the Spryker Marketplace with Merchant Portal
 template: howto-guide-template
+redirect_from:
+  - /docs/marketplace/dev/setup/system-requirements.html
 related:
   - title: Infrastructure requirements
     link: docs/marketplace/dev/setup/infrastructure-requirements.html

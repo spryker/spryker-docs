@@ -24,6 +24,7 @@ redirect_from:
   - /v1/docs/en/console
   - /docs/scos/dev/back-end-development/202108.0/console-commandsconsole-commands-in-spryker.html
   - /docs/scos/dev/back-end-development/202204.0/console-commandsconsole-commands-in-spryker.html
+  - /docs/scos/dev/back-end-development/console-commands/console-commands.html
 related:
   - title: Getting the list of console commands and available options
     link: docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html

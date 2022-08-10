@@ -49,8 +49,6 @@ exclude:
   - redirect.html
   - docs/scos/dev/drafts-dev/
   - docs/scos/dev/developers-corner/
-  - docs/marketplace/dev/glue-api-guides/upcoming-release/
-  - docs/scos/dev/glue-api-guides/upcoming-release/
 
 # these are the files and directories that jekyll will exclude from the build
 
@@ -194,7 +192,7 @@ versions:
   '202009.0': '202009.0'
   '202108.0': '202108.0'
   '202204.0': '202204.0'
-  '202200.0': 'Upcoming release'
+  '202212.0': 'Upcoming release'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
@@ -210,6 +208,9 @@ versioned_categories:
       - data-import
       - data-export
       - legacy-demoshop
+      - front-end
+      - setup
+      - technical-enhancements
   scos:
     user:
       - features
@@ -228,6 +229,11 @@ versioned_categories:
       - legacy-demoshop
       - technology-partner-guides
       - devops-migration-guides
+  scos:
+    dev:
+      back-end-development:
+        - console-commands
+    
 
 # these are defaults used for the front matter for these file types
 

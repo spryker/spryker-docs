@@ -413,7 +413,7 @@ Cart subtotal: €100
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
+| INTEGRATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---|---|---|---|---|
 | [Integrate the Promotions & Discounts feature](/docs/pbc/all/discount-management/install-and-upgrade/integrate-the-promotions-and-discounts-feature.html) | [Upgrade the Discount module](/docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discount-module.html) | [Add items with discounts to carts of registered users](/docs/pbc/all/discount-management/manage-via-glue-api/add-items-with-discounts-to-carts-of-registered-users.html) | [File details: discount.csv](/docs/pbc/all/discount-management/import-and-export-data/file-details-discount.csv.html) | [HowTo: Create discounts based on shipment](/docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html) |
 | [Integrate the Category Management + Promotions & Discounts feature](/docs/pbc/all/discount-management/install-and-upgrade/integrate-the-category-management-promotions-and-discounts-feature.html) | [Upgrade the DiscountCalculatorConnector module](/docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountcalculatorconnector-module.html) |  [Retrieve discounts in carts of registered users](/docs/pbc/all/discount-management/manage-via-glue-api/retrieve-discounts-in-carts-of-registered-users.html)   | [File details - discount_amount.csv](/docs/pbc/all/discount-management/import-and-export-data/file-details-discount-amount.csv.html) | |

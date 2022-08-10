@@ -192,17 +192,19 @@ We do not support product options in Subtotal of the Shopping Lists. For example
 
 ## Related Business User articles
 
-|BACK OFFICE USER GUIDES|
-|---|
-| [Get a general idea of the shopping list widget](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-widget-overview.html)  |
-| [Get a general idea of shopping list notes](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-notes-overview.html)  |
+| OVERVIEWS |
+|-|
+| [Shopping list notes](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-notes-overview.html) |
+| [Shopping list printing](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-printing-overview.html) |
+| [Shopping list widget](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-widget-overview.html)  |
+
 
 ## Related Developer articles
 
-| FEATURES INTEGRATION GUIDES | MODULE UPGRADE GUIDES | GLUE API GUIDES  |
+| INTEGRATION GUIDES | UPGRADE GUIDES | GLUE API GUIDES  |
 |---------|---------|-|
-| [Integrate the Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-feature.html)  | [Upgrade the ShoppingList module](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglist-module.html) | [Managing shopping lists](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-lists-via-glue-api.html)  |
-| [Integrate the Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-glue-api.html)  | [Upgrade the ShoppingListPage module](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistpage-module.html) | [Managing shopping list items](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html)   |
+| [Integrate the Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-feature.html)  | [Upgrade the ShoppingList module](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglist-module.html) | [Manage shopping lists](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-lists-via-glue-api.html)  |
+| [Integrate the Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-glue-api.html)  | [Upgrade the ShoppingListPage module](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistpage-module.html) | [Manage shopping list items](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html)   |
 | [Integrate the Agent Assist + Shopping List feature](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-agent-assist-shopping-list-feature.html)| [Upgrade the ShoppingListWidget module](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistwidget-module.html) | |
 | [Integrate the Quick Add to Cart + Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-quick-add-to-cart-shopping-lists-feature.html) | | |
 | [Integrate the Shopping Lists + Product Options feature](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-product-options-feature.html)

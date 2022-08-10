@@ -46,7 +46,7 @@ Make sure that the following modules have been installed:
 
 Put all the payment methods available in the shop to  `PaymentsRestApiConfig`:
 
-**src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiConfig.php**
+**src/Pyz/Glue/PaymentsRestApi/PaymentsRestApiConfig.php**
 
 ```php
 <?php
@@ -180,7 +180,7 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 2. Add at least one item to the cart by sending `POST https://glue.mysprykershop.com/{{cart_uuid}}/items`.
 3. Check result by sending the `POST https://glue.mysprykershop.com/checkout-data?include=payment-methods` request.
 
-**Request:**
+**Request Example:**
 ```json
 {
   "data":
@@ -208,7 +208,7 @@ Please take care that requests body differs for each Unzer payment method.
 
 {% endinfo_block %}
 
-**Response:**
+**Response Example:**
 ```json
 {
   "data": {
@@ -258,8 +258,7 @@ Please take care that requests body differs for each Unzer payment method.
 
 4. Check result by sending the `POST https://glue.mysprykershop.com/checkout` request.
 
-**Request:**
-
+**Request Example:**
 ```json
 {
   "data": {
@@ -294,7 +293,7 @@ Please take care that requests body differs for each Unzer payment method.
 
 {% endinfo_block %}
 
-**Response:**
+**Response Example:**
 ```json
 {
     "data": {

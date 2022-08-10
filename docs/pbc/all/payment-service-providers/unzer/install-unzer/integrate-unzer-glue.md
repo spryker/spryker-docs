@@ -6,7 +6,7 @@ template: feature-integration-guide-template
 
 # Glue support in Unzer feature integration
 
-This document describes how to integrate the *Glue support* to the [Unzer]({/docs/pbc/all/payment-service-providers/unzer/unzer.html}) into a Spryker project.
+This document describes how to integrate the *Glue support* to the [Unzer](/docs/pbc/all/payment-service-providers/unzer/unzer.html) into a Spryker project.
 
 ## Install feature core
 
@@ -16,11 +16,11 @@ Follow the steps below to install the {Feature Name} feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME                | INTEGRATION GUIDE                                                                                                                                 |
-|---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unzer               | [Unzer feature integration](/docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.html)                                     |
-| Glue API - Checkout | [Glue API - Checkout feature integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-checkout-feature-integration.html) |
-| Glue API - Payments | [Glue API - Payments feature integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-payments-feature-integration.html) |
+| NAME                | INTEGRATION GUIDE                                                                                                                                         |
+|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Unzer               | [Unzer feature integration](/docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.html)                                             |
+| Glue API - Checkout | [Glue API - Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html) |
+| Glue API - Payments | [Glue API - Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-payments-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 

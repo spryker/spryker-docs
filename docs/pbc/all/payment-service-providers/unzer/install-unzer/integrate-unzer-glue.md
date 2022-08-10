@@ -1,10 +1,9 @@
 ---
 title: Glue support in Unzer feature integration
 description: Integrate the Glue support in Unzer into your project
+last_updated: Aug 10, 2022
 template: feature-integration-guide-template
 ---
-
-# Glue support in Unzer feature integration
 
 This document describes how to integrate the *Glue support* to the [Unzer](/docs/pbc/all/payment-service-providers/unzer/unzer.html) into a Spryker project.
 
@@ -202,9 +201,9 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 
 {% info_block infoBox %}
 
-Please take care that requests body differs for each Unzer payment method.
-- Property `paymentMethodName` of `payments` has to be replaced by used method (e.g. `Unzer Sofort`, `Unzer Credit Card`, etc.). 
-- Property `paymentResource` of `payments` is not required for `Unzer Sofort`, `Unzer Marketplace Sofort`, `Unzer Bank Transfer`.
+Take care that requests body differs for each Unzer payment method.
+- Property `paymentMethodName` of `payments` has to be replaced by the used method—for example, `Unzer Sofort` or `Unzer Credit Card`. 
+- Property `paymentResource` of `payments` is not required for `Unzer Sofort`, `Unzer Marketplace Sofort`, and `Unzer Bank Transfer`.
 
 {% endinfo_block %}
 
@@ -286,7 +285,7 @@ Please take care that requests body differs for each Unzer payment method.
 
 {% info_block infoBox %}
 
-Please take care that requests body differs for each Unzer payment method.
+Take care that requests body differs for each Unzer payment method.
 - Property `paymentMethodName` of `payments` has to be replaced by used method (e.g. `Unzer Sofort`, `Unzer Credit Card`, etc.).
 - Property `paymentResource` of `payments` is not required for `Unzer Sofort`, `Unzer Marketplace Sofort`, `Unzer Bank Transfer`.
 - Property `paymentSelection` of `payments` has to be replaced by used method (e.g. `unzerSofort`, `unzerCreditCard`, `unzerMarketplaceCreditCard`, etc.).

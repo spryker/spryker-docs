@@ -7,7 +7,7 @@ Instead of writing different components for different App configurations, we use
 
 {% info_block infoBox "Info" %}
 
-For the app configuration translation, see [App configuration translation](LINK). Some insights about the translation see in the [Translation appendix](#translation-appendix) 
+For the app configuration translation, see [App configuration translation](/docs/acp/user/intro-to-acp/app-configuration-translation.html). Some insights about the translation see in the [Translation appendix](#translation-appendix) 
 
 {% endinfo_block %}
 

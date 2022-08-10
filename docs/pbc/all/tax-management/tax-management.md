@@ -125,4 +125,4 @@ The capability has the following functional constraints:
 | [Integrate Avalara](/docs/pbc/all/tax-management/third-party-integrations/integrate-avalara.html) |
 | [Integrrate Avalara Tax + Shipment feature](/docs/scos/dev/technology-partner-guides/{{site.version}}/taxes/avalara/integrating-avalara-tax-shipment.html) |
 | [Integrate Avalara Tax + Product Options feature](/docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-product-options.html) |
- -- >
+-->

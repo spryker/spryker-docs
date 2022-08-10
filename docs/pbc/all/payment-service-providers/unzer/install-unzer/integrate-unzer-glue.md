@@ -202,7 +202,9 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 
 {% info_block infoBox %}
 
-Please take care that requests body differs for each Unzer payment method. Property `paymentMethodName` of `payments` has to be replaced by used method (e.g. `Unzer Sofort`, `Unzer Credit Card`, etc.)
+Please take care that requests body differs for each Unzer payment method.
+- Property `paymentMethodName` of `payments` has to be replaced by used method (e.g. `Unzer Sofort`, `Unzer Credit Card`, etc.). 
+- Property `paymentResource` of `payments` is not required for `Unzer Sofort`, `Unzer Marketplace Sofort`, `Unzer Bank Transfer`.
 
 {% endinfo_block %}
 
@@ -285,8 +287,10 @@ Please take care that requests body differs for each Unzer payment method. Prope
 
 {% info_block infoBox %}
 
-Please take care that requests body differs for each Unzer payment method. Property `paymentMethodName` of `payments` has to be replaced by used method (e.g. `Unzer Sofort`, `Unzer Credit Card`, etc.).
-Property `paymentSelection` of `payments` has to be replaced by used method (e.g. `unzerSofort`, `unzerCreditCard`, `unzerMarketplaceCreditCard`, etc.).
+Please take care that requests body differs for each Unzer payment method.
+- Property `paymentMethodName` of `payments` has to be replaced by used method (e.g. `Unzer Sofort`, `Unzer Credit Card`, etc.).
+- Property `paymentResource` of `payments` is not required for `Unzer Sofort`, `Unzer Marketplace Sofort`, `Unzer Bank Transfer`.
+- Property `paymentSelection` of `payments` has to be replaced by used method (e.g. `unzerSofort`, `unzerCreditCard`, `unzerMarketplaceCreditCard`, etc.).
 
 {% endinfo_block %}
 

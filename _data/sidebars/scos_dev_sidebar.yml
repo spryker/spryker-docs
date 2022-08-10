@@ -284,7 +284,6 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/merchant-custom-prices-feature-walkthrough.html
       include_versions:
       - "202108.0"
-      - "202204.0"
     - title: Merchant Product Restrictions
       url: /docs/scos/dev/feature-walkthroughs/merchant-product-restrictions-feature-walkthrough/merchant-product-restrictions-feature-walkthrough.html
       include_versions:
@@ -1893,6 +1892,9 @@ entries:
       - "202204.0"
     - title: Merchant Custom Prices
       url: /docs/scos/dev/feature-integration-guides/merchant-custom-prices-feature-integration.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
     - title: Merchant Product Restrictions
       url: /docs/scos/dev/feature-integration-guides/merchant-product-restrictions-feature-integration.html
     - title: Merchants and Merchant Relations

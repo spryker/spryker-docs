@@ -116,7 +116,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details>
 <summary markdown='span'>Integration guide</summary>
 
-[Scheduled Prices Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/scheduled-prices-feature-integration.html)
+[Integrate the Scheduled prices feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/scheduled-prices-feature-integration.html)
 
 </details>
 <details>

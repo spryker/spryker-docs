@@ -398,6 +398,9 @@ entries:
       - "202204.0"
     - title: Merchant Custom Prices
       url: /docs/scos/user/features/merchant-custom-prices-feature-overview.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
     - title: Merchant Product Restrictions
       url: /docs/scos/user/features/merchant-product-restrictions-feature-overview.html
       include_versions:

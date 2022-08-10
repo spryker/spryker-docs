@@ -197,7 +197,7 @@ entries:
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:
           - title: Shopping List feature overview
-            url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.
+            url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html
             nested:
               - title: Shopping List Notes overview
                 url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-notes-overview.html
@@ -266,6 +266,10 @@ entries:
                 url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets.html
               - title: Import tax sets for abstract products
                 url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-abstract-products.html
+              - title: Import tax sets for product options
+                url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-product-options.html
+              - title: Import tax sets for shipment methoods
+                url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-shipment-methods.html
           - title: Extend and customize
             url: /docs/pbc/all/tax-management/extend-and-customize/tax-module-reference-information.html
           - title: Domain model and relationships

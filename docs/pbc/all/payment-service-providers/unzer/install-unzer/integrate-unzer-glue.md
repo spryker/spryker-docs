@@ -208,6 +208,7 @@ Ensure that the request body differs for each Unzer payment method:
 {% endinfo_block %}
 
 <details><summary markdown='span'>Response example:</summary>
+ 
 ```json
 {
   "data": {
@@ -254,6 +255,8 @@ Ensure that the request body differs for each Unzer payment method:
   ]
 }
 ```
+
+</details>
 
 4. Check result by sending the `POST https://glue.mysprykershop.com/checkout` request.
 

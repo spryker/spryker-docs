@@ -1,0 +1,25 @@
+---
+title: AsyncAPI
+Descriptions: AsyncAPI schema file helps users understand the asynchronous message handling in Spryker.
+template: howto-guide-template
+---
+
+To define the [AsyncAPI](https://github.com/spryker-sdk/async-api) messages, Spryker uses the [AsyncAPI specification](https://www.asyncapi.com/) which is similar to the OpenAPI specification. The main purpose of the AsyncAPI schema file is to help users understand the asynchronous message handling in Spryker. The file contains several important information, such as the channel which a message goes through, the name of the message, and the data that is transported within a message. For more information, see [AsyncAPI docs](https://www.asyncapi.com/docs).
+Spryker uses the AsyncAPI schema files to generate the needed code to work with messages. For each message, a transfer schema definition is created. Depending on whether you want to consume or emit messages, several other classes are generated. For example, this can be a MessageHandlerPluginInterface, a Message handler, and the wiring code (Facade, Factory, etc).
+One thing that can not be extracted out of the AsyncAPI schema file by default is the module name in which the code should be generated. To define the module where your code should be generated, you need to add an extension to your schema file.
+
+## Extension to define the module
+With the extension, you can control in which module the code should be generated. To enable the extension, add the following to your schema file:
+
+```xml
+x-spryker:
+    module: YourModuleName
+```
+With this extension, the code generator parses your schema file and generates the code for the defined module.
+
+## Schema version
+
+Via the [SprykerSDK](https://docs.spryker.com/docs/sdk/dev/spryker-sdk.html), a minimal AsyncAPI file is created when you want to work with asynchronous messages. The created schema file uses the AsyncAPI specification version 2.4.0. This version is currently set as default and can only be changed manually after the file was created.
+
+You can also use the AsyncAPI SDK without the SprykerSDK. Read more about the AsyncAPI package in the [AsyncAPI README file](https://github.com/spryker-sdk/async-api/).  
+ 

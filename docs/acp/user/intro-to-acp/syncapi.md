@@ -36,7 +36,7 @@ For example, `/customers/addresses` generates code within the CustomersBackendAp
 
 Inside your path definition, you can manipulate the generated code. For example:
 
-```yml
+```xml
 paths:
     /customers/addresses:
         post:
@@ -55,7 +55,7 @@ Spryker offers two types of API Applications: a frontend API and a backend API. 
 ### Components
 Within the *Components* section, you describe the data contract for your API endpoints. You always need to define three schemas for one endpoint. Here is an example of a response your API returns:
 
-```yml
+```xml
 paths:
     /customers/addresses:
         post:

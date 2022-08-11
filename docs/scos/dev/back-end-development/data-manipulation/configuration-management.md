@@ -85,8 +85,8 @@ There are some other configuration files for specific purposes.
 
 | FILENAME | PURPOSE  |
 | ----------------- | -------------------- |
-| `console_env_local.php` | This file returns the default environment for command line calls. This file is on gitignore. It is optional. If it is missing, you need to explicitly pass the environment to all [command line calls](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html). |
-|   `default_store.php`   | This file returns the default store which is used for all [command line calls](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html). |
+| `console_env_local.php` | This file returns the default environment for command line calls. This file is on gitignore. It is optional. If it is missing, you need to explicitly pass the environment to all [command line calls](/docs/scos/dev/back-end-development/console-commands/{{site.version}}/implementing-a-new-console-command.html). |
+|   `default_store.php`   | This file returns the default store which is used for all [command line calls](/docs/scos/dev/back-end-development/console-commands/{{site.version}}/implementing-a-new-console-command.html). |
 |      `stores.php`       | This file contains an array with all stores and their configuration like locale, date format, currency, etc. |
 
 ## How to retrieve the configuration

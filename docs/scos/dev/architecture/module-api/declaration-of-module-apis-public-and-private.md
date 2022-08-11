@@ -52,7 +52,7 @@ In the Spryker Commerce OS’s core, the following is the public API:
     * module Config [`Client/Yves/Zed/Shared/Service`](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html)
     * Controllers
     * Twig functions
-    * [CLI commands](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html)
+    * [CLI commands](/docs/scos/dev/back-end-development/console-commands/{{site.version}}/implementing-a-new-console-command.html)
     * Public constants that define environment configuration in [Constant Interfaces](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html)
 * [Database](/docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html)
 * Search

@@ -207,7 +207,7 @@ Take care that requests body differs for each Unzer payment method.
 
 {% endinfo_block %}
 
-**Response Example:**
+<details><summary markdown='span'>Response example:</summary>
 ```json
 {
   "data": {

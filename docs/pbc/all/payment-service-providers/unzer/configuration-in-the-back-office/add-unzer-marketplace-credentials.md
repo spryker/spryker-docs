@@ -1,6 +1,6 @@
 ---
 title: Add Unzer marketplace credentials
-last_updated: Jun 22, 2022
+last_updated: Aug 11, 2022
 description: This document shows how to add Unzer marketplace credentials
 template: back-office-user-guide-template
 ---
@@ -37,6 +37,10 @@ To add Unzer marketplace credentials, take the steps in the following sections.
    3. Enter **UNZER PUBLIC KEY**.
    4. Enter **UNZER PRIVATE KEY**.
 3. Click **Save**. The new credentials appear on the **Overview of Unzer Credentials** page.
+4. Click the **Sync payment methods** button for needed credentials to sync payment methods. 
+5. Go to **Back Office&nbsp;<span aria-label="and then">></span> Administration&nbsp;<span aria-label="and then">></span> Payment Methods**. 
+6. On the **Payment Methods** overview page click on **Edit** next to the needed payment method. 
+7. On the **Edit Payment Method** page, open the **Store Relation** tab and map the payment method to needed stores.
 
 ### Reference information: Add Unzer marketplace credentials
 

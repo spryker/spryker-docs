@@ -1,11 +1,11 @@
 ---
-title: Glue support in Unzer feature integration
-description: Integrate the Glue support in Unzer into your project
-last_updated: Aug 10, 2022
+title: Integrate Unzer Glue API
+description: Integrate Unzer Glue API into your project
+last_updated: Aug 11, 2022
 template: feature-integration-guide-template
 ---
 
-This document describes how to integrate the *Glue support* to the [Unzer](/docs/pbc/all/payment-service-providers/unzer/unzer.html) into a Spryker project.
+This document describes how to integrate [Unzer](/docs/pbc/all/payment-service-providers/unzer/unzer.html) Glue API into a Spryker project.
 
 ## Install feature core
 
@@ -15,11 +15,11 @@ Follow the steps below to install the Unzer Glue API feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME                | INTEGRATION GUIDE                                                                                                                                        |
-|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Unzer               | [Unzer feature integration](/docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.html)                                            |
-| Glue API - Checkout | [Glue API - Checkout feature integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-checkout-feature-integration.html) |
-| Glue API - Payments | [Glue API - Payments feature integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-payments-feature-integration.html) |
+| NAME               | INTEGRATION GUIDE                                                                                                                                 |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| Unzer              | [Unzer feature integration](/docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.html)                                     |
+| Glue API: Checkout | [Glue API - Checkout feature integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-checkout-feature-integration.html) |
+| Glue API: Payments | [Glue API - Payments feature integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-payments-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -39,9 +39,7 @@ Ensure that the following modules have been installed:
 
 {% endinfo_block %}
 
----
-
-### 2) Set up the configuration
+### 2) Set up configuration
 
 Put all the payment methods available in the shop to `PaymentsRestApiConfig`:
 
@@ -124,10 +122,10 @@ Ensure the following transfers have been created:
 
 Enable the following behaviors by registering the plugins:
 
-| PLUGIN                                | SPECIFICATION                                                                                                                                                                                          | PREREQUISITES | NAMESPACE                                                          |
-|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|--------------------------------------------------------------------|
-| UnzerCheckoutDataResponseMapperPlugin | Maps `RestCheckoutDataTransfer.unzerCredentials.unzerKeypair.publicKey` to `RestCheckoutDataResponseAttributesTransfer.unzerPublicKey` while `RestCheckoutDataTransfer.unzerCredentials` is specified. | None          | SprykerEco\Glue\UnzerRestApi\Plugin\CheckoutRestApi                |
-| UnzerNotificationResource             | Adds Unzer notification resource.                                                                                                                                                                      | None          | SprykerEco\Glue\UnzerRestApi\Plugin\GlueJsonApiConventionExtension |
+| PLUGIN | SPECIFICATION  | PREREQUISITES | NAMESPACE |
+|---|---|---|---|
+| UnzerCheckoutDataResponseMapperPlugin | Maps `RestCheckoutDataTransfer.unzerCredentials.unzerKeypair.publicKey` to `RestCheckoutDataResponseAttributesTransfer.unzerPublicKey` while `RestCheckoutDataTransfer.unzerCredentials` is specified. | None  | SprykerEco\Glue\UnzerRestApi\Plugin\CheckoutRestApi |
+| UnzerNotificationResource | Adds Unzer notification resource.  | None | SprykerEco\Glue\UnzerRestApi\Plugin\GlueJsonApiConventionExtension |
 
 **src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
 
@@ -176,7 +174,6 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 {% info_block warningBox "Verification" %}
 
 Ensure that the following API requests work:
-
 1. Create a cart by sending the `POST https://glue.mysprykershop.com/carts`.
 2. Add at least one item to the cart by sending `POST https://glue.mysprykershop.com/{{cart_uuid}}/items`.
 3. Check result by sending the `POST https://glue.mysprykershop.com/checkout-data?include=payment-methods` request.
@@ -201,7 +198,7 @@ Ensure that the following API requests work:
 }
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox "Verification" %}
 
 Ensure that the request body differs for each Unzer payment method:
 - Property `paymentMethodName` of `payments` must be replaced by the used method—for example, `Unzer Sofort` or `Unzer Credit Card`. 
@@ -288,7 +285,7 @@ Ensure that the request body differs for each Unzer payment method:
 }
 ```
 
-{% info_block warningBox %}
+{% info_block warningBox "Verification" %}
 
 Ensure that the request body differs for each Unzer payment method:
 - Property `paymentMethodName` of `payments` must be replaced by the used method—for example, `Unzer Sofort` or `Unzer Credit Card`.

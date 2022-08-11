@@ -31,7 +31,7 @@ composer require spryker-eco/unzer-rest-api
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules have been installed:
+Ensure that the following modules have been installed:
 
 | MODULE       | EXPECTED DIRECTORY                 |
 |--------------|------------------------------------|
@@ -175,7 +175,7 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 
 {% info_block warningBox "Verification" %}
 
-Verify that the following API requests work:
+Ensure that the following API requests work:
 
 1. Create a cart by sending the `POST https://glue.mysprykershop.com/carts`.
 2. Add at least one item to the cart by sending `POST https://glue.mysprykershop.com/{{cart_uuid}}/items`.

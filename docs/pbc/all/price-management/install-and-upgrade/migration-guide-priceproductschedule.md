@@ -20,6 +20,8 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-priceproductschedule.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-priceproductschedule.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproductschedule.html
+  - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-priceproductschedule.html
+
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-priceproductschedule-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-priceproductschedule-module.md -->

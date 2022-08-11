@@ -3,6 +3,8 @@ title: "PriceProduct module details: reference information"
 last_updated: Aug 18, 2021
 description: This article provides the technical details of the PriceProduct module and price dimensions
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202204.0/prices-feature-walkthrough/priceproduct-module-details-reference-information.html
 ---
 
 This article describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](/docs/scos/dev/module-migration-guides/migration-guide-priceproduct.html#upgrading-from-version-1-to-version-2) of the module.
@@ -83,7 +85,7 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 }
 ```
 
-`AclEntityOrphanPriceProductStoreRemovalVoterPlugin` enables removal of "orphaned" records in 
+`AclEntityOrphanPriceProductStoreRemovalVoterPlugin` enables removal of "orphaned" records in
 `spy_price_product_store` table, except for the case when prices are edited in the Merchant Portal UI.
 In the latter case, removal is only possible by running `price-product-store:optimize` command (see below).
 

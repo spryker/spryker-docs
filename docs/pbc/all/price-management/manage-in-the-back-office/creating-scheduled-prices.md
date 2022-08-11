@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/creating-scheduled-prices
   - /docs/creating-scheduled-prices
   - /docs/en/creating-scheduled-prices
+  - /docs/scos/user/back-office-user-guides/202204.0/catalog/scheduled-prices/creating-scheduled-prices.html
 related:
   - title: Managing Scheduled Prices
     link: docs/scos/user/back-office-user-guides/page.version/catalog/scheduled-prices/managing-scheduled-prices.html
@@ -106,7 +107,7 @@ The *Scheduled Prices: Import dry run* page is divided into four sections.
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
 | Schedule name |Name of the list of price product schedules which you have just imported.  |
-| Select your CSV file |Here, you can select the file with price product schedules which you want to re-import. It is used in case you want to correct or change some of the schedules you have imported. Learn about file format in [File details: product_price_schedule.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html).  |
+| Select your CSV file |Here, you can select the file with price product schedules which you want to re-import. It is used in case you want to correct or change some of the schedules you have imported. Learn about file format in [File details: product_price_schedule.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-product-price-schedule.csv.html).  |
 | Row n° | Numeric identifier of a price schedule entry in the list of price schedules. |
 | Error |  Describes why a particular price schedule has not been imported.|
 | ID | Numeric identifier of price schedule. |

@@ -12,7 +12,7 @@ Price types (for example,gross price, net price) are assigned to each price, and
 
 A new price type can be added by importing price data. The price type in the CSV file will be added or updated.
 
-To learn more details about prices import file, see: [File details: product_price.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html)
+To learn more details about prices import file, see: [File details: product_price.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-product-price.csv.html)
 
 Depending on the price mode selected by a customer in Storefront, the price can have gross or net value. You can run your shop in both modes as well as select net mode for business customers, for example.
 

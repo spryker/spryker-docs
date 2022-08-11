@@ -21,6 +21,7 @@ redirect_from:
   - /v2/docs/en/ht-create-personalized-prices
   - /v1/docs/ht-create-personalized-prices
   - /v1/docs/en/ht-create-personalized-prices
+  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-personalized-prices.html
 ---
 
 This document describes the steps to consider when implementing personalized prices for customer groups.

@@ -10,9 +10,7 @@ redirect_from:
   - /2021080/docs/en/scheduled-prices-feature-integration
   - /docs/scheduled-prices-feature-integration
   - /docs/en/scheduled-prices-feature-integration
-related:
-  - title: Scheduled Prices feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/scheduled-prices-feature-walkthrough.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/scheduled-prices-feature-integration.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-scheduled-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-scheduled-prices-feature.md -->

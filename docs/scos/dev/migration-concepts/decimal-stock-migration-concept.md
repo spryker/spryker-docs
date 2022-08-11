@@ -20,7 +20,7 @@ related:
   - title: Packaging Units feature overview
     link: docs/scos/user/features/page.version/packaging-units-feature-overview.html
   - title: CRUD Scheduled Prices migration concept
-    link: docs/scos/dev/migration-concepts/crud-scheduled-prices-migration-concept.html
+    link: docs/pbc/all/price-management/install-and-upgrade/crud-scheduled-prices-migration-concept
   - title: Float Stock for Products
     link: docs/scos/dev/migration-concepts/float-stock-for-products-migration-concept.html
   - title: Migrating from Twig v1 to Twig v3

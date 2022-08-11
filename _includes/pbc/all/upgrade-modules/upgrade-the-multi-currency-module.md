@@ -28,7 +28,7 @@ composer update spryker/*
    * **Discount >= 5.** — see .
    * **Calculation >= 4.2.** — we have changed the way the discount amount is aggregated.
    * **Cart >= 4.2.** — we have added a new facade method to rebuild cart items when currency is changed. Extension point to watch for cart item rebuild.
-   * **CartCurrencyConnector** - new module provides plugin for cart rebuilding. <!-- See [Currency configuration](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html) for more details.-->
+   * **CartCurrencyConnector** - new module provides plugin for cart rebuilding. <!-- See [Currency configuration](/docs/pbc/all/price-management/extend-and-customize/multiple-currencies-per-store-configuration.html) for more details.-->
    * **ProductDiscountConnector >= 3.2.** — we have changed the way the net price is assigned.
    * **ProductLabelDiscountConnector >= 1.2.** — we have changed the way the net price is assigned.
    * **ShipmentDiscountConnector >= 1.1.** — we have changed the way the net price is assigned.

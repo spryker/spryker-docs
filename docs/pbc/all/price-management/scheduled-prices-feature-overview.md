@@ -11,6 +11,7 @@ redirect_from:
   - /docs/scheduled-prices-feature-overview
   - /docs/en/scheduled-prices-feature-overview
   - /docs/scos/dev/feature-walkthroughs/202204.0/scheduled-prices-feature-walkthrough.html
+  - /docs/scos/user/features/202204.0/scheduled-prices-feature-overview.html
 ---
 
 The _Scheduled Prices_ feature lets shop administrators schedule price changes, which are to happen in the future for multiple products simultaneously.
@@ -43,7 +44,7 @@ Even though you can use any time zone for defining a price schedule, in the data
 ## Defining product price schedules
 
 You can define price schedules as follows:
-Import a CSV file with a list of prices. This option is for bulk operations. You can import the file through [Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html) or [manually](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html).
+Import a CSV file with a list of prices. This option is for bulk operations. You can import the file through [Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html) or [manually](/docs/pbc/all/price-management/import-and-export-data/file-details-product-price-schedule.csv.html).
 Add a price schedule to a single abstract or concrete product. This option is suitable for working with a small number of products. For details, see [Edit abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html).
 
 ## Cron job
@@ -100,5 +101,5 @@ The feature has the following functional constraints which are going to be resol
 
 |INTEGRATION GUIDES  | MIGRATION GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---------|---------|---------|---------|
-| [Integrate the Scheduled prices feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/scheduled-prices-feature-integration.html) | [PriceProductSchedule migration guide](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedule.html)  | [File details: product_price_schedule.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html) | [HowTo: Schedule cron job for Scheduled Prices](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html)  |
+| [Integrate the Scheduled prices feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/scheduled-prices-feature-integration.html) | [PriceProductSchedule migration guide](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedule.html)  | [File details: product_price_schedule.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-product-price-schedule.csv.html) | [HowTo: Schedule cron job for Scheduled Prices](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html)  |
 |   | [PriceProductScheduleGui migration guide](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedulegui.html)  |   |   |

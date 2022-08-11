@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/file-details-currencycsv
 ---
 
-This document describes the `currency.csv` file to configure [Currency](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html) information in your Spryker Demo Shop.
+This document describes the `currency.csv` file to configure [Currency](/docs/pbc/all/price-management/extend-and-customize/multiple-currencies-per-store-configuration.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 

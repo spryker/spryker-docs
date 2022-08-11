@@ -14,7 +14,7 @@ redirect_from:
   - /v6/docs/en/migrating-from-twig-v1-to-twig-v3
 related:
   - title: CRUD Scheduled Prices migration concept
-    link: docs/scos/dev/migration-concepts/crud-scheduled-prices-migration-concept.html
+    link: docs/pbc/all/price-management/install-and-upgrade/crud-scheduled-prices-migration-concept
   - title: Decimal Stock migration concept
     link: docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
   - title: Float Stock for Products

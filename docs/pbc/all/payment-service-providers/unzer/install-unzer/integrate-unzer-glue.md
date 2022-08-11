@@ -9,7 +9,7 @@ This document describes how to integrate the *Glue support* to the [Unzer](/docs
 
 ## Install feature core
 
-Follow the steps below to install the {Feature Name} feature core.
+Follow the steps below to install the Glue for Unzer.
 
 ### Prerequisites
 
@@ -175,6 +175,8 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 
 {% info_block warningBox "Verification" %}
 
+Verify that the following API requests work:
+
 1. Create a cart by sending the `POST https://glue.mysprykershop.com/carts`.
 2. Add at least one item to the cart by sending `POST https://glue.mysprykershop.com/{{cart_uuid}}/items`.
 3. Check result by sending the `POST https://glue.mysprykershop.com/checkout-data?include=payment-methods` request.
@@ -199,7 +201,7 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 }
 ```
 
-{% info_block infoBox %}
+{% info_block warningBox %}
 
 Ensure that the request body differs for each Unzer payment method:
 - Property `paymentMethodName` of `payments` must be replaced by the used method—for example, `Unzer Sofort` or `Unzer Credit Card`. 
@@ -286,7 +288,7 @@ Ensure that the request body differs for each Unzer payment method:
 }
 ```
 
-{% info_block infoBox %}
+{% info_block warningBox %}
 
 Ensure that the request body differs for each Unzer payment method:
 - Property `paymentMethodName` of `payments` must be replaced by the used method—for example, `Unzer Sofort` or `Unzer Credit Card`.

@@ -35,7 +35,7 @@ composer update spryker/*
 
 4. For Shipment, we have changed the way the default price is assigned (currency-aware). Zed money input form has also been changed to accept multi-currency:
 
-   * **Shipment >= 6.** — see [Migration Guide - Shipment](/docs/scos/dev/module-migration-guides/migration-guide-shipment.html).
+   * **Shipment >= 6.** — see [Migration Guide - Shipment](/docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipment-module.html).
    * **ShipmentCartConnector** - is a new module, which provides plugins for cart to handle cases when currency changed. <!-- add a link See Integration guide for more details.-->
 
 5. In Products, the way the price is entered in Zed has been changed to support multi-currency, price mode as well as price type variants. We have also changed the way the collector collects prices, the way Elasticsearch exports prices, the way the results coming from Elasticsearch are formatted, the way the prices are picked in cart when item is added:

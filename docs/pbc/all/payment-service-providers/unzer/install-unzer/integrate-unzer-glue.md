@@ -43,7 +43,7 @@ Make sure that the following modules have been installed:
 
 ### 2) Set up the configuration
 
-Put all the payment methods available in the shop to  `PaymentsRestApiConfig`:
+Put all the payment methods available in the shop to `PaymentsRestApiConfig`:
 
 **src/Pyz/Glue/PaymentsRestApi/PaymentsRestApiConfig.php**
 

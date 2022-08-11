@@ -5,7 +5,7 @@ last_updated: Jul 28, 2022
 template: glue-api-storefront-guide-template
 ---
 
-This document describes how to retrieve shipments in orders. For full information on the endpoint, see [Retrieve orders](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-orders.html)
+This document describes how to retrieve shipments in orders. For full information about the endpoint, see [Retrieve orders](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-orders.html)
 
 ## Installation
 

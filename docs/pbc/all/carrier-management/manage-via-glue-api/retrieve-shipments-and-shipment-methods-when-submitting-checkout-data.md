@@ -5,7 +5,7 @@ last_updated: Jul 28, 2022
 template: glue-api-storefront-guide-template
 ---
 
-This document describes how retrieve shipments and shipment methods when submitting checkout data. For full information on the endpoint, see [Submit checkout data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/submitting-checkout-data.html).
+This document describes how retrieve shipments and shipment methods when submitting checkout data. For full information about the endpoint, see [Submit checkout data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/submitting-checkout-data.html).
 
 ## Installation
 

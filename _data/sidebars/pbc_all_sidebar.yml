@@ -171,6 +171,8 @@ entries:
                     url: /docs/pbc/all/payment-service-providers/unzer/install-unzer/install-and-configure-unzer.html
                   - title: Integrate
                     url: /docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.html
+                  - title: Integrate Glue API
+                    url: /docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer-glue-api.html
               - title: Use cases, HowTos, and tips
                 nested:
                   - title: Refund shipping costs

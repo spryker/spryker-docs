@@ -201,7 +201,7 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 
 {% info_block infoBox %}
 
-Take care that requests body differs for each Unzer payment method.
+Ensure that the request body differs for each Unzer payment method:
 - Property `paymentMethodName` of `payments` must be replaced by the used method—for example, `Unzer Sofort` or `Unzer Credit Card`. 
 - Property `paymentResource` of `payments` is not required for `Unzer Sofort`, `Unzer Marketplace Sofort`, and `Unzer Bank Transfer`.
 

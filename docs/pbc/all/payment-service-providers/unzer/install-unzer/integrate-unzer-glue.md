@@ -287,7 +287,7 @@ Ensure that the request body differs for each Unzer payment method:
 
 Ensure that the request body differs for each Unzer payment method:
 - Property `paymentMethodName` of `payments` must be replaced by the used method—for example, `Unzer Sofort` or `Unzer Credit Card`.
-- Property `paymentResource` of `payments` is not required for `Unzer Sofort`, `Unzer Marketplace Sofort`, `Unzer Bank Transfer`.
+- Property `paymentResource` of `payments` is not required for `Unzer Sofort`, `Unzer Marketplace Sofort`, and  `Unzer Bank Transfer`.
 - Property `paymentSelection` of `payments` has to be replaced by used method (e.g. `unzerSofort`, `unzerCreditCard`, `unzerMarketplaceCreditCard`, etc.).
 
 {% endinfo_block %}

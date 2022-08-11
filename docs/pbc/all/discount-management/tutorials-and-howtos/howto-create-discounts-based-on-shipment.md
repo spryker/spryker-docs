@@ -21,7 +21,7 @@ related:
   - title: Shipment feature overview
     link: docs/scos/user/features/page.version/shipment-feature-overview.html
   - title: "Reference information: Shipment method plugins"
-    link: docs/scos/dev/feature-walkthroughs/page.version/shipment-feature-walkthrough/reference-information-shipment-method-plugins.html
+    link: docs/pbc/all/carrier-management/extend-and-customize/shipment-method-plugins-reference-information.html
 ---
 
 The HowTo guide shows how to do the following:

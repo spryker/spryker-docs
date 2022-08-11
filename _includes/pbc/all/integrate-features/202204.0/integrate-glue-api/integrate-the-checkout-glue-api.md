@@ -12,7 +12,7 @@ To start feature integration, overview and install the necessary features:
 | Glue API: Cart                        | {{site.version}}  | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html) |
 | Glue API: Customer Account Management | {{site.version}}  | [Glue API: Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
 | Glue API: Payments                    | {{site.version}}  | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-payments-feature-integration.html) |
-| Glue API: Shipment                   | {{site.version}}  | [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-shipment-feature-integration.html) |
+| Glue API: Shipment                   | {{site.version}}  | [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html) |
 
 ## 1) Install the required modules using Composer
 
@@ -775,5 +775,5 @@ Integrate the following related features.
 
 | FEATURE   | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE    |
 | -------- | ----------------- | ---------------------- |
-| Glue API: Shipment  | ✓                                | [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-shipment-feature-integration.html)  |
+| Glue API: Shipment  | ✓                                | [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html)  |
 | Glue API: Payments   | ✓                                | [Glue API: Payments feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-payments-feature-integration.html) |

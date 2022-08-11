@@ -9,7 +9,7 @@ This document describes how to integrate the *Glue support* to the [Unzer](/docs
 
 ## Install feature core
 
-Follow the steps below to install the Glue for Unzer.
+Follow the steps below to install the Unzer Glue API feature core.
 
 ### Prerequisites
 

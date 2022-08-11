@@ -11,7 +11,7 @@ entries:
         url: /docs/pbc/all/carrier-management/carrier-management.html
         nested:
           - title: What's changed
-            url: /docs/pbc/all/discount-management/whats-changed-in-carrier-management.html
+            url: /docs/pbc/all/carrier-management/whats-changed-in-carrier-management.html
           - title: Install and upgrade
             nested:
               - title: Integrate the Shipment feature
@@ -171,6 +171,8 @@ entries:
                     url: /docs/pbc/all/payment-service-providers/unzer/install-unzer/install-and-configure-unzer.html
                   - title: Integrate
                     url: /docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.html
+                  - title: Integrate Glue API
+                    url: /docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer-glue-api.html
               - title: Use cases, HowTos, and tips
                 nested:
                   - title: Refund shipping costs
@@ -197,38 +199,38 @@ entries:
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:
           - title: Shopping List feature overview
-            url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.md
+            url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html
             nested:
               - title: Shopping List Notes overview
-                url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-notes-overview.md
+                url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-notes-overview.html
               - title: Shopping List Printing overview
-                url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-printing-overview.md
+                url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-printing-overview.html
               - title: Shopping List Widget overview
-                url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-widget-overview.md
+                url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-widget-overview.html
           - title: Wishlist feature overview
             url: /docs/pbc/all/shopping-list-and-wishlist/wishlist-feature-overview.html
           - title: Install and upgrade
             nested:
               - title: Integrate the Shopping Lists feature
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-feature.md
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-feature.html
               - title: Integrate the Shopping Lists Glue API
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-glue-api.md
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-glue-api.html
               - title: Integrate the Shopping Lists + Product Options feature
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-product-options-feature.md
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-product-options-feature.html
               - title: Integrrate the Wishlist Glue API
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-wishlist-glue-api.md
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-wishlist-glue-api.html
               - title: Upgrade the ShoppingList module
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglist-module.md
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglist-module.html
               - title: Upgrade the ShoppingListPage module
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistpage-module.md
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistpage-module.html
               - title: Upgrade the ShoppingListWidget module
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistwidget-module.md
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistwidget-module.html
               - title: Upgrade the Wishlist module
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-wishlist-module.md
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-wishlist-module.html
           - title: Manage via Glue API
             nested:
               - title: Manage shopping lists
-                url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-lists-via-glue-api.md
+                url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-lists-via-glue-api.html
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
         nested:
@@ -266,12 +268,14 @@ entries:
                 url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets.html
               - title: Import tax sets for abstract products
                 url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-abstract-products.html
+              - title: Import tax sets for product options
+                url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-product-options.html
+              - title: Import tax sets for shipment methoods
+                url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-shipment-methods.html
           - title: Extend and customize
-            nested:
-              - title: "Tax module: reference information"
-                url: /docs/pbc/all/tax-management/extend-and-customize/tax-module-reference-information.html
+            url: /docs/pbc/all/tax-management/extend-and-customize/tax-module-reference-information.html
           - title: Domain model and relationships
-            url: /docs/pbc/all/tax-management/tax-domain-model-and-relationships.html
+            url: /docs/pbc/all/tax-management/domain-model-and-relationships/tax-domain-model-and-relationships.html
           - title: Third-party integrations
             url: /docs/pbc/all/tax-management/third-party-integrations/avalara.html
             nested:

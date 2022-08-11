@@ -32,7 +32,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-shoppinglistpage.html  
 related:
   - title: Multiple and Shared Shopping Lists overview
-    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+    link: docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-shoppinglistpage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-shoppinglistpage-module.md -->

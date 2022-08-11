@@ -6,7 +6,7 @@ template: glue-api-storefront-guide-template
 
 ---
 
-This document describes how to retrieve cart rules, vouchers, and promotional items in guest carts. To learn about all the management options of guest carts, see [Managing guest carts of registered users](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/guest-carts/managing-guest-carts.html).
+This document describes how to retrieve cart rules, vouchers, and promotional items in guest carts. For full information on the endpoint, see [Managing guest carts of registered users](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/guest-carts/managing-guest-carts.html).
 
 ## Installation
 

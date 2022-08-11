@@ -5,7 +5,7 @@ last_updated: July 29, 2022
 template: glue-api-storefront-guide-template
 ---
 
-This document describes how to add items with discounts to carts of registered users. To learn about all the management options of items in carts of registered users, see [Managing items in carts of registered users](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html).
+This document describes how to add items with discounts to carts of registered users. For full information on the endpoint, see [Manage items in carts of registered users](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html).
 
 ## Installation
 
@@ -689,6 +689,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 
 {% include pbc/all/glue-api-guides/add-items-to-a-cart-of-registered-user-response-attributes-of-included-resources.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/add-items-to-a-cart-of-registered-user-response-attributes-of-included-resources.md -->
 
+For the attributes of the other included resources, see the docs:
 
 * [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-measurement-units.html)
 * [Create a cart](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#create-a-cart)

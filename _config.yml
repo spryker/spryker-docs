@@ -210,7 +210,7 @@ versioned_categories:
       - legacy-demoshop
       - front-end
       - setup
-      - technical-enhancements
+      - technical-enhancement
   scos:
     user:
       - features

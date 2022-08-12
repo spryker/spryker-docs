@@ -242,6 +242,8 @@ entries:
       - "202204.0"
     - title: Gift Cards
       url: /docs/scos/dev/feature-walkthroughs/gift-cards-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
     - title: Inventory Management
       url: /docs/scos/dev/feature-walkthroughs/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
       include_versions:
@@ -936,7 +938,6 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Managing discount vouchers in guest carts
           url: /docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html
           include_versions:
@@ -961,7 +962,6 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Managing discount vouchers in carts of registered users
           url: /docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-discount-vouchers-in-carts-of-registered-users.html
           include_versions:
@@ -1826,8 +1826,6 @@ entries:
       - "201907.0"
       - "202001.0"
       - "202005.0"
-    - title: Enabling Gift Cards
-      url: /docs/scos/dev/feature-integration-guides/enabling-gift-cards.html
     - title: Enabling the Content Widget
       url: /docs/scos/dev/feature-integration-guides/enabling-the-content-widget.html
     - title: Gift Cards
@@ -1838,7 +1836,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Installing the Category CMS Blocks
       url: /docs/scos/dev/feature-integration-guides/installing-the-category-cms-blocks.html
       include_versions:
@@ -2985,7 +2982,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
           nested:
           - title: File details - gift_card_concrete_configuration.csv
             url: /docs/scos/dev/data-import/data-import-categories/special-product-types/gift-cards/file-details-gift-card-concrete-configuration.csv.html
@@ -2993,14 +2989,12 @@ entries:
             - "202005.0"
             - "202009.0"
             - "202108.0"
-            - "202204.0"
           - title: File details - gift_card_abstract_configuration.csv
             url: /docs/scos/dev/data-import/data-import-categories/special-product-types/gift-cards/file-details-gift-card-abstract-configuration.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
-            - "202204.0"
         - title: Product options
           url: /docs/scos/dev/data-import/data-import-categories/special-product-types/product-options/product-options.html
           include_versions:

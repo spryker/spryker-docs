@@ -10,7 +10,7 @@ related:
 
 # Unzer feature integration
 
-This document describes how to integrate the [Unzer](/docs/pbc/all/payment-service-providers/unzer/unzer.html) into a Spryker project.
+This document describes how to integrate [Unzer](/docs/pbc/all/payment-service-providers/unzer/unzer.html) into a Spryker project.
 
 ## Install feature core
 

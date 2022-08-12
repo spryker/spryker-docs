@@ -32,7 +32,7 @@ To add Unzer marketplace credentials, take the steps in the following sections.
      {% endinfo_block %}
 
 2. Add main merchant credentials:
-   1. Optional: if the main seller is a merchant, select **MERCHANT REFERENCE**.
+   1. Optional: if the operator is a merchant, select **MERCHANT REFERENCE**.
    2. Enter **PARTICIPANT ID**.
    3. Enter **UNZER PUBLIC KEY**.
    4. Enter **UNZER PRIVATE KEY**.

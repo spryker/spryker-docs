@@ -13,7 +13,7 @@ Review the reference information before you start, or look up the necessary info
 
 ## Add Unzer standard credentials
 
-   1. Go to **Back Office&nbsp;<span aria-label="and then">></span> Unzer**.
+   1. Go to **Back Office <span aria-label="and then">></span> Unzer**.
    2. On the **Overview of Unzer Credentials** page, click **Add Unzer Credentials**.
       The **Add Unzer Credentials** page opens.
    3. For the new credentials, enter a **NAME**.
@@ -30,7 +30,7 @@ Review the reference information before you start, or look up the necessary info
 
    8. Click **Save**. The new credentials appear on the **Overview of Unzer Credentials** page.
    9. Click the **Sync payment methods** button for needed credentials to sync payment methods.
-   10. Go to **Back Office&nbsp;<span aria-label="and then">></span> Administration&nbsp;<span aria-label="and then">></span> Payment Methods**.
+   10. Go to **Back Office <span aria-label="and then">></span> Administration <span aria-label="and then">></span> Payment Methods**.
    11. On the **Payment Methods** overview page click on **Edit** next to the needed payment method.
    12. On the **Edit Payment Method** page, open the **Store Relation** tab and map the payment method to needed stores.
 

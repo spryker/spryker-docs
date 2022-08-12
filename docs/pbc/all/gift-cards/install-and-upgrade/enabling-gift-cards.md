@@ -15,4 +15,4 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/gift-cards-feature-walkthrough.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-the-gift-cards-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-gift-cards-feature.md -->
+{% include pbc/all/integrate-features/202204.0/enable-gift-cards.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/enable-gift-cards.md -->

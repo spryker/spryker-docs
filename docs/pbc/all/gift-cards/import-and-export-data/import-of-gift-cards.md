@@ -1,5 +1,5 @@
 ---
-title: Gift Cards
+title: Import of gift cards
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/gift-cards-import
@@ -22,4 +22,3 @@ The table below provides details on Gift Cards data importers, their purpose, CS
 | --- | --- | --- | --- |--- |
 | Gift Card Abstract Configuration  | Imports gift card product configuration information. A Gift Card Product is a regular product in the shop which represents a Gift Card that Customer can buy. The Gift Card Abstract Product configuration represents a type of Gift Cards with a code pattern (for example, “Xmas”, “Happy-B”, etc.). |`data:import:gift-card-abstract-configuration` | [gift_card_abstract_configuration.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/gift-cards/file-details-gift-card-abstract-configuration.csv.html) |[product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html) |
 | Gift Card Concrete Configuration | Imports gift card product configuration information. This data is used to configure the amount of money that will be top-up (loaded) in the Gift Card.  |`data:import:gift-card-concrete-configuration` |[gift_card_concrete_configuration.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/gift-cards/file-details-gift-card-concrete-configuration.csv.html)| [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html) |
-

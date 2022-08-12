@@ -120,7 +120,11 @@ console translator:generate-cache
 
 {% info_block warningBox "Verification" %}
 
-Ensure that all labels and help tooltips in the Discount form has English and German translation.
+Ensure that all labels and help tooltips in the **Discount** form has English and German translation:
+
+1. In the Back Office, go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
+2. Click **Create new discount** button or **Edit** button next to existing discount.
+3. Check labels and help tooltips in **Discount** form on **Create new discount** or **Edit discount** page.
 
 {% endinfo_block %}
 
@@ -162,10 +166,10 @@ Ensure that the plugin works correctly:
 
 1. [Create a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
 2. On the **Discount calculation** tab, for **DISCOUNT APPLICATION TYPE**, select **PROMOTIONAL PRODUCT**. 
-2. In **ABSTRACT PRODUCT SKU(S)**, add an abstract product SKU.
-3. Create another discount with one or more identic promotional products.
-4. To fulfill the discounts' requirements, add items to the cart.
-5. Ensure that both discounts are displayed in the **Promotional Product** section on the **Cart** page.
+3. In **ABSTRACT PRODUCT SKU(S)**, add an abstract product SKU.
+4. Create another discount with one or more identic promotional products.
+5. To fulfill the discounts' requirements, add items to the cart.
+6. Ensure that both discounts are displayed in the **Promotional Product** section on the **Cart** page.
 
 {% endinfo_block %}
 
@@ -181,13 +185,14 @@ console frontend:zed:build
 {% info_block warningBox "Verification" %}
 
 Ensure that you can create a discount with multiple promotional products:
-1. In the Back Office, go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**. 
-2. Create a new discount or update an existing one and check that you can see the **Discount** form.
-3. On the **Discount calculation** tab, for **DISCOUNT APPLICATION TYPE**, select **PROMOTIONAL PRODUCT**.
-4. Ensure that the **ABSTRACT PRODUCT SKU(S)** field is displayed and that it accepts a comma-separated list.
-5. Enter several abstract product SKUs and save the discount.
-6. To fulfill the discount's requirements, add items to the cart.
-7. Ensure that on the cart page, the **Promotional Product** section displays a carousel containing all products in the discount.
-8. Ensure that you can add a product from the **Promotional Product** section to the cart and that the discount is applied.
+1. In the Back Office, go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
+2. Click **Create new discount** button or **Edit** button next to existing discount.
+3. Check that you can see the **Discount** form on **Create new discount** or **Edit discount** page.
+4. On the **Discount calculation** tab, for **DISCOUNT APPLICATION TYPE**, select **PROMOTIONAL PRODUCT**.
+5. Ensure that the **ABSTRACT PRODUCT SKU(S)** field is displayed and that it accepts a comma-separated list.
+6. Enter several abstract product SKUs and save the discount.
+7. To fulfill the discount's requirements, add items to the cart.
+8. Ensure that on the cart page, the **Promotional Product** section displays a carousel containing all products in the discount.
+9. Ensure that you can add a product from the **Promotional Product** section to the cart and that the discount is applied.
 
 {% endinfo_block %}

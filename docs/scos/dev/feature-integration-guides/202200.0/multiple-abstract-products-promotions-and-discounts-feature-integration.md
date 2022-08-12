@@ -5,7 +5,7 @@ last_updated: Feb 04, 2022
 template: feature-integration-guide-template
 ---
 
-This document describes how to add the *multiple abstract products as promotional products* to the [Promotions & Discounts](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html) feature.
+This document describes how to add *multiple abstract products as promotional products* to the [Promotions & Discounts](/docs/scos/user/features/{{page.version}}/promotions-discounts-feature-overview.html) feature.
 
 ## Install feature core
 
@@ -80,7 +80,10 @@ Make sure that the following changes have been triggered in transfer objects:
 
 {% info_block warningBox "Verification" %}
 
-Make sure that when the *Promotional Product* radio button in *Discount Calculation* form is selected, the *Abstract Product SKU(s)* field is displayed, and it accepts a comma-separated list.
+Ensure that the *ABSTRACT PRODUCT SKU(S)** field is displayed, and it accepts a comma-separated list:
+1. In the Back Office, go to **Merchandising<span aria-label="and then">></span> Discount** and select **Create new discount**. 
+2. On the **Create new discount** page, in the **Discount calculation** tab, for **DISCOUNT APPLICATION TYPE**, select **PROMOTIONAL PRODUCT**. 
+3. Ensure that the **ABSTRACT PRODUCT SKU(S)** field appears and add to it a comma-separated list of abstract product SKUs.
 
 {% endinfo_block %}
 
@@ -95,7 +98,7 @@ cart.title.available_discounts,Verfügbare Rabatte,de_DE
 cart.title.available_discounts,Available discounts,en_US
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -117,7 +120,7 @@ console translator:generate-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that all labels and help tooltips in the discount form has English and German translation.
+Make sure that all labels and help tooltips in the Discount form has English and German translation.
 
 {% endinfo_block %}
 
@@ -157,14 +160,14 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 
 Ensure that the plugin works correctly:
 
-1. [Create a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html) and select **Promotional Product** radio button in **Discount Calculation** form.
-2. Add a product abstract sku into the **Abstract Product SKU(s)** field.
-3. Create another discount with the at least one same **Promotional Product**.
+1. [Create a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+2. On the **Discount calculation** tab, for DISCOUNT APPLICATION TYPE, select **PROMOTIONAL PRODUCT**. 
+2. In ABSTRACT PRODUCT SKU(S), add a product abstract SKU.
+3. Create another discount with one or more identic promotional products.
 4. To fulfill the discounts' requirements, add items to the cart.
-5. Make sure that both discount are displayed in the the **Promotional Product** section on the cart page.
+5. Make sure that both discount are displayed in the **Promotional Product** section on the cart page.
 
 {% endinfo_block %}
-
 
 ### 4) Build Zed UI frontend
 
@@ -177,14 +180,14 @@ console frontend:zed:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can create a discount with multiple promotional products:
-1. In the Back Office, go to **Merchandising** > **Discount**. 
+Ensure that you can create a discount with multiple promotional products:
+1. In the Back Office, go to **Merchandising<span aria-label="and then">></span> Discount**. 
 2. Create a new discount or update an existing one, check that you can see the **Discount** form.
-3. Open **Discount Calculation** form and select **Promotional Product** radio button.
-4. Make sure that the **Abstract Product SKU(s)** field is displayed, and it accepts a comma-separated list.
-5. Enter several product abstract SKUs and save the discount.
+3. On the **Discount calculation** tab, for **DISCOUNT APPLICATION TYPE**, select **PROMOTIONAL PRODUCT**.
+4. Make sure that the **ABSTRACT PRODUCT SKU(S)** field is displayed, and it accepts a comma-separated list.
+5. Enter several abstract product SKUs and save the discount.
 6. To fulfill the discount's requirements, add items to the cart.
-7. Make sure that the **Promotional Product** section on the cart page displays a carousel containing all products in the discount.
-8. Make sure that you can add a product from a **Promotional Product** section to the cart and discount is applied.
+7. Ensure that on the cart page, the **Promotional Product** section displays a carousel containing all products in the discount.
+8. Ensure that you can add a product from the **Promotional Product** section to the cart and discount is applied.
 
 {% endinfo_block %}

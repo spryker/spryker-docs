@@ -5,7 +5,7 @@ last_updated: July 28, 2022
 template: glue-api-storefront-guide-template
 ---
 
-This document describes how to retrieve order shipments when checking out. For full information on checking out, see [Checking out purchases](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/checking-out-purchases.html)
+This document describes how to retrieve order shipments when checking out. For full information on the endpoint, see [Checking out purchases](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/checking-out-purchases.html)
 
 
 This endpoint allows finalizing the checkout process by placing an order. After sending a request, the cart is deleted, and you cannot make any changes in the checkout data. Thus, use the endpoint for checkouts that can be performed in one pass or for finalizing a checkout after [submitting checkout data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/submitting-checkout-data.html).  

@@ -12,13 +12,10 @@ This document describes how to import taxes for abstract products via  `product_
 
 ## Import file parameters
 
-The file should have the following parameters:
-
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 
 | abstract_sku | &check;  | String | | SKU identifier of the abstract product. |
-| name.{ANY_LOCALE_NAME}<br>Example value: *name.en_US* | &check; | String |Locale data is dynamic in data importers. It means that ANY_LOCALE_NAME postifx can be changed, removed, and any number of columns with different locales can be added to the .csv files. | Name of the product in the specified location (US for our example). |
 | tax_set_name |  | String | | Name of the tax set. |
 
 ## Import the file
@@ -30,8 +27,6 @@ data:import:product-abstract
 ```
 
 ## Import template file and content example
-
-Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |
 | --- | --- |

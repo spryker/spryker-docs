@@ -585,10 +585,11 @@ entries:
                 url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
                 include_versions:
                 - "202204.0"
+                
           - title: "Table design"
             url: /docs/marketplace/dev/front-end/table-design/
             include_versions:
-            - "202204.0"v
+            - "202204.0"
             nested:
 
               - title: "Table Column Types"

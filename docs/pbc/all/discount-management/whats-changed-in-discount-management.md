@@ -25,7 +25,7 @@ This release contains one module, [Discount promotion](https://github.com/spryke
 
 [Public release details](https://api.release.spryker.com/release-group/4232).
 
-## Improvements
+### Improvements
 
 * Introduced `DiscountPromotionFacade::postUpdateDiscount()` to save promotion discount after discount is updated.
 * Introduced `DiscountPromotionDiscountPostUpdatePlugin` to save promotion discount after discount is updated.

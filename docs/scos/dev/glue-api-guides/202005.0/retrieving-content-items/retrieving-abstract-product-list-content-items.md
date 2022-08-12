@@ -33,14 +33,14 @@ See [Content Items](/docs/scos/user/features/{{page.version}}/content-items.html
 {% endinfo_block %} to learn how to create and manage content items in the Back Office.)
 
 ## Installation
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/user/features/{{page.version}}/content-items.html-api-feature-integration).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html).
 
 ## Retrieving Abstract Product List Content Item Data
 To retrieve the full information on the abstract product list by the content item key, send a GET request to the following endpoint:
 
 _/content-product-abstract-lists/{content_item_key}/content-product-abstract_
 
-Sample request: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract_
+Request sample: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract_
 
 where **content-product-abstract-lists** is the Abstract Product List content item type, **apl-1** is its key, and **content-product-abstract** is the abstract product list type.
 
@@ -72,7 +72,7 @@ If the request is successful and the Abstract Product List content item with the
 
 <details open>
 <summary markdown='span'>Sample response:</summary>
-    
+
 ```php
 {
 	"data": [
@@ -167,7 +167,7 @@ If the request is successful and the Abstract Product List content item with the
 	}
 }
 ```
-    
+
 <br>
 </details>
 
@@ -187,7 +187,7 @@ Please see below for details of the resource relationships.
 ### Getting Image Sets for Abstract Products
 To get image sets assigned to abstract products, request the resource from the abstract-product-image-sets relationships endpoint:
 
-Sample request: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?include=**abstract-product-image-sets**_
+Request sample: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?include=**abstract-product-image-sets**_
 where **abstract-product-image-sets** is the image sets for its abstract products included in the list and **apl-1** is the key of the Abstract Product List content item.
 
 The following additional attributes are added to the response:
@@ -206,7 +206,7 @@ If the request is successful and the abstract product image sets with the specif
 
 <details open>
 <summary markdown='span'>Sample response:</summary>
-    
+
 ```php
 ...
 			},
@@ -225,7 +225,7 @@ If the request is successful and the abstract product image sets with the specif
 			}
 		},
 	...
-	
+
 			"links": {
 				"self": "http://mysprykershop.com/abstract-products/205"
 			},
@@ -288,14 +288,14 @@ If the request is successful and the abstract product image sets with the specif
 	]
 }
 ```
-    
+
 <br>
 </details>
 
 ### Getting Information on Availability for Abstract Products
 To retrieve the information on the availability of abstract products, request the resource from the abstract-product-availabilities relationships endpoint:
 
-Sample request: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=abstract-product-availabilities**_
+Request sample: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=abstract-product-availabilities**_
 where **abstract-product-availabilities** is the availability of the abstract products included in the list and **apl-1** is the key of the Abstract Product List content item.
 
 The following additional attributes will be added to the response:
@@ -311,7 +311,7 @@ If the request is successful and the availability of abstract products with the 
 
 <details open>
 <summary markdown='span'>Sample response:</summary>
-    
+
 ```php
 {
 "data": [
@@ -456,7 +456,7 @@ If the request is successful and the availability of abstract products with the 
 ### Getting Prices for Abstract Products
 To retrieve prices of abstract products, request the resource from the abstract-product-prices relationships endpoint:
 
-Sample request: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=abstract-product-prices**_
+Request sample: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=abstract-product-prices**_
 where **abstract-product-prices** is the price of each abstract product included in the list and **apl-1** is the key of the Abstract Product List content item containing these products.
 
 The following additional attributes will be added to the response:
@@ -644,7 +644,7 @@ The following additional attributes will be added to the response:
 
 To get information on all available categories which the abstract products are assigned to, send the GET request expandable with the category-nodes relationships endpoint:
 
-Sample request: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=category-nodes**_
+Request sample: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=category-nodes**_
 where **category-nodes** is the category assigned to each abstract product included in the list and **apl-1** is the key of the Abstract Product List content item.
 
 The following additional attributes will be added to the response:
@@ -664,7 +664,7 @@ The following additional attributes will be added to the response:
 
 <details open>
 <summary markdown='span'>Sample response:</summary>
-    
+
 ```php
 {
 	"data": [
@@ -884,14 +884,14 @@ The following additional attributes will be added to the response:
 	]
 }
 ```
-    
+
 <br>
 </details>
 
 ### Getting Information on Tax Sets to Abstract Products
 To get information on tax sets defined for abstract products, request the resource from the product-tax-sets relationships endpoint:
 
-Sample request: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=product-tax-sets**_
+Request sample: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=product-tax-sets**_
 where **product-tax-sets** is the tax set of each abstract product included in the list and **apl-1** is the ID of the Abstract Product List content item.
 
 The following additional attributes will be added to the response:
@@ -907,7 +907,7 @@ The following additional attributes will be added to the response:
 
 <details open>
 <summary markdown='span'>Sample response:</summary>
-    
+
 ```php
 {
 	"data": [
@@ -1111,14 +1111,14 @@ The following additional attributes will be added to the response:
 	]
 }
 ```
-    
+
 <br>
 </details>
 
 ### Getting Product Labels of Abstract Products
 To get information on tax sets defined for abstract products, request the resource from the product-labels relationships endpoint:
 
-Sample request: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=product-labels**_
+Request sample: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?**include=product-labels**_
 where **product-labels** is the product label assigned to each abstract product included in the list and **apl-1** is the key of the Abstract Product List content item.
 
 The following additional attributes will be added to the response:
@@ -1126,7 +1126,7 @@ The following additional attributes will be added to the response:
 | Field* | Type | Description |
 | --- | --- | --- |
 | name | string | Name of a product label. |
-| isExclusive | boolean | Indicates if the label is Exclusive, i.e. takes precedence over other labels the product might have so that only this label can be displayed for the product. |
+| isExclusive | boolean | Indicates if the label is Exclusive, for example, takes precedence over other labels the product might have so that only this label can be displayed for the product. |
 | position | integer | Number of the position in the priority set. |
 | frontEndReference | string | Defines the custom product label type. |
 
@@ -1134,7 +1134,7 @@ The following additional attributes will be added to the response:
 
 <details open>
 <summary markdown='span'>Sample response:</summary>
-    
+
 ```php
 {
 	"data": [
@@ -1228,7 +1228,7 @@ The following additional attributes will be added to the response:
 		"self": "http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?include=product-labels"
 }
 ```
-    
+
 <br>
 </details>
 
@@ -1236,11 +1236,11 @@ The following additional attributes will be added to the response:
 To retrieve a specific attribute of the abstract product, send the GET request including the following resources:
 /content-product-abstract-lists/{content_item_key}/content-product-abstract?fields[abstract-products]=sku,name,description&include=abstract-product-prices
 
-Sample request: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?fields[abstract-products]=sku,name,description&include=abstract-product-prices_
+Request sample: _GET http://mysprykershop.com/content-product-abstract-lists/apl-1/content-product-abstract?fields[abstract-products]=sku,name,description&include=abstract-product-prices_
 where **apl-1** is the key of the Abstract Product List content item you want to retrieve.
 
 **Sample response:**
-    
+
 ```php
 {
 	"data": [

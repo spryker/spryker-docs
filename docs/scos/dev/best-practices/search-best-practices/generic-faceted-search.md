@@ -1,5 +1,5 @@
 ---
-title: Generic Faceted Search
+title: Generic faceted search
 description: Faceted search (sometimes also called faceted navigation) allows users to navigate through a web site by applying filters for categories, attributes, price ranges and so on.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -22,6 +22,27 @@ redirect_from:
   - /v2/docs/en/generic-faceted-search  
   - /v1/docs/generic-faceted-search
   - /v1/docs/en/generic-faceted-search
+related:
+  - title: Data-driven ranking
+    link: docs/scos/dev/best-practices/search-best-practices/data-driven-ranking.html
+  - title: Full-text search
+    link: docs/scos/dev/best-practices/search-best-practices/full-text-search.html
+  - title: Precise search by super attributes
+    link: docs/scos/dev/best-practices/search-best-practices/precise-search-by-super-attributes.html
+  - title: On-site search
+    link: docs/scos/dev/best-practices/search-best-practices/on-site-search.html
+  - title: Other best practices
+    link: docs/scos/dev/best-practices/search-best-practices/other-best-practices.html
+  - title: Multi-term autocompletion
+    link: docs/scos/dev/best-practices/search-best-practices/multi-term-auto-completion.html
+  - title: Simple spelling suggestions
+    link: docs/scos/dev/best-practices/search-best-practices/simple-spelling-suggestions.html
+  - title: Naive product centric approach
+    link: docs/scos/dev/best-practices/search-best-practices/naive-product-centric-approach.html
+  - title: Personalization - dynamic pricing
+    link: docs/scos/dev/best-practices/search-best-practices/personalization-dynamic-pricing.html
+  - title: Usage-driven schema and document structure
+    link: docs/scos/dev/best-practices/search-best-practices/usage-driven-schema-and-document-structure.html
 ---
 
 Faceted search (sometimes also called faceted navigation) allows users to navigate through a web site by applying filters for categories, attributes, price ranges and so on. It’s probably the most basic feature of a search and users expect this to work. Unfortunately, we observed that this is also one of the features that developers struggle with the most.
@@ -31,7 +52,8 @@ The main idea behind faceted search is to present the attributes of the document
 
 To support faceted search, Elasticsearch offers the simple but powerful concept of aggregations. One of the nice features of aggregations is that they can be nested – in other words, it’s possible to define top-level aggregations that create “buckets” of documents and other aggregations that are executed inside those buckets on a subset of documents. The concept of aggregations is in general similar to the SQL GROUP_BY command (but much more powerful). Nested aggregations are analogous to SQL grouping but with multiple column names in the GROUP BY part of the query.
 
-### Indexing Facet Values
+### Indexing facet values
+
 Before building aggregations, document attributes that can serve as facets need to be indexed in Elasticsearch. One way to index them would be to list all attributes and their values under the same field like in the following example:
 
 ```js
@@ -115,7 +137,8 @@ This requires a special treatment in the mapping, because otherwise Elasticsearc
 }
 ```
 
-### Facet Queries
+### Facet queries
+
 Filtering and aggregating a structure like this requires nested filters and nested aggregations in queries.
 
 **Aggregation:**
@@ -170,7 +193,6 @@ Filtering and aggregating a structure like this requires nested filters and nest
     }
   }
 }
-
 ```
 
 Numeric attributes need to be handled differently in aggregations and they have to be stored and analyzed separately. This is because numeric facets sometimes have huge numbers of distinct values. Instead of listing all possible values, it is sufficient to just get the minimum and maximum values and show them as a range selector or slider in the front end. This is possible only if values are stored as numbers.

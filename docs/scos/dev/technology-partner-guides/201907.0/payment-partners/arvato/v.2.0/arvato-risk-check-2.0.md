@@ -8,6 +8,7 @@ originalArticleId: 84ae807c-a3cf-432c-9e44-93046207445f
 redirect_from:
   - /v3/docs/arvato-risk-check-2-0
   - /v3/docs/en/arvato-risk-check-2-0
+  - /docs/scos/user/technology-partners/201907.0/payment-partners/arvato/v.2.0/arvato-risk-check-2.0.html
 related:
   - title: Arvato - Store Order 2.0
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/arvato/arvato-store-order.html
@@ -22,7 +23,7 @@ Accounted for by external credit agency data and internal existing customer- and
 The returned decision codes (`Result` – `ActionCode` – `ResultCode`) manage the definition of the eShop's payment methods.
 If a payment method is not permitted, the decision code provides information about alternate payment methods available for the customer.
 
- Additional validation of billing and shipping addresses is performed on Arvato RSS side. Please refer to Arvato documentation for return code bit pattern and explanation of bits.
+ Additional validation of billing and shipping addresses is performed on Arvato RSS side. Refer to Arvato documentation for return code bit pattern and explanation of bits.
 
 The main entry point to risk check functionality is `performRiskCheck` method inside `ArvatoRssFacade` class.
 

@@ -2,6 +2,13 @@
 title: Url Persistence Strategy
 description: This document provides details about the Url Persistence Strategy service in the Components Library.
 template: concept-topic-template
+related:
+  - title: Persistence
+    link: docs/marketplace/dev/front-end/ui-components-library/persistence/index.html
+  - title: In Memory Persistence Strategy
+    link: docs/marketplace/dev/front-end/ui-components-library/persistence/in-memory-persistence-strategy.html
+  - title: Local Storage Persistence Strategy
+    link: docs/marketplace/dev/front-end/ui-components-library/persistence/local-storage-persistence-strategy.html
 ---
 
 This document explains the Url Persistence Strategy service in the Components Library.
@@ -14,7 +21,7 @@ Check out an example usage of the Url Persistence Strategy.
 
 Service configuration:
 
-- `storage` - persistence strategy type.  
+- `storage`—persistence strategy type.  
 
 ```html
 <spy-select
@@ -35,6 +42,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/persistence' {
+    interface PersistenceStrategyRegistry {
+        'url': UrlPersistenceStrategy;
+    }
+}
+
 @NgModule({
     imports: [
         PersistenceModule.withStrategies({
@@ -50,12 +63,6 @@ export class RootModule {}
 Below you can find interfaces for the Url Persistence Strategy:
 
 ```ts
-declare module '@spryker/persistence' {
-    interface PersistenceStrategyRegistry {
-        'url': UrlPersistenceStrategy;
-    }
-}
-
 interface UrlPersistenceStrategy extends PersistenceStrategy {
     save(key: string, value: unknown): Observable<void>;
     retrieve<T>(key: string): Observable<T | undefined>;

@@ -9,12 +9,13 @@ redirect_from:
   - /v3/docs/content-items-api-feature-integration
   - /v3/docs/en/content-items-api-feature-integration
   - /docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/content-items-apifeature-integration.html
 related:
   - title: Glue Infrastructure
     link: docs/scos/dev/glue-api-guides/page.version/glue-infrastructure.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -77,16 +78,16 @@ Activate the following plugins:
 
 <details open>
 <summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\ContentBannersRestApi\Plugin\ContentBannerResourceRoutePlugin;
 use Spryker\Glue\ContentProductAbstractListsRestApi\Plugin\ContentProductAbstractListRoutePlugin;
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
 	/**
@@ -110,6 +111,6 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox “Verification” %}
 
 Make sure that the following endpoints return the result with the all necessary data (for example
-{% endinfo_block %}:<ul><li>http://glue.mysprykershop.com/content-banners/{content_key}</li><li>http://glue.mysprykershop.com/content-product-abstract-lists/{content_key}/content-product-abstract</li></ul>)
+{% endinfo_block %}:<ul><li>https://glue.mysprykershop.com/content-banners/{content_key}</li><li>https://glue.mysprykershop.com/content-product-abstract-lists/{content_key}/content-product-abstract</li></ul>)
 
 <!-- Last review date: Aug 08, 2019 by Stanislav Matveyev, Yuliia Boiko-->

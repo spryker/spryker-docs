@@ -1,5 +1,5 @@
 ---
-title: HowTo - Create CMS Templates
+title: "HowTo: Create CMS templates"
 description: Use the guide to create a template for a CMS page, CMS Block, Content Item Widget.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -10,27 +10,36 @@ redirect_from:
   - /2021080/docs/en/ht-create-cms-templates
   - /docs/ht-create-cms-templates
   - /docs/en/ht-create-cms-templates
+  - /docs/scos/dev/tutorials/201811.0/howtos/feature-howtos/cms/howto-create-cms-templates.html
+  - /docs/scos/dev/tutorials/201903.0/howtos/feature-howtos/cms/howto-create-cms-templates.html
+  - /docs/scos/dev/tutorials/201907.0/howtos/feature-howtos/cms/howto-create-cms-templates.html
+  - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/cms/howto-create-cms-templates.html
 related:
-  - title: CMS Page
+  - title: CMS feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html
+  - title: CMS Pages overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
-  - title: CMS Block
+  - title: CMS Blocks overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
 ---
 
 This document describes how to create CMS templates for Yves.
 
 {% info_block infoBox %}
-CMS templates are usually project specific. To create them, some Storefront design work needs to be done, usually in collaboration between a business person and a frontend project developer.
+
+CMS templates are usually project-specific. To create them, some Storefront design work needs to be done, usually in collaboration between a business person and frontend project developer.
+
 {% endinfo_block %}
 
-## CMS Page Template
+## CMS page template
 
 CMS page template is a [Twig](https://twig.symfony.com/) file that, when applied to a Storefront page, defines its design and layout.
-To learn how the template is created, check the exemplary procedure below.
-***
-1. Create the Twig template - `src/Pyz/Shared/Cms/Theme/default/templates/contact_page.twig`:
 
-```html
+To learn how the template is created, check the following exemplary procedure:
+
+1. Create the Twig template `src/Pyz/Shared/Cms/Theme/default/templates/contact_page.twig`:
+
+```twig
 <h1>CONTACT US </h1>
 <div>
 <strong>  Get in touch </strong>
@@ -70,27 +79,20 @@ To learn how the template is created, check the exemplary procedure below.
     </div>
 ```
 
-The text in the defined placeholders will be replaced at runtime by the glossary keys assigned to them.
+The text in the defined placeholders is replaced at runtime by the glossary keys assigned to them.
 
 A content manager can apply this template when [creating a CMS page](/docs/scos/user/back-office-user-guides/{{site.version}}/content/pages/creating-cms-pages.html) in the Back Office.
 
-## Template with Slots
+## Template with slots
 
 [Template with slots](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html) is a Twig file that defines the layout of slots across a Storefront page and has at least one slot assigned.
 
-***
-**Create a template with slots:**
-
+Create a template with slots:
 1. Create a Twig template as described in [CMS Page Template](#cms-page-template).
-
 2. For each slot that you want to have in the template, insert a [slot widget](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#slot-widget).
+3. [Import](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#correlation) section of the Templates & Slots feature overview.
 
-3. [Import](/docs/scos/dev/data-import/{{site.version}}/data-importers-overview-and-implementation.html) template and slot lists. Learn about the lists in the [Correlation](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#correlation) section of **Templates & Slots Feature Overview**.
-
-Templates with slots are universal. In the Back Office, a content manager can:
-
-* apply this template when [creating a CMS page](/docs/scos/user/back-office-user-guides/{{site.version}}/content/pages/creating-cms-pages.html).
-* apply this template when [creating a category](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/category/creating-categories.html).
+Templates with slots are universal. In the Back Office, a content manager can apply this template when [creating a CMS page](/docs/scos/user/back-office-user-guides/{{site.version}}/content/pages/creating-cms-pages.html) or [creating a category](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/category/creating-categories.html).
 
 {% info_block warningBox %}
 
@@ -98,11 +100,11 @@ You can assign the template with slots to other page types only on a code level.
 
 {% endinfo_block %}
 
-## CMS Block Template
+## CMS Block template
 
-CMS block template is a Twig file that, when applied to a [CMS block](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-blocks-overview.html), defines its design and layout.
+CMS block template is a Twig file that, when applied to a [CMS Block](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-blocks-overview.html), defines its design and layout.
 
-Create the Twig template - `src/Pyz/Shared/CmsBlock/Theme/default/template//hello.twig`.
+Create the Twig template—`src/Pyz/Shared/CmsBlock/Theme/default/template//hello.twig`.
 
 ```twig
 <!-- CMS_BLOCK_PLACEHOLDER : "helloBlockText" -->
@@ -114,20 +116,17 @@ Create the Twig template - `src/Pyz/Shared/CmsBlock/Theme/default/template//hell
 
 A content manager can apply this template when [creating a CMS block](/docs/scos/user/back-office-user-guides/{{site.version}}/content/blocks/creating-cms-blocks.html) in the Back Office.
 
-## Content Item Widget Template
+## Content item widget template
 
 [Content item widget](/docs/scos/user/features/{{site.version}}/content-items-feature-overview.html) template is a Twig file that defines the layout of the content item it renders on Storefront.
 
 By default, two content item widget templates are shipped per each content item:
-
 * Banner widget
 * Abstract Product List widget
 * Product Set widget
 * File widget
 
-***
-
-**Create a content item widget template:**
+Create a content item widget template:
 
 {% info_block infoBox %}
 
@@ -138,31 +137,30 @@ Depending on the content item widget you create the template for, make sure to i
 * [ContentProductSetWidget](https://github.com/spryker-shop/content-product-set-widget)
 * [ContentFileWidget](https://github.com/spryker-shop/content-file-widget)
 
-
 {% endinfo_block %}
 
 1. Create `src/Pyz/Yves/{ModuleWidget}/Theme/default/views/{template-folder}/{new-template}.twig`, where:
-
-* `{new-template}` - template name.
-* `{ModuleWidget}` - name of the respective Content Item Widget module.
-* `{template-folder}` - template folder name. Based on the content item widget, choose:
-    * banner;
-    * cms-product-abstract;
-    * content-product-set;
-    * content-file.
+   * `{new-template}` is the template name.
+   * `{ModuleWidget}` is the name of the respective Content Item Widget module.
+   * `{template-folder}` is the template folder name. Based on the content item widget, choose:
+       * banner
+       * cms-product-abstract
+       * content-product-set
+       * content-file
 
 The default templates located on the core level of each module can be used as examples.
 
 2. Modify the template configuration in `Pyz/Yves/{ModuleWidget}/Twig/{ModuleWidgetTwigFunction}.php`:
-* Add the template identifier.
-* Based on the template identifier, add a path to the template.
+   - Add the template identifier.
+   - Based on the template identifier, add a path to the template.
+
 {% info_block infoBox %}
 
-`{ModuleWidgetTwigFunction}.php` should extend from the corresponding file in `SprykerShop/Yves/{ModuleWidget}/Twig/`.
+`{ModuleWidgetTwigFunction}.php` must extend from the corresponding file in `SprykerShop/Yves/{ModuleWidget}/Twig/`.
 
 {% endinfo_block %}
 
-Pyz/Yves/{ModuleWidget}/Twig/{ModuleWidgetTwigFunction}.php
+**Pyz/Yves/{ModuleWidget}/Twig/{ModuleWidgetTwigFunction}.php**
 
 ```php
 namespace \Pyz\Yves\{ModuleWidget}\Twig;
@@ -185,7 +183,7 @@ class {ModuleWidgetTwigFunction} extends \SprykerShop\Yves\{ModuleWidget}\Twig\{
 
 3. Override the method in the factory that creates the object of `{ModuleWidgetTwigFunction}`:
 
-Pyz/Yves/{ModuleWidget}/{ModuleWidget}Factory.php
+**Pyz/Yves/{ModuleWidget}/{ModuleWidget}Factory.php**
 
 ```php
 namespace \Pyz\Yves\{ModuleWidget};

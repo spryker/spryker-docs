@@ -36,7 +36,7 @@ Endpoints:
 * `/abstract-products`
 * `/concrete-products`
 
-Sample request: `GET http://glue.mysprykershop.com/concrete-products/181_31995510?include=product-options`
+Request sample: `GET http://glue.mysprykershop.com/concrete-products/181_31995510?include=product-options`
 
 where **181_31995510** is the SKU of the product you want to retrieve options for.
 
@@ -208,7 +208,7 @@ When accessing guest carts, you need to specify the guest user ID. This is done 
 
 {% endinfo_block %}
 
-Sample requests:
+Request samples:
 
 `GET http://glue.mysprykershop.com/carts?include=items,concrete-products,product-options`
 
@@ -541,7 +541,7 @@ Sample Request:
 
 {% info_block infoBox "Info" %}
 
-For more details on managing carts of registered users, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/managing-carts.html-of-registered-users).
+For more details on managing carts of registered users, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html).
 
 {% endinfo_block %}
 
@@ -630,7 +630,7 @@ No matter which type of cart is created or modified, the following attributes sh
 You can specify a certain product several times with different options. In this case, the product will be added as multiple cart items.
 
 ### Response
-The endpoints respond with information on the cart or item that is being created or modified. For detailed information and the possible error codes, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/managing-carts.html-of-registered-users) and [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
+The endpoints respond with information on the cart or item that is being created or modified. For detailed information and the possible error codes, see [Managing Carts of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html) and [Managing Guest Carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html).
 
 ## Retrieving Product Options for Orders
 To retrieve the product options applied to order items, send a *GET* request to retrieve the order information.
@@ -644,7 +644,7 @@ Orders cannot be accessed anonymously. For this reason, you always need to pass 
 
 {% endinfo_block %}
 
-Sample request: `GET http://glue.mysprykershop.com/orders/DE--3`
+Request sample: `GET http://glue.mysprykershop.com/orders/DE--3`
 
 {% info_block warningBox "Tip" %}
 

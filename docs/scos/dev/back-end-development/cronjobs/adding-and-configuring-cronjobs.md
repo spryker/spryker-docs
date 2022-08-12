@@ -19,6 +19,15 @@ redirect_from:
   - /v2/docs/en/cronjob-scheduling-guide
   - /v1/docs/cronjob-scheduling-guide
   - /v1/docs/en/cronjob-scheduling-guide
+related:
+  - title: Cronjobs
+    link: docs/scos/dev/back-end-development/cronjobs/cronjobs.html
+  - title: Creating a custom scheduler
+    link: docs/scos/dev/back-end-development/cronjobs/creating-a-custom-scheduler.html
+  - title: Migrating to Jenkins
+    link: docs/scos/dev/back-end-development/cronjobs/migrating-to-jenkins.html
+  - title: Cronjob scheduling
+    link: docs/scos/dev/sdk/cronjob-scheduling.html
 ---
 
 We use [Jenkins](https://jenkins-ci.org/) for cronjob scheduling. Compared to Crontab, there are several benefits:
@@ -40,7 +49,6 @@ $jobs[] = [
     'command'               => '$PHP_BIN vendor/bin/console mail:send-mail',
     'schedule'              => '*/10 * * * *',
     'enable'                => true,
-    'run_on_non_production' => true,
     'stores'                => ['DE', 'FR'],
 ];
 ```
@@ -62,7 +70,6 @@ For each job you can define several configurations:
 | schedule              | string | Expression that defines the job schedule (how often the job is executed).The schedule string is compatible with cronjob schedule definition (eg. 0 * * * * means: run once each hour at 00 minute). If environment is development, return empty string - cronjobs are being executed on development environment only manually. | yes       |
 | enable                | bool   | Enable/Disable jobs                                          | yes       |
 | stores                | array  | An array of stores where the job is executed.                | yes       |
-| run_on_non_production | bool   | Defines, if the job also runs on environments other than production (development, testing, staging). Default: false | no        |
 
 {% info_block errorBox %}
 When not using Jenkins for job scheduling there is no locking between concurrently running commands.

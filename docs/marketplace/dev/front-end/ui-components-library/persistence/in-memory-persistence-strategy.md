@@ -2,6 +2,13 @@
 title: In Memory Persistence Strategy
 description: This document provides details about the In Memory Persistence Strategy service in the Components Library.
 template: concept-topic-template
+related:
+  - title: Persistence
+    link: docs/marketplace/dev/front-end/ui-components-library/persistence/index.html
+  - title: Local Storage Persistence Strategy
+    link: docs/marketplace/dev/front-end/ui-components-library/persistence/local-storage-persistence-strategy.html
+  - title: Url Persistence Strategy
+    link: docs/marketplace/dev/front-end/ui-components-library/persistence/url-persistence-strategy.html
 ---
 
 This document explains the In Memory Persistence Strategy service in the Components Library.
@@ -14,7 +21,7 @@ Check out an example usage of the In Memory Persistence Strategy.
 
 Service configuration:
 
-- `storage` - persistence strategy type.  
+- `storage`—persistence strategy type.  
 
 ```html
 <spy-select
@@ -35,6 +42,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/persistence' {
+    interface PersistenceStrategyRegistry {
+        'in-memory': InMemoryPersistenceStrategy;
+    }
+}
+
 @NgModule({
     imports: [
         PersistenceModule.withStrategies({
@@ -50,12 +63,6 @@ export class RootModule {}
 Below you can find interfaces for the In Memory Persistence Strategy:
 
 ```ts
-declare module '@spryker/persistence' {
-    interface PersistenceStrategyRegistry {
-        'in-memory': InMemoryPersistenceStrategy;
-    }
-}
-
 interface InMemoryPersistenceStrategy extends PersistenceStrategy {
     save(key: string, value: unknown): Observable<void>;
     retrieve<T>(key: string): Observable<T | undefined>;

@@ -2,6 +2,9 @@
 title: Data Transformer Collate Configurator Table
 description: This document provides details about the Data Transformer Collate Configurator Table service in the Components Library.
 template: concept-topic-template
+related:
+  - title: Data Transformer Data Configurators
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/index.html
 ---
 
 This document explains the Data Transformer Collate Configurator Table service in the Components Library.
@@ -35,6 +38,12 @@ Check out an example usage of the Data Transformer Collate Configurator Table in
 Register the service:
 
 ```ts
+declare module '@spryker/data-transformer.collate' {
+    interface DataTransformerConfiguratorRegistry {
+        table: TableDataTransformerConfiguratorService;
+    }
+}
+
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
@@ -46,16 +55,4 @@ Register the service:
     ],
 })
 export class RootModule {}
-```
-
-## Interfaces
-
-Below you can find interfaces for the Data Transformer Collate Configurator Table:
-
-```ts
-declare module '@spryker/data-transformer.collate' {
-    interface DataTransformerConfiguratorRegistry {
-        table: TableDataTransformerConfiguratorService;
-    }
-}
 ```

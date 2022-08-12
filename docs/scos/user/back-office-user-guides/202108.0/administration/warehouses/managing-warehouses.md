@@ -16,9 +16,9 @@ This topic describes how to manage warehouses.
 
 ## Prerequisites
 
-To start working with warehouses, go to **Administration** > **Warehouses**.
+To start working with warehouses, go to **Administration&nbsp;<span aria-label="and then">></span> Warehouses**.
 
-Review the [reference information](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/creating-warehouses.html#reference-information-creating-warehouses) before you start, or just look up the necessary information as you go through the process.
+Review the [reference information](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/creating-warehouses.html#reference-information-creating-warehouses) before you start, or look up the necessary information as you go through the process.
 
 ## Viewing warehouse details
 
@@ -41,6 +41,6 @@ To edit the warehouse details:
 4. To keep the changes, click **Save**. This redirects you to the *Warehouses* page, where you can see the updated warehouse and the following message: 'Warehouse has been successfully updated'.
 
 
-## What's next?
+## Next steps
 
 To learn how to manage stock per specific warehouse, see [Managing product availability](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/managing-products-availability.html).

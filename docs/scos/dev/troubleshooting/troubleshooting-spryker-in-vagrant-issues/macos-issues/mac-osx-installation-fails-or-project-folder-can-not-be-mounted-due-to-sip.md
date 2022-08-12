@@ -1,5 +1,5 @@
 ---
-title: Mac OSX- Installation fails or project folder can not be mounted due to SIP
+title: Mac OSX - Installation fails or project folder can not be mounted due to SIP
 description: Learn how to fix the issue when installation fails on MacOS or project folder can not be mounted due to SIP
 last_updated: Jun 16, 2021
 template: troubleshooting-guide-template
@@ -12,12 +12,19 @@ redirect_from:
   - /docs/en/mac-osx-installation-fails-or-project-folder-can-not-be-mounted-due-to-sip
   - /v6/docs/mac-osx-installation-fails-or-project-folder-can-not-be-mounted-due-to-sip
   - /v6/docs/en/mac-osx-installation-fails-or-project-folder-can-not-be-mounted-due-to-sip
+related:
+  - title: Mac OSX - iterm2 (locale error)
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-iterm2-locale-error.html
+  - title: Mac OSX - Wrong curl version error
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/macos-issues/mac-osx-wrong-curl-version-error.html
 ---
 
 ## Description
+
 Sometimes, installation fails or project folder can not be mounted due to SIP on MacOS.
 
 ## Cause
+
 SIP (System Integrity Protection) is a MacOS feature that protects the system files from modification. In some cases, it precludes the proper functioning of third-party applications and may prevent you from installing Spryker on MacOS starting from version 10.11 El Capitan.
 
 This may produce the effect of the VM correctly installed and started, but the `/project` folder containg the application to be run, can not be mounted inside the VM. This means that the whole application can not be started und run. If logged into the VM via `vagrant ssh`the improperly mounted project folder can be identified by running the `ls` command which returns the following error message:
@@ -38,10 +45,10 @@ To solve this problem, disable SIP during the installation:
 
 After SIP is disabled, install Spryker. It is strongly recommended to enable SIP when Spryker is installed. To do that, repeat the steps above, replacing the `csrutil disable` command with `csrutil enable`.
 
-
 {% info_block warningBox "Verification" %}
 
 Make sure SIP is enabled by running the command:
+
 ```bash
 csrutil status
 ```

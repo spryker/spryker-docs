@@ -7,6 +7,7 @@ originalArticleId: ec24dbd9-e3b2-4db0-9f09-50594801b162
 redirect_from:
   - /v1/docs/checking-out-purchases-and-getting-checkout-data
   - /v1/docs/en/checking-out-purchases-and-getting-checkout-data
+  - /docs/scos/dev/glue-api-guides/201811.0/checking-out-purchases-and-getting-checkout-data.html
 related:
   - title: Retrieving Customer's Order History
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
@@ -24,7 +25,7 @@ For detailed information on the modules that provide the API functionality and r
 ## Place Order
 To place an order, send a POST request to the following endpoint:
 `/checkout`
-Sample request: `POST http:carts-of-registered-users/managing-carts-of-registered-users.htmlmysprykershop.com/checkout`
+Request sample: `POST http:carts-of-registered-users/managing-carts-of-registered-users.htmlmysprykershop.com/checkout`
 
 ### Request
 A request should contain:
@@ -457,7 +458,7 @@ The **included** section of the response contains additional order details.
 ## Retrieve Checkout Data
 To get information on a particular order, send the following POST request:
 `/checkout-data`
-Sample request: `POST http:carts-of-registered-users/managing-carts-of-registered-users.htmlmysprykershop.com/checkout-data`
+Request sample: `POST http:carts-of-registered-users/managing-carts-of-registered-users.htmlmysprykershop.com/checkout-data`
 {% info_block errorBox "Authentication" %}
 To use this endpoint:<ul><li>**Registered** customers need to authenticate first. For details, see [Authentication and Authorization]().</li><li>For **anonymous** users, you need to add their _X-Anonymous-Customer-Unique-Id_ in the request header. For details, see Managing Guest Carts.</li></ul>
 {% endinfo_block %}

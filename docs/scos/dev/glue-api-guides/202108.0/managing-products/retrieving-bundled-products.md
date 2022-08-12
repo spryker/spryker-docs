@@ -16,9 +16,10 @@ This endpoint allows retrieving the products that belong to a bundle.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
+
 * [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundles-feature-integration.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Glue API: Cart feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
+* [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
 * [Glue API: Product Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundle-cart-feature-integration.html)
 
 ## Retrieve bundled products
@@ -48,14 +49,14 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 
 | REQUEST SAMPLE | USAGE |
 | --- | --- |
-| `GET https://glue.mysprykershop.com/concrete-products/214_123/bundled-products` | Retrieve bundled products of the product bundle with SKU `214_123`. |
-|`GET https://glue.mysprykershop.com/concrete-products/214_123/bundled-products?include=concrete-products` |Retrieve bundled products of the product bundle with SKU `214_123` and detailed information about corresponding concrete products.|
-|`GET https://glue.mysprykershop.com/concrete-products/214_123/bundled-products?include=concrete-products,abstract-products` |Retrieve bundled products of the product bundle with SKU `214_123` and detailed information about corresponding concrete and abstract products.|
+| GET https://glue.mysprykershop.com/concrete-products/214_123/bundled-products | Retrieve bundled products of the product bundle with SKU `214_123`. |
+| GET https://glue.mysprykershop.com/concrete-products/214_123/bundled-products?include=concrete-products |Retrieve bundled products of the product bundle with SKU `214_123` and detailed information about corresponding concrete products.|
+| GET https://glue.mysprykershop.com/concrete-products/214_123/bundled-products?include=concrete-products,abstract-products |Retrieve bundled products of the product bundle with SKU `214_123` and detailed information about corresponding concrete and abstract products.|
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample</summary>
+<summary markdown='span'>Response sample: retrieve bundled products of the product bundle</summary>
 
 ```json
 {
@@ -99,11 +100,10 @@ To retrieve related abstract products, include both `concrete-products` and `abs
     }
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with concrete products</summary>
+<summary markdown='span'>Response sample: retrieve bundled products of the product bundle with the details on the concrete products</summary>
 
 ```json
 {
@@ -299,11 +299,10 @@ To retrieve related abstract products, include both `concrete-products` and `abs
     ]
 }
 ```
-
 </details>
 
 <details>
-<summary markdown='span'>Response sample with concrete and abstract products</summary>
+<summary markdown='span'>Response sample: retrieve bundled products of the product bundle with the details on the concrete and abstract products</summary>
 
 ```json
 {
@@ -783,7 +782,6 @@ To retrieve related abstract products, include both `concrete-products` and `abs
     ]
 }
 ```
-
 </details>
 
 <a name="bundled-products-response-attributes"></a>
@@ -794,6 +792,7 @@ To retrieve related abstract products, include both `concrete-products` and `abs
 |quantity |Integer| Quantity of the product in the bundle.|
 
 For the attributes of the included resources, see:
+
 * [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 * [Retrieving abstract products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#abstract-products-response-attributes)
 

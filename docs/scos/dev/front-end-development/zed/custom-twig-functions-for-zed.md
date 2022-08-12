@@ -1,5 +1,5 @@
 ---
-title: Custom Twig Functions for Zed
+title: Custom Twig functions for Zed
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/custom-twig-functions-for-zed
@@ -85,7 +85,7 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
   }
 ```
 
-| Function name | Description | Method signature | Usage example |
+| FUNCTION NAME | DESCRIPTION | METHOD SIGNATURE | USAGE EXAMPLE |
 | --- | --- | --- | --- |
 | `assetsPath` | <ul><li>Provides a safe way to access the `public` folder where compiled assets are located. Returns a string in the following format: <br>`{publicAssetsPath}{namespaceName}{themeName}{relativeAssetPath}`. For example, `/assets/css/spryker-zed-gui-main.js`.<br>`/assets/css/spryker-zed-gui-main.css`.<br>The string is used internally to resolve a component/resource location within a provided module.</li><li>Provides a safe way to access a remote folder where compiled assets are located, e.g. a CDN (Content Delivery Network) resource. See [Custom Location for Static Assets](/docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html) for more details.</li></ul> | `function assetsPath($relativePath: string): string`<ul><li>`$relativePath` - relative asset path (*required*).</li></ul> | `{% raw %}{{{% endraw %} assetsPath('js/spryker-zed-gui-main.js') {% raw %}}}{% endraw %}`<br>`{% raw %}{{{% endraw %} assetsPath('css/spryker-zed-gui-main.css') {% raw %}}}{% endraw %}` |
 | `url` | Generates an internal URL from a path string and converts special characters into HTML entities. | `function url($url: string, $query: array, $options: array): string`<ul><li>`$url` - relative URL (*required*).</li><li>`$query` - query string (*optional*). The default value is `[]`.</li><li>`$options` - additional options (*optinal*). The default value is `[]`.</li></ul> | `{% raw %}{{{% endraw %} url('{url}', {'id': id}) {% raw %}}}{% endraw %}` |

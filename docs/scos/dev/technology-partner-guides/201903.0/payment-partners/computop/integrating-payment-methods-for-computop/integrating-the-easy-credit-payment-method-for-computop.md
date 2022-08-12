@@ -8,6 +8,7 @@ originalArticleId: 2fcd8496-1e25-473b-a8d2-13b1ed2a34e4
 redirect_from:
   - /v2/docs/computop-easy-credit
   - /v2/docs/en/computop-easy-credit
+  - /docs/scos/user/technology-partners/201903.0/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-easy-credit-payment-method-for-computop.html
 related:
   - title: Computop
     link: docs/scos/user/technology-partners/page.version/payment-partners/computop.html
@@ -17,8 +18,8 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paypal-payment-method-for-computop.html
   - title: Integrating the PayNow payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-paynow-payment-method-for-computop.html
-  - title: Computop - API
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/computop-api.html
+  - title: Computop API calls
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/computop-api-calls.html
   - title: Integrating the iDeal payment method for Computop
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/computop/integrating-payment-methods-for-computop/integrating-the-ideal-payment-method-for-computop.html
   - title: Integrating the Direct Debit payment method for Computop
@@ -32,7 +33,7 @@ related:
 ---
 
 Example State Machine
-![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop-easy-credit-flow-example.png) 
+![Click Me](https://spryker.s3.eu-central-1.amazonaws.com/docs/Technology+Partners/Payment+Partners/Computop/computop-easy-credit-flow-example.png)
 
 ## Front-end Integration
 To adjust the frontend appearance, provide the following templates in your theme directory:

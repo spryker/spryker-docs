@@ -2,6 +2,13 @@
 title: Data Transformer Collate Filter Text
 description: This document provides details about the Data Transformer Collate Filter Text service in the Components Library.
 template: concept-topic-template
+related:
+  - title: Data Transformer Filters
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/index.html
+  - title: Data Transformer Collate Filter Equals
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/equals.html
+  - title: Data Transformer Collate Filter Range
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/range.html
 ---
 
 This document explains the Data Transformer Collate Filter Text service in the Components Library.
@@ -35,6 +42,12 @@ Check out an example usage of the Data Transformer Collate Filter Text in the `@
 Register the service:
 
 ```ts
+declare module '@spryker/data-transformer.collate' {
+    interface DataTransformerFilterRegistry {
+        text: TextDataTransformerFilterService;
+    }
+}
+
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
@@ -53,12 +66,6 @@ export class RootModule {}
 Below you can find interfaces for the Data Transformer Collate Filter Text:
 
 ```ts
-declare module '@spryker/data-transformer.collate' {
-    interface DataTransformerFilterRegistry {
-        text: TextDataTransformerFilterService;
-    }
-}
-
 interface DataTransformerFilterConfig {
     type: string;
     propNames: string | string[];

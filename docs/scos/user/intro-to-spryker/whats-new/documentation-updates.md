@@ -22,13 +22,16 @@ redirect_from:
   - /v1/docs/en/documentation-updates
 ---
 
+
+<!-- causes CI errors
 This page lists all the updates to the documentation made for each release.
 Check out our [release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) to learn more about the releases.
 
 ## Release {{page.version}}
+
 Below you will find the list of the new/updated documentation released as part of the [{{site.version}} Spryker product release](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html):
 
-### Features:
+### Features
 
 * [Split Delivery](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/split-delivery-overview.html)
 
@@ -50,7 +53,7 @@ Below you will find the list of the new/updated documentation released as part o
 <summary markdown='span'>HowTo</summary>
 
 
-[HowTo - Disable Split Delivery in Yves Interface](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html)
+[HowTo: Disable Split Delivery in Yves Interface](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html)
 
 
 </details>
@@ -59,15 +62,15 @@ Below you will find the list of the new/updated documentation released as part o
 <summary markdown='span'>Back Office user guides</summary>
 
 
-* [Creating a New Shipment for Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-an-order)
-* [Editing Shipment Details](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html#editing-shipment-details)
+* [Creating a New Shipment for Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/creating-shipments.html)
+* [Editing Shipment Details](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/editing-shipments.html)
 
 </details>
 <details>
 <summary markdown='span'>Shop user guide</summary>
 
 
-[Assigning Multiple Delivery Addresses to Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html#creating-a-new-shipment-for-an-order)
+[Assigning Multiple Delivery Addresses to Order](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/creating-shipments.html)
 
 
 </details>
@@ -98,7 +101,7 @@ Below you will find the list of the new/updated documentation released as part o
  <details>
 <summary markdown='span'>HowTo</summary>
 
-[HowTo - Import Packaging Units](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html)
+[HowTo: Import Packaging Units](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html)
 
  </details>
 
@@ -321,8 +324,7 @@ Below you will find the list of the new/updated documentation released as part o
 
 * Payment Management
     * [Managing Payment Methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/payment-methods/managing-payment-methods.html)
-    * [Payment Methods: Reference Information](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/payment-methods/managing-payment-methods.html#reference-information-editing-payment-method-pages)
-* [Shipment](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/managing-order-shipments.html)
+* [Shipment](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/creating-shipments.html)
 
     * [Creating a Carrier Company](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-carrier-companies.html)
     * [Creating and Managing Delivery Methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/creating-and-managing-delivery-methods.html)
@@ -335,12 +337,14 @@ Below you will find the list of the new/updated documentation released as part o
 
 #### HowTos:
 
-* [HowTo - Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html)
-* [HowTo - Import Delivery Methods Linked to Store](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-delivery-methods-linked-to-store.html)
-* [HowTo - Notify About Unsupported Browsers](/docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html)
+* [HowTo: Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html)
+* [HowTo: Import Delivery Methods Linked to Store](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-delivery-methods-linked-to-store.html)
+* [HowTo: Notify About Unsupported Browsers](/docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html)
 
 #### Other documentation:
 * [Multiple Stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html)
 * [Inventory](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html)
 * [Custom Twig Functions for Yves](/docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html)
 * [Custom Twig Functions for Zed](/docs/scos/dev/front-end-development/zed/custom-twig-functions-for-zed.html)
+
+-->

@@ -8,6 +8,7 @@ originalArticleId: d4a8ba62-3b21-49ba-b07f-cf5d0c77e47e
 redirect_from:
   - /v5/docs/factfinder
   - /v5/docs/en/factfinder
+  - /docs/scos/user/technology-partners/202005.0/marketing-and-conversion/analytics/fact-finder/fact-finder.html
 related:
   - title: Installing and configuring FACT-Finder NG API
     link: docs/scos/dev/technology-partner-guides/page.version/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-the-fact-finder-ng-api.html
@@ -30,9 +31,6 @@ related:
 [ABOUT FACT-FINDER](http://www.fact-finder.de/)
 FACT-Finder is a software for online shops. We provide on-site search, navigation, merchandising, personalisation and product recommendations – with a measurable impact: A/B tests have proven that merchants experience a conversion uplift of 10-33 %. More than 1600 online shops use FACT-Finder, among them are brands like Media Markt, Distrelec, MyTheresa, Misterspex and Bergfreunde.
 
-
-
-
 ## FACT-Finder User Management
 
 FACT-Finder has its own User Management (permissions management) functions that allow you to set the authorizations for various modules at a fine, granular level. In this way, for example, individual users can only manage specific channels or check and maintain the associated configurations.
@@ -40,7 +38,7 @@ This system of permissions is based on roles that provide access to the specific
 
 ---
 
-## Related Developer articles
+## Related Developer guides
 
 * [Integrating FACT-Finder](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/integrating-fact-finder.html)
 * [Installing and configuring FACT-Finder](/docs/scos/dev/technology-partner-guides/{{page.version}}/marketing-and-conversion/analytics/fact-finder/installing-and-configuring-fact-finder.html)

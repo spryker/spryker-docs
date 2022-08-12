@@ -1,26 +1,17 @@
 ---
-title: Migration guide - Extending the project
+title: "Migration guide - Extending the project"
 description: This document provides details for migration of the marketplace modules to be able to extend the project.
 template: module-migration-guide-template
+related:
+  - title: Extending the project
+    link: docs/marketplace/dev/front-end/extending-the-project/index.html
 ---
 
-To be able to extend the front-end project, the marketplace modules must correspond to the following versions:
-
-| NAME                                        | VERSION   |
-| ------------------------------------------- | --------- |
-| ZedUi                                       | >= 0.4.1  |
-| DashboardMerchantPortalGui (optional)       | >= 0.4.1  |
-| MerchantProfileMerchantPortalGui (optional) | >= 0.7.1  |
-| ProductMerchantPortalGui (optional)         | >= 0.6.1  |
-| ProductOfferMerchantPortalGui (optional)    | >= 0.10.2 |
-| SalesMerchantPortalGui (optional)           | >= 0.8.1  |
-| SecurityMerchantPortalGui (optional)        | >= 0.4.2  |
-
-If not, follow the steps from this migration guide.
+This document outlines the changes that need to be made at a project level in order to [extend the frontend part of your project](/docs/marketplace/dev/front-end/extending-the-project/index.html).
 
 *Estimated migration time: 1h 30m*
 
-**To upgrade the modules to the required versions, do the following:**
+To update the project, do the following:
 
 1. Update the following files in the root:
 
@@ -30,7 +21,7 @@ wget -O tsconfig.json https://raw.githubusercontent.com/spryker-shop/suite/maste
 wget -O tsconfig.mp.json https://raw.githubusercontent.com/spryker-shop/suite/master/tsconfig.mp.json
 ```
 
-2. Update / create the following files in the `frontend/merchant-portal` folder:
+2. In the `frontend/merchant-portal` folder, update or create the following files:
 
 ```bash
 wget -O frontend/merchant-portal/entry-points.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/entry-points.js
@@ -40,7 +31,7 @@ wget -O frontend/merchant-portal/tsconfig.spec.json https://raw.githubuserconten
 wget -O frontend/merchant-portal/update-config-paths.js https://raw.githubusercontent.com/spryker-shop/suite/master/frontend/merchant-portal/update-config-paths.js
 ```
 
-3. Create the files tree on the project level in the `src/Pyz/Zed` folder:
+3. In the `src/Pyz/Zed` folder, create the files tree on the project level:
 
 - ZedUi
     - Presentation
@@ -58,9 +49,9 @@ wget -O frontend/merchant-portal/update-config-paths.js https://raw.githubuserco
             - styles.less
             - public-api.ts
     - mp.public-api.ts
-  
 
-4. Fill in the newly created files with the code below:
+
+4. Fill in the newly created files with the following code:
 
 **app.module.ts**
 
@@ -165,6 +156,6 @@ rm -rf node_modules && yarn install
 yarn mp:build
 ```
 
-Related articles: 
+Related articles:
 
-[Extending the project](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/2316501312/Extending+the+project) 
+[Extending the project](/docs/marketplace/dev/front-end/extending-the-project/index.html)

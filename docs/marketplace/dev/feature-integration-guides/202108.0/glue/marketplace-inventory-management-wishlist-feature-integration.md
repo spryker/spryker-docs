@@ -15,7 +15,7 @@ Follow the steps below to install the Marketplace Inventory Management + Wishlis
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | LINK |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | ---------- |
 | Marketplace Wishlist | {{page.version}} |[Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html) |
 | Marketplace Inventory Management API | {{page.version}} | [Glue API: Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-inventory-management-feature-integration.html) |
@@ -43,7 +43,7 @@ use Spryker\Zed\Wishlist\WishlistDependencyProvider as SprykerWishlistDependency
 class WishlistDependencyProvider extends SprykerWishlistDependencyProvider
 {
     /**
-     * @return \Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistItemExpanderPluginInterface[]
+     * @return array<\Spryker\Zed\WishlistExtension\Dependency\Plugin\WishlistItemExpanderPluginInterface>
      */
     protected function getWishlistItemExpanderPlugins(): array
     {
@@ -68,7 +68,7 @@ use Spryker\Glue\WishlistsRestApi\WishlistsRestApiDependencyProvider as SprykerW
 class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependencyProvider
 {
     /**
-     * @return \Spryker\Glue\WishlistsRestApiExtension\Dependency\Plugin\RestWishlistItemsAttributesMapperPluginInterface[]
+     * @return array<\Spryker\Glue\WishlistsRestApiExtension\Dependency\Plugin\RestWishlistItemsAttributesMapperPluginInterface>
      */
     protected function getRestWishlistItemsAttributesMapperPlugins(): array
     {
@@ -81,8 +81,8 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
 
 {% info_block warningBox "Verification" %}
 
-Make sure that `AvailabilityWishlistItemExpanderPlugin` and `ProductAvailabilityRestWishlistItemsAttributesMapperPlugin` are set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get the `quantity` value within the `attributes` in the response.
+Make sure that `AvailabilityWishlistItemExpanderPlugin` and `ProductAvailabilityRestWishlistItemsAttributesMapperPlugin` are set up by sending the request `GET https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get the `quantity` value within the `attributes` in the response.
 
-Make sure that `SellableWishlistItemExpanderPlugin` is set up by sending the request `GET http://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get `availability` value within the `attributes` in the response.
+Make sure that `SellableWishlistItemExpanderPlugin` is set up by sending the request `GET https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get `availability` value within the `attributes` in the response.
 
 {% endinfo_block %}

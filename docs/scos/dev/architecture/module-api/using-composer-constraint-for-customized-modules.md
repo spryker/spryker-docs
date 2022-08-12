@@ -1,5 +1,5 @@
 ---
-title: Using ~ Composer Constraint for Customized Modules
+title: Using ~ Composer constraint for customized modules
 description: To avoid BC breaking changes and keep project updates safe and predictable, a project should use ~ (tilde) composer constraint instead of ^ (caret) for the customized modules.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -22,6 +22,13 @@ redirect_from:
   - /v2/docs/en/using-composer-constraint
   - /v1/docs/using-composer-constraint
   - /v1/docs/en/using-composer-constraint
+related:
+  - title: Performance and scalability
+    link: docs/scos/dev/architecture/module-api/performance-and-scalability.html
+  - title: Semantic versioning - major vs. minor vs. patch release
+    link: docs/scos/dev/architecture/module-api/semantic-versioning-major-vs.-minor-vs.-patch-release.html
+  - title: "Declaration of module APIs: Public and private"
+    link: docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
 ---
 
 Spryker OS is modular and follows the rules of semantic versioning. Every BC-breaking change of module [API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html) is considered a major release. But what happens to non-API? Spryker leverages the ability to change non-API functionalities in minor and patch releases. This way Spryker provides new features for different business verticals.
@@ -32,35 +39,59 @@ To easily detect the extended core modules and to update composer.json constrain
 
 Pretty much in the same way you can check non Spryker package usages as well. In case if some classes of non Spryker vendor were used on a project level - you may also validate corresponding packages to be locked to minor version.
 
-## Installing the Composer Constrainer
+## Installing the Composer constrainer
 
 To install the tool, do the following:
 
-1. Require the `ComposerConstainter` module:
-`composer require --dev spryker-sdk/composer-constrainer`
+1. Require the `ComposerConstainer` module:
+
+```bash
+composer require --dev spryker-sdk/composer-constrainer
+```
+
 This is a development only "require-dev" module. Make sure you include it as such.
 
-2. Add the console command `SprykerSdk\Zed\ComposerConstrainer\Communication\Console\ComposerConstraintConsole` to your `Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands()` inside `if ($this->getConfig()->isDevelopmentConsoleCommandsEnabled()) {
-` to enable it only in development mode.
+2. Add the console command `SprykerSdk\Zed\ComposerConstrainer\Communication\Console\ComposerConstraintConsole` to your `Pyz\Zed\Console\ConsoleDependencyProvider::getConsoleCommands()` inside `if ($this->getConfig()->isDevelopmentConsoleCommandsEnabled()) {` to enable it only in the development mode.
 
 3. Run the following command:
-`console transfer:generate`
 
-## Using the Composer Constrainer
+```bash
+console transfer:generate
+```
+
+## Using the Composer constrainer
+
 To use the Composer Constrainer tool:
 
 1. Run the command:
-`vendor/bin/console code:constraint:modules -d`
+
+```bash
+vendor/bin/console code:constraint:modules -d
+```
+
 This command makes no changes in the composer.json. The return code of this command is either 0 (success) or 1 (error, some constraints need to be changed). This is the recommended hook for your CI system. Full version of `-d` option is also available as `--dry-run`.
 
 2. Run the command:
-`vendor/bin/console code:constraint:modules -dw`
+
+```bash
+vendor/bin/console code:constraint:modules -dw
+```
+
 This command validates not only Spryker packages, but any other vendors packages as well. Full version of `-w` option is also available as `--with-foreign`.
 
 3. Run the command:
-`vendor/bin/console code:constraint:modules`
+
+```bash
+vendor/bin/console code:constraint:modules
+```
+
 This command changes the project's composer.json. Make sure you dry run the command before applying the changes with this command.
 
-4. `vendor/bin/console code:constraint:modules -w`
+4. Run the command:
+
+```bash
+vendor/bin/console code:constraint:modules -w
+```
+
 This command changes the project's composer.json with consideration of any usage of vendor packages.
 

@@ -110,7 +110,7 @@ console data:import glossary
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data is added to the `spy_glossary_key` and `spy_glossary_translation` tables in the database.
+Make sure that the configured data is added to the `spy_glossary` table in the database.
 
 {% endinfo_block %}
 
@@ -259,7 +259,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 {% endinfo_block %}
 
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Overview and install the necessary features before beginning the integration step.
 

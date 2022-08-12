@@ -18,7 +18,7 @@ Volume pricing helps the merchants to gain the commitment of the customers. Prov
 
 Such incentives allow a business company to purchase additional inventory at a reduced cost and allow sellers or manufacturers to reduce the products by selling more units and increase their revenues per transaction.
 
-The schema below illustrates the connection between `spy_price_product_store` table links `spy_price_product_merchant_relationship` with the `spy_currency` and `spy_store` tables.
+The following schema illustrates the connection between `spy_price_product_store` table links `spy_price_product_merchant_relationship` with the `spy_currency` and `spy_store` tables.
 
 ![Database schema](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Volume+Prices/Volume+Prices+Feature+Overview/volume-prices-dbschema.png)
 
@@ -28,10 +28,10 @@ The schema below illustrates the connection between `spy_price_product_store` ta
 
 The "price_data" field is a JSON with attributes such as volume prices, merchant prices, customer prices and then a specific set of prices inside its price type (["QTY" => 10, "GROSS(DEFAULT)" => 100, "NET(DEFAULT)" => 90]).
 
-{% endinfo_block %} 
+{% endinfo_block %}
 
 
-You can find the example of the JSON below:
+The following is an example of JSON:
 
 ```js
 [
@@ -65,7 +65,9 @@ Volume prices are configured per store and per currency and a Store Administrato
 Volume prices are set for both gross and net mode and are either inherited from the abstract product or specified directly for a standalone concrete product.
 
 {% info_block infoBox %}
+
 The concrete product can also have its own volume prices different from its abstract (if they are explicitly defined per `concrete_sku`).
+
 {% endinfo_block %}
 
 A specific volume price for a concrete product has a higher priority over an inherited one from its abstract product.
@@ -83,13 +85,15 @@ Once the product is added to the shopping list or to the cart, the item price co
 ## Threshold
 Volume pricing is applied when a certain threshold is reached.
 
-Threshold is a minimum value that serves as a benchmark/boundary for a discounted price when the product is dependent on the volume (e.g. the number of units of the product) bought.
+Threshold is a minimum value that serves as a benchmark/boundary for a discounted price when the product is dependent on the volume bought—for example, the number of units of the product.
 
 {% info_block infoBox %}
+
 This means that if you buy more quantity of products or sometimes may be group of products, you would get discount based on the volume of purchase. All of the individual products exceeding the threshold will receive the special price.
+
 {% endinfo_block %}
 
-The volume price is applicable only if the shopper exceeds a certain quantity threshold - the number of units the customer chooses to buy.
+The volume price is applicable only if the shopper exceeds a certain quantity threshold—the number of units the customer chooses to buy.
 
 The following table illustrates a typical volume pricing model:
 
@@ -103,32 +107,38 @@ The following table illustrates a typical volume pricing model:
 The new price will go into effect after 5 units are purchased and only apply to the units beyond that threshold. The buyer would still pay full price for the first 5 units they procured.
 
 {% info_block infoBox %}
+
 If the customer selects five, each unit will cost $70. If the customer selects 12, each unit will cost $50.
+
 {% endinfo_block %}
 
 Volume prices can also mean higher prices per item at increasing thresholds.
 
 {% info_block infoBox %}
+
 That is a particular case of electricity bills where you pay more if you use more.
+
 {% endinfo_block %}
 
 ##  Current Constraints
 
 {% info_block infoBox %}
-Currently, the feature has the following functional constraints which are going to be resolved in the future.
+
+The feature has the following functional constraints which are going to be resolved in the future.
+
 {% endinfo_block %}
 
-* unlike other prices in Spryker which support both price types (DEFAULT and ORIGINAL), volume price supports only DEFAULT price type
+* Unlike other prices in Spryker which support both price types (DEFAULT and ORIGINAL), volume price supports only DEFAULT price type.
 
-* as volume price does not support ORIGINAL price type, you cannot define a promotion for a volume price
+* As volume price does not support ORIGINAL price type, you cannot define a promotion for a volume price.
 
-* volume prices cannot be applied to the [prices per merchant relation](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html).
+* Volume prices cannot be applied to the [prices per merchant relation](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html).
 
 ## Related Business User articles
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Add volume prices to abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/abstract-products/adding-volume-prices-to-abstract-products.html)  |
+| [Add volume prices to abstract products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/adding-volume-prices-to-abstract-products.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

@@ -13,11 +13,35 @@ redirect_from:
   - /v6/docs/publish-and-synchronization-testing
   - /v6/docs/en/publish-and-synchronization-testing
   - /docs/scos/dev/guidelines/testing/publish-and-synchronization-testing.html
+related:
+  - title: Available test helpers
+    link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
+  - title: Code coverage
+    link: docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
+  - title: Data builders
+    link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
+  - title: Executing tests
+    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests.html
+  - title: Setting up tests
+    link: docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
+  - title: Test framework
+    link: docs/scos/dev/guidelines/testing-guidelines/test-framework.html
+  - title: Test helpers
+    link: docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
+  - title: Testify
+    link: docs/scos/dev/guidelines/testing-guidelines/testify.html
+  - title: Testing best practices
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
+  - title: Testing concepts
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
+  - title: Testing console commands
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
 ---
 
 Publish & Synchronize (P&S) is an asynchronous process of changing data available to customers by pushing the data into storage, for example, Redis, and making it searchable, for example, with Elasticsearch. Due to its asynchronous nature, it is not easy to test the full process while developing.
 
 In short, in P&S, you create or update an entity in the database. The process is like this:
+
 1. The changes trigger new messages in the queue.
 2. The messages from the queue are consumed and prepare the data to be synchronized.
 3. The prepared data is stored in the `*_storage` or in the `*_search` database tables and add new messages to the queue.
@@ -33,7 +57,8 @@ The main helpers involved in the P&S testing are:
 - [StorageHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#storagehelper)
 - [SearchHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#searchhelper)
 
-## P&S testing Storage
+## P&S testing storage
+
 Let's test that the relevant data of a saved entity is available in the Storage, for example, in Redis.
 
 Since we work with the real database, we execute one test for:
@@ -43,6 +68,7 @@ Since we work with the real database, we execute one test for:
 - Removing an entity
 
 ### Preparation
+
 To prepare for the test, do the following:
 
 - Create a `Persistence` test suite for your `*Storage` module.
@@ -81,6 +107,7 @@ When you delete an entity:
 
 
 ## P&S testing Search
+
 Let's test that the relevant data of a saved entity is available in the Search, for example, Elasticsearch.
 
 Since we work with the real database, we execute one test for:
@@ -89,8 +116,10 @@ Since we work with the real database, we execute one test for:
 - Updating an entity
 - Removing an entity
 
-### Preparation:
+### Preparation
+
 To prepare for the test, do the following:
+
 - Create a `Persistence` test suite for your `*Search` module
 - Besides some other [helpers](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html), add the necessary P&S helpers:
     - [PublishAndSynchronizeHelper](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#publishandsynchronizehelper)
@@ -107,9 +136,10 @@ When you save an entity to the database:
 
 * `$this->tester->assertEntityIsPublished('your event name', 'publish queue name');` method triggers runtime events for the given `eventName` and asserts that at least one entry exists in the expected queue.
 * `$this->tester->assertEntityIsSynchronizedToSearch('search queue name');` method starts the queue worker for the given queue name and pushes the data to the Search. This method also asserts that at least one message was consumed from the queue.
-* `$this->tester->assertSearchHasKey('your expected search key');` metod asserts that the expected key can be found in the Search.
+* `$this->tester->assertSearchHasKey('your expected search key');` method asserts that the expected key can be found in the Search.
 
 ### Updating an entity
+
 When you update an entity:
 
 * `$this->tester->assertEntityIsPublished('your event name', 'publish queue name');` method triggers runtime events for the given `eventName` and asserts that at least one entry exists in the expected queue.        
@@ -122,8 +152,6 @@ When you delete an entity:
 * `$this->tester->assertEntityIsPublished('your event name', 'publish queue name');` method triggers runtime events for the given `eventName` and asserts that at least one entry exists in the expected queue.
 * `$this->tester->assertEntityIsRemovedFromSearch('search queue name');` method starts the queue worker for the given queue name and removes the data from the Search. This method also asserts that at least one message was consumed from the queue.
 * `$this->tester->assertSearchNotHasKey('your expected search key');` method ensures that the key and it's data was removed from the Search.
-
-
 
 ## Troubleshooting
 

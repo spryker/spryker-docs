@@ -28,6 +28,17 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/zed-api/zed-api-resources.html
   - /docs/scos/dev/sdk/202009.0/zed-api/zed-api-resources.html
   - /docs/scos/dev/sdk/202108.0/zed-api/zed-api-resources.html
+related:
+  - title: Zed API (Beta)
+    link: docs/scos/dev/sdk/zed-api/zed-api-beta.html
+  - title: Zed API configuration
+    link: docs/scos/dev/sdk/zed-api/zed-api-configuration.html
+  - title: Zed API CRUD functionality
+    link: docs/scos/dev/sdk/zed-api/zed-api-crud-functionality.html
+  - title: Zed API processor stack
+    link: docs/scos/dev/sdk/zed-api/zed-api-processor-stack.html
+  - title: Zed API project implementation
+    link: docs/scos/dev/sdk/zed-api/zed-api-project-implementation.html
 ---
 
 Each module can have a “{module}Api” module(e.g. CustomerApi for Customer). Such an API module exposes CRUD facade methods (find, get, add, update, remove) that can be mapped to a URL via REST `resource/action` resolution.
@@ -38,7 +49,7 @@ The main `Api` module contains a dispatcher that delegates to those API module v
 
 The following table is a quick overview for the different CRUD operations the API can perform out of the box:
 
-| HTTP Method | Meaning	 | URI | ApiResourcePlugin method |
+| HTTP METHOD | MEANING	 | URI | APIRESOURCEPLUGIN METHOD |
 | --- | --- | --- | --- |
 | GET | index/paginate read | /<br/>/{slug/id} | find($apiRequestTransfer)<br/>get($id, $apiFilterTransfer) |
 | POST | create	 | / | add($apiDataTransfer) |
@@ -55,19 +66,19 @@ This one will not have a body and return a 200 response. Check the headers for a
 
 Each resource can be mapped to the following facade methods:
 
-| Meaning | Facade method signature | Facade return type |
+| MEANING | FACADE METHOD SIGNATURE | FACADE RETURN TYPE |
 | --- | --- | --- |
-| index/paginate | findFoos($apiRequestTransfer)	 | ApiCollectionTransfer |
+| index/paginate | findFoos($apiRequestTransfer) | ApiCollectionTransfer |
 | read	 | getFoo($id, $apiFilterTransfer) | ApiItemTransfer |
 | create | 	addFoo($apiDataTransfer) | ApiItemTransfer |
 | update | updateFoo($id, $apiDataTransfer) | ApiItemTransfer |
 | delete | removeFoo($id) | ApiItemTransfer |
 
-## Request Format
+## Request format
 
 The Spryker API by default uses JSON. If you do not specify an extension in the URL, it will by default expect and return JSON.
 
-## Request Format
+## Request format
 
 The Spryker API by default uses JSON. If you do not specify an extension in the URL, it will by default expect and return JSON.
 
@@ -80,6 +91,7 @@ The Spryker API by default uses JSON. If you do not specify an extension in the 
     }
 }
 ```
+
 Error responses are usually 4xx or 5xx codes, they contain an error message instead of the data:
 
 ```json
@@ -91,7 +103,8 @@ Error responses are usually 4xx or 5xx codes, they contain an error message inst
 }
 ```
 
-### Collection vs Item
+### Collection vs item
+
 An index action in CRUD usually displays a collection of a resource. The same is true for our API. A “GET” call to the resource endpoint “/customers” then returns a collection. A “GET” call to “/customers/{id}” returns a single item of that resource.
 
 The “find” action returns a collection, for JSON format this will be an array of arrays:

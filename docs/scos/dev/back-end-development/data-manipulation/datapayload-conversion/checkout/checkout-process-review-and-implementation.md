@@ -1,5 +1,5 @@
 ---
-title: Checkout Process Review and Implementation
+title: Checkout process review and implementation
 description: This article provides an overview of the checkout process and how it is implemented in Spryker.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -18,11 +18,15 @@ redirect_from:
   - /v4/docs/en/checkout-process-review-and-implementation
   - /v2/docs/checkout-process-review-and-implementation
   - /v2/docs/en/checkout-process-review-and-implementation
+related:
+  - title: Checkout steps
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html
 ---
 
 ### Checkout process
 
 To use checkout in Yves, first, you need to configure it correctly and provide dependencies. Each step can have a form, a controller action, the implementation of the step logic and Twig template to render the HTML.
+
 * Forms—current step form collection.
 * Controller action—the action that is called when the step is being triggered.
 * Step—a class that implements the StepInterface and handles the data passed through the form.
@@ -31,6 +35,7 @@ To use checkout in Yves, first, you need to configure it correctly and provide d
 Each form in the Checkout uses `QuoteTransfer` for data storage. When the data is being submitted, it’s automatically mapped by the Symfony form component to `QuoteTransfer`. If the form is valid, the updated `QuoteTransfer` is passed to `Step::execute()` method where you can modify it further or apply custom logic. Also, there is Symfony Request object passed if additional/manual data mapping is required.
 
 There are a few factories provided for checkout dependency wiring:
+
 * `FormFactory`—creates form collections for each step.
 * `StepFactory`—creates the steps together with their dependencies and plugins.
 * `CheckoutFactory`—where the StepProcess is created for all steps.
@@ -75,19 +80,19 @@ On form submission, the same processing starts with the difference that if form 
 * If the form is invalid, then the view is rendered with validation errors.
 * If form data is valid, then `execute()` is called on the step that executes the step related logic.
 
-E.g., add the address to `QuoteTransfer` or get payment details from Zed, call external service etc.
+For example, add the address to `QuoteTransfer` or get payment details from Zed, call external service.
 
 It’s up to you to decide what to do in each execute method. It’s essential that after `execute()` runs, the updated returned `QuoteTransfer` should satisfy the `postCondition()` so that the `StepProcess` can take another step from the stack.
 
 #### Required input
 
-Normally each step requires an input from the customer. However, there are cases when there is no need to render a form or a view, but some processing is still required (e.g., `PlaceOrderStep`, `EntryStep`). Each step should provide the implementation of the `requireInput()` method. `StepProcess` calls this method and reacts accordingly. Again if `requireInput()` is false, then after running `execute()` the `postConditions` should be satisfied.
+Normally each step requires an input from the customer. However, there are cases when there is no need to render a form or a view, but some processing is still required, that is, `PlaceOrderStep`, `EntryStep`. Each step should provide the implementation of the `requireInput()` method. `StepProcess` calls this method and reacts accordingly. Again if `requireInput()` is false, then after running `execute()` the `postConditions` should be satisfied.
 
 #### Precondition and escape route
 
 Preconditions are called before each step; this is a check to indicate that step can’t be processed in a usual way.
 
-E.g., the cart is empty. If the `preCondition()` returns false, the customer is redirected to the escapeRoute provided when configuring the step.
+That is, the cart is empty. If the `preCondition()` returns false, the customer is redirected to the escapeRoute provided when configuring the step.
 
 #### External redirect URL
 
@@ -109,8 +114,8 @@ After the customer clicks the submit button during the `SummaryStep`, the `Place
 
 Zed's Checkout module contains four types of plugins to extend the behavior on placing an order. Any plugin has access to `QuoteTransfer` that is supposed to be read-only and `CheckoutResponseTransfer` data object that can be modified.
 
-* `PreCondition`—is for checking if the order satisfies predefined constraints (e.g., if the quantity of items is still available).
-* `OrderSavers`—is for saving the order, each plugin is responsible for collecting certain parts of the order (sales module saves items, discount module saves discounts, product option module saves options etc.). Each `OrderSaver` plugin is wrapped into a single transaction; if an exception is being thrown, the transaction is rolled back.
+* `PreCondition`—is for checking if the order satisfies predefined constraints (for example, if the quantity of items is still available).
+* `OrderSavers`—is for saving the order, each plugin is responsible for collecting certain parts of the order (sales module saves items, discount module saves discounts, product option module saves options). Each `OrderSaver` plugin is wrapped into a single transaction; if an exception is being thrown, the transaction is rolled back.
 * `CheckPostConditions`—is for checking conditions after saving, last time to react if something did not happen by the plan. It’s called after state machine execution.
 * `PostSaveHook`—is called after order placement, sets the success flag to false, if redirect should be headed to an error page afterward.
 
@@ -129,10 +134,10 @@ Zed's Checkout module contains four types of plugins to extend the behavior on p
 
 #### Checkout error codes
 
-* 4001—customer email already used.
-* 4002—product unavailable.
-* 4003—cart amount does not match.
-* 5000—unknown error.
+* `4001`—customer email already used.
+* `4002`—product unavailable.
+* `4003`—cart amount does not match.
+* `5000`—unknown error.
 
 #### Save order transfer
 
@@ -150,11 +155,11 @@ There are already some plugins implemented with each of those types:
 #### Postcondition plugins
 
 * `OrderCustomerSavePlugin`—save/create a customer in the database if the customer is new or the ID is not set (guest customer is ignored).
-* `SalesOrderSaverPlugin`—saves order information, creates sales_order and sales_order_item tables.
-* `ProductOptionOrderSaverPlugin`—saves product options to thr sales_product_item table.
-* `DiscountOrderSavePlugin`—saves order discounts to the sales_discounts table.
-* `OrderShipmentSavePlugin`—saves order shipment information to the sales_expense table.
-* `SalesPaymentCheckoutDoSaveOrderPlugin`—saves order payments to the spy_sales_payment table.
+* `SalesOrderSaverPlugin`—saves order information, creates `sales_order` and `sales_order_item` tables.
+* `ProductOptionOrderSaverPlugin`—saves product options to the `sales_product_item` table.
+* `DiscountOrderSavePlugin`—saves order discounts to the `sales_discounts` table.
+* `OrderShipmentSavePlugin`—saves order shipment information to the `sales_expense` table.
+* `SalesPaymentCheckoutDoSaveOrderPlugin`—saves order payments to the `spy_sales_payment` table.
 
 #### Pre save condition plugin
 
@@ -164,6 +169,6 @@ There are already some plugins implemented with each of those types:
 
 A state machine is triggered in the `CheckoutWorkflow` class from the Checkout module; the execution starts after pre-condition and order saver plugins store no errors into `CheckoutResponseTransfer`.
 
-The state machine trigger needs a name in order to be executed. The name is set by `SalesOrderSaverPlugin` in the Sales module. Each project has to implement `SalesConfig::determineProcessForOrderItem()` method, which should return the state machine name for the selected order item. E.g., Payolution payment would return PayolutionPayment01.
+The state machine trigger needs a name in order to be executed. The name is set by `SalesOrderSaverPlugin` in the Sales module. Each project has to implement the `SalesConfig::determineProcessForOrderItem()` method, which should return the state machine name for the selected order item. That is, Payolution payment would return `PayolutionPayment01`.
 
 <!-- _Last review date: Jan 18, 2019_ by Vitaliy Kirichenko, Oksana Karasyova -->

@@ -13,8 +13,8 @@ redirect_from:
 related:
   - title: Integrating Adyen
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/integrating-adyen.html
-  - title: Enabling Adyen filtering payment methods
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/enabling-adyen-filtering-payment-methods.html
+  - title: Enabling filtering of payment methods for Ayden
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/enabling-filtering-of-payment-methods-for-adyen.html
   - title: Integrating Adyen payment methods
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/adyen/integrating-adyen-payment-methods.html
 ---
@@ -27,8 +27,8 @@ The `spryker-eco/adyen` module provides integration of Spryker e-commerce system
 
 The `SprykerEco.Adyen` module includes integration with:
 
-* Checkout process - payment forms with all necessary fields that are required to make payment request, save order information and so on.
-* OMS (Order Management System) - state machines, all necessary commands for making modification requests and conditions for changing orders status accordingly.
+* Checkout process—payment forms with all necessary fields that are required to make payment request and save order information.
+* OMS (Order Management System)—state machines, all necessary commands for making modification requests, and conditions for changing orders status accordingly.
 
 The `SprykerEco.Adyen` module provides the following payment methods:
 * [Credit Card](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/adyen/integrating-adyen-payment-methods.html#credit-card)

@@ -1,5 +1,5 @@
 ---
-title: HowTo - enable SFTP for Flysystem
+title: "HowTo: enable SFTP for Flysystem"
 description: Learn how to enable SFTP for Flysystem.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -12,10 +12,15 @@ redirect_from:
   - /docs/en/howto-enable-sftp-for-flysystem
   - /v6/docs/howto-enable-sftp-for-flysystem
   - /v6/docs/en/howto-enable-sftp-for-flysystem
+related:
+  - title: Flysystem
+    link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html
 ---
 
-This document describes how to enable SFTP connection for [Flysystem](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html).
+{% info_block infoBox "Info" %}
 
-Flysystem does not support SFTP by default, but the separate [Flysystem Adapter for SFTP module](https://github.com/thephpleague/flysystem-sftp) enables it.
+[Flysystem](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html) does not support SFTP by default, but the separate [Flysystem Adapter for SFTP module](https://github.com/thephpleague/flysystem-sftp) enables it.
+
+{% endinfo_block %}
 
 To enable SFTP for Flysystem, implement `FlysystemFilesystemBuilderPluginInterface` and add it to `\Pyz\Service\Flysystem\FlysystemDependencyProvider::addFilesystemBuilderPluginCollection`.

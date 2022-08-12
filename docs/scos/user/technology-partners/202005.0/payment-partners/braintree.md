@@ -9,12 +9,12 @@ redirect_from:
   - /v5/docs/braintree
   - /v5/docs/en/braintree
 related:
-  - title: Braintree - Performing Requests for SCOS
+  - title: Braintree - Performing Requests
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-performing-requests.html
-  - title: Braintree - Configuration for SCOS
+  - title: Installing and configuring Braintree
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/installing-and-configuring-braintree.html
-  - title: Braintree - Workflow for SCOS
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-workflow.html
+  - title: Braintree - Request workflow
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-request-workflow.html
 ---
 
 [ABOUT BRAINTREE](https://www.braintreepayments.com/)
@@ -44,10 +44,10 @@ The state machine commands and conditions trigger Braintree facade calls in orde
 Because of PCI compliance reasons, credit card data is communicated to the third party through JS and AJAX calls (sensitive information stays browser side).
 
 
-## Related Developer articles
+## Related Developer guides
 
 * [Installing and configuring Braintree](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/installing-and-configuring-braintree.html)
-* [Braintree - Workflow](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/braintree-workflow.html)
+* [Braintree - Request workflow](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/braintree-request-workflow.html)
 * [Braintree - Performing requests](/docs/scos/dev/technology-partner-guides/{{page.version}}/payment-partners/braintree/braintree-performing-requests.html)
 
 

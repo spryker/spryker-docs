@@ -35,7 +35,7 @@ composer require spryker/product-bundles-rest-api:"^1.0.0" --update-with-depend
 
 {% info_block warningBox "Verification" %}
 
- Make sure that the following module has been installed:
+Make sure that the following module has been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -191,4 +191,4 @@ Integrate the following related features:
 
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Products  | ✓ | [Glue API: Products feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |
+| Products  | ✓ | [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html) |

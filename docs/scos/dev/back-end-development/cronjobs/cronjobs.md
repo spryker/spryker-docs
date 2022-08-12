@@ -18,6 +18,15 @@ redirect_from:
   - /v4/docs/en/cronjob-scheduling-guide-201907
   - /v3/docs/cronjob-scheduling-guide
   - /v3/docs/en/cronjob-scheduling-guide
+related:
+  - title: Creating a custom scheduler
+    link: docs/scos/dev/back-end-development/cronjobs/creating-a-custom-scheduler.html
+  - title: Migrating to Jenkins
+    link: docs/scos/dev/back-end-development/cronjobs/migrating-to-jenkins.html
+  - title: Adding and configuring cronjobs
+    link: docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-cronjobs.html
+  - title: Cronjob scheduling
+    link: docs/scos/dev/sdk/cronjob-scheduling.html
 ---
 
 
@@ -38,7 +47,7 @@ Basic module schema:
 
 ## Cronjob schedulers
 
-Currently, our [Demo Shops](/docs/scos/user/intro-to-spryker/about-spryker.html#spryker-b2bb2c-demo-shops) are shipped with Jenkins as a default scheduler. Jenkins manages running and monitoring jobs. If you migrated to another scheduler and want to migrate back to Jenkins, see [Migrating to Jenkins](/docs/scos/dev/back-end-development/cronjobs/migrating-to-jenkins.html).
+Currently, our [Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops) are shipped with Jenkins as a default scheduler. Jenkins manages running and monitoring jobs. If you migrated to another scheduler and want to migrate back to Jenkins, see [Migrating to Jenkins](/docs/scos/dev/back-end-development/cronjobs/migrating-to-jenkins.html).
 
 If your project has very specific requirements, you can [create a custom scheduler](/docs/scos/dev/back-end-development/cronjobs/creating-a-custom-scheduler.html).
 

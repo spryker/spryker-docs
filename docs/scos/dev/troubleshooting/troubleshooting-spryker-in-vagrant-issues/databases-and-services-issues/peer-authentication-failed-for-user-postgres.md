@@ -12,9 +12,17 @@ redirect_from:
   - /docs/en/peer-authentication-failed-for-user-postgres
   - /v6/docs/peer-authentication-failed-for-user-postgres
   - /v6/docs/en/peer-authentication-failed-for-user-postgres
+related:
+  - title: Exception connecting to Redis
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/exception-connecting-to-redis.html
+  - title: My Elasticsearch dies
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/my-elasticsearch-dies.html
+  - title: Setup MySQL Workbench to avoid port clashing with the host system
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/setup-mysql-workbench-to-avoid-port-clashing-with-the-host-system.html
 ---
 
 ## Description
+
 When running `./setup`, on the `Setup Zed` step, the following error occurs:
 
 ```php
@@ -22,6 +30,7 @@ Zed Exception: RuntimeException - psql: FATAL:  Peer authentication failed for u
 ```
 
 ## Solution
+
 Open the PostgreSQL configuration file :
 
 ```bash

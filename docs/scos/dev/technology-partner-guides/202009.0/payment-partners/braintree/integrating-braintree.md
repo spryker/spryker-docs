@@ -1,6 +1,6 @@
 ---
 title: Integrating Braintree
-description: This guide provides steps to integrate Braintree in the Spryker frontend.
+description: This guide provides steps to integrate Braintree in the Spryker Frontend.
 last_updated: Dec 8, 2020
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/v6/docs/braintree-integration
@@ -13,8 +13,8 @@ related:
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/installing-and-configuring-braintree.html
   - title: Braintree - Performing Requests
     link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-performing-requests.html
-  - title: Braintree - Workflow
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-workflow.html
+  - title: Braintree - Request workflow
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-request-workflow.html
 ---
 
 {% info_block errorBox %}

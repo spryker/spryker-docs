@@ -12,17 +12,19 @@ redirect_from:
   - /docs/en/glue-api-return-management-feature-integration
 ---
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Spryker Core | {{page.version}} | [Feature API](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
-| Return Management | {{page.version}} | Feature |
+| Return Management | {{page.version}} | [Return Management feature integration](/docs/scos/dev/feature-integration-guides/202108.0/return-management-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
@@ -125,9 +127,10 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure that following endpoints are available now:
-- `http://glue.mysprykershop.com/returns`
-- `http://glue.mysprykershop.com/return-reasons`
 
-Make sure that items from `http://glue.mysprykershop.com/orders` endpoint contain `isReturnable` and uuid properties.
+- `https://glue.mysprykershop.com/returns`
+- `https://glue.mysprykershop.com/return-reasons`
+
+Make sure that items from `https://glue.mysprykershop.com/orders` endpoint contain `isReturnable` and uuid properties.
 
 {% endinfo_block %}

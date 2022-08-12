@@ -10,11 +10,11 @@ redirect_from:
   - /v2/docs/en/e-spirit
 related:
   - title: Technology Partner Integration
-    link: docs/scos/user/technology-partners/page.version/technology-partner-integration.html
+    link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
 ## Partner Information
-[ABOUT E-SPIRIT](www.e-spirit.com)
+[ABOUT E-SPIRIT](https://www.e-spirit.com/)
 Content-rich e-commerce experiences for a Digital Experience Edge
 
 e-Spirit’s FirstSpirit Digital Experience Platform, offered through a SaaS or on-premises model, helps retail and e-commerce companies engage customers and increase revenue with personalized, content-rich digital experiences anytime, anywhere. Savvy e-commerce marketers rely on the FirstSpirit platform—which includes a headless, hybrid and head-optional CMS, AI-driven personalization and omnichannel marketing capabilities—for individualized and synchronized content delivery across all channels to differentiate their companies and compel their customers to action for an e-commerce edge.

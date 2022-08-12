@@ -3,26 +3,31 @@ title: Customization example - B2C Product Details page
 description: Customize any front–end element in Spryker by adjusting a respective SCSS file.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/сustomization-example-b2c-product-details-page
+originalLink: https://documentation.spryker.com/2021080/docs/customization-example-b2c-product-details-page
 originalArticleId: 2401ea81-04cc-431d-a369-20f834d4bdd4
 redirect_from:
-  - /2021080/docs/сustomization-example-b2c-product-details-page
-  - /2021080/docs/en/сustomization-example-b2c-product-details-page
-  - /docs/сustomization-example-b2c-product-details-page
-  - /docs/en/сustomization-example-b2c-product-details-page
-  - /v6/docs/сustomization-example-b2c-product-details-page
-  - /v6/docs/en/сustomization-example-b2c-product-details-page
+  - /2021080/docs/customization-example-b2c-product-details-page
+  - /2021080/docs/en/customization-example-b2c-product-details-page
+  - /docs/customization-example-b2c-product-details-page
+  - /docs/en/customization-example-b2c-product-details-page
+  - /v6/docs/customization-example-b2c-product-details-page
+  - /v6/docs/en/customization-example-b2c-product-details-page
+related:
+  - title: Customization example - Suite Product Details page
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/customization-example-suite-product-details-page.html
+  - title: Customization example - B2B Product Details page
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/customization-example-b2b-product-details-page.html
 ---
 
 In Spryker, front-end elements have dedicated SCSS styles. To show you how to customize the Spryker front end, we broke down the *Product Details* page from our [B2C Demo Shop](/docs/scos/user/intro-to-spryker/b2c-suite.html#b2c-demo-shop) into separate elements with their respective style files. To customize a particular element, you adjust the code in the respective style file.
 
 You can see the [full version of this page](https://www.de.b2c.demo-spryker.com/en/acer-aspire-s7-134) in our B2C Demo Shop.
 
-![B2C-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2C+Product+Details+page/b2c-1.png) 
+![B2C-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2C+Product+Details+page/b2c-1.png)
 
 
 
-| # | Path to SCSS |
+| # | PATH TO SCSS |
 | --- | --- |
 | 1 | project/src/Pyz/Yves/ShopUi/Theme/default/components/molecules/breadcrumb/breadcrumb.scss |
 | 2 | project/src/Pyz/Yves/ProductImageWidget/Theme/default/components/molecules/image-gallery/image-gallery.scss |
@@ -37,19 +42,19 @@ You can see the [full version of this page](https://www.de.b2c.demo-spryker.com/
 | 11 | project/src/Pyz/Yves/ShopUi/Theme/default/components/atoms/button/button.scss |
 
 
-![B2C-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2C+Product+Details+page/b2c-2.png) 
+![B2C-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2C+Product+Details+page/b2c-2.png)
 
 
-| # | Path to SCSS |
+| # | PATH TO SCSS |
 | --- | --- |
 | 12 | project/src/Pyz/Yves/ShopUi/Theme/default/components/atoms/title/title.scss |
 | 13 | project/src/Pyz/Yves/ShopUi/Theme/default/components/molecules/toggler-item/toggler-item.scss |
 | 14 | project/src/Pyz/Yves/ProductDetailPage/Theme/default/components/molecules/product-detail-option/product-detail-option.scss |
 
-![B2C-3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2C+Product+Details+page/b2c-3.png) 
+![B2C-3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Development+Guide/Front-End/Yves/Atomic+Frontend/%D0%A1ustomization+example+-+B2C+Product+Details+page/b2c-3.png)
 
 
-| # | Path to SCSS |
+| # | PATH TO SCSS |
 | --- | --- |
 | 15 | project/src/Pyz/Yves/ShopUi/Theme/default/components/molecules/product-slider-title/product-slider-title.scss |
 | 16 | project/src/Pyz/Yves/ShopUi/Theme/default/components/atoms/title/title.scss |

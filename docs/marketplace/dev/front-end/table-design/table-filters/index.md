@@ -3,6 +3,13 @@ title: Table Filter extension
 last_updated: Jun 07, 2021
 description: This document provides details about the Table Filter extension in the Сomponents Library.
 template: concept-topic-template
+related:
+  - title: Table Filter Date Range
+    link: docs/marketplace/dev/front-end/table-design/table-filters/table-filter-date-range.html
+  - title: Table Filter Select
+    link: docs/marketplace/dev/front-end/table-design/table-filters/table-filter-select.html
+  - title: Table Filter Tree Select
+    link: docs/marketplace/dev/front-end/table-design/table-filters/table-filter-tree-select.html
 ---
 
 This document explains the Table Filter extension in the Components Library.
@@ -60,7 +67,7 @@ export class RootModule {}
 You can configure any filter in the table config.
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         ...,
         filters: {
@@ -118,6 +125,6 @@ export interface TableFilterComponent<C extends TableFilterBase> {
 
 The Table Filters feature ships with a few common Table Filter types:
 
-- [Date Range](/docs/marketplace/dev/front-end/table-design/table-filters/table-filter-date-range.html) - allows filtering data via `DateRangePickerComponent`.
-- [Select](/docs/marketplace/dev/front-end/table-design/table-filters/table-filter-select.html) - allows filtering data via `SelectComponent`.
-- [Tree Select](/docs/marketplace/dev/front-end/table-design/table-filters/table-filter-tree-select.html) - allows filtering data via `TreeSelectComponent`.
+- [Date Range](/docs/marketplace/dev/front-end/table-design/table-filters/table-filter-date-range.html)—allows filtering data via `DateRangePickerComponent`.
+- [Select](/docs/marketplace/dev/front-end/table-design/table-filters/table-filter-select.html)—allows filtering data via `SelectComponent`.
+- [Tree Select](/docs/marketplace/dev/front-end/table-design/table-filters/table-filter-tree-select.html)—allows filtering data via `TreeSelectComponent`.

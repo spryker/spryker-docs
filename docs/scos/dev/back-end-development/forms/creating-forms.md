@@ -1,5 +1,5 @@
 ---
-title: Creating Forms
+title: Creating forms
 description: Spryker uses Symfony forms; this tutorial will help you get started on working with forms.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,9 @@ redirect_from:
   - /v2/docs/en/t-working-forms
   - /v1/docs/t-working-forms
   - /v1/docs/en/t-working-forms
+related:
+  - title: Forms
+    link: docs/scos/dev/back-end-development/forms/forms.html
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/yves/working-with-forms/ -->
@@ -36,6 +39,7 @@ Follow the steps described below to create the newsletter subscription form:
 * [Post the Data](/docs/scos/dev/back-end-development/forms/creating-forms.html#post-the-data)
 
 ## Create the FormType
+
 The best practice is to create a `FormType` class for each form you need to handle. Here you will define the fields contained in the form and the rules of validation.
 
 In our case, we need to define the email field that has two constraints attached:
@@ -96,7 +100,7 @@ class NewsletterFactory extends AbstractFactory
     {
         return $this->getFormFactory()->create(SubscriptionFormType::class);
     }
-    
+
     /**
      * @return \Symfony\Component\Form\FormFactory
      */
@@ -107,7 +111,8 @@ class NewsletterFactory extends AbstractFactory
 }
 ```
 
-## Render the Form
+## Render the form
+
 To render your form in a template, pass the form to the template through the controller action:
 
 * get an instance of your form (using the factory method implemented above)
@@ -145,7 +150,7 @@ class SubscriptionController extends AbstractController
 Add the form in your template together with a submit button; make sure you use the same string as in the controller action (`subscriptionForm`).
 
 
-```php
+```twig
 {% raw %}{{{% endraw %} form_start(subscriptionForm) {% raw %}}}{% endraw %}
     {% raw %}{{{% endraw %} form_widget(subscriptionForm.email) {% raw %}}}{% endraw %}
     {% raw %}{{{% endraw %} form_errors(subscriptionForm.email) {% raw %}}}{% endraw %}
@@ -153,7 +158,8 @@ Add the form in your template together with a submit button; make sure you use t
 {% raw %}{{{% endraw %} form_end(subscriptionForm) {% raw %}}}{% endraw %}
 ```
 
-## Post the Data
+## Post the data
+
 To handle the posted data, we’ll need to extend the controller action to handle the request and check if the form is valid when it’s being submitted. Here you can setup the page to which you want the user to be redirected after the form is being successfully submitted.
 
 ```php

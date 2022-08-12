@@ -18,6 +18,9 @@ redirect_from:
   - /v4/docs/en/router-zed
   - /v3/docs/router-zed-201907
   - /v3/docs/en/router-zed-201907
+related:
+  - title: Router Yves
+    link: docs/scos/dev/migration-concepts/silex-replacement/router/router-yves.html
 ---
 
 The Router is responsible for matching a request to a route and generating URLs based on a route name. The Spryker's Route module is based on the Symfony's Routing component; for more information on it, check out the [documentation](https://symfony.com/doc/current/routing.html).
@@ -31,14 +34,15 @@ You can find the list of all the modules related to the service below:
 
 ### Installation
 
-For information on the installtion, see [Migration Guide - Router](/docs/scos/dev/module-migration-guides/migration-guide-router.html).
+For information on the installation, see [Migration Guide - Router](/docs/scos/dev/module-migration-guides/migration-guide-router.html).
 
 Additionally, you need to add the following plugins to the `\Pyz\Zed\EventDispatcher\EventDispatcherDependencyProvider`:
 
 * `\Spryker\Zed\Router\Communication\Plugin\EventDispatcher\RouterListenerEventDispatcherPlugin`
 * `\Spryker\Zed\Router\Communication\Plugin\EventDispatcher\RouterSslRedirectEventDispatcherPlugin`
 
-### Configure Router per Environment
+### Configure router per environment
+
 The Router can be configured with the following `RouterEnvironmentConfigConstantsZed` options:
 
 * `\Spryker\Zed\Router\RouterConstants::ZED_IS_CACHE_ENABLED` - use this option to enable/disable the cache. By default, it is enabled.
@@ -49,23 +53,28 @@ The Router can be configured with the following `RouterEnvironmentConfigConstant
 For further information, check out the specifications for the Router.
 
 ### RouterDependencyProvider
+
 #### RouterPlugins
+
 Routers are added to the `\Pyz\Zed\Router\RouterDependencyProvider::getRouterPlugins()` method. Spryker provides two build-in routers:
 
 * `\Spryker\Zed\Router\Communication\Plugin\Router\ZedRouterPlugin` - This is the main router which is required for Zed routing.
 * `\Spryker\Zed\Router\Communication\Plugin\Router\ZedDevelopmentRouterPlugin` - This router is not required and is only a fallback router for development.
 
 #### RouterEnhancerPlugins
+
 Additionally, you can add `\Spryker\Zed\RouterExtension\Dependency\Plugin\RouterEnhancerPluginInterfaces` to the `\Pyz\Zed\Router\RouterDependencyProvider::getRouterEnhancerPlugins()` method.
 
 For detailed information about it have a look into the `\Spryker\Zed\RouterExtension\Dependency\Plugin\RouterEnhancerPluginInterface` interface.
 
-### Configure Router
+### Configure router
+
 Additionally, you also have the option to configure the Symfony Router with `\Spryker\Zed\Router\RouterConfig::getRouterConfiguration()`.
 
 Check `\Symfony\Component\Routing\Router::setOptions()` to see what you can use. Basically, you do not have to change this configuration, but if you need to, you can.
 
-### Extending Router
+### Extending router
+
 The Router can be extended in many ways. To be able to add additional functionality, there is a `RouterExtension` module which is installed automatically with the `spryker/router` module.
 
 The extension module offers the following interface:
@@ -96,10 +105,12 @@ interface RouterPluginInterface
 
 This plugin can be used to add a project specific Router to the `ChainRouter`. The returned router must implement `\Symfony\Component\Routing\RouterInterface`.
 
-### Use Controller from 3rd party
+### Use controller from 3rd party
+
 If you want to use 3rd party Controller,  e.g. from `spryker-eco` and alike you need to add the path where the controller can be found to the `\Pyz\Zed\Router\RouterConfig::getControllerDirectories()` method. Paths added to this method will be scanned for controllers. Found controllers will be added to the route cache.
 
-## Console Commands
+## Console commands
+
 The Router module provides the following console commands:
 
 * `\Spryker\Zed\Router\Communication\Plugin\Console\RouterDebugZedConsole` - This command lists all routes and can be used to see detailed information about each route.

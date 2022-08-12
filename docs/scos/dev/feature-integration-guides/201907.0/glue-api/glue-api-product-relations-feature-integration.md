@@ -8,9 +8,10 @@ originalArticleId: ff50c3f0-1d65-499b-8570-a417da9bfcf5
 redirect_from:
   - /v3/docs/product-relations-api-feature-integration-201907
   - /v3/docs/en/product-relations-api-feature-integration-201907
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/product-relations-api-feature-integration.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -80,7 +81,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 </details>
 
 {% info_block infoBox "Verification" %}
-Make sure that the following endpoints are available:<br>http://glue.mysprykershop.com/abstract-products/`{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}`/related-products<br>http://glue.mysprykershop.com/carts/`{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}`/up-selling-products<br>http://glue.mysprykershop.com/guest-carts/`{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}`/up-selling-products
+Make sure that the following endpoints are available:<br>https://glue.mysprykershop.com/abstract-products/`{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}`/related-products<br>https://glue.mysprykershop.com/carts/`{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}`/up-selling-products<br>https://glue.mysprykershop.com/guest-carts/`{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}`/up-selling-products
 {% endinfo_block %}
  
 <!-- Last review date: Aug 02, 2019* by Eugenia Poidenko, Yuliia Boiko-->

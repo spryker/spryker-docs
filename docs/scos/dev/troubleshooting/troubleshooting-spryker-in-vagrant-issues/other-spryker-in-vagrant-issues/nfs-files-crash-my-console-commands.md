@@ -12,6 +12,19 @@ redirect_from:
   - /docs/en/nfs-files-crash-my-console-commands
   - /v6/docs/nfs-files-crash-my-console-commands
   - /v6/docs/en/nfs-files-crash-my-console-commands
+related:
+  - title: Dev VM takes a lot of disk space (40+ GB)
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/dev-vm-takes-a-lot-of-disk-space-40-gb.html
+  - title: Error on box image download
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/error-on-box-image-download.html
+  - title: Failed to decode response - zlib_decode() - data error
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/failed-to-decode-response-zlib-decode-data-error.html
+  - title: NFS export issues
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/nfs-export-issues.html
+  - title: Too many open files in Dev VM
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/too-many-open-files-in-dev-vm.html
+  - title: VM stuck at 'Configuring and enabling network interfaces'
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/other-spryker-in-vagrant-issues/vm-stuck-at-configuring-and-enabling-network-interfaces.html
 ---
 
 ## Description
@@ -22,10 +35,13 @@ You can get the following error when running `vendor/bin/console` or console com
 Error: ENOTEMPTY, directory not empty
 '/data/shop/development/current/static/public/Yves/images/icons' at Error (native)
 ```
+
 ## Cause
+
 The issue is caused by peculiarities of the NFS file system design.
 
 ## Solution
+
 Make sure you have the latest version of the VM installed and also disable the Ngnix `open_file_cache` feature. To do so, execute the following commands:
 
 ```bash
@@ -42,7 +58,9 @@ git pull
 # inside the vm
 sudo salt-call state.highstate whitelist=nginx
 ```
+
 ### Mac OSX
+
 If you are running Mac OSX as a host system: disable Spotlight for your Code directory. For details, see: [How to disable spotlight index for specific folder in Mac OS X](http://www.techiecorner.com/254/how-to-disable-spotlight-index-for-specific-folder-in-mac-os-x/).
 
 To remove stale .nfs files, execute the following either on your host or inside the VM:

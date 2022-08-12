@@ -32,6 +32,17 @@ redirect_from:
   - /v3/docs/en/search-query
   - /v2/docs/search-query
   - /v2/docs/en/search-query
+related:
+  - title: Configuring Elasticsearch
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
+  - title: Configuring search for multi-currency
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
+  - title: Configuring the search features
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html
+  - title: Expanding search data
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
+  - title: Facet filter overview and configuration
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
 ---
 
 Once you have all the necessary data in Elasticsearch, it’s time to display it on Yves.
@@ -292,7 +303,7 @@ It looks up for products even if a customer makes typos and spelling mistakes in
 #### Suggestions by page type
 
 Suggestions by page type result by page types such as a category, products, and CMS pages.
-Use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\SuggestionByTypeQueryExpanderPlugin` to return sets of documents matching a full-text search query grouped by type, i.e., “product”, “category”, “cms page”, etc. Typical usage for this plugin is suggesting the top results by type when the user is typing in the search field. The necessary result formatter for this plugin is` \Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\SuggestionByTypeResultFormatterPlugin`.
+Use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\SuggestionByTypeQueryExpanderPlugin` to return sets of documents matching a full-text search query grouped by type, for example, “product”, “category”, “cms page”, etc. Typical usage for this plugin is suggesting the top results by type when the user is typing in the search field. The necessary result formatter for this plugin is` \Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\SuggestionByTypeResultFormatterPlugin`.
 
 #### Autocompletion
 

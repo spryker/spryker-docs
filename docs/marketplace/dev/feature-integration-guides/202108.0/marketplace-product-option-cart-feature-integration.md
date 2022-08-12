@@ -16,7 +16,7 @@ Follow the steps below to install the Marketplace Product Option + Cart feature 
 
 To start feature integration, integrate the required features:
 
-| NAME | VERSION | LINK |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --------------- | ------- | ---------- |
 | Marketplace Product Option | {{page.version}}      | [Marketplace Product Option Feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-option-feature-integration.html) |
 | Cart | {{page.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html)
@@ -45,7 +45,7 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     /**
      * @param \Spryker\Zed\Kernel\Container $container
      *
-     * @return \Spryker\Zed\CartExtension\Dependency\Plugin\CartPreCheckPluginInterface[]
+     * @return array<\Spryker\Zed\CartExtension\Dependency\Plugin\CartPreCheckPluginInterface>
      */
     protected function getCartPreCheckPlugins(Container $container): array
     {

@@ -13,10 +13,13 @@ redirect_from:
 
 This topic provides you with the information that you need to know when working with discounts.
 {% info_block warningBox "Note" %}
+
 You can find the information related to discount calculation, conditions and voucher codes in separate articles. See the **Related Articles** section.
+
 {% endinfo_block %}
 
 ## Discount Overview Page
+
 In the **Discount** section, you see the following:
 
 * The discount ID and name
@@ -29,7 +32,9 @@ By default, the last created discount goes on top of the table. However, you can
 
 All columns with headers having arrows in the List of Orders table are sortable. 
 ***
+
 ## Actions Column
+
 All the discount management options that you can invoke from the _Actions_ column on the **Discount Overview** page are described in the following table.
 
 | Action |Description  |

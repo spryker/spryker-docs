@@ -13,7 +13,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-categories/retrieving-category-trees.html
 ---
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 
@@ -101,7 +101,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox “Verification” %}
 
 Make sure the following endpoints are available:
-- http://glue.mysprykershop.com/category-trees
-- http://glue.mysprykershop.com/category-nodes/{% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}
+- https://glue.mysprykershop.com/category-trees
+- https://glue.mysprykershop.com/category-nodes/{% raw %}{{{% endraw %}category_node_id{% raw %}}}{% endraw %}
   
 {% endinfo_block %}

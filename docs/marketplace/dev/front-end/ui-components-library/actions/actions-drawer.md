@@ -2,6 +2,24 @@
 title: Actions Drawer
 description: This document provides details about the Actions Drawer service in the Components Library.
 template: concept-topic-template
+related:
+  - title: Actions
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/index.html
+  - title: Actions Close Drawer
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html
+  - title: Actions HTTP
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-http.html
+  - title: Actions Notification
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-notification.html
+  - title: Actions Redirect
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-redirect.html
+  - title: Actions Refresh Drawer
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-drawer.html
+  - title: Actions Refresh Parent Table
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-parent-table.html
+  - title: Actions Refresh Table
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-table.html
+
 ---
 
 This document explains the Actions Drawer service in the Components Library.
@@ -14,10 +32,10 @@ Check out an example usage of the Actions Drawer.
 
 Service configuration:
 
-- `type` - an action type. 
-- `component` - a component name. 
-- `options` - an object with a component options. 
-    - `inputs` - inputs of the component. 
+- `type`—an action type.
+- `component`—a component name.
+- `options`—an object with a component options.
+   —`inputs`—inputs of the component. 
 
 ```html
 <spy-button-action
@@ -34,7 +52,7 @@ Service configuration:
 
 ## Main Service
 
-The main module registers a component by key via a static method `withComponents()`. 
+The main module registers a component by key via a static method `withComponents()`.
 It assigns the object of components to the `DrawerActionComponentTypesToken` under the hood.
 
 The main service injects all registered types from the `DrawerActionComponentTypesToken.`
@@ -87,7 +105,7 @@ import { DrawerTemplateContext } from '@spryker/drawer';
 // Find the template
 @ViewChild(‘contentTpl’) contentTpl?: TemplateRef<DrawerTemplateContext>;
 
-// Call the method 
+// Call the method
 handleAction(injector, config: { template: contentTpl }, context);
 ```
 
@@ -99,6 +117,12 @@ Any existing Angular component can be registered and used within the Drawer.
 Also, it's possible to create and register a custom component that is rendered inside the Drawer.
 
 ```ts
+declare module '@spryker/actions' {
+    interface ActionsRegistry {
+        drawer: DrawerActionHandlerService;
+    }
+}
+
 @NgModule({
     imports: [
         ActionsModule.withActions({

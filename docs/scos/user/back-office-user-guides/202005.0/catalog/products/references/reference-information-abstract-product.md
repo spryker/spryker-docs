@@ -8,13 +8,19 @@ originalArticleId: 14a7dda5-dfd5-4c51-8723-806b38c12788
 redirect_from:
   - /v5/docs/abstract-product-reference-information
   - /v5/docs/en/abstract-product-reference-information
+  - /docs/scos/user/back-office-user-guides/202005.0/catalog/products/references/abstract-product-reference-information.html
 ---
 
 The topic describes the reference information for working with abstract products.
+
 {% info_block warningBox "Note" %}
+
 The set of tabs for Create and Edit pages, as well as for abstract and concrete products, is different. Hence the additional columns with identifiers are added for your convenience.
+
 {% endinfo_block %}
+
 **General tab**
+
 | Attribute |Description | Create Abstract Product | Update Abstract Product |
 | --- | --- | --- | --- |
 |**Store relation**  | Defines the store for which the product can be available.<br>You can select multiple values. | **Yes** | **Yes** |
@@ -25,6 +31,7 @@ The set of tabs for Create and Edit pages, as well as for abstract and concrete 
 
 
 **Price & Stock tab**
+
 | Attribute |Description | Create Abstract Product | Update Abstract Product |
 | --- | --- | --- | --- |
 |**Merchant Price Dimension**|**B2B Only**<br>The drop-down list that allows selecting a merchant relation and set up a specific price for a specific merchant.<br>If the Default value is selected, the prices will be the same for everyone.<br>The values available for selection derive from **Merchants > Merchant Relations**.<br>Only one value can be selected.|**Yes**|**Yes**|
@@ -35,13 +42,18 @@ The set of tabs for Create and Edit pages, as well as for abstract and concrete 
 
 
 **Variants tab**
+
 {% info_block warningBox "Note" %}
+
 No values are available for selection when you create a product bundle. When you create a bundle, one product variant will be added by default.
+
 {% endinfo_block %}
+
 * **While creating** an abstract product, you will see a list of super attributes that derive from **Products > Attributes**. You can select as many super attributes as you need and define from one to many values for them (those values will define the difference between the product variants). Please keep in mind that moving forward, you will be able to create product variants only based on the selected super attributes. As well as you need to add at least one super attribute and define at least one value for it in order to be able to add more product variants in the future.
 * **While editing the abstract product/product bundle**, you will see a table that displays the product variants that exist for this abstract product. From this page, you can View, Edit, and Manage Attributes for the product variant.
 
 **SEO tab**
+
 | Attribute |Description | Create Abstract Product | Update Abstract Product |
 | --- | --- | --- | --- |
 |**Title**|The meta title for your product.|**Yes**|**Yes**|
@@ -50,6 +62,7 @@ No values are available for selection when you create a product bundle. When you
 
 
 **Image tab**
+
 | Attribute |Description | Create Abstract Product | Update Abstract Product |
 | --- | --- | --- | --- |
 |**Image Set Name**|The name of your image set.|**Yes**|**Yes**|
@@ -59,6 +72,7 @@ No values are available for selection when you create a product bundle. When you
 
 
 **Scheduled Prices tab**
+
 On this tab, you see a table with the scheduled prices imported via a CSV file. The following information is available:
 * Currency, store, net, and gross price values
 * Start from (included) and Finish at (included) values that identify a period of time when a specific price is going to be set for a product automatically.

@@ -132,7 +132,7 @@ Make the following checks at `https://mysprykershop.com/quick-order` : `ProductP
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

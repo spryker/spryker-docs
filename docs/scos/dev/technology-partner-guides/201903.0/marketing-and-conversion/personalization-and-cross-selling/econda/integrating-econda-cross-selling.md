@@ -9,6 +9,7 @@ redirect_from:
   - /v2/docs/econda-cross-sell
   - /v2/docs/en/econda-cross-sell
   - /docs/scos/user/technology-partners/201903.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-cross-sell.html
+  - /docs/scos/dev/technology-partner-guides/201903.0/marketing-and-conversion/personalization-and-cross-selling/econda/econda-cross-sell
 ---
 
 Cross sell is highly customizable and it depends on your setup. Please refer to [Econda offical documentation](https://support.econda.de/display/CSDE/Control+Panel).

@@ -16,7 +16,7 @@ redirect_from:
   - /docs/en/product-options
 ---
 
-The *Product Options* feature allows a Back Office user to create and assign product options to abstract products. Product options are product additions that a customer can select on the product detail page before adding the product to the cart. For example, the product options can be gift wrappings for products, insurance, warranty, etc. Product options do not have stock, but a SKU linked to product abstracts. Thus, you cannot purchase them without buying a corresponding product.
+The *Product Options* feature lets a Back Office user create and assign product options to abstract products. Product options are product additions that a customer can select on the product detail page before adding the product to the cart. For example, the product options can be gift wrappings for products, insurance, or warranty. Product options do not have stock, but a SKU linked to product abstracts. Thus, you cannot purchase them without buying a corresponding product.
 
 Each product option is defined by:
 * Product option group name
@@ -40,7 +40,7 @@ In the Back Office, you can perform the following actions on product options:
 * Assign product option groups to products.
 * Activate product options to make them visible in the Storefront.
 
-See [Creating a Product Option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html#creating-a-product-option) and [Managing Product Options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/managing-product-options.html) to learn more about how to work with product options in the Back Office.
+To learn more about how to work with product options in the Back Office, see [Creating a Product Option](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/creating-product-options.html#creating-a-product-option) and [Managing Product Options](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/product-options/managing-product-options.html).
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Product+Options/Product+Options+Overview/product-option-back-office.png)
 
@@ -49,7 +49,7 @@ See [Creating a Product Option](/docs/scos/user/back-office-user-guides/{{page.v
 Each product option group may contain as many product options as you need. For example, you can offer insurance services (**product option group**) for the product with several **product options**:
 * One-year coverage insurance $100.
 * Two-yer coverage insurance $150.
-* Three-year coverage insurance $200 etc.
+* Three-year coverage insurance $200.
 
 {% endinfo_block %}
 
@@ -63,7 +63,7 @@ On the product detail page, the new product option group (1) will be displayed a
 
 {% info_block infoBox %}
 
-Currently, the feature has the following functional constraints which are going to be resolved in the future.
+The feature has the following functional constraints which are going to be resolved in the future.
 
 {% endinfo_block %}
 

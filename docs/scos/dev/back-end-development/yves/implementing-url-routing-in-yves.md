@@ -1,5 +1,5 @@
 ---
-title: Implementing URL Routing in Yves
+title: Implementing URL routing in Yves
 description: The URL routing is a mechanism used to map URLs to the code that gets executed when a specific request is being submitted. URL routing makes URLs more human-readable and SEO friendly.
 last_updated: Sep 2, 2021
 template: howto-guide-template
@@ -22,6 +22,21 @@ redirect_from:
   - /v2/docs/en/yves-url-routing
   - /v1/docs/yves-url-routing
   - /v1/docs/en/yves-url-routing
+related:
+  - title: Yves overview
+    link: docs/scos/dev/back-end-development/yves/yves.html
+  - title: Adding translations for Yves
+    link: docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
+  - title: CLI entry point for Yves
+    link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
+  - title: Controllers and actions
+    link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
+  - title: Modular Frontend
+    link: docs/scos/dev/back-end-development/yves/modular-frontend.html
+  - title: Yves bootstrapping
+    link: docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
+  - title: Yves routes
+    link: docs/scos/dev/back-end-development/yves/yves-routes.html
 ---
 
 The words contained in an URL play a major factor for a search engine to determine if the page is relevant for a specific search query. URL routing is a mechanism used to map URLs to the code that gets executed when a specific request is being submitted. URL routing makes URLs more human-readable and SEO-friendly.
@@ -45,7 +60,7 @@ In the new created plugin which extends `AbstractRouteProviderPlugin`, you must 
 <?php
 use Spryker\Yves\Router\Plugin\RouteProvider\AbstractRouteProviderPlugin;
 
-class HelloRouteProvider extends AbstractRouteProviderPlugin
+class HelloRouteProviderPlugin extends AbstractRouteProviderPlugin
 {
     private const ROUTE_HELLO = 'hello';
     
@@ -118,4 +133,3 @@ public function helloAction(Request $request)
 ```
 
 Now, you can access `http://mysprykershop.com/hello/spryker` in your browser to make a request using the newly configured route with the `name` parameter having its value set to `spryker`.
-

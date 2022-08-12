@@ -1,5 +1,5 @@
 ---
-title: About the Query Container
+title: About the query container
 description: A query container holds all the database queries of the current module.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,7 +22,19 @@ redirect_from:
   - /v2/docs/en/query-container
   - /v1/docs/query-container
   - /v1/docs/en/query-container
+related: 
+  - title: Implementing a query container
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html
+  - title: Using a query container
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html
 ---
+
+{% info_block infoBox "When to use query containers" %}
+
+Don't use query containers to cross module boundaries, as this increases modules coupling. However, you can use them behind [Repository](/docs/scos/dev/back-end-development/zed/persistence-layer/repository.html) and [Entity Manager](/docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html) as query aggregations.
+Previously, query containers were used to cross module borders (via dependency providers), which led to higher module coupling and leaking of persistence layer from one domain object to another, and therefore, to higher maintenance efforts and lower code reusability. This approach has been deprecated now, so we don't recommend using query containers like this in your project development.
+
+{% endinfo_block %}
 
 A query container holds all the database queries of the current module.
 
@@ -58,9 +70,9 @@ You might use the following definitions to generate the related code:
 
 * `vendor/bin/console spryk:run AddZedPersistencePropelAbstractQuery` - Add Zed Persistence Propel Abstract Query
 
-See the [Spryk](/docs/scos/dev/sdk/development-tools/spryk-code-generator.html) documentation for details.
+See the [Spryk](/docs/sdk/dev/spryks/spryks.html) documentation for details.
 
-## What's next?
+## Next steps
 
 * See [Using a Query Container](/docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html) for information on how to use the Query Containers.
 * If you need to implement your own Query Container, see [Implementing a Query Container](/docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html).

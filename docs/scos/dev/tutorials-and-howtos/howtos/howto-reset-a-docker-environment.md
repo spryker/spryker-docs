@@ -1,5 +1,5 @@
 ---
-title: HowTo - Reset a Docker environment
+title: "HowTo: Reset a Docker environment"
 description: Learn how to restart your Spryker in Docker from scratch.
 last_updated: Jun 18, 2021
 template: howto-guide-template
@@ -12,23 +12,29 @@ redirect_from:
   - /docs/en/howto-reset-a-docker-environment
   - /v6/docs/howto-reset-a-docker-environment
   - /v6/docs/en/howto-reset-a-docker-environment
+related:
+  - title: Docker SDK quick start guide
+    link: docs/scos/dev/the-docker-sdk/page.version/docker-sdk-quick-start-guide.html
 ---
 
-Sometimes, after experimenting or getting unexpected behavior from the docker/sdk up command, it may be useful to reset the entire Docker environment and start from scratch.
+Sometimes, after experimenting or getting unexpected behavior from the `docker/sdk up` command, it may be helpful to reset the entire Docker environment and start from scratch.
 
 {% info_block warningBox "Data removal" %}
 
-By following the instructions below, you remove all the Docker data.
+To remove all the Docker data, use the following instructions.
 
 {% endinfo_block %}
 
-To reset a Docker environment:
+To reset a Docker environment, follow these steps:
 
 1. Delete all containers, networks, unused images, and build cache:
+
 ```bash
 sudo docker/sdk prune
 ```
+
 2. In the project root directory, clean data, bootstrap the deploy file and start the instance:
+
 ```bash
 docker/sdk clean-data && docker/sdk boot {deploy_file_name} && docker/sdk up
 ```

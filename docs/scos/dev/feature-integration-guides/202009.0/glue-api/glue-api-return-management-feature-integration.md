@@ -10,7 +10,7 @@ redirect_from:
   - /v6/docs/en/glue-api-return-management-feature-integration
 ---
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
@@ -115,9 +115,9 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox "Verification" %}
 
 Make sure that following endpoints are available now:
-- `http://glue.mysprykershop.com/returns`
-- `http://glue.mysprykershop.com/return-reasons`
+- `https://glue.mysprykershop.com/returns`
+- `https://glue.mysprykershop.com/return-reasons`
 
-Make sure that items from `http://glue.mysprykershop.com/orders` endpoint contain `isReturnable` and uuid properties.
+Make sure that items from `https://glue.mysprykershop.com/orders` endpoint contain `isReturnable` and uuid properties.
 
 {% endinfo_block %}

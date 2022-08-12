@@ -21,20 +21,29 @@ redirect_from:
   - /v2/docs/en/t-override-component
   - /v1/docs/t-override-component
   - /v1/docs/en/t-override-component
+related:
+  - title: Creating a Component
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/creating-a-component.html
+  - title: Using a Component
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/using-a-component.html
+  - title: Extending a Component
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/extending-a-component.html
 ---
 
-If the implementation of any of the components shipped with Spryker frontend does not suite your needs, you can override it with a component of your own. The following article shows how to override a molecule called **simple-carousel**. By default, the component is used, for example, to display product suggestions at the bottom of the page.
+If the implementation of any of the components shipped with Spryker Frontend does not suite your needs, you can override it with a component of your own. The following article shows how to override a molecule called **simple-carousel**. By default, the component is used, for example, to display product suggestions at the bottom of the page.
 
 ![Old simple carousel](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Introduction/Customize+Frontend/old-simple-carousel.png) 
 
 Let us replace the default implementation of this molecule with our own version. It will look basically the same as the default one, but we'll use a different color for the left and right arrows; the current view number will be displayed in the browser console. Also, when reaching the last image in the set, the component will no longer be reset to the first view automatically by pressing the right button.
 
-## 1. Create Component Folder on Project Level
+## 1. Create component folder on project level
+
 On the global level, the molecule we want to override is located in the following folder: `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/components/molecules/simple-carousel`. It is a part of the main Shop UI application. To override it, we need to place our implementation in the Shop UI folder on the project level, and also replicate the folder structure. In other words, we need to create the following folder for the component: `src/Pyz/Yves/ShopUi/Theme/default/components/molecules/simple-carousel`.
 
 Also, we need to create an entry point for Webpack. Create an empty `index.ts` file in the folder.
 
-## 2. Override Component Template
+## 2. Override component template
+
 The first thing we need to do is to override the Twig of the default component. To do this, we need to create a Twig file for the component on the project level. Since the project level has priority over the global level, the newly created project-side Twig will override the global one. In other words, whenever the component is used on a page, your implementation will be used instead of the default one.
 
 To override the global component, the Twig file name on the project level must be the same as on the global level. Also, component _name_ and _tag_ name specified in the config property must be the same as on the global level. In our case, the file name on the project level must be `simple-carousel.twig`, and the **config** property will look as follows:
@@ -127,11 +136,9 @@ As we are not going to change the component template, let us copy the whole of t
     </div>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
-
-<br>
 </details>
 
-## 3. Define Component Styles
+## 3. Define component styles
 The next thing to do is to provide the styles to use in the component. We need to use the mixin of the default component and add our style customization within the mixin. For this purpose, create file `simple-carousel.scss` in the project folder with the following content:
 
 ```css
@@ -144,15 +151,16 @@ With the above code, we inherit all styles of the default component, and then ov
 
 Now, we need to make the style visible for Webpack using the `index.ts` file:
 
-```Javascript
+```js
 // Import component style
 import './simple-carousel.scss';
 ```
 
-## 4. Change Component Behavior
+## 4. Change component behavior
+
 Finally, let us define what the component does. Create the `simple-carousel.ts` file with the following content:
 
-```Javascript
+```js
 // Import the SimpleCarousel class
 import SimpleCarousel from 'ShopUi/components/molecules/simple-carousel/simple-carousel';
 
@@ -175,7 +183,7 @@ In the above example, first, we import class `SimpleCarousel` from the global l
 
 If you want to define the component behavior from scratch rather than importing the behavior of the default component, you need to extend the base **Component** class instead:
 
-```
+```js
 import Component from 'ShopUi/models/component';
 
 export default class SimpleCarouselExtended extends Component {
@@ -185,7 +193,7 @@ export default class SimpleCarouselExtended extends Component {
 
 After implementing the component behavior, let us bond it to the DOM element that represents the component. We need to use the same tag name as the default component, in our case, `simple-carousel`. Open the `index.ts` file again and add the following content:
 
-```Javascript
+```js
 // Import the 'register' function from the Shop Application
 import register from 'ShopUi/app/registry';
 
@@ -196,7 +204,8 @@ export default register(
 );
 ```
 
-## 5. Build Frontend
+## 5. Build frontend
+
 Now, let us build the frontend. Run the following command in the console: `npm run yves`.
 
 As soon as **npm** finishes, you can see the changes in the simple carousel component. The arrow color is changed and you cannot switch to the **1st** element after reaching the last one:

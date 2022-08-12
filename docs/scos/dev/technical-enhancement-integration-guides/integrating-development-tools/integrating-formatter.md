@@ -13,6 +13,15 @@ redirect_from:
   - /v6/docs/formatter-integration-guide
   - /v6/docs/en/formatter-integration-guide
   - /docs/scos/dev/migration-and-integration/202108.0/development-tools/formatter-integration-guide.html
+related: 
+  - title: Integrating SCSS linter
+    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-scss-linter.html
+  - title: Integrating TS linter
+    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-ts-linter.html
+  - title: Integrating Web Profiler for Zed
+    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-for-zed.html
+  - title: Integrating Web Profiler Widget for Yves
+    link: docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-web-profiler-widget-for-yves.html
 ---
 
 Follow the steps below to integrate [Formatter](/docs/scos/dev/sdk/development-tools/formatter.html) into your project.

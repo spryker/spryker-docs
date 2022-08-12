@@ -1,5 +1,5 @@
 ---
-title: Configuring an Events Queue
+title: Configuring an events queue
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/event-configure-q
@@ -21,9 +21,16 @@ redirect_from:
   - /v2/docs/en/event-configure-q
   - /v1/docs/event-configure-q
   - /v1/docs/en/event-configure-q
+related:
+  - title: Event
+    link: docs/scos/dev/back-end-development/data-manipulation/event/event.html
+  - title: Adding events
+    link: docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html
+  - title: Listening to events
+    link: docs/scos/dev/back-end-development/data-manipulation/event/listening-to-events.html
 ---
 
-This article descirbes how event queues are configured.
+This document describes how event queues are configured.
 
 To configure the events queue:
 
@@ -122,7 +129,9 @@ class RabbitMqDependencyProvider extends RabbitMqRabbitMqDependencyProvider
 
 }
 ```
+
 3. In `\Pyz\Client\Queue\QueueDependencyProvider`, add the RabbitMQ adapter:
+
 ```php
 <?php
 namespace Pyz\Client\Queue;
@@ -149,6 +158,7 @@ class QueueDependencyProvider extends BaseQueueDependencyProvider
 ```
 
 4. In `\Pyz\Zed\Queue\QueueConfig`, add receiver options for the event queue:
+
 ```php
 <?php
 namespace Pyz\Zed\Queue;
@@ -192,6 +202,7 @@ class QueueConfig extends SprykerQueueConfig
 ```
 
 5. In `\Pyz\Zed\Queue\QueueDependencyProvider`, add a plugin(consumer) to process messages/events.
+
 ```php
 <?php
 namespace Pyz\Zed\Queue;
@@ -218,7 +229,9 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 
 }
 ```
+
 6. In your application’s configuration file `./config/Shared/config_default.php` or environment specific make sure you have this configuration:
+
 ```php
 <?php
 $config[QueueConstants::QUEUE_SERVER_ID] = (gethostname()) ?: php_uname('n');

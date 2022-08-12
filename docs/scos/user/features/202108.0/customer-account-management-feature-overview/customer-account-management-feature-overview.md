@@ -21,13 +21,13 @@ Customers create accounts to save their personal details. Back Office users mana
 * Order history
 * Language and shipping preferences
 
-Password management enables the basic password security for customer accounts. It allows customers to:
+Password management enables the basic password security for customer accounts. It lets customers:
 
 * Specify the account password when registering.
 * Change the password in their customer account.
 * Request a password reset email.
 
-Also, it allows you to manage customer access, request a password change or change it on your side. You can restrict the possibility for the customers to register with simple passwords and lock out accounts after several unsuccessful logins for a certain period of time.
+Also, it lets you manage customer access, request a password change or change it on your side. You can restrict the possibility for the customers to register with simple passwords and lock out accounts after several unsuccessful logins for a certain period of time.
 
 ## Related Business User articles
 

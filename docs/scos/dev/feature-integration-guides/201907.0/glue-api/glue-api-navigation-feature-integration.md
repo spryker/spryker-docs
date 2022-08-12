@@ -8,13 +8,14 @@ originalArticleId: 87ec1804-7443-4361-af1f-bb0f12e7d2de
 redirect_from:
   - /v3/docs/navigation-api-feature-integration-1
   - /v3/docs/en/navigation-api-feature-integration-1
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/navigation-api-feature-integration.html
 ---
 
 {% info_block errorBox %}
 The following feature integration guide expects the basic feature to be in place. The current feature integration guide only adds the **Navigation REST API** functionality.
 {% endinfo_block %}
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -65,14 +66,14 @@ Specify mapping for the source field from which the resourceId field should be f
 
 <details open>
 <summary markdown='span'>src/Pyz/Glue/NavigationsRestApi/NavigationsRestApiConfig.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Glue\NavigationsRestApi;
- 
+
 use Spryker\Glue\NavigationsRestApi\NavigationsRestApiConfig as SprykerNavigationsRestApiConfig;
- 
+
 class NavigationsRestApiConfig extends SprykerNavigationsRestApiConfig
 {
 	/**
@@ -110,12 +111,12 @@ Activate the following plugin:
 
 ```php
 <?php
- 
+
 namespace Pyz\Glue\GlueApplication;
- 
+
 use Spryker\Glue\GlueApplication\GlueApplicationDependencyProvider as SprykerGlueApplicationDependencyProvider;
 use Spryker\Glue\NavigationsRestApi\Plugin\ResourceRoute\NavigationsResourceRoutePlugin;
- 
+
 class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependencyProvider
 {
 	/**
@@ -127,7 +128,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			new NavigationsResourceRoutePlugin(),
 		];
 	}
- 
+
 	/**
 	* @param \Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
 	*
@@ -140,7 +141,7 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 			NavigationsRestApiConfig::RESOURCE_NAVIGATIONS,
 			new CategoryNodeByResourceIdResourceRelationshipPlugin()
 		);
-  
+
 		return $resourceRelationshipCollection;
 	}
 }
@@ -151,20 +152,20 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 
 {% info_block warningBox “Verification” %}
 
-`NavigationsResourceRoutePlugin` is set up correctly if the following endpoint is available: *http://glue.mysprykershop.com/navigations/{navigationId}*
+`NavigationsResourceRoutePlugin` is set up correctly if the following endpoint is available: *https://glue.mysprykershop.commm/navigations/{navigationId}*
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
 
-Now, it is possible to verify that the configuration of NavigationsRestApiConfig is done correctly. Perform the "http://glue.mysprykershop.com/navigations/{navigationId}" request and check that each node of the type you set up in the configuration (category and CMS pages in the example
+Now, it is possible to verify that the configuration of NavigationsRestApiConfig is done correctly. Perform the "https://glue.mysprykershop.commm/navigations/{navigationId}" request and check that each node of the type you set up in the configuration (category and CMS pages in the example
 {% endinfo_block %} "resourceId" is filled with the valid foreign key.)
 
 {% info_block warningBox "your title goes here" %}
-Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes*.<br>Make sure that the response contains `category-nodes` as a relationship and `category-nodes` data included.
+Send a request to *https://glue.mysprykershop.commm/navigations/MAIN_NAVIGATION?include=category-nodes*.<br>Make sure that the response contains `category-nodes` as a relationship and `category-nodes` data included.
 {% endinfo_block %}
 
 <details open>
-<summary markdown='span'>http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes</summary>
+<summary markdown='span'>https://glue.mysprykershop.commm/navigations/MAIN_NAVIGATION?include=category-nodes</summary>
 
 ```json
 {
@@ -234,7 +235,7 @@ Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?inc
 			"isActive": true
 		},
 		"links": {
-			"self": "http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?include=category-nodes"
+			"self": "https://glue.mysprykershop.commm/navigations/MAIN_NAVIGATION?include=category-nodes"
 		},
 		"relationships": {
 			"category-nodes": {
@@ -302,7 +303,7 @@ Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?inc
 				"order": 70
 			},
 			"links": {
-				"self": "http://glue.mysprykershop.com/category-nodes/10"
+				"self": "https://glue.mysprykershop.commm/category-nodes/10"
 			}
 		},
 		{
@@ -347,7 +348,7 @@ Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?inc
 				"order": 80
 			},
 			"links": {
-				"self": "http://glue.mysprykershop.com/category-nodes/12"
+				"self": "https://glue.mysprykershop.commm/category-nodes/12"
 			}
 		},
 		{
@@ -392,7 +393,7 @@ Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?inc
 				"order": 100
 			},
 			"links": {
-				"self": "http://glue.mysprykershop.com/category-nodes/6"
+				"self": "https://glue.mysprykershop.commm/category-nodes/6"
 			}
 		},
 		{
@@ -437,7 +438,7 @@ Send a request to *http://glue.mysprykershop.com/navigations/MAIN_NAVIGATION?inc
 				"order": 80
 			},
 			"links": {
-				"self": "http://glue.mysprykershop.com/category-nodes/8"
+				"self": "https://glue.mysprykershop.commm/category-nodes/8"
 			}
 		}
 	]

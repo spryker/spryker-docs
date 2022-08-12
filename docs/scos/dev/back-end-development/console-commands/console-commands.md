@@ -1,5 +1,5 @@
 ---
-title: Console Commands in Spryker
+title: Console commands in Spryker
 description: The list of console commands contains the command names together with a short description of what the command does.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,13 @@ redirect_from:
   - /v2/docs/en/console
   - /v1/docs/console
   - /v1/docs/en/console
+  - /docs/scos/dev/back-end-development/202108.0/console-commandsconsole-commands-in-spryker.html
+  - /docs/scos/dev/back-end-development/202204.0/console-commandsconsole-commands-in-spryker.html
+related:
+  - title: Getting the list of console commands and available options
+    link: docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html
+  - title: Implementing a new console command
+    link: docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html
 ---
 
 The [list of console commands](/docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html) contains the command names together with a short description of what the command does. The most important commands in Spryker can be split into 4 categories : collector commands, order management system commands, setup commands, and frontend-related commands. This article provides details on each of the commands.
@@ -35,15 +42,20 @@ Collector commands are responsible of exporting the data in the SQL database to 
 * `collector:storage:export` - exports data to Key-Value storage (Redis)
 
 ## Order Management System commands
+
 Check if conditions are satisfied for the orders that are in the state that is the source state for the transition that has a condition attached.
+
 ```bash
 console oms:check-condition
 ```
+
 Options:
+
 * `-s`, `--store=store` - filter by the given store
 * `-l`, `--limit=limit` - limit the number of orders
 
 Examples:
+
 ```bash
 $ console oms:check-condition -s DE
 $ console oms:check-condition --limit=100 --store=DE
@@ -51,15 +63,18 @@ $ console oms:check-condition --limit=100 --store=DE
 
 ---
 Check if timeout was reached for the orders that are in the state that is the source state for the transition that has a timeout attached.
+
 ```bash
 console oms:check-timeout
 ```
 
 Options:
+
 * `-s`, `--store=store` - filter by the given store
 * `-l`, `--limit=limit` - limit the number of orders
 
 Examples:
+
 ```bash
 $ console oms:check-timeout --store=DE --limit=100
 $ console oms:check-timeout -l 100
@@ -67,41 +82,145 @@ $ console oms:check-timeout -l 100
 
 ## Installation setup commands
 
-`setup:install` - runs a set of commands, necessary for installing or updating the application. The following steps are performed when running this command:
+- Setup install runs a set of commands, necessary for installing or updating the application.
 
-1. delete all cache files for all stores (`cache:delete-all`)
-2. remove the directory that contains the generated files, such as transfer classes, merged database schema XML files or autocompletion classes (`setup:remove-generated-directory`)
-3. create or migrate the database (`setup:propel`)
-4. generate transfer classes for each of the objects defined in the XML transfer files (`transfer:generate`)
-5. initialize the database with required data (`setup:init-db`)
-6. generate ide auto-completion files to enable navigation to referenced classes (`dev:ide:generate-auto-completion`). Generated auto-completion classes will be found for each application under the generated folder.
-7. build the project resources for Yves and Zed
-8. build the navigation tree (`application:build-navigation-tree`)
+```bash
+setup:install
+```
 
-{% info_block infoBox %}
-Each of the commands contained in the steps above can also be executed individually.
-{% endinfo_block %}
+  The following steps are performed when running this command:
 
-`setup:install:demo-data` - inserts demo data into the database for testing reasons
+  1. delete all cache files for all stores
 
-`setup:propel` - runs a set of commands, necessary for creating or migrating the database. The following steps are performed when running this command:
+  ```bash
+  cache:delete-all
+  ```
 
-1. write propel configuration (`setup:propel:config:convert`)
-2. creates the database if it doesn’t exist yet, based on the configuration set in the previous step (`setup:propel:database:create`)
-3. ensure compatibility with Postgresql if necessary, by adjusting the Propel XML schema files (`setup:propel:pg-sql-compat`)
-4. copy schema files from Spryker and project packages to the generated folder (`setup:propel:schema:copy`)
-5. build Propel classes based on the XML schema files (`setup:propel:model:build`)
-6. compare the propel models with the database tables and generate the diff, in order to prepare for migration (`setup:propel:diff`)
-7. migrate the database: update the database so that’s in sync with the propel models in the project (`setup:propel:migrate`)
+  2. remove the directory that contains the generated files, such as transfer classes, merged database schema XML files or autocompletion classes
+
+  ```bash
+  setup:remove-generated-directory
+  ```
+
+  3. create or migrate the database
+
+  ```bash
+  setup:propel
+  ```
+
+  4. generate transfer classes for each of the objects defined in the XML transfer files
+
+  ```bash
+  transfer:generate
+  ```
+
+  5. initialize the database with required data
+
+  ```bash
+  setup:init-db
+  ```
+
+  6. generate IDE auto-completion files to enable navigation to referenced classes (). Generated auto-completion classes will be found for each application under the generated folder.
+
+```bash
+dev:ide:generate-auto-completion
+```
+
+  7. build the project resources for Yves and Zed
+  8. build the navigation tree
+
+  ```bash
+  application:build-navigation-tree
+  ```
+
+  {% info_block infoBox %}
+
+  Each of the commands contained in the steps above can also be executed individually.
+
+  {% endinfo_block %}
+
+- This command inserts demo data into the database for testing reasons.
+
+```bash
+setup:install:demo-data
+```
+
+- Setup propel command runs a set of commands, necessary for creating or migrating the database.
+
+```bash
+setup:propel
+```
+  The following steps are performed when running this command:
+
+  1. write propel configuration
+
+  ```bash
+  setup:propel:config:convert
+  ```
+
+  2. creates the database if it doesn’t exist yet, based on the configuration set in the previous step
+
+  ```bash
+  setup:propel:database:create
+  ```
+
+  3. ensure compatibility with PostgreSQL if necessary, by adjusting the Propel XML schema files
+
+  ```bash
+  setup:propel:pg-sql-compat
+  ```
+
+  4. copy schema files from Spryker and project packages to the generated folder
+
+  ```bash
+  setup:propel:schema:copy
+  ```
+
+  5. build Propel classes based on the XML schema files
+
+  ```bash
+  setup:propel:model:build
+  ```
+
+  6. compare the propel models with the database tables and generate the diff, in order to prepare for migration
+
+  ```bash
+  setup:propel:diff
+  ```
+
+  7. migrate the database: update the database so that’s in sync with the propel models in the project
+
+  ```bash
+  setup:propel:migrate
+  ```
 
 ## Jenkins setup commands
 
 Cron jobs are scheduled by using Jenkins. For setting up Jenkins, the following console commands can be used from the command line:
 
-* `scheduler:resume` - starts the Jenkins service
-* `scheduler:suspend` - shut downs the Jenkins service
-* `scheduler:setup` - sets up the cron jobs based on the definitions contained in the configuration file (the config file for jobs is placed in `/config/Zed/cronjobs/jobs.php`)
-* `scheduler:clean` - cleans Jenkins jobs
+* starts the Jenkins service
+
+```bash
+scheduler:resume
+```
+
+* shuts down the Jenkins service
+
+```bash
+scheduler:suspend
+```
+
+* sets up the cron jobs based on the definitions contained in the configuration file (the config file for jobs is placed in `/config/Zed/cronjobs/jobs.php`)
+
+```bash
+scheduler:setup
+```
+
+* cleans Jenkins jobs
+
+```bash
+scheduler:clean
+```
 
 {% info_block infoBox "Git Commands" %}
 
@@ -110,12 +229,15 @@ Git commands are enabled through console commands and they have effect on the Sp
 {% endinfo_block %}
 
 ## Frontend-related commands
+
 Depending on your environments and needs, there is a number of commands you can run. The table below provides an overview of such commands.
+
 {% info_block infoBox %}
 
 To use the NPM commands, you need to download and install [Node.js](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm). Minimum versions for Node.js is **8.x** and for NPM it is **5.x**. Then you can use the appropriate commands listed in the table.
 
 {% endinfo_block %}
+
 <table>
     <thead>
         <tr>

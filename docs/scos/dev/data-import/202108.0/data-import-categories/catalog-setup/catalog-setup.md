@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/catalog-setup
 ---
 
-**Catalog Setup** contains data required to sell products and build their main structure. 
+*Catalog Setup* contains data required to sell products and build their main structure. 
 
 {% info_block warningBox "Important" %}
 
@@ -21,10 +21,10 @@ We recommend setting up the Catalog after having done the [Commerce Setup](/docs
 
 This section will help you import the necessary product-related data to be able to sell products/services in your online store. We have structured it into four main categories focusing on the following topics:
 
-*     [Categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/categories.html)
-*     [Products](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/products.html)
-*     [Pricing](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/pricing/pricing.html)
-*     [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/stocks.html)
+* [Categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/categories.html)
+* [Products](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/products.html)
+* [Pricing](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/pricing/pricing.html)
+* [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/stocks.html)
 
 Within the [Categories](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/categories/categories.html) section, you will find all information about the data imports required to set up categories that can be used in your online store as well as whether they are active, searchable in the menu, etc.
 
@@ -38,14 +38,10 @@ In the  [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categor
 {% info_block warningBox "Import order" %}
 
 By default, most of the product data is stored in a separate subfolder in `data/import/icecat_biz_data`. The order in which the files are imported is **very strict**:
+
 1. Any product-related entities such as categories, attributes, and tax sets must be imported before the actual products.
-2. [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html) and for multistore setups [product_abstract_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html).
+2. [product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html) and for multi-store setups [product_abstract_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract-store.csv.html).
 3. [product_concrete.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-concrete.csv.html).
 4. Other product data such as images, product sets, etc. in any order.
 
 {% endinfo_block %}
-
-
-
-
-

@@ -28,15 +28,30 @@ redirect_from:
   - /docs/scos/dev/sdk/202009.0/development-tools/phpstan.html
   - /docs/scos/dev/sdk/202108.0/development-tools/phpstan.html
 related:
-  - title: Architecture Sniffer
+  - title: Architecture sniffer
     link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
-  - title: Code Sniffer
-    link: docs/scos/dev/sdk/development-tools/phpstan.html
+  - title: Code sniffer
+    link: docs/scos/dev/sdk/development-tools/code-sniffer.html
+  - title: Formatter
+    link: docs/scos/dev/sdk/development-tools/formatter.html
+  - title: Performance audit tool- Benchmark
+    link: docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
+  - title: SCSS linter
+    link: docs/scos/dev/sdk/development-tools/scss-linter.html
+  - title: TS linter
+    link: docs/scos/dev/sdk/development-tools/ts-linter.html
+  - title: Spryk code generator
+    link: docs/scos/dev/sdk/development-tools/spryk-code-generator.html
+  - title: Static Security Checker
+    link: docs/scos/dev/sdk/development-tools/static-security-checker.html
+  - title: Tooling config file
+    link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
 ---
 
 [PHPStan](https://github.com/phpstan/phpstan) is a static code analyzer that introspects the code without running it and catches various classes of bugs prior to unit testing.
 
 ## Installation
+
 To install PHPStan, run the following command:
 
 ```bash
@@ -56,13 +71,15 @@ Note that running this command with the level 2 key (**-l 2**) and having no err
 
 {% endinfo_block %}
 
-## Additional Functionality
-**Main Configuration File Inheritance**
+## Additional functionality
+
+**Main configuration file inheritance**
 
 To avoid duplicated code while specifying a different configuration in the _parameters_ section of the `phpstat.neon` file, it is possible to extend this file and determine only the changes needed for a particular configuration of a module.
 
-### ./[ROOT]/phpstan.neon:
-```
+### ./[ROOT]/phpstan.neon
+
+```php
 parameters:
     excludes_analyse:
         - %rootDir%/../../../src/Generated/*
@@ -78,8 +95,9 @@ services:
 ...
 ```
 
-### ./[Module]/phpstan.neon:
-```
+### ./[Module]/phpstan.neon
+
+```php
 parameters:
     ignoreErrors:
     - '#.+ has invalid typehint type Symfony\\Component\\OptionsResolver\\OptionsResolverInterface.#'

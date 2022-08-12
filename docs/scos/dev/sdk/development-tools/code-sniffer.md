@@ -29,10 +29,25 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/development-tools/code-sniffer.html
   - /docs/scos/dev/sdk/202009.0/development-tools/code-sniffer.html
   - /docs/scos/dev/sdk/202108.0/development-tools/code-sniffer.html
-
 related:
-  - title: Architecture Sniffer
+  - title: Architecture sniffer
     link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
+  - title: Formatter
+    link: docs/scos/dev/sdk/development-tools/formatter.html
+  - title: Performance audit tool- Benchmark
+    link: docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
+  - title: PHPStan
+    link: docs/scos/dev/sdk/development-tools/phpstan.html
+  - title: SCSS linter
+    link: docs/scos/dev/sdk/development-tools/scss-linter.html
+  - title: TS linter
+    link: docs/scos/dev/sdk/development-tools/ts-linter.html
+  - title: Spryk code generator
+    link: docs/scos/dev/sdk/development-tools/spryk-code-generator.html
+  - title: Static Security Checker
+    link: docs/scos/dev/sdk/development-tools/static-security-checker.html
+  - title: Tooling config file
+    link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
 ---
 
 To correspond to [PSR-2 standards](http://www.php-fig.org/psr/psr-2/), we integrated the well known [PHP-CS Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer) and [PHPCodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer).
@@ -65,7 +80,11 @@ There are two levels of sniffer severity: Level 1 (normal, used by default) and 
 	console c:s:s -m Spryker.Development -l 2 -v
 ```
 
-Tip: `c:s:s` can be used as short for `code:sniff:style`.
+{% info_block infoBox "Tip" %}
+
+`c:s:s` can be used as short for `code:sniff:style`.
+
+{% endinfo_block %}
 
 Additional options:
 

@@ -1,5 +1,5 @@
 ---
-title: HowTo - Enable guest checkout in B2B Demo Shop
+title: "HowTo: Enable guest checkout in B2B Demo Shop"
 description: Learn how to enable guest checkout in B2B Demo Shop.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -12,37 +12,43 @@ redirect_from:
   - /docs/en/howto-enable-guest-checkout-in-b2b-demo-shop
   - /v6/docs/howto-enable-guest-checkout-in-b2b-demo-shop
   - /v6/docs/en/howto-enable-guest-checkout-in-b2b-demo-shop
+related:
+  - title: Checkout steps
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html
 ---
 
-As B2B environments usually implement complex business logics, in the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html), guest users cannot check out by default. In some cases, you might need guest checkout to be enabled.
+As B2B environments usually implement complex business logic, in the [B2B Demo Shop](/docs/scos/user/intro-to-spryker/b2b-suite.html), guest users cannot check out by default. However, in some cases, you may need guest checkout to be enabled.
 
-{% info_block infoBox "Examplary implementation" %}
+{% info_block infoBox "Exemplary implementation" %}
 
-The implementation described in this document is examplary and may require additional development on the project level.
+The implementation described in this document is exemplary and may require additional development on the project level.
 
 {% endinfo_block %}
 
-
-
-
-To enable guest checkout:
+## Enable guest checkout
 
 1. In the `is_restricted` column of the `spy_unauthenticated_customer_access` table, set `0` for `add-to-cart` and `order-place-submit` content types.
-
 2. Remove customer permissions:
-    1. In the Back Office, go to **Customers** > **Customer Access**.
+    1. In the Back Office, go to **Customers&nbsp;<span aria-label="and then">></span> Customer Access**.
     2. Clear all the permissions.
-    ![customer-permissions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+enable+guest+checkout+in+B2B+Demo+Shop/customer-permissions.png) 
-    3. Select **Save**
-    This refreshes the page with the success message displayed.
+    ![customer-permissions](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/HowTos/HowTo+-+enable+guest+checkout+in+B2B+Demo+Shop/customer-permissions.png)
+    3. Select **Save**. The page refreshes with the success message displayed.
 
-3. In `​ Pyz\Client\Permission\PermissionDependencyProvider.php`, remove or comment `​PlaceOrderWithAmountUpToPermissionPlugin()`​.
+3. In `​Pyz\Client\Permission\PermissionDependencyProvider.php`, remove or comment `​PlaceOrderWithAmountUpToPermissionPlugin()`​.
 
-4. DevVM-based instace: to sync code changes, run `vagrant halt && vagrant up`.
+4. DevVM-based instance: Sync code changes:
+   ```bash
+   vagrant halt && vagrant up
+   ```
+{% info_block warningBox "Warning" %}
 
-5. In CheckoutPage module, create `src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig`.
-<details open>
-    <summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig</summary>
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+
+{% endinfo_block %}
+
+5. In the `CheckoutPage` module, create `src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig`:
+
+<details><summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/login/login.twig</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}
@@ -143,16 +149,15 @@ To enable guest checkout:
     </div>
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
-
 </details>
 
-
-
-6. In `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.twig` adjust the form definition by replacing `enable: data.isPlaceableOrder and can('WriteSharedCartPermissionPlugin', data.cart.idQuote),` with the following:
+6. In `src/Pyz/Yves/CheckoutPage/Theme/default/views/summary/summary.twig`, adjust the form definition by replacing `enable: data.isPlaceableOrder and can('WriteSharedCartPermissionPlugin', data.cart.idQuote)` with the following:
 ```twig
 enable: data.isPlaceableOrder
 and can('SeeOrderPlaceSubmitPermissionPlugin')
 and (not is_granted('ROLE_USER') or can('WriteSharedCartPermissionPlugin', data.cart.idQuote)),
 ```
 
-Now you can check out as a guest user. After adding items to cart, use the `http://yves.de.spryker.local/en/cart` custom URL for checkout.
+After this, you can check out as a guest user.
+
+After adding items to cart, use the `https://mysprykershop/en/cart` custom URL for checkout.

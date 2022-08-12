@@ -7,9 +7,10 @@ originalArticleId: 785e21c3-4474-447c-bfbf-ca1942f9c80a
 redirect_from:
   - /v2/docs/payments-api-feature-integration-201903
   - /v2/docs/en/payments-api-feature-integration-201903
+  - /docs/scos/dev/feature-integration-guides/201903.0/glue-api/glue-api-payments-feature-integration.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -33,28 +34,28 @@ Put all the payment methods available in the shop to `PaymentConfig`. For exampl
 **`src/Pyz/Zed/Payment/PaymentConfig.php`**
 ```php
 &lt;?php
- 
+
 namespace Pyz\Zed\Payment;
- 
+
 use Spryker\Zed\Payment\PaymentConfig as SprykerPaymentConfig;
- 
+
 class PaymentConfig extends SprykerPaymentConfig
 {
     /**
      * @uses \Spryker\Shared\DummyPayment\DummyPaymentConfig::PROVIDER_NAME
      */
     protected const DUMMY_PAYMENT_PROVIDER_NAME = 'DummyPayment';
- 
+
     /**
      * @uses \Spryker\Shared\DummyPayment\DummyPaymentConfig::PAYMENT_METHOD_NAME_INVOICE
      */
     protected const DUMMY_PAYMENT_PAYMENT_METHOD_NAME_INVOICE = 'invoice';
- 
+
     /**
      * @uses \Spryker\Shared\DummyPayment\DummyPaymentConfig::PAYMENT_METHOD_NAME_CREDIT_CARD
      */
     protected const DUMMY_PAYMENT_PAYMENT_METHOD_NAME_CREDIT_CARD = 'credit card';
- 
+
     /**
      * @return array
      */
@@ -82,7 +83,7 @@ In order to have payment methods available for the checkout, you'll need to exte
 <transfers xmlns="spryker:transfer-01"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
- 
+
     <transfer name="RestPayment">
         <property name="DummyPayment" type="DummyPayment"/>
         <property name="DummyPaymentInvoice" type="DummyPayment"/>
@@ -116,12 +117,12 @@ Activate the following plugin:
 **`src/Pyz/Zed/Installer/InstallerDependencyProvider.php`**
 ```php
 &lt;?php
- 
+
 namespace Pyz\Zed\Installer;
- 
+
 use Spryker\Zed\Installer\InstallerDependencyProvider as SprykerInstallerDependencyProvider;
 use Spryker\Zed\Payment\Communication\Plugin\Installer\SalesPaymentMethodTypeInstallerPlugin;
- 
+
 class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 {
     /**

@@ -8,6 +8,8 @@ originalArticleId: 2b8c5d9d-e4bb-469b-8e35-d9497fef3997
 redirect_from:
   - /v3/docs/payments-api-feature-integration-201907
   - /v3/docs/en/payments-api-feature-integration-201907
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-payments-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/201907.0/glue-api/glue-api-payments-feature-integration.html
 related:
   - title: Checking Out Purchases and Getting Checkout Data
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
@@ -19,7 +21,7 @@ related:
 The current guide only adds the Payment Management API functionality.
 </div></section>
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start the feature integration, overview and install the necessary features:
 
@@ -38,7 +40,7 @@ composer require spryker/payments-rest-api:"1.0.0" --update-with-dependencies
 <section contenteditable="false" class="warningBox"><div class="content">
 
 **Verification**
-    
+
 Make sure that the following modules are installed:
 
 | Module | Expected Directory |
@@ -52,31 +54,31 @@ Put all the payment methods available in the shop to  `PaymentConfig`, for examp
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/Payment/PaymentConfig.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Payment;
- 
+
 use Spryker\Zed\Payment\PaymentConfig as SprykerPaymentConfig;
- 
+
 class PaymentConfig extends SprykerPaymentConfig
 {
     /**
      * @uses \Spryker\Shared\DummyPayment\DummyPaymentConfig::PROVIDER_NAME
      */
     protected const DUMMY_PAYMENT_PROVIDER_NAME = 'DummyPayment';
- 
+
     /**
      * @uses \Spryker\Shared\DummyPayment\DummyPaymentConfig::PAYMENT_METHOD_NAME_INVOICE
      */
     protected const DUMMY_PAYMENT_PAYMENT_METHOD_NAME_INVOICE = 'invoice';
- 
+
     /**
      * @uses \Spryker\Shared\DummyPayment\DummyPaymentConfig::PAYMENT_METHOD_NAME_CREDIT_CARD
      */
     protected const DUMMY_PAYMENT_PAYMENT_METHOD_NAME_CREDIT_CARD = 'credit card';
- 
+
     /**
      * @return array
      */
@@ -98,7 +100,7 @@ class PaymentConfig extends SprykerPaymentConfig
 <section contenteditable="false" class="warningBox"><div class="content">
 
 **Verification**
-    
+
 Make sure that calling `Pyz\Zed\Payment\PaymentConfig::getSalesPaymentMethodTypes()` returns an array of the payment methods available in the shop grouped by the payment provider.
 </div></section>
 
@@ -114,16 +116,16 @@ In order to have payment methods available for the checkout, you need to extend 
 <transfers xmlns="spryker:transfer-01"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
- 
+
     <transfer name="RestPayment">
         <property name="DummyPayment" type="DummyPayment"/>
         <property name="DummyPaymentInvoice" type="DummyPayment"/>
         <property name="DummyPaymentCreditCard" type="DummyPayment"/>
     </transfer>
- 
+
 </transfers>
 ```
-    
+
 <br>
 </details>
 
@@ -137,7 +139,7 @@ console transfer:generate
 <section contenteditable="false" class="warningBox"><div class="content">
 
 **Verification**
-    
+
 Make sure that the following changes have occurred:
 
 | Transfer | Type | Event | Path |
@@ -160,15 +162,15 @@ Activate the following plugin:
 
 <details open>
 <summary markdown='span'>src/Pyz/Zed/Installer/InstallerDependencyProvider.php</summary>
-    
+
 ```php
 <?php
- 
+
 namespace Pyz\Zed\Installer;
- 
+
 use Spryker\Zed\Installer\InstallerDependencyProvider as SprykerInstallerDependencyProvider;
 use Spryker\Zed\Payment\Communication\Plugin\Installer\SalesPaymentMethodTypeInstallerPlugin;
- 
+
 class InstallerDependencyProvider extends SprykerInstallerDependencyProvider
 {
     /**

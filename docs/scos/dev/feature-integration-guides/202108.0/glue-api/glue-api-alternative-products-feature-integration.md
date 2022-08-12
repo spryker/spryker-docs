@@ -15,9 +15,10 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/retrieving-alternative-products.html
 ---
 
-## Install Feature API
+## Install feature API
 
 ### Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | NAME | VERSION | REQUIRED SUB-FEATURE |

@@ -31,11 +31,4 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productrelationcollector.html
 ---
 
-## Upgrading from version 1.* to version 2.*
-
-From version 2 we added support for multi-currency. First of all, make sure that you [migrated the Price module](/docs/scos/dev/module-migration-guides/migration-guide-price.html). We have changed collector dependency to use `PriceProduct` module instead of price, please update your code accordingly if you overwrote the core.
-
-<!--
-* [Learn more about Products in multi-store environment](/docs/scos/dev/feature-integration-guides/{{site.version}}/multi-store-products-feature-integration.html)-->
-
-<!-- Last review date: Nov 23, 2017 by Aurimas Ličkus -->
+{% include pbc/all/upgrade-modules/upgrade-the-productrelationcollector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productrelationcollector-module.md -->

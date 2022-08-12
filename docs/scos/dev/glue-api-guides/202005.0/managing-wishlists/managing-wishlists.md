@@ -15,7 +15,9 @@ The Wishlists API provides REST access to managing [wishlists]() of a customer. 
 In your development, these resources can help you to enable complete wishlist functionality for your customers.
 
 {% info_block warningBox "Authentication " %}
+
 Since wishlists are available for registered users only, the endpoints provided by the API cannot be accessed anonymously. For this reason, you always need to pass a user's authentication token in your REST requests. For details on how to authenticate a user and retrieve the token, see [Authentication and Authorization]().
+
 {% endinfo_block %}
 
 ## Installation
@@ -26,11 +28,11 @@ To create a wishlist for a registered user, you need to send a POST request to t
 
 `/wishlists`
 
-Sample request: `POST http://mysprykershop.com/wishlists`
+Request sample: `POST http://mysprykershop.com/wishlists`
 **Attributes:**
 * **name** - sets a name for the new wishlist.
 
-**Sample request body**
+**Request sample body**
 
 ```js
 {
@@ -87,7 +89,7 @@ To access all wishlists of a user, send a GET request to the following endpoint:
 
 `/wishlists`
 
-Sample request: `GET http://mysprykershop.com/wishlists`
+Request sample: `GET http://mysprykershop.com/wishlists`
 
 **Sample Response:**
 | Field* | Type | Description |
@@ -119,8 +121,8 @@ If there are any wishlists already created for a user, they will be returned in 
 ```js
 {
 		"data": {
-  
- 
+
+
 	{
 		"data": [
 			{
@@ -148,7 +150,7 @@ To modify a user's wishlist, send a PATCH request to the following endpoint:
 
 `/wishlists`
 
-Sample request: `PATCH http://mysprykershop.com/wishlists`
+Request sample: `PATCH http://mysprykershop.com/wishlists`
 
 **Sample Request Body**
 The following sample changes the name of a wishlist.
@@ -194,7 +196,7 @@ To delete a wishlist, send a DELETE request:
 
 `/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}`
 
-Sample request: `DELETE http://mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a`
+Request sample: `DELETE http://mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a`
 
 where `09264b7f-1894-58ed-81f4-d52d683e910a` is the ID of the wishlist you want to remove.
 
@@ -214,7 +216,7 @@ To get all items in a wishlist, send a request to the following endpoint:
 
 `/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}`
 
-Sample request: `GET http://mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a`
+Request sample: `GET http://mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a`
 
 where `09264b7f-1894-58ed-81f4-d52d683e910a` is the ID of the wishlist you want to retrieve.
 
@@ -257,13 +259,13 @@ If the specified wishlist exists, the endpoint will respond with a `RestWishlist
 
 To add an item to a wishlist, send a POST request to the following endpoint:
 `/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlist-items`
-Sample request: `POST http://mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
+Request sample: `POST http://mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items`
 where `09264b7f-1894-58ed-81f4-d52d683e910a` is the ID of the wishlist to which you want to add an item.
 
 **Attributes:**
 * **sku** - specifies the SKU of the product you want to add to the wishlist.
 
-**Sample request body**
+**Request sample body**
 
 ```js
 {
@@ -311,7 +313,7 @@ The endpoint will respond with a **RestWishlistItemResponse** that contains info
 To delete an item, send a DELETE request:
 `/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlist-items/{% raw %}{{{% endraw %}item_sku{% raw %}}}{% endraw %}`
 
-Sample request: `DELETE http://mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/064_18404924`
+Request sample: `DELETE http://mysprykershop.com/wishlists/09264b7f-1894-58ed-81f4-d52d683e910a/wishlist-items/064_18404924`
 
 where: `09264b7f-1894-58ed-81f4-d52d683e910a` - the ID of the wishlist where you want to delete an item;
 `064_18404924` - SKU of the item you want to remove.

@@ -1,5 +1,5 @@
 ---
-title: HowTo - Define the maximum size of content fields
+title: "HowTo: Define the maximum size of content fields"
 description: Use the guide to customize the content field size in the CMS module.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -17,15 +17,13 @@ related:
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-feature-overview.html
 ---
 
-By default CMS module doesn't specify the content field size. For MySQL and MariaDB, it is transferred to TEXT (65535 bytes), and, for PostgreSQL, it is transferred to TEXT (unlimited length).
+By default, the CMS module doesn't specify the content field's size. For MySQL and MariaDB, it is transferred to TEXT (65535 bytes), and for PostgreSQL, it is transferred to TEXT (unlimited length).
 
-In case your project requires more, you can redefine field size in `spy_cms_version` table.
+If your project requires more, you can redefine the field's size in the `spy_cms_version` table.
 
 {% info_block infoBox %}
 
 For example, place the following into `src/Pyz/Zed/Cms/Persistence/Propel/Schema/spy_cms.schema.xml`:
-
-{% endinfo_block %}
 
 ```xml
 <div code="xml">
@@ -37,3 +35,5 @@ For example, place the following into `src/Pyz/Zed/Cms/Persistence/Propel/Schema
 	</database>
 </div>
 ```
+
+{% endinfo_block %}

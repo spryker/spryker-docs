@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/order-management-feature-integration
   - /docs/order-management-feature-integration
   - /docs/en/order-management-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202108.0/custom-order-reference-feature-integration.html
 related:
   - title: Comments + Order Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/comments-order-management-feature-integration.html
@@ -1117,7 +1118,7 @@ Make sure that, on the following Storefront pages, even if the `display` propert
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the Order Management feature front end.
 

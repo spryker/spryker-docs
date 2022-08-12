@@ -12,14 +12,27 @@ redirect_from:
   - /docs/en/nc-command-tells-that-the-port-is-opened
   - /v6/docs/nc-command-tells-that-the-port-is-opened
   - /v6/docs/en/nc-command-tells-that-the-port-is-opened
+related:
+  - title: nc command does not give any output
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-debugging-in-docker/nc-command-does-not-give-any-output.html
+  - title: PHP `xdebug` extension is not active in CLI
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-debugging-in-docker/php-xdebug-extension-is-not-active-in-cli.html
+  - title: PHP `xdebug` extension is not active when accessing the website via a browser or curl
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-debugging-in-docker/php-xdebug-extension-is-not-active-when-accessing-the-website-via-a-browser-or-curl.html
+  - title: Xdebug does not work
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-debugging-in-docker/xdebug-does-not-work.html
 ---
 
 ## Description
+
 `nc` command tells that the port is opened.
 
 ## Solution
+
 1. Check what process occupies the port 9000 by running the command on the host:
+   
 ```bash
 sudo lsof -nPi:9000 | grep LISTEN
 ```
+
 2. If it's not your IDE, free up the port to be used by the IDE.

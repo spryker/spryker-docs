@@ -2,6 +2,25 @@
 title: Table Column Type Text
 description: This document provides details about the Table Column Type Text in the Components Library.
 template: concept-topic-template
+related:
+  - title: Table Column Type extension
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/index.html
+  - title: Table Column Type Autocomplete
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html
+  - title: Table Column Type Chip
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-chip.html
+  - title: Table Column Type Date
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-date.html
+  - title: Table Column Type Dynamic
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-dynamic.html
+  - title: Table Column Type Image
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-image.html
+  - title: Table Column Type Input
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-input.html
+  - title: Table Column Type List
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-list.html
+  - title: Table Column Type Select
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-select.html
 ---
 
 This document explains the Table Column Type Text in the Components library.
@@ -23,7 +42,7 @@ Check out an example usage of the Table Column Text in the `@spryker/table` conf
                 title: 'Column Title',
                 type: 'text',
                 typeOptions: {
-                    text: '${value}',
+                    text: '${displayValue}',
                 },
             },
             {
@@ -31,7 +50,7 @@ Check out an example usage of the Table Column Text in the `@spryker/table` conf
                 title: 'Column Title',
                 type: 'text',
                 typeOptions: {
-                    text: '${value}',
+                    text: '${displayValue}',
                 },
                 typeOptionsMappings: {
                     color: { col3: 'green' },
@@ -49,6 +68,12 @@ Check out an example usage of the Table Column Text in the `@spryker/table` conf
 Register the component:
 
 ```ts
+declare module '@spryker/table' {
+    interface TableColumnTypeRegistry {
+        text: TableColumnTextConfig;
+    }
+}
+
 @NgModule({
     imports: [
         TableModule.forRoot(),
@@ -66,12 +91,6 @@ export class RootModule {}
 Below you can find interfaces for the Table Column Text:
 
 ```ts
-declare module '@spryker/table' {
-    interface TableColumnTypeRegistry {
-        text: TableColumnTextConfig;
-    }
-}
-
 interface TableColumnTextConfig {
     text?: string;
 }

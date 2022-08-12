@@ -22,6 +22,11 @@ redirect_from:
   - /v2/docs/en/client
   - /v1/docs/client
   - /v1/docs/en/client
+related:
+  - title: Implementing a client
+    link: docs/scos/dev/back-end-development/client/implementing-a-client.html
+  - title: Using and configuring Redis as a key-value storage
+    link: docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html
 ---
 
 This article provides general information about the Client part of the Yves applications layer and describes how to use it.
@@ -32,7 +37,8 @@ See [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html) 
 
 {% endinfo_block %}
 
-## General Information
+## General information
+
 End customers interact only with the front-end application. The front-end application needs to get data from the storage, send search requests to the search engine, and send the customer requests to the Commerce OS whenever needed, like adding to the cart, as the Commerce OS performs all the business logic.
 
 The Client’s job is to connect the front-end application to all of the surrounding resources needed for the front-end application to work. These resources include the Commerce OS, Storage, and Search. It also contains some other resources like Session and Queues.
@@ -44,7 +50,7 @@ For each of these resources, there is a Client. So, it is not only one Client, b
 * Commerce OS Clients: every functional unit, a module as it’s called in Spryker, has its Client. For example, there are separated Clients for cart (CartClient), checkout (CheckoutClient), and customer (CustomerClient). The same applies to all the other modules in Spryker.
 
 Commerce OS Clients communicate with the Commerce OS using HTTP. They mainly perform RPCs (remote procedure calls) using HTTP POST requests with a serialized JSON payload. They also do all the necessary authorization and authentication between the two applications.
-The ClientClient’s purpose is to encapsulate the logic that runs the shop independent from the overlying application. So in case you want to use a different technology stack, you can reuse the Client.
+The Client’s purpose is to encapsulate the logic that runs the shop independent from the overlying application. So in case you want to use a different technology stack, you can reuse the Client.
 ![Client Schematic](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Client/client-schematic.png)
 
 
@@ -100,10 +106,11 @@ class CartController extends AbstractController
 }
 ```
 
-## Client Execution Time
+## Client execution time
+
 You can do as many usages of the storage and search engine, but you should be aware that each call takes some time. There is a restriction for calls to Zed. Each Call to Zed takes some time to start the application and perform the action. As a result, the execution time of Yves becomes slower.
 
-| Client        | Avg execution time          |
+| CLIENT        | AVERAGE EXECUTION TIME          |
 | ------------- | --------------------------- |
 | Zed           | 50 to 500 ms per request    |
 | Elasticsearch | 1 to 10 ms per search query |
@@ -112,10 +119,12 @@ You can do as many usages of the storage and search engine, but you should be aw
 The real execution time in your project depends on the environment, the performance of implementation, and the amount of stored data.
 
 ## Requests from Yves to Zed
+
 The request from Yves to Zed involves two important classes:
 
 * The **stub** represents the remote methods in the Client.
 * The **gateway controller** represents the entry point on the Zed side.
 
 ## What’s next?
+
 To implement a Client for your project, see [Implementing a Client](/docs/scos/dev/back-end-development/client/implementing-a-client.html).

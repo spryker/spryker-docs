@@ -29,12 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-priceproductstorage.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-priceproductstorage.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproductstorage.html
+  - /module_migration_guides/mg-price-product-storage.htm
 ---
 
-## Upgrading from Version 2.* to Version 4.0.0
-
-{% info_block infoBox %}
-
-In order to dismantle the Horizontal Barrier and enable partial module updates on projects, a Technical Release took place. Public API of source and target major versions are equal. No migration efforts are required. Please [contact us](https://spryker.com/en/support/) if you have any questions.
-
-{% endinfo_block %}
+{% include pbc/all/upgrade-modules/upgrade-the-priceproductstorage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-priceproductstorage-module.md -->

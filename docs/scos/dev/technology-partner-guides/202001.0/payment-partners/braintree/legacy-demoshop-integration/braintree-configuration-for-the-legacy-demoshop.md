@@ -8,13 +8,15 @@ originalArticleId: 156313b7-1121-4d09-8256-1c638facc48a
 redirect_from:
   - /v4/docs/braintree-configuration-legacy-demoshop
   - /v4/docs/en/braintree-configuration-legacy-demoshop
+  - /docs/scos/dev/technology-partner-guides/202001.0/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-configuration-for-the-legacy-demoshop.html
+  - /docs/scos/user/technology-partners/202001.0/payment-partners/braintree/legacy-demoshop-integration/braintree-configuration-for-the-legacy-demoshop.html
 related:
   - title: Braintree
     link: docs/scos/user/technology-partners/page.version/payment-partners/braintree.html
-  - title: Braintree - Workflow for Legacy Demoshop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-workflow-for-legacy-demoshop.html
+  - title: Braintree - Request workflow for Legacy Demoshop
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-workflow-for-legacy-demoshop.html
   - title: Braintree - Performing Requests for the Legacy Demoshop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-performing-requests-for-the-legacy-demoshop.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-performing-requests-for-the-legacy-demoshop.html
 ---
 
 Add `spryker-eco/braintree` to your project by running `composer require spryker-eco/braintree`.

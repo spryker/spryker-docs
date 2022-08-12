@@ -159,7 +159,7 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 To check that the step has been completed correctly:<br>Log in with a customer who has multiple company users and a default company user.<br>Check in the session if the default company user was assigned to the customer.<br>Check in the session if the IsOnBehalf property is set correctly for the customer.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 

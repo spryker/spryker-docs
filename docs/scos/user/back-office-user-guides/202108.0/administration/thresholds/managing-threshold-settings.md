@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-threshold-settings
   - /docs/managing-threshold-settings
   - /docs/en/managing-threshold-settings
+  - /docs/scos/user/back-office-user-guides/202108.0/administration/manage-threshold-settings.html
 related:
   - title: Managing Global Thresholds
     link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-global-thresholds.html
@@ -23,10 +24,10 @@ The *Threshold settings* page allows you to select a tax set that is applied to 
 
 ## Prerequisites
 
-To start working with Thershold Settings, navigate to **Administration** > **Threshold Settings**.
+To start working with threshold settings, navigate to **Administration&nbsp;<span aria-label="and then">></span> Threshold Settings**.
 
 ## Managing Threshold Settings
 
-To configure Threshold Settings:
+To configure threshold settings:
 1. On the *Edit Threshold Settings* page, from the drop-down list, select the tax set that will be applied to the threshold.
 2. Click **Save**.

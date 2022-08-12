@@ -1,5 +1,5 @@
 ---
-title: Tutorial- Product Challenge Solution
+title: "Tutorial: Product challenge solution"
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-product-challenge-solution
@@ -26,52 +26,51 @@ redirect_from:
 <!-- used to be: http://spryker.github.io/onboarding/product-solution/ -->
 
 ## ProductCountry module (Zed)
-First, you need to create a new table with the name `pyz_product_country`. This table will be filled with demo data provided by a hard coded `sku/country` list in the `ImportController` of the module.
 
-File: `Pyz/Zed/ProductCountry/Persistence/Propel/Schema/pyz_product_country.schema.xml`
+Create a new table with the name `pyz_product_country`. This table is filled with demo data provided by a hard coded `sku/country` list in the `ImportController` of the module.
 
-<details open>
-<summary markdown='span'>Click to expand the code sample</summary>
+**Pyz/Zed/ProductCountry/Persistence/Propel/Schema/pyz_product_country.schema.xml**
 
-```
-&lt;?xml version="1.0"?&gt;
-&lt;database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+```xml
+<?xml version="1.0"?>
+<database xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     name="zed"
     xsi:noNamespaceSchemaLocation="http://static.spryker.com/schema-01.xsd"
     namespace="Orm\Zed\ProductCountry\Persistence"
-    package="src.Orm.Zed.ProductCountry.Persistence"&gt;
+    package="src.Orm.Zed.ProductCountry.Persistence">
 
-    &lt;table name="spy_product_country" idMethod="native" allowPkInsert="true"&gt;
-        &lt;column name="id_product_country" required="true" type="INTEGER" autoIncrement="true" primaryKey="true"/&gt;
-        &lt;column name="fk_product" required="true" type="INTEGER"/&gt;
-        &lt;column name="fk_country" required="true" type="INTEGER"/&gt;
+    <table name="spy_product_country" idMethod="native" allowPkInsert="true">
+        <column name="id_product_country" required="true" type="INTEGER" autoIncrement="true" primaryKey="true"/>
+        <column name="fk_product" required="true" type="INTEGER"/>
+        <column name="fk_country" required="true" type="INTEGER"/>
 
-        &lt;foreign-key foreignTable="spy_country"&gt;
-            &lt;reference local="fk_country" foreign="id_country"/&gt;
-        &lt;/foreign-key&gt;
+        <foreign-key foreignTable="spy_country">
+            <reference local="fk_country" foreign="id_country"/>
+        </foreign-key>
 
-        &lt;foreign-key foreignTable="spy_product_abstract"&gt;
-            &lt;reference local="fk_product" foreign="id_product_abstract"/&gt;
-        &lt;/foreign-key&gt;
+        <foreign-key foreignTable="spy_product_abstract">
+            <reference local="fk_product" foreign="id_product_abstract"/>
+        </foreign-key>
 
-        &lt;id-method-parameter value="spy_product_country_pk_seq"/&gt;
-    &lt;/table&gt;
+        <id-method-parameter value="spy_product_country_pk_seq"/>
+    </table>
 
-&lt;/database&gt;
+</database>
 ```
 
-<br>
-</details>
 
-Next, call the console propel:install console command in order to migrate the database and create the query objects.
+Then, call the console command to migrate the database and create the query objects.
+
+```bash
+console propel:install
+```
 
 Method: `Pyz\Zed\ProductCountry\Communication\Controller\ImportController::indexAction()`
 
-<details open>
-<summary markdown='span'>Click to expand the code sample</summary>
+The code sample:
 
-```
-&lt;?php
+```php
+<?php
 
 class ProductCountryQueryContainer extends AbstractQueryContainer implements ProductCountryQueryContainerInterface
 {
@@ -85,9 +84,9 @@ class ProductCountryQueryContainer extends AbstractQueryContainer implements Pro
      */
     public function queryProductCountry($idProduct, $idCountry)
     {
-        $query = $this-&gt;getFactory()-&gt;createProductCountryQuery();
-        $query-&gt;filterByFkProduct($idProduct);
-        $query-&gt;filterByFkCountry($idCountry);
+        $query = $this->getFactory()->createProductCountryQuery();
+        $query->filterByFkProduct($idProduct);
+        $query->filterByFkCountry($idCountry);
 
         return $query;
     }
@@ -96,16 +95,13 @@ class ProductCountryQueryContainer extends AbstractQueryContainer implements Pro
 }
 ```
 
-<br>
-</details>
 
-In the `ProductCountryBusinessFactory` class you need to create a new instance of the `ProductCountryManager`. The dependency to the product module facade is missing in the class. Create a new method `getProductFacade` that returns the facade from the `ProductCountryDependencyProvider`.
+In the `ProductCountryBusinessFactory` class, create a new instance of the `ProductCountryManager`. The dependency to the product module facade is missing in the class. Create a new method `getProductFacade` that returns the facade from the `ProductCountryDependencyProvider`.
 
-<details open>
-<summary markdown='span'>Click to expand the code sample</summary>
+The code sample:
 
-```
-&lt;?php
+```php
+<?php
 
 class ProductCountryBusinessFactory extends SprykerBusinessFactory
 {
@@ -116,10 +112,10 @@ class ProductCountryBusinessFactory extends SprykerBusinessFactory
     public function createProductCountryManager()
     {
         return new ProductCountryManager(
-            $this-&gt;getProductFacade(),
-            $this-&gt;getCountryFacade(),
-            $this-&gt;getQueryContainer(),
-            $this-&gt;getPropelConnection()
+            $this->getProductFacade(),
+            $this->getCountryFacade(),
+            $this->getQueryContainer(),
+            $this->getPropelConnection()
         );
     }
 
@@ -130,7 +126,7 @@ class ProductCountryBusinessFactory extends SprykerBusinessFactory
      */
     public function getProductFacade()
     {
-        return $this-&gt;getProvidedDependency(ProductCountryDependencyProvider::PRODUCT_FACADE);
+        return $this->getProvidedDependency(ProductCountryDependencyProvider::PRODUCT_FACADE);
     }
 
     //...
@@ -138,23 +134,21 @@ class ProductCountryBusinessFactory extends SprykerBusinessFactory
 }
 ```
 
-<br>
-</details>
 
-Now, implement the logic to save a new product, within the `ProductCountryManager`.
+Implement the logic to save a new product, within the `ProductCountryManager`.
 
-<details open>
-<summary markdown='span'>Click to expand the code sample</summary>
+<details>
+<summary markdown='span'>The code sample:</summary>
 
-```
-&lt;?php
+```php
+<?php
 
 class ProductCountryManager implements ProductCountryManagerInterface
 {
     //...
 
     /**
-     * @param array $productCountryData Product SKU =&gt; Country ISO 2 Code
+     * @param array $productCountryData Product SKU => Country ISO 2 Code
      *
      * @throws \Exception
      *
@@ -162,8 +156,8 @@ class ProductCountryManager implements ProductCountryManagerInterface
      */
     public function importProductCountryData(array $productCountryData)
     {
-        foreach ($productCountryData as $productCountrySku =&gt; $productCountryIso2Code) {
-            $this-&gt;saveProductCountryEntity($productCountrySku, $productCountryIso2Code);
+        foreach ($productCountryData as $productCountrySku => $productCountryIso2Code) {
+            $this->saveProductCountryEntity($productCountrySku, $productCountryIso2Code);
         }
     }
 
@@ -175,37 +169,35 @@ class ProductCountryManager implements ProductCountryManagerInterface
     private function saveProductCountryEntity($productCountrySku, $productCountryIso2Code)
     {
         try {
-            $productId = $this-&gt;productFacade-&gt;getProductAbstractIdByConcreteSku($productCountrySku);
-            $countryId = $this-&gt;countryFacade-&gt;getIdCountryByIso2Code($productCountryIso2Code);
+            $productId = $this->productFacade->getProductAbstractIdByConcreteSku($productCountrySku);
+            $countryId = $this->countryFacade->getIdCountryByIso2Code($productCountryIso2Code);
 
             $countryEntity = new SpyProductCountry();
-            $countryEntity-&gt;setFkProduct($productId);
-            $countryEntity-&gt;setFkCountry($countryId);
+            $countryEntity->setFkProduct($productId);
+            $countryEntity->setFkCountry($countryId);
 
-            $countryEntity-&gt;save($this-&gt;connection);
+            $countryEntity->save($this->connection);
 
             // Touch product to trigger collector for key/value export
-            $this-&gt;productFacade-&gt;touchProductActive($productId);
+            $this->productFacade->touchProductActive($productId);
 
         } catch (\Exception $e) {
-            echo $e-&gt;getMessage();
+            echo $e->getMessage();
         }
     }
 
     //...
-
 }
 ```
-
-<br>
 </details>
 
 ## Collector module (Zed)
-The collector is used to transfer data from the SQL storage to the key-value storage. The collector must be extended with the new field “product_country”.
+
+The collector is used to transfer data from the SQL storage to the key-value storage. The collector must be extended with the new field `product_country`.
 
 Open `Pyz/Zed/Collector/Persistence/Storage/Pdo/PostgreSql/ProductCollectorQuery.php` and extend the collector SQL query with a left join to the new created table `spy_product_country` in order to load and select the country name where each product is produced.
 
-```
+```sql
 SELECT
     ...
     spy_country.name AS product_country
@@ -213,20 +205,19 @@ FROM
     ...
 ```
 
-```
+```sql
 ...
 LEFT JOIN spy_product_country ON (spy_product_country.fk_product = spy_product_abstract.id_product_abstract)
 LEFT JOIN spy_country ON (spy_country.id_country = spy_product_country.fk_country)
 ...
 ```
 
-Now we need to add the new selected column `product_country` to the collectItem list in `Pyz\Zed\Collector\Business\Storage\ProductCollector`.
+Add the new selected column `product_country` to the` collectItem` list in `Pyz\Zed\Collector\Business\Storage\ProductCollector`.
 
-<details open>
-<summary markdown='span'>Click to expand the code sample</summary>
+The code sample:
 
-```
-&lt;?php
+```php
+<?php
 
 class ProductCollector extends AbstractStoragePdoCollector
 {
@@ -241,18 +232,18 @@ class ProductCollector extends AbstractStoragePdoCollector
     protected function collectItem($touchKey, array $collectItemData)
     {
         return [
-            'abstract_product_id' =&gt; $collectItemData[CollectorConfig::COLLECTOR_RESOURCE_ID],
-            'abstract_attributes' =&gt; $this-&gt;getAbstractAttributes($collectItemData),
-            'abstract_name' =&gt; $collectItemData['abstract_name'],
-            'abstract_sku' =&gt; $collectItemData['abstract_sku'],
-            'url' =&gt; $collectItemData['abstract_url'],
-            'available' =&gt; true,
-            'valid_price' =&gt; $this-&gt;getValidPriceBySku($collectItemData['abstract_sku']),
-            'prices' =&gt; $this-&gt;getPrices($collectItemData),
-            'category' =&gt; $this-&gt;getCategories($collectItemData[CollectorConfig::COLLECTOR_RESOURCE_ID]),
+            'abstract_product_id' => $collectItemData[CollectorConfig::COLLECTOR_RESOURCE_ID],
+            'abstract_attributes' => $this->getAbstractAttributes($collectItemData),
+            'abstract_name' => $collectItemData['abstract_name'],
+            'abstract_sku' => $collectItemData['abstract_sku'],
+            'url' => $collectItemData['abstract_url'],
+            'available' => true,
+            'valid_price' => $this->getValidPriceBySku($collectItemData['abstract_sku']),
+            'prices' => $this->getPrices($collectItemData),
+            'category' => $this->getCategories($collectItemData[CollectorConfig::COLLECTOR_RESOURCE_ID]),
 
              // new line
-            'product_country' =&gt; $collectItemData['product_country']
+            'product_country' => $collectItemData['product_country']
         ];
     }
 
@@ -260,15 +251,13 @@ class ProductCollector extends AbstractStoragePdoCollector
 }
 ```
 
-<br>
-</details>
-
 ## Product module (Yves)
+
 Open `Pyz/Yves/Product/Theme/default/product/detail.twig` and add the following code:
 
-```
+```twig
 {% raw %}{%{% endraw %} if product.product_country {% raw %}%}{% endraw %}
-&lt;dt&gt;{% raw %}{{{% endraw %} "page.product_country"|trans {% raw %}}}{% endraw %}&lt;/dt&gt;
-&lt;dd&gt;{% raw %}{{{% endraw %} product.product_country {% raw %}}}{% endraw %}&lt;/dd&gt;
+<dt>{% raw %}{{{% endraw %} "page.product_country"|trans {% raw %}}}{% endraw %}</dt>
+<dd>{% raw %}{{{% endraw %} product.product_country {% raw %}}}{% endraw %}</dd>
 {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ```

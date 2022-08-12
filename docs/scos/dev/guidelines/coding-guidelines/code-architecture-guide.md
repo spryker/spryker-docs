@@ -22,13 +22,20 @@ redirect_from:
   - /v2/docs/en/code-architecture-guide
   - /v1/docs/code-architecture-guide
   - /v1/docs/en/code-architecture-guide
+related:
+  - title: Code Quality
+    link: docs/scos/dev/guidelines/coding-guidelines/code-quality.html
+  - title: Code style guide
+    link: docs/scos/dev/guidelines/coding-guidelines/code-style-guide.html
+  - title: Secure Coding Practices
+    link: docs/scos/dev/guidelines/coding-guidelines/secure-coding-practices.html
 ---
 
 We use our [Architecture Sniffer Tool](https://github.com/spryker/architecture-sniffer) to assert a certain quality of Spryker architecture for both core and project.
 
-## Running the Tool
+## Running the tool
 
-The sniffer can find a lot of violations and will report them:
+The sniffer can find a lot of violations and report them:
 
 ```php
 $ vendor/bin/console code:sniff:architecture
@@ -51,7 +58,3 @@ Tip: `c:s:a` can be used as a shortcut.
 Run –help or -h to get help about usage of all options available.
 
 See the [architecture sniffer](https://github.com/spryker/architecture-sniffer) documentation for details and information on how to set it up for your CI system as a checking tool for each PR.
-
-## Conventions and Guidelines
-
-If you have a running Demoshop, go to [Architecture rules](`http://zed.mysprykershop.com/development/architecture/rules`) in Zed backend to get an overview of all currently implemented rules.

@@ -1,5 +1,5 @@
 ---
-title: About Tutorials
+title: About tutorials
 description: The section provides instructions you can use to perform all tasks with Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -24,6 +24,11 @@ redirect_from:
   - /v2/docs/en/about-tutorials
   - /v1/docs/about-tutorials
   - /v1/docs/en/about-tutorials
+related:
+  - title: Advanced tutorials
+    link: docs/scos/dev/tutorials-and-howtos/advanced-tutorials/advanced-tutorials.html
+  - title: HowTos
+    link: docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
 ---
 
 Welcome to Spryker Tutorials, in this section of the documentation you will find instructions on how to perform all types of tasks with Spryker Commerce OS.

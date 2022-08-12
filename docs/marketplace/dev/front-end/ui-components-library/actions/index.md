@@ -2,16 +2,33 @@
 title: Actions
 description: This document provides details about the Actions service in the Components Library.
 template: concept-topic-template
+related:
+  - title: Actions Close Drawer
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html
+  - title: Actions Drawer
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-drawer.html
+  - title: Actions HTTP
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-http.html
+  - title: Actions Notification
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-notification.html
+  - title: Actions Redirect
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-redirect.html
+  - title: Actions Refresh Drawer
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-drawer.html
+  - title: Actions Refresh Parent Table
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-parent-table.html
+  - title: Actions Refresh Table
+    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-table.html
 ---
 
 This document explains the Actions service in the Components Library.
 
 ## Overview
 
-Using Action Handlers, the Actions service handles specific actions based on a specific format within a specific context (such as a Table, Overlay, HTTP Response, etc.).
-As a result, the backend can control what the UI looks like without changing anything on the frontend (for example, updating tables, closing drawers, etc.).
+Using Action Handlers, the Actions service handles specific actions based on a specific format within a specific context (such as a Table, Overlay, HTTP Response).
+As a result, the backend can control what the UI looks like without changing anything on the frontend (for example, updating tables, closing drawers).
 
-The context within which Actions are handled is defined by the invoker of the Action (Table, Button, Http, etc.).
+The context within which Actions are handled is defined by the invoker of the Action (Table, Button, Http).
 
 ```html
 <spy-button-action

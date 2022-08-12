@@ -19,7 +19,7 @@ redirect_from:
   - /docs/en/order-history-reference-information
 ---
 
-A *customer account* contains the following customer information on the Storefront:
+A *customer account* contains the following customer information about the Storefront:
 
 * Contact details
 * Addresses
@@ -39,10 +39,10 @@ There are slight differences in customer accounts' information for the B2B and B
 | Shopping Carts | ✓ |  |
 | Wishlist |  | ✓ |
 
-See [Customer Registration overview](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-registration-overview.html) for details on how customer accounts can be created.
+For details about how customer accounts can be created, see [Customer Registration overview](/docs/scos/user/features/{{page.version}}/customer-account-management-feature-overview/customer-registration-overview.html).
 
 
-Customers manage their accounts directly on the Storefront. If a customer updates an account, the data is synchronized, and the Back Office user sees the updated information in the Back Office > **Customers** > **Customers** section. The exceptions are newsletter subscriptions and password changes: this information is not stored in the Back Office.
+Customers manage their accounts directly on the Storefront. If a customer updates an account, the data is synchronized, and the Back Office user sees the updated information in the Back Office&nbsp;<span aria-label="and then">></span> **Customers&nbsp;<span aria-label="and then">></span> Customers** section. The exceptions are newsletter subscriptions and password changes: this information is not stored in the Back Office.
 
 
 To comply with international regulations, a Back Office user can delete a customer account on a customer request.
@@ -57,16 +57,19 @@ A Back Office user can do the following:
 
 * Add notes attached for customers.
 * Set a preferred locale per customer.
-* Deleting a customer data via an anonymization mechanism.
+* Deleting a customer data using an anonymization mechanism.
 * Configure a non-linear customer reference for external communication.
 * Set address books with default addresses for billing and shipping.
-* Send a password token via email.
+* Send a password token by email.
 * Check last orders of a customer in the shop.
 
-See [Managing customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html) for details.
+For details, see the following:
+* [Create customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/create-customers.html)
+* [Add notes to customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-notes-to-customers.html)
 
 ## Customer account on the Storefront
 Customer can perform the following actions the Storefront:
+
 <details>
 <summary markdown='span'>View the account activity</summary>
 
@@ -99,8 +102,12 @@ Customer can perform the following actions the Storefront:
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage customer accounts](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customers.html)  |
-| [Manage customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customer-customer-access-customer-groups/managing-customer-addresses.html)  |
+| [Create customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/create-customers.html)  |
+| [Edit customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/edit-customers.html)  |
+| [View customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/view-customers.html)  |
+| [Add notes to customers](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-notes-to-customers.html)  |
+| [Add customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-customer-addresses.html)  |
+| [Edit customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/edit-customer-addresses.html)  |
 
 {% info_block warningBox "Developer guides" %}
 

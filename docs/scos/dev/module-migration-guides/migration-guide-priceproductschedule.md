@@ -22,18 +22,4 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproductschedule.html
 ---
 
-## Upgrading from Version 1.* to Version 2.0.0
-
-1. Upgrade the **PriceProductSchedule** module to version 2.0.0:
-
-```bash
-composer require spryker/price-product-schedule: "^2.0.0" --update-with-dependencies
-```
-
-2. Generate transfers:
-
-```bash
-console transfer:generate
-```
-
-*Estimated migration time: 5 minutes*
+{% include pbc/all/upgrade-modules/upgrade-the-priceproductschedule-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-priceproductschedule-module.md -->

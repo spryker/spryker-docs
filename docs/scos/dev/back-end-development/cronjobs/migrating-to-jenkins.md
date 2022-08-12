@@ -3,6 +3,13 @@ title: Migrating to Jenkins
 description: Learn how to migrate to the Jenkins scheduler.
 template: howto-guide-template
 last_updated: Nov 1, 2021
+related:
+  - title: Cronjobs
+    link: docs/scos/dev/back-end-development/cronjobs/cronjobs.html
+  - title: Creating a custom scheduler
+    link: docs/scos/dev/back-end-development/cronjobs/creating-a-custom-scheduler.html
+  - title: Adding and configuring cronjobs
+    link: docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-cronjobs.html
 ---
 
 
@@ -38,7 +45,7 @@ class SchedulerConfig extends AbstractSharedConfig
 
 
 
-2. In `src/Pyz/Zed/Console/ConsoleDependencyProvider.php`, add the console commands:
+2. In `src/Pyz/Zed/Console/ConsoleDependencyProvider.php`, add the console commands and Twig application plugin:
 
 ```php
 /**
@@ -65,7 +72,27 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
         ];
         ...
     }
+    
     ...
+   
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return array<\Spryker\Shared\ApplicationExtension\Dependency\Plugin\ApplicationPluginInterface>
+     */
+    public function getApplicationPlugins(Container $container): array
+    {
+        $applicationPlugins = parent::getApplicationPlugins($container);
+
+        ...
+
+        $applicationPlugins[] = new TwigApplicationPlugin();
+
+        return $applicationPlugins;
+    }
+   
+   ...
+
 }
 ```
 

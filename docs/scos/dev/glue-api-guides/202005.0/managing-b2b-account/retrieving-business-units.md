@@ -8,6 +8,7 @@ originalArticleId: 1325e7e7-044d-4272-9587-fafc8a9cb928
 redirect_from:
   - /v5/docs/retrieving-business-unit-information-201907
   - /v5/docs/en/retrieving-business-unit-information-201907
+  - /docs/scos/dev/glue-api-guides/202005.0/managing-b2b-account/retrieving-business-unit-information.html
 related:
   - title: Logging In as Company User
     link: docs/scos/dev/glue-api-guides/page.version/managing-b2b-account/authenticating-as-a-company-user.html
@@ -40,7 +41,7 @@ To retrieve information on the business unit a user belongs to, send a GET reque
 
 [/company-business-units/mine](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/company-business-units)
 
-Sample request: *GET http://glue.mysprykershop.com/company-business-units/mine*
+Request sample: *GET http://glue.mysprykershop.com/company-business-units/mine*
 
 {% info_block warningBox "Note" %}
 You can use the Accept-Language header to specify the locale.Sample header: `[{"key":"Accept-Language","value":"de, en;q=0.9"}]` where **de**, **en** are the locales; **q=0.9** is the user's preference for a specific locale. For details, see [14.4 Accept-Language](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.4).
@@ -97,7 +98,7 @@ To retrieve information on a specific Business Unit, send a GET request to the f
 
 [/company-business-units/{% raw %}{{{% endraw %}business_unit_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/company-business-units)
 
-Sample request: *GET http://glue.mysprykershop.com/company-business-units/**b8a06475-73f5-575a-b1e9-1954de7a49ef***
+Request sample: *GET http://glue.mysprykershop.com/company-business-units/**b8a06475-73f5-575a-b1e9-1954de7a49ef***
 where **b8a06475-73f5-575a-b1e9-1954de7a49ef** is the ID of the Business Unit you need.
 
 {% info_block infoBox "Info" %}
@@ -151,7 +152,7 @@ The endpoint returns a **RestCompanyBusinessUnitResponse** containing informatio
 ### Fetching Additional Information
 This endpoint allows you not only to retrieve the Business Unit information, but also the addresses registered for it, as well as the company where the unit is located. To do so, you need to include the companies and company-business-unit-addresses resource relationships in the response of the endpoint.
 
-Sample request to include companies: *GET http://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=companies*
+Request sample to include companies: *GET http://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=companies*
 
 The response will include the following additional attributes:
 
@@ -200,7 +201,7 @@ The response will include the following additional attributes:
 }
 ```
 
-Sample request to include Business Unit addresses: *GET http://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=company-business-unit-addresses*
+Request sample to include Business Unit addresses: *GET http://glue.mysprykershop.com/company-business-units/32b44d30-3c2d-5f0a-91d3-e66adad10dc1?include=company-business-unit-addresses*
 
 The response will include the following additional attributes:
 
@@ -272,7 +273,7 @@ To retrieve a Business Unit address, send a GET request to the following endpoin
 
 [/company-business-unit-addresses/{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/company-business-unit-addresses)
 
-Sample request: *GET http://glue.mysprykershop.com/company-business-unit-addresses/**eec036ee-b999-5753-a7dd-8d0710a2312f***
+Request sample: *GET http://glue.mysprykershop.com/company-business-unit-addresses/**eec036ee-b999-5753-a7dd-8d0710a2312f***
 where **eec036ee-b999-5753-a7dd-8d0710a2312f** is the ID of the Business Unit Address you need.
 
 {% info_block warningBox "Note" %}

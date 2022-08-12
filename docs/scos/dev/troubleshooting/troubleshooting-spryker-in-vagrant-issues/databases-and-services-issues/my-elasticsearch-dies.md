@@ -12,11 +12,19 @@ redirect_from:
   - /docs/en/my-elasticsearch-dies
   - /v6/docs/my-elasticsearch-dies
   - /v6/docs/en/my-elasticsearch-dies
+related:
+  - title: Exception connecting to Redis
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/exception-connecting-to-redis.html
+  - title: Peer authentication failed for user postgres
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/peer-authentication-failed-for-user-postgres.html
+  - title: Setup MySQL Workbench to avoid port clashing with the host system
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-vagrant-issues/databases-and-services-issues/setup-mysql-workbench-to-avoid-port-clashing-with-the-host-system.html
 ---
 
 ## Description
 
 You can get the following error:
+
 ```
 [Elastica\Exception\Connection\HttpException]
 Couldn't connect to host, Elasticsearch down?

@@ -16,7 +16,7 @@ The [Product Options](/docs/scos/user/features/{{page.version}}/product-options-
 
 Options come with their own prices and tax sets. Also, different options can apply to different products. All product options available in a shop are organized in groups.
 
-Although options are applied to abstract products only, the *Product Options* API enables retrieving available options for both [abstract and concrete](/docs/scos/user/features/202108.0/product-feature-overview/product-feature-overview.html) products. Also, it enables selecting the necessary options when ordering products and viewing the selected options when an order is complete. For this purpose, product options are retrievable in endpoints related to [products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-information.html) (e.g. `/abstract-products` or `/concrete-products`), [guest carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/managing-carts.html) and [carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html) (e.g. `/guest-cart-items` or `/carts/{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}/items`, etc.), as well as [in order history](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html).
+Although options are applied to abstract products only, the *Product Options* API enables retrieving available options for both [abstract and concrete](/docs/scos/user/features/202204.0/product-feature-overview/product-feature-overview.html) products. Also, it enables selecting the necessary options when ordering products and viewing the selected options when an order is complete. For this purpose, product options are retrievable in endpoints related to [products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-information.html) (e.g. `/abstract-products` or `/concrete-products`), [guest carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/managing-carts.html) and [carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-carts.html) (e.g. `/guest-cart-items` or `/carts/{% raw %}{{{% endraw %}cart_id{% raw %}}}{% endraw %}/items`, etc.), as well as [in order history](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html).
 
 With the help of the data provided by the API resources, you will be able to perform the following tasks:
 
@@ -36,7 +36,7 @@ Endpoints:
 * `/abstract-products`
 * `/concrete-products`
 
-Sample request: `GET http://glue.mysprykershop.com/concrete-products/181_31995510?include=product-options`
+Request sample: `GET http://glue.mysprykershop.com/concrete-products/181_31995510?include=product-options`
 
 where **181_31995510** is the SKU of the product you want to retrieve options for.
 
@@ -207,7 +207,7 @@ When accessing guest carts, you need to specify the guest user ID. This is done 
 
 {% endinfo_block %}
 
-Sample requests: 
+Request samples: 
 
 `GET http://glue.mysprykershop.com/carts?include=items,concrete-products,product-options`
 
@@ -643,7 +643,7 @@ Orders cannot be accessed anonymously. For this reason, you always need to pass 
 
 {% endinfo_block %}
 
-Sample request: `GET http://glue.mysprykershop.com/orders/DE--3`
+Request sample: `GET http://glue.mysprykershop.com/orders/DE--3`
 
 {% info_block warningBox "Tip" %}
 

@@ -19,6 +19,25 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/development-tools/formatter.html
   - /docs/scos/dev/sdk/202009.0/development-tools/formatter.html
   - /docs/scos/dev/sdk/202108.0/development-tools/formatter.html
+related:
+  - title: Architecture sniffer
+    link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html
+  - title: Code sniffer
+    link: docs/scos/dev/sdk/development-tools/code-sniffer.html
+  - title: Performance audit tool- Benchmark
+    link: docs/scos/dev/sdk/development-tools/performance-audit-tool-benchmark.html
+  - title: PHPStan
+    link: docs/scos/dev/sdk/development-tools/phpstan.html
+  - title: SCSS linter
+    link: docs/scos/dev/sdk/development-tools/scss-linter.html
+  - title: TS linter
+    link: docs/scos/dev/sdk/development-tools/ts-linter.html
+  - title: Spryk code generator
+    link: docs/scos/dev/sdk/development-tools/spryk-code-generator.html
+  - title: Static Security Checker
+    link: docs/scos/dev/sdk/development-tools/static-security-checker.html
+  - title: Tooling config file
+    link: docs/scos/dev/sdk/development-tools/tooling-config-file.html
 ---
 
 *Formatter* allows you to find and fix code style mistakes and keep the code more readable.
@@ -26,6 +45,7 @@ redirect_from:
 To format files, [Prettier](https://prettier.io/) is used.
 
 ## Installation
+
 For details on how to install Formatter for your project, see [Formatter integration guide](/docs/scos/dev/technical-enhancement-integration-guides/integrating-development-tools/integrating-formatter.html).
 
 ## Using formatter
@@ -33,18 +53,25 @@ For details on how to install Formatter for your project, see [Formatter integra
 To execute the formatter, do the following:
 
 1. Install the Node modules:
+
 ```bash
 npm ci
 ```
+
 2. Execute the formatter in:
+
 * validation mode:
+
 ```bash
 npm run formatter
 ```
+
 * fix mode
+
 ```bash
 npm run formatter:fix
 ```
+
 ## File types
 
 The default file types for formatting are:
@@ -59,7 +86,7 @@ The default file types for formatting are:
 
 To change the list of file extensions, adjust `/frontend/settings.js`:
 
-```
+```js
 formatter: [
     `**/*.(scss|css|less|js|ts|json|html)`,
 ],
@@ -77,14 +104,16 @@ The config for Prettier resides in the [@spryker/frontend-config.prettier](https
 
 To redefine the path for the config file, adjust `/frontend/libs/formatter.js`  and use other [options](https://prettier.io/docs/en/options.html) for Prettier:
 
-```
+```js
 const configPath = 'node_modules/@spryker/frontend-config.prettier/.prettierrc.json';
 ```
+
 The Prettier formatter uses the ignore file `/.prettierignore` that includes directories and files where the formatter shouldn’t be executed.
 
 ## CI checks and pre-commit hook
 
 The Formatter is integrated into:
+
 * Pre-commit hooks.
 The function that executes formatter before the commit resides in `/.githook`
 

@@ -11,7 +11,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -103,4 +103,4 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 {% info_block warningBox “Verification” %}
 
 Make sure that the following endpoints return the result with the all necessary data (for example
-{% endinfo_block %}:<ul><li>http://glue.mysprykershop.com/content-banners/{content_key}</li><li>http://glue.mysprykershop.com/content-product-abstract-lists/{content_key}/content-product-abstract</li></ul>)
+{% endinfo_block %}:<ul><li>https://glue.mysprykershop.com/content-banners/{content_key}</li><li>https://glue.mysprykershop.com/content-product-abstract-lists/{content_key}/content-product-abstract</li></ul>)

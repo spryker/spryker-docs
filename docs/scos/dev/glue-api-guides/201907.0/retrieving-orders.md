@@ -7,6 +7,7 @@ originalArticleId: 8c03651a-4645-4c55-95f1-aecdee411518
 redirect_from:
   - /v3/docs/retrieving-order-history
   - /v3/docs/en/retrieving-order-history
+  - docs/scos/dev/glue-api-guides/201907.0/retrieving-customers-order-history.html
 ---
 
 For every registered customer, there is an order history retrievable. The list of orders, as well as detailed order information including every step of the calculation and addresses used in the orders, is available for retrieval.
@@ -30,7 +31,7 @@ For detailed information on the modules that provide the API functionality and r
 ## Getting Customer's Orders
 To retrieve a list of all orders made by a registered customer, send a GET request to the following endpoint:
 `/orders`
-Sample request: `GET http://mysprykershop.com/orders`
+Request sample: `GET http://mysprykershop.com/orders`
 **Sample Response:**
 
 | Field* | Type | Description |
@@ -131,7 +132,7 @@ When paging is enabled, the **links** section of the JSON response will contain 
 ## Retrieving Specific Order
 To retrieve detailed information on a specific order, including the items that the customer ordered, use the following endpoint:
 `/orders/{% raw %}{{{% endraw %}order_id{% raw %}}}{% endraw %}`
-Sample request: `GET http://mysprykershop.com/orders/DE--1`
+Request sample: `GET http://mysprykershop.com/orders/DE--1`
 where `DE--1` is the ID of the order you want to retrieve.
 **Sample Response:**
 **General Order Information**

@@ -15,9 +15,33 @@ redirect_from:
   - /v5/docs/test-framework
   - /v5/docs/en/test-framework
   - /docs/scos/dev/guidelines/testing/test-framework.html
+related:
+  - title: Available test helpers
+    link: docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html
+  - title: Code coverage
+    link: docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
+  - title: Data builders
+    link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
+  - title: Executing tests
+    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests.html
+  - title: Publish and Synchronization testing
+    link: docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
+  - title: Setting up tests
+    link: docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
+  - title: Test helpers
+    link: docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
+  - title: Testify
+    link: docs/scos/dev/guidelines/testing-guidelines/testify.html
+  - title: Testing best practices
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
+  - title: Testing concepts
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
+  - title: Testing console commands
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
 ---
 
-To easily test every aspect of Spryker and the code you write, Spryker uses the [Codeception testing framework](https://codeception.com/) and [PHPUnit ](https://phpunit.de/).
+To easily test every aspect of Spryker and the code you write, Spryker uses the [Codeception testing framework](https://codeception.com/) and PHPUnit<!-- ](https://phpunit.de/) -->.
+
 {% info_block infoBox %}
 
 We strongly recommend reading the documentation of both frameworks to get the best out of your tests.
@@ -29,12 +53,14 @@ Codeception offers many handy things to write better and cleaner tests. Many sol
 On top of Codeception, we have built the [Testify](https://github.com/spryker/testify/) module, which provides many handy helpers. See [Testify Helpers](/docs/scos/dev/guidelines/testing-guidelines/available-test-helpers.html#testify-helpers) for details on the existing helpers.
 
 ## Configuration
+
 `codeception.yml` in the root of your project is the main entry point for your tests. In this file, the basic configuration for your test suite is defined.
 
 From this file, you can include other `codeception.yml` for a better organization of your tests.
 
 Example:
-```
+
+```yml
 namespace: PyzTest
 actor: Tester
 
@@ -42,21 +68,24 @@ include:
     - tests/PyzTest/*/*
 ...
 ```
+
 See [codeception.yml in Spryker Master Suite](https://github.com/spryker-shop/suite/blob/master/codeception.yml) for example.
 
 For more information, see [Codeception configuration documentation](https://codeception.com/docs/reference/Configuration).
 
-## Console Commands
+## Console commands
+
 There are many console commands provided from Codeception, but the most used ones are:
 
 - `vendor/bin/codecept build` - generates classes
--  `vendor/bin/codecept run`  - executes all your tests
+- `vendor/bin/codecept run`  - executes all your tests
 
 For information on other Codeception console commands, run `vendor/bin/codecept list`.
 
 See [Executing Tests](/docs/scos/dev/guidelines/testing-guidelines/executing-tests.html) for details on some commands.
 
 ## Testing with Spryker
+
 On top of Codeception, we have added a basic infrastructure for tests. We have divided our tests by the applications, and for the layer we test. Thus, the organization of tests in most cases looks like this:
 
 * `tests/OrganizationTest/Application/Module/Communication` - for example, controller or plugin tests.

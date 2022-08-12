@@ -1,5 +1,5 @@
 ---
-title: Tutorial - Checkout and Step Engine - Spryker Commerce OS
+title: "Tutorial: Checkout and step engine - Spryker Commerce OS"
 description: Use the tutorial to understand how to work with Checkout and Step Engine and to extend Spryker core by adding a voucher step and a voucher form.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,95 +22,105 @@ redirect_from:
   - /v2/docs/en/t-checkout-and-step-engine-spryker-commerce-os
   - /v1/docs/t-checkout-and-step-engine-spryker-commerce-os
   - /v1/docs/en/t-checkout-and-step-engine-spryker-commerce-os
+related:
+  - title: Checkout steps
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html
+  - title: Step engine workflow overview
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-workflow-overview.html
 ---
 
 {% info_block infoBox %}
 
-This tutorial is also available on the Spryker Training web-site. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp) web-site.
+This tutorial is also available on the Spryker Training website. For more information and hands-on exercises, visit the [Spryker Training](https://training.spryker.com/courses/developer-bootcamp) website.
 
 {% endinfo_block %}
 
-## Challenge Description
-This task helps you to learn how to:
+## Challenge description
 
-* Work with Checkout and the Step Engine
-* Apply and use discounts
-* Extend the Spryker core code and functionalities
+This task helps you learn how to do the following:
+* Work with Checkout and the Step Engine.
+* Apply and use discounts.
+* Extend the Spryker core code and functionalities.
 
 {% info_block infoBox "Info" %}
-In this task we will add a voucher step to the existing out-of-the-box Spryker checkout.
+
+This tutorial shows how to add a voucher step to the existing out-of-the-box Spryker checkout.
+
 {% endinfo_block %}
 
-## 1. Add the Voucher Step
+## 1. Add the voucher step
 
-1. Before adding the step, you need to define the route for the step.
-* Add `CheckoutPageRouteProviderPlugin` that extends the core `AbstractRouteProviderPlugin` in `src/Pyz/Yves/CheckoutPage/Plugin/Provider`.
+1. Before adding the step, define the route for the step.
 
-* Then, add the route for the step.
+   1. Add `CheckoutPageRouteProviderPlugin` that extends the core `AbstractRouteProviderPlugin` in `src/Pyz/Yves/CheckoutPage/Plugin/Provider`.
+   2. Add the route for the step.
 
-```php
-<?php
+	```php
+	<?php
 
-namespace Pyz\Yves\CheckoutPage\Plugin\Router;
+	namespace Pyz\Yves\CheckoutPage\Plugin\Router;
 
-use SprykerShop\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin as SprykerShopCheckoutPageRouteProviderPlugin;
+	use SprykerShop\Yves\CheckoutPage\Plugin\Router\CheckoutPageRouteProviderPlugin as SprykerShopCheckoutPageRouteProviderPlugin;
 
-class CheckoutPageRouteProviderPlugin extends SprykerShopCheckoutPageRouteProviderPlugin
-{
-    protected const CHECKOUT_VOUCHER = 'checkout-voucher';
+	class CheckoutPageRouteProviderPlugin extends SprykerShopCheckoutPageRouteProviderPlugin
+	{
+    	protected const CHECKOUT_VOUCHER = 'checkout-voucher';
 
-    /**
-     * Specification:
-     * - Adds Routes to the RouteCollection.
-     *
-     * @api
-     *
-     * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
-     *
-     * @return \Spryker\Yves\Router\Route\RouteCollection
-     */
-    public function addRoutes(RouteCollection $routeCollection): RouteCollection
-    {
-        $routeCollection = $this->addCheckoutIndexRoute($routeCollection);
-        $routeCollection = $this->addCustomerStepRoute($routeCollection);
-        $routeCollection = $this->addAddressStepRoute($routeCollection);
-        $routeCollection = $this->addShipmentStepRoute($routeCollection);
-        $routeCollection = $this->addVoucherStepRoute($routeCollection);
-        $routeCollection = $this->addPaymentStepRoute($routeCollection);
-        $routeCollection = $this->addCheckoutSummaryStepRoute($routeCollection);
-        $routeCollection = $this->addPlaceOrderStepRoute($routeCollection);
-        $routeCollection = $this->addCheckoutErrorRoute($routeCollection);
-        $routeCollection = $this->addCheckoutSuccessRoute($routeCollection);
+    	/**
+    	 * Specification:
+    	 * - Adds Routes to the RouteCollection.
+    	 *
+    	 * @api
+    	 *
+    	 * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
+    	 *
+    	 * @return \Spryker\Yves\Router\Route\RouteCollection
+    	 */
+    	public function addRoutes(RouteCollection $routeCollection): RouteCollection
+    	{
+        	$routeCollection = $this->addCheckoutIndexRoute($routeCollection);
+        	$routeCollection = $this->addCustomerStepRoute($routeCollection);
+        	$routeCollection = $this->addAddressStepRoute($routeCollection);
+        	$routeCollection = $this->addShipmentStepRoute($routeCollection);
+        	$routeCollection = $this->addVoucherStepRoute($routeCollection);
+        	$routeCollection = $this->addPaymentStepRoute($routeCollection);
+        	$routeCollection = $this->addCheckoutSummaryStepRoute($routeCollection);
+        	$routeCollection = $this->addPlaceOrderStepRoute($routeCollection);
+        	$routeCollection = $this->addCheckoutErrorRoute($routeCollection);
+        	$routeCollection = $this->addCheckoutSuccessRoute($routeCollection);
 
-        return $routeCollection;
-    }
+        	return $routeCollection;
+    	}
 
-    /**
-     * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
-     *
-     * @return \Spryker\Yves\Router\Route\RouteCollection
-     */
-    protected function addVoucherStepRoute(RouteCollection $routeCollection): RouteCollection
-    {
-        $route = $this->buildRoute('/checkout/voucher', 'CheckoutPage', 'Checkout', 'voucherAction');
-        $route = $route->setMethods(['GET', 'POST']);
-        $routeCollection->add(static::CHECKOUT_VOUCHER, $route);
+    	/**
+    	 * @param \Spryker\Yves\Router\Route\RouteCollection $routeCollection
+    	 *
+    	 * @return \Spryker\Yves\Router\Route\RouteCollection
+    	 */
+    	protected function addVoucherStepRoute(RouteCollection $routeCollection): RouteCollection
+    	{
+        	$route = $this->buildRoute('/checkout/voucher', 'CheckoutPage', 'Checkout', 'voucherAction');
+        	$route = $route->setMethods(['GET', 'POST']);
+        	$routeCollection->add(static::CHECKOUT_VOUCHER, $route);
 
-        return $routeCollection;
-    }
-}    
+        	return $routeCollection;
+    	}
+	}    
+	```
+
+3. In YvesBootstrap in `src/Pyz/Yves/Router/RouterDependencyProvider`, update the `getRouteProvider` method to use the new Route Provider instead of the core one.
+4. Clear route cache:
+
+```bash
+vendor/bin/console router:cache:warm-up
 ```
 
-2. Update the `getRouteProvider` method in YvesBootstrap in `src/Pyz/Yves/Router/RouterDependencyProvider` to use the new Route Provider instead of the core one.
-3. Clear route cache `vendor/bin/console router:cache:warm-up`
-
-4. Next, add the voucher step class inside `src/Pyz/Yves/CheckoutPage/Process/Steps` and call it **VoucherStep**.
+5. Add the voucher step class inside `src/Pyz/Yves/CheckoutPage/Process/Steps` and call it `VoucherStep`.
 
 {% info_block infoBox "Info" %}
 
-`VoucherStep` should extend the `AbstractBaseStep` class from core.<br>As you may notice, `CalculationClient` is injected into the class. We will use this client later when we apply the discount, as we need to recalculate the grand total with the applied voucher code.
-
-{% endinfo_block %}
+`VoucherStep` must extend the `AbstractBaseStep` class from core.
+<br>`CalculationClient` is injected into the class. This client is used when you apply the discount because you need to recalculate the grand total with the applied voucher code.
 
 ```php
 namespace Pyz\Yves\CheckoutPage\Process\Steps;
@@ -214,7 +224,9 @@ class VoucherStep extends AbstractBaseStep implements StepWithBreadcrumbInterfac
 }    
 ```
 
-4. Add the step to `StepFactory`.  To do so, extend the core `StepFactory` in `src/Pyz/Yves/CheckoutPage/Process`.
+{% endinfo_block %}
+
+6. To add the step to `StepFactory`, in `src/Pyz/Yves/CheckoutPage/Process`, extend the core `StepFactory`.
 
 ```php
 namespace Pyz\Yves\CheckoutPage\Process;
@@ -268,7 +280,7 @@ class StepFactory extends SprykerShopStepFactory
 }
 ```
 
-5. To get the step factory to work, you also need to extend  `CheckoutPageFactory` in order to use the new factory instead of the core one.
+7. To get the step factory to work, extend `CheckoutPageFactory` to use the new factory instead of the core one.
 
 ```php
 namespace Pyz\Yves\CheckoutPage;
@@ -288,13 +300,13 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 }
 ```
 
-6. Finally, extend `CheckoutController` in `src/Pyz/Yves/CheckoutPage/Controller`.
+8. In `src/Pyz/Yves/CheckoutPage/Controller`, extend `CheckoutController`.
 
-Add a controller action and call it **voucherAction**.
+Add a controller action and call it `voucherAction`.
 
 {% info_block infoBox "Info" %}
-You can return any string for now, just to make sure that the step works correctly. We will get back to this action once we build the form in the next step.
-{% endinfo_block %}
+
+To make sure that the step works correctly, return any string. You get back to this action when you build the form in the following step.
 
 ```php
 namespace Pyz\Yves\CheckoutPage\Controller;
@@ -319,17 +331,21 @@ class CheckoutController extends SprykerShopCheckoutController
 }  
 ```
 
-{% info_block infoBox %}
-The step is now created:<ul><li>Go to the shop.</li><li>Add any product to the cart.</li><li>Checkout.</li></ul><br>The Voucher step should be working now.
+The step is now created:
+1. Go to the shop.
+2. Add any product to the cart.
+3. Check out.
+
+The Voucher step must be working now.
+
 {% endinfo_block %}
 
-## 2. Add the Voucher Form
+## 2. Add the voucher form
 
-Spryker uses Symfony forms as a foundation to build and handle forms. One of the main concepts in Symfony forms is binding form fields with data objects. This helps in setting and getting different data fields directly from/to the form. As Spryker uses transfer objects, they can be directly bound to your forms.
+Spryker uses Symfony forms as a foundation to build and handle forms. One of the main concepts in Symfony forms is binding form fields with data objects. This helps in setting and getting different data fields directly from and to the form. As Spryker uses transfer objects, they can be directly bound to your forms.
 
-Let’s build the form and get the customers input for the voucher:
-
-1. Create the form type in `src/Pyz/Yves/CheckoutPage/Form/Steps/`. Call it **VoucherForm**.
+Build the form and get the customer's input for the voucher:
+1. In `src/Pyz/Yves/CheckoutPage/Form/Steps/`, create the form type and call it `VoucherForm`.
 
 ```php
 namespace Pyz\Yves\CheckoutPage\Form\Steps;
@@ -374,7 +390,7 @@ class VoucherForm extends AbstractType
 }
 ```
 
-2. Extend the core's `FormFactory` in `src/Pyz/Yves/CheckoutPage/Form` and create the form collection for the `VoucherForm`.
+2. In `src/Pyz/Yves/CheckoutPage/Form`, extend the core's `FormFactory` and create the form collection for the `VoucherForm`.
 
 ```php
 namespace Pyz\Yves\CheckoutPage\Form;
@@ -412,7 +428,7 @@ class FormFactory extends SprykerShopFormFactory
 }
 ```
 
-3. Override the `createCheckoutFormFactory()` method in `CheckoutPageFactory` to use the new `FormFactory`.
+3. In `CheckoutPageFactory`, override the `createCheckoutFormFactory()` method to use the new `FormFactory`.
 
 ```php
 namespace Pyz\Yves\CheckoutPage;
@@ -441,9 +457,7 @@ class CheckoutPageFactory extends SprykerShopCheckoutPageFactory
 }
 ```
 
-4. The only missing thing is the twig template for it.
-
-Add the twig template for the voucher form in `src/Pyz/Yves/CheckoutPage/Theme/default/views/voucher`. Call it **voucher.twig**.
+1. Add the twig template for the voucher form in `src/Pyz/Yves/CheckoutPage/Theme/default/views/voucher` and name it `voucher.twig`.
 
 ```php
 {% raw %}{%{% endraw %} extends template('page-layout-checkout', 'CheckoutPage') {% raw %}%}{% endraw %}
@@ -485,20 +499,19 @@ Add the twig template for the voucher form in `src/Pyz/Yves/CheckoutPage/Theme/d
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-5. Next, let’s bind the form to the transfer object.
+5. Bind the form to the transfer object.
 
 {% info_block infoBox %}
 
-In the `VoucherForm` form class, we have already added the `property_path` to the text field with the value 'voucher'.
+In the `VoucherForm` form class, you have already added the `property_path` to the text field with the value `voucher`.
 
 {% endinfo_block %}
 
+To finish the binding, in `src/Pyz/Shared/Checkout/Transfer`, extend `QuoteTransfer` and call it `checkout.transfer.xml`.
 
-To finish the binding, you need to extend `QuoteTransfer` in `src/Pyz/Shared/Checkout/Transfer` and call it **checkout.transfer.xml**.
+When you add a new schema with the same names for the schema file and the transfer object of the core ones, you extend the transfer object.
 
-When you add a new schema with exactly the same names for the schema file and the transfer object of the core ones, you are then extending the transfer object.
-
-Now, add the voucher field in the _Quote_ transfer.
+Add the voucher field in the `Quote` transfer.
 
 ```xml
 <?xml version="1.0"?>
@@ -513,10 +526,13 @@ Now, add the voucher field in the _Quote_ transfer.
 </transfers>
 ```
 
-6. Run the `console transfer:generate` command to generate the new transfer object.
+6. Generate the new transfer object:
+ ```bash
+ console transfer:generate
+ ```
 7. Return to the controller and use the new form instead of the returned string.
 
-Modify the voucher action to create the process for the voucher step and use the form collection.
+To create the process for the voucher step and use the form collection, modify the voucher action.
 
 ```php
 /**
@@ -551,20 +567,18 @@ The step has a form now and receives the voucher code value from the customer. G
 
 {% endinfo_block %}
 
-## 3. Apply the Voucher in the Step Execution
+## 3. Apply the voucher in the step execution
 
 1. Generate some voucher codes from the Back Office:
+   1. In the Back Office, go to **Discount**, create a new discount, and generate some voucher codes.
+   2. Choose the discount and enter the voucher code.  In the **Valid to** field, make sure to select future dates.
+   3. Add the rule SKU equals to *, so the voucher code is applied to all products in the shop.
+   4. Save and go to the **Voucher codes** tab, and generate the codes.
 
-    1. Go to the **Back Office > Discount**  section, create a new discount and generate some voucher codes.
-    2. Choose the discount type *Voucher code* and make sure that the **Valid to** field is in the future.
-    3. Add the rule Sku equals to *, so the voucher code is applied on all products in the shop.
-    4. Save and then go the **Voucher codes** tab and generate the codes.
-
-2. Now, you need to implement the `execute()` method in `VoucherStep`to calculate the new grand total after applying the discount. To do so, use the `CalculationClient`:
-
-    1. Add the voucher code which you from the form into a discount transfer object.
-    2. The **CalculationClient** in the checkout works only with the quoteTransfer, thus you need to add the discount transfer back to the `quoteTransfer` using the method `$quoteTransfer→addVoucherDiscount()`.
-    3. Finally, call the method `recalculate()` from the **CalculationClient** and pass the `quoteTransfer` as a parameter and the discount should be applied.
+2. In `VoucherStep`, implement the `execute()` method to calculate the new grand total after applying the discount. To do so, use `CalculationClient`:
+   1. Add the voucher code to a discount transfer object.
+   2. The `CalculationClient` in the checkout works only with the `quoteTransfer`; thus, add the discount transfer back to the `quoteTransfer` using the method `$quoteTransfer→addVoucherDiscount()`.
+   3. Call the method `recalculate()` from the `CalculationClient` and pass the `quoteTransfer` as a parameter and the discount should be applied.
 
 ```php
 /**
@@ -584,5 +598,12 @@ public function execute(Request $request, AbstractTransfer $quoteTransfer)
 ```
 
 {% info_block infoBox "Info" %}
-Done and ready for testing! <ol><li>Go to the shop.</li><li>Add any product to cart.</li><li>Go the checkout and enter any of the available voucher codes.</li></ol><br>You should receive a discount on your order.
+
+Done and ready for testing!
+
+1. Go to the shop.
+2. Add any product to the cart.
+3. Go to the checkout and enter any of the available voucher codes.
+You receive a discount on your order.
+
 {% endinfo_block %}

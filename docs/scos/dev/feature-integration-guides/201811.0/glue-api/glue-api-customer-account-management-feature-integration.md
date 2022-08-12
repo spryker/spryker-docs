@@ -13,7 +13,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customers.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -212,18 +212,18 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
 Make sure that the following endpoints are available:
 {% endinfo_block %}
 
-* `http://glue.mysprykershop.com/customers`
+* `https://glue.mysprykershop.com/customers`
 
-* `http://glue.mysprykershop.com/addresses`
+* `https://glue.mysprykershop.com/addresses`
 
-* `http://glue.mysprykershop.com/customer-password`
+* `https://glue.mysprykershop.com/customer-password`
 
-* `http://glue.mysprykershop.com/customer-forgotten-password`
+* `https://glue.mysprykershop.com/customer-forgotten-password`
 
-* `http://glue.mysprykershop.com/customer-restore-password`
+* `https://glue.mysprykershop.com/customer-restore-password`
 
 {% info_block infoBox %}
-Send a request to  `http://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=addresses`. Make sure that the response includes relationships to the `addresses` resources.<br> *The Customer with the given ID should have at least one address.*
+Send a request to  `https://glue.mysprykershop.com/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}?include=addresses`. Make sure that the response includes relationships to the `addresses` resources.<br> *The Customer with the given ID should have at least one address.*
 {% endinfo_block %}
 
 <!-- Last review date: Apr 11, 2019 -->

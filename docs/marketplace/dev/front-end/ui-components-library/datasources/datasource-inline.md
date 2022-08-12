@@ -2,6 +2,13 @@
 title: Datasource Inline
 description: This document provides details about the Datasource Inline service in the Components Library.
 template: concept-topic-template
+related:
+  - title: Datasources
+    link: docs/marketplace/dev/front-end/ui-components-library/datasources/index.html
+  - title: Datasource Http
+    link: docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-http.html
+  - title: Datasource Inline Table
+    link: docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline-table.html
 ---
 
 This document explains the Datasource Inline service in the Components Library.
@@ -14,8 +21,8 @@ Check out an example usage of the Datasource Inline.
 
 Service configuration:
 
-- `type` - a datasource type.  
-- `data` - a datasource data.  
+- `type`—a datasource type.  
+- `data`—a datasource data.  
 
 ```html
 <spy-select
@@ -32,6 +39,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/datasource' {
+    interface DatasourceRegistry {
+        inline: DatasourceInlineService;
+    }
+}
+
 @NgModule({
     imports: [
         DatasourceModule.withDatasources({
@@ -47,12 +60,6 @@ export class RootModule {}
 Below you can find interfaces for the Datasource Inline:
 
 ```ts
-declare module '@spryker/datasource' {
-    interface DatasourceRegistry {
-        inline: DatasourceInlineService;
-    }
-}
-
 export interface DatasourceInlineConfig extends DatasourceConfig {
     data: unknown;
 }

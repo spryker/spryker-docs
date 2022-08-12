@@ -1,5 +1,5 @@
 ---
-title: Simple Spelling Suggestions
+title: Simple spelling suggestions
 description: Spelling suggestions provide the users with alternative search terms when the search query does not return any results
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -22,14 +22,36 @@ redirect_from:
   - /v2/docs/en/simple-spelling-suggestions  
   - /v1/docs/simple-spelling-suggestions
   - /v1/docs/en/simple-spelling-suggestions
+related:
+  - title: Data-driven ranking
+    link: docs/scos/dev/best-practices/search-best-practices/data-driven-ranking.html
+  - title: Full-text search
+    link: docs/scos/dev/best-practices/search-best-practices/full-text-search.html
+  - title: Generic faceted search
+    link: docs/scos/dev/best-practices/search-best-practices/generic-faceted-search.html
+  - title: Precise search by super attributes
+    link: docs/scos/dev/best-practices/search-best-practices/precise-search-by-super-attributes.html
+  - title: On-site search
+    link: docs/scos/dev/best-practices/search-best-practices/on-site-search.html
+  - title: Other best practices
+    link: docs/scos/dev/best-practices/search-best-practices/other-best-practices.html
+  - title: Multi-term autocompletion
+    link: docs/scos/dev/best-practices/search-best-practices/multi-term-auto-completion.html
+  - title: Naive product centric approach
+    link: docs/scos/dev/best-practices/search-best-practices/naive-product-centric-approach.html
+  - title: Personalization - dynamic pricing
+    link: docs/scos/dev/best-practices/search-best-practices/personalization-dynamic-pricing.html
+  - title: Usage-driven schema and document structure
+    link: docs/scos/dev/best-practices/search-best-practices/usage-driven-schema-and-document-structure.html
 ---
 
 Spelling suggestions provide the users with alternative search terms when the search query does not return any results:
+
 ![Spell checking](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Search+Engine/Simple+Spelling+Suggestions/spell-checking.png) 
 
 Translation: *Unfortunately there were 0 results for your exact search term “**hammer holk**”. Did you possibly mean **hammer holz**?*
 
-This is one of the simplest features you can build with Elasticsearch and also one that your users expect to see. Elasticsearch has a highly configurable [term suggester](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-suggesters-term.html), which enables suggestions based on the edit distance between indexed terms and search terms. We recommend putting all attributes that are suitable for spelling suggestions (i.e. short strings such as product and category names where you are sure that they are spelled correctly) into a single document field:
+This is one of the simplest features you can build with Elasticsearch and also one that your users expect to see. Elasticsearch has a highly configurable [term suggester](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-suggesters-term.html), which enables suggestions based on the edit distance between indexed terms and search terms. We recommend putting all attributes that are suitable for spelling suggestions (for example, short strings such as product and category names where you are sure that they are spelled correctly) into a single document field:
 
 ```php
 "suggestion_terms": [

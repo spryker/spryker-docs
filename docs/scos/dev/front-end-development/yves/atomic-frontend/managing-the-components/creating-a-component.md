@@ -21,11 +21,19 @@ redirect_from:
   - /v2/docs/en/t-create-component
   - /v1/docs/t-create-component
   - /v1/docs/en/t-create-component
+related:
+  - title: Using a Component
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/using-a-component.html
+  - title: Extending a Component
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/extending-a-component.html
+  - title: Overriding a Component
+    link: docs/scos/dev/front-end-development/yves/atomic-frontend/managing-the-components/overriding-a-component.html
 ---
 
 As Spryker Shop implements the [Component Model](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html#component-model), adding new functionality to it usually means implementing a new component. In this document, we shall review creation of a new component on the example of a simple block that displays the count of DOM elements of a certain type. To implement it:
 
-## 1. Create Component Folder
+## 1. Create a component folder
+
 First of all, you need to create a folder on the file system where all component files will be located. By default, project level components are located under `src/Pyz/Yves/ShopUi/Theme/default/components`. This folder should contain subfolders for each component type (_atoms_, _molecules_, _organisms_). A links counter is a simple molecule, so it will be created under the **molecules** subfolder. Per naming conventions, the folder name follows [Kebab Case](http://wiki.c2.com/?KebabCase): `src/Pyz/Yves/ShopUi/Theme/default/components/molecules/new-component-counter`.
 
 Open the `new-component-counter` folder and create the following files:
@@ -35,26 +43,27 @@ Open the `new-component-counter` folder and create the following files:
 * `new-component-counter.ts` - Javascript code;
 * `new-component-counter.twig` - component template.
 
-## 2. Define Template
+## 2. Define a template
+
 The first thing to do when creating a component is to define a template for it. A template specifies which blocks a component consists of and how they are arranged. This is done in Twig. Open the `new-component-counter.twig` file.
 
 First, we need to define the inheritance of the component. A component can inherit from a model or another component. Since we are creating a new component, it can be inherited from the following models defined in Spryker Shop Application:
 
 * atoms, molecules and organisms extend model **component**:
 
-```
+```twig
 {% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}
 ```
 
 * templates and views extend model **template**
 
-```
+```twig
 {% raw %}{%{% endraw %} extends model('template') {% raw %}%}{% endraw %}
 ```
 
 As we are creating a molecule, it must inherit the **component** model. For this purpose, add the following:
 
-```
+```twig
 {% raw %}{%{% endraw %} extends model('component') {% raw %}%}{% endraw %}
 ```
 
@@ -64,13 +73,17 @@ After that, we need to define a configuration object for our new component. A co
 * **tag** (optional) - specifies the name of the DOM tag that will be used to render the component. It also defines the component Javascript class name (**jsName**) automatically.
 
 {% info_block infoBox %}
+
 If the tag name is not defined, **div** is used by default.
+
 {% endinfo_block %}
 
 * **jsName** (optional) - explicitly specifies the Javascript class name (**.js-classname**) of the component.
 
 {% info_block warningBox "Separation of Logic from Styles" %}
+
 To enforce separation between logic and visual styles and achieve clear understanding as to which code is responsible for what, the following convention has been put in place:<br>- code related to **styles** is always contained in `{% raw %}{{{% endraw %}config.name{% raw %}}}{% endraw %}__element` classes;<br>- code related to behavior is always contained in `{% raw %}{{{% endraw %}config.jsName{% raw %}}}{% endraw %}__element classes`;
+
 {% endinfo_block %}
 
 The same as with files and folders, Kebab Case should be used
@@ -82,7 +95,7 @@ We will use a custom tag for the component. It will have the same name as the na
     name: 'new-component-counter',
 ```
 
-```
+```twig
     tag: 'new-component-counter'
 } {% raw %}%}{% endraw %}
 ```
@@ -137,7 +150,8 @@ Finally, let us define the template. You can do this like you would normally do 
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-## 3. Create Styles
+## 3. Create styles
+
 Now, let us create visual styles used to display the component on a page. When creating styles, use [BEM methodology](https://en.bem.info/methodology/css/). To link the style to the new component, the class name must be the same as the component name, also in _Kebab Case_.
 
 Open file `new-component-counter.scss` file and add the following code:
@@ -164,7 +178,9 @@ Open file `new-component-counter.scss` file and add the following code:
 ```
 
 {% info_block infoBox %}
+
 As shown in the example, you can use global variables, functions and mixins in your styles, for example `$setting-color-alt` or `$setting-color-dark`. They can be found in the `vendor/spryker-shop/shop-ui/src/SprykerShop/Yves/ShopUi/Theme/default/styles` folder. For more details, see the [SASS Layer](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html#sass-layer) section in _Atomic Frontend_.
+
 {% endinfo_block %}
 
 Also, the styles must be locatable by Webpack. For this purpose, we need to add them to the entry point of the component. Open the `index.ts` file and add the following line:
@@ -173,7 +189,8 @@ Also, the styles must be locatable by Webpack. For this purpose, we need to add 
 import './new-component-counter.scss';
 ```
 
-## 4. Implement Behavior
+## 4. Implement behavior
+
 Finally, we need to implement the actual code that will count the elements. Open the `new-component-counter.ts` file.
 
 The component we are creating is a molecule which is inherited from the _Component_ model. Because of this, it must extend the Component base class defined in the `ShopUI` module. First, we need to import the base class:
@@ -185,7 +202,9 @@ import Component from 'ShopUi/models/component';
 After that, we need to create the new component class extending the base class. The new component class must implement a DOM callback. You can use any callback defined by the [Web Components Specification](https://developer.mozilla.org/en-US/docs/Web/Web_Components). When the component receives the callback you define, it should execute the behavioral logic.
 
 {% info_block warningBox %}
+
 It is recommended to use **ready** callback. This callback is triggered when the component is ready and all other components have already been loaded in the DOM. It is the safest approach from the point of view of DOM manipulation.
+
 {% endinfo_block %}
 
 Let us implement the **ready** callback. Upon receiving the callback, the component will count the number of tags defined by _element-selector_.
@@ -194,7 +213,7 @@ To fulfill our goal, we can use keyword _this_. It provides direct access to t
 
 Names of Javascript classes follow [Camel Case](http://wiki.c2.com/?CamelCase), thus, the behavior of our component will be implemented by Javascript class `NewComponentCounter`:
 
-```Javascript
+```js
 export default class NewComponentCounter extends Component {
     protected counter: HTMLElement
     protected elements: HTMLElement[]
@@ -225,7 +244,7 @@ The call must include a Webpack magic comment that specifies which type of impor
 
 In twig, we used tag name `new-component-counter`. Let us bind it to the Javascript class we created and use 'lazy' import. To do this, open file `index.ts` again and attach the following code:
 
-```Javascript
+```js
 // Import the 'register' function from the Shop Application
 import register from 'ShopUi/app/registry';
 
@@ -236,7 +255,8 @@ export default register(
 );
 ```
 
-## 5. Compile and Use the Component
+## 5. Compile and use the component
+
 Our component is almost complete. The only thing left is to compile it. Execute the following line in the console: `npm run yves`
 
 When done, you can include it into other components, views and templates.
@@ -245,7 +265,7 @@ When done, you can include it into other components, views and templates.
 
 * Add the following code to the very beginning of the `<main>` block. It will include our new component and configure it to count **a** tags:
 
-```
+```twig
 {% raw %}{%{% endraw %} include molecule('new-component-counter') with {
     modifiers: ['big'],
     data: {
@@ -348,8 +368,6 @@ When done, you can include it into other components, views and templates.
     {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
-
-<br>
 </details>
 
 Now, open the front page of Spryker Shop. The new component will appear on the top of the page, below the header.

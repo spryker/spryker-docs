@@ -1137,7 +1137,7 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 Make sure that:<ul><li>You can activate a gift card using its generated code.</li><li>You can't activate a gift card the balance of which has been depleted.</li><li>During the checkout process, payment method selection is skipped in case the gift card covers the grand total.</li><li>Having made a successful purchase with the help of a gift card, you receive a gift card balance notification e-mail.</li></ul>Note: You need to complete Feature Frontend integration before you can verify these points.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
@@ -1275,7 +1275,7 @@ Register the following controller provider(s) in the Yves application:
 
 | Provider | Namespace | Enabled Controller | Controller Specifcation |
 | --- | --- | --- | --- |
-| `CartCodeWidgetControllerProvider` |`SprykerShop\Yves\CartCodeWidget\Plugin\Provider`  | `CartCodeWidget/CodeController` | `Handles add, remove and clear of cart codes for of the activated CartCodePlugins (i.e. gift card code, voucher code, etc.) of the cart.` |
+| `CartCodeWidgetControllerProvider` |`SprykerShop\Yves\CartCodeWidget\Plugin\Provider`  | `CartCodeWidget/CodeController` | `Handles add, remove and clear of cart codes for of the activated CartCodePlugins (for example, gift card code, voucher code, etc.) of the cart.` |
 
 <details open>
 <summary markdown='span'>src/Pyz/Yves/ShopApplication/YvesBootstrap.php</summary>

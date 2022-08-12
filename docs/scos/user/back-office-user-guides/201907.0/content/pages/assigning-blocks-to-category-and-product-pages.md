@@ -8,6 +8,8 @@ originalArticleId: 777e5102-a37c-4cba-94df-335a09ea6049
 redirect_from:
   - /v3/docs/assigning-blocks-to-category-and-product-pages
   - /v3/docs/en/assigning-blocks-to-category-and-product-pages
+  - /docs/scos/user/back-office-user-guides/201907.0/content-management/pages/assigning-blocks-to-category-and-product-pages.html
+  - /docs/scos/user/back-office-user-guides/202005.0/content/pages/assigning-blocks-to-category-and-product-pages.html
 related:
   - title: CMS Page
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
@@ -49,7 +51,7 @@ You can get a block name in the _Name_ column of the List of CMS blocks on the O
 
 5. To keep the changes, click **Save**.
 ***
-**Tips & Tricks**
+**Tips and tricks**
 If you want to create different versions of the page per locale, add the general information to the section in the corresponding language.
 ***
 **What's next?**

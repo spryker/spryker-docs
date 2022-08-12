@@ -18,17 +18,24 @@ redirect_from:
   - /v4/docs/en/docker-installation-prerequisites-windows
   - /v3/docs/docker-install-prerequisites-windows-201907
   - /v3/docs/en/docker-install-prerequisites-windows-201907
+  - /docs/scos/dev/installation/spryker-in-docker/docker-installation-prerequisites/docker-installation-prerequisites-windows.html
+related:
+  - title: Installing Docker prerequisites on Linux
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html
+  - title: Installing Docker prerequisites on MacOS
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-macos.html
+  - title: Installing Docker prerequisites on Windows with WSL1
+    link: docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl1.html
 ---
-
 
 This document describes the prerequisites for installing Spryker in Docker on Windows.
 
 
-## System requirements
+## System requirements for installing Spryker with Docker
 
 Review the system and software requirements in the table.
 
-| Requirement | Value or version | Additional details |
+| REQUIREMENT | VALUE OR VERSION | ADDITIONAL DETAILS |
 | --- | --- | --- |
 | Windows | 10 64bit | Pro, Enterprise, or Education (1607 Anniversary Update, Build 14393 or later). |
 | BIOS Virtualization | Enabled | Typically, virtualization is enabled by default. Note that having the virtualization enabled is different from having Hyper-V enabled. This setting can be checked in the **Task Manager** → **Performance** tab.  For more details, see [Virtualization must be enabled](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled). |
@@ -47,7 +54,9 @@ If you cannot use WSL2, you can [install and configure the required software wit
 {% endinfo_block %}
 
 {% info_block warningBox %}
+
 When running commands described in this document, use absolute paths. For example: `mkdir /d/spryker && cd $_` or `mkdir /c/Users/spryker && cd $_`.
+
 {% endinfo_block %}
 
 Follow the steps below to install and configure the required software with WSL2:
@@ -68,13 +77,12 @@ sudo apt update && sudo apt dist-upgrade
 
 6. Exit Ubuntu and restart Windows.
 
-
 You've installed and configured the required software.
 
 
 ## Next steps
 
-See [Chossing an installation mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html) to choose an installation mode.
+See [Choosing an installation mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html) to choose an installation mode.
 If you've already selected an installation mode, follow one of the guides below:
 * [Installing in Development mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-windows.html)
 * [Installing in Demo mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html)

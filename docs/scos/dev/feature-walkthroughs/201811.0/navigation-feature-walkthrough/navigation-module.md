@@ -8,6 +8,7 @@ originalArticleId: 1dca8ab1-b18c-4774-a20f-827c484133f5
 redirect_from:
   - /v1/docs/module-navigation
   - /v1/docs/en/module-navigation
+  - /docs/scos/dev/feature-walkthroughs/201811.0/navigation-feature-walkthrough/navigation-module-reference-information.html
 related:
   - title: Managing Navigation Elements
     link: docs/scos/user/back-office-user-guides/page.version/content/navigation/managing-navigation-elements.html
@@ -27,7 +28,7 @@ The following node types are available:
 * **Label**: These nodes do not link to any specific URL, they are used for grouping other nodes.
 * **Category**: Nodes can be assigned to category node URLs.
 * **CMS Page**: Nodes can be assigned to CMS page URLs.
-* **Link**: These nodes link to internal pages in Yves, i.e. login, registration, etc.
+* **Link**: These nodes link to internal pages in Yves, for example, login, registration, etc.
 * **External URL**: These nodes link to external URLs (typically tabs opened in a new browser).
 You can control and adjust Navigation node appearance and add icons by assigning custom CSS classes to them.
 

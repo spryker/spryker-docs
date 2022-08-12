@@ -40,6 +40,4 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-productlabelgui.html
 ---
 
-## Upgrading from Version 2.* to Version 3.*
-
-The tax plugins are using the version 3.* of the Tax module. Upgrade [Migration Guide - Tax](/docs/scos/dev/module-migration-guides/migration-guide-tax.html).
+{% include pbc/all/upgrade-modules/upgrade-the-productoptiondiscountconnector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productoptiondiscountconnector-module.md -->

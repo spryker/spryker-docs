@@ -1,5 +1,5 @@
 ---
-title: Other Best Practices
+title: Other best practices
 description: This article provides a list of some additional and potentially useful principles regarding the setup of on-site search experience.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -22,15 +22,39 @@ redirect_from:
   - /v2/docs/en/other-best-practices  
   - /v1/docs/other-best-practices
   - /v1/docs/en/other-best-practices
+related:
+  - title: Data-driven ranking
+    link: docs/scos/dev/best-practices/search-best-practices/data-driven-ranking.html
+  - title: Full-text search
+    link: docs/scos/dev/best-practices/search-best-practices/full-text-search.html
+  - title: Generic faceted search
+    link: docs/scos/dev/best-practices/search-best-practices/generic-faceted-search.html
+  - title: Precise search by super attributes
+    link: docs/scos/dev/best-practices/search-best-practices/precise-search-by-super-attributes.html
+  - title: On-site search
+    link: docs/scos/dev/best-practices/search-best-practices/on-site-search.html
+  - title: Multi-term autocompletion
+    link: docs/scos/dev/best-practices/search-best-practices/multi-term-auto-completion.html
+  - title: Simple spelling suggestions
+    link: docs/scos/dev/best-practices/search-best-practices/simple-spelling-suggestions.html
+  - title: Naive product centric approach
+    link: docs/scos/dev/best-practices/search-best-practices/naive-product-centric-approach.html
+  - title: Personalization - dynamic pricing
+    link: docs/scos/dev/best-practices/search-best-practices/personalization-dynamic-pricing.html
+  - title: Usage-driven schema and document structure
+    link: docs/scos/dev/best-practices/search-best-practices/usage-driven-schema-and-document-structure.html
 ---
 
 Finally, we want to provide you with a list of some additional and potentially useful principles regarding the setup of an on-site search experience.
 
-## Index Pages, Not Products
+## Index pages, not products
+
 Each document we put in Elasticsearch corresponds to an URL.
 
 {% info_block warningBox %}
+
 The mapping type in our schema is called `page`, not `product` or something else.
+
 {% endinfo_block %}
 
 We do this because we think that different page types (for example brand pages, category pages, CMS pages) can be relevant for the same search. There is no reason why somebody interested in [shipping prices](https://www.contorion.de/versandkosten) should not be able to find corresponding information using the search bar of a website (unfortunately this is rarely the case)–so we put it in the same index as products, using the same document structure:
@@ -60,11 +84,12 @@ Furthermore, our generic page-based schema allows for other search operations su
 
 The query looks very similar to a normal faceted navigation, except that it searches only within a specific staple.
 
-## Explicit Attribute Management
+## Explicit attribute management
+
 An usage-driven search schema and document structure puts more burden on importers because document attributes have to be duplicated in multiple fields with varying formats. To handle this additional complexity (and to keep the import code maintainable), we recommend to explicitly decide which attributes to put in which field; ideally as data (for example in a database table and ideally as part of an already existing attribute management system):
 
-| attribute              | full text | full text boosted | string facet | number facet | completion terms | suggestion terms | search result data |
-| ---------------------- | --------- | ----------------- | ------------ | ------------ | ---------------- | ---------------- | ------------------ |
+| ATTRIBUTE  | FULL TEXT | FULL TEXT BOOSTED | STRING FACET | NUMBER FACET | COMPLETION TERMS | SUGGESTION TERMS | SEARCH RESULT DATA |
+| ------------- | --------- | ----------- | ------------ | ------------ | ------------- | ----------- | ------------- |
 | description            | ✓         |                   |              |              |                  |                  |                    |
 | manufacturer           |           | ✓                 | ✓            |              | ✓                | ✓                | ✓                  |
 | name                   |           | ✓                 |              |              | ✓                | ✓                | ✓                  |
@@ -77,24 +102,24 @@ An usage-driven search schema and document structure puts more burden on importe
 
 Bonus points for providing a user interface for this purpose. It would allow category or product managers to make fine-grained conscious decisions on how to use certain attributes in search. For example, a numeric attribute `hammer_weight` could be used as a string facet and completion term, whereas another numeric attribute `hammer_handle_length` would only be used as a number facet.
 
-## Product Management for Search
+## Product management for search
+
 Everybody has an opinion on how search should work, and being a product owner / product manager for search is definitely not the easiest task.
 
 What is good product management for search? Certainly it is not of technical nature (“*please use technique X*”, these suggestions usually suck).
 
-Rather helpful are concrete examples of expected and actual behaviour from a user perspective (“*If I search for a hammer, I want to find a hammer*”).
+Rather helpful are concrete examples of expected and actual behavior from a user perspective (“*If I search for a hammer, I want to find a hammer*”).
 
 This is an excerpt of the actual input we got from various stakeholders at Contorion:
 
-| search term        | issue / expected result                                      | dev comment                                                  |
-| ------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| SEARCH TERM   | ISSUE / EXPECTED RESULT   | DEV COMMENT    |
+| -------------- | ----------------- | ---------------- |
 | makita             | I would expect standard power tools on top (e.g., drilling machines), not a jacket and a laser | Enhance WHF                                                  |
 | akkuschrauber      | I would expect more search word suggestions, not just Akkuschrauber-Set | PM: In specification                                         |
 | schleifscheibe     | No top sellers on top                                        | Add all categories, add popularity score to category ranking |
 | latt hammer        | Decompounder (I believe) not working correctly–should return Latthammers first | Decompunder works perfect, but we might need to recalibrate the search a little bit |
 | blindnietwerkzeug  | Only returns products called “Blindnietwerkzeug” but no Blindnietzange or Blindnietmutter-Handgerät and so on | Please add tokens to list                                    |
-| bohrmaschine bosch | Top categories should be the ones that actually have “Bohrmaschine” as their name, not Bohrständer and stuff like that | Fixed                                                        |
-|                    |                                                              |                                                              |
+| bohrmaschine bosch | Top categories should be the ones that actually have “Bohrmaschine” as their name, not Bohrständer and stuff like that | Fixed      |      |            |                |
 | tiefenmesschieber  | Customers missing an “s” don’t get any results for TiefenmesSschieber | Very hard to fix                                             |
 | bügelmessschraube  | Doesn’t find the right products because products are abbreviated as “Bügelmessschr.” | Product data issue                                           |
 | klopapier          | Synonym for “Toilettenpapier”                                | Please set up synonyms yourself                              |

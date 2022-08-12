@@ -1,5 +1,5 @@
 ---
-title: Security release notes- 202009.0
+title: Security release notes - 202009.0
 description: The following information pertains to security-related issues that were discovered and resolved during the 202009.0 release.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -176,7 +176,7 @@ composer update spryker/acl spryker/business-on-behalf-gui spryker/cms spryker/c
 
 ## Vulnerabilities in 3rd-party dependencies
 ### jQuery: Passing HTML from untrusted sources
-Passing an HTML code containing `<option>` elements from untrusted sources, even after sanitizing them, to one of the jQuery's DOM manipulation methods (i.e. `.html()`, `.append()`, and others) may execute untrusted code in browser.
+Passing an HTML code containing `<option>` elements from untrusted sources, even after sanitizing them, to one of the jQuery's DOM manipulation methods (for example, `.html()`, `.append()`, and others) may execute untrusted code in browser.
 
 This problem is patched in jQuery 3.5.0.
 

@@ -7,6 +7,7 @@ originalArticleId: bff44067-c078-4006-9f30-ba1c01f4666b
 redirect_from:
   - /v1/docs/managing-customers-api
   - /v1/docs/en/managing-customers-api
+  - /docs/scos/dev/glue-api-guides/201811.0/manging-customers/managing-customers.html
 related:
   - title: Managing Wishlists
     link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html
@@ -29,7 +30,7 @@ For details on the modules that provide the API functionality and how to install
 ## Creating a Customer
 To create a new customer user, send a POST request to the following endpoint:
 `/customers`
-Sample request: `POST http://mysprykershop.com/customers`
+Request sample: `POST http://mysprykershop.com/customers`
 Attributes:
 | Attribute | Type | Required | Description |
 | --- | --- | --- | --- |
@@ -41,7 +42,7 @@ Attributes:
 | password | String | ✓ | Specifies a password (7 characters or more) for the account of the new customer. This password will be used by the customer to access their account. |
 | salutation | String | ✓ | Specifies a salutation for a new customer. |
 
-**Sample request body**
+**Request sample body**
 ```js
 {
   "data": {
@@ -107,11 +108,13 @@ After a customer has been created, you can authenticate them in the REST API and
 ## Retrieving Customer Information
 To retrieve information about a customer, use the following endpoint:
 `/customers/{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}`
-Sample request: `GET http://mysprykershop.com/customers/DE-25`
+Request sample: `GET http://mysprykershop.com/customers/DE-25`
 where `DE-25` is the unique identifier of the customer you want to retrieve.
 
 {% info_block warningBox "Authentication" %}
+
 To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
 {% endinfo_block %}
 
 If a customer with the specified ID was found, the endpoint will respond with a **RestCustomersRequest**.
@@ -163,19 +166,23 @@ To modify an existing customer account, send a _PATCH_ request to the following 
 `/customers/{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}`
 
 {% info_block infoBox "Modifying Customer Addresses " %}
+
 You need to use specialized endpoints to retrieve and manage addresses registered for a customer. For details, see [Managing the List of Customer Addresses](/docs/scos/dev/glue-api-guides/{{page.version}}/manging-customers/managing-customers.html#managing-the-list-of-customer-addresses).
+
 {% endinfo_block %}
 
-Sample request: `PATCH http://mysprykershop.com/customers/DE-25`
+Request sample: `PATCH http://mysprykershop.com/customers/DE-25`
 where `DE-25` is the unique identifier of the customer you want to modify.
 
 {% info_block warningBox "Authentication " %}
+
 To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
 {% endinfo_block %}
 
 To modify a customer, the client must send a **RestCustomersRequest**.
 
-**Sample request**
+**Request sample**
 ```js
 {
 		"data" : {
@@ -235,13 +242,15 @@ If a customer is modified successfully, the endpoint will respond with a **RestC
 Customers can provide a set of addresses used for billing, goods delivery, and other purposes. The **Customer API** provides a set of endpoints to manage addresses of a registered customer.
 
 {% info_block warningBox "Authentication " %}
+
 Only authenticated users can manage customer addresses. For details on how to authenticate a customer, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
+
 {% endinfo_block %}
 
 ## Adding an Address
 To add an address to a customer, send a _POST_ request to the following endpoint:
 `/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}/addresses`
-Sample request: `POST http://mysprykershop.com/customers/DE-25/addresses`
+Request sample: `POST http://mysprykershop.com/customers/DE-25/addresses`
 where `DE-25` is the unique identifier of the customer you want to add an address to.
 
 The POST data must contain a **RestAddressesRequest**.
@@ -263,7 +272,7 @@ The POST data must contain a **RestAddressesRequest**.
 | isDefaultBilling | Boolean | ✓ | Specifies whether the address should be used as the default billing address of the customer. If the parameter is not set, the default value is true. |
 | iso2Code | String | ✓ | Specifies an ISO 2 Country Code to use |
 
-**Sample request body**
+**Request sample body**
 ```js
 {
 		"data" : {
@@ -344,7 +353,7 @@ The **id** attribute of the response will contain a unique identifier of the add
 
 To modify an address, send a PATCH request to the following endpoint:
 `/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}/addresses/{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}`
-Sample request: `PATCH http://mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b`
+Request sample: `PATCH http://mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b`
 where `DE-25` is the unique identifier of the customer you want to modify an address for, and `3a6ee102-007f-5245-aaec-af5b6e05685b` is the ID of the address you want to change.
 The POST data must contain a **RestAddressesRequest**. The attributes and format of the request are the same as when creating an address.
 
@@ -374,7 +383,7 @@ The same as when creating an address, in case, if the request is successful, the
 ## Getting all Addresses of a Customer
 To get all the addresses of a user, use the following endpoint:
 `/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}/addresses`
-Sample request: `GET http://mysprykershop.com/customers/DE-25/addresses`
+Request sample: `GET http://mysprykershop.com/customers/DE-25/addresses`
 where `DE-25` is the unique identifier of the customer whose address you want to get.
 
 | Field* | Type | Description |
@@ -460,7 +469,7 @@ If the request was successful, the endpoint would return **RestAddressesResponse
 ## Getting a Specific Address
 To get a specific address by ID, use the following endpoint:
 `/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}/addresses/{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}`
-Sample request: `GET http://mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b`
+Request sample: `GET http://mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b`
 where `DE-25` is the unique identifier of the customer whose address you want to get, and `3a6ee102-007f-5245-aaec-af5b6e05685b` is the ID of the address you need.
 
 **Sample response**
@@ -489,7 +498,7 @@ If the request is successful, the endpoint returns **RestAddressesResponse** wit
 ## Deleting an Address
 To delete an address, use the following endpoint:
 `/customers/{% raw %}{{{% endraw %}customer_id{% raw %}}}{% endraw %}/addresses/{% raw %}{{{% endraw %}address_id{% raw %}}}{% endraw %}`
-Sample request: `DELETE http://mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b`
+Request sample: `DELETE http://mysprykershop.com/customers/DE-25/addresses/3a6ee102-007f-5245-aaec-af5b6e05685b`
 where `DE-25` is the unique identifier of the customer whose address you want to delete, and `3a6ee102-007f-5245-aaec-af5b6e05685b` is the ID of the necessary address.
 
 **Sample response**
@@ -509,7 +518,7 @@ If the address is deleted successfully, the endpoint will respond with the **204
 ## Changing Customer's Password
 To change a password for a customer, use PATCH method and the following endpoint:
 `/customer-password`
-Sample request: `PATCH http://mysprykershop.com/customer-password`
+Request sample: `PATCH http://mysprykershop.com/customer-password`
 
 {% info_block warningBox "Authentication" %}
 To use this endpoint, customers need to authenticate first. For details, see [Authentication and Authorization](/docs/scos/dev/glue-api-guides/{{page.version}}/authentication-and-authorization.html).
@@ -522,7 +531,7 @@ To use this endpoint, customers need to authenticate first. For details, see [Au
 | newPassword | String | ✓ | Specifies the new password |
 | confirmPassword | String | ✓ | Specifies password confirmation for password change. |
 
-**Sample request body**
+**Request sample body**
 ```js
 {
     "data": {
@@ -552,7 +561,7 @@ In case customer forgets their password, Glue API also provides the possibility 
 
 1. Send a POST request to the following endpoint:
 `/customer-forgotten-password`
-Sample request: `POST http://mysprykershop.com/customer-forgotten-password`
+Request sample: `POST http://mysprykershop.com/customer-forgotten-password`
 **Sample Request Body**
     ```js
     {
@@ -567,7 +576,7 @@ Sample request: `POST http://mysprykershop.com/customer-forgotten-password`
 
 2. Send a PATCH request to the following endpoint:
 `/customer-restore-password`
-Sample request: `PATCH http://mysprykershop.com/customer-restore-password`
+Request sample: `PATCH http://mysprykershop.com/customer-restore-password`
 **Attributes:**
 
 | Attribute | Type | Required | Description |
@@ -576,7 +585,7 @@ Sample request: `PATCH http://mysprykershop.com/customer-restore-password`
 | password | String | ✓ | Specifies the password. |
 | passwordConfirmation | String | ✓ | Specifies a password confirmation for password change. |
 
-**Sample request body**
+**Request sample body**
 ```js
 {
   "data": {
@@ -602,7 +611,7 @@ If the password reset was successful, the endpoint will respond with the **204 N
 ## Anonymizing a Customer
 To anonymize a customer account, send a DELETE request to the following endpoint:
 `/customers/{% raw %}{{{% endraw %}customerReference{% raw %}}}{% endraw %}`
-Sample request: `DELETE http://mysprykershop.com/customers/DE-25`
+Request sample: `DELETE http://mysprykershop.com/customers/DE-25`
 where `DE-25` is the unique identifier of the customer you want to anonymize.
 **Sample response**
 

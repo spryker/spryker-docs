@@ -8,6 +8,7 @@ originalArticleId: 7147ffd2-fd6b-4510-a007-0129effaa291
 redirect_from:
   - /v3/docs/checking-out-purchases-and-getting-checkout-data-201907
   - /v3/docs/en/checking-out-purchases-and-getting-checkout-data-201907
+  - /docs/scos/dev/glue-api-guides/201907.0/checking-out-purchases-and-getting-checkout-data.html
 related:
   - title: Retrieving Customer's Order History
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-customers-order-history.html
@@ -60,7 +61,7 @@ To submit checkout data without order confirmation, you need to use the `/checko
 
 [/checkout-data](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/checkout-data)
 
-Sample request: *POST http://glue.mysprykershop.com/checkout-data*
+Request sample: *POST http://glue.mysprykershop.com/checkout-data*
 
 ### Request
 A request should contain the ID of the customer's cart that is being checked out. All other fields are optional.
@@ -82,7 +83,7 @@ To submit a request, the customer needs to have at least one cart with products 
 
 <details open>
 <summary markdown='span'>Body Sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -140,7 +141,7 @@ To submit a request, the customer needs to have at least one cart with products 
     }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -156,7 +157,7 @@ The following address parts are compulsory: **salutation**, **firstName**, **las
 
 <details open>
 <summary markdown='span'>Body Sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -178,7 +179,7 @@ The following address parts are compulsory: **salutation**, **firstName**, **las
     }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -206,7 +207,7 @@ In case of a successful update, the endpoint responds with information that can 
 
 <details open>
 <summary markdown='span'>Response Sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -442,7 +443,7 @@ In case of a successful update, the endpoint responds with information that can 
     }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -458,7 +459,7 @@ To finalize checkout and place an order, send a POST request to the following en
 
 [/checkout](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/checkout)
 
-Sample request: *POST http://glue.mysprykershop.com/checkout*
+Request sample: *POST http://glue.mysprykershop.com/checkout*
 
 ### Request
 A request should contain:
@@ -488,7 +489,7 @@ By default, if the checkout is successful, the order is placed and the shopping 
 
 <details open>
 <summary markdown='span'>Body Sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -546,7 +547,7 @@ By default, if the checkout is successful, the order is placed and the shopping 
     }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -562,7 +563,7 @@ The following address parts are compulsory: **salutation**, **firstName**, **las
 
 <details open>
 <summary markdown='span'>Body Sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -610,7 +611,7 @@ The following address parts are compulsory: **salutation**, **firstName**, **las
     }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -642,7 +643,7 @@ Among the attributes returned, there is **orderReference** that can be used to r
 
 <details open>
 <summary markdown='span'>Response Sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -659,7 +660,7 @@ Among the attributes returned, there is **orderReference** that can be used to r
     },
 }
 ```
-    
+
 <br>
 </details>
 
@@ -669,11 +670,11 @@ You can extend the response with the **orders** resource relationship in order t
 For detailed information and a list of attributes, see section [Retrieving Specific Order](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html#retrieving-specific-order).
 {% endinfo_block %}
 
-Sample request: *POST http://glue.mysprykershop.com/checkout?include=orders*
+Request sample: *POST http://glue.mysprykershop.com/checkout?include=orders*
 
 <details open>
 <summary markdown='span'>Response Sample</summary>
-    
+
 ```json
 {
     "data": {
@@ -891,7 +892,7 @@ Sample request: *POST http://glue.mysprykershop.com/checkout?include=orders*
     ]
 }
 ```
-    
+
 <br>
 </details>
 
@@ -920,7 +921,7 @@ If the user is redirected to a third-party page for payment verification, you ne
 
 [/order-payments](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html#/order-payments)
 
-Sample request: *POST http://glue.mysprykershop.com/order-payments*
+Request sample: *POST http://glue.mysprykershop.com/order-payments*
 
 ### Request
 Your request should contain the payload related to the order. The request can include an optional payment identifier, if necessary.
@@ -942,7 +943,7 @@ You can also use the **Accept-Language** header to specify the locale.<br>Sample
 
 <details open>
 <summary markdown='span'>Sample Request Body</summary>
-    
+
 ```json
 {
   "data": {
@@ -959,7 +960,7 @@ You can also use the **Accept-Language** header to specify the locale.<br>Sample
   }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -977,7 +978,7 @@ If the request was successful, the endpoint will respond with a 201 Created stat
 
 <details open>
 <summary markdown='span'>Response Sample</summary>
-    
+
 ```json
 {
   "data": {
@@ -1001,7 +1002,7 @@ If the request was successful, the endpoint will respond with a 201 Created stat
   }
 }
 ```
-    
+
 <br>
 </details>
 
@@ -1011,4 +1012,3 @@ If the request was successful, the endpoint will respond with a 201 Created stat
 | --- | --- |
 | 404 | Order not found. |
 | 422 | Order payment is not updated. |
-

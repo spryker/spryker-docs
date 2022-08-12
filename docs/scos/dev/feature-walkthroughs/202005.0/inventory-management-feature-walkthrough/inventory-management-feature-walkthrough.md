@@ -3,6 +3,8 @@ title: Inventory Management feature walkthrough
 last_updated: Aug 13, 2021
 description: The Inventory Management feature adds stock and availability management as well as multiple warehouse stock management for products
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202005.0/nventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
 ---
 
 The _Inventory Management_ feature adds stock and availability management as well as multiple warehouse stock management for products.
@@ -37,7 +39,7 @@ Events are generated in these two cases:
 | Case 1 | If availability amount was equal to 0 and now it’s more than 0, the event is triggered. |
 | Case 2 | If availability amount was more than 0 and now it’s equal to 0, the event is triggered. |
 
-The default behavior is having **available** or not available **status** set for product while the amount of product does not matter. Even though events are triggered when amount is changed from 0 to N or from N to 0, it's not the amount change that triggers events, but the change of product status. You can change the default behavior for the events to be triggered whenever the amount is changed. For more information, see [HowTo - Change the Default Behavior of Event Triggering in the AvailabilityStorage Module](/docs/scos/dev/tutorials-and-howtos/howtos/howto-change-the-default-behavior-of-event-triggering-in-the-availabilitystorage-module.html).
+The default behavior is having **available** or not available **status** set for product while the amount of product does not matter. Even though events are triggered when amount is changed from 0 to N or from N to 0, it's not the amount change that triggers events, but the change of product status. You can change the default behavior for the events to be triggered whenever the amount is changed. For more information, see [HowTo: Change the Default Behavior of Event Triggering in the AvailabilityStorage Module](/docs/scos/dev/tutorials-and-howtos/howtos/howto-change-the-default-behavior-of-event-triggering-in-the-availabilitystorage-module.html).
 
 Published data example in JSON.
 

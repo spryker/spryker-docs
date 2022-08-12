@@ -17,29 +17,58 @@ redirect_from:
   - /v5/docs/propel
   - /v5/docs/en/propel
   - /docs/scos/dev/guidelines/testing/available-test-helpers.html
+related:
+  - title: Code coverage
+    link: docs/scos/dev/guidelines/testing-guidelines/code-coverage.html
+  - title: Data builders
+    link: docs/scos/dev/guidelines/testing-guidelines/data-builders.html
+  - title: Executing tests
+    link: docs/scos/dev/guidelines/testing-guidelines/executing-tests.html
+  - title: Publish and Synchronization testing
+    link: docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html
+  - title: Setting up tests
+    link: docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html
+  - title: Test framework
+    link: docs/scos/dev/guidelines/testing-guidelines/test-framework.html
+  - title: Test helpers
+    link: docs/scos/dev/guidelines/testing-guidelines/test-helpers.html
+  - title: Testify
+    link: docs/scos/dev/guidelines/testing-guidelines/testify.html
+  - title: Testing best practices
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-best-practices.html
+  - title: Testing concepts
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-concepts.html
+  - title: Testing console commands
+    link: docs/scos/dev/guidelines/testing-guidelines/testing-console-commands.html
 ---
 
 Spryker supports a number of test helpers to assist you in testing your project. This article provides details on the supported helpers.
 
 ## TwigHelper
+
 Adds the `TwigApplicationPlugin` to your test suite and offers methods to add the `TwigPluginInterface` and `TwigLoaderPluginInterface` plugin interfaces.
 
 ## EventDispatcherHelper
+
 Adds the `EventDispatcherApplicationPlugin` to your test suite and provides methods to create events.
 
 ## Propel TransactionHelper
+
 Propel TransactionHelper ensures that a connection to the database can be established. Additionally, this helper wraps each test in a transaction. This allows you to test against the database without mocking the database away and rolling back after each test.
 
 ## Testify helpers
+
 [Testify](/docs/scos/dev/guidelines/testing-guidelines/testify.html) offers many useful helpers that are especially helpful when setting up the infrastructure for your tests.
 
 ### Shared helpers
+
 Shared helpers can be used for all application tests.
 
 #### ConfigHelper
 
-This helper lets you easily mock configurations and gives you access to the ModuleConfig.
-To find out the ModuleConfig of the current module under test, run
+This helper lets you easily mock configurations and gives you access to the `ModuleConfig`.
+To find out the ModuleConfig of the current module under test, run:
+
 ```
 $this->tester->getModuleConfig()
 ```
@@ -54,6 +83,7 @@ Manipulating the configuration can be done with:
 
 
 #### VirtualFilesystemHelper
+
 This helper lets you mock away the real filesystem.
 
 This helper has the following methods:
@@ -74,6 +104,7 @@ More information on this helper will follow soon.
 <a name=searchhelper></a>
 
 #### SearchHelper
+
 When you have this helper, an in-memory search adapter is automatically used instead of the ones defined on the project side. This allows you to work with [Search](https://github.com/spryker/search) in a synchronous way, for example, when using together with the [Publish and Synchronization tests](/docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html).
 
  {% info_block infoBox %}
@@ -92,6 +123,7 @@ This helper has the following methods:
 <a name=storagehelper></a>
 
 #### StorageHelper
+
 When you have this helper, an in-memory storage plugin is automatically used instead of the ones defined on the project side. This allows you to work with [Storage](https://github.com/spryker/storage) in a synchronous way, for example, when using together with the [Publish and Synchronization tests](/docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html).
 
 {% info_block infoBox %}
@@ -110,6 +142,7 @@ This helper has the following methods:
 <a name="queuehelper"></a>
 
 #### QueueHelper
+
 When you have this helper, an in-memory queue adapter is automatically used instead of the ones defined on the project side. This allows you to work with [Queue](https://github.com/spryker/queue) in a synchronous way, for example, when using together with the [Publish and Synchronization tests](/docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html).
 
 {% info_block infoBox %}
@@ -132,13 +165,15 @@ This helper has the following methods:
 - `cleanupInMemoryQueue()`: Use this method when you need to cleanup the in-memory queue.
 
 
-### Zed Helpers
+### Zed helpers
+
 You can use the Zed helpers only for testing the Zed application.
 
 <a name="publishandsynchronizehelper"></a>
 
 #### PublishAndSynchronizeHelper
-PublishAndSynchronizeHelper is a helper wrapper that simplifies implementation of the [Publish and Synchronization tests](/docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html).
+
+`PublishAndSynchronizeHelper` is a helper wrapper that simplifies implementation of the [Publish and Synchronization tests](/docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html).
 
 This helper has the following methods:
 
@@ -157,11 +192,13 @@ assertions.
 assertions.
 
 #### DependencyProviderHelper
+
 Allows to mock dependencies required for your tests.
 
 <a name=eventbehaviorhelper></a>
 
 #### EventBehaviorHelper
+
 This helper is useful for the [Publish and Synchronization tests](/docs/scos/dev/guidelines/testing-guidelines/publish-and-synchronization-testing.html).
 
 This helper has the following methods:
@@ -170,33 +207,43 @@ This helper has the following methods:
 - `assertAtLeastOneEventBehaviorEntityChangeEntryExistsForEvent()` - After the runtime events have been triggered, with this method, you can assert that at least one entry in the intermediate database table exists.
 
 #### BusinessHelper
+
 Allows to mock and access business layer classes like BusinessFactory.
 
 #### CommunicationHelper
+
 Allows to mock and access communication layer classes like the CommunicationFactory.
 
 #### TableHelper
+
 Allows you to work with tables rendered on pages.
 
 ### Yves Helpers
+
 The Yves helpers can only be used for testing the Yves application.
 
 #### FactoryHelper
+
 Allows you to mock and access the Factory.
 
 #### DependencyProviderHelper
+
 Allows you to mock dependencies required for your tests.
 
 ## PropelSchemaHelper
-Allows you to create SimpleXMLElement based on the XML schema file and format the XML content.
+
+Allows you to create `SimpleXMLElement` based on the XML schema file and format the XML content.
 
 ## TableHelper
+
 Allows you to create a table in the database and the `\Propel\Generator\Model\Table` object based on a database engine.
 
 ## PropelFileHelper
+
 Allows you to create Propel model files based on builders and tables.
 
 ## Next Steps
+
 * [Set up an organization of your tests](/docs/scos/dev/guidelines/testing-guidelines/setting-up-tests.html).
 * [Create or enable a test helper](/docs/scos/dev/guidelines/testing-guidelines/test-helpers.html).
 Learn about the [console commands you can use to execute your tests](/docs/scos/dev/guidelines/testing-guidelines/executing-tests.html).

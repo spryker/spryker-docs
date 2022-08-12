@@ -16,4 +16,4 @@ In this section, you can view the data that is being transmitted during the cart
 
 ## Viewing the transactions log
 
-To view the transaction log, in the *Actions* coulumn of *List of Transactions Log*, click **View**.
+To view the transaction log, in the *Actions* column of *List of Transactions Log*, click **View**.

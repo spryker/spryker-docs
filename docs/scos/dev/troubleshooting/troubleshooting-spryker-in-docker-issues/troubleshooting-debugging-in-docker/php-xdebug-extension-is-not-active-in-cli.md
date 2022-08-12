@@ -12,12 +12,24 @@ redirect_from:
   - /docs/en/php-xdebug-extension-is-not-active-in-cli
   - /v6/docs/php-xdebug-extension-is-not-active-in-cli
   - /v6/docs/en/php-xdebug-extension-is-not-active-in-cli
+related:
+  - title: nc command does not give any output
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-debugging-in-docker/nc-command-does-not-give-any-output.html
+  - title: nc command tells that the port is opened
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-debugging-in-docker/nc-command-tells-that-the-port-is-opened.html
+  - title: PHP `xdebug` extension is not active when accessing the website via a browser or curl
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-debugging-in-docker/php-xdebug-extension-is-not-active-when-accessing-the-website-via-a-browser-or-curl.html
+  - title: Xdebug does not work
+    link: docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-debugging-in-docker/xdebug-does-not-work.html
 ---
 
 ## Description
+
 PHP `xdebug` extension is not active in CLI.
 
 ## Solution
+
 Exit the CLI session and enter it with the `-x` argument:
+
 * `docker/sdk cli -x`
-* `docker/sdk testing -x
+* `docker/sdk testing -x`

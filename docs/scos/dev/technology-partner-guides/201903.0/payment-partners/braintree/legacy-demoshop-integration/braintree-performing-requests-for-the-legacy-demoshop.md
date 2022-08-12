@@ -8,13 +8,14 @@ originalArticleId: 6a43d7d4-8806-4204-95ac-c4529dcae7b1
 redirect_from:
   - /v2/docs/braintree-requests-legacy-demoshop
   - /v2/docs/en/braintree-requests-legacy-demoshop
+  - /docs/scos/dev/technology-partner-guides/201903.0/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-performing-requests-for-the-legacy-demoshop.html
 related:
   - title: Braintree
     link: docs/scos/user/technology-partners/page.version/payment-partners/braintree.html
-  - title: Braintree - Workflow for Legacy Demoshop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-workflow-for-legacy-demoshop.html
+  - title: Braintree - Request workflow for Legacy Demoshop
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-workflow-for-legacy-demoshop.html
   - title: Braintree - Configuration for the Legacy Demoshop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-configuration-for-the-legacy-demoshop.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-configuration-for-the-legacy-demoshop.html
 ---
 
 To perform the needed requests, you can easily use the implemented state machine commands and conditions. The next section gives a summary of them. You can also use the facade methods directly which, however, are invoked by the state machine.

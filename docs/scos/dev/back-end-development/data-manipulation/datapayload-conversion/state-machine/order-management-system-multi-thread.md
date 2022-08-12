@@ -12,6 +12,15 @@ redirect_from:
   - /docs/en/order-management-system-multi-thread
   - /v6/docs/order-management-system-multi-thread
   - /v6/docs/en/order-management-system-multi-thread
+related:
+  - title: Order process modelling via state machines
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html
+  - title: State machine console commands
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/state-machine-console-commands.html
+  - title: Common pitfalls in OMS design
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
+  - title: Creating an Order Management System - Spryker Commerce OS
+    link: docs/scos/dev/back-end-development/data-manipulation/creating-an-order-management-system-spryker-commerce-os.html
 ---
 
 Order management system (OMS) heavily relies on the state machine-related concepts like [event timeouts](/docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html#timeout) and [conditions](/docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html#conditions). When an order is managed, a lot of the timeout and condition entities are being processed. Processing of timeouts and conditions in Spryker is done by two console commands:
@@ -61,6 +70,7 @@ use Spryker\Shared\OmsMultiThread\OmsMultiThreadConstants;
 $config[OmsMultiThreadConstants::OMS_PROCESS_WORKER_NUMBER] = 10;
 ```
 This value will serve as the upper boundary for a generated processor identifier. For example, if you want to process the orders in 10 simultaneous threads, set this value to 10. Each new order would then be assigned a number between 1 and 10 as the processor identifier.
+
 4. Configure the OMS console commands. Let's take `oms:check-timeout` as an example. Create as many cronjobs, as many process workers you have. Each cronjob should run the command with different processor identifiers within the boundaries defined in Step 3. In our example, we have defined the maximum number of OMS process workers to be 10, thus, we must configure 10 distinct cronjobs each dealing with its own processor identifier:
 
 <details>

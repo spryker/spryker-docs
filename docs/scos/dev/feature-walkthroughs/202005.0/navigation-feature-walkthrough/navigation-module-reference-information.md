@@ -1,5 +1,5 @@
 ---
-title: Navigation module- reference information
+title: Navigation module - reference information
 description: The module provides database structure and a public API to manage what’s in the database, and a small toolkit for rendering navigation menus in the frontend
 last_updated: Aug 27, 2020
 template: feature-walkthrough-template
@@ -8,6 +8,7 @@ originalArticleId: 61208702-976f-4037-a551-093ee0162ac6
 redirect_from:
   - /v5/docs/navigation-module-reference-information
   - /v5/docs/en/navigation-module-reference-information
+  - /docs/scos/dev/feature-walkthroughs/201907.0/navigation-feature-walkthrough/navigation-module-reference-information.html
 related:
   - title: Managing Navigation Elements
     link: docs/scos/user/back-office-user-guides/page.version/content/navigation/managing-navigation-elements.html
@@ -27,7 +28,7 @@ The following node types are available:
 * **Label**: These nodes do not link to any specific URL, they are used for grouping other nodes.
 * **Category**: Nodes can be assigned to category node URLs.
 * **CMS Page**: Nodes can be assigned to CMS page URLs.
-* **Link**: These nodes link to internal pages in Yves, i.e. login, registration, etc.
+* **Link**: These nodes link to internal pages in Yves, for example, login, registration, etc.
 * **External URL**: These nodes link to external URLs (typically tabs opened in a new browser).
 You can control and adjust Navigation node appearance and add icons by assigning custom CSS classes to them.
 

@@ -57,12 +57,12 @@ You are taken to the *View Order: [order ID]* page.
 The page refreshes to show the message about successful status change. In the _Trigger event_ column next to the product, you can see the *ship* button.
 
 
-**Tips & Tricks**
+**Tips and tricks**
 To change the status of all the items inside a shipment at once, click **pay** in the **Trigger all matching states of order inside this shipment** section of the corresponding shipment.
 
 To learn more about order statuses, see [Orders: Reference Information](/docs/scos/user/back-office-user-guides/{{page.version}}/sales/orders/references/reference-information-orders.html).
 
-The order statuses you set here do not always have the same wording on the Storefront. For details on how you can display custom names for statuses on the Storefront, see [HowTo - Display Custom Names for Order Item States on the Storefront](https://docs.spryker.com/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
+The order statuses you set here do not always have the same wording on the Storefront. For details on how you can display custom names for statuses on the Storefront, see [HowTo - Display Custom Names for Order Item States on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
 
 ## Creating Returns
 If a sales order item is[ returnable](/docs/scos/user/features/{{page.version}}/return-management-feature-overview/return-management-feature-overview.html), you can create a return for it. Keep in mind, that you can create returns as for the registered, so also for the guest users. Creating a return from the Back Office is the only way for the *guest users* to return an order.
@@ -107,7 +107,7 @@ To view details on a return, click **View** in the Actions column of the *Return
 3. Update the custom order reference.
 4. Click **Save**.
 
-**Tips & Tricks**
+**Tips and tricks**
 To remove the custom order reference, clear the **Custom Order Reference** field and click **Save**.
 
 ## Claiming Orders
@@ -118,7 +118,7 @@ To [claim an order](/docs/scos/user/features/{{page.version}}/reclamations-featu
 3. Click **Create Reclamation**.
     The page refreshes to show the success message about reclamation creation.
 
-**Tips & Tricks**
+**Tips and tricks**
 Claiming an order does not change the status of the order or the items inside the order. When a reclamation is created, a sales team member processes the order manually.
 
 ## Commenting Orders
@@ -130,7 +130,7 @@ To [comment](/docs/scos/user/features/{{page.version}}/comments-feature-overview
 4. Click **Send Message**.
 The page refreshes to show the success message about comment creation. Your message is displayed in the **Comments** section.
 
-**Tips & Tricks**
+**Tips and tricks**
 * To send an email to a customer, on the *Overview of Orders* page, click the hyperlinked customer email in the _Email_ column.
 * To view customer details:
     * On the *Overview of Orders* page, click the hyperlinked customer name in the *Customer Full Name* column.

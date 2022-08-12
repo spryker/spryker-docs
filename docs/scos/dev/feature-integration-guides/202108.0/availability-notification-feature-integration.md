@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/availability-notification-feature-integration
 ---
 
-## Install feature сore
+## Install feature core
 
 ### Prerequisites
 
@@ -259,11 +259,11 @@ class CustomerDependencyProvider extends SprykerCustomerDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
- To verify that `AvailabilityNotificationAnonymizerPlugin` is working:
- 1. Add a new product.
- 2. On Yves, as a company user, subscribe to its availability notifications.
- 3. Check that the corresponding line is added to the `spy_availability_notification_subscription` table.</li><li>Delete this user.
- 4. Check that the line is deleted from the `spy_availability_notification_subscription` table.
+To verify that `AvailabilityNotificationAnonymizerPlugin` is working:
+1. Add a new product.
+2. On Yves, as a company user, subscribe to its availability notifications.
+3. Check that the corresponding line is added to the `spy_availability_notification_subscription` table.</li><li>Delete this user.
+4. Check that the line is deleted from the `spy_availability_notification_subscription` table.
 
 {% endinfo_block %}
 

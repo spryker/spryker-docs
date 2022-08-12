@@ -1,5 +1,5 @@
 ---
-title: Security Release Notes- Code Releases May, 2020
+title: Security Release Notes - Code Releases May, 2020
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/security-release-notes-code-releases-may-2020

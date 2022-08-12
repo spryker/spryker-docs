@@ -2,6 +2,21 @@
 title: Data Transformer Chain
 description: This document provides details about the Data Transformer Chain service in the Components Library.
 template: concept-topic-template
+related:
+  - title: Data Transformers
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/index.html
+  - title: Data Transformer Array-map
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/array-map.html
+  - title: Data Transformer Date-parse
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-parse.html
+  - title: Data Transformer Date-serialize
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/date-serialize.html
+  - title: Data Transformer Lens
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/lens.html
+  - title: Data Transformer Object-map
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/object-map.html
+  - title: Data Transformer Pluck
+    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/pluck.html
 ---
 
 This document explains the Data Transformer Chain service in the Components Library.
@@ -10,11 +25,11 @@ This document explains the Data Transformer Chain service in the Components Libr
 
 Data Transformer Chain is an Angular Service that executes other Data Transformers in sequence via configuration.
 
-In the example below, the `datasource` returns an array with the transformed `date` in every child object using chained transformers.
+In the following example, the `datasource` returns an array with the transformed `date` in every child object using chained transformers.
 
 Service configuration:
 
-- `transformers` - an array with Data Transformer configuration objects.
+- `transformers`—an array with Data Transformer configuration objects.
 
 ```html
 <spy-select
@@ -66,6 +81,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/data-transformer' {
+    interface DataTransformerRegistry {
+        chain: ChainDataTransformerConfig;
+    }
+}
+
 @NgModule({
     imports: [
         DataTransformerModule.withTransformers({
@@ -81,12 +102,6 @@ export class RootModule {}
 Below you can find interfaces for the Data Transformer Chain:
 
 ```ts
-declare module '@spryker/data-transformer' {
-    interface DataTransformerRegistry {
-        chain: ChainDataTransformerConfig;
-    }
-}
-
 export interface ChainDataTransformerConfig extends DataTransformerConfig {
     transformers: DataTransformerConfig[];
 }

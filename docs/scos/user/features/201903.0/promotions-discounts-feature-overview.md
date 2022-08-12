@@ -1,5 +1,5 @@
 ---
-title: Promotions and Discounts feature overview
+title: Promotions & Discounts feature overview
 description: The feature allows creating different types of discounts and applying multiple in-built discount settings suitable for any business requirements.
 last_updated: Jul 31, 2020
 template: concept-topic-template
@@ -18,7 +18,7 @@ redirect_from:
 
 The Promotions & Discounts feature enables product catalog managers to provide free value to their customers by discounting a percentage or a fixed sum of an order's subtotal or an item's price on predefined conditions.
 
-## Discount Types
+## Discount types
 
 There are two discount types:
 

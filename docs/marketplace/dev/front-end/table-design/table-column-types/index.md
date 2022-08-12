@@ -2,6 +2,25 @@
 title: Table Column Type extension
 description: This document provides details about the Table Column Type extension in the Components Library.
 template: concept-topic-template
+related:
+  - title: Table Column Type Autocomplete
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html
+  - title: Table Column Type Chip
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-chip.html
+  - title: Table Column Type Date
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-date.html
+  - title: Table Column Type Dynamic
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-dynamic.html
+  - title: Table Column Type Image
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-image.html
+  - title: Table Column Type Input
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-input.html
+  - title: Table Column Type List
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-list.html
+  - title: Table Column Type Select
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-select.html
+  - title: Table Column Type Text
+    link: docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-text.html
 ---
 
 This document explains the Table Column Type extension in the Components library.
@@ -10,10 +29,10 @@ This document explains the Table Column Type extension in the Components library
 
 Column Type is an Angular Component that describes how a specific type of the column is rendered within a table column.
 
-Check out this example below to see how to configure columns in the table config:
+Check out the following example to see how to configure columns in the table config:
 
 ```html
-<spy-table 
+<spy-table
     [config]="{
         ...,
         columns: [
@@ -117,7 +136,7 @@ export class RootModule {}
 Check out an example of getting a Table Column config value from the context:
 
 ```ts
-// Module 
+// Module
 import { ContextModule } from '@spryker/utils';
 
 @NgModule({
@@ -131,7 +150,7 @@ export class CustomTableColumnModule {}
 @Injectable({ providedIn: 'root' })
 export class CustomTableColumnConfig {
     @ColumnTypeOption()
-    propName? = this.contextService.wrap('value');
+    propName? = this.contextService.wrap('displayValue');
 
     constructor(private contextService: ContextService) {}
 }
@@ -167,7 +186,7 @@ export interface ColumnTypeOptions {
 export enum ColumnTypeOptionsType {
     /** Value will be compared with strict equality */
     Literal = 'literal',
-    /** Value must be any Javascript type (String, Number, etc.)  */
+    /** Value must be any Javascript type (String, Number)  */
     TypeOf = 'typeOf',
     /** Value will be compared with every array item. May be recursive */
     ArrayOf = 'arrayOf',

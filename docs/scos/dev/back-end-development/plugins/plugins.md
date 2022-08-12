@@ -22,13 +22,19 @@ redirect_from:
   - /v2/docs/en/plugin
   - /v1/docs/plugin
   - /v1/docs/en/plugin
+  - /docs/scos/dev/back-end-development/implementing-and-using-plugins.html
+  - /docs/scos/dev/back-end-development/plugins/implementing-and-using-plugins.html
+related:
+  - title: Getting an overview of the used plugins
+    link: docs/scos/dev/back-end-development/plugins/getting-an-overview-of-the-used-plugins.html
 ---
 
 Plugins are small classes that are used to connect bundles in a flexible and configurable way. In contrast to a direct call to a facade of another module, there can be an array of provided modules.
 
 According to our conventions, plugins are the only classes that can be directly instantiated in other modules. For instance the `Calculation` module uses an array of modules to perform the calculation. A lot of core modules allow to hook into the logic via plugins. This way you can change core behavior without extending core classes and the risk to loose backwards compatibility.
 
-## Example: Calculator Plugins
+## Example: Calculator plugins
+
 The Calculation module ships with a `CalculatorPluginInterface` which is implemented in several bundles. For instance you can find the `ItemTaxCalculatorPlugin` inside the Tax module.
 
 According to the interface, this plugin retrieves a quote transfer object, performs tax related calculations and adds them to the quote.
@@ -63,12 +69,13 @@ class ItemTaxCalculatorPlugin extends AbstractPlugin implements CalculatorPlugin
 }
 ```
 
-## How to Implement a Plugin
+## How to implement a plugin
+
 A plugin always implements an interface which is stored in the consuming module. You can find them in the `[PROJECT]\[APPLICATION]\[module]\Dependency\Plugin` namespace (e.g. `Spryker\Zed\Calculation\Dependency\Plugin`). module
 
 Your new plugin needs to be placed in a specific directory inside your module:
 
-| Application | Plugin directory | Example |
+| APPLICATION | PLUGIN DIRECTORY | EXAMPLE |
 | --- | --- | --- |
 | Client | [PROJECT]\Client\[module]\Plugin\ | Pyz\Client\Catalog\Plugin\Config\CatalogSearchConfigBuilder |
 | Yves | [PROJECT]\Yves\[module]\Plugin\ | Pyz\Yves\Cart\Plugin\Provider\CartControllerProvider |
@@ -77,6 +84,7 @@ Your new plugin needs to be placed in a specific directory inside your module:
 Plugins delegate calls to the underlying code of the same module. Plugins usually need to extend an `AbstractPlugin`. This way they can access the internal classes of their module. We recommend to use the `@method` doc block notation to enable auto completion in the IDE.
 
 ### Plugins in Zed
+
 You can copy and paste the template below. All you need to do is to replace the placeholders and to implement the related interface. The `AbstractPlugin` allows you to access the facade of the module where the plugin is placed via the `getFacade()` method.
 
 The most common use case for plugins in Zed is to delegate all calls directly to a method in the facade. You can also access the factory of the communication layer via `getFactory()`.
@@ -91,12 +99,13 @@ use Spryker\Zed\Kernel\Communication\AbstractPlugin;
  * @method \Spryker\Zed\[module]\Business\[module]Facade getFacade()
  */
 class [PLUGIN]Plugin extends AbstractPlugin implements AnotherBundlePluginInterface
-{ 
+{
     // ...
 }
 ```
 
 ### Plugins in Yves
+
 You can copy and paste the template below. All you need to do is to replace the placeholders and to implement the related interface. The `AbstractPlugin` allows you to access the factory via the `getFactory()` method.
 
 ```php
@@ -117,6 +126,7 @@ class [PLUGIN]Plugin extends AbstractPlugin implements AnotherBundlePluginInterf
 In Yves you can find some special plugins. The application uses special classes like `ApplicationPluginInterface`s, `RouteProviderPluginInterface`s, routers and twig functions. They are configured in the main `YvesBootstrap` class. These plugins and routers can be provided by several modules, that’s why we place them into the plugin-directory to fit them into our conventions. But they do not necessarily extend the `AbstractPlugin`.
 
 ### Plugins in Client
+
 You can copy and paste the template below. All you need to do is to replace the placeholders and to implement the related interface. The `AbstractPlugin` allows you to access the factory via the `getFactory()` method.
 
 ```php
@@ -134,7 +144,8 @@ class [PLUGIN]Plugin extends AbstractPlugin implements AnotherBundlePluginInterf
 }
 ```
 
-## How to Use a Plugin from Another Module
+## How to Use a plugin from another module
+
 In case you want to make your module flexible, you can add plugins to your module’s dependency provider. To do so you need to define an interface which contains a clear description of the expected implementation in the doc block.
 
 **Example**: plugin interface from the Calculation module:
@@ -212,4 +223,3 @@ class CalculationDependencyProvider extends AbstractBundleDependencyProvider
 
 }
 ```
-

@@ -22,13 +22,20 @@ redirect_from:
   - /v2/docs/en/secure-coding-practices
   - /v1/docs/secure-coding-practices
   - /v1/docs/en/secure-coding-practices
+related:
+  - title: Code Architecture Guide
+    link: docs/scos/dev/guidelines/coding-guidelines/code-architecture-guide.html
+  - title: Code Quality
+    link: docs/scos/dev/guidelines/coding-guidelines/code-quality.html
+  - title: Code style guide
+    link: docs/scos/dev/guidelines/coding-guidelines/code-style-guide.html
 ---
 
 Unsafe coding practices can make the software application vulnerable to theft of sensitive data. In this article, we’ll present a series of coding practices that we recommend using when developing an e-commerce application using Spryker Commerce OS, that will keep your software solution secured.
 
-## HTTP Strict Transport Security (HSTS)
+## HTTP strict transport security (HSTS)
 
-The HTTP Strict Transport Security policy defines a timeframe where a browser must connect to the web server via HTTP. By implementing this policy, you help protect the application against protocol downgrade attacks and cookie hijacking. The HSTS policy instructs the web browser that it can communicate with the server only through HTTP secure connections.
+The HTTP Strict Transport Security policy defines a time frame where a browser must connect to the web server via HTTP. By implementing this policy, you help protect the application against protocol downgrade attacks and cookie hijacking. The HSTS policy instructs the web browser that it can communicate with the server only through HTTP secure connections.
 
 ### HSTS mechanism
 
@@ -74,7 +81,7 @@ $config[ApplicationConstants::YVES_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG] = [
     ];
 ```
 
-## Prevent Host Header Attack Vulnerability
+## Prevent host header attack vulnerability
 
 HTTP_HOST header attacks refer to injecting malicious host in the header of the response. This is caused by inconsistencies in handling the `Host` header. The `Host` can be manipulated by an attacker and have malicious URLs injected.
 
@@ -90,7 +97,7 @@ $trustedHosts = Config::get(ApplicationConstants::YVES_TRUSTED_HOSTS);
 Request::setTrustedHosts($trustedHosts);
 ```
 
-## Code Injection Vulnerabilities
+## Code injection vulnerabilities
 
 Code injection refers to any mean that allows the attacker to inject malicious code into a web application so that it gets interpreted and executed. PHP Code Inclusions Vulnerabilities PHP code inclusion vulnerabilities refer to allowing to influence either a part or the entire file name used in an include or require statement. Possible targets for this kind of attack are:
 
@@ -101,7 +108,7 @@ Code injection refers to any mean that allows the attacker to inject malicious c
 
 Untrusted input should be prevented to be used to determine the path to the parameter that’s passed to these functions.
 
-### PHP Code Evaluation Vulnerabilities
+### PHP Code evaluation vulnerabilities
 
 PHP code evaluation vulnerabilities refers to allowing code injection through the parameters of the PHP functions that are evaluating/executing the received input.
 

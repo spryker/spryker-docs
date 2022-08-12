@@ -9,8 +9,8 @@ redirect_from:
   - /v3/docs/comments-shop-guide
   - /v3/docs/en/comments-shop-guide
   - /docs/scos/user/shop-user-guides/page.version/comments/shop-guide-comments.html
+  - /docs/scos/user/shop-user-guides/201907.0/comments/shop-guide-comments.html
 ---
 
 Comments allow you to discuss the cart contents and order details with your colleagues.
-![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Comments/comments-gif.gif) 
-
+![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Shop+User+Guides/Comments/comments-gif.gif)

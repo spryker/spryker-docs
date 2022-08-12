@@ -29,13 +29,24 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/zed-api/zed-api-crud-functionality.html
   - /docs/scos/dev/sdk/202009.0/zed-api/zed-api-crud-functionality.html
   - /docs/scos/dev/sdk/202108.0/zed-api/zed-api-crud-functionality.html
+related:
+  - title: Zed API (Beta)
+    link: docs/scos/dev/sdk/zed-api/zed-api-beta.html
+  - title: Zed API configuration
+    link: docs/scos/dev/sdk/zed-api/zed-api-configuration.html
+  - title: Zed API resources
+    link: docs/scos/dev/sdk/zed-api/zed-api-resources.html
+  - title: Zed API processor stack
+    link: docs/scos/dev/sdk/zed-api/zed-api-processor-stack.html
+  - title: Zed API project implementation
+    link: docs/scos/dev/sdk/zed-api/zed-api-project-implementation.html
 ---
 
 ## Filtering
 
 For find action we return a paginated collection that can be limited and customized based on query string input or headers. So using the provided `FilterPreProcessors` one can enable filtering (conditions), sorting (and multi-sorting) and pagination.
 
-### Condition Filtering
+### Condition filtering
 
 For the filtering we use the Spryker `PropelQueryBuilder` module. It generates Propel query criteria based on a [jQuery QueryBuilder](http://querybuilder.js.org/) string.
 
@@ -49,7 +60,8 @@ You can pass any kind of complex query including AND/OR into the `filter` query 
 %22input%22:%22text%22,%22operator%22:%22equal%22,%22value%22:%22Doe%22}]}
 ```
 
-### Field Limitations
+### Field limitations
+
 For limiting fields you can use the fields query string:
 
 ```
@@ -88,7 +100,8 @@ The following meta and link blocks will be included in the response:
 }
 ```
 
-### Pagination by Header Range
+### Pagination by header range
+
 The core also ships with a header range solution, setting the range to `0-9` (page 1), `10-19` (page 2), etc. The header to be sent by the client would look like this:
 
 ```
@@ -96,10 +109,12 @@ Range: customers=0-9
 ```
 
 {% info_block warningBox %}
+
 This pagination type is 0-based.
+
 {% endinfo_block %}
 
-### Implement a Custom Solution
+### Implement a custom solution
 
 In case you need a different pagination strategy, you can replace the core Processor with a custom project one for either a page-based or offset-based solution.
 
@@ -109,7 +124,7 @@ Each resource must have a `ResourceApiTransfer`, e.g. for a customer it would be
 
 By default, any resource will only expose and accept the fields defined in this transfer. For response data you can also further filter by a whitelist as field map (see above).
 
-## Add and Update
+## Add and update
 
 When adding or updating a resource item, one must contain the payload in the following structure:
 

@@ -2,6 +2,9 @@
 title: Cache Strategy Static
 description: This document provides details about the Cache Strategy Static service in the Components Library.
 template: concept-topic-template
+related:
+  - title: Cache
+    link: docs/marketplace/dev/front-end/ui-components-library/cache/index.html
 ---
 
 This document explains the Cache Strategy Static service in the Components Library.
@@ -14,8 +17,8 @@ Check out an example usage of the Cache Strategy Static.
 
 Service configuration:
 
-- `type` - a cache type.  
-- `expiresIn` - represents a duration as a string. Each component is separated by a space.  
+- `type`—a cache type.  
+- `expiresIn`—represents a duration as a string. Each component is separated by a space.  
 
 ```html
 <spy-select
@@ -36,6 +39,12 @@ Service configuration:
 Register the service:
 
 ```ts
+declare module '@spryker/cache' {
+    interface CacheStrategyRegistry {
+        static: StaticCacheStrategyConfig;
+    }
+}
+
 @NgModule({
     imports: [
         CacheModule.withStrategies({
@@ -56,13 +65,13 @@ Below you can find interfaces for the Cache Strategy Static:
  * Represents a duration as a string where components are separated by a space
  *
  * Components:
- *  - 1-999y - Years
- *  - 1-12m - Months
- *  - 1-365d - Days
- *  - 1-23h - Hours
- *  - 1-59min - Minutes
- *  - 1-59s - Seconds
- *  - 1-59ms - Milliseconds
+ *  - 1-999y—Years
+ *  - 1-12m—Months
+ *  - 1-365d—Days
+ *  - 1-23h—Hours
+ *  - 1-59min—Minutes
+ *  - 1-59s—Seconds
+ *  - 1-59ms—Milliseconds
  *
  * Examples:
  *  - 2h 30min

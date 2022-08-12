@@ -8,6 +8,7 @@ originalArticleId: d28a6800-6428-408f-8039-9baee6749ecd
 redirect_from:
   - /v4/docs/managing-groups
   - /v4/docs/en/managing-groups
+  - /docs/scos/user/back-office-user-guides/202001.0/users/managing-user-groups/creating-user-groups.html
 related:
   - title: Roles- Reference Information
     link: docs/scos/user/back-office-user-guides/page.version/users/roles-groups-and-users/references/roles-reference-information.html
@@ -69,7 +70,7 @@ This action will not delete the user itself. It will just delete the association
 
 ***
 
-**Tips & Tricks**
+**Tips and tricks**
 
 In case you need to know what roles are assigned to a specific group without initiating the update flow, do the following:
 1. On the **Groups** table view page, click the hyperlinked value in the _Roles_ column.

@@ -14,16 +14,16 @@ related:
   - title: Managing Global Thresholds
     link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-global-thresholds.html
   - title: Managing Threshold Settings
-    link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-threshold-settings.html
+    link: docs/scos/user/back-office-user-guides/page.version/administration/manage-threshold-settings.html
 ---
 
 This topic describes how to manage [merchant order thresholds](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html#merchant-order-thresholds).
 
-To start working with merchant order thresholds, go to **Administration** > **Merchant Relationships Threshold**.
+To start working with merchant order thresholds, go to **Administration&nbsp;<span aria-label="and then">></span> Merchant Relationships Threshold**.
 
 ## Prerequisites
 
-The list of the merchant relations for which you can define thresholds is based on the merchant relations created in **Merchant** > **Merchant Relations**. See [Creating a Merchant](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants-and-merchant-relations/managing-merchants.html#creating-a-merchant) to learn more.
+The list of the merchant relations for which you can define thresholds is based on the merchant relations created in **Merchant&nbsp;<span aria-label="and then">></span> Merchant Relations**. See [Creating a Merchant](/docs/scos/user/back-office-user-guides/{{page.version}}/marketplace/merchants/create-merchants.html) to learn more.
 
 ## Setting up Minimum Hard  Threshold
 
@@ -81,5 +81,5 @@ To set up several threshold types:
 
 The page refreshes, and the message about successful threshold update is displayed.
 
-**Tips & tricks**
+**Tips and tricks**
 <br>In the **Message** field, enter *{% raw %}{{{% endraw %}threshold{% raw %}}}{% endraw %}* or *{% raw %}{{{% endraw %}fee{% raw %}}}{% endraw %}* to reference the threshold name or the defined fee, respectively. When the message is rendered on the Storefront, the placeholders are replaced with the values from **Enter threshold value** and **Enter flexible fee** or **Enter fixed fee** fields.

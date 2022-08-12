@@ -1,5 +1,5 @@
 ---
-title: HowTo - Force HTTPS
+title: "HowTo: Force HTTPS"
 description: Use the guide to configure HTTPs and HTTP for your pages.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -24,16 +24,21 @@ redirect_from:
   - /v1/docs/en/ht-force-https
 ---
 
-The following article describes how you can force to use HTTPS in your pages.
+This guide shows how you can force to use HTTPS on your pages.
+
 {% info_block infoBox "Load balancer" %}
-If your servers are behind a load balancer and the load balancer is doing the redirects from HTTP to HTTPS, you don't need to further configure the application.
+
+If your servers are behind a load balancer, and the load balancer is doing the redirects from HTTP to HTTPS, you don't need to further configure the application.
+
 {% endinfo_block %}
 
-## Application Configuration
-### Force HTTPS For All Pages
-To force HTTPS on all pages, you have to set `$config[ApplicationConstants::(YVES|ZED)_SSL_ENABLED]` to `true`. The application will then always force HTTPS on all pages.
+Perform the following steps to configure the application to use HTTPS.
 
-**Configuration:**
+## 1. Force HTTPS for all pages
+
+Set `$config[ApplicationConstants::(YVES|ZED)_SSL_ENABLED]` to `true`. The application forces HTTPS on all pages.
+
+**Configuration**
 
 ```php
 <?php
@@ -47,17 +52,21 @@ $config[ApplicationConstants::ZED_SSL_ENABLED] = true;
 $config[ApplicationConstants::YVES_SSL_ENABLED] = true;
 ```
 
-Before a controller is resolved, the application will check if the request is secure and that the requested resource is not excluded from HTTPS.
+Before a controller is resolved, the application checks if the request is secure and that the requested resource is not excluded from HTTPS.
 
 {% info_block infoBox "Info" %}
-If the request is not secure and not excluded from HTTPS, the application will return a redirect response if the page was requested with HTTP.<br>If the request is secure and the page is excluded from HTTPS, the application will allow requests with HTTP.
+
+If the request is not secure and not excluded from HTTPS, the application returns a redirect response if the page is requested with HTTP.<br>If the request is secure and the page is excluded from HTTPS, the application allows requests with HTTP.
+
 {% endinfo_block %}
 
-### Allow Pages to Use HTTP
-You can also allow some of your pages not to use HTTPS. If you want to allow some pages to use HTTP you can add them to `$config[ApplicationConstants::(YVES|ZED)_SSL_EXCLUDED]` and only set `$config[ApplicationConstants::(YVES|ZED)_SSL_ENABLED]` to `true`. The
- key in this array is the route name and the value is the URL.
+## 2. Allow pages to use HTTP
 
-**Configuration:**
+You can also allow some of your pages not to use HTTPS.
+
+To allow some pages to use HTTP, add them to `$config[ApplicationConstants::(YVES|ZED)_SSL_EXCLUDED]` and set only `$config[ApplicationConstants::(YVES|ZED)_SSL_ENABLED]` to `true`. The key in this array is the route name, and the value is the URL.
+
+**Configuration**
 
 ```php
 <?php
@@ -77,18 +86,20 @@ $config[ApplicationConstants::YVES_SSL_EXCLUDED] = [
 ];
 ```
 
-## When Is a Request Secure?
-There are two options that identify if a request is secure or not.
+## When is a request secure?
 
-1. When the value of `$request->server->get('REMOTE_ADDR')` is found in the configured trusted proxies and the value of `$request->header->get('X_FORWARDED_PROTO')` is HTTPS.
-2. When the value of `$request->server->get('HTTPS')` is HTTPS.
+Two options identify if a request is secure or not:
 
-The checks for a secure request will be made in this order.
+1. When the value of `$request->server->get('REMOTE_ADDR')` is found in the configured trusted proxies, and the value of `$request->header->get('X_FORWARDED_PROTO')` is `HTTPS`.
+2. When the value of `$request->server->get('HTTPS')` is `HTTPS`.
 
-## Trusted Proxy Configuration
-Both applications have a configuration for trusted proxies. To use trusted proxies, configure `$config[ApplicationConstants::(YVES|ZED)_TRUSTED_PROXIES]`.
+The checks for a secure request are made in this order.
 
-**Configuration:**
+## Trusted proxy configuration
+
+Both applications have a configuration for trusted proxies. To use trusted proxies, configure `$config[ApplicationConstants::(YVES|ZED)_TRUSTED_PROXIES]`:
+
+**Configuration**
 
 ```php
 <?php
@@ -110,4 +121,4 @@ $config[ApplicationConstants::YVES_TRUSTED_PROXIES] = [
 ];
 ```
 
-As described above, the application will check if the value of `$request->server->get('REMOTE_ADDR')` can be found in your configured trusted proxies. If so, the current request will be marked as secure when the value of `$request->header->get('X_FORWARDED_PROTO')` is HTTPS.
+As described in the preceding section, the application checks if the value of `$request->server->get('REMOTE_ADDR')` can be found in your configured trusted proxies. If so, the current request is marked secure when the value of `$request->header->get('X_FORWARDED_PROTO')` is HTTPS.

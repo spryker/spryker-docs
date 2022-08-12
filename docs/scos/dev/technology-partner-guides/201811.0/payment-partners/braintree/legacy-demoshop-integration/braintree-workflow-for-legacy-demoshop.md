@@ -1,5 +1,5 @@
 ---
-title: Braintree - Workflow for Legacy Demoshop
+title: Braintree - Request workflow for Legacy Demoshop
 description: This article describes the request flow for the Braintree module in the Spryker Legacy Demoshop.
 last_updated: Oct 22, 2019
 template: concept-topic-template
@@ -8,13 +8,14 @@ originalArticleId: 4844884b-6bbe-4036-bb2d-77815bd30c9a
 redirect_from:
   - /v1/docs/braintree-workflow-legacy-demoshop
   - /v1/docs/en/braintree-workflow-legacy-demoshop
+  - /docs/scos/dev/technology-partner-guides/201811.0/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-workflow-for-legacy-demoshop.html
 related:
   - title: Braintree
     link: docs/scos/user/technology-partners/page.version/payment-partners/braintree.html
   - title: Braintree - Configuration for the Legacy Demoshop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-configuration-for-the-legacy-demoshop.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-configuration-for-the-legacy-demoshop.html
   - title: Braintree - Performing Requests for the Legacy Demoshop
-    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/legacy-demoshop-integration/braintree-performing-requests-for-the-legacy-demoshop.html
+    link: docs/scos/dev/technology-partner-guides/page.version/payment-partners/braintree/braintree-guides-for-the-legacy-demoshop/braintree-performing-requests-for-the-legacy-demoshop.html
 ---
 
 Both credit card and PayPal utilize the same request flow. It basically consists of the following requests:

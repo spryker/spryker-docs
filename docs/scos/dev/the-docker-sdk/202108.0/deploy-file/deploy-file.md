@@ -19,7 +19,7 @@ Docker SDK is shipped with the basic deploy file template: `deploy.base.template
 To include a deploy file template into an application's configuration, use the [`imports:`](/docs/scos/dev/the-docker-sdk/{{page.version}}/deploy-file/deploy-file-reference-1.0.html#imports) parameter in the main deploy file of the desired environment.
 
 ```yaml
-import:
+imports:
   custom_deploy_file.yml:
 ```
 
@@ -30,6 +30,7 @@ A dynamic parameter is a YAML parameter that defines the value of a placeholder 
 For example, `deploy.dev.yaml` includes `deploy.base.template.yml`:
 
 **deploy.dev.yml**
+
 ```yaml
 version: 1.0
 
@@ -42,6 +43,7 @@ imports:
 The included deploy file includes more deploy files:
 
 **deploy.base.template.yml**
+
 ```yaml
 ...
 
@@ -58,6 +60,7 @@ imports:
 When `deploy.base.template.yml` is included into the build of `deploy.dev.yml`, `%env_name%` is replaced with `dev`:
 
 **deploy.base.template.yml**
+
 ```yaml
 ...
 
@@ -72,9 +75,61 @@ imports:
 ```
 
 
+### Import types
 
+You can include a deploy file into an application's configuration using one of the following import types.
 
+* File path:
 
+```yaml
+imports:
+    deploy.base.template.yml:
+    deploy.project.template.yml:
+```      
+
+* Named array:
+
+```yaml
+imports:
+    base-deploy-file:
+        template: deploy.base.template.yml
+    project-deploy-file:
+        template: deploy.project.template.yml
+```
+
+* Unnamed array:
+
+```yaml
+imports:
+    - template: deploy.base.template.yml
+    - template: deploy.project.template.yml
+```
+
+Unlike file path import, named and unnamed array imports support including the same deploy file multiple types. This can be useful when you want to add the same configuration multiple times with different parameters.
+
+Example of including the same deploy file with different parameters via a named array import:
+
+```yaml
+imports:
+    project-deploy-file:
+        template: deploy.project.template.yml
+        parameters: 'stage'
+    extended-project-deploy-file:
+        template: deploy.project.template.yml
+        parameters:
+            env_name: 'dev'
+```
+
+Example of including the same deploy file with different parameters via an unnamed array import:
+
+```yaml
+- template: deploy.porject.template.yml
+  parameters:
+      env-name: 'stage'
+- template: deploy.porject.template.yml
+  parameters:
+      env-name: 'dev'
+```
 
 ## Deploy file inheritance
 
@@ -108,6 +163,7 @@ image:
         ini:
             memory_limit: 2048M
 ```
+
 And, in `./spryker/generator/deploy-file-generator/templates/services.deploy.template.yml`, the memory limit is defined as follows:
 
 ```yaml

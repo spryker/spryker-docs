@@ -38,6 +38,9 @@ redirect_from:
   - /v1/docs/en/about-zed
   - /v1/docs/zed
   - /v1/docs/en/zed
+related: 
+  - title: Adding navigation in the Back Office
+    link: docs/scos/dev/back-end-development/zed/adding-navigation-in-the-back-office.html
 ---
 
 Zed is one of the application layers of the Spryker Commerce OS, providing the backoffice/backend functionality.
@@ -51,5 +54,5 @@ See [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html) 
 Zed is divided into three parts:
 
 * Business layer, containing the entire business logic;
-* Persistence layer, responsible for the database structure, connections to it, i.e., for the data persistence;
+* Persistence layer, responsible for the database structure, connections to it, for example, for the data persistence;
 * Communication layer, enabling the connection to the external providers.

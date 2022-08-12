@@ -15,7 +15,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 To start feature integration, overview and install the necessary features:
 
@@ -94,7 +94,7 @@ class CartsRestApiDependencyProvider extends SprykerCartsRestApiDependencyProvid
 </details>
 
 {% info_block warningBox "your title goes here" %}
-Make sure that the following endpoints are available:<ul><li>http://glue.mysprykershop.com/carts</li><li>http://glue.mysprykershop.com/guest-carts</li></ul>
+Make sure that the following endpoints are available:<ul><li>https://glue.mysprykershop.commmmmm/carts</lihttps://glue.mysprykershop.comomomomomom/guest-carts</li></ul>
 {% endinfo_block %}
 
 {% info_block warningBox “Verification” %}
@@ -104,7 +104,7 @@ Make sure that it is possible to create more than one cart.
 
 {% info_block warningBox “Verification” %}
 
-Make sure that after creating several carts, a response from http://glue.mysprykershop.com/carts GET request contains data about all created carts.
+Make sure that after creating several carts, a response from https://glue.mysprykershop.commmmmm/carts GET request contains data about all created carts.
 {% endinfo_block %}
 
 <!-- links to:

@@ -32,7 +32,7 @@ This document explains the Table Feature Selectable component in the Components 
 Table Feature Selectable is a feature of the Table Component that allows selecting multiple rows.
 The row selection toggles whether a row is selected. A checkmark indicates that a row is selected, while an empty box indicates that a row is not selected.
 Commonly, the table header indicates whether all rows are selected. If they are, the header displays a checkmark. If all rows are unselected, the header displays an empty checkbox. For rows with indeterminate states, a dash appears in the header.
-When the rows selection feature changes, it emits an event with all selected rows, which can be used by other features (for example, the [Table Feature Batch Actions](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-batch-actions.html) will display the applicable actions for selected rows).
+When the rows selection feature changes, it emits an event with all selected rows, which can be used by other features (for example, the [Table Feature Batch Actions](/docs/marketplace/dev/front-end/{{page.version}}/table-design/table-features/table-feature-batch-actions.html) will display the applicable actions for selected rows).
 
 Check out an example usage of the Table Feature Selectable in the `@spryker/table` config.
 

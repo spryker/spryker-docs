@@ -35,7 +35,7 @@ Datasources are used in other components like Table, Select, Autocomplete.
 
 The main module provides an opportunity to register any datasource by key via static method `withDatasources()`. It assigns the object of datasources to the `DatasourceTypesToken` under the hood.
 
-The main service injects all registered types from the `DatasourceTypesToken` and `DataTransformerService` (see [Data Transformers](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/)).
+The main service injects all registered types from the `DatasourceTypesToken` and `DataTransformerService` (see [Data Transformers](/docs/marketplace/dev/front-end/{{page.version}}/ui-components-library/data-transformers/)).
 
 `resolve()` method finds specific service from the `DatasourceTypesToken` by `config.type` (from the argument) and returns observable with data by `Datasource.resolve()`. Data is also transformed by `DataTransformerService` if `config.transform` exists.
 
@@ -112,7 +112,7 @@ export interface Datasource<D = unknown, C = unknown> {
 
 There are a few common Datasources that are available in UI library as separate packages:
 
-- [HTTP](/docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-http.html)—allows fetching data from URL via HTTP configured in the configuration of the Datasource.
-  HTTP Datasource supports caching strategy (see [Cache](/docs/marketplace/dev/front-end/ui-components-library/cache/)) that may be configured via config and used before the request is made when applicable.
-- [Inline](/docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline.html)—allows passing data along with the configuration of the Datasource.
-- [Inline.table](/docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline-table.html)—allows passing transformed for the table format data along with the configuration of the Datasource
+- [HTTP](/docs/marketplace/dev/front-end/{{page.version}}/ui-components-library/datasources/datasource-http.html)—allows fetching data from URL via HTTP configured in the configuration of the Datasource.
+  HTTP Datasource supports caching strategy (see [Cache](/docs/marketplace/dev/front-end/{{page.version}}/ui-components-library/cache/)) that may be configured via config and used before the request is made when applicable.
+- [Inline](/docs/marketplace/dev/front-end/{{page.version}}/ui-components-library/datasources/datasource-inline.html)—allows passing data along with the configuration of the Datasource.
+- [Inline.table](/docs/marketplace/dev/front-end/{{page.version}}/ui-components-library/datasources/datasource-inline-table.html)—allows passing transformed for the table format data along with the configuration of the Datasource

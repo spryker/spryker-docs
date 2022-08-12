@@ -58,10 +58,10 @@ Component configuration:
 
 Take a closer look at all the options available.
 
-- `columns` (only required properties are listed, the entire interface can be found in [Table Design](/docs/marketplace/dev/front-end/table-design/#interfaces) article.):  
+- `columns` (only required properties are listed, the entire interface can be found in [Table Design](/docs/marketplace/dev/front-end/{{page.version}}/table-design/#interfaces) article.):  
     - `id`—a cell `id`.  
     - `type`—a cell `type`.  
-    - `typeOptions`. Check [Column Type](/docs/marketplace/dev/front-end/table-design/table-column-types/)) to learn more about the column types available.):  
+    - `typeOptions`. Check [Column Type](/docs/marketplace/dev/front-end/{{page.version}}/table-design/table-column-types/)) to learn more about the column types available.):  
         - `value`—sets the default value to the newly added row's cell.  
 
 - `create`:  

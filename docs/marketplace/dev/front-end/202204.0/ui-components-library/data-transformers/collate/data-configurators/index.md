@@ -109,4 +109,4 @@ interface DataTransformerConfigurator {
 
 There are a few common Data Transformer Data Configurators that are available in UI library as separate packages:
 
-- [Table](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html)—integrates Table into Collate to re-populate data when the table updates.
+- [Table](/docs/marketplace/dev/front-end/{{page.version}}/ui-components-library/data-transformers/collate/data-configurators/table.html)—integrates Table into Collate to re-populate data when the table updates.

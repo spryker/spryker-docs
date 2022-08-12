@@ -30,7 +30,7 @@ This document explains the Table Feature Batch Actions component in the Componen
 ## Overview
 
 Table Feature Batch Actions is a feature of the Table Component that allows triggering batch/multiple actions from rows.
-As Table Feature Batch Actions is based on the [Table Feature Selectable](/docs/marketplace/dev/front-end/table-design/table-features/table-feature-selectable.html), batch actions must be registered and enabled via the table config. Batch actions are functions that can be performed on multiple items within a table. As soon as at least one row is selected in the table, the batch action bar with allowed actions appears at the top of the table.
+As Table Feature Batch Actions is based on the [Table Feature Selectable](/docs/marketplace/dev/front-end/{{page.version}}/table-design/table-features/table-feature-selectable.html), batch actions must be registered and enabled via the table config. Batch actions are functions that can be performed on multiple items within a table. As soon as at least one row is selected in the table, the batch action bar with allowed actions appears at the top of the table.
 To escape the `batch action mode`, it is necessary to unselect the table rows.
 
 Check out an example usage of the Table Feature Batch Actions in the `@spryker/table` config.
@@ -39,7 +39,7 @@ Component configuration:
 
 - `enabled`—enables the feature via the config.  
 - `noActionsMessage`—error message text.  
-- `actions`—an array with actions that are displayed in the top bar, and their type of the registered [action](/docs/marketplace/dev/front-end/ui-components-library/actions/).   
+- `actions`—an array with actions that are displayed in the top bar, and their type of the registered [action](/docs/marketplace/dev/front-end/{{page.version}}/ui-components-library/actions/).   
 - `rowIdPath`—gets a row `id` via the column `id` (in the following example, `Sku` column).  
 - `availableActionsPath`—path to an array with available action IDs in the top bar (supports nested objects using dot notation for ex. `prop.nestedProp`).   
 

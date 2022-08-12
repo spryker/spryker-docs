@@ -9,7 +9,7 @@ related:
     link: docs/marketplace/dev/front-end/extending-the-project/index.html
 ---
 
-This document outlines the changes that need to be made at a project level in order to [extend the frontend part of your project](/docs/marketplace/dev/front-end/extending-the-project/index.html).
+This document outlines the changes that need to be made at a project level in order to [extend the frontend part of your project](/docs/marketplace/dev/front-end/{{page.version}}/extending-the-project/index.html).
 
 *Estimated migration time: 1h 30m*
 
@@ -160,4 +160,4 @@ yarn mp:build
 
 Related articles:
 
-[Extending the project](/docs/marketplace/dev/front-end/extending-the-project/index.html)
+[Extending the project](/docs/marketplace/dev/front-end/{{page.version}}/extending-the-project/index.html)

@@ -199,12 +199,12 @@ export enum ColumnTypeOptionsType {
 
 UI library comes with a number of standard column types that can be used on any project:
 
-- [Autocomplete](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-autocomplete.html) - renders `@spryker/input` and `@spryker/autocomplete` components.
-- [Chip](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-chip.html) - renders `@spryker/chip` component.
-- [Date](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-date.html) - renders a formatted date by `config`.
-- [Dynamic](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-dynamic.html) - is a higher-order column that gets `ColumnConfig` from the configured `Datasource` and renders a column with the retrieved `ColumnConfig`.
-- [Image](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-image.html) - renders an image.
-- [Input](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-input.html) - renders `@spryker/input` component.
-- [List](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-list.html) - renders a list of column types.
-- [Select](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-select.html) - renders `@spryker/select` component.
-- [Text](/docs/marketplace/dev/front-end/table-design/table-column-types/table-column-type-text.html) - renders a static text.
+- [Autocomplete](/docs/marketplace/dev/front-end/{{page.version}}/table-design/table-column-types/table-column-type-autocomplete.html) - renders `@spryker/input` and `@spryker/autocomplete` components.
+- [Chip](/docs/marketplace/dev/front-end/{{page.version}}/table-design/table-column-types/table-column-type-chip.html) - renders `@spryker/chip` component.
+- [Date](/docs/marketplace/dev/front-end/{{page.version}}/table-design/table-column-types/table-column-type-date.html) - renders a formatted date by `config`.
+- [Dynamic](/docs/marketplace/dev/front-end/{{page.version}}/table-design/table-column-types/table-column-type-dynamic.html) - is a higher-order column that gets `ColumnConfig` from the configured `Datasource` and renders a column with the retrieved `ColumnConfig`.
+- [Image](/docs/marketplace/dev/front-end/{{page.version}}/table-design/table-column-types/table-column-type-image.html) - renders an image.
+- [Input](/docs/marketplace/dev/front-end/{{page.version}}/table-design/table-column-types/table-column-type-input.html) - renders `@spryker/input` component.
+- [List](/docs/marketplace/dev/front-end/{{page.version}}/table-design/table-column-types/table-column-type-list.html) - renders a list of column types.
+- [Select](/docs/marketplace/dev/front-end/{{page.version}}/table-design/table-column-types/table-column-type-select.html) - renders `@spryker/select` component.
+- [Text](/docs/marketplace/dev/front-end/{{page.version}}/table-design/table-column-types/table-column-type-text.html) - renders a static text.

@@ -57,9 +57,9 @@ These services are registered via `CollateDataTransformer.withFilters()`.
 
 There are a few common Data Transformer Collate Filters that are available as separate packages in the UI library:
 
-- [Equals](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/equals.html)—filters values that are strictly equal.
-- [Range](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/range.html)—filters values that are within a number range.
-- [Text](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/text.html)—filters values that match a string.
+- [Equals](/docs/marketplace/dev/front-end/{{page.version}}/ui-components-library/data-transformers/collate/filters/equals.html)—filters values that are strictly equal.
+- [Range](/docs/marketplace/dev/front-end/{{page.version}}/ui-components-library/data-transformers/collate/filters/range.html)—filters values that are within a number range.
+- [Text](/docs/marketplace/dev/front-end/{{page.version}}/ui-components-library/data-transformers/collate/filters/text.html)—filters values that match a string.
 
 ## Collate Data Configurators
 
@@ -68,7 +68,7 @@ These services are registered via `CollateDataTransformer.withConfigurators()`.
 
 There are a few common Data Transformers Collate Data Configurators that are available:
 
-- [Table](/docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html)—integrates Table into Collate to re-populate data when the table updates.
+- [Table](/docs/marketplace/dev/front-end/{{page.version}}/ui-components-library/data-transformers/collate/data-configurators/table.html)—integrates Table into Collate to re-populate data when the table updates.
 
 ## Service registration
 

@@ -13,7 +13,7 @@ Using Table Configuration you can customize the behavior of the table based on y
 Table config has two required sections:
 
 - [Columns](#columns-configuration) definition that describes what columns user will see and what data to expect.
-- [Datasource](/docs/marketplace/dev/front-end/ui-components-library/datasources/) type that describes how the data should be provided to a table.
+- [Datasource](/docs/marketplace/dev/front-end/{{page.version}}/ui-components-library/datasources/) type that describes how the data should be provided to a table.
 
 The rest of the sections are reserved for features (like Pagination, which describes pagination section and its properties).
 
@@ -163,7 +163,7 @@ typeOptionsMappings: {
 // default text(table column value) and default color('red')—in other cases
 ```
 
-To get more details about the table columns, see [Column Types](/docs/marketplace/dev/front-end/table-design/table-column-types/).
+To get more details about the table columns, see [Column Types](/docs/marketplace/dev/front-end/{{page.version}}/table-design/table-column-types/).
 
 ## Interfaces
 

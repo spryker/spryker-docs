@@ -16,7 +16,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/managing-customer-addresses.html
 related:
   - title: Managing Wishlists
-    link: docs/scos/dev/glue-api-guides/page.version/managing-wishlists/managing-wishlists.html
+    link: docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlists-via-glue-api.html
   - title: Login & Registration Forms
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-login-overview.html
   - title: Password Management
@@ -433,7 +433,7 @@ To view generic errors that originate from the Glue Application, see [Reference 
 * [Manage carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html)
 * [Manage cart items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html)
 * [Manage gift cards](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html)
-* [Manage wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html)
+* [Manage wishlists](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlists-via-glue-api.html)
 * [Manage orders](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-orders.html)
 * [Manage customer authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-authentication-tokens.html)
 * [Manage customer passwords](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-passwords.html)

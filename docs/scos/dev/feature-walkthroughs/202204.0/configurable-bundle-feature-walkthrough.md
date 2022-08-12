@@ -33,7 +33,7 @@ The following schemas illustrates module relations in the Configurable Bundle fe
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES | TUTORIALS AND HOWTOS |
+|INTEGRATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | TUTORIALS AND HOWTOS |
 |---------|---------|---------|---------|
 | [Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/configurable-bundle-feature-integration.html) | [ConfigurableBundle migration guide](/docs/scos/dev/module-migration-guides/migration-guide-configurablebundle.html) | [Retrieving configurable bundle templates](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-configurable-bundle-templates.html) | [HowTo: Render configurable bundle templates in the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html)  |
 | [Merchant Product Restrictions feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-product-restrictions-feature-integration.html) | [ConfigurableBundleStorage migration guide](/docs/scos/dev/module-migration-guides/migration-guide-configurablebundlestorage.html) |   |   |

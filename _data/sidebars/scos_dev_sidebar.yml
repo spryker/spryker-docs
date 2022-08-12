@@ -2703,12 +2703,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-setup.html
     - title: Migration Guide - SharedCartPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-sharedcartpage.html
-    - title: Migration Guide - ShoppingList
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shoppinglist.html
-    - title: Migration Guide - ShoppingListPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shoppinglistpage.html
-    - title: Migration Guide - ShoppingListWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shoppinglistwidget.html
     - title: Migration Guide - Step Engine
       url: /docs/scos/dev/module-migration-guides/migration-guide-step-engine.html
     - title: Migration Guide - Stock
@@ -2731,8 +2725,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-validator.html
     - title: Migration Guide - WebProfiler
       url: /docs/scos/dev/module-migration-guides/migration-guide-webprofiler.html
-    - title: Migration Guide - Wishlist
-      url: /docs/scos/dev/module-migration-guides/migration-guide-wishlist.html
   - title: DevOps migration guides
     include_versions:
     - "202001.0"

@@ -1,5 +1,5 @@
 ---
-title: Migration guide - ShoppingListPage
+title: Upgrade the ShoppingListPage module
 description: Use the guide to learn how to update the ShoppingListPage module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -29,9 +29,10 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-shoppinglistpage.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-shoppinglistpage.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-shoppinglistpage.html
+  - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-shoppinglistpage.html  
 related:
   - title: Multiple and Shared Shopping Lists overview
-    link: docs/scos/user/features/page.version/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+    link: docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-shoppinglistpage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-shoppinglistpage-module.md -->

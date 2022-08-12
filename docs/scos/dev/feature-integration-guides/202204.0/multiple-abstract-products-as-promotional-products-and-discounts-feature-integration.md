@@ -123,8 +123,8 @@ console translator:generate-cache
 Ensure that all labels and help tooltips in the **Discount** form has English and German translation:
 
 1. In the Back Office, go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
-2. Click **Create new discount** button or **Edit** button next to existing discount.
-3. Check labels and help tooltips in **Discount** form on **Create new discount** or **Edit discount** page.
+2. **Create new discount** or **Edit** an existing one.
+3. Check labels and help tooltips on the **Create new discount** or **Edit discount** page.
 
 {% endinfo_block %}
 
@@ -166,7 +166,7 @@ Ensure that the plugin works correctly:
 
 1. [Create a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
 2. On the **Discount calculation** tab, for **DISCOUNT APPLICATION TYPE**, select **PROMOTIONAL PRODUCT**. 
-3. In **ABSTRACT PRODUCT SKU(S)**, add an abstract product SKU.
+3. Add **ABSTRACT PRODUCT SKU**.
 4. Create another discount with one or more identic promotional products.
 5. To fulfill the discounts' requirements, add items to the cart.
 6. Ensure that both discounts are displayed in the **Promotional Product** section on the **Cart** page.

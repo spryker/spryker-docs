@@ -4,12 +4,12 @@ Descriptions: You can use the Sync API's OpenAPI schema to generate code with th
 template: howto-guide-template
 ---
 
-[Sync API](https://github.com/spryker-sdk/sync-api/) is the synchronous API that Spryker supports. In the Spryker terminology, tt is also known as [Glue API](https://docs.spryker.com/docs/scos/dev/glue-api-guides/202108.0/glue-rest-api.html) with its [REST API B2C Demo Shop](/docs/scos/dev/glue-api-guides/202204.0/rest-api-b2c-reference.html) and [REST API B2B Demo Shop](https://docs.spryker.com/docs/scos/dev/glue-api-guides/202204.0/rest-api-b2b-reference.html) endpoints. The schema files we use follow the [OpenAPI specification](https://swagger.io/specification/).
+[Sync API](https://github.com/spryker-sdk/sync-api/) is the synchronous API that Spryker supports. In the Spryker terminology, it is also known as [Glue API](https://docs.spryker.com/docs/scos/dev/glue-api-guides/202108.0/glue-rest-api.html) with its [REST API B2C Demo Shop](/docs/scos/dev/glue-api-guides/202204.0/rest-api-b2c-reference.html) and [REST API B2B Demo Shop](https://docs.spryker.com/docs/scos/dev/glue-api-guides/202204.0/rest-api-b2b-reference.html) endpoints. The schema files we use follow the [OpenAPI specification](https://swagger.io/specification/).
 Spryker uses schema files to generate code for your project, including predefined test cases. The purpose of doing so is to let you focus on building your business logic without caring about the boilerplate code.
 
 ## Code generation
 
-You can use the Sync API’s OpenAPI schema file to generate code with the help of a [Spryk](/docs/sdk/dev/spryks/spryks.html).
+You can use the Sync API’s OpenAPI schema file to generate code with the help of [Spryks](/docs/sdk/dev/spryks/spryks.html).
 You can control the code generator with the following parts of the schema file:
 - Paths
 - Extension
@@ -18,7 +18,7 @@ You can control the code generator with the following parts of the schema file:
   
 {% info_block infoBox "Info" %}
 
-All required infrastructural code is generated automatically. For example, Facade, Factory, DependencyProvider, Plugins, Controller, etc.
+All the required infrastructural code is generated automatically. For example, Facade, Factory, DependencyProvider, Plugins, Controller, etc.
 
 {% endinfo_block %}
 
@@ -30,7 +30,7 @@ When you design your resource names, keep in mind that the code generator, by de
 - controller name that will handle the request, 
 - model name that will be used to fulfill your business logic.
 
-For example, `/customers/addresses` generates code within the CustomersBackendApi or CustomersFrontendApi module (see [application Type](#application-type)). The controller name that will be executed to handle the request will be `AddressesController` and the model name will be `Addresses`.
+For example, `/customers/addresses` generates code within the CustomersBackendApi or CustomersFrontendApi module (see [Application type](#application-type)). The controller name that will be executed to handle the request will be `AddressesController` and the model name will be `Addresses`.
 
 ### Extension
 
@@ -100,7 +100,7 @@ For all three components, the code generator creates a transfer schema file defi
 
 ## Troubleshooting
 
-**when**
+### when
 There is the following error: `Failed to resolve Reference '#/paths/my/app/path/...`. Example output:
 
 ```php
@@ -117,9 +117,7 @@ In JsonPointer.php line 123:
                                                                                                                        
 
 code:openapi:generate [-f|--openapi-file OPENAPI-FILE] [-t|--application-type APPLICATION-TYPE] [-o|--organization ORGANIZATION]
-```
-
-**then**
+``
 This is typically caused by forward slashes (`/`) or tilde (`~`) characters that are not properly escaped in the referenced path.
 If you wish to refer to the path `/blogs/{blog_id}/new~posts`, your reference must look like this:
 

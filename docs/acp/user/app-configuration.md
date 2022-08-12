@@ -7,7 +7,7 @@ Instead of writing different components for different App configurations, we use
 
 {% info_block infoBox "Info" %}
 
-For the app configuration translation, see [App configuration translation](/docs/acp/user/app-configuration-translation.html). Some insights about the translation see in the [Translation appendix](#translation-appendix) 
+For the app configuration translation, see [App configuration translation](/docs/acp/user/app-configuration-translation.html). For information about the translation, see  [Translation appendix](#translation-appendix).
 
 {% endinfo_block %}
 
@@ -41,6 +41,8 @@ Example of the configuration widget:
   }
 }
 ```
+Display on the frontend:
+
 ![configuration-widget](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/configuration-widget.png)
 
 ## Widget catalog
@@ -77,12 +79,12 @@ Common properties of a widget are:
   <tr>
     <td>date</td>
     <td><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/date-widget.png"></td>
-    <td>Allow the user to enter a date.</td>
+    <td>Allows the user to enter a date.</td>
   </tr>
   <tr>
     <td>time</td>
     <td><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/time-widget.png"></td>
-    <td>Allow the user to enter time.</td>
+    <td>Allows the user to enter time.</td>
   </tr>
   <tr>
     <td>password</td>
@@ -102,17 +104,17 @@ Common properties of a widget are:
   <tr>
     <td>link</td>
     <td>As a tag:<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/link-as-a-tag.png"><br>As a button:<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/link-as-a-button.png"></td>
-    <td>Displays a link as a tag or a button.<br>Required properties:<br><code>isButtonLink</code>: <i>false</i> - display as a tag, <i>true</i> - display as a button<br>url: the url<br>target: set to <code>_blank</code>to open the url in a new tab<br>variant: (for button only)—primary or secondary button<br>See the <i>link example</i> under this table.<br></td>
+    <td>Displays a link as a tag or a button.<br>Required properties:<br><code>isButtonLink</code>: <i>false</i>—display as a tag, <i>true</i>—display as a button<br><code>url</code>: the url<br><code>target</code>: set to <code>_blank</code>to open the url in a new tab<br><code>variant</code>: (for button only)—primary or secondary button<br>See the <i>link example</i> under this table.<br></td>
   </tr>
   <tr>
     <td>notification</td>
     <td><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/notification-widget.png"></td>
-    <td>The notification widget is used to inform the user of some additional information. There cannot be any user input for this type of widget<br>Properties:<ul><li><code>notificationType</code>:<code>info</code>/<code>warning</code>/<code>error</code>/<code>success</code>—type of the notification</code></li><li><code>content</code>: Content of the notification widget—accepts an HTML string.</li> See <i>notification example</i>under this table.</ul></td>
+    <td>The notification widget is used to inform the user of some additional information. There cannot be any user input for this type of widget.<br>Properties:<ul><li><code>notificationType</code>:<code>info</code>/<code>warning</code>/<code>error</code>/<code>success</code>—type of the notification.</li><li><code>content</code>: Content of the notification widget—accepts an HTML string.</li>See<i>notification example</i>under this table.</ul></td>
   </tr>
 </tbody>
 </table>
 
-<details open>
+<details>
 <summary>link example</summary>
 
 ```json
@@ -167,7 +169,7 @@ Common properties of a widget are:
   <tr>
     <td>checkbox/ boolean</td>
     <td><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/selection-checkbox.png"></td>
-    <td>This widget is of type <code>boolean</code>, the input value will be either <code>true</code> or <code>false</code></td>
+    <td>This widget is of type <code>boolean</code>, the input value can be either <code>true</code> or <code>false</code>.</td>
   </tr>
   <tr>
     <td>radio</td>
@@ -177,7 +179,7 @@ Common properties of a widget are:
   <tr>
     <td>select</td>
     <td>Single selection: <img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/single-selection.png"> Image Multi-selection: <img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/multi-selection.png"></td>
-    <td>Similar to the <code>radio</code> widget, but instead of radio buttons, we can use <code>select</code> for selection using a dropdown. Besides, this widget also allows multiple options selection by setting <code>multiple: true</code>.<br>Properties:<ul><li><code>oneOf</code>: list of objects used as the options</li><li><code>multiple</code>: <code>true</code> or <code>false</code></li><li><code>multipleOptions</code>: list of strings to be used as the options. Can be used instead of <code>oneOf</code></li>See <i>Example for select with oneOf</i>under this table.</ul>In case you don’t need to have separate labels and values, you can use <code>multipleOptions</code> or <code>enum</code> instead of <code>oneOf</code>. See <i>Example for select without oneOf</i>under this table.</td>
+    <td>Similar to the <code>radio</code> widget, but instead of radio buttons, you can use <code>select</code> for selection in a dropdown. Besides, this widget also allows multiple options selection by setting <code>multiple: true</code>.<br>Properties:<ul><li><code>oneOf</code>: list of objects used as the options</li><li><code>multiple</code>: <code>true</code> or <code>false</code></li><li><code>multipleOptions</code>: list of strings to be used as the options. Can be used instead of <code>oneOf</code>.</li>See <i>example for select with oneOf</i> under this table.</ul>In case you don’t need to have separate labels and values, you can use <code>multipleOptions</code> or <code>enum</code> instead of <code>oneOf</code>. See <i>example for select without oneOf</i> under this table.</td>
   </tr>
   <tr>
     <td>app-status</td>
@@ -187,7 +189,7 @@ Common properties of a widget are:
 </tbody>
 </table>
 
-<details open>
+<details>
 <summary>radio example</summary>
 
 ```json
@@ -224,8 +226,8 @@ Common properties of a widget are:
 ```
 </details>
 
-<details open>
-<summary>Example for select with oneOf</summary>
+<details>
+<summary>example for select with oneOf</summary>
 
 ```json
 {
@@ -262,8 +264,8 @@ Common properties of a widget are:
 ```
 </details>
 
-<details open>
-<summary>Example for select without oneOf</summary>
+<details>
+<summary>example for select without oneOf</summary>
 
 ```json
 {
@@ -286,7 +288,7 @@ Common properties of a widget are:
 ```
 </details>
 
-<details open>
+<details>
 <summary>app-status example</summary>
 
 ```json
@@ -311,7 +313,7 @@ Common properties of a widget are:
 For the form layout, in particular, you should take into consideration the `array` type and order of the fields.
 
 ### Array type
-Sometimes, you might ask a user to input one or more values of the same field sets. For example, when you ask for all the pets within a household. These values can differ from each other, and there could be 0, or 10, or 100 pets. In these cases, you can use the `array` type of the form:
+Sometimes, you might ask a user to input one or more values of the same field sets. For example, when you ask for all the pets within a household. These values can differ from each other, as there could be 0, or 10, or 100 pets. In these cases, you can use the `array` type of the form:
 
 ```json
 {
@@ -383,7 +385,7 @@ The `order` property changes the order of the fields within the form:
   "order": ["lastName", "firstName", "email"]
 }
 ```
-Here is how it looks on the Storefront:
+Here is how it looks on the frontend:
 
 ![order-property](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/order-property.png)
 
@@ -419,11 +421,11 @@ To group different fields into different sections, you can define the `fieldsets
   ]
 }
 ```
-This is how it looks on the Storefront:
+This is how it looks on the frontend:
 
 ![fieldsets-property](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/fieldsets-property.png)
 
-If you don't want any layout for a section, you can set `noLayout` to the `layout` property of the section:
+If you don't want any layout for a section, you can set `noLayout` to the `layout` property:
 
 ```xml
 {
@@ -456,13 +458,13 @@ If you don't want any layout for a section, you can set `noLayout` to the `layou
   ]
 }
 ```
-This is how it looks on the Storefront:
+This is how it looks on the frontend:
 ![layout-property](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/layout-property.png)
 
 ### Full configuration example
 Here is an example of the full configuration:
 
-<details open>
+<details>
 <summary>Full configuration example</summary>
 
 ```json
@@ -620,7 +622,7 @@ Translation for an app configuration is provided in the `app-store-suite/app/con
   }
 }
 ```
-This is how the result of the configuration looks:
+This is how the result of the configuration looks on the frontend:
 
 DE shop
 ![configuration-de-shop](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/configuration-de-shop.png)

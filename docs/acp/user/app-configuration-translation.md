@@ -4,17 +4,17 @@ Descriptions: App configuration translation is a JSON file that contains all tra
 template: howto-guide-template
 related:
   - title: App configuration
-    link: docs/acp/user/intro-to-acp/app-configuration.html
+    link: docs/acp/user/app-configuration.html
   - title: Developing an app
-    link: docs/acp/user/intro-to-acp/developing-an-app.html
+    link: docs/acp/user/developing-an-app.html
   - title: App manifest
-    link: docs/acp/user/intro-to-acp/app-manifest.html
+    link: docs/acp/user/app-manifest.html
 ---
 
 *App Configuration Translation* represents a JSON file that contains all translations for all entities from the [application configuration file](/docs/acp/user/app-configuration.html).
+Translations for all configurations in all locales are contained in the same file. The default path for the translation file is: `/config/app/translation.json`.
 
-- Translations for all configurations in all locales are contained in the same file.
-- The default path for the translation file is: `/config/app/translation.json`.
+{% endinfo_block %}
 
 <details open>
 <summary>App configuration translation example</summary>
@@ -76,7 +76,7 @@ related:
 
 The translation configuration file has a very simple structure: it’s a JSON object. The keys of this object represent translation keys, that are the pieces of information from a configuration file that should be translated. The values are simple objects with the structure `"{locale name}": "{translated value}"`.
 
-The following properties of configuration can be translated:
+You can translate the following properties of configuration:
 
 - title
 - description

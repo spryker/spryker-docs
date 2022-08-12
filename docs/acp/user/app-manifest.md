@@ -80,26 +80,25 @@ For the manifest, make sure to follow these conditions:
 ```
 </details>
 
-## Manifest parts
+## Manifest file parts
 
 |Name   |Description   |Example   |
 |---|---|---|
-|name   |The app's name   |"name": "Payone"   |
+|name   |The app's name.   |"name": "Payone"   |
 |provider   |App provider's name (not visible on AppCatalog).   |"provider": "Payone"   |
-|descriptionShort   |A short description displayed on the application tile in the application catalog page and at the top of the application detail page.   |"descriptionShort": "A single payment platform to accept payments anywhere on any device."   |
+|descriptionShort   |Short description displayed on the application tile in the application catalog page and at the top of the application detail page.   |"descriptionShort": "A single payment platform to accept payments anywhere on any device."   |
 |description   |Full description of the app. New line symbols and HTML tags are not allowed.   |"description": "BS PAYONE GmbH is headquartered in Frankfurt am Main and is one of the leading omnichannel-payment providers in Europe. In addition to providing customer support to numerous Savings Banks (Sparkasse) the full-service payment service provider also provides cashless payment transaction services to more than 255,000 customers from stationary trade to the automated and holistic processing of e-commerce and mobile payments."   |
 |url   |URL to a homepage of the application provider (not visible in the AppCatalog).   |"url": "https://www.payone.com"   |
-|is_available   |Shows if the application is currently available. Possible values:<br><ul><li>false - the application is not available, it’s not possible to connect and configure it.</li><li>true - the application is available, it’s possible to connect, configure, and use it.</li></ul>   |"is_available": true   |
+|is_available   |Shows if the application is currently available. Possible values:<br><ul><li>false—the application is not available, it’s not possible to connect and configure it.</li><li>true—the application is available, it’s possible to connect, configure, and use it.</li></ul>   |"is_available": true   |
 |business_models   |An array of suite types that are compatible with the application. Possible values:<ul><li>B2C</li><li>B2B</li><li>B2C_MARKETPLACE</li><li>B2B_MARKETPLACE</li></ul>|See *business_models example* under this table.   |
-|categories   |An array of categories that the application belongs to. Possible values:
-<ul><li>BI_ANALYTICS</li><li>CUSTOMER</li><li>LOYALTY</li><li>PAYMENT</li><li>PRODUCT_INFORMATION_SYSTEM</li><li>SEARCH</li><li>USER_GENERATED_CONTENT</li></ul>   |See *categories example* under this table.   |
-|pages   |Adds additional content to the application detail page. This part contains an object with a page type and its blocks.<br>Possible page types (object keys):<ul><li>Overview</li><li>Legal</li></ul>Each page may contain no or multiple blocks. Each block should be specified by an object with the following keys:<ul><li>title - header of the block;</li><li>type - the way the data will be displayed. Possible values:<ul><li>list<li>text</li></ul><li>data - information that will be displayed inside the block. Can be string, if *type=text*, or an array of strings if *type=list*.</li></ul>   |See *pages example* under this table.   |
-|assets   |An array of objects represented as application assets. Each object has the following keys:<ul><li>type - type of the asset. Possible values:<ul><li>icon - displayed on the application tile and on top of the application detail page.</li><li>image - displayed in a carousel on the application detail page.</li><li>video - displayed in a carousel on the application detail page. Allows only videos hosted on https://wistia.com.</li></ul><li>url - a relative path to the asset. Possible extensions:<ul><li>jpeg</li><li>png</li><li>svg</li><li>url to a video hosted on https://wistia.com</li></ul></ul>   |See *assets example* under this table.   |
+|categories   |An array of categories that the application belongs to. Possible values:<ul><li>BI_ANALYTICS</li><li>CUSTOMER</li><li>LOYALTY</li><li>PAYMENT</li><li>PRODUCT_INFORMATION_SYSTEM</li><li>SEARCH</li><li>USER_GENERATED_CONTENT</li></ul>   |See *categories example* under this table.   |
+|pages   |Adds additional content to the application detail page. This part contains an object with a page type and its blocks.<br>Possible page types (object keys):<ul><li>Overview</li><li>Legal</li></ul>Each page can contain no or multiple blocks. Each block should be specified by an object with the following keys:<ul><li>title—header of the block;</li><li>type—the way the data is displayed. Possible values:<ul><li>list<li>text</li></ul><li>data—information that is displayed inside the block. Can be a string, if *type=text*, or an array of strings if *type=list*.</li></ul>   |See *pages example* under this table.   |
+|assets   |An array of objects represented as application assets. Each object has the following keys:<ul><li>type—type of the asset. Possible values:<ul><li>icon—displayed on the application tile and on top of the application detail page.</li><li>image—displayed in a carousel on the application detail page.</li><li>video - displayed in a carousel on the application detail page. Allows only videos hosted on https://wistia.com.</li></ul><li>url - a relative path to the asset. Possible extensions:<ul><li>jpeg</li><li>png</li><li>svg</li><li>url to a video hosted on https://wistia.com</li></ul></ul>   |See *assets example* under this table.   |
 |labels   |An array of strings. Displays label icons on the application detail page according to the label. Possible values:<ul><li>Silver Partner</li><li>Gold Partner</li><li>New</li><li>Popular</li><li>Free Trial</li></ul>   |See *labels example* under this table.   |
-|resources   |An array of objects represented as application resources (links, documents). The resource object has the following keys:<ul><li>title - a displayed name of the resource</li><li>url - full URL to the resource</li>type - type of the resource. Optional. The type affects a displayed icon. Possible values:<ul><li>internal-documentation</li><li>homepage</li><li>user-documentation</li><li>developer-documentation</li><li>release-notes</li></ul><li>fileType - type of the resource file (in case if the url leads to a file and if `type=internal-documentation`). Optional. The files will be displayed directly in the AppCatalog, without redirecting to another page. Possible values:<ul><li>pdf</li><li>markdown</li></ul></ul>   |See *resources example* under this table.   |
+|resources   |An array of objects represented as application resources (links, documents). The resource object has the following keys:<ul><li>title—a displayed name of the resource</li><li>url—full URL to the resource</li>type—type of the resource. Optional. The type affects a displayed icon. Possible values:<ul><li>internal-documentation</li><li>homepage</li><li>user-documentation</li><li>developer-documentation</li><li>release-notes</li></ul><li>fileType—type of the resource file (in case if the url leads to a file and if `type=internal-documentation`). Optional. The files will be displayed directly in the AppCatalog, without redirecting to another page. Possible values:<ul><li>pdf</li><li>markdown</li></ul></ul>   |See *resources example* under this table.   |
 
 
-<details open>
+<details>
 <summary>business_models example</summary>
 
 ```yml
@@ -110,7 +109,7 @@ For the manifest, make sure to follow these conditions:
 ```
 </details>
 
-<details open>
+<details>
 <summary>categories example</summary>
 
 ```yml
@@ -120,7 +119,7 @@ For the manifest, make sure to follow these conditions:
 ```
 </details>
 
-<details open>
+<details>
 <summary>pages example</summary>
 
 ```yml
@@ -156,7 +155,7 @@ For the manifest, make sure to follow these conditions:
 ```
 </details>
 
-<details open>
+<details>
 <summary>assets example</summary>
 
 ```yml
@@ -177,7 +176,7 @@ For the manifest, make sure to follow these conditions:
 ```
 </details>
 
-<details open>
+<details>
 <summary>labels example</summary>
 
 ```yml
@@ -187,7 +186,7 @@ For the manifest, make sure to follow these conditions:
 ```
 </details>
 
-<details open>
+<details>
 <summary>resources example</summary>
 
 ```yml

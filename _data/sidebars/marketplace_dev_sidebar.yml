@@ -686,7 +686,7 @@ entries:
                     url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-sync-state.html
                     include_versions:
                     - "202204.0"
-                    xx
+
                   - title: "Title"
                     url: /docs/marketplace/dev/front-end/table-design/table-features/table-feature-title.html
                     include_versions:
@@ -725,10 +725,7 @@ entries:
             nested:
 
               - title: "Actions"
-                url: /docs/marketplace/dev/front-end/ui-components-library/actions/
-                include_versions:
-                - "202204.0"
-                                  
+                url: /docs/marketplace/dev/front-end/ui-components-library/actions/                                
                 nested:
 
                   - title: "Close Drawer"

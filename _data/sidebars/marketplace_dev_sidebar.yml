@@ -836,3 +836,5 @@ entries:
 
           - title: "Migration guide - Upgrade to Angular v12"
             url: /docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v12.html
+            include_versions:
+            - "202204.0"

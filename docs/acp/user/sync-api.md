@@ -1,15 +1,15 @@
 ---
-title: SyncAPI
-Descriptions: You can use the SyncAPI's OpenAPI schema to generate code with the code generator and control the generated code by adjusting parts of the schema file.
+title: Sync API
+Descriptions: You can use the Sync API's OpenAPI schema to generate code with the code generator and control the generated code by adjusting parts of the schema file.
 template: howto-guide-template
 ---
 
-[SyncAPI](https://github.com/spryker-sdk/sync-api/) is the synchronous API that Spryker supports. It is also known as [Glue API](https://docs.spryker.com/docs/scos/dev/glue-api-guides/202108.0/glue-rest-api.html) with its [REST API B2C Demo Shop](/docs/scos/dev/glue-api-guides/202204.0/rest-api-b2c-reference.html) and [REST API B2B Demo Shop](https://docs.spryker.com/docs/scos/dev/glue-api-guides/202204.0/rest-api-b2b-reference.html) endpoints. The schema files we use follow the [OpenAPI specification](https://swagger.io/specification/).
+[Sync API](https://github.com/spryker-sdk/sync-api/) is the synchronous API that Spryker supports. In the Spryker terminology, tt is also known as [Glue API](https://docs.spryker.com/docs/scos/dev/glue-api-guides/202108.0/glue-rest-api.html) with its [REST API B2C Demo Shop](/docs/scos/dev/glue-api-guides/202204.0/rest-api-b2c-reference.html) and [REST API B2B Demo Shop](https://docs.spryker.com/docs/scos/dev/glue-api-guides/202204.0/rest-api-b2b-reference.html) endpoints. The schema files we use follow the [OpenAPI specification](https://swagger.io/specification/).
 Spryker uses schema files to generate code for your project, including predefined test cases. The purpose of doing so is to let you focus on building your business logic without caring about the boilerplate code.
 
 ## Code generation
 
-You can use the SyncAPI’s OpenAPI schema file to generate code with the help of a [Spryk](/docs/sdk/dev/spryks/spryks.html).
+You can use the Sync API’s OpenAPI schema file to generate code with the help of a [Spryk](/docs/sdk/dev/spryks/spryks.html).
 You can control the code generator with the following parts of the schema file:
 - Paths
 - Extension

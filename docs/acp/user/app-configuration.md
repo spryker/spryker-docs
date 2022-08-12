@@ -7,7 +7,7 @@ Instead of writing different components for different App configurations, we use
 
 {% info_block infoBox "Info" %}
 
-For the app configuration translation, see [App configuration translation](/docs/acp/user/intro-to-acp/app-configuration-translation.html). Some insights about the translation see in the [Translation appendix](#translation-appendix) 
+For the app configuration translation, see [App configuration translation](/docs/acp/user/app-configuration-translation.html). Some insights about the translation see in the [Translation appendix](#translation-appendix) 
 
 {% endinfo_block %}
 
@@ -58,56 +58,56 @@ Common properties of a widget are:
 <table>
 <thead>
   <tr>
-    <th">widgetId<br></th>
-    <th>display<br></th>
-    <th>Description<br></th>
+    <th>widgetId</th>
+    <th>display</th>
+    <th>Description</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td>string</td>
-    <td><br><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/string-widget.png"><br></td>
+    <td><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/string-widget.png"></td>
     <td>Default <code>string</code> input widget that allows the user to input a single line string.</td>
   </tr>
   <tr>
     <td>number</td>
-    <td><br><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/number-widget.png"><br><br><br><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/number-widget-2.png"><br><br> </td>
+    <td><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/number-widget.png"><br><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/number-widget-2.png"></td>
     <td>Allows the user to enter a number.</td>
   </tr>
   <tr>
     <td>date</td>
-    <td><br><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/date-widget.png"><br><br> </td>
+    <td><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/date-widget.png"></td>
     <td>Allow the user to enter a date.</td>
   </tr>
   <tr>
     <td>time</td>
-    <td><br><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/time-widget.png"><br><br> </td>
-    <td> <br>Allow the user to enter time.</td>
+    <td><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/time-widget.png"></td>
+    <td>Allow the user to enter time.</td>
   </tr>
   <tr>
     <td>password</td>
-    <td><br><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/password-widget.png"><br><br> </td>
+    <td><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/password-widget.png"></td>
     <td>Allows the user to enter a masked string that is used for passwords or API keys.</td>
   </tr>
   <tr>
     <td>textarea</td>
-    <td><br><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/textarea-widget.png"><br><br> </td>
+    <td><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/textarea-widget.png"></td>
     <td>Allows the user to enter a multi-line string.</td>
   </tr>
   <tr>
     <td>file</td>
-    <td><br><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/file-widget.png"><br></td>
+    <td><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/file-widget.png"></td>
     <td>Allows the user to upload a file.</td>
   </tr>
   <tr>
     <td>link</td>
-    <td>As a tag:<br><br><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/link-as-a-tag.png"><br>As a button:<br><br><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/link-as-a-button.png"><br></td>
-    <td>Displays a link as a tag or a button.<br>Required properties:<br><code><isButtonLink</code>: <i>false</i> - display as a tag, <i>true</i> - display as a button<br>url: the url<br>target: set to <code><_blank</code>< to open the url in a new tab<br>variant: (for button only) - primary or secondary button<br>See the <i>link example</i> under this table.<br></td>
+    <td>As a tag:<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/link-as-a-tag.png"><br>As a button:<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/link-as-a-button.png"></td>
+    <td>Displays a link as a tag or a button.<br>Required properties:<br><code>isButtonLink</code>: <i>false</i> - display as a tag, <i>true</i> - display as a button<br>url: the url<br>target: set to <code>_blank</code>to open the url in a new tab<br>variant: (for button only)—primary or secondary button<br>See the <i>link example</i> under this table.<br></td>
   </tr>
   <tr>
     <td>notification</td>
     <td><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/notification-widget.png"></td>
-    <td>The notification widget is used to inform the user of some additional information. There cannot be any user input for this type of widget. <br>Properties:<ul><li><code>notificationType</code>: <code>info</code>/ <code>warning</code> / <code>error</code> / <code>success</code>—type of the notification</code></li><li><code>content</code>: Content of the notification widget—accepts an HTML string.</li> See <i>notification example</i> under this table.</ul></td>
+    <td>The notification widget is used to inform the user of some additional information. There cannot be any user input for this type of widget<br>Properties:<ul><li><code>notificationType</code>:<code>info</code>/<code>warning</code>/<code>error</code>/<code>success</code>—type of the notification</code></li><li><code>content</code>: Content of the notification widget—accepts an HTML string.</li> See <i>notification example</i>under this table.</ul></td>
   </tr>
 </tbody>
 </table>
@@ -159,20 +159,20 @@ Common properties of a widget are:
 <thead>
   <tr>
     <th>widgetId</th>
-    <th>display<br></th>
-    <th>Description<br></th>
+    <th>display</th>
+    <th>Description</th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td>checkbox/ boolean</td>
-    <td><br><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/selection-checkbox.png"><br></td>
-    <td>This widget is of type <code>boolean</code>, the input value will be either <code>true</code> or <code>false</code><br> </td>
+    <td><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/selection-checkbox.png"></td>
+    <td>This widget is of type <code>boolean</code>, the input value will be either <code>true</code> or <code>false</code></td>
   </tr>
   <tr>
     <td>radio</td>
-    <td><br><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/selection-radio.png"><br></td>
-    <td> The radio widgets rely on the <code>oneOf</code> property. The <code>description</code> is the displayed label for an option, while the <code>enum</code> is the value that is saved in the form. For example, if we select <code>OSX</code> in the form, the actual saved value is <code>osx</code>.<br>Properties:<br><code>oneOf</code>: list of objects used as the options<br>See <i>radio example</i> under this table.<br></td>
+    <td><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/selection-radio.png"></td>
+    <td> The radio widgets rely on the <code>oneOf</code> property. The <code>description</code> is the displayed label for an option, while the <code>enum</code> is the value that is saved in the form. For example, if we select <code>OSX</code> in the form, the actual saved value is <code>osx</code>.<br>Properties:<br><code>oneOf</code>: list of objects used as the options<br>See <i>radio example</i> under this table.</td>
   </tr>
   <tr>
     <td>select</td>
@@ -425,7 +425,7 @@ This is how it looks on the Storefront:
 
 If you don't want any layout for a section, you can set `noLayout` to the `layout` property of the section:
 
-```json
+```xml
 {
   "properties": {
     "firstName": {

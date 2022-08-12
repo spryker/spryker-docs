@@ -23,17 +23,17 @@ You need to have a clear understanding of what your app API will provide to othe
 
 ### Schema-first
 
-Before you start with the development, you should design your API schema files first. Depending on your requirements, you can have an OpenAPI or an AsyncAPI schema file. In this step, you define the SyncAPI endpoints your app will provide to others, the messages you will emit or consume, and the data you expect to work with.
+Before you start with the development, you should design your API schema files first. Depending on your requirements, you can have an OpenAPI or an Async API schema file. In this step, you define the Sync API endpoints your app will provide to others, the messages you will emit or consume, and the data you expect to work with.
 
-For more information about AsyncAPI schema design, see [Designing your APIs with AsyncAPI](https://www.asyncapi.com/blog/designing_your_apis_with_asyncapi_part_1). 
+For more information about Async API schema design, see [Designing your APIs with Async API](https://www.asyncapi.com/blog/designing_your_apis_with_asyncapi_part_1). 
 
 For more information about OpenAPI schema design, see [Best practices in API design](https://swagger.io/resources/articles/best-practices-in-api-design/).
 
 You can use the following tools to design your APIs:
-- [AsyncAPI Studio](https://studio.asyncapi.com/)
+- [Async API Studio](https://studio.asyncapi.com/)
 - [Swagger Editor](https://editor.swagger.io/)
 
-You can also use the wizards provided by Spryker, which will be used by the [SprykerSDK workflow](LINK).
+You can also use the wizards provided by Spryker, which will be used by the SprykerSDK workflow.
 
 ## Build an app
 
@@ -80,7 +80,7 @@ There are a couple of files that an app must have. The workflow guides you throu
 **Manifest files**
 The manifest files define the details like title, category, and description of the app itself. The manifest files are also used to display information about the app on the App Catalog Page and the App Detail Page in the Back office.
 
-For more details on the manifest files, see [App manifest](LINK)
+For more details on the manifest files, see [App manifest](/docs/acp/user/app-manifest.html)
 
 {% info_block infoBox "Info" %}
 
@@ -93,31 +93,31 @@ The translation file contains the keys and the translation values for each local
 
 This file is created with the help of a wizard, but you can also add or update it manually.
 
-For more details, see [App Configuration Translation](LINK)
+For more details, see [App Configuration Translation](/docs/acp/user/app-configuration-translation.html)
 
 **Configuration file**
 The configuration file defines the form that is displayed in the Back Office App Catalog after the App was connected and needed some configuration. 
 
 This file is created with the help of a wizard, but you can also add or update it manually.
 
-For more details, see [App Configuration](LINK)
+For more details, see [App Configuration](/docs/acp/user/app-configuration.html)
 
 ![acp-sdk-workflow-1](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/developing-an-app/ACP-SDK-Workflow-black-1.jpg)
 
 #### 2. Creates app API
 
-The command defines SyncAPI and AsyncAPI.
+The command defines Sync API and Async API.
 
-**SyncAPI**
-The SyncAPI defines the app's synchronous endpoints, also known as Glue endpoints. The workflow creates a boilerplate that you need to update with the required endpoints your PBC should have. See the [current OpenAPI specification](https://spec.openapis.org/oas/v3.1.0).
+**Sync API**
+The Sync API defines the app's synchronous endpoints, also known as Glue endpoints. The workflow creates a boilerplate that you need to update with the required endpoints your PBC should have. See the [current OpenAPI specification](https://spec.openapis.org/oas/v3.1.0).
 
-For more details about the SyncAPI with information specific to Spryker, see [SyncAPI](LINK).
+For more details about the Sync API with information specific to Spryker, see [Sync API](/docs/acp/user/sync-api.html).
 
-**AsyncAPI**
+**Async API**
 
-The AsyncAPI defines the app's asynchronous endpoints, also known as events and messaging. The workflow creates a boilerplate one that you need to update with the required endpoints your app should have. See the [current AsyncAPI specification](https://www.asyncapi.com/docs/reference).
+The Async API defines the app's asynchronous endpoints, also known as events and messaging. The workflow creates a boilerplate one that you need to update with the required endpoints your app should have. See the [current Async API specification](https://www.asyncapi.com/docs/reference).
 
-For more details about the AsyncAPI with information specific to Spryker, see [AsyncAPI](LINK).
+For more details about the Async API with information specific to Spryker, see [Async API](/docs/acp/user/async-api.html).
 
 ![acp-sdk-workflow-2](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/developing-an-app/ACP-SDK-Workflow-black-2.jpg)
 

@@ -11,7 +11,7 @@ related:
     link: docs/acp/user/intro-to-acp/app-manifest.html
 ---
 
-*App Configuration Translation* represents a JSON file that contains all translations for all entities from the [application configuration file](/docs/acp/user/intro-to-acp/app-configuration.html).
+*App Configuration Translation* represents a JSON file that contains all translations for all entities from the [application configuration file](/docs/acp/user/app-configuration.html).
 
 - Translations for all configurations in all locales are contained in the same file.
 - The default path for the translation file is: `/config/app/translation.json`.

@@ -31,15 +31,15 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-multi-currency.html
   - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-multi-currency.html  
 related:
-  - title: Migration guide - Currency
+  - title: Upgrade the Currency
     link: docs/scos/dev/module-migration-guides/migration-guide-currency.html
-  - title: Migration guide - Sales
+  - title: Upgrade the Sales
     link: docs/scos/dev/module-migration-guides/migration-guide-sales.html
-  - title: Migration guide - Price
+  - title: Upgrade the Price
     link: docs/scos/dev/module-migration-guides/migration-guide-price.html
-  - title: Migration guide - Discount
+  - title: Upgrade the Discount
     link: docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discount-module.html
-  - title: Migration guide - Shipment
+  - title: Upgrade the Shipment
     link: docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipment-module.html
 ---
 

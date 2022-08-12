@@ -1,5 +1,5 @@
 ---
-title: CRUD Scheduled Prices migration concept
+title: Migrate to CRUD Scheduled Prices
 description: The article provides instructions on how to install CRUD Scheduled Prices on all modules affected in bulk and them individually.
 last_updated: Jun 16, 2021
 template: howto-guide-template

@@ -1,5 +1,5 @@
 ---
-title: Migration guide - PriceProductVolume
+title: Upgrade the PriceProductVolume module
 description: Use the guide to update the PriceProductVolume module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

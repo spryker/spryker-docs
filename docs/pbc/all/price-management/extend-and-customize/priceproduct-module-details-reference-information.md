@@ -11,7 +11,7 @@ This article describes technical details of the [PriceProduct](https://github.co
 
 ## Price dimension
 
-Starting from version 2.0.0 of the PriceProduct module, _Default Price Dimension_ was implemented inside the PriceProduct to save BC. All prices imported by the new PriceProductDataImport would be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/scos/user/features/{{page.version}}/merchant-custom-prices-feature-overview.html) to learn more about the price dimension.
+Starting from version 2.0.0 of the PriceProduct module, _Default Price Dimension_ was implemented inside the PriceProduct to save BC. All prices imported by the new PriceProductDataImport would be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/pbc/all/price-management/merchant-custom-prices-feature-overview.html) to learn more about the price dimension.
 
 ## PriceProductService
 

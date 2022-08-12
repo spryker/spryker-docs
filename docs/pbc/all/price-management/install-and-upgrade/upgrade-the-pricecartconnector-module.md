@@ -1,5 +1,5 @@
 ---
-title: Migration guide - PriceCartConnector
+title: Upgrade the PriceCartConnector module
 description: Use the guide to learn how to update the PriceCartConnector module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -33,9 +33,9 @@ redirect_from:
 
   - /module_migration_guides/mg-price-cart-connector.htm
 related:
-  - title: Migration guide - Price
+  - title: Upgrade the Price
     link: docs/scos/dev/module-migration-guides/migration-guide-price.html
-  - title: Migration guide - MultiCurrency
+  - title: Upgrade the MultiCurrency
     link: docs/scos/dev/module-migration-guides/migration-guide-multi-currency.html
 ---
 

@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202204.0/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html
 ---
 
-This article contains content of the `product_price_schedule.csv` file to configure [Product Price Schedule](/docs/scos/user/features/{{page.version}}/scheduled-prices-feature-overview.html) information in your Spryker Demo Shop.
+This article contains content of the `product_price_schedule.csv` file to configure [Product Price Schedule](/docs/pbc/all/price-management/scheduled-prices-feature-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 

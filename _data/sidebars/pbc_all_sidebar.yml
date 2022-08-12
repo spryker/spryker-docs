@@ -198,6 +198,8 @@ entries:
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:
+          - title: What's changed
+            url: /docs/pbc/all/shopping-list-and-wishlist/whats-changed-in-shopping-list-and-wishlist.html
           - title: Shopping List feature overview
             url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html
             nested:

@@ -35,7 +35,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Persistent Cart Sharing](/docs/scos/user/features/{{site.version}}/persistent-cart-sharing-feature-overview.html)
 - [Resource Sharing](/docs/scos/user/features/{{site.version}}/resource-sharing-feature-overview.html)
 - [Quotation Process](/docs/scos/user/features/{{site.version}}/quotation-process-feature-overview.html)
-- [Scheduled Prices](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
+- [Scheduled Prices](/docs/pbc/all/price-management/scheduled-prices-feature-overview.html)
 - [Approval process](/docs/scos/user/features/{{site.version}}/approval-process-feature-overview.html)
 - [Availability Notification](/docs/scos/user/features/{{site.version}}/availability-notification-feature-overview.html)
 - [Customer Account Management](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html)
@@ -53,7 +53,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 <!---- [Merchant]()-->
 - [Merchant Product restrictions](/docs/scos/user/features/{{site.version}}/merchant-product-restrictions-feature-overview.html)
 - [Merchant B2B Contracts](/docs/scos/user/features/{{site.version}}/merchant-b2b-contracts-feature-overview.html)
-- [Merchant Custom Prices](/docs/scos/user/features/{{site.version}}/merchant-custom-prices-feature-overview.html)
+- [Merchant Custom Prices](/docs/pbc/all/price-management/merchant-custom-prices-feature-overview.html)
 - [Merchant Order Threshold](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html)
 - [Prices](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview.html)
 - [Tax](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html)

@@ -106,11 +106,11 @@ Below you will find the list of the new/updated documentation released as part o
  </details>
 
 
-* [Scheduled Prices](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
+* [Scheduled Prices](/docs/pbc/all/price-management/scheduled-prices-feature-overview.html)
 <details>
 <summary markdown='span'>Feature overview</summary>
 
-[Scheduled Prices Feature Overview](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
+[Scheduled Prices Feature Overview](/docs/pbc/all/price-management/scheduled-prices-feature-overview.html)
 
 </details>
 <details>

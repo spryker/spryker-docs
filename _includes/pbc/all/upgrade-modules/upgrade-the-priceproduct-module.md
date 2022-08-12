@@ -15,7 +15,7 @@ There are new functionalities and changes that were added in this new module rel
 In the previous version of the PriceProduct module, a product had only one price per store (and multi-currency) with gross and net amounts.
 By adding the [Price dimension](/docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html) concept to the new release, you can set specific prices for each customer separately. Having logged in, a user with these specific prices will see another prices in Catalog and will be able to buy products for  their own price.
 
-To save BC, we have implemented Default Price Dimension inside the new `PriceProduct` module, so all prices imported by new `PriceProductDataImport` will be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/scos/user/features/{{site.version}}/merchant-custom-prices-feature-overview.html) to learn more about the price dimension.
+To save BC, we have implemented Default Price Dimension inside the new `PriceProduct` module, so all prices imported by new `PriceProductDataImport` will be in the Default Price Dimension. See [Prices per Merchant Relation](/docs/pbc/all/price-management/merchant-custom-prices-feature-overview.html) to learn more about the price dimension.
 Prices from price dimensions could be stored not only in DB, but also in Storage. Therefore, the update of the PriceProductStorage module was necessary. The new version 2.0.0 of the PriceProduct module already supports price dimensions and has Default Price Dimension implemented.
 
 To migrate the changes to the module, do the following:

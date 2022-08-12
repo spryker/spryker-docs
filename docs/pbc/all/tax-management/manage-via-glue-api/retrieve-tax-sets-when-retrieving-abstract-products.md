@@ -1,8 +1,10 @@
 ---
-title: Retrieve tax sets of abstract products
-description: Retrieve general information about abstract products and related resources.
+title: Retrieve tax sets when retrieving abstract products
+description: Learn how to retrieve tax sets when retrieving abstract products using Glue API.
 last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
+redirect_from:
+  - /docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
 ---
 
 This document describes how to retrieve tax sets of abstract products. To retrieve full information of abstract products, see [Retrieve abstract products](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-products.html).
@@ -102,6 +104,8 @@ For detailed information on the modules that provide the API functionality and r
 }
 ```
 </details>
+
+{% include pbc/all/glue-api-guides/retrieve-an-abstract-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/retrieve-an-abstract-product-response-attributes.md -->
 
 For the attributes of tax sets, see [Retrieve tax sets](/docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html#tax-sets-response-attributes).
 

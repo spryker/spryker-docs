@@ -1,6 +1,6 @@
 ---
-title: Migration guide - MultiCurrency
-description: Use the guide to migrate to a newer version of the MultiCurrency module.
+title: Migrate to multi-currency
+description: Learn how to migrate your project to multi-currency.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-multi-currency
@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-multi-currency.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-multi-currency.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-multi-currency.html
+  - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-multi-currency.html  
 related:
   - title: Migration guide - Currency
     link: docs/scos/dev/module-migration-guides/migration-guide-currency.html

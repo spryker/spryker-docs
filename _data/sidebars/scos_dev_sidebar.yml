@@ -2532,8 +2532,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-messenger.html
     - title: Migration Guide - Monitoring
       url: /docs/scos/dev/module-migration-guides/migration-guide-monitoring.html
-    - title: Migration Guide - Multi-Currency
-      url: /docs/scos/dev/module-migration-guides/migration-guide-multi-currency.html
     - title: Migration Guide - MultiCartPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-multicartpage.html
     - title: Migration Guide - Navigation

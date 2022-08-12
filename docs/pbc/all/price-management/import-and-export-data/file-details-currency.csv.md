@@ -24,7 +24,7 @@ data:import:currency
 The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | iso_code | &check; | String |   | Currency ISO code. <br>For more details check [ISO 4217 CURRENCY CODES](https://www.iso.org/iso-4217-currency-codes.html).  |
 | currency_symbol | &check; | String |   | Currency symbol. |
 | name | &check; | String |   | Currency name. |

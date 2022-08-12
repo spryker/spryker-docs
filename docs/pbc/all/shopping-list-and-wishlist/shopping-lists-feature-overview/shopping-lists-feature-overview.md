@@ -15,6 +15,9 @@ redirect_from:
   - /docs/shopping-lists
   - /docs/en/shopping-lists
   - /docs/scos/user/features/202200.0/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+  - /docs/scos/user/features/202204.0/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202204.0/shopping-lists-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202200.0/shopping-lists-feature-walkthrough.html    
 ---
 
 A *shopping list* is a list of the items that shoppers buy or plan to buy frequently or regularly. For example, a consumer can compile a shopping list of the products they purchase every week. Shopping lists let a buyer have a quick overview of the products they are planning to buy and the sum of money they are going to spend.
@@ -22,7 +25,7 @@ A *shopping list* is a list of the items that shoppers buy or plan to buy freque
 A shopping list is always saved, disregarding if a company user logs out and logs in again—the list is still available. The shopping list does not reserve products on stock, so adding an item to the shopping list does not affect item availability. However, a company user can easily convert any shopping list into a shopping cart to proceed with the Checkout.
 There are two ways to create a shopping list:
 
-* Through a [shopping list widget](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-widget-overview.html) in the header of the shop.
+* Through a [shopping list widget](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-widget-overview.html) in the header of the shop.
 * From the **Shopping Lists** page in the **My Account** menu. For more detailed instructions, see [Multiple and Shared Shopping Lists on the Storefront](#multiple-and-shared-shopping-lists-on-the-storefront).
 
 New items are added to shopping lists by clicking **Add to Shopping List** on the product details page.
@@ -62,7 +65,7 @@ Three types of shopping list access rights can be granted:
 * SKU
 * Product attribute
 * Product options
-* Product comments (see [Shopping List Notes overview](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details)
+* Product comments (see [Shopping List Notes overview](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details)
 * Quantity
 * Item price
 * Availability
@@ -91,7 +94,7 @@ Alternative products are not shown for discontinued products because they can no
    * SKU
    * Product attribute
    * Product options
-   * Product notes (see [Shopping List Notes overview](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details)
+   * Product notes (see [Shopping List Notes overview](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-notes-overview.html) for more details)
    * Quantity
    * Item price
    * Availability
@@ -123,7 +126,7 @@ Different access rights can be granted on a shopping list to a business unit and
 
 ## Search widget for shopping lists
 
-Starting from v. 201903.0, you can integrate the [Search Widget for Concrete Products](/docs/scos/user/features/{{page.version}}/product-feature-overview/search-widget-for-concrete-products-overview.html) feature. The search widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
+Starting from v. 201903.0, you can integrate the [Search Widget for Concrete Products](/docs/scos/user/features/{{site.version}}/product-feature-overview/search-widget-for-concrete-products-overview.html) feature. The search widget allows adding the products to the shopping list directly from the shopping list page. The shoppers do not need to go to product detail pages to add products to a list anymore.
 
 {% info_block warningBox %}
 
@@ -189,13 +192,19 @@ We do not support product options in Subtotal of the Shopping Lists. For example
 
 ## Related Business User articles
 
-|BACK OFFICE USER GUIDES|
-|---|
-| [Get a general idea of the shopping list widget](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-widget-overview.html)  |
-| [Get a general idea of Shopping List Notes](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-list-notes-overview.html)  |
+| OVERVIEWS |
+|-|
+| [Shopping list notes](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-notes-overview.html) |
+| [Shopping list printing](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-printing-overview.html) |
+| [Shopping list widget](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-widget-overview.html)  |
 
-{% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Shopping Lists feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shopping-lists-feature-walkthrough.html) for developers.
+## Related Developer articles
 
-{% endinfo_block %}
+| INTEGRATION GUIDES | UPGRADE GUIDES | GLUE API GUIDES  |
+|---------|---------|-|
+| [Integrate the Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-feature.html)  | [Upgrade the ShoppingList module](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglist-module.html) | [Manage shopping lists](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-lists-via-glue-api.html)  |
+| [Integrate the Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-glue-api.html)  | [Upgrade the ShoppingListPage module](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistpage-module.html) | [Manage shopping list items](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html)   |
+| [Integrate the Agent Assist + Shopping List feature](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-agent-assist-shopping-list-feature.html)| [Upgrade the ShoppingListWidget module](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistwidget-module.html) | |
+| [Integrate the Quick Add to Cart + Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-quick-add-to-cart-shopping-lists-feature.html) | | |
+| [Integrate the Shopping Lists + Product Options feature](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-product-options-feature.html)

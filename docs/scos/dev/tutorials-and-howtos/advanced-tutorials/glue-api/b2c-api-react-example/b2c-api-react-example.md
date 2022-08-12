@@ -66,7 +66,7 @@ The Demo shop was built using and demonstrates the use of the endpoints and reso
 | Cart API | [Guest carts](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/guest-carts/managing-guest-carts.html)<br>[Carts of registered users](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html) |
 | Checkout API | [Checking out purchases and getting checkout data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/checking-out-purchases.html) |
 | Order History API | [Retrieving customer's order history](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-orders.html) |
-| Wishlist API | [Managing wishlists](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-wishlists/managing-wishlists.html) |
+| Wishlist API | [Managing wishlists](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlists-via-glue-api.html) |
 | Store API | [Retrieving store configuration](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-store-configuration.html) |
 
 ## Running the example application

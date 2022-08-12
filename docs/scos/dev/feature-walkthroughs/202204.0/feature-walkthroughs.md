@@ -321,10 +321,6 @@ The [Search](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature
 
 The [Shared Carts](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shared-carts-feature-walkthrough.html) feature allows sharing carts between company users.
 
-## Shopping Lists
-
-The [Shopping Lists](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shopping-lists-feature-walkthrough.html) feature allows customers to create and share multiple lists of products between company business units or single users. Shopping lists can be shared between users with different sets of permissions.
-
 ## Spryker Core Back Office
 
 The [Spryker Core Back Office](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html) feature adds a comprehensive, intuitive administration area that provides the product and content management capabilities, categories and navigation building blocks, search and filter customizations, barcode generator, order handling, company structure creation (for B2B users), merchant-buyer contracts’ setup.
@@ -340,7 +336,3 @@ The [Tax](/docs/pbc/all/tax-management/tax-management.html) feature allows you t
 ### Tax module: reference information
 
 The [Tax module](/docs/pbc/all/tax-management/extend-and-customize/tax-module-reference-information.html) is responsible for handling tax rates that can apply for products, product options, or shipment.
-
-## Wishlist
-
-The [Wishlist](/docs/scos/dev/feature-walkthroughs/{{page.version}}/wishlist-feature-walkthrough.html) feature allows customers to track and save the products they wish to purchase through the wish list. Customers can create multiple wish lists and customize their names.

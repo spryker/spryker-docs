@@ -58,5 +58,4 @@ Integrate the following related features:
 
 | FEATURE   | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE  |
 | ----------------- | ------------ | ----------------------- |
-| Agent Assist            | ✓     | [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/agent-assist-feature-integration.html) |
 | Agent Assist + Shopping List |         | [Agent Assist + Shopping List feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/agent-assist-shopping-list-feature-integration.html) |

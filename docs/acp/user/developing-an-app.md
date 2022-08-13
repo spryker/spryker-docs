@@ -115,7 +115,7 @@ The translation file contains the keys and the translation values for each local
 
 This file is created with the help of a wizard, but you can also add or update it manually.
 
-For more details, see [App Configuration Translation](/docs/acp/user/intro-to-acp/app-configuration-translation.html)
+For more details, see [App Configuration Translation](/docs/acp/user/app-configuration-translation.html)
 
 #### 2. Creates app API
 

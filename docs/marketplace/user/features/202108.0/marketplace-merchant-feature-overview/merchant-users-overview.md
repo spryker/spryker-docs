@@ -31,8 +31,6 @@ The following table explains all the statuses that may apply to a merchant user.
 | Deactivated | Access to the Merchant Portal is revoked for a deactivated merchant user. A merchant user can be deactivated when:<ul><li>A merchant or Marketplace administrator deactivates the merchant user.</li><li>The merchant to whom the merchant user belongs has been [denied](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/marketplace-merchant-feature-overview.html#merchant-statuses).</li></ul> |
 | Deleted | Access to the Merchant Portal is revoked for the deleted merchant user. In the current implementation, both statuses `Deactivated` and `Deleted` have the same functionality—they restrict access to the Merchant Portal. However, this can be changed and adapted on the project level. |
 
-<!--See LINK TO BO GUIDE HOW TO ACTIVATE A MERCHANT USER for details on to change the merchant user statues in the Back Office-->
-
 ## Merchant user access
 
 Both merchant and typical Back Office users have a common entry point, but the login URLs to the Back Office and Merchant Portal are different. The exemplary login link to the Merchant Portal is `https://os.de.marketplace.demo-spryker.com/security-merchant-portal-gui/login`.
@@ -52,6 +50,6 @@ Merchant users have access only to the information related to their organization
 
 1. A Marketplace administrator creates a merchant and approves it.
 2. When the merchant is approved, corresponding merchant users can be created in **Back Office&nbsp;<span aria-label="and then">> </span> Merchant&nbsp;<span aria-label="and then">> </span> Users**.
-3. After the merchant user is created, they need to be activated <!--LINK TO BO GUIDE HOW TO ACTIVATE A MERCHANT USER--> to log in to the Merchant Portal.
+3. After the merchant user is created, they need to be [activated](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html#activating-and-deactivating-the-merchant-users) to log in to the Merchant Portal.
 4. The "Reset Password" email is sent to the activated merchant user.
 5. After the password is reset, the merchant user can log in to the Merchant Portal.

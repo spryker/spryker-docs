@@ -10,13 +10,13 @@ related:
 
 # Unzer feature integration
 
-This document describes how to integrate [Unzer](/docs/pbc/all/payment-service-providers/unzer/unzer.html) into a Spryker project.
+This document describes how to integrate [Unzer](/docs/pbc/all/payment-service-providers/unzer/unzer.html) into your project.
 
 ## Install feature core
 
-Follow the steps below to integrate the Unzer feature core.
+To integrate the Unzer, follow these steps.
 
-## Prerequisites
+### Prerequisites
 
 [Install and configure Unzer](/docs/pbc/all/payment-service-providers/unzer/install-unzer/install-and-configure-unzer.html).
 
@@ -25,8 +25,6 @@ Follow the steps below to integrate the Unzer feature core.
 The following state machines are examples of the payment service provider flow.
 
 {% endinfo_block %}
-
----
 
 ### 1) Set up the configuration
 
@@ -287,7 +285,7 @@ console translator:generate-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that all labels and help tooltips in the Unzer forms has English and German translation.
+Make sure that all labels and help tooltips in the Unzer forms have English and German translations.
 
 {% endinfo_block %}
 
@@ -299,10 +297,10 @@ Set up the following behaviors:
 
 | PLUGIN                                      | SPECIFICATION                                                                                                                                                | PREREQUISITES | NAMESPACE                                               |
 |---------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------|
-| UnzerCredentialsCartOperationPostSavePlugin | Expands `QuoteTransfer` with `UnzerCredentialsTransfer` according to added items.                                                                            | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Cart          |
+| UnzerCredentialsCartOperationPostSavePlugin | Expands `QuoteTransfer` with `UnzerCredentialsTransfer` according to the added items.                                                                            | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Cart          |
 | UnzerCheckoutDoSaveOrderPlugin              | Saves Unzer payment details to Persistence.                                                                                                                  | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Checkout      |
-| UnzerCheckoutPostSavePlugin                 | Executes Unzer API calls and saves payment detailed info to Persistence                                                                                      | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Checkout      |
-| UnzerCheckoutPreSaveOrderPlugin             | Performs Unzer Create Customer, Unzer Update Customer, and Unzer Create Metadata API calls                                                                   | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Checkout      |
+| UnzerCheckoutPostSavePlugin                 | Executes Unzer API calls and saves payment detailed info to Persistence.                                                                                    | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Checkout      |
+| UnzerCheckoutPreSaveOrderPlugin             | Performs Unzer Create Customer, Unzer Update Customer, and Unzer Create Metadata API calls.                                                                   | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Checkout      |
 | UnzerChargeCommandByOrderPlugin             | Executes Unzer API Charge request and saves Unzer payment details to Persistence.                                                                            | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Oms\Command   |
 | UnzerRefundCommandByOrderPlugin             | Executes Unzer API Refund request and saves Unzer payment details to Persistence.                                                                            | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Oms\Command   |
 | UnzerIsAuthorizeCanceledConditionPlugin     | Checks if Unzer Authorization is canceled.                                                                                                                   | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Oms\Condition |
@@ -312,16 +310,16 @@ Set up the following behaviors:
 | UnzerIsChargeFailedConditionPlugin          | Checks if Unzer Charge failed.                                                                                                                               | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Oms\Condition |
 | UnzerIsPaymentChargebackConditionPlugin     | Checks if Unzer Payment is charged-back.                                                                                                                     | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Oms\Condition |
 | UnzerIsPaymentCompletedConditionPlugin      | Checks if Unzer Payment is completed.                                                                                                                        | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Oms\Condition |
-| UnzerEnabledPaymentMethodFilterPlugin       | Takes enabled payment methods from the `QuoteTransfer` received from Unzer local config and filters given payment methods based on enabled payment methods.  | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Payment       |
+| UnzerEnabledPaymentMethodFilterPlugin       | Takes enabled payment methods from `QuoteTransfer` received from the Unzer local config and filters the given payment methods based on the enabled payment methods.  | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Payment       |
 | UnzerMarketplacePaymentMethodFilterPlugin   | Filters available marketplace payment methods based on quote items.                                                                                          | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Payment       |
 | StoreRelationToggleFormTypePlugin           | Represents a store relation toggle form based on stores registered in the system.                                                                            | None          | Spryker\Zed\Store\Communication\Plugin\Form             |
-| UnzerStepHandlerPlugin                      | Sets payment provider and payment method based on payment selection.                                                                                         | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
-| UnzerCreditCardSubFormPlugin                | Creates `CreditCard` subform.                                                                                                                                | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
-| UnzerBankTransferSubFormPlugin              | Creates `BankTransfer` subform.                                                                                                                              | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
-| UnzerSofortSubFormPlugin                    | Creates `Sofort` subform.                                                                                                                                    | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
-| UnzerMarketplaceBankTransferSubFormPlugin   | Creates `Marketplace BankTransfer` subform data provider.                                                                                                    | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
-| UnzerMarketplaceCreditCardSubFormPlugin     | Creates `MarketplaceCreditCard` subform.                                                                                                                     | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
-| UnzerMarketplaceSofortSubFormPlugin         | Creates `Marketplace Sofort` subform.                                                                                                                        | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
+| UnzerStepHandlerPlugin                      | Sets payment provider and payment method based on the payment selection.                                                                                         | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
+| UnzerCreditCardSubFormPlugin                | Creates the `CreditCard` subform.                                                                                                                                | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
+| UnzerBankTransferSubFormPlugin              | Creates the `BankTransfer` subform.                                                                                                                              | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
+| UnzerSofortSubFormPlugin                    | Creates the `Sofort` subform.                                                                                                                                    | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
+| UnzerMarketplaceBankTransferSubFormPlugin   | Creates the `Marketplace BankTransfer` subform data provider.                                                                                                    | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
+| UnzerMarketplaceCreditCardSubFormPlugin     | Creates the `MarketplaceCreditCard` subform.                                                                                                                     | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
+| UnzerMarketplaceSofortSubFormPlugin         | Creates the `Marketplace Sofort` subform.                                                                                                                        | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
 
 1.Add the Unzer plugin for `CartDepenencyProvider`:
 
@@ -686,7 +684,7 @@ class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyPr
 
 ## Install feature frontend
 
-Follow the steps below to install the Unzer feature front end.
+Follow these steps to install the Unzer feature front end.
 
 ### 1) Set up behavior
 

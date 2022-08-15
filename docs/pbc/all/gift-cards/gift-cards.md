@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/gift-cards-feature-walkthrough.html  
 ---
 
-The _Gift Card_ feature lets you create a special product type with a chosen value amount. The purchase of a gift card generates an individual code that can then be used as a payment method during checkout.
+The _Gift Cards_ capability lets you create a special product type with a chosen value amount. The purchase of a gift card generates an individual code that can then be used as a payment method during checkout.
 
 A Gift Card is a prepaid certificate entitling its owner to purchase products for the gift card’s value.
 
@@ -27,7 +27,7 @@ Gift cards are sensitive data and can be used to pay orders; therefore, keep in 
 
 {% endinfo_block %}
 
-In a Spryker-based shop, the gift cards follow the same rules and are bought as products and can even be bundled. However, they are purely virtual and do not require shipping. A gift card can be applied as a voucher and redeemed to pay an order. Therefore, the gift cards have two characteristics: a product characteristic and a voucher (+payment method) characteristic. When a gift card is bought, it is treated like a product. When it is applied, it’s a *voucher* that can be used as a payment method.
+The gift cards follow the same rules and are bought as products and can even be bundled. However, they are purely virtual and do not require shipping. A gift card can be applied as a voucher and redeemed to pay an order. Therefore, the gift cards have two characteristics: a product characteristic and a voucher (+payment method) characteristic. When a gift card is bought, it is treated like a product. When it is applied, it’s a *voucher* that can be used as a payment method.
 
 Gift cards have variants just like abstract products. For example, a New Year Gift Card can have all the different values—50 Euro and 100 Euro. In this case, the New Year Gift Card would be handled like an abstract product, and 50 Euro and 100 Euro gift cards would be its variants.
 
@@ -89,5 +89,5 @@ Even though the Balance strategy is a bit more complicated than Replacement, it 
 
 | INTEGRATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|---|
-| [Gift Cards feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/gift-cards-feature-integration.html) | [CheckoutPage migration guide](/docs/scos/dev/module-migration-guides/migration-guide-checkoutpage.html) | [Managing gift cards of guest users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html) | [File details: gift_card_abstract_configuration.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/gift-cards/file-details-gift-card-abstract-configuration.csv.html) |
+| [Integrate the Gift Cards feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/gift-cards-feature-integration.html) | [Upgrade the CheckoutPage module](/docs/scos/dev/module-migration-guides/migration-guide-checkoutpage.html) | [Manage gift cards of guest users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html) | [File details: gift_card_abstract_configuration.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/gift-cards/file-details-gift-card-abstract-configuration.csv.html) |
 |  |  | [Managing gift cards of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html) | [File details: gift_card_concrete_configuration.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/gift-cards/file-details-gift-card-concrete-configuration.csv.html) |

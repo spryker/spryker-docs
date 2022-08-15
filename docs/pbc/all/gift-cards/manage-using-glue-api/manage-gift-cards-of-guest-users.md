@@ -1,5 +1,5 @@
 ---
-title: Managing gift cards of guest users
+title: Manage gift cards of guest users
 description: Retrieve details about gift cards of the guest users, and learn what else you can do with the resource.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template

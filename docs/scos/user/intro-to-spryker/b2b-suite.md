@@ -49,7 +49,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Spryker Core Back Office](/docs/scos/user/features/{{site.version}}/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html)
 <!---- [Development tools]()-->
 <!---- [Deployment tools]()-->
-- [Shopping Lists](/docs/scos/user/features/{{site.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html)
+- [Shopping Lists](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html)
 <!---- [Merchant]()-->
 - [Merchant Product restrictions](/docs/scos/user/features/{{site.version}}/merchant-product-restrictions-feature-overview.html)
 - [Merchant B2B Contracts](/docs/scos/user/features/{{site.version}}/merchant-b2b-contracts-feature-overview.html)

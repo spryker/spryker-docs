@@ -1,0 +1,7 @@
+---
+title: Integrate the Quick Add to Cart + Shopping Lists feature
+description: Quick Add to Cart + Shopping Lists allow creating a shopping list to buy products. This guide describes how to integrate this feature into your project.
+last_updated: Jun 16, 2021
+template: feature-integration-guide-template
+---
+{% include pbc/all/integrate-features/202204.0/integrate-the-quick-add-to-cart-shopping-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-quick-add-to-cart-shopping-lists-feature.md -->

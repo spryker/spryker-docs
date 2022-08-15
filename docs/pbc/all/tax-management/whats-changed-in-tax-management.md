@@ -13,7 +13,7 @@ This release contains the following modules:
 
 [Public release details](https://api.release.spryker.com/release-group/2084)
 
-**Fixes**
+### Fixes
 
 * Removed deprecated usage of `DatabaseTransactionHandlerTrait::preventTransaction()`.
 * Removed `PropelOrm` version BC.
@@ -24,7 +24,7 @@ This release contains one module, [Tax](https://github.com/spryker/tax/releases/
 
 [Public release details](https://api.release.spryker.com/release-group/2771)
 
-**Improvements**
+### Improvements
 
 * Adjusted `DeleteRateController::confirmAction()` in order to use CSRF protection.
 * Adjusted `DeleteSetController::confirmAction()` in order to use CSRF protection.
@@ -35,7 +35,7 @@ This release contains one module, [Tax](https://github.com/spryker/tax/releases/
 
 [Public release details](https://api.release.spryker.com/release-group/2715)
 
-**Fixes**
+### Fixes
 
 * Adjusted translations.
 
@@ -47,8 +47,7 @@ This release contains the following modules:
 
 [Public release details](https://api.release.spryker.com/release-group/2714)
 
-**Improvements**
+### Improvements
 
 * Introduced `Spryker\Zed\TaxProductStorage\TaxProductStorageConfig::getEventQueueName()` to define event queue name for publish.
 * Introduced `Spryker\Zed\TaxStorage\TaxStorageConfig::getEventQueueName()` to define event queue name for publish.
-

@@ -55,7 +55,7 @@ To integrate Payone, follow these steps:
 7. On the Payone app details page, fill in fields in the **Credentials** section.
    ![payone-app-detais](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-app-details.png)
 8. Select *Payone Environment Mode*: **TEST** or **LIVE**.
-9. Enter your *Shop Name*. This name will be displayed on a **Payment Page** as a merchant label for whom to pay.
+9. Enter your *Shop Name*. This name will be displayed on **Payment Page** as a merchant label for whom to pay:
    ![payone-shop-name](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-shop-name.png)
 10. Select a payment method⁠—either **CREDIT CARD** or **PAYPAL**, or both.
    ![payone-payment-methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-payment-methods.png)

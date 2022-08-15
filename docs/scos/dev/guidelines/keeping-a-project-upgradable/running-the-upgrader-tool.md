@@ -63,28 +63,20 @@ docker/sdk cli
 
 ## Install the upgrader tool
 
-To install the upgrader tool, do the following:
+The Evaluator tool is supplied as part of Spryker SDK.
 
-1. In the Docker SDK CLI, install Spryker SDK globally:
+1. Install the Spryker SDK tool https://github.com/spryker-sdk/sdk#installation
 
-```bash
-composer global require spryker-sdk/sdk "dev-master"
-```
-
-2. Initialize Spryker SDK:
-
-```bash
-~/.composer/vendor/spryker-sdk/sdk/bin/console sdk:init:sdk
-```
+3. Also, possible to use spryker-sdk image from project directory, without any installation. Example: `docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console {connamd name}'`
 
 ## Run the upgrader tool
 
 To update all the modules and libraries to the latest versions, do the following:
 
-1. In the Docker SDK CLI, run the upgrader tool:
+1. Run the upgrader tool:
 
 ```bash
-~/.composer/vendor/spryker-sdk/sdk/bin/console upgradability:php:upgrade
+spryker-sdk upgradability:php:upgrade
 ```
 
 If the upgrade was successful, the upgrader tool created a PR with the updates.

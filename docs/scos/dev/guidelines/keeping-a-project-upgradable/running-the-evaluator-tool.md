@@ -20,47 +20,26 @@ This document describes how to check if code is compliant with Spryker’s stand
 
 ## Prerequisites
 
-To start working with the evaluator tool, connect to the Docker SDK CLI container:
-
-```bash
-docker/sdk cli
-```
-
 Get general information about the tool and see all available commands related to the evaluation process we may in *analyze* section:
 
 ```bash
-~/.composer/vendor/spryker-sdk/sdk/bin/console list
+spryker-sdk list
 ```
 
 ## Installing the evaluator tool
 
-To install the evaluator tool, do the following:
+The Evaluator tool is supplied as part of Spryker SDK.
 
-1. In the Docker SDK CLI, install Spryker SDK:
+1. Install the Spryker SDK tool https://github.com/spryker-sdk/sdk#installation
 
-```bash
-composer global require spryker-sdk/sdk "dev-master"
-```
-
-2. Initialize Spryker SDK:
-
-```bash
-~/.composer/vendor/spryker-sdk/sdk/bin/console sdk:init:sdk
-```
+2. Also, possible to use spryker-sdk image from project directory, without any installation. Example: `docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console {connamd name}'`
 
 ## Running an evaluation
 
-To evaluate your code, run the Evaluator with the output format defined in YAML:
-
-{% info_block infoBox "Output formats" %}
-
-The Evaluator supports only the YAML format.
-
-{% endinfo_block %}
-
+To evaluate your code, run the Evaluator with the output format defined in YAML.
 
 ```bash
-~/.composer/vendor/spryker-sdk/sdk/bin/console analyze:php:code-compliance --format=yaml
+spryker-sdk analyze:php:code-compliance
 ```
 
 The Evaluator creates `analyze:php:code-compliance.violations.yaml` in the reports folder.
@@ -68,13 +47,9 @@ The Evaluator creates `analyze:php:code-compliance.violations.yaml` in the repor
 To view the report, run the following command:
 
 ```bash
-~/.composer/vendor/spryker-sdk/sdk/bin/console analyze:php:code-compliance-report
+spryker-sdk analyze:php:code-compliance-report
 ```
 
 ## Updating the evaluator tool
 
-To update the evaluator tool to the latest version, run the following command:
-
-```bash
-composer update spryker-sdk/evaluator
-```
+To update the evaluator tool to the latest version, follow updating instructions from the SDK tool https://github.com/spryker-sdk/sdk.

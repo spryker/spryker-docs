@@ -129,7 +129,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details>
 <summary markdown='span'>HowTo</summary>
 
-[Schedule Cron Job for Scheduled Prices](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html)
+[Schedule Cron Job for Scheduled Prices](/docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html)
 
 </details>
 

@@ -55,7 +55,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Merchant B2B Contracts](/docs/scos/user/features/{{site.version}}/merchant-b2b-contracts-feature-overview.html)
 - [Merchant Custom Prices](/docs/pbc/all/price-management/merchant-custom-prices-feature-overview.html)
 - [Merchant Order Threshold](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html)
-- [Prices](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview.html)
+- [Prices](/docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.html)
 - [Tax](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html)
 - [Promotions & Discounts](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html)
 - [Cart](/docs/scos/user/features/{{site.version}}/cart-feature-overview/cart-feature-overview.html)

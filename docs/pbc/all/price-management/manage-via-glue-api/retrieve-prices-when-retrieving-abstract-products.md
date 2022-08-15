@@ -264,7 +264,7 @@ To retrieve general information about an abstract product, send the request:
 {% include pbc/all/glue-api-guides/retrieve-an-abstract-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/retrieve-an-abstract-product-response-attributes.md -->
 
 
-For the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-prices.html).
+For the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/manage-via-glue-api/retrieve-abstract-product-prices.html).
 
 
 ## Possible errors

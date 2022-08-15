@@ -22,7 +22,7 @@ To support product offer prices, a *PriceProductOffer* database table has been a
 
 In addition, product offers support volume prices. Merchants can now enter volume prices for product offers, and customers will see the corresponding price on their Storefront based on the quantity they have chosen. The volume prices for product offers work the same as the volume prices for products.
 
-To learn more about prices and volume prices, see: [Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html), [Volume Prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html)
+To learn more about prices and volume prices, see: [Prices](/docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.html), [Volume Prices](/docs/pbc/all/price-management/prices-feature-overview/volume-prices-overview.html)
 
 {% info_block warningBox "User documentation" %}
 

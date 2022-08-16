@@ -133,7 +133,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 {% include pbc/all/glue-api-guides/manage-guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/manage-guest-carts-response-attributes.md -->
 
 
-For the attributes of guest cart items, see [Managing gift cards of guest users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html).
+For the attributes of guest cart items, see [Managing gift cards of guest users](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-guest-users.html).
 
 
 

@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html  
 related:
   - title: Managing carts of registered users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
@@ -21,7 +22,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
 ---
 
-[Gift Card](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html) is an alternative payment method. It is purchased as a default product in the Spryker Commerce OS and is redeemed as a voucher code during the checkout. When you have a gift card code, this code can be applied to a shopping cart, and the money value of the applied gift card is deducted from the total sum of the cart items.
+[Gift Card](/docs/pbc/all/gift-cards/gift-cards.html) is an alternative payment method. It is purchased as a default product in the Spryker Commerce OS and is redeemed as a voucher code during the checkout. When you have a gift card code, this code can be applied to a shopping cart, and the money value of the applied gift card is deducted from the total sum of the cart items.
 
 In your development, Gift Cards API provides resources for purchasing and redeeming gift cards in Spryker Commerce OS via Glue API.
 
@@ -29,7 +30,7 @@ This article includes a list of endpoints to manage Gift Cards for registered us
 
 {% info_block infoBox "Info" %}
 
-To manage the gift cards of the unregistered users, see [Managing Gift Cards of Guest Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html).
+To manage the gift cards of the unregistered users, see [Managing Gift Cards of Guest Users](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-guest-users.html).
 
 {% endinfo_block %}
 

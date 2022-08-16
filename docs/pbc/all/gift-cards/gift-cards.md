@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/gift-cards-feature-overview
   - /docs/scos/user/features/202200.0/gift-cards-feature-overview.html
   - /docs/scos/user/features/202204.0/gift-cards-feature-overview.html  
-  - /docs/scos/dev/feature-walkthroughs/202204.0/gift-cards-feature-walkthrough.html  
+  - /docs/scos/dev/feature-walkthroughs/202204.0/gift-cards-feature-walkthrough.html
 ---
 
 The _Gift Cards_ capability lets you create a special product type with a chosen value amount. The purchase of a gift card generates an individual code that can then be used as a payment method during checkout.
@@ -89,5 +89,5 @@ Even though the Balance strategy is a bit more complicated than Replacement, it 
 
 | INTEGRATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|---|
-| [Integrate the Gift Cards feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/gift-cards-feature-integration.html) | [Upgrade the CheckoutPage module](/docs/scos/dev/module-migration-guides/migration-guide-checkoutpage.html) | [Manage gift cards of guest users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html) | [File details: gift_card_abstract_configuration.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/gift-cards/file-details-gift-card-abstract-configuration.csv.html) |
-|  |  | [Managing gift cards of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html) | [File details: gift_card_concrete_configuration.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/gift-cards/file-details-gift-card-concrete-configuration.csv.html) |
+| [Install the Gift Cards feature](/docs/pbc/all/gift-cards/install-and-upgrade/integrate-the-gift-cards-feature.html) | [Upgrade the CheckoutPage module](/docs/scos/dev/module-migration-guides/migration-guide-checkoutpage.html) | [Manage gift cards of guest users](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-guest-users.html) | [File details: gift_card_abstract_configuration.csv](/docs/pbc/all/gift-cards/import-and-export-data/file-details-gift-card-abstract-configuration.csv.html) |
+|  |  | [Managing gift cards of registered users](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html) | [File details: gift_card_concrete_configuration.csv](/docs/pbc/all/gift-cards/import-and-export-data/file-details-gift-card-concrete-configuration.csv.html) |

@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201903.0/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html  
 related:
   - title: Managing guest carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
@@ -21,17 +22,17 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-cart-items.html
 ---
 
-[Gift card](/docs/scos/user/features/{{page.version}}/gift-cards-feature-overview.html) is an alternative payment method. It is purchased as a regular product in the Spryker Commerce OS and is redeemed as a voucher code during checkout.  When you apply the code of a gift card to a shopping cart, the money value of the gift card is deducted from the total sum of the cart items.
+[Gift card](/docs/pbc/all/gift-cards/gift-cards.html) is an alternative payment method. It is purchased as a regular product in the Spryker Commerce OS and is redeemed as a voucher code during checkout.  When you apply the code of a gift card to a shopping cart, the money value of the gift card is deducted from the total sum of the cart items.
 
 In your development, Gift Cards API provides resources for purchasing and redeeming gift cards.
 
 This endpoint allows managing gift cards of guest users.
 
-To manage the gift cards of the registered users, see [Managing gift cards of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html).
+To manage the gift cards of the registered users, see [Managing gift cards of registered users](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html).
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Gift Cards API feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/gift-cards-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Gift Cards API feature integration](/docs/pbc/all/gift-cards/install-and-upgrade/integrate-the-gift-cards-feature.html).
 
 ## Purchasing a gift card
 

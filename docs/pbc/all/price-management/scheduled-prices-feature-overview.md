@@ -44,12 +44,12 @@ Even though you can use any time zone for defining a price schedule, in the data
 ## Defining product price schedules
 
 You can define price schedules as follows:
-Import a CSV file with a list of prices. This option is for bulk operations. You can import the file through [Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html) or [manually](/docs/pbc/all/price-management/import-and-export-data/file-details-product-price-schedule.csv.html).
-Add a price schedule to a single abstract or concrete product. This option is suitable for working with a small number of products. For details, see [Edit abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html).
+Import a CSV file with a list of prices. This option is for bulk operations. You can import the file through [Back Office](/docs/pbc/all/price-management/manage-in-the-back-office/create-scheduled-prices.html) or [manually](/docs/pbc/all/price-management/import-and-export-data/file-details-product-price-schedule.csv.html).
+Add a price schedule to a single abstract or concrete product. This option is suitable for working with a small number of products. For details, see [Edit abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html).
 
 ## Cron job
 
-Once [imported](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html), prices do not get updated right away. To automate price application, a cron job shipped with the feature. The cron job checks if there are any imported scheduled prices that need to be applied or reverted. If there is a price schedule that passes its starting or ending date, the cron job applies the changes.
+Once [imported](/docs/pbc/all/price-management/manage-in-the-back-office/create-scheduled-prices.html), prices do not get updated right away. To automate price application, a cron job shipped with the feature. The cron job checks if there are any imported scheduled prices that need to be applied or reverted. If there is a price schedule that passes its starting or ending date, the cron job applies the changes.
 
 By default, the cron job runs every day at 00:06:00-00:00. In some cases, it might be necessary to change this behavior. For example, if you schedule a price to be updated at 00:01:00-00:00, the price is updated at 00:06:00-00:00 since that's when the cron job runs. 00:01:00-00:00. In this case, you can [schedule the cron job](/docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html) to be run at 00:01:00-00:00. When you add, edit, or delete a price schedule while editing a product, the cron job runs automatically for this single product.
 
@@ -89,17 +89,17 @@ In this case:
 The feature has the following functional constraints which are going to be resolved in the future.
 
 * The default number of prices that the cron job can process at a time is 1000.
-* The feature does not work with merchant prices ([relations](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html)) and [volume prices](/docs/pbc/all/price-management/prices-feature-overview/volume-prices-overview.html).
+* The feature does not work with merchant prices ([relations](/docs/scos/user/features/{{site.version}}/merchant-b2b-contracts-feature-overview.html)) and [volume prices](/docs/pbc/all/price-management/prices-feature-overview/volume-prices-overview.html).
 
 ## Related Business User articles
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Manage scheduled prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/creating-scheduled-prices.html)  |
+| [Manage scheduled prices](/docs/pbc/all/price-management/manage-in-the-back-office/create-scheduled-prices.html)  |
 
 ## Related Developer articles
 
 |INTEGRATION GUIDES  | MIGRATION GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---------|---------|---------|---------|
-| [Integrate the Scheduled prices feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/scheduled-prices-feature-integration.html) | [PriceProductSchedule migration guide](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedule.html)  | [File details: product_price_schedule.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-product-price-schedule.csv.html) | [HowTo: Schedule cron job for Scheduled Prices](/docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html)  |
-|   | [PriceProductScheduleGui migration guide](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedulegui.html)  |   |   |
+| [Integrate the Scheduled prices feature](/docs/pbc/all/price-management/install-and-upgrade/integrrate-the-scheduled-prices-feature.html) | [PriceProductSchedule migration guide](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproduct-moduleschedule.html)  | [File details: product_price_schedule.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-product-price-schedule.csv.html) | [HowTo: Schedule cron job for Scheduled Prices](/docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html)  |
+|   | [PriceProductScheduleGui migration guide](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproduct-moduleschedulegui.html)  |   |   |

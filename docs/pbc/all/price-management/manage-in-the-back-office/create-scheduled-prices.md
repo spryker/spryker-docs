@@ -1,5 +1,5 @@
 ---
-title: Creating scheduled prices
+title: Create scheduled prices
 description: This user guide is about scheduling price changes by creating product price schedules. This functionality is shipped with the Scheduled prices feature.
 last_updated: Sep 10, 2021
 template: back-office-user-guide-template
@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/catalog/scheduled-prices/creating-scheduled-prices.html
 related:
   - title: Managing Scheduled Prices
-    link: docs/scos/user/back-office-user-guides/page.version/catalog/scheduled-prices/managing-scheduled-prices.html
+    link: docs/pbc/all/price-management/manage-in-the-back-office/manage-scheduled-prices.html
   - title: Scheduled Prices feature overview
     link: docs/scos/user/features/page.version/scheduled-prices-feature-overview.html
 ---
@@ -46,7 +46,7 @@ To create a price schedule:
 
 {% info_block infoBox "Info" %}
 
-If needed, you can [edit the imported scheduled prices](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/scheduled-prices/managing-scheduled-prices.html)
+If needed, you can [edit the imported scheduled prices](/docs/pbc/all/price-management/manage-in-the-back-office/manage-scheduled-prices.html)
 
 {% endinfo_block %}
 

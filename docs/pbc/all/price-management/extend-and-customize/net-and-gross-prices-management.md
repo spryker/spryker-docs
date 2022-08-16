@@ -90,7 +90,7 @@ To use it, do the following:
 
    The switch can happen only if quote have to items.
 
-   This is available after the product currency release so you must first follow the steps in [Migration Guide - Price](/docs/scos/dev/module-migration-guides/migration-guide-price.html).
+   This is available after the product currency release so you must first follow the steps in [Migration Guide - Price](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-price-module.html).
 
 
  {% info_block infoBox "Switching shop to Net prices:" %}

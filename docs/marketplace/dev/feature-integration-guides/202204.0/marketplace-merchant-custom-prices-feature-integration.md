@@ -20,7 +20,7 @@ To start feature integration, integrate the required features:
 
 | NAME    | VERSION    | INTEGRATION GUIDE    |
 |----------------|------------------|-------------------|
-| Merchant Custom Prices                         | {{page.version}} | [Merchant Custom Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-custom-prices-feature-integration.html)                                    |
+| Merchant Custom Prices                         | {{page.version}} | [Install the Merchant Custom Prices feature](/docs/pbc/all/price-management/install-and-upgrade/integrate-the-merchant-custom-prices-feature.html)                                    |
 | Marketplace Merchant Portal Product Management | {{page.version}} | [Merchant Portal - Marketplace Product feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
@@ -32,7 +32,7 @@ composer require spryker-feature/marketplace-merchant-custom-prices:"{{page.vers
 ```
 
 {% info_block warningBox "Verification" %}
-    
+
 Make sure that the following modules were installed:
 
 | MODULE     | EXPECTED DIRECTORY       |
@@ -79,7 +79,7 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN     | SPECIFICATION     | PREREQUISITES | NAMESPACE  |
 |-----------------|-----------------|---------------|------------------|
 | MerchantRelationshipPreBuildPriceProductGroupKeyPlugin                   | Extends the logic for the Price Product group key generation. |               | Spryker\Service\PriceProductMerchantRelationship\Plugin\PriceProduct                                           |
-| MerchantRelationshipVolumePriceProductValidatorPlugin                    | Validates volume prices.                                   |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\PriceProduct                | 
+| MerchantRelationshipVolumePriceProductValidatorPlugin                    | Validates volume prices.                                   |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\PriceProduct                |
 | MerchantRelationshipPriceProductCollectionDeletePlugin                   | Removes price product merchant relationships.              |               | Spryker\Zed\PriceProductMerchantRelationship\Communication\Plugin\PriceProduct                                 |
 | MerchantRelationshipPriceProductTableFilterPlugin                        | Filters price product transfers.                           |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui    |
 | MerchantRelationshipPriceProductAbstractTableConfigurationExpanderPlugin | Expands price product abstract table configuration.        |               | Spryker\Zed\PriceProductMerchantRelationshipMerchantPortalGui\Communication\Plugin\ProductMerchantPortalGui    |

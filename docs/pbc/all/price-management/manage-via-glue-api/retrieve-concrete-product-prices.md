@@ -32,8 +32,8 @@ This endpoint allows retrieving prices of concrete products.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Glue API: Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html)
+* [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html)
+* [Install the Prices Glue API](/docs/pbc/all/price-management/install-and-upgrade/integrate-the-product-price-glue-api.html)
 
 ## Retrieve prices of a concrete product
 
@@ -228,4 +228,4 @@ To retrieve prices of a concrete product, send the request:
 | 302 | Concrete product is not found. |
 | 404 | Request URL or type is wrong. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/reference-information-glueapplication-errors.html).

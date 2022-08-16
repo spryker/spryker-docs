@@ -87,10 +87,10 @@ console price-product-merchant-relationship:delete [-m X] . X = MR ID
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Set prices per merchant relations when creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)   |
+| [Set prices per merchant relations when creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)   |
 
 ## Related Developer articles
 
 |INTEGRATION GUIDES | MIGRATION GUIDES |
 |---------|---------|
-| [Merchant custom prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-custom-prices-feature-integration.html)  | PriceProduct migration guide](/docs/scos/dev/module-migration-guides/migration-guide-priceproduct.html) |
+| [Install the Merchant custom prices feature](/docs/pbc/all/price-management/install-and-upgrade/integrate-the-merchant-custom-prices-feature.html)  | PriceProduct migration guide](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproduct-module.html) |

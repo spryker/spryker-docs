@@ -64,7 +64,7 @@ From currency version 3, we have introduced currency table where currencies are 
 
 {% info_block infoBox "Info" %}
 
-Check the [Curency migration guide](/docs/scos/dev/module-migration-guides/migration-guide-currency.html) to migrate to the latest  module version.
+Check the [Curency migration guide](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-currency-module.html) to migrate to the latest  module version.
 
 {% endinfo_block %}
 

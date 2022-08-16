@@ -34,7 +34,7 @@ redirect_from:
   - /v2/docs/en/multicurrency-search
 related:
   - title: Migration Guide - Multi-Currency
-    link: docs/scos/dev/module-migration-guides/migration-guide-multi-currency.html
+    link: docs/pbc/all/price-management/install-and-upgrade/migrate-to-multi-currency.html
   - title: Migration Guide - Price
     link: docs/scos/dev/module-migration-guides/migration-guide-price.html
   - title: Configuring Elasticsearch

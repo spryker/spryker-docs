@@ -32,7 +32,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-price.html
 related:
   - title: Upgrade the MultiCurrency
-    link: docs/scos/dev/module-migration-guides/migration-guide-multi-currency.html
+    link: docs/pbc/all/price-management/install-and-upgrade/migrate-to-multi-currency.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-price-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-price-module.md -->

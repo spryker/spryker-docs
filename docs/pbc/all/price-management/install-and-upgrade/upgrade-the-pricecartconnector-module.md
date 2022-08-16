@@ -36,7 +36,7 @@ related:
   - title: Upgrade the Price
     link: docs/scos/dev/module-migration-guides/migration-guide-price.html
   - title: Upgrade the MultiCurrency
-    link: docs/scos/dev/module-migration-guides/migration-guide-multi-currency.html
+    link: docs/pbc/all/price-management/install-and-upgrade/migrate-to-multi-currency.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-pricecartconnector-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-pricecartconnector-module.md -->

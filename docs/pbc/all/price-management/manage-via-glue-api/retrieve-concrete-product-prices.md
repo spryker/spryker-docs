@@ -33,7 +33,7 @@ This endpoint allows retrieving prices of concrete products.
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Glue API: Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html)
+* [Install the Prices Glue API](/docs/pbc/all/price-management/install-and-upgrade/integrate-the-product-price-glue-api.html)
 
 ## Retrieve prices of a concrete product
 

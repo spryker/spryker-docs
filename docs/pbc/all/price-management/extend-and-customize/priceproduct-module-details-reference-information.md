@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/prices-feature-walkthrough/priceproduct-module-details-reference-information.html
 ---
 
-This article describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](/docs/scos/dev/module-migration-guides/migration-guide-priceproduct.html#upgrading-from-version-1-to-version-2) of the module.
+This article describes technical details of the [PriceProduct](https://github.com/spryker/price-product) module that are valid since [version 2](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproduct-module.html#upgrading-from-version-1-to-version-2) of the module.
 
 ## Price dimension
 

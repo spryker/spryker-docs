@@ -93,4 +93,4 @@ console price-product-merchant-relationship:delete [-m X] . X = MR ID
 
 |INTEGRATION GUIDES | MIGRATION GUIDES |
 |---------|---------|
-| [Merchant custom prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-custom-prices-feature-integration.html)  | PriceProduct migration guide](/docs/scos/dev/module-migration-guides/migration-guide-priceproduct.html) |
+| [Install the Merchant custom prices feature](/docs/pbc/all/price-management/install-and-upgrade/integrate-the-merchant-custom-prices-feature.html)  | PriceProduct migration guide](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproduct-module.html) |

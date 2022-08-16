@@ -22,7 +22,7 @@ redirect_from:
   - /v2/docs/en/about-migration-concepts
 related:
   - title: CRUD Scheduled Prices migration concept
-    link: docs/pbc/all/price-management/install-and-upgrade/crud-scheduled-prices-migration-concept
+    link: docs/pbc/all/price-management/install-and-upgrade/migrate-to-crud-scheduled-prices.html
   - title: Decimal Stock migration concept
     link: docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
   - title: Float Stock for Products

@@ -36,7 +36,7 @@ related:
   - title: Upgrade the Sales
     link: docs/scos/dev/module-migration-guides/migration-guide-sales.html
   - title: Upgrade the Price
-    link: docs/scos/dev/module-migration-guides/migration-guide-price.html
+    link: docs/pbc/all/price-management/install-and-upgrade/upgrade-the-price-module.html
   - title: Upgrade the Discount
     link: docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discount-module.html
   - title: Upgrade the Shipment
@@ -82,9 +82,9 @@ composer update spryker/*
 5. In Products, the way the price is entered in Zed has been changed to support multi-currency, price mode as well as price type variants. We have also changed the way the collector collects prices, the way Elasticsearch exports prices, the way the results coming from Elasticsearch are formatted, the way the prices are picked in cart when item is added:
 
    * **CatalogPriceProductConnector** - we have added new currency aware formatter plugins for formatting prices when reading results from Elasticsearch. See Integration guide for more details.
-   * **Price >= 5.***—see [Migration Guide - Price](/docs/scos/dev/module-migration-guides/migration-guide-price.html).
-   * **PriceProduct** - new module handling price product prices. Migration is a part of [Migration Guide - Price](/docs/scos/dev/module-migration-guides/migration-guide-price.html).
-   * **PriceCartConnector >= 4.** — [Migration Guide - PriceCartConnector](/docs/scos/dev/module-migration-guides/migration-guide-pricecartconnector.html) uses the new PriceProduct module.
+   * **Price >= 5.***—see [Migration Guide - Price](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-price-module.html).
+   * **PriceProduct** - new module handling price product prices. Migration is a part of [Migration Guide - Price](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-price-module.html).
+   * **PriceCartConnector >= 4.** — [Migration Guide - PriceCartConnector](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-pricecartconnector-module.html) uses the new PriceProduct module.
    * **PriceDataFeed >= 0.2.** — uses the new `PriceProduct` module.
    * **ProductBundle >= 4.** — [Migration Guide - ProductBundle](/docs/scos/dev/module-migration-guides/migration-guide-productbundle.html) uses the new `PriceProduct` module, the new plugin to watch cart item reload action.
    * **ProductLabelGui >= 2.** — see [Migration Guide - ProductLabelGui](/docs/scos/dev/module-migration-guides/migration-guide-productlabelgui.html).

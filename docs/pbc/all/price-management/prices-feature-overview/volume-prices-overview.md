@@ -143,6 +143,6 @@ The feature has the following functional constraints which are going to be resol
 
 {% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Prices feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/prices-feature-walkthrough.html) for developers.
+Are you a developer? See [Prices feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{site.version}}/prices-feature-walkthrough/prices-feature-walkthrough.html) for developers.
 
 {% endinfo_block %}

@@ -34,7 +34,7 @@ redirect_from:
   - /module_migration_guides/mg-price-cart-connector.htm
 related:
   - title: Upgrade the Price
-    link: docs/scos/dev/module-migration-guides/migration-guide-price.html
+    link: docs/pbc/all/price-management/install-and-upgrade/upgrade-the-price-module.html
   - title: Upgrade the MultiCurrency
     link: docs/pbc/all/price-management/install-and-upgrade/migrate-to-multi-currency.html
 ---

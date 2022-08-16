@@ -47,10 +47,10 @@ The concerns for the product price calculation are the following:
 
 | OVERVIEWS | BACK OFFICE USER GUIDES |
 |---| - |
-| [Get a general idea of volume prices](/docs/pbc/all/price-management/prices-feature-overview/volume-prices-overview.html) | [Define prices when creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)   |
-| | [Edit prices of an abstract product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html#edit-prices-of-an-abstract-product-or-product-bundle)   |
-| | [Define prices when creating a concrete product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html)  |
-| | [Edit prices of a concrete product](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/editing-product-variants.html)   |
+| [Get a general idea of volume prices](/docs/pbc/all/price-management/prices-feature-overview/volume-prices-overview.html) | [Define prices when creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)   |
+| | [Edit prices of an abstract product](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html#edit-prices-of-an-abstract-product-or-product-bundle)   |
+| | [Define prices when creating a concrete product](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-concrete-products/creating-product-variants.html)  |
+| | [Edit prices of a concrete product](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-concrete-products/editing-product-variants.html)   |
 
 ## Related Developer articles
 

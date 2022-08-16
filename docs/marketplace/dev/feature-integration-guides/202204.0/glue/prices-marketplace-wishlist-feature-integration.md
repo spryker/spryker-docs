@@ -5,8 +5,6 @@ template: feature-integration-guide-template
 related:
   - title: Marketplace Wishlist feature walkthrough
     link: docs/marketplace/dev/feature-walkthroughs/page.version/marketplace-wishlist-feature-walkthrough.html
-  - title: Prices feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/prices-feature-walkthrough/prices-feature-walkthrough.html
 ---
 
 This document describes how to integrate the Prices + Marketplace Wishlist Glue API feature into a Spryker project.

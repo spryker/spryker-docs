@@ -14,10 +14,6 @@ redirect_from:
 related:
   - title: Prices feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/prices-feature-integration.html
-  - title: Product feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/product-feature-walkthrough.html
-  - title: Prices feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/prices-feature-walkthrough/prices-feature-walkthrough.html
   - title: Retrieving abstract product prices
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-prices.html
   - title: Retrieving concrete product prices

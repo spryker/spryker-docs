@@ -12,7 +12,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202204.0/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html
 ---
 
-This article contains content of the `product_price.csv` file to configure [prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.
+This article contains content of the `product_price.csv` file to configure [prices](/docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.html) of the products/services in your Spryker Demo Shop.
 
 To import the file, run:
 

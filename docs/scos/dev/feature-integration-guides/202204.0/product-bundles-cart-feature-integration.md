@@ -23,4 +23,4 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/cart-feature-integration.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-the-product-bundles-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-product-bundles-cart-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-product-bundles-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-bundles-cart-feature.md -->

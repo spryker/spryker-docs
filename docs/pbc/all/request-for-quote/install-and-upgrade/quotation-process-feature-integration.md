@@ -23,4 +23,4 @@ related:
     - title: Quotation Process feature walkthrough
       link: docs/scos/dev/feature-walkthroughs/page.version/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
 ---
-{% include pbc/all/integrate-features/202204.0/integrate-the-quotation-process-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-quotation-process-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-quotation-process-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-quotation-process-feature.md -->

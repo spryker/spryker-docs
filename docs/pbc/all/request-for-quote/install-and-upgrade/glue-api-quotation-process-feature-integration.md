@@ -9,4 +9,4 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-quotation-process-glue-api.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-quotation-process-glue-api.md -->
+{% include pbc/all/install-features/202204.0/install-glue-api/install-the-quotation-process-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-quotation-process-glue-api.md -->

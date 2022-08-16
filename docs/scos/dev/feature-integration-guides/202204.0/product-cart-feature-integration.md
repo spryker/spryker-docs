@@ -19,4 +19,4 @@ related:
     link: docs/scos/user/features/page.version/product-feature-overview/product-images-overview.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-the-product-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-product-cart-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-product-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-cart-feature.md -->

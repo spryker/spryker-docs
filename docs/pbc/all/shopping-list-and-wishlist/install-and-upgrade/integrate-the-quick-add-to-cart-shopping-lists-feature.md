@@ -4,4 +4,4 @@ description: Quick Add to Cart + Shopping Lists allow creating a shopping list t
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 ---
-{% include pbc/all/integrate-features/202204.0/integrate-the-quick-add-to-cart-shopping-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-quick-add-to-cart-shopping-lists-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-quick-add-to-cart-shopping-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-quick-add-to-cart-shopping-lists-feature.md -->

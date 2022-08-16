@@ -213,9 +213,6 @@ The [Persistent Cart Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version
 
 [This schema](/docs/scos/dev/feature-walkthroughs/{{page.version}}/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-module-relations.html) illustrates module relations in the Unique URL per Cart for Easy Sharing feature
 
-## Prices
-
-The [Prices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/prices-feature-walkthrough.html) feature enables Back Office users to effectively manage the prices of all types of products. They can set different types of prices, like default, original, and volume prices.
 
 ### PriceProduct module details: reference information
 

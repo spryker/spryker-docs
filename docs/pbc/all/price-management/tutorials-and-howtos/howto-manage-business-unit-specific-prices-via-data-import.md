@@ -3,7 +3,7 @@ title: "HowTo: Manage business unit specific prices via data import"
 last_updated: Feb 04, 2022
 template: howto-guide-template
 redirect_from:
-  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-personalized-prices.html
+  - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/how-to-manage-business-unit-specific-prices-via-data-import.html
 related:
   - title: Merchant Custom Prices feature overview
     link: docs/scos/user/features/page.version/merchant-custom-prices-feature-overview.html

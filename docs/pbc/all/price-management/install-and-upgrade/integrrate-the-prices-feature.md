@@ -27,8 +27,6 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/product-lists-feature-integration.html
   - title: Merchant Product Restrictions feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/merchant-product-restrictions-feature-integration.html
-  - title: Prices feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/prices-feature-walkthrough/prices-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-prices-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-prices-feature.md -->

@@ -1,5 +1,5 @@
 ---
-title: Retrieving abstract product prices
+title: Retrieve abstract product prices
 description: Retrieve details information about prices of abstract products.
 last_updated: Jun 21, 2021
 template: glue-api-storefront-guide-template
@@ -213,7 +213,7 @@ To retrieve prices of an abstract product, send the request:
 | currency.code | String | Currency code. |
 | currency.name | String | Currency name. |
 | currency.symbol | String | Currency symbol. |
-| volumePrices | Array | An array of objects defining the [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html) for the abstract product. |
+| volumePrices | Array | An array of objects defining the [volume prices](/docs/pbc/all/price-management/prices-feature-overview/volume-prices-overview.html) for the abstract product. |
 | netAmount | Integer | Net price in cents. |
 | grossAmount | Integer | Gross price in cents. |
 | quantity | Integer | Number of items. |

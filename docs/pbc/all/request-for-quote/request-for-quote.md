@@ -1,5 +1,5 @@
 ---
-title: Quotation Process feature overview
+title: Request for Quote
 description: The document describes the Quotation Process feature, its statuses, and workflow (by a customer, sales representative, agent account and interaction with approval process.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -19,6 +19,7 @@ redirect_from:
   - /docs/rfq-reference-information-shop-guide
   - /docs/en/rfq-reference-information-shop-guide
   - /docs/scos/user/features/202200.0/quotation-process-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202204.0/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
 ---
 
 | DEFINITION | DESCRIPTION |
@@ -197,8 +198,12 @@ Agents can perform the same actions (on company users' behalf) as company users.
 * Request for Quote does not work with the product bundles.
 
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Quotation Process feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INTEGRATION GUIDES | MIGRATION GUIDES |
+|---|---|
+| [Quotation Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-quotation-process-feature-integration.html) | [QuoteRequestAgent migration guide](/docs/scos/dev/module-migration-guides/migration-guide-quoterequestagent.html) |
+| [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/approval-process-feature-integration.html) | [QuoteRequestPage migration guide](/docs/scos/dev/module-migration-guides/migration-guide-quoterequestpage.html) |
+| [Checkout + Quotation process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-quotation-process-feature-integration.html) |  |
+| [Quotation Process + Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quotation-process-approval-process-feature-integration.html) |  |
+| [Quotation Process + Multiple Carts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quotation-process-multiple-carts-feature-integration.html) |  |

@@ -200,7 +200,7 @@ Agents can perform the same actions (on company users' behalf) as company users.
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES | MIGRATION GUIDES |
+| INSTALLATION GUIDES | UPGRADE GUIDES|
 |---|---|
 | [Quotation Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-quotation-process-feature-integration.html) | [QuoteRequestAgent migration guide](/docs/scos/dev/module-migration-guides/migration-guide-quoterequestagent.html) |
 | [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/approval-process-feature-integration.html) | [QuoteRequestPage migration guide](/docs/scos/dev/module-migration-guides/migration-guide-quoterequestpage.html) |

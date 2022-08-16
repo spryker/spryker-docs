@@ -102,9 +102,9 @@ entries:
               - title: Integrate the Promotions & Discounts Glue API
                 url: /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html
               - title: Integrate the Product labels + Promotions & Discounts feature
-                url: /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-product-labels-promotions-and-discounts-feature.html
+                url: /docs/pbc/all/discount-management/install-and-upgrade/install-the-promotions-and-discounts-product-labels-feature.html
               - title: Integrate the Category Management + Promotions & Discounts feature
-                url: /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-category-management-promotions-and-discounts-feature.html
+                url: /docs/pbc/all/discount-management/install-and-upgrade/install-the-promotions-and-discounts-category-management-feature.html
               - title: Upgrade the Discount module
                 url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discount-module.html
               - title: Upgrade the DiscountCalculatorConnector module

@@ -122,8 +122,8 @@ Below you will find the list of the new/updated documentation released as part o
 <details>
 <summary markdown='span'>Migration guides</summary>
 
-* [PriceProductSchedule migration from v. 1.* to v. 2.*](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproduct-moduleschedule.html)
-* [PriceProductScheduleGui migration from v. 1.* to v. 2.*](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproduct-moduleschedulegui.html)
+* [PriceProductSchedule migration from v. 1.* to v. 2.*](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproductschedule-module.html)
+* [PriceProductScheduleGui migration from v. 1.* to v. 2.*](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproductschedulegui-module.html)
 
 </details>
 <details>

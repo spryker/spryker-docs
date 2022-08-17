@@ -195,6 +195,50 @@ entries:
                 url: /docs/pbc/all/payment-service-providers/unzer/unzer-domain-model-and-relationships.html
           - title: Payone
             url: /docs/pbc/all/payment-service-providers/payone/payone.html
+      - title: Price Management
+        url: /docs/pbc/all/price-management/price-management.html
+        nested:
+          - title: Prices feature overview
+            url: /docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.html
+            nested:
+              - title: Volume Prices overview
+                url: /docs/pbc/all/price-management/prices-feature-overview/volume-prices-overview.html
+          - title: Merchant Custom Prices feature overview
+            url: /docs/pbc/all/price-management/merchant-custom-prices-feature-overview.html
+          - title: Scheduled Prices feature overview
+            url: /docs/pbc/all/price-management/scheduled-prices-feature-overview.html
+          - title: Install and upgrade
+            nested:
+              - title: Integrate the Prices feature
+                url: /docs/pbc/all/price-management/install-and-upgrade/integrate-the-prices-feature.html
+              - title: Integrate the Prices feature
+                url: /docs/pbc/all/price-management/install-and-upgrade/integrate-the-prices-feature.html
+              - title: Integrate the Prices feature
+                url: /docs/pbc/all/price-management/install-and-upgrade/integrate-the-prices-feature.html
+              - title: Integrate the Prices feature
+                url: /docs/pbc/all/price-management/install-and-upgrade/integrate-the-prices-feature.html
+              - title: Integrate the Prices feature
+                url: /docs/pbc/all/price-management/install-and-upgrade/integrate-the-prices-feature.html
+              - title: Integrate the Prices feature
+                url: /docs/pbc/all/price-management/install-and-upgrade/integrate-the-prices-feature.html
+              - title: Integrate the Prices feature
+                url: /docs/pbc/all/price-management/install-and-upgrade/integrate-the-prices-feature.html
+              - title: Integrate the Prices feature
+                url: /docs/pbc/all/price-management/install-and-upgrade/integrate-the-prices-feature.html
+              - title: Integrate the Prices feature
+                url: /docs/pbc/all/price-management/install-and-upgrade/integrate-the-prices-feature.html
+              - title: Integrate the Prices feature
+                url: /docs/pbc/all/price-management/install-and-upgrade/integrate-the-prices-feature.html
+              - title: Integrate the Prices feature
+                url: /docs/pbc/all/price-management/install-and-upgrade/integrate-the-prices-feature.html
+              - title: Integrate the Prices feature
+                url: /docs/pbc/all/price-management/install-and-upgrade/integrate-the-prices-feature.html
+              - title: Integrate the Prices feature
+                url: /docs/pbc/all/price-management/install-and-upgrade/integrate-the-prices-feature.html
+              - title: Integrate the Prices feature
+                url: /docs/pbc/all/price-management/install-and-upgrade/integrate-the-prices-feature.html
+              - title: Integrate the Prices feature
+                url: /docs/pbc/all/price-management/install-and-upgrade/integrate-the-prices-feature.html
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:
@@ -226,7 +270,7 @@ entries:
               - title: Integrate the Wishlist Glue API
                 url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-wishlist-glue-api.html
               - title: Install the Wishlist + Alternative Products feature
-                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/install-the-wishlist-alternative-products-feature.html                
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/install-the-wishlist-alternative-products-feature.html
               - title: Upgrade the ShoppingList module
                 url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglist-module.html
               - title: Upgrade the ShoppingListPage module

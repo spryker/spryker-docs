@@ -53,12 +53,12 @@ console transfer:generate
 
 3. Follow individual migration guides of the modules listed below:
 
-* [PriceProductSchedule](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproduct-moduleschedule.html#upgrading-from-version-1-to-version-200)
-* [PriceProductScheduleGui](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproduct-moduleschedulegui.html)
+* [PriceProductSchedule](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproductschedule-module.html#upgrading-from-version-1-to-version-200)
+* [PriceProductScheduleGui](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproductschedulegui-module.html)
 
 You can find the affected modules of the CRUD scheduled prices update in the following table.
 
 | MODULE | VERSION | MIGRATION GUIDE |
 | --- | --- | --- |
-| `spryker/price-product-schedule	` | 	2.0.0 | [Migration Guide - PriceProductSchedule](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproduct-moduleschedule.html#upgrading-from-version-1-to-version-200) |
-| `spryker/price-product-schedule-gui` | 	2.0.0 | [Migration Guide - PriceProductScheduleGui](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproduct-moduleschedulegui.html) |
+| `spryker/price-product-schedule	` | 	2.0.0 | [Migration Guide - PriceProductSchedule](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproductschedule-module.html#upgrading-from-version-1-to-version-200) |
+| `spryker/price-product-schedule-gui` | 	2.0.0 | [Migration Guide - PriceProductScheduleGui](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproductschedulegui-module.html) |

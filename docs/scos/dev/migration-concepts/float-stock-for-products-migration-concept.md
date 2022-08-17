@@ -102,7 +102,7 @@ You can find the affected modules of the float stock update in the following lis
 | spryker/persistent-cart | 2.0.0 | [Migration Guide - PersistentCart](/docs/scos/dev/module-migration-guides/migration-guide-persistentcart.html) |
 | spryker/price-cart-connector | 5.0.0 | [Migration Guide - PriceCartConnector](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-pricecartconnector-module.html) |
 | spryker/price-product | 3.0.0 | [Migration Guide - PriceProduct](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproduct-module.html) |
-| spryker/price-product-storage | 3.0.0 | [Migration Guide - PriceProductStorage](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproduct-modulestorage.html) |
+| spryker/price-product-storage | 3.0.0 | [Migration Guide - PriceProductStorage](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproductstorage-module.html) |
 | spryker/price-product-volume | 2.0.0 | [Migration Guide - PriceProductVolume](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproductvolume-module.html) |
 | spryker/price-product-volume-gui | 2.0.0 | [Migration Guide - PriceProductVolumeGui](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproductvolumegui-module.html) |
 | spryker/product-availabilities-rest-api | 2.0.0 | [Migration Guide - ProductAvailabilitiesRestApi](/docs/scos/dev/module-migration-guides/glue-api/migration-guide-productavailabilitiesrestapi.html) |

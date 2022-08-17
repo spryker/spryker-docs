@@ -31,7 +31,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cart.html
   - /module_migration_guides/mg-cart.htm
 related:
-  - title: Migration guide - Quote
+  - title: Upgrade the Quote module
     link: docs/scos/dev/module-migration-guides/migration-guide-quote.html
 ---
 

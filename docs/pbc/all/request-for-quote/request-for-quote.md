@@ -19,6 +19,7 @@ redirect_from:
   - /docs/rfq-reference-information-shop-guide
   - /docs/en/rfq-reference-information-shop-guide
   - /docs/scos/user/features/202200.0/quotation-process-feature-overview.html
+  - /docs/scos/user/features/202204.0/quotation-process-feature-overview.html  
   - /docs/scos/dev/feature-walkthroughs/202204.0/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
 ---
 
@@ -202,8 +203,8 @@ Agents can perform the same actions (on company users' behalf) as company users.
 
 | INSTALLATION GUIDES | UPGRADE GUIDES|
 |---|---|
-| [Quotation Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-quotation-process-feature-integration.html) | [QuoteRequestAgent migration guide](/docs/scos/dev/module-migration-guides/migration-guide-quoterequestagent.html) |
+| [Install the Quotation Process feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-quotation-process-feature-integration.html) | [QuoteRequestAgent migration guide](/docs/scos/dev/module-migration-guides/migration-guide-quoterequestagent.html) |
 | [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/approval-process-feature-integration.html) | [QuoteRequestPage migration guide](/docs/scos/dev/module-migration-guides/migration-guide-quoterequestpage.html) |
 | [Checkout + Quotation process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-quotation-process-feature-integration.html) |  |
-| [Quotation Process + Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quotation-process-approval-process-feature-integration.html) |  |
-| [Quotation Process + Multiple Carts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quotation-process-multiple-carts-feature-integration.html) |  |
+| [Install the Quotation Process + Approval Process feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/quotation-process-approval-process-feature-integration.html) |  |
+| [Install the Quotation Process + Multiple Carts feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/quotation-process-multiple-carts-feature-integration.html) |  |

@@ -1,5 +1,5 @@
 ---
-title: Quotation Process + Approval Process feature integration
+title: Install the Quotation Process + Approval Process feature
 description: Install the Quotation Process + Approval Process features in your project.
 last_updated: Jan 25, 2022
 template: feature-integration-guide-template
@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/quotation-process-approval-process-feature-integration
   - /docs/quotation-process-approval-process-feature-integration
   - /docs/en/quotation-process-approval-process-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202204.0/quotation-process-approval-process-feature-integration.html
 related:
     - title: Quotation Process feature walkthrough
       link: docs/scos/dev/feature-walkthroughs/page.version/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html

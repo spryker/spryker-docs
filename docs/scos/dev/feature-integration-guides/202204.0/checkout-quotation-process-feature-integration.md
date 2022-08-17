@@ -11,7 +11,7 @@ redirect_from:
   - /docs/checkout-quotation-process-feature-integration
   - /docs/en/checkout-quotation-process-feature-integration
 related:
-  - title: Quotation Process feature integration
+  - title: Install the Quotation Process feature
     link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-feature-integration.html
   - title: Checkout feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/checkout-feature-walkthrough.html

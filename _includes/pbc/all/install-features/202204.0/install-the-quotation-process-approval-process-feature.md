@@ -12,7 +12,7 @@ To start feature integration, integrate the required features:
 
 | NAME              | VERSION          | INTEGRATION GUIDE |
 |-------------------|------------------|------------------|
-| Quotation Process | {{site.version}} | [Quotation Process feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/quotation-process-feature-integration.html) |
+| Quotation Process | {{site.version}} | [Install the Quotation Process feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/quotation-process-feature-integration.html) |
 | Approval Process  | {{site.version}} | [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/approval-process-feature-integration.html) |
 
 ### 1) Set up behavior

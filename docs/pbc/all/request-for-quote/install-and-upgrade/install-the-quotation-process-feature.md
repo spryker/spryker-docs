@@ -1,5 +1,5 @@
 ---
-title: Quotation Process feature integration
+title: Install the Quotation Process feature
 description: Install the Quotation Process feature in your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -11,12 +11,13 @@ redirect_from:
   - /docs/quotation-process-feature-integration
   - /docs/en/quotation-process-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/quotation-process-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/quotation-process-feature-integration.html  
 related:
-    - title: Glue API - Quotation Process feature integration
+    - title: Install the Quotation Process Glue API
       link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-quotation-process-feature-integration.html
-    - title: Quotation Process + Approval Process feature integration
+    - title: Install the Quotation Process + Approval Process feature
       link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-approval-process-feature-integration.html
-    - title: Quotation Process + Multiple Carts feature integration
+    - title: Install the Quotation Process + Multiple Carts feature
       link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-multiple-carts-feature-integration.html
     - title: Checkout + Quotation Process feature integration
       link: docs/scos/dev/feature-integration-guides/page.version/checkout-quotation-process-feature-integration.html

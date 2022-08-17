@@ -1,5 +1,5 @@
 ---
-title: Quotation Process + Multiple Carts feature integration
+title: Install the Quotation Process + Multiple Carts feature
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/quotation-process-multiple-carts-feature-integration
@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/quotation-process-multiple-carts-feature-integration
   - /docs/quotation-process-multiple-carts-feature-integration
   - /docs/en/quotation-process-multiple-carts-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202204.0/quotation-process-multiple-carts-feature-integration.html
 related:
   - title: Quotation Process feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html

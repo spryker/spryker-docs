@@ -2634,20 +2634,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-quickorder.html
     - title: Migration Guide - QuickOrderPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-quickorderpage.html
-    - title: Migration Guide - Quote
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quote.html
-    - title: Migration Guide - QuoteRequest
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequest.html
-    - title: Migration Guide - QuoteRequestAgent
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestagent.html
-    - title: Migration Guide - QuoteRequestAgentPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestagentpage.html
-    - title: Migration Guide - QuoteRequestAgentWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestagentwidget.html
-    - title: Migration Guide - QuoteRequestPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestpage.html
-    - title: Migration Guide - QuoteRequestWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestwidget.html
     - title: Migration Guide - Refund
       url: /docs/scos/dev/module-migration-guides/migration-guide-refund.html
     - title: Migration Guide - Router

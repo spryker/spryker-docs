@@ -15,26 +15,27 @@ From this section, you will get to know how product availability is checked and 
 
 ### Availability check
 
-The process of checking a product's availability implies several operations described in the list below.
 
-* The product details page won’t show the **Add to cart** button when a concrete product is out of stock. Instead, informational message is displayed.
-* Pre-check plugin in cart. `\Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CheckAvailabilityPlugin`checks if all items in cart are available. It’s executed after the "Add to cart" operation. If an item is not available, an error message is sent to Yves.
-* Checkout pre-condition when an order is placed in the last step. `Spryker\Zed\Availability\Communication\Plugin\ProductsAvailableCheckoutPreConditionPlugin`  checks all items in cart. If any of them is not available anymore, order placing is aborted and error message is displayed.
+A product's availability is checked with the following operations:
 
-### "Reserved" flag
+* The product details page doesn't show the **Add to cart** button when a concrete product is out of stock. Instead, a message about the product being out of stock is displayed.
+* `\Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CheckAvailabilityPlugin` checks if all items in cart are available. It’s executed after the "Add to cart" operation. If an item is not available, an error message is sent to Yves.
+* `Spryker\Zed\Availability\Communication\Plugin\ProductsAvailableCheckoutPreConditionPlugin` checks if all items in cart are available before placing the order. If one or more items are not available, order placing is aborted and an error message is displayed.
 
-When an order is placed, the payment state machine is executed and an item is moved through states. Some states have a “reserved” flag which means that the state influences the item availability.
+### Reserved flag
 
-When items are moved to state with the "reserved" flag, `ReservationHandlerPluginInterface::handle()` is triggered. This call means that the product availability has to be updated.  The state machine is also tracking products in the "reserved" state using the database table `spy_oms_product_reservation` for this
+When an order is placed, the items are moved though states in the  payment state machine. Some states have a `reserved` flag that influences the availability of items.
 
-Below you can see dummy payment state machine, which is a sample implementation with the "reserved" flags:
+When an item is moved to a state with the `reserved` flag, `ReservationHandlerPluginInterface::handle()` is triggered. This call updates the product's availability. The state machine is also tracking products in the reserved state using the `spy_oms_product_reservation` database table.
+
+Sample payment state machine with `reserved` flags:
 ![Reserved flags](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Stock+and+Availability+Management/dummy_payment.jpg)
 
 ### Availability storage
 
 AvailabilityStorage publishes all availability information for abstract and concrete products. Items are grouped by abstract product. This process is handled by [Publish and Synchronize](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html).
 
-Events are generated in these two cases:
+Events are generated in the following cases:
 
 | CASE | DETAILS |
 | --- | --- |

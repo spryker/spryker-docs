@@ -44,8 +44,9 @@ A Back Office user cannot manage newsletter subscriptions.
 
 A developer can manage the newsletter text files in `/src/Spryker/Zed/AvailabilityNotification/Presentation/Mail` and check the list of subscriptions in the `spy_availability_subscription`database table.
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Availability Notification feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/availability-notification-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INTEGRATION GUIDES  | GLUE API GUIDES  |
+|---------|---------|
+| [Availability Notification feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/availability-notification-feature-integration.html)  | [Managing availability notifications](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-availability-notifications/managing-availability-notifications.html)  |
+| [Glue API: Availability Notification feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-availability-notification-feature-integration.html) | [Retrieving subscriptions to availability notifications](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html)  |

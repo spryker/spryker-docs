@@ -1,5 +1,5 @@
 ---
-title: "HowTo: Change the default behavior of event triggering in the AvailabilityStorage module"
+title: Configure product availability to be published when product amount changes
 description: Learn how to change the default behavior of the event being triggered in the AvailabilityStorage module when the amount of product is changed.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -27,7 +27,7 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html
 ---
 
-By default, events are triggered when product status changes from `available` to `not available`, and conversely.
+By default, AvailabilityStorage is configured to trigger event when product status changes from `available` to `not available`, and the other way around.
 
 To change this behavior for the events to be triggered when the amount of product changes, follow these steps:
 

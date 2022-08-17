@@ -1,7 +1,7 @@
 ---
-title: What's changed in Tax Management
-last_updated: Jun 20, 2022
-description: This document lists all the Unzer releases
+title: What's changed in Ratings & Reviews
+last_updated: Jul 28, 2022
+description: This document lists all the Ratings & Reviews releases
 template: concept-topic-template
 ---
 

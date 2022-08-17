@@ -5,8 +5,11 @@ entries:
       - title: Ratings and Reviews
         url: /docs/pbc/all/ratings-reviews/ratings-reviews.html
         nested:
-          - title: Bazaarvoice
-            url: /docs/pbc/all/ratings-reviews/bazaarvoice.html
+          - title: Third-party integrations
+            url: /docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice.html
+            nested:
+              - title: Bazaarvoice
+                url: /docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice.html
       - title: Payment Service Providers
         url: /docs/pbc/all/payment-service-providers/psp.html
         nested:

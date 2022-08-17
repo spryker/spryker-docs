@@ -120,3 +120,10 @@ The capability has the following functional constraints:
 | [Avalara Tax + Shipment feature integration](/docs/scos/dev/technology-partner-guides/{{site.version}}/taxes/avalara/integrating-avalara-tax-shipment.html) |  |  | [File details: product_abstract.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html) | |
 | [Avalara Tax + Product Options feature integration](/docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-product-options.html) |  |  | [File details: product_option.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html) | |
 |  |  |  | [File details: shipment.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html) |
+
+## Tax Management capabilities available in Spryker
+
+| NAME | MARKETPLACE COMPATIBLE | AVAILABLE IN ACP |
+| --- | --- | --- |
+| Spryker | Yes | No |
+| [Avalara]({% link docs/pbc/all/tax-management/third-party-integrations/avalara.md %}) | No | No |

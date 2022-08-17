@@ -1,5 +1,5 @@
 ---
-title: Configure product availability to be published when product amount changes
+title: Configure product availability to be published on product amount changes
 description: Learn how to change the default behavior of the event being triggered in the AvailabilityStorage module when the amount of product is changed.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -27,9 +27,9 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html
 ---
 
-By default, AvailabilityStorage is configured to trigger event when product status changes from `available` to `not available`, and the other way around.
+By default, AvailabilityStorage is configured to trigger a [P&S event](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html) when product status changes from `available` to `not available` and the other way around.
 
-To change this behavior for the events to be triggered when the amount of product changes, follow these steps:
+To configure the events to be triggered when product amount, follow the steps:
 
 1. In `src/Pyz/Zed/Availability/Persistence/Propel/Schema/spy_availability.schema.xml`, remove `value="0"` and `operator="==="` from the line `<parameter name="spy_availability_abstract_quantity" column="quantity" value="0" operator="==="/>`:
 

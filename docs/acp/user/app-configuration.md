@@ -48,7 +48,7 @@ Display on the frontend:
 ## Widget catalog
 Common properties of a widget are:
 - `type`: widget type
-- `widget`: widgetId - see the available widgetIds in the following sections
+- `widget`: widgetId—see the available widgetIDs in the following sections
 - `title`: display title of the field
 - `placeholder`: string as a placeholder for the input field
 - `description`: additional description for the field
@@ -104,12 +104,12 @@ Common properties of a widget are:
   <tr>
     <td>link</td>
     <td>As a tag:<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/link-as-a-tag.png"><br>As a button:<img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/link-as-a-button.png"></td>
-    <td>Displays a link as a tag or a button.<br>Required properties:<br><code>isButtonLink</code>: <i>false</i>—display as a tag, <i>true</i>—display as a button<br><code>url</code>: the url<br><code>target</code>: set to <code>_blank</code>to open the url in a new tab<br><code>variant</code>: (for button only)—primary or secondary button<br>See the <i>link example</i> under this table.<br></td>
+    <td>Displays a link as a tag or a button.<br>Required properties:<br><code>isButtonLink</code>: <i>false</i>—display as a tag, <i>true</i>—display as a button<br>.<code>url</code>: the url<br>.<code>target</code>: set to <code>_blank</code>to open the url in a new tab<br>.<code>variant</code>: (for button only)—primary or secondary button.<br> See the <i>link example</i> under this table.<br></td>
   </tr>
   <tr>
     <td>notification</td>
     <td><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/notification-widget.png"></td>
-    <td>The notification widget is used to inform the user of some additional information. There cannot be any user input for this type of widget.<br>Properties:<ul><li><code>notificationType</code>:<code>info</code>/<code>warning</code>/<code>error</code>/<code>success</code>—type of the notification.</li><li><code>content</code>: Content of the notification widget—accepts an HTML string.</li>See<i>notification example</i>under this table.</ul></td>
+    <td>The notification widget is used to inform the user of some additional information. There cannot be any user input for this type of widget.<br>Properties:<ul><li><code>notificationType</code>:<code>info</code>/<code>warning</code>/<code>error</code>/<code>success</code>—type of the notification.</li><li><code>content</code>: Content of the notification widget—accepts an HTML string.</li><br>See<i>notification example</i>under this table.</ul></td>
   </tr>
 </tbody>
 </table>
@@ -174,17 +174,17 @@ Common properties of a widget are:
   <tr>
     <td>radio</td>
     <td><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/selection-radio.png"></td>
-    <td> The radio widgets rely on the <code>oneOf</code> property. The <code>description</code> is the displayed label for an option, while the <code>enum</code> is the value that is saved in the form. For example, if we select <code>OSX</code> in the form, the actual saved value is <code>osx</code>.<br>Properties:<br><code>oneOf</code>: list of objects used as the options<br>See <i>radio example</i> under this table.</td>
+    <td> The radio widgets rely on the <code>oneOf</code> property. The <code>description</code> is the displayed label for an option, while the <code>enum</code> is the value that is saved in the form. For example, if we select <code>OSX</code> in the form, the actual saved value is <code>osx</code>.<br>Properties:<br><code>oneOf</code>: list of objects used as options.<br>See <i>radio example</i> under this table.</td>
   </tr>
   <tr>
     <td>select</td>
     <td>Single selection: <img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/single-selection.png"> Image Multi-selection: <img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/multi-selection.png"></td>
-    <td>Similar to the <code>radio</code> widget, but instead of radio buttons, you can use <code>select</code> for selection in a dropdown. Besides, this widget also allows multiple options selection by setting <code>multiple: true</code>.<br>Properties:<ul><li><code>oneOf</code>: list of objects used as the options</li><li><code>multiple</code>: <code>true</code> or <code>false</code></li><li><code>multipleOptions</code>: list of strings to be used as the options. Can be used instead of <code>oneOf</code>.</li>See <i>example for select with oneOf</i> under this table.</ul>In case you don’t need to have separate labels and values, you can use <code>multipleOptions</code> or <code>enum</code> instead of <code>oneOf</code>. See <i>example for select without oneOf</i> under this table.</td>
+    <td>Similar to the <code>radio</code> widget, but instead of radio buttons, you can use <code>select</code> for selection in a dropdown. Besides, this widget also allows multiple options selection by setting <code>multiple: true</code>.<br>Properties:<ul><li><code>oneOf</code>: list of objects used as options.</li><li><code>multiple</code>: <code>true</code> or <code>false</code></li><li><code>multipleOptions</code>: list of strings to be used as options. Can be used instead of <code>oneOf</code>.</li>See <i>example for select with oneOf</i> under this table.</ul>In case you don’t need to have separate labels and values, you can use <code>multipleOptions</code> or <code>enum</code> instead of <code>oneOf</code>.<br> See <i>example for select without oneOf</i> under this table.</td>
   </tr>
   <tr>
     <td>app-status</td>
     <td><img src="https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/app-status.png"></td>
-    <td>This custom widget shows only <i>Active</i> (<code>true</code>) or <i>Inactive</i> (<code>false</code>) value to fit the design. See <i>app-status example</i> under this table.</td>
+    <td>This custom widget shows only <i>Active</i> (<code>true</code>) or <i>Inactive</i> (<code>false</code>) value to fit the design.<br> See <i>app-status example</i> under this table.</td>
   </tr> 
 </tbody>
 </table>
@@ -310,7 +310,7 @@ Common properties of a widget are:
 </details>
 
 ## Form layout
-For the form layout, in particular, you should take into consideration the `array` type and order of the fields.
+For the form layout, in particular, you should take into consideration the `array` type and the order of fields.
 
 ### Array type
 Sometimes, you might ask a user to input one or more values of the same field sets. For example, when you ask for all the pets within a household. These values can differ from each other, as there could be 0, or 10, or 100 pets. In these cases, you can use the `array` type of the form:
@@ -624,8 +624,8 @@ Translation for an app configuration is provided in the `app-store-suite/app/con
 ```
 This is how the result of the configuration looks on the frontend:
 
-DE shop
+DE shop:
 ![configuration-de-shop](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/configuration-de-shop.png)
 
-EN shop
+EN shop:
 ![configuration-en-shop](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/dev/app-configuration/configuration-en-shop.png)

@@ -15,8 +15,6 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-feature-integration.html
   - title: Checkout feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/checkout-feature-walkthrough.html
-  - title: Quotation Process feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-uuid-generation-console-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-uuid-generation-console-feature.md -->

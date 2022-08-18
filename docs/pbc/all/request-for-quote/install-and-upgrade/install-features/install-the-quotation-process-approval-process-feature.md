@@ -11,10 +11,5 @@ redirect_from:
   - /docs/quotation-process-approval-process-feature-integration
   - /docs/en/quotation-process-approval-process-feature-integration
   - /docs/scos/dev/feature-integration-guides/202204.0/quotation-process-approval-process-feature-integration.html
-related:
-    - title: Quotation Process feature walkthrough
-      link: docs/scos/dev/feature-walkthroughs/page.version/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
-    - title: Approval Process feature walkthrough
-      link: docs/scos/dev/feature-walkthroughs/page.version/approval-process-feature-walkthrough.html
 ---
 {% include pbc/all/install-features/202204.0/install-the-quotation-process-approval-process-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-quotation-process-approval-process-feature.md -->

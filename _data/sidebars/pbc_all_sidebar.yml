@@ -226,23 +226,23 @@ entries:
                   - title: Multi-currency
                     url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
                   - title: Currency
-                    url: /docs/pbc/all/price-management/install-and-upgrade/install-features/upgrade-the-currency-module.html
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html
                   - title: Price
-                    url: /docs/pbc/all/price-management/install-and-upgrade/install-features/upgrade-the-price-module.html
-                  - title: PriceCartConnector
-                    url: /docs/pbc/all/price-management/install-and-upgrade/install-features/upgrade-the-pricecartconnector-module.html
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
+                  upgrade-modules/
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-pricecartconnector-module.html
                   - title: PriceProduct
-                    url: /docs/pbc/all/price-management/install-and-upgrade/install-features/upgrade-the-priceproduct-module.html
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html
                   - title: PriceProductSchedule
-                    url: /docs/pbc/all/price-management/install-and-upgrade/install-features/upgrade-the-priceproductschedule-module.html
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedule-module.html
                   - title: PriceProductScheduleGui
-                    url: /docs/pbc/all/price-management/install-and-upgrade/install-features/upgrade-the-priceproductschedulegui-module.html
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedulegui-module.html
                   - title: PriceProductStorage
-                    url: /docs/pbc/all/price-management/install-and-upgrade/install-features/upgrade-the-priceproductstorage-module.html
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductstorage-module.html
                   - title: PriceProductVolume
-                    url: /docs/pbc/all/price-management/install-and-upgrade/install-features/upgrade-the-priceproductvolume-module.html
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolume-module.html
                   - title: PriceProductVolumeGui
-                    url: /docs/pbc/all/price-management/install-and-upgrade/install-features/upgrade-the-priceproductvolumegui-module.html
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolumegui-module.html
           - title: Manage in the Back Office
             nested:
               - title: Create scheduled prices
@@ -272,7 +272,7 @@ entries:
               - title: "HowTo: Manage business unit specific prices via data import"
                 url: /docs/pbc/all/price-management/tutorials-and-howtos/howto-manage-business-unit-specific-prices-via-data-import.html
               - title: "HowTo: Schedule cron job for Scheduled Prices"
-                url: /docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html                                                
+                url: /docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:

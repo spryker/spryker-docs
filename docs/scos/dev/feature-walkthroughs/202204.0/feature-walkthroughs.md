@@ -155,9 +155,6 @@ The [Merchant](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-fea
 
 The [Merchant B2B Contracts](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-b2b-contracts-feature-walkthrough.html) feature allows setting up contracts between a merchant and B2B customer.
 
-## Merchant Custom Prices
-
-The [Merchant Custom Prices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-custom-prices-feature-walkthrough.html) feature allows a merchant to define custom prices for B2B customers.
 
 ## Merchant Product Restrictions
 

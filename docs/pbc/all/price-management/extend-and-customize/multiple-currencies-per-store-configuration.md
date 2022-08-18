@@ -19,7 +19,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html
 related:
   - title: Net and gross prices management
-    link: docs/pbc/all/price-management/extend-and-customize/net-and-gross-prices-management.html
+    link: docs/pbc/all/price-management/extend-and-customize/configuration-of-price-modes-and-types.html
 ---
 
 In a Spryker-based shop, you can define multiple currencies per store for product, product option, and shipping method. A product can, for example, cost 5 EUR in Germany, 6 EUR in France and 5 CHF in Switzerland. Your customers may easily choose between these different currencies.
@@ -64,7 +64,7 @@ From currency version 3, we have introduced currency table where currencies are 
 
 {% info_block infoBox "Info" %}
 
-Check the [Curency migration guide](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-currency-module.html) to migrate to the latest  module version.
+Check the [Curency migration guide](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html) to migrate to the latest  module version.
 
 {% endinfo_block %}
 

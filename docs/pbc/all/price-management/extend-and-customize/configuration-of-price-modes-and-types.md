@@ -1,6 +1,6 @@
 ---
-title: Net and gross prices management
-description: The article describes the net & gross prices management
+title: Configuration of price modes and types
+description: The article describes the net and gross prices management
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/net-gross-prices-management
@@ -21,8 +21,6 @@ related:
   - title: Multiple currencies per store configuration
     link: docs/pbc/all/price-management/extend-and-customize/multiple-currencies-per-store-configuration.html
 ---
-
-## Price mode
 
 We use the following price modes to identify pricing type:
 
@@ -59,11 +57,7 @@ You can use these keys in environment configuration:
   ```
 
 
-### Price mode switching
-
-There is a price switcher plugin to help you with implementing price switcher in Yves.
-
-To use it, do the following:
+## Set up a price mode switcher
 
 1. Add  `\SprykerShop\Yves\PriceWidget\Widget\PriceModeSwitcherWidget` to the `\Pyz\Yves\ShopApplication\ShopApplicationDependencyProvider::getGlobalWidgets()` method.
 
@@ -90,7 +84,7 @@ To use it, do the following:
 
    The switch can happen only if quote have to items.
 
-   This is available after the product currency release so you must first follow the steps in [Migration Guide - Price](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-price-module.html).
+   This is available after the product currency release so you must first follow the steps in [Migration Guide - Price](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
 
 
  {% info_block infoBox "Switching shop to Net prices:" %}

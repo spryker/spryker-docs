@@ -35,7 +35,7 @@ related:
   - title: Upgrade the Cart
     link: docs/scos/dev/module-migration-guides/migration-guide-cart.html
   - title: Upgrade the Price
-    link: docs/pbc/all/price-management/install-and-upgrade/upgrade-the-price-module.html
+    link: docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-wishlist-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-wishlist-module.md -->

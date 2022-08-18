@@ -15,9 +15,9 @@ related:
   - title: Prices feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/prices-feature-integration.html
   - title: Retrieving abstract product prices
-    link: docs/pbc/all/price-management/manage-via-glue-api/retrieve-abstract-product-prices.html
+    link: docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html
   - title: Retrieving concrete product prices
-    link: docs/pbc/all/price-management/manage-via-glue-api/retrieve-concrete-product-prices.html
+    link: docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-product-price-glue-api.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-product-price-glue-api.md -->

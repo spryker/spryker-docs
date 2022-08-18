@@ -1,5 +1,5 @@
 ---
-title: Migrate to CRUD Scheduled Prices
+title: Upgrade to CRUD Scheduled Prices
 description: The article provides instructions on how to install CRUD Scheduled Prices on all modules affected in bulk and them individually.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -53,12 +53,12 @@ console transfer:generate
 
 3. Follow individual migration guides of the modules listed below:
 
-* [PriceProductSchedule](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproductschedule-module.html#upgrading-from-version-1-to-version-200)
-* [PriceProductScheduleGui](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproductschedulegui-module.html)
+* [PriceProductSchedule](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedule-module.html#upgrading-from-version-1-to-version-200)
+* [PriceProductScheduleGui](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedulegui-module.html)
 
 You can find the affected modules of the CRUD scheduled prices update in the following table.
 
 | MODULE | VERSION | MIGRATION GUIDE |
 | --- | --- | --- |
-| `spryker/price-product-schedule	` | 	2.0.0 | [Migration Guide - PriceProductSchedule](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproductschedule-module.html#upgrading-from-version-1-to-version-200) |
-| `spryker/price-product-schedule-gui` | 	2.0.0 | [Migration Guide - PriceProductScheduleGui](/docs/pbc/all/price-management/install-and-upgrade/upgrade-the-priceproductschedulegui-module.html) |
+| `spryker/price-product-schedule	` | 	2.0.0 | [Migration Guide - PriceProductSchedule](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedule-module.html#upgrading-from-version-1-to-version-200) |
+| `spryker/price-product-schedule-gui` | 	2.0.0 | [Migration Guide - PriceProductScheduleGui](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedulegui-module.html) |

@@ -106,7 +106,15 @@ For SEO purposes, products that are not available can still be displayed on the 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create a warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/create-warehouses.html)  |
-| [Manage warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/edit-warehouses.html) |
+| [Create warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/create-warehouses.html)  |
+| [Edit warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/edit-warehouses.html) |
 | [Check availability of products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/check-availability-of-products.html)  |
 | [Edit stock of products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/edit-stock-of-products-and-product-bundles.html)  |
+
+## Related Developer articles
+
+| INTEGRATION GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
+|---|---|---|---|
+| [Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/inventory-management-feature-integration.html) | [Retrieving abstract product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-availability.html) | [File details: product_stock.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html) | [AvailabilityStorage module: reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html) |
+| [Glue API: Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-inventory-management-feature-integration.html) | [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html) | [File details: warehouse_address.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html) | [Managing stocks in a multi-store environment: Best practices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html) |
+|  |  | [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html) |  |

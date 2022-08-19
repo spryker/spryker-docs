@@ -1,20 +1,20 @@
 ---
-title: Inventory Management feature walkthrough
+title: Inventory Management feature modules
 last_updated: Aug 13, 2021
 description: The Inventory Management feature adds stock and availability management as well as multiple warehouse stock management for products
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/201903.0/nventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
+  - /docs/scos/dev/feature-walkthroughs/202204.0/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html
 ---
 
-The _Inventory Management_ feature adds stock and availability management as well as multiple warehouse stock management for products.
+This document describes the modules of the Inventory Management feature.
 
 ## Availability
 
-From this section, you will get to know how product availability is checked and calculated, how products are reserved, how availability can be imported to the database, as well as how availability per store works.
+This section describes how the availability modules works.
 
 ### Availability check
-
 
 A product's availability is checked with the following operations:
 
@@ -31,7 +31,7 @@ When an item is moved to a state with the `reserved` flag, `ReservationHandlerPl
 Sample payment state machine with `reserved` flags:
 ![Reserved flags](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Stock+and+Availability+Management/dummy_payment.jpg)
 
-### Availability storage
+## AvailabilityStorage
 
 AvailabilityStorage publishes all availability information for abstract and concrete products. Items are grouped by abstract product. This process is handled by [Publish and Synchronize](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html).
 
@@ -146,12 +146,3 @@ That means that both DE and AT share a database. This information will be used w
 When placing an order in Store A, the reservation is stored with the store identifier `fk_store`. An event is created and published in the queue, and synchronization with Store B happens. See scenario 3 above for information about how reservations are handled as well learn about the new configuration option for shared database in the `store.php` file.
 
 To learn more about the feature and to find out how end users use it, see [Inventory Management feature overview](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) for business users.
-
-
-## Related Developer articles
-
-| INTEGRATION GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
-|---|---|---|---|
-| [Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/inventory-management-feature-integration.html) | [Retrieving abstract product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-availability.html) | [File details: product_stock.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html) | [AvailabilityStorage module: reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html) |
-| [Glue API: Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-inventory-management-feature-integration.html) | [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html) | [File details: warehouse_address.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html) | [Managing stocks in a multi-store environment: Best practices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html) |
-|  |  | [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html) |  |

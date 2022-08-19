@@ -11,6 +11,7 @@ redirect_from:
   - /docs/en/file-details-product-stockcsv
   - /docs/scos/dev/data-import/201811.0/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/catalog-setup/stocks/stocks.html
 ---
 
 This document describes the `product_stock.csv` file to configure [Product Stock](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) information in your Spryker Demo Shop.

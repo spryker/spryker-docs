@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201907.0/shipment-approval-process-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/shipment-approval-process-feature-integration.html
 related:
-  - title: Approval Process feature integration
+  - title: Install the Approval Process feature
     link: docs/scos/dev/feature-integration-guides/page.version/approval-process-feature-integration.html
   - title: Shipment feature integration
     link: docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html

@@ -2,6 +2,9 @@
 title: "Quotation Process: module relations"
 description: On this page, you can find module relations for the Quotation Process feature.
 template: feature-walkthrough-template
+last_updated: Jun 16, 2021
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202204.0/quotation-process-feature-walkthrough/quotation-process-module-relations.html
 ---
 
 On this page, you can find the module relations for the [Quotation Process](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html) feature.

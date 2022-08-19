@@ -14,11 +14,11 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/quotation-process-feature-integration.html  
 related:
     - title: Install the Quotation Process Glue API
-      link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-quotation-process-feature-integration.html
+      link: docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-glue-api.html
     - title: Install the Quotation Process + Approval Process feature
-      link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-approval-process-feature-integration.html
+      link: docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-approval-process-feature.html
     - title: Install the Quotation Process + Multiple Carts feature
-      link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-multiple-carts-feature-integration.html
+      link: docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-multiple-carts-feature.html
     - title: Checkout + Quotation Process feature integration
       link: docs/scos/dev/feature-integration-guides/page.version/checkout-quotation-process-feature-integration.html
 ---

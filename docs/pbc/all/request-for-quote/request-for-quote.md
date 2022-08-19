@@ -203,8 +203,8 @@ Agents can perform the same actions (on company users' behalf) as company users.
 
 | INSTALLATION GUIDES | UPGRADE GUIDES|
 |---|---|
-| [Install the Quotation Process feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-quotation-process-feature-integration.html) | [QuoteRequestAgent migration guide](/docs/scos/dev/module-migration-guides/migration-guide-quoterequestagent.html) |
-| [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/approval-process-feature-integration.html) | [QuoteRequestPage migration guide](/docs/scos/dev/module-migration-guides/migration-guide-quoterequestpage.html) |
+| [Install the Quotation Process feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-quotation-process-feature-integration.html) | [QuoteRequestAgent migration guide](/docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagent-module.html) |
+| [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/approval-process-feature-integration.html) | [QuoteRequestPage migration guide](/docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestpage-module.html) |
 | [Checkout + Quotation process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-quotation-process-feature-integration.html) |  |
-| [Install the Quotation Process + Approval Process feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/quotation-process-approval-process-feature-integration.html) |  |
-| [Install the Quotation Process + Multiple Carts feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/quotation-process-multiple-carts-feature-integration.html) |  |
+| [Install the Quotation Process + Approval Process feature](/docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-approval-process-feature.html) |  |
+| [Install the Quotation Process + Multiple Carts feature](/docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-multiple-carts-feature.html) |  |

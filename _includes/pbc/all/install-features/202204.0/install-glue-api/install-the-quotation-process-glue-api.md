@@ -14,7 +14,7 @@ To start feature integration, integrate the required features and Glue APIs:
 | Cart API            | {{site.version}} | [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html)                       |
 | Company Account API | {{site.version}} | [Glue API: Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-company-account-feature-integration.html) |
 | Agent Assist API    | {{site.version}} | [Glue API: Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-agent-assist-feature-integration.html)       |
-| Quotation Process   | {{site.version}} | [Install the Quotation Process feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/quotation-process-feature-integration.html)                         |
+| Quotation Process   | {{site.version}} | [Install the Quotation Process feature](/docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-feature.html)                         |
 
 
 ### 1) Install the required modules using Composer

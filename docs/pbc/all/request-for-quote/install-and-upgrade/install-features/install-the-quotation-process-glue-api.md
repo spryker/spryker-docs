@@ -6,7 +6,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-quotation-process-feature-integration.html
 related:
   - title: Install the Quotation Process feature
-    link: docs/scos/dev/feature-integration-guides/page.version/quotation-process-feature-integration.html
+    link: docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-feature.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-glue-api/install-the-quotation-process-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-quotation-process-glue-api.md -->

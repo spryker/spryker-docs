@@ -19,7 +19,7 @@ This document describes the `gift_card_abstract_configuration.csv` file to conf
 
 ## Import file dependencies
 
-[product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
+[product_abstract.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
 
 ## Import file parameters
 

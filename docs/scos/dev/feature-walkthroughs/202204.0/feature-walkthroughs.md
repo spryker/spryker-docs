@@ -126,9 +126,7 @@ The [Customer entity](/docs/scos/dev/feature-walkthroughs/{{page.version}}/custo
 
 The [File Manager](/docs/scos/dev/feature-walkthroughs/{{page.version}}/file-manager-feature-walkthrough.html) feature allows uploading files required for your shop.
 
-## Gift Cards
 
-The [Gift Cards](/docs/scos/dev/feature-walkthroughs/{{page.version}}/gift-cards-feature-walkthrough.html) feature enables you to create a virtual product (a gift card) with a chosen value amount. The purchase of a gift card generates an individual code that is used as a payment method during checkout.
 
 ## Inventory Management
 
@@ -157,9 +155,6 @@ The [Merchant](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-fea
 
 The [Merchant B2B Contracts](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-b2b-contracts-feature-walkthrough.html) feature allows setting up contracts between a merchant and B2B customer.
 
-## Merchant Custom Prices
-
-The [Merchant Custom Prices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-custom-prices-feature-walkthrough.html) feature allows a merchant to define custom prices for B2B customers.
 
 ## Merchant Product Restrictions
 

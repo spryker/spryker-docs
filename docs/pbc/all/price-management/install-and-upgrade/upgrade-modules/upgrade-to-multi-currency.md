@@ -1,6 +1,47 @@
-
-
-## Migrating system to multi-currency
+---
+title: Upgrade to multi-currency
+description: Learn how to migrate your project to multi-currency.
+last_updated: Jun 16, 2021
+template: module-migration-guide-template
+originalLink: https://documentation.spryker.com/2021080/docs/mg-multi-currency
+originalArticleId: 95dd322c-44ae-476b-8587-7773565cafc2
+redirect_from:
+  - /2021080/docs/mg-multi-currency
+  - /2021080/docs/en/mg-multi-currency
+  - /docs/mg-multi-currency
+  - /docs/en/mg-multi-currency
+  - /v1/docs/mg-multi-currency
+  - /v1/docs/en/mg-multi-currency
+  - /v2/docs/mg-multi-currency
+  - /v2/docs/en/mg-multi-currency
+  - /v3/docs/mg-multi-currency
+  - /v3/docs/en/mg-multi-currency
+  - /v4/docs/mg-multi-currency
+  - /v4/docs/en/mg-multi-currency
+  - /v5/docs/mg-multi-currency
+  - /v5/docs/en/mg-multi-currency
+  - /v6/docs/mg-multi-currency
+  - /v6/docs/en/mg-multi-currency
+  - /docs/scos/dev/module-migration-guides/201811.0/migration-guide-multi-currency.html
+  - /docs/scos/dev/module-migration-guides/201903.0/migration-guide-multi-currency.html
+  - /docs/scos/dev/module-migration-guides/201907.0/migration-guide-multi-currency.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-multi-currency.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-multi-currency.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-multi-currency.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-multi-currency.html
+  - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-multi-currency.html  
+related:
+  - title: Upgrade the Currency
+    link: docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html
+  - title: Upgrade the Sales
+    link: docs/scos/dev/module-migration-guides/migration-guide-sales.html
+  - title: Upgrade the Price
+    link: docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
+  - title: Upgrade the Discount
+    link: docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discount-module.html
+  - title: Upgrade the Shipment
+    link: docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipment-module.html
+---
 
 This article provides a whole overview of what needs to be done to have the multi-currency feature running in your Spryker shop. The multi-currency feature affects many Spryker modules so we split it into smaller parts. Here you will find the information that will help get you started with the multi-currency feature.
 There is a chance that you already have the multi-currency enabled in some of the modules. In the list below you will find versions of the modules from when it has first been implemented as well as a link to an appropriate migration guide.
@@ -14,7 +55,7 @@ composer update spryker/*
 1. Infrastructure for multi-currency:
 
    * **Store >= 1.2.** — this is a new module, require it in composer and execute `propel install` for the new databases.
-   * **Currency >= 3.2.** — see [Migration Guide - Currency](/docs/scos/dev/module-migration-guides/migration-guide-currency.html) for more details.
+   * **Currency >= 3.2.** — see [Migration Guide - Currency](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html) for more details.
    * **Money >= 2.3.** — we have added a new form of money collection type, required by ZED money form inputs.
    * **ZedRequest >= 3.2.** — we have added a new extension point for ZED request to add additional meta data to request `\Spryker\Client\Currency\Plugin\ZedRequestMetaDataProviderPlugin`, which sends currency with each ZED request.
 
@@ -41,9 +82,9 @@ composer update spryker/*
 5. In Products, the way the price is entered in Zed has been changed to support multi-currency, price mode as well as price type variants. We have also changed the way the collector collects prices, the way Elasticsearch exports prices, the way the results coming from Elasticsearch are formatted, the way the prices are picked in cart when item is added:
 
    * **CatalogPriceProductConnector** - we have added new currency aware formatter plugins for formatting prices when reading results from Elasticsearch. See Integration guide for more details.
-   * **Price >= 5.***—see [Migration Guide - Price](/docs/scos/dev/module-migration-guides/migration-guide-price.html).
-   * **PriceProduct** - new module handling price product prices. Migration is a part of [Migration Guide - Price](/docs/scos/dev/module-migration-guides/migration-guide-price.html).
-   * **PriceCartConnector >= 4.** — [Migration Guide - PriceCartConnector](/docs/scos/dev/module-migration-guides/migration-guide-pricecartconnector.html) uses the new PriceProduct module.
+   * **Price >= 5.***—see [Migration Guide - Price](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
+   * **PriceProduct** - new module handling price product prices. Migration is a part of [Migration Guide - Price](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html).
+   * **PriceCartConnector >= 4.** — [Migration Guide - PriceCartConnector](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-pricecartconnector-module.html) uses the new PriceProduct module.
    * **PriceDataFeed >= 0.2.** — uses the new `PriceProduct` module.
    * **ProductBundle >= 4.** — [Migration Guide - ProductBundle](/docs/scos/dev/module-migration-guides/migration-guide-productbundle.html) uses the new `PriceProduct` module, the new plugin to watch cart item reload action.
    * **ProductLabelGui >= 2.** — see [Migration Guide - ProductLabelGui](/docs/scos/dev/module-migration-guides/migration-guide-productlabelgui.html).

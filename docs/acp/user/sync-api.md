@@ -117,7 +117,9 @@ In JsonPointer.php line 123:
                                                                                                                        
 
 code:openapi:generate [-f|--openapi-file OPENAPI-FILE] [-t|--application-type APPLICATION-TYPE] [-o|--organization ORGANIZATION]
-``
+```
+
+### then
 This is typically caused by forward slashes (`/`) or tilde (`~`) characters that are not properly escaped in the referenced path.
 If you wish to refer to the path `/blogs/{blog_id}/new~posts`, your reference must look like this:
 

@@ -1,5 +1,5 @@
 ---
-title: Integrate the Agent Assist + Shopping List feature
+title: Install the Shopping List + Agent Assist feature
 last_updated: Jul 6, 2021
 template: feature-integration-guide-template
 ---

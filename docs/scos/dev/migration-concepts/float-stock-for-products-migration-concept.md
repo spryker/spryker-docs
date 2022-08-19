@@ -23,7 +23,7 @@ redirect_from:
   - /v1/docs/en/float-stock-for-products
 related:
   - title: CRUD Scheduled Prices migration concept
-    link: docs/pbc/all/price-management/install-and-upgrade/crud-scheduled-prices-migration-concept
+    link: docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
   - title: Decimal Stock migration concept
     link: docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
   - title: Migrating from Twig v1 to Twig v3
@@ -100,11 +100,11 @@ You can find the affected modules of the float stock update in the following lis
 | spryker/oms | 9.0.0 | [Migration Guide - Oms](/docs/scos/dev/module-migration-guides/migration-guide-oms.html) |
 | spryker/orders-rest-api | 2.0.0 | [Migration Guide - OrdersRestApi](/docs/scos/dev/module-migration-guides/glue-api/migration-guide-ordersrestapi.html) |
 | spryker/persistent-cart | 2.0.0 | [Migration Guide - PersistentCart](/docs/scos/dev/module-migration-guides/migration-guide-persistentcart.html) |
-| spryker/price-cart-connector | 5.0.0 | [Migration Guide - PriceCartConnector](/docs/scos/dev/module-migration-guides/migration-guide-pricecartconnector.html) |
-| spryker/price-product | 3.0.0 | [Migration Guide - PriceProduct](/docs/scos/dev/module-migration-guides/migration-guide-priceproduct.html) |
-| spryker/price-product-storage | 3.0.0 | [Migration Guide - PriceProductStorage](/docs/scos/dev/module-migration-guides/migration-guide-priceproductstorage.html) |
-| spryker/price-product-volume | 2.0.0 | [Migration Guide - PriceProductVolume](/docs/scos/dev/module-migration-guides/migration-guide-priceproductvolume.html) |
-| spryker/price-product-volume-gui | 2.0.0 | [Migration Guide - PriceProductVolumeGui](/docs/scos/dev/module-migration-guides/migration-guide-priceproductvolumegui.html) |
+| spryker/price-cart-connector | 5.0.0 | [Migration Guide - PriceCartConnector](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-pricecartconnector-module.html) |
+| spryker/price-product | 3.0.0 | [Migration Guide - PriceProduct](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html) |
+| spryker/price-product-storage | 3.0.0 | [Migration Guide - PriceProductStorage](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductstorage-module.html) |
+| spryker/price-product-volume | 2.0.0 | [Migration Guide - PriceProductVolume](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolume-module.html) |
+| spryker/price-product-volume-gui | 2.0.0 | [Migration Guide - PriceProductVolumeGui](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolumegui-module.html) |
 | spryker/product-availabilities-rest-api | 2.0.0 | [Migration Guide - ProductAvailabilitiesRestApi](/docs/scos/dev/module-migration-guides/glue-api/migration-guide-productavailabilitiesrestapi.html) |
 | spryker/product-bundle | 5.0.0 | [Migration Guide - ProductBundle](/docs/scos/dev/module-migration-guides/migration-guide-productbundle.html) |
 | spryker/product-discount-connector | 4.0.0 | [Migration Guide - ProductDiscountConnector](/docs/scos/dev/module-migration-guides/migration-guide-productdiscountconnector.html) |

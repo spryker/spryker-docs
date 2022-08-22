@@ -126,9 +126,7 @@ The [Customer entity](/docs/scos/dev/feature-walkthroughs/{{page.version}}/custo
 
 The [File Manager](/docs/scos/dev/feature-walkthroughs/{{page.version}}/file-manager-feature-walkthrough.html) feature allows uploading files required for your shop.
 
-## Gift Cards
 
-The [Gift Cards](/docs/scos/dev/feature-walkthroughs/{{page.version}}/gift-cards-feature-walkthrough.html) feature enables you to create a virtual product (a gift card) with a chosen value amount. The purchase of a gift card generates an individual code that is used as a payment method during checkout.
 
 ## Inventory Management
 
@@ -157,9 +155,6 @@ The [Merchant](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-fea
 
 The [Merchant B2B Contracts](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-b2b-contracts-feature-walkthrough.html) feature allows setting up contracts between a merchant and B2B customer.
 
-## Merchant Custom Prices
-
-The [Merchant Custom Prices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-custom-prices-feature-walkthrough.html) feature allows a merchant to define custom prices for B2B customers.
 
 ## Merchant Product Restrictions
 
@@ -213,17 +208,10 @@ The [Persistent Cart Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version
 
 [This schema](/docs/scos/dev/feature-walkthroughs/{{page.version}}/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-module-relations.html) illustrates module relations in the Unique URL per Cart for Easy Sharing feature
 
-## Prices
-
-The [Prices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/prices-feature-walkthrough.html) feature enables Back Office users to effectively manage the prices of all types of products. They can set different types of prices, like default, original, and volume prices.
-
-### Money
-
-Handling monetary values can be a problem and is often quite hard. The [Money](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/money-module-reference-information.html) module makes it easier to work with monetary values.
 
 ### PriceProduct module details: reference information
 
-This article describes technical details of the [PriceProduct](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/priceproduct-module-details-reference-information.html) module that are valid since version 2 of the module.
+This article describes technical details of the [PriceProduct](/docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html) module that are valid since version 2 of the module.
 
 ## Product
 
@@ -309,10 +297,6 @@ The [Resource Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/reso
 
 The [Return Management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/return-management-feature-walkthrough.html) feature allows you to create and manage returns for a sales order.
 
-## Scheduled Prices
-
-The [Scheduled Prices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/scheduled-prices-feature-walkthrough.html) feature enables Back Office users to schedule price changes, which are to happen in the future for multiple products simultaneously.
-
 ## Search
 
 The [Search](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) feature enables you to control search and filtering preferences and customize them to improve your customers’ user experience and help them quickly find what they are looking for. The feature includes textual search, multi-language search, full-site search, filter by a category, dynamically, and by filters & facets.
@@ -320,22 +304,6 @@ The [Search](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature
 ## Shared Carts
 
 The [Shared Carts](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shared-carts-feature-walkthrough.html) feature allows sharing carts between company users.
-
-## Shipment
-
-The [Shipment](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/shipment-feature-walkthrough.html) feature allows you to create and manage carrier companies and assign multiple delivery methods associated with specific stores, which your customers can select during the checkout. With the feature in place, you can define delivery price and expected delivery time, tax sets, and availability of the delivery method per store.
-
-### Shipment method entities in the database: reference information
-
-[This schema](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/shipment-method-entities-in-the-database-reference-information.html) shows how the sales order and shipment method entities are modeled in the database.
-
-### Shipment method plugins: reference information
-
-This provides a walkthrough to the [Shipment method](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/shipment-method-plugins-reference-information.html) plugin and its features.
-
-## Shopping Lists
-
-The [Shopping Lists](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shopping-lists-feature-walkthrough.html) feature allows customers to create and share multiple lists of products between company business units or single users. Shopping lists can be shared between users with different sets of permissions.
 
 ## Spryker Core Back Office
 
@@ -352,7 +320,3 @@ The [Tax](/docs/pbc/all/tax-management/tax-management.html) feature allows you t
 ### Tax module: reference information
 
 The [Tax module](/docs/pbc/all/tax-management/extend-and-customize/tax-module-reference-information.html) is responsible for handling tax rates that can apply for products, product options, or shipment.
-
-## Wishlist
-
-The [Wishlist](/docs/scos/dev/feature-walkthroughs/{{page.version}}/wishlist-feature-walkthrough.html) feature allows customers to track and save the products they wish to purchase through the wish list. Customers can create multiple wish lists and customize their names.

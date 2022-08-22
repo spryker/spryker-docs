@@ -242,6 +242,8 @@ entries:
       - "202204.0"
     - title: Gift Cards
       url: /docs/scos/dev/feature-walkthroughs/gift-cards-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
     - title: Inventory Management
       url: /docs/scos/dev/feature-walkthroughs/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
       include_versions:
@@ -284,7 +286,6 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/merchant-custom-prices-feature-walkthrough.html
       include_versions:
       - "202108.0"
-      - "202204.0"
     - title: Merchant Product Restrictions
       url: /docs/scos/dev/feature-walkthroughs/merchant-product-restrictions-feature-walkthrough/merchant-product-restrictions-feature-walkthrough.html
       include_versions:
@@ -367,15 +368,14 @@ entries:
         - "202204.0"
     - title: Prices
       url: /docs/scos/dev/feature-walkthroughs/prices-feature-walkthrough/prices-feature-walkthrough.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: "Money module: reference information"
         url: /docs/scos/dev/feature-walkthroughs/prices-feature-walkthrough/money-module-reference-information.html
       - title: "PriceProduct module details: reference information"
         url: /docs/scos/dev/feature-walkthroughs/prices-feature-walkthrough/priceproduct-module-details-reference-information.html
-        include_versions:
-        - "202009.0"
-        - "202108.0"
-        - "202204.0"
     - title: Product
       url: /docs/scos/dev/feature-walkthroughs/product-feature-walkthrough.html
       include_versions:
@@ -426,7 +426,7 @@ entries:
       include_versions:
       - "202005.0"
       - "202009.0"
-      - "202108.0"      
+      - "202108.0"
     - title: Quick Add to Cart
       url: /docs/scos/dev/feature-walkthroughs/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
       nested:
@@ -509,7 +509,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Search
       url: /docs/scos/dev/feature-walkthroughs/search-feature-walkthrough.html
       include_versions:
@@ -519,6 +518,8 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/shared-carts-feature-walkthrough.html
     - title: Shipment
       url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/shipment-feature-walkthrough.html
+      include_versions:
+      - "202108.0"
       nested:
       - title: "Shipment method plugins: reference information"
         url: /docs/scos/dev/feature-walkthroughs/shipment-feature-walkthrough/shipment-method-plugins-reference-information.html
@@ -785,7 +786,6 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Retrieving tax sets
           url: /docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-tax-sets.html
           include_versions:
@@ -820,7 +820,6 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Retrieving image sets of concrete products
           url: /docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html
           include_versions:
@@ -939,7 +938,6 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Managing discount vouchers in guest carts
           url: /docs/scos/dev/glue-api-guides/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html
           include_versions:
@@ -964,7 +962,6 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Managing discount vouchers in carts of registered users
           url: /docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-discount-vouchers-in-carts-of-registered-users.html
           include_versions:
@@ -1433,6 +1430,11 @@ entries:
         - "202204.0"
       - title: Glue API - Product Price
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-price-feature-integration.html
+        include_versions:
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"
       - title: Glue API - Product Rating and Reviews
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-product-rating-and-reviews-feature-integration.html
         include_versions:
@@ -1483,7 +1485,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Glue API - Shopping Lists
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-shopping-lists-feature-integration.html
         include_versions:
@@ -1825,8 +1826,6 @@ entries:
       - "201907.0"
       - "202001.0"
       - "202005.0"
-    - title: Enabling Gift Cards
-      url: /docs/scos/dev/feature-integration-guides/enabling-gift-cards.html
     - title: Enabling the Content Widget
       url: /docs/scos/dev/feature-integration-guides/enabling-the-content-widget.html
     - title: Gift Cards
@@ -1837,7 +1836,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Installing the Category CMS Blocks
       url: /docs/scos/dev/feature-integration-guides/installing-the-category-cms-blocks.html
       include_versions:
@@ -1891,6 +1889,9 @@ entries:
       - "202204.0"
     - title: Merchant Custom Prices
       url: /docs/scos/dev/feature-integration-guides/merchant-custom-prices-feature-integration.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
     - title: Merchant Product Restrictions
       url: /docs/scos/dev/feature-integration-guides/merchant-product-restrictions-feature-integration.html
     - title: Merchants and Merchant Relations
@@ -1970,7 +1971,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Prices per Merchant Relation
       url: /docs/scos/dev/feature-integration-guides/prices-per-merchant-relation-feature-integration.html
     - title: Product
@@ -2274,7 +2274,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Search Widget for Concrete Products
       url: /docs/scos/dev/feature-integration-guides/search-widget-for-concrete-products-feature-integration.html
       include_versions:
@@ -2294,7 +2293,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Shipment + Approval Process
       url: /docs/scos/dev/feature-integration-guides/shipment-approval-process-feature-integration.html
       include_versions:
@@ -2302,14 +2300,12 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Shipment + Cart
       url: /docs/scos/dev/feature-integration-guides/shipment-cart-feature-integration.html
       include_versions:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Shopping Lists
       url: /docs/scos/dev/feature-integration-guides/shopping-lists-feature-integration.html
     - title: Shopping Lists + Product Options
@@ -2493,8 +2489,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-contentgui.html
     - title: Migration Guide - ContentStorage
       url: /docs/scos/dev/module-migration-guides/migration-guide-contentstorage.html
-    - title: Migration Guide - Currency
-      url: /docs/scos/dev/module-migration-guides/migration-guide-currency.html
     - title: Migration Guide - Customer
       url: /docs/scos/dev/module-migration-guides/migration-guide-customer.html
     - title: Migration Guide - CustomerPage
@@ -2535,8 +2529,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-messenger.html
     - title: Migration Guide - Monitoring
       url: /docs/scos/dev/module-migration-guides/migration-guide-monitoring.html
-    - title: Migration Guide - Multi-Currency
-      url: /docs/scos/dev/module-migration-guides/migration-guide-multi-currency.html
     - title: Migration Guide - MultiCartPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-multicartpage.html
     - title: Migration Guide - Navigation
@@ -2557,22 +2549,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-payment.html
     - title: Migration Guide - PersistentCart
       url: /docs/scos/dev/module-migration-guides/migration-guide-persistentcart.html
-    - title: Migration Guide - Price
-      url: /docs/scos/dev/module-migration-guides/migration-guide-price.html
-    - title: Migration Guide - PriceCartConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-pricecartconnector.html
-    - title: Migration Guide - PriceProduct
-      url: /docs/scos/dev/module-migration-guides/migration-guide-priceproduct.html
-    - title: Migration Guide - PriceProductSchedule
-      url: /docs/scos/dev/module-migration-guides/migration-guide-priceproductschedule.html
-    - title: Migration Guide - PriceProductScheduleGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-priceproductschedulegui.html
-    - title: Migration Guide - PriceProductStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-priceproductstorage.html
-    - title: Migration Guide - PriceProductVolume
-      url: /docs/scos/dev/module-migration-guides/migration-guide-priceproductvolume.html
-    - title: Migration Guide - PriceProductVolumeGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-priceproductvolumegui.html
     - title: Migration Guide - Product
       url: /docs/scos/dev/module-migration-guides/migration-guide-product.html
     - title: Migration Guide - ProductBundle
@@ -2705,22 +2681,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-setup.html
     - title: Migration Guide - SharedCartPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-sharedcartpage.html
-    - title: Migration Guide - Shipment
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shipment.html
-    - title: Migration Guide - ShipmentCartConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentcartconnector.html
-    - title: Migration Guide - ShipmentCheckoutConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentcheckoutconnector.html
-    - title: Migration Guide - ShipmentDiscountConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentdiscountconnector.html
-    - title: Migration Guide - ShipmentGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shipmentgui.html
-    - title: Migration Guide - ShoppingList
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shoppinglist.html
-    - title: Migration Guide - ShoppingListPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shoppinglistpage.html
-    - title: Migration Guide - ShoppingListWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-shoppinglistwidget.html
     - title: Migration Guide - Step Engine
       url: /docs/scos/dev/module-migration-guides/migration-guide-step-engine.html
     - title: Migration Guide - Stock
@@ -2743,8 +2703,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-validator.html
     - title: Migration Guide - WebProfiler
       url: /docs/scos/dev/module-migration-guides/migration-guide-webprofiler.html
-    - title: Migration Guide - Wishlist
-      url: /docs/scos/dev/module-migration-guides/migration-guide-wishlist.html
   - title: DevOps migration guides
     include_versions:
     - "202001.0"
@@ -2857,21 +2815,18 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - shipment_method_store.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-shipment-method-store.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - shipment_price.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-shipment-price.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - sales_order_threshold.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-sales-order-threshold.csv.html
           include_versions:
@@ -2885,7 +2840,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - order-status.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-order-status.csv.html
           include_versions:
@@ -3001,7 +2955,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
           nested:
           - title: File details - product_price.csv
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/pricing/file-details-product-price.csv.html
@@ -3009,14 +2962,12 @@ entries:
             - "202005.0"
             - "202009.0"
             - "202108.0"
-            - "202204.0"
           - title: File details - product_price_schedule.csv
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/pricing/file-details-product-price-schedule.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
-            - "202204.0"
       - title: Special product types
         url: /docs/scos/dev/data-import/data-import-categories/special-product-types/special-product-types-import-category.html
         include_versions:
@@ -3031,7 +2982,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
           nested:
           - title: File details - gift_card_concrete_configuration.csv
             url: /docs/scos/dev/data-import/data-import-categories/special-product-types/gift-cards/file-details-gift-card-concrete-configuration.csv.html
@@ -3039,14 +2989,12 @@ entries:
             - "202005.0"
             - "202009.0"
             - "202108.0"
-            - "202204.0"
           - title: File details - gift_card_abstract_configuration.csv
             url: /docs/scos/dev/data-import/data-import-categories/special-product-types/gift-cards/file-details-gift-card-abstract-configuration.csv.html
             include_versions:
             - "202005.0"
             - "202009.0"
             - "202108.0"
-            - "202204.0"
         - title: Product options
           url: /docs/scos/dev/data-import/data-import-categories/special-product-types/product-options/product-options.html
           include_versions:
@@ -3581,10 +3529,6 @@ entries:
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-use-case-scenario.html
           - title: Step engine workflow overview
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-workflow-overview.html
-        - title: Net and Gross prices management
-          url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/net-and-gross-prices-management.html
-        - title: Multiple currencies per store configuration
-          url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multiple-currencies-per-store-configuration.html
       - title: Configuration management
         url: /docs/scos/dev/back-end-development/data-manipulation/configuration-management.html
       - title: Data interaction
@@ -3794,8 +3738,6 @@ entries:
       url: /docs/scos/dev/migration-concepts/migrating-from-twig-v1-to-twig-v3.html
     - title: Split delivery migration concept
       url: /docs/scos/dev/migration-concepts/split-delivery-migration-concept.html
-    - title: CRUD Scheduled Prices migration concept
-      url: /docs/scos/dev/migration-concepts/crud-scheduled-prices-migration-concept.html
     - title: Silex Replacement
       nested:
       - title: Application
@@ -4219,18 +4161,13 @@ entries:
       url: /docs/scos/dev/tutorials-and-howtos/howtos/about-howtos.html
       nested:
       - title: Feature HowTos
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/feature-howtos.html
         nested:
         - title: Data Imports
           nested:
-          - title: "HowTo: Import delivery methods linked to store"
-            url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-delivery-methods-linked-to-store.html
           - title: "HowTo: Import warehouse data"
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html
           - title: "HowTo: Import packaging units"
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html
-          - title: "HowTo: Manage business unit specific prices via data import"
-            url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/how-to-manage-business-unit-specific-prices-via-data-import.html
         - title: "HowTo: Generate a token for login"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html
         - title: "HowTo: Use blocks"
@@ -4247,8 +4184,6 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html
         - title: "HowTo: Make a product searchable and shown on the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
-        - title: "HowTo: Schedule cron job for scheduled prices"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html
         - title: CMS
           nested:
           - title: "HowTo: Create CMS templates"
@@ -4292,20 +4227,14 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-integrate-and-use-precise-decimal-numbers.html
       - title: "HowTo: Create and register a MailTypePlugin"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-and-register-a-mailtypeplugin.html
-      - title: "HowTo: Handle twenty five million prices in Spryker Commerce OS"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
       - title: "HowTo: Customize HTTP headers in AJAX request"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-customize-http-headers-in-ajax-request.html
       - title: "HowTo: Debug payment integrations locally"
         url:  /docs/scos/dev/tutorials-and-howtos/howtos/howto-debug-payment-integrations-locally.html
       - title: "HowTo: Configure basic htaccess authentication"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-configure-basic-htaccess-authentication.html
-      - title: "HowTo: Create personalized prices"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-create-personalized-prices.html
       - title: "HowTo: Set up Spryker with MySQL"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-spryker-with-mysql.html
-      - title: "HowTo: Add a new shipment method 2.0"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method-2.0.html
       - title: "HowTo: Define the maximum size of content fields"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-define-the-maximum-size-of-content-fields.html
       - title: "HowTo: Do better deployments"
@@ -4314,8 +4243,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-decrease-the-memory-usage-of-spryker-with-docker-on-wsl2.html
       - title: "HowTo: Hydrate payment methods for an order"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-hydrate-payment-methods-for-an-order.html
-      - title: "HowTo: Add a new shipment method"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-a-new-shipment-method.html
       - title: "HowTo: Notify about unsupported browsers"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html
       - title: "HowTo: Set up stores with multiple locales"
@@ -4783,6 +4710,8 @@ entries:
           - "202108.0"
           - "202204.0"
     - title: Shipment
+      include_versions:
+      - "202108.0"
       nested:
       - title: Seven Senders
         nested:

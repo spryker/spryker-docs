@@ -14,8 +14,6 @@ redirect_from:
 related:
   - title: Alternative Products feature walkthrough
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-alternative-products-feature-integration.html
-  - title: Wishlist feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/wishlist-feature-walkthrough.html
 ---
 
 {% include pbc/all/integrate-features/202204.0/integrate-the-alternative-products-wishlist-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-alternative-products-wishlist-feature.md -->

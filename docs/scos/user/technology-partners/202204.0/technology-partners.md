@@ -131,11 +131,3 @@ Visit [Technology Partners](https://spryker.com/technology-partners/) for a comp
 <!--* [Censhare](/docs/scos/user/technology-partners/{{page.version}}/content-management/censhare.html)-->
 <!--* [Contentserv](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/contentserv.html)-->
 <!--* [Tradebyte](/docs/scos/user/technology-partners/{{page.version}}/order-management-erpoms/tradebyte.html)-->
-
- ## Shipment
-
-* [Paazl](/docs/scos/user/technology-partners/{{page.version}}/shipment/paazl.html)
-* [Paqato](/docs/scos/user/technology-partners/{{page.version}}/shipment/paqato.html)
-* [Seven Senders](/docs/scos/user/technology-partners/{{page.version}}/shipment/seven-senders.html)
-
-Become a partner now!

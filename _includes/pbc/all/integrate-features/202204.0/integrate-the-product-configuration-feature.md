@@ -11,14 +11,14 @@ Follow the steps below to install the Product Configuration feature core.
 
 To start feature integration, integrate the required features:
 
-| NAME                 | VERSION | INTEGRATION GUIDE |
-|----------------------| --- | --- |
-| Spryker Core         | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
-| Product              |{{site.version}} |[Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)|
-| Cart                 | {{site.version}}| [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html)|
-| Order Management     | {{site.version}} |[Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-feature-integration.html)|
-| Checkout             |{{site.version}} |[Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/checkout-feature-integration.html)|
-| Prices               |{{site.version}} |[Prices feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/prices-feature-integration.html)|
+| NAME | VERSION | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
+| Product |{{site.version}} |[Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)|
+| Cart| {{site.version}}| [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html)|
+| Order Management| {{site.version}} |[Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-feature-integration.html)|
+| Checkout |{{site.version}} |[Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/checkout-feature-integration.html)|
+| Prices |{{site.version}} |[Prices feature integration](/docs/pbc/all/price-management/install-and-upgrade/install-features/install-the-prices-feature.html)|
 | Inventory Management |{{site.version}} |[Inventory management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/inventory-management-feature-integration.html)|
 | Wishlist             |{{site.version}} ||
 | ShoppingList         |{{site.version}} |[Shopping Lists feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/shopping-lists-feature-integration.html)|

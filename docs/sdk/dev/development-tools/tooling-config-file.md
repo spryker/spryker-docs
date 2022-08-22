@@ -27,6 +27,7 @@ redirect_from:
   - /docs/scos/dev/sdk/202005.0/development-tools/tooling-config-file.html
   - /docs/scos/dev/sdk/202009.0/development-tools/tooling-config-file.html
   - /docs/scos/dev/sdk/202108.0/development-tools/tooling-config-file.html
+  - /docs/scos/dev/sdk/development-tools/tooling-config-file.html
 related:
   - title: Architecture sniffer
     link: docs/scos/dev/sdk/development-tools/architecture-sniffer.html

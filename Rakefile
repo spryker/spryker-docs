@@ -72,7 +72,6 @@ task :check_acp_user do
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/acp\/dev\/.+/,
     /docs\/fes\/.+/,
     /docs\/paas-plus\/.+/,
     /docs\/pbc\/.+/,
@@ -203,11 +202,12 @@ task :check_pbc do
   options[:file_ignore] = [
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
+    /docs\/sdk\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/acp\/.+/,
     /docs\/fes\/.+/,
-    /docs\/paas-plus\/.+/,
-    /docs\/sdk\/.+/
+    /docs\/acp\/.+/,
+    /docs\/paas-plus\/.+/
+
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

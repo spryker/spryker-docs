@@ -163,7 +163,7 @@ entries:
           - title: Install and upgrade
             nested:
               - title: Integrate the Gift Cards feature
-                url: /docs/pbc/all/gift-cards/install-and-upgrade/integrate-the-gift-cards-feature.html
+                url: /docs/pbc/all/gift-cards/install-and-upgrade/install-the-gift-cards-feature.html
               - title: Enable gift cards
                 url: /docs/pbc/all/gift-cards/install-and-upgrade/enable-gift-cards.html
           - title: Import and export data

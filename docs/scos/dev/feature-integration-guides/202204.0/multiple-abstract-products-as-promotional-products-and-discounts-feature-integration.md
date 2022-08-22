@@ -18,7 +18,7 @@ To start feature integration, integrate the required features:
 | NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
 | Promotions & Discounts | {{page.version}} | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/promotions-and-discounts-feature-integration.html) |
-| Spryker Cart | {{page.version}}   | [Spryker Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.md.html) |
+| Spryker Cart | {{page.version}}   | [Spryker Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -163,8 +163,8 @@ class CartPageDependencyProvider extends SprykerCartPageDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Ensure that the plugin works correctly:
-
-1. [Create a discount](/docs/scos/user/back-office-user-guides/{{page.version}}/merchandising/discount/creating-cart-rules.html).
+ 
+1. [Create a discount](/docs/pbc/all/discount-management/manage-in-the-back-office/create-discounts.html).
 2. On the **Discount calculation** tab, for **DISCOUNT APPLICATION TYPE**, select **PROMOTIONAL PRODUCT**. 
 3. Add **ABSTRACT PRODUCT SKU**.
 4. Create another discount with one or more identic promotional products.

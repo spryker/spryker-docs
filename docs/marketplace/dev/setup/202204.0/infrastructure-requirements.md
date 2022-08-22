@@ -6,7 +6,7 @@ redirect_from:
   - /docs/marketplace/dev/setup/infrastructure-requirements.html
 related:
   - title: DevVM system requirements
-    link: docs/marketplace/dev/setup/system-requirements.html
+    link: docs/marketplace/dev/setup/page.version/system-requirements.html
 ---
 
 This document describes the system infrastructure requirements that help mitigate security risks for Spryker Marketplace projects.

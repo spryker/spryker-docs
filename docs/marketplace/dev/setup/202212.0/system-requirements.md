@@ -5,7 +5,7 @@ last_updated: Aug 5, 2022
 template: howto-guide-template
 related:
   - title: Infrastructure requirements
-    link: docs/marketplace/dev/setup/infrastructure-requirements.html
+    link: docs/marketplace/dev/setup/page.version/infrastructure-requirements.html
 ---
 
 {% info_block warningBox "Warning" %}

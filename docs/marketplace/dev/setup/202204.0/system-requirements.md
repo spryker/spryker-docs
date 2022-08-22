@@ -6,7 +6,7 @@ redirect_from:
   - /docs/marketplace/dev/setup/system-requirements.html
 related:
   - title: Infrastructure requirements
-    link: docs/marketplace/dev/setup/infrastructure-requirements.html
+    link: docs/marketplace/dev/setup/page.version/infrastructure-requirements.html
 ---
 
 {% info_block warningBox "Warning" %}

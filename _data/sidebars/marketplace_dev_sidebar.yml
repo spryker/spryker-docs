@@ -10,23 +10,21 @@ entries:
             url: /docs/marketplace/dev/setup/system-requirements.html
             include_versions:
             - "202204.0" 
-            - "202212.0" 
+
           - title: Infrastructure requirements
             url: /docs/marketplace/dev/setup/infrastructure-requirements.html
             include_versions:
             - "202204.0" 
-            - "202212.0"              
+         
           - title: Marketplace supported browsers
             url: /docs/marketplace/dev/setup/marketplace-supported-browsers.html  
             include_versions:
             - "202204.0"
-            - "202212.0" 
-              
+            
           - title: Setup
             url: /docs/marketplace/dev/setup/spryker-marketplace-setup.html
             include_versions:
             - "202204.0"
-            - "202212.0"  
               
       - title: Marketplace architecture overview
         nested:

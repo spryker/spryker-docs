@@ -26,30 +26,26 @@ Get general information about the tool and see all available commands related to
 spryker-sdk list
 ```
 
-## Installing the evaluator tool
+## Install the evaluator tool
 
-The Evaluator tool is supplied as part of Spryker SDK.
+The evaluator tool is part of Spryker SDK.
 
 1. Install the Spryker SDK tool https://github.com/spryker-sdk/sdk#installation
 
 2. Also, possible to use spryker-sdk image from project directory, without any installation. Example: `docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console {connamd name}'`
 
-## Running an evaluation
+## Run an evaluation
 
-To evaluate your code, run the Evaluator with the output format defined in YAML.
+To evaluate your code, run the evaluator:
 
 ```bash
 spryker-sdk analyze:php:code-compliance
 ```
 
-The Evaluator creates `analyze:php:code-compliance.violations.yaml` in the reports folder.
+This creates `analyze:php:code-compliance.violations.yaml` in the `reports` folder.
 
 To view the report, run the following command:
 
 ```bash
 spryker-sdk analyze:php:code-compliance-report
 ```
-
-## Updating the evaluator tool
-
-To update the evaluator tool to the latest version, follow updating instructions from the SDK tool https://github.com/spryker-sdk/sdk.

@@ -106,30 +106,30 @@ Below you will find the list of the new/updated documentation released as part o
  </details>
 
 
-* [Scheduled Prices](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
+* [Scheduled Prices](/docs/pbc/all/price-management/scheduled-prices-feature-overview.html)
 <details>
 <summary markdown='span'>Feature overview</summary>
 
-[Scheduled Prices Feature Overview](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
+[Scheduled Prices Feature Overview](/docs/pbc/all/price-management/scheduled-prices-feature-overview.html)
 
 </details>
 <details>
 <summary markdown='span'>Integration guide</summary>
 
-[Scheduled Prices Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/scheduled-prices-feature-integration.html)
+[Integrate the Scheduled prices feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/scheduled-prices-feature-integration.html)
 
 </details>
 <details>
 <summary markdown='span'>Migration guides</summary>
 
-* [PriceProductSchedule migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedule.html)
-* [PriceProductScheduleGui migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedulegui.html)
+* [PriceProductSchedule migration from v. 1.* to v. 2.*](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedule-module.html)
+* [PriceProductScheduleGui migration from v. 1.* to v. 2.*](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedulegui-module.html)
 
 </details>
 <details>
 <summary markdown='span'>HowTo</summary>
 
-[Schedule Cron Job for Scheduled Prices](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html)
+[Schedule Cron Job for Scheduled Prices](/docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html)
 
 </details>
 

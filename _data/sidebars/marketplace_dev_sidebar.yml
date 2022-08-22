@@ -8,16 +8,24 @@ entries:
         nested:
           - title: DevVM system requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
-                    
+            include_versions:
+            - "202204" 
+
           - title: Infrastructure requirements
             url: /docs/marketplace/dev/setup/infrastructure-requirements.html
-
+            include_versions:
+            - "202204" 
+              
           - title: Marketplace supported browsers
             url: /docs/marketplace/dev/setup/marketplace-supported-browsers.html  
-
+            include_versions:
+            - "202204" 
+              
           - title: Setup
             url: /docs/marketplace/dev/setup/spryker-marketplace-setup.html
-
+            include_versions:
+            - "202204" 
+              
       - title: Marketplace architecture overview
         nested:
           - title: Marketplace Application composition
@@ -37,28 +45,52 @@ entries:
 
           - title: Marketplace Merchant
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-feature-walkthrough.html
+            include_versions:
+            - "202108"
+            - "202204"
 
           - title: Marketplace Product Offer
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/marketplace-product-offer-feature-walkthrough.html
+            include_versions:
+            - "202108"
+            - "202204"
             nested:
               - title: Product Offer in the Back Office
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-in-the-back-office.html
+                include_versions:
+                - "202108"
+                - "202204"
 
               - title: Rendering product offers on the Storefront
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/rendering-product-offers-on-the-storefront.html
+                include_versions:
+                - "202108"
+                - "202204"
 
               - title: Product Offer storage
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-storage.html
+                include_versions:
+                - "202108"
+                - "202204"
 
               - title: Product Offer store relation
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-store-relation.html
+                include_versions:
+                - "202108"
+                - "202204"
 
               - title: Product Offer validity dates
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-feature-walkthrough/product-offer-validity-dates.html
+                include_versions:
+                - "202108"
+                - "202204"
 
           - title: Marketplace Product
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-feature-walkthrough.html
-
+            include_versions:
+            - "202108"
+            - "202204"
+            
           - title: Marketplace Product Approval Process
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-approval-process-feature-walkthrough.html
             include_versions:
@@ -66,16 +98,28 @@ entries:
 
           - title: Marketplace Order Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/marketplace-order-management-feature-walkthrough.html
+            include_versions:
+            - "202108"
+            - "202204"
 
             nested:
               - title: Merchant Oms
                 url: /docs/marketplace/dev/feature-walkthroughs/marketplace-order-management-feature-walkthrough/merchant-oms.html
+                include_versions:
+                - "202108"
+                - "202204"
 
           - title: Marketplace Inventory Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-inventory-management-feature-walkthrough.html
+            include_versions:
+            - "202108"
+            - "202204"
 
           - title: Marketplace Product Offer Prices
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-offer-prices-feature-walkthrough.html
+            include_versions:
+            - "202108"
+            - "202204"
 
           - title: Marketplace Merchant Custom Prices
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-merchant-custom-prices-feature-walkthrough.html
@@ -84,22 +128,40 @@ entries:
 
           - title: Marketplace Return Management
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-return-management-feature-walkthrough.html
+            include_versions:
+            - "202108"
+            - "202204"
 
           - title: Marketplace Shipment
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-shipment-feature-walkthrough.html
-
+            include_versions:
+            - "202108"
+            - "202204"
+  
           - title: Marketplace Promotions and Discounts
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-promotions-and-discounts-feature-walkthrough.html
-
+            include_versions:
+            - "202108"
+            - "202204"
+  
           - title: Marketplace Product Options
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-product-options-feature-walkthrough.html
-
+            include_versions:
+            - "202108"
+            - "202204"
+  
           - title: Marketplace Cart
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-cart-feature-walkthrough.html
-
+            include_versions:
+            - "202108"
+            - "202204"
+  
           - title: Marketplace Wishlist
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-wishlist-feature-walkthrough.html
-
+            include_versions:
+            - "202108"
+            - "202204"
+  
           - title: Marketplace Shopping Lists
             url: /docs/marketplace/dev/feature-walkthroughs/marketplace-shopping-lists-feature-walkthrough.html
             include_versions:
@@ -107,7 +169,10 @@ entries:
 
           - title: Persistence ACL
             url: /docs/marketplace/dev/feature-walkthroughs/persistence-acl-feature-walkthrough/persistence-acl-feature-walkthrough.html
-
+            include_versions:
+            - "202108"
+            - "202204"
+  
             nested:
 
               - title: Persistence ACL feature configuration
@@ -247,7 +312,10 @@ entries:
 
           - title: Merchant Switcher + Wishlist feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-switcher-wishlist-feature-integration.html
-
+            include_versions:
+            - "202108"
+            - "202204"
+            
           - title: Marketplace Merchant Custom Prices
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-merchant-custom-prices-feature-integration.html
             include_versions:
@@ -255,7 +323,10 @@ entries:
 
           - title: Marketplace Order Management feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-feature-integration.html
-
+            include_versions:
+            - "202108"
+            - "202204"
+            
           - title: Marketplace Order Management + Order Threshold feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-order-management-order-threshold-feature-integration.html
             include_versions:
@@ -501,7 +572,10 @@ entries:
       
               - title: "Glue API: Marketplace Product Offer + Wishlist feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-wishlist-feature-integration.html
-
+                include_versions:
+                - "202108"
+                - "202204"
+                
               - title: "Glue API: Marketplace Product Offer Prices feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-prices-feature-integration.html
                 include_versions:

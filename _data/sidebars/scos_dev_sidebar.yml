@@ -3499,10 +3499,16 @@ entries:
       nested:
       - title: Console commands in Spryker
         url: /docs/scos/dev/back-end-development/console-commands/console-commands.html
+        include_versions:
+        - "202204.0"
       - title: Implementing a new console command
         url: /docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html
+        include_versions:
+        - "202204.0"        
       - title: Getting the list of console commands and available options
         url: /docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html
+        include_versions:
+        - "202204.0"        
     - title: Data manipulation
       nested:
       - title: Running and reverting a database migration

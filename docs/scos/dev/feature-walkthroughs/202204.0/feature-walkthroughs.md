@@ -157,9 +157,6 @@ The [Merchant](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-fea
 
 The [Merchant B2B Contracts](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-b2b-contracts-feature-walkthrough.html) feature allows setting up contracts between a merchant and B2B customer.
 
-## Merchant Custom Prices
-
-The [Merchant Custom Prices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-custom-prices-feature-walkthrough.html) feature allows a merchant to define custom prices for B2B customers.
 
 ## Merchant Product Restrictions
 
@@ -213,17 +210,10 @@ The [Persistent Cart Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version
 
 [This schema](/docs/scos/dev/feature-walkthroughs/{{page.version}}/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-module-relations.html) illustrates module relations in the Unique URL per Cart for Easy Sharing feature
 
-## Prices
-
-The [Prices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/prices-feature-walkthrough.html) feature enables Back Office users to effectively manage the prices of all types of products. They can set different types of prices, like default, original, and volume prices.
-
-### Money
-
-Handling monetary values can be a problem and is often quite hard. The [Money](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/money-module-reference-information.html) module makes it easier to work with monetary values.
 
 ### PriceProduct module details: reference information
 
-This article describes technical details of the [PriceProduct](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/priceproduct-module-details-reference-information.html) module that are valid since version 2 of the module.
+This article describes technical details of the [PriceProduct](/docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html) module that are valid since version 2 of the module.
 
 ## Product
 
@@ -308,10 +298,6 @@ The [Resource Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/reso
 ## Return Management
 
 The [Return Management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/return-management-feature-walkthrough.html) feature allows you to create and manage returns for a sales order.
-
-## Scheduled Prices
-
-The [Scheduled Prices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/scheduled-prices-feature-walkthrough.html) feature enables Back Office users to schedule price changes, which are to happen in the future for multiple products simultaneously.
 
 ## Search
 

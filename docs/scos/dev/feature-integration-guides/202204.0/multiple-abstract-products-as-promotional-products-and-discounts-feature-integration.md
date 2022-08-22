@@ -55,10 +55,6 @@ Ensure that the following changes have been applied by checking your database:
 |-----------------------|--------|--------|
 | spy_discount.abstract_skus | column | added  |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
 Ensure that the following changes have been triggered in transfer objects:
 
 | TRANSFER                            | TYPE     | EVENT   | PATH                                                                       |
@@ -75,10 +71,6 @@ Ensure that the following changes have been triggered in transfer objects:
 | Discount.discountPromotion          | property | created | src/Generated/Shared/Transfer/DiscountTransfer                             |
 | RestPromotionalItemsAttributes.skus | property | created | src/Generated/Shared/Transfer/RestPromotionalItemsAttributesTransfer       |
 | ProductView.promotionItem           | property | created | src/Generated/Shared/Transfer/ProductViewTransfer                          |
-
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
 
 Ensure that the *ABSTRACT PRODUCT SKU(S)** field is displayed, and it accepts a comma-separated list:
 1. In the Back Office, go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount** and select **Create new discount**. 
@@ -186,8 +178,8 @@ console frontend:zed:build
 
 Ensure that you can create a discount with multiple promotional products:
 1. In the Back Office, go to **Merchandising&nbsp;<span aria-label="and then">></span> Discount**.
-2. Click **Create new discount** button or **Edit** button next to existing discount.
-3. Check that you can see the **Discount** form on **Create new discount** or **Edit discount** page.
+2. Click **Create new discount** or **Edit** next to the existing discount.
+3. Check that you can see the **Discount** form on the **Create new discount** or **Edit discount** page.
 4. On the **Discount calculation** tab, for **DISCOUNT APPLICATION TYPE**, select **PROMOTIONAL PRODUCT**.
 5. Ensure that the **ABSTRACT PRODUCT SKU(S)** field is displayed and that it accepts a comma-separated list.
 6. Enter several abstract product SKUs and save the discount.

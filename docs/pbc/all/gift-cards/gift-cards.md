@@ -1,5 +1,5 @@
 ---
-title: Gift Cards feature overview
+title: Gift Cards
 description: This document describes general concepts of gift cards, gift card’s purchase and redeeming process, as well as the various use case scenarios.
 last_updated: Aug 2, 2021
 template: concept-topic-template
@@ -11,9 +11,11 @@ redirect_from:
   - /docs/gift-cards-feature-overview
   - /docs/en/gift-cards-feature-overview
   - /docs/scos/user/features/202200.0/gift-cards-feature-overview.html
+  - /docs/scos/user/features/202204.0/gift-cards-feature-overview.html  
+  - /docs/scos/dev/feature-walkthroughs/202204.0/gift-cards-feature-walkthrough.html
 ---
 
-The _Gift Card_ feature lets you create a special product type with a chosen value amount. The purchase of a gift card generates an individual code that can then be used as a payment method during checkout.
+The _Gift Cards_ capability lets you create a special product type with a chosen value amount. The purchase of a gift card generates an individual code that can then be used as a payment method during checkout.
 
 A Gift Card is a prepaid certificate entitling its owner to purchase products for the gift card’s value.
 
@@ -25,7 +27,7 @@ Gift cards are sensitive data and can be used to pay orders; therefore, keep in 
 
 {% endinfo_block %}
 
-In a Spryker-based shop, the gift cards follow the same rules and are bought as products and can even be bundled. However, they are purely virtual and do not require shipping. A gift card can be applied as a voucher and redeemed to pay an order. Therefore, the gift cards have two characteristics: a product characteristic and a voucher (+payment method) characteristic. When a gift card is bought, it is treated like a product. When it is applied, it’s a *voucher* that can be used as a payment method.
+The gift cards follow the same rules and are bought as products and can even be bundled. However, they are purely virtual and do not require shipping. A gift card can be applied as a voucher and redeemed to pay an order. Therefore, the gift cards have two characteristics: a product characteristic and a voucher (+payment method) characteristic. When a gift card is bought, it is treated like a product. When it is applied, it’s a *voucher* that can be used as a payment method.
 
 Gift cards have variants just like abstract products. For example, a New Year Gift Card can have all the different values—50 Euro and 100 Euro. In this case, the New Year Gift Card would be handled like an abstract product, and 50 Euro and 100 Euro gift cards would be its variants.
 
@@ -82,8 +84,10 @@ With this strategy, a Back Office user will see gift card balance information: a
 
 Even though the Balance strategy is a bit more complicated than Replacement, it provides the shop owner with detailed information about the gift card as well as the purchase history. From the customer’s perspective, this strategy might be a better option if a gift card is used by one person, and it does not make sense to send emails with new codes every time a gift card was used.
 
-{% info_block warningBox "Developer guides" %}
 
-Are you a developer? See [Gift Cards feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/gift-cards-feature-walkthrough.html) for developers.
+## Related Developer articles
 
-{% endinfo_block %}
+| INTEGRATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT |
+|---|---|---|---|
+| [Install the Gift Cards feature](/docs/pbc/all/gift-cards/install-and-upgrade/integrate-the-gift-cards-feature.html) | [Upgrade the CheckoutPage module](/docs/scos/dev/module-migration-guides/migration-guide-checkoutpage.html) | [Manage gift cards of guest users](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-guest-users.html) | [File details: gift_card_abstract_configuration.csv](/docs/pbc/all/gift-cards/import-and-export-data/file-details-gift-card-abstract-configuration.csv.html) |
+|  |  | [Managing gift cards of registered users](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html) | [File details: gift_card_concrete_configuration.csv](/docs/pbc/all/gift-cards/import-and-export-data/file-details-gift-card-concrete-configuration.csv.html) |

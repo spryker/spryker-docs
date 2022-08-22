@@ -126,9 +126,7 @@ The [Customer entity](/docs/scos/dev/feature-walkthroughs/{{page.version}}/custo
 
 The [File Manager](/docs/scos/dev/feature-walkthroughs/{{page.version}}/file-manager-feature-walkthrough.html) feature allows uploading files required for your shop.
 
-## Gift Cards
 
-The [Gift Cards](/docs/scos/dev/feature-walkthroughs/{{page.version}}/gift-cards-feature-walkthrough.html) feature enables you to create a virtual product (a gift card) with a chosen value amount. The purchase of a gift card generates an individual code that is used as a payment method during checkout.
 
 ## Inventory Management
 

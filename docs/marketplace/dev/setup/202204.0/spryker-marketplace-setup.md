@@ -87,5 +87,5 @@ That's it. You've set up your Spryker B2C Demo Marketplace and can access your a
 ## Next steps
 
 - For troubleshooting, see [Troubleshooting Spryker in Docker issues](/docs/scos/dev/troubleshooting/troubleshooting-spryker-in-docker-issues/troubleshooting-spryker-in-docker-issues.html).
-- Configuring debugging in [Docker](/docs/scos/dev/the-docker-sdk/{{site.version}}/configuring-debugging-in-docker.html).
-- See Glue API reference at [REST API reference](/docs/scos/dev/glue-api-guides/{{site.version}}/rest-api-reference.html).
+- Configuring debugging in [Docker](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-debugging-in-docker.html).
+- See Glue API reference at [REST API reference](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html).

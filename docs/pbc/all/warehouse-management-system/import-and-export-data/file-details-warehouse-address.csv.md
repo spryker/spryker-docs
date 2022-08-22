@@ -14,6 +14,7 @@ redirect_from:
   - /docs/scos/dev/data-import/201903.0/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html
   - /docs/scos/dev/data-import/202005.0/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html
 ---
 
 This document describes the `warehouse_address.csv` file to configure [warehouse address information](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html#defining-a-warehouse-address) in your Spryker shop.
@@ -30,7 +31,7 @@ The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
-| warehouse_name | &check; | String |  | Warehouse name from the [warehouse.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html) file. |
+| warehouse_name | &check; | String |  | Warehouse name from the [warehouse.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse.csv.html) file. |
 | address1 | &check; | String |  | Warehouse address—first line. |
 | address2 |  | String |  | Warehouse address—second line. |
 | address3 |  | String |  | Warehouse address—third line. |
@@ -43,7 +44,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-The file has the following dependency: [File details: warehouse.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html).
+The file has the following dependency: [File details: warehouse.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse-store.csv.html).
 
 ## Import template file and content example
 

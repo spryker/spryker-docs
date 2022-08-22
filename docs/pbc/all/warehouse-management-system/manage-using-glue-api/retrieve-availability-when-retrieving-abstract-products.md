@@ -1,5 +1,5 @@
 ---
-title: Retrieving abstract products
+title: Retrieve availability when retrieving abstract products
 description: Learn how to retrieve availability when retrieving abstract products using Glue API.
 last_updated: Aug 22, 2022
 template: glue-api-storefront-guide-template
@@ -11,7 +11,7 @@ This document describes how to retrieve availability when retrieving abstract pr
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Glue API: Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-inventory-management-feature-integration.html)
+* [Glue API: Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-inventory-management-glue-api.html)
 
 ## Retrieve an abstract product
 
@@ -131,7 +131,7 @@ To retrieve general information about an abstract product, send the request:
 {% include pbc/all/glue-api-guides/retrieve-an-abstract-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/retrieve-an-abstract-product-response-attributes.md -->
 
 
-For the attributes of abstract product availability, see [Retrieve availability of an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-availability.html#abstract-product-availability-response-attributes)
+For the attributes of abstract product availability, see [Retrieve availability of an abstract product](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-abstract-product-availability.html#abstract-product-availability-response-attributes)
 
 ## Possible errors
 

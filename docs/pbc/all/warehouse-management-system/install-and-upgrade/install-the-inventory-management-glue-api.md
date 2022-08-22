@@ -12,11 +12,10 @@ redirect_from:
   - /docs/en/glue-api-inventory-management-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-inventory-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-inventory-management-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-inventory-management-feature-integration.html
 related:
   - title: Inventory Management feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/inventory-management-feature-integration.html
-  - title: Inventory Management feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
   - title: Retrieving abstract product availability
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
   - title: Retrieving concrete product availability

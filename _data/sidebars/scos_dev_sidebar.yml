@@ -109,7 +109,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Cart
       url: /docs/scos/dev/feature-walkthroughs/cart-feature-walkthrough/cart-feature-walkthrough.html
       nested:
@@ -253,7 +252,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
       nested:
       - title: 'AvailabilityStorage module: reference information'
         url: /docs/scos/dev/feature-walkthroughs/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html
@@ -261,13 +259,11 @@ entries:
         - "201903.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: 'Managing stocks in a multi-store environment: Best practices'
         url: /docs/scos/dev/feature-walkthroughs/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
     - title: Mailing and Notifications
       url: /docs/scos/dev/feature-walkthroughs/mailing-and-notifications-feature-walkthrough.html
     - title: Measurement Units
@@ -778,7 +774,6 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Retrieving abstract product prices
           url: /docs/scos/dev/glue-api-guides/managing-products/abstract-products/retrieving-abstract-product-prices.html
           include_versions:
@@ -812,7 +807,6 @@ entries:
           include_versions:
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Retrieving concrete product prices
           url: /docs/scos/dev/glue-api-guides/managing-products/concrete-products/retrieving-concrete-product-prices.html
           include_versions:
@@ -868,18 +862,15 @@ entries:
       - title: Managing availability notifications
         include_versions:
         - "202108.0"
-        - "202204.0"
         nested:
         - title: Managing availability notifications
           url: /docs/scos/dev/glue-api-guides/managing-products/managing-availability-notifications/managing-availability-notifications.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: Retrieving subscriptions to availability notifications
           url: /docs/scos/dev/glue-api-guides/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
           include_versions:
           - "202108.0"
-          - "202204.0"
       - title: Retrieving bundled products
         url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-bundled-products.html
         include_versions:
@@ -1224,7 +1215,6 @@ entries:
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-availability-notification-feature-integration.html
         include_versions:
         - "202108.0"
-        - "202204.0"
       - title: Glue API - Cart
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-cart-feature-integration.html
         include_versions:
@@ -1341,7 +1331,6 @@ entries:
         - "201907.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Glue API - Measurement Units
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-measurement-units-feature-integration.html
         include_versions:
@@ -1583,7 +1572,6 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Back in Stock Notification
       url: /docs/scos/dev/feature-integration-guides/back-in-stock-notification-feature-integration.html
       include_versions:
@@ -1854,7 +1842,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Measurement Units
       url: /docs/scos/dev/feature-integration-guides/measurement-units-feature-integration.html
       include_versions:
@@ -2390,16 +2377,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-api-module.html
     - title: Migration guide - Auth module to SecurityGui module
       url: /docs/scos/dev/module-migration-guides/migration-guide-auth-module-to-securitygui-module.html
-    - title: Migration Guide - Availability
-      url: /docs/scos/dev/module-migration-guides/migration-guide-availability.html
-    - title: Migration Guide - AvailabilityCartConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-availabilitycartconnector.html
-    - title: Migration Guide - AvailabilityGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-availabilitygui.html
-    - title: Migration Guide - AvailabilityOfferConnector
-      url: /docs/scos/dev/module-migration-guides/migration-guide-availabilityofferconnector.html
-    - title: Migration Guide - AvailabilityStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-availabilitystorage.html
     - title: Migration Guide - Business On Behalf Data Import
       url: /docs/scos/dev/module-migration-guides/migration-guide-business-on-behalf-data-import.html
     - title: Migration Guide - Calculation
@@ -2774,19 +2751,16 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - warehouse_address.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: File details - warehouse_store.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html
           include_versions:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - tax.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-tax.csv.html
           include_versions:
@@ -2904,7 +2878,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
           nested:
           - title: File details - product_stock.csv
             url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html
@@ -2912,7 +2885,6 @@ entries:
             - "202005.0"
             - "202009.0"
             - "202108.0"
-            - "202204.0"
         - title: Categories
           url: /docs/scos/dev/data-import/data-import-categories/catalog-setup/categories/categories.html
           include_versions:
@@ -4206,8 +4178,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-key-value-storage-with-database.html
       - title: "HowTo: Force HTTPS"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-force-https.html
-      - title: "HowTo: Change the default behavior of event triggering in the AvailabilityStorage module"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-change-the-default-behavior-of-event-triggering-in-the-availabilitystorage-module.html
       - title: "HowTo: Define positions of category CMS blocks"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-define-positions-for-category-cms-blocks.html
       - title: "HowTo: Build your own product relation type"

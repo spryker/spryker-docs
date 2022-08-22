@@ -13,11 +13,10 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201903.0/availability-notification-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/201907.0/availability-notification-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/availability-notification-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/availability-notification-feature-integration.html
 related:
   - title: Glue API - Availability Notification feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-availability-notification-feature-integration.html
-  - title: Availability Notification feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/availability-notification-feature-walkthrough.html
+    link: docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-availability-notification-glue-api.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-availability-notification-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-availability-notification-feature.md -->

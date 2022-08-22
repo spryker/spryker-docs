@@ -40,4 +40,4 @@ To check a product's availability in the Back Office, follow the steps:
 
 ## Next steps
 
-[Edit stock of products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/edit-stock-of-products-and-product-bundles.html).
+[Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html).

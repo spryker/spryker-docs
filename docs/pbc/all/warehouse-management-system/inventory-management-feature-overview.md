@@ -11,6 +11,7 @@ redirect_from:
   - /docs/inventory-management-feature-overview
   - /docs/en/inventory-management-feature-overview
   - /docs/scos/user/features/202200.0/inventory-management-feature-overview.html
+  - /docs/scos/user/features/202204.0/inventory-management-feature-overview.html  
 ---
 
 The *Inventory Management* feature refers to warehousing and managing your store’s stock. In this context, a *warehouse* is a physical place where your products are stored, and *stock* is the number of products available in the warehouse. See [Warehouse management](#warehouse-management) and [Stock management](#stock-management) for details about how to manage them.
@@ -18,13 +19,13 @@ Stock does not always reflect the real availability of products, as not all the 
 
 ## Warehouse management
 
-You can [create warehouses in the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/create-warehouses.html) or [import them](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse.csv.html).
+You can [create warehouses in the Back Office](/docs/pbc/all/warehouse-management-system/manage-in-the-back-office/create-warehouses.html) or [import them](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse.csv.html).
 
-A warehouse can be assigned to a single store or shared between several stores. For the warehouse and stock management scenarios you can set up for your project, see [Managing stocks in a multi-store environment: Best practices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html). You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. For details about managing warehouses and stores in the back office, see [Managing warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/edit-warehouses.html). For details about importing the warehouse and store data, see [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html).
+A warehouse can be assigned to a single store or shared between several stores. For the warehouse and stock management scenarios you can set up for your project, see [Managing stocks in a multi-store environment: Best practices](/docs/pbc/all/warehouse-management-system/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html). You can manage relations between stores and warehouses in the Back Office or by importing the warehouse and store data. For details about managing warehouses and stores in the back office, see [Managing warehouses](/docs/pbc/all/warehouse-management-system/manage-in-the-back-office/edit-warehouses.html). For details about importing the warehouse and store data, see [File details: warehouse_store.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse-store.csv.html).
 
 ### Defining a warehouse address
 
-You can define the warehouse address that will be used as the shipping origin address by importing the warehouse address data. For details about the import file, see [File details: warehouse_address.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html).
+You can define the warehouse address that will be used as the shipping origin address by importing the warehouse address data. For details about the import file, see [File details: warehouse_address.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse-address.csv.html).
 
 ### Warehouse assignment to order items (with Avalara integration only)
 
@@ -62,7 +63,7 @@ Schematically, the process looks like this:
 
 When the order is made, the stock is not updated automatically in the system, and you have to set it manually. You can define stock only for concrete products. You can set stock by doing the following:
 
-* Editing product stock in the Back Office. For details, see [Edit stock of products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/edit-stock-of-products-and-product-bundles.html).
+* Editing product stock in the Back Office. For details, see [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html).
 * Importing the quantities of items stored in each of the warehouses. For details, see [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/stocks.html).
 
 ## Availability management
@@ -106,15 +107,15 @@ For SEO purposes, products that are not available can still be displayed on the 
 
 |BACK OFFICE USER GUIDES|
 |---|
-| [Create warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/create-warehouses.html)  |
-| [Edit warehouses](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/warehouses/edit-warehouses.html) |
+| [Create warehouses](/docs/pbc/all/warehouse-management-system/manage-in-the-back-office/create-warehouses.html)  |
+| [Edit warehouses](/docs/pbc/all/warehouse-management-system/manage-in-the-back-office/edit-warehouses.html) |
 | [Check availability of products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/check-availability-of-products.html)  |
-| [Edit stock of products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/edit-stock-of-products-and-product-bundles.html)  |
+| [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html)  |
 
 ## Related Developer articles
 
 | INTEGRATION GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
 |---|---|---|---|
-| [Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/inventory-management-feature-integration.html) | [Retrieving abstract product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-availability.html) | [File details: product_stock.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html) | [AvailabilityStorage module: reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html) |
-| [Glue API: Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-inventory-management-feature-integration.html) | [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html) | [File details: warehouse_address.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html) | [Managing stocks in a multi-store environment: Best practices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html) |
-|  |  | [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html) |  |
+| [Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-inventory-management-feature.html) | [Retrieving abstract product availability](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-abstract-product-availability.html) | [File details: product_stock.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-product-stock.csv.html) | [AvailabilityStorage module: reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html) |
+| [Glue API: Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-inventory-management-glue-api.html) | [Retrieving concrete product availability](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-concrete-product-availability.html) | [File details: warehouse_address.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse-address.csv.html) | [Managing stocks in a multi-store environment: Best practices](/docs/pbc/all/warehouse-management-system/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html) |
+|  |  | [File details: warehouse_store.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse-store.csv.html) |  |

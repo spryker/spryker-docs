@@ -1,11 +1,12 @@
 ---
-title: Inventory Management feature modules
+title: Inventory Management feature modules overview
 last_updated: Aug 13, 2021
 description: The Inventory Management feature adds stock and availability management as well as multiple warehouse stock management for products
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/201903.0/nventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html
+  - /docs/scos/dev/feature-walkthroughs/202204.0/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
 ---
 
 This document describes the modules of the Inventory Management feature.
@@ -42,7 +43,7 @@ Events are generated in the following cases:
 | Case 1 | If availability amount was equal to 0 and now it’s more than 0, the event is triggered. |
 | Case 2 | If availability amount was more than 0 and now it’s equal to 0, the event is triggered. |
 
-The default behavior is having the **available** or **not available** status set for a product while the amount of product does not matter. Even though events are triggered when amount is changed from 0 to N or from N to 0, it's not the amount change that triggers events, but the change of product status. You can change the default behavior for the events to be triggered whenever the amount is changed. For more information, see [HowTo: Change the Default Behavior of Event Triggering in the AvailabilityStorage Module](/docs/scos/dev/tutorials-and-howtos/howtos/howto-change-the-default-behavior-of-event-triggering-in-the-availabilitystorage-module.html).
+The default behavior is having the **available** or **not available** status set for a product while the amount of product does not matter. Even though events are triggered when amount is changed from 0 to N or from N to 0, it's not the amount change that triggers events, but the change of product status. You can change the default behavior for the events to be triggered whenever the amount is changed. For more information, see [HowTo: Change the Default Behavior of Event Triggering in the AvailabilityStorage Module](/docs/pbc/all/warehouse-management-system/extend-and-customize/configure-product-availability-to-be-published-on-product-amount-changes.html).
 
 Published data example in JSON.
 
@@ -87,7 +88,7 @@ A stock update triggers the event `stock update`. For example, in our dummy paym
 
 It’s possible to use the `vendor/bin/console data:import:product-stock` command to import stocks into the database. The default stock importer uses the `csv` file from `src/Pyz/Zed/Updater/Business/Internal/data/import/product_stock.csv` which imports stocks.
 
-To edit stock in the Back Office, see [Edit stock of products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/edit-stock-of-products-and-product-bundles.html).
+To edit stock in the Back Office, see [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html).
 
 Stock update considers the stock from the stock file to be the absolute value. On stock update, the stock is overwritten with the values from the file. If a certain product does not have a record in the stock file, then it is considered that the stock of this product does not have to be updated.
 

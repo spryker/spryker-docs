@@ -22,7 +22,7 @@ To start feature integration, integrate the required features:
 |-|-|-|
 | Spryker Core | {{page.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-spryker-core-feature-integration.html)  |
 | Marketplace Product Offer | {{page.version}} | [Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-offer-feature-integration.html)  |
-| Inventory Management | {{page.version}} | [Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/inventory-management-feature-integration.html)  |
+| Inventory Management | {{page.version}} | [Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-inventory-management-feature.html)  |
 
 ### 1) Install the required modules using Composer
 
@@ -736,7 +736,7 @@ Make sure that the imported data is added to the `spy_merchant_stock` and `spy_p
 
 ## Related features
 
-| FEATURE                                             | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                                       | 
+| FEATURE                                             | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE                                                                                                                                                                                                       |
 |-----------------------------------------------------|----------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Marketplace Inventory Management + Order Management |                           | [Marketplace Inventory Management + Order Management feature Integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-order-management-feature-integration.html) |
 | Marketplace Inventory Management + Packaging Units  |                                  | [Marketplace Inventory Management + Packaging Units feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-packaging-units-feature-integration.html)   |

@@ -1,5 +1,5 @@
 ---
-title: Availability  Notification feature overview
+title: Availability Notification feature overview
 description: The feature lets registered and guest users subscribe to the newsletter by specifying the email address they wish to receive the notifications to
 last_updated: Aug 12, 2021
 template: concept-topic-template
@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/availability-notification-feature-overview
   - /docs/availability-notification-feature-overview
   - /docs/en/availability-notification-feature-overview
+  - /docs/scos/user/features/202204.0/availability-notification-feature-overview.html
 ---
 
 When customers visit an out-of-stock product page, they usually search for the shop which has the product in stock. The Back Office user of the original store can replenish the stock; however, it does not mean that the customer is still there to buy it. The *Availability Notification* feature provides a way to notify you about the demand for the product, so you can prioritize the product replenishment and notify the customer once it is available again.
@@ -48,5 +49,5 @@ A developer can manage the newsletter text files in `/src/Spryker/Zed/Availabili
 
 |INTEGRATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|
-| [Availability Notification feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/availability-notification-feature-integration.html)  | [Managing availability notifications](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-availability-notifications/managing-availability-notifications.html)  |
-| [Glue API: Availability Notification feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-availability-notification-feature-integration.html) | [Retrieving subscriptions to availability notifications](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html)  |
+| [Availability Notification feature integration](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-availability-notification-feature.html)  | [Managing availability notifications](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/manage-availability-notifications.html)  |
+| [Glue API: Availability Notification feature integration](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-availability-notification-glue-api.html) | [Retrieving subscriptions to availability notifications](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html)  |

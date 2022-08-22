@@ -43,7 +43,5 @@ If the [Marketplace Return Management](/docs/marketplace/user/features/{{page.ve
 ## Main merchant user
 
 Main merchant user is a user which has assigned `root_group`. 
-The main working tool for the main merchant user is [Back Office](docs/scos/user/back-office-user-guides/202005.0/general-back-office-overview.html).
+The main working tool for the main merchant user is [Back Office](/docs/scos/user/back-office-user-guides/202001.0/general-back-office-overview.html).
 Main merchant user has no access to the merchant portal.
-
-

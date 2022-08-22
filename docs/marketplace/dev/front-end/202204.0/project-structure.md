@@ -4,7 +4,7 @@ description: This document provides details about the structure of the frontend 
 template: concept-topic-template
 related:
   - title: Building the project
-    link: docs/marketplace/dev/front-end/building-the-project.html
+    link: docs/marketplace/dev/front-end/page.version/building-the-project.html
 ---
 
 This document explains the structure of the frontend project in the Spryker Marketplace.

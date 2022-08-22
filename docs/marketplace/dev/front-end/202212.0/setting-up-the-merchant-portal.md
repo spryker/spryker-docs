@@ -4,7 +4,7 @@ description: This document provides details about setting up Spryker Marketplace
 template: howto-guide-template
 related:
   - title: Building the project
-    link: docs/marketplace/dev/front-end/building-the-project.html
+    link: docs/marketplace/dev/front-end/page.version/building-the-project.html
 ---
 
 This document provides details about how to set up the Spryker Merchant Portal.

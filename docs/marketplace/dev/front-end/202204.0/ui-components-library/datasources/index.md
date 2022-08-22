@@ -5,11 +5,11 @@ description: This document provides details about the Datasources service in the
 template: concept-topic-template
 related:
   - title: Datasource Http
-    link: docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-http.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/datasources/datasource-http.html
   - title: Datasource Inline Table
-    link: docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline-table.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/datasources/datasource-inline-table.html
   - title: Datasource Inline
-    link: docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/datasources/datasource-inline.html
 ---
 
 This document explains the Datasources service in the Components Library.

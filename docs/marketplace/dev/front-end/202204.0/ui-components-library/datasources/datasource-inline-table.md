@@ -4,11 +4,11 @@ description: This document provides details about the Datasource Inline Table se
 template: concept-topic-template
 related:
   - title: Datasources
-    link: docs/marketplace/dev/front-end/ui-components-library/datasources/index.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/datasources/index.html
   - title: Datasource Http
-    link: docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-http.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/datasources/datasource-http.html
   - title: Datasource Inline
-    link: docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-inline.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/datasources/datasource-inline.html
 ---
 
 This document explains the Datasource Inline Table service in the Components Library.

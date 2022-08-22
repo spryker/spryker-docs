@@ -5,11 +5,11 @@ description: This document provides details about the Table Filter extension in 
 template: concept-topic-template
 related:
   - title: Table Filter Date Range
-    link: docs/marketplace/dev/front-end/table-design/table-filters/table-filter-date-range.html
+    link: docs/marketplace/dev/front-end/page.version/table-design/table-filters/table-filter-date-range.html
   - title: Table Filter Select
-    link: docs/marketplace/dev/front-end/table-design/table-filters/table-filter-select.html
+    link: docs/marketplace/dev/front-end/page.version/table-design/table-filters/table-filter-select.html
   - title: Table Filter Tree Select
-    link: docs/marketplace/dev/front-end/table-design/table-filters/table-filter-tree-select.html
+    link: docs/marketplace/dev/front-end/page.version/table-design/table-filters/table-filter-tree-select.html
 ---
 
 This document explains the Table Filter extension in the Components Library.

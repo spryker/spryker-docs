@@ -4,9 +4,9 @@ description: This document provides details about the Data Transformer Collate s
 template: concept-topic-template
 related:
   - title: Data Transformer Data Configurators
-    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/index.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/data-transformers/collate/data-configurators/index.html
   - title: Data Transformer Filters
-    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/index.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/data-transformers/collate/filters/index.html
 ---
 
 This document explains the Data Transformer Collate service in the Components Library.

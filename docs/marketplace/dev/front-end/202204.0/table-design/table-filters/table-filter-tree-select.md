@@ -4,11 +4,11 @@ description: This document provides details about the Table Filter Tree Select c
 template: concept-topic-template
 related:
   - title: Table Filter extension
-    link: docs/marketplace/dev/front-end/table-design/table-filters/index.html
+    link: docs/marketplace/dev/front-end/page.version/table-design/table-filters/index.html
   - title: Table Filter Date Range
-    link: docs/marketplace/dev/front-end/table-design/table-filters/table-filter-date-range.html
+    link: docs/marketplace/dev/front-end/page.version/table-design/table-filters/table-filter-date-range.html
   - title: Table Filter Select
-    link: docs/marketplace/dev/front-end/table-design/table-filters/table-filter-select.html
+    link: docs/marketplace/dev/front-end/page.version/table-design/table-filters/table-filter-select.html
 ---
 
 This document explains the Table Filter Tree Select component in the Components Library.

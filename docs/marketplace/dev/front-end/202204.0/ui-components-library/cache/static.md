@@ -4,7 +4,7 @@ description: This document provides details about the Cache Strategy Static serv
 template: concept-topic-template
 related:
   - title: Cache
-    link: docs/marketplace/dev/front-end/ui-components-library/cache/index.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/cache/index.html
 ---
 
 This document explains the Cache Strategy Static service in the Components Library.

@@ -6,7 +6,7 @@ redirect_from:
   - /docs/marketplace/dev/front-end/extending-the-project/index.html
 related:
   - title: Migration guide - Extending the project
-    link: docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
+    link: docs/marketplace/dev/front-end/page.version/extending-the-project/migration-guide-extending-the-project.html
 ---
 
 To add additional frontend functionality beyond the one provisioned out-of-the-box, the project must be extended.

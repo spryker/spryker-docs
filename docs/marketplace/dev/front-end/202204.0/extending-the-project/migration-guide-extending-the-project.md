@@ -6,7 +6,7 @@ redirect_from:
   - /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
 related:
   - title: Extending the project
-    link: docs/marketplace/dev/front-end/extending-the-project/index.html
+    link: docs/marketplace/dev/front-end/page.version/extending-the-project/index.html
 ---
 
 This document outlines the changes that need to be made at a project level in order to [extend the frontend part of your project](/docs/marketplace/dev/front-end/{{page.version}}/extending-the-project/index.html).

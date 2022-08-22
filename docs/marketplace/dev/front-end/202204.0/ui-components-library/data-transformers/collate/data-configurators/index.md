@@ -4,7 +4,7 @@ description: This document provides details about the Data Transformer Data Conf
 template: concept-topic-template
 related:
   - title: Data Transformer Collate Configurator Table
-    link: docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/table.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/data-transformers/collate/data-configurators/table.html
 ---
 
 This document explains the Data Transformer Data Configurators service in the Components Library.

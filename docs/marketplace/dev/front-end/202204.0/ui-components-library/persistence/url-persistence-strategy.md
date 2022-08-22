@@ -4,11 +4,11 @@ description: This document provides details about the Url Persistence Strategy s
 template: concept-topic-template
 related:
   - title: Persistence
-    link: docs/marketplace/dev/front-end/ui-components-library/persistence/index.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/persistence/index.html
   - title: In Memory Persistence Strategy
-    link: docs/marketplace/dev/front-end/ui-components-library/persistence/in-memory-persistence-strategy.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/persistence/in-memory-persistence-strategy.html
   - title: Local Storage Persistence Strategy
-    link: docs/marketplace/dev/front-end/ui-components-library/persistence/local-storage-persistence-strategy.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/persistence/local-storage-persistence-strategy.html
 ---
 
 This document explains the Url Persistence Strategy service in the Components Library.

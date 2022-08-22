@@ -4,9 +4,9 @@ description: This document provides details how to build the frontend part of th
 template: concept-topic-template
 related:
   - title: Project structure
-    link: docs/marketplace/dev/front-end/project-structure.html
+    link: docs/marketplace/dev/front-end/page.version/project-structure.html
   - title: Setting up the Merchant Portal
-    link: docs/marketplace/dev/front-end/setting-up-the-merchant-portal.html
+    link: docs/marketplace/dev/front-end/page.version/setting-up-the-merchant-portal.html
 ---
 
 This document provides details how to build the frontend part of the Merchant Portal.

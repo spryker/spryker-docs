@@ -4,7 +4,7 @@ description: This document provides details about the Cache service in the Compo
 template: concept-topic-template
 related:
   - title: Cache Strategy Static
-    link: docs/marketplace/dev/front-end/ui-components-library/cache/static.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/cache/static.html
 ---
 
 This document explains the Cache service in the Component Library.

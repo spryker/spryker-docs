@@ -4,21 +4,21 @@ description: This document provides details about the Actions Redirect service i
 template: concept-topic-template
 related:
   - title: Actions
-    link: docs/marketplace/dev/front-end/ui-components-library/actions/index.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/actions/index.html
   - title: Actions Close Drawer
-    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/actions/actions-close-drawer.html
   - title: Actions Drawer
-    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-drawer.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/actions/actions-drawer.html
   - title: Actions HTTP
-    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-http.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/actions/actions-http.html
   - title: Actions Notification
-    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-notification.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/actions/actions-notification.html
   - title: Actions Refresh Drawer
-    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-drawer.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/actions/actions-refresh-drawer.html
   - title: Actions Refresh Parent Table
-    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-parent-table.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/actions/actions-refresh-parent-table.html
   - title: Actions Refresh Table
-    link: docs/marketplace/dev/front-end/ui-components-library/actions/actions-refresh-table.html
+    link: docs/marketplace/dev/front-end/page.version/ui-components-library/actions/actions-refresh-table.html
 
 ---
 

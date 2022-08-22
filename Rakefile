@@ -75,6 +75,7 @@ task :check_acp_user do
     /docs\/acp\/dev\/.+/,
     /docs\/fes\/.+/,
     /docs\/paas-plus\/.+/,
+    /docs\/pbc\/.+/,
     /docs\/sdk\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run

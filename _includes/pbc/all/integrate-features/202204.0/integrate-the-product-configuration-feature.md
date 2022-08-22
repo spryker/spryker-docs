@@ -1313,7 +1313,7 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 
 ```
 
-**src/Pyz/Client/ShoppingList/ShoppingListDependencyProvider.php**
+**src/Pyz/Zed/ShoppingList/ShoppingListDependencyProvider.php**
 
 ```php
 <?php
@@ -1828,7 +1828,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that product configuration data is displayed on the *Product Details*, *Cart*, *Wishlist* and Shopping list pages.
+Make sure that product configuration data is displayed on the *Product Details*, *Cart*, *Wishlist* and *Shopping list* pages.
 
 {% endinfo_block %}
 

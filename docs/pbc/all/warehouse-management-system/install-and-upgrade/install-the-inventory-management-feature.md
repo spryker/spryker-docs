@@ -1,5 +1,5 @@
 ---
-title: Inventory Management feature integration
+title: Install the Inventory Management feature
 description: The guide guides you through the process of installing the Warehouse Management functionality into your project.
 last_updated: Jun 17, 2021
 template: feature-integration-guide-template
@@ -16,7 +16,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/inventory-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/inventory-management-feature-integration.html
 related:
-  - title: Glue API - Inventory Management feature integration
+  - title: Install the Inventory Management Glue API
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-inventory-management-feature-integration.html
   - title: Inventory Management feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html

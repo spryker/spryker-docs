@@ -11,7 +11,7 @@ This document describes how to retrieve availability when retrieving abstract pr
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Glue API: Inventory Management feature integration](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-inventory-management-glue-api.html)
+* [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-inventory-management-glue-api.html)
 
 ## Retrieve an abstract product
 

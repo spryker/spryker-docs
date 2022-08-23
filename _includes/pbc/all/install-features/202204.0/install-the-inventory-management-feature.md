@@ -540,5 +540,5 @@ Make sure that the warehouse address management works:
 
 |FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 |--- | --- | --- |
-| Inventory Management API | | [Glue API: Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-inventory-management-feature-integration.html) |
+| Inventory Management API | | [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-inventory-management-glue-api.html) |
 | Alternative Products | | [Alternative Products + Inventory Management feature integration - ongoing](/docs/scos/dev/feature-integration-guides/{{site.version}}/alternative-products-inventory-management-feature-integration.html)|

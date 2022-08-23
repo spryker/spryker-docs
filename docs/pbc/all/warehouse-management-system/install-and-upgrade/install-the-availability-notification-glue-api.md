@@ -1,5 +1,5 @@
 ---
-title: Glue API - Availability Notification feature integration
+title: Install the Availability Notification Glue API
 description: Integrate the Glue API - Availability Notification feature into your project
 last_updated: Jun 18, 2021
 template: feature-integration-guide-template
@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-availability-notification-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-availability-notification-feature-integration.html
 related:
-  - title: Availability Notification feature integration
+  - title: Install the Availability Notification feature
     link: docs/scos/dev/feature-integration-guides/page.version/availability-notification-feature-integration.html
   - title: Managing availability notifications
     link: docs/pbc/all/warehouse-management-system/manage-using-glue-api/manage-availability-notifications.html

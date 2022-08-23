@@ -1,5 +1,5 @@
 ---
-title: Migration guide - AvailabilityOfferConnector
+title: Upgrade the AvailabilityOfferConnector module
 description: Use the guide to migrate to a new version of the AvailabilityOfferConnector module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

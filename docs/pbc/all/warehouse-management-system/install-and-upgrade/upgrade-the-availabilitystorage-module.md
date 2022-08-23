@@ -1,5 +1,5 @@
 ---
-title: Migration guide - AvailabilityStorage
+title: Upgrade the AvailabilityStorage module
 description: Use the guide to migrate to a new version of the AvailabilityStorage module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

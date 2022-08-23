@@ -1,5 +1,5 @@
 ---
-title: Availability Notification feature integration
+title: Install the Availability Notification feature
 description: The guide walks you through the process of installing the Product is Available Again feature into the project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202005.0/availability-notification-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/availability-notification-feature-integration.html
 related:
-  - title: Glue API - Availability Notification feature integration
+  - title: Install the Availability Notification Glue API
     link: docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-availability-notification-glue-api.html
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Glue API - Inventory Management feature integration
+title: Install the Inventory Management Glue API
 description: Learn how to integrate the Inventory Management feature API into a Spryker project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-inventory-management-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-inventory-management-feature-integration.html
 related:
-  - title: Inventory Management feature integration
+  - title: Install the Inventory Management feature
     link: docs/scos/dev/feature-integration-guides/page.version/inventory-management-feature-integration.html
   - title: Retrieving abstract product availability
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html

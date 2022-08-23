@@ -1,5 +1,5 @@
 ---
-title: Migration guide - Availability
+title: Upgrade the Availability module
 description: Use the guide to migrate to the new version of the Availability module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template

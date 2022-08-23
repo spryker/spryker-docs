@@ -203,7 +203,7 @@ Agents can perform the same actions (on company users' behalf) as company users.
 
 | INSTALLATION GUIDES | UPGRADE GUIDES|
 |---|---|
-| [Install the Quotation Process feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-quotation-process-feature-integration.html) | [Upgrade the QuoteRequestAgent module](/docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagent-module.html) |
-| [Install the Quotation Process + Checkout feature](/docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-checkout-feature.html) |  |
-| [Install the Quotation Process + Approval Process feature](/docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-approval-process-feature.html) |  |
-| [Install the Quotation Process + Multiple Carts feature](/docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-multiple-carts-feature.html) |  |
+| [Install the Quotation Process feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-quotation-process-feature-integration.html) | [Upgrade the Quote module](/docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quote-module.html) |
+| [Install the Quotation Process + Checkout feature](/docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-checkout-feature.html) | [Upgrade the QuoteRequestA module](/docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequest-module.html) |
+| [Install the Quotation Process + Approval Process feature](/docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-approval-process-feature.html) | [Upgrade the QuoteRequestAgent module](/docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagent-module.html) |
+| [Install the Quotation Process + Multiple Carts feature](/docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-multiple-carts-feature.html) | [Upgrade the QuoteRequestAgentPage module](/docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagentpage-module.html) |

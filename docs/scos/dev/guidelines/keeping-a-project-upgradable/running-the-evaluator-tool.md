@@ -20,29 +20,50 @@ This document describes how to check if code is compliant with Spryker’s stand
 
 ## Prerequisites
 
-Depending
-* Install the evaluator by [installing Spryker SDK](https://github.com/spryker-sdk/sdk#installation).
+Depending on how you want to use the tool, do one of the following:
 
-* Get general information about the tool and see all the commands related to evaluation in the `analyze` section:
+* Recommended: Install the evaluator by [installing Spryker SDK](https://github.com/spryker-sdk/sdk#installation).
 
-```bash
-spryker-sdk list
-```
+* To use the `spryker-sdk` image from project directory without installing Spryker SDK, see [Run an evaluation without Spryker SDK installed](#run-an-evaluation-without-spryker-sdk-installed).
 
-Also, possible to use spryker-sdk image from project directory, without any installation. Example: `docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console {command name}'`
-
-## Run an evaluation
+## Run an evaluation with Spryker SDK installed
 
 To evaluate your code, run the evaluator:
 
 ```bash
 spryker-sdk analyze:php:code-compliance
 ```
-
-This creates `analyze:php:code-compliance.violations.yaml` in the `reports` folder.
+    This creates `analyze:php:code-compliance.violations.yaml` in the `reports` folder.
 
 To view the report, run the following command:
 
 ```bash
 spryker-sdk analyze:php:code-compliance-report
+```
+
+Get general information about the tool and see all the commands related to evaluation in the `analyze` section:
+
+```bash
+spryker-sdk list
+```
+
+## Run an evaluation without Spryker SDK installed
+
+To evaluate your code, run the evaluator:
+
+```bash
+docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console spryker-sdk analyze:php:code-compliance'
+```
+    This creates `analyze:php:code-compliance.violations.yaml` in the `reports` folder.
+
+To view the report, run the following command:
+
+```bash
+docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console spryker-sdk analyze:php:code-compliance-report'
+```
+
+You can run all the Spryker SDK commands using the method in the prior commands. Get general information about the tool and see all the commands related to evaluation in the `analyze` section:
+
+```bash
+docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console spryker-sdk list'
 ```

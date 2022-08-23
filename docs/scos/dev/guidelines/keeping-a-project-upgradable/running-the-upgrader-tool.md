@@ -67,7 +67,7 @@ The Evaluator tool is supplied as part of Spryker SDK.
 
 1. Install the Spryker SDK tool https://github.com/spryker-sdk/sdk#installation
 
-3. Also, possible to use spryker-sdk image from project directory, without any installation. Example: `docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console {connamd name}'`
+2. Also, possible to use spryker-sdk image from project directory. Example: `docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console analyze:php:code-compliance'`
 
 ## Run the upgrader tool
 

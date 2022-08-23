@@ -12,3 +12,4 @@ algolia:
     - docs/cloud/dev/spryker-cloud-commerce-os/**/*.md
     - docs/fes/dev/**/*.md
     - docs/acp/user/**/*.md
+    - docs/sdk/dev/**/*.md

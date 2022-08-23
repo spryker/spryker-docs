@@ -19,11 +19,11 @@ First, think about what your app should be capable of: what features it will bri
 ### API-first
 It's strongly recommended that apps follow the API-first approach. 
 API-first means that your app is centered on the API. It should be possible to perform every action via the scripting language, and every piece of functionality should be available for other systems to leverage. For more information on the API-first approach, see [this blog post](https://www.algolia.com/blog/product/the-5-principles-of-api-first-development-and-what-does-api-first-even-mean/).
-You need to have a clear understanding of what your app API will provide to others, and always keep that in mind when you design your app.
+You need to have a clear understanding of what your app API will provide to others, and always keep that in mind when designing your app.
 
 ### Schema-first
 
-Before you start with the development, you should design your API schema files first. Depending on your requirements, you can have an OpenAPI or an [Async API](#async-api) schema file. In this step, you define the [Sync API](#sync-api) endpoints your app will provide to others, the messages you will emit or consume, and the data you expect to work with.
+Before you start with the development, you should design your API schema files. Depending on your requirements, you can have an OpenAPI or an [Async API](#async-api) schema file. In this step, you define the [Sync API](#sync-api) endpoints your app will provide to others, the messages you will emit or consume, and the data you expect to work with.
 
 {% info_block infoBox "Info" %}
 
@@ -37,7 +37,7 @@ You can use the following tools to design your APIs:
 - [Async API Studio](https://studio.asyncapi.com/)
 - [Swagger Editor](https://editor.swagger.io/)
 
-You can also use wizards provided by Spryker, which will be used by the SprykerSDK workflow.
+You can also use wizards provided by Spryker, which will be used by the [SprykerSDK workflow](https://github.com/spryker-sdk/sdk/blob/master/docs/workflow.md).
 
 ## Build an app
 
@@ -115,7 +115,7 @@ The translation file contains the keys and the translation values for each local
 
 This file is created with the help of a wizard, but you can also add or update it manually.
 
-For more details, see [App Configuration Translation](/docs/acp/user/app-configuration-translation.html)
+For more details, see [App Configuration Translation](/docs/acp/user/app-configuration-translation.html).
 
 #### 2. Creates app API
 

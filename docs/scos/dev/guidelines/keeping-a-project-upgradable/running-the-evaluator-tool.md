@@ -20,19 +20,16 @@ This document describes how to check if code is compliant with Spryker’s stand
 
 ## Prerequisites
 
-Get general information about the tool and see all available commands related to the evaluation process we may in *analyze* section:
+Depending
+* Install the evaluator by [installing Spryker SDK](https://github.com/spryker-sdk/sdk#installation).
+
+* Get general information about the tool and see all the commands related to evaluation in the `analyze` section:
 
 ```bash
 spryker-sdk list
 ```
 
-## Install the evaluator tool
-
-The evaluator tool is part of Spryker SDK.
-
-1. Install the Spryker SDK tool https://github.com/spryker-sdk/sdk#installation
-
-2. Also, possible to use spryker-sdk image from project directory, without any installation. Example: `docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console {connamd name}'`
+Also, possible to use spryker-sdk image from project directory, without any installation. Example: `docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console {command name}'`
 
 ## Run an evaluation
 

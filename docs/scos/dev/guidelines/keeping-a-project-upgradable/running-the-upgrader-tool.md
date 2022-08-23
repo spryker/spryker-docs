@@ -55,14 +55,7 @@ This document describes how to upgrade all the modules to the latest versions.
   git config --global user.email "{GIT_EMAIL_ADDRESS}"
   ```
 
-3. Connect to the Docker SDK CLI container:
-
-```bash
-docker/sdk cli
-```
-
-
-3. Also, possible to use spryker-sdk image from project directory, without any installation. Example: `docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console {connamd name}'`
+3. Also, possible to use spryker-sdk image from project directory. Example: `docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console {command name}'`
 
 ## Run the upgrader tool
 

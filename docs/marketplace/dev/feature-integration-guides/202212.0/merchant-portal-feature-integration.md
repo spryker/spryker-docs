@@ -10,9 +10,9 @@ related:
 ---
 
 {% info_block infoBox "Info" %}
-
+<!--
 See [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html).
-
+-->
 {% endinfo_block %}
 
 
@@ -48,12 +48,12 @@ $ npm run mp:build:production
 ## Installing backend
 
 Install the needed packages for the Merchant Portal with dependencies, see the available list [here](https://github.com/spryker/?q=merchant-portal-gui)
-
+<!--
 | NAME | VERSION | INTEGRATION GUIDE |
 | --------- | ----- | ---------- |
 | Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Marketplace Merchant Portal Core | {{page.version}}  | [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html) |
-
+-->
 ### Merchant Portal users
 
 ### 1) Create users
@@ -98,9 +98,9 @@ Connect users and merchants using Zed UI (Backoffice) or using the next data imp
  merchant_key,merchant_reference,merchant_name,registration_number,status,email,is_active,url.de_DE,url.en_US
  sony-experts,MER000006,Sony Experts,HYY 134306,approved,michele@sony-experts.com,1,/de/merchant/sony-experts,/en/merchant/sony-experts
 ```
-
+<!--
 In case you don't have merchant user data import integrated, you can find how to do it in the [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) guide.
-
+-->
 
 **data/import/common/common/marketplace/merchant_user.csv**
 
@@ -344,9 +344,9 @@ class ZedNavigationDependencyProvider extends SprykerZedNavigationDependencyProv
 {% endinfo_block %}
 
 ### 5) Separate Login feature setup (security firewalls).
-
+<!--
 It requires upgrading spryker/smyfony:3.5.0 and applying some changes on the project, see [Symfony 5 integration](/docs/scos/dev/technical-enhancement-integration-guides/integrating-symfony-5.html).
-
+-->
 Install the required modules:
 
 ```bash
@@ -388,7 +388,7 @@ After login, you should be redirected to the Dashboard. The contents of the Side
 ## Related features
 
 Integrate the following related features:
-
+<!--
 | FEATURE    | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE   |
 |----------|------------------|------------|
 | Merchant Portal - Marketplace Merchant    | [Merchant Portal - Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-merchant-feature-integration.html)    |
@@ -398,3 +398,4 @@ Integrate the following related features:
 | Merchant Portal - Marketplace Product + Inventory Management  |                           | [Merchant Portal - Marketplace Product + Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-inventory-management-feature-integration.html)     |
 | Merchant Portal - Marketplace Product Option Management   |                           | [Merchant Portal - Marketplace Product Option Management integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-option-management-feature-integration.html)    |
 | Merchant Portal - Marketplace Product + Tax   |                           | [Merchant Portal - Marketplace Product + Tax feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-marketplace-product-tax-feature-integration.html)   |
+-->

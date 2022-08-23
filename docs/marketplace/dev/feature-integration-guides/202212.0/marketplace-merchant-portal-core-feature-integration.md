@@ -14,14 +14,14 @@ Follow the steps below to install the Merchant Portal Core feature core.
 ### Prerequisites
 
 To start feature integration, integrate the required features:
-
+<!--
 | NAME | VERSION | INTEGRATION GUIDE |
 | -------------------- | ---------- | ---------|
 | Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
 | Spryker Core BO      | {{page.version}} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html) |
 | Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
 | Acl | {{page.version}} | [ACL feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/acl-feature-integration.html) |
-
+-->
 ###  1) Install the required modules using Composer
 
 Install the required modules:
@@ -1266,7 +1266,8 @@ Log in to the Merchant Portal and make sure that when clicking on the profile pi
 ## Related features
 
 Integrate the following related features:
-
+<!--
 | FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | -|
 | Merchant Portal | &check;  |  [Merchant Portal feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-feature-integration.html) |
+-->

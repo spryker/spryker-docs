@@ -26,36 +26,36 @@ redirect_from:
 
 ## Overview
 
-Spryker Middleware is a constructor that allows you to set up a linear data processing flow, also referred to as pipeline, for import/export of data from some system to shop, or from shop to some system. For example, it can be used for importing products to a shop, or exporting orders from a shop.
+Spryker Middleware is a constructor that lets you to set up a linear data processing flow, also referred to as *pipeline*, for the import and export of data from some system to shop, or from shop to some system. For example, it can be used for importing products to a shop, or exporting orders from a shop.
 
 ### Pipeline structure
 
-The Middleware applies the pipeline pattern allowing to connect different stages of data processing together and inverting dependencies between them. The imported/exported items are processed one by one and go through a set of specific steps called “stages”.
+The Middleware applies the pipeline pattern letting you connect different stages of data processing together and inverting dependencies between them. The imported and exported items are processed one by one and go through a set of specific steps called *stages*.
 
-The pipeline contains 5 standard stages: reader, validator, mapper, translator, and writer. However, you can use them or define any number of stages.
+The pipeline contains five standard stages: reader, validator, mapper, translator, and writer. However, you can use them or define any number of stages.
 
-First of all, a source item is **read**. Then, it is **validated** to make sure that all attributes etc. are correct and all the necessary data is available. Having passed the validation, the item is **mapped**, for example, keys of the source system are mapped onto the target system. This being done, the items go through a **translator** which processes the values and translates them into a respective format (for example, the price value is a decimal value, but should be integer - it’s translator’s responsibility to change it to the required value). After that, the item is **written** to the target system (to the database, in case of import, to a file, if it’s export etc.).
+First of all, a source item is *read*. Then, it is *validated* to make sure that all attributes are correct and all the necessary data is available. Having passed the validation, the item is *mapped*—for example, keys of the source system are mapped onto the target system. This being done, the items go through a *translator*, which processes the values and translates them into a respective format—for example, the price value is a decimal value, but it should be integer, and it's translator's responsibility to change it to the required value. After that, the item is *written* to the target system (to the database, in case of import, to a file, if it's export).
 ![Pipeline stages](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Spryker+Middleware/stages.png)
 
-Each stage can be abstracted as having:
+Each stage can be abstracted as having the following:
 
-1. Input – item is received from the previous stage, exception might be a reader, which receives nothing.
-2. Output – item is provided for the next stage, exception might be a writer, which persists data and sends back nothing.
-3. Configuration – configuration of the stage, e.g. validation rules for the validator.
-4. Logging – used by any stage to leave some artefacts of processing data.
+1. Input. The item is received from the previous stage, exception might be a reader, which receives nothing.
+2. Output. The item is provided for the next stage, exception might be a writer, which persists data and sends back nothing.
+3. Configuration. The configuration of the stage—for example, validation rules for the validator.
+4. Logging. It is sed by any stage to leave some artefacts of processing data.
 ![Input output](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Spryker+Middleware/input-output.png)
 
-The incoming data is taken from the stream - the Middleware does not care about the source of the data, whether it comes from a file, from an API etc. The middleware provides its own interface, so that the source of data does not really matter.
+The incoming data is taken from the stream—the Middleware does not care about the source of the data, whether it comes from a file or an API. The middleware provides its own interface, so that the source of data does not really matter.
 
 ### How the Middleware works
 
-The Middleware provides a console interface to allow job triggering and Jenkins integration. It is evoked by running the `middleware:process:run` command. The main parameter of the command is *-p* (process name) which defines the process to be started.
+The Middleware provides a console interface to allow job triggering and Jenkins integration. It is evoked by running the `middleware:process:run` command. The main parameter of the command is `-p` (process name) which defines the process to be started.
 
-The default implementation of the middleware constructor includes the interface, reading/writing from/to JSON, .csv, .xml formats, business logic of mapping, translation and validation (you can add your own translators and validators).
+The default implementation of the middleware constructor includes the interface, reading/writing from/to JSON, CSV, XML formats, business logic of mapping, translation and validation (you can add your own translators and validators).
 
-There are two main plugin interfaces, which should be implemented to configure Middleware Process: `ConfigurationProfilePluginInterface` and `ProccessConfigurationPluginInterface`.
+There are two main plugin interfaces, which must be implemented to configure Middleware Process: `ConfigurationProfilePluginInterface` and `ProccessConfigurationPluginInterface`.
 
-The `ConfigurationProfilePluginInterface` registers the processes (like import/export) and the list of custom translators/validators (if any) implemented at the project level. The interface can be implemented in any module under `\Spryker\Zed\[MODULE]\Communication\Plugin\Configuration`.
+The `ConfigurationProfilePluginInterface` plagin registers the processes (like import/export) and the list of custom translators/validators (if any) implemented at the project level. The interface can be implemented in any module under `\Spryker\Zed\[MODULE]\Communication\Plugin\Configuration`.
 
 This plugin implements the interface as follows:
 
@@ -92,21 +92,21 @@ class AkeneoPimConfigurationProfilePlugin extends AbstractPlugin implements Conf
 
 Each process is a separate plugin that consists of the following methods (ProcessConfigurationPluginInterface):
 
-**getProcessName** - returns the process name which is used to find necessary process with the parameter (transferred with -p option).
+**getProcessName**—returns the process name which is used to find necessary process with the parameter (transferred with -p option).
 
-**getInputStreamPlugin** - configures the source where the data is read from.
+**getInputStreamPlugin**—configures the source where the data is read from.
 
-**getOutputStreamPlugin** - configures the target where the data is written.
+**getOutputStreamPlugin**—configures the target where the data is written.
 
-**getIteratorPlugin** - either does nothing and releases the input stream for processing as is, or alters the data for further processing. For example, if the input stream is just a file, the iterator does nothing and lets the data be processed further. If the input stream is, for example, a file catalog, `getInputStreamPlugin` returns the file name, the iterator goes through all the files, and if, say each file is in the JSON format, the iterator returns each JSON file of the catalog for processing to pipeline.
+**getIteratorPlugin**—either does nothing and releases the input stream for processing as is, or alters the data for further processing. For example, if the input stream is just a file, the iterator does nothing and lets the data be processed further. If the input stream is, for example, a file catalog, `getInputStreamPlugin` returns the file name, the iterator goes through all the files, and if, say each file is in the JSON format, the iterator returns each JSON file of the catalog for processing to pipeline.
 
 You can use one of two iterators that are provided out of the box (NullIterator, JsonDirectoryIterator) or implement your own iterator.
 
-**getStagePlugins** - contains a list of all stages the items go through (reader, validator, mapper, translator, writer) and makes sure each item passes each stage one by one.
+`getStagePlugins`—contains a list of all stages the items go through (reader, validator, mapper, translator, writer) and makes sure each item passes each stage one by one.
 
-**getLoggerPlugin** - defines the way logging happens. The default Middleware logger logs to the PHP standard error stream (php://stderr) (this can be changed as needed). Detalization of the logging is fully customizable, which means you can configure it as you wish.
+`getLoggerPlugin`—defines the way logging happens. The default Middleware logger logs to the PHP standard error stream (php://stderr) (this can be changed as needed). Detalization of the logging is fully customizable, which means you can configure it as you wish.
 
-**getPreProcessorHookPlugins** and **getPostProcessorHookPlugins** - define what should be done prior to or after a process. For example, it might be necessary to download a file with the categories prior to the categories import: this would be specified in `getPreProcessHookPlugins`.
+`getPreProcessorHookPlugins` and `getPostProcessorHookPlugins`—define what should be done prior to or after a process. For example, it might be necessary to download a file with the categories prior to the categories import: this would be specified in `getPreProcessHookPlugins`.
 
 ```php
 class CategoryImportConfigurationPlugin extends AbstractPlugin implements ProcessConfigurationPluginInterface
@@ -188,16 +188,16 @@ class CategoryImportConfigurationPlugin extends AbstractPlugin implements Proces
 
 ### Code organization
 
-The Middleware is a set of modules in the Middleware namespace allowing to group common functionalities together. The middleware cannot provide readers and writers for all systems, these should be implemented in scope of respective modules and namespaces.
+The Middleware is a set of modules in the Middleware namespace allowing to group common functionalities together. The middleware cannot provide readers and writers for all systems, these must be implemented in scope of respective modules and namespaces.
 
 Here is an example of code organization for a project:
 ![Code organization](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Spryker+Middleware/code-organization.png)
 
 ### Middleware integration
 
-The core of the Spryker Middleware is implemented in the Process module. This module collects all process plugins and creates processes out of them.
+The core of the Spryker Middleware is implemented in the `Process` module. This module collects all process plugins and creates processes out of them.
 
-To install Process module, run this command in console:
+To install the `Process` module, run this command in console:
 
 ```
 composer require spryker-middleware/process
@@ -248,45 +248,45 @@ class ProcessDependencyProvider extends SprykerMiddlewareProcessDependencyProvid
 }    
 ```
 
-See [this example](https://github.com/spryker-eco/akeneo-pim-middleware-connector/blob/master/src/SprykerEco/Zed/AkeneoPimMiddlewareConnector/Communication/Plugin/Configuration/DefaultProductImportConfigurationPlugin.php) on how to implement a process.
+For more information about implementing a process, as an example, see [DefaultProductImportConfigurationPlugin.php](https://github.com/spryker-eco/akeneo-pim-middleware-connector/blob/master/src/SprykerEco/Zed/AkeneoPimMiddlewareConnector/Communication/Plugin/Configuration/DefaultProductImportConfigurationPlugin.php).
 
 ### Middleware reports
 
-You can view the results of the Spryker Middleware processes in the Middleware *Reports* section under the *Maintenance* menu of the Administration interface. This *Middleware Reports* section provides an overview of all the processes run with Middleware, overview of the process results (start time, duration, item count, and status of each process), as well as the detailed information on each process. The detailed information includes:
+You can view the results of the Spryker Middleware processes in the Middleware **Reports** section under the **Maintenance** menu of the Administration interface. This Middleware Reports section provides an overview of all the processes run with Middleware, overview of the process results (start time, duration, item count, and status of each process), as well as the detailed information on each process. The detailed information includes the following:
 
 **Process details:**
 
-* process name
-* process start/end times
-* process duration
-* items count
-* processed items
-* skipped items
-* status
-* duration
+* Process name
+* Process start/end times
+* Process duration
+* Items count
+* Processed items
+* Skipped items
+* Status
+* Duration
 
 **Configuration details:**
 
-* iterator plugin
-* post process hook plugins
-* input stream plugin
-* output stream plugin
-* logger plugin
-* stage plugins
-* pre process hook plugins
-* paths (if applicable)
+* Iterator plugin
+* Post process hook plugins
+* Input stream plugin
+* Output stream plugin
+* Logger plugin
+* Stage plugins
+* Pre process hook plugins
+* Paths (if applicable)
 
 **Process stage results:**
 
-* stage name
-* input item count
-* output item count
-* total execution time
-* average item execution time
+* Stage name
+* Input item count
+* Output item count
+* Total execution time
+* Average item execution time
 
 ### Reports integration
 
-To install Report module, run this command in console:
+To install the `Report` module, run this command in console:
 
 ```
 composer require spryker-middleware/report
@@ -307,19 +307,19 @@ public function getPostProcessorHookPlugins(): array
 ...
 ```
 
-After that, you will be able to see the result of your process runs in the Admin UI (Maintenance\ Middleware Reports).
+After that, you can see the result of your process runs in the Admin UI (Maintenance\ Middleware Reports).
 
-### OmsMiddlewareConnector module
+### `OmsMiddlewareConnector` module
 
-The `OmsMiddlewareConnector` module provides `TriggerOrderExportProcessCommand` which enables triggering of a Middleware process from OMS. Also, this module provides `OrderReadStreamPlugin` that provides input stream for reading orders and pass them to next stages of Middleware process.
+The `OmsMiddlewareConnector` module provides `TriggerOrderExportProcessCommand`, which enables triggering of a Middleware process from OMS. Also, this module provides `OrderReadStreamPlugin` that provides input stream for reading orders and pass them to next stages of Middleware process.
 
-To install `OmsMiddlewareConnector` module, run this command in console:
+To install the `OmsMiddlewareConnector` module, run this command:
 
 ```bash
 composer require spryker-middleware/oms-middleware-connector
 ```
 
-Please refer to config/Shared/config.dist.php for example of module configuration. To set up the order export process which should be triggered from the OMS command, add configuration of its name to your project’s config:
+For example of the module configuration, refer to `config/Shared/config.dist.php`. To set up the order export process, which must be triggered from the OMS command, add configuration of its name to your project’s config:
 
 ```php
 $config[OmsMiddlewareConnectorConstants::ORDER_EXPORT_PROCESS_NAME] = OrderExportProcessConfigurationPlugin::PROCESS_NAME;
@@ -350,7 +350,7 @@ public function provideBusinessLayerDependencies(Container $container)
 
 ### Mapper
 
-A mapper is a way to generate an array for `WriteStream` via data taken from `ReadStream`. You should define keys for the new array and match them to payload data according to the strict rules provided as `MapperConfigTransfer`.
+A *mapper* is a way to generate an array for `WriteStream` by data taken from `ReadStream`. You must define keys for the new array and match them to payload data according to the strict rules provided as `MapperConfigTransfer`.
 
 At first, you should implement `SprykerMiddleware\Zed\Process\Business\Mapper\Map\AbstractMap`. The abstract methods necessary for implementation are `getStrategy()` and `getMap()`.
 
@@ -358,16 +358,15 @@ By default, Middleware supports two strategies:
 
 | STRATEGY | DESCRIPTION |
 | --- | --- |
-| SprykerMiddleware\Zed\Process\Business\Mapper\Map\MapInterface::MAPPER_STRATEGY_SKIP_UNKNOWN | This strategy will skip the keys which weren't mentioned in the mapper configuration from the payload. |
-| SprykerMiddleware\Zed\Process\Business\Mapper\Map\MapInterface::MAPPER_STRATEGY_COPY_UNKNOWN | This strategy will copy keys with values which weren't mentioned in the mapper configuration from the payload. |
+| SprykerMiddleware\Zed\Process\Business\Mapper\Map\MapInterface::MAPPER_STRATEGY_SKIP_UNKNOWN | This strategy skips the keys which are mentioned in the mapper configuration from the payload. |
+| SprykerMiddleware\Zed\Process\Business\Mapper\Map\MapInterface::MAPPER_STRATEGY_COPY_UNKNOWN | This strategy copies keys with values which are not mentioned in the mapper configuration from the payload. |
 
-There are 5 different ways to set mapper rules:
-
-* ArrayMapRule - this rule allows using the given payload as an array with a recursive call;
-* DynamicMapRule - this rule allows using the value from the payload as a key;
-* ClosureMapRule - this rule allows using a custom function for the payload array;
-* DynamicArrayMapRule - this rule allows using the value from the payload as a key and works with the payload as with an array with recursive calls;
-* KeyMapeRule - the simplest rule for the mapper that gets the value via the key from the payload. You can use . symbol as a key separator for getting value from the payload.
+There are five ways to set mapper rules:
+* `ArrayMapRule`. This rule lets you use the given payload as an array with a recursive call.
+* `DynamicMapRule`. This rule lets you use the value from the payload as a key.
+* `ClosureMapRule`. This rule lets you use a custom function for the payload array.
+* `DynamicArrayMapRule`. This rule lets you use the value from the payload as a key and works with the payload as with an array with recursive calls.
+* `KeyMapeRule`. This simplest rule for the mapper that gets the value via the key from the payload. You can use. symbol as a key separator for getting value from the payload.
 
 You can check the examples of each rule in the following snippet. It's a final mapper example with examples of payload and their result.
 

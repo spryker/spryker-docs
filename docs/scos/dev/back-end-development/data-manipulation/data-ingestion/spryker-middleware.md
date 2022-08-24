@@ -350,7 +350,7 @@ public function provideBusinessLayerDependencies(Container $container)
 
 ### Mapper
 
-A mapper is a way to generate an array for `WriteSteam` via data taken from `ReadStream`. You should define keys for the new array and match them to payload data according to the strict rules provided as `MapperConfigTransfer`.
+A mapper is a way to generate an array for `WriteStream` via data taken from `ReadStream`. You should define keys for the new array and match them to payload data according to the strict rules provided as `MapperConfigTransfer`.
 
 At first, you should implement `SprykerMiddleware\Zed\Process\Business\Mapper\Map\AbstractMap`. The abstract methods necessary for implementation are `getStrategy()` and `getMap()`.
 

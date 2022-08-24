@@ -26,10 +26,12 @@ redirect_from:
 
 State machines are a model of computation used to automate processes. In Spryker you can use the `OMS` module to automate the management of orders or the `StateMachine` module to automate other processes you define in your shop. Both behave similar, but the `OMS` one is a customized solution to manage the orders in a shop.
 
-The machine can be in one of a finite number of states and it can be only in one state at a time. ( e.g. : state machine is in the `waiting for payment` state).
+The machine can be in one of a finite number of states and it can be only in one state at a time—for example, state machine is in the `waiting for payment` state.
 
 {% info_block infoBox %}
-State machines can model problems that involve performing of a predetermined sequence of actions that depend on a sequence of events (e.g. : order is being shipped if the payment is successful).
+
+State machines can model problems that involve performing of a predetermined sequence of actions that depend on a sequence of events—for example, the order is being shipped if the payment is successful.
+
 {% endinfo_block %}
 
 
@@ -58,8 +60,8 @@ Furthermore, a state can contain several flags.
 ### Flagged items
 Sometimes you need to have the ability to check if items are in a certain state. For determining if an order is flagged, OmsFacade exposes two operations:
 
-* `isOrderFlagged($idOrder, $flag)` - checks if an order contains at least a flag (at least one order item is flagged)
-* `isOrderFlaggedAll($idOrder, $flag)` - checks if the entire order is flagged (all order items are flagged)
+* `isOrderFlagged($idOrder, $flag)`—checks if an order contains at least a flag (at least one order item is flagged)
+* `isOrderFlaggedAll($idOrder, $flag)`—checks if the entire order is flagged (all order items are flagged)
 
 **Example:**
 
@@ -91,7 +93,7 @@ The event element can be omitted. This way an external call like `saveOrder` or 
 
 You can attach the following attributes to a transition:
 
-| Attribute | Description                                                  | Example                           |
+| ATTRIBUTE | DESCRIIPTION                                                  | EXAMPLE                           |
 | --------- | ------------------------------------------------------------ | --------------------------------- |
 | happy     | The attribute happy marks the transition as the happy case. When Zed renders the process model, this transition will be marked with a green shade. | happy="true"                      |
 | condition | The condition attribute allows adding PHP coding that double checks if this transition can be fired or not. The condition is evaluated when the defined event has been fired. | condition="PackageName/ClassName" |
@@ -267,9 +269,9 @@ An event associated to a transition can have a timeout interval set. When that t
 ..
 ```
 
-The textual timeout is evaluated with `\DateInterval::createFromDateString()`. You can find out more about it [here](https://www.php.net/manual/en/dateinterval.createfromdatestring.php).
+The textual timeout is evaluated with `\DateInterval::createFromDateString()`. For more information, see [DateInterval::createFromDateString](https://www.php.net/manual/en/dateinterval.createfromdatestring.php).
 
-#### Events triggered automatically via onEnter
+#### Events triggered automatically using onEnter
 
 If an event has set the `onEnter` attribute on `True`, it will be automatically triggered when the order is in the source state of the transition that contains the event.
 

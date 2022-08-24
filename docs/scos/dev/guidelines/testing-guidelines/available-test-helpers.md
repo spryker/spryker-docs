@@ -191,9 +191,6 @@ assertions.
 - `assertEntityIsRemovedFromSearch()`: This method triggers the required QueueHelper methods for consuming messages and
 assertions.
 
-#### DependencyProviderHelper
-
-Allows to mock dependencies required for your tests.
 
 <a name=eventbehaviorhelper></a>
 

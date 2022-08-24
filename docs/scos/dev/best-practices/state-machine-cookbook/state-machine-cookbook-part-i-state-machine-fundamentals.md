@@ -267,7 +267,7 @@ An event associated to a transition can have a timeout interval set. When that t
 ..
 ```
 
-The textual timeout is evaluated with `\DateInterval::createFromDateString()`. You can find out more about it here.
+The textual timeout is evaluated with `\DateInterval::createFromDateString()`. You can find out more about it [here](https://www.php.net/manual/en/dateinterval.createfromdatestring.php).
 
 #### Events triggered automatically via onEnter
 

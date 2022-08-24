@@ -16,13 +16,13 @@ redirect_from:
   - /v5/docs/en/migration-guide-product-list-gui
   - /v6/docs/migration-guide-product-list-gui
   - /v6/docs/en/migration-guide-product-list-gui
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-priceproductschedulegui.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-priceproductschedulegui.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-priceproductschedulegui.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-priceproductschedulegui.html
+  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-productlistgui.html
+  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-productlistgui.html
+  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-productlistgui.html
+  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-productlistgui.html
 related:
   - title: Migration guide - MerchantRelationshipProductListGui
     link: docs/scos/dev/module-migration-guides/migration-guide-merchantrelationshipproductlistgui.html
 ---
 
-{% include pbc/all/upgrade-modules/upgrade-the-priceproductschedulegui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-priceproductschedulegui-module.md -->
+{% include pbc/all/upgrade-modules/upgrade-the-productlistgui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-productlistgui-module.md -->

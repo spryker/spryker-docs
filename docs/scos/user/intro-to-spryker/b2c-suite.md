@@ -31,7 +31,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Configurable Bundle](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
 - [Comments](/docs/scos/user/features/{{site.version}}/comments-feature-overview.html)
 - [Persistent Cart Sharing](/docs/scos/user/features/{{site.version}}/persistent-cart-sharing-feature-overview.html)
-- [Scheduled Prices](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
+- [Scheduled Prices](/docs/pbc/all/price-management/scheduled-prices-feature-overview.html)
 - [Availability Notification](/docs/scos/user/features/{{site.version}}/availability-notification-feature-overview.html)
 - [Customer Account Management](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html)
 - [Customer Access](/docs/scos/user/features/{{site.version}}/customer-access-feature-overview.html)
@@ -43,7 +43,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Spryker Core Back Office](/docs/scos/user/features/{{site.version}}/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html)
 <!---- [Development tools]()-->
 <!---- [Deployment tools]()-->
-- [Prices](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview.html)
+- [Prices](/docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.html)
 - [Tax](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html)
 - [Promotions & Discounts](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html)
 - [Wishlist](/docs/pbc/all/shopping-list-and-wishlist/wishlist-feature-overview.html)
@@ -53,7 +53,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Agent Assist](/docs/scos/user/features/{{site.version}}/agent-assist-feature-overview.html)
 - [Payments](/docs/scos/user/features/{{site.version}}/payments-feature-overview.html)
 <!---- [Invoice]()-->
-- [Gift cards](/docs/scos/user/features/{{site.version}}/gift-cards-feature-overview.html)
+- [Gift cards](/docs/pbc/all/gift-cards/gift-cards.html)
 - [Checkout](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/checkout-feature-overview.html)
 - [Mailing & Notifications](/docs/scos/user/features/{{site.version}}/mailing-and-notifications-feature-overview.html)
 - [Spryker Core](/docs/scos/user/features/{{site.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html)

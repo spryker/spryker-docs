@@ -412,7 +412,7 @@ There are several reasons for introducing subprocesses when modeling a state mac
 To introduce a subprocess in the main process, specify its name under the subprocesses tag, as in the example below:
 
 ```xml
-process name="Prepayment" main="true">
+<process name="Prepayment" main="true">
     <subprocesses>
         <process>completion</process>
         <process>cancellation</process>

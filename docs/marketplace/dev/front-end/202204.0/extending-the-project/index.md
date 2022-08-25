@@ -64,7 +64,7 @@ For webpack to compile project-based modules rather than vendor-based, `entry.ts
 
 Default `entry.ts` should use the same code as vendor-level `entry.ts`.
 
-Add angular components in the app folder [Angular Components](/docs/marketplace/dev/front-end/angular-components.html).
+Add angular components in the app folder [Angular Components](/docs/marketplace/dev/front-end/{{page.version}}/angular-components.html).
 
 Add newly-created component `Module` and `Component` classes to the `components.module.ts`.
 

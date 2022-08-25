@@ -23,4 +23,4 @@ related:
     link: docs/scos/user/features/page.version/inventory-management-feature-overview.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-the-inventory-management-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-inventory-management-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-inventory-management-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-inventory-management-feature.md -->

@@ -144,7 +144,7 @@ To learn more about the feature and to find out how end users use it, see [Inven
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES | 
+| INSTALLATION GUIDES | 
 |---|---|---|
 | [Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/inventory-management-feature-integration.html) | 
 

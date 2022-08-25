@@ -50,7 +50,7 @@ The following diagram illustrates the domain model of the Marketplace Merchant f
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES | GLUE API GUIDES | DATA IMPORT |
+| INSTALLATION GUIDES | GLUE API GUIDES | DATA IMPORT |
 | --- | --- | --- |
 |[Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |[Retrieving merchants](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html) | [File details: merchant.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant.csv.html) |
 |[Glue API: Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-merchant-feature-integration.html) | [Searching the product catalog](/docs/marketplace/dev/glue-api-guides/{{page.version}}/searching-the-product-catalog.html) | [File details: merchant_profile.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-profile.csv.html) |

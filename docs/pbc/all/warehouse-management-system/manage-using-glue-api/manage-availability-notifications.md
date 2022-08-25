@@ -1,5 +1,5 @@
 ---
-title: Managing availability notifications
+title: Manage availability notifications
 description: Manage product availability notifications for registered users
 last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template
@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202005.0/managing-products/managing-availability-notifications/managing-availability-notifications.html
   - /docs/scos/dev/glue-api-guides/202204.0/managing-products/managing-availability-notifications/managing-availability-notifications.html
 related:
-  - title: Retrieving subscriptions to availability notifications
+  - title: Retrieve subscriptions to availability notifications
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
 ---
 

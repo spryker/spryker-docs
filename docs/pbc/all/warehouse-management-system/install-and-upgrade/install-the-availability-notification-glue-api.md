@@ -19,7 +19,7 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/availability-notification-feature-integration.html
   - title: Managing availability notifications
     link: docs/pbc/all/warehouse-management-system/manage-using-glue-api/manage-availability-notifications.html
-  - title: Retrieving subscriptions to availability notifications
+  - title: Retrieve subscriptions to availability notifications
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html
 ---
 

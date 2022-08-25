@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/retrieving-abstract-products
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/abstract-products/retrieving-abstract-products.html
 related:
-  - title: Retrieving abstract product availability
+  - title: Retrieve abstract product availability
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
   - title: Retrieving abstract product prices
     link: docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html

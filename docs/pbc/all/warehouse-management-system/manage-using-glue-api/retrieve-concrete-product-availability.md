@@ -1,5 +1,5 @@
 ---
-title: Retrieving concrete product availability
+title: Retrieve concrete product availability
 description: Retrieve availability of concrete products.
 last_updated: Jul 12, 2021
 template: glue-api-storefront-guide-template

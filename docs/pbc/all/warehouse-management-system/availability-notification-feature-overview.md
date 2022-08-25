@@ -47,7 +47,7 @@ A developer can manage the newsletter text files in `/src/Spryker/Zed/Availabili
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | GLUE API GUIDES  |
+|INSTALLATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|
-| [Install the Availability Notification feature](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-availability-notification-feature.html)  | [Managing availability notifications](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/manage-availability-notifications.html)  |
-| [Glue API: Availability Notification feature integration](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-availability-notification-glue-api.html) | [Retrieving subscriptions to availability notifications](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html)  |
+| [Install the Availability Notification feature](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-availability-notification-feature.html)  | [Manage availability notifications](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/manage-availability-notifications.html)  |
+| [Install the Availability Notification Glue API](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-availability-notification-glue-api.html) | [Retrieve subscriptions to availability notifications](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-subscriptions-to-availability-notifications.html)  |

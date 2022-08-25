@@ -18,8 +18,6 @@ redirect_from:
 related:
   - title: Install the Inventory Management Glue API
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-inventory-management-feature-integration.html
-  - title: Inventory Management feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html
   - title: Inventory Management feature overview
     link: docs/scos/user/features/page.version/inventory-management-feature-overview.html
 ---

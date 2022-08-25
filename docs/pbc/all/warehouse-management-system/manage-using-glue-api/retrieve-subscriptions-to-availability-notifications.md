@@ -1,5 +1,5 @@
 ---
-title: Retrieving subscriptions to availability notifications
+title: Retrieve subscriptions to availability notifications
 description: Retrieve subscriptions to notifications on product availability via Glue API
 last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template

@@ -17,4 +17,4 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/agent-assist-feature-walkthrough.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-the-customer-account-management-agent-assist-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-customer-account-management-agent-assist-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-customer-account-management-agent-assist-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-customer-account-management-agent-assist-feature.md -->

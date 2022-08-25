@@ -22,7 +22,7 @@ One of the most important building blocks of the company account is business uni
 
 With this feature, you can create your own permission rules and assign them to company users. Also, you can implement any kind of business logic, from simple checks, like single permissions, to complex ones, like purchasing limit, customer allocation, and business unit checks.
 
-Organizations with multiple business units that support their own set of accounts, customers, and vendors often need some of their company users to be able to access (and eventually manage) not one business unit but several business units within the whole company. Business on behalf lets you set up multiple company users for one customer account. You can assign a company user to multiple business units with different roles and permissions to match your organization's policies and procedures.
+Organizations with multiple business units that support their own set of accounts, customers, and vendors often need some of their company users to access (and eventually manage) not one business unit but several business units within the whole company. Business on behalf lets you set up multiple company users for one customer account. You can assign a company user to multiple business units with different roles and permissions to match your organization's policies and procedures.
 
 The feature lets customers log in by token. By dynamically generating a token, a user can log in with a predefined company user to a new ecommerce provider. All this happens without sharing the login information or having to fill out a sign-up form.
 

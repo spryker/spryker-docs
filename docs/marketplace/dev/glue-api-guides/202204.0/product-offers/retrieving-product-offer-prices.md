@@ -4,7 +4,7 @@ description: Retrieve Marketplace product offer prices via Glue API
 template: glue-api-storefront-guide-template
 related:
   - title: Retrieving product offers
-    link: docs/marketplace/dev/glue-api-guides/page.version/product-offers/retrieving-product-offers.html 
+    link: docs/marketplace/dev/glue-api-guides/page.version/product-offers/retrieving-product-offers.html
   - title: Retrieving product offer availabilities
     link: docs/marketplace/dev/glue-api-guides/page.version/product-offers/retrieving-product-offer-availability.html
 ---
@@ -95,7 +95,7 @@ Response sample: retrieve prices of a product offer
 | prices.currency.code   | String  | Currency code.   |
 | prices.currency.name   | String  | Currency name.  |
 | prices.currency.symbol   | String  | Currency symbol.  |
-| prices.volumePrices   | Object  |  An array of objects defining the [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html) of the product offer.  |
+| prices.volumePrices   | Object  |  An array of objects defining the [volume prices](/docs/pbc/all/price-management/prices-feature-overview/volume-prices-overviewhe product offer.  |
 | prices.volumePrices.grossAmount | Integer   |  Gross volume price in cents.         |
 | prices.volumePrices.netAmount | Integer   | Net volume price in cents.          |
 | prices.volumePrices.quantity  |  Integer         | Required quantity of items in offer for the volume price to apply.  |

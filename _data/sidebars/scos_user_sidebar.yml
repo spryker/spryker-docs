@@ -380,6 +380,8 @@ entries:
         url: /docs/scos/user/features/file-manager-feature-overview/file-uploader.html
     - title: Gift Cards
       url: /docs/scos/user/features/gift-cards-feature-overview.html
+      include_versions:
+      - "202108.0" 
     - title: Inventory Management
       url: /docs/scos/user/features/inventory-management-feature-overview.html
     - title: Mailing and Notifications
@@ -398,6 +400,9 @@ entries:
       - "202204.0"
     - title: Merchant Custom Prices
       url: /docs/scos/user/features/merchant-custom-prices-feature-overview.html
+      include_versions:
+      - "202009.0"
+      - "202108.0"
     - title: Merchant Product Restrictions
       url: /docs/scos/user/features/merchant-product-restrictions-feature-overview.html
       include_versions:
@@ -478,7 +483,6 @@ entries:
         - "202001.0"
         - "202005.0"
         - "202108.0"
-        - "202204.0"
       nested:
       - title: Volume Prices
         url: /docs/scos/user/features/prices-feature-overview/volume-prices-overview.html
@@ -489,7 +493,6 @@ entries:
         - "202001.0"
         - "202005.0"
         - "202108.0"
-        - "202204.0"
     - title: Product
       url: /docs/scos/user/features/product-feature-overview/product-feature-overview.html
       nested:
@@ -536,6 +539,12 @@ entries:
       url: /docs/scos/user/features/product-sets-feature-overview.html
     - title: Promotions and Discounts
       url: /docs/scos/user/features/promotions-discounts-feature-overview.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: Quick Add to Cart
       url: /docs/scos/user/features/quick-add-to-cart-feature-overview.html
     - title: Quotation Process
@@ -591,7 +600,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Search
       url: /docs/scos/user/features/search-feature-overview/search-feature-overview.html
       nested:
@@ -659,6 +667,8 @@ entries:
       url: /docs/scos/user/features/shared-carts-feature-overview.html
     - title: Shipment
       url: /docs/scos/user/features/shipment-feature-overview.html
+      include_versions:
+      - "202108.0"
     - title: Shopping Lists
       url: /docs/scos/user/features/shopping-lists-feature-overview/shopping-lists-feature-overview.html
       nested:
@@ -1246,10 +1256,6 @@ entries:
           nested:
           - title: Create
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html
-          - title: Add scheduled prices
-            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/add-scheduled-prices-to-abstract-products-and-product-bundles.html
-          - title: Add volume prices
-            url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/add-volume-prices-to-abstract-products-and-product-bundles.html
           - title: Assign product attributes
             url: /docs/scos/user/back-office-user-guides/catalog/products/manage-abstract-products-and-product-bundles/assign-product-attributes-to-abstract-products-and-product-bundles.html
           - title: Edit
@@ -1625,7 +1631,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         nested:
         - title: Creating scheduled prices
           url: /docs/scos/user/back-office-user-guides/catalog/scheduled-prices/creating-scheduled-prices.html
@@ -1635,7 +1640,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: Managing scheduled prices
           url: /docs/scos/user/back-office-user-guides/catalog/scheduled-prices/managing-scheduled-prices.html
           include_versions:
@@ -1643,7 +1647,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: References
           include_versions:
           - "201907.0"
@@ -1978,27 +1981,31 @@ entries:
     - title: Merchandising
       nested:
       - title: Discount
+        include_versions:
+        - "201811.0"
+        - "201903.0"
+        - "201907.0"
+        - "202001.0"
+        - "202005.0"
+        - "202009.0"
+        - "202108.0"              
         nested:
         - title: "Best practices: Promote products with discounts"
           url: /docs/scos/user/back-office-user-guides/merchandising/discount/best-practices-promote-products-with-discounts.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: Create discounts
           url: /docs/scos/user/back-office-user-guides/merchandising/discount/create-discounts.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: Edit discounts
           url: /docs/scos/user/back-office-user-guides/merchandising/discount/edit-discounts.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: Export voucher codes
           url: /docs/scos/user/back-office-user-guides/merchandising/discount/export-voucher-codes.html
           include_versions:
           - "202108.0"
-          - "202204.0"
         - title: Creating vouchers
           url: /docs/scos/user/back-office-user-guides/merchandising/discount/creating-vouchers.html
           include_versions:
@@ -2628,20 +2635,7 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
         nested:
-        - title: Add carrier companies
-          url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/add-carrier-companies.html
-          include_versions:
-          - "202204.0"
-        - title: Add delivery methods
-          url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/add-delivery-methods.html
-          include_versions:
-          - "202204.0"
-        - title: Edit delivery methods
-          url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/edit-delivery-methods.html
-          include_versions:
-          - "202204.0"
         - title: Creating a carrier company
           url: /docs/scos/user/back-office-user-guides/administration/delivery-methods/creating-carrier-companies.html
           include_versions:
@@ -3148,6 +3142,8 @@ entries:
         - "201903.0"
         - "201907.0"
     - title: Shipment
+      include_versions:
+      - "202108.0"
       nested:
       - title: Paqato
         url: /docs/scos/user/technology-partners/shipment/paqato.html

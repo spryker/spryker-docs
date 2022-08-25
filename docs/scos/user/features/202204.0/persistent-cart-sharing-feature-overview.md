@@ -33,8 +33,8 @@ The preview link is the only available option for the B2C environment. B2C users
 
 {% endinfo_block %}
 
-* *Read-only*: for details, see [Read only](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html#read-only).
-* *Full access*: for details, see [Full access](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html#full-access).
+* *Read-only*: for details, see [Read only](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html#read-only).
+* *Full access*: for details, see [Full access](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html#full-access).
 
 {% info_block warningBox %}
 
@@ -43,7 +43,7 @@ Sharing cart with read-Only or full access permissions is available only for int
 {% endinfo_block %}
 
 ![internal-users-interface.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Unique+URL+per+Cart+for+Easy+Sharing/internal-users-interface.png)
-The link allows displaying prices according to the selected currency. The cart shared via the link displays the prices in the currency that the owner has set up. For example, if the default currency is set to EUR and the owner changes the currency to CHF, the shopping cart shared through the link also displays the prices in CHF.
+The link allows displaying prices according to the selected currency. The cart shared by the link displays the prices in the currency that the owner has set up. For example, if the default currency is set to EUR and the owner changes the currency to CHF, the shopping cart shared through the link also displays the prices in CHF.
 
 If a customer selects a link of the cart that's not available, the _This cart is unavailable_ message is displayed.
 

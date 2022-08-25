@@ -20,7 +20,7 @@ related:
 
 ## Overview
 
-This вщсгьуте describes how to use the support portal to create and manage your cases
+This document describes how to use the support portal to create and manage your cases
 
 ## Prerequisites
 

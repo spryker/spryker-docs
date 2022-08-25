@@ -195,6 +195,25 @@ class CartsRestApiConfig extends SprykerCartsRestApiConfig
 }
 ```
 
+### Configure quote creation
+
+You can enable the creation of a cart for the newly authenticated customer while merging the guest cart with the customer cart by adjusting the configuration constant:
+
+**src/Pyz/Zed/CartsRestApi/CartsRestApiConfig.php**
+
+```php
+<?php
+
+namespace Pyz\Zed\CartsRestApi;
+
+use Spryker\Zed\CartsRestApi\CartsRestApiConfig as SprykerCartsRestApiConfig;
+
+class CartsRestApiConfig extends SprykerCartsRestApiConfig
+{
+    protected const IS_QUOTE_CREATION_WHILE_QUOTE_MERGING_ENABLED = true;
+}
+```
+
 ### Enable resources and relationships
 
 Activate the following plugins:

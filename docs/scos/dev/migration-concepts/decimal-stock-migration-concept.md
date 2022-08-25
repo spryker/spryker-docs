@@ -20,7 +20,7 @@ related:
   - title: Packaging Units feature overview
     link: docs/scos/user/features/page.version/packaging-units-feature-overview.html
   - title: CRUD Scheduled Prices migration concept
-    link: docs/scos/dev/migration-concepts/crud-scheduled-prices-migration-concept.html
+    link: docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
   - title: Float Stock for Products
     link: docs/scos/dev/migration-concepts/float-stock-for-products-migration-concept.html
   - title: Migrating from Twig v1 to Twig v3
@@ -89,7 +89,7 @@ The following table lists the modules affected by the Decimal Stock update and w
 | `spryker/cart-variant` | 2.0.0 | [Migration Guide - CartVariant](/docs/scos/dev/module-migration-guides/migration-guide-cartvariant.html#upgrading-from-version-1-to-version-200) |
 | `spryker/product-availabilities-rest-api` | 4.0.0 | [Migration Guide - ProductAvailabilitiesRestApi](/docs/scos/dev/module-migration-guides/glue-api/migration-guide-productavailabilitiesrestapi.html#upgrading-from-version-3-to-version-4) |
 | `spryker/product-bundle` | 7.0.0 | [Migration Guide - ProductBundle](/docs/scos/dev/module-migration-guides/migration-guide-productbundle.html#upgrading-from-version-6-to-version-700) |
-| `spryker/discount-promotion` | 4.0.0 | [Migration Guide - DiscountPromotion](/docs/scos/dev/module-migration-guides/migration-guide-discountpromotion.html#upgrading-from-version-3-to-version-400) |
+| `spryker/discount-promotion` | 4.0.0 | [Migration Guide - DiscountPromotion](/docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discountpromotion-module.html#upgrading-from-version-3-to-version-400) |
 | `spryker/product-packaging-unit` | 4.0.0 | [Migration Guide - ProductPackagingUnit](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunit.html#upgrading-from-version-3-to-version-400) |
 | `spryker/product-measurement-unit` | 5.0.0 | [Migration Guide - ProductMeasurementUnit](/docs/scos/dev/module-migration-guides/migration-guide-productmeasurementunit.html#upgrading-from-version-4-to-version-500) |
 | `spryker/product-packaging-unit-data-import` | 2.0.0 | [Migration Guide - ProductPackagingUnitDataImport](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitdataimport.html#upgrading-from-version-1-to-version-200) |

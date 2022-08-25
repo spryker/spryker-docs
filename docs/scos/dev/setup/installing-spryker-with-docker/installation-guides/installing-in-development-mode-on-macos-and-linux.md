@@ -25,6 +25,12 @@ related:
     link: docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
 ---
 
+{% info_block infoBox "Info" %}
+
+Starting with the 202204.0 release, the following guide applies to both Intel and ARM architectures. You can install the demo shops of previous versions on ARM chips by following the steps from the [Switch to ARM architecture](/docs/scos/dev/technical-enhancement-integration-guides/switch-to-arm-architecture-m1-chip.html) technical enhancement guide.
+
+{% endinfo_block %}
+
 This document describes how to install Spryker in [Development Mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html#development-mode) on MacOS and Linux.
 
 ## Install Docker prerequisites on MacOS and Linux
@@ -78,119 +84,6 @@ Make sure that you are in the correct folder by running the `pwd` command.
 git clone https://github.com/spryker/docker-sdk.git --single-branch docker
 ```
 
-## Optional: Switch to ARM architecture
-
-Follow the steps in this section if you are installing on a device with an ARM chip, like Apple M1. Otherwise, [configure and start the instance](#configure-and-start-the-instance).
-
-### Update Sass
-
-Replace x86 based Sass with an ARM based one:
-
-1. In `package.json`, remove `node-sass` dependencies.
-2. Add `sass` and `sass-loader` dependencies.
-
-```json
-...
-"sass": "~1.32.13",
-"sass-loader": "~10.2.0",
-...
-```
-
-3. Update `@spryker/oryx-for-zed`:
-
-```json
-...
-"@spryker/oryx-for-zed": "~2.11.5",
-...
-```
-
-4. In `frontend/configs/development.js`, add configuration for `saas-loader`:
-```js
-loader: 'sass-loader',
-options: {
-   implementation: require('sass'),
-}
-```
-
-5. Enter the Docker SDK CLI:
-
-```bash
-docker/sdk cli
-```
-
-6. Update `package-lock.json` and install dependencies based on your package manager:
-    * npm:
-    ```bash
-    npm install
-    ```
-    * yarn:
-    ```bash
-    yarn install
-    ```
-7. Rebuild Yves:
-
-```bash
-npm run yves
-```
-
-8. Rebuild Zed
-
-```bash
-npm run zed
-```
-
-
-### Update RabbitMQ and Jenkins services
-
-In the deploy file, update RabbitMQ and Jenkins to [ARM supporting versions](https://github.com/spryker/docker-sdk#supported-services). Example:
-
-```yaml
-services:
-...
-    broker:
-        engine: rabbitmq
-        version: '3.9'
-        api:
-            username: 'spryker'
-            password: 'secret'
-        endpoints:
-            queue.spryker.local:
-            localhost:5672:
-                protocol: tcp
-...
-        scheduler:
-        engine: jenkins
-        version: '2.324'
-        endpoints:
-            scheduler.spryker.local:
-...
-```
-
-
-### Enable Jenkins CSRF protection
-
-
-1. In the deploy file, enable the usage of the CSRF variable:
-
-```yaml
-...
-services:
-  scheduler:
-    csrf-protection-enabled: true
-...
-```    
-
-2. In the config file, enable Jenkins CSRF protection by defining the CSRF variable:
-
-```php
-...
-$config[SchedulerJenkinsConstants::JENKINS_CONFIGURATION] = [
-    SchedulerConfig::SCHEDULER_JENKINS => [
-        SchedulerJenkinsConfig::SCHEDULER_JENKINS_CSRF_ENABLED => (bool)getenv('SPRYKER_JENKINS_CSRF_PROTECTION_ENABLED'),
-    ],
-];
-...
-```
 
 ## Configure and start the instance
 

@@ -24,7 +24,7 @@ The following schema illustrates relations between the _Payment_, _PaymentGui_, 
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES  | UPGRADE GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
+| INSTALLATION GUIDES  | UPGRADE GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|---|
 | [Payments feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/payments-feature-integration.html) | Payment migration guide | [HowTo: Hydrate payment methods for an order](/docs/scos/dev/tutorials-and-howtos/howtos/howto-hydrate-payment-methods-for-an-order.html) | [Payment partners](/docs/scos/user/technology-partners/{{page.version}}/payment-partners/adyen/adyen.html) <!-- must be a link to the whole directory payment-partnerts --> |
 |  |  | [Implementing Direct Debit Payment](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html) |  |

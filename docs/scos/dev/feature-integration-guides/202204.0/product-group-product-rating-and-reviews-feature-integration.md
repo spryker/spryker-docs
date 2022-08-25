@@ -17,4 +17,4 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/product-rating-reviews-feature-walkthrough.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-the-product-group-product-rating-and-reviews-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-product-group-product-rating-and-reviews-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-product-group-product-rating-and-reviews-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-group-product-rating-and-reviews-feature.md -->

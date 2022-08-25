@@ -41,7 +41,7 @@ The following schemas illustrates module relations in the Configurable Bundle fe
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | UPGRADE GUIDES | TUTORIALS AND HOWTOS |
+| INSTALLATION GUIDES | UPGRADE GUIDES| TUTORIALS AND HOWTOS |
 |---------|---------|---------|
 | [Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/configurable-bundle-feature-integration.html) | ConfigurableBundle migration guide | [HowTo: Render configurable bundle templates in the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html)  |
 | [Merchant Product Restrictions feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-product-restrictions-feature-integration.html) | ConfigurableBundleStorage migration guide |   |

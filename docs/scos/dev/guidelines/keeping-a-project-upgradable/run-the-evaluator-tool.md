@@ -1,8 +1,10 @@
 ---
-title: Running the evaluator tool
+title: Run the evaluator tool
 description: Instructions for running the evaluator tool
 last_updated: Nov 25, 2021
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html
 related:
   - title: Keeping a project upgradable
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
@@ -11,9 +13,9 @@ related:
   - title: Upgrader tool overview
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
   - title: Running the upgrader tool
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-upgrader-tool.html
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-upgrader-tool.html
   - title: Define custom prefixes for core entity names
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html    
 ---
 
 This document describes how to check if code is compliant with Spryker’s standards using the evaluator tool.

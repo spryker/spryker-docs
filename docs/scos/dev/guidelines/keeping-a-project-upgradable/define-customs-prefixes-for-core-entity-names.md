@@ -10,10 +10,10 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-services.html
   - title: Upgrader tool overview
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
-  - title: Running the evaluator tool
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html
+  - title: Run the evaluator tool
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
   - title: Running the upgrader tool
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-upgrader-tool.html
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-upgrader-tool.html
 ---
 
 When evaluator checks project-level code entities for existing and potential matches with the core ones, it skips the entities that have the `Pyz` prefix in their name. Such are considered unique and will not conflict with core entities in future because there will never be an entity with the `Pyz` prefix in the core.

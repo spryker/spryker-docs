@@ -4,7 +4,7 @@ description: Instructions for running the upgrader tool
 last_updated: Nov 25, 2021
 template: concept-topic-template
 redirect_from:
-  - /docs/scos/dev/upgradability-services/running-the-upgrader-tool.html
+  - /docs/scos/dev/upgradability-services/run-the-upgrader-tool.html
   - /docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-upgrader-tool.html
 
 related:
@@ -14,8 +14,8 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-services.html
   - title: Upgrader tool overview
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
-  - title: Running the evaluator tool
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html
+  - title: Run the evaluator tool
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
   - title: Define custom prefixes for core entity names
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
 ---

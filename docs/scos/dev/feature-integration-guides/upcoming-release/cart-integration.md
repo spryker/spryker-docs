@@ -28,7 +28,7 @@ Cart now supports changing cart items by modifying their attributes. If we have 
 Cart now also supports product images out of the box.
 ![cart_product_images](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/feature-integration-guides/cart-integration.md/cart_product_images.png)
 
-If we have products with multiple super attributes we can now, narrowing-down in the cart.
+Based on the super attributes, you can select the needed product variant in cart.
 ![product_super_attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/feature-integration-guides/cart-integration.md/product_super_attributes.png)
 
 ## Installation

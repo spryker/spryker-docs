@@ -1,6 +1,6 @@
 ---
 title: Cart integration
-description: The guide describes the process of integrating the Cart feature into your project.
+description: The guide shows how to integrate the Cart feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cart-integration
@@ -14,34 +14,35 @@ redirect_from:
 
 {% info_block infoBox %}
 
-This article describes how to add product variants, product images and price validation for carts items to an existing cart.
+This document describes how to add product variants, product images, and price validation for a cart's items to an existing cart.
+
 {% endinfo_block %}
 
-## Prerequisites:
+## Prerequisites
 
-Before starting make sure you are familiar with the concept of Spryker Super Attributes.
+Read the concept of Spryker [super attributes](/docs/scos/user/features/{{page.versionj}}/product-feature-overview/product-attributes-overview.html#super-attributes).
 
-## UI Changes:
+## UI changes
 
-Cart now supports changing cart items by modifying their attributes. If we have a wrong T-Shirt size in the cart we will be able to change it.
+The cart now supports changing cart items by modifying their attributes. If you have the wrong t-shirt size in the cart, you can change it.
 
-Cart now also supports product images out of the box.
+The cart supports product images out of the box.
+
 ![cart_product_images](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/feature-integration-guides/cart-integration.md/cart_product_images.png)
 
-Based on the super attributes, you can select the needed product variant in cart.
+Based on the super attributes, you can select the needed product variant in the cart.
+
 ![product_super_attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/feature-integration-guides/cart-integration.md/product_super_attributes.png)
 
-## Installation
+## Add support of item images in the cart
 
-### Item images in cart
-
-To support  images in a cart,  install the optional module `ProductImageCartConnector` by running:
+To support images in a cart, install the optional module `ProductImageCartConnector`:
 
 ```bash
 composer require spryker/product-image-cart-connector
 ```
 
-This module will provide the `ProductImageCartPlugin` that you will have to register later in your shop `CartDependencyProvider` like in a snippet below:
+This module provides `ProductImageCartPlugin`, which you must register later in your shop's `CartDependencyProvider` as follows:
 
 ```php
 /**
@@ -77,19 +78,21 @@ protected function getExpanderPlugins(Container $container)
 
 {% info_block warningBox "Verification" %}
 
-Make sure the `ExpandBundleItemsWithImagesPlugin` is registered after the `ExpandBundleItemsPlugin` plugin.
+Make sure `ExpandBundleItemsWithImagesPlugin` is registered after the `ExpandBundleItemsPlugin` plugin.
 
 {% endinfo_block %}
 
-### Price validation
+### Add price validation
+
 Spryker provides the `PriceCartConnector` module for this purpose.
-To install the `PriceCartConnector` module, run:
+
+Install the `PriceCartConnector` module:
 
 ```bash
 composer require spryker/price-cart-connector
 ```
 
-This module will provide the `CartItemPricePreCheckPlugin` that you will have to register later in your shop `CartDependencyProvider` like in a snippet below:
+This module provides the `CartItemPricePreCheckPlugin`, which you must register later in your shop `CartDependencyProvider` as follows:
 
 ```php
 /**
@@ -120,18 +123,20 @@ class PriceCartConnectorConfig extends SprykerPriceCartConnectorConfig
 }
 ```
 
-In case it has `false` value, while attempting to add the product with zero price to the cart, you will get the next message: "Price in selected currency not found for product with sku '%sku%'. Please change the currency or remove product from order."
+If it has the `false` value, while attempting to add the product with zero price to the cart, you get the following message: "Price in selected currency not found for product with sku '%sku%'. Please change the currency or remove product from order."
 
-#### Cart variants
+#### Install cart variants
 
 Spryker provides the `CartVariant` module for this purpose.
-To install the `CartVariant` module, run:
+
+Install the `CartVariant` module:
 
 ```bash
 composer require spryker/cart-variant
 ```
 
-### AttributeMapCollector
+### Attribute map collector
+
 To support the mapping between attributes and availability, we need to collect additional data in our attribute map collector. You can do that by adding a single line with `SpyProductTableMap::COL_SKU` to the `getConreteProducts` function.
 
 The full function is as follows:

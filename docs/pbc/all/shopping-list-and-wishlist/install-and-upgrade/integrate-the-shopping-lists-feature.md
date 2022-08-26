@@ -24,4 +24,4 @@ related:
     link: docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-notes-overview.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-the-shopping-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-shopping-lists-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-shopping-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-shopping-lists-feature.md -->

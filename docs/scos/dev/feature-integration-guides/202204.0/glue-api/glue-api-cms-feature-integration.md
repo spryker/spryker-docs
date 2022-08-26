@@ -20,4 +20,4 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-cms-pages.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-cms-glue-api.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-cms-glue-api.md -->
+{% include pbc/all/install-features/202204.0/install-glue-api/install-the-cms-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-cms-glue-api.md -->

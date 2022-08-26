@@ -1,5 +1,5 @@
 ---
-title: Quotation Process feature overview
+title: Request for Quote
 description: The document describes the Quotation Process feature, its statuses, and workflow (by a customer, sales representative, agent account and interaction with approval process.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -19,6 +19,8 @@ redirect_from:
   - /docs/rfq-reference-information-shop-guide
   - /docs/en/rfq-reference-information-shop-guide
   - /docs/scos/user/features/202200.0/quotation-process-feature-overview.html
+  - /docs/scos/user/features/202204.0/quotation-process-feature-overview.html  
+  - /docs/scos/dev/feature-walkthroughs/202204.0/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html
 ---
 
 | DEFINITION | DESCRIPTION |
@@ -51,8 +53,8 @@ The RFQ can have the following statuses:
 
 The process of requesting the quote includes two workflows depending on the role the user has. A workflow is defined as the sequence of steps the user can go through to complete the process successfully. These are:
 
-* [Buyer workflow](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#buyer-workflow)
-* [Sales representative workflow](/docs/scos/user/features/{{page.version}}/quotation-process-feature-overview.html#sales-representative-workflow)
+* [Buyer workflow](#buyer-workflow)
+* [Sales representative workflow](#sales-representative-workflow)
 
 ### Buyer workflow
 
@@ -81,7 +83,7 @@ Schematically, the workflow is shown in the following diagram:
 ### Sales representative workflow
 
 A sales representative can create an RFQ using two working procedures:
-* By an [agent](/docs/scos/user/features/{{page.version}}/agent-assist-feature-overview.html) account.
+* By an [agent](/docs/scos/user/features/{{site.version}}/agent-assist-feature-overview.html) account.
 * On behalf of a company user.
 
 #### By an agent account
@@ -139,7 +141,7 @@ The buyers can use the blocked cart irrespective of the RFQ updates by unblockin
 
 ## Interaction of the RFQ with the approval process
 
-Mixing several workflows adds complexity to the process and increases the steps for a buyer to perform to submit the order. This can be true for projects where the [Approval Process](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) and RFQ are integrated. In such a scenario, every RFQ that hits the limit will need to be approved by a manager. Let's check an example:
+Mixing several workflows adds complexity to the process and increases the steps for a buyer to perform to submit the order. This can be true for projects where the [Approval Process](/docs/scos/user/features/{{site.version}}/approval-process-feature-overview.html) and RFQ are integrated. In such a scenario, every RFQ that hits the limit will need to be approved by a manager. Let's check an example:
 
 {% info_block infoBox "Example" %}
 Example: In the project, the cart needs approval when the cart total exceeds €1000. A buyer adds the products to the cart with the total amount of €1500 and converts the shopping cart into the RFQ. The sales representative reviews the cart and updates the prices for products so that the cart total makes up €1300 and sends the RFQ back to the buyer. The buyer cannot proceed to checkout as the cart total still exceeds the limit, so the buyer has to send the RFQ to their approver. If the approver approves the cart, then the buyer finally can create the order and pay for it.
@@ -197,8 +199,13 @@ Agents can perform the same actions (on company users' behalf) as company users.
 * Request for Quote does not work with the product bundles.
 
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Quotation Process feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INSTALLATION GUIDES | UPGRADE GUIDES|
+|---|---|
+| [Install the Quotation Process feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/checkout-quotation-process-feature-integration.html) | [Upgrade the QuoteRequest module](/docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequest-module.html) |
+| [Install the Quotation Process + Checkout feature](/docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-checkout-feature.html) | [Upgrade the QuoteRequestAgent module](/docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagent-module.html) |
+| [Install the Quotation Process + Approval Process feature](/docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-approval-process-feature.html) | [Upgrade the QuoteRequestAgentPage module](/docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagentpage-module.html) |
+| [Install the Quotation Process + Multiple Carts feature](/docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-multiple-carts-feature.html) | [Upgrade the QuoteRequestAgentWidget module](/docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagentwidget-module.html) |
+| [Install the Quotation Process Glue API](/docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-glue-api.html) | [Upgrade the QuoteRequestPage module](/docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestpage-module.html) |
+| | [Upgrade the QuoteRequestWidget module](/docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestwidget-module.html) |

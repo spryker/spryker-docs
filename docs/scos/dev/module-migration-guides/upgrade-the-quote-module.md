@@ -1,5 +1,5 @@
 ---
-title: Migration guide - Quote
+title: Upgrade the Quote module
 description: Use the guide to learn how to update the Quote module to a newer version.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-quote.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-quote.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-quote.html
+  - /docs/scos/dev/module-migration-guides/migration-guide-quote.html
   - /module_migration_guides/mg-quote.htm
 related:
   - title: Migration guide - Cart

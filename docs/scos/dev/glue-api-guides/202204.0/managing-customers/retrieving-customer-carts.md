@@ -1612,7 +1612,7 @@ For the attributes of the included resources, see:
 
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 * [Add an item to a registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart-response-attributes)
-* [Managing Gift Cards of Registered Users](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html)
+* [Manage gift cards of registered users](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html)
 * [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 
 ## Possible errors

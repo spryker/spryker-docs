@@ -20,4 +20,4 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/company-account-feature-walkthrough/company-account-feature-walkthrough.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-the-company-account-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-company-account-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-company-account-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-company-account-feature.md -->

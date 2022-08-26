@@ -18,4 +18,4 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-the-cms-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-cms-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-cms-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-cms-feature.md -->

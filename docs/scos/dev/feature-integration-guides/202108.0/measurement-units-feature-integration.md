@@ -11,4 +11,4 @@ redirect_from:
   - /docs/product-measurement-unit-feature-integration
   - /docs/en/product-measurement-unit-feature-integration
 ---
-{% include pbc/all/integrate-features/202204.0/integrate-the-product-measurement-unit-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-product-measurement-unit-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-product-measurement-unit-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-measurement-unit-feature.md -->

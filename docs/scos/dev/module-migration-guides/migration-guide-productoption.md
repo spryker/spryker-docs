@@ -32,7 +32,7 @@ redirect_from:
   - /module_migration_guides/mg-product-option.htm
 related:
   - title: Migration guide - Currency
-    link: docs/scos/dev/module-migration-guides/migration-guide-currency.html
+    link: docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html
   - title: Migration guide - ProductOptionCartConnector
     link: docs/scos/dev/module-migration-guides/migration-guide-productoptioncartconnector.html
 ---

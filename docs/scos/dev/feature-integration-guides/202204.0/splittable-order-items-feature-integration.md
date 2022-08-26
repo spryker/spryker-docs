@@ -9,4 +9,4 @@ redirect_from:
   - /v3/docs/en/splittable-order-items-integration
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-the-splittable-order-items-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-splittable-order-items-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-splittable-order-items-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-splittable-order-items-feature.md -->

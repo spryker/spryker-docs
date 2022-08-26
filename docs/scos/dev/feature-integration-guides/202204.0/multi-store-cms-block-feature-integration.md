@@ -16,4 +16,4 @@ related:
     link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-the-multi-store-cms-block-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-multi-store-cms-block-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-multi-store-cms-block-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-multi-store-cms-block-feature.md -->

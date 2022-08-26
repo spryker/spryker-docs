@@ -18,4 +18,4 @@ related:
   - title: Product Rating & Reviews feature overview
     link: docs/scos/user/features/page.version/product-rating-and-reviews-feature-overview.html
 ---
-{% include pbc/all/integrate-features/202204.0/integrate-the-product-rating-and-reviews-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-product-rating-and-reviews-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-product-rating-and-reviews-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-product-rating-and-reviews-feature.md -->

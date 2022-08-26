@@ -1991,6 +1991,7 @@ Set up behavior as follows:
 |ExampleDateTimeWishlistItemProductConfigurationRenderStrategyPlugin | Decodes JSON configuration data.                                                                  | None | SprykerShop\Yves\DateTimeConfiguratorPageExample\Plugin\ProductConfigurationWishlistWidget |
 |ProductConfigurationWishlistItemRequestExpanderPlugin | Expands `WishlistItem` with product configuration.                                                | None | SprykerShop\Yves\ProductConfigurationWishlistWidget\Plugin\WishlistPage |
 |ExampleDateTimeShoppingListItemProductConfigurationRenderStrategyPlugin | Decodes JSON configuration data.                                                                  | None | SprykerShop\Yves\DateTimeConfiguratorPageExample\Plugin\ProductConfigurationShoppingListWidget |
+|ConfiguratorSecurityHeaderExpanderPlugin | Adds configurator url to `Content-Security-Policy` header.                                                                  | None | SprykerShop\Yves\DateTimeConfiguratorPageExample\Plugin\Application |
 
 **src/Pyz/Zed/Availability/AvailabilityDependencyProvider.php**
 
@@ -2132,6 +2133,30 @@ class ProductConfigurationShoppingListWidgetDependencyProvider extends SprykerPr
     {
         return [
             new ExampleDateTimeShoppingListItemProductConfigurationRenderStrategyPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Yves/Application/ApplicationDependencyProvider.php**
+
+```php
+<?php
+
+namespace Pyz\Yves\Application;
+
+use Spryker\Yves\Application\ApplicationDependencyProvider as SprykerApplicationDependencyProvider;
+use SprykerShop\Yves\DateTimeConfiguratorPageExample\Plugin\Application\ConfiguratorSecurityHeaderExpanderPlugin;
+
+class ApplicationDependencyProvider extends SprykerApplicationDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Yves\ApplicationExtension\Dependency\Plugin\SecurityHeaderExpanderPluginInterface>
+     */
+    protected function getSecurityHeaderExpanderPlugins(): array
+    {
+        return [
+            new ConfiguratorSecurityHeaderExpanderPlugin(),
         ];
     }
 }

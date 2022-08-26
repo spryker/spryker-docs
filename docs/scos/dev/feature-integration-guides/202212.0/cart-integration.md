@@ -34,7 +34,7 @@ Based on the super attributes, you can select the needed product variant in the 
 
 ![product_super_attributes](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/feature-integration-guides/cart-integration.md/product_super_attributes.png)
 
-## Add support of item images in the cart
+## Add item images
 
 To support images in a cart, install the optional module `ProductImageCartConnector`:
 
@@ -135,9 +135,9 @@ Install the `CartVariant` module:
 composer require spryker/cart-variant
 ```
 
-### Attribute map collector
+### Update attribute map collector
 
-To support the mapping between attributes and availability, we need to collect additional data in our attribute map collector. You can do that by adding a single line with `SpyProductTableMap::COL_SKU` to the `getConreteProducts` function.
+To support the mapping between attributes and availability, you need to collect additional data in your attribute map collector. You can do that by adding the `SpyProductTableMap::COL_SKU` line to the `getConreteProducts` function.
 
 The full function is as follows:
 
@@ -166,7 +166,7 @@ protected function getConcreteProducts($idProductAbstract)
 }
 ```
 
-The `filterConcreteProductIds` function was changed to the following:
+The `filterConcreteProductIds` function changes to the following:
 
 ```php
 /**

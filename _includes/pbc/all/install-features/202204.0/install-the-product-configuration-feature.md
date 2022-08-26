@@ -702,13 +702,10 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 
 Check that product management plugins work correctly:
 
-1.  Add the configuration to the product via data import.
-
-2.  In the Back Office, go to **Catalog** > **Products**.
-
-3.  Find a product with a configuration that you created before.
-
-4.  Check that product is marked as configurable.
+1. Add the configuration to the product via data import.
+2. In the Back Office, go to **Catalog&nbsp;<span aria-label="and then">></span> Products**.
+3. Find a product with a configuration that you created before.
+4. Check that product is marked as configurable.
 
 {% endinfo_block %}
 
@@ -759,12 +756,9 @@ class SalesDependencyProvider extends SprykerSalesDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Make sure that sales plugins work correctly:
-
-1.  Configure a configurable product.
-
-2.  Place an order with the product.
-
-3.  Check that that the `spy_sales_order_item_configuration` database table contains a record with the configurable order item.
+1. Configure a configurable product.
+2. Place an order with the product.
+3. Check that the `spy_sales_order_item_configuration` database table contains a record with the configurable order item.
 
 {% endinfo_block %}
 
@@ -892,12 +886,9 @@ class ProductConfigurationDependencyProvider extends SprykerProductConfiguration
 {% info_block warningBox "Verification" %}
 
 Make sure that the product configuration price overrides the default product price:
-
-1.  Configure a configurable product with a regular price and a volume price.
-
-2.  Add the product to the cart with the amount required for the volume prices to apply.
-
-3.  Make sure that the volume price applies.
+1. Configure a configurable product with a regular price and a volume price.
+2. Add the product to the cart with the amount required for the volume prices to apply.
+3. Make sure that the volume price applies.
 
 {% endinfo_block %}
 
@@ -934,10 +925,8 @@ class AvailabilityStorageDependencyProvider extends SprykerAvailabilityStorageDe
 {% info_block warningBox "Verification" %}
 
 Make sure that availability plugins work correctly:
-
-1.  Configure a configurable product that has a regular availability.
-
-2.  Make sure that you cannot add to cart more items than available for the configuration.
+1. Configure a configurable product that has regular availability.
+2. Make sure that you cannot add to the cart more items than are available for the configuration.
 
 
 {% endinfo_block %}
@@ -974,11 +963,11 @@ class ProductStorageDependencyProvider extends SprykerProductStorageDependencyPr
 
 {% info_block warningBox "Verification" %}
 
-Make sure that, on the *Product Details* page of a configurable product, you can see product configuration information.
+Make sure that, on the **Product Details** page of a configurable product, you can see product configuration information.
 
 {% endinfo_block %}
 
-11. Set up product configuration check plugins for the quote request module::
+11. Set up product configuration check plugins for the quote request module:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
@@ -1013,10 +1002,8 @@ class QuoteRequestDependencyProvider extends SprykerQuoteRequestDependencyProvid
 {% info_block warningBox "Verification" %}
 
 Make sure the plugins work correctly:
-
-1.  Add a configurable product with incomplete configuration to cart.
-
-2.  Check that the Checkout and Request for quote buttons are not available.
+1. Add a configurable product with incomplete configuration to thecart.
+2. Check that the Checkout and Request for quote buttons are not available.
 
 {% endinfo_block %}
 
@@ -1069,7 +1056,7 @@ class QuoteRequestDependencyProvider extends SprykerQuoteRequestDependencyProvid
 Make sure the plugins work correctly:
 
 1. Log in as an agent assist.
-2. Add a configurable product with incomplete configuration to a cart.
+2. Add a configurable product with incomplete configuration to the cart.
 3. Select **Save** or **Save and Back to Edit**.
 4. Make sure that the validation error message appears.
 
@@ -1245,12 +1232,9 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
 {% info_block warningBox "Verification" %}
 
 Make sure that the wishlist plugins work correctly:
-
-1.  Configure a configurable product.
-
-2.  Add the configured product to wishlist.
-
-3.  Make sure that the product has been successfully added to wishlist.
+1. Configure a configurable product.
+2. Add the configured product to a wishlist.
+3. Make sure that the product has been successfully added to the wishlist.
 
 {% endinfo_block %}
 
@@ -1374,19 +1358,16 @@ class ShoppingListDependencyProvider extends SprykerShoppingListDependencyProvid
 {% info_block warningBox "Verification" %}
 
 Make sure that the shopping list plugins work correctly:
-
-1.  Configure a configurable product.
-
-2.  Add the configured product to shopping list.
-
-3.  Make sure that the product has been successfully added to shopping list.
+1. Configure a configurable product.
+2. Add the configured product to a shopping list.
+3. Make sure that the product has been added successfully to the shopping list.
 
 {% endinfo_block %}
 
 
 ### 5) Import data
 
-The following imported entities will be used as product configurations in Spryker. Follow the steps to import product configuration data:  
+The following imported entities are used as product configurations in Spryker. Follow the steps to import product configuration data:  
 
 1. Prepare data according to your requirements using the following demo data:
 
@@ -1400,8 +1381,8 @@ concrete_sku,configurator_key,is_complete,default_configuration,default_display_
 
 | COLUMN | Required | DATA TYPE | DATA EXAMPLE | DATA EXPLANATION |
 | --- | --- | --- | --- | --- |
-| concrete_sku | ✓ | string | 093_24495843 | Unique product identifier. |
-| configurator_key | ✓ | string | DATE_TIME_CONFIGURATOR | Unique identifier of a product configurator to be used for this product. |
+| concrete_sku | &check; | string | 093_24495843 | Unique product identifier. |
+| configurator_key | &check; | string | DATE_TIME_CONFIGURATOR | Unique identifier of a product configurator to be used for this product. |
 | is_complete |   | boolean | 0 | Defines if product configuration complete by default. |
 | default_configuration |  | text | `"{""time_of_day"": ""2""}"` | Defines default configuration. |
 | default_display_data |  | text | `"{""Preferred time of the day"": ""Afternoon"", ""Date"": ""9.09.2020""}"` | Defines default display data for the configuration. |
@@ -1448,7 +1429,7 @@ Make sure that the configured data has been added to the `spy_product_cofigurat
 
 {% endinfo_block %}
 
-## Install feature front end
+## Install feature frontend
 
 Follow the steps below to install the feature front end.
 
@@ -1628,23 +1609,19 @@ class CustomerReorderWidgetDependencyProvider extends SprykerCustomerReorderWidg
 {% info_block warningBox "Verification" %}
 
 Make sure that the reorder expander plugin works:
-
-1.  Order with a configurable product.
-
-2.  Go to the *Order history* page on the Storefront.
-
-3.  Select **Reorder** next to the order with the configurable product.
+1. Order with a configurable product.
+2. Go to the **Order history** page on the Storefront.
+3. Select **Reorder** next to the order with the configurable product.
 
 4.  Check that, in the cart, the configurable product has the configuration from the previous order.
 
-
 {% endinfo_block %}
 
-3. Register the following gateway plugins:
+5. Register the following gateway plugins:
 
 | PLUGIN                                                                    | SPECIFICATION                                                                                                                                                                                             | PREREQUISITES | NAMESPACE |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------| --- |
-| ProductDetailPageProductConfiguratorRequestStrategyPlugin                 | Finds the product configuration instance for a given product, maps it to ProductConfiguratorRequestTransfer, and sends the product configurator access token request.                                     | None          | SprykerShop\Yves\ProductConfiguratorGatewayPage\Plugin|
+| ProductDetailPageProductConfiguratorRequestStrategyPlugin                 | Finds the product configuration instance for a given product, maps it to `ProductConfiguratorRequestTransfer`, and sends the product configurator access token request.                                     | None          | SprykerShop\Yves\ProductConfiguratorGatewayPage\Plugin|
 | ProductDetailPageProductConfiguratorResponseStrategyPlugin                | Maps the product configurator check sum response, validates it and replaces configuration for a given product in the session.                                                                             | None          | SprykerShop\Yves\ProductConfiguratorGatewayPage\Plugin|
 | ProductDetailPageProductConfiguratorRequestDataFormExpanderStrategyPlugin | Extends the product configurator request form with the SKU field to support configuration for a product on the PDP page.                                                                                  | None          | SprykerShop\Yves\ProductConfiguratorGatewayPage\Plugin|
 | CartPageProductConfiguratorRequestStartegyPlugin                          | Finds configuration instance in quote, maps it to `ProductConfiguratorRequestTransfer` and sends product configurator access token request.                                                               | None          | SprykerShop\Yves\ProductConfigurationCartWidget\Plugin|
@@ -1652,7 +1629,7 @@ Make sure that the reorder expander plugin works:
 | CartPageProductConfiguratorRequestDataFormExpanderStrategyPlugin          | Extends the product configurator request form with SKU, quantity, and key group fields to support configuration for a cart item on a cart page.                                                           | None          | SprykerShop\Yves\ProductConfigurationCartWidget\Plugin|
 | WishlistPageProductConfiguratorRequestStrategyPlugin                      | Finds product configuration instance for given wishlist item, maps product configuration instance data to `ProductConfiguratorRequestTransfer`, and sends product configurator access token request.      | None          | SprykerShop\Yves\ProductConfigurationWishlistWidget\Plugin\ProductConfiguratorGatewayPage |
 | WishlistPageProductConfiguratorResponseStrategyPlugin                     | Maps the product configurator check sum response, validates it and replaces configuration for a given product in the wishlist item.                                                                       | None          | SprykerShop\Yves\ProductConfigurationWishlistWidget\Plugin\ProductConfiguratorGatewayPage |
-| WishlistPageProductConfiguratorRequestDataFormExpanderStrategyPlugin      | Extends the product configurator request form with the `idWishlistItem`, 'sku' fields to support configuration for a wishlist item on the Wishlist page.                                                  | None          | SprykerShop\Yves\ProductConfigurationWishlistWidget\Plugin\ProductConfiguratorGatewayPage |
+| WishlistPageProductConfiguratorRequestDataFormExpanderStrategyPlugin      | Extends the product configurator request form with the `idWishlistItem` and `sku` fields to support configuration for a wishlist item on the wishlist page.                                                  | None          | SprykerShop\Yves\ProductConfigurationWishlistWidget\Plugin\ProductConfiguratorGatewayPage |
 | ShoppingListPageProductConfiguratorRequestStrategyPlugin                  | Finds product configuration instance for given shopping list item, maps product configuration instance data to `ProductConfiguratorRequestTransfer`, and sends product configurator access token request. | None          | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Plugin\ProductConfiguratorGatewayPage |
 | ShoppingListPageProductConfiguratorResponseStrategyPlugin                 | Maps the product configurator check sum response, validates it and replaces configuration for a given product in the shopping list item.                                                                  | None          | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Plugin\ProductConfiguratorGatewayPage |
 | ShoppingListPageProductConfiguratorRequestDataFormExpanderStrategyPlugin  | Extends the product configurator request form with the `shoppingListItemUuid` and `quantity` fields to support configuration for a shopping list item on the Shopping List page.                          | None          | SprykerShop\Yves\ProductConfigurationShoppingListWidget\Plugin\ProductConfiguratorGatewayPage |
@@ -1726,20 +1703,14 @@ class ProductConfiguratorGatewayPageDependencyProvider extends SprykerProductCon
 {% info_block warningBox "Verification" %}
 
 Make sure that the plugins are set up correctly:
-
-1. Go to the PDP of a configurable product, make sure that you are able to open the configurator page and return to the PDP with the configuration saved.
-
-2. Add a configurable product to cart, go to the Cart page, make sure that you are able to open the configurator page and return to the Cart page with the configuration saved.
-
-3. Add a configurable product to the wishlist, go to the wishlist page and make sure that you are able to open the configurator page and return to the wishlist page with the configuration saved.
-
-4. Add a configurable product to the shopping list, go to the shopping list page and make sure that you are able to open the configurator page and return to the shopping list page with the configuration saved.
+1. Go to the PDP of a configurable product, make sure that you can open the configurator page, and return to the PDP with the configuration saved.
+2. Add a configurable product to the wishlist. Then, go to the wishlist page and make sure that you can open the configurator page and return to the wishlist page with the configuration saved.
+3. Add a configurable product to the shopping list. Then, go to the shopping list page and make sure that you can open the configurator page and return to the shopping list page with the configuration saved.
 
 {% endinfo_block %}
 
 1. Set up widgets as follows:
-
-    1.  Register the following plugins to enable widgets:   
+    1. Register the following plugins to enable widgets:   
 
     | PLUGIN                                            | SPECIFICATION                                                                                  | PREREQUISITES | NAMESPACE |
 ---------------------------------------------------|------------------------------------------------------------------------------------------------| --- | --- | --- |
@@ -1828,7 +1799,7 @@ console frontend:yves:build
 
 {% info_block warningBox "Verification" %}
 
-Make sure that product configuration data is displayed on the *Product Details*, *Cart*, *Wishlist* and *Shopping list* pages.
+Make sure that product configuration data is displayed on the **Product Details**, **Cart**, **Wishlist** and **Shopping list** pages.
 
 {% endinfo_block %}
 
@@ -1866,7 +1837,7 @@ Make sure that the following modules have been installed:
 ### 2) Configure an endpoint
 Configure an endpoint:
 
-1.  Define a new front controller for the date-time configurator:
+1. Define a new front controller for the date-time configurator:
 
 **public/Configurator/index.php**
 
@@ -2330,9 +2301,7 @@ console frontend:date-time-product-configurator:build
 {% info_block warningBox "Verification" %}
 
 Make sure that the front-end part has been built:
-
 1. Check that the folder `public/Configurator/dist` exists, and it’s not empty.
-
 2. Check that you can access the configurator at `https://date-time-configurator-example.mysprykershop.com/`.
 
 {% endinfo_block %}

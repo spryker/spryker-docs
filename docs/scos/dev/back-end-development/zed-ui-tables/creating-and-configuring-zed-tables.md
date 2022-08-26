@@ -24,6 +24,9 @@ redirect_from:
   - /v1/docs/en/t-working-tables
   - /docs/t-working-tables
   - /docs/en/t-working-tables
+related:
+  - title: Adding buttons to Zed tables
+    link: docs/scos/dev/back-end-development/zed-ui-tables/adding-buttons-to-zed-tables.html
 ---
 
 Spryker has a dedicated component to help you build tables for the Zed UI.
@@ -43,6 +46,7 @@ use Spryker\Zed\Gui\Communication\Table\AbstractTable;
 
 class OrdersTable extends AbstractTable
 ```
+
 {% info_block warningBox "Note" %}
 
 The query used for fetching the data must be injected into the constructor.
@@ -230,6 +234,7 @@ To start the download, add a link to the `DownloadController` action on the tabl
 ### Preparing the download of the data
 
 To prepare the CSV file, implement the following methods in the `Table` class:
+
 * `GetCsvHeaders()`
 * `GetDownloadQuery()`
 * `FormatCsvRow()`
@@ -258,9 +263,9 @@ protected function getCsvHeaders(): array
 }
 ```
 
-#### Implementing formatCsvRow
+#### Implementing getDownloadQuery
 
-The `GetDownloadQuery` method returns the query that is used to fetch the data from the database. In the background, `\Propel\Runtime\Formatter\OnDemandFormatter` is set for performance reasons.
+This method returns the query that is used to fetch the data from the database. In the background, `\Propel\Runtime\Formatter\OnDemandFormatter` is set for performance reasons.
 
 ```php
 <?php
@@ -279,7 +284,7 @@ protected function getDownloadQuery(): ModelCriteria
 }
 ```
 
-#### Implementing GetDownloadQuery
+#### Implementing formatCsvRow
 
 This method receives each `\Propel\Runtime\ActiveRecord\ActiveRecordInterface` and is responsible for returning a formatted array of the required data.
 

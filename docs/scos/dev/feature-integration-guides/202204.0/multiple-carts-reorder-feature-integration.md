@@ -1,6 +1,6 @@
 ---
 title: Multiple Carts + Reorder feature integration
-description: The Reorder Feature allows reordering previous orders. This guide will walk you through the process of integrating the feature into your project.
+description: The Reorder feature allows reordering previous orders. This guide will walk you through the process of integrating the feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/multiple-carts-reorder-feature-integration
@@ -11,54 +11,11 @@ redirect_from:
   - /docs/multiple-carts-reorder-feature-integration
   - /docs/en/multiple-carts-reorder-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/multiple-carts-reorder-feature-integration.html
+related:
+  - title: Multiple Carts feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/multiple-carts-feature-walkthrough.html
+  - title: Reorder feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/reorder-feature-walkthrough.html
 ---
 
-## Install feature core
-
-### Prerequisites
-
-To start feature integration, overview and install the necessary features:
-
-| NAME | VERSION |
-| --- | --- |
-| Multiple Carts | {{page.version}} |
-| Reorder | {{page.version}} |
-| Spryker Core | {{page.version}} |
-
-### 1) Set up behavior
-
-Register the following plugins:
-
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| ReorderPersistentCartChangeExpanderPlugin | Adds a default reorder name and adds it to add item request. | 1 | Spryker\Client\MultiCart\Plugin |
-
-**src/Pyz/Client/PersistentCart/PersistentCartDependencyProvider.php**
-
-```php
-<?php
-
-namespace Pyz\Client\PersistentCart;
-
-use Spryker\Client\MultiCart\Plugin\ReorderPersistentCartChangeExpanderPlugin;
-use Spryker\Client\PersistentCart\PersistentCartDependencyProvider as SprykerPersistentCartDependencyProvider;
-
-class PersistentCartDependencyProvider extends SprykerPersistentCartDependencyProvider
-{
- /**
- * @return \Spryker\Client\PersistentCartExtension\Dependency\Plugin\PersistentCartChangeExpanderPluginInterface[]
- */
- protected function getChangeRequestExtendPlugins(): array
- {
- return [
- new ReorderPersistentCartChangeExpanderPlugin(),
- ];
- }
-}
-```
-
-{% info_block warningBox "Verification" %}
-
-When using the reorder feature, a new customer quote must be created with the name "Cart from order {Order reference}".
-
-{% endinfo_block %}
+{% include pbc/all/install-features/202204.0/install-the-multiple-carts-reorder-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-multiple-carts-reorder-feature.md -->

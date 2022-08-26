@@ -3,6 +3,15 @@ title: Entity name is not unique
 description: Guidelines for making entity names unique
 last_updated: Mar 23, 2022
 template: concept-topic-template
+related:
+  - title: Upgradability guidelines
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html
+  - title: Private API is extended
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-extended.html
+  - title: Private API is used on the project level
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-used-on-the-project-level.html
+  - title: Private API method is overridden on the project level
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-method-is-overridden-on-the-project-level.html
 ---
 
 Modules have public and private APIs. While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API. For example, if you use a core method on the project level, and it is updated or removed with an update, it can cause unexpected issues.
@@ -19,6 +28,7 @@ The names of the following entities must be unique on the project level:
 * Database columns
 * Methods
 * Constants
+* Modules
 
 
 ## Transfer name is not unique
@@ -244,4 +254,30 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 {
     public const PYZ_CUSTOM_CONST = 'PYZ_CUSTOM_CONST';
 }
+```
+
+## Constant name is not unique
+
+Module names must be unique. Check the examples below to learn how to fix the error.
+
+### Example of source structure that causes an upgradability error: Module name is not unique
+
+```php
+src/Pyz/Zed/SomeModuleName
+src/Pyz/Yves/ExampleStateMachine
+```
+
+### Example of related error in the Evaluator output: Module name is not unique
+
+```bash
+------------------ ----------------------------------------------------------------------------------------------------
+NotUnique:ModuleName Module ExampleStateMachine has to have project prefix, like PyzSomeModuleName.
+------------------ ----------------------------------------------------------------------------------------------------
+```
+
+### Example of resolving the error: Module name is not unique
+
+```php
+src/Pyz/Zed/PyzSomeModuleName
+src/Pyz/Yves/PyzExampleStateMachine
 ```

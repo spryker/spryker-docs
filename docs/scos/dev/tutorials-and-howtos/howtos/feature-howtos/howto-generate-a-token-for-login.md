@@ -11,6 +11,9 @@ redirect_from:
   - /docs/en/howto-generate-a-token-for-login
   - /v6/docs/howto-generate-a-token-for-login
   - /v6/docs/en/howto-generate-a-token-for-login
+related:
+  - title: Customer Login by Token overview
+    link: docs/scos/user/features/page.version/company-account-feature-overview/customer-login-by-token-overview.html
 ---
 
 The [Customer Login by Token](/docs/scos/user/features/{{site.version}}/company-account-feature-overview/customer-login-by-token-overview.html) feature lets B2B users log in to a Spryker Shop using a token.
@@ -19,7 +22,7 @@ A token is a unique identifier that contains all the information needed for auth
 
 To generate a token, follow the steps:
 
-1. The following transfers have to be adjusted for expansion:
+1. Adjusted the following transfers for expansion:
 
 ```xml
 <transfer name="Customer">

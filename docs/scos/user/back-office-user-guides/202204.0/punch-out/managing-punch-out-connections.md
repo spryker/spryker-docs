@@ -12,6 +12,11 @@ redirect_from:
   - /docs/en/managing-punch-out-connections
   - /docs/scos/user/back-office-user-guides/201811.0/punch-out/managing-punch-out-connections.html
   - /docs/scos/user/back-office-user-guides/201903.0/punch-out/managing-punch-out-connections.html
+related:
+  - title: Managing transactions log
+    link: docs/scos/user/back-office-user-guides/page.version/punch-out/managing-transactions-log.html
+  - title: Punchout Catalogs overview
+    link: docs/scos/user/technology-partners/page.version/order-management-erpoms/punchout-catalogs/punchout-catalogs-overview.html
 ---
 
 This topic describes how to create and manage the Punch Out connections.
@@ -26,6 +31,7 @@ Each section contains reference information. Make sure to review it before you s
 
 To connect your ERP with the Spryker Commerce OS via the Punch Out protocol, you need to create a Punch Out connection.
 To create the connection:
+
 1. On the *Punch Out Connections* page, in the top right corner, click **+New Connection**.
 2. On the *Create Transferred Cart Connection* page, enter and select the attributes.
 3. Click **Create**.
@@ -59,6 +65,7 @@ The following table describes the attributes that are used when creating a conne
 
 If the connection details change, edit them.
 To edit the connection:
+
 1. In the **Actions** column of *List of Punch Out Connections*, click **Edit** for a specific connection.
 2. On the **Edit Transferred Cart Connection** page, change the attributes.
 3. Click **Save**.
@@ -96,5 +103,6 @@ To view the entry points, in the **Actions** column of *List of Punch Out Connec
 ## Activating and deactivating a punch out connection
 
 To activate or deactivate a connection, in the *Actions* column of *List of Punch Out Connections*, click:
+
 * **Activate** to activate a connection.
 * **Deactivate** to deactivate a connection.

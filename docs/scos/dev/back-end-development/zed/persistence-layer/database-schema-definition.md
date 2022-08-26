@@ -22,6 +22,19 @@ redirect_from:
   - /v2/docs/en/database-schema-definition
   - /v1/docs/database-schema-definition
   - /v1/docs/en/database-schema-definition
+related: 
+  - title: Database overview
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/database-overview.html 
+  - title: Entity
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity.html
+  - title: Entity manager
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html
+  - title: About the query container
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html 
+  - title: Query objects - creation and usage
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/query-objects-creation-and-usage.html
+  - title: Repository
+    link: docs/scos/dev/back-end-development/zed/persistence-layer/repository.html
 ---
 
 With Propel, a [database schema](http://propelorm.org/documentation/reference/schema.html) is defined in an XML file. Each module has its own part of the big schema that is collected and merged.
@@ -170,4 +183,4 @@ You can use the following definitions to generate related code:
 * `vendor/bin/console spryk:run AddZedPersistencePropelSchema` - Add Zed Persistence Propel Schema
 * `vendor/bin/console spryk:run AddZedPersistencePropelSchemaTable` - Add Zed Persistence Propel Schema Table
 
-See the [Spryk](/docs/scos/dev/sdk/development-tools/spryk-code-generator.html) documentation for details.
+See the [Spryk](/docs/sdk/dev/spryks/spryks.html) documentation for details.

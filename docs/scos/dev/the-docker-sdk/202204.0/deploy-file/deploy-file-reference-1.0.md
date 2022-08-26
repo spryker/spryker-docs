@@ -14,7 +14,11 @@ redirect_from:
   - /docs/scos/dev/installation/spryker-in-docker/docker-sdk/deploy-file-reference-1.0.html
 related:
   - title: Docker SDK
-    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html
+    link: docs/scos/dev/the-docker-sdk/page.version/the-docker-sdk.html 
+  - title: Deploy file inheritance — common use cases
+    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file-inheritance-common-use-cases.html
+  - title: Deploy file
+    link: docs/scos/dev/the-docker-sdk/page.version/deploy-file/deploy-file.html
 ---
 
 
@@ -651,7 +655,7 @@ docker:
 
 ### docker: newrelic:
 
-Defines the [New Relic](/docs/scos/dev/the-docker-sdk/{{page.version}}/configuring-services.html#new-relic) configuration.
+Defines the [New Relic](/docs/scos/dev/the-docker-sdk/{{page.version}}/configure-services.html#new-relic) configuration.
 
 * `docker: newrelic: license:` - defines a New Relic license. Aquire it from [New Relic](https://www.newrelic.com/).
 * `docker: newrelic: appname:` - defines a New Relic application name. This variable is optional and does not have a default value.
@@ -839,12 +843,18 @@ A real-time log monitoring *Service*.
 
   - `dashboard: engine:` - possible value is `dashboard`.
   - `dashboard: endpoints:` - defines the service's port and web interface that can be accessed via given endpoints.
-  -
+
 ***
 
 ### database:
 
 An SQL database management system *Service*.
+
+{% info_block warningBox "SCCOS" %}
+
+In Spryker Cloud Commerse OS, `database: root: username:` and `database: root: password:` are generated automatically for security reasons. You *do not* need to define them for cloud environments.  
+
+{% endinfo_block %}
 
 * Project-wide
 

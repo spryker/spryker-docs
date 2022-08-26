@@ -1,5 +1,5 @@
 ---
-title: Showing Messages in Zed
+title: Showing messages in Zed
 description: This article describes how to show a message in the Zed GUI.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,11 @@ redirect_from:
   - /v2/docs/en/flash-messenger
   - /v1/docs/flash-messenger
   - /v1/docs/en/flash-messenger
+related:
+  - title: Handling errors with ErrorHandler
+    link: docs/scos/dev/back-end-development/messages-and-errors/handling-errors-with-errorhandler.html
+  - title: Handling Internal Server messages
+    link: docs/scos/dev/back-end-development/messages-and-errors/handling-internal-server-messages.html
 ---
 
 This article describes how to show a message in the Zed GUI.

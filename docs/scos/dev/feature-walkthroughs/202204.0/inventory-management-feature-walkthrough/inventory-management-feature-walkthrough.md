@@ -11,21 +11,21 @@ The _Inventory Management_ feature adds stock and availability management as wel
 
 ## Availability
 
-From this section, you will get to know how product availability is checked and calculated, how products are reserved, how availability can be imported to the database as well as how availability per store works.
+From this section, you will get to know how product availability is checked and calculated, how products are reserved, how availability can be imported to the database, as well as how availability per store works.
 
 ### Availability check
 
-The process of checking product's availability implies several operations described in the list below.
+The process of checking a product's availability implies several operations described in the list below.
 
-* Product details page won’t show the **Add to cart** button when a concrete product is out of stock. Instead, informational message is displayed.
+* The product details page won’t show the **Add to cart** button when a concrete product is out of stock. Instead, informational message is displayed.
 * Pre-check plugin in cart. `\Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CheckAvailabilityPlugin`checks if all items in cart are available. It’s executed after the "Add to cart" operation. If an item is not available, an error message is sent to Yves.
 * Checkout pre-condition when an order is placed in the last step. `Spryker\Zed\Availability\Communication\Plugin\ProductsAvailableCheckoutPreConditionPlugin`  checks all items in cart. If any of them is not available anymore, order placing is aborted and error message is displayed.
 
 ### "Reserved" flag
 
-When an order is placed, payment state machine is executed and an item is moved through states. Some states have a “reserved” flag which means that the state influences the item availability.
+When an order is placed, the payment state machine is executed and an item is moved through states. Some states have a “reserved” flag which means that the state influences the item availability.
 
-When items are moved to state with the "reserved" flag, `ReservationHandlerPluginInterface::handle()` is triggered. This call means that the product availability has to be updated. State machine is also tracking products in the "reserved" state, and the database table `spy_oms_product_reservation` is used for this.
+When items are moved to state with the "reserved" flag, `ReservationHandlerPluginInterface::handle()` is triggered. This call means that the product availability has to be updated.  The state machine is also tracking products in the "reserved" state using the database table `spy_oms_product_reservation` for this
 
 Below you can see dummy payment state machine, which is a sample implementation with the "reserved" flags:
 ![Reserved flags](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Stock+and+Availability+Management/dummy_payment.jpg)
@@ -41,7 +41,7 @@ Events are generated in these two cases:
 | Case 1 | If availability amount was equal to 0 and now it’s more than 0, the event is triggered. |
 | Case 2 | If availability amount was more than 0 and now it’s equal to 0, the event is triggered. |
 
-The default behavior is having **available** or not available **status** set for product while the amount of product does not matter. Even though events are triggered when amount is changed from 0 to N or from N to 0, it's not the amount change that triggers events, but the change of product status. You can change the default behavior for the events to be triggered whenever the amount is changed. For more information, see [HowTo - Change the Default Behavior of Event Triggering in the AvailabilityStorage Module](/docs/scos/dev/tutorials-and-howtos/howtos/howto-change-the-default-behavior-of-event-triggering-in-the-availabilitystorage-module.html).
+The default behavior is having the **available** or **not available** status set for a product while the amount of product does not matter. Even though events are triggered when amount is changed from 0 to N or from N to 0, it's not the amount change that triggers events, but the change of product status. You can change the default behavior for the events to be triggered whenever the amount is changed. For more information, see [HowTo: Change the Default Behavior of Event Triggering in the AvailabilityStorage Module](/docs/scos/dev/tutorials-and-howtos/howtos/howto-change-the-default-behavior-of-event-triggering-in-the-availabilitystorage-module.html).
 
 Published data example in JSON.
 
@@ -74,16 +74,17 @@ This information is used on product details page when **Add to cart** is rendere
 
 ### Availability calculation
 
-Product availability can have flag `is_never_out_of_stock`. This indicates that the product is always available for sale and does not have a finite stock. In this situation the availability calculation is not needed anymore.
+Product availability can have flag `is_never_out_of_stock`. This indicates that the product is always available for sale and does not have a finite stock. In this situation, the availability calculation is no longer needed.
 
 `Availability = max(0, sum of all stock types(Stock) - Reserved Items)`
-In state machine items get reserved for an open order. There are certain states that release item, for example when payment fails and order is canceled. But if order is successfully fulfilled and item is delivered, item stays reserved till the next stock update.
 
-Stock update triggers the event `stock update`. For example, in our dummy payment’s implementation this will move the items from “Shipped” state to next state. As the consecutive state is not reserved, the items that have already been shipped, will not be reserved any more.
+In the state machine, items get reserved for an open order. There are certain states that release item, for example when payment fails and order is canceled. But if order is successfully fulfilled and item is delivered, the item stays reserved until the next stock update.
+
+A stock update triggers the event `stock update`. For example, in our dummy payment’s implementation, this would move the items from the “Shipped” state to next state. As the consecutive state is not reserved, the items that have already been shipped will no longer be reserved.
 
 ### Import or change stock
 
-It’s possible to use `vendor/bin/console data:import:product-stock` command to import stocks into database. The default stock importer uses `csv` file from `src/Pyz/Zed/Updater/Business/Internal/data/import/product_stock.csv` which imports stocks.
+It’s possible to use the `vendor/bin/console data:import:product-stock` command to import stocks into the database. The default stock importer uses the `csv` file from `src/Pyz/Zed/Updater/Business/Internal/data/import/product_stock.csv` which imports stocks.
 
 To edit stock in the Back Office, see [Edit stock of products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/edit-stock-of-products-and-product-bundles.html).
 
@@ -91,16 +92,16 @@ Stock update considers the stock from the stock file to be the absolute value. O
 
 ### Availability per store
 
-Since Availability module version 6.* we have added support for multi-store availability. That means that you can now have availability calculated per store basis. In the Administration Interface you can change from which store you want to see availability.
+Since Availability module version 6.*, we have added support for multi-store availability. That means that you can now have availability calculated per store basis. In the Administration Interface, you can change from which store you want to see availability.
 
-The main change in Availability in that `spy_availability` and `spy_availability_abstract` now have foreign key to store table which indicates to which store it is applicable. Reservations in OMS have also undergone a few changes to support multiple multi-store scenarios.
+The main change in Availability is that `spy_availability` and `spy_availability_abstract` now have foreign keys to store tables which indicates to which store it is applicable. Reservations in OMS have also undergone a few changes to support multiple multi-store scenarios.
 
 With Spryker shop, you can actually have several scenarios pertain to product warehouses in a multi-store environment. Each scenario is configured and enabled manually. The possible scenarios are listed below.
 
-1. Each store has own database and own warehouse. This means that stores have separate independent stocks and therefore separated product reservations and availability.
+1. Each store has its own database and own warehouse. This means that stores have separate independent stocks and therefore separate product reservations and availability.
 ![Scenario 1](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Stock+and+Availability+Management/Scenario_1.png)
 
-2. Each store has own database, but warehouse is shared between the stores. This means that reservation and availabilities are synced.For the case when stores do not share database, but reservations must be shared, three new database tables have been created.
+2. Each store has its own database, but a warehouse is shared between the stores. This means that reservation and availabilities are synced. For the case when stores do not share a database, but reservations must be shared, three new database tables have been created.
 ![Scenario 2](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Stock+and+Availability+Management/Scenario_2.png)
 
 * spy_oms_product_reservation_store - this table will store reservation request from other stores.
@@ -109,16 +110,17 @@ With Spryker shop, you can actually have several scenarios pertain to product wa
 
 Also, we provide a few plugins to help implement synchronization:
 
-* `\Spryker\Zed\Oms\Communication\Plugin\Oms\ReservationHandler\ReservationVersionHandlerPlugin` - this plugin will be called when customer makes an order and reservation is made. It will store reservation to spy_oms_reservation_change_version database table. This plugin should be registered in `\Pyz\Zed\Oms\OmsDependencyProvider::getReservationHandlerPlugins` plugin stack.
-* `\Spryker\Zed\Oms\Communication\Plugin\Oms\ReservationImport\ReservationExportPlugin` - is the plugin which will be called when reservation export to other store is called. This plugin should decide if the export should be accepted. The delivery mechanism is not provided, it could be done with files or queue. For example, when ReservationExportPlugin is called, you could write a file copy to other server and then read it there. Similar would be with queue "publish", then "consume" on other end.
-* When reading export data on other store, you can then use `\Spryker\Zed\Oms\Business\OmsFacadeInterface::importReservation` which will store reservation information to `spy_oms_product_reservation_store` table and update all timestamps accordingly.
+* `\Spryker\Zed\Oms\Communication\Plugin\Oms\ReservationHandler\ReservationVersionHandlerPlugin` - this plugin will be called when customer makes an order and a reservation is made. It will store the reservation to the spy_oms_reservation_change_version database table. This plugin should be registered in the `\Pyz\Zed\Oms\OmsDependencyProvider::getReservationHandlerPlugins` plugin stack.
+* `\Spryker\Zed\Oms\Communication\Plugin\Oms\ReservationImport\ReservationExportPlugin` - is the plugin which will be called when a reservation export to another store is called. This plugin decides if the export should be accepted. The delivery mechanism is not provided, and instead could be done with files or a queue. For example, when ReservationExportPlugin is called, you could write a file copy to another server and then read it there. Similarly would be with the use of a queue called "publish", with another named "consume" on other end.
+* When reading export data on another store, you can then use `\Spryker\Zed\Oms\Business\OmsFacadeInterface::importReservation` which will store reservation information to the `spy_oms_product_reservation_store` table and update all timestamps accordingly.
 
 There is a console command to export all reservations: `\Spryker\Zed\Oms\Communication\Console\ExportReservationConsole`. It will trigger `ReservationExportPlugin` with reservations amounts to export. This command can be added to cronjob and run periodically.
 
-3. Database is shared between stores, but warehouses are separated by store. This means, that reservations and availability are separated per store and the warehouses (and their stocks) belong to specific stores. Assume there are DE and AT stores. DE store has Warehouse 1 and Warehouse 2, and AT has Warehouse 2. If user wants to buy some product from Warehouse 2 which is not available for AT store, but available in DE store, he/she would not be able to buy it in AT store (since the warehouses are separated), but could buy it in DE store (since the database is shared and it’s possible to switch between stores). When orders are placed, each reservation in
+3. Database is shared between stores, but warehouses are separated by store. This means that reservations and availability are separated per store and the warehouses (and their stocks) belong to specific stores. Assume there are DE and AT stores: DE store has Warehouse 1 and Warehouse 2, and AT has Warehouse 2. If a user wants to buy some product from Warehouse 2 which is not available for AT store, but available in DE store, they would not be able to buy it from the AT store since the warehouses are separated. However, the user could buy it in DE store, since the database is shared and it’s possible to switch between stores. When orders are placed, each reservation in
 ![Scenario 3](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Stock+and+Availability+Management/Scenario_3.png)
 
-`spy_oms_product_reservation` table will also store information about store, the relation `fk_store`, to `spy_store` table. When adding a product to cart and displaying it there, the store identifier `fk_store` is used to define the correct availability value for the specific store.
+The `spy_oms_product_reservation` table will also store information about stores, the relation `fk_store`, to the `spy_store` table. When adding a product to cart and displaying it there, the store identifier `fk_store` is used to define the correct availability value for the specific store.
+
 From Availability module version 6.0 we have added a new configuration option to store.php file to have information about store with shared persistence. Add `'sharedPersistenceWithStores' => []` to `stores.php`, where array is store names.
 
 For example:
@@ -135,9 +137,9 @@ For example:
           ]
 ```
 
-That means that DE and AT both share database. This information will be used when updating OMS reservations.
+That means that both DE and AT share a database. This information will be used when updating OMS reservations.
 
-4. Database is shared between stores, warehouses are shared by the stores. In this case the reservation must be synchronized.
+4. Database is shared between stores, and warehouses are shared by the stores. In this case the reservation must be synchronized.
 ![Scenario 4](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/Stock+and+Availability+Management/Scenario_4.png)
 
 When placing an order in Store A, the reservation is stored with the store identifier `fk_store`. An event is created and published in the queue, and synchronization with Store B happens. See scenario 3 above for information about how reservations are handled as well learn about the new configuration option for shared database in the `store.php` file.
@@ -149,6 +151,6 @@ To learn more about the feature and to find out how end users use it, see [Inven
 
 | INTEGRATION GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
 |---|---|---|---|
-| [Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/inventory-management-feature-integration.html) | [Retrieving abstract product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-availability.html) | [File details: product_stock.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html) | [Reference information: AvailabilityStorage module overview](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/reference-informaton-availabilitystorage-module-overview.html) |
+| [Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/inventory-management-feature-integration.html) | [Retrieving abstract product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-product-availability.html) | [File details: product_stock.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/file-details-product-stock.csv.html) | [AvailabilityStorage module: reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html) |
 | [Glue API: Inventory Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-inventory-management-feature-integration.html) | [Retrieving concrete product availability](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-availability.html) | [File details: warehouse_address.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html) | [Managing stocks in a multi-store environment: Best practices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html) |
 |  |  | [File details: warehouse_store.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-warehouse-store.csv.html) |  |

@@ -16,6 +16,9 @@ redirect_from:
   - /v5/docs/en/ht-integrate-and-use-precise-decimal-numbers
   - /v4/docs/ht-integrate-and-use-precise-decimal-numbers
   - /v4/docs/en/ht-integrate-and-use-precise-decimal-numbers
+related:
+  - title: Decimal Stock migration concept
+    link: docs/scos/dev/migration-concepts/decimal-stock-migration-concept.html
 ---
 
 The document shows how to install and work with precise decimal objects.

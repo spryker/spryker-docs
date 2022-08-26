@@ -11,6 +11,9 @@ redirect_from:
   - /docs/managing-roles
   - /docs/en/managing-roles
   - /docs/scos/user/back-office-user-guides/202204.0/users/roles-groups-and-users/managing-roles.html
+related:
+  - title: Editing user roles
+    link: docs/scos/user/back-office-user-guides/page.version/users/managing-user-roles/editing-user-roles.html
 ---
 
 This document describes how to create user roles in the Back Office.
@@ -33,7 +36,7 @@ Review the [reference information](#reference-information-creating-user-roles) b
 6. Select a **PERMISSION**
 7. Click **Add Rule**.
       The page refreshes with the success message displayed and the rule displayed in the **Assigned Rules** section.
-8. Repeat steps 3-7 until you add all the needed rules.       
+8. Repeat steps 3-7 until you add all the needed rules.
 
 
 ### Reference information: Creating user roles
@@ -47,7 +50,6 @@ The following table describes the attributes you enter and select when creating 
 | CONTROLLER | Depending on the **PERMISSION**, allows or denies access to a  subsection of the Back Office. You can check this value by going to the needed subsection and looking it up in the URL. For example, in `https://backoffice.de.b2b-demo-shop.local/product-attribute-gui/attribute/create`, `attribute` is a controller. |
 | ACTION | Depending on the **PERMISSION**, allows or denies access to making actions. You can check this value by going to the needed action and looking it up in the URL. For example, in `https://backoffice.de.b2b-demo-shop.local/product-attribute-gui/attribute/create`, `create` is an action.
 | PERMISSION | Denies or allows access to the **BUNDLE**, **CONTROLLER**, and **ACTION**. |
-
 
 **Tips and tricks**
 
@@ -95,7 +97,6 @@ See the example of the `navigation.xml` file of the AvailabilityGui module:
     </product>
 </config>
 ```
-
 </details>
 
 

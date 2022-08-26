@@ -42,7 +42,8 @@ commonOptions = {
     /blackfire.io\/[\.\w\-\/\?]+/,
     /www.nekom.com\/[\.\w\-\/\?]+/,
     /www.phpunit.de\/[\.\w\-\/\?]+/,
-    /rpm.newrelic.com\/[\.\w\-\/\?]+/
+    /rpm.newrelic.com\/[\.\w\-\/\?]+/,
+    /martin-loetzsch.de\/[\.\w\-\/\?]+/
   ],
   :file_ignore => [],
   :typhoeus => {
@@ -71,9 +72,9 @@ task :check_acp_user do
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/acp\/dev\/.+/,
     /docs\/fes\/.+/,
     /docs\/paas-plus\/.+/,
+    /docs\/pbc\/.+/,
     /docs\/sdk\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
@@ -201,11 +202,12 @@ task :check_pbc do
   options[:file_ignore] = [
     /docs\/scos\/.+/,
     /docs\/marketplace\/.+/,
+    /docs\/sdk\/.+/,
     /docs\/cloud\/.+/,
-    /docs\/acp\/.+/,
     /docs\/fes\/.+/,
-    /docs\/paas-plus\/.+/,
-    /docs\/sdk\/.+/
+    /docs\/acp\/.+/,
+    /docs\/paas-plus\/.+/
+
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

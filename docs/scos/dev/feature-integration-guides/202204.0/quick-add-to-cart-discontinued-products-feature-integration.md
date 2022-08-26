@@ -11,57 +11,11 @@ redirect_from:
   - /docs/quick-add-to-cart-discontinued-products-feature-integration
   - /docs/en/quick-add-to-cart-discontinued-products-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/quick-add-to-cart-discontinued-products-feature-integration.html
+related:
+  - title: Quick Add to Cart feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
+  - title: Product feature walkthrough
+    link: docs/scos/dev/feature-walkthroughs/page.version/product-feature-walkthrough.html
 ---
 
-## Install feature core
-
-### Prerequisites
-
-To start feature integration, overview and install the necessary features:
-
-| NAME | VERSION |
-| --- | --- |
-|Quick Add To Cart  | {{page.version}}  |
-|Discontinued Products  | {{page.version}} |
-
-### 1) Set up behavior
-
-#### Set up the additional functionality
-
-Enable the following behaviors by registering the plugins:
-
-| PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
-| --- | --- | --- | --- |
-| ProductDiscontinuedItemValidatorPlugin |Checks if the provided product SKU is discontinued, if yes - adds an error message.  | None | Spryker\Client\ProductDiscontinuedStorage\Plugin\QuickOrder |
-
-**src/Pyz/Client/QuickOrder/QuickOrderDependencyProvider.php**
-
-```php
- <?php
-
-namespace Pyz\Client\QuickOrder;
-
-use Spryker\Client\ProductDiscontinuedStorage\Plugin\QuickOrder\ProductDiscontinuedItemValidatorPlugin;
-use Spryker\Client\QuickOrder\QuickOrderDependencyProvider as SprykerQuickOrderDependencyProvider;
-
-class QuickOrderDependencyProvider extends SprykerQuickOrderDependencyProvider
-{
-	/**
-	* @return \Spryker\Client\QuickOrderExtension\Dependency\Plugin\ItemValidatorPluginInterface[]
-	*/
-	protected function getQuickOrderBuildItemValidatorPlugins(): array
-	{
-		return [
-			new ProductDiscontinuedItemValidatorPlugin(),
-		];
-	}
-    }
-```
-
-{% info_block warningBox "Verification" %}
-
-Make the following checks at `https://mysprykershop.com/quick-order`:
-* `ProductDiscontinuedItemValidatorPlugin`validates discontinued products.
-* Provide the SKU of a discontinued product on the **Quick Add To Cart** page and verify that the error message is displayed and you are not allowed to work with this product.
-
-{% endinfo_block %}
+{% include pbc/all/install-features/202204.0/install-the-quick-add-to-cart-discontinued-products-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-quick-add-to-cart-discontinued-products-feature.md -->

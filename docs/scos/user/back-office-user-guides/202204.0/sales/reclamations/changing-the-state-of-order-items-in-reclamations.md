@@ -3,6 +3,13 @@ title: Changing the state of order items in reclamations
 description: Learn how to change the state of order items in reclamations in the Back Office.
 last_updated: Aug 10, 2021
 template: back-office-user-guide-template
+related:
+  - title: Creating reclamations
+    link: docs/scos/user/back-office-user-guides/page.version/sales/orders/creating-reclamations.html
+  - title: Viewing reclamations
+    link: docs/scos/user/back-office-user-guides/page.version/sales/reclamations/viewing-reclamations.html
+  - title: Reclamations feature overview
+    link: docs/scos/user/features/page.version/reclamations-feature-overview.html
 ---
 
 This document describes how to change the state of order items in reclamations. Each reclamation is linked to the order it was created from. When you change the state of an order in a reclamation, you change it in the linked order.
@@ -12,12 +19,11 @@ This document describes how to change the state of order items in reclamations. 
 The instructions assume that there is an existing order with the **Payment pending** status.
 
 To start working with item states in reclamations, do the following:
+
 1. Go to **Sales&nbsp;<span aria-label="and then">></span> Reclamations**.
     This opens the **Reclamations** page.
 2. Next to the reclamation containing the items you want to change the state of, click **View**.
     This opens the **View reclamation** page.  
-
-
 
 Review the [reference information](#reference-information-changing-the-state-of-order-items-in-reclamations) before you start, or look up the necessary information as you go through the process.
 
@@ -38,7 +44,7 @@ Review the [reference information](#reference-information-changing-the-state-of-
 1. In the **ORDER {order reference} ITEMS:** pane, select the items you want to change the state of.
 2. In the **TRIGGER ALL MATCHING STATES** pane, click **Pay**.
     This refreshes the page with a success message displayed. The updated **State** is displayed for the selected items.
-3. Repeat steps 1-2 until you get the needed state.         
+3. Repeat steps 1-2 until you get the needed state.
 
 
 ## Reference information: Changing the state of order items in reclamations
@@ -58,6 +64,7 @@ The following table describes the states you can select for order items.
 | Refund | Select this state in case of a refund.|
 
 States flow:
+
 * **Payment pending**: the initial order status.
 * **Canceled**: state  of the order after it is canceled by the customer on the Storefront or by the Back Office user.
 * When you select **Pay**, the state becomes **Confirmed**.

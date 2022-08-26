@@ -25,7 +25,19 @@ redirect_from:
   - /v4/docs/supported-browsers
   - /v4/docs/en/supported-browsers
   - /docs/scos/dev/setup/system-requirements.html
+related:
+  - title: Installing Spryker with development virtual machine
+    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html
+  - title: Installing Spryker with DevVM on MacOS and Linux
+    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html
+  - title: Installing Spryker with DevVM on Windows
+    link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html
 ---
+{% info_block warningBox "Warning" %}
+
+We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
+
+{% endinfo_block %}
 
 | REQUIREMENT | VALUE |
 | ----------------- | ----------------------- |

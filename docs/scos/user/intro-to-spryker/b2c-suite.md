@@ -16,9 +16,12 @@ redirect_from:
   - /v4/docs/en/b2c-suite
   - /v6/docs/b2c-suite
   - /v6/docs/en/b2c-suite
+related:
+  - title: B2B Suite
+    link: docs/scos/user/intro-to-spryker/b2b-suite.html
 ---
 
-The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. Of course, every B2С project has its own set of features that meet their business needs and B2B features can be used as well, but the most common features for the B2C commerce are listed below.
+The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. Of course, every B2С project has its own set of features that meet its business needs and B2B features can be used as well, but the most common features for B2C commerce are as follows.
 
 <details>
 <summary markdown='span'>B2C feature list</summary>
@@ -28,7 +31,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Configurable Bundle](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
 - [Comments](/docs/scos/user/features/{{site.version}}/comments-feature-overview.html)
 - [Persistent Cart Sharing](/docs/scos/user/features/{{site.version}}/persistent-cart-sharing-feature-overview.html)
-- [Scheduled Prices](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
+- [Scheduled Prices](/docs/pbc/all/price-management/scheduled-prices-feature-overview.html)
 - [Availability Notification](/docs/scos/user/features/{{site.version}}/availability-notification-feature-overview.html)
 - [Customer Account Management](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html)
 - [Customer Access](/docs/scos/user/features/{{site.version}}/customer-access-feature-overview.html)
@@ -40,17 +43,17 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Spryker Core Back Office](/docs/scos/user/features/{{site.version}}/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html)
 <!---- [Development tools]()-->
 <!---- [Deployment tools]()-->
-- [Prices](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview.html)
+- [Prices](/docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.html)
 - [Tax](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html)
 - [Promotions & Discounts](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html)
-- [Wishlist](/docs/scos/user/features/{{site.version}}/wishlist-feature-overview.html)
+- [Wishlist](/docs/pbc/all/shopping-list-and-wishlist/wishlist-feature-overview.html)
 - [Cart](/docs/scos/user/features/{{site.version}}/cart-feature-overview/cart-feature-overview.html)
 - [Reorder](/docs/scos/user/features/{{site.version}}/reorder-feature-overview.html)
 - [Shipment](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
 - [Agent Assist](/docs/scos/user/features/{{site.version}}/agent-assist-feature-overview.html)
 - [Payments](/docs/scos/user/features/{{site.version}}/payments-feature-overview.html)
 <!---- [Invoice]()-->
-- [Gift cards](/docs/scos/user/features/{{site.version}}/gift-cards-feature-overview.html)
+- [Gift cards](/docs/pbc/all/gift-cards/gift-cards.html)
 - [Checkout](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/checkout-feature-overview.html)
 - [Mailing & Notifications](/docs/scos/user/features/{{site.version}}/mailing-and-notifications-feature-overview.html)
 - [Spryker Core](/docs/scos/user/features/{{site.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html)
@@ -77,10 +80,10 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 </details>
 
 ## B2C Demo Shop
-To demonstrate the B2C features in a live implementation, we use a B2C Demo Shop. The B2C Demo Shop is a showcase that is pre-loaded with a combination of modules and functionalities best suited for B2C commerce. This Demo Shop is our recommended starting point for all standard B2C commerce projects. New features for the B2C Demo Shop are released every several months.
+To demonstrate the B2C features in a live implementation, we use a B2C Demo Shop. The B2C Demo Shop is a showcase that is preloaded with a combination of modules and functionalities best suited for B2C commerce. This Demo Shop is our recommended starting point for all standard B2C commerce projects. New features for the B2C Demo Shop are released every several months.
 
 {% wistia e169fy8miw 960 720 %}
 
-To download the B2C Demo Shop, visit the following GitHub repository: [https://github.com/spryker-shop/b2c-demo-shop](https://github.com/spryker-shop/b2c-demo-shop)
+To download the B2C Demo Shop, visit the following GitHub repository: [https://github.com/spryker-shop/b2c-demo-shop](https://github.com/spryker-shop/b2c-demo-shop).
 
 To install the B2C Demo Shop, follow the instructions in [Installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).

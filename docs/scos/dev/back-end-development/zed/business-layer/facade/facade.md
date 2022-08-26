@@ -1,5 +1,5 @@
 ---
-title: About Facade
+title: About facade
 description: The facade acts as an internal API. The main responsibility of the facade is to hide the internal implementation.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,13 @@ redirect_from:
   - /v2/docs/en/facade
   - /v1/docs/facade
   - /v1/docs/en/facade
+related:
+  - title: Implementing a facade
+    link: docs/scos/dev/back-end-development/zed/business-layer/facade/implementing-a-facade.html
+  - title: Using a facade
+    link: docs/scos/dev/back-end-development/zed/business-layer/facade/using-a-facade.html
+  - title: Design by Contract (DBC) - Facade
+    link: docs/scos/dev/back-end-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
 ---
 
 The facade acts as an internal API. The main responsibility of the facade is to hide the internal implementation.

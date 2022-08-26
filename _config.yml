@@ -49,6 +49,8 @@ exclude:
   - redirect.html
   - docs/scos/dev/drafts-dev/
   - docs/scos/dev/developers-corner/
+  - docs/marketplace/dev/glue-api-guides/upcoming-release/
+  - docs/scos/dev/glue-api-guides/upcoming-release/
 
 # these are the files and directories that jekyll will exclude from the build
 
@@ -179,7 +181,7 @@ defaults:
     scope:
       path: "docs/pbc/all"
     values:
-      sidebar: "pbc_all_roles_sidebar"
+      sidebar: "pbc_all_sidebar"
       role: "all"
 
 
@@ -225,9 +227,6 @@ versioned_categories:
       - legacy-demoshop
       - technology-partner-guides
       - devops-migration-guides
-  pbc:
-    all:
-      - tax-management
 
 # these are defaults used for the front matter for these file types
 
@@ -241,7 +240,7 @@ sidebars:
   - acp_user_sidebar
   - fes_dev_sidebar
   - paas_plus_dev_sidebar
-  - pbc_all_roles_sidebar
+  - pbc_all_sidebar
 
 description: "Spryker documentation center."
 # the description is used in the feed.xml file
@@ -276,10 +275,10 @@ algolia:
       title: 'ACP User'
     - name: 'fes_dev'
       title: 'Frontend enablement Service Developer'
-    - name: 'paas_plus_dev'
-      title: 'Platform as a Service Plus Developer'
-    - name: 'pbc_all_roles'
+    - name: 'pbc_all'
       title: 'Packaged Business Capabilities'
+    - name: 'paas_plus_dev'
+      title: 'PaaS+'
 sass:
     sass_dir: css
     style: compressed

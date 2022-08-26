@@ -11,10 +11,10 @@ redirect_from:
   - /docs/managing-guest-carts
   - /docs/en/managing-guest-carts
 related:
-  - title: Managing gift cards of guest users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
   - title: Managing guest cart items
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-cart-items.html
+  - title: Managing gift cards of guest users
+    link: docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-guest-users.html
 ---
 
 This endpoint allows to manage guest carts.
@@ -22,6 +22,7 @@ This endpoint allows to manage guest carts.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
+
 * [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 * [Glue API: Product options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
@@ -984,33 +985,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 <a name="guest-cart-response-attributes"></a>
 
-**General Cart Information**
-
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| priceMode | String | Price mode that was active when the cart was created. |
-| currency | String | Currency that was selected when the cart was created. |
-| store | String | Store for which the cart was created. |
-| name | String | Name of the shopping cart. |
-| isDefault | Boolean | Defines whether the cart is default or not. |
-
-**Totals Information**
-
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| expenseTotal | Integer | Total amount of expenses (including e.g. shipping costs). |
-| discountTotal | Integer | Total amount of discounts applied to the cart. |
-| taxTotal | Integer | Total amount of taxes to be paid. |
-| subTotal | Integer | Subtotal of the cart. |
-| grandTotal | Integer | Grand total of the cart. |
-
-**Discount Information**
-
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| --- | --- | --- |
-| displayName | String | Discount name. |
-| code | String | Discount code applied to the cart. |
-| amount | Integer | Discount amount applied to the cart. |
+{% include pbc/all/glue-api-guides/manage-guest-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/manage-guest-carts-response-attributes.md -->
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -1034,7 +1009,7 @@ For the attributes of other included resources, see:
 * [Managing guest cart items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html)
 * [Retrieving measurement units](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)
 * [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
-* [Gift Cards of Guest Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html)
+* [Gift Cards of Guest Users](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-guest-users.html)
 * [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html#measurement-units-response-attributes)
 * [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 

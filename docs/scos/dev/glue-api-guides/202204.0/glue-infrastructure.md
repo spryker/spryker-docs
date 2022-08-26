@@ -1,5 +1,5 @@
 ---
-title: Glue Infrastructure
+title: Glue infrastructure
 description: The guide will walk you through the process of handling API requests at the Glue layer, including GlueApplication, Resource, and Relationship modules.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -17,7 +17,7 @@ redirect_from:
   - /docs/scos/dev/concepts/glue-api/glue-infrastructure.html
   - /docs/scos/dev/glue-api-guides/202200.0/glue-infrastructure.html
 related:
-  - title: Authentication and Authorization
+  - title: Authentication and authorization
     link: docs/scos/dev/glue-api-guides/page.version/authentication-and-authorization.html
 ---
 
@@ -217,7 +217,7 @@ The interface provides only 1 method: `getParentResourceType`. The method must r
 
 ### Resource relationships
 
-Often, to query certain data, one needs to use endpoints from different APIs to get the necessary information. For example, to present products in a customer's wishlist, one would need to use endpoints of the [Wishlists API](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html) to get a list of items in the wishlist, and then query endpoints of the [abstract product API](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html) and [concrete product API] in order to get descriptions, images and other information on each product. This can result in a big number of requests until the necessary data is fetched. To reduce the number of calls and provide all the necessary information in one pass, you can use resource relationships.
+Often, to query certain data, one needs to use endpoints from different APIs to get the necessary information. For example, to present products in a customer's wishlist, one would need to use endpoints of the [Wishlists API](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlists-via-glue-api.html) to get a list of items in the wishlist, and then query endpoints of the [abstract product API](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html) and [concrete product API] in order to get descriptions, images and other information on each product. This can result in a big number of requests until the necessary data is fetched. To reduce the number of calls and provide all the necessary information in one pass, you can use resource relationships.
 
 Let us consider the following REST Response example. It contains information on a wishlist item without any resource relationships.
 

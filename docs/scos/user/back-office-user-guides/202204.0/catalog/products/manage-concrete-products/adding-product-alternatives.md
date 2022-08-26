@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/adding-product-alternatives
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/products/manage-concrete-products/adding-product-alternatives.html
 related:
-  - title: Alternative Products Feature Overview
+  - title: Alternative Products feature overview
     link: docs/scos/user/features/page.version/alternative-products-feature-overview.html
 ---
 
@@ -28,6 +28,7 @@ To start working with product alternatives, go to **Catalog&nbsp;<span aria-labe
 ## Adding product alternatives for a product
 
 To added product alternatives for a product, do the following:
+
 1. On the *Edit Concrete Product* page, switch to the *Product Alternatives* tab.
 2. To add product alternatives, enter _Product Name_ or its _SKU_ in the **Add Product Alternative by Name** or **SKU** field.
 You can add multiple alternative products.

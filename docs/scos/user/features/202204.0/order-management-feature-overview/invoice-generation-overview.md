@@ -1,6 +1,6 @@
 ---
 title: Invoice Generation overview
-description: In this article, you will get the details about the Invoice Generation article provided by Spryker Commerce OS.
+description: This document provides the details about Invoice Generation provided by Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/invoice-generation-overview
@@ -24,11 +24,11 @@ You can generate an invoice only once the order has acquired the `confirmed` sta
 
 {% info_block infoBox "Info" %}
 
-You can use the default OMS states to be displayed on the **Order Details** pages on the Storefront or set custom states so they would make more sense for the Storefront users. For details about how to set the custom states for orders on the Storefront, see [HowTo - Display Custom Names for Order Item States on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
+You can use the default OMS states to be displayed on the **Order Details** pages on the Storefront or set custom states so they would make more sense for the Storefront users. For details about how to set the custom states for orders on the Storefront, see [HowTo: Display Custom Names for Order Item States on the Storefront](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html).
 
 {% endinfo_block %}
 
-By default, the invoice can be generated only for the whole order (not for individual order items) and only once. However, on the project level, you can set up a configuration that forces the repeated invoice generation by running a console command. For details, see [HowTo - Emailing Invoices Using BCC](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html).
+By default, the invoice can be generated only for the whole order (not for individual order items) and only once. However, on the project level, you can set up a configuration that forces the repeated invoice generation by running a console command. For details, see [HowTo: Emailing Invoices Using BCC](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-emailing-invoices-using-bcc.html).
 
 
 ## Invoice template
@@ -48,7 +48,7 @@ All other text is hardcoded. This text is glossary keys, and you can change them
 
 {% info_block infoBox "Product bundles" %}
 
-Keep in mind that bundled product itself always has a 0 tax rate. However, all of the bundled items are represented separately in the invoice and can have their own tax rates which are reflected in the invoice. For example, in the preceding image, Sony Bundle is the bundled product with a 0% tax rate, and *Sony HDR-AS20*, *Sony SmartWatch 3*, *Sony Xperia Z3 Compact* are its bundled items with their tax rates.
+Keep in mind that bundled product always has a 0-tax rate. However, all of the bundled items are represented separately in the invoice and can have their own tax rates which are reflected in the invoice. For example, in the preceding image, Sony Bundle is the bundled product with a 0% tax rate, and *Sony HDR-AS20*, *Sony SmartWatch 3*, *Sony Xperia Z3 Compact* are its bundled items with their tax rates.
 
 {% endinfo_block %}
 

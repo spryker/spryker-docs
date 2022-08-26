@@ -28,9 +28,10 @@ This page lists all the updates to the documentation made for each release.
 Check out our [release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) to learn more about the releases.
 
 ## Release {{page.version}}
+
 Below you will find the list of the new/updated documentation released as part of the [{{site.version}} Spryker product release](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html):
 
-### Features:
+### Features
 
 * [Split Delivery](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/split-delivery-overview.html)
 
@@ -52,7 +53,7 @@ Below you will find the list of the new/updated documentation released as part o
 <summary markdown='span'>HowTo</summary>
 
 
-[HowTo - Disable Split Delivery in Yves Interface](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html)
+[HowTo: Disable Split Delivery in Yves Interface](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-disable-split-delivery-in-yves-interface.html)
 
 
 </details>
@@ -100,35 +101,35 @@ Below you will find the list of the new/updated documentation released as part o
  <details>
 <summary markdown='span'>HowTo</summary>
 
-[HowTo - Import Packaging Units](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html)
+[HowTo: Import Packaging Units](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-packaging-units.html)
 
  </details>
 
 
-* [Scheduled Prices](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
+* [Scheduled Prices](/docs/pbc/all/price-management/scheduled-prices-feature-overview.html)
 <details>
 <summary markdown='span'>Feature overview</summary>
 
-[Scheduled Prices Feature Overview](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
+[Scheduled Prices Feature Overview](/docs/pbc/all/price-management/scheduled-prices-feature-overview.html)
 
 </details>
 <details>
 <summary markdown='span'>Integration guide</summary>
 
-[Scheduled Prices Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/scheduled-prices-feature-integration.html)
+[Integrate the Scheduled prices feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/scheduled-prices-feature-integration.html)
 
 </details>
 <details>
 <summary markdown='span'>Migration guides</summary>
 
-* [PriceProductSchedule migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedule.html)
-* [PriceProductScheduleGui migration from v. 1.* to v. 2.*](/docs/scos/dev/module-migration-guides/migration-guide-priceproductschedulegui.html)
+* [PriceProductSchedule migration from v. 1.* to v. 2.*](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedule-module.html)
+* [PriceProductScheduleGui migration from v. 1.* to v. 2.*](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedulegui-module.html)
 
 </details>
 <details>
 <summary markdown='span'>HowTo</summary>
 
-[Schedule Cron Job for Scheduled Prices](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-schedule-cron-job-for-scheduled-prices.html)
+[Schedule Cron Job for Scheduled Prices](/docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html)
 
 </details>
 
@@ -336,9 +337,9 @@ Below you will find the list of the new/updated documentation released as part o
 
 #### HowTos:
 
-* [HowTo - Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html)
-* [HowTo - Import Delivery Methods Linked to Store](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-delivery-methods-linked-to-store.html)
-* [HowTo - Notify About Unsupported Browsers](/docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html)
+* [HowTo: Import Warehouse Data](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-warehouse-data.html)
+* [HowTo: Import Delivery Methods Linked to Store](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/data-imports/howto-import-delivery-methods-linked-to-store.html)
+* [HowTo: Notify About Unsupported Browsers](/docs/scos/dev/tutorials-and-howtos/howtos/howto-notify-about-unsupported-browsers.html)
 
 #### Other documentation:
 * [Multiple Stores](/docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-multiple-stores.html)

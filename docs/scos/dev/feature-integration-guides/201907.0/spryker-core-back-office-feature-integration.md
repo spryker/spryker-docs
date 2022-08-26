@@ -10,7 +10,7 @@ redirect_from:
   - /v3/docs/en/back-office-feature-integration-201903
 ---
 
-## Install Feature API
+## Install feature API
 ### Prerequisites
 Ensure that the related features have been installed:
 

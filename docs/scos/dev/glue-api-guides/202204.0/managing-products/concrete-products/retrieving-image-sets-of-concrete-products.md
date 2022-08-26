@@ -11,6 +11,14 @@ redirect_from:
   - /docs/retrieving-image-sets-of-concrete-products
   - /docs/en/retrieving-image-sets-of-concrete-products
 related:
+  - title: Retrieving concrete products
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-products.html
+  - title: Retrieving concrete product availability
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-product-availability.html
+  - title: Retrieving concrete product prices
+    link: docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html
+  - title: Retrieving sales units
+    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-sales-units.html
   - title: Product image management
     link: docs/scos/user/features/page.version/product-feature-overview/product-images-overview.html
 ---

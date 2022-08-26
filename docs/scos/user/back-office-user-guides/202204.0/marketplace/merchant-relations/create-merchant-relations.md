@@ -12,7 +12,9 @@ redirect_from:
   - /docs/en/managing-merchant-relations
   - /docs/scos/user/back-office-user-guides/202204.0/marketplace/merchants-and-merchant-relations/managing-merchant-relations.html
 related:
-  - title: Merchants and Merchant Relations Feature Overview
+  - title: Edit merchant relations
+    link: docs/scos/user/back-office-user-guides/page.version/marketplace/merchant-relations/edit-merchant-relations.html
+  - title: Merchants and Merchant Relations feature overview
     link: docs/scos/user/features/page.version/merchant-b2b-contracts-feature-overview.html
 ---
 
@@ -50,5 +52,5 @@ This document describes how to create merchant relations in the Back Office.
 
 ## Next steps
 
-* Define merchant specific prices. For instructions, see [Creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products/creating-abstract-products-and-product-bundles.html) and [Creating a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html).
+* Define merchant specific prices. For instructions, see [Creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html) and [Creating a product variant](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/products/manage-concrete-products/creating-product-variants.html).
 * Define order thresholds for merchants. For instructions, see [Manage merchant order thresholds](/docs/scos/user/back-office-user-guides/{{page.version}}/administration/thresholds/managing-merchant-order-thresholds.html).

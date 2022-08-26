@@ -603,7 +603,7 @@ class CmsGuiDependencyProvider extends SprykerCmsGuiDependencyProvider
 Make sure that on the CMS Page and CMS Block edit pages you can see a new widget representing a block in the WYSIWYG editor toolbar when you add any Content Item using a **Content Item** button.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 To start the feature integration, review and install the necessary features:
 

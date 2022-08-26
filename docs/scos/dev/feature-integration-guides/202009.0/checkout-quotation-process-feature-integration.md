@@ -74,7 +74,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 Make sure that you can't see the **Checkout** button on the Quote request items edit page.<br>Make sure that after you placed an order form quote request, a quote request has a closed status.
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 ### Prerequisites
 Please overview and install the necessary features before beginning the integration step.
 

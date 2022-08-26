@@ -1,5 +1,5 @@
 ---
-title: Testing Your Direct Debit Implementation
+title: Testing your Direct Debit implementation
 description: This article describes how to test the direct debit payment implementation.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,17 @@ redirect_from:
   - /v2/docs/en/dd-test-implementation
   - /v1/docs/dd-test-implementation
   - /v1/docs/en/dd-test-implementation
+related:
+  - title: Implementing Direct Debit payment
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html
+  - title: Implementation of Direct Debit in Yves
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-yves.html
+  - title: Implementation of Direct Debit in Zed
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-zed.html
+  - title: Implementation of Direct Debit in the shared layer
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-the-shared-layer.html
+  - title: Integrate Direct Debit into checkout
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html
 ---
 
 After the Direct Debit payment method has been set up on the [front end](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-yves.html), [back end](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-zed.html) and [shared implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-the-shared-layer.html), test it by [submitting a new order](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/multi-step-checkout-overview.html) from Yves. Then, you can manage the flow of the order [in the Back Office](/docs/scos/user/back-office-user-guides/{{site.version}}/sales/orders/changing-the-state-of-order-items.html).

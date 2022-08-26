@@ -10,7 +10,7 @@ redirect_from:
   - /v4/docs/en/prices-feature-integration
 related:
   - title: Glue API - Product Price API feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-price-feature-integration.html
+    link: docs/pbc/all/price-management/install-and-upgrade/install-the-product-price-glue-api.html
   - title: Configurable Bundle feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/configurable-bundle-feature-integration.html
   - title: Product Images + Configurable Bundle feature integration
@@ -51,7 +51,7 @@ composer require spryker-feature/prices: "^{{page.version}}" --update-with-depen
 {% info_block warningBox "Verification" %}
 
 Make sure that the following modules were installed:
-    
+
  | Module | Expected Directory |
 | --- | --- |
 | `PriceProductVolume` | `vendor/spryker/price-product-volume` |
@@ -69,7 +69,7 @@ console transfer:generate
 {% info_block warningBox "Verification" %}
 
 Make sure that the following changes in transfer objects:
-    
+
 | Transfer | Type | Event | Path |
 | --- | --- | --- | --- |
 | `PriceProductVolume` | class |  created | `src/Generated/Shared/Transfer/PriceProductVolumeTransfer` |
@@ -121,12 +121,12 @@ Register the following plugin to enable data import:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\DataImport;
- 
+
 use Spryker\Zed\DataImport\DataImportDependencyProvider as SprykerDataImportDependencyProvider;
 use Spryker\Zed\PriceProductDataImport\Communication\Plugin\PriceProductDataImportPlugin;
- 
+
 class DataImportDependencyProvider extends SprykerDataImportDependencyProvider
 {
     protected function getDataImporterPlugins(): array
@@ -164,12 +164,12 @@ Enable the following behaviors by registering the plugins:
 
 ```php
 <?php
- 
+
 namespace Pyz\Zed\PriceProduct;
- 
+
 use Spryker\Zed\PriceProduct\PriceProductDependencyProvider as SprykerPriceProductDependencyProvider;
 use Spryker\Zed\PriceProductVolume\Communication\Plugin\PriceProductExtension\PriceProductVolumeExtractorPlugin;
- 
+
 class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvider
 {
     /**
@@ -188,12 +188,12 @@ class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvid
 
 ```php
 <?php
- 
+
 namespace Pyz\Client\PriceProductStorage;
- 
+
 use Spryker\Client\PriceProductStorage\PriceProductStorageDependencyProvider as SprykerPriceProductStorageDependencyProvider;
 use Spryker\Client\PriceProductVolume\Plugin\PriceProductStorageExtension\PriceProductVolumeExtractorPlugin;
- 
+
 class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDependencyProvider
 {
     /**
@@ -212,12 +212,12 @@ class PriceProductStorageDependencyProvider extends SprykerPriceProductStorageDe
 
 ```php
 <?php
- 
+
 namespace Pyz\Service\PriceProduct;
- 
+
 use Spryker\Service\PriceProduct\PriceProductDependencyProvider as SprykerPriceProductDependencyProvider;
 use Spryker\Service\PriceProductVolume\Plugin\PriceProductExtension\PriceProductVolumeFilterPlugin;
- 
+
 class PriceProductDependencyProvider extends SprykerPriceProductDependencyProvider
 {
     /**
@@ -240,7 +240,7 @@ Go to the product detail page for a product with Volume Prices set, update the q
 
 {% endinfo_block %}
 
-## Install Feature Frontend
+## Install feature frontend
 
 ### Prerequisites
 
@@ -308,13 +308,13 @@ Enable global widgets:
 
 ```php
 <?php
- 
+
 namespace Pyz\Yves\ShopApplication;
- 
+
 use SprykerShop\Yves\ShopApplication\ShopApplicationDependencyProvider as SprykerShopApplicationDependencyProvider;
 use SprykerShop\Yves\PriceProductVolumeWidget\Widget\ProductPriceVolumeWidget;
 use SprykerShop\Yves\PriceProductWidget\Widget\PriceProductWidget;
- 
+
 class ShopApplicationDependencyProvider extends SprykerShopApplicationDependencyProvider
 {
     /**

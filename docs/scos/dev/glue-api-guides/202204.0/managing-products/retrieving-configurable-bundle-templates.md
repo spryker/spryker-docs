@@ -11,6 +11,9 @@ redirect_from:
   - /docs/retrieving-configurable-bundle-templates
   - /docs/en/retrieving-configurable-bundle-templates
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/retrieving-configurable-bundle-templates.html
+related:
+  - title: Configurable Bundle feature overview
+    link: docs/scos/user/features/page.version/configurable-bundle-feature-overview.html
 ---
 
 This endpoint allows retrieving information about the configurable bundle templates and their slots.
@@ -739,7 +742,7 @@ A list of images assigned to a configurable bundle template.  |
 For the attributes of other included resources, see:
 
 * [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
-* [Retrieving concrete product prices](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-product-prices.html)
+* [Retrieving concrete product prices](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html)
 * [Retrieving concrete product image sets](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html)
 
 ## Possible errors

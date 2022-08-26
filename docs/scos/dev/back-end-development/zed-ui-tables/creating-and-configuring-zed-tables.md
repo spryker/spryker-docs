@@ -263,9 +263,9 @@ protected function getCsvHeaders(): array
 }
 ```
 
-#### Implementing formatCsvRow
+#### Implementing getDownloadQuery
 
-The `GetDownloadQuery` method returns the query that is used to fetch the data from the database. In the background, `\Propel\Runtime\Formatter\OnDemandFormatter` is set for performance reasons.
+This method returns the query that is used to fetch the data from the database. In the background, `\Propel\Runtime\Formatter\OnDemandFormatter` is set for performance reasons.
 
 ```php
 <?php
@@ -284,7 +284,7 @@ protected function getDownloadQuery(): ModelCriteria
 }
 ```
 
-#### Implementing GetDownloadQuery
+#### Implementing formatCsvRow
 
 This method receives each `\Propel\Runtime\ActiveRecord\ActiveRecordInterface` and is responsible for returning a formatted array of the required data.
 

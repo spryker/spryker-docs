@@ -10,4 +10,4 @@ redirect_from:
   - /v3/docs/en/tax-api-feature-integration-201907
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-tax-glue-api.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-tax-glue-api.md -->
+{% include pbc/all/install-features/202204.0/install-glue-api/install-the-tax-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-tax-glue-api.md -->

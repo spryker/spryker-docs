@@ -18,4 +18,4 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-the-multiple-carts-quick-order-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-multiple-carts-quick-order-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-multiple-carts-quick-order-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-multiple-carts-quick-order-feature.md -->

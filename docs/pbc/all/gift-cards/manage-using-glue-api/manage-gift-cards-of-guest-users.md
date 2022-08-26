@@ -27,7 +27,7 @@ To manage the gift cards of the registered users, see [Managing gift cards of re
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Gift Cards API feature integration](/docs/pbc/all/gift-cards/install-and-upgrade/integrate-the-gift-cards-feature.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Gift Cards API feature integration](/docs/pbc/all/gift-cards/install-and-upgrade/install-the-gift-cards-feature.html).
 
 ## Purchasing a gift card
 

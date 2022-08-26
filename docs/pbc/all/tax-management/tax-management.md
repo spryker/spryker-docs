@@ -114,10 +114,10 @@ The capability has the following functional constraints:
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES | MIGRATION GUIDES | GLUE API GUIDES | DATA IMPORT |
+| INSTALLATION GUIDES | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|---|
 | [Integrate the Tax Glue API](/docs/pbc/all/tax-management/install-and-upgrade/integrate-the-tax-glue-api.html) | [Upgrade the Tax module](/docs/pbc/all/tax-management/install-and-upgrade/upgrade-the-tax-module.html) | [Retrieve tax sets](/docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html)  | [Import tax sets](/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets.html) |
-| [Integrate the Product Tax Sets Glue API](/docs/pbc/all/tax-management/install-and-upgrade/integrate-the-product-tax-sets-glue-api.html) | [Upgrade the ProductTaxSetsRestApi module](/docs/pbc/all/tax-management/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html) | [Retrieve tax sets of abstract products](/docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets-of-abstract-products.html) | [Import tax sets for abstract products](/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-abstract-products.html) |
+| [Integrate the Product Tax Sets Glue API](/docs/pbc/all/tax-management/install-and-upgrade/integrate-the-product-tax-sets-glue-api.html) | [Upgrade the ProductTaxSetsRestApi module](/docs/pbc/all/tax-management/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html) | [Retrieve tax sets of abstract products](/docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html) | [Import tax sets for abstract products](/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-abstract-products.html) |
 | | | | [Import tax sets for shipment methods](/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-shipment-methods.html) |
 | | | | [Import tax sets for product options](/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-product-options.html) |
 

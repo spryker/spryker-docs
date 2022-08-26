@@ -21,4 +21,4 @@ related:
       link: docs/scos/dev/feature-walkthroughs/page.version/spryker-core-feature-walkthrough/spryker-core-feature-walkthrough.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-the-spryker-core-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-spryker-core-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-spryker-core-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-spryker-core-feature.md -->

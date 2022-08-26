@@ -54,7 +54,7 @@ You can give shipment discounts based on the carrier, shipment method, or cart v
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES  | UPGRADE GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
+| INSTALLATION GUIDES  | UPGRADE GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|
 | [Integrate the Shipment feature](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html) | [Upgrade the Shipment module](/docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipment-module.html) | [HowTo: Create discounts based on shipment](/docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html#activate-a-discount-rule-based-on-a-shipment-carrier) | [Shipment method plugins: reference information](/docs/pbc/all/carrier-management/extend-and-customize/shipment-method-plugins-reference-information.html) |
 | [Integrate the Shipment Glue API](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html) | [Upgrade the ShipmentGui module](/docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentgui-module.html) | [HowTo: Add a new shipment method 2.0](/docs/pbc/all/carrier-management/tutorials-and-howtos/howto-add-a-new-shipment-method-2.0.html) | [Shipment method entities in the database: reference information](/docs/pbc/all/carrier-management/domain-model-and-relationships/shipment-method-entities-in-the-database-reference-information.html) |

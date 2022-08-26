@@ -21,7 +21,7 @@ related:
   - title: Managing guest carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
   - title: Managing gift cards of guest users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html
+    link: docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-guest-users.html
 ---
 
 This endpoint allows managing discount vouchers in guest carts.

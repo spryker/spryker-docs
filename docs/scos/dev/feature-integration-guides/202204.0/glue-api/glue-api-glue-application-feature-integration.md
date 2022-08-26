@@ -13,4 +13,4 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/glue-api/glue-api-glue-application-feature-integration.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-glue-application.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-glue-application.md -->
+{% include pbc/all/install-features/202204.0/install-glue-api/install-the-glue-application.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-glue-application.md -->

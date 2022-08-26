@@ -14,7 +14,7 @@ redirect_from:
 
 {% info_block infoBox %}
 
-This article describes how to add product variants and product images to an existing cart.
+This article describes how to add product variants and product images to an existing cart and validate price for carts items.
 {% endinfo_block %}
 
 ## Prerequisites:

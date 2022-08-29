@@ -182,7 +182,7 @@ defaults:
       sidebar: "pbc_all_sidebar"
       role: "all"
 
-
+ 
 versions:
   '201811.0': '201811.0'
   '201903.0': '201903.0'
@@ -229,11 +229,8 @@ versioned_categories:
       - legacy-demoshop
       - technology-partner-guides
       - devops-migration-guides
-  scos:
-    dev:
-      back-end-development:
+      - back-end-development:
         - console-commands
-    
 
 # these are defaults used for the front matter for these file types
 

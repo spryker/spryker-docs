@@ -10,8 +10,6 @@ redirect_from:
 related:
   - title: Keeping a project upgradable
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
-  - title: Upgradability services
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-services.html
   - title: Upgrader tool overview
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
   - title: Run the evaluator tool

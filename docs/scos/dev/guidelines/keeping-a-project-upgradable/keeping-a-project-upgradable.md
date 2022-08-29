@@ -5,8 +5,6 @@ template: concept-topic-template
 related:
   - title: Upgradability guidelines
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html
-  - title: Upgradability services
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-services.html
   - title: Upgrader tool overview
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
   - title: Run the evaluator tool

@@ -6,12 +6,8 @@ template: concept-topic-template
 related:
   - title: Keeping a project upgradable
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
-  - title: Upgradability services
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-services.html
   - title: Run the evaluator tool
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
-  - title: Running the upgrader tool
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-upgrader-tool.html
   - title: Define custom prefixes for core entity names
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
 ---

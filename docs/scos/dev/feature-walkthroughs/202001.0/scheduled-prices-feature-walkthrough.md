@@ -13,7 +13,7 @@ To learn more about the feature and to find out how end users use it, see [Sched
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | UPGRADE GUIDES | TUTORIALS AND HOWTOS |
+| INSTALLATION GUIDES | UPGRADE GUIDES| TUTORIALS AND HOWTOS |
 |---------|---------|---------|---------|
 | [Integrate the Scheduled prices feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/scheduled-prices-feature-integration.html) | PriceProductSchedule migration guide  | [HowTo: Schedule cron job for Scheduled Prices](/docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html)  |
 |   | PriceProductScheduleGui migration guide  |   |   |

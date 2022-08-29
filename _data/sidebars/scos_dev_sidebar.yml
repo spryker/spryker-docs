@@ -443,7 +443,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
       nested:
       - title: "Quotation Process: module relations"
         url: /docs/scos/dev/feature-walkthroughs/quotation-process-feature-walkthrough/quotation-process-module-relations.html
@@ -453,7 +452,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
     - title: Reclamations
       url: /docs/scos/dev/feature-walkthroughs/reclamations-feature-walkthrough.html
       include_versions:
@@ -1458,10 +1456,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-      - title: Glue API - Quotation Process
-        url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-quotation-process-feature-integration.html
-        include_versions:
-        - "202204.0"
       - title: Glue API - REST Schema Validation
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-rest-schema-validation-feature-integration.html
       - title: Glue API - Return Management
@@ -2217,7 +2211,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Quotation Process + Approval Process
       url: /docs/scos/dev/feature-integration-guides/quotation-process-approval-process-feature-integration.html
       include_versions:
@@ -2226,7 +2219,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Quotation Process + Multiple Carts
       url: /docs/scos/dev/feature-integration-guides/quotation-process-multiple-carts-feature-integration.html
       include_versions:
@@ -2235,7 +2227,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Reclamations
       url: /docs/scos/dev/feature-integration-guides/reclamations-feature-integration.html
       include_versions:
@@ -2643,20 +2634,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-quickorder.html
     - title: Migration Guide - QuickOrderPage
       url: /docs/scos/dev/module-migration-guides/migration-guide-quickorderpage.html
-    - title: Migration Guide - Quote
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quote.html
-    - title: Migration Guide - QuoteRequest
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequest.html
-    - title: Migration Guide - QuoteRequestAgent
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestagent.html
-    - title: Migration Guide - QuoteRequestAgentPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestagentpage.html
-    - title: Migration Guide - QuoteRequestAgentWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestagentwidget.html
-    - title: Migration Guide - QuoteRequestPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestpage.html
-    - title: Migration Guide - QuoteRequestWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-quoterequestwidget.html
     - title: Migration Guide - Refund
       url: /docs/scos/dev/module-migration-guides/migration-guide-refund.html
     - title: Migration Guide - Router

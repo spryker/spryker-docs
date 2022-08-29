@@ -13,7 +13,7 @@ To learn more about the feature and to find out how end users use it, see [Promo
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
+| INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---|---|---|---|---|
 | [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html) | [Discount migration guide](/docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discount-module.html) | [Retrieving promotional items](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-promotional-items.html) | [File details: discount.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount.csv.html) | [HowTo: Create discounts based on shipment](/docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html) |
 |  |  | [Managing discount vouchers in guest carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-discount-vouchers-in-guest-carts.html) | [File details: discount_amount.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/discounts/file-details-discount-amount.csv.html) |  |

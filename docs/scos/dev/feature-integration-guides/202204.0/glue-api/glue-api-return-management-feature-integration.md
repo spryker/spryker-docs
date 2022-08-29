@@ -21,4 +21,4 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-returns/retrieving-return-reasons.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-return-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-return-management-glue-api.md -->
+{% include pbc/all/install-features/202204.0/install-glue-api/install-the-return-management-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-return-management-glue-api.md -->

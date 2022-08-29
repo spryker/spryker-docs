@@ -3,7 +3,7 @@ title: Inventory Management feature overview
 description: Learn how you can manage warehouse, stock, and availability with the Inventory Management feature
 last_updated: Jul 22, 2021
 template: concept-topic-template
-originalLink: /docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html-feature-overview
+originalLink: /docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html-feature-overview
 originalArticleId: 6aaacd72-1ca1-4406-8614-0cacf94459d4
 redirect_from:
   - /2021080/docs/inventory-management-feature-overview
@@ -31,11 +31,11 @@ You can define the warehouse address that will be used as the shipping origin ad
 
 {% info_block warningBox %}
 
-By default, a warehouse is not linked to a sales order item. The logic described below applies only when [Avalara](/docs/scos/user/features/{{page.version}}/tax-feature-overview.html) is integrated into your project. That is, it is used to get warehouse addresses to calculate taxes in the USA.
+By default, a warehouse is not linked to a sales order item. The logic described below applies only when [Avalara](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html) is integrated into your project. That is, it is used to get warehouse addresses to calculate taxes in the USA.
 
 {% endinfo_block %}
 
-During the checkout, once a buyer entered delivery addresses for all order items, be it a [single delivery](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/split-delivery-overview.html) or a split delivery, the order items are assigned to warehouses to fulfill them.
+During the checkout, once a buyer entered delivery addresses for all order items, be it a [single delivery](/docs/scos/user/features/{{site.version}}/order-management-feature-overview/split-delivery-overview.html) or a split delivery, the order items are assigned to warehouses to fulfill them.
 
 By default, if a buyer orders several items of the same SKU, the requested item’s stock is checked in all the warehouses of the store. Based on the item stock, the warehouses are sorted in descending order—for example:
 
@@ -64,7 +64,7 @@ Schematically, the process looks like this:
 When the order is made, the stock is not updated automatically in the system, and you have to set it manually. You can define stock only for concrete products. You can set stock by doing the following:
 
 * Editing product stock in the Back Office. For details, see [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html).
-* Importing the quantities of items stored in each of the warehouses. For details, see [Stocks](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/stocks/stocks.html).
+* Importing the quantities of items stored in each of the warehouses. For details, see [Stocks](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/stocks/stocks.html).
 
 ## Availability management
 
@@ -80,7 +80,7 @@ Product availability after the order:
 
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Inventory+Management/after-order-placement.png)
 
-For details about checking product availability in the Back Office, see [Check availability of products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/check-availability-of-products.html).
+For details about checking product availability in the Back Office, see [Check availability of products](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/availability/check-availability-of-products.html).
 
 {% info_block infoBox %}
 
@@ -109,14 +109,14 @@ For SEO purposes, products that are not available can still be displayed on the 
 |---|
 | [Create warehouses](/docs/pbc/all/warehouse-management-system/manage-in-the-back-office/create-warehouses.html)  |
 | [Edit warehouses](/docs/pbc/all/warehouse-management-system/manage-in-the-back-office/edit-warehouses.html) |
-| [Check availability of products](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/availability/check-availability-of-products.html)  |
+| [Check availability of products](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/availability/check-availability-of-products.html)  |
 | [Edit stock of products and product bundles](/docs/pbc/all/warehouse-management-system/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html)  |
 
 ## Related Developer articles
 
 | INSTALLATION GUIDES | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
 |---|---|---|---|-|
-| [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-inventory-management-feature.html) | [Upgrade the Availability module](/docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-the-availability-module.html) | [Retrieve abstract product availability](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-abstract-product-availability.html) | [File details: product_stock.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-product-stock.csv.html) | [AvailabilityStorage module: reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html) |
+| [Install the Inventory Management feature](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-inventory-management-feature.html) | [Upgrade the Availability module](/docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-the-availability-module.html) | [Retrieve abstract product availability](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-abstract-product-availability.html) | [File details: product_stock.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-product-stock.csv.html) | [AvailabilityStorage module: reference information](/docs/scos/dev/feature-walkthroughs/{{site.version}}/inventory-management-feature-walkthrough/availabilitystorage-module-reference-informaton.html) |
 | [Install the Inventory Management + Alternative Products feature](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-inventory-management-alternative-products-feature.html) | [Upgrade the AvailabilityCartConnector module](/docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-the-availabilitycartconnector-module.html) | [Retrieve concrete product availability](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-concrete-product-availability.html) | [File details: warehouse_address.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse-address.csv.html) | [Manage stocks in a multi-store environment: Best practices](/docs/pbc/all/warehouse-management-system/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html) |
 | [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-inventory-management-glue-api.html) | [Upgrade the AvailabilityGui module](/docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-the-availabilitygui-module.html) | [Retrieve availability when retrieving abstract products](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-availability-when-retrieving-abstract-products.html) | [File details: warehouse_store.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse-store.csv.html) |  |
 || [Upgrade the AvailabilityOfferConnector module](/docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-the-availabilityofferconnector-module.html) | [Retrieve availability when retrieving concrete products](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-availability-when-retrieving-concrete-products.html) | [File details - warehouse.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse.csv.html) |

@@ -146,4 +146,4 @@ That means that both DE and AT share a database. This information will be used w
 
 When placing an order in Store A, the reservation is stored with the store identifier `fk_store`. An event is created and published in the queue, and synchronization with Store B happens. See scenario 3 above for information about how reservations are handled as well learn about the new configuration option for shared database in the `store.php` file.
 
-To learn more about the feature and to find out how end users use it, see [Inventory Management feature overview](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Inventory Management feature overview](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html) for business users.

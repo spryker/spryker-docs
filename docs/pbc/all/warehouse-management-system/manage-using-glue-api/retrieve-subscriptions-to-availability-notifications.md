@@ -80,7 +80,7 @@ Request sample: retrieve subscriptions to availability notifications
 
 ## Other management options
 
-There is an alternative way to retrieve subscriptions to availability notifications of a registered customer. For details, see [Managing customers](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customers.html#create-a-customer).
+There is an alternative way to retrieve subscriptions to availability notifications of a registered customer. For details, see [Managing customers](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html#create-a-customer).
 
 ## Possible errors
 
@@ -89,4 +89,4 @@ There is an alternative way to retrieve subscriptions to availability notificati
 | 001 | Access token is invalid. |
 | 002 | Access token is missing. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/reference-information-glueapplication-errors.html).

@@ -4736,7 +4736,7 @@ entries:
             - title: Private API method is overridden on the project level
               url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-method-is-overridden-on-the-project-level.html
         - title: Running the Evalutor tool
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
         - title: Define custom prefixes for core entity names
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
     - title: Performance guidelines

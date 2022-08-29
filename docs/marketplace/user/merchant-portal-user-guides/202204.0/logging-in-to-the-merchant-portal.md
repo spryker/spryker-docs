@@ -17,6 +17,12 @@ To log in to the Merchant Portal, a [merchant user](/docs/marketplace/user/featu
 
 Each section in this article contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
+{% info_block warningBox "Note" %}
+
+Merchant portal login is restricted for the [Main merchant user](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html#main-merchant-user).
+
+{% endinfo_block %}
+
 ## Creating a password
 
 Once the merchant user is [activated](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html#activating-and-deactivating-the-merchant-users), an email with the password reset link is sent. To reset the password:

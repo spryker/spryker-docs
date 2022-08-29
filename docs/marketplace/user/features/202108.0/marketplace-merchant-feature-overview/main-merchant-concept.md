@@ -33,3 +33,9 @@ The workflow of the main merchant state machine is schematically displayed in th
 If the [Marketplace Return Management](/docs/marketplace/user/features/{{page.version}}/marketplace-return-management-feature-overview.html) feature is integrated into the project, the main merchant state machine obtains an additional return subprocess, and the flow looks like this:
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Merchant/Main+merchant+concept/marketplace-main-merchant-return-process.png)
+
+## Main merchant user
+
+Main merchant user is a user which has assigned `root_group`.
+The main working tool for the main merchant user is Back Office.
+Main merchant user has no access to the merchant portal.

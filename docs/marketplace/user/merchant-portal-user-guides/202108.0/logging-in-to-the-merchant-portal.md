@@ -16,7 +16,7 @@ Each section in this article contains reference information. Make sure to review
 
 {% info_block warningBox "Note" %}
 
-Merchant portal login is restricted for the [Main merchant user](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/main-merchant-concept.html#main-merchant-user).
+Merchant portal login is restricted for the [Marketplace administrator](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-personas.html#marketplace-administrator).
 
 {% endinfo_block %}
 

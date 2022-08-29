@@ -12,7 +12,7 @@ A *Marketplace* is a type of e-commerce website where products or services are d
 
 ## Marketplace administrator
 
-A *Marketplace administrator* works for a Marketplace operator in the Spryker Back Office. A Marketplace administrator is also known as an admin user for the whole Marketplace and is responsible for the following actions:
+A *Marketplace administrator* works for a Marketplace operator in the Spryker Back Office. He has no access to the merchant portal. A Marketplace administrator is also known as an admin user for the whole Marketplace and is responsible for the following actions:
 - Managing merchants.
 - Managing offers of all products from all merchants.
 - Managing all products from all merchants.

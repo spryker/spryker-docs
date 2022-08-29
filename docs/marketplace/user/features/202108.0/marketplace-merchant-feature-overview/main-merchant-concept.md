@@ -34,8 +34,3 @@ If the [Marketplace Return Management](/docs/marketplace/user/features/{{page.ve
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/Marketplace/user+guides/Features/Marketplace+Merchant/Main+merchant+concept/marketplace-main-merchant-return-process.png)
 
-## Main merchant user
-
-Main merchant user is a user which has assigned `root_group`.
-The main working tool for the main merchant user is Back Office.
-Main merchant user has no access to the merchant portal.

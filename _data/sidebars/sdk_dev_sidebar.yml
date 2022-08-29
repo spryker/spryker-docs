@@ -48,6 +48,6 @@ entries:
           - title: SCSS linter
             url: /docs/sdk/dev/development-tools/scss-linter.html
           - title: TS linter
-            url: /docs/sdk/dev/development-tools/
+            url: /docs/sdk/dev/development-tools/ts-linter.html
 
 

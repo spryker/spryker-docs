@@ -29,7 +29,7 @@ entries:
           url: /docs/sdk/dev/spryks/enabling-and-disabling-the-code-sniffer-for-spryks.html
         - title: FileResolver
           url: /docs/sdk/dev/spryks/fileresolver.html
-        - title: Development tools
+      - title: Development tools
           nested:
           - title: Architecture sniffer
             url: /docs/sdk/dev/development-tools/architecture-sniffer.html

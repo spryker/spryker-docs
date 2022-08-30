@@ -51,4 +51,3 @@ This release contains the following modules:
 
 * Introduced `Spryker\Zed\TaxProductStorage\TaxProductStorageConfig::getEventQueueName()` to define event queue name for publish.
 * Introduced `Spryker\Zed\TaxStorage\TaxStorageConfig::getEventQueueName()` to define event queue name for publish.
-

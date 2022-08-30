@@ -28,7 +28,7 @@ data:import:shipment
 The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | shipment_method_key| &check; | String | | Identifier of the shipment method. |
 | name|  &check; | String | | Name of the shipment method. |
 | carrier |  &check; | String |  | Name of the shipment carrier. |

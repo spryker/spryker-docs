@@ -235,7 +235,7 @@ class TransferConfig extends SprykerTransferConfig
     protected function getAdditionalSourceDirectoryGlobPatterns()
     {
         return [
-            APPLICARION_ROOT_DIR . '/vendor/my-vendor/my-package/src/Transfer/',
+            APPLICATION_ROOT_DIR . '/vendor/my-vendor/my-package/src/Transfer/',
         ];
     }
 

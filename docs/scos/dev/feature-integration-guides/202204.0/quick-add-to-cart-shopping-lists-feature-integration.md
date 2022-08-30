@@ -12,4 +12,4 @@ redirect_from:
   - /docs/en/quick-add-to-cart-shopping-lists-feature-integration
   - /docs/scos/dev/feature-integration-guides/201811.0/quick-add-to-cart-shopping-lists-feature-integration.html
 ---
-{% include pbc/all/integrate-features/202204.0/integrate-the-quick-add-to-cart-shopping-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-quick-add-to-cart-shopping-lists-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-quick-add-to-cart-shopping-lists-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-quick-add-to-cart-shopping-lists-feature.md -->

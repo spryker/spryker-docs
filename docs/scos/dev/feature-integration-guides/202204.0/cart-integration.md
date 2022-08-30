@@ -15,4 +15,4 @@ related:
   - title: Cart feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-feature-walkthrough.html
 ---
-{% include pbc/all/integrate-features/202204.0/integrate-the-cart.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-cart.md -->
+{% include pbc/all/install-features/202204.0/install-the-cart.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-cart.md -->

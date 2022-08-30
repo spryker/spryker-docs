@@ -1,19 +1,19 @@
 ---
-title: Running the upgrader tool
+title: Run the upgrader tool
 description: Instructions for running the upgrader tool
 last_updated: Nov 25, 2021
 template: concept-topic-template
 redirect_from:
-  - /docs/scos/dev/upgradability-services/running-the-upgrader-tool.html
+  - /docs/scos/dev/upgradability-services/run-the-upgrader-tool.html
+  - /docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-upgrader-tool.html
+
 related:
   - title: Keeping a project upgradable
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html
-  - title: Upgradability services
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-services.html
   - title: Upgrader tool overview
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgrader-tool-overview.html
-  - title: Running the evaluator tool
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html
+  - title: Run the evaluator tool
+    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
   - title: Define custom prefixes for core entity names
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
 ---
@@ -21,9 +21,15 @@ This document describes how to upgrade all the modules to the latest versions.
 
 ## Prerequisites
 
-To start working with the upgrader tool, do the following:
+1. Install the upgrader by [installing Spryker SDK](https://github.com/spryker-sdk/sdk#installation).
 
-1. To enable the upgrader tool to commit and push changes, adjust your project’s Git and environment configuration as follows:
+{% info_block warningBox "Running the upgrader without installing Spryker SDK" %}
+
+Alternatively, you can use the `spryker-sdk` image from the project directory without installing it. To do that, run all the commands in this doc as follows: `docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console {COMMAND}'
+
+{% endinfo_block %}
+
+2. To enable the upgrader tool to commit and push changes, adjust your project’s Git and environment configuration as follows:
 
   * Add a GitHub token with the permissions to push branches and create PRs:
 
@@ -55,36 +61,14 @@ To start working with the upgrader tool, do the following:
   git config --global user.email "{GIT_EMAIL_ADDRESS}"
   ```
 
-2. Connect to the Docker SDK CLI container:
-
-```bash
-docker/sdk cli
-```
-
-## Install the upgrader tool
-
-To install the upgrader tool, do the following:
-
-1. In the Docker SDK CLI, install Spryker SDK globally:
-
-```bash
-composer global require spryker-sdk/sdk "dev-master"
-```
-
-2. Initialize Spryker SDK:
-
-```bash
-~/.composer/vendor/spryker-sdk/sdk/bin/console sdk:init:sdk
-```
-
 ## Run the upgrader tool
 
 To update all the modules and libraries to the latest versions, do the following:
 
-1. In the Docker SDK CLI, run the upgrader tool:
+1. Run the upgrader tool:
 
 ```bash
-~/.composer/vendor/spryker-sdk/sdk/bin/console upgradability:php:upgrade
+spryker-sdk upgradability:php:upgrade
 ```
 
 If the upgrade was successful, the upgrader tool created a PR with the updates.

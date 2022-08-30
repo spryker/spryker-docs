@@ -41,7 +41,7 @@ The following schema represents module relations of the Customer Login by Token 
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES | MIGRATION GUIDES | GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
+| INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
 |---------|---------|---------|---------|---------|
 | [Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/company-account-feature-integration.html)| CompanyUser migration guide  | [Retrieving companies](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-companies.html) |[ HowTo - Generate a token for login](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-generate-a-token-for-login.html)  | [Customer Login by Token reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/customer-login-by-token-reference-information.html) |
 | [Glue API: Company Account feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-company-account-feature-integration.html) | BusinessOnBehalfDataImport migration guide  | [Retrieving business units](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html)  |   |   |

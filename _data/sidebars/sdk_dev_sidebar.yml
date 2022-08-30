@@ -30,24 +30,24 @@ entries:
         - title: FileResolver
           url: /docs/sdk/dev/spryks/fileresolver.html
       - title: Development tools
-          nested:
-          - title: Architecture sniffer
-            url: /docs/sdk/dev/development-tools/architecture-sniffer.html
-          - title: Code sniffer
-            url: /docs/sdk/dev/development-tools/code-sniffer.html
-          - title: Performance audit tool- Benchmark
-            url: /docs/sdk/dev/development-tools/performance-audit-tool-benchmark.html
-          - title: PHPStan
-            url: /docs/sdk/dev/development-tools/phpstan.html
-          - title: Static Security Checker
-            url: /docs/sdk/dev/development-tools/static-security-checker.html
-          - title: Tooling config file
-            url: /docs/sdk/dev/development-tools/tooling-config-file.html
-          - title: Formatter
-            url: /docs/sdk/dev/development-tools/formatter.html
-          - title: SCSS linter
-            url: /docs/sdk/dev/development-tools/scss-linter.html
-          - title: TS linter
-            url: /docs/sdk/dev/development-tools/ts-linter.html
+        nested:
+        - title: Architecture sniffer
+          url: /docs/sdk/dev/development-tools/architecture-sniffer.html
+        - title: Code sniffer
+          url: /docs/sdk/dev/development-tools/code-sniffer.html
+        - title: Performance audit tool- Benchmark
+          url: /docs/sdk/dev/development-tools/performance-audit-tool-benchmark.html
+        - title: PHPStan
+          url: /docs/sdk/dev/development-tools/phpstan.html
+        - title: Static Security Checker
+          url: /docs/sdk/dev/development-tools/static-security-checker.html
+        - title: Tooling config file
+          url: /docs/sdk/dev/development-tools/tooling-config-file.html
+        - title: Formatter
+          url: /docs/sdk/dev/development-tools/formatter.html
+        - title: SCSS linter
+          url: /docs/sdk/dev/development-tools/scss-linter.html
+        - title: TS linter
+          url: /docs/sdk/dev/development-tools/ts-linter.html
 
 

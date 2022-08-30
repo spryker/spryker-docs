@@ -12,6 +12,13 @@ Microsoft dropped the support of IE11 in June 2022. So it has to be removed in S
 
 *Estimated migration time: 1h*
 
+## Update modules
+
+Run the next command to update module versions:
+```bash
+composer update spryker/zed-ui spryker-shop/shop-ui
+```
+
 ## Update configuration files
 
 `.browserslistrc`:

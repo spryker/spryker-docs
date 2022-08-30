@@ -35,6 +35,42 @@ console propel:install
 console transfer:generate
 ```
 
+## Upgrading from version 0.19.* to version 0.20.*
+
+With version 0.20, we have added numbers formatting.
+
+Please check:
+- `\Spryker\Zed\ProductManagement\Communication\Form\Product\Price\ProductMoneyCollectionType`
+- `\Spryker\Zed\ProductManagement\Communication\Form\Product\Price\ProductMoneyType`
+- `\Spryker\Zed\ProductManagement\Communication\Form\Product\ImageCollectionForm`
+- `\Spryker\Zed\ProductManagement\Communication\Form\Product\ImageSetForm`
+- `\Spryker\Zed\ProductManagement\Communication\Form\ProductFormAdd`
+
+They use a new form option `locale`. If you have overwritten or changed those classes, you will have to modify them accordingly.
+
+There is also a new dependency in `PriceFormTypePlugin`:
+
+**src/Pyz/Zed/ProductManagement/ProductManagementDependencyProvider.php**
+```php
+namespace Pyz\Zed\ProductManagement;
+
+use Spryker\Zed\MoneyGui\Communication\Plugin\Form\MoneyFormTypePlugin;
+use Spryker\Zed\ProductManagement\ProductManagementDependencyProvider as SprykerProductManagementDependencyProvider;
+
+class ProductManagementDependencyProvider extends SprykerProductManagementDependencyProvider
+{
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\Kernel\Communication\Form\FormTypeInterface
+     */
+    protected function createMoneyFormTypePlugin(Container $container): FormTypeInterface
+    {
+        return new MoneyFormTypePlugin();
+    }
+}
+```
+
 ## Upgrading from version 0.* to version 0.18.0
 
 {% info_block infoBox %}

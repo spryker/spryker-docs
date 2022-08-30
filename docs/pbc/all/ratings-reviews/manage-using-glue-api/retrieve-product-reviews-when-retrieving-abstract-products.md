@@ -1,27 +1,8 @@
 ---
 title: Retrieve product reviews when retrieving abstract products
-description: Retrieve general information about abstract products and related resources.
-last_updated: Jun 21, 2021
+description: Learn how to retrieve product reviews when retrieving abstract products using Glue API.
+last_updated: Sep 2, 2022
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-abstract-products
-originalArticleId: 6ba1a21c-bbbe-4442-b7ce-81e921924b26
-redirect_from:
-  - /2021080/docs/retrieving-abstract-products
-  - /2021080/docs/en/retrieving-abstract-products
-  - /docs/retrieving-abstract-products
-  - /docs/en/retrieving-abstract-products
-  - /docs/scos/dev/glue-api-guides/202200.0/managing-products/abstract-products/retrieving-abstract-products.html
-related:
-  - title: Retrieving abstract product availability
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
-  - title: Retrieving abstract product prices
-    link: docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html
-  - title: Retrieving image sets of abstract products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html
-  - title: Retrieving tax sets
-    link: docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html
-  - title: Product feature overview
-    link: docs/scos/user/features/page.version/product-feature-overview/product-feature-overview.html
 ---
 
 This endpoint allows retrieving general information about abstract products.
@@ -30,11 +11,7 @@ This endpoint allows retrieving general information about abstract products.
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see the docs:
 * [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
-* [Glue API: Product Options Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
-* [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html)
-* [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundles-feature-integration.html)
-* [Glue API: Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html)
-* [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-inventory-management-glue-api.html)
+* [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)
 
 
 

@@ -1,27 +1,8 @@
 ---
-title: Retrieving concrete products
+title: Retrieving product reviews when retrieving concerete products
 description: Retrieve general information about concrete products.
-last_updated: Jun 21, 2021
+last_updated: Sep 2, 2022
 template: glue-api-storefront-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/retrieving-concrete-products
-originalArticleId: 4f36b42a-e2a2-46a1-be84-ae9f3b2a1a25
-redirect_from:
-  - /2021080/docs/retrieving-concrete-products
-  - /2021080/docs/en/retrieving-concrete-products
-  - /docs/retrieving-concrete-products
-  - /docs/en/retrieving-concrete-products
-  - /docs/scos/dev/glue-api-guides/202200.0/managing-products/concrete-products/retrieving-concrete-products.html
-related:
-  - title: Retrieving concrete product availability
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-product-availability.html
-  - title: Retrieving concrete product prices
-    link: docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html
-  - title: Retrieving image sets of concrete products
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html
-  - title: Retrieving sales units
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-sales-units.html
-  - title: Product Options feature overview
-    link: docs/scos/user/features/page.version/product-options-feature-overview.html
 ---
 
 This endpoint allows retrieving general information about concrete products.
@@ -31,6 +12,7 @@ This endpoint allows retrieving general information about concrete products.
 For detailed information on the modules that provide the API functionality and related installation instructions, see the docs:
 
 * [Glue API: Products Feature Integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html)
+* [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)
 
 
 ## Retrieve a concrete product
@@ -168,37 +150,10 @@ To retrieve general information about a concrete product, send the request:
 
 <a name="concrete-products-response-attributes"></a>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-|-|-|-|
-| sku | String | SKU of the concrete product. |
-| name | String | Name of the concrete product. |
-| description | String | Description of the concrete product. |
-| attributes | Object | List of attribute keys and their values for the product. |
-| superAttributeDefinition | String | List of attributes that are flagged as super attributes. |
-| metaTitle | String | Meta title of the product. |
-| metaKeywords | String | Meta keywords of the product. |
-| metaDescription | String | Meta description of the product. |
-| attributeNames | String | List of attribute keys and their translations. |
-| productAbstractSku | String | Unique identifier of the abstract product owning this concrete product. |
+{% include pbc/all/glue-api-guides/retrieve-a-concrete-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/retrieve-a-concrete-product-response-attributes.md -->
 
-| INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
-|-|-|-|-|
-| product-options | sku | String | Specifies the SKU of the product option. |
-| product-options | optionName | String | Specifies the option name. |
-| product-options | optionGroupName | String | Specifies the name of the group to which the option belongs. |
-| product-options | price | Integer | Specifies the option price in cents. |
-| product-options | currencyIsoCode | String | Specifies the ISO 4217 code of the currency in which the product option price is specified. |
 
-For other attributes of the included resources, see:
-
-* [Retrieve sales units of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-sales-units.html#sales-units-response-attributes)
-* [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html#measurement-units-response-attributes)
-* [Retrieve image sets of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html#concrete-image-sets-response-attributes)
-* [Retrieve availability of a concrete product](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-concrete-product-availability.html#concrete-product-availability-response-attributes)
-* [Retrieve prices of a concrete product](/docs/pbc/all/price-management/manage-via-glue-api/retrieve-concrete-product-prices.html#response)
-* [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
-* [Retrieve product ratings and reviews](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-product-ratings-and-reviews.html#product-reviews-response-attributes)
-
+For the attributes product reviews, see [Retrieve product reviews](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-product-ratings-and-reviews.html#product-reviews-response-attributes)
 
 ## Possible errors
 

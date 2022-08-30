@@ -36,6 +36,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-bundles-feature-integration.html)
 * [Glue API: Prices feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-price-feature-integration.html)
 * [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-inventory-management-glue-api.html)
+* [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)
 
 
 ## Retrieve a concrete product
@@ -1623,18 +1624,7 @@ To retrieve general information about a concrete product, send the request:
 
 <a name="concrete-products-response-attributes"></a>
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-|-|-|-|
-| sku | String | SKU of the concrete product. |
-| name | String | Name of the concrete product. |
-| description | String | Description of the concrete product. |
-| attributes | Object | List of attribute keys and their values for the product. |
-| superAttributeDefinition | String | List of attributes that are flagged as super attributes. |
-| metaTitle | String | Meta title of the product. |
-| metaKeywords | String | Meta keywords of the product. |
-| metaDescription | String | Meta description of the product. |
-| attributeNames | String | List of attribute keys and their translations. |
-| productAbstractSku | String | Unique identifier of the abstract product owning this concrete product. |
+{% include pbc/all/glue-api-guides/retrieve-a-concrete-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/retrieve-a-concrete-product-response-attributes.md -->
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|-|

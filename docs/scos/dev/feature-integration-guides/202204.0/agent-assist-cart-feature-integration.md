@@ -18,4 +18,4 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-feature-walkthrough.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-the-agent-assist-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-agent-assist-cart-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-agent-assist-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-agent-assist-cart-feature.md -->

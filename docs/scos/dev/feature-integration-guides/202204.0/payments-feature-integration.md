@@ -22,4 +22,4 @@ related:
     link: docs/scos/user/features/page.version/payments-feature-overview.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-the-payments-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-payments-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-payments-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-payments-feature.md -->

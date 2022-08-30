@@ -157,6 +157,32 @@ entries:
             nested:
               - title: "HowTo: Create discounts based on shipment"
                 url: /docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
+      - title: Gift Cards
+        url: /docs/pbc/all/gift-cards/gift-cards.html
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Integrate the Gift Cards feature
+                url: /docs/pbc/all/gift-cards/install-and-upgrade/install-the-gift-cards-feature.html
+              - title: Enable gift cards
+                url: /docs/pbc/all/gift-cards/install-and-upgrade/enable-gift-cards.html
+          - title: Import and export data
+            url: /docs/pbc/all/gift-cards/import-and-export-data/import-of-gift-cards.html
+            nested:
+              - title: File details- gift_card_abstract_configuration.csv
+                url: /docs/pbc/all/gift-cards/import-and-export-data/file-details-gift-card-abstract-configuration.csv.html
+              - title: File details- gift_card_concrete_configuration.csv
+                url: /docs/pbc/all/gift-cards/import-and-export-data/file-details-gift-card-concrete-configuration.csv.html
+          - title: Manage using Glue API
+            nested:
+              - title: Manage gift cards of guest users
+                url: /docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-guest-users.html
+              - title: Retrieve gift cards in guest carts
+                url: /docs/pbc/all/gift-cards/manage-using-glue-api/retrieve-gift-cards-in-guest-carts.html
+              - title: Manage gift cards of registered users
+                url: /docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html
+              - title: Retrieve gift cards in guest carts
+                url: /docs/pbc/all/gift-cards/manage-using-glue-api/retrieve-gift-cards-in-guest-carts.html
       - title: Payment Service Providers
         url: /docs/pbc/all/payment-service-providers/psp.html
         nested:
@@ -229,7 +255,7 @@ entries:
                     url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html
                   - title: Price
                     url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
-                  - title: PriceCartConnector  
+                  - title: PriceCartConnector
                     url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-pricecartconnector-module.html
                   - title: PriceProduct
                     url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html
@@ -273,6 +299,39 @@ entries:
                 url: /docs/pbc/all/price-management/tutorials-and-howtos/howto-manage-business-unit-specific-prices-via-data-import.html
               - title: "HowTo: Schedule cron job for Scheduled Prices"
                 url: /docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html
+      - title: Request for Quote
+        url: /docs/pbc/all/request-for-quote/request-for-quote.html
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Install features
+                nested:
+                  - title: Quotation Process
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-feature.html
+                  - title: Quotation Process + Checkout
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-checkout-feature.html
+                  - title: Quotation Process + Approval Process
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-approval-process-feature.html
+                  - title: Quotation Process + Multiple Carts
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-multiple-carts-feature.html
+                  - title: Quotation Process Glue API
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: QuoteRequest
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequest-module.html
+                  - title: QuoteRequestAgent
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagent-module.html
+                  - title: QuoteRequestAgentPage
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagentpage-module.html
+                  - title: QuoteRequestAgentWidget
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagentwidget-module.html
+                  - title: QuoteRequestPage
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestpage-module.html
+                  - title: QuoteRequestwidget
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestwidget-module.html
+          - title: Module relations
+            url: /docs/pbc/all/request-for-quote/quotation-process-module-relations.html
       - title: Shopping List and Wishlist
         url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
         nested:

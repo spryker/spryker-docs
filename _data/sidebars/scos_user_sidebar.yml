@@ -380,6 +380,8 @@ entries:
         url: /docs/scos/user/features/file-manager-feature-overview/file-uploader.html
     - title: Gift Cards
       url: /docs/scos/user/features/gift-cards-feature-overview.html
+      include_versions:
+      - "202108.0" 
     - title: Inventory Management
       url: /docs/scos/user/features/inventory-management-feature-overview.html
     - title: Mailing and Notifications

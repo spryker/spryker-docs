@@ -126,9 +126,7 @@ The [Customer entity](/docs/scos/dev/feature-walkthroughs/{{page.version}}/custo
 
 The [File Manager](/docs/scos/dev/feature-walkthroughs/{{page.version}}/file-manager-feature-walkthrough.html) feature allows uploading files required for your shop.
 
-## Gift Cards
 
-The [Gift Cards](/docs/scos/dev/feature-walkthroughs/{{page.version}}/gift-cards-feature-walkthrough.html) feature enables you to create a virtual product (a gift card) with a chosen value amount. The purchase of a gift card generates an individual code that is used as a payment method during checkout.
 
 ## Inventory Management
 
@@ -270,14 +268,6 @@ The [ProductSet](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-se
 ## Quick Add to Cart
 
 The [Quick Add to Cart](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html) feature allows adding multiple products to cart at once.
-
-## Quotation Process
-
-The [Quotation Process](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html) feature adds functionality that allows customers to request special product prices and lets agents manage those quote requests.
-
-### Quotation Process: module relations
-
-[On this page](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quotation-process-feature-walkthrough/quotation-process-module-relations.html), you can find the module relations for the Quotation Process feature.
 
 ## Reclamations
 

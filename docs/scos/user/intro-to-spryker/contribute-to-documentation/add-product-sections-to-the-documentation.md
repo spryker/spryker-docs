@@ -438,7 +438,7 @@ To configure the search in the Algolia app of the Spryker docs, do the following
     * title
     * type
 5. In the **Highlight prefix tag** section, replace the default value with `<em class="ais-Highlight">`.
-6.
+
 #### Add snippeting attributes
 
 1. Go to **PAGINATION AND DISPLAY > Snippeting**.

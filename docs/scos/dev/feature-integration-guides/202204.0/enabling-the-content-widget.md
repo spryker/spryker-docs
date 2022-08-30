@@ -12,4 +12,4 @@ redirect_from:
   - /docs/en/enabling-cms-widget/docs/scos/dev/feature-integration-guides/202200.0/enabling-the-content-widget.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/enable-the-content-widget.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/enable-the-content-widget.md -->
+{% include pbc/all/install-features/202204.0/enable-the-content-widget.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/enable-the-content-widget.md -->

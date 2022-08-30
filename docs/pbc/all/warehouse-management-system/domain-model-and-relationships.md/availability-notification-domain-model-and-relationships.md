@@ -1,10 +1,8 @@
 ---
 title: Availability Notification domain model and relationships
-description: Relatioins between modules in the Availability Notification feature.
+description: Relations between modules in the Availability Notification feature.
 last_updated: Aug 12, 2021
 template: concept-topic-template
-redirect_from:
-  - /docs/scos/dev/feature-walkthroughs/202204.0/availability-notification-feature-walkthrough.html
 ---
 
 The following scheme illustrates relations between `Availability`, `AvailabilityNotification`, `AvailabilityNotificationWidget`, and `ProductDetailPage` modules:

@@ -87,7 +87,7 @@ You can find the affected modules of the float stock update in the following lis
 | spryker/availability | 7.0.0 | [Upgrade the Availability module](/docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html) |
 | spryker/availability-cart-connector | 5.0.0 | [Upgrade the AvailabilityCartConnector module](/docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availabilitycartconnector-module.html) |
 | spryker/availability-gui | 4.0.0 | [Upgrade the AvailabilityGui module](/docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availabilitygui-module.html) |
-| spryker/availability-offer-connector | 2.0.0 | [Upgrade the AvailabilityOfferConnector module](/docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availability-moduleofferconnector.html) |
+| spryker/availability-offer-connector | 2.0.0 | [Upgrade the AvailabilityOfferConnector module](/docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availabilityofferconnector-module.html) |
 | spryker/cart | 6.0.0 | [Migration Guide - Cart](/docs/scos/dev/module-migration-guides/migration-guide-cart.html) |
 | spryker/cart-extension | 3.0.0 | [Migration Guide - CartExtension](/docs/scos/dev/module-migration-guides/migration-guide-cartextension.html) |
 | spryker/carts-rest-api | 4.0.0 | [Migration Guide - CartsRestApi](/docs/scos/dev/module-migration-guides/glue-api/cartsrestapi-migration-guide.html) |

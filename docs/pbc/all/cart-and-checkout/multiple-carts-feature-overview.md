@@ -11,6 +11,7 @@ redirect_from:
   - /docs/multiple-carts-feature-overview
   - /docs/en/multiple-carts-feature-overview
   - /docs/scos/user/features/202200.0/multiple-carts-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202200.0/multiple-carts-feature-walkthrough.html
 ---
 
 Sometimes customers need more than one shopping cart—for example, one for daily purchases and the other one for monthly expenses. The *Multiple Carts* feature lets you create and manage multiple shopping carts in one customer account.
@@ -125,8 +126,11 @@ This video explains how to use shopping carts in the Spryker [B2B Demo Shop](/do
 
 {% wistia s776wlo9ds 960 720 %}
 
-{% info_block warningBox %}
 
-Are you a developer? See [Multiple Carts feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/multiple-carts-feature-walkthrough.html) for developers.
+## Related Developer articles
 
-{% endinfo_block %}
+|INSTALLATION GUIDES  |
+|---------|
+| [Multiple Carts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html)  |
+| [Multiple carts + Quick Order feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-quick-order-feature-integration.html)  |
+| [Multiple carts + Reorder feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-reorder-feature-integration.html)   |

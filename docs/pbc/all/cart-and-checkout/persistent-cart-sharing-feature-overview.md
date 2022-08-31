@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/persistent-cart-sharing-feature-overview
   - /docs/persistent-cart-sharing-feature-overview
   - /docs/en/persistent-cart-sharing-feature-overview
+  - /docs/scos/dev/feature-walkthroughs/202204.0/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-walkthrough.html
 ---
 
 The *Persistent Cart Sharing* feature lets company users generate the URL to share the cart with different access levels. To generate the link, you need to be logged in to a company account.
@@ -47,8 +48,12 @@ The link allows displaying prices according to the selected currency. The cart s
 
 If a customer selects a link of the cart that's not available, the _This cart is unavailable_ message is displayed.
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Persistent Cart Sharing feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INTEGRATION GUIDES  |
+|---|
+| [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
+| [Persistent Cart Sharing + Shared Carts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/persistent-cart-sharing-shared-carts-feature-integration.html) |
+| [Persistent Cart Sharing feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/persistent-cart-sharing-feature-integration.html) |
+| [Resource Sharing feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/resource-sharing-feature-integration.html) |
+| [Shared Carts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shared-carts-feature-integration.html) |

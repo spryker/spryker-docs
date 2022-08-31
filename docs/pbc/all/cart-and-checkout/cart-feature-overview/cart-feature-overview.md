@@ -14,7 +14,7 @@ redirect_from:
   - /docs/shop-guide-shopping-carts-reference-information
   - /docs/en/shop-guide-shopping-carts-reference-information
   - /docs/scos/user/features/202200.0/cart-feature-overview/cart-feature-overview.html
-
+  - /docs/scos/dev/feature-walkthroughs/202200.0/cart-feature-walkthrough/cart-feature-walkthrough.html  
 ---
 
 The *Cart* feature lets your customers add products to their cart by selecting the needed quantity of a product. Inside the cart, customers can change the number of items, switch between different variants of the product, add notes, apply vouchers, and remove items.
@@ -31,14 +31,17 @@ In a Spryker shop, the shopping cart widget is displayed in the header. With the
 
 ## Related Business User articles
 
-|BACK OFFICE USER GUIDES|
+|OVERVIEWS|
 |---|
-| [Get a general idea of Cart Notes](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-notes-overview.html)  |
-| [Get a general idea of Cart Widget](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-widget-overview.html)  |
-| [Get a general idea of Quick Order from the Catalog Page](/docs/scos/user/features/{{page.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)   |
+| [Cart Notes](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-notes-overview.html)  |
+| [Cart Widget](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-widget-overview.html)  |
+| [Quick Order from the Catalog Page](/docs/scos/user/features/{{page.version}}/cart-feature-overview/quick-order-from-the-catalog-page-overview.html)   |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Cart feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INSTALLATION GUIDES  | GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
+|---------|---------|---------|---------|
+|  [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/cart-feature-integration.html) |  [Managing guest carts](/docs/marketplace/dev/glue-api-guides/{{page.version}}/guest-carts/managing-guest-carts.html) | [HowTo: Define if a cart should be deleted after placing an order](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html)  | [Calculation 3.0](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-3-0.html) |
+| [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)  |  [Managing carts of registered users](/docs/marketplace/dev/glue-api-guides/{{page.version}}/carts-of-registered-users/managing-carts-of-registered-users.html) |   | [Calculation data structure](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-data-structure.html) |
+| [Product Bundles + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-bundles-cart-feature-integration.html) | [Retrieving customer carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-carts.html)  |   |  [Calculator plugins](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculator-plugins.html) |
+|  |   |   | [Cart module: Reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-module-reference-information.html)  |

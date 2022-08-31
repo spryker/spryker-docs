@@ -22,8 +22,8 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION | INTEGRATION GUIDE |
 |-|-|-|
-| Marketplace Wishlist | {{site.version}} |[Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-wishlist-feature-integration.html) |
-| Marketplace Product Offer API    | {{site.version}}  | [Glue API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/glue/marketplace-product-offer-feature-integration.html) |
+| Marketplace Wishlist | {{page.version}} |[Wishlist feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-wishlist-feature-integration.html) |
+| Marketplace Product Offer API    | {{page.version}}  | [Glue API: Marketplace Product Offer feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-product-offer-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -198,12 +198,12 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the `ProductOfferRestWishlistItemsAttributesMapperPlugin` is set up by sending the request to `GET https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You should get `attributes` in the response.
+Make sure that the `ProductOfferRestWishlistItemsAttributesMapperPlugin` is set up by sending the request to `GET https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}?include=wishlist-items`. You get `attributes` in the response.
 
-Make sure that the `ValidMerchantProductOfferAddItemPreCheckPlugin` is set up by sending the request to `POST https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}/wishlist-items`. You should have the wishlist item added only when the product has the specified offer reference, offer is active and approved, and merchant, who owns it, is active and approved.
+Make sure that the `ValidMerchantProductOfferAddItemPreCheckPlugin` is set up by sending the request to `POST https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}/wishlist-items`. The wishlist item is added only when the product has the specified offer reference, the offer is active and approved, and the merchant, who owns it, is active and approved.
 
-Make sure that the `ValidMerchantProductOfferUpdateItemPreCheckPlugin` is set up by sending the request `PATCH https://glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlist-items/{% raw %}{{{% endraw %}wishlist_item_id{% raw %}}}{% endraw %}`. You should have the wishlist item updated only when the product has the specified offer reference, offer is active and approved, and merchant, who owns it, is active and approved.
+Make sure that the `ValidMerchantProductOfferUpdateItemPreCheckPlugin` is set up by sending the request `PATCH https://glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlist-items/{% raw %}{{{% endraw %}wishlist_item_id{% raw %}}}{% endraw %}`. The wishlist item is updated only when the product has the specified offer reference, the offer is active and approved, and the merchant, who owns it, is active and approved.
 
-Make sure that the `ProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin` and `EmptyProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin` are set up by sending the request to `DELETE https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}/wishlist-items/{% raw %}{{wishlistItemId}}{% endraw %}`. You should get the product offer wishlist item deleted.
+Make sure that the `ProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin` and `EmptyProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin` are set up by sending the request to `DELETE https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}/wishlist-items/{% raw %}{{wishlistItemId}}{% endraw %}`. You get the product offer wishlist item deleted.
 
 {% endinfo_block %}

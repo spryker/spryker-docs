@@ -1,7 +1,7 @@
 ---
 title: Marketplace Merchant Portal Core feature integration
-last_updated: Oct 19, 2021
-description: This document describes how to integrate the Merchant Portal Core feature into a Spryker project.
+last_updated: Aug 31, 2022
+description: Integrate the Merchant Portal Core feature into a Spryker project.
 template: feature-integration-guide-template
 related:
   - title: Marketplace Merchant Portal Core feature walkthrough
@@ -20,10 +20,10 @@ To start feature integration, integrate the required features:
 
 | NAME | VERSION          | INTEGRATION GUIDE |
 | -------------------- |------------------| ---------|
-| Spryker Core         | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
-| Spryker Core BO      | {{site.version}} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-back-office-feature-integration.html) |
-| Marketplace Merchant | {{site.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/marketplace-merchant-feature-integration.html) |
-| Acl | {{site.version}} | [ACL feature integration](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/acl-feature-integration.html) |
+| Spryker Core         | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html) |
+| Spryker Core BO      | {{page.version}} | [Spryker Core Back Office feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-back-office-feature-integration.html) |
+| Marketplace Merchant | {{page.version}} | [Marketplace Merchant feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-feature-integration.html) |
+| Acl | {{page.version}} | [ACL feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/acl-feature-integration.html) |
 
 ###  1) Install the required modules using Composer
 
@@ -87,7 +87,7 @@ Make sure that the following modules have been installed:
 </database>
 ```
 
-Apply database changes and to generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console transfer:generate
@@ -101,21 +101,21 @@ Set up behavior as follows:
 
 #### Integrate the following plugins:
 
-| PLUGIN                                                    | SPECIFICATION                                                                                                                                                                                           | PREREQUISITES | NAMESPACE                                                                        |
-|-----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ------------- |----------------------------------------------------------------------------------|
-| MerchantUserSecurityPlugin                                | Sets security firewalls (rules, handlers) for Marketplace users.                                                                                                                                        |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security              |
-| BooleanToStringTwigPlugin                                 | Adds a new Twig function for converting Boolean to String.                                                                                                                                              |  | Spryker\Zed\ZedUi\Communication\Plugin\Twig                                      |
-| ZedUiNavigationTwigPlugin                                 | Adds a new Twig function for rendering Navigation using web components.                                                                                                                                 |  | Spryker\Zed\ZedUi\Communication\Plugin                                           |
-| GuiTableApplicationPlugin                                 | Enables GuiTable infrastructure for Zed.                                                                                                                                                                |  | Spryker\Zed\GuiTable\Communication\Plugin\Application                            |
-| GuiTableConfigurationTwigPlugin                           | Adds a new Twig function for rendering GuiTableConfiguration for the GuiTable web component.                                                                                                            |  | Spryker\Zed\GuiTable\Communication\Plugin\Twig                                   |
-| SecurityTokenUpdateMerchantUserPostChangePlugin           | Rewrites Symfony security token.                                                                                                                                                                        |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui |
-| MerchantPortalAclEntityMetadataConfigExpanderPlugin       | Expands provided Acl Entity Metadata with merchant order composite, merchant product composite, merchant composite, product offer composit data, merchant read global entities and allow list entities. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity                     |
-| MerchantAclMerchantPostCreatePlugin                       | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for provided merchant.                                                                                                  |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant                      |
-| MerchantAclMerchantUserPostCreatePlugin                   | Creates ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for provided merchant user.                                                                                            |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
-| AclMerchantPortalMerchantUserRoleFilterPreConditionPlugin | Checks if the Symfony security authentication roles should be filtered out.                                                                                                                             |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
-| MerchantUserUserRoleFilterPlugin                          | Filters ROLE_BACK_OFFICE_USER to prevent Merchant User login to Backoffice.                                                                                                                             |  | Spryker\Zed\MerchantUser\Communication\Plugin\SecurityGui                        |
-| ProductViewerForOfferCreationAclInstallerPlugin           | Provide `ProductViewerForOfferCreation` Roles with Rules and Groups to create on install.                                                                                                               |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser                  |
-| AclGroupMerchantUserLoginRestrictionPlugin                | Checks if the merchant user login is restricted.                                                                                                                                                        |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\SecurityMerchantPortalGui     |
+| PLUGIN  | SPECIFICATION | PREREQUISITES | NAMESPACE |
+|---|---| --- |---|
+| MerchantUserSecurityPlugin | Sets security firewalls (rules, handlers) for Marketplace users. |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\Security    |
+| BooleanToStringTwigPlugin | Adds a new Twig function for converting Boolean to String. |  | Spryker\Zed\ZedUi\Communication\Plugin\Twig |
+| ZedUiNavigationTwigPlugin   Adds a new Twig function for rendering Navigation using web components.      |  | Spryker\Zed\ZedUi\Communication\Plugin  |
+| GuiTableApplicationPlugin  | Enables GuiTable infrastructure for Zed. |  | Spryker\Zed\GuiTable\Communication\Plugin\Application     |
+| GuiTableConfigurationTwigPlugin    | Adds a new Twig function for rendering GuiTableConfiguration for the GuiTable web component.  |  | Spryker\Zed\GuiTable\Communication\Plugin\Twig  |
+| SecurityTokenUpdateMerchantUserPostChangePlugin | Rewrites Symfony security token. |  | Spryker\Zed\SecurityMerchantPortalGui\Communication\Plugin\UserMerchantPortalGui |
+| MerchantPortalAclEntityMetadataConfigExpanderPlugin       | Expands provided Acl Entity Metadata with merchant order composite, merchant product composite, merchant composite, product offer composit data, merchant read global entities and allow list entities. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\AclEntity   |
+| MerchantAclMerchantPostCreatePlugin     | Creates ACL group, ACL role, ACL rules, ACL entity rules and ACL entity segment for a provided merchant.  |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\Merchant    |
+| MerchantAclMerchantUserPostCreatePlugin | Creates ACL group, ACL role, ACL rules, ACL entity rules, and ACL entity segment for a provided merchant user. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser |
+| AclMerchantPortalMerchantUserRoleFilterPreConditionPlugin | Checks if the Symfony security authentication roles should be filtered out.  |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser |
+| MerchantUserUserRoleFilterPlugin   | Filters `ROLE_BACK_OFFICE_USER` to prevent a merchant user from loging in to the Back Office.  |  | Spryker\Zed\MerchantUser\Communication\Plugin\SecurityGui |
+| ProductViewerForOfferCreationAclInstallerPlugin | Provide `ProductViewerForOfferCreation` roles with rules and groups to create on installation. |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\MerchantUser |
+| AclGroupMerchantUserLoginRestrictionPlugin | Checks if the merchant user login is restricted.  |  | Spryker\Zed\AclMerchantPortal\Communication\Plugin\SecurityMerchantPortalGui     |
 
 **src/Pyz/Zed/Twig/TwigDependencyProvider.php**
 
@@ -515,7 +515,7 @@ $config[AclConstants::ACL_DEFAULT_RULES][] = [
 ];
 ```
 
-Add console command for warming up *Merchant Portal* router cache:
+Add a console command for warming up the *Merchant Portal* router cache:
 
 **src/Pyz/Zed/Console/ConsoleDependencyProvider.php**
 ```php
@@ -618,7 +618,7 @@ Environment requirements:
 
 Spryker requirements:
 
-To start builder integration, check the Spryker packages versions:
+To start builder integration, check versions of Spryker packages:
 
 | NAME | VERSION |
 | --------------------------- | --------- |
@@ -629,6 +629,7 @@ To start builder integration, check the Spryker packages versions:
 ### 1) Install the required modules using Composer
 
 Install the required modules:
+
 ```bash
 composer require spryker/dashboard-merchant-portal-gui:"^1.4.0" --update-with-dependencies
 ```
@@ -798,11 +799,11 @@ yarn install
 
 {% info_block warningBox "Warning" %}
 
-If you're getting `Missing write access to node_modules/mp-profile`, delete this **file** and make a **folder** with the same name.
+If you're getting `Missing write access to node_modules/mp-profile`, delete this *file* and make a *folder* with the same name.
 
 {% endinfo_block %}
 
-Check if the marketplace packages are located in the `node_modules/@spryker` folder — for example, utils.
+Check if the marketplace packages are located in the `node_modules/@spryker` folder—for example, utils.
 
 ### 5) Install Marketplace builder
 
@@ -853,7 +854,7 @@ export default async (
 };
 ```
 
-### 6) Add files for Merchant Portal entry point:
+### 6) Add files for the Merchant Portal entry point:
 
 **public/MerchantPortal/index.php**
 
@@ -1014,7 +1015,7 @@ import '@mp/polyfills';
 
 {% info_block warningBox "Verification" %}
 
-`yarn run mp:build` should pass successfully. If it doesn't work, try full rebuild:
+`yarn run mp:build` should pass successfully. If it doesn't work, try the full rebuild:
 
 `rm -rf node_modules && yarn cache clean --all && npm cache clean --force && yarn install && yarn mp:build`
 
@@ -1022,7 +1023,7 @@ import '@mp/polyfills';
 
 ### 6) Adjust deployment configs
 
-To configure deployment configuration to automatically install and build Merchant Portal, change frontend dependencies and installation commands in the deployment Yaml:
+To configure deployment configuration to automatically install and build Merchant Portal, change frontend dependencies and installation commands in the deployment YAML:
 
 - Remove existing Yves dependencies' installation commands from deployment Yaml: `dependencies-install` and `yves-isntall-dependencies`.
 - Add required console commands:
@@ -1083,7 +1084,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 ## Adjust environment infrastructure
 
-It is not safe to expose MerchantPortal next to the Back Office - MerchantPortal  *must not have* OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with Zed.
+It is not safe to expose MerchantPortal next to the Back Office—MerchantPortal *must not have* OS, DNS name, VirtualHost settings, FileSystem, and service credentials shared with Zed.
 
 ### 1) Set up a new virtual machine/docker container dedicated to MerchantPortal
 
@@ -1212,11 +1213,11 @@ $config[PropelConstants::ZED_DB_PASSWORD] = getenv('SPRYKER_DB_PASSWORD');
 
 {% endinfo_block %}
 
-The following page should now show the login page for MerchantPortal: `https://your-merchant-portal.domain/security-merchant-portal-gui/login`
+The following page now shows the login page for MerchantPortal: `https://your-merchant-portal.domain/security-merchant-portal-gui/login`.
 
 {% info_block warningBox "Verification" %}
 
-Make sure the following pages do not open: `https://your-merchant-portal.domain/security-gui/login`, `https://your-merchant-portal.domain/`
+Make sure the following pages do not open: `https://your-merchant-portal.domain/security-gui/login`, `https://your-merchant-portal.domain/`.
 
 {% endinfo_block %}
 
@@ -1314,6 +1315,6 @@ Log in to the Merchant Portal and make sure that when clicking on the profile pi
 
 Integrate the following related features:
 
-| FEATURE        | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
+| FEATURE | REQUIRED FOR THE CURRENT FEATURE | INTEGRATION GUIDE |
 | - | - | -|
-| Merchant Portal | &check;  |  [Merchant Portal feature integration ](/docs/marketplace/dev/feature-integration-guides/{{site.version}}/merchant-portal-feature-integration.html) |
+| Merchant Portal | &check;  |  [Merchant Portal feature integration ](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-portal-feature-integration.html) |

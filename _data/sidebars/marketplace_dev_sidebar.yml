@@ -5,11 +5,15 @@ entries:
   - product: Marketplace
     nested:
       - title: Setup
+        include_versions:
+        - "202204.0"
+        - "202212.0"
         nested:
           - title: DevVM system requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
             include_versions:
-            - "202204.0" 
+            - "202204.0"
+            - "202212.0"
 
           - title: Infrastructure requirements
             url: /docs/marketplace/dev/setup/infrastructure-requirements.html
@@ -936,15 +940,19 @@ entries:
             url: /docs/marketplace/dev/front-end/extending-the-project/
             include_versions:
             - "202204.0"
+            - "202212.0"
             nested:
 
               - title: "Migration guide - Extending the project"
                 url: /docs/marketplace/dev/front-end/extending-the-project/migration-guide-extending-the-project.html
                 include_versions:
                 - "202204.0"
+                - "202212.0"
 
           - title: "Table design"
             url: /docs/marketplace/dev/front-end/table-design/
+            include_versions:
+            - "202204.0"
             nested:
 
               - title: "Table Column Types"
@@ -1056,6 +1064,8 @@ entries:
                     
               - title: "Table Filters"
                 url: /docs/marketplace/dev/front-end/table-design/table-filters/
+                include_versions:
+                - "202204.0"
                 nested:
 
                   - title: "Date Range"
@@ -1079,10 +1089,14 @@ entries:
                  - "202204.0"
                     
           - title: "UI components library"
+            include_versions:
+            - "202204.0"
             nested:
 
               - title: "Actions"
-                url: /docs/marketplace/dev/front-end/ui-components-library/actions/                                
+                url: /docs/marketplace/dev/front-end/ui-components-library/actions/actions-close-drawer.html
+                include_versions:
+                - "202204.0"
                 nested:
 
                   - title: "Close Drawer"
@@ -1127,6 +1141,8 @@ entries:
                     
               - title: "Cache"
                 url: /docs/marketplace/dev/front-end/ui-components-library/cache/
+                include_versions:
+                - "202204.0"                
                 nested:
 
                   - title: "Static"
@@ -1136,14 +1152,20 @@ entries:
                    
               - title: "Data Transformers"
                 url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/
+                include_versions:
+                - "202204.0"
                 nested:
 
                   - title: "Collate"
                     url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/
+                    include_versions:
+                    - "202204.0"
                     nested:
 
                       - title: "Data Configurators"
                         url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/data-configurators/
+                        include_versions:
+                        - "202204.0"
                         nested:
 
                           - title: "Table"
@@ -1153,6 +1175,8 @@ entries:
                             
                       - title: "Filters"
                         url: /docs/marketplace/dev/front-end/ui-components-library/data-transformers/collate/filters/
+                        include_versions:
+                        - "202204.0"
                         nested:
 
                           - title: "Equals"
@@ -1207,9 +1231,11 @@ entries:
                  
               - title: "Datasources"
                 url: /docs/marketplace/dev/front-end/ui-components-library/datasources/
+                include_versions:
+                - "202204.0"
                 nested:
 
-                  - title: "Http"
+                  - title: "HTTP"
                     url: /docs/marketplace/dev/front-end/ui-components-library/datasources/datasource-http.html
                     include_versions:
                     - "202204.0"
@@ -1226,6 +1252,8 @@ entries:
                  
               - title: "Persistence"
                 url: /docs/marketplace/dev/front-end/ui-components-library/persistence/
+                include_versions:
+                - "202204.0"
                 nested:
 
                   - title: "In Memory"
@@ -1257,6 +1285,7 @@ entries:
             url: /docs/marketplace/dev/front-end/building-the-project.html
             include_versions:
             - "202204.0"
+            - "202212.0"
                  
           - title: "Project structure"
             url: /docs/marketplace/dev/front-end/project-structure.html
@@ -1267,6 +1296,7 @@ entries:
             url: /docs/marketplace/dev/front-end/setting-up-the-merchant-portal.html
             include_versions:
             - "202204.0"
+            - "202212.0"
                  
           - title: "Web components"
             url: /docs/marketplace/dev/front-end/web-components.html
@@ -1313,3 +1343,4 @@ entries:
             url: /docs/marketplace/dev/technical-enhancement/migration-guide-upgrade-to-angular-v12.html
             include_versions:
             - "202204.0"
+            - "202212.0"

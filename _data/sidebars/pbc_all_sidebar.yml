@@ -456,13 +456,22 @@ entries:
                   - title: Availability
                     url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html
                   - title: AvailabilityCartConnector
-                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html
-                  - title: Availability
-                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html
-                  - title: Availability
-                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html
-                  - title: Availability
-                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html
-
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availabilitycartconnector-module.html
+                  - title: AvailabilityGui
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availabilitygui-module.html
+                  - title: AvailabilityOfferConnector
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availabilityofferconnector-module.html
+                  - title: AvailabilityStorage
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availabilitystorage-module.html
+          - title: Import and export data
+            nested:
+              - title: File details - warehouse.csv
+                url: /docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse.csv.html
+              - title: File details - warehouse_address.csv
+                url: /docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse-address.csv.html
+              - title: File details - warehouse.csv
+                url: /docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse.csv.html
+              - title: File details - warehouse.csv
+                url: /docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse.csv.html
       - title: Usercentrics
         url: /docs/pbc/all/usercentrics.html

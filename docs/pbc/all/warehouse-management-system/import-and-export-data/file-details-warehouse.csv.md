@@ -17,26 +17,29 @@ redirect_from:
 
 This document describes the `warehouse.csv` file to configure the [Warehouse](/docs/pbc/all/warehouse-management-system/inventory-management-feature-overview.html) information in your Spryker Demo Shop.
 
-To import the file, run
-
-```bash
-data:import:stock
-```
 
 ## Import file parameters
-
-The file should have the following parameters:
 
 <div>
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- | --- |
-| name | Yes | String |  | Name of the warehouse. |
-| is_active | No | Boolean | <ul><li>True = 1</li><li>False = 0</li><li>If empty, it will be assumed 0 (false)</li></ul>| Status of the warehouse, specified in a boolean value: 1 (true) or 0 (false), where 1 indicates that the warehouse is available and 0 indicates that the warehouse is unavailable. By default, the warehouse is not active.|
+| name | ✓ | String |  | Name of the warehouse. |
+| is_active |  | Boolean | <ul><li>True = 1</li><li>False = 0</li><li>If empty, it will be assumed 0 (false)</li></ul>| Status of the warehouse, specified in a boolean value: 1 (true) or 0 (false), where 1 indicates that the warehouse is available and 0 indicates that the warehouse is unavailable. By default, the warehouse is not active.|
 </div>
 
-## Import file dependencies
+## Import template file and content example
 
-This file has no dependencies.
+| FILE | DESCRIPTION |
+| --- | --- |
+| [warehouse.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/Template+warehouse.csv) | Import file template with headers only. |
+| [warehouse.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/warehouse.csv) | Exemplary import file with Demo Shop data. |
+
+
+## Import file command
+
+```bash
+data:import:stock
+```
 
 ## Additional information
 
@@ -50,11 +53,8 @@ The `warehouse.csv` file replaces the `stock.csv` previously used.
 
 By default, `warehouse.csv` exists only in folder `…/vendor/spryker/stock-data-import/data/import/warehouse.csv`, but can be also be copied into `…/data/import` folder.
 
-## Import template file and content example
+## Next steps
 
-Find the template and an example of the file below:
-
-| FILE | DESCRIPTION |
-| --- | --- |
-| [warehouse.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/Template+warehouse.csv) | Import file template with headers only. |
-| [warehouse.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/warehouse.csv) | Exemplary import file with Demo Shop data. |
+* [File details - warehouse_address.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse-address.csv.html)
+* [File details - warehouse_store.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse-store.csv.html)
+* [File details - product_stock.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-product-stock.csv.html)

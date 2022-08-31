@@ -30,12 +30,21 @@ IE 11
 
 `frontend/configs/development.js`: 
 
-1. Remove import of `es6-polyfill` file: 
+1. Remove `buildVariantSettings` variable declaration and usage:
 ```js
+const { buildVariantSettings } = require('../settings');
+...
+const { buildVariant, isES6Module } = buildVariantSettings;
+```
+
+2. Remove `es6PolyfillTs` variable declaration and usage:
+```js
+const es6PolyfillTs = await findAppEntryPoint(appSettings.find.shopUiEntryPoints, './es6-polyfill.ts');
+...
 'es6-polyfill': es6PolyfillTs,
 ```
 
-2. Remove browsers support as it specified in the `.browserslistrc` file:
+3. Remove browsers support as it specified in the `.browserslistrc` file:
 ```js
 browsers: [
     '> 1%',
@@ -43,17 +52,47 @@ browsers: [
 ],
 ```
 
-3. Remove `isES6Module` usage from conditions, like: 
 ```js
-isES6Module ? `./js/${appSettings.name}.[name].js` : `./js/${appSettings.name}.[name].${buildVariant}.js`,
-    
-...
+plugins: [
+    autoprefixer({
+        'browsers': ['> 1%', 'last 2 versions']
+    })
+]
+// should be
+plugins: [require('autoprefixer')],
+```
 
+4. Set `esmodules` property to `true` instead of using `isES6Module` variable:
+```js
+esmodules: isES6Module,
+// should be 
+esmodules: true,
+```
+
+5. Replace usage for the next conditions:
+```js
+filename: isES6Module ? `./js/${appSettings.name}.[name].js` : `./js/${appSettings.name}.[name].${buildVariant}.js`,
+// should be 
+filename: `./js/${appSettings.name}.[name].js`,
+```
+
+```js
 ...(!isES6Module ? ['@babel/plugin-transform-runtime'] : []),
-    
-...
+// should be
+['@babel/plugin-transform-runtime'],
+```
 
+```js
 ...(isES6Module ? getAssetsConfig(appSettings) : []),
+// should be
+...getAssetsConfig(appSettings),
+```
+
+6. Adjust `watchLifecycleEventNames` to use only `yves:watch` lifecycle event: 
+```js
+const watchLifecycleEventNames = ['yves:watch:esm', 'yves:watch:legacy'];
+// should be
+const watchLifecycleEventNames = ['yves:watch'];
 ```
 
 `frontend/libs/command-line-parser.js`:
@@ -65,7 +104,12 @@ Remove `build determined module version` message:
 
 `frontend/libs/compiler.js`:
 
-Remove console command from the config section:
+1. Remove import of `buildVariantSettings` variable:
+```js
+const { buildVariantSettings } = require('../settings');
+```
+
+2. Remove console command from the config section:
 ```js
 const buildVariant = buildVariantSettings.buildVariant;
 
@@ -103,6 +147,12 @@ module.exports = {
 `src/Pyz/Yves/ShopUi/Theme/default/vendor.ts`: 
 
 Remove all IE11 related polyfills from the `vendor.ts`.
+
+{% info_block infoBox %}
+
+`es6-polyfill.ts` file was removed because all polyfills were specified in the `vendor.ts`.
+
+{% endinfo_block %}
 
 ## Update templates
 
@@ -147,13 +197,13 @@ Create `layout.twig` template with the next content:
 
 2. Remove IE11 related dependencies:
 ```json
-"classlist-polyfill": "~1.2.0",
-"date-input-polyfill": "~2.14.0",
-"element-closest": "~3.0.0",
-"element-remove": "~1.0.4",
-"intersection-observer": "~0.10.0",
-"string.prototype.startswith": "~0.2.0",
-"whatwg-fetch": "~3.4.0",
+"classlist-polyfill",
+"date-input-polyfill",
+"element-closest",
+"element-remove",
+"intersection-observer",
+"string.prototype.startswith",
+"whatwg-fetch",
 ```
 
 3. Update `autoprefixer` dependency:
@@ -163,12 +213,26 @@ Create `layout.twig` template with the next content:
 
 ## Install and build
 
+### Via Docker
+
+1. Install dependencies:
+```bash
+docker/sdk cli npm i 
+```
+
+2. Build the project assets:
+```bash
+docker/sdk up --assets 
+```
+
+### Locally
+
 1. Install dependencies:
 ```bash
 npm install 
 ```
 
-2. Build the project:
+2. Build the project assets:
 ```bash
 npm run yves
 npm run zed

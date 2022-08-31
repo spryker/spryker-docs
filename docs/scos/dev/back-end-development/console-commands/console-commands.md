@@ -82,7 +82,7 @@ $ console oms:check-timeout -l 100
 
 ## Installation setup commands
 
-- Setup install runs a set of commands necessary for installing or updating the application.
+- The following command runs a set of commands necessary for installing or updating the application.
 
 ```bash
 setup:install
@@ -182,13 +182,13 @@ setup:propel
   setup:propel:model:build
   ```
 
-  1. Compare the propel models with the database tables and generate the diff to prepare for migration:
+  6. Compare the propel models with the database tables and generate the diff to prepare for migration:
 
   ```bash
   setup:propel:diff
   ```
 
-  7. migrate the database: update the database so that's in sync with the propel models in the project:
+  7. Migrate the database: update the database so that's in sync with the propel models in the project:
 
   ```bash
   setup:propel:migrate
@@ -239,7 +239,7 @@ To use the NPM commands, download and install [Node.js](https://docs.npmjs.com/d
 {% endinfo_block %}
 
 | ENVIRONMENT | COMMAND DESCRIPTION | LOCAL COMMAND | VM COMMAND |
-|:---:|:---:|:---:|:---:|
+|---|---|---|---|
 | Project/Core |  |  |  |
 |  | Removes the entire content from the cache directories. |  | console cache:empty-all |
 |  | Executes your importers (full-import). |  | console data:import  |

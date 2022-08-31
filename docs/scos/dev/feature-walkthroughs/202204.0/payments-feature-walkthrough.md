@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/payments-feature-walkthrough.html
 ---
 
-The _Payments_ feature lets customers to pay for orders with none, one, or multiple payment methods during the checkout process.
+The _Payments_ feature lets customers pay for orders with none, one, or multiple payment methods during the checkout process.
 
 
 To learn more about the feature and to find out how end users use it, see [Payments feature overview](/docs/scos/user/features/{{page.version}}/payments-feature-overview.html) for business users.

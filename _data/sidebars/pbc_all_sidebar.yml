@@ -430,5 +430,39 @@ entries:
                 url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-product-options.html
               - title: Integrate Avalara Tax + Shipment
                 url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-shipment.html
+      - title: Warehouse Management System
+        url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.md
+        nested:
+          - title: Inventory Management feature overview
+            url: /docs/pbc/all/warehouse-management-system/inventory-management-feature-overview.md
+          - title: Availability Notification feature overview
+            url: /docs/pbc/all/warehouse-management-system/availability-notification-feature-overview.md
+          - title: Install and upgrade
+            nested:
+              - title: Install features
+                nested:
+                  - title: Availability Notification
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-availability-notification-feature.html
+                  - title: Inventory Management
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-inventory-management-feature.html
+                  - title: Inventory Management + Alternative Products
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-inventory-management-alternative-products-feature.html
+                  - title: Availability Notification Glue API
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html
+                  - title: Inventory Management Glue API
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: Availability
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html
+                  - title: AvailabilityCartConnector
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html
+                  - title: Availability
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html
+                  - title: Availability
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html
+                  - title: Availability
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html
+
       - title: Usercentrics
         url: /docs/pbc/all/usercentrics.html

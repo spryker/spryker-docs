@@ -34,7 +34,7 @@ related:
 This document describes how you can implement a new console command. However, before implementing your commands, we recommend you to do the following:
 
 * Getting the list of the console commands already available at Spryker. See [Getting the list of console commands and available options](/docs/scos/dev/back-end-development/console-commands/{{page.version}}/getting-the-list-of-console-commands-and-available-options.html) for instructions on how to do that. 
-* Check out what each command does. See [Console commands in Spryker](/docs/scos/dev/back-end-development/console-commands/{{page.version}}/console-commands.html) for details.
+* Check out what each command does. See [Console commands in Spryker](/docs/scos/dev/back-end-development/console-commands/console-commands.html) for details.
 
 ## Adding a new console command
 

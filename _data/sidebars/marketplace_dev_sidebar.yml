@@ -371,6 +371,11 @@ entries:
               - title: "Glue API: Marketplace Product Offer Volume Prices feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-volume-prices-feature-integration.html
 
+              - title: "Glue API: Marketplace Product Offer + Wishlist feature integration"
+                url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-wishlist-feature-integration.html
+                include_versions:
+                - "202212.0"
+
               - title: "Glue API: Marketplace Return Management feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-return-management-feature-integration.html
 

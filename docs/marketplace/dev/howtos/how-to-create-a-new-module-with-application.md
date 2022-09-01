@@ -1,6 +1,6 @@
 ---
 title: "HowTo: Create a new module with application"
-description: This document provides details how to create new module with application
+description: This document shows how to create a new module with the application
 template: howto-guide-template
 ---
 
@@ -48,7 +48,7 @@ By registering and rebuilding this module, a new JS bundle is created, which mus
 
 {% info_block warningBox "Note" %}
 
-Be aware that Angular Component names will be prefixed with `web-` when registered as Web Components, for example:
+Angular Component names are prefixed with `web-` when registered as Web Components, for example:
 
 ```ts
 import { Component } from '@angular/core';

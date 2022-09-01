@@ -31,6 +31,6 @@ The following schema illustrates the *Marketplace Product Approval Process* doma
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | DATA IMPORT |
+|INSTALLATION GUIDES  | DATA IMPORT |
 |---------| --- |
 | [Marketplace Product Approval Process feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-product-approval-process-feature-integration.html) | [File details: merchant_product_approval_status_default.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-product-approval-status-default.csv.html) |

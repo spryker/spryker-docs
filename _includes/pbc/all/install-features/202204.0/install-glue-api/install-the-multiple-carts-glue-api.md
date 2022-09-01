@@ -1,31 +1,18 @@
----
-title: Glue API - Multiple Carts feature integration
-description: The guide walks you through the process of installing the Multiple Carts API feature into the project.
-last_updated: Nov 22, 2019
-template: feature-integration-guide-template
-originalLink: https://documentation.spryker.com/v3/docs/multiple-carts-api-feature-integration-201907
-originalArticleId: 0b3107fb-825e-481e-bb6d-27e13f4a7d0f
-redirect_from:
-  - /v3/docs/multiple-carts-api-feature-integration-201907
-  - /v3/docs/en/multiple-carts-api-feature-integration-201907
-related:
-  - title: Managing Guest Carts
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
-  - title: Managing Carts of Registered Users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
----
+This document describes how to install the Multiple Carts Glue API.
 
-## Install feature API
-### Prerequisites
+
+## Prerequisites
+
 To start feature integration, overview and install the necessary features:
 
 | Name | Version | Integration guide |
 | --- | --- | --- |
-| Spryker Core | 201907.0 | Glue Application feature integration |
-| Multiple Carts | 201907.0 | Multiple Carts feature integration |
-| Cart | 201907.0 | Cart feature integration |
+| Spryker Core | {{site.version}} | Glue Application feature integration |
+| Multiple Carts | {{site.version}} | Multiple Carts feature integration |
+| Cart | {{site.version}} | Cart feature integration |
 
-### 1) Install the required modules using Composer
+## 1) Install the required modules using Composer
+
 Run the following command(s) to install the required modules:
 
 ```bash
@@ -34,14 +21,16 @@ composer require spryker/multi-carts-rest-api:"^1.0.0" --update-with-dependencie
 
 {% info_block warningBox “Verification” %}
 
-Make sure that the following modules were installed:
+Make sure that the following modules have been installed:
+
 {% endinfo_block %}
 
-| Module | Expected Directory |
+| MODULE | EXPECTED DIRECTORY |
 | --- | --- |
 | `MultiCartsRestApi` | `vendor/spryker/multi-carts-rest-api` |
 
-### 2) Set up Transfer Objects
+## 2) Set up transfer objects
+
 Run the following commands to generate transfer changes:
 
 ```bash
@@ -58,8 +47,8 @@ Make sure that the following changes have been applied in transfer objects:
 | `RestCartsAttributesTransfer:name` | property | added | `src/Generated/Shared/Transfer/RestCartsAttributesTransfer` |
 | `RestCartsAttributesTransfer:isDefault` | property | added | `src/Generated/Shared/Transfer/RestCartsAttributesTransfer` |
 
-### 3) Set up Behavior
-#### Enable resources and relationships
+## 3) Enable resources and relationships
+
 On a project level, install the following plugins:
 
 | Plugin | Specification | Prerequisites | Namespace |

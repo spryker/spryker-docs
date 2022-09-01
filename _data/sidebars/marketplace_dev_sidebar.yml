@@ -6,8 +6,6 @@ entries:
     nested:
       - title: Setup
         include_versions:
-        - "202204.0"
-        - "202212.0"
         nested:
           - title: DevVM system requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
@@ -279,6 +277,7 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
+            - "202212.0"
             
           - title: Marketplace Cart feature integration
             url: /docs/marketplace/dev/feature-integration-guides/marketplace-cart-feature-integration.html
@@ -469,6 +468,7 @@ entries:
             include_versions:
             - "202108.0"
             - "202204.0"
+            - "202212.0"
             
           - title: Merchant Portal - Marketplace Merchant feature integration
             url: /docs/marketplace/dev/feature-integration-guides/merchant-portal-marketplace-merchant-feature-integration.html
@@ -579,6 +579,7 @@ entries:
                 include_versions:
                 - "202108.0"
                 - "202204.0"
+                - "202212.0"
                 
               - title: "Glue API: Marketplace Product Offer Prices feature integration"
                 url: /docs/marketplace/dev/feature-integration-guides/glue/marketplace-product-offer-prices-feature-integration.html
@@ -934,6 +935,7 @@ entries:
             - "202204.0"
             
       - title: Front-end
+        include_versions:
         nested:
 
           - title: "Extending the project"

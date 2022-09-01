@@ -1611,6 +1611,7 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
+      - "202212.0"
     - title: Catalog + Category Management
       url: /docs/scos/dev/feature-integration-guides/catalog-category-management-feature-integration.html
       include_versions:
@@ -1857,15 +1858,6 @@ entries:
       - "202204.0"
     - title: Measurement Units
       url: /docs/scos/dev/feature-integration-guides/measurement-units-feature-integration.html
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      - "202204.0"
     - title: Merchant
       url: /docs/scos/dev/feature-integration-guides/merchant-feature-integration.html
       include_versions:
@@ -3447,6 +3439,7 @@ entries:
       nested:
       - title: Console commands in Spryker
         url: /docs/scos/dev/back-end-development/console-commands/console-commands.html
+        include_versions:
       - title: Implementing a new console command
         url: /docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html
       - title: Getting the list of console commands and available options
@@ -4766,7 +4759,7 @@ entries:
             - title: Private API method is overridden on the project level
               url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-method-is-overridden-on-the-project-level.html
         - title: Running the Evalutor tool
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
         - title: Define custom prefixes for core entity names
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
     - title: Performance guidelines

@@ -13,7 +13,7 @@ This release contains one module, [Discount](https://github.com/spryker/discount
 [Public release details](https://api.release.spryker.com/release-group/4173).
 
 
-### Adjustments
+**Adjustments**
 
 * Adjusted `main.js` to revert `es6` syntax.
 * Removed redundant `package-lock.json` file from assets.
@@ -25,7 +25,7 @@ This release contains one module, [Discount promotion](https://github.com/spryke
 
 [Public release details](https://api.release.spryker.com/release-group/4232).
 
-### Improvements
+**Improvements**
 
 * Introduced `DiscountPromotionFacade::postUpdateDiscount()` to save promotion discount after discount is updated.
 * Introduced `DiscountPromotionDiscountPostUpdatePlugin` to save promotion discount after discount is updated.
@@ -37,6 +37,6 @@ This release contains one module, [Discount](https://github.com/spryker/discount
 
 [Public release details](https://api.release.spryker.com/release-group/4245).
 
-### Fixes
+**Fixes**
 
 Fixed the data builder `DiscountGeneral::validTo` to the maximum allowed date that can be inserted in the database.

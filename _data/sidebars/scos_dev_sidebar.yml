@@ -1882,6 +1882,10 @@ entries:
       - "201907.0"
       - "202001.0"
       - "202005.0"
+    - title: Multiple Abstract Products as Promotional Producs & Discounts
+      url: /docs/scos/dev/feature-integration-guides/multiple-abstract-products-as-promotional-products-and-discounts-feature-integration.html
+      include_versions:
+      - "202204.0"
     - title: Multi-store CMS Block
       url: /docs/scos/dev/feature-integration-guides/multi-store-cms-block-feature-integration.html
     - title: Multi-store Products

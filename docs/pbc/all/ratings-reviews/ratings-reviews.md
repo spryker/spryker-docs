@@ -49,5 +49,5 @@ The feature has the following functional constraints, which are going to be reso
 
 |INTEGRATION GUIDES | GLUE API GUIDES  | DATA IMPORT |
 |---------|---------|---------|
-| [Product Rating & Reviews feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-rating-and-reviews-feature-integration.html) | [Managing product ratings and reviews](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-product-ratings-and-reviews.html)  | [File details: product_review.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html)  |
-|[Glue API: Product rating & reviews feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)   |   |  |
+| [Product Rating & Reviews feature integration](/docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-feature.html) | [Managing product ratings and reviews](/docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html)  | [File details: product_review.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html)  |
+|[Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)   |   |  |

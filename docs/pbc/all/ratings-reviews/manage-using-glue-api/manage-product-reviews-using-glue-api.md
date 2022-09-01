@@ -29,7 +29,7 @@ Products and ratings API helps you to:
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product rating & reviews feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)
 
 ## Retrieve product reviews
 

@@ -275,7 +275,7 @@ Below you will find the list of the new/updated documentation released as part o
 <details>
 <summary markdown='span'>Integration guide</summary>
 
-[Glue API: Product Rating & Reviews Feature Integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)
+[Install the Product Rating and Reviews Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)
 
 </details>
 

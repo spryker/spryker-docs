@@ -1,5 +1,5 @@
 ---
-title: Managing product reviews
+title: Manage product reviews using Glue API
 description: Learn how to manage product reviews via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/managing-products/managing-product-ratings-and-reviews.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-products/managing-product-ratings-and-reviews.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-products/managing-product-ratings-and-reviews.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-products/managing-product-ratings-and-reviews.html  
 related:
   - title: Product Rating and Reviews feature overview
     link: docs/scos/user/features/page.version/product-rating-and-reviews-feature-overview.html

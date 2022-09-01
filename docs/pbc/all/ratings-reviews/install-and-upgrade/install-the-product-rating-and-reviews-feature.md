@@ -1,5 +1,5 @@
 ---
-title: Product Rating and Reviews feature integration
+title: Install the Product Rating and Reviews feature
 description: The guide walks you through the process of installing the Product Reviews feature in your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/product-rating-reviews-feature-integration
   - /docs/product-rating-reviews-feature-integration
   - /docs/en/product-rating-reviews-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202204.0/product-rating-and-reviews-feature-integration.html  
 related:
   - title: Glue API - Product rating & reviews feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-rating-and-reviews-feature-integration.html

@@ -19,7 +19,7 @@ redirect_from:
 related:
   - title: Retrieving abstract products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-products.html
-  - title: Retrieving abstract product availability
+  - title: Retrieve abstract product availability
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-abstract-product-availability.html
   - title: Retrieving image sets of abstract products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/abstract-products/retrieving-image-sets-of-abstract-products.html

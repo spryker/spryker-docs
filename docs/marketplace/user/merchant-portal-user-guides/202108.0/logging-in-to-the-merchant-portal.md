@@ -1,6 +1,6 @@
 ---
 title: Logging in to the Merchant Portal
-last_updated: Jul 13, 2021
+last_updated: Aug 31, 2022
 description: This document describes how to log in and log out of the Merchant Portal.
 template: back-office-user-guide-template
 ---

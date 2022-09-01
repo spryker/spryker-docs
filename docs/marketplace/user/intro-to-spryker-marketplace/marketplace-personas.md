@@ -1,6 +1,7 @@
 ---
 title: Marketplace personas
 description: This document describes key users that cooperate in the Marketplace environment.
+last_updated: Aug 31, 2022
 template: concept-topic-template
 ---
 

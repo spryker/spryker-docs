@@ -9,8 +9,6 @@ The current feature integration guide adds the following functionalities:
 
 *   OAuth 2.0/Open ID Connect Support for Zed login
 
-*   StorageGui
-
 {% endinfo_block %}
 
 ## Prerequisites

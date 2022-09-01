@@ -292,6 +292,14 @@ class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 }
 ```
 
+### 5) Build Zed UI frontend
+
+Run the following command to enable Javascript and CSS changes for Zed:
+
+```bash
+console frontend:zed:build
+```
+
 ## Summary
 
 After applying these changes, your will be able to see formatted prices and numbers in Backoffice forms and tables.

@@ -62,6 +62,8 @@ plugins: [
 plugins: [require('autoprefixer')],
 ```
 
+Note: Remove `autoprefixer` import at the top of file.
+
 4. Set `esmodules` property to `true` instead of using `isES6Module` variable:
 ```js
 esmodules: isES6Module,

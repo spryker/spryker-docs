@@ -31,7 +31,7 @@ related:
     link: docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html
 ---
 
-The [list of console commands](/docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html) contains the command names together with a short description of what the command does. The most important commands in Spryker can be split into gour categories: collector commands, order management system commands, setup commands, and frontend-related commands. This document provides details on each of the commands.
+The [list of console commands](/docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html) contains the command names together with a short description of what the command does. The most important commands in Spryker can be split into four categories: collector commands, order management system commands, setup commands, and frontend-related commands. This document provides details on each of the commands.
 
 ## Collector commands
 
@@ -135,7 +135,7 @@ dev:ide:generate-auto-completion
 
   {% info_block infoBox %}
 
-  Each of the commands contained in the steps above can also be executed individually.
+  Each of the commands contained in the previous above can also be executed individually.
 
   {% endinfo_block %}
 
@@ -152,31 +152,31 @@ setup:propel
 ```
   The following steps are performed when running this command:
 
-  1. Write propel configuration
+  1. Write propel configuration:
 
   ```bash
   setup:propel:config:convert
   ```
 
-  2. Create the database if it doesn’t exist yet, based on the configuration set in the previous step
+  2. Create the database if it doesn’t exist yet, based on the configuration set in the previous step:
 
   ```bash
   setup:propel:database:create
   ```
 
-  3. Ensure compatibility with PostgreSQL, if necessary, by adjusting the Propel XML schema files.
+  3. Ensure compatibility with PostgreSQL, if necessary, by adjusting the Propel XML schema files:
 
   ```bash
   setup:propel:pg-sql-compat
   ```
 
-  4. Copy schema files from Spryker and project packages to the generated folder.
+  4. Copy schema files from Spryker and project packages to the generated folder:
 
   ```bash
   setup:propel:schema:copy
   ```
 
-  5. Build Propel classes based on the XML schema files.
+  5. Build Propel classes based on the XML schema files:
 
   ```bash
   setup:propel:model:build

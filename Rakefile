@@ -105,7 +105,8 @@ task :check_mp_dev do
     /docs\/marketplace\/user\/.+/,
     /docs\/pbc\/.+/,
     /docs\/marketplace\/\w+\/[\w-]+\/202108\.0\/.+/,
-    /docs\/sdk\/.+/
+    /docs\/sdk\/.+/,
+    /docs\/marketplace\/\w+\/[\w-]+\/202212\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -142,7 +143,8 @@ task :check_scos_dev do
     /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/
+    /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202212\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end
@@ -164,7 +166,8 @@ task :check_scos_user do
     /docs\/scos\/\w+\/[\w-]+\/202001\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202005\.0\/.+/,
     /docs\/scos\/\w+\/[\w-]+\/202009\.0\/.+/,
-    /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/
+    /docs\/scos\/\w+\/[\w-]+\/202108\.0\/.+/,
+    /docs\/scos\/\w+\/[\w-]+\/202212\.0\/.+/
   ]
   HTMLProofer.check_directory("./_site", options).run
 end

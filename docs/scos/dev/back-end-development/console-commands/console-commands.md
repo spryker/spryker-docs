@@ -37,9 +37,9 @@ The [list of console commands](/docs/scos/dev/back-end-development/console-comma
 
 Collector commands are responsible for exporting the data in the SQL database to the frontend data storages (Redis and Elasticsearch):
 
-* `collector:search:export` — exports data to the Elasticsearch storage.
-* `collector:search:update` — updates the data in the Elasticsearch storage.
-* `collector:storage:export` — exports data to Key-Value storage (Redis).
+* `collector:search:export`—exports data to the Elasticsearch storage.
+* `collector:search:update`—updates the data in the Elasticsearch storage.
+* `collector:storage:export`—exports data to Key-Value storage (Redis).
 
 ## Order Management System commands
 
@@ -70,8 +70,8 @@ console oms:check-timeout
 
 Options:
 
-* `-s`, `--store=store` — filter by the given store
-* `-l`, `--limit=limit` — limit the number of orders
+* `-s`, `--store=store`—filter by the given store
+* `-l`, `--limit=limit`—limit the number of orders
 
 Examples:
 

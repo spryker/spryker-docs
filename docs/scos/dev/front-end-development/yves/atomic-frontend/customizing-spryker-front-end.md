@@ -280,41 +280,11 @@ The behavior of different components is defined by Javascript. For stricter typi
 
 All component assets are compiled using a bundler called Webpack. Spryker Shop Application (Shop UI) can have 3 entry points for Webpack on the project level. They should be located in the root folder of the Shop UI (`src/Pyz/Yves/ShopUi/Theme/default`). The entry points are as follows (in processing order):
 
-* `es6-polyfill.ts`
-
-Contains polyfills required to make ES6 features (promises, sets, maps, arrays etc) available in older browsers, like IE11. You can add and remove as many polyfills as you may need for your project.
-
-**Recommended Polyfills**
-
-```JavaScript
-// ES6 polyfill
-import 'core-js/fn/promise';
-import 'core-js/fn/array';
-import 'core-js/fn/set';
-import 'core-js/fn/map';
-
-// Check if the browser natively supports web components nd ES6
-const hasNativeCustomElements = !!window.customElements;
-
-// Load a shim for ES5 transpilers (typescript or babel)
-// https://github.com/webcomponents/webcomponentsjs#custom-elements-es5-adapterjs
-if (hasNativeCustomElements) {
-    import(/* webpackMode: "eager" */'@webcomponents/webcomponentsjs/custom-elements-es5-adapter');
-}
-```
-
 * `vendor.ts`
 
 Contains external dependencies for the system. It is recommended to use this file for dependencies as Webpack will load the dependency code only once, and then references will be provided per request.
 
-Out of the box, the _Web Components_ dependency is provided. You can add your own dependencies depending on the project needs (e.g. _jquery_, _recat_, _vue_ etc).
-
-**Default Dependencies**
-
-```Javascript
-// Add webcomponents polyfill
-import '@webcomponents/webcomponentsjs/webcomponents-bundle';
-```
+You can add your own dependencies depending on the project needs (e.g. _jquery_, _recat_, _vue_ etc).
 
 * `app.ts`
 

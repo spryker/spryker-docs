@@ -99,7 +99,7 @@ const criticalPatterns = [
 ...
 ```
 
-4. Update the `frontend/libs/finder.js` file with the following cod:
+4. Update the `frontend/libs/finder.js` file with the following code:
 
     1. Add `mergeEntryPoints` function:
 
@@ -211,7 +211,6 @@ const criticalPatterns = [
     ...
     entry: {
         'vendor': vendorTs,
-        'es6-polyfill': es6PolyfillTs,
         'app': [
             appTs,
             ...componentEntryPoints,
@@ -258,7 +257,6 @@ const criticalPatterns = [
 {% raw %}{%{% endraw %} extends template('page-blank', '@SprykerShop:ShopUi') {% raw %}%}{% endraw %}
 
 {% raw %}{%{% endraw %} block template {% raw %}%}{% endraw %}
-    {% raw %}{%{% endraw %} set isNewFrontendBuildSupported = true {% raw %}%}{% endraw %}
     {% raw %}{%{% endraw %} set isCssLazyLoadSupported = true {% raw %}%}{% endraw %}
 
     {% raw %}{{{% endraw %} parent() {% raw %}}}{% endraw %}

@@ -98,9 +98,11 @@ The following technologies are used to enable Spryker Atomic Frontend:
     Typescript is a superset of Javascript that allows you to reinforce the object-oriented approach in programming behaviors. It is used to make Javascript strictly typed, increasing readability and maintainability, reducing the likelihood of type-related mistakes and enforces strong contracts in terms of data. For more information, see the [Typescript](https://www.typescriptlang.org/) documentation.
 
 
-<!-- {% info_block warningBox %}
-If necessary, you can develop in pure Javascript. For details, see //How to Customize Spryker Frontend TODO:.
-{% endinfo_block %}-->
+{% info_block infoBox %}
+
+If necessary, you can develop in pure Javascript. For details, see [How to Customize Spryker Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/customizing-spryker-front-end.html).
+
+{% endinfo_block %}
 
 * **Web Components**
 
@@ -157,7 +159,7 @@ The structure of the default folder is as follows (both on the global and projec
 * **styles**: Holds all SCSS-related assets, such as utility classes, variables, reset for browser styles, grids and so on.
 * **templates**:Contains Twig files with templates. Each template must be placed in its own folder.
 * **views**: Contains Twig files with views. Each view must be placed in its own folder.
-* **app.ts**, **es6-polyfill.ts**, **vendor.ts**: Typescript entry points.
+* **app.ts**, **vendor.ts**: Typescript entry points.
 
 ### Feature components
 
@@ -169,11 +171,7 @@ The feature components are located in the `vendor/spryker-shop` folder of the `S
 
 When you build the shop application, the builder (*Webpack*) will find all entry points of all components. Entry points are the files that Webpack uses to create the output assets.
 
-There are 3 entry points that will be loaded in the DOM in the following order:
-
-* **es6-polyfill**:
-    `src/Pyz/Yves/ShopUi/Theme/default/es-polyfill.ts`
-    Provides ES6 polyfills used for compatibility with older browsers.
+There are 2 entry points that will be loaded in the DOM in the following order:
 
 * **vendor**:
     `src/Pyz/Yves/ShopUi/Theme/default/vendor.ts`
@@ -204,7 +202,7 @@ The Webpack implementation is located in the frontend folder and has the followi
 * **build.js**: Webpack loader. This file is called by `npm` when running `npm run yves`.
 * **libs/alias.js**: Takes the `paths` property defined in the `tsconfig.json` file and transforms them into Webpack aliases. Using this file ensures that an alias defined in Typescript is available not only everywhere in Typescript, but also in SASS.
 * **libs/compiler.js**: Calls Webpack as a compiler and prints out a human-readable output of the build process.
-* **libs/finder.js**:  Finder is a set of functions needed to locate the assets for the frontend. This is necessary because of Spryker architecture. Spryker, being a modular application, can contain various modules. Some of them have a frontend implementation, and some do not. The finder locates all frontend assets in all modules and passes them to Webpack to compile. For this purpose, a set of glob operations on the file system are used.
+* **libs/finder.js**: Finder is a set of functions needed to locate the assets for the frontend. This is necessary because of Spryker architecture. Spryker, being a modular application, can contain various modules. Some of them have a frontend implementation, and some do not. The finder locates all frontend assets in all modules and passes them to Webpack to compile. For this purpose, a set of glob operations on the file system are used.
 * **configs/development.js**: Webpack configuration for development environment.
 * **configs/development-watch.js**: Webpack configuration for development environment that also provides watchers.
 * **configs/production.js**: Webpack configuration for production environment.
@@ -293,7 +291,7 @@ A typical component folder consists of the following files:
 * **index.ts**: Specifies the component entry point for Webpack. This file is necessary to locate the component styles and Typescript code.
 * **component-name.ts**: Specifies the behavior for the component in Typescript.
 * **component-name.scss**: Contains the SCSS style for the component, wrapped into a mixin.<br>Note: If a component contains the `style.scss` file, this file only declares a mixin.
-* **style.scss**: Imports the style when `component-name.scss`contains only mixin declaration.
+* **style.scss**: Imports the style when `component-name.scss` contains only mixin declaration.
 * **component-name.twig**: Defines a template for the component layout.
 
 The above structure contains a fully featured component, with styles and Typescript that defines the component behavior. Depending on what you are trying to achieve, you can have a component that includes both styles and behavior, or any of these separately. In addition to this, you can even create a component that has neither styles, nor behavior. In the latter case, the component will contain a template only consisting of a `.twig` file.
@@ -307,11 +305,11 @@ When defining a component template with Twig, you need to use the following defa
 
 **Example:**
 
-```php
-    {% raw %}{% define config = {
-        name: 'new-component-counter',
-        tag: 'new-component-counter'
-    } %}{% endraw %}
+```twig
+{% raw %}{% define config = {
+    name: 'new-component-counter',
+    tag: 'new-component-counter'
+} %}{% endraw %}
 ```
 
 *Attributes*:
@@ -333,10 +331,10 @@ Whenever possible, use primitive types (e. g. strings, numbers etc). Avoid compl
 **Example:**
 
 ```twig
-% define data = {
+{% raw %}{% define data = {
     name: required,
     description: 'no description'
-} {% raw %}%}{% endraw %}
+} %}{% endraw %}
 ```
 
 * `attributes` variable: defines HTML5 attributes for the component
@@ -344,10 +342,10 @@ If not **null** or **false**, the specified attributes will be rendered in the c
 
 **Example:**
 
-```php
-% define attributes = {
+```twif
+{% raw %}{% define attributes = {
     'element-selector': required
-} {% raw %}%}{% endraw %}
+} %}{% endraw %}
 ```
 
 * `class` variable: defines external class names that a component might receive from the context.
@@ -461,7 +459,7 @@ This function can be used for the following purposes:
 
 A typical `component-name.scss` file looks as follows:
 
-```php
+```scss
 @mixin module-name-component-name($name: '.component-name') {
     #{$name} {
         // BEM styles
@@ -473,7 +471,7 @@ A typical `component-name.scss` file looks as follows:
 
 When defining styles for a component, you can include the global mixins, variables and styles as defined in the ShopUi module. They are exposed to every component by default. Also, you can use the styles and mixins of every built-in component, as they are exposed transparently to the project level, for example:
 
-```js
+```scss
 @include shop-ui-side-drawer('.new-existing-component-side-drawer') { //Create component style based on mixin of a core component
     color: $setting-color-alt; // Use system-wide variables
 
@@ -501,7 +499,7 @@ In your code, you can use keyword this to access the public API of the HTML elem
 
 **Typical implementation:**
 
-```php
+```ts
 import Component from 'ShopUi/models/component';
 
 export default class ComponentName extends Component {
@@ -513,7 +511,7 @@ export default class ComponentName extends Component {
 
 The above example extend the default Component model defined in the ShopUi application. However, you can extend from any component both on the global and on the project level. In this case, your new component will inherit the logic and behavior of the component it is derived from. The following example shows a component inherited from the default side-drawer component of Spryker Shop:
 
-```js
+```ts
 // Import class SideDrawer
 import SideDrawer from 'ShopUi/components/organisms/side-drawer/side-drawer';
 
@@ -537,7 +535,7 @@ To register the component in the DOM, you need to use the **register** function 
 
 **Typical implementation:**
 
-```php
+```ts
 import './component-name.scss';
 
 // Import the 'register' function from the Shop Application

@@ -1,7 +1,7 @@
 ---
 title: Installing and configuring FACT-Finder web components
 description: Integrate Fact Finder Web Components into Spryker Commerce OS.
-last_updated: Jun 16, 2021
+last_updated: Aug 31, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/fact-finder-web-components
 originalArticleId: 2c240c0e-67be-43d0-87fe-256dcf2f0a8f
@@ -16,9 +16,12 @@ related:
     link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
 
+This document shows how to install and configure FACT-Finder web components.
+
 ## Installation
 
-To install the fact-finder-web-components module, run the following command:
+Install the fact-finder-web-components module:
+
 ```bash
 composer require spryker-eco/fact-finder-web-components
 ```
@@ -46,7 +49,7 @@ $config[FactFinderWebComponentsConstants::COMMUNICATION_COMPONENT_CONFIG] = [
 
 To set up the components configuration, use the following config code as an example:
 
-<details open>
+<details>
 <summary markdown='span'>config/Shared/config_default.php</summary>
 
 ```php
@@ -237,10 +240,10 @@ $config[FactFinderWebComponentsConstants::CAMPAIGN_COMPONENT_CONFIG] = [
 ];
 ...
 ```
-<br>
+
 </details>
 
-## Integration into Project
+## Integration into the project
 
 **frontend/settings.js**
 
@@ -298,9 +301,9 @@ import 'ff-web-components/dist/bundle';
 },
 ```
 
-## Frontend Integration
+## Frontend integration
 
-Add the required Communication element:
+Add the required communication element:
 
 ```twig
 {% raw %}{%{% endraw %} block content {% raw %}%}{% endraw %}

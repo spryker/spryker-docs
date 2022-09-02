@@ -41,6 +41,10 @@ spryker-sdk analyze:php:code-compliance
 ```
     This creates `analyze:php:code-compliance.violations.yaml` in the `reports` folder.
 
+Available options:
+- Module filtration option, use it for specifies which modules should be evaluated.
+  Example `-m 'Pyz.ProductStorage'` where `Pyz` is namespace and `ProductStorage` is module name.
+
 To view the report, run the following command:
 
 ```bash

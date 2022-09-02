@@ -102,7 +102,7 @@ If necessary, you can develop in pure Javascript. For details, see [How to Custo
 
 **Web Components**
 
-The Web Component standard was chosen as a reliable, high-performance, and consistent approach to creating UI components. The main benefit of this approach is that any user interface created with the help of Web Components will be non-changeable across platforms and browsers. Also, it reduces the number of project dependencies required. Basically, everything that is needed to enable Web Components is a set of polyfills. For more information, see [Web Components](https://www.webcomponents.org/) Overview.
+The Web Component standard was chosen as a reliable, high-performance, and consistent approach to creating UI components. The main benefit of this approach is that any user interface created with the help of Web Components is non-changeable across platforms and browsers. Also, it reduces the number of project dependencies required. Basically, everything that is needed to enable Web Components is a set of polyfills. For more information, see [Web Components](https://www.webcomponents.org/) Overview.
 
 **Webpack**
 
@@ -166,7 +166,7 @@ The feature components are located in the `vendor/spryker-shop` folder of the `S
 
 ## Application Bootstrap
 
-When you build the shop application, the builder (*Webpack*) will find all entry points of all components. Entry points are the files that Webpack uses to create the output assets.
+When you build the shop application, the builder (*Webpack*) finds all entry points of all components. Entry points are the files that Webpack uses to create the output assets.
 
 There are two entry points that are loaded in the DOM in the following order:
 * *vendor*: `src/Pyz/Yves/ShopUi/Theme/default/vendor.ts`—contains all external dependencies required for your project.
@@ -191,7 +191,7 @@ The Webpack implementation is located in the frontend folder and has the followi
 * `configs/development.js`. It is Webpack configuration for development environment.
 * `configs/development-watch.js`. It is Webpack configuration for development environment that also provides watchers.
 * `configs/production.js`. It is Webpack configuration for production environment.
-* `assets/`. It contains static assets (images and fonts) used in the project. This the place to put static files used in your project. They will be copied to the `public` folder automatically.
+* `assets/`. It contains static assets (images and fonts) used in the project. This the place to put static files used in your project. They are copied to the `public` folder automatically.
 
 The resulting compiled data is placed in the `public` folder of your Spryker code installation.
 
@@ -275,7 +275,7 @@ A typical component folder consists of the following files:
 * `style.scss`. It imports the style when `component-name.scss` contains only mixin declaration.
 * `component-name.twig`. It efines a template for the component layout.
 
-The above structure contains a fully featured component, with styles and Typescript that defines the component behavior. Depending on what you are trying to achieve, you can have a component that includes both styles and behavior, or any of these separately. In addition to this, you can even create a component that has neither styles, nor behavior. In the latter case, the component will contain a template only consisting of a `.twig` file.
+The above structure contains a fully featured component, with styles and Typescript that defines the component behavior. Depending on what you are trying to achieve, you can have a component that includes both styles and behavior, or any of these separately. In addition to this, you can even create a component that has neither styles, nor behavior. In the latter case, the component contains a template only consisting of a `.twig` file.
 *Views* and *templates* always consist of a `.twig` file only.
 
 ### Twig
@@ -486,7 +486,7 @@ export default class ComponentName extends Component {
 }
 ```
 
-The above example extend the default Component model defined in the ShopUi application. However, you can extend from any component both on the global and on the project level. In this case, your new component will inherit the logic and behavior of the component it is derived from. The following example shows a component inherited from the default side-drawer component of Spryker Shop:
+The preceding example extend the default Component model defined in the ShopUi application. However, you can extend from any component both on the global and on the project level. In this case, your new component inherits the logic and behavior of the component it is derived from. The following example shows a component inherited from the default side-drawer component of Spryker Shop:
 
 ```ts
 // Import class SideDrawer
@@ -504,7 +504,7 @@ export default class ComponentName extends SideDrawer {
 
 The `index.ts` file is required to load the client-side of the component with Webpack. The latter globs the system looking for these files and bundles them into an output file. Create this file whenever you need to include a style and/or a Typescript/Javascript file as part of the component.
 
-To register the component in the DOM, you need to use the **register** function of the shop application. It accepts two arguments:
+To register the component in the DOM, you need to use the `register` function of the shop application. It accepts two arguments:
 
 * `name`. It specifies the component's tag name. This name is associated with the component and can be used in Twig to insert the component into a template. Also, it is used in the DOM as a tag name. Whenever a tag with the specified name occurs in the DOM, the Shop Application loads the component.
 

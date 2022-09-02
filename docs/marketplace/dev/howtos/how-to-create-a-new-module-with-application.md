@@ -1,5 +1,6 @@
 ---
 title: "HowTo: Create a new module with application"
+last_updated: Aug 31, 2022
 description: This document shows how to create a new module with the application
 template: howto-guide-template
 ---
@@ -46,7 +47,7 @@ registerNgModule(ComponentsModule);
 
 By registering and rebuilding this module, a new JS bundle is created, which must be manually added to the Twig page in order to load Web Components.
 
-{% info_block warningBox "Note" %}
+{% info_block warningBox %}
 
 Angular Component names are prefixed with `web-` when registered as Web Components, for example:
 

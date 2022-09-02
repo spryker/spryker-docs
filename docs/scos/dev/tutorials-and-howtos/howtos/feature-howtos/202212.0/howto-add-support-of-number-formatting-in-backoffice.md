@@ -5,9 +5,7 @@ template: howto-guide-template
 last_updated: Aug 30, 2022
 ---
 
-#{Title}
-
-{Overview}
+Overview
 
 This document explains how to add support of number formatting in Backoffice UI.
 
@@ -23,7 +21,7 @@ To add support of number formatting in Backoffice, integrate the required featur
 | Product + Order Management (Optional)  | {{page.version}} | [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-order-management-feature-integration.html) |
 | Shipment (Optional)                    | {{page.version}} | [Shipment integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-feature-integration.html)                                           |
 
-## {Step-by-step instructions}
+## Step-by-step instructions
 
 ### 1) Install the required modules using Composer
 

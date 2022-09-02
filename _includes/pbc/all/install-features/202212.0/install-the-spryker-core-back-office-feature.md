@@ -2,11 +2,8 @@
 
 This feature integration guide expects the basic feature to be in place.
 The current feature integration guide adds the following functionalities:
-
 *   Translation
-
 *   Security
-
 *   OAuth 2.0/Open ID Connect Support for Zed login
 
 {% endinfo_block %}
@@ -174,11 +171,8 @@ class SecurityOauthUserConfig extends SprykerSecurityOauthUserConfig
 {% info_block warningBox “Verification” %}
 
 Having finished the entire integration, ensure that:
-
 *   Entries without a translation for a language with a configured fallback are translated into the fallback language.
-
 *   Translation cache is stored under the configured directory.
-
 *   Translations are found based on the configured file path pattern.
 
 {% endinfo_block %}
@@ -361,11 +355,8 @@ console twig:cache:warmer
 {% info_block warningBox "Verification" %}
 
 Ensure that:
-
 *   You can open the Back Office login page or any page which requires authentication.
-
 *   On the Back Office login page, the **Forgot password?** button redirects you to the password reset form.
-
 *   You receive a password reset email to the email address you submitted the password reset form with.
 
 {% endinfo_block %}
@@ -558,11 +549,8 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Ensure that you’ve enabled the plugins:
-
 1.  In the Back Office, go to **Users** > **Users**.
-
 2.  Select **+Add New User**.
-
 3.  On the *Create new User* page, check that the **Interface language*** field exists.
 
 {% endinfo_block %}
@@ -616,9 +604,7 @@ console translator:generate-cache
 {% info_block warningBox "Verification" %}
 
 Ensure that the command:
-
-*   cleaned previous translation cache in the translation folder, which is `data/{YourStore}/cache/Zed/translation` by default.
-
-*   generated translator cache files like `catalogue.{your_locale}.{randomString}.php` and `catalogue.{your_locale}.{randomString}.php.meta` in the translation folder, which is `data/{YourStore}/cache/Zed/translation` by default.
+*   Cleaned previous translation cache in the translation folder, which is `data/{YourStore}/cache/Zed/translation` by default.
+*   Generated translator cache files like `catalogue.{your_locale}.{randomString}.php` and `catalogue.{your_locale}.{randomString}.php.meta` in the translation folder, which is `data/{YourStore}/cache/Zed/translation` by default.
 
 {% endinfo_block %}

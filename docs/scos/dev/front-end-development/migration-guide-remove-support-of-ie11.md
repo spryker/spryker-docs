@@ -166,7 +166,7 @@ The `es6-polyfill.ts` file was removed because all polyfills were specified in `
 
 ## Update templates
 
-To update `src/Pyz/Yves/ShopUi/Theme/default/templates/page-blank/page-blank.twig`, remove the `isNewFrontendBuildSupported` variable from the `template` block:
+1. In `src/Pyz/Yves/ShopUi/Theme/default/templates/page-blank/page-blank.twig`, remove the `isNewFrontendBuildSupported` variable from the `template` block:
 
 ```twig
 {%- raw -%}

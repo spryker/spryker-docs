@@ -178,7 +178,7 @@ To update `src/Pyz/Yves/ShopUi/Theme/default/templates/page-blank/page-blank.twi
 {% endraw %}
 ```
 
-To update `src/Pyz/Zed/ZedUi/Presentation/Layout/layout.twig`, create the `layout.twig` template with the following content:
+2. Create the `src/Pyz/Zed/ZedUi/Presentation/Layout/layout.twig` template with the following content:
 
 ```twig
 {%- raw -%}

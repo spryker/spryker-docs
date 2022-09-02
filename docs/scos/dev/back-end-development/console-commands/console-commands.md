@@ -135,7 +135,7 @@ dev:ide:generate-auto-completion
 
   {% info_block infoBox %}
 
-  Each of the commands contained in the previous above can also be executed individually.
+  Each of the commands contained in the previous steps can also be executed individually.
 
   {% endinfo_block %}
 

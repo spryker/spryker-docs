@@ -1,7 +1,7 @@
 ---
 title: Frontend assets building and loading
 description: Spryker assets are split into critical and non-critical CSS chunks. Their main purpose is to provide loading of the critical CSS at the start of the page loading and load the non-critical CSS only after the full page is loaded.
-last_updated: Jun 16, 2021
+last_updated: Aug 31, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/frontend-assets-building-and-loading
 originalArticleId: d9f739fa-6b6a-45d7-8d3e-4ba793809910
@@ -16,15 +16,15 @@ redirect_from:
 
 Spryker assets are split into critical and non-critical CSS chunks. Their main purpose is to provide loading of the critical CSS at the start of the page loading and load the non-critical CSS only after the full page is loaded.
 
-The *critical CSS* includes all the components from the [ShopUi](https://github.com/spryker/spryker-shop-core/tree/master/Bundles/ShopUi) module as basic front-end building blocks for all pages and components from the Home page, Catalog page, and Product Detail page. These pages are considered landing pages and the most important pages from the search engine optimization perspective.
+The *critical CSS* includes all the components from the [`ShopUi`](https://github.com/spryker/spryker-shop-core/tree/master/Bundles/ShopUi) module as basic frontend building blocks for all pages and components from the **Home**, **Catalog**,  **Product Detail** pages. These pages are considered landing pages and the most important pages from the search engine optimization perspective.
 
 The *non-critical CSS* includes all other styles and service CSS classes called *utils*. The non-critical assets are not necessary for every page loading and can be loaded when the whole page has already been loaded.
 
-To support the assets loading behavior as described above, most pages considered as not landing are loading both critical and non-critical assets into the `<head>` tag at the start of the page loading. The assets loading approach for the landing pages is described further in this article.
+To support the assets loading behavior as described above, most pages considered as not landing are loading both critical and non-critical assets into the `<head>` tag at the start of the page loading. The assets loading approach for the landing pages is described further in this document.
 
 ## Page-critical-path layout
 
-For the landing pages, there is the `page-critical-path` layout defining the assets loading behavior. It is an extension of the `page-blank` layout with the overwritten `nonCriticalStyles` and `styleLazyLoader` blocks. The `page-critical-path` contains a `style-loader` component before the closing tag of `<body>`. The `style-loader` component is responsible for loading the non-critical CSS only after the whole page is loaded.
+For the landing pages, there is the `page-critical-path` layout defining the asset's loading behavior. It is an extension of the `page-blank` layout with the overwritten `nonCriticalStyles` and `styleLazyLoader` blocks. The `page-critical-path` contains a `style-loader` component before the closing tag of `<body>`. The `style-loader` component is responsible for loading the non-critical CSS only after the whole page is loaded.
 
 The `page-critical-path` layout uses cookies to track whether it is the first session on the site. If it is the first session, the critical CSS and utils are loaded into the `<head>` tag at the start of the page loading. Only after the whole page is loaded, the `style-loader` component appends the non-critical CSS to the end of the `<head>` tag. Otherwise, the approach for the non-landing pages is used.
 
@@ -32,59 +32,51 @@ The main purpose of the page-critical-path layout is to use the CSS Lazy Load on
 
 ## Building CSS and JS chunks
 
-As mentioned above, all the Yves CSS are split into critical, non-critical, and utils chunks using the Webpack `MiniCssExtractPlugin` and are loaded separately to all pages. Due to the fact that the utils CSS is a part of the non-critical CSS, they are built separately **only** for the user's first session on the site if the pages use `page-critical-path` layout.
+As mentioned above, all the Yves CSS are split into critical, non-critical, and utils chunks using the Webpack `MiniCssExtractPlugin` and are loaded separately to all pages. Because the utils CSS is a part of the non-critical CSS, they are built separately *only* for the user's first session on the site if the pages use the `page-critical-path` layout.
 
-Building the JS chunks using a code-splitting Webpack feature allows splitting JS code into various bundles. It builds a smaller bundles size and allows you to control the resource load prioritization impact on a page load time.
+Building the JS chunks using a code-splitting Webpack feature lets you split JS code into various bundles. It builds a smaller bundle size and lets you control the resource load prioritization impact on a page load time.
 
 There are three general approaches to code splitting:
-
 * Entry Points: manual split of code using entry configuration.
 * Prevent Duplication: using the `SplitChunksPlugin` to dedupe and split chunks.
-* Dynamic Imports: splitting code via inline function calls within modules.
+* Dynamic Imports: splitting code by inline function calls within modules.
 
-The approaches are implemented with the `RuntimeChunkPlugin`, `SplitChunksPlugin` plugins, and by using the `WebpackChunkName`. The `RuntimeChunkPlugin` is needed for multiple entry points that are being used on a single HTML page. The `SplitChunksPlugin` allows extracting common dependencies into entirely new chunks. `WebpackChunkName` uses a component name as a chunk name. As a result, at first, Webpack builds a single runtime JS chunk and creates named chunks for all components on the page using the components' names as names for chunks.
+The approaches are implemented with the `RuntimeChunkPlugin`, `SplitChunksPlugin` plugins, and by using the `WebpackChunkName`. The `RuntimeChunkPlugin` is needed for multiple entry points that are being used on a single HTML page. The `SplitChunksPlugin` lets you extract common dependencies into entirely new chunks. `WebpackChunkName` uses a component name as a chunk name. As a result, at first, Webpack builds a single runtime JS chunk and creates named chunks for all components on the page using the components' names as names for chunks.
 
 
 ### Polyfills
 
-A polyfill is a code that is used to provide modern functionality for older browsers that do not natively support it. The polyfills are imported on the project level into the `src/Pyz/Yves/ShopUi/Theme/default/vendor.ts` file.
+A *polyfill* is a code that is used to provide modern functionality for older browsers that do not natively support it. The polyfills are imported on the project level into the `src/Pyz/Yves/ShopUi/Theme/default/vendor.ts` file.
 
 ## Cache-busting mechanism
 
-The main idea of the cache-busting mechanism is to provide an ability to reset JS/CSS cache for a newly deployed version so that the new assets are delivered to the front-end applications. It is achieved by adding a hash to every asset path via an environment variable `SPRYKER_BUILD_HASH`  that allows resetting the browser cache instead of a namespace variable. The path of the resources on Yves is displayed with this hash folder `assets/SPRYKER_BUILD_HASH/default/css/yves_default.app.css`. If the project is set up via Docker, the assets folder is present in the Docker container in a production environment. Otherwise, if it is a development environment, the assets folder is in a public assets folder rather than a container.
+The main idea of the *cache-busting mechanism* is to provide an ability to reset JS/CSS cache for a newly deployed version so that the new assets are delivered to the frontend applications. It is achieved by adding a hash to every asset path using an environment variable `SPRYKER_BUILD_HASH` that lets you reset the browser cache instead of a namespace variable. The path of the resources on Yves is displayed with this hash folder `assets/SPRYKER_BUILD_HASH/default/css/yves_default.app.css`. If the project is set up by Docker, the `assets` folder is present in the Docker container in a production environment. Otherwise, if it is a development environment, the `assets` folder is in a public `assets` folder rather than a container.
 
-## isCssLazyLoadSupported Twig variable
+## `isCssLazyLoadSupported` Twig variable
 
-The page-blank layout has the `isCssLazyLoadSupported` Twig variable on the core level. This variable is responsible for turning on/off the CSS Lazy loading. By default, this variable is set to `false` and overwritten to `true` on a project level to enable the mentioned feature.
+The page-blank layout has the `isCssLazyLoadSupported` Twig variable on the core level. This variable is responsible for turning on and off the CSS Lazy loading. By default, this variable is set to `false` and overwritten to `true` on a project level to enable the mentioned feature.
 
 ## Assets structure
 
-All the Spryker assets are divided into .css, .js files, and images and are added to the `public/Yves/assets` folder after the frontend is built. The assets folder has the following structure:
+All the Spryker assets are divided into CSS, JS files, and images and are added to the `public/Yves/assets` folder after the frontend is built. The `assets` folder has the following structure:
 
-* **current** - assets folder for the current namespace (`current` by default)
+* `current`: assets folder for the current namespace (`current` by default).
+  * `default`: assets folder for the current theme in the namespace.
+    * `css`: folder for styles.
+      * `yves_default.critical.css`: styles loaded at the start of the page loading.
+      * `yves_default.non-critical.css`: styles loaded after full page loading.
+      * `yves_default.util.css`: service styles.
+      * `yves_default.app.css`: all the styles used for cases when CSS Lazy Load feature is turned off.
+    * `js`: folder for scripts.
+      * `yves_default.runtime.js`: scripts executed on runtime and compiled in ES6 modes.
+      * `yves_default.app.js`: compiled Spryker Frontend application script in ES6 modes.
+      * `yves_default.vendor.js`: contains scripts of polyfills compiled in ES6 modes.
+      * Named scripts of used web components compiled in ES6 modes.
+    * `images`: folder for the images.
+* `static`: static assets source folder.
+    * `images`: folder for the static images.
 
-    * **default** - assets folder for the current theme in the namespace
-        * **css** - folder for styles
-
-            * `yves_default.critical.css` - styles loaded at the start of the page loading
-            * `yves_default.non-critical.css` - styles loaded after full page loading
-            * `yves_default.util.css` - service styles
-            * `yves_default.app.css` - all the styles used for cases when CSS Lazy Load feature is turned off
-
-        * **js** - folder for scripts
-
-            * `yves_default.runtime.js` -  scripts executed on runtime and compiled in ES6 modes
-            * `yves_default.app.js`  - compiled Spryker Frontend application script in ES6 modes
-            * `yves_default.vendor.js` -  contains scripts of polyfills compiled in ES6 modes
-            * named scripts of used web components compiled in ES6 modes
-
-        * **images** - folder for the images
-
-* **static** folder - static assets source folder
-
-    * **images** - folder for the static images
-
-Depending on the usage of scripts and CSS Lazy Load feature, the following variants are loading in the `head` and `body` tags exist:
+Depending on the usage of scripts and *CSS Lazy Load* feature, the following variants are loading in the `head` and `body` tags exist:
 
 `<head>`
 ```html

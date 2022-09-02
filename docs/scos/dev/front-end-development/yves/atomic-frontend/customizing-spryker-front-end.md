@@ -147,7 +147,7 @@ Let's see how to extend the Twig template of a molecule. By default, the front p
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-<details><summary markdown='span'>Resulting Twig File</summary>
+<details><summary markdown='span'>Resulting Twig file</summary>
 
 ```twig
 {% raw %}{%{% endraw %} extends molecule('card') {% raw %}%}{% endraw %}

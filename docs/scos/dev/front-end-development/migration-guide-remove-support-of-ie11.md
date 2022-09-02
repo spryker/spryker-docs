@@ -1,5 +1,6 @@
 ---
 title: Migration guide - Remove support of IE11
+last_updated: Aug 31, 2022
 description: Use this guide to migrate the project from Yarn to NPM v8.
 template: concept-topic-template
 ---
@@ -8,43 +9,45 @@ This document provides instructions for removing support of IE11 in your Spryker
 
 ## Overview
 
-Microsoft dropped the support of IE11 in June 2022. So it has to be removed in Spryker.
+Microsoft stopped the support of IE11 in June 2022. So it must be removed in Spryker.
 
 *Estimated migration time: 1h*
 
 ## Update modules
 
-Run the next command to update module versions:
+Update module versions:
+
 ```bash
 composer update spryker/zed-ui spryker-shop/shop-ui
 ```
+## Update configuration files 
 
-## Update configuration files
+Update the following configuration files: 
 
-`.browserslistrc`:
+### Update `.browserslistrc`
 
 Remove IE11 usage:
 ```text
 IE 11
 ```
 
-`frontend/configs/development.js`: 
+### Update `frontend/configs/development.js`
 
-1. Remove `buildVariantSettings` variable declaration and usage:
+1. Remove the `buildVariantSettings` variable declaration and usage:
 ```js
 const { buildVariantSettings } = require('../settings');
 ...
 const { buildVariant, isES6Module } = buildVariantSettings;
 ```
 
-2. Remove `es6PolyfillTs` variable declaration and usage:
+2. Remove the `es6PolyfillTs` variable declaration and usage:
 ```js
 const es6PolyfillTs = await findAppEntryPoint(appSettings.find.shopUiEntryPoints, './es6-polyfill.ts');
 ...
 'es6-polyfill': es6PolyfillTs,
 ```
 
-3. Remove browsers support as it specified in the `.browserslistrc` file:
+3. Remove browsers support as specified in the `.browserslistrc` file:
 ```js
 browsers: [
     '> 1%',
@@ -58,67 +61,72 @@ plugins: [
         'browsers': ['> 1%', 'last 2 versions']
     })
 ]
-// should be
+// must be
 plugins: [require('autoprefixer')],
 ```
 
-Note: Remove `autoprefixer` import at the top of file.
+{% info_block warningBox %}
 
-4. Set `esmodules` property to `true` instead of using `isES6Module` variable:
+Remove `autoprefixer` import at the top of the file.
+
+{% endinfo_block %}
+
+
+4. Set the `esmodules` property to `true` instead of using the `isES6Module` variable:
 ```js
 esmodules: isES6Module,
-// should be 
+// must be 
 esmodules: true,
 ```
 
 5. Replace usage for the next conditions:
 ```js
 filename: isES6Module ? `./js/${appSettings.name}.[name].js` : `./js/${appSettings.name}.[name].${buildVariant}.js`,
-// should be 
+// must be 
 filename: `./js/${appSettings.name}.[name].js`,
 ```
 
 ```js
 ...(!isES6Module ? ['@babel/plugin-transform-runtime'] : []),
-// should be
+// must be
 ['@babel/plugin-transform-runtime'],
 ```
 
 ```js
 ...(isES6Module ? getAssetsConfig(appSettings) : []),
-// should be
+// must be
 ...getAssetsConfig(appSettings),
 ```
 
-6. Adjust `watchLifecycleEventNames` to use only `yves:watch` lifecycle event: 
+6. Adjust `watchLifecycleEventNames` to use only the `yves:watch` lifecycle event: 
 ```js
 const watchLifecycleEventNames = ['yves:watch:esm', 'yves:watch:legacy'];
-// should be
+// must be
 const watchLifecycleEventNames = ['yves:watch'];
 ```
 
-`frontend/libs/command-line-parser.js`:
+### Update `frontend/libs/command-line-parser.js`
 
-Remove `build determined module version` message: 
+Remove the `build determined module version` message: 
 ```js
 .option('-m, --module <module>', 'build determined module version', globalSettings.buildVariants)
 ```
 
-`frontend/libs/compiler.js`:
+### Update `frontend/libs/compiler.js`
 
-1. Remove import of `buildVariantSettings` variable:
+1. Remove import of the `buildVariantSettings` variable:
 ```js
 const { buildVariantSettings } = require('../settings');
 ```
 
-2. Remove console command from the config section:
+2. Remove the console command from the config section:
 ```js
 const buildVariant = buildVariantSettings.buildVariant;
 
 console.log(`${config.namespace} (${config.theme}) building ${buildVariant} modules for ${config.webpack.mode}...`);
 ```
 
-`frontend/settings.js`:
+##№ Update `frontend/settings.js`
 
 1. Remove build variants:
 ```js
@@ -148,19 +156,18 @@ module.exports = {
 
 `src/Pyz/Yves/ShopUi/Theme/default/vendor.ts`: 
 
-Remove all IE11 related polyfills from the `vendor.ts`.
+Remove all IE11-related polyfills from `vendor.ts`.
 
 {% info_block infoBox %}
 
-`es6-polyfill.ts` file was removed because all polyfills were specified in the `vendor.ts`.
+The `es6-polyfill.ts` file was removed because all polyfills were specified in `vendor.ts`.
 
 {% endinfo_block %}
 
 ## Update templates
 
-`src/Pyz/Yves/ShopUi/Theme/default/templates/page-blank/page-blank.twig`:
+To update `src/Pyz/Yves/ShopUi/Theme/default/templates/page-blank/page-blank.twig`, remove the `isNewFrontendBuildSupported` variable from the `template` block:
 
-Remove `isNewFrontendBuildSupported` variable from the `template` block:
 ```twig
 {%- raw -%}
 {% block template %}
@@ -171,9 +178,8 @@ Remove `isNewFrontendBuildSupported` variable from the `template` block:
 {% endraw %}
 ```
 
-`src/Pyz/Zed/ZedUi/Presentation/Layout/layout.twig`:
+To update `src/Pyz/Zed/ZedUi/Presentation/Layout/layout.twig`, create the `layout.twig` template with the following content:
 
-Create `layout.twig` template with the next content:
 ```twig
 {%- raw -%}
 {% extends '@Spryker:ZedUi/Layout/layout.twig' %}
@@ -186,9 +192,7 @@ Create `layout.twig` template with the next content:
 {% endraw %}
 ```
 
-## Update package.json
-
-`package.json`:
+## Update `package.json`
 
 1. Update YVES build commands to: 
 ```json
@@ -197,7 +201,7 @@ Create `layout.twig` template with the next content:
 "yves:production": "node ./frontend/build production",
 ```
 
-2. Remove IE11 related dependencies:
+2. Remove IE11-related dependencies:
 ```json
 "classlist-polyfill",
 "date-input-polyfill",
@@ -208,14 +212,12 @@ Create `layout.twig` template with the next content:
 "whatwg-fetch",
 ```
 
-3. Update `autoprefixer` dependency:
+3. Update the `autoprefixer` dependency:
 ```json
 "autoprefixer": "~9.8.8",
 ```
 
-## Install and build
-
-### Via Docker
+## Install and build using Docker
 
 1. Install dependencies:
 ```bash
@@ -227,7 +229,7 @@ docker/sdk cli npm i
 docker/sdk up --assets 
 ```
 
-### Locally
+## Install and build locally
 
 1. Install dependencies:
 ```bash

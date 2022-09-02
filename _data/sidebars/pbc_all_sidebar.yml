@@ -6,7 +6,16 @@ entries:
         url: /docs/pbc/all/ratings-reviews/ratings-reviews.html
         nested:
           - title: Bazaarvoice
-            url: /docs/pbc/all/ratings-reviews/bazaarvoice.html
+            url: /docs/pbc/all/ratings-reviews/Bazaarvoice/bazaarvoice.html
+            nested:
+              - title: Integrate Bazaarvoice
+                url: /docs/pbc/all/ratings-reviews/Bazaarvoice/integrate-bazaarvoice.html
+              - title: Manage in the Back Office
+                nested:
+                - title: Configure Bazaarvoice
+                  url: /docs/pbc/all/ratings-reviews/Bazaarvoice/manage-in-the-back-office/configure-bazaarvoice.html
+                - title: Disconnect Bazaarvoice
+                  url: /docs/pbc/all/ratings-reviews/Bazaarvoice/manage-in-the-back-office/disconnect-bazaarvoice.html
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
         nested:
@@ -185,7 +194,18 @@ entries:
                 url: /docs/pbc/all/gift-cards/manage-using-glue-api/retrieve-gift-cards-in-guest-carts.html
       - title: Payment Service Providers
         url: /docs/pbc/all/payment-service-providers/psp.html
-        nested:
+        nested:        
+          - title: Payone
+            url: /docs/pbc/all/payment-service-providers/payone/payone.html
+            nested:
+              - title: Integrate Payone
+                url: /docs/pbc/all/payment-service-providers/payone/integrate-payone.html
+              - title: Manage in the Back Office
+                nested:
+                  - title: Activating payment methods
+                    url: /docs/pbc/all/payment-service-providers/payone/manage-in-the-back-office/activating-payment-methods.html
+                  - title: Disconnecting Payone
+                    url: /docs/pbc/all/payment-service-providers/payone/manage-in-the-back-office/disconnecting-payone.html
           - title: Unzer
             url: /docs/pbc/all/payment-service-providers/unzer/unzer.html
             nested:

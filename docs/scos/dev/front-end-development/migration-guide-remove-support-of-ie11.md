@@ -1,7 +1,7 @@
 ---
 title: Migration guide - Remove support of IE11
 last_updated: Aug 31, 2022
-description: Use this guide to migrate the project from Yarn to NPM v8.
+description: This document shows how to remove support of IE11 in your Spryker project.
 template: concept-topic-template
 ---
 

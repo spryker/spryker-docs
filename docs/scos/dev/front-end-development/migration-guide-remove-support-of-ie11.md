@@ -154,7 +154,7 @@ module.exports = {
 };
 ```
 
-`src/Pyz/Yves/ShopUi/Theme/default/vendor.ts`: 
+### Update `src/Pyz/Yves/ShopUi/Theme/default/vendor.ts`
 
 Remove all IE11-related polyfills from `vendor.ts`.
 

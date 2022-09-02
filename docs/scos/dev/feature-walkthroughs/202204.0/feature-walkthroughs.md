@@ -26,10 +26,6 @@ The [Alternative Products](/docs/scos/dev/feature-walkthroughs/{{page.version}}/
 
 The [Approval Process](/docs/scos/dev/feature-walkthroughs/{{page.version}}/approval-process-feature-walkthrough.html) feature enables managers to control purchases requested by their employees.
 
-## Availability Notification
-
-The [Availability Notification](/docs/scos/dev/feature-walkthroughs/{{page.version}}/availability-notification-feature-walkthrough.html) feature allows customers to subscribe to product availability notifications to receive emails when an out-of-stock product is back in stock.
-
 ## Cart
 
 The [Cart](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-feature-walkthrough.html) feature provides functionality of the shopping cart and cart total calculations.
@@ -127,13 +123,6 @@ The [Customer entity](/docs/scos/dev/feature-walkthroughs/{{page.version}}/custo
 The [File Manager](/docs/scos/dev/feature-walkthroughs/{{page.version}}/file-manager-feature-walkthrough.html) feature allows uploading files required for your shop.
 
 
-
-## Inventory Management
-
-The [Inventory Management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html) feature adds stock and availability management as well as multiple warehouse stock management for products.
-
-### Managing stocks in a multi-store environment: Best practices
-In a [multi-store environment](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html), you can manage the warehouses to stores and database relations in several ways. This article contains scenarios that can help you choose the most suitable warehouse management workflow and implement it using the Inventory Management feature.
 
 ### AvailabilityStorage module: reference information
 

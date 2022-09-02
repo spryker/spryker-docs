@@ -13,6 +13,6 @@ To learn more about the feature and to find out how end users use it, see [Recla
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  |
+|INSTALLATION GUIDES  |
 |---------|
 |[Reclamations feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/reclamations-feature-integration.html)|

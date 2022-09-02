@@ -33,3 +33,6 @@ To integrate Payone, follow these steps:
    
 In case the app was connected successfully, a corresponding message appears, and the app status changes to **Connected**. The payment methods, which you selected in step 8, appear in **Administration&nbsp;<span aria-label="and then">></span>  Payment methods**:
 ![payone-credit-card](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-credit-card.png).
+
+## Next steps
+[Activate the added payment methods](/docs/pbc/all/payment-service-providers/payone/manage-in-the-back-office/activating-payment-methods.html)

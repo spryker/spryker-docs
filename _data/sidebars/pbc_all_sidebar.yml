@@ -202,10 +202,10 @@ entries:
                 url: /docs/pbc/all/payment-service-providers/payone/integrate-payone.html
               - title: Manage in the Back Office
                 nested:
-                  - title: Activating payment methods
-                    url: /docs/pbc/all/payment-service-providers/payone/manage-in-the-back-office/activating-payment-methods.html
-                  - title: Disconnecting Payone
-                    url: /docs/pbc/all/payment-service-providers/payone/manage-in-the-back-office/disconnecting-payone.html
+                  - title: Activate payment methods
+                    url: /docs/pbc/all/payment-service-providers/payone/manage-in-the-back-office/activate-payment-methods.html
+                  - title: Disconnec Payone
+                    url: /docs/pbc/all/payment-service-providers/payone/manage-in-the-back-office/disconnect-payone.html
           - title: Unzer
             url: /docs/pbc/all/payment-service-providers/unzer/unzer.html
             nested:
@@ -239,8 +239,6 @@ entries:
                     url: /docs/pbc/all/payment-service-providers/unzer/extend-and-customize/customize-the-credit-card-display-in-your-payment-step.html
               - title: Domain model and relationships
                 url: /docs/pbc/all/payment-service-providers/unzer/unzer-domain-model-and-relationships.html
-          - title: Payone
-            url: /docs/pbc/all/payment-service-providers/payone/payone.html
       - title: Price Management
         url: /docs/pbc/all/price-management/price-management.html
         nested:
@@ -451,4 +449,10 @@ entries:
               - title: Integrate Avalara Tax + Shipment
                 url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-shipment.html
       - title: Usercentrics
-        url: /docs/pbc/all/usercentrics.html
+        url: /docs/pbc/all/usercentrics/usercentrics.html
+        nested:
+          - title: Integrate Usercentrics
+            url: /docs/pbc/all/usercentrics/integrate-usercentrics.html
+          - title: Disconnect Usercentrics
+            url: /docs/pbc/all/usercentrics/disconnect-usercentrics.html              
+

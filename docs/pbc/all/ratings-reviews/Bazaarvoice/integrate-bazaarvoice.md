@@ -7,7 +7,7 @@ template: howto-guide-template
 To integrate Bazaarvoice:
 
 1. In your store's Back Office, go to **Apps > Catalog**.
-2. Click **Bazaarvoice**
+2. Click **Bazaarvoice**.
 3. In the top right corner of the Bazaarvoice app details page, click **Connect app**.
    This takes you to the Bazaarvoice site with the signup form.
 4. Fill out the Bazaarvoice signup form and submit it.
@@ -24,4 +24,5 @@ You can do the administration work on the Bazaarvoice reviews from the [Bazaarvo
 
 {% endinfo_block %}
 
-Now, you can [configure the BazzareVoice app](/docs/pbc/all\ratings-reviews\Bazaarvoice\manage-in-the-back-office\configure-bazaarvoice.md) for your store.
+## Next steps
+[Configure the BazzareVoice app](/docs/pbc/all/ratings-reviews/bazaarvoice/manage-in-the-back-office/configure-bazaarvoice.html) for your store.

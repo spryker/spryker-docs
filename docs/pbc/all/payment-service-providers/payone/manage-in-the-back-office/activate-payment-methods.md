@@ -1,5 +1,5 @@
 ---
-title: Activating payment methods
+title: Activate payment methods
 description: Learn how you can activate Payone payment methods
 template: howto-guide-template
 ---

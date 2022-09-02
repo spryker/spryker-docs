@@ -1,5 +1,5 @@
 ---
-title: Disconnecting Payone
+title: Disconnect Payone
 description: Learn how you can disconnect the Payone app from your Spryker shop
 template: howto-guide-template
 ---

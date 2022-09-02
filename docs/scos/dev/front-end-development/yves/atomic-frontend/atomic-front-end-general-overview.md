@@ -1,6 +1,6 @@
 ---
 title: Atomic Frontend - general overview
-last_updated: Jun 16, 2021
+last_updated: Aug 31, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/atomic-front-end-general-overview
 originalArticleId: 98f5fe06-2e55-4271-a793-928272216dd5

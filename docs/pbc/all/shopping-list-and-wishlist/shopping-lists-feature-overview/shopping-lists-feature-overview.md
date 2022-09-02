@@ -201,7 +201,7 @@ We do not support product options in Subtotal of the Shopping Lists. For example
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES | UPGRADE GUIDES | GLUE API GUIDES  |
+| INSTALLATION GUIDES | UPGRADE GUIDES | GLUE API GUIDES  |
 |---------|---------|-|
 | [Integrate the Shopping Lists feature](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-feature.html)  | [Upgrade the ShoppingList module](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglist-module.html) | [Manage shopping lists](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-lists-via-glue-api.html)  |
 | [Integrate the Shopping Lists Glue API](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-glue-api.html)  | [Upgrade the ShoppingListPage module](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistpage-module.html) | [Manage shopping list items](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-list-items-via-glue-api.html)   |

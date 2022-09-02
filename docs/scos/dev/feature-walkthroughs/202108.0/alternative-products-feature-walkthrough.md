@@ -24,7 +24,7 @@ The following schema illustrates relations between alternative products:
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | GLUE API GUIDES  | DATA IMPORT |
+|INSTALLATION GUIDES  | GLUE API GUIDES  | DATA IMPORT |
 |---------|---------|---------|
 | [Alternative products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-feature-integration.html)  | [Retrieving alternative products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-alternative-products.html)  | [File details: product_alternative.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-alternative.csv.html)  |
 | [Alternative Products + Discontinued Products feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-discontinued-products-feature-integration.html) |   |

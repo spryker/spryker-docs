@@ -1,5 +1,5 @@
 algolia:
-  index_name: 'pbc'
+  index_name: 'pbc_all'
   files_to_exclude:
     - index.md
     - 404.md
@@ -12,3 +12,4 @@ algolia:
     - docs/cloud/dev/spryker-cloud-commerce-os/**/*.md
     - docs/fes/dev/**/*.md
     - docs/acp/user/**/*.md
+    - docs/sdk/dev/**/*.md

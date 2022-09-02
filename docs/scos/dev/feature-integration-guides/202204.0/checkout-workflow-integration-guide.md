@@ -10,4 +10,4 @@ redirect_from:
   - /docs/checkout-workflow-integration
   - /docs/en/checkout-workflow-integration
 ---
-{% include pbc/all/integrate-features/202204.0/integrate-the-checkout-workflow.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-checkout-workflow.md -->
+{% include pbc/all/install-features/202204.0/install-the-checkout-workflow.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-checkout-workflow.md -->

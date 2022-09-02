@@ -182,7 +182,7 @@ defaults:
       sidebar: "pbc_all_sidebar"
       role: "all"
 
-
+ 
 versions:
   '201811.0': '201811.0'
   '201903.0': '201903.0'
@@ -192,6 +192,7 @@ versions:
   '202009.0': '202009.0'
   '202108.0': '202108.0'
   '202204.0': '202204.0'
+  '202212.0': 'Upcoming release'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
@@ -207,6 +208,9 @@ versioned_categories:
       - data-import
       - data-export
       - legacy-demoshop
+      - front-end
+      - setup
+      - technical-enhancement
   scos:
     user:
       - features

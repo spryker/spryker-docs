@@ -19,6 +19,8 @@ redirect_from:
   - /docs/shop-guide-managing-products
   - /docs/en/shop-guide-managing-products
   - /docs/scos/user/features/202200.0/product-feature-overview/product-feature-overview.html
+  - /docs/product-quantity-restrictions
+  - /docs/product-ttl
 ---
 
 The *Product* feature lets you create products, and manage their characteristics and settings.
@@ -40,13 +42,13 @@ The following table shows the differences between abstract products and product 
 
 | PRODUCT DATA | ABSTRACT PRODUCT | PRODUCT VARIANT |
 | --- | --- | --- |
-| SKU | v | v |
-| Name | v | v |
-| Description | v | v |
-| Product attributes | v | v |
-| Super attributes |  | v |
-| Media assets | v | v |
-| Stock |  | v |
+| SKU |&check;|&check;|
+| Name |&check;|&check;|
+| Description |&check;|&check;|
+| Product attributes |&check;|&check;|
+| Super attributes |  |&check;|
+| Media assets |&check;|&check;|
+| Stock |  |&check;|
 
 ### Abstract products and product variants on the Storefront
 

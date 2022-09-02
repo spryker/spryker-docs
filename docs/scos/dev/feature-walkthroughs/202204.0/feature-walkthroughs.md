@@ -26,10 +26,6 @@ The [Alternative Products](/docs/scos/dev/feature-walkthroughs/{{page.version}}/
 
 The [Approval Process](/docs/scos/dev/feature-walkthroughs/{{page.version}}/approval-process-feature-walkthrough.html) feature enables managers to control purchases requested by their employees.
 
-## Availability Notification
-
-The [Availability Notification](/docs/scos/dev/feature-walkthroughs/{{page.version}}/availability-notification-feature-walkthrough.html) feature allows customers to subscribe to product availability notifications to receive emails when an out-of-stock product is back in stock.
-
 ## Cart
 
 The [Cart](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-feature-walkthrough.html) feature provides functionality of the shopping cart and cart total calculations.
@@ -126,16 +122,7 @@ The [Customer entity](/docs/scos/dev/feature-walkthroughs/{{page.version}}/custo
 
 The [File Manager](/docs/scos/dev/feature-walkthroughs/{{page.version}}/file-manager-feature-walkthrough.html) feature allows uploading files required for your shop.
 
-## Gift Cards
 
-The [Gift Cards](/docs/scos/dev/feature-walkthroughs/{{page.version}}/gift-cards-feature-walkthrough.html) feature enables you to create a virtual product (a gift card) with a chosen value amount. The purchase of a gift card generates an individual code that is used as a payment method during checkout.
-
-## Inventory Management
-
-The [Inventory Management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/inventory-management-feature-walkthrough.html) feature adds stock and availability management as well as multiple warehouse stock management for products.
-
-### Managing stocks in a multi-store environment: Best practices
-In a [multi-store environment](/docs/scos/dev/feature-walkthroughs/{{page.version}}/inventory-management-feature-walkthrough/managing-stocks-in-a-multi-store-environment-best-practices.html), you can manage the warehouses to stores and database relations in several ways. This article contains scenarios that can help you choose the most suitable warehouse management workflow and implement it using the Inventory Management feature.
 
 ### AvailabilityStorage module: reference information
 
@@ -157,9 +144,6 @@ The [Merchant](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-fea
 
 The [Merchant B2B Contracts](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-b2b-contracts-feature-walkthrough.html) feature allows setting up contracts between a merchant and B2B customer.
 
-## Merchant Custom Prices
-
-The [Merchant Custom Prices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-custom-prices-feature-walkthrough.html) feature allows a merchant to define custom prices for B2B customers.
 
 ## Merchant Product Restrictions
 
@@ -213,17 +197,10 @@ The [Persistent Cart Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version
 
 [This schema](/docs/scos/dev/feature-walkthroughs/{{page.version}}/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-module-relations.html) illustrates module relations in the Unique URL per Cart for Easy Sharing feature
 
-## Prices
-
-The [Prices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/prices-feature-walkthrough.html) feature enables Back Office users to effectively manage the prices of all types of products. They can set different types of prices, like default, original, and volume prices.
-
-### Money
-
-Handling monetary values can be a problem and is often quite hard. The [Money](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/money-module-reference-information.html) module makes it easier to work with monetary values.
 
 ### PriceProduct module details: reference information
 
-This article describes technical details of the [PriceProduct](/docs/scos/dev/feature-walkthroughs/{{page.version}}/prices-feature-walkthrough/priceproduct-module-details-reference-information.html) module that are valid since version 2 of the module.
+This article describes technical details of the [PriceProduct](/docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html) module that are valid since version 2 of the module.
 
 ## Product
 
@@ -277,21 +254,9 @@ The [Product Sets](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-
 
 The [ProductSet](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-sets-feature-walkthrough/product-sets-module-relations.html) module provides a spy_product_set table that stores some non-localized data about Product Sets entities. Localized data is stored in the spy_product_set_data table. These tables, along with their related URLs and product image sets, contain all the necessary data about Product Sets entities that you can list on the Storefront or show their representing Product details pages.
 
-## Promotions and Discounts
-
-The [Promotions & Discounts](/docs/scos/dev/feature-walkthroughs/{{page.version}}/promotions-discounts-feature-walkthrough.html) feature allows defining several types of discounts based on a brand, overall cart value, certain product ranges, or special customer groups. You can also offer discount vouchers or incentivize certain products through coupon codes.
-
 ## Quick Add to Cart
 
 The [Quick Add to Cart](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html) feature allows adding multiple products to cart at once.
-
-## Quotation Process
-
-The [Quotation Process](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quotation-process-feature-walkthrough/quotation-process-feature-walkthrough.html) feature adds functionality that allows customers to request special product prices and lets agents manage those quote requests.
-
-### Quotation Process: module relations
-
-[On this page](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quotation-process-feature-walkthrough/quotation-process-module-relations.html), you can find the module relations for the Quotation Process feature.
 
 ## Reclamations
 
@@ -313,10 +278,6 @@ The [Resource Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/reso
 
 The [Return Management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/return-management-feature-walkthrough.html) feature allows you to create and manage returns for a sales order.
 
-## Scheduled Prices
-
-The [Scheduled Prices](/docs/scos/dev/feature-walkthroughs/{{page.version}}/scheduled-prices-feature-walkthrough.html) feature enables Back Office users to schedule price changes, which are to happen in the future for multiple products simultaneously.
-
 ## Search
 
 The [Search](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) feature enables you to control search and filtering preferences and customize them to improve your customers’ user experience and help them quickly find what they are looking for. The feature includes textual search, multi-language search, full-site search, filter by a category, dynamically, and by filters & facets.
@@ -324,22 +285,6 @@ The [Search](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature
 ## Shared Carts
 
 The [Shared Carts](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shared-carts-feature-walkthrough.html) feature allows sharing carts between company users.
-
-## Shipment
-
-The [Shipment](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/shipment-feature-walkthrough.html) feature allows you to create and manage carrier companies and assign multiple delivery methods associated with specific stores, which your customers can select during the checkout. With the feature in place, you can define delivery price and expected delivery time, tax sets, and availability of the delivery method per store.
-
-### Shipment method entities in the database: reference information
-
-[This schema](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/shipment-method-entities-in-the-database-reference-information.html) shows how the sales order and shipment method entities are modeled in the database.
-
-### Shipment method plugins: reference information
-
-This provides a walkthrough to the [Shipment method](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shipment-feature-walkthrough/shipment-method-plugins-reference-information.html) plugin and its features.
-
-## Shopping Lists
-
-The [Shopping Lists](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shopping-lists-feature-walkthrough.html) feature allows customers to create and share multiple lists of products between company business units or single users. Shopping lists can be shared between users with different sets of permissions.
 
 ## Spryker Core Back Office
 
@@ -356,7 +301,3 @@ The [Tax](/docs/pbc/all/tax-management/tax-management.html) feature allows you t
 ### Tax module: reference information
 
 The [Tax module](/docs/pbc/all/tax-management/extend-and-customize/tax-module-reference-information.html) is responsible for handling tax rates that can apply for products, product options, or shipment.
-
-## Wishlist
-
-The [Wishlist](/docs/scos/dev/feature-walkthroughs/{{page.version}}/wishlist-feature-walkthrough.html) feature allows customers to track and save the products they wish to purchase through the wish list. Customers can create multiple wish lists and customize their names.

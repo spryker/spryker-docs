@@ -16,23 +16,23 @@ redirect_from:
   - /docs/vault-for-tokens
 ---
 
-Vault for Tokens provides the functionality to store sensitive data. This feature doesn't have any GUI and consists of two modules: _Spryker.UtilEncryption_ and _Spryker.Vault_.
+*Vault for Tokens* provides the functionality to store sensitive data. This feature doesn't have any GUI and consists of two modules: `Spryker.UtilEncryption` and `Spryker.Vault`.
 
-_Spryker.UtilEncryption_ provides data encryption / decryption functionality and _Spryker.Vault_ module uses this functionality to store and retrieve data from the database.
+`Spryker.UtilEncryption` provides data encryption and decryption functionality, and the `Spryker.Vault` module uses this functionality to store and retrieve data from the database.
 
 ![Module relations of Vault for Tokens](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Workflow+&+Process+Management/Vault+for+Tokens/Vault+for+Tokens+Feature+Overview/module-relations-vault-for-tokens.png)
 
 The database structure includes the following fields:
 
-* dataType
-* dataKey
-* data
+* `dataType`
+* `dataKey`
+* `data`
 
-_dataType_ and _dataKey_ entries are used for the distinction between the provided data. Thus, multiple and various entries of data can be filtered and stored in the vault.
+`dataType` and `dataKey` entries are used for the distinction between the provided data. Thus, multiple and various entries of data can be filtered and stored in the vault.
 
-The database fields are mandatory and should contain either an empty string or a string with value.
+The database fields are mandatory and must contain either an empty string or a string with a value.
 
-By default, we provide encryption algorithm AES256. The encryption functionality won't be used until the ENCRYPTION_KEY is set in the project configuration file. You can change the encryption algorithm in the module configuration on the project level.
+By default, we provide the encryption algorithm AES256. The encryption functionality won't be used until ` ENCRYPTION_KEY` is set in the project configuration file. You can change the encryption algorithm in the module configuration on the project level.
 
 The feature supports special characters and different [writing systems](https://en.wikipedia.org/wiki/Writing_system#Logographic_systems).
 

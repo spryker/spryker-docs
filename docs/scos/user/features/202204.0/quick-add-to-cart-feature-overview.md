@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/features/202200.0/quick-add-to-cart-feature-overview.html
 ---
 
-Regular buyers, and especially B2B wholesale customers, often know what exactly they want to order from the shop—by product SKU and product name. The *Quick Add to Cart* feature lets your customers find and buy products in just a few clicks. Instead of going to each product page individually, they can go to the **Quick Add to Cart** page, accessible directly from the header, and quickly order items by typing product SKU and its quantity in respective fields. At the same time, if some specific [quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html) apply to products, they will also be taken into account when ordering through the **Quick Add to Cart** page. The **Quick Add to Cart** form can also be used to add items to [shopping lists](/docs/scos/user/features/{{page.version}}/shopping-lists-feature-overview/shopping-lists-feature-overview.html). Also, if a customer has a list of products to be ordered, for example, in a CSV file or other, the ordering process becomes even faster. The customer can bulk add SKUs and put quantities next to them in a single field. This being done, the customer either adds the items to the cart or proceeds directly to checkout.
+Regular buyers, and especially B2B wholesale customers, often know what exactly they want to order from the shop—by product SKU and product name. The *Quick Add to Cart* feature lets your customers find and buy products in just a few clicks. Instead of going to each product page individually, they can go to the **Quick Add to Cart** page, accessible directly from the header, and quickly order items by typing product SKU and its quantity in respective fields. At the same time, if some specific [quantity restrictions](/docs/scos/user/features/{{page.version}}/non-splittable-products-feature-overview.html) apply to products, they will also be taken into account when ordering through the **Quick Add to Cart** page. The **Quick Add to Cart** form can also be used to add items to [shopping lists](/docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html). Also, if a customer has a list of products to be ordered, for example, in a CSV file or other, the ordering process becomes even faster. The customer can bulk add SKUs and put quantities next to them in a single field. This being done, the customer either adds the items to the cart or proceeds directly to checkout.
 
 The *Quick Add to Cart* feature lets wholesale and returning customers place bulk orders.
 
@@ -70,7 +70,7 @@ It is also possible to add products to the cart in bulk. To do so, the customer 
 
 {% info_block warningBox %}
 
-However, separators should be the same for all products entered in this form at a time. If products and quantities are added in the correct format and with acceptable separators, but the separators are different for different products—for example, 1234567, 2 in one case and 1234568; 3 in another, an error message is shown after verification. If SKUs and format have passed the verification, then the products and their quantities are automatically entered in the **SKU** and **Qty** fields of the **Quick Order** form, and the customer can either add them to the cart or create the order.
+However, separators must be the same for all products entered in this form at a time. If products and quantities are added in the correct format and with acceptable separators, but the separators are different for different products—for example, 1234567, 2 in one case and 1234568; 3 in another, an error message is shown after verification. If SKUs and format have passed the verification, then the products and their quantities are automatically entered in the **SKU** and **Qty** fields of the **Quick Order** form, and the customer can either add them to the cart or create the order.
 
 {% endinfo_block %}
 
@@ -86,7 +86,7 @@ The **Quantity** field in the **Quick Order** adheres to these quantities. There
 
 To see the price, a shop visitor has to select the concrete product and set the item quantity.
 
-The price is displayed dynamically, taking into account the quantity, currency, store, and [merchant relation](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html) dimensions, respectively. If the item has any [volume prices](/docs/scos/user/features/{{page.version}}/prices-feature-overview/volume-prices-overview.html), the price is adjusted to the correct price set for the quantity the user has selected.
+The price is displayed dynamically, taking into account the quantity, currency, store, and [merchant relation](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html) dimensions, respectively. If the item has any [volume prices](/docs/pbc/all/price-management/prices-feature-overview/volume-prices-overview.html), the price is adjusted to the correct price set for the quantity the user has selected.
 
 ## File upload form for concrete products
 
@@ -103,7 +103,7 @@ After the feature is integrated<!-- link to integration guide-->, a buyer can se
 
 ![File Upload form](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/file-upload-form.png)
 
-Buyers can upload a CSV by choosing a file from their local system or via drag & drop. To make the process clearer, they can download a sample CSV file and add the necessary data (SKU and Qty) there:
+Buyers can upload a CSV file by choosing a file from their local system or by drag & drop. To make the process clearer, they can download a sample CSV file and add the necessary data (SKU and Qty) there:
 
 ![File Upload a CSV file](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/file-upload-csv.png)
 

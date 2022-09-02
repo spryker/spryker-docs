@@ -16,4 +16,4 @@ related:
     link:
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-glue-api.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-glue-api.md -->
+{% include pbc/all/install-features/202204.0/install-glue-api/install-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-glue-api.md -->

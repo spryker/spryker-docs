@@ -25,7 +25,7 @@ To help customers select payment and shipment methods, the endpoint allows retri
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 * [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html)
-* [Glue API: Shipment feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-shipment-feature-integration.html)
+* [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html)
 
 
 ## Submit checkout data
@@ -257,42 +257,7 @@ To retrieve all available shipment methods, submit checkout data with one or mor
 </details>
 
 
-| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
-| --- | --- | --- | --- |
-| billingAddress | Object | | Customer's billing [address](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/managing-customer-addresses.html). |
-| billingAddress.id | String | . | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [add a customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-customer-addresses.html). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
-| billingAddress.salutation | String | &check; | Salutation to use when addressing the customer. |
-| billingAddress.email | String | &check; | Customer's email address. |
-| billingAddress.firstName | String | &check; | Customer's first name. |
-| billingAddress.lastName | String | &check; | Customer's last name. |
-| billingAddress.address1 | String | &check; | The 1st line of the customer's address. |
-| billingAddress.address2 | String | &check; | The 2nd line of the customer's address. |
-| billingAddress.address3 | String | | The 3rd line of the customer's address. |
-| billingAddress.zipCode | String | &check; | ZIP code. |
-| billingAddress.city | String | &check; | Specifies the city. |
-| billingAddress.iso2Code | String | &check; | Specifies an ISO 2 Country Code to use. |
-| billingAddress.company | String | | Customer's company. |
-| billingAddress.phone | String | | Customer's phone number. |
-| payments | Array | | The payment methods used in this order. |
-| shipments | Array | | A list of shipments. |
-| shipments.items | Array | &check; | A list of items in a shipment. |
-| shipments.shippingAddress | Object | &check; | Shipping address for the items in the shipment. |
-| shipments.shippingAddress.id | String | . | A hyphenated alphanumeric value of an existing customer address. To get it, include the `addresses` resource in your request or [add a customer addresses](/docs/scos/user/back-office-user-guides/{{page.version}}/customer/customers/add-customer-addresses.html). If you pass this value for a billing or shipping address, do not pass the other address attributes. |
-| shipments.shippingAddress.idCompanyBusinessUnitAddress | String | | A hyphenated alphanumeric value of an existing company business unit address. To get it, include the `company-business-unit-addresses` resource in your request. Alternatively,  [retrieve a company business unit](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/retrieving-business-units.html#retrieve-a-company-business-unit) with the company-business-unit-addresses resource included. If you pass this value for a billing or shipping address, do not pass the other address attributes. |
-| shipments.shippingAddress.salutation | String | &check; | Salutation to use when addressing the customer. |
-| shipments.shippingAddress.email | String | &check; | Customer's email address. |
-| shipments.shippingAddress.firstName | String | &check; | Customer's first name. |
-| shipments.shippingAddress.lastName | String | &check; | Customer's last name. |
-| shipments.shippingAddress.address1 | String | &check; | The 1st line of the customer's address. |
-| shipments.shippingAddress.address2 | String | &check; | The 2nd line of the customer's address. |
-| shipments.shippingAddress.address3 | String | | The 3rd line of the customer's address. |
-| shipments.shippingAddress.zipCode | String | &check; | ZIP code. |
-| shipments.shippingAddress.city | String | &check; | Specifies the city. |
-| shipments.shippingAddress.iso2Code | String | &check; | Specifies an ISO 2 Country Code to use. |
-| shipments.shippingAddress.company | String | | Customer's company. |
-| shipments.shippingAddress.phone | String | | Customer's phone number. |
-| shipments.shippingAddress.idShipmentMethod | Integer | &check; | Unique identifier of a shipment method used for a shipment. |
-| shipments.shippingAddress.requestedDeliveryDate | Date | &check; | Desired delivery date for a shipment. |
+{% include pbc/all/glue-api-guides/submit-checkout-data-request-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/submit-checkout-data-request-attributes.md -->
 
 
 ### Response
@@ -993,17 +958,7 @@ In case of a successful update, the endpoint responds with information that can 
 </details>
 
 
-| ATTRIBUTE | TYPE | DESCRIPTION |
-| ----------- | ----- | ----- |
-| addresses | Array | A list of customer addresses that can be used for billing or shipping. This attribute is deprecated. To retrieve all available addresses, include the `addresses` resource in your request. |
-| paymentProviders | Array | Payment providers that can be used for the checkout. This attribute is deprecated. To retrieve all the available payment methods, include the `payment-methods` resource in your request. |  
-| shipmentMethods | Array | A list of available shipment methods. This attribute is deprecated. To retrieve all the available shipment methods, include the `shipment-methods` resource in your request. |  
-| selectedShipmentMethods | Array | Shipment methods selected for the order. This value is returned only if you submit an order without shipments. See [Submitting checkout data in version 202009.0](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/submitting-checkout-data.html) to learn how to do that. |
-| selectedPaymentMethods | Array | Payment methods selected for this order. |
-| selectedPaymentMethods.paymentMethodName | String | Payment method name. |
-| selectedPaymentMethods.paymentProviderName | String | Name of the payment provider for this payment method. |
-| selectedPaymentMethods.priority | String | Defines the order of returned payment methods in ascending order. |
-| selectedPaymentMethods.requiredRequestData | Array | A list of attributes required by the given method to effectuate a purchase. The actual list depends on the specific provider. |
+{% include pbc/all/glue-api-guides/submit-checkout-data-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/submit-checkout-data-response-attributes.md -->
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |

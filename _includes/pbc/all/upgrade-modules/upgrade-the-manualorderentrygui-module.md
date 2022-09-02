@@ -1,30 +1,3 @@
----
-title: Migration guide - ManualOrderEntryGui
-description: Use the guide to migrate to a newer version of the ManualOrderEntryGui module.
-last_updated: Jun 16, 2021
-template: module-migration-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/mg-manual-order-entry-gui
-originalArticleId: b1063ac2-eb74-45b3-8af5-f2f35d9325ce
-redirect_from:
-  - /2021080/docs/mg-manual-order-entry-gui
-  - /2021080/docs/en/mg-manual-order-entry-gui
-  - /docs/mg-manual-order-entry-gui
-  - /docs/en/mg-manual-order-entry-gui
-  - /v4/docs/mg-manual-order-entry-gui
-  - /v4/docs/en/mg-manual-order-entry-gui
-  - /v5/docs/mg-manual-order-entry-gui
-  - /v5/docs/en/mg-manual-order-entry-gui
-  - /v6/docs/mg-manual-order-entry-gui
-  - /v6/docs/en/mg-manual-order-entry-gui
-  - /docs/scos/dev/module-migration-guides/202001.0/migration-guide-manualorderentrygui.html
-  - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-manualorderentrygui.html
-  - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-manualorderentrygui.html
-  - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-manualorderentrygui.html
-related:
-  - title: Migration guide - Shipment
-    link: docs/scos/dev/module-migration-guides/migration-guide-shipment.html
----
-
 ## Upgrading from version 0.8.* to version 0.9.0
 
 In the version 0.9.0 of the `ManualOrderEntryGui` module, we have added the ability to assign a delivery method to a store in the Back Office. You can find more details about the changes on the [ManualOrderEntryGui module](https://github.com/spryker/manual-order-entry-gui/releases) release page.

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/product-barcode-feature-overview
   - /docs/en/product-barcode-feature-overview
   - /docs/scos/user/features/202200.0/product-barcode-feature-overview.html
+  - /docs/product-barcode
 ---
 
 The *Product Barcode* feature lets you create barcodes for any kind of entity. By default, barcodes are only generated for [products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html).
@@ -45,7 +46,7 @@ Creating barcodes requires two main prerequisites:
 1. *Unique product codes for each product you offer*. These can be UPC codes that identify manufactured goods, unique SKU numbers that you use to track inventory your way, or other identifying numbers.
 2. *A system that lets you input codes to create barcodes*. Your codes need to be entered into a device or software system that can translate the numeric or alphanumeric code into a scannable barcode.
 
-Nowadays, B2B businesses face extraordinary challenges as more and more consumers are making comparisons of various e-commerce applications. To stay on top of the industry trends, improve customer experience and increase sales, every business must innovate with a deep understanding of their customer’s physical, emotional, and financial needs and triggers.
+Nowadays, B2B businesses face extraordinary challenges as more and more consumers are making comparisons of various ecommerce applications. To stay on top of the industry trends, improve customer experience and increase sales, every business must innovate with a deep understanding of their customer’s physical, emotional, and financial needs and triggers.
 
 Barcodes are often overlooked as a way to cut costs and save time. A valuable and viable choice for businesses looking to improve efficiency and reduce overhead, barcodes are both cost-effective and reliable. Both inexpensive and user-friendly, barcodes provide an indispensable tool for tracking a variety of data, from pricing to inventory. The ultimate result of a comprehensive barcoding system is a reduction in overhead.
 

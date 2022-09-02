@@ -1580,35 +1580,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 ```
 </details>
 
-#### General cart information
-
-| ATTRIBUTE | TYPE | DESCRIPTION |
-|-|-|-|
-| currency | String | Currency that was selected when the cart was created. |
-| isDefault | Boolean | Specifies whether the cart is the default one for the customer. The field is available in multi-cart environments only. |
-| name | String | Specifies a cart name. The field is available in multi-cart environments only. |
-| priceMode | String | Price mode that was active when the cart was created. |
-| store | String | Store for which the cart was created. |
-
-#### Discount information
-
-| ATTRIBUTE | TYPE | DESCRIPTION |
-|-|-|-|
-| displayName | String | Discount name. |
-| amount | Integer | Discount amount applied to the cart. |
-| code | String | Discount code applied to the cart. |
-
-#### Totals
-
-| ATTRIBUTE | TYPE | DESCRIPTION |
-|-|-|-|
-| expenseTotal | String | Total amount of expenses (including, e.g., shipping costs). |
-| discountTotal | Integer | Total amount of discounts applied to the cart. |
-| taxTotal | Integer | Total amount of taxes to be paid. |
-| subTotal | Integer | Subtotal of the cart. |
-| grandTotal | Integer | Grand total of the cart. |
-| priceToPay | Integer | Total price of the cart to pay after discounts. |
-| selectedProductOptions | array | List of attributes describing the product options that were added to cart with the product. |
+{% include pbc/all/glue-api-guides/retrieve-customer-carts-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/retrieve-customer-carts-response-attributes.md -->
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
 |-|-|-|-|
@@ -1640,7 +1612,7 @@ For the attributes of the included resources, see:
 
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 * [Add an item to a registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart-response-attributes)
-* [Managing Gift Cards of Registered Users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html)
+* [Manage gift cards of registered users](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html)
 * [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 
 ## Possible errors

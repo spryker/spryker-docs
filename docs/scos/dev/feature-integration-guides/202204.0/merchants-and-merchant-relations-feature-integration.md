@@ -11,4 +11,4 @@ redirect_from:
   - /docs/en/merchant-merchant-relations-feature-integration
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-the-merchants-and-merchant-relations-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-merchants-and-merchant-relations-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-merchants-and-merchant-relations-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-merchants-and-merchant-relations-feature.md -->

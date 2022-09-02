@@ -149,7 +149,7 @@ Most popular file types that a shop owner can allow uploading in the Administrat
 
 | TYPE | DESCRIPTION | EXAMPLE OF MIME TYPE |
 | --- | --- | --- |
-| text | Represents any document that contains text and is theoretically human readable | `text/plain`, `text/html`, `text/css`, `text/javascript`<br>For text documents without specific subtype, `text/plain` should be used.|
+| text | Represents any document that contains text and is theoretically human readable | `text/plain`, `text/html`, `text/css`, `text/javascript`<br>For text documents without specific subtype, `text/plain` must be used.|
 |image | Represents any kind of images | `image/gif`, `image/png`, `image/jpeg`, `image/bmp`, `image/webp` |
 | audio | Represents any kind of audio files | `audio/midi`, `audio/mpeg`, `audio/webm`, `audio/ogg`, `audio/wav` |
 | video | Represents any kind of video files | `video/webm`, `video/ogg` |

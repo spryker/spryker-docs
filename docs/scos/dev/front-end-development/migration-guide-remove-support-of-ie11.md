@@ -20,6 +20,7 @@ Update module versions:
 ```bash
 composer update spryker/zed-ui spryker-shop/shop-ui
 ```
+
 ## Update configuration files 
 
 Update the following configuration files: 

@@ -356,9 +356,9 @@ console twig:cache:warmer
 {% info_block warningBox "Verification" %}
 
 Ensure the following:
-*   You can open the Back Office login page or any page which requires authentication.
-*   On the Back Office login page, the **Forgot password?** button redirects you to the password reset form.
-*   You receive a password reset email to the email address you submitted the password reset form with.
+* You can open the Back Office login page or any page which requires authentication.
+* On the Back Office login page, the **Forgot password?** button redirects you to the password reset form.
+* You receive a password reset email to the email address you submitted the password reset form with.
 
 {% endinfo_block %}
 
@@ -546,9 +546,9 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Ensure that you've enabled the plugins:
-1.  In the Back Office, select **Users&nbsp;<span aria-label="and then">></span> Users**.
-2.  Select **Add New User**.
-3.  On the **Create new User** page, check that the **Interface language*** field exists.
+1. In the Back Office, select **Users&nbsp;<span aria-label="and then">></span> Users**.
+2. Select **Add New User**.
+3. On the **Create new User** page, check that the **Interface language*** field exists.
 
 {% endinfo_block %}
 
@@ -601,7 +601,7 @@ console translator:generate-cache
 {% info_block warningBox "Verification" %}
 
 Ensure that the command has done the following:
-*   Cleaned the previous translation cache in the translation folder, which is `data/{YourStore}/cache/Zed/translation` by default.
-*   Generated translator cache files like `catalogue.{your_locale}.{randomString}.php` and `catalogue.{your_locale}.{randomString}.php.meta` in the translation folder, which is `data/{YourStore}/cache/Zed/translation` by default.
+* Cleaned the previous translation cache in the translation folder, which is `data/{YourStore}/cache/Zed/translation` by default.
+* Generated translator cache files like `catalogue.{your_locale}.{randomString}.php` and `catalogue.{your_locale}.{randomString}.php.meta` in the translation folder, which is `data/{YourStore}/cache/Zed/translation` by default.
 
 {% endinfo_block %}

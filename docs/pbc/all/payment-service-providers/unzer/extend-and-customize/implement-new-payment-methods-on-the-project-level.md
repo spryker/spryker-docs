@@ -636,8 +636,8 @@ class UnzerBusinessFactory extends EcoUnzerBusinessFactory
 </details>
 
 12. To add PayPal to authorizable payment methods, override `UnzerConfig`:
+<details><summary markdown='span'>src/Pyz/Zed/Unzer/UnzerConfig.php</summary>
 
-**src/Pyz/Zed/Unzer/UnzerConfig.php**
 ```php
 <?php
 
@@ -663,7 +663,7 @@ class UnzerConfig extends EcoUnzerConfig
     ];
 }
 ```
-
+</details>
 ## Implemented payment method on the Storefront
 
 The following is an example of how the implemented payment method Unzer looks on the Storefront during the checkout.

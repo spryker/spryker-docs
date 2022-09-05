@@ -9,7 +9,7 @@ This document describes how to create a new module with the application.
 
 ## 1) Create module scaffolding structure
 
-A new module needs to have a proper scaffolding structure. The necessary list of files is provided in the [Project structure article, Module structure section](/docs/marketplace/dev/front-end/project-structure.html#module-structure). Each new module can contain its own set of Twig Web Components.
+A new module needs to have a proper scaffolding structure. The necessary list of files is provided in the [Project structure article, Module structure section](/docs/marketplace/dev/front-end/{{site.version}}/project-structure.html#module-structure). Each new module can contain its own set of Twig Web Components.
 
 ## 2) Register a new module
 

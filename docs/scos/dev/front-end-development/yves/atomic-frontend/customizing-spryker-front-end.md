@@ -305,7 +305,7 @@ Apart from Webpack bootstrap, each component can have its own logic defined in t
 
 ## Installing dependencies
 
-Spryker Shop Application comes with a set of dependencies required to run the application. The dependency list can be found in the `package.json` file. You can add dependencies on your own. For example, you can add _recat_, _foundation_, _jquery_, or customize Webpack with _file-loader_. For this purpose, create an SSH session to your virtual machine with `vagrant ssh` and execute the following commands:
+Spryker Shop Application comes with a set of dependencies required to run the application. The dependency list can be found in the `package.json` file. You can add dependencies on your own. For example, you can add _react_, _foundation_, _jquery_, or customize Webpack with _file-loader_. For this purpose, create an SSH session to your virtual machine with `vagrant ssh` and execute the following commands:
 * `npm install --save dependency-name`—for application dependencies.
 * `npm install --save-dev dev-dependency-name`—or Webpack and tooling dependencies.
 

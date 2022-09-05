@@ -1,6 +1,6 @@
 ---
-title: Making your Spryker shop secure
-last_updated: Sep 29, 2021
+title: Security guidelines
+last_updated: Sep 2, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/making-your-spryker-shop-secure
 originalArticleId: 892e11f7-ef46-47ed-aba2-7efc2ea83c60
@@ -24,28 +24,24 @@ related:
     link: docs/scos/dev/guidelines/project-development-guidelines.html
 ---
 
-Digital security is critical in our modern digital world, especially for successful businesses. Therefore, Spryker is advising to go through the following security actions to ensure the safety of your customers’ and partners’ data.
+This doc describes the guidelines for securing your customers' and partners' data.
 
-## Security advisory
+## Passwords
 
-### Passwords
+The most important about password security is to not save it in plain text. Therefore, Spryker uses BCrypt, which uses Blowfish to hash passwords and add a random salt to each hash, preventing rainbow table attacks. To prevent dictionary and brute force attacks, you can force users to use special characters by adding validation rules to needed forms. For even higher security, use 2-factor authentication and CAPTCHA.
 
-The most important about password security is not to save it in plain text. Therefore, Spryker uses BCrypt, which uses Blowfish to hash a password and adds a random salt to each hash, preventing Rainbow-Table based attacks. Additionally, you can force your users to use special characters to prevent dictionary-attacks or brute-forcing by adding validation rules to relevant forms. In case you need even higher security, you can use the 2-factor authentication mechanisms to increase security, and CAPTCHA systems to prevent brute-force.
+## Encrypted communication
 
-### Encrypted communication
+As HTTP is a textual protocol having no built-in encryption, passwords and customer personal data are transferred to shops in plain text. So, a good practice is to configure and implement transport layer security (TLS), which is widely known to most users as HTTPS.
 
-Passwords and customer personal data are transferred to shop in plain text since HTTP is a textual protocol having no built-in encryption. Therefore, a good practice is to configure and implement transport layer security, also known as TLS, which is widely known to most users as HTTPS.
+In most cases, it prevents eavesdropping on traffic of users in local public networks like free Wi-Fi hotspots. Besides, it can be used to authenticate users using third-party integrations by requiring a client certificate to be trusted.
 
-In most cases, it allows preventing eavesdropping on traffic of your users in local public  networks like free Wi-Fi hotspots.
-
-Besides, it can be used to authenticate parties passwordless in integrations with other systems by requiring a client certificate to be trusted.
-
-TLS configuration is not applied to Spryker directly, but is configured on the webserver level:
+TLS configuration is configured on the webserver level. See the following configuration references for both web servers:
 
 * [Nginx](https://nginx.org/en/docs/http/configuring_https_servers.html)
 * [Apache](https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html)
 
-Forcing HTTPS can also be done via the `Strict-Transport-Security` header and can be configured for Yves, Glue and Zed with:
+Optionally, you can force HTTPS for the Storefront, Back Office, and Glue using the  `Strict-Transport-Security` header:
 * `HttpConstants::ZED_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED`
 * `HttpConstants::YVES_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED`
 * `HttpConstants::ZED_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG`
@@ -53,18 +49,18 @@ Forcing HTTPS can also be done via the `Strict-Transport-Security` header and ca
 * `HttpConstants::GLUE_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED`
 * `HttpConstants::GLUE_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG`
 
-Server configuration can be tested with online tools like  [SSL Server Test](https://www.ssllabs.com/ssltest/).
+To test web server configuration, use online tools like [SSL Server Test](https://www.ssllabs.com/ssltest/).
 
-### Session security and session hijacking
+## Session security and hijacking
 
-Modern websites include many third-party Javascript libraries that could access the content of the page:
+Modern websites include many third-party JavaScript libraries that can access the content of the page:
 
-* To prevent access to session cookies from Javascript, Spryker sets the httponly attribute of the session cookie by default. It is advised to set this attribute for all sensitive cookies.
-* In addition, when using TLS, a *secure* cookie flag can be used to instruct the browser to send this cookie back to the server only via an encrypted connection. These can be configured with `*_SESSION_COOKIE_SECURE` configuration keys.
-* To prevent session fixation, the session identifier is refreshed on login and logout events. It is suggested to implement the same behavior for other sensitive cookies if you use them in your shop.
-* Check that your web server configuration does not cut these flags from cookie headers.
-* Pay attention to `*_SESSION_COOKIE_DOMAIN` to match only your domain to disallow the browser to send the cookie to another domain or subdomain.
-* Never send a session ID as a GET parameter of a URL, because these can be logged in logs or forwarded to external websites in HTTP Referer header.
+* To prevent access to session cookies from Javascript, Spryker sets the HttpOnly attribute of the session cookie by default. We advise to set this attribute for all sensitive cookies.
+* When using TLS, you can use a `secure` cookie flag to instruct a browser to send this cookie back to the server only via an encrypted connection. To configure it, use the  `*_SESSION_COOKIE_SECURE` configuration keys.
+* To prevent session fixation, session identifier is refreshed on login and logout events. We recommend implementing the same behavior for other sensitive cookies if you use them in your shop.
+* Make sure that your web server configuration does not cut these flags from cookie headers.
+* Make sure that `*_SESSION_COOKIE_DOMAIN` matches only your domain to disallow a browser to send the cookie to another domain or subdomain.
+* Never send a session ID as a GET parameter of a URL, because the ID can be logged in logs or forwarded to external websites in HTTP Referer header.
 
 ### Cross-site request forgery (CSRF)
 

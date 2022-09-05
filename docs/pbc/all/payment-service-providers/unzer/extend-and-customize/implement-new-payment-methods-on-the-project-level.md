@@ -582,7 +582,7 @@ class PayPalPaymentProcessor implements UnzerChargeablePaymentProcessorInterface
 
 11. To introduce new methods on the `Zed` layer, override `UnzerBusinessFactory`:
 
-<details><summary markdown='span'>src/Pyz/Zed/Unzer/Business/Payment/Processor/PayPalPaymentProcessor.php</summary>
+<details><summary markdown='span'>src/Pyz/Zed/Unzer/Business/UnzerBusinessFactory.php</summary>
 
 ```php
 <?php

@@ -1,5 +1,5 @@
 ---
-title: Persistent Cart Sharing feature integration
+title: Install the Persistent Cart Sharing feature
 description: The guide describes the process of installing the Persistent Cart feature into your project.
 last_updated: Jul 23, 2021
 template: feature-integration-guide-template

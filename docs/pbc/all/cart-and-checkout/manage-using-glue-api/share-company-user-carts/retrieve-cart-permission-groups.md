@@ -1,5 +1,5 @@
 ---
-title: Retrieving cart permission groups
+title: Retrieve cart permission groups
 description: Learn how to retrieve cart permission groups via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template

@@ -1,5 +1,5 @@
 ---
-title: Managing shared company user carts
+title: Manage shared company user carts
 description: Managed shared company user carts via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template

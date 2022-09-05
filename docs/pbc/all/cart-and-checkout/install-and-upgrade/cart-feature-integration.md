@@ -1,5 +1,5 @@
 ---
-title: Cart feature integration
+title: Install the Cart feature
 description: This guide provides step-by-step instruction for integrating Add product to cart from the Catalog page feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

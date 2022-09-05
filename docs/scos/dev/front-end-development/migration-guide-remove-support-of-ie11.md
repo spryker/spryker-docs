@@ -68,7 +68,7 @@ plugins: [require('autoprefixer')],
 
 {% info_block warningBox %}
 
-Remove `autoprefixer` import at the top of the file.
+Remove the `autoprefixer` import at the top of the file.
 
 {% endinfo_block %}
 

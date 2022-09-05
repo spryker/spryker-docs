@@ -162,7 +162,7 @@ npm install
     const filePathFilter = require("@jsdevtools/file-path-filter");
     ```
 
-    1. Add `findStyleEntryPoints` to the import from the `Finder` module:
+    2. Add `findStyleEntryPoints` to the import from the `Finder` module:
 
     ```js
     ...
@@ -170,7 +170,7 @@ npm install
     ...
     ```
 
-    1. Add the new local variable `styleEntryPointsPromise` to the `getConfiguration` function:
+    3. Add the new local variable `styleEntryPointsPromise` to the `getConfiguration` function:
 
     ```js
     ...
@@ -178,7 +178,7 @@ npm install
     ...
     ```
 
-    1. Extend the destructuring assignment with the following changes:
+    4. Extend the destructuring assignment with the following changes:
 
     From:
 
@@ -191,7 +191,7 @@ npm install
     const [componentEntryPoints, styleEntryPoints, styles] = await Promise.all([componentEntryPointsPromise, styleEntryPointsPromise, stylesPromise]);
     ```
 
-    1. Add new local variables `criticalEntryPoints` and `nonCriticalEntryPoints` to the `getConfiguration` function:
+    5. Add new local variables `criticalEntryPoints` and `nonCriticalEntryPoints` to the `getConfiguration` function:
 
     ```js
     ...
@@ -205,7 +205,7 @@ npm install
     ...
     ```
 
-    1. Extend the `entry` section of the returned Webpack config object into the `getConfiguration` function with the new `critical`, `non-critical`, and `util` points:
+    6. Extend the `entry` section of the returned Webpack config object into the `getConfiguration` function with the new `critical`, `non-critical`, and `util` points:
 
     ```js
     ...
@@ -238,7 +238,7 @@ npm install
     ...
     ```
 
-    1. Add this plugin to the returned collection of the `getEventDispatcherPlugins` function:
+    2. Add this plugin to the returned collection of the `getEventDispatcherPlugins` function:
 
     ```js
     protected function getEventDispatcherPlugins(): array

@@ -316,7 +316,7 @@ Whenever possible, use primitive types—for example, strings or numbers. Avoid 
 
 **Example:**
 
-```twif
+```twig
 {% raw %}{% define attributes = {
     'element-selector': required
 } %}{% endraw %}

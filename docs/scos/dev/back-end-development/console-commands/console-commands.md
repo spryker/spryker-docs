@@ -114,7 +114,7 @@ setup:install
   transfer:generate
   ```
 
-  1. Initialize the database with required data:
+  5. Initialize the database with required data:
 
   ```bash
   setup:init-db

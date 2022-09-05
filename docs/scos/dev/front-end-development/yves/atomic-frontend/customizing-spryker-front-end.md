@@ -285,7 +285,7 @@ All component assets are compiled using a bundler called Webpack. Spryker Shop A
 
 * `vendor.ts`. It contains external dependencies for the system. We recommend using this file for dependencies as Webpack loads the dependency code only once, and then references are provided per request.
 
-You can add your own dependencies depending on the project needs—for example, _jquery_, _recat_, _vue_).
+You can add your own dependencies depending on the project needs—for example, _jquery_, _react_, _vue_).
 
 * `app.ts`. This file contains the bootstrap code, which simply loads the components. You can change the logic of how the application starts here. For example, this file can be used to add `document.ready` for _jquery_, main `conatiner/fragment` rendering for _react_ and so on.
 

@@ -35,4 +35,4 @@ In case the app was connected successfully, a corresponding message appears, and
 ![payone-credit-card](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-credit-card.png).
 
 ## Next steps
-[Activate the added payment methods](/docs/pbc/all/payment-service-providers/payone/manage-in-the-back-office/activating-payment-methods.html)
+[Activate the added payment methods](/docs/pbc/all/payment-service-providers/payone/manage-in-the-back-office/activate-payment-methods.html)

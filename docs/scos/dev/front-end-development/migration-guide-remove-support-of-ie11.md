@@ -79,7 +79,7 @@ esmodules: isES6Module,
 esmodules: true,
 ```
 
-5. Replace usage for the next conditions:
+5. Replace usage for the following conditions:
 ```js
 filename: isES6Module ? `./js/${appSettings.name}.[name].js` : `./js/${appSettings.name}.[name].${buildVariant}.js`,
 // must be 
@@ -126,7 +126,7 @@ const buildVariant = buildVariantSettings.buildVariant;
 console.log(`${config.namespace} (${config.theme}) building ${buildVariant} modules for ${config.webpack.mode}...`);
 ```
 
-##№ Update `frontend/settings.js`
+### Update `frontend/settings.js`
 
 1. Remove build variants:
 ```js
@@ -194,7 +194,7 @@ The `es6-polyfill.ts` file was removed because all polyfills were specified in `
 
 ## Update `package.json`
 
-1. Update YVES build commands to: 
+1. Update YVES build commands to the following: 
 ```json
 "yves": "node ./frontend/build development",
 "yves:watch": "node ./frontend/build development-watch",

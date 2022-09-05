@@ -6,16 +6,16 @@ entries:
         url: /docs/pbc/all/ratings-reviews/ratings-reviews.html
         nested:
           - title: Bazaarvoice
-            url: /docs/pbc/all/ratings-reviews/Bazaarvoice/bazaarvoice.html
+            url: /docs/pbc/all/ratings-reviews/bazaarvoice/bazaarvoice.html
             nested:
               - title: Integrate Bazaarvoice
-                url: /docs/pbc/all/ratings-reviews/Bazaarvoice/integrate-bazaarvoice.html
+                url: /docs/pbc/all/ratings-reviews/bazaarvoice/integrate-bazaarvoice.html
               - title: Manage in the Back Office
                 nested:
                 - title: Configure Bazaarvoice
-                  url: /docs/pbc/all/ratings-reviews/Bazaarvoice/manage-in-the-back-office/configure-bazaarvoice.html
+                  url: /docs/pbc/all/ratings-reviews/bazaarvoice/manage-in-the-back-office/configure-bazaarvoice.html
                 - title: Disconnect Bazaarvoice
-                  url: /docs/pbc/all/ratings-reviews/Bazaarvoice/manage-in-the-back-office/disconnect-bazaarvoice.html
+                  url: /docs/pbc/all/ratings-reviews/bazaarvoice/manage-in-the-back-office/disconnect-bazaarvoice.html
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
         nested:

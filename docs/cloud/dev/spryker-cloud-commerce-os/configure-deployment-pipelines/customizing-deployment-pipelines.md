@@ -17,6 +17,8 @@ This document describes how to customize deployment pipelines.
 
 * Also, we use the default location of deployment scripts: `/config/install/`. Before you edit or add new scripts, make sure to check where they are stored in your project.
 
+* Please do not add lengthy (data import) operations to the deployment stages. Timeouts and issues will break your deployments. Make sure you export lengthy operations like data imports to Jenkins Jobs that can be run outside of deployments.
+
 {% endinfo_block %}
 
 

@@ -2060,7 +2060,7 @@ entries:
       - "202005.0":
     - title: Product Labels
       url: /docs/scos/dev/feature-integration-guides/product-labels-feature-integration.html
-    - title: Product Labels + Promotions and Discounts feature integration
+    - title: Product Labels + Promotions and Discounts
       url: /docs/scos/dev/feature-integration-guides/product-labels-promotions-and-discounts-feature-integration.html
       include_versions:
       - "202009.0"
@@ -2267,6 +2267,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
+      - "202212.0"
     - title: Shipment + Approval Process
       url: /docs/scos/dev/feature-integration-guides/shipment-approval-process-feature-integration.html
       include_versions:
@@ -2299,7 +2300,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "201907.0"
     - title: Spryker Core Back Office
       url: /docs/scos/dev/feature-integration-guides/spryker-core-back-office-feature-integration.html
       include_versions:
@@ -2310,6 +2310,7 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
+      - "202212.0"
     - title: Uuid Generation Console
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
     - title: Volume Prices
@@ -4132,6 +4133,8 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html
         - title: "HowTo: Make a product searchable and shown on the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
+        - title: "HowTo: Add support of number formatting in the Back Office"
+          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html
         - title: CMS
           nested:
           - title: "HowTo: Create CMS templates"

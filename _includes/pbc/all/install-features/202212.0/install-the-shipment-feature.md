@@ -19,8 +19,8 @@ Follow the steps below to install the feature core.
 
 To start the feature integration, overview and install the necessary features:
 
-| NAME         | VERSION          |
-|--------------|------------------|
+| NAME         | VERSION          | INTEGRATION GUIDE |
+|--------------|------------------| [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/202204.0/spryker-core-feature-integration.html)|
 | Spryker Core | {{page.version}} |
 
 ### 1) Install the required modules using Composer

@@ -1,6 +1,6 @@
 ---
 title: "HowTo: Add support of number formatting in the Back Office"
-description: Add support of numbers formatting in Back Office UI.
+description: Add support of numbers formatting in the Back Office UI.
 template: howto-guide-template
 last_updated: Aug 30, 2022
 ---

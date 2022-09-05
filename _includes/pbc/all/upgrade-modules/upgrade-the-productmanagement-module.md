@@ -12,7 +12,7 @@ This release is a part of the *Decimal Stock* concept migration. When you upgrad
 
 *Estimated migration time: 5 min*
 
-To upgrade to the new version of the module, do the following:
+To upgrade to the new version of the module, follow these steps:
 
 1. Upgrade the `ProductManagement` module to the new version:
 
@@ -85,8 +85,13 @@ The new version provides support to manage the `abstract product-store` relation
 
 1. Update `/ install spryker/product` to at least 6.0.0 version. For more details, see [Migration Guide - Product](/docs/scos/dev/module-migration-guides/migration-guide-product.html) 
 2. Update `/ install spryker/productmanagement` to 0.10.0 version or later.
-3. To generate the transfer object changes, run `vendor/bin/console transfer:generate`.
-4. The Product Information Management (PIM) Back Office expects the `abstract product-store` relation handling a partial form to be defined in the dependency provider using the `Spryker\Zed\Kernel\Communication\Form\FormTypeInterface`. You can use a single-store and multi-store compatible default implementation.`Spryker\Zed\Store\Communication\Form\Type\StoreRelationToggleType` wrapped in `Spryker\Zed\Store\Communication\Plugin\Form\StoreRelationToggleFormTypePlugin`.
+3. Generate the transfer object changes:
+
+```bash
+vendor/bin/console transfer:generate
+```
+
+4. The Product Information Management (PIM) Back Office expects the `abstract product-store` relation handling a partial form to be defined in the dependency provider using the `Spryker\Zed\Kernel\Communication\Form\FormTypeInterface`. You can use a single-store and multi-store compatible default implementation. `Spryker\Zed\Store\Communication\Form\Type\StoreRelationToggleType` wrapped in `Spryker\Zed\Store\Communication\Plugin\Form\StoreRelationToggleFormTypePlugin`.
 
 {% info_block warningBox "Note" %}
 
@@ -123,7 +128,9 @@ With version 0.9, we added multi-currency support. Make sure to migrate the `Pri
 
 Check `\Spryker\Zed\ProductManagement\Communication\Form\ProductFormAdd::addPriceForm`. It uses a new form from the `Money` module. 
 
-Check `\Spryker\Zed\ProductManagement\Communication\Form\ProductConcreteFormEdit::addPriceForm`. If you have overwritten or changed those classes, you must modify them accordingly. The new `ProductManagement/Presentation/_partials/product_price_collection.twig` form is rendered now as well. There is also a new dependency in `PriceFormTypePlugin`. The following snippet shows how to include it:
+Check `\Spryker\Zed\ProductManagement\Communication\Form\ProductConcreteFormEdit::addPriceForm`. If you have overwritten or changed those classes, you must modify them accordingly. The new `ProductManagement/Presentation/_partials/product_price_collection.twig` form is rendered now as well. 
+
+ There is also a new dependency in `PriceFormTypePlugin`. The following snippet shows how to include it:
 
 ```php
 namespace Pyz\Zed\ProductManagement;
@@ -167,7 +174,7 @@ The classes under `Orm\Zed\ProductManagement\` were moved to the `Orm\Zed\Produc
 
 ### Importer updates
 
-Project's importer was also updated to take advantage of the new `ProductAttribute` module.
+Project's importer was updated to take advantage of the new `ProductAttribute` module:
 * `src/Pyz/Zed/Importer/Business/Factory/AbstractFactory.php`: the `getProductManagementFacade()` method was removed and replaced with `getProductAttributeFacade()`.
 * `src/Pyz/Zed/Importer/Business/Factory/ImporterFactory.php`: the `getProductManagementFacade()` method was removed and replaced with `getProductAttributeFacade()`.
 * `src/Pyz/Zed/Importer/Business/Importer/ProductManagement/ProductManagementAttributeImporter.php`: the `$productManagementFacade` property was removed and replaced with `$productAttributeFacade`.

@@ -2,9 +2,9 @@
 
 This feature integration guide expects the basic feature to be in place.
 The current feature integration guide adds the following functionalities:
-*   Translation
-*   Security
-*   OAuth 2.0/Open ID Connect Support for Zed login
+* Translation
+* Security
+* OAuth 2.0/Open ID Connect Support for Zed login
 
 {% endinfo_block %}
 
@@ -19,7 +19,7 @@ Ensure that the related features are installed:
 
 ## 1) Install the required modules using Composer
 
-Run the following command(s) to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/spryker-core-back-office:"{{site.version}}" --update-with-dependencies
@@ -41,11 +41,7 @@ Ensure that the following modules have been installed:
 | UserPasswordResetMail      | vendor/spryker/user-password-reset-mail      |
 | SecurityOauthUser          | vendor/sprkyer/security-oauth-user           |
 
-{% endinfo_block %}
-
-{% info_block warningBox "Verification" %}
-
-Ensure that the following modules have been uninstalled:
+Ensure that the following modules have been removed:
 
 | MODULE                     | EXPECTED DIRECTORY                           |
 |----------------------------|----------------------------------------------|
@@ -53,21 +49,24 @@ Ensure that the following modules have been uninstalled:
 | AuthMailConnector          | vendor/spryker/auth-mail-connector           |
 | AuthMailConnectorExtension | vendor/spryker/auth-mail-connector-extension |
 
-{% endinfo_block %}
 
-If they are not uninstalled, run the following command:
+If these modules have not been removed, remove them:
 
 ```bash
 composer remove spryker/auth spryker/auth-mail-connector spryker/auth-mail-connector-extension
 ```
 
+{% endinfo_block %}
+
 ## 2) Set up transfer objects
 
-Run the following commands to generate transfers:
+Generate transfers:
 
 ```bash
 console transfer:generate
 ```
+
+{% info_block warningBox "Verification" %}
 
 Ensure the following transfers have been created:
 
@@ -85,6 +84,8 @@ Ensure the following transfers have been created:
 | ResourceOwnerTransfer           | class     | created | src/Generated/Shared/Transfer/ResourceOwnerTransfer`          |
 | ResourceOwnerRequestTransfer    | class     | created | src/Generated/Shared/Transfer/ResourceOwnerRequestTransfer    |
 | ResourceOwnerResponseTransfer   | class     | created | src/Generated/Shared/Transfer/ResourceOwnerResponseTransfer   |
+
+{% endinfo_block %}
 
 ## 3) Set up the configuration
 
@@ -138,8 +139,8 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
 
 Spryker offers two authentication strategies out of the box:
 
-* `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_CREATE_USER_ON_FIRST_LOGIN` — If a user does not exist, it is created automatically based on the data from an external service.
-*   `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_ACCEPT_ONLY_EXISTING_USERS` — Accepts only existing users for authentication.
+* `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_CREATE_USER_ON_FIRST_LOGIN`—if a user does not exist, it is created automatically based on the data from an external service.
+* `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_ACCEPT_ONLY_EXISTING_USERS`—it accepts only existing users for authentication.
 
 
 **src/Pyz/Zed/SecurityOauthUser/SecurityOauthUserConfig.php**
@@ -168,18 +169,18 @@ class SecurityOauthUserConfig extends SprykerSecurityOauthUserConfig
 }
 ```
 
-{% info_block warningBox “Verification” %}
+{% info_block warningBox "Verification" %}
 
-Having finished the entire integration, ensure that:
-*   Entries without a translation for a language with a configured fallback are translated into the fallback language.
-*   Translation cache is stored under the configured directory.
-*   Translations are found based on the configured file path pattern.
+After finishing the entire integration, ensure the following:
+* Entries without a translation for a language with a configured fallback are translated into the fallback language.
+* Translation cache is stored under the configured directory.
+* Translations are found based on the configured file path pattern.
 
 {% endinfo_block %}
 
 ### Configure navigation
 
-Add `StrageGui` section to `navigation.xml`:
+Add the `StrageGui` section to `navigation.xml`:
 
 **config/Zed/navigation.xml**
 
@@ -211,7 +212,7 @@ console navigation:build-cache
 
 {% info_block warningBox "Verification" %}
 
-Make sure that you can see the **Maintenance > Storage** button in the navigation menu of the Back Office.
+Make sure that in the Back Office, you can select **Maintenance&nbsp;<span aria-label="and then">></span> Storage**.
 
 {% endinfo_block %}
 
@@ -287,7 +288,7 @@ class SecurityDependencyProvider extends SprykerSecurityDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that `https://mysprykershop.com/security-oauth-user/login` redirects you to the login page with the “Authentication failed!” message displayed.
+Ensure that `https://mysprykershop.com/security-oauth-user/login` redirects you to the login page with the *Authentication failed!* message displayed.
 
 {% endinfo_block %}
 
@@ -354,7 +355,7 @@ console twig:cache:warmer
 
 {% info_block warningBox "Verification" %}
 
-Ensure that:
+Ensure the following:
 *   You can open the Back Office login page or any page which requires authentication.
 *   On the Back Office login page, the **Forgot password?** button redirects you to the password reset form.
 *   You receive a password reset email to the email address you submitted the password reset form with.
@@ -362,8 +363,6 @@ Ensure that:
 {% endinfo_block %}
 
 ### Set up translation across the Back Office
-
-To set up translation:
 
 1. Activate the following plugins for translation:
 
@@ -408,11 +407,9 @@ console setup:init-db
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the command:
-
-*   cleaned previous translation cache in the translation folder, which is `data/{YourStore}/cache/Zed/translation` by default.
-
-*   generated translation cache files like `catalogue.{your_locale}.{randomString}.php` and `catalogue.{your_locale}.{randomString}.php.meta` in the translation folder, which is `data/{YourStore}/cache/Zed/translation` by default.
+Ensure that the command has done the following:
+* Cleaned the previous translation cache in the translation folder, which is `data/{YourStore}/cache/Zed/translation` by default.
+* Generated translation cache files like `catalogue.{your_locale}.{randomString}.php` and `catalogue.{your_locale}.{randomString}.php.meta` in the translation folder, which is `data/{YourStore}/cache/Zed/translation` by default.
 
 {% endinfo_block %}
 
@@ -548,10 +545,10 @@ class UserDependencyProvider extends SprykerUserDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-Ensure that you’ve enabled the plugins:
-1.  In the Back Office, go to **Users** > **Users**.
-2.  Select **+Add New User**.
-3.  On the *Create new User* page, check that the **Interface language*** field exists.
+Ensure that you've enabled the plugins:
+1.  In the Back Office, select **Users&nbsp;<span aria-label="and then">></span> Users**.
+2.  Select **Add New User**.
+3.  On the **Create new User** page, check that the **Interface language*** field exists.
 
 {% endinfo_block %}
 
@@ -559,7 +556,7 @@ Ensure that you’ve enabled the plugins:
 
 Set up the following console commands:
 
-| COMMAND                         | SPECIFICATION                        | [PREREQUISITES] | NAMESPACE                                    |
+| COMMAND                         | SPECIFICATION                        | PREREQUISITES | NAMESPACE                                    |
 |---------------------------------|--------------------------------------|-----------------|----------------------------------------------|
 | CleanTranslationCacheConsole    | Cleans translation cache for Zed.    | None            | Spryker\Zed\Translator\Communication\Console |
 | GenerateTranslationCacheConsole | Generates translation cache for Zed. | None            | Spryker\Zed\Translator\Communication\Console |
@@ -603,8 +600,8 @@ console translator:generate-cache
 
 {% info_block warningBox "Verification" %}
 
-Ensure that the command:
-*   Cleaned previous translation cache in the translation folder, which is `data/{YourStore}/cache/Zed/translation` by default.
+Ensure that the command has done the following:
+*   Cleaned the previous translation cache in the translation folder, which is `data/{YourStore}/cache/Zed/translation` by default.
 *   Generated translator cache files like `catalogue.{your_locale}.{randomString}.php` and `catalogue.{your_locale}.{randomString}.php.meta` in the translation folder, which is `data/{YourStore}/cache/Zed/translation` by default.
 
 {% endinfo_block %}

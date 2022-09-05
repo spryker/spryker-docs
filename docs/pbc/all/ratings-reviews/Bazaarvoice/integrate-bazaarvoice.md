@@ -25,4 +25,4 @@ You can do the administration work on the Bazaarvoice reviews from the [Bazaarvo
 {% endinfo_block %}
 
 ## Next steps
-[Configure the BazzareVoice app](/docs/pbc/all/ratings-reviews/bazaarvoice/manage-in-the-back-office/configure-bazaarvoice.html) for your store.
+[Configure the Bazzarevoice app](/docs/pbc/all/ratings-reviews/bazaarvoice/manage-in-the-back-office/configure-bazaarvoice.html) for your store.

@@ -22,7 +22,7 @@ This document describes how to check if code is compliant with Spryker’s stand
 
 {% info_block warningBox "Running the evaluator without installing Spryker SDK" %}
 
-Alternatively, you can use the `spryker-sdk` image from the project directory without installing it. To do that, run all the commands in this doc as follows: `docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console {COMMAND}'
+Alternatively, you can use the `spryker-sdk` image from the project directory without installing it. To do that, run all the commands in this doc as follows: `docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console {COMMAND}'.
 
 {% endinfo_block %}
 

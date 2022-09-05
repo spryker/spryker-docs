@@ -179,7 +179,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Cart
       url: /docs/scos/user/features/cart-feature-overview/cart-feature-overview.html
       nested:
@@ -381,9 +380,11 @@ entries:
     - title: Gift Cards
       url: /docs/scos/user/features/gift-cards-feature-overview.html
       include_versions:
-      - "202108.0" 
+      - "202108.0"
     - title: Inventory Management
       url: /docs/scos/user/features/inventory-management-feature-overview.html
+      include_versions:
+      - "202108.0"      
     - title: Mailing and Notifications
       url: /docs/scos/user/features/mailing-and-notifications-feature-overview.html
     - title: Measurement Units
@@ -835,6 +836,13 @@ entries:
         - "202005.0"
   - title: Back Office User guides
     url: /docs/scos/user/back-office-user-guides/about-back-office-user-guides.html
+    include_versions:
+    - "201907.0"
+    - "202001.0"
+    - "202005.0"
+    - "202009.0"
+    - "202108.0"
+    - "202204.0"
     nested:
     - title: Logging into the Back Office
       url: /docs/scos/user/back-office-user-guides/logging-in-to-the-back-office.html
@@ -1500,14 +1508,6 @@ entries:
             - "202009.0"
       - title: Availability
         nested:
-        - title: Check availability of products
-          url: /docs/scos/user/back-office-user-guides/catalog/availability/check-availability-of-products.html
-          include_versions:
-          - "202204.0"
-        - title: Edit stock of products and product bundles
-          url: /docs/scos/user/back-office-user-guides/catalog/availability/edit-stock-of-products-and-product-bundles.html
-          include_versions:
-          - "202204.0"
         - title: Managing products availability
           url: /docs/scos/user/back-office-user-guides/catalog/availability/managing-products-availability.html
           include_versions:
@@ -2584,16 +2584,7 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
         nested:
-        - title: Create warehouses
-          url: /docs/scos/user/back-office-user-guides/administration/warehouses/create-warehouses.html
-          include_versions:
-          - "202204.0"
-        - title: Edit warehouses
-          url: /docs/scos/user/back-office-user-guides/administration/warehouses/managing-warehouses.html
-          include_versions:
-          - "202204.0"
         - title: Creating warehouses
           url: /docs/scos/user/back-office-user-guides/administration/warehouses/creating-warehouses.html
           include_versions:

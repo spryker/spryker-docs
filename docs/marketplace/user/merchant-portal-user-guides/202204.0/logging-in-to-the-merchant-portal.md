@@ -1,6 +1,6 @@
 ---
 title: Logging in to the Merchant Portal
-last_updated: Jul 13, 2021
+last_updated: Aug 31, 2022
 description: This document describes how to log in and log out of the Merchant Portal.
 template: back-office-user-guide-template
 related:
@@ -15,7 +15,13 @@ To use the Merchant Portal, you have to log in. This document describes how you 
 
 To log in to the Merchant Portal, a [merchant user](/docs/marketplace/user/features/{{page.version}}/marketplace-merchant-feature-overview/merchant-users-overview.html) needs to be [created](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html#creating-a-merchant-user) and [activated in the Back Office](/docs/marketplace/user/back-office-user-guides/{{page.version}}/marketplace/merchants/managing-merchant-users.html#activating-and-deactivating-the-merchant-users) by the Marketplace administrator.
 
-Each section in this article contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
+Each section in this guide contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
+
+{% info_block warningBox %}
+
+A [marketplace administrator](/docs/marketplace/user/intro-to-spryker-marketplace/marketplace-personas.html#marketplace-administrator) cannot log in to Merchant Portal. 
+
+{% endinfo_block %}
 
 ## Creating a password
 

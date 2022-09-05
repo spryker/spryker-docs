@@ -1,29 +1,25 @@
 ---
-title: "HowTo: Add support of number formatting in Backoffice"
-description: Add support of numbers formatting in Backoffice UI.
+title: "HowTo: Add support of number formatting in the Back Office"
+description: Add support of numbers formatting in Back Office UI.
 template: howto-guide-template
 last_updated: Aug 30, 2022
 ---
 
-Overview
-
-This document explains how to add support of number formatting in Backoffice UI.
+This document explains how to add support of number formatting in Back Office UI.
 
 ## Prerequisites
 
-To add support of number formatting in Backoffice, integrate the required features:
+To add support of number formatting in the Back Office, integrate the required features:
 
 | NAME                                   | VERSION          | INTEGRATION GUIDE                                                                                                                                              |
 |----------------------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Spryker Core                           | {{page.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/spryker-core-feature-integration.html)                           |
-| Promotions & Discounts (Optional)      | {{page.version}} | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/promotions-and-discounts-feature-integration.html)     |
-| Product Options (Optional)             | {{page.version}} | [Product Options feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-options-feature-walkthrough.html)                           |
-| Product + Order Management (Optional)  | {{page.version}} | [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-order-management-feature-integration.html) |
-| Shipment (Optional)                    | {{page.version}} | [Shipment integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-feature-integration.html)                                           |
+| Spryker Core                           | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)                           |
+| Promotions & Discounts (Optional)      | {{site.version}} | [Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/promotions-and-discounts-feature-integration.html)     |
+| Product Options (Optional)             | {{site.version}} | [Product Options feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{site.version}}/product-options-feature-walkthrough.html)                           |
+| Product + Order Management (Optional)  | {{site.version}} | [Product + Order Management feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-order-management-feature-integration.html) |
+| Shipment (Optional)                    | {{site.version}} | [Shipment integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/shipment-feature-integration.html)                                           |
 
-## Step-by-step instructions
-
-### 1) Install the required modules using Composer
+## 1) Install the required modules using Composer
 
 Install the required modules:
 
@@ -44,15 +40,15 @@ Ensure that the following modules have been installed:
 
 ---
 
-### 2) Set up configuration
-
-{% info_block warningBox "Verification" %}
-
-Optional - in case `Promotions & Discounts` feature is installed.
-
-{% endinfo_block %}
+## 2) Set up configuration
 
 Extend `Discount` configuration settings:
+
+{% info_block warningBox "Warning" %}
+
+Apply the following changes only if you have the [Promotions & Discounts](/docs/pbc/all/discount-management/discount-management.html) feature installed.
+
+{% endinfo_block %}
 
 **src/Pyz/Zed/Discount/DiscountConfig.php**
 
@@ -83,9 +79,7 @@ Make sure that calling `Pyz\Zed\Discount\DiscountConfig::isMoneyCollectionFormTy
 
 {% endinfo_block %}
 
----
-
-### 3) Set up transfer objects
+## 3) Set up transfer objects
 
 Generate transfers:
 
@@ -113,7 +107,8 @@ Ensure the following transfers have been created:
 
 ---
 
-### 4) Set up behavior
+## 4) Set up behavior
+
 Enable the following behaviors by registering the plugins:
 
 | PLUGIN                           | SPECIFICATION                                                         | PREREQUISITES | NAMESPACE                                               |
@@ -176,9 +171,9 @@ class TwigDependencyProvider extends SprykerTwigDependencyProvider
 }
 ```
 
-{% info_block warningBox "Verification" %}
+{% info_block warningBox "Warning" %}
 
-Optional - in case `Promotions & Discounts` feature is installed.
+Apply the following changes only if you have the [Discount Management](/docs/pbc/all/discount-management/discount-management.html) feature installed.
 
 {% endinfo_block %}
 
@@ -204,9 +199,9 @@ class DiscountDependencyProvider extends SprykerDiscountDependencyProvider
 }
 ```
 
-{% info_block warningBox "Verification" %}
+{% info_block warningBox "Warning" %}
 
-Optional - in case `Product + Order Management` feature is installed.
+Apply the following changes only if you have the [Product](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html) feature installed.
 
 {% endinfo_block %}
 
@@ -234,9 +229,9 @@ class ProductManagementDependencyProvider extends SprykerProductManagementDepend
 }
 ```
 
-{% info_block warningBox "Verification" %}
+{% info_block warningBox "Warning" %}
 
-Optional - in case `Product Options` feature is installed.
+Apply the following changes only if you have the [Product Options](/docs/scos/user/features/{{site.version}}/product-options-feature-overview.html) feature installed.
 
 {% endinfo_block %}
 
@@ -262,9 +257,9 @@ class ProductOptionDependencyProvider extends SprykerProductOptionDependencyProv
 }
 ```
 
-{% info_block warningBox "Verification" %}
+{% info_block warningBox "Warning" %}
 
-Optional - in case `Shipment` feature is installed.
+Apply the following changes only if you have the [Carrier Management](/docs/pbc/all/carrier-management/carrier-management.html) feature installed.
 
 {% endinfo_block %}
 
@@ -290,14 +285,12 @@ class ShipmentGuiDependencyProvider extends SprykerShipmentGuiDependencyProvider
 }
 ```
 
-### 5) Build Zed UI frontend
+## 5) Build Zed UI frontend
 
-Run the following command to enable Javascript and CSS changes for Zed:
+Enable Javascript and CSS changes for Zed:
 
 ```bash
 console frontend:zed:build
 ```
 
-## Summary
-
-After applying these changes, your will be able to see formatted prices and numbers in Backoffice forms and tables.
+After applying all these changes, you can see formatted prices and numbers in Back Office forms and tables.

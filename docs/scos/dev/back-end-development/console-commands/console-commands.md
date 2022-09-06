@@ -1,7 +1,7 @@
 ---
 title: Console commands in Spryker
 description: The list of console commands contains the command names together with a short description of what the command does.
-last_updated: Jun 16, 2021
+last_updated: Aug 31, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/console
 originalArticleId: d4062a3e-5dac-4905-afc7-105978e27432
@@ -31,7 +31,7 @@ related:
     link: docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html
 ---
 
-The [list of console commands](/docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html) contains the command names together with a short description of what the command does. The most important commands in Spryker can be split into gour categories: collector commands, order management system commands, setup commands, and frontend-related commands. This document provides details on each of the commands.
+The [list of console commands](/docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html) contains the command names together with a short description of what the command does. The most important commands in Spryker can be split into four categories: collector commands, order management system commands, setup commands, and frontend-related commands. This document provides details on each of the commands.
 
 ## Collector commands
 
@@ -114,7 +114,7 @@ setup:install
   transfer:generate
   ```
 
-  1. Initialize the database with required data:
+  5. Initialize the database with required data:
 
   ```bash
   setup:init-db
@@ -135,7 +135,7 @@ dev:ide:generate-auto-completion
 
   {% info_block infoBox %}
 
-  Each of the commands contained in the steps above can also be executed individually.
+  Each of the commands contained in the previous steps can also be executed individually.
 
   {% endinfo_block %}
 
@@ -152,31 +152,31 @@ setup:propel
 ```
   The following steps are performed when running this command:
 
-  1. Write propel configuration
+  1. Write propel configuration:
 
   ```bash
   setup:propel:config:convert
   ```
 
-  2. Create the database if it doesn’t exist yet, based on the configuration set in the previous step
+  2. Create the database if it doesn’t exist yet, based on the configuration set in the previous step:
 
   ```bash
   setup:propel:database:create
   ```
 
-  3. Ensure compatibility with PostgreSQL, if necessary, by adjusting the Propel XML schema files.
+  3. Ensure compatibility with PostgreSQL, if necessary, by adjusting the Propel XML schema files:
 
   ```bash
   setup:propel:pg-sql-compat
   ```
 
-  4. Copy schema files from Spryker and project packages to the generated folder.
+  4. Copy schema files from Spryker and project packages to the generated folder:
 
   ```bash
   setup:propel:schema:copy
   ```
 
-  5. Build Propel classes based on the XML schema files.
+  5. Build Propel classes based on the XML schema files:
 
   ```bash
   setup:propel:model:build
@@ -238,7 +238,7 @@ To use the NPM commands, download and install [Node.js](https://docs.npmjs.com/d
 
 {% endinfo_block %}
 
-| ENVIRONMENT | COMMAND DESCRIPTION | LOCAL COMMAND | VM COMMAND |
+| ENVIRONMENT | COMMAND DESCRIPTION | LOCAL COMMAND | DOCKER CLI COMMAND |
 |---|---|---|---|
 | Project/Core |  |  |  |
 |  | Removes the entire content from the cache directories. |  | console cache:empty-all |
@@ -250,12 +250,6 @@ To use the NPM commands, download and install [Node.js](https://docs.npmjs.com/d
 |  | Builds the core/project scripts, styles, fonts, and images to the `public/Yves/assets` folder. | npm run yves | console frontend:yves:build  |
 |  | Runs a build command every time the core/project scripts or style files change during the development. | npm run yves:watch |  |
 |  | Runs a production build which compresses and minifies the core/project scripts, styles, fonts, and images to the `public/Yves/assets` folder. | npm run yves:production  | console frontend:yves:build --environment production  |
-|  | Builds the core/project scripts, styles, fonts, and images to the `public/Yves/assets` folder for development environment. Scripts are building in ES6 mode in this case. | npm run yves:development:esm |  |
-|  | Builds the core/project scripts, styles, fonts, and images to the `public/Yves/assets` folder for development environment. Scripts are building in ES5 mode in this case. | npm run yves:development:legacy |  |
-|  | Runs a production build which compresses and minifies the core/project scripts, styles, fonts, and images to the `public/Yves/assets` folder. Scripts are building in ES6 mode in this case. | npm run yves:production:esm |  |
-|  | Runs a production build which compresses and minifies the core/project scripts, styles, fonts, and images to the `public/Yves/assets` folder. Scripts are building in ES5 mode in this case. | npm run yves:production:legacy |  |
-|  | Runs a build command for development environment every time the core/project scripts or style files change during the development. Scripts are building in ES6 mode in this case. | npm run yves:watch:esm |  |
-|  | Runs a build command for development environment every time the core/project scripts or style files change during the development. Scripts are building in ES5 mode in this case. | npm run yves:watch:legacy |  |
 | Zed | Dependencies installation. Installs and packages all modules from the `vendor/spryker` (for the split version) and `vendor/spryker/spryker` (for the nonsplit version) folders. |  | console frontend:project:install-dependencies |
 |  | Builds Zed scripts, styles, fonts, and images to the `public/Zed/assets` folder. | npm run zed | console frontend:zed:build  |
 |  | Runs a build command every time when Zed scripts or style files change during the development. | npm run zed:watch |  |
@@ -272,4 +266,3 @@ To use the NPM commands, download and install [Node.js](https://docs.npmjs.com/d
 |  | Builds Zed scripts, styles, fonts, and images to the `public/Zed/assets` folder. | npm run zed | console frontend:zed:build |
 |  | Runs a build command every time Zed scripts or styles files change during development. | npm run zed:dev |  |
 |  | Runs a production build which compresses and minifies Zed scripts, styles, fonts, and images to the `public/Zed/assets` folder. | npm run zed:prod |  |
-

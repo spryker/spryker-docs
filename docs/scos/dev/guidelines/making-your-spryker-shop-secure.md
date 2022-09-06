@@ -28,7 +28,7 @@ This doc describes the guidelines for securing your customers' and partners' dat
 
 ## Passwords
 
-The most important about password security is to not save it in plain text. Therefore, Spryker uses BCrypt, which uses Blowfish to hash passwords and add a random salt to each hash, preventing rainbow table attacks. To prevent dictionary and brute force attacks, you can force users to use special characters by adding validation rules to needed forms. For even higher security, use 2-factor authentication and CAPTCHA.
+The most important about password security is to not save it in plain text. Therefore, Spryker uses BCrypt based on Blowfish to hash passwords and add a random salt to each hash, preventing rainbow table attacks. To prevent dictionary and brute force attacks, you can force users to use special characters by adding validation rules to needed forms. For even higher security, use 2-factor authentication and CAPTCHA.
 
 ## Encrypted communication
 
@@ -53,7 +53,7 @@ To test web server configuration, use online tools like [SSL Server Test](https:
 
 ## Session security and hijacking
 
-Modern websites include many third-party JavaScript libraries that can access the content of the page:
+Websites include many third-party JavaScript libraries that can access the content of a page.
 
 * To prevent access to session cookies from Javascript, Spryker sets the HttpOnly attribute of the session cookie by default. We advise to set this attribute for all sensitive cookies.
 * When using TLS, you can use a `secure` cookie flag to instruct a browser to send this cookie back to the server only via an encrypted connection. To configure it, use the  `*_SESSION_COOKIE_SECURE` configuration keys.
@@ -62,55 +62,60 @@ Modern websites include many third-party JavaScript libraries that can access th
 * Make sure that `*_SESSION_COOKIE_DOMAIN` matches only your domain to disallow a browser to send the cookie to another domain or subdomain.
 * Never send a session ID as a GET parameter of a URL, because the ID can be logged in logs or forwarded to external websites in HTTP Referer header.
 
-### Cross-site request forgery (CSRF)
+## Cross-site request forgery (CSRF)
 
-CSRF forces a user to execute unwanted actions while being logged in and either clicking on a specially crafted link or just embedding the URL into some HTML tags triggering the request automatically (for example, the *src* attribute of the *img*). To prevent such attacks, Symfony Form provides the `csrf_protection` token by default. It is advisable to use this functionality in all forms.
+CSRF forces a user to execute unwanted actions while being logged in and either clicking on a specially crafted link or just embedding the URL into some HTML tags triggering the request automatically. For example, the `src` attribute of an `img`. To prevent such attacks, Symfony Form provides the `csrf_protection` token by default. We recommend using it in all forms.
 
-### Cross-site scripting (XSS)
+## Cross-site scripting (XSS)
 
 Cross-site scripting is a possibility to inject malicious scripts to be executed in the browser context, for example, for a logged-in user to scrape information from the page or steal cookies. To prevent such vulnerabilities, developers should filter input and sanitize output to prevent rendering HTML or JS code from user input.
 
-Twig template engine has autoescaping enabled by default, so developers should pay attention to not using a “raw” filter. HTML should be stripped from user input.
+Twig template engine has autoescaping enabled by default, so make sure to not use a “raw” filter. HTML should be stripped from user input.
 
-Usually, shop operators are trusted to enter raw HTML. In this case, it is impossible to limit them, and it is advised to increase security by restricting access to the administrative panel and to hide Zed with, for example, VPN, IP whitelisting, or introducing additional authentication.
+Usually, shop operators are trusted to enter raw HTML. As it is impossible to limit them in this case, we recommend restricting access to the Back Office and other administrative panels in your shop. For example, introduce a VPN, IP whitelisting, or additional authentication.
 
-In addition “X-XSS-Protection” can be set via `HeadersSecurityServiceProvider`. See the [X-XSS-Protection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection) article for details.
+Additionally, you can set [X-XSS-Protection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection) using `HeadersSecurityServiceProvider`.
 
-### Yves-&gt;Zed security
+## Security between the Storefront and the Back Office
 
-Yves uses HTTP RPC calls to communicate with Zed. These calls can be secured in different ways:
-* Securing Zed with whitelisting and implementing isolated DMZ between Yves and Zed. It is strongly recommended not to make Zed publicly available.
-* Using TLS for communication if it is happening through untrusted networks when DMZ is not possible (see previous sections). But this adds some latency to communication.
-* Enabling Zed authorization for Yves requests:
-    * `ZedRequestConstants::AUTH_ZED_ENABLED` and `AuthConstants::AUTH_ZED_ENABLED` should be set to true.
-    * `AuthConstants::AUTH_DEFAULT_CREDENTIALS[‘zed_request’][‘token’]` should be set to a random value for each environment.
-    * Optionally: change a user name used by Yves via `UserConstants::USER_SYSTEM_USERS`.
+The Storefront uses HTTP RPC calls to communicate with the Back Office. Secure these calls by any combination of the following:
 
-Previously, we used the configuration key `yves_system` but this wasn't reflecting that this key is used for all applications that do make requests to the Zed application. We kept the possibility to use `yves_system` for backwards-compatibility.
+* Implement whitelisting or DMZ between the Storefront and the Back Office. If possible, make the Back Office unavailable publicly.
+* When communication is happening through untrusted networks and DMZ is not possible, use TLS. This adds some latency to communication.
+* Enable Back Office authorization for Storefront requests:
+    * Set `ZedRequestConstants::AUTH_ZED_ENABLED` and `AuthConstants::AUTH_ZED_ENABLED` to true.
+    * Set a random value of `AuthConstants::AUTH_DEFAULT_CREDENTIALS[‘zed_request’][‘token’]` for each environment.
+    * Optional: Change the user name used by Storefront in `UserConstants::USER_SYSTEM_USERS`.
 
-### Remote code execution
 
-There are many possibilities to trigger remote code execution in a web application:
+{% info_block infoBox "" %}
 
-* Local file inclusion: using unsanitized paths in *include* statements. PHP provides the `include_path` configuration option to limit locations of files to be included.
-* Remote file inclusion: using unsanitized URLs or user input in *include* statements. These should be avoided by developers.
-* Unsafe deserialization. Serialized data should not be sent to the browser and should not be accepted back by the server. During deserialization of serialized data, PHP might instantiate classes mentioned in the payload and invoke some actions. This should be avoided by developers, or signature verification methods should be in place to validate this input.
-* Command injection: user input should not be forwarded to “exec”, “system”, “passthru” or similar functions.
+Previously, the `yves_system` configuration key was used instead of `UserConstants::USER_SYSTEM_USERS` but this wasn't reflecting that this key is used for all applications that make requests to the Back Office. We kept the possibility to use `yves_system` for backwards-compatibility.
 
-### SQL Injection
+{% endinfo_block %}
 
-SQL injections are happening when unsanitized user input is embedded into an SQL statement. You can use the following mechanisms to prevent SQL injections:
 
-* Propel to build queries and avoid plain SQL
-* Prepared statements (used by Propel by default) and typed placeholders
-* Casting incoming data to concrete data types, for example, integer, string etc.
-* `CastId` method in Zed controllers
+## Remote code execution
 
-Given Spryker limits access to an SQL database only for Zed, and Yves does not have access to it, then an additional measure is to limit access to Zed for the public via VPN, IP whitelisting, etc.
+Avoid triggering remote code execution as follows:
 
-### Clickjacking
+* Local file inclusion: using unsanitized paths in `include` statements. To limit locations of files to be included, use the `include_path` PHP configuration option.
+* Remote file inclusion: Avoid using unsanitized URLs or user input in `include` statements.
+* Unsafe deserialization. Serialized data should not be sent to the browser and should not be accepted back by the server. During deserialization of serialized data, PHP might instantiate classes mentioned in the payload and invoke some actions. Avoid this behavior or implement signature verification methods to validate this input.
+* Command injection: avoid forwarding user input to `exec`, `system`, `passthru` or similar functions.
 
-Clickjacking is a possibility to tweak the UI or craft a malicious webpage, embedding the attacked one to force the user to click on specific buttons or links. Clickjacking is prevented by setting correct headers in “X-Frame-Options” and “Content-Security-Policy” already provided by `HeadersSecurityServiceProvider`. However, make sure that the headers are not deleted by webserver configuration. For more information about clickjacking, see the [OWASP](https://owasp.org/www-community/attacks/Clickjacking) article.
+## SQL injection
+
+SQL injections are happening when unsanitized user input is embedded into an SQL statement. Use the following mechanisms to prevent SQL injections:
+
+* Propel to build queries and avoid plain SQL.
+* Prepared statements (used by Propel by default) and typed placeholders.
+* Casting incoming data to concrete data types like integer or string.
+* `CastId` method in Zed controllers.
+
+## Clickjacking
+
+Clickjacking is when UI tweaked to force users to click on specific buttons or links. To prevent clickjacking, set correct headers in `X-Frame-Options` and `Content-Security-Policy` provided by `HeadersSecurityServiceProvider`. Make sure that the headers are not deleted by webserver configuration. For more information about clickjacking, see the [OWASP](https://owasp.org/www-community/attacks/Clickjacking) article.
 
 ### Obsolete or outdated dependencies
 

@@ -238,7 +238,7 @@ $bootstrap
 ```
 </details>
 
-1. Configure a maintenance page:
+3. Configure a maintenance page:
 
 {% info_block warningBox %}
 

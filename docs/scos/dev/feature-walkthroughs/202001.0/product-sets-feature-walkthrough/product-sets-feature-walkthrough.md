@@ -34,6 +34,6 @@ The products in product sets and their sorting positions are stored in the `spy_
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES | 
+|INSTALLATION GUIDES | 
 |---------|
 | [Product Sets feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-set-feature-integration.html)  

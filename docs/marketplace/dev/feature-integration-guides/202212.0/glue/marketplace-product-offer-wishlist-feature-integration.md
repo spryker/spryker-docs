@@ -1,6 +1,6 @@
 ---
 title: "Glue API: Marketplace Product Offer + Wishlist feature integration"
-last_updated: Sep 13, 2021
+last_updated: Sep 5, 2022
 description: This document describes how to integrate the Marketplace Product Offer + Wishlist Glue API feature into a Spryker project.
 template: feature-integration-guide-template
 ---
@@ -68,7 +68,6 @@ Activate the following plugins:
 | ValidMerchantProductOfferUpdateItemPreCheckPlugin                | Validates merchant product offer in a wishlist item before the update item operation is executed.                                               |               | Spryker\Zed\MerchantProductOfferWishlist\Communication\Plugin\Wishlist |
 | ProductOfferRestWishlistItemsAttributesMapperPlugin              | Populates `RestWishlistItemsAttributes.id` with the following pattern: `{WishlistItem.sku}_{WishlistItemTransfer.productOfferReference}`. |               | Spryker\Glue\MerchantProductOfferWishlistRestApi\Plugin\Wishlist       |
 | ProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin      | Checks if the requested wishlist item exists in the wishlist item collection.                                                             |               | Spryker\Zed\MerchantProductOfferWishlistRestApi\Communication\Plugin   |
-| EmptyProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin | Checks if the requested wishlist item exists in the wishlist item collection.                                                             |               | Spryker\Zed\MerchantProductOfferWishlistRestApi\Communication\Plugin   |
 | MerchantByMerchantReferenceResourceRelationshipPlugin            | Adds `merchants` resources as a relationship by the  merchant references in the attributes.                                                      |               | Spryker\Glue\MerchantsRestApi\Plugin\GlueApplication                   |
 
 <details><summary markdown='span'>src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php</summary>
@@ -171,7 +170,6 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
 <?php
 namespace Pyz\Zed\WishlistsRestApi;
 
-use Spryker\Zed\MerchantProductOfferWishlistRestApi\Communication\Plugin\EmptyProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin;
 use Spryker\Zed\MerchantProductOfferWishlistRestApi\Communication\Plugin\ProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin;
 use Spryker\Zed\WishlistsRestApi\WishlistsRestApiDependencyProvider as SprykerWishlistsRestApiDependencyProvider;
 
@@ -184,7 +182,6 @@ class WishlistsRestApiDependencyProvider extends SprykerWishlistsRestApiDependen
     {
         return [
             new ProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin(),
-            new EmptyProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin(),
         ];
     }
 }
@@ -199,6 +196,6 @@ Make sure that the `ValidMerchantProductOfferAddItemPreCheckPlugin` is set up by
 
 Make sure that the `ValidMerchantProductOfferUpdateItemPreCheckPlugin` is set up by sending the request `PATCH https://glue.mysprykershop.com/wishlists/{% raw %}{{{% endraw %}wishlist_id{% raw %}}}{% endraw %}/wishlist-items/{% raw %}{{{% endraw %}wishlist_item_id{% raw %}}}{% endraw %}`. You should have the wishlist item updated only when the product has the specified offer reference, offer is active and approved, and merchant, who owns it, is active and approved.
 
-Make sure that the `ProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin` and `EmptyProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin` are set up by sending the request to `DELETE https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}/wishlist-items/{% raw %}{{wishlistItemId}}{% endraw %}`. You should get the product offer wishlist item deleted.
+Make sure that the `ProductOfferRestWishlistItemsAttributesDeleteStrategyPlugin` is set up by sending the request to `DELETE https://glue.mysprykershop.com/wishlists/{% raw %}{{wishlistId}}{% endraw %}/wishlist-items/{% raw %}{{wishlistItemId}}{% endraw %}`. You should get the product offer wishlist item deleted.
 
 {% endinfo_block %}

@@ -8,6 +8,7 @@ originalArticleId: 2a34c80b-5b49-4b00-b360-324fe585dc4c
 redirect_from:
   - /v6/docs/concrete-product-reference-information
   - /v6/docs/en/concrete-product-reference-information
+  - /docs/scos/user/back-office-user-guides/202009.0/catalog/products/references/reference-information-concrete-product.html
 ---
 
 This topic describes the reference information for working with concrete and abstract products.

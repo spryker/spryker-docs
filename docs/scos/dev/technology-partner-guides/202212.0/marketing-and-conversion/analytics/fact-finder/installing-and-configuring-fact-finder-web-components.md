@@ -20,7 +20,7 @@ This document shows how to install and configure FACT-Finder web components.
 
 ## Installation
 
-Install the fact-finder-web-components module:
+Install the `fact-finder-web-components` module:
 
 ```bash
 composer require spryker-eco/fact-finder-web-components

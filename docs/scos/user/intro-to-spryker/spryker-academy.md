@@ -1,6 +1,6 @@
 ---
 title: Spryker Academy
-description: This page provides video presentations for Spryker features.
+description: This page introduces Spryker Academy.
 last_updated: Sep 6, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-videos

@@ -672,6 +672,7 @@ class UnzerConfig extends EcoUnzerConfig
 }
 ```
 </details>
+
 ## Implemented payment method on the Storefront
 
 The following is an example of how the implemented payment method Unzer looks on the Storefront during the checkout.
@@ -705,8 +706,6 @@ The following is an example of how the implemented payment method Unzer looks on
 ![storefront-5](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level/storefront-5.jpeg)
 
 </details>
-
-
 
 ## Triggering shipment states in the Back Office
 

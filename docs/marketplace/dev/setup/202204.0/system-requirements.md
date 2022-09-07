@@ -1,5 +1,5 @@
 ---
-title: DevVM system requirements
+title: System requirements
 Descriptions: System infrastructure requirements for the Spryker Marketplace with Merchant Portal
 template: howto-guide-template
 redirect_from:
@@ -8,13 +8,6 @@ related:
   - title: Infrastructure requirements
     link: docs/marketplace/dev/setup/page.version/infrastructure-requirements.html
 ---
-
-{% info_block warningBox "Warning" %}
-
-We will soon deprecate the DevVM and stop supporting it. Therefore, we highly recommend [installing Spryker with Docker](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
-
-{% endinfo_block %}
-
 | OPERATING SYSTEM | NATIVE: LinuxOnly via VM: MacOS and MS Windows               |
 | ----------------------------------------- | ------------------------------------------------------------ |
 | **Web Server**                                | NginX—preferred. But any webserver which supports PHP will work such as lighttpd, Apache, Cherokee. |

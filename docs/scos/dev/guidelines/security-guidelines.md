@@ -81,7 +81,7 @@ Cross-site scripting is a possibility to inject malicious scripts to be executed
 
 Twig template engine has autoescaping enabled by default, so make sure to not use a `raw` filter. HTML should be stripped from user input.
 
-Usually, shop operators are trusted to enter raw HTML. Because you can limit them in this case, we recommend restricting access to the Back Office and other administrative panels in your shop. For example, introduce a VPN, IP whitelisting, or additional authentication.
+Usually, shop operators are trusted to enter raw HTML. Because you can't limit them in this case, we recommend restricting access to the Back Office and other administrative panels in your shop. For example, introduce a VPN, IP whitelisting, or additional authentication.
 
 Additionally, you can set [X-XSS-Protection](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection) using `HeadersSecurityServiceProvider`.
 

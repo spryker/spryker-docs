@@ -73,7 +73,7 @@ Websites include many third-party JavaScript libraries that can access the conte
 
 ## Cross-site request forgery (CSRF)
 
-CSRF forces a user to execute unwanted actions while being logged in and either clicking on a specially crafted link or just embedding the URL into some HTML tags triggering the request automatically. For example, the `src` attribute of an `img`. To prevent such attacks, Symfony Form provides the `csrf_protection` token by default. We recommend using it in all forms.
+CSRF forces a user to execute unwanted actions while being logged in and either click on a specially crafted link or just embed the URL into some HTML tags triggering the request automatically—for example, the `src` attribute of `img`. To prevent such attacks, Symfony Form provides the `csrf_protection` token by default. We recommend using it in all forms.
 
 ## Cross-site scripting (XSS)
 

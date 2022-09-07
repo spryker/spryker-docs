@@ -15,6 +15,7 @@ redirect_from:
   - /v5/docs/en/making-your-spryker-shop-secure
   - /v4/docs/making-your-spryker-shop-secure
   - /v4/docs/en/making-your-spryker-shop-secure
+  - /docs/scos/dev/guidelines/making-your-spryker-shop-secure.html
 related:
   - title: Data Processing Guidelines
     link: docs/scos/dev/guidelines/data-processing-guidelines.html
@@ -34,7 +35,7 @@ The most important about password security is to not save it in plain text. Ther
 
 {% info_block infoBox "PaaS+" %}
 
-For [PaaS+ projects](/docs/paas-plus/dev/platform-as-a-service-plus.html), encyrpted communication is implemented on the infrastructure level. On the application side, you can optionally [force encrypted communication](#forced-encrypted-communication)
+For [PaaS+ projects](/docs/paas-plus/dev/platform-as-a-service-plus.html), encyrpted communication is implemented on the infrastructure level. On the application side, you can configure [forced encrypted communication](#forced-encrypted-communication).
 
 {% endinfo_block %}
 
@@ -94,14 +95,6 @@ The Storefront uses HTTP RPC calls to communicate with the Back Office. Secure t
     * Set `ZedRequestConstants::AUTH_ZED_ENABLED` and `AuthConstants::AUTH_ZED_ENABLED` to true.
     * Set a random value of `AuthConstants::AUTH_DEFAULT_CREDENTIALS[‘zed_request’][‘token’]` for each environment.
     * Optional: Change the user name used by Storefront in `UserConstants::USER_SYSTEM_USERS`.
-
-
-{% info_block infoBox "" %}
-
-Previously, the `yves_system` configuration key was used instead of `UserConstants::USER_SYSTEM_USERS` but this wasn't reflecting that this key is used for all applications that make requests to the Back Office. We kept the possibility to use `yves_system` for backwards-compatibility.
-
-{% endinfo_block %}
-
 
 ## Remote code execution
 

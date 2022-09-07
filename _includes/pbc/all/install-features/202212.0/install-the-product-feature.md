@@ -220,7 +220,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 Ensure the following:
 1. After executing the `console sync:data product_concrete` command, product data including images is synced to Elasticsearch product concrete documents.
-2. When a product or its images updated by Zed UI product data including images is synced in respective Elasticsearch product concrete documents.
+2. When a product or its images, updated by Zed UI product data including images, is synced in respective Elasticsearch product concrete documents.
 
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | --- | --- | --- |

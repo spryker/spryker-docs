@@ -3,32 +3,34 @@
 {% info_block errorBox %}
 
 The following feature integration guide expects the basic feature to be in place.
-This guide only describes the **Product Concrete Search** and **Add to cart from the Catalog page** integration.
+This guide only describes the *Product Concrete Search* and *Add to cart from the Catalog page* integration.
 
 {% endinfo_block %}
 
 
 ## Install feature core
 
+Follow the steps below to install the feature core.
+
 ### Prerequisites
 
-Please overview and install the necessary features before beginning the integration step.
+To start feature integration, overview and install the necessary features:
 
-| Name | Version |
-|---|---|
-| Spryker Core | {{site.version}} |
-| Prices | {{site.version}} |
+| NAME | VERSION | INTEGRATION GUIDE |
+|---|---|---|
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)
+| Prices | {{site.version}} | [Integrate the Prices feature](/docs/pbc/all/price-management/install-and-upgrade/install-features/install-the-prices-feature.html) |
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/product:"{{site.version}}" --update-with-dependencies
 ```
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules were installed:
+Make sure that the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -48,7 +50,7 @@ Make sure that the following modules were installed:
 
 {% endinfo_block %}
 
-Run the following commands to apply database changes and generate entity and transfer changes:
+Apply database changes and generate entity and transfer changes:
 
 ```bash
 console propel:install
@@ -81,7 +83,7 @@ product_search_widget.search.no_results,Products were not found.,en_US
 product_search_widget.search.no_results,Products were not found.,de_DE
 ```
 
-Run the following console command to import data:
+Import data:
 
 ```bash
 console data:import glossary
@@ -120,7 +122,7 @@ class ProductPageSearchConfig extends SprykerProductPageSearchConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that abstract products eligible for adding to cart have additional `add_to_cart_sku` field at Elasticsearch document.
+Make sure that abstract products eligible for adding to cart have the additional `add_to_cart_sku` field in the Elasticsearch document.
 
 {% endinfo_block %}
 
@@ -129,9 +131,9 @@ Make sure that abstract products eligible for adding to cart have additional `ad
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductConcretePageSearchProductImageEventSubscriber | Registers listeners that are responsible for publishing product concrete image entity changes to search when a related entity change event occurs. | None | Spryker\Zed\ProductPageSearch\Communication\Plugin\Event\Subscriber |
-| ProductImageProductConcretePageMapExpanderPlugin | Expands product concrete page map with images field. | None | Spryker\Zed\ProductPageSearch\Communication\Plugin\PageMapExpander |
-| ProductImageProductConcretePageDataExpanderPlugin | Expands product concrete page data with images data. | None | Spryker\Zed\ProductPageSearch\Communication\Plugin\PageMapExpander |
-| ProductConcretePublisherTriggerPlugin | Trigger concrete products resource to be published. | None | Spryker\Zed\ProductPageSearch\Communication\Plugin\Publisher |
+| ProductImageProductConcretePageMapExpanderPlugin | Expands the product concrete page map with the images field. | None | Spryker\Zed\ProductPageSearch\Communication\Plugin\PageMapExpander |
+| ProductImageProductConcretePageDataExpanderPlugin | Expands product concrete page data with the images data. | None | Spryker\Zed\ProductPageSearch\Communication\Plugin\PageMapExpander |
+| ProductConcretePublisherTriggerPlugin | Triggers the concrete products resource to be published. | None | Spryker\Zed\ProductPageSearch\Communication\Plugin\Publisher |
 
 **src/Pyz/Zed/Event/EventDependencyProvider.php**
 
@@ -191,6 +193,7 @@ class ProductPageSearchDependencyProvider extends SprykerProductPageSearchDepend
 ```
 
 **src/Pyz/Zed/Publisher/PublisherDependencyProvider.php**
+
 ```php
 <?php
 
@@ -215,14 +218,15 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 {% info_block warningBox "Verification" %}
 
-1. Make sure that after `console sync:data product_concrete` command execution product data including images is synced to Elasticsearch product concrete documents.
-2. Also check that when product or its images updated via Zed UI, product data including images is synced at respective Elasticsearch product concrete documents.
+Ensure the following:
+1. After executing the `console sync:data product_concrete` command, product data including images is synced to Elasticsearch product concrete documents.
+2. When a product or its images updated by Zed UI product data including images is synced in respective Elasticsearch product concrete documents.
 
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |
 | --- | --- | --- |
 | Elasticsearch | ProductConcrete | product_concrete:de:de_de:1 |
 
-**Example expected data fragment**
+**Expected data fragment example**
 
 ```yaml
 {
@@ -269,17 +273,19 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 
 ## Install feature frontend
 
+Follow the steps below to install the Product feature frontend.
+
 ### Prerequisites
 
 Overview and install the necessary features before beginning the integration step.
 
-| Name | Version |
-| --- | --- |
-| Spryker Core | {{site.version}} |
+| NANE | VERSION | INTEGRATION GUIDE|
+| --- | --- | --- |
+| Spryker Core | {{site.version}} | [Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html)
 
 ### 1) Install the required modules using Composer
 
-Run the following command to install the required modules:
+Install the required modules:
 
 ```bash
 composer require spryker-feature/product:"{{site.version}}" --update-with-dependencies
@@ -287,7 +293,7 @@ composer require spryker-feature/product:"{{site.version}}" --update-with-depend
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following modules are installed:
+Make sure that the following modules have been installed:
 
 | MODULE | EXPECTED DIRECTORY |
 | --- | --- |
@@ -298,13 +304,13 @@ Make sure that the following modules are installed:
 
 ### 2) Set up widgets
 
-Register the following plugins to enable widgets:
+To enable widgets, register the following plugins:
 
 | PLUGIN | SPECIFICATION | PREREQUISITES | NAMESPACE |
 | --- | --- | --- | --- |
 | ProductConcreteSearchWidget | Allows customers to search for concrete products on the Cart page. | None | SprykerShop\Yves\ProductSearchWidget\Widget |
-| ProductConcreteSearchWidget | Incorporates `ProductConcreteSearchWidget` and allows customers to search for concrete products and quickly add them to the Cart with the desired quantity. | None | SprykerShop\Yves\ProductSearchWidget\Widget |
-| ProductConcreteSearchGridWidget | Allows to output list of concrete products from search filtered by criteira. | None | SprykerShop\Yves\ProductSearchWidget\Widget |
+| ProductConcreteSearchWidget | Incorporates `ProductConcreteSearchWidget` and lets customers search for concrete products and quickly add them to the cart with the desired quantity. | None | SprykerShop\Yves\ProductSearchWidget\Widget |
+| ProductConcreteSearchGridWidget | Enables the output list of concrete products from search filtered by criteira. | None | SprykerShop\Yves\ProductSearchWidget\Widget |
 
 **src/Pyz/Yves/ShopApplication/ShopApplicationDependencyProvider.php**
 
@@ -336,12 +342,12 @@ class ShopApplicationDependencyProvider extends SprykerShopApplicationDependency
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the following widgets are registered:
+Make sure that the following widgets have been registered:
 
 | MODULE | TEST |
 | --- | --- |
-| ProductConcreteSearchWidget | Go to the Cart page and make sure the "Quick add to Cart" section is present, so you can search for concrete products by typing their SKU. |
-| ProductConcreteAddWidget | Go to the Cart page and make sure the "Quick add to Cart" section is present, so you can add the found products to the Cart with the desired Quantity. |
-| ProductConcreteSearchGridWidget | Could be checked on slot edit page of Configurator. |
+| ProductConcreteSearchWidget | Go to the **Cart** page and make sure the **Quick add to Cart** section is present, so you can search for concrete products by typing their SKU. |
+| ProductConcreteAddWidget | Go to the **Cart** page and make sure the **Quick add to Cart** section is present, so you can add the found products to the cart with the desired Quantity. |
+| ProductConcreteSearchGridWidget | Can be checked on the slot edit page of Configurator. |
 
 {% endinfo_block %}

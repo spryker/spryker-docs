@@ -2372,7 +2372,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-business-on-behalf-data-import.html
     - title: Migration Guide - Calculation
       url: /docs/scos/dev/module-migration-guides/migration-guide-calculation.html
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cartvariant.html
     - title: Migration Guide - Catalog
       url: /docs/scos/dev/module-migration-guides/migration-guide-catalog.html
     - title: Migration Guide - Category Template Migration Console

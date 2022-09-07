@@ -17,4 +17,4 @@ To learn more about the feature and to find out how end users use it, see [Reord
 
 | INSTALLATION GUIDES | UPGRADE GUIDES|
 |---------|---------|
-| [Multiple Carts + Reorder feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-reorder-feature-integration.html) | CustomerReorderWidget migration guide](/docs/scos/dev/module-migration-guides/migration-guide-customerreorderwidget.html)  |
+| [Install the Multiple Carts + Reorder feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-reorder-feature-integration.html) | CustomerReorderWidget migration guide](/docs/scos/dev/module-migration-guides/migration-guide-customerreorderwidget.html)  |

@@ -11,7 +11,7 @@ This document describes how to retrieve gift cards in guest carts using Glue API
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html)
+* [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html)
 
 ## Retrieve a guest cart
 

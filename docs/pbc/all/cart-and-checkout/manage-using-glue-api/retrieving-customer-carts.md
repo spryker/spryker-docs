@@ -45,7 +45,7 @@ This endpoint allows retrieving a customer’s carts.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Cart feature integration](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-the-cart-glue-api.html).
+For details on the modules that provide the API functionality and how to install them, see [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-the-cart-glue-api.html).
 
 ## Retrieve customer’s carts
 

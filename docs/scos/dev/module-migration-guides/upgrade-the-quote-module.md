@@ -33,7 +33,7 @@ redirect_from:
   - /module_migration_guides/mg-quote.htm
 related:
   - title: Upgrade the Cart module
-    link: docs/scos/dev/module-migration-guides/migration-guide-cart.html
+    link: docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-the-cart-module.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-quote-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-quote-module.md -->

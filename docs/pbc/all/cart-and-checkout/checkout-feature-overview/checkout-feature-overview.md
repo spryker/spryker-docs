@@ -46,5 +46,5 @@ With order thresholds, you can do the following:
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| DATA IMPORT |
 |---------|---------|---------|
-| [Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html) | [Upgrade the Checkout module](/docs/scos/dev/module-migration-guides/migration-guide-checkout.html)  | [File details: sales_order_threshold.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-sales-order-threshold.csv.html)  |
-| [Merchant feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html) | [Upgrade the CheckoutPage module](/docs/scos/dev/module-migration-guides/migration-guide-checkoutpage.html) |   |
+| [Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html) | [Upgrade the Checkout module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-the-checkout-module.html)  | [File details: sales_order_threshold.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-sales-order-threshold.csv.html)  |
+| [Merchant feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html) | [Upgrade the CheckoutPage module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-the-checkoutpage-module.html) |   |

@@ -54,7 +54,7 @@ If a customer selects a link of the cart that's not available, the _This cart is
 | INTEGRATION GUIDES  |
 |---|
 | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
-| [Persistent Cart Sharing + Shared Carts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/persistent-cart-sharing-shared-carts-feature-integration.html) |
-| [Persistent Cart Sharing feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/persistent-cart-sharing-feature-integration.html) |
+| [Persistent Cart Sharing + Install the Shared Carts feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/persistent-cart-sharing-shared-carts-feature-integration.html) |
+| [Install the Persistent Cart Sharing feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/persistent-cart-sharing-feature-integration.html) |
 | [Resource Sharing feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/resource-sharing-feature-integration.html) |
-| [Shared Carts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shared-carts-feature-integration.html) |
+| [Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-the-shared-carts-feature.html) |

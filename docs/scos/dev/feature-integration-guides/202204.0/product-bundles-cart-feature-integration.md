@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201907.0/product-bundles-cart-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202005.0/product-bundles-cart-feature-integration.html
 related:
-  - title: Glue API - Product Bundle + Cart feature integration
+  - title: Glue API: Product Bundle + Cart feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-bundle-cart-feature-integration.html
   - title: Product Bundles feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-bundles-feature-walkthrough.html

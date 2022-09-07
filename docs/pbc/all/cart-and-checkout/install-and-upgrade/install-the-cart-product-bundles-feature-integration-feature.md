@@ -4,8 +4,8 @@ description: Learn how to install the Cart + Product Bundles feature in a Spryke
 last_updated: Jun 20, 2022
 template: feature-integration-guide-template
 related:
-  - title: Glue API - Product Bundle + Cart feature integration
-    link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-product-bundle-cart-feature-integration.html
+  - title: Install the Cart + Product Bundle Glue API
+    link: docs/pbc/all/cart-and-checkout/install-and-upgrade/install-the-cart-product-bundle-glue-api.html
   - title: Product Bundles feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/product-bundles-feature-walkthrough.html
   - title: Cart feature integration

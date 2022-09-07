@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202200.0/checkout-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/checkout-feature-integration.html  
 related:
-  - title: Glue API - Checkout feature integration
+  - title: Install the Checkout Glue API
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-checkout-feature-integration.html
   - title: Checkout feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/checkout-feature-walkthrough.html

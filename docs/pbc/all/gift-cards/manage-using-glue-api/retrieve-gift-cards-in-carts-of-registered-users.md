@@ -9,7 +9,7 @@ This document describes how to retrieve gift cards in carts of registered users 
 
 ## Installation
 
-* [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html)
+* [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html)
 
 
 ## Retrieve registered user's carts

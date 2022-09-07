@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/checking-out-purchases
   - /docs/scos/dev/glue-api-guides/202204.0/checking-out/checking-out-purchases.html
 related:
-  - title: Glue API - Checkout feature integration
+  - title: Install the Checkout Glue API
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-checkout-feature-integration.html
   - title: Checkout
     link: docs/scos/user/features/page.version/checkout-feature-overview/checkout-feature-overview.html

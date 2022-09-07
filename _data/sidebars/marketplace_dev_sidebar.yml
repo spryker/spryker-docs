@@ -7,7 +7,7 @@ entries:
       - title: Setup
         include_versions:
         nested:
-          - title: DevVM system requirements
+          - title: System requirements
             url: /docs/marketplace/dev/setup/system-requirements.html
             include_versions:
             - "202204.0"

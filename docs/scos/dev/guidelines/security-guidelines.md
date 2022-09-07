@@ -25,7 +25,7 @@ related:
     link: docs/scos/dev/guidelines/project-development-guidelines.html
 ---
 
-This doc describes the guidelines for securing your customers' and partners' data.
+This document describes the guidelines for securing your customers' and partners' data.
 
 ## Passwords
 
@@ -50,7 +50,7 @@ TLS configuration is configured on the webserver level. See the following config
 
 ### Forced encrypted communication
 
-Optionally, you can force HTTPS for the Storefront, Back Office, and Glue using the  `Strict-Transport-Security` header:
+Optionally, you can force HTTPS for the Storefront, Back Office, and Glue using the `Strict-Transport-Security` header:
 * `HttpConstants::ZED_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED`
 * `HttpConstants::YVES_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED`
 * `HttpConstants::ZED_HTTP_STRICT_TRANSPORT_SECURITY_CONFIG`
@@ -101,9 +101,9 @@ The Storefront uses HTTP RPC calls to communicate with the Back Office. Secure t
 Avoid triggering remote code execution as follows:
 
 * Local file inclusion: using unsanitized paths in `include` statements. To limit locations of files to be included, use the `include_path` PHP configuration option.
-* Remote file inclusion: Avoid using unsanitized URLs or user input in `include` statements.
+* Remote file inclusion: avoid using unsanitized URLs or user input in `include` statements.
 * Unsafe deserialization. Serialized data should not be sent to the browser and should not be accepted back by the server. During deserialization of serialized data, PHP might instantiate classes mentioned in the payload and invoke some actions. Avoid this behavior or implement signature verification methods to validate this input.
-* Command injection: avoid forwarding user input to `exec`, `system`, `passthru` or similar functions.
+* Command injection: avoid forwarding user input to `exec`, `system`, `passthru`, or similar functions.
 
 ## SQL injection
 
@@ -112,7 +112,7 @@ SQL injections are happening when unsanitized user input is embedded into an SQL
 * Propel to build queries and avoid plain SQL.
 * Prepared statements (used by Propel by default) and typed placeholders.
 * Casting incoming data to concrete data types like integer or string.
-* `CastId` method in Zed controllers.
+* The `CastId` method in Zed controllers.
 
 ## Clickjacking
 

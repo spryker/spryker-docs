@@ -32,6 +32,12 @@ The most important about password security is to not save it in plain text. Ther
 
 ## Encrypted communication
 
+{% info_block infoBox "PaaS+" %}
+
+For [PaaS+ projects](/docs/paas-plus/dev/platform-as-a-service-plus.html), encyrpted communication is implemented on the infrastructure level. On the application side, you can optionally [force encrypted communication](#forced-encrypted-communication)
+
+{% endinfo_block %}
+
 As HTTP is a textual protocol having no built-in encryption, passwords and customer personal data are transferred to shops in plain text. So, a good practice is to configure and implement transport layer security (TLS), which is widely known to most users as HTTPS.
 
 In most cases, it prevents eavesdropping on traffic of users in local public networks like free Wi-Fi hotspots. Besides, it can be used to authenticate users using third-party integrations by requiring a client certificate to be trusted.
@@ -40,6 +46,8 @@ TLS configuration is configured on the webserver level. See the following config
 
 * [Nginx](https://nginx.org/en/docs/http/configuring_https_servers.html)
 * [Apache](https://httpd.apache.org/docs/2.4/ssl/ssl_howto.html)
+
+### Forced encrypted communication
 
 Optionally, you can force HTTPS for the Storefront, Back Office, and Glue using the  `Strict-Transport-Security` header:
 * `HttpConstants::ZED_HTTP_STRICT_TRANSPORT_SECURITY_ENABLED`
@@ -117,33 +125,33 @@ SQL injections are happening when unsanitized user input is embedded into an SQL
 
 Clickjacking is when UI tweaked to force users to click on specific buttons or links. To prevent clickjacking, set correct headers in `X-Frame-Options` and `Content-Security-Policy` provided by `HeadersSecurityServiceProvider`. Make sure that the headers are not deleted by webserver configuration. For more information about clickjacking, see the [OWASP](https://owasp.org/www-community/attacks/Clickjacking) article.
 
-### Obsolete or outdated dependencies
+## Obsolete or outdated dependencies
 
-To make sure that all the security updates are installed, keep Spryker and third-party modules up to date.
+To make sure that all the security updates are installed, keep Spryker and third-party modules up to date. For upgradability guidelines, see [Keeping a project upgradable](/docs/scos/dev/guidelines/keeping-a-project-upgradable/keeping-a-project-upgradable.html).
 
-### Exceptions/Debug
+## Exceptions and debug mode
 
 Make sure that, in your production environment, the debugging mode is disabled, and exceptions are not shown.
 
 
-Debug mode is configured with:
+Debug mode is configured with the following:
 * `ApplicationConstants::ENABLE_APPLICATION_DEBUG`
 * `ShopApplicationConstants::ENABLE_APPLICATION_DEBUG`
 * `GlueApplicationConstants::GLUE_APPLICATION_REST_DEBUG`
 
-### Demo data
+## Demo data
 
-*Remove all the demo data from the environment*. The project should only use the real data that will be used after the go-live. Remove all the demo data that comes with the Spryker repository, which includes demo and admin users. Demo admin users in a live shop pose a significant security risk for your project. In addition, make sure to set strong passwords when creating new admin users.
+*Remove all the demo data from the environment*. A project should only use the real data that will be used after going live. Remove all the demo data that comes with Spryker, which includes demo and admin users. Demo admin users in a live shop pose a significant security risk for your project. Also, make sure to set strong passwords when creating new admin users.
 
-### Summary
+## Summary
 
-To sum up, the main points recommended to keep the data secure are:
+To sum up, the main points to keep the data secure are the following:
 
-* Educate: Learn and spread OWASP guidelines in your team
-* Check web server configuration and presence of security-related HTTP headers
-* Check cookie settings
-* Configure TLS
-* Secure Zed, do not make it public
-* Check Spryker configuration and change default authentication parameters (users, passwords)
-* Keep systems and applications up-to-date
-* Make sure that exceptions are not shown and debug mode is disabled on production
+* Educate: Learn and spread [OWASP guidelines](https://owasp.org/www-project-secure-coding-practices-quick-reference-guide/migrated_content) in your team.
+* Check web server configuration and presence of security-related HTTP headers.
+* Check cookie settings.
+* Configure TLS.
+* Secure the Back Office, do not make it public.
+* Check Spryker configuration and change default authentication parameters like users and passwords.
+* Keep systems and applications up to date.
+* Make sure that exceptions are not shown and debug mode is disabled on production.

@@ -8,6 +8,8 @@ entries:
   - title: Setup
     url: /docs/scos/dev/setup/setup.html
     nested:
+    - title: System requirements
+      url: /docs/scos/dev/setup/system-requirements.html
     - title: Installing Spryker with Docker
       url: /docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
       nested:
@@ -48,8 +50,6 @@ entries:
     - title: Installing Spryker with Development Virtual Machine
       url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html
       nested:
-      - title: DevVM system requirements
-        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html
       - title: SCOS supported browsers
         url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/scos-supported-browsers.html
       - title: Installing on MacOS and Linux

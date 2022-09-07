@@ -40,7 +40,7 @@ To learn more about the feature and to find out how end users use it, see [Marke
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES |DATA IMPORT |
+|INSTALLATION GUIDES |DATA IMPORT |
 |---------|---------|
 | [Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-inventory-management-feature-integration.html) | [File details: merchant_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-stock.csv.html) |
 | [Glue API: Marketplace Inventory Management feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/marketplace-inventory-management-feature-integration.html)  | [File details: product_offer_stock.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-product-offer-stock.csv.html) |

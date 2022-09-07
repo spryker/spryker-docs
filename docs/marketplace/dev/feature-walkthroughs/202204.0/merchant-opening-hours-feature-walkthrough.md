@@ -38,7 +38,7 @@ The following schema illustrates the Merchant Opening Hours domain model:
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
+|INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
 |---------|---------|---------|
 | [Merchant Opening Hours feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/merchant-opening-hours-feature-integration.html)    |[Retrieve profile information for a merchant](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchants.html#retrieve-a-merchant)        | [File details: merchant_open_hours_week_day_schedule.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-open-hours-week-day-schedule.csv.html)        |
 | [Glue API: Merchant Opening Hours integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/glue/merchant-opening-hours-feature-integration.html)    |[Retrieve merchant opening hours](/docs/marketplace/dev/glue-api-guides/{{page.version}}/merchants/retrieving-merchant-opening-hours.html)         | [File details: merchant_open_hours_date_schedule.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-open-hours-date-schedule.csv.html)        |

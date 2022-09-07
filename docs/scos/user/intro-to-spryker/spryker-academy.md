@@ -1,6 +1,6 @@
 ---
 title: Spryker Academy
-description: This page introduces Spryker Academy.
+description: Spryker Academy is a dedicated resource for learning Spryker Commerce OS through a variety of self-paced and instructor-led courses.
 last_updated: Sep 6, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-videos
@@ -173,7 +173,7 @@ redirect_from:
 
 We believe that good technology doesn’t stop with the code. You also need examples and information to help you convert your vision into reality.
 
-[Spryker Academy](https://training.spryker.com/pages/spryker-tv) is a dedicated resource for learning our Spryker Commerce OS through a variety of training materials.
+[Spryker Academy](https://academy.spryker.com/learn) is a dedicated resource for learning our Spryker Commerce OS through a variety of self-paced and instructor-led courses.
 
 
 

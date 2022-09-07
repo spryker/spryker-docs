@@ -117,65 +117,6 @@ To add items to a shopping list, send the request:
 ```
 </details>
 
-<!-- Add conf product to the shopping list-->
-
-<details>
-<summary markdown='span'>Request sample: add a configurable product to the shopping list</summary>
-
-`POST https://glue.myspryker.com/shopping-lists/333327a9-3654-5382-b81b-4992458ebae8/shopping-list-items`
-
-```json
-{
-    "data": {
-        "type": "shopping-list-items",
-        "attributes": {
-            "sku": "093_24495843",
-            "quantity": 3,
-            "productConfigurationInstance": {
-                "displayData": "{\"Preferred time of the day\": \"Afternoon\", \"Date\": \"9.09.2050\"}",
-                "configuration": "{\"time_of_day\": \"4\"}",
-                "configuratorKey": "installation_appointment_test",
-                "isComplete": true,
-                "quantity": 3,
-                "availableQuantity": 4,
-                 "prices": [
-                	  {
-                        "priceTypeName": "DEFAULT",
-                        "netAmount": 23434,
-                        "grossAmount": 42502,
-                        "currency": {
-                            "code": "EUR",
-                            "name": "Euro",
-                            "symbol": "€"
-                        },
-                        "volumePrices": [
-                            {
-                                "netAmount": 150,
-                                "grossAmount": 165,
-                                "quantity": 5
-                            },
-                            {
-                                "netAmount": 145,
-                                "grossAmount": 158,
-                                "quantity": 10
-                            },
-                            {
-                                "netAmount": 140,
-                                "grossAmount": 152,
-                                "quantity": 20
-                            }
-                        ]
-                    }
-                ]
-            }
-        }
-    }
-}
-```
-
-</details>
-
-
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | quantity | Integer | ✓ | Quantity of the product to add. |
@@ -313,65 +254,6 @@ To add items to a shopping list, send the request:
         },
         "links": {
             "self": "https://glue.mysprykershop.com/shopping-lists/c0bc6296-8a0c-50d9-b25e-5bface7671ce/shopping-list-items/946451d1-3c40-559e-95c7-ebda2d12bebf"
-        }
-    }
-}
-```
-</details>
-
-<summary markdown='span'>Response sample: add a configurable product to the shopping list</summary>
-
-```json
-{
-    "data": {
-        "type": "shopping-list-items",
-        "id": "f4ef6ec3-d0c1-55f8-80c9-6ef120d4761f",
-        "attributes": {
-            "productOfferReference": null,
-            "merchantReference": "MER000001",
-            "quantity": 3,
-            "sku": "093_24495843",
-            "productConfigurationInstance": {
-                "displayData": "{\"Preferred time of the day\": \"Afternoon\", \"Date\": \"9.09.2050\"}",
-                "configuration": "{\"time_of_day\": \"4\"}",
-                "configuratorKey": "installation_appointment_test",
-                "isComplete": true,
-                "quantity": 3,
-                "availableQuantity": 4,
-                "prices": [
-                    {
-                        "netAmount": 23434,
-                        "grossAmount": 42502,
-                        "priceTypeName": "DEFAULT",
-                        "volumeQuantity": null,
-                        "currency": {
-                            "code": "EUR",
-                            "name": "Euro",
-                            "symbol": "€"
-                        },
-                        "volumePrices": [
-                            {
-                                "grossAmount": 165,
-                                "netAmount": 150,
-                                "quantity": 5
-                            },
-                            {
-                                "grossAmount": 158,
-                                "netAmount": 145,
-                                "quantity": 10
-                            },
-                            {
-                                "grossAmount": 152,
-                                "netAmount": 140,
-                                "quantity": 20
-                            }
-                        ]
-                    }
-                ]
-            }
-        },
-        "links": {
-            "self": "https://glue.de.scos.demo-spryker.com/shopping-lists/333327a9-3654-5382-b81b-4992458ebae8/shopping-list-items/f4ef6ec3-d0c1-55f8-80c9-6ef120d4761f"
         }
     }
 }

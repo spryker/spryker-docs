@@ -1,5 +1,5 @@
 ---
-title: Migration guide - CartsRestApi
+title: Upgrade the CartsRestApi module
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cartsrestapi-migration-guide
@@ -29,6 +29,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/cartsrestapi-migration-guide.html
   - /docs/scos/dev/module-migration-guides/glue-api/cartsrestapi-migration-guide.html
   - /module_migration_guides/glue_api/cartsrestapi-migration-guide.htm
+  - /docs/scos/dev/module-migration-guides/202204.0/glue-api/cartsrestapi-migration-guide.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-cartsrestapi-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-glue-api-modules/upgrade-the-cartsrestapi-module.md -->

@@ -18,6 +18,7 @@ redirect_from:
   - /v4/docs/en/checkout-steps
   - /v2/docs/checkout-steps
   - /v2/docs/en/checkout-steps
+  - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html
 related:
   - title: Multi-Step Checkout
     link: docs/scos/user/features/page.version/checkout-feature-overview/multi-step-checkout-overview.html
@@ -36,7 +37,7 @@ The checkout process consists of the following steps:
 * Place order step
 * Success step
 
-![Quote_transfer_lifetime.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Checkout/Multi-Step+Checkout/Checkout+Steps/quote-transfer-lifetime.png) 
+![Quote_transfer_lifetime.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Checkout/Multi-Step+Checkout/Checkout+Steps/quote-transfer-lifetime.png)
 
 Read on to learn more on each step.
 

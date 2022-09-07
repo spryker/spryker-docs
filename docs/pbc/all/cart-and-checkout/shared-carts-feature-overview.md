@@ -11,6 +11,7 @@ redirect_from:
   - /docs/shared-carts-feature-overview
   - /docs/en/shared-carts-feature-overview
   - /docs/scos/user/features/202200.0/shared-carts-feature-overview.html
+  - /docs/scos/user/features/202204.0/shared-carts-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202200.0/shared-carts-feature-walkthrough.html  
 ---
 

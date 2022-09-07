@@ -144,7 +144,6 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/checkout-feature-walkthrough.html
       include_versions:
       - "202108.0"
-      - "202204.0"
     - title: Cms
       url: /docs/scos/dev/feature-walkthroughs/cms-feature-walkthrough/cms-feature-walkthrough.html
       include_versions:
@@ -1107,13 +1106,11 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Submitting checkout data
         url: /docs/scos/dev/glue-api-guides/checking-out/submitting-checkout-data.html
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Checking out purchases
         url: /docs/scos/dev/glue-api-guides/checking-out/checking-out-purchases.html
       - title: Updating payment data
@@ -1121,7 +1118,6 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
     - title: Retrieving CMS pages
       url: /docs/scos/dev/glue-api-guides/retrieving-cms-pages.html
       include_versions:
@@ -1246,7 +1242,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Glue API - CMS
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-cms-feature-integration.html
         include_versions:
@@ -1632,7 +1627,6 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Checkout + Quotation Process
       url: /docs/scos/dev/feature-integration-guides/checkout-quotation-process-feature-integration.html
       include_versions:
@@ -1641,9 +1635,14 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Checkout Workflow
       url: /docs/scos/dev/feature-integration-guides/checkout-workflow-integration-guide.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: CMS
       url: /docs/scos/dev/feature-integration-guides/cms-feature-integration.html
       include_versions:
@@ -2347,12 +2346,8 @@ entries:
     - title: Glue API
       url: /docs/scos/dev/module-migration-guides/glue-api/about-glue-api-migration-guides.html
       nested:
-      - title: Migration Guide - CartsRestApi
-        url: /docs/scos/dev/module-migration-guides/glue-api/cartsrestapi-migration-guide.html
       - title: Migration Guide - CatalogSearchRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/catalogsearchrestapi-migration-guide.html
-      - title: Migration Guide - CheckoutRestApi
-        url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-checkoutrestapi.html
       - title: Migration Guide - CompanyUserAuthRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/companyuserauthrestapi-migration-guide.html
       - title: Migration Guide - CompanyUsersRestApi
@@ -2369,7 +2364,6 @@ entries:
         url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationspriceproductvolumesrestapi.html
       - title: Migration guide - ProductConfigurationsRestApi
         url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationsrestapi.html
-
     - title: Migration Guide - API Module
       url: /docs/scos/dev/module-migration-guides/migration-guide-api-module.html
     - title: Migration guide - Auth module to SecurityGui module
@@ -2378,13 +2372,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-business-on-behalf-data-import.html
     - title: Migration Guide - Calculation
       url: /docs/scos/dev/module-migration-guides/migration-guide-calculation.html
-    - title: Migration Guide - Cart
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cart.html
-    - title: Migration Guide - CartExtension
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cartextension.html
-    - title: Migration Guide - CartPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cartpage.html
-    - title: Migration Guide - CartVariant
       url: /docs/scos/dev/module-migration-guides/migration-guide-cartvariant.html
     - title: Migration Guide - Catalog
       url: /docs/scos/dev/module-migration-guides/migration-guide-catalog.html
@@ -2398,10 +2385,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-categorypagesearch.html
     - title: Migration guide - CategoryStorage
       url: /docs/scos/dev/module-migration-guides/migration-guide-categorystorage.html
-    - title: Migration Guide - Checkout
-      url: /docs/scos/dev/module-migration-guides/migration-guide-checkout.html
-    - title: Migration Guide - CheckoutPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-checkoutpage.html
     - title: Migration Guide - CMS Block Category Connector Migration Console
       url: /docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector-migration-console.html
     - title: Migration Guide - CMS Block Category Connector
@@ -3461,12 +3444,6 @@ entries:
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
         - title: Multi-language setup
           url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html
-        - title: Checkout
-          nested:
-          - title: Checkout steps
-            url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html
-          - title: Checkout process review and implementation
-            url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-process-review-and-implementation.html
         - title: Step engine
           nested:
           - title: Step engine - creating a breadcrumb navigation
@@ -4018,8 +3995,6 @@ entries:
     nested:
     - title: Introduction Tutorials
       nested:
-      - title: "Tutorial: Checkout and step engine - Spryker Commerce OS"
-        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-checkout-and-step-engine-spryker-commerce-os.html
       - title: "Tutorial: Sending an email"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email.html
       - title: "Tutorial: Handling new types of entity URLs - Legacy Demoshop"
@@ -4139,7 +4114,7 @@ entries:
           - title: "HowTo: Create a custom content item"
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-custom-content-item.html
         - title: "HowTo: Define if a cart should be deleted after placing an order"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
+          url: /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
         - title: "HowTo: Render configurable bundle templates in the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html
         - title: "HowTo: Disable split delivery in Yves interface"
@@ -4195,16 +4170,12 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-graceful-shutdown.html
       - title: "HowTo: Install Spryker in AWS environment"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-install-spryker-in-aws-environment.html
-      - title: "HowTo: Enable guest checkout in B2B demo shop"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-enable-guest-checkout-in-b2b-demo-shop.html
       - title: "HowTo: Set up custom response headers on project level"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-custom-response-headers-on-project-level.html
       - title: "HowTo: Set up database connections"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-database-connections.html
       - title: "HowTo: Replace Spryker module dependencies"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-spryker-module-dependencies.html
-      - title: "HowTo: Add additional countries to Spryker checkout"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-additional-countries-to-spryker-checkout.html
       - title: "HowTo: Product data from import to frontend view"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-product-data-from-import-to-frontend-view.html
       - title: "HowTo: enable SFTP for Flysystem"

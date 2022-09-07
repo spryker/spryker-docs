@@ -1,6 +1,8 @@
 ---
 title: "Persistent Cart Sharing: module relations"
 template: feature-walkthrough-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202204.0/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-module-relations.html
 ---
 
 The following schema illustrates module relations in the Unique URL per Cart for Easy Sharing feature:

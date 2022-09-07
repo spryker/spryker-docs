@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/checking-out-purchases
   - /docs/checking-out-purchases
   - /docs/en/checking-out-purchases
+  - /docs/scos/dev/glue-api-guides/202204.0/checking-out/checking-out-purchases.html
 related:
   - title: Glue API - Checkout feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-checkout-feature-integration.html
@@ -38,7 +39,7 @@ The endpoint also provides information on whether it is necessary to redirect th
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html)
+* [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html)
 * [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html)
 * [Glue API: Configurable Bundle feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-feature-integration.html)
 * [Glue API: Configurable Bundle + Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-configurable-bundle-cart-feature-integration.html)

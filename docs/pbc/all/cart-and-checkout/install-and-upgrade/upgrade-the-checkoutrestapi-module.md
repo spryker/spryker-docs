@@ -1,5 +1,5 @@
 ---
-title: Migration guide - CheckoutRestApi
+title: Upgrade the CheckoutRestApi module
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/mg-checkoutrestapi
@@ -19,6 +19,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/glue-api/migration-guide-checkoutrestapi.html
   - /docs/scos/dev/module-migration-guides/202009.0/glue-api/migration-guide-checkoutrestapi.html
   - /docs/scos/dev/module-migration-guides/202108.0/glue-api/migration-guide-checkoutrestapi.html
+  - /docs/scos/dev/module-migration-guides/202204.0/glue-api/migration-guide-checkoutrestapi.html
 related:
   - title: Migration guide - Payment
     link: docs/scos/dev/module-migration-guides/migration-guide-payment.html

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/persistent-cart-sharing-feature-overview
   - /docs/en/persistent-cart-sharing-feature-overview
   - /docs/scos/dev/feature-walkthroughs/202204.0/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-walkthrough.html
+  - /docs/scos/user/features/202204.0/persistent-cart-sharing-feature-overview.html
 ---
 
 The *Persistent Cart Sharing* feature lets company users generate the URL to share the cart with different access levels. To generate the link, you need to be logged in to a company account.

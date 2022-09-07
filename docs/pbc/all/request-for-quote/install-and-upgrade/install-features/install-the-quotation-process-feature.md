@@ -19,7 +19,7 @@ related:
       link: docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-approval-process-feature.html
     - title: Install the Quotation Process + Multiple Carts feature
       link: docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-multiple-carts-feature.html
-    - title: Checkout + Quotation Process feature integration
+    - title: Install the Checkout + Quotation Process feature
       link: docs/scos/dev/feature-integration-guides/page.version/checkout-quotation-process-feature-integration.html
 ---
 {% include pbc/all/install-features/202204.0/install-the-quotation-process-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-quotation-process-feature.md -->

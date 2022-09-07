@@ -1,5 +1,5 @@
 ---
-title: Migration guide - CartVariant
+title: Upgrade the CartVariant module
 description: Use the guide to migrate to a new version of the CartVariant module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -20,5 +20,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cartvariant.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cartvariant.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cartvariant.html
+  - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-cartvariant.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-cartvariant-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cartvariant-module.md -->

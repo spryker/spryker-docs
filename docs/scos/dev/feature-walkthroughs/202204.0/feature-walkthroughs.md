@@ -26,26 +26,6 @@ The [Alternative Products](/docs/scos/dev/feature-walkthroughs/{{page.version}}/
 
 The [Approval Process](/docs/scos/dev/feature-walkthroughs/{{page.version}}/approval-process-feature-walkthrough.html) feature enables managers to control purchases requested by their employees.
 
-## Cart
-
-The [Cart](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-feature-walkthrough.html) feature provides functionality of the shopping cart and cart total calculations.
-
-### Calculation 3.0
-
-Spryker uses the [Calculation](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-3-0.html) module to calculate the cart totals that are displayed in the cart/checkout or when the order is placed.
-
-### Calculation data structure
-
-This describes the structure of how Spryker [calculates its data](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-data-structure.html) between different transfers.
-
-### Calculator plugins
-
-This states the various parts of the [Calculator plugin](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculator-plugins.html) method.
-
-### Cart module: reference information
-
-Our [Cart consists of a few components](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-module-reference-information.html) in Yves and Zed. The Yves components create the cart requests and persist the cart into the session. The Zed components persist the data into the database and expand the items with data obtained from plugins.
-
 ### Resource Sharing
 
 The [Resource Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/resource-sharing-feature-walkthrough.html) allows creating a unique URL for any entity in the Spyker Commerce OS. For each entity, you should use an additional connector-module. For example, to share a cart through a URL, Resource Sharing should be combined with Persistent Cart Sharing.

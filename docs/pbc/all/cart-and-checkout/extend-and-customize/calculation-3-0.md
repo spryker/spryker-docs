@@ -3,6 +3,8 @@ title:  Calculation 3.0
 last_updated: Aug 12, 2021
 description: The Calculation module is used to calculate the cart totals displayed in the cart/checkout or when the order is placed. The article describes its workflow.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202204.0/cart-feature-walkthrough/calculation-3-0.html
 ---
 
 Spryker uses the Calculation module to calculate the cart totals that are displayed in the cart/checkout or when the order is placed.
@@ -21,11 +23,11 @@ There is already a list of plugins that populate quote transfer with correspondi
 
 {% info_block infoBox %}
 
-For more details, check [Cart Data Flow](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-module-reference-information.html#cart-data-flow) in the *Cart Functionality* section.
+For more details, check [Cart Data Flow](/docs/pbc/all/cart-and-checkout/extend-and-customize/cart-module-reference-information.html#cart-data-flow) in the *Cart Functionality* section.
 
 {% endinfo_block %}
 
-If manual recalculation of cart is required, then `CalculationFacade::recalculate` can be called from Zed or `CalculationClient::recalculate` from Yves with prepared [Calculation Data Structure](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-data-structure.html#quote-transfer). When the recalculation operation is called, the calculator runs the calculator plugin stack and each plugin modifies the `QuoteTransfer` (calculates discounts, adds sum gross prices, calculates taxes). Most plugins require the `unitGrossPrice` and the `quantity` to be provided.
+If manual recalculation of cart is required, then `CalculationFacade::recalculate` can be called from Zed or `CalculationClient::recalculate` from Yves with prepared [Calculation Data Structure](/docs/pbc/all/cart-and-checkout/extend-and-customize/calculation-data-structure.html#quote-transfer). When the recalculation operation is called, the calculator runs the calculator plugin stack and each plugin modifies the `QuoteTransfer` (calculates discounts, adds sum gross prices, calculates taxes). Most plugins require the `unitGrossPrice` and the `quantity` to be provided.
 
 {% info_block infoBox "Calculated amounts" %}
 

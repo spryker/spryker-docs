@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/submitting-checkout-data
   - /docs/submitting-checkout-data
   - /docs/en/submitting-checkout-data
+  - /docs/scos/dev/glue-api-guides/202204.0/checking-out/submitting-checkout-data.html
 related:
   - title: Checking out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
@@ -24,7 +25,7 @@ To help customers select payment and shipment methods, the endpoint allows retri
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html)
+* [Install the Checkout Glue API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-checkout-feature-integration.html)
 * [Glue API: Shipment feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html)
 
 

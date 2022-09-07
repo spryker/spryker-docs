@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/managing-items-in-carts-of-registered-users
   - /docs/managing-items-in-carts-of-registered-users
   - /docs/en/managing-items-in-carts-of-registered-users
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
 related:
   - title: Managing carts of registered users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
@@ -23,7 +24,7 @@ This endpoint allows managing items in carts of registered users by adding, chan
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
+* [Glue API: Cart feature integration](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-the-cart-glue-api.html)
 * [Glue API: Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
 * [Glue API: Product Options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)

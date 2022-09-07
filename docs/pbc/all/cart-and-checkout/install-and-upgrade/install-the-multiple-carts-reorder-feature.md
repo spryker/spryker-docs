@@ -11,6 +11,7 @@ redirect_from:
   - /docs/multiple-carts-reorder-feature-integration
   - /docs/en/multiple-carts-reorder-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/multiple-carts-reorder-feature-integration.html
+  - /docs/scos/dev/feature-integration-guides/202204.0/multiple-carts-reorder-feature-integration.html  
 related:
   - title: Multiple Carts feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/multiple-carts-feature-walkthrough.html

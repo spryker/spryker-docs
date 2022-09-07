@@ -15,6 +15,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201907.0/managing-customers/retrieving-customer-carts.html
   - /docs/scos/dev/glue-api-guides/202005.0/managing-customers/retrieving-customer-carts.html
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/retrieving-customer-carts.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-customers/retrieving-customer-carts.html
 related:
   - title: Managing carts of registered users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
@@ -44,7 +45,7 @@ This endpoint allows retrieving a customer’s carts.
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Glue API: Cart feature integration](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-the-cart-glue-api.html).
 
 ## Retrieve customer’s carts
 

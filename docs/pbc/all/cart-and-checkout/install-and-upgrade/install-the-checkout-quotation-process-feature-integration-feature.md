@@ -1,5 +1,5 @@
 ---
-title: Checkout + Quotation Process feature integration
+title: Install the Checkout + Quotation Process feature
 description: The guide describes the process of installing the Checkout + Quotation process feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/checkout-quotation-process-feature-integration
   - /docs/checkout-quotation-process-feature-integration
   - /docs/en/checkout-quotation-process-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202204.0/checkout-quotation-process-feature-integration.html
 related:
   - title: Install the Quotation Process feature
     link: docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-feature.html

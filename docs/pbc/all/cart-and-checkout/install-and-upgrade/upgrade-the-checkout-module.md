@@ -1,5 +1,5 @@
 ---
-title: Migration guide - Checkout
+title: Upgrade the Checkout module
 description: Use the guide to update versions to the newer ones of the Checkout module.
 last_updated: Jun 16, 2021
 template: module-migration-guide-template
@@ -30,6 +30,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-checkout.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-checkout.html
   - /module_migration_guides/mg-checkout.htm
+  - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-checkout.html
 related:
   - title: Checkout
     link: docs/scos/user/features/page.version/checkout-feature-overview/checkout-feature-overview.html

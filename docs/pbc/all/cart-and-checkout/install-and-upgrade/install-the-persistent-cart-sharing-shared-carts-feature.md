@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/persisitent-cart-sharing-shared-carts-integration
   - /docs/persisitent-cart-sharing-shared-carts-integration
   - /docs/en/persisitent-cart-sharing-shared-carts-integration
+  - /docs/scos/dev/feature-integration-guides/202204.0/persistent-cart-sharing-shared-carts-feature-integration.html
 related:
   - title: Persistent Cart Sharing feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-walkthrough.html

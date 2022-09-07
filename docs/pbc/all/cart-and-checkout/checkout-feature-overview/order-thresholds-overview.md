@@ -1,5 +1,5 @@
 ---
-title: Order Thresholds feature overview
+title: Order Thresholds overview
 description: Order thresholds let you control the values of the orders that your customers place. You can define a maximum or minimum monetary value for customers to reach to place an order.
 last_updated: Jul 19, 2021
 template: concept-topic-template
@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/order-thresholds
   - /docs/order-thresholds
   - /docs/en/order-thresholds
+  - /docs/scos/user/features/202204.0/checkout-feature-overview/order-thresholds-overview.html
 ---
 
 *Order thresholds* let you control the values of the orders that your customers place. You can define a maximum or minimum monetary value for customers to reach to place an order. Apart from just disallowing a customer to place an order if a threshold condition is not fulfilled, you can request them to pay different types of fees.

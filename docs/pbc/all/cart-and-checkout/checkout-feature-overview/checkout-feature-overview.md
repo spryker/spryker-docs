@@ -10,8 +10,8 @@ redirect_from:
   - /2021080/docs/en/checkout
   - /docs/checkout
   - /docs/en/checkout
-  - /docs/scos/user/features/202200.0/checkout-feature-overview/multi-step-checkout-overview.html
   - /docs/scos/user/features/202200.0/checkout-feature-overview/checkout-feature-overview.html
+  - /docs/scos/user/features/202204.0/checkout-feature-overview/checkout-feature-overview.html
 ---
 
 
@@ -37,13 +37,14 @@ With order thresholds, you can do the following:
 
 ## Related Business User articles
 
-|BACK OFFICE USER GUIDES|
+|OVERVIEWS|
 |---|
-| [Get a general idea of Multi-step Checkout](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html)  |
-| [Get a general idea of Order Thresholds](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html)  |
+| [Multi-step Checkout](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/multi-step-checkout-overview.html)  |
+| [Order Thresholds](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html)  |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Checkout feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/checkout-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INSTALLATION GUIDES | UPGRADE GUIDES| DATA IMPORT |
+|---------|---------|---------|
+| [Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/checkout-feature-integration.html) | [Upgrade the Checkout module](/docs/scos/dev/module-migration-guides/migration-guide-checkout.html)  | [File details: sales_order_threshold.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-sales-order-threshold.csv.html)  |
+| [Merchant feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html) | [Upgrade the CheckoutPage module](/docs/scos/dev/module-migration-guides/migration-guide-checkoutpage.html) |   |

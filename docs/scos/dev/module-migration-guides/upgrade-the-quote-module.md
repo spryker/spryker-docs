@@ -32,7 +32,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/migration-guide-quote.html
   - /module_migration_guides/mg-quote.htm
 related:
-  - title: Migration guide - Cart
+  - title: Upgrade the Cart module
     link: docs/scos/dev/module-migration-guides/migration-guide-cart.html
 ---
 

@@ -5,6 +5,7 @@ description: The extensive Cart allows your customers to add products to their C
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202005.0/cart-feature-walkthrough/cart-module-reference-information.html
+  - /docs/scos/dev/feature-walkthroughs/202204.0/cart-feature-walkthrough/cart-module-reference-information.html
 ---
 
 Our `Cart` consists of a few components in Yves and Zed. The Yves components create the cart requests and persist the cart into the session. The Zed components persist the data into the database and expand the items with data obtained from plugins.

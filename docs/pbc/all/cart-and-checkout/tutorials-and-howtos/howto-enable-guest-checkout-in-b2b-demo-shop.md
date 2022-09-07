@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/howto-enable-guest-checkout-in-b2b-demo-shop
   - /v6/docs/howto-enable-guest-checkout-in-b2b-demo-shop
   - /v6/docs/en/howto-enable-guest-checkout-in-b2b-demo-shop
+  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-enable-guest-checkout-in-b2b-demo-shop.html
 related:
   - title: Checkout steps
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html

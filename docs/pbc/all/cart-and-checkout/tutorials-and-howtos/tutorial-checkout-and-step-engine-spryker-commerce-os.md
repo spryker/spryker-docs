@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/t-checkout-and-step-engine-spryker-commerce-os
   - /v1/docs/t-checkout-and-step-engine-spryker-commerce-os
   - /v1/docs/en/t-checkout-and-step-engine-spryker-commerce-os
+  - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-checkout-and-step-engine-spryker-commerce-os.html
 related:
   - title: Checkout steps
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html

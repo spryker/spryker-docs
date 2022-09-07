@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/checkout-workflow
   - /docs/checkout-workflow
   - /docs/en/checkout-workflow
+  - /docs/scos/dev/glue-api-guides/202204.0/checking-out/checkout-workflow.html
 related:
   - title: Checking out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/cart-non-splittable-products-feature-integration
   - /docs/cart-non-splittable-products-feature-integration
   - /docs/en/cart-non-splittable-products-feature-integration
+  - /docs/scos/dev/feature-integration-guides/202204.0/cart-non-splittable-products-feature-integration.html
 related:
   - title: Cart feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-feature-walkthrough.html

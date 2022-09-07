@@ -79,7 +79,7 @@ CSRF forces a user to execute unwanted actions while being logged in and either 
 
 Cross-site scripting is a possibility to inject malicious scripts to be executed in the browser context, for example, for a logged-in user to scrape information from the page or steal cookies. To prevent such vulnerabilities, developers should filter input and sanitize output to prevent rendering HTML or JS code from user input.
 
-Twig template engine has autoescaping enabled by default, so make sure to not use a “raw” filter. HTML should be stripped from user input.
+Twig template engine has autoescaping enabled by default, so make sure to not use a `raw` filter. HTML should be stripped from user input.
 
 Usually, shop operators are trusted to enter raw HTML. As it is impossible to limit them in this case, we recommend restricting access to the Back Office and other administrative panels in your shop. For example, introduce a VPN, IP whitelisting, or additional authentication.
 

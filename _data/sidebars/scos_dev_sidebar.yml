@@ -2663,6 +2663,7 @@ entries:
       include_versions:
       - "202001.0"
   - title: Data import
+    url: /docs/scos/dev/data-import/data-import.html
     include_versions:
     - "202005.0"
     - "202009.0"

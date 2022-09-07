@@ -789,6 +789,7 @@ entries:
             - "202108.0"
             - "202204.0"
       - title: Data import
+        url: /docs/marketplace/dev/data-import/data-import.html
         nested:
           - title: Marketplace setup
             url: /docs/marketplace/dev/data-import/marketplace-setup.html

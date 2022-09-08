@@ -13,8 +13,8 @@ redirect_from:
 related:
   - title: Retrieving concrete products
     link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-products.html
-  - title: Retrieving concrete product availability
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-product-availability.html
+  - title: Retrieve concrete product availability
+    link: docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-concrete-product-availability.html
   - title: Retrieving concrete product prices
     link: docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html
   - title: Retrieving image sets of concrete products

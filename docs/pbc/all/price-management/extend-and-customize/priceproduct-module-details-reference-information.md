@@ -50,6 +50,8 @@ The `PriceProduct` module has a set of plugins necessary for work with the price
 Based on `PriceProductCriteria`, you can build your own `QueryCriteria` to get prices using joins—all prices can be selected from needed price dimensions using only one SQL query. See the DB scheme:
 ![Database scheme](https://spryker.s3.eu-central-1.amazonaws.com/docs/Migration+and+Integration/Module+Migration+Guides/Migration+Guide+-+PriceProduct/priece-dimensions-diagram.png)
 
+### "Orphaned records"
+
 {% info_block errorBox "Important" %}
 
 According to the DB schema, the `spy_price_product_store` table is the common storage for prices from different dimensions. If some price is the same for several dimensions, it will be stored as a single record. When a price is changed in one dimension, and there is no identical price in `spy_price_product_store`, the price will be stored as a new record in this table. This is done to avoid overriding prices in other dimensions. After some time, this table will have so-called "orphaned records" (any price dimension does not have a reference to these prices). To automatically remove them, you can use `src/Pyz/Zed/PriceProduct/PriceProductConfig.php`:

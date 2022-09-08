@@ -70,7 +70,7 @@ To learn more about table design, see [Table design](/docs/marketplace/dev/front
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
+|INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  | REFERENCES  |
 |---------|---------|---------|--------|
 | [Marketplace Merchant Portal Core feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-merchant-portal-core-feature-integration.html)          |          | [File details: merchant_user.csv](/docs/marketplace/dev/data-import/{{page.version}}/file-details-merchant-user.csv.html)           | [GUI modules concept](/docs/marketplace/dev/feature-walkthroughs/{{page.version}}/marketplace-merchant-portal-core-feature-walkthrough/gui-modules-concept.html) |
 |        |          |          | [How to create a new GUI module](/docs/marketplace/dev/howtos/how-to-create-gui-module.html)  |

@@ -30,6 +30,6 @@ The following schema illustrates the *Product Approval Process* domain model:
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | DATA IMPORT |
+|INSTALLATION GUIDES  | DATA IMPORT |
 |---------|---------|
 | [Product Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/product-approval-process-feature-integration.html) | [File details: product_abstract_approval_status.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract-approval-status.csv.html)  |

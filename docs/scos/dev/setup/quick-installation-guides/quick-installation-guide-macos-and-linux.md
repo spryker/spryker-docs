@@ -1,7 +1,7 @@
 ---
 title: 'Quick installation guide: Mac OS and Linux'
-description: Get started with Spryker via Docker on Mac OS and Linux
-last_updated: Jul 5, 2022
+description: Get started with Spryker using Docker on Mac OS and Linux
+last_updated: Sep 8, 2022
 template: howto-guide-template
 ---
 To install Spryker on Mac OS or Linux, follow these steps:
@@ -63,7 +63,7 @@ This mode is better suited to showcase Spryker features.
 
 {% endinfo_block %}
 
-2. Update the host file `/etc/hosts` file with the command that the `docker/sdk bootstrap` command displays.
+2. Update the host file `/etc/hosts` with the command that the `docker/sdk bootstrap` command displays.
 
 ## 5. Build and start your local instance
 
@@ -83,6 +83,6 @@ If you see `.de.` in your URL, it means that this application is store-specific.
 
 {% endinfo_block %}
 
-If you need more details on the installation, see the detailed installation guides:
+If you need more details about the installation, see the detailed installation guides:
 - [Installing in Development mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-macos-and-linux.html)
 - [Installing in Demo mode on MacOS and Linux](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-macos-and-linux.html)

@@ -1,7 +1,7 @@
 ---
 title: 'Quick installation guide: Windows'
-description: Get started with Spryker via Docker on Windows
-last_updated: Jul 5, 2022
+description: Get started with Spryker using Docker on Windows
+last_updated: Sep 8, 2022
 template: howto-guide-template
 ---
 
@@ -84,6 +84,6 @@ If you see `.de.` in your URL, it means that this application is store-specific.
 
 {% endinfo_block %}
 
-If you need more details on the installation, see the detailed installation guides:
+If you need more details about the installation, see the detailed installation guides:
 - [Installing in Development mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-development-mode-on-windows.html)
 - [Installing in Demo mode on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/installing-in-demo-mode-on-windows.html)

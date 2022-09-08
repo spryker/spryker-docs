@@ -4,7 +4,7 @@ description: Find out how you can integrate Bazaarvoice into your Spryker shop
 template: howto-guide-template 
 ---
 
-To integrate Bazaarvoice:
+To integrate Bazaarvoice, follow the steps:
 
 1. In your store's Back Office, go to **Apps > Catalog**.
 2. Click **Bazaarvoice**.

@@ -3,7 +3,7 @@ title: Integrate Usercentrics
 description: Find out how you can integrate Usercentrics in your Spryker shop
 template: howto-guide-template
 ---
-To use Usercentrics, you need an account with Usercentrics. To create it, select the [Usercentrics pricing plan](https://usercentrics.com/pricing/) and then create an account that lets you access the [Usercentrics Admin Interface](https://admin.usercentrics.eu/).
+To use Usercentrics, you need an account with Usercentrics. To create it, select a [Usercentrics pricing plan](https://usercentrics.com/pricing/) and create an account that lets you access the [Usercentrics Admin Interface](https://admin.usercentrics.eu/).
 
 {% info_block infoBox "Info" %}
 
@@ -80,8 +80,8 @@ Every data processing service not supported by Usercentrics by default requires 
 
 If you already have the [Google Tag Manager](https://developers.google.com/tag-platform/tag-manager) integrated into your store, to use the technology legally, you need the cookie consent dialog to appear in your stores. You can achieve that by using the Google Tag Manager with Usercentrics.
 
-To use Usercentrics with the Google Tag Manager, make sure that:
+To use Usercentrics with the Google Tag Manager, make sure the following applies:
 
-- The Usersentrics data processing services match the tracking tools you have in the [Google Tag Manager](https://developers.google.com/tag-platform/tag-manager). For this, in the [Usercentrics Admin Interface](https://admin.usercentrics.eu/), go to **Service Settings&nbsp;<span aria-label="and then">></span> Data Processing Services** and define the same data processing services that you have in the Google Tag Manager.
+- The Usersentrics data processing services match the tracking tools in the [Google Tag Manager](https://developers.google.com/tag-platform/tag-manager). To do that, in the [Usercentrics Admin Interface](https://admin.usercentrics.eu/), go to **Service Settings&nbsp;<span aria-label="and then">></span> Data Processing Services** and define the same data processing services that you have in the Google Tag Manager.
 
 - In the Google Tag Manager UI, configure the variables and triggers to work with Usercentrics. For details about how to do that, see [Google Tag Manager Configuration](https://docs.usercentrics.com/#/browser-sdk-google-tag-manager-configuration).

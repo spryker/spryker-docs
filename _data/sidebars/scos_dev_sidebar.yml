@@ -3555,6 +3555,7 @@ entries:
           - title: Implementing Invoice payment
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment.html
       - title: Data ingestion
+        url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-ingestion.html
         nested:
         - title: Structural preparations
           url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-ingestion.html

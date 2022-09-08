@@ -2664,6 +2664,7 @@ entries:
       include_versions:
       - "202001.0"
   - title: Data import
+    url: /docs/scos/dev/data-import/data-import.html
     include_versions:
     - "202005.0"
     - "202009.0"
@@ -3555,8 +3556,10 @@ entries:
           - title: Implementing Invoice payment
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment.html
       - title: Data ingestion
+        url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-ingestion.html
         nested:
         - title: Structural preparations
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-ingestion.html
           nested:
           - title: File System
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/file-system.html
@@ -4791,8 +4794,8 @@ entries:
       url: /docs/scos/dev/guidelines/data-processing-guidelines.html
     - title: Module configuration convention
       url: /docs/scos/dev/guidelines/module-configuration-convention.html
-    - title: Making your Spryker shop secure
-      url: /docs/scos/dev/guidelines/making-your-spryker-shop-secure.html
+    - title: Security guidelines
+      url: /docs/scos/dev/guidelines/security-guidelines.html
   - title: Best practices
     nested:
     - title: Basic SEO techniques to use in your project

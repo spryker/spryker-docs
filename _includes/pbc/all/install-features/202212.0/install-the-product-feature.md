@@ -91,13 +91,13 @@ console data:import glossary
 
 {% info_block warningBox "Verification" %}
 
-Make sure that the configured data is added to the `spy_glossary` table in the database.
+Make sure that the configured data has been added to the `spy_glossary` table in the database.
 
 {% endinfo_block %}
 
 ### 2) Configure export to Redis and Elasticsearch
 
-Add to cart from catalog page configuration:
+Add to a cart from the catalog page configuration:
 
 **src/Pyz/Zed/ProductPageSearch/ProductPageSearchConfig.php**
 
@@ -122,7 +122,7 @@ class ProductPageSearchConfig extends SprykerProductPageSearchConfig
 
 {% info_block warningBox "Verification" %}
 
-Make sure that abstract products eligible for adding to cart have the additional `add_to_cart_sku` field in the Elasticsearch document.
+Make sure that abstract products eligible for adding to a cart have the additional `add_to_cart_sku` field in the Elasticsearch document.
 
 {% endinfo_block %}
 
@@ -219,7 +219,7 @@ class PublisherDependencyProvider extends SprykerPublisherDependencyProvider
 {% info_block warningBox "Verification" %}
 
 Ensure the following:
-1. After executing the `console sync:data product_concrete` command, product data including images is synced to Elasticsearch product concrete documents.
+1. After executing the `console sync:data product_concrete` command, product data, including images, is synced to Elasticsearch product concrete documents.
 2. When a product or its images, updated by Zed UI product data including images, is synced in respective Elasticsearch product concrete documents.
 
 | STORAGE TYPE | TARGET ENTITY | EXAMPLE EXPECTED DATA IDENTIFIER |

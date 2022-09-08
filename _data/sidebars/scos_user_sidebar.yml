@@ -123,8 +123,8 @@ entries:
       url: /docs/scos/user/intro-to-spryker/spryker-release-process.html
     - title: MVP project structuring
       url: /docs/scos/user/intro-to-spryker/mvp-project-structuring.html
-    - title: Spryker videos
-      url: /docs/scos/user/intro-to-spryker/spryker-videos.html
+    - title: Spryker Academy
+      url: /docs/scos/user/intro-to-spryker/spryker-academy.html
     - title: Contribute to documentation
       url: /docs/scos/user/intro-to-spryker/contribute-to-documentation/contribute-to-documentation.html
       nested:

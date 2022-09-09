@@ -150,8 +150,6 @@ To add items to a shopping list, send the request:
 | --- | --- | --- | --- |
 | quantity | Integer | &check; | Quantity of the product to add. |
 | sku | String | &check; | SKU of the product to add. Only [concrete products](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html) are allowed. |
-| productOfferReference | String | &check; | Unique identifier of the product offer. |
-|merchantReference| String | &check; | Unique identifier of the merchant. |
 | productConfigurationInstance.displayData  | Array  |&check; | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
 | productConfigurationInstance.configuration  | Array  | &check; | Default configurable product configuration.  |
 | productConfigurationInstance.configuratorKey  | String  | &check; | Configurator type. |
@@ -322,7 +320,7 @@ For details about the attributes of abstract product prices, see [Retrieve abstr
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
 | productOfferReference | String | Unique identifier of the product offer. |
-|merchantReference| String | Unique identifier of the merchant. |
+| merchantReference | String | Unique identifier of the merchant. |
 | quantity | Integer | Quantity of the product. |
 | sku | String | Product SKU. |
 | productConfigurationInstance.displayData  | Array  | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
@@ -457,8 +455,6 @@ To change item quantity in a shopping list, send the request:
 | --- | --- | --- | --- |
 | quantity | Integer | &check; | New quantity of the product. |
 | sku | String | &check; | SKU of the product you want to change the quantity of. Only [concrete products](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html) are allowed. |
-| productOfferReference | String | &check; | Unique identifier of the product offer. |
-|merchantReference| String | &check; | Unique identifier of the merchant. |
 | productConfigurationInstance.displayData  | Array  |&check; | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
 | productConfigurationInstance.configuration  | Array  | &check; | Default configurable product configuration.  |
 | productConfigurationInstance.configuratorKey  | String  | &check; | Configurator type. |
@@ -620,7 +616,7 @@ To change item quantity in a shopping list, send the request:
 | quantity | Integer | &check; | Updated quantity of the product. |
 | sku | String | &check; | SKU of the product whose quantity has been updated. Only [concrete products](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html) are allowed. |
 | productOfferReference | String | &check; | Unique identifier of the product offer. |
-|merchantReference| String | &check; | Unique identifier of the merchant. |
+| merchantReference| String | &check; | Unique identifier of the merchant. |
 | productConfigurationInstance.displayData  | Array  |&check; | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
 | productConfigurationInstance.configuration  | Array  | &check; | Default configurable product configuration.  |
 | productConfigurationInstance.configuratorKey  | String  | &check; | Configurator type. |

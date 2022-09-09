@@ -325,7 +325,7 @@ For details about the attributes of abstract product prices, see [Retrieve abstr
 |merchantReference| String | Unique identifier of the merchant. |
 | quantity | Integer | Quantity of the product. |
 | sku | String | Product SKU. |
-| productConfigurationInstance.displayData  | Array  | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
+| productConfigurationInstance.displayData  | Array  | Array of variables that are proposed to a Storefront user to set up in the configurator.  |
 | productConfigurationInstance.configuration  | Array  | Default configuration of the configurable product.  |
 | productConfigurationInstance.configuratorKey  | String  | Configurator type. |
 | productConfigurationInstance.isComplete  | Boolean  | Shows if the configurable product configuration is complete:<div><ul><li>`true`—configuration complete.</li><li>`false`—configuration incomplete.</li></ul></div>  |

@@ -1,7 +1,7 @@
 ---
-title: Spryker videos
-description: This page provides video presentations for Spryker features.
-last_updated: Jun 16, 2021
+title: Spryker Academy
+description: Spryker Academy is a dedicated resource for learning Spryker Commerce OS through a variety of self-paced and instructor-led courses.
+last_updated: Sep 6, 2022
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/spryker-videos
 originalArticleId: e1db0ef0-24d3-4862-b493-c4bf8a4adad7
@@ -168,10 +168,12 @@ redirect_from:
   - /v6/docs/en/spryker-videos
   - /docs/scos/user/intro-to-spryker/videos-and-webinars/spryker-videos.html
   - /docs/scos/user/intro-to-spryker/202204.0/videos-and-webinars/spryker-videos.html
+  - /docs/scos/user/intro-to-spryker/spryker-videos.html
 ---
 
-We believe that good technology doesn’t stop with the code. You also need the examples and information to help you convert your vision into reality.
+We believe that good technology doesn’t stop with the code. You also need examples and information to help you convert your vision into reality.
 
-[Spryker TV](https://training.spryker.com/pages/spryker-tv) is a dedicated resource for Spryker videos. Explore our Spryker Commerce OS visually!
+[Spryker Academy](https://academy.spryker.com/learn) is a dedicated resource for learning our Spryker Commerce OS through a variety of self-paced and instructor-led courses.
 
-You can also send us direct requests for videos and topics to [academy@spryker.com](mailto:academy@spryker.com).
+
+

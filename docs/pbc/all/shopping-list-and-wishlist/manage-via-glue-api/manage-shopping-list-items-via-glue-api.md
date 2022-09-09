@@ -148,8 +148,8 @@ To add items to a shopping list, send the request:
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| quantity | Integer | &check; | Quantity of the product to add. |
 | sku | String | &check; | SKU of the product to add. Only [concrete products](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html) are allowed. |
+| quantity | Integer | &check; | Quantity of the product to add. |
 | productConfigurationInstance.displayData  | Array  |&check; | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
 | productConfigurationInstance.configuration  | Array  | &check; | Default configurable product configuration.  |
 | productConfigurationInstance.configuratorKey  | String  | &check; | Configurator type. |
@@ -454,13 +454,16 @@ To change item quantity in a shopping list, send the request:
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | quantity | Integer | &check; | New quantity of the product. |
-| sku | String | &check; | SKU of the product you want to change the quantity of. Only [concrete products](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html) are allowed. |
 | productConfigurationInstance.displayData  | Array  |&check; | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
 | productConfigurationInstance.configuration  | Array  | &check; | Default configurable product configuration.  |
 | productConfigurationInstance.configuratorKey  | String  | &check; | Configurator type. |
 | productConfigurationInstance.isComplete  | Boolean  | &check; | Shows if the configurable product configuration is complete:<div><ul><li>`true`—configuration complete.</li><li>`false`—configuration incomplete.</li></ul></div>  |
 | productConfigurationInstance.quantity  | Integer  | &check; | Quantity of the product that is added to the wishlist.  |
 | productConfigurationInstance.availableQuantity  | Integer  | &check; | Product quantity available in the store. |
+
+For details about the attributes of included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
+
+For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
 ### Response
 
@@ -613,10 +616,10 @@ To change item quantity in a shopping list, send the request:
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| quantity | Integer | &check; | Updated quantity of the product. |
-| sku | String | &check; | SKU of the product whose quantity has been updated. Only [concrete products](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html) are allowed. |
 | productOfferReference | String | &check; | Unique identifier of the product offer. |
 | merchantReference| String | &check; | Unique identifier of the merchant. |
+| quantity | Integer | &check; | Updated quantity of the product. |
+| sku | String | &check; | SKU of the product whose quantity has been updated. Only [concrete products](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html) are allowed. |
 | productConfigurationInstance.displayData  | Array  |&check; | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
 | productConfigurationInstance.configuration  | Array  | &check; | Default configurable product configuration.  |
 | productConfigurationInstance.configuratorKey  | String  | &check; | Configurator type. |

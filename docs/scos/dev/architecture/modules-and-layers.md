@@ -63,7 +63,7 @@ All the business logic is implemented in the Business layer. It usually has seve
 
 ### Communication layer
 
-The Communication layer is the entry point of a module. When a front-end application communicates with the Commerce OS, it accesses the Communication layer first. Then, depending on the request functionality, the request is passed further from the Communication layer.
+The Communication layer is the entry point of a module. When a frontend application communicates with the Commerce OS, it accesses the Communication layer first. Then, depending on the request functionality, the request is passed further from the Communication layer.
 
 The Communication Layer is located above the Business layer, so it can access all the business logic in a module. That's how the Communication layer invokes the right business logic when requested.
 

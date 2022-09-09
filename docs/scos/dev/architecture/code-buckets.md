@@ -28,7 +28,7 @@ related:
 
 For example, a project can have multiple checkout processes, each having a different number of steps. The regular checkout consists of three steps, but in one of the countries, because of some business reasons, the checkout requires four steps.
 
-The example above is the most typical case to use code buckets. However, you can use them for other types of business reasons, even for the back-end A/B testing.
+The example above is the most typical case to use code buckets. However, you can use them for other types of business reasons, even for the backend A/B testing.
 
 Since the number of code buckets in a project is unlimited, you can use them for multiple purposes.
 

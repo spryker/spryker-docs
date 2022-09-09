@@ -50,7 +50,7 @@ We have two types of Major Releases:
 
 ## What is a "Minor release"?
 
-A release is **minor** when the internal API was changed. For instance, when the signature of internal models or constructors is changed, classes are renamed, etc. Actually, anything that can break extensions via inheritance or composition on a project level.
+A release is **minor** when the internal API was changed. For instance, when the signature of internal models or constructors is changed, classes are renamed, etc. Actually, anything that can break extensions using inheritance or composition on a project level.
 
 Our customers will get all new minor releases automatically during composer update if they use the ^ symbol in `composer.json` (e.g. `"spryker/category": "^4.1.2"`). We recommend to use the `~` symbol (e.g. `"spryker/category": "~4.1.0"`) for all modules that have been extended at the project level to make sure that nothing breaks after a release. See [Using ~ Composer Constraint for Customized Modules](/docs/scos/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html) on how you can easily detect `^` in the extended modules and update them with `~`.
 

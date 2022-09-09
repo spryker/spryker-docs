@@ -32,7 +32,7 @@ related:
     link: docs/scos/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html
 ---
 
-According to [Semantic Versioning](http://semver.org/), we release a major version of a module when there are backward compatibility(BC) breaking changes in the Public API. This document declares what public and private APIs are.
+According to [Semantic Versioning](http://semver.org/), we release a major version of a module when there are backward compatibility (BC) breaking changes in the Public API. This document declares what public and private APIs are.
 
 ## Public API
 
@@ -49,7 +49,7 @@ In the Spryker Commerce OS’s core, the following is the public API:
     * Plugins
 
 * Other classes:
-    * module Config [`Client/Yves/Zed/Shared/Service`](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html)
+    * Module Config [`Client/Yves/Zed/Shared/Service`](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html)
     * Controllers
     * Twig functions
     * [CLI commands](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html)

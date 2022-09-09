@@ -33,7 +33,7 @@ related:
     link: docs/scos/dev/architecture/code-buckets.html
 ---
 
-Having covered the main architectural concepts of the Spryker’s Commerce OS, front-end, modularity, and the application and software layers, we will dive deeper inside these approaches and explain the main software and coding concepts in Spryker. There are 7 main software concepts in Spryker.  
+Having covered the main architectural concepts of the Spryker’s Commerce OS, frontend, modularity, and the application and software layers, we will dive deeper inside these approaches and explain the main software and coding concepts in Spryker. There are 7 main software concepts in Spryker.  
 
 ## Facade
 
@@ -47,7 +47,7 @@ Spryker *Factories* follow the [Factory method pattern](https://en.wikipedia.org
 
 To isolate objects between the software layers in Spryker, every software layer in a module has its own Factory. The only exception the Presentation layer that does not have objects, only templates. So, there are Persistence Factories, Business Factories, and Communication Factories.
 
-Glue, Client, and Service application layers have their own Factories as well. Yves can have a Factory when needed. However, it is not enforced by the Spryker architecture as, in many cases, it is not needed for the front-end presentation logic.
+Glue, Client, and Service application layers have their own Factories as well. Yves can have a Factory when needed. However, it is not enforced by the Spryker architecture as, in many cases, it is not needed for the frontend presentation logic.
 
 ## Query Container
 
@@ -55,9 +55,9 @@ A *Query Container* is the place where all the database queries of a module are 
 
 ## Client
 
-A *Client* is the place where the implementation of the communication between the front-end application and all the surrounding resources is built. It acts similarly to a Facade where the Client interface shows all the possible functionalities the front-end can invoke. The Client also delegates all the actions to the right resources to get the needed responses to the front-end application.
+A *Client* is the place where the implementation of the communication between the frontend application and all the surrounding resources is built. It acts similarly to a Facade where the Client interface shows all the possible functionalities the frontend can invoke. The Client also delegates all the actions to the right resources to get the needed responses to the frontend application.
 
-The Client is not needed for every module: some modules have it, and some do not. When there is communication between the front end and a module, the module has a Client. A module has a single Client. Sometimes, there are Clients that connect directly to an external resource. In this case, there is only a Client for this module, but no Commerce OS or front-end parts.
+The Client is not needed for every module: some modules have it, and some do not. When there is communication between the frontend and a module, the module has a Client. A module has a single Client. Sometimes, there are Clients that connect directly to an external resource. In this case, there is only a Client for this module, but no Commerce OS or frontend parts.
 
 ## Plugin
 
@@ -75,13 +75,13 @@ The main difference between Factories and Dependency Providers is that Factories
 
 ## Transfer object
 
-To manage data transfer between the front-end and the Commerce OS applications, and between module-to-module communication, we use *Data Transfer Objects* (or Transfer Objects). A Transfer Object in Spryker is an object with getters, setters, and helper functions to make data transfers clear and simple to use.
+To manage data transfer between the frontend and the Commerce OS applications, and between module-to-module communication, we use *Data Transfer Objects* (or Transfer Objects). A Transfer Object in Spryker is an object with getters, setters, and helper functions to make data transfers clear and simple to use.
 
 Transfer Objects are defined as XML files. Every module can define its own Transfer Objects or extend Transfer Objects from other modules when a dependency to that data is needed. The XML files are merged and transformed into auto-generated PHP objects.
 
-Transfer Objects are a great way to represent data contracts between the Commerce OS and front-end applications. It also represents data contracts between different modules. When any data is needed from a module, it is clear what structure the data has and how to properly use it.
+Transfer Objects are a great way to represent data contracts between the Commerce OS and frontend applications. It also represents data contracts between different modules. When any data is needed from a module, it is clear what structure the data has and how to properly use it.
 
-As both the Commerce OS and the front-end application should know about the structure of the Transfer Objects, they are located on the Shared application layer. Every module can have one or more Transfer Objects.
+As both the Commerce OS and the frontend application should know about the structure of the Transfer Objects, they are located on the Shared application layer. Every module can have one or more Transfer Objects.
 
 ## Code structure
 
@@ -96,7 +96,7 @@ Directories:
 | ------------------------ | ---------------------------------------------------------- |
 |      src/{Namespace}/      | Use this directory for developing. All the code for Yves and Zed is located here. |
 |  vendor/spryker,  vendor/spryker-shop  | Contains the code of the Spryker-core. It follows the architectural rules used in the project’s code. |
-| vendor/{vendor}/{package}/ | All the other packages that are installed via composer install. |
+| vendor/{vendor}/{package}/ | All the other packages that are installed using composer install. |
 |           data/            |  Log files and other temporary data.   |
 |   public/Yves/index.php    |      Web-server entry point of the Storefront application.       |
 |    public/Yves/assets/     |  Static files, such as CSS, JS, and assets, for the project’s Yves.  |

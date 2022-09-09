@@ -1958,6 +1958,7 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
+      - "202212.0"
     - title: Product Approval Process
       url: /docs/scos/dev/feature-integration-guides/product-approval-process-feature-integration.html
       include_versions:
@@ -2661,6 +2662,7 @@ entries:
       include_versions:
       - "202001.0"
   - title: Data import
+    url: /docs/scos/dev/data-import/data-import.html
     include_versions:
     - "202005.0"
     - "202009.0"
@@ -3552,8 +3554,10 @@ entries:
           - title: Implementing Invoice payment
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment.html
       - title: Data ingestion
+        url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-ingestion.html
         nested:
         - title: Structural preparations
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-ingestion.html
           nested:
           - title: File System
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/file-system.html

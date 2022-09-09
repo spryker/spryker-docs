@@ -52,7 +52,7 @@ We have two types of Major Releases:
 
 A release is **minor** when the internal API was changed. For instance, when the signature of internal models or constructors is changed, classes are renamed, etc. Actually, anything that can break extensions using inheritance or composition on a project level.
 
-Our customers will get all new minor releases automatically during composer update if they use the ^ symbol in `composer.json` (e.g. `"spryker/category": "^4.1.2"`). We recommend to use the `~` symbol (e.g. `"spryker/category": "~4.1.0"`) for all modules that have been extended at the project level to make sure that nothing breaks after a release. See [Using ~ Composer Constraint for Customized Modules](/docs/scos/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html) on how you can easily detect `^` in the extended modules and update them with `~`.
+Our customers will get all new minor releases automatically during composer update if they use the ^ symbol in `composer.json` (for example, `"spryker/category": "^4.1.2"`). We recommend to use the `~` symbol (for example, `"spryker/category": "~4.1.0"`) for all modules that have been extended at the project level to make sure that nothing breaks after a release. See [Using ~ Composer Constraint for Customized Modules](/docs/scos/dev/architecture/module-api/using-composer-constraint-for-customized-modules.html) on how you can easily detect `^` in the extended modules and update them with `~`.
 
 ## What is a "Patch release"?
 
@@ -60,7 +60,7 @@ A release is a patch when the internal API of a module is not changed. So all in
 
 {% info_block infoBox %}
 
-It is very important to understand that patch release and bug fix are not the same. A bug fix can be released as Major, Minor or Patch-Release, depending on the compatibility level. A Patch-Release can also ship an improvement of a feature (e.g., a performance increase).
+It is very important to understand that patch release and bug fix are not the same. A bug fix can be released as Major, Minor or Patch-Release, depending on the compatibility level. A Patch-Release can also ship an improvement of a feature (for example, a performance increase).
 
 {% endinfo_block %}
 

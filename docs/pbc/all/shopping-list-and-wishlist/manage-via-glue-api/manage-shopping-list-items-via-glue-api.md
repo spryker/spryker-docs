@@ -460,7 +460,7 @@ To change item quantity in a shopping list, send the request:
 | productOfferReference | String | &check; | Unique identifier of the product offer. |
 |merchantReference| String | &check; | Unique identifier of the merchant. |
 | productConfigurationInstance.displayData  | Array  |&check; | Array of variables that are proposed to a Storefront user to set up in the configurator.  |
-| productConfigurationInstance.configuration  | Array  | &check; | Default configurable product configuration.  |
+| productConfigurationInstance.configuration  | Array  | &check; | Default configuration of the configurable product.  |
 | productConfigurationInstance.configuratorKey  | String  | &check; | Configurator type. |
 | productConfigurationInstance.isComplete  | Boolean  | &check; | Shows if the configurable product configuration is complete:<div><ul><li>`true`—configuration complete.</li><li>`false`—configuration incomplete.</li></ul></div>  |
 | productConfigurationInstance.quantity  | Integer  | &check; | Quantity of the product that is added to the wishlist.  |

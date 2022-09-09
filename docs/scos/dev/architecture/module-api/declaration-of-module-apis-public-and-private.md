@@ -68,7 +68,7 @@ In the Spryker Commerce OS’s core, the following is the public API:
 
 There are several classes and files which are part of the public API, but not every change in the file causes a BC break. In general, there is a BC break whenever an existing contract is changed. A contract is what the user of the API expects. This includes the signature of methods as well as the expected behavior. For this reason, we have added an ApiDoc to the most used APIs like facades and plugin interfaces.
 
-We always try to avoid BC breaking changes and reduce the effort needed to upgrade a module to a new version. There are several ways to add functionality to APIs without a BC break. So you can add new methods and even parameters to the existing methods as long as they are optional.
+We always try to avoid breaking changes of BC and reduce the effort needed to upgrade a module to a new version. There are several ways to add functionality to APIs without a BC break. So you can add new methods and even parameters to the existing methods as long as they are optional.
 
 
 ## Private API

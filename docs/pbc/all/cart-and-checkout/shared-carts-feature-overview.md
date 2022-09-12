@@ -150,4 +150,4 @@ On the storefront, company users can share a cart with other users within the sa
 
 |INSTALLATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|
-|[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-the-shared-carts-feature.html) | [Sharing company user carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/share-company-user-carts.html)  |
+|[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-the-shared-carts-feature.html) | [Share company user carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/share-company-user-carts.html)  |

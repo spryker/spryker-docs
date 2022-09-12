@@ -171,5 +171,3 @@ There are already some plugins implemented with each of those types:
 A state machine is triggered in the `CheckoutWorkflow` class from the Checkout module; the execution starts after pre-condition and order saver plugins store no errors into `CheckoutResponseTransfer`.
 
 The state machine trigger needs a name in order to be executed. The name is set by `SalesOrderSaverPlugin` in the Sales module. Each project has to implement the `SalesConfig::determineProcessForOrderItem()` method, which should return the state machine name for the selected order item. That is, Payolution payment would return `PayolutionPayment01`.
-
-<!-- _Last review date: Jan 18, 2019_ by Vitaliy Kirichenko, Oksana Karasyova -->

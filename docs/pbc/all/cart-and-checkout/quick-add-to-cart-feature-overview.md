@@ -133,8 +133,13 @@ Using the Quick Order feature on the Storefront, company users can do the follow
 The following figure shows how to perform these actions:
 ![create-quick-order](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Shopping+Cart/Cart/Quick+Order/Quick+Order+Feature+Overview/create-quick-order.gif)
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Quick Add to Cart feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INSTALLATION GUIDES  | UPGRADE GUIDES |
+|---|---|
+| [Install the Quick Add to Cart feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-feature-integration.html) | [ProductPackagingUnitStorage migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productpackagingunitstorage.html) |
+| [Install the Quick Add to Cart + Shopping Lists feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-shopping-lists-feature-integration.html) | [ProductPageSearch migration guide](/docs/scos/dev/module-migration-guides/migration-guide-productpagesearch.html) |
+| [Install the Quick Add to Cart + Discontinued Products feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-discontinued-products-feature-integration.html) | [QuickOrderPage migration guide](/docs/scos/dev/module-migration-guides/migration-guide-quickorderpage.html |
+| [Install the Quick Add to Cart + Measurement Units feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-measurement-units-feature-integration.html) |  |
+| [Install the Quick Add to Cart + Non-splittable Products feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-non-splittable-products-feature-integration.html) |  |
+| [Quick Add to Cart + Packaging Units feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/quick-add-to-cart-packaging-units-feature-integration.html) |  |

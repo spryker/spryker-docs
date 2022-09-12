@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/managing-shared-company-user-carts
   - /docs/scos/dev/glue-api-guides/202204.0/managing-carts/sharing-company-user-carts/managing-shared-company-user-carts.html
 related:
-  - title: Sharing company user carts
+  - title: Share company user carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html
   - title: Retrieving cart permission groups
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html

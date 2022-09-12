@@ -32,7 +32,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-passwords.html
   - title: Managing customer addresses
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-addresses.html
-  - title: Retrieving customer carts
+  - title: Retrieve customer carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-carts.html
 ---
 

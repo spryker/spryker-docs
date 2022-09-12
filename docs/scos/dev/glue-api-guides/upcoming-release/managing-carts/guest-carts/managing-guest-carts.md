@@ -11,7 +11,7 @@ redirect_from:
   - /docs/managing-guest-carts
   - /docs/en/managing-guest-carts
 related:
-  - title: Managing guest cart items
+  - title: Manage guest cart items
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-cart-items.html
   - title: Managing gift cards of guest users
     link: docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-guest-users.html
@@ -32,7 +32,7 @@ For detailed information on the modules that provide the API functionality and r
 
 ## Create a guest cart
 
-To create a guest cart as an unauthenticated user, [add items to a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart).
+To create a guest cart as an unauthenticated user, [add items to a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart).
 
 ## Retrieve a guest cart
 
@@ -1034,7 +1034,7 @@ When retrieving the cart with `guestCartId`, the response includes a single obje
 
 
 For the attributes of other included resources, see:
-* [Managing guest cart items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html)
+* [Manage guest cart items](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-cart-items.html)
 * [Retrieving measurement units](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)
 * [Retrieving concrete products](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 * [Gift Cards of Guest Users](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-guest-users.html)

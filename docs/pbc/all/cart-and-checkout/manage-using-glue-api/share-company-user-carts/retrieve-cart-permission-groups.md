@@ -145,4 +145,4 @@ Request sample: `GET http://glue.mysprykershop.com/cart-permission-groups/1`
 
 ## Next steps
 
-[Sharing company user carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html)
+[Sharing company user carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/share-company-user-carts.html)

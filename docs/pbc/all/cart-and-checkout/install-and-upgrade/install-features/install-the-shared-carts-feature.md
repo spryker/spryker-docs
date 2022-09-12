@@ -14,8 +14,6 @@ redirect_from:
 related:
   - title: Shared Cart feature overview
     link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
-  - title: Shared Carts feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/shared-carts-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-shared-carts-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-shared-carts-feature.md -->

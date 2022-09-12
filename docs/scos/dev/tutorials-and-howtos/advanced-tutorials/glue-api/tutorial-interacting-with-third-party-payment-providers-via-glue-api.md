@@ -113,7 +113,7 @@ To help you understand which payments need to be processed, you can use the opti
 
 {% info_block infoBox %}
 
-For details, see [Updating Payment Data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/updating-payment-data.html).
+For details, see [Updating Payment Data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/update-payment-data.html).
 
 {% endinfo_block %}
 

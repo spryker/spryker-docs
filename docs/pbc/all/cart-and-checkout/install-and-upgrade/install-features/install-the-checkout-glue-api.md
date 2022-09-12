@@ -16,8 +16,6 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/checkout-feature-integration.html
   - title: Checkout feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/checkout-feature-walkthrough.html
-  - title: Checkout workflow
-    link: docs/scos/dev/glue-api-guides/page.version/checking-out/checkout-workflow.html
   - title: Checking out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
   - title: Updating payment data

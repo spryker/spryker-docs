@@ -13,6 +13,7 @@ redirect_from:
   - /docs/scos/user/features/202200.0/shared-carts-feature-overview.html
   - /docs/scos/user/features/202204.0/shared-carts-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202200.0/shared-carts-feature-walkthrough.html  
+  - /docs/scos/dev/feature-walkthroughs/202204.0/shared-carts-feature-walkthrough.html  
 ---
 
 *Shopping Cart* is a part of the online shop where the record of the items a buyer has "picked up" from the online store is kept. The shopping cart lets customers select products, review what they selected, make modifications or add extra items if needed, and purchase the products.
@@ -149,4 +150,4 @@ On the storefront, company users can share a cart with other users within the sa
 
 |INSTALLATION GUIDES  | GLUE API GUIDES  |
 |---------|---------|
-|[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-the-shared-carts-feature.html) | [Sharing company user carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/sharing-company-user-carts.html)  |
+|[Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-the-shared-carts-feature.html) | [Sharing company user carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/share-company-user-carts.html)  |

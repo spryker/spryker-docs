@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Checkout and step engine - Spryker Commerce OS"
+title: "Tutorial: Checkout and step engine"
 description: Use the tutorial to understand how to work with Checkout and Step Engine and to extend Spryker core by adding a voucher step and a voucher form.
 last_updated: Jun 16, 2021
 template: howto-guide-template

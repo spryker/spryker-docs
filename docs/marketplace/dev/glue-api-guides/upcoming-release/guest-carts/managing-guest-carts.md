@@ -8,7 +8,7 @@ redirect_from:
   - /docs/marketplace/dev/glue-api-guides/201907.0/guest-carts/managing-guest-carts.html
   - /docs/marketplace/dev/glue-api-guides/202005.0/guest-carts/managing-guest-carts.html
 related:
-  - title: Managing guest cart items
+  - title: Manage guest cart items
     link: docs/marketplace/dev/glue-api-guides/page.version/guest-carts/managing-guest-cart-items.html
 ---
 
@@ -26,7 +26,7 @@ For detailed information about the modules that provide the API functionality an
 
 ## Create a guest cart
 
-To create a guest cart as an unauthenticated user, [add items to a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart).
+To create a guest cart as an unauthenticated user, [add items to a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart).
 
 ## Retrieve a guest cart
 

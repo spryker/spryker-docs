@@ -64,7 +64,7 @@ Request sample: `POST https://glue.mysprykershop.com/carts/f23f5cfa-7fde-5706-ae
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
 | idCompanyUser | String | ✓ | Unique identifier of a company user to share the cart with.<br>The user must belong to the same company as the cart owner. |
-| idCartPermissionGroup | Integer | ✓ | Unique identifier of a cart permission group that defines the permissions of the company user for the cart. To get the full list of cart permission groups, [retrieve permission groups](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/retrieving-cart-permission-groups.html#retrieve-cart-permission-groups). |
+| idCartPermissionGroup | Integer | ✓ | Unique identifier of a cart permission group that defines the permissions of the company user for the cart. To get the full list of cart permission groups, [retrieve permission groups](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/retrieve-cart-permission-groups.html#retrieve-cart-permission-groups). |
 
 ### Response
 
@@ -112,4 +112,4 @@ Response sample:
 
 ## Next steps
 
-* [Manage shared company user carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/sharing-company-user-carts/managing-shared-company-user-carts.html)
+* [Manage shared company user carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/manage-shared-company-user-carts.html)

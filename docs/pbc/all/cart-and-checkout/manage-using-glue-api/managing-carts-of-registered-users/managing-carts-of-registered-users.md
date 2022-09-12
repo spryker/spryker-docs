@@ -1,5 +1,5 @@
 ---
-title: Managing carts of registered users
+title: Manage carts of registered users
 description: Retrieve details about the carts of the registered users and learn what else you can do with the resource.
 last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template
@@ -12,11 +12,11 @@ redirect_from:
   - /docs/en/managing-carts-of-registered-users
   - /docs/scos/dev/glue-api-guides/202204.0/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
 related:
-  - title: Managing items in carts of registered users
+  - title: Manage items in carts of registered users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
   - title: Managing gift cards of registered users
     link: docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html
-  - title: Retrieving customer carts
+  - title: Retrieve customer carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-carts.html
 ---
 
@@ -153,7 +153,7 @@ To retrieve all carts, send the request:
 
 {% info_block infoBox "Note" %}
 
-Alternatively, you can retrieve all carts belonging to a customer through the **/customers/*{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*/carts** endpoint. For details, see [Retrieving customer carts](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/retrieving-customer-carts.html).
+Alternatively, you can retrieve all carts belonging to a customer through the **/customers/*{% raw %}{{{% endraw %}customerId{% raw %}}}{% endraw %}*/carts** endpoint. For details, see [Retrieve customer carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/retrieving-customer-carts.html).
 
 {% endinfo_block %}
 

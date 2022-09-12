@@ -5,7 +5,7 @@ last_updated: Aug 12, 2022
 template: glue-api-storefront-guide-template
 ---
 
-This document describes how to retrieve gift cards in guest carts using Glue API. To retrieve full information about guest carts, see [Manage guest carts](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-carts/guest-carts/managing-guest-carts.html).
+This document describes how to retrieve gift cards in guest carts using Glue API. To retrieve full information about guest carts, see [Manage guest carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-carts.html).
 
 ## Installation
 

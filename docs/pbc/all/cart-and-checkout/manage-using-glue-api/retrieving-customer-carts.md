@@ -1,5 +1,5 @@
 ---
-title: Retrieving customer carts
+title: Retrieve customer carts
 description: Retrieve customer's carts via Glue API
 last_updated: Jul 20, 2021
 template: glue-api-storefront-guide-template
@@ -17,7 +17,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/managing-customers/retrieving-customer-carts.html
   - /docs/scos/dev/glue-api-guides/202204.0/managing-customers/retrieving-customer-carts.html
 related:
-  - title: Managing carts of registered users
+  - title: Manage carts of registered users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
   - title: Authentication and authorization
     link: docs/scos/dev/glue-api-guides/page.version/authentication-and-authorization.html
@@ -55,7 +55,7 @@ To retrieve a customer’s carts, send the following request:
 
 {% info_block infoBox "Note" %}
 
-Alternatively, you can retrieve all carts belonging to a customer through the **/carts** endpoint. For details, see [Managing carts of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts).
+Alternatively, you can retrieve all carts belonging to a customer through the **/carts** endpoint. For details, see [Manage carts of registered users](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/managing-carts-of-registered-users.html#retrieve-registered-users-carts).
 
 {% endinfo_block %}
 
@@ -1612,7 +1612,7 @@ To retrieve product labels of the products in a cart, include items, concrete-pr
 For the attributes of the included resources, see:
 
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
-* [Add an item to a registered user's cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart-response-attributes)
+* [Add an item to a registered user's cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart-response-attributes)
 * [Manage gift cards of registered users](/docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html)
 * [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 

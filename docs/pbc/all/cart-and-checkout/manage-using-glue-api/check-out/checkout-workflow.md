@@ -28,4 +28,4 @@ A typical API Client workflow is as follows:
 
 ## Next steps
 
-* [Submitting checkout data](/docs/scos/dev/glue-api-guides/{{page.version}}/checking-out/submitting-checkout-data.html)
+* [Submitting checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/submit-checkout-data.html)

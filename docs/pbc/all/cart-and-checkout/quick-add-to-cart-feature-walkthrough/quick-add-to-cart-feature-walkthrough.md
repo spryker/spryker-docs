@@ -10,7 +10,7 @@ redirect_from:
 The _Quick Add to Cart_ feature allows adding multiple products to cart at once.
 
 
-To learn more about the feature and to find out how end users use it, see [Quick Add to Cart feature overview](/docs/scos/user/features/{{page.version}}/quick-add-to-cart-feature-overview.html) for business users.
+To learn more about the feature and to find out how end users use it, see [Quick Add to Cart feature overview](/docs/pbc/all/cart-and-checkout/quick-add-to-cart-feature-overview.html) for business users.
 
 
 ## Entity diagram

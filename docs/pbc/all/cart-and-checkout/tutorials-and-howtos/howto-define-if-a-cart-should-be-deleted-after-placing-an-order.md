@@ -9,7 +9,7 @@ redirect_from:
   - /2021080/docs/en/howto-define-if-a-cart-should-be-deleted-after-placing-an-order
   - /docs/howto-define-if-a-cart-should-be-deleted-after-placing-an-order
   - /docs/en/howto-define-if-a-cart-should-be-deleted-after-placing-an-order
-  - /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
+  - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
 related:
   - title: Cart feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-feature-walkthrough.html

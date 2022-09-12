@@ -22,7 +22,7 @@ related:
     link: docs/scos/user/features/page.version/shared-carts-feature-overview.html
   - title: Install the Shared Carts feature
     link: docs/scos/dev/feature-integration-guides/page.version/shared-carts-feature-integration.html
-  - title: Managing carts of registered users
+  - title: Manage carts of registered users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
 ---
 

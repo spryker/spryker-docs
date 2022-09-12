@@ -19,13 +19,13 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/cart-feature-integration.html
   - title: Cart feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-feature-walkthrough.html
-  - title: Managing carts of registered users
+  - title: Manage carts of registered users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
-  - title: Managing items in carts of registered users
+  - title: Manage items in carts of registered users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-items-in-carts-of-registered-users.html
-  - title: Managing guest carts
+  - title: Manage guest carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
-  - title: Managing guest cart items
+  - title: Manage guest cart items
     link: docs/scos/dev/glue-api-guides/202204.0/managing-carts/guest-carts/managing-guest-cart-items.html
 ---
 

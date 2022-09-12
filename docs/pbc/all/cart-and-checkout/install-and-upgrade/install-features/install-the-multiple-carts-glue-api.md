@@ -9,9 +9,9 @@ redirect_from:
   - /v3/docs/multiple-carts-api-feature-integration-201907
   - /v3/docs/en/multiple-carts-api-feature-integration-201907
 related:
-  - title: Managing Guest Carts
+  - title: Manage guest carts
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/guest-carts/managing-guest-carts.html
-  - title: Managing Carts of Registered Users
+  - title: Manage carts of registered users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
 ---
 

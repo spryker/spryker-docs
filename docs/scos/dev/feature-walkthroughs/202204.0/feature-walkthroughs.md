@@ -169,10 +169,6 @@ The [Packaging Units](/docs/scos/dev/feature-walkthroughs/{{page.version}}/packa
 
 The [Payments](/docs/scos/dev/feature-walkthroughs/{{page.version}}/payments-feature-walkthrough.html) feature allows customers to pay for orders with none, one, or multiple payment methods during the checkout process.
 
-## Persistent Cart Sharing
-
-The [Persistent Cart Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-walkthrough.html) feature allows company users to generate the URL to share the cart with different levels of access.
-
 ### Persistent Cart Sharing: module relations
 
 [This schema](/docs/scos/dev/feature-walkthroughs/{{page.version}}/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-module-relations.html) illustrates module relations in the Unique URL per Cart for Easy Sharing feature
@@ -261,10 +257,6 @@ The [Return Management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/ret
 ## Search
 
 The [Search](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) feature enables you to control search and filtering preferences and customize them to improve your customers’ user experience and help them quickly find what they are looking for. The feature includes textual search, multi-language search, full-site search, filter by a category, dynamically, and by filters & facets.
-
-## Shared Carts
-
-The [Shared Carts](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shared-carts-feature-walkthrough.html) feature allows sharing carts between company users.
 
 ## Spryker Core Back Office
 

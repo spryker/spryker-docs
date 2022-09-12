@@ -31,13 +31,11 @@ related:
     link: docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html
 ---
 
-Spryker OS is modular and follows the rules of semantic versioning. Every _backward compatibility_ (BC) breaking change of module [API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html) is considered a major release. HOwever, what happens to non-API? Spryker leverages the ability to change non-API functionalities in minor and patch releases. This way Spryker provides new features for different business verticals.
+Spryker OS is modular and follows the rules of semantic versioning. Every _backward compatibility_ (BC) breaking change of module [API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html) is considered a major release. However, what happens to non-API? Spryker can change non-API functionalities in minor and patch releases. This way Spryker provides new features for different business verticals.
 
 When you customize Spryker modules by changing their behavior on the project level, even minor changes could potentially cause migration efforts. To avoid such cases and keep project updates safe and predictable, a project should use _~_ (tilde) composer constraint instead of _^_ (caret) for the customized modules.
 
-To easily detect the extended core modules and to update `composer.json` constraints from using `^` to `~`, Spryker provides the Composer Constrainer tool `vendor/bin/console code:constraint:modules`. The tool suggests required changes in `composer.json`.
-
-Pretty much in the same way you can check non-Spryker package usages as well. If some classes of non-Spryker vendors were used on a project level, you may also validate corresponding packages to be locked to a minor version.
+To easily detect the extended core modules and to update `composer.json` constraints from using `^` to `~`, Spryker provides the Composer Constrainer tool `vendor/bin/console code:constraint:modules`. The tool suggests required changes in `composer.json`.Similarly, you can check non-Spryker package usage as well. If some classes of non-Spryker vendors were used on a project level, you may also validate corresponding packages to be locked to a minor version.
 
 ## Install the Composer constrainer
 
@@ -89,5 +87,5 @@ This command changes the project's `composer.json`. Make sure you dry run the co
 vendor/bin/console code:constraint:modules -w
 ```
 
-This command changes the project's composer.json with consideration of any usage of vendor packages.
+This command changes the project's `composer.json` with consideration of any usage of vendor packages.
 

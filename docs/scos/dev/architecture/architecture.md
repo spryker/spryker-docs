@@ -42,7 +42,7 @@ In this section, you can learn the following topics:
 * The Spryker architecture and concepts.
 * What technologies we use.
 * What applications the Spryker Commerce OS is composed of.
-* how we enable the development of high-performance applications and their scalability.
+* How we enable the development of high-performance applications and their scalability.
 
 Also, this guide is especially useful for developers, architects, and integrators dealing with the Spryker Commerce OS.
 

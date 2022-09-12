@@ -87,11 +87,9 @@ There are some other configuration files for specific purposes.
 | ----------------- | -------------------- |
 | `console_env_local.php` | This file returns the default environment for command line calls. This file is on gitignore. It is optional. If it is missing, you need to explicitly pass the environment to all [command line calls](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html). |
 |   `default_store.php`   | This file returns the default store which is used for all [command line calls](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html). |
-|      `stores.php`       | This file contains an array with all stores and their configuration like locale, date format, currency, etc. |
+|      `stores.php`       | This file contains an array with all stores and their configuration like locale, date format, currency. |
 
-## How to retrieve the configuration
-
-### Static method
+## Static method
 
 You can retrieve the configuration from the configuration files with a static method:
 
@@ -124,7 +122,7 @@ class MyModuleConfig extends AbstractBundleConfig
 
 The same is valid for other layers: Client, Yves, Shared, Service.
 
-### Module shared configuration
+## Module-shared configuration
 
 From kernel version 3.14, it is possible to create shared configuration classes, which are shared between application layers. That means you can access them in Yves, Zed, Client. To use it, create a `Config` class in your module Shared namespace, for example:
 

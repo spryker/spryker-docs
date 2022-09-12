@@ -86,9 +86,9 @@ When the form is created, it requires the property path to be provided so that i
 
 `PaymentTransfer` includes:
 
-* paymentProvider (string) — payment provider name (Paypal, Payolution etc..).
-* paymentMethod (string) — payment method (credit card, invoice).
-* paymentSelection (string) — subform name that is currently selected.
+* paymentProvider (string)—payment provider name (Paypal or Payolution).
+* paymentMethod (string)—payment method (credit card or invoice).
+* paymentSelection (string)—subform name that is currently selected.
 
 ### Data Handling
 Data handling happens after a valid form is submitted during the `PaymentStep`. The step receives plugins that implement `CheckoutStepHandlerPluginInterface` and that are provided in the `CheckoutFactory::createPaymentPlugins()`. When `execute()` method is called on `PaymentStep`, the plugin that is identified by `PaymentTransfer::paymentSelection` string is selected and the `CheckoutStepHandlerPluginInterface::addToQuote()` is called to update `QuoteTransfer` with the payment data. From this part, all population or data handling is left to concrete `CheckoutStepHandler`.

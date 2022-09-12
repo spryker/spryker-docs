@@ -49,7 +49,7 @@ For information on how to install and integrate _Form_ and _Validator_ in your p
 
 ## Extending the form
 
-The _Form_ Component provides several possibilities to add additional functionality like form types, validators etc. The `spryker/form-extension` module was created for this purpose. It will be installed automatically together with the `spryker/form` module.
+The _Form_ component provides several possibilities to add additional functionality like form types or validators. The `spryker/form-extension` module was created for this purpose. It will be installed automatically together with the `spryker/form` module.
 
 The extension module provides the `FormPluginInterface` interface as follows:
 

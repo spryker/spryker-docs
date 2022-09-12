@@ -334,7 +334,7 @@ Transfers expose the new *get-collection-item* methods for all the `associative`
 
 ```xml
 …
-<property name=“items” type=“string[]” singular=“item” associative=“true”/>
+<property name="items" type="string[]" singular="item" associative="true"/>
 ```
 
 {% info_block warningBox %}

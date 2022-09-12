@@ -68,7 +68,7 @@ See [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html) 
 
 Yves is divided into two parts:
 
-* The part with controllers, forms, templates etc. covered in the following articles:
+* The part with controllers, forms, and templates is covered in the following articles:
     * [Controllers and actions](/docs/scos/dev/back-end-development/yves/controllers-and-actions.html)
     * [Modular Frontend](/docs/scos/dev/back-end-development/yves/modular-frontend.html)
     * [Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html)

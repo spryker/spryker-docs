@@ -1,6 +1,6 @@
 ---
 title: Cronjobs
-description: Spryker applications demand performing repetitive background operation - jobs. Such operations are necessary for synchronizing denormalized data into Search engine, key-value store, etc.
+description: Spryker applications demand performing repetitive background operation—jobs. Such operations are necessary for synchronizing denormalized data into Search engine or key-value store.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cronjob-scheduling-guide
@@ -31,7 +31,7 @@ related:
 
 
 
-Spryker applications demand performing repetitive background operation - jobs. Such operations are necessary for synchronizing denormalized data into the Search engine, key-value store, etc. For Spryker applications to operate properly, we recommend running predefined jobs.
+Spryker applications demand performing repetitive background operation—jobs. Such operations are necessary for synchronizing denormalized data into the search engine or key-value store. For Spryker applications to operate properly, we recommend running predefined jobs.
 
 While setting up and configuring a scheduler, a developer is to solve the following tasks:
 

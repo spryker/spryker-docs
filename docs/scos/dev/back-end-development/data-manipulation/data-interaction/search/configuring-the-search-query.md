@@ -288,7 +288,7 @@ It provides information and functionality necessary for sorting the results.
 #### Spelling suggestion
 
 It adds a spelling correction suggestion to search results.
-Use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\SpellingSuggestionQueryExpanderPlugin` to allow Elasticsearch to provide the “did you mean” suggestions for full-text search typos. The suggestions are collected from the `suggestion_terms` field of the `page` index map. Therefore, inside this field, store only the information that you want to use for this purpose. The necessary result formatter for this plugin is `\Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\SpellingSuggestionResultFormatterPlugin`
+Use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\SpellingSuggestionQueryExpanderPlugin` to allow Elasticsearch to provide the "did you mean" suggestions for full-text search typos. The suggestions are collected from the `suggestion_terms` field of the `page` index map. Therefore, inside this field, store only the information that you want to use for this purpose. The necessary result formatter for this plugin is `\Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\SpellingSuggestionResultFormatterPlugin`
 
 #### Fuzzy search (query)
 
@@ -303,7 +303,7 @@ It looks up for products even if a customer makes typos and spelling mistakes in
 #### Suggestions by page type
 
 Suggestions by page type result by page types such as a category, products, and CMS pages.
-Use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\SuggestionByTypeQueryExpanderPlugin` to return sets of documents matching a full-text search query grouped by type, for example, “product”, “category”, “cms page”, etc. Typical usage for this plugin is suggesting the top results by type when the user is typing in the search field. The necessary result formatter for this plugin is` \Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\SuggestionByTypeResultFormatterPlugin`.
+Use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\SuggestionByTypeQueryExpanderPlugin` to return sets of documents matching a full-text search query grouped by type—for example, "product", "category", or "cms page". Typical usage for this plugin is suggesting the top results by type when the user is typing in the search field. The necessary result formatter for this plugin is` \Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\SuggestionByTypeResultFormatterPlugin`.
 
 #### Autocompletion
 

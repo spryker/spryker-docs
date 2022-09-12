@@ -32,7 +32,7 @@ Even with a good ACL use, the Back Office contains sensitive data which must be 
 
 {% info_block warningBox "System requirement" %}
 
-To protect the application and user data, the Back Office Application (Zed) must be secured in an Intranet (using VPN, Basic Auth, IP Allowlist, DMZ, etc.).
+To protect the application and user data, the Back Office Application (Zed) must be secured in an Intranet (using VPN, Basic Auth, IP Allowlist, or DMZ).
 
 {% endinfo_block %}
 

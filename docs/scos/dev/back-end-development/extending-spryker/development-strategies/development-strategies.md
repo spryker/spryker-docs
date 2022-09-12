@@ -96,7 +96,7 @@ Spryker OS support: Reduced, manual check is needed for every update.
 
 ### Spryker OS module replacement
 
-When an existing Spryker module provides functionality that doesn’t fit the Project conceptually, there is a possibility to replace a Spryker module completely using the “composer replace” feature.
+When an existing Spryker module provides functionality that doesn’t fit the Project conceptually, there is a possibility to replace a Spryker module completely using the "composer replace" feature.
 
 This option is not available for every module, as sometimes conceptual changes could lead to high development efforts.
 

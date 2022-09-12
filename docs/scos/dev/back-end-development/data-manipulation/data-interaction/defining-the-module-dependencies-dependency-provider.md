@@ -130,7 +130,7 @@ class MyBundleDependencyProvider extends AbstractBundleDependencyProvider
 }
 ```
 
-New bundles will not be auto-completable in your IDE just yet. Run `vendor/bin/console dev:ide:generate-auto-completion` to get IDE typehinting for those, the yellow “markup” will go away.
+New bundles will not be auto-completable in your IDE just yet. Run `vendor/bin/console dev:ide:generate-auto-completion` to get IDE typehinting for those, the yellow "markup" will go away.
 
 ## Bridges in Spryker core
 

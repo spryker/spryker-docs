@@ -140,10 +140,10 @@ class RefundTransaction
 
 ## Extending the Refund module
 
-The manner of calculating the refundable amount is different from one project to another. One will refund the shipment for every item, while the other one will refund the shipment only when all items are refunded etc.
+The manner of calculating the refundable amount is different from one project to another. One refunds the shipment for every item, while the other one refunds the shipment only when all items are refunded.
 
 The calculation of the refundable amount is achieved through a plugin mechanism.
 
-The default implementation will refund all expenses when the last item will be refunded. If you need to change this behavior, you simply need to create a new plugin that implements `RefundCalculatorPluginInterface` and replace the default one from the plugin stack with the new one.
+The default implementation refunds all expenses when the last item is refunded. To change this behavior, create a new plugin that implements `RefundCalculatorPluginInterface` and replace the default one from the plugin stack with the new one.
 
-This interface contains one method `RefundCalculatorPluginInterface::calculateRefund()` that asks for a `RefundTransfer` object, an `OrderTransfer` and an array of items that need to be refunded.
+This interface contains one method `RefundCalculatorPluginInterface::calculateRefund()` that asks for a `RefundTransfer` object, `OrderTransfer`, and an array of items that need to be refunded.

@@ -157,7 +157,7 @@ You can also set the date and time from when the timeout should be started. See 
 
 Timeout processor is designed to set a custom timeout for an OMS event.
 
-Let’s imagine today is Monday, and your shop plans to ship orders only on Friday. In this case, you can not specify the exact timeout (in days, hours, etc.) to start the shipping process. Even if you specify just the timeout, say, four days, for example, `<event name="ship" manual="" timeout="96 hour"/>`, the scheduler will be regularly checking if the event happened. This creates an unnecessary load on the OMS and is bad for your shop’s performance, especially if you have many orders. For this specific case, it would be enough to start running the check in four days. This is when a timeout processor comes in handy: you use it to specify from when the timeout should be calculated.
+Let’s imagine today is Monday, and your shop plans to ship orders only on Friday. In this case, you can not specify the exact timeout (in days or hours) to start the shipping process. Even if you specify just the timeout, say, four days, for example, `<event name="ship" manual="" timeout="96 hour"/>`, the scheduler will be regularly checking if the event happened. This creates an unnecessary load on the OMS and is bad for your shop’s performance, especially if you have many orders. For this specific case, it would be enough to start running the check in four days. This is when a timeout processor comes in handy: you use it to specify from when the timeout should be calculated.
 
 Here is an example of a timeout processor in an event definition:
 

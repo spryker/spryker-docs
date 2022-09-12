@@ -68,6 +68,6 @@ From the name we expect that this method will ‘save a customer’. So the cont
 
 **Additional information**:
 
-* The post-conditions are complete. So we don’t expect any other behavior here (e.g. “this method should not send an email to the customer to confirm the change”)
+* The post-conditions are complete. So we don’t expect any other behavior here (e.g. "this method should not send an email to the customer to confirm the change")
 * This method should not return anything. You could think of a boolean return value if the email cannot be changed. But then this method would do two things. Therefore it is a better approach to have another `doesEmailExist($email)` method for the pre-check.
 * If the preconditions are not valid, the method must throw an exception. In this case, if the email address already exists we would throw an `EmailAlreadyExistsException`.

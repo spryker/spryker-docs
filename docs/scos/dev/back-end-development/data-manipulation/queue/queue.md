@@ -49,12 +49,12 @@ Here is the list of the Queue System’s benefits:
 3. **Scalability**. Adding more processes for receiving and processing allows for scaling up your applications.
 4. **Routing**. Send messages to different routes for specific receivers.
 5. **Process Ordering**. The Queue processes messages in the right order.
-6. **Error Handling**. Plan for error handling during message processing such as routing to another queue, re-queuing, etc.
+6. **Error Handling**. Plan for error handling during message processing such as routing to another queue or requeuing.
 7. **Confirmation**. By approving or rejecting the message we can control the life-cycle of the message in a queue.
 
 ## Spryker Queue module
 
-The Spryker Queue module provides a set of high-level standard APIs for communicating with queues. Moreover, the Queue module is also a gateway for other modules to interact with queues and messages. The Queue module is an abstract adapter implementation which provides a standard API for other modules. This API internally calls their queue engine’s API and translates to their own communication language. There are multiple 3rd-party queue engines to choose from such as RabbitMQ, AmazonSQS, etc.
+The Spryker Queue module provides a set of high-level standard APIs for communicating with queues. Moreover, the Queue module is also a gateway for other modules to interact with queues and messages. The Queue module is an abstract adapter implementation, which provides a standard API for other modules. This API internally calls their queue engine’s API and translates to their own communication language. There are multiple 3rd-party queue engines to choose from such as RabbitMQ or AmazonSQS.
 
 To start working with the Queue module, you need at least one Queue Engine and one Queue Adapter. This module also comes with a set of simple commands for listening to the queues and processing messages by the stack of the corresponding plugins.
 

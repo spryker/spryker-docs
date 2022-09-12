@@ -300,9 +300,17 @@ To configure the Algolia search for the product, you need to configure the searc
 
 2. In both files, exclude generic pages and the pages of all the existing projects from indexing. Example:
 
+{% info_block warningBox "Excluding the files you are adding" %}
+
+If you are adding configuration for two roles, you also need to exclude them from indexing each other. The examples below show it.
+
+{% endinfo_block %}
+
+
+**algolia_config/_acp_user.yml**
 ```yaml
 algolia:
-  index_name: 'acp'
+  index_name: 'acp_user'
   files_to_exclude:
     - index.md
     - 404.md
@@ -312,9 +320,33 @@ algolia:
     - docs/scos/user/**/*.md
     - docs/scos/dev/**/*.md
     - docs/paas-plus/dev/**/*.md
-    - docs/cloud/dev**/*.md
-
+    - docs/fes/dev/**/*.md
+    - docs/cloud/dev/**/*.md
+    - docs/pbc/all/**/*.md
+    - docs/sdk/dev/**/*.md
+    - docs/acp/dev/**/*.md
 ```
+
+**algolia_config/_acp_dev.yml**
+```yaml
+algolia:
+  index_name: 'acp_dev'
+  files_to_exclude:
+    - index.md
+    - 404.md
+    - search.md
+    - docs/marketplace/user/**/*.md
+    - docs/marketplace/dev/**/*.md
+    - docs/scos/user/**/*.md
+    - docs/scos/dev/**/*.md
+    - docs/paas-plus/dev/**/*.md
+    - docs/fes/dev/**/*.md
+    - docs/cloud/dev/**/*.md
+    - docs/pbc/all/**/*.md
+    - docs/sdk/dev/**/*.md
+    - docs/acp/user/**/*.md
+```
+
 
 3. In the Algolia configuration file of each existing project, exclude the project for both roles from indexing. Example:
 

@@ -17,17 +17,13 @@ redirect_from:
   - /docs/scos/dev/data-import/202204.0/data-import-categories/commerce-setup/file-details-warehouse-address.csv.html
 ---
 
-This document describes the `warehouse_address.csv` file to configure [warehouse address information](/docs/scos/user/features/{{page.version}}/inventory-management-feature-overview.html#defining-a-warehouse-address) in your Spryker shop.
+This document describes the `warehouse_address.csv` file to configure [warehouse address information](/docs/pbc/all/warehouse-management-system/inventory-management-feature-overview.html#defining-a-warehouse-address) in your Spryker shop.
 
-To import the file, run
+## Import file dependencies
 
-```bash
-data:import stock-address
-```
+[File details: warehouse.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse-store.csv.html).
 
 ## Import file parameters
-
-The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -42,15 +38,18 @@ The file should have the following parameters:
 | phone |  | String |   |Phone number. |
 | comment |  | String |   | Comment. |
 
-## Import file dependencies
-
-The file has the following dependency: [File details: warehouse.csv](/docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse-store.csv.html).
 
 ## Import template file and content example
-
-Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |
 | --- | --- |
 |[ template_warehouse_address.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/Template_warehouse_address.csv) | Import file template with headers only. |
 | [warehouse_address.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Commerce+Setup/warehouse_address.csv) | Exemplary import file with Demo Shop data. |
+
+
+
+## Import file command
+
+```bash
+data:import stock-address
+```

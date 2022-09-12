@@ -12,8 +12,8 @@ redirect_from:
   - /docs/en/retrieving-concrete-products
   - /docs/scos/dev/glue-api-guides/202200.0/managing-products/concrete-products/retrieving-concrete-products.html
 related:
-  - title: Retrieving concrete product availability
-    link: docs/scos/dev/glue-api-guides/page.version/managing-products/concrete-products/retrieving-concrete-product-availability.html
+  - title: Retrieve concrete product availability
+    link: docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-concrete-product-availability.html
   - title: Retrieving concrete product prices
     link: docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html
   - title: Retrieving image sets of concrete products
@@ -1640,7 +1640,7 @@ For other attributes of the included resources, see:
 * [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html#measurement-units-response-attributes)
 * [Retrieve image sets of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html#concrete-image-sets-response-attributes)
 * [Retrieve availability of a concrete product](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-concrete-product-availability.html#concrete-product-availability-response-attributes)
-* [Retrieve prices of a concrete product](/docs/pbc/all/price-management/manage-via-glue-api/retrieve-concrete-product-prices.html#response)
+* [Retrieve prices of a concrete product](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html#response)
 * [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
 * [Retrieve product ratings and reviews](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-product-ratings-and-reviews.html#product-reviews-response-attributes)
 

@@ -1130,7 +1130,7 @@ For attributes of the other included resources, see the following:
 * [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html#measurement-units-response-attributes)
 * [Retrieve image sets of a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-image-sets-of-concrete-products.html)
 * [Retrieve availability of a concrete product](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-concrete-product-availability.html)
-* [Retrieve prices of a concrete product](/docs/pbc/all/price-management/manage-via-glue-api/retrieve-concrete-product-prices.html)
+* [Retrieve prices of a concrete product](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html)
 * [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html)
 * [Retrieve product ratings and reviews](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-product-ratings-and-reviews.html)
 * [Retrieving product offers](/docs/marketplace/dev/glue-api-guides/{{page.version}}/product-offers/retrieving-product-offers.html#product-offers-response-attributes)

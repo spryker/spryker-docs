@@ -1,5 +1,5 @@
 ---
-title: Retrieving concrete product availability
+title: Retrieve concrete product availability
 description: Retrieve availability of concrete products.
 last_updated: Jul 12, 2021
 template: glue-api-storefront-guide-template
@@ -32,7 +32,7 @@ This endpoint allows retrieving availability of concrete products.
 ## Installation
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
-* [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-the-inventory-management-glue-api.html)
+* [Install the Inventory Management Glue API](/docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html)
 
 
 
@@ -98,4 +98,4 @@ Request sample: retrieve availability of a concrete product
 | 306 | Availability is not found. |
 | 312 | Concrete product sku is not specified. |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/reference-information-glueapplication-errors.html).

@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/configurable-bundle-feature-overview
   - /docs/configurable-bundle-feature-overview
   - /docs/en/configurable-bundle-feature-overview
+  - /docs/configurable-bundle
 ---
 
 A *configurable bundle* is a [product bundle](/docs/scos/user/features/{{page.version}}/product-bundles-feature-overview.html) for which a Storefront User selects products on the Storefront.

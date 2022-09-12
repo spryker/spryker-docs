@@ -4,7 +4,7 @@ This repository contains the documentation for the [Spryker documentation portal
 
 ## Installation
 
-To build the documentation site locally, see [buidling the documentation site](https://docs.spryker.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html).
+To build the documentation site locally, see [building the documentation site](https://docs.spryker.com/docs/scos/user/intro-to-spryker/contributing-to-documentation/building-the-documentation-site.html).
 
 ### Build with Docker
 

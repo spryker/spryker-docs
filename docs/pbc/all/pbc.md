@@ -4,7 +4,9 @@ description: Welcome to the Packaged Business Capabilities (PBC) documentation s
 template: concept-topic-template
 ---
 
-Packaged Business Capabilities (PBCs) are capabilities that enclose a certain functionality with the Spryker system. PBCs provide a good foundation for decision- makers throughout multiple business entities.
+Packaged Business Capabilities (PBCs) are capabilities that enclose a certain functionality with the Spryker system. PBCs provide a good foundation for decision makers throughout multiple business entities.
+
+This section is in beta because not all the PBCs are covered. You are welcome to use the docs that are already here, and we will keep adding the docs for the rest of the PBCs.
 
 ## Spryker PBCs
 

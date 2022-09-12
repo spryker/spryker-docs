@@ -33,7 +33,7 @@ redirect_from:
   - /docs/b2c-demo-shop-installation-mac-os-or-linux-with-devvm
   - /docs/scos/dev/setup/installing-spryker-with-vagrant/b2b-or-b2c-demo-shop-installation-mac-os-or-linux-with-development-virtual-machine.html
 related:
-  - title: DevVM system requirements
+  - title: System requirements
     link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html
   - title: Installing Spryker with development virtual machine
     link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html

@@ -44,8 +44,8 @@ When we make a change to the [external API of a module](/docs/scos/dev/architect
 Our customers need to change their `composer.json` file to get major versions of modules.
 
 We have two types of major releases:
-* A _Maxi Major. When the release effort is higher than four hours for clients who did not extend the module. This typically happens when data needs to be migrated. In case of a Maxi Major, the previous version automatically gets all bug fixes and security patches (LTS) as long as anyone uses this version.
-* A _Mini Major_. When the release effort is lower than four hours for clients who did not extend the module.
+* A _maxi-major_. When the release effort is higher than four hours for clients who did not extend the module. This typically happens when data needs to be migrated. In case of a maxi-major release, the previous version automatically gets all bug fixes and security patches (LTS) as long as anyone uses this version.
+* A _mini-major_. When the release effort is lower than four hours for clients who did not extend the module.
 
 ## What is a Minor release?
 
@@ -59,18 +59,19 @@ A release is a patch when the internal API of a module is not changed. So all in
 
 {% info_block infoBox %}
 
-Patch release and bug fix are not the same. A bug fix can be released as Major, Minor, or Patch Release, depending on the compatibility level. A Patch Release can also ship an improvement of a feature—for example, a performance increase.
+Patch release and bug fix are not the same. A bug fix can be released as a major, minor, or patch release, depending on the compatibility level. A patch release can also ship an improvement of a feature—for example, a performance increase.
 
 {% endinfo_block %}
 
 ## Taking updates
 
-Usually, you need to run `composer update` to get Spryker Core updates, because by default the modules are constrained with `^`. After each update, you need to run `console transfer:generate` to update DTOs. Adding a field to DTO is BC change and can be considered as a Minor or Patch release.
+Usually, you need to run `composer update` to get Spryker Core updates, because by default the modules are constrained with `^`. After each update, you need to run `console transfer:generate` to update DTOs. Adding a field to DTO is BC change and can be considered as a minor or patch release.
 
 {% info_block infoBox %}
 
 Some minor updates require specific development effort for the project, which is caused by the deprecation of some old approaches or 3rd party modules. We recommend reading the [release notes](/docs/scos/user/intro-to-spryker/releases/release-notes/release-notes.html) published after the project's start.
-Also, check out [General Troubleshooting](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/class-silex-controllerproviderinterface-not-found.html) for solutions to general technical issues you might have.
+
+For solutions to general technical issues you might have, see [Troubleshooting general technical issues](/docs/scos/dev/troubleshooting/troubleshooting-general-technical-issues/troubleshooting-general-technical-issues.html).
 
 {% endinfo_block %}
 

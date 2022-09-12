@@ -1,6 +1,6 @@
 ---
 title: Code buckets
-description: Code buckets enable projects to define, implement, and execute different business logics based on different HTTP or console requests.
+description: Code buckets let projects define, implement, and execute different business logics based on different HTTP or console requests.
 last_updated: Jun 16, 2021
 template: concept-topic-template
 originalLink: https://documentation.spryker.com/2021080/docs/code-buckets
@@ -24,7 +24,7 @@ related:
 ---
 
 
-*Code buckets* define multiple slices of source code that can be executed in runtime. This enables projects to define, implement, and execute different business logics based on different HTTP or console requests.
+*Code buckets* define multiple slices of source code that can be executed in runtime. This lets projects define, implement, and execute different business logics based on different HTTP or console requests.
 
 For example, a project can have multiple checkout processes, each having a different number of steps. The regular checkout consists of three steps, but in one of the countries, because of some business reasons, the checkout requires four steps.
 

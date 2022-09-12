@@ -29,12 +29,10 @@ related:
     link: docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html
 ---
 
-## Introduction
-
 This document describes how you can implement a new console command. However, before implementing your commands, we recommend you to do the following:
 
-* Getting the list of the console commands already available at Spryker. See [Getting the list of console commands and available options](/docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html) for instructions on how to do that. 
-* Check out what each command does. See [Console commands in Spryker](/docs/scos/dev/back-end-development/console-commands/console-commands.html) for details.
+* Get the list of the console commands already available at Spryker. For instructions about how to do that, see [Getting the list of console commands and available options](/docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html).
+* Check out what each command does. For details, see [Console commands in Spryker](/docs/scos/dev/back-end-development/console-commands/console-commands.html).
 
 ## Adding a new console command
 
@@ -42,10 +40,10 @@ To add a new console command, you need to create a new class in:
 
 `[Namespace]/Zed/(module)/Communication/Console/` which extends `Spryker\Zed\Console\Business\Model\Console`. There are two methods that need to be implemented:
 
-* `configure()` - this method is used to set the name, description etc.
-* `execute()` - this method is executed by the console application and contains your code (e.g. call a facade).
+* `configure()`—this method is used to set the name or description.
+* `execute()`—this method is executed by the console application and contains your code—for example, call a facade.
 
-Symfony’s console tool is quite powerful. Please read the official documentation before you implement your first console command. It is possible to use arguments, to send messages and to add options.
+Symfony’s console tool is quite powerful. Read the official documentation before you implement your first console command. To send messages and add options, you can use arguments.
 
 ```php
 <?php
@@ -84,7 +82,7 @@ class YourNewConsoleCommand extends Console
 
 ## Add new console command to configuration
 
-To see the command listed when running `vendor/bin/console`, you to provide it to the common console module. Then you can run the new console command with: `vendor/bin/console your-module:your-task`
+To see the command listed when running `vendor/bin/console`, provide it to the common console module. Then you can run the new console command with this command: `vendor/bin/console your-module:your-task`.
 
 ```php
 <?php
@@ -115,13 +113,12 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 
 ## Event listener
 
-Symfony console triggers three events in a console command lifecycle.
+Symfony console triggers three events in a console command lifecycle:
+* `ConsoleEvents::COMMAND` is triggered before the command is executed.
+* `ConsoleEvents::TERMINATE` is triggered after the command is executed.
+* `ConsoleEvents::EXCEPTION` is triggered when an uncaught exception appears.
 
-* `ConsoleEvents::COMMAND` is triggered before the command is executed
-* `ConsoleEvents::TERMINATE` is triggered after the command is executed
-* `ConsoleEvents::EXCEPTION` is triggered when an uncaught exception appears
-
-To add an event listener you need to create a class which implements `EventSubscriberInterface`. This can then be added in your `ConsoleDependencyProvider::getEventSubscriber()`.
+To add an event listener you need to create a class that implements `EventSubscriberInterface`. This can then be added in your `ConsoleDependencyProvider::getEventSubscriber()`.
 
 ```php
 <?php
@@ -150,8 +147,8 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-This is useful in many situations. One case could be when you need to log information in your console command lifecycle.
+This is useful in many situations—for example, to log information in your console command lifecycle.
 
 ## Logging
 
-For logging we already provide a plugin which can be added into your project as described above. The `ConsoleLogPlugin` makes use of our log module to log useful information for all three possible events.
+For logging, we already provide a plugin that you can add to your project as described above. The `ConsoleLogPlugin` makes use of our log module to log useful information for all three possible events.

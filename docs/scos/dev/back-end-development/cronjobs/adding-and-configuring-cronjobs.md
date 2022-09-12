@@ -32,15 +32,15 @@ related:
 
 We use [Jenkins](https://jenkins-ci.org/) for cronjob scheduling. Compared to Crontab, there are several benefits:
 
-* Jobs are queued and can be manually executed
-* Job definitions are under version control and can be changed by any developer
-* Console output available for debugging
+* Jobs are queued and can be manually executed.
+* Job definitions are under version control and can be changed by any developer.
+* Console output is available for debugging.
 
-## Add a New Job and Run It
+## Add a new job and run it
 
 Jobs are defined in `config/Zed/cronjobs/jenkins.php`
 
-This file contains an array which defines the jobs.
+This file contains an array defining the jobs.
 
 ```php
 // Send emails every 10 minutes
@@ -53,24 +53,26 @@ $jobs[] = [
 ];
 ```
 
-To import this configuration to Jenkins you need to run this command in the console. In a production environment, this is part of the deployment process.
+To import this configuration to Jenkins, run the following command in the console. In a production environment, this is part of the deployment process.
 
 `vendor/bin/console scheduler:setup`
 
-Now you can open Jenkins on port 10007 and watch your scripts running: [http://zed.mysprykershop.com:10007](http://zed.mysprykershop.com:10007/) (URL works for standard VM, you may use a different host name).
+After this, you can open Jenkins on port `10007` and watch your scripts running: [http://zed.mysprykershop.com:10007](http://zed.mysprykershop.com:10007/) (URL works for standard VM, you may use a different hostname).
 
 ## Cronjob Configuration
 
 For each job you can define several configurations:
 
-| Key                   | Type   | Purpose                                                      | Mandatory |
+| KEY                   | TYPE   | PURPOSE                                                      | MANDATORY |
 | --------------------- | ------ | ------------------------------------------------------------ | --------- |
-| name                  | string | Name of the job                                              | yes       |
+| name                  | string | Name of the job.                                              | yes       |
 | command               | string | The [console command](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html) that is executed. | yes       |
-| schedule              | string | Expression that defines the job schedule (how often the job is executed).The schedule string is compatible with cronjob schedule definition (eg. 0 * * * * means: run once each hour at 00 minute). If environment is development, return empty string - cronjobs are being executed on development environment only manually. | yes       |
-| enable                | bool   | Enable/Disable jobs                                          | yes       |
+| schedule              | string | Expression that defines the job schedule (how often the job is executed).The schedule string is compatible with cronjob schedule definition—fpr example, `0 * * * *` means run once each hour at 00 minute). If the environment is in development, return empty string—cronjobs are being executed on development environment only manually. | yes       |
+| enable                | bool   | Enable or disable jobs.                                          | yes       |
 | stores                | array  | An array of stores where the job is executed.                | yes       |
 
 {% info_block errorBox %}
-When not using Jenkins for job scheduling there is no locking between concurrently running commands.
+
+When you don't use Jenkins for job scheduling, there is no locking between concurrently running commands.
+
 {% endinfo_block %}

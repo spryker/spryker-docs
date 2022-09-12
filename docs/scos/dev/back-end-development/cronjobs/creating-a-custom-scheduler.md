@@ -27,8 +27,8 @@ related:
     link: docs/scos/dev/sdk/cronjob-scheduling.html
 ---
 
-To create a new custom scheduler:
+To create a new custom scheduler, follow these steps:
 
-1. Create a reader plugin that reads configuration of jobs from the specific source.
+1. Create a reader plugin that reads the configuration of jobs from the specific source.
 2. Create an adapter plugin that covers the basic scheduler functionality.
-3. Enable plugins in `\Pyz\Zed\Scheduler\SchedulerDependencyProvider` and adjust configuration settings according to your changes.
+3. In `\Pyz\Zed\Scheduler\SchedulerDependencyProvider`, enable plugins and adjust configuration settings according to your changes.

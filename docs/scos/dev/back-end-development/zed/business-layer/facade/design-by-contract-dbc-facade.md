@@ -33,7 +33,7 @@ related:
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/using-a-facade.html
 ---
 
-Every method in a facade contains an implicit promise. So a client expects that the behavior does not change in a minor update. Basically there are two types of possible changes. First there can be changes in the method’s signature for instance, when the name of the method or the order of the parameters changed. Second there can be changes in the expected behavior of the method. While a renamed method will cause an exception, a change of behavior is much harder to detect.
+Every method in a facade contains an implicit promise. So a client expects that the behavior does not change in a minor update. Basically there are two types of possible changes. First there can be changes in the method's signature for instance, when the name of the method or the order of the parameters changed. Second there can be changes in the expected behavior of the method. While a renamed method will cause an exception, a change of behavior is much harder to detect.
 
  
 
@@ -59,7 +59,7 @@ public function saveCustomer($idCustomer, $email)
 }
 ```
 
-From the name we expect that this method will ‘save a customer’. So the contract would look like this:
+From the name we expect that this method will 'save a customer'. So the contract would look like this:
 
 | Precondition  | The email address does not already exist. This constraint is defined by the database schema.There is a customer with the given ID. |
 | ------------- | ------------------------------------------------------------ |
@@ -68,6 +68,6 @@ From the name we expect that this method will ‘save a customer’. So the cont
 
 **Additional information**:
 
-* The post-conditions are complete. So we don’t expect any other behavior here (e.g. "this method should not send an email to the customer to confirm the change")
+* The post-conditions are complete. So we don't expect any other behavior here—for example, "this method should not send an email to the customer to confirm the change".
 * This method should not return anything. You could think of a boolean return value if the email cannot be changed. But then this method would do two things. Therefore it is a better approach to have another `doesEmailExist($email)` method for the pre-check.
 * If the preconditions are not valid, the method must throw an exception. In this case, if the email address already exists we would throw an `EmailAlreadyExistsException`.

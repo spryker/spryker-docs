@@ -1,6 +1,6 @@
 ---
 title: Database schema definition
-description: With Propel, a database schema is defined in an XML-file. Each module carries it’s own part of the big schema that is collected and merged.
+description: With Propel, a database schema is defined in an XML-file. Each module carries it's own part of the big schema that is collected and merged.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/database-schema-definition

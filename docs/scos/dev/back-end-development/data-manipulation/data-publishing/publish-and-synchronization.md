@@ -77,7 +77,7 @@ The advantages of the approach are as follows:
 
 Both Publish and Synchronize implement the queue pattern. See [Spryker Queue Module](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html) to learn more.
 
-The process relies heavily on Propel Behaviors. Propel Behaviors are used to trigger actions automatically on updating the database. This way, you don’t need to trigger any step of the process manually in code. See [Boostrapping a Behavior](http://propelorm.org/documentation/cookbook/writing-behavior.html) to learn more.
+The process relies heavily on Propel Behaviors. Propel Behaviors are used to trigger actions automatically on updating the database. This way, you don't need to trigger any step of the process manually in code. See [Boostrapping a Behavior](http://propelorm.org/documentation/cookbook/writing-behavior.html) to learn more.
 
 ### Triggering the publish process
 

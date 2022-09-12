@@ -43,13 +43,13 @@ All Clients have the same structure. There is always one class that represents t
 
 | CLASS   | PURPOSE  |
 | ----------------- | ---------------- |
-| Pyz\Client\MyBundle\MyBundleClient             | The client’s entry point.                                    |
+| Pyz\Client\MyBundle\MyBundleClient             | The client's entry point.                                    |
 | Pyz\Client\MyBundle\MyBundleDependencyProvider | A [dependency provider](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/defining-the-module-dependencies-dependency-provider.html) to interact with other modules. |
-| Pyz\Client\MyBundle\MyBundleFactory            | The client’s [factory](/docs/scos/dev/back-end-development/factory/factory.html). |
+| Pyz\Client\MyBundle\MyBundleFactory            | The client's [factory](/docs/scos/dev/back-end-development/factory/factory.html). |
 | Pyz\Client\MyBundle\Session\MyBundleSession    | A wrapper for the session.                                    |
-| Pyz\Client\MyBundle\Search\MyBundleSearch      | Contains search queries (e.g. Elasticsearch ).                |
-| Pyz\Client\MyBundle\Storage\MyBundleStorage    | Gets data from the storage (e.g. Redis).                      |
-| Pyz\Client\MyBundle\Zed\MyBundleStub           | The stub connects to Zed’s corresponding gateway controller . |
+| Pyz\Client\MyBundle\Search\MyBundleSearch      | Contains search queries—for example, Elasticsearch ).                |
+| Pyz\Client\MyBundle\Storage\MyBundleStorage    | Gets data from the storage—for example, Redis).                      |
+| Pyz\Client\MyBundle\Zed\MyBundleStub           | The stub connects to Zed's corresponding gateway controller . |
 
 When you implement a client you should have in mind, that the client does not know about Yves. So you should not use any class from Yves there otherwise you make the client non-reusable in a different context.
 

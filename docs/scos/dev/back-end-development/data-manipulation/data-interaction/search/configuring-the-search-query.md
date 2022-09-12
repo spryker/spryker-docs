@@ -45,7 +45,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
 ---
 
-Once you have all the necessary data in Elasticsearch, it’s time to display it on Yves.
+Once you have all the necessary data in Elasticsearch, it's time to display it on Yves.
 
 To achieve this, [query Elasticsearch](#quering), which returns raw data needed for [processing the query result](#process) to display it in the templates.
 
@@ -234,13 +234,13 @@ Spryker provides the following query expander plugins:
 
 #### Filtering by store
 
-The *Filter by store* feature is a background capability that enables filtering content according to the request’s store.
-To filter content according to the request’s store, use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\StoreQueryExpanderPlugin`.
+The *Filter by store* feature is a background capability that enables filtering content according to the request's store.
+To filter content according to the request's store, use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\StoreQueryExpanderPlugin`.
 
 #### Filtering by locale
 
-The *Filter by locale* feature is a background capability that enables filtering content according to the request’s locale.
-To filter content according to the request’s store, use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\LocalizedQueryExpanderPlugin`.
+The *Filter by locale* feature is a background capability that enables filtering content according to the request's locale.
+To filter content according to the request's store, use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\LocalizedQueryExpanderPlugin`.
 
 #### Filtering by "is active" flag
 
@@ -308,7 +308,7 @@ Use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\SuggestionByTypeQu
 #### Autocompletion
 
 Autocompletion adds the functionality to predict the rest of the word or search string.
-`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\CompletionQueryExpanderPlugin` provides top completion terms for full-text search queries. Typical usage for this plugin is autocompleting the input of users with the top result when they type something in the full-text search field and providing more suggestions as they type. The suggestions are collected from the `completion_terms` field of the `page` index map. Hence, make sure to store only the information inside the field that you’d like to use for this purpose. The necessary result formatter for this plugin is `\Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\CompletionResultFormatterPlugin`.
+`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\CompletionQueryExpanderPlugin` provides top completion terms for full-text search queries. Typical usage for this plugin is autocompleting the input of users with the top result when they type something in the full-text search field and providing more suggestions as they type. The suggestions are collected from the `completion_terms` field of the `page` index map. Hence, make sure to store only the information inside the field that you'd like to use for this purpose. The necessary result formatter for this plugin is `\Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\CompletionResultFormatterPlugin`.
 
 {% info_block infoBox "Autocompletion preparations" %}
 
@@ -371,7 +371,7 @@ To enable autocompletion when the user types, add some analyzers to the full-tex
 
 After creating your query, process the raw response from Elasticsearch. This is done by providing a collection of `\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface`.
 To create one, extend `\Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\AbstractElasticsearchResultFormatterPlugin`
-It’s also possible to not provide any result formatters; in this case, the raw response is returned at the end.
+It's also possible to not provide any result formatters; in this case, the raw response is returned at the end.
 
 <details open>
 <summary markdown='span'>Pyz\Client\Catalog\Plugin\ResultFormatter</summary>

@@ -63,7 +63,7 @@ For the current step, it will check if it meets the assigned preconditions by ca
 
 If the preconditions are satisfied and the current step can be accessed, `StepEngine` needs to verify if the current step needs user input:
 
-* current step doesn’t need user input: `StepEngine` will return a `RedirectResponse` to the next step
+* current step doesn't need user input: `StepEngine` will return a `RedirectResponse` to the next step
 * current step needs user input: `StepEngine` will take the Request object and pass it to the `FormCollectionHandlerInterface`
 
 If we have a submitted form, the `FormCollectionHandlerInterface` will handle the request and if the form validation passes the `StepEngine` the execution of the workflow will continue.

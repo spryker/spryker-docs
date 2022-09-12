@@ -44,7 +44,7 @@ As you can see in the example below, the query container consists of `query-meth
 
 Unterminated queries should be avoided in the Application Layers above Persistence. Consider using the [Repository](/docs/scos/dev/back-end-development/zed/persistence-layer/repository.html) and [Entity Manager](/docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html) patterns to decouple persistence and ORM implementation details.
 
-Unterminated means you don’t execute the query with `find()`, `findOne()` or `count()`.
+Unterminated means you don't execute the query with `find()`, `findOne()` or `count()`.
 
 ```php
 use Spryker\Zed\Kernel\Persistence\AbstractQueryContainer;

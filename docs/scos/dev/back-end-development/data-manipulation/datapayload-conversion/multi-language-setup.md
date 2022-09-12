@@ -173,7 +173,7 @@ Example:
 </blocks>
 ```
 
-The XML file structure for loading static pages is similar to the one for importing blocks; the only differences are that a page has also a URL associated for each locale and it doesn’t have a name linked to it.
+The XML file structure for loading static pages is similar to the one for importing blocks; the only differences are that a page has also a URL associated for each locale and it doesn't have a name linked to it.
 
 ```xml
 <?xml version="1.0"?>
@@ -216,15 +216,15 @@ For each category there is a distinct URL for each configured locale. Similar fo
 
 {% info_block infoBox %}
 
-For example, `/en/computers` and `/de/computers` are the URL’s for the same category but for different locales.
+For example, `/en/computers` and `/de/computers` are the URL's for the same category but for different locales.
 
 {% endinfo_block %}
 
 The URLs assigned for each imported CMS static page are distinct for each defined locale.
 
-* `/en/privacy and /de/datenschutz` point to the same template; when rendered, they’ll be loaded with the glossary values that correspond to the associated locale.
+* `/en/privacy and /de/datenschutz` point to the same template; when rendered, they'll be loaded with the glossary values that correspond to the associated locale.
 
-The XML file structure for loading static pages is similar to the one for importing blocks; the only differences are that a page has also a URL associated for each locale and it doesn’t have a name linked to it.
+The XML file structure for loading static pages is similar to the one for importing blocks; the only differences are that a page has also a URL associated for each locale and it doesn't have a name linked to it.
 
 ```xml
 <?xml version="1.0"?>

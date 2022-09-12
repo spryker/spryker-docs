@@ -102,7 +102,7 @@ Currently, we use the `exclude from customer` flag that will skip all orders hav
 
 ## Transitions
 
-Spryker’s state machine allows you to define transitions between states. A transition is bound to an event, which tells when the state machine item can leave the current state.
+Spryker's state machine allows you to define transitions between states. A transition is bound to an event, which tells when the state machine item can leave the current state.
 
 {% info_block infoBox %}
 
@@ -135,7 +135,7 @@ The events can be fired as follows:
 * Automatically: If an event has the `onEnter="true"` attribute associated, then the event is fired automatically when the source state is reached. For example, `<event name="authorize" onEnter="true"/>` means that the OMS state-authorized is triggered automatically.
 * By setting the `manual` attribute to `true`: This adds a button in the **Back Office → View Order [Order ID**] page that allows you to manually trigger the corresponding transition by clicking the button. For example, `<event name="cancel" manual="true"/>` means that the OMS state canceled can only be triggered by clicking the **cancel** button for the order state.
 * Via an API call: The `triggerEvent`method allows triggering an event for a given process instance. For example, if a message from the payment provider is received that the capture was successful, the corresponding process instance can be triggered via the API call.
-* By a timeout: Events are triggered after the defined time has passed. For example, `<event name="close" manual="true" timeout="1 hour"/>` means that the OMS state closed will be triggered in 1 hour, if not triggered manually from the Back Office earlier. Now let’s assume we are trying to define the prepayment process, in which if after 15 days no payment is received, `reminder sent` is fired due to the timeout. How is the reminder then technically sent? This can be implemented through a command attached to the `sendFirstReminder` event. The command attribute references a PHP class that implements a specific interface. Every time the event is fired (automatically, after the timeout), Zed makes sure the associated command is executed. If an exception occurs in the command coding, the order/order item stays in the source state.
+* By a timeout: Events are triggered after the defined time has passed. For example, `<event name="close" manual="true" timeout="1 hour"/>` means that the OMS state closed will be triggered in 1 hour, if not triggered manually from the Back Office earlier. Now let's assume we are trying to define the prepayment process, in which if after 15 days no payment is received, `reminder sent` is fired due to the timeout. How is the reminder then technically sent? This can be implemented through a command attached to the `sendFirstReminder` event. The command attribute references a PHP class that implements a specific interface. Every time the event is fired (automatically, after the timeout), Zed makes sure the associated command is executed. If an exception occurs in the command coding, the order/order item stays in the source state.
 
 ```xml
 <transition command="Oms/sendFirstReminder">
@@ -157,7 +157,7 @@ You can also set the date and time from when the timeout should be started. See 
 
 Timeout processor is designed to set a custom timeout for an OMS event.
 
-Let’s imagine today is Monday, and your shop plans to ship orders only on Friday. In this case, you can not specify the exact timeout (in days or hours) to start the shipping process. Even if you specify just the timeout, say, four days, for example, `<event name="ship" manual="" timeout="96 hour"/>`, the scheduler will be regularly checking if the event happened. This creates an unnecessary load on the OMS and is bad for your shop’s performance, especially if you have many orders. For this specific case, it would be enough to start running the check in four days. This is when a timeout processor comes in handy: you use it to specify from when the timeout should be calculated.
+Let's imagine today is Monday, and your shop plans to ship orders only on Friday. In this case, you can not specify the exact timeout (in days or hours) to start the shipping process. Even if you specify just the timeout, say, four days, for example, `<event name="ship" manual="" timeout="96 hour"/>`, the scheduler will be regularly checking if the event happened. This creates an unnecessary load on the OMS and is bad for your shop's performance, especially if you have many orders. For this specific case, it would be enough to start running the check in four days. This is when a timeout processor comes in handy: you use it to specify from when the timeout should be calculated.
 
 Here is an example of a timeout processor in an event definition:
 
@@ -322,7 +322,7 @@ There are several reasons for introducing subprocesses when modeling a state mac
 * The flow of the process is easier to follow.
 * If more than one process needs to be defined (e.g., orders that are being paid before delivery and orders that are paid on delivery), then the common parts of the processes can be extracted into subprocesses and reused.
 
-To introduce a subprocess in the main process, you need to specify it’s name under the subprocesses tag as in the example below:
+To introduce a subprocess in the main process, you need to specify it's name under the subprocesses tag as in the example below:
 
 ```xml
 <process name="Prepayment" main="true">
@@ -451,7 +451,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 
 Similar to this, the mapping between a string linked to a condition and the implementation of the condition is also done through the state machine handler `StateMachineHandlerInterface::getConditionPlugins()`.
 
-A transition from one state to another can be conditioned: it’s possible to make that transition if a condition is satisfied:
+A transition from one state to another can be conditioned: it's possible to make that transition if a condition is satisfied:
 
 ```xml
 <transition condition="Example/ExampleTransition" happy="true">

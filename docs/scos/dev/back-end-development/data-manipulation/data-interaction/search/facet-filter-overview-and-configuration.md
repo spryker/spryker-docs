@@ -120,7 +120,7 @@ You can integrate as many facet filters in your search query, as long as they ar
 
 Keep in mind that the configuration you make in the `CatalogDependencyProvider` must be in sync with the structure of the data exported to Elasticsearch.
 
-Also, keep in mind that even if you have the facets exported in Elasticsearch, without adding the necessary configuration in the `CatalogDependencyProvider` you won’t be able to submit the correct queries.
+Also, keep in mind that even if you have the facets exported in Elasticsearch, without adding the necessary configuration in the `CatalogDependencyProvider` you won't be able to submit the correct queries.
 
 The search attributes must be configured in the `CatalogDependencyProvider`.
 

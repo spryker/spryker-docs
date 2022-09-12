@@ -1,6 +1,6 @@
 ---
 title: Extending the Spryker Core functionality
-description: To extend the Spryker-Core functionality and to use the Spryker Engine to develop a project, it’s important to understand the folder structure used in Spryker Commerce OS.
+description: To extend the Spryker-Core functionality and to use the Spryker Engine to develop a project, it's important to understand the folder structure used in Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-extend-spryker
@@ -29,7 +29,7 @@ related:
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/zed/extending-spryker/-->
-To extend the Spryker-Core functionality and to use the Spryker Engine to develop a project, it’s important to understand the folder structure used in Spryker Commerce OS.
+To extend the Spryker-Core functionality and to use the Spryker Engine to develop a project, it's important to understand the folder structure used in Spryker Commerce OS.
 
 The project consists of two parts : **Spryker Core** and **Project** implementation. They both follow the same structure and the project implementation goes on top of the Spryker Core functionalities.
 

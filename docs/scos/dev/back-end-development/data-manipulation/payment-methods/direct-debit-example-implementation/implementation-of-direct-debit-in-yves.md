@@ -436,7 +436,7 @@ To create the Direct Debit twig template, do the following:
 ```
 
 {% info_block errorBox %}
-Don’t forget to add the factory and the dependency provider for this new  module in Yves.
+Don't forget to add the factory and the dependency provider for this new  module in Yves.
 {% endinfo_block %}
 
 

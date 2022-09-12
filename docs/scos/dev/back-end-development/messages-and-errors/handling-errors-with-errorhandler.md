@@ -49,7 +49,7 @@ Always double check `\Spryker\Shared\ErrorHandler\ErrorHandlerConfig::isPrettyEr
 
 ## Configuration
 
-The [ErrorHandler module](https://github.com/spryker/error-handler) has a rich list of configuration options for controlling the ErrorHandler’s behavior. Check the detailed list, including specifications, in the module’s [ErrorHandlerConstants file](https://github.com/spryker/error-handler/blob/c1884be8035b42ea89a12cbfc69b2d4a68e34d82/src/Spryker/Shared/ErrorHandler/ErrorHandlerConstants.php).
+The [ErrorHandler module](https://github.com/spryker/error-handler) has a rich list of configuration options for controlling the ErrorHandler's behavior. Check the detailed list, including specifications, in the module's [ErrorHandlerConstants file](https://github.com/spryker/error-handler/blob/c1884be8035b42ea89a12cbfc69b2d4a68e34d82/src/Spryker/Shared/ErrorHandler/ErrorHandlerConstants.php).
 
 ## ErrorRenderer
 
@@ -59,7 +59,7 @@ Change the renderer in your configuration files as follows:
 
 * To change the renderer, use the `ErrorHandlerConstants::ErrorRenderer` constant.
 * To display a formatted HTML page in production environments, use `WebErrorHtmlRenderer`.
-* To display exception details in a development environment, use `WebExceptionErrorRenderer`. This displays the relevant developer messages and the exception’s stack trace.
+* To display exception details in a development environment, use `WebExceptionErrorRenderer`. This displays the relevant developer messages and the exception's stack trace.
 
 The following example shows how to change the error renderer for a development environment:
 
@@ -132,7 +132,7 @@ line=$(echo "${arg}" | sed -r 's/.*file=.*&line=(.*)/\1/')
 /locale/path/to/PhpStorm/bin/phpstorm.sh --line "${line}" "${file}"
 ```
 
-Replace `/locale/path/to/PhpStorm/bin/phpstorm.sh` with your IDE’s local path and make this script executable. Save this script as `phpstorm-url-handler` and execute:
+Replace `/locale/path/to/PhpStorm/bin/phpstorm.sh` with your IDE's local path and make this script executable. Save this script as `phpstorm-url-handler` and execute:
 
 ```bash
 chmod +X phpstorm-url-handler

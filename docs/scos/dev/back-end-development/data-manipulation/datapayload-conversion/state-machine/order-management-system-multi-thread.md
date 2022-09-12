@@ -112,5 +112,5 @@ $jobs[] = [
 ## General performance recommendations
 Regarding performance, there are a few things to keep in mind when running the OMS commands:
 
-* The `limit options`: as mentioned above, commands `oms:check-timeout` and `oms:check-condition` have an option that allows specifying the maximum number of order items to be handled during a single command run. It’s recommended to provide this option for speeding up the database-related activities.
+* The `limit options`: as mentioned above, commands `oms:check-timeout` and `oms:check-condition` have an option that allows specifying the maximum number of order items to be handled during a single command run. It's recommended to provide this option for speeding up the database-related activities.
 * It is possible to specify more than one processor identifier for a single command run. But for large databases, this is generally not recommended. Specifying more than one process identifier affects the SQL query running under the hood and might disable a table index needed for this query to be executed in the most performant way.

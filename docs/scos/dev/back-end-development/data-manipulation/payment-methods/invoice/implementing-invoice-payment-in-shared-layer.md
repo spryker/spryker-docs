@@ -35,9 +35,9 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/testing-the-invoice-payment-implementation.html
 ---
 
-This procedure will help us to identify the new payment type through some unique constants. We are going to define those constants under the `Shared` namespace, since they’re needed both by Yves and Zed.
+This procedure will help us to identify the new payment type through some unique constants. We are going to define those constants under the `Shared` namespace, since they're needed both by Yves and Zed.
 
-1. Create the `PaymentMethodsConstants` interface under the `Shared` namespace, where you’ll define these unique constants.
+1. Create the `PaymentMethodsConstants` interface under the `Shared` namespace, where you'll define these unique constants.
 
 <details open>
 <summary markdown='span'>Code sample:</summary>

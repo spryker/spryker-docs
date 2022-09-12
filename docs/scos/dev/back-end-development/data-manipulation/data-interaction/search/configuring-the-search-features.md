@@ -1,6 +1,6 @@
 ---
 title: Configuring the search features
-description: In this article, you’ll learn how to configure faceted navigation, filters, pagination, and sorting, so all the important search features that are provided by the Search module.
+description: In this article, you'll learn how to configure faceted navigation, filters, pagination, and sorting, so all the important search features that are provided by the Search module.
 last_updated: Jul 29, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-the-search-features
@@ -79,7 +79,7 @@ First, add the code that configures your facet filters.
 
 The goal is to create `FacetConfigTransfer` instances with some data, and set it as a property of `$searchConfigurationTransfer`.
 
-Let’s assume that previously in your `PageMapInterface`you mapped an integer facet called "price" with some data (note the use of `addIntegerFacet()` in the example above). So now you want to add a price range filter for that data.
+Let's assume that previously in your `PageMapInterface`you mapped an integer facet called "price" with some data (note the use of `addIntegerFacet()` in the example above). So now you want to add a price range filter for that data.
 
 <details open>
 <summary markdown='span'>Plugin\SearchElasticsearch</summary>
@@ -127,7 +127,7 @@ use Generated\Shared\Transfer\SearchConfigurationTransfer;
 ```
 </details>
 
-You can create and add as many `FacetConfigTransfers` as you need. Let’s analyze this transfer’s options below:
+You can create and add as many `FacetConfigTransfers` as you need. Let's analyze this transfer's options below:
 
 * `setName()`: *Required* field; the name of the target data to filter by.
 * `setParameterName()`: *Required* field; the name that is used in the request when the filter is used.
@@ -136,7 +136,7 @@ You can create and add as many `FacetConfigTransfers` as you need. Let’s analy
 * `setIsMultiValued()`: *Optional* field; if set to *true*, multiple values can be filtered with logical OR comparison.
 * `setSize()`: *Optional* field; the maximum number of filter options to be returned (`0` means unlimited). Elasticsearch returns 10 options by default.
 * `setValueTransformer()`: *Optional* field; to provide a value transformer plugin by defining the Fully Qualified Name of the plugin. This plugin should implement `\Spryker\Client\SearchExtension\Dependency\Plugin\FacetSearchResultValueTransformerPluginInterface`. It's used to transform each filter value from their stored values (for example IDs) to something readable (representing name) for users.
-* The next method you implement is the`buildSortConfig()`, where you configure your sorting options. Let’s assume you want to sort by name and price, and you’ve already added them when implementing `PageMapInterface` (check the use of `addStringSort()` and `addIntegerSort()` in the example above).
+* The next method you implement is the`buildSortConfig()`, where you configure your sorting options. Let's assume you want to sort by name and price, and you've already added them when implementing `PageMapInterface` (check the use of `addStringSort()` and `addIntegerSort()` in the example above).
 
 <details open>
 <summary markdown='span'>Pyz\Client\Catalog\Plugin\Config</summary>
@@ -265,7 +265,7 @@ use Generated\Shared\Transfer\SortConfigTransfer;
 ```
 </details>
 
-Similar to facet filters, you can create and add as many `SortConfigTransfers` as you need. The transfer’s options are the following:
+Similar to facet filters, you can create and add as many `SortConfigTransfers` as you need. The transfer's options are the following:
 
 * `setName()`: *Required* field; the name of the target data to sort by.
 * `setParameterName()`: *Required* field; the name that is used in the request when sorting is used.
@@ -325,7 +325,7 @@ use Generated\Shared\Transfer\PaginationConfigTransfer;
 ```
 </details>
 
-Here, create only one instance from `PaginationConfigTransfer` and pass it to the `$searchConfigurationTransfer->setPaginationConfig()`. The transfer’s options are the following:
+Here, create only one instance from `PaginationConfigTransfer` and pass it to the `$searchConfigurationTransfer->setPaginationConfig()`. The transfer's options are the following:
 
 * `setParameterName()`: *Required* field; the name that is used in the request for the current page.
 * `setItemsPerPageParameterName()`: *Optional* field; if defined this name is used in the request for changing the items per page parameter.
@@ -360,4 +360,4 @@ class SearchDependencyProvider extends SprykerSearchElasticsearchDependencyProvi
 
 }
 ```
-After providing the instance of your search configuration builder, the *expander* and *result formatter* plugins start to generate data next time when you run a search query. This tutorial doesn’t cover how to display the filters, but you can find examples using them in our Demo Shops.
+After providing the instance of your search configuration builder, the *expander* and *result formatter* plugins start to generate data next time when you run a search query. This tutorial doesn't cover how to display the filters, but you can find examples using them in our Demo Shops.

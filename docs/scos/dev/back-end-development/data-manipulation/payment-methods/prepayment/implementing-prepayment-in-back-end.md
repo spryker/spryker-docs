@@ -161,10 +161,10 @@ class PaymentDependencyInjector extends AbstractDependencyInjector
 
 <br>
 
-3. Link the prepayment state machine to process the orders submitted with the payment method we’re implementing.
+3. Link the prepayment state machine to process the orders submitted with the payment method we're implementing.
 
 {% info_block warningBox %}
-We’ll use the prepayment state machine that’s delivered with Demoshop.
+We'll use the prepayment state machine that's delivered with Demoshop.
 {% endinfo_block %}
 
 Add this configuration in the `SalesConfig` class:

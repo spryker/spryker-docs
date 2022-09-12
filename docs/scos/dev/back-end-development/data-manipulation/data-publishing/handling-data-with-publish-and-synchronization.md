@@ -85,7 +85,7 @@ The following P&S naming conventions are applied:
 
 ## 2. Data structure
 
-Usually, the data for Yves is structured differently than the data for Zed. It’s because the data model used in Redis and Elasticsearch is optimized to be used by a frontend. With P&S, data is always carried in the form of [**transfer objects**](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html) between Zed and Yves.
+Usually, the data for Yves is structured differently than the data for Zed. It's because the data model used in Redis and Elasticsearch is optimized to be used by a frontend. With P&S, data is always carried in the form of [**transfer objects**](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html) between Zed and Yves.
 
 Follow the steps below to create a transfer object that represents the frontend's target data structure.
 
@@ -110,7 +110,7 @@ To publish changes in the Zed database table automatically, an event for each pa
 
 Follow the steps to enable the events:
 
-1. Activate Event Propel Behavior in `spy_hello_world.schema.xml` you’ve created in step [1. Module and Table](#module-and-table).
+1. Activate Event Propel Behavior in `spy_hello_world.schema.xml` you've created in step [1. Module and Table](#module-and-table).
 
 ```xml
 {% raw %}
@@ -885,7 +885,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-4. Run the `IndexController` class that you’ve created in step [4. Publishers](#publishers) to update the table.
+4. Run the `IndexController` class that you've created in step [4. Publishers](#publishers) to update the table.
 
 {% info_block warningBox "Verification" %}
 

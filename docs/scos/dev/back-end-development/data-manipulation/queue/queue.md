@@ -42,7 +42,7 @@ The Queue System provides a protocol for managing asynchronous processing, meani
 
 ## Queue benefits
 
-Here is the list of the Queue System’s benefits:
+Here is the list of the Queue System's benefits:
 
 1. **Asynchronousness**. Message processing can be offloaded to different times to prevent bottlenecks and run when necessary.
 2. **Decoupling**. The queue provides separate layers for data and processing.
@@ -54,7 +54,7 @@ Here is the list of the Queue System’s benefits:
 
 ## Spryker Queue module
 
-The Spryker Queue module provides a set of high-level standard APIs for communicating with queues. Moreover, the Queue module is also a gateway for other modules to interact with queues and messages. The Queue module is an abstract adapter implementation, which provides a standard API for other modules. This API internally calls their queue engine’s API and translates to their own communication language. There are multiple 3rd-party queue engines to choose from such as RabbitMQ or AmazonSQS.
+The Spryker Queue module provides a set of high-level standard APIs for communicating with queues. Moreover, the Queue module is also a gateway for other modules to interact with queues and messages. The Queue module is an abstract adapter implementation, which provides a standard API for other modules. This API internally calls their queue engine's API and translates to their own communication language. There are multiple 3rd-party queue engines to choose from such as RabbitMQ or AmazonSQS.
 
 To start working with the Queue module, you need at least one Queue Engine and one Queue Adapter. This module also comes with a set of simple commands for listening to the queues and processing messages by the stack of the corresponding plugins.
 

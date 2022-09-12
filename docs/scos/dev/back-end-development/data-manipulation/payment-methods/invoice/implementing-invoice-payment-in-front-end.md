@@ -285,6 +285,6 @@ Add the Twig template that will be rendered when invoice payment method is selec
 
 {% info_block errorBox %}
 
-Don’t forget to add the factory and the dependency provider for this new added module in Yves.
+Don't forget to add the factory and the dependency provider for this new added module in Yves.
 
 {% endinfo_block %}

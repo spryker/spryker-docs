@@ -35,11 +35,11 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/testing-your-direct-debit-implementation.html
 ---
 
-This article provides step-by-step instructions on how to identify the new payment type using some unique constants. We are going to define those constants under the `Shared` namespace, since they’re needed both for Yves and Zed.
+This article provides step-by-step instructions on how to identify the new payment type using some unique constants. We are going to define those constants under the `Shared` namespace, since they're needed both for Yves and Zed.
 
 To identify the new payment type, do the following:
 
-1. Create the `PaymentMethodsConstants` interface under the `Shared` namespace, where you’ll define these unique constants.
+1. Create the `PaymentMethodsConstants` interface under the `Shared` namespace, where you'll define these unique constants.
 
 **Code sample:**
 

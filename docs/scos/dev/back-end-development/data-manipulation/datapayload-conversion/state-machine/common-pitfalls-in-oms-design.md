@@ -66,7 +66,7 @@ In the OMS drawing, you will see the last *read* event definition, but during th
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-2.png)
 
-**Reason**: Function `OmsConfig:getInitialStatus` has only one return value, so it’s impossible to start from another "initial" state.
+**Reason**: Function `OmsConfig:getInitialStatus` has only one return value, so it's impossible to start from another "initial" state.
 
 **Solution**: In most cases, this is a mistake, and the transition between some states is missing. Adding transition makes the process correct. For example, adding transition `payment done` → `shipped` with the `ship` event brings the whole process to a correct state.
 
@@ -74,7 +74,7 @@ In the OMS drawing, you will see the last *read* event definition, but during th
 
 {% info_block infoBox "Info" %}
 
-It’s possible to change order items' state via a manual call, and this way, use the states without inbound transitions. On the one hand, this helps not to overwhelm the process with 10+ transitions to a cancellation process. On the other hand, though, this makes the process definition incomplete and, thus, this approach is not recommended.
+It's possible to change order items' state via a manual call, and this way, use the states without inbound transitions. On the one hand, this helps not to overwhelm the process with 10+ transitions to a cancellation process. On the other hand, though, this makes the process definition incomplete and, thus, this approach is not recommended.
 
 {% endinfo_block %}
 
@@ -99,7 +99,7 @@ Process/Process.php:198)
 
 ## More than one transition with the same events and without condition
 
-**Issue**: It’s impossible to guess which transition is expected, so the first one read is executed.
+**Issue**: It's impossible to guess which transition is expected, so the first one read is executed.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-5.png)
 

@@ -158,7 +158,7 @@ setup:propel
   setup:propel:config:convert
   ```
 
-  2. Create the database if it doesn’t exist yet, based on the configuration set in the previous step:
+  2. Create the database if it doesn't exist yet, based on the configuration set in the previous step:
 
   ```bash
   setup:propel:database:create

@@ -43,7 +43,7 @@ To add a new console command, you need to create a new class in:
 * `configure()`—this method is used to set the name or description.
 * `execute()`—this method is executed by the console application and contains your code—for example, call a facade.
 
-Symfony’s console tool is quite powerful. Read the official documentation before you implement your first console command. To send messages and add options, you can use arguments.
+Symfony's console tool is quite powerful. Read the official documentation before you implement your first console command. To send messages and add options, you can use arguments.
 
 ```php
 <?php

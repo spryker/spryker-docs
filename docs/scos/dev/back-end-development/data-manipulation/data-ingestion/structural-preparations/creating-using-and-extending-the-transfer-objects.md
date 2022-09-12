@@ -214,7 +214,7 @@ For more information, see [PHP documentation](https://php.net/manual/en/function
 
 {% endinfo_block %}
 
-Let’s say you have a custom extension package called `my-vendor/my-package` that uses transfer objects. Using Composer, by default, this package will be installed under `vendor/my-vendor/my-package`.
+Let's say you have a custom extension package called `my-vendor/my-package` that uses transfer objects. Using Composer, by default, this package will be installed under `vendor/my-vendor/my-package`.
 If you want your transfer objects to be created from definitions stored under `vendor/my-vendor/my-package/src/Transfer`, provide the necessary *glob* pattern like this:
 
 ```php
@@ -275,7 +275,7 @@ Transfer objects can be expanded from different bundles. Any other module can ad
 </transfers>
 ```
 
-After the transfers have been generated, you can set and get the customer’s *taxId* like this:
+After the transfers have been generated, you can set and get the customer's *taxId* like this:
 
 ```php
 <?php

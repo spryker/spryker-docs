@@ -73,11 +73,11 @@ Of course, the data stored in the SQL database is the subject of change; data ca
 
 For more information, see [Cronjob Scheduling](/docs/scos/dev/sdk/cronjob-scheduling.html).
 
-You must also find out which data has changed because you don’t want to completely reload the content stored in Redis. The Touch module takes care of marking the items that were updated in the meantime. You must keep in mind that every time you make an update/delete/insert for data that’s also stored in Redis, you must touch that data so that it’s marked for export when the next storage update task will run.
+You must also find out which data has changed because you don't want to completely reload the content stored in Redis. The Touch module takes care of marking the items that were updated in the meantime. You must keep in mind that every time you make an update/delete/insert for data that's also stored in Redis, you must touch that data so that it's marked for export when the next storage update task will run.
 
 ## Browsing the data from Redis
 
-To be able to browse the data that’s stored in Redis, you must set up Redis Desktop Manager(RDS). [Install RDS](http://redisdesktop.com/download) and then configure as shown on the screenshot below.
+To be able to browse the data that's stored in Redis, you must set up Redis Desktop Manager(RDS). [Install RDS](http://redisdesktop.com/download) and then configure as shown on the screenshot below.
 
 Find the current Redis Port in `config/Shared/config_default-development.php`.
 ![Redis setup](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Using+Redis+as+a+KV+Storage/redis-setup.png)

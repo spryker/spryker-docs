@@ -41,7 +41,7 @@ The checkout process consists of the following steps:
 Read on to learn more on each step.
 
 ## Entry Step
-The entry step redirects the customer to correct step based on QuoteTransfer state. This step requires `input = false`, so it won’t be rendered.
+The entry step redirects the customer to correct step based on QuoteTransfer state. This step requires `input = false`, so it won't be rendered.
 
 ## Customer Step
 The customer step provides three forms:
@@ -53,7 +53,7 @@ The customer step provides three forms:
 This step is responsible for filling `CustomerTransfer` with corresponding data. The authentication logic is left to customer module, this step is only delegating calls to (and from) customer module and mapping data with forms.
 
 ## Address Step
-The address step is the step where customer fills billing and shipping addresses in `QuoteTransfer::billingAddress` and `QuoteTransfer::shippingAddress` respectively. This step lets the returning customers select one of the existing addresses or create a new one. New address will be created only if "Save new address to address book" checkbox is checked. Otherwise, it is saved in Order, but won't be stored in the database. This allows customer to skip new address saving if they want to. New and guest customers can only create a new address. If a new address is selected, it’s only created when order is placed and `OrderCustomerSavePlugin` plugin is enabled.
+The address step is the step where customer fills billing and shipping addresses in `QuoteTransfer::billingAddress` and `QuoteTransfer::shippingAddress` respectively. This step lets the returning customers select one of the existing addresses or create a new one. New address will be created only if "Save new address to address book" checkbox is checked. Otherwise, it is saved in Order, but won't be stored in the database. This allows customer to skip new address saving if they want to. New and guest customers can only create a new address. If a new address is selected, it's only created when order is placed and `OrderCustomerSavePlugin` plugin is enabled.
 
 ## Shipment Step
 Get shipment method information and store it into the quote. This step requires additional configuration because different shipment providers and different ways forms should be handled for each.

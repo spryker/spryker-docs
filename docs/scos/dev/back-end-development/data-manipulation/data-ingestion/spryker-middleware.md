@@ -201,7 +201,7 @@ The core of the Spryker Middleware is implemented in the `Process` module. This 
 composer require spryker-middleware/process
 ```
 
-2. Add the `SprykerMiddleware` namespace to your project’s core namespaces:
+2. Add the `SprykerMiddleware` namespace to your project's core namespaces:
 
 ```bash
 $config[KernelConstants::CORE_NAMESPACES] = [
@@ -314,7 +314,7 @@ Install the `OmsMiddlewareConnector` module:
 composer require spryker-middleware/oms-middleware-connector
 ```
 
-For an example of the module configuration, refer to `config/Shared/config.dist.php`. To set up the order export process, which must be triggered from the OMS command, add the configuration of its name to your project’s config:
+For an example of the module configuration, refer to `config/Shared/config.dist.php`. To set up the order export process, which must be triggered from the OMS command, add the configuration of its name to your project's config:
 
 ```php
 $config[OmsMiddlewareConnectorConstants::ORDER_EXPORT_PROCESS_NAME] = OrderExportProcessConfigurationPlugin::PROCESS_NAME;
@@ -333,7 +333,7 @@ public function provideBusinessLayerDependencies(Container $container)
 {
    $container = parent::provideBusinessLayerDependencies($container);
    $container->extend(self::COMMAND_PLUGINS, function (CommandCollectionInterface $commandCollection) {
-       $commandCollection->add(new TriggerOrderExportProcessCommand(), ‘Order/Export);
+       $commandCollection->add(new TriggerOrderExportProcessCommand(), 'Order/Export);
 
        return $commandCollection;
    });

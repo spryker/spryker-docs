@@ -166,7 +166,7 @@ class PaymentDependencyInjector extends AbstractDependencyInjector
 
 ## State machine
 
-Once the preceding procedures are completed, we’ll need to design a state machine. This state machine is dedicated for processing orders that use direct debit as a payment type:
+Once the preceding procedures are completed, we'll need to design a state machine. This state machine is dedicated for processing orders that use direct debit as a payment type:
 
 1. Add the `Invoice.xml` file inside the `config/Zed/oms/` folder, with the following content:
 
@@ -324,7 +324,7 @@ Once the preceding procedures are completed, we’ll need to design a state mach
 ```
 </details>
 
-3. Link the invoice state machine to process the orders submitted with the payment method we’re implementing.
+3. Link the invoice state machine to process the orders submitted with the payment method we're implementing.
 
 Add this configuration in the `SalesConfig` class:
 

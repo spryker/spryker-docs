@@ -63,7 +63,7 @@ The RabbitMq default configuration in Spryker VM looks like this:
 
 * RabbitMq groups queues into virtual hosts.
 * RabbitMq provides users/permissions to these virtual hosts.
-* Each virtual host belongs to one Store\Environment (e.g. DE_development_zed, AT_staging_zed, US_production_zed).
+* Each virtual host belongs to one Store\Environment—for example, DE_development_zed, AT_staging_zed, US_production_zed.
 * Messages can be sent to several virtual hosts.
 
 ### Spryker Entities and Multi-Store

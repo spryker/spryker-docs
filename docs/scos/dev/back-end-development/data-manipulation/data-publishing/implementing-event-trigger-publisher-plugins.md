@@ -33,7 +33,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
-Sometimes it’s necessary to [publish or re-publish](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1215792106/WIP+Publish+and+Synchronize+Repeated+Export#Published-Data-Re-generation) the model data manually for all or a particular resource. To do that, you need to implement an event trigger publisher plugin.
+Sometimes it's necessary to [publish or re-publish](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1215792106/WIP+Publish+and+Synchronize+Repeated+Export#Published-Data-Re-generation) the model data manually for all or a particular resource. To do that, you need to implement an event trigger publisher plugin.
 
 Follow the steps below to implement and register a new event trigger publisher plugin.
 

@@ -134,7 +134,7 @@ New bundles will not be auto-completable in your IDE just yet. Run `vendor/bin/c
 
 ## Bridges in Spryker core
 
-When you look into dependency provider classes from the core level, you will discover the existence of bridges. Inside Spryker’s Core, we are using the [Bridge pattern](https://en.wikipedia.org/wiki/Bridge_pattern) to avoid hard dependencies and to further decouple the bundles form each other.
+When you look into dependency provider classes from the core level, you will discover the existence of bridges. Inside Spryker's Core, we are using the [Bridge pattern](https://en.wikipedia.org/wiki/Bridge_pattern) to avoid hard dependencies and to further decouple the bundles form each other.
 
 {% info_block warningBox %}
 

@@ -34,7 +34,7 @@ With the Spryker Commerce OS comes an all-inclusive and fully pre-provisioned de
 
 The command-line Console tool enables you to execute a great variety of commands, such as managing the Spryker Commerce OS installer to run the OS in any environment.
 
-A *console command* is a PHP class that contains the implementation of functionality that can get executed from the command line. Spryker contains a wrapper over Symfony’s console component that makes the implementation and configuration of a console command easier. This article provides detailed information about the console commands Spryker has.
+A *console command* is a PHP class that contains the implementation of functionality that can get executed from the command line. Spryker contains a wrapper over Symfony's console component that makes the implementation and configuration of a console command easier. This article provides detailed information about the console commands Spryker has.
 
 To get the list of the available console commands, run:
 

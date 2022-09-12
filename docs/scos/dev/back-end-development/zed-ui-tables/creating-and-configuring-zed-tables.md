@@ -113,7 +113,7 @@ protected function configure(TableConfiguration $config)
 
 ### Configuring the default field for sorting
 
-To configure the field on which the table is sorted by default when it’s initially rendered or when no sorting is applied by the user from the UI, specify the index of the field when configuring the table:
+To configure the field on which the table is sorted by default when it's initially rendered or when no sorting is applied by the user from the UI, specify the index of the field when configuring the table:
 
 ```php
 <?php
@@ -121,7 +121,7 @@ To configure the field on which the table is sorted by default when it’s initi
 $config->setDefaultSortColumnIndex(5);
 ```
 
-You can also configure the default sort direction (for the initial rendering of the table or for the case it’s not set yet), for example:
+You can also configure the default sort direction (for the initial rendering of the table or for the case it's not set yet), for example:
 
 ```php
 <?php
@@ -165,7 +165,7 @@ protected function prepareData(TableConfiguration $config)
 
 ## 4. Rendering the table
 
-To display the query results in the table, in the controller’s action, retrieve an instance of the table configuration class and call the `render()` operation:
+To display the query results in the table, in the controller's action, retrieve an instance of the table configuration class and call the `render()` operation:
 
 ```php
 <?php

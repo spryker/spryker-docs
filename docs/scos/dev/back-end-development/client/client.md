@@ -41,16 +41,16 @@ See [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html) 
 
 End customers interact only with the front-end application. The front-end application needs to get data from the storage, send search requests to the search engine, and send the customer requests to the Commerce OS whenever needed, like adding to the cart, as the Commerce OS performs all the business logic.
 
-The Client’s job is to connect the front-end application to all of the surrounding resources needed for the front-end application to work. These resources include the Commerce OS, Storage, and Search. It also contains some other resources like Session and Queues.
+The Client's job is to connect the front-end application to all of the surrounding resources needed for the front-end application to work. These resources include the Commerce OS, Storage, and Search. It also contains some other resources like Session and Queues.
 
 For each of these resources, there is a Client. So, it is not only one Client, but many of them. Each one of them is responsible for a specific resource or functionality. Spryker, by default, is shipped with the following Clients:
 
 * SearchClient: to connect to Elasticsearch using its API.
 * StorageClient: to connect to Redis using the Redis protocol; RESP.
-* Commerce OS Clients: every functional unit, a module as it’s called in Spryker, has its Client. For example, there are separated Clients for cart (CartClient), checkout (CheckoutClient), and customer (CustomerClient). The same applies to all the other modules in Spryker.
+* Commerce OS Clients: every functional unit, a module as it's called in Spryker, has its Client. For example, there are separated Clients for cart (CartClient), checkout (CheckoutClient), and customer (CustomerClient). The same applies to all the other modules in Spryker.
 
 Commerce OS Clients communicate with the Commerce OS using HTTP. They mainly perform RPCs (remote procedure calls) using HTTP POST requests with a serialized JSON payload. They also do all the necessary authorization and authentication between the two applications.
-The Client’s purpose is to encapsulate the logic that runs the shop independent from the overlying application. So in case you want to use a different technology stack, you can reuse the Client.
+The Client's purpose is to encapsulate the logic that runs the shop independent from the overlying application. So in case you want to use a different technology stack, you can reuse the Client.
 ![Client Schematic](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Client/client-schematic.png)
 
 
@@ -125,6 +125,6 @@ The request from Yves to Zed involves two important classes:
 * The **stub** represents the remote methods in the Client.
 * The **gateway controller** represents the entry point on the Zed side.
 
-## What’s next?
+## What's next?
 
 To implement a Client for your project, see [Implementing a Client](/docs/scos/dev/back-end-development/client/implementing-a-client.html).

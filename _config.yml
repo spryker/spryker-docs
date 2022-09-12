@@ -150,17 +150,6 @@ defaults:
       role: "user"
   -
      scope:
-       path: "docs/fes"
-     values:
-       product: "frontend-enablement-service"
-  -
-     scope:
-       path: "docs/fes/dev"
-     values:
-       sidebar: "fes_dev_sidebar"
-       role: "dev"
-  -
-     scope:
        path: "docs/paas-plus"
      values:
        product: "platform-as-a-service-plus"
@@ -182,7 +171,7 @@ defaults:
       sidebar: "pbc_all_sidebar"
       role: "all"
 
- 
+
 versions:
   '201811.0': '201811.0'
   '201903.0': '201903.0'
@@ -240,7 +229,6 @@ sidebars:
   - scos_user_sidebar
   - sdk_dev_sidebar
   - acp_user_sidebar
-  - fes_dev_sidebar
   - paas_plus_dev_sidebar
   - pbc_all_sidebar
 
@@ -275,8 +263,6 @@ algolia:
       title: 'Cloud Developer'
     - name: 'acp_user'
       title: 'ACP User'
-    - name: 'fes_dev'
-      title: 'Frontend enablement Service Developer'
     - name: 'pbc_all'
       title: 'Packaged Business Capabilities'
     - name: 'paas_plus_dev'

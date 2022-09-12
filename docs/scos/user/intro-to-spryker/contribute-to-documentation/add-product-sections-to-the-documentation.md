@@ -302,7 +302,7 @@ To configure the Algolia search for the product, you need to configure the searc
 
 {% info_block warningBox "Excluding the files you are adding" %}
 
-If you are adding configuration for two roles, you also need to exclude them from indexing each other. The examples below show it.
+If you are adding configuration for two roles, you also need to exclude them from indexing each other. In the following examples, this is indicated by `docs/fes/dev/**/*.md` and `docs/fes/dev/**/*.md`.
 
 {% endinfo_block %}
 

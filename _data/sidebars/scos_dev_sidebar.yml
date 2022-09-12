@@ -8,6 +8,8 @@ entries:
   - title: Setup
     url: /docs/scos/dev/setup/setup.html
     nested:
+    - title: System requirements
+      url: /docs/scos/dev/setup/system-requirements.html
     - title: Installing Spryker with Docker
       url: /docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
       nested:
@@ -48,8 +50,6 @@ entries:
     - title: Installing Spryker with Development Virtual Machine
       url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html
       nested:
-      - title: DevVM system requirements
-        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html
       - title: SCOS supported browsers
         url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/scos-supported-browsers.html
       - title: Installing on MacOS and Linux
@@ -1960,6 +1960,7 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
+      - "202212.0"
     - title: Product Approval Process
       url: /docs/scos/dev/feature-integration-guides/product-approval-process-feature-integration.html
       include_versions:
@@ -2060,7 +2061,7 @@ entries:
       - "202005.0":
     - title: Product Labels
       url: /docs/scos/dev/feature-integration-guides/product-labels-feature-integration.html
-    - title: Product Labels + Promotions and Discounts feature integration
+    - title: Product Labels + Promotions and Discounts
       url: /docs/scos/dev/feature-integration-guides/product-labels-promotions-and-discounts-feature-integration.html
       include_versions:
       - "202009.0"
@@ -2267,6 +2268,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
+      - "202212.0"
     - title: Shipment + Approval Process
       url: /docs/scos/dev/feature-integration-guides/shipment-approval-process-feature-integration.html
       include_versions:
@@ -2299,7 +2301,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "201907.0"
     - title: Spryker Core Back Office
       url: /docs/scos/dev/feature-integration-guides/spryker-core-back-office-feature-integration.html
       include_versions:
@@ -2310,6 +2311,7 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
+      - "202212.0"
     - title: Uuid Generation Console
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
     - title: Volume Prices
@@ -2662,6 +2664,7 @@ entries:
       include_versions:
       - "202001.0"
   - title: Data import
+    url: /docs/scos/dev/data-import/data-import.html
     include_versions:
     - "202005.0"
     - "202009.0"
@@ -3553,8 +3556,10 @@ entries:
           - title: Implementing Invoice payment
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment.html
       - title: Data ingestion
+        url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-ingestion.html
         nested:
         - title: Structural preparations
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-ingestion.html
           nested:
           - title: File System
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/file-system.html
@@ -3666,6 +3671,8 @@ entries:
         url: /docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html
       - title: Multi-theme
         url: /docs/scos/dev/front-end-development/yves/multi-theme.html
+    - title: Migration guide - Remove support of IE11
+      url: /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html
     - title: Migration guide - Switch from Yarn to NPM v8
       url: /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
   - title: Migration concepts
@@ -4130,6 +4137,8 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html
         - title: "HowTo: Make a product searchable and shown on the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
+        - title: "HowTo: Add support of number formatting in the Back Office"
+          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html
         - title: CMS
           nested:
           - title: "HowTo: Create CMS templates"
@@ -4785,8 +4794,8 @@ entries:
       url: /docs/scos/dev/guidelines/data-processing-guidelines.html
     - title: Module configuration convention
       url: /docs/scos/dev/guidelines/module-configuration-convention.html
-    - title: Making your Spryker shop secure
-      url: /docs/scos/dev/guidelines/making-your-spryker-shop-secure.html
+    - title: Security guidelines
+      url: /docs/scos/dev/guidelines/security-guidelines.html
   - title: Best practices
     nested:
     - title: Basic SEO techniques to use in your project

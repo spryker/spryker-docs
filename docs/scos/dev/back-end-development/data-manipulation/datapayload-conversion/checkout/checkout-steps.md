@@ -68,9 +68,9 @@ Data handling happens after a valid form is being submitted during the `Shipment
 
 The approach of implementing shipment and payment handlers and forms are the same PaymentStep.
 
-* shipmentSelection (string) — the name of the form for the selected shipment.
-* carrier (ShipmentCarrierTransfer) — includes information on the shipment carrier.
-* method (ShipmentMethodTransfer) — contains information about the shipment method that is currently selected.
+* shipmentSelection (string)—the name of the form for the selected shipment.
+* carrier (ShipmentCarrierTransfer)—includes information on the shipment carrier.
+* method (ShipmentMethodTransfer)—contains information about the shipment method that is currently selected.
 
 ## Payment Step
 Get payment information and store it into quote for later processing when state machine is triggered.

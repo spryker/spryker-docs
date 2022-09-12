@@ -38,7 +38,7 @@ related:
     link: docs/scos/dev/architecture/code-buckets.html
 ---
 
-In Spryker, we use modular programming and packaging principles for organizing functionalities into independent software packages — modules.
+In Spryker, we use modular programming and packaging principles for organizing functionalities into independent software packages—modules.
 To establish a common infrastructure across all modules and to assist configurability, flexibility, agility, and modularity, the modules are divided into application layers according to the Spryker OS application design concept. Each application layer is further divided into layers following the layered architecture pattern.
 
 This document describes the Spryker layers and their roles in the application layers.

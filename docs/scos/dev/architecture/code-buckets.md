@@ -109,7 +109,7 @@ SPRYKER_CODE_BUCKET=FOO vendor/bin/console name:of:command
 
 ## Defining code buckets of a project
 
-Since the PHP code owns the code bucket implementations, it is necessary to validate the value of the `SPRYKER_CODE_BUCKET` environment variable.
+Since the PHP code owns the code bucket implementations, you must validate the value of the `SPRYKER_CODE_BUCKET` environment variable.
 
 You can define the code buckets of a project in `src/SprykerConfig/CodeBucketConfig.php`:
 

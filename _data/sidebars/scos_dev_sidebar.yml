@@ -9,7 +9,10 @@ entries:
     url: /docs/scos/dev/setup/setup.html
     nested:
     - title: System requirements
-      url: /docs/scos/dev/setup/system-requirements.html
+      url: /docs/scos/dev/system-requirements/system-requirements.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
     - title: Installing Spryker with Docker
       url: /docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
       nested:

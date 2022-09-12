@@ -24,6 +24,7 @@ redirect_from:
 - /v1/docs/en/system-requirements
 - /v4/docs/supported-browsers
 - /v4/docs/en/supported-browsers
+- /docs/scos/dev/setup/system-requirements.html
 ---
 | REQUIREMENT | VALUE |
 | ----------------- | ----------------------- |

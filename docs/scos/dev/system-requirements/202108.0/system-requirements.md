@@ -3,35 +3,6 @@ title: 'System requirements: Spryker product release 202108.0'
 description: This article provides the configuration that a system must have in order for the Spryker project to run smoothly and efficiently.
 last_updated: Jun 16, 2021
 template: howto-guide-template
-originalLink: https://documentation.spryker.com/2021080/docs/system-requirements
-originalArticleId: 6f7d36c1-2ee4-47d1-8f7f-ea0f1b7f93a7
-redirect_from:
-- /2021080/docs/system-requirements
-- /2021080/docs/en/system-requirements
-- /docs/system-requirements
-- /docs/en/system-requirements
-- /v6/docs/system-requirements
-- /v6/docs/en/system-requirements
-- /v5/docs/system-requirements
-- /v5/docs/en/system-requirements
-- /v4/docs/system-requirements
-- /v4/docs/en/system-requirements
-- /v3/docs/system-requirements
-- /v3/docs/en/system-requirements
-- /v2/docs/system-requirements
-- /v2/docs/en/system-requirements
-- /v1/docs/system-requirements
-- /v1/docs/en/system-requirements
-- /v4/docs/supported-browsers
-- /v4/docs/en/supported-browsers
-- /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html
-  related:
-- title: Installing Spryker with development virtual machine
-  link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html
-- title: Installing Spryker with DevVM on MacOS and Linux
-  link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-macos-and-linux.html
-- title: Installing Spryker with DevVM on Windows
-  link: docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-devvm-on-windows.html
 ---
 | REQUIREMENT | VALUE |
 | ----------------- | ----------------------- |

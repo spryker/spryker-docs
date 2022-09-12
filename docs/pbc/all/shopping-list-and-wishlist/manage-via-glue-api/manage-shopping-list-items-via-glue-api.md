@@ -23,11 +23,11 @@ related:
     link: docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html
 ---
 
-This endpoint allows managing shopping list items
+This endpoint lets you manage shopping list items.
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see:
+For detailed information about the modules that provide the API functionality and related installation instructions, see these integration guides:
 * [Glue API: Shopping Lists feature integration](/docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-glue-api.html)
 * [Glue API: Products feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html)
 
@@ -47,16 +47,17 @@ To add items to a shopping list, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value. |
 
 | QUERY PARAMETER | DESCRIPTION | POSSIBLE VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | concrete-products |
 
-| REQUEST SAMPLE | USAGE |
-| --- | --- |
-| `POST http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items` | Add items to the shopping list with the `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` unique identifier. |
-| `POST http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items?include=concrete-products` | Add items to the shopping list with the `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` unique identifier. Include information about the concrete products in the shopping list into the response. |
+
+<details>
+<summary markdown='span'>Request sample: add items to a shopping list with the `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` unique identifier.</summary>
+
+`POST http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items`
 
 ```json
 {
@@ -69,16 +70,101 @@ To add items to a shopping list, send the request:
     }
 }
 ```
+</details>
+
+<details>
+<summary markdown='span'>Request sample: add items to a shopping list with the `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a` unique identifier. Include information about the concrete products in the shopping list in the response.</summary>
+
+`POST http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items?include=concrete-products` 
+
+```json
+{
+    "data": {
+        "type": "shopping-list-items",
+        "attributes": {
+            "quantity": 4,
+            "sku": "005_30663301"
+       }
+    }
+}
+```
+</details>
+
+<details>
+<summary markdown='span'>Request sample: add a configurable product to a shopping list.</summary>
+
+`POST https://glue.myspryker.com/shopping-lists/333327a9-3654-5382-b81b-4992458ebae8/shopping-list-items`
+
+```json
+{
+    "data": {
+        "type": "shopping-list-items",
+        "attributes": {
+            "sku": "093_24495843",
+            "quantity": 3,
+            "productConfigurationInstance": {
+                "displayData": "{\"Preferred time of the day\": \"Afternoon\", \"Date\": \"9.09.2050\"}",
+                "configuration": "{\"time_of_day\": \"4\"}",
+                "configuratorKey": "installation_appointment_test",
+                "isComplete": true,
+                "quantity": 3,
+                "availableQuantity": 4,
+                 "prices": [
+                	  {
+                        "priceTypeName": "DEFAULT",
+                        "netAmount": 23434,
+                        "grossAmount": 42502,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        },
+                        "volumePrices": [
+                            {
+                                "netAmount": 150,
+                                "grossAmount": 165,
+                                "quantity": 5
+                            },
+                            {
+                                "netAmount": 145,
+                                "grossAmount": 158,
+                                "quantity": 10
+                            },
+                            {
+                                "netAmount": 140,
+                                "grossAmount": 152,
+                                "quantity": 20
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+
+</details>
 
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| quantity | Integer | ✓ | Quantity of the product to add. |
-| sku | String | ✓ | SKU of the product to add. Only [concrete products](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
+| sku | String | &check; | SKU of the product to add. Only [concrete products](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html) are allowed. |
+| quantity | Integer | &check; | Quantity of the product to add. |
+| productConfigurationInstance.displayData  | Array  |&check; | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
+| productConfigurationInstance.configuration  | Array  | &check; | Default configurable product configuration.  |
+| productConfigurationInstance.configuratorKey  | String  | &check; | Configurator type. |
+| productConfigurationInstance.isComplete  | Boolean  | &check; | Shows if the configurable product configuration is complete:<div><ul><li>`true`—configuration complete.</li><li>`false`—configuration incomplete.</li></ul></div>  |
+| productConfigurationInstance.quantity  | Integer  | &check; | Quantity of the product that is added to the wishlist.  |
+| productConfigurationInstance.availableQuantity  | Integer  | &check; | Product quantity available in the store. |
+
+For details about the attributes of included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
+
+For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: add items to a shopping list</summary>
+<summary markdown='span'>Response sample: add items to a shopping list.</summary>
 
 ```json
   {
@@ -98,7 +184,7 @@ To add items to a shopping list, send the request:
 </details>
 
 <details>
-<summary markdown='span'>Response sample: add items to a shopping list with the details on concrete products</summary>
+<summary markdown='span'>Response sample: add items to a shopping list with the details on concrete products.</summary>
 
 ```json
     {
@@ -168,15 +254,85 @@ To add items to a shopping list, send the request:
 ```
 </details>
 
+<details>
+<summary markdown='span'>Response sample: add a configurable product to a shopping list.</summary>
+
+```json
+{
+    "data": {
+        "type": "shopping-list-items",
+        "id": "f4ef6ec3-d0c1-55f8-80c9-6ef120d4761f",
+        "attributes": {
+            "productOfferReference": null,
+            "merchantReference": "MER000001",
+            "quantity": 3,
+            "sku": "093_24495843",
+            "productConfigurationInstance": {
+                "displayData": "{\"Preferred time of the day\": \"Afternoon\", \"Date\": \"9.09.2050\"}",
+                "configuration": "{\"time_of_day\": \"4\"}",
+                "configuratorKey": "installation_appointment_test",
+                "isComplete": true,
+                "quantity": 3,
+                "availableQuantity": 4,
+                "prices": [
+                    {
+                        "netAmount": 23434,
+                        "grossAmount": 42502,
+                        "priceTypeName": "DEFAULT",
+                        "volumeQuantity": null,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        },
+                        "volumePrices": [
+                            {
+                                "grossAmount": 165,
+                                "netAmount": 150,
+                                "quantity": 5
+                            },
+                            {
+                                "grossAmount": 158,
+                                "netAmount": 145,
+                                "quantity": 10
+                            },
+                            {
+                                "grossAmount": 152,
+                                "netAmount": 140,
+                                "quantity": 20
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "links": {
+            "self": "https://glue.de.scos.demo-spryker.com/shopping-lists/333327a9-3654-5382-b81b-4992458ebae8/shopping-list-items/f4ef6ec3-d0c1-55f8-80c9-6ef120d4761f"
+        }
+    }
+}
+```
+</details>
+
+
 <a name="shopping-list-items-response-attributes"></a>
 
 | ATTRIBUTE | TYPE | DESCRIPTION |
 | --- | --- | --- |
-| cell | cell | cell |
+| productOfferReference | String | Unique identifier of the product offer. |
+| merchantReference | String | Unique identifier of the merchant. |
 | quantity | Integer | Quantity of the product. |
 | sku | String | Product SKU. |
+| productConfigurationInstance.displayData  | Array  | Array of variables that are proposed to a Storefront user to set up in the configurator.  |
+| productConfigurationInstance.configuration  | Array  | Default configuration of the configurable product.  |
+| productConfigurationInstance.configuratorKey  | String  | Configurator type. |
+| productConfigurationInstance.isComplete  | Boolean  | Shows if the configurable product configuration is complete:<div><ul><li>`true`—configuration complete.</li><li>`false`—configuration incomplete.</li></ul></div>  |
+| productConfigurationInstance.quantity  | Integer  | Quantity of the product that is added to the wishlist.  |
+| productConfigurationInstance.availableQuantity  | Integer  | Product quantity available in the store. |
 
-For the attributes of included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
+For details about the attributes of included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
+
+For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
 ## Change item quantity in a shopping list
 
@@ -195,16 +351,17 @@ To change item quantity in a shopping list, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 | QUERY PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
 | include | Adds resource relationships to the request. | concrete-products|
 
-| REQUEST SAMPLE | USAGE |
-| --- | --- |
-| `PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08` | In the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`, change quantity of the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08`. |
-| `PATCH http://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08?include=concrete-products` | In the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`, change quantity of the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08`. Include information about the respective concrete product into the response. |
+
+<details>
+<summary markdown='span'>Request sample: in the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`, change quantity of the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08`.</summary>
+
+ `PATCH https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08`
 
 ```json
 {
@@ -218,15 +375,100 @@ To change item quantity in a shopping list, send the request:
 }
 ```
 
+</details>
+
+
+<details>
+<summary markdown='span'>In the shopping list with the id `ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a`, change quantity of the item with the id `00fed212-3dc9-569f-885f-3ddca41dea08`. Include information about the respective concrete product in the response.</summary>
+
+`PATCH https://glue.mysprykershop.com/shopping-lists/ecdb5c3b-8bba-5a97-8e7b-c0a5a8f8a74a/shopping-list-items/00fed212-3dc9-569f-885f-3ddca41dea08?include=concrete-products`
+
+```json
+{
+    "data": {
+        "type": "shopping-list-items",
+        "attributes": {
+            "quantity": 12,
+            "sku": "005_30663301"
+       }
+    }
+}
+```
+
+</details>
+
+<details>
+<summary markdown='span'>Request sample: in the shopping list with the id `333327a9-3654-5382-b81b-4992458ebae8` change quantity of the configurable product item with the id `0323bd43-f9ff-5964-afe3-44a2085ce0c6`.</summary>
+
+`PATCH https://glue.mysprykershop.com/shopping-lists/333327a9-3654-5382-b81b-4992458ebae8/shopping-list-items/0323bd43-f9ff-5964-afe3-44a2085ce0c6`
+
+```json
+{
+"data": {
+        "type": "shopping-list-items",
+        "attributes": {
+            "quantity": 3,
+            "productConfigurationInstance": {
+                "displayData": "{\"Preferred time of the day\": \"Morning\", \"Date\": \"9.09.2055\"}",
+                "configuration": "{\"time_of_day\": \"4\"}",
+                "configuratorKey": "installation_appointment_edit123",
+                "isComplete": false,
+                "quantity": 3,
+                "availableQuantity": 4,
+                "prices": [
+                    {
+                        "priceTypeName": "DEFAULT",
+                        "netAmount": 23434,
+                        "grossAmount": 42502,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        },
+                        "volumePrices": [
+                            {
+                                "netAmount": 150,
+                                "grossAmount": 165,
+                                "quantity": 5
+                            },
+                            {
+                                "netAmount": 145,
+                                "grossAmount": 158,
+                                "quantity": 10
+                            },
+                            {
+                                "netAmount": 140,
+                                "grossAmount": 152,
+                                "quantity": 20
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+</details>
+
 | ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
-| --- | --- | --- |--- |
-| sku | String | ✓ | SKU of the product you want to change the quantity of. Only [concrete products](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html) are allowed. |
-| quantity | Integer | ✓ | New quantity of the product. |
+| --- | --- | --- | --- |
+| quantity | Integer | &check; | New quantity of the product. |
+| productConfigurationInstance.displayData  | Array  |&check; | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
+| productConfigurationInstance.configuration  | Array  | &check; | Default configurable product configuration.  |
+| productConfigurationInstance.configuratorKey  | String  | &check; | Configurator type. |
+| productConfigurationInstance.isComplete  | Boolean  | &check; | Shows if the configurable product configuration is complete:<div><ul><li>`true`—configuration complete.</li><li>`false`—configuration incomplete.</li></ul></div>  |
+| productConfigurationInstance.quantity  | Integer  | &check; | Quantity of the product that is added to the wishlist.  |
+| productConfigurationInstance.availableQuantity  | Integer  | &check; | Product quantity available in the store. |
+
+For details about the attributes of included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
+
+For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: change item quantity in a shopping list</summary>
+<summary markdown='span'>Response sample: change item quantity in a shopping list.</summary>
 
 ```json
     {
@@ -246,7 +488,7 @@ To change item quantity in a shopping list, send the request:
 </details>     
 
 <details>
-<summary markdown='span'>Response sample: change item quantity in a shopping list with the details on concrete products</summary>
+<summary markdown='span'>Response sample: change item quantity in a shopping list with the details on concrete products.</summary>
 
 ```json
 {
@@ -310,10 +552,84 @@ To change item quantity in a shopping list, send the request:
 }
 
 ```
-</details>   
+</details>
 
-For response attributes, see [Add items to a shopping list](#shopping-list-items-response-attributes).
-For the attributes of included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
+<details>
+<summary markdown='span'>Response sample: in the shopping list with the id `333327a9-3654-5382-b81b-4992458ebae8` change quantity of the configurable product with the id `0323bd43-f9ff-5964-afe3-44a2085ce0c6`.</summary>
+
+```json
+{
+    "data": {
+        "type": "shopping-list-items",
+        "id": "0323bd43-f9ff-5964-afe3-44a2085ce0c6",
+        "attributes": {
+            "productOfferReference": null,
+            "merchantReference": "MER000001",
+            "quantity": 3,
+            "sku": "093_24495843",
+            "productConfigurationInstance": {
+                "displayData": "{\"Preferred time of the day\": \"Morning\", \"Date\": \"9.09.2055\"}",
+                "configuration": "{\"time_of_day\": \"4\"}",
+                "configuratorKey": "installation_appointment_edit123",
+                "isComplete": false,
+                "quantity": 3,
+                "availableQuantity": 4,
+                "prices": [
+                    {
+                        "netAmount": 23434,
+                        "grossAmount": 42502,
+                        "priceTypeName": "DEFAULT",
+                        "volumeQuantity": null,
+                        "currency": {
+                            "code": "EUR",
+                            "name": "Euro",
+                            "symbol": "€"
+                        },
+                        "volumePrices": [
+                            {
+                                "grossAmount": 165,
+                                "netAmount": 150,
+                                "quantity": 5
+                            },
+                            {
+                                "grossAmount": 158,
+                                "netAmount": 145,
+                                "quantity": 10
+                            },
+                            {
+                                "grossAmount": 152,
+                                "netAmount": 140,
+                                "quantity": 20
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        "links": {
+            "self": "https://glue.mysprykershop.com/shopping-lists/333327a9-3654-5382-b81b-4992458ebae8/shopping-list-items/0323bd43-f9ff-5964-afe3-44a2085ce0c6"
+        }
+    }
+}
+```
+</details>
+
+| ATTRIBUTE | TYPE | REQUIRED | DESCRIPTION |
+| --- | --- | --- | --- |
+| productOfferReference | String | &check; | Unique identifier of the product offer. |
+| merchantReference| String | &check; | Unique identifier of the merchant. |
+| quantity | Integer | &check; | Updated quantity of the product. |
+| sku | String | &check; | SKU of the product whose quantity has been updated. Only [concrete products](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html) and [configurable products](/docs/scos/user/features/{{site.version}}/configurable-product-feature-overview.html) are allowed. |
+| productConfigurationInstance.displayData  | Array  |&check; | Array of variables that are proposed for a Storefront user to set up in the configurator.  |
+| productConfigurationInstance.configuration  | Array  | &check; | Default configurable product configuration.  |
+| productConfigurationInstance.configuratorKey  | String  | &check; | Configurator type. |
+| productConfigurationInstance.isComplete  | Boolean  | &check; | Shows if the configurable product configuration is complete:<div><ul><li>`true`—configuration complete.</li><li>`false`—configuration incomplete.</li></ul></div>  |
+| productConfigurationInstance.quantity  | Integer  | &check; | Quantity of the product that is added to the wishlist.  |
+| productConfigurationInstance.availableQuantity  | Integer  | &check; | Product quantity available in the store. |
+
+For details about the attributes of included resources, see [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes).
+
+For details about the attributes of abstract product prices, see [Retrieve abstract product prices](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html#abstract-product-prices-response-attributes).
 
 ## Remove an item from a shopping list
 
@@ -332,7 +648,7 @@ To remove an item from a shopping list, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | ✓ | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
+| Authorization | string | &check; | String containing digits, letters, and symbols that authorize the company user. [Authenticate as a company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user) to get the value.  |
 
 Request sample: remove an item from a shopping list
 
@@ -349,10 +665,10 @@ If the item is removed successfully, the endpoint returns the `204 No Content` s
 | 001 | Access token is incorrect. |
 | 002 | Access token is missing. |
 | 400 | Provided access token is not an [access token of a company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html). |
-| 901 | Shop list name or item name is not specified or too long.<br>**OR** <br> Item quantity is not specified or too large.|
+| 901 | Shop list name or item name is not specified or too long.<br>OR<br> Item quantity is not specified or too large.|
 | 1501 | Shopping list ID or item is not specified. |
-| 1503 |  Specified shopping list is not found. |
-| 1504 |  Specified shopping list item is not found. |
+| 1503 | Specified shopping list is not found. |
+| 1504 | Specified shopping list item is not found. |
 | 1508 | Concrete product is not found. |
 
 To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/reference-information-glueapplication-errors.html).

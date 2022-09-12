@@ -74,10 +74,9 @@ docker/sdk up
 
 ## 7. Open your new Spryker project in the browser
 
-* Storefront [yves.de.spryker.local](yves.de.spryker.local)
-* Back-Office [backoffice.de.spryker.local](backoffice.de.spryker.local)
-* Frontend API [glue-storefront.de.spryker.local](glue-storefront.de.spryker.local) and its schema [swagger.spryker.local](swagger.spryker.local)
-
+* Storefront: `yves.de.spryker.local`
+* Back-Office: `backoffice.de.spryker.local`
+* Frontend API: `glue-storefront.de.spryker.local` and its schema `swagger.spryker.local`
 {% info_block infoBox "Info" %}
 
 If you see `.de.` in your URL, it means that this application is store-specific. By default, Spryker comes with three stores: *de*, *at*, and *us*.

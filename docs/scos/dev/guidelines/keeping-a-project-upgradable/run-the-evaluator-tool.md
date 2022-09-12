@@ -34,16 +34,27 @@ spryker-sdk list
 
 ## Run an evaluation
 
-To evaluate your code, run the evaluator:
+To evaluate your code, run the evaluator in one of the following ways:
+
+* Evaluate the code of all the modules:
 
 ```bash
 spryker-sdk analyze:php:code-compliance
 ```
-    This creates `analyze:php:code-compliance.violations.yaml` in the `reports` folder.
 
-Available options:
-- Module filtration option, use it for specifies which modules should be evaluated.
-  Example `-m 'Pyz.ProductStorage'` where `Pyz` is namespace and `ProductStorage` is module name.
+* Evaluate the code of needed modules:
+
+```bash
+spryker-sdk analyze:php:code-compliance -m '{NAMESPACE}.{MODULE_NAME} {NAMESPACE}.{MODULE_NAME} ...'
+```
+
+Example:
+
+```bash
+spryker-sdk analyze:php:code-compliance -m 'Pyz.ProductStorage'
+```
+
+    The command creates `analyze:php:code-compliance.violations.yaml` in the `reports` folder.
 
 To view the report, run the following command:
 

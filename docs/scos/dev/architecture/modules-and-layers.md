@@ -69,7 +69,7 @@ The Communication Layer is located above the Business layer, so it can access al
 
 ### Presentation layer
 
-On the Presentation layer, the view related content is implemented. To get the needed data, the layer sends requests to the Communication layer. Then, it shows the data using the templates.
+On the Presentation layer, the view-related content is implemented. To get the needed data, the layer sends requests to the Communication layer. Then, it shows the data using the templates.
 
 ## Next steps
 

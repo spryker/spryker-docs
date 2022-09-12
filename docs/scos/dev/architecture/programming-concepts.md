@@ -33,13 +33,13 @@ related:
     link: docs/scos/dev/architecture/code-buckets.html
 ---
 
-Having covered the main architectural concepts of the Spryker's Commerce OS, frontend, modularity, and the application and software layers, we will dive deeper inside these approaches and explain the main software and coding concepts in Spryker. There are 7 main software concepts in Spryker.  
+Having covered the main architectural concepts of the Spryker's Commerce OS, frontend, modularity, and the application and software layers, let's dive deeper into these approaches and explain the main software and coding concepts in Spryker. There are seven main software concepts in Spryker.
 
 ## Facade
 
 Spryker *Facades* use the [Facade design pattern](https://en.wikipedia.org/wiki/Facade_pattern). They hide all the business logic of a module behind them and give a very simple and straightforward interface. Thus, the main API of a module is its Facade. When you want to find out what a module does, simply check its Facade interface.
 
-Spryker's Facades work as delegators, so they do not have any business logic in them. They simply delegate to the right model in order to handle the needed business logic. There is only one Facade for each module, and it is located in the Business layer.
+Spryker's Facades work as delegators, so they do not have any business logic in them. They delegate to the right model in order to handle the needed business logic. There is only one Facade for each module, and it is located in the Business layer.
 
 ## Factory
 

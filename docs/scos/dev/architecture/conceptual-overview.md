@@ -84,7 +84,7 @@ The application separation brings 3 main benefits:
 
 ## Data separation
 
-Following the separation between frontend and back-end, one of the main concepts in Spryker is the separation of data between the frontend and back-end. As in any e-commerce shop system, there are always tons of data to persist and usually with relations between different data entities, for example, orders with products and customers. For managing such data relations, a relational database is needed. The backend manages your shop’s data and its relations; thus it comes with a relational database.
+Following the separation between frontend and back-end, one of the main concepts in Spryker is the separation of data between the frontend and back-end. As in any e-commerce shop system, there are always tons of data to persist and usually with relations between different data entities, for example, orders with products and customers. For managing such data relations, a relational database is needed. The backend manages your shop's data and its relations; thus it comes with a relational database.
 
 ### Storage
 

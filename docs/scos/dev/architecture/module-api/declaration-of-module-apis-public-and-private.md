@@ -36,7 +36,7 @@ According to [Semantic Versioning](http://semver.org/), we release a major versi
 
 ## Public API
 
-In the Spryker Commerce OS’s core, the following is the public API:
+In the Spryker Commerce OS's core, the following is the public API:
 
 * Public methods in these locatable classes:
     * [Facades](/docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html)

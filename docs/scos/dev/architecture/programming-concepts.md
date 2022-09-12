@@ -33,13 +33,13 @@ related:
     link: docs/scos/dev/architecture/code-buckets.html
 ---
 
-Having covered the main architectural concepts of the Spryker’s Commerce OS, frontend, modularity, and the application and software layers, we will dive deeper inside these approaches and explain the main software and coding concepts in Spryker. There are 7 main software concepts in Spryker.  
+Having covered the main architectural concepts of the Spryker's Commerce OS, frontend, modularity, and the application and software layers, we will dive deeper inside these approaches and explain the main software and coding concepts in Spryker. There are 7 main software concepts in Spryker.  
 
 ## Facade
 
 Spryker *Facades* use the [Facade design pattern](https://en.wikipedia.org/wiki/Facade_pattern). They hide all the business logic of a module behind them and give a very simple and straightforward interface. Thus, the main API of a module is its Facade. When you want to find out what a module does, simply check its Facade interface.
 
-Spryker’s Facades work as delegators, so they do not have any business logic in them. They simply delegate to the right model in order to handle the needed business logic. There is only one Facade for each module, and it is located in the Business layer.
+Spryker's Facades work as delegators, so they do not have any business logic in them. They simply delegate to the right model in order to handle the needed business logic. There is only one Facade for each module, and it is located in the Business layer.
 
 ## Factory
 
@@ -95,13 +95,13 @@ Directories:
 |            PATH            |                           PURPOSE                            |
 | ------------------------ | ---------------------------------------------------------- |
 |      src/{Namespace}/      | Use this directory for developing. All the code for Yves and Zed is located here. |
-|  vendor/spryker,  vendor/spryker-shop  | Contains the code of the Spryker-core. It follows the architectural rules used in the project’s code. |
+|  vendor/spryker,  vendor/spryker-shop  | Contains the code of the Spryker-core. It follows the architectural rules used in the project's code. |
 | vendor/{vendor}/{package}/ | All the other packages that are installed using composer install. |
 |           data/            |  Log files and other temporary data.   |
 |   public/Yves/index.php    |      Web-server entry point of the Storefront application.       |
-|    public/Yves/assets/     |  Static files, such as CSS, JS, and assets, for the project’s Yves.  |
+|    public/Yves/assets/     |  Static files, such as CSS, JS, and assets, for the project's Yves.  |
 |    public/Zed/index.php    |      Web-server entry point of the Back Office application.       |
-|     public/Zed/assets/     |  Static files, such as CSS, JS, and assets, for the project’s Zed.   |
+|     public/Zed/assets/     |  Static files, such as CSS, JS, and assets, for the project's Zed.   |
 |   public/Glue/index.php    |    Web-server entry point of the Storefront API application.     |
 
 ## Next steps

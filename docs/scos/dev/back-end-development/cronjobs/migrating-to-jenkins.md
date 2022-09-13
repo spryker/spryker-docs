@@ -12,12 +12,9 @@ related:
     link: docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-cronjobs.html
 ---
 
-
-
-
 This document describes how to migrate to the Jenkins scheduler and set up jobs.
 
-{% info_block infoBox "" %}
+{% info_block infoBox %}
 
 Jenkins is the default scheduler shipped with Spryker Demo Shops. Follow the instructions in the document only if you previously migrated to another scheduler.
 
@@ -126,7 +123,7 @@ class SchedulerDependencyProvider extends SprykerSchedulerDependencyProvider
 
 ## 2. Configure the project
 
-1. To be able to use enabled schedulers from environment variables, adjust the project configuration with `SchedulerConstants::ENABLED_SCHEDULERS`:
+1. To use enabled schedulers from environment variables, adjust the project configuration with `SchedulerConstants::ENABLED_SCHEDULERS`:
 
 ```php
 $config[SchedulerConstants::ENABLED_SCHEDULERS] = [

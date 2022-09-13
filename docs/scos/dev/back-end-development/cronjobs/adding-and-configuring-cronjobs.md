@@ -59,7 +59,7 @@ To import this configuration to Jenkins, run the following command in the consol
 
 After this, you can open Jenkins on port `10007` and watch your scripts running: [http://zed.mysprykershop.com:10007](http://zed.mysprykershop.com:10007/) (URL works for standard VM, you may use a different hostname).
 
-## Cronjob Configuration
+## Cronjob configuration
 
 For each job you can define several configurations:
 

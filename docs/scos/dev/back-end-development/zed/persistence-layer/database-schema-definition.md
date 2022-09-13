@@ -38,7 +38,7 @@ related:
 ---
 
 With Propel, a [database schema](http://propelorm.org/documentation/reference/schema.html) is defined in an XML file. Each module has its own part of the big schema that is collected and merged.
-This document desribes the database schema file and how to use it in your project.
+This document describes the database schema file and how to use it in your project.
 
 ## Example schema XML file
 

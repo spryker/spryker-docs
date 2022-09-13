@@ -34,11 +34,9 @@ This document describes how you can implement a new console command. However, be
 * Get the list of the console commands already available at Spryker. For instructions about how to do that, see [Getting the list of console commands and available options](/docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html).
 * Check out what each command does. For details, see [Console commands in Spryker](/docs/scos/dev/back-end-development/console-commands/console-commands.html).
 
-## Adding a new console command
+## Add a new console command
 
-To add a new console command, you need to create a new class in:
-
-`[Namespace]/Zed/(module)/Communication/Console/` which extends `Spryker\Zed\Console\Business\Model\Console`. There are two methods that need to be implemented:
+To add a new console command, create a new class in `[Namespace]/Zed/(module)/Communication/Console/`, which extends `Spryker/Zed/Console/Business/Model/Console`. Two methods need implementation:
 
 * `configure()`—this method is used to set the name or description.
 * `execute()`—this method is executed by the console application and contains your code—for example, call a facade.

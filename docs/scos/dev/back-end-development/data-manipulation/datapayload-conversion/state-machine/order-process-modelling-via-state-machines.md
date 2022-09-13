@@ -69,7 +69,7 @@ There is already an example state machine implemented in Legacy Demoshop. Look f
 
 How are the states modeled in the XML?
 
-* A list of state elements can be easily defined in an XML file, as in the example below.
+* A list of state elements can be easily defined in an XML file, as in the following example.
 * A state is defined by a name.
 
 {% info_block infoBox %}
@@ -322,7 +322,7 @@ There are several reasons for introducing subprocesses when modeling a state mac
 * The flow of the process is easier to follow.
 * If more than one process needs to be defined (e.g., orders that are being paid before delivery and orders that are paid on delivery), then the common parts of the processes can be extracted into subprocesses and reused.
 
-To introduce a subprocess in the main process, you need to specify it's name under the subprocesses tag as in the example below:
+To introduce a subprocess in the main process, you need to specify it's name under the subprocesses tag as in the following example:
 
 ```xml
 <process name="Prepayment" main="true">

@@ -96,7 +96,7 @@ protected function addError403Route(RouteCollection $routeCollection): RouteColl
 }
 ```
 
- The route mapping can be registered in the `\Pyz\Yves\Router\RouterDependencyProvider::getRouteProvider()` method, as in the example below:
+ The route mapping can be registered in the `\Pyz\Yves\Router\RouterDependencyProvider::getRouteProvider()` method, as in the following example:
  
  
 ```php

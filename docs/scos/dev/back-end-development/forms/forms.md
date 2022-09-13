@@ -182,7 +182,7 @@ class FormDependencyProvider extends SprykerFormDependencyProvider
 
 ## Extending the validator
 
-The _Validator_ offers several possibilities to extend it. For example, you can add a translator or a enable a validation factory. To be able to do so, we provide the `spryker/validator-extension` module, which will be installed automatically when the `spryker/validator` module is installed.
+The _Validator_ offers several possibilities to extend it. For example, you can add a translator or enable a validation factory. To do so, we provide the `spryker/validator-extension` module, which will be installed automatically when the `spryker/validator` module is installed.
 
 The extension module provides the `ValidatorPluginInterface` as follows:
 
@@ -206,7 +206,7 @@ interface ValidatorPluginInterface
 }
 ```
 
-The interface gets the `ValidatorBuilderInterface` and the `ContainerInterface` to be able to extend the _Validator Service_ with all possible extensions and get other services from the `ContainerInterface` when required.
+The interface gets `ValidatorBuilderInterface` and `ContainerInterface` to extend the _Validator Service_ with all possible extensions and get other services from the `ContainerInterface` when required.
 
 In order to enable a new constraint factory, we need to add it via a plugin that implements the interface.
 
@@ -339,7 +339,7 @@ interface ConstraintPluginInterface
 }
 ```
 
-The interface gets the `ContainerInterface` to be able to get every service that a constraint might require. By default, Spryker has one _Constraint Plugin_ out of the box.
+The interface gets `ContainerInterface` to get every service that a constraint might require. By default, Spryker has one _Constraint Plugin_ out of the box.
 
 **Implementation Example:**
 

@@ -49,7 +49,7 @@ Facets provide aggregated data based on a search query. For example, we need to 
 
 The operation can contain other facet filters (such as color or size)  in the request.
 
-On the category detail page, the `catalogSearch($searchString, $parameters)` should be used, as in the example below:
+On the category detail page, the `catalogSearch($searchString, $parameters)` should be used, as in the following example:
 
 ```php
 <?php

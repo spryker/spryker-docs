@@ -91,7 +91,7 @@ Replacement rules, described in the [Extending the Core](/docs/scos/dev/back-end
 * `DependencyProvider`
 * `Config`
 
-The example below illustrates how `CategoryFacade` can be extended on the project side:
+The following example illustrates how `CategoryFacade` can be extended on the project side:
 
 **Spryker Core:**
 

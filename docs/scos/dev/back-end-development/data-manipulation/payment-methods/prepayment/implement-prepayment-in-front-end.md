@@ -196,7 +196,7 @@ The next procedure to be performed is to set-up the payment handler.
 <details open>
 <summary markdown='span'>1. Handling the new payment type</summary>
 
-To be able to handle this new payment type, add a `PrepaymentHandler` class inside the `Handler/` folder:
+To handle this new payment type, add a `PrepaymentHandler` class inside the `Handler/` folder:
 
 ```php
 <?php

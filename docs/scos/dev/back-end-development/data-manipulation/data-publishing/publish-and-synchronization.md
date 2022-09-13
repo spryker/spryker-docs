@@ -122,7 +122,8 @@ On triggering the publish process, an event or events are posted to a queue. Eac
 *   The foreign keys used to backtrack the updated Propel entities
 
 
-However, it will not contain the actual data that has changed. Find an example below:
+However, it will not contain the actual data that has changed. See the following example:
+
 ```json
 {
 	"listenerClassName":"Spryker\\Zed\\UrlStorage\\Communication\\Plugin\\Event\\Listener\\UrlStorageListener",

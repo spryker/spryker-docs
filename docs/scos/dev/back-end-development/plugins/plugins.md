@@ -171,7 +171,7 @@ interface CalculatorPluginInterface
 }
 ```
 
-Now you can provide the plugin or an array of plugins in the dependency provider, as in the example below. Example of dependency provider from the `Calculation` module:
+Now you can provide the plugin or an array of plugins in the dependency provider, as in the following example. Example of dependency provider from the `Calculation` module:
 
 ```php
 <?php

@@ -77,7 +77,7 @@ You must also find out which data has changed because you don't want to complete
 
 ## Browsing the data from Redis
 
-To be able to browse the data that's stored in Redis, you must set up Redis Desktop Manager(RDS). [Install RDS](http://redisdesktop.com/download) and then configure as shown on the screenshot below.
+To browse the data that's stored in Redis, you must set up Redis Desktop Manager(RDS). [Install RDS](http://redisdesktop.com/download) and then configure it as shown on the following screenshot.
 
 Find the current Redis Port in `config/Shared/config_default-development.php`.
 ![Redis setup](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Using+Redis+as+a+KV+Storage/redis-setup.png)
@@ -109,7 +109,7 @@ The caption for the button depends on the selected locale:
 
 Redis data storage is accessed using the `StorageClient`.
 
-The `StorageClient` can be obtained as an external dependency for Yves, in the client layer. In the dependency provider of the client layer from your module, add the `StorageClient` dependency as in the example below:
+The `StorageClient` can be obtained as an external dependency for Yves, in the client layer. In the dependency provider of the client layer from your module, add the `StorageClient` dependency as in the following example:
 
 ```php
 <?php

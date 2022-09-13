@@ -212,7 +212,7 @@ class HelloWorldDependencyProvider extends SprykerCustomerDependencyProvider
 
 {% endinfo_block %}
 
-3. To be able to get an instance of `HelloWorldStub`, create `HelloWorldFactory`:
+3. To get an instance of `HelloWorldStub`, create `HelloWorldFactory`:
 
 ```php
 <?php

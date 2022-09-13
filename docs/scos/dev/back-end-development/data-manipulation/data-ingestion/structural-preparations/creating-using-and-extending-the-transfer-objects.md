@@ -120,7 +120,7 @@ $fooTransfer->setBazs([
 
 ## Using the transfer objects
 
-The example below is a typical use case for a transfer object. The customer object is created and the setters are used to set an email, first, and last name:
+The following example is a typical use case for a transfer object. The customer object is created and the setters are used to set an email, first, and last name:
 
 ```php
 <?php

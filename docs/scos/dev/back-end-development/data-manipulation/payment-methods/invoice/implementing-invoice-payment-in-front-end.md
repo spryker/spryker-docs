@@ -189,7 +189,7 @@ The next procedure to be performed is to set-up the payment handler.
 
 ### 1. Handling the new payment type
 
-To be able to handle this new payment type, add the `InvoiceHandler` class inside the `Handler/` folder:
+To handle this new payment type, add the `InvoiceHandler` class inside the `Handler/` folder:
 
 ```php
 <?php

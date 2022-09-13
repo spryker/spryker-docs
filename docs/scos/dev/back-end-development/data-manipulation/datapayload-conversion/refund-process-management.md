@@ -43,7 +43,7 @@ The `RefundFacade::calculateRefund($salesOrderItems, $salesOrderEntity)` will re
 
 Usually this functionality will be integrated in the state machine processes and will be called by a command.
 
-A command plugin that calls the refund functionality can be similar to the example below:
+A command plugin that calls the refund functionality can be similar to the following example:
 
 ```php
 <?php

@@ -19,7 +19,19 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/prices-feature-walkthrough/prices-feature-walkthrough.html
 ---
 
-A price can be defined for abstract and concrete products. Prices are stored as an integer, in the smallest unit of a currency. For example, for Euro prices are stored in cents.
+Both [abstract products and product variants](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) can have prices.
+
+On the catalog and search pages of the Storefront, abstract product prices are displayed.
+
+When a customer opens a Product Details page, they still see an abstract product price.
+
+After selecting a product variant, they see the variant's price.
+
+
+
+## Price types
+
+Prices are stored as an integer, in the smallest unit of a currency. For example, for Euro prices are stored in cents.
 
 Each price is assigned to a price type, like gross or net price. For a price type, there can be *one* to *n* product prices defined. Price type entity is used to differentiate between use cases. For example, you can have DEFAULT and ORIGINAL types to use for sale pricing.
 
@@ -33,19 +45,11 @@ If a concrete product doesn’t have a price entity stored, it inherits the valu
 The following diagram summarizes the logic for retrieving the price for a product:
 ![Price retrieval logic](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Price+Functionality/price_retrieval_logic.png)
 
-## Price calculation
-
-Prices are calculated as follows:
-
-1. Retrieve the valid price for the product.
-2. Calculate the amount of tax.          
-3. Price for the options that were selected for the product (for example, frame or fabric).
-
 ## Related Business User articles
 
 | OVERVIEWS | BACK OFFICE USER GUIDES |
 |---| - |
-| [Get a general idea of volume prices](/docs/pbc/all/price-management/prices-feature-overview/volume-prices-overview.html) | [Define prices when creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)   |
+| [Volume prices](/docs/pbc/all/price-management/prices-feature-overview/volume-prices-overview.html) | [Define prices when creating abstract products and product bundles](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html)   |
 | | [Edit prices of an abstract product](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-abstract-products-and-product-bundles/edit-abstract-products-and-product-bundles.html#edit-prices-of-an-abstract-product-or-product-bundle)   |
 | | [Define prices when creating a concrete product](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-concrete-products/creating-product-variants.html)  |
 | | [Edit prices of a concrete product](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-concrete-products/editing-product-variants.html)   |

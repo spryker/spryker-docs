@@ -34,7 +34,21 @@ $( document ).ready(function() {
     initPostAnchor();
 
     initHubspotForm();
+
+    initAccordion();
 });
+
+function initAccordion() {
+    $('.accordion').navgoco({
+        caretHtml: null,
+        openClass: 'active',
+        save: false,
+        slide: {
+            duration: 300,
+            easing: 'linear',
+        },
+    });
+}
 
 function initHubspotForm() {
     let formContainer = $('.js-hubspot-form');

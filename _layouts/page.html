@@ -159,6 +159,34 @@ layout: default
             </div>
         </aside>
 
+        {% if page.related_accordion != null %}
+            <aside class="related">
+                <h3 class="related__title" data-toc-skip>Related articles</h3>
+                <ul class="accordion">
+                    {% for section in page.related_accordion %}
+                        <li class="accordion__item active">
+                            <a href="#" class="accordion__opener">
+                                <span class="accordion__opener-text">{{ section.title }}</span>
+                                <i class="accordion__opener-icon icon-arrow-down"></i>
+                            </a>
+                            <div class="accordion__slide">
+                                <div class="accordion__slide-inner">
+                                    {% for relatedPage in section.links %}
+                                        {% assign link = relatedPage.link | prepend: '/' %}
+                                        {% assign version = page.version | default: site.version %}
+                                        <a href="{{ link | replace_first: "page.version", version }}" class="related__link">
+                                            <i class="icon-article related__link-icon"></i>
+                                            <span class="related__link-text">{{ relatedPage.title }}</span>
+                                        </a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </aside>
+        {% endif %}
+
         {% if page.related != null %}
             <aside class="related">
             <h3 class="related__title" data-toc-skip>Related articles</h3>

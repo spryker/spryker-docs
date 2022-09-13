@@ -10,6 +10,13 @@ entries:
     nested:
     - title: System requirements
       url: /docs/scos/dev/setup/system-requirements.html
+    - title: Quick installation guides
+      url: /docs/scos/dev/setup/quick-installation-guides/quick-installation-guides.html
+      nested:
+      - title: 'Quick installation guide: Mac OS and Linux'
+        url: /docs/scos/dev/setup/quick-installation-guides/quick-installation-guide-macos-and-linux.html
+      - title: 'Quick installation guide: Windows'
+        url: /docs/scos/dev/setup/quick-installation-guides/quick-installation-guide-windows.html
     - title: Installing Spryker with Docker
       url: /docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
       nested:

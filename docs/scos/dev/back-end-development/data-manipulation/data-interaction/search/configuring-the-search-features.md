@@ -1,6 +1,6 @@
 ---
 title: Configuring the search features
-description: In this article, you'll learn how to configure faceted navigation, filters, pagination, and sorting, so all the important search features that are provided by the Search module.
+description: This document shows how to configure faceted navigation, filters, pagination, and sorting, so all the important search features that are provided by the Search module.
 last_updated: Jul 29, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-the-search-features
@@ -35,7 +35,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
 ---
 
-This article explains how to configure faceted navigation, filters, pagination, and sorting, so all the important search features that are provided by the Search module.
+This document explains how to configure faceted navigation, filters, pagination, and sorting, so all the important search features that are provided by the Search module.
 
 This configuration is only relevant if you enable the three query expanders and the result formatters. See [Configuring the search query](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html) for details.
 

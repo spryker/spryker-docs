@@ -1,6 +1,6 @@
 ---
 title: Integrating Prepayment into checkout
-description: This article describes how to integrate prepayment into Checkout.
+description: This document describes how to integrate prepayment into Checkout.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-checkout

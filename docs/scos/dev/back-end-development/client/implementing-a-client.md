@@ -1,6 +1,6 @@
 ---
 title: Implementing a client
-description: This article describes how to implement the Client part of the Spryker Yves application layer.
+description: This document describes how to implement the Client part of the Spryker Yves application layer.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/implementing-a-client
@@ -29,11 +29,11 @@ related:
     link: docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html
 ---
 
-This article describes how to implement [Client](/docs/scos/dev/back-end-development/client/client.html) part of the Spryker Yves application layer.
+This document describes how to implement [Client](/docs/scos/dev/back-end-development/client/client.html) part of the Spryker Yves application layer.
 
 {% info_block infoBox %}
 
-See [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html) to learn more about the Spryker applications and their layers.
+To learn more about the Spryker applications and their layers, see [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html)
 
 {% endinfo_block %}
 

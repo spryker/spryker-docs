@@ -1,6 +1,6 @@
 ---
 title: Showing messages in Zed
-description: This article describes how to show a message in the Zed GUI.
+description: This document describes how to show a message in the Zed GUI.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/flash-messenger
@@ -29,7 +29,7 @@ related:
     link: docs/scos/dev/back-end-development/messages-and-errors/handling-internal-server-messages.html
 ---
 
-This article describes how to show a message in the Zed GUI.
+This document describes how to show a message in the Zed GUI.
 
 In the controller you can use these shortcut methods to show a user message in the GUI. The messages will be translated later when they are rendered.
 

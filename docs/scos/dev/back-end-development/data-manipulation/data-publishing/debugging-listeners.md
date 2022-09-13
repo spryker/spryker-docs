@@ -40,7 +40,7 @@ related:
 
 {% info_block infoBox %}
 
-The article provides information on the `event:trigger:listener` command.
+The document provides information on the `event:trigger:listener` command.
 
 {% endinfo_block %}
 

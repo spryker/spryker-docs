@@ -1,6 +1,6 @@
 ---
 title: Configuring the search query
-description: This  article explains how to configure search query.
+description: This document explains how to configure search query.
 last_updated: Jul 29, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/configuring-search-query

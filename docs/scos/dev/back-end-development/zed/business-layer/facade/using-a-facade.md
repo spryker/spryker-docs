@@ -1,6 +1,6 @@
 ---
 title: Using a facade
-description: This article describes the cases when the facade is used.
+description: This document describes the cases when the facade is used.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/using-facade

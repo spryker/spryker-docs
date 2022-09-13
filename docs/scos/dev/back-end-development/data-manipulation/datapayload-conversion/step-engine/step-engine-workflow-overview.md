@@ -1,6 +1,6 @@
 ---
 title: Step engine workflow overview
-description: This article provides an overview of  the step engine feature.
+description: This document provides an overview of  the step engine feature.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/step-engine-workflow

@@ -1,6 +1,6 @@
 ---
 title: Creating, using, and extending the transfer objects
-description: The article provides information on creation and usage of the Transfer objects.
+description: The document provides information on creation and usage of the Transfer objects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-use-transfer-objects
@@ -25,7 +25,7 @@ related:
 
 Transfer objects are simple data containers. Their purpose is to retrieve a standardized way to access data and get more expressive method signatures. Transfer objects are available everywhere in the system.
 
-This article will teach you how to create and use transfer objects.
+This document shows how to create and use transfer objects.
 
 ## Creating transfer objects
 

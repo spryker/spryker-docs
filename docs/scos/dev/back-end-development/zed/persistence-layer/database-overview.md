@@ -1,6 +1,6 @@
 ---
 title: Database overview
-description: In this article, you will get an overview of the database in the ORM directory.
+description: In this document, you will get an overview of the database in the ORM directory.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/database-overview

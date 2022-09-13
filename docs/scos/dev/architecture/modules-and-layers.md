@@ -45,7 +45,7 @@ This document describes the Spryker layers and their roles in the application la
 
 ## Layers
 
-Layers are not limited to any specific application layer. In practice though, there is a specific set of layers utilized by each application layer.
+Layers are not limited to any specific application layer. In practice, though, there is a specific set of layers utilized by each application layer.
 
 The Spryker layer structure looks as follows:
 

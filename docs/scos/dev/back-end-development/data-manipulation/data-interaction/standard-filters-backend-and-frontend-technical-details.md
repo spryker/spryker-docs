@@ -1,6 +1,6 @@
 ---
 title: Standard Filters Backend and Frontend Technical Details
-description: In this article, you will get information on technical details for the frontend and backend development for the standard filters.
+description: This document provides information about technical details for the frontend and backend development for the standard filters.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/standard-filters-backend-and-frontend-technical-details
@@ -25,7 +25,7 @@ related:
 
 ## Backend technical details
 
-The backend part of Standard Filters feature is located in the following modules:
+The backend part of the Standard Filters feature is located in the following modules:
 
 1. ProductCategoryFilter (`spryker/product-category-filter`),
 2. ProductCategoryFilterGui (`spryker/product-category-filter-gui`),

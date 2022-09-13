@@ -37,7 +37,7 @@ We use whoops for error rendering on the Zed side. For more information, check t
 
 {% endinfo_block %}
 
-Errors in CLI are exposed differently than errors displayed in the web interface. In the front-end application, you receive a formatted error page. In CLI, you get in-depth details regarding the exception and a proper stack trace. In this article, we will show how to manage and configure the way errors are rendered.
+Errors in CLI are exposed differently than errors displayed in the web interface. In the front-end application, you receive a formatted error page. In CLI, you get in-depth details regarding the exception and a proper stack trace. In this document, we will show how to manage and configure the way errors are rendered.
 
 {% info_block warningBox "PrettyErrorHandler" %}
 

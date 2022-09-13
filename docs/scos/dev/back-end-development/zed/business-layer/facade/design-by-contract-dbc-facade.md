@@ -37,7 +37,7 @@ Every method in a facade contains an implicit promise. So a client expects that 
 
  
 
-A [contract](https://en.wikipedia.org/wiki/Design_by_contract) is a formal and precise specification of a method (or other component). This consists of three parts: preconditions, post-conditions and invariants. Practically there is no approach to enforce a contract in PHP. In other languages there are DBC extensions like iContract for Java (see this [article](http://www.javaworld.com/article/2074956/learn-java/icontract--design-by-contract-in-java.html) from 2001).
+A [contract](https://en.wikipedia.org/wiki/Design_by_contract) is a formal and precise specification of a method (or other component). This consists of three parts: preconditions, post-conditions and invariants. Practically there is no approach to enforce a contract in PHP. In other languages there are DBC extensions like iContract for Java (see this [document](http://www.javaworld.com/article/2074956/learn-java/icontract--design-by-contract-in-java.html) from 2001).
 
  
 

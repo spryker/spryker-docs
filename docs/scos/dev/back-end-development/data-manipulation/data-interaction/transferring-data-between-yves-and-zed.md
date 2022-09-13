@@ -1,6 +1,6 @@
 ---
 title: Transferring data between Yves and Zed
-description: In this article, we'll exemplify how you can set up the communication between Yves and Zed.
+description: This document shows how to set up communication between Yves and Zed.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-transfer-data-yves-zed
@@ -27,7 +27,7 @@ redirect_from:
 
 Yves gets most of its data from the client-side NoSQL data stores (data such as product details, product categories, and prices). There are situations when Yves needs to communicate with Zed either to submit data (for example, the customer has submitted a new order or subscribed to a newsletter) or to retrieve data (for example, order history for the customer, customer account details).
 
-In this article, we'll exemplify how you can set up communication between Yves and Zed. We'll display a random salutation message that is retrieved from Zed.
+In this document, we'll exemplify how you can set up communication between Yves and Zed. We'll display a random salutation message that is retrieved from Zed.
 
 {% info_block warningBox "Prerequisites" %}
 

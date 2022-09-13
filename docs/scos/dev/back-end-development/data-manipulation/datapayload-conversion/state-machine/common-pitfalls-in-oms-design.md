@@ -27,7 +27,7 @@ This document describes the most common issues with OMS design and how you can f
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-1.png)
 
-**Reason**: This behavior will never be supported because there should always be only one state after an event execution.
+**Reason**: This behavior is not supported because there must always be only one state after an event execution.
 
 **Solution**: If you have different commands, you can chain those:
 
@@ -74,7 +74,7 @@ In the OMS drawing, you will see the last *read* event definition, but during th
 
 {% info_block infoBox "Info" %}
 
-It's possible to change order items' state via a manual call, and this way, use the states without inbound transitions. On the one hand, this helps not to overwhelm the process with 10+ transitions to a cancellation process. On the other hand, though, this makes the process definition incomplete and, thus, this approach is not recommended.
+You can change order items' states through a manual call, and this way, use the states without inbound transitions. On the one hand, this helps not to overwhelm the process with 10+ transitions to a cancellation process. On the other hand, though, this makes the process definition incomplete and, thus, this approach is not recommended.
 
 {% endinfo_block %}
 
@@ -158,15 +158,15 @@ The unused state could have a missing transition.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-10.png)
 
-Event will not appear as manual unless the previous command execution fails with an exception.
+Event does not appear as manual unless the previous command execution fails with an exception.
 
-**Solution:** Create separate transitions: one with `onEnter` command, the other with `manual` command.
+**Solution:** Create separate transitions: one with the `onEnter` command, the other with the `manual` command.
 
 ![img](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design/oms-issue-10-fixed.png)
 
 {% info_block infoBox "Tip" %}
 
-Keeping both `onEnter` and `manual` command could only be used for backup for the failed automated execution of the `onEnter` command with a manual event.
+Keeping both `onEnter` and `manual` commands can only be used for backup for the failed automated execution of the `onEnter` command with a manual event.
 
 {% endinfo_block %}
 

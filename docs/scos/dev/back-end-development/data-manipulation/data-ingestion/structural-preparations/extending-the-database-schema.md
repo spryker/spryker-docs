@@ -54,7 +54,7 @@ As an example, we will add a description field to the `spy_price_type` table. Th
     ...
 ```
 
-To add an additional column to this table, do the following:
+To add a column to this table, do the following:
 
 1. On the project side, if it hasn't been created yet, add the corresponding `xml` file ( follow the same folder structure and give it the same name)
 

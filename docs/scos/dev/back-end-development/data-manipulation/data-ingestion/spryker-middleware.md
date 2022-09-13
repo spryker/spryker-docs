@@ -361,7 +361,7 @@ There are five ways to set mapper rules:
 * `DynamicMapRule`. This rule lets you use the value from the payload as a key.
 * `ClosureMapRule`. This rule lets you use a custom function for the payload array.
 * `DynamicArrayMapRule`. This rule lets you use the value from the payload as a key and works with the payload as with an array with recursive calls.
-* `KeyMapeRule`. This simplest rule for the mapper that gets the value via the key from the payload. You can use the *. (period)* symbol as a key separator for getting value from the payload.
+* `KeyMapeRule`. This simplest rule for the mapper that gets the value using the key from the payload. You can use the *. (period)* symbol as a key separator for getting value from the payload.
 
 You can check the examples of each rule in the following snippet. It's a final mapper example with examples of payload and their result.
 

@@ -26,17 +26,17 @@ redirect_from:
 
 The FileSystem Service provides an abstraction for file systems. It uses the same interface to access different types of file systems, regardless of their location or protocol.
 
-The Flysystem module provides plugins for [thephpleague/flysystem](https://github.com/thephpleague/flysystem) vendor package and implement FileSystem's plugin interfaces. For more details, see [Flysystem](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html).
+The Flysystem module provides plugins for [thephpleague/flysystem](https://github.com/thephpleague/flysystem) vendor package and implements FileSystem's plugin interfaces. For more details, see [Flysystem](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html).
 
 ## FileSystem module
 
-The FileSystem module uses the `FileSystemReaderPluginInterface` to execute read operations, the `FileSystemWriterPluginInterface` to execute write operations and the `FileSystemStreamPluginInterface` to handle big read or write operations.
+The FileSystem module uses the `FileSystemReaderPluginInterface` to execute read operations, the `FileSystemWriterPluginInterface` to execute write operations, and the `FileSystemStreamPluginInterface` to handle big read or write operations.
 
 ![File_System_Dependencies.png](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Development/File+System/file_system_dependencies.png)
 
 ## FileSystem plugin interfaces system
 
-| Plugin Interface | Description |
+| PLUGIN INTERFACE | DESCRIPTION |
 | --- | --- |
 | FileSystemReaderPluginInterface | Reading operations |
 | FileSystemWriterPluginInterface | Writing operations |
@@ -44,7 +44,7 @@ The FileSystem module uses the `FileSystemReaderPluginInterface` to execute read
 
 ## Plugin configuration
 
-The FileSystem plugins are loaded via `FileSystemDependencyProvider` by the methods: `addFileSystemReaderPlugin()`, `addFileSystemWriterPlugin()` and `addFileSystemStreamPlugin()`.
+The FileSystem plugins are loaded through `FileSystemDependencyProvider` by the methods: `addFileSystemReaderPlugin()`, `addFileSystemWriterPlugin()` and `addFileSystemStreamPlugin()`.
 
 ```php
 <?php
@@ -106,7 +106,9 @@ class FileSystemDependencyProvider extends AbstractBundleDependencyProvider
 You can use multiple `FileSystems` at once. They are identified by name, and contain all the configurations required by the specific `FileSystem` adapter and type defined under `sprykerAdapterClass`.
 
 {% info_block warningBox %}
-The `sprykerAdapterClass` should point to the builder plugin used to create the `FileSystem`.
+
+The `sprykerAdapterClass` needs to point to the builder plugin used to create the `FileSystem`.
+
 {% endinfo_block %}
 
 **Separate FileSystems for media and documents**

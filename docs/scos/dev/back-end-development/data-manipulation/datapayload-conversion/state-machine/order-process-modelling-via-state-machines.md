@@ -34,7 +34,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/creating-an-order-management-system-spryker-commerce-os.html
 ---
 
-State machines help you define, execute and visualize predefined and automated processes. It can model events that involve performing a predetermined sequence of actions, for example, in the order process.
+State machines help you define, execute and visualize predefined and automated processes. It can model events that involve performing a predetermined sequence of actions—for example, in the order process.
 
 {% info_block infoBox %}
 
@@ -44,14 +44,14 @@ The order is being shipped if the payment is successful.
 
 You can tailor the State Machine to your needs to trigger certain processes automatically or execute them manually.
 
-* Model and visualize the process as a state machine in XML
-* Reusable sub-processes (e.g., return-process)—programmable commands and conditions
-* Events can be triggered manually or fully automated
-* Timeouts
+* Model and visualize the process as a state machine in XML.
+* Reusable sub-processes (e.g., return-process)—programmable commands and conditions.
+* Events can be triggered manually or fully automated.
+* Timeouts.
 
 ## State machine module
 
-The `StateMachine` module provides a generic implementation for state machines (SM). This module provides functionality for drawing the SM graph, triggering events, initializing a new state machine, or for getting the state history for a processed item.
+The `StateMachine` module provides a generic implementation for state machines (SM). This module provides functionality for drawing the SM graph, triggering events, initializing a new state machine, or getting the state history for a processed item.
 
 {% info_block warningBox %}
 
@@ -94,11 +94,11 @@ You can query the state machine for items marked with specified flags by using `
 
 {% info_block infoBox %}
 
-The number of sate machine flags in the `oms.xsd` file has been already predifined and can be found in `http://static.spryker.com/oms-01.xsd`. You can find it in the `stateType` definition flag subsection.
+The number of state machine flags in the `oms.xsd` file has been already predefined and can be found in `http://static.spryker.com/oms-01.xsd`. You can find it in the `stateType` definition flag subsection.
 
 {% endinfo_block %}
 
-Currently, we use the `exclude from customer` flag that will skip all orders having _ALL_ item states flagged with this flag. That means it won't be displayed in customer Yves order details/list pages.
+We use the `exclude from customer` flag that skips all orders having _ALL_ item states flagged with this flag. That means it is not displayed on customer Yves order details and list pages.
 
 ## Transitions
 
@@ -110,7 +110,7 @@ For example, waiting for credit card capture and captured states are connected w
 
 {% endinfo_block %}
 
-Technically, transitions are very simple. The `happy`attribute  marks this transition as a happy case. When the state machine graph is rendered in Zed, the transition is marked with green.
+Technically, transitions are very simple. The `happy` attribute marks this transition as a happy case. When the state machine graph is rendered in Zed, the transition is marked with green.
 
 The condition attribute allows you to add PHP code that double-checks if this transition can be fired or not. The condition is evaluated when the event associated with the transition has been fired.
 
@@ -155,7 +155,7 @@ You can also set the date and time from when the timeout should be started. See 
 
 ### OMS timeout processor
 
-Timeout processor is designed to set a custom timeout for an OMS event.
+_Timeout processor_ is designed to set a custom timeout for an OMS event.
 
 Let's imagine today is Monday, and your shop plans to ship orders only on Friday. In this case, you can not specify the exact timeout (in days or hours) to start the shipping process. Even if you specify just the timeout, say, four days, for example, `<event name="ship" manual="" timeout="96 hour"/>`, the scheduler will be regularly checking if the event happened. This creates an unnecessary load on the OMS and is bad for your shop's performance, especially if you have many orders. For this specific case, it would be enough to start running the check in four days. This is when a timeout processor comes in handy: you use it to specify from when the timeout should be calculated.
 

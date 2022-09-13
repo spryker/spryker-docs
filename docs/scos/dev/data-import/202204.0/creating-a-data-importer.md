@@ -248,7 +248,7 @@ namespace Pyz\Zed\DataImport\Business\Model\Locale\Repository;
 use Orm\Zed\Locale\Persistence\Map\SpyLocaleTableMap;
 use Orm\Zed\Locale\Persistence\SpyLocaleQuery;
 
-class LocaleRepository
+class LocaleRepository implements LocaleRepositoryInterface
 {
 
 	/**

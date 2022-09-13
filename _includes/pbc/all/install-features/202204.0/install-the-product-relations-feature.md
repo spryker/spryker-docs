@@ -366,7 +366,7 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 4. Run the following console commands to import data:
 
 ```bash
-console data:import:product:relation
+console data:import:product-relation
 console data:import:product-relation-store
 ```
 

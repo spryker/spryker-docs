@@ -32,7 +32,7 @@ That's it. You have integrated the Usercentrics app into your store. The app cha
 
 ## Global settings configuration
 
-There are three ways to integrate Usecentrics: by direct integration, by the Usercentrics Smart Data Protector, and integration with Google Tag Manager. In the Spryker Back Office, you can select either Smart Data Protector or Google Tag Manager. At the same time, the Smart Data Protector is the preferred and default setting.
+There are three ways to integrate Usecentrics: by direct integration, by the Usercentrics Smart Data Protector, and integration with Google Tag Manager. In the Spryker Back Office, you can select either Smart Data Protector or Google Tag Manager. At the same time, the Smart Data Protector is the preferred and default setting. If you are not using a third-party tracking management tool like [Google Tag Manager](https://developers.google.com/tag-platform/tag-manager) and want a code-free integration, we recommend integrating Usercentrics via Smart Data Protector.
 
 {% info_block infoBox "Info" %}
 
@@ -66,7 +66,7 @@ For more details about the Usercetrics direct integration, see the [Usercentrics
 
 ### Smart Data Protector
 
-The [Smart Data Protector](https://docs.usercentrics.com/#/smart-data-protector) blocks the data processing services you added to your store and activates them only for customers that gave their consent to do so. The [Smart Data Protector](https://docs.usercentrics.com/#/smart-data-protector) is the preferred and default setting to configure Usercentrics using Spryker. You can apply it if you don't use a third-party tracking management tool yet such as [Google Tag Manager](https://developers.google.com/tag-platform/tag-manager) or others and prefer a code-free and therefore the most convenient approach to configure Usercentrics.
+The [Smart Data Protector](https://docs.usercentrics.com/#/smart-data-protector) blocks the data processing services you added to your store and activates them only for customers that gave their consent to do so. The Smart Data Protector is the preferred and default setting to configure Usercentrics using Spryker.
 
 For this setting, the Usercentrics JavaScript tag has to be injected with the setting ID and Smart Data Protector JavaScript code. Once you set up data processing services and got the setting ID for your app from the [Usercentrics Admin Interface](https://admin.usercentrics.eu/), the [Smart Data Protector](https://docs.usercentrics.com/#/smart-data-protector) automatically manages all the tracking tools, and no manual work is required from your side.
 

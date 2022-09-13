@@ -4,7 +4,9 @@ description: Learn how you can integrate the Payone app into your Spryker shop
 template: howto-guide-template
 ---
 
-To integrate Payone, follow these steps:
+To integrate Payone, follow these steps.
+
+## 1. Connect Payone
 
 1. In your store's Back Office, go to **Apps&nbsp;<span aria-label="and then">></span> Catalog**.
 2. Click **Payone**.
@@ -19,20 +21,24 @@ To integrate Payone, follow these steps:
 
    {% endinfo_block %}
 
-5. Go back to your store's Back Office, to the Payone app details page.
-6. In the top right corner of the Payone app details page, click **Configure**.
-7. On the Payone app details page, fill in fields in the **Credentials** section.
+## 2. Configure Payone
+
+1. Go to your store's Back Office, to the Payone app details page.
+2. In the top right corner of the Payone app details page, click **Configure**.
+3. On the Payone app details page, fill in fields in the **Credentials** section.
    ![payone-app-detais](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-app-details.png)
-8. Select *Payone Environment Mode*: **TEST** or **LIVE**.
-9. Enter your *Shop Name*. This name will be displayed on **Payment Page** as a merchant label for whom to pay:
+4. Select **Payone Environment Mode**.
+5. Enter your *Shop Name*. This name will be displayed on **Payment** page as a merchant label for whom to pay:
    ![payone-shop-name](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-shop-name.png)
-10. Select a payment method⁠—either **CREDIT CARD** or **PAYPAL**, or both.
+6. Select one or more payment methods.
    ![payone-payment-methods](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-payment-methods.png)
-11. Optional: To configure payment methods per store, click **Payment methods per store configuration** and select stores for the defined payment methods.
-12. Click **Save**.
+7. Optional: To configure payment methods per store, click **Payment methods per store configuration** and select stores for the defined payment methods.
+8. Click **Save**.
+
+![configure-payone](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/payment-service-providers/payone/integrate-payone/configure-payone.png)
    
-In case the app was connected successfully, a corresponding message appears, and the app status changes to **Connected**. The payment methods, which you selected in step 8, appear in **Administration&nbsp;<span aria-label="and then">></span>  Payment methods**:
+If the app was connected successfully, a corresponding message appears, and the app status changes to **Connected**. The payment methods you've selected in step 8, appear in **Administration&nbsp;<span aria-label="and then">></span>  Payment methods**:
 ![payone-credit-card](https://spryker.s3.eu-central-1.amazonaws.com/docs/aop/user/apps/payone/payone-credit-card.png).
 
 ## Next steps
-[Activate the added payment methods](/docs/pbc/all/payment-service-providers/payone/manage-in-the-back-office/activate-payment-methods.html)
+[Activate the added payment methods](/docs/scos/user/back-office-user-guides/202204.0/administration/payment-methods/edit-payment-methods.html)

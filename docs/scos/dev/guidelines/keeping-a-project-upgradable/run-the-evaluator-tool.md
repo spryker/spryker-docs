@@ -22,7 +22,7 @@ This document describes how to check if code is compliant with Spryker’s stand
 
 {% info_block warningBox "Running the evaluator without installing Spryker SDK" %}
 
-Alternatively, you can use the `spryker-sdk` image from the project directory without installing it. To do that, run all the commands in this doc as follows: `docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console {COMMAND}'
+Alternatively, you can use the `spryker-sdk` image from the project directory without installing it. To do that, run all the commands in this doc as follows: `docker run -ti -v $PWD:/data/project --entrypoint bash spryker/php-sdk:latest -c 'cd /data/project && ../bin/console {COMMAND}'.
 
 {% endinfo_block %}
 
@@ -34,12 +34,27 @@ spryker-sdk list
 
 ## Run an evaluation
 
-To evaluate your code, run the evaluator:
+To evaluate your code, run the evaluator in one of the following ways:
+
+* Evaluate the code of all the modules:
 
 ```bash
 spryker-sdk analyze:php:code-compliance
 ```
-    This creates `analyze:php:code-compliance.violations.yaml` in the `reports` folder.
+
+* Evaluate the code of needed modules:
+
+```bash
+spryker-sdk analyze:php:code-compliance -m '{NAMESPACE}.{MODULE_NAME} {NAMESPACE}.{MODULE_NAME} ...'
+```
+
+Example:
+
+```bash
+spryker-sdk analyze:php:code-compliance -m 'Pyz.ProductStorage'
+```
+
+    The command creates `analyze:php:code-compliance.violations.yaml` in the `reports` folder.
 
 To view the report, run the following command:
 

@@ -202,8 +202,6 @@ entries:
                 url: /docs/pbc/all/payment-service-providers/payone/integrate-payone.html
               - title: Manage in the Back Office
                 nested:
-                  - title: Activate payment methods
-                    url: /docs/pbc/all/payment-service-providers/payone/manage-in-the-back-office/activate-payment-methods.html
                   - title: Disconnec Payone
                     url: /docs/pbc/all/payment-service-providers/payone/manage-in-the-back-office/disconnect-payone.html
           - title: Unzer

@@ -39,15 +39,15 @@ To learn more about the Spryker applications and their layers, see [Conceptual O
 
 ## General information
 
-End customers interact only with the front-end application. The front-end application needs to get data from the storage, send search requests to the search engine, and send the customer requests to the Commerce OS whenever needed, like adding to the cart, as the Commerce OS performs all the business logic.
+End customers interact only with the frontend application. The frontend application needs to get data from the storage, send search requests to the search engine, and send the customer requests to the Commerce OS whenever needed, like adding to the cart, because the Commerce OS performs all the business logic.
 
-The Client's job is to connect the front-end application to all of the surrounding resources needed for the front-end application to work. These resources include the Commerce OS, Storage, and Search. It also contains some other resources like Session and Queues.
+The _Client's_ job is to connect the frontend application to all of the surrounding resources needed for the frontend application to work. These resources include the Commerce OS, Storage, and Search. It also contains some other resources like Session and Queues.
 
 For each of these resources, there is a Client. So, it is not only one Client, but many of them. Each one of them is responsible for a specific resource or functionality. Spryker, by default, is shipped with the following Clients:
 
 * SearchClient: to connect to Elasticsearch using its API.
 * StorageClient: to connect to Redis using the Redis protocol; RESP.
-* Commerce OS Clients: every functional unit, a module as it's called in Spryker, has its Client. For example, there are separated Clients for cart (CartClient), checkout (CheckoutClient), and customer (CustomerClient). The same applies to all the other modules in Spryker.
+* Commerce OS Clients: every functional unit, a module as it's called in Spryker, has its Client. For example, there are separated Clients for the cart (CartClient), checkout (CheckoutClient), and customer (CustomerClient). The same applies to all the other modules in Spryker.
 
 Commerce OS Clients communicate with the Commerce OS using HTTP. They mainly perform RPCs (remote procedure calls) using HTTP POST requests with a serialized JSON payload. They also do all the necessary authorization and authentication between the two applications.
 The Client's purpose is to encapsulate the logic that runs the shop independent from the overlying application. So in case you want to use a different technology stack, you can reuse the Client.
@@ -56,7 +56,7 @@ The Client's purpose is to encapsulate the logic that runs the shop independent 
 
 ## How to use a Client in Yves
 
-`getClient()` method in Yves
+The `getClient()` method in Yves
 
 Spryker provides several clients. For example, there is a cart client which contains methods like `addItem()` or `removeItem()`. And there is a catalog client that handles query strings. In each module, you can access the related Client with the `getClient()` method, which is available in controllers and plugins.
 
@@ -98,7 +98,7 @@ class CartController extends AbstractController
         $itemTransfer->setQuantity($quantity);
 
         // Add the item:
-        //  Behind this there is a request to Zed.
+        //  Behind this, there is a request to Zed.
         //  The response is stored in the session.
         $cartClient->addItem($itemTransfer);
 
@@ -109,7 +109,7 @@ class CartController extends AbstractController
 
 ## Client execution time
 
-You can do as many usages of the storage and search engine, but you should be aware that each call takes some time. There is a restriction for calls to Zed. Each Call to Zed takes some time to start the application and perform the action. As a result, the execution time of Yves becomes slower.
+You can do as many usages of the storage and search engine, but be aware that each call takes some time. There is a restriction for calls to Zed. Each call to Zed takes some time to start the application and perform the action. As a result, the execution time of Yves becomes slower.
 
 | CLIENT        | AVERAGE EXECUTION TIME          |
 | ------------- | --------------------------- |

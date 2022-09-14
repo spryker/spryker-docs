@@ -22,7 +22,7 @@ Depending on the OS you use, check out the following installation prerequisites:
 - [Installing Docker prerequisites on Linux](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
 - [Installing Docker prerequisites on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html)
 
-## Clone the Marketplace Demo Shop repository
+## Clone the Marketplace Demo Shop repository and the Docker SDK
 
 Depending on the desired Marketplace Demo Shop, clone one of the following repositories:
 
@@ -46,13 +46,15 @@ git clone https://github.com/spryker-shop/b2b-demo-marketplace.git ./
 git clone https://github.com/spryker/docker-sdk.git docker
 ```
 
-1. Set up the environment you need:
+## Set up the Development or Demo environment
 
-### Setting up a development environment
+You can install the Marketplace Demo Shop in Development or Demo mode. For information on the installation modes, see [Choosing an installation mode](/docs/scos/dev/setup/installing-spryker-with-docker/installation-guides/choosing-an-installation-mode.html). 
 
-To set up a development environment:
+### Setting up a Development environment
 
-1. Bootstrap the docker setup:
+To set up a Development environment, do the following:
+
+1. Bootstrap the Docker setup:
 
 ```bash
 docker/sdk boot deploy.dev.yml
@@ -60,17 +62,17 @@ docker/sdk boot deploy.dev.yml
 
 2. If the command you've run in the previous step returned instructions, follow them.
 
-3. Build and start an instance:
+3. Build and start the instance:
 
 ```bash
 docker/sdk up
 ```
 
-That's it. You've set up your Spryker B2C Demo Marketplace and can access your applications.
+That's it. You've set up your Spryker B2C Demo Marketplace in Development mode and can access your applications.
 
-### Setting up a production-like environment
+### Setting up a Demo environment
 
-To set up a production-like environment:
+To set up a Demo environment, do the following:
 
 1. Bootstrap the Docker setup:
 
@@ -86,7 +88,7 @@ docker/sdk boot -s
 docker/sdk up
 ```
 
-That's it. You've set up your Spryker B2C Demo Marketplace and can access your applications.
+That's it. You've set up your Spryker B2C Demo Marketplace in Demo mode and can access your applications.
 
 ## Next steps
 

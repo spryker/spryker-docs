@@ -172,20 +172,6 @@ task :check_scos_user do
   HTMLProofer.check_directory("./_site", options).run
 end
 
-task :check_fes do
-  options = commonOptions.dup
-  options[:file_ignore] = [
-    /docs\/scos\/.+/,
-    /docs\/marketplace\/.+/,
-    /docs\/cloud\/.+/,
-    /docs\/acp\/.+/,
-    /docs\/paas-plus\/.+/,
-    /docs\/pbc\/.+/,
-    /docs\/sdk\/.+/
-  ]
-  HTMLProofer.check_directory("./_site", options).run
-end
-
 task :check_paas_plus do
   options = commonOptions.dup
   options[:file_ignore] = [

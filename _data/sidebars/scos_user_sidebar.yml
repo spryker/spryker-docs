@@ -3152,7 +3152,6 @@ entries:
     - title: Taxes
       include_versions:
       - "202108.0"
-      - "202204.0"
       nested:
       - title: Avalara
         url: /docs/scos/user/technology-partners/taxes/avalara.html

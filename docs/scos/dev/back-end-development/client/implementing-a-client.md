@@ -29,7 +29,7 @@ related:
     link: docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html
 ---
 
-This document describes how to implement [Client](/docs/scos/dev/back-end-development/client/client.html) part of the Spryker Yves application layer.
+This document describes how to implement the [Client](/docs/scos/dev/back-end-development/client/client.html) part of the Spryker Yves application layer.
 
 {% info_block infoBox %}
 
@@ -39,7 +39,7 @@ To learn more about the Spryker applications and their layers, see [Conceptual O
 
 ## How to implement a Client
 
-All Clients have the same structure. There is always one class that represents the Client. This is quite close to the facades which we use in Zed. This class is the entry point, and it usually delegates to concrete implementations, that are placed in the optional subdirectories `Search`, `Session`, `Storage`, and `Zed`.
+All Clients have the same structure. There is always one class that represents a Client. This is quite close to the facades which we use in Zed. This class is the entry point, and it usually delegates to concrete implementations placed in the optional subdirectories `Search`, `Session`, `Storage`, and `Zed`.
 
 | CLASS   | PURPOSE  |
 | ----------------- | ---------------- |
@@ -51,7 +51,11 @@ All Clients have the same structure. There is always one class that represents t
 | Pyz\Client\MyBundle\Storage\MyBundleStorage    | Gets data from the storage—for example, Redis).                      |
 | Pyz\Client\MyBundle\Zed\MyBundleStub           | The stub connects to Zed's corresponding gateway controller . |
 
-When you implement a client you should have in mind, that the client does not know about Yves. So you should not use any class from Yves there otherwise you make the client non-reusable in a different context.
+{% info_block warningBox "Warning" %}
+
+When you implement a client, the client does not know about Yves. Therefore, don't use any class from Yves there; otherwise, you make the client non-reusable in a different context.
+
+{% endinfo_block %}
 
 The client class uses the factory to create the other objects. These objects require a connecting client which they get injected in the factory. For this purpose the factory contains these prepared methods:
 

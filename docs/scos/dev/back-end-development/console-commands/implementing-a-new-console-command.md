@@ -41,7 +41,9 @@ To add a new console command, create a new class in `[Namespace]/Zed/(module)/Co
 * `configure()`—this method is used to set the name or description.
 * `execute()`—this method is executed by the console application and contains your code—for example, call a facade.
 
-Symfony's console tool is quite powerful. Read the official documentation before you implement your first console command. To send messages and add options, you can use arguments.
+Symfony's console tool is quite powerful. Read the [official documentation](https://symfony.com/doc/current/components/console.html) before you implement your first console command. 
+
+To send messages and add options, you can use arguments.
 
 ```php
 <?php
@@ -149,4 +151,4 @@ This is useful in many situations—for example, to log information in your cons
 
 ## Logging
 
-For logging, we already provide a plugin that you can add to your project as described above. The `ConsoleLogPlugin` makes use of our log module to log useful information for all three possible events.
+For logging, we already provide a plugin that you can add to your project as described in the preceding sections. The `ConsoleLogPlugin` plugin uses our log module to log useful information for all three possible events.

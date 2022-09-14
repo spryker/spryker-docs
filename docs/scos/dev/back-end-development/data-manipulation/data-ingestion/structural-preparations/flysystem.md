@@ -26,9 +26,9 @@ redirect_from:
 
 The Flysystem module integrates Spryker with the [thephpleague/flysystem](https://github.com/thephpleague/flysystem) vendor package.
 
-It handles operations, flysystem adapter configuration and provides a `FlysystemFilesystemBuilderPluginInterface`, where the `build()` method is expected to return a concrete implementation of the `\League\Flysystem\Filesystem` interface.
+It handles operation and Flysystem adapter configuration and provides `FlysystemFilesystemBuilderPluginInterface`, where the `build()` method is expected to return a concrete implementation of the `\League\Flysystem\Filesystem` interface.
 
-There are module with adapters for Local, FTP, and AWS3 filesystems.
+There are modules with adapters for Local, FTP, and AWS3 filesystems.
 
 ## Flysystem features
 
@@ -45,15 +45,15 @@ Quote from [Flysytem's official documentation](http://flysystem.thephpleague.com
 
 ### Module dependency graph
 
-The Flysystem module provides plugins that integrate [thephpleague/flysystem](https://github.com/thephpleague/flysystem) vendor package and implement FileSystem's plugin interface.
+Flysystem provides plugins that integrate [thephpleague/flysystem](https://github.com/thephpleague/flysystem) vendor package and implement FileSystem's plugin interface.
 
 ![File_System_Dependencies](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Development/File+System/file_system_dependencies.png)
 
 ## Flysystem service API
 
-Flysystem's Service API is almost exactly like [Flysystem's API](https://flysystem.thephpleague.com/docs/usage/filesystem-api/) with only one distinction, it takes an additional mandatory parameter containing a pre-configured filesystem name.
+Flysystem's Service API is almost exactly like [Flysystem's API](https://flysystem.thephpleague.com/docs/usage/filesystem-api/) with only one distinction, it takes an additional mandatory parameter containing a preconfigured filesystem name.
 
-See [Plugin Configuration](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/file-system.html) for details.
+For details, see [Plugin configuration](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/file-system.html)
 
 For example, to extract an image's metadata information stored under `foo/bar.jpg`, use the `getMetadata()` method with the media store's name.
 
@@ -61,7 +61,7 @@ For example, to extract an image's metadata information stored under `foo/bar.jp
 <?php
 /**
  * Specification:
- * - Select pre-configured filesystem
+ * - Select preconfigured filesystem
  * - Get resource metadata
  * - Return resource metadata transfer, null on failure
  *
@@ -81,7 +81,7 @@ Or to read file content from the `customerDocument` store.
 <?php
 /**
  * Specification:
- * - Select pre-configured filesystem
+ * - Select preconfigured filesystem
  * - Read file
  * - Return file content, false on failure
  *
@@ -97,7 +97,7 @@ $invoiceDocument = $flysystemService->read('customerData', 'invoices/2017/05/123
 
 ## Flysystem filesystem adapter modules
 
-Different filesystems require different adapters in order to handle them. In Spryker, we use [package principles](https://en.wikipedia.org/wiki/Package_principles) to create modular and easy to configure applications. Each different Flysystem adapter implementing `\League\Flysystem\FilesystemInterface` has its own Module.
+Different filesystems require different adapters to handle them. In Spryker, we use [package principles](https://en.wikipedia.org/wiki/Package_principles) to create modular and easy-to-configure applications. Each different Flysystem adapter implementing `\League\Flysystem\FilesystemInterface` has its own module.
 
 | MODULE | DESCRIPTIO0N | CONFIG |
 | --- | --- | --- |
@@ -323,9 +323,7 @@ class Aws3v3AdapterBuilder implements AdapterBuilderInterface
 
 **Flysystem filesystem builder example**
 
-An example of `Aws3v3FilesystemBuilder`, responsible for instantiation of Filesystem implementing `League\Flysystem\FilesystemInterface`.
-
-It creates a config using `FlysystemConfigAws3v3Transfer` and validates it.
+The following is an example of `Aws3v3FilesystemBuilder`, responsible for instantiation of Filesystem implementing `League\Flysystem\FilesystemInterface`. It creates a config using `FlysystemConfigAws3v3Transfer` and validates it.
 
 ```php
 <?php
@@ -379,7 +377,7 @@ class Aws3v3FilesystemBuilder extends AbstractFilesystemBuilder
 
 **AbstractFilesystemBuilder example**
 
-An example of `AbstractFilesystemBuilder` from the `FlysystemAws3v3FileSystem` module.
+The following is an example of `AbstractFilesystemBuilder` from the `FlysystemAws3v3FileSystem` module.
 
 ```php
 <?php
@@ -441,11 +439,11 @@ abstract class AbstractFilesystemBuilder implements FilesystemBuilderInterface
 
 ## Flysystem plugins
 
-[thephpleague/flysystem vendor package](https://github.com/thephpleague/flysystem) also supports plugins.
+The [thephpleague/flysystem vendor package](https://github.com/thephpleague/flysystem) also supports plugins.
 
 In Spryker, they are loaded using `FlysystemDependencyProvider` and automatically passed to the `build()` method.
 
-All you have to do is to configure them in the `addFlysystemPluginCollection()` method.
+All you need to do is to configure them in the `addFlysystemPluginCollection()` method.
 
 ```php
 <?php
@@ -476,8 +474,8 @@ class FlysystemDependencyProvider extends AbstractBundleDependencyProvider
 
 {% info_block warningBox "Warning" %}
 
-Make sure to carry over this behavior if you ever need to overwrite `buildFilesystemCollection()`.
+To overwrite `buildFilesystemCollection()`, make sure to carry over this behavior. Otherwise, implement the `Flysystem` plugin loading and configuration on your own.
 
 {% endinfo_block %}
 
-Otherwise, implement the Flysystem plugin loading and configuration on your own.
+

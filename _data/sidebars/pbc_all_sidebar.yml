@@ -6,7 +6,16 @@ entries:
         url: /docs/pbc/all/ratings-reviews/ratings-reviews.html
         nested:
           - title: Bazaarvoice
-            url: /docs/pbc/all/ratings-reviews/bazaarvoice.html
+            url: /docs/pbc/all/ratings-reviews/bazaarvoice/bazaarvoice.html
+            nested:
+              - title: Integrate Bazaarvoice
+                url: /docs/pbc/all/ratings-reviews/bazaarvoice/integrate-bazaarvoice.html
+              - title: Manage in the Back Office
+                nested:
+                - title: Configure Bazaarvoice
+                  url: /docs/pbc/all/ratings-reviews/bazaarvoice/manage-in-the-back-office/configure-bazaarvoice.html
+                - title: Disconnect Bazaarvoice
+                  url: /docs/pbc/all/ratings-reviews/bazaarvoice/manage-in-the-back-office/disconnect-bazaarvoice.html
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
         nested:
@@ -185,7 +194,16 @@ entries:
                 url: /docs/pbc/all/gift-cards/manage-using-glue-api/retrieve-gift-cards-in-guest-carts.html
       - title: Payment Service Providers
         url: /docs/pbc/all/payment-service-providers/psp.html
-        nested:
+        nested:        
+          - title: Payone
+            url: /docs/pbc/all/payment-service-providers/payone/payone.html
+            nested:
+              - title: Integrate Payone
+                url: /docs/pbc/all/payment-service-providers/payone/integrate-payone.html
+              - title: Manage in the Back Office
+                nested:
+                  - title: Disconnect Payone
+                    url: /docs/pbc/all/payment-service-providers/payone/manage-in-the-back-office/disconnect-payone.html
           - title: Unzer
             url: /docs/pbc/all/payment-service-providers/unzer/unzer.html
             nested:
@@ -219,8 +237,6 @@ entries:
                     url: /docs/pbc/all/payment-service-providers/unzer/extend-and-customize/customize-the-credit-card-display-in-your-payment-step.html
               - title: Domain model and relationships
                 url: /docs/pbc/all/payment-service-providers/unzer/unzer-domain-model-and-relationships.html
-          - title: Payone
-            url: /docs/pbc/all/payment-service-providers/payone/payone.html
       - title: Price Management
         url: /docs/pbc/all/price-management/price-management.html
         nested:
@@ -518,4 +534,10 @@ entries:
               - title: "Manage stocks in a multi-store environment: Best practices"
                 url: /docs/pbc/all/warehouse-management-system/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html
       - title: Usercentrics
-        url: /docs/pbc/all/usercentrics.html
+        url: /docs/pbc/all/usercentrics/usercentrics.html
+        nested:
+          - title: Integrate Usercentrics
+            url: /docs/pbc/all/usercentrics/integrate-usercentrics.html
+          - title: Disconnect Usercentrics
+            url: /docs/pbc/all/usercentrics/disconnect-usercentrics.html              
+

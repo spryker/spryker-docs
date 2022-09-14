@@ -1,6 +1,6 @@
 ---
 title: Configuring Elasticsearch
-description: Elasticsearch is a NoSQL data store which lets you predefine the structure of the data you store in it.
+description: Elasticsearch is a NoSQL data store that lets you predefine the structure of the data you store in it.
 last_updated: Jul 24, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-configure-elasticsearch
@@ -71,15 +71,15 @@ Because the used data structure is static, you need to define it in advance. The
 
 The content of the configuration files must follow the conventions listed in the [Create index API](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html) document of the official Elasticsearch documentation. 
 
-Note that the current search installer supports only settings and mappings. However, if you need more, you can extend it on the project level.
+{% info_block infoBox "Note" %}
 
-{% info_block infoBox "Schema example" %}
+The current search installer supports only settings and mappings. However, if you need more, you can extend it on the project level.
 
-For the main index called `page`, you can find the default schema configuration in `vendor/spryker/search-elasticsearch/src/Spryker/Shared/SearchElasticsearch/Schema/page.json`.
+**Schema example**: For the main index called `page`, you can find the default schema configuration in `vendor/spryker/search-elasticsearch/src/Spryker/Shared/SearchElasticsearch/Schema/page.json`.
 
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox "Disable the default mapping installation" %}
 
 To disable the default mapping installation, override the core configuration defined in `Spryker\Zed\SearchElasticsearch\SearchElasticsearchConfig::getJsonIndexDefinitionDirectories()` by implementing it on the project level—for example, `Pyz\Zed\Search\SearchConfig`.
 
@@ -171,7 +171,8 @@ If an index is created with the given settings, it is changed by running this pr
 
 In the development environment, to create new analyzers or change the index settings, you must delete the index and run the installation process again.
 
-To populate the newly created index with data, run `publish:trigger-events`:
+Populate the newly created index with data:
+
 ```php
 vendor/bin/console publish:trigger-events
 ```

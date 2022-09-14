@@ -1,6 +1,7 @@
 ---
 title: Adding and configuring cronjobs
 last_updated: Jun 16, 2021
+description: Learn to add and configure cronjobs
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/adding-and-configuring-cronjob
 originalArticleId: 6af304f1-b8ba-417b-874e-878e5d9a5730
@@ -29,6 +30,8 @@ related:
   - title: Cronjob scheduling
     link: docs/scos/dev/sdk/cronjob-scheduling.html
 ---
+
+This document shows how to add and configure cronjobs in Jenkins.
 
 We use [Jenkins](https://jenkins-ci.org/) for cronjob scheduling. Compared to Crontab, there are several benefits:
 
@@ -67,7 +70,7 @@ For each job you can define several configurations:
 | --------------------- | ------ | ------------------------------------------------------------ | --------- |
 | name                  | string | Name of the job.                                              | yes       |
 | command               | string | The [console command](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html) that is executed. | yes       |
-| schedule              | string | Expression that defines the job schedule (how often the job is executed).The schedule string is compatible with cronjob schedule definition—fpr example, `0 * * * *` means run once each hour at 00 minute). If the environment is in development, return empty string—cronjobs are being executed on development environment only manually. | yes       |
+| schedule              | string | Expression that defines the job schedule (how often the job is executed).The schedule string is compatible with cronjob schedule definition—for example, `0 * * * *` means run once each hour at 00 minute). If the environment is in development, return empty string—cronjobs are being executed on development environment only manually. | yes       |
 | enable                | bool   | Enable or disable jobs.                                          | yes       |
 | stores                | array  | An array of stores where the job is executed.                | yes       |
 

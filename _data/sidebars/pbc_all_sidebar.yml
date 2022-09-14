@@ -202,7 +202,7 @@ entries:
                 url: /docs/pbc/all/payment-service-providers/payone/integrate-payone.html
               - title: Manage in the Back Office
                 nested:
-                  - title: Disconnec Payone
+                  - title: Disconnect Payone
                     url: /docs/pbc/all/payment-service-providers/payone/manage-in-the-back-office/disconnect-payone.html
           - title: Unzer
             url: /docs/pbc/all/payment-service-providers/unzer/unzer.html

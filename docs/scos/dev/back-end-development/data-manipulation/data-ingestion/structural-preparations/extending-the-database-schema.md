@@ -27,16 +27,21 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html
 ---
 
-<!--used to be: http://spryker.github.io/tutorials/zed/extending-database-schema/-->
+This document shows how to extend the database schema.
+
 Fields can be added to the existing database tables, but they cannot be removed (removing fields from the tables could break the functionalities implemented in Spryker Core).
 
 {% info_block infoBox "Info" %}
 
-In addition, you can create a new database table by running the following command: `console spryk:run AddZedPersistencePropelSchema`.
+In addition, you can create a new database table:
+
+```bash
+console spryk:run AddZedPersistencePropelSchema
+```
 
 {% endinfo_block %}
 
-As an example, we will add a description field to the `spy_price_type` table. The structure of this table is defined in the `PriceProduct` module, in the `spy_price_product.schema.xml` file, as it can be seen below:
+As an example, let's add a description field to the `spy_price_type` table. The structure of this table is defined in the `PriceProduct` module, in the `spy_price_product.schema.xml` file as follows:
 
 ```xml
     ...
@@ -54,12 +59,11 @@ As an example, we will add a description field to the `spy_price_type` table. Th
     ...
 ```
 
-To add a column to this table, do the following:
+To add a column to this table, follow these steps:
 
-1. On the project side, if it hasn't been created yet, add the corresponding `xml` file ( follow the same folder structure and give it the same name)
+1. On the project side, if it hasn't been created yet, add a corresponding XML file ( follow the same folder structure and give it the same name)
 
 ```bash
-
 mkdir -p src/Pyz/Zed/PriceProduct/Persistence/Propel/Schema
 touch src/Pyz/Zed/PriceProduct/Persistence/Propel/Schema/spy_price_product.schema.xml
 
@@ -81,7 +85,7 @@ touch src/Pyz/Zed/PriceProduct/Persistence/Propel/Schema/spy_price_product.schem
 </database>
 ```
 
-3. Update the database by running the following console command:
+1. Update the database:
 
 ```bash
 vendor/bin/console propel:install
@@ -89,7 +93,7 @@ vendor/bin/console propel:install
 
 ## Troubleshooting
 
-If you stumble upon an exception *Uncommitted migrations have been found*, you should either execute or delete them before rerunning the `diff` task:
+If you stumble upon an exception *Uncommitted migrations have been found*, either execute or delete them before rerunning the `diff` task:
 
 ```bash
 vendor/bin/console propel:migration:delete

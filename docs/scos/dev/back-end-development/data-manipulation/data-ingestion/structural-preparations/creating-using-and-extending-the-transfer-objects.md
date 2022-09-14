@@ -1,6 +1,6 @@
 ---
 title: Creating, using, and extending the transfer objects
-description: The document provides information on creation and usage of the Transfer objects.
+description: The document provides information on the creation and usage of the Transfer objects.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-use-transfer-objects
@@ -22,6 +22,8 @@ related:
   - title: Extending the database schema
     link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html
 ---
+
+s create, use, and extend transfer objects.
 
 _Transfer objects_ are simple data containers. Their purpose is to retrieve a standardized way to access data and get more expressive method signatures. Transfer objects are available everywhere in the system.
 

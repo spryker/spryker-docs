@@ -6,11 +6,11 @@ redirect_from:
   - /docs/marketplace/dev/setup/spryker-marketplace-setup.html
 ---
 
-This document describes how to get started with the B2C Demo Marketplace. 
+This document describes how to get started with the Demo Marketplace. 
 
 {% info_block infoBox "Info" %}
 
-The B2C Demo Marketplace installation process described in this document is based on the [Spryker in Docker installation](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html). You can also install the B2C Demo Marketplace based on Vagrant. To do so, use [Installing Spryker with the Development Virtual Machine](/docs/scos/dev/developer-getting-started-guide.html) for reference and adapt this installation guide to installation in Vagrant.
+The Marketplace installation process described in this document is based on the [Spryker in Docker installation](/docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html).
 
 {% endinfo_block %}
 
@@ -22,11 +22,11 @@ Depending on the OS you use, check out the following installation prerequisites:
 - [Installing Docker prerequisites on Linux](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-linux.html)
 - [Installing Docker prerequisites on Windows](/docs/scos/dev/setup/installing-spryker-with-docker/docker-installation-prerequisites/installing-docker-prerequisites-on-windows-with-wsl2.html)
 
-## Installing the B2C Demo Marketplace
+## Clone the Marketplace Demo Shop repository
 
-To install the B2C Demo Marketplace:
+Depending on the desired Marketplace Demo Shop, clone one of the following repositories:
 
-1. Create a project folder and clone the B2C Demo Marketplace and the Docker SDK:
+- B2C Demo Marketplace:
 
 ```bash
 mkdir spryker-b2c-marketplace && cd spryker-b2c-marketplace
@@ -36,13 +36,17 @@ git clone https://github.com/spryker-shop/b2c-demo-marketplace.git ./
 git clone https://github.com/spryker/docker-sdk.git docker
 ```
 
-2. Set up the environment you need:
+- B2B Demo Marketplace:
+  
+```bash
+mkdir spryker-b2b-marketplace && cd spryker-b2b-marketplace
 
-- [Prerequisites](#prerequisites)
-- [Installing the B2C Demo Marketplace](#installing-the-b2c-demo-marketplace)
-  - [Setting up a development environment](#setting-up-a-development-environment)
-  - [Setting up a production-like environment](#setting-up-a-production-like-environment)
-- [Next steps](#next-steps)
+git clone https://github.com/spryker-shop/b2b-demo-marketplace.git ./
+
+git clone https://github.com/spryker/docker-sdk.git docker
+```
+
+1. Set up the environment you need:
 
 ### Setting up a development environment
 

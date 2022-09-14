@@ -29,23 +29,23 @@ related:
     link: docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html
 ---
 
-This document describes how to implement the [Client](/docs/scos/dev/back-end-development/client/client.html) part of the Spryker Yves application layer.
+This document describes how to implement a [client](/docs/scos/dev/back-end-development/client/client.html) part of the Spryker Yves application layer.
 
 {% info_block infoBox %}
 
-To learn more about the Spryker applications and their layers, see [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html)
+To learn more about the Spryker applications and their layers, see [Conceptual overview](/docs/scos/dev/architecture/conceptual-overview.html)
 
 {% endinfo_block %}
 
-## How to implement a Client
+## How to implement a client
 
-All Clients have the same structure. There is always one class that represents a Client. This is quite close to the facades which we use in Zed. This class is the entry point, and it usually delegates to concrete implementations placed in the optional subdirectories `Search`, `Session`, `Storage`, and `Zed`.
+All clients have the same structure. There is always one class that represents a client. This is quite close to the facades which we use in Zed. This class is the entry point, and it usually delegates to concrete implementations placed in the optional subdirectories `Search`, `Session`, `Storage`, and `Zed`.
 
 | CLASS   | PURPOSE  |
 | ----------------- | ---------------- |
-| Pyz\Client\MyBundle\MyBundleClient             | The client's entry point.                                    |
+| Pyz\Client\MyBundle\MyBundleClient             | The Client's entry point.                                    |
 | Pyz\Client\MyBundle\MyBundleDependencyProvider | A [dependency provider](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/defining-the-module-dependencies-dependency-provider.html) to interact with other modules. |
-| Pyz\Client\MyBundle\MyBundleFactory            | The client's [factory](/docs/scos/dev/back-end-development/factory/factory.html). |
+| Pyz\Client\MyBundle\MyBundleFactory            | The Client's [factory](/docs/scos/dev/back-end-development/factory/factory.html). |
 | Pyz\Client\MyBundle\Session\MyBundleSession    | A wrapper for the session.                                    |
 | Pyz\Client\MyBundle\Search\MyBundleSearch      | Contains search queries—for example, Elasticsearch ).                |
 | Pyz\Client\MyBundle\Storage\MyBundleStorage    | Gets data from the storage—for example, Redis).                      |
@@ -57,7 +57,7 @@ When you implement a client, the client does not know about Yves. Therefore, don
 
 {% endinfo_block %}
 
-The client class uses the factory to create the other objects. These objects require a connecting client which they get injected in the factory. For this purpose the factory contains these prepared methods:
+The client class uses a factory to create the other objects. These objects require a connecting client, which they get injected into the factory. For this purpose, the factory contains these prepared methods:
 
 * `createSessionClient()`
 * `createZedRequestClient()`

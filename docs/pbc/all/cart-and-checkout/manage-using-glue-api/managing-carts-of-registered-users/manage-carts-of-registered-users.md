@@ -24,7 +24,7 @@ This endpoint allows managing carts by creating, retrieving, and deleting them.
 
 ## Multiple carts
 
-Unlike guest carts, carts of registered users have an unlimited lifetime. Also, if the Multiple Carts feature is [integrated into your project](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html), and Glue is [enabled for multi-cart operations](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html), registered users can have an unlimited number of carts.
+Unlike guest carts, carts of registered users have an unlimited lifetime. Also, if the Multiple Carts feature is [integrated into your project](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-multiple-carts-feature.html), and Glue is [enabled for multi-cart operations](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-multiple-carts-feature.html), registered users can have an unlimited number of carts.
 
 
 ## Installation

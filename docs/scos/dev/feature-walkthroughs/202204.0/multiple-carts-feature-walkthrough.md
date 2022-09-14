@@ -17,6 +17,6 @@ To learn more about the feature and to find out how end users use it, see [Multi
 
 |INSTALLATION GUIDES  |
 |---------|
-| [Multiple Carts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html)  |
+| [Multiple Carts feature integration](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-multiple-carts-feature.html)  |
 | [Multiple carts + Quick Order feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-quick-order-feature-integration.html)  |
 | [Multiple carts + Reorder feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-reorder-feature-integration.html)   |

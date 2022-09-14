@@ -1,5 +1,5 @@
 ---
-title: Checkout workflow
+title: Glue API Checkout workflow
 description: Checkout workflow of Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template

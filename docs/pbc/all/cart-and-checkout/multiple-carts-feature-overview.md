@@ -133,6 +133,7 @@ This video explains how to use shopping carts in the Spryker [B2B Demo Shop](/do
 
 |INSTALLATION GUIDES  |
 |---------|
-| [Install the Multiple Carts feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-feature-integration.html)  |
+| [Install the Multiple Carts feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-multiple-carts-feature.html)  |
 | [Install Multiple Carts + Quick Order feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-quick-order-feature-integration.html)  |
+| [Install Multiple Carts + Quotation Process feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-multiple-carts-quotation-process-feature.html)  |
 | [Install the Multiple Carts + Reorder feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-reorder-feature-integration.html)   |

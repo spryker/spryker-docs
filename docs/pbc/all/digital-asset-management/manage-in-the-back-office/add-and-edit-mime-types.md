@@ -21,6 +21,8 @@ related:
     link: docs/scos/user/features/page.version/file-manager-feature-overview/file-manager-feature-overview.html
 ---
 
+This document describes how to define what files types can be uploaded to a shop.
+
 ## Prerequisites
 
 To manage MIME types, go to **Administration&nbsp;<span aria-label="and then">></span> MIME Type Settings**.

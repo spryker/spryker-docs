@@ -23,7 +23,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html
 ---
 
-Transfer objects are simple data containers. Their purpose is to retrieve a standardized way to access data and get more expressive method signatures. Transfer objects are available everywhere in the system.
+_Transfer objects_ are simple data containers. Their purpose is to retrieve a standardized way to access data and get more expressive method signatures. Transfer objects are available everywhere in the system.
 
 This document shows how to create and use transfer objects.
 
@@ -134,7 +134,7 @@ echo $customerTransfer->getFirstName(); // echos 'John'
 ```
 
 ## Object nesting
-Transfer objects can be nested. For instance, a cart object contains several items like this:
+Transfer objects can be nested—for example, a cart object contains several items like this:
 
 ```php
 <?php
@@ -157,9 +157,12 @@ $items = $cartTransfer->getItems();
 ## Checking the required fields
 
 {% info_block warningBox %}
+
 *Require* methods have been deprecated in version 3.25.0 of the Transfer module and replaced by the [get-or-fail](#get-or-fail) methods.
+
 {% endinfo_block %}
-In general, a transfer object must not know which fields are required, as it can be used for different use cases. However, when you use a transfer object, you always expect the existence of specific parameters. This can be checked with a special require-method for each property:
+
+A transfer object must not know which fields are required, as it can be used for different use cases. However, when you use a transfer object, you always expect the existence of specific parameters. This can be checked with a special require-method for each property:
 
 ```php
 <?php
@@ -169,9 +172,9 @@ $customerTransfer->requireFirstName()->getFirstName();
 
 <a name="get-or-fail"></a>
 
-### Using the get-or-fail methods
+### Using get-or-fail methods
 
-Starting from version 3.25.0 of the [Transfer](https://github.com/spryker/transfer) module, transfers expose the new *get-or-fail* methods that are meant to replace the deprecated *require* methods. Here is how it works: for each nullable property, an extra *getter* method is generated, along with the regular one. This new *getter* will throw an exception when trying to get the value of a property that was not previously set. The name of the method is composed of the `get` prefix, the name of the property, and the `OrFail` suffix.
+Starting from version 3.25.0 of the [Transfer](https://github.com/spryker/transfer) module, transfers expose the new *get-or-fail* methods that are meant to replace the deprecated *require* methods. Here is how it works: for each nullable property, an extra *getter* method is generated, along with the regular one. This new *getter* throws an exception when trying to get the value of a property that was not previously set. The name of the method is composed of the `get` prefix, the name of the property, and the `OrFail` suffix.
 
 ```php
 $fooBarTransfer = new FooBarTransfer();
@@ -184,11 +187,17 @@ $fooBarTransfer->getFooOrFail();
 $fooBarTransfer->getBarOrFail(); // exception will be thrown
 ```
 
-Keep in mind that these new methods are not generated for the array and collection transfer properties, as these properties cannot be nullable by design.
+{% info_block infoBox "Note" %}
+
+These new methods are not generated for the array and collection transfer properties, as these properties cannot be nullable by design.
+
+{% endinfo_block %}
+
+
 
 ### Property constants
 
-The transfer object exposes all properties as constants which can be used in forms and tables:
+A transfer object exposes all properties as constants that can be used in forms and tables:
 
 ```php
 <?php
@@ -200,11 +209,11 @@ CustomerTransfer::FIRST_NAME; // = 'firstName'
 
 Most of the modules define transfer objects in a dedicated XML file: `(ModuleNamespace)/Shared/Module/Transfer/module.transfer.xml`.
 
-Therefore, you can find the XML definition, for example, for the `CustomerGroup` module in `vendor/spryker/spryker/Bundles/CustomerGroup/src/Spryker/Shared/CustomerGroup/Transfer/customer_group.transfer.xml`.
+Therefore, you can find the XML definition—for example, for the `CustomerGroup` module in `vendor/spryker/spryker/Bundles/CustomerGroup/src/Spryker/Shared/CustomerGroup/Transfer/customer_group.transfer.xml`.
 
 ### Adding more file locations
 
-If you have third-party modules using our transfer objects, you can easily add additional source directories in your projects. To do so, extend `Spryker\Zed\Transfer\TransferConfig` and return all additional *glob* patterns from `getAdditionalSourceDirectoryGlobPatterns()`.
+If you have third-party modules using our transfer objects, you can easily add additional source directories to your projects. To do so, extend `Spryker\Zed\Transfer\TransferConfig` and return all additional *glob* patterns from `getAdditionalSourceDirectoryGlobPatterns()`.
 
 {% info_block warningBox "Glob patterns" %}
 
@@ -214,7 +223,8 @@ For more information, see [PHP documentation](https://php.net/manual/en/function
 
 {% endinfo_block %}
 
-Let's say you have a custom extension package called `my-vendor/my-package` that uses transfer objects. Using Composer, by default, this package will be installed under `vendor/my-vendor/my-package`.
+If you have a custom extension package called `my-vendor/my-package` that uses transfer objects, using Composer, by default, this package is installed under `vendor/my-vendor/my-package`.
+
 If you want your transfer objects to be created from definitions stored under `vendor/my-vendor/my-package/src/Transfer`, provide the necessary *glob* pattern like this:
 
 ```php
@@ -244,13 +254,11 @@ class TransferConfig extends SprykerTransferConfig
 
 {% info_block infoBox "Naming" %}
 
-Make sure your transfer object definition files end with `.transfer.xml` (even for your custom packages).
+Make sure your transfer object definition files, even for your custom packages, end with `.transfer.xml`.
 
 {% endinfo_block %}
 
 ## Transfer object generation
-
-To generate the objects, run:
 
 ```bash
 vendor/bin/console transfer:generate
@@ -260,7 +268,15 @@ This command retrieves all `*.transfer.xml` files from the project- and core-lev
 
 ## Transfer file expansion
 
-Transfer objects can be expanded from different bundles. Any other module can add properties to the existing transfer objects. For instance, the [Tax](https://github.com/spryker/tax) module may expect a *customer tax-id*. So in the `tax.transfer.xml`, you can add the required properties to the customer. But keep in mind that it is not possible to remove existing properties or to change their type.
+Transfer objects can be expanded from different bundles. Any other module can add properties to the existing transfer objects. For instance, the [Tax](https://github.com/spryker/tax) module may expect a *customer tax-id*. So in the `tax.transfer.xml`, you can add the required properties to the customer. 
+
+{% info_block infoBox "Note" %}
+
+You can't remove existing properties or change their type.
+
+{% endinfo_block %}
+
+
 
 ```xml
 <?xml version="1.0"?>
@@ -275,7 +291,7 @@ Transfer objects can be expanded from different bundles. Any other module can ad
 </transfers>
 ```
 
-After the transfers have been generated, you can set and get the customer's *taxId* like this:
+After the transfers have been generated, you can set and get the customer's `taxId` like this:
 
 ```php
 <?php
@@ -288,7 +304,7 @@ $taxId = $customerTransfer->getTaxId();
 
 ## Transfer strict types
 
-Starting from version 3.27.0 of the [Transfer](https://github.com/spryker/transfer) module, transfers support the so-called strict mode. In the strict mode, all the relevant *get-*, *set-* and *add-* methods are generated with PHP data types in place of their arguments and return values. The strict mode is disabled by default for backward compatibility reasons and can be enabled for specific transfer properties or for an entire transfer. To enable the strict mode, you need to use the new `strict` XML attribute while defining a transfer. If the `strict` attribute is applied to a property, then only that property will be considered as a strict property while applying the attribute to a `<transfer/>` element means that the whole transfer is supposed to be strict:
+Starting from version 3.27.0 of the [Transfer](https://github.com/spryker/transfer) module, transfers support the so-called *strict* mode. In the strict mode, all the relevant *get-*, *set-* and *add-* methods are generated with PHP data types in place of their arguments and return values. The strict mode is disabled by default for backward compatibility reasons and can be enabled for specific transfer properties or for an entire transfer. To enable the strict mode, you need to use the new `strict` XML attribute while defining a transfer. If the `strict` attribute is applied to a property, then only that property is considered as a strict property while applying the attribute to a `<transfer/>` element means that the whole transfer is supposed to be strict:
 
 ```xml
 <?xml version="1.0"?>
@@ -310,17 +326,18 @@ Starting from version 3.27.0 of the [Transfer](https://github.com/spryker/transf
 </transfers>
 ```
 
-In the example above, the `Foo` transfer is  fully strict, meaning that all of its getters, setters, and adders have data types where possible. The only acceptable value of this new attribute is `true`.
+In the previous example, the `Foo` transfer is fully strict, meaning that all of its getters, setters, and adders have data types where possible. The only acceptable value of this new attribute is `true`.
 
-Also, in the example above, the `Buzz` transfer has a nested transfer `Foo` declared as a strict property. In case of trying to put to the `foo` property something other than `Foo` transfer object, an exception is thrown.
+In the previous example, the `Foo` transfer is fully strict, meaning that all of its getters, setters, and adders have data types where possible. The only acceptable value of this new attribute is `true`.
+Also, in the example, the `Buzz` transfer has a nested transfer `Foo` declared as a strict property. In case of trying to put to the `foo` property something other than `Foo` transfer object, an exception is thrown.
 
 {% info_block warningBox %}
 
-There is a limitation to keep in mind here: the usage of the `strict` attribute must be consistent for the same transfer/property across different definitions. In other words, if some transfer or property is defined as strict in one module, you cannot have it defined as non-strict in another module or at the project level. Otherwise, an exception will be thrown when merging the transfer definition.
+There is a limitation to keep in mind here: the usage of the `strict` attribute must be consistent for the same transfer/property across different definitions. In other words, if some transfer or property is defined as strict in one module, you cannot have it defined as non-strict in another module or at the project level. Otherwise, an exception is thrown when merging the transfer definition.
 
 {% endinfo_block %}
 
-### Nullable arrays vs. collections
+### Nullable arrays versus collections
 
 In the strict mode, there is a concept of nullable arrays. Each strict transfer property of the `array` type without the `singular` or `associative` attribute can accept `null` as its value. This differs from the non-strict mode, where array transfer properties cannot be nullable by design. All the nullable arrays have the get-or-fail method in place, the same as with all the other non-array nullable transfer properties.
 
@@ -339,7 +356,7 @@ Transfers expose the new *get-collection-item* methods for all the `associative`
 
 {% info_block warningBox %}
 
-If you extend the existing transfer object, don't copy over all fields, but only the fields you want to add on top.
+If you extend the existing transfer object, don't copy over all fields, only the fields you want to add on top.
 
 {% endinfo_block %}
 
@@ -347,11 +364,11 @@ If you extend the existing transfer object, don't copy over all fields, but only
 
 Starting from version 3.28.0 of the [Transfer](https://github.com/spryker/transfer) module, you can validate transfer XML definition files against a configurable XSD schema. This validation is run as part of the general transfer validation process triggered by the `transfer:validate` command. You can enable or disable the validation by overriding the `\Spryker\Zed\Transfer\TransferConfig::isTransferXmlValidationEnabled()` method. Spyker provides default XSD schema for validation that can be found in `vendor/transfer/data/definition/transfer-01.xsd`. You can change this schema by overriding `\Spryker\Zed\Transfer\TransferConfig::getXsdSchemaFilePath()`.
 
-Under the hood, the validation tool uses regular `\DOMDocument::schemaValidate()` to validate the transfer definition file against the provided schema, so see the documentation for this method to find out more about possible validation errors in case there are any.
+Under the hood, the validation tool uses regular `\DOMDocument::schemaValidate()` to validate the transfer definition file against the provided schema.
 
 {% info_block warningBox "The attribute value of the *root* element" %}
 
-The only valid attribute value of the root `<transfers></transfers>` element is `spryker:transfer-01 http://static.spryker.com/transfer-01.xsd`, even though now the validation also allows `spryker:transfer-01 https://static.spryker.com/transfer-01.xsd` (`https` vs. `http`). This is done for backward compatibility reasons. Pay attention to this when creating transfer definition files and always use the valid value.
+The only valid attribute value of the root `<transfers></transfers>` element is `spryker:transfer-01 http://static.spryker.com/transfer-01.xsd`, even though now the validation also allows `spryker:transfer-01 https://static.spryker.com/transfer-01.xsd` (`https` versus `http`). This is done for backward compatibility reasons. Pay attention to this when creating transfer definition files and always use the valid value.
 
 {% endinfo_block %}
 
@@ -359,7 +376,5 @@ The only valid attribute value of the root `<transfers></transfers>` element is 
 
 You can use the following definitions to generate the related code:
 
-* Add shared transfer schema.
-
-See the [Spryk](/docs/sdk/dev/spryks/spryks.html) documentation for details.
+* Add shared transfer schema. For details, see [Spryk](/docs/sdk/dev/spryks/spryks.html). 
  

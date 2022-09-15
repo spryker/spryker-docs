@@ -3326,10 +3326,10 @@ entries:
     - title: Client
       url: /docs/scos/dev/back-end-development/client/client.html
       nested:
-      - title: Implementing a client
-        url: /docs/scos/dev/back-end-development/client/implementing-a-client.html
-      - title: Using and configuring Redis as a key-value storage
-        url: /docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html
+      - title: Implement a client
+        url: /docs/scos/dev/back-end-development/client/implement-a-client.html
+      - title: Use and configure Redis as a key-value storage
+        url: /docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html
     - title: Yves
       url: /docs/scos/dev/back-end-development/yves/yves.html
       nested:
@@ -3400,12 +3400,12 @@ entries:
     - title: Cronjobs
       url: /docs/scos/dev/back-end-development/cronjobs/cronjobs.html
       nested:
-      - title: Adding and configuring cronjobs
-        url: /docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-cronjobs.html
-      - title: Creating a custom scheduler
-        url: /docs/scos/dev/back-end-development/cronjobs/creating-a-custom-scheduler.html
-      - title: Migrating to Jenkins
-        url: /docs/scos/dev/back-end-development/cronjobs/migrating-to-jenkins.html
+      - title: Add and configure cronjobs
+        url: /docs/scos/dev/back-end-development/cronjobs/add-and-configure-cronjobs.html
+      - title: Create a custom scheduler
+        url: /docs/scos/dev/back-end-development/cronjobs/create-a-custom-scheduler.html
+      - title: Migrate to Jenkins
+        url: /docs/scos/dev/back-end-development/cronjobs/migrate-to-jenkins.html
     - title: Forms
       url: /docs/scos/dev/back-end-development/forms/forms.html
       nested:
@@ -3427,10 +3427,10 @@ entries:
       - title: Console commands in Spryker
         url: /docs/scos/dev/back-end-development/console-commands/console-commands.html
         include_versions:
-      - title: Implementing a new console command
-        url: /docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html
-      - title: Getting the list of console commands and available options
-        url: /docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html
+      - title: Implement a new console command
+        url: /docs/scos/dev/back-end-development/console-commands/implement-a-new-console-command.html
+      - title: Get the list of console commands and available options
+        url: /docs/scos/dev/back-end-development/console-commands/get-the-list-of-console-commands-and-available-options.html
     - title: Data manipulation
       nested:
       - title: Running and reverting a database migration

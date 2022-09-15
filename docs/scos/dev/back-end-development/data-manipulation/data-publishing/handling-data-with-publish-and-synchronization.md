@@ -85,7 +85,7 @@ The following P&S naming conventions are applied:
 
 ## 2. Data structure
 
-Usually, the data for Yves is structured differently than the data for Zed. It's because the data model used in Redis and Elasticsearch is optimized to be used by a frontend. With P&S, data is always carried in the form of [**transfer objects**](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html) between Zed and Yves.
+Usually, the data for Yves is structured differently than the data for Zed. It's because the data model used in Redis and Elasticsearch is optimized to be used by a frontend. With P&S, data is always carried in the form of [transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html) between Zed and Yves.
 
 Follow these steps to create a transfer object that represents the frontend's target data structure.
 

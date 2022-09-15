@@ -24,8 +24,8 @@ redirect_from:
   - /v1/docs/en/t-extend-db-schema
   - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html
 related:
-  - title: Creating, using, and extending the transfer objects
-    link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html
+  - title: Create, use, and extend the transfer objects
+    link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
 ---
 
 This document shows how to extend the database schema.

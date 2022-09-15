@@ -74,4 +74,4 @@ Yves is divided into two parts:
     * [Atomic Frontend](/docs/scos/dev/front-end-development/yves/atomic-frontend/atomic-front-end-general-overview.html)
  * Client part which provides access to the search and storage engine and the Zed application. See the following documents for more information on the Client:
      * [Client](/docs/scos/dev/back-end-development/client/client.html)
-     * [Implementing a Client](/docs/scos/dev/back-end-development/client/implementing-a-client.html)
+     * [Implement a client](/docs/scos/dev/back-end-development/client/implement-a-client.html)

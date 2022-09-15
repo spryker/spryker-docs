@@ -26,13 +26,13 @@ redirect_from:
 related:
   - title: Console commands in Spryker
     link: docs/scos/dev/back-end-development/console-commands/console-commands.html
-  - title: Getting the list of console commands and available options
-    link: docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html
+  - title: Get the list of console commands and available options
+    link: docs/scos/dev/back-end-development/console-commands/get-the-list-of-console-commands-and-available-options.html
 ---
 
 This document describes how you can implement a new console command. However, before implementing your commands, we recommend you to do the following:
 
-* Get the list of the console commands already available at Spryker. For instructions about how to do that, see [Getting the list of console commands and available options](/docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html).
+* Get the list of the console commands already available at Spryker. For instructions about how to do that, see [Get the list of console commands and available options](/docs/scos/dev/back-end-development/console-commands/get-the-list-of-console-commands-and-available-options.html).
 * Check out what each command does. For details, see [Console commands in Spryker](/docs/scos/dev/back-end-development/console-commands/console-commands.html).
 
 ## Add a new console command

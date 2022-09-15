@@ -20,10 +20,10 @@ redirect_from:
 related:
   - title: Cronjobs
     link: docs/scos/dev/back-end-development/cronjobs/cronjobs.html
-  - title: Adding and configuring cronjobs
-    link: docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-cronjobs.html
-  - title: Migrating to Jenkins
-    link: docs/scos/dev/back-end-development/cronjobs/migrating-to-jenkins.html
+  - title: Add and configure cronjobs
+    link: docs/scos/dev/back-end-development/cronjobs/add-and-configure-cronjobs.html
+  - title: Migrate to Jenkins
+    link: docs/scos/dev/back-end-development/cronjobs/migrate-to-jenkins.html
   - title: Cronjob scheduling
     link: docs/scos/dev/sdk/cronjob-scheduling.html
 ---

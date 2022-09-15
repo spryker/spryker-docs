@@ -10,7 +10,7 @@ The *Data ingestion* section includes the following documents:
 * Structural preparations:
   * [File System](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/file-system.html)—learn about the `FileSystem` module and its configuration.
   * [Flysystem](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html)—learn about the `FlySystem` module and its configuration.
-  * [Extending the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html)—find out how to extend database tables by adding new fields.
-  * [Creating, using, and extending the transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html)—learn how to create, extend and use transfer objects.
+  * [Extend the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html)—find out how to extend database tables by adding new fields.
+  * [Create, use, and extend the transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html)—learn how to create, extend and use transfer objects.
 * [Spryker Middleware](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html)—read the detailed overview of Spryker Middleware and learn how to create importers to import data into the database.
 

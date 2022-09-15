@@ -20,8 +20,8 @@ redirect_from:
   - /v2/docs/en/ht-use-transfer-objects
   - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html
 related:
-  - title: Extending the database schema
-    link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html
+  - title: Extend the database schema
+    link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html
 ---
 
 _Transfer objects_ are simple data containers. Their purpose is to retrieve a standardized way to access data and get more expressive method signatures. Transfer objects are available everywhere in the system.

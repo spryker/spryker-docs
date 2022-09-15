@@ -19,12 +19,12 @@ redirect_from:
   - /v3/docs/cronjob-scheduling-guide
   - /v3/docs/en/cronjob-scheduling-guide
 related:
-  - title: Creating a custom scheduler
-    link: docs/scos/dev/back-end-development/cronjobs/creating-a-custom-scheduler.html
-  - title: Migrating to Jenkins
-    link: docs/scos/dev/back-end-development/cronjobs/migrating-to-jenkins.html
-  - title: Adding and configuring cronjobs
-    link: docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-cronjobs.html
+  - title: Create a custom scheduler
+    link: docs/scos/dev/back-end-development/cronjobs/create-a-custom-scheduler.html
+  - title: Migrate to Jenkins
+    link: docs/scos/dev/back-end-development/cronjobs/migrate-to-jenkins.html
+  - title: Add and configure cronjobs
+    link: docs/scos/dev/back-end-development/cronjobs/add-and-configure-cronjobs.html
   - title: Cronjob scheduling
     link: docs/scos/dev/sdk/cronjob-scheduling.html
 ---
@@ -45,9 +45,9 @@ Basic module schema:
 
 ## Cronjob schedulers
 
-[Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops) are shipped with Jenkins as a default scheduler. Jenkins manages running and monitoring jobs. If you migrated to another scheduler and want to migrate back to Jenkins, see [Migrating to Jenkins](/docs/scos/dev/back-end-development/cronjobs/migrating-to-jenkins.html).
+[Demo Shops](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops) are shipped with Jenkins as a default scheduler. Jenkins manages running and monitoring jobs. If you migrated to another scheduler and want to migrate back to Jenkins, see [Migrate to Jenkins](/docs/scos/dev/back-end-development/cronjobs/migrate-to-jenkins.html).
 
-If your project has very specific requirements, you can [create a custom scheduler](/docs/scos/dev/back-end-development/cronjobs/creating-a-custom-scheduler.html).
+If your project has very specific requirements, you can [create a custom scheduler](/docs/scos/dev/back-end-development/cronjobs/create-a-custom-scheduler.html).
 
 
 ## Using cronjob schedulers

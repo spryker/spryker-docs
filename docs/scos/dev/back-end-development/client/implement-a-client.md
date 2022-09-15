@@ -26,8 +26,8 @@ redirect_from:
 related:
   - title: Client
     link: docs/scos/dev/back-end-development/client/client.html
-  - title: Using and configuring Redis as a key-value storage
-    link: docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html
+  - title: Use and configure Redis as a key-value storage
+    link: docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html
 ---
 
 This document describes how to implement a [client](/docs/scos/dev/back-end-development/client/client.html) part of the Spryker Yves application layer.

@@ -56,8 +56,8 @@ In the Spryker Commerce OS's core, the following is the public API:
     * Public constants that define environment configuration in [Constant Interfaces](/docs/scos/dev/back-end-development/data-manipulation/configuration-management.html)
 * [Database](/docs/scos/dev/back-end-development/zed/persistence-layer/database-schema-definition.html)
 * Search
-* [Storage](/docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html)
-* [Transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html)
+* [Storage](/docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html)
+* [Transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html)
 * Dependencies to open source components
 * Glossary keys
 * Software design

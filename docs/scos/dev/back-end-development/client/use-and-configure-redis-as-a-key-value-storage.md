@@ -26,8 +26,8 @@ redirect_from:
 related:
   - title: Client
     link: docs/scos/dev/back-end-development/client/client.html
-  - title: Implementing a client
-    link: docs/scos/dev/back-end-development/client/implementing-a-client.html
+  - title: Implement a client
+    link: docs/scos/dev/back-end-development/client/implement-a-client.html
 ---
 
 This document describes how Redis is used within Spryker. The current functionality can be extended according to your needs.

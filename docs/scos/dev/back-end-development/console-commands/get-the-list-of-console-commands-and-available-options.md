@@ -27,7 +27,7 @@ redirect_from:
 related:
   - title: Console commands in Spryker
     link: docs/scos/dev/back-end-development/console-commands/console-commands.html
-  - title: Implementing a new console command
+  - title: Implement a new console command
     link: docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html
 ---
 

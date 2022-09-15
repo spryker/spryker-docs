@@ -24,9 +24,9 @@ redirect_from:
   - /v1/docs/en/client
 related:
   - title: Implementing a client
-    link: docs/scos/dev/back-end-development/client/implementing-a-client.html
-  - title: Using and configuring Redis as a key-value storage
-    link: docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html
+    link: docs/scos/dev/back-end-development/client/implement-a-client.html
+  - title: Use and configuring Redis as a key-value storage
+    link: docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html
 ---
 
 This document provides general information about the client part of the Yves applications layer and describes how to use it.
@@ -62,7 +62,7 @@ Spryker provides several clients. For example, there is a cart client which cont
 
 ![Yves Get Client](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Client/yves-getclient.png)
 
-The following example shows how the cart client is used inside the `CartController.` As you can see, the client uses [transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html) as an input parameter.
+The following example shows how the cart client is used inside the `CartController.` As you can see, the client uses [transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html) as an input parameter.
 
 ```php
 <?php
@@ -128,4 +128,4 @@ The request from Yves to Zed involves two important classes:
 
 ## What's next?
 
-To implement a client for your project, see [Implementing a client](/docs/scos/dev/back-end-development/client/implementing-a-client.html).
+To implement a client for your project, see [Implementing a client](/docs/scos/dev/back-end-development/client/implement-a-client.html).

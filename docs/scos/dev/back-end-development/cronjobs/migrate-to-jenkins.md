@@ -8,10 +8,10 @@ redirect_from:
 related:
   - title: Cronjobs
     link: docs/scos/dev/back-end-development/cronjobs/cronjobs.html
-  - title: Creating a custom scheduler
-    link: docs/scos/dev/back-end-development/cronjobs/creating-a-custom-scheduler.html
-  - title: Adding and configuring cronjobs
-    link: docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-cronjobs.html
+  - title: Create a custom scheduler
+    link: docs/scos/dev/back-end-development/cronjobs/create-a-custom-scheduler.html
+  - title: Add and configure cronjobs
+    link: docs/scos/dev/back-end-development/cronjobs/add-and-configure-cronjobs.html
 ---
 
 This document describes how to migrate to the Jenkins scheduler and set up jobs.
@@ -150,4 +150,4 @@ $config[SchedulerJenkinsConstants::JENKINS_TEMPLATE_PATH] = getenv('SPRYKER_JENK
 
 ## 3. Configure Jenkins jobs
 
-Create or update the Jenkins job list in `config/Zed/cronjobs/jenkins.php`. To learn how to add jobs, see [Adding and configuring cronjobs](/docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-cronjobs.html).
+Create or update the Jenkins job list in `config/Zed/cronjobs/jenkins.php`. To learn how to add jobs, see [Add and configure cronjobs](/docs/scos/dev/back-end-development/cronjobs/add-and-configure-cronjobs.html).

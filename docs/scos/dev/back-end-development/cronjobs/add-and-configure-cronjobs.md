@@ -20,14 +20,14 @@ redirect_from:
   - /v2/docs/en/cronjob-scheduling-guide
   - /v1/docs/cronjob-scheduling-guide
   - /v1/docs/en/cronjob-scheduling-guide
-  - /docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-cronjobs.html
+  - /docs/scos/dev/back-end-development/cronjobs/add-and-configure-cronjobs.html
 related:
   - title: Cronjobs
     link: docs/scos/dev/back-end-development/cronjobs/cronjobs.html
-  - title: Creating a custom scheduler
-    link: docs/scos/dev/back-end-development/cronjobs/creating-a-custom-scheduler.html
-  - title: Migrating to Jenkins
-    link: docs/scos/dev/back-end-development/cronjobs/migrating-to-jenkins.html
+  - title: Create a custom scheduler
+    link: docs/scos/dev/back-end-development/cronjobs/create-a-custom-scheduler.html
+  - title: Migrate to Jenkins
+    link: docs/scos/dev/back-end-development/cronjobs/migrate-to-jenkins.html
   - title: Cronjob scheduling
     link: docs/scos/dev/sdk/cronjob-scheduling.html
 ---

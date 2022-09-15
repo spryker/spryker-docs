@@ -67,7 +67,7 @@ related:
 
 Elasticsearch is a NoSQL data store that lets you predefine the structure of the data you get to store in it.
 
-Because the used data structure is static, you need to define it in advance. The definitions of the indexes and mappings are written in JSON format. You can find it in the [official Elasticsearch documentation](https://www.elastic.co/guide/index.html).
+Because the used data structure is static, you need to define it in advance. The definitions of the indexes and mappings are written in JSON. You can find it in the [official Elasticsearch documentation](https://www.elastic.co/guide/index.html).
 
 The content of the configuration files must follow the conventions listed in the [Create index API](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html) document of the official Elasticsearch documentation. 
 

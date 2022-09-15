@@ -48,7 +48,7 @@ git clone git@github.com:spryker/docker-sdk.git docker
 
 ##### Integrating Gatling
 
-With the B2C Demo Shop and Docker SDK cloned, you will need to make a few changes to integrate Gatling into your project. These changes including requiring the load testing tool with composer as well as updating the [Router module](docs/scos/dev/migration-concepts/silex-replacement/router/router-yves.html) inside of Yves.
+With the B2C Demo Shop and Docker SDK cloned, you will need to make a few changes to integrate Gatling into your project. These changes including requiring the load testing tool with composer as well as updating the [Router module](/docs/scos/dev/migration-concepts/silex-replacement/router/router-yves.html) inside of Yves.
 
 1. Require the *composer* package:
 
@@ -210,8 +210,4 @@ For *Glue API*:
 - `GuestCartApi` - scenario to add a product to cart for guest user
 - `PdpApi` - request a random product detail page from fixtures
 
-For more information on either using Gatling as a stand-alone tool or for navigating through the tools, please refer to the available guides here:
-
-- [Gatling](docs/load-testing-with-gatling/1-gatling-overview.md)
-- [Installing Gatling](docs/load-testing-with-gatling/2-installing-gatling.md)
-- [Running and using Gatling](docs/load-testing-with-gatling/3-running-and-using-gatling.md)
+For more information on either using Gatling as a stand-alone tool or for navigating through the tools, please refer to the [available guides here](https://github.com/spryker-sdk/load-testing/blob/master/docs/load-testing-with-gatling/1-gatling-overview.md).

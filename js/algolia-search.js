@@ -44,6 +44,9 @@ const AlgoliaSearch = {
     },
     addSearchWidgets() {
         this.searchIndices.forEach((searchIndex, index) => {
+            const archiveLink = $(this.pageConfig.container).data('archive');
+            const archive = (searchIndex.indexName === 'scos_user' || searchIndex.indexName === 'scos_dev' || searchIndex.indexName === 'marketplace_user' || searchIndex.indexName === 'marketplace_dev') ? `<span class="search-results__outer">Haven’t found neccessary information? Go to <a href="${archiveLink}" target="_blank" class="search-results__outer-link">Archive</a> and check there.</span>` : '';
+
             // add searchbox widget only to the main index
             if (index === 0) {
                 searchIndex.addWidget(
@@ -66,9 +69,9 @@ const AlgoliaSearch = {
                 instantsearch.widgets.stats({
                     container: $(`#tabs-${searchIndex.indexName} .${this.pageConfig.statsClassName}`).get(0),
                     templates: {
-                         text: '{{#hasNoResults}}<span class="search-results__empty"><i class="search-results__empty-icon icon-search"></i> <span class="search-results__empty-title">No results found for "{{query}}"</span><span class="search-results__empty-subtitle">Please check your spelling or try another keyword</span></span>{{/hasNoResults}}\
-                                {{#hasOneResult}}<span class="search-results__details">1 result for <span class="search-results__details-mark">{{query}}</span></span>{{/hasOneResult}}\
-                                {{#hasManyResults}}<span class="search-results__details">{{#helpers.formatNumber}}{{nbHits}}{{/helpers.formatNumber}} results for <span class="search-results__details-mark">{{query}}</span></span>{{/hasManyResults}}',
+                         text: `{{#hasNoResults}}<span class="search-results__empty"><i class="search-results__empty-icon icon-search"></i> <span class="search-results__empty-title">No results found for "{{query}}"</span><span class="search-results__empty-subtitle">Please check your spelling or try another keyword</span>${archive}</span>{{/hasNoResults}}\
+                                {{#hasOneResult}}<span class="search-results__details">1 result for <span class="search-results__details-mark">{{query}}</span></span>${archive}{{/hasOneResult}}\
+                                {{#hasManyResults}}<span class="search-results__details">{{#helpers.formatNumber}}{{nbHits}}{{/helpers.formatNumber}} results for <span class="search-results__details-mark">{{query}}</span></span>${archive}{{/hasManyResults}}`,
                     },
                 })
             );

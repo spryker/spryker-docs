@@ -6,7 +6,11 @@
 
 {% assign current_version_label = site.versions[current_version] | default: 'undefined' %}
 
-{% if page.all_versions.size > 1 %}
+{% if page.product == 'marketplace' or page.product == 'scos' %}
+    <div class="alt-nav">
+        <div class="alt-nav__outer">To view an older version of this document, go to <br class="desktop-hidden"><a href="{{ site.archive_domain }}" target="_blank" class="alt-nav__outer-link">Archive</a> .</div>
+    </div>
+{% elsif page.all_versions.size > 1 %}
     <div class="alt-nav dropdown">
         <span class="alt-nav__opener nav-link dropdown-toggle" id="versionDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <span class="alt-nav__opener-text">{{ current_version_label }}</span>

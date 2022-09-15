@@ -49,6 +49,10 @@ exclude:
   - redirect.html
   - docs/scos/dev/drafts-dev/
   - docs/scos/dev/developers-corner/
+  - docs/scos/
+  - docs/pbc/
+  - docs/cloud/
+  - docs/marketplace/dev/
 
 # these are the files and directories that jekyll will exclude from the build
 
@@ -280,3 +284,5 @@ redirect_from:
 
 form_endpoints:
   feedback: 'https://formspree.io/f/xdoboyro'
+
+archive_domain: 'https://github.com/spryker/spryker-docs-archive'

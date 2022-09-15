@@ -140,6 +140,27 @@
         }
     }
 
+    &__outer {
+        padding: 15px;
+        background: $grey-lightest;
+        color: $dark;
+        font: 600 12px / 16px $main-font;
+        display: inline-block;
+        vertical-align: top;
+
+        @include media("<desktop") {
+            padding: 12px;
+        }
+    }
+
+    &__outer-link {
+        &:after {
+            content: "\f08e";
+            font-family: FontAwesome;
+            margin-right: 2px;
+        }
+    }
+
     &.dropdown {
         .alt-nav__opener {
             cursor: pointer;

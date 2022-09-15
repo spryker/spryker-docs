@@ -31,6 +31,10 @@ When a customer opens a Product Details page, they still see an abstract product
 
 After selecting a product variant, they see the variant's price.
 
+<iframe width="960" height="720" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.md/prices-of-abstract-products-and-pruduct-variants.mp4" frameborder="0" allowfullscreen></iframe>
+
+When an abstract product has only one concrete product,
+
 
 
 ## Price types

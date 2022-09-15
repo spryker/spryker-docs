@@ -9,7 +9,10 @@ entries:
     url: /docs/scos/dev/setup/setup.html
     nested:
     - title: System requirements
-      url: /docs/scos/dev/setup/system-requirements.html
+      url: /docs/scos/dev/system-requirements/system-requirements.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
     - title: Quick installation guides
       url: /docs/scos/dev/setup/quick-installation-guides/quick-installation-guides.html
       nested:

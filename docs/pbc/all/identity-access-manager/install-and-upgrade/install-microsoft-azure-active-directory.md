@@ -1,5 +1,5 @@
 ---
-title: Microsoft Azure Active Directory
+title: Install Microsoft Azure Active Directory
 description: Learn  how to integrate Microsoft Azure Active Directory into a Spryker project.
 last_updated: Jun 17, 2021
 template: feature-integration-guide-template

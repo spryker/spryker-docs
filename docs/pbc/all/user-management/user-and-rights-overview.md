@@ -14,9 +14,7 @@ redirect_from:
 - /docs/scos/dev/feature-walkthroughs/202200.0/spryker-core-back-office-feature-walkthrough/user-and-rights-overview.html
 ---
 
-User and rights management is a general term that describes the security functionality for controlling user access to perform various roles throughout the system.
-
-In the Spryker Commerce OS user and rights management is implemented in the following three bundles:
+User and rights management is implemented in the following three bundles:
 
 * ACL—ACL stands for Access Control List. This is where you can manage your roles, groups, privileges and resources.
 * Auth—manages the authorization of a specific user by returning true or false if the credentials are allowed to access the system or not. It is used for login, logout, and used by the login controller to verify if a given user token is authenticated. Login is authenticated with a form or a header (via token). Auth is also used to validate that Zed has authorization to process incoming requests from Yves or 3rd parties such as payment providers.

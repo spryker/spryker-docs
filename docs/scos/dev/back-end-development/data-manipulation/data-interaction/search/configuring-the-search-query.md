@@ -67,7 +67,7 @@ The `QueryInterface` instance is a stateful class; sometimes, the `getSearchQuer
 Besides, this new `QueryInterface ` instance has to implement `Spryker\Client\SearchExtension\Dependency\Plugin\SearchContextAwareQueryInterface`. To be compliant with this interface, implementations for the `::setSearchContext()` and `::getSearchContext()` methods must be provided. This is needed for setting and maintaining a search context that would later be used during the search process, particularly for resolving the correct Elasticsearch index for search. For more information, see [Search migration concept](/docs/scos/dev/migration-concepts/search-migration-concept/search-migration-concept.html).
 
 
-<details open>
+<details>
 <summary markdown='span'>Query</summary>
 
 ```php
@@ -316,7 +316,7 @@ To enable autocompletion when the user types, add some analyzers to the full-tex
 
 {% endinfo_block %}
 
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Shared/Search/Schema/page.json</summary>
 
 ```json
@@ -373,7 +373,7 @@ After creating your query, process the raw response from Elasticsearch. This is 
 To create one, extend `\Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\AbstractElasticsearchResultFormatterPlugin`
 It's also possible to not provide any result formatters; in this case, the raw response is returned at the end.
 
-<details open>
+<details>
 <summary markdown='span'>Pyz\Client\Catalog\Plugin\ResultFormatter</summary>
 
 ```php

@@ -35,13 +35,13 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
 ---
 
-This document explains how to configure faceted navigation, filters, pagination, and sorting, so all the important search features that are provided by the Search module.
+This document explains how to configure faceted navigation, filters, pagination, and sorting, so all the important search features that are provided by the `Search` module.
 
-This configuration is only relevant if you enable the three query expanders and the result formatters. See [Configuring the search query](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html) for details.
+This configuration is only relevant if you enable the three query expanders and the result formatters. For details, see [Configuring the search query](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html) 
 
 To build configuration for the search features, provide implementation for `\Spryker\Client\SearchExtension\Dependency\Plugin\SearchConfigBuilderPluginInterface`:
 
-<details open>
+<details>
 <summary markdown='span'>SearchElasticsearch</summary>
 
 ```php
@@ -79,9 +79,9 @@ First, add the code that configures your facet filters.
 
 The goal is to create `FacetConfigTransfer` instances with some data, and set it as a property of `$searchConfigurationTransfer`.
 
-Let's assume that previously in your `PageMapInterface`you mapped an integer facet called "price" with some data (note the use of `addIntegerFacet()` in the example above). So now you want to add a price range filter for that data.
+Let's assume that previously in your `PageMapInterface`you mapped an integer facet called "price" with some data (note the use of `addIntegerFacet()` in the previous example). So now you want to add a price range filter for that data.
 
-<details open>
+<details>
 <summary markdown='span'>Plugin\SearchElasticsearch</summary>
 
 ```php
@@ -127,7 +127,7 @@ use Generated\Shared\Transfer\SearchConfigurationTransfer;
 ```
 </details>
 
-You can create and add as many `FacetConfigTransfers` as you need. Let's analyze this transfer's options below:
+You can create and add as many `FacetConfigTransfers` as you need. Let's analyze this transfer's options:
 
 * `setName()`: *Required* field; the name of the target data to filter by.
 * `setParameterName()`: *Required* field; the name that is used in the request when the filter is used.
@@ -138,7 +138,7 @@ You can create and add as many `FacetConfigTransfers` as you need. Let's analyze
 * `setValueTransformer()`: *Optional* field; to provide a value transformer plugin by defining the Fully Qualified Name of the plugin. This plugin should implement `\Spryker\Client\SearchExtension\Dependency\Plugin\FacetSearchResultValueTransformerPluginInterface`. It's used to transform each filter value from their stored values (for example IDs) to something readable (representing name) for users.
 * The next method you implement is the`buildSortConfig()`, where you configure your sorting options. Let's assume you want to sort by name and price, and you've already added them when implementing `PageMapInterface` (check the use of `addStringSort()` and `addIntegerSort()` in the example above).
 
-<details open>
+<details>
 <summary markdown='span'>Pyz\Client\Catalog\Plugin\Config</summary>
 
 ```php
@@ -273,10 +273,14 @@ Similar to facet filters, you can create and add as many `SortConfigTransfers` a
 * `setIsDescending()`: *Optional* field; the sort direction is descending when this is set to true. Otherwise, the sort direction is ascending by default.
 
 {% info_block infoBox "Sort by relevance" %}
-Note that, by default, Elasticsearch is sorting by relevance. The cost of each document is calculated based on your search query.
+
+By default, Elasticsearch is sorting by relevance. The cost of each document is calculated based on your search query.
+
 {% endinfo_block %}
+
 To add the code that configures the pagination of the results.
-<details open>
+
+<details>
 <summary markdown='span'>Pyz\Client\Catalog\Plugin\Config</summary>
 
 ```php
@@ -360,4 +364,5 @@ class SearchDependencyProvider extends SprykerSearchElasticsearchDependencyProvi
 
 }
 ```
+
 After providing the instance of your search configuration builder, the *expander* and *result formatter* plugins start to generate data next time when you run a search query. This tutorial doesn't cover how to display the filters, but you can find examples using them in our Demo Shops.

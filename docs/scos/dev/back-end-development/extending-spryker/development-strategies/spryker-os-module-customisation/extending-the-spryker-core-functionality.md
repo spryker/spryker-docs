@@ -31,9 +31,9 @@ related:
 <!--used to be: http://spryker.github.io/tutorials/zed/extending-spryker/-->
 To extend the Spryker-Core functionality and to use the Spryker Engine to develop a project, it's important to understand the folder structure used in Spryker Commerce OS.
 
-The project consists of two parts : **Spryker Core** and **Project** implementation. They both follow the same structure and the project implementation goes on top of the Spryker Core functionalities.
+The project consists of two parts: **Spryker Core** and **Project** implementation. They both follow the same structure and the project implementation goes on top of the Spryker Core functionalities.
 
-The picture below shows how a request is being handled:
+The following schema shows how a request is handled:
 ![Request handling](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Tutorial+Extending+Spryker/request_handling.png)
 
 ## Project Structure Overview

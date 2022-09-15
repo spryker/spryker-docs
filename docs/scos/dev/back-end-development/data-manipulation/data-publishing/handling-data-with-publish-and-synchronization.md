@@ -40,7 +40,7 @@ In this document, you will learn how P&S works and how to export data using a 
 
 ## 1. Module and table
 
-Follow the steps below to create the following:
+Follow these steps to create the following:
 
 * Data source module
 * Zed database table
@@ -87,7 +87,7 @@ The following P&S naming conventions are applied:
 
 Usually, the data for Yves is structured differently than the data for Zed. It's because the data model used in Redis and Elasticsearch is optimized to be used by a frontend. With P&S, data is always carried in the form of [**transfer objects**](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html) between Zed and Yves.
 
-Follow the steps below to create a transfer object that represents the frontend's target data structure.
+Follow these steps to create a transfer object that represents the frontend's target data structure.
 
 1.  Create `\Pyz\Shared\HelloWorldStorage\Transfer\hello_world_storage.transfer.xml`:
 

@@ -151,7 +151,7 @@ The events can be fired as follows:
 </events>
 ```
 
-You can also set the date and time from when the timeout should be started. See the *OMS Timeout Processor* section below for details.
+You can also set the date and time from when the timeout should be started. For details, see the following *OMS Timeout Processor* section.
 
 ### OMS timeout processor
 

@@ -56,7 +56,7 @@ $config[SystemConfig::ZED_ERROR_PAGE] = APPLICATION_ROOT_DIR . '/static/public/Y
 By default behavior, HTTP errors are converted to Exceptions. To render different content when a specific error occurs, we have a built-in custom error handler.
 
 **To create a custom error:**
-Register the exception in the exception handlers under the `ApplicationFactory`, as below:
+Register the exception in the exception handlers under the `ApplicationFactory`, as shows in the following example:
 
 ```php
 <?php

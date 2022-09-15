@@ -106,7 +106,7 @@ class GatewayController extends AbstractGatewayController
 
 ## 3. Implement the stub
 
-Your next step is to move to the client part to add support for calling the controller action we've just added. Follow the steps below.
+Your next step is to move to the client part to add support for calling the controller action we've just added. Follow these steps.
 
 1. Create a `HelloWorldStub` stub under `src/Pyz/Client/HelloWorld/Zed`. This stub will enable you to submit an HTTP request to Zed.
 

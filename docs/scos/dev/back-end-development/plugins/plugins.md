@@ -85,7 +85,7 @@ Plugins delegate calls to the underlying code of the same module. Plugins usuall
 
 ### Plugins in Zed
 
-You can copy and paste the template below. All you need to do is to replace the placeholders and to implement the related interface. The `AbstractPlugin` allows you to access the facade of the module where the plugin is placed via the `getFacade()` method.
+You can copy and paste the following template. All you need to do is to replace the placeholders and to implement the related interface. The `AbstractPlugin` allows you to access the facade of the module where the plugin is placed via the `getFacade()` method.
 
 The most common use case for plugins in Zed is to delegate all calls directly to a method in the facade. You can also access the factory of the communication layer via `getFactory()`.
 
@@ -106,7 +106,7 @@ class [PLUGIN]Plugin extends AbstractPlugin implements AnotherBundlePluginInterf
 
 ### Plugins in Yves
 
-You can copy and paste the template below. All you need to do is to replace the placeholders and to implement the related interface. The `AbstractPlugin` allows you to access the factory via the `getFactory()` method.
+You can copy and paste the following template. All you need to do is to replace the placeholders and to implement the related interface. The `AbstractPlugin` allows you to access the factory via the `getFactory()` method.
 
 ```php
 <?php
@@ -127,7 +127,7 @@ In Yves you can find some special plugins. The application uses special classes 
 
 ### Plugins in Client
 
-You can copy and paste the template below. All you need to do is to replace the placeholders and to implement the related interface. The `AbstractPlugin` allows you to access the factory via the `getFactory()` method.
+You can copy and paste the following template. All you need to do is to replace the placeholders and to implement the related interface. The `AbstractPlugin` allows you to access the factory via the `getFactory()` method.
 
 ```php
 <?php

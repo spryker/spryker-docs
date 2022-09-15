@@ -129,8 +129,8 @@ Zed's Checkout module contains four types of plugins to extend the behavior on p
 
 #### Checkout error transfer
 
-* `errorCode` (int)—numeric error code. The checkout error codes are listed below.
-* message (string)—error message.
+* `errorCode` (int)—numeric error code. The checkout error codes are listed in the following section [Checkout error codes](#checkout-error-codes).
+* `message` (string)—error message.
 
 #### Checkout error codes
 

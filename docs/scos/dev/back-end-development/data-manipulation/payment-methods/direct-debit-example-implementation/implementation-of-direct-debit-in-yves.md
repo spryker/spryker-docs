@@ -280,7 +280,8 @@ class DirectDebitSubFormPlugin extends AbstractPlugin implements SubFormPluginIn
 ```
 
 ## Setting up a Payment Handler
-The next step is setting up the payment handler. Follow the procedure below to accomplish this.
+
+The next step is setting up the payment handler. Use the following procedure to accomplish this.
 
 ### 1. Handle a new payment type
 

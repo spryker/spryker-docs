@@ -130,12 +130,11 @@ To expand the search data with a `foo` entity, do the following:
 3. Expand the `PageMapTransfer` object with `foo` data by implementing `ProductAbstractMapExpanderPluginInterface` as follows. This plugin expands `foo`-related data in product abstract search data.
 
 
-{% info_block infoBox "" %}
+{% info_block infoBox  %}
 
 In the example with `foo`, we use `->addIntegerSort()`, but you can use more options from `PageMapBuilderInterface`.
 
 {% endinfo_block %}
-
 
 <details><summary markdown='span'>ProductAbstractMapExpanderPluginInterface implementation example</summary>
 
@@ -286,7 +285,7 @@ protected function getDataLoaderPlugins()
 }
 ```
 
-* Optional: `CatalogDependencyProvider::getSortConfigTransferBuilderPlugins()`
+* `CatalogDependencyProvider::getSortConfigTransferBuilderPlugins()` (optional)
 
 ```
 /**
@@ -305,7 +304,7 @@ protected function getSortConfigTransferBuilderPlugins()
 
 ## Running the plugins
 
-You can run the plugins by executing `ProductPageSearchFacade::publish()` in a suitable way.  For example, you can set up the `ProductPageProductAbstractRefreshConsole` command as follows:
+You can run the plugins by executing `ProductPageSearchFacade::publish()` in a suitable way. For example, you can set up the `ProductPageProductAbstractRefreshConsole` command as follows:
 
 ```php
 namespace Spryker\Zed\ProductPageSearch\Communication\Console;

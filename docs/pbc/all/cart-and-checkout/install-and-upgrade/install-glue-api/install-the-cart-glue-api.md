@@ -17,8 +17,6 @@ redirect_from:
 related:
   - title: Cart feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/cart-feature-integration.html
-  - title: Cart feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-feature-walkthrough.html
   - title: Manage carts of registered users
     link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
   - title: Manage items in carts of registered users

@@ -110,7 +110,7 @@ Your next step is to move to the client part to add support for calling the cont
 
 1. Create a `HelloWorldStub` stub under `src/Pyz/Client/HelloWorld/Zed`. This stub will enable you to submit an HTTP request to Zed.
 
-<details open>
+<details>
 <summary markdown='span'>Pyz\Client\HelloWorld\Zed</summary>
 
 ```php
@@ -164,7 +164,7 @@ Through the second parameter, you can pass a transfer object as a request parame
 
 In our example, the stub depends on `ZedRequestClient` that can be provided by implementing `HelloWorldDependencyProvider`:
 
-<details open>
+<details>
 <summary markdown='span'>Pyz\Client\HelloWorld</summary>
 
 ```php

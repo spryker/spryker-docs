@@ -39,7 +39,7 @@ Follow the steps below to implement and register a synchronization plugin.
 
 1.  Implement the synchronization(sync) plugin:
 
-<details open>
+<details>
     <summary markdown='span'>Pyz\Zed\HelloWorldStorage\Communication\Plugin\Synchronization</summary>
 
 ```php

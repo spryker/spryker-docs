@@ -37,7 +37,7 @@ related:
 
 The next step is to integrate prepayment into `Checkout`. In the `PaymentMethods/Dependency/Injector` from Yves add the `CheckoutDependencyInjector` that will inject the prepayment form and handler into the `Checkout` module:
 
-<details open>
+<details>
 <summary markdown='span'>Code sample:</summary>
 
 ```php

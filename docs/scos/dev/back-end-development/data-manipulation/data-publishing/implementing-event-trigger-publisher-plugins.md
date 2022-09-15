@@ -37,7 +37,7 @@ Sometimes it's necessary to [publish or re-publish](https://spryker.atlassian.ne
 
 Follow the steps below to implement and register a new event trigger publisher plugin.
 
-<details open>
+<details>
     <summary markdown='span'>Pyz\Zed\HelloWorldStorage\Communication\Plugin\Publisher</summary>
 
 ```php

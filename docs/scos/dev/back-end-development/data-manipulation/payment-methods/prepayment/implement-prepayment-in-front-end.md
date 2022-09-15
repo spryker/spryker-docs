@@ -42,7 +42,7 @@ In Yves, the starting point is to build a form.
 * Add a new module in Yves
 * Add a `Form` folder where we will place the implementation for building the form
 
-<details open>
+<details>
 <summary markdown='span'>1. Adding the data provider</summary>
 
 The first step is to add the data provider, inside the `Form/DataProvider/` folder:
@@ -81,7 +81,7 @@ class PrepaymentDataProvider implements DataProviderInterface
 ```
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>2. Implementing the form</summary>
 
 The next step is to implement the form:
@@ -150,7 +150,7 @@ class PrepaymentSubForm extends CheckoutAbstractSubFormType implements SubFormIn
 ```
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>3. Adding a plugin</summary>
 
 Right after the form is implemented, you will need to plug this form into checkout. In order to do that, add a plugin for it inside the `Plugin/` folder:
@@ -193,7 +193,7 @@ class PrepaymentSubFormPlugin extends AbstractPlugin implements SubFormPluginInt
 
 The next procedure to be performed is to set-up the payment handler.
 
-<details open>
+<details>
 <summary markdown='span'>1. Handling the new payment type</summary>
 
 To handle this new payment type, add a `PrepaymentHandler` class inside the `Handler/` folder:
@@ -238,7 +238,7 @@ class PrepaymentHandler
 ```
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>2. Plugging the payment handler into checkout</summary>
 
 To plug this payment handler into checkout, add a plugin for it inside the `Plugin/` folder:
@@ -281,7 +281,7 @@ Add the Twig template that will be rendered when prepayment method is selected u
 1. In Yves, create the `prepayment.twig` template file in `PaymentMethods/Theme/` , then `ApplicationConstants::YVES_THEME` config value directory.
 2. Adjust the path according to the theme you are currently using.
 
-<details open>
+<details>
 <summary markdown='span'>Code sample</summary>
 
 ```twig

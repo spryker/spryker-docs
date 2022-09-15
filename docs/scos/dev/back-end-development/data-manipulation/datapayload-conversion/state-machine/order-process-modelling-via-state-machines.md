@@ -171,7 +171,7 @@ In this example, `OmsTimeout/Initiation` is the name of the plugin which is exec
 
 In the default implementation for Master Suite, the timeout processor in [OmsTimeout/Initiation](/docs/scos/dev/feature-integration-guides/{{site.version}}/order-management-feature-integration.html) plugin starts the timeout immediately, from the current time:
 
-<details open>
+<details>
 
 <summary markdown='span'>src/Pyz/Zed/Oms/Communication/Plugin/Oms/InitiationTimeoutProcessorPlugin.php</summary>
 
@@ -245,7 +245,7 @@ With this implementation of the plugin, if the timeout is set to 1 hour, the eve
 
 If you need to start the timeout, say, on November 15, 2021, the plugin should be modified as follows:
 
-<details open><summary markdown='span'>src/Pyz/Zed/Oms/Communication/Plugin/Oms/InitiationTimeoutProcessorPlugin.php</summary>
+<details><summary markdown='span'>src/Pyz/Zed/Oms/Communication/Plugin/Oms/InitiationTimeoutProcessorPlugin.php</summary>
 
 ```php
 <?php

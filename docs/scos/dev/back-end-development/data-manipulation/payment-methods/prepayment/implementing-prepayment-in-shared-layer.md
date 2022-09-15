@@ -39,7 +39,7 @@ This procedure will help us to identify the new payment type through some unique
 
 1. Create the `PaymentMethodsConstants` interface under the `Shared` namespace, where you'll define these unique constants.
 
-<details open>
+<details>
 <summary markdown='span'>Code sample:</summary>
 
 ```php
@@ -71,7 +71,7 @@ interface PaymentMethodsConstants
 
 2. Enrich the `Payment` transfer file with a new property that corresponds to the new payment method.
 
-<details open>
+<details>
 <summary markdown='span'>Code sample</summary>
 
 ```xml

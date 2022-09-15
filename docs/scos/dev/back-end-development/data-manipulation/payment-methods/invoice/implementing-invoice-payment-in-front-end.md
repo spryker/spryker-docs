@@ -271,7 +271,7 @@ Add the Twig template that will be rendered when invoice payment method is selec
 1. In Yves, create the `invoice.twig` template file in `PaymentMethods/Theme/ then ApplicationConstants::YVES_THEME` config value directory.
 2. Adjust the path according to the theme you are currently using.
 
-<details open>
+<details>
 <summary markdown='span'>Code sample</summary>
 
 ```twig

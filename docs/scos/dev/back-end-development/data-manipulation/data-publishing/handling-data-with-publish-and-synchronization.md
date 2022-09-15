@@ -177,7 +177,7 @@ Do the following:
 
 1. Create a writer plugin that handles the creation and changes of the `spy_hello_world_message` entity.  
 
-<details open>
+<details>
 <summary markdown='span'>\Pyz\Zed\HelloWorldStorage\Communication\Plugin\Publisher\HelloWorldWritePublisherPlugin</summary>
 
 ```php
@@ -231,7 +231,7 @@ class HelloWorldWritePublisherPlugin extends AbstractPlugin implements Publisher
 
 2. Create a plugin that handles the deletion of the `spy_hello_world_message` entity.
 
-<details open>
+<details>
  <summary markdown='span'>\Pyz\Zed\HelloWorldStorage\Communication\Plugin\Publisher\HelloWorldDeletePublisherPlugin</summary>
 
 ```php

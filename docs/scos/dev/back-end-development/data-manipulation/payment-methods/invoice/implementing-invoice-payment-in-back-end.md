@@ -46,7 +46,7 @@ Perform the following procedure:
 
 1. Add the following 2 plugins in Zed, inside the `Communication/Plugin/Checkout/` folder of the new added module.
 
-<details open>
+<details>
 <summary markdown='span'>InvoicePreCheckPlugin</summary>
 
 ```php
@@ -78,7 +78,7 @@ class InvoicePreCheckPlugin extends AbstractPlugin implements CheckoutPreCheckPl
 ```
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>InvoiceSaveOrderPlugin</summary>
 
 ```php
@@ -113,7 +113,7 @@ class InvoiceSaveOrderPlugin extends AbstractPlugin implements CheckoutSaveOrder
 
 1. Next, inject these 2 plugins in the `Payment` module by creating a `PaymentDependencyInjector` under `Dependency/Injector/` folder:
 
-<details open>
+<details>
 <summary markdown='span'>Code sample:</summary>
 
 ```php
@@ -170,7 +170,7 @@ Once the preceding procedures are completed, we'll need to design a state machin
 
 1. Add the `Invoice.xml` file inside the `config/Zed/oms/` folder, with the following content:
 
-<details open>
+<details>
 <summary markdown='span'>Code sample:</summary>
 
 ```xml
@@ -303,7 +303,7 @@ Once the preceding procedures are completed, we'll need to design a state machin
 
 2. Add this new state machine to `OmsConfig`:
 
-<details open>
+<details>
 <summary markdown='span'>Code sample</summary>
 
 ```php

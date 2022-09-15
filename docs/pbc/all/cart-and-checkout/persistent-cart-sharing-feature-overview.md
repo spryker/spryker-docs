@@ -54,7 +54,7 @@ If a customer selects a link of the cart that's not available, the _This cart is
 | INSTALLATION GUIDES  |
 |---|
 | [Install the Persistent Cart Sharing feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-persistent-cart-sharing-feature.html) |
-| [Install the Persistent Cart Sharing + Shared Carts feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/persistent-cart-sharing-shared-carts-feature-integration.html) |
+| [Install the Persistent Cart Sharing + Shared Carts feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-persistent-cart-sharing-shared-carts-feature.html) |
 | [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-customer-account-management-feature-integration.html) |
 | [Install the Resource Sharing feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-resource-sharing-feature.html) |
 | [Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-the-shared-carts-feature.html) |

@@ -1,5 +1,5 @@
 ---
-title: Creating a custom scheduler
+title: Create a custom scheduler
 description: This tutorial describes how to create a new custom scheduler.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -16,6 +16,7 @@ redirect_from:
   - /v5/docs/en/ht-create-a-new-custom-scheduler
   - /v4/docs/ht-create-a-new-custom-scheduler
   - /v4/docs/en/ht-create-a-new-custom-scheduler
+  - /docs/scos/dev/back-end-development/cronjobs/creating-a-custom-scheduler.html
 related:
   - title: Cronjobs
     link: docs/scos/dev/back-end-development/cronjobs/cronjobs.html

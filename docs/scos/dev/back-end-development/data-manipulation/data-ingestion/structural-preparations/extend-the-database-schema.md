@@ -1,6 +1,6 @@
 ---
-title: Extending the database schema
-description: Fields can be added to the existing database tables, but they cannot be removed (removing fields from the tables could break the functionalities implemented in Spryker Core).
+title: Extend the database schema
+description: this document shows how to add fields to the existing database tables
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-extend-db-schema
@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/t-extend-db-schema
   - /v1/docs/t-extend-db-schema
   - /v1/docs/en/t-extend-db-schema
+  - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html
 related:
   - title: Creating, using, and extending the transfer objects
     link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html

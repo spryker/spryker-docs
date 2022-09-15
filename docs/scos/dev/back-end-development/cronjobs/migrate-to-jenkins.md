@@ -1,8 +1,10 @@
 ---
-title: Migrating to Jenkins
+title: Migrate to Jenkins
 description: Learn how to migrate to the Jenkins scheduler.
 template: howto-guide-template
 last_updated: Nov 1, 2021
+redirect_from:
+  - /docs/scos/dev/back-end-development/cronjobs/migrating-to-jenkins.html
 related:
   - title: Cronjobs
     link: docs/scos/dev/back-end-development/cronjobs/cronjobs.html
@@ -39,8 +41,6 @@ class SchedulerConfig extends AbstractSharedConfig
     public const SCHEDULER_JENKINS = 'jenkins';
 }
 ```
-
-
 
 2. In `src/Pyz/Zed/Console/ConsoleDependencyProvider.php`, add the console commands and Twig application plugin:
 

@@ -1,5 +1,5 @@
 ---
-title: Implementing a client
+title: Implement a client
 description: This document describes how to implement the Client part of the Spryker Yves application layer.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/implementing-a-client
   - /v1/docs/implementing-a-client
   - /v1/docs/en/implementing-a-client
+  - /docs/scos/dev/back-end-development/client/implementing-a-client.html
 related:
   - title: Client
     link: docs/scos/dev/back-end-development/client/client.html

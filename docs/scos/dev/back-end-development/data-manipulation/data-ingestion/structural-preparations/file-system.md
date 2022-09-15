@@ -184,7 +184,7 @@ $fileSystemQueryTransfer->setPath('/foo/bar.jpg');
 $metadataTransfer = $fileSystemService->getMetadata($fileSystemQueryTransfer);
 ```
 
-**To get metadata:**
+**Get metadata:**
 
 Define the `FileSystem` name provided in the configuration and set the path to the filename you want to extract metadata from.
 

@@ -777,7 +777,7 @@ Check out an example of the following dictionary:
 	}		
 ```
 
-## Creating importer
+## Create an importer
 
 Create a business model to import data to the database. Usually, it's called Importer. It must be implemented at the project level.
 

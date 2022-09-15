@@ -21,9 +21,13 @@ redirect_from:
 
 Both [abstract products and product variants](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) can have prices.
 
-On the catalog and search pages of the Storefront, abstract product prices are displayed.
+On the Storefront, when customers browse catalog and search pages, they see abstract product prices.
+
+![Abstract product prices in catalog](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.md/abstract-product-prices-in-catalog.png)
 
 When a customer opens a Product Details page, they still see an abstract product price.
+
+![Abstract product price on the Product Details page](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.md/abstract-product-prices-on-pdp.png)
 
 After selecting a product variant, they see the variant's price.
 

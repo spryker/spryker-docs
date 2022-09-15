@@ -1,5 +1,5 @@
 ---
-title: Using and configuring Redis as a key-value storage
+title: Use and configure Redis as a key-value storage
 description: This document describes how Redis is used within Spryker; the current functionality can be extended according to your needs.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/redis-as-kv
   - /v1/docs/redis-as-kv
   - /v1/docs/en/redis-as-kv
+  - /docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html
 related:
   - title: Client
     link: docs/scos/dev/back-end-development/client/client.html
@@ -81,7 +82,7 @@ Every time you make an update delete insert request for data that is also stored
 
 {% endinfo_block %}
 
-## Browsing the data from Redis
+## Browse the data from Redis
 
 To browse the data that's stored in Redis, you need to set up Redis Desktop Manager (RDS). [Install RDS](http://redisdesktop.com/download) and then configure it as shown on the following screenshot.
 
@@ -90,7 +91,7 @@ Find the current Redis Port in `config/Shared/config_default-development.php`.
 
 Make sure that your virtual machine is up and running.
 
-## Using the data stored in Redis
+## Use the data stored in Redis
 
 This section describes how you can use data stored in Redis.
 
@@ -156,13 +157,13 @@ To retrieve the value for a given key, you can use the `get($key)` operation fro
 $storedValue = $this->storageClient->get($myKey);
 ```
 
-## Using a password for accessing Redis
+## Use a password for accessing Redis
 
 You can define a password to restrict access to Redis. Spryker provides the `\Spryker\Shared\Storage\StorageConstants::STORAGE_REDIS_PASSWORD` configuration option that can be used to configure the Redis client to authenticate Spryker.
 
 To activate it, specify the `redis` protocol for `\Spryker\Shared\Storage\StorageConstants::STORAGE_REDIS_SCHEME` (the Spryker Demo Shop uses `tcp` by default).
 
-## Using and configuring Redis cache
+## Use and configure Redis cache
 
 To boost the performance in Spryker even more, we have built a caching mechanism to cache all used Redis keys on any page in the shop.
 

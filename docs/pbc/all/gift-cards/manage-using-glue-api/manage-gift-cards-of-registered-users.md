@@ -39,7 +39,7 @@ Gift Card is available in the Spryker shop as an abstract product with its varia
 
 1. Add a Gift Card to a guest shopping cart. See [Adding Items to Carts of Registered Users](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart) for more details.
 2. [Submit the checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/submit-checkout-data.html).
-3. [Complete the checkout](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/checking-out-purchases.html#place-an-order).
+3. [Complete the checkout](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/check-out-purchases.html#place-an-order).
 
 {% info_block warningBox "Note" %}
 

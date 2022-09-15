@@ -35,7 +35,7 @@ You can purchase a gift card as a regular product. To do that:
 
 1. Add a gift card to a guest cart. See [Add an item to a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart) for more details.
 2. [Submit the checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/submit-checkout-data.html#submit-checkout-data).
-3. [Place the order](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/checking-out-purchases.html#place-an-order).
+3. [Place the order](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/check-out-purchases.html#place-an-order).
 
 After placing the order, you receive the gift card code to the email address specified in the checkout. You can redeem this code to pay for the products.
 

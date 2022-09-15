@@ -1062,7 +1062,7 @@ class CartsRestApiConfig extends SprykerCartsRestApiConfig
 }
 ```
 
-Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/user/features/{{page.version}}/multiple-carts-feature-overview.html) environment:
+Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/pbc/all/cart-and-checkout/multiple-carts-feature-overview.html) environment:
 
 * In a **single cart** environment, the products in the guest cart are added to the customers' own cart;
 * In a **multiple cart** environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.

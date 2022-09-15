@@ -1,5 +1,5 @@
 ---
-title: Checking out purchases
+title: Check out purchases
 description: Learn how to check out purchases via Glue API.
 last_updated: Jul 13, 2021
 template: glue-api-storefront-guide-template
@@ -18,10 +18,10 @@ related:
     link: docs/scos/user/features/page.version/checkout-feature-overview/checkout-feature-overview.html
   - title: Multi-step Checkout
     link: docs/scos/user/features/page.version/checkout-feature-overview/multi-step-checkout-overview.html
-  - title: Submitting checkout data
+  - title: Submit checkout data
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/submitting-checkout-data.html
   - title: Updating payment data
-    link: docs/scos/dev/glue-api-guides/page.version/checking-out/updating-payment-data.html
+    link: docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/update-payment-data.html
   - title: Retrieving customer orders
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
   - title: Manage guest carts
@@ -1243,4 +1243,4 @@ For the attributes of other included resources, see [Retrieve customer's order](
 
 ## Next steps
 
-* [Updating payment data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/update-payment-data.html)
+* [Update payment data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/update-payment-data.html)

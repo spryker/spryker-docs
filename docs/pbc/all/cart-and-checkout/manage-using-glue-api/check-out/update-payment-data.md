@@ -17,15 +17,15 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202200.0/checking-out/updating-payment-data.html
   - /docs/scos/dev/glue-api-guides/202204.0/checking-out/updating-payment-data.html
 related:
-  - title: Checking out purchases
+  - title: Check out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
-  - title: Submitting checkout data
+  - title: Submit checkout data
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/submitting-checkout-data.html
 ---
 
 This endpoint allows completing payment with payment verification of a third-party resource.
 
-When [checking out purchases](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/checking-out-purchases.html), a payment method may require verification with a third-party resource. The checkout endpoint returns the URL of the resource in the `redirectURL` attribute. If the value is `null` or empty, no additional steps are required. After completing the verification, use the endpoint in this document to complete the checkout with verification data.
+When [checking out purchases](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/check-out-purchases.html), a payment method may require verification with a third-party resource. The checkout endpoint returns the URL of the resource in the `redirectURL` attribute. If the value is `null` or empty, no additional steps are required. After completing the verification, use the endpoint in this document to complete the checkout with verification data.
 
 It is the responsibility of the API Client to redirect the customer to the page and capture the response. For information on how to process it, see the payment service provider's API reference.
 

@@ -16,11 +16,11 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/checkout-feature-integration.html
   - title: Checkout feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/checkout-feature-walkthrough.html
-  - title: Checking out purchases
+  - title: Check out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
-  - title: Updating payment data
-    link: docs/scos/dev/glue-api-guides/page.version/checking-out/updating-payment-data.html
-  - title: Submitting checkout data
+  - title: Update payment data
+    link: docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/update-payment-data.html
+  - title: Submit checkout data
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/submitting-checkout-data.html    
 ---
 

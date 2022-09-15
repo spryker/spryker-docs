@@ -17,7 +17,7 @@ related:
   - title: Managing gift cards of registered users
     link: docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html
   - title: Retrieve customer carts
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-carts.html
+    link: docs/pbc/all/cart-and-checkout/manage-using-glue-api/retrieving-customer-carts.html
 ---
 
 This endpoint allows managing carts by creating, retrieving, and deleting them.

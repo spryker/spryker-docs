@@ -133,10 +133,6 @@ The [Merchant Product Restrictions](/docs/scos/dev/feature-walkthroughs/{{page.v
 
 [On this page](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html), you can find commonly encountered cases of product restrictions behavior.
 
-## Multiple Carts
-
-The [Multiple Carts](/docs/scos/dev/feature-walkthroughs/{{page.version}}/multiple-carts-feature-walkthrough.html) feature allows you to create and manage one or multiple shopping carts in one customer account.
-
 ## Navigation
 
 The [Navigation](/docs/scos/dev/feature-walkthroughs/{{page.version}}/navigation-feature-walkthrough/navigation-feature-walkthrough.html) feature enables product catalog managers to create intuitive navigation elements and display them on the Storefront.

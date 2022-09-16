@@ -141,7 +141,7 @@ The general look of the `page-layout-catalog.twig` template is as follows:
     {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 <br>
-</details>
+
 ```twig
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
 
@@ -470,6 +470,8 @@ As you may see from the following code snippet, this part is responsible for ren
     {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
+
+</details>
 
 Thus, each filter is rendered by another molecule according to its name and type.
 

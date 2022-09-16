@@ -110,7 +110,7 @@ The caption for the button depends on the selected locale:
 | de_DE  | `kv:de.de_de.glossary.translation.page.detail.add-to-cart` | In den Warenkorb. |
 | en_US  | `kv:de.en_us.glossary.translation.page.detail.add-to-cart` | Add to Cart . |
 
-### Accessing the Redis data storage
+### Access the Redis data storage
 
 Redis data storage is accessed using `StorageClient`.
 

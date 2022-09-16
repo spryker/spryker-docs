@@ -95,12 +95,25 @@ Data handling happens after a valid form is submitted during the `PaymentStep`. 
 
 {% info_block infoBox %}
 
-A new payment method `Paypal` must be added.<ol><li>The first step would be to add the new property to `PaymentTransfer` and call it paypal. This property will use `PaypalTransfer` and it will contain the data we need to map the details from the form.</li><li>Next, create/use Paypal module to add the step plugin.</li><li>In the Paypal module add the following plugins:<ul><li>Create `PaypalCheckoutSubForm` implementing `CheckoutSubFormPluginInterface` that returns a subform that implements `SubFormInterface`</li><li>Create `PaypalHandler` implementing `CheckoutStepHandlerPluginInterface` that should populate `QuoteTransfer:payment:paypal` with `PaypalTransfer`</li></ul></li></ol>After creation you need to add the plugins to the checkout process.<br><ol><li>To do this you need to create a `CheckoutDependencyInjector` inside your module and configure it to be used by the `Checkout` module. From there you can inject the needed forms and handler.</li><li>Add your form to the `CheckoutSubFormPluginCollection` by extending the given `CheckoutDependencyProvider::PAYMENT_SUB_FORMS`</li><li>Your handler needs to be added to the `CheckoutStepHandlerPluginCollection` by extending the given `CheckoutDependencyProvider::PAYMENT_METHOD_HANDLER`</li></ol>After this, you should see the new payment selection with subform rendered below.
+Add a new payment method `Paypal`:
+
+1. Add the new property to `PaymentTransfer` and call it `Paypal`. This property uses `PaypalTransfer` and contains the data for mapping the details from the form.
+2. Create or use the `Paypal` module to add the step plugin.
+3. In the Paypal module, add the following plugins:
+   * Create `PaypalCheckoutSubForm` implementing `CheckoutSubFormPluginInterface` that returns a subform that implements `SubFormInterface`.
+   * Create `PaypalHandler` implementing `CheckoutStepHandlerPluginInterface` that populates `QuoteTransfer:payment:paypal` with `PaypalTransfer`.
+
+After creation, you need to add the plugins to the checkout process:
+1. Create a `CheckoutDependencyInjector` inside your module and configure it to be used by the `Checkout` module. From there, you can inject the needed forms and handler.
+2. Add your form to the `CheckoutSubFormPluginCollection` by extending the given `CheckoutDependencyProvider::PAYMENT_SUB_FORMS`.
+3. Add your handler to `CheckoutStepHandlerPluginCollection` by extending the given `CheckoutDependencyProvider::PAYMENT_METHOD_HANDLER`.
+
+After this, you can the new payment selection with the subform rendered below.
 
 {% endinfo_block %}
 
 ## Summary Step
-Display order information about the item to be placed, details and order totals.
+Display order information about the item to be placed, details, and order totals.
 
 ## Place Order Step
 Place order into the system. This step requires `input = false`. This step makes Zed HTTP request which sends `QuoteTransfer`. In this step, all order saving is happening.

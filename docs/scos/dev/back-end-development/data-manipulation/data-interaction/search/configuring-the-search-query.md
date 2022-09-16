@@ -47,7 +47,7 @@ related:
 
 Once you have all the necessary data in Elasticsearch, you can display it on Yves.
 
-To achieve this, [query Elasticsearch](#quering-elasticsearch), which returns raw data needed for [processing the query result](#process-query-result) to display it in the templates.
+To achieve this, [query Elasticsearch](#querying-elasticsearch), which returns raw data needed for [processing the query result](#process-query-result) to display it in the templates.
 
 In `SearchClient`, you can find the `search()` method `(\Spryker\Client\Search\SearchClientInterface::search())`. Call this method to execute any search query. It expects to receive an instance of `\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface` as the first parameter, which represents the query itself, and a collection of `\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface` instances, which are applied to the response data to format it.
 

@@ -30,7 +30,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/event/listening-to-events.html
 ---
 
-The Event module implements an Observer pattern where you can add hooks (events) to your code and allow other modules to listen and react to those events.
+The Event module implements an [Observer pattern](https://en.wikipedia.org/wiki/Observer_pattern)  where you can add hooks (events) to your code and allow other modules to listen and react to those events.
 
 There are two methods:
 

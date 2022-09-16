@@ -3573,10 +3573,10 @@ entries:
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/file-system.html
           - title: Flysystem
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html
-          - title: Extending the database schema
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html
-          - title: Creating, using, and extending the transfer objects
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html
+          - title: Extend the database schema
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html
+          - title: Create, use, and extend the transfer objects
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
         - title: Spryker Middleware
           url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html
       - title: Event

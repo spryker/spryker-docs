@@ -1,5 +1,5 @@
 ---
-title: Transferring data between Yves and Zed
+title: Transfer data between Yves and Zed
 description: This document shows how to set up communication between Yves and Zed.
 last_updated: Jun 16, 2021
 template: howto-guide-template

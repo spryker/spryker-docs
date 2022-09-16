@@ -45,7 +45,7 @@ All clients have the same structure. There is always one class that represents a
 | CLASS   | PURPOSE  |
 | ----------------- | ---------------- |
 | Pyz\Client\MyBundle\MyBundleClient             | The Client's entry point.                                    |
-| Pyz\Client\MyBundle\MyBundleDependencyProvider | A [dependency provider](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/defining-the-module-dependencies-dependency-provider.html) to interact with other modules. |
+| Pyz\Client\MyBundle\MyBundleDependencyProvider | A [dependency provider](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/define-the-module-dependencies-dependency-provider.html) to interact with other modules. |
 | Pyz\Client\MyBundle\MyBundleFactory            | The Client's [factory](/docs/scos/dev/back-end-development/factory/factory.html). |
 | Pyz\Client\MyBundle\Session\MyBundleSession    | A wrapper for the session.                                    |
 | Pyz\Client\MyBundle\Search\MyBundleSearch      | Contains search queries—for example, Elasticsearch ).                |

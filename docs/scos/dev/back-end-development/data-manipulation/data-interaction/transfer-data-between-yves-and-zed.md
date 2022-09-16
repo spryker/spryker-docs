@@ -25,7 +25,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transfering-data-between-yves-and-zed.html
 ---
 
-Yves gets most of its data from the client-side NoSQL data stores (data such as product details, product categories, and prices). There are situations when Yves needs to communicate with Zed either to submit data (for example, the customer has submitted a new order or subscribed to a newsletter) or to retrieve data (for example, order history for the customer, customer account details).
+Yves gets most of its data from the client-side NoSQL data stores (data such as product details, product categories, and prices). There are situations when Yves needs to communicate with Zed either to submit data (for example, the customer has submitted a new order or subscribed to a newsletter) or to retrieve data (for example, order history for the customer or customer account details).
 
 This document shows how to set up communication between Yves and Zed and display a random salutation message that is retrieved from Zed.
 
@@ -39,7 +39,7 @@ To implement communication between Yves and Zed, follow the steps below.
 
 ## 1. Create a transfer object
 
-Communication between Yves and Zed is done using [transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html). So the first thing you have to do to establish communication between Yves and Zed, is to create a transfer object as follows:
+Communication between Yves and Zed is done using [transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html). So to establish communication between Yves and Zed, you need to create a transfer object as follows:
 
 1. Create a new transfer object and add it to the `src/Pyz/Shared/HelloWorld/Transfer/` folder. In the example, it's called the `helloworld.transfer.xml` transfer object, and one property is assigned to it:
 

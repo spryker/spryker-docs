@@ -21,13 +21,11 @@ The *Product Barcode* feature lets you create barcodes for any kind of entity. B
 A barcode is a square or rectangular image consisting of a series of parallel black lines (bars) and white spaces of varying widths that can be read by a scanner and printed. Barcodes are applied to entities as a means of quick identification.
 ![Barcode example](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Barcode+Generator/Barcode+Generator+Feature+Overview/barcode.png)
 
-By default, barcodes are generated based on product SKUs using the [Code128](https://en.wikipedia.org/wiki/Code_128) format.
+By default, barcodes are generated based on product SKUs using the [Code128](https://en.wikipedia.org/wiki/Code_128) format. 
 
-{% info_block infoBox %}
+Though, Spryker provides highly customizable solutions through plugins with the help of which the setup can be changed.
 
-You can read more about the product types we differentiate in [Product Abstraction](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html).
-
-{% endinfo_block %}
+For more information about the product types we differentiate in product abstraction, see [Product feature overview](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html).
 
 {% info_block errorBox %}
 
@@ -37,7 +35,17 @@ In your project, you can also implement the QR code functionality by creating si
 
 Barcodes are dynamically generated for concrete products, which ensures that barcodes are immediately valid.
 
-The feature also has plugin support to change the way the barcodes are generated. It includes support for different barcode formats.
+Also, depending on whether a customer chooses a product bundle or configurable bundle, the number of barcodes differs:
+* If a customer purchases a product bundle, it's always assigned only one barcode, regardless of the quantity of the products within the bundle.
+* If a customer purchases a configurable bundle, each product within the configurable bundle is assigned a separate unique barcode.
+
+The following image demonstrates how barcodes are assigned depending on whether it's a product bundle or a configurable bundle.
+
+![product-bundle-vs-configurable-bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/product-barcode-feature-overview/product-bundle-versus-configurable-bundle.png)
+
+You can see the barcodes in the Back Office, in the **Catalog&nbsp;<span aria-label="and then">></span> Product Barcodes** section. The section is designed as a review; thus, no actual actions are performed here. The barcode is generated automatically once a new concrete product is added.
+
+You can see the Product ID, product name, SKU, and barcode itself.
 
 The barcodes help a store administrator update product stock numbers according to the actual information provided by the warehouse.
 
@@ -53,15 +61,10 @@ Barcodes are often overlooked as a way to cut costs and save time. A valuable an
 The Barcode Generator can be used for any kind of entity, and by default, Spryker provides a solution for products.
 
 **What is a barcode?**
-<br>A *barcode* is a square or rectangular image consisting of a series of parallel black lines (bars) and white spaces of varying widths that can be read by a scanner and printed. Barcodes are applied to entities as a means of quick identification.
 
-In the default configuration, barcodes are generated based on the SKU of a concrete product using the Code128 format. Though, Spryker provides highly customizable solutions through plugins with the help of which the setup can be changed.
 
-Barcodes are dynamically generated for concrete products. This ensures that barcodes are immediately valid.
 
-You can see the barcodes in the Back Office, in the **Catalog&nbsp;<span aria-label="and then">></span> Product Barcodes** section. The section is designed as a review; thus, no actual actions are performed here. The barcode is generated automatically once a new concrete product is added.
 
-You can see the Product ID, product name, SKU, and the barcode itself.
 
 ## Related Business User articles
 

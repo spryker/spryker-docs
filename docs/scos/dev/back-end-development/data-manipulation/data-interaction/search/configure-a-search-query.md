@@ -32,6 +32,8 @@ redirect_from:
   - /v3/docs/en/search-query
   - /v2/docs/search-query
   - /v2/docs/en/search-query
+  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html
+  - 
 related:
   - title: Configure Elasticsearch
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
@@ -51,7 +53,7 @@ To achieve this, [query Elasticsearch](#querying-elasticsearch), which returns r
 
 In `SearchClient`, you can find the `search()` method `(\Spryker\Client\Search\SearchClientInterface::search())`. Call this method to execute any search query. It expects to receive an instance of `\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface` as the first parameter, which represents the query itself, and a collection of `\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface` instances, which are applied to the response data to format it.
 
-## Querying Elasticsearch
+## Query Elasticsearch
 
 The first step is implementing the `QueryInterface`. To communicate with Elasticsearch, Spryker uses the [Elastica](http://elastica.io/) library as a Data Query Language.
 
@@ -186,7 +188,7 @@ class MatchAllQueryPlugin extends AbstractPlugin implements QueryInterface, Sear
 In the preceding example, a simple query is created, which returns all the documents from your mapping type.
 To execute this query, you need to call the `search()` method of the `SearchClient`.
 
-## Expanding queries
+## Expand queries
 
 Query expanders are a way to reuse partial queries to build more complex ones.
 
@@ -229,25 +231,27 @@ To expand a base query with a collection of expanders, use `expandQuery()` metho
 ```
 ### Query expander plugins
 
-Spryker provides the following query expander plugins:
+Spryker provides the following query expander plugins.
 
-#### Filtering by store
+#### Filter by store
 
 The *Filter by store* feature is a background capability that enables filtering content according to the request's store.
 To filter content according to the request's store, use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\StoreQueryExpanderPlugin`.
 
-#### Filtering by locale
+#### Filter by locale
 
 The *Filter by locale* feature is a background capability that enables filtering content according to the request's locale.
 To filter content according to the request's store, use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\LocalizedQueryExpanderPlugin`.
 
-#### Filtering by the "is active" flag
+#### Filter by the "is active" flag
 
 To display only active records in search results, use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\IsActiveQueryExpanderPlugin`. Add this to expander plugin stack, for example `\Pyz\Client\Catalog\CatalogDependencyProvider::createSuggestionQueryExpanderPlugins`. You also must export the `is-active` field by your search collector. The value for it is a boolean.
 
-#### Filtering by "is active" within a given date range
+#### Filter by "is active" within a given date range
 
-To display only records which are active within a given date range, use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\IsActiveInDateRangeQueryExpanderPlugin`. Add this plugin to expander plugin stack, for example, `\Pyz\Client\Catalog\CatalogDependencyProvider::createSuggestionQueryExpanderPlugins`. You also must export `active-from` and `active-to` by your search collector. The value is any valid Elasticsearch Date datatype value. For more information, see [Elasticsearch reference](https://www.elastic.co/guide/en/elasticsearch/reference/current/date.html#date).
+To display only records which are active within a given date range, use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\IsActiveInDateRangeQueryExpanderPlugin`. Add this plugin to expander plugin stack—for example, `\Pyz\Client\Catalog\CatalogDependencyProvider::createSuggestionQueryExpanderPlugins`. 
+
+You also must export `active-from` and `active-to` by your search collector. The value is any valid Elasticsearch Date datatype value. For more information, see [Elasticsearch reference](https://www.elastic.co/guide/en/elasticsearch/reference/current/date.html#date).
 
 #### Faceted navigation and filters
 
@@ -267,7 +271,7 @@ To manage each facet filter separately, check the `aggregationParams` field in `
 
 However, if your project requires more, replace the default behavior in the provided extension points. `FacetQueryExpanderPlugin`, `FacetResultFormatterPlugin` are good points to start.
 
-#### Paginating the results
+#### Paginate the results
 
 It provides information about paginating the catalog pages and their current state.
 
@@ -279,12 +283,12 @@ If you use this plugin, add `\Spryker\Client\SearchElasticsearch\Plugin\ResultFo
 
 {% endinfo_block %}
 
-#### Sorting the results
+#### Sort the results
 
 It provides information and functionality necessary for sorting the results.
 `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\SortedQueryExpanderPlugin` takes care of sorting your results based on the predefined configuration. The necessary result formatter for this plugin is `\Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\SortedResultFormatterPlugin`.
 
-#### Spelling suggestion
+#### Spell suggestion
 
 It adds a spelling correction suggestion to search results.
 Use `\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\SpellingSuggestionQueryExpanderPlugin` to allow Elasticsearch to provide the "did you mean" suggestions for full-text search typos. The suggestions are collected from the `suggestion_terms` field of the `page` index map. Therefore, inside this field, store only the information that you want to use for this purpose. The necessary result formatter for this plugin is `\Spryker\Client\SearchElasticsearch\Plugin\ResultFormatter\SpellingSuggestionResultFormatterPlugin`

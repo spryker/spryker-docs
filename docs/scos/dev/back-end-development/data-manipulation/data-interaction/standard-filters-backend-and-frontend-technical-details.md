@@ -27,9 +27,9 @@ related:
 
 The backend part of the Standard Filters feature is located in the following modules:
 
-1. ProductCategoryFilter (`spryker/product-category-filter`),
-2. ProductCategoryFilterGui (`spryker/product-category-filter-gui`),
-3. ProductCategoryFilterStorage (`spryker/product-category-filter-storage`).
+* ProductCategoryFilter (`spryker/product-category-filter`)
+* ProductCategoryFilterGui (`spryker/product-category-filter-gui`)
+* ProductCategoryFilterStorage (`spryker/product-category-filter-storage`)
 
 Category Filters management is described in the [Back Office guide](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/search-and-filters/managing-category-filters.html).
 
@@ -475,4 +475,4 @@ As you may see from the following code snippet, this part is responsible for ren
 
 Thus, each filter is rendered by another molecule according to its name and type.
 
-You can see the list of all available filters by going into `vendor/spryker-shop/catalog-page/src/SprykerShop/Yves/CatalogPage/Theme/default/components/molecules` directory.
+You can see the list of all available filters by going into the `vendor/spryker-shop/catalog-page/src/SprykerShop/Yves/CatalogPage/Theme/default/components/molecules` directory.

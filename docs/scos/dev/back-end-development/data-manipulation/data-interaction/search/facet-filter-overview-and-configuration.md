@@ -35,7 +35,6 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html
 ---
 
-<!--used to be: http://spryker.github.io/tutorials/yves/working-with-filter-facets/-->
 A search engine facilitates better navigation, allowing customers to quickly locate desired products.
 
 The search engine returns a small number of items that match the query.
@@ -114,9 +113,9 @@ Making a request on the URL `https://mysprykershop.com/en/computers/notebooks` i
 
 A facet search is executed using the category facet with the provided category node as a parameter.
 
-## Configuring facet filters
+## Configure facet filters
 
-As mentioned above, the category facet is a special case and needs to be handled this way because a call needs to be made to Redis to retrieve the category node ID when a category detail page is requested.
+The category facet is a special case and needs to be handled this way because a call needs to be made to Redis to retrieve the category node ID when a category detail page is requested.
 
 Other than that, the `CatalogClient` operation can handle requests that contain other facet filters.
 
@@ -124,13 +123,13 @@ You can integrate as many facet filters in your search query, as long as they ar
 
 {% info_block warningBox %}
 
-The configuration you make in the `CatalogDependencyProvider` must be in sync with the structure of the data exported to Elasticsearch.
+The configuration you make in `CatalogDependencyProvider` must be in sync with the structure of the data exported to Elasticsearch.
 
-However, even if you have the facets exported in Elasticsearch, without adding the necessary configuration in the `CatalogDependencyProvider` you can't submit the correct queries.
+However, even if you have the facets exported in Elasticsearch, without adding the necessary configuration in `CatalogDependencyProvider`, you can't submit the correct queries.
 
 {% endinfo_block %}
 
-The search attributes is configured in the `CatalogDependencyProvider`.
+The search attributes are configured in `CatalogDependencyProvider`.
 
 **Example:**
 

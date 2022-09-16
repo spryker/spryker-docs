@@ -2,6 +2,8 @@
 title: Expand search data
 description: Learn how to expand entity data and create new data types in the search.
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
 related:
   - title: Configure Elasticsearch
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
@@ -19,7 +21,9 @@ This document describes how to expand entity data and create new data types in t
 
 In this document, we expand the search data with a `foo` entity as an example. You can use these instructions to add any other entity.
 
-To expand the search data with a `foo` entity, do the following:
+## Expand search data
+
+To expand search data with a `foo` entity, do the following:
 
 1. Expand `ProductPageLoadTransfer` object with `foo` data:
 
@@ -31,7 +35,7 @@ To expand the search data with a `foo` entity, do the following:
     </transfer>
     ```
 
-    2. Implement `ProductPageDataLoaderPluginInterface` as follows. This plugin expands `ProductPageLoadTransfer` with data and returns the modified object.
+    1. Implement `ProductPageDataLoaderPluginInterface` as follows. This plugin expands `ProductPageLoadTransfer` with data and returns the modified object.
 
     <details><summary markdown='span'>ProductPageDataLoaderPluginInterface implementation example</summary>
 
@@ -74,8 +78,6 @@ To expand the search data with a `foo` entity, do the following:
     }    
     ```
     </details>
-
-
 
 2. Expand `ProductAbstractPageSearch` object with `foo` data:
 
@@ -125,8 +127,6 @@ To expand the search data with a `foo` entity, do the following:
     ```
     </details>
 
-
-
 3. Expand the `PageMapTransfer` object with `foo` data by implementing `ProductAbstractMapExpanderPluginInterface` as follows. This plugin expands `foo`-related data in product abstract search data.
 
 
@@ -144,7 +144,7 @@ In the example with `foo`, we use `->addIntegerSort()`, but you can use more opt
 
 /**
  * Copyright © 2016-present Spryker Systems GmbH. All rights reserved.
- * Use of this software requires acceptance of the Evaluation License Agreement. See LICENSE file.
+ * Use of this software requires acceptance of the Evaluation License Agreement. See the LICENSE file.
  */
 
 namespace Spryker\Zed\SalesProductConnector\Communication\Plugin\ProductPageSearch;
@@ -302,7 +302,7 @@ protected function getSortConfigTransferBuilderPlugins()
 
 
 
-## Running the plugins
+## Run the plugins
 
 You can run the plugins by executing `ProductPageSearchFacade::publish()` in a suitable way. For example, you can set up the `ProductPageProductAbstractRefreshConsole` command as follows:
 

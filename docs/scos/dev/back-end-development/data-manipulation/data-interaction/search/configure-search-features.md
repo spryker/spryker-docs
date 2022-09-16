@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/configuring-the-search-features
   - /v1/docs/configuring-the-search-features
   - /v1/docs/en/configuring-the-search-features
+  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html
 related:
   - title: Configure Elasticsearch
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
@@ -132,7 +133,7 @@ You can create and add as many `FacetConfigTransfers` as you need. Let's analyze
 * `setName()`: *Required* field; the name of the target data to filter by.
 * `setParameterName()`: *Required* field; the name that is used in the request when the filter is used.
 * `setFieldName()`: *Required* field; the name of the field of the page mapping type where the target data is stored.
-* **setType()**: *Required* field; the type of the facet. Currently available options: "enumeration", "bool", "range", "price_range", "category".
+* `setType()`: *Required* field; the type of the facet. Currently available options: "enumeration", "bool", "range", "price_range", "category".
 * `setIsMultiValued()`: *Optional* field; if set to *true*, multiple values can be filtered with logical OR comparison.
 * `setSize()`: *Optional* field; the maximum number of filter options to be returned (`0` means unlimited). Elasticsearch returns 10 options by default.
 * `setValueTransformer()`: *Optional* field; to provide a value transformer plugin by defining the Fully Qualified Name of the plugin. This plugin should implement `\Spryker\Client\SearchExtension\Dependency\Plugin\FacetSearchResultValueTransformerPluginInterface`. It's used to transform each filter value from their stored values (for example, IDs) to something readable (representing name) for users.

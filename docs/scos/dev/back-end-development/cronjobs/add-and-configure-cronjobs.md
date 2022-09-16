@@ -20,7 +20,7 @@ redirect_from:
   - /v2/docs/en/cronjob-scheduling-guide
   - /v1/docs/cronjob-scheduling-guide
   - /v1/docs/en/cronjob-scheduling-guide
-  - /docs/scos/dev/back-end-development/cronjobs/add-and-configure-cronjobs.html
+  - /docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-cronjobs.html
 related:
   - title: Cronjobs
     link: docs/scos/dev/back-end-development/cronjobs/cronjobs.html

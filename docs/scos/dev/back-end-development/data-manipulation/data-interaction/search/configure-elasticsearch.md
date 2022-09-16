@@ -1,5 +1,5 @@
 ---
-title: Configuring Elasticsearch
+title: Configure Elasticsearch
 description: Elasticsearch is a NoSQL data store that lets you predefine the structure of the data you store in it.
 last_updated: Jul 24, 2022
 template: howto-guide-template
@@ -52,15 +52,16 @@ redirect_from:
   - /v2/docs/en/search-30
   - /v2/docs/search-40
   - /v2/docs/en/search-40
+  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
 related:
-  - title: Configuring search for multi-currency
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
-  - title: Configuring the search features
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html
-  - title: Configuring the search query
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html
-  - title: Expanding search data
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
+  - title: Configure search for multi-currency
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
+  - title: Configure the search features
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-the-search-features.html
+  - title: Configure the search query
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-a-search-query.html
+  - title: Expand search data
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html
   - title: Facet filter overview and configuration
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
 ---

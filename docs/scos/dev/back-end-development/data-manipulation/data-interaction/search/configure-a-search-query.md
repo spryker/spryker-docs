@@ -1,5 +1,5 @@
 ---
-title: Configuring the search query
+title: Configure a search query
 description: This document explains how to configure a search query.
 last_updated: Jul 29, 2021
 template: howto-guide-template
@@ -33,14 +33,14 @@ redirect_from:
   - /v2/docs/search-query
   - /v2/docs/en/search-query
 related:
-  - title: Configuring Elasticsearch
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
-  - title: Configuring search for multi-currency
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
-  - title: Configuring the search features
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html
-  - title: Expanding search data
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
+  - title: Configure Elasticsearch
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
+  - title: Configure search for multi-currency
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
+  - title: Configure search features
+    link: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html
+  - title: Expand search data
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html
   - title: Facet filter overview and configuration
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
 ---
@@ -253,7 +253,7 @@ To display only records which are active within a given date range, use `\Spryke
 
 The *Faceted navigation and filtering* feature lets you refilter search results by specific criteria. The filters are commonly displayed on the left side of the catalog page.
 
-`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FacetQueryExpanderPlugin` is responsible for adding necessary aggregations to your query based on a predefined configuration (see [Configuring the search features](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html). Use this plugin to get the necessary data for the faceted navigation of your search results.
+`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FacetQueryExpanderPlugin` is responsible for adding necessary aggregations to your query based on a predefined configuration (see [Configure search features](//docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html). Use this plugin to get the necessary data for the faceted navigation of your search results.
 
 {% info_block warningBox "Note" %}
 

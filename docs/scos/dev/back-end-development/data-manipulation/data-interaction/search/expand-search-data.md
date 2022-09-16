@@ -1,16 +1,16 @@
 ---
-title: Expanding search data
+title: Expand search data
 description: Learn how to expand entity data and create new data types in the search.
 template: howto-guide-template
 related:
-  - title: Configuring Elasticsearch
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
-  - title: Configuring search for multi-currency
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
-  - title: Configuring the search features
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html
-  - title: Configuring the search query
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html
+  - title: Configure Elasticsearch
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
+  - title: Configure search for multi-currency
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
+  - title: Configure search features
+    link: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html
+  - title: Configure a search query
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-a-search-query.html
   - title: Facet filter overview and configuration
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
 ---

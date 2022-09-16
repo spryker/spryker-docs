@@ -1,5 +1,5 @@
 ---
-title: Configuring search for multi-currency
+title: Configure search for multi-currency
 description: This document describes how to configure search for multi-currency.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -32,24 +32,25 @@ redirect_from:
   - /v3/docs/en/multicurrency-search
   - /v2/docs/multicurrency-search
   - /v2/docs/en/multicurrency-search
+  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
 related:
   - title: Migration Guide - Multi-Currency
     link: docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
   - title: Migration Guide - Price
     link: docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
-  - title: Configuring Elasticsearch
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
-  - title: Configuring the search features
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html
-  - title: Configuring the search query
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html
-  - title: Expanding search data
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
+  - title: Configure Elasticsearch
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
+  - title: Configure search features
+    link: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html
+  - title: Configure a search query
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-a-search-query.html
+  - title: Expand search data
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html
   - title: Facet filter overview and configuration
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
 ---
 
-If you don't have the multi-currency feature in your project and want to migrate, you have to follow certain steps to migrate your system. First, [migrate Price](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html) and [modules related to multi-currency](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html) before proceeding with the search for multi-currency.
+If you don't have the multi-currency feature in your project and want to migrate, you have to follow certain steps to migrate your system. First, [migrate Price](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html) and [modules related to multi-currency](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html) before proceeding with the search for multi-currency.
 
 In the multi-currency feature we store prices grouped by price mode and currency, so prices are as follows:
 ```php

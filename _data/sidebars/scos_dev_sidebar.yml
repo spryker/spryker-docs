@@ -3496,16 +3496,16 @@ entries:
           nested:
           - title: Facet filter overview and configuration
             url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
-          - title: Configuring the search features
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html
-          - title: Configuring Elasticsearch
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
-          - title: Configuring the search query
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html
-          - title: Configuring Search for multi-currency
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
-          - title: Expanding search data
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
+          - title: Configure search features
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-the-search-features.html
+          - title: Configure Elasticsearch
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
+          - title: Configure a search query
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-the-search-query.html
+          - title: Configure Search for multi-currency
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
+          - title: Expand search data
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html
         - title: Transferring data between Yves and Zed
           url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transferring-data-between-yves-and-zed.html
         - title: Defining the module dependencies- Dependency Provider

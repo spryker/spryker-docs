@@ -19,7 +19,20 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/prices-feature-walkthrough/prices-feature-walkthrough.html
 ---
 
-Both [abstract products and product variants](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants) can have prices.
+The *Prices* feature enables Back Office users to set prices for products and manage them effectively.
+
+## Price types
+
+To accommodate business requirements, there can be various price types. For example, a  *default price* is a product's regular price. An *original price* is typically used to show a product's price before a discount was applied. The original price is displayed in a strikethrough font next the the default price.
+
+
+![Default and original prices]
+
+
+## Product types and prices
+
+
+Back Office users can set prices for both [abstract products and product variants](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants). When an abstract product has multiple product variants and you want
 
 On the Storefront, when customers browse catalog and search pages, they see abstract product prices.
 
@@ -33,11 +46,9 @@ After selecting a product variant, they see the variant's price.
 
 <iframe width="960" height="720" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.md/prices-of-abstract-products-and-pruduct-variants.mp4" frameborder="0" allowfullscreen></iframe>
 
-When an abstract product has only one concrete product,
+When an abstract product has only one product variant, it usually makes sense to set a price only for the abstract product. In this case, the abstract product price is displayed for the product on all the pages.
 
-
-
-## Price types
+## Prices in database
 
 Prices are stored as an integer, in the smallest unit of a currency. For example, for Euro prices are stored in cents.
 

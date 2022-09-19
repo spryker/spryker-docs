@@ -50,4 +50,4 @@ lifecycle:
 
 ## Adding events to task create via a PHP class
 
-A [task implemented in a PHP class](/docs/sdk/dev/extending-the-sdk.html#implementation-via-a-php-class) only needs to implement the [TaskLifecycleInterface](https://github.com/spryker-sdk/sdk-contracts/blob/master/src/Entity/Lifecycle/LifecycleInterface.php) to subscribe to the lifecycle events.
+A [task implemented in a PHP class](/docs/sdk/dev/extending-the-sdk.html#implementation-via-a-php-class) only needs to implement the [TaskLifecycleInterface](https://github.com/spryker-sdk/sdk/blob/master/src/Core/Domain/Entity/Lifecycle/TaskLifecycleInterface.php) to subscribe to the lifecycle events.

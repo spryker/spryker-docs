@@ -888,6 +888,7 @@ function initToc() {
 
             if ($headings.length < 2) {
                 opts.$nav.closest('.toc').hide();
+                $('.alt-sidebar').css({ 'minHeight': 0 });
                 return;
             } else {
                 opts.$nav.closest('.toc').show();

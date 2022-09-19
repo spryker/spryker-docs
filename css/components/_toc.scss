@@ -1,5 +1,6 @@
 .toc {
     display: none;
+    justify-self: flex-end;
 
     @include media("<laptop") {
         flex: 0 0 auto;
@@ -54,6 +55,7 @@
         &-opener {
             transition: transform .3s linear;
             display: none;
+            cursor: pointer;
 
             @include media("<laptop") {
                 display: block;

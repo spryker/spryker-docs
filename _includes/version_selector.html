@@ -6,7 +6,7 @@
 
 {% assign current_version_label = site.versions[current_version] | default: 'undefined' %}
 
-{% if page.product == 'marketplace' or page.product == 'scos' %}
+{% if page.product contains 'marketplace' | 'scos' and page.all_versions.size > 1 %}
     <div class="alt-nav">
         <div class="alt-nav__outer">To view an older version of this document, go to <br class="desktop-hidden"><a href="{{ site.archive_domain }}" target="_blank" class="alt-nav__outer-link">Archive</a> .</div>
     </div>
@@ -25,8 +25,4 @@
         </ul>
     </div>
     <div class="alt-nav__overlay"></div>
-{% else %}
-    <div class="alt-nav">
-        <span class="alt-nav__opener">This document has only one version {{ current_version_label }}</span>
-    </div>
 {% endif %}

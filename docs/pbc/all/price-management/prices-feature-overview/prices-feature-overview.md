@@ -23,16 +23,15 @@ The *Prices* feature enables Back Office users to set prices for products and ma
 
 ## Price types
 
-To accommodate business requirements, there can be various price types. For example, a  *default price* is a product's regular price. An *original price* is typically used to show a product's price before a discount was applied. The original price is displayed in a strikethrough font next the the default price.
+To accommodate business requirements, there can be various price types. For example, a *default price* is a product's regular price. An *original price* is typically used to show a product's price before a discount was applied. The original price is displayed in a strikethrough font next the the default price.
 
 
-![Default and original prices]
+![Default and original prices](https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.md/default-and-original-prices.png)
 
 
-## Product types and prices
+## Product types and price inheritance
 
-
-Back Office users can set prices for both [abstract products and product variants](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants). When an abstract product has multiple product variants and you want
+Back Office users can set prices for both [abstract products and product variants](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html#abstract-products-and-product-variants). When an abstract product has multiple product variants, you can set a price for the abstract product and different prices for each product variant.
 
 On the Storefront, when customers browse catalog and search pages, they see abstract product prices.
 
@@ -46,7 +45,11 @@ After selecting a product variant, they see the variant's price.
 
 <iframe width="960" height="720" src="https://spryker.s3.eu-central-1.amazonaws.com/docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.md/prices-of-abstract-products-and-pruduct-variants.mp4" frameborder="0" allowfullscreen></iframe>
 
-When an abstract product has only one product variant, it usually makes sense to set a price only for the abstract product. In this case, the abstract product price is displayed for the product on all the pages.
+In some cases, you may want to set the same price for all the product variants. Then, you set the price for the abstract product and don't set any for the variants. When the variants don't have prices, they inherit the price of their abstract product.
+
+Similarly, when there is one product variant, it makes sense to set the price just for the abstract product.
+
+In the last two cases described, since product variants don't have prices, customers see the abstract product price on all the Storefront pages.
 
 ## Prices in database
 
@@ -57,7 +60,7 @@ Each price is assigned to a price type, like gross or net price. For a price typ
 The price can have a gross or net value which can be used based on a price mode selected by a customer on the Storefront. You can have a shop running in both modes and select the net mode for the business customer, for example. Price also has currency and store assigned to it.
 ![Price calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Price+Functionality/price_calculation.png)
 
-## Price inheritance
+## Price retrieving logic
 
 If a concrete product doesn’t have a price entity stored, it inherits the values stored for its abstract product. When fetching the price of a concrete product, the price entity of the respective concrete product SKU is checked. If the entity exists, the price is returned. If not, an abstract product owning that concrete product is queries and it's price entity is checked. If it exists, the abstract product's price is returned for the concrete product. If it does not exist an exception is thrown.
 

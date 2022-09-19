@@ -99,6 +99,17 @@ entries:
                 url: /docs/pbc/all/carrier-management/third-party-integrations/paazl.html
               - title: Paqato
                 url: /docs/pbc/all/carrier-management/third-party-integrations/paqato.html
+      - title: Cart and Checkout
+        url: /docs/pbc/all/cart-and-checkout/cart-and-checkout.html
+        nested:
+          - title: Cart featurer overview
+            url: /docs/pbc/all/cart-and-checkout/cart-feature-overview/cart-feature-overview.html
+            nested:
+              - title: Cart notes
+                url: /docs/pbc/all/cart-and-checkout/cart-feature-overview/cart-notes-overview.md
+              - title: Cart widget
+                url: docs/pbc/all/cart-and-checkout/cart-feature-overview/cart-widget-overview.md  
+
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:
@@ -194,7 +205,7 @@ entries:
                 url: /docs/pbc/all/gift-cards/manage-using-glue-api/retrieve-gift-cards-in-guest-carts.html
       - title: Payment Service Providers
         url: /docs/pbc/all/payment-service-providers/psp.html
-        nested:        
+        nested:
           - title: Payone
             url: /docs/pbc/all/payment-service-providers/payone/payone.html
             nested:
@@ -316,15 +327,15 @@ entries:
               - title: "HowTo: Schedule cron job for Scheduled Prices"
                 url: /docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html
           - title: Extend and customize
-            nested: 
+            nested:
               - title: Configuration of price modes and types
-                url: /docs/pbc/all/price-management/extend-and-customize/configuration-of-price-modes-and-types.html 
+                url: /docs/pbc/all/price-management/extend-and-customize/configuration-of-price-modes-and-types.html
               - title: "Money module: reference information"
                 url: /docs/pbc/all/price-management/extend-and-customize/money-module-reference-information.html
               - title: Multiple currencies per store configuration
                 url: /docs/pbc/all/price-management/extend-and-customize/multiple-currencies-per-store-configuration.html
               - title: "PriceProduct module details: reference information"
-                url: /docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html                                                
+                url: /docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html
       - title: Request for Quote
         url: /docs/pbc/all/request-for-quote/request-for-quote.html
         nested:
@@ -539,5 +550,4 @@ entries:
           - title: Integrate Usercentrics
             url: /docs/pbc/all/usercentrics/integrate-usercentrics.html
           - title: Disconnect Usercentrics
-            url: /docs/pbc/all/usercentrics/disconnect-usercentrics.html              
-
+            url: /docs/pbc/all/usercentrics/disconnect-usercentrics.html

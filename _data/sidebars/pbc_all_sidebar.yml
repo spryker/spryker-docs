@@ -108,8 +108,24 @@ entries:
               - title: Cart notes
                 url: /docs/pbc/all/cart-and-checkout/cart-feature-overview/cart-notes-overview.md
               - title: Cart widget
-                url: docs/pbc/all/cart-and-checkout/cart-feature-overview/cart-widget-overview.md  
-
+                url: /docs/pbc/all/cart-and-checkout/cart-feature-overview/cart-widget-overview.md
+              - title: Quick order from the catalog page
+                url: /docs/pbc/all/cart-and-checkout/cart-feature-overview/quick-order-from-the-catalog-page-overview.md
+          - title: Multiple Carts feature overview
+            url: /docs/pbc/all/cart-and-checkout/multiple-carts-feature-overview.md
+          - title: Persistent Cart Sharing feature overview
+            url: /docs/pbc/all/cart-and-checkout/persistent-cart-sharing-feature-overview.md
+          - title: Quick Add to Cart feature overview
+            url: /docs/pbc/all/cart-and-checkout/quick-add-to-cart-feature-overview.md
+          - title: Shared Carts feature overview
+            url: /docs/pbc/all/cart-and-checkout/shared-carts-feature-overview.md
+          - title: Checkout feature overview
+            url: /docs/pbc/all/cart-and-checkout/checkout-feature-overview/checkout-feature-overview.md
+            nested:
+              - title: Multi-step checkout
+                url: /docs/pbc/all/cart-and-checkout/checkout-feature-overview/multi-step-checkout-overview.md
+              - title: Order thresholds overview
+                url: /docs/pbc/all/cart-and-checkout/checkout-feature-overview/order-thresholds-overview.md
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:

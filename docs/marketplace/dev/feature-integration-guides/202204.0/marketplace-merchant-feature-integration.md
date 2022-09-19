@@ -513,7 +513,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 |---|---|---|---|
 | MerchantSynchronizationDataPlugin | Enables the content of an entire storage table to be synchronized into Storage. |   | Spryker\Zed\MerchantStorage\Communication\Plugin\Synchronization |
 
-**src/Pyz/Zed/MerchantStorage/MerchantStorageConfig.php**
+**src/Pyz/Zed/Synchronization/SynchronizationDependencyProvider.php**
 
 ```php
 <?php

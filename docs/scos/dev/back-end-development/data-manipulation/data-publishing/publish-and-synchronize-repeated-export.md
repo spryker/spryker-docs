@@ -27,8 +27,8 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
   - title: Implementing Publish and Synchronization
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-publish-and-synchronization.html
-  - title: Handling data with Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html
+  - title: Handle data with Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
   - title: Adding publish events
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
   - title: Implementing event trigger publisher plugins
@@ -43,7 +43,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
-Automatic execution of the [Publish & Synchronize process](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html) does not always resolve all your tasks. For example, you might want to re-synchronize(re-sync) the published data in Redis and Elasticsearch to display updated information in your shop front end. Or you might want to re-generate the published data and re-write the data of the database tables in the Storage and Search modules with the subsequent update of Redis and Elasticsearch records. This can be done manually by running console commands.
+Automatic execution of the [Publish & Synchronize process](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html) does not always resolve all your tasks. For example, you might want to re-synchronize(re-sync) the published data in Redis and Elasticsearch to display updated information in your shop front end. Or you might want to re-generate the published data and re-write the data of the database tables in the Storage and Search modules with the subsequent update of Redis and Elasticsearch records. This can be done manually by running console commands.
 
 ## Data re-synchronization
 

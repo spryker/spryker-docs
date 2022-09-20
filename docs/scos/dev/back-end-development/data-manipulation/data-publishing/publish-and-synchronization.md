@@ -25,8 +25,8 @@ redirect_from:
 related:
   - title: Implementing Publish and Synchronization
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-publish-and-synchronization.html
-  - title: Handling data with Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html
+  - title: Handle data with Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
   - title: Adding publish events
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
   - title: Implementing event trigger publisher plugins
@@ -152,7 +152,7 @@ Each event is consumed by a publisher plugin mapped to it. The number of events 
 
 To consume an event, the queue adapter calls the publisher plugin specified in the `listenerClassName` field of the event message. The publisher is a plugin class implemented in one of the modules. It queries the data affected by an event and transforms it into the format suitable for the front-end data storage (Redis or Elasticsearch).
 
-The transformed data is stored in a dedicated database table. It serves as a _mirror table_ for the respective Redis or Elasticsearch storage. The `data` column of the table contains the data to be synced to the front end, defining [the storage and the key](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html). It is stored in JSON for easy and fast sync. The table also contains the foreign keys used to backtrack data and the timestamp of the last change for each row. The timestamp is used to track changes rapidly.
+The transformed data is stored in a dedicated database table. It serves as a _mirror table_ for the respective Redis or Elasticsearch storage. The `data` column of the table contains the data to be synced to the front end, defining [the storage and the key](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html). It is stored in JSON for easy and fast sync. The table also contains the foreign keys used to backtrack data and the timestamp of the last change for each row. The timestamp is used to track changes rapidly.
 
 ### Synchronize
 

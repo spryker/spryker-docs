@@ -23,8 +23,8 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
   - title: Implementing Publish and Synchronization
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-publish-and-synchronization.html
-  - title: Handling data with Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html
+  - title: Handle data with Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
   - title: Adding publish events
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
   - title: Implementing event trigger publisher plugins

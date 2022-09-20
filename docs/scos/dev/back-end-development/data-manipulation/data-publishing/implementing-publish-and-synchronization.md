@@ -25,8 +25,8 @@ redirect_from:
 related:
   - title: Publish and Synchronization
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
-  - title: Handling data with Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html
+  - title: Handle data with Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
   - title: Adding publish events
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
   - title: Implementing event trigger publisher plugins
@@ -107,7 +107,7 @@ Now, you need to configure the publish queues where all publish events will be e
 
 {% info_block infoBox "Creating a queue"%}
 
-For information on how to create a queue, see [Set Up a "Hello World" Queue](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#queue).
+For information on how to create a queue, see [Set Up a "Hello World" Queue](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html#queue).
 
 {% endinfo_block %}
 

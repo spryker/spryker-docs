@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/administration/thresholds/managing-threshold-settings.html
 related:
   - title: Managing Global Thresholds
-    link: docs/scos/user/back-office-user-guides/page.version/administration/define-global-thresholds.html
+    link: docs/pbc/all/cart-and-checkout/manage-in-the-back-office/define-global-thresholds.html
   - title: Managing Merchant Order Thresholds
     link: docs/scos/user/back-office-user-guides/page.version/administration/thresholds/managing-merchant-order-thresholds.html
   - title: Managing Merchant Relations

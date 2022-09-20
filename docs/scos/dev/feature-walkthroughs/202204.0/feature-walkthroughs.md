@@ -38,10 +38,6 @@ The [Catalog](/docs/scos/dev/feature-walkthroughs/{{page.version}}/catalog-featu
 
 The [Category Management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/category-management-feature-walkthrough.html) feature allows managing your product catalog with customized categories, category pages, and filters. All products can be categorized into logical clusters so that customers can filter them on the Storefront.
 
-## Checkout
-
-The [Checkout](/docs/scos/dev/feature-walkthroughs/{{page.version}}/checkout-feature-walkthrough.html) feature allows customizing the checkout workflow.
-
 ## Cms
 
 The [CMS](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cms-feature-walkthrough/cms-feature-walkthrough.html) feature adds a content management system that allows creating and managing the content of custom pages that are not part of the product catalog.

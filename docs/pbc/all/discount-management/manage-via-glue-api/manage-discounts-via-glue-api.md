@@ -44,7 +44,7 @@ You can do the following actions on the promotional items via API:
 
 For customers to be able to benefit from promotional offers, first, they need to know about them. For this purpose, you can fetch the promotions available for products in a cart and display the possible benefits to the customer. To do so, you can query the cart information and include the `promotional-items` resource relationship. The response provides the abstract SKU of the promoted product and how many of the promotional items customers can add. To present detailed information on promotional products to the customer, you can include the `abstract-products` and `concrete-products` resource relationships.
 
-See [Manage carts of registered users](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/managing-carts-of-registered-users.html) for details on how to retrieve promotional items for a registered user’s cart.
+See [Manage carts of registered users](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html) for details on how to retrieve promotional items for a registered user’s cart.
 
 See [Manage guest carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-carts.html) for details on how to retrieve promotional items for a guest user’s cart.
 

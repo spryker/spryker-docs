@@ -25,9 +25,9 @@ Any changes the customer makes within the cart trigger an automatic sum-recalcul
 
 The persistent cart functionality lets authenticated customers store their cart throughout multiple sessions. The Cart feature also ensures that your business rules, such as discounts, taxes, or shipping, are applied based on the customers' final choice of items.
 
-Your customers can place orders faster by adding simple products to their cart from the **Category** page. They can add products with one [product variant](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) to the cart with one click.
+Your customers can place orders faster by adding simple products to their cart from the **Category** page. They can add products with one [product variant](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-feature-overview.html) to the cart with one click.
 
-The feature supports [product groups](/docs/scos/user/features/{{page.version}}/product-groups-feature-overview.html). If simple products are grouped, you can browse and add these products to your cart from the **Category** page.
+The feature supports [product groups](/docs/scos/user/features/{{site.version}}/product-groups-feature-overview.html). If simple products are grouped, you can browse and add these products to your cart from the **Category** page.
 
 In a Spryker shop, the shopping cart widget is displayed in the header. With the widget, customers can easily create new shopping carts and view the existing ones by pointing to the cart icon.
 
@@ -43,7 +43,7 @@ In a Spryker shop, the shopping cart widget is displayed in the header. With the
 
 |INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | TUTORIALS AND HOWTOS | REFERENCES |
 |---------| - | ---------|---------|---------|
-| [Install the Cart feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-the-cart-feature.html) | [Upgrade the Cart module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html) | [Manage guest carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-carts.html) | [HowTo: Define if a cart should be deleted after placing an order](/docs/pbc/all/cart-and-checkout/tutorials-and-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html)  | [Calculation 3.0](/docs/pbc/all/cart-and-checkout/extend-and-customize/calculation-3-0.html) |
+| [Install the Cart feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-cart-feature.html) | [Upgrade the Cart module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html) | [Manage guest carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-carts.html) | [HowTo: Define if a cart should be deleted after placing an order](/docs/pbc/all/cart-and-checkout/tutorials-and-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html)  | [Calculation 3.0](/docs/pbc/all/cart-and-checkout/extend-and-customize/calculation-3-0.html) |
 | [Install the Cart + Shipment feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-cart-shipment-feature.html) | [Upgrade the CartExtension module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartextension-module.html) |[Manage carts of registered users](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html) |   | [Calculation data structure](/docs/pbc/all/cart-and-checkout/extend-and-customize/calculation-data-structure.html) |
 | [Install the Cart + Product Bundles feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-the-cart-product-bundles-feature.html) | [Upgrade the CartPage module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartpage-module.html) | [Retrieve customer carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/retrieving-customer-carts.html)  |   |  [Calculator plugins](/docs/pbc/all/cart-and-checkout/extend-and-customize/calculator-plugins.html) |
 | [Install the Persistent Cart + Comments feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-persistent-cart-comments-feature.html) | [Upgrade the CartsRestApi module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartsrestapi-module.html) | [Manage items in carts of registered users](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-items-in-carts-of-registered-users.html)  |   | [Cart module: Reference information](/docs/pbc/all/cart-and-checkout/extend-and-customize/cart-module-reference-information.html)  |
@@ -52,5 +52,5 @@ In a Spryker shop, the shopping cart widget is displayed in the header. With the
 | [Install the Cart + Product feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-cart-product-feature.html) |  | | |
 | [Install the Cart + Product Group feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-cart-product-group-feature.html) | | | |
 |  | | | |
-| [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-the-cart-glue-api.html) | | | |
+| [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html) | | | |
 |

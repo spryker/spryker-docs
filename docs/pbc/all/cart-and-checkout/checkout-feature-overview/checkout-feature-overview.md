@@ -22,11 +22,11 @@ The *Checkout* feature lets customers select single or multiple products and add
 
 Control the values of the orders that your customers place by defining order thresholds.
 
-Fulfilling small orders is not always worthwhile for the business because operating costs, time, and effort spent on processing them often overweight the profit gained. In such cases, implementing a minimum threshold might be the solution. The *[Order Thresholds](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html)* feature provides you with multiple options for defining thresholds. You can define a minimum threshold and disallow placing orders with smaller values or request customers to pay a fee.
+Fulfilling small orders is not always worthwhile for the business because operating costs, time, and effort spent on processing them often overweight the profit gained. In such cases, implementing a minimum threshold might be the solution. The *[Order Thresholds](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html)* feature provides you with multiple options for defining thresholds. You can define a minimum threshold and disallow placing orders with smaller values or request customers to pay a fee.
 
 Per your business requirements, you can also set up a maximum threshold to disallow placing orders above a defined threshold.
 
-In a B2B scenario, you can define any type of threshold for each [merchant relation](/docs/scos/user/features/{{page.version}}/merchant-b2b-contracts-feature-overview.html) separately.
+In a B2B scenario, you can define any type of threshold for each [merchant relation](/docs/scos/user/features/{{site.version}}/merchant-b2b-contracts-feature-overview.html) separately.
 
 With order thresholds, you can do the following:
 
@@ -38,13 +38,13 @@ With order thresholds, you can do the following:
 ## Related Business User articles
 
 |OVERVIEWS| BACK OFFICE USER GUIDES |
-|---|
-| [Multi-step Checkout](/docs/pbc/all/cart-and-checkout/checkout-feature-overview/multi-step-checkout-overview.html)  |
-| [Order Thresholds](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html)  |
+|-|-|
+| [Multi-step Checkout](/docs/pbc/all/cart-and-checkout/checkout-feature-overview/multi-step-checkout-overview.html)  | [Define global thresholds](/docs/pbc/all/cart-and-checkout/manage-in-the-back-office/define-global-thresholds.html) |
+| [Order Thresholds](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html)  | [Manage threshold settings](/docs/pbc/all/cart-and-checkout/manage-in-the-back-office/manage-threshold-settings.html) |
 
 ## Related Developer articles
 
 | INSTALLATION GUIDES | UPGRADE GUIDES| DATA IMPORT |
 |---------|---------|---------|
-| [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-checkout-feature.html) | [Upgrade the Checkout module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-the-checkout-module.html)  | [File details: sales_order_threshold.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-sales-order-threshold.csv.html)  |
-| [Merchant feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/merchant-feature-integration.html) | [Upgrade the CheckoutPage module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-the-checkoutpage-module.html) |   |
+| [Install the Checkout feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-checkout-feature.html) | [Upgrade the Checkout module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-the-checkout-module.html)  | [File details: sales_order_threshold.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-sales-order-threshold.csv.html)  |
+| [Merchant feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/merchant-feature-integration.html) | [Upgrade the CheckoutPage module](/docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-the-checkoutpage-module.html) |   |

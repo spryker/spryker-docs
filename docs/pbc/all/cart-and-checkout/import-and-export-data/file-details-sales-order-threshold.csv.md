@@ -11,7 +11,7 @@ redirect_from:
   - /docs/en/file-details-sales-order-thresholdcsv
 ---
 
-This document describes the `sales_order_threshold.csv` file to configure [Sales Order Threshold](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html) information in your Spryker Demo Shop.
+This document describes the `sales_order_threshold.csv` file to configure [Sales Order Threshold](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/order-thresholds-overview.html) information in your Spryker Demo Shop.
 
 To import the file, run:
 
@@ -37,7 +37,7 @@ The file should have the following parameters:
 This file has the following dependencies:
 
 * [currency.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-currency.csv.html)
-* [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
+* [glossary.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)
 * *stores.php* configuration file of the demo shop PHP project
 
 ## Import template file and content example

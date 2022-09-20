@@ -170,7 +170,7 @@ To retrieve general information about an abstract product, send the request:
 
 {% include pbc/all/glue-api-guides/retrieve-an-abstract-product-response-attributes.md %} <!-- To edit, see /_includes/pbc/all/glue-api-guides/retrieve-an-abstract-product-response-attributes.md -->
 
-For the attributes of product reviews resources, see [Retrieve product reviews](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-product-ratings-and-reviews.html#product-reviews-response-attributes).
+For the attributes of product reviews resources, see [Retrieve product reviews](/docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html#product-reviews-response-attributes).
 
 ## Possible errors
 

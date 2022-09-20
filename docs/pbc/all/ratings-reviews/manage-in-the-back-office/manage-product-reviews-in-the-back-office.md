@@ -1,5 +1,5 @@
 ---
-title: Manage product reviews
+title: Manage product reviews in the Back Office
 description: Learn how to read, approve, and reject product reviews in the Back Office.
 last_updated: June 25, 2022
 template: back-office-user-guide-template

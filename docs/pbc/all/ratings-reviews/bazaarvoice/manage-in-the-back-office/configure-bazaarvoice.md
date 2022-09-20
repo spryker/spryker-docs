@@ -18,5 +18,5 @@ To configure Bazaarvoice, follow these steps:
    <!---- QUESTIONS & ANSWERS:--> 
    - INLINE RATINGS: This service displays the star ratings directly in these lists of products, for example, in search results, in the product catalog, etc.
    - Bazaarvoice PIXEL: Adds a single tracking pixel to your shopping cart page and product details page. It lets Bazaarvoice track whether the products that have more UGC have a better conversion rate than products without many ratings and reviews.
-   - CONTAINER PAGE: Lets your users add their reviews on the product details page.
+
 5. To configure the stores where you want to turn on the Bazaarvoice app, in **Settings** > **Store**, select the stores.

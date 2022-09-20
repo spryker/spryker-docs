@@ -3497,21 +3497,21 @@ entries:
           - title: Facet filter overview and configuration
             url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
           - title: Configure search features
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-the-search-features.html
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html
           - title: Configure Elasticsearch
             url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
           - title: Configure a search query
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-the-search-query.html
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-a-search-query.html
           - title: Configure Search for multi-currency
             url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
           - title: Expand search data
             url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html
-        - title: Transferring data between Yves and Zed
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transferring-data-between-yves-and-zed.html
+        - title: Transfer data between Yves and Zed
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transfer-data-between-yves-and-zed.html
         - title: Define the module dependencies - Dependency Provider
           url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/define-the-module-dependencies-dependency-provider.html
-      - title: Create an Order Management System - Spryker Commerce OS
-        url: /docs/scos/dev/back-end-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
+      - title: Creating an Order Management System - Spryker Commerce OS
+        url: /docs/scos/dev/back-end-development/data-manipulation/creating-an-order-management-system-spryker-commerce-os.html
       - title: Queue
         url: /docs/scos/dev/back-end-development/data-manipulation/queue/queue.html
         nested:

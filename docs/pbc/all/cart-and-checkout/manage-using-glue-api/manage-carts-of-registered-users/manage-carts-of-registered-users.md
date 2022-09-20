@@ -35,7 +35,7 @@ For detailed information on the modules that provide the API functionality and r
 * [Glue API: Measurement Units feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-measurement-units-feature-integration.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 * [Glue API: Product Options feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-options-feature-integration.html)
-* [Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-the-shared-carts-feature.html)
+* [Install the Shared Carts feature](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html)
 
 ## Create a cart
 

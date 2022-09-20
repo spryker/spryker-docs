@@ -14,8 +14,6 @@ redirect_from:
 related:
   - title: Checkout feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/checkout-feature-integration.html
-  - title: Checkout feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/checkout-feature-walkthrough.html
   - title: Check out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
   - title: Update payment data

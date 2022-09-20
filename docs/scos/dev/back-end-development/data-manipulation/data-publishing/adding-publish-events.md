@@ -33,7 +33,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
-[Publish and Synchronize](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html) are event-driven. Data is published only after a registered event is triggered. Follow the steps below to register the events for them:
+[Publish and Synchronize](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html) are event-driven. Data is published only after a registered event is triggered. Follow these steps to register the events for them:
 
 1. Prepare data structure and activate `Propel Event Behavior` for the `spy_glossary` database table:
 

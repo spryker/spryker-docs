@@ -92,7 +92,7 @@ When you have a dynamic part in the translation, you can use placeholders.
 
 | KEY       | VALUE               |
 | --------- | ------------------- |
-| “my.name” | “My name is %name%” |
+| "my.name" | "My name is %name%" |
 
 Now replace it with a value in the Twig template:
 
@@ -100,7 +100,7 @@ Now replace it with a value in the Twig template:
 {% raw %}{{{% endraw %} "auth.my.name" | trans({'%name%' : 'Fabian'}, "app") {% raw %}}}{% endraw %}
 ```
 
-This will show “My name is Fabian”
+This will show "My name is Fabian"
 
 ## Translation with AJAX requests
 

@@ -41,7 +41,7 @@ The checkout process consists of the following steps:
 Read on to learn more on each step.
 
 ## Entry Step
-The entry step redirects the customer to correct step based on QuoteTransfer state. This step requires `input = false`, so it won’t be rendered.
+The entry step redirects the customer to correct step based on QuoteTransfer state. This step requires `input = false`, so it won't be rendered.
 
 ## Customer Step
 The customer step provides three forms:
@@ -53,7 +53,7 @@ The customer step provides three forms:
 This step is responsible for filling `CustomerTransfer` with corresponding data. The authentication logic is left to customer module, this step is only delegating calls to (and from) customer module and mapping data with forms.
 
 ## Address Step
-The address step is the step where customer fills billing and shipping addresses in `QuoteTransfer::billingAddress` and `QuoteTransfer::shippingAddress` respectively. This step lets the returning customers select one of the existing addresses or create a new one. New address will be created only if "Save new address to address book" checkbox is checked. Otherwise, it is saved in Order, but won't be stored in the database. This allows customer to skip new address saving if they want to. New and guest customers can only create a new address. If a new address is selected, it’s only created when order is placed and `OrderCustomerSavePlugin` plugin is enabled.
+The address step is the step where customer fills billing and shipping addresses in `QuoteTransfer::billingAddress` and `QuoteTransfer::shippingAddress` respectively. This step lets the returning customers select one of the existing addresses or create a new one. New address will be created only if "Save new address to address book" checkbox is checked. Otherwise, it is saved in Order, but won't be stored in the database. This allows customer to skip new address saving if they want to. New and guest customers can only create a new address. If a new address is selected, it's only created when order is placed and `OrderCustomerSavePlugin` plugin is enabled.
 
 ## Shipment Step
 Get shipment method information and store it into the quote. This step requires additional configuration because different shipment providers and different ways forms should be handled for each.
@@ -68,9 +68,9 @@ Data handling happens after a valid form is being submitted during the `Shipment
 
 The approach of implementing shipment and payment handlers and forms are the same PaymentStep.
 
-* shipmentSelection (string) — the name of the form for the selected shipment.
-* carrier (ShipmentCarrierTransfer) — includes information on the shipment carrier.
-* method (ShipmentMethodTransfer) — contains information about the shipment method that is currently selected.
+* shipmentSelection (string)—the name of the form for the selected shipment.
+* carrier (ShipmentCarrierTransfer)—includes information on the shipment carrier.
+* method (ShipmentMethodTransfer)—contains information about the shipment method that is currently selected.
 
 ## Payment Step
 Get payment information and store it into quote for later processing when state machine is triggered.
@@ -86,19 +86,34 @@ When the form is created, it requires the property path to be provided so that i
 
 `PaymentTransfer` includes:
 
-* paymentProvider (string) — payment provider name (Paypal, Payolution etc..).
-* paymentMethod (string) — payment method (credit card, invoice).
-* paymentSelection (string) — subform name that is currently selected.
+* paymentProvider (string)—payment provider name (Paypal or Payolution).
+* paymentMethod (string)—payment method (credit card or invoice).
+* paymentSelection (string)—subform name that is currently selected.
 
 ### Data Handling
 Data handling happens after a valid form is submitted during the `PaymentStep`. The step receives plugins that implement `CheckoutStepHandlerPluginInterface` and that are provided in the `CheckoutFactory::createPaymentPlugins()`. When `execute()` method is called on `PaymentStep`, the plugin that is identified by `PaymentTransfer::paymentSelection` string is selected and the `CheckoutStepHandlerPluginInterface::addToQuote()` is called to update `QuoteTransfer` with the payment data. From this part, all population or data handling is left to concrete `CheckoutStepHandler`.
 
 {% info_block infoBox %}
-A new payment method `Paypal` must be added.<ol><li>The first step would be to add the new property to `PaymentTransfer` and call it paypal. This property will use `PaypalTransfer` and it will contain the data we need to map the details from the form.</li><li>Next, create/use Paypal module to add the step plugin.</li><li>In the Paypal module add the following plugins:<ul><li>Create `PaypalCheckoutSubForm` implementing `CheckoutSubFormPluginInterface` that returns a subform that implements `SubFormInterface`</li><li>Create `PaypalHandler` implementing `CheckoutStepHandlerPluginInterface` that should populate `QuoteTransfer:payment:paypal` with `PaypalTransfer`</li></ul></li></ol>After creation you need to add the plugins to the checkout process.<br><ol><li>To do this you need to create a `CheckoutDependencyInjector` inside your module and configure it to be used by the `Checkout` module. From there you can inject the needed forms and handler.</li><li>Add your form to the `CheckoutSubFormPluginCollection` by extending the given `CheckoutDependencyProvider::PAYMENT_SUB_FORMS`</li><li>Your handler needs to be added to the `CheckoutStepHandlerPluginCollection` by extending the given `CheckoutDependencyProvider::PAYMENT_METHOD_HANDLER`</li></ol>After this, you should see the new payment selection with subform rendered below.
+
+Add a new payment method `Paypal`:
+
+1. Add the new property to `PaymentTransfer` and call it `Paypal`. This property uses `PaypalTransfer` and contains the data for mapping the details from the form.
+2. Create or use the `Paypal` module to add the step plugin.
+3. In the Paypal module, add the following plugins:
+   * Create `PaypalCheckoutSubForm` implementing `CheckoutSubFormPluginInterface` that returns a subform that implements `SubFormInterface`.
+   * Create `PaypalHandler` implementing `CheckoutStepHandlerPluginInterface` that populates `QuoteTransfer:payment:paypal` with `PaypalTransfer`.
+
+After creation, you need to add the plugins to the checkout process:
+1. Create a `CheckoutDependencyInjector` inside your module and configure it to be used by the `Checkout` module. From there, you can inject the needed forms and handler.
+2. Add your form to the `CheckoutSubFormPluginCollection` by extending the given `CheckoutDependencyProvider::PAYMENT_SUB_FORMS`.
+3. Add your handler to `CheckoutStepHandlerPluginCollection` by extending the given `CheckoutDependencyProvider::PAYMENT_METHOD_HANDLER`.
+
+After this, you can the new payment selection with the subform rendered below.
+
 {% endinfo_block %}
 
 ## Summary Step
-Display order information about the item to be placed, details and order totals.
+Display order information about the item to be placed, details, and order totals.
 
 ## Place Order Step
 Place order into the system. This step requires `input = false`. This step makes Zed HTTP request which sends `QuoteTransfer`. In this step, all order saving is happening.

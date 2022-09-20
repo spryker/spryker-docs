@@ -33,13 +33,13 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
-Sometimes it’s needed to manually [synchronize or re-syncrhonize](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html#published-data-re-generation) the published model data with Redis or ElasticSearch. To do that, you need to implement a synchronization plugin.
+Sometimes it's needed to manually [synchronize or re-syncrhonize](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html#published-data-re-generation) the published model data with Redis or ElasticSearch. To do that, you need to implement a synchronization plugin.
 
-Follow the steps below to implement and register a synchronization plugin.
+Follow these steps to implement and register a synchronization plugin.
 
 1.  Implement the synchronization(sync) plugin:
 
-<details open>
+<details>
     <summary markdown='span'>Pyz\Zed\HelloWorldStorage\Communication\Plugin\Synchronization</summary>
 
 ```php
@@ -116,7 +116,7 @@ class HelloWorldSynchronizationDataRepositoryPlugin extends AbstractPlugin imple
 </details>
 
 
-Find the method descriptions below:
+The method descriptions:
 
 *   `HelloWorldSynchronizationDataRepositoryPlugin::getResourceName()` - defines a resource name of the storage or search module for key generation.
 

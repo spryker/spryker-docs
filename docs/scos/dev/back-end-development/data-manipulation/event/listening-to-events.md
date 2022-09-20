@@ -30,7 +30,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/event/configuring-an-events-queue.html
 ---
 
-There are two ways to listen to events: using direct listeners or subscribers. The difference between these two is that a subscriber allows the module providing the subscriber to wire up the handlers in the module that owns it without touching the `EventDependencyProvider` exception’s initial subscriber initialization. It is best to use a subscriber from the beginning, as this simplifies future listener registration. When you need to listen to specific listener, use `\Pyz\Zed\Event\EventDependencyProvider::getEventListenerCollection`.
+There are two ways to listen to events: using direct listeners or subscribers. The difference between these two is that a subscriber allows the module providing the subscriber to wire up the handlers in the module that owns it without touching the `EventDependencyProvider` exception's initial subscriber initialization. It is best to use a subscriber from the beginning, as this simplifies future listener registration. When you need to listen to specific listener, use `\Pyz\Zed\Event\EventDependencyProvider::getEventListenerCollection`.
 
 ## Listening to Events with Direct Listeners
 

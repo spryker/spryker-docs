@@ -1,6 +1,6 @@
 ---
 title: Checkout process review and implementation
-description: This article provides an overview of the checkout process and how it is implemented in Spryker.
+description: This document provides an overview of the checkout process and how it is implemented in Spryker.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/checkout-process-review-and-implementation
@@ -32,7 +32,7 @@ To use checkout in Yves, first, you need to configure it correctly and provide d
 * Step—a class that implements the StepInterface and handles the data passed through the form.
 * Twig template—template where the form is rendered.
 
-Each form in the Checkout uses `QuoteTransfer` for data storage. When the data is being submitted, it’s automatically mapped by the Symfony form component to `QuoteTransfer`. If the form is valid, the updated `QuoteTransfer` is passed to `Step::execute()` method where you can modify it further or apply custom logic. Also, there is Symfony Request object passed if additional/manual data mapping is required.
+Each form in the Checkout uses `QuoteTransfer` for data storage. When the data is being submitted, it's automatically mapped by the Symfony form component to `QuoteTransfer`. If the form is valid, the updated `QuoteTransfer` is passed to `Step::execute()` method where you can modify it further or apply custom logic. Also, there is Symfony Request object passed if additional/manual data mapping is required.
 
 There are a few factories provided for checkout dependency wiring:
 
@@ -58,7 +58,7 @@ When a process is being called on `StepProcess`, it tries to get the current val
 
 #### Post condition
 
-Post condition is an essential part of the step Processing. It indicates if a step has all the data that it needs and if its requirements are satisfied. It’s not possible to access the next step from the stack if previous step post conditions are not met, but it’s possible to navigate to any step where post conditions are satisfied (`return true`).
+Post condition is an essential part of the step Processing. It indicates if a step has all the data that it needs and if its requirements are satisfied. It's not possible to access the next step from the stack if previous step post conditions are not met, but it's possible to navigate to any step where post conditions are satisfied (`return true`).
 
 Post conditions are called twice per step processing:
 * To find the current step or if we can access the current step.
@@ -70,7 +70,7 @@ Inside your step, you can set a post condition error route. If you need to redir
 
 ### How the quote transfer is mapped inside forms
 
-Symfony forms provide a mechanism to store data into objects without needing manual mapping. It’s called [Data transformers](https://symfony.com/doc/current/form/data_transformers.html). There are a few important things to make this work. Because we are passing the entire `QuoteTransfer`, the form handler does not know which fields you are trying to use. Symfony provides a few ways to handle this situation:
+Symfony forms provide a mechanism to store data into objects without needing manual mapping. It's called [Data transformers](https://symfony.com/doc/current/form/data_transformers.html). There are a few important things to make this work. Because we are passing the entire `QuoteTransfer`, the form handler does not know which fields you are trying to use. Symfony provides a few ways to handle this situation:
 * Using [property_path](https://symfony.com/doc/current/reference/forms/types/form.html#property-path) configuration directive. It uses the full path to object property you are about to map form into, for example, `payment.paypal` maps your form to `QuoteTransfer:payment:paypal`; this works when the property is not on the same level and when you are using subforms.
 * Using the main form that includes subforms. Each subform has to be configured with the `data_class` option that is the FQCN of transfer object you are about to use. This works when the property is in the top level.
 
@@ -82,7 +82,7 @@ On form submission, the same processing starts with the difference that if form 
 
 For example, add the address to `QuoteTransfer` or get payment details from Zed, call external service.
 
-It’s up to you to decide what to do in each execute method. It’s essential that after `execute()` runs, the updated returned `QuoteTransfer` should satisfy the `postCondition()` so that the `StepProcess` can take another step from the stack.
+It's up to you to decide what to do in each execute method. It's essential that after `execute()` runs, the updated returned `QuoteTransfer` should satisfy the `postCondition()` so that the `StepProcess` can take another step from the stack.
 
 #### Required input
 
@@ -90,13 +90,13 @@ Normally each step requires an input from the customer. However, there are cases
 
 #### Precondition and escape route
 
-Preconditions are called before each step; this is a check to indicate that step can’t be processed in a usual way.
+Preconditions are called before each step; this is a check to indicate that step can't be processed in a usual way.
 
 That is, the cart is empty. If the `preCondition()` returns false, the customer is redirected to the escapeRoute provided when configuring the step.
 
 #### External redirect URL
 
-Sometimes it’s needed to redirect the customer to an external URL (outside application). The step should implement `StepWithExternalRedirectInterface::getExternalRedirectUrl()` which returns the URL to redirect customer after `execute()` is ran.
+Sometimes it's needed to redirect the customer to an external URL (outside application). The step should implement `StepWithExternalRedirectInterface::getExternalRedirectUrl()` which returns the URL to redirect customer after `execute()` is ran.
 
 {% info_block errorBox %}
 
@@ -116,7 +116,7 @@ Zed's Checkout module contains four types of plugins to extend the behavior on p
 
 * `PreCondition`—is for checking if the order satisfies predefined constraints (for example, if the quantity of items is still available).
 * `OrderSavers`—is for saving the order, each plugin is responsible for collecting certain parts of the order (sales module saves items, discount module saves discounts, product option module saves options). Each `OrderSaver` plugin is wrapped into a single transaction; if an exception is being thrown, the transaction is rolled back.
-* `CheckPostConditions`—is for checking conditions after saving, last time to react if something did not happen by the plan. It’s called after state machine execution.
+* `CheckPostConditions`—is for checking conditions after saving, last time to react if something did not happen by the plan. It's called after state machine execution.
 * `PostSaveHook`—is called after order placement, sets the success flag to false, if redirect should be headed to an error page afterward.
 
 #### Checkout response transfer
@@ -129,8 +129,8 @@ Zed's Checkout module contains four types of plugins to extend the behavior on p
 
 #### Checkout error transfer
 
-* `errorCode` (int)—numeric error code. The checkout error codes are listed below.
-* message (string)—error message.
+* `errorCode` (int)—numeric error code. The checkout error codes are listed in the following section [Checkout error codes](#checkout-error-codes).
+* `message` (string)—error message.
 
 #### Checkout error codes
 

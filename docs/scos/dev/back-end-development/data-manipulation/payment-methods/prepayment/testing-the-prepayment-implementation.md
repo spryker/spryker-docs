@@ -1,6 +1,6 @@
 ---
 title: Testing the Prepayment implementation
-description: This article describes how to test the prepayment implementation.
+description: This document describes how to test the prepayment implementation.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-test

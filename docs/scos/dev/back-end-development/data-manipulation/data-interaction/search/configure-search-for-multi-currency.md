@@ -1,6 +1,6 @@
 ---
-title: Configuring search for multi-currency
-description: This article describes how to configure search for multi-currency.
+title: Configure search for multi-currency
+description: This document describes how to configure search for multi-currency.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-multi-currency
@@ -32,26 +32,27 @@ redirect_from:
   - /v3/docs/en/multicurrency-search
   - /v2/docs/multicurrency-search
   - /v2/docs/en/multicurrency-search
+  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
 related:
   - title: Migration Guide - Multi-Currency
     link: docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
   - title: Migration Guide - Price
     link: docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
-  - title: Configuring Elasticsearch
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
-  - title: Configuring the search features
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html
-  - title: Configuring the search query
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html
-  - title: Expanding search data
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
+  - title: Configure Elasticsearch
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
+  - title: Configure search features
+    link: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html
+  - title: Configure a search query
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-a-search-query.html
+  - title: Expand search data
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html
   - title: Facet filter overview and configuration
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
 ---
 
-If you don't have the multi-currency feature in you current project yet and want to migrate, you have to follow certain steps to migrate your system. First [migrate Price](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html) and [modules related to multi-currency](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html) before proceeding with the search for multi-currency.
+If you don't have the multi-currency feature in your project and want to migrate, you have to follow certain steps to migrate your system. First, [migrate Price](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html) and [modules related to multi-currency](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html) before proceeding with the search for multi-currency.
 
-In the current multi-currency feature we store prices grouped by price mode and currency, so prices are as follows now:
+In the multi-currency feature we store prices grouped by price mode and currency, so prices are as follows:
 ```php
 {
  EUR : {
@@ -66,16 +67,18 @@ In the current multi-currency feature we store prices grouped by price mode and 
    }
 }
 ```
-The "price" field has the same structure, but value has a different meaning. This value now stores a default price. Default price is the price having the default price type, currency and price mode which is defined in the price configuration. The price is stored grouped in elastic search, but before returning it for the view, we format it and return prices based on the currently selected currency, price mode and price type. So the result structure/schema you get from search client will be the same as before multi-currency change:
+The `price` field has the same structure, but the value has a different meaning. This value now stores a *default price*. Default price is the price having the default price type, currency, and price mode, which is defined in the price configuration. The price is stored grouped in elastic search, but before returning it for the view, we format it and return prices based on the currently selected currency, price mode, and price type. So the resulting structure or schema you get from the earch client is the same as before the multi-currency change:
+
 ```php
  prices : {
      DEFAULT : 100,
      ORIGINAL: 150
  }
    ```
-Value will be adjusted according to the customer state (currency, price mode and price type). Because of this you have to decorate `RawCatalogSearchResultFormatterPlugin` with `\Spryker\Client\CatalogPriceProductConnector\Plugin\CurrencyAwareCatalogSearchResultFormatterPlugin` in modules using it. For `\Pyz\Client\Catalog\CatalogDependencyProvider`:   
 
-**Pyz\Client\Catalog:**
+The value is adjusted according to the customer state (currency, price mode, and price type). Because of this, you have to decorate `RawCatalogSearchResultFormatterPlugin` with `\Spryker\Client\CatalogPriceProductConnector\Plugin\CurrencyAwareCatalogSearchResultFormatterPlugin` in modules using it. For `\Pyz\Client\Catalog\CatalogDependencyProvider`:   
+
+<details><summary markdown='span'>Pyz\Client\Catalog</summary>
 
 ```php
 class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
@@ -128,6 +131,7 @@ class CatalogDependencyProvider extends SprykerCatalogDependencyProvider
    }
 }
 ```
+</details>
 
 For `\Pyz\Client\ProductNew\ProductNewDependencyProvider`:
 
@@ -200,7 +204,7 @@ class ProductSaleDependencyProvider extends AbstractDependencyProvider
 
 You also have to update the price expander to export grouped prices. To do this, change `\Pyz\Zed\ProductSearch\Business\Map\Expander\PriceExpander` class:
 
-**Pyz\Zed\ProductSearch\Business\Map\Expander**
+<details><summary markdown='span'>Pyz\Zed\ProductSearch\Business\Map\Expander</summary>
 
 ```php
 <?php
@@ -298,6 +302,7 @@ public function expandProductPageMap(
 }
 
 ```
+</details>
 
 Inject a new dependency:
 
@@ -371,7 +376,7 @@ class ProductSearchBusinessFactory extends SprykerProductSearchBusinessFactory
 
 It is also needed to configure prices for catalog search in `\Pyz\Client\Catalog\Plugin\Config\CatalogSearchConfigBuilder`:
 
-**Pyz\Client\Catalog\Plugin\Config**
+<details><summary markdown='span'>Pyz\Client\Catalog\Plugin\Config</summary>
 
 ```php
 <?php
@@ -447,6 +452,7 @@ class CatalogSearchConfigBuilder extends AbstractPlugin implements SearchConfigB
 }
 
 ```
+</details>
 
 Inject a new dependency:
 
@@ -510,4 +516,4 @@ class CatalogFactory extends SprykerCatalogFactory
 
 ```
 
-After these changes you should be able to see prices based on the selected price mode and currency.
+After these changes, you can see prices based on the selected price mode and currency.

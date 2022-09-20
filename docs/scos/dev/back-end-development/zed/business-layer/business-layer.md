@@ -1,6 +1,6 @@
 ---
 title: About the Business layer
-description: Zed’s business layer is responsible for the entire business logic.
+description: Zed's business layer is responsible for the entire business logic.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/business-layer
@@ -35,7 +35,7 @@ related:
     link: docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
 ---
 
-Zed’s business layer is responsible for the entire business logic.
+Zed's business layer is responsible for the entire business logic.
 
 Most classes exist in this layer and this is the primary area for development.
 

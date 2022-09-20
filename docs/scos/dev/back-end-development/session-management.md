@@ -28,7 +28,7 @@ related:
 
 In Spryker Commerce OS, session behavior is supported by User, Customer and CustomerPage modules.
 
-The following article provides an overview on how sessions are handled in Zed and Yves, as well as describes possible use cases for both of them.
+The following document provides an overview on how sessions are handled in Zed and Yves, as well as describes possible use cases for both of them.
 
 ## Zed
 

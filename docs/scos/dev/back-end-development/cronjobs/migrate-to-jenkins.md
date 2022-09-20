@@ -1,23 +1,22 @@
 ---
-title: Migrating to Jenkins
+title: Migrate to Jenkins
 description: Learn how to migrate to the Jenkins scheduler.
 template: howto-guide-template
 last_updated: Nov 1, 2021
+redirect_from:
+  - /docs/scos/dev/back-end-development/cronjobs/migrating-to-jenkins.html
 related:
   - title: Cronjobs
     link: docs/scos/dev/back-end-development/cronjobs/cronjobs.html
-  - title: Creating a custom scheduler
-    link: docs/scos/dev/back-end-development/cronjobs/creating-a-custom-scheduler.html
-  - title: Adding and configuring cronjobs
-    link: docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-cronjobs.html
+  - title: Create a custom scheduler
+    link: docs/scos/dev/back-end-development/cronjobs/create-a-custom-scheduler.html
+  - title: Add and configure cronjobs
+    link: docs/scos/dev/back-end-development/cronjobs/add-and-configure-cronjobs.html
 ---
-
-
-
 
 This document describes how to migrate to the Jenkins scheduler and set up jobs.
 
-{% info_block infoBox "" %}
+{% info_block infoBox %}
 
 Jenkins is the default scheduler shipped with Spryker Demo Shops. Follow the instructions in the document only if you previously migrated to another scheduler.
 
@@ -28,9 +27,9 @@ Jenkins is the default scheduler shipped with Spryker Demo Shops. Follow the ins
 
 Check `composer.json` and `package.json` to make sure that the following Composer packages are installed:
 
-* spryker/scheduler: *
-* spryker/scheduler-extension: *
-* spryker/scheduler-jenkins: *
+* `spryker/scheduler: *`
+* `spryker/scheduler-extension: *`
+* `spryker/scheduler-jenkins: *`
 
 ## 1. Configure Jenkins
 
@@ -42,8 +41,6 @@ class SchedulerConfig extends AbstractSharedConfig
     public const SCHEDULER_JENKINS = 'jenkins';
 }
 ```
-
-
 
 2. In `src/Pyz/Zed/Console/ConsoleDependencyProvider.php`, add the console commands and Twig application plugin:
 
@@ -126,7 +123,7 @@ class SchedulerDependencyProvider extends SprykerSchedulerDependencyProvider
 
 ## 2. Configure the project
 
-1. To be able to use enabled schedulers from environment variables, adjust the project configuration with `SchedulerConstants::ENABLED_SCHEDULERS`:
+1. To use enabled schedulers from environment variables, adjust the project configuration with `SchedulerConstants::ENABLED_SCHEDULERS`:
 
 ```php
 $config[SchedulerConstants::ENABLED_SCHEDULERS] = [
@@ -153,4 +150,4 @@ $config[SchedulerJenkinsConstants::JENKINS_TEMPLATE_PATH] = getenv('SPRYKER_JENK
 
 ## 3. Configure Jenkins jobs
 
-Create or update the Jenkins job list in `config/Zed/cronjobs/jenkins.php`. To learn how to add jobs, see [Adding and configuring cronjobs](/docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-cronjobs.html).
+Create or update the Jenkins job list in `config/Zed/cronjobs/jenkins.php`. To learn how to add jobs, see [Add and configure cronjobs](/docs/scos/dev/back-end-development/cronjobs/add-and-configure-cronjobs.html).

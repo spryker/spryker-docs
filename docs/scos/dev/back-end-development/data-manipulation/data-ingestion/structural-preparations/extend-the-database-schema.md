@@ -1,6 +1,6 @@
 ---
-title: Extending the database schema
-description: Fields can be added to the existing database tables, but they cannot be removed (removing fields from the tables could break the functionalities implemented in Spryker Core).
+title: Extend the database schema
+description: this document shows how to add fields to the existing database tables
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-extend-db-schema
@@ -22,21 +22,27 @@ redirect_from:
   - /v2/docs/en/t-extend-db-schema
   - /v1/docs/t-extend-db-schema
   - /v1/docs/en/t-extend-db-schema
+  - /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html
 related:
-  - title: Creating, using, and extending the transfer objects
-    link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html
+  - title: Create, use, and extend the transfer objects
+    link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
 ---
 
-<!--used to be: http://spryker.github.io/tutorials/zed/extending-database-schema/-->
+This document shows how to extend the database schema.
+
 Fields can be added to the existing database tables, but they cannot be removed (removing fields from the tables could break the functionalities implemented in Spryker Core).
 
 {% info_block infoBox "Info" %}
 
-In addition, you can create a new database table by running the following command: `console spryk:run AddZedPersistencePropelSchema`.
+In addition, you can create a new database table:
+
+```bash
+console spryk:run AddZedPersistencePropelSchema
+```
 
 {% endinfo_block %}
 
-As an example, we will add a description field to the `spy_price_type` table. The structure of this table is defined in the `PriceProduct` module, in the `spy_price_product.schema.xml` file, as it can be seen below:
+As an example, let's add a description field to the `spy_price_type` table. The structure of this table is defined in the `PriceProduct` module, in the `spy_price_product.schema.xml` file as follows:
 
 ```xml
     ...
@@ -54,12 +60,11 @@ As an example, we will add a description field to the `spy_price_type` table. Th
     ...
 ```
 
-To add an additional column to this table, do the following:
+To add a column to this table, follow these steps:
 
-1. On the project side, if it hasn’t been created yet, add the corresponding `xml` file ( follow the same folder structure and give it the same name)
+1. On the project side, if it hasn't been created yet, add a corresponding XML file ( follow the same folder structure and give it the same name)
 
 ```bash
-
 mkdir -p src/Pyz/Zed/PriceProduct/Persistence/Propel/Schema
 touch src/Pyz/Zed/PriceProduct/Persistence/Propel/Schema/spy_price_product.schema.xml
 
@@ -81,7 +86,7 @@ touch src/Pyz/Zed/PriceProduct/Persistence/Propel/Schema/spy_price_product.schem
 </database>
 ```
 
-3. Update the database by running the following console command:
+1. Update the database:
 
 ```bash
 vendor/bin/console propel:install
@@ -89,7 +94,7 @@ vendor/bin/console propel:install
 
 ## Troubleshooting
 
-If you stumble upon an exception *Uncommitted migrations have been found*, you should either execute or delete them before rerunning the `diff` task:
+If you stumble upon an exception *Uncommitted migrations have been found*, either execute or delete them before rerunning the `diff` task:
 
 ```bash
 vendor/bin/console propel:migration:delete

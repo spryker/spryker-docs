@@ -230,7 +230,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-6. In your application’s configuration file `./config/Shared/config_default.php` or environment specific make sure you have this configuration:
+6. In your application's configuration file `./config/Shared/config_default.php` or environment specific make sure you have this configuration:
 
 ```php
 <?php

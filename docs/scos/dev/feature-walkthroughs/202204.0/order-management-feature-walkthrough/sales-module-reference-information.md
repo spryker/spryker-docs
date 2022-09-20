@@ -29,11 +29,11 @@ The following ER diagram shows persisted calculated values:
 
 ## Extension points
 
-HydrateOrderPluginInterface — this is an action which happens when the `SalesFacade::getOrderByIdSalesOrder()` method is called. This can be done when you wish to populate `OrderTransfer` with additional data. This plugins accepts passes `OrderTransfer` for additional population.
+HydrateOrderPluginInterface—this is an action which happens when the `SalesFacade::getOrderByIdSalesOrder()` method is called. This can be done when you wish to populate `OrderTransfer` with additional data. This plugins accepts passes `OrderTransfer` for additional population.
 
 There are already few plugins provided:
 
-* `DiscountOrderHydratePlugin` — populates `OrderTransfer` with discount related data as it was stored when order is placed.
-* `ProductOptionOrderHydratePlugin` — populates `OrderTransfer` with product option related data.
-* `ProductBundleOrderHydratePlugin` — populates `OrderTransfer` with product bundle related data.
-* `ShipmentOrderHydratePlugin` — populates `OrderTransfer` with shipment related data.
+* `DiscountOrderHydratePlugin`—populates `OrderTransfer` with discount related data as it was stored when order is placed.
+* `ProductOptionOrderHydratePlugin`—populates `OrderTransfer` with product option related data.
+* `ProductBundleOrderHydratePlugin`—populates `OrderTransfer` with product bundle related data.
+* `ShipmentOrderHydratePlugin`—populates `OrderTransfer` with shipment related data.

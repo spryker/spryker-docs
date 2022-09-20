@@ -1,6 +1,6 @@
 ---
-title: Defining the Module Dependencies- Dependency Provider
-description: Each module ships with a DependencyProvider class which explicitly defines services and external dependencies to other modules.
+title: Define module dependencies - Dependency Provider
+description: Each module ships with a DependencyProvider class, which explicitly defines services and external dependencies to other modules.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/dependency-provider
@@ -22,12 +22,13 @@ redirect_from:
   - /v2/docs/en/dependency-provider
   - /v1/docs/dependency-provider
   - /v1/docs/en/dependency-provider
+  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/defining-the-module-dependencies-dependency-provider.html
 related:
   - title: Spryk
     link: docs/scos/dev/sdk/development-tools/spryk-code-generator.html
 ---
 
-Each module ships with a `DependencyProvider` class which explicitly defines services and external dependencies to other modules. For instance, when the `Cms` module requires the `Glossary` module, this needs to be configured here. The `DependencyProvider` defines dependencies for each layer. Usually you require some of these classes:
+Each module ships with a `DependencyProvider` class, which explicitly defines services and external dependencies to other modules. For example, when the `Cms` module requires the `Glossary` module, this is configured here. The `DependencyProvider` defines dependencies for each layer. Usually, you need some of these classes:
 
 * Services (Common functionality for Client, Yves, and Zed)
 * Plugins
@@ -38,7 +39,7 @@ As you can see in the example, these required classes are wrapped into a closure
 
 {% info_block warningBox %}
 
-You can use any module name instead of `->glossary()`. The structure is always the same, so you can copy and adapt it for your use case.
+Instead of `->glossary()`, you can use any module name. The structure is always the same, so you can copy and adapt it for your use case.
 
 {% endinfo_block %}
 
@@ -130,15 +131,15 @@ class MyBundleDependencyProvider extends AbstractBundleDependencyProvider
 }
 ```
 
-New bundles will not be auto-completable in your IDE just yet. Run `vendor/bin/console dev:ide:generate-auto-completion` to get IDE typehinting for those, the yellow “markup” will go away.
+New bundles are not auto-completable in your IDE just yet. To get IDE type-hinting for those, run `vendor/bin/console dev:ide:generate-auto-completion`, and the yellow "markup" goes away.
 
 ## Bridges in Spryker core
 
-When you look into dependency provider classes from the core level, you will discover the existence of bridges. Inside Spryker’s Core, we are using the [Bridge pattern](https://en.wikipedia.org/wiki/Bridge_pattern) to avoid hard dependencies and to further decouple the bundles form each other.
+When you look into dependency provider classes from the core level, you can discover the existence of bridges. Inside Spryker's Core, we are using the [Bridge pattern](https://en.wikipedia.org/wiki/Bridge_pattern) to avoid hard dependencies and to further decouple the bundles from each other.
 
 {% info_block warningBox %}
 
-This is not needed in the project code and we recommend avoiding it to reduce overhead.
+This is not needed in the project code. We recommend avoiding it to reduce overhead.
 
 {% endinfo_block %}
 
@@ -146,7 +147,7 @@ This is not needed in the project code and we recommend avoiding it to reduce ov
 <?php
 ...
 $container->set(static::FACADE_GLOSSARY, function (Container $container) {
-    // Here we return the bridge instead of the required facade. Core only!
+    // Here, the bridge is returned instead of the required facade. Core only!
     return new CmsToGlossaryBridge($container->getLocator()->glossary()->facade());
 });
 ...
@@ -184,4 +185,4 @@ You might use the following definitions to generate related code:
 * Add Zed Dependency Service Interface
 * Add Client Dependency Provider
 
-See the [Spryk](/docs/sdk/dev/spryks/spryks.html) documentation for details.
+For details, see [Spryk](/docs/sdk/dev/spryks/spryks.html).

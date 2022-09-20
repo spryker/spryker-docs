@@ -1,6 +1,6 @@
 ---
 title: Standard Filters Backend and Frontend Technical Details
-description: In this article, you will get information on technical details for the frontend and backend development for the standard filters.
+description: This document provides information about technical details for the frontend and backend development for the standard filters.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/standard-filters-backend-and-frontend-technical-details
@@ -25,23 +25,23 @@ related:
 
 ## Backend technical details
 
-The backend part of Standard Filters feature is located in the following modules:
+The backend part of the Standard Filters feature is located in the following modules:
 
-1. ProductCategoryFilter (`spryker/product-category-filter`),
-2. ProductCategoryFilterGui (`spryker/product-category-filter-gui`),
-3. ProductCategoryFilterStorage (`spryker/product-category-filter-storage`).
+* ProductCategoryFilter (`spryker/product-category-filter`)
+* ProductCategoryFilterGui (`spryker/product-category-filter-gui`)
+* ProductCategoryFilterStorage (`spryker/product-category-filter-storage`)
 
 Category Filters management is described in the [Back Office guide](/docs/scos/user/back-office-user-guides/{{site.version}}/merchandising/search-and-filters/managing-category-filters.html).
 
 ## Frontend technical details
 
-CatalogPage module (`spryker-shop/catalog-page`) provides all applicable product filters and a basic set of templates, used by all pages.
+The `CatalogPage` module (`spryker-shop/catalog-page`) provides all applicable product filters and a basic set of templates used by all pages.
 
-The core of each page is `page-layout-catalog.twig`, which extends another global template - `page-layout-main.twig`.
+The core of each page is `page-layout-catalog.twig`, which extends another global template—`page-layout-main.twig`.
 
-The general look of the `page-layout-catalog.twig` template is shown below:
+The general look of the `page-layout-catalog.twig` template is as follows:
 
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Yves/CatalogPage/Theme/default/templates/page-layout-catalog/page-layout-catalog.twig</summary>
 
 ```twig
@@ -141,7 +141,7 @@ The general look of the `page-layout-catalog.twig` template is shown below:
     {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 <br>
-</details>
+
 ```twig
 {% raw %}{%{% endraw %} extends template('page-layout-main') {% raw %}%}{% endraw %}
 
@@ -298,7 +298,7 @@ The general look of the `page-layout-catalog.twig` template is shown below:
 
 Standard product filters are represented in the form of filter-section organism (`filter-section.twig` in particular) inclusion.
 
-Related code is located in the `filterBar` section, as shown below (extra code removed):
+Related code is located in the `filterBar` section, as shown in the following example (extra code removed):
 
 **src/Pyz/Yves/CatalogPage/Theme/default/templates/page-layout-catalog/page-layout-catalog.twig**
 
@@ -323,9 +323,9 @@ Related code is located in the `filterBar` section, as shown below (extra code r
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-When you look closer to the `filter-section.twig` template, you may notice, that this template is responsible for rendering both Filters and Categories (another feature):
+When you look closer at the `filter-section.twig` template, you may notice that this template is responsible for rendering both Filters and Categories (another feature):
 
-<details open>
+<details>
 <summary markdown='span'>src/Pyz/Yves/CatalogPage/Theme/default/components/organisms/filter-section/filter-section.twig</summary>
 
 ```twig
@@ -427,9 +427,10 @@ When you look closer to the `filter-section.twig` template, you may notice, that
 ```
 </details>
 
-As you may see from the code snippet below, this part is responsible for rendering a single filter (extra code removed):
+As you may see from the following code snippet, this part is responsible for rendering a single filter (extra code removed):
 
-**src/Pyz/Yves/CatalogPage/Theme/default/components/organisms/filter-section/filter-section.twig**
+<details>
+<summary markdown='span'>src/Pyz/Yves/CatalogPage/Theme/default/components/organisms/filter-section/filter-section.twig</summary>
 
 ```twig
 {% raw %}{%{% endraw %} block body {% raw %}%}{% endraw %}
@@ -470,6 +471,8 @@ As you may see from the code snippet below, this part is responsible for renderi
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-Thus, each filter is being rendered by another molecule according to its name and type.
+</details>
 
-You can see the list of all available filters by going into `vendor/spryker-shop/catalog-page/src/SprykerShop/Yves/CatalogPage/Theme/default/components/molecules` directory.
+Thus, each filter is rendered by another molecule according to its name and type.
+
+You can see the list of all available filters by going into the `vendor/spryker-shop/catalog-page/src/SprykerShop/Yves/CatalogPage/Theme/default/components/molecules` directory.

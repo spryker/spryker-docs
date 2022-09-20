@@ -37,7 +37,7 @@ related:
 
 {% info_block infoBox "Prepayment" %}
 
-This article describes the steps that you need to consider when you need to implement the prepayment method without integrating with a third party payment service provider.
+This document describes the steps that you need to consider when you need to implement the prepayment method without integrating with a third party payment service provider.
 
 {% endinfo_block %}
 

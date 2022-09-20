@@ -1,6 +1,6 @@
 ---
-title: Configuring Elasticsearch
-description: Elasticsearch is a NoSQL data store which lets you predefine the structure of the data you store in it.
+title: Configure Elasticsearch
+description: Elasticsearch is a NoSQL data store that lets you predefine the structure of the data you store in it.
 last_updated: Jul 24, 2022
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/search-configure-elasticsearch
@@ -52,34 +52,35 @@ redirect_from:
   - /v2/docs/en/search-30
   - /v2/docs/search-40
   - /v2/docs/en/search-40
+  - /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
 related:
-  - title: Configuring search for multi-currency
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
-  - title: Configuring the search features
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html
-  - title: Configuring the search query
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html
-  - title: Expanding search data
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
+  - title: Configure search for multi-currency
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
+  - title: Configure the search features
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-the-search-features.html
+  - title: Configure the search query
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-a-search-query.html
+  - title: Expand search data
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html
   - title: Facet filter overview and configuration
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
 ---
 
 Elasticsearch is a NoSQL data store that lets you predefine the structure of the data you get to store in it.
 
-Because the used data structure is static, you need to define it in advance. The definitions of the indexes and mappings are written in JSON format. You can find it in the [official Elasticsearch documentation](https://www.elastic.co/guide/index.html).
+Because the used data structure is static, you need to define it in advance. The definitions of the indexes and mappings are written in JSON. You can find it in the [official Elasticsearch documentation](https://www.elastic.co/guide/index.html).
 
 The content of the configuration files must follow the conventions listed in the [Create index API](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-create-index.html) document of the official Elasticsearch documentation. 
 
-Note that the current search installer supports only settings and mappings. However, if you need more, you can extend it on the project level.
+{% info_block infoBox "Note" %}
 
-{% info_block infoBox "Schema example" %}
+The current search installer supports only settings and mappings. However, if you need more, you can extend it on the project level.
 
-For the main index called `page`, you can find the default schema configuration in `vendor/spryker/search-elasticsearch/src/Spryker/Shared/SearchElasticsearch/Schema/page.json`.
+**Schema example**: For the main index called `page`, you can find the default schema configuration in `vendor/spryker/search-elasticsearch/src/Spryker/Shared/SearchElasticsearch/Schema/page.json`.
 
 {% endinfo_block %}
 
-{% info_block warningBox %}
+{% info_block warningBox "Disable the default mapping installation" %}
 
 To disable the default mapping installation, override the core configuration defined in `Spryker\Zed\SearchElasticsearch\SearchElasticsearchConfig::getJsonIndexDefinitionDirectories()` by implementing it on the project level—for example, `Pyz\Zed\Search\SearchConfig`.
 
@@ -171,7 +172,8 @@ If an index is created with the given settings, it is changed by running this pr
 
 In the development environment, to create new analyzers or change the index settings, you must delete the index and run the installation process again.
 
-To populate the newly created index with data, run `publish:trigger-events`:
+Populate the newly created index with data:
+
 ```php
 vendor/bin/console publish:trigger-events
 ```

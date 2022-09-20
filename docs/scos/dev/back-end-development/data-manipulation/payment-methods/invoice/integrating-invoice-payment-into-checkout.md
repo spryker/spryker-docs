@@ -1,6 +1,6 @@
 ---
 title: Integrating Invoice payment into checkout
-description: This article provides information on how to integrate the invoice payment into the checkout.
+description: This document provides information on how to integrate the invoice payment into the checkout.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-invoice-payment-checkout
@@ -37,7 +37,7 @@ related:
 
 The next step is to integrate the invoice payment into Checkout. In the `PaymentMethods/Dependency/Injector` from in Yves add the `CheckoutDependencyInjector` that will inject the invoice form and handler into the `Checkout` module:
 
-<details open>
+<details>
 <summary markdown='span'>Code sample:</summary>
 
 ```php
@@ -106,6 +106,6 @@ class CheckoutDependencyInjector implements DependencyInjectorInterface
 
 {% info_block errorBox %}
 
-If you recreated this example in Demoshop, you’ll need to do some adjustments on the `selectPayment()` from `checkout.js`.
+If you recreated this example in Demoshop, you'll need to do some adjustments on the `selectPayment()` from `checkout.js`.
 
 {% endinfo_block %}

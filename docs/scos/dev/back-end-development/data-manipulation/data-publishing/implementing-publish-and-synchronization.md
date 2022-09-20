@@ -131,7 +131,7 @@ protected function getQueueOptions()
 
 
 ## 4. Create Publish table
-The next step is to create a database table that will be used as a mirror for the corresponding *Redis* or *Elasticsearch* store. For details, see [Extending the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
+The next step is to create a database table that will be used as a mirror for the corresponding *Redis* or *Elasticsearch* store. For details, see [Extend the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html).
 
 {% info_block infoBox "Naming convention"%}
 

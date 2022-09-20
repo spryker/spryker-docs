@@ -31,8 +31,8 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
   - title: Adding publish events
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
-  - title: Implementing event trigger publisher plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html
+  - title: Implement event trigger publisher plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
   - title: Implementing synchronization plugins
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
   - title: Debug listeners
@@ -117,4 +117,4 @@ vendor/bin/console publish:trigger-events -r cms_block,availability -i 1,2
 
 To trigger data re-publish for a resource, there should be a corresponding publisher plugin created for this resource.
 
-See [Implementing event trigger publisher plugins](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html) to learn how to create it.
+See [Implement event trigger publisher plugins](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html) to learn how to create it.

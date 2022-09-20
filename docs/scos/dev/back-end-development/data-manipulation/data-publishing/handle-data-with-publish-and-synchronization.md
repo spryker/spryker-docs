@@ -14,7 +14,7 @@ redirect_from:
   - /v6/docs/en/handling-data-with-publish-and-synchronization
   - /docs/t-handling-data-publish-and-sync-scos
   - /docs/en/t-handling-data-publish-and-sync-scos
-  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
+  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html
 related:
   - title: Publish and Synchronization
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
@@ -22,8 +22,8 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-publish-and-synchronization.html
   - title: Adding publish events
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
-  - title: Implementing event trigger publisher plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html
+  - title: Implement event trigger publisher plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
   - title: Implementing synchronization plugins
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
   - title: Debug listeners

@@ -3451,8 +3451,8 @@ entries:
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
         - title: Implementing synchronization plugins
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
-        - title: Implementing event trigger publisher plugins
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html
+        - title: Implement event trigger publisher plugins
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
         - title: Debug listeners
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
         - title: Synchronization behavior - enabling multiple mappings

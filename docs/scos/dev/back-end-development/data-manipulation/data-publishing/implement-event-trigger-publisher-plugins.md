@@ -1,5 +1,5 @@
 ---
-title: Implementing event trigger publisher plugins
+title: Implement event trigger publisher plugins
 description: Learn how to implement event trigger publisher plugins.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/howto-implement-event-trigger-publisher-plugins
   - /v6/docs/howto-implement-event-trigger-publisher-plugins
   - /v6/docs/en/howto-implement-event-trigger-publisher-plugins
+  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html
 related:
   - title: Publish and Synchronization
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
@@ -33,12 +34,11 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
-Sometimes it's necessary to [publish or re-publish](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1215792106/WIP+Publish+and+Synchronize+Repeated+Export#Published-Data-Re-generation) the model data manually for all or a particular resource. To do that, you need to implement an event trigger publisher plugin.
+To [publish or republish](https://spryker.atlassian.net/wiki/spaces/DOCS/pages/1215792106/WIP+Publish+and+Synchronize+Repeated+Export#Published-Data-Re-generation) the model data manually for all or a particular resource, you need to implement an event trigger publisher plugin.
 
 Follow these steps to implement and register a new event trigger publisher plugin.
 
-<details>
-    <summary markdown='span'>Pyz\Zed\HelloWorldStorage\Communication\Plugin\Publisher</summary>
+<details><summary markdown='span'>Pyz\Zed\HelloWorldStorage\Communication\Plugin\Publisher</summary>
 
 ```php
 <?php
@@ -94,27 +94,24 @@ class HelloWorldPublisherTriggerPlugin extends AbstractPlugin implements Publish
 
 </details>
 
-Method descriptions:
+Find method descriptions below:
+* `HelloWorldPublisherTriggerPlugin::getResourceName()`—defines the resource name for key generation.
+* `HelloWorldPublisherTriggerPlugin::getData()`—retrieves a collection of data transfer objects for publishing according to a provided offset and limit.
+* `HelloWorldPublisherTriggerPlugin::getEventName()`—defines an event name for publishing.
 
-*   `HelloWorldPublisherTriggerPlugin::getResourceName()` - defines the resource name for key generation.
-
-*   `HelloWorldPublisherTriggerPlugin::getData()` - retrieves a collection of data transfer objects for publishing according to a provided offset and limit.
-
-*   `HelloWorldPublisherTriggerPlugin::getEventName()` - defines an event name for publishing.
-
-*   `HelloWorldPublisherTriggerPlugin::getIdColumnName()` - defines an ID column name for publishing.
+* `HelloWorldPublisherTriggerPlugin::getIdColumnName()`—defines an ID column name for publishing.
 
 {% info_block infoBox %}
 
-Make sure to fulfil the requirements:
+Make sure to fulfill the requirements:
 
-1.  The resource name should be the same as in the Propel schema definition.
+1. The resource name must be the same as in the Propel schema definition.
 
-2.  The plugin should implement `\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface`.
+2. The plugin must implement `\Spryker\Zed\PublisherExtension\Dependency\Plugin\PublisherTriggerPluginInterface`.
 
 {% endinfo_block %}
 
-2. Register the event trigger publisher plugin in `\Pyz\Zed\Publisher\PublisherDependencyProvider`:
+Register the event trigger publisher plugin in `\Pyz\Zed\Publisher\PublisherDependencyProvider`:
 
 ```php
 <?php

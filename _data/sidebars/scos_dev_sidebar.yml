@@ -3439,8 +3439,8 @@ entries:
         nested:
         - title: Publish and Synchronization
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
-        - title: Implementing Publish and Synchronization
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-publish-and-synchronization.html
+        - title: Implement Publish and Synchronization
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
         - title: Publish and Synchronize repeated export
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
         - title: Publish and Synchronize and multi-store shop systems

@@ -18,8 +18,8 @@ redirect_from:
 related:
   - title: Publish and Synchronization
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
-  - title: Implementing Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-publish-and-synchronization.html
+  - title: Implement Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
   - title: Adding publish events
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
   - title: Implement event trigger publisher plugins

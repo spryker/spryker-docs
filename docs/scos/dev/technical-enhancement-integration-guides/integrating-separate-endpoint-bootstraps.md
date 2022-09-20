@@ -238,7 +238,13 @@ $bootstrap
 ```
 </details>
 
-1. Configure a maintenance page:
+3. Configure a maintenance page:
+
+{% info_block warningBox %}
+
+The maintenance page is not yet compatible with Spryker Cloud.
+
+{% endinfo_block %}
 
     1. Add the maintenance page:
 

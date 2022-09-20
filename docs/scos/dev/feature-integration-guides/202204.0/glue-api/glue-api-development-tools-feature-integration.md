@@ -12,4 +12,4 @@ redirect_from:
   - /docs/en/glue-api-development-tools-feature-integration
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-development-tools-glue-api.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-development-tools-glue-api.md -->
+{% include pbc/all/install-features/202204.0/install-glue-api/install-the-development-tools-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-development-tools-glue-api.md -->

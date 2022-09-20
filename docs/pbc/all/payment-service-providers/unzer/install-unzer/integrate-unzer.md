@@ -1,16 +1,22 @@
 ---
 title: Integrate Unzer
 description: Integrate Unzer into the Spryker Commerce OS.
-last_updated: Jun 17, 2022
+last_updated: Aug 11, 2022
 template: feature-integration-guide-template
 related:
 - title: Install and configure Unzer
   link: docs/pbc/all/payment-service-providers/unzer/install-unzer/install-and-configure-unzer.html
 ---
 
-This document shows how to integrate Unzer into your project.
+# Unzer feature integration
 
-## Prerequisites
+This document describes how to integrate [Unzer](/docs/pbc/all/payment-service-providers/unzer/unzer.html) into your project.
+
+## Install feature core
+
+To integrate the Unzer, follow these steps.
+
+### Prerequisites
 
 [Install and configure Unzer](/docs/pbc/all/payment-service-providers/unzer/install-unzer/install-and-configure-unzer.html).
 
@@ -20,7 +26,7 @@ The following state machines are examples of the payment service provider flow.
 
 {% endinfo_block %}
 
-To integrate Unzer, follow these steps:
+### 1) Set up the configuration
 
 1. Add the Unzer OMS processes to the project on the project level or provide your own:
 
@@ -50,6 +56,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
     UnzerConfig::PAYMENT_METHOD_KEY_SOFORT => 'UnzerSofort01',
 ];
 ```
+
 2. Add the Unzer Zed navigation part:
 
 **config/Zed/navigation.xml**
@@ -68,10 +75,256 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 </config>
 ```
 
+---
 
-3. Add the Unzer plugin for `CartDepenencyProvider`:
+### 2) Set up database schema and transfer objects
 
-**src/Pyz/Zed/Cart/CartDependencyProvider.php**
+Apply database changes and generate entity and transfer changes:
+
+```bash
+console transfer:generate
+console propel:install
+console transfer:generate
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following changes have been applied by checking your database:
+
+| DATABASE ENTITY                | TYPE  | EVENT   |
+|--------------------------------|-------|---------|
+| spy_payment_unzer              | table | created |
+| spy_payment_unzer_order_item   | table | created |
+| spy_payment_unzer_transaction  | table | created |
+| spy_payment_unzer_notification | table | created |
+| spy_payment_unzer_customer     | table | created |
+| spy_unzer_credentials          | table | created |
+| spy_unzer_credentials_store    | table | created |
+| spy_unzer_credentials_store    | table | created |
+| spy_payment_unzer_api_log      | table | created |
+
+{% endinfo_block %}
+
+{% info_block warningBox "Verification" %}
+
+Make sure that the following changes have been triggered in transfer objects:
+
+| TRANSFER                              | TYPE      | EVENT   | PATH                                                                        |
+|---------------------------------------|-----------|---------|-----------------------------------------------------------------------------|
+| UnzerAddress                          | class     | created | src/Generated/Shared/Transfer/UnzerAddressTransfer                          |
+| UnzerApiAuthorizeRequest              | class     | created | src/Generated/Shared/Transfer/UnzerApiAuthorizeRequestTransfer              |
+| UnzerApiAuthorizeResponse             | class     | created | src/Generated/Shared/Transfer/UnzerApiAuthorizeResponseTransfer             |
+| UnzerApiChargeRequest                 | class     | created | src/Generated/Shared/Transfer/UnzerApiChargeRequestTransfer                 |
+| UnzerApiChargeResponse                | class     | created | src/Generated/Shared/Transfer/UnzerApiChargeResponseTransfer                |
+| UnzerApiCreateBasketRequest           | class     | created | src/Generated/Shared/Transfer/UnzerApiCreateBasketRequestTransfer           |
+| UnzerApiCreateBasketResponse          | class     | created | src/Generated/Shared/Transfer/UnzerApiCreateBasketResponseTransfer          |
+| UnzerApiCreateCustomerRequest         | class     | created | src/Generated/Shared/Transfer/UnzerApiCreateCustomerRequestTransfer         |
+| UnzerApiCreateCustomerResponse        | class     | created | src/Generated/Shared/Transfer/UnzerApiCreateCustomerResponseTransfer        |
+| UnzerApiCreateMetadataRequest         | class     | created | src/Generated/Shared/Transfer/UnzerApiCreateMetadataRequestTransfer         |
+| UnzerApiCreateMetadataResponse        | class     | created | src/Generated/Shared/Transfer/UnzerApiCreateMetadataResponseTransfer        |
+| UnzerApiCreatePaymentResourceRequest  | class     | created | src/Generated/Shared/Transfer/UnzerApiCreatePaymentResourceRequestTransfer  |
+| UnzerApiCreatePaymentResourceResponse | class     | created | src/Generated/Shared/Transfer/UnzerApiCreatePaymentResourceResponseTransfer |
+| UnzerApiDeleteWebhookRequest          | class     | created | src/Generated/Shared/Transfer/UnzerApiDeleteWebhookRequestTransfer          |
+| UnzerApiDeleteWebhookResponse         | class     | created | src/Generated/Shared/Transfer/UnzerApiDeleteWebhookResponseTransfer         |
+| UnzerApiErrorResponse                 | class     | created | src/Generated/Shared/Transfer/UnzerApiErrorResponseTransfer                 |
+| UnzerApiGetPaymentMethodsRequest      | class     | created | src/Generated/Shared/Transfer/UnzerApiGetPaymentMethodsRequestTransfer      |
+| UnzerApiGetPaymentMethodsResponse     | class     | created | src/Generated/Shared/Transfer/UnzerApiGetPaymentMethodsResponseTransfer     |
+| UnzerApiGetPaymentRequest             | class     | created | src/Generated/Shared/Transfer/UnzerApiGetPaymentRequestTransfer             |
+| UnzerApiGetPaymentResponse            | class     | created | src/Generated/Shared/Transfer/UnzerApiGetPaymentResponseTransfer            |
+| UnzerApiGetWebhookRequest             | class     | created | src/Generated/Shared/Transfer/UnzerApiGetWebhookRequestTransfer             |
+| UnzerApiGetWebhookResponse            | class     | created | src/Generated/Shared/Transfer/UnzerApiGetWebhookResponseTransfer            |
+| UnzerApiMarketplaceAuthorizeRequest   | class     | created | src/Generated/Shared/Transfer/UnzerApiMarketplaceAuthorizeRequestTransfer   |
+| UnzerApiMarketplaceAuthorizeResponse  | class     | created | src/Generated/Shared/Transfer/UnzerApiMarketplaceAuthorizeResponseTransfer  |
+| UnzerApiMarketplaceRefundRequest      | class     | created | src/Generated/Shared/Transfer/UnzerApiMarketplaceRefundRequestTransfer      |
+| UnzerApiMarketplaceRefundResponse     | class     | created | src/Generated/Shared/Transfer/UnzerApiMarketplaceRefundResponseTransfer     |
+| UnzerApiMarketplaceTransaction        | class     | created | src/Generated/Shared/Transfer/UnzerApiMarketplaceTransactionTransfer        |
+| UnzerApiMessage                       | class     | created | src/Generated/Shared/Transfer/UnzerApiMessageTransfer                       |
+| UnzerApiPaymentMethod                 | class     | created | src/Generated/Shared/Transfer/UnzerApiPaymentMethodTransfer                 |
+| UnzerApiPaymentTransaction            | class     | created | src/Generated/Shared/Transfer/UnzerApiPaymentTransactionTransfer            |
+| UnzerApiRefundRequest                 | class     | created | src/Generated/Shared/Transfer/UnzerApiRefundRequestTransfer                 |
+| UnzerApiRefundResponse                | class     | created | src/Generated/Shared/Transfer/UnzerApiRefundResponseTransfer                |
+| UnzerApiRequest                       | class     | created | src/Generated/Shared/Transfer/UnzerApiRequestTransfer                       |
+| UnzerApiResponse                      | class     | created | src/Generated/Shared/Transfer/UnzerApiResponseTransfer                      |
+| UnzerApiResponseError                 | class     | created | src/Generated/Shared/Transfer/UnzerApiResponseErrorTransfer                 |
+| UnzerApiSetWebhookRequest             | class     | created | src/Generated/Shared/Transfer/UnzerApiSetWebhookRequestTransfer             |
+| UnzerApiSetWebhookResponse            | class     | created | src/Generated/Shared/Transfer/UnzerApiSetWebhookResponseTransfer            |
+| UnzerApiUpdateCustomerRequest         | class     | created | src/Generated/Shared/Transfer/UnzerApiUpdateCustomerRequestTransfer         |
+| UnzerApiUpdateCustomerResponse        | class     | created | src/Generated/Shared/Transfer/UnzerApiUpdateCustomerResponseTransfer        |
+| UnzerBasket                           | class     | created | src/Generated/Shared/Transfer/UnzerBasketTransfer                           |
+| UnzerBasketItem                       | class     | created | src/Generated/Shared/Transfer/UnzerBasketItemTransfer                       |
+| UnzerCharge                           | class     | created | src/Generated/Shared/Transfer/UnzerChargeTransfer                           |
+| UnzerCredentials                      | class     | created | src/Generated/Shared/Transfer/UnzerCredentialsTransfer                      |
+| UnzerCredentialsCollection            | class     | created | src/Generated/Shared/Transfer/UnzerCredentialsCollectionTransfer            |
+| UnzerCredentialsConditions            | class     | created | src/Generated/Shared/Transfer/UnzerCredentialsConditionsTransfer            |
+| UnzerCredentialsCriteria              | class     | created | src/Generated/Shared/Transfer/UnzerCredentialsCriteriaTransfer              |
+| UnzerCredentialsParameterMessage      | class     | created | src/Generated/Shared/Transfer/UnzerCredentialsParameterMessageTransfer      |
+| UnzerCredentialsResponse              | class     | created | src/Generated/Shared/Transfer/UnzerCredentialsResponseTransfer              |
+| UnzerCustomer                         | class     | created | src/Generated/Shared/Transfer/UnzerCustomerTransfer                         |
+| UnzerGeolocation                      | class     | created | src/Generated/Shared/Transfer/UnzerGeolocationTransfer                      |
+| UnzerKeypair                          | class     | created | src/Generated/Shared/Transfer/UnzerKeypairTransfer                          |
+| UnzerMetadata                         | class     | created | src/Generated/Shared/Transfer/UnzerMetadataTransfer                         |
+| UnzerNotification                     | class     | created | src/Generated/Shared/Transfer/UnzerNotificationTransfer                     |
+| UnzerNotificationConfig               | class     | created | src/Generated/Shared/Transfer/UnzerNotificationConfigTransfer               |
+| UnzerPayment                          | class     | created | src/Generated/Shared/Transfer/UnzerPaymentTransfer                          |
+| UnzerPaymentResource                  | class     | created | src/Generated/Shared/Transfer/UnzerPaymentResourceTransfer                  |
+| UnzerRefund                           | class     | created | src/Generated/Shared/Transfer/UnzerRefundTransfer                           |
+| UnzerRefundItem                       | class     | created | src/Generated/Shared/Transfer/UnzerRefundItemTransfer                       |
+| UnzerRefundItemCollection             | class     | created | src/Generated/Shared/Transfer/UnzerRefundItemCollectionTransfer             |
+| UnzerTransaction                      | class     | created | src/Generated/Shared/Transfer/UnzerTransactionTransfer                      |
+| UnzerWebhook                          | class     | created | src/Generated/Shared/Transfer/UnzerWebhookTransfer                          |
+| Address                               | class     | created | src/Generated/Shared/Transfer/AddressTransfer                               |																									
+| CheckoutResponse                      | class     | created | src/Generated/Shared/Transfer/CheckoutResponseTransfer                      |																									
+| Currency                              | class     | created | src/Generated/Shared/Transfer/CurrencyTransfer                              |																									
+| Customer                              | class     | created | src/Generated/Shared/Transfer/CustomerTransfer                              |																									
+| Expense                               | class     | created | src/Generated/Shared/Transfer/ExpenseTransfer                               |																									
+| Item                                  | class     | created | src/Generated/Shared/Transfer/ItemTransfer                                  |																									
+| ItemCollection                        | class     | created | src/Generated/Shared/Transfer/ItemCollectionTransfer                        |																									
+| Locale                                | class     | created | src/Generated/Shared/Transfer/LocaleTransfer                                |																									
+| Merchant                              | class     | created | src/Generated/Shared/Transfer/MerchantTransfer                              |																									
+| MerchantCollection                    | class     | created | src/Generated/Shared/Transfer/MerchantCollectionTransfer                    |																									
+| MerchantCriteria                      | class     | created | src/Generated/Shared/Transfer/MerchantCriteriaTransfer                      |																									
+| MerchantResponse                      | class     | created | src/Generated/Shared/Transfer/MerchantResponseTransfer                      |																									
+| MerchantUnzerParticipant              | class     | created | src/Generated/Shared/Transfer/MerchantUnzerParticipantTransfer              |																									
+| MerchantUnzerParticipantCollection    | class     | created | src/Generated/Shared/Transfer/MerchantUnzerParticipantCollectionTransfer    |																									
+| MerchantUnzerParticipantConditions    | class     | created | src/Generated/Shared/Transfer/MerchantUnzerParticipantConditionsTransfer    |																									
+| MerchantUnzerParticipantCriteria      | class     | created | src/Generated/Shared/Transfer/MerchantUnzerParticipantCriteriaTransfer      |																									
+| Message                               | class     | created | src/Generated/Shared/Transfer/MessageTransfer                               |																									
+| Order                                 | class     | created | src/Generated/Shared/Transfer/OrderTransfer                                 |																									
+| OrderFilter                           | class     | created | src/Generated/Shared/Transfer/OrderFilterTransfer                           |																									
+| OrderItemFilter                       | class     | created | src/Generated/Shared/Transfer/OrderItemFilterTransfer                       |																									
+| Pagination                            | class     | created | src/Generated/Shared/Transfer/PaginationTransfer                            |																									
+| Payment                               | class     | created | src/Generated/Shared/Transfer/PaymentTransfer                               |																									
+| PaymentMethod                         | class     | created | src/Generated/Shared/Transfer/PaymentMethodTransfer                         |																									
+| PaymentMethodCollectionRequest        | class     | created | src/Generated/Shared/Transfer/PaymentMethodCollectionRequestTransfer        |																									
+| PaymentMethodCollectionResponse       | class     | created | src/Generated/Shared/Transfer/PaymentMethodCollectionResponseTransfer       |																									
+| PaymentMethods                        | class     | created | src/Generated/Shared/Transfer/PaymentMethodsTransfer                        |																									
+| PaymentProvider                       | class     | created | src/Generated/Shared/Transfer/PaymentProviderTransfer                       |																									
+| PaymentProviderCollection             | class     | created | src/Generated/Shared/Transfer/PaymentProviderCollectionTransfer             |																									
+| PaymentProviderCollectionRequest      | class     | created | src/Generated/Shared/Transfer/PaymentProviderCollectionRequestTransfer      |																									
+| PaymentProviderCollectionResponse     | class     | created | src/Generated/Shared/Transfer/PaymentProviderCollectionResponseTransfer     |																									
+| PaymentProviderConditions             | class     | created | src/Generated/Shared/Transfer/PaymentProviderConditionsTransfer             |																									
+| PaymentProviderCriteria               | class     | created | src/Generated/Shared/Transfer/PaymentProviderCriteriaTransfer               |																									
+| PaymentUnzer                          | class     | created | src/Generated/Shared/Transfer/PaymentUnzerTransfer                          |																									
+| PaymentUnzerApiLog                    | class     | created | src/Generated/Shared/Transfer/PaymentUnzerApiLogTransfer                    |																									
+| PaymentUnzerOrderItem                 | class     | created | src/Generated/Shared/Transfer/PaymentUnzerOrderItemTransfer                 |																									
+| PaymentUnzerOrderItemCollection       | class     | created | src/Generated/Shared/Transfer/PaymentUnzerOrderItemCollectionTransfer       |																									
+| PaymentUnzerTransaction               | class     | created | src/Generated/Shared/Transfer/PaymentUnzerTransactionTransfer               |																									
+| PaymentUnzerTransactionCollection     | class     | created | src/Generated/Shared/Transfer/PaymentUnzerTransactionCollectionTransfer     |																									
+| PaymentUnzerTransactionConditions     | class     | created | src/Generated/Shared/Transfer/PaymentUnzerTransactionConditionsTransfer     |																									
+| PaymentUnzerTransactionCriteria       | class     | created | src/Generated/Shared/Transfer/PaymentUnzerTransactionCriteriaTransfer       |																									
+| Quote                                 | class     | created | src/Generated/Shared/Transfer/QuoteTransfer                                 |																									
+| Refund                                | class     | created | src/Generated/Shared/Transfer/RefundTransfer                                |																									
+| RestUnzerNotificationAttributes       | class     | created | src/Generated/Shared/Transfer/RestUnzerNotificationAttributesTransfer       |																									
+| SaveOrder                             | class     | created | src/Generated/Shared/Transfer/SaveOrderTransfer                             |																									
+| Shipment                              | class     | created | src/Generated/Shared/Transfer/ShipmentTransfer                              |																									
+| ShipmentMethod                        | class     | created | src/Generated/Shared/Transfer/ShipmentMethodTransfer                        |																									
+| Sort                                  | class     | created | src/Generated/Shared/Transfer/SortTransfer                                  |																									
+| Store                                 | class     | created | src/Generated/Shared/Transfer/StoreTransfer                                 |																									
+| StoreRelation                         | class     | created | src/Generated/Shared/Transfer/StoreRelationTransfer                         |																									
+| TabItem                               | class     | created | src/Generated/Shared/Transfer/TabItemTransfer                               |																									
+| TabsView                              | class     | created | src/Generated/Shared/Transfer/TabsViewTransfer                              |																									
+| TaxTotal                              | class     | created | src/Generated/Shared/Transfer/TaxTotalTransfer                              |																									
+| Totals                                | class     | created | src/Generated/Shared/Transfer/TotalsTransfer                                |
+
+{% endinfo_block %}
+
+---
+
+### 3) Add translations
+
+Append glossary according to your configuration:
+
+**data/import/common/common/glossary.csv**
+
+```
+oms.state.authorize-succeeded,Authorization succeeded,en_US
+oms.state.authorize-succeeded,Authorization succeeded,de_DE
+oms.state.payment-completed,Payment completed,en_US
+oms.state.payment-completed,Payment completed,de_DE
+oms.state.charge-pending,Charge pending,en_US
+oms.state.charge-pending,Charge pending,de_DE
+oms.state.authorize-pending,Authorization pending,en_US
+oms.state.authorize-pending,Authorization pending,de_DE
+UnzerMarketplaceCreditCard,Unzer Marketplace Credit Card,en_US
+UnzerMarketplaceCreditCard,Unzer Marktplatz Kreditkarte,de_DE
+UnzerCreditCard,Credit Card,en_US
+UnzerCreditCard,Kreditkarte,de_DE
+UnzerSofort,Unzer Sofort,en_US
+UnzerSofort,Unzer Sofort,de_DE
+UnzerBankTransfer,Unzer Bank Transfer,en_US
+UnzerBankTransfer,Unzer Bank Transfer,de_DE
+UnzerMarketpaceSofort,Unzer Marketplace Sofort,en_US
+UnzerMarketplaceSofort,Unzer Marktplatz Sofort,de_DE
+UnzerMarketplaceBankTransfer,Unzer Marketplace Bank Transfer,en_US
+UnzerMarketplaceBankTransfer,Unzer Marktplatz Bank Transfer,de_DE
+checkout.payment.provider.Unzer,Unzer,en_US
+checkout.payment.provider.Unzer,Unzer,de_DE
+```
+
+Run the following console command to import data:
+
+```bash
+console data:import glossary
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that in the database the configured data are added to the `spy_glossary` table.
+
+{% endinfo_block %}
+
+---
+
+### 4) Add Zed translations
+
+Generate a new translation cache for Zed:
+
+```bash
+console translator:generate-cache
+```
+
+{% info_block warningBox "Verification" %}
+
+Make sure that all labels and help tooltips in the Unzer forms have English and German translations.
+
+{% endinfo_block %}
+
+---
+
+### 5) Set up behavior
+
+Set up the following behaviors:
+
+| PLUGIN                                      | SPECIFICATION                                                                                                                                                | PREREQUISITES | NAMESPACE                                               |
+|---------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|---------------------------------------------------------|
+| UnzerCredentialsCartOperationPostSavePlugin | Expands `QuoteTransfer` with `UnzerCredentialsTransfer` according to the added items.                                                                            | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Cart          |
+| UnzerCheckoutDoSaveOrderPlugin              | Saves Unzer payment details to Persistence.                                                                                                                  | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Checkout      |
+| UnzerCheckoutPostSavePlugin                 | Executes Unzer API calls and saves payment detailed info to Persistence.                                                                                    | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Checkout      |
+| UnzerCheckoutPreSaveOrderPlugin             | Performs Unzer Create Customer, Unzer Update Customer, and Unzer Create Metadata API calls.                                                                   | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Checkout      |
+| UnzerChargeCommandByOrderPlugin             | Executes Unzer API Charge request and saves Unzer payment details to Persistence.                                                                            | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Oms\Command   |
+| UnzerRefundCommandByOrderPlugin             | Executes Unzer API Refund request and saves Unzer payment details to Persistence.                                                                            | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Oms\Command   |
+| UnzerIsAuthorizeCanceledConditionPlugin     | Checks if Unzer Authorization is canceled.                                                                                                                   | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Oms\Condition |
+| UnzerIsAuthorizeFailedConditionPlugin       | Checks if Unzer Authorization is failed.                                                                                                                     | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Oms\Condition |
+| UnzerIsAuthorizePendingConditionPlugin      | Checks if Unzer Authorization is pending.                                                                                                                    | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Oms\Condition |
+| UnzerIsAuthorizeSucceededConditionPlugin    | Checks if Unzer Authorization is successful.                                                                                                                 | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Oms\Condition |
+| UnzerIsChargeFailedConditionPlugin          | Checks if Unzer Charge failed.                                                                                                                               | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Oms\Condition |
+| UnzerIsPaymentChargebackConditionPlugin     | Checks if Unzer Payment is charged-back.                                                                                                                     | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Oms\Condition |
+| UnzerIsPaymentCompletedConditionPlugin      | Checks if Unzer Payment is completed.                                                                                                                        | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Oms\Condition |
+| UnzerEnabledPaymentMethodFilterPlugin       | Takes enabled payment methods from `QuoteTransfer` received from the Unzer local config and filters the given payment methods based on the enabled payment methods.  | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Payment       |
+| UnzerMarketplacePaymentMethodFilterPlugin   | Filters available marketplace payment methods based on quote items.                                                                                          | None          | SprykerEco\Zed\Unzer\Communication\Plugin\Payment       |
+| StoreRelationToggleFormTypePlugin           | Represents a store relation toggle form based on stores registered in the system.                                                                            | None          | Spryker\Zed\Store\Communication\Plugin\Form             |
+| UnzerStepHandlerPlugin                      | Sets payment provider and payment method based on the payment selection.                                                                                         | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
+| UnzerCreditCardSubFormPlugin                | Creates the `CreditCard` subform.                                                                                                                                | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
+| UnzerBankTransferSubFormPlugin              | Creates the `BankTransfer` subform.                                                                                                                              | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
+| UnzerSofortSubFormPlugin                    | Creates the `Sofort` subform.                                                                                                                                    | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
+| UnzerMarketplaceBankTransferSubFormPlugin   | Creates the `Marketplace BankTransfer` subform data provider.                                                                                                    | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
+| UnzerMarketplaceCreditCardSubFormPlugin     | Creates the `MarketplaceCreditCard` subform.                                                                                                                     | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
+| UnzerMarketplaceSofortSubFormPlugin         | Creates the `Marketplace Sofort` subform.                                                                                                                        | None          | SprykerEco\Yves\Unzer\Plugin\StepEngine                 |
+
+1.Add the Unzer plugin for `CartDepenencyProvider`:
+
+<details>
+<summary markdown='span'>src/Pyz/Zed/Cart/CartDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -104,8 +357,9 @@ class CartDependencyProvider extends SprykerCartDependencyProvider
     ...
 }
 ```
+</details>
 
-4. Add checkout Unzer plugins for integrating into the checkout flow:
+2. Add checkout Unzer plugins for integrating into the checkout flow:
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/Checkout/CheckoutDependencyProvider.php</summary>
@@ -171,7 +425,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 ```
 </details>
 
-5. In `OmsDependencyProvider`, add the OMS command and condition plugins:
+3. In `OmsDependencyProvider`, add the OMS command and condition plugins:
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/Oms/OmsDependencyProvider.php</summary>
@@ -243,7 +497,7 @@ class OmsDependencyProvider extends SprykerOmsDependencyProvider
 ```
 </details>
 
-6. Add Unzer payment filter plugins:
+4. Add Unzer payment filter plugins:
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/Payment/PaymentDependencyProvider.php</summary>
@@ -279,7 +533,7 @@ class PaymentDependencyProvider extends SprykerPaymentDependencyProvider
 
 </details>
 
-7. To use Unzer expense refund strategies, disable the default refund flow by overriding `RefundBusinessFactory`:
+5. To use Unzer expense refund strategies, disable the default refund flow by overriding `RefundBusinessFactory`:
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/Refund/Business/RefundBusinessFactory.php</summary>
@@ -318,7 +572,7 @@ class RefundBusinessFactory extends SprykerRefundBusinessFactory
 
 </details>
 
-8. To use Unzer Gui, override `UnzerGuiDependencyProvider`:
+6. To use Unzer Gui, override `UnzerGuiDependencyProvider`:
 
 <details>
 <summary markdown='span'>src/Pyz/Zed/UnzerGui/UnzerGuiDependencyProvider.php</summary>
@@ -352,10 +606,10 @@ class UnzerGuiDependencyProvider extends SprykerUnzerGuiDependencyProvider
 
 </details>
 
-9. Add `StepHandler` plugins to `CheckoutPageDependencyProvider`:
+7. Add `StepHandler` plugins to `CheckoutPageDependencyProvider`:
 
 <details>
-<summary markdown='span'>src/Pyz/Zed/UnzerGui/UnzerGuiDependencyProvider.php</summary>
+<summary markdown='span'>src/Pyz/Yves/CheckoutPage/CheckoutPageDependencyProvider.php</summary>
 
 ```php
 <?php
@@ -376,7 +630,10 @@ use SprykerEco\Yves\Unzer\Plugin\StepEngine\UnzerMarketplaceCreditCardSubFormPlu
 use SprykerEco\Yves\Unzer\Plugin\StepEngine\UnzerMarketplaceSofortSubFormPlugin;
 use SprykerEco\Yves\Unzer\Plugin\StepEngine\UnzerSofortSubFormPlugin;
 use SprykerEco\Yves\Unzer\Plugin\StepEngine\UnzerStepHandlerPlugin;
+use SprykerShop\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerShopCheckoutPageDependencyProvider;
 
+class CheckoutPageDependencyProvider extends SprykerShopCheckoutPageDependencyProvider
+{
     /**
      * @param \Spryker\Yves\Kernel\Container $container
      *
@@ -419,33 +676,23 @@ use SprykerEco\Yves\Unzer\Plugin\StepEngine\UnzerStepHandlerPlugin;
         });
     }
 }
-
 ```
 
 </details>
 
-10. Add Unzer payment templates:
+---
 
-<details>
-<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
+## Install feature frontend
 
-```twig
-    customForms: {
-        'Payone/credit_card': ['credit-card', 'payone'],
-        'Payone/instant_online_transfer': ['instant-online-transfer', 'payone'],
-        'Unzer/views/marketplace-credit-card/marketplace-credit-card': ['marketplace-credit-card', 'unzer'],
-        'Unzer/views/credit-card/credit-card': ['credit-card', 'unzer'],
-        'Unzer/views/marketplace-sofort': ['marketplace-sofort', 'unzer'],
-        'Unzer/views/sofort': ['sofort', 'unzer'],
-        'Unzer/views/marketplace-bank-transfer': ['marketplace-bank-transfer', 'unzer'],
-        'Unzer/views/bank-transfer': ['bank-transfer', 'unzer'],
-    },
-} %}
-```
+Follow these steps to install the Unzer feature front end.
 
-</details>
+### 1) Set up behavior
 
-11. Add Unzer routes for Yves:
+Set up the following behaviors:
+
+| PLUGIN                   | SPECIFICATION                                | PREREQUISITES | NAMESPACE                           |
+|--------------------------|----------------------------------------------|---------------|-------------------------------------|
+| UnzerRouteProviderPlugin | Adds Unzer module routes to RouteCollection. | None          | SprykerEco\Yves\Unzer\Plugin\Router |
 
 <details>
 <summary markdown='span'>src/Pyz/Yves/Router/RouterDependencyProvider.php</summary>
@@ -481,3 +728,30 @@ class RouterDependencyProvider extends SprykerRouterDependencyProvider
 ```
 
 </details>
+
+### 2) Set up template
+
+<details>
+<summary markdown='span'>src/Pyz/Yves/CheckoutPage/Theme/default/views/payment/payment.twig</summary>
+
+```twig
+{% raw %}{%{% endraw %} define data = {
+    ...
+    customForms: {
+        'Unzer/views/marketplace-credit-card/marketplace-credit-card': ['marketplace-credit-card', 'unzer'],
+        'Unzer/views/credit-card/credit-card': ['credit-card', 'unzer'],
+        'Unzer/views/marketplace-sofort': ['marketplace-sofort', 'unzer'],
+        'Unzer/views/sofort': ['sofort', 'unzer'],
+        'Unzer/views/marketplace-bank-transfer': ['marketplace-bank-transfer', 'unzer'],
+        'Unzer/views/bank-transfer': ['bank-transfer', 'unzer'],
+    },
+} {% raw %}%}{% endraw %}
+```
+
+</details>
+
+### 3) Enable Javascript and CSS changes
+
+```bash
+console frontend:yves:build
+```

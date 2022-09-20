@@ -32,7 +32,7 @@ To edit a payment method in the Back Office, follow the steps:
     * Select the stores you want to make this payment method available in.
     * Clear the checkboxes next to the stores you want to make this payment method unavailable in.
 6. Click **Save**.
-    This opens the **Payment Methods** page with a success message displayed. The changes are reflected in the table.
+    This opens the **Payment Methods** page with a success message displayed. The changes are reflected on the **Payment Methods** page. The activated the payment methods becomes available for your customers at the checkout.
 
 
 ## Reference information: Editing payment method pages

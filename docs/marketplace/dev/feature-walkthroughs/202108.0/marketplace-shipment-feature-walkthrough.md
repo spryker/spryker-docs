@@ -39,7 +39,7 @@ The following schema illustrates the Marketplace Shipment domain model:
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  |
+|INSTALLATION GUIDES  |
 |---------|
 | [Marketplace Shipment feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-feature-integration.html) |  |
 | [Marketplace Shipment + Cart feature integration](/docs/marketplace/dev/feature-integration-guides/{{page.version}}/marketplace-shipment-cart-feature-integration.html) |  |

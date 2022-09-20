@@ -17,4 +17,4 @@ related:
     link: docs/scos/dev/feature-walkthroughs/page.version/product-labels-feature-walkthrough.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-the-alternative-products-product-label-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-alternative-products-product-label-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-alternative-products-product-label-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-alternative-products-product-label-feature.md -->

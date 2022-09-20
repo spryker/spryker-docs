@@ -12,11 +12,36 @@
     color: $grey-darker;
     background: $white;
 
+    @include media(">=desktop") {
+        overflow: auto;
+        max-height: 400px;
+        scrollbar-color: $grey $grey-lighten;
+        scrollbar-width: thin;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+    
+        &::-webkit-scrollbar-track {
+            background-color: $grey-lighten;
+            border-radius: 4px;
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background: $grey;
+        }
+    }
+
     .dropdown-menu--dark & {
-        @include media(">=tablet") {
+        @include media(">=desktop") {
             color: $grey-2;
             background: $darkest;
             border-color: $grey-darker;
+
+            &::-webkit-scrollbar-track {
+                background-color: transparent;
+            }
         }
     }
 

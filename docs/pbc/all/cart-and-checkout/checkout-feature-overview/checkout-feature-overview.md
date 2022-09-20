@@ -37,7 +37,7 @@ With order thresholds, you can do the following:
 
 ## Related Business User articles
 
-|OVERVIEWS|
+|OVERVIEWS| BACK OFFICE USER GUIDES |
 |---|
 | [Multi-step Checkout](/docs/pbc/all/cart-and-checkout/checkout-feature-overview/multi-step-checkout-overview.html)  |
 | [Order Thresholds](/docs/scos/user/features/{{page.version}}/checkout-feature-overview/order-thresholds-overview.html)  |

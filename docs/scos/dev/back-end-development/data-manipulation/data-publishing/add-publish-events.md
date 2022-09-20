@@ -1,5 +1,5 @@
 ---
-title: Adding publish events
+title: Add publish events
 description: Learn how to add publish events for Publish and Synchronization.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/adding-publish-events
   - /v6/docs/adding-publish-events
   - /v6/docs/en/adding-publish-events
+  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/adding-publish-events.html
 related:
   - title: Publish and Synchronization
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
@@ -23,8 +24,8 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html
   - title: Implementing synchronization plugins
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
-  - title: Debugging listeners
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debugging-listeners.html
+  - title: Debug listeners
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
   - title: Publish and Synchronize and multi-store shop systems
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
   - title: Publish and Synchronize repeated export
@@ -96,7 +97,6 @@ class GlossaryStorageConfig extends AbstractBundleConfig
 }
 ```
 
-
 3. Adjust the RabbitMQ configuration with the newly introduced publish queue:
 
 
@@ -132,7 +132,7 @@ class RabbitMqConfig extends SprykerRabbitMqConfig
 }    
 ```
 
-4. Implement and register the Publisher plugin for the glossary storage module in `\Pyz\Zed\Publisher\PublisherDependencyProvider` with defined `publish.translation` queue.
+4. Implement and register the `Publisher` plugin for the glossary storage module in `\Pyz\Zed\Publisher\PublisherDependencyProvider` with the defined `publish.translation` queue.
 
 ```php
 <?php

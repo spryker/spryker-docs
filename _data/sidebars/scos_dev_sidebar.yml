@@ -3445,16 +3445,16 @@ entries:
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
         - title: Publish and Synchronize and multi-store shop systems
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
-        - title: Adding publish events
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/adding-publish-events.html
+        - title: Add publish events
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/ad-publish-events.html
         - title: Handling data with Publish and Synchronization
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html
         - title: Implementing synchronization plugins
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
         - title: Implementing event trigger publisher plugins
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html
-        - title: Debugging listeners
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/debugging-listeners.html
+        - title: Debug listeners
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
         - title: Synchronization behavior - enabling multiple mappings
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
       - title: DataPayload Conversion

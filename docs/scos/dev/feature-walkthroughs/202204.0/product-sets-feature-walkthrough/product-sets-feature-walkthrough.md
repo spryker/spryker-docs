@@ -1,13 +1,13 @@
 ---
 title: Product Sets feature walkthrough
 last_updated: Aug 19, 2021
-description: The Product Sets feature allows creating and selling collections of products
+description: The Product Sets feature lets you create and sale collections of products
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/product-sets-feature-walkthrough/product-sets-feature-walkthrough.html
 ---
 
-The _Product Sets_ feature allows creating and selling collections of products.
+The _Product Sets_ feature lets you create and sale collections of products.
 
 
 To learn more about the feature and to find out how end users use it, see [Product Sets feature overview](/docs/scos/user/features/{{page.version}}/product-sets-feature-overview.html) for business users.

@@ -6,13 +6,13 @@ redirect_from: /docs/marketplace/dev/feature-walkthroughs/202204.0/merchant.html
 ---
 
 The *Merchant* feature provides the core functionality for the SCOS B2B and Marketplace with the basic create-read-update operations over the Merchant entity.
-You cannot delete a merchant, but only deactivate.
+You cannot delete a merchant account but only deactivate it.
 
 ## Main Merchant feature modules
 
 | NAME | Description |
-| -------------------- | ---------- |
-| [Merchant](https://github.com/spryker/merchant)          | Keeps the core create-read-update functionality of a merchant. |
+| ---| --- |
+| [Merchant](https://github.com/spryker/merchant) | Keeps the core create-read-update functionality of a merchant. |
 
 ## Entity diagram
 

@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/cart-feature-walkthrough/cart-feature-walkthrough.html
 ---
 
-The _Cart_ feature provides functionality of the shopping cart and cart total calculations.
+The _Cart_ feature provides the functionality of the shopping cart and cart total calculations.
 
 To learn more about the feature and to find out how end users use it, see [Cart](/docs/scos/user/features/{{page.version}}/cart-feature-overview/cart-feature-overview.html) for business users.
 

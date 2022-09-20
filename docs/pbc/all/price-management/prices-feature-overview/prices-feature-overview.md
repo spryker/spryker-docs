@@ -55,14 +55,14 @@ In the last two cases described, since product variants don't have prices, custo
 
 Prices are stored as an integer, in the smallest unit of a currency. For example, for Euro prices are stored in cents.
 
-Each price is assigned to a price type, like gross or net price. For a price type, there can be *one* to *n* product prices defined. Price type entity is used to differentiate between use cases. For example, you can have DEFAULT and ORIGINAL types to use for sale pricing.
+Each price is assigned to a price type, like DEFAULT or ORIGINAL price. For a price type, there can be *one* to *n* product prices defined. Price type entity is used to differentiate between use cases. For example, you can have DEFAULT and ORIGINAL types to use for sale pricing.
 
 The price can have a gross or net value which can be used based on a price mode selected by a customer on the Storefront. You can have a shop running in both modes and select the net mode for the business customer, for example. Price also has currency and store assigned to it.
 ![Price calculation](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Price+Functionality/price_calculation.png)
 
 ## Price retrieving logic
 
-If a concrete product doesn’t have a price entity stored, it inherits the values stored for its abstract product. When fetching the price of a concrete product, the price entity of the respective concrete product SKU is checked. If the entity exists, the price is returned. If not, an abstract product owning that concrete product is queries and it's price entity is checked. If it exists, the abstract product's price is returned for the concrete product. If it does not exist an exception is thrown.
+If a concrete product doesn’t have a price entity stored, it inherits the values stored for its abstract product. When fetching the price of a concrete product, the price entity of the respective concrete product SKU is checked. If the entity exists, the price is returned. If not, an abstract product owning that concrete product is queried and it's price entity is checked. If it exists, the abstract product's price is returned for the concrete product. If it does not exist an exception is thrown.
 
 The following diagram summarizes the logic for retrieving the price for a product:
 ![Price retrieval logic](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Price/Price+Functionality/price_retrieval_logic.png)
@@ -78,7 +78,7 @@ The following diagram summarizes the logic for retrieving the price for a produc
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES  | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS | REFERENCES |
+| INSTALLATION GUIDES  | GLUE API GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS | REFERENCES |
 |---|---|---|---|---|
 | [Install the Prices feature](/docs/pbc/all/price-management/install-and-upgrade/install-features/install-the-prices-feature.html) | [Retrieving abstract product prices](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html) | [File details: product_price.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-product-price.csv.html) | [HowTo: Handle twenty five million prices in Spryker Commerce OS](/docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html) | [Money module: reference information](/docs/pbc/all/price-management/extend-and-customize/money-module-reference-information.html) |
 | [Install the Product Price Glue API](/docs/pbc/all/price-management/install-and-upgrade/install-features/install-the-product-price-glue-api.html) | [Retrieving concrete product prices](/docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html) |  |  | [PriceProduct module details: reference information](/docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html) |

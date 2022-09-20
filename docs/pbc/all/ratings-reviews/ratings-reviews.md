@@ -31,7 +31,7 @@ For more details about managing ratings and reviews, check the video:
 | NAME | MARKETPLACE COMPATIBLE | AVAILABLE IN ACP |
 | --- | --- | --- |
 | Spryker | No | No |
-| [Bazaarvoice](/docs/pbc/all/ratings-reviews/bazaarvoice.html) | No | Yes |
+| [Bazaarvoice](/docs/pbc/all/ratings-reviews/bazaarvoice/bazaarvoice.html) | No | Yes |
 
 ## Current constraints
 
@@ -49,5 +49,5 @@ The feature has the following functional constraints, which are going to be reso
 
 |INTEGRATION GUIDES | GLUE API GUIDES  | DATA IMPORT |
 |---------|---------|---------|
-| [Product Rating & Reviews feature integration](/docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-feature.html) | [Managing product ratings and reviews](/docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html)  | [File details: product_review.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html)  |
+| [Product Rating & Reviews feature integration](/docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-feature.html) | [Managing product ratings and reviews](/docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html)  | [File details: product_review.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html)  |
 |[Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)   |   |  |

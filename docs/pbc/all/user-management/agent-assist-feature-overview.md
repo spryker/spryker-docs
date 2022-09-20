@@ -51,8 +51,11 @@ Check out this video tutorial on setting up an Agent user in a B2B company accou
 |---|
 | [Create an agent user](/docs/scos/user/back-office-user-guides/{{page.version}}/users/managing-users/creating-users.html#creating-users) |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Agent Assist feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/agent-assist-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+|INSTALLATION GUIDES  |GLUE API GUIDES  |DATA IMPORT  |
+|---------|---------|---------|
+| [Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/agent-assist-feature-integration.html)  | [Authenticating as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/authenticating-as-an-agent-assist.html)  |
+| [Glue API: Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-agent-assist-feature-integration.html) | [Searching by customers as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/searching-by-customers-as-an-agent-assist.html) |
+| [Customer Account Management feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-feature-integration.html) | [Impersonating customers as an agent assist](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/impersonating-customers-as-an-agent-assist.html) |
+|  [Customer Account Management + Agent Assist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/customer-account-management-agent-assist-feature-integration.html) | [Managing agent assist authentication tokens](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-agent-assists/managing-agent-assist-authentication-tokens.html)|

@@ -43,7 +43,7 @@ The following image demonstrates how barcodes are assigned depending on whether 
 
 ![product-bundle-vs-configurable-bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/product-barcode-feature-overview/product-bundle-versus-configurable-bundle.png)
 
-You can see the barcodes in the Back Office, in the **Catalog&nbsp;<span aria-label="and then">></span> Product Barcodes** section. The section is designed as a review; thus, no actual actions are performed here. The barcode is generated automatically once a new concrete product is added.
+You can view the barcodes in the Back Office, in the **Catalog&nbsp;<span aria-label="and then">></span> Product Barcodes** section. You can not perform any other actions on the barcodes, as they are generated automatically once a new concrete product is added to the system.
 
 You can see the Product ID, product name, SKU, and barcode itself.
 

@@ -16,14 +16,12 @@ redirect_from:
 
 The *Product Barcode* feature lets you create barcodes for any kind of entity. By default, barcodes are only generated for [products](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html).
 
-## What is a barcode?
-
 A barcode is a square or rectangular image consisting of a series of parallel black lines (bars) and white spaces of varying widths that can be read by a scanner and printed. Barcodes are applied to entities as a means of quick identification.
 ![Barcode example](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Product+Management/Barcode+Generator/Barcode+Generator+Feature+Overview/barcode.png)
 
 By default, barcodes are generated based on product SKUs using the [Code128](https://en.wikipedia.org/wiki/Code_128) format. 
 
-Though, Spryker provides highly customizable solutions through plugins with the help of which the setup can be changed.
+Though, Spryker highly provides customizable solutions through plugins that let you change the setup.
 
 For more information about the product types we differentiate in product abstraction, see [Product feature overview](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html).
 
@@ -43,7 +41,7 @@ The following image demonstrates how barcodes are assigned depending on whether 
 
 ![product-bundle-vs-configurable-bundle](https://spryker.s3.eu-central-1.amazonaws.com/docs/scos/user/features/product-barcode-feature-overview/product-bundle-versus-configurable-bundle.png)
 
-You can see the barcodes in the Back Office, in the **Catalog&nbsp;<span aria-label="and then">></span> Product Barcodes** section. The section is designed as a review; thus, no actual actions are performed here. The barcode is generated automatically once a new concrete product is added.
+You can view the barcodes in the Back Office, in the **Catalog&nbsp;<span aria-label="and then">></span> Product Barcodes** section. You can not perform any other actions on the barcodes, as they are generated automatically once a new concrete product is added to the system.
 
 You can see the Product ID, product name, SKU, and barcode itself.
 
@@ -57,14 +55,6 @@ Creating barcodes requires two main prerequisites:
 Nowadays, B2B businesses face extraordinary challenges as more and more consumers are making comparisons of various ecommerce applications. To stay on top of the industry trends, improve customer experience and increase sales, every business must innovate with a deep understanding of their customer’s physical, emotional, and financial needs and triggers.
 
 Barcodes are often overlooked as a way to cut costs and save time. A valuable and viable choice for businesses looking to improve efficiency and reduce overhead, barcodes are both cost-effective and reliable. Both inexpensive and user-friendly, barcodes provide an indispensable tool for tracking a variety of data, from pricing to inventory. The ultimate result of a comprehensive barcoding system is a reduction in overhead.
-
-The Barcode Generator can be used for any kind of entity, and by default, Spryker provides a solution for products.
-
-**What is a barcode?**
-
-
-
-
 
 ## Related Business User articles
 

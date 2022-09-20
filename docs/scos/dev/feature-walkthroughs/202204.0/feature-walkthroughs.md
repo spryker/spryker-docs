@@ -28,7 +28,7 @@ The [Approval Process](/docs/scos/dev/feature-walkthroughs/{{page.version}}/appr
 
 ## Cart
 
-The [Cart](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-feature-walkthrough.html) feature provides functionality of the shopping cart and cart total calculations.
+The [Cart](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-feature-walkthrough.html) feature provides the functionality of the shopping cart and cart total calculations.
 
 ### Calculation 3.0
 
@@ -48,11 +48,11 @@ Our [Cart consists of a few components](/docs/scos/dev/feature-walkthroughs/{{pa
 
 ### Resource Sharing
 
-The [Resource Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/resource-sharing-feature-walkthrough.html) lets you create a unique URL for any entity in the Spyker Commerce OS. For each entity, you must use an additional connector module. For example, to share a cart through a URL, Resource Sharing must be combined with Persistent Cart Sharing.
+The [Resource Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/resource-sharing-feature-walkthrough.html) lets you create a unique URL for any entity in the Spyker Commerce OS. For each entity, you must use an additional connector-module. For example, to share a cart through a URL, Resource Sharing must be combined with Persistent Cart Sharing.
 
 ## Catalog
 
-The [Catalog](/docs/scos/dev/feature-walkthroughs/{{page.version}}/catalog-feature-walkthrough.html) feature lets you build and organize products to meet your and your customer's demands, primarily to make sure everyone can quickly find what they are looking for.
+The [Catalog](/docs/scos/dev/feature-walkthroughs/{{page.version}}/catalog-feature-walkthrough.html) feature lets you build and organize products to meet your and your customer’s demands, primarily to make sure everyone can quickly find what they are looking for.
 
 ## Category Management
 
@@ -76,7 +76,7 @@ The [Comments](/docs/scos/dev/feature-walkthroughs/{{page.version}}/comments-fea
 
 ## Company Account
 
-The [Company Account](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/company-account-feature-walkthrough.html) feature lets you control user access to the system within an organization by configuring different permissions and roles for the company's entities (units) and users.
+The [Company Account](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/company-account-feature-walkthrough.html) feature lets you control user access to the system within an organization by configuring different permissions and roles for the company’s entities (units) and users.
 
 ### Company account: module relations
 
@@ -84,7 +84,7 @@ The [Company Account](/docs/scos/dev/feature-walkthroughs/{{page.version}}/compa
 
 ### Customer Login by Token: reference information
 
-[A token](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/customer-login-by-token-reference-information.html) is a unique identifier that contains all the information needed for authentication to fetch a specific resource without using a username and password. The tokens are JSON strings that are encoded in base64url format.
+[A token](/docs/scos/dev/feature-walkthroughs/{{page.version}}/company-account-feature-walkthrough/customer-login-by-token-reference-information.html) is a unique identifier that contains all the information needed for authentication to fetch a specific resource without using a username and password. The tokens are JSON strings that are encoded in the base64url format.
 
 ## Configurable Bundle
 
@@ -116,7 +116,7 @@ The [Customer Account Management](/docs/scos/dev/feature-walkthroughs/{{page.ver
 
 ### Customer module overview
 
-The [Customer entity](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html) wraps data around registered customers. Customer data is managed from the Back Office by the shop administrator and from the shop website itself by customers. This document describes how new customers can be created and managed and how to enable specific features related to customers.
+The [Customer entity](/docs/scos/dev/feature-walkthroughs/{{page.version}}/customer-account-management-feature-walkthrough/reference-information-customer-module-overview.html) wraps data around registered customers. Customer data is managed from the Back Office by a shop administrator and from a shop website itself by customers. This document describes how new customers can be created and managed and how to enable specific features related to customers.
 
 ## File Manager
 
@@ -130,7 +130,7 @@ The [AvailabilityStorage module](/docs/scos/dev/feature-walkthroughs/{{page.vers
 
 ## Mailing & Notifications
 
-The [Mailing & Notifications ](/docs/scos/dev/feature-walkthroughs/{{page.version}}/mailing-and-notifications-feature-walkthrough.html) feature lets you manage newsletters and notifications.
+The [Mailing & Notifications ](/docs/scos/dev/feature-walkthroughs/{{page.version}}/mailing-and-notifications-feature-walkthrough.html)feature lets you manage newsletters and notifications.
 
 ## Measurement Units
 
@@ -138,7 +138,7 @@ The [Measurement Units](/docs/scos/dev/feature-walkthroughs/{{page.version}}/mea
 
 ## Merchant
 
-The [Merchant](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-feature-walkthrough.html) feature provides the core functionality for the SCOS B2B and Marketplace with the basic create-read-update operations over the Merchant entity. You cannot delete a merchant, but only deactivate.
+The [Merchant](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-feature-walkthrough.html) feature provides the core functionality for the SCOS B2B and Marketplace with the basic create-read-update operations over the Merchant entity. You cannot delete a merchant but only deactivate them.
 
 ## Merchant B2B Contracts
 
@@ -187,7 +187,7 @@ The [Packaging Units](/docs/scos/dev/feature-walkthroughs/{{page.version}}/packa
 
 ## Payments
 
-The [Payments](/docs/scos/dev/feature-walkthroughs/{{page.version}}/payments-feature-walkthrough.html) feature lets customers to pay for orders with none, one, or multiple payment methods during the checkout process.
+The [Payments](/docs/scos/dev/feature-walkthroughs/{{page.version}}/payments-feature-walkthrough.html) feature lets customers pay for orders with none, one, or multiple payment methods during the checkout process.
 
 ## Persistent Cart Sharing
 
@@ -195,10 +195,10 @@ The [Persistent Cart Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version
 
 ### Persistent Cart Sharing: module relations
 
-[This schema](/docs/scos/dev/feature-walkthroughs/{{page.version}}/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-module-relations.html) illustrates module relations in the Unique URL per Cart for Easy Sharing feature
+[This schema](/docs/scos/dev/feature-walkthroughs/{{page.version}}/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-module-relations.html) illustrates module relations in the Unique URL per Cart for the Easy Sharing feature
 
 
-### `PriceProduct` module details: reference information
+### PriceProduct module details: reference information
 
 This document describes technical details of the [PriceProduct](/docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html) module that are valid since version 2 of the module.
 
@@ -208,7 +208,7 @@ The [Product](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-featu
 
 ## Product Approval Process
 
-The [Product Approval Process](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-approval-process-feature-walkthrough.html) feature adds approval mechanisms for products by providing an optional spy_product_abstract.approval_status DB column to store product approval statuses. Thus, a shop owner can follow the review process and manage which products will be placed in the store by setting the corresponding approval statuses. The feature also provides the Back Office UI for managing the approval statuses and the corresponding Data importer.
+The [Product Approval Process](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-approval-process-feature-walkthrough.html) feature adds approval mechanisms for products by providing an optional `spy_product_abstract.approval_status` DB column to store product approval statuses. Thus, a shop owner can follow the review process and manage which products will be placed in the store by setting the corresponding approval statuses. The feature also provides the Back Office UI for managing the approval statuses and the corresponding Data importer.
 
 ## Product Barcode
 
@@ -236,7 +236,7 @@ The [Product Options](/docs/scos/dev/feature-walkthroughs/{{page.version}}/produ
 
 ## Product Rating and Reviews
 
-The [Product Rating & Reviews](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-rating-reviews-feature-walkthrough.html) feature lets customers to add reviews and ratings to abstract products.
+The [Product Rating & Reviews](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-rating-reviews-feature-walkthrough.html) feature lets customers add reviews and ratings to abstract products.
 
 ## Product Relations
 
@@ -248,19 +248,15 @@ The [Product Relations](/docs/scos/dev/feature-walkthroughs/{{page.version}}/pro
 
 ## Product Sets
 
-The [Product Sets](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-sets-feature-walkthrough/product-sets-feature-walkthrough.html) feature lets you create and sale collections of products.
+The [Product Sets](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-sets-feature-walkthrough/product-sets-feature-walkthrough.html) feature lets you create and sell collections of products.
 
 ### Product Sets: module relations
 
-The [ProductSet](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-sets-feature-walkthrough/product-sets-module-relations.html) module provides a spy_product_set table that stores some non-localized data about Product Sets entities. Localized data is stored in the spy_product_set_data table. These tables, along with their related URLs and product image sets, contain all the necessary data about Product Sets entities that you can list on the Storefront or show their representing Product details pages.
-
-## Promotions and Discounts
-
-The [Promotions & Discounts](/docs/scos/dev/feature-walkthroughs/{{page.version}}/promotions-discounts-feature-walkthrough.html) feature lets you define several types of discounts based on a brand, overall cart value, certain product ranges, or special customer groups. You can also offer discount vouchers or incentivize certain products through coupon codes.
+The [ProductSet](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-sets-feature-walkthrough/product-sets-module-relations.html) module provides a `spy_product_set` table that stores some non-localized data about Product Sets entities. Localized data is stored in the `spy_product_set_data` table. These tables, along with their related URLs and product image sets, contain all the necessary data about Product Sets entities that you can list on the Storefront or show their representing Product details pages.
 
 ## Quick Add to Cart
 
-The [Quick Add to Cart](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html) feature lets you add multiple products to cart at once.
+The [Quick Add to Cart](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html) feature lets you add multiple products to a cart at once.
 
 ## Reclamations
 
@@ -272,11 +268,11 @@ The [Refunds](/docs/scos/dev/feature-walkthroughs/{{page.version}}/refunds-featu
 
 ## Reorder
 
-The [Reorder](/docs/scos/dev/feature-walkthroughs/{{page.version}}/reorder-feature-walkthrough.html) feature lets customers to repeat their previous orders in one click.
+The [Reorder](/docs/scos/dev/feature-walkthroughs/{{page.version}}/reorder-feature-walkthrough.html) feature lets customers repeat their previous orders in one click.
 
 ## Resource Sharing
 
-The [Resource Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/resource-sharing-feature-walkthrough.html) lets you create a unique URL for any entity in the Spryker Commerce OS. For each entity, you must use an additional connector module. For example, to share a cart through a URL, Resource Sharing must be combined with Persistent Cart Sharing.
+The [Resource Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/resource-sharing-feature-walkthrough.html) lets you create a unique URL for any entity in the Spryker Commerce OS. For each entity, you must use an additional connector-module. For example, to share a cart through a URL, Resource Sharing should be combined with Persistent Cart Sharing.
 
 ## Return Management
 
@@ -284,7 +280,7 @@ The [Return Management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/ret
 
 ## Search
 
-The [Search](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) feature enables you to control search and filtering preferences and customize them to improve your customers' user experience and help them quickly find what they are looking for. The feature includes textual search, multi-language search, full-site search, filter by a category, dynamically, and by filters & facets.
+The [Search](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) feature enables you to control search and filtering preferences and customize them to improve your customers’ user experience and help them quickly find what they are looking for. The feature includes textual search, multi-language search, full-site search, filter by a category, dynamically, and by filters & facets.
 
 ## Shared Carts
 
@@ -292,7 +288,7 @@ The [Shared Carts](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shared-c
 
 ## Spryker Core Back Office
 
-The [Spryker Core Back Office](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html) feature adds a comprehensive, intuitive administration area that provides the product and content management capabilities, categories and navigation building blocks, search and filter customizations, barcode generator, order handling, company structure creation (for B2B users), merchant-buyer contracts' setup.
+The [Spryker Core Back Office](/docs/scos/dev/feature-walkthroughs/{{page.version}}/spryker-core-back-office-feature-walkthrough/spryker-core-back-office-feature-walkthrough.html) feature adds a comprehensive, intuitive administration area that provides the product and content management capabilities, categories and navigation building blocks, search and filter customizations, barcode generator, order handling, company structure creation (for B2B users), merchant-buyer contracts’ setup.
 
 ### Users and rights overview
 
@@ -304,4 +300,4 @@ The [Tax](/docs/pbc/all/tax-management/tax-management.html) feature lets you def
 
 ### Tax module: reference information
 
-The [Tax module](/docs/pbc/all/tax-management/extend-and-customize/tax-module-reference-information.html) is responsible for handling tax rates that can apply for products, product options, or shipment.
+The [Tax module](/docs/pbc/all/tax-management/extend-and-customize/tax-module-reference-information.html) is responsible for handling tax rates that can apply for products, product options, or a shipment.

@@ -13,7 +13,7 @@ To learn more about the feature and to find out how end users use it, see [Confi
 
 ## Entity diagram
 
-The following schemas illustrates module relations in the Configurable Bundle feature:
+The following schemas illustrate module relations in the Configurable Bundle feature:
 
 ### Module architecture (spryker/spryker)
 

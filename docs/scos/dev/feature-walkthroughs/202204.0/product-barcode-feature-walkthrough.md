@@ -12,11 +12,7 @@ The _Product Barcode_ feature lets you create barcodes for any kind of entity.
 
 To learn more about the feature and to find out how end users use it, see [Product Barcode feature overview](/docs/scos/user/features/{{page.version}}/product-barcode-feature-overview.html) for business users.
 
-
-<!-- add a link to the IG when it's ready -->
-
 ## Related Developer articles
-<!-- Usually filled by a technical writer. You can omit this part -->
 
 | MIGRATION GUIDES|
 |---------|

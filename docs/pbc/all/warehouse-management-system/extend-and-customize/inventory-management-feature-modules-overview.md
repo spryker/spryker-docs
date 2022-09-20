@@ -21,11 +21,11 @@ A product's availability is checked with the following operations:
 
 * The product details page doesn't show the **Add to cart** button when a concrete product is out of stock. Instead, a message about the product being out of stock is displayed.
 * `\Spryker\Zed\AvailabilityCartConnector\Communication\Plugin\CheckAvailabilityPlugin` checks if all items in cart are available. It’s executed after the "Add to cart" operation. If an item is not available, an error message is sent to Yves.
-* `Spryker\Zed\Availability\Communication\Plugin\ProductsAvailableCheckoutPreConditionPlugin` checks if all items in cart are available before placing the order. If one or more items are not available, order placing is aborted and an error message is displayed.
+* `Spryker\Zed\Availability\Communication\Plugin\ProductsAvailableCheckoutPreConditionPlugin` checks if all items in the cart are available before placing the order. If one or more items are not available, order placing is aborted and an error message is displayed.
 
 ### Reserved flag
 
-When an order is placed, the items are moved though states in the  payment state machine. Some states have a `reserved` flag that influences the availability of items.
+When an order is placed, the items are moved through states in the payment state machine. Some states have a `reserved` flag that influences the availability of items.
 
 When an item is moved to a state with the `reserved` flag, `ReservationHandlerPluginInterface::handle()` is triggered. This call updates the product's availability. The state machine is also tracking products in the reserved state using the `spy_oms_product_reservation` database table.
 
@@ -34,7 +34,7 @@ Sample payment state machine with `reserved` flags:
 
 ## AvailabilityStorage
 
-AvailabilityStorage publishes all availability information for abstract and concrete products. Items are grouped by abstract product. This process is handled by [Publish and Synchronize](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html).
+`AvailabilityStorage` publishes all availability information for abstract and concrete products. Items are grouped by abstract product. This process is handled by [Publish and Synchronize](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html).
 
 Events are generated in the following cases:
 
@@ -43,7 +43,7 @@ Events are generated in the following cases:
 | Case 1 | If availability amount was equal to 0 and now it's more than 0, the event is triggered. |
 | Case 2 | If availability amount was more than 0 and now it's equal to 0, the event is triggered. |
 
-The default behavior is having the **available** or **not available** status set for a product while the amount of product does not matter. Even though events are triggered when amount is changed from 0 to N or from N to 0, it's not the amount change that triggers events, but the change of product status. You can change the default behavior for the events to be triggered whenever the amount is changed. For more information, see [HowTo: Change the Default Behavior of Event Triggering in the AvailabilityStorage Module](/docs/pbc/all/warehouse-management-system/extend-and-customize/configure-product-availability-to-be-published-on-product-amount-changes.html).
+The default behavior is having the *available* or *not available* status set for a product while the amount of product does not matter. Even though events are triggered when amount is changed from 0 to N or from N to 0, it's not the amount change that triggers events, but the change of product status. You can change the default behavior for the events to be triggered whenever the amount is changed. For more information, see [HowTo: Change the Default Behavior of Event Triggering in the AvailabilityStorage Module](/docs/pbc/all/warehouse-management-system/extend-and-customize/configure-product-availability-to-be-published-on-product-amount-changes.html).
 
 Published data example in JSON.
 
@@ -76,11 +76,11 @@ This information is used on product details page when **Add to cart** is rendere
 
 ### Availability calculation
 
-Product availability can have flag `is_never_out_of_stock`. This indicates that the product is always available for sale and does not have a finite stock. In this situation, the availability calculation is no longer needed.
+Product availability can have the flag `is_never_out_of_stock`. This indicates that the product is always available for sale and does not have a finite stock. In this situation, the availability calculation is no longer needed.
 
 `Availability = max(0, sum of all stock types(Stock) - Reserved Items)`
 
-In the state machine, items get reserved for an open order. There are certain states that release item, for example when payment fails and order is canceled. But if order is successfully fulfilled and item is delivered, the item stays reserved until the next stock update.
+In the state machine, items get reserved for an open order. There are certain states that release items—for example, when the payment fails and the order is canceled. However, if the order is successfully fulfilled, and the item is delivered, the item stays reserved until the next stock update.
 
 A stock update triggers the event `stock update`. For example, in our dummy payment's implementation, this would move the items from the “Shipped” state to next state. As the consecutive state is not reserved, the items that have already been shipped will no longer be reserved.
 

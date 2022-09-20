@@ -99,7 +99,7 @@ The feature has the following functional constraints which are going to be resol
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | MIGRATION GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
+|INSTALLATION GUIDES  | MIGRATION GUIDES | DATA IMPORT | TUTORIALS AND HOWTOS |
 |---------|---------|---------|---------|
 | [Integrate the Scheduled prices feature](/docs/pbc/all/price-management/install-and-upgrade/install-features/install-the-scheduled-prices-feature.html) | [Upgrade the PriceProductSchedule module](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedule-module.html)  | [File details: product_price_schedule.csv](/docs/pbc/all/price-management/import-and-export-data/file-details-product-price-schedule.csv.html) | [HowTo: Schedule cron job for Scheduled Prices](/docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html)  |
 |   | [Upgrade the PriceProductScheduleGui module](/docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedulegui-module.html)  |   |   |

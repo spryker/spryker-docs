@@ -4,7 +4,9 @@ description: Welcome to the Packaged Business Capabilities (PBC) documentation s
 template: concept-topic-template
 ---
 
-Packaged Business Capabilities (PBCs) are capabilities that enclose a certain functionality with the Spryker system. PBCs provide a good foundation for decision- makers throughout multiple business entities.
+Packaged Business Capabilities (PBCs) are capabilities that enclose a certain functionality with the Spryker system. PBCs provide a good foundation for decision makers throughout multiple business entities.
+
+This section is in beta because not all the PBCs are covered. You are welcome to use the docs that are already here, and we will keep adding the docs for the rest of the PBCs.
 
 ## Spryker PBCs
 
@@ -50,8 +52,8 @@ Packaged Business Capabilities (PBCs) are capabilities that enclose a certain fu
 
 | NAME | CATEGORY |
 | --- | --- |
-| [Bazaarvoice](/docs/pbc/all/ratings-reviews/bazaarvoice.html) | Ratings and Reviews |
+| [Bazaarvoice](/docs/pbc/all/ratings-reviews/bazaarvoice/bazaarvoice.html) | Ratings and Reviews |
 | [Payone](/docs/pbc/all/payment-service-providers/payone/payone.html) | PSP (Payment Service Provider) |
-| [Usercentrics](/docs/pbc/all/usercentrics.html) | (CMP) Consent Management Platform |
+| [Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html) | (CMP) Consent Management Platform |
 
 </div>

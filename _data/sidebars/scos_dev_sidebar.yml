@@ -8,6 +8,18 @@ entries:
   - title: Setup
     url: /docs/scos/dev/setup/setup.html
     nested:
+    - title: System requirements
+      url: /docs/scos/dev/system-requirements/system-requirements.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
+    - title: Quick installation guides
+      url: /docs/scos/dev/setup/quick-installation-guides/quick-installation-guides.html
+      nested:
+      - title: 'Quick installation guide: Mac OS and Linux'
+        url: /docs/scos/dev/setup/quick-installation-guides/quick-installation-guide-macos-and-linux.html
+      - title: 'Quick installation guide: Windows'
+        url: /docs/scos/dev/setup/quick-installation-guides/quick-installation-guide-windows.html
     - title: Installing Spryker with Docker
       url: /docs/scos/dev/setup/installing-spryker-with-docker/installing-spryker-with-docker.html
       nested:
@@ -48,8 +60,6 @@ entries:
     - title: Installing Spryker with Development Virtual Machine
       url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/installing-spryker-with-development-virtual-machine.html
       nested:
-      - title: DevVM system requirements
-        url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/devvm-system-requirements.html
       - title: SCOS supported browsers
         url: /docs/scos/dev/setup/installing-spryker-with-development-virtual-machine/scos-supported-browsers.html
       - title: Installing on MacOS and Linux
@@ -1083,13 +1093,11 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Managing shopping list items
         url: /docs/scos/dev/glue-api-guides/managing-shopping-lists/managing-shopping-list-items.html
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
     - title: Managing wishlists
       nested:
       - title: Managing wishlists
@@ -1596,6 +1604,7 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
+      - "202212.0"
     - title: Catalog + Category Management
       url: /docs/scos/dev/feature-integration-guides/catalog-category-management-feature-integration.html
       include_versions:
@@ -1841,15 +1850,6 @@ entries:
       - "202108.0"
     - title: Measurement Units
       url: /docs/scos/dev/feature-integration-guides/measurement-units-feature-integration.html
-      include_versions:
-      - "201811.0"
-      - "201903.0"
-      - "201907.0"
-      - "202001.0"
-      - "202005.0"
-      - "202009.0"
-      - "202108.0"
-      - "202204.0"
     - title: Merchant
       url: /docs/scos/dev/feature-integration-guides/merchant-feature-integration.html
       include_versions:
@@ -1887,6 +1887,10 @@ entries:
       - "201907.0"
       - "202001.0"
       - "202005.0"
+    - title: Multiple Abstract Products as Promotional Producs & Discounts
+      url: /docs/scos/dev/feature-integration-guides/multiple-abstract-products-as-promotional-products-and-discounts-feature-integration.html
+      include_versions:
+      - "202204.0"
     - title: Multi-store CMS Block
       url: /docs/scos/dev/feature-integration-guides/multi-store-cms-block-feature-integration.html
     - title: Multi-store Products
@@ -1961,6 +1965,7 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
+      - "202212.0"
     - title: Product Approval Process
       url: /docs/scos/dev/feature-integration-guides/product-approval-process-feature-integration.html
       include_versions:
@@ -2061,7 +2066,7 @@ entries:
       - "202005.0":
     - title: Product Labels
       url: /docs/scos/dev/feature-integration-guides/product-labels-feature-integration.html
-    - title: Product Labels + Promotions and Discounts feature integration
+    - title: Product Labels + Promotions and Discounts
       url: /docs/scos/dev/feature-integration-guides/product-labels-promotions-and-discounts-feature-integration.html
       include_versions:
       - "202009.0"
@@ -2268,6 +2273,7 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
+      - "202212.0"
     - title: Shipment + Approval Process
       url: /docs/scos/dev/feature-integration-guides/shipment-approval-process-feature-integration.html
       include_versions:
@@ -2300,7 +2306,6 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
-      - "201907.0"
     - title: Spryker Core Back Office
       url: /docs/scos/dev/feature-integration-guides/spryker-core-back-office-feature-integration.html
       include_versions:
@@ -2311,6 +2316,7 @@ entries:
       - "202009.0"
       - "202108.0"
       - "202204.0"
+      - "202212.0"
     - title: Uuid Generation Console
       url: /docs/scos/dev/feature-integration-guides/uuid-generation-console-feature-integration.html
     - title: Volume Prices
@@ -2663,6 +2669,7 @@ entries:
       include_versions:
       - "202001.0"
   - title: Data import
+    url: /docs/scos/dev/data-import/data-import.html
     include_versions:
     - "202005.0"
     - "202009.0"
@@ -3416,6 +3423,7 @@ entries:
       nested:
       - title: Console commands in Spryker
         url: /docs/scos/dev/back-end-development/console-commands/console-commands.html
+        include_versions:
       - title: Implementing a new console command
         url: /docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html
       - title: Getting the list of console commands and available options
@@ -3553,8 +3561,10 @@ entries:
           - title: Implementing Invoice payment
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment.html
       - title: Data ingestion
+        url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-ingestion.html
         nested:
         - title: Structural preparations
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-ingestion.html
           nested:
           - title: File System
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/file-system.html
@@ -3666,6 +3676,8 @@ entries:
         url: /docs/scos/dev/front-end-development/yves/custom-twig-functions-for-yves.html
       - title: Multi-theme
         url: /docs/scos/dev/front-end-development/yves/multi-theme.html
+    - title: Migration guide - Remove support of IE11
+      url: /docs/scos/dev/front-end-development/migration-guide-remove-support-of-ie11.html
     - title: Migration guide - Switch from Yarn to NPM v8
       url: /docs/scos/dev/front-end-development/migration-guide-switch-from-yarn-to-npm.html
   - title: Migration concepts
@@ -4130,6 +4142,8 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-set-number-of-days-for-a-return-policy.html
         - title: "HowTo: Make a product searchable and shown on the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-make-a-product-searchable-and-shown-on-the-storefront.html
+        - title: "HowTo: Add support of number formatting in the Back Office"
+          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-add-support-of-number-formatting-in-the-back-office.html
         - title: CMS
           nested:
           - title: "HowTo: Create CMS templates"
@@ -4733,7 +4747,7 @@ entries:
             - title: Private API method is overridden on the project level
               url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-method-is-overridden-on-the-project-level.html
         - title: Running the Evalutor tool
-          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html
+          url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/run-the-evaluator-tool.html
         - title: Define custom prefixes for core entity names
           url: /docs/scos/dev/guidelines/keeping-a-project-upgradable/define-customs-prefixes-for-core-entity-names.html
     - title: Performance guidelines
@@ -4785,8 +4799,8 @@ entries:
       url: /docs/scos/dev/guidelines/data-processing-guidelines.html
     - title: Module configuration convention
       url: /docs/scos/dev/guidelines/module-configuration-convention.html
-    - title: Making your Spryker shop secure
-      url: /docs/scos/dev/guidelines/making-your-spryker-shop-secure.html
+    - title: Security guidelines
+      url: /docs/scos/dev/guidelines/security-guidelines.html
   - title: Best practices
     nested:
     - title: Basic SEO techniques to use in your project

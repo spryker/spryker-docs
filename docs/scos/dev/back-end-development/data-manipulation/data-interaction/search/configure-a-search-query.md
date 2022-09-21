@@ -257,7 +257,7 @@ You also must export `active-from` and `active-to` by your search collector. The
 
 The *Faceted navigation and filtering* feature lets you refilter search results by specific criteria. The filters are commonly displayed on the left side of the catalog page.
 
-`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FacetQueryExpanderPlugin` is responsible for adding necessary aggregations to your query based on a predefined configuration (see [Configure search features](//docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html). Use this plugin to get the necessary data for the faceted navigation of your search results.
+`\Spryker\Client\SearchElasticsearch\Plugin\QueryExpander\FacetQueryExpanderPlugin` is responsible for adding necessary aggregations to your query based on a predefined configuration (see [Configure search features](/docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html). Use this plugin to get the necessary data for the faceted navigation of your search results.
 
 {% info_block warningBox "Note" %}
 

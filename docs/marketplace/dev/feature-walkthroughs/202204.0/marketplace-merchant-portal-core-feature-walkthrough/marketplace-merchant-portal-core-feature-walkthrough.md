@@ -64,7 +64,7 @@ The `GuiTable` frontend component knows how to create the table itself, where to
 
 {% info_block warningBox "Table design" %}
 
-To learn more about table design, see [Table design](/docs/marketplace/dev/front-end/table-design/).
+To learn more about table design, see [Table design](/docs/marketplace/dev/front-end/{{page.version}}/table-design/).
 
 {% endinfo_block %}
 

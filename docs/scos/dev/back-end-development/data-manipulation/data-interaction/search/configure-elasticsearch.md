@@ -57,7 +57,7 @@ related:
   - title: Configure search for multi-currency
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
   - title: Configure the search features
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-the-search-features.html
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html
   - title: Configure the search query
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-a-search-query.html
   - title: Expand search data

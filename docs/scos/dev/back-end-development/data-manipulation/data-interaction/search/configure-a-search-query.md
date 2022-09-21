@@ -40,7 +40,7 @@ related:
   - title: Configure search for multi-currency
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
   - title: Configure search features
-    link: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html
   - title: Expand search data
     link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html
   - title: Facet filter overview and configuration
@@ -49,7 +49,7 @@ related:
 
 Once you have all the necessary data in Elasticsearch, you can display it on Yves.
 
-To achieve this, [query Elasticsearch](#querying-elasticsearch), which returns raw data needed for [processing the query result](#process-query-result) to display it in the templates.
+To achieve this, [query Elasticsearch](#query-elasticsearch), which returns raw data needed for [processing the query result](#process-query-result) to display it in the templates.
 
 In `SearchClient`, you can find the `search()` method `(\Spryker\Client\Search\SearchClientInterface::search())`. Call this method to execute any search query. It expects to receive an instance of `\Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface` as the first parameter, which represents the query itself, and a collection of `\Spryker\Client\SearchExtension\Dependency\Plugin\ResultFormatterPluginInterface` instances, which are applied to the response data to format it.
 
@@ -63,7 +63,7 @@ This is the point where configuring the query is completely up to you. Use Elast
 
 {% info_block infoBox %}
 
-The `QueryInterface` instance is a stateful class; sometimes, the `getSearchQuery()` method is called multiple times and alters the original query (see [Expanding queries](#expanding-queries)), so make sure that it returns the same instance. This can be achieved by creating the `\Elastica\Query` instance at construction time and returning it in the `getSearchQuery()` method.
+The `QueryInterface` instance is a stateful class; sometimes, the `getSearchQuery()` method is called multiple times and alters the original query (see [Expanding queries](#expand-queries)), so make sure that it returns the same instance. This can be achieved by creating the `\Elastica\Query` instance at construction time and returning it in the `getSearchQuery()` method.
 
 {% endinfo_block %}
 

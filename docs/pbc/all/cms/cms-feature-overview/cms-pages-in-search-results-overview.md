@@ -23,10 +23,3 @@ The *CMS pages in search results* functionality lets you search not only for pro
 ![CMS pages in search results](https://spryker.s3.eu-central-1.amazonaws.com/docs/Features/Search+and+Filter/CMS+Pages+in+Search+Results/cms-pages-in-search-results.png)
 
 Page sorting and pagination on the search results page help shop visitors find content easier. Breadcrumbs let a shop administrator structure the content to reduce the number of steps a customer takes to return to a previous page.
-
-
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [CMS feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cms-feature-walkthrough/cms-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}

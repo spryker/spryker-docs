@@ -9,13 +9,14 @@ redirect_from:
   - /2021080/docs/en/content-management
   - /docs/content-management
   - /docs/en/content-management
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/navigation-setup/navigation-setup.html
 ---
 
-The **Content Management** category contains data required to create and manage content elements, such es CMS pages, blocks, etc. for your online store.
+The content management category contains data required to create and manage content elements like CMS pages or blocks.
 
 The table below provides details on Content Management data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 
-| DATA IMPORTER | PURPOSE | CONSOLE COMMAND | FILE(S) | DEPENDENCIES |
+| DATA IMPORTER | PURPOSE | CONSOLE COMMAND | FILES | DEPENDENCIES |
 | --- | --- | --- | --- |--- |
 | CMS Template   | Imports information about CMS templates. |`data:import:cms-template` |[ cms_template.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-template.csv.html)|None |
 | CMS Slot Template  | Imports information about the CMS slot templates. |`data:import:cms-slot-template` | [cms_slot_template.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-slot-template.csv.html)| None|
@@ -31,11 +32,13 @@ The table below provides details on Content Management data importers, their pur
 | Content Product Abstract List  |Imports information used to import the content related to abstract products.  |`data:import:content-product-abstract-list` |[content_product_abstract_list.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-content-product-abstract-list.csv.html) |[product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html)|
 | Content Product Set  |Imports information used to load content linked to product sets.  |`data:import:content-product-set` | [content_product_set.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-content-product-set.csv.html)| [product_set.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-set.csv.html)|
 | Content Navigation | Imports information used to configure content navigation.|`data:import:content-navigation` | [content_navigation.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-content-navigation.csv.html) | [navigation.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html) |
+| Navigation | Imports information about the navigation entities. |`data:import:navigation` | [navigation.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html) |None |
+| Navigation Node | Imports information about the navigation nodes. |`data:import:navigation-node` |[ navigation_node.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation-node.csv.html) | <ul><li>[navigation.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html)</li><li>[glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html)</li></ul>|
 
 
 {% info_block warningBox "Import order" %}
 
-The order in which the files are imported is **very strict**. For this reason, the data importers should be executed in the following order:
+Apart fron navigation and navigation nodes, the order in which the files are imported is *very strict*. The data importers should be executed in the following order:
 
 1. [CMS Template](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-template.csv.html)
 2. [CMS Block](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-block.csv.html)

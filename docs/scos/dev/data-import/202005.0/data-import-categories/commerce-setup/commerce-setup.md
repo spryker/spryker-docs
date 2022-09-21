@@ -13,7 +13,7 @@ The **Commerce Setup** category contains data required to set up the multistore 
 The table below provides details on Commerce Setup data importers, their purpose, .csv files, dependencies, and other details. Each data importer contains links to .csv files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 
 
-| Data Importer | Purpose | Console Command| File(s) | Dependencies |
+| Data Importer | Purpose | Console Command| FILES | Dependencies |
 | --- | --- | --- | --- |--- |
 | **Store**   | Imports basic information about the stores. |`data:import:store` | There is no CSV file to import the store setup information.<br>Store names and other setup information is set in the **stores.php** configuration file in the demo shop PHP project.  | **stores.php** configuration file of Demo Shop|
 | **Currency**  | Imports information about currencies used in the store(s). The **currency.csv** file provides an easy way to load information about currencies used in Spryker Demo Shop. It allows to load information like: ISO code, currency symbol, and the name of the currency.|`data:import:currency` | [currency.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-currency.csv.html) | None|

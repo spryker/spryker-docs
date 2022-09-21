@@ -61,12 +61,6 @@ With the CMS Pages feature, you can:
 | [Manage versions of a CMS page](/docs/scos/user/back-office-user-guides/{{page.version}}/content/pages/managing-cms-pages.html)  |
 
 
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [CMS feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cms-feature-walkthrough/cms-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
-
 ## See next
 
 * [CMS block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)

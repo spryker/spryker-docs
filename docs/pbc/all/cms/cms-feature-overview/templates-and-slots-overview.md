@@ -383,11 +383,6 @@ The functionality has the following functional constraints which are going to be
 | [Manage slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html)   |
 
 
-{% info_block warningBox "Developer guides" %}
-
-Are you a developer? See [CMS feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cms-feature-walkthrough/cms-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
 
 ## See next
 

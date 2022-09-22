@@ -3587,8 +3587,8 @@ entries:
           url: /docs/scos/dev/back-end-development/data-manipulation/event/configuring-an-events-queue.html
         - title: Listening to events
           url: /docs/scos/dev/back-end-development/data-manipulation/event/listening-to-events.html
-        - title: Adding events
-          url: /docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html
+        - title: Add events
+          url: /docs/scos/dev/back-end-development/data-manipulation/event/add-events.html
     - title: Extending Spryker
       nested:
       - title: Development strategies

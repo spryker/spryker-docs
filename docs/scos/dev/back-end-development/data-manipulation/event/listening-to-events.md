@@ -24,8 +24,8 @@ redirect_from:
 related:
   - title: Event
     link: docs/scos/dev/back-end-development/data-manipulation/event/event.html
-  - title: Adding events
-    link: docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html
+  - title: Add events
+    link: docs/scos/dev/back-end-development/data-manipulation/event/add-events.html
   - title: Configuring an events queue
     link: docs/scos/dev/back-end-development/data-manipulation/event/configuring-an-events-queue.html
 ---

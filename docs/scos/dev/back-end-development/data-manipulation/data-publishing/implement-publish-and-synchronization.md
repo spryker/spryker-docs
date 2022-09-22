@@ -65,7 +65,7 @@ As a naming convention, names of modules that publish data to Redis end with Sto
 ## 2. Define Publish events
 The *Publish* and *Synchronize* are event-driven processes. To start publishing data to the frontend, the Publish event must be triggered. After the publish process successfully prepares the data for the frontend, the Synchronization event must be triggered to deliver the prepared data to the frontend.
 
-For this purpose, you need to define events for all changes you want to publish and synchronize. For information about adding events to your module, see [Adding Events](/docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html).
+For this purpose, you need to define events for all changes you want to publish and synchronize. For information about adding events to your module, see [Add events](/docs/scos/dev/back-end-development/data-manipulation/event/add-events.html).
 
 For example, the following code defines events for publishing for the cases when an entity is created, updated, or deleted in the `spy_glossary_translation` table (see `data/shop/development/current/vendor/spryker/product/src/Spryker/Shared/GlossaryStorage/GlossaryStorageConfig.php`):
 

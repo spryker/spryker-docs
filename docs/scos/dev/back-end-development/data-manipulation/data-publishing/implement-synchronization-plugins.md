@@ -1,5 +1,5 @@
 ---
-title: Implementing synchronization plugins
+title: Implement synchronization plugins
 description: Learn how to implement synchronization plugins.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -12,6 +12,7 @@ redirect_from:
   - /docs/en/implementing-synchronization-plugins
   - /v6/docs/implementing-synchronization-plugins
   - /v6/docs/en/implementing-synchronization-plugins
+  - /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
 related:
   - title: Publish and Synchronization
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
@@ -39,8 +40,7 @@ Follow these steps to implement and register a synchronization plugin.
 
 1.  Implement the synchronization(sync) plugin:
 
-<details>
-    <summary markdown='span'>Pyz\Zed\HelloWorldStorage\Communication\Plugin\Synchronization</summary>
+<details><summary markdown='span'>Pyz\Zed\HelloWorldStorage\Communication\Plugin\Synchronization</summary>
 
 ```php
 <?php
@@ -117,26 +117,20 @@ class HelloWorldSynchronizationDataRepositoryPlugin extends AbstractPlugin imple
 
 
 The method descriptions:
-
-*   `HelloWorldSynchronizationDataRepositoryPlugin::getResourceName()` - defines a resource name of the storage or search module for key generation.
-
-*   `HelloWorldSynchronizationDataRepositoryPlugin::hasStore()` - defines if the entity implements a multi-store concept.
-
-*   `HelloWorldSynchronizationDataRepositoryPlugin::getData()` - retrieves a collection of sync transfers based on the provided offset and limit.
-
-*   `HelloWorldSynchronizationDataRepositoryPlugin::getParams()` - defines additional sync parameters for Redis or ElasticSearch.
-
-*   `HelloWorldSynchronizationDataRepositoryPlugin::getQueueName()` - defines a queue name for synchonization.
-
-*   `HelloWorldSynchronizationDataRepositoryPlugin::getSynchronizationQueuePoolName()` \- defines the name of the synchronization queue pool for broadcasting messages.
+* `HelloWorldSynchronizationDataRepositoryPlugin::getResourceName()`—defines a resource name of the storage or search module for key generation.
+* `HelloWorldSynchronizationDataRepositoryPlugin::hasStore()`—defines if the entity implements a multi-store concept.
+* `HelloWorldSynchronizationDataRepositoryPlugin::getData()`—retrieves a collection of sync transfers based on the provided offset and limit.
+* `HelloWorldSynchronizationDataRepositoryPlugin::getParams()`—defines additional sync parameters for Redis or ElasticSearch.
+* `HelloWorldSynchronizationDataRepositoryPlugin::getQueueName()`—defines a queue name for synchonization.
+* `HelloWorldSynchronizationDataRepositoryPlugin::getSynchronizationQueuePoolName()`—defines the name of the synchronization queue pool for broadcasting messages.
 
 {% info_block infoBox %}
 
 Make sure to fulfill the requirements:
 
-1.  The resource name should be the same as in the Propel schema definition.
+* The resource name must be the same as in the Propel schema definition.
 
-2.  The plugin has to implement`\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataBulkRepositoryPluginInterface`.
+* The plugin has to implement`\Spryker\Zed\SynchronizationExtension\Dependency\Plugin\SynchronizationDataBulkRepositoryPluginInterface`.
 
 {% endinfo_block %}
 
@@ -144,7 +138,6 @@ Make sure to fulfill the requirements:
 
 ```php
 <?php
-
 
 namespace Pyz\Zed\Synchronization;
 

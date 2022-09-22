@@ -22,8 +22,8 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
   - title: Adding publish events
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
-  - title: Implementing synchronization plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
+  - title: Implement synchronization plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
   - title: Debug listeners
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
   - title: Publish and Synchronize and multi-store shop systems

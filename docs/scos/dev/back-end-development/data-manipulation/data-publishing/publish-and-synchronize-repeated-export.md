@@ -33,8 +33,8 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
   - title: Implement event trigger publisher plugins
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
-  - title: Implementing synchronization plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
+  - title: Implement synchronization plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
   - title: Debug listeners
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
   - title: Publish and Synchronize and multi-store shop systems
@@ -75,7 +75,7 @@ For example, the command to re-sync data for `CMS Block` looks as follows:
 vendor/bin/console sync:data cms_block
 ```
 
-To trigger data re-sync for a resource, there should be a corresponding sync plugin created for this resource. See [Implementing synchronization plugins](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html) to learn how to create it.
+To trigger data re-sync for a resource, there should be a corresponding sync plugin created for this resource. See [Implement synchronization plugins](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html) to learn how to create it.
 
 ## Published data re-generation
 

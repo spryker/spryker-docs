@@ -3450,8 +3450,8 @@ entries:
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
         - title: Handle data with Publish and Synchronization
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
-        - title: Implementing synchronization plugins
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
+        - title: Implement synchronization plugins
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
         - title: Implement event trigger publisher plugins
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
         - title: Debug listeners

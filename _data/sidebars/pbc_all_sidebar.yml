@@ -332,6 +332,14 @@ entries:
             nested:
               - title: Manage product reviews
                 url: /docs/pbc/all/ratings-reviews/manage-in-the-back-office/manage-product-reviews-in-the-back-office.html
+          - title: Manage using Glue API
+            nested:
+              - title: Manage product reviews using Glue API
+                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html
+              - title: Retrieve product reviews when retrieving abstract products
+                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/retrieve-product-reviews-when-retrieving-abstract-products.html
+              - title: Retrieving product reviews when retrieving concrete products
+                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/retrieve-product-reviews-when-retrieving-concrete-products.html
           - title: Tutorials and HowTos
             nested:
               - title: "HowTo: Configure product reviews"
@@ -343,9 +351,9 @@ entries:
               - title: Integrate Bazaarvoice
                 url: /docs/pbc/all/ratings-reviews/third-party-integrations/integrate-bazaarvoice.html
               - title: Configure Bazaarvoice
-                url: /docs/pbc/all/ratings-reviews/third-party-integrations/manage-in-the-back-office/configure-bazaarvoice.html
+                url: /docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice.html
               - title: Disconnect Bazaarvoice
-                url: /docs/pbc/all/ratings-reviews/third-party-integrations/manage-in-the-back-office/disconnect-bazaarvoice.html
+                url: /docs/pbc/all/ratings-reviews/third-party-integrations/disconnect-bazaarvoice.html
       - title: Request for Quote
         url: /docs/pbc/all/request-for-quote/request-for-quote.html
         nested:

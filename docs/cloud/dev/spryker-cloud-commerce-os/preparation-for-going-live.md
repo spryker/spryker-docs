@@ -44,7 +44,7 @@ We highly recommend you to follow our [Security guidelines](https://docs.spryker
 
 ## Four weeks before go-live
 
-- *Performance Tips implemented and verified*. Double-check that you implemented all the provided performance tips.
+- *Performance Tips implemented and verified*. Double-check that you implemented all the provided [performance tips](https://docs.spryker.com/docs/scos/dev/guidelines/performance-guidelines/general-performance-guidelines.html).
 - *Conduct Load Tests*. Conduct load tests for your application. The sample data used for testing should be comparable to the size and complexity of the production data.
 - *The DNS Names and strategy for your shop are clear*. You know how users are going to access your shop. Verify that you control access to the DNS to be able to manage DNS. For example, you want to use `spryker.com` as the domain for your shop, but you want a user to access the Storefront by the `www.spryker.com` subdomain.
 - *Decide how email sending should be handled*. If you want to send emails using Spryker, decide whether you want to use the native mail service shipped with Spryker PaaS or integrate a third-party one. If you want to use the native one, let us know the email address that you want to send emails from. We will lift sending restrictions and help you validate the needed DNS name.

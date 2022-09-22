@@ -15,11 +15,11 @@ redirect_from:
   - /docs/scos/dev/data-import/202204.0/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html
 ---
 
-This document describes the `product_review.csv` file to configure [Product Review](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) information in your Spryker Demo Shop.
+This document describes the `product_review.csv` file to configure [Product Review](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html) information in your Spryker Demo Shop.
 
 ## Import file dependencies
 
-[product_abstract.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
+[product_abstract.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html).
 
 
 ## Import file parameters

@@ -24,9 +24,9 @@ redirect_from:
   - /v1/docs/en/service
 ---
 
-Service is a Spryker application layer shared by the Client application layer, the Zed application layer, and Yves application layer. This service layer provides the ability to register a service once and have it applied to both layers. Usage is focused on level details (infrastructure layer). For example: encoding, text processing, and sanitization. Currently, there are already few `Util` bundles providing services (UtilText, UtilEncoding, etc.).
+Service is a Spryker application layer shared by the Client application layer, the Zed application layer, and Yves application layer. This service layer provides the ability to register a service once and have it applied to both layers. Usage is focused on level details (infrastructure layer). For example: encoding, text processing, and sanitization. Currently, there are already a few `Util` bundles providing services (UtilText, UtilEncoding.).
 
-## How to use a Service
+## How to use a service
 
 To support best practices, any services shared between bundles and applications (Yves, Zed, Client) that do not resolve high-level business processes should be moved to services. Services can be accessed with the locator: `$container->getLocator()->utilEncoding()->service()`.
 

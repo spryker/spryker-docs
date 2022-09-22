@@ -1,6 +1,6 @@
 ---
 title: Implementing Invoice payment
-description: In this set of articles, we will add a new module called PaymentMethods.
+description: In this set of documents, we will add a new module called PaymentMethods.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-implement-invoice-payment
@@ -37,11 +37,11 @@ related:
 
 {% info_block infoBox "Invoice Payment" %}
 
-This article describes the steps that you need to consider when you need to implement invoice payment method without integrating with a third party payment service provider.
+This document describes the steps that you need to consider when you need to implement invoice payment method without integrating with a third party payment service provider.
 
 {% endinfo_block %}
 
-In this set of articles, we will add a new module called `PaymentMethods`.
+In this set of documents, we will add a new module called `PaymentMethods`.
 
 If this is you first time creating a new module, see [Tutorial: Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html).
 

@@ -1,11 +1,11 @@
 ---
 title: Refunds feature walkthrough
 last_updated: Aug 19, 2021
-description: The Refunds feature allows issuing refunds on orders
+description: The Refunds feature lets you issue refunds on orders
 template: concept-topic-template
 ---
 
-The _Refunds_ feature allows issuing refunds on orders.
+The _Refunds_ feature lets you issue refunds on orders.
 
 
 To learn more about the feature and to find out how end users use it, see [Refunds feature overview](/docs/scos/user/features/{{page.version}}/refunds-feature-overview.html) for business users.

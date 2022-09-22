@@ -103,6 +103,6 @@ Bridges are for core-level only. If you use them at the project-level, you are d
 
 {% info_block infoBox "Info" %}
 
-The described case is only practical when you are “between” two core-bundles and you want to make it right. For you own modules, use the general module-interface (e.g. `MyModuleInterface`).
+The described case is only practical when you are "between" two core-bundles and you want to make it right. For your own modules, use the general module-interface—for example, `MyModuleInterface`.
 
 {% endinfo_block %}

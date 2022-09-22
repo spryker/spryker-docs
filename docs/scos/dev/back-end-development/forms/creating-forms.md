@@ -44,7 +44,7 @@ The best practice is to create a `FormType` class for each form you need to hand
 
 In our case, we need to define the email field that has two constraints attached:
 
-* it’s a required field
+* it's a required field
 * it must be a valid email address
 
 **Code sample:**
@@ -81,7 +81,7 @@ class SubscriptionFormType extends AbstractType
 }
 ```
 
-To instantiate your form, use Symfony’s `FormBuilder` in your module’s factory, as in the example bellow:
+To instantiate your form, use Symfony's `FormBuilder` in your module's factory, as in the example bellow:
 
 ```php
 <?php
@@ -160,7 +160,7 @@ Add the form in your template together with a submit button; make sure you use t
 
 ## Post the data
 
-To handle the posted data, we’ll need to extend the controller action to handle the request and check if the form is valid when it’s being submitted. Here you can setup the page to which you want the user to be redirected after the form is being successfully submitted.
+To handle the posted data, we'll need to extend the controller action to handle the request and check if the form is valid when it's being submitted. Here you can setup the page to which you want the user to be redirected after the form is being successfully submitted.
 
 ```php
 <?php

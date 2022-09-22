@@ -50,7 +50,7 @@ Assume that you modify the product storage data to match your product requiremen
 
 {% info_block warningBox %}
 
-For more details, see [Database schema for product attributes](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-attributes-overview.html#database-schema-for-product-attributes) and [Extending the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html).
+For more details, see [Database schema for product attributes](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-attributes-overview.html#database-schema-for-product-attributes) and [Extend the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html).
 
 {% endinfo_block %}
 

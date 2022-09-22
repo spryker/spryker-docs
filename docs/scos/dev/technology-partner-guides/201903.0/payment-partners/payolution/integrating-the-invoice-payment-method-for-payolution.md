@@ -92,4 +92,4 @@ The configuration to integrate invoice payments using Payolution is:
 * `PAYOLUTION_BCC_EMAIL_ADDRESS`: Payolution email address to send copies of payment details to Payolution.
 
 ### Performing Requests
-In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. See [Payolution — Performing Requests](/docs/scos/user/technology-partners/201903.0/payment-partners/payolution/payolution-performing-requests.html) for a summary. You can also use the facade methods directly which, however, are invoked by the state machine.
+In order to perform the needed requests, you can easily use the implemented state machine commands and conditions. See [Payolution—Performing Requests](/docs/scos/user/technology-partners/201903.0/payment-partners/payolution/payolution-performing-requests.html) for a summary. You can also use the facade methods directly which, however, are invoked by the state machine.

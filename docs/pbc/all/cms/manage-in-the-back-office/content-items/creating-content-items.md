@@ -30,8 +30,7 @@ Each section contains reference information. Make sure to review it before you s
 
 ## Select a content item
 
-Follow the steps below to select a content item you want to create:
-1. On the *Overview of Content Items* page, click **Add Content Item** in the top right corner of the page.
+1. On the * *Overview of Content Items** page, click **Add Content Item** in the top right corner of the page.
 2.  Select a content item type you want to create and follow the steps from the corresponding section:
     * [Create a banner](#create-a-banner-content-item)
     * [Create an abstract product list](#create-an-abstract-product-list-content-item)
@@ -41,91 +40,9 @@ Follow the steps below to select a content item you want to create:
 
 To learn about the content item types, see [Content item types: Module relations](/docs/scos/dev/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-item-types-module-relations.html).
 
-### Reference information: Select a content item
-
-On the *Overview of Content Items* page, you see the following:
-
-| ATTRIBUTE | DESCRIPTION |
-| --- | --- |
-| Content Item Key | Fixed value of the content item indicated in the database. |
-|Name  | Name of a content item. |
-| Description |Descriptive information on what a content item is used for.  |
-| Content Type | Type of a content item. |
-|Created | Date when a content item was created. |
-| Updated | Date when a content item was last updated.|
-| Actions | Set of actions that can be performed on a content item. |
-
-By default, the latest created content item is displayed and sorted by the _Name_ column on the grid of content items.
-
-On the *Overview of Content Items* page, you can:
-
-* Create a new content item.
-* Sort content items by *Content Item Key*, *Name*, *Content type*, *Created*, and *Updated* dates.
-* Filter content items using the search by *Content Item Key*, *Name*, *Description*, *Content type*, *Created*, and *Updated* dates.
-* Edit a content item.
 
 
-## Create a banner content item
 
-{% info_block infoBox %}
-
-For the use cases and examples of the banner content item, see [Banner Content Item Widget](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-types.html#banner-content-item-widget) and [Banner Content Item Widget Templates](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-templates.html#banner-content-item-widget-templates).
-
-{% endinfo_block %}
-
-Follow the steps to create a banner:
-1. On the *Create Content Item: Banner* page, enter **Name** and **Description**. The fields are mandatory.
-2. In the *Default* tab, fill out the following mandatory fields:
-    * **Title**
-    * **Subtitle**
-    * **Image URL**
-    * **Click URL**
-    * **Alt-text**
-
-3. If needed, repeat the previous step in one or more locale-specific tabs.
-
-{% info_block infoBox "Multi-language setup" %}
-
-The following logic applies in a multi-language setup:
-* Locale-specific values overwrite the default values when the banner is rendered on a Storefront page with the [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html) selected.
-* If the fields are not filled out for a locale, the default values are displayed on a Storefront page with the locale selected.
-
-{% endinfo_block %}
-
-4. Click **Save**. This takes you to the *Overview of Content Items* page.
-
-{% info_block warningBox "Verification" %}
-
-Make sure the banner has been created:
-* Above *List of Content Items*, you can see the message: _Content item has been successfully created_.
-* In *List of Content Items*, you can see the created banner.
-
-{% endinfo_block %}
-
-**Tips and tricks**
-<br>On the *Create Content Item: Banner* page, you can do the following:
-* Clear all the fields in a tab by clicking **Clear locale**.
-* Go back to the *Overview of Content Items* page by clicking **Back to Content Items** in the top right corner.
-
-{% info_block warningBox "Saving changes" %}
-
-Make sure to click **Save** before clicking **Back to Content Items** or going to any other Back Office section. Otherwise, the changes are discarded.
-
-{% endinfo_block %}
-
-### Reference information: Create a banner content item
-
-The following table describes the attributes on the *Create Content Item: Banner* page.
-
-| ATTRIBUTE | DESCRIPTION |
-| --- | --- |
-| Name | Name of a banner content item. |
-|Description  | Descriptive information on what a banner is used for.  |
-| Title |  Heading of the banner.|
-| Subtitle| Text of the banner. |
-|Image URL | Address where the image element of the banner content item is stored.  |
-| Click URL | URL of the target page to which your shop visitors are redirected. |
-| Alt-text | Some additional text that describes the image. |
 
 ## Create an abstract product list content item
 

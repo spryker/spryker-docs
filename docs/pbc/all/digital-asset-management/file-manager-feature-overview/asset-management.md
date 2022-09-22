@@ -11,6 +11,7 @@ redirect_from:
   - /docs/asset-management
   - /docs/en/asset-management
   - /docs/scos/user/features/202200.0/file-manager-feature-overview/asset-management.html
+  - /docs/scos/user/features/202204.0/file-manager-feature-overview/asset-management.html
 ---
 
 There are two types of assets in the Spryker Commerce OS: dynamic and static.

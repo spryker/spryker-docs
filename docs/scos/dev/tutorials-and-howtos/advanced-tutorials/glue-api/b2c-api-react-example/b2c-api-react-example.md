@@ -63,7 +63,7 @@ The Demo shop was built using and demonstrates the use of the endpoints and reso
 | Product Labels API | [Retrieving product labels](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/retrieving-product-labels.html) |
 | Login API | [Authentication and authorization](/docs/scos/dev/glue-api-guides/{{site.version}}/authentication-and-authorization.html) |
 | Customer API | [Managing customers](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/managing-customers.html) |
-| Cart API | [Guest carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-carts.html)<br>[Carts of registered users](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html) |
+| Cart API | [Guest carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html)<br>[Carts of registered users](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html) |
 | Checkout API | [Checking out purchases and getting checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/check-out-purchases.html) |
 | Order History API | [Retrieving customer's order history](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-orders.html) |
 | Wishlist API | [Managing wishlists](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlists-via-glue-api.html) |

@@ -50,7 +50,7 @@ To redeem a gift card, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to redeem the gift card in. To get it, [create](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-carts.html#create-a-guest-cart) or [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart to redeem the gift card in. To get it, [create](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart) or [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart). |
 
 ### Request
 
@@ -148,7 +148,7 @@ Response sample: redeem a gift card in a guest cart
 }
 ```
 
-For the guest cart attributes, see [Creating Guest Carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-carts.html#create-a-guest-cart).
+For the guest cart attributes, see [Creating Guest Carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#create-a-guest-cart).
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |

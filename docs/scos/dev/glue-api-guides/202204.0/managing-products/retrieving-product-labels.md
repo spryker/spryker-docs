@@ -82,7 +82,7 @@ Request sample: retrieve a product label
 Apart from using this dedicated endpoint, you can retrieve product lables as an included resource as follows:
 * [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
-* [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-carts.html#retrieve-a-guest-cart)
+* [Retrieve a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart)
 * [Retrieve registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts)
 * [Retrieve a registered user's cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-a-registered-users-cart)
 * [Retrieve wishlists](/docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-wishlists-via-glue-api.html#retrieve-wishlists)

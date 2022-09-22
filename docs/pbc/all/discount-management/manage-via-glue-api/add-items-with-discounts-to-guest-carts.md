@@ -31,7 +31,7 @@ To add items to a guest cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart. To get it, [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-carts.html#retrieve-a-guest-cart). |
+| ***{% raw %}{{{% endraw %}guest_cart_id{% raw %}}}{% endraw %}*** | Unique identifier of the guest cart. To get it, [retrieve a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html#retrieve-a-guest-cart). |
 
 {% endinfo_block %}
 

@@ -46,7 +46,7 @@ For customers to be able to benefit from promotional offers, first, they need to
 
 See [Manage carts of registered users](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html) for details on how to retrieve promotional items for a registered user’s cart.
 
-See [Manage guest carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-carts.html) for details on how to retrieve promotional items for a guest user’s cart.
+See [Manage guest carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html) for details on how to retrieve promotional items for a guest user’s cart.
 
 ## Adding applicable promotional items to cart
 

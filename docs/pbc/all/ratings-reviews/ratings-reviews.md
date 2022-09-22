@@ -31,7 +31,7 @@ For more details about managing ratings and reviews, check the video:
 | NAME | MARKETPLACE COMPATIBLE | AVAILABLE IN ACP |
 | --- | --- | --- |
 | Spryker | No | No |
-| [Bazaarvoice](/docs/pbc/all/ratings-reviews/bazaarvoice/bazaarvoice.html) | No | Yes |
+| [Bazaarvoice](/docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice.html) | No | Yes |
 
 ## Current constraints
 
@@ -42,12 +42,18 @@ The feature has the following functional constraints, which are going to be reso
 
 ## Related Business User articles
 
-
+| BACK OFFICE USER GUIDES | THIRD-PARTY INTEGRATIONS |
+| - | - |
+| [Manage product reviews in the Back Office](/docs/pbc/all/ratings-reviews/manage-in-the-back-office/manage-product-reviews-in-the-back-office.html) | [Bazaarvoice](/docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice.html) | |
+| [Integrate Bazaarvoice](/docs/pbc/all/ratings-reviews/third-party-integrations/integrate-bazaarvoice.html) | |
+| [Configure Bazaarvoice](/docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice.html) | |
+| [Disconnect Bazaarvoice](/docs/pbc/all/ratings-reviews/third-party-integrations/disconnect-bazaarvoice.html) | |
 
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES | GLUE API GUIDES  | DATA IMPORT |
-|---------|---------|---------|
-| [Product Rating & Reviews feature integration](/docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-feature.html) | [Managing product ratings and reviews](/docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html)  | [File details: product_review.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/merchandising-setup/product-merchandising/file-details-product-review.csv.html)  |
-|[Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)   |   |  |
+| INSTALLATION GUIDES | GLUE API GUIDES  | DATA IMPORT | TUTORIALS AND HOWTOS |
+|---------|---------|---------| - |
+| [Install the Product Rating and Reviews feature](/docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-feature.html) | [Managing product ratings and reviews using Glue API](/docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html)  | [File details: product_review.csv](/docs/pbc/all/ratings-reviews/import-and-export-data/file-details-product-review.csv.html)  | [HowTo: Configure product reviews](/docs/pbc/all/ratings-reviews/tutorials-and-howtos/howto-configure-product-reviews.html) |
+| [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)   | [Retrieve product reviews when retrieving abstract products](/docs/pbc/all/ratings-reviews/manage-using-glue-api/retrieve-product-reviews-when-retrieving-abstract-products.html)  |  | |
+| [Install the Product Rating and Reviews + Product Group feature](/docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-product-group-feature.html) | [Retrieving product reviews when retrieving concrete products](/docs/pbc/all/ratings-reviews/manage-using-glue-api/retrieve-product-reviews-when-retrieving-concrete-products.html) | | |

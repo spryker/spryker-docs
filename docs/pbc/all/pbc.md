@@ -52,7 +52,7 @@ This section is in beta because not all the PBCs are covered. You are welcome to
 
 | NAME | CATEGORY |
 | --- | --- |
-| [Bazaarvoice](/docs/pbc/all/ratings-reviews/bazaarvoice/bazaarvoice.html) | Ratings and Reviews |
+| [Bazaarvoice](/docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice.html) | Ratings and Reviews |
 | [Payone](/docs/pbc/all/payment-service-providers/payone/payone.html) | PSP (Payment Service Provider) |
 | [Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html) | (CMP) Consent Management Platform |
 

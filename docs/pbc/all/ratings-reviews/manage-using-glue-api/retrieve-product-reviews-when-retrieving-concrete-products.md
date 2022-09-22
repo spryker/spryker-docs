@@ -1,5 +1,5 @@
 ---
-title: Retrieving product reviews when retrieving concerete products
+title: Retrieving product reviews when retrieving concrete products
 description: Retrieve general information about concrete products.
 last_updated: Sep 2, 2022
 template: glue-api-storefront-guide-template

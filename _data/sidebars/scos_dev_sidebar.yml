@@ -3518,8 +3518,8 @@ entries:
         nested:
         - title: Queue pool
           url: /docs/scos/dev/back-end-development/data-manipulation/queue/queue-pool.html
-        - title: Integrating RabbitMQ Headers in Queue Messages
-          url: /docs/scos/dev/back-end-development/data-manipulation/queue/integrating-rabbitmq-headers-in-queue-messages.html
+        - title: Integrate RabbitMQ Headers in Queue Messages
+          url: /docs/scos/dev/back-end-development/data-manipulation/queue/integrate-rabbitmq-headers-in-queue-messages.html
       - title: Payment methods
         nested:
         - title: Direct Debit example implementation

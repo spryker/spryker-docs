@@ -36,11 +36,11 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html
 ---
 
-This document provides step-by-step instructions on how to identify the new payment type using some unique constants. We are going to define those constants under the `Shared` namespace, since they're needed both for Yves and Zed.
+This document shows how to identify the new payment type using some unique constants. Those constants are defined under the `Shared` namespace because they're needed both for Yves and Zed.
 
 To identify the new payment type, do the following:
 
-1. Create the `PaymentMethodsConstants` interface under the `Shared` namespace, where you'll define these unique constants.
+1. Create the `PaymentMethodsConstants` interface under the `Shared` namespace, where you define these unique constants.
 
 **Code sample:**
 
@@ -79,13 +79,13 @@ interface PaymentMethodsConstants
     </transfer>
 ```
 
-3. To have the `PaymentTransfer` class updated, run the following command:
+1. Update `PaymentTransfer`:
 
 ```bash
 vendor/bin/console transfer:generate
 ```
 
-***
+
 **What's next?**
 
-After you've completed the front end, back end and shared implementation of the Direct Debit payment method, you can test it. See [Test your Direct Debit implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html) for information on how to do that.
+After you've completed the frontend, backend, and shared implementation of the Direct Debit payment method, you can test it. For information on how to do that, see [Test your Direct Debit implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html)

@@ -1,6 +1,6 @@
 ---
 title: Implement Direct Debit in Yves
-description: Usually, the first step of the Direct Debit payment method implementation is set-up on Yves. This document provides step-by-step instructions on how to do that.
+description: Usually, the first step of the Direct Debit payment method implementation is setting it up on Yves. This document provides step-by-step instructions on how to do that.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/dd-fe-implementation
@@ -36,19 +36,21 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html
 ---
 
-Usually, the first step of the Direct Debit payment method implementation is set-up on Yves. This document provides step-by-step instructions on how to do that.
+The first step of the Direct Debit payment method implementation is setting it up on Yves. This document provides step-by-step instructions on how to do that.
 
 ## Prerequisites
-Prior to proceeding with the first step, the form creation, add a new module on the project level in Yves - for example, the `PaymentMethods` module. If you haven't had any experience in creating a new module yet, see [Tutorial: Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html). Create a *Form* folder in the module.
+Before proceeding with the first step, the form creation, add a new module on the project level in Yves—for example, the `PaymentMethods` module. If you haven't had any experience in creating a new module yet, see [Tutorial: Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html). 
 
-## Creating a Form
-The starting point is to create the form in Yves.
+Create a `Form` folder in the module.
 
-To create the form, do the following:
+## Create a form
+The starting point is to create a form in Yves.
+
+To create a form, follow these steps.
 
 ### 1. Add the data provider
 
-In the created module, in our example `PaymentMethods`, add the data provider to the `Form/DataProvider/` folder:
+In the created `PaymentMethods` module, add the data provider to the `Form/DataProvider/` folder:
 
 ```php
 <?php
@@ -92,8 +94,6 @@ class DirectDebitDataProvider
 ```
 
 ### 2. Implement the form
-
-Once done, implement the form:
 
 ```php
 <?php
@@ -247,7 +247,7 @@ class DirectDebitForm extends AbstractSubFormType implements SubFormInterface, S
 
 ### 3. Add a plugin
 
-After the form has been implemented, plug this form into the checkout by adding a plugin to the `Plugin/` folder:
+After the form has been implemented, plug this form into the checkout by adding a plugin to the `Plugin` folder:
 
 ```php
 <?php
@@ -280,13 +280,13 @@ class DirectDebitSubFormPlugin extends AbstractPlugin implements SubFormPluginIn
 }
 ```
 
-## Setting up a Payment Handler
+## Setup a payment handler
 
-The next step is setting up the payment handler. Use the following procedure to accomplish this.
+The next step is setting up the payment handler. Follow these steps to accomplish the procedure.
 
 ### 1. Handle a new payment type
 
-To handle the new payment type, add a `DirectDebitHandler` class to the `Handler/` folder:
+To handle the new payment type, add the `DirectDebitHandler` class to the `Handler/` folder:
 
 ```php
 <?php
@@ -404,12 +404,13 @@ class DirectDebitHandler
 }
 ```
 
-## Creating a Direct Debit Twig Template
-This procedure learns you on how to create the Twig template that will be rendered when the direct debit payment method is selected under the configured path.
+## Create a Direct Debit Twig template
+
+This section shows how to create the Twig template that is rendered when the direct debit payment method is selected under the configured path.
 
 To create the Direct Debit twig template, do the following:
 
-1. In Yves, create the `directdebit.twig` template file in the `PaymentMethods/Theme/` folder, and then `ApplicationConstants::YVES_THEME` config value directory.
+1. In Yves, create the `directdebit.twig` template file in the `PaymentMethods/Theme/` folder and `ApplicationConstants::YVES_THEME` config value directory.
 2. Adjust the path according to the theme you are currently using.
 
 **Code sample:**
@@ -438,12 +439,10 @@ To create the Direct Debit twig template, do the following:
 ```
 
 {% info_block errorBox %}
-Don't forget to add the factory and the dependency provider for this new  module in Yves.
+
+Add the factory and the dependency provider for this new module in Yves.
+
 {% endinfo_block %}
-
-
-***
-
 
 **What's next?**
 

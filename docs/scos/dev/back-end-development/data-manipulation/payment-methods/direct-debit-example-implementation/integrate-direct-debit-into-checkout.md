@@ -35,9 +35,9 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/testing-your-direct-debit-implementation.html
 ---
 
-This document provides instructions on how to integrate the Direct Debit payment form and handler into Checkout.
+This document shows how to integrate the Direct Debit payment form and handler into Checkout.
 
-For this purpose, in Yves, add the `CheckoutDependencyInjector` to the `PaymentMethods/Dependency/Injector`. This will inject the direct debit form and handler into the `Checkout`module:
+For this purpose, in Yves, add the `CheckoutDependencyInjector` to the `PaymentMethods/Dependency/Injector`. This injects the direct debit form and handler into the `Checkout`module:
 
 **Code sample:**
 
@@ -107,10 +107,7 @@ class CheckoutPageDependencyInjector implements DependencyInjectorInterface
 
 <br>
 
-<!--{% info_block errorBox %}
-If you re-created this example in Demoshop, perform some adjustments on the `selectPayment()` from `checkout.js`.
-{% endinfo_block %}-->
-***
+
 **What's next?**
 
-Once done, you need to [create and integrate the Direct Debit payment method in the back-end](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-zed.html).
+[Create and integrate the Direct Debit payment method in the backend](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-zed.html).

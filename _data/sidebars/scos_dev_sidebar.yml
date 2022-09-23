@@ -3524,18 +3524,18 @@ entries:
         nested:
         - title: Direct Debit example implementation
           nested:
-          - title: Implementation of Direct Debit in Zed
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-zed.html
-          - title: Testing Your Direct Debit Implementation
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/testing-your-direct-debit-implementation.html
-          - title: Implementation of Direct Debit in Yves
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-yves.html
-          - title: Implementation of Direct Debit in the shared layer
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-the-shared-layer.html
+          - title: Implement Direct Debit in Zed
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-zed.html
+          - title: Test Your Direct Debit Implementation
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html
+          - title: Implement of Direct Debit in Yves
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-yves.html
+          - title: Implement Direct Debit in the shared layer
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-the-shared-layer.html
           - title: Integrate Direct Debit into checkout
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html
-          - title: Implementing Direct Debit Payment
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html
+          - title: Implement Direct Debit Payment
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html
         - title: Prepayment
           nested:
           - title: Testing the Prepayment implementation

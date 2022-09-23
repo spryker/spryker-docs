@@ -3552,18 +3552,18 @@ entries:
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-front-end.html
         - title: Invoice
           nested:
-          - title: Testing the Invoice payment implementation
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/testing-the-invoice-payment-implementation.html
-          - title: Implementing Invoice Payment in Frontend
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html
-          - title: Integrating Invoice Payment into checkout
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrating-invoice-payment-into-checkout.html
-          - title: Implementing Invoice payment in Back End
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-back-end.html
-          - title: Implementing Invoice payment in shared layer
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-shared-layer.html
-          - title: Implementing Invoice payment
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment.html
+          - title: Test the invoice payment implementation
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
+          - title: Implement invoice payment in frontend
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html
+          - title: Integrate invoice payment into checkout
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html
+          - title: Implement invoice payment in backend
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-backend.html
+          - title: Implement invoice payment in shared layer
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-shared-layer.html
+          - title: Implement invoice payment
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment.html
       - title: Data ingestion
         url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-ingestion.html
         nested:

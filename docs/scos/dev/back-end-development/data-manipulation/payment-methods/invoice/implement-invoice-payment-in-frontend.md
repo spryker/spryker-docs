@@ -1,6 +1,6 @@
 ---
-title: Implementing Invoice payment in front end
-description: This document describes implementing invoice payment in front end.
+title: Implement invoice payment in frontend
+description: This document describes how to implement invoice payment in frontend.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-invoice-payment-fe
@@ -22,29 +22,29 @@ redirect_from:
   - /v2/docs/en/ht-invoice-payment-fe
   - /v1/docs/ht-invoice-payment-fe
   - /v1/docs/en/ht-invoice-payment-fe
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html
 related:
-  - title: Implementing Invoice payment
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment.html
-  - title: Implementing Invoice payment in back end
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-back-end.html
-  - title: Implementing Invoice payment in shared layer
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-shared-layer.html
-  - title: Integrating Invoice payment into checkout
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrating-invoice-payment-into-checkout.html
-  - title: Testing the Invoice payment implementation
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/testing-the-invoice-payment-implementation.html
+  - title: Implement invoice payment
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment.html
+  - title: Implement invoice payment in backend
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-backend.html
+  - title: Implement invoice payment in shared layer
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-shared-layer.html
+  - title: Integrate invoice payment into checkout
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html
+  - title: Test the invoice payment implementation
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
 ---
 
-## Form creation
+## Create a form
 
 In Yves, the starting point is to build a form.
+* Add a new module in Yves.
+* Add the `Form` folder, where you will place the implementation for building the form.
 
-* Add a new module in Yves
-* Add a `Form` folder where we will place the implementation for building the form
+### 1. Add the data provider
 
-### 1. Adding the data provider
-
-The first step is to add the data provider, inside the `Form/DataProvider/` folder:
+In the `Form/DataProvider/` folder, add the data provider:
 
 ```php
 <?php
@@ -79,9 +79,7 @@ class InvoiceDataProvider implements DataProviderInterface
 }
 ```
 
-### 2. Implementing the form
-
-The next step is to implement the form:
+### 2. Implement the form
 
 ```php
 <?php
@@ -146,9 +144,9 @@ class InvoiceSubForm extends CheckoutAbstractSubFormType implements SubFormInter
 }
 ```
 
-### 3. Adding a plugin
+### 3. Add a plugin
 
-Right after the form is implemented, you will need to plug this form into checkout. In order to do that, add a plugin for it inside the `Plugin/` folder:
+After implementing the form, you need to plug this form into the checkout. To do that, in the `Plugin/` folder, add a plugin for it:
 
 ```php
 <?php
@@ -183,13 +181,13 @@ class InvoiceSubFormPlugin extends AbstractPlugin implements SubFormPluginInterf
 }
 ```
 
-## Payment handler
+## Set up a payment handler
 
-The next procedure to be performed is to set-up the payment handler.
+The next procedure to be performed is to set up a payment handler.
 
-### 1. Handling the new payment type
+### 1. Handle the new payment type
 
-To handle this new payment type, add the `InvoiceHandler` class inside the `Handler/` folder:
+To handle this new payment type, in the `Handler/` folder, add the `InvoiceHandler` class:
 
 ```php
 <?php
@@ -230,9 +228,9 @@ class InvoiceHandler
 }
 ```
 
-### 2. Plugging the payment handler into checkout
+### 2. Plug the payment handler into the checkout
 
-To plug this payment handler into checkout, add a plugin for it inside the `Plugin/` folder:
+To plug this payment handler into the checkout, in the `Plugin/` folder, add a plugin for it:
 
 ```php
 <?php
@@ -264,11 +262,11 @@ class InvoiceHandlerPlugin extends AbstractPlugin implements StepHandlerPluginIn
 }
 ```
 
-## Invoice twig template
+## Add an invoice twig template
 
-Add the Twig template that will be rendered when invoice payment method is selected under the configured path:
+Add the Twig template that's rendered when the invoice payment method is selected under the configured path:
 
-1. In Yves, create the `invoice.twig` template file in `PaymentMethods/Theme/ then ApplicationConstants::YVES_THEME` config value directory.
+1. In Yves, create the `invoice.twig` template file in the `PaymentMethods/Theme/ then ApplicationConstants::YVES_THEME` config value directory.
 2. Adjust the path according to the theme you are currently using.
 
 <details>
@@ -285,6 +283,6 @@ Add the Twig template that will be rendered when invoice payment method is selec
 
 {% info_block errorBox %}
 
-Don't forget to add the factory and the dependency provider for this new added module in Yves.
+Don't forget to add the factory and the dependency provider for this newly added module in Yves.
 
 {% endinfo_block %}

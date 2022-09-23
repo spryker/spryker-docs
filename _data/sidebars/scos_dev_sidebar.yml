@@ -3410,8 +3410,8 @@ entries:
     - title: Forms
       url: /docs/scos/dev/back-end-development/forms/forms.html
       nested:
-      - title: Creating forms
-        url: /docs/scos/dev/back-end-development/forms/creating-forms.html
+      - title: Create forms
+        url: /docs/scos/dev/back-end-development/forms/create-forms.html
     - title: Plugins
       url: /docs/scos/dev/back-end-development/plugins/plugins.html
       nested:

@@ -3625,8 +3625,8 @@ entries:
     - title: Factory
       url: /docs/scos/dev/back-end-development/factory/factory.html
       nested:
-      - title: Injecting dependencies within factories- container globals
-        url: /docs/scos/dev/back-end-development/factory/injecting-dependencies-within-factories-container-globals.html
+      - title: "Inject dependencies within factories: Container globals"
+        url: /docs/scos/dev/back-end-development/factory/inject-dependencies-within-factories-container-globals.html
   - title: Frontend development
     nested:
     - title: Zed

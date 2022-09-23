@@ -1,6 +1,6 @@
 ---
-title: Injecting dependencies within factories - container globals
-description: The ContainerGlobals is a way to inject dependencies which are available inside your Factories.
+title: "Inject dependencies within factories: Container globals"
+description: ContainerGlobals lets you inject dependencies available inside your factories.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/container-globals
@@ -22,12 +22,13 @@ redirect_from:
   - /v2/docs/en/container-globals
   - /v1/docs/container-globals
   - /v1/docs/en/container-globals
+  - /docs/scos/dev/back-end-development/factory/injecting-dependencies-within-factories-container-globals.html
 related:
   - title: Factory
     link: docs/scos/dev/back-end-development/factory/factory.html
 ---
 
-The `ContainerInterface` provides a way to make dependencies globally available. Every dependency added to `ContainerInterface`, that is marked as `isGlobal`, is available by using `getProvidedDependency()` in your factory.
+The `ContainerInterface` provides a way to make dependencies globally available. Every dependency added to `ContainerInterface`, that is, marked as `isGlobal`, is available by using `getProvidedDependency()` in your factory.
 
 To add something globally you need to add the dependency to the `ContainerInterface` and mark it as global.
 
@@ -62,5 +63,5 @@ class YourApplicationPlugin implements ApplicationPluginInterface
 }
 ```
 
-To access this global dependency, call `$this->getProvidedDependency('Your service name')` inside your factory. With this approach, you can define such dependencies once instead of defining them each time for each module that uses them.
+To access this global dependency, inside your factory, call `$this->getProvidedDependency('Your service name')`. With this approach, you can define such dependencies once instead of defining them each time for each module that uses them.
 

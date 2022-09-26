@@ -1,6 +1,6 @@
 ---
 title: Implementing Invoice payment in front end
-description: This article describes implementing invoice payment in front end.
+description: This document describes implementing invoice payment in front end.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-invoice-payment-fe
@@ -189,7 +189,7 @@ The next procedure to be performed is to set-up the payment handler.
 
 ### 1. Handling the new payment type
 
-To be able to handle this new payment type, add the `InvoiceHandler` class inside the `Handler/` folder:
+To handle this new payment type, add the `InvoiceHandler` class inside the `Handler/` folder:
 
 ```php
 <?php
@@ -271,7 +271,7 @@ Add the Twig template that will be rendered when invoice payment method is selec
 1. In Yves, create the `invoice.twig` template file in `PaymentMethods/Theme/ then ApplicationConstants::YVES_THEME` config value directory.
 2. Adjust the path according to the theme you are currently using.
 
-<details open>
+<details>
 <summary markdown='span'>Code sample</summary>
 
 ```twig
@@ -285,6 +285,6 @@ Add the Twig template that will be rendered when invoice payment method is selec
 
 {% info_block errorBox %}
 
-Don’t forget to add the factory and the dependency provider for this new added module in Yves.
+Don't forget to add the factory and the dependency provider for this new added module in Yves.
 
 {% endinfo_block %}

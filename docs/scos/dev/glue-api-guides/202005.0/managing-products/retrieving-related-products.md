@@ -266,7 +266,7 @@ To get related items of an abstract product, send the request:
       "attributes": {
         "sku": "131",
         "name": "Lenovo ThinkStation P900",
-        "description": "Thermal Design: Elegant & Efficient. Patented tri-channel cooling with just 3 system fans – as opposed to 10 that other workstations typically rely on — and a direct cooling air baffle directs fresh air into the CPU and memory. ThinkStation P900 delivers new technologies and design to keep your workstation cool and quiet. The innovative Flex Module lets you customize I/O ports, so you add only what you need. Using the 5.25\" bays, you can mix and match components including an ultraslim ODD, 29-in-1 media card reader, Firewire, and eSATA. The Flex Connector is a mezzanine card that fits into the motherboard and allows for expanded storage and I/O, without sacrificing the use of rear PCI. It supports SATA/SAS/PCIe advanced RAID solution. ThinkStation P900 includes two available connectors (enabled with each CPU).",
+        "description": "Thermal Design: Elegant & Efficient. Patented tri-channel cooling with just 3 system fans – as opposed to 10 that other workstations typically rely on—and a direct cooling air baffle directs fresh air into the CPU and memory. ThinkStation P900 delivers new technologies and design to keep your workstation cool and quiet. The innovative Flex Module lets you customize I/O ports, so you add only what you need. Using the 5.25\" bays, you can mix and match components including an ultraslim ODD, 29-in-1 media card reader, Firewire, and eSATA. The Flex Connector is a mezzanine card that fits into the motherboard and allows for expanded storage and I/O, without sacrificing the use of rear PCI. It supports SATA/SAS/PCIe advanced RAID solution. ThinkStation P900 includes two available connectors (enabled with each CPU).",
         "attributes": {
           "processor_frequency": "2.4 GHz",
           "processor_cores": "6",
@@ -289,7 +289,7 @@ To get related items of an abstract product, send the request:
         },
         "metaTitle": "Lenovo ThinkStation P900",
         "metaKeywords": "Lenovo,Tax Exempt",
-        "metaDescription": "Thermal Design: Elegant & Efficient. Patented tri-channel cooling with just 3 system fans – as opposed to 10 that other workstations typically rely on — an",
+        "metaDescription": "Thermal Design: Elegant & Efficient. Patented tri-channel cooling with just 3 system fans – as opposed to 10 that other workstations typically rely on—an",
         "attributeNames": {
           "processor_frequency": "Processor frequency",
           "processor_cores": "Processor cores",
@@ -535,7 +535,7 @@ To get related items of an abstract product, send the request:
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Lenovo ThinkStation P900",
-                "description": "Thermal Design: Elegant & Efficient. Patented tri-channel cooling with just 3 system fans – as opposed to 10 that other workstations typically rely on — and a direct cooling air baffle directs fresh air into the CPU and memory. ThinkStation P900 delivers new technologies and design to keep your workstation cool and quiet. The innovative Flex Module lets you customize I/O ports, so you add only what you need. Using the 5.25\" bays, you can mix and match components including an ultraslim ODD, 29-in-1 media card reader, Firewire, and eSATA. The Flex Connector is a mezzanine card that fits into the motherboard and allows for expanded storage and I/O, without sacrificing the use of rear PCI. It supports SATA/SAS/PCIe advanced RAID solution. ThinkStation P900 includes two available connectors (enabled with each CPU).",
+                "description": "Thermal Design: Elegant & Efficient. Patented tri-channel cooling with just 3 system fans – as opposed to 10 that other workstations typically rely on—and a direct cooling air baffle directs fresh air into the CPU and memory. ThinkStation P900 delivers new technologies and design to keep your workstation cool and quiet. The innovative Flex Module lets you customize I/O ports, so you add only what you need. Using the 5.25\" bays, you can mix and match components including an ultraslim ODD, 29-in-1 media card reader, Firewire, and eSATA. The Flex Connector is a mezzanine card that fits into the motherboard and allows for expanded storage and I/O, without sacrificing the use of rear PCI. It supports SATA/SAS/PCIe advanced RAID solution. ThinkStation P900 includes two available connectors (enabled with each CPU).",
                 "attributes": {
                     "processor_frequency": "2.4 GHz",
                     "processor_cores": "6",
@@ -566,7 +566,7 @@ To get related items of an abstract product, send the request:
                 },
                 "metaTitle": "Lenovo ThinkStation P900",
                 "metaKeywords": "Lenovo,Tax Exempt",
-                "metaDescription": "Thermal Design: Elegant & Efficient. Patented tri-channel cooling with just 3 system fans – as opposed to 10 that other workstations typically rely on — an",
+                "metaDescription": "Thermal Design: Elegant & Efficient. Patented tri-channel cooling with just 3 system fans – as opposed to 10 that other workstations typically rely on—an",
                 "attributeNames": {
                     "processor_frequency": "Processor frequency",
                     "processor_cores": "Processor cores",
@@ -673,7 +673,7 @@ Request sample : `GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-449
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Asus ZenPad Z380C-1B",
-                "description": "Bigger while smaller ASUS ZenPad 8.0 is an 8-inch tablet with a 76.5% screen-to-body ratio — an incredible engineering achievement made possible by reducing the bezel width to the bare minimum. ASUS VisualMaster is a suite of exclusive visual enhancement technologies that combine hardware and software to optimize all aspects of the display — including contrast, sharpness, color, clarity, and brightness — resulting in an incredibly realistic viewing experience. With ASUS VisualMaster, it’s just like being there. ASUS Audio Cover is an entertainment accessory that brings cinematic, 5.1-channel surround sound to ASUS ZenPad 8.0. DTS-HD Premium Sound and SonicMaster technology provide further enhancement, ensuring the ultimate audio experience on ASUS ZenPad 8.0. Intelligent contrast enhancement analyzes and optimizes each pixel in an image before it is reproduced, rendering more detail in the highlights and shadows to reveal the true beauty in your pictures.",
+                "description": "Bigger while smaller ASUS ZenPad 8.0 is an 8-inch tablet with a 76.5% screen-to-body ratio—an incredible engineering achievement made possible by reducing the bezel width to the bare minimum. ASUS VisualMaster is a suite of exclusive visual enhancement technologies that combine hardware and software to optimize all aspects of the display—including contrast, sharpness, color, clarity, and brightness—resulting in an incredibly realistic viewing experience. With ASUS VisualMaster, it’s just like being there. ASUS Audio Cover is an entertainment accessory that brings cinematic, 5.1-channel surround sound to ASUS ZenPad 8.0. DTS-HD Premium Sound and SonicMaster technology provide further enhancement, ensuring the ultimate audio experience on ASUS ZenPad 8.0. Intelligent contrast enhancement analyzes and optimizes each pixel in an image before it is reproduced, rendering more detail in the highlights and shadows to reveal the true beauty in your pictures.",
                 "attributes": {
                     "processor_cores": "4",
                     "storage_media": "flash",
@@ -705,7 +705,7 @@ Request sample : `GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-449
                 },
                 "metaTitle": "Asus ZenPad Z380C-1B",
                 "metaKeywords": "Asus,Communication Electronics",
-                "metaDescription": "Bigger while smaller ASUS ZenPad 8.0 is an 8-inch tablet with a 76.5% screen-to-body ratio — an incredible engineering achievement made possible by reducin",
+                "metaDescription": "Bigger while smaller ASUS ZenPad 8.0 is an 8-inch tablet with a 76.5% screen-to-body ratio—an incredible engineering achievement made possible by reducin",
                 "attributeNames": {
                     "processor_cores": "Processor cores",
                     "storage_media": "Storage media",
@@ -728,7 +728,7 @@ Request sample : `GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-449
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Asus ZenPad Z380C-1B",
-                "description": "Bigger while smaller ASUS ZenPad 8.0 is an 8-inch tablet with a 76.5% screen-to-body ratio — an incredible engineering achievement made possible by reducing the bezel width to the bare minimum. ASUS VisualMaster is a suite of exclusive visual enhancement technologies that combine hardware and software to optimize all aspects of the display — including contrast, sharpness, color, clarity, and brightness — resulting in an incredibly realistic viewing experience. With ASUS VisualMaster, it’s just like being there. ASUS Audio Cover is an entertainment accessory that brings cinematic, 5.1-channel surround sound to ASUS ZenPad 8.0. DTS-HD Premium Sound and SonicMaster technology provide further enhancement, ensuring the ultimate audio experience on ASUS ZenPad 8.0. Intelligent contrast enhancement analyzes and optimizes each pixel in an image before it is reproduced, rendering more detail in the highlights and shadows to reveal the true beauty in your pictures.",
+                "description": "Bigger while smaller ASUS ZenPad 8.0 is an 8-inch tablet with a 76.5% screen-to-body ratio—an incredible engineering achievement made possible by reducing the bezel width to the bare minimum. ASUS VisualMaster is a suite of exclusive visual enhancement technologies that combine hardware and software to optimize all aspects of the display—including contrast, sharpness, color, clarity, and brightness—resulting in an incredibly realistic viewing experience. With ASUS VisualMaster, it’s just like being there. ASUS Audio Cover is an entertainment accessory that brings cinematic, 5.1-channel surround sound to ASUS ZenPad 8.0. DTS-HD Premium Sound and SonicMaster technology provide further enhancement, ensuring the ultimate audio experience on ASUS ZenPad 8.0. Intelligent contrast enhancement analyzes and optimizes each pixel in an image before it is reproduced, rendering more detail in the highlights and shadows to reveal the true beauty in your pictures.",
                 "attributes": {
                     "processor_cores": "4",
                     "storage_media": "flash",
@@ -760,7 +760,7 @@ Request sample : `GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-449
                 },
                 "metaTitle": "Asus ZenPad Z380C-1B",
                 "metaKeywords": "Asus,Communication Electronics",
-                "metaDescription": "Bigger while smaller ASUS ZenPad 8.0 is an 8-inch tablet with a 76.5% screen-to-body ratio — an incredible engineering achievement made possible by reducin",
+                "metaDescription": "Bigger while smaller ASUS ZenPad 8.0 is an 8-inch tablet with a 76.5% screen-to-body ratio—an incredible engineering achievement made possible by reducin",
                 "attributeNames": {
                     "processor_cores": "Processor cores",
                     "storage_media": "Storage media",
@@ -783,7 +783,7 @@ Request sample : `GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-449
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Asus ZenPad Z580CA",
-                "description": "Fashion-inspired design The design of ASUS ZenPad S 8.0 carries modern influences and a simple, clean look that gives it a universal and stylish appeal. These elements are inspired by our Zen design philosophy of balancing beauty and strength. ASUS ZenPad S 8.0 is an 8-inch tablet that is only 6.6mm thin, weighs just 298g, and has a 74% screen-to-body ratio — an incredible engineering achievement made possible by reducing the bezel width to the bare minimum. Intelligent contrast enhancement analyzes and optimizes each pixel in an image before it is reproduced, rendering more detail in the highlights and shadows to reveal the true beauty in your pictures. ASUS ZenPad S 8.0 is equipped with ASUS Tru2Life+ technology, which improves video with fast action scenes — such as sports — by increasing the screen refresh rate, resulting in reduced blur and smooth, detailed motion.",
+                "description": "Fashion-inspired design The design of ASUS ZenPad S 8.0 carries modern influences and a simple, clean look that gives it a universal and stylish appeal. These elements are inspired by our Zen design philosophy of balancing beauty and strength. ASUS ZenPad S 8.0 is an 8-inch tablet that is only 6.6mm thin, weighs just 298g, and has a 74% screen-to-body ratio—an incredible engineering achievement made possible by reducing the bezel width to the bare minimum. Intelligent contrast enhancement analyzes and optimizes each pixel in an image before it is reproduced, rendering more detail in the highlights and shadows to reveal the true beauty in your pictures. ASUS ZenPad S 8.0 is equipped with ASUS Tru2Life+ technology, which improves video with fast action scenes—such as sports—by increasing the screen refresh rate, resulting in reduced blur and smooth, detailed motion.",
                 "attributes": {
                     "processor_cores": "4",
                     "display_technology": "IPS",
@@ -845,7 +845,7 @@ Request sample : `GET http://mysprykershop.com/carts/1ce91011-8d60-59ef-9fe0-449
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Asus ZenPad Z580CA-1B",
-                "description": "Fashion-inspired design The design of ASUS ZenPad S 8.0 carries modern influences and a simple, clean look that gives it a universal and stylish appeal. These elements are inspired by our Zen design philosophy of balancing beauty and strength. ASUS VisualMaster is a suite of exclusive visual enhancement technologies that combine hardware and software to optimize all aspects of the display — including contrast, sharpness, color, clarity, and brightness — resulting in an incredibly realistic viewing experience. With ASUS VisualMaster, it’s just like being there. ASUS ZenPad S 8.0 is equipped with ASUS Tru2Life+ technology, which improves video with fast action scenes — such as sports — by increasing the screen refresh rate, resulting in reduced blur and smooth, detailed motion.",
+                "description": "Fashion-inspired design The design of ASUS ZenPad S 8.0 carries modern influences and a simple, clean look that gives it a universal and stylish appeal. These elements are inspired by our Zen design philosophy of balancing beauty and strength. ASUS VisualMaster is a suite of exclusive visual enhancement technologies that combine hardware and software to optimize all aspects of the display—including contrast, sharpness, color, clarity, and brightness—resulting in an incredibly realistic viewing experience. With ASUS VisualMaster, it’s just like being there. ASUS ZenPad S 8.0 is equipped with ASUS Tru2Life+ technology, which improves video with fast action scenes—such as sports—by increasing the screen refresh rate, resulting in reduced blur and smooth, detailed motion.",
                 "attributes": {
                     "internal_memory": "4 GB",
                     "display_technology": "IPS",

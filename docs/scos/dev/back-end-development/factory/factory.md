@@ -85,12 +85,12 @@ The extended `AbstractFactory` holds some important methods:
 | METHOD    | PURPOSE  | AVAILABLE |
 | ------------------- | ----------------- | --------- |
 | `getConfig()`         | The module config contains all of the needed settings for the current module. | Zed only  |
-| `getRepository()` | The dependency container always holds a direct connection to the module’s repository, which is often required by internal models. | Zed only  |
-| `getEntityManager()`| The dependency container always holds a direct connection to the module’s entity manager, which is often required by internal models.| Zed only  |
+| `getRepository()` | The dependency container always holds a direct connection to the module's repository, which is often required by internal models. | Zed only  |
+| `getEntityManager()`| The dependency container always holds a direct connection to the module's entity manager, which is often required by internal models.| Zed only  |
 
 ## Snippets to create a new factory
 
-The factory pattern is used all over our code-base. The concrete implementations look a bit different for Yves, Zed, and Client. You can copy and paste these snippets and just replace ‘MyBundle’ with your real module name. To enable auto-completion, it is recommended to define the interfaces for the query container and module config in the class doc block as shown in the snippets.
+The factory pattern is used all over our code-base. The concrete implementations look a bit different for Yves, Zed, and Client. You can copy and paste these snippets and just replace 'MyBundle' with your real module name. To enable auto-completion, it is recommended to define the interfaces for the query container and module config in the class doc block as shown in the snippets.
 
 ### Yves
 

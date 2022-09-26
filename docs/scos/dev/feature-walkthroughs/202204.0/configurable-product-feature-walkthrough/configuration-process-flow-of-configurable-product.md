@@ -88,7 +88,7 @@ The customer clicks the configuration button, and the request is redirected to t
 | sourceType | SOURCE_TYPE_PDP, SOURCE_TYPE_CART, SOURCE_TYPE_WISHLIST_DETAIL, …                                                                            |   |
 | `SKU`  | `some_sku`                                                                                                                                   |   |
 | `timestamp` | `1231313123123`                                                                                                                              |   |
-| `CheckSum` | It’s an encrypted value of the `CheckSum`. It must be based on the all requested parameters and must have the same order for decryption. |   |
+| `CheckSum` | It's an encrypted value of the `CheckSum`. It must be based on the all requested parameters and must have the same order for decryption. |   |
 
 ### Phase 6
 
@@ -97,7 +97,7 @@ The customer clicks the configuration button, and the request is redirected to t
 3. In the backend, a `CheckSum` is prepared based on the response data, which is encrypted with a shared key and returns these as the AJAX response.
 4. On the configurator page, the framework puts data to a hidden form and submits the form, which points to the gateway page.
 5. After the successful configuration, the customer is redirected to the configurator gateway with a configuration response.
-6. The gateway URL does not equal the back URL; it’s a fixed, known URL.
+6. The gateway URL does not equal the back URL; it's a fixed, known URL.
 
 ### Phase 7
 
@@ -177,7 +177,7 @@ Redirects the customer to the configurator page using the GET request.
 ### Phase 6
 
 1. After the successful configuration, the customer is redirected to the configurator gateway with a configuration response.
-2. The gateway URL is not the same as the back URL; it’s a fixed known URL.
+2. The gateway URL is not the same as the back URL; it's a fixed known URL.
 
 ### Phase 7
 

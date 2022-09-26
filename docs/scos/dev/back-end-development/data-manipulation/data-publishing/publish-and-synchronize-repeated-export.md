@@ -1,6 +1,6 @@
 ---
 title: Publish and Synchronize repeated export
-description: By following the steps from this article, you can re-generate published data and re-write data of database tables in Storage and Search modules with subsequent update of Redis and Elasticsearch records
+description: By following the steps from this document, you can regenerate published data and re-write data of database tables in Storage and Search modules with subsequent update of Redis and Elasticsearch records
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/publish-and-synchronize-repeated-export
@@ -25,25 +25,25 @@ redirect_from:
 related:
   - title: Publish and Synchronization
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
-  - title: Implementing Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-publish-and-synchronization.html
-  - title: Handling data with Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html
+  - title: Implement Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
+  - title: Handle data with Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
   - title: Adding publish events
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/adding-publish-events.html
-  - title: Implementing event trigger publisher plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html
-  - title: Implementing synchronization plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
-  - title: Debugging listeners
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debugging-listeners.html
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
+  - title: Implement event trigger publisher plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
+  - title: Implement synchronization plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
+  - title: Debug listeners
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
   - title: Publish and Synchronize and multi-store shop systems
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
   - title: Synchronization behavior - enabling multiple mappings
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
-Automatic execution of the [Publish & Synchronize process](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html) does not always resolve all your tasks. For example, you might want to re-synchronize(re-sync) the published data in Redis and Elasticsearch to display updated information in your shop front end. Or you might want to re-generate the published data and re-write the data of the database tables in the Storage and Search modules with the subsequent update of Redis and Elasticsearch records. This can be done manually by running console commands.
+Automatic execution of the [Publish & Synchronize process](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html) does not always resolve all your tasks. For example, you might want to re-synchronize(re-sync) the published data in Redis and Elasticsearch to display updated information in your shop front end. Or you might want to re-generate the published data and re-write the data of the database tables in the Storage and Search modules with the subsequent update of Redis and Elasticsearch records. This can be done manually by running console commands.
 
 ## Data re-synchronization
 
@@ -75,7 +75,7 @@ For example, the command to re-sync data for `CMS Block` looks as follows:
 vendor/bin/console sync:data cms_block
 ```
 
-To trigger data re-sync for a resource, there should be a corresponding sync plugin created for this resource. See [Implementing synchronization plugins](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html) to learn how to create it.
+To trigger data re-sync for a resource, there should be a corresponding sync plugin created for this resource. See [Implement synchronization plugins](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html) to learn how to create it.
 
 ## Published data re-generation
 
@@ -117,4 +117,4 @@ vendor/bin/console publish:trigger-events -r cms_block,availability -i 1,2
 
 To trigger data re-publish for a resource, there should be a corresponding publisher plugin created for this resource.
 
-See [Implementing event trigger publisher plugins](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html) to learn how to create it.
+See [Implement event trigger publisher plugins](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html) to learn how to create it.

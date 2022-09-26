@@ -1,6 +1,6 @@
 ---
 title: Implementing Invoice payment in back end
-description: This article describes how to implement invoice payment in the back end.
+description: This document describes how to implement invoice payment in the back end.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-invoice-payment-be
@@ -46,7 +46,7 @@ Perform the following procedure:
 
 1. Add the following 2 plugins in Zed, inside the `Communication/Plugin/Checkout/` folder of the new added module.
 
-<details open>
+<details>
 <summary markdown='span'>InvoicePreCheckPlugin</summary>
 
 ```php
@@ -78,7 +78,7 @@ class InvoicePreCheckPlugin extends AbstractPlugin implements CheckoutPreCheckPl
 ```
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>InvoiceSaveOrderPlugin</summary>
 
 ```php
@@ -113,7 +113,7 @@ class InvoiceSaveOrderPlugin extends AbstractPlugin implements CheckoutSaveOrder
 
 1. Next, inject these 2 plugins in the `Payment` module by creating a `PaymentDependencyInjector` under `Dependency/Injector/` folder:
 
-<details open>
+<details>
 <summary markdown='span'>Code sample:</summary>
 
 ```php
@@ -166,11 +166,11 @@ class PaymentDependencyInjector extends AbstractDependencyInjector
 
 ## State machine
 
-Once the preceding procedures are completed, we’ll need to design a state machine. This state machine is dedicated for processing orders that use direct debit as a payment type:
+Once the preceding procedures are completed, we'll need to design a state machine. This state machine is dedicated for processing orders that use direct debit as a payment type:
 
 1. Add the `Invoice.xml` file inside the `config/Zed/oms/` folder, with the following content:
 
-<details open>
+<details>
 <summary markdown='span'>Code sample:</summary>
 
 ```xml
@@ -303,7 +303,7 @@ Once the preceding procedures are completed, we’ll need to design a state mach
 
 2. Add this new state machine to `OmsConfig`:
 
-<details open>
+<details>
 <summary markdown='span'>Code sample</summary>
 
 ```php
@@ -324,7 +324,7 @@ Once the preceding procedures are completed, we’ll need to design a state mach
 ```
 </details>
 
-3. Link the invoice state machine to process the orders submitted with the payment method we’re implementing.
+3. Link the invoice state machine to process the orders submitted with the payment method we're implementing.
 
 Add this configuration in the `SalesConfig` class:
 

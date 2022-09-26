@@ -34,7 +34,7 @@ To apply a discount voucher to a cart of a registered user, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | Unique identifier of the cart to apply the discount voucher to. To get it, [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts).  |
+| ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | Unique identifier of the cart to apply the discount voucher to. To get it, [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#retrieve-registered-users-carts).  |
 
 ### Request
 
@@ -208,8 +208,8 @@ To remove a discount voucher, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | Unique identifier of the registered user's cart to remove the discount voucher from. To get it, [Retrieve a registered user's cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts).  |
-| ***{% raw %}{{{% endraw %}voucher_id{% raw %}}}{% endraw %}*** | Unique identifier of the voucher to remove. To get it, [Retrieve a registered user's cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-a-registered-users-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts) with the `vouchers` resource included.  |
+| ***{% raw %}{{{% endraw %}uuid{% raw %}}}{% endraw %}*** | Unique identifier of the registered user's cart to remove the discount voucher from. To get it, [Retrieve a registered user's cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#retrieve-registered-users-carts).  |
+| ***{% raw %}{{{% endraw %}voucher_id{% raw %}}}{% endraw %}*** | Unique identifier of the voucher to remove. To get it, [Retrieve a registered user's cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#retrieve-a-registered-users-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#retrieve-registered-users-carts) with the `vouchers` resource included.  |
 
 ### Request
 

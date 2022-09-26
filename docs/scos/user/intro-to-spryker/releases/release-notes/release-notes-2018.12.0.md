@@ -56,7 +56,7 @@ Endpoints ensure access-token login and retrieval. Customers can also register a
 ### Cart
 Customers and guests can add products to their cart. Guest carts are now also persisted and retrievable via anonymous IDs, handled by your client application.
 
-**Documentation**: [Managing Carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html).
+**Documentation**: [Managing Carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html).
 
 ### Checkout
 Retrieve all the necessary information to build your checkout for guest customers and already registered customers with their personal data. If you offer different shipment or payment methods on your own conditions, they will be considered.

@@ -46,7 +46,7 @@ To add items to a cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html)) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html)) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 
 ### Request
 
@@ -2451,7 +2451,7 @@ It is the responsibility of the API Client to track whether the selected items a
 For the attributes of other included resources, see the following:
 
 * [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-measurement-units.html)
-* [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart)
+* [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#create-a-cart)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-products.html#abstract-products-response-attributes)
 
@@ -2466,7 +2466,7 @@ To add a configurable bundle to a registered user’s cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***cart_uuid*** | A unique identifier of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***cart_uuid*** | A unique identifier of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 
 ### Request
 
@@ -2666,7 +2666,7 @@ Request sample: `POST https://glue.mysprykershop.com/carts/61ab15e9-e24a-5dec-a1
 ```    
 </details>
 
-For the attributes of the response sample, see [Add an item a to a registered user's cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/managing-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
+For the attributes of the response sample, see [Add an item a to a registered user's cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#add-an-item-to-a-registered-users-cart).
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -2690,7 +2690,7 @@ To change the number of items in a cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***cart_uuid*** | Unique identifier of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 | ***{% raw %}{{{% endraw %}itemgroupkey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. |
 
 ### Request
@@ -2860,7 +2860,7 @@ To change quantity of configurable bundles in a registered user’s cart, send t
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | A unique identifier of a cart.[ Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | A unique identifier of a cart.[ Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 | ***{% raw %}{{{% endraw %}bundlegroupkey{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the Configurable Bundle Template and items selected in the slot. You can get it when [adding the configurable bundle to a registered user’s cart](#add-a-configurable-bundle-to-a-registered-users-cart). |
 
 ### Request
@@ -3172,7 +3172,7 @@ To remove an item from a registered user's cart, send the request:
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 | ***{% raw %}{{{% endraw %}itemgroupkey{% raw %}}}{% endraw %}*** | Group key of the item. Usually, it is equal to the item’s SKU. |
 
 
@@ -3198,7 +3198,7 @@ To remove a configurable bundle from a registered user’s cart, send the reques
 
 | PATH PARAMETER | DESCRIPTION |
 | --- | --- |
-| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-carts-of-registered-users/manage-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
+| ***{% raw %}{{{% endraw %}cart_uuid{% raw %}}}{% endraw %}*** | Unique identifier of a cart. [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#create-a-cart) or [Retrieve a registered user's carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#retrieve-registered-users-carts) to get it. |
 | ***{% raw %}{{{% endraw %}bundle_group_key{% raw %}}}{% endraw %}*** | Group key of the configurable bundle. The value is generated based on the configurable bundle template and items selected in the slot. You can get it when [adding the configurable bundle to a registered user’s cart](#add-a-configurable-bundle-to-a-registered-users-cart). |
 
 ### Request

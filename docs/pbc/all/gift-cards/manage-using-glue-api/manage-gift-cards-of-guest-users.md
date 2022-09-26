@@ -33,7 +33,7 @@ For detailed information on the modules that provide the API functionality and r
 
 You can purchase a gift card as a regular product. To do that:
 
-1. Add a gift card to a guest cart. See [Add an item to a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart) for more details.
+1. Add a gift card to a guest cart. See [Add an item to a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-items-to-a-guest-cart) for more details.
 2. [Submit the checkout data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/submit-checkout-data.html#submit-checkout-data).
 3. [Place the order](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/check-out-purchases.html#place-an-order).
 

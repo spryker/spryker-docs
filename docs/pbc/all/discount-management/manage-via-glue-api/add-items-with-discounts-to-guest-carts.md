@@ -5,7 +5,7 @@ last_updated: July 29, 2022
 template: glue-api-storefront-guide-template
 ---
 
-This document describes how to add items with discounts to guest carts. For full information on the endpoint, see [Manage guest cart items](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-cart-items.html).
+This document describes how to add items with discounts to guest carts. For full information on the endpoint, see [Manage guest cart items](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html).
 
 ## Installation
 

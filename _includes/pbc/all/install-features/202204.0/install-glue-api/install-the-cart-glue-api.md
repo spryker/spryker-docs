@@ -343,7 +343,7 @@ Ensure that the `items` resource relationships is registered as a relationship o
 
 Ensure that the `guest-cart-items` resource relationship is registered as a relationship of the `guest-carts` resource:
 
-1. [Add one or more items to cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart).
+1. [Add one or more items to cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-items-to-a-guest-cart).
 2 Send the request: `GET https://glue.mysprykershop.com/guest-carts/{% raw %}{{{% endraw %}guest_cart_uuid{% raw %}}}{% endraw %}/?include=guest-cart-items`.
 3. Check that the response contains the relationships to the `guest-cart-items` resource.
 

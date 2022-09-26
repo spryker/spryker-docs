@@ -5,7 +5,7 @@ last_updated: Jul 25, 2022
 template: glue-api-storefront-guide-template
 ---
 
-This document describes how to retrieve cart rules, vouchers, and promotional items in customer carts. For full information on the endpoint, see [Retrieve customer carts](https://docs.spryker.com/docs/pbc/all/cart-and-checkout/manage-using-glue-api/retrieving-customer-carts.html).
+This document describes how to retrieve cart rules, vouchers, and promotional items in customer carts. For full information on the endpoint, see [Retrieve customer carts](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/retrieves-customer-carts.html).
 
 ## Installation
 

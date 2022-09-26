@@ -2847,7 +2847,7 @@ String | &check; | Unique identifier of the [Configurable Bundle Template](/docs
 ```
 </details>
 
-For the attributes of the response sample, see [Add an item to a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart).
+For the attributes of the response sample, see [Add an item to a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-items-to-a-guest-cart).
 
 
 | INCLUDED RESOURCE | ATTRIBUTE | TYPE | DESCRIPTION |
@@ -3230,7 +3230,7 @@ Request sample: change quantity of configurable bundles in a guest cart
 ```
 </details>
 
-For the attribute descriptions, see [Manage guest cart items](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/managing-guest-carts/managing-guest-cart-items.html).
+For the attribute descriptions, see [Manage guest cart items](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html).
 
 ## Remove an item from a guest cart
 

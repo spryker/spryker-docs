@@ -23,7 +23,7 @@ related:
   - title: Multi-Step Checkout
     link: docs/scos/user/features/page.version/checkout-feature-overview/multi-step-checkout-overview.html
   - title: Checkout process review and implementation
-    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-process-review-and-implementation.html
+    link: docs/pbc/all/cart-and-checkout/extend-and-customize/checkout-process-review-and-implementation.html
 ---
 
 The checkout process consists of the following steps:

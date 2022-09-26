@@ -1,5 +1,5 @@
 ---
-title: State machine cookbook - part I - state machine fundamentals
+title: "State machine cookbook: State machine fundamentals"
 description: State machines are a model of computation used to automate processes. In Spryker you can use the OMS module to automate the management of orders or the StateMachine module to automate other processes you define in your shop.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/state-machine-cookbook  
   - /v1/docs/state-machine-cookbook
   - /v1/docs/en/state-machine-cookbook
+  - /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html
 ---
 
 State machines are a model of computation used to automate processes. In Spryker, you can use the `OMS` module to automate the management of orders or the `StateMachine` module to automate other processes you define in your shop. Both behave similarly, but the `OMS` one is a customized solution to manage the orders in a shop.
@@ -241,7 +242,7 @@ Let's assume you are trying to define the prepayment process, in which if, after
 ...
 </events>
 ```
-You can also set the date and time when the timeout is started. For details, see [OMS Timeout Processor](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#oms-timeout-processor) 
+You can also set the date and time when the timeout is started. For details, see [OMS Timeout Processor](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html#oms-timeout-processor)
 
 #### Invoking an event
 

@@ -4793,10 +4793,10 @@ entries:
         url: /docs/scos/dev/best-practices/search-best-practices/personalization-dynamic-pricing.html
     - title: State machine cookbook
       nested:
-      - title: State machine cookbook - part 2 - building a state machine
-        url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-2-building-a-state-machine.html
-      - title: State machine cookbook - part I - state machine fundamentals
-        url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html
+      - title: State machine fundamentals
+        url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html
+      - title: Build a state machine
+        url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-build-a-state-machine.html
   - title: Troubleshooting
     url: /docs/scos/dev/troubleshooting/troubleshooting.html
     nested:

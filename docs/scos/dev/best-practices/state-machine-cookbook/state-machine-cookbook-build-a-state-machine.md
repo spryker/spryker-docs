@@ -1,5 +1,5 @@
 ---
-title: State machine cookbook - part 2 - building a state machine
+title: "State machine cookbook: build a state machine"
 description: This chapter will help you model a state machine using Spryker to manage your sale orders.
 last_updated: Jun 16, 2021
 template: concept-topic-template
@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/tate-machine-cookbook-2  
   - /v1/docs/tate-machine-cookbook-2
   - /v1/docs/en/tate-machine-cookbook-2
+  - /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-2-building-a-state-machine.html
 ---
 
 {% info_block infoBox %}

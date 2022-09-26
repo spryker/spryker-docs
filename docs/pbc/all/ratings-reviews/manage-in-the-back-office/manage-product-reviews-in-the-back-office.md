@@ -1,5 +1,5 @@
 ---
-title: Manage product reviews
+title: Manage product reviews in the Back Office
 description: Learn how to read, approve, and reject product reviews in the Back Office.
 last_updated: June 25, 2022
 template: back-office-user-guide-template
@@ -12,7 +12,7 @@ redirect_from:
   - /docs/en/managing-product-reviews
   - /docs/scos/user/back-office-user-guides/202200.0/catalog/product-reviews/managing-product-reviews.html
   - /docs/scos/user/back-office-user-guides/202204.0/catalog/product-reviews/managing-product-reviews.html
-
+  - /docs/scos/user/back-office-user-guides/202204.0/catalog/manage-product-reviews.html
 related:
   - title: Product Rating & Reviews feature overview
     link: docs/scos/user/features/page.version/product-rating-and-reviews-feature-overview.html

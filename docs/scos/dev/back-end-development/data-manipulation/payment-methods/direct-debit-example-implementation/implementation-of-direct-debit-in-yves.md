@@ -1,6 +1,6 @@
 ---
 title: Implementation of Direct Debit in Yves
-description: Usually, the first step of the Direct Debit payment method implementation is set-up on Yves. This article provides step-by-step instructions on how to do that.
+description: Usually, the first step of the Direct Debit payment method implementation is set-up on Yves. This document provides step-by-step instructions on how to do that.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/dd-fe-implementation
@@ -35,7 +35,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/testing-your-direct-debit-implementation.html
 ---
 
-Usually, the first step of the Direct Debit payment method implementation is set-up on Yves. This article provides step-by-step instructions on how to do that.
+Usually, the first step of the Direct Debit payment method implementation is set-up on Yves. This document provides step-by-step instructions on how to do that.
 
 ## Prerequisites
 Prior to proceeding with the first step, the form creation, add a new module on the project level in Yves - for example, the `PaymentMethods` module. If you haven't had any experience in creating a new module yet, see [Tutorial: Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html). Create a *Form* folder in the module.
@@ -280,7 +280,8 @@ class DirectDebitSubFormPlugin extends AbstractPlugin implements SubFormPluginIn
 ```
 
 ## Setting up a Payment Handler
-The next step is setting up the payment handler. Follow the procedure below to accomplish this.
+
+The next step is setting up the payment handler. Use the following procedure to accomplish this.
 
 ### 1. Handle a new payment type
 
@@ -436,7 +437,7 @@ To create the Direct Debit twig template, do the following:
 ```
 
 {% info_block errorBox %}
-Don’t forget to add the factory and the dependency provider for this new  module in Yves.
+Don't forget to add the factory and the dependency provider for this new  module in Yves.
 {% endinfo_block %}
 
 

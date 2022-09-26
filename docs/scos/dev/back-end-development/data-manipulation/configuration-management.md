@@ -37,13 +37,13 @@ These configuration files are used only for the global environment configuration
 
 ## Default and local configuration files
 
-`config/Shared` contains several files necessary for the system’s configuration, that can be used by both Yves and Zed.
+`config/Shared` contains several files necessary for the system's configuration, that can be used by both Yves and Zed.
 
 There are several files that allow you to add the needed configuration for your specific exact use-case.
 
 |  FILENAME  |  DESCRIPTION | EXAMPLE FILE NAME | ON GITIGNORE |
 | ------------------- | ---------------- | -------------- | ---------- |
-|              `config_default.php`              | Configuration that is used for all environments, all locations, and for all stores. Usually that’s the place to put default data for the whole project. |        `config_default.php`        |      no      |
+|              `config_default.php`              | Configuration that is used for all environments, all locations, and for all stores. Usually that's the place to put default data for the whole project. |        `config_default.php`        |      no      |
 |       `config_default-[environment].php`      | Configuration that is used for a specific environment but for all stores. Usually, this place is used for global flags, for example, tracking is active on production and staging only. |  `config_default-production.php`   |      no      |
 |        `config_default-[storename].php`        | Configuration that contains the default information for each store. |      `config_default_DE.php`       |      no      |
 | `config_default-[environment]_[storename].php` | Configuration for a specific environment and a specific store. | `config_default-production_DE.php` |      no      |
@@ -87,11 +87,9 @@ There are some other configuration files for specific purposes.
 | ----------------- | -------------------- |
 | `console_env_local.php` | This file returns the default environment for command line calls. This file is on gitignore. It is optional. If it is missing, you need to explicitly pass the environment to all [command line calls](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html). |
 |   `default_store.php`   | This file returns the default store which is used for all [command line calls](/docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html). |
-|      `stores.php`       | This file contains an array with all stores and their configuration like locale, date format, currency, etc. |
+|      `stores.php`       | This file contains an array with all stores and their configuration like locale, date format, currency. |
 
-## How to retrieve the configuration
-
-### Static method
+## Static method
 
 You can retrieve the configuration from the configuration files with a static method:
 
@@ -124,7 +122,7 @@ class MyModuleConfig extends AbstractBundleConfig
 
 The same is valid for other layers: Client, Yves, Shared, Service.
 
-### Module shared configuration
+## Module-shared configuration
 
 From kernel version 3.14, it is possible to create shared configuration classes, which are shared between application layers. That means you can access them in Yves, Zed, Client. To use it, create a `Config` class in your module Shared namespace, for example:
 

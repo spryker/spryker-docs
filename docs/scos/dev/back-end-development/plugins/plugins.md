@@ -71,7 +71,7 @@ class ItemTaxCalculatorPlugin extends AbstractPlugin implements CalculatorPlugin
 
 ## How to implement a plugin
 
-A plugin always implements an interface which is stored in the consuming module. You can find them in the `[PROJECT]\[APPLICATION]\[module]\Dependency\Plugin` namespace (e.g. `Spryker\Zed\Calculation\Dependency\Plugin`). module
+A plugin always implements an interface that is stored in the consuming module. You can find them in the `[PROJECT]\[APPLICATION]\[module]\Dependency\Plugin` namespace—for example, `Spryker\Zed\Calculation\Dependency\Plugin`.
 
 Your new plugin needs to be placed in a specific directory inside your module:
 
@@ -85,7 +85,7 @@ Plugins delegate calls to the underlying code of the same module. Plugins usuall
 
 ### Plugins in Zed
 
-You can copy and paste the template below. All you need to do is to replace the placeholders and to implement the related interface. The `AbstractPlugin` allows you to access the facade of the module where the plugin is placed via the `getFacade()` method.
+You can copy and paste the following template. All you need to do is to replace the placeholders and to implement the related interface. The `AbstractPlugin` allows you to access the facade of the module where the plugin is placed via the `getFacade()` method.
 
 The most common use case for plugins in Zed is to delegate all calls directly to a method in the facade. You can also access the factory of the communication layer via `getFactory()`.
 
@@ -106,7 +106,7 @@ class [PLUGIN]Plugin extends AbstractPlugin implements AnotherBundlePluginInterf
 
 ### Plugins in Yves
 
-You can copy and paste the template below. All you need to do is to replace the placeholders and to implement the related interface. The `AbstractPlugin` allows you to access the factory via the `getFactory()` method.
+You can copy and paste the following template. All you need to do is to replace the placeholders and to implement the related interface. The `AbstractPlugin` allows you to access the factory via the `getFactory()` method.
 
 ```php
 <?php
@@ -123,11 +123,11 @@ class [PLUGIN]Plugin extends AbstractPlugin implements AnotherBundlePluginInterf
 }
 ```
 
-In Yves you can find some special plugins. The application uses special classes like `ApplicationPluginInterface`s, `RouteProviderPluginInterface`s, routers and twig functions. They are configured in the main `YvesBootstrap` class. These plugins and routers can be provided by several modules, that’s why we place them into the plugin-directory to fit them into our conventions. But they do not necessarily extend the `AbstractPlugin`.
+In Yves you can find some special plugins. The application uses special classes like `ApplicationPluginInterface`s, `RouteProviderPluginInterface`s, routers and twig functions. They are configured in the main `YvesBootstrap` class. These plugins and routers can be provided by several modules, that's why we place them into the plugin-directory to fit them into our conventions. But they do not necessarily extend the `AbstractPlugin`.
 
 ### Plugins in Client
 
-You can copy and paste the template below. All you need to do is to replace the placeholders and to implement the related interface. The `AbstractPlugin` allows you to access the factory via the `getFactory()` method.
+You can copy and paste the following template. All you need to do is to replace the placeholders and to implement the related interface. The `AbstractPlugin` allows you to access the factory via the `getFactory()` method.
 
 ```php
 <?php
@@ -146,7 +146,7 @@ class [PLUGIN]Plugin extends AbstractPlugin implements AnotherBundlePluginInterf
 
 ## How to Use a plugin from another module
 
-In case you want to make your module flexible, you can add plugins to your module’s dependency provider. To do so you need to define an interface which contains a clear description of the expected implementation in the doc block.
+In case you want to make your module flexible, you can add plugins to your module's dependency provider. To do so you need to define an interface which contains a clear description of the expected implementation in the doc block.
 
 **Example**: plugin interface from the Calculation module:
 
@@ -171,7 +171,7 @@ interface CalculatorPluginInterface
 }
 ```
 
-Now you can provide the plugin or an array of plugins in the dependency provider, as in the example below. Example of dependency provider from the `Calculation` module:
+Now you can provide the plugin or an array of plugins in the dependency provider, as in the following example. Example of dependency provider from the `Calculation` module:
 
 ```php
 <?php
@@ -212,7 +212,7 @@ class CalculationDependencyProvider extends AbstractBundleDependencyProvider
             //SubTotal
             new SubtotalTotalsCalculatorPlugin(),
 
-            //Expenses (e.g. shipping)
+            //Expenses —for example, shipping
             new ExpensesGrossSumAmountCalculatorPlugin(),
             new ExpenseTotalsCalculatorPlugin(),
 

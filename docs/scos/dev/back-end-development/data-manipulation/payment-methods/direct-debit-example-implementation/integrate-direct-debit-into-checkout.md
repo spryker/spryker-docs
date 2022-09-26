@@ -1,6 +1,6 @@
 ---
 title: Integrate Direct Debit into checkout
-description: This article provides instructions on how to integrate the Direct Debit payment form and handler into Checkout.
+description: This document provides instructions on how to integrate the Direct Debit payment form and handler into Checkout.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/dd-checkout-implementation
@@ -35,7 +35,7 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/testing-your-direct-debit-implementation.html
 ---
 
-This article provides instructions on how to integrate the Direct Debit payment form and handler into Checkout.
+This document provides instructions on how to integrate the Direct Debit payment form and handler into Checkout.
 
 For this purpose, in Yves, add the `CheckoutDependencyInjector` to the `PaymentMethods/Dependency/Injector`. This will inject the direct debit form and handler into the `Checkout`module:
 

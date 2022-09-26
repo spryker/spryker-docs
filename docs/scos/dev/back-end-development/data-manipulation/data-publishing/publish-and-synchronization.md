@@ -23,18 +23,18 @@ redirect_from:
   - /v1/docs/publish-and-synchronization
   - /v1/docs/en/publish-and-synchronization
 related:
-  - title: Implementing Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-publish-and-synchronization.html
-  - title: Handling data with Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html
+  - title: Implement Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
+  - title: Handle data with Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
   - title: Adding publish events
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/adding-publish-events.html
-  - title: Implementing event trigger publisher plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html
-  - title: Implementing synchronization plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
-  - title: Debugging listeners
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debugging-listeners.html
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
+  - title: Implement event trigger publisher plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
+  - title: Implement synchronization plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
+  - title: Debug listeners
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
   - title: Publish and Synchronize and multi-store shop systems
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
   - title: Publish and Synchronize repeated export
@@ -77,13 +77,13 @@ The advantages of the approach are as follows:
 
 Both Publish and Synchronize implement the queue pattern. See [Spryker Queue Module](/docs/scos/dev/back-end-development/data-manipulation/queue/queue.html) to learn more.
 
-The process relies heavily on Propel Behaviors. Propel Behaviors are used to trigger actions automatically on updating the database. This way, you don’t need to trigger any step of the process manually in code. See [Boostrapping a Behavior](http://propelorm.org/documentation/cookbook/writing-behavior.html) to learn more.
+The process relies heavily on Propel Behaviors. Propel Behaviors are used to trigger actions automatically on updating the database. This way, you don't need to trigger any step of the process manually in code. See [Boostrapping a Behavior](http://propelorm.org/documentation/cookbook/writing-behavior.html) to learn more.
 
 ### Triggering the publish process
 
 There are 2 ways to start the Publish process:
 
-1.  Trigger the publish event manually using the [Event Facade](/docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html):
+1.  Trigger the publish event manually using the [Event Facade](/docs/scos/dev/back-end-development/data-manipulation/event/add-events.html):
 
 ```php
 $this->eventFacade->trigger(CmsStorageConfig::CMS_KEY_PUBLISH_WRITE, (new EventEntityTransfer())->setId($id));
@@ -122,7 +122,8 @@ On triggering the publish process, an event or events are posted to a queue. Eac
 *   The foreign keys used to backtrack the updated Propel entities
 
 
-However, it will not contain the actual data that has changed. Find an example below:
+However, it will not contain the actual data that has changed. See the following example:
+
 ```json
 {
 	"listenerClassName":"Spryker\\Zed\\UrlStorage\\Communication\\Plugin\\Event\\Listener\\UrlStorageListener",
@@ -151,7 +152,7 @@ Each event is consumed by a publisher plugin mapped to it. The number of events 
 
 To consume an event, the queue adapter calls the publisher plugin specified in the `listenerClassName` field of the event message. The publisher is a plugin class implemented in one of the modules. It queries the data affected by an event and transforms it into the format suitable for the front-end data storage (Redis or Elasticsearch).
 
-The transformed data is stored in a dedicated database table. It serves as a _mirror table_ for the respective Redis or Elasticsearch storage. The `data` column of the table contains the data to be synced to the front end, defining [the storage and the key](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html). It is stored in JSON for easy and fast sync. The table also contains the foreign keys used to backtrack data and the timestamp of the last change for each row. The timestamp is used to track changes rapidly.
+The transformed data is stored in a dedicated database table. It serves as a _mirror table_ for the respective Redis or Elasticsearch storage. The `data` column of the table contains the data to be synced to the front end, defining [the storage and the key](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html). It is stored in JSON for easy and fast sync. The table also contains the foreign keys used to backtrack data and the timestamp of the last change for each row. The timestamp is used to track changes rapidly.
 
 ### Synchronize
 

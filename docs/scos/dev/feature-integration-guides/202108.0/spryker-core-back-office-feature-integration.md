@@ -164,8 +164,8 @@ $config[AclConstants::ACL_DEFAULT_RULES] = [
 
 Spryker offers two authentication strategies out of the box:
 
-* `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_CREATE_USER_ON_FIRST_LOGIN` — If a user does not exist, it is created automatically based on the data from an external service.
-*   `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_ACCEPT_ONLY_EXISTING_USERS` — Accepts only existing users for authentication.
+* `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_CREATE_USER_ON_FIRST_LOGIN`—If a user does not exist, it is created automatically based on the data from an external service.
+*   `\Spryker\Zed\SecurityOauthUser\SecurityOauthUserConfig::AUTHENTICATION_STRATEGY_ACCEPT_ONLY_EXISTING_USERS`—Accepts only existing users for authentication.
 
 
 **src/Pyz/Zed/SecurityOauthUser/SecurityOauthUserConfig.php**

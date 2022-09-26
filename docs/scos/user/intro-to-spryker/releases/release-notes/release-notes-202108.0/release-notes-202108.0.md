@@ -322,7 +322,7 @@ We have introduced the **strict mode** and type hints for transfer objects in fu
 
 #### Documentation
 
-[Transfer strict types](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html#transfer-strict-types)
+[Transfer strict types](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html#transfer-strict-types)
 
 
 ### Front-end (Profiling + Microdata)

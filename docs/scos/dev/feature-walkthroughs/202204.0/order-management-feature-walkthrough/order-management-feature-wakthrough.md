@@ -1,11 +1,11 @@
 ---
 title: Order Management feature walkthrough
 last_updated: Aug 18, 2021
-description: The Order Management feature adds a collection of functionalities that allow you to see the quantity of the order items, their status, and how long they exist.
+description: The Order Management feature adds a collection of functionalities that let you see the quantity of the order items, their status, and how long they exist.
 template: concept-topic-template
 ---
 
-The _Order Management_ feature adds a collection of functionalities that allow you to see the quantity of the order items, their status, and how long they exist. Also, you can view details per status and order page.
+The _Order Management_ feature adds a collection of functionalities that let you see the quantity of the order items, their status, and how long they exist. Also, you can view details per status and order page.
 
 
 To learn more about the feature and to find out how end users use it, see [Order Management](/docs/scos/user/features/{{page.version}}/order-management-feature-overview/order-management-feature-overview.html) for business users.

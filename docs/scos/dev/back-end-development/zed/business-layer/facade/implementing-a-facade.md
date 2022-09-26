@@ -1,6 +1,6 @@
 ---
 title: Implementing a facade
-description: This article describes how to implement a facade.
+description: This document describes how to implement a facade.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/implementing-facade
@@ -60,7 +60,7 @@ class GlossaryFacade extends AbstractFacade
 
 When you look at the `deleteKey()` method, please observe the following:
 
-* The name of the method expresses exactly what happens. It uses the terms of the related terminology, but it is easy to grasp what happens (“A key will be deleted”).
+* The name of the method expresses exactly what happens. It uses the terms of the related terminology, but it is easy to grasp what happens ("A key will be deleted").
 * The method does not contain any control logic, like if or foreach statements; it just delegates to the business model and calls the right method.
 * The business model KeyManager is created using the factory so it does not need to know how the class is created.
 

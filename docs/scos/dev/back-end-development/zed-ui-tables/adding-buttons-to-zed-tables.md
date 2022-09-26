@@ -1,6 +1,6 @@
 ---
 title: Adding buttons to Zed tables
-description: The article describes how to add buttons to Zed tables.
+description: The document describes how to add buttons to Zed tables.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-add-button-table

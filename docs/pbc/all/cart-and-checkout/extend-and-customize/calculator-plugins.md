@@ -42,7 +42,7 @@ public function recalculate(CalculableObjectTransfer $calculableObjectTransfer);
     `ItemTransfer::sumGrossPriceWithProductOptions` = `sum(ProductOptionTransfer::sumGrossPrice)` + `ItemTransfer:sumGrossPrice`
 
 
-* `SubtotalTotalsCalculatorPlugin`—sums each of the `sumGrossPriceWithProductOptions` items.
+* `SubtotalTotalsCalculatorPlugin` sums each of the `sumGrossPriceWithProductOptions` items.
 `TotalsTransfer::subtotal = sum(ItemTransfer::sumGrossPriceWithProductOptions)`.
 
 * `ExpensesGrossSumAmountCalculatorPlugin`—calculates `sumGrossPrice` for each item.
@@ -71,7 +71,7 @@ public function recalculate(CalculableObjectTransfer $calculableObjectTransfer);
 
     `TotalsTransfer:discountTotal` += `sum(ItemTransfer::CalculateDiscountTransfer::sumGrossAmount` +
     `ItemTransfer::ProductOptionTransfer::CalculateDiscountTransfer::sumGrossAmount` + `ExpenseTransfer::sumGrossAmount)`
-    `GrandTotalTotalsCalculatorPlugin`—calculates `grandTotal` in `TotalsTransfer`.
+    `GrandTotalTotalsCalculatorPlugin` calculates `grandTotal` in `TotalsTransfer`.
     `TotalsTransfer:grandTotal` = `TotalsTransfer::subtotal` + `TotalsTransfer:expenseTotal`
 
 

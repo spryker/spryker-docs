@@ -1,6 +1,6 @@
 ---
 title: Integrating Prepayment into checkout
-description: This article describes how to integrate prepayment into Checkout.
+description: This document describes how to integrate prepayment into Checkout.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-checkout
@@ -37,7 +37,7 @@ related:
 
 The next step is to integrate prepayment into `Checkout`. In the `PaymentMethods/Dependency/Injector` from Yves add the `CheckoutDependencyInjector` that will inject the prepayment form and handler into the `Checkout` module:
 
-<details open>
+<details>
 <summary markdown='span'>Code sample:</summary>
 
 ```php
@@ -106,6 +106,6 @@ class CheckoutDependencyInjector implements DependencyInjectorInterface
 
 {% info_block errorBox %}
 
-If you re-created this example in Demoshop, you’ll need to do some adjustments on the selectPayment() from `checkout.js`.
+If you re-created this example in Demoshop, you'll need to do some adjustments on the selectPayment() from `checkout.js`.
 
 {% endinfo_block %}

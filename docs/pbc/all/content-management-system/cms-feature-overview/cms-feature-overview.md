@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202204.0/cms-feature-walkthrough/cms-feature-walkthrough.html
 ---
 
-The *CMS* feature is a content management system that lets you create and manage the content of custom pages that are not part of the product catalog.
+The *CMS* feature is lets you create and manage the content of custom pages that are not part of the product catalog.
 
 The main functionalities of the feature are the following:
 * Templates and slots
@@ -46,13 +46,13 @@ All the CMS elements are based on templates. They simplify the creation of simil
 
 ## Related Business User articles
 
-|BACK OFFICE USER GUIDES|
+|OVERVIEWS|
 |---|
-| [Get a general idea of Templates and Slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html)  |
-| [Get a general idea of CMS Pages](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html)  |
-| [Get a general idea of CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)  |
-| [Get a general idea of CMS pages in search results](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-in-search-results-overview.html)  |
-| [Get a general idea of email as a CMS block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html)  |
+| [Templates and Slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html)  |
+| [CMS Pages](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html)  |
+| [CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)  |
+| [CMS pages in search results](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-in-search-results-overview.html)  |
+| [Email as a CMS block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html)  |
 
 
 

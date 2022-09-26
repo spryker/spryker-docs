@@ -376,11 +376,10 @@ The functionality has the following functional constraints which are going to be
 
 ## Related Business User articles
 
-|BACK OFFICE USER GUIDES|
-|---|
-| [Learn about the CoreMedia technology partner integration](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html)  |
-| [Add content to the Storefront using templates and slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/best-practices-adding-content-to-the-storefront-pages-using-templates-and-slots.html) |
-| [Manage slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html)   |
+|BACK OFFICE USER GUIDES| THIRD-PARTY INTEGRATIONS |
+| - | - |
+| [Add content to the Storefront using templates and slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/best-practices-adding-content-to-the-storefront-pages-using-templates-and-slots.html) |  [Learn about the CoreMedia technology partner integration](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html)  |
+| [Manage slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html)   | |
 
 
 

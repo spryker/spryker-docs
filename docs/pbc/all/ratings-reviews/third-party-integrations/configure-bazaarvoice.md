@@ -4,7 +4,7 @@ description: Find out how you can configure Bazaarvoice in your Spryker shop
 template: howto-guide-template 
 ---
 
-After you have [integrated the Bazaarvoice app](/docs/pbc/all/ratings-reviews/bazaarvoice/integrate-bazaarvoice.html), you can configure the following for your store:
+After you have [integrated the Bazaarvoice app](/docs/pbc/all/ratings-reviews/third-party-integrations/integrate-bazaarvoice.html), you can configure the following for your store:
 - Bazaarvoice services you need
 - Stores you want the Bazaarvoice UGC to be displayed in
 

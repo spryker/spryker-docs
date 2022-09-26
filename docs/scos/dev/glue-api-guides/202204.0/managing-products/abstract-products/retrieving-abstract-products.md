@@ -56,7 +56,7 @@ To retrieve general information about an abstract product, send the request:
 
 | STRING PARAMETER | DESCRIPTION | EXEMPLARY VALUES |
 | --- | --- | --- |
-| include | Adds resource relationships to the request. | <ul><li>abstract-product-prices</li><li> concrete-products</li><li>product-labels</li><li>abstract-product-image-sets</li><li>abstract-product-availabilities</li><li>category-nodes</li><li>product-tax-sets</li><li>product-options</li><li>product-reviews</li><li>bundled-products</li></ul> |
+| include | Adds resource relationships to the request. | <ul><li>abstract-product-prices</li><li>concrete-products</li><li>product-labels</li><li>abstract-product-image-sets</li><li>abstract-product-availabilities</li><li>category-nodes</li><li>product-tax-sets</li><li>product-options</li><li>product-reviews</li><li>bundled-products</li></ul> |
 | fields | 	Filters out the fields to be retrieved.  | name, image, description |
 
 {% info_block infoBox "Included resources" %}
@@ -1943,7 +1943,7 @@ For the attributes of other included resources, see:
 * [Retrieve a category node](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-categories/retrieving-category-nodes.html#category-nodes-response-attributes)
 * [Retrieve tax sets](/docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html#tax-sets-response-attributes)
 * [Retrieve a product label](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/retrieving-product-labels.html#product-labels-response-attributes)
-* [Retrieve product reviews](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-product-ratings-and-reviews.html#product-ratings-and-reviews-response-attributes)
+* [Retrieve product reviews](/docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html#product-reviews-response-attributes)
 * [Retrieve a measurement unit](/docs/scos/dev/glue-api-guides/{{page.version}}/retrieving-measurement-units.html)
 
 ## Possible errors

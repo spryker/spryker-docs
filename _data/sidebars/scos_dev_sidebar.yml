@@ -403,8 +403,6 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/product-lists-feature-walkthrough.html
     - title: Product Options
       url: /docs/scos/dev/feature-walkthroughs/product-options-feature-walkthrough.html
-    - title: Product Rating and Reviews
-      url: /docs/scos/dev/feature-walkthroughs/product-rating-reviews-feature-walkthrough.html
     - title: Product Relations
       url: /docs/scos/dev/feature-walkthroughs/product-relations-feature-walkthrough.html
       include_versions:
@@ -843,7 +841,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Retrieving related products
         url: /docs/scos/dev/glue-api-guides/managing-products/retrieving-related-products.html
         include_versions:

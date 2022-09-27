@@ -1,6 +1,6 @@
 ---
-title: Managing product ratings and reviews
-description: Learn how to manage product ratings and reviews via Glue API.
+title: Manage product reviews using Glue API
+description: Learn how to manage product reviews via Glue API.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-product-ratings-and-reviews
@@ -13,12 +13,13 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/201811.0/managing-products/managing-product-ratings-and-reviews.html
   - /docs/scos/dev/glue-api-guides/201903.0/managing-products/managing-product-ratings-and-reviews.html
   - /docs/scos/dev/glue-api-guides/201907.0/managing-products/managing-product-ratings-and-reviews.html
+  - /docs/scos/dev/glue-api-guides/202204.0/managing-products/managing-product-ratings-and-reviews.html  
 related:
   - title: Product Rating and Reviews feature overview
     link: docs/scos/user/features/page.version/product-rating-and-reviews-feature-overview.html
 ---
 
-[Ratings and reviews](/docs/scos/user/features/{{page.version}}/product-rating-and-reviews-feature-overview.html) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.
+[Ratings and reviews](/docs/scos/user/features/{{site.version}}/product-rating-and-reviews-feature-overview.html) allow customers to share their opinions and experiences about purchases. This enables customers to take meaningful decisions about purchases and increases their trust with the shop.
 
 Products and ratings API helps you to:
 
@@ -28,11 +29,11 @@ Products and ratings API helps you to:
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Glue API: Product rating & reviews feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-rating-and-reviews-feature-integration.html)
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Install the Product Rating and Reviews Glue API](/docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-glue-api.html)
 
-## Retrieve product ratings and reviews
+## Retrieve product reviews
 
-To retrieve ratings and reviews, send the request:
+To retrieve product reviews, send the request:
 
 ---
 `GET` **/abstract-products/*{% raw %}{{{% endraw %}abstract_product_sku{% raw %}}}{% endraw %}*/product-reviews**
@@ -50,14 +51,12 @@ To retrieve ratings and reviews, send the request:
 | page[offset] | Offset of the item at which to begin the response.  | From `0` to any. |
 | page[limit] | Maximum number of entries to return. | From `1` to any. |
 
-Request sample: retrieve product ratings and reviews
-
-`GET http://glue.mysprykershop.com/abstract-products/035/product-reviews`
+Request sample: retrieve product ratings and reviews: `GET http://glue.mysprykershop.com/abstract-products/035/product-reviews`
 
 ### Response
 
 <details>
-<summary markdown='span'>Response sample: retrieve product ratings and reviews</summary>
+<summary markdown='span'>Response sample: retrieve product reviews</summary>
 
 ```json
 {
@@ -99,7 +98,7 @@ Request sample: retrieve product ratings and reviews
 ```
 </details>
 
-<a name="product-ratings-and-reviews-response-attributes"></a>
+<a name="product-reviews-response-attributes"></a>
 
 | ATTRIBUTE | TYPE | DESCRIPTIONS |
 | --- | --- | --- |
@@ -108,9 +107,9 @@ Request sample: retrieve product ratings and reviews
 | summary | String | Review summary. |
 | description | String | Full review. |
 
-## Provide a rating and a review of products
+## Submit a product review
 
-To provide rating and a review of products, send the request:
+To submit a product review, send the request:
 
 ---
 `POST`**/abstract-products/*{% raw %}{{{% endraw %}product_sku{% raw %}}}{% endraw %}*/product-reviews**
@@ -125,7 +124,7 @@ To provide rating and a review of products, send the request:
 
 | HEADER KEY | TYPE | REQUIRED | DESCRIPTION |
 | --- | --- | --- | --- |
-| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
+| Authorization | string | &check; | Alphanumeric string that authorizes the customer or company user to send requests to protected resources. Get it by [authenticating as a customer](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-customers/authenticating-as-a-customer.html#authenticate-as-a-customer) or [authenticating as a company user](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-b2b-account/authenticating-as-a-company-user.html#authenticate-as-a-company-user).  |
 
 Request sample: provide a rating and a review of products
 
@@ -153,8 +152,6 @@ Request sample: provide a rating and a review of products
 | description | String | no | Full review. |
 
 ### Response
-
-Response sample: provide rating and a review of products
 
 ```json
 {
@@ -184,9 +181,9 @@ Response sample: provide rating and a review of products
 
 ## Other management options
 
-You can retrieve the average rating of a product by:
-* [Retrieving an abstract product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
-* [Retrieving a concrete product](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
+You can retrieve the average rating of a product as follows:
+* [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-products.html#retrieve-an-abstract-product)
+* [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#retrieve-a-concrete-product)
 
 Also, all the endpoints that accept `abstract-products` and `concrete-products` resources as included resources in requests, return the average product rating.
 
@@ -200,4 +197,4 @@ Also, all the endpoints that accept `abstract-products` and `concrete-products` 
 | 311 | Abstract product ID is not specified. |
 | 901 | One or more of the following reasons:<ul><li>The `nickname` attribute is empty or not specified.</li><li>The `rating` attribute is empty or not specified.</li><li>The `summary` attribute is empty or not specified.</li></ul> |
 
-To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{page.version}}/reference-information-glueapplication-errors.html).
+To view generic errors that originate from the Glue Application, see [Reference information: GlueApplication errors](/docs/scos/dev/glue-api-guides/{{site.version}}/reference-information-glueapplication-errors.html).

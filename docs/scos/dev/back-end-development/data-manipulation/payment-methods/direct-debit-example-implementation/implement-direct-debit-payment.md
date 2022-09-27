@@ -46,10 +46,10 @@ The order of the implementation steps does not matter; however, ensure to comple
 
 {% endinfo_block %}
 
-* [Implement Direct Debit in Yves](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-yves.html)
-* [Integrate Direct Debit into the checkout](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html)
-* [Implement Direct Debit in Zed](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-zed.html)
-* [Implement Direct Debit in the іhared layer](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-the-shared-layer.html)
-* [Test your Direct Debit implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html)
+1. [Implement Direct Debit in Yves](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-yves.html).
+2. [Integrate Direct Debit into checkout](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html).
+3. [Implement Direct Debit in Zed](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-zed.html).
+4. [Implement Direct Debit in the іhared layer](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-the-shared-layer.html).
+5. [Test your Direct Debit implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html).
 
 

@@ -38,9 +38,6 @@ related:
 
 This document describes the steps to consider implementing the invoice payment method without integrating with a third-party payment service provider.
 
-
-The following documents describe how to add a new module called `PaymentMethods`.
-
 If this is your first time creating a new module, see [Tutorial: Adding a new module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html).
 
 {% info_block infoBox "Implementation order" %}

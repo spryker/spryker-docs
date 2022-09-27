@@ -40,7 +40,7 @@ related:
   - title: Managing customer passwords
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-passwords.html
   - title: Retrieve customer carts
-    link: docs/pbc/all/cart-and-checkout/manage-using-glue-api/retrieving-customer-carts.html
+    link: docs/pbc/all/cart-and-checkout/manage-using-glue-api/retrieve-customer-carts.html
   - title: Retrieving customer orders
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
 ---

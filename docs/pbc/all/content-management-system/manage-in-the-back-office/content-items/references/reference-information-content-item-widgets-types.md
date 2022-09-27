@@ -14,37 +14,9 @@ redirect_from:
 
 This topic contains the reference information you need to know when working with content item widgets in the **Content Management&nbsp;<span aria-label="and then">></span> Pages/Blocks&nbsp;<span aria-label="and then">></span> Edit Placeholders** section.
 
-## Banner content item widget
 
-The widget allows you to display a Banner content item on the defined sections of a page or block.
 
-**Use case example:** The widget might be used to display a banner to promote products of a specific brand or hold a marketing campaign on the website.
 
-You can view how it looks like on the store website:
-
-* **B2C**
-    Template used: Big Banner w/Middle Title and Subtitle
-![Banner content item widget B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/banner-yves-b2c.gif)
-
-* **B2B**
-    Template used: Big Banner Left Title, Subtitle and Button
-![Banner content item widget B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/banner-template-b2b.png)
-
-## Abstract product list content item widget
-
-The widget allows you to add an Abstract Product List content item to any placeholders of a page or block.
-
-**Use case example:** The widget can be used to display a list of products for a specific promoting campaign, for example, the Best Selling items, or a list of frequently used products on a page.
-
-You can view how it looks like on the store website:
-
-* **B2C**
-Template used: Slider with product category info
-![Abstract product list content item widget B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/abstract-product-list-yves-b2c.png)
-
-* **B2B**
-Template used: Product Slider for store/landing pages
-![Abstract product list content item widget B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/apl-template-b2b.png)
 
 ## Product set content item widget
 

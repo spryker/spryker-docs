@@ -1,5 +1,5 @@
 ---
-title: Ratings & Reviews
+title: Ratings and Reviews
 last_updated: Jul 29, 2022
 description: This document describes the capability of type Ratings & Reviews
 template: concept-topic-template

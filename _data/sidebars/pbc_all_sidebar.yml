@@ -415,7 +415,7 @@ entries:
               - title: "PriceProduct module details: reference information"
                 url: /docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html
       - title: Ratings and Reviews
-        url: /docs/pbc/all/ratings-reviews/ratings-reviews.html
+        url: /docs/pbc/all/ratings-reviews/ratings-and-reviews.html
         nested:
           - title: What's changed in Ratings and Reviews
             url: /docs/pbc/all/ratings-reviews/whats-changed-in-ratings-and-reviews.html

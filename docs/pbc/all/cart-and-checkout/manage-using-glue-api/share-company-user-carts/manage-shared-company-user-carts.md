@@ -23,7 +23,7 @@ related:
   - title: Install the Shared Carts feature
     link: docs/scos/dev/feature-integration-guides/page.version/shared-carts-feature-integration.html
   - title: Manage carts of registered users
-    link: docs/scos/dev/glue-api-guides/page.version/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
+    link: docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html
 ---
 
 This endpoint allows managing shared company user carts.

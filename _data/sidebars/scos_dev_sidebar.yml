@@ -3538,18 +3538,18 @@ entries:
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html
         - title: Prepayment
           nested:
-          - title: Testing the Prepayment implementation
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/testing-the-prepayment-implementation.html
-          - title: Implementing Prepayment in Back End
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html
-          - title: Integrating Prepayment into checkout
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrating-prepayment-into-checkout.html
-          - title: Implementing Prepayment in shared layer
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html
-          - title: Implementing Prepayment
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment.html
-          - title: Implement Prepayment in Frontend
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-front-end.html
+          - title: Test the prepayment implementation
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
+          - title: Implement prepayment in backend
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
+          - title: Integrate Prepayment into checkout
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
+          - title: Implement prepayment in shared layer
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
+          - title: Implement prepayment
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
+          - title: Implement prepayment in frontend
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
         - title: Invoice
           nested:
           - title: Test the invoice payment implementation

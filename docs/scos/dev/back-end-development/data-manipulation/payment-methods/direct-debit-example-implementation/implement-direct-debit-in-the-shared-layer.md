@@ -40,7 +40,7 @@ This document shows how to identify the new payment type using some unique const
 
 To identify the new payment type, do the following:
 
-1. Create the `PaymentMethodsConstants` interface under the `Shared` namespace, where you define these unique constants.
+1. In the `Shared` namespace, where you define these unique constants, create the `PaymentMethodsConstants` interface.
 
 **Code sample:**
 

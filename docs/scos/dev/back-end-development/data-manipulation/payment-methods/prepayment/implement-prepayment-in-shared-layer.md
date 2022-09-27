@@ -1,5 +1,5 @@
 ---
-title: Implementing Prepayment in shared layer
+title: Implement prepayment in shared layer
 description: This procedure will help us to identify the new payment type through some unique constants.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,25 +22,25 @@ redirect_from:
   - /v2/docs/en/ht-prepayment-shared
   - /v1/docs/ht-prepayment-shared
   - /v1/docs/en/ht-prepayment-shared
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html
 related:
-  - title: Implementing Prepayment
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment.html
-  - title: Implement Prepayment in front end
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-front-end.html
-  - title: Implementing Prepayment in back end
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html
-  - title: Integrating Prepayment into checkout
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrating-prepayment-into-checkout.html
-  - title: Testing the Prepayment implementation
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/testing-the-prepayment-implementation.html
+  - title: Implement prepayment
+    link: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
+  - title: Implement prepayment in frontend
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
+  - title: Implement prepayment in backend
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
+  - title: Integrate Prepayment into checkout
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
+  - title: Test the Prepayment implementation
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
 ---
 
-This procedure will help us to identify the new payment type through some unique constants. We are going to define those constants under the Shared namespace, since they're needed both by Yves and Zed.
+This tutorial shows how to identify the new payment type through some unique constants. Those constants are going to be defined under the Shared namespace because both Yves and Zed need them.
 
-1. Create the `PaymentMethodsConstants` interface under the `Shared` namespace, where you'll define these unique constants.
+1. Create the `PaymentMethodsConstants` interface under the `Shared` namespace, where you define these unique constants.
 
-<details>
-<summary markdown='span'>Code sample:</summary>
+**Code sample:**
 
 ```php
 <?php
@@ -67,12 +67,10 @@ interface PaymentMethodsConstants
 
 }
 ```
-</details>
 
-2. Enrich the `Payment` transfer file with a new property that corresponds to the new payment method.
+1. Enrich the `Payment` transfer file with a new property that corresponds to the new payment method.
 
-<details>
-<summary markdown='span'>Code sample</summary>
+**Code sample:**
 
 ```xml
 <?xml version="1.0"?>
@@ -88,4 +86,7 @@ interface PaymentMethodsConstants
 ```
 </details>
 
-3. Run the `vendor/bin/console transfer:generate` command to have the `PaymentTransfer` class updated.
+1. Update the `PaymentTransfer` class:
+```bash
+vendor/bin/console transfer:generate
+```

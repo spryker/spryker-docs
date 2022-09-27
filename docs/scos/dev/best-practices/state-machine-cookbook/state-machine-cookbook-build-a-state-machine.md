@@ -497,7 +497,7 @@ Now check again the [Prepayment](http://zed.mysprykershop.com/oms/index/draw?pro
 ## Integrate the State Machine
 You can have more than one state machine defined in your application and apply them according to the details of the order that gets submitted.
 
-E.g.: you can have a state machine that doesn’t involves shipping for goods that are delivered electronic. Also, you can have a dedicated state machine for each payment method (invoice payment method involves other patterns than credit card payment does).
+E.g.: you can have a state machine that doesn’t involve shipping for goods that are delivered electronic. Also, you can have a dedicated state machine for each payment method (invoice payment method involves other patterns than credit card payment does).
 
 The mapping between a submitted order and the corresponding state machine that is able to process the payment is done in the `SalesConfig` class, under the `determineProcessForOrderItem(OrderTransfer $order, QuoteTransfer $request)` operation; here, you will set the corresponding process for your order.
 

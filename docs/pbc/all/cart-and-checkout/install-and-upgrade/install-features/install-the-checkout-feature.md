@@ -15,8 +15,6 @@ redirect_from:
 related:
   - title: Install the Checkout Glue API
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-checkout-feature-integration.html
-  - title: Checkout feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/checkout-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-checkout-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-checkout-feature.md -->

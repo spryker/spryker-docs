@@ -125,6 +125,7 @@ Enable the following behaviors by registering the plugins:
 | PLUGIN | SPECIFICATION  | PREREQUISITES | NAMESPACE |
 |---|---|---|---|
 | UnzerCheckoutDataResponseMapperPlugin | Maps `RestCheckoutDataTransfer.unzerCredentials.unzerKeypair.publicKey` to `RestCheckoutDataResponseAttributesTransfer.unzerPublicKey` while `RestCheckoutDataTransfer.unzerCredentials` is specified. | None  | SprykerEco\Glue\UnzerRestApi\Plugin\CheckoutRestApi |
+| UnzerCheckoutDataExpanderPlugin | Expands the `RestCheckoutDataTransfer.quote` transfer property with `UnzerCredentialsTransfer` according to added items. | None  | SprykerEco\Zed\UnzerRestApi\Communication\Plugin\CheckoutRestApi |
 | UnzerNotificationResource | Adds Unzer notification resource.  | None | SprykerEco\Glue\UnzerRestApi\Plugin\GlueJsonApiConventionExtension |
 
 **src/Pyz/Glue/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
@@ -144,6 +145,28 @@ class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependency
     {
         return [
             new UnzerCheckoutDataResponseMapperPlugin(),
+        ];
+    }
+}
+```
+
+**src/Pyz/Zed/CheckoutRestApi/CheckoutRestApiDependencyProvider.php**
+
+```php
+namespace Pyz\Zed\CheckoutRestApi;
+
+use Spryker\Zed\CheckoutRestApi\CheckoutRestApiDependencyProvider as SprykerCheckoutRestApiDependencyProvider;
+use SprykerEco\Zed\UnzerRestApi\Communication\Plugin\CheckoutRestApi\UnzerCheckoutDataExpanderPlugin;
+
+class CheckoutRestApiDependencyProvider extends SprykerCheckoutRestApiDependencyProvider
+{
+    /**
+     * @return array<\Spryker\Zed\CheckoutRestApiExtension\Dependency\Plugin\CheckoutDataExpanderPluginInterface>
+     */
+    protected function getCheckoutDataExpanderPlugins(): array
+    {
+        return [
+            new UnzerCheckoutDataExpanderPlugin(),
         ];
     }
 }

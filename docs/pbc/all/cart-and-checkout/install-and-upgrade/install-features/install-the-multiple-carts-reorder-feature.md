@@ -12,11 +12,6 @@ redirect_from:
   - /docs/en/multiple-carts-reorder-feature-integration
   - /docs/scos/dev/feature-integration-guides/202200.0/multiple-carts-reorder-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/multiple-carts-reorder-feature-integration.html  
-related:
-  - title: Multiple Carts feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/multiple-carts-feature-walkthrough.html
-  - title: Reorder feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/reorder-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-multiple-carts-reorder-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-multiple-carts-reorder-feature.md -->

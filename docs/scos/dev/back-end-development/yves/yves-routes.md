@@ -38,7 +38,7 @@ related:
     link: docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
 ---
 
-Whenever you need to create a new controller, you’ll need to define a path where it’s available. To do that, register your controllers for a specific path (or in other words, create a new route definition) in a route.
+Whenever you need to create a new controller, you'll need to define a path where it's available. To do that, register your controllers for a specific path (or in other words, create a new route definition) in a route.
 
 Have a look at the `ApplicationRouteProviderPlugin` and see how it registers two controllers in the `Application` module.
 
@@ -125,7 +125,7 @@ protected function getRouteProvider()
 
 ## Routers
 
-Routers are responsible for finding a matching controller action for each request. Spryker uses Symfony’s `ChainRouter` to chain multiple routers which means that each router will be executed after each other, and the first, which finds a matching path, will resolve the request.
+Routers are responsible for finding a matching controller action for each request. Spryker uses Symfony's `ChainRouter` to chain multiple routers which means that each router will be executed after each other, and the first, which finds a matching path, will resolve the request.
 
 By default we provide three routers:
 

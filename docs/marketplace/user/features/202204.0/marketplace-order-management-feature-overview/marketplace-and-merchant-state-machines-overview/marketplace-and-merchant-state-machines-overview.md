@@ -39,7 +39,7 @@ Our exemplary Marketplace state machine provides the following states:
 * Delivered
 * Closed
 
-To learn more about states, see [State Machine Fundamentals](/docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html).
+To learn more about states, see [State Machine Fundamentals](/docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html).
 
 {% info_block warningBox "Note" %}
 
@@ -96,4 +96,3 @@ Our exemplary merchant state machine provides the following states:
 ## Next steps
 
 [Learn how the marketplace and merchant state machines interact with each other](/docs/marketplace/user/features/{{page.version}}/marketplace-order-management-feature-overview/marketplace-and-merchant-state-machines-overview/marketplace-and-merchant-state-machines-interaction.html)
-

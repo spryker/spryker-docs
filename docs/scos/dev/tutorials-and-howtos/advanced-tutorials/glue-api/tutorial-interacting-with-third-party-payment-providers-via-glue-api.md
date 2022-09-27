@@ -29,7 +29,7 @@ The checkout process of Spryker Glue API can be leveraged to involve third parti
 
 {% info_block infoBox %}
 
-For details, see [Checking Out Purchases and Getting Checkout Data](/docs/scos/dev/glue-api-guides/{{site.version}}/checking-out/checking-out-purchases.html).
+For details, see [Checking Out Purchases and Getting Checkout Data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/check-out-purchases.html).
 
 {% endinfo_block %}
 
@@ -113,7 +113,7 @@ To help you understand which payments need to be processed, you can use the opti
 
 {% info_block infoBox %}
 
-For details, see [Updating Payment Data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/update-payment-data.html).
+For details, see [Update payment data](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/update-payment-data.html).
 
 {% endinfo_block %}
 

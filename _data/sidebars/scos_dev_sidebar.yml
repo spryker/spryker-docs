@@ -9,7 +9,10 @@ entries:
     url: /docs/scos/dev/setup/setup.html
     nested:
     - title: System requirements
-      url: /docs/scos/dev/setup/system-requirements.html
+      url: /docs/scos/dev/system-requirements/system-requirements.html
+      include_versions:
+      - "202108.0"
+      - "202204.0"
     - title: Quick installation guides
       url: /docs/scos/dev/setup/quick-installation-guides/quick-installation-guides.html
       nested:
@@ -939,7 +942,6 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
         nested:
         - title: Managing carts of registered users
           url: /docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
@@ -1930,7 +1932,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Persistent Cart Sharing + Shared Carts
       url: /docs/scos/dev/feature-integration-guides/persistent-cart-sharing-shared-carts-feature-integration.html
       include_versions:
@@ -1939,7 +1940,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Prices
       url: /docs/scos/dev/feature-integration-guides/prices-feature-integration.html
       include_versions:
@@ -2147,7 +2147,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Quick Add to Cart + Measurement Units
       url: /docs/scos/dev/feature-integration-guides/quick-add-to-cart-measurement-units-feature-integration.html
       include_versions:
@@ -2157,7 +2156,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Quick Add to Cart + Non-splittable Products
       url: /docs/scos/dev/feature-integration-guides/quick-add-to-cart-non-splittable-products-feature-integration.html
       include_versions:
@@ -2167,7 +2165,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Quick Add to Cart + Packaging Units
       url: /docs/scos/dev/feature-integration-guides/quick-add-to-cart-packaging-units-feature-integration.html
       include_versions:
@@ -2177,7 +2174,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Quick Add to Cart + Shopping Lists
       url: /docs/scos/dev/feature-integration-guides/quick-add-to-cart-shopping-lists-feature-integration.html
       include_versions:
@@ -2187,7 +2183,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Quotation Process
       url: /docs/scos/dev/feature-integration-guides/quotation-process-feature-integration.html
       include_versions:
@@ -2650,8 +2645,6 @@ entries:
   - title: Data import
     url: /docs/scos/dev/data-import/data-import.html
     include_versions:
-    - "202005.0"
-    - "202009.0"
     - "202108.0"
     - "202204.0"
     nested:
@@ -2767,7 +2760,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - currency.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-currency.csv.html
           include_versions:
@@ -2986,7 +2978,6 @@ entries:
             - "202005.0"
             - "202009.0"
             - "202108.0"
-            - "202204.0"
           - title: File details - product_alternative.csv
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-alternative.csv.html
             include_versions:
@@ -3301,10 +3292,10 @@ entries:
     - title: Client
       url: /docs/scos/dev/back-end-development/client/client.html
       nested:
-      - title: Implementing a client
-        url: /docs/scos/dev/back-end-development/client/implementing-a-client.html
-      - title: Using and configuring Redis as a key-value storage
-        url: /docs/scos/dev/back-end-development/client/using-and-configuring-redis-as-a-key-value-storage.html
+      - title: Implement a client
+        url: /docs/scos/dev/back-end-development/client/implement-a-client.html
+      - title: Use and configure Redis as a key-value storage
+        url: /docs/scos/dev/back-end-development/client/use-and-configure-redis-as-a-key-value-storage.html
     - title: Yves
       url: /docs/scos/dev/back-end-development/yves/yves.html
       nested:
@@ -3375,12 +3366,12 @@ entries:
     - title: Cronjobs
       url: /docs/scos/dev/back-end-development/cronjobs/cronjobs.html
       nested:
-      - title: Adding and configuring cronjobs
-        url: /docs/scos/dev/back-end-development/cronjobs/adding-and-configuring-cronjobs.html
-      - title: Creating a custom scheduler
-        url: /docs/scos/dev/back-end-development/cronjobs/creating-a-custom-scheduler.html
-      - title: Migrating to Jenkins
-        url: /docs/scos/dev/back-end-development/cronjobs/migrating-to-jenkins.html
+      - title: Add and configure cronjobs
+        url: /docs/scos/dev/back-end-development/cronjobs/add-and-configure-cronjobs.html
+      - title: Create a custom scheduler
+        url: /docs/scos/dev/back-end-development/cronjobs/create-a-custom-scheduler.html
+      - title: Migrate to Jenkins
+        url: /docs/scos/dev/back-end-development/cronjobs/migrate-to-jenkins.html
     - title: Forms
       url: /docs/scos/dev/back-end-development/forms/forms.html
       nested:
@@ -3402,10 +3393,10 @@ entries:
       - title: Console commands in Spryker
         url: /docs/scos/dev/back-end-development/console-commands/console-commands.html
         include_versions:
-      - title: Implementing a new console command
-        url: /docs/scos/dev/back-end-development/console-commands/implementing-a-new-console-command.html
-      - title: Getting the list of console commands and available options
-        url: /docs/scos/dev/back-end-development/console-commands/getting-the-list-of-console-commands-and-available-options.html
+      - title: Implement a new console command
+        url: /docs/scos/dev/back-end-development/console-commands/implement-a-new-console-command.html
+      - title: Get the list of console commands and available options
+        url: /docs/scos/dev/back-end-development/console-commands/get-the-list-of-console-commands-and-available-options.html
     - title: Data manipulation
       nested:
       - title: Running and reverting a database migration
@@ -3414,22 +3405,22 @@ entries:
         nested:
         - title: Publish and Synchronization
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
-        - title: Implementing Publish and Synchronization
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-publish-and-synchronization.html
+        - title: Implement Publish and Synchronization
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
         - title: Publish and Synchronize repeated export
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
         - title: Publish and Synchronize and multi-store shop systems
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-and-multi-store-shop-systems.html
-        - title: Adding publish events
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/adding-publish-events.html
-        - title: Handling data with Publish and Synchronization
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html
-        - title: Implementing synchronization plugins
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
-        - title: Implementing event trigger publisher plugins
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html
-        - title: Debugging listeners
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/debugging-listeners.html
+        - title: Add publish events
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
+        - title: Handle data with Publish and Synchronization
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
+        - title: Implement synchronization plugins
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
+        - title: Implement event trigger publisher plugins
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
+        - title: Debug listeners
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
         - title: Synchronization behavior - enabling multiple mappings
           url: /docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
       - title: DataPayload Conversion
@@ -3465,20 +3456,20 @@ entries:
           nested:
           - title: Facet filter overview and configuration
             url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/facet-filter-overview-and-configuration.html
-          - title: Configuring the search features
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html
-          - title: Configuring Elasticsearch
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
-          - title: Configuring the search query
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html
-          - title: Configuring Search for multi-currency
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
-          - title: Expanding search data
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
-        - title: Transferring data between Yves and Zed
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transferring-data-between-yves-and-zed.html
-        - title: Defining the module dependencies- Dependency Provider
-          url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/defining-the-module-dependencies-dependency-provider.html
+          - title: Configure search features
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html
+          - title: Configure Elasticsearch
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
+          - title: Configure a search query
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-a-search-query.html
+          - title: Configure Search for multi-currency
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
+          - title: Expand search data
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html
+        - title: Transfer data between Yves and Zed
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transfer-data-between-yves-and-zed.html
+        - title: Define the module dependencies - Dependency Provider
+          url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/define-the-module-dependencies-dependency-provider.html
       - title: Creating an Order Management System - Spryker Commerce OS
         url: /docs/scos/dev/back-end-development/data-manipulation/creating-an-order-management-system-spryker-commerce-os.html
       - title: Queue
@@ -3542,10 +3533,10 @@ entries:
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/file-system.html
           - title: Flysystem
             url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/flysystem.html
-          - title: Extending the database schema
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extending-the-database-schema.html
-          - title: Creating, using, and extending the transfer objects
-            url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html
+          - title: Extend the database schema
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html
+          - title: Create, use, and extend the transfer objects
+            url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
         - title: Spryker Middleware
           url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/spryker-middleware.html
       - title: Event
@@ -3555,8 +3546,8 @@ entries:
           url: /docs/scos/dev/back-end-development/data-manipulation/event/configuring-an-events-queue.html
         - title: Listening to events
           url: /docs/scos/dev/back-end-development/data-manipulation/event/listening-to-events.html
-        - title: Adding events
-          url: /docs/scos/dev/back-end-development/data-manipulation/event/adding-events.html
+        - title: Add events
+          url: /docs/scos/dev/back-end-development/data-manipulation/event/add-events.html
     - title: Extending Spryker
       nested:
       - title: Development strategies
@@ -4102,8 +4093,6 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-use-blocks.html
         - title: "HowTo: Display custom names for order item states on the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html
-        - title: "HowTo: Configure the product reviews"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-configure-the-product-reviews.html
         - title: "HowTo: Manage a big number of categories"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-manage-a-big-number-of-categories.html
         - title: "HowTo: Display product groups by color on the Storefront"
@@ -4799,10 +4788,10 @@ entries:
         url: /docs/scos/dev/best-practices/search-best-practices/personalization-dynamic-pricing.html
     - title: State machine cookbook
       nested:
-      - title: State machine cookbook - part 2 - building a state machine
-        url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-2-building-a-state-machine.html
-      - title: State machine cookbook - part I - state machine fundamentals
-        url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html
+      - title: State machine fundamentals
+        url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html
+      - title: Build a state machine
+        url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-build-a-state-machine.html
   - title: Troubleshooting
     url: /docs/scos/dev/troubleshooting/troubleshooting.html
     nested:

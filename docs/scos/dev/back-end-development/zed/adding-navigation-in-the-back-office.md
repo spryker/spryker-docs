@@ -1,6 +1,6 @@
 ---
 title: Adding navigation in the Back Office
-description: This article describes how to make your new controller action accessible in the navigation bar.
+description: This document describes how to make your new controller action accessible in the navigation bar.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/adding-navigation-in-the-back-office
@@ -28,7 +28,7 @@ related:
     link: docs/scos/dev/back-end-development/zed/zed.html
 ---
 
-This article describes how to make a controller action accessible in the navigation bar.
+This document describes how to make a controller action accessible in the navigation bar.
 
 There are two places to define the navigation configuration:
 

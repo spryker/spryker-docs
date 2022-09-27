@@ -27,7 +27,7 @@ redirect_from:
 
 {% info_block infoBox %}
 
-In this tutorial we will create a test module: `HelloWorld` module; the module’s functionality is to show a ‘Hello world!’ message to the user.
+In this tutorial we will create a test module: `HelloWorld` module; the module's functionality is to show a 'Hello world!' message to the user.
 
 {% endinfo_block %}
 
@@ -35,7 +35,7 @@ When a new concept needs to be defined, a new module needs to be added on the pr
 
 ## Prerequisites
 
-To implement this functionality, it’s necessary to have an index view together with its matching controller and a `HelloWorld` dependency provider.
+To implement this functionality, it's necessary to have an index view together with its matching controller and a `HelloWorld` dependency provider.
 
 ## Creating a new module
 
@@ -53,7 +53,7 @@ touch src/Pyz/Zed/HelloWorld/Communication/Controller/IndexController.php
 touch src/Pyz/Zed/HelloWorld/HelloWorldDependencyProvider.php
 ```
 
-2. Insert the ‘Hello world !’ message inside the view (`index.twig`):
+2. Insert the 'Hello world !' message inside the view (`index.twig`):
 
 ```twig
 {% raw %}{%{% endraw %} extends '@Gui/Layout/layout.twig' {% raw %}%}{% endraw %}
@@ -99,7 +99,7 @@ Additionally, you can use the code generator to create a module. For this, run `
 
 ## Displaying a random salutation message
 
-We can now extend this example to display a random salutation message on the screen. For this, we’ll create a class that will contain the logic for generating the random salutation message; we’ll call it `MessageGenerator` and we will place it under the business layer.
+We can now extend this example to display a random salutation message on the screen. For this, we'll create a class that will contain the logic for generating the random salutation message; we'll call it `MessageGenerator` and we will place it under the business layer.
 
 **To display a random salutation message:**
 

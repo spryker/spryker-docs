@@ -30,7 +30,7 @@ This section is in beta because not all the PBCs are covered. You are welcome to
 | Product Relationship Management | Helps you enhance your shop with cross- and up-selling capabilities to increase sales. | Increases average order values with product relations. |
 | [PSP (Payment Service Provider)](/docs/pbc/all/payment-service-providers/psp.html) | Provides integration of payment methods. You can integrate multiple payment gateways, define their availability, and customize how they appear on your site. | Lets you provide an excellent shopping experience and integrate your customers’ preferred payment methods. |
 | Punchout |The Punchout integration eases the purchasing process for your B2B customers. Buyers can select a shop within their procurement system and visit the supplier website via a Punchout Setup Request, thereby allowing them to follow internal procurement guidelines. | Lets you increase customer satisfaction by offering a direct Punchout integration. |
-| Ratings and Reviews | Lets you incorporate user reviews and ratings. You can receive and moderate feedback in the Back Office. The Ratings and Reviews feature also comes with the functionality to add text-free reviews and star ratings. | Inspires trust among customers with ratings and reviews. |
+| [Ratings and Reviews](/docs/pbc/all/ratings-reviews/ratings-and-reviews.html) | Lets you incorporate user reviews and ratings. You can receive and moderate feedback in the Back Office. The Ratings and Reviews feature also comes with the functionality to add text-free reviews and star ratings. | Inspires trust among customers with ratings and reviews. |
 | Return Management | Lets you establish a return policy and execute returns. | Increase customer satisfaction and loyalty. |
 | RFQ (Request for Quote) | Your customers can request a quote for products and services that you sell. The Request for Quote feature supports all functionalities of the price engine and product capabilities, such as Volume Prices, Customer Specific Prices, Measuring and Packaging units, Shipping costs, Product Options, etc. | Enhances customer loyalty and increase conversion rates. |
 | Search | The out-of-the-box Elasticsearch technology lets you include full-text search, auto-suggestions, and auto-completion. You can set individual search preferences for multiple stores and categorize your products by adding dynamic filters and facets to help your customers further refine the search results. You can also add more advanced filters that use the product’s metadata or promote a brand’s top-sellers or highly rated products. | Helps you increase conversion rates by providing an excellent Search and Filter experience. |
@@ -52,8 +52,8 @@ This section is in beta because not all the PBCs are covered. You are welcome to
 
 | NAME | CATEGORY |
 | --- | --- |
-| [Bazaarvoice](/docs/pbc/all/ratings-reviews/bazaarvoice.html) | Ratings and Reviews |
+| [Bazaarvoice](/docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice.html) | Ratings and Reviews |
 | [Payone](/docs/pbc/all/payment-service-providers/payone/payone.html) | PSP (Payment Service Provider) |
-| [Usercentrics](/docs/pbc/all/usercentrics.html) | (CMP) Consent Management Platform |
+| [Usercentrics](/docs/pbc/all/usercentrics/usercentrics.html) | (CMP) Consent Management Platform |
 
 </div>

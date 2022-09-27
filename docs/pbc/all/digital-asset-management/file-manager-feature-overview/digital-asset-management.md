@@ -77,9 +77,9 @@ Most popular file types that a shop owner can allow uploading to the Back Office
 
 ## Related Business User articles
 
-|BACK OFFICE USER GUIDES|
-|---|
-| [Upload files to the Back Office](/docs/scos/user/back-office-user-guides/{{page.version}}/content/file-manager/managing-file-tree.html#uploading-files) |
+| OVERVIEWS |BACK OFFICE USER GUIDES|
+| - | - |
+| [Asset management](/docs/pbc/all/digital-asset-management/file-manager-feature-overview/asset-management.html) | [Upload files to the Back Office](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/managing-file-tree.html#uploading-files) |
 
 ## Related Business User articles
 
@@ -87,5 +87,5 @@ Most popular file types that a shop owner can allow uploading to the Back Office
 |---|
 | [Get a general idea of asset measurement](/docs/scos/user/features/{{page.version}}/file-manager-feature-overview/asset-management.html)  |
 | [Get a general idea of the file uploader](/docs/scos/user/features/{{page.version}}/file-manager-feature-overview/file-uploader.html)  |
-| [Manage file tree](/docs/scos/user/back-office-user-guides/{{page.version}}/content/file-manager/managing-file-tree.html)   |
-| [Manage file list](/docs/scos/user/back-office-user-guides/{{page.version}}/content/file-manager/managing-file-list.html) |
+| [Manage file tree](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/managing-file-tree.html)   |
+| [Manage file list](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/managing-file-list.html) |

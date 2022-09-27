@@ -90,6 +90,8 @@ entries:
                 url: /docs/pbc/all/carrier-management/third-party-integrations/paazl.html
               - title: Paqato
                 url: /docs/pbc/all/carrier-management/third-party-integrations/paqato.html
+      - title: Digital Asset Management
+        
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:
@@ -300,15 +302,15 @@ entries:
               - title: "HowTo: Schedule cron job for Scheduled Prices"
                 url: /docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html
           - title: Extend and customize
-            nested: 
+            nested:
               - title: Configuration of price modes and types
-                url: /docs/pbc/all/price-management/extend-and-customize/configuration-of-price-modes-and-types.html 
+                url: /docs/pbc/all/price-management/extend-and-customize/configuration-of-price-modes-and-types.html
               - title: "Money module: reference information"
                 url: /docs/pbc/all/price-management/extend-and-customize/money-module-reference-information.html
               - title: Multiple currencies per store configuration
                 url: /docs/pbc/all/price-management/extend-and-customize/multiple-currencies-per-store-configuration.html
               - title: "PriceProduct module details: reference information"
-                url: /docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html                                                
+                url: /docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html
       - title: Request for Quote
         url: /docs/pbc/all/request-for-quote/request-for-quote.html
         nested:

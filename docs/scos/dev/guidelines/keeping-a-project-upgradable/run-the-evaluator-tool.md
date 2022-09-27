@@ -1,7 +1,7 @@
 ---
 title: Run the evaluator tool
 description: Instructions for running the evaluator tool
-last_updated: Nov 25, 2021
+last_updated: Sep 2, 2022
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/guidelines/keeping-a-project-upgradable/running-the-evaluator-tool.html

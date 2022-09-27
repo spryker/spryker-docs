@@ -2,20 +2,6 @@ title: PBC guides
 entries:
   - product: PBC
     nested:
-      - title: Ratings and Reviews
-        url: /docs/pbc/all/ratings-reviews/ratings-reviews.html
-        nested:
-          - title: Bazaarvoice
-            url: /docs/pbc/all/ratings-reviews/bazaarvoice/bazaarvoice.html
-            nested:
-              - title: Integrate Bazaarvoice
-                url: /docs/pbc/all/ratings-reviews/bazaarvoice/integrate-bazaarvoice.html
-              - title: Manage in the Back Office
-                nested:
-                - title: Configure Bazaarvoice
-                  url: /docs/pbc/all/ratings-reviews/bazaarvoice/manage-in-the-back-office/configure-bazaarvoice.html
-                - title: Disconnect Bazaarvoice
-                  url: /docs/pbc/all/ratings-reviews/bazaarvoice/manage-in-the-back-office/disconnect-bazaarvoice.html
       - title: Carrier Management
         url: /docs/pbc/all/carrier-management/carrier-management.html
         nested:
@@ -194,7 +180,7 @@ entries:
                 url: /docs/pbc/all/gift-cards/manage-using-glue-api/retrieve-gift-cards-in-guest-carts.html
       - title: Payment Service Providers
         url: /docs/pbc/all/payment-service-providers/psp.html
-        nested:        
+        nested:
           - title: Payone
             url: /docs/pbc/all/payment-service-providers/payone/payone.html
             nested:
@@ -316,15 +302,58 @@ entries:
               - title: "HowTo: Schedule cron job for Scheduled Prices"
                 url: /docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html
           - title: Extend and customize
-            nested: 
+            nested:
               - title: Configuration of price modes and types
-                url: /docs/pbc/all/price-management/extend-and-customize/configuration-of-price-modes-and-types.html 
+                url: /docs/pbc/all/price-management/extend-and-customize/configuration-of-price-modes-and-types.html
               - title: "Money module: reference information"
                 url: /docs/pbc/all/price-management/extend-and-customize/money-module-reference-information.html
               - title: Multiple currencies per store configuration
                 url: /docs/pbc/all/price-management/extend-and-customize/multiple-currencies-per-store-configuration.html
               - title: "PriceProduct module details: reference information"
-                url: /docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html                                                
+                url: /docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html
+      - title: Ratings and Reviews
+        url: /docs/pbc/all/ratings-reviews/ratings-reviews.html
+        nested:
+          - title: What's changed in Ratings and Reviews
+            url: /docs/pbc/all/ratings-reviews/whats-changed-in-ratings-and-reviews.html
+          - title: Install and upgrade
+            nested:
+              - title: Install the Product Rating and Reviews feature
+                url: /docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-feature.html
+              - title: Install the Product Rating and Reviews + Product Group feature
+                url: /docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-product-group-feature.html
+              - title: Install the Product Rating and Reviews Glue API
+                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html
+          - title: Import and export data
+            nested:
+              - title: File details- product_review.csv
+                url: /docs/pbc/all/ratings-reviews/import-and-export-data/file-details-product-review.csv.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Manage product reviews
+                url: /docs/pbc/all/ratings-reviews/manage-in-the-back-office/manage-product-reviews-in-the-back-office.html
+          - title: Manage using Glue API
+            nested:
+              - title: Manage product reviews using Glue API
+                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html
+              - title: Retrieve product reviews when retrieving abstract products
+                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/retrieve-product-reviews-when-retrieving-abstract-products.html
+              - title: Retrieving product reviews when retrieving concrete products
+                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/retrieve-product-reviews-when-retrieving-concrete-products.html
+          - title: Tutorials and HowTos
+            nested:
+              - title: "HowTo: Configure product reviews"
+                url: /docs/pbc/all/ratings-reviews/tutorials-and-howtos/howto-configure-product-reviews.html
+          - title: Third-party integrations
+            nested:
+              - title: Bazaarvoice
+                url: /docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice.html
+              - title: Integrate Bazaarvoice
+                url: /docs/pbc/all/ratings-reviews/third-party-integrations/integrate-bazaarvoice.html
+              - title: Configure Bazaarvoice
+                url: /docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice.html
+              - title: Disconnect Bazaarvoice
+                url: /docs/pbc/all/ratings-reviews/third-party-integrations/disconnect-bazaarvoice.html
       - title: Request for Quote
         url: /docs/pbc/all/request-for-quote/request-for-quote.html
         nested:
@@ -539,5 +568,4 @@ entries:
           - title: Integrate Usercentrics
             url: /docs/pbc/all/usercentrics/integrate-usercentrics.html
           - title: Disconnect Usercentrics
-            url: /docs/pbc/all/usercentrics/disconnect-usercentrics.html              
-
+            url: /docs/pbc/all/usercentrics/disconnect-usercentrics.html

@@ -1,6 +1,6 @@
 ---
 title: Implementing Prepayment in back end
-description: This article describes how to implement prepayment in the back end.
+description: This document describes how to implement prepayment in the back end.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-be
@@ -44,7 +44,7 @@ Perform the following procedure:
 
 1. Add the following 2 plugins in Zed, inside the `Communication/Plugin/Checkout/` folder of the new added module.
 
-<details open>
+<details>
 <summary markdown='span'>PrepaymentPreCheckPlugin</summary>
 
 ```php
@@ -78,7 +78,7 @@ class PrepaymentPreCheckPlugin extends AbstractPlugin implements CheckoutPreChec
 <br>
 </details>
 
-<details open>
+<details>
 <summary markdown='span'>PrepaymentSaveOrderPlugin</summary>
 
 ```php
@@ -161,10 +161,10 @@ class PaymentDependencyInjector extends AbstractDependencyInjector
 
 <br>
 
-3. Link the prepayment state machine to process the orders submitted with the payment method we’re implementing.
+3. Link the prepayment state machine to process the orders submitted with the payment method we're implementing.
 
 {% info_block warningBox %}
-We’ll use the prepayment state machine that’s delivered with Demoshop.
+We'll use the prepayment state machine that's delivered with Demoshop.
 {% endinfo_block %}
 
 Add this configuration in the `SalesConfig` class:

@@ -1,13 +1,13 @@
 ---
 title:  Mailing & Notifications feature walkthrough
 last_updated: Aug 13, 2021
-description: The Mailing & Notifications feature allows you to manage newsletters and notifications
+description: The Mailing & Notifications feature lets you manage newsletters and notifications
 template: concept-topic-template
 redirect_from:
   - /docs/scos/dev/feature-walkthroughs/202200.0/mailing-and-notifications-feature-walkthrough.html
 ---
 
-The _Mailing & Notifications_ feature allows you to manage newsletters and notifications.
+The _Mailing & Notifications_ feature lets you manage newsletters and notifications.
 
 
 To learn more about the feature and to find out how end users use it, see [Mailing & Notifications feature overview](/docs/scos/user/features/{{page.version}}/mailing-and-notifications-feature-overview.html) for business users.

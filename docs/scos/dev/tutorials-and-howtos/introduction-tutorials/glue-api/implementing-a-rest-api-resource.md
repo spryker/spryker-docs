@@ -266,7 +266,7 @@ The same as with any other data source, you can use containers called *transfer 
 
 {% info_block infoBox %}
 
-For information about defining objects and syntax, see [Creating, using, and extending the transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/creating-using-and-extending-the-transfer-objects.html).
+For information about defining objects and syntax, see [Create, use, and extend the transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html).
 
 {% endinfo_block %}
 

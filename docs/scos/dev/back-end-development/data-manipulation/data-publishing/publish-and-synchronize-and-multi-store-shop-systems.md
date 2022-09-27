@@ -1,6 +1,6 @@
 ---
 title: Publish and Synchronize and Multi-Store Shop Systems
-description: This article describes a way to synchronize data between multiple stores.
+description: This document describes a way to synchronize data between multiple stores.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/p-s-and-multi-store-shop-systems
@@ -25,18 +25,18 @@ redirect_from:
 related:
   - title: Publish and Synchronization
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronization.html
-  - title: Implementing Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-publish-and-synchronization.html
-  - title: Handling data with Publish and Synchronization
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html
+  - title: Implement Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-publish-and-synchronization.html
+  - title: Handle data with Publish and Synchronization
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html
   - title: Adding publish events
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/adding-publish-events.html
-  - title: Implementing event trigger publisher plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-event-trigger-publisher-plugins.html
-  - title: Implementing synchronization plugins
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implementing-synchronization-plugins.html
-  - title: Debugging listeners
-    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debugging-listeners.html
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/add-publish-events.html
+  - title: Implement event trigger publisher plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html
+  - title: Implement synchronization plugins
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html
+  - title: Debug listeners
+    link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/debug-listeners.html
   - title: Publish and Synchronize repeated export
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/publish-and-synchronize-repeated-export.html
   - title: Synchronization behavior - enabling multiple mappings
@@ -63,7 +63,7 @@ The RabbitMq default configuration in Spryker VM looks like this:
 
 * RabbitMq groups queues into virtual hosts.
 * RabbitMq provides users/permissions to these virtual hosts.
-* Each virtual host belongs to one Store\Environment (e.g. DE_development_zed, AT_staging_zed, US_production_zed).
+* Each virtual host belongs to one Store\Environment—for example, DE_development_zed, AT_staging_zed, US_production_zed.
 * Messages can be sent to several virtual hosts.
 
 ### Spryker Entities and Multi-Store
@@ -80,7 +80,7 @@ The following diagrams show:
 
 ## How it Works
 
-The first diagram shows how P&S works with a multi-store shop system with one database. When the event is triggered, Publisher checks if the entity has information about a store. Depending on the result, it sends a message to sync queue or the store. Since `spy_product_abstract_storage` has a store column which defines entity and store relation, ProductAbstract goes to two different store sync queues . URL doesn't have any store, so Publisher sends it only to the default store (the store which Zed is running). To be able to send URL to other stores, you need to define a **QueuePool**. The [Queue Pool](/docs/scos/dev/back-end-development/data-manipulation/queue/queue-pool.html) is designed to allow messages to be sent to several queues. The synchronization process is using SynchronizationPool to get the list of the queues for sending the messages. In this example, URL will be sent to DE and AT as these queues are defined in the `SynchronizationPool` in `store.php`.
+The first diagram shows how P&S works with a multi-store shop system with one database. When the event is triggered, Publisher checks if the entity has information about a store. Depending on the result, it sends a message to sync queue or the store. Since `spy_product_abstract_storage` has a store column which defines entity and store relation, ProductAbstract goes to two different store sync queues . URL doesn't have any store, so Publisher sends it only to the default store (the store which Zed is running). To send URL to other stores, you need to define a **QueuePool**. The [Queue Pool](/docs/scos/dev/back-end-development/data-manipulation/queue/queue-pool.html) is designed to allow messages to be sent to several queues. The synchronization process is using SynchronizationPool to get the list of the queues for sending the messages. In this example, URL will be sent to DE and AT as these queues are defined in the `SynchronizationPool` in `store.php`.
 
 {% info_block errorBox %}
 An entity cannot have a store relation and SynchronizationPool defined for it simultaneously.

@@ -1,11 +1,11 @@
 ---
 title: Product feature walkthrough
 last_updated: Aug 19, 2021
-description: The Product feature allows creating products, manage their characteristics and settings.
+description: The Product feature lets you create products, manage their characteristics and settings.
 template: concept-topic-template
 ---
 
-The _Product_ feature allows creating products, manage their characteristics and settings.
+The _Product_ feature lets you create products and manage their characteristics and settings.
 
 To learn more about the feature and to find out how end users use it, see [Product](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-feature-overview.html) for business users.
 
@@ -20,7 +20,7 @@ The following diagram shows the relations between abstract products and product 
 
 </div>
 
-The schema below illustrates the relations between discontinued products, as well as abstract and concrete products:
+The following schema illustrates the relations between discontinued products, as well as abstract and concrete products:
 
 <div class="width-100">
 

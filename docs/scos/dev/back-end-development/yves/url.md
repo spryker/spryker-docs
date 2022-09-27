@@ -32,7 +32,7 @@ In the Spryker Demo Shop, URLs are exported to the key-value storage (Redis) wit
 
 The `reference_key` contains the key of the entity that was also stored in the key-value storage. The data read from the reference key is exactly the data that will be provided to the controller to handle the request at the end. The `type` is required to determine which controller handles the request (along with the data from the reference key).
 
-The example below shows the value stored under the `kv:de.en_us.url./en/imprint` key which will match the [/en/imprint](http://zed.mysprykershop.com/en/imprint) URL in a Demo Shop.
+The following example shows the value stored under the `kv:de.en_us.url./en/imprint` key which will match the [/en/imprint](http://zed.mysprykershop.com/en/imprint) URL in a Demo Shop.
 
 ```js
 {

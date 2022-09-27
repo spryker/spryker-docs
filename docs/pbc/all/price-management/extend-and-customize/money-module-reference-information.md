@@ -44,7 +44,7 @@ To get a money object, call the `MoneyFacade::from*()` methods:
 | MoneyFacade::fromString('1000') | string |
 | MoneyFacade::fromString('1000', 'EUR') | string and currency |
 
-All of them return a `MoneyTransfer` with a `MoneyTransfer::$amount` of `‘1000’`.
+All of them return a `MoneyTransfer` with a `MoneyTransfer::$amount` of `‘1000'`.
 
 {% info_block infoBox "" %}
 
@@ -52,8 +52,8 @@ The only difference between them is `MoneyTransfer::$currency`. This value diffe
 
 {% endinfo_block %}
 
-* In case you don’t pass a currency, the currency configured as default is used.
-* If you pass a specific currency, it is used instead of the one that’s configured as default.
+* In case you don't pass a currency, the currency configured as default is used.
+* If you pass a specific currency, it is used instead of the one that's configured as default.
 
 **`MoneyFacade::formatWithSymbol()`**
 
@@ -62,7 +62,7 @@ The `MoneyFacade::formatWithSymbol()` method accepts only one argument — a Mon
 {% info_block infoBox "Example" %}
 
 * MoneyTransfer::$amount = 1000
-* MoneyTransfer::$currency = ‘EUR’
+* MoneyTransfer::$currency = ‘EUR'
 * Current locale is de_DE
 * The output would be 10,00 €
 * If the current locale would be en_US, the output would be: €10.00 when passing the same object.
@@ -89,7 +89,7 @@ In some cases, you need an integer (for example, cents) representation for a dec
 
 ## Money collection form type
 
-From Money version 2.2.*, you can have a money collection form type inside your forms which allow you to include a complex form collection that render a table with currency per store and gross/net price.
+From Money version 2.2.*, you can have a money collection form type inside your forms which let you include a complex form collection that render a table with currency per store and gross/net price.
 
 For example, add FormBuilder in your form type:
 
@@ -102,7 +102,7 @@ For example, add FormBuilder in your form type:
 protected function addMoneyValueCollectionType(FormBuilderInterface $builder)
 	{
     	$builder->add(
-        	DiscountCalculatorTransfer::MONEY_VALUE_COLLECTION, //is the property in the main form you want to map. It should be transferred as in example
+        	DiscountCalculatorTransfer::MONEY_VALUE_COLLECTION, //is the property in the main form you want to map. It must be transferred as in example
          	MoneyCollectionType::class,
             	[
                 	MoneyCollectionType::OPTION_AMOUNT_PER_STORE => false, //If you want to render per store, set it to true

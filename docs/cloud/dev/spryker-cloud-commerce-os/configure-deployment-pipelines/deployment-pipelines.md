@@ -8,6 +8,7 @@ redirect_from:
   - /docs/deployment-pipelines
   - /docs/en/deployment-pipelines
   - /docs/cloud/dev/spryker-cloud-commerce-os/deployment-pipelines/deployment-pipelines.html
+  - /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-pipelines.html
 ---
 
 Spryker Cloud Commerce OS(SCCOS) provides automated CI/CD(Continuous Integration/Continuous Deployment) Pipelines based on the following AWS Code Suite services:

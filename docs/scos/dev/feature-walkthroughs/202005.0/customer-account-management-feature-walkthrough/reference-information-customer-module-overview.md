@@ -8,6 +8,7 @@ originalArticleId: 119fad7b-c05f-4797-965c-75d3fea94e71
 redirect_from:
   - /v5/docs/customer-module-overview
   - /v5/docs/en/customer-module-overview
+  - /docs/scos/dev/feature-walkthroughs/202005.0/customer-account-management-feature-walkthrough/customer-module-overview-reference-information.html
 related:
   - title: Customer Groups
     link: docs/scos/user/features/page.version/customer-account-management-feature-overview/customer-groups-overview.html

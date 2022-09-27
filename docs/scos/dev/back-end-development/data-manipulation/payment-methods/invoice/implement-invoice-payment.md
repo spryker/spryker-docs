@@ -41,9 +41,11 @@ This document describes the steps to consider implementing the invoice payment m
 
 The following documents describe how to add a new module called `PaymentMethods`.
 
-{% info_block infoBox %}
-
 If this is your first time creating a new module, see [Tutorial: Adding a new module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html).
+
+{% info_block infoBox "Implementation order" %}
+
+The order of the implementation steps does not matter; however, ensure to complete all the steps.
 
 {% endinfo_block %}
 

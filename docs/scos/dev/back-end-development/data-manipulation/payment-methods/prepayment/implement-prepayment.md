@@ -42,8 +42,14 @@ This HowTo section shows how to add a new module called `PaymentMethods`.
 
 If this is your first time creating a new module, see [Tutorial: Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html).
 
-* [Implement prepayment in Front-End](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html)
-* [Integrate Prepayment into Checkout](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html)
-* [Implement prepayment in Back-End](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html)
-* [Implement prepayment in Shared layer](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html)
-* [Test Prepayment Implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html)
+{% info_block infoBox "Implementation order" %}
+
+The order of the implementation steps does not matter; however, ensure to complete all the steps.
+
+{% endinfo_block %}
+
+* [Implement prepayment in frontend](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html)
+* [Integrate Prepayment into checkout](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html)
+* [Implement prepayment in Backend](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html)
+* [Implement prepayment in shared layer](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html)
+* [Test prepayment implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html)

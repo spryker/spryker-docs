@@ -36,14 +36,20 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html
 ---
 
-This set of documents will guide you through implementation of the Direct Debit payment method without integrating with a third party payment service provider.
+This set of documents guides you through the implementation of the Direct Debit payment method without integrating with a third-party payment service provider.
 
 The implementation process includes the following steps:
+
+{% info_block infoBox "Implementation order" %}
+
+The order of the implementation steps does not matter; however, ensure to complete all the steps.
+
+{% endinfo_block %}
 
 * [Implement Direct Debit in Yves](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-yves.html)
 * [Integrate Direct Debit into the checkout](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html)
 * [Implement Direct Debit in Zed](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-zed.html)
-* [Implement Direct Debit in the Shared layer](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-the-shared-layer.html)
+* [Implement Direct Debit in the іhared layer](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-the-shared-layer.html)
 * [Test your Direct Debit implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html)
 
-The order of the implementation steps does not really matter, however make sure you execute them all.
+

@@ -692,7 +692,7 @@ To add the promotional product to the cart, make sure that the cart fulfills the
 For the attributes of the other included resources, see the docs:
 
 * [Retrieving Measurement Units](/docs/scos/dev/glue-api-guides/{{site.version}}/retrieving-measurement-units.html)
-* [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html#create-a-cart)
+* [Create a cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html#create-a-cart)
 * [Retrieve a concrete product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/concrete-products/retrieving-concrete-products.html#concrete-products-response-attributes)
 * [Retrieve an abstract product](/docs/scos/dev/glue-api-guides/{{site.version}}/managing-products/abstract-products/retrieving-abstract-products.html#abstract-products-response-attributes)
 

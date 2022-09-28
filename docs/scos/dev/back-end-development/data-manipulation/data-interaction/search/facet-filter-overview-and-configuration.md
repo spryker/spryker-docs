@@ -23,33 +23,33 @@ redirect_from:
   - /v1/docs/t-working-filter-facets
   - /v1/docs/en/t-working-filter-facets
 related:
-  - title: Configuring Elasticsearch
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-elasticsearch.html
-  - title: Configuring search for multi-currency
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-search-for-multi-currency.html
-  - title: Configuring the search features
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-features.html
-  - title: Configuring the search query
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configuring-the-search-query.html
-  - title: Expanding search data
-    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expanding-search-data.html
+  - title: Configure Elasticsearch
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-elasticsearch.html
+  - title: Configure search for multi-currency
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-for-multi-currency.html
+  - title: Configure search features
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-search-features.html
+  - title: Configure a search query
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/configure-a-search-query.html
+  - title: Expand search data
+    link: docs/scos/dev/back-end-development/data-manipulation/data-interaction/search/expand-search-data.html
 ---
 
-<!--used to be: http://spryker.github.io/tutorials/yves/working-with-filter-facets/-->
-A search engine facilitates a better navigation, allowing customers to quickly locate desired products.
+A search engine facilitates better navigation, allowing customers to quickly locate desired products.
 
-The search engine should return a small number of items that match the query.
+The search engine returns a small number of items that match the query.
 
-Facets provide aggregated data based on a search query. For example, we need to query for all the shirts that are in color blue. The search engine has configured a facet on a category and one on the color attribute. Therefore, the search query will be executed using these 2 facets. The search result will return the entries that are aggregated both in the category facet with the shirt category ID and in the color facet with the value blue.
+Facets provide aggregated data based on a search query. For example, you need to query for all the shirts that are in blue. The search engine has configured a facet on a category and one on the color attribute. Therefore, the search query is executed using these two facets. The search result returns the entries that are aggregated both in the category facet with the shirt category ID and in the color facet with the value blue.
 
 ## Category facet filter
+
 `CatalogClient` enables creating a search query when a request is submitted. `CatalogClient` exposes the operation:
 
 * `catalogSearch($searchString, array $requestParameters = [])`
 
 The operation can contain other facet filters (such as color or size)  in the request.
 
-On the category detail page, the `catalogSearch($searchString, $parameters)` should be used, as in the example below:
+On the category detail page, `catalogSearch($searchString, $parameters)` must be used, as in the following example:
 
 ```php
 <?php
@@ -106,23 +106,30 @@ On the category detail page, the `catalogSearch($searchString, $parameters)` sho
         return array_merge($searchResults, $metaAttributes);
     }
 ```
+
 **Example:**
-Making a request on the URL `https://mysprykershop.com/en/computers/notebooks` in Demoshop will be routed to the `CatalogController:indexAction` controller action, which is designated for a category detail page.
 
-A facet search will be executed using the category facet with the provided category node as a parameter.
+Making a request on the URL `https://mysprykershop.com/en/computers/notebooks` in Demoshop is routed to the `CatalogController:indexAction` controller action, which is designated for a category detail page.
 
-## Configuring facet filters
-As mentioned above, the category facet is a special case and needs to be handled this way because a call needs to be made to Redis to retrieve the category node ID when a category detail page is requested.
+A facet search is executed using the category facet with the provided category node as a parameter.
+
+## Configure facet filters
+
+The category facet is a special case and needs to be handled this way because a call needs to be made to Redis to retrieve the category node ID when a category detail page is requested.
 
 Other than that, the `CatalogClient` operation can handle requests that contain other facet filters.
 
 You can integrate as many facet filters in your search query, as long as they are configured. The facet configuration is done in the `CatalogDependencyProvider` class.
 
-Keep in mind that the configuration you make in the `CatalogDependencyProvider` must be in sync with the structure of the data exported to Elasticsearch.
+{% info_block warningBox %}
 
-Also, keep in mind that even if you have the facets exported in Elasticsearch, without adding the necessary configuration in the `CatalogDependencyProvider` you won’t be able to submit the correct queries.
+The configuration you make in `CatalogDependencyProvider` must be in sync with the structure of the data exported to Elasticsearch.
 
-The search attributes must be configured in the `CatalogDependencyProvider`.
+However, even if you have the facets exported in Elasticsearch, without adding the necessary configuration in `CatalogDependencyProvider`, you can't submit the correct queries.
+
+{% endinfo_block %}
+
+The search attributes are configured in `CatalogDependencyProvider`.
 
 **Example:**
 
@@ -152,8 +159,8 @@ The search attributes must be configured in the `CatalogDependencyProvider`.
     }
 ```
 
-Having the price attribute added to configuration as an active facet enables us to filter the products on the value of this attribute.
+Adding the price attribute to the configuration as an active facet lets you filter the products on the value of this attribute.
 
-`https://mysprykershop.com/en/computers/notebooks?price=0-300` request will perform a search using the category and price facets. It will return the products that are under the notebooks category with the price range between 0 and 300.
+The `https://mysprykershop.com/en/computers/notebooks?price=0-300` request performs a search using the category and price facets. It returns the products under the notebooks category with a price range between 0 and 300.
 
-`https://mysprykershop.com/search?q=tablet&price=0-300` request will perform a full-text search with the search string tablet and with the facet filter price (price in the range 0-300).
+The `https://mysprykershop.com/search?q=tablet&price=0-300` request performs a full-text search with the search string tablet and with the facet filter price (price in the range 0-300).

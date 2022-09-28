@@ -29,7 +29,7 @@ To manage your users' consent to the tracking tools or data processing services,
 
 The tracking tools you defined in Usercentrics are displayed on the Storefront in the Usercentrics cookie consent dialog so users can consent to which tracking tools they agree.
 
-With Usercentrics, you don't need to program the cookie consent dialogs or add their JavaScript code to every single page of your store. Instead, you can configure the dialog in the Usercentrics portal, and it automatically adds the dialog to your store. You can achieve this with the [Smart Data Protector setting](#smart-data-protector) from Usercentrics.
+With Usercentrics, you don't need to program the cookie consent dialogs or add their JavaScript code to every single page of your store. Instead, you can configure the dialog in the Usercentrics portal, and it automatically adds the dialog to your store. You can achieve this with the [Smart Data Protector setting](/docs/pbc/all/usercentrics/integrate-usercentrics.html#smart-data-protector) from Usercentrics.
 
 This is how the basic Usercentrics cookie consent dialog may look like in a Spryker store:
 

@@ -47,7 +47,7 @@ This gives you a list of all available console commands for Yves.
 
 To create a console command for Yves, you need to create a class inside the `Plugin/Console` directory and extend the `\Spryker\Yves\Kernel\Console\Console` which already brings some handy methods. A new console command could look like this:
 
-<details open>
+<details>
 
 <summary markdown='span'>Pyz\Yves\YourModule\Plugin\Console</summary>
 

@@ -32,7 +32,7 @@ related:
     link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html
 ---
 
-We offer several ways like plugins to hook into the core’s behavior and extend this without modifications. But sometimes this is not enough, so you need to replace a method which is deep in the core.
+We offer several ways like plugins to hook into the core's behavior and extend this without modifications. But sometimes this is not enough, so you need to replace a method which is deep in the core.
 
 Before you proceed, double-check if there is no other way to solve your requirement, maybe there is a facade method that fits in or you can use plugins. It is important to understand that if you do a core extension, you are behind the stable internal APIs, so there is no guarantee that the extended class is not modified, renamed or even non-existing in the next release. Therefore, you take over responsibility for your extension and it is highly recommended to cover it with unit tests. In case it is not urgent you can request a change in our support desk to get an official extension point.
 

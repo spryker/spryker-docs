@@ -1,6 +1,6 @@
 ---
 title: Extending the Spryker Core functionality
-description: To extend the Spryker-Core functionality and to use the Spryker Engine to develop a project, it’s important to understand the folder structure used in Spryker Commerce OS.
+description: To extend the Spryker-Core functionality and to use the Spryker Engine to develop a project, it's important to understand the folder structure used in Spryker Commerce OS.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-extend-spryker
@@ -29,11 +29,11 @@ related:
 ---
 
 <!--used to be: http://spryker.github.io/tutorials/zed/extending-spryker/-->
-To extend the Spryker-Core functionality and to use the Spryker Engine to develop a project, it’s important to understand the folder structure used in Spryker Commerce OS.
+To extend the Spryker-Core functionality and to use the Spryker Engine to develop a project, it's important to understand the folder structure used in Spryker Commerce OS.
 
-The project consists of two parts : **Spryker Core** and **Project** implementation. They both follow the same structure and the project implementation goes on top of the Spryker Core functionalities.
+The project consists of two parts: **Spryker Core** and **Project** implementation. They both follow the same structure and the project implementation goes on top of the Spryker Core functionalities.
 
-The picture below shows how a request is being handled:
+The following schema shows how a request is handled:
 ![Request handling](https://spryker.s3.eu-central-1.amazonaws.com/docs/Tutorials/Advanced/Tutorial+Extending+Spryker/request_handling.png)
 
 ## Project Structure Overview
@@ -82,7 +82,7 @@ Each module contains one folder for every layer of the application :
 ## Extending SprykerCore Functionality
 To extend the functionality of a class from SprykerCore, a new class with the same name must be added to the corresponding location on the project side.
 
-Replacement rules, described in the [Extending the Core](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html) article work for the next classes in Spryker module:
+Replacement rules, described in the [Extending the Core](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html) document work for the next classes in Spryker module:
 
 * `Facade`
 * `BusinessFactory`
@@ -91,7 +91,7 @@ Replacement rules, described in the [Extending the Core](/docs/scos/dev/back-end
 * `DependencyProvider`
 * `Config`
 
-The example below illustrates how `CategoryFacade` can be extended on the project side:
+The following example illustrates how `CategoryFacade` can be extended on the project side:
 
 **Spryker Core:**
 

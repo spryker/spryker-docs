@@ -544,7 +544,7 @@ To get related items of an abstract product, send the request:
                 },
                 "metaTitle": "Lenovo ThinkStation P900",
                 "metaKeywords": "Lenovo,Tax Exempt",
-                "metaDescription": "Thermal Design: Elegant & Efficient. Patented tri-channel cooling with just 3 system fans – as opposed to 10 that other workstations typically rely on — an",
+                "metaDescription": "Thermal Design: Elegant & Efficient. Patented tri-channel cooling with just 3 system fans – as opposed to 10 that other workstations typically rely on—an",
                 "attributeNames": {
                     "processor_frequency": "Processor frequency",
                     "processor_cores": "Processor cores",
@@ -679,7 +679,7 @@ To get upselling items for all products in a cart of a registered customer, send
                 },
                 "metaTitle": "Asus ZenPad Z380C-1B",
                 "metaKeywords": "Asus,Communication Electronics",
-                "metaDescription": "Bigger while smaller ASUS ZenPad 8.0 is an 8-inch tablet with a 76.5% screen-to-body ratio — an incredible engineering achievement made possible by reducin",
+                "metaDescription": "Bigger while smaller ASUS ZenPad 8.0 is an 8-inch tablet with a 76.5% screen-to-body ratio—an incredible engineering achievement made possible by reducin",
                 "attributeNames": {
                     "processor_cores": "Processor cores",
                     "storage_media": "Storage media",
@@ -734,7 +734,7 @@ To get upselling items for all products in a cart of a registered customer, send
                 },
                 "metaTitle": "Asus ZenPad Z380C-1B",
                 "metaKeywords": "Asus,Communication Electronics",
-                "metaDescription": "Bigger while smaller ASUS ZenPad 8.0 is an 8-inch tablet with a 76.5% screen-to-body ratio — an incredible engineering achievement made possible by reducin",
+                "metaDescription": "Bigger while smaller ASUS ZenPad 8.0 is an 8-inch tablet with a 76.5% screen-to-body ratio—an incredible engineering achievement made possible by reducin",
                 "attributeNames": {
                     "processor_cores": "Processor cores",
                     "storage_media": "Storage media",
@@ -757,7 +757,7 @@ To get upselling items for all products in a cart of a registered customer, send
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Asus ZenPad Z580CA",
-                "description": "Fashion-inspired design The design of ASUS ZenPad S 8.0 carries modern influences and a simple, clean look that gives it a universal and stylish appeal. These elements are inspired by our Zen design philosophy of balancing beauty and strength. ASUS ZenPad S 8.0 is an 8-inch tablet that is only 6.6mm thin, weighs just 298g, and has a 74% screen-to-body ratio — an incredible engineering achievement made possible by reducing the bezel width to the bare minimum. Intelligent contrast enhancement analyzes and optimizes each pixel in an image before it is reproduced, rendering more detail in the highlights and shadows to reveal the true beauty in your pictures. ASUS ZenPad S 8.0 is equipped with ASUS Tru2Life+ technology, which improves video with fast action scenes — such as sports — by increasing the screen refresh rate, resulting in reduced blur and smooth, detailed motion.",
+                "description": "Fashion-inspired design The design of ASUS ZenPad S 8.0 carries modern influences and a simple, clean look that gives it a universal and stylish appeal. These elements are inspired by our Zen design philosophy of balancing beauty and strength. ASUS ZenPad S 8.0 is an 8-inch tablet that is only 6.6mm thin, weighs just 298g, and has a 74% screen-to-body ratio—an incredible engineering achievement made possible by reducing the bezel width to the bare minimum. Intelligent contrast enhancement analyzes and optimizes each pixel in an image before it is reproduced, rendering more detail in the highlights and shadows to reveal the true beauty in your pictures. ASUS ZenPad S 8.0 is equipped with ASUS Tru2Life+ technology, which improves video with fast action scenes—such as sports—by increasing the screen refresh rate, resulting in reduced blur and smooth, detailed motion.",
                 "attributes": {
                     "processor_cores": "4",
                     "display_technology": "IPS",
@@ -819,7 +819,7 @@ To get upselling items for all products in a cart of a registered customer, send
                 "averageRating": null,
                 "reviewCount": 0,
                 "name": "Asus ZenPad Z580CA-1B",
-                "description": "Fashion-inspired design The design of ASUS ZenPad S 8.0 carries modern influences and a simple, clean look that gives it a universal and stylish appeal. These elements are inspired by our Zen design philosophy of balancing beauty and strength. ASUS VisualMaster is a suite of exclusive visual enhancement technologies that combine hardware and software to optimize all aspects of the display — including contrast, sharpness, color, clarity, and brightness — resulting in an incredibly realistic viewing experience. With ASUS VisualMaster, it’s just like being there. ASUS ZenPad S 8.0 is equipped with ASUS Tru2Life+ technology, which improves video with fast action scenes—such as sports—by increasing the screen refresh rate, resulting in reduced blur and smooth, detailed motion.",
+                "description": "Fashion-inspired design The design of ASUS ZenPad S 8.0 carries modern influences and a simple, clean look that gives it a universal and stylish appeal. These elements are inspired by our Zen design philosophy of balancing beauty and strength. ASUS VisualMaster is a suite of exclusive visual enhancement technologies that combine hardware and software to optimize all aspects of the display—including contrast, sharpness, color, clarity, and brightness—resulting in an incredibly realistic viewing experience. With ASUS VisualMaster, it’s just like being there. ASUS ZenPad S 8.0 is equipped with ASUS Tru2Life+ technology, which improves video with fast action scenes—such as sports—by increasing the screen refresh rate, resulting in reduced blur and smooth, detailed motion.",
                 "attributes": {
                     "internal_memory": "4 GB",
                     "display_technology": "IPS",

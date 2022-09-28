@@ -1,11 +1,11 @@
 ---
 title: Persistent Cart Sharing feature walkthrough
 last_updated: Aug 18, 2021
-description: The Persistent Cart Sharing feature allows company users to generate the URL to share the cart with different levels of access.
+description: The Persistent Cart Sharing feature lets company users generate the URL to share the cart with different levels of access.
 template: concept-topic-template
 ---
 
-The _Persistent Cart Sharing_ feature allows company users to generate the URL to share the cart with different levels of access.
+The _Persistent Cart Sharing_ feature lets company users generate the URL to share the cart with different levels of access.
 
 
 To learn more about the feature and to find out how end users use it, see [Persistent Cart Sharing feature overview](/docs/scos/user/features/{{page.version}}/persistent-cart-sharing-feature-overview.html) for business users.

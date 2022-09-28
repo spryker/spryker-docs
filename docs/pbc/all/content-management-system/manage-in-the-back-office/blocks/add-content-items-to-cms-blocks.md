@@ -1,22 +1,24 @@
 ---
-title: Add content items to CMS pages
+title: Add content items to CMS blocks
 description: Learn how to add content items to CMS pages in the Back Office
 last_updated: Oct 22, 2022
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/scos/user/back-office-user-guides/202204.0/content/content-items/adding-content-items-to-cms-pages-and-blocks.html
 ---
 
-This document describes how to add content items to Storefront pages using the Back Office.
+This document describes how to add content items to CMS blocks using the Back Office.
 
 ## Prerequisites
 
-* Create the content items you want to add to pages. For instructions, see [Create content items](/docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-content-items.html).
-* Make sure to review the [reference information](#reference-information-add-content-items-to-cms-pages) before you start or just look it up as you go through the steps.
+* Create the content items you want to add to blocks. For instructions, see [Create content items](/docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-content-items.html).
+* Make sure to review the [reference information](#reference-information-add-content-items-to-cms-blocks) before you start or just look it up as you go through the steps.
 
-## Add content items to a page
+## Add content items to a block
 
-1. Go to **Content&nbsp;<span aria-label="and then">></span> Pages**.
-2. On the **Overview of CMS Pages** page, next to the page you want to add a content item to, click  **Edit&nbsp;<span aria-label="and then">></span> Placeholders**.
-3. On the **Edit Placeholders: CMS Page [Name]** page, click the tab of the placeholder you want to add the content item to.
+1. Go to **Content&nbsp;<span aria-label="and then">></span> Blocks**.
+2. On the **Overview of CMS Blocks** page, next to the block you want to add the content items to click  **Edit Placeholder**.
+3. On the **Edit Block Glossary: {Block ID}** page, click the tab of the placeholder you want to add the content items to.
 4. Click the locale you want to add the content item to.
 5. In the WYSIWYG editor, place your cursor where you want to insert the content item.
 6. In the editor toolbar, click **Content Item** and select the content item type you want to add.
@@ -34,13 +36,9 @@ The **Insert a Content Item** pop-up window opens.
 9. Optional: Add other content items to needed placeholders and locales.
 
 10. Click **Save**.
-    The page refreshes with a success message displayed. If the page is published and active, the added content items are displayed on the Storefront.
+    The page refreshes with a success message displayed.
 
-**Tips and tricks**
-
-To preview the changes on the Storefront, click **Preview**.    
-
-## Reference information: Add content items to CMS pages
+## Reference information: Add content items to CMS blocks
 
 
 {% include pbc/all/cart-and-checkout/manage-in-the-back-office/reference-information-add-content-items-to-cms-pages-and-blocks.md %} <!-- To edit, see /_includes/pbc/all/cart-and-checkout/manage-in-the-back-office/reference-information-add-content-items-to-cms-pages-and-blocks.md -->

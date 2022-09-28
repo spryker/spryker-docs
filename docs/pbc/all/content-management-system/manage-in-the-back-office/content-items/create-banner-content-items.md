@@ -46,7 +46,7 @@ To clear all the fields on a tab, click **Clear locale**.
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| Name | Name of a banner content item. |
+| NAME | Name of a banner content item. |
 | DESCRIPTION  | Descriptive information on what a banner is used for.  |
 | TITLE |  Heading of the banner.|
 | SUBTITLE| Text of the banner. |
@@ -69,78 +69,3 @@ You can view how it looks like on the store website:
 * **B2B**
     Template used: Big Banner Left Title, Subtitle and Button
 ![Banner content item widget B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/banner-template-b2b.png)
-
-
-
-### Reference information: Banner content item widget templates
-
-The following templates are used to set up a Banner content item widget:
-
-#### Bottom title
-
-Displays a title and a subtitle of the banner at the bottom of the image. Clicking any element of the banner will redirect your shop visitors to the target page.
-
-{% info_block warningBox "For B2B:" %}
-
-Displays a title and a subtitle of the banner, and the Shop Now button at the bottom of the image.
-
-{% endinfo_block %}
-
-See how the **Bottom title** template looks like on Yves:
-
-* **White Label**
-![Banner bottom title white label](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+templates:+Reference+Information/banner-bottom-title-white-label.png)
-
-* **B2B Shop**
-![Banner bottom title B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+templates:+Reference+Information/banner-bottom-title-b2b.png)
-
-* **B2C Shop**
-![Banner bottom title B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+templates:+Reference+Information/banner-bottom-title-b2c.png)
-
-#### Top title
-
-Displays a title and a subtitle of the banner in the upper part of the image. Clicking any element of the banner will redirect your shop visitors to the target page.
-
-{% info_block warningBox "For B2B:" %}
-
-Displays a title and a subtitle of the banner, and the Shop Now button in the upper part of the image.
-
-{% endinfo_block %}
-
-See how the **Top Title** template looks like on Yves:
-
-* **White Label**
-
-![Banner top title white label](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+templates:+Reference+Information/banner-top-title-white-label.png)
-
-* **B2B Shop**
-![Banner top-title B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+templates:+Reference+Information/banner-top-title-b2b.png)
-
-* **B2C Shop**
-![Banner top title B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+templates:+Reference+Information/banner-top-title-b2c.png)
-
-#### Big banner w/middle title and subtitle
-
-Displays a title and a subtitle of the banner in the middle of the image. Clicking any element of the banner will redirect your shop visitors to the target page.
-
-See how the **Big Banner w/Middle Title and Subtitle** template looks like on Yves:
-
-* **B2C Shop**
-![Big banner w/middle title and subtitle](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+templates:+Reference+Information/banner-with-link-b2c.png)
-
-####  Big banner w/middle title and subtitle without link  
-Displays a title and a subtitle of the banner in the middle of the image and makes it non-clickable.
-
-See how the **Big Banner w/Middle Title and Subtitle without link** template looks like on Yves:
-
- * **B2C Shop**   
-![Banner without link](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+templates:+Reference+Information/banner-without-link-b2c.png)
-
-#### Big banner left title, subtitle and button
-
-Displays a title, a subtitle, and a **Shop Now** button on the left of the banner. Clicking any element of the banner will redirect your shop visitors to the target page.
-
-See how the **Big Banner Left Title, Subtitle and Button** template looks like on Yves:
-
-* **B2B Shop**
-![Big banner left title, subtitle and button](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+templates:+Reference+Information/banner-left-button-b2b.png)

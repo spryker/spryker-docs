@@ -9,11 +9,8 @@ This document describes how to add content items to Storefront pages using the B
 
 ## Prerequisites
 
-Create the content items you want to add to pages. For instructions, see [Create content items](/docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-content-items.html)
-
-Prior to adding a content item widget to a block or a page, make sure that the page is _active_ and _not expired_; otherwise, it will not be displayed on the website.
-
-Make sure to review the reference information before you start or just look it up as you go through the steps.
+* Create the content items you want to add to pages. For instructions, see [Create content items](/docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-content-items.html).
+* Make sure to review the [reference information] before you start or just look it up as you go through the steps.
 
 ## Add content items to a page
 
@@ -46,8 +43,4 @@ To preview the changes on the Storefront, click **Preview**.
 ## Reference information: Add content items to CMS pages
 
 
-{% info_block infoBox %}
-
-Templates are project-specific and are usually created by a developer and a business person. If you are missing a Content Item Widget template, contact them and refer to [HowTo - Create a content item widget template](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#content-item-widget-template).
-
-{% endinfo_block %}
+{% include pbc/all/cart-and-checkout/manage-in-the-back-office/reference-information-add-content-items-to-cms-pages-and-blocks.md %} <!-- To edit, see /_includes/pbc/all/cart-and-checkout/manage-in-the-back-office/reference-information-add-content-items-to-cms-pages-and-blocks.md -->

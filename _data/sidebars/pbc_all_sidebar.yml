@@ -198,7 +198,7 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkoutrestapi-module.html
           - title: Extend and customize
             nested:
-              - title: Calculation 3.0
+              - title: "Calculation 3.0"
                 url: /docs/pbc/all/cart-and-checkout/extend-and-customize/calculation-3-0.html
               - title: Calculation data structure
                 url: /docs/pbc/all/cart-and-checkout/extend-and-customize/calculation-data-structure.html

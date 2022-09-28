@@ -23,6 +23,7 @@ redirect_from:
   - /v1/docs/t-add-new-bundle
   - /v1/docs/en/t-add-new-bundle
   - /docs/scos/dev/back-end-development/extending-spryker/adding-a-new-module.html
+  - /docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html
 ---
 
 {% info_block infoBox %}

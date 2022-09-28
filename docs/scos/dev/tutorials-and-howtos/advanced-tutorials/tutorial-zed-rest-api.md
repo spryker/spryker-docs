@@ -26,8 +26,8 @@ related:
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
   - title: Create, use, and extend the transfer objects
     link: docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html
-  - title: Adding a New Module
-    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html
+  - title: Add a new module
+    link: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html
   - title: Controllers and Actions
     link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
 
@@ -59,7 +59,7 @@ It is advised to recap the following topics before starting the challenge:
 * [PHP Reflection](http://php.net/manual/en/book.reflection.php)
 * [Facades](/docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html)
 * [Transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html)
-* ["Tutorial: Adding a New Module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html)
+* ["Tutorial: Add a new module](//docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html)
 * [Controllers in Zed](/docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html)
 
 {% info_block infoBox %}

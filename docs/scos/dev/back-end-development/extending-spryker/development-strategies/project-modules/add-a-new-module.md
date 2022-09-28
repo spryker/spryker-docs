@@ -1,5 +1,5 @@
 ---
-title: Adding a New Module
+title: Add a new module
 description: When a new concept needs to be defined, a new module needs to be added on the project side to encapsulate that concept. The new module needs to follow the same folder structure and conventions as the ones in Core.
 last_updated: Jun 16, 2021
 template: howto-guide-template

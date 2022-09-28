@@ -3588,8 +3588,8 @@ entries:
         nested:
         - title: Project modules
           nested:
-          - title: Adding a new module
-            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html
+          - title: Add a new module
+            url: //docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html
         - title: Spryker OS module customization
           nested:
           - title: Extending a core module that is used by another

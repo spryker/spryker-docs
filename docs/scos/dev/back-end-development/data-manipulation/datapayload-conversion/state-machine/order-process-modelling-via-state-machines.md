@@ -30,8 +30,8 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/state-machine-console-commands.html
   - title: Common pitfalls in OMS design
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
-  - title: Creating an Order Management System - Spryker Commerce OS
-    link: docs/scos/dev/back-end-development/data-manipulation/creating-an-order-management-system-spryker-commerce-os.html
+  - title: Create an Order Management System - Spryker Commerce OS
+    link: docs/scos/dev/back-end-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
 ---
 
 State machines help you define, execute and visualize predefined and automated processes. It can model events that involve performing a predetermined sequence of actions—for example, in the order process.

@@ -3506,8 +3506,8 @@ entries:
           url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transfer-data-between-yves-and-zed.html
         - title: Define the module dependencies - Dependency Provider
           url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/define-the-module-dependencies-dependency-provider.html
-      - title: Creating an Order Management System - Spryker Commerce OS
-        url: /docs/scos/dev/back-end-development/data-manipulation/creating-an-order-management-system-spryker-commerce-os.html
+      - title: Create an Order Management System - Spryker Commerce OS
+        url: /docs/scos/dev/back-end-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
       - title: Queue
         url: /docs/scos/dev/back-end-development/data-manipulation/queue/queue.html
         nested:

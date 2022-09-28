@@ -1,6 +1,6 @@
 ---
-title: Running and Reverting a Database Migration
-description: Database migration allows you to update your database with the latest changes.
+title: Run and revert a database migration
+description: Database migration lets you update your database with the latest changes.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/running-reverting-db-migration
@@ -22,17 +22,18 @@ redirect_from:
   - /v2/docs/en/running-reverting-db-migration
   - /v1/docs/running-reverting-db-migration
   - /v1/docs/en/running-reverting-db-migration
+  - /docs/scos/dev/back-end-development/data-manipulation/running-and-reverting-a-database-migration.html
 ---
 
-Database migration allows you to update your database with the latest changes.
+Database migration lets you update your database with the latest changes.
 
-To see the list of all the commands related to the migration process, run:
+View the list of all the commands related to the migration process:
 
 ```bash
 vendor/bin/propel list
 ```
 
-To revert the database migration, run:
+Revert the database migration:
 
 ```bash
 vendor/bin/propel migration:down --config-dir=src/Orm/Propel/STORE/Config/development

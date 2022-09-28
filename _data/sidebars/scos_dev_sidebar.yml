@@ -3429,8 +3429,8 @@ entries:
         url: /docs/scos/dev/back-end-development/console-commands/get-the-list-of-console-commands-and-available-options.html
     - title: Data manipulation
       nested:
-      - title: Running and reverting a database migration
-        url: /docs/scos/dev/back-end-development/data-manipulation/running-and-reverting-a-database-migration.html
+      - title: Run and revert a database migration
+        url: /docs/scos/dev/back-end-development/data-manipulation/run-and-revert-a-database-migration.html
       - title: Data publishing
         nested:
         - title: Publish and Synchronization

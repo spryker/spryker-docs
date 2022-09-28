@@ -25,8 +25,8 @@ redirect_from:
   - /docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html
   - /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html
 related:
-  - title: Extending the core
-    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html
+  - title: Extend the core
+    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-core.html
   - title: Extending the Spryker Core functionality
     link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-spryker-core-functionality.html
 ---

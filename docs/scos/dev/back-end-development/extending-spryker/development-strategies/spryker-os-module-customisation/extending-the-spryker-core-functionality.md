@@ -22,8 +22,8 @@ redirect_from:
   - /v1/docs/en/t-extend-spryker
   - /docs/scos/dev/back-end-development/extending-spryker/extending-the-spryker-core-functionality.html
 related:
-  - title: Extending the core
-    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html
+  - title: Extend the core
+    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-core.html
   - title: Extend a core module that is used by another
     link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
 ---
@@ -82,7 +82,7 @@ Each module contains one folder for every layer of the application :
 ## Extending SprykerCore Functionality
 To extend the functionality of a class from SprykerCore, a new class with the same name must be added to the corresponding location on the project side.
 
-Replacement rules, described in the [Extending the Core](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html) document work for the next classes in Spryker module:
+Replacement rules, described in the [Extend the core](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-core.html) document work for the next classes in Spryker module:
 
 * `Facade`
 * `BusinessFactory`

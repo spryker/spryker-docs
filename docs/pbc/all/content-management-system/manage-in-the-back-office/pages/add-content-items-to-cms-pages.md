@@ -5,23 +5,20 @@ last_updated: Oct 22, 2022
 template: back-office-user-guide-template
 ---
 
-This document describes how to add a content item widget to a page and block using the Back Office.
+This document describes how to add content items to Storefront pages using the Back Office.
 
 ## Prerequisites
 
-To start adding content item widgets to pages, navigate to **Content&nbsp;<span aria-label="and then">></span> Pages**.
-
-To start adding content item widgets to blocks, navigate to **Content&nbsp;<span aria-label="and then">></span> Blocks**.
-
-{% info_block warningBox %}
+Create the content items you want to add to pages. For instructions, see [Create content items](/docs/pbc/all/content-management-system/manage-in-the-back-office/content-items/create-content-items.html)
 
 Prior to adding a content item widget to a block or a page, make sure that the page is _active_ and _not expired_; otherwise, it will not be displayed on the website.
 
-{% endinfo_block %}
+Make sure to review the reference information before you start or just look it up as you go through the steps.
 
 ## Adding content item widgets to pages
 
 To add a content item widget to a page:
+t item widgets to pages, navigate to **Content&nbsp;<span aria-label="and then">></span> Pages**.
 
 1. On the *Overview of CMS Pages* page, In the _Actions_ column, select **Edit&nbsp;<span aria-label="and then">></span> Placeholders** next to the page you want to add a content item widget to.
 2. On the *Edit Placeholders: CMS Page [Name]* page, go to the *Placeholder* tab and place your cursor where you want to insert the content items.

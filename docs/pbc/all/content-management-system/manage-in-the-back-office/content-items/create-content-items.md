@@ -19,22 +19,10 @@ related:
     link: docs/scos/user/back-office-user-guides/page.version/content/content-items/editing-content-items.html
 ---
 
-This topic describes how to create content items in the Back Office.
-
-## Prerequisites
-
-To start working with content items, go to **Content&nbsp;<span aria-label="and then">></span> Content Items**.
-
-Each section contains reference information. Make sure to review it before you start, or look up the necessary information as you go through the process.
 
 
 ## Create a product set content item
 
-{% info_block infoBox %}
-
-For the use cases and examples of the product set content item, see [Product Set Content Item Widget](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-types.html#product-set-content-item-widget) and [Product Set Content Item Widget Templates](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/references/reference-information-content-item-widgets-templates.html#product-set-content-item-widget-templates).
-
-{% endinfo_block %}
 
 Follow the steps to create a product set:
 

@@ -38,7 +38,8 @@ The **Insert a Content Item** pop-up window opens.
 
 **Tips and tricks**
 
-To preview the changes on the Storefront, click **Preview**.    
+To edit a content item widget, select the widget and click **Edit Widget**. 
+To preview the changes on the Storefront, click **Preview**.   
 
 ## Reference information: Add content items to CMS pages
 

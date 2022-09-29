@@ -5,6 +5,7 @@ last_updated: Oct 22, 2022
 template: back-office-user-guide-template
 redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/content/content-items/adding-content-items-to-cms-pages-and-blocks.html
+  - /docs/scos/user/back-office-user-guides/202204.0/content/content-items/editing-content-items-in-cms-pages-and-blocks.html
 ---
 
 This document describes how to add content items to CMS blocks using the Back Office.
@@ -37,6 +38,10 @@ The **Insert a Content Item** pop-up window opens.
 
 10. Click **Save**.
     The page refreshes with a success message displayed.
+
+**Tips and tricks**
+
+To edit a content item widget, select the widget and click **Edit Widget**.    
 
 ## Reference information: Add content items to CMS blocks
 

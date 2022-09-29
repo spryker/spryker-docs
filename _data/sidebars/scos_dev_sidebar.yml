@@ -1190,6 +1190,8 @@ entries:
         url: /docs/scos/dev/glue-api-guides/glue-parameters-usage.html
         - title: How to create a JSON:API relationship
         url: /docs/scos/dev/glue-api-guides/create-a-relationship.html
+        - title: How to document Glue API endpoints
+        url: /docs/scos/dev/glue-api-guides/documenting-glue-api-endpoints.html
     - title: Glue API Developer Guides
       url: /docs/scos/dev/glue-api-guides/glue-api-developer-guides.html
       include_versions:

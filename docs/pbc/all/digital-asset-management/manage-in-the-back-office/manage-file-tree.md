@@ -1,5 +1,5 @@
 ---
-title: Managing file tree
+title: Manage file tree
 description: Use the procedures to create or delete a file directory, upload media files, change the order for file directories in the Back Office.
 last_updated: Jul 9, 2021
 template: back-office-user-guide-template
@@ -84,7 +84,7 @@ The file is uploaded to the selected folder.
 
 Once the file is uploaded, you can manage it from two locations:
 
-* File List (for more details, see [Managing File List](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/managing-file-list.html))
+* File List (for more details, see [Managing File List](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-list.html))
 * File Tree
 
 To manage a file:

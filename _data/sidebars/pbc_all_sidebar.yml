@@ -85,7 +85,6 @@ entries:
                 url: /docs/pbc/all/carrier-management/third-party-integrations/paazl.html
               - title: Paqato
                 url: /docs/pbc/all/carrier-management/third-party-integrations/paqato.html
-      - title: Digital Asset Management          
       - title: Cart and Checkout
         url: /docs/pbc/all/cart-and-checkout/cart-and-checkout.html
         nested:
@@ -260,6 +259,21 @@ entries:
                 url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/persistent-cart-sharing-feature-module-relations.html
               - title: Quick Add to Cart feature entity diagram
                 url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/quick-add-to-cart-feature-entity-diagram.html
+      - title: Digital Asset Management
+        url: /docs/pbc/all/digital-asset-management/digital-asset-management.html
+        nested:
+          - title: Import and export data
+            nested:
+              - title: File details - mime_type.csv
+                url: /docs/pbc/all/digital-asset-management/import-and-export-data/file-details-mime-type.csv.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Add and edit MIME types
+                url: docs/pbc/all/digital-asset-management/manage-in-the-back-office/add-and-edit-mime-types.html
+              - title: Manage file list
+                url: docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-list.html
+              - title: Manage file tree
+                url: docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-tree.html
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:

@@ -13,7 +13,8 @@ redirect_from:
   - /docs/scos/user/features/202200.0/file-manager-feature-overview/file-manager-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/file-manager-feature-walkthrough.html
   - /docs/scos/user/features/202200.0/file-manager-feature-overview/file-uploader.html  
-  - /docs/scos/user/features/202204.0/file-manager-feature-overview/file-uploader.html    
+  - /docs/scos/user/features/202204.0/file-manager-feature-overview/file-uploader.html
+  - /docs/scos/user/features/202204.0/file-manager-feature-overview/asset-management.html   
 ---
 
 The *Digital Asset Management* capability lets you upload and manage your assets effectively.
@@ -75,11 +76,42 @@ Most popular file types that a shop owner can allow uploading to the Back Office
 | video | Represents any kind of video files | `video/webm`, `video/ogg` |
 
 
+## Asset types
+
+There are two types of assets in the Spryker Commerce OS: dynamic and static.
+
+*Dynamic assets* are files added during content and product creation: adding or changing CMS pages and adding product images.
+
+*Static assets* are images, fonts, CSS, JS, and HTML and PHP files that are available and used by default. All the files are split into folders according to the application they are used for: Zed, Yves, or Glue. PHP and HTML files stored in static asset directories are used for handling errors and showing the platform maintenance messages.
+
+{% info_block infoBox %}
+
+Except for the error handling files, there are no Glue-related assets.
+
+{% endinfo_block %}
+
+### Location of assets
+
+By default, static assets are stored locally in the following folders:
+
+* `public/Yves/assets/`
+* `public/Zed/assets/`
+
+For organizational or cost and speed optimization purposes, the location of static assets can be changed to an external source.
+
+The following environment variables are used for that:
+
+* `SPRYKER_ZED_ASSETS_BASE_URL`
+* `SPRYKER_YVES_ASSETS_URL_PATTERN`
+
+Check [Integrating custom location for static assets](/docs/scos/dev/technical-enhancement-integration-guides/integrating-custom-location-for-static-assets.html) for more details.
+
+
 ## Related Business User articles
 
 | OVERVIEWS |BACK OFFICE USER GUIDES|
 | - | - |
-| [Asset management](/docs/pbc/all/digital-asset-management/file-manager-feature-overview/asset-management.html) | [Upload files to the Back Office](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/managing-file-tree.html#uploading-files) |
+| [Asset management](/docs/pbc/all/digital-asset-management/file-manager-feature-overview/asset-management.html) | [Upload files to the Back Office](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-tree.html#uploading-files) |
 
 ## Related Business User articles
 
@@ -87,5 +119,5 @@ Most popular file types that a shop owner can allow uploading to the Back Office
 |---|
 | [Get a general idea of asset measurement](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/asset-management.html)  |
 | [Get a general idea of the file uploader](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-uploader.html)  |
-| [Manage file tree](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/managing-file-tree.html)   |
-| [Manage file list](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/managing-file-list.html) |
+| [Manage file tree](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-tree.html)   |
+| [Manage file list](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-list.html) |

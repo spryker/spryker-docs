@@ -11,6 +11,7 @@ redirect_from:
   - /docs/cms
   - /docs/en/cms
   - /docs/scos/user/features/202200.0/cms-feature-overview/cms-feature-overview.html
+  - /docs/scos/user/features/202204.0/cms-feature-overview/cms-feature-overview.html
   - /docs/scos/dev/feature-walkthroughs/202204.0/cms-feature-walkthrough/cms-feature-walkthrough.html
 ---
 

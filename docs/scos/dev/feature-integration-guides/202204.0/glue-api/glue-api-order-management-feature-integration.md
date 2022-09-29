@@ -22,7 +22,7 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-orders.html
   - title: Retrieving customer orders
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
-  - title: Checking out purchases
+  - title: Check out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
 ---
 

@@ -11,7 +11,7 @@ To start the feature integration, overview and install the necessary features:
 | --- | --- | --- |
 | Spryker Core | {{site.version}} | [Glue API: Spryker Core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-spryker-core-feature-integration.html) |
 | Product Bundles |{{site.version}}| [Product Bundles feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-bundles-feature-integration.html)|
-| Cart |{{site.version}}| [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html)|
+| Cart |{{site.version}}| [Install the Cart Glue API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-cart-feature-integration.html)|
 
 ## 1) Install the required modules using Composer
 

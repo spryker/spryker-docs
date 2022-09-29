@@ -1,6 +1,6 @@
 ---
 title: Create an Order Management System - Spryker Commerce OS
-description: In this task,  you will create a full order management process (OMS) using the Spryker state machine and then use it in your shop.
+description: This task-based document shows how to create a full order management process (OMS) using the Spryker state machine and then use it in your shop..
 last_updated: Oct 21, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-oms-and-state-machines-spryker-commerce-os
@@ -46,7 +46,7 @@ This tutorial is also available on the Spryker Training website. For more inform
 
 ## Challenge description
 
-In this task, you will create a full order management process (OMS) using the Spryker state machine and then use it in your shop.
+This task-based document shows how to create a full order management process (OMS) using the Spryker state machine and then use it in your shop.
 
 ### 1. Create the state machine skeleton
 
@@ -96,7 +96,7 @@ $config[OmsConstants::ACTIVE_PROCESSES] = [
 
 5. Check the state machine graph while building it.
    1. In the Backend Office, go to the **Administration&nbsp;<span aria-label="and then">></span> OMS**.
-   2. In the **PROCESSES** section, click your state machine name **Demo01** to see the graph that represents your XML file.
+   2. To see the graph that represents your XML file, in the **PROCESSES** section, click your state machine name **Demo01**. 
 	
 	{% info_block infoBox %}
 

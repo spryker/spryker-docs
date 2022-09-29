@@ -31,11 +31,11 @@ related:
 Spryker uses Symfony forms; this tutorial helps you get started on working with forms and shows how to build a simple newsletter subscription form that contains a field for entering the email address and a submit button.
 
 Follow the steps in these sections to create the newsletter subscription form:
-* [Create FormType](/docs/scos/dev/back-end-development/forms/create-forms.html#create-formtype)
+* [Create FormType](/docs/scos/dev/back-end-development/forms/create-forms.html#create-the-formtype-class)
 * [Render a form](/docs/scos/dev/back-end-development/forms/create-forms.html#render-forms)
 * [Handle posted data](/docs/scos/dev/back-end-development/forms/create-forms.html#handle-posted-data)
 
-## Create `FormType`
+## Create the FormType class
 
 The best practice is to create a `FormType` class for each form you need to handle. Here you define the fields contained in the form and the rules of validation.
 

@@ -59,7 +59,7 @@ It is advised to recap the following topics before starting the challenge:
 * [PHP Reflection](http://php.net/manual/en/book.reflection.php)
 * [Facades](/docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html)
 * [Transfer objects](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/create-use-and-extend-the-transfer-objects.html)
-* ["Tutorial: Add a new module](//docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html)
+* ["Tutorial: Add a new module](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html)
 * [Controllers in Zed](/docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html)
 
 {% info_block infoBox %}

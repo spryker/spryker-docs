@@ -1,5 +1,5 @@
 ---
-title:  Calculation data structure
+title: Calculation data structure
 last_updated: Aug 12, 2021
 description: This document describes calculation data structure
 template: concept-topic-template

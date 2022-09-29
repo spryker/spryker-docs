@@ -165,30 +165,101 @@ entries:
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html
                   - title: Shared Carts
                     url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html
-
-
-
+              - title: Install Glue API
+                nested:
+                  - title: Install the Cart Glue API
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html
+                  - title: Install the Cart + Configurable Bundle Glue API
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-cart-configurable-bundle-glue-api.html
+                  - title: Install the Cart + Product Bundle Glue API
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-cart-product-bundle-glue-api.html
+                  - title: Install the Checkout Glue API
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
+                  - title: Install the Multiple Carts Glue API
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-multiple-carts-glue-api.html
+                  - title: Install the Shared Carts Glue API
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-shared-carts-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: Upgrade the Cart module
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
+                  - title: Upgrade the CartExtension module
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartextension-module.html
+                  - title: Upgrade the CartPage module
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartpage-module.html
+                  - title: Upgrade the CartsRestApi module
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartsrestapi-module.html
+                  - title: Upgrade the CartVariant module
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartvariant-module.html
+                  - title: Upgrade the Checkout module
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkout-module.html
+                  - title: Upgrade the CheckoutPage module
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html
+                  - title: Upgrade the CheckoutRestApi module
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkoutrestapi-module.html
           - title: Extend and customize
-
-
+            nested:
+              - title: "Calculation 3.0"
+                url: /docs/pbc/all/cart-and-checkout/extend-and-customize/calculation-3-0.html
+              - title: Calculation data structure
+                url: /docs/pbc/all/cart-and-checkout/extend-and-customize/calculation-data-structure.html
+              - title: Calculator plugins
+                url: /docs/pbc/all/cart-and-checkout/extend-and-customize/calculator-plugins.html
+              - title: "Cart module: reference information"
+                url: /docs/pbc/all/cart-and-checkout/extend-and-customize/cart-module-reference-information.html
+              - title: Checkout process review and implementation
+                url: /docs/pbc/all/cart-and-checkout/extend-and-customize/checkout-process-review-and-implementation.html
+              - title: Checkout steps
+                url: /docs/pbc/all/cart-and-checkout/extend-and-customize/checkout-steps.html
           - title: Import and export data
-
-
+            nested:
+              - title: File details - sales_order_threshold.csv
+                url: /docs/pbc/all/cart-and-checkout/import-and-export-data/file-details-sales-order-threshold.csv.html
           - title: Manage in the Back Office
-
-
+            nested:
+              - title: Define global thresholds
+                url: /docs/pbc/all/cart-and-checkout/manage-in-the-back-office/define-global-thresholds.html
+              - title: Manage threshold settings
+                url: /docs/pbc/all/cart-and-checkout/manage-in-the-back-office/manage-threshold-settings.html
           - title: Manage using Glue API
-
-
+            nested:
+              - title: Retrieve customer carts
+                url: /docs/pbc/all/cart-and-checkout/manage-using-glue-api/retrieve-customer-carts.html
+              - title: Manage carts of registered users
+                url: /docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html
+                nested:
+                  - title: Manage items in carts of registered users
+                    url: /docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html
+              - title: Manage guest carts
+                url: /docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html
+                nested:
+                  - title: Manage guest cart items
+                    url: /docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html
+              - title: Share company user carts
+                url: /docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/share-company-user-carts.html
+                nested:
+                  - title: Manage shared company user carts
+                    url: /docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/manage-shared-company-user-carts.html
+                  - title: Retrieve cart permission groups
+                    url: /docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/retrieve-cart-permission-groups.html
           - title: Tutorials and HowTos
-
-
-
-          - title: Domain mode and relationships
-
-
-
-
+            nested:
+              - title: "HowTo: Add additional countries to Spryker checkout"
+                url: /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/howto-add-additional-countries-to-spryker-checkout.html
+              - title: "HowTo: Define if a cart should be deleted after placing an order"
+                url: /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
+              - title: "HowTo: Enable guest checkout in B2B Demo Shop"
+                url: /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/howto-enable-guest-checkout-in-b2b-demo-shop.html
+              - title: "Tutorial: Checkout and step engine"
+                url: /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/tutorial-checkout-and-step-engine.html
+          - title: Domain model and relationships
+            nested:
+              - title: Checkout feature entity diagram
+                url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/checkout-feature-entity-diagram.html
+              - title: "Persistent Cart Sharing: module relations"
+                url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/persistent-cart-sharing-feature-module-relations.html
+              - title: Quick Add to Cart feature entity diagram
+                url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/quick-add-to-cart-feature-entity-diagram.html
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:

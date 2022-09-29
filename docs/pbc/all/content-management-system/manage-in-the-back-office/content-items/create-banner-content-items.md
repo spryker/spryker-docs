@@ -34,7 +34,7 @@ The following logic applies in a multi-language setup:
 {% endinfo_block %}
 
 7. Click **Save**.
-    This takes you to the **Overview of Content Items** page with a success message displayed. The content item is displayed in the list.
+    This opens the **Overview of Content Items** page with a success message displayed. The content item is displayed in the list.
 
 **Tips and tricks**
 
@@ -46,8 +46,8 @@ To clear all the fields on a tab, click **Clear locale**.
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| NAME | Name of a banner content item. |
-| DESCRIPTION  | Descriptive information on what a banner is used for.  |
+| NAME | Unique identifier of the content item. You will use it when adding the content item to CMS pages and blocks. |
+| DESCRIPTION | Description for internal usage. |
 | TITLE |  Heading of the banner.|
 | SUBTITLE| Text of the banner. |
 | IMAGE URL | Address where the image element of the banner content item is stored.  |

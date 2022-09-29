@@ -18,21 +18,7 @@ This topic contains the reference information you need to know when working with
 
 
 
-## Product set content item widget
-
-The widget allows you to add a Product Set content item to any placeholders of a page or block. The Product Set widget can be displayed as a slider or carousel.
-
-**Use case example:** The widget can be used to display a product set containing, for example, Basic Office Supplies, on a page from which your customers can select and add an item or all items to the cart with one click.
-
-You can view how it looks like on the store website:
-
-* **B2C**
-Template used: Images left side, products right side and only add all button)
-![Product set content item widget B2C](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/product-set-yves-b2c.png)
-
-* **B2B**
-Template used: Product Set for landing pages
-![Product set content item widget B2B](https://spryker.s3.eu-central-1.amazonaws.com/docs/User+Guides/Back+Office+User+Guides/Content+Management+System/Content+Item+Widgets/Content+Item+Widgets+types%3A+Reference+Information/product-set-template-b2b.png)
+s
 
 ## File list content item widget
 

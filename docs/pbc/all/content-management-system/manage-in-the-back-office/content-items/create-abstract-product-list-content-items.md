@@ -41,8 +41,8 @@ To clear product selection on a tab, click **Clear locale**.
 
 | ATTRIBUTE | DESCRIPTION |
 | --- | --- |
-| NAME | Name for an abstract product list content item. |
-| DESCRIPTION | Descriptive information on what an Abstract Product List is used for. |
+| NAME | Unique identifier of the content item. You will use it when adding the content item to CMS pages and blocks. |
+| DESCRIPTION | Description for internal usage. |
 
 
 ### Reference information: Abstract product list content item widget

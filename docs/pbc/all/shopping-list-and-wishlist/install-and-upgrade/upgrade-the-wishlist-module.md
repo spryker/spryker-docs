@@ -33,7 +33,7 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202204.0/migration-guide-wishlist.html  
 related:
   - title: Upgrade the Cart
-    link: docs/scos/dev/module-migration-guides/migration-guide-cart.html
+    link: docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
   - title: Upgrade the Price
     link: docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
 ---

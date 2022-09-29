@@ -32,8 +32,8 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-passwords.html
   - title: Managing customer addresses
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-addresses.html
-  - title: Retrieving customer carts
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-carts.html
+  - title: Retrieve customer carts
+    link: docs/pbc/all/cart-and-checkout/manage-using-glue-api/retrieve-customer-carts.html
 ---
 
 This endpoint allows retrieving a customer’s orders.

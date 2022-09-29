@@ -26,26 +26,6 @@ The [Alternative Products](/docs/scos/dev/feature-walkthroughs/{{page.version}}/
 
 The [Approval Process](/docs/scos/dev/feature-walkthroughs/{{page.version}}/approval-process-feature-walkthrough.html) feature enables managers to control purchases requested by their employees.
 
-## Cart
-
-The [Cart](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-feature-walkthrough.html) feature provides the functionality of the shopping cart and cart total calculations.
-
-### Calculation 3.0
-
-Spryker uses the [Calculation](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-3-0.html) module to calculate the cart totals that are displayed in the cart/checkout or when the order is placed.
-
-### Calculation data structure
-
-This describes the structure of how Spryker [calculates its data](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculation-data-structure.html) between different transfers.
-
-### Calculator plugins
-
-This states the various parts of the [Calculator plugin](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/calculator-plugins.html) method.
-
-### Cart module: reference information
-
-Our [Cart consists of a few components](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/cart-module-reference-information.html) in Yves and Zed. The Yves components create the cart requests and persist the cart into the session. The Zed components persist the data into the database and expand the items with data obtained from plugins.
-
 ### Resource Sharing
 
 The [Resource Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/cart-feature-walkthrough/resource-sharing-feature-walkthrough.html) lets you create a unique URL for any entity in the Spyker Commerce OS. For each entity, you must use an additional connector-module. For example, to share a cart through a URL, Resource Sharing must be combined with Persistent Cart Sharing.
@@ -57,10 +37,6 @@ The [Catalog](/docs/scos/dev/feature-walkthroughs/{{page.version}}/catalog-featu
 ## Category Management
 
 The [Category Management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/category-management-feature-walkthrough.html) feature lets you manage your product catalog with customized categories, category pages, and filters. All products can be categorized into logical clusters so that customers can filter them on the Storefront.
-
-## Checkout
-
-The [Checkout](/docs/scos/dev/feature-walkthroughs/{{page.version}}/checkout-feature-walkthrough.html) feature lets you customize the checkout workflow.
 
 ## Cms
 
@@ -153,10 +129,6 @@ The [Merchant Product Restrictions](/docs/scos/dev/feature-walkthroughs/{{page.v
 
 [On this page](/docs/scos/dev/feature-walkthroughs/{{page.version}}/merchant-product-restrictions-feature-walkthrough/restricted-products-behavior.html), you can find commonly encountered cases of product restrictions behavior.
 
-## Multiple Carts
-
-The [Multiple Carts](/docs/scos/dev/feature-walkthroughs/{{page.version}}/multiple-carts-feature-walkthrough.html) feature lets you create and manage one or multiple shopping carts in one customer account.
-
 ## Navigation
 
 The [Navigation](/docs/scos/dev/feature-walkthroughs/{{page.version}}/navigation-feature-walkthrough/navigation-feature-walkthrough.html) feature enables product catalog managers to create intuitive navigation elements and display them on the Storefront.
@@ -188,10 +160,6 @@ The [Packaging Units](/docs/scos/dev/feature-walkthroughs/{{page.version}}/packa
 ## Payments
 
 The [Payments](/docs/scos/dev/feature-walkthroughs/{{page.version}}/payments-feature-walkthrough.html) feature lets customers pay for orders with none, one, or multiple payment methods during the checkout process.
-
-## Persistent Cart Sharing
-
-The [Persistent Cart Sharing](/docs/scos/dev/feature-walkthroughs/{{page.version}}/persistent-cart-sharing-feature-walkthrough/persistent-cart-sharing-feature-walkthrough.html) feature lets company users generate the URL to share the cart with different levels of access.
 
 ### Persistent Cart Sharing: module relations
 
@@ -254,10 +222,6 @@ The [Product Sets](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-
 
 The [ProductSet](/docs/scos/dev/feature-walkthroughs/{{page.version}}/product-sets-feature-walkthrough/product-sets-module-relations.html) module provides a `spy_product_set` table that stores some non-localized data about Product Sets entities. Localized data is stored in the `spy_product_set_data` table. These tables, along with their related URLs and product image sets, contain all the necessary data about Product Sets entities that you can list on the Storefront or show their representing Product details pages.
 
-## Quick Add to Cart
-
-The [Quick Add to Cart](/docs/scos/dev/feature-walkthroughs/{{page.version}}/quick-add-to-cart-feature-walkthrough/quick-add-to-cart-feature-walkthrough.html) feature lets you add multiple products to a cart at once.
-
 ## Reclamations
 
 The [Reclamations](/docs/scos/dev/feature-walkthroughs/{{page.version}}/reclamations-feature-walkthrough.html) feature lets Back Office users handle order claims issued by customers.
@@ -281,10 +245,6 @@ The [Return Management](/docs/scos/dev/feature-walkthroughs/{{page.version}}/ret
 ## Search
 
 The [Search](/docs/scos/dev/feature-walkthroughs/{{page.version}}/search-feature-walkthrough.html) feature enables you to control search and filtering preferences and customize them to improve your customers’ user experience and help them quickly find what they are looking for. The feature includes textual search, multi-language search, full-site search, filter by a category, dynamically, and by filters & facets.
-
-## Shared Carts
-
-The [Shared Carts](/docs/scos/dev/feature-walkthroughs/{{page.version}}/shared-carts-feature-walkthrough.html) feature lets you share carts between company users.
 
 ## Spryker Core Back Office
 

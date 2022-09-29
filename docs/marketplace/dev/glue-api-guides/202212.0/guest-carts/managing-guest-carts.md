@@ -8,7 +8,7 @@ redirect_from:
   - /docs/marketplace/dev/glue-api-guides/201907.0/guest-carts/managing-guest-carts.html
   - /docs/marketplace/dev/glue-api-guides/202005.0/guest-carts/managing-guest-carts.html
 related:
-  - title: Managing guest cart items
+  - title: Manage guest cart items
     link: docs/marketplace/dev/glue-api-guides/page.version/guest-carts/managing-guest-cart-items.html
 ---
 
@@ -16,7 +16,7 @@ This endpoint lets you manage guest carts.
 
 ## Installation
 For detailed information about the modules that provide the API functionality and related installation instructions, see:
-* [Glue API: Cart feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cart-feature-integration.html)
+* [Install the Cart Glue API](/docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html)
 * [Glue API: Promotions & Discounts feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-promotions-and-discounts-feature-integration.html)
 * [Glue API: Product options feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-options-feature-integration.html)
 * [Glue API: Product Labels feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-labels-feature-integration.html)
@@ -26,7 +26,7 @@ For detailed information about the modules that provide the API functionality an
 
 ## Create a guest cart
 
-To create a guest cart as an unauthenticated user, [add items to a guest cart](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-guest-cart-items.html#add-items-to-a-guest-cart).
+To create a guest cart as an unauthenticated user, [add items to a guest cart](/docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html#add-items-to-a-guest-cart).
 
 ## Retrieve a guest cart
 
@@ -1963,7 +1963,7 @@ class CartsRestApiConfig extends SprykerCartsRestApiConfig
 }
 ```
 
-Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/scos/user/features/{{page.version}}/multiple-carts-feature-overview.html) environment:
+Upon login, the behavior depends on whether your project is a single cart or [multiple cart](/docs/pbc/all/cart-and-checkout/multiple-carts-feature-overview.html) environment:
 
 * In a *single cart* environment, the products in the guest cart are added to the customers' own cart.
 * In a *multiple cart* environment, the guest cart is converted to a regular user cart and added to the list of the customers' own carts.

@@ -210,6 +210,16 @@ entries:
                 url: /docs/pbc/all/cart-and-checkout/extend-and-customize/checkout-process-review-and-implementation.html
               - title: Checkout steps
                 url: /docs/pbc/all/cart-and-checkout/extend-and-customize/checkout-steps.html
+          - title: Import and export data
+            nested:
+              title: File details - sales_order_threshold.csv
+              url: /docs/pbc/all/cart-and-checkout/import-and-export-data/file-details-sales-order-threshold.csv.html
+          - title: Manage in the Back Office
+            nested:
+              title: Define global thresholds
+              url: /docs/pbc/all/cart-and-checkout/manage-in-the-back-office/define-global-thresholds.html
+              title: Manage threshold settings
+              url: /docs/pbc/all/cart-and-checkout/manage-in-the-back-office/manage-threshold-settings.html    
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:

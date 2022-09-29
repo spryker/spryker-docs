@@ -25,7 +25,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/testing-the-prepayment-implementation.html
 related:
   - title: Implement prepayment
-    link: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
   - title: Implement prepayment in frontend
     link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
   - title: Implement prepayment in backend

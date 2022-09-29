@@ -25,7 +25,7 @@ redirect_from:
   - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-front-end.html
 related:
   - title: Implement prepayment
-    link: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
   - title: Implement prepayment in backend
     link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
   - title: Implement prepayment in shared layer

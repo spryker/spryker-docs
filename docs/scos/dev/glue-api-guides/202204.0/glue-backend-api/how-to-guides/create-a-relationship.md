@@ -4,21 +4,73 @@ This guide describes how to add resources through relationships. The following c
 
 Let’s say we have a module named `FooApi` where we want to add `bar` resource related to `foo` resource.
 
-1.  Create `FooBarResourceRelationshipPlugin`:
+1.  Create `FooBarResourceRelationshipPlugin`: `src\Pyz\Glue\FooApi\Plugin\FooBarResourceRelationshipPlugin.php`
+
+```
+<?php
+
+<?php
+
+namespace Pyz\Glue\FooApi\Plugin\GlueJsonApiConvention;
+
+use Generated\Shared\Transfer\GlueRelationshipTransfer;
+use Generated\Shared\Transfer\GlueRequestTransfer;
+use Generated\Shared\Transfer\GlueResourceTransfer;
+use Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipPluginInterface;
+use Spryker\Glue\Kernel\AbstractPlugin;
+
+class FooBarResourceRelationshipPlugin extends AbstractPlugin implements ResourceRelationshipPluginInterface
+{
+
+    protected const RESOURCE_TYPE_BAR = 'bar';
+
+    public function addRelationships(array $resources, GlueRequestTransfer $glueRequestTransfer): void
+    {
+        foreach ($resources as $glueResourceTransfer) {
+            $glueRelationshipTransfer = (new GlueRelationshipTransfer())
+                ->addResource(new GlueResourceTransfer());
+            $glueResourceTransfer->addRelationship($glueRelationshipTransfer);
+        }
+    }
+
+    public function getRelationshipResourceType(): string
+    {
+        return static::RESOURCE_TYPE_BAR;
+    }
+}
+
+```
+
+2. Now declare the relationship resource:
+   `src\Pyz\Glue\GlueStorefrontApiApplicationGlueJsonApiConventionConnector\GlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvider.php`
+```
+<?php
+
+namespace Pyz\Glue\GlueStorefrontApiApplicationGlueJsonApiConventionConnector;
+
+use Pyz\Glue\FooApi\Plugin\FooBarResourceRelationshipPlugin;
+use Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;
+use Spryker\Glue\GlueStorefrontApiApplicationGlueJsonApiConventionConnector\GlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvider as SprykerGlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvider;
+
+class GlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvider extends SprykerGlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvider
+{
+    protected const RESOURCE_FOO = 'foo';
     
+    /**
+     * @param \Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection
+     *
+     * @return \Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface
+     */
+    protected function getResourceRelationshipPlugins(
+        ResourceRelationshipCollectionInterface $resourceRelationshipCollection
+    ): ResourceRelationshipCollectionInterface {
+        $resourceRelationshipCollection->addRelationship(
+            static::RESOURCE_FOO,
+            new FooBarResourceRelationshipPlugin(),
+        );
 
-|     |
-| --- |
-| `src\Pyz\Glue\FooApi\Plugin\FooBarResourceRelationshipPlugin.php` |
-| ```<br><?php<br><br>namespace Pyz\Glue\FooApi\Plugin\GlueJsonApiConvention;<br><br>use Generated\Shared\Transfer\GlueRelationshipTransfer;<br>use Generated\Shared\Transfer\GlueRequestTransfer;<br>use Generated\Shared\Transfer\GlueResourceTransfer;<br>use Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipPluginInterface;<br>use Spryker\Glue\Kernel\AbstractPlugin;<br><br>class FooBarResourceRelationshipPlugin extends AbstractPlugin implements ResourceRelationshipPluginInterface<br>{<br><br>    protected const RESOURCE_TYPE_BAR = 'bar';<br><br>    public function addRelationships(array $resources, GlueRequestTransfer $glueRequestTransfer): void<br>    {<br>        foreach ($resources as $glueResourceTransfer) {<br>            $glueRelationshipTransfer = (new GlueRelationshipTransfer())<br>                ->addResource(new GlueResourceTransfer());<br>            $glueResourceTransfer->addRelationship($glueRelationshipTransfer);<br>        }<br>    }<br><br>    public function getRelationshipResourceType(): string<br>    {<br>        return static::RESOURCE_TYPE_BAR;<br>    }<br>}<br><br>``` |
-
-2\. Now declare the relationship resource:
-
-|     |
-| --- |
-| `src\Pyz\Glue\GlueStorefrontApiApplicationGlueJsonApiConventionConnector\GlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvider.php` |
-| ```<br><?php<br><br>namespace Pyz\Glue\GlueStorefrontApiApplicationGlueJsonApiConventionConnector;<br><br>use Pyz\Glue\FooApi\Plugin\FooBarResourceRelationshipPlugin;<br>use Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface;<br>use Spryker\Glue\GlueStorefrontApiApplicationGlueJsonApiConventionConnector\GlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvider as SprykerGlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvider;<br><br>class GlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvider extends SprykerGlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvider<br>{<br>    protected const RESOURCE_FOO = 'foo';<br>    <br>    /**<br>     * @param \Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface $resourceRelationshipCollection<br>     *<br>     * @return \Spryker\Glue\GlueJsonApiConventionExtension\Dependency\Plugin\ResourceRelationshipCollectionInterface<br>     */<br>    protected function getResourceRelationshipPlugins(<br>        ResourceRelationshipCollectionInterface $resourceRelationshipCollection<br>    ): ResourceRelationshipCollectionInterface {<br>        $resourceRelationshipCollection->addRelationship(<br>            static::RESOURCE_FOO,<br>            new FooBarResourceRelationshipPlugin(),<br>        );<br><br>        return $resourceRelationshipCollection;<br>    }<br>}<br>``` |
-
-![](https://spryker.atlassian.net/wiki/images/icons/grey_arrow_down.png)Verification
-
+        return $resourceRelationshipCollection;
+    }
+}
+```
 If everything is set up correctly, you should be able to access `http://glue-storefront.mysprykershop.com/foo?include=bar`

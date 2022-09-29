@@ -5,12 +5,51 @@ vendor/bin/glue api:generate:documentation [--application=storefront|backend]
 ```
 
 You can describe your resources in the Glue doc-comment annotation on the relevant Controller actions.
+**in** `Controller`
+```
+/**
+ * @Glue({
+ *     "getResourceById": {
+ *          "isIdNullable": true,
+ *          "summary": [
+ *              "Retrieves resource by id."
+ *          ],
+ *          "parameters": [{
+ *              "ref": "acceptLanguage"
+ *          }],
+ *          "responses": {
+ *              "200": "Resource found.",
+ *              "422": "Unprocessable entity."
+ *          },
+ *          "responseAttributesClassName": "Generated\\Shared\\Transfer\\RestResourcesAttributesTransfer",
+ *          "path": "/resources/{resourceId}/resource-items/{resourceItemsId}"
+ *     },
+ *     "getCollection": {
+ *         ...
+ *     }
+ * })
+ *
+ * @param \Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface $restRequest
+ *
+ * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
+ */
+public function getAction(RestRequestInterface $restRequest): RestResponseInterface
+{
+}
 
-|     |
-| --- |
-| **in** `Controller` |
-| ```<br>/**<br> * @Glue({<br> *     "getResourceById": {<br> *          "isIdNullable": true,<br> *          "summary": [<br> *              "Retrieves resource by id."<br> *          ],<br> *          "parameters": [{<br> *              "ref": "acceptLanguage"<br> *          }],<br> *          "responses": {<br> *              "200": "Resource found.",<br> *              "422": "Unprocessable entity."<br> *          },<br> *          "responseAttributesClassName": "Generated\\Shared\\Transfer\\RestResourcesAttributesTransfer",<br> *          "path": "/resources/{resourceId}/resource-items/{resourceItemsId}"<br> *     },<br> *     "getCollection": {<br> *         ...<br> *     }<br> * })<br> *<br> * @param \Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface $restRequest<br> *<br> * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface<br> */<br>public function getAction(RestRequestInterface $restRequest): RestResponseInterface<br>{<br>}<br><br>/**<br> * @Glue({<br> *     "post": {<br> *         ...<br> *     }<br> * })<br> *<br> * @param \Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface $restRequest<br> *<br> * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface<br> */<br>``` |
+/**
+ * @Glue({
+ *     "post": {
+ *         ...
+ *     }
+ * })
+ *
+ * @param \Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface $restRequest
+ *
+ * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
+ */
 
+```
 Glue annotation has to contain valid JSON.
 
 Glue annotation can be defined on each action in the controller, two can be defined on the get action (for having separate descriptions for getting collections and getting resources by id actions). Possible top level keys are: `getResourceById`, `getCollection`, `post`, `patch`, `delete`.
@@ -21,19 +60,38 @@ Always describe all the possible error statuses your resource can return in `res
 
 For describing request body structure in the schema, you can use additional transfer properties attributes:
 
-|     |
-| --- |
-| **in** `resources_rest_api.transfer.xml` |
-| ```<br><?xml version="1.0"?><br><transfers xmlns="spryker:transfer-01"<br>           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"<br>           xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd"><br><br>    <transfer name="ApiResourcesAttributes"><br>        <property name="sku" type="string" restRequestParameter="required"/><br>        <property name="quantity" type="int" restRequestParameter="required"/><br>        <property name="productOptions" type="string[]" restRequestParameter="yes"/><br>        <property name="createdAt" type="string"/><br>    </transfer><br><br>``` |
+**in** `resources_rest_api.transfer.xml`
+
+```
+<?xml version="1.0"?>
+<transfers xmlns="spryker:transfer-01"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
+
+    <transfer name="ApiResourcesAttributes">
+        <property name="sku" type="string" restRequestParameter="required"/>
+        <property name="quantity" type="int" restRequestParameter="required"/>
+        <property name="productOptions" type="string[]" restRequestParameter="yes"/>
+        <property name="createdAt" type="string"/>
+    </transfer>
+```
 
 In the example above the `sku` and `quantity` will be added to the request schema as required, `productOptions` will be added as optional and `createdAt` will be skipped. There needs to be at least one attribute on the transfer with the not empty `restRequestParameter` for the request schema to be even generated, so always pay attention to this.
 
 When creating a resource that will be available as a relationship only (and has no resource route of its own), you need to describe the structure of your resource attributes in a Glue annotation on the `ResourceRelationshipPlugin`:
+**in** `PaymentMethodsByCheckoutDataResourceRelationshipPlugin`
 
-|     |
-| --- |
-| **in** `PaymentMethodsByCheckoutDataResourceRelationshipPlugin` |
-| ```<br>/**<br> * @Glue({<br> *     "resourceAttributesClassName": "\\Generated\\Shared\\Transfer\\RestPaymentMethodsAttributesTransfer"<br> * })<br> *<br> * @method \Spryker\Glue\PaymentsRestApi\PaymentsRestApiFactory getFactory()<br> */<br>class PaymentMethodsByCheckoutDataResourceRelationshipPlugin extends AbstractPlugin implements ResourceRelationshipPluginInterface<br>{<br>``` |
+```
+/**
+ * @Glue({
+ *     "resourceAttributesClassName": "\\Generated\\Shared\\Transfer\\RestPaymentMethodsAttributesTransfer"
+ * })
+ *
+ * @method \Spryker\Glue\PaymentsRestApi\PaymentsRestApiFactory getFactory()
+ */
+class PaymentMethodsByCheckoutDataResourceRelationshipPlugin extends AbstractPlugin implements ResourceRelationshipPluginInterface
+{
+```
 
 Always check the schema your resources are described with before releasing your resource.
 

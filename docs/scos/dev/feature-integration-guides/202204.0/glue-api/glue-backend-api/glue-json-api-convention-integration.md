@@ -136,6 +136,4 @@ class GlueJsonApiConventionDependencyProvider extends SprykerGlueJsonApiConventi
 }
 ```
 
-![](https://spryker.atlassian.net/wiki/images/icons/grey_arrow_down.png)Verification
-
 In order to verify that everything is set up correctly and you are able to access the endpoint follow [\[FINAL\] Create a resource](https://spryker.atlassian.net/wiki/spaces/CORE/pages/3298459765)

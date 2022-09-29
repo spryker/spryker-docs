@@ -339,7 +339,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 }
 ```
 
-2\. Set up the Oauth client:
+Set up the Oauth client:
 
 ```
 console setup:init-db

@@ -399,11 +399,11 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 ];
 ```
 
-Your process should be working now.
+Your process works now.
 
 ### 4. Test the state machine
 
-You need to just built a new order process. To test it, do the following:
+After building a new order process, you need to test it:
 
 1. Go to the shop, chose a product, add it to the cart, and checkout using the Invoice payment method.
 2. Open the orders page in Zed UI and then open your order.

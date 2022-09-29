@@ -90,7 +90,7 @@ The Spryker B2B Suite is a collection of ready-to-use B2B-specific features. Of 
 - [Navigation](/docs/scos/user/features/{{site.version}}/navigation-feature-overview.html)
 - [Search](/docs/scos/user/features/{{site.version}}/search-feature-overview/search-feature-overview.html)
 - [CMS](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html)
-- [File Manager](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.html)
+- [File Manager](/docs/pbc/all/digital-asset-management/file-manager-feature-overview/digital-asset-management.html)
 
 <br>
 </details>

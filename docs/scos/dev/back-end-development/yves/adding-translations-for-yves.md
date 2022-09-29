@@ -41,7 +41,7 @@ related:
     link: docs/scos/dev/back-end-development/yves/yves-routes.html
 ---
 
-Textual translations are handled by the Glossary-module. You can use the GlossaryFacade in Zed to add entries to Glossary (or you can use the Zed UI).
+Textual translations are handled by the Glossary module. You can use the `GlossaryFacade` in Zed to add entries to Glossary (or you can use the Zed UI).
 
 ```php
 <?php
@@ -63,7 +63,8 @@ An entry in the glossary has a key and translations per locale, like this:
 ]
 ```
 
-Before it can be used in Yves, this data must be exported to the KV-storage. You can use the [Redis Desktop Manager](http://redisdesktop.com/) to have a look inside and see the values.
+Before it can be used in Yves, this data must be exported to the KV storage. You can use the [Redis Desktop Manager](http://redisdesktop.com/) to look inside and see the values.
+
 ![Glossary KV and DB](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Yves/Frontend+Translations/glossary-kv-and-db.png) 
 
 ## Usage in Twig templates
@@ -78,7 +79,7 @@ You can use the key in a Twig template in Yves:
 {% raw %}{{{% endraw %} 'say.hello' | trans {% raw %}}}{% endraw %}
 ```
 
-Sometimes you need to list all keys which are used in a template. Currently there is no good solution, but this regex will do the job pretty good:
+Sometimes you need to list all keys which are used in a template. Currently, there is no good solution, but this regex does the job pretty good:
 
 ```twig
 {% raw %}{{{% endraw %}.?"(.*)".?\|.?trans.?{% raw %}}}{% endraw %}

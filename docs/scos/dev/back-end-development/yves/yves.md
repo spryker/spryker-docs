@@ -58,7 +58,7 @@ related:
     link: docs/scos/dev/back-end-development/yves/yves-routes.html
 ---
 
-Yves is one of the application layers of the Spryker Commerce OS, providing the front-end functionality.
+Yves is one of the application layers of the Spryker Commerce OS, providing the frontend functionality.
 
 {% info_block infoBox %}
 

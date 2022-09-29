@@ -49,7 +49,7 @@ class IndexController extends AbstractController
 }
 ```
 
-## Show Message from Zed's Business Layer
+## Show message from Zed's Business Layer
 To show a message from a model, declare this dependency in the module's dependency provider:
 
 Now, you can access it from the business factory and inject it to your model:

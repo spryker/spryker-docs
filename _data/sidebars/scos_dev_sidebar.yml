@@ -3410,8 +3410,8 @@ entries:
     - title: Plugins
       url: /docs/scos/dev/back-end-development/plugins/plugins.html
       nested:
-      - title: Getting an overview of the used plugins
-        url: /docs/scos/dev/back-end-development/plugins/getting-an-overview-of-the-used-plugins.html
+      - title: Get an overview of the used plugins
+        url: /docs/scos/dev/back-end-development/plugins/get-an-overview-of-the-used-plugins.html
     - title: Session handlers
       url: /docs/scos/dev/back-end-development/session-handlers.html
     - title: Session management

@@ -177,7 +177,6 @@ class PrepaymentSubFormPlugin extends AbstractPlugin implements SubFormPluginInt
 
 }
 ```
-</details>
 
 ## Set up the payment handler
 
@@ -254,7 +253,6 @@ class PrepaymentHandlerPlugin extends AbstractPlugin implements StepHandlerPlugi
 
 }
 ```
-</details>
 
 ## Add the prepayment twig template
 

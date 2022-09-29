@@ -57,7 +57,7 @@ By default behavior, HTTP errors are converted to exceptions. To render differen
 
 *To create a custom error, follow these steps*
 
-Register the exception in the exception handlers under the `ApplicationFactory`, as shows in the following example:
+1. Register the exception in the exception handlers under the `ApplicationFactory`, as shown in the following example:
 
 ```php
 <?php
@@ -73,10 +73,11 @@ public function createExceptionHandlers()
 }
 ```
 
-If one of the configured exceptions occurs, the request will be forwarded to a route named `error/[STATUS_CODE]`.
-Next, create `CustomErrorRouteProviderPlugin` which must implement `AbstractRouteProviderPlugin`.
+If one of the configured exceptions occurs, the request is forwarded to a route named `error/[STATUS_CODE]`.
 
-To add the route, use the following code sample:
+2. Create `CustomErrorRouteProviderPlugin` which must implement `AbstractRouteProviderPlugin`.
+
+3. To add the route, use the following code sample:
 
 ```php
 <?php

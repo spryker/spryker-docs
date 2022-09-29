@@ -84,7 +84,6 @@ interface PaymentMethodsConstants
     </transfer>
     </transfers>
 ```
-</details>
 
 3. Update the `PaymentTransfer` class:
 ```bash

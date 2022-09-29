@@ -17,9 +17,9 @@ related:
   - title: Managing File Tree
     link: docs/pbc/all/digital-asset-management/manage-in-the-back-office/managing-file-tree.html
   - title: Managing File List
-    link: docs/scos/user/back-office-user-guides/page.version/content/file-manager/managing-file-list.html
+    link: docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-list.html
   - title: File Manager feature overview
-    link: docs/scos/user/features/page.version/file-manager-feature-overview/file-manager-feature-overview.html
+    link: docs/pbc/all/digital-asset-management/file-manager-feature-overview/digital-asset-management.html
 ---
 
 This document describes how to define what files types can be uploaded to a shop.

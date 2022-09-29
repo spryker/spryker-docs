@@ -14,11 +14,11 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/content/file-manager/managing-file-list.html  
 related:
   - title: Managing File Tree
-    link: docs/scos/user/back-office-user-guides/page.version/content/file-manager/managing-file-tree.html
+    link: docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-tree.html
   - title: Add and edit MIME types
-    link: docs/scos/user/back-office-user-guides/page.version/administration/add-and-edit-mime-types.html
+    link: docs/pbc/all/digital-asset-management/manage-in-the-back-office/add-and-edit-mime-types.html
   - title: File Manager feature overview
-    link: docs/scos/user/features/page.version/file-manager-feature-overview/file-manager-feature-overview.html
+    link: docs/pbc/all/digital-asset-management/file-manager-feature-overview/digital-asset-management.html
 ---
 
 The *File List* section is a way to quickly review all the files from the file tree.

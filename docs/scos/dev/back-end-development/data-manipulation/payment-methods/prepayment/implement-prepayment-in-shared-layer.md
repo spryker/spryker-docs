@@ -68,7 +68,7 @@ interface PaymentMethodsConstants
 }
 ```
 
-1. Enrich the `Payment` transfer file with a new property that corresponds to the new payment method.
+2. Enrich the `Payment` transfer file with a new property that corresponds to the new payment method.
 
 **Code sample:**
 
@@ -86,7 +86,7 @@ interface PaymentMethodsConstants
 ```
 </details>
 
-1. Update the `PaymentTransfer` class:
+3. Update the `PaymentTransfer` class:
 ```bash
 vendor/bin/console transfer:generate
 ```

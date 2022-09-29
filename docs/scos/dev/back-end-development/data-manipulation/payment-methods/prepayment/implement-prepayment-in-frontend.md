@@ -143,7 +143,7 @@ class PrepaymentSubForm extends CheckoutAbstractSubFormType implements SubFormIn
 }
 ```
 
-1. After implementing the form, plug it into checkout by adding a plugin for the form in the `Plugin` folder:
+3. After implementing the form, plug it into checkout by adding a plugin for the form in the `Plugin` folder:
 
 ```php
 <?php
@@ -223,7 +223,7 @@ class PrepaymentHandler
 ```
 
 
-1. To plug this payment handler into checkout, in the `Plugin` folder, add a corresponding plugin:
+2. To plug this payment handler into checkout, in the `Plugin` folder, add a corresponding plugin:
 
 ```php
 <?php

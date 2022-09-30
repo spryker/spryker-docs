@@ -82,7 +82,7 @@ public function testAction(Request $request)
 
 ## Response methods
 
-There are several ways to send responses in different use cases. These methods are called at the end of the action and their return value is returned by the action. e.g. return `$this->redirectResponse('/my-module')`.
+There are several ways to send responses in different use cases. These methods are called at the end of the action and their return value is returned by the action—for example, return `$this->redirectResponse('/my-module')`.
 
 | RESPONSE METHOD | PURPOSE  |
 | ----------------- | -------------------- |

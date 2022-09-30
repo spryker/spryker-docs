@@ -3441,8 +3441,8 @@ entries:
           url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html
         - title: Step engine
           nested:
-          - title: Step engine - creating a breadcrumb navigation
-            url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-creating-a-breadcrumb-navigation.html
+          - title: Create a breadcrumb navigation
+            url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-create-breadcrumb-navigation.html
           - title: Step engine - use case scenario
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-use-case-scenario.html
           - title: Step engine workflow overview

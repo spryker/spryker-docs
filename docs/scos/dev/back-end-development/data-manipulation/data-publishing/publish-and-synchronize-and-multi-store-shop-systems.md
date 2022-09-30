@@ -66,9 +66,9 @@ The RabbitMq default configuration in Spryker VM looks like this:
 * Each virtual host belongs to one Store\Environment—for example, DE_development_zed, AT_staging_zed, US_production_zed.
 * Messages can be sent to several virtual hosts.
 
-### Spryker Entities and Multi-Store
+### Spryker entities and multi-store
 
-Entities in Spryker can be global or store aware. Global entities,like Glossary or URL, don't belong to any specific store. Other entities, like ProductAbstract, belong to a specific store.
+Entities in Spryker can be global or store-aware. Global entities, like Glossary or URL, don't belong to any specific store. Other entities, like ProductAbstract, belong to a specific store.
 
 The following diagrams show:
 
@@ -80,7 +80,7 @@ The following diagrams show:
 
 ## How it Works
 
-The first diagram shows how P&S works with a multi-store shop system with one database. When the event is triggered, Publisher checks if the entity has information about a store. Depending on the result, it sends a message to sync queue or the store. Since `spy_product_abstract_storage` has a store column which defines entity and store relation, ProductAbstract goes to two different store sync queues . URL doesn't have any store, so Publisher sends it only to the default store (the store which Zed is running). To send URL to other stores, you need to define a **QueuePool**. The [Queue Pool](/docs/scos/dev/back-end-development/data-manipulation/queue/queue-pool.html) is designed to allow messages to be sent to several queues. The synchronization process is using SynchronizationPool to get the list of the queues for sending the messages. In this example, URL will be sent to DE and AT as these queues are defined in the `SynchronizationPool` in `store.php`.
+The first diagram shows how P&S works with a multi-store shop system with one database. When the event is triggered, Publisher checks if the entity has information about a store. Depending on the result, it sends a message to the sync queue or the store. Since `spy_product_abstract_storage` has a store column, which defines entity and store relation, ProductAbstract goes to two different store sync queues. URL doesn't have any store, so Publisher sends it only to the default store (the store which Zed is running). To send a URL to other stores, you need to define a **QueuePool**. The [Queue Pool](/docs/scos/dev/back-end-development/data-manipulation/queue/queue-pool.html) is designed to allow messages to be sent to several queues. The synchronization process is using SynchronizationPool to get the list of the queues for sending the messages. In this example, URL will be sent to DE and AT as these queues are defined in the `SynchronizationPool` in `store.php`.
 
 {% info_block errorBox %}
 

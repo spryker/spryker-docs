@@ -101,7 +101,7 @@ Now replace it with a value in the Twig template:
 {% raw %}{{{% endraw %} "auth.my.name" | trans({'%name%' : 'Fabian'}, "app") {% raw %}}}{% endraw %}
 ```
 
-This will show "My name is Fabian"
+This shows "My name is Fabian".
 
 ## Translation with AJAX requests
 

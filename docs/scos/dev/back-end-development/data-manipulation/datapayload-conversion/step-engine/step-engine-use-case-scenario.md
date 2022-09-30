@@ -26,7 +26,7 @@ related:
   - title: Step engine workflow overview
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-workflow-overview.html
   - title: Step engine - creating a breadcrumb navigation
-    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-creating-a-breadcrumb-navigation.html
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-create-breadcrumb-navigation.html
 ---
 
 Below you can see an example of configuration for the checkout process, containing two steps: an entry step and a success step.

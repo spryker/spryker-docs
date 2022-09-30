@@ -36,7 +36,7 @@ related:
   - title: Step engine - use case scenario
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-use-case-scenario.html
   - title: Step engine - creating a breadcrumb navigation
-    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-creating-a-breadcrumb-navigation.html
+    link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-create-breadcrumb-navigation.html
 ---
 
 When you need to define a multi-step process using the StepEngine feature, you need to implement the following interfaces:

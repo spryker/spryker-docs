@@ -1,6 +1,6 @@
 ---
-title: Step engine - creating a breadcrumb navigation
-description: To set up breadcrumb navigation for a step collection, first you'll need to mark which steps you would like to have in your breadcrumb.
+title: "Step engine: Create breadcrumb navigation"
+description: This document shows how to step up breadcrumb navigation for a step collection
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/step-engine-breadcrumb
@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/step-engine-breadcrumb
   - /v1/docs/step-engine-breadcrumb
   - /v1/docs/en/step-engine-breadcrumb
+  - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-creating-a-breadcrumb-navigation.html
 related:
   - title: Step engine - use case scenario
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-use-case-scenario.html
@@ -29,11 +30,15 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-workflow-overview.html
 ---
 
-To set up breadcrumb navigation for a step collection, first, mark which steps you would like to have in your breadcrumb. To mark a step available for breadcrumb, implement `\Spryker\Yves\StepEngine\Dependency\Step\StepWithBreadcrumbInterface` in all the necessary steps.
+This document shows how to step up breadcrumb navigation for a step collection.
+
+To set up breadcrumb navigation for a step collection, follow these steps:
+
+1. Mark the steps want to have in your breadcrumb. To mark a step available for breadcrumb, implement `\Spryker\Yves\StepEngine\Dependency\Step\StepWithBreadcrumbInterface` in all the necessary steps.
 
 The following example shows how to enable `MyStep` in the breadcrumb. The comments in each method describe their responsibilities.
 
-**Code sample**:
+<details><summary markdown='span'>Code sample</summary>
 
 ```php
 <?php
@@ -51,7 +56,7 @@ class MyStep extends AbstractBaseStep implements StepWithBreadcrumbInterface
     public function getBreadcrumbItemTitle()
     {
         /*
-         * Return any string that will represent this step in the breadcrumb.
+         * Return any string that represents this step in the breadcrumb.
          */
         return 'Entry step';
     }
@@ -64,7 +69,7 @@ class MyStep extends AbstractBaseStep implements StepWithBreadcrumbInterface
     public function isBreadcrumbItemEnabled(AbstractTransfer $dataTransfer)
     {
         /*
-         * Return true if this step is enabled (for example, clickable), false otherwise. It's
+         * Return true if this step is enabled (for example, clickable); false otherwise. It's
          * recommended to check the post condition to align with the status logic of
          * the step.
          */
@@ -79,7 +84,7 @@ class MyStep extends AbstractBaseStep implements StepWithBreadcrumbInterface
     public function isBreadcrumbItemHidden(AbstractTransfer $dataTransfer)
     {
         /*
-         * It's also possible to hide a step from the breadcrumb based on some conditions
+         * You can hide a step from the breadcrumb based on some conditions
          * by returning false in this method. It's recommended to check the require input
          * condition to align with the display logic of the step.
          */
@@ -91,11 +96,15 @@ class MyStep extends AbstractBaseStep implements StepWithBreadcrumbInterface
 }
 ```
 
-Once all the necessary steps implements `StepWithBreadcrumbInterface` the next thing to do is to generate the breadcrumb data. One thing you can do is to instantiate `\Spryker\Yves\StepEngine\Process\StepEngine` together with the optional `\Spryker\Yves\StepEngine\Process\StepBreadcrumbGenerator`. This will provide the stepBreadcrumb variable with an instance of `\Generated\Shared\Transfer\StepBreadcrumbsTransfer` for all the templates handled by the step engine. The `StepBreadcrumbsTransfer` stores all necessary data to display the breadcrumb in a template.
+</details>
 
-Another thing you can do to generate the `StepBreadcrumbsTransfer` is to instantiate and use `\Spryker\Yves\StepEngine\Process\StepBreadcrumbGenerator` class manually. This can be useful to provide breadcrumb for pages which are not handled with the step engine itself.
+2. Once `StepWithBreadcrumbInterface` is implemented in all the necessary steps, generate the breadcrumb data. 
 
-The following example shows a template fragment of how to render the breadcrumb with the provided `StepBreadcrumbsTransfer`.
+You can instantiate `\Spryker\Yves\StepEngine\Process\StepEngine` together with optional `\Spryker\Yves\StepEngine\Process\StepBreadcrumbGenerator`. This provides the `stepBreadcrumb` variable with an instance of `\Generated\Shared\Transfer\StepBreadcrumbsTransfer` for all the templates handled by the step engine. The `StepBreadcrumbsTransfer` object stores all necessary data to display the breadcrumb in a template.
+
+To generate `StepBreadcrumbsTransfer`, instantiate and use the `\Spryker\Yves\StepEngine\Process\StepBreadcrumbGenerator` class manually. This can be useful to provide a breadcrumb for pages that are not handled by the step engine itself.
+
+The following example shows a template fragment of how to render the breadcrumb with the provided `StepBreadcrumbsTransfer` object.
 
 ```php
 <ul>

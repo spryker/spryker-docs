@@ -19,7 +19,7 @@ related:
   - title: Managing File List
     link: docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-list.html
   - title: File Manager feature overview
-    link: docs/pbc/all/digital-asset-management/file-manager-feature-overview/digital-asset-management.html
+    link: docs/pbc/all/digital-asset-management/digital-asset-management.html
 ---
 
 This document describes how to define what files types can be uploaded to a shop.

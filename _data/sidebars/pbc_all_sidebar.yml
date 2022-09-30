@@ -269,11 +269,11 @@ entries:
           - title: Manage in the Back Office
             nested:
               - title: Add and edit MIME types
-                url: docs/pbc/all/digital-asset-management/manage-in-the-back-office/add-and-edit-mime-types.html
+                url: /docs/pbc/all/digital-asset-management/manage-in-the-back-office/add-and-edit-mime-types.html
               - title: Manage file list
-                url: docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-list.html
+                url: /docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-list.html
               - title: Manage file tree
-                url: docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-tree.html
+                url: /docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-tree.html
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:

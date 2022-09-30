@@ -18,7 +18,7 @@ related:
   - title: Add and edit MIME types
     link: docs/pbc/all/digital-asset-management/manage-in-the-back-office/add-and-edit-mime-types.html
   - title: File Manager feature overview
-    link: docs/pbc/all/digital-asset-management/file-manager-feature-overview/digital-asset-management.html
+    link: docs/pbc/all/digital-asset-management/digital-asset-management.html
 ---
 
 The *File List* section is a way to quickly review all the files from the file tree.

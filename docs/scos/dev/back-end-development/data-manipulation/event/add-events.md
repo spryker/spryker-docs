@@ -1,5 +1,6 @@
 ---
 title: Add events
+description: This document shows how to add events
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/event-adding
@@ -39,7 +40,7 @@ For example, to perform an action before persisting a product abstract entity, d
 2. Add the following constant `ProductConfig::PRODUCT_ABSTRACT_BEFORE_CREATE` with the value `Product.product_abstract.before.create`. The first part in this example value is the module name, then the subject, and lastly the action. You can define any unique name, just keep it literal for the sake of code clarity.
 3. Trigger the event before the entity is persisted using the event facade `\Spryker\Zed\Event\EventFacadeInterface::trigger` method which accepts two arguments: `eventName`, which is the name of the event we created before `ProductConfig::PRODUCT_ABSTRACT_BEFORE_CREATE` and `TransferInterface`, which is the transfer object you want to pass to the event listener.
 
-{% info_block infoBox "Info"%}
+{% info_block infoBox %}
 
 When multiple modules use the same events, we recommend redefining the constants in the secondary modules and binding them to the primary module's constants with the `@uses` PHP tag.
 

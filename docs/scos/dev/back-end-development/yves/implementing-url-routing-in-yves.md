@@ -45,7 +45,9 @@ To implement URL Routing in Yves:
 
 **Scenario**: You need to route requests made on `URL /hello` to the action `helloAction(Request $request)` implemented in the `DemoController`.
 
-To route this request, create a plugin that extends `AbstractRouteProviderPlugin` in the module where the controller is defined, under the `Plugin/Router` folder. `AbstractRouteProviderPlugin` enables setting up the HTTP method used (GET or POST) when setting up the new route. 
+To route this request, follow these steps:
+
+1. Create a plugin that extends `AbstractRouteProviderPlugin` in the module where the controller is defined, under the `Plugin/Router` folder. `AbstractRouteProviderPlugin` enables setting up the HTTP method used (GET or POST) when setting up the new route. 
 
 ```php
 <?php
@@ -54,7 +56,7 @@ protected function buildPostRoute(string $path, string $moduleName, string $cont
 protected function buildRoute(string $path, string $moduleName, string $controllerName, string $actionName = 'indexAction'): Route
 ```
 
-In the new created plugin which extends `AbstractRouteProviderPlugin`, you must implement the route in the `addRoutes(RouteCollection $routeCollection): RouteCollection` operation.
+2. In the new created plugin, which extends `AbstractRouteProviderPlugin`, implement the route in the `addRoutes(RouteCollection $routeCollection): RouteCollection` operation:
 
 ```php
 <?php
@@ -81,7 +83,7 @@ class HelloRouteProviderPlugin extends AbstractRouteProviderPlugin
 }
 ```
 
-Activate the plugin in `Pyz\Yves\Route\RouterDependencyProvider::getRouteProvider(): array`:
+3. Activate the plugin in `Pyz\Yves\Route\RouterDependencyProvider::getRouteProvider(): array`:
 
 ```php
 protected function getRouteProvider(): array
@@ -93,11 +95,11 @@ protected function getRouteProvider(): array
 }
 ```
 
-Now, you can access `http://mysprykershop.com/hello` to make a request using the newly configured route in your browser.
+4. To make a request using the newly configured route in your browser, open `http://mysprykershop.com/hello` 
 
 **Scenario**: You need to route requests made on `URL /hello/{name}` to the action `helloAction(Request $request)` implemented in `DemoController`, which generates different content based on the value of the `name` parameter.
 
-To add a route with parameters you can use curly braces syntax:
+1. To add a route with parameters, you can use curly braces syntax:
 
 ```php
 <?php
@@ -123,7 +125,7 @@ class HelloRouteProvider extends AbstractRouteProviderPlugin
 }
 ```
 
-To use this parameter in controller:
+2. Use this parameter in the controller:
 
 ```php
 public function helloAction(Request $request)
@@ -132,4 +134,4 @@ public function helloAction(Request $request)
 }
 ```
 
-Now, you can access `http://mysprykershop.com/hello/spryker` in your browser to make a request using the newly configured route with the `name` parameter having its value set to `spryker`.
+3. Open `http://mysprykershop.com/hello/spryker` to make a request using the newly configured route with the `name` parameter having its value set to `spryker`.

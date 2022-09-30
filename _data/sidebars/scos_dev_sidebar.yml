@@ -1201,7 +1201,7 @@ entries:
         - title: How to create protected endpoints
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create-protected-endpoints.html
         - title: How to create a new API application
-        url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create-api-application.html
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create-api-application.html
         - title: How to create or change a convention
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create_change-convention.html
     - title: Glue API Developer Guides
@@ -1522,14 +1522,22 @@ entries:
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-wishlist-feature-integration.html
       - title: Glue Backend API
         nested:
-            - title: Glue Backend API infrastructure
-              url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-storefront-and-backend-api-applications-integration.html
-            - title: Glue Authentication
-              url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-authentication-integration.html
-            - title: Glue JSON:API Convention
-              url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-json-api-convention-integration.html
-            - title: Glue Authorization Scopes
-              url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/authorization-scopes-integration.html
+          - title: Glue Backend API infrastructure
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-storefront-and-backend-api-applications-integration.html
+            include_versions:
+            - "202204.0"
+          - title: Glue Authentication
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-authentication-integration.html
+            include_versions:
+            - "202204.0"
+          - title: Glue JSON:API Convention
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-json-api-convention-integration.html
+            include_versions:
+            - "202204.0"
+          - title: Glue Authorization Scopes
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/authorization-scopes-integration.html
+            include_versions:
+            - "202204.0"
     - title: Agent Assist
       url: /docs/scos/dev/feature-integration-guides/agent-assist-feature-integration.html
     - title: Agent Assist + Cart

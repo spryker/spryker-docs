@@ -41,9 +41,9 @@ related:
 
 The words contained in an URL play a major factor for a search engine to determine if the page is relevant for a specific search query. URL routing is a mechanism used to map URLs to the code that gets executed when a specific request is being submitted. URL routing makes URLs more human-readable and SEO-friendly.
 
-To implement URL Routing in Yves:
+To implement URL Routing in Yves, follow these steps per scenario:
 
-**Scenario**: You need to route requests made on `URL /hello` to the action `helloAction(Request $request)` implemented in the `DemoController`.
+**Scenario 1**: You need to route requests made on `URL /hello` to the action `helloAction(Request $request)` implemented in the `DemoController`.
 
 To route this request, follow these steps:
 
@@ -97,7 +97,7 @@ protected function getRouteProvider(): array
 
 4. To make a request using the newly configured route in your browser, open `http://mysprykershop.com/hello` 
 
-**Scenario**: You need to route requests made on `URL /hello/{name}` to the action `helloAction(Request $request)` implemented in `DemoController`, which generates different content based on the value of the `name` parameter.
+**Scenario 2**: You need to route requests made on `URL /hello/{name}` to the action `helloAction(Request $request)` implemented in `DemoController`, which generates different content based on the value of the `name` parameter.
 
 1. To add a route with parameters, you can use curly braces syntax:
 

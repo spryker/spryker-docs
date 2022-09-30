@@ -100,7 +100,7 @@ class YourConsole extends Console
 
 ### Add a console command
 
-A console command is added the same way as all other plugins are added to the application. If you don't have a ConsoleDependencyProvider for Yves, you need to create one, and then you can add your console commands to it:
+A console command is added the same way as all other plugins are added to the application. If you don't have `ConsoleDependencyProvider` for Yves, you need to create one, and then you can add your console commands to it:
 
 ```php
 <?php

@@ -163,7 +163,7 @@ With the integrations done and the environment set up, you will need to create a
 
 {% info_block infoBox %}
 
-These steps assume you are working from a local environment. If you are attempting to implement these changes to a production or staging environment, you will need to configure these commands to run with a [cronjob](docs/scos/dev/back-end-development/cronjobs/cronjobs.html) using the Scheduler module.
+These steps assume you are working from a local environment. If you are attempting to implement these changes to a production or staging environment, you will need to configure these commands to run with a [cronjob](/docs/scos/dev/back-end-development/cronjobs/cronjobs.html) using the Scheduler module.
 
 {% endinfo_block %}
 

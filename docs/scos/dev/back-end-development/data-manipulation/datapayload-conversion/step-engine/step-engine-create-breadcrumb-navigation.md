@@ -24,9 +24,9 @@ redirect_from:
   - /v1/docs/en/step-engine-breadcrumb
   - /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-creating-a-breadcrumb-navigation.html
 related:
-  - title: Step engine - use case scenario
+  - title: "Step engine: Use case scenario"
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-use-case-scenario.html
-  - title: Step engine workflow overview
+  - title: "Step engine: Workflow overview"
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-workflow-overview.html
 ---
 

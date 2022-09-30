@@ -145,7 +145,7 @@ class HelloWorldBusinessFactory extends AbstractBusinessFactory
 }
 ```
 
-3. Create the `HelloWorldFacade` and call this functionality from it:
+3. Create the `HelloWorldFacade` and the corresponding interface and call this functionality from it:
 
 ```php
 <?php
@@ -165,6 +165,20 @@ class HelloWorldFacade extends AbstractFacade implements HelloWorldFacadeInterfa
     {
          return  $this->getFactory()->createMessageGenerator()->generateHelloMessage();
     }
+}
+```
+
+```
+<?php
+
+namespace Pyz\Zed\HelloWorld\Business;
+
+interface HelloWorldFacadeInterface
+{
+    /**
+     * @return string
+     */
+    public function getSalutationMessage();
 }
 ```
 

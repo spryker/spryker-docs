@@ -1,3 +1,10 @@
+---
+title: Glue API - Glue Authorization Scopes integration
+description: 
+last_updated: September 30, 2022
+template: feature-integration-guide-template
+---
+
 This page will demonstrate how to use scopes in Authorization for Storefront API application and Backend API application into a Spryker project.
 
 * * *

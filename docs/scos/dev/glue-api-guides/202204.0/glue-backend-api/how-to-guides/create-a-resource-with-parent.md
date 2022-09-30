@@ -1,3 +1,10 @@
+---
+title: How to create a resource with a parent
+description: 
+last_updated: September 30, 2022
+template: howto-guide-template
+---
+
 Glue API allows the creation of resources with parent-child relationships or, in other words, nested resources. In order to enable such behavior a resource that implements `Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceWithParentPluginInterface` has to be created.
 
 Such a plugin routes requests from the parent resources to the correct child resource. This interface must be implemented together with **ResourceInterface**.

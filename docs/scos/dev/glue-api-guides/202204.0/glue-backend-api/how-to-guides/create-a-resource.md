@@ -1,3 +1,10 @@
+---
+title: How to create a resource
+description: 
+last_updated: September 30, 2022
+template: howto-guide-template
+---
+
 This guide will show the process of creation the API endpoint using a resource for the Storefront API application.
 
 * * *

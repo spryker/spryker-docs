@@ -1,3 +1,9 @@
+---
+title: How to create a route
+description: 
+last_updated: September 30, 2022
+template: howto-guide-template
+---
 New Glue allows creation of plain routes directly to a controller. This might be useful in a variety of cases. For example, building a non-resource-based API or endpoints that do not need or cannot be adapted to use resources.
 
 Custom routes are based on Symfony routing.

@@ -1,3 +1,10 @@
+---
+title: How to use authorization framework
+description: 
+last_updated: September 30, 2022
+template: howto-guide-template
+---
+
 This page will demonstrate how to create a new authorization strategy.
 
 Integrate authorization following this guide [https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-authorization-enabler.html](https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-authorization-enabler.html).

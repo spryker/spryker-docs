@@ -1,3 +1,10 @@
+---
+title: How to use OOTB Glue parameters
+description: 
+last_updated: September 30, 2022
+template: howto-guide-template
+---
+
 Glue conventions provide some parameters parsing out of the box. Among them:
 
 *   Pagination

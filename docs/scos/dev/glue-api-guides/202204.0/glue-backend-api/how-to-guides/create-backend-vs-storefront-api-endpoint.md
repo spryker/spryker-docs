@@ -1,3 +1,10 @@
+---
+title: Creating a Backend vs a Storefront API endpoint
+description: 
+last_updated: September 30, 2022
+template: howto-guide-template
+---
+
 New Glue infrastructure has introduced the possibility to build not only storefront but also backend APIs in the same project. Storefront APIs inherit the possibilities of old Glue in terms of what they can do and what they have access to (Storage and ElasticSearch, make RPC Zed calls via Clients). Backend APIs have direct access to Facades that enables creation of performant backend APIs projects often need.
 
 This document will describe how exactly the code in a backend and storefront API modules are different. It will focus on the differences.

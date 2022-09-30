@@ -1,3 +1,10 @@
+---
+title: How to create protected endpoints
+description: 
+last_updated: September 30, 2022
+template: howto-guide-template
+---
+
 This guide will show the process of creating the protected endpoint using a resource for the Storefront and Backend API applications.
 
 * * *

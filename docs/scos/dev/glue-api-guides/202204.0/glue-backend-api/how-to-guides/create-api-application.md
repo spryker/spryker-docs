@@ -1,3 +1,9 @@
+---
+title: How to create a new API application
+description: 
+last_updated: September 30, 2022
+template: howto-guide-template
+---
 The new Glue projects have the possibility to create API applications. This is what you need to do in order to create one.
 
 ### Docker configuration

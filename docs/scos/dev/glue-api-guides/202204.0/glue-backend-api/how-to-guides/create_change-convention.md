@@ -1,3 +1,9 @@
+---
+title: How to create or change a convention
+description: 
+last_updated: September 30, 2022
+template: howto-guide-template
+---
 New Glue infrastructure implements the Convention feature. Through it, you can change the way your API accepts or returns data.
 
 [comment]: <> (TODO: Add diagram)

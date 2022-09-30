@@ -1,3 +1,10 @@
+---
+title: How to document Glue API endpoints
+description: 
+last_updated: September 30, 2022
+template: howto-guide-template
+---
+
 You can enhance the way your resource is described in the [OPENAPI v3 schema](https://swagger.io/docs/specification/basic-structure/). Use `vendor/bin/glue api:generate:documentation` console command to generate the doc. By default, the command will be generating the documentation for all the configured applications. There is an optional `application` parameter you can pass to select the application.
 
 ```

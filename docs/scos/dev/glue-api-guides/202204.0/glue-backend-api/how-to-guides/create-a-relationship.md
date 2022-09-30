@@ -1,3 +1,9 @@
+---
+title: How to create a JSON:API relationship
+description: 
+last_updated: September 30, 2022
+template: howto-guide-template
+---
 This guide describes how to add resources through relationships. The following concept is allowed only for applications that implemented the Glue Json API convention.
 
 * * *

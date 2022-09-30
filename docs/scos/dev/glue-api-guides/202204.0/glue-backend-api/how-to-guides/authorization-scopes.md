@@ -1,3 +1,9 @@
+---
+title: How to use Glue API authorization scopes
+description: 
+last_updated: September 30, 2022
+template: howto-guide-template
+---
 This guide describes how to add scopes to the resource and custom route for the Storefront API and Backend API applications.
 
 * * *

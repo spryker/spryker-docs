@@ -4,13 +4,12 @@ description:
 last_updated: September 30, 2022
 template: howto-guide-template
 ---
-New Glue allows creation of plain routes directly to a controller. This might be useful in a variety of cases. For example, building a non-resource-based API or endpoints that do not need or cannot be adapted to use resources.
+
+New Glue lets you create plain routes directly to a controller. This might be useful in a variety of cases. For example, building a non-resource-based API or endpoints that do not need or cannot be adapted to use resources.
 
 Custom routes are based on Symfony routing.
 
 This guide will show the process of creation of the API endpoint using a custom route.
-
-* * *
 
 Let’s say we have a Storefront module named `FooApi` where we want to have a new backend API endpoint `/foo/bar` with GET and POST methods.
 
@@ -45,7 +44,7 @@ I will just return an empty response for now, but module’s Factory is availabl
 
 Pay attention to the `AbstractController` you use, Storefront and Backend variation exists in Glue layer.
 
-2. Create `FooBarRouteProviderPlugin`:`\Pyz\Glue\FooApi\Plugin\FooBarRouteProviderPlugin`
+1. Create `FooBarRouteProviderPlugin`:`\Pyz\Glue\FooApi\Plugin\FooBarRouteProviderPlugin`
 
 ```
 <?php

@@ -79,7 +79,7 @@ class FooRestResource extends AbstractResourcePlugin implements ResourceInterfac
 ```
 </details>
 
-1. Declare the resource:
+4. Declare the resource:
 
 **\Pyz\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider**
 

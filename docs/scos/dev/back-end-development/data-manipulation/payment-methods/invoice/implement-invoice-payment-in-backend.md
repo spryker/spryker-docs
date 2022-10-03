@@ -1,6 +1,6 @@
 ---
-title: Implementing Invoice payment in back end
-description: This document describes how to implement invoice payment in the back end.
+title: Implement invoice payment in backend
+description: This document describes how to implement invoice payment in the backend.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-invoice-payment-be
@@ -22,29 +22,29 @@ redirect_from:
   - /v2/docs/en/ht-invoice-payment-be
   - /v1/docs/ht-invoice-payment-be
   - /v1/docs/en/ht-invoice-payment-be
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-back-end.html
 related:
-  - title: Implementing Invoice payment
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment.html
-  - title: Implementing Invoice payment in front end
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html
-  - title: Implementing Invoice payment in shared layer
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-shared-layer.html
-  - title: Integrating Invoice payment into checkout
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrating-invoice-payment-into-checkout.html
-  - title: Testing the Invoice payment implementation
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/testing-the-invoice-payment-implementation.html
+  - title: Implement invoice payment
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment.html
+  - title: Implement invoice payment in frontend
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html
+  - title: Implement invoice payment in shared layer
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-shared-layer.html
+  - title: Integrate invoice payment into checkout
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html
+  - title: Test the invoice payment implementation
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
 ---
 
-## Checkout Plugins
+## Checkout plugins
 
-To integrate the invoice payment method into the checkout, we need to provide implementations for these 2 plugins:
-
+To integrate the invoice payment method into the checkout, you need to provide implementations for the following plugins:
 * `CheckoutPreCondition`
 * `PaymentSaveOrder`
 
-Perform the following procedure:
+Perform the following steps:
 
-1. Add the following 2 plugins in Zed, inside the `Communication/Plugin/Checkout/` folder of the new added module.
+1. Add the following plugins to Zed, inside the `Communication/Plugin/Checkout/` folder of the newly added module.
 
 <details>
 <summary markdown='span'>InvoicePreCheckPlugin</summary>
@@ -111,7 +111,7 @@ class InvoiceSaveOrderPlugin extends AbstractPlugin implements CheckoutSaveOrder
 ```
 </details>
 
-1. Next, inject these 2 plugins in the `Payment` module by creating a `PaymentDependencyInjector` under `Dependency/Injector/` folder:
+2. Next, inject these two plugins into the `Payment` module by creating a `PaymentDependencyInjector` under the `Dependency/Injector/` folder:
 
 <details>
 <summary markdown='span'>Code sample:</summary>
@@ -164,9 +164,9 @@ class PaymentDependencyInjector extends AbstractDependencyInjector
 ```
 </details>
 
-## State machine
+## Design a state machine
 
-Once the preceding procedures are completed, we'll need to design a state machine. This state machine is dedicated for processing orders that use direct debit as a payment type:
+Once the preceding procedures are completed, you need to design a state machine. This state machine is meant for processing orders that use direct debit as a payment type:
 
 1. Add the `Invoice.xml` file inside the `config/Zed/oms/` folder, with the following content:
 

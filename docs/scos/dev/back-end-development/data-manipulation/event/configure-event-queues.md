@@ -1,5 +1,6 @@
 ---
-title: Configuring an events queue
+title: Configure event queues
+description: This document shows how to configure event queues
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/event-configure-q
@@ -21,6 +22,7 @@ redirect_from:
   - /v2/docs/en/event-configure-q
   - /v1/docs/event-configure-q
   - /v1/docs/en/event-configure-q
+  - /docs/scos/dev/back-end-development/data-manipulation/event/configuring-an-events-queue.html
 related:
   - title: Event
     link: docs/scos/dev/back-end-development/data-manipulation/event/event.html
@@ -32,7 +34,7 @@ related:
 
 This document describes how event queues are configured.
 
-To configure the events queue:
+To configure the event queue, follow these steps:
 
 1. Install `spryker/queue` version at least 1.*. and `spryker/rabbit-mq`
 2. Create the configuration for RabbitMQ in `\Pyz\Client\RabbitMq\RabbitMqDependencyProvider` as follows:
@@ -201,7 +203,7 @@ class QueueConfig extends SprykerQueueConfig
 }
 ```
 
-5. In `\Pyz\Zed\Queue\QueueDependencyProvider`, add a plugin(consumer) to process messages/events.
+5. In `\Pyz\Zed\Queue\QueueDependencyProvider`, add a plugin (consumer) to process messages or events.
 
 ```php
 <?php
@@ -230,7 +232,7 @@ class QueueDependencyProvider extends SprykerDependencyProvider
 }
 ```
 
-6. In your application's configuration file `./config/Shared/config_default.php` or environment specific make sure you have this configuration:
+6. In your application's configuration file `./config/Shared/config_default.php` or environment specific, make sure you have this configuration:
 
 ```php
 <?php

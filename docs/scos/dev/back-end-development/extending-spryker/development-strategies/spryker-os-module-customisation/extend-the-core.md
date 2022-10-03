@@ -1,6 +1,6 @@
 ---
-title: Extending the core
-description: There are three ways to extend classes from the core- replacement class, inheritance object, composition. Each of them has its advantages and disadvantages.
+title: Extend the core
+description: There are three ways to extend classes from the core—replacement class, inheritance object, and composition.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/core-extension
@@ -25,30 +25,30 @@ redirect_from:
   - /v1/docs/core-extension
   - /v1/docs/en/core-extension
   - /docs/scos/dev/back-end-development/extending-spryker/extending-the-core.html
+  - /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html
 related:
-  - title: Extending the Spryker Core functionality
-    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-spryker-core-functionality.html
-  - title: Extending a core module that is used by another
-    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html
+  - title: Extend the Spryker Core functionality
+    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
+  - title: Extend a core module that is used by another
+    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
 ---
 
-We offer several ways like plugins to hook into the core's behavior and extend this without modifications. But sometimes this is not enough, so you need to replace a method which is deep in the core.
+We offer several ways like plugins to hook into the core's behavior and extend this without modifications. But sometimes this is not enough, so you need to replace a method that is deep in the core.
 
-Before you proceed, double-check if there is no other way to solve your requirement, maybe there is a facade method that fits in or you can use plugins. It is important to understand that if you do a core extension, you are behind the stable internal APIs, so there is no guarantee that the extended class is not modified, renamed or even non-existing in the next release. Therefore, you take over responsibility for your extension and it is highly recommended to cover it with unit tests. In case it is not urgent you can request a change in our support desk to get an official extension point.
+Before you proceed, double-check if there is no other way to solve your requirement, maybe there is a facade method that fits in or you can use plugins. You must understand that if you do a core extension, you are behind the stable internal APIs, so there is no guarantee that the extended class is not modified, renamed, or even non-existing in the next release. Therefore, you take over responsibility for your extension, and it is highly recommended to cover it with unit tests. If it is not urgent, you can request a change in our support desk to get an official extension point.
 
 There are three ways to extend classes from the core:
-
-* replacement class
-* inheritance object
-* composition
+* Replacement class
+* Inheritance object
+* Composition
 
 Each of them has its advantages and disadvantages.
 
-## Extension via replacement
+## Extension using replacement
 
-In case you want to completely replace a class from the core, you can add a class that contains all the `public` methods from the original class and implements the same interface.
+To completely replace a class from the core, add a class that contains all the `public` methods from the original class and implements the same interface.
 
-## Extension via class inheritance
+## Extension using class inheritance
 
 You can extend a class from the core and overwrite just the public or protected methods you need. This works well because internally there are almost no `private` methods and no `final` classes.
 
@@ -66,9 +66,9 @@ class AnyModel extends SprykerAnyModel
 }
 ```
 
-## Extension via object composition
+## Extension using object composition
 
-As an alternative to the class inheritance, you can also implement composition of objects. This approach is more flexible and more robust but it requires more work in the initial implementation. You need to implement the same interface and provide all public methods. So you need to copy over some lines of code from the core to the project. This way you take over more control about this code.
+As an alternative to class inheritance, you can also implement the composition of objects. This approach is more flexible and robust, but it requires more work in the initial implementation. You need to implement the same interface and provide all public methods. So you need to copy over some lines of code from the core to the project. This way you take over more control about this code.
 
 ```php
 <?php
@@ -112,9 +112,10 @@ class AnyModel implements AnyModelInterface
 
 ## Add your class to the factory
 
-When you extend a class from the core, you want the core code to go use that one instead of the original class. To do so, add a [factory](/docs/scos/dev/back-end-development/factory/factory.html) to the same module and same layer. This factory must extend its equivalent from the core. Core will automatically detect the overwritten factory and use it. Now, you can easily exchange the classes and your extension.
+When you extend a class from the core, you want the core code to go use that one instead of the original class. To do so, add a [factory](/docs/scos/dev/back-end-development/factory/factory.html) to the same module and same layer. This factory must extend its equivalent from the core. The core will automatically detect the overwritten factory and use it. Now, you can easily exchange the classes and your extension.
 
 **Example:**
+
 | PATH | DESCRIPTION |
 | --- | --- |
 | `Pyz\Zed\MyBundle\Business\MyBundleBusinessFactory`|Factory on a project level|

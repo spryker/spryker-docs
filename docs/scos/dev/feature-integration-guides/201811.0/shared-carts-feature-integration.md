@@ -8,6 +8,7 @@ originalArticleId: 3459b42e-9e0b-47a0-8774-5755e00c9353
 redirect_from:
   - /v1/docs/shared-carts-feature-integration-201811
   - /v1/docs/en/shared-carts-feature-integration-201811
+  - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/shared-carts-feature-integration.html
 ---
 
 ## Install Feature Core

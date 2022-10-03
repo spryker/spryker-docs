@@ -1,6 +1,6 @@
 ---
-title: Implementing Prepayment in back end
-description: This document describes how to implement prepayment in the back end.
+title: Implement prepayment in backend
+description: This document describes how to implement prepayment in the backend.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-be
@@ -22,27 +22,28 @@ redirect_from:
   - /v2/docs/en/ht-prepayment-be
   - /v1/docs/ht-prepayment-be
   - /v1/docs/en/ht-prepayment-be
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html
 related:
-  - title: Implementing Prepayment
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment.html
-  - title: Implement Prepayment in front end
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-front-end.html
-  - title: Implementing Prepayment in shared layer
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html
-  - title: Integrating Prepayment into checkout
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrating-prepayment-into-checkout.html
-  - title: Testing the Prepayment implementation
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/testing-the-prepayment-implementation.html
+  - title: Implement prepayment
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
+  - title: Implement prepayment in frontend
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
+  - title: Implement prepayment in shared layer
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
+  - title: Integrate Prepayment into checkout
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
+  - title: Test the Prepayment implementation
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
 ---
 
-To integrate the prepayment method into the checkout, we need to provide implementations for these 2 plugins:
+To integrate the prepayment method into the checkout, you need to provide implementations for these two plugins:
 
 * `CheckoutPreCondition`
 * `PaymentSaveOrder`
 
-Perform the following procedure:
+Perform the following steps:
 
-1. Add the following 2 plugins in Zed, inside the `Communication/Plugin/Checkout/` folder of the new added module.
+1. Add the following plugins in Zed, in the `Communication/Plugin/Checkout/` folder of the newly added module.
 
 <details>
 <summary markdown='span'>PrepaymentPreCheckPlugin</summary>
@@ -75,7 +76,6 @@ class PrepaymentPreCheckPlugin extends AbstractPlugin implements CheckoutPreChec
 }
 ```
 
-<br>
 </details>
 
 <details>
@@ -107,10 +107,9 @@ class PrepaymentSaveOrderPlugin extends AbstractPlugin implements CheckoutSaveOr
 }
 ```
 
-<br>
 </details>
 
-2. Next, inject these 2 plugins in the `Payment` module by creating a `PaymentDependencyInjector` under `Dependency/Injector` folder:
+2. Inject these plugins into the `Payment` module by creating the `PaymentDependencyInjector` in the `Dependency/Injector` folder:
 
 ```php
 <?php
@@ -159,15 +158,16 @@ class PaymentDependencyInjector extends AbstractDependencyInjector
 }
 ```
 
-<br>
 
 3. Link the prepayment state machine to process the orders submitted with the payment method we're implementing.
 
 {% info_block warningBox %}
-We'll use the prepayment state machine that's delivered with Demoshop.
+
+Use the prepayment state machine that's delivered with Demoshop.
+
 {% endinfo_block %}
 
-Add this configuration in the `SalesConfig` class:
+In the `SalesConfig` class, add this configuration:
 
 ```
 /**

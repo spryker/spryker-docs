@@ -1,5 +1,5 @@
 ---
-title: Adding a New Module
+title: Add a new module
 description: When a new concept needs to be defined, a new module needs to be added on the project side to encapsulate that concept. The new module needs to follow the same folder structure and conventions as the ones in Core.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -23,25 +23,24 @@ redirect_from:
   - /v1/docs/t-add-new-bundle
   - /v1/docs/en/t-add-new-bundle
   - /docs/scos/dev/back-end-development/extending-spryker/adding-a-new-module.html
+  - /docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html
 ---
 
 {% info_block infoBox %}
 
-In this tutorial we will create a test module: `HelloWorld` module; the module's functionality is to show a 'Hello world!' message to the user.
+This tutorial shows how to create a test `HelloWorld` module; the module's functionality is to display a _Hello world!_ message to users.
 
 {% endinfo_block %}
 
-When a new concept needs to be defined, a new module needs to be added on the project side to encapsulate that concept. The new module needs to follow the same folder structure and conventions as the ones in Core.
+When a new concept needs to be defined, you need to add a new module on the project side to encapsulate that concept. The new module needs to follow the same folder structure and conventions as the ones in Core.
 
 ## Prerequisites
 
-To implement this functionality, it's necessary to have an index view together with its matching controller and a `HelloWorld` dependency provider.
+To implement this functionality, you need an index view together with its matching controller and a `HelloWorld` dependency provider.
 
-## Creating a new module
+## Create a new module
 
-To create a new module:
-
-1. Run the following commands to create the necessary files, following the folder structure conventions:
+1. Create the necessary files, following the folder structure conventions:
 
 ```bash
 mkdir -p src/Pyz/Zed/HelloWorld/Presentation/Index
@@ -53,7 +52,7 @@ touch src/Pyz/Zed/HelloWorld/Communication/Controller/IndexController.php
 touch src/Pyz/Zed/HelloWorld/HelloWorldDependencyProvider.php
 ```
 
-2. Insert the 'Hello world !' message inside the view (`index.twig`):
+2. In the view (`index.twig`), add the _Hello world !_ message:
 
 ```twig
 {% raw %}{%{% endraw %} extends '@Gui/Layout/layout.twig' {% raw %}%}{% endraw %}
@@ -63,7 +62,7 @@ touch src/Pyz/Zed/HelloWorld/HelloWorldDependencyProvider.php
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-`IndexController`at the moment is empty (its index action returns an empty array) :
+`IndexController` is empty (its index action returns an empty array):
 
 ```php
 <?php
@@ -93,17 +92,20 @@ class HelloWorldDependencyProvider extends AbstractBundleDependencyProvider
 }
 ```
 
-Additionally, you can use the code generator to create a module. For this, run `console spryk:run AddModule` that will create the basic module structure.
+Additionally, you can use the code generator to create a module. For this, create the basic module structure:
 
-<!-- for demoshop --> Requesting the URL `https://zed.mysprykershop.com/hello-world` will show the Hello World example.
+```bash
+console spryk:run AddModule
+```
+Requesting the URL `https://zed.mysprykershop.com/hello-world` shows the Hello World example.
 
-## Displaying a random salutation message
+## Display a random salutation message
 
-We can now extend this example to display a random salutation message on the screen. For this, we'll create a class that will contain the logic for generating the random salutation message; we'll call it `MessageGenerator` and we will place it under the business layer.
+You can extend this example to display a random salutation message on the screen. For this, you need to create a class containing the logic for generating the random salutation message, name it `MessageGenerator`, and place it under the business layer.
 
-**To display a random salutation message:**
+To display a random salutation message, follow these steps:
 
-1. In this class, implement the method that will return the message:
+1. In `MessageGenerator`, implement the method that returns the message:
 
 ```php
 <?php
@@ -123,7 +125,7 @@ class MessageGenerator
 }
 ```
 
-2. Next, add a business factory so that we can get an instance of this class in the facade:
+2. To get an instance of this class in the facade, add a business factory:
 
 ```php
 <?php
@@ -145,7 +147,7 @@ class HelloWorldBusinessFactory extends AbstractBusinessFactory
 }
 ```
 
-3. Create the `HelloWorldFacade` and call this functionality from it:
+3. Create `HelloWorldFacade` and call this functionality from it:
 
 ```php
 <?php
@@ -168,7 +170,7 @@ class HelloWorldFacade extends AbstractFacade implements HelloWorldFacadeInterfa
 }
 ```
 
-4. Modify the controller so that it calls the method you just added to your facade:
+4. Modify the controller so that it calls the method added to your facade:
 
 ```php
 <?php
@@ -204,4 +206,4 @@ class IndexController extends AbstractController
 {% raw %}{%{% endraw %} endblock {% raw %}%}{% endraw %}
 ```
 
-<!-- for demoshop --> We are done! http://zed.mysprykershop.com/ now displays a random salutation message.
+<!-- for demoshop -->http://zed.mysprykershop.com/ displays a random salutation message.

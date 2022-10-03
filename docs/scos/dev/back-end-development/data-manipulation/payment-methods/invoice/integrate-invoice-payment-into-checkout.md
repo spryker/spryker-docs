@@ -1,5 +1,5 @@
 ---
-title: Integrating Invoice payment into checkout
+title: Integrate invoice payment into checkout
 description: This document provides information on how to integrate the invoice payment into the checkout.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,20 +22,23 @@ redirect_from:
   - /v2/docs/en/ht-invoice-payment-checkout
   - /v1/docs/ht-invoice-payment-checkout
   - /v1/docs/en/ht-invoice-payment-checkout
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrating-invoice-payment-into-checkout.html
 related:
-  - title: Implementing Invoice payment
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment.html
-  - title: Implementing Invoice payment in front end
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html
-  - title: Implementing Invoice payment in back end
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-back-end.html
-  - title: Implementing Invoice payment in shared layer
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-shared-layer.html
-  - title: Testing the Invoice payment implementation
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/testing-the-invoice-payment-implementation.html
+  - title: Implement invoice payment
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment.html
+  - title: Implement invoice payment in frontend
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html
+  - title: Implement invoice payment in backend
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-backend.html
+  - title: Implement invoice payment in shared layer
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-shared-layer.html
+  - title: Test the invoice payment implementation
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
 ---
 
-The next step is to integrate the invoice payment into Checkout. In the `PaymentMethods/Dependency/Injector` from in Yves add the `CheckoutDependencyInjector` that will inject the invoice form and handler into the `Checkout` module:
+This document describes how to integrate invoice payment into the checkout.
+
+In `PaymentMethods/Dependency/Injector`, in Yves, add `CheckoutDependencyInjector` that injects the invoice form and handler into the `Checkout` module:
 
 <details>
 <summary markdown='span'>Code sample:</summary>
@@ -106,6 +109,6 @@ class CheckoutDependencyInjector implements DependencyInjectorInterface
 
 {% info_block errorBox %}
 
-If you recreated this example in Demoshop, you'll need to do some adjustments on the `selectPayment()` from `checkout.js`.
+If you recreate this example in Demoshop, you'll need to do some adjustments on `selectPayment()` from `checkout.js`.
 
 {% endinfo_block %}

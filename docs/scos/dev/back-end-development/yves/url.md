@@ -1,6 +1,6 @@
 ---
 title: URL
-description: The URL module handles dynamic URLs for entities that appear on the front-end (Yves)
+description: The URL module handles dynamic URLs for entities that appear on the frontend (Yves)
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/url
@@ -24,7 +24,7 @@ redirect_from:
   - /v1/docs/en/url
 ---
 
-The URL module handles dynamic URLs for entities that appear on the front-end (Yves). At the moment, Spryker core provides URL handling for products, CMS pages, categories and URL redirects.
+The URL module handles dynamic URLs for entities that appear on the frontend (Yves). At the moment, Spryker core provides URL handling for products, CMS pages, categories and URL redirects.
 
 The URLs are stored in one database table and each is unique. Spryker OS avoids multiple URLs heading to a single entity, as it leads to a poor SEO support. Only one URL should be active for a single entity, other URLs should be set as URL redirects.
 

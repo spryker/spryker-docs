@@ -24,15 +24,14 @@ redirect_from:
 related:
   - title: Add events
     link: docs/scos/dev/back-end-development/data-manipulation/event/add-events.html
-  - title: Configuring an events queue
-    link: docs/scos/dev/back-end-development/data-manipulation/event/configuring-an-events-queue.html
-  - title: Listening to events
-    link: docs/scos/dev/back-end-development/data-manipulation/event/listening-to-events.html
+  - title: Configure event queues
+    link: docs/scos/dev/back-end-development/data-manipulation/event/configure-event-queues.html
+  - title: Listen to events
+    link: docs/scos/dev/back-end-development/data-manipulation/event/listen-to-events.html
 ---
 
-The Event module implements an Observer pattern where you can add hooks (events) to your code and allow other modules to listen and react to those events.
+The `Event` module implements an Observer pattern where you can add hooks (events) to your code and allow other modules to listen and react to those events.
 
 There are two methods:
-
-1. Traditional Synchronous where listeners are handled at the same time as they are dispatched
-2. Asynchronous (Queueable) where events are put into a queue and handled later by some queue service.
+1. _Traditional Synchronous_: Listeners are handled at the same time as they are dispatched.
+2. _Asynchronous (Queueable)_: Events are put into a queue and handled later by some queue service.

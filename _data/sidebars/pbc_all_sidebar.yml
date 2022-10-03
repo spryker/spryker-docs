@@ -88,6 +88,8 @@ entries:
       - title: Cart and Checkout
         url: /docs/pbc/all/cart-and-checkout/cart-and-checkout.html
         nested:
+          - title: What's changed
+            url: /docs/pbc/all/cart-and-checkout/whats-changed-in-cart-and-checkout.html
           - title: Cart feature overview
             url: /docs/pbc/all/cart-and-checkout/cart-feature-overview/cart-feature-overview.html
             nested:

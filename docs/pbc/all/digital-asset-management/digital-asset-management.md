@@ -111,7 +111,7 @@ Check [Integrating custom location for static assets](/docs/scos/dev/technical-e
 
 | OVERVIEWS |BACK OFFICE USER GUIDES|
 | - | - |
-| [Asset management](/docs/pbc/all/digital-asset-management/file-manager-feature-overview/asset-management.html) | [Upload files to the Back Office](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-tree.html#uploading-files) |
+| [Asset management](/docs/pbc/all/digital-asset-management/digital-asset-management.html) | [Upload files to the Back Office](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-tree.html#uploading-files) |
 
 ## Related Business User articles
 

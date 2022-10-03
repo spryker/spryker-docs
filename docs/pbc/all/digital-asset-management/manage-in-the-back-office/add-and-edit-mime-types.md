@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/202204.0/administration/add-and-edit-mime-types.html   
 related:
   - title: Managing File Tree
-    link: docs/pbc/all/digital-asset-management/manage-in-the-back-office/managing-file-tree.html
+    link: docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-tree.html
   - title: Managing File List
     link: docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-list.html
   - title: File Manager feature overview

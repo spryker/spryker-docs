@@ -1,27 +1,24 @@
 ---
 title: How to create or change a convention
-description: 
+description: New Glue infrastructure implements the *Convention* feature. Through it, you can change the way your API accepts or returns data.
 last_updated: September 30, 2022
 template: howto-guide-template
 ---
-New Glue infrastructure implements the Convention feature. Through it, you can change the way your API accepts or returns data.
 
-[comment]: <> (TODO: Add diagram)
+New Glue infrastructure implements the *Convention* feature. Through it, you can change the way your API accepts or returns data.
 
-So a convention has a say in every step of the request flow:
+<!-- (TODO: Add diagram) -->
 
-*   Resolving the convention happens first. Any data in the `GlueRequestTransfer` can affect the resolution of the convention. For example, projects can pull attributes from a certain location in the content.
-    
-*   During the building request step, it’s possible to extract and pre-format the data from the raw request data.
-    
-*   Convention can add validation steps that are necessary for its flow, both before and after the routing.
-    
-*   Formatting response can be used to wrap the response attributes in the convention-determined wrapper.
-    
+ A Convention has a say in every step of the request flow:
 
-In order to introduce a new Convention, implement `ApiConventionPluginInterface`.
+* Resolving the convention happens first. Any data in `GlueRequestTransfer` can affect the resolution of the convention. For example, projects can pull attributes from a certain location in the content.
+* During the building request step, you can extract and preformat the data from the raw request data.
+* A convention can add validation steps that are necessary for its flow, both before and after the routing.
+* Formatting response can be used to wrap the response attributes in the convention-determined wrapper.
 
-```
+To introduce a new Convention, implement `ApiConventionPluginInterface`.
+
+```php
 <?php
 
 namespace Spryker\Glue\GlueJsonApiConvention\Plugin\GlueApplication;
@@ -70,7 +67,7 @@ class CustomConventionPlugin extends AbstractPlugin implements ConventionPluginI
      */
     public function getResourceType(): string
     {
-        // This interface should be implemented by resources that follow this convention.
+        // This interface must be implemented by resources that follow this convention.
 
         return CustomResourceInterface::class;
     }

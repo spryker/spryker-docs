@@ -10,8 +10,8 @@ This guide shows how to create an API endpoint using a resource for the Storefro
 Let’s say you have a module named `FooApi`, where you want to have a new endpoint `/foo` with `GET` and `POST` methods. To create an endpoint, follow these steps:
 
 1. Create `FooApiConfig` and add resource name:
-    
- `\Pyz\Glue\FooApi\FooApiConfig` 
+
+**\Pyz\Glue\FooApi\FooApiConfig`**
 
  ```php
 <?php
@@ -51,7 +51,9 @@ class FooApiConfig extends AbstractBundleConfig
 </transfers>
 ```
 
-3. Create `FooController`: `\Pyz\Glue\FooApi\Controller\FooController`:
+3. Create `FooController`: 
+
+**\Pyz\Glue\FooApi\Controller\FooController`**
 
 ```php
 <?php
@@ -96,12 +98,11 @@ The `AbstractStorefrontApiController` can be used only for Storefront API. For B
 
 {% endinfo_block %}
 
-
-
 4. Create `FooResource`:
 
 For accepting the JSON API convention, the resource must implement `JsonApiResourceInterface`.
-`\Pyz\Glue\FooApi\Plugin\FooResource`
+
+**\Pyz\Glue\FooApi\Plugin\FooResource**
 
 ```PHP
 <?php
@@ -138,9 +139,11 @@ class FooResource extends AbstractResourcePlugin implements ResourceInterface
             );
     }
 }
-
 ```
-5. Declare the resource: `\Pyz\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider`
+
+5. Declare the resource: 
+
+**\Pyz\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider**
 
 ```php
 <?php

@@ -7,7 +7,7 @@ template: howto-guide-template
 
 This guide describes how to add resources through relationships. The following concept is allowed only for applications that implemented the Glue JSON API convention.
 
-Let’s say you have a module named `FooApi`, where you want to add the `bar` resource related to the `foo` resource. To do this, follow these steps:
+Let's say you have a module named `FooApi`, where you want to add the `bar` resource related to the `foo` resource. To do this, follow these steps:
 
 1. Create `FooBarResourceRelationshipPlugin`:
 

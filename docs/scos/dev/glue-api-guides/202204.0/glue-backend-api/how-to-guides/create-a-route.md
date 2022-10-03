@@ -11,7 +11,7 @@ Custom routes are based on Symfony routing.
 
 This guide will show the process of creation of the API endpoint using a custom route.
 
-Let’s say we have a Storefront module named `FooApi` where we want to have a new backend API endpoint `/foo/bar` with GET and POST methods.
+Let's say we have a Storefront module named `FooApi` where we want to have a new backend API endpoint `/foo/bar` with GET and POST methods.
 
 1\. Create a `FooBarController` with the action:
 `\Pyz\Glue\FooApi\Controller\FooBarController`
@@ -40,7 +40,7 @@ class FooBarController extends AbstractController
 }
 
 ```
-I will just return an empty response for now, but module’s Factory is available and can be used to access Processor models or external dependencies the same way it is done everywhere in Spryker.
+I will just return an empty response for now, but module's Factory is available and can be used to access Processor models or external dependencies the same way it is done everywhere in Spryker.
 
 Pay attention to the `AbstractController` you use, Storefront and Backend variation exists in Glue layer.
 
@@ -133,7 +133,7 @@ curl --location --request GET 'http://glue-backend.de.spryker.local/foo/bar' \
 
 * * *
 
-Now let’s add a POST method to the same route.
+Now let's add a POST method to the same route.
 
 7. Add a method to a controller: `\Pyz\Glue\FooApi\Controller\FooBarController`
 ```

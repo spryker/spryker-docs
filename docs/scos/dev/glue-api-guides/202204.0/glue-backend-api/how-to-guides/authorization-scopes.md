@@ -6,7 +6,7 @@ template: howto-guide-template
 ---
 This guide describes how to add scopes to the resource and custom route for the Storefront API and Backend API applications.
 
-Let’s say you have a module named `FooApi` with `GET` and `POST` methods, where you want to add scopes. To add scopes, follow these steps:
+Let's say you have a module named `FooApi` with `GET` and `POST` methods, where you want to add scopes. To add scopes, follow these steps:
 
 1. Set up a resource for the Storefront API application and a route for the Backend API application.
 

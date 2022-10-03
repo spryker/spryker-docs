@@ -7,7 +7,7 @@ template: howto-guide-template
 
 This guide shows how to create an API endpoint using a resource for the Storefront API application.
 
-Let’s say you have a module named `FooApi`, where you want to have a new endpoint `/foo` with `GET` and `POST` methods. To create an endpoint, follow these steps:
+Let's say you have a module named `FooApi`, where you want to have a new endpoint `/foo` with `GET` and `POST` methods. To create an endpoint, follow these steps:
 
 1. Create `FooApiConfig` and add resource name:
 

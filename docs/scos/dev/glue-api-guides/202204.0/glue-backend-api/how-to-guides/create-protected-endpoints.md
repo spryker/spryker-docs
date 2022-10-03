@@ -9,7 +9,7 @@ This guide will show the process of creating the protected endpoint using a reso
 
 * * *
 
-Let’s say we have a module named `FooApi` where we want to have a new protected endpoint `/foo` with GET and POST methods.
+Let's say we have a module named `FooApi` where we want to have a new protected endpoint `/foo` with GET and POST methods.
 
     
 Add a route or regular expression for the endpoint into `src/Pyz/Shared/GlueStorefrontApiApplicationAuthorizationConnector/GlueStorefrontApiApplicationAuthorizationConnectorConfig.php` in order to set up it protected.

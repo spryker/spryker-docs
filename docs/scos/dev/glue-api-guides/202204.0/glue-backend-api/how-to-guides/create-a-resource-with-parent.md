@@ -11,7 +11,7 @@ Such a plugin routes requests from the parent resources to the correct child res
 
 The interface provides only one method: `getParentResourceType`. The method must return the type of the immediate parent resource within the context in which the child resource is implemented.
 
-Let’s say you have a module named `FooApi`, where you want to have a new endpoint `/foo/1/bar` with `GET` and `POST` methods. For this, follow these steps:
+Let's say you have a module named `FooApi`, where you want to have a new endpoint `/foo/1/bar` with `GET` and `POST` methods. For this, follow these steps:
 
 1. Create a resource following the how to create a resource guide.
 2. Add a child resource name:

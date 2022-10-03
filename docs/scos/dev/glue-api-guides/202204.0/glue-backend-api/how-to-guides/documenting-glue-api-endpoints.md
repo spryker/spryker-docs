@@ -102,7 +102,7 @@ class PaymentMethodsByCheckoutDataResourceRelationshipPlugin extends AbstractPlu
 
 Always check the schema your resources are described with before releasing your resource.
 
-Below you’ll find the description of the properties you can use in the annotations:
+Below you'll find the description of the properties you can use in the annotations:
 
 |     |     |
 | --- | --- |
@@ -111,7 +111,7 @@ Below you’ll find the description of the properties you can use in the annotat
 | `responseAttributesClassName` | The transfer will be used as a representation of the response attributes. |
 | `isIdNullable` | The (JSON:API) response `id` will be null. |
 | `path` | The resource is available on the path. This property can be used if the type+id is not the path the resource uses. |
-| `summary` | Path’s summary. Text should briefly describe what the endpoint is doing. |
+| `summary` | Path's summary. Text should briefly describe what the endpoint is doing. |
 | `parameters` | The list of parameters the endpoint is accepting. |
 | `isEmptyResponse` | A flag is to be used to mark endpoint that return empty responses. |
 | `responses` | A list responses the endpointcan respond with. The object must contain key-value pairs with HTTP codes as key, and desciption as value. |

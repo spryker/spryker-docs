@@ -1,18 +1,19 @@
 ---
 title: How to create a JSON:API relationship
-description: 
+description: This guide describes how to add resources through relationships
 last_updated: September 30, 2022
 template: howto-guide-template
 ---
-This guide describes how to add resources through relationships. The following concept is allowed only for applications that implemented the Glue Json API convention.
 
-* * *
+This guide describes how to add resources through relationships. The following concept is allowed only for applications that implemented the Glue JSON API convention.
 
-Let’s say we have a module named `FooApi` where we want to add `bar` resource related to `foo` resource.
+Let’s say you have a module named `FooApi`, where you want to add the `bar` resource related to the `foo` resource. To do this, follow these steps:
 
-1.  Create `FooBarResourceRelationshipPlugin`: `src\Pyz\Glue\FooApi\Plugin\FooBarResourceRelationshipPlugin.php`
+1. Create `FooBarResourceRelationshipPlugin`:
 
-```
+**src\Pyz\Glue\FooApi\Plugin\FooBarResourceRelationshipPlugin.php**
+
+```php
 <?php
 
 <?php
@@ -48,8 +49,10 @@ class FooBarResourceRelationshipPlugin extends AbstractPlugin implements Resourc
 ```
 
 2. Now declare the relationship resource:
-   `src\Pyz\Glue\GlueStorefrontApiApplicationGlueJsonApiConventionConnector\GlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvider.php`
-```
+
+**src\Pyz\Glue\GlueStorefrontApiApplicationGlueJsonApiConventionConnector\GlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvider.php**
+
+```php
 <?php
 
 namespace Pyz\Glue\GlueStorefrontApiApplicationGlueJsonApiConventionConnector;
@@ -79,4 +82,5 @@ class GlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvid
     }
 }
 ```
-If everything is set up correctly, you should be able to access `http://glue-storefront.mysprykershop.com/foo?include=bar`
+
+If everything is set up correctly, you can access `http://glue-storefront.mysprykershop.com/foo?include=bar`.

@@ -1,21 +1,17 @@
 ---
 title: How to create protected endpoints
-description: 
+description: This guide shows how to create the protected endpoint using a resource for the Storefront and Backend API applications.
 last_updated: September 30, 2022
 template: howto-guide-template
 ---
 
-This guide will show the process of creating the protected endpoint using a resource for the Storefront and Backend API applications.
+This guide shows how to create the protected endpoint using a resource for the Storefront and Backend API applications.
 
-* * *
+Let's say you have a module named `FooApi`, where you want to have a new protected endpoint `/foo` with `GET` and `POST` methods. For this, follow these steps:
 
-Let's say we have a module named `FooApi` where we want to have a new protected endpoint `/foo` with GET and POST methods.
+1. Add a route or regular expression for the endpoint to `src/Pyz/Shared/GlueStorefrontApiApplicationAuthorizationConnector/GlueStorefrontApiApplicationAuthorizationConnectorConfig.php` to set up it protected:
 
-    
-Add a route or regular expression for the endpoint into `src/Pyz/Shared/GlueStorefrontApiApplicationAuthorizationConnector/GlueStorefrontApiApplicationAuthorizationConnectorConfig.php` in order to set up it protected.
-    
-
-```
+```php
 <?php
 
 namespace Pyz\Shared\GlueStorefrontApiApplicationAuthorizationConnector;
@@ -46,12 +42,14 @@ class GlueStorefrontApiApplicationAuthorizationConnectorConfig extends SprykerGl
 }
 ```
 
-For Backend API use the appropriate backend-specific class `src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php`
+{% info_block infoBox %}
 
+For Backend API, use the appropriate backend-specific class `src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php`
 
-1.  Trying to access `http://glue-storefront.mysprykershop.com/foo` without access token.
-    
-2.  Check that the output contains the 403 response with message `Unauthorized request.`.
-    
+{% endinfo_block %}
 
-Entered valid access token and you should be able to access `http://glue-storefront.mysprykershop.com/foo`.
+2. Try to access `http://glue-storefront.mysprykershop.com/foo` without an access token.
+
+3. Check that the output contains the 403 response with the `Unauthorized request.` message.
+
+4. To access `http://glue-storefront.mysprykershop.com/foo`, enter a valid access token.

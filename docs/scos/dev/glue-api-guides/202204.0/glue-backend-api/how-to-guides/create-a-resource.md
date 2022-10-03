@@ -92,7 +92,7 @@ class FooResourceController extends AbstractStorefrontApiController
 
 {% info_block infoBox "Backend-specific class" %}
 
-Note the `AbstractStorefrontApiController` can be used only for Storefront API. For Backend API, use the appropriate backend-specific class `AbstractBackendApiController`.
+The `AbstractStorefrontApiController` can be used only for Storefront API. For Backend API, use the appropriate backend-specific class `AbstractBackendApiController`.
 
 {% endinfo_block %}
 

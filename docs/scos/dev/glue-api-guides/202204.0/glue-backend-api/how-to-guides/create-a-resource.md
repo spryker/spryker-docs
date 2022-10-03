@@ -1,21 +1,19 @@
 ---
 title: How to create a resource
-description: 
+description: This guide shows how to create an API endpoint using a resource for the Storefront API application.
 last_updated: September 30, 2022
 template: howto-guide-template
 ---
 
-This guide will show the process of creation the API endpoint using a resource for the Storefront API application.
+This guide shows how to create an API endpoint using a resource for the Storefront API application.
 
-* * *
+Let’s say you have a module named `FooApi`, where you want to have a new endpoint `/foo` with `GET` and `POST` methods. To create an endpoint, follow these steps:
 
-Let’s say we have a module named `FooApi` where we want to have a new endpoint `/foo` with GET and POST methods.
-
-1.  Create `FooApiConfig` and add resource name:
+1. Create `FooApiConfig` and add resource name:
     
-
  `\Pyz\Glue\FooApi\FooApiConfig` 
- ```
+
+ ```php
 <?php
 
 namespace Pyz\Glue\FooApi;
@@ -26,13 +24,11 @@ class FooApiConfig extends AbstractBundleConfig
 {
     public const RESOURCE_FOO = 'foo';
 }
-
-
 ``` 
 
-2. Create `foo_api.transfer.xml`
+2. Create `foo_api.transfer.xml`:
 
-```
+```xml
 <?xml version="1.0"?>
 <transfers xmlns="spryker:transfer-01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="spryker:transfer-01 http://static.spryker.com/transfer-01.xsd">
 
@@ -54,9 +50,10 @@ class FooApiConfig extends AbstractBundleConfig
   //add other used transfers
 </transfers>
 ```
-3. Create `FooController`: `\Pyz\Glue\FooApi\Controller\FooController`
 
-```
+3. Create `FooController`: `\Pyz\Glue\FooApi\Controller\FooController`:
+
+```php
 <?php
 
 namespace Pyz\Glue\FooApi\Controller;
@@ -92,13 +89,21 @@ class FooResourceController extends AbstractStorefrontApiController
     }
 }
 ```
-Note the `AbstractStorefrontApiController` can be used only for Storefront API. For Backend API use the appropriate backend-specific class `AbstractBackendApiController`.
 
-4. Create `FooResource` :
+{% info_block infoBox "Backend-specific class" %}
 
-For accepting the Json API convention the resource must implement `JsonApiResourceInterface`.
+Note the `AbstractStorefrontApiController` can be used only for Storefront API. For Backend API, use the appropriate backend-specific class `AbstractBackendApiController`.
+
+{% endinfo_block %}
+
+
+
+4. Create `FooResource`:
+
+For accepting the JSON API convention, the resource must implement `JsonApiResourceInterface`.
 `\Pyz\Glue\FooApi\Plugin\FooResource`
-```
+
+```PHP
 <?php
 
 namespace Pyz\Glue\FooApi\Plugin;
@@ -135,8 +140,10 @@ class FooResource extends AbstractResourcePlugin implements ResourceInterface
 }
 
 ```
-5. Now declare the resource: `\Pyz\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider`
-```<?php
+5. Declare the resource: `\Pyz\Glue\GlueStorefrontApiApplication\GlueStorefrontApiApplicationDependencyProvider`
+
+```php
+<?php
 
 namespace Pyz\Glue\GlueStorefrontApiApplication;
 
@@ -154,4 +161,4 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 }
 ```
 
-If everything is set up correctly, you should be able to access `http://glue-storefront.mysprykershop.com/foo` .
+If everything is set up correctly, you can access `http://glue-storefront.mysprykershop.com/foo`.

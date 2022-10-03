@@ -1,18 +1,19 @@
 ---
 title: How to use authorization framework
-description: 
+description: This document shows how to create a new authorization strategy.
 last_updated: September 30, 2022
 template: howto-guide-template
 ---
 
-This page will demonstrate how to create a new authorization strategy.
+This document shows how to create a new authorization strategy.
 
 Integrate authorization following this guide [https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-authorization-enabler.html](https://docs.spryker.com/docs/scos/dev/technical-enhancement-integration-guides/integrating-authorization-enabler.html).
 
 The first step is creating a strategy that is a plugin responsible for performing the authorization itself:
-`AuthorizationStrategyPluginInterface`
 
-```
+<details><summary markdown='span'>AuthorizationStrategyPluginInterface</summary>
+
+```php
 <?php
 
 namespace Spryker\Client\Customer\Plugin\Authorization;
@@ -57,16 +58,15 @@ class CustomAuthorizationStrategyPlugin extends AbstractPlugin implements Author
         return static::STRATEGY_NAME;
     }
 }
-
 ```
+</details>
 
-This plugin will be run by the `AuthorizationClient::authorize()`.
+This plugin is run by `AuthorizationClient::authorize()`.
 
-There is a way to connect the Resources and Custom Routes with the strategy we just created. They need to implement `AuthorizationStrategyAwareResourceRoutePluginInterface` pointing to the strategy:
-`AuthorizationStrategyAwareResourceRoutePluginInterface`
+There is a way to connect the resources and custom routes with the just-created strategy. They need to implement `AuthorizationStrategyAwareResourceRoutePluginInterface` pointing to the strategy:
 
-
-```
+**AuthorizationStrategyAwareResourceRoutePluginInterface**
+```php
 <?php
 
 namespace Spryker\Glue\DummyStoresApi\Plugin;
@@ -97,10 +97,9 @@ class DummyStoresResource extends AbstractResourcePlugin implements JsonApiResou
 
 ```
 
-|     |     |
+| FIELD IN ROUTE AUTHORIZATION CONFIG TRANSFER | MEANING |
 | --- | --- |
-| **Field in RouteAuthorizationConfigTransfer** | **Meaning** |
 | `strategies` | The array of strategies name to be used to evaluate the request. |
-| `apiCode` | API code that will be returned if authorization fails. |
-| `httpStatusCode` | HTTP response status that will be returned if authorization fails. |
-| `apiMessage` | API message that will be returned if authorization fails. |
+| `apiCode` | API code returned if authorization fails. |
+| `httpStatusCode` | HTTP response status returned if authorization fails. |
+| `apiMessage` | API message returned if authorization fails. |

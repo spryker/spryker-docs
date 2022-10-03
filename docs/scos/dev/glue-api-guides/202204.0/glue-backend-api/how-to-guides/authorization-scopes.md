@@ -1,21 +1,20 @@
 ---
 title: How to use Glue API authorization scopes
-description: 
+description: This guide describes how to add scopes to the resource and custom route for the Storefront API and Backend API applications
 last_updated: September 30, 2022
 template: howto-guide-template
 ---
 This guide describes how to add scopes to the resource and custom route for the Storefront API and Backend API applications.
 
-* * *
+Let’s say you have a module named `FooApi` with `GET` and `POST` methods, where you want to add scopes. To add scopes, follow these steps:
 
-Let’s say we have a module named `FooApi` with GET and POST methods where we want to add scopes.
+1. Set up a resource for the Storefront API application and a route for the Backend API application.
 
-1.  Set up a resource for the Storefront API application and set up a route for the Backend API application.
-    
-2.  Adjust `FooResource` in order to implement `ScopeDefinitionPluginInterface` and set up the scopes.
+2. To implement `ScopeDefinitionPluginInterface` and set up the scopes, adjust `FooResource`:
 
-`Pyz\Glue\FooApi\Plugin\FooResource.php`
-```
+**Pyz\Glue\FooApi\Plugin\FooResource.php**
+
+```php
 <?php
 
 namespace Pyz\Glue\FooApi\Plugin;
@@ -36,10 +35,12 @@ class FooResource extends AbstractResourcePlugin implements ResourceInterface, S
 }
 ```
 
-3. Adjust `FooBarRouteProviderPlugin` in order to implement `ScopeRouteProviderPluginInterface` and set up the scopes.
-   `Pyz\Glue\FooApi\Plugin\FooBarRouteProviderPlugin.php`
+3. To implement `ScopeRouteProviderPluginInterface` and set up the scopes, adjust `FooBarRouteProviderPlugin`:
+
+**Pyz\Glue\FooApi\Plugin\FooBarRouteProviderPlugin.php**
    
-```<?php
+```php
+<?php
 
 namespace Pyz\Glue\FooApi\Plugin;
 
@@ -71,49 +72,47 @@ class FooBarRouteProviderPlugin extends AbstractPlugin implements RouteProviderP
     }
 }
 ```
-4. Run the console command to re-generate the scopes cache file:
+
+4. Regenerate the scopes cache file:
 
 ```
 console oauth:scope-collection-file:generate
 ```
 
+{% info_block warningBox "Verification" %}
 
-1.  Make sure that accessing `http://glue-storefront.mysprykershop.com/foo` or `http://glue-backend.mysprykershop.com/foo/bar` without access token you receive the the 403 response with message `Unauthorized request.`.
-    
+Ensure that when accessing `http://glue-storefront.mysprykershop.com/foo` or `http://glue-backend.mysprykershop.com/foo/bar` without an access token, you receive the 403 response with the message `Unauthorized request`.
 
-Ensure that you are able to authenticate as a customer:
+{% endinfo_block %}
 
-1.  Send the request:
-    
+5. Ensure that you can authenticate as a customer:
+   1. Send the request:
+
     ```
     POST /token/ HTTP/1.1
     Host: glue-storefront.mysprykershop.com
     Content-Type: application/x-www-form-urlencoded
     Accept: application/json
     Content-Length: 131
-    
+
     grantType=password&username={customer_username}&password={customer_password}&scope=storefront%3foo%3read%20storefront%3foobar%3read
     ```
-    
-2.  Check that the output contains the 201 response with a valid token.
-    
-3.  Entered valid access token and you should be able to access `http://glue-storefront.mysprykershop.com/foo`.
-    
 
-Ensure that you are able to authenticate as a user:
+   2. Check that the output contains the 201 response with a valid token.
+   3. Enter a valid access token to access `http://glue-storefront.mysprykershop.com/foo`.
 
-1.  Send the request:
-    
+6. Ensure that you can authenticate as a user:
+   1. Send the request:
+
     ```
     POST /token/ HTTP/1.1
     Host: glue-backend.mysprykershop.com
     Content-Type: application/x-www-form-urlencoded
     Accept: application/json
     Content-Length: 117
-    
+
     grantType=password&username={user_username}&password={user_password}&scope=backend%3foo%3read%20backend%3foobar%3read
     ```
-    
-2.  Check that the output contains the 201 response with a valid token.
-    
-3.  Entered valid access token and you should be able to access `http://glue-backend.mysprykershop.com/foo/bar`.
+
+   2. Check that the output contains the 201 response with a valid token.
+   3. Enter a valid access token to access `http://glue-backend.mysprykershop.com/foo/bar`.

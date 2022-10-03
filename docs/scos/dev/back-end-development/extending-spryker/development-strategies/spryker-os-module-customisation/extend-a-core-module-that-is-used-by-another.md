@@ -1,6 +1,6 @@
 ---
-title: Extending a core module that is used by another
-description: This topic describes how to extend a core module that is used by another core module.
+title: Extend a core module that is used by another
+description: This document describes how to extend a core module that is used by another core module.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-extend-inuse-core
@@ -23,24 +23,25 @@ redirect_from:
   - /v1/docs/ht-extend-inuse-core
   - /v1/docs/en/ht-extend-inuse-core
   - /docs/scos/dev/back-end-development/extending-spryker/extending-a-core-module-that-is-used-by-another.html
+  - /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html
 related:
-  - title: Extending the core
-    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html
-  - title: Extending the Spryker Core functionality
-    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-spryker-core-functionality.html
+  - title: Extend the core
+    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-core.html
+  - title: Extend the Spryker Core functionality
+    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
 ---
 
-This topic describes how to extend a core module that is used by another core module.
+This document describes how to extend a core module that is used by another core module.
 
 Extra consideration must be taken when extending core modules that are already in use by another module.
 
-In the following example, we will extend the `Cart` -> `Calculation` modules.
+The following example extends the `Cart` -> `Calculation` modules.
 
-## Step 1: Modify the interface
+## 1. Modify the interface
 
-Add a `foo()` method to `CalculationFacade` on the project level and call it from the `Cart` module.
+Add the `foo()` method to `CalculationFacade` on the project level and call it from the `Cart` module.
 
-The `CalculationFacade` needs to implement the `CartToCalculationInterface` because this interface is used in the `Cart`module.
+The `CalculationFacade` needs to implement the `CartToCalculationInterface` because this interface is used in the `Cart` module.
 
 You can also add your own interface as follows:
 
@@ -56,9 +57,9 @@ interface CartToCalculationInterface extends SprykerCartToCalculationInterface
 }
 ```
 
-## Step 2: Add the new method to the interface
+## 2. Add the new method to the interface
 
-The interface needs to extend the one from core.
+The interface needs to extend one from the core.
 
 ```php
 <?php
@@ -77,7 +78,7 @@ class CalculationFacade extends SprykerCalculationFacade implements CartToCalcul
 }
 ```
 
-## Step 3: Remove the bridge
+## 3. Remove the bridge
 
 In the `Cart` module's dependency provider, remove the bridge to directly use the facade.
 
@@ -97,12 +98,12 @@ public function provideBusinessLayerDependencies(Container $container)
 
 {% info_block errorBox %}
 
-Bridges are for core-level only. If you use them at the project-level, you are doing it wrong!
+Bridges are for core-level only. If you use them at the project level, you are doing it wrong.
 
 {% endinfo_block %}
 
 {% info_block infoBox "Info" %}
 
-The described case is only practical when you are "between" two core-bundles and you want to make it right. For your own modules, use the general module-interface—for example, `MyModuleInterface`.
+The described case is only practical when you are "between" two core bundles, and you want to make it right. For your own modules, use the general module interface—for example, `MyModuleInterface`.
 
 {% endinfo_block %}

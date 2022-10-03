@@ -1,6 +1,6 @@
 ---
-title: Implement Prepayment in front end
-description: This document describes how to implement prepayment method in front end.
+title: Implement prepayment in frontend
+description: This document describes how to implement the prepayment method in frontend.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/ht-prepayment-fe
@@ -22,30 +22,28 @@ redirect_from:
   - /v2/docs/en/ht-prepayment-fe
   - /v1/docs/ht-prepayment-fe
   - /v1/docs/en/ht-prepayment-fe
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-front-end.html
 related:
-  - title: Implementing Prepayment
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment.html
-  - title: Implementing Prepayment in back end
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html
-  - title: Implementing Prepayment in shared layer
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html
-  - title: Integrating Prepayment into checkout
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrating-prepayment-into-checkout.html
-  - title: Testing the Prepayment implementation
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/testing-the-prepayment-implementation.html
+  - title: Implement prepayment
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
+  - title: Implement prepayment in backend
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
+  - title: Implement prepayment in shared layer
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
+  - title: Integrate Prepayment into checkout
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
+  - title: Test the Prepayment implementation
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
 ---
 
-## Form creation
+## Create the form
 
 In Yves, the starting point is to build a form.
 
-* Add a new module in Yves
-* Add a `Form` folder where we will place the implementation for building the form
+* Add a new module in Yves.
+* Add the `Form` folder to place the implementation for building the form.
 
-<details>
-<summary markdown='span'>1. Adding the data provider</summary>
-
-The first step is to add the data provider, inside the `Form/DataProvider/` folder:
+1. In the `Form/DataProvider` folder, add the data provider:
 
 ```php
 <?php
@@ -79,12 +77,8 @@ class PrepaymentDataProvider implements DataProviderInterface
 
 }
 ```
-</details>
 
-<details>
-<summary markdown='span'>2. Implementing the form</summary>
-
-The next step is to implement the form:
+2. Implement the form:
 
 ```php
 <?php
@@ -148,12 +142,8 @@ class PrepaymentSubForm extends CheckoutAbstractSubFormType implements SubFormIn
 
 }
 ```
-</details>
 
-<details>
-<summary markdown='span'>3. Adding a plugin</summary>
-
-Right after the form is implemented, you will need to plug this form into checkout. In order to do that, add a plugin for it inside the `Plugin/` folder:
+3. After implementing the form, plug it into checkout by adding a plugin for the form in the `Plugin` folder:
 
 ```php
 <?php
@@ -187,16 +177,10 @@ class PrepaymentSubFormPlugin extends AbstractPlugin implements SubFormPluginInt
 
 }
 ```
-</details>
 
-## Payment handler
+## Set up the payment handler
 
-The next procedure to be performed is to set-up the payment handler.
-
-<details>
-<summary markdown='span'>1. Handling the new payment type</summary>
-
-To handle this new payment type, add a `PrepaymentHandler` class inside the `Handler/` folder:
+1. To handle this new payment type, in the `Handler` folder, add the `PrepaymentHandler` class:
 
 ```php
 <?php
@@ -236,12 +220,9 @@ class PrepaymentHandler
     }
 }
 ```
-</details>
 
-<details>
-<summary markdown='span'>2. Plugging the payment handler into checkout</summary>
 
-To plug this payment handler into checkout, add a plugin for it inside the `Plugin/` folder:
+2. To plug this payment handler into checkout, in the `Plugin` folder, add a corresponding plugin:
 
 ```php
 <?php
@@ -272,17 +253,14 @@ class PrepaymentHandlerPlugin extends AbstractPlugin implements StepHandlerPlugi
 
 }
 ```
-</details>
 
-## Prepayment twig template
+## Add the prepayment twig template
 
-Add the Twig template that will be rendered when prepayment method is selected under the configured path.
+Add the Twig template that is rendered when the prepayment method is selected under the configured path.
 
-1. In Yves, create the `prepayment.twig` template file in `PaymentMethods/Theme/` , then `ApplicationConstants::YVES_THEME` config value directory.
+1. In Yves, create the `prepayment.twig` template file in `PaymentMethods/Theme/`, then `ApplicationConstants::YVES_THEME` config value directory.
 2. Adjust the path according to the theme you are currently using.
 
-<details>
-<summary markdown='span'>Code sample</summary>
 
 ```twig
 <div class="payment-subform prepayment-form">
@@ -297,10 +275,9 @@ Add the Twig template that will be rendered when prepayment method is selected u
 
 </div>
 ```
-</details>
 
 {% info_block errorBox %}
 
-Don't forget to add the factory and the dependency provider for this new added module in Yves.
+Add the factory and the dependency provider for this new module in Yves.
 
 {% endinfo_block %}

@@ -1,5 +1,5 @@
 ---
-title: Implementation of Direct Debit in the shared layer
+title: Implement Direct Debit in the shared layer
 description: This document provides step-by-step instructions on how to identify the new payment type using some unique constants.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,24 +22,25 @@ redirect_from:
   - /v2/docs/en/dd-shared-implementation
   - /v1/docs/dd-shared-implementation
   - /v1/docs/en/dd-shared-implementation
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-the-shared-layer.html
 related:
-  - title: Implementing Direct Debit payment
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html
-  - title: Implementation of Direct Debit in Yves
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-yves.html
-  - title: Implementation of Direct Debit in Zed
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-zed.html
+  - title: Implement Direct Debit payment
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html
+  - title: Implement Direct Debit in Yves
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-yves.html
+  - title: Implement Direct Debit in Zed
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-zed.html
   - title: Integrate Direct Debit into checkout
     link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html
-  - title: Testing your Direct Debit implementation
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/testing-your-direct-debit-implementation.html
+  - title: Test your Direct Debit implementation
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html
 ---
 
-This document provides step-by-step instructions on how to identify the new payment type using some unique constants. We are going to define those constants under the `Shared` namespace, since they're needed both for Yves and Zed.
+This document shows how to identify the new payment type using some unique constants. Those constants are defined under the `Shared` namespace because they're needed both for Yves and Zed.
 
 To identify the new payment type, do the following:
 
-1. Create the `PaymentMethodsConstants` interface under the `Shared` namespace, where you'll define these unique constants.
+1. In the `Shared` namespace, where you define these unique constants, create the `PaymentMethodsConstants` interface.
 
 **Code sample:**
 
@@ -78,13 +79,13 @@ interface PaymentMethodsConstants
     </transfer>
 ```
 
-3. To have the `PaymentTransfer` class updated, run the following command:
+1. Update `PaymentTransfer`:
 
 ```bash
 vendor/bin/console transfer:generate
 ```
 
-***
+
 **What's next?**
 
-After you've completed the front end, back end and shared implementation of the Direct Debit payment method, you can test it. See [Testing your Direct Debit Implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/testing-your-direct-debit-implementation.html) for information on how to do that.
+After you've completed the frontend, backend, and shared implementation of the Direct Debit payment method, you can test it. For information on how to do that, see [Test your Direct Debit implementation](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html)

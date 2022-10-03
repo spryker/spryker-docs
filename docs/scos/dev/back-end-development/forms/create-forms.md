@@ -1,5 +1,5 @@
 ---
-title: Creating forms
+title: c
 description: Spryker uses Symfony forms; this tutorial will help you get started on working with forms.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,30 +22,26 @@ redirect_from:
   - /v2/docs/en/t-working-forms
   - /v1/docs/t-working-forms
   - /v1/docs/en/t-working-forms
+  - docs/scos/dev/back-end-development/forms/creating-forms.html
 related:
   - title: Forms
     link: docs/scos/dev/back-end-development/forms/forms.html
 ---
 
-<!--used to be: http://spryker.github.io/tutorials/yves/working-with-forms/ -->
-Spryker uses Symfony forms; this tutorial will help you get started on working with forms.
+Spryker uses Symfony forms; this tutorial helps you get started on working with forms and shows how to build a simple newsletter subscription form that contains a field for entering the email address and a submit button.
 
-You will build a simple newsletter subscription form that contains a field for entering the email address and a submit button.
+Follow the steps in these sections to create the newsletter subscription form:
+* [Create FormType](/docs/scos/dev/back-end-development/forms/create-forms.html#create-the-formtype-class)
+* [Render a form](/docs/scos/dev/back-end-development/forms/create-forms.html#render-forms)
+* [Handle posted data](/docs/scos/dev/back-end-development/forms/create-forms.html#handle-posted-data)
 
-Follow the steps described below to create the newsletter subscription form:
+## Create the FormType class
 
-* [Create the FormType](/docs/scos/dev/back-end-development/forms/creating-forms.html#create-the-formtype)
-* [Render the Form](/docs/scos/dev/back-end-development/forms/creating-forms.html#render-the-form)
-* [Post the Data](/docs/scos/dev/back-end-development/forms/creating-forms.html#post-the-data)
+The best practice is to create a `FormType` class for each form you need to handle. Here you define the fields contained in the form and the rules of validation.
 
-## Create the FormType
-
-The best practice is to create a `FormType` class for each form you need to handle. Here you will define the fields contained in the form and the rules of validation.
-
-In our case, we need to define the email field that has two constraints attached:
-
-* it's a required field
-* it must be a valid email address
+Define the email field that has two constraints attached:
+* It's a required field.
+* It must be a valid email address.
 
 **Code sample:**
 
@@ -81,7 +77,7 @@ class SubscriptionFormType extends AbstractType
 }
 ```
 
-To instantiate your form, use Symfony's `FormBuilder` in your module's factory, as in the example bellow:
+To instantiate your form, use Symfony's `FormBuilder` in your module's factory, as in the following example:
 
 ```php
 <?php
@@ -111,12 +107,11 @@ class NewsletterFactory extends AbstractFactory
 }
 ```
 
-## Render the form
+## Render forms
 
 To render your form in a template, pass the form to the template through the controller action:
-
-* get an instance of your form (using the factory method implemented above)
-* pass the form to the template
+* Get an instance of your form (using the factory method implemented above).
+* Pass the form to the template.
 
 ```php
 <?php
@@ -147,7 +142,7 @@ class SubscriptionController extends AbstractController
 }
 ```
 
-Add the form in your template together with a submit button; make sure you use the same string as in the controller action (`subscriptionForm`).
+In your template, add the form together with a submit button. Make sure you use the same string as in the controller action (`subscriptionForm`).
 
 
 ```twig
@@ -158,9 +153,9 @@ Add the form in your template together with a submit button; make sure you use t
 {% raw %}{{{% endraw %} form_end(subscriptionForm) {% raw %}}}{% endraw %}
 ```
 
-## Post the data
+## Handle posted data
 
-To handle the posted data, we'll need to extend the controller action to handle the request and check if the form is valid when it's being submitted. Here you can setup the page to which you want the user to be redirected after the form is being successfully submitted.
+To handle the posted data, you need to extend the controller action to handle the request and check whether the form is valid when it's submitted. Here you can set up the page to which you want the user to be redirected after the form is submitted successfully.
 
 ```php
 <?php

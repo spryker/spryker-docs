@@ -1,6 +1,6 @@
 ---
-title: Implementation of Direct Debit in Zed
-description: This document provides the instructions on how to implement the Direct Debit payment method and integrate it into Checkout, State Machine, and OMS on the back-end side.
+title: Implement Direct Debit in Zed
+description: This document provides the instructions on how to implement the Direct Debit payment method and integrate it into Checkout, State Machine, and OMS on the backend side.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/dd-be-implementation
@@ -22,24 +22,25 @@ redirect_from:
   - /v2/docs/en/dd-be-implementation
   - /v1/docs/dd-be-implementation
   - /v1/docs/en/dd-be-implementation
+  - /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-zed.html
 related:
-  - title: Implementing Direct Debit payment
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html
-  - title: Implementation of Direct Debit in Yves
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-yves.html
-  - title: Implementation of Direct Debit in the shared layer
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-the-shared-layer.html
+  - title: Implement Direct Debit payment
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html
+  - title: Implement Direct Debit in Yves
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-yves.html
+  - title: Implement Direct Debit in the shared layer
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-the-shared-layer.html
   - title: Integrate Direct Debit into checkout
     link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html
-  - title: Testing your Direct Debit implementation
-    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/testing-your-direct-debit-implementation.html
+  - title: Test your Direct Debit implementation
+    link: docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html
 ---
 
-This document provides the instructions on how to implement the Direct Debit payment method and integrate it into Checkout, State Machine, and OMS on the back-end side.
+This document provides shows how to implement the Direct Debit payment method and integrate it into Checkout, State Machine, and OMS on the backend side.
 
-## Persisting payment details
+## Persist payment details
 
-The payment details for the Direct Debit payment method should be persisted in the database.
+The payment details for the Direct Debit payment method must be persisted in the database.
 
 To persist the payment details, do the following:
 
@@ -82,8 +83,6 @@ vendor/bin/console propel:install
 
 ### 3. Save the Direct Debit payment details in the persistence layer:
 
-To do this, perform the following steps:
-
 1. Create the `PaymentMethodsPersistenceFactory` class on the persistence layer:
 
 ```php
@@ -109,7 +108,7 @@ class PaymentMethodsPersistenceFactory extends AbstractPersistenceFactory
 }
 ```
 
-2. Implement the `PaymentMethodsQueryContainer`:
+1. Implement `PaymentMethodsQueryContainer`:
 
 ```php
 <?php
@@ -134,11 +133,11 @@ class PaymentMethodsQueryContainer extends AbstractQueryContainer
 }
 ```
 
-## Saving Direct Debit payment details
+## Save Direct Debit payment details
 
-To add the logic for saving and viewing the Direct Debit payment details on the business layer and expose them using the `PaymentMethodsFacade`, do the following:
+To add the logic for saving and viewing the Direct Debit payment details on the business layer and expose them using `PaymentMethodsFacade`, do the following:
 
-1. In the `Business/Reader/ ` folder, add the `DirectDebitReader` class. This will implement the logic for **viewing** the Direct Debit payment details.
+1. In the `Business/Reader/ ` folder, add the `DirectDebitReader` class. This implements the logic for *viewing* the Direct Debit payment details.
 
 <details><summary>Code sample</summary>
 
@@ -197,8 +196,8 @@ class DirectDebitReader
 ```
 </details>
 
-2. In the `Business/Writer/` folder, add the `DirectDebitWriter` class. This implements the logic for **saving** the Direct Debit payment details.		    
-
+1. In the `Business/Writer/` folder, add the `DirectDebitWriter` class. This implements the logic for *saving* the Direct Debit payment details.
+2. 
 <details><summary>Code sample:</summary>
 
 ```php
@@ -248,7 +247,7 @@ class DirectDebitWriter
 
 </details>
 
-3. Implement the `PaymentMethodsBusinessFactory` to get instances for these 2 classes:
+1. To get instances for these two classes, implement `PaymentMethodsBusinessFactory` 
 
 **Code sample:**
 
@@ -282,7 +281,7 @@ class PaymentMethodsBusinessFactory extends AbstractBusinessFactory
 }
 ```
 
-4. Expose the `save/retrieve` Direct Debit payment details using the `PaymentMethodsFacade`:
+1. Expose the `save/retrieve` Direct Debit payment details using `PaymentMethodsFacade`:
 
 <details><summary>Code sample:</summary>
 
@@ -337,7 +336,7 @@ class PaymentMethodsFacade extends AbstractFacade
 
 </details>
 
-### Listing Direct Debit payment details in Zed UI
+### Listen to Direct Debit payment details in Zed UI
 
 In Zed, when looking over the details on a submitted order, check the payment details.
 
@@ -376,7 +375,7 @@ To view the payment details, do the following:
 {% raw %}{%{% endraw %} endif {% raw %}%}{% endraw %}
 ```
 
-2. Add the corresponding controller action for this view in `PaymentMethods/Communication/Controller/SalesController.php`:
+2. In `PaymentMethods/Communication/Controller/SalesController.php`, add the corresponding controller action for this view:
 
 **Code sample:**
 
@@ -423,9 +422,9 @@ class SalesController extends AbstractController
 
 Information is available here: `/payment-methods/sales/list?id-sales-order=1`
 
-### Integrating the Direct Debit Method into the checkout
+### Integrate the Direct Debit method into the checkout
 
-To integrate the Direct Debit method into the checkout, implement these 3 plugins:
+To integrate the Direct Debit method into the checkout, implement these plugins:
 * `PaymentMethodsDirectDebitCheckoutPreConditionPlugin`
 * `PaymentMethodsDirectDebitCheckoutDoSaveOrderPlugin`
 * `PaymentMethodsDirectDebitCheckoutPostSavePlugin`
@@ -526,7 +525,7 @@ class PaymentMethodsDirectDebitCheckoutPostSavePlugin extends AbstractPlugin imp
 }
 ```
 
-2. In  the `Checkout` module, add these 3 plugins to the related methods (plugin stacks) in `CheckoutDependencyProvider`.
+2. In the `Checkout` module, add the previous three plugins to the related methods (plugin stacks) in `CheckoutDependencyProvider`.
 
 <details><summary>Code sample</summary>
 
@@ -584,7 +583,7 @@ class CheckoutDependencyProvider extends SprykerCheckoutDependencyProvider
 
 </details>
 
-## Configuring dependency injectors for Yves and Zed
+## Configure dependency injectors for Yves and Zed
 
 Add injectors for Zed and Yves and `ActiveProcess` and Statemachine mapping to the `config\Shared\config_default.php` file:
 
@@ -609,7 +608,7 @@ $config[SalesConstants::PAYMENT_METHOD_STATEMACHINE_MAPPING] = [
 ];
 ```
 
-## Integrating the Direct Debit Payment Method into a state machine
+## Integrate the Direct Debit Payment Method into a state machine
 
 After the preceding procedures have been completed, set up a state machine, which is dedicated for processing orders that use Direct Debit as a payment type. For this purpose, add the `paymentMethodsDirectDebit.xml ` file with the following content to the `config/Zed/oms/` folder:
 
@@ -729,4 +728,4 @@ After the preceding procedures have been completed, set up a state machine, whic
 
 **What's next?**
 
-After the Direct Debit payment method has been created and integrated in the back-end, [identify the new Direct Debit payment type in the shared layer](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-the-shared-layer.html).
+After creating and integrating the Direct Debit payment method into the backend, [identify the new Direct Debit payment type in the shared layer](/docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-the-shared-layer.html).

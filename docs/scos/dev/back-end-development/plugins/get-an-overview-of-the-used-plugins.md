@@ -1,5 +1,5 @@
 ---
-title: Getting an overview of the used plugins
+title: Get an overview of the used plugins
 description: Plugin Overview gives you several ways of displaying plugin usages.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,24 +22,23 @@ redirect_from:
   - /v2/docs/en/plugin-overview
   - /v1/docs/plugin-overview
   - /v1/docs/en/plugin-overview
+  - /docs/scos/dev/back-end-development/plugins/getting-an-overview-of-the-used-plugins.html
 related:
   - title: Plugins
     link: docs/scos/dev/back-end-development/plugins/plugins.html
 ---
 
-To use a new feature projects most likely need to add some plugins to their `*DependencyProvider`. Currently, it is not easy for projects to integrate a new feature due to the difficulties in identifying to which *DependencyProvider plugin A* of *module B* can be added to bring *functionality X*.
+To use a new feature projects most likely need to add some plugins to their `*DependencyProvider`. Currently, it is not easy for projects to integrate a new feature due to the difficulties in identifying to which *`DependencyProvider` plugin A* of *module B* can be added to bring *functionality X*.
 
 To see which [Plugin](/docs/scos/dev/back-end-development/plugins/plugins.html) can be used in which `DependencyProvider` we added a feature called **Plugin Overview**. This feature gives you several ways of displaying our plugin usages. The feature brings a console command (`vendor/bin/console dev:plugin-usage:dump`) and a [GUI in Zed](https://zed.mysprykershop.com/development/dependency-provider-plugin-usage).
 
-You can even download a .CSV file with all used plugins.
+You can even download a CSV file with all the used plugins.
 
-## Console examples
-
-### Show all
+## Display all used plugins
 
 Print all used plugins by running the command without any argument or option.
 
-This will search for all `DependencyProvider` in the project code and all used plugins in there. The header of the table is the `DepenencyProvider` in which the plugins are found.
+This searches for all `DependencyProvider` in the project code and all used plugins in there. The header of the table is `DepenencyProvider` in which the plugins are found.
 
 ```
 $ vendor/bin/console dev:plugin-usage:dump
@@ -52,7 +51,7 @@ Spryker\Zed\CustomerUserConnectorGui\Communication\Plugin\UserTableActionExpande
 ...
 ```
 
-### Show one module
+## Display one module
 
 Another way of execution is to add the "module" option which can be used to shrink the list to a more readable one.
 
@@ -67,7 +66,7 @@ Spryker\Zed\AgentGui\Communication\Plugin\UserAgentTableDataExpanderPlugin
 Spryker\Zed\CustomerUserConnectorGui\Communication\Plugin\UserTableActionExpanderPlugin
 ```
 
-### Show all of an application
+## Display all used plugins in applications
 
 You can also print a list of used plugins in applications.
 
@@ -81,4 +80,4 @@ Spryker\Zed\AgentGui\Communication\Plugin\UserAgentTableDataExpanderPlugin
 Spryker\Zed\CustomerUserConnectorGui\Communication\Plugin\UserTableActionExpanderPlugin
 ```
 
-The module option is very powerful and can be used in many ways. You can also use a placeholder (*) in the module option elements. The module option consists of three elements **Organization + Application + Module**.
+The module option is very powerful and can be used in many ways. You can also use a placeholder asterisk (`*`) in the module option elements. The module option consists of three elements: *Organization*, *Application*, and *Module*.

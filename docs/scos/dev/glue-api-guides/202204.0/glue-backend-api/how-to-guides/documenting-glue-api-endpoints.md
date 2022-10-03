@@ -1,19 +1,31 @@
 ---
 title: How to document Glue API endpoints
-description: 
+description: You can enhance the way your resource is described in the OPENAPI v3 schema
 last_updated: September 30, 2022
 template: howto-guide-template
 ---
 
-You can enhance the way your resource is described in the [OPENAPI v3 schema](https://swagger.io/docs/specification/basic-structure/). Use `vendor/bin/glue api:generate:documentation` console command to generate the doc. By default, the command will be generating the documentation for all the configured applications. There is an optional `application` parameter you can pass to select the application.
+This document shows how to document Glue API endpoints.
 
+You can enhance the way your resource is described in the [OPENAPI v3 schema](https://swagger.io/docs/specification/basic-structure/). 
+
+To generate the doc, use the following command:
+```bash
+vendor/bin/glue api:generate:documentation
 ```
+
+By default, the preceding command generates the documentation for all the configured applications. 
+
+To select the application, you can pass the optional parameter `application`:
+```bash
 vendor/bin/glue api:generate:documentation [--application=storefront|backend]
 ```
 
-You can describe your resources in the Glue doc-comment annotation on the relevant Controller actions.
-**in** `Controller`
-```
+You can describe your resources in the Glue doc-comment annotation on the relevant controller actions:
+
+**Controller**
+
+```php
 /**
  * @Glue({
  *     "getResourceById": {
@@ -57,19 +69,20 @@ public function getAction(RestRequestInterface $restRequest): RestResponseInterf
  */
 
 ```
+
 Glue annotation has to contain valid JSON.
 
-Glue annotation can be defined on each action in the controller, two can be defined on the get action (for having separate descriptions for getting collections and getting resources by id actions). Possible top level keys are: `getResourceById`, `getCollection`, `post`, `patch`, `delete`.
+Glue annotation can be defined on each action in the controller, two can be defined on the get action (for having separate descriptions for getting collections and getting resources by ID actions). Possible top-level keys are: `getResourceById`, `getCollection`, `post`, `patch`, and `delete`.
 
-`isIdNullable` will be false by default but can be defined as true for the cases like `/catalog-search` or `/url-resolver`.
+`isIdNullable` is false by default but can be defined as true for the cases like `/catalog-search` or `/url-resolver`.
 
 Always describe all the possible error statuses your resource can return in `responses`. If the status is used for several errors, you can use the most generic description for all of them (`"422": "Unprocessable entity."`).
 
 For describing request body structure in the schema, you can use additional transfer properties attributes:
 
-**in** `resources_rest_api.transfer.xml`
+**resources_rest_api.transfer.xml**
 
-```
+```xml
 <?xml version="1.0"?>
 <transfers xmlns="spryker:transfer-01"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -83,12 +96,13 @@ For describing request body structure in the schema, you can use additional tran
     </transfer>
 ```
 
-In the example above the `sku` and `quantity` will be added to the request schema as required, `productOptions` will be added as optional and `createdAt` will be skipped. There needs to be at least one attribute on the transfer with the not empty `restRequestParameter` for the request schema to be even generated, so always pay attention to this.
+In the preceding example, `sku` and `quantity` are added to the request schema as required, `productOptions` added as optional, and `createdAt` skipped. There needs to be at least one attribute on the transfer with the not empty `restRequestParameter` for the request schema to be even generated, so always pay attention to this.
 
-When creating a resource that will be available as a relationship only (and has no resource route of its own), you need to describe the structure of your resource attributes in a Glue annotation on the `ResourceRelationshipPlugin`:
-**in** `PaymentMethodsByCheckoutDataResourceRelationshipPlugin`
+When creating a resource available as a relationship only and without its own resource route, you need to describe the structure of your resource attributes in a Glue annotation on `ResourceRelationshipPlugin`:
 
-```
+**PaymentMethodsByCheckoutDataResourceRelationshipPlugin**
+
+```php
 /**
  * @Glue({
  *     "resourceAttributesClassName": "\\Generated\\Shared\\Transfer\\RestPaymentMethodsAttributesTransfer"
@@ -100,28 +114,29 @@ class PaymentMethodsByCheckoutDataResourceRelationshipPlugin extends AbstractPlu
 {
 ```
 
+{% info_block infoBox %}
+
 Always check the schema your resources are described with before releasing your resource.
 
-Below you'll find the description of the properties you can use in the annotations:
+{% endinfo_block %}
 
-|     |     |
+The following table lists descriptions of the properties you can use in the annotations:
+
+| PROPERTY | DESCRIPTION |
 | --- | --- |
-|     |     |
-| `deprecated` | The path will be marked deprecated. |
-| `responseAttributesClassName` | The transfer will be used as a representation of the response attributes. |
-| `isIdNullable` | The (JSON:API) response `id` will be null. |
-| `path` | The resource is available on the path. This property can be used if the type+id is not the path the resource uses. |
-| `summary` | Path's summary. Text should briefly describe what the endpoint is doing. |
-| `parameters` | The list of parameters the endpoint is accepting. |
-| `isEmptyResponse` | A flag is to be used to mark endpoint that return empty responses. |
-| `responses` | A list responses the endpointcan respond with. The object must contain key-value pairs with HTTP codes as key, and desciption as value. |
+| `deprecated` | Path is marked deprecated. |
+| `responseAttributesClassName` | Transfer is used as a representation of the response attributes. |
+| `isIdNullable` | JSON:API response `id` is null. |
+| `path` | Resource is available on the path. This property can be used if the *type+id* is not the path the resource uses. |
+| `summary` | Path's summary that briefly describes what the endpoint does. |
+| `parameters` | List of parameters the endpoint accepts. |
+| `isEmptyResponse` | Fag used to mark endpoint that return empty responses. |
+| `responses` | List responses the endpoint can respond with. The object must contain key-value pairs with HTTP codes as key, and desciption as value. |
 
 ### Extending the behavior
 
 The following interfaces can be used to add more data to the generated documentation.
 
-1.  `Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\PluginApiApplicationProviderPluginInterface` - adds a new application to which the documentation will get generated.
-    
-2.  `Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\Plugin\ContextExpanderPluginInterface` - adds information to the documentation generation context.
-    
-3.  `Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\Plugin\SchemaFormatterPluginInterface` - formats the part of the documentation, and must return an array of data ready for getting converted to YAML.
+* The `Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\PluginApiApplicationProviderPluginInterface` interface: Adds a new application to which the documentation will get generated.
+* The `Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\Plugin\ContextExpanderPluginInterface` interface: Adds information to the documentation generation context.
+* The `Spryker\Glue\DocumentationGeneratorApiExtension\Dependency\Plugin\SchemaFormatterPluginInterface` interface: Formats the part of the documentation and must return an array of data ready for getting converted to YAML.

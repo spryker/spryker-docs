@@ -1,27 +1,28 @@
 ---
 title: How to create a new API application
-description: 
+description: THis document shows how to create a new API application
 last_updated: September 30, 2022
 template: howto-guide-template
 ---
-The new Glue projects have the possibility to create API applications. This is what you need to do in order to create one.
+
+New Glue projects can create API applications. This is what you need to do in order to create one.
 
 ### Docker configuration
 
-First of all, the backend and storefront API have different settings in docker (they have different sets of services configured for them). Make sure your `deploy.yml` contains the correct setting for the `application`. Available options are:
+First of all, the backend and storefront API have different settings in Docker (they have different sets of services configured for them). Make sure your `deploy.yml` contains the correct setting for `application`. Available options are as follows:
 
-|     |     |
+| OPTION | MEANING |
 | --- | --- |
-| **Option** | **Meaning** |
-| `glue` | Old application value. For the new APIs please choose one of the options below. |
-| `glue-storefront` | Application that has access to:<br><br>*   key\_value\_store<br>    <br>*   search |
-| `glue-backend` | Application that has access to:<br><br>*   database<br>    <br>*   broker<br>    <br>*   key\_value\_store<br>    <br>*   session<br>    <br>*   search |
+| `glue` | Old application value. For the new APIs, choose one of the following options. |
+| `glue-storefront` | Application that has access to key\_value\_store and search.   |
+| `glue-backend` | Application that has access to the following: <ul><li>database</li><li>broker</li><li>key\_value\_store</li><li>session</li><li>search</li></ul> |
 
 **deploy.yml**
-```
+
+```yml
 groups:
     US:
-        applications:           
+        applications:
            ...
            glue_storefront:
                 application: glue-storefront
@@ -36,20 +37,18 @@ groups:
                         store: US
                         entry-point: BackendCustomApi
 ```
-To activate your new API, run the following commands:
 
-```
+1. To activate your new API, run the following commands:
+
+```bash
 docker/sdk boot
 docker/sdk up
 ```
 
-Verify that your domain is now available: `http://storefront.de.spryker.local`.
+2. Verify that your domain is now available: `http://storefront.de.spryker.local`.
+3. Create an entry point for your new API: `public/CustomApi/index.php`.
 
-* * *
-
-Create an entry point for your new API: `public/CustomApi/index.php`
-
-```
+```php
 <?php
 
 use Pyz\Glue\CustomApiApplication\Bootstrap\GlueCustomApiBootstrap;
@@ -73,13 +72,15 @@ $bootstrap
 
 ```
 
-Line 7 defines the `APPLICATION`, constant reused across Spryker.
+*Line 7* defines `APPLICATION`, a constant reused across Spryker.
 
-Line 17 has the `GlueCustomApiBootstrap`, a bootstrap the application should use. We create it in the next step.
+*Line 17* has `GlueCustomApiBootstrap`, a bootstrap the application must use. You create it in the next step.
 
-Create the bootstrap to serve your application: `src/Pyz/Glue/CustomApiApplication/Bootstrap/GlueCustomApiBootstrap.php`
+4. Create the bootstrap to serve your application:
 
-```
+**src/Pyz/Glue/CustomApiApplication/Bootstrap/GlueCustomApiBootstrap.php**
+
+```php
 <?php
 
 namespace Pyz\Glue\CustomApiApplication\Bootstrap;
@@ -102,9 +103,10 @@ class GlueCustomApiBootstrap extends GlueBootstrap
 }
 
 ```
-`src/Pyz/Glue/CustomApiApplication/Plugin/CustomApiGlueApplicationBootstrapPlugin.php` 
 
-```
+**src/Pyz/Glue/CustomApiApplication/Plugin/CustomApiGlueApplicationBootstrapPlugin.php**
+
+```php
 <?php
 
 namespace Pyz\Glue\CustomApiApplication\Plugin;
@@ -128,10 +130,14 @@ class CustomApiGlueApplicationBootstrapPlugin extends AbstractPlugin implements 
 }
 ```
 
-Line 19 must create an instance of the `ApplicationInterface`, which can take and array of `ApplicationPluginInterface`. You can add features like DB access via these plugins.
+*Line 19* creates an instance of `ApplicationInterface`, which can take an array of `ApplicationPluginInterface`. You can add features like DB access using these plugins.
 
-Its constructor will look like this in the factory: `src/Pyz/Glue/CustomApiApplication/CustomApiApplicationFactory.php`
-```
+In the factory, its constructor looks like this: 
+
+<details>
+<summary markdown='span'>src/Pyz/Glue/CustomApiApplication/CustomApiApplicationFactory.php</summary>
+
+```php
 <?php
 
 namespace Pyz\Glue\CustomApiApplication;
@@ -172,9 +178,13 @@ class CustomApiApplicationFactory extends AbstractFactory
     }
 }
 ```
-Here is the dependency provider: `src/Pyz/Glue/CustomApiApplication/CustomApiApplicationDependencyProvider.php`
+</details>
 
-```
+Here is the dependency provider: 
+
+<details><summary markdown='span'>src/Pyz/Glue/CustomApiApplication/CustomApiApplicationDependencyProvider.php</summary>
+
+```php
 <?php
 
 namespace Pyz\Glue\CustomApiApplication;
@@ -221,12 +231,14 @@ class CustomApiApplicationDependencyProvider extends AbstractBundleDependencyPro
         return [];
     }
 }
-
 ```
+</details>
 
-Here is what the `Application` can look like: `src/Pyz/Glue/CustomApiApplication/Application/CustomApiApplication.php`
+The following example is what the `Application` can look like: 
 
-```
+<details><summary markdown='span'>src/Pyz/Glue/CustomApiApplication/Application/CustomApiApplication.php</summary>
+
+```php
 <?php
 
 namespace Spryker\Glue\GlueStorefrontApiApplication\Application;
@@ -283,15 +295,18 @@ class GlueStorefrontApiApplication extends RequestFlowAwareApiApplication
     }
 
 }
-
 ```
+</details>
 
-Each method in the `CustomApiApplication` represents a step in the API application request flow. It can be used is an extension point into each of the steps.
+Each method in `CustomApiApplication` represents a step in the API application request flow. It can be used as an extension point into each of the steps.
 
-This application extends `RequestFlowAwareApiApplication` which means that this API application will follow the default Glue workflow. This is beneficial because it allows making the most use of the conventions and features in Spryker that wire into the request flow.
+This application extends `RequestFlowAwareApiApplication`, which means that this API application follows the default Glue workflow. This is beneficial because it lets you make the most use of the conventions and features in Spryker that wire into the request flow.
 
-If your API uses its own workflow you can opt for extending `RequestFlowAgnosticApiApplication`. This kind of application will have everything (separate set of application plugins, boot and run methods) but not the request flow actions. One of these is the old Glue application. Here is an example of the application: `src/Pyz/Glue/CustomApiApplication/Application/CustomApiApplication.php`
-```
+If your API uses its own workflow, you can opt for extending `RequestFlowAgnosticApiApplication`. This kind of application has everything (a separate set of application plugins, boot, and run methods) but not the request flow actions. One of these is the old Glue application. Here is an example of the application: 
+
+**src/Pyz/Glue/CustomApiApplication/Application/CustomApiApplication.php**
+
+```php
 <?php
 
 namespace Pyz\Glue\CustomApiApplication\Application;

@@ -84,7 +84,7 @@ The file is uploaded to the selected folder.
 
 Once the file is uploaded, you can manage it from two locations:
 
-* File List (for more details, see [Managing File List](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-list.html))
+* File List (for more details, see [Manage file List](/docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-list.html))
 * File Tree
 
 To manage a file:

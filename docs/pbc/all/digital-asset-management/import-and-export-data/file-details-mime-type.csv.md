@@ -16,7 +16,7 @@ This document describes the `mime_type.csv` file to configure Mime Type informat
 
 ## Prerequisites
 
-This file does not exist by default on the project level. To override the default `mime_type.csv` file of the `file-manager-data-import` module, create the file in the  `data/import` folder.
+This file does not exist by default on the project level. To override the default `mime_type.csv` file of the `file-manager-data-import` module, create the file in the `data/import` folder.
 
 ## Import file parameters
 

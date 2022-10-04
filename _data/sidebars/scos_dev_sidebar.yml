@@ -1527,7 +1527,7 @@ entries:
             include_versions:
             - "202204.0"
           - title: Glue API - Authentication
-            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue api-authentication-integration.html
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-authentication-integration.html
             include_versions:
             - "202204.0"
           - title: Glue API - JSON:API Convention

@@ -11,6 +11,12 @@ redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/configuring-deployment-pipelines/deployment-pipelines.html
 ---
 
+{% info_block infoBox "Data Import during Deployments" %}
+
+For performance and stability reasons, please make sure to remove all heavy data ingestion or processing operations from deployment steps/install recipes. Please use a jenkins job instead and start these operations after the deployment is finished.
+
+{% endinfo_block %}
+
 Spryker Cloud Commerce OS(SCCOS) provides automated CI/CD(Continuous Integration/Continuous Deployment) Pipelines based on the following AWS Code Suite services:
 
 *   [CodePipeline](https://aws.amazon.com/codepipeline/) - Build and Deploy scenarios

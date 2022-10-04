@@ -1,8 +1,10 @@
 ---
-title: How to create a new API application
-description: THis document shows how to create a new API application
+title: How to create API applications
+description: This document shows how to create a new API application
 last_updated: September 30, 2022
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-api-application.html
 ---
 
 New Glue projects can create API applications. This is what you need to do in order to create one.
@@ -38,14 +40,14 @@ groups:
                         entry-point: BackendCustomApi
 ```
 
-1. To activate your new API, run the following commands:
+1. Activate your new API:
 
 ```bash
 docker/sdk boot
 docker/sdk up
 ```
 
-2. Verify that your domain is now available: `http://storefront.de.spryker.local`.
+2. Verify that your domain is now available: `https://storefront.mysprykershop.com`.
 3. Create an entry point for your new API: `public/CustomApi/index.php`.
 
 ```php
@@ -333,5 +335,4 @@ class CustomApiApplication extends RequestFlowAgnosticApiApplication
         parent::run();
     }
 }
-
 ```

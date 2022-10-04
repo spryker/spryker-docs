@@ -1,9 +1,12 @@
 ---
-title: Glue API - Glue Authentication integration
-description: 
+title: Glue API - Authentication integration
+description: Create an authentication token for the Storefront and Backend API applications in a Spryker project.
 last_updated: September 30, 2022
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-authentication-integration.html
 ---
+
 This document describes how to create an authentication token for the Storefront and Backend API applications in a Spryker project.
 
 ## Install feature core
@@ -14,10 +17,10 @@ Follow the steps below to install the Authentication core.
 
 To start feature integration, overview and install the necessary features:
 
-| NAME | INTEGRATION GUIDE |
-| --- | --- |
-| Glue Backend API Application | [Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-storefront-and-backend-api-applications-integration.html) |
-| Glue Storefront API Application | [Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-storefront-and-backend-api-applications-integration.html) |
+| NAME           | VERSION           | INTEGRATION GUIDE |
+| -------------- | ----------------- | ----------------- |
+| Glue Backend API Application | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-storefront-and-backend-api-applications-integration.html) |
+| Glue Storefront API Application | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-storefront-and-backend-api-applications-integration.html) |
 
 ### 1) Install the required modules using Composer
 

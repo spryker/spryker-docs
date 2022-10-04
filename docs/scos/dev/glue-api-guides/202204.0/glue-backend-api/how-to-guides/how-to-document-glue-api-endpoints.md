@@ -3,13 +3,15 @@ title: How to document Glue API endpoints
 description: You can enhance the way your resource is described in the OPENAPI v3 schema
 last_updated: September 30, 2022
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/documenting-glue-api-endpoints.html
 ---
 
 This document shows how to document Glue API endpoints.
 
 You can enhance the way your resource is described in the [OPENAPI v3 schema](https://swagger.io/docs/specification/basic-structure/). 
 
-To generate the doc, use the following command:
+To generate the documentation, use the following command:
 ```bash
 vendor/bin/glue api:generate:documentation
 ```
@@ -96,7 +98,7 @@ For describing request body structure in the schema, you can use additional tran
     </transfer>
 ```
 
-In the preceding example, `sku` and `quantity` are added to the request schema as required, `productOptions` added as optional, and `createdAt` skipped. There needs to be at least one attribute on the transfer with the not empty `restRequestParameter` for the request schema to be even generated, so always pay attention to this.
+In the preceding example, `sku` and `quantity` are added to the request schema as required, `productOptions` added as optional, and `createdAt` skipped. There needs to be at least one attribute on the transfer with not empty `restRequestParameter` for the request schema to be even generated, so always pay attention to this.
 
 When creating a resource available as a relationship only and without its own resource route, you need to describe the structure of your resource attributes in a Glue annotation on `ResourceRelationshipPlugin`:
 

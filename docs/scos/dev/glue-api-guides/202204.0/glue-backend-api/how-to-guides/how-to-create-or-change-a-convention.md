@@ -1,22 +1,24 @@
 ---
 title: How to create or change a convention
-description: New Glue infrastructure implements the *Convention* feature. Through it, you can change the way your API accepts or returns data.
+description: New Glue infrastructure implements the Convention feature. Through it, you can change the way your API accepts or returns data.
 last_updated: September 30, 2022
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create_change-convention.html
 ---
 
 New Glue infrastructure implements the *Convention* feature. Through it, you can change the way your API accepts or returns data.
 
 <!-- (TODO: Add diagram) -->
 
- A Convention has a say in every step of the request flow:
+ A convention has a say in every step of the request flow:
 
 * Resolving the convention happens first. Any data in `GlueRequestTransfer` can affect the resolution of the convention. For example, projects can pull attributes from a certain location in the content.
 * During the building request step, you can extract and preformat the data from the raw request data.
 * A convention can add validation steps that are necessary for its flow, both before and after the routing.
 * Formatting response can be used to wrap the response attributes in the convention-determined wrapper.
 
-To introduce a new Convention, implement `ApiConventionPluginInterface`.
+To introduce a new convention, implement `ApiConventionPluginInterface`:
 
 ```php
 <?php

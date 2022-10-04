@@ -3,6 +3,8 @@ title: How to create a JSON:API relationship
 description: This guide describes how to add resources through relationships
 last_updated: September 30, 2022
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-json-api-convention-integration.html
 ---
 
 This guide describes how to add resources through relationships. The following concept is allowed only for applications that implemented the Glue JSON API convention.
@@ -83,4 +85,4 @@ class GlueStorefrontApiApplicationGlueJsonApiConventionConnectorDependencyProvid
 }
 ```
 
-If everything is set up correctly, you can access `http://glue-storefront.mysprykershop.com/foo?include=bar`.
+If everything is set up correctly, you can access `https://glue-storefront.mysprykershop.com/foo?include=bar`.

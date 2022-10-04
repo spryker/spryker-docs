@@ -3,6 +3,8 @@ title: How to use OOTB Glue parameters
 description: This document explains how to pass the parameters and how to use them in code
 last_updated: September 30, 2022
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/glue-parameters-usage.html
 ---
 
 This document explains how to pass the parameters and how to use them in code.
@@ -25,10 +27,10 @@ In JSON:API responses, the calculation of the next, previous, last, and first pa
 
 ```json
 "links": {
-    "next": "http://glue.de.spryker.local/wishlists?page[offset]=3&amp;page[limit]=2",
-    "prev": "http://glue.de.spryker.local/wishlists?page[offset]=0&amp;page[limit]=2",
-    "last": "http://glue.de.spryker.local/wishlists?page[offset]=10&amp;page[limit]=2",
-    "first": "http://glue.de.spryker.local/wishlists?page[offset]=0&amp;page[limit]=2"
+    "next": "https://glue.mysprykershop.com/wishlists?page[offset]=3&amp;page[limit]=2",
+    "prev": "https://glue.mysprykershop.com/wishlists?page[offset]=0&amp;page[limit]=2",
+    "last": "https://glue.mysprykershop.com/wishlists?page[offset]=10&amp;page[limit]=2",
+    "first": "https://glue.mysprykershop.com/wishlists?page[offset]=0&amp;page[limit]=2"
 }
 ```
 

@@ -1,15 +1,17 @@
 ---
-title: Create a Backend vs a Storefront API endpoint
+title: Backend and storefront API module differences
 description: This document describes the difference between the code in a backend and storefront API modules.
 last_updated: September 30, 2022
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-backend-vs-storefront-api-endpoint.html
 ---
 
-New Glue infrastructure has introduced the possibility to build not only the storefront but also backend APIs in the same project. Storefront APIs inherit the possibilities of old Glue in terms of what they can do and what they have access to (Storage and ElasticSearch, make RPC Zed calls via Clients). Backend APIs have direct access to Facades that enables the creation of performant backend APIs projects often need.
+This document describes how exactly the code in the backend and storefront API modules are different. It focuses on the differences.
 
-This document describes how exactly the code in a backend and storefront API modules are different. It focuses on the differences.
+New Glue infrastructure has introduced the possibility to build not only the storefront but also backend APIs in the same project. Storefront APIs inherit the possibilities of old Glue in terms of what they can do and what they have access to (Storage and ElasticSearch or make RPC Zed calls via Clients). Backend APIs have direct access to Facades that enables the creation of performant backend APIs projects often need.
 
-The main difference between storefront and backend APIs is in the base classes each type of module uses. Because Storefront APIs will continue providing lightweight APIs the same as old Glue did, they will use the same base classes. Backend APIs are getting the new abstract classes that will have access to Facades from other modules.
+The main difference between storefront and backend APIs is in the base classes each type of module uses. Because Storefront APIs continue providing lightweight APIs the same as old Glue did, they use the same base classes. Backend APIs are getting the new abstract classes that have access to Facades from other modules.
 
 | CLASS | STOREFRONT | BACKEND |
 | --- | --- | --- |
@@ -67,14 +69,13 @@ class CustomBackendApiDependencyProvider extends AbstractBundleDependencyProvide
 
 {% info_block infoBox %}
 
-In the Backend dependency provider, Backend Container can resolve facades. 
+In the backend dependency provider, the backend container can resolve facades. 
 
-Also, the function to provide Backend Dependencies is `provideBackendDependencies`.
+Also, the function to provide backend dependencies is `provideBackendDependencies`.
 
 {% endinfo_block %}
 
-
-Factory:
+**Factory:**
 
 **\Pyz\Glue\CustomBackendApi\CustomApiApplicationFactory**
 
@@ -98,9 +99,9 @@ class CustomApiApplicationFactory extends AbstractFactory
 }
 ```
 
-Backend `AbstractFactory` has access to the backend Container.
+Backend `AbstractFactory` has access to the backend container.
 
-Let's see what `AbstractPlugin` allows to access:
+Let's see what `AbstractPlugin` allows you to access:
 
 **\Pyz\Glue\CustomApiApplication\Plugin\CustomApiGlueContextExpanderPlugin**
 
@@ -129,4 +130,4 @@ class CustomApiGlueContextExpanderPlugin extends AbstractPlugin implements GlueC
 }
 ```
 
-The concrete plugin interface here is implemented just as an example to demonstrate that `Facade`, `Repository`, and `EntityManager` of the module are dirrectly accessible from any Glue Backend plugin.
+The concrete plugin interface here is implemented just as an example to demonstrate that `Facade`, `Repository`, and `EntityManager` of the module are directly accessible from any Glue backend plugin.

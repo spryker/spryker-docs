@@ -3,6 +3,8 @@ title: How to create protected endpoints
 description: This guide shows how to create the protected endpoint using a resource for the Storefront and Backend API applications.
 last_updated: September 30, 2022
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-protected-endpoints.html
 ---
 
 This guide shows how to create the protected endpoint using a resource for the Storefront and Backend API applications.
@@ -44,12 +46,12 @@ class GlueStorefrontApiApplicationAuthorizationConnectorConfig extends SprykerGl
 
 {% info_block infoBox %}
 
-For Backend API, use the appropriate backend-specific class `src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php`
+For Backend API, use the appropriate backend-specific class `src/Pyz/Shared/GlueBackendApiApplicationAuthorizationConnector/GlueBackendApiApplicationAuthorizationConnectorConfig.php`.
 
 {% endinfo_block %}
 
-2. Try to access `http://glue-storefront.mysprykershop.com/foo` without an access token.
+2. Try to access `https://glue-storefront.mysprykershop.com/foo` without an access token.
 
 3. Check that the output contains the 403 response with the `Unauthorized request.` message.
 
-4. To access `http://glue-storefront.mysprykershop.com/foo`, enter a valid access token.
+4. To access `https://glue-storefront.mysprykershop.com/foo`, enter a valid access token.

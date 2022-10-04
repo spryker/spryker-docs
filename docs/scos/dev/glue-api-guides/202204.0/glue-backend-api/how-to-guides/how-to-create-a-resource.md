@@ -3,6 +3,8 @@ title: How to create a resource
 description: This guide shows how to create an API endpoint using a resource for the Storefront API application.
 last_updated: September 30, 2022
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-a-resource.html
 ---
 
 This guide shows how to create an API endpoint using a resource for the Storefront API application.
@@ -164,4 +166,4 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 }
 ```
 
-If everything is set up correctly, you can access `http://glue-storefront.mysprykershop.com/foo`.
+If everything is set up correctly, you can access `https://glue-storefront.mysprykershop.com/foo`.

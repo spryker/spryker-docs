@@ -1,9 +1,12 @@
 ---
-title: Glue API - Glue Backend API infrastructure integration
-description: 
+title: Glue API - Glue Storefront and Backend API applications integration
+description: Integrate the Glue Storefront and Backend API applications into a Spryker project.
 last_updated: September 30, 2022
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-storefront-and-backend-api-applications-integration.html
 ---
+
 This document describes how to integrate the Glue Storefront and Backend API applications into a Spryker project.
 
 ## Install feature core
@@ -14,10 +17,9 @@ Follow the steps below to install the Glue Storefront and Backend API applicatio
 
 To start feature integration, overview and install the necessary features:
 
-|     |     |
-| --- | --- |
-| NAME | INTEGRATION GUIDE |
-| Glue Application | [Glue Application feature integration](https://github.com/spryker/spryker-docs/blob/1cac1b2759d30e33ad12b14f3e7e543d5dc23dcc/docs/scos/dev/feature-integration-guides/%7B%7Bpage.version%7D%7D/glue-api/glue-api-glue-application-feature-integration.html) |
+| NAME | INTEGRATION GUIDE | INTEGRATION GUIDE |
+| --- | --- | --- |
+| Glue Application | [Glue API - Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 
@@ -29,20 +31,19 @@ composer require spryker/glue-storefront-api-application:"^1.0.0" spryker/glue-b
 
 Make sure that the following modules have been installed:
 
-|     |     |
-| --- | --- |
 | MODULE | EXPECTED DIRECTORY |
+| --- | --- |
 | GlueApplication | vendor/spryker/glue-application |
 | GlueStorefrontApiApplication | vendor/spryker/glue-storefront-api-application |
 | GlueBackendApiApplication | vendor/spryker/glue-backend-api-application |
 
 ### 2) Set up the configuration
 
-Add the following configuration:
+1. Add the following configuration:
 
 **config/Shared/config\_default.php**
 
-```
+```php
 <?php
 
 use Spryker\Shared\GlueBackendApiApplication\GlueBackendApiApplicationConstants;
@@ -64,9 +65,9 @@ $sprykerGlueStorefrontHost = getenv('SPRYKER_GLUE_STOREFRONT_HOST');
 $config[GlueStorefrontApiApplicationConstants::GLUE_STOREFRONT_API_HOST] = $sprykerGlueStorefrontHost;
 ```
 
-**src/Pyz/Glue/GlueApplication/Bootstrap/****GlueBackendApiBootstrap****.php**
+__src/Pyz/Glue/GlueApplication/Bootstrap/****GlueBackendApiBootstrap****.php__
 
-```
+```php
 <?php
 
 namespace Pyz\Glue\GlueApplication\Bootstrap;
@@ -89,9 +90,9 @@ class GlueBackendApiBootstrap extends GlueBootstrap
 }
 ```
 
-**src/Pyz/Glue/GlueApplication/Bootstrap/****GlueBootstrap****.php**
+__src/Pyz/Glue/GlueApplication/Bootstrap/****GlueBootstrap****.php__
 
-```
+```php
 <?php
 
 namespace Pyz\Glue\GlueApplication\Bootstrap;
@@ -114,9 +115,9 @@ class GlueBootstrap extends SprykerGlueBootstrap
 }
 ```
 
-**src/Pyz/Glue/GlueApplication/Bootstrap/****GlueStorefrontApiBootstrap****.php**
+__src/Pyz/Glue/GlueApplication/Bootstrap/****GlueStorefrontApiBootstrap****.php__
 
-```
+```php
 <?php
 
 namespace Pyz\Glue\GlueApplication\Bootstrap;
@@ -141,7 +142,7 @@ class GlueStorefrontApiBootstrap extends GlueBootstrap
 
 **public/GlueBackend/index.php**
 
-```
+```php
 <?php
 
 use Pyz\Glue\GlueApplication\Bootstrap\GlueBackendApiBootstrap;
@@ -164,9 +165,9 @@ $bootstrap
     ->run();
 ```
 
-**public/Glue****/index.****php**
+__public/Glue****/index.****php__
 
-```
+```php
 <?php
 
 use Pyz\Glue\GlueApplication\Bootstrap\GlueBootstrap;
@@ -189,9 +190,9 @@ $bootstrap
     ->run();
 ```
 
-**public/GlueStorefront****/index.****php**
+__public/GlueStorefront****/index.****php__
 
-```
+```php
 use Pyz\Glue\GlueApplication\Bootstrap\GlueStorefrontApiBootstrap;
 use Spryker\Shared\Config\Application\Environment;
 use Spryker\Shared\ErrorHandler\ErrorHandlerEnvironment;
@@ -212,7 +213,7 @@ $bootstrap
     ->run();
 ```
 
-**deploy****.yml**
+__deploy****.yml__
 
 ```
 groups:
@@ -252,28 +253,33 @@ groups:
             store: US
 ```
 
-To activate your new API, run the following commands:
+2. Activate your new API:
 
-```
+```bash
 docker/sdk boot
 docker/sdk up
 ```
 
-Verify that your domains are now available: `http://glue-storefront.de.spryker.local`, `http://glue-backend.de.spryker.local` and `http://glue.de.spryker.local`.
+{% info_block warningBox "Verification" %}
+
+Verify that your domains are available: `http://glue-storefront.de.spryker.local`, `http://glue-backend.de.spryker.local`, and `http://glue.de.spryker.local`.
+
+{% endinfo_block %}
 
 ### 3) Set up transfer objects
 
 Generate transfers:
 
-```
+```bash
 console transfer:generate
 ```
 
+{% info_block warningBox "Verification" %}
+
 Ensure the following transfers have been created:
 
-|     |     |     |     |
-| --- | --- | --- | --- |
 | TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
 | GlueApiContext | class | created | src/Generated/Shared/Transfer/GlueApiContextTransfer.php |
 | GlueResponse | class | created | src/Generated/Shared/Transfer/GlueResponseTransfer.php |
 | GlueRequest | class | created | src/Generated/Shared/Transfer/GlueRequestTransfer.php |
@@ -289,13 +295,14 @@ Ensure the following transfers have been created:
 | Sort | class | created | src/Generated/Shared/Transfer/SortTransfer.php |
 | Store | class | created | src/Generated/Shared/Transfer/StoreTransfer.php |
 
+{% endinfo_block %}
+
 ### 4) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
-|     |     |     |
-| --- | --- | --- |
 | PLUGIN | SPECIFICATION | NAMESPACE |
+| --- | --- | --- |
 | BackendApiGlueApplicationBootstrapPlugin | Returns the `Application` class responsible for executing the Backend API application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
 | StorefrontApiGlueApplicationBootstrapPlugin | Returns the `Application` class responsible for executing the Storefront API application. | Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\GlueApplication |
 | FallbackStorefrontApiGlueApplicationBootstrapPlugin | Returns the `Application` class responsible for executing the Storefront Fallback API application. | Spryker\\Glue\\GlueApplication\\Plugin\\FallbackStorefrontApiGlueApplicationBootstrapPlugin |
@@ -312,9 +319,10 @@ Enable the following behaviors by registering the plugins:
 | BackendRouterProviderPlugin | Gets route collection from current Glue Backend API Application for route debug console command. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
 | ControllerCacheCollectorPlugin | Returns controllers configuration for GlueStorefrontApiApplication/GlueBackendApiApplication applications. | Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\GlueApplication and Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
 
-**src/Pyz/Glue/GlueApplication/****GlueApplicationDependencyProvider****.php**
+<details open>
+<summary markdown='span'>src/Pyz/Glue/GlueApplication/****GlueApplicationDependencyProvider****.php</summary>
 
-```
+```php
 <?php
 
 namespace Pyz\Glue\GlueApplication;
@@ -401,10 +409,11 @@ class GlueApplicationDependencyProvider extends SprykerGlueApplicationDependency
     }
 }
 ```
+</details>
 
 **src/Pyz/Glue/Console/ConsoleDependencyProvider.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Glue\Console;
@@ -433,17 +442,15 @@ class ConsoleDependencyProvider extends SprykerConsoleDependencyProvider
 }
 ```
 
-If the console commands are setup correctly, the following commands will be available:
+If the console commands are setup correctly, the following commands are available:
+* `glue glue-api:controller:cache:warm-up`
+* `glue router:debug application_name`
+* `glue api:router:cache:warm-up [application_name]`
 
-`glue glue-api:controller:cache:warm-up`
+<details open>
+<summary markdown='span'>src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php</summary>
 
-`glue router:debug application_name`
-
-`glue api:router:cache:warm-up [application_name]`
-
-**src/Pyz/Glue/GlueBackendApiApplication/GlueBackendApiApplicationDependencyProvider.php**
-
-```
+```php
 <?php
 
 namespace Pyz\Glue\GlueBackendApiApplication;
@@ -533,10 +540,12 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
     }
 }
 ```
+</details>
 
-**src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider.php**
+<details open>
+<summary markdown='span'>src/Pyz/Glue/GlueStorefrontApiApplication/GlueStorefrontApiApplicationDependencyProvider.php</summary>
 
-```
+```php
 <?php
 
 namespace Pyz\Glue\GlueStorefrontApiApplication;
@@ -615,5 +624,8 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
     }
 }
 ```
+</details>
 
-If everything is set up correctly, you should be able to access it via the `http://glue-backend.mysprykershop.com` and `http://glue-storefront.mysprykershop.com` endpoint for Glue Backend API application and via the `http://glue-storefront.mysprykershop.com` endpoint for Glue Storefront API application.
+If everything is set up correctly, you can access it as follows:
+ * Glue Backend API application: `http://glue-backend.mysprykershop.com` and `http://glue-storefront.mysprykershop.com`.
+ * Glue Storefront API application: `http://glue-storefront.mysprykershop.com`.

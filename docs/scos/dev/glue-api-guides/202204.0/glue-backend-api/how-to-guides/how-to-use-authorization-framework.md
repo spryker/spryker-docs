@@ -3,6 +3,8 @@ title: How to use authorization framework
 description: This document shows how to create a new authorization strategy.
 last_updated: September 30, 2022
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/using-authorization-framework.html
 ---
 
 This document shows how to create a new authorization strategy.

@@ -1,8 +1,10 @@
 ---
-title: How to create a resource with a parent
+title: How to create resources with parent-child relationships
 description: This document shows how to create resources with parent-child relationships 
 last_updated: September 30, 2022
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-a-resource-with-parent.html
 ---
 
 Glue API lets you create resources with parent-child relationships or, in other words, nested resources. In order to enable such behavior, a resource that implements `Spryker\Glue\GlueApplicationExtension\Dependency\Plugin\ResourceWithParentPluginInterface` must be created.
@@ -102,4 +104,4 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 }
 ```
 
-If everything is set up correctly, you can access `http://glue-storefront.mysprykershop.com/foo/1/bar`.
+If everything is set up correctly, you can access `https://glue-storefront.mysprykershop.com/foo/1/bar`.

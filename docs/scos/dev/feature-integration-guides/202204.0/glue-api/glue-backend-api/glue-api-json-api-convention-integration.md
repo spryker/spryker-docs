@@ -1,9 +1,12 @@
 ---
 title: Glue API - Glue JSON:API Convention integration
-description: 
+description: Integrate the Glue JSON API convention for Storefront API application into a Spryker project.
 last_updated: September 30, 2022
 template: feature-integration-guide-template
+redirect_from:
+  - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-json-api-convention-integration.html
 ---
+
 This document describes how to integrate the Glue JSON API convention for Storefront API application into a Spryker project.
 
 ## Install feature core
@@ -14,26 +17,26 @@ Follow the steps below to install the Glue JSON API convention core.
 
 To start feature integration, overview and install the necessary features:
 
-|     |     |
-| --- | --- |
-| NAME | INTEGRATION GUIDE |
-| Glue Storefront and Backend API Applications | [Glue Storefront and Backend API Applications feature integration](https://github.com/spryker/spryker-docs/blob/1cac1b2759d30e33ad12b14f3e7e543d5dc23dcc/docs/scos/dev/feature-integration-guides/%7B%7Bpage.version%7D%7D/glue-api/glue-storefront-and-backend-api-application-integration-guide.html) |
+| NAME           | VERSION           | INTEGRATION GUIDE |
+| -------------- | ----------------- | ----------------- |
+| Glue Storefront and Backend API Applications | {{page.version}} | [Glue Storefront and Backend API applications integration](/docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-backend-api/glue-storefront-and-backend-api-applications-integration.html) |
 
 ### 1) Install the required modules using Composer
 
 Install the required modules:
 
-```
+```bash
 composer require spryker/glue-json-api-convention:"^1.0.0" spryker/glue-storefront-api-application-glue-json-api-convention-connector:"^1.0.0" --update-with-dependencies
 ```
 
-Make sure that the following modules have been installed:
+{% info_block warningBox "Verification" %}
 
-|     |     |
-| --- | --- |
 | MODULE | EXPECTED DIRECTORY |
+| --- | --- |
 | GlueJsonApiConvention | vendor/spryker/glue-json-api-convention |
 | GlueStorefrontApiApplicationGlueJsonApiConventionConnector | vendor/spryker/glue-storefront-api-application-glue-json-api-convention-connector |
+
+{% endinfo_block %}
 
 ### 2) Set up the configuration
 
@@ -41,7 +44,7 @@ Add the following configuration:
 
 **config/Shared/config\_default.php**
 
-```
+```php
 <?php
 
 use Spryker\Shared\GlueJsonApiConvention\GlueJsonApiConventionConstants;
@@ -66,11 +69,12 @@ Generate transfers:
 console transfer:generate
 ```
 
+{% info_block warningBox "Verification" %}
+
 Ensure the following transfers have been created:
 
-|     |     |     |     |
-| --- | --- | --- | --- |
 | TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
 | GlueApiContext | class | created | src/Generated/Shared/Transfer/GlueApiContextTransfer.php |
 | GlueResponse | class | created | src/Generated/Shared/Transfer/GlueResponseTransfer.php |
 | GlueRequest | class | created | src/Generated/Shared/Transfer/GlueRequestTransfer.php |
@@ -84,13 +88,14 @@ Ensure the following transfers have been created:
 | Pagination | class | created | src/Generated/Shared/Transfer/PaginationTransfer.php |
 | Sort | class | created | src/Generated/Shared/Transfer/SortTransfer.php |
 
+{% endinfo_block %}
+
 ### 4) Set up behavior
 
 Enable the following behaviors by registering the plugins:
 
-|     |     |     |
-| --- | --- | --- |
 | PLUGIN | SPECIFICATION | NAMESPACE |
+| --- | --- | --- |
 | JsonApiConventionPlugin | Defines the JSON:API convention and adds steps it requires for the request flow. | Spryker\\Glue\\GlueJsonApiConvention\\Plugin\\GlueApplication |
 | StorefrontApiRelationshipProviderPlugin | Provides a collection of resource relationships for the storefront API application. | Spryker\\Glue\\GlueStorefrontApiApplicationGlueJsonApiConventionConnector\\Plugin\\GlueStorefrontApiApplication |
 
@@ -142,4 +147,4 @@ class GlueJsonApiConventionDependencyProvider extends SprykerGlueJsonApiConventi
 }
 ```
 
-In order to verify that everything is set up correctly and you are able to access the endpoint follow [\[FINAL\] Create a resource](https://spryker.atlassian.net/wiki/spaces/CORE/pages/3298459765)
+To verify that everything is set up correctly, and you can access the endpoint, see [How to create a resource](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-backend-api/how-to-guides/how-to-create-a-resource.html)

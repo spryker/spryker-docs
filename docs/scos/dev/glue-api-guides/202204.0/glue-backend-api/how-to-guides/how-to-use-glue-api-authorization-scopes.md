@@ -3,7 +3,10 @@ title: How to use Glue API authorization scopes
 description: This guide describes how to add scopes to the resource and custom route for the Storefront API and Backend API applications
 last_updated: September 30, 2022
 template: howto-guide-template
+redirect_from:
+  - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/authorization-scopes.html
 ---
+
 This guide describes how to add scopes to the resource and custom route for the Storefront API and Backend API applications.
 
 Let's say you have a module named `FooApi` with `GET` and `POST` methods, where you want to add scopes. To add scopes, follow these steps:
@@ -81,7 +84,7 @@ console oauth:scope-collection-file:generate
 
 {% info_block warningBox "Verification" %}
 
-Ensure that when accessing `http://glue-storefront.mysprykershop.com/foo` or `http://glue-backend.mysprykershop.com/foo/bar` without an access token, you receive the 403 response with the message `Unauthorized request`.
+Ensure that when accessing `https://glue-storefront.mysprykershop.com/foo` or `https://glue-backend.mysprykershop.com/foo/bar` without an access token, you receive the 403 response with the message `Unauthorized request`.
 
 {% endinfo_block %}
 
@@ -99,7 +102,7 @@ Ensure that when accessing `http://glue-storefront.mysprykershop.com/foo` or `ht
     ```
 
    2. Check that the output contains the 201 response with a valid token.
-   3. Enter a valid access token to access `http://glue-storefront.mysprykershop.com/foo`.
+   3. Enter a valid access token to access `https://glue-storefront.mysprykershop.com/foo`.
 
 6. Ensure that you can authenticate as a user:
    1. Send the request:
@@ -115,4 +118,4 @@ Ensure that when accessing `http://glue-storefront.mysprykershop.com/foo` or `ht
     ```
 
    2. Check that the output contains the 201 response with a valid token.
-   3. Enter a valid access token to access `http://glue-backend.mysprykershop.com/foo/bar`.
+   3. Enter a valid access token to access `https://glue-backend.mysprykershop.com/foo/bar`.

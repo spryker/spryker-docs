@@ -14,6 +14,8 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-method-is-overridden-on-the-project-level.html
 ---
 
+Private API is extended. The page describes why entities on the project side have to avoid private api extending. The project has to follow the rule to be able to correctly receive Spryker autoupdates.
+
 Modules have public and private APIs. While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API.
 
 For more information about module APIs, see [Definition of Module API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html).
@@ -37,7 +39,7 @@ class CustomerAccessForm extends SprykerCustomerAccessForm
 
 ```bash
 ------------------------------------------------------------------------------------
-"Please avoid dependency: ""Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm" in "Pyz\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm""
+Please avoid extension of the PrivateApi Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm in Pyz\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm
 ------------------------------------------------------------------------------------
 ```
 
@@ -90,7 +92,7 @@ class CustomerAccessFilter extends SprykerCustomerAccessFilter
 
 ```bash
 ------------------------------------------------------------------------------------
-"PrivateApi:PrivateApiDependencyInBusinessModel: ""Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter" in "Pyz\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter""
+Please avoid extension of the PrivateApi Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter in Pyz\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter
 ------------------------------------------------------------------------------------
 ```
 
@@ -103,54 +105,6 @@ namespace Pyz\Zed\CustomerAccess\Business\CustomerAccess;
 class PyzCustomerAccessFilter implements PyzCustomerAccessFilterInterface
 {
     ...
-}
-```
-
-## Example of code that causes an upgradability error: Extending a private API dependency provider
-
-`CheckoutPageDependencyProvider` extends `Spryker\Yves\CheckoutPage\CheckoutPageDependencyProvider` from a private API.
-
-```php
-namespace Pyz\Yves\CheckoutPage;
-
-use Spryker\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerCheckoutPageDependencyProvider;
-
-class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvider
-{
-    /**
-     * ...
-     */
-    protected function getCustomerStepHandler(): ...
-    {
-        ...
-    }
-}
-```
-
-### Related error in the Evaluator output: Extending a private API dependency provider
-
-```bash
-------------------------------------------------------------------------------------
-"PrivateApi:MethodIsOverwritten: "Spryker\Yves\CheckoutPage\CheckoutPageDependencyProvider::getCustomerStepHandler" in "Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider""
-------------------------------------------------------------------------------------
-```
-
-### Example of resolving the error by copying the dependency provider to the project level
-
-```php
-namespace Pyz\Yves\CheckoutPage;
-
-use Spryker\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerCheckoutPageDependencyProvider;
-
-class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvider
-{
-    /**
-     * ...
-     */
-    protected function getPyzCustomerStepHandler(): ...
-    {
-        ...
-    }
 }
 ```
 

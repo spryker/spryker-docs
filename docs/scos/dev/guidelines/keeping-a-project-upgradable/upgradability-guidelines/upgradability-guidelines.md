@@ -13,6 +13,12 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-method-is-overridden-on-the-project-level.html
 ---
 
+Spryker has more than one thousand modules, and a bunch of them uses in each Spryker-based project. At the same time, the Sprykers team implements about 50 module updates each month. In this case, keeping your project up to date and receiving all necessary updates, coud take a lot of time for the project team.
+
+To improve the developer experience and decrease the time to keep your project up to date - we implemented the Upgrader and Integrator tools. These tools can automatically update vendors of the spryker-based projects and integrate changes to the project side.
+
+For correct updating a project by Upgrader and Integrator, the project has to follow some Spryker upgradability rules. You can check that your project code is compliant with the rules by the Evaluator tool.
+
 The documents in this section will help you resolve the issues related to code evaluation in a way that keeps your code upgradable and up to date with Spryker's and industry coding standards.
 
 When you get an evaluation error, check the name of the triggered check in the Evaluation output logs. The name is at the beginning of each error log.

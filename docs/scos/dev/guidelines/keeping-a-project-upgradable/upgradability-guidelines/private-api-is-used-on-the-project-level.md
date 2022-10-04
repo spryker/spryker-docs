@@ -14,11 +14,17 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-method-is-overridden-on-the-project-level.html
 ---
 
+Private API is used on the project level. The page describes why entities on the project side have to avoid private api using. The project has to follow the rule to be able to correctly receive Spryker autoupdates.
+
 Modules have public and private APIs. While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API. For example, if you use a core method on the project level, and it is updated or removed with an update, it can cause unexpected issues.
 
 For more information about module APIs, see [Definition of Module API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html).
 
-## Example of code that causes an upgradability error
+## PrivateApi:Facade
+
+Facade on project level can use repository/factory/entityManager but only methods that were declared on project level.
+
+### Example of code that causes an upgradability error
 
 `CustomerFacade` uses `createCustomerReader` and `getCustomerCollection` from a private API.
 
@@ -44,15 +50,15 @@ class CustomerFacade extends SprykerCustomerFacade implements CustomerFacadeInte
 }
 ```
 
-## Example of related error in the Evaluator output
+### Example of related error in the Evaluator output
 
 ```bash
 ------------------------------------------------------------------------------------------------------------------------
-PrivateApi:Facade "Please avoid Spryker dependency: Spryker\...\CustomerReader::getCustomerCollection(...) in Pyz\Zed\Customer\Business\CustomerFacade"
-************************************************************************************************************************
+Please avoid usage of Spryker\...\CustomerReader::getCustomerCollection(...) in Pyz\Zed\Customer\Business\CustomerFacade
+------------------------------------------------------------------------------------------------------------------------
 ```
 
-## Resolving the error
+### Resolving the error
 
 To resolve the error provided in the example, try the following in the provided order:
 1. Recommended: Extend the functionality using the [Configuration strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration).
@@ -64,7 +70,7 @@ To resolve the error provided in the example, try the following in the provided 
     3. As soon as the extension point in core is released, refactor the code added in step 4.2 using the strategies in steps 1-3.
         While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 
-## Example of resolving the error by renaming private API entities
+### Example of resolving the error by renaming private API entities
 
 1. Give the method a unique name and copy it to the factory to fetch the business models. In the  example, we add `Pyz` to its name, but you can use any other strategy. For example, you can prefix them with your project name.
 
@@ -128,3 +134,177 @@ class CustomerReader extends SprykerCustomerReader implements CustomerReaderInte
 ```
 
 After the fix re-evaluate the code. The same error shouldn’t be returned.
+
+
+## PrivateApi:Persistence
+
+Repository and entity manager on project level can use the factory but only methods that were declared on project level
+
+### Example of code that causes an upgradability error
+
+`CustomerAccessEntityManager` uses factory method `createCustomerAccessMapper` that was declared on the vendor level.
+
+```php
+use Spryker\Zed\CustomerAccess\Persistence\CustomerAccessEntityManager as SprykerCustomerAccessEntityManager;
+
+/**
+ * @method \Pyz\Zed\Customer\Business\CustomerBusinessFactory getFactory()
+ */
+class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager implements CustomCustomerAccessEntityManager
+{
+   /**
+     * 
+     */
+    public function setContentTypesToAccessible(CustomerAccessTransfer $customerAccessTransfer): void
+    {
+        $this->getFactory()->createCustomerAccessMapper();
+       ....
+    }
+}
+```
+
+### Example of related error in the Evaluator output
+
+```bash
+------------------------------------------------------------------------------------------------------------------------
+Please avoid usage of Spryker\...\CustomerAccessEntityManager::createCustomerAccessMapper(...) in Pyz/Zed/CustomerAccess/Persistence/CustomerAccessEntityManager
+------------------------------------------------------------------------------------------------------------------------
+```
+
+### Resolving the error
+
+See `Resolving the error` section for the first example on this page.
+
+### Example of resolving the error by cloning functionality to the project level
+
+Copy the method to the factory on the project level.
+
+```php
+namespace Pyz\Zed\Customer\Business;
+
+use Pyz\Zed\Customer\Business\Customer\CustomerReader;
+use Spryker\Zed\Customer\Business\CustomerBusinessFactory as SprykerCustomerBusinessFactory;
+
+class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
+{
+    /**
+     * @return \Pyz\Zed\Customer\Business\Customer\CustomerReaderInterface
+     */
+    public function createPyzCustomerAccessMapper(): CustomerReaderInterface
+    {
+        return new CustomerPyzReader(...);
+    }
+}
+```
+
+
+## PrivateApi:Dependency
+
+Business factory should use dependency by a key that is defined on project level.
+
+### Example of code that causes an upgradability error
+
+`CustomerAccessBusinessFactory` uses as key `ProductPageSearchDependencyProvider::QUERY_CONTAINER_CATEGORY` that was declared on the vendor level.
+
+```php
+...
+use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider
+...
+class CustomerAccessBusinessFactory implements SprykerCustomerAccessBusinessFactory
+{
+    /**
+    * @return \Pyz\Zed\CustomerAccess\Business\PropelFacadeInterface
+    * @throws \Spryker\Zed\Kernel\Exception\Container\ContainerKeyNotFoundException
+    */
+    public function getPropelFacade(): PropelFacadeInterface
+    {
+        return $this->getProvidedDependency(ProductPageSearchDependencyProvider::QUERY_CONTAINER_CATEGORY);
+    }
+}
+```
+
+### Example of related error in the Evaluator output
+
+```bash
+------------------------------------------------------------------------------------------------------------------------
+Please avoid usage of Spryker/Zed/ProductPageSearch/ProductPageSearchDependencyProvider/ProductPageSearchDependencyProvider::QUERY_CONTAINER_CATEGORY in Pyz/Zed/CustomerAccess/Business/CustomerAccessBusinessFactory
+------------------------------------------------------------------------------------------------------------------------
+```
+
+### Resolving the error
+
+See `Resolving the error` section for the first example on this page.
+
+
+## PrivateApi:DependencyInBusinessModel
+
+Business models on project level should avoid using private API from Core level
+
+### Example of code that causes an upgradability error
+
+`CustomerAccessFilter` uses as dependency `CustomerAccessReaderInterface` that was declared on the vendor level.
+
+```php
+...
+class CustomerAccessFilter implements CustomCustomerAccessFilter
+{
+    /**
+    * @param \Pyz\Zed\CustomerAccess\CustomerAccessConfig $customerAccessConfig
+    * @param \Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessReaderInterface $customerAccessReader
+    */
+    public function __construct(CustomerAccessConfig $customerAccessConfig, CustomerAccessReaderInterface $customerAccessReader)
+    {
+        $this->customerAccessReader = $customerAccessReader;
+        $this->customerAccessConfig = $customerAccessConfig;
+    }
+}
+```
+
+### Example of related error in the Evaluator output
+
+```bash
+------------------------------------------------------------------------------------------------------------------------
+PrivateApi:DependencyInBusinessModel "Please avoid usage of Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessReaderInterface in Pyz\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter"
+------------------------------------------------------------------------------------------------------------------------
+```
+
+### Resolving the error
+
+See `Resolving the error` section for the first example on this page.
+
+
+## PrivateApi:ObjectInitialization
+
+Business models on project level should avoid creating private API from Core level.
+
+### Example of code that causes an upgradability error
+
+`CustomerAccessFilter` contains creating `CustomerAccessReader` in the `constructor` method.
+
+```php
+...
+class CustomerAccessFilter implements CustomCustomerAccessFilter
+{
+    public function __construct(
+        CustomerAccessEntityManagerInterface $customerAccessEntityManager,
+        CustomerAccessReaderInterface $customerAccessReader,
+        CustomerAccessFilterInterface $customerAccessFilter
+    ) {
+        parent::__construct($customerAccessEntityManager);
+        $this->customerAccessReader = new CustomerAccessReader();
+        $this->customerAccessFilter = $customerAccessFilter;
+    }
+}
+```
+
+### Example of related error in the Evaluator output
+
+```bash
+------------------------------------------------------------------------------------------------------------------------
+Please avoid usage of Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessReaderInterface in Pyz\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter
+------------------------------------------------------------------------------------------------------------------------
+```
+
+### Resolving the error
+
+See `Resolving the error` section for the first example on this page.

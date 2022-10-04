@@ -5,9 +5,8 @@ last_updated: September 30, 2022
 template: feature-integration-guide-template
 ---
 
-This page will demonstrate how to use scopes in Authorization for Storefront API application and Backend API application into a Spryker project.
 
-* * *
+This document describes how to use scopes in Authorization for Storefront API application and Backend API application into a Spryker project.
 
 ## Install feature core
 
@@ -17,7 +16,9 @@ Follow the steps below to install the Authorization core.
 
 To start feature integration, overview and install the necessary feature:
 
-Glue Authentication integration
+| NAME           | VERSION           | INTEGRATION GUIDE |
+| -------------- | ----------------- | ----------------- |
+| Glue Authentication | {{page.version}} | [Glue Authentication itegration](/docs/scos/dev/feature-integration-guides/{{pagelversion}}/glue-api/glue-backend-api/glue-authentication-integration.html) |
 
 ### 1) Set up transfer objects
 
@@ -27,11 +28,12 @@ Generate transfers:
 console transfer:generate
 ```
 
-Ensure that the following changes have occurred in transfer objects:
+{% info_block warningBox "Verification" %}
 
-|     |     |     |     |
-| --- | --- | --- | --- |
+Make sure that the following changes have been applied in transfer objects:
+
 | TRANSFER | TYPE | EVENT | PATH |
+| --- | --- | --- | --- |
 | GlueRequest | class | created | src/Generated/Shared/Transfer/GlueRequestTransfer.php |
 | GlueResource | class | created | src/Generated/Shared/Transfer/GlueResourceTransfer.php |
 | OauthScopeFind | class | created | src/Generated/Shared/Transfer/OauthScopeFindTransfer.php |
@@ -41,26 +43,31 @@ Ensure that the following changes have occurred in transfer objects:
 | OauthScopeFindRequest | class | created | src/Generated/Shared/Transfer/OauthScopeFindRequestTransfer.php |
 | OauthScopeFind | class | created | src/Generated/Shared/Transfer/OauthScopeFindTransfer.php |
 
+{% endinfo_block %}
+
 ### 2) Set up behavior
 
-1.  Activate the following plugins:
-    
+Activate the following plugins:
 
-|     |     |     |
-| --- | --- | --- |
+**Storefront API**
+
 | PLUGIN | SPECIFICATION | NAMESPACE |
-| STOREFRONT API |     |     |
+| --- | --- | --- |
 | ScopeRequestAfterRoutingValidatorPlugin | Validates the resource's scopes against the scopes in the token. | Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\GlueStorefrontApiApplication |
 | StorefrontScopeCollectorPlugin | Provides the set of OAuth scopes for Storefront API application. | Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\Oauth |
 | StorefrontScopeFinderPlugin | Gets the scope based on specified identifier. | Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\Oauth |
-| BACKEND API |     |     |
+
+**Backend API**
+
+| PLUGIN | SPECIFICATION | NAMESPACE |
+| --- | --- | --- |
 | ScopeRequestAfterRoutingValidatorPlugin | Validates the resource's scopes against the scopes in the token. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\GlueApplication |
 | BackendScopeCollectorPlugin | Provides the set of OAuth scopes for Backend API application. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\Oauth |
 | BackendScopeFinderPlugin | Gets the scope based on specified identifier. | Spryker\\Glue\\GlueBackendApiApplication\\Plugin\\Oauth |
 
 **src/Pyz/Glue/GlueStorefrontApiApplication/****GlueStorefrontApiApplicationDependencyProvider****.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Glue\GlueStorefrontApiApplication;
@@ -81,7 +88,7 @@ class GlueStorefrontApiApplicationDependencyProvider extends SprykerGlueStorefro
 
 **src/Pyz/Glue/GlueBackendApiApplication/****GlueBackendApiApplicationDependencyProvider****.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Glue\GlueBackendApiApplication;
@@ -102,7 +109,7 @@ class GlueBackendApiApplicationDependencyProvider extends SprykerGlueBackendApiA
 
 **src/Pyz/Zed/Oauth/****OauthDependencyProvider****.php**
 
-```
+```php
 <?php
 
 namespace Pyz\Zed\Oauth;
@@ -133,5 +140,4 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 }
 ```
 
-
-In order to verify that everything is set up correctly and provide the protected endpoints follow [\[WIP\] Authorization - Managing scopes](https://spryker.atlassian.net/wiki/spaces/CORE/pages/3532587478)
+To verify that everything is set up correctly and provide the protected endpoints, see [How to use Glue API authorization scopes](/docs/scos/dev/glue-api-guides/{{page.verison}}/glue-backend-api/how-to-guides/authorization-scopes.html).

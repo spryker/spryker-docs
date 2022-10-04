@@ -1,7 +1,7 @@
 ---
 title: Performance testing in staging environments
 description: Learn about performance testing for the Spryker Cloud Commerce OS
-last_updated: Sep 29, 2022
+last_updated: Sep 15, 2022
 template: concept-topic-template
 redirect_from:
   - /docs/cloud/dev/spryker-cloud-commerce-os/performance-testing.html
@@ -161,11 +161,67 @@ You've set up your Spryker B2C Demo Shop and can now access your applications.
 
 With the integrations done and the environment set up, you will need to create and load the data fixtures. This is done by first generating the necessary fixtures before triggering a *publish* of all events and then running the *queue worker*. As this will be running tests for this data preparation step, this will need to be done in the [testing mode for the Docker SDK](/docs/scos/dev/the-docker-sdk/202204.0/running-tests-with-the-docker-sdk.html). 
 
+These steps assume you are working from a local environment. If you are attempting to implement these changes to a production or staging environment, you will need to configure these commands to run with a Jenkins.
+
+
+#### Steps for configuring a job in Jenkins
+
+Jenkins is the default scheduler which ships with Spryker. It is an automation service which helps to automate tasks within Spryker. For an environment that is already set-up and hosted in the cloud, Jenkins can be used to schedule the necessary tasks you need for the data preparation step.
+
 {% info_block infoBox %}
 
-These steps assume you are working from a local environment. If you are attempting to implement these changes to a production or staging environment, you will need to configure these commands to run with a [cronjob](/docs/scos/dev/back-end-development/cronjobs/cronjobs.html) using the Scheduler module.
+For most environments hosted, you will need to be connected to a VPN to access the Jenkins web UI.
 
 {% endinfo_block %}
+
+1. From the Dashboard, select `New Item`.
+![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTzW2A-gkFX6PC1YiG4r0EUQX5S2xWDRQWq4hkgzKn889xva_FwrEaDo-lYl2i3CWgXiMqebPA=w1920-h919)
+
+2. Enter an item name for the new job and select `Freestyle project`. Once you have done that, you can move to the next step with `OK`.
+![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmR2mN1q7_Du2JZPTw_CFqi9hjYnEqi8XvjXpgidcmcEeIEvUYwiEFX2GAAeLU105pz53guDHqI=w1920-h919)
+
+3. The next step will allow up to input the commands we need to run. While a description is optional, you can choose to set one here. There are also additional settings, such as a display name, which may also be toggled. As you only need the commands to run once, you can move down to the `Build` section to add the three build steps needed.
+
+Click on `Add build step` and select `Execute shell`. A Command field will appear, allowing you to input the following: 
+
+```bash
+APPLICATION_STORE="DE" COMMAND="$PHP_BIN vendor/bin/codecept fixtures -c vendor/spryker-sdk/load-testing" bash /usr/bin/spryker.sh
+```
+
+{% info_block errorBox %}
+
+Once these fixtures have been generated, attempting to rerun them in the future with the default data files found in **/vendor/spryker-sdk/load-testing/tests/_data/** will cause an error. New data should be considered if you wish to regenerate fixtures for whatever reason.
+
+{% endinfo_block %}
+
+You can change the store for which you wish to generate fixtures for (i.e., `AT` or `US`). This command allows Codeception to locate the proper configuration file with the `-c` flag for the load testing tool. Once the fixtures have been generated, the data needs to be republished. We can have Jenkins do that with the same job by adding an additional build step with `Add build step`.
+
+```bash
+APPLICATION_STORE="DE" COMMAND="$PHP_BIN vendor/bin/console publish:trigger-events" bash /usr/bin/spryker.sh
+```
+
+From here, you can either add another build step to toggle the queue worker to run, or you can run the queue worker job already available within Jenkins, i.e. `DE__queue-worker-start`.
+
+```bash
+APPLICATION_STORE="DE" COMMAND="$PHP_BIN vendor/bin/console queue:worker:start -s " bash /usr/bin/spryker.sh
+```
+![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmTeb8OPIZwA65e57LNg8fq_t7DnQ2T_okTLFBxcljKIXgqXcjWyt9yiCFiPKX50_Nb2LyE__Ao=w1920-h919)
+
+4. Once the build steps have been added, you can `Save` to be taken to the project status page for the newly-created job. As this is a job that you only need to run once and no schedule was set, you can select the `Build Now` option.
+![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmRTLzDFMolgcaZ_xE-nKMNBEiIDXkSjwEiInkEIJL3ZbMbIY5ygKXqc-7eE_H5N2X-m7ap1l8s=w1920-h919)
+
+5. With the job set to build and run, it will build a new workspace for the tasks and run each build step that you specified. Once the build has successfully completed, you can review the `Console Output` and then remove the project `Delete Project` once you as finished if you no longer need it.
+![screenshot](https://lh3.googleusercontent.com/drive-viewer/AJc5JmSJmYXg2MyBlTWGbCU6BtzL4ye4y2YOiKNFSobALdDrnescyH8wgIIOzF84QfWQAeSVEmz5HnI=w1920-h919)
+
+{% info_block infoBox %}
+
+While it is possible to change the Jenkins cronjobs found at **/config/Zed/cronjobs/jenkins.php**, please note that these entries require a scheduled time and setting this will cause those jobs to run until they have been disabled in the Jenkins web UI.
+
+{% endinfo_block %}
+
+You are now done and can move on to [Installing Gatling](#installing-gatling)!
+
+#### Steps for using a local environment
 
 To start, entering testing mode with the following command:
 

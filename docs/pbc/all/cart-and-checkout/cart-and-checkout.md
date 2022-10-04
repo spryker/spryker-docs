@@ -9,21 +9,9 @@ The *Cart and Checkout* capability enables customers and guest users to create a
 
 To learn about cart and checkout, see the following feature overviews:
 
-* Cart feature overview            url: /docs/pbc/all/cart-and-checkout/cart-feature-overview/cart-feature-overview.html
-            nested:
-              - title: Cart notes
-                url: /docs/pbc/all/cart-and-checkout/cart-feature-overview/cart-notes-overview.html
-              - title: Cart widget
-                url: /docs/pbc/all/cart-and-checkout/cart-feature-overview/cart-widget-overview.html
-              - title: Quick order from the catalog page
-                url: /docs/pbc/all/cart-and-checkout/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
-          - title: Multiple Carts feature overview
-            url: /docs/pbc/all/cart-and-checkout/multiple-carts-feature-overview.html
-          - title: Persistent Cart Sharing feature overview
-            url: /docs/pbc/all/cart-and-checkout/persistent-cart-sharing-feature-overview.html
-          - title: Quick Add to Cart feature overview
-            url: /docs/pbc/all/cart-and-checkout/quick-add-to-cart-feature-overview.html
-          - title: Shared Carts feature overview
-            url: /docs/pbc/all/cart-and-checkout/shared-carts-feature-overview.html
-          - title: Checkout feature overview
-            url: /docs/pbc/all/cart-and-checkout/checkout-feature-overview/checkout-feature-overview.html
+* [Cart feature overview](/docs/pbc/all/cart-and-checkout/cart-feature-overview/cart-feature-overview.html)
+* [Multiple Carts feature overview](/docs/pbc/all/cart-and-checkout/multiple-carts-feature-overview.html)
+* [Persistent Cart Sharing feature overview](/docs/pbc/all/cart-and-checkout/persistent-cart-sharing-feature-overview.html)
+* [Quick Add to Cart feature overview](/docs/pbc/all/cart-and-checkout/quick-add-to-cart-feature-overview.html)
+* [Shared Carts feature overview](/docs/pbc/all/cart-and-checkout/shared-carts-feature-overview.html)
+* [Checkout feature overview](/docs/pbc/all/cart-and-checkout/checkout-feature-overview/checkout-feature-overview.html)

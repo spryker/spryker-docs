@@ -1553,7 +1553,7 @@ entries:
         - "202204.0"
         nested:
           - title: Glue API - Glue Storefront and Backend API applications
-            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-storefront-and-backend-api-applications-integration.html
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-glue-storefront-and-backend-api-applications-integration.html
             include_versions:
             - "202204.0"
           - title: Glue API - Authentication

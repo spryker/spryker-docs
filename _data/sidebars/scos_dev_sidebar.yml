@@ -1179,31 +1179,59 @@ entries:
     - title: Glue infrastructure
       url: /docs/scos/dev/glue-api-guides/glue-infrastructure.html
     - title: Glue Backend API
+      include_versions:
+      - "202204.0"
       nested:
+      - title: HowTo guides
+        include_versions:
+        - "202204.0"
+        nested:
         - title: How to create a resource
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-a-resource.html
+          include_versions:
+          - "202204.0"
         - title: How to create resources with parent-child relationships
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-resources-with-parent-child-relationships.html
+          include_versions:
+          - "202204.0"
         - title: How to create a route 
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-a-route.html
+          include_versions:
+          - "202204.0"
         - title: Backend and storefront API module differences
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/backend-and-storefront-api-module-differences.html
+          include_versions:
+          - "202204.0"
         - title: How to use OOTB Glue parameters
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-use-ootb-glue-parameters.html
+          include_versions:
+          - "202204.0"
         - title: How to create a JSON:API relationship
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-a-json-api-relationship.html
+          include_versions:
+          - "202204.0"
         - title: How to document Glue API endpoints
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-document-glue-api-endpoints.html
+          include_versions:
+          - "202204.0"
         - title: How to use authorization framework
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-use-authorization-framework.html
         - title: How to use the Glue authorization scopes
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-use-glue-api-authorization-scopes.html
+          include_versions:
+          - "202204.0"
         - title: How to create protected endpoints
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-protected-endpoints.html
+          include_versions:
+          - "202204.0"
         - title: How to create API applications
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-api-applications.html
+          include_versions:
+          - "202204.0"
         - title: How to create or change a convention
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/how-to-create-or-change-a-convention.html
+          include_versions:
+          - "202204.0"
     - title: Glue API Developer Guides
       url: /docs/scos/dev/glue-api-guides/glue-api-developer-guides.html
       include_versions:
@@ -1521,9 +1549,11 @@ entries:
       - title: Glue API - Wishlist
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-wishlist-feature-integration.html
       - title: Glue Backend API
+        include_versions:
+        - "202204.0"
         nested:
-          - title: Glue API - Glue Storefront and Backend API infrastructure
-            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-storefront-and-backend-api-applications-integration.html
+          - title: Glue API - Glue Storefront and Backend API applications
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-api-storefront-and-backend-api-applications-integration.html
             include_versions:
             - "202204.0"
           - title: Glue API - Authentication

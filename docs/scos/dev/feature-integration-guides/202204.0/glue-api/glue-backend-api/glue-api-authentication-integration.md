@@ -100,7 +100,7 @@ Ensure that the following changes have occurred in transfer objects:
 | --- | --- | --- |
 | OauthClientInstallerPlugin | Populates database with Oauth client data. | Spryker\\Zed\\Oauth\\Communication\\Plugin\\Installer |
 
-**Storefront API:**
+**Storefront API plugins:**
 
 | PLUGIN | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
@@ -113,7 +113,7 @@ Ensure that the following changes have occurred in transfer objects:
 | CustomerOauthScopeProviderPlugin | Gets a list of customer scopes. | Spryker\\Zed\\OauthCustomerConnector\\Communication\\Plugin |
 | CustomerPasswordOauthRequestGrantTypeConfigurationProviderPlugin | Builds `OauthGrantTypeConfigurationTransfer` from configuration of Password GrantType data. | Spryker\\Zed\\Oauth\\Communication\\Plugin\\Oauth |
 
-**Backend API:**
+**Backend API plugins:**
 
 | PLUGIN | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
@@ -364,7 +364,7 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 ```
 </details>
 
-Set up the Oauth client:
+2. Set up the Oauth client:
 
 ```bash
 console setup:init-db

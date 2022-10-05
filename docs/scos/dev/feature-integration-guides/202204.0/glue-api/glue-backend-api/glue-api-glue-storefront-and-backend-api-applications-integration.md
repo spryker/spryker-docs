@@ -25,9 +25,11 @@ To start feature integration, overview and install the necessary features:
 
 Install the required modules:
 
-```
+```bash
 composer require spryker/glue-storefront-api-application:"^1.0.0" spryker/glue-backend-api-application:"^1.0.0" --update-with-dependencies
 ```
+
+{% info_block warningBox "Verification" %}
 
 Make sure that the following modules have been installed:
 
@@ -36,6 +38,8 @@ Make sure that the following modules have been installed:
 | GlueApplication | vendor/spryker/glue-application |
 | GlueStorefrontApiApplication | vendor/spryker/glue-storefront-api-application |
 | GlueBackendApiApplication | vendor/spryker/glue-backend-api-application |
+
+{% endinfo_block %}
 
 ### 2) Set up the configuration
 

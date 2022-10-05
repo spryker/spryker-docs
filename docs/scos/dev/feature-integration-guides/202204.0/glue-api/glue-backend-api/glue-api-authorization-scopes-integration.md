@@ -19,7 +19,7 @@ To start feature integration, overview and install the necessary feature:
 
 | NAME           | VERSION           | INTEGRATION GUIDE |
 | -------------- | ----------------- | ----------------- |
-| Glue Authentication | {{page.version}} | [Glue Authentication itegration](/docs/scos/dev/feature-integration-guides/{{pagelversion}}/glue-api/glue-backend-api/glue-api-authentication-integration.html) |
+| Glue Authentication | {{page.version}} | [Glue Authentication itegration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-backend-api/glue-api-authentication-integration.html) |
 
 ### 1) Set up transfer objects
 

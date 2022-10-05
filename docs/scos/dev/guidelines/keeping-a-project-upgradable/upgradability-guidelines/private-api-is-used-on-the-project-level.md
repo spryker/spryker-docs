@@ -8,10 +8,6 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html
   - title: Entity name is not unique
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/entity-name-is-not-unique.html
-  - title: Private API is extended
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-extended.html
-  - title: Private API method is overridden on the project level
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-method-is-overridden-on-the-project-level.html
 ---
 
 Private API is used on the project level. Private API entities shouldn't be used on the project side. The project has to follow the rule to be able to correctly receive Spryker autoupdates.
@@ -134,6 +130,161 @@ class CustomerReader extends SprykerCustomerReader implements CustomerReaderInte
 ```
 
 After the fix re-evaluate the code. The same error shouldn’t be returned.
+
+
+## PrivateApi:Extension
+
+`CustomerAccessForm` extends `Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm` from a private API.
+
+```php
+namespace Pyz\Zed\CustomerAccessGui\Communication\Form;
+
+use Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm as SprykerCustomerAccessForm;
+
+class CustomerAccessForm extends SprykerCustomerAccessForm
+{
+...
+}
+```
+
+### Related error in the Evaluator output: Extending a private API form class
+
+```bash
+------------------------------------------------------------------------------------
+Please avoid extension of the PrivateApi Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm in Pyz\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm
+------------------------------------------------------------------------------------
+```
+
+### Example of resolving the error by copying the form class to the project level
+
+```php
+<?php
+namespace Pyz\Zed\CustomerAccessGui\Communication\Form;
+
+use Spryker\Zed\Kernel\Communication\Form\AbstractType;
+
+class PyzCustomerAccessForm extends AbstractType
+{
+    ...
+}
+```
+
+After the fix re-evaluate the code. The same error shouldn’t be returned.
+
+
+### Example of code that causes an upgradability error: Extending a private API business model
+
+`CustomerAccessFilter` extends `Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter` from a private API.
+
+```php
+namespace Pyz\Zed\CustomerAccess\Business\CustomerAccess;
+
+use Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter as SprykerCustomerAccessFilter;
+
+class CustomerAccessFilter extends SprykerCustomerAccessFilter
+{
+    ...
+}
+```
+
+### Related error in the Evaluator output: Extending a private API business model
+
+```bash
+------------------------------------------------------------------------------------
+Please avoid extension of the PrivateApi Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter in Pyz\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter
+------------------------------------------------------------------------------------
+```
+
+### Example of resolving the error by copying the business model to the project level
+
+```php
+<?php
+namespace Pyz\Zed\CustomerAccess\Business\CustomerAccess;
+
+class PyzCustomerAccessFilter implements PyzCustomerAccessFilterInterface
+{
+    ...
+}
+```
+
+### Example of code that causes an upgradability error: Extending a private API Bridge
+
+```php
+namespace Pyz\Zed\PriceProduct\Dependency\Facade;
+
+use Spryker\Zed\PriceProduct\Dependency\Facade\PriceProductToProductFacadeBridge as SprykerPriceProductToProductFacadeBridge;
+
+class PriceProductToProductFacadeBridge extends SprykerPriceProductToProductFacadeBridge implements PriceProductToProductFacadeInterface
+{
+    ...
+}
+```
+
+### Related error in the Evaluator output: Extending a private API Bridge
+
+
+```bash
+------------------------------------------------------------------------------------
+Please avoid extension of the PrivateApi Spryker\Zed\PriceProduct\Dependency\Facade\PriceProductToProductFacadeBridge in Pyz\Zed\PriceProduct\Dependency\Facade\PriceProductToProductFacadeBridge
+------------------------------------------------------------------------------------
+```
+
+### Example of resolving the error: Extending a private API Bridge
+Remove the Bridge.
+
+
+## PrivateApi:MethodIsOverwritten
+
+The extended class `CheckoutPageDependencyProvider` overrides the private API core method `SprykerCheckoutPageDependencyProvider::getCustomerStepHandler`.
+
+```php
+namespace Pyz\Yves\CheckoutPage;
+
+use Spryker\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerCheckoutPageDependencyProvider;
+
+class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvider
+{
+    /**
+     * ...
+     */
+    protected function getCustomerStepHandler(): ...
+    {
+        ...
+    }
+}
+```
+
+## Example of related error in the Evaluator output
+
+```bash
+------------------------------------------------------------------------------------
+Please avoid overriding of core method Spryker\Yves\CheckoutPage\CheckoutPageDependencyProvider::getCustomerStepHandler() in the class Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider
+------------------------------------------------------------------------------------
+```
+
+Make the name of the Private API entity unique by adding `Pyz`.
+
+```php
+namespace Pyz\Yves\CheckoutPage;
+
+use Spryker\Yves\CheckoutPage\CheckoutPageDependencyProvider as SprykerCheckoutPageDependencyProvider;
+
+class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvider
+{
+    /**
+     * ...
+     */
+    protected function getPyzCustomerStepHandler(): ...
+    {
+        ...
+    }
+}
+```
+
+To make the names of extended Private API entities unique, you can use any other strategy. For example, you can prefix them with your project name.
+
+After renaming the entity, re-evaluate the code. The same error shouldn't be returned.
+
 
 
 ## PrivateApi:Persistence

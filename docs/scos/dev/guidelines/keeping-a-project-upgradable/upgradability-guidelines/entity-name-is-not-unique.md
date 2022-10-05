@@ -6,12 +6,8 @@ template: concept-topic-template
 related:
   - title: Upgradability guidelines
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html
-  - title: Private API is extended
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-extended.html
   - title: Private API is used on the project level
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-used-on-the-project-level.html
-  - title: Private API method is overridden on the project level
-    link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-method-is-overridden-on-the-project-level.html
 ---
 
 All entities in your project should have unique names. Not unique entity names on the project level can produce naming conflicts during the semi-automatic update process. The easiest way to ensure that is to use a prefix in entities' names. Unique entity names are required for the successful delivery of Spryker module updates to your project.

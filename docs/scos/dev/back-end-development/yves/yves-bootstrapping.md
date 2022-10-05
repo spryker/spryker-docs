@@ -42,7 +42,7 @@ related:
 <!--used to be: http://spryker.github.io/tutorials/yves/yves-bootstrapping/-->
 Yves and Zed are both built upon the [Symfony components](https://symfony.com/components). So most concepts about modern web frameworks are applied here as well.
 
-In `static/public/Yves/index.php`, you will find the entry for the front-end application.
+In `static/public/Yves/index.php`, you will find the entry for the frontend application.
 
 ```php
 <?php

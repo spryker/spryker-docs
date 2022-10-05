@@ -26,7 +26,7 @@ redirect_from:
 related:
   - title: Checkout steps
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html
-  - title: Step engine workflow overview
+  - title: "Step engine: Workflow overview"
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-workflow-overview.html
 ---
 

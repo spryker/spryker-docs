@@ -2,6 +2,8 @@
 title: Packaged Business Capabilities
 description: Welcome to the Packaged Business Capabilities (PBC) documentation section
 template: concept-topic-template
+redirect_from:
+  - /docs/pbc/all/pbc-landing.html
 ---
 
 Packaged Business Capabilities (PBCs) are capabilities that enclose a certain functionality with the Spryker system. PBCs provide a good foundation for decision makers throughout multiple business entities.
@@ -13,7 +15,7 @@ This section is in beta because not all the PBCs are covered. You are welcome to
 | NAME | DESCRIPTION | BENEFITS |
 | --- | --- | --- |
 | Carrier Management | The Spryker Cloud Commerce OS integrates with several shipping carriers and methods and lets you define their availability, price, and tax set. During the checkout process, customers have the option to select their preferred shipment method and relevant carrier. | Ensures quick and cost-effective delivery. |
-| Cart and Checkout | The online shopping cart and checkout process act as a gateway for customer and order management. It lets your customers organize and manage their purchases, apply vouchers and coupon codes. Based on their roles and permissions, your B2B customers can add or remove products, share the cart, and manage their purchases. | Increases conversion rates and reduces drop-off rates. Offers additional B2B specific, permission-related functionalities. |
+| [Cart and Checkout](/docs/pbc/all/cart-and-checkout/cart-and-checkout.html) | The online shopping cart and checkout process act as a gateway for customer and order management. It lets your customers organize and manage their purchases, apply vouchers and coupon codes. Based on their roles and permissions, your B2B customers can add or remove products, share the cart, and manage their purchases. | Increases conversion rates and reduces drop-off rates. Offers additional B2B specific, permission-related functionalities. |
 | CMS (Content Management System) | The CMS features let you customize your store, enrich it with information, stories, or other content, and make it easily findable in search engines. Several SEO features enable you to add customized meta information to all your content and create search engine-friendly URLs. | Provides compelling content and stories where your customers need it. |
 | CRM (Customer Relationship Management) | The customer management tool lets B2B and B2C businesses manage customer accounts and efficiently monitor shopping habits. It provides your B2B Customers with a way to map their business hierarchies, permissions, and role management. With the creation of distinctive Business Units, the internal hierarchy can easily be mapped out, and each Unit can operate independently. The Roles and Permissions System lets your customer’s buyers define the purchase and approval process. | Increases conversion rates and average order values with a compact Customer Relationship Management tool. |
 | DAM (Digital Asset Management) | The DAM system provides impactful visuals while simultaneously maintaining fast response times, thus helping you reduce your bounce rate effectively and create an enhanced shopping experience. With the DAM, you can add images and videos to any of your pages. | Offers an exceptional brand experience with impactful visuals, banners, and media assets. |

@@ -69,7 +69,7 @@ session refresh before end: 5m (300)
 
 ## Yves
 
-In Yves (front-end), sessions are managed by the following widget:
+In Yves (frontend), sessions are managed by the following widget:
 `vendor/spryker/spryker-shop/Bundles/UpdateSessionTtlWidget/src/SprykerShop/Yves/UpdateSessionTtlWidget/Widget/UpdateSessionTtlWidget.php`
 
 The widget handles sessions as follows:

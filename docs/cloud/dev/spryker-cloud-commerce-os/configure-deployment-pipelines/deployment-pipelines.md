@@ -13,7 +13,7 @@ redirect_from:
 
 {% info_block infoBox "Data Import during Deployments" %}
 
-For performance and stability reasons, please make sure to remove all heavy data ingestion or processing operations from deployment steps/install recipes. Please use a jenkins job instead and start these operations after the deployment is finished.
+For performance and stability reasons, remove all heavy data ingestion or processing operations from deployment steps/install recipes. Use a Jenkins job instead and start these operations after the deployment is finished.
 
 {% endinfo_block %}
 

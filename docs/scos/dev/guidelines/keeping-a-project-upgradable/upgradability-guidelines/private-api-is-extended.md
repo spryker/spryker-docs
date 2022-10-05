@@ -14,7 +14,7 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-method-is-overridden-on-the-project-level.html
 ---
 
-Private API is extended. The page describes why entities on the project side have to avoid private api extending. The project has to follow the rule to be able to correctly receive Spryker autoupdates.
+[Private API is extended](/docs/scos/dev/architecture/module-api/declaration-of-module-apis-public-and-private.html). Private API entities shouldn't be extended on the project side. This will allow you to improve the process of semi-automated delivery of Spryker module updates.
 
 Modules have public and private APIs. While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API.
 

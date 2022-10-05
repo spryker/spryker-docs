@@ -141,4 +141,4 @@ class OauthDependencyProvider extends SprykerOauthDependencyProvider
 }
 ```
 
-To verify that everything is set up correctly and provide the protected endpoints, see [How to use Glue API authorization scopes](/docs/scos/dev/glue-api-guides/{{page.verison}}/glue-backend-api/how-to-guides/how-to-use-glue-api-authorization-scopes.html).
+To verify that everything is set up correctly and provide the protected endpoints, see [How to use Glue API authorization scopes](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-backend-api/how-to-guides/how-to-use-glue-api-authorization-scopes.html).

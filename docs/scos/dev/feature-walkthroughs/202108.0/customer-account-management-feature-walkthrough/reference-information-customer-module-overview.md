@@ -3,6 +3,8 @@ title:  "Reference information: Customer module overview"
 last_updated: Aug 13, 2021
 description: This article describes how new customers can be created and managed and how to enable specific features related to customers.
 template: concept-topic-template
+redirect_from:
+  - /docs/scos/dev/feature-walkthroughs/202108.0/customer-account-management-feature-walkthrough/customer-module-overview-reference-information.html
 ---
 
 The Customer entity wraps data around registered customers. Customer data is managed from the Back Office by the shop administrator and from the shop website itself by customers. This article describes how new customers can be created and managed and how to enable specific features related to customers.

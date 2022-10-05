@@ -19,11 +19,11 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/state-machine-console-commands.html
   - title: Common pitfalls in OMS design
     link: docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
-  - title: Creating an Order Management System - Spryker Commerce OS
-    link: docs/scos/dev/back-end-development/data-manipulation/creating-an-order-management-system-spryker-commerce-os.html
+  - title: Create an Order Management System - Spryker Commerce OS
+    link: docs/scos/dev/back-end-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
 ---
 
-Order management system (OMS) heavily relies on the state machine-related concepts like [event timeouts](/docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html#timeout) and [conditions](/docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html#conditions). When an order is managed, a lot of the timeout and condition entities are being processed. Processing of timeouts and conditions in Spryker is done by two console commands:
+Order management system (OMS) heavily relies on the state machine-related concepts like [event timeouts](/docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html#timeout) and [conditions](/docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html#conditions). When an order is managed, a lot of the timeout and condition entities are being processed. Processing of timeouts and conditions in Spryker is done by two console commands:
 
 * `oms:check-timeout`
 * `oms:check-condition`
@@ -47,9 +47,7 @@ If you have a large database, for performance reasons, it is not recommended to 
 
 {% endinfo_block %}
 
-## Enabling OMS multi-thread
-
-To enable the OMS multi-thread, do the following:
+## Enable OMS multi-thread
 
 1. Install the `spryker/oms-multi-thread` module and update `spryker/sales`:
 
@@ -74,7 +72,7 @@ $config[OmsMultiThreadConstants::OMS_PROCESS_WORKER_NUMBER] = 10;
 
 This value serves as the upper boundary for a generated processor identifier. For example, if you want to process the orders in 10 simultaneous threads, set this value to 10. Then, each new order is assigned a number between 1 and 10 as the processor identifier.
 
-1. Configure the OMS console commands. Let's take `oms:check-timeout` as an example. Create as many cronjobs, as many process workers you have. Each cronjob must run the command with different processor identifiers within the boundaries defined in Step 3. In the current example, the maximum number of OMS process workers is 10; thus, you must configure 10 distinct cronjobs each dealing with its own processor identifier:
+4. Configure the OMS console commands. Let's take `oms:check-timeout` as an example. Create as many cronjobs, as many process workers you have. Each cronjob must run the command with different processor identifiers within the boundaries defined in Step 3. In the current example, the maximum number of OMS process workers is 10; thus, you must configure 10 distinct cronjobs each dealing with its own processor identifier:
 
 <details>
 <summary markdown='span'>config/Zed/cronjobs/jenkins.php</summary>
@@ -116,5 +114,5 @@ $jobs[] = [
 
 Regarding performance, there are a few things to keep in mind when running the OMS commands:
 
-* The `limit options`: commands `oms:check-timeout` and `oms:check-condition` have an option that allows specifying the maximum number of order items to be handled during a single command run. It's recommended to provide this option for speeding up the database-related activities.
+* The limit options: commands `oms:check-timeout` and `oms:check-condition` have an option that allows specifying the maximum number of order items to be handled during a single command run. It's recommended to provide this option for speeding up the database-related activities.
 * You can specify more than one processor identifier for a single command run. But for large databases, this is generally not recommended. Specifying more than one process identifier affects the SQL query running under the hood and might disable a table index needed for this query to be executed in the most performant way.

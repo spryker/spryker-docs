@@ -14,7 +14,7 @@ redirect_from:
 
 The _Resource Sharing_ feature lets you generate a unique URL for any entity in Spryker. For example, you can generate a unique URL for a cart and share it with different access permissions.
 
-For each entity, you must use an additional connector module. For example, to share carts, combine the Resource Sharing feature with the [Persistent Cart Sharing](/docs/scos/user/features/{{page.version}}/persistent-cart-sharing-feature-overview.html) feature.
+For each entity, you must use an additional connector module. For example, to share carts, combine the Resource Sharing feature with the [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/persistent-cart-sharing-feature-overview.html) feature.
 
 {% info_block warningBox "Developer guides" %}
 

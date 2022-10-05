@@ -70,27 +70,28 @@ After rebuilding the abstract product Propel entity class and synchronizing data
 {"id":123,"_timestamp":1599741494.2676899}
 ```
 The key with which this record is stored, looks like this:
+
 ```php
 kv:product_abstract:de:de_de:sku:xyz
 ```
-where *xyz* is the SKU of the particular product.
+where *`xyz`* is the SKU of the particular product.
 
-That being done, we have mapped the product's SKU to the product's ID.
+After that, the product's SKU is mapped to the product's ID.
 
 <a name="using"></a>
 
 ## Using mappings
 
-Once you have the mappings, to get the actual product data, you obviously need to make some extra steps:
+Once you have the mappings, to get the actual product data, you need to make some extra steps:
 
-1. Get product's ID from the mapping record.
+1. Get the product's ID from the mapping record.
 2. Construct the final storage key using the ID obtained from the mapping record.
 3. Make another request to the storage.
 
 However, overall, this is pretty reasonable and doesn't bring any notable performance penalties (of course, if you're using some fast storage like Redis).
 
 ## Multiple mappings
-Because of the way Propel schema files are parsed and merged, previously it was not possible to define several mappings for the same resource. Now it is possible. For this, multiple source-destination pairs have to be defined as a value of the same `mappings` parameter, separated by a configurable delimiter (`;` by default):
+Because of the way Propel schema files are parsed and merged, previously you could not define several mappings for the same resource. Now you can. For this, multiple source-destination pairs have to be defined as a value of the same `mappings` parameter, separated by a configurable delimiter (`;` by default):
 
 ```xml
 <table name="spy_product_abstract_storage">
@@ -108,8 +109,9 @@ You can configure the delimiter to separate mappings by overriding `\Spryker\Zed
 For each mapping, a separate storage key is generated.
 
 After this adjustment, Propel entity classes have to be rebuilt.
+
 {% info_block warningBox "Note" %}
 
-There's one limitation about the multiple mappings: you cannot define several mappings with the same source portion for the same resource - the last defined mapping with a non-unique source will win.
+There's one limitation about the multiple mappings: you cannot define several mappings with the same source portion for the same resource. The last defined mapping with a non-unique source wins.
 
 {% endinfo_block %}

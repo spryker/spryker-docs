@@ -198,6 +198,13 @@ entries:
       url: /docs/scos/user/features/catalog-feature-overview.html
     - title: Checkout
       url: /docs/scos/user/features/checkout-feature-overview/checkout-feature-overview.html
+      include_versions:
+      - "201903.0"
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
       nested:
       - title: Multi-step checkout
         url: /docs/scos/user/features/checkout-feature-overview/multi-step-checkout-overview.html
@@ -208,7 +215,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Order thresholds
         url: /docs/scos/user/features/checkout-feature-overview/order-thresholds-overview.html
         include_versions:
@@ -218,7 +224,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Define Payment and Shipment Methods
         url: /docs/scos/user/features/checkout-feature-overview/define-payment-and-shipment-methods.html
         include_versions:
@@ -370,6 +375,8 @@ entries:
       - "202108.0"
       - "202204.0"
     - title: File Manager
+      include_versions:
+      - "202108.0"
       nested:
       - title: Media Management
         url: /docs/scos/user/features/file-manager-feature-overview/file-manager-feature-overview.html
@@ -384,7 +391,7 @@ entries:
     - title: Inventory Management
       url: /docs/scos/user/features/inventory-management-feature-overview.html
       include_versions:
-      - "202108.0"      
+      - "202108.0"
     - title: Mailing and Notifications
       url: /docs/scos/user/features/mailing-and-notifications-feature-overview.html
     - title: Measurement Units
@@ -416,6 +423,8 @@ entries:
       - "202204.0"
     - title: Multiple Carts
       url: /docs/scos/user/features/multiple-carts-feature-overview.html
+      include_versions:
+      - "202108.0"
     - title: Navigation
       url: /docs/scos/user/features/navigation-feature-overview.html
     - title: Non-splittable products
@@ -474,7 +483,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Prices
       url: /docs/scos/user/features/prices-feature-overview/prices-feature-overview.html
       include_versions:
@@ -556,7 +564,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Reclamations
       url: /docs/scos/user/features/reclamations-feature-overview.html
       include_versions:
@@ -666,6 +673,8 @@ entries:
         - "201903.0"
     - title: Shared Cart
       url: /docs/scos/user/features/shared-carts-feature-overview.html
+      include_versions:
+      - "202108.0"
     - title: Shipment
       url: /docs/scos/user/features/shipment-feature-overview.html
       include_versions:
@@ -1973,6 +1982,9 @@ entries:
             - "202005.0"
             - "202009.0"
       - title: File manager
+        include_versions:
+        - "202009.0"
+        - "202108.0"
         nested:
         - title: Managing file tree
           url: /docs/scos/user/back-office-user-guides/content/file-manager/managing-file-tree.html
@@ -1988,7 +2000,7 @@ entries:
         - "202001.0"
         - "202005.0"
         - "202009.0"
-        - "202108.0"              
+        - "202108.0"
         nested:
         - title: "Best practices: Promote products with discounts"
           url: /docs/scos/user/back-office-user-guides/merchandising/discount/best-practices-promote-products-with-discounts.html
@@ -2737,14 +2749,6 @@ entries:
             - "201907.0"
             - "202001.0"
             - "202005.0"
-      - title: Define global thresholds
-        url: /docs/scos/user/back-office-user-guides/administration/define-global-thresholds.html
-        include_versions:
-        - "202204.0"
-      - title: Manage threshold settings
-        url: /docs/scos/user/back-office-user-guides/administration/manage-threshold-settings.html
-        include_versions:
-        - "202204.0"
       - title: Define merchant order thresholds
         url: /docs/scos/user/back-office-user-guides/administration/define-merchant-order-thresholds.html
         include_versions:
@@ -2810,10 +2814,6 @@ entries:
             - "202001.0"
             - "202005.0"
             - "202009.0"
-      - title: MIME Type settings
-        url: /docs/scos/user/back-office-user-guides/administration/add-and-edit-mime-types.html
-        include_versions:
-        - "202204.0"
       - title: MIME Type settings
         include_versions:
         - "201903.0"
@@ -3145,7 +3145,6 @@ entries:
     - title: Taxes
       include_versions:
       - "202108.0"
-      - "202204.0"
       nested:
       - title: Avalara
         url: /docs/scos/user/technology-partners/taxes/avalara.html

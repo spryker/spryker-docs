@@ -52,7 +52,7 @@ $templateQuery->offset(10);
 $templateCollection = $templateQuery->find(); // or findOne()
 ```
 
-You can also change the output format, e.g. to array instead of collection:
+You can also change the output format—for example, to array instead of collection:
 
 ```php
 <?php

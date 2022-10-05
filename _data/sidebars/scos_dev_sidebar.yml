@@ -154,7 +154,6 @@ entries:
       url: /docs/scos/dev/feature-walkthroughs/checkout-feature-walkthrough.html
       include_versions:
       - "202108.0"
-      - "202204.0"
     - title: Cms
       url: /docs/scos/dev/feature-walkthroughs/cms-feature-walkthrough/cms-feature-walkthrough.html
       include_versions:
@@ -943,7 +942,6 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
         nested:
         - title: Managing carts of registered users
           url: /docs/scos/dev/glue-api-guides/managing-carts/carts-of-registered-users/managing-carts-of-registered-users.html
@@ -1115,13 +1113,11 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Submitting checkout data
         url: /docs/scos/dev/glue-api-guides/checking-out/submitting-checkout-data.html
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Checking out purchases
         url: /docs/scos/dev/glue-api-guides/checking-out/checking-out-purchases.html
       - title: Updating payment data
@@ -1129,7 +1125,6 @@ entries:
         include_versions:
         - "202009.0"
         - "202108.0"
-        - "202204.0"
     - title: Retrieving CMS pages
       url: /docs/scos/dev/glue-api-guides/retrieving-cms-pages.html
       include_versions:
@@ -1183,6 +1178,32 @@ entries:
       url: /docs/scos/dev/glue-api-guides/security-and-authentication.html
     - title: Glue infrastructure
       url: /docs/scos/dev/glue-api-guides/glue-infrastructure.html
+    - title: Glue Backend API
+      nested:
+        - title: How to create a resource
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create-a-resource.html
+        - title: How to create a resource with a parent
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create-a-resource-with-parent.html
+        - title: How to create a route
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create-a-route.html
+        - title: Creating a Backend vs a Storefront API endpoint
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create-backend-vs-storefront-api-endpoint.html
+        - title: How to use OOTB Glue parameters
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/glue-parameters-usage.html
+        - title: How to create a JSON:API relationship
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create-a-relationship.html
+        - title: How to document Glue API endpoints
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/documenting-glue-api-endpoints.html
+        - title: How to use authorization framework
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/using-authorization-framework.html
+        - title: How to use the Glue authorization scopes
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/authorization-scopes.html
+        - title: How to create protected endpoints
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create-protected-endpoints.html
+        - title: How to create a new API application
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create-api-application.html
+        - title: How to create or change a convention
+          url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create_change-convention.html
     - title: Glue API Developer Guides
       url: /docs/scos/dev/glue-api-guides/glue-api-developer-guides.html
       include_versions:
@@ -1254,7 +1275,6 @@ entries:
         - "202005.0"
         - "202009.0"
         - "202108.0"
-        - "202204.0"
       - title: Glue API - CMS
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-cms-feature-integration.html
         include_versions:
@@ -1500,6 +1520,24 @@ entries:
         - "201907.0"
       - title: Glue API - Wishlist
         url: /docs/scos/dev/feature-integration-guides/glue-api/glue-api-wishlist-feature-integration.html
+      - title: Glue Backend API
+        nested:
+          - title: Glue Backend API infrastructure
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-storefront-and-backend-api-applications-integration.html
+            include_versions:
+            - "202204.0"
+          - title: Glue Authentication
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-authentication-integration.html
+            include_versions:
+            - "202204.0"
+          - title: Glue JSON:API Convention
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/glue-json-api-convention-integration.html
+            include_versions:
+            - "202204.0"
+          - title: Glue Authorization Scopes
+            url: /docs/scos/dev/feature-integration-guides/glue-api/glue-backend-api/authorization-scopes-integration.html
+            include_versions:
+            - "202204.0"
     - title: Agent Assist
       url: /docs/scos/dev/feature-integration-guides/agent-assist-feature-integration.html
     - title: Agent Assist + Cart
@@ -1641,7 +1679,6 @@ entries:
       include_versions:
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Checkout + Quotation Process
       url: /docs/scos/dev/feature-integration-guides/checkout-quotation-process-feature-integration.html
       include_versions:
@@ -1650,9 +1687,14 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Checkout Workflow
       url: /docs/scos/dev/feature-integration-guides/checkout-workflow-integration-guide.html
+      include_versions:
+      - "201907.0"
+      - "202001.0"
+      - "202005.0"
+      - "202009.0"
+      - "202108.0"
     - title: CMS
       url: /docs/scos/dev/feature-integration-guides/cms-feature-integration.html
       include_versions:
@@ -1934,7 +1976,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Persistent Cart Sharing + Shared Carts
       url: /docs/scos/dev/feature-integration-guides/persistent-cart-sharing-shared-carts-feature-integration.html
       include_versions:
@@ -1943,7 +1984,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Prices
       url: /docs/scos/dev/feature-integration-guides/prices-feature-integration.html
       include_versions:
@@ -2151,7 +2191,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Quick Add to Cart + Measurement Units
       url: /docs/scos/dev/feature-integration-guides/quick-add-to-cart-measurement-units-feature-integration.html
       include_versions:
@@ -2161,7 +2200,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Quick Add to Cart + Non-splittable Products
       url: /docs/scos/dev/feature-integration-guides/quick-add-to-cart-non-splittable-products-feature-integration.html
       include_versions:
@@ -2171,7 +2209,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Quick Add to Cart + Packaging Units
       url: /docs/scos/dev/feature-integration-guides/quick-add-to-cart-packaging-units-feature-integration.html
       include_versions:
@@ -2181,7 +2218,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Quick Add to Cart + Shopping Lists
       url: /docs/scos/dev/feature-integration-guides/quick-add-to-cart-shopping-lists-feature-integration.html
       include_versions:
@@ -2191,7 +2227,6 @@ entries:
       - "202005.0"
       - "202009.0"
       - "202108.0"
-      - "202204.0"
     - title: Quotation Process
       url: /docs/scos/dev/feature-integration-guides/quotation-process-feature-integration.html
       include_versions:
@@ -2353,12 +2388,8 @@ entries:
     - title: Glue API
       url: /docs/scos/dev/module-migration-guides/glue-api/about-glue-api-migration-guides.html
       nested:
-      - title: Migration Guide - CartsRestApi
-        url: /docs/scos/dev/module-migration-guides/glue-api/cartsrestapi-migration-guide.html
       - title: Migration Guide - CatalogSearchRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/catalogsearchrestapi-migration-guide.html
-      - title: Migration Guide - CheckoutRestApi
-        url: /docs/scos/dev/module-migration-guides/glue-api/migration-guide-checkoutrestapi.html
       - title: Migration Guide - CompanyUserAuthRestApi
         url: /docs/scos/dev/module-migration-guides/glue-api/companyuserauthrestapi-migration-guide.html
       - title: Migration Guide - CompanyUsersRestApi
@@ -2375,7 +2406,6 @@ entries:
         url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationspriceproductvolumesrestapi.html
       - title: Migration guide - ProductConfigurationsRestApi
         url: /docs/scos/dev/module-migration-guides/migration-guide-productconfigurationsrestapi.html
-
     - title: Migration Guide - API Module
       url: /docs/scos/dev/module-migration-guides/migration-guide-api-module.html
     - title: Migration guide - Auth module to SecurityGui module
@@ -2384,14 +2414,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-business-on-behalf-data-import.html
     - title: Migration Guide - Calculation
       url: /docs/scos/dev/module-migration-guides/migration-guide-calculation.html
-    - title: Migration Guide - Cart
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cart.html
-    - title: Migration Guide - CartExtension
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cartextension.html
-    - title: Migration Guide - CartPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cartpage.html
-    - title: Migration Guide - CartVariant
-      url: /docs/scos/dev/module-migration-guides/migration-guide-cartvariant.html
     - title: Migration Guide - Catalog
       url: /docs/scos/dev/module-migration-guides/migration-guide-catalog.html
     - title: Migration Guide - Category Template Migration Console
@@ -2404,10 +2426,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-categorypagesearch.html
     - title: Migration guide - CategoryStorage
       url: /docs/scos/dev/module-migration-guides/migration-guide-categorystorage.html
-    - title: Migration Guide - Checkout
-      url: /docs/scos/dev/module-migration-guides/migration-guide-checkout.html
-    - title: Migration Guide - CheckoutPage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-checkoutpage.html
     - title: Migration Guide - CMS Block Category Connector Migration Console
       url: /docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector-migration-console.html
     - title: Migration Guide - CMS Block Category Connector
@@ -2786,7 +2804,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
         - title: File details - currency.csv
           url: /docs/scos/dev/data-import/data-import-categories/commerce-setup/file-details-currency.csv.html
           include_versions:
@@ -3005,7 +3022,6 @@ entries:
             - "202005.0"
             - "202009.0"
             - "202108.0"
-            - "202204.0"
           - title: File details - product_alternative.csv
             url: /docs/scos/dev/data-import/data-import-categories/merchandising-setup/product-merchandising/file-details-product-alternative.csv.html
             include_versions:
@@ -3260,7 +3276,6 @@ entries:
           - "202005.0"
           - "202009.0"
           - "202108.0"
-          - "202204.0"
     - title: Creating a data importer
       url: /docs/scos/dev/data-import/creating-a-data-importer.html
       include_versions:
@@ -3296,7 +3311,6 @@ entries:
       - "202108.0"
       - "202204.0"
   - title: Data export
-    url: /docs/scos/dev/data-export/
     include_versions:
     - "202005.0"
     - "202009.0"
@@ -3405,13 +3419,13 @@ entries:
     - title: Forms
       url: /docs/scos/dev/back-end-development/forms/forms.html
       nested:
-      - title: Creating forms
-        url: /docs/scos/dev/back-end-development/forms/creating-forms.html
+      - title: Create forms
+        url: /docs/scos/dev/back-end-development/forms/create-forms.html
     - title: Plugins
       url: /docs/scos/dev/back-end-development/plugins/plugins.html
       nested:
-      - title: Getting an overview of the used plugins
-        url: /docs/scos/dev/back-end-development/plugins/getting-an-overview-of-the-used-plugins.html
+      - title: Get an overview of the used plugins
+        url: /docs/scos/dev/back-end-development/plugins/get-an-overview-of-the-used-plugins.html
     - title: Session handlers
       url: /docs/scos/dev/back-end-development/session-handlers.html
     - title: Session management
@@ -3429,8 +3443,8 @@ entries:
         url: /docs/scos/dev/back-end-development/console-commands/get-the-list-of-console-commands-and-available-options.html
     - title: Data manipulation
       nested:
-      - title: Running and reverting a database migration
-        url: /docs/scos/dev/back-end-development/data-manipulation/running-and-reverting-a-database-migration.html
+      - title: Run and revert a database migration
+        url: /docs/scos/dev/back-end-development/data-manipulation/run-and-revert-a-database-migration.html
       - title: Data publishing
         nested:
         - title: Publish and Synchronization
@@ -3468,19 +3482,13 @@ entries:
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/common-pitfalls-in-oms-design.html
         - title: Multi-language setup
           url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html
-        - title: Checkout
-          nested:
-          - title: Checkout steps
-            url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-steps.html
-          - title: Checkout process review and implementation
-            url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/checkout/checkout-process-review-and-implementation.html
         - title: Step engine
           nested:
-          - title: Step engine - creating a breadcrumb navigation
-            url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-creating-a-breadcrumb-navigation.html
-          - title: Step engine - use case scenario
+          - title: Create a breadcrumb navigation
+            url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-create-breadcrumb-navigation.html
+          - title: Use case scenario
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-use-case-scenario.html
-          - title: Step engine workflow overview
+          - title: Workflow overview
             url: /docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/step-engine/step-engine-workflow-overview.html
       - title: Configuration management
         url: /docs/scos/dev/back-end-development/data-manipulation/configuration-management.html
@@ -3506,59 +3514,56 @@ entries:
           url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/transfer-data-between-yves-and-zed.html
         - title: Define the module dependencies - Dependency Provider
           url: /docs/scos/dev/back-end-development/data-manipulation/data-interaction/define-the-module-dependencies-dependency-provider.html
-      - title: Creating an Order Management System - Spryker Commerce OS
-        url: /docs/scos/dev/back-end-development/data-manipulation/creating-an-order-management-system-spryker-commerce-os.html
+      - title: Create an Order Management System - Spryker Commerce OS
+        url: /docs/scos/dev/back-end-development/data-manipulation/create-an-order-management-system-spryker-commerce-os.html
       - title: Queue
         url: /docs/scos/dev/back-end-development/data-manipulation/queue/queue.html
         nested:
         - title: Queue pool
           url: /docs/scos/dev/back-end-development/data-manipulation/queue/queue-pool.html
-        - title: Integrating RabbitMQ Headers in Queue Messages
-          url: /docs/scos/dev/back-end-development/data-manipulation/queue/integrating-rabbitmq-headers-in-queue-messages.html
+        - title: Integrate RabbitMQ Headers in Queue Messages
+          url: /docs/scos/dev/back-end-development/data-manipulation/queue/integrate-rabbitmq-headers-in-queue-messages.html
       - title: Payment methods
         nested:
-        - title: Direct Debit example implementation
+        - title: Direct Debit payment
+          url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-payment.html
           nested:
-          - title: Implementation of Direct Debit in Zed
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-zed.html
-          - title: Testing Your Direct Debit Implementation
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/testing-your-direct-debit-implementation.html
-          - title: Implementation of Direct Debit in Yves
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-yves.html
-          - title: Implementation of Direct Debit in the shared layer
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementation-of-direct-debit-in-the-shared-layer.html
+          - title: Implement of Direct Debit in Yves
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-yves.html
           - title: Integrate Direct Debit into checkout
             url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/integrate-direct-debit-into-checkout.html
-          - title: Implementing Direct Debit Payment
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implementing-direct-debit-payment.html
-        - title: Prepayment
+          - title: Implement Direct Debit in Zed
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-zed.html
+          - title: Implement Direct Debit in the shared layer
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/implement-direct-debit-in-the-shared-layer.html
+          - title: Test Your Direct Debit Implementation
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/direct-debit-example-implementation/test-your-direct-debit-implementation.html
+          - title: Prepayment
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment.html
           nested:
-          - title: Testing the Prepayment implementation
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/testing-the-prepayment-implementation.html
-          - title: Implementing Prepayment in Back End
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-back-end.html
-          - title: Integrating Prepayment into checkout
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrating-prepayment-into-checkout.html
-          - title: Implementing Prepayment in shared layer
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment-in-shared-layer.html
-          - title: Implementing Prepayment
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implementing-prepayment.html
-          - title: Implement Prepayment in Frontend
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-front-end.html
+          - title: Implement prepayment in frontend
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-frontend.html
+          - title: Integrate Prepayment into checkout
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/integrate-prepayment-into-checkout.html
+          - title: Implement prepayment in backend
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-backend.html
+          - title: Implement prepayment in shared layer
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/implement-prepayment-in-shared-layer.html
+          - title: Test the prepayment implementation
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/prepayment/test-the-prepayment-implementation.html
         - title: Invoice
+          url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment.html
           nested:
-          - title: Testing the Invoice payment implementation
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/testing-the-invoice-payment-implementation.html
-          - title: Implementing Invoice Payment in Frontend
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-front-end.html
-          - title: Integrating Invoice Payment into checkout
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrating-invoice-payment-into-checkout.html
-          - title: Implementing Invoice payment in Back End
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-back-end.html
-          - title: Implementing Invoice payment in shared layer
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment-in-shared-layer.html
-          - title: Implementing Invoice payment
-            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implementing-invoice-payment.html
+          - title: Implement invoice payment in frontend
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-frontend.html
+          - title: Integrate invoice payment into checkout
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/integrate-invoice-payment-into-checkout.html
+          - title: Implement invoice payment in backend
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-backend.html
+          - title: Implement invoice payment in shared layer
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/implement-invoice-payment-in-shared-layer.html
+          - title: Test the invoice payment implementation
+            url: /docs/scos/dev/back-end-development/data-manipulation/payment-methods/invoice/test-the-invoice-payment-implementation.html
       - title: Data ingestion
         url: /docs/scos/dev/back-end-development/data-manipulation/data-ingestion/data-ingestion.html
         nested:
@@ -3578,10 +3583,10 @@ entries:
       - title: Event
         url: /docs/scos/dev/back-end-development/data-manipulation/event/event.html
         nested:
-        - title: Configuring an events queue
-          url: /docs/scos/dev/back-end-development/data-manipulation/event/configuring-an-events-queue.html
-        - title: Listening to events
-          url: /docs/scos/dev/back-end-development/data-manipulation/event/listening-to-events.html
+        - title: Configure event queues
+          url: /docs/scos/dev/back-end-development/data-manipulation/event/configure-event-queues.html
+        - title: Listen to events
+          url: /docs/scos/dev/back-end-development/data-manipulation/event/listen-to-events.html
         - title: Add events
           url: /docs/scos/dev/back-end-development/data-manipulation/event/add-events.html
     - title: Extending Spryker
@@ -3591,16 +3596,16 @@ entries:
         nested:
         - title: Project modules
           nested:
-          - title: Adding a new module
-            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/adding-a-new-module.html
+          - title: Add a new module
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/project-modules/add-a-new-module.html
         - title: Spryker OS module customization
           nested:
-          - title: Extending a core module that is used by another
-            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-a-core-module-that-is-used-by-another.html
-          - title: Extending the Core
-            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html
-          - title: Extending the Spryker Core functionality
-            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-spryker-core-functionality.html
+          - title: Extend a core module that is used by another
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-a-core-module-that-is-used-by-another.html
+          - title: Extend the core
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-core.html
+          - title: Extend the Spryker Core functionality
+            url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
     - title: Zed UI tables
       nested:
       - title: Creating and configuring Zed tables
@@ -3620,8 +3625,8 @@ entries:
     - title: Factory
       url: /docs/scos/dev/back-end-development/factory/factory.html
       nested:
-      - title: Injecting dependencies within factories- container globals
-        url: /docs/scos/dev/back-end-development/factory/injecting-dependencies-within-factories-container-globals.html
+      - title: "Inject dependencies within factories: Container globals"
+        url: /docs/scos/dev/back-end-development/factory/inject-dependencies-within-factories-container-globals.html
   - title: Frontend development
     nested:
     - title: Zed
@@ -4029,8 +4034,6 @@ entries:
     nested:
     - title: Introduction Tutorials
       nested:
-      - title: "Tutorial: Checkout and step engine - Spryker Commerce OS"
-        url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-checkout-and-step-engine-spryker-commerce-os.html
       - title: "Tutorial: Sending an email"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-sending-an-email.html
       - title: "Tutorial: Handling new types of entity URLs - Legacy Demoshop"
@@ -4131,8 +4134,6 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-use-blocks.html
         - title: "HowTo: Display custom names for order item states on the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-display-custom-names-for-order-item-states-on-the-storefront.html
-        - title: "HowTo: Configure the product reviews"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-configure-the-product-reviews.html
         - title: "HowTo: Manage a big number of categories"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-manage-a-big-number-of-categories.html
         - title: "HowTo: Display product groups by color on the Storefront"
@@ -4152,7 +4153,7 @@ entries:
           - title: "HowTo: Create a custom content item"
             url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-a-custom-content-item.html
         - title: "HowTo: Define if a cart should be deleted after placing an order"
-          url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
+          url: /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
         - title: "HowTo: Render configurable bundle templates in the Storefront"
           url: /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-render-configurable-bundle-templates-in-the-storefront.html
         - title: "HowTo: Disable split delivery in Yves interface"
@@ -4208,16 +4209,12 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-handle-graceful-shutdown.html
       - title: "HowTo: Install Spryker in AWS environment"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-install-spryker-in-aws-environment.html
-      - title: "HowTo: Enable guest checkout in B2B demo shop"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-enable-guest-checkout-in-b2b-demo-shop.html
       - title: "HowTo: Set up custom response headers on project level"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-custom-response-headers-on-project-level.html
       - title: "HowTo: Set up database connections"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-set-up-database-connections.html
       - title: "HowTo: Replace Spryker module dependencies"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-replace-spryker-module-dependencies.html
-      - title: "HowTo: Add additional countries to Spryker checkout"
-        url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-add-additional-countries-to-spryker-checkout.html
       - title: "HowTo: Product data from import to frontend view"
         url: /docs/scos/dev/tutorials-and-howtos/howtos/howto-product-data-from-import-to-frontend-view.html
       - title: "HowTo: enable SFTP for Flysystem"
@@ -4832,10 +4829,10 @@ entries:
         url: /docs/scos/dev/best-practices/search-best-practices/personalization-dynamic-pricing.html
     - title: State machine cookbook
       nested:
-      - title: State machine cookbook - part 2 - building a state machine
-        url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-2-building-a-state-machine.html
-      - title: State machine cookbook - part I - state machine fundamentals
-        url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-part-i-state-machine-fundamentals.html
+      - title: State machine fundamentals
+        url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-state-machine-fundamentals.html
+      - title: Build a state machine
+        url: /docs/scos/dev/best-practices/state-machine-cookbook/state-machine-cookbook-build-a-state-machine.html
   - title: Troubleshooting
     url: /docs/scos/dev/troubleshooting/troubleshooting.html
     nested:

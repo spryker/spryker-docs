@@ -15,7 +15,7 @@ To start feature integration, overview and install the necessary features:
 | Spryker Core | {{site.version}}   | [Spryker core feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/spryker-core-feature-integration.html) |
 | Product      | {{site.version}}   | [Product feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/product-feature-integration.html)           |
 | Cart         | {{site.version}}   | [Cart feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cart-feature-integration.html)                 |
-| Checkout     | {{site.version}}   | [Checkout feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/checkout-feature-integration.html)         |
+| Checkout     | {{site.version}}   | [Install the Checkout feature](/docs/scos/dev/feature-integration-guides/{{site.version}}/checkout-feature-integration.html)         |
 
 ### Install feature
 

@@ -43,46 +43,43 @@ related:
     link: docs/scos/dev/back-end-development/data-manipulation/data-publishing/synchronization-behavior-enabling-multiple-mappings.html
 ---
 
-Automatic execution of the [Publish & Synchronize process](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html) does not always resolve all your tasks. For example, you might want to re-synchronize(re-sync) the published data in Redis and Elasticsearch to display updated information in your shop front end. Or you might want to re-generate the published data and re-write the data of the database tables in the Storage and Search modules with the subsequent update of Redis and Elasticsearch records. This can be done manually by running console commands.
+Automatic execution of the [Publish & Synchronize process](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html) does not always resolve all your tasks. For example, you might want to re-synchronize(re-sync) the published data in Redis and Elasticsearch to display updated information in your shop front end. Or you might want to regenerate the published data and re-write the data of the database tables in the `Storage` and `Search` modules with the subsequent update of Redis and Elasticsearch records. This can be done manually by running console commands.
 
 ## Data re-synchronization
 
 
 In some cases, you might want to re-export data into Redis and Elasticsearch. For example, if Redis has been flushed and the data in Redis and/or Elasticsearch is lost.
 
-Run the following command to re-export data:
+To re-export data, run the following command:
 
 ```bash
 vendor/bin/console sync:data
 ```
 
 This command does the following:
-
-1.  Reads the aggregated data from the database tables of Storage and Search modules.
-
-2.  Sends the data to the RabbitMQ queues.
-
-3.  Copies the data from the RabbitMQ queues to Redis and Elasticsearch.
-
+1. Reads the aggregated data from the database tables of `Storage` and `Search` modules.
+2. Sends the data to the RabbitMQ queues.
+3. Copies the data from the RabbitMQ queues to Redis and Elasticsearch.
 
 You can specify particular `Storage` and `Search` tables by specifying entity names as follows:
+
 ```bash
 vendor/bin/console sync:data {resource_name}
 ```
 
 For example, the command to re-sync data for `CMS Block` looks as follows:
+
 ```bash
 vendor/bin/console sync:data cms_block
 ```
 
-To trigger data re-sync for a resource, there should be a corresponding sync plugin created for this resource. See [Implement synchronization plugins](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html) to learn how to create it.
-
+To trigger data re-sync for a resource, there must be a corresponding sync plugin created for this resource. To learn how to create it, see [Implement synchronization plugins](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-synchronization-plugins.html) 
 ## Published data re-generation
 
 
-You can re-generate published data from scratch. For example, something went wrong during a product import and you want to re-publish the data. In other words, you need to update `Storage` and `Search` tables and sync the data in Redis and Elasticsearch.
+You can regenerate published data from scratch. For example, something went wrong during a product import and you want to re-publish the data. In other words, you need to update `Storage` and `Search` tables and sync the data in Redis and Elasticsearch.
 
-Run the command to re-generate published data:
+To regenerate published data, run the following command:
 ```bash
 vendor/bin/console publish:trigger-events
 ```
@@ -94,27 +91,27 @@ vendor/bin/console publish:trigger-events
 {% endinfo_block %}
 
 This command does the following:
-
-1.  Reads data from the `Storage` and `Search` tables and re-writes them
-
-2.  Updates Redis and Elasticsearch records.
-
+1. Reads data from the `Storage` and `Search` tables and re-writes them
+2. Updates Redis and Elasticsearch records.
 
 You can specify particular `Storage` and `Search` tables by indicating resource names as follows:
+
 ```bash
 vendor/bin/console publish:trigger-events -r {resource_name}
 ```
 
 Also, you can add one or more entity IDs:
+
 ```bash
 vendor/bin/console publish:trigger-events -r {resource_name} -i {ids}
 ```
 
-For example, the command to re-generate the published data for `CMS Block` and `Availability` resources with IDs 1 and 2 looks as follows:
+For example, the command to regenerate the published data for `CMS Block` and `Availability` resources with IDs 1 and 2 looks as follows:
+
 ```bash
 vendor/bin/console publish:trigger-events -r cms_block,availability -i 1,2
 ```
 
-To trigger data re-publish for a resource, there should be a corresponding publisher plugin created for this resource.
+To trigger data re-publish for a resource, there must be a corresponding publisher plugin created for this resource.
 
-See [Implement event trigger publisher plugins](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html) to learn how to create it.
+To learn how to create it, see [Implement event trigger publisher plugins](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/implement-event-trigger-publisher-plugins.html).

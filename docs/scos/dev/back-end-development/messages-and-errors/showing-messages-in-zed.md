@@ -31,7 +31,7 @@ related:
 
 This document describes how to show a message in the Zed GUI.
 
-In the controller you can use these shortcut methods to show a user message in the GUI. The messages will be translated later when they are rendered.
+In the controller, you can use these shortcut methods to show a user message in the GUI. The messages are translated later when they are rendered.
 
 
 ```php
@@ -49,10 +49,10 @@ class IndexController extends AbstractController
 }
 ```
 
-## Show Message from Zed's Business Layer
+## Show message from Zed's Business Layer
 To show a message from a model, declare this dependency in the module's dependency provider:
 
-Now, you can access it from the business factory and inject it to your model:
+Now, you can access it from the business factory and inject it into your model:
 
 ```php
 <?php

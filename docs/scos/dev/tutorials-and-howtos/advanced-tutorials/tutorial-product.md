@@ -22,8 +22,8 @@ redirect_from:
   - /v1/docs/t-product-challenge
   - /v1/docs/en/t-product-challenge
 related:
-  - title: Extending the core
-    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html
+  - title: Extend the core
+    link: docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-core.html
   - title: About the Persistence layer
     link: docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
   - title: Using translations

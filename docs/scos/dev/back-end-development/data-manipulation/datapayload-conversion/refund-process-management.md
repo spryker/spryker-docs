@@ -33,15 +33,12 @@ Refund manages the retour refund process.
 
 `RefundFacade` contains the following methods:
 
-* `calculateRefund(array $salesOrderItems, SpySalesOrder $salesOrderEntity)`
-    * calculates refundable amount for the sales order
-* `saveRefund(RefundTransfer $refundTransfer)`
-    * persists the calculated refund amount
-The `RefundFacade::calculateRefund($salesOrderItems, $salesOrderEntity)` will return a RefundTransfer that contains the calculated refundable amount.
+* `calculateRefund(array $salesOrderItems, SpySalesOrder $salesOrderEntity)`: Calculates the refundable amount for the sales order
+* `saveRefund(RefundTransfer $refundTransfer)` persists the calculated refund amount. `RefundFacade::calculateRefund($salesOrderItems, $salesOrderEntity)` returns `RefundTransfer` that contains the calculated refundable amount.
 
-## Using the Refund module
+## Using the `Refund` module
 
-Usually this functionality will be integrated in the state machine processes and will be called by a command.
+Usually, this functionality is integrated into the state machine processes and is called by a command.
 
 A command plugin that calls the refund functionality can be similar to the following example:
 
@@ -79,13 +76,13 @@ class RefundCommand extends AbstractPlugin implements CommandByOrderInterface
 }
 ```
 
-The needed data to handle the refund is given inside the state machine command and you only need to pass the data to the Business Layer of your payment provider.
+The needed data to handle the refund is given inside the state machine command, and you only need to pass the data to the `Business` layer of your payment provider.
 
-In your transaction model, you ask the RefundFacade to calculate the refundable amount by calling `RefundFacade::calculateRefund($orderItems, $orderEntity)` which will return a `RefundTransfer`.
+In your transaction model, you ask `RefundFacade` to calculate the refundable amount by calling `RefundFacade::calculateRefund($orderItems, $orderEntity)`, which returns a `RefundTransfer`.
 
 The `RefundTransfer::$amount` contains the refundable amount for the given data.
 
-After that, you can tell your payment provider the amount that should be refunded. When the response is successful, you need to save the refund data by calling `RefundFacade::saveRefund($refundTransfer)`.
+After that, you can tell your payment provider the amount to refund. When the response is successful, you need to save the refund data by calling `RefundFacade::saveRefund($refundTransfer)`.
 
 ```php
 <?php
@@ -138,7 +135,7 @@ class RefundTransaction
 }
 ```
 
-## Extending the Refund module
+## Extending the `Refund` module
 
 The manner of calculating the refundable amount is different from one project to another. One refunds the shipment for every item, while the other one refunds the shipment only when all items are refunded.
 
@@ -146,4 +143,4 @@ The calculation of the refundable amount is achieved through a plugin mechanism.
 
 The default implementation refunds all expenses when the last item is refunded. To change this behavior, create a new plugin that implements `RefundCalculatorPluginInterface` and replace the default one from the plugin stack with the new one.
 
-This interface contains one method `RefundCalculatorPluginInterface::calculateRefund()` that asks for a `RefundTransfer` object, `OrderTransfer`, and an array of items that need to be refunded.
+This interface contains one method `RefundCalculatorPluginInterface::calculateRefund()`, that asks for a `RefundTransfer` object, `OrderTransfer`, and an array of items that need to be refunded.

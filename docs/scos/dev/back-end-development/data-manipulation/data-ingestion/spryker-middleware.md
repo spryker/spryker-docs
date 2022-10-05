@@ -584,7 +584,7 @@ A *translator* is a way to update the values from the mapped payload using stric
 
 First, implement `SprykerMiddleware\Zed\Process\Business\Translator\Dictionary\AbstractDictionary`. The abstract method is necessary for `getDictionary()` implementation. This method returns an array with translation rules for the mapped payload.
 
-You can apply the translator function for value with the type array. You can use the _*_ (*asterisk*) symbol to apply the translator function to each value in the array like `mapped_key.*` or use the `mapped_key.*` subkey syntax to apply the translator function to a certain key in the array.
+You can apply the translator function for value with the type array. You can use the asterisk (`*`) symbol to apply the translator function to each value in the array like `mapped_key.*` or use the `mapped_key.*` subkey syntax to apply the translator function to a certain key in the array.
 
 Use the following format to define translation rules:
 

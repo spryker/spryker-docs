@@ -16,7 +16,7 @@ To generate the documentation, use the following command:
 vendor/bin/glue api:generate:documentation
 ```
 
-By default, the preceding command generates the documentation for all the configured applications. 
+By default, this command generates the documentation for all the configured applications. 
 
 To select the application, you can pass the optional parameter `application`:
 ```bash
@@ -72,7 +72,7 @@ public function getAction(RestRequestInterface $restRequest): RestResponseInterf
 
 ```
 
-Glue annotation has to contain valid JSON.
+Glue annotation must contain valid JSON.
 
 Glue annotation can be defined on each action in the controller, two can be defined on the get action (for having separate descriptions for getting collections and getting resources by ID actions). Possible top-level keys are: `getResourceById`, `getCollection`, `post`, `patch`, and `delete`.
 
@@ -98,7 +98,11 @@ For describing request body structure in the schema, you can use additional tran
     </transfer>
 ```
 
+{% info_block infoBox %}
+
 In the preceding example, `sku` and `quantity` are added to the request schema as required, `productOptions` added as optional, and `createdAt` skipped. There needs to be at least one attribute on the transfer with not empty `restRequestParameter` for the request schema to be even generated, so always pay attention to this.
+
+{% endinfo_block %}
 
 When creating a resource available as a relationship only and without its own resource route, you need to describe the structure of your resource attributes in a Glue annotation on `ResourceRelationshipPlugin`:
 

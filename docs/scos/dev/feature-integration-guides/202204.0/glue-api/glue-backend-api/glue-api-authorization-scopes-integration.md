@@ -25,7 +25,7 @@ To start feature integration, overview and install the necessary feature:
 
 Generate transfers:
 
-```
+```bash
 console transfer:generate
 ```
 
@@ -50,7 +50,7 @@ Make sure that the following changes have been applied in transfer objects:
 
 Activate the following plugins:
 
-**Storefront API**
+**Storefront API plugins**
 
 | PLUGIN | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |
@@ -58,7 +58,7 @@ Activate the following plugins:
 | StorefrontScopeCollectorPlugin | Provides the set of OAuth scopes for Storefront API application. | Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\Oauth |
 | StorefrontScopeFinderPlugin | Gets the scope based on specified identifier. | Spryker\\Glue\\GlueStorefrontApiApplication\\Plugin\\Oauth |
 
-**Backend API**
+**Backend API plugins**
 
 | PLUGIN | SPECIFICATION | NAMESPACE |
 | --- | --- | --- |

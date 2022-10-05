@@ -17,9 +17,9 @@ Follow the steps below to install the Glue Storefront and Backend API applicatio
 
 To start feature integration, overview and install the necessary features:
 
-| NAME | INTEGRATION GUIDE | INTEGRATION GUIDE |
+| NAME | VERSION | INTEGRATION GUIDE |
 | --- | --- | --- |
-| Glue Application | [Glue API - Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
+| Glue Application | {{page.version}} | [Glue API - Glue Application feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-glue-application-feature-integration.html) |
 
 ### 1) Install the required modules using Composer
 

@@ -51,7 +51,5 @@ For Backend API, use the appropriate backend-specific class `src/Pyz/Shared/Glue
 {% endinfo_block %}
 
 2. Try to access `https://glue-storefront.mysprykershop.com/foo` without an access token.
-
 3. Check that the output contains the 403 response with the `Unauthorized request.` message.
-
 4. To access `https://glue-storefront.mysprykershop.com/foo`, enter a valid access token.

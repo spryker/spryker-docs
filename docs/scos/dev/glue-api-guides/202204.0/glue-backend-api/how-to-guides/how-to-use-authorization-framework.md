@@ -68,6 +68,7 @@ This plugin is run by `AuthorizationClient::authorize()`.
 There is a way to connect the resources and custom routes with the just-created strategy. They need to implement `AuthorizationStrategyAwareResourceRoutePluginInterface` pointing to the strategy:
 
 **AuthorizationStrategyAwareResourceRoutePluginInterface**
+
 ```php
 <?php
 
@@ -96,7 +97,6 @@ class DummyStoresResource extends AbstractResourcePlugin implements JsonApiResou
         ];
     }
 }
-
 ```
 
 | FIELD IN ROUTE AUTHORIZATION CONFIG TRANSFER | MEANING |

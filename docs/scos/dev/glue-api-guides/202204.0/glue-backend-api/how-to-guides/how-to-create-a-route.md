@@ -7,7 +7,7 @@ redirect_from:
   - /docs/scos/dev/glue-api-guides/202204.0/glue-backend-api/how-to-guides/create-a-route.html
 ---
 
-This guide shows the process of creation of the API endpoint using a custom route.
+This guide shows the process of the API endpoint creation using a custom route.
 
 New Glue lets you create plain routes directly to a controller. This might be useful in a variety of cases—for example, building a non-resource-based API or endpoints that do not need or cannot be adapted to use resources.
 
@@ -52,7 +52,7 @@ Pay attention to the `AbstractController` you use, Storefront and Backend variat
 
 {% endinfo_block %}
 
-1. Create `FooBarRouteProviderPlugin`
+2. Create `FooBarRouteProviderPlugin`
 
 **\Pyz\Glue\FooApi\Plugin\FooBarRouteProviderPlugin**
 
@@ -150,7 +150,7 @@ curl --location --request GET 'https://glue-backend.mysprykershop.com/foo/bar' \
 --header 'Accept: application/json'
 ```
 
-1. Add a `POST` method to the same route:
+6. Add a `POST` method to the same route:
 
    1. Add a method to a controller: `\Pyz\Glue\FooApi\Controller\FooBarController`
 
@@ -168,7 +168,7 @@ curl --location --request GET 'https://glue-backend.mysprykershop.com/foo/bar' \
 
    ```
 
-   1. Add a new route to the same route provider plugin: `\Pyz\Glue\FooApi\Plugin\FooBarRouteProviderPlugin`
+   2. Add a new route to the same route provider plugin: `\Pyz\Glue\FooApi\Plugin\FooBarRouteProviderPlugin`
 
    ```php
    ...
@@ -181,9 +181,9 @@ curl --location --request GET 'https://glue-backend.mysprykershop.com/foo/bar' \
    ...
    ```
 
-   1. Reset the router cache again and test your POST request:
+   3. Reset the router cache again and test your `POST` request:
 
-   ```bash
+   ```
    curl --location --request POST 'https://glue-backend.mysprykershop.com/foo/bar' \
    --header 'Accept: application/json' \
    --header 'Content-Type: application/json' \

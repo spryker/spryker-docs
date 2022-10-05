@@ -50,9 +50,8 @@ The article describes how you can manage orders in your Customer Account, and pr
 * view the order details
 * reorder the existing orders
 * add comments to the cart
-***
+
 To start working with the orders, navigate to the Customer Account > Order History section.
-***
 
 ## Managing Order Details
 
@@ -92,9 +91,9 @@ When there is a long list of orders in the Customer account, it is always a good
 
 2. Depending on the selection from step #1, enter the search query in the next to the **Search** drop-down field.
 
-    {% info_block infoBox "Example" %}
+{% info_block infoBox "Example" %}
 
-    You can select **Product Name** in the **Search** drop-down and enter the name of the Concrete Product in the search query in the following field.
+You can select **Product Name** in the **Search** drop-down and enter the name of the Concrete Product in the search query in the following field.
 
 {% endinfo_block %}
 
@@ -107,7 +106,6 @@ To narrow the filtered results and find a more specific order, you can proceed w
 5. [Optional] Check **Show products in search results** checkmark if you wish to see the products matching your search parameters in the search results. Otherwise, only the order list appropriate to the search parameters will be displayed.
 
 6. Click **Apply** to see the results.
-***
 
 **What’s next?**
 

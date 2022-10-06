@@ -10,6 +10,7 @@ redirect_from:
   - /2021080/docs/en/content-item-types-module-relations
   - /docs/content-item-types-module-relations
   - /docs/en/content-item-types-module-relations
+  - /docs/scos/dev/feature-walkthroughs/202204.0/content-items-feature-walkthrough/content-item-types-module-relations.html
 related:
   - title: Creating Content Items
     link: docs/scos/user/back-office-user-guides/page.version/content/content-items/creating-content-items.html
@@ -90,7 +91,7 @@ The schema below shows the module relations of the File list content item:
 
 ## Navigation
 
-The Navigation content item is a content piece that consists of a [navigation element](/docs/scos/dev/feature-walkthroughs/{{page.version}}/content-items-feature-walkthrough/content-item-types-module-relations.html). A content manager selects a navigation element when [creating the Navigation content item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html#create-a-navigation-content-item) in the Back Office.
+The Navigation content item is a content piece that consists of a [navigation element](/docs/pbc/all/content-management-system/domain-model-and-relationships/content-item-types-module-relations.html). A content manager selects a navigation element when [creating the Navigation content item](/docs/scos/user/back-office-user-guides/{{page.version}}/content/content-items/creating-content-items.html#create-a-navigation-content-item) in the Back Office.
 
 The schema shows the module relations of the Navigation content item:
 

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/navigation-feature-overview
   - /docs/en/navigation-feature-overview
   - /docs/scos/user/features/202200.0/navigation-feature-overview.html
+  - /docs/scos/user/features/202204.0/navigation-feature-overview.html
 ---
 
 The *Navigation* feature lets product catalog managers create intuitive navigation elements and display them on the Storefront. Product catalog managers can create different types of navigation for different places of the shop. For example, they can add a fully-fledged navigation tree for main website navigation, several simple navigation lists for the footer, and any number of custom navigation elements for CMS pages.
@@ -81,7 +82,7 @@ To learn how a product catalog manager can define a navigation node validity per
 
 ## Navigation as content item
 
-To publish a navigation element on the Storefront, you can add it to [CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html) and [CMS Pages](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html) as a [content item](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html).
+To publish a navigation element on the Storefront, you can add it to [CMS Blocks](/docs/pbc/all/content-management-system/cms-feature-overview/cms-blocks-overview.html) and [CMS Pages](/docs/pbc/all/content-management-system/cms-feature-overview/cms-pages-overview.html) as a [content item](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html).
 The schema shows how the Navigation feature affects content management in a Spryker shop:
 
 ![navigation-as-content-item-schema](https://confluence-connect.gliffy.net/embed/image/a086fe4e-1d09-49ae-a181-ebd8b0f8c051.png?utm_medium=live&utm_source=custom)

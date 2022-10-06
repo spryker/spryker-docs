@@ -9,6 +9,7 @@ redirect_from:
   - /2021080/docs/en/file-details-cms-block-categorycsv
   - /docs/file-details-cms-block-categorycsv
   - /docs/en/file-details-cms-block-categorycsv
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/content-management/file-details-cms-block-category.csv.html
 ---
 
 This document describes the `cms_block_category.csv` file to configure CMS Block Category information in your Spryker Demo Shop.
@@ -32,7 +33,7 @@ The file should have the following parameters:
 
 ## Import file dependencies
 
-This file has the following dependency: [cms_block_category_position.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-block-category-postion.csv.html). 
+This file has the following dependency: [cms_block_category_position.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-block-category-postion.csv.html).
 
 ## Import template file and content example
 

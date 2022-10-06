@@ -18,8 +18,8 @@ redirect_from:
 {% info_block infoBox %}
 
 Templates and slots is a complex functionality that works in conjunction with other functionalities. To use it effectively, make sure you get familiar with the functionalities in the order they are presented:
-* [CMS Page](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html)
-* [CMS Block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)
+* [CMS Page](/docs/pbc/all/content-management-system/cms-feature-overview/cms-pages-overview.html)
+* [CMS Block](/docs/pbc/all/content-management-system/cms-feature-overview/cms-blocks-overview.html)
 * [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html)
 
 {% endinfo_block %}
@@ -92,7 +92,7 @@ A content manager can [manage slots](/docs/scos/user/back-office-user-guides/{{p
 
 ## CMS block
 
-[CMS block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html), from the perspective of the templates and slots, is a piece of content that is inserted into a slot. When a CMS block is inserted into a slot, its content is displayed on the Storefront page space belonging to the slot. The position of CMS blocks on a page can be defined by a content manager in the Back Office.
+[CMS block](/docs/pbc/all/content-management-system/cms-feature-overview/cms-blocks-overview.html), from the perspective of the templates and slots, is a piece of content that is inserted into a slot. When a CMS block is inserted into a slot, its content is displayed on the Storefront page space belonging to the slot. The position of CMS blocks on a page can be defined by a content manager in the Back Office.
 
 <details open><summary markdown='span'> CMS block representation—Storefront</summary>
 
@@ -186,7 +186,7 @@ A content provider is a source from which Slot Widget fetches content to embed i
 With templates and slots, the following applies:
 
 * Spryker CMS Blocks is the content provider for all the slots.
-* Slots embed content from [CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html).
+* Slots embed content from [CMS Blocks](/docs/pbc/all/content-management-system/cms-feature-overview/cms-blocks-overview.html).
 * Content for CMS blocks is created in the [WYSIWYG Editor](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item-widget).
 * Templates with slots are managed in the Back Office&nbsp;<span aria-label="and then">></span> **Slots** section.
 
@@ -386,4 +386,4 @@ The functionality has the following functional constraints which are going to be
 
 ## See next
 
-* [Email as a CMS block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html)
+* [Email as a CMS block](/docs/pbc/all/content-management-system/cms-feature-overview/email-as-a-cms-block-overview.html)

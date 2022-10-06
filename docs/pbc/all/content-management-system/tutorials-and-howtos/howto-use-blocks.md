@@ -21,6 +21,7 @@ redirect_from:
   - /v2/docs/en/ht-use-cms-blocks
   - /v1/docs/ht-use-cms-blocks
   - /v1/docs/en/ht-use-cms-blocks
+  - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-use-blocks.html
 related:
   - title: CMS feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html

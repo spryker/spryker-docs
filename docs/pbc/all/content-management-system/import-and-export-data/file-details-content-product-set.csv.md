@@ -11,6 +11,7 @@ redirect_from:
   - /docs/en/file-details-content-product-setcsv
   - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-content-product-set.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/content-management/file-details-content-product-set.csv.html
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/content-management/file-details-content-product-set.csv.html
 ---
 
 This document describes the `content_product_set.csv` file to configure [Content Product Set](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item) information in your Spryker Demo Shop.

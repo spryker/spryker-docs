@@ -49,11 +49,11 @@ All the CMS elements are based on templates. They simplify the creation of simil
 
 |OVERVIEWS|
 |---|
-| [Templates and Slots](/docs/scos/user/features/{{page.version}}/cms-feature-overview/templates-and-slots-overview.html)  |
-| [CMS Pages](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-overview.html)  |
-| [CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)  |
-| [CMS pages in search results](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-pages-in-search-results-overview.html)  |
-| [Email as a CMS block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html)  |
+| [Templates and Slots](/docs/pbc/all/content-management-system/cms-feature-overview/templates-and-slots-overview.html)  |
+| [CMS Pages](/docs/pbc/all/content-management-system/cms-feature-overview/cms-pages-overview.html)  |
+| [CMS Blocks](/docs/pbc/all/content-management-system/cms-feature-overview/cms-blocks-overview.html)  |
+| [CMS pages in search results](/docs/pbc/all/content-management-system/cms-feature-overview/cms-pages-in-search-results-overview.html)  |
+| [Email as a CMS block](/docs/pbc/all/content-management-system/cms-feature-overview/email-as-a-cms-block-overview.html)  |
 
 
 

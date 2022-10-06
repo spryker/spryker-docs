@@ -1,6 +1,6 @@
 ---
 title: Create email CMS blocks
-description: Learn how to create email CMS blocks in the Back Office. 
+description: Learn how to create email CMS blocks in the Back Office.
 last_updated: Jun 17, 2021
 template: back-office-user-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/managing-content-of-emails-via-cms-blocks
@@ -16,9 +16,9 @@ related:
     link: docs/scos/user/features/page.version/cms-feature-overview/email-as-a-cms-block-overview.html
 ---
 
-You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html).
+You can manage the content of emails you send to customers by editing [email templates via CMS Blocks](/docs/pbc/all/content-management-system/cms-feature-overview/email-as-a-cms-block-overview.html).
 
-There is a number of default emails that are automatically sent on different occasions, like customer registration or order shipment. You can change the default emails by editing their email templates via respective CMS blocks. For the full list of the emails with their email CMS blocks, see [Default email templates](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html).
+There is a number of default emails that are automatically sent on different occasions, like customer registration or order shipment. You can change the default emails by editing their email templates via respective CMS blocks. For the full list of the emails with their email CMS blocks, see [Default email templates](/docs/pbc/all/content-management-system/cms-feature-overview/email-as-a-cms-block-overview.html).
 
 If a developer introduced a new email for your project, you need to create an email block for it. Blocks for the default email templates are already created, and you can [edit them as regular blocks](/docs/scos/user/back-office-user-guides/{{page.version}}/content/blocks/edit-cms-blocks.html).
 

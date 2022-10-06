@@ -41,7 +41,7 @@ This opens the **Edit CMS Block** page.
     * Enter and select products you want to assign.
 9. Click **Save**.
     This refreshes the page with a success message displayed.
-10. Email blocks: If you've updated the **NAME**, pass it to your development team to update the name of the respective [email template](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html).    
+10. Email blocks: If you've updated the **NAME**, pass it to your development team to update the name of the respective [email template](/docs/pbc/all/content-management-system/cms-feature-overview/email-as-a-cms-block-overview.html).    
 
 ## Reference information: Edit a CMS block
 

@@ -12,7 +12,7 @@ redirect_from:
   - /docs/scos/user/features/202204.0/cms-feature-overview/email-as-a-cms-block-overview.html
 ---
 
-Back Office users can manage the content of emails sent to customers through [CMS Blocks](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html) in the Back Office. To use a CMS Block as an email, the Back Office user applies an email template.
+Back Office users can manage the content of emails sent to customers through [CMS Blocks](/docs/pbc/all/content-management-system/cms-feature-overview/cms-blocks-overview.html) in the Back Office. To use a CMS Block as an email, the Back Office user applies an email template.
 
 
 ## Types of email templates
@@ -45,7 +45,7 @@ When a developer creates an email template, inside the file, they enter the CMS 
 
 
 #### Email format
-There are two email formats by default: HTML and pure text. The format of the [default email templates](/docs/scos/user/features/{{page.version}}/cms-feature-overview/email-as-a-cms-block-overview.html) is identified by one of the respective tales in the name of an Email CMS Block: `--html` or `--text`. For example, Email CMS Blocks with the following names are assigned to the customer registration email template:
+There are two email formats by default: HTML and pure text. The format of the [default email templates](/docs/pbc/all/content-management-system/cms-feature-overview/email-as-a-cms-block-overview.html) is identified by one of the respective tales in the name of an Email CMS Block: `--html` or `--text`. For example, Email CMS Blocks with the following names are assigned to the customer registration email template:
 
 * `customer-registration--html`
 * `customer-registration--text`

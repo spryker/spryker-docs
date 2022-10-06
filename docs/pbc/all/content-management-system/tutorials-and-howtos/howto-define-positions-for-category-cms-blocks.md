@@ -6,6 +6,8 @@ template: howto-guide-template
 related:
   - title: CMS blocks overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-blocks-overview.html
+redirect_from:
+  - /docs/scos/dev/tutorials-and-howtos/howtos/howto-define-positions-for-category-cms-blocks.html
 ---
 
 

@@ -11,6 +11,7 @@ redirect_from:
   - /docs/en/file-details-content-bannercsv
   - /docs/scos/dev/data-import/201811.0/data-import-categories/content-management/file-details-content-banner.csv.html
   - /docs/scos/dev/data-import/201907.0/data-import-categories/content-management/file-details-content-banner.csv.html
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/content-management/file-details-content-banner.csv.html
 ---
 
 This document describes the `content_banner.csv` file to configure [Content Banner](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item) information in your Spryker Demo Shop.

@@ -64,4 +64,4 @@ With the CMS Pages feature, you can:
 
 ## See next
 
-* [CMS block](/docs/scos/user/features/{{page.version}}/cms-feature-overview/cms-blocks-overview.html)
+* [CMS block](/docs/pbc/all/content-management-system/cms-feature-overview/cms-blocks-overview.html)

@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/t-cms
   - /v1/docs/t-cms
   - /v1/docs/en/t-cms
+  - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-cms.html
 related:
   - title: Implementing URL routing in Yves
     link: docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
@@ -39,7 +40,7 @@ Create a static **Contact Us** page and integrate it into Yves. Then, create you
 
 ## Create a static page
 
-1. Go to Zed UI and open the CMS Pages `https://zed.mysprykershop.com/cms-gui/list-page` backend. 
+1. Go to Zed UI and open the CMS Pages `https://zed.mysprykershop.com/cms-gui/list-page` backend.
 2. Add a CMS page that uses the URL `/de/contact`.
 3. Add the text you want to show on the static page.
 4. Activate the page.

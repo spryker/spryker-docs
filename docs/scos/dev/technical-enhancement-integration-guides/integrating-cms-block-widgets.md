@@ -22,7 +22,7 @@ This document describes how to enable CMS block widget in a Spryker project.
 
 {% info_block infoBox %}
 
-CMS block widgets are outdated. We recommend using [slots](/docs/scos/user/features/{{site.version}}/cms-feature-overview/templates-and-slots-overview.html#slot) which are part of the [CMS feature](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html). For integration instructions, see [CMS feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cms-feature-integration.html)
+CMS block widgets are outdated. We recommend using [slots](/docs/pbc/all/content-management-system/cms-feature-overview/templates-and-slots-overview.html#slot) which are part of the [CMS feature](/docs/pbc/all/content-management-system/cms-feature-overview/cms-feature-overview.html). For integration instructions, see [CMS feature integration](/docs/scos/dev/feature-integration-guides/{{site.version}}/cms-feature-integration.html)
 
 {% endinfo_block %}
 

@@ -141,7 +141,7 @@ environment: 'docker'
 Defines secrets and their configuration:
 
 * `environment-configuration: secrets: name:`—Secret's name.
-* `environment-configuration: secrets: grant:`—IAM users' permissions. `limited` provides read while `public` provides read and write permissions. The default one is `limited`.
+* `environment-configuration: secrets: grant:`—Users' permissions. `limited` provides read while `public` provides read and write permissions. The default one is `limited`.
 * `environment-configuration: secrets: bucket:`—Defines what the secret is used for. Acceptable values are `app`, `scheduler`, `pipeline`, and `common`. `common` is the default value. Common secrets can be used by all the buckets.
 
 ### environment-configuration: params:

@@ -28,7 +28,7 @@ environment-configuration:
 | PARAMETER | DESCRIPTION |
 | - | - |
 | name | Unique identifier of a secret or parameter. You will use it when defining its value in `.env.docker.local`. |
-| grant | IAM users' permissions. `limited` provides read while `public` provides read and write permissions. The default one is `limited`. |
+| grant | Users' permissions. `limited` provides read while `public` provides read and write permissions. The default one is `limited`. |
 | bucket | Defines what the secret or parameter is used for. Acceptable values are `app`, `scheduler`, `pipeline`, and `common`. `common` is the default value. Common secrets and parameters can be used by all the buckets. |
 | default | Default parameter value. Accepts string, number, and json values. |
 

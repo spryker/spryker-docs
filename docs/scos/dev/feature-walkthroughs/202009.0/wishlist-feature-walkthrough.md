@@ -18,7 +18,7 @@ To learn more about the feature and to find out how end users use it, see [Wishl
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES  |
+| INSTALLATION GUIDES | UPGRADE GUIDES| GLUE API GUIDES  |
 |---------|---------|---------|
 | [Alternative Products + Wishlist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/alternative-products-wishlist-feature-integration.html)  | Wishlist migration guide | [Managing wishlists](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlists.html)  |
 | [Glue API: Wishlist feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-wishlist-feature-integration.html)  |   |[ Managing wishlist items](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-wishlists/managing-wishlist-items.html)  |

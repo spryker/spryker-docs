@@ -30,8 +30,8 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Return Management](/docs/scos/user/features/{{site.version}}/return-management-feature-overview/return-management-feature-overview.html)
 - [Configurable Bundle](/docs/scos/user/features/{{site.version}}/configurable-bundle-feature-overview.html)
 - [Comments](/docs/scos/user/features/{{site.version}}/comments-feature-overview.html)
-- [Persistent Cart Sharing](/docs/scos/user/features/{{site.version}}/persistent-cart-sharing-feature-overview.html)
-- [Scheduled Prices](/docs/scos/user/features/{{site.version}}/scheduled-prices-feature-overview.html)
+- [Persistent Cart Sharing](/docs/pbc/all/cart-and-checkout/persistent-cart-sharing-feature-overview.html)
+- [Scheduled Prices](/docs/pbc/all/price-management/scheduled-prices-feature-overview.html)
 - [Availability Notification](/docs/scos/user/features/{{site.version}}/availability-notification-feature-overview.html)
 - [Customer Account Management](/docs/scos/user/features/{{site.version}}/customer-account-management-feature-overview/customer-account-management-feature-overview.html)
 - [Customer Access](/docs/scos/user/features/{{site.version}}/customer-access-feature-overview.html)
@@ -39,21 +39,21 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Refunds](/docs/scos/user/features/{{site.version}}/refunds-feature-overview.html)
 - [Reclamations](/docs/scos/user/features/{{site.version}}/reclamations-feature-overview.html)
 - [State Machine](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/state-machine/order-process-modelling-via-state-machines.html)
-- [Inventory Management](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html)
+- [Inventory Management](/docs/pbc/all/warehouse-management-system/inventory-management-feature-overview.html)
 - [Spryker Core Back Office](/docs/scos/user/features/{{site.version}}/spryker-core-back-office-feature-overview/spryker-core-back-office-feature-overview.html)
 <!---- [Development tools]()-->
 <!---- [Deployment tools]()-->
-- [Prices](/docs/scos/user/features/{{site.version}}/prices-feature-overview/prices-feature-overview.html)
+- [Prices](/docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.html)
 - [Tax](/docs/scos/user/features/{{site.version}}/tax-feature-overview.html)
 - [Promotions & Discounts](/docs/scos/user/features/{{site.version}}/promotions-discounts-feature-overview.html)
-- [Wishlist](/docs/scos/user/features/{{site.version}}/wishlist-feature-overview.html)
+- [Wishlist](/docs/pbc/all/shopping-list-and-wishlist/wishlist-feature-overview.html)
 - [Cart](/docs/scos/user/features/{{site.version}}/cart-feature-overview/cart-feature-overview.html)
 - [Reorder](/docs/scos/user/features/{{site.version}}/reorder-feature-overview.html)
 - [Shipment](/docs/scos/user/features/{{site.version}}/shipment-feature-overview.html)
 - [Agent Assist](/docs/scos/user/features/{{site.version}}/agent-assist-feature-overview.html)
 - [Payments](/docs/scos/user/features/{{site.version}}/payments-feature-overview.html)
 <!---- [Invoice]()-->
-- [Gift cards](/docs/scos/user/features/{{site.version}}/gift-cards-feature-overview.html)
+- [Gift cards](/docs/pbc/all/gift-cards/gift-cards.html)
 - [Checkout](/docs/scos/user/features/{{site.version}}/checkout-feature-overview/checkout-feature-overview.html)
 - [Mailing & Notifications](/docs/scos/user/features/{{site.version}}/mailing-and-notifications-feature-overview.html)
 - [Spryker Core](/docs/scos/user/features/{{site.version}}/spryker-core-feature-overview/spryker-core-feature-overview.html)
@@ -74,7 +74,7 @@ The Spryker B2С Suite is a collection of ready-to-use B2С-specific features. O
 - [Navigation](/docs/scos/user/features/{{site.version}}/navigation-feature-overview.html)
 - [Search](/docs/scos/user/features/{{site.version}}/search-feature-overview/search-feature-overview.html)
 - [CMS](/docs/scos/user/features/{{site.version}}/cms-feature-overview/cms-feature-overview.html)
-- [File Manager](/docs/scos/user/features/{{site.version}}/file-manager-feature-overview/file-manager-feature-overview.html)
+- [File Manager](/docs/pbc/all/digital-asset-management/digital-asset-management.html)
 
 <br>
 </details>

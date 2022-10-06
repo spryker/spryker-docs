@@ -1,5 +1,6 @@
 ---
 title: Migration guide - Switch from Yarn to NPM v8
+last_updated: Aug 31, 2022
 description: Use this guide to migrate the project from Yarn to NPM v8.
 template: concept-topic-template
 ---

@@ -13,7 +13,7 @@ To learn more about the feature and to find out how end users use it, see [Gift 
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES  | MIGRATION GUIDES | GLUE API GUIDES | DATA IMPORT |
+| INSTALLATION GUIDES  | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|---|
-| [Gift Cards feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/gift-cards-feature-integration.html) | CheckoutPage migration guide | [Managing gift cards of guest users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html) | [File details: gift_card_abstract_configuration.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/gift-cards/file-details-gift-card-abstract-configuration.csv.html) |
+| [Gift Cards feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/gift-cards-feature-integration.html) | Upgrade the CheckoutPage module | [Managing gift cards of guest users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/guest-carts/managing-gift-cards-of-guest-users.html) | [File details: gift_card_abstract_configuration.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/gift-cards/file-details-gift-card-abstract-configuration.csv.html) |
 |  |  | [Managing gift cards of registered users](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-carts/carts-of-registered-users/managing-gift-cards-of-registered-users.html) | [File details: gift_card_concrete_configuration.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/special-product-types/gift-cards/file-details-gift-card-concrete-configuration.csv.html) |

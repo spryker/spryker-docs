@@ -35,7 +35,7 @@ Tax sets can be applied to an abstract product, product option, and shipment:
 | --- | --- | --- |
 | Abstract product | [Define prices](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/products/manage-abstract-products-and-product-bundles/create-abstract-products-and-product-bundles.html#define-prices) | [File details: product_abstract.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html) |
 | Product option | [Creating a product option](/docs/scos/user/back-office-user-guides/{{site.version}}/catalog/product-options/create-product-options.html) | [File details: product_option.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html) |
-| Shipment | [Add delivery methods](/docs/scos/user/back-office-user-guides/{{site.version}}/administration/delivery-methods/add-delivery-methods.html) | [File details: shipment.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html) |
+| Shipment | [Add delivery methods](/docs/pbc/all/carrier-management/manage-in-the-back-office/add-delivery-methods.html) | [File details: shipment.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html) |
 
 ## International tax rates and sets
 
@@ -81,7 +81,7 @@ Since shipment and products fall under different taxability categories, Avalara 
 
 The Avalara codes are not displayed on the Storefront or in the Back Office. They are processed in the background to define taxes for order items. Avalara calculates taxes during the checkout, and, by default, the taxes are shown at the final checkout step.
 
-When calculating taxes, Avalara takes the items' [warehouse addresses](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html#defining-a-warehouse-address) into account. Therefore, each order item you calculate a tax for with Avalara, must have a warehouse assigned. To learn how warehouses are assigned to order items by default, see [Warehouse assignment to order items (with Avalara integration only)](/docs/scos/user/features/{{site.version}}/inventory-management-feature-overview.html#warehouse-assignment-to-order-items-with-avalara-integration-only).
+When calculating taxes, Avalara takes the items' [warehouse addresses](/docs/pbc/all/warehouse-management-system/inventory-management-feature-overview.html#defining-a-warehouse-address) into account. Therefore, each order item you calculate a tax for with Avalara, must have a warehouse assigned. To learn how warehouses are assigned to order items by default, see [Warehouse assignment to order items (with Avalara integration only)](/docs/pbc/all/warehouse-management-system/inventory-management-feature-overview.html#warehouse-assignment-to-order-items-with-avalara-integration-only).
 
 ## Tax Management capability on the Storefront
 
@@ -114,9 +114,15 @@ The capability has the following functional constraints:
 
 ## Related Developer articles
 
-| INTEGRATION GUIDES | MIGRATION GUIDES | GLUE API GUIDES | DATA IMPORT |
+| INSTALLATION GUIDES | UPGRADE GUIDES | GLUE API GUIDES | DATA IMPORT |
 |---|---|---|---|
-| [Avalara Tax integration](/docs/pbc/all/tax-management/third-party-integrations/integrate-avalara.html) | [Upgrade the Tax module](/docs/pbc/all/tax-management/install-and-upgrade/upgrade-the-tax-module.html) | [Retrieve tax sets](/docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html) | [File details: tax.csv](/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets.html) | |
-| [Avalara Tax + Shipment feature integration](/docs/scos/dev/technology-partner-guides/{{site.version}}/taxes/avalara/integrating-avalara-tax-shipment.html) |  |  | [File details: product_abstract.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/catalog-setup/products/file-details-product-abstract.csv.html) | |
-| [Avalara Tax + Product Options feature integration](/docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-product-options.html) |  |  | [File details: product_option.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/special-product-types/product-options/file-details-product-option.csv.html) | |
-|  |  |  | [File details: shipment.csv](/docs/scos/dev/data-import/{{site.version}}/data-import-categories/commerce-setup/file-details-shipment.csv.html) |
+| [Integrate the Tax Glue API](/docs/pbc/all/tax-management/install-and-upgrade/integrate-the-tax-glue-api.html) | [Upgrade the Tax module](/docs/pbc/all/tax-management/install-and-upgrade/upgrade-the-tax-module.html) | [Retrieve tax sets](/docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html)  | [Import tax sets](/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets.html) |
+| [Integrate the Product Tax Sets Glue API](/docs/pbc/all/tax-management/install-and-upgrade/integrate-the-product-tax-sets-glue-api.html) | [Upgrade the ProductTaxSetsRestApi module](/docs/pbc/all/tax-management/install-and-upgrade/upgrade-the-producttaxsetsrestapi-module.html) | [Retrieve tax sets of abstract products](/docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html) | [Import tax sets for abstract products](/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-abstract-products.html) |
+| | | | [Import tax sets for shipment methods](/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-shipment-methods.html) |
+| | | | [Import tax sets for product options](/docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-product-options.html) |
+
+<!--
+| [Integrate Avalara](/docs/pbc/all/tax-management/third-party-integrations/integrate-avalara.html) |
+| [Integrrate Avalara Tax + Shipment feature](/docs/scos/dev/technology-partner-guides/{{site.version}}/taxes/avalara/integrating-avalara-tax-shipment.html) |
+| [Integrate Avalara Tax + Product Options feature](/docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-product-options.html) |
+-->

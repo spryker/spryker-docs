@@ -1,6 +1,6 @@
 ---
 title: About the Business layer
-description: Zed’s business layer is responsible for the entire business logic.
+description: Zed's business layer is responsible for the entire business logic.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/business-layer
@@ -35,7 +35,7 @@ related:
     link: docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
 ---
 
-Zed’s business layer is responsible for the entire business logic.
+Zed's business layer is responsible for the entire business logic.
 
 Most classes exist in this layer and this is the primary area for development.
 
@@ -54,6 +54,6 @@ The business layer is used by the communication layer and by other bundles. Here
 
 ## Interaction with other layers
 
-The business layer is in the middle, between communication and persistence layer. It is used by controllers and plugins from the communication layer and uses the entities and the query container from the persistence layer.
+The business layer is in the middle, between the communication and persistence layers. It is used by controllers and plugins from the communication layer and uses the entities and the query container from the persistence layer.
 ![Interaction with the business layer](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Zed/Business+Layer/business-layer-interaction.png) 
 

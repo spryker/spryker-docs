@@ -15,10 +15,10 @@ related:
     link: docs/scos/dev/feature-integration-guides/page.version/payments-feature-integration.html
   - title: Payments feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/payments-feature-walkthrough.html
-  - title: Checking out purchases
+  - title: Check out purchases
     link: docs/scos/dev/glue-api-guides/page.version/checking-out/checking-out-purchases.html
   - title: Updating payment data
-    link: docs/scos/dev/glue-api-guides/page.version/checking-out/updating-payment-data.html
+    link: docs/pbc/all/cart-and-checkout/manage-using-glue-api/check-out/update-payment-data.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-payments-glue-api.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-glue-api/integrate-the-payments-glue-api.md -->
+{% include pbc/all/install-features/202204.0/install-glue-api/install-the-payments-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-payments-glue-api.md -->

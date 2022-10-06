@@ -1,6 +1,6 @@
 ---
 title: Creating and configuring Zed tables
-description: This article helps you to get started on working with tables.
+description: This document helps you to get started on working with tables.
 last_updated: Oct 13, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/creating-and-configuring-zed-tables
@@ -31,7 +31,7 @@ related:
 
 Spryker has a dedicated component to help you build tables for the Zed UI.
 
-This article helps you start working with tables.
+This document helps you start working with tables.
 
 ## 1. Creating a new table
 
@@ -113,7 +113,7 @@ protected function configure(TableConfiguration $config)
 
 ### Configuring the default field for sorting
 
-To configure the field on which the table is sorted by default when it’s initially rendered or when no sorting is applied by the user from the UI, specify the index of the field when configuring the table:
+To configure the field on which the table is sorted by default when it's initially rendered or when no sorting is applied by the user from the UI, specify the index of the field when configuring the table:
 
 ```php
 <?php
@@ -121,7 +121,7 @@ To configure the field on which the table is sorted by default when it’s initi
 $config->setDefaultSortColumnIndex(5);
 ```
 
-You can also configure the default sort direction (for the initial rendering of the table or for the case it’s not set yet), for example:
+You can also configure the default sort direction (for the initial rendering of the table or for the case it's not set yet), for example:
 
 ```php
 <?php
@@ -165,7 +165,7 @@ protected function prepareData(TableConfiguration $config)
 
 ## 4. Rendering the table
 
-To display the query results in the table, in the controller’s action, retrieve an instance of the table configuration class and call the `render()` operation:
+To display the query results in the table, in the controller's action, retrieve an instance of the table configuration class and call the `render()` operation:
 
 ```php
 <?php
@@ -263,9 +263,9 @@ protected function getCsvHeaders(): array
 }
 ```
 
-#### Implementing formatCsvRow
+#### Implementing getDownloadQuery
 
-The `GetDownloadQuery` method returns the query that is used to fetch the data from the database. In the background, `\Propel\Runtime\Formatter\OnDemandFormatter` is set for performance reasons.
+This method returns the query that is used to fetch the data from the database. In the background, `\Propel\Runtime\Formatter\OnDemandFormatter` is set for performance reasons.
 
 ```php
 <?php
@@ -284,7 +284,7 @@ protected function getDownloadQuery(): ModelCriteria
 }
 ```
 
-#### Implementing GetDownloadQuery
+#### Implementing formatCsvRow
 
 This method receives each `\Propel\Runtime\ActiveRecord\ActiveRecordInterface` and is responsible for returning a formatted array of the required data.
 

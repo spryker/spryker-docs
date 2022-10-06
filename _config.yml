@@ -150,17 +150,6 @@ defaults:
       role: "user"
   -
      scope:
-       path: "docs/fes"
-     values:
-       product: "frontend-enablement-service"
-  -
-     scope:
-       path: "docs/fes/dev"
-     values:
-       sidebar: "fes_dev_sidebar"
-       role: "dev"
-  -
-     scope:
        path: "docs/paas-plus"
      values:
        product: "platform-as-a-service-plus"
@@ -192,6 +181,7 @@ versions:
   '202009.0': '202009.0'
   '202108.0': '202108.0'
   '202204.0': '202204.0'
+  '202212.0': 'Upcoming release'
 
 # versioned categories - these must match corresponding directories
 versioned_categories:
@@ -207,6 +197,9 @@ versioned_categories:
       - data-import
       - data-export
       - legacy-demoshop
+      - front-end
+      - setup
+      - technical-enhancement
   scos:
     user:
       - features
@@ -225,6 +218,7 @@ versioned_categories:
       - legacy-demoshop
       - technology-partner-guides
       - devops-migration-guides
+      - system-requirements
 
 # these are defaults used for the front matter for these file types
 
@@ -236,7 +230,6 @@ sidebars:
   - scos_user_sidebar
   - sdk_dev_sidebar
   - acp_user_sidebar
-  - fes_dev_sidebar
   - paas_plus_dev_sidebar
   - pbc_all_sidebar
 
@@ -271,8 +264,6 @@ algolia:
       title: 'Cloud Developer'
     - name: 'acp_user'
       title: 'ACP User'
-    - name: 'fes_dev'
-      title: 'Frontend enablement Service Developer'
     - name: 'pbc_all'
       title: 'Packaged Business Capabilities'
     - name: 'paas_plus_dev'

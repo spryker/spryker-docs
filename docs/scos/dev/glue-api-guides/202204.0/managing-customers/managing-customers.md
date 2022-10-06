@@ -29,8 +29,8 @@ related:
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-passwords.html
   - title: Managing customer addresses
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/managing-customer-addresses.html
-  - title: Retrieving customer carts
-    link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-carts.html
+  - title: Retrieve customer carts
+    link: docs/pbc/all/cart-and-checkout/manage-using-glue-api/retrieve-customer-carts.html
   - title: Retrieving customer orders
     link: docs/scos/dev/glue-api-guides/page.version/managing-customers/retrieving-customer-orders.html
 ---
@@ -413,7 +413,7 @@ Request sample: retrieve subscriptions to availability notifications
 
 ## Other management options
 
-There is an alternative way to retrieve existing subscriptions, for details see [Retrieving subscriptions to availability notifications](/docs/scos/dev/glue-api-guides/{{page.version}}/managing-products/managing-availability-notifications/retrieving-subscriptions-to-availability-notifications.html).
+There is an alternative way to retrieve existing subscriptions, for details see [Retrieve subscriptions to availability notifications](/docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-subscriptions-to-availability-notifications.html).
 
 ## Possible errors
 

@@ -1,7 +1,7 @@
 ---
 title: Approval Process feature walkthrough
 last_updated: Aug 12, 2021
-description: The Approval Process feature allows managers to control purchases requested by their employees
+description: The Approval Process feature lets managers control purchases requested by their employees
 template: concept-topic-template
 redirect_from:
   - /2021080/docs/approval-process-module-relations
@@ -10,7 +10,7 @@ redirect_from:
   - /docs/en/approval-process-module-relations
 ---
 
-The _Approval Process_ feature enables managers to control purchases requested by their employees.
+The _Approval Process_ feature lets managers control purchases requested by their employees.
 
 
 To learn more about the feature and to find out how end users use it, see [Approval Process feature overview](/docs/scos/user/features/{{page.version}}/approval-process-feature-overview.html) for business users.
@@ -29,7 +29,7 @@ The following schema illustrates module relations in the Approval Process featur
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | TUTORIALS AND HOWTOS |
+|INSTALLATION GUIDES  | TUTORIALS AND HOWTOS |
 |---------|---------|
 | [Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-alternative-products-feature-integration.html) | [HowTo: Implement customer approval process based on a generic state machine](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/howto-implement-customer-approval-process-based-on-a-generic-state-machine.html)  |
-| [Shipment + Approval Process feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/shipment-approval-process-feature-integration.html)  |   |
+| [Shipment + Approval Process feature integration](/docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-approval-process-feature.html)  |   |

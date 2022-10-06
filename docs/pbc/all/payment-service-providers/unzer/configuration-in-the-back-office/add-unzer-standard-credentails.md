@@ -1,8 +1,10 @@
 ---
 title: Add Unzer standard credentials
-last_updated: Jun 22, 2022
+last_updated: Aug 11, 2022
 description: This document shows how to add Unzer standard credentials
 template: back-office-user-guide-template
+redirect_from:
+  - /docs/pbc/all/payment/unzer/configuration-in-the-back-office/add-unzer-standard-credentails.html
 ---
 
 This document shows how to add Unzer standard credentials.
@@ -13,7 +15,7 @@ Review the reference information before you start, or look up the necessary info
 
 ## Add Unzer standard credentials
 
-   1. Go to **Back Office&nbsp;<span aria-label="and then">></span> Unzer**.
+   1. Go to **Back Office > Unzer**.
    2. On the **Overview of Unzer Credentials** page, click **Add Unzer Credentials**.
       The **Add Unzer Credentials** page opens.
    3. For the new credentials, enter a **NAME**.
@@ -29,6 +31,10 @@ Review the reference information before you start, or look up the necessary info
       {% endinfo_block %}
 
    8. Click **Save**. The new credentials appear on the **Overview of Unzer Credentials** page.
+   9. To sync payment method, click **Sync payment methods** for the needed credentials.
+   10. Go to **Back Office > Administration > Payment Methods**.
+   11. On the **Payment Methods** page, click **Edit** next to the needed payment method.
+   12. On the **Edit Payment Method** page, open the **Store Relation** tab and map the payment method to the needed stores.
 
 ### Reference information: Add Unzer credentials
 

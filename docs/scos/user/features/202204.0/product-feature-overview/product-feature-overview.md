@@ -19,6 +19,8 @@ redirect_from:
   - /docs/shop-guide-managing-products
   - /docs/en/shop-guide-managing-products
   - /docs/scos/user/features/202200.0/product-feature-overview/product-feature-overview.html
+  - /docs/product-quantity-restrictions
+  - /docs/product-ttl
 ---
 
 The *Product* feature lets you create products, and manage their characteristics and settings.
@@ -102,7 +104,7 @@ Besides the Back Office, you can maintain product information in an external Pro
 
 The Spryker Commerce OS supports integration of the following PIM systems:
 
-* [Akeneo](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extending-the-core.html)
+* [Akeneo](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-core.html)
 * [Censhare PIM](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/censhare-pim.html)
 * [Xentral](/docs/scos/user/technology-partners/{{page.version}}/product-information-pimerp/xentral.html)
 

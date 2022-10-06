@@ -13,6 +13,6 @@ To learn more about the feature and to find out how end users use it, see [Reord
 
 ## Related Developer articles
 
-|INTEGRATION GUIDES  | MIGRATION GUIDES |
+| INSTALLATION GUIDES | UPGRADE GUIDES|
 |---------|---------|
 | [Multiple Carts + Reorder feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/multiple-carts-reorder-feature-integration.html) | CustomerReorderWidget migration guide  |

@@ -12,10 +12,6 @@ redirect_from:
 related:
   - title: Glue API - Agent Assist feature integration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-agent-assist-feature-integration.html
-  - title: Agent Assist feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/agent-assist-feature-walkthrough.html
-  - title: Cart feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/cart-feature-walkthrough/cart-feature-walkthrough.html
 ---
 
-{% include pbc/all/integrate-features/202204.0/integrate-the-agent-assist-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/integrate-features/202204.0/integrate-the-agent-assist-cart-feature.md -->
+{% include pbc/all/install-features/202204.0/install-the-agent-assist-cart-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-agent-assist-cart-feature.md -->

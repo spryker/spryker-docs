@@ -28,7 +28,7 @@ related:
 
 In Spryker Commerce OS, session behavior is supported by User, Customer and CustomerPage modules.
 
-The following article provides an overview on how sessions are handled in Zed and Yves, as well as describes possible use cases for both of them.
+The following document provides an overview on how sessions are handled in Zed and Yves, as well as describes possible use cases for both of them.
 
 ## Zed
 
@@ -69,7 +69,7 @@ session refresh before end: 5m (300)
 
 ## Yves
 
-In Yves (front-end), sessions are managed by the following widget:
+In Yves (frontend), sessions are managed by the following widget:
 `vendor/spryker/spryker-shop/Bundles/UpdateSessionTtlWidget/src/SprykerShop/Yves/UpdateSessionTtlWidget/Widget/UpdateSessionTtlWidget.php`
 
 The widget handles sessions as follows:

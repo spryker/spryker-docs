@@ -239,7 +239,7 @@ The **Queue manager** functionality is extended with the command that makes queu
 
 #### Documentation:
 
-[Tutorial - Handling Data - Publish and Synchronization - Spryker Commerce OS](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handling-data-with-publish-and-synchronization.html#queue)
+[Tutorial - Handling Data - Publish and Synchronization - Spryker Commerce OS](/docs/scos/dev/back-end-development/data-manipulation/data-publishing/handle-data-with-publish-and-synchronization.html#queue)
 
 ### Search Initialization Improvement
 To improve usability, the `vendor/bin/console setup:search` command which has been generating two processes, was split into two commands:

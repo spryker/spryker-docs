@@ -27,12 +27,12 @@ A typical use is scaling your Storefront API servers while running a native APP 
 
 ## Back Office security
 
-Back Office Application based on Zed Application Layer, contains business logic of your application and heavy Backend calculations. Also, the Back Office Application provides full control over the data via UI.
+Back Office Application based on Zed Application Layer, contains business logic of your application and heavy Backend calculations. Also, the Back Office Application provides full control over the data through UI.
 Even with a good ACL use, the Back Office contains sensitive data which must be secured by environment infrastructure.
 
 {% info_block warningBox "System requirement" %}
 
-To protect the application and user data, the Back Office Application (Zed) must be secured in an Intranet (using VPN, Basic Auth, IP Allowlist, DMZ, etc.).
+To protect the application and user data, the Back Office Application (Zed) must be secured in an Intranet (using VPN, Basic Auth, IP Allowlist, or DMZ).
 
 {% endinfo_block %}
 

@@ -1780,20 +1780,10 @@ sections:
             groups:
                 - project
 
-        yves-install-dependencies:
-            command: "vendor/bin/console frontend:yves:install-dependencies -vvv"
-            groups:
-                - yves
-
         yves-build-frontend:
             command: "vendor/bin/console frontend:yves:build -vvv"
             groups:
                 - yves
-
-        zed-install-dependencies:
-            command: "vendor/bin/console frontend:zed:install-dependencies -vvv"
-            groups:
-                - zed
 
         zed-build-frontend:
             command: "vendor/bin/console frontend:zed:build"

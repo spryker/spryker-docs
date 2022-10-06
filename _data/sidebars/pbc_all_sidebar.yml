@@ -2,11 +2,280 @@ title: PBC guides
 entries:
   - product: PBC
     nested:
-      - title: Ratings and Reviews
-        url: /docs/pbc/all/ratings-reviews/ratings-reviews.html
+      - title: Carrier Management
+        url: /docs/pbc/all/carrier-management/carrier-management.html
         nested:
-          - title: Bazaarvoice
-            url: /docs/pbc/all/ratings-reviews/bazaarvoice.html
+          - title: What's changed
+            url: /docs/pbc/all/carrier-management/whats-changed-in-carrier-management.html
+          - title: Install and upgrade
+            nested:
+              - title: Integrate the Shipment feature
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-feature.html
+              - title: Integrate the Shipment + Approval Process feature
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-approval-process-feature.html
+              - title: Integrate the Shipment + Cart feature
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-cart-feature.html
+              - title: Integrate the Shipment Glue API
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/integrate-the-shipment-glue-api.html
+              - title: Upgrade the Shipment module
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipment-module.html
+              - title: Upgrade the ShipmentCartConnector module
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentcartconnector-module.html
+              - title: Upgrade the ShipmentCheckoutConnector module
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentcheckoutconnector-module.html
+              - title: Upgrade the ShipmentDiscountConnector module
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentdiscountconnector-module.html
+              - title: Upgrade the ShipmentGui module
+                url: /docs/pbc/all/carrier-management/install-and-upgrade/upgrade-the-shipmentgui-module.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Add carrier companies
+                url: /docs/pbc/all/carrier-management/manage-in-the-back-office/add-carrier-companies.html
+              - title: Add delivery methods
+                url: /docs/pbc/all/carrier-management/manage-in-the-back-office/add-delivery-methods.html
+              - title: Edit delivery methods
+                url: /docs/pbc/all/carrier-management/manage-in-the-back-office/edit-delivery-methods.html
+          - title: Manage via Glue API
+            nested:
+              - title: Retrieve shipments and shipment methods when submitting checkout data
+                url: /docs/pbc/all/carrier-management/manage-via-glue-api/retrieve-shipments-and-shipment-methods-when-submitting-checkout-data.html
+              - title: Retrieve shipments when checking out purchases
+                url: /docs/pbc/all/carrier-management/manage-via-glue-api/retrieve-shipments-when-checking-out-purchases.html
+              - title: Retrieve shipments in orders
+                url: /docs/pbc/all/carrier-management/manage-via-glue-api/retrieve-shipments-in-orders.html
+          - title: Import and export data
+            url: /docs/pbc/all/discount-management/import-and-export-data/discount-import.html
+            nested:
+              - title: File details - shipment.csv
+                url: /docs/pbc/all/carrier-management/import-and-export-data/file-details-shipment.csv.html
+              - title: File details - shipment_method_store.csv
+                url: /docs/pbc/all/carrier-management/import-and-export-data/file-details-shipment-method-store.csv.html
+              - title: File details - shipment_price.csv
+                url: /docs/pbc/all/carrier-management/import-and-export-data/file-details-shipment-price.csv.html
+          - title: Tutorials and HowTos
+            nested:
+              - title: "HowTo: Add a new shipment method"
+                url: /docs/pbc/all/carrier-management/tutorials-and-howtos/howto-add-a-new-shipment-method.html
+              - title: "HowTo: Add a new shipment method 2.0"
+                url: /docs/pbc/all/carrier-management/tutorials-and-howtos/howto-add-a-new-shipment-method-2.0.html
+          - title: Domain model and relationships
+            nested:
+              - title: "Shipment method entities in the database: reference information"
+                url: /docs/pbc/all/carrier-management/domain-model-and-relationships/shipment-method-entities-in-the-database-reference-information.html
+          - title: Extend and customize
+            nested:
+              - title: "Shipment method plugins: reference information"
+                url: /docs/pbc/all/carrier-management/extend-and-customize/shipment-method-plugins-reference-information.html
+          - title: Third-party integrations
+            nested:
+              - title: Seven Senders
+                url: /docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders.html
+                nested:
+                  - title: Install and configure
+                    url: /docs/pbc/all/carrier-management/third-party-integrations/seven-senders/install-and-configure-seven-senders.html
+                  - title: Integrate
+                    url: /docs/pbc/all/carrier-management/third-party-integrations/seven-senders/integrate-seven-senders.html
+                  - title: API requests
+                    url: /docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders-api-requests.html
+                  - title: Mappers
+                    url: /docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders-mappers.html
+                  - title: Persistence layer
+                    url: /docs/pbc/all/carrier-management/third-party-integrations/seven-senders/seven-senders-persistance-layer.html
+              - title: Paazl
+                url: /docs/pbc/all/carrier-management/third-party-integrations/paazl.html
+              - title: Paqato
+                url: /docs/pbc/all/carrier-management/third-party-integrations/paqato.html
+      - title: Cart and Checkout
+        url: /docs/pbc/all/cart-and-checkout/cart-and-checkout.html
+        nested:
+          - title: What's changed
+            url: /docs/pbc/all/cart-and-checkout/whats-changed-in-cart-and-checkout.html
+          - title: Cart feature overview
+            url: /docs/pbc/all/cart-and-checkout/cart-feature-overview/cart-feature-overview.html
+            nested:
+              - title: Cart notes
+                url: /docs/pbc/all/cart-and-checkout/cart-feature-overview/cart-notes-overview.html
+              - title: Cart widget
+                url: /docs/pbc/all/cart-and-checkout/cart-feature-overview/cart-widget-overview.html
+              - title: Quick order from the catalog page
+                url: /docs/pbc/all/cart-and-checkout/cart-feature-overview/quick-order-from-the-catalog-page-overview.html
+          - title: Multiple Carts feature overview
+            url: /docs/pbc/all/cart-and-checkout/multiple-carts-feature-overview.html
+          - title: Persistent Cart Sharing feature overview
+            url: /docs/pbc/all/cart-and-checkout/persistent-cart-sharing-feature-overview.html
+          - title: Quick Add to Cart feature overview
+            url: /docs/pbc/all/cart-and-checkout/quick-add-to-cart-feature-overview.html
+          - title: Shared Carts feature overview
+            url: /docs/pbc/all/cart-and-checkout/shared-carts-feature-overview.html
+          - title: Checkout feature overview
+            url: /docs/pbc/all/cart-and-checkout/checkout-feature-overview/checkout-feature-overview.html
+            nested:
+              - title: Multi-step checkout
+                url: /docs/pbc/all/cart-and-checkout/checkout-feature-overview/multi-step-checkout-overview.html
+              - title: Order thresholds overview
+                url: /docs/pbc/all/cart-and-checkout/checkout-feature-overview/order-thresholds-overview.html
+          - title: Install and upgrade
+            nested:
+              - title: Install features
+                nested:
+                  - title: Cart + Agent Assist
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-cart-agent-assist-feature.html
+                  - title: Cart
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-cart-feature.html
+                  - title: Cart + Non-splittable Products
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-cart-product-bundles-feature.html
+                  - title: Cart + Product
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-cart-product-feature.html
+                  - title: Cart + Product Group
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-cart-product-group-feature.html
+                  - title: Cart + Shipment
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-cart-shipment-feature.html
+                  - title: Checkout
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-checkout-feature.html
+                  - title: Checkout + Quotation Process
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-checkout-quotation-process-feature.html
+                  - title: Checkout Workflow
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-multiple-carts-reorder-feature.html
+                  - title: Multiple Carts
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-persistent-cart-comments-feature.html
+                  - title: Multiple Carts + Quick Order
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-persistent-cart-sharing-feature.html
+                  - title: Multiple Carts + Quotation Process
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-persistent-cart-sharing-shared-carts-feature.html
+                  - title: Multiple Carts + Reorder
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-discontinued-products-feature.html
+                  - title: Persistent Cart + Comments
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-feature.html
+                  - title: Persistent Cart Sharing
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-measurement-units-feature.html
+                  - title: Persistent Cart Sharing + Shared Carts
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-non-splittable-products-feature.html
+                  - title: Quick Add to Cart + Discontinued Products
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-packaging-units-feature.html
+                  - title: Quick Add to Cart
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-quick-add-to-cart-shopping-lists-feature.html
+                  - title: Quick Add to Cart + Measurement Units
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-resource-sharing-feature.html
+                  - title: Quick Add to Cart + Non-splittable Products
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html
+                  - title: Quick Add to Cart + Packaging Units
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html
+                  - title: Quick Add to Cart + Shopping Lists
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html
+                  - title: Resource Sharing
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html
+                  - title: Shared Carts
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-features/install-the-shared-carts-feature.html
+              - title: Install Glue API
+                nested:
+                  - title: Install the Cart Glue API
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-cart-glue-api.html
+                  - title: Install the Cart + Configurable Bundle Glue API
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-cart-configurable-bundle-glue-api.html
+                  - title: Install the Cart + Product Bundle Glue API
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-cart-product-bundle-glue-api.html
+                  - title: Install the Checkout Glue API
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-checkout-glue-api.html
+                  - title: Install the Multiple Carts Glue API
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-multiple-carts-glue-api.html
+                  - title: Install the Shared Carts Glue API
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/install-glue-api/install-the-shared-carts-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: Upgrade the Cart module
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cart-module.html
+                  - title: Upgrade the CartExtension module
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartextension-module.html
+                  - title: Upgrade the CartPage module
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartpage-module.html
+                  - title: Upgrade the CartsRestApi module
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartsrestapi-module.html
+                  - title: Upgrade the CartVariant module
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-cartvariant-module.html
+                  - title: Upgrade the Checkout module
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkout-module.html
+                  - title: Upgrade the CheckoutPage module
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkoutpage-module.html
+                  - title: Upgrade the CheckoutRestApi module
+                    url: /docs/pbc/all/cart-and-checkout/install-and-upgrade/upgrade-modules/upgrade-the-checkoutrestapi-module.html
+          - title: Extend and customize
+            nested:
+              - title: "Calculation 3.0"
+                url: /docs/pbc/all/cart-and-checkout/extend-and-customize/calculation-3-0.html
+              - title: Calculation data structure
+                url: /docs/pbc/all/cart-and-checkout/extend-and-customize/calculation-data-structure.html
+              - title: Calculator plugins
+                url: /docs/pbc/all/cart-and-checkout/extend-and-customize/calculator-plugins.html
+              - title: "Cart module: reference information"
+                url: /docs/pbc/all/cart-and-checkout/extend-and-customize/cart-module-reference-information.html
+              - title: Checkout process review and implementation
+                url: /docs/pbc/all/cart-and-checkout/extend-and-customize/checkout-process-review-and-implementation.html
+              - title: Checkout steps
+                url: /docs/pbc/all/cart-and-checkout/extend-and-customize/checkout-steps.html
+          - title: Import and export data
+            nested:
+              - title: File details - sales_order_threshold.csv
+                url: /docs/pbc/all/cart-and-checkout/import-and-export-data/file-details-sales-order-threshold.csv.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Define global thresholds
+                url: /docs/pbc/all/cart-and-checkout/manage-in-the-back-office/define-global-thresholds.html
+              - title: Manage threshold settings
+                url: /docs/pbc/all/cart-and-checkout/manage-in-the-back-office/manage-threshold-settings.html
+          - title: Manage using Glue API
+            nested:
+              - title: Retrieve customer carts
+                url: /docs/pbc/all/cart-and-checkout/manage-using-glue-api/retrieve-customer-carts.html
+              - title: Manage carts of registered users
+                url: /docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-carts-of-registered-users.html
+                nested:
+                  - title: Manage items in carts of registered users
+                    url: /docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-carts-of-registered-users/manage-items-in-carts-of-registered-users.html
+              - title: Manage guest carts
+                url: /docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-carts.html
+                nested:
+                  - title: Manage guest cart items
+                    url: /docs/pbc/all/cart-and-checkout/manage-using-glue-api/manage-guest-carts/manage-guest-cart-items.html
+              - title: Share company user carts
+                url: /docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/share-company-user-carts.html
+                nested:
+                  - title: Manage shared company user carts
+                    url: /docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/manage-shared-company-user-carts.html
+                  - title: Retrieve cart permission groups
+                    url: /docs/pbc/all/cart-and-checkout/manage-using-glue-api/share-company-user-carts/retrieve-cart-permission-groups.html
+          - title: Tutorials and HowTos
+            nested:
+              - title: "HowTo: Add additional countries to Spryker checkout"
+                url: /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/howto-add-additional-countries-to-spryker-checkout.html
+              - title: "HowTo: Define if a cart should be deleted after placing an order"
+                url: /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/howto-define-if-a-cart-should-be-deleted-after-placing-an-order.html
+              - title: "HowTo: Enable guest checkout in B2B Demo Shop"
+                url: /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/howto-enable-guest-checkout-in-b2b-demo-shop.html
+              - title: "Tutorial: Checkout and step engine"
+                url: /docs/pbc/all/cart-and-checkout/tutorials-and-howtos/tutorial-checkout-and-step-engine.html
+          - title: Domain model and relationships
+            nested:
+              - title: Checkout feature entity diagram
+                url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/checkout-feature-entity-diagram.html
+              - title: "Persistent Cart Sharing: module relations"
+                url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/persistent-cart-sharing-feature-module-relations.html
+              - title: Quick Add to Cart feature entity diagram
+                url: /docs/pbc/all/cart-and-checkout/domain-model-and-relationships/quick-add-to-cart-feature-entity-diagram.html
+      - title: Digital Asset Management
+        url: /docs/pbc/all/digital-asset-management/digital-asset-management.html
+        nested:
+          - title: Import and export data
+            nested:
+              - title: File details - mime_type.csv
+                url: /docs/pbc/all/digital-asset-management/import-and-export-data/file-details-mime-type.csv.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Add and edit MIME types
+                url: /docs/pbc/all/digital-asset-management/manage-in-the-back-office/add-and-edit-mime-types.html
+              - title: Manage file list
+                url: /docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-list.html
+              - title: Manage file tree
+                url: /docs/pbc/all/digital-asset-management/manage-in-the-back-office/manage-file-tree.html
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:
@@ -19,9 +288,9 @@ entries:
               - title: Integrate the Promotions & Discounts Glue API
                 url: /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-promotions-and-discounts-glue-api.html
               - title: Integrate the Product labels + Promotions & Discounts feature
-                url: /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-product-labels-promotions-and-discounts-feature.html
+                url: /docs/pbc/all/discount-management/install-and-upgrade/install-the-promotions-and-discounts-product-labels-feature.html
               - title: Integrate the Category Management + Promotions & Discounts feature
-                url: /docs/pbc/all/discount-management/install-and-upgrade/integrate-the-category-management-promotions-and-discounts-feature.html
+                url: /docs/pbc/all/discount-management/install-and-upgrade/install-the-promotions-and-discounts-category-management-feature.html
               - title: Upgrade the Discount module
                 url: /docs/pbc/all/discount-management/install-and-upgrade/upgrade-the-discount-module.html
               - title: Upgrade the DiscountCalculatorConnector module
@@ -74,9 +343,44 @@ entries:
             nested:
               - title: "HowTo: Create discounts based on shipment"
                 url: /docs/pbc/all/discount-management/tutorials-and-howtos/howto-create-discounts-based-on-shipment.html
+      - title: Gift Cards
+        url: /docs/pbc/all/gift-cards/gift-cards.html
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Integrate the Gift Cards feature
+                url: /docs/pbc/all/gift-cards/install-and-upgrade/install-the-gift-cards-feature.html
+              - title: Enable gift cards
+                url: /docs/pbc/all/gift-cards/install-and-upgrade/enable-gift-cards.html
+          - title: Import and export data
+            url: /docs/pbc/all/gift-cards/import-and-export-data/import-of-gift-cards.html
+            nested:
+              - title: File details- gift_card_abstract_configuration.csv
+                url: /docs/pbc/all/gift-cards/import-and-export-data/file-details-gift-card-abstract-configuration.csv.html
+              - title: File details- gift_card_concrete_configuration.csv
+                url: /docs/pbc/all/gift-cards/import-and-export-data/file-details-gift-card-concrete-configuration.csv.html
+          - title: Manage using Glue API
+            nested:
+              - title: Manage gift cards of guest users
+                url: /docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-guest-users.html
+              - title: Retrieve gift cards in guest carts
+                url: /docs/pbc/all/gift-cards/manage-using-glue-api/retrieve-gift-cards-in-guest-carts.html
+              - title: Manage gift cards of registered users
+                url: /docs/pbc/all/gift-cards/manage-using-glue-api/manage-gift-cards-of-registered-users.html
+              - title: Retrieve gift cards in guest carts
+                url: /docs/pbc/all/gift-cards/manage-using-glue-api/retrieve-gift-cards-in-guest-carts.html
       - title: Payment Service Providers
         url: /docs/pbc/all/payment-service-providers/psp.html
         nested:
+          - title: Payone
+            url: /docs/pbc/all/payment-service-providers/payone/payone.html
+            nested:
+              - title: Integrate Payone
+                url: /docs/pbc/all/payment-service-providers/payone/integrate-payone.html
+              - title: Manage in the Back Office
+                nested:
+                  - title: Disconnect Payone
+                    url: /docs/pbc/all/payment-service-providers/payone/manage-in-the-back-office/disconnect-payone.html
           - title: Unzer
             url: /docs/pbc/all/payment-service-providers/unzer/unzer.html
             nested:
@@ -88,6 +392,8 @@ entries:
                     url: /docs/pbc/all/payment-service-providers/unzer/install-unzer/install-and-configure-unzer.html
                   - title: Integrate
                     url: /docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer.html
+                  - title: Integrate Glue API
+                    url: /docs/pbc/all/payment-service-providers/unzer/install-unzer/integrate-unzer-glue-api.html
               - title: Use cases, HowTos, and tips
                 nested:
                   - title: Refund shipping costs
@@ -100,12 +406,222 @@ entries:
                     url: /docs/pbc/all/payment-service-providers/unzer/configuration-in-the-back-office/add-unzer-standard-credentails.html
                   - title: Add Unzer marketplace credentials
                     url: /docs/pbc/all/payment-service-providers/unzer/configuration-in-the-back-office/add-unzer-marketplace-credentials.html
-              - title: Customize the credit card display in your payment step
-                url: /docs/pbc/all/payment-service-providers/unzer/customize-the-credit-card-display-in-your-payment-step.html
+              - title: Extend and Customize
+                nested:
+                  - title: Implement new payment methods on the project level
+                    url: /docs/pbc/all/payment-service-providers/unzer/extend-and-customize/implement-new-payment-methods-on-the-project-level.html
+                  - title: Customize the credit card display in your payment step
+                    url: /docs/pbc/all/payment-service-providers/unzer/extend-and-customize/customize-the-credit-card-display-in-your-payment-step.html
               - title: Domain model and relationships
                 url: /docs/pbc/all/payment-service-providers/unzer/unzer-domain-model-and-relationships.html
-          - title: Payone
-            url: /docs/pbc/all/payment-service-providers/payone/payone.html
+      - title: Price Management
+        url: /docs/pbc/all/price-management/price-management.html
+        nested:
+          - title: Prices feature overview
+            url: /docs/pbc/all/price-management/prices-feature-overview/prices-feature-overview.html
+            nested:
+              - title: Volume Prices overview
+                url: /docs/pbc/all/price-management/prices-feature-overview/volume-prices-overview.html
+          - title: Merchant Custom Prices feature overview
+            url: /docs/pbc/all/price-management/merchant-custom-prices-feature-overview.html
+          - title: Scheduled Prices feature overview
+            url: /docs/pbc/all/price-management/scheduled-prices-feature-overview.html
+          - title: Install and upgrade
+            nested:
+              - title: Install features
+                nested:
+                  - title: Prices
+                    url: /docs/pbc/all/price-management/install-and-upgrade/install-features/install-the-prices-feature.html
+                  - title: Merchant Custom Prices
+                    url: /docs/pbc/all/price-management/install-and-upgrade/install-features/install-the-merchant-custom-prices-feature.html
+                  - title: Scheduled prices
+                    url: /docs/pbc/all/price-management/install-and-upgrade/install-features/install-the-scheduled-prices-feature.html
+                  - title: Product Price Glue API
+                    url: /docs/pbc/all/price-management/install-and-upgrade/install-features/install-the-product-price-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: CRUD Scheduled Prices
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-to-crud-scheduled-prices.html
+                  - title: Multi-currency
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-to-multi-currency.html
+                  - title: Currency
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-currency-module.html
+                  - title: Price
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-price-module.html
+                  - title: PriceCartConnector
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-pricecartconnector-module.html
+                  - title: PriceProduct
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproduct-module.html
+                  - title: PriceProductSchedule
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedule-module.html
+                  - title: PriceProductScheduleGui
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductschedulegui-module.html
+                  - title: PriceProductStorage
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductstorage-module.html
+                  - title: PriceProductVolume
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolume-module.html
+                  - title: PriceProductVolumeGui
+                    url: /docs/pbc/all/price-management/install-and-upgrade/upgrade-modules/upgrade-the-priceproductvolumegui-module.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Create scheduled prices
+                url: /docs/pbc/all/price-management/manage-in-the-back-office/create-scheduled-prices.html
+              - title: Manage scheduled prices
+                url: /docs/pbc/all/price-management/manage-in-the-back-office/manage-scheduled-prices.html
+              - title: Add scheduled prices to abstract products and product bundles
+                url: /docs/pbc/all/price-management/manage-in-the-back-office/add-scheduled-prices-to-abstract-products-and-product-bundles.html
+              - title: Add volume prices to abstract products and product bundles
+                url: /docs/pbc/all/price-management/manage-in-the-back-office/add-volume-prices-to-abstract-products-and-product-bundles.html
+          - title: Manage using Glue API
+            nested:
+              - title: Retrieve abstract product prices
+                url: /docs/pbc/all/price-management/manage-using-glue-api/retrieve-abstract-product-prices.html
+              - title: Retrieve concrete product prices
+                url: /docs/pbc/all/price-management/manage-using-glue-api/retrieve-concrete-product-prices.html
+              - title: Retrieve prices when retrieving abstract products
+                url: /docs/pbc/all/price-management/manage-using-glue-api/retrieve-prices-when-retrieving-abstract-products.html
+              - title: Retrieve prices when retrieving concrete products
+                url: /docs/pbc/all/price-management/manage-using-glue-api/retrieve-prices-when-retrieving-concrete-products.html
+          - title: Tutorials and HowTos
+            nested:
+              - title: "HowTo: Create personalized prices"
+                url: /docs/pbc/all/price-management/tutorials-and-howtos/howto-create-personalized-prices.html
+              - title: "HowTo: Handle twenty five million prices in Spryker Commerce OS"
+                url: /docs/pbc/all/price-management/tutorials-and-howtos/howto-handle-twenty-five-million-prices-in-spryker-commerce-os.html
+              - title: "HowTo: Manage business unit specific prices via data import"
+                url: /docs/pbc/all/price-management/tutorials-and-howtos/howto-manage-business-unit-specific-prices-via-data-import.html
+              - title: "HowTo: Schedule cron job for Scheduled Prices"
+                url: /docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html
+          - title: Extend and customize
+            nested:
+              - title: Configuration of price modes and types
+                url: /docs/pbc/all/price-management/extend-and-customize/configuration-of-price-modes-and-types.html
+              - title: "Money module: reference information"
+                url: /docs/pbc/all/price-management/extend-and-customize/money-module-reference-information.html
+              - title: Multiple currencies per store configuration
+                url: /docs/pbc/all/price-management/extend-and-customize/multiple-currencies-per-store-configuration.html
+              - title: "PriceProduct module details: reference information"
+                url: /docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html
+      - title: Ratings and Reviews
+        url: /docs/pbc/all/ratings-reviews/ratings-and-reviews.html
+        nested:
+          - title: What's changed in Ratings and Reviews
+            url: /docs/pbc/all/ratings-reviews/whats-changed-in-ratings-and-reviews.html
+          - title: Install and upgrade
+            nested:
+              - title: Install the Product Rating and Reviews feature
+                url: /docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-feature.html
+              - title: Install the Product Rating and Reviews + Product Group feature
+                url: /docs/pbc/all/ratings-reviews/install-and-upgrade/install-the-product-rating-and-reviews-product-group-feature.html
+              - title: Install the Product Rating and Reviews Glue API
+                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html
+          - title: Import and export data
+            nested:
+              - title: File details- product_review.csv
+                url: /docs/pbc/all/ratings-reviews/import-and-export-data/file-details-product-review.csv.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Manage product reviews
+                url: /docs/pbc/all/ratings-reviews/manage-in-the-back-office/manage-product-reviews-in-the-back-office.html
+          - title: Manage using Glue API
+            nested:
+              - title: Manage product reviews using Glue API
+                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/manage-product-reviews-using-glue-api.html
+              - title: Retrieve product reviews when retrieving abstract products
+                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/retrieve-product-reviews-when-retrieving-abstract-products.html
+              - title: Retrieving product reviews when retrieving concrete products
+                url: /docs/pbc/all/ratings-reviews/manage-using-glue-api/retrieve-product-reviews-when-retrieving-concrete-products.html
+          - title: Tutorials and HowTos
+            nested:
+              - title: "HowTo: Configure product reviews"
+                url: /docs/pbc/all/ratings-reviews/tutorials-and-howtos/howto-configure-product-reviews.html
+          - title: Third-party integrations
+            nested:
+              - title: Bazaarvoice
+                url: /docs/pbc/all/ratings-reviews/third-party-integrations/bazaarvoice.html
+              - title: Integrate Bazaarvoice
+                url: /docs/pbc/all/ratings-reviews/third-party-integrations/integrate-bazaarvoice.html
+              - title: Configure Bazaarvoice
+                url: /docs/pbc/all/ratings-reviews/third-party-integrations/configure-bazaarvoice.html
+              - title: Disconnect Bazaarvoice
+                url: /docs/pbc/all/ratings-reviews/third-party-integrations/disconnect-bazaarvoice.html
+      - title: Request for Quote
+        url: /docs/pbc/all/request-for-quote/request-for-quote.html
+        nested:
+          - title: Install and upgrade
+            nested:
+              - title: Install features
+                nested:
+                  - title: Quotation Process
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-feature.html
+                  - title: Quotation Process + Checkout
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-checkout-feature.html
+                  - title: Quotation Process + Approval Process
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-approval-process-feature.html
+                  - title: Quotation Process + Multiple Carts
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-multiple-carts-feature.html
+                  - title: Quotation Process Glue API
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/install-features/install-the-quotation-process-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: QuoteRequest
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequest-module.html
+                  - title: QuoteRequestAgent
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagent-module.html
+                  - title: QuoteRequestAgentPage
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagentpage-module.html
+                  - title: QuoteRequestAgentWidget
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestagentwidget-module.html
+                  - title: QuoteRequestPage
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestpage-module.html
+                  - title: QuoteRequestwidget
+                    url: /docs/pbc/all/request-for-quote/install-and-upgrade/upgrade-modules/upgrade-the-quoterequestwidget-module.html
+          - title: Module relations
+            url: /docs/pbc/all/request-for-quote/quotation-process-module-relations.html
+      - title: Shopping List and Wishlist
+        url: /docs/pbc/all/shopping-list-and-wishlist/shopping-list-and-wishlist.html
+        nested:
+          - title: What's changed
+            url: /docs/pbc/all/shopping-list-and-wishlist/whats-changed-in-shopping-list-and-wishlist.html
+          - title: Shopping List feature overview
+            url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-lists-feature-overview.html
+            nested:
+              - title: Shopping List Notes overview
+                url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-notes-overview.html
+              - title: Shopping List Printing overview
+                url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-printing-overview.html
+              - title: Shopping List Widget overview
+                url: /docs/pbc/all/shopping-list-and-wishlist/shopping-lists-feature-overview/shopping-list-widget-overview.html
+          - title: Wishlist feature overview
+            url: /docs/pbc/all/shopping-list-and-wishlist/wishlist-feature-overview.html
+          - title: Install and upgrade
+            nested:
+              - title: Integrate the Shopping Lists feature
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-feature.html
+              - title: Integrate the Shopping Lists Glue API
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-glue-api.html
+              - title: Install the Shopping List + Agent Assist feature
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/install-the-shopping-list-agent-assist-feature.html
+              - title: Install the Shopping Lists + Quick Add to Cart feature
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/install-the-shopping-lists-quick-add-to-cart-feature.html
+              - title: Integrate the Shopping Lists + Product Options feature
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-shopping-lists-product-options-feature.html
+              - title: Integrate the Wishlist Glue API
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/integrate-the-wishlist-glue-api.html
+              - title: Install the Wishlist + Alternative Products feature
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/install-the-wishlist-alternative-products-feature.html
+              - title: Upgrade the ShoppingList module
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglist-module.html
+              - title: Upgrade the ShoppingListPage module
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistpage-module.html
+              - title: Upgrade the ShoppingListWidget module
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-shoppinglistwidget-module.html
+              - title: Upgrade the Wishlist module
+                url: /docs/pbc/all/shopping-list-and-wishlist/install-and-upgrade/upgrade-the-wishlist-module.html
+          - title: Manage via Glue API
+            nested:
+              - title: Manage shopping lists
+                url: /docs/pbc/all/shopping-list-and-wishlist/manage-via-glue-api/manage-shopping-lists-via-glue-api.html
       - title: Tax Management
         url: /docs/pbc/all/tax-management/tax-management.html
         nested:
@@ -135,20 +651,22 @@ entries:
             nested:
               - title: Retrieve tax sets
                 url: /docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets.html
-              - title: Retrieve tax sets of abstract products
-                url: /docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets-of-abstract-products.html
+              - title: Retrieve tax sets when retrieving abstract products
+                url: /docs/pbc/all/tax-management/manage-via-glue-api/retrieve-tax-sets-when-retrieving-abstract-products.html
           - title: Import and export data
             nested:
               - title: Import tax sets
                 url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets.html
               - title: Import tax sets for abstract products
                 url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-abstract-products.html
+              - title: Import tax sets for product options
+                url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-product-options.html
+              - title: Import tax sets for shipment methoods
+                url: /docs/pbc/all/tax-management/import-and-export-data/import-tax-sets-for-shipment-methods.html
           - title: Extend and customize
-            nested:
-              - title: "Tax module: reference information"
-                url: /docs/pbc/all/tax-management/extend-and-customize/tax-module-reference-information.html
+            url: /docs/pbc/all/tax-management/extend-and-customize/tax-module-reference-information.html
           - title: Domain model and relationships
-            url: /docs/pbc/all/tax-management/tax-domain-model-and-relationships.html
+            url: /docs/pbc/all/tax-management/domain-model-and-relationships/tax-domain-model-and-relationships.html
           - title: Third-party integrations
             url: /docs/pbc/all/tax-management/third-party-integrations/avalara.html
             nested:
@@ -158,5 +676,87 @@ entries:
                 url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-product-options.html
               - title: Integrate Avalara Tax + Shipment
                 url: /docs/pbc/all/tax-management/third-party-integrations/integrate-avalara-tax-shipment.html
+      - title: Warehouse Management System
+        url: /docs/pbc/all/warehouse-management-system/warehouse-management-system.html
+        nested:
+          - title: Inventory Management feature overview
+            url: /docs/pbc/all/warehouse-management-system/inventory-management-feature-overview.html
+          - title: Availability Notification feature overview
+            url: /docs/pbc/all/warehouse-management-system/availability-notification-feature-overview.html
+          - title: Install and upgrade
+            nested:
+              - title: Install features
+                nested:
+                  - title: Availability Notification
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-availability-notification-feature.html
+                  - title: Inventory Management
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-inventory-management-feature.html
+                  - title: Inventory Management + Alternative Products
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-inventory-management-alternative-products-feature.html
+                  - title: Availability Notification Glue API
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-availability-notification-glue-api.html
+                  - title: Inventory Management Glue API
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/install-features/install-the-inventory-management-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: Availability
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availability-module.html
+                  - title: AvailabilityCartConnector
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availabilitycartconnector-module.html
+                  - title: AvailabilityGui
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availabilitygui-module.html
+                  - title: AvailabilityOfferConnector
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availabilityofferconnector-module.html
+                  - title: AvailabilityStorage
+                    url: /docs/pbc/all/warehouse-management-system/install-and-upgrade/upgrade-modules/upgrade-the-availabilitystorage-module.html
+          - title: Import and export data
+            nested:
+              - title: File details - warehouse.csv
+                url: /docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse.csv.html
+              - title: File details - warehouse_address.csv
+                url: /docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse-address.csv.html
+              - title: File details - warehouse_store.csv
+                url: /docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-warehouse-store.csv.html
+              - title: File details - product_stock.csv
+                url: /docs/pbc/all/warehouse-management-system/import-and-export-data/file-details-product-stock.csv.html
+          - title: Manage in the Back Office
+            nested:
+              - title: Create warehouses
+                url: /docs/pbc/all/warehouse-management-system/manage-in-the-back-office/create-warehouses.html
+              - title: Edit warehouses
+                url: /docs/pbc/all/warehouse-management-system/manage-in-the-back-office/edit-warehouses.html
+              - title: Check availability of products
+                url: /docs/pbc/all/warehouse-management-system/manage-in-the-back-office/check-availability-of-products.html
+              - title: Edit stock of products and product bundles
+                url: /docs/pbc/all/warehouse-management-system/manage-in-the-back-office/edit-stock-of-products-and-product-bundles.html
+          - title: Manage using Glue API
+            nested:
+              - title: Retrieve abstract product availability
+                url: /docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-abstract-product-availability.html
+              - title: Retrieve availability when retrieving abstract products
+                url: /docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-availability-when-retrieving-abstract-products.html
+              - title: Retrieve concrete product availability
+                url: /docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-concrete-product-availability.html
+              - title: Retrieve availability when retrieving concrete products
+                url: /docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-availability-when-retrieving-concrete-products.html
+              - title: Manage availability notifications
+                url: /docs/pbc/all/warehouse-management-system/manage-using-glue-api/manage-availability-notifications.html
+              - title: Retrieve subscriptions to availability notifications
+                url: /docs/pbc/all/warehouse-management-system/manage-using-glue-api/retrieve-subscriptions-to-availability-notifications.html
+          - title: Domain mode and relationships
+            url: /docs/pbc/all/warehouse-management-system/domain-model-and-relationships/availability-notification-domain-model-and-relationships.html
+          - title: Extend and customize
+            nested:
+              - title: Configure product availability to be published on product amount changes
+                url: /docs/pbc/all/warehouse-management-system/extend-and-customize/configure-product-availability-to-be-published-on-product-amount-changes.html
+              - title: Inventory Management feature modules overview
+                url: /docs/pbc/all/warehouse-management-system/extend-and-customize/inventory-management-feature-modules-overview.html
+              - title: "Manage stocks in a multi-store environment: Best practices"
+                url: /docs/pbc/all/warehouse-management-system/extend-and-customize/manage-stocks-in-a-multi-store-environment-best-practices.html
       - title: Usercentrics
-        url: /docs/pbc/all/usercentrics.html
+        url: /docs/pbc/all/usercentrics/usercentrics.html
+        nested:
+          - title: Integrate Usercentrics
+            url: /docs/pbc/all/usercentrics/integrate-usercentrics.html
+          - title: Disconnect Usercentrics
+            url: /docs/pbc/all/usercentrics/disconnect-usercentrics.html

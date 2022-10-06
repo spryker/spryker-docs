@@ -459,3 +459,87 @@ Please avoid usage of Spryker\Zed\CustomerAccess\Business\CustomerAccess\Custome
 ### Resolving the error
 
 The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
+
+
+## PrivateApi:PersistenceInBusinessModel
+
+Business models on project level can use repository and entity manager but only methods that were declared on project level.
+
+### Example of code that causes an upgradability error
+
+`CustomerAccessUpdater` calls method `setContentTypesToInaccessible` of the entity manager, that was declared on the core level.
+
+```php
+namespace Pyz\Zed\CustomerAccess\Business\CustomerAccess;
+
+class CustomerAccessUpdater implements CustomerAccessUpdaterInterface;
+{
+   ...
+   /**
+     * @param \Generated\Shared\Transfer\CustomerAccessTransfer $customerAccessTransfer
+     *
+     * @return \Generated\Shared\Transfer\CustomerAccessTransfer
+     */
+    public function updateUnauthenticatedCustomerAccess(CustomerAccessTransfer $customerAccessTransfer): CustomerAccessTransfer
+    {
+        return $this->getTransactionHandler()->handleTransaction(function () use ($customerAccessTransfer) {
+            ...
+            return $this->customerAccessEntityManager->setContentTypesToInaccessible($customerAccessTransfer);
+        });
+    }
+   ...
+}
+```
+
+### Example of related error in the Evaluator output
+
+```bash
+------------------------------------------------------------------------------------------------------------------------
+Please avoid usage of PrivateApi customerAccessEntityManager->setContentTypesToInaccessible(...) in Pyz\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessUpdater
+------------------------------------------------------------------------------------------------------------------------
+```
+
+### Resolving the error
+
+The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
+
+
+
+## PrivateApi:CorePersistenceUsage
+
+Repository and EntityManager on project level should avoid methods from Core.
+
+### Example of code that causes an upgradability error
+
+`CustomerAccessEntityManager` calls method `getCustomerAccessEntityByContentType` of the SprykerCustomerAccessEntityManager, that was declared on the core level.
+
+```php
+namespace Pyz\Zed\CustomerAccess\Persistence;
+
+use Spryker\Zed\CustomerAccess\Persistence\CustomerAccessEntityManager as SprykerCustomerAccessEntityManager;
+
+class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager implements CustomerAccessEntityManagerInterface
+{
+    ...
+    public function setContentTypesToAccessible(CustomerAccessTransfer $customerAccessTransfer): void
+    {
+        foreach ($customerAccessTransfer->getContentTypeAccess() as $contentTypeAccess) {
+            $customerAccessEntity = $this->getCustomerAccessEntityByContentType($contentTypeAccess);
+            ...
+        }
+    }
+    ...
+}
+```
+
+### Example of related error in the Evaluator output
+
+```bash
+------------------------------------------------------------------------------------------------------------------------
+Please avoid usage of PrivateApi method SprykerCustomerAccessEntityManager::getCustomerAccessEntityByContentType()
+------------------------------------------------------------------------------------------------------------------------
+```
+
+### Resolving the error
+
+The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)

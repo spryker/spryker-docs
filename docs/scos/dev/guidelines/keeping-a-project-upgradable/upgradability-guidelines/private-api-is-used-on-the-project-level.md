@@ -10,7 +10,7 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/entity-name-is-not-unique.html
 ---
 
-Private API is used on the project level. Private API entities shouldn't be used on the project side. The project has to follow the rule to be able to correctly receive Spryker autoupdates.
+Private API is used on the project level. Private API entities shouldn't be used on the project side. The project has to follow the rule to be able to correctly receive Spryker module updates.
 
 Modules have public and private APIs. While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API. For example, if you use a core method on the project level, and it is updated or removed with an update, it can cause unexpected issues.
 
@@ -333,7 +333,7 @@ Copy the method to the factory on the project level.
 ```php
 namespace Pyz\Zed\Customer\Business;
 
-use Pyz\Zed\Customer\Business\Customer\CustomerReader;
+use Pyz\Zed\Customer\Business\Customer\CustomerPyzReader;
 use Spryker\Zed\Customer\Business\CustomerBusinessFactory as SprykerCustomerBusinessFactory;
 
 class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
@@ -359,7 +359,7 @@ The business factory should use dependency by a key that is defined at the proje
 
 ```php
 ...
-use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider
+use Spryker\Zed\ProductPageSearch\ProductPageSearchDependencyProvider;
 ...
 class CustomerAccessBusinessFactory implements SprykerCustomerAccessBusinessFactory
 {

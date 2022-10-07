@@ -178,6 +178,11 @@ namespace Pyz\Zed\HelloWorld\Business;
 interface HelloWorldFacadeInterface
 {
     /**
+     * Specification:
+     * - Returns a salutation text
+     *
+     * @api
+     *
      * @return string
      */
     public function getSalutationMessage();

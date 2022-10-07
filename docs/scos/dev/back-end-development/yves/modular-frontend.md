@@ -25,14 +25,14 @@ redirect_from:
 related:
   - title: Yves overview
     link: docs/scos/dev/back-end-development/yves/yves.html
-  - title: Adding translations for Yves
-    link: docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
+  - title: Add translations for Yves
+    link: docs/scos/dev/back-end-development/yves/add-translations-for-yves.html
   - title: CLI entry point for Yves
     link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
   - title: Controllers and actions
     link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
-  - title: Implementing URL routing in Yves
-    link: docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
+  - title: Implement URL routing in Yves
+    link: docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
   - title: Yves bootstrapping
     link: docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
   - title: Yves routes
@@ -78,7 +78,7 @@ When you get a general understanding of the Pages and Widgets concept, it's time
 
 ## Page module appearance and pages extension
 
-A Page module typically contains a `RouteProviderPlugin` plugin for routing (see [URL Routing](/docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html)) and some Controllers with their twig templates (see [Controllers and Actions](/docs/scos/dev/back-end-development/yves/controllers-and-actions.html)). The implementation scope of a *Page* module should be decided individually, depending on its need fo re-usability.
+A Page module typically contains a `RouteProviderPlugin` plugin for routing (see [URL Routing](/docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html)) and some Controllers with their twig templates (see [Controllers and Actions](/docs/scos/dev/back-end-development/yves/controllers-and-actions.html)). The implementation scope of a *Page* module should be decided individually, depending on its need fo re-usability.
 
 {% info_block infoBox %}
 

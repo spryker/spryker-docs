@@ -29,8 +29,8 @@ related:
     link: docs/scos/dev/back-end-development/yves/add-translations-for-yves.html
   - title: CLI entry point for Yves
     link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
-  - title: Implementing URL routing in Yves
-    link: docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
+  - title: Implement URL routing in Yves
+    link: docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
   - title: Modular Frontend
     link: docs/scos/dev/back-end-development/yves/modular-frontend.html
   - title: Yves bootstrapping
@@ -108,7 +108,7 @@ Now the data can be accessed in the twig template like this: `{% raw %}{{{% endr
 
 URL routing in Yves is not the same as URL routing in Zed. You can route a custom URL to a module-controller-action triple.
 
-To learn more about URL routing in Yves, see [Implementing URL Routing in Yves](/docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html).
+To learn more about URL routing in Yves, see [Implement URL routing in Yves](/docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html).
 
 ## Twig template in Yves
 

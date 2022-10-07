@@ -3353,8 +3353,8 @@ entries:
         url: /docs/scos/dev/back-end-development/yves/add-translations-for-yves.html
       - title: URL
         url: /docs/scos/dev/back-end-development/yves/url.html
-      - title: Implementing URL routing in Yves
-        url: /docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
+      - title: Implement URL routing in Yves
+        url: /docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
       - title: Yves bootstrapping
         url: /docs/scos/dev/back-end-development/yves/yves-bootstrapping.html
       - title: Yves routes

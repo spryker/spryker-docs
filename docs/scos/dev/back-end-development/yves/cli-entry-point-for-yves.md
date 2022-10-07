@@ -19,8 +19,8 @@ related:
     link: docs/scos/dev/back-end-development/yves/add-translations-for-yves.html
   - title: Controllers and actions
     link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
-  - title: Implementing URL routing in Yves
-    link: docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
+  - title: Implement URL routing in Yves
+    link: docs/scos/dev/back-end-development/yves/implement-url-routing-in-yves.html
   - title: Modular Frontend
     link: docs/scos/dev/back-end-development/yves/modular-frontend.html
   - title: Yves bootstrapping

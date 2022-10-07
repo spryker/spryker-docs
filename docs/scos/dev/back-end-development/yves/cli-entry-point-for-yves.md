@@ -15,8 +15,8 @@ redirect_from:
 related:
   - title: Yves overview
     link: docs/scos/dev/back-end-development/yves/yves.html
-  - title: Adding translations for Yves
-    link: docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
+  - title: Add translations for Yves
+    link: docs/scos/dev/back-end-development/yves/add-translations-for-yves.html
   - title: Controllers and actions
     link: docs/scos/dev/back-end-development/yves/controllers-and-actions.html
   - title: Implementing URL routing in Yves

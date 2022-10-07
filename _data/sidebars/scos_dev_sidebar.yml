@@ -3349,8 +3349,8 @@ entries:
         url: /docs/scos/dev/back-end-development/yves/controllers-and-actions.html
       - title: CLI entry point for Yves
         url: /docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
-      - title: Adding translations for Yves
-        url: /docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
+      - title: Add translations for Yves
+        url: /docs/scos/dev/back-end-development/yves/add-translations-for-yves.html
       - title: URL
         url: /docs/scos/dev/back-end-development/yves/url.html
       - title: Implementing URL routing in Yves

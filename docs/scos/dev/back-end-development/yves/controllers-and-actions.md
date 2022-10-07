@@ -25,8 +25,8 @@ redirect_from:
 related:
   - title: Yves overview
     link: docs/scos/dev/back-end-development/yves/yves.html
-  - title: Adding translations for Yves
-    link: docs/scos/dev/back-end-development/yves/adding-translations-for-yves.html
+  - title: Add translations for Yves
+    link: docs/scos/dev/back-end-development/yves/add-translations-for-yves.html
   - title: CLI entry point for Yves
     link: docs/scos/dev/back-end-development/yves/cli-entry-point-for-yves.html
   - title: Implementing URL routing in Yves
@@ -41,7 +41,7 @@ related:
 
 _Controllers_ are placed inside the `Controllers` folder in Yves; they provide an entry point to the system for requests submitted by the D users.
 
-The methods inside of a controller are called actions. Usually, an action reads the incoming request data, maybe validates it with a form, delegates it to a client, and writes the response.
+Methods inside a controller are called *actions*. Usually, an action reads the incoming request data, maybe validates it with a form, delegates it to a client, and writes the response.
 
 The following controller provides two actions: `indexAction()` and `testAction()`.
 

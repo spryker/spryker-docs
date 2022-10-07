@@ -3368,8 +3368,8 @@ entries:
         - title: Facade
           url: /docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
           nested:
-          - title: Using a facade
-            url: /docs/scos/dev/back-end-development/zed/business-layer/facade/using-a-facade.html
+          - title: Facade use cases
+            url: /docs/scos/dev/back-end-development/zed/business-layer/facade/facade-use-cases.html
           - title: Design by Contract (DBC) - Facade
             url: /docs/scos/dev/back-end-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
           - title: A facade implementation

@@ -22,10 +22,10 @@ redirect_from:
   - /v2/docs/en/implementing-facade
   - /docs/scos/dev/back-end-development/zed/business-layer/facade/implementing-a-facade.html
 related:
-  - title: About facade
+  - title: Facade
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
-  - title: Using a facade
-    link: docs/scos/dev/back-end-development/zed/business-layer/facade/using-a-facade.html
+  - title: Facade use cases
+    link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade-use-cases.html
   - title: Design by Contract (DBC) - Facade
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
 ---

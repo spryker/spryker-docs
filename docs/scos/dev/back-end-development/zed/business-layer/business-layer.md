@@ -23,7 +23,7 @@ redirect_from:
   - /v1/docs/business-layer
   - /v1/docs/en/business-layer
 related:
-  - title: About facade
+  - title: Facade
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
   - title: Business models
     link: docs/scos/dev/back-end-development/zed/business-layer/business-models.html
@@ -35,11 +35,11 @@ related:
     link: docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
 ---
 
-Zed's business layer is responsible for the entire business logic.
+Zed's `Business` layer is responsible for the entire business logic.
 
 Most classes exist in this layer and this is the primary area for development.
 
-The business layer is used by the communication layer and by other bundles. Here you know how to save data objects, but you do not care about data persistency.
+The `Business` layer is used by the `Communication` layer and by other bundles. Here you know how to save data objects, but you do not care about data persistence.
 
 ## Business layer internal structure
 
@@ -48,7 +48,7 @@ The business layer is used by the communication layer and by other bundles. Here
 | Facade          | The facade acts like a public API for the module     |
 | Factory         | The factory creates and returns all internal classes |
 | Business models | These classes contain the logic of the module        |
-| Exceptions      | Exceptions which are thrown by this module           |
+| Exceptions      | Exceptions thrown by this module           |
 
 ------
 

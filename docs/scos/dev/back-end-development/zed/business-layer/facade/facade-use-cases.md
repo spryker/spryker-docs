@@ -1,6 +1,6 @@
 ---
-title: Using a facade
-description: This document describes the cases when the facade is used.
+title: Facade use cases
+description: This document describes facade use cases.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/using-facade
@@ -22,8 +22,9 @@ redirect_from:
   - /v2/docs/en/using-facade
   - /v1/docs/zed-facade-how-to-use
   - /v1/docs/en/zed-facade-how-to-use
+  - /docs/scos/dev/back-end-development/zed/business-layer/facade/using-a-facade.html
 related:
-  - title: About facade
+  - title: Facade
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
   - title: A facade implementation
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/a-facade-implementation.html
@@ -31,12 +32,14 @@ related:
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
 ---
 
-## The facade usage from a controller or a plugin
+This document describes the use cases of a facade.
 
-In Zed's communication layer the facade of the same module is available with the `getFacade()` method from all controllers and plugins.
+## The facade usage from a controller or plugin
+
+In Zed's `Communication` layer, the facade of the same module is available with the `getFacade()` method from all controllers and plugins.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Zed/Business+Layer/How+to+Use+a+Facade/how-to-use-a-facade-from-the-same-bundle.png) 
 
-A typical usage from a controller looks like this. The controller retrieves data from a submitted form and calls a method of a facade to save it.
+Typical usage from a controller is as follows. The controller retrieves data from a submitted form and calls a method of a facade to save it:
 
 ```php
 <?php
@@ -56,6 +59,6 @@ class FormController extends AbstractController
     } 
 ```
 
-## Using a facade from another module
+## The facade usage from another module
 
 To connect modules you can provide the facade to another module. To do so, you need to use the dependency provider mechanism.

@@ -25,12 +25,12 @@ redirect_from:
   - /v1/docs/zed-facade-how-to-implement
   - /v1/docs/en/zed-facade-how-to-implement
 related:
-  - title: About facade
+  - title: Facade
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
   - title: A facade implementation
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/a-facade-implementation.html
-  - title: Using a facade
-    link: docs/scos/dev/back-end-development/zed/business-layer/facade/using-a-facade.html
+  - title: Facade use cases
+    link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade-use-cases.html
 ---
 
 Every method in a facade contains an implicit promise. So a client expects that the behavior does not change in a minor update. Basically, there are two types of possible changes:

@@ -27,8 +27,8 @@ redirect_from:
 related:
   - title: About facade
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
-  - title: Implementing a facade
-    link: docs/scos/dev/back-end-development/zed/business-layer/facade/implementing-a-facade.html
+  - title: A facade implementation
+    link: docs/scos/dev/back-end-development/zed/business-layer/facade/a-facade-implementation.html
   - title: Using a facade
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/using-a-facade.html
 ---

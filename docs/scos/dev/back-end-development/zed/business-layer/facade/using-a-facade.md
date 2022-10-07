@@ -25,13 +25,13 @@ redirect_from:
 related:
   - title: About facade
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/facade.html
-  - title: Implementing a facade
-    link: docs/scos/dev/back-end-development/zed/business-layer/facade/implementing-a-facade.html
+  - title: A facade implementation
+    link: docs/scos/dev/back-end-development/zed/business-layer/facade/a-facade-implementation.html
   - title: Design by Contract (DBC) - Facade
     link: docs/scos/dev/back-end-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
 ---
 
-## Using the facade from a controller or a plugin
+## The facade usage from a controller or a plugin
 
 In Zed's communication layer the facade of the same module is available with the `getFacade()` method from all controllers and plugins.
 ![image](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Zed/Business+Layer/How+to+Use+a+Facade/how-to-use-a-facade-from-the-same-bundle.png) 

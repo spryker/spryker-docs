@@ -3372,8 +3372,8 @@ entries:
             url: /docs/scos/dev/back-end-development/zed/business-layer/facade/using-a-facade.html
           - title: Design by Contract (DBC) - Facade
             url: /docs/scos/dev/back-end-development/zed/business-layer/facade/design-by-contract-dbc-facade.html
-          - title: Implementing a facade
-            url: /docs/scos/dev/back-end-development/zed/business-layer/facade/implementing-a-facade.html
+          - title: A facade implementation
+            url: /docs/scos/dev/back-end-development/zed/business-layer/facade/a-facade-implementation.html
         - title: Business models
           url: /docs/scos/dev/back-end-development/zed/business-layer/business-models.html
         - title: Custom exceptions

@@ -1,5 +1,5 @@
 ---
-title: About facade
+title: Facade
 description: The facade acts as an internal API. The main responsibility of the facade is to hide the internal implementation.
 last_updated: Jun 16, 2021
 template: howto-guide-template

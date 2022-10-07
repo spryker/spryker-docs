@@ -33,7 +33,6 @@ This document describes how to show a message in the Zed GUI.
 
 In the controller, you can use these shortcut methods to show a user message in the GUI. The messages are translated later when they are rendered.
 
-
 ```php
 <?php
 class IndexController extends AbstractController

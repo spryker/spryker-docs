@@ -105,7 +105,7 @@ This shows "My name is Fabian".
 
 ## Translation with AJAX requests
 
-To use an AJAX request, you need to send translated content directly from the controller. In Yves you can locate the translator and use it directly:
+To use an AJAX request, you need to send translated content directly from the controller. In Yves, you can locate the translator and use it directly:
 
 ```php
 <?php

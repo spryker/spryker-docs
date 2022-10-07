@@ -41,7 +41,7 @@ related:
     link: docs/scos/dev/back-end-development/yves/yves-routes.html
 ---
 
-Textual translations are handled by the Glossary module. You can use the `GlossaryFacade` in Zed to add entries to Glossary (or you can use the Zed UI).
+Textual translations are handled by the `Glossary` module. You can use the `GlossaryFacade` in Zed to add entries to `Glossary` (or you can use the Zed UI).
 
 ```php
 <?php
@@ -53,7 +53,7 @@ class GlossaryFacade extends AbstractFacade
 }
 ```
 
-An entry in the glossary has a key and translations per locale, like this:
+Tn the glossary, an entry has a key and translations per locale, like this:
 
 ```php
 <?php
@@ -69,7 +69,7 @@ Before it can be used in Yves, this data must be exported to the KV storage. You
 
 ## Usage in Twig templates
 
-The translation function is provided by [Symfony translation component](http://symfony.com/doc/current/book/translation.html).
+The translation function is provided by the [Symfony translation component](http://symfony.com/doc/current/book/translation.html).
 
 ### Simple translation
 
@@ -89,7 +89,7 @@ Sometimes you need to list all keys which are used in a template. Currently, the
 
 When you have a dynamic part in the translation, you can use placeholders.
 
-**Entry in glossary**:
+**Entry in the glossary**:
 
 | KEY       | VALUE               |
 | --------- | ------------------- |

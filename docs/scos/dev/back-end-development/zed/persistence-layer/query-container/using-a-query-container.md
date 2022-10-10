@@ -25,7 +25,7 @@ redirect_from:
 related: 
   - title: About the query container
     link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
-  - title: Implementing a query container
+  - title: Implement a query container
     link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html
 ---
 

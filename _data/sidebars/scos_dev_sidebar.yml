@@ -3381,8 +3381,8 @@ entries:
       - title: Communication layer
         url: /docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html
         nested:
-        - title: Add indexes to foreign key columns - index generator
-          url: /docs/scos/dev/back-end-development/zed/communication-layer/add-indexes-to-foreign-key-columns-index-generator.html
+        - title: Addi indexes to foreign key columns - index generator
+          url: /docs/scos/dev/back-end-development/zed/communication-layer/adding-indexes-to-foreign-key-columns-index-generator.html
       - title: Persistence layer
         url: /docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
         nested:
@@ -3403,8 +3403,8 @@ entries:
           nested:
           - title: Using a query container
             url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html
-          - title: Implementing a query container
-            url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html
+          - title: Implement a query container
+            url: /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implement-a-query-container.html
       - title: Adding navigation in the Back Office
         url: /docs/scos/dev/back-end-development/zed/adding-navigation-in-the-back-office.html
     - title: Cronjobs

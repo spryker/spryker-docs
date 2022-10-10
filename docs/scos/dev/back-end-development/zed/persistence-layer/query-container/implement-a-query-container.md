@@ -1,5 +1,5 @@
 ---
-title: Implementing a query container
+title: Implement a query container
 description: To create a new Query Container you can copy and paste the snippet from this document and replace Mymodule with your module name.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/implementing-a-query-container
   - /v1/docs/implementing-a-query-container
   - /v1/docs/en/implementing-a-query-container
+  - /docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html
 related: 
   - title: About the query container
     link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/query-container.html
@@ -31,12 +32,14 @@ related:
 
 {% info_block infoBox "When to use query containers" %}
 
-Don't use query containers to cross module boundaries, as this increases modules coupling. However, you can use them behind [Repository](/docs/scos/dev/back-end-development/zed/persistence-layer/repository.html) and [Entity Manager](/docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html) as query aggregations.
-Previously, query containers were used to cross module borders (via dependency providers), which led to higher module coupling and leaking of persistence layer from one domain object to another, and therefore, to higher maintenance efforts and lower code reusability. This approach has been deprecated now, so we don't recommend using query containers like this in your project development.
+Don't use query containers to cross module boundaries, as this increases module coupling. However, you can use them behind [Repository](/docs/scos/dev/back-end-development/zed/persistence-layer/repository.html) and [Entity Manager](/docs/scos/dev/back-end-development/zed/persistence-layer/entity-manager.html) as query aggregations.
+Previously, query containers were used to cross-module borders (using dependency providers), which led to higher module coupling and leaking of the `Persistence` layer from one domain object to another, and therefore, to higher maintenance efforts and lower code reusability. This approach has been deprecated now, so we don't recommend using query containers like this in your project development.
 
 {% endinfo_block %}
 
-To create a new Query Container you can copy and paste the following snippet and replace `MyBundle` with your module name.
+## Create a new query container
+
+To create a new query container, copy and paste the following snippet and replace `MyBundle` with your module name:
 
 ```php
 <?php
@@ -54,7 +57,7 @@ class MyBundleQueryContainer extends AbstractQueryContainer implements MyBundleQ
 
 ## Conventions for query containers
 
-There are some conventions which should be followed here:
+These are conventions to follow:
 
 * All methods have the prefix `query*()`.
 * All public methods are exposed in the related interface—for example, `MyBundleQueryContainerInterface`.

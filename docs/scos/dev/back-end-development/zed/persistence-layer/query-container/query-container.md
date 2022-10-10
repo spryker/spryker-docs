@@ -23,7 +23,7 @@ redirect_from:
   - /v1/docs/query-container
   - /v1/docs/en/query-container
 related: 
-  - title: Implementing a query container
+  - title: Implement a query container
     link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html
   - title: Using a query container
     link: docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html
@@ -75,4 +75,4 @@ See the [Spryk](/docs/sdk/dev/spryks/spryks.html) documentation for details.
 ## Next steps
 
 * See [Using a Query Container](/docs/scos/dev/back-end-development/zed/persistence-layer/query-container/using-a-query-container.html) for information on how to use the Query Containers.
-* If you need to implement your own Query Container, see [Implementing a Query Container](/docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implementing-a-query-container.html).
+* If you need to implement your own Query Container, see [Implement a query container](/docs/scos/dev/back-end-development/zed/persistence-layer/query-container/implement-a-query-container.html).

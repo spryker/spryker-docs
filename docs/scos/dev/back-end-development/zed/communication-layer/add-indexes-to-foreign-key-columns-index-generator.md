@@ -1,5 +1,5 @@
 ---
-title: Adding indexes to foreign key columns - index generator
+title: Add indexes to foreign key columns - index generator
 description: The index generator module adds the missing indexes for foreign key columns in Postgres.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,6 +22,7 @@ redirect_from:
   - /v2/docs/en/postgres-index-generator
   - /v1/docs/postgres-index-generator
   - /v1/docs/en/postgres-index-generator
+  - /docs/scos/dev/back-end-development/zed/communication-layer/adding-indexes-to-foreign-key-columns-index-generator.html
 related:
   - title: About Communication layer
     link: docs/scos/dev/back-end-development/zed/communication-layer/communication-layer.html

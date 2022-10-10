@@ -29,7 +29,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-navigationgui.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-navigationgui.html
   - /docs/scos/dev/module-migration-guides/2021080.0/migration-guide-navigationgui.html
-  - /docs/scos/dev/module-migration-guides/migration-guide-navigationgui.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-navigationgui-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-navigationgui-module.md -->

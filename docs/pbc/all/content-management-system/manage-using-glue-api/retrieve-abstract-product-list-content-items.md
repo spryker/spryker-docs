@@ -1,5 +1,5 @@
 ---
-title: Retrieving abstract product list content items
+title: Retrieve abstract product list content items
 description: Abstract Product List API provides resources to retrieve data on abstract products included in the Abstract Product List content item for all or specific locale
 last_updated: Jun 22, 2021
 template: glue-api-storefront-guide-template
@@ -23,7 +23,7 @@ This endpoint allows retrieving information about abstract product list content 
 
 ## Installation
 
-For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-content-items-feature-integration.html).
+For details on the modules that provide the API functionality and how to install them, see [Content Items API](/docs/pbc/all/content-management-system/install-and-upgrade/install-glue-api/install-the-content-items-glue-api.html).
 
 <a name="product-list"></a>
 

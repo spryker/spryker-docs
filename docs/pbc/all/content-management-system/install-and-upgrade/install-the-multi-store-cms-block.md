@@ -1,5 +1,5 @@
 ---
-title: Multi-store CMS block feature integration
+title: Install Multi-store CMS block
 description: This integration guide provides step-by-step instruction on integrating Multi-store CMS Block Feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202204.0/multi-store-cms-block-feature-integration.html
 related:
   - title: Migration Guide - CMS Block
-    link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
+    link: docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblock.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-multi-store-cms-block-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-multi-store-cms-block-feature.md -->

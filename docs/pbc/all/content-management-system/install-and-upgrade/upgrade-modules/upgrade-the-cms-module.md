@@ -30,19 +30,18 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cms.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cms.html
   - /module_migration_guides/mg-cms.htm
-  - /docs/scos/dev/module-migration-guides/migration-guide-cms.html
 related:
   - title: CMS
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-feature-overview.html
   - title: Upgrade the CmsBlock
-    link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
+    link: docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblock.html
   - title: Upgrade the CmsBlockCollector
-    link: docs/scos/dev/module-migration-guides/migration-guide-cms-block-collector.html
+    link: docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-migration-guide-cms-block-collector.html
   - title: Upgrade the CMS Block GUI
-    link: docs/scos/dev/module-migration-guides/migration-guide-cmsblockgui.html
+    link: docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblockgui.html
   - title: Upgrade the CMS Block Category Connector
-    link: docs/scos/dev/module-migration-guides/migration-guide-cms-block-category-connector.html
+    link: docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cms-module-block-category-connector.html
   - title: Upgrade the CMS Collector
-    link: docs/scos/dev/module-migration-guides/migration-guide-cmscollector.html
+    link: docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cms-modulecollector.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-cms-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cms-module.md -->

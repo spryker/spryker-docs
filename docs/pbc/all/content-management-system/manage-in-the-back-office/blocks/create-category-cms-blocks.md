@@ -12,7 +12,7 @@ This topic describes how to create category CMS blocks in the Back Office.
 
 ## Prerequisites
 
-* [Integrate category CMS blocks](/docs/scos/dev/technical-enhancement-integration-guides/integrate-category-cms-blocks.html).
+* [Install category CMS blocks](/docs/scos/dev/technical-enhancement-integration-guides/integrate-category-cms-blocks.html).
 
 * Create the categories whose pages you want to show the block on. For instructions, see [Create categories](/docs/scos/user/back-office-user-guides/{{page.version}}/catalog/category/creating-categories.html).
 

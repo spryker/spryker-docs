@@ -1,5 +1,5 @@
 ---
-title: Glue API - CMS feature integration
+title: Install the CMS Glue API
 last_updated: Jul 14, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/glue-api-cms-feature-integration-guide
@@ -13,12 +13,12 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/202005.0/glue-api/glue-api-cms-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-cms-feature-integration.html  
 related:
-  - title: CMS feature integration
+  - title: Install the CMS feature
     link: docs/scos/dev/feature-integration-guides/page.version/cms-feature-integration.html
   - title: CMS feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html
-  - title: Retrieving CMS pages
-    link: docs/scos/dev/glue-api-guides/page.version/retrieving-cms-pages.html
+  - title: Retrieve CMS pages
+    link: docs/pbc/all/content-management-system/manage-using-glue-api/retrieve-cms-pages.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-glue-api/install-the-cms-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-cms-glue-api.md -->

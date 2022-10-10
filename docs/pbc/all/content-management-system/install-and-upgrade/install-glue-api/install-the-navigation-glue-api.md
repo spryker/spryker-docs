@@ -1,5 +1,5 @@
 ---
-title: Glue API - Navigation feature integration
+title: Install the Navigation Glue API
 description: This guide will walk you through the process of installing and configuring the Navigation API feature in Spryker OS.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -13,12 +13,12 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-navigation-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-navigation-feature-integration.html
 related:
-  - title: Navigation feature integration
+  - title: Install the Navigation feature
     link: docs/scos/dev/feature-integration-guides/page.version/navigation-feature-integration.html
   - title: Navigation feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/navigation-feature-walkthrough/navigation-feature-walkthrough.html
-  - title: Retrieving navigation trees
-    link: docs/scos/dev/glue-api-guides/page.version/retrieving-navigation-trees.html
+  - title: Retrieve navigation trees
+    link: docs/pbc/all/content-management-system/manage-using-glue-api/retrieve-navigation-trees.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-glue-api/install-the-navigation-glue-api.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-glue-api/install-the-navigation-glue-api.md -->

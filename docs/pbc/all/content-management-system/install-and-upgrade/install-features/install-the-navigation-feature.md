@@ -1,5 +1,5 @@
 ---
-title: Navigation feature integration
+title: Install the Navigation feature
 description: This guide provides step-by-step instructions on integrating Navigation feature into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -12,8 +12,8 @@ redirect_from:
   - /docs/en/navigation-feature-integration
   - /docs/scos/dev/feature-integration-guides/202204.0/navigation-feature-integration.html
 related:
-    - title: Glue API - Navigation feature integration
-      link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-navigation-feature-integration.html
+    - title: Install the Navigation Glue API
+      link: docs/pbc/all/content-management-system/install-and-upgrade/install-glue-api/install-the-navigation-glue-api.html
     - title: Navigation feature walkthrough
       link: docs/scos/dev/feature-walkthroughs/page.version/navigation-feature-walkthrough/navigation-feature-walkthrough.html
 ---

@@ -1,6 +1,6 @@
 ---
-title: Integrate product CMS blocks
-description: Learn how to integrate product CMS blocks into a Spryker project.
+title: Install product CMS blocks
+description: Learn how to install product CMS blocks into a Spryker project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/enabling-the-product-cms-block
@@ -21,9 +21,9 @@ related:
   - title: Managing CMS Blocks
     link: docs/scos/user/back-office-user-guides/page.version/content/blocks/managing-cms-blocks.html
   - title: Migration Guide - CMS Block
-    link: docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html
+    link: docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblock.html
   - title: Migration Guide - CMS Block GUI
-    link: docs/scos/dev/module-migration-guides/migration-guide-cmsblockgui.html
+    link: docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblockgui.html
 ---
 
 Product blocks are CMS blocks that are embedded in the product template and rendered on product details pages of selected products.

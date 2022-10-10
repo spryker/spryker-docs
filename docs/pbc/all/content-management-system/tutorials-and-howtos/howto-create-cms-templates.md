@@ -119,7 +119,7 @@ A content manager can apply this template when [creating a CMS block](/docs/scos
 
 ## Content item widget template
 
-[Content item widget](/docs/scos/user/features/{{site.version}}/content-items-feature-overview.html) template is a Twig file that defines the layout of the content item it renders on Storefront.
+[Content item widget](/docs/pbc/all/content-management-system/navigation-feature-overview.html) template is a Twig file that defines the layout of the content item it renders on Storefront.
 
 By default, two content item widget templates are shipped per each content item:
 * Banner widget

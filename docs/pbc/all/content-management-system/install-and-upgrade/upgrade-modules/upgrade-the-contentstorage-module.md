@@ -22,7 +22,6 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-contentstorage.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-contentstorage.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-contentstorage.html
-  - /docs/scos/dev/module-migration-guides/migration-guide-contentstorage.html
 ---
 
 {% include pbc/all/upgrade-modules/upgrade-the-contentstorage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-contentstorage-module.md -->

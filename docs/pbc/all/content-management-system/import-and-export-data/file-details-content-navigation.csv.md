@@ -15,7 +15,7 @@ redirect_from:
   - /docs/scos/dev/data-import/202204.0/data-import-categories/content-management/file-details-content-navigation.csv.html
 ---
 
-This document describes the `content_navigation.csv` file to configure [Content Navigation](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item) information in your Spryker Demo Shop.
+This document describes the `content_navigation.csv` file to configure [Content Navigation](/docs/pbc/all/content-management-system/navigation-feature-overview.html#content-item) information in your Spryker Demo Shop.
 
 To import the file, run:
 

@@ -20,7 +20,7 @@ redirect_from:
 Templates and slots is a complex functionality that works in conjunction with other functionalities. To use it effectively, make sure you get familiar with the functionalities in the order they are presented:
 * [CMS Page](/docs/pbc/all/content-management-system/cms-feature-overview/cms-pages-overview.html)
 * [CMS Block](/docs/pbc/all/content-management-system/cms-feature-overview/cms-blocks-overview.html)
-* [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html)
+* [Content Items](/docs/pbc/all/content-management-system/navigation-feature-overview.html)
 
 {% endinfo_block %}
 
@@ -117,7 +117,7 @@ CMS Block is a separate entity with a dedicated section in the Back Office. To l
 
 ## Content item
 
-[Content Item](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) is the smallest content unit in Spryker that is used in the WYSIWYG editor when creating content for CMS blocks. When a CMS block is inserted into a slot, all the content items of the CMS block are displayed on the Storefront page space of the slot.
+[Content Item](/docs/pbc/all/content-management-system/navigation-feature-overview.html) is the smallest content unit in Spryker that is used in the WYSIWYG editor when creating content for CMS blocks. When a CMS block is inserted into a slot, all the content items of the CMS block are displayed on the Storefront page space of the slot.
 
 <details open><summary markdown='span'>Content item representation—Storefront</summary>
 
@@ -126,7 +126,7 @@ CMS Block is a separate entity with a dedicated section in the Back Office. To l
 </details>
 
 From the perspective of templates and slots, a content item always comes as a part of the CMS block. That's why there is no place to manage it in the **Slots** section.
-To learn what a content manager can do with content items in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section, see [Content Items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html).
+To learn what a content manager can do with content items in the Back Office&nbsp;<span aria-label="and then">></span> **Content Management&nbsp;<span aria-label="and then">></span> Content Items** section, see [Content Items](/docs/pbc/all/content-management-system/navigation-feature-overview.html).
 
 ### <a name="applying-templates-with-slots"></a>Applying templates with slots
 
@@ -181,13 +181,13 @@ The slot list contains the following information:
 | status | Defines whether the slot is active or not where "0" stands for "inactive" and "1" stands for "active". If a slot is inactive, it is not rendered in the Storefront by the slot widget. | 1 |
 
 ## Content providers
-A content provider is a source from which Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront. With templates and slots, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (for example, [CoreMedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html), [E-spirit](/docs/scos/user/technology-partners/{{page.version}}/content-management/e-spirit.html), [Styla](/docs/scos/user/technology-partners/{{page.version}}/content-management/styla.html), [Magnolia](/docs/scos/user/technology-partners/{{page.version}}/content-management/magnolia.html)).
+A content provider is a source from which Slot Widget fetches content to embed into slots and, subsequently, render it in the Storefront. With templates and slots, you can use slots to embed the content created in your Spryker project or CMS editors of technology partners (for example, [CoreMedia](/docs/pbc/all/content-management-system/third-party-integrations/coremedia.html), [E-spirit](/docs/pbc/all/content-management-system/third-party-integrations/e-spirit.html), [Styla](/docs/pbc/all/content-management-system/third-party-integrations/styla.html), [Magnolia](/docs/pbc/all/content-management-system/third-party-integrations/magnolia.html)).
 
 With templates and slots, the following applies:
 
 * Spryker CMS Blocks is the content provider for all the slots.
 * Slots embed content from [CMS Blocks](/docs/pbc/all/content-management-system/cms-feature-overview/cms-blocks-overview.html).
-* Content for CMS blocks is created in the [WYSIWYG Editor](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html#content-item-widget).
+* Content for CMS blocks is created in the [WYSIWYG Editor](/docs/pbc/all/content-management-system/navigation-feature-overview.html#content-item-widget).
 * Templates with slots are managed in the Back Office&nbsp;<span aria-label="and then">></span> **Slots** section.
 
 The following schema shows how content is managed with the help of templates with slots:
@@ -224,7 +224,7 @@ A developer can [import visibility conditions](/docs/scos/dev/data-import/{{page
 ## Slot widget
 Slot widget is used to fetch content from a content provider and render it on specified pages. Content is fetched in the form of HTML code ready to be rendered in the Storefront. With the help of slot widgets, you can fetch and render content from the following content providers:
 
-* [CoreMedia](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html)
+* [CoreMedia](/docs/pbc/all/content-management-system/third-party-integrations/coremedia.html)
 * [Spryker CMS Blocks](#spryker-cms-blocks)
 
 
@@ -297,7 +297,7 @@ This section describes how Slot Widget works with the Spryker CMS Blocks content
 {% info_block infoBox %}
 
 
-* By default, names are used as unique identifiers of CMS blocks while Slot Widget requires keys. To enable Slot Widget to work with CMS blocks, [upgrade](/docs/scos/dev/module-migration-guides/migration-guide-cmsblock.html#upgrading-from-version-2-to-version-3) the `CMSBlock` module in your project for CMS Blocks to have keys.
+* By default, names are used as unique identifiers of CMS blocks while Slot Widget requires keys. To enable Slot Widget to work with CMS blocks, [upgrade](/docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cms-moduleblock.html#upgrading-from-version-2-to-version-3) the `CMSBlock` module in your project for CMS Blocks to have keys.
 
 
 {% endinfo_block %}
@@ -379,7 +379,7 @@ The functionality has the following functional constraints which are going to be
 
 |BACK OFFICE USER GUIDES| THIRD-PARTY INTEGRATIONS |
 | - | - |
-| [Add content to the Storefront using templates and slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/best-practices-adding-content-to-the-storefront-pages-using-templates-and-slots.html) |  [Learn about the CoreMedia technology partner integration](/docs/scos/user/technology-partners/{{page.version}}/content-management/coremedia.html)  |
+| [Add content to the Storefront using templates and slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/best-practices-adding-content-to-the-storefront-pages-using-templates-and-slots.html) |  [Learn about the CoreMedia technology partner integration](/docs/pbc/all/content-management-system/third-party-integrations/coremedia.html)  |
 | [Manage slots](/docs/scos/user/back-office-user-guides/{{page.version}}/content/slots/managing-slots.html)   | |
 
 

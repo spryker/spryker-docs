@@ -1,5 +1,5 @@
 ---
-title: Retrieving navigation trees
+title: Retrieve navigation trees
 description: The topic demonstrates how to retrieve navigation trees with the help of API endpoints.
 last_updated: Jun 16, 2021
 template: glue-api-storefront-guide-template
@@ -25,7 +25,7 @@ A navigation element with its child nodes forms a navigation tree. You can only 
 
 ## Installation
 
-For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-navigation-feature-integration.html).
+For detailed information on the modules that provide the API functionality and related installation instructions, see [Navigation](/docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-navigation-feature.html).
 
 ## Retrieving a navigation tree
 

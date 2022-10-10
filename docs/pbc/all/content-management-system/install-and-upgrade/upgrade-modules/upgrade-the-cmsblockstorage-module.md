@@ -20,6 +20,5 @@ redirect_from:
   - /docs/scos/dev/module-migration-guides/202005.0/migration-guide-cmsblockstorage.html
   - /docs/scos/dev/module-migration-guides/202009.0/migration-guide-cmsblockstorage.html
   - /docs/scos/dev/module-migration-guides/202108.0/migration-guide-cmsblockstorage.html
-  - /docs/scos/dev/module-migration-guides/migration-guide-cmsblockstorage.html
 ---
 {% include pbc/all/upgrade-modules/upgrade-the-cmsblockstorage-module.md %} <!-- To edit, see /_includes/pbc/all/upgrade-modules/upgrade-the-cmsblockstorage-module.md -->

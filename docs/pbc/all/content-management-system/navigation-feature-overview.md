@@ -82,7 +82,7 @@ To learn how a product catalog manager can define a navigation node validity per
 
 ## Navigation as content item
 
-To publish a navigation element on the Storefront, you can add it to [CMS Blocks](/docs/pbc/all/content-management-system/cms-feature-overview/cms-blocks-overview.html) and [CMS Pages](/docs/pbc/all/content-management-system/cms-feature-overview/cms-pages-overview.html) as a [content item](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html).
+To publish a navigation element on the Storefront, you can add it to [CMS Blocks](/docs/pbc/all/content-management-system/cms-feature-overview/cms-blocks-overview.html) and [CMS Pages](/docs/pbc/all/content-management-system/cms-feature-overview/cms-pages-overview.html) as a [content item](/docs/pbc/all/content-management-system/navigation-feature-overview.html).
 The schema shows how the Navigation feature affects content management in a Spryker shop:
 
 ![navigation-as-content-item-schema](https://confluence-connect.gliffy.net/embed/image/a086fe4e-1d09-49ae-a181-ebd8b0f8c051.png?utm_medium=live&utm_source=custom)

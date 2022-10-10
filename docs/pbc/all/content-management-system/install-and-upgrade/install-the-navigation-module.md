@@ -1,5 +1,5 @@
 ---
-title: Navigation module integration
+title: Install the Navigation module
 description: The guide walks you through the process of installing the Navigation Module into your project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template

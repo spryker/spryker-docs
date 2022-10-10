@@ -1,5 +1,5 @@
 ---
-title: CMS + Category Management feature integration
+title: Install the CMS + Category Management feature
 last_updated: Jun 23, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/cms-category-management-feature-integration

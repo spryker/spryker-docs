@@ -2390,20 +2390,6 @@ entries:
       url: /docs/scos/dev/module-migration-guides/migration-guide-configurablebundlestorage.html
     - title: Migration Guide - Console
       url: /docs/scos/dev/module-migration-guides/migration-guide-console.html
-    - title: Migration Guide - Content
-      url: /docs/scos/dev/module-migration-guides/migration-guide-content.html
-    - title: Migration Guide - ContentBanner
-      url: /docs/scos/dev/module-migration-guides/migration-guide-contentbanner.html
-    - title: Migration Guide - ContentBannerGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-contentbannergui.html
-    - title: Migration Guide - ContentFileGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-contentfilegui.html
-    - title: Migration Guide - ContentFileWidget
-      url: /docs/scos/dev/module-migration-guides/migration-guide-contentfilewidget.html
-    - title: Migration Guide - ContentGui
-      url: /docs/scos/dev/module-migration-guides/migration-guide-contentgui.html
-    - title: Migration Guide - ContentStorage
-      url: /docs/scos/dev/module-migration-guides/migration-guide-contentstorage.html
     - title: Migration Guide - Customer
       url: /docs/scos/dev/module-migration-guides/migration-guide-customer.html
     - title: Migration Guide - CustomerPage

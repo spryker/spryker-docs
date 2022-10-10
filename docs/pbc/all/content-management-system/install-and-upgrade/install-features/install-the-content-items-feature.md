@@ -1,5 +1,5 @@
 ---
-title: Content Items feature integration
+title: Install the Content Items feature
 description: The guide walks you through the process of installing the Content Items feature in the project.
 last_updated: Jul 14, 2021
 template: feature-integration-guide-template
@@ -13,7 +13,7 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/content-items-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/content-items-feature-integration.html
 related:
-  - title: Glue API - Content Items feature integration
+  - title: Install the Content Items Glue API
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-content-items-feature-integration.html
   - title: Content Items feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/content-items-feature-walkthrough/content-items-feature-walkthrough.html

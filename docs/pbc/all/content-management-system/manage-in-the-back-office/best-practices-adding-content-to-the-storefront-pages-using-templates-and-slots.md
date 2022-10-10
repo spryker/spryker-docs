@@ -37,7 +37,7 @@ Follow the steps below to add the content.
 
 ## Create content items
 
-[Content item](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) is the smallest content unit in Spryker. By creating a content item, you preserve a small content piece that can be used later in multiple pages.
+[Content item](/docs/pbc/all/content-management-system/navigation-feature-overview.html) is the smallest content unit in Spryker. By creating a content item, you preserve a small content piece that can be used later in multiple pages.
 
 Create the following content items:
 

@@ -1,5 +1,5 @@
 ---
-title: Retrieving CMS pages
+title: Retrieve CMS pages
 description: Retrieve details on CMS pages via the API.
 last_updated: Jun 18, 2021
 template: glue-api-storefront-guide-template
@@ -16,7 +16,7 @@ redirect_from:
 related:
   - title: CMS Pages overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
-  - title: Glue API - CMS feature integration
+  - title: Install the CMS Glue API
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-cms-feature-integration.html
 ---
 
@@ -26,8 +26,8 @@ related:
 
 For detailed information on the modules that provide the API functionality and related installation instructions, see:
 
-* [Content Items feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/content-items-feature-integration.html)
-* [Glue API: CMS feature integration](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-cms-feature-integration.html)
+* [Install the Content Items feature](/docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-content-items-feature.html)
+* [Glue API: CMS feature integration](/docs/pbc/all/content-management-system/install-and-upgrade/install-glue-api/install-the-cms-glue-api.html)
 
 <a name="all-cms-pages"></a>
 

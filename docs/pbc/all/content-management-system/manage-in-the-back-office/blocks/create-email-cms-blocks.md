@@ -38,7 +38,7 @@ Review the [reference information](#reference-information-create-an-email-cms-bl
 
 {% info_block warningBox "Content items in email blocks" %}
 
-[Content items](/docs/scos/user/features/{{page.version}}/content-items-feature-overview.html) are not rendered in emails.
+[Content items](/docs/pbc/all/content-management-system/navigation-feature-overview.html) are not rendered in emails.
 
 {% endinfo_block %}
 

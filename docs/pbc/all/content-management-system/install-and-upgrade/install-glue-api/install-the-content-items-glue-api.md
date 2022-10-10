@@ -1,5 +1,5 @@
 ---
-title: Glue API - Content Items feature integration
+title: Install the Content Items Glue API
 description: The guide walks you through the process of installing and configuring the Content Items feature in the project.
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
@@ -13,13 +13,13 @@ redirect_from:
   - /docs/scos/dev/feature-integration-guides/201811.0/glue-api/glue-api-content-items-feature-integration.html
   - /docs/scos/dev/feature-integration-guides/202204.0/glue-api/glue-api-content-items-feature-integration.html  
 related:
-  - title: Content Items feature integration
+  - title: Install the Content Items feature
     link: docs/scos/dev/feature-integration-guides/page.version/content-items-feature-integration.html
   - title: Content Items feature walkthrough
     link: docs/scos/dev/feature-walkthroughs/page.version/content-items-feature-walkthrough/content-items-feature-walkthrough.html
-  - title: Retrieving abstract product list content items
+  - title: Retrieve abstract product list content items
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-content-items/retrieving-abstract-product-list-content-items.html
-  - title: Retrieving banner content items
+  - title: Retrieve banner content items
     link: docs/scos/dev/glue-api-guides/page.version/retrieving-content-items/retrieving-banner-content-items.html
 ---
 

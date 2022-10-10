@@ -76,4 +76,4 @@ Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\ProductCo
 Spryker\Zed\MerchantProductOfferStorage\Communication\Plugin\Publisher\Merchant\MerchantProductOfferWritePublisherPlugin
 ```
 
-*Estimated migration time: 30 min*
+*Estimated migration time: 30 minutes*

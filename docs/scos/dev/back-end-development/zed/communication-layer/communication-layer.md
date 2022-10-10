@@ -31,7 +31,7 @@ related:
     link: docs/scos/dev/back-end-development/zed/persistence-layer/persistence-layer.html
 ---
 
-Zed's communication layer is the entry point to the system. Here are executed all of the external requests from users, the Yves-application and all command-line calls. The purpose of this layer is to retrieve the data, delegate to the business layer and to hand over it to the presentation layer.
+Zed's `Communication` layer is the entry point to the system. Here are executed all of the external requests from users, the Yves application, and all command-line calls. The purpose of this layer is to retrieve the data, delegate it to the `Business` layer, and hand it over to the ` ` layer.
 
 The methods inside of a controller are called actions. Usually an action reads the incoming request-data, maybe validates it with a form, delegates it to a facade from the business layer, and writes the response.
 

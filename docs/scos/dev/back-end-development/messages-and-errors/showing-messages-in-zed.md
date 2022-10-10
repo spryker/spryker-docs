@@ -51,6 +51,30 @@ class IndexController extends AbstractController
 ## Show message from Zed's Business Layer
 To show a message from a model, declare this dependency in the module's dependency provider:
 
+```php
+class MyBundleDependencyProvider extends AbstractBundleDependencyProvider
+{
+    /**
+     * @var string
+     */
+    public const FACADE_MESSENGER = 'messages';
+    
+    /**
+     * @param \Spryker\Zed\Kernel\Container $container
+     *
+     * @return \Spryker\Zed\Kernel\Container
+     */
+    public function provideBusinessLayerDependencies(Container $container)
+    {
+        $container->set(static::FACADE_MESSENGER, function (Container $container) {
+            return $container->getLocator()->messenger()->facade();
+        });
+
+        return $container;
+    }
+}
+```
+
 Now, you can access it from the business factory and inject it into your model:
 
 ```php
@@ -66,7 +90,7 @@ class MyBundleBusinessFactory extends AbstractBusinessFactory
  
     protected function getFlashMessengerFacade()
     {
-        return $this->getProvidedDependency(GlossaryDependencyProvider::FACADE_FLASH_MESSENGER);
+        return $this->getProvidedDependency(MyBundleDependencyProvider::FACADE_MESSENGER);
     }
 }
 ```

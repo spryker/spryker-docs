@@ -37,19 +37,19 @@ related:
     link: docs/scos/dev/back-end-development/zed/persistence-layer/repository.html
 ---
 
-From Kernel version 3.2, it is possible to create an entity manager class in your persistence layer. It will be responsible for saving, updating, and deleting data. Using the class, you can separate data from persistence details (Propel).
+From Kernel version 3.2, you can create an entity manager class in your `Persistence` layer. It is responsible for saving, updating, and deleting data. Using the class, you can separate data from persistence details (Propel).
 
-It is important not to overuse the entity manager or repository for your logic. These two concepts should only be used for data persistence in entities. Combination of multiple calls and the entire logic should be done in the business layer by delegating calls to corresponding entities/repositories to keep the persistence layer separated from the business layer.
+It is important not to overuse the entity manager or repository for your logic. These two concepts must only be used for data persistence in entities. The combination of multiple calls and the entire logic must be done in the `Business` layer by delegating calls to corresponding entities/repositories to keep the `Persistence` layer separated from the business layer.
 
-As an example on using an entity manager, see the [Company module](https://github.com/spryker/company).
+As an example of using an entity manager, see the [Company module](https://github.com/spryker/company).
 
-## Entity Transfers
+## Entity transfers
 
 With the Publish and Synchronize feature, we have added a new transfer generation for `EntityTransfers`. The `EntityTransfers` are a direct representation of SQL tables. `EntityTransfer` has all properties, and relations defined and holds FQCN to the Propel entity it is mapped to. This FQCN is used when mapping the entity as the data is persisted. 
 
-## AbstractEntityManager Class
+## AbstractEntityManager class
 
-Abstract entity manager has one public helper method `save()` to save the `EntityTransfer` trees. If you call `$this->save(SpyBlogEntityTransfer)` on your module, `EntityManager` will try to save the whole tree in a single transaction, and you will get another transfer back with primary foreign keys populated.
+Abstract entity manager has one public helper method `save()` to save the `EntityTransfer` trees. If you call `$this->save(SpyBlogEntityTransfer)` on your module, `EntityManager` tries to save the whole tree in a single transaction, and you get another transfer back with primary foreign keys populated.
 
 **Example:**
 
@@ -74,12 +74,11 @@ class BlogEntityManager extends AbstractEntityManager implements BlogEntityManag
       return $this->save($blogEntityTransfer);
     }
 }
-    	
 ```
 
 It's a good practice to include a saver method for each saved entity, even if it can be automatically mapped, as this way, you define contracts.
 
-Deletion would be done the same way you normally do with Propel.
+Deletion is done the same way you normally do with Propel.
 
 ```php
 use Spryker\Zed\Kernel\Persistence\AbstractEntityManager;
@@ -104,9 +103,9 @@ class BlogEntityManager extends AbstractEntityManager implements BlogEntityManag
  }
 ```
 
-## Entity Manager Availability
+## Entity manager availability
 
-The main idea is to keep entity manager inside its own module and have control over how data is persisted. It cannot be located by Spryker dependency locator. So it cannot be used by other modules. If you need to save from another module, you have to provide a Facade method. The entity manager is available in the same module as Factories and Facade, and can be accessed by calling `getEntityManager`. Also, you need to define autocomplete namespace the same way as for other magic classes.
+The main idea is to keep the entity manager inside its own module and have control over how data is persisted. It cannot be located by the Spryker dependency locator. So it cannot be used by other modules. If you need to save from another module, you have to provide the facade method. The entity manager is available in the same module as factories and a facade, and can be accessed by calling `getEntityManager`. Also, you need to define autocomplete namespace the same way as for other magic classes.
 
 ```php
 use Spryker\Zed\Kernel\Business\AbstractBusinessFactory;
@@ -122,7 +121,7 @@ class BlogBusinessFactory extends AbstractBusinessFactory
     
 ```
 
-## Transaction Handling
+## Transaction handling
 
 If there is a need to make your whole operation atomic, and you need to control it, you can include a transaction trait in your business class.
 
@@ -159,9 +158,9 @@ class Blog
 
 You might use the following definitions to generate related code:
 
-* `vendor/bin/console spryk:run AddZedPersistenceEntityManager` - Add Zed Persistence Entity Manager
-* `vendor/bin/console spryk:run AddZedPersistenceEntityManagerInterface` - Add Zed Persistence Entity Manager Interface
-* `vendor/bin/console spryk:run AddZedPersistenceEntityManagerInterfaceMethod` - Add Zed Persistence Entity Manager Interface Method
-* `vendor/bin/console spryk:run AddZedPersistenceEntityManagerMethod` - Add Zed Persistence Entity Manager Method
+* `vendor/bin/console spryk:run AddZedPersistenceEntityManager`: Add Zed Persistence Entity Manager.
+* `vendor/bin/console spryk:run AddZedPersistenceEntityManagerInterface`: Add Zed Persistence Entity Manager Interface.
+* `vendor/bin/console spryk:run AddZedPersistenceEntityManagerInterfaceMethod`: Add Zed Persistence Entity Manager Interface Method.
+* `vendor/bin/console spryk:run AddZedPersistenceEntityManagerMethod`: Add Zed Persistence Entity Manager Method.
 
-See the [Spryk](/docs/sdk/dev/spryks/spryks.html) documentation for details.
+For details, see [Spryks](/docs/sdk/dev/spryks/spryks.html).

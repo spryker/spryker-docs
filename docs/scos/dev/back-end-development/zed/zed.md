@@ -47,12 +47,11 @@ Zed is one of the application layers of the Spryker Commerce OS, providing the b
 
 {% info_block infoBox %}
 
-See [Conceptual Overview](/docs/scos/dev/architecture/conceptual-overview.html) to learn more about the Spryker applications and their layers.
+To learn more about the Spryker applications and their layers, see [Conceptual overview](/docs/scos/dev/architecture/conceptual-overview.html) 
 
 {% endinfo_block %}
 
 Zed is divided into three parts:
-
-* Business layer, containing the entire business logic;
-* Persistence layer, responsible for the database structure, connections to it, for example, for the data persistence;
-* Communication layer, enabling the connection to the external providers.
+* The `Business` layer: Contains the entire business logic.
+* The `Persistence` layer: Responsible for the database structure and connections to it—for example, for the data persistence.
+* The `Communication` layer: Enables the connection to the external providers.

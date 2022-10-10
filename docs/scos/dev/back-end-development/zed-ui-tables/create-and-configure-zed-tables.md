@@ -26,8 +26,8 @@ redirect_from:
   - /docs/en/t-working-tables
   - /docs/scos/dev/back-end-development/zed-ui-tables/creating-and-configuring-zed-tables.html
 related:
-  - title: Adding buttons to Zed tables
-    link: docs/scos/dev/back-end-development/zed-ui-tables/adding-buttons-to-zed-tables.html
+  - title: Add buttons to Zed tables
+    link: docs/scos/dev/back-end-development/zed-ui-tables/add-buttons-to-zed-tables.html
 ---
 
 Spryker has a dedicated component to help you build tables for the Zed UI.
@@ -74,7 +74,6 @@ function configure(TableConfiguration $configuration)
 ```
 
 The configuration of the table must be done with the following methods:
-
 * Set up captions for the table headers (`setHeader()`)
 * Set up searchable fields (`setSearchable()`)
 * Set up sortable fields (`setSortable()`)
@@ -121,7 +120,7 @@ To configure the field on which the table is sorted by default when it's initial
 $config->setDefaultSortColumnIndex(5);
 ```
 
-You can also configure the default sort direction (for the initial rendering of the table or for the case it's not set yet), for example:
+You can also configure the default sort direction (for the initial rendering of the table or for the case it's not set yet)—for example:
 
 ```php
 <?php
@@ -140,7 +139,7 @@ Prepare the data retrieved by the query in the way you want it to be shown in th
 function prepareData(TableConfiguration $configuration)
 ```
 
-The query results should be mapped to the table columns, and data transformations such as price formatting should be done here:
+The query results must be mapped to the table columns, and data transformations such as price formatting must be done here:
 
 ```php
 <?php

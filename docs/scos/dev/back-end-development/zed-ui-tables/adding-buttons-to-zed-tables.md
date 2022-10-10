@@ -1,5 +1,5 @@
 ---
-title: Adding buttons to Zed tables
+title: Add buttons to Zed tables
 description: The document describes how to add buttons to Zed tables.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -22,12 +22,13 @@ redirect_from:
   - /v2/docs/en/t-add-button-table
   - /v1/docs/t-add-button-table
   - /v1/docs/en/t-add-button-table
+  - /docs/scos/dev/back-end-development/zed-ui-tables/adding-buttons-to-zed-tables.html
 related:
   - title: Create and configure Zed tables
     link: docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html
 ---
 
-Depending on the button type that needs to be added (`Update/Create/Remove/View`), the following operations can be called:
+Depending on the button type that needs to be added (`Update/Create/Remove/View`), you can add the following operations:
 
 ```php
 <?php
@@ -39,7 +40,7 @@ $this->generateRemoveButton('destination_URL', 'Button title', array $buttonOpti
 
 Each generated button has corresponding color and icon according to its type.
 
-Usage example:
+**Usage example:**
 
 ```php
 <?php
@@ -52,9 +53,9 @@ $this->generateRemoveButton('#', 'Remove Category', [
 ]);
 ```
 
-The third parameter (`$buttonOptions`) is an array through which extra properties can be appended to the HTML code that is generated.
+The third parameter `$buttonOptions` is an array through which extra properties can be appended to the HTML code that is generated.
 
-Example:
+**Example:**
 
 ```php
 <?php

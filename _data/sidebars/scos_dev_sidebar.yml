@@ -3608,8 +3608,8 @@ entries:
             url: /docs/scos/dev/back-end-development/extending-spryker/development-strategies/spryker-os-module-customisation/extend-the-spryker-core-functionality.html
     - title: Zed UI tables
       nested:
-      - title: Creating and configuring Zed tables
-        url: /docs/scos/dev/back-end-development/zed-ui-tables/creating-and-configuring-zed-tables.html
+      - title: Create and configure Zed tables
+        url: /docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html
       - title: Adding buttons to Zed tables
         url: /docs/scos/dev/back-end-development/zed-ui-tables/adding-buttons-to-zed-tables.html
     - title: Messages and errors

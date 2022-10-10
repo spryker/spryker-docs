@@ -23,11 +23,9 @@ redirect_from:
   - /v1/docs/t-add-button-table
   - /v1/docs/en/t-add-button-table
 related:
-  - title: Creating and configuring Zed tables
-    link: docs/scos/dev/back-end-development/zed-ui-tables/creating-and-configuring-zed-tables.html
+  - title: Create and configure Zed tables
+    link: docs/scos/dev/back-end-development/zed-ui-tables/create-and-configure-zed-tables.html
 ---
-
-<!-- used to be: http://spryker.github.io/tutorials/yves/adding-buttons-to-tables/ -->
 
 Depending on the button type that needs to be added (`Update/Create/Remove/View`), the following operations can be called:
 
@@ -39,7 +37,7 @@ $this->generateViewButton('destination_URL', 'Button title', array $buttonOption
 $this->generateRemoveButton('destination_URL', 'Button title', array $buttonOptions);
 ```
 
-Each generated button has the corresponding style (color and icon) according to its type.
+Each generated button has corresponding color and icon according to its type.
 
 Usage example:
 

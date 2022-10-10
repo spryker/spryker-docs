@@ -76,14 +76,17 @@ The config file should contain the following data:
 
 ## Twig templates
 
-To specify the theme in a multi-theme environment for twig templates, use TwigConfig. You can overwrite `getYvesThemeName`as follows:
+To specify the theme in a multi-theme environment for twig templates, use TwigConfig. You can overwrite `getYvesThemeName` as follows:
 
 **Shared/TwigDE/TwigConfig.php**
 
 ```php
 <?php
 namespace Pyz\Shared\TwigDE;
-class TwigConfig extends \Spryker\Shared\Twig\TwigConfig
+
+use Spryker\Shared\Twig\TwigConfig as SprykerTwigConfig;
+
+class TwigConfig extends SprykerTwigConfig
 {
     /**
      * @return string

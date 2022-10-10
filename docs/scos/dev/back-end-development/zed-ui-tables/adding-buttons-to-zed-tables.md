@@ -39,7 +39,7 @@ $this->generateViewButton('destination_URL', 'Button title', array $buttonOption
 $this->generateRemoveButton('destination_URL', 'Button title', array $buttonOptions);
 ```
 
-Each generated button will have the corresponding style(color,icon) according to its type.
+Each generated button has the corresponding style (color and icon) according to its type.
 
 Usage example:
 

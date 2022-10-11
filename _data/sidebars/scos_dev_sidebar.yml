@@ -4052,7 +4052,7 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html
         - title: Implementing a REST API Resource
           url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html
-        - title: Documenting GLUE API Resources
+        - title: Document Glue API resources
           url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/documenting-glue-api-resources.html
       - title: "Tutorial: different stores, different logic - landing pages - Spryker Commerce OS"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-different-stores-different-logic-landing-pages-spryker-commerce-os.html

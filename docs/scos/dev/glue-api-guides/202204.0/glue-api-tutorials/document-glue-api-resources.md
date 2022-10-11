@@ -1,5 +1,5 @@
 ---
-title: Documenting Glue API resources
+title: Document Glue API resources
 description: This guide shows how to document Glue API resources
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -20,6 +20,7 @@ redirect_from:
   - /v2/docs/en/documenting-glue-api-resources
   - /v1/docs/documenting-glue-api-resources
   - /v1/docs/en/documenting-glue-api-resources
+  - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/documenting-glue-api-resources.html
 related:
   - title: Glue infrastructure
     link: docs/scos/dev/glue-api-guides/page.version/glue-infrastructure.html
@@ -40,7 +41,7 @@ REST API endpoints shipped by Spryker are covered by documentation by default. A
 {% endinfo_block %}
 
 ## Prerequisites
-
+ 
 Install and enable [Spryker Glue](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-installation-and-configuration.html). Also, see the following documents:
 
 * [Open API Specification](https://github.com/OAI/OpenAPI-Specification)

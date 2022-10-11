@@ -15,8 +15,6 @@ redirect_from:
 related:
   - title: Install the Content Items Glue API
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-content-items-feature-integration.html
-  - title: Content Items feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/content-items-feature-walkthrough/content-items-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-content-items-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-content-items-feature.md -->

@@ -15,8 +15,6 @@ redirect_from:
 related:
   - title: Install the CMS feature
     link: docs/scos/dev/feature-integration-guides/page.version/cms-feature-integration.html
-  - title: CMS feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html
   - title: Retrieve CMS pages
     link: docs/pbc/all/content-management-system/manage-using-glue-api/retrieve-cms-pages.html
 ---

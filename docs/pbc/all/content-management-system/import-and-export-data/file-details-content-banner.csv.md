@@ -16,15 +16,15 @@ redirect_from:
 
 This document describes the `content_banner.csv` file to configure [Content Banner](/docs/pbc/all/content-management-system/navigation-feature-overview.html#content-item) information in your Spryker Demo Shop.
 
-To import the file, run:
 
-```bash
-data:import:content-banner
-```
+## Import file dependencies
+
+This file has the following dependency: [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html).
+
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -44,15 +44,20 @@ The file should have the following parameters:
 
 *ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
 
-## Import file dependencies
 
-This file has the following dependency: [glossary.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/commerce-setup/file-details-glossary.csv.html).
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [content_banner.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+content_banner.csv) | Exemplary import file with headers only. |
 | [content_banner.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/content_banner.csv) | Exemplary import file with Demo Shop data. |
+
+
+## Import file command
+
+```bash
+data:import:content-banner
+```

@@ -15,30 +15,30 @@ redirect_from:
 
 This document describes the `cms_template.csv` file to configure [CMS Template](/docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html#cms-page-template) information in your Spryker Demo Shop.
 
-To import the file, run:
 
-```bash
-data:import:cms-template
-```
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | template_name | &check; | String | Must be unique. | Name of the template. |
 | template_path | &check; | String | Must be unique. Must be a valid path to a twig file template. | Path to the Twig file template. |
 
-## Import file dependencies
-
-This file has no dependencies.
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [cms_template.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+cms_template.csv) | Exemplary import file with headers only. |
 | [cms_template.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_template.csv) | Exemplary import file with Demo Shop data. |
+
+
+## Import file command
+
+```bash
+data:import:cms-template
+```

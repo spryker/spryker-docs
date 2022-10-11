@@ -14,15 +14,11 @@ redirect_from:
 
 This document describes the `cms_block_category.csv` file to configure CMS Block Category information in your Spryker Demo Shop.
 
-To import the file, run:
+## Import file dependencies
 
-```bash
-data:import:cms-block-category
-```
+This file has the following dependency: [cms_block_category_position.csv](/docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-block-category-postion.csv.html).
 
 ## Import file parameters
-
-The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -31,15 +27,19 @@ The file should have the following parameters:
 | category_template_name | &check; | String |  | Name of the category template. |
 | cms_block_category_position_name |  | String |  | Name of the CMS block category position. |
 
-## Import file dependencies
-
-This file has the following dependency: [cms_block_category_position.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-block-category-postion.csv.html).
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [cms_block_category.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_block_category_template.csv) | Exemplary import file with headers only. |
 | [cms_block_category.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_block_category.csv) | Exemplary import file with Demo Shop data. |
+
+
+## Import file command
+
+```bash
+data:import:cms-block-category
+```

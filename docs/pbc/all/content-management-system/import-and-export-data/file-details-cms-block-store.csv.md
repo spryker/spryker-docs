@@ -15,15 +15,17 @@ redirect_from:
 
 This document describes the `cms_block_store.csv` file to configure CMS Block Store information on your Spryker Demo Shop.
 
-To import the file, run:
 
-```bash
-data:import:cms-block-store
-```
+## Import file dependencies
+
+
+* [cms_block.csv](/docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-block.csv.html)
+* *stores.php* configuration file of the demo shop PHP project
+
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -31,17 +33,20 @@ The file should have the following parameters:
 | store_name | &check; | String |  | Name of the store. |
 
 
-## Import file dependencies
 
-This file has the following dependencies:
-* [cms_block.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-block.csv.html)
-* *stores.php* configuration file of the demo shop PHP project
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [cms_block_store.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+cms_block_store.csv) | Exemplary import file with headers only. |
 | [cms_block_store.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_block_store.csv) | Exemplary import file with Demo Shop data. |
+
+
+## Import file command
+
+```bash
+data:import:cms-block-store
+```

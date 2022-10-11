@@ -11,11 +11,6 @@ redirect_from:
   - /docs/cms-pages-in-search-results-integration
   - /docs/en/cms-pages-in-search-results-integration
   - /docs/scos/dev/feature-integration-guides/202204.0/cms-catalog-feature-integration.html
-related:
-  - title: CMS feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html
-  - title: Catalog feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/catalog-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-cms-catalog-feature.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-cms-catalog-feature.md -->

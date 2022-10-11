@@ -17,34 +17,39 @@ redirect_from:
 
 This document describes the `content_navigation.csv` file to configure [Content Navigation](/docs/pbc/all/content-management-system/navigation-feature-overview.html#content-item) information in your Spryker Demo Shop.
 
-To import the file, run:
 
-```bash
-data:import:content-navigation
-```
+## Import file dependencies
+
+ [navigation.csv](/docs/pbc/all/content-management-system/import-and-export-data/file-details-navigation.csv.html).
+
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | key | &check; | string | Must be unique. | Identifier of the content item. |
 | name | &check; | string | Human-readable name. | Name of the content. |
 | description |   | string |  | Description of the content. |
-| navigation_key.default | &check; | string | Key of an existing navigation element. | Default unique identifier of a [navigation element](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html).  |
-| navigation_key.en_US |  | string | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html) for the `en_US` [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html). |
-| title.de_DE |  | string | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html) for the `de_DE` [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html). |
+| navigation_key.default | &check; | string | Key of an existing navigation element. | Default unique identifier of a [navigation element](/docs/pbc/all/content-management-system/import-and-export-data/file-details-navigation.csv.html).  |
+| navigation_key.en_US |  | string | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/pbc/all/content-management-system/import-and-export-data/file-details-navigation.csv.html) for the `en_US` [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html). |
+| title.de_DE |  | string | Key of an existing navigation element. | Unique identifier of a [navigation element](/docs/pbc/all/content-management-system/import-and-export-data/file-details-navigation.csv.html) for the `de_DE` [locale](/docs/scos/dev/back-end-development/data-manipulation/datapayload-conversion/multi-language-setup.html). |
 
-## Import file dependencies
 
-This file has the following dependencies: [navigation.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/navigation-setup/file-details-navigation.csv.html).
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [content_navigation.csv Template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+content_navigation.csv) | Exemplary import file with headers only. |
 | [content_navigation.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/content_navigation.csv) | Exemplary import file with Demo Shop data. |
+
+
+## Import file command
+
+```bash
+data:import:content-navigation
+```

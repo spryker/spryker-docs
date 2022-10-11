@@ -15,8 +15,6 @@ redirect_from:
 related:
   - title: Install the Navigation feature
     link: docs/scos/dev/feature-integration-guides/page.version/navigation-feature-integration.html
-  - title: Navigation feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/navigation-feature-walkthrough/navigation-feature-walkthrough.html
   - title: Retrieve navigation trees
     link: docs/pbc/all/content-management-system/manage-using-glue-api/retrieve-navigation-trees.html
 ---

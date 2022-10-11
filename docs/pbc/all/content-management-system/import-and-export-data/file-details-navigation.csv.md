@@ -17,15 +17,7 @@ redirect_from:
 
 This document describes the `navigation.csv` file to configure [Navigation](/docs/scos/user/features/{{page.version}}/navigation-feature-overview.html) information in your Spryker Demo Shop.
 
-To import the file, run:
-
-```bash
-data:import:navigation
-```
-
 ## Import file parameters
-
-The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -33,15 +25,15 @@ The file should have the following parameters:
 | name | &check; | String |  | Navigation entity name. |
 | is_active | &check; | Boolean |  | Defines if the navigation element is active. |
 
-## Import file dependencies
-
-This file has no dependencies.
-
 ## Import template file and content example
-
-Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [navigation.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Navigation+Setup/Template+navigation.csv) | Exemplary import file with headers only. |
 | [navigation.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Navigation+Setup/navigation.csv) | Exemplary import file with Demo Shop data. |
+
+## Import file command
+
+```bash
+data:import:navigation
+```

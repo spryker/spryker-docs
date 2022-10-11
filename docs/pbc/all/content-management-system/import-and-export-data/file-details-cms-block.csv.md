@@ -15,15 +15,13 @@ redirect_from:
 
 This document describes the `cms_block.csv` file to configure [CMS Block](/docs/pbc/all/content-management-system/cms-feature-overview/cms-blocks-overview.html) information on your Spryker Demo Shop.
 
-To import the file, run:
+## Import file command
 
 ```bash
 data:import:cms-block
 ```
 
 ## Import file parameters
-
-The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -39,13 +37,11 @@ The file should have the following parameters:
 
 *ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
 
-## Import file dependencies
 
-This file has no dependencies.
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |

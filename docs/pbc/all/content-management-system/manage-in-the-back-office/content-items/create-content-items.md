@@ -14,7 +14,7 @@ redirect_from:
   - /docs/scos/user/back-office-user-guides/201903.0/content/content-items/creating-content-items.html
 related:
   - title: Content Items feature overview
-    link: docs/scos/user/features/page.version/content-items-feature-overview.html
+    link: docs/pbc/all/content-management-system/content-items-feature-overview.html
   - title: Editing Content Items
     link: docs/scos/user/back-office-user-guides/page.version/content/content-items/editing-content-items.html
 ---

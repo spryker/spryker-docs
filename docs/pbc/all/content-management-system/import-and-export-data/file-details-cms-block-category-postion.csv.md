@@ -14,30 +14,26 @@ redirect_from:
 
 This document describes the `cms_block_category_position.csv` file to configure CMS Block Category Position information in your Spryker Demo Shop.
 
-To import the file, run:
-
-```bash
-data:import:cms-block-category-position
-```
-
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | cms_block_category_position_name | &check; | String |  |Name of the CMS block category position.  |
 
 
-## Import file dependencies
-
-This file has no dependencies.
-
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [cms_block_category_position.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_block_category_position_template.csv) | Exemplary import file with headers only. |
 | [cms_block_category_position.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_block_category_position.csv) | Exemplary import file with Demo Shop data. |
+
+## Import file command
+
+```bash
+data:import:cms-block-category-position
+```

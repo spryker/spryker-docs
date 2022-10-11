@@ -101,4 +101,4 @@ The schema shows the module relations of the Navigation content item:
 
 A developer can create and edit navigation content items by [importing](/docs/scos/dev/data-import/{{page.version}}/importing-data-with-a-configuration-file.html#console-commands-to-run-import) them.
 
-See [File details: content_navigation.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-content-navigation.csv.html) for more details.
+See [File details: content_navigation.csv](/docs/pbc/all/content-management-system/import-and-export-data/file-details-content-navigation.csv.html) for more details.

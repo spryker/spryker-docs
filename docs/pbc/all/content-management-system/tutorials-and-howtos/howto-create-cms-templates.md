@@ -16,8 +16,6 @@ redirect_from:
   - /docs/scos/dev/tutorials/202005.0/howtos/feature-howtos/cms/howto-create-cms-templates.html
   - /docs/scos/dev/tutorials-and-howtos/howtos/feature-howtos/cms/howto-create-cms-templates.html
 related:
-  - title: CMS feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html
   - title: CMS Pages overview
     link: docs/scos/user/features/page.version/cms-feature-overview/cms-pages-overview.html
   - title: CMS Blocks overview

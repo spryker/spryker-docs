@@ -28,8 +28,6 @@ related:
     link: docs/scos/dev/back-end-development/yves/implementing-url-routing-in-yves.html
   - title: Cronjob scheduling
     link: docs/scos/dev/sdk/cronjob-scheduling.html
-  - title: CMS feature walkthrough
-    link: docs/scos/dev/feature-walkthroughs/page.version/cms-feature-walkthrough/cms-feature-walkthrough.html
 ---
 
 <!--used to be: http://spryker.github.io/challenge/cms/-->

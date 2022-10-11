@@ -11,9 +11,6 @@ redirect_from:
   - /docs/navigation-module-integration
   - /docs/en/navigation-module-integration
   - /docs/scos/dev/feature-integration-guides/202204.0/navigation-module-integration.html
-related:
-    - title: Navigation feature walkthrough
-      link: docs/scos/dev/feature-walkthroughs/page.version/navigation-feature-walkthrough/navigation-feature-walkthrough.html
 ---
 
 {% include pbc/all/install-features/202204.0/install-the-navigation-module.md %} <!-- To edit, see /_includes/pbc/all/install-features/202204.0/install-the-navigation-module.md -->

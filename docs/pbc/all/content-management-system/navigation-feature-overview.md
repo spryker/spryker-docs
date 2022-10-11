@@ -12,6 +12,8 @@ redirect_from:
   - /docs/en/navigation-feature-overview
   - /docs/scos/user/features/202200.0/navigation-feature-overview.html
   - /docs/scos/user/features/202204.0/navigation-feature-overview.html
+  - /docs/scos/dev/feature-walkthroughs/202200.0/navigation-feature-walkthrough/navigation-feature-walkthrough.html  
+  - /docs/scos/dev/feature-walkthroughs/202204.0/navigation-feature-walkthrough/navigation-feature-walkthrough.html  
 ---
 
 The *Navigation* feature lets product catalog managers create intuitive navigation elements and display them on the Storefront. Product catalog managers can create different types of navigation for different places of the shop. For example, they can add a fully-fledged navigation tree for main website navigation, several simple navigation lists for the footer, and any number of custom navigation elements for CMS pages.
@@ -134,8 +136,10 @@ For more details about navigation, check the video:
 |---|
 | [Manage navigation elements](/docs/scos/user/back-office-user-guides/{{page.version}}/content/navigation/managing-navigation-elements.html)   |
 
-{% info_block warningBox "Developer guides" %}
+## Related Developer articles
 
-Are you a developer? See [Navigation feature walkthrough](/docs/scos/dev/feature-walkthroughs/{{page.version}}/navigation-feature-walkthrough/navigation-feature-walkthrough.html) for developers.
-
-{% endinfo_block %}
+| INSTALLATION GUIDES | GLUE API GUIDES | DATA IMPORT | REFERENCES |
+|---|---|---|---|
+| [Install the Navigation feature](/docs/scos/dev/feature-integration-guides/{{page.version}}/navigation-feature-integration.html) | [Retrieve navigation trees](/docs/pbc/all/content-management-system/manage-using-glue-api/retrieve-navigation-trees.html) | [File details: navigation.csv](/docs/pbc/all/content-management-system/import-and-export-data/file-details-navigation.csv.html) | [Navigation module: Reference information](/docs/scos/dev/feature-walkthroughs/{{page.version}}/navigation-feature-walkthrough/navigation-module-reference-information.html) |
+| [Glue API: Navigation feature integration](/docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-navigation-feature.html) |  | [File details: navigation_node.csv](/docs/pbc/all/content-management-system/import-and-export-data/file-details-navigation-node.csv.html) | |
+| [Install the CMS feature](/docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-cms-feature.html) |  |  |  |

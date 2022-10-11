@@ -14,32 +14,32 @@ redirect_from:
 
 This document describes the `cms_page_store.csv` file to configure CMS Page Store information in your Spryker Demo Shop.
 
-To import the file, run:
+## Import file dependencies
 
-```bash
-data:import cms-page-store
-```
+
+* [cms_page.csv](/docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-page.csv.html)
+* *stores.php* configuration file of the demo shop PHP project
+
 
 ## Import file parameters
 
-The file should have the following parameters:
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
 | page_key | &check; | String | Must be unique. | Unique identifier of the page. |
 | store_name | &check; | String |  | Store name identifier. |
 
-## Import file dependencies
 
-This file has the following dependencies:
-* [cms_page.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-page.csv.html)
-* *stores.php* configuration file of the demo shop PHP project
 
 ## Import template file and content example
-
-Find the template and an example of the file below:
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [cms_page_store.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+cms_page_store.csv) | Exemplary import file with headers only. |
 | [cms_page_store.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_page_store.csv) | Exemplary import file with Demo Shop data. |
+
+## Import file command
+
+```bash
+data:import cms-page-store
+```

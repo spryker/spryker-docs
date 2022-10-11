@@ -15,15 +15,19 @@ redirect_from:
 
 This document describes the `cms_slot_block.csv` file to configure [CMS Slot Block](/docs/pbc/all/content-management-system/cms-feature-overview/templates-and-slots-overview.html) information in your Spryker Demo Shop.
 
-To import the file, run:
+## Import file dependencies
 
-```bash
-data:import:cms-slot-block
-```
+
+
+* [cms_slot.csv](/docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-slot.csv.html)
+* [cms_block.csv](/docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-block.csv.html)
+
+
+
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -40,18 +44,20 @@ The file should have the following parameters:
 | conditions.cms_page.page_key |  | String |  | Conditions for Page key identifiers and CMS pages. |
 
 
-## Import file dependencies
 
-This file has the following dependencies:
-
-* [cms_slot.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-slot.csv.html)
-* [cms_block.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-block.csv.html)
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [cms_slot_block.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+cms_slot_block.csv) | Exemplary import file with headers only. |
 | [cms_slot_block.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_slot_block.csv) | Exemplary import file with Demo Shop data. |
+
+
+## Import file command
+
+```bash
+data:import:cms-slot-block
+```

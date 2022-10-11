@@ -137,10 +137,6 @@ The [Merchant Product Restrictions](/docs/scos/dev/feature-walkthroughs/{{page.v
 
 The [Multiple Carts](/docs/scos/dev/feature-walkthroughs/{{page.version}}/multiple-carts-feature-walkthrough.html) feature allows you to create and manage one or multiple shopping carts in one customer account.
 
-## Navigation
-
-The [Navigation](/docs/scos/dev/feature-walkthroughs/{{page.version}}/navigation-feature-walkthrough/navigation-feature-walkthrough.html) feature enables product catalog managers to create intuitive navigation elements and display them on the Storefront.
-
 ### Navigation module: reference information
 
 The [Navigation module](/docs/scos/dev/feature-walkthroughs/{{page.version}}/navigation-feature-walkthrough/navigation-module-reference-information.html) manages multiple navigation menus that can be displayed on the frontend (Yves). Every navigation section can contain its own nested structure of navigation nodes. Navigation nodes have types that help define what kind of link they represent.

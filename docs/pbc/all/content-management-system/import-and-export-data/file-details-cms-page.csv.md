@@ -16,15 +16,13 @@ redirect_from:
 
 This document describes the `cms_page.csv` file to configure [CMS Page](/docs/pbc/all/content-management-system/cms-feature-overview/cms-pages-overview.html) information in your Spryker Demo Shop.
 
-To import the file, run:
+## Import file dependencies
 
-```bash
-data:import:cms-page
-```
+This file has the following dependency: [cms_template.csv](/docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-template.csv.html).
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -43,15 +41,19 @@ The file should have the following parameters:
 
 *ANY_LOCALE_NAME: Locale date is dynamic in data importers. It means that ANY_LOCALE_NAME postfix can be changed, removed, and any number of columns with different locales can be added to the CSV files.
 
-## Import file dependencies
 
-This file has the following dependency: [cms_template.csv](/docs/scos/dev/data-import/{{page.version}}/data-import-categories/content-management/file-details-cms-template.csv.html).
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [cms_page.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+cms_page.csv) | Exemplary import file with headers only. |
 | [cms_page.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_page.csv) | Exemplary import file with Demo Shop data. |
+
+## Import file command
+
+```bash
+data:import:cms-page
+```

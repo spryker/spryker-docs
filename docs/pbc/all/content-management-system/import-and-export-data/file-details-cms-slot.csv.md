@@ -15,15 +15,11 @@ redirect_from:
 
 This document describes the `cms_slot.csv` file to configure [CMS Slot](/docs/pbc/all/content-management-system/cms-feature-overview/templates-and-slots-overview.html) information in your Spryker Demo Shop.
 
-To import the file, run:
 
-```bash
-data:import:cms-slot
-```
 
 ## Import file parameters
 
-The file should have the following parameters:
+
 
 | PARAMETER | REQUIRED | TYPE | REQUIREMENTS OR COMMENTS | DESCRIPTION |
 | --- | --- | --- | --- | --- |
@@ -34,15 +30,20 @@ The file should have the following parameters:
 | description | &check; | String |  | Description of the slot. It will be shown in the Back Office. |
 | is_active |  | Boolean |<ul><li>Inactive = 0</li><li>Active = 1</li><li>If empty during the import, the slots will be imported as inactive.</li></ul> | Indicates if the slot is active or inactive.<br>If the slot is inactive, it is not rendered in the Storefront by the slot widget. |
 
-## Import file dependencies
 
-This file has no dependencies.
 
 ## Import template file and content example
 
-Find the template and an example of the file below:
+
 
 | FILE | DESCRIPTION |
 | --- | --- |
 | [cms_slot.csv template](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/Template+cms_slot.csv) | Exemplary import file with headers only. |
 | [cms_slot.csv](https://spryker.s3.eu-central-1.amazonaws.com/docs/Developer+Guide/Back-End/Data+Manipulation/Data+Ingestion/Data+Import/Data+Import+Categories/Content+Management/cms_slot.csv) | Exemplary import file with Demo Shop data. |
+
+
+## Import file command
+
+```bash
+data:import:cms-slot
+```

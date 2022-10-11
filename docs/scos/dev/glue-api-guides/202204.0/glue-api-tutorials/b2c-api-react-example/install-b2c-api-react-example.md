@@ -1,6 +1,6 @@
 ---
-title: B2C API React example installation
-description: This document describes installation of B2C API Demo Shop to experience the use of Spryker Glue REST API.
+title: Install B2C API React example
+description: This document describes how to install B2C API Demo Shop to experience the use of Spryker Glue REST API.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/b2c-api-react-example-installation
@@ -22,12 +22,13 @@ redirect_from:
   - /v2/docs/en/b2c-api-react-example-installation
   - /v1/docs/b2c-api-react-example-installation
   - /v1/docs/en/b2c-api-react-example-installation
+  - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example-installation.html
 related:
   - title: B2C API React example
-    link: docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example.html
+    link: docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html
 ---
 
-B2C API React Example can be installed inside [Spryker Development Virtual Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html) (VM) or on a separate dedicated server. To perform both the installation scenarios, take the following steps.
+The B2C API React example can be installed inside [Spryker Development Virtual Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html) (VM) or on a separate dedicated server. To perform both installation scenarios, take the following steps.
 
 {% info_block infoBox %}
 
@@ -41,9 +42,9 @@ The example application is provided only for display purposes, and must under no
 
 {% endinfo_block %}
 
-## Installation inside the Development Virtual Machine
+## Install the app inside the Development Virtual Machine
 
-To perform the app installation on the VM:
+To install the app on the VM, follow these steps:
 
 1. Make sure that you have Spryker Glue REST API [installed and working](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-installation-and-configuration.html).
 2. Log in to the VM. For this purpose, execute the following command on the host where the VM runs:
@@ -58,7 +59,7 @@ vagrant ssh
 cd ..
 ```
 
-4. Prepare a folder to install the example app. For example, you can place it in the `api-rest-example` folder:
+4. Prepare a folder to install the example app—for example, you can place it in the `api-rest-example` folder:
 
 ```bash
 commands:sudo mkdir api-rest-example
@@ -161,16 +162,16 @@ npm run serve:vm
 13. Check that the example application is available at the following URL: `http://glue.de.b2c-demo-shop.local/react/`, where `glue.de.b2c-demo-shop.local` is the host name you specified in the `local_inside_vm.env` file.
 14. To stop the app, press <kbd>Ctrl+C</kbd>. To start it again, run `npm run serve:vm`
 
-## Installation on a dedicated server
+## Install on a dedicated server
 
-To perform the app installation on a dedicated web server, follow these steps:
+To install the app on a dedicated web server, follow these steps:
 
 1. Make sure that you have Spryker Glue REST API [installed and working](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-installation-and-configuration.html).
 
 2. Make sure that the following prerequisites are installed on the server:
-    * [Node 8.9.3](https://nodejs.org/en/) or newer.
+   * [Node 8.9.3](https://nodejs.org/en/) or newer.
 
-3. Add the following entries to the `hosts` file of the server:
+1. Add the following entries to the `hosts` file of the server:
 
 ```text
 <Glue_IP> glue.de.project-name.local

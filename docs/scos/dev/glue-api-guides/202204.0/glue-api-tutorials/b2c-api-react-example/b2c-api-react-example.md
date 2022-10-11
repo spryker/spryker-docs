@@ -1,6 +1,6 @@
 ---
 title: B2C API React example
-description: B2C API React Example is a single-page web application that demonstrates the use of Spryker Glue REST API in B2C scenarios.
+description: B2C API React example is a single-page web application that demonstrates the use of Spryker Glue REST API in B2C scenarios.
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/b2c-api-react-example
@@ -22,22 +22,23 @@ redirect_from:
   - /v2/docs/en/b2c-api-react-example
   - /v1/docs/b2c-api-react-example
   - /v1/docs/en/b2c-api-react-example
+  - 
 related:
   - title: B2C API React example installation
-    link: docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example-installation.html
+    link: docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
   - title: Glue REST API
     link: docs/scos/dev/glue-api-guides/page.version/glue-rest-api.html
   - title: REST API Reference
     link: docs/scos/dev/glue-api-guides/page.version/rest-api-reference.html
 ---
 
-As a part of documentation related to Spryker Glue REST API, we have also developed a B2C API React Example. It is a [React](https://reactjs.org/) single page application based on a [webpack](https://webpack.js.org/) devserver, Typescript, [Redux](https://redux.js.org/), and Material UI.
+As a part of documentation related to Spryker Glue REST API, we have also developed a B2C API React example. It is a [React](https://reactjs.org/) single-page application based on a [webpack](https://webpack.js.org/) dev server, Typescript, [Redux](https://redux.js.org/), and Material UI.
 
 The application has been developed for four primary purposes:
 
 1. Provide a simple yet fully functional example of Glue REST API usage.
-2. Illustrate a complete B2C Spryker experience using REST endpoints, starting from selecting the necessary product all the way through to placing an order. The shop also demonstrates the use of the API resources to create such features as the product catalog, search, auto-suggestions, customer registration, cart management, displaying order details.
-3. Allow you to try Glue REST API without any coding.
+2. Illustrate a complete B2C Spryker experience using REST endpoints, starting from selecting the necessary product all the way through to placing an order. The shop also demonstrates the use of API resources to create such features as the product catalog, search, auto-suggestions, customer registration, cart management, and displaying order details.
+3. Let you try Glue REST API without any coding.
 4. Provide sample REST requests that can facilitate custom touchpoint development.
 
 {% info_block errorBox %}
@@ -73,7 +74,7 @@ The Demo shop was built using and demonstrates the use of the endpoints and reso
 
 The app source code can be found in the following GitHub repository: [https://github.com/spryker-shop/b2c-api-react-example](https://github.com/spryker-shop/b2c-api-react-example). You can install it inside [Spryker Development Virtual Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html) or on a dedicated web server.
 
-For detailed installation steps, see [B2C API React Example Installation](/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example.html).
+For detailed installation steps, see [B2C API React Example Installation](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html).
 
 ## Peeking requests
 

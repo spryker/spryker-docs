@@ -1229,6 +1229,17 @@ entries:
             url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/document-glue-api-resources.html
             include_versions:
             - "202204.0"
+          - title: B2C API React example
+            url: /docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html
+            include_versions:
+            - "202204.0"
+            nested:
+            - title: Install B2C API React example
+              url: /docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
+              include_versions:
+              - "202204.0"
+          - title: "Tutorial: Interacting with third party payment providers via Glue API"
+            url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
     - title: Glue API Developer Guides
       url: /docs/scos/dev/glue-api-guides/glue-api-developer-guides.html
       include_versions:
@@ -4101,15 +4112,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-managing-glossary-keys.html
       - title: "Tutorial: Replacing a default data importer with the queue data importer"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-replacing-a-default-data-importer-with-the-queue-data-importer.html
-      - title: Glue API
-        nested:
-        - title: B2C API React Example
-          url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example.html
-          nested:
-          - title: B2C API React Example Installation
-            url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/b2c-api-react-example/b2c-api-react-example-installation.html
-        - title: "Tutorial: Interacting with third party payment providers via Glue API"
-          url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
       - title: "Tutorial: Product challenge solution"
         url: /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/tutorial-product-challenge-solution.html
       - title: "Tutorial: Twig extensions"

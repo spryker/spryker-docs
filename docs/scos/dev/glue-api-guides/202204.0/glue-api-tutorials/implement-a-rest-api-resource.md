@@ -60,7 +60,7 @@ To create a module, follow these steps:
 
 {% info_block infoBox %}
 
-To create a basic structure, you can use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html):
+To create a basic structure, you can use a [Spryk](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-spryks.html):
 
 ```bash
 console spryk:run AddGlueBasicStructure --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources
@@ -74,7 +74,7 @@ Add a transfer file that is used to automatically map JSON data. Transfers are d
 
 {% info_block infoBox %}
 
-To add a transfer file, you can use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html):
+To add a transfer file, you can use a [Spryk](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-spryks.html):
 
 ```bash
 console spryk:run AddSharedRestAttributesTransfer --mode=project --module=ResourcesRestApi --organization=Pyz --name=RestResourcesAttributes
@@ -116,7 +116,7 @@ class WishlistsRestApiConfig extends AbstractBundleConfig
 
 {% info_block infoBox %}
 
-To create a configuration class, you can use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html):
+To create a configuration class, you can use a [Spryk](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-spryks.html):
 
 ```bash
 console spryk:run AddGlueConfig --mode=project --module=ResourcesRestApi --organization=Pyz
@@ -155,7 +155,7 @@ class WishlistsRestApiFactory extends AbstractFactory
 
 {% info_block infoBox %}
 
-To create a factory, you can use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html):  
+To create a factory, you can use a [Spryk](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-spryks.html):  
 
 ```bash
 console spryk:run AddGlueFactory --mode=project --module=ResourcesRestApi --organization=Pyz
@@ -251,7 +251,7 @@ class WishlistsResourceController extends AbstractController
 
 {% info_block infoBox %}
 
-To create a resource controller, you can use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html):
+To create a resource controller, you can use a [Spryk](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-spryks.html):
 
 ```bash
 console AddGlueController  --mode=project --module=ResourcesRestApi --organization=Pyz --controller=ResourcesController
@@ -297,7 +297,7 @@ vendor/bin/console transfer:generate
 
 {% info_block infoBox %}
 
-To describe fields for `POST` and `PATCH` calls, you can use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html):
+To describe fields for `POST` and `PATCH` calls, you can use a [Spryk](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-spryks.html):
 
 ```bash
 console spryk:run AddSharedRestAttributesTransfer --mode=project --module=ResourcesRestApi --organization=Pyz --name=RestResourcesAttributes
@@ -487,7 +487,7 @@ class WishlistsResourceRoutePlugin extends AbstractPlugin implements ResourceRou
 
 {% info_block infoBox %}
 
-To route requests to your controller, you can use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html):
+To route requests to your controller, you can use a [Spryk](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-spryks.html):
 
 ```bash
 console spryk:run AddGlueResourceRoute --mode=project --module=ResourcesRestApi --organization=Pyz --resourceType=resources --resourceRouteMethod=get

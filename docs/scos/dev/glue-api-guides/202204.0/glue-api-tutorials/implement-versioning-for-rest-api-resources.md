@@ -1,5 +1,5 @@
 ---
-title: Versioning REST API resources
+title: Implement versioning for REST API resources
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/versioning-rest-api-resources
@@ -41,7 +41,7 @@ To add versioning to a resource, the route plugin of the `resource` module needs
 
 {% info_block warningBox %}
 
-For more information on route plugins, see the [Resource routing](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-infrastructure.html#resource-routing) section in *Glue Infrastructure*.
+For more information on route plugins, see the [Resource routing](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-routing) section in *Glue Infrastructure*.
 
 {% endinfo_block %}
 

@@ -31,15 +31,15 @@ Spryker Glue REST API comes with a set of predefined APIs out of the box. You ca
 
 {% info_block infoBox %}
 
-The following guide relies on your knowledge of the structure of a Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource modules](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-infrastructure.html#resource-modules) section in *Glue Infrastructure*.
+The following guide relies on your knowledge of the structure of a Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource modules](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-modules) section in *Glue Infrastructure*.
 
 {% endinfo_block %}
 
 ## Prerequisites
 
 * [Install Spryker Development Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html);
-* [Enable Glue Rest API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-installation-and-configuration.html);
-* [Integrate Products API](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-product-feature-integration.html).
+* [Enable Glue Rest API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-installation-and-configuration.html);
+* [Integrate Products API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html).
 
 {% info_block infoBox %}
 
@@ -47,7 +47,7 @@ If you have a development virtual machine with the [B2C Demo Shop](/docs/scos/us
 
 Assume that you modify the product storage data to match your product requirements—for example, you add the `manufacturerCountry` field to the product data not as an attribute but as another field in the database.
 
-For more details, see [Database schema for product attributes](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-attributes-overview.html#database-schema-for-product-attributes) and [Extend the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html).
+For more details, see [Database schema for product attributes](/docs/scos/user/features/{{page.version}}/product-feature-overview/product-attributes-overview.html#database-schema-for-product-attributes) and [Extend the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html).
 
 {% endinfo_block %}
 
@@ -97,7 +97,7 @@ vendor/bin/console transfer:generate
 
 {% info_block infoBox %}
 
-To extend Glue transfers you also can use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html):
+To extend Glue transfers you also can use a [Spryk](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-spryks.html):
 
 ```bash
 console spryk:run AddSharedRestAttributesTransfer --mode=project --module=ResourcesRestApi --organization=Pyz --name=RestResourcesAttributes
@@ -148,7 +148,7 @@ The implemented mapper extends the original core mapper (located in `Spryker\Glu
 
 {% info_block infoBox %}
 
-To put data, you can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html):
+To put data, you can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-spryks.html):
 
 ```bash
 console spryk:run AddGlueResourceMapper --mode=project --module=ResourcesRestApi --organization=Pyz  --subDirectory=Mapper --className=Resource
@@ -192,7 +192,7 @@ Like the mapper, `ProductsRestApiFactory` extends the core factory and only over
 
 {% info_block infoBox %}
 
-To override mapper initialization, you can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-spryks.html):
+To override mapper initialization, you can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-spryks.html):
 
 ```bash
 console spryk:run AddGlueMapperFactoryMethod --mode=project --module=ResourcesRestApi --organization=Pyz --subDirectory=Mapper --className=Resource
@@ -204,4 +204,4 @@ This adds mapper initialization to the project-level factory.
 
 ## 4. Verify implementation
 
-You can query the Products API to check whether the attribute has been added to the API response. For example, you can query information on one of the products with the `manufacturerCountry` field populated. For details, see [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{site.version}}/abstract-products/retrieving-abstract-products.html) and [Retrieving concrete products](/docs/marketplace/dev/glue-api-guides/{{site.version}}/concrete-products/retrieving-concrete-products.html).
+You can query the Products API to check whether the attribute has been added to the API response. For example, you can query information on one of the products with the `manufacturerCountry` field populated. For details, see [Retrieving abstract products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/abstract-products/retrieving-abstract-products.html) and [Retrieving concrete products](/docs/marketplace/dev/glue-api-guides/{{page.version}}/concrete-products/retrieving-concrete-products.html).

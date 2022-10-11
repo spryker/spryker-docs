@@ -36,13 +36,13 @@ The resulting document is a full description of your REST API following the [Ope
 
 {% info_block warningBox %}
 
-REST API endpoints shipped by Spryker are covered by documentation by default. A snapshot of the latest state of Spryker REST API can be found in Spryker Documentation. For more information, see [Rest API Reference](/docs/scos/dev/glue-api-guides/{{site.version}}/rest-api-reference.html).
+REST API endpoints shipped by Spryker are covered by documentation by default. A snapshot of the latest state of Spryker REST API can be found in Spryker Documentation. For more information, see [Rest API Reference](/docs/scos/dev/glue-api-guides/{{page.version}}/rest-api-reference.html).
 
 {% endinfo_block %}
 
 ## Prerequisites
  
-Install and enable [Spryker Glue](/docs/scos/dev/feature-integration-guides/{{site.version}}/glue-api/glue-api-installation-and-configuration.html). Also, see the following documents:
+Install and enable [Spryker Glue](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-installation-and-configuration.html). Also, see the following documents:
 
 * [Open API Specification](https://github.com/OAI/OpenAPI-Specification)
 * [Swagger Tools Reference](https://swagger.io/)
@@ -112,7 +112,7 @@ vendor/bin/console transfer:generate
 
 ### Describe resource relationships
 
-Many REST API resources are related to each other. For example, the cart items resource is related to the products resources describing the products included in a cart, and so on. On the API side, such relationships are expressed with the help of [resource relationships](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-infrastructure.html#resource-relationships).
+Many REST API resources are related to each other. For example, the cart items resource is related to the products resources describing the products included in a cart, and so on. On the API side, such relationships are expressed with the help of [resource relationships](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-relationships).
 
 The resource relationships that already exist are added to the documentation automatically. However, some resources are only available through relationships, which means they do not have their own resource route. In these cases, to facilitate the implementation of clients based on the Glue REST API of your project, you can describe such relationships in the generated documentation. To describe how two resources are related, add an additional annotation to the `ResourceRelationshipPlugin` that links the resources together. For example, in the following code sample, `ResourceRelationshipPlugin` allows including items while requesting a cart is expanded with the specification of the relationship attributes type:
 
@@ -129,7 +129,7 @@ The resource relationships that already exist are added to the documentation aut
 
 {% info_block infoBox "Info" %}
 
-For more information about `ResourceRelationshipPlugins`, see [Resource relationships](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-infrastructure.html#resource-relationships).
+For more information about `ResourceRelationshipPlugins`, see [Resource relationships](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-relationships).
 
 {% endinfo_block %}
 

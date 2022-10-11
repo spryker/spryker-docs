@@ -4044,7 +4044,7 @@ entries:
         nested:
         - title: Extend a REST API resource
           url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html
-        - title: Versioning REST API Resources
+        - title: Implement versioning for REST API resources
           url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/versioning-rest-api-resources.html
         - title: Glue API Tutorials
           url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/glue-api-tutorials.html

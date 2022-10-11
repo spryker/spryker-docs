@@ -10,9 +10,9 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/entity-name-is-not-unique.html
 ---
 
-Private API is used on the project level. Private API entities shouldn't be used on the project side. The project has to follow the rule to be able to correctly receive Spryker module updates.
+Modules have public and private APIs. While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API.
 
-Modules have public and private APIs. While public API updates always support backward compatibility, private API updates can break backward compatibility. So, backward compatibility is not guaranteed in the private API. For example, if you use a core method on the project level, and it is updated or removed with an update, it can cause unexpected issues.
+To be able to take semi-automatic updates, private API entities shouldn't be used on the project side. For example, if you use a core method on the project level, and it is updated or removed with an update, it can cause unexpected issues.
 
 For more information about module APIs, see [Definition of Module API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html).
 
@@ -135,6 +135,8 @@ After the fix re-evaluate the code. The same error shouldn’t be returned.
 ## PrivateApi:Extension
 
 `CustomerAccessForm` extends `Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm` from a private API.
+
+### Example of code that causes an upgradability error
 
 ```php
 namespace Pyz\Zed\CustomerAccessGui\Communication\Form;
@@ -304,7 +306,7 @@ use Spryker\Zed\CustomerAccess\Persistence\CustomerAccessEntityManager as Spryke
 class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager implements CustomCustomerAccessEntityManager
 {
    /**
-     * 
+     *
      */
     public function setContentTypesToAccessible(CustomerAccessTransfer $customerAccessTransfer): void
     {

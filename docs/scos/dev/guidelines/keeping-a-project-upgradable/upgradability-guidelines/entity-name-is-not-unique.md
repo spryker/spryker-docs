@@ -10,9 +10,7 @@ related:
     link: docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/private-api-is-used-on-the-project-level.html
 ---
 
-All entities in your project should have unique names. Not unique entity names on the project level can produce naming conflicts during the semi-automatic update process. The easiest way to ensure that is to use a prefix in entities' names. Unique entity names are required for the successful delivery of Spryker module updates to your project.
-
-When extending public API on the project level, make sure that entity names are unique, so Spryker updates are compatible with project changes. If a Spryker update introduces a core entity with a name matching a project-level entity name, its behavior might change or cause issues. To make your code unique, you can use prefixes like `Pyz` or your project name.
+To avoid naming conflicts when taking semi-automatic updates, all entities in a project should have unique names. When extending public API on the project level, make sure that entity names are unique, so Spryker updates are compatible with project changes. If an update introduces a core entity with a name matching a project-level entity name, its behavior might change or cause issues. To make your code unique, you can use prefixes like `Pyz` or your project name.
 
 The names of the following entities must be unique on the project level:
 

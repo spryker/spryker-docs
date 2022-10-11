@@ -1,5 +1,5 @@
 ---
-title: Implementing a REST API resource
+title: Implement a REST API resource
 description: This document shows how to implement a REST API resource in your project.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -21,6 +21,7 @@ redirect_from:
   - /v1/docs/implementing-rest-api-resource
   - /v1/docs/en/implementing-rest-api-resource
   - /docs/scos/dev/tutorials/201811.0/introduction/glue-api/implementing-a-rest-api-resource.html
+  - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html
 ---
 
 This document shows how to implement a REST API resource in your project.

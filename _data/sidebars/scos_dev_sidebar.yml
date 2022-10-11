@@ -4048,9 +4048,9 @@ entries:
           url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/versioning-rest-api-resources.html
         - title: Glue API Tutorials
           url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/glue-api-tutorials.html
-        - title: Validating REST request format
+        - title: Validate REST request format
           url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html
-        - title: Implementing a REST API Resource
+        - title: Implement a REST API resource
           url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html
         - title: Document Glue API resources
           url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/documenting-glue-api-resources.html

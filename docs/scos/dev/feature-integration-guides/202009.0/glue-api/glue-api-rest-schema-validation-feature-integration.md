@@ -148,7 +148,7 @@ Make sure that `ValidateRestRequestAttributesPlugin` has been activated:
 
     1. Create `src/Pyz/Glue/YourModuleRestApi/Validation/{module}.validation.yaml`.
 
-    2. In the file, describe validation rules for endpoints. See see [Validating REST Request Format](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html) for more details. Example:
+    2. In the file, describe validation rules for endpoints. See see [Validate REST request format](/docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html) for more details. Example:
 
     ```yaml
     access-tokens:

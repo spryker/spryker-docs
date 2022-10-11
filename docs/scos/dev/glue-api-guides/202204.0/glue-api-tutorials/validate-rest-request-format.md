@@ -1,5 +1,5 @@
 ---
-title: Validating REST request format
+title: Validate REST request format
 description: Learn about REST request validation format and how to validate requests in Glue API.
 last_updated: Jun 16, 2021
 template: howto-guide-template
@@ -20,6 +20,7 @@ redirect_from:
   - /v2/docs/en/validating-rest-request-format
   - /v1/docs/validating-rest-request-format
   - /v1/docs/en/validating-rest-request-format
+  - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html
 related:
   - title: Glue API installation and configuration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-installation-and-configuration.html

@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Interacting with third party payment providers via Glue API"
+title: Interact with third party payment providers using Glue API
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/t-interacting-with-third-party-payment-providers-via-glue-api
@@ -18,12 +18,14 @@ redirect_from:
   - /v3/docs/t-interacting-with-third-party-payment-providers-via-glue-api
   - /v3/docs/en/t-interacting-with-third-party-payment-providers-via-glue-api
   - /docs/scos/dev/tutorials/201907.0/advanced/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
-  - /docs/scos/dev/glue-api-guides/202005.0/checking-out/docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
-
+  - /docs/scos/dev/glue-api-guides/202005.0/checking-out/docs/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html
+  - /docs/scos/dev/tutorials-and-howtos/advanced-tutorials/glue-api/tutorial-interacting-with-third-party-payment-providers-via-glue-api.html
 related:
   - title: Technology Partner Integration
     link: docs/scos/user/technology-partners/page.version/technology-partners.html
 ---
+
+This tutorial shows how to invoke third parties in the API payment process.
 
 The checkout process of Spryker Glue API can be leveraged to involve third parties in the process of order confirmation. This can be required, for example, when the method of payment selected by the user requires additional steps to complete the purchase. These can include, but not limited to, card validation, processing a bank transfer, etc.
 
@@ -33,7 +35,7 @@ For details, see [Checking Out Purchases and Getting Checkout Data](/docs/pbc/al
 
 {% endinfo_block %}
 
-This tutorial shows how to invoke third parties in the API payment process.
+To invoke third parties in the API payment process, proceed with the steps in the following sections:
 
 ## 1. Create new module
 

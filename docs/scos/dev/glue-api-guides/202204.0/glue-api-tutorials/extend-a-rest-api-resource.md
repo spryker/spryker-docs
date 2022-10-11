@@ -19,6 +19,7 @@ redirect_from:
   - /v2/docs/en/extending-a-rest-request-resource
   - /v1/docs/extending-a-rest-request-resource
   - /v1/docs/en/extending-a-rest-request-resource
+  - /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html
 related:
   - title: Glue API installation and configuration
     link: docs/scos/dev/feature-integration-guides/page.version/glue-api/glue-api-installation-and-configuration.html

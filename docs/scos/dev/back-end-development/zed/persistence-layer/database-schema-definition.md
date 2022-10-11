@@ -72,11 +72,11 @@ The name of the XML file that contains the DB schema definition must be prefixed
 
 ### Composed names
 
-When you need to use a composed name for a field, you define it in your table. For this, use small cases and separate the words using underscores, for example, `category_image_name`.
+When you need to use a composed name for a field, you define it in your table. For this, use small cases and separate the words using underscores—for example, `category_image_name`.
 
 ## Migrations
 
-To apply a change in the DB schema, run the following command
+To apply a change in the DB schema, run the following command:
 
 ```php
 vendor/bin/console propel:install
@@ -171,17 +171,15 @@ To enable this option, for the column attribute, set `caseInsensitive` with `tru
 
 ### Data migrations
 
-If your DB changes, include any operations with data that already exist, Spryker persistence provides functionality to execute any custom business logic that can be written in PHP while applying a migration.
+If your DB changes, include any operations with data that already exist. Spryker persistence provides functionality to execute any custom business logic that can be written in PHP while applying a migration.
 
-To leverage this mechanism, you can create a migration file—for example, `PropelMigration_1622797441.php` 
-for the migration folder. At the end of the file name, use a timestamp that is older than the previous migration file's timestamp. You can add any business logic that impacts your data to this file for execution.
+To leverage this mechanism, you can create a migration file—for example, `PropelMigration_1622797441.php` for the migration folder. At the end of the file name, use a timestamp that is older than the previous migration file's timestamp. You can add any business logic that impacts your data to this file for execution.
 
 This migration is applied only once and is registered in the `propel_migration table`.
 
 ## Related Spryks
 
 You can use the following definitions to generate related code:
-
 * `vendor/bin/console spryk:run AddZedPersistencePropelSchema`: Add Zed Persistence Propel Schema
 * `vendor/bin/console spryk:run AddZedPersistencePropelSchemaTable`: Add Zed Persistence Propel Schema Table
 

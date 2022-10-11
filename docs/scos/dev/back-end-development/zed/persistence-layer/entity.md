@@ -56,7 +56,7 @@ $customer->save();
 
 ## Saving Entities With Transactions
 
-In general, Propel performs every `save` operation in a transaction. Sometimes, you want to save things together, for example, when you save customers and order items during the checkout. For this, you can use Propel's connection.
+In general, Propel performs every `save` operation in a transaction. Sometimes, you want to save things together—for example, when you save customers and order items during the checkout. For this, you can use Propel's connection.
 
 ```php
  <?php

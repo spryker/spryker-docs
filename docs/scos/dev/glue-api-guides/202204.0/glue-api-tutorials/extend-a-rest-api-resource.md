@@ -1,5 +1,5 @@
 ---
-title: Extending a REST API resource
+title: Extend a REST API resource
 last_updated: Jun 16, 2021
 template: howto-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/extending-a-rest-request-resource
@@ -44,11 +44,7 @@ The following guide relies on your knowledge of the structure of a Glue REST API
 
 If you have a development virtual machine with the [B2C Demo Shop](/docs/scos/user/intro-to-spryker/intro-to-spryker.html#spryker-b2bb2c-demo-shops) installed, all the required components are available out of the box.
 
-{% endinfo_block %}
-
 Assume that you modify the product storage data to match your product requirements—for example, you add the `manufacturerCountry` field to the product data not as an attribute but as another field in the database.
-
-{% info_block warningBox %}
 
 For more details, see [Database schema for product attributes](/docs/scos/user/features/{{site.version}}/product-feature-overview/product-attributes-overview.html#database-schema-for-product-attributes) and [Extend the database schema](/docs/scos/dev/back-end-development/data-manipulation/data-ingestion/structural-preparations/extend-the-database-schema.html).
 
@@ -89,12 +85,12 @@ All transfer file names end with `.transfer.xml`.
     </transfers>
 ```
 
-1. Generate transfers:
+3. Generate transfers:
 ```bash
 vendor/bin/console transfer:generate
 ```
 
-1. Check that generated transfers contain the attribute you have added:
+4. Check that generated transfers contain the attribute you have added:
   * `src/Generated/Shared/Transfer/AbstractProductsRestAttributesTransfer.php`—for abstract products.
   * `src/Generated/Shared/Transfer/ConcreteProductsRestAttributesTransfer.php`—for concrete products.
 

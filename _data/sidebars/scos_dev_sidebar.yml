@@ -4042,7 +4042,7 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-integrating-any-search-engine-into-a-project.html
       - title: Glue API
         nested:
-        - title: Extending a REST API Resource
+        - title: Extend a REST API resource
           url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html
         - title: Versioning REST API Resources
           url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/versioning-rest-api-resources.html

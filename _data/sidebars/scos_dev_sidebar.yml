@@ -1204,6 +1204,31 @@ entries:
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create-api-application.html
         - title: How to create or change a convention
           url: /docs/scos/dev/glue-api-guides/glue-backend-api/how-to-guides/create_change-convention.html
+        - title: Glue API tutorials
+          url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/glue-api-tutorials.html
+          include_versions:
+          - "202204.0"
+          nested:
+          - title: Extend a REST API resource
+            url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/extend-a-rest-api-resource.html
+            include_versions:
+            - "202204.0"
+          - title: Implement versioning for REST API resources
+            url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/implement-versioning-for-rest-api-resources.html
+            include_versions:
+            - "202204.0"
+          - title: Validate REST request format
+            url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/validate-rest-request-format.html
+            include_versions:
+            - "202204.0"
+          - title: Implement a REST API resource
+            url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/implementa-rest-api-resource.html
+            include_versions:
+            - "202204.0"
+          - title: Document Glue API resources
+            url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/document-glue-api-resources.html
+            include_versions:
+            - "202204.0"
     - title: Glue API Developer Guides
       url: /docs/scos/dev/glue-api-guides/glue-api-developer-guides.html
       include_versions:
@@ -4040,20 +4065,6 @@ entries:
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-handling-new-types-of-entity-urls-legacy-demoshop.html
       - title: "Tutorial: Integrating any search engine into a project"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-integrating-any-search-engine-into-a-project.html
-      - title: Glue API
-        nested:
-        - title: Extend a REST API resource
-          url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/extending-a-rest-api-resource.html
-        - title: Implement versioning for REST API resources
-          url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/versioning-rest-api-resources.html
-        - title: Glue API Tutorials
-          url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/glue-api-tutorials.html
-        - title: Validate REST request format
-          url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/validating-rest-request-format.html
-        - title: Implement a REST API resource
-          url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/implementing-a-rest-api-resource.html
-        - title: Document Glue API resources
-          url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/glue-api/documenting-glue-api-resources.html
       - title: "Tutorial: different stores, different logic - landing pages - Spryker Commerce OS"
         url: /docs/scos/dev/tutorials-and-howtos/introduction-tutorials/tutorial-different-stores-different-logic-landing-pages-spryker-commerce-os.html
       - title: "Tutorial: Content and search - attribute-cart-based catalog personalization Spryker Commerce OS"

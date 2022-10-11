@@ -1230,12 +1230,12 @@ entries:
             include_versions:
             - "202204.0"
           - title: B2C API React example
-            url: /docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html
+            url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/b2c-api-react-example/b2c-api-react-example.html
             include_versions:
             - "202204.0"
             nested:
             - title: Install B2C API React example
-              url: /docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
+              url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
               include_versions:
               - "202204.0"
           - title: "Tutorial: Interacting with third party payment providers via Glue API"

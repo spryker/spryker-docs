@@ -1222,7 +1222,7 @@ entries:
             include_versions:
             - "202204.0"
           - title: Implement a REST API resource
-            url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/implementa-rest-api-resource.html
+            url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/implement-a-rest-api-resource.html
             include_versions:
             - "202204.0"
           - title: Document Glue API resources
@@ -1240,6 +1240,8 @@ entries:
               - "202204.0"
           - title: Interact with third party payment providers using Glue API
             url: /docs/scos/dev/glue-api-guides/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html
+            include_versions:
+            - "202204.0"
     - title: Glue API Developer Guides
       url: /docs/scos/dev/glue-api-guides/glue-api-developer-guides.html
       include_versions:

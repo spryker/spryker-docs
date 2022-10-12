@@ -62,6 +62,41 @@ To view the report, run the following command:
 spryker-sdk analyze:php:code-compliance-report
 ```
 
+## Define custom prefixes for core entity names
+
+When evaluator checks project-level code entities for existing and potential matches with the core ones, it skips the entities that have the `Pyz` prefix in their name. Such are considered unique and will not conflict with core entities in future because there will never be an entity with the `Pyz` prefix in the core.
+
+When solving upgradability issues, you can use the `Pyz` prefix to make your entities unique. To use custom prefixes, do the following:
+
+1. Create `/tooling.yaml`
+2. Define `Pyz` and needed custom prefixes. For example, define `Zyp` as a custom prefix:
+
+```yaml
+evaluator:
+  prefixes:
+    - Pyz
+    - Zyp
+```
+
+Now the evaluator will not consider entities prefixed with `Zyp` as not unique.
+
+
+## Skip some rules for this project
+
+When some rule is not mandatory for your project, please add it to the `ignore list`.
+
+The messages for the `ignored` rules will still be in CLI output and a report, but they will not be a reason for producing exit code 1 from the `analyze:php:code-compliance` command.
+
+1. Create `/tooling.yaml`
+2. For example, add `NotUnique:Constant` check to ignore list:
+
+```yaml
+evaluator:
+  rules:
+    ignore:
+      - NotUnique:Constant
+```
+
 ## Resolve upgradability issues
 
 If the report contains upgradability issues, to resolve them, see [Upgradability guidelines](/docs/scos/dev/guidelines/keeping-a-project-upgradable/upgradability-guidelines/upgradability-guidelines.html).

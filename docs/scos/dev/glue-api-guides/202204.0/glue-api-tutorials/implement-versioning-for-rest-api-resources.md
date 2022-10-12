@@ -162,7 +162,7 @@ If a version is not specified, the latest available version is returned.
 
 ## 3. Add more versions
 
-To implement a new version, you can create a new route plugin in your module. For example, to support version 3.0, you can use the following code in your plugin:
+To implement a new version, you can create a new route plugin in your module—for example, to support version 3.0, you can use the following code in your plugin:
 
 **Code sample:**
 
@@ -179,7 +179,7 @@ class CustomerRestorePasswordResourceRouteVersion3Plugin extends AbstractPlugin 
 }
 ```
 
-In the new plugin, you can configure routing differently. You can use a different controller class or use a different transfer for the resource attributes—for example:
+In the new plugin, you can configure routing differently. You can use a different controller class or use a different transfer for the resource attributes. See the following example:
 
 **Code sample:**
 

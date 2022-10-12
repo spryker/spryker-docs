@@ -54,9 +54,9 @@ To create a module, follow these steps:
 | `/Plugin` |Glue API plugins.  |
 | `/Processor` | Folder where all the resource processing logic, data mapping code, and calls to other clients are located. |
 | `{YOUR_RESOURCE}sRestApiConfig.php` | Contains resource-related configuration, such as the resource type and error code constants. |
-|`{YOUR_RESOURCE}sRestApiFactory.php`  |  Factory to construct objects.|
+|`{YOUR_RESOURCE}sRestApiFactory.php`  | Factory to construct objects.|
 | `ResourcesDependencyProvider.php` | Provides external dependencies to this module. |
-| `{YOUR_RESOURCE}sRestApiResource.php` |  Locatable class that provides resource objects to other modules as a dependency.|
+| `{YOUR_RESOURCE}sRestApiResource.php` | Locatable class that provides resource objects to other modules as a dependency.|
 
 {% info_block infoBox %}
 
@@ -70,7 +70,7 @@ You must agree to all the default values when prompted.
 
 {% endinfo_block %}
 
-Add a transfer file that is used to automatically map JSON data. Transfers are defined in the `Shared` layer (for example, `src/Pyz/Shared/{YOUR_RESOURCE}sRestApi/Transfer`) as it needs to be accessible to any layer, including Glue. The name of the transfer file is `resources_rest_api.transfer.xml`, where the first part is the name of your resource.
+Add a transfer file that is used to automatically map JSON data. Transfers are defined in the `Shared` layer—for example, `src/Pyz/Shared/{YOUR_RESOURCE}sRestApi/Transfer`—as it needs to be accessible to any layer, including Glue. The name of the transfer file is `resources_rest_api.transfer.xml`, where the first part is the name of your resource.
 
 {% info_block infoBox %}
 
@@ -126,7 +126,7 @@ console spryk:run AddGlueConfig --mode=project --module=ResourcesRestApi --organ
 
 ## 3. Create a factory
 
-Factory is used for instantiating module classes and dependencies and provides access to the resource builder.
+A factory is used for instantiating module classes and dependencies and provides access to the resource builder.
 
 The factory must be inherited from `Spryker\Glue\Kernel\AbstractFactory`. This abstract factory exposes the `getResourceBuilder()` method that is used to construct resource and response objects. 
 
@@ -307,11 +307,11 @@ console spryk:run AddSharedRestAttributesTransfer --mode=project --module=Resour
 
 ## 6. Route requests to your controller
 
-To route requests to your module, create a route plugin that calls a certain function of the resource controller depending on the method configured in your resource and add the plugin to the Glue module dependency provider.
+To route requests to your module, create a routing plugin that calls a certain function of the resource controller depending on the method configured in your resource and add the plugin to the Glue module dependency provider.
 
 **Resource route plugin**
 
-A route plugin must be inherited from `AbstractPlugin` and implement `ResourceRoutePluginInterface`. Create a route plugin in the `Plugin` folder:
+A route plugin must be inherited from `AbstractPlugin` and implement `ResourceRoutePluginInterface`. In the `Plugin` folder, create a routing plugin: 
 
 **WishlistsResourceRoutePlugin.php**
 
@@ -334,9 +334,9 @@ To map the controller actions to the verbs they implement, implement the functio
 
 To map the actions, you can use such methods as `addPost`, `addDelete`, `addPatch`, and `addGet`, which are supported by `ResourceRouteCollectionInterface`. Each function has three parameters:
 
-1. `action`: Specifies the action name to map the verb to the Resource controller method.
-2. `protected` (optional): Specifies whether authentication is required to access the resource. If this parameter is not specified, then the verb requires authentication.
-3. `context` (optional): An array of additional parameters that can be passed to the action. Use this parameter to perform additional configuration of your actions.
+* `action`: Specifies the action name to map the verb to the Resource controller method.
+* `protected` (optional): Specifies whether authentication is required to access the resource. If this parameter is not specified, then the verb requires authentication.
+* `context` (optional): An array of additional parameters that can be passed to the action. Use this parameter to perform additional configuration of your actions.
 
 In the following example, the plugin maps `GET`, `POST`, `DELETE` and `PATCH` to the controller actions created in step 4. All the verbs except `GET` require authentication. This means that unauthenticated users can read the resource but can not create, modify, or delete items.
 
@@ -506,7 +506,7 @@ To build the responses, create classes responsible for the request processing. Y
 When you have a processor in place, you can use it in your code. 
 
 To invoke the processor, follow these steps:
-1. Use the factory created in step 3. 
+1. Use the factory created in step 3.
 2. Reopen the resource controller created in step 4 (`WishlistsResourceController.php`).
 3. Add code that handles `GET` requests:
 
@@ -518,9 +518,7 @@ public function getAction(RestRequestInterface $restRequest): RestResponseInterf
     }
 ```
 
-## 9. Register resources in GlueApplicationDependencyProvider
-
-Register your resource route plugin in Glue:
+## 9. Register resources in 'GlueApplicationDependencyProvider'
 
 1. Open the `src/Pyz/Glue/GlueApplication/GlueApplicationDependencyProvider.php` file.
 2. Add the route plugin to `getResourceRoutePlugins()`.

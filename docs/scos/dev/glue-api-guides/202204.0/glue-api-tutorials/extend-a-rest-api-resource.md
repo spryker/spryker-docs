@@ -32,14 +32,14 @@ Spryker Glue REST API comes with a set of predefined APIs out of the box. You ca
 
 {% info_block infoBox %}
 
-The following guide relies on your knowledge of the structure of a Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource modules](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-modules) section in *Glue Infrastructure*.
+The following guide relies on your knowledge of the structure of the Glue REST API resource module and the behavior of its constituents. For more details, see the [Resource modules](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-infrastructure.html#resource-modules) section in *Glue Infrastructure*.
 
 {% endinfo_block %}
 
 ## Prerequisites
 
-* [Install Spryker Development Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html);
-* [Enable Glue Rest API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-installation-and-configuration.html);
+* [Install Spryker Development Machine](/docs/scos/dev/sdk/development-virtual-machine-docker-containers-and-console.html).
+* [Enable Glue Rest API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-installation-and-configuration.html).
 * [Integrate Products API](/docs/scos/dev/feature-integration-guides/{{page.version}}/glue-api/glue-api-product-feature-integration.html).
 
 {% info_block infoBox %}
@@ -145,7 +145,7 @@ class AbstractProductsResourceMapper extends SprykerAbstractProductsResourceMapp
 }
 ```
 
-The implemented mapper extends the original core mapper (located in `Spryker\Glue\ProductsRestApi\Processor\Mapper\AbstractProductsResourceMapper`) and calls the parent method in the method you override. This lets you avoid redefining the whole class and lets you define only the things you want to override.
+The implemented mapper extends the original core mapper located in `Spryker\Glue\ProductsRestApi\Processor\Mapper\AbstractProductsResourceMapper` and calls the parent method in the method you override. This lets you avoid redefining the whole class and lets you define only the things you want to override.
 
 {% info_block infoBox %}
 
@@ -155,7 +155,7 @@ To put data, you can also use a [Spryk](/docs/scos/dev/glue-api-guides/{{page.ve
 console spryk:run AddGlueResourceMapper --mode=project --module=ResourcesRestApi --organization=Pyz  --subDirectory=Mapper --className=Resource
 ```
 
-This creates a mapper and adds it to the factory on the project level. You need to extend the mapper from the original feature.
+The preceding command creates a mapper and adds it to the factory on the project level. You need to extend the mapper from the original feature.
 
 {% endinfo_block %}
 

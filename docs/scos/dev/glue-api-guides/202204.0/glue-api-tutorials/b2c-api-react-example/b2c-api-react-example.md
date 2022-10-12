@@ -25,7 +25,7 @@ redirect_from:
   - 
 related:
   - title: Install B2C API React example
-    link: docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
+    link: docs/scos/dev/glue-api-guides/page.version/glue-api-tutorials/b2c-api-react-example/install-b2c-api-react-example.html
   - title: Glue REST API
     link: docs/scos/dev/glue-api-guides/page.version/glue-rest-api.html
   - title: REST API Reference

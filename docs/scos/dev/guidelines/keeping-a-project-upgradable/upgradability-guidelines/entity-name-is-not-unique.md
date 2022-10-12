@@ -60,7 +60,7 @@ NotUnique:TransferName Transfer object name "CustomProductData" has to have proj
 
 ## Transfer property name is not unique
 
-Transfer property names must be unique, when you extend transfer that exists on the vendor level. Below you can find the code examples that show how to solve the described problem.
+Transfer property names must be unique, when you extend transfer that exists on the core level. Below you can find the code examples that show how to solve the described problem.
 
 ### Example of code that causes an upgradability error: Transfer property name is not unique
 
@@ -126,7 +126,7 @@ NotUnique:DatabaseTable Database table "custom_table" has to have project prefix
 
 ## Name of database table column is not unique
 
-Names of database table columns must be unique when you extend table that exists on the vendor level. Below you can find the code examples that show how to solve the described problem.
+Names of database table columns must be unique when you extend table that exists on the core level. Below you can find the code examples that show how to solve the described problem.
 
 ### Example of code that causes an upgradability error: Name of database table column is not unique
 

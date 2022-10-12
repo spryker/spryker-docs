@@ -217,16 +217,52 @@ entries:
                 url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-page-store.csv.html
               - title: cms_slot_template.csv
                 url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-slot-template.csv.html
-              - title: cms_template.csv
-                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-template.csv.html
-              - title: cms_template.csv
-                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-template.csv.html
-              - title: cms_template.csv
-                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-template.csv.html
-              - title: cms_template.csv
-                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-template.csv.html
-              - title: cms_template.csv
-                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-template.csv.html
+              - title: cms_slot.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-slot.csv.html
+              - title: cms_slot_block.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-slot-block.csv.html
+              - title: navigation.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-navigation.csv.html
+              - title: navigation_node.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-navigation-node.csv.html
+              - title: content_navigation.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-content-navigation.csv.html
+          - title: Manage using Glue API
+            nested:
+              - title: Retrieve abstract product list content items
+                url: /docs/pbc/all/content-management-system/manage-using-glue-api/retrieve-abstract-product-list-content-items.html
+              - title: Retrieve banner content items
+                url: /docs/pbc/all/content-management-system/manage-using-glue-api/retrieve-banner-content-items.html
+              - title: Retrieve CMS pages
+                url: /docs/pbc/all/content-management-system/manage-using-glue-api/retrieve-cms-pages.html
+              - title: Retrieve navigation trees
+                url: /docs/pbc/all/content-management-system/manage-using-glue-api/retrieve-navigation-trees.html
+          - title: Manage in the Back Office
+            nested:
+
+
+          - title: Tutorials and HowTos
+            nested:
+              - title: "HowTo: Create a custom content item"
+                url: /docs/pbc/all/content-management-system/tutorials-and-howtos/howto-create-a-custom-content-item.html
+              - title: "HowTo: Create a visibility condition for CMS Blocks"
+                url: /docs/pbc/all/content-management-system/tutorials-and-howtos/howto-create-a-visibility-condition-for-cms-blocks.html
+              - title: "HowTo: Create CMS templates"
+                url: /docs/pbc/all/content-management-system/tutorials-and-howtos/howto-create-cms-templates.html
+              - title: "HowTo: Define positions of category CMS blocks"
+                url: /docs/pbc/all/content-management-system/tutorials-and-howtos/howto-define-positions-for-category-cms-blocks.html
+              - title: "HowTo: Use blocks"
+                url: /docs/pbc/all/content-management-system/tutorials-and-howtos/howto-use-blocks.html
+              - title: "Tutorial: CMS"
+                url: /docs/pbc/all/content-management-system/tutorials-and-howtos/tutorial-cms.html
+              - title: "Tutorial: Content and search - personalized catalog pages"
+                url: /tutorial-content-and-search-personalized-catalog-pages.html
+          - title: Third-party integrations
+            nested:
+              - 
+
+
+
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:

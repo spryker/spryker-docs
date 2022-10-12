@@ -1,5 +1,5 @@
 ---
-title: Content Management
+title: CMS data import
 last_updated: Jun 16, 2021
 template: data-import-template
 originalLink: https://documentation.spryker.com/2021080/docs/content-management
@@ -11,9 +11,10 @@ redirect_from:
   - /docs/en/content-management
   - /docs/scos/dev/data-import/202204.0/data-import-categories/navigation-setup/navigation-setup.html
   - /docs/scos/dev/data-import/202108.0/data-import-categories/content-management/content-management.html
+  - /docs/scos/dev/data-import/202204.0/data-import-categories/content-management/content-management.html
 ---
 
-The content management category contains data required to create and manage content elements like CMS pages or blocks.
+The CMS data import category contains data required to create and manage content elements like CMS pages or blocks.
 
 The table below provides details on Content Management data importers, their purpose, CSV files, dependencies, and other details. Each data importer contains links to CSV files used to import the corresponding data, including specifications of mandatory and unique fields, dependencies, detailed explanations, recommendations, templates, and content examples.
 

@@ -1,6 +1,6 @@
 ---
-title: Install Multi-store CMS block
-description: This integration guide provides step-by-step instruction on integrating Multi-store CMS Block Feature into your project.
+title: Install multi-store CMS blocks
+description: Learn how to install multi-store CMS blocks in a Spryker project
 last_updated: Jun 16, 2021
 template: feature-integration-guide-template
 originalLink: https://documentation.spryker.com/2021080/docs/multi-store-cms-block-feature-integration

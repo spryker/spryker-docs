@@ -90,6 +90,143 @@ entries:
                 url: /docs/pbc/all/carrier-management/third-party-integrations/paazl.html
               - title: Paqato
                 url: /docs/pbc/all/carrier-management/third-party-integrations/paqato.html
+      - title: Content Management System
+        url: /docs/pbc/all/content-management-system/content-management-system.html
+        nested:
+          - title: What's changed
+            url: /docs/pbc/all/content-management-system/whats-changed-in-content-management-system.html
+          - title: CMS feature overview
+            url: /docs/pbc/all/content-management-system/cms-feature-overview/cms-feature-overview.html
+            nested:
+              - title: CMS Pages
+                url: /docs/pbc/all/content-management-system/cms-feature-overview/cms-pages-overview.html
+              - title: CMS blocks
+                url: /docs/pbc/all/content-management-system/cms-feature-overview/cms-blocks-overview.html
+              - title: Templates and Slots
+                url: /docs/pbc/all/content-management-system/cms-feature-overview/templates-and-slots-overview.html
+              - title: CMS pages in search results
+                url: /docs/pbc/all/content-management-system/cms-feature-overview/cms-pages-in-search-results-overview.html
+              - title: Email as a CMS block
+                url: /docs/pbc/all/content-management-system/cms-feature-overview/templates-and-slots-overview.html
+          - title: Content items feature overview
+            url: /docs/pbc/all/content-management-system/content-items-feature-overview.html
+          - title: Navigation feature overview
+            url: /docs/pbc/all/content-management-system/navigation-feature-overview.html
+          - title: Install and upgrade
+            nested:
+              - title: Install features
+                nested:
+                  - title: CMS
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-cms-feature.html
+                  - title: CMS + Catalog
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-cms-catalog-feature.html
+                  - title: CMS + Category Management
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-cms-category-management-feature.html
+                  - title: CMS + Product Lists + Catalog
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-cms-product-lists-catalog-feature.html
+                  - title: Content Items
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-content-items-feature.html
+                  - title: Navigation
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-features/install-the-navigation-feature.html
+              - title: Install Glue API
+                nested:
+                  - title: CMS
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-glue-api/install-the-cms-glue-api.html
+                  - title: Content Items
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-glue-api/install-the-content-items-glue-api.html
+                  - title: Navigation
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/install-glue-api/install-the-navigation-glue-api.html
+              - title: Upgrade modules
+                nested:
+                  - title: Cms
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cms-module.html
+                  - title: CmsBlock
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmsblock-module.html
+                  - title: CmsBlockCategoryConnector
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcategoryconnector-module.html
+                  - title: CmsBlockCollector
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockcollector-module.html
+                  - title: CmsBlockGui
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockgui-module.html
+                  - title: CmsBlockStorage
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockstorage-module.html
+                  - title: CmsBlockWidget
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmsblockwidget-module.html
+                  - title: CmsCollector
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmscollector-module.html
+                  - title: CmsGui
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmsgui-module.html
+                  - title: CmsPageSearch
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmspagesearch-module.html
+                  - title: CmsStorage
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-cmsstorage-module.html
+                  - title: Content
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-content-module.html
+                  - title: ContentBanner
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-contentbanner-module.html
+                  - title: ContentBannerGui
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-contentbannergui-module.html
+                  - title: ContentBannersRestApi
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-contentbannersrestapi-module.html
+                  - title: ContentFileGui
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-contentfilegui-module.html
+                  - title: ContentFileWidget
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-contentfilewidget-module.html
+                  - title: ContentGui
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-contentgui-module.html
+                  - title: ContentStorage
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-contentstorage-module.html
+                  - title: Navigation
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-navigation-module.html
+                  - title: NavigationGui
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-navigationgui-module.html
+                  - title: NavigationsRestApi
+                    url: /docs/pbc/all/content-management-system/install-and-upgrade/upgrade-modules/upgrade-the-navigationsrestapi-module.html
+              - title: Category CMS blocks
+                url: /docs/pbc/all/content-management-system/install-and-upgrade/install-category-cms-blocks.html
+              - title: Product CMS blocks
+                url: /docs/pbc/all/content-management-system/install-and-upgrade/install-product-cms-blocks.html
+              - title: Content widget
+                url: /docs/pbc/all/content-management-system/install-and-upgrade/install-the-content-widget.html
+              - title: Multi-store CMS blocks
+                url: /docs/pbc/all/content-management-system/install-and-upgrade/install-multi-store-cms-blocks.html
+              - title: Navigation module
+                url: /docs/pbc/all/content-management-system/install-and-upgrade/install-the-navigation-module.html
+          - title: Import and export data
+            url: /docs/pbc/all/content-management-system/import-and-export-data/cms-data-import.html
+            nested:
+              - title: cms_template.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-template.csv.html
+              - title: cms_block.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-block.csv.html
+              - title: cms_block_store.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-block-store.csv.html
+              - title: cms_block_category_position.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-block-category-postion.csv.html
+              - title: cms_block_category.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-block-category.csv.html
+              - title: content_banner.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-content-banner.csv.html
+              - title: content_product_abstract_list.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-content-product-abstract-list.csv.html
+              - title: content_product_set.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-content-product-set.csv.html
+              - title: cms_page.csv.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-page.csv.html
+              - title: cms_page_store.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-page-store.csv.html
+              - title: cms_slot_template.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-slot-template.csv.html
+              - title: cms_template.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-template.csv.html
+              - title: cms_template.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-template.csv.html
+              - title: cms_template.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-template.csv.html
+              - title: cms_template.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-template.csv.html
+              - title: cms_template.csv
+                url: /docs/pbc/all/content-management-system/import-and-export-data/file-details-cms-template.csv.html
       - title: Discount Management
         url: /docs/pbc/all/discount-management/discount-management.html
         nested:
@@ -300,15 +437,15 @@ entries:
               - title: "HowTo: Schedule cron job for Scheduled Prices"
                 url: /docs/pbc/all/price-management/tutorials-and-howtos/howto-schedule-cron-job-for-scheduled-prices.html
           - title: Extend and customize
-            nested: 
+            nested:
               - title: Configuration of price modes and types
-                url: /docs/pbc/all/price-management/extend-and-customize/configuration-of-price-modes-and-types.html 
+                url: /docs/pbc/all/price-management/extend-and-customize/configuration-of-price-modes-and-types.html
               - title: "Money module: reference information"
                 url: /docs/pbc/all/price-management/extend-and-customize/money-module-reference-information.html
               - title: Multiple currencies per store configuration
                 url: /docs/pbc/all/price-management/extend-and-customize/multiple-currencies-per-store-configuration.html
               - title: "PriceProduct module details: reference information"
-                url: /docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html                                                
+                url: /docs/pbc/all/price-management/extend-and-customize/priceproduct-module-details-reference-information.html
       - title: Request for Quote
         url: /docs/pbc/all/request-for-quote/request-for-quote.html
         nested:

@@ -179,6 +179,6 @@ For more details, see section **Generic Rest Response** in [Glue Infrastructure
 
 {% info_block infoBox %}
 
-For more details, see [Validate REST request format](/docs/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/validate-rest-request-format.html).
+For more details, see [Validate REST request format](/docs/scos/dev/glue-api-guides/{{page.version}}/glue-api-tutorials/validate-rest-request-format.html).
 
 {% endinfo_block %}

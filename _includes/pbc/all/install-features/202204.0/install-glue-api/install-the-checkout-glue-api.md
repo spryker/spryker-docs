@@ -441,7 +441,7 @@ To make sure that `OrderPaymentsResourceRoutePlugin` is activated, check if you 
 
 {% endinfo_block %}
 
-For more details, see [Implementing Checkout Steps for Glue API](/docs/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html).
+For more details, see [Implementing Checkout Steps for Glue API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html).
 
 ### Configure mapping
 

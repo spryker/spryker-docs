@@ -16,13 +16,27 @@ To be able to take semi-automatic updates, private API entities shouldn't be use
 
 For more information about module APIs, see [Definition of Module API](/docs/scos/dev/architecture/module-api/definition-of-module-api.html).
 
+## General approach to solving upgradability issues
+
+When solving any of the following cases, apply the following strategies in the provided order:
+1. Recommended: Extend the functionality using the [Configuration strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration).
+2. Recommended: Extend the functionality using the [Plug and Play strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play).
+3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
+4. Not recommended: Copy the functionality from the core to the project level:
+    1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
+    2. Copy private API core entities to the project level and give them unique names. For an example, see [Example of resolving the error by copying and renaming the entities](#example-of-resolving-the-error-by-renaming-private-api-entities).
+    3. As soon as the extension point in core is released, refactor the code added in step 4.2 using the strategies in steps 1-3.
+        While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
+
+
+
 ## PrivateApi:Facade
 
 It is allowed to use repository, factory, or entity manager classes inside of facade class on a project level, but only the methods from these classes, that were declared on project level.
 
 ### Example of code that causes an upgradability error
 
-`CustomerFacade` uses `createCustomerReader` and `getCustomerCollection` from a private API.
+`CustomerFacade` uses `createCustomerReader` and `getCustomerCollection` from the private API.
 
 ```php
 namespace Pyz\Zed\Customer\Business;
@@ -53,18 +67,6 @@ class CustomerFacade extends SprykerCustomerFacade implements CustomerFacadeInte
 Please avoid usage of Spryker\...\CustomerReader::getCustomerCollection(...) in Pyz\Zed\Customer\Business\CustomerFacade
 ------------------------------------------------------------------------------------------------------------------------
 ```
-
-### Resolving the error
-
-To resolve the error provided in the example, try the following in the provided order:
-1. Recommended: Extend the functionality using the [Configuration strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#configuration).
-2. Recommended: Extend the functionality using the [Plug and Play strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#plug-and-play).
-3. Recommended: Extend the functionality using the [Project Modules strategy](/docs/scos/dev/back-end-development/extending-spryker/development-strategies/development-strategies.html#project-modules).
-4. Not recommended: Copy the functionality from the core to the project level:
-    1. Register the missing extension point in [Spryker Ideas](https://spryker.ideas.aha.io/), so we add it in future.
-    2. Copy private API core entities to the project level and give them unique names. For an example, see [Example of resolving the error by copying and renaming the entities](#example-of-resolving-the-error-by-renaming-private-api-entities).
-    3. As soon as the extension point in core is released, refactor the code added in step 4.2 using the strategies in steps 1-3.
-        While it's not refactored, auto-upgrades are not supported, and the effort to update the project may be bigger and require more manual work.
 
 ### Example of resolving the error by renaming private API entities
 
@@ -129,14 +131,16 @@ class CustomerReader extends SprykerCustomerReader implements CustomerReaderInte
 }
 ```
 
-After the fix re-evaluate the code. The same error shouldn’t be returned.
+After applying the solution, re-evaluate the code. The same error shouldn’t be returned.
 
 
 ## PrivateApi:Extension
 
-`CustomerAccessForm` extends `Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm` from a private API.
+
 
 ### Example of code that causes an upgradability error
+
+`CustomerAccessForm` extends `Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm` from the private API.
 
 ```php
 namespace Pyz\Zed\CustomerAccessGui\Communication\Form;
@@ -171,7 +175,11 @@ class PyzCustomerAccessForm extends AbstractType
 }
 ```
 
-After the fix re-evaluate the code. The same error shouldn’t be returned.
+After applying the solution, re-evaluate the code. The same error shouldn’t be returned.
+
+## Rule name
+
+Description
 
 
 ### Example of code that causes an upgradability error: Extending a private API business model
@@ -209,6 +217,10 @@ class PyzCustomerAccessFilter implements PyzCustomerAccessFilterInterface
 }
 ```
 
+## Rule name
+
+Description
+
 ### Example of code that causes an upgradability error: Extending a private API Bridge
 
 ```php
@@ -231,11 +243,16 @@ Please avoid extension of the PrivateApi Spryker\Zed\PriceProduct\Dependency\Fac
 ------------------------------------------------------------------------------------
 ```
 
-### Example of resolving the error: Extending a private API Bridge
-Remove the Bridge.
+### Resolve the error: Extending a private API Bridge
+
+
+Remove the bridge.
 
 
 ## PrivateApi:MethodIsOverwritten
+
+
+### Example of code that causes an upgradability error
 
 The extended class `CheckoutPageDependencyProvider` overrides the private API core method `SprykerCheckoutPageDependencyProvider::getCustomerStepHandler`.
 
@@ -263,6 +280,9 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 Please avoid overriding of core method Spryker\Yves\CheckoutPage\CheckoutPageDependencyProvider::getCustomerStepHandler() in the class Pyz\Yves\CheckoutPage\CheckoutPageDependencyProvider
 ------------------------------------------------------------------------------------
 ```
+
+### Example of resolving the error by copying the method to the project level
+
 
 Make the name of the Private API entity unique by adding `Pyz`.
 
@@ -295,7 +315,7 @@ It is allowed to use factory classes inside of repositories and entity manager c
 
 ### Example of code that causes an upgradability error
 
-`CustomerAccessEntityManager` uses factory method `createCustomerAccessMapper` that was declared on the vendor level.
+`CustomerAccessEntityManager` uses factory method `createCustomerAccessMapper` from the Private API.
 
 ```php
 use Spryker\Zed\CustomerAccess\Persistence\CustomerAccessEntityManager as SprykerCustomerAccessEntityManager;
@@ -324,13 +344,7 @@ Please avoid usage of Spryker\...\CustomerAccessEntityManager::createCustomerAcc
 ------------------------------------------------------------------------------------------------------------------------
 ```
 
-### Resolving the error
-
-The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
-
-### Example of resolving the error by cloning functionality to the project level
-
-Copy the method to the factory on the project level.
+### Example of resolving the error by copying the method to the factory on the project level
 
 ```php
 namespace Pyz\Zed\Customer\Business;
@@ -357,7 +371,7 @@ The business factory should use dependency by a key that is defined at the proje
 
 ### Example of code that causes an upgradability error
 
-`CustomerAccessBusinessFactory` uses as key `ProductPageSearchDependencyProvider::QUERY_CONTAINER_CATEGORY` that was declared on the vendor level.
+`CustomerAccessBusinessFactory` the `ProductPageSearchDependencyProvider::QUERY_CONTAINER_CATEGORY` key from the Private API.
 
 ```php
 ...

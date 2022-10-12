@@ -148,7 +148,7 @@ In many cases, you may decide to provide your buyers and users with alternative 
 
 **Documentation**:
 
-* [Interacting with Third Party Payment Providers via Glue API](/docs/scos/dev/glue-api-guides/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html)
+* [Interact with third party payment providers using Glue API](/docs/scos/dev/glue-api-guides/{{site.version}}/glue-api-tutorials/interact-with-third-party-payment-providers-using-glue-api.html)
 * [B2B-B2C Checking Out Purchases and Getting Checkout Data](/docs/scos/dev/glue-api-guides/201907.0/checking-out/checking-out-purchases.html)
 
 Additionally, the following APIs were modified to support B2B use cases (they work now both for B2C and B2B) :

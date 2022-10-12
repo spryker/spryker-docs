@@ -51,7 +51,7 @@ To apply validation rules to an API, follow these steps:
   For `StoresRestAPI`, the name is `STORES.validation.yaml`.
 
 3. Specify validation for the endpoints provided by the API.
-  Follow the format described in [Validation rule format](#validation-rule-format).
+  Follow the format described in the [validation rule format](#validation-rule-format).
 
 4. Generate validation cache:
 

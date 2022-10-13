@@ -18,7 +18,7 @@ For more information about module APIs, see [Definition of Module API](/docs/sco
 
 ## PrivateApi:Facade
 
-It is allowed to use only the methods declared on the project level from a repository, factory, or entity manager inside the facade class of a project level.
+When you use a repository, factory, or entity manager inside of facade class on a project level, please use only methods that are also declared on the project level.
 
 ### Example of code that causes an upgradability error
 
@@ -463,7 +463,7 @@ The solution for the error is the same as in `Resolving the error`[PrivateApi:Fa
 
 ## PrivateApi:PersistenceInBusinessModel
 
-Business models on project level can use repository and entity manager but only methods that were declared on project level.
+When you use a repository or entity manager inside the business model classes on a project level, please use only methods that are also declared on the project level.
 
 ### Example of code that causes an upgradability error
 

@@ -32,7 +32,9 @@ When solving any of the following cases, apply the following strategies in the p
 
 ## PrivateApi:Facade
 
-It is allowed to use repository, factory, or entity manager classes inside of facade class on a project level, but only the methods from these classes, that were declared on project level.
+On the project level, you can use repository, factory, and entity manager classes inside of a facade class. They must be declared on the project level.
+
+It is allowed to use  on a project level, but only the methods from these classes, that were declared on project level.
 
 ### Example of code that causes an upgradability error
 
@@ -136,11 +138,14 @@ After applying the solution, re-evaluate the code. The same error shouldn’t be
 
 ## PrivateApi:Extension
 
+The following sections describe why this upgradability error can occur and how to solve it.
 
-
-### Example of code that causes an upgradability error
+### PrivateApi:Extension: Form extended
 
 `CustomerAccessForm` extends `Spryker\Zed\CustomerAccessGui\Communication\Form\CustomerAccessForm` from the private API.
+
+Example of code that causes an upgradability error:
+
 
 ```php
 namespace Pyz\Zed\CustomerAccessGui\Communication\Form;
@@ -153,7 +158,7 @@ class CustomerAccessForm extends SprykerCustomerAccessForm
 }
 ```
 
-### Related error in the Evaluator output: Extending a private API form class
+Related error in the Evaluator output:
 
 ```bash
 ------------------------------------------------------------------------------------
@@ -161,7 +166,7 @@ Please avoid extension of the PrivateApi Spryker\Zed\CustomerAccessGui\Communica
 ------------------------------------------------------------------------------------
 ```
 
-### Example of resolving the error by copying the form class to the project level
+Example of resolving the error by copying the form class to the project level:
 
 ```php
 <?php
@@ -175,16 +180,11 @@ class PyzCustomerAccessForm extends AbstractType
 }
 ```
 
-After applying the solution, re-evaluate the code. The same error shouldn’t be returned.
+### PrivateApi:Extension: Business model extended
 
-## Rule name
+`CustomerAccessFilter` extends `Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter` from the private API.
 
-Description
-
-
-### Example of code that causes an upgradability error: Extending a private API business model
-
-`CustomerAccessFilter` extends `Spryker\Zed\CustomerAccess\Business\CustomerAccess\CustomerAccessFilter` from a private API.
+Example of code that causes an upgradability error:
 
 ```php
 namespace Pyz\Zed\CustomerAccess\Business\CustomerAccess;
@@ -197,7 +197,7 @@ class CustomerAccessFilter extends SprykerCustomerAccessFilter
 }
 ```
 
-### Related error in the Evaluator output: Extending a private API business model
+Related error in the Evaluator output:
 
 ```bash
 ------------------------------------------------------------------------------------
@@ -205,7 +205,7 @@ Please avoid extension of the PrivateApi Spryker\Zed\CustomerAccess\Business\Cus
 ------------------------------------------------------------------------------------
 ```
 
-### Example of resolving the error by copying the business model to the project level
+Example of resolving the error by copying the business model to the project level:
 
 ```php
 <?php
@@ -217,11 +217,9 @@ class PyzCustomerAccessFilter implements PyzCustomerAccessFilterInterface
 }
 ```
 
-## Rule name
+### PrivateApi:Extension: Bridge extended
 
-Description
-
-### Example of code that causes an upgradability error: Extending a private API Bridge
+Example of code that causes an upgradability error:
 
 ```php
 namespace Pyz\Zed\PriceProduct\Dependency\Facade;
@@ -234,7 +232,7 @@ class PriceProductToProductFacadeBridge extends SprykerPriceProductToProductFaca
 }
 ```
 
-### Related error in the Evaluator output: Extending a private API Bridge
+Related error in the Evaluator output:
 
 
 ```bash
@@ -243,16 +241,15 @@ Please avoid extension of the PrivateApi Spryker\Zed\PriceProduct\Dependency\Fac
 ------------------------------------------------------------------------------------
 ```
 
-### Resolve the error: Extending a private API Bridge
 
-
-Remove the bridge.
+To resolve the error, remove the bridge.
 
 
 ## PrivateApi:MethodIsOverwritten
 
 
-### Example of code that causes an upgradability error
+Example of code that causes an upgradability error:
+
 
 The extended class `CheckoutPageDependencyProvider` overrides the private API core method `SprykerCheckoutPageDependencyProvider::getCustomerStepHandler`.
 
@@ -273,7 +270,7 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 }
 ```
 
-## Example of related error in the Evaluator output
+Example of related error in the Evaluator output
 
 ```bash
 ------------------------------------------------------------------------------------
@@ -281,10 +278,7 @@ Please avoid overriding of core method Spryker\Yves\CheckoutPage\CheckoutPageDep
 ------------------------------------------------------------------------------------
 ```
 
-### Example of resolving the error by copying the method to the project level
-
-
-Make the name of the Private API entity unique by adding `Pyz`.
+Example of resolving the error by copying the method to the project level and renaming it:
 
 ```php
 namespace Pyz\Yves\CheckoutPage;
@@ -303,17 +297,12 @@ class CheckoutPageDependencyProvider extends SprykerCheckoutPageDependencyProvid
 }
 ```
 
-To make the names of extended Private API entities unique, you can use any other strategy. For example, you can prefix them with your project name.
-
-After renaming the entity, re-evaluate the code. The same error shouldn't be returned.
-
-
 
 ## PrivateApi:Persistence
 
 It is allowed to use factory classes inside of repositories and entity manager classes on a project level, but only the methods from these classes, that were declared on the project level.
 
-### Example of code that causes an upgradability error
+Example of code that causes an upgradability error:
 
 `CustomerAccessEntityManager` uses factory method `createCustomerAccessMapper` from the Private API.
 
@@ -336,7 +325,7 @@ class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager imp
 }
 ```
 
-### Example of related error in the Evaluator output
+Example of related error in the Evaluator output:
 
 ```bash
 ------------------------------------------------------------------------------------------------------------------------
@@ -344,7 +333,7 @@ Please avoid usage of Spryker\...\CustomerAccessEntityManager::createCustomerAcc
 ------------------------------------------------------------------------------------------------------------------------
 ```
 
-### Example of resolving the error by copying the method to the factory on the project level
+Example of resolving the error by copying the method to the factory on the project level:
 
 ```php
 namespace Pyz\Zed\Customer\Business;
@@ -367,11 +356,11 @@ class CustomerBusinessFactory extends SprykerCustomerBusinessFactory
 
 ## PrivateApi:Dependency
 
-The business factory should use dependency by a key that is defined at the project level.
+Business factory should use dependency by a key that is defined at the project level.
 
-### Example of code that causes an upgradability error
+Example of code that causes an upgradability error:
 
-`CustomerAccessBusinessFactory` the `ProductPageSearchDependencyProvider::QUERY_CONTAINER_CATEGORY` key from the Private API.
+`CustomerAccessBusinessFactory` uses the `ProductPageSearchDependencyProvider::QUERY_CONTAINER_CATEGORY` key from the Private API.
 
 ```php
 ...
@@ -390,7 +379,7 @@ class CustomerAccessBusinessFactory implements SprykerCustomerAccessBusinessFact
 }
 ```
 
-### Example of related error in the Evaluator output
+Example of related error in the Evaluator output:
 
 ```bash
 ------------------------------------------------------------------------------------------------------------------------
@@ -398,7 +387,7 @@ Please avoid usage of Spryker/Zed/ProductPageSearch/ProductPageSearchDependencyP
 ------------------------------------------------------------------------------------------------------------------------
 ```
 
-### Resolving the error
+Example of resolving the error by ?
 
 The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
 
@@ -407,9 +396,9 @@ The solution for the error is the same as in `Resolving the error`[PrivateApi:Fa
 
 Business models on the project level should avoid the usage of private API from the Core level.
 
-### Example of code that causes an upgradability error
+Example of code that causes an upgradability error:
 
-`CustomerAccessFilter` uses as dependency `CustomerAccessReaderInterface` that was declared on the vendor level.
+`CustomerAccessFilter` uses `CustomerAccessReaderInterface` from the private API as a dependency.
 
 ```php
 ...
@@ -427,7 +416,7 @@ class CustomerAccessFilter implements CustomCustomerAccessFilter
 }
 ```
 
-### Example of related error in the Evaluator output
+Example of related error in the Evaluator output:
 
 ```bash
 ------------------------------------------------------------------------------------------------------------------------
@@ -435,7 +424,7 @@ PrivateApi:DependencyInBusinessModel "Please avoid usage of Spryker\Zed\Customer
 ------------------------------------------------------------------------------------------------------------------------
 ```
 
-### Resolving the error
+Example of resolving the error by ?
 
 The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
 
@@ -444,7 +433,7 @@ The solution for the error is the same as in `Resolving the error`[PrivateApi:Fa
 
 Business models on the project level should avoid creating private API from the Core level.
 
-### Example of code that causes an upgradability error
+Example of code that causes an upgradability error:
 
 `CustomerAccessFilter` contains creating `CustomerAccessReader` in the `constructor` method.
 
@@ -464,7 +453,7 @@ class CustomerAccessFilter implements CustomCustomerAccessFilter
 }
 ```
 
-### Example of related error in the Evaluator output
+Example of related error in the Evaluator output:
 
 ```bash
 ------------------------------------------------------------------------------------------------------------------------
@@ -472,18 +461,18 @@ Please avoid usage of Spryker\Zed\CustomerAccess\Business\CustomerAccess\Custome
 ------------------------------------------------------------------------------------------------------------------------
 ```
 
-### Resolving the error
+Example of resolving the error by ?
 
 The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
 
 
 ## PrivateApi:PersistenceInBusinessModel
 
-Business models on project level can use repository and entity manager but only methods that were declared on project level.
+Business models on the project level can use repository and entity manager, but only the methods that are declared on the project level.
 
-### Example of code that causes an upgradability error
+Example of code that causes an upgradability error:
 
-`CustomerAccessUpdater` calls method `setContentTypesToInaccessible` of the entity manager, that was declared on the core level.
+`CustomerAccessUpdater` calls the `setContentTypesToInaccessible` method of the entity manager that was declared on the core level.
 
 ```php
 namespace Pyz\Zed\CustomerAccess\Business\CustomerAccess;
@@ -507,7 +496,7 @@ class CustomerAccessUpdater implements CustomerAccessUpdaterInterface;
 }
 ```
 
-### Example of related error in the Evaluator output
+Example of related error in the Evaluator output:
 
 ```bash
 ------------------------------------------------------------------------------------------------------------------------
@@ -515,7 +504,7 @@ Please avoid usage of PrivateApi customerAccessEntityManager->setContentTypesToI
 ------------------------------------------------------------------------------------------------------------------------
 ```
 
-### Resolving the error
+Example of resolving the error by ?
 
 The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
 
@@ -523,11 +512,11 @@ The solution for the error is the same as in `Resolving the error`[PrivateApi:Fa
 
 ## PrivateApi:CorePersistenceUsage
 
-Repository and EntityManager on project level should avoid methods from Core.
+Repository and EntityManager on the project level must not use methods from the core level.
 
-### Example of code that causes an upgradability error
+Example of code that causes an upgradability error:
 
-`CustomerAccessEntityManager` calls method `getCustomerAccessEntityByContentType` of the SprykerCustomerAccessEntityManager, that was declared on the core level.
+`CustomerAccessEntityManager` calls the `getCustomerAccessEntityByContentType` method of `SprykerCustomerAccessEntityManager` that was declared on the core level.
 
 ```php
 namespace Pyz\Zed\CustomerAccess\Persistence;
@@ -548,7 +537,7 @@ class CustomerAccessEntityManager extends SprykerCustomerAccessEntityManager imp
 }
 ```
 
-### Example of related error in the Evaluator output
+Example of related error in the Evaluator output:
 
 ```bash
 ------------------------------------------------------------------------------------------------------------------------
@@ -556,6 +545,6 @@ Please avoid usage of PrivateApi method SprykerCustomerAccessEntityManager::getC
 ------------------------------------------------------------------------------------------------------------------------
 ```
 
-### Resolving the error
+Example of resolving the error by
 
 The solution for the error is the same as in `Resolving the error`[PrivateApi:Facade](#privateapi:facade)
